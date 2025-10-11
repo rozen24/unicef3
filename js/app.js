@@ -881,52 +881,7 @@ class YouthHealthLMS {
       </section>
 
       <!-- Impact metrics -->
-      <section id="statistics" class="section-padding slide-section slide-section--gradient">
-        <div class="container">
-          <div class="section-header text-center text-white" data-aos="fade-up">
-            <span class="slide-kicker text-white-50">Global & local insight</span>
-            <h2 class="section-heading text-white">Youth voices are reshaping health outcomes</h2>
-            <p class="section-paragraph text-white-75 w-lg-75 mx-auto">
-              Data-backed storytelling keeps ambassadors motivated, showing how every completed lesson contributes to community progress.
-            </p>
-          </div>
-          <div class="row g-4 justify-content-center">
-            ${[
-              {
-                label: "Youth worldwide",
-                headline: "1.8B",
-                detail: "90% live in developing countries where youth-driven health literacy is critical.",
-                icon: "fa-earth-asia"
-              },
-              {
-                label: "Young people in Bangladesh",
-                headline: "49.5M",
-                detail: "Nearly 30% of the population are poised to champion healthier futures.",
-                icon: "fa-people-group"
-              },
-              {
-                label: "Active youth (15-24)",
-                headline: "31.5M",
-                detail: "Ambassadors focus on inclusive programming that reaches every upazila.",
-                icon: "fa-person-rays"
-              }
-            ]
-              .map(
-                (item, index) => `
-                  <div class="col-md-4" data-aos="zoom-in" data-aos-delay="${index * 90}">
-                    <article class="impact-card">
-                      <div class="impact-icon"><i class="fa-solid ${item.icon}"></i></div>
-                      <span class="impact-label">${item.label}</span>
-                      <span class="impact-value stat-number" data-target="${item.headline}">0</span>
-                      <p>${item.detail}</p>
-                    </article>
-                  </div>
-                `
-              )
-              .join("")}
-          </div>
-        </div>
-      </section>
+      
 
       <!-- Call to action -->
       <section class="section-padding slide-section slide-section--cta">
