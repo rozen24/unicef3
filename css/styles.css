@@ -101,8 +101,9 @@ img {
 .gradient-text {
   background: var(--primary-gradient);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: var(--primary-gradient);
   background-clip: text;
+  
 }
 
 .gradient-bg {
@@ -225,6 +226,73 @@ img {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+
+/* ==================== FLOATING BACKGROUND ELEMENTS ==================== */
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(10px, -15px, 0) scale(1.02); }
+}
+
+.floating-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0; /* keep behind content */
+}
+
+.floating-bg-sm .float-elem {
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+}
+
+.float-elem {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 999px;
+  opacity: 0.12;
+  filter: blur(0.5px);
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.65), rgba(255,255,255,0.1) 60%, rgba(255,255,255,0) 70%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  animation: drift 10s ease-in-out infinite;
+}
+
+.float-elem:nth-child(2) { animation-duration: 12s; animation-delay: .4s; }
+.float-elem:nth-child(3) { animation-duration: 14s; animation-delay: .8s; }
+.float-elem:nth-child(4) { animation-duration: 11s; animation-delay: 1.2s; }
+.float-elem:nth-child(5) { animation-duration: 15s; animation-delay: 1.6s; }
+.float-elem:nth-child(6) { animation-duration: 13s; animation-delay: 2s; }
+
+/* ==================== HOVER/FOCUS UTILITIES ==================== */
+.transition-base { transition: all 0.25s ease; }
+
+.hover-lift-sm { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.hover-lift-sm:hover { transform: translateY(-4px); }
+
+.hover-shadow-glow { transition: box-shadow 0.25s ease; }
+.hover-shadow-glow:hover { box-shadow: var(--shadow-glow); }
+
+.icon-spin-on-hover i,
+.icon-spin-on-hover .fa,
+.icon-spin-on-hover .fas,
+.icon-spin-on-hover .bi { transition: transform 0.6s ease; }
+.icon-spin-on-hover:hover i,
+.icon-spin-on-hover:hover .fa,
+.icon-spin-on-hover:hover .fas,
+.icon-spin-on-hover:hover .bi { transform: rotate(360deg); }
+
+.focus-visible-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.3);
+}
+
+/* Gradient titles that animate on hover */
+.gradient-text-hover {
+  background-size: 200% 200%;
+  transition: background-position 0.6s ease, transform 0.25s ease;
+}
+.gradient-text-hover:hover { background-position: 100% 50%; }
 
 /* ==================== NAVIGATION ==================== */
 .navbar {
@@ -2839,9 +2907,8 @@ img {
 
 /* Lesson Sidebar */
 .lesson-sidebar-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
+  overflow: visible !important;
+  height: auto;
 }
 
 .lesson-sidebar-wrapper .lesson-sidebar {
@@ -2849,22 +2916,21 @@ img {
 }
 
 .lesson-sidebar {
-  position: sticky !important;
-  top: var(--lesson-sticky-offset, 110px);
   align-self: flex-start;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 18px;
   padding: 1.5rem 0.75rem;
-  max-height: max(320px, calc(100vh - var(--lesson-sticky-offset, 110px) - 2.5rem));
-  overflow-y: auto;
   box-shadow: 0 24px 48px rgba(15, 53, 101, 0.08);
   scrollbar-width: thin;
   scrollbar-color: #667eea #e2e8f0;
+  display: block;
+  overflow: visible !important;
 }
 
 .lesson-sidebar::-webkit-scrollbar {
   width: 10px;
+  overflow: visible !important;
 }
 
 .lesson-sidebar::-webkit-scrollbar-track {
@@ -2948,6 +3014,8 @@ img {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   animation: slideIn 0.5s ease-out;
   min-height: 600px;
+  position: relative; /* ensure content sits above floating backgrounds */
+  z-index: 1;
 }
 
 @keyframes slideIn {
@@ -2964,7 +3032,7 @@ img {
 .slide-title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #1a202c;
+  color: #1a202c !important;
   margin-bottom: 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
@@ -2974,17 +3042,19 @@ img {
 
 /* Definition Cards */
 .definition-card {
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%) !important;
   padding: 1.5rem;
   border-radius: 12px;
   border-left: 5px solid #667eea;
   margin-bottom: 1.5rem;
   transition: all 0.3s ease;
+  border-radius: 30px;
+  border-left: 5px solid var(--dark-glass) !important;
 }
 
 .definition-card:hover {
-  transform: translateX(10px);
-  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+  transform: translateX(10px) !important;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15) !important;
 }
 
 .definition-card h4 {
@@ -2994,13 +3064,19 @@ img {
 }
 
 .program-intro {
-  background: white;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
   padding: 2rem;
   border-radius: 12px;
   border: 2px solid #e2e8f0;
   margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  border-left: 5px solid;
 }
-
+.program-intro:hover {
+  transform: translateX(-10px) !important;
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.2);
+}
 .program-intro h4 {
   color: #1a202c;
   font-size: 1.5rem;
@@ -5706,11 +5782,25 @@ body {
 
 .lesson-body {
   padding: 0 0 clamp(80px, 10vw, 110px);
+  overflow: visible !important;
+}
+
+.lesson-body .container {
+  max-width: 100vw !important;
+  overflow: visible !important;
+}
+
+.lesson-body .row {
+  overflow: visible !important;
+}
+
+.lesson-body .col-lg-4 {
+  overflow: visible !important;
 }
 
 .lesson-trail {
   position: sticky !important;
-  top: var(--lesson-sticky-offset, 110px) !important;
+  top: 120px !important;
   align-self: flex-start;
   background: rgba(255, 255, 255, 0.94);
   border-radius: var(--radius-lg);
@@ -5719,8 +5809,8 @@ body {
   padding: 1.6rem;
   display: grid;
   gap: 0.85rem;
-  max-height: max(320px, calc(100vh - var(--lesson-sticky-offset, 110px) - 2.5rem));
-  overflow-y: auto;
+  max-height: max(600px, calc(100vh - var(--lesson-sticky-offset, 110px) - 2.5rem));
+  overflow-y: auto; 
   overscroll-behavior: contain;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
@@ -5839,6 +5929,7 @@ body {
   padding: clamp(2rem, 4.5vw, 2.75rem);
   display: grid;
   gap: 2.2rem;
+  overflow-y: auto;
 }
 
 .lesson-audio-bar {
@@ -6080,28 +6171,19 @@ body {
   }
 
   .lesson-sidebar {
-    position: sticky !important;
     max-height: none;
-    overflow: visible;
     box-shadow: none;
     padding: 1.5rem 0;
     overscroll-behavior: auto;
   }
 
   .lesson-trail {
-    position: static;
-    display: flex;
-    overflow-x: auto;
-    overflow-y: visible;
+    position: sticky !important;
+    top: var(--lesson-sticky-offset, 96px) !important;
     padding: 1.25rem;
     gap: 0.75rem;
-    max-height: none;
+    max-height: calc(100vh - var(--lesson-sticky-offset, 96px) - 2rem);
     box-shadow: none;
-    overscroll-behavior: auto;
-  }
-
-  .lesson-chip {
-    min-width: 220px;
   }
 }
 
@@ -6165,6 +6247,23 @@ body {
     justify-content: center;
   }
 
+  .lesson-trail {
+    position: sticky !important;
+    top: var(--lesson-sticky-offset, 96px) !important;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 1rem;
+    gap: 0.75rem;
+    max-height: none;
+    box-shadow: none;
+    overscroll-behavior: auto;
+  }
+
+  .lesson-chip {
+    min-width: 220px;
+  }
+
   .lesson-hero {
     padding: 2.4rem 1.7rem;
   }
@@ -6179,6 +6278,8 @@ body {
 
   .lesson-trail {
     padding: 1rem;
+    position: sticky !important;
+    top: var(--lesson-sticky-offset, 96px) !important;
   }
 
   .lesson-content-card {
@@ -6557,4 +6658,45 @@ body {
 
 .dark-mode .scroll-top-chip {
   box-shadow: 0 25px 55px rgba(0, 173, 255, 0.4);
+}
+
+.lesson-body .container {
+  max-width: 100vw !important;
+  overflow: visible !important;
+}
+p.lead {
+  color: #fff;
+}
+.strong {
+  color: var(--blue-gradient) !important;
+}
+
+.lesson-slide .role-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 95, 175, 0.12);
+  padding: clamp(2rem, 4.5vw, 2.75rem);
+  display: grid;
+  gap: 0.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.lesson-slide .role-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 28px 58px rgba(8, 44, 110, 0.4);
+  border-color: rgba(0, 95, 175, 0.18);
+}
+.lesson-slide .role-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.75rem;
+  background-color: #004eb5;
+  box-shadow: 0 15px 24px rgba(6, 52, 110, 0.22);
+}
+.lesson-slide .role-card p {
+  color: #4b647f;
 }

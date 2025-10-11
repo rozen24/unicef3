@@ -28,6 +28,19 @@ class YouthHealthLMS {
     this.render();
   }
 
+  // Initialize or refresh AOS scroll animations across views
+  initAOS() {
+    if (typeof AOS === "undefined") return;
+    if (this._aosInitialized) {
+      try { AOS.refreshHard(); } catch (e) { AOS.refresh(); }
+      setTimeout(() => { try { AOS.refresh(); } catch (e) {} }, 80);
+    } else {
+      AOS.init({ duration: 800, once: true, offset: 60, easing: "ease-out-quart" });
+      this._aosInitialized = true;
+      setTimeout(() => { try { AOS.refresh(); } catch (e) {} }, 120);
+    }
+  }
+
   // Navigation methods
   navigateTo(view) {
     this.currentView = view;
@@ -380,42 +393,43 @@ class YouthHealthLMS {
       case "home":
         app.innerHTML = this.renderHome();
         this.initHomeScripts();
+        this.initAOS();
         break;
       case "login":
         app.innerHTML = this.renderLogin();
+        this.initAOS();
         this.attachLoginHandlers();
         break;
       case "register":
         app.innerHTML = this.renderRegister();
+        this.initAOS();
         this.attachRegisterHandlers();
         break;
       case "dashboard":
         app.innerHTML = this.renderDashboard();
+        this.initAOS();
         break;
       case "course":
         app.innerHTML = this.renderCourse();
+        this.initAOS();
         this.initLessonAudio();
         break;
       case "lesson-slider":
         app.innerHTML = this.renderLessonSlider();
         // Initialize lesson audio controls/state after DOM is ready
         this.initLessonAudio();
+        this.initAOS();
         break;
       case "certificate":
         app.innerHTML = this.renderCertificate();
+        this.initAOS();
         break;
     }
   }
 
   initHomeScripts() {
-    // Initialize AOS (if available)
-    if (typeof AOS !== "undefined") {
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100,
-      });
-    }
+    // Ensure AOS is active on home as well
+    this.initAOS();
 
     // Navbar scroll effect
     const handleScroll = () => {
@@ -2001,7 +2015,7 @@ class YouthHealthLMS {
           <div class="container">
             <div class="row g-4">
               <aside class="col-lg-4 lesson-sidebar-wrapper">
-                <div class="lesson-trail lesson-sidebar">
+                <div class="lesson-trail">
                   ${course.lessons
                     .map((lesson, index) => {
                       const isCurrent = index === activeIndex;

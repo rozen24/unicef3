@@ -57,20 +57,25 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="slide-title">Youth Health Ambassador Program (YHAP)</h2>
+            <h2 class="definition-card alert-info hover-lift-sm transition-base aos-init aos-animate gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Youth Health Ambassador Program (YHAP)</h2>
+            <div class="floating-bg" aria-hidden="true">
+              <span class="float-elem" style="top:8%; left:6%; width:70px; height:70px;"></span>
+              <span class="float-elem" style="top:35%; right:10%; width:90px; height:90px;"></span>
+              <span class="float-elem" style="bottom:12%; left:14%; width:80px; height:80px;"></span>
+            </div>
             
-            <div class="definition-card">
-              <h4><i class="fas fa-users me-2"></i>Youth</h4>
+            <div class=" definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="gradient-text transition-base"><i class="fas fa-users me-2 animate-float"></i>Youth</h4>
               <p>As per United Nations, youth refers to those persons aged between the ages of <strong>15 and 24</strong> without prejudice to other definitions by Member States. It is a period of transition from the dependence of childhood to adulthood's independence. Young People covers the age range 10-24 years and Adolescents as individuals in the 10-19 years age group.</p>
             </div>
 
-            <div class="definition-card">
-              <h4><i class="fas fa-heartbeat me-2"></i>Health</h4>
+            <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="200">
+              <h4 class="gradient-text transition-base"><i class="fas fa-heartbeat me-2 animate-float"></i>Health</h4>
               <p>As per World Health Organization (WHO), health is defined as a state of complete <strong>physical, mental, and social well-being</strong>, and not merely the absence of disease or infirmity.</p>
             </div>
 
-            <div class="program-intro">
-              <h4>About YHAP</h4>
+            <div class="program-intro hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="250">
+              <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>About YHAP</h4>
               <p>The Youth Health Ambassador Programme (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The programme is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p>
               
               <p>These programs equip youth with knowledge and skills in areas like physical health including SRH and mental wellbeing, enabling them to become active advocates for health and influence healthier choices within their communities and networks.</p>
@@ -124,65 +129,69 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="slide-title">Core Components of YHAP</h2>
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Core Components of YHAP</h2>
+            <div class="floating-bg" aria-hidden="true">
+              <span class="float-elem" style="top:10%; left:8%; width:70px; height:70px;"></span>
+              <span class="float-elem" style="bottom:10%; right:12%; width:90px; height:90px;"></span>
+            </div>
             
             <div class="row g-4">
               <div class="col-md-6">
-                <div class="component-card">
-                  <div class="component-icon bg-gradient-purple">
+                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="component-icon bg-gradient-purple animate-float">
                     <i class="fas fa-book-medical"></i>
                   </div>
-                  <h5>Health Literacy</h5>
+                  <h5 class="gradient-text transition-base">Health Literacy</h5>
                   <p>YHAP builds foundational health literacy through comprehensive training on essential health and wellbeing. This equips ambassadors with the expertise to act as credible sources of information and effective advocates for prevention and promotion.</p>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="component-card">
-                  <div class="component-icon bg-gradient-blue">
+                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="150">
+                  <div class="component-icon bg-gradient-blue animate-float">
                     <i class="fas fa-graduation-cap"></i>
                   </div>
-                  <h5>Health Education & Awareness</h5>
+                  <h5 class="gradient-text transition-base">Health Education & Awareness</h5>
                   <p>Youth Health Ambassadors (YHAs) will create health education and awareness through campaigns on key health issues, comprehensive trainings, mentorships etc., ensuring accurate dissemination of crucial health information.</p>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="component-card">
-                  <div class="component-icon bg-gradient-teal">
+                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="component-icon bg-gradient-teal animate-float">
                     <i class="fas fa-users"></i>
                   </div>
-                  <h5>Peer to Peer Influence</h5>
+                  <h5 class="gradient-text transition-base">Peer to Peer Influence</h5>
                   <p>The programme is built on the principle that peer-to-peer engagement is a powerful catalyst for change. By facilitating supportive mentorship and encouraging positive role-modeling among contemporaries.</p>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="component-card">
-                  <div class="component-icon bg-gradient-orange">
+                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="250">
+                  <div class="component-icon bg-gradient-orange animate-float">
                     <i class="fas fa-hand-fist"></i>
                   </div>
-                  <h5>Empowerment</h5>
+                  <h5 class="gradient-text transition-base">Empowerment</h5>
                   <p>YHAP empowers individuals by equipping them with the tools, confidence, and skills needed to take effective control and contribute to the economic development, creating a productive, resilient, and healthy workforce.</p>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="component-card">
-                  <div class="component-icon bg-gradient-green">
+                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="component-icon bg-gradient-green animate-float">
                     <i class="fas fa-flag"></i>
                   </div>
-                  <h5>Leadership</h5>
+                  <h5 class="gradient-text transition-base">Leadership</h5>
                   <p>The program cultivates leadership qualities in youth, preparing them to become effective, ethical, and inspiring agents of change in their communities.</p>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="component-card">
-                  <div class="component-icon bg-gradient-pink">
+                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="component-icon bg-gradient-pink animate-float">
                     <i class="fas fa-bullhorn"></i>
                   </div>
-                  <h5>Advocacy</h5>
+                  <h5 class="gradient-text transition-base">Advocacy</h5>
                   <p>YHAP builds foundational competencies in health advocacy, empowering youth to effectively raise voice, articulate public health priorities to drive systemic reform.</p>
                 </div>
               </div>
@@ -214,13 +223,13 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="slide-title">Roles and Responsibilities of Health Ambassador</h2>
-            <h3 class="text-center mb-4 gradient-text">Who am I?</h3>
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Roles and Responsibilities of Health Ambassador</h2>
+            <h3 class="text-center mb-4 gradient-text hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">Who am I?</h3>
             
             <div class="row g-4">
               <div class="col-md-6">
-                <div class="role-card">
-                  <div class="role-icon">
+                <div class="role-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-right" data-aos-delay="100">
+                  <div class="role-icon animate-float">
                     <i class="fas fa-shield-heart"></i>
                   </div>
                   <p>I am equipped with expertise in safeguarding adolescent and youth health and well-being, enabling me to contribute meaningfully to society while harnessing the triple dividend of health, social, and economic benefits</p>
@@ -228,8 +237,8 @@ const coursesData = [
               </div>
 
               <div class="col-md-6">
-                <div class="role-card">
-                  <div class="role-icon">
+                <div class="role-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-left" data-aos-delay="150">
+                  <div class="role-icon animate-float">
                     <i class="fas fa-share-nodes"></i>
                   </div>
                   <p>I actively empower my peers by sharing knowledge on health promotion, disease prevention, and holistic well-being, fostering informed decision-making among adolescents and youth</p>
@@ -237,8 +246,8 @@ const coursesData = [
               </div>
 
               <div class="col-md-6">
-                <div class="role-card">
-                  <div class="role-icon">
+                <div class="role-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-right" data-aos-delay="200">
+                  <div class="role-icon animate-float">
                     <i class="fas fa-handshake"></i>
                   </div>
                   <p>Through advocacy, I engage policy makers, stakeholders and community influencer, gatekeepers to prioritize adolescent health, ensuring supportive policies and collaborative action for sustainable well-being</p>
@@ -246,8 +255,8 @@ const coursesData = [
               </div>
 
               <div class="col-md-6">
-                <div class="role-card">
-                  <div class="role-icon">
+                <div class="role-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-left" data-aos-delay="250">
+                  <div class="role-icon animate-float">
                     <i class="fas fa-chart-line"></i>
                   </div>
                   <p>I drive awareness and demand creation within communities, inspiring collective responsibility and action toward better health outcomes for adolescents and youth</p>
@@ -255,8 +264,8 @@ const coursesData = [
               </div>
             </div>
 
-            <div class="text-center mt-4">
-              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Youth Health Ambassador" class="img-fluid rounded-4 shadow-lg" style="max-height: 300px; object-fit: cover;">
+            <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="150">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Youth Health Ambassador" class="img-fluid rounded-4 shadow-lg hover-lift-sm transition-base" style="max-height: 300px; object-fit: cover;">
             </div>
           </div>
         `
@@ -285,82 +294,82 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="slide-title">Eligibility and Steps to be a YHA</h2>
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Eligibility and Steps to be a YHA</h2>
             
-            <div class="alert alert-info mb-4">
+            <div class="alert alert-info mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">
               <h5><i class="fas fa-info-circle me-2"></i>Eligibility Criteria</h5>
               <p class="mb-0">Any person between <strong>15-24 years of age</strong> is eligible to be a Youth Health Ambassador.</p>
             </div>
 
-            <h4 class="mb-4">Steps to Become a Youth Health Ambassador</h4>
+            <h4 class="mb-4 gradient-text transition-base" data-aos="fade-up" data-aos-delay="100">Steps to Become a Youth Health Ambassador</h4>
 
             <div class="row g-3">
-              <div class="col-md-4">
-                <div class="step-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="step-number">1</div>
                   <h6>Online Registration</h6>
                   <p>Register in Health Ambassador Programme platform</p>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="step-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="step-number">2</div>
                   <h6>Unique ID Generation</h6>
                   <p>Receive your unique identification number</p>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="step-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="step-number">3</div>
                   <h6>Login to Platform</h6>
                   <p>Access the Website/App with credentials</p>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="step-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="240">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="step-number">4</div>
                   <h6>Access Course</h6>
                   <p>Access Health Ambassador course content</p>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="step-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="280">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="step-number">5</div>
                   <h6>Complete Course</h6>
                   <p>Complete online Health Ambassador modules</p>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="step-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="320">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="step-number">6</div>
                   <h6>Pass Assessment</h6>
                   <p>Obtain passing marks in final assessment</p>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="step-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="360">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="step-number">7</div>
                   <h6>System Certification</h6>
                   <p>Receive system-generated certification</p>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="step-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="step-number">8</div>
                   <h6>Oath Taking</h6>
                   <p>Complete self-declaration ceremony</p>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="step-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="440">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="step-number">9</div>
                   <h6>Final Certificate</h6>
                   <p>Receive Final Certificate (Valid 2 years)</p>
@@ -394,16 +403,16 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="slide-title">Distribution of Young People</h2>
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Distribution of Young People</h2>
             
-            <div class="stat-highlight mb-4">
+            <div class="stat-highlight mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="80">
               <h3>Global Youth Population</h3>
-              <p class="lead">There are over <strong class="text-primary">1.8 billion youth</strong> in the world today, <strong>90%</strong> of whom live in developing countries, where they tend to make up a large proportion of the population.</p>
+              <p class="lead">There are over <strong class="text-primary strong">1.8 billion youth</strong> in the world today, <strong>90%</strong> of whom live in developing countries, where they tend to make up a large proportion of the population.</p>
             </div>
 
             <div class="row g-4 mb-4">
-              <div class="col-md-6">
-                <div class="stat-card">
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
+                <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="stat-icon">
                     <i class="fas fa-users-between-lines"></i>
                   </div>
@@ -413,8 +422,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="stat-card">
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
+                <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="stat-icon">
                     <i class="fas fa-user-group"></i>
                   </div>
@@ -425,7 +434,7 @@ const coursesData = [
               </div>
             </div>
 
-            <div class="info-box">
+            <div class="info-box hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="200">
               <i class="fas fa-globe me-2"></i>
               <p class="mb-0">Young people represent a significant demographic force globally, with developing countries having the largest youth populations.</p>
             </div>
@@ -456,15 +465,15 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="slide-title">Why Adolescent Health is Important?</h2>
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Why Adolescent Health is Important?</h2>
             
-            <div class="highlight-box mb-4">
+            <div class="highlight-box mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="80">
               <h4>Investments in the current generation of 10-24-year-olds will reap a <span class="text-primary">triple dividend</span></h4>
             </div>
 
             <div class="row g-4 mb-4">
-              <div class="col-md-4">
-                <div class="dividend-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
+                <div class="dividend-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="dividend-icon">
                     <i class="fas fa-heart-pulse"></i>
                   </div>
@@ -473,8 +482,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="dividend-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+                <div class="dividend-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="dividend-icon">
                     <i class="fas fa-briefcase"></i>
                   </div>
@@ -483,8 +492,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="dividend-card">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="dividend-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="dividend-icon">
                     <i class="fas fa-baby"></i>
                   </div>
@@ -494,7 +503,7 @@ const coursesData = [
               </div>
             </div>
 
-            <div class="roi-card">
+            <div class="roi-card hover-lift-sm transition-base" data-aos="zoom-in" data-aos-delay="220">
               <div class="row align-items-center">
                 <div class="col-md-8">
                   <h4><i class="fas fa-dollar-sign me-2"></i>Return on Investment</h4>
@@ -536,53 +545,53 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="slide-title">Global and Bangladesh Scenario</h2>
-            <h4 class="mb-4">Mortality and Morbidity of Young People</h4>
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Global and Bangladesh Scenario</h2>
+            <h4 class="mb-4 gradient-text transition-base" data-aos="fade-up" data-aos-delay="60">Mortality and Morbidity of Young People</h4>
             
             <div class="row g-4 mb-4">
               <div class="col-12">
-                <div class="fact-card alert-danger">
+                <div class="fact-card alert-danger hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="90">
                   <i class="fas fa-exclamation-triangle"></i>
                   <p>Over <strong>1.5 million</strong> adolescents and young adults aged 10–24 years died in 2021, about <strong>4500 every day</strong></p>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="fact-card alert-info">
+                <div class="fact-card alert-info hover-lift-sm transition-base" data-aos="fade-right" data-aos-delay="120">
                   <i class="fas fa-shield-halved"></i>
                   <p>Young adolescents aged 10–14 years have the <strong>lowest risk of death</strong> among all age groups</p>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="fact-card alert-warning">
+                <div class="fact-card alert-warning hover-lift-sm transition-base" data-aos="fade-left" data-aos-delay="150">
                   <i class="fas fa-car-burst"></i>
                   <p>Injuries, interpersonal violence, self-harm and maternal conditions are the <strong>leading causes of death</strong></p>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="fact-card alert-primary">
+                <div class="fact-card alert-primary hover-lift-sm transition-base" data-aos="fade-right" data-aos-delay="180">
                   <i class="fas fa-brain"></i>
                   <p>Half of all mental health disorders in adulthood start by age 18, but <strong>most cases are undetected</strong></p>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="fact-card alert-secondary">
+                <div class="fact-card alert-secondary hover-lift-sm transition-base" data-aos="fade-left" data-aos-delay="210">
                   <i class="fas fa-baby-carriage"></i>
                   <p>Globally, there were <strong>42 births per 1000</strong> to girls aged 15–19 years in 2021</p>
                 </div>
               </div>
             </div>
 
-            <div class="bangladesh-section">
-              <h5 class="mb-3">Bangladesh Context (Bengali)</h5>
+            <div class="bangladesh-section" data-aos="fade-up" data-aos-delay="240">
+              <h5 class="mb-3 gradient-text transition-base">Bangladesh Context (Bengali)</h5>
               <p>প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন কারণে অসুস্থ হয় বা মৃত্যুবরণ করে।</p>
               
               <div class="row g-3">
                 <div class="col-md-6">
-                  <div class="bengali-card">
+                  <div class="bengali-card hover-lift-sm transition-base" data-aos="fade-right" data-aos-delay="260">
                     <h6><i class="fas fa-mars text-primary me-2"></i>কিশোরদের মৃত্যুর প্রধান ৫টি কারণ:</h6>
                     <ol>
                       <li>সড়ক দুর্ঘটনা</li>
@@ -595,7 +604,7 @@ const coursesData = [
                 </div>
 
                 <div class="col-md-6">
-                  <div class="bengali-card">
+                  <div class="bengali-card hover-lift-sm transition-base" data-aos="fade-left" data-aos-delay="300">
                     <h6><i class="fas fa-venus text-danger me-2"></i>কিশোরীদের মৃত্যুর প্রধান ৫টি কারণ:</h6>
                     <ol>
                       <li>ডায়রিয়া</li>
@@ -635,9 +644,9 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="slide-title">Adolescent Health in Bangladesh</h2>
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Adolescent Health in Bangladesh</h2>
             
-            <div class="alert alert-danger mb-4">
+            <div class="alert alert-danger mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="80">
               <h5><i class="fas fa-exclamation-circle me-2"></i>Critical Issue</h5>
               <p class="mb-0">Bangladesh is among <strong>top 10 countries</strong> with highest level of Child Marriage</p>
             </div>
@@ -645,43 +654,43 @@ const coursesData = [
             <div class="health-stats">
               <h5 class="mb-3">Key Health Challenges</h5>
               <div class="row g-3">
-                <div class="col-md-6">
-                  <div class="challenge-card">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="110">
+                  <div class="challenge-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                     <i class="fas fa-ring text-warning"></i>
                     <p><strong>Child Marriage:</strong> Adolescent girls face early marriage and maternal complications</p>
                   </div>
                 </div>
 
-                <div class="col-md-6">
-                  <div class="challenge-card">
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="140">
+                  <div class="challenge-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                     <i class="fas fa-user-injured text-danger"></i>
                     <p><strong>Violence:</strong> Sexual harassment, gender-based discrimination, and abuse</p>
                   </div>
                 </div>
 
-                <div class="col-md-6">
-                  <div class="challenge-card">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="170">
+                  <div class="challenge-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                     <i class="fas fa-child text-info"></i>
                     <p><strong>Malnutrition:</strong> Stunting, underweight, and anemia issues</p>
                   </div>
                 </div>
 
-                <div class="col-md-6">
-                  <div class="challenge-card">
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                  <div class="challenge-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                     <i class="fas fa-pills text-primary"></i>
                     <p><strong>Substance Use:</strong> Tobacco, drugs, and other addictions among adolescents</p>
                   </div>
                 </div>
 
-                <div class="col-md-6">
-                  <div class="challenge-card">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="230">
+                  <div class="challenge-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                     <i class="fas fa-virus text-success"></i>
                     <p><strong>STIs:</strong> Sexually transmitted infections from unsafe practices</p>
                   </div>
                 </div>
 
-                <div class="col-md-6">
-                  <div class="challenge-card">
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="260">
+                  <div class="challenge-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                     <i class="fas fa-graduation-cap text-secondary"></i>
                     <p><strong>Education:</strong> High dropout rates, especially among girls</p>
                   </div>
@@ -689,8 +698,8 @@ const coursesData = [
               </div>
             </div>
 
-            <div class="text-center mt-4">
-              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Bangladesh Youth" class="img-fluid rounded-4 shadow" style="max-height: 300px; object-fit: cover;">
+            <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="300">
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Bangladesh Youth" class="img-fluid rounded-4 shadow hover-lift-sm transition-base" style="max-height: 300px; object-fit: cover;">
             </div>
           </div>
         `
@@ -720,11 +729,11 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="slide-title">Key Facts About Adolescent Health</h2>
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Key Facts About Adolescent Health</h2>
             
             <div class="row g-3">
-              <div class="col-md-6">
-                <div class="key-fact">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="key-fact hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="fact-icon bg-gradient-purple">
                     <i class="fas fa-brain"></i>
                   </div>
@@ -732,8 +741,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="key-fact">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="140">
+                <div class="key-fact hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="fact-icon bg-gradient-blue">
                     <i class="fas fa-child"></i>
                   </div>
@@ -741,8 +750,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="key-fact">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="180">
+                <div class="key-fact hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="fact-icon bg-gradient-orange">
                     <i class="fas fa-droplet"></i>
                   </div>
@@ -750,8 +759,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="key-fact">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="220">
+                <div class="key-fact hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="fact-icon bg-gradient-green">
                     <i class="fas fa-weight-scale"></i>
                   </div>
@@ -759,8 +768,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="key-fact">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="260">
+                <div class="key-fact hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="fact-icon bg-gradient-pink">
                     <i class="fas fa-hand-dots"></i>
                   </div>
@@ -768,8 +777,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="key-fact">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="key-fact hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="fact-icon bg-gradient-teal">
                     <i class="fas fa-person-harassing"></i>
                   </div>
@@ -777,8 +786,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="key-fact">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="340">
+                <div class="key-fact hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="fact-icon bg-gradient-purple">
                     <i class="fas fa-children"></i>
                   </div>
@@ -786,8 +795,8 @@ const coursesData = [
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="key-fact">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="380">
+                <div class="key-fact hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="fact-icon bg-gradient-blue">
                     <i class="fas fa-graduation-cap"></i>
                   </div>
