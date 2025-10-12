@@ -2875,15 +2875,16 @@ img {
   padding: 2rem 0;
   box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
   position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-.lesson-topbar h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: white;
+/* Lesson Sidebar */
+.lesson-sidebar-wrapper {
+  display: block;
+  position: sticky;
+  top: var(--lesson-sticky-offset, 110px);
+  overflow: visible !important;
+  height: auto;
+  align-self: flex-start;
 }
 
 .lesson-course-info {
@@ -2903,12 +2904,6 @@ img {
 
 .lesson-course-info .info-item i {
   font-size: 1rem;
-}
-
-/* Lesson Sidebar */
-.lesson-sidebar-wrapper {
-  overflow: visible !important;
-  height: auto;
 }
 
 .lesson-sidebar-wrapper .lesson-sidebar {
@@ -3018,27 +3013,23 @@ img {
   z-index: 1;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.lesson-trail {
+  position: static;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 95, 175, 0.12);
+  padding: 1.6rem;
+  display: grid;
+  gap: 0.85rem;
+  max-height: max(320px, calc(100vh - var(--lesson-sticky-offset, 110px) - 2.5rem));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
 }
 
-.slide-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #1a202c !important;
-  margin-bottom: 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 
 /* Definition Cards */
 .definition-card {
