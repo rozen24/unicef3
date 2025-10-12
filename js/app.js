@@ -579,7 +579,7 @@ class YouthHealthLMS {
       <nav class="navbar navbar-expand-lg fixed-top nav-glass">
         <div class="container">
           <a class="navbar-brand d-flex align-items-center gap-2" href="#home" onclick="app.navigateTo('home'); return false;">
-            <img src="img/UNICEF_Logo.png" alt="UNICEF Logo" class="brand-mark">
+            <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
