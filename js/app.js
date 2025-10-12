@@ -768,56 +768,7 @@ class YouthHealthLMS {
       </section>
 
       <!-- Ambassador Roles -->
-      <section id="roles" class="section-padding slide-section slide-section--dark text-white">
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-4" data-aos="fade-right">
-              <div class="section-header text-lg-start text-center">
-                <span class="slide-kicker">Ambassador identity</span>
-                <h2 class="section-heading text-white">What it feels like to lead the change</h2>
-                <p class="section-paragraph">
-                  Youth Health Ambassadors champion whole-community wellbeing and create ripples of positive change.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-8" data-aos="fade-left">
-              <div class="role-grid">
-                ${[
-                  {
-                    icon: "fa-shield-heart",
-                    text:
-                      "Protect adolescent health with accurate information, safeguarding the triple dividend of social, economic, and health outcomes."
-                  },
-                  {
-                    icon: "fa-hand-holding-heart",
-                    text:
-                      "Share practical guidance on disease prevention, nutrition, and mental wellbeing so peers can make informed decisions."
-                  },
-                  {
-                    icon: "fa-users-line",
-                    text:
-                      "Advocate with policymakers, guardians, and community leaders to secure resources that uplift adolescents."
-                  },
-                  {
-                    icon: "fa-chart-line",
-                    text:
-                      "Spark demand for health services by telling compelling stories, leading campaigns, and tracking results."
-                  }
-                ]
-                  .map(
-                    (role, index) => `
-                      <article class="role-card" data-aos="fade-up" data-aos-delay="${index * 80}">
-                        <div class="role-icon"><i class="fa-solid ${role.icon}"></i></div>
-                        <p>${role.text}</p>
-                      </article>
-                    `
-                  )
-                  .join("")}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- Ambassador Journey -->
       <section id="eligibility" class="section-padding slide-section">
