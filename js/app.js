@@ -1920,7 +1920,7 @@ class YouthHealthLMS {
         <section class="lesson-body">
           <div class="container">
             <div class="row g-4">
-              <aside class="col-lg-4 lesson-sidebar-wrapper">
+              <aside class="col-lg-4">
                 <div class="lesson-trail">
                   ${course.lessons
                     .map((lesson, index) => {

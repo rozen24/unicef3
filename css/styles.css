@@ -63,7 +63,6 @@ body {
   color: #1a202c;
   background-color: #f7fafc;
   line-height: 1.7;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2878,14 +2877,14 @@ img {
 }
 
 /* Lesson Sidebar */
-.lesson-sidebar-wrapper {
+/* .lesson-sidebar-wrapper {
   display: block;
   position: sticky;
   top: var(--lesson-sticky-offset, 110px);
   overflow: visible !important;
   height: auto;
   align-self: flex-start;
-}
+} */
 
 .lesson-course-info {
   display: flex;
@@ -2910,7 +2909,7 @@ img {
   width: 100%;
 }
 
-.lesson-sidebar {
+/* .lesson-sidebar {
   align-self: flex-start;
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -2921,7 +2920,7 @@ img {
   scrollbar-color: #667eea #e2e8f0;
   display: block;
   overflow: visible !important;
-}
+} */
 
 .lesson-sidebar::-webkit-scrollbar {
   width: 10px;
@@ -3011,23 +3010,6 @@ img {
   min-height: 600px;
   position: relative; /* ensure content sits above floating backgrounds */
   z-index: 1;
-}
-
-.lesson-trail {
-  position: static;
-  align-self: flex-start;
-  background: rgba(255, 255, 255, 0.94);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(0, 95, 175, 0.12);
-  padding: 1.6rem;
-  display: grid;
-  gap: 0.85rem;
-  max-height: max(320px, calc(100vh - var(--lesson-sticky-offset, 110px) - 2.5rem));
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
 }
 
 
@@ -5791,7 +5773,7 @@ body {
 
 .lesson-trail {
   position: sticky !important;
-  top: 120px !important;
+  top: 0px !important;
   align-self: flex-start;
   background: rgba(255, 255, 255, 0.94);
   border-radius: var(--radius-lg);
