@@ -579,7 +579,7 @@ class YouthHealthLMS {
       <nav class="navbar navbar-expand-lg fixed-top nav-glass">
         <div class="container">
           <a class="navbar-brand d-flex align-items-center gap-2" href="#home" onclick="app.navigateTo('home'); return false;">
-            <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark">
+            <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -934,7 +934,7 @@ class YouthHealthLMS {
         <div class="container py-3">
           <div class="d-flex align-items-center gap-2">
             <a class="navbar-brand" href="#" onclick="app.navigateTo('home'); return false;">
-                  <img src="img/UNICEF_Logo.png" alt="" style="width: 120px; height: 50px;">
+              <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
             </a>
           </div>
         </div>
@@ -990,7 +990,7 @@ class YouthHealthLMS {
         <div class="container py-3">
           <div class="d-flex align-items-center gap-2">
             <a class="navbar-brand" href="#" onclick="app.navigateTo('home'); return false;">
-                  <img src="img/UNICEF_Logo.png" alt="" style="width: 120px; height: 50px;">
+                  <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark">
             </a>
           </div>
         </div>
@@ -1161,7 +1161,7 @@ class YouthHealthLMS {
         <nav class="navbar navbar-expand-lg fixed-top nav-glass nav-dashboard">
           <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="app.navigateTo('home'); return false;">
-              <img src="img/UNICEF_Logo.png" alt="UNICEF Logo" class="brand-mark">
+              <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
             </a>
             <div class="d-flex align-items-center gap-3 ms-auto">
               <button class="btn btn-chip d-none d-md-inline-flex" onclick="app.navigateTo('home'); return false;">
