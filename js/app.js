@@ -388,6 +388,13 @@ class YouthHealthLMS {
   // Render methods
   render() {
     const app = document.getElementById("app");
+    // Control horizontal overflow globally except on lesson slider view
+    const body = document.body;
+    if (this.currentView === 'lesson-slider') {
+      body.classList.remove('no-overflow-x');
+    } else {
+      body.classList.add('no-overflow-x');
+    }
 
     switch (this.currentView) {
       case "home":
