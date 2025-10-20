@@ -1998,6 +1998,102 @@ img {
   transform: translateY(-4px);
 }
 
+/* ======== Lesson Slider Enhancements ======== */
+.chapter-accordion .chapter-button {
+  background: linear-gradient(135deg, rgba(0, 174, 239, 0.08), rgba(0, 119, 200, 0.08));
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.chapter-accordion .chapter-button:not(.collapsed) {
+  background: linear-gradient(135deg, rgba(0, 174, 239, 0.2), rgba(0, 119, 200, 0.2));
+  box-shadow: 0 8px 24px rgba(0, 119, 200, 0.15);
+}
+.chapter-accordion .chapter-button:hover {
+  transform: translateY(-1px);
+}
+.chapter-accordion .chapter-index {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #00AEEF, #0077C8);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 18px rgba(0, 119, 200, 0.25);
+}
+.chapter-accordion .chapter-title {
+  font-weight: 700;
+}
+.lessons-list .lesson-item {
+  cursor: pointer;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+.lessons-list .lesson-item .lesson-icon {
+  display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center;
+  border-radius: 10px; background: linear-gradient(135deg, #e6f7ff, #f0fbff); color: #0077C8;
+}
+.lessons-list .lesson-item:hover {
+  background: linear-gradient(135deg, rgba(0, 174, 239, 0.1), rgba(0, 119, 200, 0.08));
+  transform: translateX(2px);
+}
+.lessons-list .lesson-item.is-active {
+  background: linear-gradient(135deg, #00AEEF, #0077C8);
+  color: #fff;
+}
+.lessons-list .lesson-item.is-active .lesson-icon { background: rgba(255,255,255,0.2); color: #fff; }
+.lessons-list .lesson-item .lesson-state { color: #00a3e0; }
+.lessons-list .lesson-item.is-active .lesson-state { color: #fff; }
+
+.chapter-progress-pill {
+  font-weight: 700; font-size: .85rem; padding: .2rem .6rem; border-radius: 999px;
+  background: rgba(0, 119, 200, 0.08); color: #0b2a4a; border: 1px solid rgba(0,119,200,.15);
+}
+
+.inline-lesson-nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.inline-lesson-nav .btn { border-radius: 999px; }
+.inline-lesson-nav .btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.chapter-nav-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.chapter-nav-actions .btn { border-radius: 999px; }
+.chapter-nav-actions .btn:disabled { opacity: .6; cursor: not-allowed; }
+
+/* Dashboard chapters browse */
+.course-chapters-card {
+  background: #fff; border-radius: 16px; padding: 1rem 1rem 0.75rem; box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 119, 200, 0.12);
+}
+.course-chapters-header { display:flex; align-items:center; justify-content: space-between; margin-bottom: .5rem; }
+.chapters-list { display: grid; gap: .5rem; }
+.chapter-block { padding: .75rem; border-radius: 12px; background: linear-gradient(180deg, #f6fafe, #eef7ff); }
+.chapter-block__title { display:flex; align-items:center; gap: .5rem; font-weight: 700; margin-bottom: .5rem; }
+.chapter-badge { display:inline-flex; width: 28px; height:28px; align-items:center; justify-content:center; border-radius:999px; background: linear-gradient(135deg, #00AEEF, #0077C8); color:#fff; font-weight:800; font-size:.85rem; }
+.chapter-lessons { display:flex; flex-wrap: wrap; gap: .5rem; }
+.lesson-tag { border:none; background: rgba(0, 119, 200, 0.08); color:#0b2a4a; padding: .5rem .75rem; border-radius: 999px; font-weight:600; transition: transform .2s ease, background .25s ease; }
+.lesson-tag:hover { transform: translateY(-2px); background: rgba(0, 119, 200, 0.15); }
+
+/* Dashboard accordion overrides */
+.dashboard-course-accordion .accordion-button { background: linear-gradient(135deg, rgba(0, 174, 239, 0.08), rgba(0, 119, 200, 0.08)); }
+.dashboard-course-accordion .accordion-button:not(.collapsed) { background: linear-gradient(135deg, rgba(0, 174, 239, 0.16), rgba(0, 119, 200, 0.16)); }
+.dashboard-course-accordion .chapter-progress-pill { margin-left: auto; }
+
+/* Ensure sidebar trail can scroll if tall */
+.lesson-trail { max-height: calc(100vh - 220px); overflow: auto; padding-right: 4px; }
+
 .card-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -3068,7 +3164,7 @@ img {
 .lesson-sidebar-item .lesson-title {
   flex: 1;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 .lesson-sidebar-item.active .lesson-title {
@@ -5792,8 +5888,8 @@ body {
 .lesson-title {
   position: relative;
   z-index: 2;
-  font-size: clamp(2.2rem, 3.6vw, 3.1rem);
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
