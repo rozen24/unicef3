@@ -9,6 +9,389 @@ const coursesData = [
     level: 'Comprehensive',
     imageUrl: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
     enrolled: 0,
+    // Chapterized structure
+    chapters: [
+      {
+        id: 'ch-1',
+        title: 'Chapter-1: Introduction of Young Health Ambassador Program (YHAP)',
+        lessons: [
+          // Understanding YHAP
+          {
+            id: 'ch1-lesson-1',
+            title: 'Understanding Youth Health Ambassador Programme',
+            icon: 'fa-heartbeat',
+            gradientClass: 'bg-gradient-purple',
+            audioFile: '1.mp3',
+            quiz: { passingScore: 80, questions: [{ id:'q1a', question: 'What age defines youth per UN?', options:['15-24','10-19','18-29','12-21'], correctAnswer:0 }] },
+            content: (function(){
+              // reuse existing lesson-1 content
+              return `
+          <div class="lesson-slide">
+            <h2 class="definition-card alert-info hover-lift-sm transition-base aos-init aos-animate gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Youth Health Ambassador Program (YHAP)</h2>
+            <div class="floating-bg" aria-hidden="true">
+              <span class="float-elem" style="top:8%; left:6%; width:70px; height:70px;"></span>
+              <span class="float-elem" style="top:35%; right:10%; width:90px; height:90px;"></span>
+              <span class="float-elem" style="bottom:12%; left:14%; width:80px; height:80px;"></span>
+            </div>
+            <div class=" definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="gradient-text transition-base"><i class="fas fa-users me-2 animate-float"></i>Youth</h4>
+              <p>As per United Nations, youth refers to those persons aged between the ages of <strong>15 and 24</strong> without prejudice to other definitions by Member States. It is a period of transition from the dependence of childhood to adulthood's independence. Young People covers the age range 10-24 years and Adolescents as individuals in the 10-19 years age group.</p>
+            </div>
+            <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="200">
+              <h4 class="gradient-text transition-base"><i class="fas fa-heartbeat me-2 animate-float"></i>Health</h4>
+              <p>As per World Health Organization (WHO), health is defined as a state of complete <strong>physical, mental, and social well-being</strong>, and not merely the absence of disease or infirmity.</p>
+            </div>
+            <div class="program-intro hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="250">
+              <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>About YHAP</h4>
+              <p>The Youth Health Ambassador Programme (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The programme is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p>
+              <p>These programs equip youth with knowledge and skills in areas like physical health including SRH and mental wellbeing, enabling them to become active advocates for health and influence healthier choices within their communities and networks.</p>
+            </div>
+          </div>`; })()
+          },
+          // Six pillars
+          {
+            id: 'ch1-lesson-2',
+            title: 'Six pillars that build confident health ambassadors',
+            icon: 'fa-layer-group',
+            gradientClass: 'bg-gradient-blue',
+            audioFile: '2.mp3',
+            quiz: { passingScore: 80, questions: [{ id:'q1b', question: 'Which pillar focuses on accurate messaging?', options:['Leadership','Advocacy','Health Education & Awareness','Empowerment'], correctAnswer:2 }] },
+            content: (function(){ return `
+          <div class="lesson-slide">
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Core Components of YHAP</h2>
+            <div class="floating-bg" aria-hidden="true">
+              <span class="float-elem" style="top:10%; left:8%; width:70px; height:70px;"></span>
+              <span class="float-elem" style="bottom:10%; right:12%; width:90px; height:90px;"></span>
+            </div>
+            <div class="row g-4">${['Health Literacy','Health Education & Awareness','Peer to Peer Influence','Empowerment','Leadership','Advocacy'].map((t,i)=>`
+              <div class="col-md-6">
+                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${100+i*50}">
+                  <div class="component-icon bg-gradient-${['purple','blue','teal','orange','green','pink'][i]} animate-float"><i class="fas ${['fa-book-medical','fa-graduation-cap','fa-users','fa-hand-fist','fa-flag','fa-bullhorn'][i]}"></i></div>
+                  <h5 class="gradient-text transition-base">${t}</h5>
+                  <p>${['Foundational knowledge for credible advocacy.','Campaigns and toolkits for accurate information.','Peer mentoring and positive role-modeling.','Agency through challenges and real-world practice.','Lead local projects with mentors and analytics.','Policy primers and stakeholder engagement.'][i]}</p>
+                </div>
+              </div>`).join('')}
+            </div>
+          </div>`; })()
+          },
+          // Who am I
+          {
+            id: 'ch1-lesson-3',
+            title: 'Who Am I as a Health Ambassador?',
+            icon: 'fa-user-shield',
+            gradientClass: 'bg-gradient-teal',
+            audioFile: '3.mp3',
+            quiz: { passingScore: 80, questions: [{ id:'q1c', question: 'Advocacy includes engaging which stakeholders?', options:['Only peers','Policy makers and gatekeepers','Only media','No one'], correctAnswer:1 }] },
+            content: (function(){ return `
+          <div class="lesson-slide">
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Roles and Responsibilities of Health Ambassador</h2>
+            <h3 class="text-center mb-4 gradient-text hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">Who am I?</h3>
+            <div class="row g-4">${[
+              {icon:'fa-shield-heart', text:'Safeguard adolescent health and well-being to achieve a triple dividend.'},
+              {icon:'fa-share-nodes', text:'Empower peers by sharing knowledge on health promotion and prevention.'},
+              {icon:'fa-handshake', text:'Advocate with policy makers and community leaders to prioritize adolescent health.'},
+              {icon:'fa-chart-line', text:'Drive awareness and demand creation for better outcomes.'}
+            ].map((f,i)=>`
+              <div class="col-md-6">
+                <div class="role-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="${i%2?'fade-left':'fade-right'}" data-aos-delay="${100+i*50}">
+                  <div class="role-icon animate-float"><i class="fas ${f.icon}"></i></div>
+                  <p>${f.text}</p>
+                </div>
+              </div>`).join('')}
+            </div>
+          </div>`; })()
+          },
+          // Nine steps
+          {
+            id: 'ch1-lesson-4',
+            title: 'Nine interactive steps to become a certified Youth Health Ambassador',
+            icon: 'fa-clipboard-check',
+            gradientClass: 'bg-gradient-orange',
+            audioFile: '4.mp3',
+            quiz: { passingScore: 80, questions: [{ id:'q1d', question: 'Which step confirms identity?', options:['Registration','Unique ID Generation','Assessment','Certificate download'], correctAnswer:1 }] },
+            content: (function(){ return `
+          <div class="lesson-slide">
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Eligibility and Steps to be a YHA</h2>
+            <div class="alert alert-info mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">
+              <h5><i class="fas fa-info-circle me-2"></i>Eligibility</h5>
+              <p class="mb-0">Any person aged <strong>15-24 years</strong> can become a Youth Health Ambassador.</p>
+            </div>
+            <div class="row g-3">${[
+              'Online Registration','Unique ID Generation','Secure Login','Access Course','Complete Modules','Pass Assessment','System Certification','Oath Taking','Final Certificate'
+            ].map((t,i)=>`
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="${120+i*40}">
+                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+                  <div class="step-number">${i+1}</div>
+                  <h6>${t}</h6>
+                </div>
+              </div>`).join('')}
+            </div>
+          </div>`; })()
+          },
+          // Youth Around the World
+          {
+            id: 'ch1-lesson-5',
+            title: 'Youth Around the World',
+            icon: 'fa-earth-americas',
+            gradientClass: 'bg-gradient-green',
+            audioFile: '5.mp3',
+            quiz: { passingScore: 80, questions: [{ id:'q1e', question: 'Approximate share of youth living in developing countries?', options:['30%','50%','70%','90%'], correctAnswer:3 }] },
+            content: (function(){ return `
+          <div class="lesson-slide">
+            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Distribution of Young People</h2>
+            <div class="row g-4 mb-4">
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
+                <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+                  <div class="stat-icon"><i class="fas fa-users-between-lines"></i></div>
+                  <h4>49.5 Million</h4><p>Total young people in Bangladesh (~30%)</p>
+                </div>
+              </div>
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
+                <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+                  <div class="stat-icon"><i class="fas fa-user-group"></i></div>
+                  <h4>31.5 Million</h4><p>Youth (15–24 years) in Bangladesh</p>
+                </div>
+              </div>
+            </div>
+          </div>`; })()
+          }
+        ]
+      },
+      {
+        id: 'ch-2',
+        title: 'Chapter-2: Global and Bangladesh Scenario',
+        lessons: [
+          {
+            id: 'ch2-lesson-1',
+            title: 'Distribution of young people',
+            icon: 'fa-map-location-dot',
+            gradientClass: 'bg-gradient-blue',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2a', question: 'A youthful population can be a…', options:['Barrier','Dividend','Burden','Myth'], correctAnswer:1 }] },
+            content: `
+            <div class="lesson-slide">
+              <h2 class="slide-title gradient-text" data-aos="fade-up">Distribution of young people</h2>
+              <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in">
+                  <article class="modern-card glass-card">
+                    <h5>Geographic spread</h5>
+                    <p>Urban and rural contexts shape access to education, health, and safe spaces.</p>
+                    <figure class="image-card" style="height:220px"><img src="img/Distribution/distrubation-map.jpg" alt="Map"></figure>
+                  </article>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="80">
+                  <article class="modern-card glass-card">
+                    <h5>Population pyramid</h5>
+                    <p>A youthful population can deliver a demographic dividend with the right investments.</p>
+                    <figure class="image-card" style="height:220px"><img src="img/Distribution/dis-piramid.png" alt="Pyramid"></figure>
+                  </article>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="140">
+                  <article class="modern-card glass-card">
+                    <h5>Age groups</h5>
+                    <p>Adolescents (10–19) and youth (15–24) need tailored services and safe participation.</p>
+                    <figure class="image-card" style="height:220px"><img src="img/Distribution/dis-people.png" alt="People"></figure>
+                  </article>
+                </div>
+              </div>
+            </div>`
+          },
+          {
+            id: 'ch2-lesson-2',
+            title: 'Why young people’s health and wellbeing are vital',
+            icon: 'fa-heart-pulse',
+            gradientClass: 'bg-gradient-emerald',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2b', question: 'Investments in adolescents yield a…', options:['Single benefit','No return','Triple dividend','Unknown'], correctAnswer:2 }] },
+            content: (function(){return `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Why adolescent health matters</h2>
+                <div class="row g-4 align-items-center">
+                  <div class="col-lg-6" data-aos="fade-right"><figure class="image-card" style="height:360px"><img src="img/why-imp/why-imp.jpg" alt="Why"></figure></div>
+                  <div class="col-lg-6" data-aos="fade-left">${['Prevention first','Better learning','Peer power'].map((h,i)=>`
+                    <div class="fact-item icon-spin-on-hover"><div class="fact-icon"><i class="fa-solid ${['fa-shield-heart','fa-graduation-cap','fa-people-arrows'][i]}"></i></div><p class="mb-0">${['Protective behaviors reduce lifelong risks.','Health and nutrition improve attendance and performance.','Informed youth influence peers positively and spark change.'][i]}</p></div>`).join('')}</div>
+                </div>
+              </div>`; })()
+          },
+          {
+            id: 'ch2-lesson-3',
+            title: 'Global and Bangladesh scenarios',
+            icon: 'fa-globe',
+            gradientClass: 'bg-gradient-purple',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2c', question: 'A leading cause of adolescent death includes…', options:['Common cold','Road injuries','Allergies','None'], correctAnswer:1 }] },
+            content: (function(){return `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Global and Bangladesh Scenario</h2>
+                <div class="row g-3">${[
+                  '1.5 million deaths among 10–24 in 2021 (~4500/day).',
+                  '10–14 have the lowest risk of death among all ages.',
+                  'Injuries, violence, self-harm and maternal causes lead mortality.',
+                  'Half of adult mental disorders start by 18; most undetected.'
+                ].map((t,i)=>`<div class="col-md-6"><div class="fact-card alert-${['danger','info','warning','primary'][i]} hover-lift-sm transition-base"><p>${t}</p></div></div>`).join('')}</div>
+              </div>`; })()
+          },
+          {
+            id: 'ch2-lesson-4',
+            title: 'Child marriage and adolescent childbirth',
+            icon: 'fa-child-reaching',
+            gradientClass: 'bg-gradient-orange',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2d', question: 'Ending child marriage helps protect…', options:['Education and health','Only sports','Only economy','None'], correctAnswer:0 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Child marriage and adolescent childbirth</h2>
+                <div class="row g-3">
+                  <div class="col-6"><figure class="image-card" style="height:160px"><img src="img/Child-marraige/key-facts.png" alt="Key facts"></figure></div>
+                  <div class="col-6"><figure class="image-card" style="height:160px"><img src="img/Child-marraige/graph.png" alt="Trends"></figure></div>
+                  <div class="col-12"><figure class="image-card" style="height:180px"><img src="img/Child-marraige/childbearing.png" alt="Childbearing"></figure></div>
+                </div>
+                <ul class="mt-3 ps-3"><li>Keep girls in school and support re-entry.</li><li>Scale adolescent-friendly SRHR and mental health services.</li><li>Enforce laws and mobilize communities.</li></ul>
+              </div>`
+          },
+          {
+            id: 'ch2-lesson-5',
+            title: 'What challenges do adolescents face?',
+            icon: 'fa-triangle-exclamation',
+            gradientClass: 'bg-gradient-pink',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2e', question: 'Determinants include…', options:['Only nutrition','Multiple domains','Only activity','None'], correctAnswer:1 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Issues and determinants</h2>
+                <div class="d-grid gap-2 mb-3">
+                  <span class="badge-pill">Nutrition</span>
+                  <span class="badge-pill">Mental health</span>
+                  <span class="badge-pill">SRHR & protection</span>
+                  <span class="badge-pill">Injury & road safety</span>
+                  <span class="badge-pill">Substance use</span>
+                </div>
+                <figure class="image-card" style="height:360px"><img src="img/determinants/determinants.png" alt="Determinants"></figure>
+              </div>`
+          },
+          {
+            id: 'ch2-lesson-6',
+            title: 'Special care for adolescents',
+            icon: 'fa-user-nurse',
+            gradientClass: 'bg-gradient-teal',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2f', question: 'Adolescent services should be…', options:['Judgmental','Exclusive','Non-judgmental and confidential','Irregular'], correctAnswer:2 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Special care for adolescents</h2>
+                <div class="row g-3 align-items-center">
+                  <div class="col-md-6"><article class="modern-card"><ul class="ps-3 mb-0"><li>Respectful communication and privacy</li><li>Peer support and safe referral</li><li>Inclusive access for disabilities</li></ul></article></div>
+                  <div class="col-md-6"><figure class="image-card" style="height:300px"><img src="img/adolsent/adolsent.png" alt="Care"></figure></div>
+                </div>
+              </div>`
+          },
+          {
+            id: 'ch2-lesson-7',
+            title: 'How youth health advances the SDGs',
+            icon: 'fa-diagram-project',
+            gradientClass: 'bg-gradient-violet',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2g', question: 'Youth health impacts how many SDGs?', options:['Only 1','Several','None','Unknown'], correctAnswer:1 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Youth health and the SDGs</h2>
+                <div class="row g-3 text-center">${[
+                  {img:'img/sdc/no-proverty.png', label:'SDG 1'},
+                  {img:'img/sdc/zero-hunger.png', label:'SDG 2'},
+                  {img:'img/sdc/good-health.png', label:'SDG 3'},
+                  {img:'img/sdc/quality.png', label:'SDG 4'},
+                  {img:'img/sdc/gender.png', label:'SDG 5'},
+                  {img:'img/sdc/decentpng.png', label:'SDG 8'},
+                  {img:'img/sdc/peace.png', label:'SDG 16'}
+                ].map((s,i)=>`<div class="col-6 col-md-4 col-lg-3"><div class="modern-card glass-card" style="padding:1rem"><img src="${s.img}" alt="${s.label}" style="max-height:80px; object-fit:contain"><p class="mt-2 mb-0 fw-semibold">${s.label}</p></div></div>`).join('')}</div>
+              </div>`
+          },
+          {
+            id: 'ch2-lesson-8',
+            title: 'A shared agenda for adolescent health',
+            icon: 'fa-handshake-angle',
+            gradientClass: 'bg-gradient-emerald',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2h', question: 'Put whom at the center of design?', options:['Providers','Parents','Adolescents','Donors'], correctAnswer:2 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Global agenda</h2>
+                <div class="row g-3 align-items-center">
+                  <div class="col-lg-6"><ul class="ps-3"><li>Adolescents at the center of design and delivery</li><li>Community systems and school-health platforms</li><li>Use data to target and improve outcomes</li></ul></div>
+                  <div class="col-lg-6"><figure class="image-card" style="height:320px"><img src="img/agenda/agenda.jpg" alt="Agenda"></figure></div>
+                </div>
+              </div>`
+          },
+          {
+            id: 'ch2-lesson-9',
+            title: 'Policies, strategies and plans',
+            icon: 'fa-file-shield',
+            gradientClass: 'bg-gradient-blue',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2i', question: 'National directions guide…', options:['Service delivery and coordination','Only events','Only media','None'], correctAnswer:0 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Policies, strategies and plans</h2>
+                <div class="row g-3">${[
+                  {img:'img/policies/policy.png', title:'Policy framework'},
+                  {img:'img/policies/strategy.png', title:'Strategy and roadmap'},
+                  {img:'img/policies/national-health.png', title:'National health policy'},
+                  {img:'img/policies/national-strategy.jpg', title:'Adolescent health strategy'},
+                  {img:'img/plan/national-plan.png', title:'National action plan'},
+                  {img:'img/policies/adolsent.png', title:'Adolescent-friendly services'}
+                ].map((p)=>`<div class="col-sm-6 col-lg-4"><article class="modern-card"><figure class="image-card" style="height:180px"><img src="${p.img}" alt="${p.title}"></figure><h6 class="mt-2">${p.title}</h6></article></div>`).join('')}</div>
+              </div>`
+          },
+          {
+            id: 'ch2-lesson-10',
+            title: 'Government’s commitment',
+            icon: 'fa-landmark',
+            gradientClass: 'bg-gradient-tangerine',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2j', question: 'Bangladesh invests in adolescent health via…', options:['Policies and partnerships','Only posters','Only apps','None'], correctAnswer:0 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Government’s commitment</h2>
+                <div class="row g-3 align-items-center">
+                  <div class="col-md-6"><ul class="ps-3"><li>Strengthen adolescent-friendly services</li><li>Scale through schools and communities</li><li>Digital tools for learning and accountability</li></ul></div>
+                  <div class="col-md-6"><figure class="image-card" style="height:300px"><img src="img/plan/national-plan.png" alt="Plan"></figure></div>
+                </div>
+              </div>`
+          },
+          {
+            id: 'ch2-lesson-11',
+            title: 'A combined effort',
+            icon: 'fa-people-group',
+            gradientClass: 'bg-gradient-green',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2k', question: 'Whole-of-society approach includes…', options:['Only health','Multiple sectors','Only schools','None'], correctAnswer:1 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">A combined effort</h2>
+                <div class="row g-3 align-items-center">
+                  <div class="col-lg-6 order-lg-2"><figure class="image-card" style="height:320px"><img src="img/effort.png" alt="Effort"></figure></div>
+                  <div class="col-lg-6 order-lg-1"><div class="d-flex flex-wrap gap-2"><span class="badge-pill">Health sector</span><span class="badge-pill">Education</span><span class="badge-pill">Social protection</span><span class="badge-pill">Civil society</span><span class="badge-pill">Private sector</span></div></div>
+                </div>
+              </div>`
+          },
+          {
+            id: 'ch2-lesson-12',
+            title: 'Turning insight into action',
+            icon: 'fa-rocket',
+            gradientClass: 'bg-gradient-rose',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2l', question: 'Actions include…', options:['Boost health literacy','Reduce services','Ignore data','Exclude youth'], correctAnswer:0 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Recommendations</h2>
+                <ul class="ps-3 mb-3"><li>Boost health literacy with age-appropriate content</li><li>Expand adolescent-friendly services</li><li>Strengthen referral and protection</li><li>Champion youth leadership</li><li>Use data for equity and improvement</li></ul>
+                <figure class="image-card" style="height:300px"><img src="img/recomendations.png" alt="Recommendations"></figure>
+              </div>`
+          }
+        ]
+      }
+    ],
+    // Flat lessons kept for backward compatibility (legacy renderers)
     lessons: [
       {
         id: 'lesson-1',

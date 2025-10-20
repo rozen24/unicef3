@@ -6,6 +6,7 @@ class YouthHealthLMS {
     this.currentUser = null;
     this.selectedCourse = null;
     this.currentlessionIndex = 0;
+    this.currentChapterIndex = 0;
     this.showQuiz = false;
     this.quizState = {
       currentQuestionIndex: 0,
@@ -18,50 +19,38 @@ class YouthHealthLMS {
   }
 
   init() {
-    // Check for existing session
-    const storedUser = localStorage.getItem("currentUser");
-    if (storedUser) {
-      this.currentUser = JSON.parse(storedUser);
-      this.currentView = "dashboard";
-    }
-
+    try {
+      const saved = localStorage.getItem("currentUser");
+      if (saved) this.currentUser = JSON.parse(saved);
+    } catch (_) {}
     this.render();
   }
 
-  // Initialize or refresh AOS scroll animations across views
-  initAOS() {
-    if (typeof AOS === "undefined") return;
-    if (this._aosInitialized) {
-      try { AOS.refreshHard(); } catch (e) { AOS.refresh(); }
-      setTimeout(() => { try { AOS.refresh(); } catch (e) {} }, 80);
-    } else {
-      AOS.init({ duration: 800, once: true, offset: 60, easing: "ease-out-quart" });
-      this._aosInitialized = true;
-      setTimeout(() => { try { AOS.refresh(); } catch (e) {} }, 120);
-    }
-  }
-
-  // Navigation methods
   navigateTo(view) {
     this.currentView = view;
     this.render();
   }
 
-  // User authentication
+  // Initialize or refresh AOS animations after each render
+  initAOS() {
+    try {
+      if (window.AOS) {
+        if (!this._aosInitialized) {
+          window.AOS.init({ duration: 700, easing: "ease-out-cubic", once: false, offset: 40 });
+          this._aosInitialized = true;
+        } else {
+          window.AOS.refreshHard();
+        }
+        setTimeout(() => window.AOS && window.AOS.refresh(), 250);
+      }
+    } catch (_) {}
+  }
+
+  // Basic login: validates saved users and persists current user
   login(email, password) {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    const userIndex = users.findIndex(
-      (u) => u.email === email && u.password === password
-    );
-
-    if (userIndex !== -1) {
-      const user = users[userIndex];
-
-      // Update last login time
-      user.lastLogin = new Date().toISOString();
-      users[userIndex] = user;
-      localStorage.setItem("users", JSON.stringify(users));
-
+    const user = users.find((u) => u.email === email && u.password === password);
+    if (user) {
       this.currentUser = {
         id: user.id,
         email: user.email,
@@ -69,13 +58,10 @@ class YouthHealthLMS {
         registeredAt: user.registeredAt,
       };
       localStorage.setItem("currentUser", JSON.stringify(this.currentUser));
-
       console.log(`✅ Login successful! User ID: ${user.id}`);
-
       this.navigateTo("dashboard");
       return { success: true };
     }
-
     return { success: false, error: "Invalid email or password" };
   }
 
@@ -168,10 +154,14 @@ class YouthHealthLMS {
     this.selectedCourse = coursesData.find((c) => c.id === courseId);
     this.currentlessionIndex = 0;
     this.currentLessonIndex = 0;
+    this.currentChapterIndex = 0;
     this.showQuiz = false;
 
-    // Check if course uses new lesson system
-    if (this.selectedCourse.lessons && this.selectedCourse.lessons.length > 0) {
+    // Prefer chapter-based lesson system when available
+    if (this.selectedCourse && Array.isArray(this.selectedCourse.chapters) && this.selectedCourse.chapters.length > 0) {
+      this.selectedCourse.lessons = this.selectedCourse.chapters[0].lessons || [];
+      this.navigateTo("lesson-slider");
+    } else if (this.selectedCourse.lessons && this.selectedCourse.lessons.length > 0) {
       // New lesson slider system
       this.navigateTo("lesson-slider");
     } else {
@@ -666,641 +656,6 @@ class YouthHealthLMS {
           <span class="float-elem" style="bottom:15%; left:12%;"></span>
           <span class="float-elem" style="bottom:10%; right:10%;"></span>
           <span class="float-elem" style="top:55%; left:45%; width:80px; height:80px;"></span>
-        </div>
-      </section>
-
-      <!-- About Slide -->
-      <section id="about" class="section-padding slide-section slide-section--light">
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-5" data-aos="fade-up">
-              <div class="slide-intro">
-                <span class="slide-kicker">Our mission</span>
-                <h2 class="section-heading">Understanding Youth Health Ambassador Programme</h2>
-                <p class="section-paragraph">
-                  YHAP is a structured pathway for young people aged 15-24 to discover their voice, master critical health knowledge, and lead change with evidence-based advocacy.
-                </p>
-                <div class="slide-stamp">
-                  <i class="fa-solid fa-certificate"></i>
-                  System-generated certificates, valid for two years.
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-              <div class="definition-grid">
-                <article class="definition-card">
-                  <div class="definition-icon bg-sky"><i class="fa-solid fa-users"></i></div>
-                  <h3>Youth</h3>
-                  <p>
-                    As defined by the United Nations, youth refers to young people aged <strong>15-24</strong>. This period bridges dependence and independence, where curiosity and potential are at their highest.
-                  </p>
-                  <span class="definition-note">Young people cover ages <strong>10-24</strong>; adolescents are <strong>10-19</strong>.</span>
-                </article>
-                <article class="definition-card">
-                  <div class="definition-icon bg-deep"><i class="fa-solid fa-heart-pulse"></i></div>
-                  <h3>Health</h3>
-                  <p>
-                    The World Health Organization defines health as a state of complete <strong>physical, mental, and social wellbeing</strong>—far beyond the absence of disease.
-                  </p>
-                  <span class="definition-note">Health knowledge is the first step to enduring community resilience.</span>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Core Components -->
-      <section id="components" class="section-padding slide-section">
-        <div class="container">
-          <div class="section-header text-center" data-aos="fade-up">
-            <span class="slide-kicker">Programme pillars</span>
-            <h2 class="section-heading">Six pillars that build confident health ambassadors</h2>
-            <p class="section-paragraph w-lg-75 mx-auto">
-              Each module unlocks interactive lessons, storytelling videos, and measurable actions so youth can translate insight into impact.
-            </p>
-          </div>
-          <div class="row g-4 pillars-grid">
-            ${[
-              {
-                title: "Health Literacy",
-                description:
-                  "Foundational knowledge delivered through dynamic lessons, podcasts, and scenario-based practice.",
-                icon: "fa-book-open",
-                accent: "gradient-sky"
-              },
-              {
-                title: "Health Education & Awareness",
-                description:
-                  "Campaign toolkits and community playbooks simplify how ambassadors share accurate information.",
-                icon: "fa-graduation-cap",
-                accent: "gradient-lagoon"
-              },
-              {
-                title: "Peer to Peer Influence",
-                description:
-                  "Mentorship circles and storytelling labs nurture confident communicators and inclusive leaders.",
-                icon: "fa-people-arrows",
-                accent: "gradient-emerald"
-              },
-              {
-                title: "Empowerment",
-                description:
-                  "Design challenges, problem-solving sprints, and pitch sessions build agency and real-world readiness.",
-                icon: "fa-hand-fist",
-                accent: "gradient-tangerine"
-              },
-              {
-                title: "Leadership",
-                description:
-                  "Ambassadors lead local projects with support from mentors, dashboards, and progress analytics.",
-                icon: "fa-lightbulb",
-                accent: "gradient-violet"
-              },
-              {
-                title: "Advocacy",
-                description:
-                  "Policy primers and stakeholder maps guide ambassadors to amplify youth priorities with evidence.",
-                icon: "fa-bullhorn",
-                accent: "gradient-rose"
-              }
-            ]
-              .map(
-                (pillar, index) => `
-                  <div class="col-sm-6 col-xl-4" data-aos="zoom-in" data-aos-delay="${index * 70}">
-                    <article class="pillar-card ${pillar.accent}">
-                      <div class="pillar-icon"><i class="fa-solid ${pillar.icon}"></i></div>
-                      <h3>${pillar.title}</h3>
-                      <p>${pillar.description}</p>
-                    </article>
-                  </div>
-                `
-              )
-              .join("")}
-          </div>
-        </div>
-      </section>
-
-      <!-- Ambassador Roles -->
-      <!-- Roles Section -->
-      <section id="roles" class="section-padding bg-light">
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-10 text-center mb-5" data-aos="fade-up">
-                      <h2 class="section-title gradient-text">Who Am I as a Health Ambassador?</h2>
-                      <p class="section-subtitle">My roles and responsibilities in transforming community health</p>
-                  </div>
-              </div>
-              <div class="row g-4">
-          <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
-            <div class="fact-item hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
-                          <div class="fact-icon">
-                              <i class="fas fa-shield-heart"></i>
-                          </div>
-                          <p class="fact-text">
-                              I am equipped with expertise in safeguarding adolescent and youth health and well-being, enabling me to contribute meaningfully to society while harnessing the triple dividend of health, social, and economic benefits.
-                          </p>
-                      </div>
-                  </div>
-          <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
-            <div class="fact-item hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
-                          <div class="fact-icon">
-                              <i class="fas fa-share-nodes"></i>
-                          </div>
-                          <p class="fact-text">
-                              I actively empower my peers by sharing knowledge on health promotion, disease prevention, and holistic well-being, fostering informed decision-making among adolescents and youth.
-                          </p>
-                      </div>
-                  </div>
-          <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
-            <div class="fact-item hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
-                          <div class="fact-icon">
-                              <i class="fas fa-handshake"></i>
-                          </div>
-                          <p class="fact-text">
-                              Through advocacy, I engage policy makers, stakeholders and community influencer, gatekeepers to prioritize adolescent health, ensuring supportive policies and collaborative action.
-                          </p>
-                      </div>
-                  </div>
-          <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
-            <div class="fact-item hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
-                          <div class="fact-icon">
-                              <i class="fas fa-chart-line"></i>
-                          </div>
-                          <p class="fact-text">
-                              I drive awareness and demand creation within communities, inspiring collective responsibility and action toward better health outcomes for adolescents and youth.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      
-
-      <!-- Ambassador Journey -->
-      <section id="eligibility" class="section-padding slide-section">
-        <div class="container">
-          <div class="section-header text-center" data-aos="fade-up">
-            <span class="slide-kicker">Your learning arc</span>
-            <h2 class="section-heading">Nine interactive steps to become a certified Youth Health Ambassador</h2>
-            <p class="section-paragraph w-lg-75 mx-auto">
-              Each chapter unlocks when you pass the quiz, guiding you towards certification with a sense of progress and celebration at every milestone.
-            </p>
-            <div class="eligibility-badge">
-              <i class="fa-solid fa-id-card-clip"></i>
-              Eligibility: Young people aged 15&ndash;24 across Bangladesh.
-            </div>
-          </div>
-          <div class="journey-track">
-            <div class="journey-progress" aria-hidden="true"></div>
-            <div class="row g-4">
-              ${[
-                "Online Registration",
-                "Unique ID Generation",
-                "Secure Login",
-                "Access Course Library",
-                "Complete Modules",
-                "Pass Adaptive Assessments",
-                "Receive System Certificate",
-                "Take the Ambassador Oath",
-                "Download Final Certificate"
-              ]
-                .map(
-                  (step, index) => `
-                    <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-delay="${index * 70}">
-                      <article class="journey-step">
-                        <div class="journey-index">${index + 1}</div>
-                        <h3>${step}</h3>
-                        <p>${[
-                          "Register on the UNICEF-powered learning portal.",
-                          "Instantly receive your unique YHAP identifier.",
-                          "Log in securely from any device.",
-                          "Dive into playlists tailored to your goals.",
-                          "Unlock modules with videos, stories, and cases.",
-                          "Master quizzes with hints, retries, and feedback.",
-                          "Celebrate your first official milestone.",
-                          "Commit to championing adolescent health.",
-                          "Download and share your verified certificate."
-                        ][index]}</p>
-                      </article>
-                    </div>
-                  `
-                )
-                .join("")}
-            </div>
-          </div>
-          <div class="text-center mt-5" data-aos="zoom-in">
-            <a class="btn btn-primary btn-lg" href="#" onclick="app.navigateTo('register'); return false;">
-              <i class="fa-solid fa-rocket-launch me-2"></i>
-              Start your ambassador journey
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Global Statistics -->
-      <section id="statistics" class="section-padding bg-light">
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-8 text-center mb-5" data-aos="fade-up">
-                      <h2 class="section-title gradient-text">Youth Around the World</h2>
-                      <p class="section-subtitle">Understanding the global and local landscape</p>
-                  </div>
-              </div>
-              <div class="row g-4 mb-5">
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="stat-box hover-lift-sm hover-shadow-glow transition-base">
-                          <div class="stat-icon-large">
-                              <i class="fas fa-earth-americas"></i>
-                          </div>
-                          <span class="stat-value">1.8B</span>
-                          <p class="stat-description">Youth Worldwide</p>
-                          <p class="text-muted small">90% live in developing countries</p>
-                      </div>
-                  </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="stat-box hover-lift-sm hover-shadow-glow transition-base">
-                          <div class="stat-icon-large">
-                              <i class="fas fa-users-between-lines"></i>
-                          </div>
-                          <span class="stat-value">49.5M</span>
-                          <p class="stat-description">Young People in </br> Bangladesh</p>
-                          <p class="text-muted small">Approx. 30% of total population</p>
-                      </div>
-                  </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="stat-box hover-lift-sm hover-shadow-glow transition-base">
-                          <div class="stat-icon-large">
-                              <i class="fas fa-user-group"></i>
-                          </div>
-                          <span class="stat-value">31.5M</span>
-                          <p class="stat-description">Youth in Bangladesh</p>
-                          <p class="text-muted small">Ages 15-24 years</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      <!-- Distribution of Young People -->
-      <section id="distribution" class="section-padding slide-section slide-section--light">
-        <div class="container">
-          <div class="section-header text-center" data-aos="fade-up">
-            <span class="slide-kicker">Population lens</span>
-            <h2 class="section-heading">Distribution of young people</h2>
-            <p class="section-paragraph w-lg-75 mx-auto">Where young people live and how they’re distributed across age and geography shapes services, access, and opportunities.</p>
-          </div>
-          <div class="row g-4 align-items-stretch">
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="50">
-              <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                <div class="mb-3"><i class="fa-solid fa-map-location-dot fa-2xl" style="color:#0ea5f7"></i></div>
-                <h3 class="mb-2">Geographic spread</h3>
-                <p class="mb-3">Urban and rural contexts differ in access to education, health, and safe spaces for adolescents.</p>
-                <figure class="image-card" style="height:220px"><img src="img/Distribution/distrubation-map.jpg" alt="Distribution map of youth"></figure>
-              </article>
-            </div>
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="120">
-              <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                <div class="mb-3"><i class="fa-solid fa-people-group fa-2xl" style="color:#22c55e"></i></div>
-                <h3 class="mb-2">Population pyramid</h3>
-                <p class="mb-3">A youthful population is a powerful dividend—if health, skills, and protection are prioritized.</p>
-                <figure class="image-card" style="height:220px"><img src="img/Distribution/dis-piramid.png" alt="Population pyramid"></figure>
-              </article>
-            </div>
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="190">
-              <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                <div class="mb-3"><i class="fa-solid fa-person-chalkboard fa-2xl" style="color:#a855f7"></i></div>
-                <h3 class="mb-2">Age groups</h3>
-                <p class="mb-3">Adolescents (10–19) and youth (15–24) need tailored messages, services, and safe participation.</p>
-                <figure class="image-card" style="height:220px"><img src="img/Distribution/dis-people.png" alt="Young people"></figure>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why important -->
-      <section id="why-important" class="section-padding slide-section">
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-              <figure class="image-card" style="height:420px"><img src="img/why-imp/why-imp.jpg" alt="Why youth health matters"></figure>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-              <span class="slide-kicker">Why it matters</span>
-              <h2 class="section-heading">Why young people’s health and wellbeing are vital</h2>
-              <p class="section-paragraph">Healthy adolescents learn better, participate confidently, and transition into thriving adults—multiplying benefits for families, communities, and the economy.</p>
-              <ul class="list-unstyled d-grid gap-3 mt-3">
-                <li class="fact-item icon-spin-on-hover">
-                  <div class="fact-icon"><i class="fa-solid fa-shield-heart"></i></div>
-                  <p class="mb-0">Prevention first: building literacy and protective behaviors reduces lifelong risks.</p>
-                </li>
-                <li class="fact-item icon-spin-on-hover">
-                  <div class="fact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                  <p class="mb-0">Better learning: health and nutrition improve attendance, focus, and performance.</p>
-                </li>
-                <li class="fact-item icon-spin-on-hover">
-                  <div class="fact-icon"><i class="fa-solid fa-people-arrows"></i></div>
-                  <p class="mb-0">Peer power: informed youth influence peers positively and spark community change.</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Global and Bangladesh scenarios -->
-      <section id="scenarios" class="section-padding slide-section slide-section--light">
-        <div class="container">
-          <div class="section-header text-center" data-aos="fade-up">
-            <span class="slide-kicker">Context matters</span>
-            <h2 class="section-heading">Global and Bangladesh scenarios</h2>
-            <p class="section-paragraph w-lg-75 mx-auto">From global trends to local realities, insights guide smart action for youth health.</p>
-          </div>
-          <div class="row g-4">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
-              <article class="modern-card hover-lift-sm hover-shadow-glow transition-base">
-                <div class="d-flex align-items-center gap-2 mb-2"><i class="fa-solid fa-globe-asia"></i><h3 class="mb-0">Global scenario</h3></div>
-                <ul class="mb-0 ps-3">
-                  <li>1.8 billion adolescents and youth—largest generation ever.</li>
-                  <li>Rapid digital adoption, but uneven access to services and protections.</li>
-                  <li>Climate, conflict, and misinformation amplify health risks.</li>
-                </ul>
-              </article>
-            </div>
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="120">
-              <article class="modern-card hover-lift-sm hover-shadow-glow transition-base">
-                <div class="d-flex align-items-center gap-2 mb-2"><i class="fa-solid fa-flag"></i><h3 class="mb-0">Bangladesh scenario</h3></div>
-                <ul class="mb-0 ps-3">
-                  <li>A youthful demographic with strong potential for a demographic dividend.</li>
-                  <li>Progress in education and primary health—opportunities to deepen quality and reach.</li>
-                  <li>Need for adolescent-friendly services, mental health care, SRHR, and protection.</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Child marriage focus -->
-      <section id="child-marriage" class="section-padding slide-section">
-        <div class="container">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-              <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                <div class="d-flex align-items-center gap-2 mb-2"><i class="fa-solid fa-child-reaching"></i><h3 class="mb-0">Child marriage and adolescent childbirth</h3></div>
-                <p class="mb-3">Ending child marriage protects education, autonomy, and health. Delaying pregnancy reduces risks and unlocks opportunities.</p>
-                <div class="row g-3">
-                  <div class="col-6"><figure class="image-card" style="height:160px"><img src="img/Child-marraige/key-facts.png" alt="Key facts"></figure></div>
-                  <div class="col-6"><figure class="image-card" style="height:160px"><img src="img/Child-marraige/graph.png" alt="Trend graph"></figure></div>
-                  <div class="col-12"><figure class="image-card" style="height:180px"><img src="img/Child-marraige/childbearing.png" alt="Adolescent childbearing"></figure></div>
-                </div>
-              </article>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-              <ul class="list-unstyled d-grid gap-3">
-                <li class="fact-item"><div class="fact-icon"><i class="fa-solid fa-school"></i></div><p class="mb-0">Keep girls in school and support re-entry for young mothers.</p></li>
-                <li class="fact-item"><div class="fact-icon"><i class="fa-solid fa-hand-holding-heart"></i></div><p class="mb-0">Scale adolescent-friendly services including SRHR and mental health.</p></li>
-                <li class="fact-item"><div class="fact-icon"><i class="fa-solid fa-scale-balanced"></i></div><p class="mb-0">Enforce laws and mobilize communities to shift harmful norms.</p></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Issues and determinants -->
-      <section id="issues" class="section-padding bg-light">
-        <div class="container">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-5" data-aos="fade-right">
-              <span class="slide-kicker">Key issues</span>
-              <h2 class="section-heading">What challenges do adolescents face?</h2>
-              <p class="section-paragraph">Nutrition, mental health, violence, unsafe practices, limited information, and barriers to services affect daily wellbeing.</p>
-              <div class="d-grid gap-2">
-                <span class="badge-pill">Nutrition</span>
-                <span class="badge-pill">Mental health</span>
-                <span class="badge-pill">SRHR & protection</span>
-                <span class="badge-pill">Injury & road safety</span>
-                <span class="badge-pill">Substance use</span>
-              </div>
-            </div>
-            <div class="col-lg-7" data-aos="fade-left">
-              <figure class="image-card" style="height:380px"><img src="img/determinants/determinants.png" alt="Determinants of adolescent health"></figure>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Special care -->
-      <section id="special-care" class="section-padding slide-section slide-section--light">
-        <div class="container">
-          <div class="row g-4 align-items-center">
-            <div class="col-md-6" data-aos="zoom-in">
-              <article class="modern-card hover-lift-sm hover-shadow-glow transition-base">
-                <div class="d-flex align-items-center gap-2 mb-2"><i class="fa-solid fa-user-nurse"></i><h3 class="mb-0">Special care for adolescents</h3></div>
-                <p class="mb-2">Adolescents need non-judgmental, confidential, and inclusive services designed for their stage of life.</p>
-                <ul class="ps-3 mb-0">
-                  <li>Respectful communication and privacy</li>
-                  <li>Peer support and safe referral pathways</li>
-                  <li>Access for all—including those with disabilities</li>
-                </ul>
-              </article>
-            </div>
-            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
-              <figure class="image-card" style="height:300px"><img src="img/adolsent/adolsent.png" alt="Adolescent care"></figure>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SDG alignment -->
-      <section id="sdg" class="section-padding slide-section">
-        <div class="container">
-          <div class="section-header text-center" data-aos="fade-up">
-            <span class="slide-kicker">SDG links</span>
-            <h2 class="section-heading">How youth health advances the SDGs</h2>
-            <p class="section-paragraph w-lg-75 mx-auto">Investing in adolescents accelerates progress across multiple Sustainable Development Goals.</p>
-          </div>
-          <div class="row g-4 text-center">
-            ${[
-              {img:'img/sdc/no-proverty.png', label:'SDG 1: No Poverty'},
-              {img:'img/sdc/zero-hunger.png', label:'SDG 2: Zero Hunger'},
-              {img:'img/sdc/good-health.png', label:'SDG 3: Good Health'},
-              {img:'img/sdc/quality.png', label:'SDG 4: Quality Education'},
-              {img:'img/sdc/gender.png', label:'SDG 5: Gender Equality'},
-              {img:'img/sdc/decentpng.png', label:'SDG 8: Decent Work'},
-              {img:'img/sdc/peace.png', label:'SDG 16: Peace, Justice & Strong Institutions'}
-            ].map((s, i) => `
-              <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="${i*60}">
-                <div class="modern-card glass-card hover-lift-sm transition-base" style="padding:1.25rem">
-                  <img src="${s.img}" alt="${s.label}" style="max-height:80px; object-fit:contain;" />
-                  <p class="mt-2 mb-0 fw-semibold">${s.label}</p>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      </section>
-
-      <!-- Global agenda -->
-      <section id="global-agenda" class="section-padding slide-section slide-section--light">
-        <div class="container">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-              <span class="slide-kicker">Global agenda</span>
-              <h2 class="section-heading">A shared agenda for adolescent health</h2>
-              <p class="section-paragraph">Global commitments emphasize primary prevention, equity, adolescent participation, and cross-sector collaboration.</p>
-              <ul class="ps-3">
-                <li>Put adolescents at the center of design and delivery</li>
-                <li>Strengthen community systems and school-health platforms</li>
-                <li>Use data to target, measure, and improve outcomes</li>
-              </ul>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-              <figure class="image-card" style="height:360px"><img src="img/agenda/agenda.jpg" alt="Global agenda"></figure>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Policies and strategies -->
-      <section id="policies" class="section-padding slide-section">
-        <div class="container">
-          <div class="section-header text-center" data-aos="fade-up">
-            <span class="slide-kicker">Policy & strategy</span>
-            <h2 class="section-heading">Policies, strategies and plans</h2>
-            <p class="section-paragraph w-lg-75 mx-auto">National directions guide service delivery, investment, and coordination for adolescent health.</p>
-          </div>
-          <div class="row g-4">
-            ${[
-              {img:'img/policies/policy.png', title:'Policy framework'},
-              {img:'img/policies/strategy.png', title:'Strategy and roadmap'},
-              {img:'img/policies/national-health.png', title:'National health policy'},
-              {img:'img/policies/national-strategy.jpg', title:'Adolescent health strategy'},
-              {img:'img/plan/national-plan.png', title:'National action plan'},
-              {img:'img/policies/adolsent.png', title:'Adolescent-friendly services'}
-            ].map((p, i) => `
-              <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="${i*60}">
-                <article class="modern-card hover-lift-sm hover-shadow-glow transition-base">
-                  <figure class="image-card" style="height:180px"><img src="${p.img}" alt="${p.title}"></figure>
-                  <h3 class="mt-3">${p.title}</h3>
-                </article>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      </section>
-
-      <!-- Government commitment -->
-      <section id="government" class="section-padding slide-section slide-section--light">
-        <div class="container">
-          <div class="row g-4 align-items-center">
-            <div class="col-md-6" data-aos="fade-right">
-              <span class="slide-kicker">Commitment</span>
-              <h2 class="section-heading">Government’s commitment</h2>
-              <p class="section-paragraph">Bangladesh is investing in adolescent health through policies, plans, and partnerships—aligning service delivery with rights and quality.</p>
-              <ul class="ps-3">
-                <li>Strengthening adolescent-friendly health services</li>
-                <li>Scale-up through schools and community platforms</li>
-                <li>Digital tools for learning and accountability</li>
-              </ul>
-            </div>
-            <div class="col-md-6" data-aos="fade-left">
-              <figure class="image-card" style="height:320px"><img src="img/plan/national-plan.png" alt="National plan"></figure>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Combined effort -->
-      <section id="effort" class="section-padding slide-section">
-        <div class="container">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-              <figure class="image-card" style="height:340px"><img src="img/effort.png" alt="Combined effort"></figure>
-            </div>
-            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-              <span class="slide-kicker">Whole-of-society</span>
-              <h2 class="section-heading">A combined effort</h2>
-              <p class="section-paragraph">Health facilities, schools, families, religious leaders, media, and youth networks play complementary roles. Together, we create enabling environments where adolescents can thrive.</p>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <span class="badge-pill">Health sector</span>
-                <span class="badge-pill">Education</span>
-                <span class="badge-pill">Social protection</span>
-                <span class="badge-pill">Civil society</span>
-                <span class="badge-pill">Private sector</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Recommendations -->
-      <section id="recommendations" class="section-padding slide-section slide-section--light">
-        <div class="container">
-          <div class="row g-4 align-items-center">
-            <div class="col-md-6" data-aos="fade-right">
-              <span class="slide-kicker">Recommendations</span>
-              <h2 class="section-heading">Turning insight into action</h2>
-              <ul class="ps-3">
-                <li>Boost health literacy with engaging, age-appropriate content</li>
-                <li>Expand adolescent-friendly services with privacy and respect</li>
-                <li>Strengthen referral and protection systems</li>
-                <li>Champion youth leadership and peer influence</li>
-                <li>Use data for equity and continuous improvement</li>
-              </ul>
-            </div>
-            <div class="col-md-6" data-aos="fade-left">
-              <figure class="image-card" style="height:320px"><img src="img/recomendations.png" alt="Recommendations visual"></figure>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-      <!-- Impact metrics -->
-      
-
-      <!-- Call to action -->
-      <section class="section-padding slide-section slide-section--cta">
-        <div class="container">
-          <div class="cta-card" data-aos="fade-up">
-            <div class="cta-content">
-              <span class="slide-kicker">Next-gen LMS</span>
-              <h2 class="section-heading">One login. Your entire learning cockpit.</h2>
-              <p class="section-paragraph">
-                Access audio-guided lessons, interactive quizzes, progress dashboards, and instant certificates. Switch between light and dark themes any time.
-              </p>
-              <div class="cta-actions">
-                <a class="btn btn-light btn-lg" href="#" onclick="app.navigateTo('login'); return false;"><i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Log in</a>
-                <button class="btn btn-outline-light btn-lg" onclick="app.navigateTo('login'); return false;">Preview course map</button>
-              </div>
-            </div>
-            <div class="cta-visual">
-              <div class="cta-gauge">
-                <svg viewBox="0 0 120 120">
-                  <defs>
-                    <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#00b7ff" />
-                      <stop offset="50%" stop-color="#009edb" />
-                      <stop offset="100%" stop-color="#6a5ae0" />
-                    </linearGradient>
-                  </defs>
-                  <circle cx="60" cy="60" r="54" class="gauge-bg"></circle>
-                  <circle cx="60" cy="60" r="54" class="gauge-progress"></circle>
-                </svg>
-                <div class="gauge-center">
-                  <span class="gauge-score">80%</span>
-                  <span class="gauge-label">Avg. pass rate</span>
-                </div>
-              </div>
-              <div class="cta-highlight">
-                <i class="fa-solid fa-award"></i>
-                Auto-generated certificates with shareable QR codes.
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -2303,29 +1658,156 @@ class YouthHealthLMS {
 
   renderLessonSlider() {
     const course = this.selectedCourse;
-    const activeIndex = this.currentLessonIndex || 0;
-    const currentLesson = course.lessons[activeIndex];
+    const hasChapters = Array.isArray(course?.chapters) && course.chapters.length > 0;
 
-    let progress = this.getUserProgress(course.id);
-    if (!progress) {
-      progress = this.initializeProgress(course.id);
+    if (hasChapters) {
+      const totalChapters = course.chapters.length;
+      const chIndex = Math.min(Math.max(0, this.currentChapterIndex || 0), totalChapters - 1);
+      const chapterLessons = course.chapters[chIndex].lessons || [];
+      // Align legacy lesson-driven quiz/navigation to current chapter
+      this.selectedCourse.lessons = chapterLessons;
+
+      const activeIndex = Math.min(Math.max(0, this.currentLessonIndex || 0), Math.max(0, chapterLessons.length - 1));
+      const currentLesson = chapterLessons[activeIndex];
+
+      let progress = this.getUserProgress(course.id);
+      if (!progress) progress = this.initializeProgress(course.id);
+      const completedIds = new Set(progress.completedlessions || []);
+      const totalLessons = chapterLessons.length;
+      const lessonCompleted = currentLesson ? completedIds.has(currentLesson.id) : false;
+      const quizScore = currentLesson ? (progress.quizScores?.[currentLesson.id]) : undefined;
+
+      if (this.showQuiz) return this.renderQuiz();
+
+      const accordion = `
+        <div class="accordion" id="chaptersAccordion">
+          ${course.chapters.map((ch, ci) => `
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-${ci}">
+                <button class="accordion-button ${ci === chIndex ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${ci}" aria-expanded="${ci === chIndex}" aria-controls="collapse-${ci}">
+                  <span class="me-2 badge rounded-pill bg-primary">${ci + 1}</span> ${ch.title}
+                </button>
+              </h2>
+              <div id="collapse-${ci}" class="accordion-collapse collapse ${ci === chIndex ? 'show' : ''}" aria-labelledby="heading-${ci}" data-bs-parent="#chaptersAccordion">
+                <div class="accordion-body p-0">
+                  <ul class="list-group list-group-flush">
+                    ${(ch.lessons || []).map((ls, li) => `
+                      <li class="list-group-item d-flex align-items-center ${ci === chIndex && li === activeIndex ? 'active' : ''}" onclick="app.changeChapterLesson(${ci}, ${li})">
+                        <i class="fa-solid ${ls.icon || 'fa-circle'} me-2"></i>
+                        <span>${ls.title}</span>
+                      </li>
+                    `).join('')}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>`;
+
+      return `
+        <div class="lesson-shell">
+          <header class="lesson-hero">
+            <div class="container">
+              <div class="lesson-hero__top">
+                <button class="lesson-back" onclick="app.navigateTo('dashboard')">
+                  <i class="fa-solid fa-arrow-left-long"></i>
+                  Back to dashboard
+                </button>
+                <span class="lesson-pill">Lesson ${activeIndex + 1} of ${totalLessons}</span>
+              </div>
+              <div class="row align-items-start g-4"></div>
+            </div>
+          </header>
+
+          <section class="lesson-body">
+            <div class="container">
+              <div class="row g-4">
+                <aside class="col-lg-4">
+                  <div class="lesson-trail">${accordion}</div>
+                </aside>
+
+                <div class="col-lg-8">
+                  <article class="lesson-content-card">
+                    ${currentLesson && currentLesson.audioFile ? `
+                      <div class="lesson-audio-bar">
+                        <div class="lesson-audio-meta">
+                          <span class="lesson-audio-label"><i class="fa-solid fa-headphones"></i> Audio companion</span>
+                          <span class="lesson-audio-sub">Listen while you learn or pause to read at your own pace.</span>
+                        </div>
+                        <button class="btn btn-primary" id="audioToggleBtn" onclick="app.toggleAudio()" style="min-width: 120px;">
+                          <i class="bi bi-pause-fill" id="audioIcon"></i>
+                          <span id="audioText">Pause</span>
+                        </button>
+                      </div>
+                      <audio id="lessonAudio" autoplay controls style="width:100%; margin-bottom: 1rem; display: none;">
+                        <source src="${this.getAudioSource(currentLesson.audioFile)}" type="${this.getAudioMimeType(currentLesson.audioFile)}">
+                        Your browser does not support the audio element.
+                      </audio>
+                    ` : ''}
+
+                    <div class="lesson-content-body">
+                      ${currentLesson ? currentLesson.content : '<p>No lesson selected.</p>'}
+                    </div>
+
+                    ${currentLesson ? `
+                    <div class="lesson-quiz-card ${lessonCompleted ? 'lesson-quiz-card--complete' : ''}">
+                      <div class="lesson-quiz-card__header">
+                        <span class="lesson-quiz-badge"><i class="fa-solid fa-circle-question"></i> Module quiz</span>
+                        <span class="lesson-quiz-score">Passing score: ${currentLesson.quiz.passingScore}%</span>
+                      </div>
+                      ${quizScore !== undefined ? `
+                        <div class="lesson-quiz-status">
+                          <i class="fa-solid ${lessonCompleted ? 'fa-check-circle' : 'fa-rotate-right'}"></i>
+                          <div>
+                            <p class="lesson-quiz-status__title">Latest attempt: ${quizScore}%</p>
+                            <p class="lesson-quiz-status__meta">${lessonCompleted ? 'Great job! You can retake the quiz to boost your score.' : 'Give it another try to reach the passing score.'}</p>
+                          </div>
+                        </div>` : ''}
+                      <p class="lesson-quiz-text">
+                        Test your understanding and unlock the next milestone. Score at least ${currentLesson.quiz.passingScore}% to mark this lesson as complete.
+                      </p>
+                      <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
+                        ${lessonCompleted ? 'Retake quiz' : 'Start quiz'}
+                        <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                      </button>
+                    </div>` : ''}
+
+                    <div class="lesson-nav-actions">
+                      ${activeIndex > 0 ? `
+                        <button class="btn btn-outline-primary lesson-nav-btn" onclick="app.previousLesson()">
+                          <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
+                        </button>` : '<span></span>'}
+                      ${activeIndex < totalLessons - 1 ? `
+                        <button class="btn btn-primary lesson-nav-btn" onclick="app.nextLesson()">
+                          Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
+                        </button>` : `
+                        <button class="btn btn-success lesson-nav-btn" onclick="app.completeLesson()">
+                          <i class="fa-solid fa-award me-2"></i>Complete course
+                        </button>`}
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
     }
+
+    // Legacy: flat lessons
+    const courseFlat = this.selectedCourse;
+    const activeIndex = this.currentLessonIndex || 0;
+    const currentLesson = courseFlat.lessons[activeIndex];
+
+    let progress = this.getUserProgress(courseFlat.id);
+    if (!progress) progress = this.initializeProgress(courseFlat.id);
 
     const completedIds = new Set(progress.completedlessions || []);
-    const totalLessons = course.lessons.length;
-    const completedLessons = completedIds.size;
-    const courseProgress = totalLessons
-      ? Math.round((completedLessons / totalLessons) * 100)
-      : 0;
+    const totalLessons = courseFlat.lessons.length;
     const lessonCompleted = completedIds.has(currentLesson.id);
     const quizScore = progress.quizScores?.[currentLesson.id];
-    const courseDescription =
-      course.description ||
-      "Self-paced UNICEF curriculum empowering youth health ambassadors across Bangladesh.";
 
-    if (this.showQuiz) {
-      return this.renderQuiz();
-    }
+    if (this.showQuiz) return this.renderQuiz();
 
     return `
       <div class="lesson-shell">
@@ -2336,12 +1818,9 @@ class YouthHealthLMS {
                 <i class="fa-solid fa-arrow-left-long"></i>
                 Back to dashboard
               </button>
-              <span class="lesson-pill">Lesson ${activeIndex + 1} of ${
-      totalLessons
-    }</span>
+              <span class="lesson-pill">Lesson ${activeIndex + 1} of ${totalLessons}</span>
             </div>
-            <div class="row align-items-start g-4">
-            </div>
+            <div class="row align-items-start g-4"></div>
           </div>
         </header>
 
@@ -2350,47 +1829,30 @@ class YouthHealthLMS {
             <div class="row g-4">
               <aside class="col-lg-4">
                 <div class="lesson-trail">
-                  ${course.lessons
-                    .map((lesson, index) => {
-                      const isCurrent = index === activeIndex;
-                      const isCompleted = completedIds.has(lesson.id);
-                      const statusClass = isCurrent
-                        ? "lesson-chip--current"
-                        : isCompleted
-                        ? "lesson-chip--completed"
-                        : "lesson-chip--upcoming";
-                      const statusLabel = isCurrent
-                        ? "Now playing"
-                        : isCompleted
-                        ? "Completed"
-                        : "Available";
-                      return `
-                        <button class="lesson-chip ${statusClass}" type="button" onclick="app.changeLesson(${index})">
-                          <span class="lesson-chip__icon ${lesson.gradientClass}">
-                            <i class="fas ${lesson.icon}"></i>
-                          </span>
-                          <span class="lesson-chip__content">
-                            <span class="lesson-chip__eyebrow">Lesson ${index + 1}</span>
-                            <span class="lesson-chip__title">${lesson.title}</span>
-                            <span class="lesson-chip__meta">${statusLabel}</span>
-                          </span>
-                          ${
-                            isCompleted
-                              ? '<span class="lesson-chip__state"><i class="fa-solid fa-check"></i></span>'
-                              : ""
-                          }
-                        </button>
-                      `;
-                    })
-                    .join("")}
+                  ${courseFlat.lessons.map((lesson, index) => {
+                    const isCurrent = index === activeIndex;
+                    const isCompleted = completedIds.has(lesson.id);
+                    const statusClass = isCurrent ? 'lesson-chip--current' : (isCompleted ? 'lesson-chip--completed' : 'lesson-chip--upcoming');
+                    const statusLabel = isCurrent ? 'Now playing' : (isCompleted ? 'Completed' : 'Available');
+                    return `
+                      <button class="lesson-chip ${statusClass}" type="button" onclick="app.changeLesson(${index})">
+                        <span class="lesson-chip__icon ${lesson.gradientClass}">
+                          <i class="fas ${lesson.icon}"></i>
+                        </span>
+                        <span class="lesson-chip__content">
+                          <span class="lesson-chip__eyebrow">Lesson ${index + 1}</span>
+                          <span class="lesson-chip__title">${lesson.title}</span>
+                          <span class="lesson-chip__meta">${statusLabel}</span>
+                        </span>
+                        ${isCompleted ? '<span class="lesson-chip__state"><i class="fa-solid fa-check"></i></span>' : ''}
+                      </button>`;
+                  }).join('')}
                 </div>
               </aside>
 
               <div class="col-lg-8">
                 <article class="lesson-content-card">
-                  ${
-                    currentLesson.audioFile
-                      ? `
+                  ${currentLesson.audioFile ? `
                     <div class="lesson-audio-bar">
                       <div class="lesson-audio-meta">
                         <span class="lesson-audio-label"><i class="fa-solid fa-headphones"></i> Audio companion</span>
@@ -2402,61 +1864,49 @@ class YouthHealthLMS {
                       </button>
                     </div>
                     <audio id="lessonAudio" autoplay controls style="width:100%; margin-bottom: 1rem; display: none;">
-                      <source src="${this.getAudioSource(
-                        currentLesson.audioFile
-                      )}" type="${this.getAudioMimeType(currentLesson.audioFile)}">
+                      <source src="${this.getAudioSource(currentLesson.audioFile)}" type="${this.getAudioMimeType(currentLesson.audioFile)}">
                       Your browser does not support the audio element.
                     </audio>
-                  `
-                      : ""
-                  }
+                  ` : ''}
 
                   <div class="lesson-content-body">
                     ${currentLesson.content}
                   </div>
 
-                  <div class="lesson-quiz-card ${lessonCompleted ? "lesson-quiz-card--complete" : ""}">
+                  <div class="lesson-quiz-card ${lessonCompleted ? 'lesson-quiz-card--complete' : ''}">
                     <div class="lesson-quiz-card__header">
                       <span class="lesson-quiz-badge"><i class="fa-solid fa-circle-question"></i> Module quiz</span>
                       <span class="lesson-quiz-score">Passing score: ${currentLesson.quiz.passingScore}%</span>
                     </div>
-                    ${
-                      quizScore !== undefined
-                        ? `<div class="lesson-quiz-status">
-                            <i class="fa-solid ${lessonCompleted ? "fa-check-circle" : "fa-rotate-right"}"></i>
-                            <div>
-                              <p class="lesson-quiz-status__title">Latest attempt: ${quizScore}%</p>
-                              <p class="lesson-quiz-status__meta">${lessonCompleted ? "Great job! You can retake the quiz to boost your score." : "Give it another try to reach the passing score."}</p>
-                            </div>
-                          </div>`
-                        : ""
-                    }
+                    ${quizScore !== undefined ? `
+                      <div class="lesson-quiz-status">
+                        <i class="fa-solid ${lessonCompleted ? 'fa-check-circle' : 'fa-rotate-right'}"></i>
+                        <div>
+                          <p class="lesson-quiz-status__title">Latest attempt: ${quizScore}%</p>
+                          <p class="lesson-quiz-status__meta">${lessonCompleted ? 'Great job! You can retake the quiz to boost your score.' : 'Give it another try to reach the passing score.'}</p>
+                        </div>
+                      </div>` : ''}
                     <p class="lesson-quiz-text">
                       Test your understanding and unlock the next milestone. Score at least ${currentLesson.quiz.passingScore}% to mark this lesson as complete.
                     </p>
                     <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
-                      ${lessonCompleted ? "Retake quiz" : "Start quiz"}
+                      ${lessonCompleted ? 'Retake quiz' : 'Start quiz'}
                       <i class="fa-solid fa-arrow-right-long ms-2"></i>
                     </button>
                   </div>
 
                   <div class="lesson-nav-actions">
-                    ${
-                      activeIndex > 0
-                        ? `<button class="btn btn-outline-primary lesson-nav-btn" onclick="app.previousLesson()">
-                            <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
-                          </button>`
-                        : "<span></span>"
-                    }
-                    ${
-                      activeIndex < totalLessons - 1
-                        ? `<button class="btn btn-primary lesson-nav-btn" onclick="app.nextLesson()">
-                            Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
-                          </button>`
-                        : `<button class="btn btn-success lesson-nav-btn" onclick="app.completeLesson()">
-                            <i class="fa-solid fa-award me-2"></i>Complete course
-                          </button>`
-                    }
+                    ${activeIndex > 0 ? `
+                      <button class="btn btn-outline-primary lesson-nav-btn" onclick="app.previousLesson()">
+                        <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
+                      </button>` : '<span></span>'}
+                    ${activeIndex < totalLessons - 1 ? `
+                      <button class="btn btn-primary lesson-nav-btn" onclick="app.nextLesson()">
+                        Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
+                      </button>` : `
+                      <button class="btn btn-success lesson-nav-btn" onclick="app.completeLesson()">
+                        <i class="fa-solid fa-award me-2"></i>Complete course
+                      </button>`}
                   </div>
                 </article>
               </div>
@@ -2465,6 +1915,20 @@ class YouthHealthLMS {
         </section>
       </div>
     `;
+  }
+
+  // Change chapter and lesson (chapter-based courses)
+  changeChapterLesson(chapterIndex, lessonIndex) {
+    this.currentChapterIndex = Math.max(0, chapterIndex || 0);
+    if (this.selectedCourse && Array.isArray(this.selectedCourse.chapters)) {
+      const lessons = this.selectedCourse.chapters[this.currentChapterIndex]?.lessons || [];
+      this.selectedCourse.lessons = lessons;
+      this.currentLessonIndex = Math.min(Math.max(0, lessonIndex || 0), Math.max(0, lessons.length - 1));
+    } else {
+      this.currentLessonIndex = Math.max(0, lessonIndex || 0);
+    }
+    this.render();
+    try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (_) {}
   }
 
   changeLesson(index) {
