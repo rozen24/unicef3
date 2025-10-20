@@ -388,13 +388,6 @@ class YouthHealthLMS {
   // Render methods
   render() {
     const app = document.getElementById("app");
-    // Control horizontal overflow globally except on lesson slider view
-    const body = document.body;
-    if (this.currentView === 'lesson-slider') {
-      body.classList.remove('no-overflow-x');
-    } else {
-      body.classList.add('no-overflow-x');
-    }
 
     switch (this.currentView) {
       case "home":
@@ -432,6 +425,19 @@ class YouthHealthLMS {
         this.initAOS();
         break;
     }
+
+    // View-specific overflow handling
+    // For lesson slider, allow horizontal overflow (auto) to avoid clipping wide content
+    try {
+      const htmlEl = document.documentElement;
+      if (this.currentView === "lesson-slider") {
+        if (htmlEl) htmlEl.style.overflowX = "visible";
+        if (document.body) document.body.style.overflowX = "visible";
+      } else {
+        if (htmlEl) htmlEl.style.overflowX = ""; // revert to stylesheet (likely hidden)
+        if (document.body) document.body.style.overflowX = "";
+      }
+    } catch (_) { /* no-op */ }
   }
 
   initHomeScripts() {
