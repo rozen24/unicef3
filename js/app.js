@@ -613,32 +613,13 @@ class YouthHealthLMS {
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="fade-right">
               <div class="hero-content">
-                <div class="hero-badges">
-                  <span class="badge-pill">Health Literacy</span>
-                  <span class="badge-pill">Peer Influence</span>
-                  <span class="badge-pill">Advocacy</span>
-                </div>
                 <h1 class="hero-title display-gradient">Youth Health Ambassador Programme</h1>
                 <p class="hero-description">
-                  A joint initiative empowering youth through primary prevention and health promotion—building capacity to lead as informed health ambassadors.
+                    The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador. <br>
+                    This program equips young person with knowledge and skills in areas like physical health including sexual and reproductive health, nutrition, mental wellbeing etc.  enabling them to become active advocates for health and influence healthier choices within their communities and networks.
                 </p>
                 <div class="d-flex gap-3 flex-wrap">
-                  <a href="#eligibility" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base">Become an Ambassador</a>
-                  <a href="#" class="btn-cta-secondary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">Access Login</a>
-                </div>
-              </div>
-              <div class="hero-stats">
-                <div class="stat-item glass-card">
-                  <span class="stat-number">49.5M</span>
-                  <span class="stat-label">Young People in <br> Bangladesh</span>
-                </div>
-                <div class="stat-item glass-card">
-                  <span class="stat-number">15-24</span>
-                  <span class="stat-label">Age Group</span>
-                </div>
-                <div class="stat-item glass-card">
-                  <span class="stat-number">30%</span>
-                  <span class="stat-label">of <br>Total Population</span>
+                  <a href="#" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">Become an Ambassador</a>
                 </div>
               </div>
             </div>
@@ -1739,7 +1720,7 @@ class YouthHealthLMS {
                           <span id="audioText">Pause</span>
                         </button>
                       </div>
-                      <audio id="lessonAudio" autoplay controls style="width:100%; margin-bottom: 1rem; display: none;">
+                      <audio id="lessonAudio" controls style="width:100%; margin-bottom: 1rem; display: none;">
                         <source src="${this.getAudioSource(currentLesson.audioFile)}" type="${this.getAudioMimeType(currentLesson.audioFile)}">
                         Your browser does not support the audio element.
                       </audio>
