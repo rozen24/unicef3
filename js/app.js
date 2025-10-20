@@ -576,82 +576,83 @@ class YouthHealthLMS {
   renderHome() {
     return `
       <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg fixed-top nav-glass">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-neo">
         <div class="container">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="#home" onclick="app.navigateTo('home'); return false;">
-            <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="app.navigateTo('home'); return false;">
+            <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" style="width: 100%; height: 60px; object-fit: contain;">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-              <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#about">Mission</a></li>
-              <li class="nav-item"><a class="nav-link" href="#components">Pillars</a></li>
-              <li class="nav-item"><a class="nav-link" href="#roles">Ambassadors</a></li>
-              <li class="nav-item"><a class="nav-link" href="#eligibility">Journey</a></li>
-              <li class="nav-item"><a class="nav-link" href="#statistics">Impact</a></li>
-              <li class="nav-item ms-lg-3"><a href="#" class="btn btn-chip" onclick="app.navigateTo('login'); return false;">Sign In</a></li>
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item"><a class="nav-link active transition-base" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link transition-base" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link transition-base" href="#components">Components</a></li>
+              <li class="nav-item"><a class="nav-link transition-base" href="#roles">Roles</a></li>
+              <li class="nav-item"><a class="nav-link transition-base" href="#eligibility">Join</a></li>
+              <li class="nav-item"><a class="nav-link transition-base" href="#statistics">Stats</a></li>
+              <li class="nav-item ms-lg-3"><a href="#" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">Login</a></li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <!-- Hero -->
-      <section id="home" class="hero-section hero-immersive">
-        <div class="hero-gradient-layer"></div>
-        <div class="hero-blob hero-blob-one"></div>
-        <div class="hero-blob hero-blob-two"></div>
-        <div class="container position-relative">
-          <div class="row align-items-center g-5">
-            <div class="col-xl-6" data-aos="fade-right">
-              <div class="hero-copy">
-                <div class="hero-kicker">A UNICEF & MOHFW collaboration</div>
-                <h1 class="hero-title display-4">Empowering Youth through Health Leadership</h1>
-                <p class="hero-lead">
-                  The Youth Health Ambassador Programme equips young people across Bangladesh with health literacy, advocacy, and leadership skills so they can champion wellbeing within their communities.
-                </p>
-                <div class="hero-actions">
-                  <a class="btn btn-primary btn-lg" href="#eligibility">Explore the journey</a>
-                  <a class="btn btn-outline-light btn-lg" href="#" onclick="app.navigateTo('register'); return false;">Create free account</a>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section hero-neo">
+        <!-- Background ornaments -->
+        <div class="bg-ornaments" aria-hidden="true">
+          <span class="orb orb-1"></span>
+          <span class="orb orb-2"></span>
+          <span class="orb orb-3"></span>
+        </div>
+        <div class="container position-relative" style="z-index: 2;">
+          <div class="row align-items-center">
+            <div class="col-lg-7" data-aos="fade-right">
+              <div class="hero-content">
+                <div class="hero-badges">
+                  <span class="badge-pill">Health Literacy</span>
+                  <span class="badge-pill">Peer Influence</span>
+                  <span class="badge-pill">Advocacy</span>
                 </div>
-                <div class="hero-meta">
-                  <div class="meta-badge"><i class="fa-solid fa-circle-check"></i> UNICEF Trusted Curriculum</div>
-                  <div class="meta-badge"><i class="fa-solid fa-globe"></i> Available nationwide, 24/7</div>
+                <h1 class="hero-title display-gradient">Youth Health Ambassador Programme</h1>
+                <p class="hero-description">
+                  A joint initiative empowering youth through primary prevention and health promotion—building capacity to lead as informed health ambassadors.
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                  <a href="#eligibility" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base">Become an Ambassador</a>
+                  <a href="#" class="btn-cta-secondary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">Access Login</a>
+                </div>
+              </div>
+              <div class="hero-stats">
+                <div class="stat-item glass-card">
+                  <span class="stat-number">49.5M</span>
+                  <span class="stat-label">Young People in <br> Bangladesh</span>
+                </div>
+                <div class="stat-item glass-card">
+                  <span class="stat-number">15-24</span>
+                  <span class="stat-label">Age Group</span>
+                </div>
+                <div class="stat-item glass-card">
+                  <span class="stat-number">30%</span>
+                  <span class="stat-label">of <br>Total Population</span>
                 </div>
               </div>
             </div>
-            <div class="col-xl-6" data-aos="fade-left">
-              <div class="hero-visual">
-                <div class="hero-card">
-                  <div class="hero-card__header">
-                    <span class="hero-chip">
-                      <i class="fa-solid fa-star"></i>
-                      Ambassador Spotlight
-                    </span>
-                    <span class="hero-chip hero-chip--pulse">
-                      <i class="fa-solid fa-signal"></i>
-                      Live Progress Tracker
-                    </span>
-                  </div>
-                  <div class="hero-card__body">
-                    <img src="img/Asset 2.png" alt="Youth celebrating" class="hero-illustration">
-                  </div>
-                  <div class="hero-card__footer">
-                    <div class="metric">
-                      <span class="metric-label">Young people in Bangladesh</span>
-                      <span class="metric-value stat-number" data-target="49.5M">0</span>
-                    </div>
-                    <div class="metric">
-                      <span class="metric-label">Active ambassadors this week</span>
-                      <span class="metric-value stat-number" data-target="1200">0</span>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-lg-5" data-aos="fade-left">
+              <div class="animate-float">
+                <img src="img/Asset 2.png" alt="Youth Health" class="img-fluid" style="position: relative; z-index: 2; filter: drop-shadow(0 20px 40px rgba(0,0,0,.25));">
               </div>
             </div>
           </div>
+        </div>
+        <!-- Floating background elements -->
+        <div class="floating-bg" aria-hidden="true">
+          <span class="float-elem" style="top:10%; left:5%;"></span>
+          <span class="float-elem" style="top:20%; right:8%;"></span>
+          <span class="float-elem" style="bottom:15%; left:12%;"></span>
+          <span class="float-elem" style="bottom:10%; right:10%;"></span>
+          <span class="float-elem" style="top:55%; left:45%; width:80px; height:80px;"></span>
         </div>
       </section>
 
@@ -768,6 +769,60 @@ class YouthHealthLMS {
       </section>
 
       <!-- Ambassador Roles -->
+      <!-- Roles Section -->
+      <section id="roles" class="section-padding bg-light">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-10 text-center mb-5" data-aos="fade-up">
+                      <h2 class="section-title gradient-text">Who Am I as a Health Ambassador?</h2>
+                      <p class="section-subtitle">My roles and responsibilities in transforming community health</p>
+                  </div>
+              </div>
+              <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="fact-item hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+                          <div class="fact-icon">
+                              <i class="fas fa-shield-heart"></i>
+                          </div>
+                          <p class="fact-text">
+                              I am equipped with expertise in safeguarding adolescent and youth health and well-being, enabling me to contribute meaningfully to society while harnessing the triple dividend of health, social, and economic benefits.
+                          </p>
+                      </div>
+                  </div>
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="fact-item hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+                          <div class="fact-icon">
+                              <i class="fas fa-share-nodes"></i>
+                          </div>
+                          <p class="fact-text">
+                              I actively empower my peers by sharing knowledge on health promotion, disease prevention, and holistic well-being, fostering informed decision-making among adolescents and youth.
+                          </p>
+                      </div>
+                  </div>
+          <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+            <div class="fact-item hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+                          <div class="fact-icon">
+                              <i class="fas fa-handshake"></i>
+                          </div>
+                          <p class="fact-text">
+                              Through advocacy, I engage policy makers, stakeholders and community influencer, gatekeepers to prioritize adolescent health, ensuring supportive policies and collaborative action.
+                          </p>
+                      </div>
+                  </div>
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+            <div class="fact-item hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+                          <div class="fact-icon">
+                              <i class="fas fa-chart-line"></i>
+                          </div>
+                          <p class="fact-text">
+                              I drive awareness and demand creation within communities, inspiring collective responsibility and action toward better health outcomes for adolescents and youth.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
       
 
       <!-- Ambassador Journey -->
@@ -831,6 +886,366 @@ class YouthHealthLMS {
         </div>
       </section>
 
+      <!-- Global Statistics -->
+      <section id="statistics" class="section-padding bg-light">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8 text-center mb-5" data-aos="fade-up">
+                      <h2 class="section-title gradient-text">Youth Around the World</h2>
+                      <p class="section-subtitle">Understanding the global and local landscape</p>
+                  </div>
+              </div>
+              <div class="row g-4 mb-5">
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-box hover-lift-sm hover-shadow-glow transition-base">
+                          <div class="stat-icon-large">
+                              <i class="fas fa-earth-americas"></i>
+                          </div>
+                          <span class="stat-value">1.8B</span>
+                          <p class="stat-description">Youth Worldwide</p>
+                          <p class="text-muted small">90% live in developing countries</p>
+                      </div>
+                  </div>
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-box hover-lift-sm hover-shadow-glow transition-base">
+                          <div class="stat-icon-large">
+                              <i class="fas fa-users-between-lines"></i>
+                          </div>
+                          <span class="stat-value">49.5M</span>
+                          <p class="stat-description">Young People in </br> Bangladesh</p>
+                          <p class="text-muted small">Approx. 30% of total population</p>
+                      </div>
+                  </div>
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stat-box hover-lift-sm hover-shadow-glow transition-base">
+                          <div class="stat-icon-large">
+                              <i class="fas fa-user-group"></i>
+                          </div>
+                          <span class="stat-value">31.5M</span>
+                          <p class="stat-description">Youth in Bangladesh</p>
+                          <p class="text-muted small">Ages 15-24 years</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Distribution of Young People -->
+      <section id="distribution" class="section-padding slide-section slide-section--light">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="slide-kicker">Population lens</span>
+            <h2 class="section-heading">Distribution of young people</h2>
+            <p class="section-paragraph w-lg-75 mx-auto">Where young people live and how they’re distributed across age and geography shapes services, access, and opportunities.</p>
+          </div>
+          <div class="row g-4 align-items-stretch">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="50">
+              <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                <div class="mb-3"><i class="fa-solid fa-map-location-dot fa-2xl" style="color:#0ea5f7"></i></div>
+                <h3 class="mb-2">Geographic spread</h3>
+                <p class="mb-3">Urban and rural contexts differ in access to education, health, and safe spaces for adolescents.</p>
+                <figure class="image-card" style="height:220px"><img src="img/Distribution/distrubation-map.jpg" alt="Distribution map of youth"></figure>
+              </article>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="120">
+              <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                <div class="mb-3"><i class="fa-solid fa-people-group fa-2xl" style="color:#22c55e"></i></div>
+                <h3 class="mb-2">Population pyramid</h3>
+                <p class="mb-3">A youthful population is a powerful dividend—if health, skills, and protection are prioritized.</p>
+                <figure class="image-card" style="height:220px"><img src="img/Distribution/dis-piramid.png" alt="Population pyramid"></figure>
+              </article>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="190">
+              <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                <div class="mb-3"><i class="fa-solid fa-person-chalkboard fa-2xl" style="color:#a855f7"></i></div>
+                <h3 class="mb-2">Age groups</h3>
+                <p class="mb-3">Adolescents (10–19) and youth (15–24) need tailored messages, services, and safe participation.</p>
+                <figure class="image-card" style="height:220px"><img src="img/Distribution/dis-people.png" alt="Young people"></figure>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why important -->
+      <section id="why-important" class="section-padding slide-section">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+              <figure class="image-card" style="height:420px"><img src="img/why-imp/why-imp.jpg" alt="Why youth health matters"></figure>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <span class="slide-kicker">Why it matters</span>
+              <h2 class="section-heading">Why young people’s health and wellbeing are vital</h2>
+              <p class="section-paragraph">Healthy adolescents learn better, participate confidently, and transition into thriving adults—multiplying benefits for families, communities, and the economy.</p>
+              <ul class="list-unstyled d-grid gap-3 mt-3">
+                <li class="fact-item icon-spin-on-hover">
+                  <div class="fact-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                  <p class="mb-0">Prevention first: building literacy and protective behaviors reduces lifelong risks.</p>
+                </li>
+                <li class="fact-item icon-spin-on-hover">
+                  <div class="fact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                  <p class="mb-0">Better learning: health and nutrition improve attendance, focus, and performance.</p>
+                </li>
+                <li class="fact-item icon-spin-on-hover">
+                  <div class="fact-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                  <p class="mb-0">Peer power: informed youth influence peers positively and spark community change.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global and Bangladesh scenarios -->
+      <section id="scenarios" class="section-padding slide-section slide-section--light">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="slide-kicker">Context matters</span>
+            <h2 class="section-heading">Global and Bangladesh scenarios</h2>
+            <p class="section-paragraph w-lg-75 mx-auto">From global trends to local realities, insights guide smart action for youth health.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+              <article class="modern-card hover-lift-sm hover-shadow-glow transition-base">
+                <div class="d-flex align-items-center gap-2 mb-2"><i class="fa-solid fa-globe-asia"></i><h3 class="mb-0">Global scenario</h3></div>
+                <ul class="mb-0 ps-3">
+                  <li>1.8 billion adolescents and youth—largest generation ever.</li>
+                  <li>Rapid digital adoption, but uneven access to services and protections.</li>
+                  <li>Climate, conflict, and misinformation amplify health risks.</li>
+                </ul>
+              </article>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="120">
+              <article class="modern-card hover-lift-sm hover-shadow-glow transition-base">
+                <div class="d-flex align-items-center gap-2 mb-2"><i class="fa-solid fa-flag"></i><h3 class="mb-0">Bangladesh scenario</h3></div>
+                <ul class="mb-0 ps-3">
+                  <li>A youthful demographic with strong potential for a demographic dividend.</li>
+                  <li>Progress in education and primary health—opportunities to deepen quality and reach.</li>
+                  <li>Need for adolescent-friendly services, mental health care, SRHR, and protection.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Child marriage focus -->
+      <section id="child-marriage" class="section-padding slide-section">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+              <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                <div class="d-flex align-items-center gap-2 mb-2"><i class="fa-solid fa-child-reaching"></i><h3 class="mb-0">Child marriage and adolescent childbirth</h3></div>
+                <p class="mb-3">Ending child marriage protects education, autonomy, and health. Delaying pregnancy reduces risks and unlocks opportunities.</p>
+                <div class="row g-3">
+                  <div class="col-6"><figure class="image-card" style="height:160px"><img src="img/Child-marraige/key-facts.png" alt="Key facts"></figure></div>
+                  <div class="col-6"><figure class="image-card" style="height:160px"><img src="img/Child-marraige/graph.png" alt="Trend graph"></figure></div>
+                  <div class="col-12"><figure class="image-card" style="height:180px"><img src="img/Child-marraige/childbearing.png" alt="Adolescent childbearing"></figure></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <ul class="list-unstyled d-grid gap-3">
+                <li class="fact-item"><div class="fact-icon"><i class="fa-solid fa-school"></i></div><p class="mb-0">Keep girls in school and support re-entry for young mothers.</p></li>
+                <li class="fact-item"><div class="fact-icon"><i class="fa-solid fa-hand-holding-heart"></i></div><p class="mb-0">Scale adolescent-friendly services including SRHR and mental health.</p></li>
+                <li class="fact-item"><div class="fact-icon"><i class="fa-solid fa-scale-balanced"></i></div><p class="mb-0">Enforce laws and mobilize communities to shift harmful norms.</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Issues and determinants -->
+      <section id="issues" class="section-padding bg-light">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5" data-aos="fade-right">
+              <span class="slide-kicker">Key issues</span>
+              <h2 class="section-heading">What challenges do adolescents face?</h2>
+              <p class="section-paragraph">Nutrition, mental health, violence, unsafe practices, limited information, and barriers to services affect daily wellbeing.</p>
+              <div class="d-grid gap-2">
+                <span class="badge-pill">Nutrition</span>
+                <span class="badge-pill">Mental health</span>
+                <span class="badge-pill">SRHR & protection</span>
+                <span class="badge-pill">Injury & road safety</span>
+                <span class="badge-pill">Substance use</span>
+              </div>
+            </div>
+            <div class="col-lg-7" data-aos="fade-left">
+              <figure class="image-card" style="height:380px"><img src="img/determinants/determinants.png" alt="Determinants of adolescent health"></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Special care -->
+      <section id="special-care" class="section-padding slide-section slide-section--light">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6" data-aos="zoom-in">
+              <article class="modern-card hover-lift-sm hover-shadow-glow transition-base">
+                <div class="d-flex align-items-center gap-2 mb-2"><i class="fa-solid fa-user-nurse"></i><h3 class="mb-0">Special care for adolescents</h3></div>
+                <p class="mb-2">Adolescents need non-judgmental, confidential, and inclusive services designed for their stage of life.</p>
+                <ul class="ps-3 mb-0">
+                  <li>Respectful communication and privacy</li>
+                  <li>Peer support and safe referral pathways</li>
+                  <li>Access for all—including those with disabilities</li>
+                </ul>
+              </article>
+            </div>
+            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
+              <figure class="image-card" style="height:300px"><img src="img/adolsent/adolsent.png" alt="Adolescent care"></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SDG alignment -->
+      <section id="sdg" class="section-padding slide-section">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="slide-kicker">SDG links</span>
+            <h2 class="section-heading">How youth health advances the SDGs</h2>
+            <p class="section-paragraph w-lg-75 mx-auto">Investing in adolescents accelerates progress across multiple Sustainable Development Goals.</p>
+          </div>
+          <div class="row g-4 text-center">
+            ${[
+              {img:'img/sdc/no-proverty.png', label:'SDG 1: No Poverty'},
+              {img:'img/sdc/zero-hunger.png', label:'SDG 2: Zero Hunger'},
+              {img:'img/sdc/good-health.png', label:'SDG 3: Good Health'},
+              {img:'img/sdc/quality.png', label:'SDG 4: Quality Education'},
+              {img:'img/sdc/gender.png', label:'SDG 5: Gender Equality'},
+              {img:'img/sdc/decentpng.png', label:'SDG 8: Decent Work'},
+              {img:'img/sdc/peace.png', label:'SDG 16: Peace, Justice & Strong Institutions'}
+            ].map((s, i) => `
+              <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="${i*60}">
+                <div class="modern-card glass-card hover-lift-sm transition-base" style="padding:1.25rem">
+                  <img src="${s.img}" alt="${s.label}" style="max-height:80px; object-fit:contain;" />
+                  <p class="mt-2 mb-0 fw-semibold">${s.label}</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </section>
+
+      <!-- Global agenda -->
+      <section id="global-agenda" class="section-padding slide-section slide-section--light">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+              <span class="slide-kicker">Global agenda</span>
+              <h2 class="section-heading">A shared agenda for adolescent health</h2>
+              <p class="section-paragraph">Global commitments emphasize primary prevention, equity, adolescent participation, and cross-sector collaboration.</p>
+              <ul class="ps-3">
+                <li>Put adolescents at the center of design and delivery</li>
+                <li>Strengthen community systems and school-health platforms</li>
+                <li>Use data to target, measure, and improve outcomes</li>
+              </ul>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <figure class="image-card" style="height:360px"><img src="img/agenda/agenda.jpg" alt="Global agenda"></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Policies and strategies -->
+      <section id="policies" class="section-padding slide-section">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="slide-kicker">Policy & strategy</span>
+            <h2 class="section-heading">Policies, strategies and plans</h2>
+            <p class="section-paragraph w-lg-75 mx-auto">National directions guide service delivery, investment, and coordination for adolescent health.</p>
+          </div>
+          <div class="row g-4">
+            ${[
+              {img:'img/policies/policy.png', title:'Policy framework'},
+              {img:'img/policies/strategy.png', title:'Strategy and roadmap'},
+              {img:'img/policies/national-health.png', title:'National health policy'},
+              {img:'img/policies/national-strategy.jpg', title:'Adolescent health strategy'},
+              {img:'img/plan/national-plan.png', title:'National action plan'},
+              {img:'img/policies/adolsent.png', title:'Adolescent-friendly services'}
+            ].map((p, i) => `
+              <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="${i*60}">
+                <article class="modern-card hover-lift-sm hover-shadow-glow transition-base">
+                  <figure class="image-card" style="height:180px"><img src="${p.img}" alt="${p.title}"></figure>
+                  <h3 class="mt-3">${p.title}</h3>
+                </article>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </section>
+
+      <!-- Government commitment -->
+      <section id="government" class="section-padding slide-section slide-section--light">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+              <span class="slide-kicker">Commitment</span>
+              <h2 class="section-heading">Government’s commitment</h2>
+              <p class="section-paragraph">Bangladesh is investing in adolescent health through policies, plans, and partnerships—aligning service delivery with rights and quality.</p>
+              <ul class="ps-3">
+                <li>Strengthening adolescent-friendly health services</li>
+                <li>Scale-up through schools and community platforms</li>
+                <li>Digital tools for learning and accountability</li>
+              </ul>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+              <figure class="image-card" style="height:320px"><img src="img/plan/national-plan.png" alt="National plan"></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Combined effort -->
+      <section id="effort" class="section-padding slide-section">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+              <figure class="image-card" style="height:340px"><img src="img/effort.png" alt="Combined effort"></figure>
+            </div>
+            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+              <span class="slide-kicker">Whole-of-society</span>
+              <h2 class="section-heading">A combined effort</h2>
+              <p class="section-paragraph">Health facilities, schools, families, religious leaders, media, and youth networks play complementary roles. Together, we create enabling environments where adolescents can thrive.</p>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <span class="badge-pill">Health sector</span>
+                <span class="badge-pill">Education</span>
+                <span class="badge-pill">Social protection</span>
+                <span class="badge-pill">Civil society</span>
+                <span class="badge-pill">Private sector</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recommendations -->
+      <section id="recommendations" class="section-padding slide-section slide-section--light">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+              <span class="slide-kicker">Recommendations</span>
+              <h2 class="section-heading">Turning insight into action</h2>
+              <ul class="ps-3">
+                <li>Boost health literacy with engaging, age-appropriate content</li>
+                <li>Expand adolescent-friendly services with privacy and respect</li>
+                <li>Strengthen referral and protection systems</li>
+                <li>Champion youth leadership and peer influence</li>
+                <li>Use data for equity and continuous improvement</li>
+              </ul>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+              <figure class="image-card" style="height:320px"><img src="img/recomendations.png" alt="Recommendations visual"></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
       <!-- Impact metrics -->
       
 
