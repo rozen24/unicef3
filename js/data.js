@@ -1,10 +1,10 @@
-// Youth Health LMS - Course Data
+// Young Health LMS - Course Data
 
 const coursesData = [
   {
     id: 'yhap-course',
-    title: 'Youth Health Ambassador Programme',
-    description: 'Comprehensive training program for Youth Health Ambassadors covering health literacy, advocacy, and community leadership.',
+  title: 'Young Health Ambassador Programme',
+  description: 'Comprehensive training program for Young Health Ambassadors covering health literacy, advocacy, and community leadership.',
     duration: '10 Lessons',
     level: 'Comprehensive',
     imageUrl: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
@@ -18,24 +18,24 @@ const coursesData = [
           // Understanding YHAP
           {
             id: 'ch1-lesson-1',
-            title: 'Understanding Youth Health Ambassador Programme',
+            title: 'Understanding Young Health Ambassador Programme',
             icon: 'fa-heartbeat',
             gradientClass: 'bg-gradient-purple',
             audioFile: '1.mp3',
-            quiz: { passingScore: 80, questions: [{ id:'q1a', question: 'What age defines youth per UN?', options:['15-24','10-19','18-29','12-21'], correctAnswer:0 }] },
+            quiz: { passingScore: 80, questions: [{ id:'q1a', question: 'What age defines young per UN?', options:['15-24','10-19','18-29','12-21'], correctAnswer:0 }] },
             content: (function(){
               // reuse existing lesson-1 content
               return `
           <div class="lesson-slide">
-            <h2 class="definition-card alert-info hover-lift-sm transition-base aos-init aos-animate gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Youth Health Ambassador Program (YHAP)</h2>
+            <h2 class="definition-card alert-info hover-lift-sm transition-base aos-init aos-animate gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Young Health Ambassador Program (YHAP)</h2>
             <div class="floating-bg" aria-hidden="true">
               <span class="float-elem" style="top:8%; left:6%; width:70px; height:70px;"></span>
               <span class="float-elem" style="top:35%; right:10%; width:90px; height:90px;"></span>
               <span class="float-elem" style="bottom:12%; left:14%; width:80px; height:80px;"></span>
             </div>
             <div class=" definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="100">
-              <h4 class="gradient-text transition-base"><i class="fas fa-users me-2 animate-float"></i>Youth</h4>
-              <p>As per United Nations, youth refers to those persons aged between the ages of <strong>15 and 24</strong> without prejudice to other definitions by Member States. It is a period of transition from the dependence of childhood to adulthood's independence. Young People covers the age range 10-24 years and Adolescents as individuals in the 10-19 years age group.</p>
+              <h4 class="gradient-text transition-base"><i class="fas fa-users me-2 animate-float"></i>Young</h4>
+              <p>As per United Nations, young refers to those persons aged between the ages of <strong>15 and 24</strong> without prejudice to other definitions by Member States. It is a period of transition from the dependence of childhood to adulthood's independence. Young People covers the age range 10-24 years and Adolescents as individuals in the 10-19 years age group.</p>
             </div>
             <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="200">
               <h4 class="gradient-text transition-base"><i class="fas fa-heartbeat me-2 animate-float"></i>Health</h4>
@@ -43,8 +43,8 @@ const coursesData = [
             </div>
             <div class="program-intro hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="250">
               <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>About YHAP</h4>
-              <p>The Youth Health Ambassador Programme (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The programme is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p>
-              <p>These programs equip youth with knowledge and skills in areas like physical health including SRH and mental wellbeing, enabling them to become active advocates for health and influence healthier choices within their communities and networks.</p>
+              <p>The Young Health Ambassador Programme (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The programme is designed to empower young by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p>
+              <p>These programs equip young with knowledge and skills in areas like physical health including SRH and mental wellbeing, enabling them to become active advocates for health and influence healthier choices within their communities and networks.</p>
             </div>
           </div>`; })()
           },
@@ -104,7 +104,7 @@ const coursesData = [
           // Nine steps
           {
             id: 'ch1-lesson-4',
-            title: 'Nine interactive steps to become a certified Youth Health Ambassador',
+            title: 'Nine interactive steps to become a certified Young Health Ambassador',
             icon: 'fa-clipboard-check',
             gradientClass: 'bg-gradient-orange',
             audioFile: '4.mp3',
@@ -114,7 +114,7 @@ const coursesData = [
             <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Eligibility and Steps to be a YHA</h2>
             <div class="alert alert-info mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">
               <h5><i class="fas fa-info-circle me-2"></i>Eligibility</h5>
-              <p class="mb-0">Any person aged <strong>15-24 years</strong> can become a Youth Health Ambassador.</p>
+              <p class="mb-0">Any person aged <strong>15-24 years</strong> can become a Young Health Ambassador.</p>
             </div>
             <div class="row g-3">${[
               'Online Registration','Unique ID Generation','Secure Login','Access Course','Complete Modules','Pass Assessment','System Certification','Oath Taking','Final Certificate'
@@ -128,14 +128,14 @@ const coursesData = [
             </div>
           </div>`; })()
           },
-          // Youth Around the World
+          // Young Around the World
           {
             id: 'ch1-lesson-5',
-            title: 'Youth Around the World',
+            title: 'Young Around the World',
             icon: 'fa-earth-americas',
             gradientClass: 'bg-gradient-green',
             audioFile: '5.mp3',
-            quiz: { passingScore: 80, questions: [{ id:'q1e', question: 'Approximate share of youth living in developing countries?', options:['30%','50%','70%','90%'], correctAnswer:3 }] },
+            quiz: { passingScore: 80, questions: [{ id:'q1e', question: 'Approximate share of young living in developing countries?', options:['30%','50%','70%','90%'], correctAnswer:3 }] },
             content: (function(){ return `
           <div class="lesson-slide">
             <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Distribution of Young People</h2>
@@ -149,7 +149,7 @@ const coursesData = [
               <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
                 <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
                   <div class="stat-icon"><i class="fas fa-user-group"></i></div>
-                  <h4>31.5 Million</h4><p>Youth (15–24 years) in Bangladesh</p>
+                  <h4>31.5 Million</h4><p>Young (15–24 years) in Bangladesh</p>
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@ const coursesData = [
             icon: 'fa-map-location-dot',
             gradientClass: 'bg-gradient-blue',
             audioFile: '',
-            quiz: { passingScore: 60, questions: [{ id:'q2a', question: 'A youthful population can be a…', options:['Barrier','Dividend','Burden','Myth'], correctAnswer:1 }] },
+            quiz: { passingScore: 60, questions: [{ id:'q2a', question: 'A young population can be a…', options:['Barrier','Dividend','Burden','Myth'], correctAnswer:1 }] },
             content: `
             <div class="lesson-slide">
               <h2 class="slide-title gradient-text" data-aos="fade-up">Distribution of young people</h2>
@@ -182,14 +182,14 @@ const coursesData = [
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="80">
                   <article class="modern-card glass-card">
                     <h5>Population pyramid</h5>
-                    <p>A youthful population can deliver a demographic dividend with the right investments.</p>
+                    <p>A young population can deliver a demographic dividend with the right investments.</p>
                     <figure class="image-card" style="height:220px"><img src="img/Distribution/dis-piramid.png" alt="Pyramid"></figure>
                   </article>
                 </div>
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="140">
                   <article class="modern-card glass-card">
                     <h5>Age groups</h5>
-                    <p>Adolescents (10–19) and youth (15–24) need tailored services and safe participation.</p>
+                    <p>Adolescents (10–19) and young (15–24) need tailored services and safe participation.</p>
                     <figure class="image-card" style="height:220px"><img src="img/Distribution/dis-people.png" alt="People"></figure>
                   </article>
                 </div>
@@ -209,7 +209,7 @@ const coursesData = [
                 <div class="row g-4 align-items-center">
                   <div class="col-lg-6" data-aos="fade-right"><figure class="image-card" style="height:360px"><img src="img/why-imp/why-imp.jpg" alt="Why"></figure></div>
                   <div class="col-lg-6" data-aos="fade-left">${['Prevention first','Better learning','Peer power'].map((h,i)=>`
-                    <div class="fact-item icon-spin-on-hover"><div class="fact-icon"><i class="fa-solid ${['fa-shield-heart','fa-graduation-cap','fa-people-arrows'][i]}"></i></div><p class="mb-0">${['Protective behaviors reduce lifelong risks.','Health and nutrition improve attendance and performance.','Informed youth influence peers positively and spark change.'][i]}</p></div>`).join('')}</div>
+                    <div class="fact-item icon-spin-on-hover"><div class="fact-icon"><i class="fa-solid ${['fa-shield-heart','fa-graduation-cap','fa-people-arrows'][i]}"></i></div><p class="mb-0">${['Protective behaviors reduce lifelong risks.','Health and nutrition improve attendance and performance.','Informed young influence peers positively and spark change.'][i]}</p></div>`).join('')}</div>
                 </div>
               </div>`; })()
           },
@@ -287,14 +287,14 @@ const coursesData = [
           },
           {
             id: 'ch2-lesson-7',
-            title: 'How youth health advances the SDGs',
+            title: 'How young health advances the SDGs',
             icon: 'fa-diagram-project',
             gradientClass: 'bg-gradient-violet',
             audioFile: '',
-            quiz: { passingScore: 60, questions: [{ id:'q2g', question: 'Youth health impacts how many SDGs?', options:['Only 1','Several','None','Unknown'], correctAnswer:1 }] },
+            quiz: { passingScore: 60, questions: [{ id:'q2g', question: 'Young health impacts how many SDGs?', options:['Only 1','Several','None','Unknown'], correctAnswer:1 }] },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">Youth health and the SDGs</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Young health and the SDGs</h2>
                 <div class="row g-3 text-center">${[
                   {img:'img/sdc/no-proverty.png', label:'SDG 1'},
                   {img:'img/sdc/zero-hunger.png', label:'SDG 2'},
@@ -380,11 +380,11 @@ const coursesData = [
             icon: 'fa-rocket',
             gradientClass: 'bg-gradient-rose',
             audioFile: '',
-            quiz: { passingScore: 60, questions: [{ id:'q2l', question: 'Actions include…', options:['Boost health literacy','Reduce services','Ignore data','Exclude youth'], correctAnswer:0 }] },
+            quiz: { passingScore: 60, questions: [{ id:'q2l', question: 'Actions include…', options:['Boost health literacy','Reduce services','Ignore data','Exclude young'], correctAnswer:0 }] },
             content: `
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Recommendations</h2>
-                <ul class="ps-3 mb-3"><li>Boost health literacy with age-appropriate content</li><li>Expand adolescent-friendly services</li><li>Strengthen referral and protection</li><li>Champion youth leadership</li><li>Use data for equity and improvement</li></ul>
+                <ul class="ps-3 mb-3"><li>Boost health literacy with age-appropriate content</li><li>Expand adolescent-friendly services</li><li>Strengthen referral and protection</li><li>Champion young leadership</li><li>Use data for equity and improvement</li></ul>
                 <figure class="image-card" style="height:300px"><img src="img/recomendations.png" alt="Recommendations"></figure>
               </div>`
           }
@@ -440,7 +440,7 @@ const coursesData = [
         },
         content: `
           <div class="lesson-slide">
-            <h2 class="definition-card alert-info hover-lift-sm transition-base aos-init aos-animate gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Youth Health Ambassador Program (YHAP)</h2>
+            <h2 class="definition-card alert-info hover-lift-sm transition-base aos-init aos-animate gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Young Health Ambassador Program (YHAP)</h2>
             <div class="floating-bg" aria-hidden="true">
               <span class="float-elem" style="top:8%; left:6%; width:70px; height:70px;"></span>
               <span class="float-elem" style="top:35%; right:10%; width:90px; height:90px;"></span>
@@ -448,8 +448,8 @@ const coursesData = [
             </div>
             
             <div class=" definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="100">
-              <h4 class="gradient-text transition-base"><i class="fas fa-users me-2 animate-float"></i>Youth</h4>
-              <p>As per United Nations, youth refers to those persons aged between the ages of <strong>15 and 24</strong> without prejudice to other definitions by Member States. It is a period of transition from the dependence of childhood to adulthood's independence. Young People covers the age range 10-24 years and Adolescents as individuals in the 10-19 years age group.</p>
+              <h4 class="gradient-text transition-base"><i class="fas fa-users me-2 animate-float"></i>Young</h4>
+              <p>As per United Nations, young refers to those persons aged between the ages of <strong>15 and 24</strong> without prejudice to other definitions by Member States. It is a period of transition from the dependence of childhood to adulthood's independence. Young People covers the age range 10-24 years and Adolescents as individuals in the 10-19 years age group.</p>
             </div>
 
             <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="200">
@@ -459,9 +459,9 @@ const coursesData = [
 
             <div class="program-intro hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="250">
               <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>About YHAP</h4>
-              <p>The Youth Health Ambassador Programme (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The programme is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p>
+              <p>The Young Health Ambassador Programme (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The programme is designed to empower young by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p>
               
-              <p>These programs equip youth with knowledge and skills in areas like physical health including SRH and mental wellbeing, enabling them to become active advocates for health and influence healthier choices within their communities and networks.</p>
+              <p>These programs equip young with knowledge and skills in areas like physical health including SRH and mental wellbeing, enabling them to become active advocates for health and influence healthier choices within their communities and networks.</p>
             </div>
           </div>
         `
@@ -535,7 +535,7 @@ const coursesData = [
                     <i class="fas fa-graduation-cap"></i>
                   </div>
                   <h5 class="gradient-text transition-base">Health Education & Awareness</h5>
-                  <p>Youth Health Ambassadors (YHAs) will create health education and awareness through campaigns on key health issues, comprehensive trainings, mentorships etc., ensuring accurate dissemination of crucial health information.</p>
+                  <p>Young Health Ambassadors (YHAs) will create health education and awareness through campaigns on key health issues, comprehensive trainings, mentorships etc., ensuring accurate dissemination of crucial health information.</p>
                 </div>
               </div>
 
@@ -565,7 +565,7 @@ const coursesData = [
                     <i class="fas fa-flag"></i>
                   </div>
                   <h5 class="gradient-text transition-base">Leadership</h5>
-                  <p>The program cultivates leadership qualities in youth, preparing them to become effective, ethical, and inspiring agents of change in their communities.</p>
+                  <p>The program cultivates leadership qualities in young, preparing them to become effective, ethical, and inspiring agents of change in their communities.</p>
                 </div>
               </div>
 
@@ -575,7 +575,7 @@ const coursesData = [
                     <i class="fas fa-bullhorn"></i>
                   </div>
                   <h5 class="gradient-text transition-base">Advocacy</h5>
-                  <p>YHAP builds foundational competencies in health advocacy, empowering youth to effectively raise voice, articulate public health priorities to drive systemic reform.</p>
+                  <p>YHAP builds foundational competencies in health advocacy, empowering young to effectively raise voice, articulate public health priorities to drive systemic reform.</p>
                 </div>
               </div>
             </div>
@@ -615,7 +615,7 @@ const coursesData = [
                   <div class="role-icon animate-float">
                     <i class="fas fa-shield-heart"></i>
                   </div>
-                  <p>I am equipped with expertise in safeguarding adolescent and youth health and well-being, enabling me to contribute meaningfully to society while harnessing the triple dividend of health, social, and economic benefits</p>
+                  <p>I am equipped with expertise in safeguarding adolescent and young health and well-being, enabling me to contribute meaningfully to society while harnessing the triple dividend of health, social, and economic benefits</p>
                 </div>
               </div>
 
@@ -624,7 +624,7 @@ const coursesData = [
                   <div class="role-icon animate-float">
                     <i class="fas fa-share-nodes"></i>
                   </div>
-                  <p>I actively empower my peers by sharing knowledge on health promotion, disease prevention, and holistic well-being, fostering informed decision-making among adolescents and youth</p>
+                  <p>I actively empower my peers by sharing knowledge on health promotion, disease prevention, and holistic well-being, fostering informed decision-making among adolescents and young</p>
                 </div>
               </div>
 
@@ -642,13 +642,13 @@ const coursesData = [
                   <div class="role-icon animate-float">
                     <i class="fas fa-chart-line"></i>
                   </div>
-                  <p>I drive awareness and demand creation within communities, inspiring collective responsibility and action toward better health outcomes for adolescents and youth</p>
+                  <p>I drive awareness and demand creation within communities, inspiring collective responsibility and action toward better health outcomes for adolescents and young</p>
                 </div>
               </div>
             </div>
 
             <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="150">
-              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Youth Health Ambassador" class="img-fluid rounded-4 shadow-lg hover-lift-sm transition-base" style="max-height: 300px; object-fit: cover;">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Young Health Ambassador" class="img-fluid rounded-4 shadow-lg hover-lift-sm transition-base" style="max-height: 300px; object-fit: cover;">
             </div>
           </div>
         `
@@ -681,10 +681,10 @@ const coursesData = [
             
             <div class="alert alert-info mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">
               <h5><i class="fas fa-info-circle me-2"></i>Eligibility Criteria</h5>
-              <p class="mb-0">Any person between <strong>15-24 years of age</strong> is eligible to be a Youth Health Ambassador.</p>
+              <p class="mb-0">Any person between <strong>15-24 years of age</strong> is eligible to be a Young Health Ambassador.</p>
             </div>
 
-            <h4 class="mb-4 gradient-text transition-base" data-aos="fade-up" data-aos-delay="100">Steps to Become a Youth Health Ambassador</h4>
+            <h4 class="mb-4 gradient-text transition-base" data-aos="fade-up" data-aos-delay="100">Steps to Become a Young Health Ambassador</h4>
 
             <div class="row g-3">
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
@@ -789,8 +789,8 @@ const coursesData = [
             <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Distribution of Young People</h2>
             
             <div class="stat-highlight mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="80">
-              <h3>Global Youth Population</h3>
-              <p class="lead">There are over <strong class="text-primary strong">1.8 billion youth</strong> in the world today, <strong>90%</strong> of whom live in developing countries, where they tend to make up a large proportion of the population.</p>
+              <h3>Global Young Population</h3>
+              <p class="lead">There are over <strong class="text-primary strong">1.8 billion young</strong> in the world today, <strong>90%</strong> of whom live in developing countries, where they tend to make up a large proportion of the population.</p>
             </div>
 
             <div class="row g-4 mb-4">
@@ -811,7 +811,7 @@ const coursesData = [
                     <i class="fas fa-user-group"></i>
                   </div>
                   <h4>31.5 Million</h4>
-                  <p>Youth Population (15-24 years)</p>
+                  <p>Young Population (15-24 years)</p>
                   <span class="badge bg-success">in Bangladesh</span>
                 </div>
               </div>
@@ -819,7 +819,7 @@ const coursesData = [
 
             <div class="info-box hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="200">
               <i class="fas fa-globe me-2"></i>
-              <p class="mb-0">Young people represent a significant demographic force globally, with developing countries having the largest youth populations.</p>
+              <p class="mb-0">Young people represent a significant demographic force globally, with developing countries having the largest young populations.</p>
             </div>
           </div>
         `
@@ -1082,7 +1082,7 @@ const coursesData = [
             </div>
 
             <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="300">
-              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Bangladesh Youth" class="img-fluid rounded-4 shadow hover-lift-sm transition-base" style="max-height: 300px; object-fit: cover;">
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Bangladesh Young" class="img-fluid rounded-4 shadow hover-lift-sm transition-base" style="max-height: 300px; object-fit: cover;">
             </div>
           </div>
         `
@@ -1295,7 +1295,7 @@ const coursesData = [
               <div class="text-center">
                 <i class="fas fa-award display-1 text-primary mb-3"></i>
                 <h3>Congratulations!</h3>
-                <p class="lead">You have completed all lessons of the Youth Health Ambassador Programme</p>
+                <p class="lead">You have completed all lessons of the Young Health Ambassador Programme</p>
                 <p>Continue to the final assessment to earn your certificate</p>
               </div>
             </div>

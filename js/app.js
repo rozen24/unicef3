@@ -1,4 +1,4 @@
-// Youth Health LMS - Main Application Logic
+// Young Health LMS - Main Application Logic
 
 class YouthHealthLMS {
   constructor() {
@@ -614,9 +614,9 @@ class YouthHealthLMS {
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="fade-right">
               <div class="hero-content">
-                <h1 class="hero-title display-gradient">Youth Health Ambassador Programme</h1>
+                <h1 class="hero-title display-gradient">Young Health Ambassador Programme</h1>
                 <p class="hero-description">
-                    The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador. <br>
+                    The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower young by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador. <br>
                     This program equips young person with knowledge and skills in areas like physical health including sexual and reproductive health, nutrition, mental wellbeing etc.  enabling them to become active advocates for health and influence healthier choices within their communities and networks.
                 </p>
                 <div class="d-flex gap-3 flex-wrap">
@@ -626,7 +626,7 @@ class YouthHealthLMS {
             </div>
             <div class="col-lg-5" data-aos="fade-left">
               <div class="animate-float">
-                <img src="img/Asset 2.png" alt="Youth Health" class="img-fluid" style="position: relative; z-index: 2; filter: drop-shadow(0 20px 40px rgba(0,0,0,.25));">
+                <img src="img/Asset 2.png" alt="Young Health" class="img-fluid" style="position: relative; z-index: 2; filter: drop-shadow(0 20px 40px rgba(0,0,0,.25));">
               </div>
             </div>
           </div>
@@ -645,9 +645,9 @@ class YouthHealthLMS {
         <div class="container">
           <div class="row g-4">
             <div class="col-xl-4 col-lg-5">
-              <h3 class="footer-heading">Youth Health Ambassador Programme</h3>
+              <h3 class="footer-heading">Young Health Ambassador Programme</h3>
               <p class="footer-text">
-                A partnership between UNICEF and the Ministry of Health & Family Welfare, Bangladesh—nurturing youth ambassadors who lead healthier communities.
+                A partnership between UNICEF and the Ministry of Health & Family Welfare, Bangladesh—nurturing young ambassadors who lead healthier communities.
               </p>
               <div class="footer-social">
                 <a href="#" class="footer-social__item" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -680,7 +680,7 @@ class YouthHealthLMS {
             </div>
           </div>
           <div class="footer-bottom">
-            <p>&copy; ${new Date().getFullYear()} Youth Health Ambassador Programme. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Young Health Ambassador Programme. All rights reserved.</p>
             <p class="footer-subline">A joint initiative of MOHFW & UNICEF</p>
           </div>
         </div>
@@ -955,7 +955,7 @@ class YouthHealthLMS {
                   <span class="dashboard-kicker"><i class="fa-solid fa-sun"></i> UNICEF mission control</span>
                   <h1 class="dashboard-title">Welcome To YHAP, ${userFirstName}</h1>
                   <p class="dashboard-subtitle">
-                    You're ${overallProgress}% through your Youth Health Ambassador pathway. Keep up the momentum with curated lessons, trackable impact, and certificates powered by UNICEF and MOHFW.
+                    You're ${overallProgress}% through your Young Health Ambassador pathway. Keep up the momentum with curated lessons, trackable impact, and certificates powered by UNICEF and MOHFW.
                   </p>
                   <div class="dashboard-meta">
                     <span class="meta-pill"><i class="fa-solid fa-id-badge"></i>${this.currentUser.id}</span>
@@ -2145,7 +2145,7 @@ class YouthHealthLMS {
                     CERTIFICATE OF COMPLETION
                   </p>
                   
-                  <h2 class="mb-5">Youth Health LMS</h2>
+                  <h2 class="mb-5">Young Health LMS</h2>
                   
                   <p class="text-muted mb-3">This certifies that</p>
                   
