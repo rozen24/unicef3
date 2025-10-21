@@ -36,7 +36,12 @@ class YouthHealthLMS {
     try {
       if (window.AOS) {
         if (!this._aosInitialized) {
-          window.AOS.init({ duration: 700, easing: "ease-out-cubic", once: false, offset: 40 });
+          window.AOS.init({
+            duration: 700,
+            easing: "ease-out-cubic",
+            once: false,
+            offset: 40,
+          });
           this._aosInitialized = true;
         } else {
           window.AOS.refreshHard();
@@ -49,7 +54,9 @@ class YouthHealthLMS {
   // Basic login: validates saved users and persists current user
   login(email, password) {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    const user = users.find((u) => u.email === email && u.password === password);
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
     if (user) {
       this.currentUser = {
         id: user.id,
@@ -158,10 +165,18 @@ class YouthHealthLMS {
     this.showQuiz = false;
 
     // Prefer chapter-based lesson system when available
-    if (this.selectedCourse && Array.isArray(this.selectedCourse.chapters) && this.selectedCourse.chapters.length > 0) {
-      this.selectedCourse.lessons = this.selectedCourse.chapters[0].lessons || [];
+    if (
+      this.selectedCourse &&
+      Array.isArray(this.selectedCourse.chapters) &&
+      this.selectedCourse.chapters.length > 0
+    ) {
+      this.selectedCourse.lessons =
+        this.selectedCourse.chapters[0].lessons || [];
       this.navigateTo("lesson-slider");
-    } else if (this.selectedCourse.lessons && this.selectedCourse.lessons.length > 0) {
+    } else if (
+      this.selectedCourse.lessons &&
+      this.selectedCourse.lessons.length > 0
+    ) {
       // New lesson slider system
       this.navigateTo("lesson-slider");
     } else {
@@ -183,12 +198,14 @@ class YouthHealthLMS {
 
   viewCertificate(courseId) {
     // Navigate within SPA to certificate view
-    const course = (typeof coursesData !== 'undefined' ? coursesData : []).find(c => c.id === courseId);
+    const course = (typeof coursesData !== "undefined" ? coursesData : []).find(
+      (c) => c.id === courseId
+    );
     if (course) {
       this.selectedCourse = course;
-      this.navigateTo('certificate');
+      this.navigateTo("certificate");
     } else {
-      alert('Course not found for certificate');
+      alert("Course not found for certificate");
     }
   }
 
@@ -409,7 +426,9 @@ class YouthHealthLMS {
         // Initialize lesson audio controls/state after DOM is ready
         this.initLessonAudio();
         this.initAOS();
-        try { setTimeout(() => this.scrollActiveLessonIntoView(), 80); } catch (_) {}
+        try {
+          setTimeout(() => this.scrollActiveLessonIntoView(), 80);
+        } catch (_) {}
         break;
       case "certificate":
         app.innerHTML = this.renderCertificate();
@@ -428,7 +447,9 @@ class YouthHealthLMS {
         if (htmlEl) htmlEl.style.overflowX = ""; // revert to stylesheet (likely hidden)
         if (document.body) document.body.style.overflowX = "";
       }
-    } catch (_) { /* no-op */ }
+    } catch (_) {
+      /* no-op */
+    }
   }
 
   initHomeScripts() {
@@ -865,8 +886,9 @@ class YouthHealthLMS {
     });
 
     const totalCourses = courseSummaries.length;
-    const completedCourses = courseSummaries.filter((item) => item.completed)
-      .length;
+    const completedCourses = courseSummaries.filter(
+      (item) => item.completed
+    ).length;
     const activeCourses = courseSummaries.filter(
       (item) => !item.completed && item.completedLessons > 0
     ).length;
@@ -884,7 +906,9 @@ class YouthHealthLMS {
     );
     const remainingLessons = Math.max(totalLessons - completedLessons, 0);
     const overallProgress =
-      totalLessons > 0 ? Math.round((completedLessons / totalLessons) * 100) : 0;
+      totalLessons > 0
+        ? Math.round((completedLessons / totalLessons) * 100)
+        : 0;
 
     const activeCourse =
       courseSummaries.find(
@@ -894,7 +918,9 @@ class YouthHealthLMS {
       courseSummaries[0];
 
     const certificateCourse =
-      courseSummaries.find((item) => item.certificateIssued && item.course?.id) ||
+      courseSummaries.find(
+        (item) => item.certificateIssued && item.course?.id
+      ) ||
       courseSummaries.find((item) => item.completed && item.course?.id) ||
       null;
 
@@ -960,9 +986,13 @@ class YouthHealthLMS {
                     You're ${overallProgress}% through your Young Health Ambassador pathway. Keep up the momentum with curated lessons, trackable impact, and certificates powered by UNICEF and MOHFW.
                   </p>
                   <div class="dashboard-meta">
-                    <span class="meta-pill"><i class="fa-solid fa-id-badge"></i>${this.currentUser.id}</span>
+                    <span class="meta-pill"><i class="fa-solid fa-id-badge"></i>${
+                      this.currentUser.id
+                    }</span>
                     <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i>Joined ${joinedDate}</span>
-                    <span class="meta-pill"><i class="fa-solid fa-book-open"></i>${formatNumber(totalLessons)} total lessons</span>
+                    <span class="meta-pill"><i class="fa-solid fa-book-open"></i>${formatNumber(
+                      totalLessons
+                    )} total lessons</span>
                   </div>
                   <div class="dashboard-actions">
                     ${
@@ -1004,15 +1034,21 @@ class YouthHealthLMS {
                       </li>
                       <li>
                         <span class="stat-label">Lessons finished</span>
-                        <span class="stat-value">${formatNumber(completedLessons)}</span>
+                        <span class="stat-value">${formatNumber(
+                          completedLessons
+                        )}</span>
                       </li>
                       <li>
                         <span class="stat-label">Lessons remaining</span>
-                        <span class="stat-value">${formatNumber(remainingLessons)}</span>
+                        <span class="stat-value">${formatNumber(
+                          remainingLessons
+                        )}</span>
                       </li>
                       <li>
                         <span class="stat-label">Active programmes</span>
-                        <span class="stat-value">${formatNumber(activeCourses)}</span>
+                        <span class="stat-value">${formatNumber(
+                          activeCourses
+                        )}</span>
                       </li>
                     </ul>
                   </div>
@@ -1026,8 +1062,14 @@ class YouthHealthLMS {
                   <span class="insight-icon gradient-sky"><i class="fa-solid fa-graduation-cap"></i></span>
                   <div>
                     <span class="insight-label">Course library</span>
-                    <span class="insight-value">${formatNumber(totalCourses)}</span>
-                    <p class="insight-subtext">${formatNumber(completedCourses)} completed • ${formatNumber(activeCourses)} in progress</p>
+                    <span class="insight-value">${formatNumber(
+                      totalCourses
+                    )}</span>
+                    <p class="insight-subtext">${formatNumber(
+                      completedCourses
+                    )} completed • ${formatNumber(
+      activeCourses
+    )} in progress</p>
                   </div>
                 </article>
                 <article class="insight-card">
@@ -1035,25 +1077,124 @@ class YouthHealthLMS {
                   <div>
                     <span class="insight-label">Overall progress</span>
                     <span class="insight-value">${overallProgress}%</span>
-                    <p class="insight-subtext">${formatNumber(completedLessons)} of ${formatNumber(totalLessons)} lessons done</p>
+                    <p class="insight-subtext">${formatNumber(
+                      completedLessons
+                    )} of ${formatNumber(totalLessons)} lessons done</p>
                   </div>
                 </article>
                 <article class="insight-card">
                   <span class="insight-icon gradient-violet"><i class="fa-solid fa-award"></i></span>
                   <div>
                     <span class="insight-label">Certificates ready</span>
-                    <span class="insight-value">${formatNumber(completedCourses)}</span>
-                    <p class="insight-subtext">${completedCourses > 0 ? "Download and share your achievements" : "Complete a programme to earn your first badge"}</p>
+                    <span class="insight-value">${formatNumber(
+                      completedCourses
+                    )}</span>
+                    <p class="insight-subtext">${
+                      completedCourses > 0
+                        ? "Download and share your achievements"
+                        : "Complete a programme to earn your first badge"
+                    }</p>
                   </div>
                 </article>
                 <article class="insight-card">
                   <span class="insight-icon gradient-tangerine"><i class="fa-solid fa-lightbulb"></i></span>
                   <div>
                     <span class="insight-label">Opportunities</span>
-                    <span class="insight-value">${formatNumber(notStartedCourses)}</span>
-                    <p class="insight-subtext">${notStartedCourses > 0 ? "New journeys are waiting for you" : "You’ve explored every programme available"}</p>
+                    <span class="insight-value">${formatNumber(
+                      notStartedCourses
+                    )}</span>
+                    <p class="insight-subtext">${
+                      notStartedCourses > 0
+                        ? "New journeys are waiting for you"
+                        : "You’ve explored every programme available"
+                    }</p>
                   </div>
                 </article>
+              </div>
+            </section>
+
+            <section class="dashboard-chapters my-5">
+              <div class="dashboard-section-header">
+                <div>
+                  <span class="section-kicker">Browse chapters</span>
+                  <h2>Jump to any chapter or lesson</h2>
+                  <p>Pick a chapter and open a specific lesson directly in the slider view.</p>
+                </div>
+              </div>
+              <div class="row g-4">
+                ${coursesData
+                  .map((course) => {
+                    const hasChapters =
+                      Array.isArray(course.chapters) &&
+                      course.chapters.length > 0;
+                    if (!hasChapters) return "";
+                    const cId = String(course.id).replace(
+                      /[^a-zA-Z0-9_-]/g,
+                      ""
+                    );
+                    const progress =
+                      this.getUserProgress(course.id) ||
+                      this.initializeProgress(course.id);
+                    const doneSet = new Set(progress.completedlessions || []);
+                    return `
+                    <div class="col-12">
+                      <div class="course-chapters-card">
+                        <div class="course-chapters-header">
+                          <h3 class="mb-1">${course.title}</h3>
+                          <span class="text-muted">${
+                            course.chapters.length
+                          } chapter${
+                      course.chapters.length > 1 ? "s" : ""
+                    }</span>
+                        </div>
+                        <div class="accordion dashboard-course-accordion" id="dash-acc-${cId}">
+                          ${course.chapters
+                            .map((ch, ci) => {
+                              const total = (ch.lessons || []).length;
+                              const done = (ch.lessons || []).reduce(
+                                (acc, ls) => acc + (doneSet.has(ls.id) ? 1 : 0),
+                                0
+                              );
+                              const itemId = `dash-col-${cId}-${ci}`;
+                              return `
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="dash-head-${cId}-${ci}">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${itemId}" aria-controls="${itemId}">
+                                    <span class="chapter-badge me-2">${
+                                      ci + 1
+                                    }</span>
+                                    <span class="fw-semibold">${ch.title}</span>
+                                    <span class="ms-auto chapter-progress-pill">${done}/${total}</span>
+                                  </button>
+                                </h2>
+                                <div id="${itemId}" class="accordion-collapse collapse" aria-labelledby="dash-head-${cId}-${ci}" data-bs-parent="#dash-acc-${cId}">
+                                  <div class="accordion-body">
+                                    <div class="chapter-lessons">
+                                      ${(ch.lessons || [])
+                                        .map(
+                                          (ls, li) => `
+                                        <button class="lesson-tag" onclick="app.openCourseChapterLesson('${
+                                          course.id
+                                        }', ${ci}, ${li})">
+                                          <i class="fa-solid ${
+                                            ls.icon || "fa-book"
+                                          } me-1"></i>${ls.title}
+                                        </button>
+                                      `
+                                        )
+                                        .join("")}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>`;
+                            })
+                            .join("")}
+                        </div>
+                      </div>
+                    </div>
+                  `;
+                  })
+                  .join("")}
               </div>
             </section>
 
@@ -1070,7 +1211,9 @@ class YouthHealthLMS {
                   courseSummaries.length > 0
                     ? courseSummaries
                         .map((item) => {
-                          const progressValue = clampProgress(item.progressPercent);
+                          const progressValue = clampProgress(
+                            item.progressPercent
+                          );
                           const progressRounded = Math.round(progressValue);
                           const actionText = item.completed
                             ? "Review course"
@@ -1085,15 +1228,22 @@ class YouthHealthLMS {
                           return `
                             <div class="col-xl-4 col-lg-6">
                               <article class="course-card-modern">
-                                <div class="course-card__visual" style="background-image: url('${item.course.imageUrl}');">
+                                <div class="course-card__visual" style="background-image: url('${
+                                  item.course.imageUrl
+                                }');">
                                   <span class="course-card__tag">
                                     <i class="fa-solid fa-layer-group"></i>
-                                    ${item.course.duration || `${item.totalLessons} lessons`}
+                                    ${
+                                      item.course.duration ||
+                                      `${item.totalLessons} lessons`
+                                    }
                                   </span>
                                 </div>
                                 <div class="course-card__body">
                                   <div class="course-card__status">
-                                    <span class="status-pill ${statusClass}">${item.statusLabel}</span>
+                                    <span class="status-pill ${statusClass}">${
+                            item.statusLabel
+                          }</span>
                                     ${
                                       item.certificateIssued
                                         ? `<span class="status-pill status-pill--outline"><i class="fa-solid fa-award"></i> Certificate ready</span>`
@@ -1101,9 +1251,13 @@ class YouthHealthLMS {
                                     }
                                   </div>
                                   <h3>${item.course.title}</h3>
-                                  <p class="line-clamp-2">${item.course.description}</p>
+                                  <p class="line-clamp-2">${
+                                    item.course.description
+                                  }</p>
                                   <div class="course-card__meta">
-                                    <span><i class="fa-solid fa-book-open"></i>${item.totalLessons} lessons</span>
+                                    <span><i class="fa-solid fa-book-open"></i>${
+                                      item.totalLessons
+                                    } lessons</span>
                                     <span><i class="fa-solid fa-gauge-high"></i>${progressRounded}% complete</span>
                                   </div>
                                   <div>
@@ -1111,13 +1265,21 @@ class YouthHealthLMS {
                                       <div class="progress-track__value" style="width: ${progressValue}%;"></div>
                                     </div>
                                     <div class="progress-caption">
-                                      <span>${item.completedLessons} completed</span>
-                                      <span>${Math.max(item.totalLessons - item.completedLessons, 0)} remaining</span>
+                                      <span>${
+                                        item.completedLessons
+                                      } completed</span>
+                                      <span>${Math.max(
+                                        item.totalLessons -
+                                          item.completedLessons,
+                                        0
+                                      )} remaining</span>
                                     </div>
                                   </div>
                                   <div class="course-card__footer">
                                     <div class="course-card__actions">
-                                      <button class="btn btn-primary flex-grow-1" onclick="app.selectCourse('${item.course.id}')">
+                                      <button class="btn btn-primary flex-grow-1" onclick="app.selectCourse('${
+                                        item.course.id
+                                      }')">
                                         ${actionText} <i class="fa-solid fa-arrow-right-long ms-2"></i>
                                       </button>
                                       ${
@@ -1153,63 +1315,6 @@ class YouthHealthLMS {
                       </div>
                     `
                 }
-              </div>
-            </section>
-
-            <section class="dashboard-chapters mt-5">
-              <div class="dashboard-section-header">
-                <div>
-                  <span class="section-kicker">Browse chapters</span>
-                  <h2>Jump to any chapter or lesson</h2>
-                  <p>Pick a chapter and open a specific lesson directly in the slider view.</p>
-                </div>
-              </div>
-              <div class="row g-4">
-                ${coursesData.map((course) => {
-                  const hasChapters = Array.isArray(course.chapters) && course.chapters.length > 0;
-                  if (!hasChapters) return '';
-                  const cId = String(course.id).replace(/[^a-zA-Z0-9_-]/g, '');
-                  const progress = this.getUserProgress(course.id) || this.initializeProgress(course.id);
-                  const doneSet = new Set(progress.completedlessions || []);
-                  return `
-                    <div class="col-12">
-                      <div class="course-chapters-card">
-                        <div class="course-chapters-header">
-                          <h3 class="mb-1">${course.title}</h3>
-                          <span class="text-muted">${course.chapters.length} chapter${course.chapters.length>1?'s':''}</span>
-                        </div>
-                        <div class="accordion dashboard-course-accordion" id="dash-acc-${cId}">
-                          ${course.chapters.map((ch, ci) => {
-                            const total = (ch.lessons || []).length;
-                            const done = (ch.lessons || []).reduce((acc, ls) => acc + (doneSet.has(ls.id) ? 1 : 0), 0);
-                            const itemId = `dash-col-${cId}-${ci}`;
-                            return `
-                              <div class="accordion-item">
-                                <h2 class="accordion-header" id="dash-head-${cId}-${ci}">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${itemId}" aria-controls="${itemId}">
-                                    <span class="chapter-badge me-2">${ci + 1}</span>
-                                    <span class="fw-semibold">${ch.title}</span>
-                                    <span class="ms-auto chapter-progress-pill">${done}/${total}</span>
-                                  </button>
-                                </h2>
-                                <div id="${itemId}" class="accordion-collapse collapse" aria-labelledby="dash-head-${cId}-${ci}" data-bs-parent="#dash-acc-${cId}">
-                                  <div class="accordion-body">
-                                    <div class="chapter-lessons">
-                                      ${(ch.lessons||[]).map((ls, li) => `
-                                        <button class="lesson-tag" onclick="app.openCourseChapterLesson('${course.id}', ${ci}, ${li})">
-                                          <i class="fa-solid ${ls.icon || 'fa-book'} me-1"></i>${ls.title}
-                                        </button>
-                                      `).join('')}
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>`;
-                          }).join('')}
-                        </div>
-                      </div>
-                    </div>
-                  `;
-                }).join('')}
               </div>
             </section>
           </div>
@@ -1499,13 +1604,17 @@ class YouthHealthLMS {
                   <div class="completion-ring" style="--progress: ${scorePercent};">
                     <div class="completion-ring__content">
                       <span class="completion-ring__value">${scorePercent}%</span>
-                      <span class="completion-ring__label">${passed ? "Passed" : "Score"}</span>
+                      <span class="completion-ring__label">${
+                        passed ? "Passed" : "Score"
+                      }</span>
                     </div>
                   </div>
                   <div class="quiz-scorecard-stats">
                     <div>
                       <span class="stat-label">Correct answers</span>
-                      <span class="stat-value">${correctCount}/${questions.length}</span>
+                      <span class="stat-value">${correctCount}/${
+        questions.length
+      }</span>
                     </div>
                     <div>
                       <span class="stat-label">Incorrect</span>
@@ -1530,11 +1639,16 @@ class YouthHealthLMS {
                         userAnswer !== undefined
                           ? question.options[userAnswer]
                           : "Not answered";
-                      const correctAnswerText = question.options[question.correctAnswer];
+                      const correctAnswerText =
+                        question.options[question.correctAnswer];
                       return `
-                        <div class="quiz-review-item ${isCorrect ? "correct" : "incorrect"}">
+                        <div class="quiz-review-item ${
+                          isCorrect ? "correct" : "incorrect"
+                        }">
                           <div class="quiz-review-icon">
-                            <i class="fa-solid ${isCorrect ? "fa-circle-check" : "fa-circle-xmark"}"></i>
+                            <i class="fa-solid ${
+                              isCorrect ? "fa-circle-check" : "fa-circle-xmark"
+                            }"></i>
                           </div>
                           <div class="quiz-review-content">
                             <h3>Q${qIndex + 1}. ${question.question}</h3>
@@ -1584,8 +1698,12 @@ class YouthHealthLMS {
     const previousAction = isFirstQuestion
       ? "app.showQuiz = false; app.render()"
       : "app.previousQuestion()";
-    const previousLabel = isFirstQuestion ? "Review lesson" : "Previous question";
-    const previousIcon = isFirstQuestion ? "fa-book-open" : "fa-arrow-left-long";
+    const previousLabel = isFirstQuestion
+      ? "Review lesson"
+      : "Previous question";
+    const previousIcon = isFirstQuestion
+      ? "fa-book-open"
+      : "fa-arrow-left-long";
     const hasSelection =
       this.quizState.selectedAnswers[this.quizState.currentQuestionIndex] !==
       undefined;
@@ -1699,62 +1817,96 @@ class YouthHealthLMS {
 
   renderLessonSlider() {
     const course = this.selectedCourse;
-    const hasChapters = Array.isArray(course?.chapters) && course.chapters.length > 0;
+    const hasChapters =
+      Array.isArray(course?.chapters) && course.chapters.length > 0;
 
     if (hasChapters) {
       const totalChapters = course.chapters.length;
-      const chIndex = Math.min(Math.max(0, this.currentChapterIndex || 0), totalChapters - 1);
-  const chapterLessons = course.chapters[chIndex].lessons || [];
-  const totalLessons = chapterLessons.length;
-  // Align legacy lesson-driven quiz/navigation to current chapter
-  this.selectedCourse.lessons = chapterLessons;
+      const chIndex = Math.min(
+        Math.max(0, this.currentChapterIndex || 0),
+        totalChapters - 1
+      );
+      const chapterLessons = course.chapters[chIndex].lessons || [];
+      const totalLessons = chapterLessons.length;
+      // Align legacy lesson-driven quiz/navigation to current chapter
+      this.selectedCourse.lessons = chapterLessons;
 
-  const activeIndex = Math.min(Math.max(0, this.currentLessonIndex || 0), Math.max(0, totalLessons - 1));
-  const currentLesson = chapterLessons[activeIndex];
-  const hasPrevLesson = activeIndex > 0;
-  const hasNextLesson = activeIndex < totalLessons - 1;
-  const hasPrevChapter = chIndex > 0;
-  const hasNextChapter = chIndex < totalChapters - 1;
+      const activeIndex = Math.min(
+        Math.max(0, this.currentLessonIndex || 0),
+        Math.max(0, totalLessons - 1)
+      );
+      const currentLesson = chapterLessons[activeIndex];
+      const hasPrevLesson = activeIndex > 0;
+      const hasNextLesson = activeIndex < totalLessons - 1;
+      const hasPrevChapter = chIndex > 0;
+      const hasNextChapter = chIndex < totalChapters - 1;
 
       let progress = this.getUserProgress(course.id);
       if (!progress) progress = this.initializeProgress(course.id);
       const completedIds = new Set(progress.completedlessions || []);
-      const lessonCompleted = currentLesson ? completedIds.has(currentLesson.id) : false;
-      const quizScore = currentLesson ? (progress.quizScores?.[currentLesson.id]) : undefined;
+      const lessonCompleted = currentLesson
+        ? completedIds.has(currentLesson.id)
+        : false;
+      const quizScore = currentLesson
+        ? progress.quizScores?.[currentLesson.id]
+        : undefined;
 
       if (this.showQuiz) return this.renderQuiz();
 
       const accordion = `
         <div class="accordion chapter-accordion" id="chaptersAccordion">
-          ${course.chapters.map((ch, ci) => {
-            const total = (ch.lessons || []).length;
-            const done = (ch.lessons || []).reduce((acc, ls) => acc + (completedIds.has(ls.id) ? 1 : 0), 0);
-            return `
+          ${course.chapters
+            .map((ch, ci) => {
+              const total = (ch.lessons || []).length;
+              const done = (ch.lessons || []).reduce(
+                (acc, ls) => acc + (completedIds.has(ls.id) ? 1 : 0),
+                0
+              );
+              return `
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading-${ci}">
-                <button class="accordion-button chapter-button ${ci === chIndex ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${ci}" aria-expanded="${ci === chIndex}" aria-controls="collapse-${ci}">
-                  <span class="chapter-index me-2">${ci + 1}</span> <span class="chapter-title">${ch.title}</span>
+                <button class="accordion-button chapter-button ${
+                  ci === chIndex ? "" : "collapsed"
+                }" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${ci}" aria-expanded="${
+                ci === chIndex
+              }" aria-controls="collapse-${ci}">
+                  <span class="chapter-index me-2">${
+                    ci + 1
+                  }</span> <span class="chapter-title">${ch.title}</span>
                   <span class="ms-auto chapter-progress-pill" title="${done} of ${total} lessons">${done}/${total}</span>
                 </button>
               </h2>
-              <div id="collapse-${ci}" class="accordion-collapse collapse ${ci === chIndex ? 'show' : ''}" aria-labelledby="heading-${ci}" data-bs-parent="#chaptersAccordion">
+              <div id="collapse-${ci}" class="accordion-collapse collapse ${
+                ci === chIndex ? "show" : ""
+              }" aria-labelledby="heading-${ci}" data-bs-parent="#chaptersAccordion">
                 <div class="accordion-body p-0">
                   <ul class="list-group list-group-flush lessons-list">
-                    ${(ch.lessons || []).map((ls, li) => {
-                      const isActive = ci === chIndex && li === activeIndex;
-                      const isDone = completedIds.has(ls.id);
-                      return `
-                      <li class="list-group-item lesson-item d-flex align-items-center ${isActive ? 'is-active' : ''}" onclick="app.changeChapterLesson(${ci}, ${li})">
-                        <span class="lesson-icon"><i class="fa-solid ${ls.icon || 'fa-book'}"></i></span>
+                    ${(ch.lessons || [])
+                      .map((ls, li) => {
+                        const isActive = ci === chIndex && li === activeIndex;
+                        const isDone = completedIds.has(ls.id);
+                        return `
+                      <li class="list-group-item lesson-item d-flex align-items-center ${
+                        isActive ? "is-active" : ""
+                      }" onclick="app.changeChapterLesson(${ci}, ${li})">
+                        <span class="lesson-icon"><i class="fa-solid ${
+                          ls.icon || "fa-book"
+                        }"></i></span>
                         <span class="lesson-title">${ls.title}</span>
-                        ${isDone ? '<span class="lesson-state ms-auto"><i class="fa-solid fa-check"></i></span>' : ''}
+                        ${
+                          isDone
+                            ? '<span class="lesson-state ms-auto"><i class="fa-solid fa-check"></i></span>'
+                            : ""
+                        }
                       </li>`;
-                    }).join('')}
+                      })
+                      .join("")}
                   </ul>
                 </div>
               </div>
             </div>`;
-          }).join('')}
+            })
+            .join("")}
         </div>`;
 
       return `
@@ -1766,7 +1918,9 @@ class YouthHealthLMS {
                   <i class="fa-solid fa-arrow-left-long"></i>
                   Back to dashboard
                 </button>
-                <span class="lesson-pill">Lesson ${activeIndex + 1} of ${totalLessons}</span>
+                <span class="lesson-pill">Lesson ${
+                  activeIndex + 1
+                } of ${totalLessons}</span>
               </div>
               <div class="row align-items-start g-4"></div>
             </div>
@@ -1781,7 +1935,9 @@ class YouthHealthLMS {
 
                 <div class="col-lg-8">
                   <article class="lesson-content-card">
-                    ${currentLesson && currentLesson.audioFile ? `
+                    ${
+                      currentLesson && currentLesson.audioFile
+                        ? `
                       <div class="lesson-audio-bar">
                         <div class="lesson-audio-meta">
                           <span class="lesson-audio-label"><i class="fa-solid fa-headphones"></i> Audio companion</span>
@@ -1793,66 +1949,122 @@ class YouthHealthLMS {
                         </button>
                       </div>
                       <audio id="lessonAudio" controls style="width:100%; margin-bottom: 1rem; display: none;">
-                        <source src="${this.getAudioSource(currentLesson.audioFile)}" type="${this.getAudioMimeType(currentLesson.audioFile)}">
+                        <source src="${this.getAudioSource(
+                          currentLesson.audioFile
+                        )}" type="${this.getAudioMimeType(
+                            currentLesson.audioFile
+                          )}">
                         Your browser does not support the audio element.
                       </audio>
-                    ` : ''}
+                    `
+                        : ""
+                    }
 
                     <div class="lesson-content-body">
-                      ${currentLesson ? currentLesson.content : '<p>No lesson selected.</p>'}
+                      ${
+                        currentLesson
+                          ? currentLesson.content
+                          : "<p>No lesson selected.</p>"
+                      }
                       <div class="inline-lesson-nav">
-                        <button class="btn btn-outline-primary" ${hasPrevLesson ? 'onclick="app.previousLesson()"' : 'disabled'}>
+                        <button class="btn btn-outline-primary" ${
+                          hasPrevLesson
+                            ? 'onclick="app.previousLesson()"'
+                            : "disabled"
+                        }>
                           <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
                         </button>
-                        <button class="btn btn-primary" ${hasNextLesson ? 'onclick="app.nextLesson()"' : 'disabled'}>
+                        <button class="btn btn-primary" ${
+                          hasNextLesson
+                            ? 'onclick="app.nextLesson()"'
+                            : "disabled"
+                        }>
                           Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
                         </button>
                       </div>
                     </div>
 
-                    ${currentLesson ? `
-                    <div class="lesson-quiz-card ${lessonCompleted ? 'lesson-quiz-card--complete' : ''}">
+                    ${
+                      currentLesson
+                        ? `
+                    <div class="lesson-quiz-card ${
+                      lessonCompleted ? "lesson-quiz-card--complete" : ""
+                    }">
                       <div class="lesson-quiz-card__header">
                         <span class="lesson-quiz-badge"><i class="fa-solid fa-circle-question"></i> Module quiz</span>
-                        <span class="lesson-quiz-score">Passing score: ${currentLesson.quiz.passingScore}%</span>
+                        <span class="lesson-quiz-score">Passing score: ${
+                          currentLesson.quiz.passingScore
+                        }%</span>
                       </div>
-                      ${quizScore !== undefined ? `
+                      ${
+                        quizScore !== undefined
+                          ? `
                         <div class="lesson-quiz-status">
-                          <i class="fa-solid ${lessonCompleted ? 'fa-check-circle' : 'fa-rotate-right'}"></i>
+                          <i class="fa-solid ${
+                            lessonCompleted
+                              ? "fa-check-circle"
+                              : "fa-rotate-right"
+                          }"></i>
                           <div>
                             <p class="lesson-quiz-status__title">Latest attempt: ${quizScore}%</p>
-                            <p class="lesson-quiz-status__meta">${lessonCompleted ? 'Great job! You can retake the quiz to boost your score.' : 'Give it another try to reach the passing score.'}</p>
+                            <p class="lesson-quiz-status__meta">${
+                              lessonCompleted
+                                ? "Great job! You can retake the quiz to boost your score."
+                                : "Give it another try to reach the passing score."
+                            }</p>
                           </div>
-                        </div>` : ''}
+                        </div>`
+                          : ""
+                      }
                       <p class="lesson-quiz-text">
-                        Test your understanding and unlock the next milestone. Score at least ${currentLesson.quiz.passingScore}% to mark this lesson as complete.
+                        Test your understanding and unlock the next milestone. Score at least ${
+                          currentLesson.quiz.passingScore
+                        }% to mark this lesson as complete.
                       </p>
                       <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
-                        ${lessonCompleted ? 'Retake quiz' : 'Start quiz'}
+                        ${lessonCompleted ? "Retake quiz" : "Start quiz"}
                         <i class="fa-solid fa-arrow-right-long ms-2"></i>
                       </button>
                       <div class="chapter-nav-actions">
-                        <button class="btn btn-outline-primary" ${hasPrevChapter ? 'onclick="app.previousChapter()"' : 'disabled'}>
+                        <button class="btn btn-outline-primary" ${
+                          hasPrevChapter
+                            ? 'onclick="app.previousChapter()"'
+                            : "disabled"
+                        }>
                           <i class="fa-solid fa-arrow-left me-2"></i>Previous chapter
                         </button>
-                        <button class="btn btn-primary" ${hasNextChapter ? 'onclick="app.nextChapter()"' : 'disabled'}>
+                        <button class="btn btn-primary" ${
+                          hasNextChapter
+                            ? 'onclick="app.nextChapter()"'
+                            : "disabled"
+                        }>
                           Next chapter<i class="fa-solid fa-arrow-right ms-2"></i>
                         </button>
                       </div>
-                    </div>` : ''}
+                    </div>`
+                        : ""
+                    }
 
                     <div class="lesson-nav-actions">
-                      ${activeIndex > 0 ? `
+                      ${
+                        activeIndex > 0
+                          ? `
                         <button class="btn btn-outline-primary lesson-nav-btn" onclick="app.previousLesson()">
                           <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
-                        </button>` : '<span></span>'}
-                      ${activeIndex < totalLessons - 1 ? `
+                        </button>`
+                          : "<span></span>"
+                      }
+                      ${
+                        activeIndex < totalLessons - 1
+                          ? `
                         <button class="btn btn-primary lesson-nav-btn" onclick="app.nextLesson()">
                           Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
-                        </button>` : `
+                        </button>`
+                          : `
                         <button class="btn btn-success lesson-nav-btn" onclick="app.completeLesson()">
                           <i class="fa-solid fa-award me-2"></i>Complete course
-                        </button>`}
+                        </button>`
+                      }
                     </div>
                   </article>
                 </div>
@@ -1889,7 +2101,9 @@ class YouthHealthLMS {
                 <i class="fa-solid fa-arrow-left-long"></i>
                 Back to dashboard
               </button>
-              <span class="lesson-pill">Lesson ${activeIndex + 1} of ${totalLessons}</span>
+              <span class="lesson-pill">Lesson ${
+                activeIndex + 1
+              } of ${totalLessons}</span>
             </div>
             <div class="row align-items-start g-4"></div>
           </div>
@@ -1900,30 +2114,50 @@ class YouthHealthLMS {
             <div class="row g-4">
               <aside class="col-lg-4">
                 <div class="lesson-trail">
-                  ${courseFlat.lessons.map((lesson, index) => {
-                    const isCurrent = index === activeIndex;
-                    const isCompleted = completedIds.has(lesson.id);
-                    const statusClass = isCurrent ? 'lesson-chip--current' : (isCompleted ? 'lesson-chip--completed' : 'lesson-chip--upcoming');
-                    const statusLabel = isCurrent ? 'Now playing' : (isCompleted ? 'Completed' : 'Available');
-                    return `
+                  ${courseFlat.lessons
+                    .map((lesson, index) => {
+                      const isCurrent = index === activeIndex;
+                      const isCompleted = completedIds.has(lesson.id);
+                      const statusClass = isCurrent
+                        ? "lesson-chip--current"
+                        : isCompleted
+                        ? "lesson-chip--completed"
+                        : "lesson-chip--upcoming";
+                      const statusLabel = isCurrent
+                        ? "Now playing"
+                        : isCompleted
+                        ? "Completed"
+                        : "Available";
+                      return `
                       <button class="lesson-chip ${statusClass}" type="button" onclick="app.changeLesson(${index})">
                         <span class="lesson-chip__icon ${lesson.gradientClass}">
                           <i class="fas ${lesson.icon}"></i>
                         </span>
                         <span class="lesson-chip__content">
-                          <span class="lesson-chip__eyebrow">Lesson ${index + 1}</span>
-                          <span class="lesson-chip__title">${lesson.title}</span>
+                          <span class="lesson-chip__eyebrow">Lesson ${
+                            index + 1
+                          }</span>
+                          <span class="lesson-chip__title">${
+                            lesson.title
+                          }</span>
                           <span class="lesson-chip__meta">${statusLabel}</span>
                         </span>
-                        ${isCompleted ? '<span class="lesson-chip__state"><i class="fa-solid fa-check"></i></span>' : ''}
+                        ${
+                          isCompleted
+                            ? '<span class="lesson-chip__state"><i class="fa-solid fa-check"></i></span>'
+                            : ""
+                        }
                       </button>`;
-                  }).join('')}
+                    })
+                    .join("")}
                 </div>
               </aside>
 
               <div class="col-lg-8">
                 <article class="lesson-content-card">
-                  ${currentLesson.audioFile ? `
+                  ${
+                    currentLesson.audioFile
+                      ? `
                     <div class="lesson-audio-bar">
                       <div class="lesson-audio-meta">
                         <span class="lesson-audio-label"><i class="fa-solid fa-headphones"></i> Audio companion</span>
@@ -1935,57 +2169,97 @@ class YouthHealthLMS {
                       </button>
                     </div>
                     <audio id="lessonAudio" autoplay controls style="width:100%; margin-bottom: 1rem; display: none;">
-                      <source src="${this.getAudioSource(currentLesson.audioFile)}" type="${this.getAudioMimeType(currentLesson.audioFile)}">
+                      <source src="${this.getAudioSource(
+                        currentLesson.audioFile
+                      )}" type="${this.getAudioMimeType(
+                          currentLesson.audioFile
+                        )}">
                       Your browser does not support the audio element.
                     </audio>
-                  ` : ''}
+                  `
+                      : ""
+                  }
 
                   <div class="lesson-content-body">
                     ${currentLesson.content}
                     <div class="inline-lesson-nav">
-                      <button class="btn btn-outline-primary" ${hasPrevLesson ? 'onclick="app.previousLesson()"' : 'disabled'}>
+                      <button class="btn btn-outline-primary" ${
+                        hasPrevLesson
+                          ? 'onclick="app.previousLesson()"'
+                          : "disabled"
+                      }>
                         <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
                       </button>
-                      <button class="btn btn-primary" ${hasNextLesson ? 'onclick="app.nextLesson()"' : 'disabled'}>
+                      <button class="btn btn-primary" ${
+                        hasNextLesson
+                          ? 'onclick="app.nextLesson()"'
+                          : "disabled"
+                      }>
                         Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
                       </button>
                     </div>
                   </div>
 
-                  <div class="lesson-quiz-card ${lessonCompleted ? 'lesson-quiz-card--complete' : ''}">
+                  <div class="lesson-quiz-card ${
+                    lessonCompleted ? "lesson-quiz-card--complete" : ""
+                  }">
                     <div class="lesson-quiz-card__header">
                       <span class="lesson-quiz-badge"><i class="fa-solid fa-circle-question"></i> Module quiz</span>
-                      <span class="lesson-quiz-score">Passing score: ${currentLesson.quiz.passingScore}%</span>
+                      <span class="lesson-quiz-score">Passing score: ${
+                        currentLesson.quiz.passingScore
+                      }%</span>
                     </div>
-                    ${quizScore !== undefined ? `
+                    ${
+                      quizScore !== undefined
+                        ? `
                       <div class="lesson-quiz-status">
-                        <i class="fa-solid ${lessonCompleted ? 'fa-check-circle' : 'fa-rotate-right'}"></i>
+                        <i class="fa-solid ${
+                          lessonCompleted
+                            ? "fa-check-circle"
+                            : "fa-rotate-right"
+                        }"></i>
                         <div>
                           <p class="lesson-quiz-status__title">Latest attempt: ${quizScore}%</p>
-                          <p class="lesson-quiz-status__meta">${lessonCompleted ? 'Great job! You can retake the quiz to boost your score.' : 'Give it another try to reach the passing score.'}</p>
+                          <p class="lesson-quiz-status__meta">${
+                            lessonCompleted
+                              ? "Great job! You can retake the quiz to boost your score."
+                              : "Give it another try to reach the passing score."
+                          }</p>
                         </div>
-                      </div>` : ''}
+                      </div>`
+                        : ""
+                    }
                     <p class="lesson-quiz-text">
-                      Test your understanding and unlock the next milestone. Score at least ${currentLesson.quiz.passingScore}% to mark this lesson as complete.
+                      Test your understanding and unlock the next milestone. Score at least ${
+                        currentLesson.quiz.passingScore
+                      }% to mark this lesson as complete.
                     </p>
                     <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
-                      ${lessonCompleted ? 'Retake quiz' : 'Start quiz'}
+                      ${lessonCompleted ? "Retake quiz" : "Start quiz"}
                       <i class="fa-solid fa-arrow-right-long ms-2"></i>
                     </button>
                   </div>
 
                   <div class="lesson-nav-actions">
-                    ${activeIndex > 0 ? `
+                    ${
+                      activeIndex > 0
+                        ? `
                       <button class="btn btn-outline-primary lesson-nav-btn" onclick="app.previousLesson()">
                         <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
-                      </button>` : '<span></span>'}
-                    ${activeIndex < totalLessons - 1 ? `
+                      </button>`
+                        : "<span></span>"
+                    }
+                    ${
+                      activeIndex < totalLessons - 1
+                        ? `
                       <button class="btn btn-primary lesson-nav-btn" onclick="app.nextLesson()">
                         Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
-                      </button>` : `
+                      </button>`
+                        : `
                       <button class="btn btn-success lesson-nav-btn" onclick="app.completeLesson()">
                         <i class="fa-solid fa-award me-2"></i>Complete course
-                      </button>`}
+                      </button>`
+                    }
                   </div>
                 </article>
               </div>
@@ -2000,39 +2274,59 @@ class YouthHealthLMS {
   changeChapterLesson(chapterIndex, lessonIndex) {
     this.currentChapterIndex = Math.max(0, chapterIndex || 0);
     if (this.selectedCourse && Array.isArray(this.selectedCourse.chapters)) {
-      const lessons = this.selectedCourse.chapters[this.currentChapterIndex]?.lessons || [];
+      const lessons =
+        this.selectedCourse.chapters[this.currentChapterIndex]?.lessons || [];
       this.selectedCourse.lessons = lessons;
-      this.currentLessonIndex = Math.min(Math.max(0, lessonIndex || 0), Math.max(0, lessons.length - 1));
+      this.currentLessonIndex = Math.min(
+        Math.max(0, lessonIndex || 0),
+        Math.max(0, lessons.length - 1)
+      );
     } else {
       this.currentLessonIndex = Math.max(0, lessonIndex || 0);
     }
     this.render();
-    try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (_) {}
-    try { setTimeout(() => this.scrollActiveLessonIntoView(), 80); } catch (_) {}
+    try {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (_) {}
+    try {
+      setTimeout(() => this.scrollActiveLessonIntoView(), 80);
+    } catch (_) {}
   }
 
   // Jump to a specific course/chapter/lesson from dashboard
   openCourseChapterLesson(courseId, chapterIndex = 0, lessonIndex = 0) {
-    const course = (typeof coursesData !== 'undefined' ? coursesData : []).find(c => c.id === courseId);
+    const course = (typeof coursesData !== "undefined" ? coursesData : []).find(
+      (c) => c.id === courseId
+    );
     if (!course) return;
     this.selectedCourse = course;
     this.showQuiz = false;
     if (Array.isArray(course.chapters) && course.chapters.length > 0) {
-      this.currentChapterIndex = Math.min(Math.max(0, chapterIndex || 0), course.chapters.length - 1);
+      this.currentChapterIndex = Math.min(
+        Math.max(0, chapterIndex || 0),
+        course.chapters.length - 1
+      );
       const lessons = course.chapters[this.currentChapterIndex]?.lessons || [];
       this.selectedCourse.lessons = lessons;
-      this.currentLessonIndex = Math.min(Math.max(0, lessonIndex || 0), Math.max(0, lessons.length - 1));
+      this.currentLessonIndex = Math.min(
+        Math.max(0, lessonIndex || 0),
+        Math.max(0, lessons.length - 1)
+      );
     } else {
       this.currentChapterIndex = 0;
       this.selectedCourse.lessons = course.lessons || [];
-      this.currentLessonIndex = Math.min(Math.max(0, lessonIndex || 0), Math.max(0, this.selectedCourse.lessons.length - 1));
+      this.currentLessonIndex = Math.min(
+        Math.max(0, lessonIndex || 0),
+        Math.max(0, this.selectedCourse.lessons.length - 1)
+      );
     }
-    this.navigateTo('lesson-slider');
+    this.navigateTo("lesson-slider");
   }
 
   // Chapter navigation helpers
   nextChapter() {
-    if (!this.selectedCourse || !Array.isArray(this.selectedCourse.chapters)) return;
+    if (!this.selectedCourse || !Array.isArray(this.selectedCourse.chapters))
+      return;
     const total = this.selectedCourse.chapters.length;
     if (this.currentChapterIndex < total - 1) {
       this.changeChapterLesson(this.currentChapterIndex + 1, 0);
@@ -2040,7 +2334,8 @@ class YouthHealthLMS {
   }
 
   previousChapter() {
-    if (!this.selectedCourse || !Array.isArray(this.selectedCourse.chapters)) return;
+    if (!this.selectedCourse || !Array.isArray(this.selectedCourse.chapters))
+      return;
     if (this.currentChapterIndex > 0) {
       this.changeChapterLesson(this.currentChapterIndex - 1, 0);
     }
@@ -2049,23 +2344,29 @@ class YouthHealthLMS {
   changeLesson(index) {
     this.currentLessonIndex = index;
     this.render();
-    try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch (_) {}
-    try { setTimeout(() => this.scrollActiveLessonIntoView(), 80); } catch (_) {}
+    try {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (_) {}
+    try {
+      setTimeout(() => this.scrollActiveLessonIntoView(), 80);
+    } catch (_) {}
   }
 
   // Smooth-scroll the active lesson in the sidebar into view
   scrollActiveLessonIntoView() {
     try {
-      const container = document.querySelector('.lesson-trail');
+      const container = document.querySelector(".lesson-trail");
       if (!container) return;
-      const active = container.querySelector('.lesson-item.is-active, .lesson-chip.lesson-chip--current');
+      const active = container.querySelector(
+        ".lesson-item.is-active, .lesson-chip.lesson-chip--current"
+      );
       if (!active) return;
       const cRect = container.getBoundingClientRect();
       const aRect = active.getBoundingClientRect();
       const overTop = aRect.top < cRect.top + 16;
       const overBottom = aRect.bottom > cRect.bottom - 16;
       if (overTop || overBottom) {
-        active.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        active.scrollIntoView({ block: "center", behavior: "smooth" });
       }
     } catch (_) {}
   }
@@ -2074,8 +2375,12 @@ class YouthHealthLMS {
     if (this.currentLessonIndex < this.selectedCourse.lessons.length - 1) {
       this.currentLessonIndex++;
       this.render();
-      try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch (_) {}
-      try { setTimeout(() => this.scrollActiveLessonIntoView(), 80); } catch (_) {}
+      try {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch (_) {}
+      try {
+        setTimeout(() => this.scrollActiveLessonIntoView(), 80);
+      } catch (_) {}
     }
   }
 
@@ -2083,8 +2388,12 @@ class YouthHealthLMS {
     if (this.currentLessonIndex > 0) {
       this.currentLessonIndex--;
       this.render();
-      try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch (_) {}
-      try { setTimeout(() => this.scrollActiveLessonIntoView(), 80); } catch (_) {}
+      try {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch (_) {}
+      try {
+        setTimeout(() => this.scrollActiveLessonIntoView(), 80);
+      } catch (_) {}
     }
   }
 
@@ -2207,10 +2516,10 @@ class YouthHealthLMS {
                     <p class="text-muted mb-1 small">Modules Completed</p>
                     <p class="mb-0">${
                       this.selectedCourse.lessons
-                        ? this.selectedCourse.lessons.length + ' lessons'
+                        ? this.selectedCourse.lessons.length + " lessons"
                         : this.selectedCourse.lessions
-                        ? this.selectedCourse.lessions.length + ' lessions'
-                        : '0 lessons'
+                        ? this.selectedCourse.lessions.length + " lessions"
+                        : "0 lessons"
                     }</p>
                   </div>
                   <div class="col-md-6">
