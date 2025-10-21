@@ -613,7 +613,7 @@ class YouthHealthLMS {
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="fade-right">
               <div class="hero-content">
-                <h1 class="hero-title glow-title">Young Health Ambassador Programme</h1>
+                <h1 class="hero-title glow-title-float">Young Health Ambassador Programme</h1>
                 <p class="hero-description">
                     The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower young by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador. <br>
                     This program equips young person with knowledge and skills in areas like physical health including sexual and reproductive health, nutrition, mental wellbeing etc.  enabling them to become active advocates for health and influence healthier choices within their communities and networks.

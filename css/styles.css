@@ -107,19 +107,47 @@ img {
 
 /* ===== Gradient Glow Title and CTA Button (Hero) ===== */
 .glow-title {
-  background-image: linear-gradient(90deg, #ffffff 0%, #79f0e8 50%, #ffffff 100%);
+  display: inline-block;
+  background-image: linear-gradient(90deg, #ffffff 0%, #79f0e8 50%, #ffffff 100%) !important;
+  /* background-size: 300% 100%; */
+  background-position: 0% 100% !important;
+  background-repeat: repeat;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  text-shadow: 0 2px 8px rgba(127, 125, 255, 0.35), 0 8px 30px rgba(0, 224, 255, 0.25);
-  animation: titleGradientMove 8s ease-in-out infinite;
+  text-shadow: 0 3px 12px rgba(127, 125, 255, 0.45), 0 14px 38px rgba(0, 224, 255, 0.3), 0 0 28px rgba(3, 175, 255, 0.35);
+  animation: glowPulse 3s ease-in-out infinite;
+  will-change: background-image;
 }
 
 @keyframes titleGradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0%, 100% {
+    background-position: 0% 50%;
+    background-position-x: 0%;
+  }
+  50% {
+    background-position: 200% 50%;
+    background-position-x: 200%;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    background-image: linear-gradient(90deg, #ffffff 0%, #79f0e8 50%, #ffffff 100%) !important;
+  }
+  25% {
+    background-image: linear-gradient(135deg, #ffffff 0%, #6fe7ef 50%, #ffffff 100%) !important;
+  }
+  50% {
+    background-image: linear-gradient(180deg, #ffffff 0%, #4fcedf 50%, #00eeff 100%) !important;
+  }
+  75% {
+    background-image: linear-gradient(225deg, #ffffff 0%, #79f0e8 50%, #ffffff 100%) !important;
+  }
+  100% {
+    background-image: linear-gradient(90deg, #ffffff 0%, #79f0e8 50%, #ffffff 100%) !important;
+  }
 }
 
 .btn-gradient-glow {
@@ -172,6 +200,34 @@ img {
   45% { transform: rotate(-4deg); }
   60% { transform: rotate(2deg); }
   75% { transform: rotate(0deg); }
+}
+
+/* ===== Floating linear gradient title (alternative) ===== */
+
+
+.glow-title-float {
+    display: inline-block;
+    background-image: linear-gradient(120deg, #ffffff 0%, #00ffee 30%, #ffffff 60%, #00fbff 100%);
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 238, 255, 0.25);
+    animation: floatGradient 10s ease-in-out infinite;
+}
+
+@keyframes floatGradient {
+  0%   { background-position:   0% 50%; }
+  25%  { background-position:  50%   0%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position:  50% 100%; }
+  100% { background-position:   0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-title-float { animation: none; }
 }
 
 .gradient-bg {
