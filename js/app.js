@@ -595,7 +595,6 @@ class YouthHealthLMS {
               <li class="nav-item"><a class="nav-link transition-base" href="#components">Components</a></li>
               <li class="nav-item"><a class="nav-link transition-base" href="#roles">Roles</a></li>
               <li class="nav-item"><a class="nav-link transition-base" href="#eligibility">Join</a></li>
-              <li class="nav-item"><a class="nav-link transition-base" href="#statistics">Stats</a></li>
               <li class="nav-item ms-lg-3"><a href="#" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">Login</a></li>
             </ul>
           </div>
@@ -614,13 +613,16 @@ class YouthHealthLMS {
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="fade-right">
               <div class="hero-content">
-                <h1 class="hero-title display-gradient">Young Health Ambassador Programme</h1>
+                <h1 class="hero-title glow-title">Young Health Ambassador Programme</h1>
                 <p class="hero-description">
                     The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower young by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador. <br>
                     This program equips young person with knowledge and skills in areas like physical health including sexual and reproductive health, nutrition, mental wellbeing etc.  enabling them to become active advocates for health and influence healthier choices within their communities and networks.
                 </p>
                 <div class="d-flex gap-3 flex-wrap">
-                  <a href="#" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">Become an Ambassador</a>
+                  <a href="#" class="btn btn-gradient-glow hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">
+                    <i class="fa-solid fa-handshake-angle join-icon" aria-hidden="true"></i>
+                    Become an Ambassador
+                  </a>
                 </div>
               </div>
             </div>

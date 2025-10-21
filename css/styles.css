@@ -105,6 +105,75 @@ img {
   
 }
 
+/* ===== Gradient Glow Title and CTA Button (Hero) ===== */
+.glow-title {
+  background-image: linear-gradient(90deg, #ffffff 0%, #79f0e8 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 2px 8px rgba(127, 125, 255, 0.35), 0 8px 30px rgba(0, 224, 255, 0.25);
+  animation: titleGradientMove 8s ease-in-out infinite;
+}
+
+@keyframes titleGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-gradient-glow {
+  --btn-grad-a: #00AEEF;
+  --btn-grad-b: #0077C8;
+  --btn-grad-c: #6A00FF;
+  background-image: linear-gradient(135deg, var(--btn-grad-a) 0%, var(--btn-grad-b) 50%, var(--btn-grad-c) 100%);
+  color: #fff !important;
+  border: 0;
+  box-shadow: 0 8px 24px rgba(0, 174, 239, 0.35), 0 12px 48px rgba(106, 0, 255, 0.25);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-gradient-glow::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(from 0deg, rgba(255,255,255,.10), transparent 35%, rgba(255,255,255,.08) 70%, transparent);
+  animation: buttonGlowRotate 6s linear infinite;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: -1;
+}
+
+@keyframes buttonGlowRotate { to { transform: rotate(360deg); } }
+
+.btn-gradient-glow:hover,
+.btn-gradient-glow:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0, 174, 239, 0.45), 0 18px 56px rgba(106, 0, 255, 0.35);
+  filter: brightness(1.03);
+}
+
+.btn-gradient-glow .join-icon {
+  margin-right: .5rem;
+  filter: drop-shadow(0 2px 6px rgba(255,255,255,0.35));
+  animation: handshakeWave 2.2s ease-in-out infinite;
+  transform-origin: 60% 60%;
+}
+
+.btn-gradient-glow:hover .join-icon { animation-duration: 1.2s; }
+
+@keyframes handshakeWave {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(-8deg); }
+  30% { transform: rotate(6deg); }
+  45% { transform: rotate(-4deg); }
+  60% { transform: rotate(2deg); }
+  75% { transform: rotate(0deg); }
+}
+
 .gradient-bg {
   background: var(--primary-gradient);
   color: var(--white);
