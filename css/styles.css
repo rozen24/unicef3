@@ -2146,19 +2146,19 @@ img {
 }
 
 .chapter-accordion .chapter-icon {
-  display: inline-flex;
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: #fff;
-  background: linear-gradient(135deg, #00AEEF, #0077C8);
-  box-shadow: 0 8px 22px rgba(0, 119, 200, 0.25);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 47%;
+    color: #000000;
+    background: linear-gradient(135deg, #ffffff, #0098ff);
+    box-shadow: 0 8px 22px rgb(169 174 177 / 25%);
+    padding: 13px;
 }
-.chapter-accordion .chapter-icon i { line-height: 1; font-size: .9rem; }
+.chapter-accordion .chapter-icon i { line-height: 1; font-size: 1.9rem; }
 .chapter-accordion .chapter-title {
   font-weight: 700;
+  color: #000000;
 }
 .lessons-list .lesson-item {
   cursor: pointer;
@@ -2168,7 +2168,7 @@ img {
   transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
 .lessons-list .lesson-item .lesson-icon {
-  display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center;
+  display: inline-flex; padding: 10px; align-items: center; justify-content: center;
   border-radius: 10px; background: linear-gradient(135deg, #e6f7ff, #f0fbff); color: #0077C8;
 }
 .lessons-list .lesson-item:hover {
@@ -7038,4 +7038,9 @@ p.lead {
 }
 .lesson-slide .role-card p {
   color: #4b647f;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
 }

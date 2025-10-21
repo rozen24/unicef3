@@ -1855,16 +1855,16 @@ class YouthHealthLMS {
 
       // Icon mapping for chapters (fallback rotates through when out of range)
       const chapterIcons = [
-        'fa-layer-group',
-        'fa-compass',
-        'fa-seedling',
-        'fa-graduation-cap',
-        'fa-heart-pulse',
-        'fa-globe',
-        'fa-handshake-angle',
-        'fa-lightbulb',
-        'fa-rocket',
-        'fa-diagram-project'
+        "fa-layer-group",
+        "fa-compass",
+        "fa-seedling",
+        "fa-graduation-cap",
+        "fa-heart-pulse",
+        "fa-globe",
+        "fa-handshake-angle",
+        "fa-lightbulb",
+        "fa-rocket",
+        "fa-diagram-project",
       ];
 
       const accordion = `
@@ -1884,7 +1884,9 @@ class YouthHealthLMS {
                 }" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${ci}" aria-expanded="${
                 ci === chIndex
               }" aria-controls="collapse-${ci}">
-                  <span class="chapter-icon me-2"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]}"></i></span>
+                  <span class="chapter-icon me-2"><i class="fa-solid ${
+                    chapterIcons[ci % chapterIcons.length]
+                  }"></i></span>
                   <span class="chapter-title">${ch.title}</span>
                   <span class="ms-auto chapter-progress-pill" title="${done} of ${total} lessons">${done}/${total}</span>
                 </button>
@@ -1899,7 +1901,7 @@ class YouthHealthLMS {
                         const isActive = ci === chIndex && li === activeIndex;
                         const isDone = completedIds.has(ls.id);
                         return `
-                      <li class="list-group-item lesson-item d-flex align-items-center ${
+                      <li class="lesson-chip list-group-item lesson-item d-flex align-items-center my-1 ${
                         isActive ? "is-active" : ""
                       }" onclick="app.changeChapterLesson(${ci}, ${li})">
                         <span class="lesson-icon"><i class="fa-solid ${
@@ -2038,6 +2040,10 @@ class YouthHealthLMS {
                         ${lessonCompleted ? "Retake quiz" : "Start quiz"}
                         <i class="fa-solid fa-arrow-right-long ms-2"></i>
                       </button>
+                    </div>`
+                        : ""
+                    }
+
                       <div class="chapter-nav-actions">
                         <button class="btn btn-outline-primary" ${
                           hasPrevChapter
@@ -2054,31 +2060,6 @@ class YouthHealthLMS {
                           Next chapter<i class="fa-solid fa-arrow-right ms-2"></i>
                         </button>
                       </div>
-                    </div>`
-                        : ""
-                    }
-
-                    <div class="lesson-nav-actions">
-                      ${
-                        activeIndex > 0
-                          ? `
-                        <button class="btn btn-outline-primary lesson-nav-btn" onclick="app.previousLesson()">
-                          <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
-                        </button>`
-                          : "<span></span>"
-                      }
-                      ${
-                        activeIndex < totalLessons - 1
-                          ? `
-                        <button class="btn btn-primary lesson-nav-btn" onclick="app.nextLesson()">
-                          Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
-                        </button>`
-                          : `
-                        <button class="btn btn-success lesson-nav-btn" onclick="app.completeLesson()">
-                          <i class="fa-solid fa-award me-2"></i>Complete course
-                        </button>`
-                      }
-                    </div>
                   </article>
                 </div>
               </div>
