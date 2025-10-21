@@ -1853,6 +1853,20 @@ class YouthHealthLMS {
 
       if (this.showQuiz) return this.renderQuiz();
 
+      // Icon mapping for chapters (fallback rotates through when out of range)
+      const chapterIcons = [
+        'fa-layer-group',
+        'fa-compass',
+        'fa-seedling',
+        'fa-graduation-cap',
+        'fa-heart-pulse',
+        'fa-globe',
+        'fa-handshake-angle',
+        'fa-lightbulb',
+        'fa-rocket',
+        'fa-diagram-project'
+      ];
+
       const accordion = `
         <div class="accordion chapter-accordion" id="chaptersAccordion">
           ${course.chapters
@@ -1870,9 +1884,8 @@ class YouthHealthLMS {
                 }" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${ci}" aria-expanded="${
                 ci === chIndex
               }" aria-controls="collapse-${ci}">
-                  <span class="chapter-index me-2">${
-                    ci + 1
-                  }</span> <span class="chapter-title">${ch.title}</span>
+                  <span class="chapter-icon me-2"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]}"></i></span>
+                  <span class="chapter-title">${ch.title}</span>
                   <span class="ms-auto chapter-progress-pill" title="${done} of ${total} lessons">${done}/${total}</span>
                 </button>
               </h2>
