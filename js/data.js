@@ -25,28 +25,47 @@ const coursesData = [
             quiz: { passingScore: 80, questions: [{ id:'q1a', question: 'What age defines young per UN?', options:['15-24','10-19','18-29','12-21'], correctAnswer:0 }] },
             content: (function(){
               // reuse existing lesson-1 content
-              return `
-          <div class="lesson-slide">
-            <h2 class="definition-card alert-info hover-lift-sm transition-base aos-init aos-animate gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Young Health Ambassador Program (YHAP)</h2>
-            <div class="floating-bg" aria-hidden="true">
-              <span class="float-elem" style="top:8%; left:6%; width:70px; height:70px;"></span>
-              <span class="float-elem" style="top:35%; right:10%; width:90px; height:90px;"></span>
-              <span class="float-elem" style="bottom:12%; left:14%; width:80px; height:80px;"></span>
-            </div>
-            <div class=" definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="100">
-              <h4 class="gradient-text transition-base"><i class="fas fa-users me-2 animate-float"></i>Young</h4>
-              <p>As per United Nations, young refers to those persons aged between the ages of <strong>15 and 24</strong> without prejudice to other definitions by Member States. It is a period of transition from the dependence of childhood to adulthood's independence. Young People covers the age range 10-24 years and Adolescents as individuals in the 10-19 years age group.</p>
-            </div>
-            <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="gradient-text transition-base"><i class="fas fa-heartbeat me-2 animate-float"></i>Health</h4>
-              <p>As per World Health Organization (WHO), health is defined as a state of complete <strong>physical, mental, and social well-being</strong>, and not merely the absence of disease or infirmity.</p>
-            </div>
-            <div class="program-intro hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="250">
-              <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>About YHAP</h4>
-              <p>The Young Health Ambassador Programme (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The programme is designed to empower young by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p>
-              <p>These programs equip young with knowledge and skills in areas like physical health including SRH and mental wellbeing, enabling them to become active advocates for health and influence healthier choices within their communities and networks.</p>
-            </div>
-          </div>`; })()
+                return `
+              <div class="lesson-slide">
+              <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Young Health Ambassador Programme</h2>
+              <div class="floating-bg" aria-hidden="true">
+                <span class="float-elem" style="top:8%; left:6%; width:70px; height:70px;"></span>
+                <span class="float-elem" style="top:35%; right:10%; width:90px; height:90px;"></span>
+                <span class="float-elem" style="bottom:12%; left:14%; width:80px; height:80px;"></span>
+              </div>
+
+                <div class="row g-3 mt-2">
+                  <div class="col-md-12">
+                  <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="160">
+                    <h4 class="gradient-text transition-base"><i class="fas fa-heartbeat me-2 animate-float"></i>Health</h4>
+                    <p>As per World Health Organization (WHO), health is defined as a state of complete physical, mental, and social well-being, and not merely the absence of disease or infirmity.</p>
+                  </div>
+                  </div>
+                  <div class="col-md-12">
+                  <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="gradient-text transition-base"><i class="fas fa-child-reaching me-2 animate-float"></i>Adolescence</h4>
+                    <p>According to World Health Organization (WHO), adolescence is the phase of life between childhood and adulthood, from ages 10 to 19. Adolescents experience rapid physical, cognitive and psychosocial growth. This affects how they feel, think, make decisions, and interact with the world around them.</p>
+                  </div>
+                  </div>
+                  <div class="col-md-12">
+                  <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="240">
+                    <h4 class="gradient-text transition-base"><i class="fas fa-user-group me-2 animate-float"></i>Youth</h4>
+                    <p>As per United Nations (UN), youth refers to those persons aged between the ages of 15 and 24 without prejudice to other definitions by Member States. It is a period of transition from the dependence of childhood to adulthood’s independence.</p>
+                  </div>
+                  </div>
+                  <div class="col-md-12">
+                  <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="280">
+                    <h4 class="gradient-text transition-base"><i class="fas fa-users-between-lines me-2 animate-float"></i>Young people</h4>
+                    <p>According to the World Health Organization (WHO), "young people" are defined as individuals between the ages of 10 and 24.</p>
+                  </div>
+                  </div>
+                </div>
+                <div class="program-intro hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="100">
+                  <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>About YHAP</h4>
+                  <p>The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p>
+                  <p>This program equips young person with knowledge and skills in areas like physical health including sexual and reproductive health, nutrition, mental wellbeing etc.  enabling them to become active advocates for health and influence healthier choices within their communities and networks.</p>
+                </div>
+              </div>`; })()
           },
           // Six pillars
           {
