@@ -2168,8 +2168,13 @@ img {
   transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
 .lessons-list .lesson-item .lesson-icon {
-  display: inline-flex; padding: 10px; align-items: center; justify-content: center;
-  border-radius: 10px; background: linear-gradient(135deg, #e6f7ff, #f0fbff); color: #0077C8;
+    display: inline-flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #cfcfcf, #f0fbff);
+    color: #0077C8;
 }
 .lessons-list .lesson-item:hover {
   background: linear-gradient(135deg, rgba(0, 174, 239, 0.1), rgba(0, 119, 200, 0.08));
