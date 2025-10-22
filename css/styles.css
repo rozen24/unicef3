@@ -7228,3 +7228,38 @@ p.lead {
 @media (prefers-reduced-motion: reduce) {
   .age-step::after { animation: none; }
 }
+
+/* ==================== LESSON 2: GLOBAL YOUTH MODULE ==================== */
+.global-overview {
+  background: linear-gradient(135deg, #0b5fa5 0%, #0a77c4 50%, #0bb2a8 100%);
+  color: #ffffff;
+}
+.world-youth-map {
+  position: relative;
+}
+.world-youth-map .region {
+  position: absolute;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2);
+  transition: transform .25s ease, background .25s ease;
+  backdrop-filter: blur(2px);
+}
+.world-youth-map .region:hover {
+  background: linear-gradient(90deg, #06D6A0, #2575fc);
+  transform: scale(1.06);
+}
+/* Approximate placements on the background map */
+.world-youth-map .north-america { top: 38%; left: 18%; }
+.world-youth-map .europe { top: 34%; left: 48%; }
+.world-youth-map .africa { top: 58%; left: 50%; }
+.world-youth-map .asia { top: 46%; left: 71%; }
+.world-youth-map .latin { top: 56%; left: 27%; }
+.world-youth-map .mena { top: 44%; left: 56%; }
+
+.population-pyramid-wrapper canvas { width: 100%; height: 100%; }

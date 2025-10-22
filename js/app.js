@@ -426,6 +426,8 @@ class YouthHealthLMS {
         // Initialize lesson audio controls/state after DOM is ready
         this.initLessonAudio();
         this.initAOS();
+        // Initialize any lesson-specific interactive enhancements (charts, counters)
+        try { this.initLessonEnhancements(); } catch (_) {}
         try {
           setTimeout(() => this.scrollActiveLessonIntoView(), 80);
         } catch (_) {}
@@ -450,6 +452,75 @@ class YouthHealthLMS {
     } catch (_) {
       /* no-op */
     }
+  }
+
+  // Initialize lesson-specific enhancements like counters and charts when elements are present
+  initLessonEnhancements() {
+    try {
+      // Animated counter for global overview (90%)
+      const counterEl = document.getElementById("globalCounter");
+      if (counterEl && !counterEl.dataset.animated) {
+        const target = Number(counterEl.getAttribute("data-target") || 90);
+        let start = 0;
+        const step = () => {
+          start = Math.min(start + 1, target);
+          counterEl.textContent = String(start);
+          if (start < target) requestAnimationFrame(step);
+          else counterEl.dataset.animated = "true";
+        };
+        // Trigger on intersect to avoid animating offscreen
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting && !counterEl.dataset.animated) {
+              requestAnimationFrame(step);
+              obs.disconnect();
+            }
+          });
+        }, { threshold: 0.4 });
+        obs.observe(counterEl);
+      }
+
+      // Initialize Chart.js population pyramid if canvas exists
+      const pyramidCanvas = document.getElementById("populationPyramid");
+      if (pyramidCanvas && !pyramidCanvas.dataset.chartInitialized && window.Chart) {
+        try {
+          const ctx = pyramidCanvas.getContext("2d");
+          new window.Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65-69", "70-74", "75-79", "80-84", "85-89", "90-94", "95-99", "100+"],
+              datasets: [
+                {
+                  label: "Male",
+                  backgroundColor: "#2563EB",
+                  data: [-7.63, -7.41, -7.82, -8.5, -8.27, -7.92, -6.46, -6.68, -6.04, -4.92, -4.14, -3.78, -2.78, -2.59, -1.77, -1.26, -0.56, -0.18, -0.12, -0.06, -0.01]
+                },
+                {
+                  label: "Female",
+                  backgroundColor: "#F97316",
+                  data: [7.95, 7.92, 8.51, 8.07, 6.72, 7.92, 6.46, 5.66, 6.04, 5.12, 4.13, 4.0, 2.96, 3.01, 2.15, 1.57, 0.67, 0.46, 0.17, 0.08, 0.01]
+                }
+              ]
+            },
+            options: {
+              indexAxis: "y",
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  ticks: {
+                    callback: (val) => Math.abs(val)
+                  },
+                  title: { display: true, text: "Population (Millions)" }
+                }
+              },
+              plugins: { legend: { position: "bottom" } }
+            }
+          });
+          pyramidCanvas.dataset.chartInitialized = "true";
+        } catch (_) {}
+      }
+    } catch (_) {}
   }
 
   initHomeScripts() {
