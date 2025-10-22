@@ -689,6 +689,63 @@ class YouthHealthLMS {
           if (chartVisible) ensureTopCausesChart();
         } catch (_) {}
       }
+
+      // Bangladesh mortality donuts (Lesson 3b)
+      const buildDonut = (canvasId, labels, data, colors) => {
+        const el = document.getElementById(canvasId);
+        if (!el || el.dataset.chartInitialized || !window.Chart) return;
+        try {
+          const ctx = el.getContext("2d");
+          new window.Chart(ctx, {
+            type: "doughnut",
+            data: { labels, datasets: [{ data, backgroundColor: colors, borderColor: "#ffffff", borderWidth: 2 }] },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              cutout: "60%",
+              plugins: {
+                legend: { position: "bottom" },
+                tooltip: {
+                  callbacks: {
+                    label: (ctx) => `${ctx.label}: ${ctx.parsed}`
+                  }
+                }
+              }
+            }
+          });
+          el.dataset.chartInitialized = "true";
+        } catch (_) {}
+      };
+
+      const bdLabels = [
+        "Heart disease",
+        "Stroke",
+        "Respiratory",
+        "Infection",
+        "Cancer",
+        "Obstetric",
+        "Road traffic",
+        "Drowning & accidents",
+        "Other"
+      ];
+
+      // Relative weights (illustrative; replace with official splits when available)
+      const bdAdolData = [4, 2, 3, 6, 4, 0, 10, 9, 6];
+      const bdYAData   = [14, 6, 2, 3, 4, 1, 10, 5, 2];
+      const bdColors   = [
+        "#F472B6", // pink
+        "#A78BFA", // violet
+        "#60A5FA", // blue
+        "#34D399", // emerald
+        "#F59E0B", // amber
+        "#FB7185", // rose
+        "#F97316", // orange
+        "#22D3EE", // cyan
+        "#9CA3AF"  // gray
+      ];
+
+      buildDonut("bdMortalityAdolescents", bdLabels, bdAdolData, bdColors);
+      buildDonut("bdMortalityYoungAdults", bdLabels, bdYAData, bdColors);
     } catch (_) {}
   }
 

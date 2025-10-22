@@ -535,6 +535,109 @@ const coursesData = [
           },
           {
             id: 'ch2-lesson-4',
+            title: 'Bangladesh scenario of mortality and morbidity among young people',
+            icon: 'fa-flag',
+            gradientClass: 'bg-gradient-blue',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2c-bd', question: 'Among Bangladeshi adolescent males (10–19), which is a leading cause of death?', options:['Road accidents','Cancer','Diabetes','Malaria'], correctAnswer:0 }] },
+            content: (function(){ return `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Bangladesh scenario of mortality and morbidity among young people</h2>
+
+                <!-- Sex-disaggregated Top 5 Causes (UNICEF Adolescent Data Portal 2019) -->
+                <section class="my-3" data-aos="fade-up" data-aos-delay="60">
+                  <h5 class="gradient-text mb-2">According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:
+                  </h5>
+                  <div class="row g-3">
+                    <div class="col-lg-6">
+                      <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">Males</span></h6>
+                        <ul class="list-unstyled d-grid gap-2 mb-0">
+                          ${[
+                            {label:'Road accidents', icon:'fa-car-burst', color:'bg-gradient-orange'},
+                            {label:'Diarrhea', icon:'fa-bacteria', color:'bg-gradient-blue'},
+                            {label:'Drowning', icon:'fa-water', color:'bg-gradient-teal'},
+                            {label:'Tuberculosis', icon:'fa-lungs', color:'bg-gradient-purple'},
+                            {label:'Suicide', icon:'fa-heart-crack', color:'bg-gradient-pink'}
+                          ].map((item,i)=>`
+                            <li class="d-flex align-items-center gap-2 icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${140+i*40}">
+                              <span class="${item.color}" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff"><i class="fa-solid ${item.icon}"></i></span>
+                              <span>${item.label}</span>
+                            </li>
+                          `).join('')}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="120">
+                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">Females</span></h6>
+                        <ul class="list-unstyled d-grid gap-2 mb-0">
+                          ${[
+                            {label:'Diarrhea', icon:'fa-bacteria', color:'bg-gradient-blue'},
+                            {label:'Tuberculosis', icon:'fa-lungs', color:'bg-gradient-purple'},
+                            {label:'Road accidents', icon:'fa-car-burst', color:'bg-gradient-orange'},
+                            {label:'Maternal mortality', icon:'fa-person-pregnant', color:'bg-gradient-pink'},
+                            {label:'Lower respiratory tract infections', icon:'fa-lungs', color:'bg-gradient-green'}
+                          ].map((item,i)=>`
+                            <li class="d-flex align-items-center gap-2 icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${160+i*40}">
+                              <span class="${item.color}" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff"><i class="fa-solid ${item.icon}"></i></span>
+                              <span>${item.label}</span>
+                            </li>
+                          `).join('')}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Doughnut charts: Adolescents vs Young adults -->
+                <section class="my-3" data-aos="fade-up" data-aos-delay="80">
+                  <h5 class="gradient-text mb-2">Adolescent and young adult mortality in Bangladesh</h5>
+                  <div class="row g-3 align-items-stretch">
+                    <div class="col-md-6">
+                      <div class="modern-card glass-card h-100">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                          <span class="badge-pill">Adolescents (10–19)</span>
+                        </div>
+                        <div style="position:relative; height:320px;">
+                          <canvas id="bdMortalityAdolescents" aria-label="Adolescent mortality distribution (relative)" role="img"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="modern-card glass-card h-100">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                          <span class="badge-pill">Young adults (20–24)</span>
+                        </div>
+                        <div style="position:relative; height:320px;">
+                          <canvas id="bdMortalityYoungAdults" aria-label="Young adult mortality distribution (relative)" role="img"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="small text-muted mt-2">Note: Chart shows relative emphasis for categories; update with official proportions when available.</div> -->
+
+                  <!-- Legend with icons -->
+                  <div class="d-flex flex-wrap gap-2 mt-2">
+                    ${[
+                      {label:'Heart disease', icon:'fa-heart', color:'bg-gradient-pink'},
+                      {label:'Stroke', icon:'fa-brain', color:'bg-gradient-purple'},
+                      {label:'Respiratory', icon:'fa-lungs', color:'bg-gradient-blue'},
+                      {label:'Infection', icon:'fa-virus', color:'bg-gradient-green'},
+                      {label:'Cancer', icon:'fa-ribbon', color:'bg-gradient-orange'},
+                      {label:'Obstetric', icon:'fa-person-pregnant', color:'bg-gradient-pink'},
+                      {label:'Road traffic', icon:'fa-car-burst', color:'bg-gradient-tangerine'},
+                      {label:'Drowning & accidents', icon:'fa-water', color:'bg-gradient-teal'},
+                      {label:'Other', icon:'fa-circle-dot', color:'bg-gradient-blue'}
+                    ].map((l)=>`
+                      <span class="badge-pill" title="${l.label}"><i class="fa-solid ${l.icon} me-1"></i>${l.label}</span>
+                    `).join('')}
+                  </div>
+                </section>
+              </div>`; })()
+          },
+          {
+            id: 'ch2-lesson-5',
             title: 'Child marriage and adolescent childbirth',
             icon: 'fa-child-reaching',
             gradientClass: 'bg-gradient-orange',
@@ -552,7 +655,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-5',
+            id: 'ch2-lesson-6',
             title: 'What challenges do adolescents face?',
             icon: 'fa-triangle-exclamation',
             gradientClass: 'bg-gradient-pink',
@@ -572,7 +675,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-6',
+            id: 'ch2-lesson-7',
             title: 'Special care for adolescents',
             icon: 'fa-user-nurse',
             gradientClass: 'bg-gradient-teal',
@@ -588,7 +691,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-7',
+            id: 'ch2-lesson-8',
             title: 'How young health advances the SDGs',
             icon: 'fa-diagram-project',
             gradientClass: 'bg-gradient-violet',
@@ -609,7 +712,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-8',
+            id: 'ch2-lesson-9',
             title: 'A shared agenda for adolescent health',
             icon: 'fa-handshake-angle',
             gradientClass: 'bg-gradient-emerald',
@@ -625,7 +728,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-9',
+            id: 'ch2-lesson-10',
             title: 'Policies, strategies and plans',
             icon: 'fa-file-shield',
             gradientClass: 'bg-gradient-blue',
@@ -645,7 +748,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-10',
+            id: 'ch2-lesson-11',
             title: 'Government’s commitment',
             icon: 'fa-landmark',
             gradientClass: 'bg-gradient-tangerine',
@@ -661,7 +764,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-11',
+            id: 'ch2-lesson-12',
             title: 'A combined effort',
             icon: 'fa-people-group',
             gradientClass: 'bg-gradient-green',
@@ -677,7 +780,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-12',
+            id: 'ch2-lesson-13',
             title: 'Turning insight into action',
             icon: 'fa-rocket',
             gradientClass: 'bg-gradient-rose',
