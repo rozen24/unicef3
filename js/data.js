@@ -67,6 +67,92 @@ const coursesData = [
                 </div>
               </div>`; })()
           },
+          // Age progression (inserted after Lesson 1)
+          {
+            id: 'ch1-lesson-1-ages',
+            title: 'Age Progression: Adolescence to Young Adulthood (10–24)',
+            icon: 'fa-children',
+            gradientClass: 'bg-gradient-violet',
+            audioFile: '',
+            quiz: {
+              passingScore: 70,
+              questions: [
+                {
+                  id: 'q1a-ages-1',
+                  question: 'Which range is considered Mid Adolescence?',
+                  options: ['10–13 years', '14–16 years', '17–19 years', '20–24 years'],
+                  correctAnswer: 1
+                }
+              ]
+            },
+            content: (function(){ return `
+            <div class="lesson-slide">
+              <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Understanding Age Groups (10–24)</h2>
+              <div class="floating-bg" aria-hidden="true">
+                <span class="float-elem" style="top:8%; left:6%; width:64px; height:64px;"></span>
+                <span class="float-elem" style="top:30%; right:8%; width:80px; height:80px;"></span>
+                <span class="float-elem" style="bottom:10%; left:12%; width:72px; height:72px;"></span>
+              </div>
+
+              <div class="alert alert-primary mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="60">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-primary bg-gradient p-3"><i class="fa-solid fa-users-between-lines"></i></span>
+                  <div>
+                    <h5 class="mb-1">Who is a “young person”?</h5>
+                    <p class="mb-0">According to WHO, <strong>young people are 10–24 years</strong>. Adolescence (10–19) is often described in three stages: <em>Early (10–13)</em>, <em>Mid (14–16)</em>, and <em>Late (17–19)</em> — followed by <em>Young Adulthood (20–24)</em>.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="age-legend" data-aos="fade-up" data-aos-delay="100">
+                <span class="legend-item"><span class="legend-dot legend-adolescence"></span> Adolescence (10–19)</span>
+                <span class="legend-item"><span class="legend-dot legend-young"></span> Young Adulthood (20–24)</span>
+              </div>
+
+              <div class="age-track d-flex flex-wrap align-items-stretch justify-content-between gap-3" data-aos="fade-up" data-aos-delay="120">
+                ${[
+                  {label:'Early Adolescence', range:'10–13', iconA:'fa-child', iconB:'fa-person-dress', color:'gradient-sky', img:'img/age/10-13.png'},
+                  {label:'Mid Adolescence', range:'14–16', iconA:'fa-child-reaching', iconB:'fa-person', color:'gradient-emerald', img:'img/age/14-16.png'},
+                  {label:'Late Adolescence', range:'17–19', iconA:'fa-person-walking', iconB:'fa-person-dress', color:'gradient-violet', img:'img/age/17-19.png'},
+                  {label:'Young Adulthood', range:'20–24', iconA:'fa-user', iconB:'fa-user', color:'gradient-tangerine', img:'img/age/20-24.png'}
+                ].map((step,i)=>`
+                  <div class="age-step flex-grow-1" style="min-width: 220px;">
+                    <div class="modern-card glass-card h-100 hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" style="padding:1rem; position:relative; z-index:1;">
+                      <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="badge-pill">${step.label}</span>
+                        <span class="badge bg-dark text-light">${step.range} yrs</span>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-center gap-4" style="font-size: 2rem;">
+                        <span class="${step.color}"><i class="fa-solid ${step.iconA}"></i></span>
+                        <i class="fa-solid fa-plus text-muted" style="font-size:1rem"></i>
+                        <span class="${step.color}"><i class="fa-solid ${step.iconB}"></i></span>
+                      </div>
+                      <figure class="image-card age-figure mt-3" style="height:160px">
+                        <img src="${step.img}" alt="${step.label} ${step.range} years" class="animate-float-slow">
+                      </figure>
+                    </div>
+                  </div>
+                  ${i < 3 ? '<div class="d-none d-xl-flex align-items-center justify-content-center" style="min-width:24px"><i class="fa-solid fa-arrow-right-long text-muted"></i></div>' : ''}
+                `).join('')}
+              </div>
+
+              <div class="row g-3 mt-3">
+                ${[
+                  {title:'Early 10–13', icon:'fa-seedling', text:'Rapid growth begins; guidance on body changes and healthy habits is essential.'},
+                  {title:'Mid 14–16', icon:'fa-compass', text:'Identity exploration and peer influence increase—support positive choices.'},
+                  {title:'Late 17–19', icon:'fa-graduation-cap', text:'Transitions to higher studies or work—build life skills and resilience.'},
+                  {title:'Young Adult 20–24', icon:'fa-rocket', text:'Greater independence—focus on wellbeing, employability, and leadership.'}
+                ].map((card,idx)=>`
+                  <div class="col-12 col-md-6">
+                    <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${160+idx*60}">
+                      <h5 class="gradient-text mb-1"><i class="fa-solid ${card.icon} me-2 animate-float"></i>${card.title}</h5>
+                      <p class="mb-0">${card.text}</p>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>`; })()
+          },
           // Six pillars
           {
             id: 'ch1-lesson-2',

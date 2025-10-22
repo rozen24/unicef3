@@ -7049,3 +7049,116 @@ p.lead {
   border-top-left-radius: var(--radius-lg);
   border-top-right-radius: var(--radius-lg);
 }
+
+/* ===== Age Track infographic styling ===== */
+.age-track {
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.age-track::before {
+  /* subtle connecting line */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.06) 0%,
+    rgba(0, 0, 0, 0.18) 50%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.age-track::after {
+  /* animated subtle ticks moving along the line */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 10px,
+    rgba(0, 0, 0, 0.35) 10px,
+    rgba(0, 0, 0, 0.35) 12px
+  );
+  opacity: 0.4;
+  z-index: 0;
+  animation: trackTicks 12s linear infinite;
+}
+
+@keyframes trackTicks {
+  0% { background-position: 0 0; }
+  100% { background-position: 120px 0; }
+}
+
+/* Ensure cards render above the connector line */
+.age-track .modern-card,
+.age-track .glass-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Age figure subtle float; respect reduced motion */
+.animate-float-slow {
+  animation: floatSoft 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes floatSoft {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.age-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Dark mode adjustments for age track */
+.dark-mode .age-track::before {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+}
+.dark-mode .age-track::after {
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 10px,
+    rgba(255, 255, 255, 0.5) 10px,
+    rgba(255, 255, 255, 0.5) 12px
+  );
+  opacity: 0.5;
+}
+
+/* Responsive: simplify line on small screens */
+@media (max-width: 991.98px) {
+  .age-track::before,
+  .age-track::after { opacity: 0.2; animation-duration: 18s; }
+}
+@media (max-width: 575.98px) {
+  .age-track::before,
+  .age-track::after { display: none; }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .age-track::after { animation: none; }
+  .animate-float-slow { animation: none; }
+}
