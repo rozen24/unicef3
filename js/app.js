@@ -1911,7 +1911,7 @@ class YouthHealthLMS {
                         ${
                           isDone
                             ? '<span class="lesson-state ms-auto"><i class="fa-solid fa-check"></i></span>'
-                            : ""
+                            : '<span class="lesson-state ms-auto"><i class="fa-solid fa-minus"></i></span>'
                         }
                       </li>`;
                       })

@@ -400,7 +400,7 @@ img {
 .icon-spin-on-hover i,
 .icon-spin-on-hover .fa,
 .icon-spin-on-hover .fas,
-.icon-spin-on-hover .bi { transition: transform 0.6s ease; }
+.icon-spin-on-hover .bi { transition: transform 0.6s ease; padding: 10px; border-radius: 10px !important;}
 .icon-spin-on-hover:hover i,
 .icon-spin-on-hover:hover .fa,
 .icon-spin-on-hover:hover .fas,
@@ -7161,4 +7161,70 @@ p.lead {
 @media (prefers-reduced-motion: reduce) {
   .age-track::after { animation: none; }
   .animate-float-slow { animation: none; }
+}
+
+/* Legend styles for age track */
+.age-legend {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.92rem;
+  color: #4a5568;
+  margin: 0.25rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+}
+
+.legend-adolescence { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.legend-young { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+
+.dark-mode .legend-dot { box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12); }
+
+/* Dot stations per step */
+.age-step { position: relative; }
+.age-step::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #6cd1ff, #0ea5e9 70%);
+  box-shadow: 0 0 0 3px rgba(0, 160, 255, 0.15), 0 6px 14px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  animation: stationPulse 3.6s ease-in-out infinite;
+}
+
+@keyframes stationPulse {
+  0% { box-shadow: 0 0 0 3px rgba(0, 160, 255, 0.18), 0 6px 14px rgba(0, 0, 0, 0.15); }
+  50% { box-shadow: 0 0 0 6px rgba(0, 160, 255, 0.10), 0 6px 18px rgba(0, 0, 0, 0.20); }
+  100% { box-shadow: 0 0 0 3px rgba(0, 160, 255, 0.18), 0 6px 14px rgba(0, 0, 0, 0.15); }
+}
+
+.dark-mode .age-step::after {
+  background: radial-gradient(circle at 35% 35%, #7dd3fc, #38bdf8 70%);
+  box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.28), 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 575.98px) {
+  .age-step::after { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .age-step::after { animation: none; }
 }
