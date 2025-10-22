@@ -677,6 +677,17 @@ class YouthHealthLMS {
         if (causesToggleCards) causesToggleCards.addEventListener("click", showCards);
         if (causesToggleChart) causesToggleChart.addEventListener("click", showChart);
         causesControls.dataset.bound = "true";
+        // If chart is the default visible view, ensure it's initialized on first load
+        try {
+          const chartVisibleByDefault = causesChartWrap && causesChartWrap.style.display !== "none";
+          if (chartVisibleByDefault) ensureTopCausesChart();
+        } catch (_) {}
+      } else if (causesControls) {
+        // Controls already bound on a previous render; still ensure chart is ready if visible
+        try {
+          const chartVisible = causesChartWrap && causesChartWrap.style.display !== "none";
+          if (chartVisible) ensureTopCausesChart();
+        } catch (_) {}
       }
     } catch (_) {}
   }

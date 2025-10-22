@@ -478,9 +478,9 @@ const coursesData = [
                       { icon:'fa-brain', color:'bg-gradient-purple', text:'<strong>Half</strong> of all mental health disorders in adulthood start by <strong>age 18</strong>, but most cases are <strong>undetected</strong> and <strong>untreated</strong>.' },
                       { icon:'fa-wine-bottle', color:'bg-gradient-blue', text:'<strong>Early substance use</strong> is linked to higher risks of dependence and other problems in adult life; younger people are <strong>disproportionately affected</strong>.' }
                     ].map((card, i)=>`
-                      <div class="col-md-6 col-lg-4">
+                      <div class="col-md-6">
                         <div class="modern-card glass-card icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${100 + i*60}">
-                          <div class="d-flex align-items-start gap-3">
+                          <div class="d-flex flex-col align-items-start gap-3">
                             <span class="${card.color}" style="width:48px; height:48px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0;">
                               <i class="fa-solid ${card.icon}"></i>
                             </span>
@@ -497,11 +497,11 @@ const coursesData = [
                 <!-- Top 5 Leading Causes of Death -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="80">
                   <h5 class="gradient-text mb-2">Top 5 leading causes of death among adolescents are</h5>
-                  <div id="topCausesControls" class="d-flex gap-2 mb-2">
-                    <button class="btn btn-outline-primary btn-sm active" id="topCausesToggleCards"><i class="fa-solid fa-grip me-1"></i> Cards</button>
-                    <button class="btn btn-outline-primary btn-sm" id="topCausesToggleChart"><i class="fa-solid fa-chart-bar me-1"></i> Chart</button>
+                  <div id="topCausesControls" class="d-flex gap-2 my-2">
+                    <button class="btn btn-outline-primary btn-sm active" id="topCausesToggleChart"><i class="fa-solid fa-chart-bar me-1"></i> Chart</button>
+                    <button class="btn btn-outline-primary btn-sm" id="topCausesToggleCards"><i class="fa-solid fa-grip me-1"></i> Cards</button>
                   </div>
-                  <div id="topCausesCards">
+                  <div id="topCausesCards" style="display:none">
                     <div class="row g-3">
                       ${[
                         { label:'Road traffic accident', icon:'fa-car-burst', color:'bg-gradient-orange' },
@@ -523,7 +523,7 @@ const coursesData = [
                       `).join('')}
                     </div>
                   </div>
-                  <div id="topCausesChartWrap" style="display:none">
+                  <div id="topCausesChartWrap">
                     <div class="modern-card glass-card">
                       <div style="position:relative; height:320px;">
                         <canvas id="top5CausesChart" aria-label="Top 5 adolescent death causes (relative rank)" role="img"></canvas>
