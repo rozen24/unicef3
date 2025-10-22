@@ -69,7 +69,7 @@ const coursesData = [
           },
           // Age progression (inserted after Lesson 1)
           {
-            id: 'ch1-lesson-1-ages',
+            id: 'ch1-lesson-2',
             title: 'Age Progression: Adolescence to Young Adulthood (10–24)',
             icon: 'fa-children',
             gradientClass: 'bg-gradient-violet',
@@ -155,7 +155,7 @@ const coursesData = [
           },
           // Six pillars
           {
-            id: 'ch1-lesson-2',
+            id: 'ch1-lesson-3',
             title: 'Six pillars that build confident health ambassadors',
             icon: 'fa-layer-group',
             gradientClass: 'bg-gradient-blue',
@@ -186,7 +186,7 @@ const coursesData = [
           },
           // Who am I
           {
-            id: 'ch1-lesson-3',
+            id: 'ch1-lesson-4',
             title: 'Who Am I as a Health Ambassador?',
             icon: 'fa-user-shield',
             gradientClass: 'bg-gradient-teal',
@@ -211,68 +211,74 @@ const coursesData = [
             </div>
           </div>`; })()
           },
-          // Nine steps
-          {
-            id: 'ch1-lesson-4',
+            // Nine steps
+            {
+            id: 'ch1-lesson-5',
             title: 'Nine interactive steps to become a certified Young Health Ambassador',
             icon: 'fa-clipboard-check',
             gradientClass: 'bg-gradient-orange',
             audioFile: '4.mp3',
             quiz: { passingScore: 80, questions: [{ id:'q1d', question: 'Which step confirms identity?', options:['Registration','Unique ID Generation','Assessment','Certificate download'], correctAnswer:1 }] },
-            content: (function(){ return `
-          <div class="lesson-slide">
+            content: (function(){ 
+              const steps = [
+              { text:'Online registration in Young Health Ambassador Program (YHAP)', icon:'fa-pen-to-square', color:'purple' },
+              { text:'Unique ID Generation', icon:'fa-id-card', color:'blue' },
+              { text:'Log in to the Website/App', icon:'fa-right-to-bracket', color:'teal' },
+              { text:'Access Young Health Ambassador Program (YAHP) course', icon:'fa-book-open', color:'orange' },
+              { text:'Complete YHAP course', icon:'fa-list-check', color:'green' },
+              { text:'Obtain passing marks in final assessment', icon:'fa-trophy', color:'pink' },
+              { text:'System generated certificate', icon:'fa-certificate', color:'violet' },
+              { text:'Self declaration/Oath Taking', icon:'fa-hand', color:'emerald' },
+              { text:'Final Certificate (Course validity-2 years)', icon:'fa-award', color:'tangerine' }
+              ];
+              return `
+            <div class="lesson-slide">
             <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Eligibility and Steps to be a YHA</h2>
             <div class="alert alert-info mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">
               <h5><i class="fas fa-info-circle me-2"></i>Eligibility</h5>
               <p class="mb-0">Any person aged <strong>15-24 years</strong> can become a Young Health Ambassador.</p>
             </div>
-            <div class="row g-3">${[
-              'Online registration in Young Health Ambassador Program (YHAP)',
-              'Unique ID Generation',
-              'Log in to the Website/App',
-              'Access Young Health Ambassador Program (YAHP) course',
-              'Complete YHAP course',
-              'Obtain passing marks in final assessment',
-              'System generated certificate',
-              'Self declaration/Oath Taking',
-              'Final Certificate (Course validity-2 years)'
-            ].map((t,i)=>`
+            <div class="row g-3">
+              ${steps.map((s,i)=>`
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="${120+i*40}">
-                <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
-                  <div class="step-number">${i+1}</div>
-                  <h6>${t}</h6>
+              <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover text-center">
+                <div class="step-icon bg-gradient-${s.color} animate-float-slow d-inline-flex align-items-center justify-content-center"
+                   style="width:64px; height:64px; border-radius:50%; animation-duration:6s; animation-delay:${(i*0.2).toFixed(1)}s">
+                <i class="fas ${s.icon} text-white" style="font-size:1.35rem"></i>
                 </div>
+                <h6 class="mt-2">${s.text}</h6>
+              </div>
               </div>`).join('')}
             </div>
-          </div>`; })()
-          },
+            </div>`; })()
+            },
           // Young Around the World
-          {
-            id: 'ch1-lesson-5',
-            title: 'Young Around the World',
-            icon: 'fa-earth-americas',
-            gradientClass: 'bg-gradient-green',
-            audioFile: '5.mp3',
-            quiz: { passingScore: 80, questions: [{ id:'q1e', question: 'Approximate share of young living in developing countries?', options:['30%','50%','70%','90%'], correctAnswer:3 }] },
-            content: (function(){ return `
-          <div class="lesson-slide">
-            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Distribution of Young People</h2>
-            <div class="row g-4 mb-4">
-              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
-                <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
-                  <div class="stat-icon"><i class="fas fa-users-between-lines"></i></div>
-                  <h4>49.5 Million</h4><p>Total young people in Bangladesh (~30%)</p>
-                </div>
-              </div>
-              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
-                <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
-                  <div class="stat-icon"><i class="fas fa-user-group"></i></div>
-                  <h4>31.5 Million</h4><p>Young (15–24 years) in Bangladesh</p>
-                </div>
-              </div>
-            </div>
-          </div>`; })()
-          }
+          // {
+          //   id: 'ch1-lesson-5',
+          //   title: 'Young Around the World',
+          //   icon: 'fa-earth-americas',
+          //   gradientClass: 'bg-gradient-green',
+          //   audioFile: '5.mp3',
+          //   quiz: { passingScore: 80, questions: [{ id:'q1e', question: 'Approximate share of young living in developing countries?', options:['30%','50%','70%','90%'], correctAnswer:3 }] },
+          //   content: (function(){ return `
+          // <div class="lesson-slide">
+          //   <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Distribution of Young People</h2>
+          //   <div class="row g-4 mb-4">
+          //     <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
+          //       <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+          //         <div class="stat-icon"><i class="fas fa-users-between-lines"></i></div>
+          //         <h4>49.5 Million</h4><p>Total young people in Bangladesh (~30%)</p>
+          //       </div>
+          //     </div>
+          //     <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
+          //       <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+          //         <div class="stat-icon"><i class="fas fa-user-group"></i></div>
+          //         <h4>31.5 Million</h4><p>Young (15–24 years) in Bangladesh</p>
+          //       </div>
+          //     </div>
+          //   </div>
+          // </div>`; })()
+          // }
         ]
       },
       {
