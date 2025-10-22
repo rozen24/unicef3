@@ -362,18 +362,97 @@ const coursesData = [
           },
           {
             id: 'ch2-lesson-2',
-            title: 'Why young people’s health and wellbeing are vital',
+            title: 'Why young people’s health and wellbeing is important?',
             icon: 'fa-heart-pulse',
-            gradientClass: 'bg-gradient-emerald',
-            audioFile: '',
+            gradientClass: 'bg-gradient-green',
+            audioFile: '2.mp3',
             quiz: { passingScore: 60, questions: [{ id:'q2b', question: 'Investments in adolescents yield a…', options:['Single benefit','No return','Triple dividend','Unknown'], correctAnswer:2 }] },
             content: (function(){return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">Why adolescent health matters</h2>
-                <div class="row g-4 align-items-center">
-                  <div class="col-lg-6" data-aos="fade-right"><figure class="image-card" style="height:360px"><img src="img/why-imp/why-imp.jpg" alt="Why"></figure></div>
-                  <div class="col-lg-6" data-aos="fade-left">${['Prevention first','Better learning','Peer power'].map((h,i)=>`
-                    <div class="fact-item icon-spin-on-hover"><div class="fact-icon"><i class="fa-solid ${['fa-shield-heart','fa-graduation-cap','fa-people-arrows'][i]}"></i></div><p class="mb-0">${['Protective behaviors reduce lifelong risks.','Health and nutrition improve attendance and performance.','Informed young influence peers positively and spark change.'][i]}</p></div>`).join('')}</div>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Why young people’s health and wellbeing is important?</h2>
+
+                <h5 class="mt-2 gradient-text" data-aos="fade-up" data-aos-delay="60">Investments in the current generation of 10–24-year-olds will reap a triple dividend</h5>
+
+                <!-- Triple Dividend Cards -->
+                <div class="row g-3 my-2">
+                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
+                    <div class="modern-card glass-card icon-spin-on-hover dividend-card">
+                      <div class="dividend-icon bg-gradient-blue"><i class="fa-solid fa-heart-pulse"></i></div>
+                      <h6 class="mb-1">Healthy young population now</h6>
+                      <p class="mb-2 text-muted">1.8 billion people aged 10–24 years</p>
+                      <span class="badge-pill">1.8B aged 10–24</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+                    <div class="modern-card glass-card icon-spin-on-hover dividend-card">
+                      <div class="dividend-icon bg-gradient-green"><i class="fa-solid fa-briefcase"></i></div>
+                      <h6 class="mb-1">Future healthy adult workforce</h6>
+                      <p class="mb-0 text-muted">Productive, resilient, skilled</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="modern-card glass-card icon-spin-on-hover dividend-card">
+                      <div class="dividend-icon bg-gradient-orange"><i class="fa-solid fa-baby"></i></div>
+                      <h6 class="mb-1">Healthy next generation of children</h6>
+                      <p class="mb-0 text-muted">Breaking intergenerational cycles</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ROI Banner -->
+                <div class="modern-card glass-card my-3 roi-banner" data-aos="zoom-in" data-aos-delay="240">
+                  <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                    <div>
+                      <h5 class="mb-1">Investing in Adolescent Health & Wellbeing</h5>
+                      <p class="mb-0 text-muted">For each US$1 invested, the return is US$5–10.</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 roi-chip">
+                      <span class="badge-pill">US$1</span>
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <span class="badge-pill">US$5–10</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Demographic Pyramid Compare -->
+                <h5 class="gradient-text mt-4" data-aos="fade-up">Pathways to harnessing the Demographic Dividend</h5>
+                <div class="row g-3 pyramid-compare" data-aos="fade-up" data-aos-delay="80">
+                  <!-- Positive Path -->
+                  <div class="col-lg-6">
+                    <div class="modern-card glass-card pyramid-path pyramid-positive">
+                      <div class="pyramid-head"><i class="fa-solid fa-chart-line"></i> Harnessing the Demographic Dividend</div>
+                      <ul class="pyramid-steps">
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-dress"></i> Adolescent Girl</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="120"><i class="fa-solid fa-school"></i> School</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="180"><i class="fa-solid fa-briefcase"></i> Employment</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="240"><i class="fa-solid fa-piggy-bank"></i> Wealth/child investment</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-graduation-cap"></i> Lifelong learning</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="360"><i class="fa-solid fa-people-arrows"></i> Work-life Balance</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="420"><i class="fa-solid fa-location-dot"></i> Security of Place</li>
+                        <li class="pyramid-step highlight" data-aos="fade-up" data-aos-delay="480"><i class="fa-solid fa-hands-holding-child"></i> Healthy children</li>
+                        <li class="pyramid-step apex" data-aos="fade-up" data-aos-delay="540"><i class="fa-solid fa-trophy"></i> Demographic Dividend</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-shield-heart"></i> Secure old-age</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Negative Path -->
+                  <div class="col-lg-6">
+                    <div class="modern-card glass-card pyramid-path pyramid-negative">
+                      <div class="pyramid-head"><i class="fa-solid fa-triangle-exclamation"></i> Missed Demographic Dividend</div>
+                      <ul class="pyramid-steps">
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-dress"></i> Adolescent Girl</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="120"><i class="fa-solid fa-ring"></i> Child Marriage</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="180"><i class="fa-solid fa-person-walking-arrow-right"></i> Leaving School</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="240"><i class="fa-solid fa-helmet-safety"></i> Informal work</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-rotate"></i> Repeat Pregnancies</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="360"><i class="fa-solid fa-person-pregnant"></i> Maternal morbidity</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="420"><i class="fa-solid fa-child"></i> Child illness & death</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="480"><i class="fa-solid fa-house-crack"></i> Insecurity & Displacement</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="540"><i class="fa-solid fa-shield-halved"></i> Insecure old-age</li>
+                        <li class="pyramid-step apex" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-circle-xmark"></i> Missed Demographic Dividend</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>`; })()
           },
