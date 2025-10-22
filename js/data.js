@@ -173,7 +173,12 @@ const coursesData = [
                 <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${100+i*50}">
                   <div class="component-icon bg-gradient-${['purple','blue','teal','orange','green','pink'][i]} animate-float"><i class="fas ${['fa-book-medical','fa-graduation-cap','fa-users','fa-hand-fist','fa-flag','fa-bullhorn'][i]}"></i></div>
                   <h5 class="gradient-text transition-base">${t}</h5>
-                  <p>${['Foundational knowledge for credible advocacy.','Campaigns and toolkits for accurate information.','Peer mentoring and positive role-modeling.','Agency through challenges and real-world practice.','Lead local projects with mentors and analytics.','Policy primers and stakeholder engagement.'][i]}</p>
+                  <p>${['YHAP builds foundational health literacy through comprehensive training on essential health and wellbeing. This equips ambassadors with the expertise to act as credible sources of information and effective advocates for prevention of diseases and health promotion.',
+                    'Young Health Ambassadors (YHAs) will create health education and awareness through campaigns on key health issues, comprehensive trainings, mentorships etc., Through these multifaceted efforts, they will ensure the accurate dissemination of crucial health information towards fostering well-informed and health-literate communities.',
+                    'The programme is built on the principle that peer-to-peer engagement is a powerful catalyst for change. By facilitating supportive mentorship and encouraging positive role-modeling among contemporaries, YHAP leverages the profound impact of shared experiences to promote healthy behaviors.',
+                    'YHAP empowers individuals by equipping them with the tools, confidence, and skills needed to take effective control and contribute to the economic development, creating a productive, resilient, and healthy workforce for the future.',
+                    'The program cultivates leadership qualities in youth, preparing them to become effective, ethical, and inspiring agents of change in their communities.',
+                    'The Youth Health Ambassador Programme (YHAP) builds foundational competencies in health advocacy, empowering youth to effectively raise voice, articulate public health priorities to drive systemic reform. This is achieved through strategic engagement with key stakeholders, evidence-based promotion of policies, and active contribution to the formulation of legislation for strengthening health systems.'][i]}</p>
                 </div>
               </div>`).join('')}
             </div>
@@ -192,10 +197,10 @@ const coursesData = [
             <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Roles and Responsibilities of Health Ambassador</h2>
             <h3 class="text-center mb-4 gradient-text hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">Who am I?</h3>
             <div class="row g-4">${[
-              {icon:'fa-shield-heart', text:'Safeguard adolescent health and well-being to achieve a triple dividend.'},
-              {icon:'fa-share-nodes', text:'Empower peers by sharing knowledge on health promotion and prevention.'},
-              {icon:'fa-handshake', text:'Advocate with policy makers and community leaders to prioritize adolescent health.'},
-              {icon:'fa-chart-line', text:'Drive awareness and demand creation for better outcomes.'}
+              {icon:'fa-shield-heart', text:'I am equipped with expertise in safeguarding health and well-being of young people, enabling me to contribute meaningfully to society while harnessing the triple dividend of health, social, and economic benefits.'},
+              {icon:'fa-share-nodes', text:'I actively empower my peers by sharing knowledge on health promotion, disease prevention, and holistic well-being, fostering informed decision-making among young people.'},
+              {icon:'fa-handshake', text:'Through advocacy, I engage policy makers, stakeholders and community influencer,  gatekeepers to prioritize health and wellbeing of young people, ensuring supportive policies and collaborative action for sustainable well-being.'},
+              {icon:'fa-chart-line', text:'I drive awareness and demand creation within communities, inspiring collective responsibility and action towards better health outcomes for adolescents and youth.'}
             ].map((f,i)=>`
               <div class="col-md-6">
                 <div class="role-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="${i%2?'fade-left':'fade-right'}" data-aos-delay="${100+i*50}">
@@ -222,7 +227,15 @@ const coursesData = [
               <p class="mb-0">Any person aged <strong>15-24 years</strong> can become a Young Health Ambassador.</p>
             </div>
             <div class="row g-3">${[
-              'Online Registration','Unique ID Generation','Secure Login','Access Course','Complete Modules','Pass Assessment','System Certification','Oath Taking','Final Certificate'
+              'Online registration in Young Health Ambassador Program (YHAP)',
+              'Unique ID Generation',
+              'Log in to the Website/App',
+              'Access Young Health Ambassador Program (YAHP) course',
+              'Complete YHAP course',
+              'Obtain passing marks in final assessment',
+              'System generated certificate',
+              'Self declaration/Oath Taking',
+              'Final Certificate (Course validity-2 years)'
             ].map((t,i)=>`
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="${120+i*40}">
                 <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
