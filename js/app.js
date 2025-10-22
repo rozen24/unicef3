@@ -593,6 +593,91 @@ class YouthHealthLMS {
           regionalCanvas.dataset.chartInitialized = "true";
         } catch (_) {}
       }
+
+      // Toggle and Chart.js for Top 5 causes (Lesson 3)
+      const causesCards = document.getElementById("topCausesCards");
+      const causesChartWrap = document.getElementById("topCausesChartWrap");
+      const causesToggleCards = document.getElementById("topCausesToggleCards");
+      const causesToggleChart = document.getElementById("topCausesToggleChart");
+      const causesControls = document.getElementById("topCausesControls");
+
+      const ensureTopCausesChart = () => {
+        const canvas = document.getElementById("top5CausesChart");
+        if (!canvas || canvas.dataset.chartInitialized || !window.Chart) return;
+        try {
+          const ctx = canvas.getContext("2d");
+          new window.Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: [
+                "Road traffic accident",
+                "Suicide",
+                "Violence",
+                "Lower Respiratory Tract infection",
+                "HIV/AIDS"
+              ],
+              datasets: [{
+                label: "Relative rank (higher = more prominent)",
+                data: [5, 4, 3, 2, 1],
+                backgroundColor: [
+                  "#FB923C", // orange-400
+                  "#F472B6", // pink-400
+                  "#34D399", // emerald-400
+                  "#60A5FA", // blue-400
+                  "#2DD4BF"  // teal-400
+                ],
+                borderRadius: 8,
+                barPercentage: 0.7,
+                categoryPercentage: 0.7
+              }]
+            },
+            options: {
+              indexAxis: "y",
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  suggestedMin: 0,
+                  suggestedMax: 5,
+                  title: { display: true, text: "Relative rank" },
+                  ticks: { stepSize: 1 }
+                }
+              },
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  callbacks: {
+                    label: (ctx) => `Rank: ${ctx.parsed.x}`
+                  }
+                }
+              }
+            }
+          });
+          canvas.dataset.chartInitialized = "true";
+        } catch (_) {}
+      };
+
+      if (causesControls && !causesControls.dataset.bound) {
+        const showCards = () => {
+          if (causesCards) causesCards.style.display = "";
+          if (causesChartWrap) causesChartWrap.style.display = "none";
+          if (causesToggleCards) causesToggleCards.classList.add("active");
+          if (causesToggleChart) causesToggleChart.classList.remove("active");
+        };
+        const showChart = () => {
+          if (causesCards) causesCards.style.display = "none";
+          if (causesChartWrap) causesChartWrap.style.display = "";
+          if (causesToggleChart) causesToggleChart.classList.add("active");
+          if (causesToggleCards) causesToggleCards.classList.remove("active");
+          ensureTopCausesChart();
+          // Refresh AOS to account for layout change
+          try { window.AOS && window.AOS.refreshHard && window.AOS.refreshHard(); } catch (_) {}
+        };
+
+        if (causesToggleCards) causesToggleCards.addEventListener("click", showCards);
+        if (causesToggleChart) causesToggleChart.addEventListener("click", showChart);
+        causesControls.dataset.bound = "true";
+      }
     } catch (_) {}
   }
 

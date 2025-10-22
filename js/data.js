@@ -458,20 +458,79 @@ const coursesData = [
           },
           {
             id: 'ch2-lesson-3',
-            title: 'Global and Bangladesh scenarios',
+            title: 'Global scenario of mortality and morbidity among young people',
             icon: 'fa-globe',
             gradientClass: 'bg-gradient-purple',
             audioFile: '',
             quiz: { passingScore: 60, questions: [{ id:'q2c', question: 'A leading cause of adolescent death includes…', options:['Common cold','Road injuries','Allergies','None'], correctAnswer:1 }] },
             content: (function(){return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">Global and Bangladesh Scenario</h2>
-                <div class="row g-3">${[
-                  '1.5 million deaths among 10–24 in 2021 (~4500/day).',
-                  '10–14 have the lowest risk of death among all ages.',
-                  'Injuries, violence, self-harm and maternal causes lead mortality.',
-                  'Half of adult mental disorders start by 18; most undetected.'
-                ].map((t,i)=>`<div class="col-md-6"><div class="fact-card alert-${['danger','info','warning','primary'][i]} hover-lift-sm transition-base"><p>${t}</p></div></div>`).join('')}</div>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Global scenario of mortality and morbidity among young people</h2>
+
+                <!-- Key Global Insights -->
+                <section class="my-3" data-aos="fade-up" data-aos-delay="40">
+                  <h5 class="gradient-text mb-2">Key global insights</h5>
+                  <div class="row g-3">
+                    ${[
+                      { icon:'fa-heart-pulse', color:'bg-gradient-pink', text:'Globally over <strong>1.5 million</strong> young people aged 10–24 years died in 2021 — about <strong>4500 every day</strong>.' },
+                      { icon:'fa-shield-halved', color:'bg-gradient-green', text:'Young adolescents aged <strong>10–14</strong> have the <strong>lowest risk of death</strong> among all age groups.' },
+                      { icon:'fa-car-burst', color:'bg-gradient-orange', text:'<strong>Injuries</strong> (including road traffic injuries and drowning), <strong>interpersonal violence</strong>, <strong>self-harm</strong>, and <strong>maternal conditions</strong> are leading causes of death.' },
+                      { icon:'fa-brain', color:'bg-gradient-purple', text:'<strong>Half</strong> of all mental health disorders in adulthood start by <strong>age 18</strong>, but most cases are <strong>undetected</strong> and <strong>untreated</strong>.' },
+                      { icon:'fa-wine-bottle', color:'bg-gradient-blue', text:'<strong>Early substance use</strong> is linked to higher risks of dependence and other problems in adult life; younger people are <strong>disproportionately affected</strong>.' }
+                    ].map((card, i)=>`
+                      <div class="col-md-6 col-lg-4">
+                        <div class="modern-card glass-card icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${100 + i*60}">
+                          <div class="d-flex align-items-start gap-3">
+                            <span class="${card.color}" style="width:48px; height:48px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0;">
+                              <i class="fa-solid ${card.icon}"></i>
+                            </span>
+                            <div>
+                              <p class="mb-0">${card.text}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </section>
+
+                <!-- Top 5 Leading Causes of Death -->
+                <section class="my-3" data-aos="fade-up" data-aos-delay="80">
+                  <h5 class="gradient-text mb-2">Top 5 leading causes of death among adolescents are</h5>
+                  <div id="topCausesControls" class="d-flex gap-2 mb-2">
+                    <button class="btn btn-outline-primary btn-sm active" id="topCausesToggleCards"><i class="fa-solid fa-grip me-1"></i> Cards</button>
+                    <button class="btn btn-outline-primary btn-sm" id="topCausesToggleChart"><i class="fa-solid fa-chart-bar me-1"></i> Chart</button>
+                  </div>
+                  <div id="topCausesCards">
+                    <div class="row g-3">
+                      ${[
+                        { label:'Road traffic accident', icon:'fa-car-burst', color:'bg-gradient-orange' },
+                        { label:'Suicide', icon:'fa-heart-crack', color:'bg-gradient-pink' },
+                        { label:'Violence', icon:'fa-hand-fist', color:'bg-gradient-green' },
+                        { label:'Lower Respiratory Tract infection', icon:'fa-lungs', color:'bg-gradient-blue' },
+                        { label:'HIV/AIDS', icon:'fa-virus', color:'bg-gradient-teal' }
+                      ].map((cause, i)=>`
+                        <div class="col-12 col-md-6 col-lg-4">
+                          <div class="modern-card glass-card icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${120 + i*60}">
+                            <div class="d-flex align-items-center gap-3">
+                              <span class="${cause.color}" style="width:48px; height:48px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0;">
+                                <i class="fa-solid ${cause.icon}"></i>
+                              </span>
+                              <h6 class="mb-0">${cause.label}</h6>
+                            </div>
+                          </div>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                  <div id="topCausesChartWrap" style="display:none">
+                    <div class="modern-card glass-card">
+                      <div style="position:relative; height:320px;">
+                        <canvas id="top5CausesChart" aria-label="Top 5 adolescent death causes (relative rank)" role="img"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>`; })()
           },
           {
