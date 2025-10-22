@@ -132,7 +132,7 @@ const coursesData = [
                       </figure>
                     </div>
                   </div>
-                  ${i < 3 ? '<div class="d-none d-xl-flex align-items-center justify-content-center" style="min-width:24px"><i class="fa-solid fa-arrow-right-long text-muted"></i></div>' : ''}
+                  ${i < 3 ? '<div class="d-none d-xl-flex align-items-center justify-content-center" style="min-width:24px"><i class="fa-solid fa-arrow-right-long"></i></div>' : ''}
                 `).join('')}
               </div>
 
