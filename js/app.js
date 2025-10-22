@@ -15,6 +15,9 @@ class YouthHealthLMS {
       score: 0,
     };
 
+    // Track confetti firing to avoid duplicates per lesson
+    this._confettiFiredFor = new Set();
+
     this.init();
   }
 
@@ -332,6 +335,26 @@ class YouthHealthLMS {
     const percentage = (correct / currentItem.quiz.questions.length) * 100;
     this.quizState.score = percentage;
     this.quizState.showResults = true;
+
+    // Fire confetti once when passing
+    try {
+      const passed = percentage >= (currentItem.quiz?.passingScore || 0);
+      const key = `${this.selectedCourse?.id || 'course'}:${currentItem?.id || idx}`;
+      if (passed && typeof window !== 'undefined' && window.confetti && !this._confettiFiredFor.has(key)) {
+        // Subtle celebratory burst
+        const burst = (originX) => window.confetti({
+          particleCount: 80,
+          spread: 70,
+          startVelocity: 35,
+          gravity: 0.9,
+          ticks: 200,
+          scalar: 0.9,
+          origin: { y: 0.2, x: originX }
+        });
+        burst(0.3); burst(0.7);
+        this._confettiFiredFor.add(key);
+      }
+    } catch (_) {}
     this.render();
   }
 
@@ -518,6 +541,56 @@ class YouthHealthLMS {
             }
           });
           pyramidCanvas.dataset.chartInitialized = "true";
+        } catch (_) {}
+      }
+
+      // Initialize doughnut chart for regional shares if canvas exists
+      const regionalCanvas = document.getElementById("regionalShareChart");
+      if (regionalCanvas && !regionalCanvas.dataset.chartInitialized && window.Chart) {
+        try {
+          const ctx2 = regionalCanvas.getContext("2d");
+          new window.Chart(ctx2, {
+            type: "doughnut",
+            data: {
+              labels: [
+                "North America (4%)",
+                "Europe (6%)",
+                "Sub-Saharan Africa (26%)",
+                "Asia-Pacific (29%)",
+                "Latin America (8%)",
+                "MENA (10%)"
+              ],
+              datasets: [{
+                label: "Regional Youth Share",
+                data: [4, 6, 26, 29, 8, 10],
+                backgroundColor: [
+                  "#60A5FA", // blue-400
+                  "#A78BFA", // violet-400
+                  "#34D399", // emerald-400
+                  "#FBBF24", // amber-400
+                  "#F472B6", // pink-400
+                  "#22D3EE"  // cyan-400
+                ],
+                borderColor: "rgba(255,255,255,0.85)",
+                borderWidth: 2,
+                hoverOffset: 6
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { position: "bottom" },
+                tooltip: {
+                  callbacks: {
+                    label: (ctx) => `${ctx.label}: ${ctx.parsed}%`
+                  }
+                }
+              },
+              cutout: "60%"
+            }
+          });
+          regionalCanvas.dataset.chartInitialized = "true";
         } catch (_) {}
       }
     } catch (_) {}

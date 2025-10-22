@@ -25,3 +25,15 @@ ASIA-
 29% PACIFIC
 SOUTH
 
+<div class="col-lg-7">
+    <div class="world-youth-map position-relative">
+    <img src="img/Distribution/global.jpg" class="img-fluid w-100 rounded-4" alt="World Map">
+    <div class="region north-america">+4% NORTH AMERICA</div>
+    <div class="region europe">6% EUROPE</div>
+    <div class="region africa">26% SUB-SAHARAN AFRICA</div>
+    <div class="region asia">29% ASIA-PACIFIC</div>
+    <div class="region latin">8% LATIN AMERICA</div>
+    <div class="region mena">10% MENA</div>
+    </div>
+</div>
+

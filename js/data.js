@@ -301,25 +301,32 @@ const coursesData = [
             <div class="lesson-slide">
               <h2 class="slide-title gradient-text" data-aos="fade-up">Global Youth Population and Demographics</h2>
 
-              <!-- Step 1 – Global Overview -->
-              <section class="global-overview text-center py-5 rounded-4 mb-4" data-aos="fade-up" style="position:relative; overflow:hidden;">
+              <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
+              <section class="text-center py-5 mb-4" data-aos="fade-up" style="position:relative; overflow:hidden;">
                 <div class="container">
-                  <img src="img/Distribution/dis-map.png" class="img-fluid mx-auto d-block mb-3" alt="Globe showing youth population" style="max-width:320px; filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));">
-                  <h3 class="fw-bold display-5" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
-                  <p class="lead mt-2 text-white-75">The world counts <strong>1.8 billion</strong> young people aged 10–24.</p>
-                  <p class="mb-0 text-white-75">Around <strong>90%</strong> live in developing countries.</p>
+                  <img src="img/Distribution/globe.jpg" class="img-fluid mx-auto d-block mb-3 rounded-4" alt="Globe showing youth population">
+                  <div class="globe-text-wrap">
+                    <h3 class="fw-bold display-5" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
+                    <p class="lead mt-2 text-white-75">The world counts <strong>1.8 billion</strong> young people aged 10–24.</p>
+                    <p class="mb-0 text-white-75">Around <strong>90%</strong> live in developing countries.</p>
+                  </div>
                 </div>
               </section>
 
-              <!-- Step 2 – Global Youth Population by Region -->
-              <section class="world-youth-map position-relative py-4 mb-4 rounded-4" data-aos="zoom-in">
-                <img src="img/Distribution/distrubation-map.jpg" class="img-fluid w-100 rounded-4" alt="World Map">
-                <div class="region north-america">+4% NORTH AMERICA</div>
-                <div class="region europe">6% EUROPE</div>
-                <div class="region africa">26% SUB-SAHARAN AFRICA</div>
-                <div class="region asia">29% ASIA-PACIFIC</div>
-                <div class="region latin">8% LATIN AMERICA</div>
-                <div class="region mena">10% MENA</div>
+              <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
+              <section class="world-youth-map-and-chart py-4 mb-4 rounded-4" data-aos="zoom-in">
+                <div class="container">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-lg-12">
+                      <div class="modern-card glass-card">
+                        <h5 class="mb-3">Regional Youth Share</h5>
+                        <div style="position:relative; height:340px;">
+                          <canvas id="regionalShareChart" aria-label="Regional Youth Share" role="img"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               <!-- Step 3 – Population Pyramid (Chart.js) -->
@@ -335,24 +342,22 @@ const coursesData = [
               <!-- Step 4 – Bangladesh Focus -->
               <section class="bangladesh-map py-4" data-aos="fade-right">
                 <div class="container">
-                  <div class="row align-items-center g-3">
-                    <div class="col-md-6">
-                      <img src="img/Distribution/dis-map.png" class="img-fluid rounded shadow" alt="Bangladesh map placeholder">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="modern-card glass-card" style="padding:1.5rem;">
+                  <div class="row align-items-center g-3 modern-card glass-card">
+                      <div class="col-md-8" style="padding:1.5rem;">
                         <h5>Distribution of Young People</h5>
                         <p>There are over <strong>1.8 billion</strong> youth in the world today, 90 per cent of whom live in developing countries.</p>
                         <p class="mb-0"><strong>Bangladesh:</strong> <strong>49.5 million</strong> young people (~30% of total population).</p>
                       </div>
-                    </div>
+                      <div class="col-md-4">
+                       <img src="img/Distribution/dis-map.png" class="img-fluid rounded shadow" alt="Bangladesh map placeholder">
+                     </div>
                   </div>
                 </div>
               </section>
 
-              <div class="alert alert-info mt-3" role="note" data-aos="fade-up">
+              <!-- <div class="alert alert-info mt-3" role="note" data-aos="fade-up">
                 Complete the knowledge check below to continue.
-              </div>
+              </div> -->
             </div>`; })()
           },
           {

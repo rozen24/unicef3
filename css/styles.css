@@ -7230,9 +7230,11 @@ p.lead {
 }
 
 /* ==================== LESSON 2: GLOBAL YOUTH MODULE ==================== */
-.global-overview {
-  background: linear-gradient(135deg, #0b5fa5 0%, #0a77c4 50%, #0bb2a8 100%);
-  color: #ffffff;
+
+.globe-text-wrap {
+  position: relative;
+  margin-top: -280px;
+  z-index: 111;
 }
 .world-youth-map {
   position: relative;
