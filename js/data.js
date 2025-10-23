@@ -1040,7 +1040,7 @@ const coursesData = [
                     ].map((o,i)=>`
                       <div class="orbit-item orbit-pos-${i+1}">
                         <div class="orbit-card ${o.cls} icon-spin-on-hover">
-                          <div class="orbit-icon"><i class="fa-solid ${o.icon}"></i></div>
+                          <div class="orbit-icon animate-float"><i class="fa-solid ${o.icon}"></i></div>
                           <div class="orbit-title small">${o.label}</div>
                         </div>
                       </div>
