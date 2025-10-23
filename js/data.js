@@ -656,7 +656,7 @@ const coursesData = [
 
                 <!-- FIG.4: Graph chart section -->
                 <section class="mb-4" aria-labelledby="cm-figure4-title">
-                  <h3 class="gradient-text mb-2" id="cm-figure4-title" data-aos="fade-up" data-aos-delay="80">FIG. 4: Percentage of women (20–24) first married/union before age 18</h3>
+                  <h3 class="gradient-text mb-2" id="cm-figure4-title" data-aos="fade-up" data-aos-delay="80">Percentage of women (20–24) first married/union before age 18</h3>
                   <div class="row g-3 align-items-stretch">
                     <div class="col-lg-12" data-aos="fade-right" data-aos-delay="100">
                       <article class="modern-card" style="height:320px">
