@@ -400,7 +400,7 @@ img {
 .icon-spin-on-hover i,
 .icon-spin-on-hover .fa,
 .icon-spin-on-hover .fas,
-.icon-spin-on-hover .bi { transition: transform 0.6s ease; padding: 10px; border-radius: 10px !important;}
+.icon-spin-on-hover .bi { transition: transform 0.6s ease; padding: 10px; color: #fff; border-radius: 10px !important;}
 .icon-spin-on-hover:hover i,
 .icon-spin-on-hover:hover .fa,
 .icon-spin-on-hover:hover .fas,
@@ -1093,6 +1093,31 @@ img {
 
 .bg-gradient-pink {
   background: var(--pink-gradient);
+}
+
+/* Additional gradient backgrounds (custom palette) */
+.bg-gradient-violet {
+  /* New: distinct violet gradient (different from purple) */
+  background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
+}
+
+.bg-gradient-emerald {
+  /* New: emerald green gradient, distinct hue from plain green */
+  background: linear-gradient(135deg, #059669 0%, #34D399 100%);
+}
+
+.bg-gradient-tangerine {
+  /* New: warm tangerine gradient (different from orange) */
+  background: linear-gradient(135deg, #FB923C 0%, #F97316 100%);
+}
+
+/* Helpful extras for consistency with lesson content */
+.bg-gradient-cyan {
+  background: linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%);
+}
+
+.bg-gradient-rose {
+  background: linear-gradient(135deg, #FB7185 0%, #F43F5E 100%);
 }
 
 /* ==================== HOVER EFFECTS ==================== */
@@ -3431,7 +3456,7 @@ img {
 /* Component Cards */
 .component-card {
   background: white;
-  padding: 1.5rem;
+  padding: 0.5rem;
   border-radius: 16px;
   border: 2px solid #e2e8f0;
   text-align: center;
@@ -3446,8 +3471,8 @@ img {
 }
 
 .component-icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -3455,7 +3480,6 @@ img {
   margin: 0 auto 1rem;
   font-size: 1.75rem;
   color: white;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .component-card h5 {
@@ -3847,7 +3871,9 @@ img {
   color: #1a202c;
   margin: 0;
 }
-
+.aa-ha-title {
+  font-size: 1rem;
+}
 /* Completion Message */
 .completion-message {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

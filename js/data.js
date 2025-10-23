@@ -753,22 +753,63 @@ const coursesData = [
           },
           {
             id: 'ch2-lesson-6',
-            title: 'What challenges do adolescents face?',
+            title: 'Determinants for adolescent health and well-being',
             icon: 'fa-triangle-exclamation',
             gradientClass: 'bg-gradient-pink',
             audioFile: '',
             quiz: { passingScore: 60, questions: [{ id:'q2e', question: 'Determinants include…', options:['Only nutrition','Multiple domains','Only activity','None'], correctAnswer:1 }] },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">Issues and determinants</h2>
-                <div class="d-grid gap-2 mb-3">
-                  <span class="badge-pill">Nutrition</span>
-                  <span class="badge-pill">Mental health</span>
-                  <span class="badge-pill">SRHR & protection</span>
-                  <span class="badge-pill">Injury & road safety</span>
-                  <span class="badge-pill">Substance use</span>
-                </div>
-                <figure class="image-card" style="height:360px"><img src="img/determinants/determinants.png" alt="Determinants"></figure>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Determinants for adolescent health and well-being</h2>
+
+                <!-- AA-HA! guidance section with distinct background -->
+                <section class="mb-4 p-3 p-md-4 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
+                      <figure class="image-card" style="height:320px"><img src="img/determinants/determenants.jpg" alt="AA-HA! guidance"></figure>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
+                      <article class="modern-card hover-lift-sm transition-base icon-spin-on-hover">
+                        <div class="d-flex align-items-start gap-3">
+                          <span class="badge-pill bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+                          <div class"">
+                            <h3 id="aa-ha-title" class="mb-2 gradient-text aa-ha-title">Global Accelerated Action for the Health of Adolescents (AA-HA!)</h3>
+                            <p class="mb-1">Guidance to Support Country Implementation</p>
+                            <p class="mb-0 text-muted">Second Edition</p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Determinants grid on a contrasting background -->
+                <section class="p-3 p-md-4 rounded-4" style="background: rgba(0,0,0,0.03);" aria-labelledby="determinants-title">
+                  <h3 class="mb-3 gradient-text" id="determinants-title" data-aos="fade-up" data-aos-delay="120">Key determinants</h3>
+                  <div class="row g-3">
+                    ${[
+                      {label:'Unintentional Injury', icon:'fa-car-burst', color:'bg-gradient-orange', delay:140},
+                      {label:'Violence', icon:'fa-hand-back-fist', color:'bg-gradient-pink', delay:160},
+                      {label:'SRH, HIV and other STI', icon:'fa-venus-mars', color:'bg-gradient-violet', delay:180},
+                      {label:'Communicable Diseases', icon:'fa-virus', color:'bg-gradient-green', delay:200},
+                      {label:'Non-Communicable Diseases', icon:'fa-heart-pulse', color:'bg-gradient-emerald', delay:220},
+                      {label:'Mental Health', icon:'fa-brain', color:'bg-gradient-blue', delay:240},
+                      {label:'Alcohol and Drug Use', icon:'fa-wine-bottle', color:'bg-gradient-tangerine', delay:260},
+                      {label:'Tobacco use', icon:'fa-smoking', color:'bg-gradient-teal', delay:280},
+                      {label:'Physical activity and Sedentary behavior', icon:'fa-person-running', color:'bg-gradient-cyan', delay:300},
+                      {label:'Nutrition', icon:'fa-utensils', color:'bg-gradient-purple', delay:320}
+                    ].map((d)=>`
+                      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="${d.delay}">
+                        <div class="component-card hover-lift-sm hover-shadow-glow transition-base">
+                          <div class="component-icon ${d.color} animate-float" aria-hidden="true">
+                            <i class="fas ${d.icon}"></i>
+                          </div>
+                          <h6 class="mt-2 mb-0">${d.label}</h6>
+                        </div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </section>
               </div>`
           },
           {
