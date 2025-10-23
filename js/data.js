@@ -891,23 +891,32 @@ const coursesData = [
           },
           {
             id: 'ch2-lesson-8',
-            title: 'How young health advances the SDGs',
+            title: 'SDC related to adolescent health.',
             icon: 'fa-diagram-project',
             gradientClass: 'bg-gradient-violet',
             audioFile: '',
             quiz: { passingScore: 60, questions: [{ id:'q2g', question: 'Young health impacts how many SDGs?', options:['Only 1','Several','None','Unknown'], correctAnswer:1 }] },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">Young health and the SDGs</h2>
-                <div class="row g-3 text-center">${[
-                  {img:'img/sdc/no-proverty.png', label:'SDG 1'},
-                  {img:'img/sdc/zero-hunger.png', label:'SDG 2'},
-                  {img:'img/sdc/good-health.png', label:'SDG 3'},
-                  {img:'img/sdc/quality.png', label:'SDG 4'},
-                  {img:'img/sdc/gender.png', label:'SDG 5'},
-                  {img:'img/sdc/decentpng.png', label:'SDG 8'},
-                  {img:'img/sdc/peace.png', label:'SDG 16'}
-                ].map((s,i)=>`<div class="col-6 col-md-4 col-lg-3"><div class="modern-card glass-card" style="padding:1rem"><img src="${s.img}" alt="${s.label}" style="max-height:80px; object-fit:contain"><p class="mt-2 mb-0 fw-semibold">${s.label}</p></div></div>`).join('')}</div>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">SDC related to adolescent health</h2>
+
+                <!-- SDG/SDC cards with distinct lean gradients, icons, and hover effects -->
+                <div class="row g-3">${[
+                  {label:'No Poverty', icon:'fa-hand-holding-heart', cls:'sdg-lean-rose', delay:100},
+                  {label:'Zero Hunger', icon:'fa-bowl-food', cls:'sdg-lean-tangerine', delay:130},
+                  {label:'Good Health And Well-Being', icon:'fa-heart-pulse', cls:'sdg-lean-emerald', delay:160},
+                  {label:'Quality Education', icon:'fa-graduation-cap', cls:'sdg-lean-blue', delay:190},
+                  {label:'Gender Equality', icon:'fa-venus-mars', cls:'sdg-lean-violet', delay:220},
+                  {label:'Decent Work And Economic Growth', icon:'fa-briefcase', cls:'sdg-lean-purple', delay:250},
+                  {label:'Peace, Justice And Strong Institutions', icon:'fa-scale-balanced', cls:'sdg-lean-teal', delay:280}
+                ].map((s)=>`
+                  <div class="col-6 col-md-4 col-lg-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" data-aos="flip-left" data-aos-delay="${s.delay}">
+                    <article class="sdg-lean-card ${s.cls} sdg-hover-tilt transition-base icon-spin-on-hover h-100">
+                      <div class="sdg-card-icon animate-float-slow"><i class="fa-solid ${s.icon}"></i></div>
+                      <h6 class="sdg-card-title">${s.label}</h6>
+                    </article>
+                  </div>
+                `).join('')}</div>
               </div>`
           },
           {
