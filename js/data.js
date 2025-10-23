@@ -1062,10 +1062,59 @@ const coursesData = [
             content: `
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">A combined effort</h2>
-                <div class="row g-3 align-items-center">
-                  <div class="col-lg-6 order-lg-2"><figure class="image-card" style="height:320px"><img src="img/effort.png" alt="Effort"></figure></div>
-                  <div class="col-lg-6 order-lg-1"><div class="d-flex flex-wrap gap-2"><span class="badge-pill">Health sector</span><span class="badge-pill">Education</span><span class="badge-pill">Social protection</span><span class="badge-pill">Civil society</span><span class="badge-pill">Private sector</span></div></div>
+
+                <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="60">
+                  <h5 class="mb-1">A combined effort</h5>
+                  <p class="mb-1">Institutions and individuals can help protect adolescents from harm.</p>
+                  <p class="mb-0">So too can teaching them healthy habits.</p>
                 </div>
+
+                <!-- Radial infographic: center + inner + outer rings -->
+                <section class="radial-chart-section" aria-labelledby="combined-effort-title">
+                  <div class="radial-chart radial-v2 hover-lift-sm transition-base" style="--inner-offset: 10deg;" data-aos="zoom-in" data-aos-delay="120" role="img" aria-label="Center: Healthy habits. Inner: School, Health services, Sleep, Healthy diet. Outer: Institutions, Families, Society, Communities.">
+                    <!-- Rings -->
+                    <div class="radial-ring radial-ring-outer" aria-hidden="true"></div>
+                    <div class="radial-ring radial-ring-inner" aria-hidden="true"></div>
+
+                    <!-- Center -->
+                    <div class="radial-center">
+                      <article class="radial-card bg-gradient-emerald icon-spin-on-hover">
+                        <div class="radial-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <div class="radial-title">Healthy habits</div>
+                      </article>
+                    </div>
+
+                    <!-- Inner ring (4) -->
+                    ${[
+                      {label:'School', icon:'fa-school', cls:'bg-gradient-blue', pos:'radial-inner-left'},
+                      {label:'Health services', icon:'fa-hospital', cls:'bg-gradient-rose', pos:'radial-inner-right'},
+                      {label:'Sleep', icon:'fa-bed', cls:'bg-gradient-violet', pos:'radial-inner-bottom'},
+                      {label:'Healthy diet', icon:'fa-apple-whole', cls:'bg-gradient-tangerine', pos:'radial-inner-top'}
+                    ].map((n)=>`
+                      <div class="radial-node radial-inner ${n.pos}">
+                        <article class="radial-card ${n.cls} icon-spin-on-hover">
+                          <div class="radial-icon animate-float-slow"><i class="fa-solid ${n.icon}"></i></div>
+                          <div class="radial-title">${n.label}</div>
+                        </article>
+                      </div>
+                    `).join('')}
+
+                    <!-- Outer ring (4) -->
+                    ${[
+                      {label:'Institutions', icon:'fa-landmark', cls:'bg-gradient-purple', pos:'radial-outer-ne'},
+                      {label:'Families', icon:'fa-people-roof', cls:'bg-gradient-emerald', pos:'radial-outer-nw'},
+                      {label:'Society', icon:'fa-people-group', cls:'bg-gradient-cyan', pos:'radial-outer-sw'},
+                      {label:'Communities', icon:'fa-people-carry-box', cls:'bg-gradient-teal', pos:'radial-outer-se'}
+                    ].map((n)=>`
+                      <div class="radial-node radial-outer ${n.pos}">
+                        <article class="radial-card ${n.cls} icon-spin-on-hover">
+                          <div class="radial-icon animate-float-slow"><i class="fa-solid ${n.icon}"></i></div>
+                          <div class="radial-title">${n.label}</div>
+                        </article>
+                      </div>
+                    `).join('')}
+                  </div>
+                </section>
               </div>`
           },
           {
