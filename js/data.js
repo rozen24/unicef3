@@ -921,18 +921,37 @@ const coursesData = [
           },
           {
             id: 'ch2-lesson-9',
-            title: 'A shared agenda for adolescent health',
+            title: 'AH in Global Agenda',
             icon: 'fa-handshake-angle',
             gradientClass: 'bg-gradient-emerald',
             audioFile: '',
             quiz: { passingScore: 60, questions: [{ id:'q2h', question: 'Put whom at the center of design?', options:['Providers','Parents','Adolescents','Donors'], correctAnswer:2 }] },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">Global agenda</h2>
-                <div class="row g-3 align-items-center">
-                  <div class="col-lg-6"><ul class="ps-3"><li>Adolescents at the center of design and delivery</li><li>Community systems and school-health platforms</li><li>Use data to target and improve outcomes</li></ul></div>
-                  <div class="col-lg-6"><figure class="image-card" style="height:320px"><img src="img/agenda/agenda.jpg" alt="Agenda"></figure></div>
-                </div>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Adolescent Health in the Global Agenda</h2>
+
+                <section class="timeline-chart" aria-labelledby="ah-global-agenda-title">
+                  <h3 id="ah-global-agenda-title" class="mb-3 gradient-text" data-aos="fade-up" data-aos-delay="60">Infographic timeline</h3>
+                  <div class="timeline-track" aria-hidden="true"></div>
+                  ${[
+                    {year:'1994', title:'International Conference on Population and Development', desc:'Adolescents were recognized as a separate group with distinct needs.', icon:'fa-people-group', cls:'tl-rose', delay:100},
+                    {year:'2000', title:'Millennium Development Goals (MDGs)', desc:'Adolescents were included as part of broader child and maternal health goals.', icon:'fa-bullseye', cls:'tl-blue', delay:130},
+                    {year:'2010', title:'Global Strategy for Women’s and Children’s Health', desc:'Adolescents were minimally included in this strategy.', icon:'fa-child-reaching', cls:'tl-amber', delay:160},
+                    {year:'2015', title:'Sustainable Development Goals (SDGs)', desc:'Adolescents were recognized as key to achieving global health and development goals.', icon:'fa-globe', cls:'tl-emerald', delay:190},
+                    {year:'2016', title:'Lancet Commission on Adolescent Health and Wellbeing', desc:'Highlighted the importance of investing in adolescent health and well-being.', icon:'fa-book-open', cls:'tl-violet', delay:220},
+                    {year:'2017', title:'Global Accelerated Action for the Health of Adolescents (AA-HA!)', desc:'Guidance to support implementation of adolescent health initiatives.', icon:'fa-rocket', cls:'tl-cyan', delay:250},
+                    {year:'2021', title:'Global Accelerated Action for the Health of Adolescents (AA-HA! 2.0)', desc:'A call to action: The second guidance for adolescent health and wellbeing.', icon:'fa-flag-checkered', cls:'tl-slate', delay:280}
+                  ].map((m,i)=>`
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="${m.delay}">
+                      <div class="timeline-dot"><span>${m.year}</span></div>
+                      <article class="timeline-card ${m.cls}">
+                        <div class="timeline-card-icon"><i class="fa-solid ${m.icon}"></i></div>
+                        <h6 class="timeline-card-title">${m.title}</h6>
+                        <p class="timeline-card-text">${m.desc}</p>
+                      </article>
+                    </div>
+                  `).join('')}
+                </section>
               </div>`
           },
           {
