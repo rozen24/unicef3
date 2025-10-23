@@ -1077,6 +1077,7 @@ img {
 
 .bg-gradient-blue {
   background: var(--blue-gradient);
+  color: #fff;
 }
 
 .bg-gradient-teal {

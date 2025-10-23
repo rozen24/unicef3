@@ -814,18 +814,79 @@ const coursesData = [
           },
           {
             id: 'ch2-lesson-7',
-            title: 'Special care for adolescents',
+            title: 'Why young people need special care?',
             icon: 'fa-user-nurse',
             gradientClass: 'bg-gradient-teal',
             audioFile: '',
             quiz: { passingScore: 60, questions: [{ id:'q2f', question: 'Adolescent services should be…', options:['Judgmental','Exclusive','Non-judgmental and confidential','Irregular'], correctAnswer:2 }] },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">Special care for adolescents</h2>
-                <div class="row g-3 align-items-center">
-                  <div class="col-md-6"><article class="modern-card"><ul class="ps-3 mb-0"><li>Respectful communication and privacy</li><li>Peer support and safe referral</li><li>Inclusive access for disabilities</li></ul></article></div>
-                  <div class="col-md-6"><figure class="image-card" style="height:300px"><img src="img/adolsent/adolsent.png" alt="Care"></figure></div>
+                <!-- Intro banner -->
+                <div class="alert alert-info hover-lift-sm transition-base mb-3" data-aos="fade-up" data-aos-delay="60">
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group"></i></span>
+                    <div>
+                      <h5 class="mb-1">Why young people need special care?</h5>
+                    </div>
+                  </div>
                 </div>
+
+                <!-- Diversified needs and barriers: icon cards grid -->
+                <section class="mb-4" aria-labelledby="adol-needs-title">
+                  <div class="row g-3">
+                    ${[
+                      {
+                        title:'Adolescents have diversified needs',
+                        desc:'Needs in SRHR, mental health and other NCDs, nutrition, violence against adolescents, vulnerable adolescents etc.',
+                        icon:'fa-layer-group',
+                        color:'bg-gradient-violet',
+                        delay:100
+                      },
+                      {
+                        title:'Unaware of the laws, policies, rights',
+                        desc:'Sexual and reproductive health rights, Child rights',
+                        icon:'fa-scale-balanced',
+                        color:'bg-gradient-emerald',
+                        delay:130
+                      },
+                      {
+                        title:'Limited ability to execute the rights',
+                        desc:'Lack of confidence, parental influence, peer pressure',
+                        icon:'fa-hands-holding',
+                        color:'bg-gradient-tangerine',
+                        delay:160
+                      },
+                      {
+                        title:'Barriers in accessing information, knowledge, skills',
+                        desc:'Social stigma; discomfort among parents, family members, peers, teachers to talk about adolescent health issues',
+                        icon:'fa-book-open-reader',
+                        color:'bg-gradient-rose',
+                        delay:190
+                      },
+                      {
+                        title:'Barriers in accessing the health services',
+                        desc:'Limited care seeking behaviors; no dedicated service (no separate space, no privacy, no dedicated staff); negligence and unawareness among service providers',
+                        icon:'fa-hospital-user',
+                        color:'bg-gradient-cyan',
+                        delay:220
+                      }
+                    ].map((c) => `
+                      <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="${c.delay}">
+                        <article class="modern-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover h-100">
+                          <div class="d-flex align-items-start gap-3">
+                            <span class="badge-pill ${c.color}" aria-hidden="true"><i class="fa-solid ${c.icon}"></i></span>
+                            <div>
+                              <h6 class="mb-1">${c.title}</h6>
+                              <p class="mb-0 small">${c.desc}</p>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    `).join('')}
+                  </div>
+                </section>
+
+                <!-- Supportive visual -->
               </div>`
           },
           {
