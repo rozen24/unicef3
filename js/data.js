@@ -965,13 +965,13 @@ const coursesData = [
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Policies, strategies and plans</h2>
                 <div class="row g-3">${[
-                  {img:'img/policies/policy.png', title:'Policy framework'},
-                  {img:'img/policies/strategy.png', title:'Strategy and roadmap'},
-                  {img:'img/policies/national-health.png', title:'National health policy'},
-                  {img:'img/policies/national-strategy.jpg', title:'Adolescent health strategy'},
-                  {img:'img/plan/national-plan.png', title:'National action plan'},
-                  {img:'img/policies/adolsent.png', title:'Adolescent-friendly services'}
-                ].map((p)=>`<div class="col-sm-6 col-lg-4"><article class="modern-card"><figure class="image-card" style="height:180px"><img src="${p.img}" alt="${p.title}"></figure><h6 class="mt-2">${p.title}</h6></article></div>`).join('')}</div>
+                  {img:'img/policies/national-strategy.jpg', title:'National Adolescent Health Strategy'},
+                  {img:'img/policies/adolsent.png', title:'National Plan of Action for Adolescent Health Strategy'},
+                  {img:'img/policies/gadget.png', title:'Enacted Mental Health Act, Bangladesh'},
+                  {img:'img/policies/national-health.png', title:'2nd  National Mental Health Survey'},
+                  {img:'img/policies/policy.png', title:'National Mental Health Policy : 2022'},
+                  {img:'img/policies/strategy.png', title:'National Mental Health Strategic Plan : 2022-2030'}
+                ].map((p)=>`<div class="col-sm-6 col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="120"><article class="modern-card"><figure class="image-card" style="height:auto; object-fit: cover;"><img src="${p.img}" alt="${p.title}"></figure><h6 class="mt-2">${p.title}</h6></article></div>`).join('')}</div>
               </div>`
           },
           {
@@ -986,7 +986,7 @@ const coursesData = [
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Government’s commitment</h2>
                 <div class="row g-3 align-items-center">
                   <div class="col-md-6"><ul class="ps-3"><li>Strengthen adolescent-friendly services</li><li>Scale through schools and communities</li><li>Digital tools for learning and accountability</li></ul></div>
-                  <div class="col-md-6"><figure class="image-card" style="height:300px"><img src="img/plan/national-plan.png" alt="Plan"></figure></div>
+                  <div class="col-md-6"><figure class="image-card" style="height:auto; object-fit: cover;"><img src="img/plan/national-plan.png" alt="Plan"></figure></div>
                 </div>
               </div>`
           },

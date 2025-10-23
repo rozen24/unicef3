@@ -1191,7 +1191,7 @@ img {
 .timeline-track {
   position: absolute;
   left: 28px;
-  top: 0;
+  top: 60px;
   bottom: 0;
   width: 4px;
   background: linear-gradient(180deg, #e5e7eb 0%, #d1d5db 100%);
