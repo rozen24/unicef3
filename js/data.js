@@ -62,7 +62,8 @@ const coursesData = [
                 </div>
                 <div class="program-intro hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="100">
                   <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>About YHAP</h4>
-                  <p>The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p>
+                  <p>The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p></br>
+
                   <p>This program equips young person with knowledge and skills in areas like physical health including sexual and reproductive health, nutrition, mental wellbeing etc.  enabling them to become active advocates for health and influence healthier choices within their communities and networks.</p>
                 </div>
               </div>`; })()
@@ -638,20 +639,116 @@ const coursesData = [
           },
           {
             id: 'ch2-lesson-5',
-            title: 'Child marriage and adolescent childbirth',
+            title: 'Child marriage and teenage pregnancies',
             icon: 'fa-child-reaching',
             gradientClass: 'bg-gradient-orange',
             audioFile: '',
             quiz: { passingScore: 60, questions: [{ id:'q2d', question: 'Ending child marriage helps protect…', options:['Education and health','Only sports','Only economy','None'], correctAnswer:0 }] },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">Child marriage and adolescent childbirth</h2>
-                <div class="row g-3">
-                  <div class="col-6"><figure class="image-card" style="height:160px"><img src="img/Child-marraige/key-facts.png" alt="Key facts"></figure></div>
-                  <div class="col-6"><figure class="image-card" style="height:160px"><img src="img/Child-marraige/graph.png" alt="Trends"></figure></div>
-                  <div class="col-12"><figure class="image-card" style="height:180px"><img src="img/Child-marraige/childbearing.png" alt="Childbearing"></figure></div>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Child marriage and teenage pregnancies</h2>
+
+                <!-- Special info badge -->
+                <div class="fact-card alert-warning hover-lift-sm transition-base icon-spin-on-hover mb-3" data-aos="fade-up" data-aos-delay="60">
+                  <i class="fas fa-ranking-star" aria-hidden="true"></i>
+                  <p class="mb-0">Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.</p>
                 </div>
-                <ul class="mt-3 ps-3"><li>Keep girls in school and support re-entry.</li><li>Scale adolescent-friendly SRHR and mental health services.</li><li>Enforce laws and mobilize communities.</li></ul>
+
+                <!-- FIG.4: Graph chart section -->
+                <section class="mb-4" aria-labelledby="cm-figure4-title">
+                  <h3 class="gradient-text mb-2" id="cm-figure4-title" data-aos="fade-up" data-aos-delay="80">FIG. 4: Percentage of women (20–24) first married/union before age 18</h3>
+                  <div class="row g-3 align-items-stretch">
+                    <div class="col-lg-12" data-aos="fade-right" data-aos-delay="100">
+                      <article class="modern-card" style="height:320px">
+                        <canvas id="cmFigure4Chart" aria-label="Child marriage before 18: Bangladesh vs South Asia vs World" role="img"></canvas>
+                      </article>
+                    </div>
+                    <div class="col-lg-12" data-aos="fade-left" data-aos-delay="120">
+                      <article class="modern-card h-100 d-flex flex-column">
+                        <p class="mb-3">Bangladesh has the highest prevalence of child marriage in South Asia, and is among the 10 countries worldwide with the highest levels.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                          ${[
+                            { label: 'Bangladesh', icon: 'fa-flag', color: 'bg-gradient-pink' },
+                            { label: 'Nepal', icon: 'fa-mountain', color: 'bg-gradient-orange' },
+                            { label: 'Afghanistan', icon: 'fa-earth-asia', color: 'bg-gradient-violet' },
+                            { label: 'India', icon: 'fa-landmark', color: 'bg-gradient-blue' },
+                            { label: 'Bhutan', icon: 'fa-hill-rockslide', color: 'bg-gradient-teal' },
+                            { label: 'Pakistan', icon: 'fa-mosque', color: 'bg-gradient-tangerine' },
+                            { label: 'Sri Lanka', icon: 'fa-umbrella-beach', color: 'bg-gradient-emerald' },
+                            { label: 'Maldives', icon: 'fa-water', color: 'bg-gradient-emerald' },
+                            { label: 'South Asia (region)', icon: 'fa-globe-asia', color: 'bg-gradient-purple' },
+                            { label: 'World', icon: 'fa-earth-americas', color: 'bg-gradient-green' }
+                          ].map((c) => `
+                            <span class="badge-pill ${c.color}" title="${c.label}"><i class="fa-solid ${c.icon} me-1"></i>${c.label}</span>
+                          `).join('')}
+                        </div>
+                        <p class="small text-muted mt-3 mb-0">Note: Chart shows available values for Bangladesh (51%), South Asia (29%) and World (20%). Country-level values for other South Asian nations can be added when verified.</p>
+                      </article>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- KEY FACTS -->
+                <section aria-labelledby="cm-keyfacts-title">
+                  <h3 class="gradient-text mb-1" id="cm-keyfacts-title" data-aos="fade-up" data-aos-delay="140">KEY FACTS</h3>
+                  <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="160">About child marriage in Bangladesh</p>
+                  <div class="row g-3">
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="180">
+                      <div class="fact-card alert-info hover-lift-sm transition-base">
+                        <i class="fas fa-children" aria-hidden="true"></i>
+                        <p class="mb-0"><strong>38 million</strong> child brides live in Bangladesh; <strong>13 million</strong> married before age 15.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="fact-card alert-primary hover-lift-sm transition-base">
+                        <i class="fas fa-percent" aria-hidden="true"></i>
+                        <p class="mb-0"><strong>51%</strong> of young women were married before their 18th birthday.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="220">
+                      <div class="fact-card alert-warning hover-lift-sm transition-base">
+                        <i class="fas fa-ranking-star" aria-hidden="true"></i>
+                        <p class="mb-0">Bangladesh ranks among the <strong>top 10</strong> countries globally for child marriage.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="240">
+                      <div class="fact-card alert-secondary hover-lift-sm transition-base">
+                        <i class="fas fa-school" aria-hidden="true"></i>
+                        <p class="mb-0">Risk factors include rural residence, poverty, and lower than secondary education.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="260">
+                      <div class="fact-card alert-danger hover-lift-sm transition-base">
+                        <i class="fas fa-user-graduate" aria-hidden="true"></i>
+                        <p class="mb-0">Married girls are <strong>4×</strong> more likely to be out of school than unmarried girls.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="280">
+                      <div class="fact-card alert-success hover-lift-sm transition-base">
+                        <i class="fas fa-baby" aria-hidden="true"></i>
+                        <p class="mb-0">Nearly <strong>5 in 10</strong> child brides gave birth before 18; <strong>8 in 10</strong> before 20.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="fact-card alert-success hover-lift-sm transition-base">
+                        <i class="fas fa-arrow-trend-down" aria-hidden="true"></i>
+                        <p class="mb-0">Child marriage is less common today than in previous generations.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="320">
+                      <div class="fact-card alert-secondary hover-lift-sm transition-base">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <p class="mb-0">Declines seen across wealth groups, with faster progress among the richest.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="340">
+                      <div class="fact-card alert-primary hover-lift-sm transition-base">
+                        <i class="fas fa-bullseye" aria-hidden="true"></i>
+                        <p class="mb-0">To meet national (2041) and SDG (2030) targets, progress must accelerate by <strong>8×</strong> and <strong>17×</strong>, respectively.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>`
           },
           {

@@ -746,6 +746,63 @@ class YouthHealthLMS {
 
       buildDonut("bdMortalityAdolescents", bdLabels, bdAdolData, bdColors);
       buildDonut("bdMortalityYoungAdults", bdLabels, bdYAData, bdColors);
+
+      // FIG.4 Child marriage prevalence chart (Lesson 5)
+      const cmCanvas = document.getElementById("cmFigure4Chart");
+      if (cmCanvas && !cmCanvas.dataset.chartInitialized && window.Chart) {
+        try {
+          const ctx = cmCanvas.getContext("2d");
+          new window.Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: ["Bangladesh", "South Asia", "World"],
+              datasets: [
+                {
+                  label: "% of women 20–24 first married/union before 18",
+                  data: [51, 29, 20],
+                  backgroundColor: [
+                    "#F472B6", // Bangladesh - pink
+                    "#A78BFA", // South Asia - violet
+                    "#34D399"  // World - emerald
+                  ],
+                  borderRadius: 10,
+                  barPercentage: 0.7,
+                  categoryPercentage: 0.6
+                }
+              ]
+            },
+            options: {
+              indexAxis: "y",
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  suggestedMin: 0,
+                  suggestedMax: 100,
+                  ticks: { callback: (v) => v + "%" },
+                  title: { display: true, text: "Percentage" }
+                }
+              },
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  callbacks: {
+                    label: (ctx) => `${ctx.raw}%`
+                  }
+                },
+                title: {
+                  display: false
+                }
+              },
+              animation: {
+                duration: 900,
+                easing: "easeOutCubic"
+              }
+            }
+          });
+          cmCanvas.dataset.chartInitialized = "true";
+        } catch (_) {}
+      }
     } catch (_) {}
   }
 
