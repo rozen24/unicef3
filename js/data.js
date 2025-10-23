@@ -752,6 +752,103 @@ const coursesData = [
               </div>`
           },
           {
+            id: 'ch2-lesson-5a',
+            title: 'Adolescent health related issues',
+            icon: 'fa-circle-nodes',
+            gradientClass: 'bg-gradient-cyan',
+            audioFile: '',
+            quiz: { passingScore: 60, questions: [{ id:'q2d-issues', question: 'Improving adolescent health requires…', options:['Single-sector approach','Rights-based, multisectoral action','Ignoring evidence','Only services'], correctAnswer:1 }] },
+            content: `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Adolescent health related issues</h2>
+
+                <!-- Special info -->
+                <div class="fact-card alert-info hover-lift-sm transition-base icon-spin-on-hover mb-3" data-aos="fade-up" data-aos-delay="60">
+                  <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                  <p class="mb-0">Actions to improve adolescent health and wellbeing need to address established and emerging determinants and <strong>meaningfully engage</strong> with adolescents and young people.</p>
+                </div>
+
+                <!-- Issues infographic: 2x2 matrix cards with icons -->
+                <section class="issue-matrix" aria-labelledby="issue-matrix-title">
+                  <h3 id="issue-matrix-title" class="mb-2 gradient-text" data-aos="fade-up" data-aos-delay="80">Key domains</h3>
+                  <div class="row g-3">
+                    <!-- Health -->
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                      <article class="issue-panel bg-gradient-emerald">
+                        <div class="issue-head">
+                          <div class="issue-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                          <h6 class="issue-title">Health</h6>
+                        </div>
+                        <ul class="stat-list">
+                          <li><span class="stat-chip"><span class="value">12.6</span><span class="unit">%</span></span> children and adolescents (7–17 years) suffer from diagnosable mental health condition</li>
+                          <li>
+                            NCD risk factors:
+                            <span class="stat-chip"><span class="value">14</span><span class="unit">%</span></span> one
+                            <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> two
+                            <span class="stat-chip"><span class="value">29</span><span class="unit">%</span></span> three
+                            <span class="stat-chip"><span class="value">34</span><span class="unit">%</span></span> four or more
+                          </li>
+                          <li>Substance use (12–17 years): <span class="stat-chip"><span class="value">1.5</span><span class="unit">%</span></span></li>
+                          <li>Road accidents: ~<span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> adolescent mortality; students > <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of fatalities</li>
+                          <li>Internet addiction (13–19 years): <span class="stat-chip"><span class="value">24.1</span><span class="unit">%</span></span></li>
+                        </ul>
+                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
+                      </article>
+                    </div>
+                    <!-- Nutrition -->
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
+                      <article class="issue-panel bg-gradient-rose">
+                        <div class="issue-head">
+                          <div class="issue-icon"><i class="fa-solid fa-utensils"></i></div>
+                          <h6 class="issue-title">Nutrition</h6>
+                        </div>
+                        <ul class="stat-list">
+                          <li>Stunting: <span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> UM males</li>
+                          <li>Underweight: <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> UM males</li>
+                          <li>Overweight: <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> UM males</li>
+                          <li>Anemia: about <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> of adolescents</li>
+                        </ul>
+                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
+                      </article>
+                    </div>
+                    <!-- Education -->
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="140">
+                      <article class="issue-panel bg-gradient-blue">
+                        <div class="issue-head">
+                          <div class="issue-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                          <h6 class="issue-title">Education</h6>
+                        </div>
+                        <ul class="stat-list">
+                          <li>GER (secondary): <span class="stat-chip"><span class="value">74.81</span><span class="unit">%</span></span></li>
+                          <li>NER (secondary): <span class="stat-chip"><span class="value">72.20</span><span class="unit">%</span></span></li>
+                          <li>Secondary completion rate: <span class="stat-chip"><span class="value">65.1</span><span class="unit">%</span></span></li>
+                          <li>Dropout rate: <span class="stat-chip"><span class="value">32.85</span><span class="unit">%</span></span></li>
+                        </ul>
+                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
+                      </article>
+                    </div>
+                    <!-- Protection -->
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
+                      <article class="issue-panel bg-gradient-violet">
+                        <div class="issue-head">
+                          <div class="issue-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                          <h6 class="issue-title">Protection</h6>
+                        </div>
+                        <ul class="stat-list">
+                          <li><span class="stat-chip"><span class="value">1</span>/<span class="value">5</span></span> adolescent girls and women face physical or sexual violence</li>
+                          <li><span class="stat-chip"><span class="value">77</span><span class="unit">%</span></span> of married adolescent girls abused by their husbands</li>
+                          <li>~<span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents in child labor</li>
+                          <li>During monsoon, <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown; ~<span class="stat-chip"><span class="value">14,000</span></span> annually</li>
+                          <li>~<span class="stat-chip"><span class="value">89</span><span class="unit">%</span></span> children (~<span class="stat-chip"><span class="value">45</span><span class="unit">M</span></span>) experience violent discipline at home</li>
+                        </ul>
+                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
+                      </article>
+                    </div>
+                  </div>
+                </section>
+              </div>`
+          },
+          {
             id: 'ch2-lesson-6',
             title: 'Determinants for adolescent health and well-being',
             icon: 'fa-triangle-exclamation',
