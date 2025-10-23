@@ -2287,7 +2287,7 @@ img {
 .dashboard-course-accordion .chapter-progress-pill { margin-left: auto; }
 
 /* Ensure sidebar trail can scroll if tall */
-.lesson-trail { max-height: calc(100vh - 220px); overflow: auto; padding-right: 4px; }
+.lesson-trail { max-height: calc(100vh - 220px); padding-right: 4px; overflow-x: hidden; }
 
 .card-title {
   font-size: 1.5rem;
