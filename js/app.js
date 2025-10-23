@@ -54,6 +54,97 @@ class YouthHealthLMS {
     } catch (_) {}
   }
 
+  // Image zoom overlay for elements with class 'img-zoom'
+  initImageZoom() {
+    try {
+      // Create overlay lazily once
+      if (!this._zoomOverlay) {
+        const overlay = document.createElement("div");
+        overlay.className = "zoom-overlay";
+        overlay.setAttribute("role", "dialog");
+        overlay.setAttribute("aria-modal", "true");
+        overlay.setAttribute("aria-label", "Image preview");
+
+        const img = document.createElement("img");
+        img.className = "zoom-overlay__img";
+        img.alt = "Preview";
+        overlay.appendChild(img);
+
+        // Close button (top-right)
+        const closeBtn = document.createElement("button");
+        closeBtn.className = "zoom-overlay__close";
+        closeBtn.setAttribute("type", "button");
+        closeBtn.setAttribute("aria-label", "Close image preview");
+  // Use a simple multiplication sign as an accessible fallback icon
+  closeBtn.innerHTML = '<span class="zoom-overlay__close-icon" aria-hidden="true">&times;</span>';
+        overlay.appendChild(closeBtn);
+
+        document.body.appendChild(overlay);
+        this._zoomOverlay = overlay;
+        this._zoomOverlayImg = img;
+        this._zoomCloseBtn = closeBtn;
+
+        // Prevent image click from closing via overlay handler
+        try { this._zoomOverlayImg.addEventListener('click', (e)=> e.stopPropagation()); } catch (_) {}
+      }
+
+      const openZoom = (src, alt) => {
+        if (!this._zoomOverlay || !this._zoomOverlayImg) return;
+        this._zoomOverlayImg.src = src || "";
+        this._zoomOverlayImg.alt = alt || "Preview";
+        this._zoomOverlay.classList.add("active");
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+
+        const onEsc = (e) => {
+          if (e.key === "Escape") closeZoom();
+        };
+        const onClick = () => closeZoom();
+
+        this._zoomEscHandler = onEsc;
+        this._zoomClickHandler = onClick;
+        document.addEventListener("keydown", onEsc);
+        this._zoomOverlay.addEventListener("click", onClick);
+
+        // Bind close button
+        if (this._zoomCloseBtn && !this._zoomCloseBtn.dataset.bound) {
+          this._zoomCloseBtn.addEventListener('click', (e) => { e.stopPropagation(); closeZoom(); });
+          this._zoomCloseBtn.dataset.bound = 'true';
+        }
+        // Move focus to close button for accessibility
+        try { this._zoomCloseBtn && this._zoomCloseBtn.focus(); } catch (_) {}
+      };
+
+      const closeZoom = () => {
+        if (!this._zoomOverlay) return;
+        this._zoomOverlay.classList.remove("active");
+        document.documentElement.style.overflow = "";
+        document.body.style.overflow = "";
+        if (this._zoomEscHandler) {
+          document.removeEventListener("keydown", this._zoomEscHandler);
+          this._zoomEscHandler = null;
+        }
+        if (this._zoomClickHandler) {
+          this._zoomOverlay.removeEventListener("click", this._zoomClickHandler);
+          this._zoomClickHandler = null;
+        }
+      };
+
+      // Bind click handlers to images with class 'img-zoom'
+      document.querySelectorAll("img.img-zoom").forEach((img) => {
+        if (img.dataset.zoomBound) return;
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", (e) => {
+          e.preventDefault();
+          const src = img.getAttribute("data-zoom-src") || img.src;
+          const alt = img.alt || "Preview";
+          openZoom(src, alt);
+        });
+        img.dataset.zoomBound = "true";
+      });
+    } catch (_) {}
+  }
+
   // Basic login: validates saved users and persists current user
   login(email, password) {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
@@ -461,9 +552,6 @@ class YouthHealthLMS {
         break;
     }
 
-  // Initialize global image lightbox on every render
-  try { this.initImageLightbox(); } catch (_) {}
-
     // View-specific overflow handling
     // For lesson slider, allow horizontal overflow (auto) to avoid clipping wide content
     try {
@@ -478,61 +566,9 @@ class YouthHealthLMS {
     } catch (_) {
       /* no-op */
     }
-  }
 
-  // Simple image lightbox: clicking any image opens a fullscreen overlay
-  initImageLightbox() {
-    try {
-      // Create overlay once
-      let overlay = document.getElementById("imgLightbox");
-      if (!overlay) {
-        overlay = document.createElement("div");
-        overlay.id = "imgLightbox";
-        overlay.className = "img-lightbox";
-        overlay.innerHTML = `
-          <img class="img-lightbox__img" alt="Expanded image">
-          <button class="img-lightbox__close" aria-label="Close image">&times;</button>
-        `;
-        document.body.appendChild(overlay);
-
-        const closeOverlay = () => {
-          overlay.classList.remove("open");
-          try { document.body.style.overflow = ""; } catch (_) {}
-        };
-
-        overlay.addEventListener("click", (e) => {
-          if (e.target === overlay || (e.target && e.target.classList && e.target.classList.contains("img-lightbox__close"))) {
-            closeOverlay();
-          }
-        });
-        document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape" && overlay.classList.contains("open")) closeOverlay();
-        });
-      }
-
-      const overlayImg = overlay.querySelector(".img-lightbox__img");
-
-      // Bind to all images in the document, avoid rebinding and skip overlay's own image
-      const allImgs = document.querySelectorAll("img");
-      allImgs.forEach((img) => {
-        if (img.dataset.lightboxBound === "true") return;
-        if (img.closest("#imgLightbox")) return;
-        img.style.cursor = img.style.cursor || "zoom-in";
-        img.addEventListener(
-          "click",
-          () => {
-            try {
-              overlayImg.src = img.currentSrc || img.src;
-              overlayImg.alt = img.alt || "Expanded image";
-              overlay.classList.add("open");
-              document.body.style.overflow = "hidden";
-            } catch (_) {}
-          },
-          { passive: true }
-        );
-        img.dataset.lightboxBound = "true";
-      });
-    } catch (_) {}
+    // Initialize image zoom bindings on every render
+    try { this.initImageZoom(); } catch (_) {}
   }
 
   // Initialize lesson-specific enhancements like counters and charts when elements are present

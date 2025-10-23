@@ -971,23 +971,85 @@ const coursesData = [
                   {img:'img/policies/national-health.png', title:'2nd  National Mental Health Survey'},
                   {img:'img/policies/policy.png', title:'National Mental Health Policy : 2022'},
                   {img:'img/policies/strategy.png', title:'National Mental Health Strategic Plan : 2022-2030'}
-                ].map((p)=>`<div class="col-sm-6 col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="120"><article class="modern-card"><figure class="image-card" style="height:auto; object-fit: cover;"><img src="${p.img}" alt="${p.title}"></figure><h6 class="mt-2">${p.title}</h6></article></div>`).join('')}</div>
+                ].map((p)=>`<div class="col-sm-6 col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="120"><article class="modern-card"><figure class="image-card" style="height:auto; object-fit: cover;"><img src="${p.img}" class="img-zoom" alt="${p.title}"></figure><h6 class="mt-2">${p.title}</h6></article></div>`).join('')}</div>
               </div>`
           },
           {
             id: 'ch2-lesson-11',
-            title: 'Government’s commitment',
+            title: 'Bangladesh Government’s commitment',
             icon: 'fa-landmark',
             gradientClass: 'bg-gradient-tangerine',
             audioFile: '',
             quiz: { passingScore: 60, questions: [{ id:'q2j', question: 'Bangladesh invests in adolescent health via…', options:['Policies and partnerships','Only posters','Only apps','None'], correctAnswer:0 }] },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">Government’s commitment</h2>
-                <div class="row g-3 align-items-center">
-                  <div class="col-md-6"><ul class="ps-3"><li>Strengthen adolescent-friendly services</li><li>Scale through schools and communities</li><li>Digital tools for learning and accountability</li></ul></div>
-                  <div class="col-md-6"><figure class="image-card" style="height:auto; object-fit: cover;"><img src="img/plan/national-plan.png" alt="Plan"></figure></div>
-                </div>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Bangladesh Government’s commitment</h2>
+
+                <!-- Infographic: Policy evolution snapshot (distinct from timeline) -->
+                <section class="flow-chart" aria-labelledby="bd-commitment-flow-title">
+                  <div class="flow-rows">
+                    <!-- Row 1: Strategy evolution -->
+                    <div class="flow-row" data-aos="fade-up" data-aos-delay="100">
+                      <div class="flow-node tl-blue">
+                        <div class="flow-node-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <div class="flow-node-title">National Adolescent Reproductive Health Strategy</div>
+                        <div class="flow-node-sub">2006–2015</div>
+                      </div>
+                      <div class="flow-arrow" aria-hidden="true"></div>
+                      <div class="flow-node tl-emerald">
+                        <div class="flow-node-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+                        <div class="flow-node-title">National Adolescent Health Strategy</div>
+                        <div class="flow-node-sub">2017–2030</div>
+                      </div>
+                    </div>
+                    <!-- Row 2: Action plan evolution -->
+                    <div class="flow-row" data-aos="fade-up" data-aos-delay="140">
+                      <div class="flow-node tl-violet">
+                        <div class="flow-node-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                        <div class="flow-node-title">National Plan of Action for Adolescent Health Strategy</div>
+                      </div>
+                      <div class="flow-arrow" aria-hidden="true"></div>
+                      <div class="flow-node tl-rose">
+                        <div class="flow-node-icon"><i class="fa-solid fa-coins"></i></div>
+                        <div class="flow-node-title">National Costed Action Plan for Adolescent Health Strategy</div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Orbit info: main strategy at center with related focus areas around -->
+                <section class="orbit-section" aria-labelledby="orbit-title">
+                  <div class="orbit-layout" data-aos="zoom-in" data-aos-delay="240">
+                    <!-- Center node -->
+                    <div class="orbit-center">
+                      <div class="orbit-card bg-gradient-emerald">
+                        <div class="orbit-icon"><i class="fa-solid fa-flag"></i></div>
+                        <div class="orbit-title">National Adolescent Health Strategy</div>
+                        <div class="orbit-sub">2017–2030</div>
+                      </div>
+                    </div>
+                    <!-- Satellites: 7 items -->
+                    ${[
+                      {label:'Adolescent Sexual and Reproductive Health & Rights', icon:'fa-venus-mars', cls:'bg-gradient-rose'},
+                      {label:'Violence against Adolescents', icon:'fa-hand-fist', cls:'bg-gradient-tangerine'},
+                      {label:'Mental Health for Adolescents', icon:'fa-brain', cls:'bg-gradient-violet'},
+                      {label:'Health System Strengthening', icon:'fa-screwdriver-wrench', cls:'bg-gradient-blue'},
+                      {label:'Social & Behaviour Change Communication', icon:'fa-bullhorn', cls:'bg-gradient-emerald'},
+                      {label:'Vulnerable adolescents & challenging circumstances', icon:'fa-people-roof', cls:'bg-gradient-teal'},
+                      {label:'Adolescent Nutrition', icon:'fa-utensils', cls:'bg-gradient-purple'}
+                    ].map((o,i)=>`
+                      <div class="orbit-item orbit-pos-${i+1}">
+                        <div class="orbit-card ${o.cls} icon-spin-on-hover">
+                          <div class="orbit-icon"><i class="fa-solid ${o.icon}"></i></div>
+                          <div class="orbit-title small">${o.label}</div>
+                        </div>
+                      </div>
+                    `).join('')}
+                    <!-- Decorative orbit rings -->
+                    <div class="orbit-ring orbit-ring-1" aria-hidden="true"></div>
+                    <div class="orbit-ring orbit-ring-2" aria-hidden="true"></div>
+                  </div>
+                </section>
               </div>`
           },
           {
