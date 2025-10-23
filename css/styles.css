@@ -1249,6 +1249,42 @@ img {
 .tl-violet { background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%); }
 .tl-cyan { background: linear-gradient(135deg, #CFFAFE 0%, #A5F3FC 100%); }
 .tl-slate { background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%); }
+
+/* ==================== Image Lightbox ==================== */
+.img-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+}
+.img-lightbox.open { display: flex; animation: lb-fade .18s ease-out; }
+.img-lightbox__img {
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+.img-lightbox__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,0.16);
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+}
+@keyframes lb-fade { from { opacity: 0 } to { opacity: 1 } }
 /* ==================== HOVER EFFECTS ==================== */
 .hover-lift {
   transition: var(--transition-normal);

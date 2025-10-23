@@ -461,6 +461,9 @@ class YouthHealthLMS {
         break;
     }
 
+  // Initialize global image lightbox on every render
+  try { this.initImageLightbox(); } catch (_) {}
+
     // View-specific overflow handling
     // For lesson slider, allow horizontal overflow (auto) to avoid clipping wide content
     try {
@@ -475,6 +478,61 @@ class YouthHealthLMS {
     } catch (_) {
       /* no-op */
     }
+  }
+
+  // Simple image lightbox: clicking any image opens a fullscreen overlay
+  initImageLightbox() {
+    try {
+      // Create overlay once
+      let overlay = document.getElementById("imgLightbox");
+      if (!overlay) {
+        overlay = document.createElement("div");
+        overlay.id = "imgLightbox";
+        overlay.className = "img-lightbox";
+        overlay.innerHTML = `
+          <img class="img-lightbox__img" alt="Expanded image">
+          <button class="img-lightbox__close" aria-label="Close image">&times;</button>
+        `;
+        document.body.appendChild(overlay);
+
+        const closeOverlay = () => {
+          overlay.classList.remove("open");
+          try { document.body.style.overflow = ""; } catch (_) {}
+        };
+
+        overlay.addEventListener("click", (e) => {
+          if (e.target === overlay || (e.target && e.target.classList && e.target.classList.contains("img-lightbox__close"))) {
+            closeOverlay();
+          }
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && overlay.classList.contains("open")) closeOverlay();
+        });
+      }
+
+      const overlayImg = overlay.querySelector(".img-lightbox__img");
+
+      // Bind to all images in the document, avoid rebinding and skip overlay's own image
+      const allImgs = document.querySelectorAll("img");
+      allImgs.forEach((img) => {
+        if (img.dataset.lightboxBound === "true") return;
+        if (img.closest("#imgLightbox")) return;
+        img.style.cursor = img.style.cursor || "zoom-in";
+        img.addEventListener(
+          "click",
+          () => {
+            try {
+              overlayImg.src = img.currentSrc || img.src;
+              overlayImg.alt = img.alt || "Expanded image";
+              overlay.classList.add("open");
+              document.body.style.overflow = "hidden";
+            } catch (_) {}
+          },
+          { passive: true }
+        );
+        img.dataset.lightboxBound = "true";
+      });
+    } catch (_) {}
   }
 
   // Initialize lesson-specific enhancements like counters and charts when elements are present
