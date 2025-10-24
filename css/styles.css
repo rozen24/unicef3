@@ -4007,7 +4007,7 @@ img {
     font-size: clamp(-1.25rem, 3vw, 2.5rem);
     font-weight: 700;
     animation: gradientShift 7s ease-in-out infinite !important;
-    background: radial-gradient(circle at 70% 70%, rgba(16,185,129,0.42), rgba(16,185,129,0));
+    color: radial-gradient(circle at 70% 70%, rgba(16,185,129,0.42), rgba(16,185,129,0));
     padding: 10px;
     border-radius: 13px;
 }
