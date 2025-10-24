@@ -54,7 +54,8 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
 }
 
 body {
@@ -63,6 +64,8 @@ body {
   background-color: #f7fafc;
   line-height: 1.7;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -3763,6 +3766,9 @@ img {
   color: #667eea;
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
+}
+.definition-card h4 i {
+  color: #667eea !important;
 }
 
 .program-intro {
@@ -7712,9 +7718,6 @@ p.lead {
 .pyramid-step.apex { font-weight:800; }
 @media (max-width: 576px) {
   .pyramid-compare .pyramid-path { margin-bottom: .5rem; }
-}
-.row>* {
-    margin-top: 0 !important;
 }
 .login-title {
     font-size: 1.75rem !important;
