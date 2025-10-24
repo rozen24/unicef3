@@ -1184,9 +1184,9 @@ const coursesData = [
                     <!-- Inner ring (4) -->
                     ${[
                       {label:'School', icon:'fa-school', cls:'bg-gradient-blue', pos:'radial-inner-left'},
-                      {label:'Health services', icon:'fa-hospital', cls:'bg-gradient-rose', pos:'radial-inner-right'},
+                      {label:'Health services', icon:'fa-hospital', cls:'bg-gradient-rose', pos:'radial-inner-right custom-pos-combined-effort'},
                       {label:'Sleep', icon:'fa-bed', cls:'bg-gradient-violet', pos:'radial-inner-bottom'},
-                      {label:'Healthy diet', icon:'fa-apple-whole', cls:'bg-gradient-tangerine', pos:'radial-inner-top'}
+                      {label:'Healthy diet', icon:'fa-apple-whole', cls:'bg-gradient-tangerine', pos:'radial-inner-top custom-pos-combined-effort'}
                     ].map((n)=>`
                       <div class="radial-node radial-inner ${n.pos}">
                         <article class="radial-card ${n.cls} icon-spin-on-hover">
@@ -1204,8 +1204,8 @@ const coursesData = [
                       {label:'Communities', icon:'fa-people-carry-box', cls:'bg-gradient-teal', pos:'radial-outer-se'}
                     ].map((n)=>`
                       <div class="radial-node radial-outer ${n.pos}">
-                        <article class="radial-card ${n.cls} icon-spin-on-hover">
-                          <div class="radial-icon animate-float-slow"><i class="fa-solid ${n.icon}"></i></div>
+                        <article class="radial-card ${n.cls} icon-spin-on-hover animate-float-slow">
+                          <div class="radial-icon"><i class="fa-solid ${n.icon}"></i></div>
                           <div class="radial-title">${n.label}</div>
                         </article>
                       </div>

@@ -1572,6 +1572,112 @@ img {
 @media (min-width: 768px) { .recs-ambient { padding: 1.25rem; } }
 @media (min-width: 992px) { .recs-ambient { padding: 1.5rem; } }
 
+/* ==================== Dashboard: Course Chapters Card ==================== */
+.course-chapters-card {
+  border-radius: 18px;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(59,130,246,0.10), rgba(16,185,129,0.10));
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
+}
+.course-chapters-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .5rem;
+}
+.course-chapters-header h3 { margin: 0; font-weight: 700; }
+
+/* Scope accordion restyle to dashboard course list only */
+.dashboard-course-accordion .accordion-item {
+  background: transparent;
+  border: 0;
+  margin-bottom: .5rem;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.dashboard-course-accordion .accordion-button {
+  background: linear-gradient(135deg, rgba(255,255,255,0.70), rgba(255,255,255,0.50));
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px !important;
+  box-shadow: none;
+  color: #0f172a; /* slate-900 */
+  font-weight: 600;
+  gap: .5rem;
+}
+.dashboard-course-accordion .accordion-button:hover {
+  background: var(--hero-gradient);
+  transform: translateY(-1px);
+}
+.dashboard-course-accordion .accordion-button:focus {
+   background: var(--hero-gradient);
+  box-shadow: none;
+  outline: none;
+}
+.dashboard-course-accordion .accordion-button::after {
+  filter: saturate(1.2) opacity(.8);
+}
+.dashboard-course-accordion .accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background: var(--hero-gradient) !important;
+  border-color: transparent;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+.dashboard-course-accordion .accordion-button:not(.collapsed)::after {
+  filter: invert(1) brightness(1.8);
+}
+.dashboard-course-accordion .accordion-collapse {
+  border: 0;
+}
+.dashboard-course-accordion .accordion-body {
+  background: linear-gradient(135deg, rgba(255,255,255,0.65), rgba(255,255,255,0.45));
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+}
+
+/* Badges and pills in headers */
+.chapter-badge {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3B82F6, #60A5FA);
+  color: #fff;
+  font-weight: 800;
+  font-size: .85rem;
+}
+.chapter-progress-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.06);
+  font-weight: 600;
+}
+
+/* Lesson tags inside chapters */
+.course-chapters-card .chapter-lessons { display: flex; flex-wrap: wrap; gap: .5rem; }
+.course-chapters-card .lesson-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.06);
+  color: #0f172a;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.course-chapters-card .lesson-tag:hover {
+  background: linear-gradient(135deg, #EFF6FF, #ECFEFF);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
 /* ==================== FOOTER ==================== */
 .footer {
   background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
@@ -7786,4 +7892,9 @@ p.lead {
 }
 .rec-title {
   color: #fff;
+}
+
+.custom-pos-combined-effort {
+    --r: 165% !important;
+    transform: translate(-51%, -84%) rotate(calc(var(--a) + var(--inner-offset))) translate(var(--r)) rotate(calc((var(--a) + var(--inner-offset)) * -1)) !important;
 }
