@@ -6688,7 +6688,7 @@ body {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(0, 95, 175, 0.12);
-  padding: clamp(2rem, 4.5vw, 2.75rem);
+  padding: clamp(2rem, 0.5vw, 2.75rem);
   display: grid;
   gap: 2.2rem;
   /* overflow-y: auto; */
