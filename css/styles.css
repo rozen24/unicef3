@@ -420,7 +420,7 @@ img {
 
 /* ==================== NAVIGATION ==================== */
 .navbar {
-  padding: 1.5rem 0;
+  padding: 0.5rem 0 !important;
   transition: var(--transition-normal);
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
@@ -5761,7 +5761,7 @@ body {
 }
 
 .dashboard-main {
-  padding-top: clamp(110px, 14vw, 150px);
+  padding-top: clamp(100px, 7vw, 150px);
   padding-bottom: clamp(80px, 10vw, 120px);
 }
 
@@ -6376,14 +6376,14 @@ body {
 }
 
 .lesson-hero {
-  position: relative;
-  border-radius: var(--radius-xl);
-  margin: clamp(15px, 7vw, 10px) auto clamp(15px, 6vw, 10px) !important;
-  padding: clamp(2.8rem, 6vw, 3.8rem);
-  background: linear-gradient(140deg, rgba(7, 38, 85, 0.95), rgba(16, 119, 197, 0.9));
-  color: #f4f9ff;
-  box-shadow: var(--shadow-bold);
-  overflow: hidden;
+    position: relative;
+    border-radius: var(--radius-xl);
+    margin: clamp(0px, 1vw, 4px) auto clamp(32px, 6vw, 10px) !important;
+    padding: clamp(0.8rem, 2vw, 1.8rem);
+    background: var(--hero-gradient);
+    color: #f4f9ff;
+    box-shadow: var(--shadow-bold);
+    overflow: hidden;
 }
 
 .lesson-hero::after {
@@ -7712,4 +7712,10 @@ p.lead {
 .pyramid-step.apex { font-weight:800; }
 @media (max-width: 576px) {
   .pyramid-compare .pyramid-path { margin-bottom: .5rem; }
+}
+.row>* {
+    margin-top: 0 !important;
+}
+.login-title {
+    font-size: 1.75rem !important;
 }

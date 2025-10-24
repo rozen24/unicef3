@@ -1177,7 +1177,7 @@ class YouthHealthLMS {
       </header>
 
       <!-- Main Content -->
-      <div class="container py-5">
+      <div class="container py-2">
         <div class="row justify-content-center">
           <div class="col-md-6 col-lg-5">
             <button class="btn btn-link text-decoration-none mb-3 p-0" onclick="app.navigateTo('home')">
@@ -1186,7 +1186,7 @@ class YouthHealthLMS {
 
             <div class="card shadow-lg border-0">
               <div class="card-body p-4">
-                <h2 class="text-center mb-2">Welcome</h2>
+                <h2 class="text-center mb-2 login-title">Become an Ambassador</h2>
                 <p class="text-center text-muted mb-4">Log in to continue your learning journey</p>
 
                 <div id="loginError" class="alert alert-danger d-none"></div>
@@ -1226,14 +1226,14 @@ class YouthHealthLMS {
         <div class="container py-3">
           <div class="d-flex align-items-center gap-2">
             <a class="navbar-brand" href="#" onclick="app.navigateTo('home'); return false;">
-                  <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark">
+              <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" style="width: 100%; height: 60px; object-fit: contain;">
             </a>
           </div>
         </div>
       </header>
 
       <!-- Main Content -->
-      <div class="container py-5">
+      <div class="container py-2">
         <div class="row justify-content-center">
           <div class="col-md-6 col-lg-5">
             <button class="btn btn-link text-decoration-none mb-3 p-0" onclick="app.navigateTo('home')">
@@ -1242,7 +1242,7 @@ class YouthHealthLMS {
 
             <div class="card shadow-lg border-0">
               <div class="card-body p-4">
-                <h2 class="text-center mb-2">Create Your Account</h2>
+                <h2 class="text-center mb-2 login-title">Be a Young Health Ambassador</h2>
                 <p class="text-center text-muted mb-4">Start your health learning journey today</p>
 
                 <div id="registerError" class="alert alert-danger d-none"></div>
