@@ -2423,8 +2423,8 @@ class YouthHealthLMS {
                     ></div>
                   </div>
                   <div class="lesson-progress__meta">
-                    <span class="lesson-progress__label">Course progress: </span>
-                    <span class="lesson-progress__value">${courseProgressDisplay}%</span>
+                    <span class="lesson-progress__label">Course progress:</span>
+                    <span class="lesson-progress__value">&nbsp;${courseProgressDisplay}%</span>
                   </div>
                   ${
                     totalLessons > 0

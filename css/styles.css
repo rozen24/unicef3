@@ -441,7 +441,7 @@ img {
 .icon-spin-on-hover i,
 .icon-spin-on-hover .fa,
 .icon-spin-on-hover .fas,
-.icon-spin-on-hover .bi { transition: transform 0.6s ease; padding: 10px; color: #fff; border-radius: 10px !important;}
+.icon-spin-on-hover .bi { transition: transform 0.6s ease; padding: 10px; border-radius: 10px !important;}
 .icon-spin-on-hover:hover i,
 .icon-spin-on-hover:hover .fa,
 .icon-spin-on-hover:hover .fas,
@@ -4043,7 +4043,6 @@ img {
 .lesson-slide .badge-pill,
 .lesson-slide .stat-chip {
   position: relative;
-  overflow: hidden;
 }
 
 .lesson-slide .badge-pill::after,

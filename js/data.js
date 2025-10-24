@@ -1028,7 +1028,6 @@ const coursesData = [
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Adolescent Health in the Global Agenda</h2>
 
                 <section class="timeline-chart" aria-labelledby="ah-global-agenda-title">
-                  <h3 id="ah-global-agenda-title" class="mb-3 gradient-text" data-aos="fade-up" data-aos-delay="60">Infographic timeline</h3>
                   <div class="timeline-track" aria-hidden="true"></div>
                   ${[
                     {year:'1994', title:'International Conference on Population and Development', desc:'Adolescents were recognized as a separate group with distinct needs.', icon:'fa-people-group', cls:'tl-rose', delay:100},
