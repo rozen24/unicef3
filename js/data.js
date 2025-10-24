@@ -1235,10 +1235,9 @@ const coursesData = [
 
                 <!-- Petal infographic: five recommendations around a center -->
                 <section class="" aria-labelledby="ahw-recs-title">
-                  <h3 id="ahw-recs-title" class="mb-2 gradient-text" data-aos="fade-up" data-aos-delay="80">Recommendations to protect adolescent health and wellbeing</h3>
                   <!-- Ambient gradient container with floating shapes -->
                   <div class="recs-ambient" data-aos="fade-up" data-aos-delay="100">
-                    <div class="ambient-shapes" aria-hidden="true">
+                    <div class="ambient-shapes animate-float" aria-hidden="true">
                       <span class="shape shape-1"></span>
                       <span class="shape shape-2"></span>
                       <span class="shape shape-3"></span>
@@ -1246,7 +1245,7 @@ const coursesData = [
                       <span class="shape shape-5"></span>
                     </div>
 
-                    <div class="petal-chart hover-lift-sm transition-base" data-aos="zoom-in" data-aos-delay="140" role="img" aria-label="Five recommendation petals surrounding a central goal: Protect adolescent health and wellbeing.">
+                    <div class="petal-chart hover-lift-sm transition-base" aria-label="Five recommendation petals surrounding a central goal: Protect adolescent health and wellbeing.">
                       <!-- Decorative ring -->
                       <div class="petal-ring spin-slow" aria-hidden="true"></div>
 
@@ -1264,7 +1263,7 @@ const coursesData = [
                         {
                           title:'Protect adolescent health & wellbeing',
                           text:'',
-                          icon:'fa-scale-balanced', cls:'bg-gradient-teal', pos:'petal-pos-1',
+                          icon:'fa-rocket', cls:'bg-gradient-teal', pos:'petal-pos-1',
                           delay:100
                         },
                         {
@@ -1298,11 +1297,11 @@ const coursesData = [
                           delay:350
                         }
                       ].map((p)=>`
-                        <div class="aos-init aos-animate"  "data-aos="fade-up" data-aos-delay="${p.delay}">
+                        <div class="aos-init aos-animate"  data-aos="fade-up" data-aos-delay="${p.delay}">
                           <article class="recs-petal-card ${p.cls} mb-2 icon-spin-on-hover hover-glow">
-                            <div class="timeline-card-icon animate-float"><i class="fa-solid ${p.icon}"></i></div>
+                            <div class="timeline-card-icon animate-float-slow"><i class="fa-solid ${p.icon}"></i></div>
                             <div class="timeline-card-title">${p.title}</div>
-                            <p class="timeline-card-text">${p.text}</p>
+                            <p class="timeline-card-text rec-title">${p.text}</p>
                           </article>
                         </div>
                         
