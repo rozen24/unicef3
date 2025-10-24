@@ -2299,6 +2299,33 @@ class YouthHealthLMS {
         ? progress.quizScores?.[currentLesson.id]
         : undefined;
 
+      const totalCourseLessons = course.chapters.reduce(
+        (sum, ch) => sum + (ch.lessons?.length || 0),
+        0
+      );
+      const overallCompleted = Math.min(completedIds.size, totalCourseLessons);
+      const courseProgressRaw =
+        totalCourseLessons > 0
+          ? (overallCompleted / totalCourseLessons) * 100
+          : 0;
+      const courseProgressWidth = Math.min(
+        100,
+        Math.max(0, courseProgressRaw)
+      );
+      const courseProgressDisplay = Math.round(courseProgressWidth);
+
+      const chapterCompletedCount = chapterLessons.reduce(
+        (count, lesson) => count + (completedIds.has(lesson.id) ? 1 : 0),
+        0
+      );
+      const chapterProgressRaw =
+        totalLessons > 0
+          ? (chapterCompletedCount / totalLessons) * 100
+          : 0;
+      const chapterProgressDisplay = Math.round(
+        Math.min(100, Math.max(0, chapterProgressRaw))
+      );
+
       if (this.showQuiz) return this.renderQuiz();
 
       // Icon mapping for chapters (fallback rotates through when out of range)
@@ -2381,9 +2408,40 @@ class YouthHealthLMS {
                   <i class="fa-solid fa-arrow-left-long"></i>
                   Back to dashboard
                 </button>
-                <span class="lesson-pill">Lesson ${
-                  activeIndex + 1
-                } of ${totalLessons}</span>
+                <div class="lesson-hero__progress">
+                  <div
+                    class="lesson-progress"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="${courseProgressDisplay}"
+                    aria-label="Course progress"
+                  >
+                    <div
+                      class="lesson-progress__bar"
+                      style="width: ${courseProgressWidth.toFixed(2)}%;"
+                    ></div>
+                  </div>
+                  <div class="lesson-progress__meta">
+                    <span class="lesson-progress__label">Course progress: </span>
+                    <span class="lesson-progress__value">${courseProgressDisplay}%</span>
+                  </div>
+                  ${
+                    totalLessons > 0
+                      ? `<div class="lesson-progress__caption">Chapter ${
+                          chIndex + 1
+                        } progress: ${chapterProgressDisplay}%</div>`
+                      : ""
+                  }
+                </div>
+                <div class="lesson-hero__counts">
+                  <span class="lesson-pill">Chapter ${
+                    chIndex + 1
+                  } of ${totalChapters}</span>
+                  <span class="lesson-pill">Lesson ${
+                    activeIndex + 1
+                  } of ${totalLessons}</span>
+                </div>
               </div>
               <div class="row align-items-start g-4"></div>
             </div>
@@ -2532,6 +2590,11 @@ class YouthHealthLMS {
     const lessonCompleted = completedIds.has(currentLesson.id);
     const quizScore = progress.quizScores?.[currentLesson.id];
 
+    const courseProgressRaw =
+      totalLessons > 0 ? (completedIds.size / totalLessons) * 100 : 0;
+    const courseProgressWidth = Math.min(100, Math.max(0, courseProgressRaw));
+    const courseProgressDisplay = Math.round(courseProgressWidth);
+
     if (this.showQuiz) return this.renderQuiz();
 
     return `
@@ -2543,9 +2606,30 @@ class YouthHealthLMS {
                 <i class="fa-solid fa-arrow-left-long"></i>
                 Back to dashboard
               </button>
-              <span class="lesson-pill">Lesson ${
-                activeIndex + 1
-              } of ${totalLessons}</span>
+              <div class="lesson-hero__counts">
+                <span class="lesson-pill">Lesson ${
+                  activeIndex + 1
+                } of ${totalLessons}</span>
+              </div>
+            </div>
+            <div class="lesson-hero__progress">
+              <div
+                class="lesson-progress"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="${courseProgressDisplay}"
+                aria-label="Course progress"
+              >
+                <div
+                  class="lesson-progress__bar"
+                  style="width: ${courseProgressWidth.toFixed(2)}%;"
+                ></div>
+              </div>
+              <div class="lesson-progress__meta">
+                <span class="lesson-progress__label">Course progress</span>
+                <span class="lesson-progress__value">${courseProgressDisplay}%</span>
+              </div>
             </div>
             <div class="row align-items-start g-4"></div>
           </div>

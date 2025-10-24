@@ -6781,8 +6781,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  flex-wrap: wrap;
   margin-bottom: 1.8rem;
+}
+
+.lesson-hero__counts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.65rem;
 }
 
 .lesson-back {
@@ -6841,6 +6850,60 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.lesson-hero__progress {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 0.55rem;
+  max-width: min(420px, 100%);
+  margin-left: auto;
+}
+
+.lesson-progress {
+  position: relative;
+  width: 100%;
+  height: 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(6, 24, 52, 0.15);
+}
+
+.lesson-progress__bar {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.9), rgba(148, 206, 255, 0.95));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35), 0 12px 28px rgba(6, 24, 52, 0.22);
+  transition: width 0.55s ease;
+}
+
+.lesson-progress__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(226, 240, 255, 0.78);
+}
+
+.lesson-progress__label {
+  font-weight: 600;
+}
+
+.lesson-progress__value {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.lesson-progress__caption {
+  font-size: 0.8rem;
+  color: rgba(226, 240, 255, 0.82);
+  letter-spacing: 0.02em;
 }
 
 .lesson-hero__stats {
@@ -7236,6 +7299,27 @@ body {
     text-align: center;
   }
 
+  .lesson-hero__top {
+    justify-content: center;
+  }
+
+  .lesson-hero__counts {
+    justify-content: center;
+  }
+
+  .lesson-hero__progress {
+    margin-inline: auto;
+  }
+
+  .lesson-progress__meta {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .lesson-progress__caption {
+    text-align: center;
+  }
+
   .lesson-meta {
     justify-content: center;
   }
@@ -7340,6 +7424,36 @@ body {
 
   .lesson-hero {
     padding: 2.4rem 1.7rem;
+  }
+
+  .lesson-hero__top {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .lesson-hero__counts {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lesson-hero__progress {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .lesson-progress {
+    height: 0.75rem;
+  }
+
+  .lesson-progress__meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .lesson-progress__caption {
+    text-align: center;
   }
 
   .lesson-meta {
@@ -7617,6 +7731,25 @@ body {
   background: rgba(7, 32, 68, 0.65);
   border-color: rgba(0, 160, 255, 0.3);
   color: rgba(214, 230, 255, 0.85);
+}
+
+.dark-mode .lesson-progress {
+  background: rgba(8, 36, 74, 0.65);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.dark-mode .lesson-progress__bar {
+  background: linear-gradient(120deg, rgba(124, 200, 255, 0.95), rgba(154, 143, 255, 0.95));
+  box-shadow: 0 0 0 1px rgba(162, 206, 255, 0.42), 0 20px 34px rgba(22, 88, 180, 0.38);
+}
+
+.dark-mode .lesson-progress__meta,
+.dark-mode .lesson-progress__caption {
+  color: rgba(198, 218, 255, 0.78);
+}
+
+.dark-mode .lesson-progress__value {
+  color: #d6e8ff;
 }
 
 .dark-mode .lesson-subtitle {
