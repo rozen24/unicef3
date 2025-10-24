@@ -346,6 +346,44 @@ img {
   100% { background-position: 0% 50%; }
 }
 
+@keyframes lessonEnter {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0) scale(0.98);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -6px, 0) scale(1.005);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes orbGlide {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  40% { transform: translate3d(18px, -22px, 0) scale(1.05); }
+  70% { transform: translate3d(-14px, 18px, 0) scale(0.98); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.25); }
+  50% { box-shadow: 0 0 0 12px rgba(59,130,246,0); }
+}
+
+@keyframes correctPop {
+  0% { transform: scale(0.96); }
+  55% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+@keyframes sheenSweep {
+  0% { transform: translateX(-120%); opacity: 0; }
+  45% { opacity: 0.85; }
+  100% { transform: translateX(160%); opacity: 0; }
+}
+
 .animate-fadeInUp {
   animation: fadeInUp 0.8s ease forwards;
 }
@@ -2071,6 +2109,8 @@ img {
   border-radius: inherit;
   transition: width 0.45s var(--transition-curve);
   position: relative;
+  background-size: 200% 100%;
+  animation: gradientShift 8s linear infinite;
 }
 
 .quiz-progress-fill::after {
@@ -2126,6 +2166,7 @@ img {
   font-size: 1.05rem;
   font-weight: 600;
   transition: transform 0.35s var(--transition-curve), border-color 0.35s var(--transition-curve), box-shadow 0.35s var(--transition-curve), background 0.35s var(--transition-curve);
+  will-change: transform;
 }
 
 .quiz-option-button:hover {
@@ -2140,6 +2181,18 @@ img {
   border-color: rgba(39, 70, 215, 0.38);
   color: #0b1534;
   box-shadow: 0 36px 96px rgba(10, 32, 70, 0.3);
+  animation: correctPop 0.45s var(--transition-curve);
+}
+
+.quiz-option-button.active::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  border: 1px solid rgba(255,255,255,0.6);
+  opacity: 0.8;
+  pointer-events: none;
+  animation: glowPulse 3.4s ease-in-out infinite;
 }
 
 .quiz-option-index {
@@ -2178,6 +2231,7 @@ img {
 .quiz-option-button.active .quiz-option-state {
   opacity: 1;
   transform: scale(1);
+  animation: correctPop 0.45s var(--transition-curve);
 }
 
 .quiz-warning {
@@ -3903,14 +3957,137 @@ img {
 }
 
 .lesson-slide {
-  background: white;
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  animation: slideIn 0.5s ease-out;
+  background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,246,255,0.94));
+  border-radius: 24px;
+  padding: clamp(2.25rem, 4vw, 3rem);
+  box-shadow: 0 28px 80px rgba(15, 53, 110, 0.12);
+  animation: lessonEnter 0.65s var(--transition-curve);
   min-height: 600px;
   position: relative; /* ensure content sits above floating backgrounds */
   z-index: 1;
+  overflow: hidden;
+}
+
+.lesson-slide::before,
+.lesson-slide::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.28;
+  background: radial-gradient(circle at 30% 30%, rgba(59,130,246,0.45), rgba(59,130,246,0));
+  filter: blur(0.5px);
+  animation: orbGlide 18s ease-in-out infinite;
+}
+
+.lesson-slide::before {
+  width: 320px;
+  height: 320px;
+  top: -140px;
+  left: -120px;
+}
+
+.lesson-slide::after {
+  width: 260px;
+  height: 260px;
+  bottom: -110px;
+  right: -150px;
+  animation-duration: 22s;
+  animation-delay: -6s;
+  background: radial-gradient(circle at 70% 70%, rgba(16,185,129,0.42), rgba(16,185,129,0));
+}
+
+.lesson-slide .slide-title.gradient-text {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    background-size: 220% 220%;
+    font-size: clamp(-1.25rem, 3vw, 2.5rem);
+    font-weight: 700;
+    animation: gradientShift 7s ease-in-out infinite !important;
+    background: radial-gradient(circle at 70% 70%, rgba(16,185,129,0.42), rgba(16,185,129,0));
+    padding: 10px;
+    border-radius: 13px;
+}
+
+.lesson-slide .slide-title.gradient-text::after {
+  content: "";
+  height: 4px;
+  width: 64px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(59,130,246,0.7), rgba(236,72,153,0.6));
+  display: inline-flex;
+  box-shadow: 0 4px 16px rgba(59,130,246,0.35);
+}
+
+.lesson-slide .modern-card,
+.lesson-slide .fact-card,
+.lesson-slide .component-card,
+.lesson-slide .role-card,
+.lesson-slide .issue-panel {
+  transition: transform 0.35s var(--transition-curve), box-shadow 0.35s var(--transition-curve), background 0.35s var(--transition-curve);
+  will-change: transform;
+}
+
+.lesson-slide .modern-card:hover,
+.lesson-slide .fact-card:hover,
+.lesson-slide .component-card:hover,
+.lesson-slide .role-card:hover,
+.lesson-slide .issue-panel:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(13, 60, 110, 0.16);
+}
+
+.lesson-slide .badge-pill,
+.lesson-slide .stat-chip {
+  position: relative;
+  overflow: hidden;
+}
+
+.lesson-slide .badge-pill::after,
+.lesson-slide .stat-chip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0), rgba(255,255,255,0.45), rgba(255,255,255,0));
+  transform: translateX(-120%);
+  animation: sheenSweep 3.5s ease-in-out infinite;
+}
+
+.lesson-slide .lesson-content img,
+.lesson-slide .lession-content img,
+.lesson-slide figure img {
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(15, 53, 110, 0.14);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lesson-slide .lesson-content img:hover,
+.lesson-slide .lession-content img:hover,
+.lesson-slide figure img:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 28px 70px rgba(15, 53, 110, 0.2);
+}
+
+.lesson-slide .quiz-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 999px;
+  padding: 0.65rem 1.1rem;
+  background: rgba(234, 179, 8, 0.18);
+  border: 1px solid rgba(180, 125, 4, 0.2);
+  animation: glowPulse 3.5s ease infinite;
+}
+
+.lesson-slide button:focus-visible,
+.lesson-slide .lesson-tag:focus-visible,
+.lesson-slide .quiz-option-button:focus-visible {
+  outline: 3px solid rgba(59,130,246,0.4);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.2);
 }
 
 
@@ -6411,6 +6588,35 @@ body {
   border-radius: 999px;
   box-shadow: 0 12px 28px rgba(0, 132, 218, 0.2);
   transition: width 0.5s ease;
+  background-size: 200% 100%;
+  animation: gradientShift 9s linear infinite;
+}
+
+.progress-track__value::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255,255,255,0), rgba(255,255,255,0.65), rgba(255,255,255,0));
+  transform: translateX(-120%);
+  animation: sheenSweep 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-slide,
+  .lesson-slide::before,
+  .lesson-slide::after,
+  .lesson-slide .badge-pill::after,
+  .lesson-slide .stat-chip::after,
+  .quiz-progress-fill,
+  .progress-track__value,
+  .progress-track__value::after,
+  .quiz-option-button.active,
+  .quiz-option-button.active::before,
+  .quiz-option-button.active .quiz-option-state {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .progress-caption {
