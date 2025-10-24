@@ -752,7 +752,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-5a',
+            id: 'ch2-lesson-6',
             title: 'Adolescent health related issues',
             icon: 'fa-circle-nodes',
             gradientClass: 'bg-gradient-cyan',
@@ -849,7 +849,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-6',
+            id: 'ch2-lesson-7',
             title: 'Determinants for adolescent health and well-being',
             icon: 'fa-triangle-exclamation',
             gradientClass: 'bg-gradient-pink',
@@ -910,7 +910,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-7',
+            id: 'ch2-lesson-8',
             title: 'Why young people need special care?',
             icon: 'fa-user-nurse',
             gradientClass: 'bg-gradient-teal',
@@ -987,7 +987,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-8',
+            id: 'ch2-lesson-9',
             title: 'SDC related to adolescent health.',
             icon: 'fa-diagram-project',
             gradientClass: 'bg-gradient-violet',
@@ -1017,7 +1017,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-9',
+            id: 'ch2-lesson-10',
             title: 'AH in Global Agenda',
             icon: 'fa-handshake-angle',
             gradientClass: 'bg-gradient-emerald',
@@ -1052,7 +1052,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-10',
+            id: 'ch2-lesson-11',
             title: 'Policies, strategies and plans',
             icon: 'fa-file-shield',
             gradientClass: 'bg-gradient-blue',
@@ -1072,7 +1072,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-11',
+            id: 'ch2-lesson-12',
             title: 'Bangladesh Government’s commitment',
             icon: 'fa-landmark',
             gradientClass: 'bg-gradient-tangerine',
@@ -1150,7 +1150,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-12',
+            id: 'ch2-lesson-13',
             title: 'A combined effort',
             icon: 'fa-people-group',
             gradientClass: 'bg-gradient-green',
@@ -1215,7 +1215,7 @@ const coursesData = [
               </div>`
           },
           {
-            id: 'ch2-lesson-13',
+            id: 'ch2-lesson-14',
             title: 'Recommendations to protect adolescent health and wellbeing',
             icon: 'fa-rocket',
             gradientClass: 'bg-gradient-rose',
@@ -1234,56 +1234,80 @@ const coursesData = [
                 </div>
 
                 <!-- Petal infographic: five recommendations around a center -->
-                <section class="petal-chart-section" aria-labelledby="ahw-recs-title">
+                <section class="" aria-labelledby="ahw-recs-title">
                   <h3 id="ahw-recs-title" class="mb-2 gradient-text" data-aos="fade-up" data-aos-delay="80">Recommendations to protect adolescent health and wellbeing</h3>
-                  <div class="petal-chart hover-lift-sm transition-base" data-aos="zoom-in" data-aos-delay="120" role="img" aria-label="Five recommendation petals surrounding a central goal: Protect adolescent health and wellbeing.">
-                    <!-- Decorative ring -->
-                    <div class="petal-ring" aria-hidden="true"></div>
-
-                    <!-- Center node -->
-                    <div class="petal-center">
-                      <article class="petal-card bg-gradient-emerald icon-spin-on-hover">
-                        <div class="petal-icon"><i class="fa-solid fa-shield-heart"></i></div>
-                        <div class="petal-title">Protect adolescent health & wellbeing</div>
-                      </article>
+                  <!-- Ambient gradient container with floating shapes -->
+                  <div class="recs-ambient" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ambient-shapes" aria-hidden="true">
+                      <span class="shape shape-1"></span>
+                      <span class="shape shape-2"></span>
+                      <span class="shape shape-3"></span>
+                      <span class="shape shape-4"></span>
+                      <span class="shape shape-5"></span>
                     </div>
 
-                    <!-- Petals (5) equally spaced -->
-                    ${[
-                      {
-                        title:'Rights-based & person-centred',
-                        text:'Emphasise adolescents’ rights to health and wellbeing; promote participation, identity expression, safe access, and protection from harm.',
-                        icon:'fa-scale-balanced', cls:'bg-gradient-purple', pos:'petal-pos-1'
-                      },
-                      {
-                        title:'Confront systemic inequities',
-                        text:'Address gender, race and geography to ensure equal opportunities and targeted support for disadvantaged groups.',
-                        icon:'fa-people-arrows-left-right', cls:'bg-gradient-rose', pos:'petal-pos-2'
-                      },
-                      {
-                        title:'Meaningfully involve adolescents',
-                        text:'Co-design and engage adolescents in health initiatives—empowering individuals and strengthening societal outcomes.',
-                        icon:'fa-people-group', cls:'bg-gradient-blue', pos:'petal-pos-3'
-                      },
-                      {
-                        title:'Evidence-informed & developmentally tailored',
-                        text:'Use evolving evidence and tailor to developmental needs while considering complex determinants across contexts.',
-                        icon:'fa-microscope', cls:'bg-gradient-cyan', pos:'petal-pos-4'
-                      },
-                      {
-                        title:'Multisectoral approach',
-                        text:'Coordinate mental health, nutrition, sexual and reproductive health, and violence prevention to amplify gains.',
-                        icon:'fa-diagram-project', cls:'bg-gradient-teal', pos:'petal-pos-5'
-                      }
-                    ].map((p)=>`
-                      <div class="">
-                        <article class="fact-card ${p.cls} icon-spin-on-hover">
-                          <div class="fact-icon"><i class="fa-solid ${p.icon}"></i></div>
-                          <div class="fact-title">${p.title}</div>
-                          <p class="fact-text">${p.text}</p>
-                        </article>
-                      </div>
-                    `).join('')}
+                    <div class="petal-chart hover-lift-sm transition-base" data-aos="zoom-in" data-aos-delay="140" role="img" aria-label="Five recommendation petals surrounding a central goal: Protect adolescent health and wellbeing.">
+                      <!-- Decorative ring -->
+                      <div class="petal-ring spin-slow" aria-hidden="true"></div>
+
+                      <!-- Center node 
+                        <div class="petal-center">
+                          <article class="petal-card bg-gradient-emerald icon-spin-on-hover hover-glow">
+                            <div class="petal-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                            <div class="petal-title">Protect adolescent health & wellbeing</div>
+                          </article>
+                        </div> 
+                      -->
+
+                      <!-- Petals (5) equally spaced -->
+                      ${[
+                        {
+                          title:'Protect adolescent health & wellbeing',
+                          text:'',
+                          icon:'fa-scale-balanced', cls:'bg-gradient-teal', pos:'petal-pos-1',
+                          delay:100
+                        },
+                        {
+                          title:'Rights-based & person-centred',
+                          text:'Emphasise adolescents’ rights to health and wellbeing; promote participation, identity expression, safe access, and protection from harm.',
+                          icon:'fa-scale-balanced', cls:'bg-gradient-purple', pos:'petal-pos-1',
+                          delay:150
+                        },
+                        {
+                          title:'Confront systemic inequities',
+                          text:'Address gender, race and geography to ensure equal opportunities and targeted support for disadvantaged groups.',
+                          icon:'fa-people-arrows-left-right', cls:'bg-gradient-rose', pos:'petal-pos-2',
+                          delay:200
+                        },
+                        {
+                          title:'Meaningfully involve adolescents',
+                          text:'Co-design and engage adolescents in health initiatives—empowering individuals and strengthening societal outcomes.',
+                          icon:'fa-people-group', cls:'bg-gradient-blue', pos:'petal-pos-3',
+                          delay:250
+                        },
+                        {
+                          title:'Evidence-informed & developmentally tailored',
+                          text:'Use evolving evidence and tailor to developmental needs while considering complex determinants across contexts.',
+                          icon:'fa-microscope', cls:'bg-gradient-cyan', pos:'petal-pos-4',
+                          delay:300
+                        },
+                        {
+                          title:'Multisectoral approach',
+                          text:'Coordinate mental health, nutrition, sexual and reproductive health, and violence prevention to amplify gains.',
+                          icon:'fa-diagram-project', cls:'bg-gradient-teal', pos:'petal-pos-5',
+                          delay:350
+                        }
+                      ].map((p)=>`
+                        <div class="aos-init aos-animate"  "data-aos="fade-up" data-aos-delay="${p.delay}">
+                          <article class="recs-petal-card ${p.cls} mb-2 icon-spin-on-hover hover-glow">
+                            <div class="timeline-card-icon animate-float"><i class="fa-solid ${p.icon}"></i></div>
+                            <div class="timeline-card-title">${p.title}</div>
+                            <p class="timeline-card-text">${p.text}</p>
+                          </article>
+                        </div>
+                        
+                      `).join('')}
+                    </div>
                   </div>
                 </section>
               </div>`
