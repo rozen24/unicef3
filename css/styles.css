@@ -1643,10 +1643,18 @@ img {
   color: #0f172a; /* slate-900 */
   font-weight: 600;
   gap: .5rem;
+  transition: all .3s ease;
 }
-.dashboard-course-accordion .accordion-button:hover {
+.dashboard-course-accordion .accordion-button:hover  {
   background: var(--hero-gradient);
   transform: translateY(-1px);
+  color: #ffffff;
+}
+.dashboard-course-accordion .accordion-button:hover .chapter-progress-pill {
+  color: #ffffff;
+}
+.dashboard-course-accordion .accordion-button:hover .accordion-button::after {
+  color: #ffffff !important;
 }
 .dashboard-course-accordion .accordion-button:focus {
    background: var(--hero-gradient);

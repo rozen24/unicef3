@@ -1311,6 +1311,121 @@ const coursesData = [
               </div>`
           }
         ]
+      },
+      {
+        id: 'ch-3',
+        title: 'Chapter-3: Changes during adolescence and puberty',
+        lessons: []
+      },
+      {
+        id: 'ch-4',
+        title: 'Chapter-4: Menstrual Health and Hygiene Management',
+        lessons: []
+      },
+      {
+        id: 'ch-5',
+        title: 'Chapter-5: Wet dream (ejaculation) Hygiene and Management',
+        lessons: []
+      },
+      {
+        id: 'ch-7',
+        title: 'Chapter-7: Causes, consequences and prevention of early child marriage',
+        lessons: []
+      },
+      {
+        id: 'ch-8',
+        title: 'Chapter-8: Adolescent Pregnancy',
+        lessons: []
+      },
+      {
+        id: 'ch-9',
+        title: 'Chapter-9: Adolescent Family Planning',
+        lessons: []
+      },
+      {
+        id: 'ch-10',
+        title: 'Chapter-10: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)',
+        lessons: []
+      },
+      {
+        id: 'ch-11',
+        title: 'Chapter-11: HPV vaccination and prevention of cervical cancer in adolescents',
+        lessons: []
+      },
+      {
+        id: 'ch-12',
+        title: 'Chapter-12: Polycystic ovary syndrome (PCOS) in adolescents',
+        lessons: []
+      },
+      {
+        id: 'ch-13',
+        title: 'Chapter-13: Adolescent nutrition: Nutritional deficiency and prevention',
+        lessons: []
+      },
+      {
+        id: 'ch-14',
+        title: 'Chapter-14: Non-communicable diseases (NCDs) in adolescents and their prevention',
+        lessons: []
+      },
+      {
+        id: 'ch-15',
+        title: 'Chapter-15: Sex, Gender and Gender Discrimination',
+        lessons: []
+      },
+      {
+        id: 'ch-16',
+        title: 'Chapter-16: Violence Related to Adolescents',
+        lessons: []
+      },
+      {
+        id: 'ch-17',
+        title: 'Chapter-17: Adolescent Mental Health -  Problems and Solutions',
+        lessons: []
+      },
+      {
+        id: 'ch-18',
+        title: 'Chapter-18: Psychosocial changes and Psychosocial complications during adolescence',
+        lessons: []
+      },
+      {
+        id: 'ch-19',
+        title: 'Chapter-19: Psychosocial support for adolescents',
+        lessons: []
+      },
+      {
+        id: 'ch-20',
+        title: 'Chapter-20: Drug addiction - Consequences and prevention',
+        lessons: []
+      },
+      {
+        id: 'ch-21',
+        title: 'Chapter-21: Special care for vulnerable adolescents',
+        lessons: []
+      },
+      {
+        id: 'ch-22',
+        title: 'Chapter-22: Climate change and special attention to adolescents',
+        lessons: []
+      },
+      {
+        id: 'ch-23',
+        title: 'Chapter-23: Injury prevention and first aid for adolescents',
+        lessons: []
+      },
+      {
+        id: 'ch-24',
+        title: 'Chapter-24: Life skills, morality, and values',
+        lessons: []
+      },
+      {
+        id: 'ch-25',
+        title: 'Chapter-25: Communication and counseling with adolescents',
+        lessons: []
+      },
+      {
+        id: 'ch-26',
+        title: 'Chapter-26: Human Rights, Child Rights, and Sexual and Reproductive Health Rights',
+        lessons: []
       }
     ],
     // Flat lessons kept for backward compatibility (legacy renderers)
