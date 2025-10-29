@@ -6156,6 +6156,7 @@ body {
 .dashboard-main {
   padding-top: clamp(100px, 7vw, 150px);
   padding-bottom: clamp(80px, 10vw, 120px);
+  background: var(--hero-gradient);
 }
 
 .btn-logout {
@@ -6220,8 +6221,7 @@ body {
   overflow: hidden;
   border-radius: var(--radius-xl);
   padding: clamp(2.8rem, 6vw, 3.6rem);
-  background: var(--hero-gradient);
-  box-shadow: var(--shadow-bold);
+  box-shadow: var(--shadow-sm);
   margin-bottom: clamp(48px, 7vw, 72px);
 }
 
@@ -6229,7 +6229,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.18), transparent 10%);
+  /* background: linear-gradient(160deg, rgba(255, 255, 255, 0.18), transparent 10%); */
   pointer-events: none;
 }
 
@@ -6253,17 +6253,25 @@ body {
   margin-bottom: 1.4rem;
 }
 
-.dashboard-title {
-  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
+dashboard-titled-title {
+    font-size: clamp(2.2rem, 3.8vw, 2.2rem) !important;
+    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
-.dashboard-subtitle {
-  font-size: 1.05rem;
-  color: rgba(229, 242, 255, 0.85);
-  max-width: 32rem;
-  margin-bottom: 1.6rem;
+.dashboard-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 1.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
 }
 
 .dashboard-meta {
@@ -7300,6 +7308,7 @@ body {
 
   .dashboard-main {
     padding-top: 7.5rem;
+    background: var(--hero-gradient);
   }
 
   .dashboard-hero {
@@ -7410,6 +7419,7 @@ body {
 
   .dashboard-main {
     padding-top: 6.5rem;
+    background: var(--hero-gradient);
   }
 
   .dashboard-hero {
@@ -7602,7 +7612,6 @@ body {
 .dark-mode .dashboard-hero {
   background: linear-gradient(135deg, #041128 0%, #0b2c56 55%, #143d77 100%);
   color: #e8f3ff;
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.45);
 }
 
 .dark-mode .dashboard-hero::after {

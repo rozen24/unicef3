@@ -1472,21 +1472,23 @@ class YouthHealthLMS {
         <main class="dashboard-main">
           <div class="container">
             <section class="dashboard-hero">
+               <!-- Background ornaments -->
+              <div class="bg-ornaments" aria-hidden="true">
+                <span class="orb orb-1"></span>
+                <span class="orb orb-2"></span>
+                <span class="orb orb-3"></span>
+              </div>
               <div class="row g-4 align-items-center">
                 <div class="col-lg-7">
-                  <span class="dashboard-kicker"><i class="fa-solid fa-sun"></i> UNICEF mission control</span>
-                  <h1 class="dashboard-title">Welcome To YHAP, ${userFirstName}</h1>
+                  <span class="dashboard-kicker dashboard-title"><i class="fa-solid fa-sun"></i> Welcome To YHAP</span>
                   <p class="dashboard-subtitle">
                     You're ${overallProgress}% through your Young Health Ambassador pathway. Keep up the momentum with curated lessons, trackable impact, and certificates powered by UNICEF and MOHFW.
                   </p>
                   <div class="dashboard-meta">
-                    <span class="meta-pill"><i class="fa-solid fa-id-badge"></i>${
-                      this.currentUser.id
-                    }</span>
                     <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i>Joined ${joinedDate}</span>
-                    <span class="meta-pill"><i class="fa-solid fa-book-open"></i>${formatNumber(
-                      totalLessons
-                    )} total lessons</span>
+                    <button class="btn btn-primary btn-lg" onclick="app.selectCourse('${actionCourseId}')">
+                            ${actionLabel} <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                          </button>
                   </div>
                   <div class="dashboard-actions">
                     ${
@@ -1507,10 +1509,6 @@ class YouthHealthLMS {
                             Invite a friend <i class="fa-solid fa-user-plus ms-2"></i>
                           </button>`
                     }
-                    <div class="action-meta">
-                      <span>${actionSubLabel}</span>
-                      <span>${actionSecondary}</span>
-                    </div>
                   </div>
                 </div>
                 <div class="col-lg-5">
