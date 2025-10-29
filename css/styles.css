@@ -1724,6 +1724,40 @@ img {
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
+/* Module grid cards (dashboard) */
+.module-card {
+  width: 100%;
+  border-radius: 14px;
+  padding: 1rem 1rem;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.module-card__icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: rgba(0,0,0,0.06); }
+.module-card__title { text-align: left; font-weight: 700; color: #0f172a; }
+.module-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.module-card:disabled,
+.module-card[disabled] { cursor: not-allowed; opacity: .7; transform: none; box-shadow: none; }
+
+/* State variants */
+.module-card--locked { background: linear-gradient(135deg, rgba(2,6,23,0.03), rgba(2,6,23,0.02)); }
+.module-card--locked .module-card__icon { background: rgba(2,6,23,0.06); color: #64748b; }
+.module-card--locked .module-card__title { color: #64748b; }
+
+.module-card--unlocked { background: linear-gradient(135deg, rgba(219,234,254,0.6), rgba(191,219,254,0.55)); }
+.module-card--unlocked .module-card__icon { background: rgba(59,130,246,0.15); color: #1d4ed8; }
+
+.module-card--completed { background: linear-gradient(135deg, rgba(187,247,208,0.75), rgba(167,243,208,0.65)); }
+.module-card--completed .module-card__icon { background: rgba(16,185,129,0.16); color: #047857; }
+
+/* Locked lesson chip visual in sidebar */
+.lesson-item.is-locked { opacity: .7; cursor: not-allowed; }
+
 /* ==================== FOOTER ==================== */
 .footer {
   background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);

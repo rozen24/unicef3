@@ -25,6 +25,25 @@ class YouthHealthLMS {
     try {
       const saved = localStorage.getItem("currentUser");
       if (saved) this.currentUser = JSON.parse(saved);
+      // Restore last app state if logged in
+      if (this.currentUser) {
+        const stateRaw = localStorage.getItem("appState");
+        if (stateRaw) {
+          try {
+            const state = JSON.parse(stateRaw);
+            if (state && state.view) {
+              this.currentView = state.view || this.currentView;
+              if (state.courseId && Array.isArray(typeof coursesData !== 'undefined' ? coursesData : [])) {
+                const course = coursesData.find((c) => c.id === state.courseId);
+                if (course) this.selectedCourse = course;
+              }
+              if (Number.isInteger(state.currentChapterIndex)) this.currentChapterIndex = state.currentChapterIndex;
+              if (Number.isInteger(state.currentLessonIndex)) this.currentLessonIndex = state.currentLessonIndex;
+              this.showQuiz = !!state.showQuiz;
+            }
+          } catch (_) {}
+        }
+      }
     } catch (_) {}
     this.render();
   }
@@ -32,6 +51,7 @@ class YouthHealthLMS {
   navigateTo(view) {
     this.currentView = view;
     this.render();
+    this.saveAppState();
   }
 
   // Initialize or refresh AOS animations after each render
@@ -288,6 +308,7 @@ class YouthHealthLMS {
 
       this.navigateTo("course");
     }
+    this.saveAppState();
   }
 
   viewCertificate(courseId) {
@@ -336,14 +357,22 @@ class YouthHealthLMS {
 
     if (passed && !progress.completedlessions.includes(lessionId)) {
       progress.completedlessions.push(lessionId);
-
-      // Check if all lessions/lessons completed
-      const total = this.selectedCourse.lessons
-        ? this.selectedCourse.lessons.length
-        : this.selectedCourse.lessions.length;
-      if (progress.completedlessions.length === total) {
-        progress.certificateIssued = true;
-      }
+      // Certificate issuance rules
+      // If course has chapters, only issue certificate when ALL module quizzes are passed
+      // Else, for flat lessons, issue when all lessons completed
+      try {
+        const selected = this.selectedCourse || (typeof coursesData !== 'undefined' ? coursesData.find(c=>c.id===courseId) : null);
+        if (selected && Array.isArray(selected.chapters) && selected.chapters.length > 0) {
+          const doneSet = new Set(progress.completedlessions || []);
+          const allQuizzesPassed = selected.chapters.every(ch => doneSet.has(`${ch.id}-quiz`));
+          progress.certificateIssued = !!allQuizzesPassed;
+        } else {
+          const total = selected?.lessons ? selected.lessons.length : selected?.lessions ? selected.lessions.length : 0;
+          if (total > 0 && progress.completedlessions.length >= total) {
+            progress.certificateIssued = true;
+          }
+        }
+      } catch (_) {}
     }
 
     localStorage.setItem(key, JSON.stringify(progress));
@@ -569,6 +598,23 @@ class YouthHealthLMS {
 
     // Initialize image zoom bindings on every render
     try { this.initImageZoom(); } catch (_) {}
+
+    // Persist state after each render
+    this.saveAppState();
+  }
+
+  // Persist minimal app state to survive refresh
+  saveAppState() {
+    try {
+      const state = {
+        view: this.currentView,
+        courseId: this.selectedCourse?.id || null,
+        currentChapterIndex: this.currentChapterIndex || 0,
+        currentLessonIndex: this.currentLessonIndex || 0,
+        showQuiz: !!this.showQuiz,
+      };
+      localStorage.setItem("appState", JSON.stringify(state));
+    } catch (_) {}
   }
 
   // Initialize lesson-specific enhancements like counters and charts when elements are present
@@ -1564,86 +1610,48 @@ class YouthHealthLMS {
             <section class="dashboard-chapters my-5">
               <div class="dashboard-section-header">
                 <div>
-                  <span class="section-kicker">Browse chapters</span>
-                  <h2>Jump to any chapter or lesson</h2>
-                  <p>Pick a chapter and open a specific lesson directly in the slider view.</p>
+                  <span class="section-kicker">Browse modules</span>
+                  <h2>Jump to any module</h2>
+                  <p>Start with Module 1. Each next module unlocks after you pass the previous module’s quiz.</p>
                 </div>
               </div>
-              <div class="row g-4">
-                ${coursesData
-                  .map((course) => {
-                    const hasChapters =
-                      Array.isArray(course.chapters) &&
-                      course.chapters.length > 0;
-                    if (!hasChapters) return "";
-                    const cId = String(course.id).replace(
-                      /[^a-zA-Z0-9_-]/g,
-                      ""
-                    );
-                    const progress =
-                      this.getUserProgress(course.id) ||
-                      this.initializeProgress(course.id);
-                    const doneSet = new Set(progress.completedlessions || []);
+              ${coursesData
+                .map((course) => {
+                  const hasChapters = Array.isArray(course.chapters) && course.chapters.length > 0;
+                  if (!hasChapters) return "";
+                  const progress = this.getUserProgress(course.id) || this.initializeProgress(course.id);
+                  const doneSet = new Set(progress.completedlessions || []);
+
+                  const moduleCards = course.chapters.map((ch, ci) => {
+                    const chapterLessonIds = (ch.lessons || []).map((l) => l.id);
+                    const contentDone = chapterLessonIds.every((id) => doneSet.has(id));
+                    const moduleQuizId = `${ch.id}-quiz`;
+                    const quizPassed = doneSet.has(moduleQuizId);
+                    const completed = contentDone && quizPassed;
+                    const unlocked = ci === 0 || (course.chapters[ci - 1] && doneSet.has(`${course.chapters[ci - 1].id}-quiz`));
+                    const state = completed ? 'completed' : unlocked ? 'unlocked' : 'locked';
+                    const icon = completed ? 'fa-check-circle' : unlocked ? 'fa-unlock' : 'fa-lock';
+                    const stateCls = completed ? 'module-card--completed' : unlocked ? 'module-card--unlocked' : 'module-card--locked';
+                    const click = unlocked || completed ? `onclick=\"app.openCourseChapterLesson('${course.id}', ${ci}, 0)\"` : '';
                     return `
-                    <div class="col-12">
-                      <div class="course-chapters-card">
-                        <div class="course-chapters-header">
-                          <h3 class="mb-1">${course.title}</h3>
-                          <span class="text-muted">${
-                            course.chapters.length
-                          } chapter${
-                      course.chapters.length > 1 ? "s" : ""
-                    }</span>
-                        </div>
-                        <div class="accordion dashboard-course-accordion" id="dash-acc-${cId}">
-                          ${course.chapters
-                            .map((ch, ci) => {
-                              const total = (ch.lessons || []).length;
-                              const done = (ch.lessons || []).reduce(
-                                (acc, ls) => acc + (doneSet.has(ls.id) ? 1 : 0),
-                                0
-                              );
-                              const itemId = `dash-col-${cId}-${ci}`;
-                              return `
-                              <div class="accordion-item">
-                                <h2 class="accordion-header" id="dash-head-${cId}-${ci}">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${itemId}" aria-controls="${itemId}">
-                                    <span class="chapter-badge me-2">${
-                                      ci + 1
-                                    }</span>
-                                    <span class="fw-semibold">${ch.title}</span>
-                                    <span class="ms-auto chapter-progress-pill">${done}/${total}</span>
-                                  </button>
-                                </h2>
-                                <div id="${itemId}" class="accordion-collapse collapse" aria-labelledby="dash-head-${cId}-${ci}" data-bs-parent="#dash-acc-${cId}">
-                                  <div class="accordion-body">
-                                    <div class="chapter-lessons">
-                                      ${(ch.lessons || [])
-                                        .map(
-                                          (ls, li) => `
-                                        <button class="lesson-tag" onclick="app.openCourseChapterLesson('${
-                                          course.id
-                                        }', ${ci}, ${li})">
-                                          <i class="fa-solid ${
-                                            ls.icon || "fa-book"
-                                          } me-1"></i>${ls.title}
-                                        </button>
-                                      `
-                                        )
-                                        .join("")}
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>`;
-                            })
-                            .join("")}
-                        </div>
+                      <div class=\"col-12 col-md-6 col-lg-3\">
+                        <button class=\"module-card ${stateCls}\" ${click} ${!(unlocked||completed)?'disabled':''}>
+                          <span class=\"module-card__icon\"><i class=\"fa-solid ${icon}\"></i></span>
+                          <span class=\"module-card__title\">${ch.title.replace(/^Module-\d+:\s*/,'')}</span>
+                        </button>
+                      </div>`;
+                  }).join('');
+
+                  return `
+                    <div class=\"course-chapters-card\">
+                      <div class=\"course-chapters-header\">
+                        <h3 class=\"mb-1\">${course.title}</h3>
+                        <span class=\"text-muted\">${course.chapters.length} module${course.chapters.length>1?'s':''}</span>
                       </div>
-                    </div>
-                  `;
-                  })
-                  .join("")}
-              </div>
+                      <div class=\"row g-3\">${moduleCards}</div>
+                    </div>`;
+                })
+                .join("")}
             </section>
 
             <section class="dashboard-courses">
@@ -2274,16 +2282,43 @@ class YouthHealthLMS {
         Math.max(0, this.currentChapterIndex || 0),
         totalChapters - 1
       );
-      const chapterLessons = course.chapters[chIndex].lessons || [];
-      const totalLessons = chapterLessons.length;
+      const rawLessons = course.chapters[chIndex].lessons || [];
+      // Build a synthetic module-level quiz as the last lesson by aggregating all lesson quizzes
+      const aggregatedQuestions = [];
+      rawLessons.forEach((ls, idx) => {
+        if (ls.quiz && Array.isArray(ls.quiz.questions)) {
+          ls.quiz.questions.forEach((q, qi) => {
+            aggregatedQuestions.push({
+              ...q,
+              id: `${ls.id}-q${qi+1}`
+            });
+          });
+        }
+      });
+      const moduleQuizLesson = {
+        id: `${course.chapters[chIndex].id}-quiz`,
+        title: 'Quiz',
+        icon: 'fa-circle-question',
+        gradientClass: 'bg-gradient-emerald',
+        audioFile: '',
+        quiz: { passingScore: 80, questions: aggregatedQuestions },
+        content: `
+          <div class="lesson-slide">
+            <h2 class="slide-title gradient-text" data-aos="fade-up">Module Quiz</h2>
+            <p class="text-muted" data-aos="fade-up" data-aos-delay="60">Answer the questions to complete this module. Passing score is 80%.</p>
+          </div>`
+      };
+      const chapterLessons = rawLessons.slice();
+      const viewLessons = chapterLessons.concat(moduleQuizLesson);
+      const totalLessons = viewLessons.length;
       // Align legacy lesson-driven quiz/navigation to current chapter
-      this.selectedCourse.lessons = chapterLessons;
+      this.selectedCourse.lessons = viewLessons;
 
       const activeIndex = Math.min(
         Math.max(0, this.currentLessonIndex || 0),
         Math.max(0, totalLessons - 1)
       );
-      const currentLesson = chapterLessons[activeIndex];
+  const currentLesson = viewLessons[activeIndex];
       const hasPrevLesson = activeIndex > 0;
       const hasNextLesson = activeIndex < totalLessons - 1;
       const hasPrevChapter = chIndex > 0;
@@ -2298,6 +2333,18 @@ class YouthHealthLMS {
       const quizScore = currentLesson
         ? progress.quizScores?.[currentLesson.id]
         : undefined;
+
+      // Auto-complete content lessons upon viewing to unlock the next one; quiz is handled separately
+      try {
+        const isModuleQuiz = currentLesson && typeof currentLesson.id === 'string' && currentLesson.id.endsWith('-quiz');
+        if (currentLesson && !isModuleQuiz && !lessonCompleted) {
+          progress.completedlessions = Array.isArray(progress.completedlessions) ? progress.completedlessions : [];
+          progress.completedlessions.push(currentLesson.id);
+          completedIds.add(currentLesson.id);
+          const key = `progress-${this.currentUser.id}-${course.id}`;
+          localStorage.setItem(key, JSON.stringify(progress));
+        }
+      } catch (_) {}
 
       const totalCourseLessons = course.chapters.reduce(
         (sum, ch) => sum + (ch.lessons?.length || 0),
@@ -2326,7 +2373,11 @@ class YouthHealthLMS {
         Math.min(100, Math.max(0, chapterProgressRaw))
       );
 
-      if (this.showQuiz) return this.renderQuiz();
+  if (this.showQuiz) return this.renderQuiz();
+
+  // Determine if module quiz is passed to allow moving to next module
+  const moduleQuizId = `${course.chapters[chIndex].id}-quiz`;
+  const modulePassed = completedIds.has(moduleQuizId);
 
       // Icon mapping for chapters (fallback rotates through when out of range)
       const chapterIcons = [
@@ -2375,19 +2426,19 @@ class YouthHealthLMS {
                       .map((ls, li) => {
                         const isActive = ci === chIndex && li === activeIndex;
                         const isDone = completedIds.has(ls.id);
+                        const isUnlocked = li === 0 || completedIds.has((ch.lessons || [])[li - 1]?.id);
+                        const lockIcon = isDone ? 'fa-check' : (isUnlocked ? 'fa-minus' : 'fa-lock');
+                        const maybeOnclick = isUnlocked ? `onclick=\"app.changeChapterLesson(${ci}, ${li})\"` : '';
+                        const ariaDisabled = isUnlocked ? '' : 'aria-disabled="true"';
                         return `
                       <li class="lesson-chip list-group-item lesson-item d-flex align-items-center my-1 ${
                         isActive ? "is-active" : ""
-                      }" onclick="app.changeChapterLesson(${ci}, ${li})">
+                      } ${isUnlocked ? '' : 'is-locked'}" ${maybeOnclick} ${ariaDisabled}>
                         <span class="lesson-icon"><i class="fa-solid ${
                           ls.icon || "fa-book"
                         }"></i></span>
                         <span class="lesson-title">${ls.title}</span>
-                        ${
-                          isDone
-                            ? '<span class="lesson-state ms-auto"><i class="fa-solid fa-check"></i></span>'
-                            : '<span class="lesson-state ms-auto"><i class="fa-solid fa-minus"></i></span>'
-                        }
+                        <span class="lesson-state ms-auto"><i class="fa-solid ${lockIcon}"></i></span>
                       </li>`;
                       })
                       .join("")}
@@ -2428,14 +2479,14 @@ class YouthHealthLMS {
                   </div>
                   ${
                     totalLessons > 0
-                      ? `<div class="lesson-progress__caption">Chapter ${
+                      ? `<div class="lesson-progress__caption">Module ${
                           chIndex + 1
                         } progress: ${chapterProgressDisplay}%</div>`
                       : ""
                   }
                 </div>
                 <div class="lesson-hero__counts">
-                  <span class="lesson-pill">Chapter ${
+                  <span class="lesson-pill">Module ${
                     chIndex + 1
                   } of ${totalChapters}</span>
                   <span class="lesson-pill">Lesson ${
@@ -2487,6 +2538,7 @@ class YouthHealthLMS {
                           ? currentLesson.content
                           : "<p>No lesson selected.</p>"
                       }
+                      ${currentLesson && currentLesson.id.endsWith('-quiz') ? '' : `
                       <div class="inline-lesson-nav">
                         <button class="btn btn-outline-primary" ${
                           hasPrevLesson
@@ -2502,68 +2554,40 @@ class YouthHealthLMS {
                         }>
                           Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
                         </button>
-                      </div>
+                      </div>`}
                     </div>
 
-                    ${
-                      currentLesson
-                        ? `
-                    <div class="lesson-quiz-card ${
-                      lessonCompleted ? "lesson-quiz-card--complete" : ""
-                    }">
-                      <div class="lesson-quiz-card__header">
-                        <span class="lesson-quiz-badge"><i class="fa-solid fa-circle-question"></i> Module quiz</span>
-                        <span class="lesson-quiz-score">Passing score: ${
-                          currentLesson.quiz.passingScore
-                        }%</span>
-                      </div>
-                      ${
-                        quizScore !== undefined
-                          ? `
-                        <div class="lesson-quiz-status">
-                          <i class="fa-solid ${
-                            lessonCompleted
-                              ? "fa-check-circle"
-                              : "fa-rotate-right"
-                          }"></i>
-                          <div>
-                            <p class="lesson-quiz-status__title">Latest attempt: ${quizScore}%</p>
-                            <p class="lesson-quiz-status__meta">${
-                              lessonCompleted
-                                ? "Great job! You can retake the quiz to boost your score."
-                                : "Give it another try to reach the passing score."
-                            }</p>
-                          </div>
-                        </div>`
-                          : ""
-                      }
-                      <p class="lesson-quiz-text">
-                        Test your understanding and unlock the next milestone. Score at least ${
-                          currentLesson.quiz.passingScore
-                        }% to mark this lesson as complete.
-                      </p>
-                      <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
-                        ${lessonCompleted ? "Retake quiz" : "Start quiz"}
-                        <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                      </button>
-                    </div>`
-                        : ""
-                    }
+                    ${currentLesson && currentLesson.id.endsWith('-quiz') ? `
+                      <div class="lesson-quiz-card ${lessonCompleted ? 'lesson-quiz-card--complete' : ''}">
+                        <div class="lesson-quiz-card__header">
+                          <span class="lesson-quiz-badge"><i class="fa-solid fa-circle-question"></i> Module quiz</span>
+                          <span class="lesson-quiz-score">Passing score: ${currentLesson.quiz.passingScore}%</span>
+                        </div>
+                        ${quizScore !== undefined ? `
+                          <div class="lesson-quiz-status">
+                            <i class="fa-solid ${lessonCompleted ? 'fa-check-circle' : 'fa-rotate-right'}"></i>
+                            <div>
+                              <p class="lesson-quiz-status__title">Latest attempt: ${quizScore}%</p>
+                              <p class="lesson-quiz-status__meta">${lessonCompleted ? 'Great job! You can retake the quiz to boost your score.' : 'Give it another try to reach the passing score.'}</p>
+                            </div>
+                          </div>` : ''}
+                        <p class="lesson-quiz-text">You must pass this quiz to unlock the next module.</p>
+                        <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
+                          ${lessonCompleted ? 'Retake quiz' : 'Start quiz'}
+                          <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                        </button>
+                      </div>` : ''}
 
-                      <div class="chapter-nav-actions">
+                      <div class="chapter-nav-actions" ${modulePassed ? '' : 'style="display:none"'}>
                         <button class="btn btn-outline-primary" ${
-                          hasPrevChapter
-                            ? 'onclick="app.previousChapter()"'
-                            : "disabled"
+                          hasPrevChapter ? 'onclick="app.previousChapter()"' : 'disabled'
                         }>
-                          <i class="fa-solid fa-arrow-left me-2"></i>Previous chapter
+                          <i class="fa-solid fa-arrow-left me-2"></i>Previous module
                         </button>
                         <button class="btn btn-primary" ${
-                          hasNextChapter
-                            ? 'onclick="app.nextChapter()"'
-                            : "disabled"
+                          hasNextChapter ? 'onclick="app.nextChapter()"' : 'disabled'
                         }>
-                          Next chapter<i class="fa-solid fa-arrow-right ms-2"></i>
+                          Next module<i class="fa-solid fa-arrow-right ms-2"></i>
                         </button>
                       </div>
                   </article>
@@ -2803,6 +2827,16 @@ class YouthHealthLMS {
       const lessons =
         this.selectedCourse.chapters[this.currentChapterIndex]?.lessons || [];
       this.selectedCourse.lessons = lessons;
+      // Enforce sequential unlocking: allow first lesson or when previous is completed
+      try {
+        const progress = this.getUserProgress(this.selectedCourse.id) || this.initializeProgress(this.selectedCourse.id);
+        const prevId = lessons[Math.max(0, (lessonIndex || 0) - 1)]?.id;
+        const isUnlocked = (lessonIndex || 0) === 0 || (prevId && (progress.completedlessions || []).includes(prevId));
+        if (!isUnlocked) {
+          // Do not navigate to locked lessons
+          return;
+        }
+      } catch (_) {}
       this.currentLessonIndex = Math.min(
         Math.max(0, lessonIndex || 0),
         Math.max(0, lessons.length - 1)

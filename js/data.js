@@ -13,7 +13,7 @@ const coursesData = [
     chapters: [
       {
         id: 'ch-1',
-        title: 'Chapter-1: Introduction of Young Health Ambassador Program (YHAP)',
+  title: 'Module-1: Introduction of Young Health Ambassador Program (YHAP)',
         lessons: [
           // Understanding YHAP
           {
@@ -284,7 +284,7 @@ const coursesData = [
       },
       {
         id: 'ch-2',
-        title: 'Chapter-2: Global and Bangladesh Scenario',
+  title: 'Module-2: Global and Bangladesh Scenario',
         lessons: [
           {
             id: 'ch2-lesson-1',
@@ -1314,117 +1314,117 @@ const coursesData = [
       },
       {
         id: 'ch-3',
-        title: 'Chapter-3: Changes during adolescence and puberty',
+  title: 'Module-3: Changes during adolescence and puberty',
         lessons: []
       },
       {
         id: 'ch-4',
-        title: 'Chapter-4: Menstrual Health and Hygiene Management',
+  title: 'Module-4: Menstrual Health and Hygiene Management',
         lessons: []
       },
       {
         id: 'ch-5',
-        title: 'Chapter-5: Wet dream (ejaculation) Hygiene and Management',
+  title: 'Module-5: Wet dream (ejaculation) Hygiene and Management',
         lessons: []
       },
       {
         id: 'ch-7',
-        title: 'Chapter-7: Causes, consequences and prevention of early child marriage',
+  title: 'Module-7: Causes, consequences and prevention of early child marriage',
         lessons: []
       },
       {
         id: 'ch-8',
-        title: 'Chapter-8: Adolescent Pregnancy',
+  title: 'Module-8: Adolescent Pregnancy',
         lessons: []
       },
       {
         id: 'ch-9',
-        title: 'Chapter-9: Adolescent Family Planning',
+  title: 'Module-9: Adolescent Family Planning',
         lessons: []
       },
       {
         id: 'ch-10',
-        title: 'Chapter-10: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)',
+  title: 'Module-10: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)',
         lessons: []
       },
       {
         id: 'ch-11',
-        title: 'Chapter-11: HPV vaccination and prevention of cervical cancer in adolescents',
+  title: 'Module-11: HPV vaccination and prevention of cervical cancer in adolescents',
         lessons: []
       },
       {
         id: 'ch-12',
-        title: 'Chapter-12: Polycystic ovary syndrome (PCOS) in adolescents',
+  title: 'Module-12: Polycystic ovary syndrome (PCOS) in adolescents',
         lessons: []
       },
       {
         id: 'ch-13',
-        title: 'Chapter-13: Adolescent nutrition: Nutritional deficiency and prevention',
+  title: 'Module-13: Adolescent nutrition: Nutritional deficiency and prevention',
         lessons: []
       },
       {
         id: 'ch-14',
-        title: 'Chapter-14: Non-communicable diseases (NCDs) in adolescents and their prevention',
+  title: 'Module-14: Non-communicable diseases (NCDs) in adolescents and their prevention',
         lessons: []
       },
       {
         id: 'ch-15',
-        title: 'Chapter-15: Sex, Gender and Gender Discrimination',
+  title: 'Module-15: Sex, Gender and Gender Discrimination',
         lessons: []
       },
       {
         id: 'ch-16',
-        title: 'Chapter-16: Violence Related to Adolescents',
+  title: 'Module-16: Violence Related to Adolescents',
         lessons: []
       },
       {
         id: 'ch-17',
-        title: 'Chapter-17: Adolescent Mental Health -  Problems and Solutions',
+  title: 'Module-17: Adolescent Mental Health -  Problems and Solutions',
         lessons: []
       },
       {
         id: 'ch-18',
-        title: 'Chapter-18: Psychosocial changes and Psychosocial complications during adolescence',
+  title: 'Module-18: Psychosocial changes and Psychosocial complications during adolescence',
         lessons: []
       },
       {
         id: 'ch-19',
-        title: 'Chapter-19: Psychosocial support for adolescents',
+  title: 'Module-19: Psychosocial support for adolescents',
         lessons: []
       },
       {
         id: 'ch-20',
-        title: 'Chapter-20: Drug addiction - Consequences and prevention',
+  title: 'Module-20: Drug addiction - Consequences and prevention',
         lessons: []
       },
       {
         id: 'ch-21',
-        title: 'Chapter-21: Special care for vulnerable adolescents',
+  title: 'Module-21: Special care for vulnerable adolescents',
         lessons: []
       },
       {
         id: 'ch-22',
-        title: 'Chapter-22: Climate change and special attention to adolescents',
+  title: 'Module-22: Climate change and special attention to adolescents',
         lessons: []
       },
       {
         id: 'ch-23',
-        title: 'Chapter-23: Injury prevention and first aid for adolescents',
+  title: 'Module-23: Injury prevention and first aid for adolescents',
         lessons: []
       },
       {
         id: 'ch-24',
-        title: 'Chapter-24: Life skills, morality, and values',
+  title: 'Module-24: Life skills, morality, and values',
         lessons: []
       },
       {
         id: 'ch-25',
-        title: 'Chapter-25: Communication and counseling with adolescents',
+  title: 'Module-25: Communication and counseling with adolescents',
         lessons: []
       },
       {
         id: 'ch-26',
-        title: 'Chapter-26: Human Rights, Child Rights, and Sexual and Reproductive Health Rights',
+  title: 'Module-26: Human Rights, Child Rights, and Sexual and Reproductive Health Rights',
         lessons: []
       }
     ],
