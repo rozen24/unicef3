@@ -21,6 +21,18 @@ class YouthHealthLMS {
     this.init();
   }
 
+  // Password complexity: at least 6 chars, include a digit and a special character
+  isStrongPassword(pw) {
+    try {
+      if (!pw || pw.length < 6) return false;
+      const hasDigit = /[0-9]/.test(pw);
+      const hasSpecial = /[^A-Za-z0-9]/.test(pw);
+      return hasDigit && hasSpecial;
+    } catch (_) {
+      return false;
+    }
+  }
+
   init() {
     try {
       const saved = localStorage.getItem("currentUser");
@@ -32,6 +44,10 @@ class YouthHealthLMS {
           try {
             const state = JSON.parse(stateRaw);
             if (state && state.view) {
+          const currentPw = (document.getElementById("profileCurrentPassword")?.value || "").trim();
+          const newPw = (document.getElementById("profileNewPassword")?.value || "").trim();
+          const confirmPw = (document.getElementById("profileConfirmPassword")?.value || "").trim();
+          const wantsPwChange = !!(currentPw || newPw || confirmPw);
               this.currentView = state.view || this.currentView;
               if (state.courseId && Array.isArray(typeof coursesData !== 'undefined' ? coursesData : [])) {
                 const course = coursesData.find((c) => c.id === state.courseId);
@@ -73,7 +89,6 @@ class YouthHealthLMS {
       }
     } catch (_) {}
   }
-
   // Image zoom overlay for elements with class 'img-zoom'
   initImageZoom() {
     try {
@@ -166,15 +181,23 @@ class YouthHealthLMS {
   }
 
   // Basic login: validates saved users and persists current user
-  login(email, password) {
+  login(identifier, password) {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    const user = users.find(
-      (u) => u.email === email && u.password === password
-    );
+    const idLower = (identifier || "").trim().toLowerCase();
+    const idPhoneE164 = this.normalizePhoneBD(identifier);
+
+    const user = users.find((u) => {
+      const emailMatch = (u.email || "").toLowerCase() === idLower;
+      const phoneStored = this.normalizePhoneBD(u.phone);
+      const phoneMatch = !!idPhoneE164 && phoneStored === idPhoneE164;
+      return (emailMatch || phoneMatch) && u.password === password;
+    });
+
     if (user) {
       this.currentUser = {
         id: user.id,
-        email: user.email,
+        email: user.email || null,
+        phone: user.phone || null,
         name: user.name,
         registeredAt: user.registeredAt,
       };
@@ -183,7 +206,7 @@ class YouthHealthLMS {
       this.navigateTo("dashboard");
       return { success: true };
     }
-    return { success: false, error: "Invalid email or password" };
+    return { success: false, error: "Invalid email/phone or password" };
   }
 
   // Generate unique user ID
@@ -204,9 +227,28 @@ class YouthHealthLMS {
     return userId;
   }
 
-  register(name, email, password, confirmPassword) {
-    if (!name || !email || !password || !confirmPassword) {
-      return { success: false, error: "Please fill in all fields" };
+  // Normalize and validate Bangladesh phone numbers to E.164 (+8801XXXXXXXXX)
+  normalizePhoneBD(raw) {
+    try {
+      if (!raw) return null;
+      let t = String(raw).trim().replace(/[\s\-()]/g, "");
+      // Keep leading + if present; strip other non-digits
+      t = t.replace(/(?!^)[^\d]/g, "");
+      // Valid patterns we accept and convert to E.164
+      if (/^\+8801[3-9]\d{8}$/.test(t)) return t; // already E.164
+      if (/^8801[3-9]\d{8}$/.test(t)) return "+" + t; // missing +
+      if (/^01[3-9]\d{8}$/.test(t)) return "+880" + t.slice(1); // local with 0
+      if (/^1[3-9]\d{8}$/.test(t)) return "+880" + t; // local without 0
+      return null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  register(name, phone, email, password, confirmPassword) {
+    // phone required, email optional
+    if (!name || !phone || !password || !confirmPassword) {
+      return { success: false, error: "Please fill in all required fields" };
     }
 
     if (password !== confirmPassword) {
@@ -220,9 +262,22 @@ class YouthHealthLMS {
       };
     }
 
-    const users = JSON.parse(localStorage.getItem("users") || "[]");
+    if (!this.isStrongPassword(password)) {
+      return {
+        success: false,
+        error: "Password must include at least one digit and one special character",
+      };
+    }
 
-    if (users.find((u) => u.email === email)) {
+    const users = JSON.parse(localStorage.getItem("users") || "[]");
+    const phoneE164 = this.normalizePhoneBD(phone);
+    if (!phoneE164) {
+      return { success: false, error: "Please enter a valid phone number (e.g., +8801XXXXXXXXX)" };
+    }
+    if (users.find((u) => this.normalizePhoneBD(u.phone) === phoneE164)) {
+      return { success: false, error: "Phone already registered" };
+    }
+    if (email && users.find((u) => (u.email || "").toLowerCase() === email.toLowerCase())) {
       return { success: false, error: "Email already registered" };
     }
 
@@ -239,7 +294,8 @@ class YouthHealthLMS {
     const newUser = {
       id: userId,
       name,
-      email,
+      phone: phoneE164,
+      email: email || null,
       password,
       registeredAt: registrationDate,
       lastLogin: registrationDate,
@@ -250,7 +306,8 @@ class YouthHealthLMS {
 
     this.currentUser = {
       id: newUser.id,
-      email: newUser.email,
+      email: newUser.email || null,
+      phone: newUser.phone || null,
       name: newUser.name,
       registeredAt: newUser.registeredAt,
     };
@@ -579,6 +636,11 @@ class YouthHealthLMS {
         app.innerHTML = this.renderCertificate();
         this.initAOS();
         break;
+      case "profile":
+        app.innerHTML = this.renderProfile();
+        this.initAOS();
+        this.attachProfileHandlers();
+        break;
     }
 
     // View-specific overflow handling
@@ -598,6 +660,9 @@ class YouthHealthLMS {
 
     // Initialize image zoom bindings on every render
     try { this.initImageZoom(); } catch (_) {}
+
+  // Initialize password show/hide toggles when present
+  try { this.initPasswordToggles(); } catch (_) {}
 
     // Persist state after each render
     this.saveAppState();
@@ -1069,6 +1134,34 @@ class YouthHealthLMS {
     } catch (_) {}
   }
 
+  // Initialize show/hide password toggles for any buttons with data-pw-toggle pointing to an input id
+  initPasswordToggles() {
+    try {
+      document.querySelectorAll('[data-pw-toggle]').forEach((btn) => {
+        if (btn.dataset.bound) return;
+        const targetId = btn.getAttribute('data-pw-toggle');
+        const input = document.getElementById(targetId);
+        if (!input) return;
+        btn.addEventListener('click', () => {
+          const isText = input.type === 'text';
+          input.type = isText ? 'password' : 'text';
+          const icon = btn.querySelector('i');
+          if (icon) {
+            if (isText) {
+              icon.classList.remove('fa-eye-slash');
+              icon.classList.add('fa-eye');
+            } else {
+              icon.classList.remove('fa-eye');
+              icon.classList.add('fa-eye-slash');
+            }
+          }
+          btn.setAttribute('aria-label', isText ? 'Show password' : 'Hide password');
+        });
+        btn.dataset.bound = 'true';
+      });
+    } catch (_) {}
+  }
+
   initHomeScripts() {
     // Ensure AOS is active on home as well
     this.initAOS();
@@ -1368,7 +1461,12 @@ class YouthHealthLMS {
 
                   <div class="mb-3">
                     <label for="loginPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+                    <div class="input-group">
+                      <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+                      <button class="btn btn-outline-secondary" type="button" data-pw-toggle="loginPassword" aria-label="Show password">
+                        <i class="fa-solid fa-eye"></i>
+                      </button>
+                    </div>
                   </div>
 
                   <button type="submit" class="btn btn-primary w-100">Log In</button>
@@ -1424,22 +1522,34 @@ class YouthHealthLMS {
                   
                   <div class="mb-3">
                     <label for="registerPhone" class="form-label">Phone</label>
-                    <input type="tel" class="form-control" id="registerPhone" placeholder="01746955601" required>
+                    <input type="tel" class="form-control" id="registerPhone" placeholder="+8801XXXXXXXXX" pattern="^(\+?8801[3-9]\d{8}|01[3-9]\d{8}|1[3-9]\d{8})$" required aria-describedby="phoneHelp">
+                    <div id="phoneHelp" class="form-text">We’ll use your phone for login and account recovery.</div>
                   </div>
                   <div class="mb-3">
-                    <label for="registerEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="registerEmail" placeholder="your@email.com" required>
+                    <label for="registerEmail" class="form-label">Email (optional)</label>
+                    <input type="email" class="form-control" id="registerEmail" placeholder="your@email.com">
                   </div>
                   
 
                   <div class="mb-3">
                     <label for="registerPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="registerPassword" placeholder="••••••••" required>
+                    <div class="input-group">
+                      <input type="password" class="form-control" id="registerPassword" placeholder="At least 6 characters" required aria-describedby="passwordHelp">
+                      <button class="btn btn-outline-secondary" type="button" data-pw-toggle="registerPassword" aria-label="Show password">
+                        <i class="fa-solid fa-eye"></i>
+                      </button>
+                    </div>
+                    <div id="passwordHelp" class="form-text">At least 6 characters and must include a number and a special character.</div>
                   </div>
 
                   <div class="mb-3">
                     <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="registerConfirmPassword" placeholder="••••••••" required>
+                    <div class="input-group">
+                      <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Repeat password" required>
+                      <button class="btn btn-outline-secondary" type="button" data-pw-toggle="registerConfirmPassword" aria-label="Show password">
+                        <i class="fa-solid fa-eye"></i>
+                      </button>
+                    </div>
                   </div>
 
                   <button type="submit" class="btn btn-primary w-100">Create Account</button>
@@ -1457,6 +1567,78 @@ class YouthHealthLMS {
         </div>
       </div>
     `;
+  }
+
+  renderProfile() {
+    const user = this.currentUser || {};
+    const phone = user.phone || "";
+    const email = user.email || "";
+    return `
+      <header class="bg-white shadow-sm">
+        <div class="container py-3 d-flex align-items-center gap-2">
+          <a class="navbar-brand" href="#" onclick="app.navigateTo('dashboard'); return false;">
+            <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
+          </a>
+          <span class="ms-2 fw-semibold">Profile settings</span>
+        </div>
+      </header>
+
+      <div class="container py-4">
+        <div class="row justify-content-center">
+          <div class="col-md-7 col-lg-6">
+            <button class="btn btn-link text-decoration-none mb-3 p-0" onclick="app.navigateTo('dashboard')">
+              <i class="bi bi-arrow-left me-2"></i>Back to Dashboard
+            </button>
+            <div class="card shadow-sm border-0">
+              <div class="card-body p-4">
+                <h3 class="h5 mb-3">Account</h3>
+                <div id="profileMsg" class="alert d-none" role="alert"></div>
+                <form id="profileForm" novalidate>
+                  <div class="mb-3">
+                    <label class="form-label" for="profilePhone">Phone</label>
+                    <input id="profilePhone" type="tel" class="form-control" required placeholder="+8801XXXXXXXXX" pattern="^(\+?8801[3-9]\d{8}|01[3-9]\d{8}|1[3-9]\d{8})$" aria-describedby="profilePhoneHelp" value="${phone}">
+                    <div id="profilePhoneHelp" class="form-text">Use a valid Bangladeshi number. This is used for login and account recovery.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="profileEmail">Email (optional)</label>
+                    <input id="profileEmail" type="email" class="form-control" placeholder="name@example.com" value="${email}">
+                  </div>
+                  <hr class="my-4">
+                  <h3 class="h6 mb-3">Change password</h3>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label class="form-label" for="profileCurrentPassword">Current password</label>
+                      <div class="input-group">
+                        <input id="profileCurrentPassword" type="password" class="form-control" placeholder="••••••••" autocomplete="current-password">
+                        <button class="btn btn-outline-secondary" type="button" data-pw-toggle="profileCurrentPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="profileNewPassword">New password</label>
+                      <div class="input-group">
+                        <input id="profileNewPassword" type="password" class="form-control" placeholder="At least 6 characters" autocomplete="new-password" aria-describedby="profilePwHelp">
+                        <button class="btn btn-outline-secondary" type="button" data-pw-toggle="profileNewPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+                      </div>
+                      <div id="profilePwHelp" class="form-text">At least 6 characters and must include a number and a special character.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="profileConfirmPassword">Confirm new password</label>
+                      <div class="input-group">
+                        <input id="profileConfirmPassword" type="password" class="form-control" placeholder="Repeat new password" autocomplete="new-password">
+                        <button class="btn btn-outline-secondary" type="button" data-pw-toggle="profileConfirmPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-primary" type="submit">Save changes</button>
+                    <button class="btn btn-outline-secondary" type="button" onclick="app.navigateTo('dashboard')">Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
   }
 
   renderDashboard() {
@@ -1603,6 +1785,9 @@ class YouthHealthLMS {
               <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
             </a>
             <div class="d-flex align-items-center gap-3 ms-auto">
+              <button class="btn btn-outline-light" title="Profile settings" onclick="app.navigateTo('profile'); return false;">
+                <i class="fa-solid fa-gear"></i>
+              </button>
               <div class="user-chip">
                 <span class="user-avatar">${userInitials}</span>
                 <div class="user-chip__meta">
@@ -2238,7 +2423,17 @@ class YouthHealthLMS {
         content: `
           <div class="lesson-slide">
             <h2 class="slide-title gradient-text" data-aos="fade-up">Module Quiz</h2>
-            <p class="text-muted" data-aos="fade-up" data-aos-delay="60">Answer the questions to complete this module. Passing score is 80%.</p>
+            <p class="text-muted" data-aos="fade-up" data-aos-delay="60">
+              This quiz checks your understanding of the key ideas in this module.
+              There are <strong>${aggregatedQuestions.length}</strong> multiple‑choice questions.
+              You must score at least <strong>80%</strong> to pass and unlock the next module.
+            </p>
+            <ul class="text-muted mb-0" data-aos="fade-up" data-aos-delay="90" style="padding-left: 1.2rem;">
+              <li>Quiz test is very crucial for every learning path.</li>
+              <li>Read each question carefully and select the best answer.</li>
+              <li>You can go back to review the lesson at any time.</li>
+              <li>Retakes are allowed — your best score will be saved.</li>
+            </ul>
           </div>`
       };
       const chapterLessons = rawLessons.slice();
@@ -2360,7 +2555,7 @@ class YouthHealthLMS {
                         const isActive = ci === chIndex && li === activeIndex;
                         const isDone = completedIds.has(ls.id);
                         const isUnlocked = li === 0 || completedIds.has((ch.lessons || [])[li - 1]?.id);
-                        const lockIcon = isDone ? 'fa-check' : (isUnlocked ? 'fa-minus' : 'fa-lock');
+                        const lockIcon = isDone ? 'fa-check' : (isUnlocked ? 'fa-lock-open' : 'fa-lock');
                         const maybeOnclick = isUnlocked ? `onclick=\"app.changeChapterLesson(${ci}, ${li})\"` : '';
                         const ariaDisabled = isUnlocked ? '' : 'aria-disabled="true"';
                         return `
@@ -2504,7 +2699,10 @@ class YouthHealthLMS {
                               <p class="lesson-quiz-status__meta">${lessonCompleted ? 'Great job! You can retake the quiz to boost your score.' : 'Give it another try to reach the passing score.'}</p>
                             </div>
                           </div>` : ''}
-                        <p class="lesson-quiz-text">You must pass this quiz to unlock the next module.</p>
+                        <p class="lesson-quiz-text">
+                          This quiz has <strong>${currentLesson.quiz.questions.length}</strong> questions.
+                          You must pass this quiz to unlock the next module. You can retake it and your best score will be saved.
+                        </p>
                         <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
                           ${lessonCompleted ? 'Retake quiz' : 'Start quiz'}
                           <i class="fa-solid fa-arrow-right-long ms-2"></i>
@@ -2713,9 +2911,9 @@ class YouthHealthLMS {
                         : ""
                     }
                     <p class="lesson-quiz-text">
-                      Test your understanding and unlock the next milestone. Score at least ${
-                        currentLesson.quiz.passingScore
-                      }% to mark this lesson as complete.
+                      Test your understanding and unlock the next milestone.
+                      This quiz has <strong>${currentLesson.quiz.questions.length}</strong> questions.
+                      Score at least <strong>${currentLesson.quiz.passingScore}%</strong> to mark this lesson as complete. You can retake it — your best score will be saved.
                     </p>
                     <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
                       ${lessonCompleted ? "Retake quiz" : "Start quiz"}
@@ -3060,17 +3258,136 @@ class YouthHealthLMS {
       e.preventDefault();
 
       const name = document.getElementById("registerName").value;
+      const phone = document.getElementById("registerPhone").value;
       const email = document.getElementById("registerEmail").value;
       const password = document.getElementById("registerPassword").value;
       const confirmPassword = document.getElementById(
         "registerConfirmPassword"
       ).value;
 
-      const result = this.register(name, email, password, confirmPassword);
+      const result = this.register(name, phone, email, password, confirmPassword);
 
       if (!result.success) {
         errorDiv.textContent = result.error;
         errorDiv.classList.remove("d-none");
+      }
+    });
+  }
+
+  attachProfileHandlers() {
+    const form = document.getElementById("profileForm");
+    const msg = document.getElementById("profileMsg");
+    if (!form) return;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      try {
+        const phoneRaw = document.getElementById("profilePhone").value;
+        const emailRaw = document.getElementById("profileEmail").value;
+        const currentPw = (document.getElementById("profileCurrentPassword")?.value || "").trim();
+        const newPw = (document.getElementById("profileNewPassword")?.value || "").trim();
+        const confirmPw = (document.getElementById("profileConfirmPassword")?.value || "").trim();
+        const wantsPwChange = !!(currentPw || newPw || confirmPw);
+
+        const phone = this.normalizePhoneBD(phoneRaw);
+        if (!phone) {
+          msg.className = "alert alert-danger";
+          msg.textContent = "Please enter a valid Bangladeshi phone (e.g., +8801XXXXXXXXX).";
+          msg.classList.remove("d-none");
+          return;
+        }
+
+  const users = JSON.parse(localStorage.getItem("users") || "[]");
+        const currentId = this.currentUser?.id;
+        const currentUserRecord = users.find(u => u.id === currentId);
+        if (!currentUserRecord) {
+          msg.className = "alert alert-danger";
+          msg.textContent = "User session not found. Please log in again.";
+          msg.classList.remove("d-none");
+          return;
+        }
+        // Uniqueness checks
+        const phoneTaken = users.some(u => u.id !== currentId && this.normalizePhoneBD(u.phone) === phone);
+        if (phoneTaken) {
+          msg.className = "alert alert-danger";
+          msg.textContent = "This phone is already registered.";
+          msg.classList.remove("d-none");
+          return;
+        }
+        const email = (emailRaw || "").trim() || null;
+        if (email && users.some(u => u.id !== currentId && (u.email || "").toLowerCase() === email.toLowerCase())) {
+          msg.className = "alert alert-danger";
+          msg.textContent = "This email is already registered.";
+          msg.classList.remove("d-none");
+          return;
+        }
+
+        // Password change validation (optional)
+        let changePw = false;
+        if (wantsPwChange) {
+          if (!currentPw || !newPw || !confirmPw) {
+            msg.className = "alert alert-danger";
+            msg.textContent = "To change your password, fill in current, new, and confirm password fields.";
+            msg.classList.remove("d-none");
+            return;
+          }
+          if (currentUserRecord.password !== currentPw) {
+            msg.className = "alert alert-danger";
+            msg.textContent = "Current password is incorrect.";
+            msg.classList.remove("d-none");
+            return;
+          }
+          if (newPw.length < 6) {
+            msg.className = "alert alert-danger";
+            msg.textContent = "New password must be at least 6 characters.";
+            msg.classList.remove("d-none");
+            return;
+          }
+          if (!this.isStrongPassword(newPw)) {
+            msg.className = "alert alert-danger";
+            msg.textContent = "New password must include at least one digit and one special character.";
+            msg.classList.remove("d-none");
+            return;
+          }
+          if (newPw !== confirmPw) {
+            msg.className = "alert alert-danger";
+            msg.textContent = "New password and confirmation do not match.";
+            msg.classList.remove("d-none");
+            return;
+          }
+          if (newPw === currentPw) {
+            msg.className = "alert alert-warning";
+            msg.textContent = "New password is the same as current password. Choose a different password.";
+            msg.classList.remove("d-none");
+            return;
+          }
+          changePw = true;
+        }
+
+        // Persist changes in users array
+        const updated = users.map(u => {
+          if (u.id === currentId) {
+            const next = Object.assign({}, u, { phone: phone, email: email });
+            if (changePw) next.password = newPw;
+            return next;
+          }
+          return u;
+        });
+        localStorage.setItem("users", JSON.stringify(updated));
+
+        // Update currentUser
+        this.currentUser = Object.assign({}, this.currentUser, { phone: phone, email: email });
+        localStorage.setItem("currentUser", JSON.stringify(this.currentUser));
+
+        msg.className = "alert alert-success";
+        msg.textContent = changePw ? "Profile and password updated successfully." : "Profile updated successfully.";
+        msg.classList.remove("d-none");
+
+        setTimeout(() => this.navigateTo("dashboard"), 900);
+      } catch (err) {
+        msg.className = "alert alert-danger";
+        msg.textContent = "Something went wrong. Please try again.";
+        msg.classList.remove("d-none");
       }
     });
   }
