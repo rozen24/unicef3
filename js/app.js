@@ -1239,8 +1239,8 @@ class YouthHealthLMS {
 
                 <form id="loginForm">
                   <div class="mb-3">
-                    <label for="loginEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="loginEmail" placeholder="your@email.com" required>
+                    <label for="loginEmail" class="form-label">Phone/Email</label>
+                    <input type="text" class="form-control" id="loginEmail" placeholder="Phone/Email" required>
                   </div>
 
                   <div class="mb-3">
@@ -1298,11 +1298,16 @@ class YouthHealthLMS {
                     <label for="registerName" class="form-label">Full Name</label>
                     <input type="text" class="form-control" id="registerName" placeholder="John Doe" required>
                   </div>
-
+                  
+                  <div class="mb-3">
+                    <label for="registerPhone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="registerPhone" placeholder="01746955601" required>
+                  </div>
                   <div class="mb-3">
                     <label for="registerEmail" class="form-label">Email</label>
                     <input type="email" class="form-control" id="registerEmail" placeholder="your@email.com" required>
                   </div>
+                  
 
                   <div class="mb-3">
                     <label for="registerPassword" class="form-label">Password</label>
@@ -1443,6 +1448,30 @@ class YouthHealthLMS {
     const clampProgress = (value) =>
       Math.min(100, Math.max(0, Number.isFinite(value) ? value : 0));
 
+    // Determine the best target for Continue learning: open first unlocked, incomplete module
+    let continueOnclick = actionCourseId
+      ? `app.selectCourse('${actionCourseId}')`
+      : `app.navigateTo('home'); return false;`;
+    try {
+      if (actionCourseId) {
+        const course = activeCourse.course;
+        if (Array.isArray(course.chapters) && course.chapters.length > 0) {
+          const progress = this.getUserProgress(course.id) || this.initializeProgress(course.id);
+          const doneSet = new Set(progress.completedlessions || []);
+          // Find first unlocked chapter (module) where previous module quiz is passed
+          const isUnlocked = (ci) => ci === 0 || doneSet.has(`${course.chapters[ci - 1].id}-quiz`);
+          const isCompletedModule = (ci) => doneSet.has(`${course.chapters[ci].id}-quiz`);
+          let targetChapter = course.chapters.findIndex((_, ci) => isUnlocked(ci) && !isCompletedModule(ci));
+          if (targetChapter < 0) {
+            // All completed or none incomplete; fall back to first unlocked
+            targetChapter = Math.max(0, course.chapters.findIndex((_, ci) => isUnlocked(ci)));
+            if (targetChapter < 0) targetChapter = 0;
+          }
+          continueOnclick = `app.openCourseChapterLesson('${course.id}', ${targetChapter}, 0)`;
+        }
+      }
+    } catch (_) {}
+
     return `
       <div class="dashboard-shell">
         <nav class="navbar navbar-expand-lg fixed-top nav-glass nav-dashboard">
@@ -1451,10 +1480,6 @@ class YouthHealthLMS {
               <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
             </a>
             <div class="d-flex align-items-center gap-3 ms-auto">
-              <button class="btn btn-chip d-none d-md-inline-flex" onclick="app.navigateTo('home'); return false;">
-                <i class="fa-solid fa-compass"></i>
-                Public site
-              </button>
               <div class="user-chip">
                 <span class="user-avatar">${userInitials}</span>
                 <div class="user-chip__meta">
@@ -1480,35 +1505,20 @@ class YouthHealthLMS {
               </div>
               <div class="row g-4 align-items-center">
                 <div class="col-lg-7">
-                  <span class="dashboard-kicker dashboard-title"><i class="fa-solid fa-sun"></i> Welcome To YHAP</span>
+                  <span class="dashboard-kicker dashboard-title"> Welcome To YHAP</span>
                   <p class="dashboard-subtitle">
                     You're ${overallProgress}% through your Young Health Ambassador pathway. Keep up the momentum with curated lessons, trackable impact, and certificates powered by UNICEF and MOHFW.
                   </p>
                   <div class="dashboard-meta">
                     <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i>Joined ${joinedDate}</span>
-                    <button class="btn btn-primary btn-lg" onclick="app.selectCourse('${actionCourseId}')">
-                            ${actionLabel} <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                          </button>
                   </div>
                   <div class="dashboard-actions">
-                    ${
-                      actionCourseId
-                        ? `<button class="btn btn-primary btn-lg" onclick="app.selectCourse('${actionCourseId}')">
-                            ${actionLabel} <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                          </button>`
-                        : `<button class="btn btn-primary btn-lg" onclick="app.navigateTo('home'); return false;">
-                            Browse programmes <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                          </button>`
-                    }
-                    ${
-                      certificateCourse
-                        ? `<button class="btn btn-outline-light btn-lg" onclick="app.viewCertificate('${certificateCourse.course.id}'); return false;">
-                            View certificate <i class="fa-solid fa-award ms-2"></i>
-                          </button>`
-                        : `<button class="btn btn-outline-light btn-lg" onclick="app.navigateTo('register'); return false;">
-                            Invite a friend <i class="fa-solid fa-user-plus ms-2"></i>
-                          </button>`
-                    }
+                    <button class="btn btn-primary btn-lg" onclick="${continueOnclick}">
+                      Continue learning <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                    </button>
+                    <button class="btn btn-outline-light btn-lg" onclick="app.navigateTo('register'); return false;">
+                      Invite a friend <i class="fa-solid fa-user-plus ms-2"></i>
+                    </button>
                   </div>
                 </div>
                 <div class="col-lg-5">
@@ -1521,25 +1531,9 @@ class YouthHealthLMS {
                     </div>
                     <ul class="dashboard-stat-list">
                       <li>
-                        <span class="stat-label">Courses complete</span>
-                        <span class="stat-value">${completedCourses}/${totalCourses}</span>
-                      </li>
-                      <li>
-                        <span class="stat-label">Lessons finished</span>
+                        <span class="stat-label">Module Completed :&nbsp;</span>
                         <span class="stat-value">${formatNumber(
                           completedLessons
-                        )}</span>
-                      </li>
-                      <li>
-                        <span class="stat-label">Lessons remaining</span>
-                        <span class="stat-value">${formatNumber(
-                          remainingLessons
-                        )}</span>
-                      </li>
-                      <li>
-                        <span class="stat-label">Active programmes</span>
-                        <span class="stat-value">${formatNumber(
-                          activeCourses
                         )}</span>
                       </li>
                     </ul>
@@ -1548,70 +1542,8 @@ class YouthHealthLMS {
               </div>
             </section>
 
-            <section class="dashboard-insights">
-              <div class="insight-grid">
-                <article class="insight-card">
-                  <span class="insight-icon gradient-sky"><i class="fa-solid fa-graduation-cap"></i></span>
-                  <div>
-                    <span class="insight-label">Course library</span>
-                    <span class="insight-value">${formatNumber(
-                      totalCourses
-                    )}</span>
-                    <p class="insight-subtext">${formatNumber(
-                      completedCourses
-                    )} completed • ${formatNumber(
-      activeCourses
-    )} in progress</p>
-                  </div>
-                </article>
-                <article class="insight-card">
-                  <span class="insight-icon gradient-emerald"><i class="fa-solid fa-chart-line"></i></span>
-                  <div>
-                    <span class="insight-label">Overall progress</span>
-                    <span class="insight-value">${overallProgress}%</span>
-                    <p class="insight-subtext">${formatNumber(
-                      completedLessons
-                    )} of ${formatNumber(totalLessons)} lessons done</p>
-                  </div>
-                </article>
-                <article class="insight-card">
-                  <span class="insight-icon gradient-violet"><i class="fa-solid fa-award"></i></span>
-                  <div>
-                    <span class="insight-label">Certificates ready</span>
-                    <span class="insight-value">${formatNumber(
-                      completedCourses
-                    )}</span>
-                    <p class="insight-subtext">${
-                      completedCourses > 0
-                        ? "Download and share your achievements"
-                        : "Complete a programme to earn your first badge"
-                    }</p>
-                  </div>
-                </article>
-                <article class="insight-card">
-                  <span class="insight-icon gradient-tangerine"><i class="fa-solid fa-lightbulb"></i></span>
-                  <div>
-                    <span class="insight-label">Opportunities</span>
-                    <span class="insight-value">${formatNumber(
-                      notStartedCourses
-                    )}</span>
-                    <p class="insight-subtext">${
-                      notStartedCourses > 0
-                        ? "New journeys are waiting for you"
-                        : "You’ve explored every programme available"
-                    }</p>
-                  </div>
-                </article>
-              </div>
-            </section>
-
             <section class="dashboard-chapters my-5">
               <div class="dashboard-section-header">
-                <div>
-                  <span class="section-kicker">Browse modules</span>
-                  <h2>Jump to any module</h2>
-                  <p>Start with Module 1. Each next module unlocks after you pass the previous module’s quiz.</p>
-                </div>
               </div>
               ${coursesData
                 .map((course) => {
@@ -1650,126 +1582,6 @@ class YouthHealthLMS {
                     </div>`;
                 })
                 .join("")}
-            </section>
-
-            <section class="dashboard-courses">
-              <div class="dashboard-section-header">
-                <div>
-                  <span class="section-kicker">Your programmes</span>
-                  <h2>Continue building your impact</h2>
-                  <p>Jump back into any course to unlock new leadership skills, track community actions, and qualify for UNICEF-backed certifications.</p>
-                </div>
-              </div>
-              <div class="row g-4">
-                ${
-                  courseSummaries.length > 0
-                    ? courseSummaries
-                        .map((item) => {
-                          const progressValue = clampProgress(
-                            item.progressPercent
-                          );
-                          const progressRounded = Math.round(progressValue);
-                          const actionText = item.completed
-                            ? "Review course"
-                            : item.completedLessons > 0
-                            ? "Continue"
-                            : "Start course";
-                          const statusClass = item.completed
-                            ? "status-pill--success"
-                            : item.completedLessons > 0
-                            ? "status-pill--warning"
-                            : "status-pill--neutral";
-                          return `
-                            <div class="col-xl-4 col-lg-6">
-                              <article class="course-card-modern">
-                                <div class="course-card__visual" style="background-image: url('${
-                                  item.course.imageUrl
-                                }');">
-                                  <span class="course-card__tag">
-                                    <i class="fa-solid fa-layer-group"></i>
-                                    ${
-                                      item.course.duration ||
-                                      `${item.totalLessons} lessons`
-                                    }
-                                  </span>
-                                </div>
-                                <div class="course-card__body">
-                                  <div class="course-card__status">
-                                    <span class="status-pill ${statusClass}">${
-                            item.statusLabel
-                          }</span>
-                                    ${
-                                      item.certificateIssued
-                                        ? `<span class="status-pill status-pill--outline"><i class="fa-solid fa-award"></i> Certificate ready</span>`
-                                        : ""
-                                    }
-                                  </div>
-                                  <h3>${item.course.title}</h3>
-                                  <p class="line-clamp-2">${
-                                    item.course.description
-                                  }</p>
-                                  <div class="course-card__meta">
-                                    <span><i class="fa-solid fa-book-open"></i>${
-                                      item.totalLessons
-                                    } lessons</span>
-                                    <span><i class="fa-solid fa-gauge-high"></i>${progressRounded}% complete</span>
-                                  </div>
-                                  <div>
-                                    <div class="progress-track">
-                                      <div class="progress-track__value" style="width: ${progressValue}%;"></div>
-                                    </div>
-                                    <div class="progress-caption">
-                                      <span>${
-                                        item.completedLessons
-                                      } completed</span>
-                                      <span>${Math.max(
-                                        item.totalLessons -
-                                          item.completedLessons,
-                                        0
-                                      )} remaining</span>
-                                    </div>
-                                  </div>
-                                  <div class="course-card__footer">
-                                    <div class="course-card__actions">
-                                      <button class="btn btn-primary flex-grow-1" onclick="app.selectCourse('${
-                                        item.course.id
-                                      }')">
-                                        ${actionText} <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                                      </button>
-                                      ${
-                                        item.completed
-                                          ? `<button class="btn btn-ghost" onclick="app.viewCertificate('${item.course.id}')">
-                                              <i class="fa-solid fa-award me-2"></i>Certificate
-                                            </button>`
-                                          : ""
-                                      }
-                                    </div>
-                                    ${
-                                      item.nextLessonTitle
-                                        ? `<span class="next-lesson">Next up: ${item.nextLessonTitle}</span>`
-                                        : ""
-                                    }
-                                  </div>
-                                </div>
-                              </article>
-                            </div>
-                          `;
-                        })
-                        .join("")
-                    : `
-                      <div class="col-12">
-                        <div class="dashboard-empty">
-                          <i class="fa-solid fa-seedling"></i>
-                          <h3>No programmes assigned yet</h3>
-                          <p>As soon as new UNICEF missions are published, they’ll appear here. In the meantime, explore the public site for stories and resources.</p>
-                          <button class="btn btn-primary" onclick="app.navigateTo('home'); return false;">
-                            Explore mission hub
-                          </button>
-                        </div>
-                      </div>
-                    `
-                }
-              </div>
             </section>
           </div>
         </main>
