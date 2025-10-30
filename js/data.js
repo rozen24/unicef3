@@ -305,7 +305,7 @@ const coursesData = [
               <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
               <section class="text-center py-5 mb-4" data-aos="fade-up" style="position:relative; overflow:hidden;">
                 <div class="container">
-                  <img src="img/Distribution/globe.jpg" class="img-fluid mx-auto d-block mb-3 rounded-4" alt="Globe showing youth population">
+                  <img src="img/Distribution/globe.jpg" class="img-fluid mx-auto d-block mb-3 rounded-4 globe-rotate" alt="Globe showing youth population">
                   <div class="globe-text-wrap">
                     <h3 class="fw-bold display-5" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
                     <p class="lead mt-2 text-white-75">The world counts <strong>1.8 billion</strong> young people aged 10–24.</p>
