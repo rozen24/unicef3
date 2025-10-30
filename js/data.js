@@ -60,7 +60,7 @@ const coursesData = [
                   </div>
                   </div>
                 </div>
-                <div class="program-intro hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="100">
+                <div class="program-intro d-none hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="100">
                   <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>About YHAP</h4>
                   <p>The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower youth by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.</p></br>
 
@@ -305,11 +305,11 @@ const coursesData = [
               <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
               <section class="text-center py-5 mb-4" data-aos="fade-up" style="position:relative; overflow:hidden;">
                 <div class="container">
-                  <img src="img/Distribution/globe.jpg" class="img-fluid mx-auto d-block mb-3 rounded-4 globe-rotate" alt="Globe showing youth population">
+                  <img src="img/Distribution/globe.jpg" class="img-fluid mx-auto d-block mb-3 rounded-4 globe-rotate opacity-25 bg-dark" alt="Globe showing youth population">
                   <div class="globe-text-wrap">
-                    <h3 class="fw-bold display-5" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
-                    <p class="lead mt-2 text-white-75">The world counts <strong>1.8 billion</strong> young people aged 10–24.</p>
-                    <p class="mb-0 text-white-75">Around <strong>90%</strong> live in developing countries.</p>
+                    <h3 class="fw-bold display-5" style="color:#0087D3; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
+                    <p class="lead mt-2 text-dark">The world counts <strong>1.8 billion</strong> young people aged 10–24.</p>
+                    <p class="mb-0 text-dark">Around <strong>90%</strong> live in developing countries.</p>
                   </div>
                 </div>
               </section>
@@ -319,7 +319,7 @@ const coursesData = [
                 <div class="container">
                   <div class="row g-3 align-items-center">
                     <div class="col-lg-12">
-                      <div class="modern-card glass-card">
+                      <div class="modern-card glass-card h-region">
                         <h5 class="mb-3">Regional Youth Share</h5>
                         <div style="position:relative; height:340px;">
                           <canvas id="regionalShareChart" aria-label="Regional Youth Share" role="img"></canvas>

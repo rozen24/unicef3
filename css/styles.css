@@ -1,3 +1,119 @@
+/* Regional shares map styles */
+.regional-map-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  background-color: #0b1324; /* fallback color */
+  background-image: url('../img/Distribution/global.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.regional-map-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(255,255,255,0.04), rgba(0,0,0,0.22) 70%),
+    repeating-linear-gradient(
+      to right,
+      rgba(255,255,255,0.04) 0,
+      rgba(255,255,255,0.04) 1px,
+      transparent 1px,
+      transparent 24px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.04) 0,
+      rgba(255,255,255,0.04) 1px,
+      transparent 1px,
+      transparent 24px
+    );
+  pointer-events: none;
+}
+
+/* Inline SVG sizing */
+/* If an inline SVG is ever used, keep sensible defaults */
+.regional-map-svg { width: 100%; height: 100%; display: block; }
+.regional-map-svg .region-shape {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.region-chip {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #0b1324;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 999px;
+  backdrop-filter: saturate(130%) blur(2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.region-chip .chip-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--chip-color, #60A5FA);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--chip-color, #60A5FA) 25%, white 75%);
+}
+
+.region-chip .chip-text { font-size: 0.9rem; line-height: 1; }
+
+/* Legend list at the bottom of the map */
+.region-legend {
+  position: absolute;
+  left: 0; right: 0; bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  justify-content: center;
+  padding: 8px 12px;
+  margin: 0;
+  list-style: none;
+}
+
+.region-legend li {
+  color: #f9fafb;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.region-legend .legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+/* Rough pin positions per region (tweak as needed) */
+.region-north-america { top: 36%; left: 18%; }
+.region-latin-america { top: 58%; left: 30%; }
+.region-europe { top: 28%; left: 52%; }
+.region-mena { top: 40%; left: 54%; }
+.region-ssa { top: 60%; left: 52%; }
+.region-asia-pacific { top: 44%; left: 74%; }
+
+/* Responsive heights similar to chart */
+@media (min-width: 992px) {
+  .regional-map-wrap { min-height: 520px; }
+}
 /* Responsive height for population pyramid chart */
 .chart-pyramid {
   height: 480px; /* small screens */
@@ -8312,4 +8428,7 @@ p.lead {
 .custom-pos-combined-effort {
     --r: 165% !important;
     transform: translate(-51%, -84%) rotate(calc(var(--a) + var(--inner-offset))) translate(var(--r)) rotate(calc((var(--a) + var(--inner-offset)) * -1)) !important;
+}
+.h-region {
+  height: 650px;
 }

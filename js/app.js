@@ -808,53 +808,52 @@ class YouthHealthLMS {
         } catch (_) {}
       }
 
-      // Initialize doughnut chart for regional shares if canvas exists
+      // Regional shares SVG map overlay (no image): shows all regions on a vector world-style backdrop
       const regionalCanvas = document.getElementById("regionalShareChart");
-      if (regionalCanvas && !regionalCanvas.dataset.chartInitialized && window.Chart) {
+      if (regionalCanvas && !regionalCanvas.dataset.mapInitialized) {
         try {
-          const ctx2 = regionalCanvas.getContext("2d");
-          new window.Chart(ctx2, {
-            type: "doughnut",
-            data: {
-              labels: [
-                "North America (4%)",
-                "Europe (6%)",
-                "Sub-Saharan Africa (26%)",
-                "Asia-Pacific (29%)",
-                "Latin America (8%)",
-                "MENA (10%)"
-              ],
-              datasets: [{
-                label: "Regional Youth Share",
-                data: [4, 6, 26, 29, 8, 10],
-                backgroundColor: [
-                  "#60A5FA", // blue-400
-                  "#A78BFA", // violet-400
-                  "#34D399", // emerald-400
-                  "#FBBF24", // amber-400
-                  "#F472B6", // pink-400
-                  "#22D3EE"  // cyan-400
-                ],
-                borderColor: "rgba(255,255,255,0.85)",
-                borderWidth: 2,
-                hoverOffset: 6
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: {
-                legend: { position: "bottom" },
-                tooltip: {
-                  callbacks: {
-                    label: (ctx) => `${ctx.label}: ${ctx.parsed}%`
-                  }
-                }
-              },
-              cutout: "60%"
-            }
+          // Build a map wrapper to replace the canvas
+          const regions = [
+            { key: 'north-america', label: 'North America (4%)', top: '36%', left: '18%', color: '#60A5FA' },
+            { key: 'latin-america', label: 'Latin America (8%)', top: '58%', left: '30%', color: '#F472B6' },
+            { key: 'europe', label: 'Europe (6%)', top: '28%', left: '52%', color: '#A78BFA' },
+            { key: 'mena', label: 'MENA (10%)', top: '40%', left: '54%', color: '#22D3EE' },
+            { key: 'ssa', label: 'Sub-Saharan Africa (26%)', top: '60%', left: '52%', color: '#34D399' },
+            { key: 'asia-pacific', label: 'Asia-Pacific (29%)', top: '44%', left: '74%', color: '#FBBF24' }
+          ];
+
+          const wrap = document.createElement('div');
+          wrap.className = 'regional-map-wrap';
+          // Accessibility
+          wrap.setAttribute('role', 'img');
+          wrap.setAttribute('aria-label', 'Regional youth shares world map');
+
+          // Using a background image for the map as requested; no inline SVG backdrop needed
+
+          // Build chips
+          regions.forEach(r => {
+            const chip = document.createElement('div');
+            chip.className = `region-chip region-${r.key}`;
+            chip.style.top = r.top;
+            chip.style.left = r.left;
+            chip.style.setProperty('--chip-color', r.color);
+            chip.innerHTML = `<span class="chip-dot" aria-hidden="true"></span><span class="chip-text">${r.label}</span>`;
+            wrap.appendChild(chip);
           });
-          regionalCanvas.dataset.chartInitialized = "true";
+
+          // Optional legend at bottom for screen readers and visibility
+          const legend = document.createElement('ul');
+          legend.className = 'region-legend';
+          regions.forEach(r => {
+            const li = document.createElement('li');
+            li.innerHTML = `<span class="legend-swatch" style="background:${r.color}"></span>${r.label}`;
+            legend.appendChild(li);
+          });
+          wrap.appendChild(legend);
+
+          // Replace the canvas in-place
+          regionalCanvas.replaceWith(wrap);
+          wrap.dataset.mapInitialized = 'true';
         } catch (_) {}
       }
 
