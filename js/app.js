@@ -647,21 +647,130 @@ class YouthHealthLMS {
       const pyramidCanvas = document.getElementById("populationPyramid");
       if (pyramidCanvas && !pyramidCanvas.dataset.chartInitialized && window.Chart) {
         try {
+          // Apply responsive height via CSS class (small: 480px, large: 640px)
+          try { pyramidCanvas.classList && pyramidCanvas.classList.add("chart-pyramid"); } catch (_) {}
           const ctx = pyramidCanvas.getContext("2d");
+          const labels = [
+            "0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39",
+            "40-44", "45-49", "50-54", "55-59", "60-64", "65-69", "70-74", "75-79",
+            "80-84", "85-89", "90-94", "95-99", "100+"
+          ];
+          const highlightAges = new Set(["10-14", "15-19", "20-24"]);
+          const maleBase = "#2563EB";      // blue-600
+          const maleHighlight = "#1D4ED8";  // blue-700
+          const femaleBase = "#F97316";    // orange-500
+          const femaleHighlight = "#EA580C"; // orange-600
+
+          const maleData = [-7.63, -7.41, -7.82, -8.5, -8.27, -7.92, -6.46, -6.68, -6.04, -4.92, -4.14, -3.78, -2.78, -2.59, -1.77, -1.26, -0.56, -0.18, -0.12, -0.06, -0.01];
+          const femaleData = [7.95, 7.92, 8.51, 8.07, 6.72, 7.92, 6.46, 5.66, 6.04, 5.12, 4.13, 4.0, 2.96, 3.01, 2.15, 1.57, 0.67, 0.46, 0.17, 0.08, 0.01];
+
+          const maleColors = labels.map(l => highlightAges.has(l) ? maleHighlight : maleBase);
+          const femaleColors = labels.map(l => highlightAges.has(l) ? femaleHighlight : femaleBase);
+
+          // Subtle outline for highlighted bars
+          const maleBorderColors = labels.map(l => highlightAges.has(l) ? "#93C5FD" : "rgba(0,0,0,0.06)"); // blue-300 or faint gray
+          const femaleBorderColors = labels.map(l => highlightAges.has(l) ? "#FDBA74" : "rgba(0,0,0,0.06)"); // orange-300 or faint gray
+          const maleBorderWidths = labels.map(l => highlightAges.has(l) ? 2 : 0.5);
+          const femaleBorderWidths = labels.map(l => highlightAges.has(l) ? 2 : 0.5);
+
+          // Background band plugin to softly highlight selected age groups
+          const ageBandHighlightBg = {
+            id: "ageBandHighlightBg",
+            beforeDatasetsDraw(chart) {
+              try {
+                const { ctx, chartArea } = chart;
+                const yScale = chart.scales.y;
+                if (!yScale || !chartArea) return;
+                ctx.save();
+                labels.forEach((lab, i) => {
+                  if (!highlightAges.has(lab)) return;
+                  const center = yScale.getPixelForValue(lab);
+                  // Approximate category height using neighbor delta
+                  const prev = yScale.getPixelForValue(labels[Math.max(0, i - 1)]);
+                  const next = yScale.getPixelForValue(labels[Math.min(labels.length - 1, i + 1)]);
+                  const step = Math.max(8, Math.abs(next - prev) / 2); // fallback minimum thickness
+                  const top = center - step / 2;
+                  const height = step;
+                  ctx.fillStyle = "rgba(234, 88, 12, 0.08)"; // subtle orange wash
+                  ctx.fillRect(chartArea.left, top, chartArea.right - chartArea.left, height);
+                });
+                ctx.restore();
+              } catch (_) {}
+            }
+          };
+
+          // Draw-time subtle shadow for highlighted bars
+          const ageBarShadow = {
+            id: "ageBarShadow",
+            afterDatasetsDraw(chart) {
+              try {
+                const { ctx } = chart;
+                const labs = chart.data.labels || [];
+                ctx.save();
+                // Dataset 0 (Male)
+                const meta0 = chart.getDatasetMeta(0);
+                if (meta0 && meta0.data) {
+                  meta0.data.forEach((bar, i) => {
+                    const lab = labs[i];
+                    if (!highlightAges.has(lab)) return;
+                    const x = bar.x, y = bar.y, base = bar.base;
+                    const width = Math.abs((bar.x ?? 0) - (bar.base ?? 0));
+                    const left = Math.min(x, base);
+                    const top = y - (bar.height || 0) / 2;
+                    const height = (bar.height || 0);
+                    ctx.shadowBlur = 6;
+                    ctx.shadowColor = "rgba(29, 78, 216, 0.25)"; // blue-700
+                    ctx.shadowOffsetX = 0;
+                    ctx.shadowOffsetY = 0;
+                    ctx.fillStyle = "rgba(29, 78, 216, 0.05)";
+                    ctx.fillRect(left, top, width, height);
+                  });
+                }
+                // Dataset 1 (Female)
+                const meta1 = chart.getDatasetMeta(1);
+                if (meta1 && meta1.data) {
+                  meta1.data.forEach((bar, i) => {
+                    const lab = labs[i];
+                    if (!highlightAges.has(lab)) return;
+                    const x = bar.x, y = bar.y, base = bar.base;
+                    const width = Math.abs((bar.x ?? 0) - (bar.base ?? 0));
+                    const left = Math.min(x, base);
+                    const top = y - (bar.height || 0) / 2;
+                    const height = (bar.height || 0);
+                    ctx.shadowBlur = 6;
+                    ctx.shadowColor = "rgba(234, 88, 12, 0.25)"; // orange-600
+                    ctx.shadowOffsetX = 0;
+                    ctx.shadowOffsetY = 0;
+                    ctx.fillStyle = "rgba(234, 88, 12, 0.05)";
+                    ctx.fillRect(left, top, width, height);
+                  });
+                }
+                ctx.restore();
+              } catch (_) {}
+            }
+          };
+
           new window.Chart(ctx, {
             type: "bar",
+            plugins: [ageBandHighlightBg, ageBarShadow],
             data: {
-              labels: ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65-69", "70-74", "75-79", "80-84", "85-89", "90-94", "95-99", "100+"],
+              labels,
               datasets: [
                 {
                   label: "Male",
-                  backgroundColor: "#2563EB",
-                  data: [-7.63, -7.41, -7.82, -8.5, -8.27, -7.92, -6.46, -6.68, -6.04, -4.92, -4.14, -3.78, -2.78, -2.59, -1.77, -1.26, -0.56, -0.18, -0.12, -0.06, -0.01]
+                  backgroundColor: maleColors,
+                  borderColor: maleBorderColors,
+                  borderWidth: maleBorderWidths,
+                  borderSkipped: false,
+                  data: maleData
                 },
                 {
                   label: "Female",
-                  backgroundColor: "#F97316",
-                  data: [7.95, 7.92, 8.51, 8.07, 6.72, 7.92, 6.46, 5.66, 6.04, 5.12, 4.13, 4.0, 2.96, 3.01, 2.15, 1.57, 0.67, 0.46, 0.17, 0.08, 0.01]
+                  backgroundColor: femaleColors,
+                  borderColor: femaleBorderColors,
+                  borderWidth: femaleBorderWidths,
+                  borderSkipped: false,
+                  data: femaleData
                 }
               ]
             },
@@ -675,9 +784,24 @@ class YouthHealthLMS {
                     callback: (val) => Math.abs(val)
                   },
                   title: { display: true, text: "Population (Millions)" }
+                },
+                y: {
+                  ticks: {
+                    autoSkip: false,
+                    color: (ctx) => (highlightAges.has(ctx.tick.value) ? "#111827" : undefined), // darker for highlights
+                    font: (ctx) => (highlightAges.has(ctx.tick.value) ? { weight: "bold" } : undefined)
+                  }
                 }
               },
-              plugins: { legend: { position: "bottom" } }
+              plugins: {
+                legend: { position: "bottom" },
+                subtitle: {
+                  display: true,
+                  text: "Highlighted age groups: 10–14, 15–19, 20–24",
+                  padding: { top: 4, bottom: 8 },
+                  color: "#374151"
+                }
+              }
             }
           });
           pyramidCanvas.dataset.chartInitialized = "true";

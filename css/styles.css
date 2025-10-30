@@ -1,3 +1,13 @@
+/* Responsive height for population pyramid chart */
+.chart-pyramid {
+  height: 480px; /* small screens */
+}
+
+@media (min-width: 992px) { /* Bootstrap lg breakpoint */
+  .chart-pyramid {
+    height: 640px; /* large screens */
+  }
+}
 /* Young Health Ambassador Programme - Modern UI/UX Styles */
 
 /* ==================== ROOT VARIABLES ==================== */
