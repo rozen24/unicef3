@@ -171,7 +171,7 @@ const coursesData = [
             </div>
             <div class="row g-4">${['Health Literacy','Health Education & Awareness','Peer to Peer Influence','Empowerment','Leadership','Advocacy'].map((t,i)=>`
               <div class="col-md-6">
-                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${100+i*50}">
+                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover bg-gradient-${['purple','blue','teal','orange','green','pink'][i]}" data-aos="zoom-in" data-aos-delay="${100+i*50}">
                   <div class="component-icon bg-gradient-${['purple','blue','teal','orange','green','pink'][i]} animate-float"><i class="fas ${['fa-book-medical','fa-graduation-cap','fa-users','fa-hand-fist','fa-flag','fa-bullhorn'][i]}"></i></div>
                   <h5 class="gradient-text transition-base">${t}</h5>
                   <p>${['YHAP builds foundational health literacy through comprehensive training on essential health and wellbeing. This equips ambassadors with the expertise to act as credible sources of information and effective advocates for prevention of diseases and health promotion.',
