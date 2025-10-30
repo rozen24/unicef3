@@ -1560,11 +1560,11 @@ class YouthHealthLMS {
                     const completed = contentDone && quizPassed;
                     const unlocked = ci === 0 || (course.chapters[ci - 1] && doneSet.has(`${course.chapters[ci - 1].id}-quiz`));
                     const state = completed ? 'completed' : unlocked ? 'unlocked' : 'locked';
-                    const icon = completed ? 'fa-check-circle' : unlocked ? 'fa-unlock' : 'fa-lock';
+                    const icon = completed ? 'fa-check-circle' : unlocked ? 'fa-lock-open' : 'fa-lock';
                     const stateCls = completed ? 'module-card--completed' : unlocked ? 'module-card--unlocked' : 'module-card--locked';
                     const click = unlocked || completed ? `onclick=\"app.openCourseChapterLesson('${course.id}', ${ci}, 0)\"` : '';
                     return `
-                      <div class=\"col-12 col-md-6 col-lg-3\">
+                      <div class=\"col-12 col-md-6 col-lg-4\">
                         <button class=\"module-card ${stateCls}\" ${click} ${!(unlocked||completed)?'disabled':''}>
                           <span class=\"module-card__icon\"><i class=\"fa-solid ${icon}\"></i></span>
                           <span class=\"module-card__title\">${ch.title.replace(/^Module-\d+:\s*/,'')}</span>
@@ -1575,7 +1575,7 @@ class YouthHealthLMS {
                   return `
                     <div class=\"course-chapters-card\">
                       <div class=\"course-chapters-header\">
-                        <h3 class=\"mb-1\">${course.title}</h3>
+                        <h3 class=\"mb-1 py-2\">${course.title}</h3>
                         <span class=\"text-muted\">${course.chapters.length} module${course.chapters.length>1?'s':''}</span>
                       </div>
                       <div class=\"row g-3\">${moduleCards}</div>
