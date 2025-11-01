@@ -1785,7 +1785,7 @@ class YouthHealthLMS {
               <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
             </a>
             <div class="d-flex align-items-center gap-3 ms-auto">
-              <button class="btn btn-outline-light" title="Profile settings" onclick="app.navigateTo('profile'); return false;">
+              <button class="btn btn-logout" title="Profile settings" onclick="app.navigateTo('profile'); return false;">
                 <i class="fa-solid fa-gear"></i>
               </button>
               <div class="user-chip">
@@ -1821,7 +1821,7 @@ class YouthHealthLMS {
                     <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i>Joined ${joinedDate}</span>
                   </div>
                   <div class="dashboard-actions">
-                    <button class="btn btn-primary btn-lg" onclick="${continueOnclick}">
+                    <button class="btn btn-gradient-glow hover-lift-sm focus-visible-ring transition-base btn-lg" onclick="${continueOnclick}">
                       Continue learning <i class="fa-solid fa-arrow-right-long ms-2"></i>
                     </button>
                     <button class="btn btn-outline-light btn-lg" onclick="app.navigateTo('register'); return false;">
@@ -2430,7 +2430,7 @@ class YouthHealthLMS {
             </p>
             <ul class="text-muted mb-0" data-aos="fade-up" data-aos-delay="90" style="padding-left: 1.2rem;">
               <li>Quiz test is very crucial for every learning path.</li>
-              <li>Read each question carefully and select the best answer.</li>
+              <li>Read each question carefully and select the correct answer.</li>
               <li>You can go back to review the lesson at any time.</li>
               <li>Retakes are allowed — your best score will be saved.</li>
             </ul>
