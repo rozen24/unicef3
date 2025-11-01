@@ -4195,7 +4195,7 @@ img {
   height: 4px;
   width: 64px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(59,130,246,0.7), rgba(236,72,153,0.6));
+  background: linear-gradient(90deg,;
   display: inline-flex;
   box-shadow: 0 4px 16px rgba(59,130,246,0.35);
 }
@@ -4360,7 +4360,6 @@ img {
 
 /* Role Cards */
 .role-card {
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
   padding: 2rem;
   border-radius: 16px;
   border-left: 5px solid #667eea;
@@ -4388,14 +4387,13 @@ img {
 
 .role-card p {
   font-size: 1rem;
-  color: #c6c6c6;
+  color: #f0f0f0 !important;
   line-height: 1.7;
   margin: 0;
 }
 
 /* Step Cards */
 .step-card {
-  background: white;
   padding: 1.5rem;
   border-radius: 12px;
   border: 2px solid #e2e8f0;
@@ -5909,7 +5907,6 @@ body {
 }
 
 .role-card {
-  background: rgba(15, 35, 84, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-md);
   padding: 1.6rem;
@@ -8071,7 +8068,6 @@ p.lead {
 }
 
 .lesson-slide .role-card {
-  background: rgba(255, 255, 255, 0.95);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(0, 95, 175, 0.12);

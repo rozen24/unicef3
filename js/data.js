@@ -243,7 +243,7 @@ const coursesData = [
             <div class="row g-3">
               ${steps.map((s,i)=>`
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="${120+i*40}">
-              <div class="step-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover text-center">
+              <div class="step-card bg-gradient-${s.color} hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover text-center">
                 <div class="step-icon bg-gradient-${s.color} animate-float-slow d-inline-flex align-items-center justify-content-center"
                    style="width:64px; height:64px; border-radius:50%; animation-duration:6s; animation-delay:${(i*0.2).toFixed(1)}s">
                 <i class="fas ${s.icon} text-white" style="font-size:1.35rem"></i>
