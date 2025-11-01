@@ -4195,7 +4195,7 @@ img {
   height: 4px;
   width: 64px;
   border-radius: 999px;
-  background: linear-gradient(90deg,;
+  background: linear-gradient(90deg, rgba(59,130,246,0.7), rgba(236,72,153,0.6));
   display: inline-flex;
   box-shadow: 0 4px 16px rgba(59,130,246,0.35);
 }
