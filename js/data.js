@@ -420,11 +420,10 @@ const coursesData = [
                 <h5 class="gradient-text mt-4" data-aos="fade-up">Pathways to harnessing the Demographic Dividend</h5>
                 <div class="row g-3 pyramid-compare" data-aos="fade-up" data-aos-delay="80">
                   <!-- Positive Path -->
-                  <div class="col-lg-6">
+                  <div class="col-lg-12">
                     <div class="modern-card glass-card pyramid-path pyramid-positive">
-                      <div class="pyramid-head"><i class="fa-solid fa-chart-line"></i> Harnessing the Demographic Dividend</div>
+                      <div class="pyramid-head"><i class="fa-solid fa-chart-line"></i> Demographic Dividend</div>
                       <ul class="pyramid-steps">
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-dress"></i> Adolescent Girl</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="120"><i class="fa-solid fa-school"></i> School</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="180"><i class="fa-solid fa-briefcase"></i> Employment</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="240"><i class="fa-solid fa-piggy-bank"></i> Wealth/child investment</li>
@@ -432,17 +431,15 @@ const coursesData = [
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="360"><i class="fa-solid fa-people-arrows"></i> Work-life Balance</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="420"><i class="fa-solid fa-location-dot"></i> Security of Place</li>
                         <li class="pyramid-step highlight" data-aos="fade-up" data-aos-delay="480"><i class="fa-solid fa-hands-holding-child"></i> Healthy children</li>
-                        <li class="pyramid-step apex" data-aos="fade-up" data-aos-delay="540"><i class="fa-solid fa-trophy"></i> Demographic Dividend</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-shield-heart"></i> Secure old-age</li>
                       </ul>
                     </div>
                   </div>
+                  <div class="pyramid-head"><i class="fa-solid fa-person-dress"></i> Adolescent Girl </div>
                   <!-- Negative Path -->
-                  <div class="col-lg-6">
+                  <div class="col-lg-12">
                     <div class="modern-card glass-card pyramid-path pyramid-negative">
-                      <div class="pyramid-head"><i class="fa-solid fa-triangle-exclamation"></i> Missed Demographic Dividend</div>
                       <ul class="pyramid-steps">
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-dress"></i> Adolescent Girl</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="120"><i class="fa-solid fa-ring"></i> Child Marriage</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="180"><i class="fa-solid fa-person-walking-arrow-right"></i> Leaving School</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="240"><i class="fa-solid fa-helmet-safety"></i> Informal work</li>
@@ -451,8 +448,8 @@ const coursesData = [
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="420"><i class="fa-solid fa-child"></i> Child illness & death</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="480"><i class="fa-solid fa-house-crack"></i> Insecurity & Displacement</li>
                         <li class="pyramid-step" data-aos="fade-up" data-aos-delay="540"><i class="fa-solid fa-shield-halved"></i> Insecure old-age</li>
-                        <li class="pyramid-step apex" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-circle-xmark"></i> Missed Demographic Dividend</li>
                       </ul>
+                      <div class="pyramid-head py-2"><i class="fa-solid fa-triangle-exclamation"></i> Missed Demographic Dividend</div>
                     </div>
                   </div>
                 </div>
