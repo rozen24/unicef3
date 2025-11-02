@@ -1131,7 +1131,47 @@ class YouthHealthLMS {
           cmCanvas.dataset.chartInitialized = "true";
         } catch (_) {}
       }
+
+      // Position demographic pyramid steps along diagonals when present
+      try { this.initPyramidLayout(); } catch (_) {}
     } catch (_) {}
+  }
+
+  // Layout the demographic pyramid steps on diagonals
+  initPyramidLayout() {
+    try {
+      const positive = document.querySelectorAll('.pyramid-positive .pyramid-step');
+      const negative = document.querySelectorAll('.pyramid-negative .pyramid-step');
+      const margin = 10; // percent padding from edges
+
+      const place = (nodeList, kind) => {
+        const items = Array.from(nodeList);
+        const n = items.length;
+        if (!n) return;
+        // Define start/end for left/top in percent
+        const leftStart = margin, leftEnd = 100 - margin;
+        let topStart, topEnd;
+        if (kind === 'positive') {
+          // bottom-left to top-right: top decreases while left increases
+          topStart = 100 - margin; topEnd = margin;
+        } else {
+          // negative: top-left to bottom-right: both increase
+          topStart = margin; topEnd = 100 - margin;
+        }
+
+        items.forEach((el, i) => {
+          const t = n === 1 ? 0.5 : i / (n - 1);
+          const left = leftStart + (leftEnd - leftStart) * t;
+          const top = topStart + (topEnd - topStart) * t;
+          el.style.left = left + '%';
+          el.style.top = top + '%';
+          el.style.zIndex = String(100 + i);
+        });
+      };
+
+      if (positive.length) place(positive, 'positive');
+      if (negative.length) place(negative, 'negative');
+    } catch (_) { /* no-op */ }
   }
 
   // Initialize show/hide password toggles for any buttons with data-pw-toggle pointing to an input id

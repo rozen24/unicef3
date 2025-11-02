@@ -1999,6 +1999,76 @@ img {
   .timeline-marker {
     left: 30px;
   }
+
+/* ==================== Demographic Pyramid Compare ==================== */
+.pyramid-center {
+  font-weight: 700 !important;
+}
+.pyramid-center i {
+  font-size: 20px !important;
+  font-weight: 900 !important;
+}
+.pyramid-compare { --pyramid-height: 360px; }
+
+.pyramid-path { position: relative; }
+
+.pyramid-path .pyramid-head {
+  font-weight: 700;
+  padding: .5rem .75rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: .5rem;
+  justify-content: end;
+}
+
+.pyramid-steps {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: var(--pyramid-height);
+}
+
+.pyramid-step {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .75rem;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  white-space: nowrap;
+}
+.pyramid-step i { opacity: .9; }
+.pyramid-step.highlight { font-weight: 700; }
+
+/* Positive path accent */
+.pyramid-positive .pyramid-head { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); }
+.pyramid-positive .pyramid-step { box-shadow: 0 8px 18px rgba(59,130,246,0.12); }
+
+/* Negative path accent */
+.pyramid-negative .pyramid-head { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.2); }
+.pyramid-negative .pyramid-step { box-shadow: 0 8px 18px rgba(249,115,22,0.12); }
+
+/* Subtle diagonal guides (optional) */
+.pyramid-steps::before { content: ""; position: absolute; inset: 10% 10%; border-top: 1px dashed rgba(0,0,0,0.08); border-left: 1px dashed rgba(0,0,0,0.08); transform: skewY(-45deg); opacity: .15; display: none; }
+
+/* Mobile fallback: stack items in flow for readability */
+@media (max-width: 576px) {
+  .pyramid-steps { min-height: 0; }
+  .pyramid-step {
+    position: static;
+    transform: none;
+    display: block;
+    width: 100%;
+    margin: .35rem 0;
+  }
+}
   
   .timeline-content {
     margin-left: 80px;
@@ -2047,7 +2117,36 @@ img {
   
   .btn-modern { padding: 12px 24px; font-size: 0.85rem; }
 }
-
+@media (min-width: 992px) {
+        /* Your custom styles for large screens go here */
+        .pyramid-positive  .pyramid-step:nth-child(1) {
+           transform: translateX(135%) !important;
+        } 
+        .pyramid-positive  .pyramid-step:nth-child(2) {
+           transform: translateX(135%) !important;
+        } 
+        .pyramid-positive  .pyramid-step:nth-child(1) {
+           transform: translateX(135%) !important;
+        } 
+        .pyramid-positive  .pyramid-step:nth-child(1) {
+           transform: translateX(135%) !important;
+        } 
+        .pyramid-positive  .pyramid-step:nth-child(1) {
+           transform: translateX(135%) !important;
+        } 
+        .pyramid-positive  .pyramid-step:nth-child(1) {
+           transform: translateX(135%) !important;
+        } 
+        .pyramid-positive  .pyramid-step:nth-child(1) {
+           transform: translateX(135%) !important;
+        } 
+        .pyramid-positive  .pyramid-step:nth-child(1) {
+           transform: translateX(135%) !important;
+        } 
+        .pyramid-positive  .pyramid-step:nth-child(1) {
+           transform: translateX(135%) !important;
+        } 
+    }
 /* ==================== LOADING ANIMATION ==================== */
 @keyframes spin {
   to { transform: rotate(360deg); }
@@ -8330,7 +8429,7 @@ p.lead {
 .roi-banner .roi-chip i { color: #0b5fa5; }
 
 .pyramid-path { position: relative; }
-.pyramid-head { font-weight:700; margin-bottom:.75rem; display:flex; align-items:center; gap:.5rem; }
+.pyramid-head { font-weight:700; margin-bottom:.75rem; display:flex; align-items:center; gap:.5rem; justify-content: end;}
 .pyramid-steps { list-style:none; margin:0; padding:0; display: inline-grid;  gap:.5rem; }
 .pyramid-step { display:flex; align-items:center; gap:.6rem; padding:.65rem .8rem; border:1px solid rgba(0,0,0,.08); border-radius:12px; background:#fff; box-shadow: var(--shadow-sm); }
 .pyramid-step i { width:26px; text-align:center; }
