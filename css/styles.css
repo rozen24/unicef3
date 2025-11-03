@@ -2033,7 +2033,8 @@ img {
 
 .pyramid-step {
   position: absolute;
-  transform: translate(-50%, -50%);
+  /* Keep center alignment and allow extra per-step X shift via --shift */
+  transform: translate(-50%, -50%) translateX(var(--shift, 0%));
   display: inline-flex;
   align-items: center;
   gap: .5rem;
@@ -2055,6 +2056,14 @@ img {
 .pyramid-negative .pyramid-head { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.2); }
 .pyramid-negative .pyramid-step { box-shadow: 0 8px 18px rgba(249,115,22,0.12); }
 
+/* Positive path: optional per-step extra X shift and arrow indicator */
+
+
+/* Draw a small diagonal arrow (↗) pointing along the positive path */
+
+
+
+
 /* Subtle diagonal guides (optional) */
 .pyramid-steps::before { content: ""; position: absolute; inset: 10% 10%; border-top: 1px dashed rgba(0,0,0,0.08); border-left: 1px dashed rgba(0,0,0,0.08); transform: skewY(-45deg); opacity: .15; display: none; }
 
@@ -2068,7 +2077,13 @@ img {
     width: 100%;
     margin: .35rem 0;
   }
+  /* Hide decorative arrows on small screens */
+  .pyramid-step::before,
+  .pyramid-step::after { display: none; }
 }
+
+
+
   
   .timeline-content {
     margin-left: 80px;
@@ -2123,29 +2138,61 @@ img {
            transform: translateX(135%) !important;
         } 
         .pyramid-positive  .pyramid-step:nth-child(2) {
-           transform: translateX(135%) !important;
+           transform: translateX(120%) !important;
         } 
-        .pyramid-positive  .pyramid-step:nth-child(1) {
-           transform: translateX(135%) !important;
+        .pyramid-positive  .pyramid-step:nth-child(3) {
+           transform: translateX(105%) !important;
         } 
-        .pyramid-positive  .pyramid-step:nth-child(1) {
-           transform: translateX(135%) !important;
+        .pyramid-positive  .pyramid-step:nth-child(4) {
+           transform: translateX(90%) !important;
         } 
-        .pyramid-positive  .pyramid-step:nth-child(1) {
-           transform: translateX(135%) !important;
+        .pyramid-positive  .pyramid-step:nth-child(5) {
+           transform: translateX(75%) !important;
         } 
-        .pyramid-positive  .pyramid-step:nth-child(1) {
-           transform: translateX(135%) !important;
+        .pyramid-positive  .pyramid-step:nth-child(6) {
+           transform: translateX(60%) !important;
         } 
-        .pyramid-positive  .pyramid-step:nth-child(1) {
-           transform: translateX(135%) !important;
+        .pyramid-positive  .pyramid-step:nth-child(7) {
+           transform: translateX(45%) !important;
         } 
-        .pyramid-positive  .pyramid-step:nth-child(1) {
-           transform: translateX(135%) !important;
+        .pyramid-positive  .pyramid-step:nth-child(8) {
+           transform: translateX(30%) !important;
         } 
-        .pyramid-positive  .pyramid-step:nth-child(1) {
+
+        .pyramid-negative  .pyramid-step:nth-child(1) {
+           transform: translateX(30%) !important;
+        }
+        .pyramid-negative  .pyramid-step:nth-child(2) {
+           transform: translateX(45%) !important;
+        }
+        .pyramid-negative  .pyramid-step:nth-child(3) {
+           transform: translateX(60%) !important;
+        }
+        .pyramid-negative  .pyramid-step:nth-child(4) {
+           transform: translateX(75%) !important;
+        }
+        .pyramid-negative  .pyramid-step:nth-child(5) {
+           transform: translateX(90%) !important;
+        }
+        .pyramid-negative  .pyramid-step:nth-child(6) {
+           transform: translateX(105%) !important;
+        }
+        .pyramid-negative  .pyramid-step:nth-child(7) {
+           transform: translateX(120%) !important;
+        }
+        .pyramid-negative  .pyramid-step:nth-child(8) {
            transform: translateX(135%) !important;
-        } 
+        }
+    }
+    .pyramid-center{
+      display: inline-grid;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .pyramid-center i {
+      font-size: 42px;
+      font-weight: bold;
     }
 /* ==================== LOADING ANIMATION ==================== */
 @keyframes spin {
@@ -8526,3 +8573,95 @@ p.lead {
 .h-region {
   height: 650px;
 }
+
+
+
+
+
+
+
+
+/* My Codes */
+@media (min-width: 992px) {
+  /* Base arrow style for all pyramid steps */
+  /* .pyramid-step {
+    position: relative;
+  } */
+
+  .pyramid-positive .pyramid-step::before {
+    content: "";
+    position: absolute;
+    top: 78%;
+    left: -16px;
+    width: 35px;
+    height: 2px;
+    background-color: #333;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+  /* Add an arrowhead using ::after */
+  .pyramid-positive .pyramid-step::after {
+    content: "";
+    position: absolute;
+    top: 93%;
+    left: -11px;
+    border: solid #333;
+    border-width: 2px 2px 0 0;
+    display: inline-block;
+    padding: 4px;
+    transform: translateY(-50%) rotate(175deg) !important;
+}
+
+.pyramid-negative .pyramid-step::before {
+    content: "";
+    position: absolute;
+    top: 113%;
+    left: -7px;
+    width: 35px;
+    height: 2px;
+    background-color: #333;
+    transform: translateY(-50%) rotate(57deg);
+    z-index: 999999999999999 !important;
+    overflow: visible;
+}
+
+  /* Add an arrowhead using ::after */
+  .pyramid-negative .pyramid-step::after {
+    content: "";
+    position: absolute;
+    top: 135%;
+    left: 13px;
+    border: solid #333;
+    border-width: 2px 2px 0 0;
+    display: inline-block;
+    padding: 4px;
+    transform: translateY(-50%) rotate(100deg) !important;
+}
+
+  /* Hide the line before the first step */
+  /* .pyramid-step:first-child::before,
+  .pyramid-step:first-child::after {
+    display: none;
+  } */
+
+  /* Your existing translations */
+  .pyramid-positive .pyramid-step:nth-child(1) { transform: translateX(135%) !important; }
+  .pyramid-positive .pyramid-step:nth-child(2) { transform: translateX(120%) !important; }
+  .pyramid-positive .pyramid-step:nth-child(3) { transform: translateX(105%) !important; }
+  .pyramid-positive .pyramid-step:nth-child(4) { transform: translateX(90%) !important; }
+  .pyramid-positive .pyramid-step:nth-child(5) { transform: translateX(75%) !important; }
+  .pyramid-positive .pyramid-step:nth-child(6) { transform: translateX(60%) !important; }
+  .pyramid-positive .pyramid-step:nth-child(7) { transform: translateX(45%) !important; }
+  .pyramid-positive .pyramid-step:nth-child(8) { transform: translateX(30%) !important; }
+
+  .pyramid-negative .pyramid-step:nth-child(1) { transform: translateX(30%) !important; }
+  .pyramid-negative .pyramid-step:nth-child(2) { transform: translateX(45%) !important; }
+  .pyramid-negative .pyramid-step:nth-child(3) { transform: translateX(60%) !important; }
+  .pyramid-negative .pyramid-step:nth-child(4) { transform: translateX(75%) !important; }
+  .pyramid-negative .pyramid-step:nth-child(5) { transform: translateX(90%) !important; }
+  .pyramid-negative .pyramid-step:nth-child(6) { transform: translateX(105%) !important; }
+  .pyramid-negative .pyramid-step:nth-child(7) { transform: translateX(120%) !important; }
+  .pyramid-negative .pyramid-step:nth-child(8) { transform: translateX(135%) !important; }
+}
+
+

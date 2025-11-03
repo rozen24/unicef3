@@ -691,29 +691,29 @@ const coursesData = [
                       <div class="pyramid-path pyramid-positive">
                         <div class="pyramid-head"><i class="fa-solid fa-chart-line"></i> Demographic Dividend</div>
                         <ul class="pyramid-steps">
-                          <li class="pyramid-step" data-aos="fade-left" data-aos-delay="600"><i class="fa-solid fa-school"></i> School</li>
-                          <li class="pyramid-step" style="transform: translateX(120%);" data-aos="fade-left" data-aos-delay="900"><i class="fa-solid fa-briefcase"></i> Employment</li>
-                          <li class="pyramid-step" style="transform: translateX(105%);" data-aos="fade-left" data-aos-delay="1200"><i class="fa-solid fa-piggy-bank"></i> Wealth/child investment</li>
-                          <li class="pyramid-step" style="transform: translateX(90%);" data-aos="fade-left" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> Lifelong learning</li>
-                          <li class="pyramid-step" style="transform: translateX(75%);" data-aos="fade-left" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> Work-life Balance</li>
-                          <li class="pyramid-step" style="transform: translateX(60%);" data-aos="fade-left" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> Security of Place</li>
-                          <li class="pyramid-step" style="transform: translateX(45%);" data-aos="fade-left" data-aos-delay="2400"><i class="fa-solid fa-hands-holding-child"></i> Healthy children</li>
-                          <li class="pyramid-step" style="transform: translateX(30%);" data-aos="fade-left" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> Secure old-age</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-school"></i> School</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-briefcase"></i> Employment</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-piggy-bank"></i> Wealth/child investment</li>
+                          <li class="pyramid-step"  data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> Lifelong learning</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> Work-life Balance</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> Security of Place</li>
+                          <li class="pyramid-step"  data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-hands-holding-child"></i> Healthy children</li>
+                          <li class="pyramid-step"  data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> Secure old-age</li>
                         </ul>
                       </div>
 
                       <div class="pyramid-center highlight py-3 border-rounded"><i class="fa-solid fa-person-dress"></i> Adolescent Girl </div>
                       <!-- Negative Path -->
                       <div class="pyramid-path pyramid-negative">
-                      <ul class="pyramid-steps">
-                        <li class="pyramid-step" style="transform: translateX(30%);" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-ring"></i> Child Marriage</li>
-                        <li class="pyramid-step" style="transform: translateX(45%);" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-person-walking-arrow-right"></i> Leaving School</li>
-                        <li class="pyramid-step" style="transform: translateX(60%);" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-helmet-safety"></i> Informal work</li>
-                        <li class="pyramid-step" style="transform: translateX(75%);" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-rotate"></i> Repeat Pregnancies</li>
-                        <li class="pyramid-step" style="transform: translateX(90%);" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-person-pregnant"></i> Maternal morbidity</li>
-                        <li class="pyramid-step" style="transform: translateX(105%);" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-child"></i> Child illness & death</li>
-                        <li class="pyramid-step" style="transform: translateX(120%);" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-house-crack"></i> Insecurity & Displacement</li>
-                        <li class="pyramid-step" style="transform: translateX(135%);" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-halved"></i> Insecure old-age</li>
+                      <ul class="pyramid-steps pyramid-container">
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-ring"></i> Child Marriage</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-person-walking-arrow-right"></i> Leaving School</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-helmet-safety"></i> Informal work</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-rotate"></i> Repeat Pregnancies</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-person-pregnant"></i> Maternal morbidity</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-child"></i> Child illness & death</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-house-crack"></i> Insecurity & Displacement</li>
+                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-halved"></i> Insecure old-age</li>
                       </ul>
                       <div class="pyramid-head py-2"><i class="fa-solid fa-triangle-exclamation"></i> Missed Demographic Dividend</div>
                     </div>
