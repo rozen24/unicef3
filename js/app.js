@@ -2561,6 +2561,48 @@ class YouthHealthLMS {
         "fa-diagram-project",
       ];
 
+      // Mobile offcanvas lesson browser (chapters)
+      const mobileBrowseBtn = `
+        <div class="d-lg-none mt-3">
+          <button class="btn btn-primary w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
+            <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+          </button>
+        </div>`;
+
+      const mobileOffcanvas = `
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileLessonBrowser" aria-labelledby="mobileLessonBrowserLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileLessonBrowserLabel">Modules & lessons</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            ${course.chapters.map((ch, ci) => {
+              const lessons = ch.lessons || [];
+              return `
+                <div class="mb-3">
+                  <div class="fw-semibold mb-2"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2"></i>${ch.title}</div>
+                  <div class="list-group">
+                    ${lessons.map((ls, li) => {
+                      const prevId = lessons[Math.max(0, li - 1)]?.id;
+                      const isUnlocked = li === 0 || (prevId && completedIds.has(prevId));
+                      const isDone = completedIds.has(ls.id);
+                      const icon = isDone ? 'fa-check' : (isUnlocked ? 'fa-unlock' : 'fa-lock');
+                      const disabledCls = isUnlocked ? '' : 'disabled';
+                      const click = isUnlocked ? `onclick=\"app.changeChapterLesson(${ci}, ${li})\"` : '';
+                      const dismiss = isUnlocked ? 'data-bs-dismiss="offcanvas"' : '';
+                      return `
+                        <button type="button" class="list-group-item list-group-item-action d-flex align-items-center ${disabledCls}" ${click} ${dismiss}>
+                          <i class="fa-solid ${icon} me-2" aria-hidden="true"></i>
+                          <span>${ls.title}</span>
+                          ${isDone ? '<span class="badge bg-success ms-auto">Done</span>' : ''}
+                        </button>`;
+                    }).join('')}
+                  </div>
+                </div>`;
+            }).join('')}
+          </div>
+        </div>`;
+
       const accordion = `
         <div class="accordion chapter-accordion" id="chaptersAccordion">
           ${course.chapters
@@ -2662,6 +2704,7 @@ class YouthHealthLMS {
                   } of ${totalLessons}</span>
                 </div>
               </div>
+              ${mobileBrowseBtn}
               <div class="row align-items-start g-4"></div>
             </div>
           </header>
@@ -2669,11 +2712,11 @@ class YouthHealthLMS {
           <section class="lesson-body">
             <div class="container">
               <div class="row g-4">
-                <aside class="col-lg-4">
+                <aside class="col-lg-4 d-none d-lg-block">
                   <div class="lesson-trail">${accordion}</div>
                 </aside>
 
-                <div class="col-lg-8">
+                <div class="col-12 col-lg-8">
                   <article class="lesson-content-card">
                     ${
                       currentLesson && currentLesson.audioFile
@@ -2766,6 +2809,7 @@ class YouthHealthLMS {
               </div>
             </div>
           </section>
+          ${mobileOffcanvas}
         </div>
       `;
     }
@@ -2807,6 +2851,11 @@ class YouthHealthLMS {
                 } of ${totalLessons}</span>
               </div>
             </div>
+            <div class="d-lg-none mt-3">
+              <button class="btn btn-primary w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
+                <i class="fa-solid fa-list me-2"></i>Browse lessons
+              </button>
+            </div>
             <div class="lesson-hero__progress">
               <div
                 class="lesson-progress"
@@ -2833,7 +2882,7 @@ class YouthHealthLMS {
         <section class="lesson-body">
           <div class="container">
             <div class="row g-4">
-              <aside class="col-lg-4">
+              <aside class="col-lg-4 d-none d-lg-block">
                 <div class="lesson-trail">
                   ${courseFlat.lessons
                     .map((lesson, index) => {
@@ -2874,7 +2923,7 @@ class YouthHealthLMS {
                 </div>
               </aside>
 
-              <div class="col-lg-8">
+              <div class="col-12 col-lg-8">
                 <article class="lesson-content-card">
                   ${
                     currentLesson.audioFile
@@ -2987,6 +3036,26 @@ class YouthHealthLMS {
             </div>
           </div>
         </section>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileLessonBrowserFlat" aria-labelledby="mobileLessonBrowserFlatLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileLessonBrowserFlatLabel">Lessons</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="list-group">
+            ${courseFlat.lessons.map((ls, li) => {
+              const isDone = completedIds.has(ls.id);
+              const icon = isDone ? 'fa-check' : 'fa-book-open';
+              return `
+                <button type="button" class="list-group-item list-group-item-action d-flex align-items-center" onclick="app.changeLesson(${li})" data-bs-dismiss="offcanvas">
+                  <i class="fa-solid ${icon} me-2"></i>
+                  <span>${ls.title}</span>
+                  ${isDone ? '<span class="badge bg-success ms-auto">Done</span>' : ''}
+                </button>`;
+            }).join('')}
+            </div>
+          </div>
+        </div>
       </div>
     `;
   }
