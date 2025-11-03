@@ -2580,12 +2580,20 @@ class YouthHealthLMS {
               const lessons = ch.lessons || [];
               return `
                 <div class="mb-3">
-                  <div class="fw-semibold mb-2"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2"></i>${ch.title}</div>
+                  <div class="module-header fw-semibold"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2"></i>${ch.title}</div>
                   <div class="list-group">
                     ${lessons.map((ls, li) => {
                       const prevId = lessons[Math.max(0, li - 1)]?.id;
                       const isUnlocked = li === 0 || (prevId && completedIds.has(prevId));
                       const isDone = completedIds.has(ls.id);
+                      const isCurrent = ci === chIndex && li === activeIndex;
+                      // Estimate reading time from content length (~200 wpm)
+                      let estMin = 1;
+                      try {
+                        const text = String(ls.content || '').replace(/<[^>]+>/g, ' ');
+                        const words = (text.match(/\S+/g) || []).length;
+                        estMin = Math.max(1, Math.round(words / 200));
+                      } catch (_) {}
                       const icon = isDone ? 'fa-check' : (isUnlocked ? 'fa-unlock' : 'fa-lock');
                       const disabledCls = isUnlocked ? '' : 'disabled';
                       const click = isUnlocked ? `onclick=\"app.changeChapterLesson(${ci}, ${li})\"` : '';
@@ -2593,8 +2601,10 @@ class YouthHealthLMS {
                       return `
                         <button type="button" class="list-group-item list-group-item-action d-flex align-items-center ${disabledCls}" ${click} ${dismiss}>
                           <i class="fa-solid ${icon} me-2" aria-hidden="true"></i>
-                          <span>${ls.title}</span>
-                          ${isDone ? '<span class="badge bg-success ms-auto">Done</span>' : ''}
+                          <span class="flex-grow-1">${ls.title}</span>
+                          <span class="badge bg-light text-dark border me-2 d-none">${estMin} min</span>
+                          ${isCurrent ? '<span class="badge bg-info text-dark me-2">Current</span>' : ''}
+                          ${isDone ? '<span class="ring ring--done" title="Completed" aria-label="Completed"><span class="ring__inner"><i class="fa-solid fa-check"></i></span></span>' : ''}
                         </button>`;
                     }).join('')}
                   </div>
@@ -3045,12 +3055,21 @@ class YouthHealthLMS {
             <div class="list-group">
             ${courseFlat.lessons.map((ls, li) => {
               const isDone = completedIds.has(ls.id);
+              const isCurrent = li === activeIndex;
               const icon = isDone ? 'fa-check' : 'fa-book-open';
+              let estMin = 1;
+              try {
+                const text = String(ls.content || '').replace(/<[^>]+>/g, ' ');
+                const words = (text.match(/\S+/g) || []).length;
+                estMin = Math.max(1, Math.round(words / 200));
+              } catch (_) {}
               return `
                 <button type="button" class="list-group-item list-group-item-action d-flex align-items-center" onclick="app.changeLesson(${li})" data-bs-dismiss="offcanvas">
                   <i class="fa-solid ${icon} me-2"></i>
-                  <span>${ls.title}</span>
-                  ${isDone ? '<span class="badge bg-success ms-auto">Done</span>' : ''}
+                  <span class="flex-grow-1">${ls.title}</span>
+                  <span class="badge bg-light text-dark border me-2">${estMin} min</span>
+                  ${isCurrent ? '<span class="badge bg-info text-dark me-2">Current</span>' : ''}
+                  ${isDone ? '<span class=\"ring ring--done\" title=\"Completed\" aria-label=\"Completed\"><span class=\"ring__inner\"><i class=\"fa-solid fa-check\"></i></span></span>' : ''}
                 </button>`;
             }).join('')}
             </div>

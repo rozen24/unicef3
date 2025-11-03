@@ -1961,6 +1961,119 @@ img {
   }
 }
 
+/* ==================== Mobile Lesson Browser (Offcanvas) ==================== */
+/* Scoped styles for the mobile offcanvas lists without touching desktop */
+#mobileLessonBrowser,
+#mobileLessonBrowserFlat {
+  --oc-border: rgba(0, 0, 0, 0.06);
+  --oc-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+#mobileLessonBrowser .offcanvas-header,
+#mobileLessonBrowserFlat .offcanvas-header {
+  border-bottom: 1px solid var(--oc-border);
+}
+
+#mobileLessonBrowser .offcanvas-body,
+#mobileLessonBrowserFlat .offcanvas-body {
+  padding-bottom: 1.25rem;
+}
+
+/* Sticky module headings for long lists */
+#mobileLessonBrowser .module-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #ffffff;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--oc-border);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+#mobileLessonBrowser .fw-semibold,
+#mobileLessonBrowserFlat .fw-semibold {
+  font-weight: 700 !important;
+}
+
+#mobileLessonBrowser .list-group,
+#mobileLessonBrowserFlat .list-group {
+  display: grid;
+  gap: 8px;
+}
+
+#mobileLessonBrowser .list-group-item,
+#mobileLessonBrowserFlat .list-group-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--oc-border) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--oc-shadow);
+}
+
+/* Compact progress ring (used instead of Done badge) */
+#mobileLessonBrowser .ring,
+#mobileLessonBrowserFlat .ring {
+  --ring-color: #10B981; /* emerald-500 */
+  --ring-bg: #E5E7EB; /* gray-200 */
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: conic-gradient(var(--ring-color) 100%, var(--ring-bg) 0);
+  display: inline-grid;
+  place-items: center;
+}
+#mobileLessonBrowser .ring__inner,
+#mobileLessonBrowserFlat .ring__inner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  color: var(--ring-color);
+  font-size: 10px;
+  line-height: 1;
+}
+
+#mobileLessonBrowser .list-group-item i.fa-solid,
+#mobileLessonBrowserFlat .list-group-item i.fa-solid {
+  width: 22px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+#mobileLessonBrowser .list-group-item.disabled,
+#mobileLessonBrowserFlat .list-group-item.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#mobileLessonBrowser .list-group-item:hover:not(.disabled),
+#mobileLessonBrowserFlat .list-group-item:hover:not(.disabled) {
+  transform: translateY(-1px);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+#mobileLessonBrowser .badge,
+#mobileLessonBrowserFlat .badge {
+  font-weight: 600;
+}
+
+#mobileLessonBrowser .badge.bg-light,
+#mobileLessonBrowserFlat .badge.bg-light {
+  background: #f8fafc !important;
+}
+
+@media (max-width: 576px) {
+  #mobileLessonBrowser .list-group-item,
+  #mobileLessonBrowserFlat .list-group-item {
+    padding: 14px 16px;
+  }
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 992px) {
   h1 { font-size: 2.5rem; }
