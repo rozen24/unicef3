@@ -2730,6 +2730,7 @@ img {
     border-color: rgba(0, 118, 190, 0.65);
     background: rgb(0 158 219 / 32%);
     transform: translateY(-2px);
+    color: #000;
 }
 
 .quiz-result-panel {
@@ -3459,6 +3460,9 @@ img {
   border-color: #667eea;
   box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
   outline: none;
+}
+input::placeholder {
+  color: #d7d7d7 !important;
 }
 
 .form-label {

@@ -21,6 +21,38 @@ class YouthHealthLMS {
     this.init();
   }
 
+  // Calculate module-based progress for a specific course
+  // If the course has chapters: module = chapter; completed when all chapter lessons are done AND chapter quiz ("<chapterId>-quiz") is passed
+  // If the course is flat (no chapters): treat each lesson as a module
+  calculateCourseModuleProgress(course, completedIdsOpt) {
+    try {
+      const hasChapters = Array.isArray(course?.chapters) && course.chapters.length > 0;
+      const progress = this.getUserProgress(course.id) || { completedlessions: [] };
+      const doneSet = completedIdsOpt instanceof Set ? completedIdsOpt : new Set(progress.completedlessions || []);
+
+      if (hasChapters) {
+        const totalModules = course.chapters.length;
+        let completedModules = 0;
+        course.chapters.forEach((ch) => {
+          const lessons = ch.lessons || [];
+          const allContentDone = lessons.length ? lessons.every(ls => doneSet.has(ls.id)) : true;
+          const quizPassed = doneSet.has(`${ch.id}-quiz`);
+          if (allContentDone && quizPassed) completedModules += 1;
+        });
+        const percent = totalModules > 0 ? Math.round((completedModules / totalModules) * 100) : 0;
+        return { completedModules, totalModules, percent };
+      } else {
+        const lessons = course.lessons || course.lessions || [];
+        const totalModules = lessons.length;
+        const completedModules = lessons.reduce((acc, ls) => acc + (doneSet.has(ls.id) ? 1 : 0), 0);
+        const percent = totalModules > 0 ? Math.round((completedModules / totalModules) * 100) : 0;
+        return { completedModules, totalModules, percent };
+      }
+    } catch (_) {
+      return { completedModules: 0, totalModules: 0, percent: 0 };
+    }
+  }
+
   // Password complexity: at least 6 chars, include a digit and a special character
   isStrongPassword(pw) {
     try {
@@ -606,6 +638,7 @@ class YouthHealthLMS {
         app.innerHTML = this.renderLogin();
         this.initAOS();
         this.attachLoginHandlers();
+        try { this.attachForgotPasswordHandlers(); } catch (_) {}
         break;
       case "register":
         app.innerHTML = this.renderRegister();
@@ -1509,7 +1542,10 @@ class YouthHealthLMS {
                     </div>
                   </div>
 
-                  <button type="submit" class="btn btn-primary w-100">Log In</button>
+                  <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot password?</button>
+                  </div>
                 </form>
 
                 <div class="text-center mt-4">
@@ -1523,7 +1559,116 @@ class YouthHealthLMS {
           </div>
         </div>
       </div>
+      
+      <!-- Forgot Password Modal -->
+      <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="forgotPasswordLabel">Reset password</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="forgotPwError" class="alert d-none" role="alert"></div>
+              <form id="forgotPwForm">
+                <div class="mb-3">
+                  <label for="fpIdentifier" class="form-label">Phone or Email</label>
+                  <input type="text" class="form-control" id="fpIdentifier" placeholder="+8801XXXXXXXXX or name@example.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="fpNewPassword" class="form-label">New password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="fpNewPassword" placeholder="At least 6 characters" required aria-describedby="fpPwHelp">
+                    <button class="btn btn-outline-secondary" type="button" data-pw-toggle="fpNewPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+                  </div>
+                  <div id="fpPwHelp" class="form-text">Must include a number and a special character.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="fpConfirmPassword" class="form-label">Confirm new password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="fpConfirmPassword" placeholder="Repeat new password" required>
+                    <button class="btn btn-outline-secondary" type="button" data-pw-toggle="fpConfirmPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+                  </div>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Reset password</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     `;
+  }
+
+  attachForgotPasswordHandlers() {
+    const form = document.getElementById('forgotPwForm');
+    if (!form) return;
+    const errorBox = document.getElementById('forgotPwError');
+    const showMsg = (msg, type = 'danger') => {
+      if (!errorBox) return;
+      errorBox.className = `alert alert-${type}`;
+      errorBox.textContent = msg;
+      errorBox.classList.remove('d-none');
+    };
+    const clearMsg = () => {
+      if (!errorBox) return;
+      errorBox.className = 'alert d-none';
+      errorBox.textContent = '';
+    };
+    const strong = (pw) => /^(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>\/\?]).{6,}$/.test(pw);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      clearMsg();
+      const idInput = form.querySelector('#fpIdentifier');
+      const newPwInput = form.querySelector('#fpNewPassword');
+      const confPwInput = form.querySelector('#fpConfirmPassword');
+      const identifier = (idInput?.value || '').trim();
+      const newPw = newPwInput?.value || '';
+      const confPw = confPwInput?.value || '';
+
+      if (!identifier) { showMsg('Please enter your phone or email.'); return; }
+      if (newPw !== confPw) { showMsg('Passwords do not match.'); return; }
+      if (!strong(newPw)) { showMsg('Password must be at least 6 characters and include a number and a special character.'); return; }
+
+      let users = [];
+      try { users = JSON.parse(localStorage.getItem('users') || '[]'); } catch { users = []; }
+
+      const identifierLower = identifier.toLowerCase();
+      const normalize = (v) => {
+        if (typeof this.normalizePhoneBD === 'function') {
+          try { return this.normalizePhoneBD(v); } catch { /* noop */ }
+        }
+        return String(v || '').replace(/\D/g, '');
+      };
+      const normIdPhone = normalize(identifier);
+
+      const idx = users.findIndex(u => {
+        const emailMatch = (u?.email || '').toLowerCase() === identifierLower;
+        const phoneMatch = normIdPhone && normalize(u?.phone) === normIdPhone;
+        return emailMatch || phoneMatch;
+      });
+
+      if (idx === -1) { showMsg('We couldn’t find an account with that phone or email.', 'warning'); return; }
+
+      users[idx].password = newPw;
+      localStorage.setItem('users', JSON.stringify(users));
+
+      showMsg('Password updated. You can now log in.', 'success');
+
+      const modalEl = document.getElementById('forgotPasswordModal');
+      if (modalEl && typeof bootstrap !== 'undefined' && bootstrap?.Modal) {
+        const instance = bootstrap.Modal.getOrCreateInstance(modalEl);
+        setTimeout(() => {
+          instance.hide();
+          const le = document.getElementById('loginEmail');
+          if (le) le.value = identifier;
+          const lp = document.getElementById('loginPassword');
+          if (lp) { lp.value = ''; lp.focus(); }
+        }, 900);
+      }
+    });
   }
 
   renderRegister() {
@@ -1557,7 +1702,7 @@ class YouthHealthLMS {
                 <form id="registerForm">
                   <div class="mb-3">
                     <label for="registerName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="registerName" placeholder="John Doe" required>
+                    <input type="text" class="form-control" id="registerName" placeholder="Roqnuzzaman Rozen" required>
                   </div>
                   
                   <div class="mb-3">
@@ -2268,7 +2413,7 @@ class YouthHealthLMS {
                             <h3>Q${qIndex + 1}. ${question.question}</h3>
                             <p class="quiz-review-answer">Your answer: <span>${userAnswerText}</span></p>
                             ${
-                              isCorrect
+                              isCorrect || !passed
                                 ? ""
                                 : `<p class="quiz-review-answer quiz-review-answer--correct">Correct answer: <span>${correctAnswerText}</span></p>`
                             }
@@ -2514,20 +2659,10 @@ class YouthHealthLMS {
         }
       } catch (_) {}
 
-      const totalCourseLessons = course.chapters.reduce(
-        (sum, ch) => sum + (ch.lessons?.length || 0),
-        0
-      );
-      const overallCompleted = Math.min(completedIds.size, totalCourseLessons);
-      const courseProgressRaw =
-        totalCourseLessons > 0
-          ? (overallCompleted / totalCourseLessons) * 100
-          : 0;
-      const courseProgressWidth = Math.min(
-        100,
-        Math.max(0, courseProgressRaw)
-      );
-      const courseProgressDisplay = Math.round(courseProgressWidth);
+      // Course progress is module-based: completed modules (chapters) / total modules
+      const moduleProgress = this.calculateCourseModuleProgress(course, completedIds);
+      const courseProgressWidth = moduleProgress.percent;
+      const courseProgressDisplay = moduleProgress.percent;
 
       const chapterCompletedCount = chapterLessons.reduce(
         (count, lesson) => count + (completedIds.has(lesson.id) ? 1 : 0),
