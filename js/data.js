@@ -175,7 +175,7 @@ const coursesData = [
                           step.range
                         } yrs</span>
                       </div>
-                      <div class="d-flex align-items-center justify-content-center gap-4" style="font-size: 2rem;">
+                      <div class="d-none d-flex align-items-center justify-content-center gap-4" style="font-size: 2rem;">
                         <span class="${step.color}"><i class="fa-solid ${
                       step.iconA
                     }"></i></span>
@@ -447,17 +447,17 @@ const coursesData = [
                 {
                   text: "System generated certificate",
                   icon: "fa-certificate",
-                  color: "violet",
+                  color: "yellow",
                 },
                 {
                   text: "Self declaration/Oath Taking",
                   icon: "fa-hand",
-                  color: "emerald",
+                  color: "lavender",
                 },
                 {
                   text: "Final Certificate (Course validity-2 years)",
                   icon: "fa-award",
-                  color: "tangerine",
+                  color: "mint",
                 },
               ];
               return `
@@ -465,7 +465,7 @@ const coursesData = [
             <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Eligibility and Steps to be a YHA</h2>
             <div class="alert alert-info mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">
               <h5><i class="fas fa-info-circle me-2"></i>Eligibility</h5>
-              <p class="mb-0">Any person aged <strong>15-24 years</strong> can become a Young Health Ambassador.</p>
+              <p class="mb-0">Any person aged <strong>10-24 years</strong> can become a Young Health Ambassador.</p>
             </div>
             <div class="row g-3">
               ${steps
@@ -477,9 +477,7 @@ const coursesData = [
               <div class="step-card bg-gradient-${
                 s.color
               } hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover text-center">
-                <div class="step-icon bg-gradient-${
-                  s.color
-                } animate-float-slow d-inline-flex align-items-center justify-content-center"
+                <div class="step-icon animate-float-slow d-inline-flex align-items-center justify-content-center"
                    style="width:64px; height:64px; border-radius:50%; animation-duration:6s; animation-delay:${(
                      i * 0.2
                    ).toFixed(1)}s">

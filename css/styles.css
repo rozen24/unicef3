@@ -134,12 +134,17 @@
   --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   --info-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
   --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  --purple-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --blue-gradient: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
-  --teal-gradient: linear-gradient(135deg, #00bcd4 0%, #009688 100%);
-  --orange-gradient: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%);
-  --green-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-  --pink-gradient: linear-gradient(135deg, #f857a6 0%, #ff5858 100%);
+  /* Pastel gradient palette */
+  --purple-gradient: linear-gradient(135deg, #cbb8ff 0%, #e6d9ff 100%);
+  --blue-gradient: linear-gradient(135deg, #a0c4ff 0%, #bde0fe 100%);
+  --teal-gradient: linear-gradient(135deg, #a5e3e3 0%, #b9f5f1 100%);
+  --orange-gradient: linear-gradient(135deg, #ffd6a5 0%, #ffcab0 100%);
+  --green-gradient: linear-gradient(135deg, #b9fbc0 0%, #a7f3d0 100%);
+  --pink-gradient: linear-gradient(135deg, #ffc6d9 0%, #ffd6e7 100%);
+  /* Additional pastel gradients */
+  --yellow-gradient: linear-gradient(135deg, #fff3b0 0%, #ffefa1 100%);
+  --lavender-gradient: linear-gradient(135deg, #e8def8 0%, #f3e8ff 100%);
+  --mint-gradient: linear-gradient(135deg, #d7fbe8 0%, #c8f7f1 100%);
   
     /* Hero Gradient */
   --hero-gradient: linear-gradient(135deg, #00AEEF 0%, #0077C8 50%, #005B99 100%) !important;
@@ -567,7 +572,7 @@ img {
 .icon-spin-on-hover i,
 .icon-spin-on-hover .fa,
 .icon-spin-on-hover .fas,
-.icon-spin-on-hover .bi { transition: transform 0.6s ease; padding: 10px; border-radius: 10px !important;}
+.icon-spin-on-hover .bi { transition: transform 0.6s ease; padding: 10px; border-radius: 10px !important; color: #000 !important}
 .icon-spin-on-hover:hover i,
 .icon-spin-on-hover:hover .fa,
 .icon-spin-on-hover:hover .fas,
@@ -1261,6 +1266,15 @@ img {
 
 .bg-gradient-pink {
   background: var(--pink-gradient);
+}
+.bg-gradient-yellow {
+  background: var(--yellow-gradient);
+}
+.bg-gradient-lavender {
+  background: var(--lavender-gradient);
+}
+.bg-gradient-mint {
+  background: var(--mint-gradient);
 }
 
 /* Additional gradient backgrounds (custom palette) */
@@ -4649,7 +4663,7 @@ input::placeholder {
 
 .role-card p {
   font-size: 1rem;
-  color: #f0f0f0 !important;
+  color: #000 !important;
   line-height: 1.7;
   margin: 0;
 }
@@ -4695,6 +4709,12 @@ input::placeholder {
   font-size: 0.875rem;
   color: #718096;
   margin: 0;
+}
+.step-card i {
+  color: #000 !important;
+}
+.step-card .step-icon {
+  background-color: #ffffff30 !important;
 }
 
 /* Stat Cards */
@@ -8349,7 +8369,6 @@ p.lead {
   place-items: center;
   color: #fff;
   font-size: 1.75rem;
-  background-color: #004eb5;
   box-shadow: 0 15px 24px rgba(6, 52, 110, 0.22);
 }
 .lesson-slide .role-card p {
