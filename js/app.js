@@ -1237,11 +1237,26 @@ class YouthHealthLMS {
 
   // Desktop lesson sidebar visibility
   isLessonSidebarHidden() {
-    try { return localStorage.getItem('lessonSidebarHidden') === '1'; } catch (_) { return false; }
+    try {
+      if (window.YHUI) return window.YHUI.sidebarHidden;
+      const v = localStorage.getItem('lessonSidebarHidden');
+      return v === '1' || v === 'true';
+    } catch (_) { return false; }
   }
   setLessonSidebarHidden(flag) {
-    try { localStorage.setItem('lessonSidebarHidden', flag ? '1' : '0'); } catch (_) {}
+    try {
+      if (window.YHUI && typeof window.YHUI.setSidebarHidden === 'function') {
+        window.YHUI.setSidebarHidden(flag);
+      } else {
+        localStorage.setItem('lessonSidebarHidden', flag ? '1' : '0');
+      }
+    } catch(_){}
     this.render();
+    // Apply state classes in case of race conditions (e.g., reused shell element)
+    try { if (window.YHUI && window.YHUI.applyLessonShellState) window.YHUI.applyLessonShellState(); } catch(_){ }
+    if (!flag) {
+      setTimeout(() => { try { this.scrollActiveLessonIntoView(); } catch(_){} }, 80);
+    }
   }
 
   initHomeScripts() {
@@ -2584,10 +2599,19 @@ class YouthHealthLMS {
   }
 
   renderLessonSlider() {
+    // Ensure a course is selected; fallback to first available course
+    if (!this.selectedCourse) {
+      try {
+        if (Array.isArray(coursesData) && coursesData.length) {
+          this.selectedCourse = coursesData[0];
+          this.currentChapterIndex = 0;
+          this.currentLessonIndex = 0;
+        }
+      } catch (_) {}
+    }
     const course = this.selectedCourse;
-    const hasChapters =
-      Array.isArray(course?.chapters) && course.chapters.length > 0;
-    const sidebarHidden = this.isLessonSidebarHidden();
+    const hasChapters = Array.isArray(course?.chapters) && course.chapters.length > 0;
+    const sidebarHidden = (window.YHUI ? window.YHUI.sidebarHidden : this.isLessonSidebarHidden());
 
     if (hasChapters) {
       const totalChapters = course.chapters.length;
@@ -2724,8 +2748,8 @@ class YouthHealthLMS {
             ${course.chapters.map((ch, ci) => {
               const lessons = ch.lessons || [];
               return `
-                <div class="mb-3">
-                  <div class="module-header fw-semibold"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2"></i>${ch.title}</div>
+                <div class="mb-3 accordion-item">
+                  <div class="module-header accordion-button fw-semibold"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2"></i>${ch.title}</div>
                   <div class="list-group">
                     ${lessons.map((ls, li) => {
                       const prevId = lessons[Math.max(0, li - 1)]?.id;
@@ -2744,7 +2768,7 @@ class YouthHealthLMS {
                       const click = isUnlocked ? `onclick=\"app.changeChapterLesson(${ci}, ${li})\"` : '';
                       const dismiss = isUnlocked ? 'data-bs-dismiss="offcanvas"' : '';
                       return `
-                        <button type="button" class="list-group-item list-group-item-action d-flex align-items-center ${disabledCls}" ${click} ${dismiss}>
+                        <button type="button" class="list-group-item list-group-item-action d-flex align-items-center accordion-button ${disabledCls}" ${click} ${dismiss}>
                           <i class="fa-solid ${icon} me-2" aria-hidden="true"></i>
                           <span class="flex-grow-1">${ls.title}</span>
                           <span class="badge bg-light text-dark border me-2 d-none">${estMin} min</span>
@@ -2816,7 +2840,7 @@ class YouthHealthLMS {
         </div>`;
 
       return `
-        <div class="lesson-shell">
+        <div class="lesson-shell modules-expanded" data-modules-state="expanded">
           <header class="lesson-hero">
             <div class="container">
               <div class="lesson-hero__top">
@@ -2860,24 +2884,19 @@ class YouthHealthLMS {
                 </div>
               </div>
               ${mobileBrowseBtn}
+              <div class="d-none d-lg-block mt-3">
+                <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
+                  <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+                </button>
+              </div>
               <div class="row align-items-start g-4"></div>
             </div>
           </header>
 
           <section class="lesson-body">
             <div class="container">
-              <div class="row g-4">
-                ${sidebarHidden ? '' : `
-                <aside class="col-lg-4 d-none d-lg-block">
-                  <div class="d-flex justify-content-end mb-2">
-                    <button class="btn btn-sm btn-outline-secondary" onclick="app.setLessonSidebarHidden(true)">
-                      <i class="fa-solid fa-chevron-left me-1"></i> Hide All Modules
-                    </button>
-                  </div>
-                  <div class="lesson-trail">${accordion}</div>
-                </aside>`}
-
-                <div class="col-12 ${sidebarHidden ? 'col-lg-12' : 'col-lg-8'}">
+              <div class="row g-4 lesson-body-row">
+                <div class="lesson-content-col col-12 col-md-12">
                   <article class="lesson-content-card">
                     ${
                       currentLesson && currentLesson.audioFile
@@ -2970,10 +2989,6 @@ class YouthHealthLMS {
               </div>
             </div>
           </section>
-          ${sidebarHidden ? `
-          <button class="lesson-open-modules d-none d-lg-inline-flex" onclick="app.setLessonSidebarHidden(false)" title="Open all modules">
-            <i class="fa-solid fa-chevron-right me-2"></i>Open All Modules
-          </button>` : ''}
           ${mobileOffcanvas}
         </div>
       `;
@@ -3002,7 +3017,7 @@ class YouthHealthLMS {
     if (this.showQuiz) return this.renderQuiz();
 
     return `
-      <div class="lesson-shell">
+      <div class="lesson-shell modules-expanded" data-modules-state="expanded">
         <header class="lesson-hero">
           <div class="container">
             <div class="lesson-hero__top">
@@ -3019,6 +3034,11 @@ class YouthHealthLMS {
             <div class="d-lg-none mt-3">
               <button class="btn btn-primary w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
                 <i class="fa-solid fa-list me-2"></i>Browse lessons
+              </button>
+            </div>
+            <div class="d-none d-lg-block mt-3">
+              <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
+                <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
               </button>
             </div>
             <div class="lesson-hero__progress">
@@ -3046,47 +3066,8 @@ class YouthHealthLMS {
 
         <section class="lesson-body">
           <div class="container">
-            <div class="row g-4">
-              ${sidebarHidden ? '' : `
-              <aside class="col-lg-4 d-none d-lg-block">
-                <div class="d-flex justify-content-end mb-2">
-                  <button class="btn btn-sm btn-outline-secondary" onclick=\"app.setLessonSidebarHidden(true)\">
-                    <i class="fa-solid fa-chevron-left me-1"></i> Hide All Modules
-                  </button>
-                </div>
-                <div class="lesson-trail">
-                  ${courseFlat.lessons
-                    .map((lesson, index) => {
-                      const isCurrent = index === activeIndex;
-                      const isCompleted = completedIds.has(lesson.id);
-                      const statusClass = isCurrent
-                        ? "lesson-chip--current"
-                        : isCompleted
-                        ? "lesson-chip--completed"
-                        : "lesson-chip--upcoming";
-                      const statusLabel = isCurrent
-                        ? "Now playing"
-                        : isCompleted
-                        ? "Completed"
-                        : "Available";
-                      return `
-                      <button class="lesson-chip ${statusClass}" type="button" onclick=\"app.changeLesson(${index})\">
-                        <span class="lesson-chip__icon ${lesson.gradientClass}">
-                          <i class="fas ${lesson.icon}"></i>
-                        </span>
-                        <span class="lesson-chip__content">
-                          <span class="lesson-chip__eyebrow">Lesson ${index + 1}</span>
-                          <span class="lesson-chip__title">${lesson.title}</span>
-                          <span class="lesson-chip__meta">${statusLabel}</span>
-                        </span>
-                        ${isCompleted ? '<span class="lesson-chip__state"><i class="fa-solid fa-check"></i></span>' : ''}
-                      </button>`;
-                    })
-                    .join("")}
-                </div>
-              </aside>`}
-
-              <div class="col-12 ${sidebarHidden ? 'col-lg-12' : 'col-lg-8'}">
+            <div class="row g-4 lesson-body-row">
+              <div class="lesson-content-col col-12 col-md-12">
                 <article class="lesson-content-card">
                   ${
                     currentLesson.audioFile
@@ -3199,10 +3180,6 @@ class YouthHealthLMS {
             </div>
           </div>
         </section>
-        ${sidebarHidden ? `
-        <button class="lesson-open-modules d-none d-lg-inline-flex" onclick="app.setLessonSidebarHidden(false)" title="Open all modules">
-          <i class=\"fa-solid fa-chevron-right me-2\"></i>Open All Modules
-        </button>` : ''}
         <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileLessonBrowserFlat" aria-labelledby="mobileLessonBrowserFlatLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="mobileLessonBrowserFlatLabel">Lessons</h5>

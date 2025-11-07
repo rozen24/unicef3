@@ -1,5 +1,72 @@
-// Young Health LMS - Course Data
+// UI state helpers: expose sidebarHidden-driven CSS class/state for dynamic use across templates
+// This avoids duplicating logic and lets markup compute classes like modules-collapsed/expanded on demand.
+(function (global) {
+  const STORAGE_KEY = 'lessonSidebarHidden';
 
+  function readFlag() {
+    try {
+      const v = localStorage.getItem(STORAGE_KEY);
+      return v === '1' || v === 'true';
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function writeFlag(flag) {
+    try {
+      // Write in the existing app.js format ('1'/'0') for compatibility
+      localStorage.setItem(STORAGE_KEY, flag ? '1' : '0');
+    } catch (_) {}
+  }
+
+  const api = global.YHUI || {};
+
+  // Live getter so it always reflects latest localStorage value
+  Object.defineProperty(api, 'sidebarHidden', {
+    get() {
+      return readFlag();
+    },
+    configurable: true,
+  });
+
+  api.setSidebarHidden = function (flag) {
+    writeFlag(flag);
+    return api.sidebarHidden;
+  };
+
+  api.getLessonShellClass = function () {
+    return api.sidebarHidden ? 'modules-collapsed' : 'modules-expanded';
+  };
+
+  api.getLessonShellState = function () {
+    return api.sidebarHidden ? 'collapsed' : 'expanded';
+  };
+
+  // Optional: apply classes/attributes to a given shell element immediately
+  api.applyLessonShellState = function (root) {
+    try {
+      const el = root || document.querySelector('.lesson-shell');
+      if (!el) return;
+      el.classList.remove('modules-collapsed', 'modules-expanded');
+      el.classList.add(api.getLessonShellClass());
+      el.setAttribute('data-modules-state', api.getLessonShellState());
+      // Sync pyramid steps visual state without requiring template rebuild
+      const positiveSteps = document.querySelectorAll('.pyramid-positive .pyramid-steps .pyramid-step');
+      positiveSteps.forEach(step => {
+        if (api.sidebarHidden) {
+          step.classList.add('pyramid-positive-collapsed').remove('pyramid-step');
+        } else {
+          step.classList.add('pyramid-step').remove('pyramid-positive-collapsed');
+        }
+      });
+    } catch (_) {}
+  };
+
+  global.YHUI = api;
+})(window);
+
+
+// Young Health LMS - Course Data
 const coursesData = [
   {
     id: "yhap-course",
@@ -689,14 +756,14 @@ const coursesData = [
                       <div class="pyramid-path pyramid-positive">
                         <div class="pyramid-head"><i class="fa-solid fa-chart-line"></i> Demographic Dividend</div>
                         <ul class="pyramid-steps">
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-school"></i> School</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-briefcase"></i> Employment</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-piggy-bank"></i> Wealth/child investment</li>
-                          <li class="pyramid-step"  data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> Lifelong learning</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> Work-life Balance</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> Security of Place</li>
-                          <li class="pyramid-step"  data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-hands-holding-child"></i> Healthy children</li>
-                          <li class="pyramid-step"  data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> Secure old-age</li>
+                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-school"></i> School</li>
+                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-briefcase"></i> Employment</li>
+                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-piggy-bank"></i> Wealth/child investment</li>
+                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> Lifelong learning</li>
+                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> Work-life Balance</li>
+                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> Security of Place</li>
+                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-hands-holding-child"></i> Healthy children</li>
+                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> Secure old-age</li>
                         </ul>
                       </div>
 
@@ -2355,3 +2422,5 @@ const coursesData = [
     steps: [],
   },
 ];
+
+
