@@ -8562,9 +8562,10 @@ p.lead {
 /* ==================== LESSON 2: GLOBAL YOUTH MODULE ==================== */
 
 .globe-text-wrap {
-  position: relative;
-  margin-top: -280px;
-  z-index: 111;
+    position: absolute;
+    z-index: 111;
+    top: 39%;
+    left: 13%;
 }
 .world-youth-map {
   position: relative;
