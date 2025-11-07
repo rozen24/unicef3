@@ -756,14 +756,14 @@ const coursesData = [
                       <div class="pyramid-path pyramid-positive">
                         <div class="pyramid-head"><i class="fa-solid fa-chart-line"></i> Demographic Dividend</div>
                         <ul class="pyramid-steps">
-                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-school"></i> School</li>
-                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-briefcase"></i> Employment</li>
-                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-piggy-bank"></i> Wealth/child investment</li>
-                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> Lifelong learning</li>
-                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> Work-life Balance</li>
-                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> Security of Place</li>
-                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-hands-holding-child"></i> Healthy children</li>
-                          <li class="${YHUI.sidebarHidden ? 'pyramid-positive-collapsed' : 'pyramid-step'}" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> Secure old-age</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-school"></i> School</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-briefcase"></i> Employment</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-piggy-bank"></i> Wealth/child investment</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> Lifelong learning</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> Work-life Balance</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> Security of Place</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-hands-holding-child"></i> Healthy children</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> Secure old-age</li>
                         </ul>
                       </div>
 

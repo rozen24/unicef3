@@ -8898,54 +8898,57 @@ p.lead {
     position: relative;
   } */
 
-  .pyramid-positive .pyramid-step::before {
+  .pyramid-positive .pyramid-step:nth-child(1)::before {
     content: "";
     position: absolute;
-    top: 78%;
-    left: -16px;
-    width: 35px;
-    height: 2px;
-    background-color: #333;
-    transform: translateY(-50%) rotate(135deg);
+    top: 525%;
+    right: 186px;
+    width: 841px;
+    height: 4px;
+    background-color: #1192D8;
+    transform: translateY(50%) rotate(147deg);
 }
 
   /* Add an arrowhead using ::after */
-  .pyramid-positive .pyramid-step::after {
+  .pyramid-positive .pyramid-step:nth-child(1)::after {
     content: "";
     position: absolute;
-    top: 93%;
-    left: -11px;
-    border: solid #333;
-    border-width: 2px 2px 0 0;
+    top: 480px;
+    right: 941px;
+    border: solid #1192D8;
+    border-width: 4px 4px 0 0;
     display: inline-block;
-    padding: 4px;
-    transform: translateY(-50%) rotate(175deg) !important;
+    padding: 8px;
+    transform: translateY(-50%) rotate(190deg) !important;
 }
 
-.pyramid-negative .pyramid-step::before {
+.pyramid-center {
+  position: relative;
+}
+.pyramid-center::before {
     content: "";
     position: absolute;
-    top: 113%;
-    left: -7px;
-    width: 35px;
-    height: 2px;
-    background-color: #333;
-    transform: translateY(-50%) rotate(57deg);
+    top: 300px;
+    left: 43px;
+    width: 842px;
+    height: 4px;
+    background-color: #E80B08;
+    transform: translateY(408%) rotate(33deg);
     z-index: 999999999999999 !important;
     overflow: visible;
 }
 
   /* Add an arrowhead using ::after */
-  .pyramid-negative .pyramid-step::after {
+  .pyramid-center::after {
     content: "";
     position: absolute;
-    top: 135%;
-    left: 13px;
-    border: solid #333;
-    border-width: 2px 2px 0 0;
+    top: 541px;
+    left: 800px;
+    border: solid #E80B08;
+    border-width: 4px 4px 0 0;
     display: inline-block;
-    padding: 4px;
-    transform: translateY(-50%) rotate(100deg) !important;
+    padding: 8px;
+    transform: translateY(-50%) rotate(85deg) !important;
 }
 
   /* Hide the line before the first step */
@@ -8955,23 +8958,89 @@ p.lead {
   } */
 
   /* Your existing translations */
-  .pyramid-positive .pyramid-step:nth-child(1) { transform: translateX(135%) !important; }
-  .pyramid-positive .pyramid-step:nth-child(2) { transform: translateX(120%) !important; }
-  .pyramid-positive .pyramid-step:nth-child(3) { transform: translateX(105%) !important; }
-  .pyramid-positive .pyramid-step:nth-child(4) { transform: translateX(90%) !important; }
-  .pyramid-positive .pyramid-step:nth-child(5) { transform: translateX(75%) !important; }
-  .pyramid-positive .pyramid-step:nth-child(6) { transform: translateX(60%) !important; }
-  .pyramid-positive .pyramid-step:nth-child(7) { transform: translateX(45%) !important; }
-  .pyramid-positive .pyramid-step:nth-child(8) { transform: translateX(30%) !important; }
+  /* Positive pyramid step positional + color ramp (base #1192D8 lightening downward) */
+  .pyramid-positive .pyramid-step:nth-child(1) { 
+    transform: translateX(340%) !important; 
+    background-color: #1192D8; /* base */
+    color: #fff;
+  }
+  .pyramid-positive .pyramid-step:nth-child(2) { 
+    transform: translateX(319%) !important; 
+    background-color: #2CA1DD; 
+    color: #fff;
+  }
+  .pyramid-positive .pyramid-step:nth-child(3) { 
+    transform: translateX(285%) !important; 
+    background-color: #47AFE2; 
+    color: #fff;
+  }
+  .pyramid-positive .pyramid-step:nth-child(4) { 
+    transform: translateX(249%) !important; 
+    background-color: #63BDE7; 
+    color: #07344E;
+  }
+  .pyramid-positive .pyramid-step:nth-child(5) { 
+    transform: translateX(213%) !important; 
+    background-color: #7ECCEC; 
+    color: #07344E;
+  }
+  .pyramid-positive .pyramid-step:nth-child(6) { 
+    transform: translateX(175%) !important; 
+    background-color: #99DAF1; 
+    color: #07344E;
+  }
+  .pyramid-positive .pyramid-step:nth-child(7) { 
+    transform: translateX(138%) !important; 
+    background-color: #B5E6F6; 
+    color: #05324A;
+  }
+  .pyramid-positive .pyramid-step:nth-child(8) { 
+    transform: translateX(100%) !important; 
+    background-color: #D1F2FB; 
+    color: #05324A;
+  }
 
-  .pyramid-negative .pyramid-step:nth-child(1) { transform: translateX(30%) !important; }
-  .pyramid-negative .pyramid-step:nth-child(2) { transform: translateX(45%) !important; }
-  .pyramid-negative .pyramid-step:nth-child(3) { transform: translateX(60%) !important; }
-  .pyramid-negative .pyramid-step:nth-child(4) { transform: translateX(75%) !important; }
-  .pyramid-negative .pyramid-step:nth-child(5) { transform: translateX(90%) !important; }
-  .pyramid-negative .pyramid-step:nth-child(6) { transform: translateX(105%) !important; }
-  .pyramid-negative .pyramid-step:nth-child(7) { transform: translateX(120%) !important; }
-  .pyramid-negative .pyramid-step:nth-child(8) { transform: translateX(135%) !important; }
+  /* Negative pyramid step positional + color ramp (base #E80B08 lightening downward) */
+  .pyramid-negative .pyramid-step:nth-child(1) { 
+    transform: translateX(85%) !important;
+    background-color: #FFE6E6; 
+    color: #460B0A;
+  }
+  .pyramid-negative .pyramid-step:nth-child(2) { 
+    transform: translateX(120%) !important; 
+    background-color: #FECACA; 
+    color: #460B0A;
+  }
+  .pyramid-negative .pyramid-step:nth-child(3) { 
+    transform: translateX(152%) !important;
+    background-color: #FCABA9; 
+    color: #4A0C0B;
+  }
+  .pyramid-negative .pyramid-step:nth-child(4) { 
+     transform: translateX(185%) !important; 
+    background-color: #F98B89; 
+    color: #4A0C0B;
+  }
+  .pyramid-negative .pyramid-step:nth-child(5) { 
+    transform: translateX(220%) !important; 
+    background-color: #F56C6A; 
+    color: #4A0C0B;
+  }
+  .pyramid-negative .pyramid-step:nth-child(6) { 
+    transform: translateX(253%) !important; 
+    background-color: #F14E4B; 
+    color: #fff;
+  }
+  .pyramid-negative .pyramid-step:nth-child(7) { 
+    transform: translateX(287%) !important; 
+    background-color: #ED2F2C; 
+    color: #fff;
+  }
+  .pyramid-negative .pyramid-step:nth-child(8) {
+    transform: translateX(320%) !important;  
+    background-color: #E80B08; /* base */
+    color: #fff;
+  }
 }
 
 
