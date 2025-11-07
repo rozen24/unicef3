@@ -176,6 +176,28 @@
   --transition-slow: all 0.5s ease;
 }
 
+/* Desktop-only open modules floating button */
+.lesson-open-modules {
+  position: fixed;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1050;
+  background: #ffffff;
+  color: #333;
+  border: 1px solid rgba(0,0,0,.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  align-items: center;
+  gap: 0.25rem;
+}
+.lesson-open-modules:hover { background: #f8f9fa; }
+
+@media (max-width: 991.98px) {
+  .lesson-open-modules { display: none !important; }
+}
+
 /* ==================== GLOBAL STYLES ==================== */
 * {
   margin: 0;

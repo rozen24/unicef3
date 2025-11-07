@@ -1235,6 +1235,15 @@ class YouthHealthLMS {
     } catch (_) {}
   }
 
+  // Desktop lesson sidebar visibility
+  isLessonSidebarHidden() {
+    try { return localStorage.getItem('lessonSidebarHidden') === '1'; } catch (_) { return false; }
+  }
+  setLessonSidebarHidden(flag) {
+    try { localStorage.setItem('lessonSidebarHidden', flag ? '1' : '0'); } catch (_) {}
+    this.render();
+  }
+
   initHomeScripts() {
     // Ensure AOS is active on home as well
     this.initAOS();
@@ -2578,6 +2587,7 @@ class YouthHealthLMS {
     const course = this.selectedCourse;
     const hasChapters =
       Array.isArray(course?.chapters) && course.chapters.length > 0;
+    const sidebarHidden = this.isLessonSidebarHidden();
 
     if (hasChapters) {
       const totalChapters = course.chapters.length;
@@ -2857,11 +2867,17 @@ class YouthHealthLMS {
           <section class="lesson-body">
             <div class="container">
               <div class="row g-4">
+                ${sidebarHidden ? '' : `
                 <aside class="col-lg-4 d-none d-lg-block">
+                  <div class="d-flex justify-content-end mb-2">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="app.setLessonSidebarHidden(true)">
+                      <i class="fa-solid fa-chevron-left me-1"></i> Hide All Modules
+                    </button>
+                  </div>
                   <div class="lesson-trail">${accordion}</div>
-                </aside>
+                </aside>`}
 
-                <div class="col-12 col-lg-8">
+                <div class="col-12 ${sidebarHidden ? 'col-lg-12' : 'col-lg-8'}">
                   <article class="lesson-content-card">
                     ${
                       currentLesson && currentLesson.audioFile
@@ -2954,6 +2970,10 @@ class YouthHealthLMS {
               </div>
             </div>
           </section>
+          ${sidebarHidden ? `
+          <button class="lesson-open-modules d-none d-lg-inline-flex" onclick="app.setLessonSidebarHidden(false)" title="Open all modules">
+            <i class="fa-solid fa-chevron-right me-2"></i>Open All Modules
+          </button>` : ''}
           ${mobileOffcanvas}
         </div>
       `;
@@ -3027,7 +3047,13 @@ class YouthHealthLMS {
         <section class="lesson-body">
           <div class="container">
             <div class="row g-4">
+              ${sidebarHidden ? '' : `
               <aside class="col-lg-4 d-none d-lg-block">
+                <div class="d-flex justify-content-end mb-2">
+                  <button class="btn btn-sm btn-outline-secondary" onclick=\"app.setLessonSidebarHidden(true)\">
+                    <i class="fa-solid fa-chevron-left me-1"></i> Hide All Modules
+                  </button>
+                </div>
                 <div class="lesson-trail">
                   ${courseFlat.lessons
                     .map((lesson, index) => {
@@ -3044,31 +3070,23 @@ class YouthHealthLMS {
                         ? "Completed"
                         : "Available";
                       return `
-                      <button class="lesson-chip ${statusClass}" type="button" onclick="app.changeLesson(${index})">
+                      <button class="lesson-chip ${statusClass}" type="button" onclick=\"app.changeLesson(${index})\">
                         <span class="lesson-chip__icon ${lesson.gradientClass}">
                           <i class="fas ${lesson.icon}"></i>
                         </span>
                         <span class="lesson-chip__content">
-                          <span class="lesson-chip__eyebrow">Lesson ${
-                            index + 1
-                          }</span>
-                          <span class="lesson-chip__title">${
-                            lesson.title
-                          }</span>
+                          <span class="lesson-chip__eyebrow">Lesson ${index + 1}</span>
+                          <span class="lesson-chip__title">${lesson.title}</span>
                           <span class="lesson-chip__meta">${statusLabel}</span>
                         </span>
-                        ${
-                          isCompleted
-                            ? '<span class="lesson-chip__state"><i class="fa-solid fa-check"></i></span>'
-                            : ""
-                        }
+                        ${isCompleted ? '<span class="lesson-chip__state"><i class="fa-solid fa-check"></i></span>' : ''}
                       </button>`;
                     })
                     .join("")}
                 </div>
-              </aside>
+              </aside>`}
 
-              <div class="col-12 col-lg-8">
+              <div class="col-12 ${sidebarHidden ? 'col-lg-12' : 'col-lg-8'}">
                 <article class="lesson-content-card">
                   ${
                     currentLesson.audioFile
@@ -3181,6 +3199,10 @@ class YouthHealthLMS {
             </div>
           </div>
         </section>
+        ${sidebarHidden ? `
+        <button class="lesson-open-modules d-none d-lg-inline-flex" onclick="app.setLessonSidebarHidden(false)" title="Open all modules">
+          <i class=\"fa-solid fa-chevron-right me-2\"></i>Open All Modules
+        </button>` : ''}
         <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileLessonBrowserFlat" aria-labelledby="mobileLessonBrowserFlatLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="mobileLessonBrowserFlatLabel">Lessons</h5>
