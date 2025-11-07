@@ -1057,22 +1057,213 @@ class YouthHealthLMS {
         if (!el || el.dataset.chartInitialized || !window.Chart) return;
         try {
           const ctx = el.getContext("2d");
+          // Helper to convert hex color to rgba with alpha
+          const hexToRgba = (hex, alpha) => {
+            try {
+              const h = hex.replace('#','');
+              const bigint = parseInt(h.length === 3 ? h.split('').map(ch => ch+ch).join('') : h, 16);
+              const r = (bigint >> 16) & 255;
+              const g = (bigint >> 8) & 255;
+              const b = bigint & 255;
+              return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+            } catch (_) { return hex; }
+          };
+
+          const baseColors = Array.isArray(colors) ? colors.slice() : [];
+
+          // Center text plugin per-chart
+          const centerTextPlugin = {
+            id: 'centerTextDonut',
+            afterDatasetsDraw(chart, args, pluginOptions) {
+              const ds = chart.data?.datasets?.[0];
+              if (!ds) return;
+              const labelsArr = chart.data.labels || [];
+              const values = ds.data || [];
+              const sel = chart.$selected instanceof Set ? chart.$selected : null;
+              const hoverIdx = chart.$hoverIndex;
+              let show = false;
+              let title = '';
+              let value = 0;
+              let percent = 0;
+
+              const total = values.reduce((a, b) => a + (Number(b) || 0), 0) || 0;
+              if (sel && sel.size > 0) {
+                // If multiple selected, sum them
+                const idxs = Array.from(sel);
+                value = idxs.reduce((acc, i) => acc + (Number(values[i]) || 0), 0);
+                percent = total ? (value / total) * 100 : 0;
+                title = sel.size === 1 ? (labelsArr[idxs[0]] || '') : 'Selected';
+                show = true;
+              } else if (hoverIdx != null && hoverIdx > -1) {
+                value = Number(values[hoverIdx]) || 0;
+                percent = total ? (value / total) * 100 : 0;
+                title = labelsArr[hoverIdx] || '';
+                show = true;
+              }
+
+              if (!show) return;
+
+              const { ctx } = chart;
+              const { left, right, top, bottom } = chart.chartArea;
+              const cx = (left + right) / 2;
+              const cy = (top + bottom) / 2;
+              ctx.save();
+              ctx.textAlign = 'center';
+              ctx.textBaseline = 'middle';
+              // Title
+              ctx.fillStyle = '#111827';
+              ctx.font = '600 14px Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+              ctx.fillText(String(title), cx, cy - 8);
+              // Value + percent
+              ctx.fillStyle = '#374151';
+              ctx.font = '500 12px Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+              const pctStr = total ? ` (${percent.toFixed(1)}%)` : '';
+              ctx.fillText(`${value}${pctStr}`, cx, cy + 10);
+              ctx.restore();
+            }
+          };
+
           new window.Chart(ctx, {
             type: "doughnut",
-            data: { labels, datasets: [{ data, backgroundColor: colors, borderColor: "#ffffff", borderWidth: 2 }] },
+            data: { 
+              labels, 
+              datasets: [{ 
+                data, 
+                // Dynamic styling based on a selected segment index stored on chart instance
+                backgroundColor: (c) => {
+                  const i = c.dataIndex;
+                  const chart = c.chart;
+                  const sel = chart.$selected instanceof Set ? chart.$selected : null;
+                  const hoverIdx = chart.$hoverIndex;
+                  const color = baseColors[i % baseColors.length] || '#999';
+                  if (sel && sel.size > 0) {
+                    return sel.has(i) ? color : hexToRgba(color, 0.25);
+                  }
+                  // no selection: on hover, emphasize hovered, keep others normal
+                  if (hoverIdx != null && hoverIdx > -1) {
+                    return i === hoverIdx ? color : hexToRgba(color, 0.6);
+                  }
+                  return color;
+                },
+                borderColor: (c) => {
+                  const chart = c.chart;
+                  const i = c.dataIndex;
+                  const sel = chart.$selected instanceof Set ? chart.$selected : null;
+                  const hoverIdx = chart.$hoverIndex;
+                  const isFocus = (sel && sel.size > 0) ? sel.has(i) : (hoverIdx === i);
+                  return isFocus ? "#111827" : "#ffffff";
+                },
+                borderWidth: (c) => {
+                  const chart = c.chart;
+                  const i = c.dataIndex;
+                  const sel = chart.$selected instanceof Set ? chart.$selected : null;
+                  const hoverIdx = chart.$hoverIndex;
+                  const isFocus = (sel && sel.size > 0) ? sel.has(i) : (hoverIdx === i);
+                  return isFocus ? 4 : 2;
+                },
+                offset: (c) => {
+                  const chart = c.chart;
+                  const i = c.dataIndex;
+                  const sel = chart.$selected instanceof Set ? chart.$selected : null;
+                  const hoverIdx = chart.$hoverIndex;
+                  const isFocus = (sel && sel.size > 0) ? sel.has(i) : (hoverIdx === i);
+                  return isFocus ? 20 : 0;
+                }
+              }]
+            },
             options: {
               responsive: true,
               maintainAspectRatio: false,
               cutout: "60%",
+              onHover: (evt, activeElements, chart) => {
+                try {
+                  const idx = activeElements && activeElements.length ? activeElements[0].index : null;
+                  const prev = chart.$hoverIndex;
+                  chart.$hoverIndex = (idx != null ? idx : null);
+                  if (prev !== chart.$hoverIndex && (!chart.$selected || chart.$selected.size === 0)) {
+                    // avoid animating on simple hover updates for snappier UI
+                    chart.update('none');
+                  }
+                } catch (_) {}
+              },
+              // Click on slice to (multi-)select like legend
+              onClick: (e, activeElements, chart) => {
+                try {
+                  const idx = activeElements && activeElements.length ? activeElements[0].index : null;
+                  if (idx == null) return;
+                  const evt = e && (e.native || e);
+                  const ctrl = !!(evt && (evt.ctrlKey || evt.metaKey));
+                  const shift = !!(evt && evt.shiftKey);
+                  if (!(chart.$selected instanceof Set)) chart.$selected = new Set();
+                  const sel = chart.$selected;
+                  if (shift && Number.isInteger(chart.$lastIndex)) {
+                    const start = Math.min(chart.$lastIndex, idx);
+                    const end = Math.max(chart.$lastIndex, idx);
+                    for (let i = start; i <= end; i++) sel.add(i);
+                  } else if (ctrl) {
+                    if (sel.has(idx)) sel.delete(idx); else sel.add(idx);
+                  } else {
+                    if (sel.size === 1 && sel.has(idx)) sel.clear(); else { sel.clear(); sel.add(idx); }
+                  }
+                  chart.$lastIndex = idx;
+                  chart.update();
+                } catch (_) {}
+              },
               plugins: {
-                legend: { position: "bottom" },
+                legend: { 
+                  position: "bottom",
+                  // Override click to highlight instead of hide
+                  onClick: (e, legendItem, legend) => {
+                    try {
+                      const chart = legend.chart;
+                      const idx = legendItem.index;
+                      const evt = e && (e.native || e);
+                      const ctrl = !!(evt && (evt.ctrlKey || evt.metaKey));
+                      const shift = !!(evt && evt.shiftKey);
+                      if (!(chart.$selected instanceof Set)) chart.$selected = new Set();
+                      const sel = chart.$selected;
+
+                      if (shift && Number.isInteger(chart.$lastIndex)) {
+                        const start = Math.min(chart.$lastIndex, idx);
+                        const end = Math.max(chart.$lastIndex, idx);
+                        for (let i = start; i <= end; i++) sel.add(i);
+                      } else if (ctrl) {
+                        if (sel.has(idx)) sel.delete(idx); else sel.add(idx);
+                      } else {
+                        // Single-selection toggle
+                        if (sel.size === 1 && sel.has(idx)) sel.clear(); else { sel.clear(); sel.add(idx); }
+                      }
+                      chart.$lastIndex = idx;
+                      chart.update();
+                    } catch (_) {}
+                  }
+                },
                 tooltip: {
                   callbacks: {
-                    label: (ctx) => `${ctx.label}: ${ctx.parsed}`
+                    label: (ctx) => {
+                      try {
+                        const chart = ctx.chart;
+                        const ds = chart.data.datasets[0];
+                        const values = ds.data || [];
+                        const totalFull = values.reduce((a, b) => a + (Number(b) || 0), 0) || 0;
+                        const sel = chart.$selected instanceof Set ? chart.$selected : null;
+                        const basis = (sel && sel.size > 0) ? Array.from(sel).reduce((acc, i) => acc + (Number(values[i]) || 0), 0) : totalFull;
+                        const val = Number(ctx.parsed) || 0;
+                        const pct = basis ? ((val / basis) * 100).toFixed(1) : '0.0';
+                        return `${ctx.label}: ${val} (${pct}%)`;
+                      } catch (_) {
+                        return `${ctx.label}: ${ctx.parsed}`;
+                      }
+                    }
                   }
                 }
+              },
+              animation: {
+                duration: 500,
+                easing: 'easeOutCubic'
               }
-            }
+            },
+            plugins: [centerTextPlugin]
           });
           el.dataset.chartInitialized = "true";
         } catch (_) {}

@@ -1096,7 +1096,7 @@ const coursesData = [
                   <!-- <div class="small text-muted mt-2">Note: Chart shows relative emphasis for categories; update with official proportions when available.</div> -->
 
                   <!-- Legend with icons -->
-                  <div class="d-flex flex-wrap gap-2 mt-2">
+                  <div class="d-flex flex-wrap gap-2 mt-2 d-none">
                     ${[
                       {
                         label: "Heart disease",
