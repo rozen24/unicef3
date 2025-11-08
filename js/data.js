@@ -1971,73 +1971,17 @@ const coursesData = [
                   </div>
                 </section>
 
-                <!-- Orbit info: main strategy at center with related focus areas around -->
-                <section class="orbit-section" aria-labelledby="orbit-title">
-                  <div class="orbit-layout" data-aos="zoom-in" data-aos-delay="240">
+                <!-- Orbit info: manual generation (JS builds satellites) -->
+                <section class="mt-5" aria-labelledby="orbit-title">
+                  <div class="orbit-layout" id="orbitLayout" data-aos="zoom-in" data-aos-delay="240" data-orbit-manual="true">
                     <!-- Center node -->
-                    <div class="orbit-center">
-                      <div class="orbit-card bg-gradient-emerald">
-                        <div class="orbit-icon"><i class="fa-solid fa-flag"></i></div>
-                        <div class="orbit-title">National Adolescent Health Strategy</div>
+                    <div class="orbit-center icon-spin-on-hover">
+                      <div class="orbit-card bg-gradient-blue">
+                        <div class="orbit-icon mb-1"><i class="fa-solid fa-flag fa-lg"></i></div>
+                        <div class="orbit-title fw-bold">National<br />Health Strategy</div>
                         <div class="orbit-sub">2017–2030</div>
                       </div>
                     </div>
-                    <!-- Satellites: 7 items -->
-                    ${[
-                      {
-                        label:
-                          "Adolescent Sexual and Reproductive Health & Rights",
-                        icon: "fa-venus-mars",
-                        cls: "bg-gradient-rose",
-                      },
-                      {
-                        label: "Violence against Adolescents",
-                        icon: "fa-hand-fist",
-                        cls: "bg-gradient-tangerine",
-                      },
-                      {
-                        label: "Mental Health for Adolescents",
-                        icon: "fa-brain",
-                        cls: "bg-gradient-violet",
-                      },
-                      {
-                        label: "Health System Strengthening",
-                        icon: "fa-screwdriver-wrench",
-                        cls: "bg-gradient-blue",
-                      },
-                      {
-                        label: "Social & Behaviour Change Communication",
-                        icon: "fa-bullhorn",
-                        cls: "bg-gradient-emerald",
-                      },
-                      {
-                        label:
-                          "Vulnerable adolescents & challenging circumstances",
-                        icon: "fa-people-roof",
-                        cls: "bg-gradient-teal",
-                      },
-                      {
-                        label: "Adolescent Nutrition",
-                        icon: "fa-utensils",
-                        cls: "bg-gradient-purple",
-                      },
-                    ]
-                      .map(
-                        (o, i) => `
-                      <div class="orbit-item orbit-pos-${i + 1}">
-                        <div class="orbit-card ${o.cls} icon-spin-on-hover">
-                          <div class="orbit-icon animate-float"><i class="fa-solid ${
-                            o.icon
-                          }"></i></div>
-                          <div class="orbit-title small">${o.label}</div>
-                        </div>
-                      </div>
-                    `
-                      )
-                      .join("")}
-                    <!-- Decorative orbit rings -->
-                    <div class="orbit-ring orbit-ring-1" aria-hidden="true"></div>
-                    <div class="orbit-ring orbit-ring-2" aria-hidden="true"></div>
                   </div>
                 </section>
               </div>`,

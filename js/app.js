@@ -263,14 +263,37 @@ class YouthHealthLMS {
   normalizePhoneBD(raw) {
     try {
       if (!raw) return null;
-      let t = String(raw).trim().replace(/[\s\-()]/g, "");
-      // Keep leading + if present; strip other non-digits
-      t = t.replace(/(?!^)[^\d]/g, "");
+            const rect = wrap.getBoundingClientRect();
+            const w = rect.width || wrap.clientWidth || 0;
+            const h = rect.height || wrap.clientHeight || 0;
       // Valid patterns we accept and convert to E.164
       if (/^\+8801[3-9]\d{8}$/.test(t)) return t; // already E.164
       if (/^8801[3-9]\d{8}$/.test(t)) return "+" + t; // missing +
-      if (/^01[3-9]\d{8}$/.test(t)) return "+880" + t.slice(1); // local with 0
-      if (/^1[3-9]\d{8}$/.test(t)) return "+880" + t; // local without 0
+            // Resolve radius preference: data attribute > CSS var > default
+            const minDim = Math.min(w, h);
+            let r = 0;
+            const attrR = parseFloat(wrap.getAttribute('data-orbit-radius') || '');
+            if (!Number.isNaN(attrR) && attrR > 0) {
+              r = attrR; // pixels
+            } else {
+              const cssVar = getComputedStyle(wrap).getPropertyValue('--orbit-radius').trim();
+              if (cssVar) {
+                if (cssVar.endsWith('%')) {
+                  const p = parseFloat(cssVar);
+                  if (!Number.isNaN(p)) r = (p / 100) * (minDim / 2);
+                } else if (cssVar.endsWith('px')) {
+                  const px = parseFloat(cssVar);
+                  if (!Number.isNaN(px)) r = px;
+                } else {
+                  const val = parseFloat(cssVar);
+                  if (!Number.isNaN(val)) r = val; // assume px
+                }
+              }
+            }
+            if (!r || r <= 0) {
+              // Default: ~38% of the smallest dimension
+              r = Math.max(40, minDim * 0.38);
+            }
       return null;
     } catch (_) {
       return null;
@@ -284,6 +307,25 @@ class YouthHealthLMS {
     }
 
     if (password !== confirmPassword) {
+
+            // Size optional decorative rings to match orbit radius
+            try {
+              const setRing = (ring, scale = 1) => {
+                const d = Math.max(0, r * 2 * scale);
+                ring.style.position = 'absolute';
+                ring.style.left = cx + 'px';
+                ring.style.top = cy + 'px';
+                ring.style.width = d + 'px';
+                ring.style.height = d + 'px';
+                ring.style.transform = 'translate(-50%, -50%)';
+                ring.style.borderRadius = '50%';
+                ring.style.pointerEvents = 'none';
+              };
+              const ring1 = wrap.querySelector('.orbit-ring-1');
+              const ring2 = wrap.querySelector('.orbit-ring-2');
+              if (ring1) setRing(ring1, 1);
+              if (ring2) setRing(ring2, 1.12);
+            } catch (_) { /* ring sizing optional */ }
       return { success: false, error: "Passwords do not match" };
     }
 
@@ -1455,6 +1497,10 @@ class YouthHealthLMS {
 
       // Position demographic pyramid steps along diagonals when present
       try { this.initPyramidLayout(); } catch (_) {}
+      // Build manual orbit items (if requested) before applying auto layout
+      try { this.generateManualOrbitItems(); } catch (_) {}
+      // Position orbit items equidistant from center in any orbit-layout instances
+      try { this.initOrbitLayout(); } catch (_) {}
     } catch (_) {}
   }
 
@@ -1494,6 +1540,159 @@ class YouthHealthLMS {
       if (negative.length) place(negative, 'negative');
     } catch (_) { /* no-op */ }
   }
+
+  // Arrange orbit diagram satellites evenly on a circle around the center
+  initOrbitLayout() {
+    try {
+      const wraps = document.querySelectorAll('.orbit-layout');
+      if (!wraps || wraps.length === 0) return;
+
+      const layoutOne = (wrap) => {
+        try {
+          if (!wrap) return;
+          // Skip if explicitly manual-managed
+          if (wrap.hasAttribute('data-orbit-manual')) return;
+          // Ensure positioning context
+          if (getComputedStyle(wrap).position === 'static') {
+            wrap.style.position = 'relative';
+          }
+          const items = Array.from(wrap.querySelectorAll('.orbit-item'));
+          if (!items.length) return;
+
+          const rect = wrap.getBoundingClientRect();
+          const w = rect.width || wrap.clientWidth || 0;
+          const h = rect.height || wrap.clientHeight || 0;
+          if (!w || !h) return;
+          const cx = w / 2;
+          const cy = h / 2;
+          // Resolve radius preference: data attribute > CSS var > default
+          const minDim = Math.min(w, h);
+          let r = 0;
+          const attrR = parseFloat(wrap.getAttribute('data-orbit-radius') || '');
+          if (!Number.isNaN(attrR) && attrR > 0) {
+            r = attrR; // pixels
+          } else {
+            const cssVar = getComputedStyle(wrap).getPropertyValue('--orbit-radius').trim();
+            if (cssVar) {
+              if (cssVar.endsWith('%')) {
+                const p = parseFloat(cssVar);
+                if (!Number.isNaN(p)) r = (p / 100) * (minDim / 2);
+              } else if (cssVar.endsWith('px')) {
+                const px = parseFloat(cssVar);
+                if (!Number.isNaN(px)) r = px;
+              } else {
+                const val = parseFloat(cssVar);
+                if (!Number.isNaN(val)) r = val; // assume px
+              }
+            }
+          }
+          if (!r || r <= 0) {
+            // Default: ~38% of the smallest dimension
+            r = Math.max(40, minDim * 0.38);
+          }
+
+          // Distribute evenly; start at top (-90deg)
+          const n = items.length;
+          items.forEach((el, i) => {
+            const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+            const x = cx + r * Math.cos(angle);
+            const y = cy + r * Math.sin(angle);
+            el.style.position = 'absolute';
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
+            el.style.transform = 'translate(-50%, -50%)';
+            el.style.zIndex = String(10 + i);
+          });
+
+          // Size optional decorative rings to match orbit radius
+          try {
+            const setRing = (ring, scale = 1) => {
+              const d = Math.max(0, r * 2 * scale);
+              ring.style.position = 'absolute';
+              ring.style.left = cx + 'px';
+              ring.style.top = cy + 'px';
+              ring.style.width = d + 'px';
+              ring.style.height = d + 'px';
+              ring.style.transform = 'translate(-50%, -50%)';
+              ring.style.borderRadius = '50%';
+              ring.style.pointerEvents = 'none';
+            };
+            const ring1 = wrap.querySelector('.orbit-ring-1');
+            const ring2 = wrap.querySelector('.orbit-ring-2');
+            if (ring1) setRing(ring1, 1);
+            if (ring2) setRing(ring2, 1.12);
+          } catch (_) { /* ring sizing optional */ }
+        } catch (_) { /* no-op single wrap */ }
+      };
+
+      wraps.forEach(layoutOne);
+      // Recompute on resize
+      const onResize = () => { try { wraps.forEach(layoutOne); } catch(_){} };
+      window.addEventListener('resize', onResize);
+    } catch (_) { /* no-op */ }
+  }
+
+  // Generate orbit items via manual list for containers with data-orbit-manual
+  generateManualOrbitItems() {
+    try {
+      const wrap = document.getElementById('orbitLayout');
+      if (!wrap || !wrap.hasAttribute('data-orbit-manual')) return;
+      // Avoid duplicating items
+      if (wrap.querySelector('.orbit-item')) return;
+
+      const orbitItems = [
+        { label: 'Adolescent Sexual & Reproductive Health', icon: 'fa-venus-mars', cls: 'bg-gradient-purple' },
+        { label: 'Violence against Adolescents', icon: 'fa-hand-fist', cls: 'bg-gradient-teal' },
+        { label: 'Mental Health for Adolescents', icon: 'fa-brain', cls: 'bg-gradient-orange' },
+        { label: 'Health System Strengthening', icon: 'fa-screwdriver-wrench', cls: 'bg-gradient-green' },
+        { label: 'Social & Behaviour Change Communication', icon: 'fa-bullhorn', cls: 'bg-gradient-pink' },
+        { label: 'Vulnerable Adolescents', icon: 'fa-people-roof', cls: 'bg-gradient-yellow' },
+        { label: 'Adolescent Nutrition', icon: 'fa-utensils', cls: 'bg-gradient-lavender' }
+      ];
+
+      const total = orbitItems.length;
+      // Resolve radius: data-orbit-radius (px) or CSS var --orbit-radius (%) or default 180px
+      const rect = wrap.getBoundingClientRect();
+      const w = rect.width || wrap.clientWidth || 0;
+      const h = rect.height || wrap.clientHeight || 0;
+      const minDim = Math.min(w, h) || 0;
+      let radius = 180;
+      const attrR = parseFloat(wrap.getAttribute('data-orbit-radius') || '');
+      if (!Number.isNaN(attrR) && attrR > 0) radius = attrR;
+      else {
+        const cssVar = getComputedStyle(wrap).getPropertyValue('--orbit-radius').trim();
+        if (cssVar && cssVar.endsWith('%')) {
+          const p = parseFloat(cssVar);
+          if (!Number.isNaN(p) && minDim) radius = (p / 100) * (minDim / 2);
+        } else if (cssVar) {
+          const v = parseFloat(cssVar);
+          if (!Number.isNaN(v)) radius = v;
+        }
+      }
+
+      // Ensure wrapper is positioning context
+      if (getComputedStyle(wrap).position === 'static') wrap.style.position = 'relative';
+
+      orbitItems.forEach((o, i) => {
+        const angle = (360 / total) * i;
+        const item = document.createElement('div');
+        item.className = 'orbit-item';
+        // Place item at center and rotate around center
+        item.style.left = '50%';
+        item.style.top = '50%';
+        item.style.position = 'absolute';
+        item.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`;
+        item.innerHTML = `
+          <div class="orbit-card ${o.cls} icon-spin-on-hover" style="animation-delay: ${i * 0.6}s">
+            <div class="orbit-icon mb-2"><i class="fa-solid ${o.icon} fa-lg"></i></div>
+            <div class="orbit-title">${o.label}</div>
+          </div>
+        `;
+        wrap.appendChild(item);
+      });
+    } catch (_) { /* no-op */ }
+  }
+
 
   // Initialize show/hide password toggles for any buttons with data-pw-toggle pointing to an input id
   initPasswordToggles() {

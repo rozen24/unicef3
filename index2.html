@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floating Orbit Layout</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+</head>
+
+<body>
+  <div class="orbit-layout" id="orbitLayout">
+    <!-- Center node -->
+    <div class="orbit-center">
+      <div class="orbit-card">
+        <div class="orbit-icon mb-1"><i class="fa-solid fa-flag fa-lg"></i></div>
+        <div class="orbit-title fw-bold">National<br />Health Strategy</div>
+        <div class="orbit-sub small">2017–2030</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const orbitItems = [
+      { label: "Adolescent Sexual & Reproductive Health", icon: "fa-venus-mars", cls: "bg-gradient-rose" },
+      { label: "Violence against Adolescents", icon: "fa-hand-fist", cls: "bg-gradient-tangerine" },
+      { label: "Mental Health for Adolescents", icon: "fa-brain", cls: "bg-gradient-violet" },
+      { label: "Health System Strengthening", icon: "fa-screwdriver-wrench", cls: "bg-gradient-blue" },
+      { label: "Social & Behaviour Change Communication", icon: "fa-bullhorn", cls: "bg-gradient-emerald" },
+      { label: "Vulnerable Adolescents", icon: "fa-people-roof", cls: "bg-gradient-teal" },
+      { label: "Adolescent Nutrition", icon: "fa-utensils", cls: "bg-gradient-purple" },
+    ];
+
+    const orbitLayout = document.getElementById("orbitLayout");
+    const total = orbitItems.length;
+    const radius = 180; // distance from center
+
+    orbitItems.forEach((o, i) => {
+      const angle = (360 / total) * i;
+      const orbitItem = document.createElement("div");
+      orbitItem.className = "orbit-item";
+      orbitItem.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`;
+
+      orbitItem.innerHTML = `
+        <div class="orbit-card ${o.cls}" style="animation-delay: ${i * 0.6}s">
+          <div class="orbit-icon mb-2"><i class="fa-solid ${o.icon} fa-lg"></i></div>
+          <div class="orbit-title small">${o.label}</div>
+        </div>
+      `;
+
+      orbitLayout.appendChild(orbitItem);
+    });
+  </script>
+</body>
+</html>
