@@ -1192,7 +1192,7 @@ const coursesData = [
                   <h3 class="gradient-text mb-2" id="cm-figure4-title" data-aos="fade-up" data-aos-delay="80">Percentage of women (20–24) first married/union before age 18</h3>
                   <div class="row g-3 align-items-stretch">
                     <div class="col-lg-12" data-aos="fade-right" data-aos-delay="100">
-                      <article class="modern-card" style="height:320px">
+                      <article class="modern-card" style="height:500px">
                         <canvas id="cmFigure4Chart" aria-label="Child marriage before 18: Bangladesh vs South Asia vs World" role="img"></canvas>
                       </article>
                     </div>
@@ -1254,7 +1254,7 @@ const coursesData = [
                           ]
                             .map(
                               (c) => `
-                            <span class="badge-pill ${c.color}" title="${c.label}"><i class="fa-solid ${c.icon} me-1"></i>${c.label}</span>
+                            <span class="d-none badge-pill ${c.color}" title="${c.label}"><i class="fa-solid ${c.icon} me-1"></i>${c.label}</span>
                           `
                             )
                             .join("")}
@@ -1269,7 +1269,7 @@ const coursesData = [
                 <section aria-labelledby="cm-keyfacts-title">
                   <h3 class="gradient-text mb-1" id="cm-keyfacts-title" data-aos="fade-up" data-aos-delay="140">KEY FACTS</h3>
                   <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="160">About child marriage in Bangladesh</p>
-                  <div class="row g-3">
+                  <div class="row g-3 d-none">
                     <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="180">
                       <div class="fact-card alert-info hover-lift-sm transition-base">
                         <i class="fas fa-children" aria-hidden="true"></i>

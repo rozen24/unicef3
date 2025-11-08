@@ -1304,35 +1304,49 @@ class YouthHealthLMS {
       if (cmCanvas && !cmCanvas.dataset.chartInitialized && window.Chart) {
         try {
           const ctx = cmCanvas.getContext("2d");
-          new window.Chart(ctx, {
-            type: "bar",
+          // Adaptive horizontal bar chart (Chart.js v2 & v3+ compatible)
+          const labelsHM = ["Bangladesh","Nepal","Afghanistan","India","Bhutan","Pakistan","Sri Lanka","Maldives", "South Asia", "World"]; 
+          const valuesHM = [51, 40, 28, 27, 26, 18, 10, 2, 29, 20];
+          const paletteHM = [
+            "#ff0000ff", // Bangladesh
+            "#A78BFA", // Nepal
+            "#34D399", // Afghanistan
+            "#60A5FA", // India
+            "#F59E0B", // Bhutan
+            "#FB7185", // Pakistan
+            "#F97316", // Sri Lanka
+            "#22D3EE", // Maldives
+            "#2563EB", // South Asia
+            "#9CA3AF"  // World
+          ];
+          // Render as vertical bars (categories on x-axis)
+          const chartConfig = {
+            type: 'bar',
             data: {
-              labels: ["Bangladesh", "South Asia", "World"],
-              datasets: [
-                {
-                  label: "% of women 20–24 first married/union before 18",
-                  data: [51, 29, 20],
-                  backgroundColor: [
-                    "#F472B6", // Bangladesh - pink
-                    "#A78BFA", // South Asia - violet
-                    "#34D399"  // World - emerald
-                  ],
-                  borderRadius: 10,
-                  barPercentage: 0.7,
-                  categoryPercentage: 0.6
-                }
-              ]
+              labels: labelsHM,
+              datasets: [{
+                label: '% of women 20–24 first married/union before 18',
+                data: valuesHM,
+                backgroundColor: paletteHM,
+                borderRadius: 6,
+                barPercentage: 0.65,
+                categoryPercentage: 0.7
+              }]
             },
             options: {
-              indexAxis: "y",
+              indexAxis: 'x', // ensure vertical orientation in Chart.js v3+
               responsive: true,
               maintainAspectRatio: false,
               scales: {
-                x: {
+                y: {
                   suggestedMin: 0,
                   suggestedMax: 100,
-                  ticks: { callback: (v) => v + "%" },
-                  title: { display: true, text: "Percentage" }
+                  ticks: { callback: (v) => v + '%' },
+                  title: { display: true, text: 'Percentage of women 20–24 married before 18' }
+                },
+                x: {
+                  ticks: { autoSkip: false },
+                  title: { display: false }
                 }
               },
               plugins: {
@@ -1342,16 +1356,12 @@ class YouthHealthLMS {
                     label: (ctx) => `${ctx.raw}%`
                   }
                 },
-                title: {
-                  display: false
-                }
+                title: { display: false }
               },
-              animation: {
-                duration: 900,
-                easing: "easeOutCubic"
-              }
+              animation: { duration: 900, easing: 'easeOutCubic' }
             }
-          });
+          };
+          new window.Chart(ctx, chartConfig);
           cmCanvas.dataset.chartInitialized = "true";
         } catch (_) {}
       }
