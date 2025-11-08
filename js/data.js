@@ -1189,7 +1189,7 @@ const coursesData = [
 
                 <!-- FIG.4: Graph chart section -->
                 <section class="mb-4" aria-labelledby="cm-figure4-title">
-                  <h3 class="gradient-text mb-2" id="cm-figure4-title" data-aos="fade-up" data-aos-delay="80">Percentage of women (20–24) first married/union before age 18</h3>
+                  <h3 class="gradient-text py-2" id="cm-figure4-title" data-aos="fade-up" data-aos-delay="80">Percentage of women (20–24) first married/union before age 18</h3>
                   <div class="row g-3 align-items-stretch">
                     <div class="col-lg-12" data-aos="fade-right" data-aos-delay="100">
                       <article class="modern-card" style="height:500px">
@@ -1198,7 +1198,6 @@ const coursesData = [
                     </div>
                     <div class="col-lg-12" data-aos="fade-left" data-aos-delay="120">
                       <article class="modern-card h-100 d-flex flex-column">
-                        <p class="mb-3">Bangladesh has the highest prevalence of child marriage in South Asia, and is among the 10 countries worldwide with the highest levels.</p>
                         <div class="d-flex flex-wrap gap-2">
                           ${[
                             {

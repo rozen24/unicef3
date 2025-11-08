@@ -1417,11 +1417,11 @@ class YouthHealthLMS {
                   suggestedMin: 0,
                   suggestedMax: 100,
                   ticks: { callback: (v) => v + '%' },
-                  title: { display: true, text: 'Percentage of women 20–24 married before 18' }
                 },
                 x: {
                   ticks: { autoSkip: false, maxRotation: 0, minRotation: 0, padding: 6 },
                   title: { display: false }
+
                 }
               },
               plugins: {
@@ -1431,12 +1431,23 @@ class YouthHealthLMS {
                     label: (ctx) => `${ctx.raw}%`
                   }
                 },
-                title: { display: false },
+                title: {
+                  display: true,
+                  position: 'top',
+                  text: [
+                    'Bangladesh has the highest prevalence of child marriage in South Asia,',
+                    'and is among the 10 countries worldwide with the highest levels.'
+                  ],
+                  padding: { top: 12, bottom: 18 },
+                  font: { size: 15, weight: '700', family: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif' },
+                  color: '#111827'
+                },
                 barValueLabels: { formatter: v => v + '%' } // append percent sign
               },
               animation: { duration: 900, easing: 'easeOutCubic' }
             }
           };
+          // Render chart without background highlight plugin (plain styled title only)
           new window.Chart(ctx, chartConfig);
           cmCanvas.dataset.chartInitialized = "true";
         } catch (_) {}
