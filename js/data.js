@@ -1475,14 +1475,14 @@ const coursesData = [
                 <!-- AA-HA! guidance section with distinct background -->
                 <section class="mb-4 p-3 p-md-4 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
                   <div class="row g-3 align-items-center">
-                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
-                      <figure class="image-card" style="height:320px"><img src="img/determinants/determenants.jpg" alt="AA-HA! guidance"></figure>
+                    <div class="col-md-12" data-aos="fade-right" data-aos-delay="60">
+                      <figure class="image-card"><img src="img/determinants/determinants.png" style="max-height: 900px;" alt="AA-HA! guidance"></figure>
                     </div>
-                    <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
+                    <div class="col-md-6 d-none" data-aos="fade-left" data-aos-delay="80">
                       <article class="modern-card hover-lift-sm transition-base icon-spin-on-hover">
                         <div class="d-flex align-items-start gap-3">
                           <span class="badge-pill bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
-                          <div class"">
+                          <div class="">
                             <h3 id="aa-ha-title" class="mb-2 gradient-text aa-ha-title">Global Accelerated Action for the Health of Adolescents (AA-HA!)</h3>
                             <p class="mb-1">Guidance to Support Country Implementation</p>
                             <p class="mb-0 text-muted">Second Edition</p>
