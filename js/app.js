@@ -962,6 +962,49 @@ class YouthHealthLMS {
       const causesToggleChart = document.getElementById("topCausesToggleChart");
       const causesControls = document.getElementById("topCausesControls");
 
+      // Reusable plugin to draw value labels on bars (supports vertical & horizontal orientations)
+      const barValueLabelsPlugin = {
+        id: 'barValueLabels',
+        afterDatasetsDraw(chart, args, opts) {
+          try {
+            const { ctx } = chart;
+            const isHorizontal = chart.options.indexAxis === 'y';
+            const formatter = (opts && typeof opts.formatter === 'function') ? opts.formatter : (v => String(v));
+            chart.data.datasets.forEach((ds, dsIndex) => {
+              const meta = chart.getDatasetMeta(dsIndex);
+              if (!meta || !meta.data) return;
+              meta.data.forEach((elem, i) => {
+                const raw = ds.data[i];
+                if (raw == null) return;
+                const txt = formatter(raw, i, ds, chart);
+                const pos = elem.tooltipPosition();
+                ctx.save();
+                ctx.font = '600 11px Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+                ctx.fillStyle = '#111827';
+                ctx.textBaseline = 'middle';
+                if (isHorizontal) {
+                  // Place label slightly beyond bar end; handle negative gracefully
+                  const isNeg = raw < 0;
+                  ctx.textAlign = isNeg ? 'right' : 'left';
+                  const base = elem.base != null ? elem.base : pos.x;
+                  const endX = pos.x;
+                  const delta = endX - base;
+                  const labelX = base + delta + (isNeg ? -8 : 8);
+                  ctx.fillText(txt, labelX, pos.y);
+                } else {
+                  // Vertical bars: place above bar top
+                  ctx.textAlign = 'center';
+                  // Attempt to derive top pixel (elem.y is center); use element properties when available
+                  const topY = (elem.y - (elem.height ? elem.height / 2 : 0)) - 6;
+                  ctx.fillText(txt, pos.x, topY);
+                }
+                ctx.restore();
+              });
+            });
+          } catch (_) { /* silent */ }
+        }
+      };
+
       const ensureTopCausesChart = () => {
         const canvas = document.getElementById("top5CausesChart");
         if (!canvas || canvas.dataset.chartInitialized || !window.Chart) return;
@@ -969,6 +1012,7 @@ class YouthHealthLMS {
           const ctx = canvas.getContext("2d");
           new window.Chart(ctx, {
             type: "bar",
+            plugins: [barValueLabelsPlugin],
             data: {
               labels: [
                 "Road traffic accident",
@@ -1010,7 +1054,8 @@ class YouthHealthLMS {
                   callbacks: {
                     label: (ctx) => `Rank: ${ctx.parsed.x}`
                   }
-                }
+                },
+                barValueLabels: { formatter: v => v } // plain numeric rank
               }
             }
           });
@@ -1307,6 +1352,31 @@ class YouthHealthLMS {
           // Adaptive horizontal bar chart (Chart.js v2 & v3+ compatible)
           const labelsHM = ["Bangladesh","Nepal","Afghanistan","India","Bhutan","Pakistan","Sri Lanka","Maldives", "South Asia", "World"]; 
           const valuesHM = [51, 40, 28, 27, 26, 18, 10, 2, 29, 20];
+          // Wrap long labels into multiple lines for readability
+          const wrapLabel = (str, max = 10) => {
+            try {
+              if (!str || typeof str !== 'string') return str;
+              if (str.length <= max) return str;
+              const words = str.split(' ');
+              if (words.length === 1) return str; // can't wrap
+              const lines = [];
+              let line = '';
+              words.forEach(w => {
+                const test = line ? (line + ' ' + w) : w;
+                if (test.length > max) { if (line) lines.push(line); line = w; } else { line = test; }
+              });
+              if (line) lines.push(line);
+              return lines;
+            } catch(_) { return str; }
+          };
+          const labelsHMWrap = labelsHM.map(l => wrapLabel(l, 10));
+
+          // Compute top-3 indices for highlight
+          const top3Idx = valuesHM
+            .map((v, i) => [v, i])
+            .sort((a, b) => b[0] - a[0])
+            .slice(0, 3)
+            .map(([, i]) => i);
           const paletteHM = [
             "#ff0000ff", // Bangladesh
             "#A78BFA", // Nepal
@@ -1322,12 +1392,17 @@ class YouthHealthLMS {
           // Render as vertical bars (categories on x-axis)
           const chartConfig = {
             type: 'bar',
+            plugins: [barValueLabelsPlugin],
             data: {
-              labels: labelsHM,
+              labels: labelsHMWrap,
+              values: valuesHM,
               datasets: [{
                 label: '% of women 20–24 first married/union before 18',
                 data: valuesHM,
                 backgroundColor: paletteHM,
+                borderColor: (ctx) => top3Idx.includes(ctx.dataIndex) ? '#000000ff' : 'rgba(0,0,0,0.15)',
+                borderWidth: (ctx) => top3Idx.includes(ctx.dataIndex) ? 3 : 1,
+                borderSkipped: false,
                 borderRadius: 6,
                 barPercentage: 0.65,
                 categoryPercentage: 0.7
@@ -1345,7 +1420,7 @@ class YouthHealthLMS {
                   title: { display: true, text: 'Percentage of women 20–24 married before 18' }
                 },
                 x: {
-                  ticks: { autoSkip: false },
+                  ticks: { autoSkip: false, maxRotation: 0, minRotation: 0, padding: 6 },
                   title: { display: false }
                 }
               },
@@ -1356,7 +1431,8 @@ class YouthHealthLMS {
                     label: (ctx) => `${ctx.raw}%`
                   }
                 },
-                title: { display: false }
+                title: { display: false },
+                barValueLabels: { formatter: v => v + '%' } // append percent sign
               },
               animation: { duration: 900, easing: 'easeOutCubic' }
             }
