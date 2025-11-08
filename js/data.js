@@ -1699,50 +1699,50 @@ const coursesData = [
                   {
                     label: "No Poverty",
                     icon: "fa-hand-holding-heart",
-                    cls: "sdg-lean-rose",
+                    cls: "purple",
                     delay: 100,
                   },
                   {
                     label: "Zero Hunger",
                     icon: "fa-bowl-food",
-                    cls: "sdg-lean-tangerine",
+                    cls: "blue",
                     delay: 130,
                   },
                   {
                     label: "Good Health And Well-Being",
                     icon: "fa-heart-pulse",
-                    cls: "sdg-lean-emerald",
+                    cls: "teal",
                     delay: 160,
                   },
                   {
                     label: "Quality Education",
                     icon: "fa-graduation-cap",
-                    cls: "sdg-lean-blue",
+                    cls: "orange",
                     delay: 190,
                   },
                   {
                     label: "Gender Equality",
                     icon: "fa-venus-mars",
-                    cls: "sdg-lean-violet",
+                    cls: "green",
                     delay: 220,
                   },
                   {
                     label: "Decent Work And Economic Growth",
                     icon: "fa-briefcase",
-                    cls: "sdg-lean-purple",
+                    cls: "pink",
                     delay: 250,
                   },
                   {
                     label: "Peace, Justice And Strong Institutions",
                     icon: "fa-scale-balanced",
-                    cls: "sdg-lean-teal",
+                    cls: "yellow",
                     delay: 280,
                   },
                 ]
                   .map(
                     (s) => `
-                  <div class="col-6 col-md-4 col-lg-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" data-aos="flip-left" data-aos-delay="${s.delay}">
-                    <article class="sdg-lean-card ${s.cls} sdg-hover-tilt transition-base icon-spin-on-hover h-100">
+                  <div class="col-6 col-md-4 col-lg-3 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" data-aos="flip-left" data-aos-delay="${s.delay}">
+                    <article class="sdg-lean-card bg-gradient-${s.cls} sdg-hover-tilt transition-base icon-spin-on-hover h-100">
                       <div class="sdg-card-icon animate-float-slow"><i class="fa-solid ${s.icon}"></i></div>
                       <h6 class="sdg-card-title">${s.label}</h6>
                     </article>
