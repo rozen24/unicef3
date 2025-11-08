@@ -4674,7 +4674,7 @@ input::placeholder {
     opacity: 1;
     background: radial-gradient(circle at 30% 30%, rgba(59,130,246,0.45), rgba(59,130,246,0));
     filter: blur(0.5px);
-    animation: orbGlide 1000s ease-in-out infinite;
+    animation: orbGlide 5000s ease-in-out infinite;
 }
 
 .lesson-slide::before {

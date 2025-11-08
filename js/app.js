@@ -3219,7 +3219,7 @@ class YouthHealthLMS {
 
       // Mobile offcanvas lesson browser (chapters)
       const mobileBrowseBtn = `
-        <div class="d-lg-none mt-3">
+        <div class="d-lg-none mb-1">
           <button class="btn btn-primary w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
             <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
           </button>
@@ -3371,7 +3371,7 @@ class YouthHealthLMS {
                 </div>
               </div>
               ${mobileBrowseBtn}
-              <div class="d-none d-lg-block mt-3">
+              <div class="d-none d-lg-block mb-1">
                 <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
                   <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
                 </button>
