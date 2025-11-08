@@ -1266,9 +1266,16 @@ const coursesData = [
 
                 <!-- KEY FACTS -->
                 <section aria-labelledby="cm-keyfacts-title">
-                  <h3 class="gradient-text mb-1" id="cm-keyfacts-title" data-aos="fade-up" data-aos-delay="140">KEY FACTS</h3>
-                  <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="160">About child marriage in Bangladesh</p>
-                  <div class="row g-3 d-none">
+                  <h3 class="d-none gradient-text mb-1" id="cm-keyfacts-title" data-aos="fade-up" data-aos-delay="140">KEY FACTS</h3>
+                  <p class="d-none text-muted mb-3" data-aos="fade-up" data-aos-delay="160">About child marriage in Bangladesh</p>
+                  <div class="row g-3">
+                    <div class="key-img py-2" style="border-radius: 20px;" data-aos="zoom-in" data-aos-delay="180">
+                      <img src="img/Child-marraige/child-marriage-bangladesh.png" alt="Key Facts" class="img-fluid rounded-4 img-zoom" />
+                    </div>
+                    <div class="key-img py-2" style="border-radius: 20px;" data-aos="zoom-in" data-aos-delay="180">
+                      <img src="img/Child-marraige/childbearing.jpg" alt="Key Facts" class="img-fluid rounded-4 img-zoom" />
+                    </div>
+                    <!--
                     <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="180">
                       <div class="fact-card alert-info hover-lift-sm transition-base">
                         <i class="fas fa-children" aria-hidden="true"></i>
@@ -1322,7 +1329,7 @@ const coursesData = [
                         <i class="fas fa-bullseye" aria-hidden="true"></i>
                         <p class="mb-0">To meet national (2041) and SDG (2030) targets, progress must accelerate by <strong>8×</strong> and <strong>17×</strong>, respectively.</p>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </section>
               </div>`,

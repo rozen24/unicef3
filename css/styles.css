@@ -1580,8 +1580,8 @@ img {
   visibility: visible;
 }
 .zoom-overlay__img {
-  max-width: min(92vw, 1400px);
-  max-height: 92vh;
+  max-width: min(99vw, 1400px);
+  max-height: 99vh;
   width: auto;
   height: auto;
   border-radius: 12px;
