@@ -2017,101 +2017,13 @@ const coursesData = [
                   <p class="mb-1">Institutions and individuals can help protect adolescents from harm.</p>
                   <p class="mb-0">So too can teaching them healthy habits.</p>
                 </div>
+                <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="60">
+                  <div class="">
+                    <img src="img/effort-new.png" alt="A combined effort infographic" class="img-fluid rounded-4 shadow-sm" />
+                  </div>
+                </div>
 
                 <!-- Radial infographic: center + inner + outer rings -->
-                <section class="radial-chart-section" aria-labelledby="combined-effort-title">
-                  <div class="radial-chart radial-v2 hover-lift-sm transition-base" style="--inner-offset: 10deg;" data-aos="zoom-in" data-aos-delay="120" role="img" aria-label="Center: Healthy habits. Inner: School, Health services, Sleep, Healthy diet. Outer: Institutions, Families, Society, Communities.">
-                    <!-- Rings -->
-                    <div class="radial-ring radial-ring-outer" aria-hidden="true"></div>
-                    <div class="radial-ring radial-ring-inner" aria-hidden="true"></div>
-
-                    <!-- Center -->
-                    <div class="radial-center">
-                      <article class="radial-card bg-gradient-emerald icon-spin-on-hover">
-                        <div class="radial-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                        <div class="radial-title">Healthy habits</div>
-                      </article>
-                    </div>
-
-                    <!-- Inner ring (4) -->
-                    ${[
-                      {
-                        label: "School",
-                        icon: "fa-school",
-                        cls: "bg-gradient-blue",
-                        pos: "radial-inner-left",
-                      },
-                      {
-                        label: "Health services",
-                        icon: "fa-hospital",
-                        cls: "bg-gradient-rose",
-                        pos: "radial-inner-right custom-pos-combined-effort",
-                      },
-                      {
-                        label: "Sleep",
-                        icon: "fa-bed",
-                        cls: "bg-gradient-violet",
-                        pos: "radial-inner-bottom",
-                      },
-                      {
-                        label: "Healthy diet",
-                        icon: "fa-apple-whole",
-                        cls: "bg-gradient-tangerine",
-                        pos: "radial-inner-top custom-pos-combined-effort",
-                      },
-                    ]
-                      .map(
-                        (n) => `
-                      <div class="radial-node radial-inner ${n.pos}">
-                        <article class="radial-card ${n.cls} icon-spin-on-hover">
-                          <div class="radial-icon animate-float-slow"><i class="fa-solid ${n.icon}"></i></div>
-                          <div class="radial-title">${n.label}</div>
-                        </article>
-                      </div>
-                    `
-                      )
-                      .join("")}
-
-                    <!-- Outer ring (4) -->
-                    ${[
-                      {
-                        label: "Institutions",
-                        icon: "fa-landmark",
-                        cls: "bg-gradient-purple",
-                        pos: "radial-outer-ne",
-                      },
-                      {
-                        label: "Families",
-                        icon: "fa-people-roof",
-                        cls: "bg-gradient-emerald",
-                        pos: "radial-outer-nw",
-                      },
-                      {
-                        label: "Society",
-                        icon: "fa-people-group",
-                        cls: "bg-gradient-cyan",
-                        pos: "radial-outer-sw",
-                      },
-                      {
-                        label: "Communities",
-                        icon: "fa-people-carry-box",
-                        cls: "bg-gradient-teal",
-                        pos: "radial-outer-se",
-                      },
-                    ]
-                      .map(
-                        (n) => `
-                      <div class="radial-node radial-outer ${n.pos}">
-                        <article class="radial-card ${n.cls} icon-spin-on-hover animate-float-slow">
-                          <div class="radial-icon"><i class="fa-solid ${n.icon}"></i></div>
-                          <div class="radial-title">${n.label}</div>
-                        </article>
-                      </div>
-                    `
-                      )
-                      .join("")}
-                  </div>
-                </section>
               </div>`,
           },
           {
