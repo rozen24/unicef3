@@ -2183,6 +2183,10 @@ img {
   --oc-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
+.offcanvas.offcanvas-start {
+  width: 500px !important;
+}
+
 #mobileLessonBrowser .offcanvas-header,
 #mobileLessonBrowserFlat .offcanvas-header {
   border-bottom: 1px solid var(--oc-border);
@@ -7462,7 +7466,9 @@ dashboard-titled-title {
 }
 
 .lesson-hero {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 9;
     border-radius: var(--radius-xl);
     padding: clamp(0.8rem, 2vw, 1.8rem);
     background: var(--hero-gradient);
@@ -7488,7 +7494,6 @@ dashboard-titled-title {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
-  margin-bottom: 1.8rem;
 }
 
 .lesson-hero__counts {

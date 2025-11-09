@@ -262,42 +262,24 @@ class YouthHealthLMS {
   // Normalize and validate Bangladesh phone numbers to E.164 (+8801XXXXXXXXX)
   normalizePhoneBD(raw) {
     try {
-      if (!raw) return null;
-            const rect = wrap.getBoundingClientRect();
-            const w = rect.width || wrap.clientWidth || 0;
-            const h = rect.height || wrap.clientHeight || 0;
-      // Valid patterns we accept and convert to E.164
-      if (/^\+8801[3-9]\d{8}$/.test(t)) return t; // already E.164
-      if (/^8801[3-9]\d{8}$/.test(t)) return "+" + t; // missing +
-            // Resolve radius preference: data attribute > CSS var > default
-            const minDim = Math.min(w, h);
-            let r = 0;
-            const attrR = parseFloat(wrap.getAttribute('data-orbit-radius') || '');
-            if (!Number.isNaN(attrR) && attrR > 0) {
-              r = attrR; // pixels
-            } else {
-              const cssVar = getComputedStyle(wrap).getPropertyValue('--orbit-radius').trim();
-              if (cssVar) {
-                if (cssVar.endsWith('%')) {
-                  const p = parseFloat(cssVar);
-                  if (!Number.isNaN(p)) r = (p / 100) * (minDim / 2);
-                } else if (cssVar.endsWith('px')) {
-                  const px = parseFloat(cssVar);
-                  if (!Number.isNaN(px)) r = px;
-                } else {
-                  const val = parseFloat(cssVar);
-                  if (!Number.isNaN(val)) r = val; // assume px
-                }
-              }
-            }
-            if (!r || r <= 0) {
-              // Default: ~38% of the smallest dimension
-              r = Math.max(40, minDim * 0.38);
-            }
+      if (raw == null) return null;
+      let t = String(raw).trim();
+      // Remove spaces, dashes, parentheses; keep leading + if present
+      const hasPlus = t.startsWith('+');
+      t = t.replace(/[^\d+]/g, '');
+
+      // Normalize common forms to E.164
+      // +8801XXXXXXXXX (already normalized)
+      if (/^\+8801[3-9]\d{8}$/.test(t)) return t;
+      // 8801XXXXXXXXX (missing +)
+      if (/^8801[3-9]\d{8}$/.test(t)) return '+' + t;
+      // 01XXXXXXXXX (local with trunk 0)
+      if (/^01[3-9]\d{8}$/.test(t)) return '+880' + t;
+      // 1XXXXXXXXX (mobile without trunk 0)
+      if (/^1[3-9]\d{8}$/.test(t)) return '+880' + t;
+
       return null;
-    } catch (_) {
-      return null;
-    }
+    } catch (_) { return null; }
   }
 
   register(name, phone, email, password, confirmPassword) {
@@ -307,25 +289,6 @@ class YouthHealthLMS {
     }
 
     if (password !== confirmPassword) {
-
-            // Size optional decorative rings to match orbit radius
-            try {
-              const setRing = (ring, scale = 1) => {
-                const d = Math.max(0, r * 2 * scale);
-                ring.style.position = 'absolute';
-                ring.style.left = cx + 'px';
-                ring.style.top = cy + 'px';
-                ring.style.width = d + 'px';
-                ring.style.height = d + 'px';
-                ring.style.transform = 'translate(-50%, -50%)';
-                ring.style.borderRadius = '50%';
-                ring.style.pointerEvents = 'none';
-              };
-              const ring1 = wrap.querySelector('.orbit-ring-1');
-              const ring2 = wrap.querySelector('.orbit-ring-2');
-              if (ring1) setRing(ring1, 1);
-              if (ring2) setRing(ring2, 1.12);
-            } catch (_) { /* ring sizing optional */ }
       return { success: false, error: "Passwords do not match" };
     }
 
@@ -3335,6 +3298,9 @@ class YouthHealthLMS {
                   <i class="fa-solid fa-arrow-left-long"></i>
                   Back to dashboard
                 </button>
+                <button class="btn btn-primary d-none d-lg-block" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
+                  <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+                </button>
                 <div class="lesson-hero__progress">
                   <div
                     class="lesson-progress"
@@ -3371,12 +3337,7 @@ class YouthHealthLMS {
                 </div>
               </div>
               ${mobileBrowseBtn}
-              <div class="d-none d-lg-block mb-1">
-                <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
-                  <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
-                </button>
-              </div>
-              <div class="row align-items-start g-4"></div>
+                
             </div>
           </header>
 
@@ -3508,13 +3469,15 @@ class YouthHealthLMS {
         <header class="lesson-hero">
           <div class="container">
             <div class="lesson-hero__top">
-              <button class="lesson-back" onclick="app.navigateTo('dashboard')">
-                <i class="fa-solid fa-arrow-left-long"></i>
-                Back to dashboard
-              </button>
-              <button class="d-none d-lg-block btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
-                <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
-              </button>
+              <div class="lesson_buttons"> 
+                 <button class="lesson-back" onclick="app.navigateTo('dashboard')">
+                  <i class="fa-solid fa-arrow-left-long"></i>
+                  Back to dashboard
+                 </button>
+                <button class="d-none d-lg-block btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
+                  <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+                </button>
+              </div>
               <div class="lesson-hero__counts">
                 <span class="lesson-pill">Lesson ${
                   activeIndex + 1
@@ -3631,8 +3594,12 @@ class YouthHealthLMS {
                     }
                     <p class="lesson-quiz-text">
                       Test your understanding and unlock the next milestone.
-                      This quiz has <strong>${currentLesson.quiz.questions.length}</strong> questions.
-                      Score at least <strong>${currentLesson.quiz.passingScore}%</strong> to mark this lesson as complete. You can retake it — your best score will be saved.
+                      This quiz has <strong>${
+                        currentLesson.quiz.questions.length
+                      }</strong> questions.
+                      Score at least <strong>${
+                        currentLesson.quiz.passingScore
+                      }%</strong> to mark this lesson as complete. You can retake it — your best score will be saved.
                     </p>
                     <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
                       ${lessonCompleted ? "Retake quiz" : "Start quiz"}
@@ -3673,25 +3640,38 @@ class YouthHealthLMS {
           </div>
           <div class="offcanvas-body">
             <div class="list-group">
-            ${courseFlat.lessons.map((ls, li) => {
-              const isDone = completedIds.has(ls.id);
-              const isCurrent = li === activeIndex;
-              const icon = isDone ? 'fa-check' : 'fa-book-open';
-              let estMin = 1;
-              try {
-                const text = String(ls.content || '').replace(/<[^>]+>/g, ' ');
-                const words = (text.match(/\S+/g) || []).length;
-                estMin = Math.max(1, Math.round(words / 200));
-              } catch (_) {}
-              return `
+            ${courseFlat.lessons
+              .map((ls, li) => {
+                const isDone = completedIds.has(ls.id);
+                const isCurrent = li === activeIndex;
+                const icon = isDone ? "fa-check" : "fa-book-open";
+                let estMin = 1;
+                try {
+                  const text = String(ls.content || "").replace(
+                    /<[^>]+>/g,
+                    " "
+                  );
+                  const words = (text.match(/\S+/g) || []).length;
+                  estMin = Math.max(1, Math.round(words / 200));
+                } catch (_) {}
+                return `
                 <button type="button" class="list-group-item list-group-item-action d-flex align-items-center" onclick="app.changeLesson(${li})" data-bs-dismiss="offcanvas">
                   <i class="fa-solid ${icon} me-2"></i>
                   <span class="flex-grow-1">${ls.title}</span>
                   <span class="badge bg-light text-dark border me-2">${estMin} min</span>
-                  ${isCurrent ? '<span class="badge bg-info text-dark me-2">Current</span>' : ''}
-                  ${isDone ? '<span class=\"ring ring--done\" title=\"Completed\" aria-label=\"Completed\"><span class=\"ring__inner\"><i class=\"fa-solid fa-check\"></i></span></span>' : ''}
+                  ${
+                    isCurrent
+                      ? '<span class="badge bg-info text-dark me-2">Current</span>'
+                      : ""
+                  }
+                  ${
+                    isDone
+                      ? '<span class="ring ring--done" title="Completed" aria-label="Completed"><span class="ring__inner"><i class="fa-solid fa-check"></i></span></span>'
+                      : ""
+                  }
                 </button>`;
-            }).join('')}
+              })
+              .join("")}
             </div>
           </div>
         </div>
