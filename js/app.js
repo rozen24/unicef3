@@ -3228,7 +3228,7 @@ class YouthHealthLMS {
       const mobileOffcanvas = `
         <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileLessonBrowser" aria-labelledby="mobileLessonBrowserLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="mobileLessonBrowserLabel">Modules & lessons</h5>
+            <h5 class="offcanvas-title btn btn-gradient-glow hover-lift-sm focus-visible-ring transition-base btn-lg" id="mobileLessonBrowserLabel">All modules & lessons</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
@@ -3236,7 +3236,7 @@ class YouthHealthLMS {
               const lessons = ch.lessons || [];
               return `
                 <div class="mb-3 accordion-item">
-                  <div class="module-header accordion-button fw-semibold"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2"></i>${ch.title}</div>
+                  <div class="module-header accordion-button fw-semibold"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2 shadow-lg"></i>${ch.title}</div>
                   <div class="list-group">
                     ${lessons.map((ls, li) => {
                       const prevId = lessons[Math.max(0, li - 1)]?.id;
@@ -3523,9 +3523,9 @@ class YouthHealthLMS {
                 <i class="fa-solid fa-list me-2"></i>Browse lessons
               </button>
             </div>
-            <div class="d-none d-lg-block mt-3">
+            <div class="d-none d-lg-block">
               <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
-                <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+                <i class="fa-solid fa-list me-2></i>Browse modules & lessons
               </button>
             </div>
             <div class="lesson-hero__progress">
