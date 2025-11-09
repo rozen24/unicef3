@@ -8582,6 +8582,7 @@ dashboard-titled-title {
 }
 p.lead {
   color: #fff;
+  font-size: 24px;
 }
 .strong {
   color: var(--blue-gradient) !important;
@@ -8804,8 +8805,9 @@ p.lead {
 .globe-text-wrap {
     position: absolute;
     z-index: 111;
-    top: 39%;
-    left: 27%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .world-youth-map {
   position: relative;

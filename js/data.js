@@ -618,13 +618,13 @@ const coursesData = [
               <h2 class="slide-title gradient-text" data-aos="fade-up">Global Youth Population and Demographics</h2>
 
               <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
-              <section class="text-center py-5 mb-4" data-aos="fade-up" style="position:relative; overflow:hidden;">
+              <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
                 <div class="container" style="position: relative">
-                  <img src="img/Distribution/globe.jpg" class="img-fluid mx-auto d-block mb-3 rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
+                  <img src="img/Distribution/globe.jpg" class="img-fluid mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
                   <div class="globe-text-wrap">
                     <h3 class="fw-bold display-5" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
                     <p class="lead mt-2 text-dark">The world counts <strong>1.8 billion</strong> young people aged 10–24.</p>
-                    <p class="mb-0 text-dark">Around <strong>90%</strong> live in developing countries.</p>
+                    <p class="mb-0 text-dark lead">Around <strong>90%</strong> live in developing countries.</p>
                   </div>
                 </div>
               </section>

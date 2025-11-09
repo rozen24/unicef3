@@ -3512,6 +3512,9 @@ class YouthHealthLMS {
                 <i class="fa-solid fa-arrow-left-long"></i>
                 Back to dashboard
               </button>
+              <button class="d-none d-lg-block btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
+                <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+              </button>
               <div class="lesson-hero__counts">
                 <span class="lesson-pill">Lesson ${
                   activeIndex + 1
@@ -3523,11 +3526,7 @@ class YouthHealthLMS {
                 <i class="fa-solid fa-list me-2"></i>Browse lessons
               </button>
             </div>
-            <div class="d-none d-lg-block">
-              <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
-                <i class="fa-solid fa-list me-2></i>Browse modules & lessons
-              </button>
-            </div>
+            
             <div class="lesson-hero__progress">
               <div
                 class="lesson-progress"
