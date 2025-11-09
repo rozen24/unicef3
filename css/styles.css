@@ -4668,15 +4668,16 @@ input::placeholder {
 }
 
 .lesson-slide::before, .lesson-slide::after {
-    content: "";
-    position: absolute;
-    border-radius: 999px;
-    pointer-events: none;
-    z-index: 999999999;
-    opacity: 1;
-    background: radial-gradient(circle at 30% 30%, rgba(59,130,246,0.45), rgba(59,130,246,0));
-    filter: blur(0.5px);
-    animation: orbGlide 5000s ease-in-out infinite;
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 999999999;
+  opacity: 0.6;
+  background: radial-gradient(circle at 30% 30%, rgba(59,130,246,0.35), rgba(59,130,246,0));
+  filter: blur(8px) saturate(1.1);
+  transform: translate3d(0,0,0);
+  animation: floatDrift 28s ease-in-out infinite alternate, glowPulse 7s ease-in-out infinite;
 }
 
 .lesson-slide::before {
@@ -4691,9 +4692,33 @@ input::placeholder {
   height: 260px;
   bottom: -110px;
   right: -150px;
-  animation-duration: 22s;
-  animation-delay: -6s;
-  background: radial-gradient(circle at 70% 70%, rgba(16,185,129,0.42), rgba(16,185,129,0));
+  /* Staggered timing for a parallax feel */
+  animation: floatDriftAlt 32s ease-in-out infinite alternate, glowPulse 8s ease-in-out infinite;
+  animation-delay: -6s, -1s;
+  background: radial-gradient(circle at 70% 70%, rgba(16,185,129,0.32), rgba(16,185,129,0));
+}
+
+/* New animations for LMS lesson slide ambient orbs */
+@keyframes floatDrift {
+  0%   { transform: translate3d(-8%, -6%, 0) scale(0.92) rotate(0deg); opacity: 0.45; }
+  25%  { transform: translate3d(2%, -2%, 0)  scale(0.98) rotate(2deg);  opacity: 0.55; }
+  50%  { transform: translate3d(6%, 4%, 0)   scale(1.03) rotate(4deg);  opacity: 0.65; }
+  75%  { transform: translate3d(-3%, 7%, 0)  scale(1.00) rotate(2deg);  opacity: 0.58; }
+  100% { transform: translate3d(-10%, -4%, 0) scale(0.95) rotate(0deg);  opacity: 0.45; }
+}
+
+@keyframes floatDriftAlt {
+  0%   { transform: translate3d(6%, -5%, 0)  scale(0.90) rotate(0deg); }
+  20%  { transform: translate3d(10%, 2%, 0)  scale(0.97) rotate(-2deg); }
+  50%  { transform: translate3d(-4%, 8%, 0)  scale(1.05) rotate(-4deg); }
+  80%  { transform: translate3d(-9%, -3%, 0) scale(1.00) rotate(-2deg); }
+  100% { transform: translate3d(6%, -5%, 0)  scale(0.90) rotate(0deg); }
+}
+
+@keyframes glowPulse {
+  0%   { filter: blur(8px) saturate(1.05); }
+  50%  { filter: blur(12px) saturate(1.25); }
+  100% { filter: blur(8px) saturate(1.05); }
 }
 
 .lesson-slide .slide-title.gradient-text {

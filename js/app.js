@@ -746,6 +746,26 @@ class YouthHealthLMS {
         obs.observe(counterEl);
       }
 
+      // Animate chapter progress percent from 0 to target once per render
+      const chapterEl = document.getElementById('chapterProgressValue');
+      if (chapterEl && !chapterEl.dataset.animated) {
+        const target = Math.max(0, Math.min(100, parseInt(chapterEl.getAttribute('data-target') || '0', 10)));
+        let startTs = null;
+        const duration = 900; // ms
+        const tick = (ts) => {
+          if (!startTs) startTs = ts;
+          const t = Math.min(1, (ts - startTs) / duration);
+          // easeOutCubic
+          const eased = 1 - Math.pow(1 - t, 3);
+          const val = Math.round(eased * target);
+          chapterEl.textContent = String(val);
+          if (t < 1) requestAnimationFrame(tick); else chapterEl.dataset.animated = 'true';
+        };
+        // Ensure initial 0 visible
+        chapterEl.textContent = '0';
+        requestAnimationFrame(tick);
+      }
+
       // Initialize Chart.js population pyramid if canvas exists
       const pyramidCanvas = document.getElementById("populationPyramid");
       if (pyramidCanvas && !pyramidCanvas.dataset.chartInitialized && window.Chart) {
@@ -3323,7 +3343,7 @@ class YouthHealthLMS {
                     totalLessons > 0
                       ? `<div class="lesson-progress__caption">Module ${
                           chIndex + 1
-                        } progress: ${chapterProgressDisplay}%</div>`
+                        } progress: <span id="chapterProgressValue" data-target="${chapterProgressDisplay}">0</span>%</div>`
                       : ""
                   }
                 </div>
