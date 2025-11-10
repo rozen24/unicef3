@@ -1806,6 +1806,32 @@ img {
 
 
 
+/* ==================== ACCESSIBILITY: REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable smooth scrolling and all animations/transitions */
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Turn off major decorative animations explicitly */
+  .hero-section { animation: none !important; }
+  .glow-title, .glow-title-float { animation: none !important; }
+  .btn-gradient-glow::after { animation: none !important; }
+  .animate-float, .floating-bg, .float-elem { animation: none !important; }
+  .modules-list .lesson-chip { animation: none !important; }
+  .orbit-card, .orbit-ring { animation: none !important; }
+  .recs-ambient .ambient-shapes .shape { animation: none !important; }
+  .lesson-slide::before, .lesson-slide::after { animation: none !important; }
+
+  /* Ensure AOS/scroll-reveal content is static and visible */
+  [data-aos] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
     /* ===== Responsive ===== */
     @media (max-width: 600px) {
       .orbit-center .orbit-card {
