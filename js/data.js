@@ -817,7 +817,7 @@ const coursesData = [
 
                 <!-- Key Global Insights -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="40">
-                  <h5 class="gradient-text mb-3">Key global insights</h5>
+                  <h5 class="gradient-text mb-2">Key global insights</h5>
                   <div class="row g-3">
                     ${[
                       {
@@ -872,8 +872,8 @@ const coursesData = [
 
                 <!-- Top 5 Leading Causes of Death -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="80">
-                  <h5 class="gradient-text my-3">Top 5 leading causes of death among adolescents are</h5>
-                  <div id="topCausesControls" class="d-flex gap-2 my-3">
+                  <h5 class="gradient-text mb-2">Top 5 leading causes of death among adolescents are</h5>
+                  <div id="topCausesControls" class="d-flex gap-2 my-2">
                     <button class="btn btn-outline-primary btn-sm active" id="topCausesToggleChart"><i class="fa-solid fa-chart-bar me-1"></i> Chart</button>
                     <button class="btn btn-outline-primary btn-sm" id="topCausesToggleCards"><i class="fa-solid fa-grip me-1"></i> Cards</button>
                   </div>
@@ -958,227 +958,227 @@ const coursesData = [
               ],
             },
             content: (function () {
-                return `
-                <div class="lesson-slide">
+              return `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Bangladesh scenario of mortality and morbidity among young people</h2>
 
                 <!-- Sex-disaggregated Top 5 Causes (UNICEF Adolescent Data Portal 2019) -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="60">
-                  <h5 class="gradient-text mb-3">According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:
+                  <h5 class="gradient-text mb-2">According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:
                   </h5>
                   <div class="row g-3">
-                  <div class="col-lg-6">
-                    <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="100">
-                    <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">Males</span></h6>
-                    <ul class="list-unstyled d-grid gap-2 mb-0">
-                      ${[
-                      {
-                        label: "Road accidents",
-                        icon: "fa-car-burst",
-                        color: "bg-gradient-orange",
-                      },
-                      {
-                        label: "Diarrhea",
-                        icon: "fa-bacteria",
-                        color: "bg-gradient-blue",
-                      },
-                      {
-                        label: "Drowning",
-                        icon: "fa-water",
-                        color: "bg-gradient-teal",
-                      },
-                      {
-                        label: "Tuberculosis",
-                        icon: "fa-lungs",
-                        color: "bg-gradient-purple",
-                      },
-                      {
-                        label: "Suicide",
-                        icon: "fa-heart-crack",
-                        color: "bg-gradient-pink",
-                      },
-                      ]
-                      .map(
-                        (item, i) => `
-                      <li class="d-flex align-items-center gap-2 icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${
-                        140 + i * 40
-                      }">
-                        <span class="${
-                        item.color
-                        }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff"><i class="fa-solid ${
-                        item.icon
-                        }"></i></span>
-                        <span>${item.label}</span>
-                      </li>
-                      `
-                      )
-                      .join("")}
-                    </ul>
+                    <div class="col-lg-6">
+                      <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">Males</span></h6>
+                        <ul class="list-unstyled d-grid gap-2 mb-0">
+                          ${[
+                            {
+                              label: "Road accidents",
+                              icon: "fa-car-burst",
+                              color: "bg-gradient-orange",
+                            },
+                            {
+                              label: "Diarrhea",
+                              icon: "fa-bacteria",
+                              color: "bg-gradient-blue",
+                            },
+                            {
+                              label: "Drowning",
+                              icon: "fa-water",
+                              color: "bg-gradient-teal",
+                            },
+                            {
+                              label: "Tuberculosis",
+                              icon: "fa-lungs",
+                              color: "bg-gradient-purple",
+                            },
+                            {
+                              label: "Suicide",
+                              icon: "fa-heart-crack",
+                              color: "bg-gradient-pink",
+                            },
+                          ]
+                            .map(
+                              (item, i) => `
+                            <li class="d-flex align-items-center gap-2 icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${
+                              140 + i * 40
+                            }">
+                              <span class="${
+                                item.color
+                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff"><i class="fa-solid ${
+                                item.icon
+                              }"></i></span>
+                              <span>${item.label}</span>
+                            </li>
+                          `
+                            )
+                            .join("")}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="120">
-                    <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">Females</span></h6>
-                    <ul class="list-unstyled d-grid gap-2 mb-0">
-                      ${[
-                      {
-                        label: "Diarrhea",
-                        icon: "fa-bacteria",
-                        color: "bg-gradient-blue",
-                      },
-                      {
-                        label: "Tuberculosis",
-                        icon: "fa-lungs",
-                        color: "bg-gradient-purple",
-                      },
-                      {
-                        label: "Road accidents",
-                        icon: "fa-car-burst",
-                        color: "bg-gradient-orange",
-                      },
-                      {
-                        label: "Maternal mortality",
-                        icon: "fa-person-pregnant",
-                        color: "bg-gradient-pink",
-                      },
-                      {
-                        label: "Lower respiratory tract infections",
-                        icon: "fa-lungs",
-                        color: "bg-gradient-green",
-                      },
-                      ]
-                      .map(
-                        (item, i) => `
-                      <li class="d-flex align-items-center gap-2 icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${
-                        160 + i * 40
-                      }">
-                        <span class="${
-                        item.color
-                        }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff"><i class="fa-solid ${
-                        item.icon
-                        }"></i></span>
-                        <span>${item.label}</span>
-                      </li>
-                      `
-                      )
-                      .join("")}
-                    </ul>
+                    <div class="col-lg-6">
+                      <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="120">
+                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">Females</span></h6>
+                        <ul class="list-unstyled d-grid gap-2 mb-0">
+                          ${[
+                            {
+                              label: "Diarrhea",
+                              icon: "fa-bacteria",
+                              color: "bg-gradient-blue",
+                            },
+                            {
+                              label: "Tuberculosis",
+                              icon: "fa-lungs",
+                              color: "bg-gradient-purple",
+                            },
+                            {
+                              label: "Road accidents",
+                              icon: "fa-car-burst",
+                              color: "bg-gradient-orange",
+                            },
+                            {
+                              label: "Maternal mortality",
+                              icon: "fa-person-pregnant",
+                              color: "bg-gradient-pink",
+                            },
+                            {
+                              label: "Lower respiratory tract infections",
+                              icon: "fa-lungs",
+                              color: "bg-gradient-green",
+                            },
+                          ]
+                            .map(
+                              (item, i) => `
+                            <li class="d-flex align-items-center gap-2 icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${
+                              160 + i * 40
+                            }">
+                              <span class="${
+                                item.color
+                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff"><i class="fa-solid ${
+                                item.icon
+                              }"></i></span>
+                              <span>${item.label}</span>
+                            </li>
+                          `
+                            )
+                            .join("")}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
                   </div>
                 </section>
 
                 <!-- Doughnut charts: Adolescents vs Young adults -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="80">
-                  <h5 class="gradient-text my-4">Adolescent and young adult mortality in Bangladesh</h5>
+                  <h5 class="gradient-text mb-2">Adolescent and young adult mortality in Bangladesh</h5>
                   <div class="row g-3 align-items-stretch">
-                  <div class="col-md-6">
-                    <div class="modern-card glass-card h-100">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                      <span class="badge-pill">Adolescents (10–19)</span>
+                    <div class="col-md-6">
+                      <div class="modern-card glass-card h-100">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                          <span class="badge-pill">Adolescents (10–19)</span>
+                        </div>
+                        <div style="position:relative; height:320px;">
+                          <canvas id="bdMortalityAdolescents" aria-label="Adolescent mortality distribution (relative)" role="img"></canvas>
+                        </div>
+                      </div>
                     </div>
-                    <div style="position:relative; height:320px;">
-                      <canvas id="bdMortalityAdolescents" aria-label="Adolescent mortality distribution (relative)" role="img"></canvas>
+                    <div class="col-md-6">
+                      <div class="modern-card glass-card h-100">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                          <span class="badge-pill">Young adults (20–24)</span>
+                        </div>
+                        <div style="position:relative; height:320px;">
+                          <canvas id="bdMortalityYoungAdults" aria-label="Young adult mortality distribution (relative)" role="img"></canvas>
+                        </div>
+                      </div>
                     </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="modern-card glass-card h-100">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                      <span class="badge-pill">Young adults (20–24)</span>
-                    </div>
-                    <div style="position:relative; height:320px;">
-                      <canvas id="bdMortalityYoungAdults" aria-label="Young adult mortality distribution (relative)" role="img"></canvas>
-                    </div>
-                    </div>
-                  </div>
                   </div>
                   <!-- <div class="small text-muted mt-2">Note: Chart shows relative emphasis for categories; update with official proportions when available.</div> -->
 
                   <!-- Legend with icons -->
                   <div class="d-flex flex-wrap gap-2 mt-2 d-none">
-                  ${[
-                    {
-                    label: "Heart disease",
-                    icon: "fa-heart",
-                    color: "bg-gradient-pink",
-                    },
-                    {
-                    label: "Stroke",
-                    icon: "fa-brain",
-                    color: "bg-gradient-purple",
-                    },
-                    {
-                    label: "Respiratory",
-                    icon: "fa-lungs",
-                    color: "bg-gradient-blue",
-                    },
-                    {
-                    label: "Infection",
-                    icon: "fa-virus",
-                    color: "bg-gradient-green",
-                    },
-                    {
-                    label: "Cancer",
-                    icon: "fa-ribbon",
-                    color: "bg-gradient-orange",
-                    },
-                    {
-                    label: "Obstetric",
-                    icon: "fa-person-pregnant",
-                    color: "bg-gradient-pink",
-                    },
-                    {
-                    label: "Road traffic",
-                    icon: "fa-car-burst",
-                    color: "bg-gradient-tangerine",
-                    },
-                    {
-                    label: "Drowning & accidents",
-                    icon: "fa-water",
-                    color: "bg-gradient-teal",
-                    },
-                    {
-                    label: "Other",
-                    icon: "fa-circle-dot",
-                    color: "bg-gradient-blue",
-                    },
-                  ]
-                    .map(
-                    (l) => `
-                    <span class="badge-pill" title="${l.label}"><i class="fa-solid ${l.icon} me-1"></i>${l.label}</span>
-                  `
-                    )
-                    .join("")}
+                    ${[
+                      {
+                        label: "Heart disease",
+                        icon: "fa-heart",
+                        color: "bg-gradient-pink",
+                      },
+                      {
+                        label: "Stroke",
+                        icon: "fa-brain",
+                        color: "bg-gradient-purple",
+                      },
+                      {
+                        label: "Respiratory",
+                        icon: "fa-lungs",
+                        color: "bg-gradient-blue",
+                      },
+                      {
+                        label: "Infection",
+                        icon: "fa-virus",
+                        color: "bg-gradient-green",
+                      },
+                      {
+                        label: "Cancer",
+                        icon: "fa-ribbon",
+                        color: "bg-gradient-orange",
+                      },
+                      {
+                        label: "Obstetric",
+                        icon: "fa-person-pregnant",
+                        color: "bg-gradient-pink",
+                      },
+                      {
+                        label: "Road traffic",
+                        icon: "fa-car-burst",
+                        color: "bg-gradient-tangerine",
+                      },
+                      {
+                        label: "Drowning & accidents",
+                        icon: "fa-water",
+                        color: "bg-gradient-teal",
+                      },
+                      {
+                        label: "Other",
+                        icon: "fa-circle-dot",
+                        color: "bg-gradient-blue",
+                      },
+                    ]
+                      .map(
+                        (l) => `
+                      <span class="badge-pill" title="${l.label}"><i class="fa-solid ${l.icon} me-1"></i>${l.label}</span>
+                    `
+                      )
+                      .join("")}
                   </div>
                 </section>
-                </div>`;
-              })(),
-              },
-              {
-              id: "ch2-lesson-5",
-              title: "Child marriage and teenage pregnancies",
-              icon: "fa-child-reaching",
-              gradientClass: "bg-gradient-orange",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`;
+            })(),
+          },
+          {
+            id: "ch2-lesson-5",
+            title: "Child marriage and teenage pregnancies",
+            icon: "fa-child-reaching",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2d",
                   question: "Ending child marriage helps protect…",
                   options: [
-                  "Education and health",
-                  "Only sports",
-                  "Only economy",
-                  "None",
+                    "Education and health",
+                    "Only sports",
+                    "Only economy",
+                    "None",
                   ],
                   correctAnswer: 0,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Child marriage and teenage pregnancies</h2>
 
                 <!-- Special info badge -->
@@ -1191,76 +1191,76 @@ const coursesData = [
                 <section class="mb-4" aria-labelledby="cm-figure4-title">
                   <h3 class="gradient-text py-2" id="cm-figure4-title" data-aos="fade-up" data-aos-delay="80">Percentage of women (20–24) first married/union before age 18</h3>
                   <div class="row g-3 align-items-stretch">
-                  <div class="col-lg-12" data-aos="fade-right" data-aos-delay="100">
-                    <article class="modern-card" style="height:500px">
-                    <canvas id="cmFigure4Chart" aria-label="Child marriage before 18: Bangladesh vs South Asia vs World" role="img"></canvas>
-                    </article>
-                  </div>
-                  <div class="col-lg-12" data-aos="fade-left" data-aos-delay="120">
-                    <article class="modern-card h-100 d-flex flex-column">
-                    <div class="d-flex flex-wrap gap-2">
-                      ${[
-                      {
-                        label: "Bangladesh",
-                        icon: "fa-flag",
-                        color: "bg-gradient-pink",
-                      },
-                      {
-                        label: "Nepal",
-                        icon: "fa-mountain",
-                        color: "bg-gradient-orange",
-                      },
-                      {
-                        label: "Afghanistan",
-                        icon: "fa-earth-asia",
-                        color: "bg-gradient-violet",
-                      },
-                      {
-                        label: "India",
-                        icon: "fa-landmark",
-                        color: "bg-gradient-blue",
-                      },
-                      {
-                        label: "Bhutan",
-                        icon: "fa-hill-rockslide",
-                        color: "bg-gradient-teal",
-                      },
-                      {
-                        label: "Pakistan",
-                        icon: "fa-mosque",
-                        color: "bg-gradient-tangerine",
-                      },
-                      {
-                        label: "Sri Lanka",
-                        icon: "fa-umbrella-beach",
-                        color: "bg-gradient-emerald",
-                      },
-                      {
-                        label: "Maldives",
-                        icon: "fa-water",
-                        color: "bg-gradient-emerald",
-                      },
-                      {
-                        label: "South Asia (region)",
-                        icon: "fa-globe-asia",
-                        color: "bg-gradient-purple",
-                      },
-                      {
-                        label: "World",
-                        icon: "fa-earth-americas",
-                        color: "bg-gradient-green",
-                      },
-                      ]
-                      .map(
-                        (c) => `
-                      <span class="d-none badge-pill ${c.color}" title="${c.label}"><i class="fa-solid ${c.icon} me-1"></i>${c.label}</span>
-                      `
-                      )
-                      .join("")}
+                    <div class="col-lg-12" data-aos="fade-right" data-aos-delay="100">
+                      <article class="modern-card" style="height:500px">
+                        <canvas id="cmFigure4Chart" aria-label="Child marriage before 18: Bangladesh vs South Asia vs World" role="img"></canvas>
+                      </article>
                     </div>
-                    <p class="small text-muted mt-3 mb-0">Note: Chart shows available values for Bangladesh (51%), South Asia (29%) and World (20%). Country-level values for other South Asian nations can be added when verified.</p>
-                    </article>
-                  </div>
+                    <div class="col-lg-12" data-aos="fade-left" data-aos-delay="120">
+                      <article class="modern-card h-100 d-flex flex-column">
+                        <div class="d-flex flex-wrap gap-2">
+                          ${[
+                            {
+                              label: "Bangladesh",
+                              icon: "fa-flag",
+                              color: "bg-gradient-pink",
+                            },
+                            {
+                              label: "Nepal",
+                              icon: "fa-mountain",
+                              color: "bg-gradient-orange",
+                            },
+                            {
+                              label: "Afghanistan",
+                              icon: "fa-earth-asia",
+                              color: "bg-gradient-violet",
+                            },
+                            {
+                              label: "India",
+                              icon: "fa-landmark",
+                              color: "bg-gradient-blue",
+                            },
+                            {
+                              label: "Bhutan",
+                              icon: "fa-hill-rockslide",
+                              color: "bg-gradient-teal",
+                            },
+                            {
+                              label: "Pakistan",
+                              icon: "fa-mosque",
+                              color: "bg-gradient-tangerine",
+                            },
+                            {
+                              label: "Sri Lanka",
+                              icon: "fa-umbrella-beach",
+                              color: "bg-gradient-emerald",
+                            },
+                            {
+                              label: "Maldives",
+                              icon: "fa-water",
+                              color: "bg-gradient-emerald",
+                            },
+                            {
+                              label: "South Asia (region)",
+                              icon: "fa-globe-asia",
+                              color: "bg-gradient-purple",
+                            },
+                            {
+                              label: "World",
+                              icon: "fa-earth-americas",
+                              color: "bg-gradient-green",
+                            },
+                          ]
+                            .map(
+                              (c) => `
+                            <span class="d-none badge-pill ${c.color}" title="${c.label}"><i class="fa-solid ${c.icon} me-1"></i>${c.label}</span>
+                          `
+                            )
+                            .join("")}
+                        </div>
+                        <p class="small text-muted mt-3 mb-0">Note: Chart shows available values for Bangladesh (51%), South Asia (29%) and World (20%). Country-level values for other South Asian nations can be added when verified.</p>
+                      </article>
+                    </div>
                   </div>
                 </section>
 
@@ -1269,95 +1269,95 @@ const coursesData = [
                   <h3 class="d-none gradient-text mb-1" id="cm-keyfacts-title" data-aos="fade-up" data-aos-delay="140">KEY FACTS</h3>
                   <p class="d-none text-muted mb-3" data-aos="fade-up" data-aos-delay="160">About child marriage in Bangladesh</p>
                   <div class="row g-3">
-                  <div class="key-img py-2" style="border-radius: 20px;" data-aos="zoom-in" data-aos-delay="180">
-                    <img src="img/Child-marraige/child-marriage-bangladesh.png" alt="Key Facts" class="img-fluid rounded-4 img-zoom" />
-                  </div>
-                  <div class="key-img py-2" style="border-radius: 20px;" data-aos="zoom-in" data-aos-delay="180">
-                    <img src="img/Child-marraige/childbearing.jpg" alt="Key Facts" class="img-fluid rounded-4 img-zoom" />
-                  </div>
-                  <!--
-                  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="180">
-                    <div class="fact-card alert-info hover-lift-sm transition-base">
-                    <i class="fas fa-children" aria-hidden="true"></i>
-                    <p class="mb-0"><strong>38 million</strong> child brides live in Bangladesh; <strong>13 million</strong> married before age 15.</p>
+                    <div class="key-img py-2" style="border-radius: 20px;" data-aos="zoom-in" data-aos-delay="180">
+                      <img src="img/Child-marraige/child-marriage-bangladesh.png" alt="Key Facts" class="img-fluid rounded-4 img-zoom" />
                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="fact-card alert-primary hover-lift-sm transition-base">
-                    <i class="fas fa-percent" aria-hidden="true"></i>
-                    <p class="mb-0"><strong>51%</strong> of young women were married before their 18th birthday.</p>
+                    <div class="key-img py-2" style="border-radius: 20px;" data-aos="zoom-in" data-aos-delay="180">
+                      <img src="img/Child-marraige/childbearing.jpg" alt="Key Facts" class="img-fluid rounded-4 img-zoom" />
                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="220">
-                    <div class="fact-card alert-warning hover-lift-sm transition-base">
-                    <i class="fas fa-ranking-star" aria-hidden="true"></i>
-                    <p class="mb-0">Bangladesh ranks among the <strong>top 10</strong> countries globally for child marriage.</p>
+                    <!--
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="180">
+                      <div class="fact-card alert-info hover-lift-sm transition-base">
+                        <i class="fas fa-children" aria-hidden="true"></i>
+                        <p class="mb-0"><strong>38 million</strong> child brides live in Bangladesh; <strong>13 million</strong> married before age 15.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="240">
-                    <div class="fact-card alert-secondary hover-lift-sm transition-base">
-                    <i class="fas fa-school" aria-hidden="true"></i>
-                    <p class="mb-0">Risk factors include rural residence, poverty, and lower than secondary education.</p>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="fact-card alert-primary hover-lift-sm transition-base">
+                        <i class="fas fa-percent" aria-hidden="true"></i>
+                        <p class="mb-0"><strong>51%</strong> of young women were married before their 18th birthday.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="260">
-                    <div class="fact-card alert-danger hover-lift-sm transition-base">
-                    <i class="fas fa-user-graduate" aria-hidden="true"></i>
-                    <p class="mb-0">Married girls are <strong>4×</strong> more likely to be out of school than unmarried girls.</p>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="220">
+                      <div class="fact-card alert-warning hover-lift-sm transition-base">
+                        <i class="fas fa-ranking-star" aria-hidden="true"></i>
+                        <p class="mb-0">Bangladesh ranks among the <strong>top 10</strong> countries globally for child marriage.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="280">
-                    <div class="fact-card alert-success hover-lift-sm transition-base">
-                    <i class="fas fa-baby" aria-hidden="true"></i>
-                    <p class="mb-0">Nearly <strong>5 in 10</strong> child brides gave birth before 18; <strong>8 in 10</strong> before 20.</p>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="240">
+                      <div class="fact-card alert-secondary hover-lift-sm transition-base">
+                        <i class="fas fa-school" aria-hidden="true"></i>
+                        <p class="mb-0">Risk factors include rural residence, poverty, and lower than secondary education.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="fact-card alert-success hover-lift-sm transition-base">
-                    <i class="fas fa-arrow-trend-down" aria-hidden="true"></i>
-                    <p class="mb-0">Child marriage is less common today than in previous generations.</p>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="260">
+                      <div class="fact-card alert-danger hover-lift-sm transition-base">
+                        <i class="fas fa-user-graduate" aria-hidden="true"></i>
+                        <p class="mb-0">Married girls are <strong>4×</strong> more likely to be out of school than unmarried girls.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="320">
-                    <div class="fact-card alert-secondary hover-lift-sm transition-base">
-                    <i class="fas fa-chart-line" aria-hidden="true"></i>
-                    <p class="mb-0">Declines seen across wealth groups, with faster progress among the richest.</p>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="280">
+                      <div class="fact-card alert-success hover-lift-sm transition-base">
+                        <i class="fas fa-baby" aria-hidden="true"></i>
+                        <p class="mb-0">Nearly <strong>5 in 10</strong> child brides gave birth before 18; <strong>8 in 10</strong> before 20.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="340">
-                    <div class="fact-card alert-primary hover-lift-sm transition-base">
-                    <i class="fas fa-bullseye" aria-hidden="true"></i>
-                    <p class="mb-0">To meet national (2041) and SDG (2030) targets, progress must accelerate by <strong>8×</strong> and <strong>17×</strong>, respectively.</p>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="fact-card alert-success hover-lift-sm transition-base">
+                        <i class="fas fa-arrow-trend-down" aria-hidden="true"></i>
+                        <p class="mb-0">Child marriage is less common today than in previous generations.</p>
+                      </div>
                     </div>
-                  </div> -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="320">
+                      <div class="fact-card alert-secondary hover-lift-sm transition-base">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <p class="mb-0">Declines seen across wealth groups, with faster progress among the richest.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="340">
+                      <div class="fact-card alert-primary hover-lift-sm transition-base">
+                        <i class="fas fa-bullseye" aria-hidden="true"></i>
+                        <p class="mb-0">To meet national (2041) and SDG (2030) targets, progress must accelerate by <strong>8×</strong> and <strong>17×</strong>, respectively.</p>
+                      </div>
+                    </div> -->
                   </div>
                 </section>
-                </div>`,
-              },
-              {
-              id: "ch2-lesson-6",
-              title: "Adolescent health related issues",
-              icon: "fa-circle-nodes",
-              gradientClass: "bg-gradient-cyan",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`,
+          },
+          {
+            id: "ch2-lesson-6",
+            title: "Adolescent health related issues",
+            icon: "fa-circle-nodes",
+            gradientClass: "bg-gradient-cyan",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2d-issues",
                   question: "Improving adolescent health requires…",
                   options: [
-                  "Single-sector approach",
-                  "Rights-based, multisectoral action",
-                  "Ignoring evidence",
-                  "Only services",
+                    "Single-sector approach",
+                    "Rights-based, multisectoral action",
+                    "Ignoring evidence",
+                    "Only services",
                   ],
                   correctAnswer: 1,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Adolescent health related issues</h2>
 
                 <!-- Special info -->
@@ -1368,128 +1368,128 @@ const coursesData = [
 
                 <!-- Issues infographic: 2x2 matrix cards with icons -->
                 <section class="issue-matrix" aria-labelledby="issue-matrix-title">
-                  <h3 id="issue-matrix-title" class="mb-3 gradient-text" data-aos="fade-up" data-aos-delay="80">Key domains</h3>
+                  <h3 id="issue-matrix-title" class="mb-2 gradient-text" data-aos="fade-up" data-aos-delay="80">Key domains</h3>
                   <div class="row g-3">
-                  <!-- Health -->
-                  <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <article class="issue-panel bg-gradient-emerald">
-                    <div class="issue-head">
-                      <div class="issue-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                      <h6 class="issue-title">Health</h6>
+                    <!-- Health -->
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                      <article class="issue-panel bg-gradient-emerald">
+                        <div class="issue-head">
+                          <div class="issue-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                          <h6 class="issue-title">Health</h6>
+                        </div>
+                        <ul class="stat-list">
+                          <li><span class="stat-chip"><span class="value">12.6</span><span class="unit">%</span></span> children and adolescents (7–17 years) suffer from diagnosable mental health condition</li>
+                          <li>
+                            NCD risk factors:
+                            <span class="stat-chip"><span class="value">14</span><span class="unit">%</span></span> one
+                            <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> two
+                            <span class="stat-chip"><span class="value">29</span><span class="unit">%</span></span> three
+                            <span class="stat-chip"><span class="value">34</span><span class="unit">%</span></span> four or more
+                          </li>
+                          <li>Substance use (12–17 years): <span class="stat-chip"><span class="value">1.5</span><span class="unit">%</span></span></li>
+                          <li>Road accidents: ~<span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> adolescent mortality; students > <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of fatalities</li>
+                          <li>Internet addiction (13–19 years): <span class="stat-chip"><span class="value">24.1</span><span class="unit">%</span></span></li>
+                        </ul>
+                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
+                      </article>
                     </div>
-                    <ul class="stat-list">
-                      <li><span class="stat-chip"><span class="value">12.6</span><span class="unit">%</span></span> children and adolescents (7–17 years) suffer from diagnosable mental health condition</li>
-                      <li>
-                      NCD risk factors:
-                      <span class="stat-chip"><span class="value">14</span><span class="unit">%</span></span> one
-                      <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> two
-                      <span class="stat-chip"><span class="value">29</span><span class="unit">%</span></span> three
-                      <span class="stat-chip"><span class="value">34</span><span class="unit">%</span></span> four or more
-                      </li>
-                      <li>Substance use (12–17 years): <span class="stat-chip"><span class="value">1.5</span><span class="unit">%</span></span></li>
-                      <li>Road accidents: ~<span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> adolescent mortality; students > <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of fatalities</li>
-                      <li>Internet addiction (13–19 years): <span class="stat-chip"><span class="value">24.1</span><span class="unit">%</span></span></li>
-                    </ul>
-                    <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
-                    </article>
-                  </div>
-                  <!-- Nutrition -->
-                  <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
-                    <article class="issue-panel bg-gradient-rose">
-                    <div class="issue-head">
-                      <div class="issue-icon"><i class="fa-solid fa-utensils"></i></div>
-                      <h6 class="issue-title">Nutrition</h6>
+                    <!-- Nutrition -->
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
+                      <article class="issue-panel bg-gradient-rose">
+                        <div class="issue-head">
+                          <div class="issue-icon"><i class="fa-solid fa-utensils"></i></div>
+                          <h6 class="issue-title">Nutrition</h6>
+                        </div>
+                        <ul class="stat-list">
+                          <li>Stunting: <span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> UM males</li>
+                          <li>Underweight: <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> UM males</li>
+                          <li>Overweight: <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> UM males</li>
+                          <li>Anemia: about <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> of adolescents</li>
+                        </ul>
+                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
+                      </article>
                     </div>
-                    <ul class="stat-list">
-                      <li>Stunting: <span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> UM males</li>
-                      <li>Underweight: <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> UM males</li>
-                      <li>Overweight: <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> UM males</li>
-                      <li>Anemia: about <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> of adolescents</li>
-                    </ul>
-                    <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
-                    </article>
-                  </div>
-                  <!-- Education -->
-                  <div class="col-md-6" data-aos="zoom-in" data-aos-delay="140">
-                    <article class="issue-panel bg-gradient-blue">
-                    <div class="issue-head">
-                      <div class="issue-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                      <h6 class="issue-title">Education</h6>
+                    <!-- Education -->
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="140">
+                      <article class="issue-panel bg-gradient-blue">
+                        <div class="issue-head">
+                          <div class="issue-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                          <h6 class="issue-title">Education</h6>
+                        </div>
+                        <ul class="stat-list">
+                          <li>GER (secondary): <span class="stat-chip"><span class="value">74.81</span><span class="unit">%</span></span></li>
+                          <li>NER (secondary): <span class="stat-chip"><span class="value">72.20</span><span class="unit">%</span></span></li>
+                          <li>Secondary completion rate: <span class="stat-chip"><span class="value">65.1</span><span class="unit">%</span></span></li>
+                          <li>Dropout rate: <span class="stat-chip"><span class="value">32.85</span><span class="unit">%</span></span></li>
+                        </ul>
+                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
+                      </article>
                     </div>
-                    <ul class="stat-list">
-                      <li>GER (secondary): <span class="stat-chip"><span class="value">74.81</span><span class="unit">%</span></span></li>
-                      <li>NER (secondary): <span class="stat-chip"><span class="value">72.20</span><span class="unit">%</span></span></li>
-                      <li>Secondary completion rate: <span class="stat-chip"><span class="value">65.1</span><span class="unit">%</span></span></li>
-                      <li>Dropout rate: <span class="stat-chip"><span class="value">32.85</span><span class="unit">%</span></span></li>
-                    </ul>
-                    <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
-                    </article>
-                  </div>
-                  <!-- Protection -->
-                  <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
-                    <article class="issue-panel bg-gradient-violet">
-                    <div class="issue-head">
-                      <div class="issue-icon"><i class="fa-solid fa-shield-heart"></i></div>
-                      <h6 class="issue-title">Protection</h6>
+                    <!-- Protection -->
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
+                      <article class="issue-panel bg-gradient-violet">
+                        <div class="issue-head">
+                          <div class="issue-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                          <h6 class="issue-title">Protection</h6>
+                        </div>
+                        <ul class="stat-list">
+                          <li><span class="stat-chip"><span class="value">1</span>/<span class="value">5</span></span> adolescent girls and women face physical or sexual violence</li>
+                          <li><span class="stat-chip"><span class="value">77</span><span class="unit">%</span></span> of married adolescent girls abused by their husbands</li>
+                          <li>~<span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents in child labor</li>
+                          <li>During monsoon, <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown; ~<span class="stat-chip"><span class="value">14,000</span></span> annually</li>
+                          <li>~<span class="stat-chip"><span class="value">89</span><span class="unit">%</span></span> children (~<span class="stat-chip"><span class="value">45</span><span class="unit">M</span></span>) experience violent discipline at home</li>
+                        </ul>
+                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
+                      </article>
                     </div>
-                    <ul class="stat-list">
-                      <li><span class="stat-chip"><span class="value">1</span>/<span class="value">5</span></span> adolescent girls and women face physical or sexual violence</li>
-                      <li><span class="stat-chip"><span class="value">77</span><span class="unit">%</span></span> of married adolescent girls abused by their husbands</li>
-                      <li>~<span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents in child labor</li>
-                      <li>During monsoon, <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown; ~<span class="stat-chip"><span class="value">14,000</span></span> annually</li>
-                      <li>~<span class="stat-chip"><span class="value">89</span><span class="unit">%</span></span> children (~<span class="stat-chip"><span class="value">45</span><span class="unit">M</span></span>) experience violent discipline at home</li>
-                    </ul>
-                    <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
-                    </article>
-                  </div>
                   </div>
                 </section>
-                </div>`,
-              },
-              {
-              id: "ch2-lesson-7",
-              title: "Determinants for adolescent health and well-being",
-              icon: "fa-triangle-exclamation",
-              gradientClass: "bg-gradient-pink",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`,
+          },
+          {
+            id: "ch2-lesson-7",
+            title: "Determinants for adolescent health and well-being",
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-pink",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2e",
                   question: "Determinants include…",
                   options: [
-                  "Only nutrition",
-                  "Multiple domains",
-                  "Only activity",
-                  "None",
+                    "Only nutrition",
+                    "Multiple domains",
+                    "Only activity",
+                    "None",
                   ],
                   correctAnswer: 1,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Determinants for adolescent health and well-being</h2>
 
                 <!-- AA-HA! guidance section with distinct background -->
                 <section class="mb-4 p-3 p-md-4 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
                   <div class="row g-3 align-items-center">
-                  <div class="col-md-12" data-aos="fade-right" data-aos-delay="60">
-                    <figure class="image-card"><img src="img/determinants/determinants.png" style="max-height: 900px;" alt="AA-HA! guidance"></figure>
-                  </div>
-                  <div class="col-md-6 d-none" data-aos="fade-left" data-aos-delay="80">
-                    <article class="modern-card hover-lift-sm transition-base icon-spin-on-hover">
-                    <div class="d-flex align-items-start gap-3">
-                      <span class="badge-pill bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
-                      <div class="">
-                      <h3 id="aa-ha-title" class="mb-2 gradient-text aa-ha-title">Global Accelerated Action for the Health of Adolescents (AA-HA!)</h3>
-                      <p class="mb-1">Guidance to Support Country Implementation</p>
-                      <p class="mb-0 text-muted">Second Edition</p>
-                      </div>
+                    <div class="col-md-12" data-aos="fade-right" data-aos-delay="60">
+                      <figure class="image-card"><img src="img/determinants/determinants.png" style="max-height: 900px;" alt="AA-HA! guidance"></figure>
                     </div>
-                    </article>
-                  </div>
+                    <div class="col-md-6 d-none" data-aos="fade-left" data-aos-delay="80">
+                      <article class="modern-card hover-lift-sm transition-base icon-spin-on-hover">
+                        <div class="d-flex align-items-start gap-3">
+                          <span class="badge-pill bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+                          <div class="">
+                            <h3 id="aa-ha-title" class="mb-2 gradient-text aa-ha-title">Global Accelerated Action for the Health of Adolescents (AA-HA!)</h3>
+                            <p class="mb-1">Guidance to Support Country Implementation</p>
+                            <p class="mb-0 text-muted">Second Edition</p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
                   </div>
                 </section>
 
@@ -1497,622 +1497,519 @@ const coursesData = [
                 <section class="p-3 p-md-4 rounded-4" style="background: rgba(0,0,0,0.03);" aria-labelledby="determinants-title">
                   <h3 class="mb-3 gradient-text" id="determinants-title" data-aos="fade-up" data-aos-delay="120">Key determinants</h3>
                   <div class="row g-3">
-                  ${[
-                    {
-                    label: "Unintentional Injury",
-                    icon: "fa-car-burst",
-                    color: "bg-gradient-orange",
-                    delay: 140,
-                    },
-                    {
-                    label: "Violence",
-                    icon: "fa-hand-back-fist",
-                    color: "bg-gradient-pink",
-                    delay: 160,
-                    },
-                    {
-                    label: "SRH, HIV and other STI",
-                    icon: "fa-venus-mars",
-                    color: "bg-gradient-violet",
-                    delay: 180,
-                    },
-                    {
-                    label: "Communicable Diseases",
-                    icon: "fa-virus",
-                    color: "bg-gradient-green",
-                    delay: 200,
-                    },
-                    {
-                    label: "Non-Communicable Diseases",
-                    icon: "fa-heart-pulse",
-                    color: "bg-gradient-emerald",
-                    delay: 220,
-                    },
-                    {
-                    label: "Mental Health",
-                    icon: "fa-brain",
-                    color: "bg-gradient-blue",
-                    delay: 240,
-                    },
-                    {
-                    label: "Alcohol and Drug Use",
-                    icon: "fa-wine-bottle",
-                    color: "bg-gradient-tangerine",
-                    delay: 260,
-                    },
-                    {
-                    label: "Tobacco use",
-                    icon: "fa-smoking",
-                    color: "bg-gradient-teal",
-                    delay: 280,
-                    },
-                    {
-                    label: "Physical activity and Sedentary behavior",
-                    icon: "fa-person-running",
-                    color: "bg-gradient-cyan",
-                    delay: 300,
-                    },
-                    {
-                    label: "Nutrition",
-                    icon: "fa-utensils",
-                    color: "bg-gradient-purple",
-                    delay: 320,
-                    },
-                  ]
-                    .map(
-                    (d) => `
-                    <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="${d.delay}">
-                    <div class="component-card hover-lift-sm hover-shadow-glow transition-base">
-                      <div class="component-icon ${d.color} animate-float" aria-hidden="true">
-                      <i class="fas ${d.icon}"></i>
+                    ${[
+                      {
+                        label: "Unintentional Injury",
+                        icon: "fa-car-burst",
+                        color: "bg-gradient-orange",
+                        delay: 140,
+                      },
+                      {
+                        label: "Violence",
+                        icon: "fa-hand-back-fist",
+                        color: "bg-gradient-pink",
+                        delay: 160,
+                      },
+                      {
+                        label: "SRH, HIV and other STI",
+                        icon: "fa-venus-mars",
+                        color: "bg-gradient-violet",
+                        delay: 180,
+                      },
+                      {
+                        label: "Communicable Diseases",
+                        icon: "fa-virus",
+                        color: "bg-gradient-green",
+                        delay: 200,
+                      },
+                      {
+                        label: "Non-Communicable Diseases",
+                        icon: "fa-heart-pulse",
+                        color: "bg-gradient-emerald",
+                        delay: 220,
+                      },
+                      {
+                        label: "Mental Health",
+                        icon: "fa-brain",
+                        color: "bg-gradient-blue",
+                        delay: 240,
+                      },
+                      {
+                        label: "Alcohol and Drug Use",
+                        icon: "fa-wine-bottle",
+                        color: "bg-gradient-tangerine",
+                        delay: 260,
+                      },
+                      {
+                        label: "Tobacco use",
+                        icon: "fa-smoking",
+                        color: "bg-gradient-teal",
+                        delay: 280,
+                      },
+                      {
+                        label: "Physical activity and Sedentary behavior",
+                        icon: "fa-person-running",
+                        color: "bg-gradient-cyan",
+                        delay: 300,
+                      },
+                      {
+                        label: "Nutrition",
+                        icon: "fa-utensils",
+                        color: "bg-gradient-purple",
+                        delay: 320,
+                      },
+                    ]
+                      .map(
+                        (d) => `
+                      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="${d.delay}">
+                        <div class="component-card hover-lift-sm hover-shadow-glow transition-base">
+                          <div class="component-icon ${d.color} animate-float" aria-hidden="true">
+                            <i class="fas ${d.icon}"></i>
+                          </div>
+                          <h6 class="mt-2 mb-0">${d.label}</h6>
+                        </div>
                       </div>
-                      <h6 class="mt-2 mb-0">${d.label}</h6>
-                    </div>
-                    </div>
-                  `
-                    )
-                    .join("")}
+                    `
+                      )
+                      .join("")}
                   </div>
                 </section>
-                </div>`,
-              },
-              {
-              id: "ch2-lesson-8",
-              title: "Why young people need special care?",
-              icon: "fa-user-nurse",
-              gradientClass: "bg-gradient-teal",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`,
+          },
+          {
+            id: "ch2-lesson-8",
+            title: "Why young people need special care?",
+            icon: "fa-user-nurse",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2f",
                   question: "Adolescent services should be…",
                   options: [
-                  "Judgmental",
-                  "Exclusive",
-                  "Non-judgmental and confidential",
-                  "Irregular",
+                    "Judgmental",
+                    "Exclusive",
+                    "Non-judgmental and confidential",
+                    "Irregular",
                   ],
                   correctAnswer: 2,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <!-- Intro banner -->
                 <div class="alert alert-info hover-lift-sm transition-base mb-3" data-aos="fade-up" data-aos-delay="60">
                   <div class="d-flex align-items-center gap-3">
-                  <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group"></i></span>
-                  <div>
-                    <h5 class="mb-1">Why young people need special care?</h5>
-                  </div>
+                    <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group"></i></span>
+                    <div>
+                      <h5 class="mb-1">Why young people need special care?</h5>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Diversified needs and barriers: icon cards grid -->
                 <section class="mb-4" aria-labelledby="adol-needs-title">
                   <div class="row g-3">
-                  ${[
-                    {
-                    title: "Adolescents have diversified needs",
-                    desc: "Needs in SRHR, mental health and other NCDs, nutrition, violence against adolescents, vulnerable adolescents etc.",
-                    icon: "fa-layer-group",
-                    color: "bg-gradient-violet",
-                    delay: 100,
-                    },
-                    {
-                    title: "Unaware of the laws, policies, rights",
-                    desc: "Sexual and reproductive health rights, Child rights",
-                    icon: "fa-scale-balanced",
-                    color: "bg-gradient-emerald",
-                    delay: 130,
-                    },
-                    {
-                    title: "Limited ability to execute the rights",
-                    desc: "Lack of confidence, parental influence, peer pressure",
-                    icon: "fa-hands-holding",
-                    color: "bg-gradient-tangerine",
-                    delay: 160,
-                    },
-                    {
-                    title:
-                      "Barriers in accessing information, knowledge, skills",
-                    desc: "Social stigma; discomfort among parents, family members, peers, teachers to talk about adolescent health issues",
-                    icon: "fa-book-open-reader",
-                    color: "bg-gradient-rose",
-                    delay: 190,
-                    },
-                    {
-                    title: "Barriers in accessing the health services",
-                    desc: "Limited care seeking behaviors; no dedicated service (no separate space, no privacy, no dedicated staff); negligence and unawareness among service providers",
-                    icon: "fa-hospital-user",
-                    color: "bg-gradient-cyan",
-                    delay: 220,
-                    },
-                  ]
-                    .map(
-                    (c) => `
-                    <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="${c.delay}">
-                    <article class="modern-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover h-100">
-                      <div class="d-flex align-items-start gap-3">
-                      <span class="badge-pill ${c.color}" aria-hidden="true"><i class="fa-solid ${c.icon}"></i></span>
-                      <div>
-                        <h6 class="mb-1">${c.title}</h6>
-                        <p class="mb-0 small">${c.desc}</p>
+                    ${[
+                      {
+                        title: "Adolescents have diversified needs",
+                        desc: "Needs in SRHR, mental health and other NCDs, nutrition, violence against adolescents, vulnerable adolescents etc.",
+                        icon: "fa-layer-group",
+                        color: "bg-gradient-violet",
+                        delay: 100,
+                      },
+                      {
+                        title: "Unaware of the laws, policies, rights",
+                        desc: "Sexual and reproductive health rights, Child rights",
+                        icon: "fa-scale-balanced",
+                        color: "bg-gradient-emerald",
+                        delay: 130,
+                      },
+                      {
+                        title: "Limited ability to execute the rights",
+                        desc: "Lack of confidence, parental influence, peer pressure",
+                        icon: "fa-hands-holding",
+                        color: "bg-gradient-tangerine",
+                        delay: 160,
+                      },
+                      {
+                        title:
+                          "Barriers in accessing information, knowledge, skills",
+                        desc: "Social stigma; discomfort among parents, family members, peers, teachers to talk about adolescent health issues",
+                        icon: "fa-book-open-reader",
+                        color: "bg-gradient-rose",
+                        delay: 190,
+                      },
+                      {
+                        title: "Barriers in accessing the health services",
+                        desc: "Limited care seeking behaviors; no dedicated service (no separate space, no privacy, no dedicated staff); negligence and unawareness among service providers",
+                        icon: "fa-hospital-user",
+                        color: "bg-gradient-cyan",
+                        delay: 220,
+                      },
+                    ]
+                      .map(
+                        (c) => `
+                      <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="${c.delay}">
+                        <article class="modern-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover h-100">
+                          <div class="d-flex align-items-start gap-3">
+                            <span class="badge-pill ${c.color}" aria-hidden="true"><i class="fa-solid ${c.icon}"></i></span>
+                            <div>
+                              <h6 class="mb-1">${c.title}</h6>
+                              <p class="mb-0 small">${c.desc}</p>
+                            </div>
+                          </div>
+                        </article>
                       </div>
-                      </div>
-                    </article>
-                    </div>
-                  `
-                    )
-                    .join("")}
+                    `
+                      )
+                      .join("")}
                   </div>
                 </section>
 
                 <!-- Supportive visual -->
-                </div>`,
-              },
-              {
-              id: "ch2-lesson-9",
-              title: "SDC related to adolescent health.",
-              icon: "fa-diagram-project",
-              gradientClass: "bg-gradient-violet",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`,
+          },
+          {
+            id: "ch2-lesson-9",
+            title: "SDC related to adolescent health.",
+            icon: "fa-diagram-project",
+            gradientClass: "bg-gradient-violet",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2g",
                   question: "Young health impacts how many SDGs?",
                   options: ["Only 1", "Several", "None", "Unknown"],
                   correctAnswer: 1,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">SDC related to adolescent health</h2>
 
                 <!-- SDG/SDC cards with distinct lean gradients, icons, and hover effects -->
-                <div class="row g-3 d-none">${[
+                <div class="row g-3">${[
                   {
-                  label: "No Poverty",
-                  icon: "fa-hand-holding-heart",
-                  cls: "purple",
-                  delay: 100,
+                    label: "No Poverty",
+                    icon: "fa-hand-holding-heart",
+                    cls: "purple",
+                    delay: 100,
                   },
                   {
-                  label: "Zero Hunger",
-                  icon: "fa-bowl-food",
-                  cls: "blue",
-                  delay: 130,
+                    label: "Zero Hunger",
+                    icon: "fa-bowl-food",
+                    cls: "blue",
+                    delay: 130,
                   },
                   {
-                  label: "Good Health And Well-Being",
-                  icon: "fa-heart-pulse",
-                  cls: "teal",
-                  delay: 160,
+                    label: "Good Health And Well-Being",
+                    icon: "fa-heart-pulse",
+                    cls: "teal",
+                    delay: 160,
                   },
                   {
-                  label: "Quality Education",
-                  icon: "fa-graduation-cap",
-                  cls: "orange",
-                  delay: 190,
+                    label: "Quality Education",
+                    icon: "fa-graduation-cap",
+                    cls: "orange",
+                    delay: 190,
                   },
                   {
-                  label: "Gender Equality",
-                  icon: "fa-venus-mars",
-                  cls: "green",
-                  delay: 220,
+                    label: "Gender Equality",
+                    icon: "fa-venus-mars",
+                    cls: "green",
+                    delay: 220,
                   },
                   {
-                  label: "Decent Work And Economic Growth",
-                  icon: "fa-briefcase",
-                  cls: "pink",
-                  delay: 250,
+                    label: "Decent Work And Economic Growth",
+                    icon: "fa-briefcase",
+                    cls: "pink",
+                    delay: 250,
                   },
                   {
-                  label: "Peace, Justice And Strong Institutions",
-                  icon: "fa-scale-balanced",
-                  cls: "yellow",
-                  delay: 280,
+                    label: "Peace, Justice And Strong Institutions",
+                    icon: "fa-scale-balanced",
+                    cls: "yellow",
+                    delay: 280,
                   },
                 ]
                   .map(
-                  (s) => `
+                    (s) => `
                   <div class="col-6 col-md-4 col-lg-3 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" data-aos="flip-left" data-aos-delay="${s.delay}">
-                  <article class="sdg-lean-card bg-gradient-${s.cls} sdg-hover-tilt transition-base icon-spin-on-hover h-100">
-                    <div class="sdg-card-icon animate-float-slow"><i class="fa-solid ${s.icon}"></i></div>
-                    <h6 class="sdg-card-title">${s.label}</h6>
-                  </article>
+                    <article class="sdg-lean-card bg-gradient-${s.cls} sdg-hover-tilt transition-base icon-spin-on-hover h-100">
+                      <div class="sdg-card-icon animate-float-slow"><i class="fa-solid ${s.icon}"></i></div>
+                      <h6 class="sdg-card-title">${s.label}</h6>
+                    </article>
                   </div>
                 `
                   )
                   .join("")}</div>
-
-                  <!-- 2-column layout: first two images stacked in left column, third image beside them -->
-                  <div class="row g-3 sdc_main" style="display: flex; flex-wrap: wrap; gap: 1rem;"> 
-                      <div class="col-12 col-md-6">
-                        <div class="row g-3">
-                          <div class="col-12" data-aos="zoom-in" data-aos-delay="80">
-                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                            <figure class="image-card" style="aspect-ratio: 2 / 1; overflow: hidden; border-radius: 14px;">
-                              <img
-                              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop"
-                              alt="SDG highlight 1"
-                              class="img-zoom"
-                              loading="lazy"
-                              style="width:100%; height:100%; object-fit:cover;"
-                              />
-                            </figure>
-                            </article>
-                          </div>
-                          <div class="col-12" data-aos="zoom-in" data-aos-delay="110">
-                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                            <figure class="image-card" style="aspect-ratio: 2 / 1; overflow: hidden; border-radius: 14px;">
-                              <img
-                              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop"
-                              alt="SDG highlight 2"
-                              class="img-zoom"
-                              loading="lazy"
-                              style="width:100%; height:100%; object-fit:cover;"
-                              />
-                            </figure>
-                            </article>
-                          </div>
-                        </div>
-                      </div>
-                  <div class="col-12" data-aos="zoom-in" data-aos-delay="140">
-                    <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base h-100">
-                    <figure class="image-card" style="aspect-ratio: 2 / 1; overflow: hidden; border-radius: 14px;">
-                      <img
-                      src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop"
-                      alt="SDG highlight 3"
-                      class="img-zoom"
-                      loading="lazy"
-                      style="width:100%; height:100%; object-fit:cover;"
-                      />
-                    </figure>
-                    </article>
-                  </div>
-                 </div>
-
-                  <!-- Bottom row: 4 images -->
-                  <div class="row g-3 mt-0">
-                  <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="170">
-                    <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                    <figure class="image-card" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 14px;">
-                      <img
-                      src="https://images.unsplash.com/photo-1542601098-8fc114e148e8?q=80&w=1200&auto=format&fit=crop"
-                      alt="SDG related 4"
-                      class="img-zoom"
-                      loading="lazy"
-                      style="width:100%; height:100%; object-fit:cover;"
-                      />
-                    </figure>
-                    </article>
-                  </div>
-                  <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
-                    <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                    <figure class="image-card" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 14px;">
-                      <img
-                      src="https://images.unsplash.com/photo-1493815793585-d94ccbc86df8?q=80&w=1200&auto=format&fit=crop"
-                      alt="SDG related 5"
-                      class="img-zoom"
-                      loading="lazy"
-                      style="width:100%; height:100%; object-fit:cover;"
-                      />
-                    </figure>
-                    </article>
-                  </div>
-                  <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="230">
-                    <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                    <figure class="image-card" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 14px;">
-                      <img
-                      src="https://images.unsplash.com/photo-1523978591478-c753949ff840?q=80&w=1200&auto=format&fit=crop"
-                      alt="SDG related 6"
-                      class="img-zoom"
-                      loading="lazy"
-                      style="width:100%; height:100%; object-fit:cover;"
-                      />
-                    </figure>
-                    </article>
-                  </div>
-                  <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="260">
-                    <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                    <figure class="image-card" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 14px;">
-                      <img
-                      src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1200&auto=format&fit=crop"
-                      alt="SDG related 7"
-                      class="img-zoom"
-                      loading="lazy"
-                      style="width:100%; height:100%; object-fit:cover;"
-                      />
-                    </figure>
-                    </article>
-                  </div>
-                 </div>
-                </div>`,
-              },
-              {
-              id: "ch2-lesson-10",
-              title: "AH in Global Agenda",
-              icon: "fa-handshake-angle",
-              gradientClass: "bg-gradient-emerald",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`,
+          },
+          {
+            id: "ch2-lesson-10",
+            title: "AH in Global Agenda",
+            icon: "fa-handshake-angle",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2h",
                   question: "Put whom at the center of design?",
                   options: ["Providers", "Parents", "Adolescents", "Donors"],
                   correctAnswer: 2,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Adolescent Health in the Global Agenda</h2>
 
                 <section class="timeline-chart" aria-labelledby="ah-global-agenda-title">
                   <div class="timeline-track" aria-hidden="true"></div>
                   ${[
-                  {
-                    year: "1994",
-                    title:
-                    "International Conference on Population and Development",
-                    desc: "Adolescents were recognized as a separate group with distinct needs.",
-                    icon: "fa-people-group",
-                    cls: "tl-rose",
-                    delay: 100,
-                  },
-                  {
-                    year: "2000",
-                    title: "Millennium Development Goals (MDGs)",
-                    desc: "Adolescents were included as part of broader child and maternal health goals.",
-                    icon: "fa-bullseye",
-                    cls: "tl-blue",
-                    delay: 130,
-                  },
-                  {
-                    year: "2010",
-                    title:
-                    "Global Strategy for Women’s and Children’s Health",
-                    desc: "Adolescents were minimally included in this strategy.",
-                    icon: "fa-child-reaching",
-                    cls: "tl-amber",
-                    delay: 160,
-                  },
-                  {
-                    year: "2015",
-                    title: "Sustainable Development Goals (SDGs)",
-                    desc: "Adolescents were recognized as key to achieving global health and development goals.",
-                    icon: "fa-globe",
-                    cls: "tl-emerald",
-                    delay: 190,
-                  },
-                  {
-                    year: "2016",
-                    title:
-                    "Lancet Commission on Adolescent Health and Wellbeing",
-                    desc: "Highlighted the importance of investing in adolescent health and well-being.",
-                    icon: "fa-book-open",
-                    cls: "tl-violet",
-                    delay: 220,
-                  },
-                  {
-                    year: "2017",
-                    title:
-                    "Global Accelerated Action for the Health of Adolescents (AA-HA!)",
-                    desc: "Guidance to support implementation of adolescent health initiatives.",
-                    icon: "fa-rocket",
-                    cls: "tl-cyan",
-                    delay: 250,
-                  },
-                  {
-                    year: "2021",
-                    title:
-                    "Global Accelerated Action for the Health of Adolescents (AA-HA! 2.0)",
-                    desc: "A call to action: The second guidance for adolescent health and wellbeing.",
-                    icon: "fa-flag-checkered",
-                    cls: "tl-slate",
-                    delay: 280,
-                  },
+                    {
+                      year: "1994",
+                      title:
+                        "International Conference on Population and Development",
+                      desc: "Adolescents were recognized as a separate group with distinct needs.",
+                      icon: "fa-people-group",
+                      cls: "tl-rose",
+                      delay: 100,
+                    },
+                    {
+                      year: "2000",
+                      title: "Millennium Development Goals (MDGs)",
+                      desc: "Adolescents were included as part of broader child and maternal health goals.",
+                      icon: "fa-bullseye",
+                      cls: "tl-blue",
+                      delay: 130,
+                    },
+                    {
+                      year: "2010",
+                      title:
+                        "Global Strategy for Women’s and Children’s Health",
+                      desc: "Adolescents were minimally included in this strategy.",
+                      icon: "fa-child-reaching",
+                      cls: "tl-amber",
+                      delay: 160,
+                    },
+                    {
+                      year: "2015",
+                      title: "Sustainable Development Goals (SDGs)",
+                      desc: "Adolescents were recognized as key to achieving global health and development goals.",
+                      icon: "fa-globe",
+                      cls: "tl-emerald",
+                      delay: 190,
+                    },
+                    {
+                      year: "2016",
+                      title:
+                        "Lancet Commission on Adolescent Health and Wellbeing",
+                      desc: "Highlighted the importance of investing in adolescent health and well-being.",
+                      icon: "fa-book-open",
+                      cls: "tl-violet",
+                      delay: 220,
+                    },
+                    {
+                      year: "2017",
+                      title:
+                        "Global Accelerated Action for the Health of Adolescents (AA-HA!)",
+                      desc: "Guidance to support implementation of adolescent health initiatives.",
+                      icon: "fa-rocket",
+                      cls: "tl-cyan",
+                      delay: 250,
+                    },
+                    {
+                      year: "2021",
+                      title:
+                        "Global Accelerated Action for the Health of Adolescents (AA-HA! 2.0)",
+                      desc: "A call to action: The second guidance for adolescent health and wellbeing.",
+                      icon: "fa-flag-checkered",
+                      cls: "tl-slate",
+                      delay: 280,
+                    },
                   ]
-                  .map(
-                    (m, i) => `
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="${m.delay}">
-                    <div class="timeline-dot"><span>${m.year}</span></div>
-                    <article class="timeline-card ${m.cls}">
-                    <div class="timeline-card-icon"><i class="fa-solid ${m.icon}"></i></div>
-                    <h6 class="timeline-card-title">${m.title}</h6>
-                    <p class="timeline-card-text">${m.desc}</p>
-                    </article>
-                  </div>
+                    .map(
+                      (m, i) => `
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="${m.delay}">
+                      <div class="timeline-dot"><span>${m.year}</span></div>
+                      <article class="timeline-card ${m.cls}">
+                        <div class="timeline-card-icon"><i class="fa-solid ${m.icon}"></i></div>
+                        <h6 class="timeline-card-title">${m.title}</h6>
+                        <p class="timeline-card-text">${m.desc}</p>
+                      </article>
+                    </div>
                   `
-                  )
-                  .join("")}
+                    )
+                    .join("")}
                 </section>
-                </div>`,
-              },
-              {
-              id: "ch2-lesson-11",
-              title: "Policies, strategies and plans",
-              icon: "fa-file-shield",
-              gradientClass: "bg-gradient-blue",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`,
+          },
+          {
+            id: "ch2-lesson-11",
+            title: "Policies, strategies and plans",
+            icon: "fa-file-shield",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2i",
                   question: "National directions guide…",
                   options: [
-                  "Service delivery and coordination",
-                  "Only events",
-                  "Only media",
-                  "None",
+                    "Service delivery and coordination",
+                    "Only events",
+                    "Only media",
+                    "None",
                   ],
                   correctAnswer: 0,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Policies, strategies and plans</h2>
                 <div class="row g-3">${[
                   {
-                  img: "img/policies/national-strategy.jpg",
-                  title: "National Adolescent Health Strategy",
+                    img: "img/policies/national-strategy.jpg",
+                    title: "National Adolescent Health Strategy",
                   },
                   {
-                  img: "img/policies/adolsent.png",
-                  title:
-                    "National Plan of Action for Adolescent Health Strategy",
+                    img: "img/policies/adolsent.png",
+                    title:
+                      "National Plan of Action for Adolescent Health Strategy",
                   },
                   {
-                  img: "img/policies/gadget.png",
-                  title: "Enacted Mental Health Act, Bangladesh",
+                    img: "img/policies/gadget.png",
+                    title: "Enacted Mental Health Act, Bangladesh",
                   },
                   {
-                  img: "img/policies/national-health.png",
-                  title: "2nd  National Mental Health Survey",
+                    img: "img/policies/national-health.png",
+                    title: "2nd  National Mental Health Survey",
                   },
                   {
-                  img: "img/policies/policy.png",
-                  title: "National Mental Health Policy : 2022",
+                    img: "img/policies/policy.png",
+                    title: "National Mental Health Policy : 2022",
                   },
                   {
-                  img: "img/policies/strategy.png",
-                  title: "National Mental Health Strategic Plan : 2022-2030",
+                    img: "img/policies/strategy.png",
+                    title: "National Mental Health Strategic Plan : 2022-2030",
                   },
                 ]
                   .map(
-                  (p) =>
-                    `<div class="col-sm-6 col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="120"><article class="modern-card"><figure class="image-card" style="height:auto; object-fit: cover;"><img src="${p.img}" class="img-zoom" alt="${p.title}"></figure><h6 class="mt-2">${p.title}</h6></article></div>`
+                    (p) =>
+                      `<div class="col-sm-6 col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="120"><article class="modern-card"><figure class="image-card" style="height:auto; object-fit: cover;"><img src="${p.img}" class="img-zoom" alt="${p.title}"></figure><h6 class="mt-2">${p.title}</h6></article></div>`
                   )
                   .join("")}</div>
-                </div>`,
-              },
-              {
-              id: "ch2-lesson-12",
-              title: "Bangladesh Government’s commitment",
-              icon: "fa-landmark",
-              gradientClass: "bg-gradient-tangerine",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`,
+          },
+          {
+            id: "ch2-lesson-12",
+            title: "Bangladesh Government’s commitment",
+            icon: "fa-landmark",
+            gradientClass: "bg-gradient-tangerine",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2j",
                   question: "Bangladesh invests in adolescent health via…",
                   options: [
-                  "Policies and partnerships",
-                  "Only posters",
-                  "Only apps",
-                  "None",
+                    "Policies and partnerships",
+                    "Only posters",
+                    "Only apps",
+                    "None",
                   ],
                   correctAnswer: 0,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Bangladesh Government’s commitment</h2>
 
                 <!-- Infographic: Policy evolution snapshot (distinct from timeline) -->
                 <section class="flow-chart" aria-labelledby="bd-commitment-flow-title">
                   <div class="flow-rows">
-                  <!-- Row 1: Strategy evolution -->
-                  <div class="flow-row" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flow-node tl-blue">
-                    <div class="flow-node-icon"><i class="fa-solid fa-book-open"></i></div>
-                    <div class="flow-node-title">National Adolescent Reproductive Health Strategy</div>
-                    <div class="flow-node-sub">2006–2015</div>
+                    <!-- Row 1: Strategy evolution -->
+                    <div class="flow-row" data-aos="fade-up" data-aos-delay="100">
+                      <div class="flow-node tl-blue">
+                        <div class="flow-node-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <div class="flow-node-title">National Adolescent Reproductive Health Strategy</div>
+                        <div class="flow-node-sub">2006–2015</div>
+                      </div>
+                      <div class="flow-arrow" aria-hidden="true"></div>
+                      <div class="flow-node tl-emerald">
+                        <div class="flow-node-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+                        <div class="flow-node-title">National Adolescent Health Strategy</div>
+                        <div class="flow-node-sub">2017–2030</div>
+                      </div>
                     </div>
-                    <div class="flow-arrow" aria-hidden="true"></div>
-                    <div class="flow-node tl-emerald">
-                    <div class="flow-node-icon"><i class="fa-solid fa-flag-checkered"></i></div>
-                    <div class="flow-node-title">National Adolescent Health Strategy</div>
-                    <div class="flow-node-sub">2017–2030</div>
+                    <!-- Row 2: Action plan evolution -->
+                    <div class="flow-row" data-aos="fade-up" data-aos-delay="140">
+                      <div class="flow-node tl-violet">
+                        <div class="flow-node-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                        <div class="flow-node-title">National Plan of Action for Adolescent Health Strategy</div>
+                      </div>
+                      <div class="flow-arrow" aria-hidden="true"></div>
+                      <div class="flow-node tl-rose">
+                        <div class="flow-node-icon"><i class="fa-solid fa-coins"></i></div>
+                        <div class="flow-node-title">National Costed Action Plan for Adolescent Health Strategy</div>
+                      </div>
                     </div>
-                  </div>
-                  <!-- Row 2: Action plan evolution -->
-                  <div class="flow-row" data-aos="fade-up" data-aos-delay="140">
-                    <div class="flow-node tl-violet">
-                    <div class="flow-node-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-                    <div class="flow-node-title">National Plan of Action for Adolescent Health Strategy</div>
-                    </div>
-                    <div class="flow-arrow" aria-hidden="true"></div>
-                    <div class="flow-node tl-rose">
-                    <div class="flow-node-icon"><i class="fa-solid fa-coins"></i></div>
-                    <div class="flow-node-title">National Costed Action Plan for Adolescent Health Strategy</div>
-                    </div>
-                  </div>
                   </div>
                 </section>
 
                 <!-- Orbit info: manual generation (JS builds satellites) -->
                 <section class="mt-5" aria-labelledby="orbit-title">
                   <div class="orbit-layout" id="orbitLayout" data-aos="zoom-in" data-aos-delay="240" data-orbit-manual="true">
-                  <!-- Center node -->
-                  <div class="orbit-center icon-spin-on-hover">
-                    <div class="orbit-card bg-gradient-blue">
-                    <div class="orbit-icon mb-1"><i class="fa-solid fa-flag fa-lg"></i></div>
-                    <div class="orbit-title fw-bold">National<br />Health Strategy</div>
-                    <div class="orbit-sub">2017–2030</div>
+                    <!-- Center node -->
+                    <div class="orbit-center icon-spin-on-hover">
+                      <div class="orbit-card bg-gradient-blue">
+                        <div class="orbit-icon mb-1"><i class="fa-solid fa-flag fa-lg"></i></div>
+                        <div class="orbit-title fw-bold">National<br />Health Strategy</div>
+                        <div class="orbit-sub">2017–2030</div>
+                      </div>
                     </div>
                   </div>
-                  </div>
                 </section>
-                </div>`,
-              },
-              {
-              id: "ch2-lesson-13",
-              title: "A combined effort",
-              icon: "fa-people-group",
-              gradientClass: "bg-gradient-green",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`,
+          },
+          {
+            id: "ch2-lesson-13",
+            title: "A combined effort",
+            icon: "fa-people-group",
+            gradientClass: "bg-gradient-green",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2k",
                   question: "Whole-of-society approach includes…",
                   options: [
-                  "Only health",
-                  "Multiple sectors",
-                  "Only schools",
-                  "None",
+                    "Only health",
+                    "Multiple sectors",
+                    "Only schools",
+                    "None",
                   ],
                   correctAnswer: 1,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">A combined effort</h2>
 
                 <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="60">
@@ -2122,44 +2019,44 @@ const coursesData = [
                 </div>
                 <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="60">
                   <div class="">
-                  <img src="img/effort-new.png" alt="A combined effort infographic" class="img-fluid rounded-4 shadow-sm" />
+                    <img src="img/effort-new.png" alt="A combined effort infographic" class="img-fluid rounded-4 shadow-sm" />
                   </div>
                 </div>
 
                 <!-- Radial infographic: center + inner + outer rings -->
-                </div>`,
-              },
-              {
-              id: "ch2-lesson-14",
-              title: "Recommendations to protect adolescent health and wellbeing",
-              icon: "fa-rocket",
-              gradientClass: "bg-gradient-rose",
-              audioFile: "",
-              quiz: {
-                passingScore: 60,
-                questions: [
+              </div>`,
+          },
+          {
+            id: "ch2-lesson-14",
+            title: "Recommendations to protect adolescent health and wellbeing",
+            icon: "fa-rocket",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
                 {
                   id: "q2l",
                   question: "Actions include…",
                   options: [
-                  "Boost health literacy",
-                  "Reduce services",
-                  "Ignore data",
-                  "Exclude young",
+                    "Boost health literacy",
+                    "Reduce services",
+                    "Ignore data",
+                    "Exclude young",
                   ],
                   correctAnswer: 0,
                 },
-                ],
-              },
-              content: `
-                <div class="lesson-slide">
+              ],
+            },
+            content: `
+              <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Recommendations</h2>
 
                 <!-- Special info -->
                 <div class="modern-card glass-card mb-3 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="60">
                   <div class="d-flex align-items-start gap-3">
-                  <span class="badge-pill bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-circle-info"></i></span>
-                  <p class="mb-0">Actions to improve adolescent health and wellbeing need to address established and emerging determinants and meaningfully engage with adolescents and young people.</p>
+                    <span class="badge-pill bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-circle-info"></i></span>
+                    <p class="mb-0">Actions to improve adolescent health and wellbeing need to address established and emerging determinants and meaningfully engage with adolescents and young people.</p>
                   </div>
                 </div>
 
@@ -2167,221 +2064,221 @@ const coursesData = [
                 <section class="" aria-labelledby="ahw-recs-title">
                   <!-- Ambient gradient container with floating shapes -->
                   <div class="recs-ambient" data-aos="fade-up" data-aos-delay="100">
-                  <div class="ambient-shapes animate-float" aria-hidden="true">
-                    <span class="shape shape-1"></span>
-                    <span class="shape shape-2"></span>
-                    <span class="shape shape-3"></span>
-                    <span class="shape shape-4"></span>
-                    <span class="shape shape-5"></span>
-                  </div>
-
-                  <div class="petal-chart hover-lift-sm transition-base" aria-label="Five recommendation petals surrounding a central goal: Protect adolescent health and wellbeing.">
-                    <!-- Decorative ring -->
-                    <div class="petal-ring spin-slow" aria-hidden="true"></div>
-
-                    <!-- Center node 
-                    <div class="petal-center">
-                      <article class="petal-card bg-gradient-emerald icon-spin-on-hover hover-glow">
-                      <div class="petal-icon"><i class="fa-solid fa-shield-heart"></i></div>
-                      <div class="petal-title">Protect adolescent health & wellbeing</div>
-                      </article>
-                    </div> 
-                    -->
-
-                    <!-- Petals (5) equally spaced -->
-                    ${[
-                    {
-                      title: "Protect adolescent health & wellbeing",
-                      text: "",
-                      icon: "fa-rocket",
-                      cls: "bg-gradient-teal",
-                      pos: "petal-pos-1",
-                      delay: 100,
-                    },
-                    {
-                      title: "Rights-based & person-centred",
-                      text: "Emphasise adolescents’ rights to health and wellbeing; promote participation, identity expression, safe access, and protection from harm.",
-                      icon: "fa-scale-balanced",
-                      cls: "bg-gradient-purple",
-                      pos: "petal-pos-1",
-                      delay: 150,
-                    },
-                    {
-                      title: "Confront systemic inequities",
-                      text: "Address gender, race and geography to ensure equal opportunities and targeted support for disadvantaged groups.",
-                      icon: "fa-people-arrows-left-right",
-                      cls: "bg-gradient-rose",
-                      pos: "petal-pos-2",
-                      delay: 200,
-                    },
-                    {
-                      title: "Meaningfully involve adolescents",
-                      text: "Co-design and engage adolescents in health initiatives—empowering individuals and strengthening societal outcomes.",
-                      icon: "fa-people-group",
-                      cls: "bg-gradient-blue",
-                      pos: "petal-pos-3",
-                      delay: 250,
-                    },
-                    {
-                      title: "Evidence-informed & developmentally tailored",
-                      text: "Use evolving evidence and tailor to developmental needs while considering complex determinants across contexts.",
-                      icon: "fa-microscope",
-                      cls: "bg-gradient-cyan",
-                      pos: "petal-pos-4",
-                      delay: 300,
-                    },
-                    {
-                      title: "Multisectoral approach",
-                      text: "Coordinate mental health, nutrition, sexual and reproductive health, and violence prevention to amplify gains.",
-                      icon: "fa-diagram-project",
-                      cls: "bg-gradient-teal",
-                      pos: "petal-pos-5",
-                      delay: 350,
-                    },
-                    ]
-                    .map(
-                      (p) => `
-                    <div class="aos-init aos-animate"  data-aos="fade-up" data-aos-delay="${p.delay}">
-                      <article class="recs-petal-card ${p.cls} mb-2 icon-spin-on-hover hover-glow">
-                      <div class="timeline-card-icon animate-float-slow"><i class="fa-solid ${p.icon}"></i></div>
-                      <div class="timeline-card-title">${p.title}</div>
-                      <p class="timeline-card-text rec-title">${p.text}</p>
-                      </article>
+                    <div class="ambient-shapes animate-float" aria-hidden="true">
+                      <span class="shape shape-1"></span>
+                      <span class="shape shape-2"></span>
+                      <span class="shape shape-3"></span>
+                      <span class="shape shape-4"></span>
+                      <span class="shape shape-5"></span>
                     </div>
-                    
-                    `
-                    )
-                    .join("")}
-                  </div>
+
+                    <div class="petal-chart hover-lift-sm transition-base" aria-label="Five recommendation petals surrounding a central goal: Protect adolescent health and wellbeing.">
+                      <!-- Decorative ring -->
+                      <div class="petal-ring spin-slow" aria-hidden="true"></div>
+
+                      <!-- Center node 
+                        <div class="petal-center">
+                          <article class="petal-card bg-gradient-emerald icon-spin-on-hover hover-glow">
+                            <div class="petal-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                            <div class="petal-title">Protect adolescent health & wellbeing</div>
+                          </article>
+                        </div> 
+                      -->
+
+                      <!-- Petals (5) equally spaced -->
+                      ${[
+                        {
+                          title: "Protect adolescent health & wellbeing",
+                          text: "",
+                          icon: "fa-rocket",
+                          cls: "bg-gradient-teal",
+                          pos: "petal-pos-1",
+                          delay: 100,
+                        },
+                        {
+                          title: "Rights-based & person-centred",
+                          text: "Emphasise adolescents’ rights to health and wellbeing; promote participation, identity expression, safe access, and protection from harm.",
+                          icon: "fa-scale-balanced",
+                          cls: "bg-gradient-purple",
+                          pos: "petal-pos-1",
+                          delay: 150,
+                        },
+                        {
+                          title: "Confront systemic inequities",
+                          text: "Address gender, race and geography to ensure equal opportunities and targeted support for disadvantaged groups.",
+                          icon: "fa-people-arrows-left-right",
+                          cls: "bg-gradient-rose",
+                          pos: "petal-pos-2",
+                          delay: 200,
+                        },
+                        {
+                          title: "Meaningfully involve adolescents",
+                          text: "Co-design and engage adolescents in health initiatives—empowering individuals and strengthening societal outcomes.",
+                          icon: "fa-people-group",
+                          cls: "bg-gradient-blue",
+                          pos: "petal-pos-3",
+                          delay: 250,
+                        },
+                        {
+                          title: "Evidence-informed & developmentally tailored",
+                          text: "Use evolving evidence and tailor to developmental needs while considering complex determinants across contexts.",
+                          icon: "fa-microscope",
+                          cls: "bg-gradient-cyan",
+                          pos: "petal-pos-4",
+                          delay: 300,
+                        },
+                        {
+                          title: "Multisectoral approach",
+                          text: "Coordinate mental health, nutrition, sexual and reproductive health, and violence prevention to amplify gains.",
+                          icon: "fa-diagram-project",
+                          cls: "bg-gradient-teal",
+                          pos: "petal-pos-5",
+                          delay: 350,
+                        },
+                      ]
+                        .map(
+                          (p) => `
+                        <div class="aos-init aos-animate"  data-aos="fade-up" data-aos-delay="${p.delay}">
+                          <article class="recs-petal-card ${p.cls} mb-2 icon-spin-on-hover hover-glow">
+                            <div class="timeline-card-icon animate-float-slow"><i class="fa-solid ${p.icon}"></i></div>
+                            <div class="timeline-card-title">${p.title}</div>
+                            <p class="timeline-card-text rec-title">${p.text}</p>
+                          </article>
+                        </div>
+                        
+                      `
+                        )
+                        .join("")}
+                    </div>
                   </div>
                 </section>
-                </div>`,
-              },
-            ],
-            },
-            {
-            id: "ch-3",
-            title: "Module-3: Changes during adolescence and puberty",
-            lessons: [],
-            },
-            {
-            id: "ch-4",
-            title: "Module-4: Menstrual Health and Hygiene Management",
-            lessons: [],
-            },
-            {
-            id: "ch-5",
-            title: "Module-5: Wet dream (ejaculation) Hygiene and Management",
-            lessons: [],
-            },
-            {
-            id: "ch-7",
-            title:
-              "Module-7: Causes, consequences and prevention of early child marriage",
-            lessons: [],
-            },
-            {
-            id: "ch-8",
-            title: "Module-8: Adolescent Pregnancy",
-            lessons: [],
-            },
-            {
-            id: "ch-9",
-            title: "Module-9: Adolescent Family Planning",
-            lessons: [],
-            },
-            {
-            id: "ch-10",
-            title:
-              "Module-10: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)",
-            lessons: [],
-            },
-            {
-            id: "ch-11",
-            title:
-              "Module-11: HPV vaccination and prevention of cervical cancer in adolescents",
-            lessons: [],
-            },
-            {
-            id: "ch-12",
-            title: "Module-12: Polycystic ovary syndrome (PCOS) in adolescents",
-            lessons: [],
-            },
-            {
-            id: "ch-13",
-            title:
-              "Module-13: Adolescent nutrition: Nutritional deficiency and prevention",
-            lessons: [],
-            },
-            {
-            id: "ch-14",
-            title:
-              "Module-14: Non-communicable diseases (NCDs) in adolescents and their prevention",
-            lessons: [],
-            },
-            {
-            id: "ch-15",
-            title: "Module-15: Sex, Gender and Gender Discrimination",
-            lessons: [],
-            },
-            {
-            id: "ch-16",
-            title: "Module-16: Violence Related to Adolescents",
-            lessons: [],
-            },
-            {
-            id: "ch-17",
-            title: "Module-17: Adolescent Mental Health -  Problems and Solutions",
-            lessons: [],
-            },
-            {
-            id: "ch-18",
-            title:
-              "Module-18: Psychosocial changes and Psychosocial complications during adolescence",
-            lessons: [],
-            },
-            {
-            id: "ch-19",
-            title: "Module-19: Psychosocial support for adolescents",
-            lessons: [],
-            },
-            {
-            id: "ch-20",
-            title: "Module-20: Drug addiction - Consequences and prevention",
-            lessons: [],
-            },
-            {
-            id: "ch-21",
-            title: "Module-21: Special care for vulnerable adolescents",
-            lessons: [],
-            },
-            {
-            id: "ch-22",
-            title: "Module-22: Climate change and special attention to adolescents",
-            lessons: [],
-            },
-            {
-            id: "ch-23",
-            title: "Module-23: Injury prevention and first aid for adolescents",
-            lessons: [],
-            },
-            {
-            id: "ch-24",
-            title: "Module-24: Life skills, morality, and values",
-            lessons: [],
-            },
-            {
-            id: "ch-25",
-            title: "Module-25: Communication and counseling with adolescents",
-            lessons: [],
-            },
-            {
-            id: "ch-26",
-            title:
-              "Module-26: Human Rights, Child Rights, and Sexual and Reproductive Health Rights",
-            lessons: [],
-            },
-          ],
+              </div>`,
+          },
+        ],
+      },
+      {
+        id: "ch-3",
+        title: "Module-3: Changes during adolescence and puberty",
+        lessons: [],
+      },
+      {
+        id: "ch-4",
+        title: "Module-4: Menstrual Health and Hygiene Management",
+        lessons: [],
+      },
+      {
+        id: "ch-5",
+        title: "Module-5: Wet dream (ejaculation) Hygiene and Management",
+        lessons: [],
+      },
+      {
+        id: "ch-7",
+        title:
+          "Module-7: Causes, consequences and prevention of early child marriage",
+        lessons: [],
+      },
+      {
+        id: "ch-8",
+        title: "Module-8: Adolescent Pregnancy",
+        lessons: [],
+      },
+      {
+        id: "ch-9",
+        title: "Module-9: Adolescent Family Planning",
+        lessons: [],
+      },
+      {
+        id: "ch-10",
+        title:
+          "Module-10: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)",
+        lessons: [],
+      },
+      {
+        id: "ch-11",
+        title:
+          "Module-11: HPV vaccination and prevention of cervical cancer in adolescents",
+        lessons: [],
+      },
+      {
+        id: "ch-12",
+        title: "Module-12: Polycystic ovary syndrome (PCOS) in adolescents",
+        lessons: [],
+      },
+      {
+        id: "ch-13",
+        title:
+          "Module-13: Adolescent nutrition: Nutritional deficiency and prevention",
+        lessons: [],
+      },
+      {
+        id: "ch-14",
+        title:
+          "Module-14: Non-communicable diseases (NCDs) in adolescents and their prevention",
+        lessons: [],
+      },
+      {
+        id: "ch-15",
+        title: "Module-15: Sex, Gender and Gender Discrimination",
+        lessons: [],
+      },
+      {
+        id: "ch-16",
+        title: "Module-16: Violence Related to Adolescents",
+        lessons: [],
+      },
+      {
+        id: "ch-17",
+        title: "Module-17: Adolescent Mental Health -  Problems and Solutions",
+        lessons: [],
+      },
+      {
+        id: "ch-18",
+        title:
+          "Module-18: Psychosocial changes and Psychosocial complications during adolescence",
+        lessons: [],
+      },
+      {
+        id: "ch-19",
+        title: "Module-19: Psychosocial support for adolescents",
+        lessons: [],
+      },
+      {
+        id: "ch-20",
+        title: "Module-20: Drug addiction - Consequences and prevention",
+        lessons: [],
+      },
+      {
+        id: "ch-21",
+        title: "Module-21: Special care for vulnerable adolescents",
+        lessons: [],
+      },
+      {
+        id: "ch-22",
+        title: "Module-22: Climate change and special attention to adolescents",
+        lessons: [],
+      },
+      {
+        id: "ch-23",
+        title: "Module-23: Injury prevention and first aid for adolescents",
+        lessons: [],
+      },
+      {
+        id: "ch-24",
+        title: "Module-24: Life skills, morality, and values",
+        lessons: [],
+      },
+      {
+        id: "ch-25",
+        title: "Module-25: Communication and counseling with adolescents",
+        lessons: [],
+      },
+      {
+        id: "ch-26",
+        title:
+          "Module-26: Human Rights, Child Rights, and Sexual and Reproductive Health Rights",
+        lessons: [],
+      },
+    ],
     // Flat lessons kept for backward compatibility (legacy renderers)
     // Legacy steps array for backward compatibility
     steps: [],

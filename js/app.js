@@ -21,13 +21,6 @@ class YouthHealthLMS {
     this.init();
   }
 
-  // Detect system preference for reduced motion
-  prefersReducedMotion() {
-    try {
-      return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    } catch (_) { return false; }
-  }
-
   // Calculate module-based progress for a specific course
   // If the course has chapters: module = chapter; completed when all chapter lessons are done AND chapter quiz ("<chapterId>-quiz") is passed
   // If the course is flat (no chapters): treat each lesson as a module
@@ -113,26 +106,18 @@ class YouthHealthLMS {
   initAOS() {
     try {
       if (window.AOS) {
-        if (this.prefersReducedMotion()) {
-          // Disable AOS animations entirely
-          if (!this._aosInitialized) {
-            window.AOS.init({ disable: true });
-            this._aosInitialized = true;
-          }
+        if (!this._aosInitialized) {
+          window.AOS.init({
+            duration: 700,
+            easing: "ease-out-cubic",
+            once: false,
+            offset: 40,
+          });
+          this._aosInitialized = true;
         } else {
-            if (!this._aosInitialized) {
-              window.AOS.init({
-                duration: 700,
-                easing: "ease-out-cubic",
-                once: false,
-                offset: 40,
-              });
-              this._aosInitialized = true;
-            } else {
-              window.AOS.refreshHard();
-            }
-            setTimeout(() => window.AOS && window.AOS.refresh(), 250);
+          window.AOS.refreshHard();
         }
+        setTimeout(() => window.AOS && window.AOS.refresh(), 250);
       }
     } catch (_) {}
   }
@@ -569,7 +554,7 @@ class YouthHealthLMS {
     try {
       const passed = percentage >= (currentItem.quiz?.passingScore || 0);
       const key = `${this.selectedCourse?.id || 'course'}:${currentItem?.id || idx}`;
-      if (!this.prefersReducedMotion() && passed && typeof window !== 'undefined' && window.confetti && !this._confettiFiredFor.has(key)) {
+      if (passed && typeof window !== 'undefined' && window.confetti && !this._confettiFiredFor.has(key)) {
         // Subtle celebratory burst
         const burst = (originX) => window.confetti({
           particleCount: 80,
@@ -738,64 +723,47 @@ class YouthHealthLMS {
   // Initialize lesson-specific enhancements like counters and charts when elements are present
   initLessonEnhancements() {
     try {
-      const reduceMotion = this.prefersReducedMotion();
       // Animated counter for global overview (90%)
       const counterEl = document.getElementById("globalCounter");
       if (counterEl && !counterEl.dataset.animated) {
         const target = Number(counterEl.getAttribute("data-target") || 90);
-        if (reduceMotion) {
-          counterEl.textContent = String(target);
-          counterEl.dataset.animated = "true";
-        } else {
-          let start = 0;
-          const step = () => {
-            start = Math.min(start + 1, target);
-            counterEl.textContent = String(start);
-            if (start < target) requestAnimationFrame(step);
-            else counterEl.dataset.animated = "true";
-          };
-          // Trigger on intersect to avoid animating offscreen
-          const obs = new IntersectionObserver((entries) => {
-            entries.forEach((e) => {
-              if (e.isIntersecting && !counterEl.dataset.animated) {
-                requestAnimationFrame(step);
-                obs.disconnect();
-              }
-            });
-          }, { threshold: 0.4 });
-          obs.observe(counterEl);
-        }
+        let start = 0;
+        const step = () => {
+          start = Math.min(start + 1, target);
+          counterEl.textContent = String(start);
+          if (start < target) requestAnimationFrame(step);
+          else counterEl.dataset.animated = "true";
+        };
+        // Trigger on intersect to avoid animating offscreen
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting && !counterEl.dataset.animated) {
+              requestAnimationFrame(step);
+              obs.disconnect();
+            }
+          });
+        }, { threshold: 0.4 });
+        obs.observe(counterEl);
       }
 
       // Animate chapter progress percent from 0 to target once per render
       const chapterEl = document.getElementById('chapterProgressValue');
       if (chapterEl && !chapterEl.dataset.animated) {
         const target = Math.max(0, Math.min(100, parseInt(chapterEl.getAttribute('data-target') || '0', 10)));
-        if (reduceMotion) {
-          chapterEl.textContent = String(target);
-          chapterEl.dataset.animated = 'true';
-        } else {
-          let startTs = null;
-          const duration = 900; // ms
-          const tick = (ts) => {
-            if (!startTs) startTs = ts;
-            const t = Math.min(1, (ts - startTs) / duration);
-            // easeOutCubic
-            const eased = 1 - Math.pow(1 - t, 3);
-            const val = Math.round(eased * target);
-            chapterEl.textContent = String(val);
-            if (t < 1) requestAnimationFrame(tick); else chapterEl.dataset.animated = 'true';
-          };
-          // Ensure initial 0 visible
-          chapterEl.textContent = '0';
-          requestAnimationFrame(tick);
-        }
-      }
-
-      // Disable Chart.js animations globally if reduced motion is requested
-      if (reduceMotion && window.Chart && window.Chart.defaults) {
-        try { window.Chart.defaults.animation = false; } catch (_) {}
-        try { if (window.Chart.defaults.animations) window.Chart.defaults.animations = {}; } catch (_) {}
+        let startTs = null;
+        const duration = 900; // ms
+        const tick = (ts) => {
+          if (!startTs) startTs = ts;
+          const t = Math.min(1, (ts - startTs) / duration);
+          // easeOutCubic
+          const eased = 1 - Math.pow(1 - t, 3);
+          const val = Math.round(eased * target);
+          chapterEl.textContent = String(val);
+          if (t < 1) requestAnimationFrame(tick); else chapterEl.dataset.animated = 'true';
+        };
+        // Ensure initial 0 visible
+        chapterEl.textContent = '0';
+        requestAnimationFrame(tick);
       }
 
       // Initialize Chart.js population pyramid if canvas exists
@@ -1764,7 +1732,6 @@ class YouthHealthLMS {
   initHomeScripts() {
     // Ensure AOS is active on home as well
     this.initAOS();
-    const reduceMotion = this.prefersReducedMotion();
 
     // Navbar scroll effect
     const handleScroll = () => {
@@ -1812,7 +1779,7 @@ class YouthHealthLMS {
           const target = document.querySelector(this.getAttribute("href"));
           if (target) {
             target.scrollIntoView({
-              behavior: reduceMotion ? "auto" : "smooth",
+              behavior: "smooth",
               block: "start",
             });
           }
@@ -1826,26 +1793,13 @@ class YouthHealthLMS {
       scrollToTopBtn.addEventListener("click", function () {
         window.scrollTo({
           top: 0,
-          behavior: reduceMotion ? "auto" : "smooth",
+          behavior: "smooth",
         });
       });
     }
 
     // Counter Animation Function
     const animateCounter = (element, target, duration = 2000, suffix = "") => {
-      if (reduceMotion) {
-        let numericTarget = target;
-        let targetSuffix = suffix;
-        if (typeof target === "string") {
-          const match = target.match(/^([\d.]+)([MBK%]?)$/);
-          if (match) {
-            numericTarget = parseFloat(match[1]);
-            targetSuffix = match[2];
-          }
-        }
-        element.textContent = numericTarget + targetSuffix;
-        return;
-      }
       let startTime = null;
       const startValue = 0;
 
