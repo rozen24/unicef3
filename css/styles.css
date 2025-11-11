@@ -2104,9 +2104,9 @@ img {
   transform-origin: 50% 50%;
   will-change: transform;
 }
-@keyframes globeSpin { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) {
-  .globe-rotate { animation: none; }
+@keyframes globeSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* ==================== FOOTER ==================== */
@@ -8992,7 +8992,7 @@ p.lead {
     right: 186px;
     width: 841px;
     height: 4px;
-    background-color: #1192D8;
+    background-color: #118DD0;
     transform: translateY(50%) rotate(147deg);
 }
 
