@@ -1695,7 +1695,7 @@ const coursesData = [
                 <h2 class="slide-title gradient-text" data-aos="fade-up">SDC related to adolescent health</h2>
 
                 <!-- SDG/SDC cards with distinct lean gradients, icons, and hover effects -->
-                <div class="row g-3">${[
+                <div class="row g-3 d-none">${[
                   {
                     label: "No Poverty",
                     icon: "fa-hand-holding-heart",
@@ -1750,6 +1750,108 @@ const coursesData = [
                 `
                   )
                   .join("")}</div>
+                   <!-- 2-column layout: first two images stacked in left column, third image beside them -->
+                    <div class="row g-3 sdc_main"> 
+                      <div class="col-12 col-md-6"><!-- three image start -->
+                        <div class="row g-3"><!-- two image start -->
+                          <div class="col-12" data-aos="zoom-in" data-aos-delay="80"><!-- image 1 -->
+                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                            <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
+                              <img
+                              src="img/sdc/1.jpg"
+                              alt="SDG highlight 1"
+                              class="img-zoom"
+                              loading="lazy"
+                              style=""
+                              />
+                            </figure>
+                            </article>
+                          </div>
+                          <div class="col-12" data-aos="zoom-in" data-aos-delay="110"><!-- image 2 -->
+                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                            <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
+                              <img
+                              src="img/sdc/2.webp"
+                              alt="SDG highlight 2"
+                              class="img-zoom"
+                              loading="lazy"
+                              style=""
+                              />
+                            </figure>
+                            </article>
+                          </div>
+                        </div><!-- two image end -->
+                      </div>
+                      <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="140"><!-- image 3 -->
+                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base h-100">
+                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
+                          <img
+                          src="img/sdc/3.png"
+                          alt="SDG highlight 3"
+                          class="img-zoom"
+                          loading="lazy"
+                          style=""
+                          />
+                        </figure>
+                        </article>
+                      </div>
+                    </div>
+
+                   <!-- Bottom row: 4 images -->
+                    <div class="row g-3 mt-0 sdc_main">
+                      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="170">
+                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
+                          <img
+                          src="img/sdc/4.png"
+                          alt="SDG related 4"
+                          class="img-zoom"
+                          loading="lazy"
+                          style=""
+                          />
+                        </figure>
+                        </article>
+                      </div>
+                      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
+                          <img
+                          src="img/sdc/5.webp"
+                          alt="SDG related 5"
+                          class="img-zoom"
+                          loading="lazy"
+                          style=""
+                          />
+                        </figure>
+                        </article>
+                      </div>
+                      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="230">
+                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
+                          <img
+                          src="img/sdc/6.png"
+                          alt="SDG related 6"
+                          class="img-zoom"
+                          loading="lazy"
+                          style=""
+                          />
+                        </figure>
+                        </article>
+                      </div>
+                      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="260">
+                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
+                          <img
+                          src="img/sdc/7.png"
+                          alt="SDG related 7"
+                          class="img-zoom"
+                          loading="lazy"
+                          style=""
+                          />
+                        </figure>
+                        </article>
+                      </div>
+                    </div>
               </div>`,
           },
           {

@@ -1434,6 +1434,13 @@ img {
 }
 
 /* ==================== SDG/SDC lean cards ==================== */
+.sdc_main .modern-card {
+  padding: 1.25rem;
+}
+.sdc_main .modern-card figure {
+  margin-bottom: 0 !important;
+
+}
 .sdg-lean-card {
   position: relative;
   padding: 1.25rem;
