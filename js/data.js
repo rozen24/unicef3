@@ -197,7 +197,7 @@ const coursesData = [
                 <span class="legend-item"><span class="legend-dot legend-young"></span> Young Adulthood (20–24)</span>
               </div>
 
-              <div class="age-track d-flex flex-wrap align-items-stretch justify-content-between gap-3" data-aos="fade-up" data-aos-delay="120">
+              <div class="age-track d-sm-block d-lg-flex align-items-stretch justify-content-between gap-3" data-aos="fade-up" data-aos-delay="120">
                 ${[
                   {
                     label: "Early Adolescence",
@@ -205,7 +205,7 @@ const coursesData = [
                     iconA: "fa-child",
                     iconB: "fa-person-dress",
                     color: "gradient-sky",
-                    img: "img/age/10-13.png",
+                    img: "img/age/1.png",
                   },
                   {
                     label: "Mid Adolescence",
@@ -213,7 +213,7 @@ const coursesData = [
                     iconA: "fa-child-reaching",
                     iconB: "fa-person",
                     color: "gradient-emerald",
-                    img: "img/age/14-16.png",
+                    img: "img/age/2.png",
                   },
                   {
                     label: "Late Adolescence",
@@ -221,7 +221,7 @@ const coursesData = [
                     iconA: "fa-person-walking",
                     iconB: "fa-person-dress",
                     color: "gradient-violet",
-                    img: "img/age/17-19.png",
+                    img: "img/age/3.png",
                   },
                   {
                     label: "Young Adulthood",
@@ -229,7 +229,7 @@ const coursesData = [
                     iconA: "fa-user",
                     iconB: "fa-user",
                     color: "gradient-tangerine",
-                    img: "img/age/20-24.png",
+                    img: "img/age/4.png",
                   },
                 ]
                   .map(
