@@ -123,6 +123,15 @@
 .region-mena { top: 40%; left: 54%; }
 .region-ssa { top: 60%; left: 52%; }
 .region-asia-pacific { top: 44%; left: 74%; }
+@media (max-width: 600px) {
+  .region-north-america { top: 10% !important; left: 18%; }
+  .region-latin-america { top: 58% !important; left: 30%; }
+  .region-europe { top: 18%!important; left: 52%; }
+  .region-mena { top: 40% !important; left: 53%; }
+  .region-ssa { top: 70% !important; left: 52%; }
+  .region-asia-pacific { top: 29% !important; left: 74%; }
+  .region-legend {display: none;}
+}
 
 /* Responsive heights similar to chart */
 @media (min-width: 992px) {
@@ -3558,7 +3567,7 @@ img {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #0025ff 100%);
+    background: linear-gradient(135deg, #0000004d 0%, #0090ff 100%);
     border: none;
     color: #ffffff;
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
@@ -8621,6 +8630,7 @@ p.lead {
   color: #fff;
   font-size: 24px;
 }
+
 .strong {
   color: var(--blue-gradient) !important;
 }
@@ -9137,4 +9147,7 @@ p.lead {
   }
 }
 
-
+@media(max-width: 600px) {
+  p.lead {
+  font-size: 21px; }
+}

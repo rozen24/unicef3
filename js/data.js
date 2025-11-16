@@ -622,7 +622,7 @@ const coursesData = [
                 <div class="container" style="position: relative">
                   <img src="img/Distribution/globe.jpg" class="img-fluid mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
                   <div class="globe-text-wrap">
-                    <h3 class="fw-bold display-5" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
+                    <h3 class="fw-bold" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
                     <p class="lead mt-2 text-dark">The world counts <strong>1.8 billion</strong> young people aged 10–24.</p>
                     <p class="mb-0 text-dark lead">Around <strong>90%</strong> live in developing countries.</p>
                   </div>
