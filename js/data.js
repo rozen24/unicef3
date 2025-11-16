@@ -817,7 +817,7 @@ const coursesData = [
 
                 <!-- Key Global Insights -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="40">
-                  <h5 class="gradient-text mb-2">Key global insights</h5>
+                  <h5 class="gradient-text mb-3">Key global insights</h5>
                   <div class="row g-3">
                     ${[
                       {
@@ -872,8 +872,8 @@ const coursesData = [
 
                 <!-- Top 5 Leading Causes of Death -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="80">
-                  <h5 class="gradient-text mb-2">Top 5 leading causes of death among adolescents are</h5>
-                  <div id="topCausesControls" class="d-flex gap-2 my-2">
+                  <h5 class="gradient-text my-3">Top 5 leading causes of death among adolescents are</h5>
+                  <div id="topCausesControls" class="d-flex gap-2 my-3">
                     <button class="btn btn-outline-primary btn-sm active" id="topCausesToggleChart"><i class="fa-solid fa-chart-bar me-1"></i> Chart</button>
                     <button class="btn btn-outline-primary btn-sm" id="topCausesToggleCards"><i class="fa-solid fa-grip me-1"></i> Cards</button>
                   </div>
@@ -964,7 +964,7 @@ const coursesData = [
 
                 <!-- Sex-disaggregated Top 5 Causes (UNICEF Adolescent Data Portal 2019) -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="60">
-                  <h5 class="gradient-text mb-2">According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:
+                  <h5 class="gradient-text mb-3">According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:
                   </h5>
                   <div class="row g-3">
                     <div class="col-lg-6">
@@ -1070,7 +1070,7 @@ const coursesData = [
 
                 <!-- Doughnut charts: Adolescents vs Young adults -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="80">
-                  <h5 class="gradient-text mb-2">Adolescent and young adult mortality in Bangladesh</h5>
+                  <h5 class="gradient-text mb-3">Adolescent and young adult mortality in Bangladesh</h5>
                   <div class="row g-3 align-items-stretch">
                     <div class="col-md-6">
                       <div class="modern-card glass-card h-100">
@@ -1368,7 +1368,7 @@ const coursesData = [
 
                 <!-- Issues infographic: 2x2 matrix cards with icons -->
                 <section class="issue-matrix" aria-labelledby="issue-matrix-title">
-                  <h3 id="issue-matrix-title" class="mb-2 gradient-text" data-aos="fade-up" data-aos-delay="80">Key domains</h3>
+                  <h3 id="issue-matrix-title" class="mb-3 gradient-text" data-aos="fade-up" data-aos-delay="80">Key domains</h3>
                   <div class="row g-3">
                     <!-- Health -->
                     <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
@@ -1381,14 +1381,15 @@ const coursesData = [
                           <li><span class="stat-chip"><span class="value">12.6</span><span class="unit">%</span></span> children and adolescents (7–17 years) suffer from diagnosable mental health condition</li>
                           <li>
                             NCD risk factors:
-                            <span class="stat-chip"><span class="value">14</span><span class="unit">%</span></span> one
-                            <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> two
-                            <span class="stat-chip"><span class="value">29</span><span class="unit">%</span></span> three
-                            <span class="stat-chip"><span class="value">34</span><span class="unit">%</span></span> four or more
+                            <span class="stat-chip"><span class="value">14</span><span class="unit">%</span></span> had one NCD risk factor while
+                            <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> had two,
+                            <span class="stat-chip"><span class="value">29</span><span class="unit">%</span></span> had three,
+                            <span class="stat-chip"><span class="value">34</span><span class="unit">%</span></span> had four or more NCD risk factors
                           </li>
-                          <li>Substance use (12–17 years): <span class="stat-chip"><span class="value">1.5</span><span class="unit">%</span></span></li>
-                          <li>Road accidents: ~<span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> adolescent mortality; students > <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of fatalities</li>
-                          <li>Internet addiction (13–19 years): <span class="stat-chip"><span class="value">24.1</span><span class="unit">%</span></span></li>
+                          <li>Prevalence of substance use among 12-17 years is <span class="stat-chip"><span class="value">1.5</span><span class="unit">%</span></span></li>
+                          <li>Road accidents are the leading cause of death for adolescents in Bangladesh, accounting for about ~<span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> of adolescent mortality, students made up over <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of all road accident fatalities
+Prevalence of Internet Addiction among 13-19 years is <span class="stat-chip"><span class="value">24.1</span><span class="unit">%</span></li>
+                          
                         </ul>
                         <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
                       </article>
@@ -1401,10 +1402,10 @@ const coursesData = [
                           <h6 class="issue-title">Nutrition</h6>
                         </div>
                         <ul class="stat-list">
-                          <li>Stunting: <span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> UM males</li>
-                          <li>Underweight: <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> UM males</li>
-                          <li>Overweight: <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> EM females; <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> UM females; <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> UM males</li>
-                          <li>Anemia: about <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> of adolescents</li>
+                          <li>Stunting: One-third of the female adolescents ( <span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> of ever-married and <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> of unmarried) were stunted, compared to one-fifth <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> of unmarried males.</li>
+                          <li>Underweight: Only <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> of ever-married adolescent females and <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> of unmarried adolescent females <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> of unmarried adolescent males are underweight.</li>
+                          <li>Overweight: Around <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of ever-married adolescent females and <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> of unmarried adolescent females and <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> unmarried adolescent males are overweight.</li>
+                          <li>Anemia: About one-third <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> of adolescents suffer from anemia</li>
                         </ul>
                         <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
                       </article>
@@ -1417,10 +1418,10 @@ const coursesData = [
                           <h6 class="issue-title">Education</h6>
                         </div>
                         <ul class="stat-list">
-                          <li>GER (secondary): <span class="stat-chip"><span class="value">74.81</span><span class="unit">%</span></span></li>
-                          <li>NER (secondary): <span class="stat-chip"><span class="value">72.20</span><span class="unit">%</span></span></li>
-                          <li>Secondary completion rate: <span class="stat-chip"><span class="value">65.1</span><span class="unit">%</span></span></li>
-                          <li>Dropout rate: <span class="stat-chip"><span class="value">32.85</span><span class="unit">%</span></span></li>
+                          <li>For secondary education, <br> The Gross Enrolment Ratio (GER) is <span class="stat-chip"><span class="value">74.81</span><span class="unit">%</span></span></li>
+                          <li>The Net Enrolment Rate (NER) is <span class="stat-chip"><span class="value">72.20</span><span class="unit">%</span></span></li>
+                          <li>Secondary education completion rate <span class="stat-chip"><span class="value">65.1</span><span class="unit">%</span></span></li>
+                          <li>Dropout rate is <span class="stat-chip"><span class="value">32.85</span><span class="unit">%</span></span></li>
                         </ul>
                         <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
                       </article>
@@ -1433,7 +1434,7 @@ const coursesData = [
                           <h6 class="issue-title">Protection</h6>
                         </div>
                         <ul class="stat-list">
-                          <li><span class="stat-chip"><span class="value">1</span>/<span class="value">5</span></span> adolescent girls and women face physical or sexual violence</li>
+                          <li><span class="stat-chip"><span class="value">One</span>/<span class="value">fifth</span></span> of adolescent girls and women, regardless of their marital status are victims of physical or sexual violence</li>
                           <li><span class="stat-chip"><span class="value">77</span><span class="unit">%</span></span> of married adolescent girls abused by their husbands</li>
                           <li>~<span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents in child labor</li>
                           <li>During monsoon, <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown; ~<span class="stat-chip"><span class="value">14,000</span></span> annually</li>
