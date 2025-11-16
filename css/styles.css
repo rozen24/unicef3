@@ -8906,6 +8906,11 @@ p.lead {
 .pyramid-steps { list-style:none; margin:0; padding:0; display: inline-grid;  gap:.5rem; }
 .pyramid-step { display:flex; align-items:center; gap:.6rem; padding:.65rem .8rem; border:1px solid rgba(0,0,0,.08); border-radius:12px; background:#fff; box-shadow: var(--shadow-sm); }
 .pyramid-step i { width:26px; text-align:center; }
+@media (max-width: 576px) {
+  .pyramid-steps {display: grid;}
+  .pyramid-head {display: block;}
+  .wrap-pyramid {text-align:;}
+  }
 
 /* ==================== Radial chart (center + inner + outer) ==================== */
 .radial-chart-section { margin: 1rem 0 2rem; }
@@ -8996,6 +9001,72 @@ p.lead {
   height: 650px;
 }
 /* My Codes */
+.pyramid-positive .pyramid-step:nth-child(1) {  
+    background-color: #1192D8; /* base */
+    color: #fff;
+  }
+  .pyramid-positive .pyramid-step:nth-child(2) { 
+    background-color: #2CA1DD; 
+    color: #fff;
+  }
+  .pyramid-positive .pyramid-step:nth-child(3) { 
+    background-color: #47AFE2; 
+    color: #fff;
+  }
+  .pyramid-positive .pyramid-step:nth-child(4) { 
+    background-color: #63BDE7; 
+    color: #07344E;
+  }
+  .pyramid-positive .pyramid-step:nth-child(5) { 
+    background-color: #7ECCEC; 
+    color: #07344E;
+  }
+  .pyramid-positive .pyramid-step:nth-child(6) { 
+    background-color: #99DAF1; 
+    color: #07344E;
+  }
+  .pyramid-positive .pyramid-step:nth-child(7) { 
+    background-color: #B5E6F6; 
+    color: #05324A;
+  }
+  .pyramid-positive .pyramid-step:nth-child(8) { 
+    background-color: #D1F2FB; 
+    color: #05324A;
+  }
+
+  /* Negative pyramid step positional + color ramp (base #E80B08 lightening downward) */
+  .pyramid-negative .pyramid-step:nth-child(1) { 
+    background-color: #FFE6E6; 
+    color: #460B0A;
+  }
+  .pyramid-negative .pyramid-step:nth-child(2) { 
+    background-color: #FECACA; 
+    color: #460B0A;
+  }
+  .pyramid-negative .pyramid-step:nth-child(3) { 
+    background-color: #FCABA9; 
+    color: #4A0C0B;
+  }
+  .pyramid-negative .pyramid-step:nth-child(4) { 
+    background-color: #F98B89; 
+    color: #4A0C0B;
+  }
+  .pyramid-negative .pyramid-step:nth-child(5) { 
+    background-color: #F56C6A; 
+    color: #4A0C0B;
+  }
+  .pyramid-negative .pyramid-step:nth-child(6) { 
+    background-color: #F14E4B; 
+    color: #fff;
+  }
+  .pyramid-negative .pyramid-step:nth-child(7) {
+    background-color: #ED2F2C; 
+    color: #fff;
+  }
+  .pyramid-negative .pyramid-step:nth-child(8) {
+    background-color: #E80B08; /* base */
+    color: #fff;
+  }
 @media (min-width: 992px) {
   /* Base arrow style for all pyramid steps */
   /* .pyramid-step {
