@@ -500,9 +500,6 @@ img {
   100% { background-position:   0% 50%; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .glow-title-float { animation: none; }
-}
 
 .gradient-bg {
   background: var(--primary-gradient);
@@ -7024,7 +7021,7 @@ dashboard-titled-title {
     padding: clamp(1.6rem, 3vw, 2.2rem);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: .5rem;
     backdrop-filter: blur(20px);
     justify-content: center;
     align-items: center;
@@ -7062,6 +7059,11 @@ dashboard-titled-title {
   font-size: 2.6rem;
   font-weight: 800;
   color: var(--unicef-deep);
+}
+@media (max-width: 576px) {
+  .completion-ring__value {
+    font-size: 1.2rem;
+  }
 }
 
 .completion-ring__label {
@@ -7354,22 +7356,6 @@ dashboard-titled-title {
   animation: sheenSweep 3s ease-in-out infinite;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .lesson-slide,
-  .lesson-slide::before,
-  .lesson-slide::after,
-  .lesson-slide .badge-pill::after,
-  .lesson-slide .stat-chip::after,
-  .quiz-progress-fill,
-  .progress-track__value,
-  .progress-track__value::after,
-  .quiz-option-button.active,
-  .quiz-option-button.active::before,
-  .quiz-option-button.active .quiz-option-state {
-    animation: none !important;
-    transition-duration: 0.01ms !important;
-  }
-}
 
 .progress-caption {
   margin-top: 0.8rem;
@@ -8778,10 +8764,7 @@ p.lead {
 }
 
 /* Reduced motion accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .age-track::after { animation: none; }
-  .animate-float-slow { animation: none; }
-}
+
 
 /* Legend styles for age track */
 .age-legend {
@@ -8845,9 +8828,7 @@ p.lead {
   .age-step::after { display: none; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .age-step::after { animation: none; }
-}
+
 
 /* ==================== LESSON 2: GLOBAL YOUTH MODULE ==================== */
 
@@ -8911,6 +8892,7 @@ p.lead {
 @media (max-width: 576px) {
   .pyramid-steps {display: grid;}
   .pyramid-head {display: block;}
+  .wrap-pyramid {text-align: center;}
   }
 
 /* ==================== Radial chart (center + inner + outer) ==================== */

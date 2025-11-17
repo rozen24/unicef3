@@ -2342,9 +2342,19 @@ class YouthHealthLMS {
 
     const courseSummaries = coursesData.map((course) => {
       const lessonsCollection = course.lessons || course.lessions || [];
+      const chaptersCollection = Array.isArray(course.chapters)
+        ? course.chapters
+        : [];
       const progressEntry = this.getUserProgress(course.id);
+      const doneSet = new Set(progressEntry?.completedlessions || []);
       const completedLessons = progressEntry?.completedlessions?.length || 0;
       const totalLessons = lessonsCollection.length;
+      const totalModules = chaptersCollection.length;
+      const completedModules = totalModules
+        ? chaptersCollection.filter((chapter) =>
+            doneSet.has(`${chapter.id}-quiz`)
+          ).length
+        : 0;
       const progressPercent = this.calculateProgress(course);
       const completed = this.isCourseCompleted(course.id);
       const nextLesson =
@@ -2355,7 +2365,9 @@ class YouthHealthLMS {
       return {
         course,
         totalLessons,
+        totalModules,
         completedLessons,
+        completedModules,
         progressPercent,
         completed,
         statusLabel: completed
@@ -2387,11 +2399,24 @@ class YouthHealthLMS {
       (sum, item) => sum + item.completedLessons,
       0
     );
+    const totalModules = courseSummaries.reduce(
+      (sum, item) => sum + (item.totalModules || 0),
+      0
+    );
+    const completedModules = courseSummaries.reduce(
+      (sum, item) => sum + (item.completedModules || 0),
+      0
+    );
     const remainingLessons = Math.max(totalLessons - completedLessons, 0);
-    const overallProgress =
-      totalLessons > 0
-        ? Math.round((completedLessons / totalLessons) * 100)
-        : 0;
+    const overallProgress = (() => {
+      if (totalModules > 0) {
+        return Math.round((completedModules / totalModules) * 100);
+      }
+      if (totalLessons > 0) {
+        return Math.round((completedLessons / totalLessons) * 100);
+      }
+      return 0;
+    })();
 
     const activeCourse =
       courseSummaries.find(
@@ -2518,9 +2543,9 @@ class YouthHealthLMS {
                     </div>
                     <ul class="dashboard-stat-list">
                       <li>
-                        <span class="stat-label">Module Completed :&nbsp;</span>
+                        <span class="stat-label">Modules Completed:&nbsp;</span>
                         <span class="stat-value">${formatNumber(
-                          completedLessons
+                          completedModules
                         )}</span>
                       </li>
                     </ul>
