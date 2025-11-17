@@ -7017,14 +7017,17 @@ dashboard-titled-title {
 }
 
 .dashboard-hero__stats {
+    
     background: var(--glass-border);
     border: 1px solid rgba(255, 255, 255, 0.28);
     border-radius: var(--radius-lg);
     padding: clamp(1.6rem, 3vw, 2.2rem);
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
     backdrop-filter: blur(20px);
     justify-content: center;
+    align-items: center;
 }
 
 .completion-ring {
@@ -8908,7 +8911,6 @@ p.lead {
 @media (max-width: 576px) {
   .pyramid-steps {display: grid;}
   .pyramid-head {display: block;}
-  .wrap-pyramid {text-align:;}
   }
 
 /* ==================== Radial chart (center + inner + outer) ==================== */
