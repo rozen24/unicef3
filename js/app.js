@@ -2554,7 +2554,7 @@ class YouthHealthLMS {
               </div>
             </section>
 
-            <section class="dashboard-chapters my-5">
+            <section class="dashboard-chapters">
               <div class="dashboard-section-header">
               </div>
               ${coursesData
@@ -3227,10 +3227,12 @@ class YouthHealthLMS {
 
       // Mobile offcanvas lesson browser (chapters)
       const mobileBrowseBtn = `
-        <div class="d-lg-none mt-3">
-          <button class="btn btn-primary w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
-            <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
-          </button>
+        <div class="lesson-mobile-actions d-lg-none">
+          <div class="container">
+            <button class="btn btn-primary w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
+              <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+            </button>
+          </div>
         </div>`;
 
       const mobileOffcanvas = `
@@ -3361,16 +3363,18 @@ class YouthHealthLMS {
                     ></div>
                   </div>
                   <div class="lesson-progress__meta">
-                    <span class="lesson-progress__label">Course progress:</span>
-                    <span class="lesson-progress__value">&nbsp;${courseProgressDisplay}%</span>
+                    <div class="lesson-progress__course">
+                      <span class="lesson-progress__label">Course progress:</span>
+                      <span class="lesson-progress__value">&nbsp;${courseProgressDisplay}%</span>
+                    </div>
+                    ${
+                      totalLessons > 0
+                        ? `<span class="lesson-progress__caption">Module ${
+                            chIndex + 1
+                          } progress: <span id="chapterProgressValue" data-target="${chapterProgressDisplay}">0</span>%</span>`
+                        : ""
+                    }
                   </div>
-                  ${
-                    totalLessons > 0
-                      ? `<div class="lesson-progress__caption">Module ${
-                          chIndex + 1
-                        } progress: <span id="chapterProgressValue" data-target="${chapterProgressDisplay}">0</span>%</div>`
-                      : ""
-                  }
                 </div>
                 <div class="lesson-hero__counts">
                   <span class="lesson-pill">Module ${
@@ -3381,10 +3385,10 @@ class YouthHealthLMS {
                   } of ${totalLessons}</span>
                 </div>
               </div>
-              ${mobileBrowseBtn}
-                
             </div>
           </header>
+
+          ${mobileBrowseBtn}
 
           <section class="lesson-body">
             <div class="container">
