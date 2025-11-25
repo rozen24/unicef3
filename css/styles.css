@@ -7597,7 +7597,7 @@ dashboard-titled-title {
   display: grid;
   gap: 0.55rem;
   max-width: min(420px, 100%);
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 .lesson-progress {
@@ -7620,14 +7620,13 @@ dashboard-titled-title {
 
 .lesson-progress__meta {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(226, 240, 255, 0.78);
-  flex-wrap: wrap;
 }
 
 .lesson-progress__label {
@@ -7645,14 +7644,12 @@ dashboard-titled-title {
   font-size: 0.8rem;
   color: rgba(226, 240, 255, 0.82);
   letter-spacing: 0.02em;
-  white-space: nowrap;
 }
 
 .lesson-progress__course {
   display: inline-flex;
   align-items: baseline;
   gap: 0.35rem;
-  white-space: nowrap;
 }
 
 .lesson-hero__stats {
@@ -8202,8 +8199,9 @@ dashboard-titled-title {
   .lesson-progress__meta {
     flex-direction: row;
     flex-wrap: nowrap;
+    align-items: baseline;
     justify-content: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
     font-size: 0.68rem;
   }
 
