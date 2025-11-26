@@ -332,7 +332,7 @@ html {
 body {
   font-family: var(--font-secondary);
   color: #1a202c;
-  background-color: #f7fafc;
+  background-color: var(--hero-gradient) !important;
   line-height: 1.7;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -2724,6 +2724,7 @@ img {
   position: relative;
   margin-top: -4.5rem;
   padding: 4.5rem 0 0;
+  background-color: var(--hero-gradient) !important;
 }
 
 .quiz-panel {
@@ -3130,6 +3131,7 @@ img {
   .quiz-body {
     margin-top: -3.5rem;
     padding-top: 4rem;
+    background-color: var(--hero-gradient) !important;
   }
 
   .quiz-panel,
@@ -7810,7 +7812,8 @@ dashboard-titled-title {
 }
 
 .lesson-content-card {
-  background: rgba(255, 255, 255, 0.97);
+  /* background: rgba(255, 255, 255, 0.97); */
+  background-color: var(--hero-gradient) !important;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(0, 95, 175, 0.12);

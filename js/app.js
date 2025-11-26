@@ -3341,13 +3341,17 @@ class YouthHealthLMS {
           <header class="lesson-hero">
             <div class="container">
               <div class="lesson-hero__top">
-                <button class="lesson-back" onclick="app.navigateTo('dashboard')">
-                  <i class="fa-solid fa-arrow-left-long"></i>
-                  Back to dashboard
-                </button>
                 <button class="btn btn-primary d-none d-lg-block" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
                   <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
                 </button>
+                 <div class="lesson-hero__counts">
+                  <span class="lesson-pill">Module ${
+                    chIndex + 1
+                  } of ${totalChapters}</span>
+                  <span class="lesson-pill">Lesson ${
+                    activeIndex + 1
+                  } of ${totalLessons}</span>
+                </div>
                 <div class="lesson-hero__progress">
                   <div
                     class="lesson-progress"
@@ -3376,14 +3380,10 @@ class YouthHealthLMS {
                     }
                   </div>
                 </div>
-                <div class="lesson-hero__counts">
-                  <span class="lesson-pill">Module ${
-                    chIndex + 1
-                  } of ${totalChapters}</span>
-                  <span class="lesson-pill">Lesson ${
-                    activeIndex + 1
-                  } of ${totalLessons}</span>
-                </div>
+                <button class="lesson-back" onclick="app.navigateTo('dashboard')">
+                  <i class="fa-solid fa-arrow-left-long"></i>
+                  Back to dashboard
+                </button>
               </div>
             </div>
           </header>
