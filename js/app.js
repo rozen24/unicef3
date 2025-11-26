@@ -814,8 +814,11 @@ class YouthHealthLMS {
                   const step = Math.max(8, Math.abs(next - prev) / 2); // fallback minimum thickness
                   const top = center - step / 2;
                   const height = step;
-                  ctx.fillStyle = "rgba(234, 88, 12, 0.08)"; // subtle orange wash
+                  ctx.fillStyle = "rgba(253, 4, 4, 0.28)"; // subtle orange wash
                   ctx.fillRect(chartArea.left, top, chartArea.right - chartArea.left, height);
+                  ctx.strokeStyle = "rgba(253, 92, 48, 0.65)";
+                  ctx.lineWidth = 1.5;
+                  ctx.strokeRect(chartArea.left, top, chartArea.right - chartArea.left, height);
                 });
                 ctx.restore();
               } catch (_) {}
@@ -1400,7 +1403,7 @@ class YouthHealthLMS {
           const top3Idx = valuesHM
             .map((v, i) => [v, i])
             .sort((a, b) => b[0] - a[0])
-            .slice(0, 3)
+            .slice(0, 1)
             .map(([, i]) => i);
           const paletteHM = [
             "#ff0000ff", // Bangladesh

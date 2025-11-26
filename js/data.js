@@ -271,22 +271,22 @@ const coursesData = [
               <div class="row g-3 mt-3">
                 ${[
                   {
-                    title: "Early 10–13",
+                    title: "Early Adolescence",
                     icon: "fa-seedling",
                     text: "Rapid growth begins; guidance on body changes and healthy habits is essential.",
                   },
                   {
-                    title: "Mid 14–16",
+                    title: "Mid Adolescence",
                     icon: "fa-compass",
                     text: "Identity exploration and peer influence increase—support positive choices.",
                   },
                   {
-                    title: "Late 17–19",
+                    title: "Late Adolescence",
                     icon: "fa-graduation-cap",
                     text: "Transitions to higher studies or work—build life skills and resilience.",
                   },
                   {
-                    title: "Young Adult 20–24",
+                    title: "Young Adulthood",
                     icon: "fa-rocket",
                     text: "Greater independence—focus on wellbeing, employability, and leadership.",
                   },
@@ -539,7 +539,7 @@ const coursesData = [
                 .map(
                   (s, i) => `
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="${
-                120 + i * 40
+                1 + i * 40
               }">
               <div class="step-card bg-gradient-${
                 s.color
@@ -622,7 +622,7 @@ const coursesData = [
                 <div class="container" style="position: relative">
                   <img src="img/Distribution/globe.jpg" class="img-fluid mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
                   <div class="globe-text-wrap">
-                    <h3 class="fw-bold" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
+                    <h3 class="fw-bold map-text" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
                     <p class="lead mt-2 text-dark">The world counts <strong>1.8 billion</strong> young people aged 10–24.</p>
                     <p class="mb-0 text-dark lead">Around <strong>90%</strong> live in developing countries.</p>
                   </div>
@@ -635,9 +635,9 @@ const coursesData = [
                   <div class="row g-3 align-items-center">
                     <div class="col-lg-12">
                       <div class="modern-card glass-card h-region">
-                        <h5 class="mb-3">Regional Youth Share</h5>
+                        <h5 class="mb-3">Global youth population by region. </h5>
                         <div style="position:relative; height:340px;">
-                          <canvas id="regionalShareChart" aria-label="Regional Youth Share" role="img"></canvas>
+                          <canvas id="regionalShareChart" aria-label="Global youth population by region. " role="img"></canvas>
                         </div>
                       </div>
                     </div>
@@ -645,12 +645,12 @@ const coursesData = [
                 </div>
               </section>
 
-              <!-- Step 3 – Population Pyramid (Chart.js) -->
+              <!-- Step 3 – POPULATION & HOUSING CENSUS 2022 (Chart.js) -->
               <section class="population-pyramid-wrapper py-4 mb-4" data-aos="fade-up">
                 <div class="modern-card glass-card">
-                  <h5 class="mb-3">Population Pyramid</h5>
+                  <h5 class="mb-3">POPULATION & HOUSING CENSUS 2022</h5>
                   <div style="position:relative; height:420px;">
-                    <canvas id="populationPyramid" aria-label="Population Pyramid" role="img"></canvas>
+                    <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
                   </div>
                 </div>
               </section>
@@ -661,7 +661,6 @@ const coursesData = [
                   <div class="row align-items-center g-3 modern-card glass-card">
                       <div class="col-md-8" style="padding:1.5rem;">
                         <h5>Distribution of Young People</h5>
-                        <p>There are over <strong>1.8 billion</strong> youth in the world today, 90 per cent of whom live in developing countries.</p>
                         <p class="mb-0"><strong>Bangladesh:</strong> <strong>49.5 million</strong> young people (~30% of total population).</p>
                       </div>
                       <div class="col-md-4">
@@ -712,22 +711,22 @@ const coursesData = [
                     <div class="modern-card glass-card icon-spin-on-hover dividend-card">
                       <div class="dividend-icon bg-gradient-blue"><i class="fa-solid fa-heart-pulse"></i></div>
                       <h6 class="mb-1">Healthy young population now</h6>
-                      <p class="mb-2 text-muted">1.8 billion people aged 10–24 years</p>
-                      <span class="badge-pill">1.8B aged 10–24</span>
+                      <p class="mb-2 text-muted"></p>
+                      <span class="badge-pill"></span>
                     </div>
                   </div>
                   <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
                     <div class="modern-card glass-card icon-spin-on-hover dividend-card">
                       <div class="dividend-icon bg-gradient-green"><i class="fa-solid fa-briefcase"></i></div>
                       <h6 class="mb-1">Future healthy adult workforce</h6>
-                      <p class="mb-0 text-muted">Productive, resilient, skilled</p>
+                      <p class="mb-0 text-muted"></p>
                     </div>
                   </div>
                   <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="modern-card glass-card icon-spin-on-hover dividend-card">
                       <div class="dividend-icon bg-gradient-orange"><i class="fa-solid fa-baby"></i></div>
                       <h6 class="mb-1">Healthy next generation of children</h6>
-                      <p class="mb-0 text-muted">Breaking intergenerational cycles</p>
+                      <p class="mb-0 text-muted"></p>
                     </div>
                   </div>
                 </div>
@@ -746,7 +745,6 @@ const coursesData = [
                     </div>
                   </div>
                 </div>
-
                 <!-- Demographic Pyramid Compare -->
                 <h5 class="gradient-text mt-4" data-aos="fade-up">Pathways to harnessing the Demographic Dividend</h5>
                 <div class="row g-3 pyramid-compare" data-aos="fade-up" data-aos-delay="80">
@@ -784,6 +782,8 @@ const coursesData = [
                     </div>
                   </div>                  
                 </div>
+                <p class="small text-muted mt-3 mb-0">Ref: Our Future: A Lancet Commission on Adolescent  Health and Wellbeing; Patton et al. 2016.</p>
+
               </div>`;
             })(),
           },

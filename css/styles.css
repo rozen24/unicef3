@@ -5154,7 +5154,7 @@ input::placeholder {
   border-radius: 12px;
   border-left: 5px solid;
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 1rem;
   transition: all 0.3s ease;
 }
@@ -8654,7 +8654,10 @@ dashboard-titled-title {
 }
 p.lead {
   color: #fff;
-  font-size: 24px;
+  font-size: 32px;
+}
+.map-text {
+  font-size: 5rem  !important;
 }
 
 .strong {
