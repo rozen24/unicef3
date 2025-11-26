@@ -1821,6 +1821,11 @@ img {
 
     /* ===== Responsive ===== */
     @media (max-width: 600px) {
+      .orbit-title {
+        font-size: 10px;
+      }
+    }
+    @media (max-width: 560px) {
       .orbit-center .orbit-card {
         width: 100px;
         height: 100px;

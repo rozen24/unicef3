@@ -596,7 +596,7 @@ const coursesData = [
         lessons: [
           {
             id: "ch2-lesson-1",
-            title: "Global Youth Population and Demographics",
+            title: "Global Young Population and Demographics",
             icon: "fa-map-location-dot",
             gradientClass: "bg-gradient-blue",
             audioFile: "",
@@ -615,7 +615,7 @@ const coursesData = [
             content: (function () {
               return `
             <div class="lesson-slide">
-              <h2 class="slide-title gradient-text" data-aos="fade-up">Global Youth Population and Demographics</h2>
+              <h2 class="slide-title gradient-text" data-aos="fade-up">Global Young Population and Demographics</h2>
 
               <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
               <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
