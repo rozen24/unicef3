@@ -1890,8 +1890,8 @@ img {
   border-radius: 999px;
   font-weight: 700;
   font-size: .9rem;
-  background: rgb(89 188 252);
-  color: #ffffff;
+  background: rgb(89 188 252 / 11%);
+  color: #000000;
   border: 1px solid rgba(255,255,255,0.35);
   backdrop-filter: blur(6px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12) inset, 0 2px 8px rgba(0,0,0,0.08);

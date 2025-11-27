@@ -635,7 +635,7 @@ const coursesData = [
                   <div class="row g-3 align-items-center">
                     <div class="col-lg-12">
                       <div class="modern-card glass-card h-region">
-                        <h5 class="mb-3">Global youth population by region. </h5>
+                        <h5 class="mb-3">Global youth population by region </h5>
                         <div style="position:relative; height:340px;">
                           <canvas id="regionalShareChart" aria-label="Global youth population by region. " role="img"></canvas>
                         </div>
@@ -1395,7 +1395,7 @@ const coursesData = [
                         <article class="issue-panel">
                           
                           <ul class="stat-list">
-                            <li>Stunting: One-third of the female adolescents ( <span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> of ever-married and <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> of unmarried) were stunted, compared to one-fifth <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> of unmarried males.</li>
+                            <li>Stunting: One-third of the female adolescents (<span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> of ever-married and <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> of unmarried) were stunted, compared to one-fifth <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> of unmarried males.</li>
                             <li>Underweight: Only <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> of ever-married adolescent females and <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> of unmarried adolescent females <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> of unmarried adolescent males are underweight.</li>
                             <li>Overweight: Around <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of ever-married adolescent females and <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> of unmarried adolescent females and <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> unmarried adolescent males are overweight.</li>
                             <li>Anemia: About one-third <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> of adolescents suffer from anemia</li>
@@ -1559,7 +1559,7 @@ const coursesData = [
                         ]
                           .map(
                             (d) => `
-                          <div class="col-sm-6 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="${d.delay}">
+                          <div class="col-sm-6 col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="${d.delay}">
                             <div class="component-card hover-lift-sm hover-shadow-glow transition-base">
                               <div class="component-icon ${d.color} animate-float" aria-hidden="true">
                                 <i class="fas ${d.icon}"></i>
@@ -1683,7 +1683,7 @@ const coursesData = [
           },
           {
             id: "ch2-lesson-9",
-            title: "SDC related to adolescent health.",
+            title: "SDG related to adolescent health.",
             icon: "fa-diagram-project",
             gradientClass: "bg-gradient-violet",
             audioFile: "",
@@ -1700,7 +1700,7 @@ const coursesData = [
             },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">SDC related to adolescent health</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">SDG related to adolescent health</h2>
 
                 <!-- SDG/SDC cards with distinct lean gradients, icons, and hover effects -->
                 <div class="row g-3 d-none">${[
@@ -2122,11 +2122,7 @@ const coursesData = [
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">A combined effort</h2>
 
-                <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="60">
-                  <h5 class="mb-1">A combined effort</h5>
-                  <p class="mb-1">Institutions and individuals can help protect adolescents from harm.</p>
-                  <p class="mb-0">So too can teaching them healthy habits.</p>
-                </div>
+                
                 <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="60">
                   <div class="">
                     <img src="img/effort-new.png" alt="A combined effort infographic" class="img-fluid rounded-4 shadow-sm" />
