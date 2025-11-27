@@ -1369,81 +1369,97 @@ const coursesData = [
                 <!-- Issues infographic: 2x2 matrix cards with icons -->
                 <section class="issue-matrix" aria-labelledby="issue-matrix-title">
                   <h3 id="issue-matrix-title" class="mb-3 gradient-text" data-aos="fade-up" data-aos-delay="80">Key domains</h3>
-                  <div class="row g-3">
+                  <div class="row shadow-sm rounded-4 overflow-hidden">
                     <!-- Health -->
-                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                      <article class="issue-panel bg-gradient-emerald">
-                        <div class="issue-head">
-                          <div class="issue-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                          <h6 class="issue-title">Health</h6>
-                        </div>
-                        <ul class="stat-list">
-                          <li><span class="stat-chip"><span class="value">12.6</span><span class="unit">%</span></span> children and adolescents (7–17 years) suffer from diagnosable mental health condition</li>
-                          <li>
-                            NCD risk factors:
-                            <span class="stat-chip"><span class="value">14</span><span class="unit">%</span></span> had one NCD risk factor while
-                            <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> had two,
-                            <span class="stat-chip"><span class="value">29</span><span class="unit">%</span></span> had three,
-                            <span class="stat-chip"><span class="value">34</span><span class="unit">%</span></span> had four or more NCD risk factors
-                          </li>
-                          <li>Prevalence of substance use among 12-17 years is <span class="stat-chip"><span class="value">1.5</span><span class="unit">%</span></span></li>
-                          <li>Road accidents are the leading cause of death for adolescents in Bangladesh, accounting for about ~<span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> of adolescent mortality, students made up over <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of all road accident fatalities
-Prevalence of Internet Addiction among 13-19 years is <span class="stat-chip"><span class="value">24.1</span><span class="unit">%</span></li>
+                    <div class="health row g-1">
+                      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                        <article class="issue-panel">
+                          <ul class="stat-list">
+                            <li><span class="stat-chip"><span class="value">12.6</span><span class="unit">%</span></span> children and adolescents (7–17 years) suffer from diagnosable mental health condition</li>
+                            <li>
+                              NCD risk factors:
+                              <span class="stat-chip"><span class="value">14</span><span class="unit">%</span></span> had one NCD risk factor while
+                              <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> had two,
+                              <span class="stat-chip"><span class="value">29</span><span class="unit">%</span></span> had three,
+                              <span class="stat-chip"><span class="value">34</span><span class="unit">%</span></span> had four or more NCD risk factors
+                            </li>
+                            <li>Prevalence of substance use among 12-17 years is <span class="stat-chip"><span class="value">1.5</span><span class="unit">%</span></span></li>
+                            <li>Road accidents are the leading cause of death for adolescents in Bangladesh, accounting for about ~<span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> of adolescent mortality, students made up over <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of all road accident fatalities
+                                  Prevalence of Internet Addiction among 13-19 years is <span class="stat-chip"><span class="value">24.1</span><span class="unit">%</span></li>
+                            
+                          </ul>
+                        </article>
+                      </div>
+                      <!-- Nutrition -->
+                      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
+                        <article class="issue-panel">
                           
-                        </ul>
-                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
-                      </article>
+                          <ul class="stat-list">
+                            <li>Stunting: One-third of the female adolescents ( <span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> of ever-married and <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> of unmarried) were stunted, compared to one-fifth <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> of unmarried males.</li>
+                            <li>Underweight: Only <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> of ever-married adolescent females and <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> of unmarried adolescent females <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> of unmarried adolescent males are underweight.</li>
+                            <li>Overweight: Around <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of ever-married adolescent females and <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> of unmarried adolescent females and <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> unmarried adolescent males are overweight.</li>
+                            <li>Anemia: About one-third <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> of adolescents suffer from anemia</li>
+                          </ul>
+                        </article>
+                      </div>
                     </div>
-                    <!-- Nutrition -->
-                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
-                      <article class="issue-panel bg-gradient-rose">
-                        <div class="issue-head">
-                          <div class="issue-icon"><i class="fa-solid fa-utensils"></i></div>
+                    
+                    
+
+                    <div class="issue-cross-wrapper" data-aos="zoom-in" data-aos-delay="130">
+                      <div class="issue-cross-lines" aria-hidden="true">
+                        <span class="issue-cross-line issue-cross-line--vertical"></span>
+                        <span class="issue-cross-line issue-cross-line--horizontal"></span>
+                      </div>
+                      <div class="issue-cross-grid">
+                        <article class="issue-cross-card">
+                          <span class="issue-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                          <h6 class="issue-title">Health</h6>
+                        </article>
+                        <article class="issue-cross-card">
+                          <span class="issue-icon"><i class="fa-solid fa-utensils"></i></span>
                           <h6 class="issue-title">Nutrition</h6>
-                        </div>
-                        <ul class="stat-list">
-                          <li>Stunting: One-third of the female adolescents ( <span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> of ever-married and <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> of unmarried) were stunted, compared to one-fifth <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> of unmarried males.</li>
-                          <li>Underweight: Only <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> of ever-married adolescent females and <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> of unmarried adolescent females <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> of unmarried adolescent males are underweight.</li>
-                          <li>Overweight: Around <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of ever-married adolescent females and <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> of unmarried adolescent females and <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> unmarried adolescent males are overweight.</li>
-                          <li>Anemia: About one-third <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> of adolescents suffer from anemia</li>
-                        </ul>
-                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
-                      </article>
-                    </div>
-                    <!-- Education -->
-                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="140">
-                      <article class="issue-panel bg-gradient-blue">
-                        <div class="issue-head">
-                          <div class="issue-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        </article>
+                        <article class="issue-cross-card">
+                          <span class="issue-icon"><i class="fa-solid fa-graduation-cap"></i></span>
                           <h6 class="issue-title">Education</h6>
-                        </div>
-                        <ul class="stat-list">
-                          <li>For secondary education, <br> The Gross Enrolment Ratio (GER) is <span class="stat-chip"><span class="value">74.81</span><span class="unit">%</span></span></li>
-                          <li>The Net Enrolment Rate (NER) is <span class="stat-chip"><span class="value">72.20</span><span class="unit">%</span></span></li>
-                          <li>Secondary education completion rate <span class="stat-chip"><span class="value">65.1</span><span class="unit">%</span></span></li>
-                          <li>Dropout rate is <span class="stat-chip"><span class="value">32.85</span><span class="unit">%</span></span></li>
-                        </ul>
-                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
-                      </article>
-                    </div>
-                    <!-- Protection -->
-                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
-                      <article class="issue-panel bg-gradient-violet">
-                        <div class="issue-head">
-                          <div class="issue-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                        </article>
+                        <article class="issue-cross-card">
+                          <span class="issue-icon"><i class="fa-solid fa-shield-heart"></i></span>
                           <h6 class="issue-title">Protection</h6>
-                        </div>
-                        <ul class="stat-list">
-                          <li><span class="stat-chip"><span class="value">One</span>/<span class="value">fifth</span></span> of adolescent girls and women, regardless of their marital status are victims of physical or sexual violence</li>
-                          <li><span class="stat-chip"><span class="value">77</span><span class="unit">%</span></span> of married adolescent girls abused by their husbands</li>
-                          <li>~<span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents in child labor</li>
-                          <li>During monsoon, <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown; ~<span class="stat-chip"><span class="value">14,000</span></span> annually</li>
-                          <li>~<span class="stat-chip"><span class="value">89</span><span class="unit">%</span></span> children (~<span class="stat-chip"><span class="value">45</span><span class="unit">M</span></span>) experience violent discipline at home</li>
-                        </ul>
-                        <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
-                      </article>
+                        </article>
+                      </div>
                     </div>
+                    <div class="education row g-1">
+                       <!-- Education -->
+                      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="140">
+                        <article class="issue-panel">
+                          <ul class="stat-list">
+                            <li>For secondary education, <br> The Gross Enrolment Ratio (GER) is <span class="stat-chip"><span class="value">74.81</span><span class="unit">%</span></span></li>
+                            <li>The Net Enrolment Rate (NER) is <span class="stat-chip"><span class="value">72.20</span><span class="unit">%</span></span></li>
+                            <li>Secondary education completion rate <span class="stat-chip"><span class="value">65.1</span><span class="unit">%</span></span></li>
+                            <li>Dropout rate is <span class="stat-chip"><span class="value">32.85</span><span class="unit">%</span></span></li>
+                          </ul>
+                        </article>
+                      </div>
+                      <!-- Protection -->
+                      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
+                        <article class="issue-panel">
+                          
+                          <ul class="stat-list">
+                            <li><span class="stat-chip"><span class="value">One</span>/<span class="value">fifth</span></span> of adolescent girls and women, regardless of their marital status are victims of physical or sexual violence</li>
+                            <li><span class="stat-chip"><span class="value">77</span><span class="unit">%</span></span> of married adolescent girls abused by their husbands</li>
+                            <li>~<span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents in child labor</li>
+                            <li>During monsoon, <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown; ~<span class="stat-chip"><span class="value">14,000</span></span> annually</li>
+                            <li>~<span class="stat-chip"><span class="value">89</span><span class="unit">%</span></span> children (~<span class="stat-chip"><span class="value">45</span><span class="unit">M</span></span>) experience violent discipline at home</li>
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                    
                   </div>
+                  <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>Source: add citation(s)</div>
+
                 </section>
               </div>`,
           },
