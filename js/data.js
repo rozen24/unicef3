@@ -2050,34 +2050,72 @@ const coursesData = [
                 <h2 class="slide-title gradient-text" data-aos="fade-up">Bangladesh Government’s commitment</h2>
 
                 <!-- Infographic: Policy evolution snapshot (distinct from timeline) -->
-                <section class="flow-chart" aria-labelledby="bd-commitment-flow-title">
-                  <div class="flow-rows">
-                    <!-- Row 1: Strategy evolution -->
-                    <div class="flow-row" data-aos="fade-up" data-aos-delay="100">
-                      <div class="flow-node tl-blue">
-                        <div class="flow-node-icon"><i class="fa-solid fa-book-open"></i></div>
-                        <div class="flow-node-title">National Adolescent Reproductive Health Strategy</div>
-                        <div class="flow-node-sub">2006–2015</div>
+                <section class="flow-chart policy-journey" aria-labelledby="bd-commitment-flow-title">
+                  <div class="policy-journey-grid" id="bd-commitment-flow-title" role="list">
+                    <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="80">
+                      <div class="policy-journey-seal bg-gradient-blue">
+                        <span class="policy-journey-step">Step 01</span>
+                        <span class="policy-journey-years">2006–2015</span>
                       </div>
-                      <div class="flow-arrow" aria-hidden="true"></div>
-                      <div class="flow-node tl-emerald">
-                        <div class="flow-node-icon"><i class="fa-solid fa-flag-checkered"></i></div>
-                        <div class="flow-node-title">National Adolescent Health Strategy</div>
-                        <div class="flow-node-sub">2017–2030</div>
+                      <figure class="policy-journey-media">
+                        <img src="img/policies/national-strategy.jpg" alt="National Adolescent Reproductive Health Strategy cover" loading="lazy" />
+                      </figure>
+                      <div class="policy-journey-body">
+                        <div class="policy-journey-icon bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-book-open"></i></div>
+                        <div>
+                          <h6 class="policy-journey-title">National Adolescent Reproductive Health Strategy</h6>
+                          <p class="policy-journey-copy">First nationwide SRHR blueprint anchoring adolescent-focused services and standards.</p>
+                        </div>
                       </div>
-                    </div>
-                    <!-- Row 2: Action plan evolution -->
-                    <div class="flow-row" data-aos="fade-up" data-aos-delay="140">
-                      <div class="flow-node tl-violet">
-                        <div class="flow-node-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-                        <div class="flow-node-title">National Plan of Action for Adolescent Health Strategy</div>
+                    </article>
+                    <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="120">
+                      <div class="policy-journey-seal bg-gradient-emerald">
+                        <span class="policy-journey-step">Step 02</span>
+                        <span class="policy-journey-years">2017–2030</span>
                       </div>
-                      <div class="flow-arrow" aria-hidden="true"></div>
-                      <div class="flow-node tl-rose">
-                        <div class="flow-node-icon"><i class="fa-solid fa-coins"></i></div>
-                        <div class="flow-node-title">National Costed Action Plan for Adolescent Health Strategy</div>
+                      <figure class="policy-journey-media">
+                        <img src="img/policies/national-strategy.jpg" alt="National Adolescent Health Strategy cover" loading="lazy" />
+                      </figure>
+                      <div class="policy-journey-body">
+                        <div class="policy-journey-icon bg-gradient-emerald" aria-hidden="true"><i class="fa-solid fa-flag-checkered"></i></div>
+                        <div>
+                          <h6 class="policy-journey-title">National Adolescent Health Strategy</h6>
+                          <p class="policy-journey-copy">Expands the agenda into a multisector roadmap aligned with SDGs and universal health coverage.</p>
+                        </div>
                       </div>
-                    </div>
+                    </article>
+                    <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="160">
+                      <div class="policy-journey-seal bg-gradient-violet">
+                        <span class="policy-journey-step">Step 03</span>
+                        <span class="policy-journey-years">Action Plan</span>
+                      </div>
+                      <figure class="policy-journey-media">
+                        <img src="img/policies/adolsent.png" alt="National Plan of Action for Adolescent Health Strategy cover" loading="lazy" />
+                      </figure>
+                      <div class="policy-journey-body">
+                        <div class="policy-journey-icon bg-gradient-violet" aria-hidden="true"><i class="fa-solid fa-clipboard-list"></i></div>
+                        <div>
+                          <h6 class="policy-journey-title">National Plan of Action</h6>
+                          <p class="policy-journey-copy">Translates strategy pillars into concrete programmes, roles, and district-level delivery milestones.</p>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="200">
+                      <div class="policy-journey-seal bg-gradient-rose">
+                        <span class="policy-journey-step">Step 04</span>
+                        <span class="policy-journey-years">Costed Plan</span>
+                      </div>
+                      <figure class="policy-journey-media">
+                        <img src="img/policies/national-strategy.jpg" alt="National Costed Action Plan for Adolescent Health Strategy cover" loading="lazy" />
+                      </figure>
+                      <div class="policy-journey-body">
+                        <div class="policy-journey-icon bg-gradient-rose" aria-hidden="true"><i class="fa-solid fa-coins"></i></div>
+                        <div>
+                          <h6 class="policy-journey-title">National Costed Action Plan</h6>
+                          <p class="policy-journey-copy">Backs commitments with phased financing, procurement priorities, and accountability indicators.</p>
+                        </div>
+                      </div>
+                    </article>
                   </div>
                 </section>
 
