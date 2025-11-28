@@ -1760,10 +1760,10 @@ const coursesData = [
                   .join("")}</div>
                    <!-- 2-column layout: first two images stacked in left column, third image beside them -->
                     <div class="row g-3 sdc_main"> 
-                      <div class="col-12 col-md-6"><!-- three image start -->
+                      <div class="col-12 col-md-5"><!-- three image start -->
                         <div class="row g-3"><!-- two image start -->
                           <div class="col-12" data-aos="zoom-in" data-aos-delay="80"><!-- image 1 -->
-                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base" style="height: 300px;">
                             <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
                               <img
                               src="img/sdc/1.jpg"
@@ -1776,7 +1776,7 @@ const coursesData = [
                             </article>
                           </div>
                           <div class="col-12" data-aos="zoom-in" data-aos-delay="110"><!-- image 2 -->
-                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
+                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base" style="height: 300px;">
                             <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
                               <img
                               src="img/sdc/2.webp"
@@ -1790,8 +1790,8 @@ const coursesData = [
                           </div>
                         </div><!-- two image end -->
                       </div>
-                      <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="140"><!-- image 3 -->
-                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base h-100">
+                      <div class="col-12 col-md-7" data-aos="zoom-in" data-aos-delay="140"><!-- image 3 -->
+                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base h-100" style="max-height: 610px;">
                         <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
                           <img
                           src="img/sdc/3.png"
