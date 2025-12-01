@@ -809,6 +809,48 @@ img {
   color: #0077C8 !important;
 }
 
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+.language-toggle button {
+  border: none;
+  background: transparent;
+  color: #0f172a;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.language-toggle button.is-active {
+  background: linear-gradient(135deg, #00AEEF, #0077C8);
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(0, 119, 200, 0.25);
+}
+
+.language-toggle__divider {
+  color: rgba(15, 23, 42, 0.5);
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+@media (max-width: 992px) {
+  .language-toggle {
+    margin-top: 1rem;
+  }
+}
+
 /* ==================== BUTTONS ==================== */
 .btn-modern {
   font-family: var(--font-secondary);
@@ -7771,6 +7813,30 @@ dashboard-titled-title {
   gap: 0.55rem;
   max-width: min(420px, 100%);
   /* margin-left: auto; */
+}
+
+.lesson-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.lesson-hero .language-toggle {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 30px rgba(5, 24, 52, 0.28);
+   position: fixed;
+  right: 6px;
+  top: 2px;
+}
+
+.lesson-hero .language-toggle button {
+  color: #f1f5f9;
+}
+
+.lesson-hero .language-toggle button.is-active {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
 .lesson-progress {

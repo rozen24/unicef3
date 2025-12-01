@@ -65,31 +65,6 @@
   global.YHUI = api;
 })(window);
 
-// Lightweight global localization helper used by data templates
-(function (global) {
-  if (typeof global.yhLang === "function") return;
-
-  const encodeAttr = (value) =>
-    String(value ?? "")
-      .replace(/&/g, "&amp;")
-      .replace(/"/g, "&quot;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-
-  const encodeHtml = (value) =>
-    String(value ?? "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-
-  global.yhLang = function yhLang(enText, bnText) {
-    const enSafe = encodeAttr(enText);
-    const bnSafe = encodeAttr(bnText != null ? bnText : enText);
-    const fallback = encodeHtml(enText);
-    return `<lang en="${enSafe}" bn="${bnSafe}">${fallback}</lang>`;
-  };
-})(window);
-
 
 // Young Health LMS - Course Data
 const coursesData = [
@@ -1782,125 +1757,78 @@ const coursesData = [
                 },
               ],
             },
-            content: (function () {
-              const determinantCards = [
-                {
-                  label: yhLang("Unintentional injury", "অনিচ্ছাকৃত আঘাত"),
-                  icon: "fa-car-burst",
-                  color: "bg-gradient-orange",
-                  delay: 140,
-                },
-                {
-                  label: yhLang("Violence", "সহিংসতা"),
-                  icon: "fa-hand-back-fist",
-                  color: "bg-gradient-pink",
-                  delay: 160,
-                },
-                {
-                  label: yhLang("SRH, HIV & STIs", "যৌন ও প্রজনন স্বাস্থ্য, এইচআইভি ও এসটিআই"),
-                  icon: "fa-venus-mars",
-                  color: "bg-gradient-violet",
-                  delay: 180,
-                },
-                {
-                  label: yhLang("Communicable diseases", "সংক্রামক রোগ"),
-                  icon: "fa-virus",
-                  color: "bg-gradient-green",
-                  delay: 200,
-                },
-                {
-                  label: yhLang("Non-communicable diseases", "অসংক্রামক রোগ"),
-                  icon: "fa-heart-pulse",
-                  color: "bg-gradient-emerald",
-                  delay: 220,
-                },
-                {
-                  label: yhLang("Mental health", "মানসিক স্বাস্থ্য"),
-                  icon: "fa-brain",
-                  color: "bg-gradient-blue",
-                  delay: 240,
-                },
-                {
-                  label: yhLang("Alcohol & drug use", "মদ ও মাদক ব্যবহার"),
-                  icon: "fa-wine-bottle",
-                  color: "bg-gradient-tangerine",
-                  delay: 260,
-                },
-                {
-                  label: yhLang("Tobacco use", "তামাক সেবন"),
-                  icon: "fa-smoking",
-                  color: "bg-gradient-teal",
-                  delay: 280,
-                },
-                {
-                  label: yhLang("Physical activity & sedentary behavior", "শারীরিক পরিশ্রম ও স্থবির জীবনধারা"),
-                  icon: "fa-person-running",
-                  color: "bg-gradient-cyan",
-                  delay: 300,
-                },
-                {
-                  label: yhLang("Nutrition", "পুষ্টি"),
-                  icon: "fa-utensils",
-                  color: "bg-gradient-purple",
-                  delay: 320,
-                },
-              ];
-
-              const determinantStrata = [
-                {
-                  title: yhLang("Structural & environmental", "কাঠামোগত ও পরিবেশগত"),
-                  icon: "fa-city",
-                  color: "bg-gradient-purple",
-                  bullets: [
-                    yhLang("Urban density, climate shocks, conflict and displacement shape exposure to health risks.", "নগরের ঘনত্ব, জলবায়ু আঘাত, সংঘাত ও বাস্তুচ্যুতি স্বাস্থ্যঝুঁকির মুখোমুখি হওয়া বাড়ায়।"),
-                    yhLang("Gender norms, poverty, and digital divides decide who accesses information.", "লিঙ্গভিত্তিক নিয়ম, দারিদ্র্য ও ডিজিটাল বৈষম্য তথ্যপ্রাপ্তি নির্ধারণ করে।"),
-                    yhLang("Policy coherence across education, labour, transport and justice keeps adolescents safe.", "শিক্ষা, শ্রম, পরিবহন ও বিচার খাতে নীতিসামঞ্জস্য কিশোরদের নিরাপদ রাখে।"),
-                  ],
-                },
-                {
-                  title: yhLang("Household & community", "পরিবার ও সম্প্রদায়"),
-                  icon: "fa-people-group",
-                  color: "bg-gradient-emerald",
-                  bullets: [
-                    yhLang("Parenting style, peer influence and safe schools determine protection from violence.", "পিতামাতার আচরণ, সহপাঠী প্রভাব ও নিরাপদ বিদ্যালয় সহিংসতা থেকে সুরক্ষা দেয়।"),
-                    yhLang("Trusted gatekeepers improve referrals to SRHR, nutrition and mental health services.", "বিশ্বস্ত অভিভাবক ও নেতৃবৃন্দ এসআরএইচআর, পুষ্টি ও মানসিক স্বাস্থ্য সেবায় রেফারাল বাড়ায়।"),
-                    yhLang("Community clubs and digital spaces build solidarity and positive norms.", "সম্প্রদায়ভিত্তিক ক্লাব ও ডিজিটাল প্ল্যাটফর্ম সংহতি ও ইতিবাচক সামাজিক মান গড়ে তোলে।"),
-                  ],
-                },
-                {
-                  title: yhLang("Individual agency", "ব্যক্তিগত সক্ষমতা"),
-                  icon: "fa-user-graduate",
-                  color: "bg-gradient-blue",
-                  bullets: [
-                    yhLang("Body literacy, consent skills and coping mechanisms help adolescents act early.", "দেহ-জ্ঞান, সম্মতির দক্ষতা ও মোকাবিলা কৌশল কিশোরকে দ্রুত পদক্ষেপ নিতে সহায়তা করে।"),
-                    yhLang("Healthy behaviours—balanced diet, movement, digital hygiene—need supportive ecosystems.", "স্বাস্থ্যকর আচরণ—সুষম খাদ্য, নড়াচড়া, ডিজিটাল নিরাপত্তা—সহায়ক পরিবেশ ছাড়া সম্ভব নয়।"),
-                    yhLang("Access to age-appropriate commodities (iron, contraception, safety gear) completes the loop.", "বয়সোপযোগী সামগ্রী (আয়রন, গর্ভনিরোধক, সুরক্ষা সরঞ্জাম) সহজলভ্য হলে চক্র পূর্ণ হয়।"),
-                  ],
-                },
-              ];
-
-              const systemActions = [
-                yhLang("Integrated surveillance & data sharing", "সমন্বিত নজরদারি ও তথ্য বিনিময়"),
-                yhLang("Youth-led accountability platforms", "তরুণ নেতৃত্বাধীন জবাবদিহি প্ল্যাটফর্ম"),
-                yhLang("Primary care readiness for SRHR & NCDs", "এসআরএইচআর ও এনসিডি সেবায় প্রাথমিক স্বাস্থ্যব্যবস্থার প্রস্তুতি"),
-                yhLang("Social protection linkages (stipends, cash transfers)", "সামাজিক সুরক্ষা সংযোগ (ভাতা, নগদ সহায়তা)"),
-                yhLang("Safe digital ecosystems & media literacy", "নিরাপদ ডিজিটাল পরিবেশ ও গণমাধ্যম সাক্ষরতা"),
-              ];
-
-              const renderBullets = (items) => items.map((item) => `<li>${item}</li>`).join("");
-
-              return `
+            content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Determinants for adolescent health and well-being", "কৈশোর স্বাস্থ্য ও সুস্থতার নির্ধারক")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Determinants for adolescent health and well-being</h2>
 
-                <p class="text-muted" data-aos="fade-up" data-aos-delay="40">${yhLang("AA-HA! 2.0 groups determinants so programmes can tackle biological, social and digital pressures at the same time.", "এএ-এইচএ! ২.০ নির্ধারকগুলোকে এমনভাবে সাজায় যাতে কর্মসূচি একযোগে জৈবিক, সামাজিক ও ডিজিটাল চাপে কাজ করতে পারে।")}</p>
-
+                <!-- AA-HA! guidance section with distinct background -->
                 <section class="mb-4 p-3 p-md-4 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
                   <div class="row g-3 align-items-center">
                     <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
-                      <h3 class="mb-3 gradient-text" id="determinants-title" data-aos="fade-up" data-aos-delay="120">${yhLang("Key determinant clusters", "প্রধান নির্ধারক গুচ্ছ")}</h3>
+                      <h3 class="mb-3 gradient-text" id="determinants-title" data-aos="fade-up" data-aos-delay="120">Key determinants</h3>
                       <div class="row g-3">
-                        ${determinantCards
+                        ${[
+                          {
+                            label: "Unintentional Injury",
+                            icon: "fa-car-burst",
+                            color: "bg-gradient-orange",
+                            delay: 140,
+                          },
+                          {
+                            label: "Violence",
+                            icon: "fa-hand-back-fist",
+                            color: "bg-gradient-pink",
+                            delay: 160,
+                          },
+                          {
+                            label: "SRH, HIV and other STI",
+                            icon: "fa-venus-mars",
+                            color: "bg-gradient-violet",
+                            delay: 180,
+                          },
+                          {
+                            label: "Communicable Diseases",
+                            icon: "fa-virus",
+                            color: "bg-gradient-green",
+                            delay: 200,
+                          },
+                          {
+                            label: "Non-Communicable Diseases",
+                            icon: "fa-heart-pulse",
+                            color: "bg-gradient-emerald",
+                            delay: 220,
+                          },
+                          {
+                            label: "Mental Health",
+                            icon: "fa-brain",
+                            color: "bg-gradient-blue",
+                            delay: 240,
+                          },
+                          {
+                            label: "Alcohol and Drug Use",
+                            icon: "fa-wine-bottle",
+                            color: "bg-gradient-tangerine",
+                            delay: 260,
+                          },
+                          {
+                            label: "Tobacco use",
+                            icon: "fa-smoking",
+                            color: "bg-gradient-teal",
+                            delay: 280,
+                          },
+                          {
+                            label: "Physical activity and Sedentary behavior",
+                            icon: "fa-person-running",
+                            color: "bg-gradient-cyan",
+                            delay: 300,
+                          },
+                          {
+                            label: "Nutrition",
+                            icon: "fa-utensils",
+                            color: "bg-gradient-purple",
+                            delay: 320,
+                          },
+                        ]
                           .map(
                             (d) => `
                           <div class="col-sm-6 col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="${d.delay}">
@@ -1922,8 +1850,11 @@ const coursesData = [
                   </div>
                 </section>
 
-              </div>`;
-            })(),
+                <!-- Determinants grid on a contrasting background -->
+                <section class="p-3 p-md-4 rounded-4" style="background: rgba(0,0,0,0.03);" aria-labelledby="determinants-title">
+                  
+                </section>
+              </div>`,
           },
           {
             id: "ch2-lesson-8",
@@ -1956,112 +1887,59 @@ const coursesData = [
                 },
               ],
             },
-            content: (function () {
-              const barrierCards = [
-                {
-                  title: yhLang("Adolescents have diverse needs", "কিশোরদের চাহিদা বহুবিধ"),
-                  desc: yhLang("Needs in SRHR, mental health and other NCDs, nutrition,  violence against adolescents, vulnerable adolescents etc.", "এসআরএইচআর, মানসিক স্বাস্থ্য, এনসিডি, পুষ্টি ও সুরক্ষাসহ চলমান কিশোরদের জন্য উপযোগী প্যাকেজ দরকার।"),
-                  icon: "fa-layer-group",
-                  color: "bg-gradient-violet",
-                  delay: 100,
-                },
-                {
-                  title: yhLang("Unaware of the laws, policies, rights", "আইন ও অধিকারের সম্পর্কে সীমিত ধারণা"),
-                  desc: yhLang("Sexual and reproductive health rights, Child rights.", "এসআরএইচআর, শিশুর অধিকার ও সাইবার সুরক্ষা সম্পর্কিত বিধান অনেক কিশোর ও অভিভাবকের অজানা।"),
-                  icon: "fa-scale-balanced",
-                  color: "bg-gradient-emerald",
-                  delay: 130,
-                },
-                {
-                  title: yhLang("Limited ability to execute the rights.", "সীমিত ক্ষমতায়ন"),
-                  desc: yhLang("Lack of confidence, parental influence, peer pressure", "আত্মবিশ্বাসের অভাব, সহপাঠী চাপ ও গেটকিপিং ঝুঁকি চিনলেও সহায়তা নিতে বিলম্ব ঘটায়।"),
-                  icon: "fa-hands-holding",
-                  color: "bg-gradient-tangerine",
-                  delay: 160,
-                },
-                {
-                  title: yhLang("Barriers in accessing the information, knowledge, skills.", "জ্ঞানপ্রাপ্তির বাধা"),
-                  desc: yhLang("Social stigma, discomfort among parents, family members, peers, teachers to talk about AH issues.", "পরিবার বা বিদ্যালয়ে লজ্জা ও অস্বস্তিকর আলোচনার কারণে সঠিক তথ্য চেপে রাখা হয়।"),
-                  icon: "fa-book-open-reader",
-                  color: "bg-gradient-rose",
-                  delay: 190,
-                },
-                {
-                  title: yhLang("Barriers in accessing the health services.", "সেবা প্রদানে ঘাটতি"),
-                  desc: yhLang("Limited care seeking behaviors, no dedicated service (no separate space, no privacy, no dedicated staff, negligence and unawareness among service providers.", "স্বতন্ত্র কর্নার, নিয়মিত সময়, গোপনীয়তা ও প্রশিক্ষিত কর্মীর অভাব সেবায় আস্থা কমায়।"),
-                  icon: "fa-hospital-user",
-                  color: "bg-gradient-cyan",
-                  delay: 220,
-                },
-              ];
-
-              const carePrinciples = [
-                {
-                  title: yhLang("Respect & confidentiality", "সম্মান ও গোপনীয়তা"),
-                  text: yhLang("Service providers greet adolescents, use preferred names/pronouns and keep records secure.", "সেবা প্রদানকারীরা কিশোরদের অভিবাদন জানান, পছন্দের নাম ও সর্বনাম ব্যবহার করেন এবং নথি সুরক্ষিত রাখেন।"),
-                  icon: "fa-lock",
-                },
-                {
-                  title: yhLang("Accessibility & affordability", "সহজপ্রাপ্যতা ও সাশ্রয়ী সেবা"),
-                  text: yhLang("Flexible hours, zero or low fees, disability-friendly layouts and virtual follow-up channels.", "নমনীয় সময়সূচি, স্বল্প বা বিনা ফি, প্রতিবন্ধীবান্ধব ব্যবস্থা ও ভার্চুয়াল ফলো-আপ চ্যানেল নিশ্চিত করতে হয়।"),
-                  icon: "fa-universal-access",
-                },
-                {
-                  title: yhLang("Holistic packages", "সমন্বিত সেবা প্যাকেজ"),
-                  text: yhLang("SRHR, mental health, nutrition, violence response and life-skills support offered together.", "এসআরএইচআর, মানসিক স্বাস্থ্য, পুষ্টি, সহিংসতা প্রতিক্রিয়া ও জীবনদক্ষতা সহায়তা একসাথে দেওয়া হয়।"),
-                  icon: "fa-box",
-                },
-                {
-                  title: yhLang("Youth participation", "তরুণদের অংশগ্রহণ"),
-                  text: yhLang("Adolescent advisory boards co-design spaces, IEC materials and feedback loops.", "কিশোর উপদেষ্টা বোর্ড স্থান, আইইসি উপকরণ ও প্রতিক্রিয়া পদ্ধতি সহ-নকশা করে।"),
-                  icon: "fa-people-group",
-                },
-              ];
-
-              const checklist = [
-                {
-                  title: yhLang("Environment", "পরিবেশ"),
-                  items: [
-                    yhLang("Separate waiting area with relatable visuals and gender-neutral signage.", "চেনা ভিজ্যুয়াল ও জেন্ডার-নিরপেক্ষ সাইনেজসহ আলাদা অপেক্ষাকক্ষ।"),
-                    yhLang("Privacy assured consultation rooms and clear referral desk.", "গোপনীয় পরামর্শ কক্ষ ও স্পষ্ট রেফারাল ডেস্ক।"),
-                    yhLang("Green & digital elements (plants, charging points, Wi-Fi).", "সবুজ ও ডিজিটাল উপাদান (গাছপালা, চার্জিং পয়েন্ট, ওয়াই-ফাই)।"),
-                  ],
-                },
-                {
-                  title: yhLang("People", "মানুষ"),
-                  items: [
-                    yhLang("Trained adolescent-friendly providers with job aids in Bangla & English.", "বাংলা ও ইংরেজি জব এইডসহ প্রশিক্ষিত কিশোরবান্ধব সেবাদাতা।"),
-                    yhLang("Peer educators manage triage, explain consent and accompany clients.", "সহপাঠী শিক্ষকেরা ট্রায়াজ, সম্মতি ব্যাখ্যা ও সঙ্গ দিয়ে সহায়তা করে।"),
-                    yhLang("Safeguarding focal points for disclosure of violence or abuse.", "সহিংসতা বা নির্যাতন প্রকাশের জন্য সুরক্ষা ফোকাল পয়েন্ট।"),
-                  ],
-                },
-                {
-                  title: yhLang("Processes", "প্রক্রিয়া"),
-                  items: [
-                    yhLang("Self-registration kiosks, SMS reminders and helpline numbers visible.", "স্ব-নিবন্ধন কিয়স্ক, এসএমএস স্মারক ও হেল্পলাইন দৃশ্যমান রাখা।"),
-                    yhLang("Standard operating procedures for confidentiality and referrals.", "গোপনীয়তা ও রেফারালের জন্য মানসম্মত কার্যপদ্ধতি।"),
-                    yhLang("Feedback wall/QR codes to capture youth satisfaction.", "তরুণদের মতামত সংগ্রহে ফিডব্যাক ওয়াল বা কিউআর কোড।"),
-                  ],
-                },
-              ];
-
-              const renderList = (items) => items.map((text) => `<li>${text}</li>`).join("");
-
-              return `
+            content: `
               <div class="lesson-slide">
+                <!-- Intro banner -->
                 <div class="alert alert-info hover-lift-sm transition-base mb-3" data-aos="fade-up" data-aos-delay="60">
                   <div class="d-flex align-items-center gap-3">
                     <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group"></i></span>
                     <div>
-                      <h5 class="mb-1">${yhLang("Why young people need special care?", "তরুণদের বিশেষ যত্ন কেন প্রয়োজন?")}</h5>
-                      <p class="mb-0 small">${yhLang("WHO adolescent-friendly standards emphasise readiness across people, places and processes.", "ডব্লিউএইচও-র কিশোরবান্ধব মানদণ্ড মানুষ, স্থান ও প্রক্রিয়ায় প্রস্তুতিকে গুরুত্ব দেয়।")}</p>
+                      <h5 class="mb-1">Why young people need special care?</h5>
                     </div>
                   </div>
                 </div>
 
+                <!-- Diversified needs and barriers: icon cards grid -->
                 <section class="mb-4" aria-labelledby="adol-needs-title">
                   <div class="row g-3">
-                    ${barrierCards
+                    ${[
+                      {
+                        title: "Adolescents have diversified needs",
+                        desc: "Needs in SRHR, mental health and other NCDs, nutrition, violence against adolescents, vulnerable adolescents etc.",
+                        icon: "fa-layer-group",
+                        color: "bg-gradient-violet",
+                        delay: 100,
+                      },
+                      {
+                        title: "Unaware of the laws, policies, rights",
+                        desc: "Sexual and reproductive health rights, Child rights",
+                        icon: "fa-scale-balanced",
+                        color: "bg-gradient-emerald",
+                        delay: 130,
+                      },
+                      {
+                        title: "Limited ability to execute the rights",
+                        desc: "Lack of confidence, parental influence, peer pressure",
+                        icon: "fa-hands-holding",
+                        color: "bg-gradient-tangerine",
+                        delay: 160,
+                      },
+                      {
+                        title:
+                          "Barriers in accessing information, knowledge, skills",
+                        desc: "Social stigma; discomfort among parents, family members, peers, teachers to talk about adolescent health issues",
+                        icon: "fa-book-open-reader",
+                        color: "bg-gradient-rose",
+                        delay: 190,
+                      },
+                      {
+                        title: "Barriers in accessing the health services",
+                        desc: "Limited care seeking behaviors; no dedicated service (no separate space, no privacy, no dedicated staff); negligence and unawareness among service providers",
+                        icon: "fa-hospital-user",
+                        color: "bg-gradient-cyan",
+                        delay: 220,
+                      },
+                    ]
                       .map(
                         (c) => `
                       <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="${c.delay}">
@@ -2081,18 +1959,14 @@ const coursesData = [
                   </div>
                 </section>
 
-                <section class="p-3 p-md-4 rounded-4" style="background: rgba(0,0,0,0.03);" aria-labelledby="adol-checklist-title">
-                  
-                  <p class="text-muted small mt-3" data-aos="fade-up" data-aos-delay="200">${yhLang("Aligns with WHO’s eight global standards for quality health services for adolescents.", "ডব্লিউএইচওর কিশোর সেবা মান নিশ্চিতকারী আটটি বৈশ্বিক মানের সাথে সামঞ্জস্যপূর্ণ।")}</p>
-                </section>
-              </div>`;
-            })(),
+                <!-- Supportive visual -->
+              </div>`,
           },
           {
             id: "ch2-lesson-9",
             title: yhLang(
-              "SDG related to adolescent health",
-              "কিশোর-কিশোরীদের স্বাস্থ্য সম্পর্কিত SDG"
+              "SDG related to adolescent health.",
+              "কৈশোর স্বাস্থ্যসংশ্লিষ্ট এসডিজি লক্ষ্য"
             ),
             icon: "fa-diagram-project",
             gradientClass: "bg-gradient-violet",
@@ -2102,15 +1976,23 @@ const coursesData = [
               questions: [
                 {
                   id: "q2g",
-                  question: "Young health impacts how many SDGs?",
-                  options: ["Only 1", "Several", "None", "Unknown"],
+                  question: yhLang(
+                    "Young health impacts how many SDGs?",
+                    "তরুণস্বাস্থ্য কতগুলো এসডিজিতে প্রভাব ফেলে?"
+                  ),
+                  options: [
+                    yhLang("Only 1", "মাত্র ১টি"),
+                    yhLang("Several", "বহু"),
+                    yhLang("None", "কোনোটিই নয়"),
+                    yhLang("Unknown", "অজানা"),
+                  ],
                   correctAnswer: 1,
                 },
               ],
             },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("SDG related to adolescent health", "কিশোর-কিশোরীদের স্বাস্থ্য সম্পর্কিত SDG")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">SDG related to adolescent health</h2>
 
                 <!-- SDG/SDC cards with distinct lean gradients, icons, and hover effects -->
                 <div class="row g-3 d-none">${[
@@ -2300,121 +2182,77 @@ const coursesData = [
                 },
               ],
             },
-            content: (function () {
-              const timeline = [
-                {
-                  year: "1994",
-                  title: yhLang(
-                    "International Conference on Population and Development",
-                    "আন্তর্জাতিক জনসংখ্যা ও উন্নয়ন সম্মেলন"
-                  ),
-                  desc: yhLang(
-                    "Adolescents were formally acknowledged as a group with unique SRHR needs.",
-                    "কিশোর-কিশোরীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।"
-                  ),
-                  icon: "fa-people-group",
-                  cls: "tl-rose",
-                  delay: 100,
-                },
-                {
-                  year: "2000",
-                  title: yhLang("Millennium Development Goals (MDGs)", "মিলেনিয়াম ডেভেলপমেন্ট গোলস (এমডিজি)"),
-                  desc: yhLang(
-                    "Adolescents were referenced within child and maternal health targets but without dedicated metrics.",
-                    "শিশু ও মাতৃস্বাস্থ্য লক্ষ্যসমূহে কিশোরদের উল্লেখ ছিল, তবে আলাদা সূচক নির্ধারিত হয়নি।"
-                  ),
-                  icon: "fa-bullseye",
-                  cls: "tl-blue",
-                  delay: 130,
-                },
-                {
-                  year: "2010",
-                  title: yhLang(
-                    "Global Strategy for Women’s and Children’s Health",
-                    "নারী ও শিশুর স্বাস্থ্য সম্পর্কিত বৈশ্বিক কৌশল"
-                  ),
-                  desc: yhLang(
-                    "Adolescent health surfaced but investments and indicators remained limited.",
-                    "কৈশোর স্বাস্থ্য আলোচনায় এলেও বিনিয়োগ ও সূচক সীমিত ছিল।"
-                  ),
-                  icon: "fa-child-reaching",
-                  cls: "tl-amber",
-                  delay: 160,
-                },
-                {
-                  year: "2015",
-                  title: yhLang("Sustainable Development Goals (SDGs)", "টেকসই উন্নয়ন লক্ষ্য (এসডিজি)"),
-                  desc: yhLang(
-                    "Adolescents recognised as essential to achieving targets on poverty, health, gender and jobs.",
-                    "দারিদ্র্য, স্বাস্থ্য, লিঙ্গ সমতা ও কর্মসংস্থানের লক্ষ্য অর্জনে কিশোরদের অপরিহার্য ধরা হয়।"
-                  ),
-                  icon: "fa-globe",
-                  cls: "tl-emerald",
-                  delay: 190,
-                },
-                {
-                  year: "2016",
-                  title: yhLang(
-                    "Lancet Commission on Adolescent Health & Wellbeing",
-                    "ল্যানসেট কমিশন: কৈশোর স্বাস্থ্য ও সুস্থতা"
-                  ),
-                  desc: yhLang(
-                    "Quantified the triple dividend of investing during adolescence.",
-                    "কৈশোরে বিনিয়োগের ত্রিমুখী সুফল পরিমাপ করে উপস্থাপন করা হয়।"
-                  ),
-                  icon: "fa-book-open",
-                  cls: "tl-violet",
-                  delay: 220,
-                },
-                {
-                  year: "2017",
-                  title: yhLang(
-                    "Global Accelerated Action for the Health of Adolescents (AA-HA!)",
-                    "কৈশোর স্বাস্থ্য ত্বরান্বিত কর্মসূচি (এএ-এইচএ!)"
-                  ),
-                  desc: yhLang(
-                    "Provided a programmatic framework covering governance, financing, platforms and accountability.",
-                    "শাসন, অর্থায়ন, প্ল্যাটফর্ম ও জবাবদিহি অন্তর্ভুক্ত প্রোগ্রামেটিক কাঠামো দেয়।"
-                  ),
-                  icon: "fa-rocket",
-                  cls: "tl-cyan",
-                  delay: 250,
-                },
-                {
-                  year: "2021",
-                  title: yhLang(
-                    "AA-HA! 2.0: A call to action",
-                    "এএ-এইচএ! ২.০: কর্মের আহ্বান"
-                  ),
-                  desc: yhLang(
-                    "Updates guidance post-COVID, emphasising mental health, climate risks and digital ecosystems.",
-                    "কোভিড পরবর্তী নির্দেশনা হালনাগাদ করে মানসিক স্বাস্থ্য, জলবায়ু ঝুঁকি ও ডিজিটাল পরিবেশকে গুরুত্ব দেয়।"
-                  ),
-                  icon: "fa-flag-checkered",
-                  cls: "tl-slate",
-                  delay: 280,
-                },
-              ];
-
-              const designPriorities = [
-                yhLang("Put adolescents at the centre of design, measurement and accountability.", "পরিকল্পনা, পরিমাপ ও জবাবদিহির কেন্দ্রবিন্দুতে কিশোরদের রাখুন।"),
-                yhLang("Invest across life-course transitions (early adolescence, older youth, young adults).", "জীবনচক্রের পরিবর্তনকাল (প্রারম্ভিক কৈশোর, বড় তরুণ, নবীন প্রাপ্তবয়স্ক) জুড়ে বিনিয়োগ করুন।"),
-                yhLang("Use digital + community platforms to reach the last mile safely.", "ডিজিটাল ও কমিউনিটি প্ল্যাটফর্ম একসাথে ব্যবহার করে নিরাপদে শেষ প্রান্তে পৌঁছান।"),
-                yhLang("Finance integrated packages that combine health, nutrition, SRHR and protection.", "স্বাস্থ্য, পুষ্টি, এসআরএইচআর ও সুরক্ষা সমন্বিত প্যাকেজে অর্থায়ন করুন।"),
-              ];
-
-              const renderList = (items) => items.map((text) => `<li>${text}</li>`).join("");
-
-              return `
+            content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Adolescent Health in the Global Agenda", "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Adolescent Health in the Global Agenda</h2>
 
                 <section class="timeline-chart" aria-labelledby="ah-global-agenda-title">
-                  <h3 class="visually-hidden" id="ah-global-agenda-title">${yhLang("Milestones shaping the agenda", "এজেন্ডা গঠনের মাইলফলক")}</h3>
                   <div class="timeline-track" aria-hidden="true"></div>
-                  ${timeline
+                  ${[
+                    {
+                      year: "1994",
+                      title:
+                        "International Conference on Population and Development",
+                      desc: "Adolescents were recognized as a separate group with distinct needs.",
+                      icon: "fa-people-group",
+                      cls: "tl-rose",
+                      delay: 100,
+                    },
+                    {
+                      year: "2000",
+                      title: "Millennium Development Goals (MDGs)",
+                      desc: "Adolescents were included as part of broader child and maternal health goals.",
+                      icon: "fa-bullseye",
+                      cls: "tl-blue",
+                      delay: 130,
+                    },
+                    {
+                      year: "2010",
+                      title:
+                        "Global Strategy for Women’s and Children’s Health",
+                      desc: "Adolescents were minimally included in this strategy.",
+                      icon: "fa-child-reaching",
+                      cls: "tl-amber",
+                      delay: 160,
+                    },
+                    {
+                      year: "2015",
+                      title: "Sustainable Development Goals (SDGs)",
+                      desc: "Adolescents were recognized as key to achieving global health and development goals.",
+                      icon: "fa-globe",
+                      cls: "tl-emerald",
+                      delay: 190,
+                    },
+                    {
+                      year: "2016",
+                      title:
+                        "Lancet Commission on Adolescent Health and Wellbeing",
+                      desc: "Highlighted the importance of investing in adolescent health and well-being.",
+                      icon: "fa-book-open",
+                      cls: "tl-violet",
+                      delay: 220,
+                    },
+                    {
+                      year: "2017",
+                      title:
+                        "Global Accelerated Action for the Health of Adolescents (AA-HA!)",
+                      desc: "Guidance to support implementation of adolescent health initiatives.",
+                      icon: "fa-rocket",
+                      cls: "tl-cyan",
+                      delay: 250,
+                    },
+                    {
+                      year: "2021",
+                      title:
+                        "Global Accelerated Action for the Health of Adolescents (AA-HA! 2.0)",
+                      desc: "A call to action: The second guidance for adolescent health and wellbeing.",
+                      icon: "fa-flag-checkered",
+                      cls: "tl-slate",
+                      delay: 280,
+                    },
+                  ]
                     .map(
-                      (m) => `
+                      (m, i) => `
                     <div class="timeline-item" data-aos="fade-up" data-aos-delay="${m.delay}">
                       <div class="timeline-dot"><span>${m.year}</span></div>
                       <article class="timeline-card ${m.cls}">
@@ -2427,15 +2265,10 @@ const coursesData = [
                     )
                     .join("")}
                 </section>
-
-                <section class="mt-4" aria-labelledby="ah-design-priorities">
-                  <p class="small text-muted mt-2" data-aos="fade-up" data-aos-delay="120">${yhLang("Source: AA-HA! 2.0, Lancet Commission, Generation Unlimited.", "সূত্র: এএ-এইচএ! ২.০, ল্যানসেট কমিশন, জেনারেশন আনলিমিটেড।")}</p>
-                </section>
-              </div>`;
-            })(),
+              </div>`,
           },
           {
-            id: "ch2-lesson-11",
+            id: "ch2-lesson-12",
             title: yhLang(
               "Bangladesh Government’s commitment",
               "বাংলাদেশ সরকারের অঙ্গীকার"
@@ -2465,124 +2298,97 @@ const coursesData = [
                 },
               ],
             },
-            content: (function () {
-              const policyJourney = [
-                {
-                  step: "01",
-                  years: "2006–2015",
-                  image: "img/policies/national-strategy.jpg",
-                  title: yhLang("National Adolescent Reproductive Health Strategy", "জাতীয় কিশোর প্রজনন স্বাস্থ্য কৌশল"),
-                  copy: yhLang("First SRHR blueprint defining adolescent-friendly corners, standards and supply chains.", "এসআরএইচআর-এর প্রথম নীলনকশা যা কিশোরবান্ধব কর্নার, মানদণ্ড ও সরবরাহ নিশ্চিত করে।"),
-                  icon: "fa-book-open",
-                  color: "bg-gradient-blue",
-                  delay: 80,
-                },
-                {
-                  step: "02",
-                  years: "2017–2030",
-                  image: "img/policies/national-strategy.jpg",
-                  title: yhLang("National Adolescent Health Strategy", "জাতীয় কিশোর স্বাস্থ্য কৌশল"),
-                  copy: yhLang("Aligns with SDGs and UHC, expanding into mental health, nutrition, violence prevention and climate resilience.", "এসডিজি ও ইউএইচসির সাথে সামঞ্জস্য রেখে মানসিক স্বাস্থ্য, পুষ্টি, সহিংসতা প্রতিরোধ ও জলবায়ু সহনশীলতাকে অন্তর্ভুক্ত করে।"),
-                  icon: "fa-flag-checkered",
-                  color: "bg-gradient-emerald",
-                  delay: 120,
-                },
-                {
-                  step: "03",
-                  years: yhLang("Action Plan", "কর্মপরিকল্পনা"),
-                  image: "img/policies/adolsent.png",
-                  title: yhLang("National Plan of Action", "জাতীয় কর্মপরিকল্পনা"),
-                  copy: yhLang("Breaks strategy pillars into interventions, roles and district roll-out sequences.", "কৌশলের স্তম্ভগুলোকে হস্তক্ষেপ, দায়িত্ব ও জেলা পর্যায়ে বাস্তবায়ন কর্মসূচিতে ভেঙে দেয়।"),
-                  icon: "fa-clipboard-list",
-                  color: "bg-gradient-violet",
-                  delay: 160,
-                },
-                {
-                  step: "04",
-                  years: yhLang("Costed Plan", "ব্যয় নির্ধারিত পরিকল্পনা"),
-                  image: "img/policies/national-strategy.jpg",
-                  title: yhLang("National Costed Action Plan", "জাতীয় ব্যয়ভিত্তিক কর্মপরিকল্পনা"),
-                  copy: yhLang("Details financing gaps, procurement lots and accountability indicators for each ministry.", "প্রতি মন্ত্রণালয়ের জন্য অর্থায়নের ঘাটতি, ক্রয় প্যাকেজ ও জবাবদিহি সূচক নির্দিষ্ট করে।"),
-                  icon: "fa-coins",
-                  color: "bg-gradient-rose",
-                  delay: 200,
-                },
-              ];
-
-              const investmentPillars = [
-                {
-                  title: yhLang("Primary health care", "প্রাথমিক স্বাস্থ্যসেবা"),
-                  desc: yhLang("30,000+ community clinics linked to adolescent corners, telehealth and referral apps.", "৩০,০০০-এর বেশি কমিউনিটি ক্লিনিক কিশোর কর্নার, টেলিহেলথ ও রেফারেল অ্যাপের সাথে যুক্ত।"),
-                  icon: "fa-house-medical",
-                },
-                {
-                  title: yhLang("Education & life skills", "শিক্ষা ও জীবনদক্ষতা"),
-                  desc: yhLang("Curriculum revision embeds SRHR, climate literacy and socio-emotional learning.", "পাঠ্যক্রম হালনাগাদ করে এসআরএইচআর, জলবায়ু সচেতনতা ও সামাজিক-মানসিক শিক্ষা যুক্ত হচ্ছে।"),
-                  icon: "fa-book-open-reader",
-                },
-                {
-                  title: yhLang("Protection & justice", "সুরক্ষা ও ন্যায়বিচার"),
-                  desc: yhLang("Child helplines, One-Stop Crisis Centres and probation services share case data.", "শিশু হেল্পলাইন, ওয়ান-স্টপ ক্রাইসিস সেন্টার ও প্রবেশন সেবা কেস ডেটা ভাগাভাগি করে।"),
-                  icon: "fa-shield-heart",
-                },
-                {
-                  title: yhLang("Digital & data", "ডিজিটাল ও ডেটা"),
-                  desc: yhLang("DHIS2 adolescent dashboard, eMIS for schools and gender-tagged budgets track progress.", "ডিএইচআইএস২ কিশোর ড্যাশবোর্ড, বিদ্যালয়ের ইএমআইএস ও লিঙ্গভিত্তিক বাজেট অগ্রগতি পর্যবেক্ষণ করে।"),
-                  icon: "fa-chart-line",
-                },
-              ];
-
-            
-
-
-              return `
+            content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Bangladesh Government’s commitment</h2>
 
+                <!-- Infographic: Policy evolution snapshot (distinct from timeline) -->
                 <section class="flow-chart policy-journey" aria-labelledby="bd-commitment-flow-title">
                   <div class="policy-journey-grid" id="bd-commitment-flow-title" role="list">
-                    ${policyJourney
-                      .map(
-                        (card) => `
-                        <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="${card.delay}">
-                          <div class="policy-journey-seal ${card.color}">
-                            <span class="policy-journey-step">${yhLang("Step", "ধাপ")}&nbsp;${card.step}</span>
-                            <span class="policy-journey-years">${card.years}</span>
-                          </div>
-                          <figure class="policy-journey-media">
-                            <img src="${card.image}" alt="${card.title}" loading="lazy" />
-                          </figure>
-                          <div class="policy-journey-body">
-                            <div class="policy-journey-icon ${card.color}" aria-hidden="true"><i class="fa-solid ${card.icon}"></i></div>
-                            <div>
-                              <h6 class="policy-journey-title">${card.title}</h6>
-                              <p class="policy-journey-copy">${card.copy}</p>
-                            </div>
-                          </div>
-                        </article>
-                      `
-                      )
-                      .join("")}
+                    <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="80">
+                      <div class="policy-journey-seal bg-gradient-blue">
+                        <span class="policy-journey-step">Step 01</span>
+                        <span class="policy-journey-years">2006–2015</span>
+                      </div>
+                      <figure class="policy-journey-media">
+                        <img src="img/policies/national-strategy.jpg" alt="National Adolescent Reproductive Health Strategy cover" loading="lazy" />
+                      </figure>
+                      <div class="policy-journey-body">
+                        <div class="policy-journey-icon bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-book-open"></i></div>
+                        <div>
+                          <h6 class="policy-journey-title">National Adolescent Reproductive Health Strategy</h6>
+                          <p class="policy-journey-copy">First nationwide SRHR blueprint anchoring adolescent-focused services and standards.</p>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="120">
+                      <div class="policy-journey-seal bg-gradient-emerald">
+                        <span class="policy-journey-step">Step 02</span>
+                        <span class="policy-journey-years">2017–2030</span>
+                      </div>
+                      <figure class="policy-journey-media">
+                        <img src="img/policies/national-strategy.jpg" alt="National Adolescent Health Strategy cover" loading="lazy" />
+                      </figure>
+                      <div class="policy-journey-body">
+                        <div class="policy-journey-icon bg-gradient-emerald" aria-hidden="true"><i class="fa-solid fa-flag-checkered"></i></div>
+                        <div>
+                          <h6 class="policy-journey-title">National Adolescent Health Strategy</h6>
+                          <p class="policy-journey-copy">Expands the agenda into a multisector roadmap aligned with SDGs and universal health coverage.</p>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="160">
+                      <div class="policy-journey-seal bg-gradient-violet">
+                        <span class="policy-journey-step">Step 03</span>
+                        <span class="policy-journey-years">Action Plan</span>
+                      </div>
+                      <figure class="policy-journey-media">
+                        <img src="img/policies/adolsent.png" alt="National Plan of Action for Adolescent Health Strategy cover" loading="lazy" />
+                      </figure>
+                      <div class="policy-journey-body">
+                        <div class="policy-journey-icon bg-gradient-violet" aria-hidden="true"><i class="fa-solid fa-clipboard-list"></i></div>
+                        <div>
+                          <h6 class="policy-journey-title">National Plan of Action</h6>
+                          <p class="policy-journey-copy">Translates strategy pillars into concrete programmes, roles, and district-level delivery milestones.</p>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="200">
+                      <div class="policy-journey-seal bg-gradient-rose">
+                        <span class="policy-journey-step">Step 04</span>
+                        <span class="policy-journey-years">Costed Plan</span>
+                      </div>
+                      <figure class="policy-journey-media">
+                        <img src="img/policies/national-strategy.jpg" alt="National Costed Action Plan for Adolescent Health Strategy cover" loading="lazy" />
+                      </figure>
+                      <div class="policy-journey-body">
+                        <div class="policy-journey-icon bg-gradient-rose" aria-hidden="true"><i class="fa-solid fa-coins"></i></div>
+                        <div>
+                          <h6 class="policy-journey-title">National Costed Action Plan</h6>
+                          <p class="policy-journey-copy">Backs commitments with phased financing, procurement priorities, and accountability indicators.</p>
+                        </div>
+                      </div>
+                    </article>
                   </div>
                 </section>
 
-                <section class="mt-4" aria-labelledby="orbit-title">
+                <!-- Orbit info: manual generation (JS builds satellites) -->
+                <section class="mt-5" aria-labelledby="orbit-title">
                   <div class="orbit-layout" id="orbitLayout" data-aos="zoom-in" data-aos-delay="240" data-orbit-manual="true">
+                    <!-- Center node -->
                     <div class="orbit-center icon-spin-on-hover">
                       <div class="orbit-card bg-gradient-blue">
                         <div class="orbit-icon mb-1"><i class="fa-solid fa-flag fa-lg"></i></div>
-                        <div class="orbit-title fw-bold">${yhLang("National Health Strategy", "জাতীয় স্বাস্থ্য কৌশল")}</div>
+                        <div class="orbit-title fw-bold">National<br />Health Strategy</div>
                         <div class="orbit-sub">2017–2030</div>
                       </div>
                     </div>
                   </div>
-                
                 </section>
-              </div>`;
-            })(),
+              </div>`,
           },
           {
-            id: "ch2-lesson-12",
+            id: "ch2-lesson-13",
             title: yhLang(
               "A combined effort",
               "সমন্বিত প্রচেষ্টা"
@@ -2609,73 +2415,22 @@ const coursesData = [
                 },
               ],
             },
-            content: (function () {
-              const actorGroups = [
-                {
-                  title: yhLang("Health & nutrition", "স্বাস্থ্য ও পুষ্টি"),
-                  desc: yhLang("DGHS, DGFP, DGHS RH line, community clinics, private hospitals and telehealth platforms.", "ডিজিএইচএস, ডিজিএফপি, আরএইচ লাইন, কমিউনিটি ক্লিনিক, বেসরকারি হাসপাতাল ও টেলিহেলথ প্ল্যাটফর্ম।"),
-                  icon: "fa-stethoscope",
-                  color: "bg-gradient-blue",
-                },
-                {
-                  title: yhLang("Education & skills", "শিক্ষা ও দক্ষতা"),
-                  desc: yhLang("MoE, Madrasah Board, TVET institutes, scouts/girl guides and online learning partners.", "শিক্ষা মন্ত্রণালয়, মাদ্রাসা বোর্ড, টিভিইটি প্রতিষ্ঠান, স্কাউট/গার্ল গাইড ও অনলাইন শিক্ষাভিত্তিক অংশীদার।"),
-                  icon: "fa-school",
-                  color: "bg-gradient-orange",
-                },
-                {
-                  title: yhLang("Protection & justice", "সুরক্ষা ও ন্যায়"),
-                  desc: yhLang("MoWCA, DSS, police, legal aid services, One-Stop Crisis Centres, probation offices.", "নারী-শিশু বিষয়ক মন্ত্রণালয়, সমাজসেবা অধিদপ্তর, পুলিশ, লিগ্যাল এইড, ওএসসিসি ও প্রবেশন অফিস।"),
-                  icon: "fa-scale-balanced",
-                  color: "bg-gradient-emerald",
-                },
-                {
-                  title: yhLang("Youth & civil society", "তরুণ ও সিভিল সোসাইটি"),
-                  desc: yhLang("YHAP ambassadors, youth clubs, disability organisations, faith leaders and media.", "ওয়াইএইচএপি দূত, যুব ক্লাব, প্রতিবন্ধী সংগঠন, ধর্মীয় নেতৃবৃন্দ ও গণমাধ্যম।"),
-                  icon: "fa-people-group",
-                  color: "bg-gradient-rose",
-                },
-                {
-                  title: yhLang("Private sector & innovation", "বেসরকারি খাত ও উদ্ভাবন"),
-                  desc: yhLang("Telecoms, fintech, social enterprises and creative agencies scaling behaviour-change content.", "টেলিকম, ফিনটেক, সামাজিক উদ্যোগ ও সৃজনশীল সংস্থা আচরণ পরিবর্তন বার্তা বিস্তারে সহায়তা করে।"),
-                  icon: "fa-lightbulb",
-                  color: "bg-gradient-purple",
-                },
-              ];
-
-              const collaborationSteps = [
-                {
-                  title: yhLang("Diagnose", "নির্ণয়"),
-                  detail: yhLang("Shared dashboards combine DHS, DHIS2, school EMIS and citizen feedback.", "ডিএইচএস, ডিএইচআইএস২, বিদ্যালয় ইএমআইএস ও নাগরিক মতামত একত্র করে যৌথ ড্যাশবোর্ড।"),
-                },
-                {
-                  title: yhLang("Co-design", "সহ-নকশা"),
-                  detail: yhLang("Youth labs, policy clinics and design sprints define prototypes for services.", "তরুণ ল্যাব, নীতি ক্লিনিক ও ডিজাইন স্প্রিন্ট সেবার প্রোটোটাইপ নির্ধারণ করে।"),
-                },
-                {
-                  title: yhLang("Deliver", "বাস্তবায়ন"),
-                  detail: yhLang("Blended platforms: schools, clinics, mobile vans, community radio, super apps.", "মিশ্র প্ল্যাটফর্ম: বিদ্যালয়, ক্লিনিক, মোবাইল ভ্যান, কমিউনিটি রেডিও, সুপার অ্যাপ।"),
-                },
-                {
-                  title: yhLang("Measure & iterate", "পরিমাপ ও উন্নয়ন"),
-                  detail: yhLang("Joint scorecards, budget tracking and adolescent report cards drive accountability.", "যৌথ স্কোরকার্ড, বাজেট ট্র্যাকিং ও কিশোর রিপোর্ট কার্ড জবাবদিহি ত্বরান্বিত করে।"),
-                },
-              ];
-
-              return `
+            content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("A combined effort", "সমন্বিত প্রচেষ্টা")}</h2>
-                <p class="text-muted" data-aos="fade-up" data-aos-delay="40">${yhLang("Protecting adolescent wellbeing needs a whole-of-society coalition where each actor brings complementary strengths.", "কৈশোর সুস্থতা নিশ্চিত করতে সমাজের সকল স্তরের সমন্বিত জোট দরকার, যেখানে প্রত্যেক অংশীদার নিজস্ব শক্তি নিয়ে আসে।")}</p>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">A combined effort</h2>
 
-                <div class="modern-card glass-card mb-4" data-aos="fade-up" data-aos-delay="60">
-                  <img src="img/effort-new.png" alt="A combined effort infographic" class="img-fluid rounded-4 shadow-sm" />
+                
+                <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="60">
+                  <div class="">
+                    <img src="img/effort-new.png" alt="A combined effort infographic" class="img-fluid rounded-4 shadow-sm" />
+                  </div>
                 </div>
 
-              </div>`;
-            })(),
+                <!-- Radial infographic: center + inner + outer rings -->
+              </div>`,
           },
           {
-            id: "ch2-lesson-13",
+            id: "ch2-lesson-14",
             title: yhLang(
               "Recommendations to protect adolescent health and wellbeing",
               "কৈশোর স্বাস্থ্য ও সুস্থতা রক্ষায় সুপারিশ"
@@ -2702,78 +2457,21 @@ const coursesData = [
                 },
               ],
             },
-            content: (function () {
-              const recommendations = [
-                {
-                  title: yhLang("Rights-based & person-centred", "অধিকারভিত্তিক ও ব্যক্তি-কেন্দ্রিক"),
-                  text: yhLang("Guarantee confidentiality, informed consent and inclusive spaces for adolescents of all identities.", "সব পরিচয়ের কিশোরদের জন্য গোপনীয়তা, অবহিত সম্মতি ও অন্তর্ভুক্তিমূলক স্থান নিশ্চিত করুন।"),
-                  icon: "fa-scale-balanced",
-                  cls: "bg-gradient-purple",
-                  delay: 120,
-                },
-                {
-                  title: yhLang("Confront systemic inequities", "পদ্ধতিগত বৈষম্য মোকাবিলা"),
-                  text: yhLang("Invest in underserved districts, hard-to-reach communities, refugees and adolescents with disabilities.", "অসেবা প্রাপ্ত জেলা, দুর্গম সম্প্রদায়, শরণার্থী ও প্রতিবন্ধী কিশোরদের জন্য বিনিয়োগ বাড়ান।"),
-                  icon: "fa-people-arrows-left-right",
-                  cls: "bg-gradient-rose",
-                  delay: 160,
-                },
-                {
-                  title: yhLang("Meaningful adolescent engagement", "অর্থবহ কিশোর অংশগ্রহণ"),
-                  text: yhLang("Create advisory boards, pay youth researchers and embed feedback loops in every programme.", "উপদেষ্টা বোর্ড গঠন, তরুণ গবেষকদের পারিশ্রমিক প্রদান ও প্রতিটি কর্মসূচিতে প্রতিক্রিয়া পদ্ধতি যুক্ত করুন।"),
-                  icon: "fa-people-group",
-                  cls: "bg-gradient-blue",
-                  delay: 200,
-                },
-                {
-                  title: yhLang("Evidence-informed & age-responsive", "প্রমাণভিত্তিক ও বয়স-উপযোগী"),
-                  text: yhLang("Use disaggregated data, U-Report polls and implementation research to tailor solutions.", "বিযুক্ত ডেটা, ইউ-রিপোর্ট জরিপ এবং বাস্তবায়ন গবেষণা ব্যবহার করে সমাধান তৈরি করুন।"),
-                  icon: "fa-microscope",
-                  cls: "bg-gradient-cyan",
-                  delay: 240,
-                },
-                {
-                  title: yhLang("Multisectoral approach", "বহুখাতীয় পন্থা"),
-                  text: yhLang("Link health, education, protection, social protection and climate financing.", "স্বাস্থ্য, শিক্ষা, সুরক্ষা, সামাজিক সুরক্ষা ও জলবায়ু অর্থায়নকে সংযুক্ত করুন।"),
-                  icon: "fa-diagram-project",
-                  cls: "bg-gradient-teal",
-                  delay: 280,
-                },
-              ];
-
-              const implementationSteps = [
-                {
-                  title: yhLang("Plan", "পরিকল্পনা"),
-                  detail: yhLang("Map determinants, choose priority districts and define SMART indicators.", "নির্ধারক মানচিত্রায়ন, অগ্রাধিকার জেলা নির্বাচন ও স্মার্ট সূচক নির্ধারণ করুন।"),
-                },
-                {
-                  title: yhLang("Resource", "সম্পদায়ন"),
-                  detail: yhLang("Blend domestic budgets with donor, private sector and youth-led funds.", "দেশীয় বাজেটের সাথে দাতা, বেসরকারি খাত ও তরুণ-নেতৃত্বাধীন তহবিল মিশ্রিত করুন।"),
-                },
-                {
-                  title: yhLang("Implement", "বাস্তবায়ন"),
-                  detail: yhLang("Bundle services (SRHR, mental health, nutrition) and deliver via multiple platforms.", "এসআরএইচআর, মানসিক স্বাস্থ্য, পুষ্টি সেবা একত্রে দিয়ে বহু প্ল্যাটফর্মে সরবরাহ করুন।"),
-                },
-                {
-                  title: yhLang("Review & adapt", "মূল্যায়ন ও অভিযোজন"),
-                  detail: yhLang("Use adolescent scorecards, digital dashboards and learning reviews every six months.", "প্রতি ছয় মাসে কিশোর স্কোরকার্ড, ডিজিটাল ড্যাশবোর্ড ও লার্নিং রিভিউ ব্যবহার করুন।"),
-                },
-              ];
-
-              const renderList = (items) => items.map((item) => `<li>${item}</li>`).join("");
-
-              return `
+            content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Recommendations", "সুপারিশসমূহ")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">Recommendations</h2>
 
+                <!-- Special info -->
                 <div class="modern-card glass-card mb-3 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="60">
                   <div class="d-flex align-items-start gap-3">
                     <span class="badge-pill bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-circle-info"></i></span>
-                    <p class="mb-0">${yhLang("Actions must tackle determinants, resource delivery platforms and meaningfully engage adolescents throughout the programme cycle.", "পদক্ষেপগুলোকে নির্ধারক, সেবা প্ল্যাটফর্ম ও পুরো কর্মচক্রে কিশোরদের অর্থবহ সম্পৃক্ততাকে একসাথে বিবেচনা করতে হবে।")}</p>
+                    <p class="mb-0">Actions to improve adolescent health and wellbeing need to address established and emerging determinants and meaningfully engage with adolescents and young people.</p>
                   </div>
                 </div>
 
-                <section aria-labelledby="ahw-recs-title">
+                <!-- Petal infographic: five recommendations around a center -->
+                <section class="" aria-labelledby="ahw-recs-title">
+                  <!-- Ambient gradient container with floating shapes -->
                   <div class="recs-ambient" data-aos="fade-up" data-aos-delay="100">
                     <div class="ambient-shapes animate-float" aria-hidden="true">
                       <span class="shape shape-1"></span>
@@ -2783,27 +2481,87 @@ const coursesData = [
                       <span class="shape shape-5"></span>
                     </div>
 
-                    <div class="petal-chart hover-lift-sm transition-base" aria-label="${yhLang("Recommendation petals surrounding the goal of protecting adolescent wellbeing.", "কৈশোর সুস্থতা সুরক্ষার লক্ষ্যের চারদিকে সুপারিশ পাঁপড়ি")}">
+                    <div class="petal-chart hover-lift-sm transition-base" aria-label="Five recommendation petals surrounding a central goal: Protect adolescent health and wellbeing.">
+                      <!-- Decorative ring -->
                       <div class="petal-ring spin-slow" aria-hidden="true"></div>
 
-                      ${recommendations
+                      <!-- Center node 
+                        <div class="petal-center">
+                          <article class="petal-card bg-gradient-emerald icon-spin-on-hover hover-glow">
+                            <div class="petal-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                            <div class="petal-title">Protect adolescent health & wellbeing</div>
+                          </article>
+                        </div> 
+                      -->
+
+                      <!-- Petals (5) equally spaced -->
+                      ${[
+                        {
+                          title: "Protect adolescent health & wellbeing",
+                          text: "",
+                          icon: "fa-rocket",
+                          cls: "bg-gradient-teal",
+                          pos: "petal-pos-1",
+                          delay: 100,
+                        },
+                        {
+                          title: "Rights-based & person-centred",
+                          text: "Emphasise adolescents’ rights to health and wellbeing; promote participation, identity expression, safe access, and protection from harm.",
+                          icon: "fa-scale-balanced",
+                          cls: "bg-gradient-purple",
+                          pos: "petal-pos-1",
+                          delay: 150,
+                        },
+                        {
+                          title: "Confront systemic inequities",
+                          text: "Address gender, race and geography to ensure equal opportunities and targeted support for disadvantaged groups.",
+                          icon: "fa-people-arrows-left-right",
+                          cls: "bg-gradient-rose",
+                          pos: "petal-pos-2",
+                          delay: 200,
+                        },
+                        {
+                          title: "Meaningfully involve adolescents",
+                          text: "Co-design and engage adolescents in health initiatives—empowering individuals and strengthening societal outcomes.",
+                          icon: "fa-people-group",
+                          cls: "bg-gradient-blue",
+                          pos: "petal-pos-3",
+                          delay: 250,
+                        },
+                        {
+                          title: "Evidence-informed & developmentally tailored",
+                          text: "Use evolving evidence and tailor to developmental needs while considering complex determinants across contexts.",
+                          icon: "fa-microscope",
+                          cls: "bg-gradient-cyan",
+                          pos: "petal-pos-4",
+                          delay: 300,
+                        },
+                        {
+                          title: "Multisectoral approach",
+                          text: "Coordinate mental health, nutrition, sexual and reproductive health, and violence prevention to amplify gains.",
+                          icon: "fa-diagram-project",
+                          cls: "bg-gradient-teal",
+                          pos: "petal-pos-5",
+                          delay: 350,
+                        },
+                      ]
                         .map(
-                          (rec) => `
-                          <div data-aos="fade-up" data-aos-delay="${rec.delay}">
-                            <article class="recs-petal-card ${rec.cls} mb-2 icon-spin-on-hover hover-glow">
-                              <div class="timeline-card-icon animate-float-slow"><i class="fa-solid ${rec.icon}"></i></div>
-                              <div class="timeline-card-title">${rec.title}</div>
-                              <p class="timeline-card-text rec-title">${rec.text}</p>
-                            </article>
-                          </div>
-                        `
+                          (p) => `
+                        <div class="aos-init aos-animate"  data-aos="fade-up" data-aos-delay="${p.delay}">
+                          <article class="recs-petal-card ${p.cls} mb-2 icon-spin-on-hover hover-glow">
+                            <div class="timeline-card-icon animate-float-slow"><i class="fa-solid ${p.icon}"></i></div>
+                            <div class="timeline-card-title">${p.title}</div>
+                            <p class="timeline-card-text rec-title">${p.text}</p>
+                          </article>
+                        </div>
+                        
+                      `
                         )
                         .join("")}
                     </div>
                   </div>
                 </section>
-              </div>`;
-            })(),
+              </div>`,
           },
         ],
       },

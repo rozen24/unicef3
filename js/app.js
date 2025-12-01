@@ -18,6 +18,9 @@ class YouthHealthLMS {
     // Track confetti firing to avoid duplicates per lesson
     this._confettiFiredFor = new Set();
 
+    // Localization state
+    this.currentLanguage = this.getStoredLanguage();
+
     this.init();
   }
 
@@ -94,6 +97,93 @@ class YouthHealthLMS {
       }
     } catch (_) {}
     this.render();
+  }
+
+  getStoredLanguage() {
+    try {
+      const stored = localStorage.getItem("preferredLanguage");
+      if (stored === "bn" || stored === "en") return stored;
+    } catch (_) {}
+    return "en";
+  }
+
+  setLanguage(lang) {
+    const normalized = lang === "bn" ? "bn" : "en";
+    if (this.currentLanguage === normalized) return;
+    this.currentLanguage = normalized;
+    try {
+      localStorage.setItem("preferredLanguage", normalized);
+    } catch (_) {}
+    this.applyLanguageToDOM();
+    this.updateLanguageToggleUI();
+  }
+
+  applyLanguageToDOM() {
+    try {
+      const lang = this.currentLanguage === "bn" ? "bn" : "en";
+      if (document?.documentElement) {
+        document.documentElement.setAttribute("lang", lang);
+      }
+      document.querySelectorAll("lang").forEach((node) => {
+        const fallback = node.getAttribute("en") || "";
+        const text = node.getAttribute(lang) || fallback;
+        node.innerHTML = text;
+      });
+    } catch (_) {}
+  }
+
+  bindLanguageToggle() {
+    try {
+      document.querySelectorAll("[data-lang-option]").forEach((btn) => {
+        if (btn.dataset.bound === "true") return;
+        btn.addEventListener("click", (event) => {
+          event.preventDefault();
+          const targetLang = btn.getAttribute("data-lang-option");
+          this.setLanguage(targetLang);
+        });
+        btn.dataset.bound = "true";
+      });
+      this.updateLanguageToggleUI();
+    } catch (_) {}
+  }
+
+  updateLanguageToggleUI() {
+    try {
+      const lang = this.currentLanguage === "bn" ? "bn" : "en";
+      document.querySelectorAll("[data-lang-option]").forEach((btn) => {
+        const isActive = btn.getAttribute("data-lang-option") === lang;
+        btn.classList.toggle("is-active", isActive);
+        btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+    } catch (_) {}
+  }
+
+  lang(enText, bnText) {
+    const safeAttr = (value) =>
+      String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    const safeHtml = (value) =>
+      String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    const enSafe = safeAttr(enText);
+    const bnSafe = safeAttr(bnText != null ? bnText : enText);
+    const fallback = safeHtml(enText);
+    return `<lang en="${enSafe}" bn="${bnSafe}">${fallback}</lang>`;
+  }
+
+  renderLanguageToggle() {
+    return `
+      <div class="language-toggle" role="group" aria-label="Language toggle">
+        <button type="button" data-lang-option="bn">BN</button>
+        <span class="language-toggle__divider" aria-hidden="true">|</span>
+        <button type="button" data-lang-option="en">EN</button>
+      </div>
+    `;
   }
 
   navigateTo(view) {
@@ -704,6 +794,10 @@ class YouthHealthLMS {
 
     // Persist state after each render
     this.saveAppState();
+
+    // Apply localization after view render
+    this.applyLanguageToDOM();
+    this.bindLanguageToggle();
   }
 
   // Persist minimal app state to survive refresh
@@ -1879,6 +1973,7 @@ class YouthHealthLMS {
   }
 
   renderHome() {
+    const currentYear = new Date().getFullYear();
     return `
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg fixed-top navbar-neo">
@@ -1891,12 +1986,15 @@ class YouthHealthLMS {
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
-              <li class="nav-item"><a class="nav-link active transition-base" href="#home">Home</a></li>
-              <li class="nav-item"><a class="nav-link transition-base" href="#about">About</a></li>
-              <li class="nav-item"><a class="nav-link transition-base" href="#components">Components</a></li>
-              <li class="nav-item"><a class="nav-link transition-base" href="#roles">Roles</a></li>
-              <li class="nav-item"><a class="nav-link transition-base" href="#eligibility">Join</a></li>
-              <li class="nav-item ms-lg-3"><a href="#" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">Login</a></li>
+              <li class="nav-item"><a class="nav-link active transition-base" href="#home">${this.lang("Home", "প্রথম পাতা")}</a></li>
+              <li class="nav-item"><a class="nav-link transition-base" href="#about">${this.lang("About", "পরিচিতি")}</a></li>
+              <li class="nav-item"><a class="nav-link transition-base" href="#components">${this.lang("Components", "প্রধান উপাদান")}</a></li>
+              <li class="nav-item"><a class="nav-link transition-base" href="#roles">${this.lang("Roles", "ভূমিকা")}</a></li>
+              <li class="nav-item"><a class="nav-link transition-base" href="#eligibility">${this.lang("Join", "যোগ দিন")}</a></li>
+              <li class="nav-item ms-lg-3">
+                ${this.renderLanguageToggle()}
+              </li>
+              <li class="nav-item ms-lg-3"><a href="#" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">${this.lang("Login", "লগইন")}</a></li>
             </ul>
           </div>
         </div>
@@ -1914,15 +2012,16 @@ class YouthHealthLMS {
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="fade-right">
               <div class="hero-content">
-                <h1 class="hero-title glow-title-float">Young Health Ambassador Programme</h1>
+                <h1 class="hero-title glow-title-float">${this.lang("Young Health Ambassador Programme", "যুব স্বাস্থ্য দূত কর্মসূচি")}</h1>
                 <p class="hero-description">
-                    The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower young by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador. <br>
-                    This program equips young person with knowledge and skills in areas like physical health including sexual and reproductive health, nutrition, mental wellbeing etc.  enabling them to become active advocates for health and influence healthier choices within their communities and networks.
+                    ${this.lang("The Young Health Ambassador Program (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF. The program is designed to empower young by enhancing their health awareness and building their capacity in primary prevention and health promotion thereby equipping them to serve as informed health ambassador.", "ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম (YHAP) হলো স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় (MOHFW) এবং ইউনিসেফের যৌথ কৌশলগত উদ্যোগ। এই কর্মসূচি তরুণদের স্বাস্থ্য সচেতনতা বৃদ্ধি ও প্রাথমিক প্রতিরোধ ও স্বাস্থ্য প্রচারে সক্ষমতা গড়ে তুলে তাদেরকে তথ্যসমৃদ্ধ স্বাস্থ্য দূত হিসেবে প্রস্তুত করে।")}
+                    <br>
+                    ${this.lang("This program equips young person with knowledge and skills in areas like physical health including sexual and reproductive health, nutrition, mental wellbeing etc.  enabling them to become active advocates for health and influence healthier choices within their communities and networks.", "এই কর্মসূচি শারীরিক স্বাস্থ্য, যৌন ও প্রজনন স্বাস্থ্য, পুষ্টি, মানসিক সুস্থতা ইত্যাদি বিষয়ে জ্ঞান ও দক্ষতা দেয়, যাতে তরুণরা স্বাস্থ্যবান্ধব সিদ্ধান্তের পক্ষে কণ্ঠ তুলে নিজেদের সম্প্রদায় ও নেটওয়ার্কে ইতিবাচক প্রভাব ফেলতে পারে।")}
                 </p>
                 <div class="d-flex gap-3 flex-wrap">
                   <a href="#" class="btn btn-gradient-glow hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">
                     <i class="fa-solid fa-handshake-angle join-icon" aria-hidden="true"></i>
-                    Become an Ambassador
+                    ${this.lang("Become an Ambassador", "দূত হোন")}
                   </a>
                 </div>
               </div>
@@ -1948,9 +2047,9 @@ class YouthHealthLMS {
         <div class="container">
           <div class="row g-4">
             <div class="col-xl-4 col-lg-5">
-              <h3 class="footer-heading">Young Health Ambassador Programme</h3>
+              <h3 class="footer-heading">${this.lang("Young Health Ambassador Programme", "যুব স্বাস্থ্য দূত কর্মসূচি")}</h3>
               <p class="footer-text">
-                A partnership between UNICEF and the Ministry of Health & Family Welfare, Bangladesh—nurturing young ambassadors who lead healthier communities.
+                ${this.lang("A partnership between UNICEF and the Ministry of Health & Family Welfare, Bangladesh—nurturing young ambassadors who lead healthier communities.", "ইউনিসেফ ও স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয়ের অংশীদারত্বে এই উদ্যোগ তরুণ দূতদের গড়ে তোলে, যারা সুস্থ সম্প্রদায়ের নেতৃত্ব দেয়।")}
               </p>
               <div class="footer-social">
                 <a href="#" class="footer-social__item" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -1960,31 +2059,31 @@ class YouthHealthLMS {
               </div>
             </div>
             <div class="col-6 col-lg-2">
-              <h4 class="footer-title">Discover</h4>
-              <a class="footer-link" href="#about">About</a>
-              <a class="footer-link" href="#components">Programme Pillars</a>
-              <a class="footer-link" href="#roles">Ambassador Stories</a>
-              <a class="footer-link" href="#statistics">Impact Data</a>
+              <h4 class="footer-title">${this.lang("Discover", "অন্বেষণ")}</h4>
+              <a class="footer-link" href="#about">${this.lang("About", "পরিচিতি")}</a>
+              <a class="footer-link" href="#components">${this.lang("Programme Pillars", "কর্মসূচির স্তম্ভ")}</a>
+              <a class="footer-link" href="#roles">${this.lang("Ambassador Stories", "দূতদের গল্প")}</a>
+              <a class="footer-link" href="#statistics">${this.lang("Impact Data", "প্রভাবের পরিসংখ্যান")}</a>
             </div>
             <div class="col-6 col-lg-2">
-              <h4 class="footer-title">Learn</h4>
-              <a class="footer-link" href="#" onclick="app.navigateTo('login'); return false;">Sign in</a>
-              <a class="footer-link" href="#" onclick="app.navigateTo('register'); return false;">Create account</a>
-              <a class="footer-link" href="#" onclick="app.navigateTo('login'); return false;">Course tracker</a>
-              <a class="footer-link" href="#" onclick="app.navigateTo('login'); return false;">Ambassador portal</a>
+              <h4 class="footer-title">${this.lang("Learn", "শেখা")}</h4>
+              <a class="footer-link" href="#" onclick="app.navigateTo('login'); return false;">${this.lang("Sign in", "সাইন ইন")}</a>
+              <a class="footer-link" href="#" onclick="app.navigateTo('register'); return false;">${this.lang("Create account", "অ্যাকাউন্ট তৈরি করুন")}</a>
+              <a class="footer-link" href="#" onclick="app.navigateTo('login'); return false;">${this.lang("Course tracker", "কোর্স ট্র্যাকার")}</a>
+              <a class="footer-link" href="#" onclick="app.navigateTo('login'); return false;">${this.lang("Ambassador portal", "দূত পোর্টাল")}</a>
             </div>
             <div class="col-lg-4">
-              <h4 class="footer-title">Contact</h4>
+              <h4 class="footer-title">${this.lang("Contact", "যোগাযোগ")}</h4>
               <ul class="footer-contact">
-                <li><i class="fa-solid fa-location-dot"></i> Ministry of Health & Family Welfare, Dhaka</li>
+                <li><i class="fa-solid fa-location-dot"></i> ${this.lang("Ministry of Health & Family Welfare, Dhaka", "স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয়, ঢাকা")}</li>
                 <li><i class="fa-solid fa-envelope"></i> info@yhap.gov.bd</li>
                 <li><i class="fa-solid fa-phone"></i> +880 XXX-XXXXXXX</li>
               </ul>
             </div>
           </div>
           <div class="footer-bottom">
-            <p>&copy; ${new Date().getFullYear()} Young Health Ambassador Programme. All rights reserved.</p>
-            <p class="footer-subline">A joint initiative of MOHFW & UNICEF</p>
+            <p>${this.lang(`© ${currentYear} Young Health Ambassador Programme. All rights reserved.`, `© ${currentYear} যুব স্বাস্থ্য দূত কর্মসূচি। সর্বস্বত্ব সংরক্ষিত।`)}</p>
+            <p class="footer-subline">${this.lang("A joint initiative of MOHFW & UNICEF", "MOHFW ও ইউনিসেফের যৌথ উদ্যোগ")}</p>
           </div>
         </div>
       </footer>
@@ -2000,10 +2099,13 @@ class YouthHealthLMS {
       <!-- Header -->
       <header class="bg-white shadow-sm">
         <div class="container py-3">
-          <div class="d-flex align-items-center gap-2">
-            <a class="navbar-brand" href="#" onclick="app.navigateTo('home'); return false;">
-              <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
-            </a>
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-2">
+              <a class="navbar-brand" href="#" onclick="app.navigateTo('home'); return false;">
+                <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
+              </a>
+            </div>
+            ${this.renderLanguageToggle()}
           </div>
         </div>
       </header>
@@ -2013,24 +2115,24 @@ class YouthHealthLMS {
         <div class="row justify-content-center">
           <div class="col-md-6 col-lg-5">
             <button class="btn btn-link text-decoration-none mb-3 p-0" onclick="app.navigateTo('home')">
-              <i class="bi bi-arrow-left me-2"></i>Back to Home
+              <i class="bi bi-arrow-left me-2"></i>${this.lang("Back to Home", "প্রথম পাতায় ফিরুন")}
             </button>
 
             <div class="card shadow-lg border-0">
               <div class="card-body p-4">
-                <h2 class="text-center mb-2 login-title">Become an Ambassador</h2>
-                <p class="text-center text-muted mb-4">Log in to continue your learning journey</p>
+                <h2 class="text-center mb-2 login-title">${this.lang("Become an Ambassador", "দূত হয়ে উঠুন")}</h2>
+                <p class="text-center text-muted mb-4">${this.lang("Log in to continue your learning journey", "আপনার শেখার যাত্রা চালিয়ে যেতে লগইন করুন")}</p>
 
                 <div id="loginError" class="alert alert-danger d-none"></div>
 
                 <form id="loginForm">
                   <div class="mb-3">
-                    <label for="loginEmail" class="form-label">Phone/Email</label>
+                    <label for="loginEmail" class="form-label">${this.lang("Phone/Email", "ফোন/ইমেইল")}</label>
                     <input type="text" class="form-control" id="loginEmail" placeholder="Phone/Email" required>
                   </div>
 
                   <div class="mb-3">
-                    <label for="loginPassword" class="form-label">Password</label>
+                    <label for="loginPassword" class="form-label">${this.lang("Password", "পাসওয়ার্ড")}</label>
                     <div class="input-group">
                       <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
                       <button class="btn btn-outline-secondary" type="button" data-pw-toggle="loginPassword" aria-label="Show password">
@@ -2040,15 +2142,15 @@ class YouthHealthLMS {
                   </div>
 
                   <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary">Log In</button>
-                    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot password?</button>
+                    <button type="submit" class="btn btn-primary">${this.lang("Log In", "লগইন")}</button>
+                    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">${this.lang("Forgot password?", "পাসওয়ার্ড ভুলে গেছেন?")}</button>
                   </div>
                 </form>
 
                 <div class="text-center mt-4">
                   <p class="text-muted mb-0">
-                    Don't have an account?
-                    <a href="#" onclick="app.navigateTo('register'); return false;" class="text-decoration-none">Sign up</a>
+                    ${this.lang("Don't have an account?", "অ্যাকাউন্ট নেই?")}
+                    <a href="#" onclick="app.navigateTo('register'); return false;" class="text-decoration-none">${this.lang("Sign up", "নিবন্ধন করুন")}</a>
                   </p>
                 </div>
               </div>
@@ -2062,33 +2164,33 @@ class YouthHealthLMS {
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="forgotPasswordLabel">Reset password</h5>
+              <h5 class="modal-title" id="forgotPasswordLabel">${this.lang("Reset password", "পাসওয়ার্ড পুনরায় নির্ধারণ করুন")}</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div id="forgotPwError" class="alert d-none" role="alert"></div>
               <form id="forgotPwForm">
                 <div class="mb-3">
-                  <label for="fpIdentifier" class="form-label">Phone or Email</label>
+                  <label for="fpIdentifier" class="form-label">${this.lang("Phone or Email", "ফোন অথবা ইমেইল")}</label>
                   <input type="text" class="form-control" id="fpIdentifier" placeholder="+8801XXXXXXXXX or name@example.com" required>
                 </div>
                 <div class="mb-3">
-                  <label for="fpNewPassword" class="form-label">New password</label>
+                  <label for="fpNewPassword" class="form-label">${this.lang("New password", "নতুন পাসওয়ার্ড")}</label>
                   <div class="input-group">
                     <input type="password" class="form-control" id="fpNewPassword" placeholder="At least 6 characters" required aria-describedby="fpPwHelp">
                     <button class="btn btn-outline-secondary" type="button" data-pw-toggle="fpNewPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
                   </div>
-                  <div id="fpPwHelp" class="form-text">Must include a number and a special character.</div>
+                  <div id="fpPwHelp" class="form-text">${this.lang("Must include a number and a special character.", "অন্তত একটি সংখ্যা ও একটি বিশেষ অক্ষর থাকতে হবে।")}</div>
                 </div>
                 <div class="mb-3">
-                  <label for="fpConfirmPassword" class="form-label">Confirm new password</label>
+                  <label for="fpConfirmPassword" class="form-label">${this.lang("Confirm new password", "নতুন পাসওয়ার্ড নিশ্চিত করুন")}</label>
                   <div class="input-group">
                     <input type="password" class="form-control" id="fpConfirmPassword" placeholder="Repeat new password" required>
                     <button class="btn btn-outline-secondary" type="button" data-pw-toggle="fpConfirmPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
                   </div>
                 </div>
                 <div class="d-grid">
-                  <button type="submit" class="btn btn-primary">Reset password</button>
+                  <button type="submit" class="btn btn-primary">${this.lang("Reset password", "পাসওয়ার্ড পরিবর্তন করুন")}</button>
                 </div>
               </form>
             </div>
@@ -2173,10 +2275,13 @@ class YouthHealthLMS {
       <!-- Header -->
       <header class="bg-white shadow-sm">
         <div class="container py-3">
-          <div class="d-flex align-items-center gap-2">
-            <a class="navbar-brand" href="#" onclick="app.navigateTo('home'); return false;">
-              <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" style="width: 100%; height: 60px; object-fit: contain;">
-            </a>
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-2">
+              <a class="navbar-brand" href="#" onclick="app.navigateTo('home'); return false;">
+                <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" style="width: 100%; height: 60px; object-fit: contain;">
+              </a>
+            </div>
+            ${this.renderLanguageToggle()}
           </div>
         </div>
       </header>
@@ -2186,46 +2291,46 @@ class YouthHealthLMS {
         <div class="row justify-content-center">
           <div class="col-md-6 col-lg-5">
             <button class="btn btn-link text-decoration-none mb-3 p-0" onclick="app.navigateTo('home')">
-              <i class="bi bi-arrow-left me-2"></i>Back to Home
+              <i class="bi bi-arrow-left me-2"></i>${this.lang("Back to Home", "প্রথম পাতায় ফিরুন")}
             </button>
 
             <div class="card shadow-lg border-0">
               <div class="card-body p-4">
-                <h2 class="text-center mb-2 login-title">Be a Young Health Ambassador</h2>
-                <p class="text-center text-muted mb-4">Start your health learning journey today</p>
+                <h2 class="text-center mb-2 login-title">${this.lang("Be a Young Health Ambassador", "যুব স্বাস্থ্য দূত হয়ে উঠুন")}</h2>
+                <p class="text-center text-muted mb-4">${this.lang("Start your health learning journey today", "আজই আপনার স্বাস্থ্য শিক্ষার যাত্রা শুরু করুন")}</p>
 
                 <div id="registerError" class="alert alert-danger d-none"></div>
 
                 <form id="registerForm">
                   <div class="mb-3">
-                    <label for="registerName" class="form-label">Full Name</label>
+                    <label for="registerName" class="form-label">${this.lang("Full Name", "পুরো নাম")}</label>
                     <input type="text" class="form-control" id="registerName" placeholder="Roqnuzzaman Rozen" required>
                   </div>
                   
                   <div class="mb-3">
-                    <label for="registerPhone" class="form-label">Phone</label>
+                    <label for="registerPhone" class="form-label">${this.lang("Phone", "ফোন")}</label>
                     <input type="tel" class="form-control" id="registerPhone" placeholder="+8801XXXXXXXXX" pattern="^(\+?8801[3-9]\d{8}|01[3-9]\d{8}|1[3-9]\d{8})$" required aria-describedby="phoneHelp">
-                    <div id="phoneHelp" class="form-text">We’ll use your phone for login and account recovery.</div>
+                    <div id="phoneHelp" class="form-text">${this.lang("We’ll use your phone for login and account recovery.", "লগইন ও অ্যাকাউন্ট পুনরুদ্ধারে আপনার ফোন নম্বর ব্যবহৃত হবে।")}</div>
                   </div>
                   <div class="mb-3">
-                    <label for="registerEmail" class="form-label">Email (optional)</label>
+                    <label for="registerEmail" class="form-label">${this.lang("Email (optional)", "ইমেইল (ঐচ্ছিক)")}</label>
                     <input type="email" class="form-control" id="registerEmail" placeholder="your@email.com">
                   </div>
                   
 
                   <div class="mb-3">
-                    <label for="registerPassword" class="form-label">Password</label>
+                    <label for="registerPassword" class="form-label">${this.lang("Password", "পাসওয়ার্ড")}</label>
                     <div class="input-group">
                       <input type="password" class="form-control" id="registerPassword" placeholder="At least 6 characters" required aria-describedby="passwordHelp">
                       <button class="btn btn-outline-secondary" type="button" data-pw-toggle="registerPassword" aria-label="Show password">
                         <i class="fa-solid fa-eye"></i>
                       </button>
                     </div>
-                    <div id="passwordHelp" class="form-text">At least 6 characters and must include a number and a special character.</div>
+                    <div id="passwordHelp" class="form-text">${this.lang("At least 6 characters and must include a number and a special character.", "কমপক্ষে ৬ অক্ষরের হতে হবে এবং অন্তত একটি সংখ্যা ও বিশেষ অক্ষর থাকতে হবে।")}</div>
                   </div>
 
                   <div class="mb-3">
-                    <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                    <label for="registerConfirmPassword" class="form-label">${this.lang("Confirm Password", "পাসওয়ার্ড নিশ্চিত করুন")}</label>
                     <div class="input-group">
                       <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Repeat password" required>
                       <button class="btn btn-outline-secondary" type="button" data-pw-toggle="registerConfirmPassword" aria-label="Show password">
@@ -2234,13 +2339,13 @@ class YouthHealthLMS {
                     </div>
                   </div>
 
-                  <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                  <button type="submit" class="btn btn-primary w-100">${this.lang("Create Account", "অ্যাকাউন্ট তৈরি করুন")}</button>
                 </form>
 
                 <div class="text-center mt-4">
                   <p class="text-muted mb-0">
-                    Already have an account?
-                    <a href="#" onclick="app.navigateTo('login'); return false;" class="text-decoration-none">Log in</a>
+                    ${this.lang("Already have an account?", "অ্যাকাউন্ট আছে?")}
+                    <a href="#" onclick="app.navigateTo('login'); return false;" class="text-decoration-none">${this.lang("Log in", "লগইন")}</a>
                   </p>
                 </div>
               </div>
@@ -2257,11 +2362,14 @@ class YouthHealthLMS {
     const email = user.email || "";
     return `
       <header class="bg-white shadow-sm">
-        <div class="container py-3 d-flex align-items-center gap-2">
-          <a class="navbar-brand" href="#" onclick="app.navigateTo('dashboard'); return false;">
-            <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
-          </a>
-          <span class="ms-2 fw-semibold">Profile settings</span>
+        <div class="container py-3 d-flex align-items-center justify-content-between flex-wrap gap-3">
+          <div class="d-flex align-items-center gap-2">
+            <a class="navbar-brand" href="#" onclick="app.navigateTo('dashboard'); return false;">
+              <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
+            </a>
+            <span class="ms-2 fw-semibold">${this.lang("Profile settings", "প্রোফাইল সেটিংস")}</span>
+          </div>
+          ${this.renderLanguageToggle()}
         </div>
       </header>
 
@@ -2269,42 +2377,42 @@ class YouthHealthLMS {
         <div class="row justify-content-center">
           <div class="col-md-7 col-lg-6">
             <button class="btn btn-link text-decoration-none mb-3 p-0" onclick="app.navigateTo('dashboard')">
-              <i class="bi bi-arrow-left me-2"></i>Back to Dashboard
+              <i class="bi bi-arrow-left me-2"></i>${this.lang("Back to Dashboard", "ড্যাশবোর্ডে ফিরুন")}
             </button>
             <div class="card shadow-sm border-0">
               <div class="card-body p-4">
-                <h3 class="h5 mb-3">Account</h3>
+                <h3 class="h5 mb-3">${this.lang("Account", "অ্যাকাউন্ট")}</h3>
                 <div id="profileMsg" class="alert d-none" role="alert"></div>
                 <form id="profileForm" novalidate>
                   <div class="mb-3">
-                    <label class="form-label" for="profilePhone">Phone</label>
+                    <label class="form-label" for="profilePhone">${this.lang("Phone", "ফোন")}</label>
                     <input id="profilePhone" type="tel" class="form-control" required placeholder="+8801XXXXXXXXX" pattern="^(\+?8801[3-9]\d{8}|01[3-9]\d{8}|1[3-9]\d{8})$" aria-describedby="profilePhoneHelp" value="${phone}">
-                    <div id="profilePhoneHelp" class="form-text">Use a valid Bangladeshi number. This is used for login and account recovery.</div>
+                    <div id="profilePhoneHelp" class="form-text">${this.lang("Use a valid Bangladeshi number. This is used for login and account recovery.", "সঠিক বাংলাদেশি নম্বর দিন। লগইন ও অ্যাকাউন্ট পুনরুদ্ধারে এটি ব্যবহৃত হয়।")}</div>
                   </div>
                   <div class="mb-3">
-                    <label class="form-label" for="profileEmail">Email (optional)</label>
+                    <label class="form-label" for="profileEmail">${this.lang("Email (optional)", "ইমেইল (ঐচ্ছিক)")}</label>
                     <input id="profileEmail" type="email" class="form-control" placeholder="name@example.com" value="${email}">
                   </div>
                   <hr class="my-4">
-                  <h3 class="h6 mb-3">Change password</h3>
+                  <h3 class="h6 mb-3">${this.lang("Change password", "পাসওয়ার্ড পরিবর্তন করুন")}</h3>
                   <div class="row g-3">
                     <div class="col-12">
-                      <label class="form-label" for="profileCurrentPassword">Current password</label>
+                      <label class="form-label" for="profileCurrentPassword">${this.lang("Current password", "বর্তমান পাসওয়ার্ড")}</label>
                       <div class="input-group">
                         <input id="profileCurrentPassword" type="password" class="form-control" placeholder="••••••••" autocomplete="current-password">
                         <button class="btn btn-outline-secondary" type="button" data-pw-toggle="profileCurrentPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <label class="form-label" for="profileNewPassword">New password</label>
+                      <label class="form-label" for="profileNewPassword">${this.lang("New password", "নতুন পাসওয়ার্ড")}</label>
                       <div class="input-group">
                         <input id="profileNewPassword" type="password" class="form-control" placeholder="At least 6 characters" autocomplete="new-password" aria-describedby="profilePwHelp">
                         <button class="btn btn-outline-secondary" type="button" data-pw-toggle="profileNewPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
                       </div>
-                      <div id="profilePwHelp" class="form-text">At least 6 characters and must include a number and a special character.</div>
+                      <div id="profilePwHelp" class="form-text">${this.lang("At least 6 characters and must include a number and a special character.", "কমপক্ষে ৬ অক্ষরের হতে হবে এবং অন্তত একটি সংখ্যা ও বিশেষ অক্ষর থাকতে হবে।")}</div>
                     </div>
                     <div class="col-md-6">
-                      <label class="form-label" for="profileConfirmPassword">Confirm new password</label>
+                      <label class="form-label" for="profileConfirmPassword">${this.lang("Confirm new password", "নতুন পাসওয়ার্ড নিশ্চিত করুন")}</label>
                       <div class="input-group">
                         <input id="profileConfirmPassword" type="password" class="form-control" placeholder="Repeat new password" autocomplete="new-password">
                         <button class="btn btn-outline-secondary" type="button" data-pw-toggle="profileConfirmPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
@@ -2312,8 +2420,8 @@ class YouthHealthLMS {
                     </div>
                   </div>
                   <div class="d-flex gap-2">
-                    <button class="btn btn-primary" type="submit">Save changes</button>
-                    <button class="btn btn-outline-secondary" type="button" onclick="app.navigateTo('dashboard')">Cancel</button>
+                    <button class="btn btn-primary" type="submit">${this.lang("Save changes", "পরিবর্তন সংরক্ষণ করুন")}</button>
+                    <button class="btn btn-outline-secondary" type="button" onclick="app.navigateTo('dashboard')">${this.lang("Cancel", "বাতিল")}</button>
                   </div>
                 </form>
               </div>
@@ -2491,7 +2599,8 @@ class YouthHealthLMS {
             <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="app.navigateTo('home'); return false;">
               <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" class="brand-mark" style="height: 60px;">
             </a>
-            <div class="d-flex align-items-center gap-3 ms-auto">
+            <div class="d-flex align-items-center flex-wrap gap-3 ms-auto justify-content-end">
+              ${this.renderLanguageToggle()}
               <button class="btn btn-logout" title="Profile settings" onclick="app.navigateTo('profile'); return false;">
                 <i class="fa-solid fa-gear"></i>
               </button>
@@ -2520,19 +2629,22 @@ class YouthHealthLMS {
               </div>
               <div class="row g-4 align-items-center">
                 <div class="col-lg-7">
-                  <span class="dashboard-kicker dashboard-title"> Welcome To YHAP</span>
+                  <span class="dashboard-kicker dashboard-title"> ${this.lang("Welcome To YHAP", "YHAP-এ স্বাগতম")}</span>
                   <p class="dashboard-subtitle">
-                    You're ${overallProgress}% through your Young Health Ambassador pathway. Keep up the momentum with curated lessons, trackable impact, and certificates powered by UNICEF and MOHFW.
+                    ${this.lang(
+                      `You're ${overallProgress}% through your Young Health Ambassador pathway. Keep up the momentum with curated lessons, trackable impact, and certificates powered by UNICEF and MOHFW.`,
+                      `আপনি ইয়াং হেলথ অ্যাম্বাসেডর যাত্রার ${overallProgress}% সম্পন্ন করেছেন। বাছাইকৃত পাঠ, মাপযোগ্য প্রভাব ও ইউনিসেফ-মন্ত্রণালয়ের সার্টিফিকেট নিয়ে এই গতিকে ধরে রাখুন।`
+                    )}
                   </p>
                   <div class="dashboard-meta">
-                    <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i>Joined ${joinedDate}</span>
+                    <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i>${this.lang(`Joined ${joinedDate}`, `${joinedDate} তারিখে যোগ দিয়েছেন`)}</span>
                   </div>
                   <div class="dashboard-actions">
                     <button class="btn btn-gradient-glow hover-lift-sm focus-visible-ring transition-base btn-lg" onclick="${continueOnclick}">
-                      Continue learning <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                      ${this.lang("Continue learning", "শেখা চালিয়ে যান")} <i class="fa-solid fa-arrow-right-long ms-2"></i>
                     </button>
                     <button class="btn btn-outline-light btn-lg" onclick="app.navigateTo('register'); return false;">
-                      Invite a friend <i class="fa-solid fa-user-plus ms-2"></i>
+                      ${this.lang("Invite a friend", "বন্ধুকে আমন্ত্রণ করুন")} <i class="fa-solid fa-user-plus ms-2"></i>
                     </button>
                   </div>
                 </div>
@@ -2541,12 +2653,12 @@ class YouthHealthLMS {
                     <div class="completion-ring" style="--progress: ${overallProgress};">
                       <div class="completion-ring__content">
                         <span class="completion-ring__value">${overallProgress}%</span>
-                        <span class="completion-ring__label">Overall</span>
+                        <span class="completion-ring__label">${this.lang("Overall", "সমগ্র অগ্রগতি")}</span>
                       </div>
                     </div>
                     <ul class="dashboard-stat-list">
                       <li>
-                        <span class="stat-label">Modules Completed:&nbsp;</span>
+                        <span class="stat-label">${this.lang("Modules Completed:", "সম্পন্ন মডিউল:")}&nbsp;</span>
                         <span class="stat-value">${formatNumber(
                           completedModules
                         )}</span>
@@ -3233,7 +3345,7 @@ class YouthHealthLMS {
         <div class="lesson-mobile-actions d-lg-none">
           <div class="container">
             <button class="btn btn-primary w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
-              <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+              <i class="fa-solid fa-list me-2"></i>${this.lang("Browse modules & lessons", "মডিউল ও পাঠ দেখুন")}
             </button>
           </div>
         </div>`;
@@ -3241,7 +3353,7 @@ class YouthHealthLMS {
       const mobileOffcanvas = `
         <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileLessonBrowser" aria-labelledby="mobileLessonBrowserLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title btn btn-gradient-glow hover-lift-sm focus-visible-ring transition-base btn-lg" id="mobileLessonBrowserLabel">All modules & lessons</h5>
+            <h5 class="offcanvas-title btn btn-gradient-glow hover-lift-sm focus-visible-ring transition-base btn-lg" id="mobileLessonBrowserLabel">${this.lang("All modules & lessons", "সমস্ত মডিউল ও পাঠ")}</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
@@ -3345,15 +3457,17 @@ class YouthHealthLMS {
             <div class="container">
               <div class="lesson-hero__top">
                 <button class="btn btn-primary d-none d-lg-block" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowser" aria-controls="mobileLessonBrowser">
-                  <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+                  <i class="fa-solid fa-list me-2"></i>${this.lang("Browse modules & lessons", "মডিউল ও পাঠ দেখুন")}
                 </button>
                  <div class="lesson-hero__counts">
-                  <span class="lesson-pill">Module ${
-                    chIndex + 1
-                  } of ${totalChapters}</span>
-                  <span class="lesson-pill">Lesson ${
-                    activeIndex + 1
-                  } of ${totalLessons}</span>
+                  <span class="lesson-pill">${this.lang(
+                    `Module ${chIndex + 1} of ${totalChapters}`,
+                    `মডিউল ${chIndex + 1} মোট ${totalChapters}`
+                  )}</span>
+                  <span class="lesson-pill">${this.lang(
+                    `Lesson ${activeIndex + 1} of ${totalLessons}`,
+                    `পাঠ ${activeIndex + 1} মোট ${totalLessons}`
+                  )}</span>
                 </div>
                 <div class="lesson-hero__progress">
                   <div
@@ -3362,7 +3476,7 @@ class YouthHealthLMS {
                     aria-valuemin="0"
                     aria-valuemax="100"
                     aria-valuenow="${courseProgressDisplay}"
-                    aria-label="Course progress"
+                    aria-label="" 
                   >
                     <div
                       class="lesson-progress__bar"
@@ -3371,22 +3485,26 @@ class YouthHealthLMS {
                   </div>
                   <div class="lesson-progress__meta">
                     <div class="lesson-progress__course">
-                      <span class="lesson-progress__label">Course progress:</span>
+                      <span class="lesson-progress__label">${this.lang("Course progress:", "কোর্সের অগ্রগতি:")}</span>
                       <span class="lesson-progress__value">&nbsp;${courseProgressDisplay}%</span>
                     </div>
                     ${
                       totalLessons > 0
-                        ? `<span class="lesson-progress__caption">Module ${
-                            chIndex + 1
-                          } progress: <span id="chapterProgressValue" data-target="${chapterProgressDisplay}">0</span>%</span>`
+                        ? `<span class="lesson-progress__caption">${this.lang(
+                            `Module ${chIndex + 1} progress`,
+                            `${chIndex + 1} নম্বর মডিউলের অগ্রগতি`
+                          )}: <span id="chapterProgressValue" data-target="${chapterProgressDisplay}">0</span>%</span>`
                         : ""
                     }
                   </div>
                 </div>
-                <button class="lesson-back" onclick="app.navigateTo('dashboard')">
-                  <i class="fa-solid fa-arrow-left-long"></i>
-                  Back to dashboard
-                </button>
+                <div class="lesson-hero__actions">
+                  ${this.renderLanguageToggle()}
+                  <button class="lesson-back" onclick="app.navigateTo('dashboard')">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    ${this.lang("Back to dashboard", "ড্যাশবোর্ডে ফিরুন")}
+                  </button>
+                </div>
               </div>
             </div>
           </header>
