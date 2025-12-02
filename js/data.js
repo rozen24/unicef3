@@ -2805,6 +2805,80 @@ const coursesData = [
               </div>`;
             })(),
           },
+          {
+            id: "ch4-lesson-2",
+            title: yhLang("নারী প্রজননতন্ত্র", "নারী প্রজননতন্ত্র"),
+            icon: "fa-person-dress",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4b",
+                  question: yhLang(
+                    "নারীর কোন অঙ্গে গর্ভধারণ ঘটে?",
+                    "নারীর কোন অঙ্গে গর্ভধারণ ঘটে?"
+                  ),
+                  options: [
+                    yhLang("জরায়ু", "জরায়ু"),
+                    yhLang("যোনিপথ", "যোনিপথ"),
+                    yhLang("স্তন", "স্তন"),
+                    yhLang("মূত্রথলি", "মূত্রথলি"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const points = [
+                "ডিম্বাশয়: জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে। প্রত্যেক মাসিক চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।",
+                "জরায়ু: জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়।",
+                "ডিম্ববাহী নালি: জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।",
+                "যোনিপথ: যোনিপথ জরায়ুর ভিতর থেকে শুরু হয়ে শরীরের বাইরে এসে যোনিমুখে শেষ হয়েছে।",
+                "স্তন: স্তন সরাসরি প্রজননতন্ত্রের অংশ না হলেও এটি আনুষঙ্গিক প্রজনন অঙ্গ হিসেবে বিবেচিত হয়, কারণ শিশুর জন্মের পর স্তনেই বুকের দুধ তৈরি হয়।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "নারী প্রজননতন্ত্র",
+                    "নারী প্রজননতন্ত্র"
+                  )}</h2>
+
+                  <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
+                    <span class="menstrual-corner-accent" aria-hidden="true"></span>
+                    <span class="menstrual-corner-pill" aria-hidden="true"></span>
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-5">
+                        <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
+                          <img src="img/modu4/nari.jpg" alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 object-fit-cover" />
+                        </figure>
+                      </div>
+                      <div class="col-lg-7">
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(points)}
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          
         ],
       },
       {
@@ -2813,23 +2887,826 @@ const coursesData = [
           "Module-3: Changes during adolescence and puberty",
           "মডিউল-৩: কৈশোর ও বয়ঃসন্ধিকালের পরিবর্তন"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch3-lesson-1",
+            title: yhLang("Puberty", "বয়ঃসন্ধিকাল"),
+            icon: "fa-venus-mars",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q3a",
+                  question: yhLang(
+                    "What is puberty?",
+                    "বয়ঃসন্ধিকাল বলতে কী বোঝায়?"
+                  ),
+                  options: [
+                    yhLang(
+                      "A process of physical changes leading to sexual maturity",
+                      "শারীরিক পরিবর্তনের এমন একটি প্রক্রিয়া যা যৌন পরিপক্বতা আনে"
+                    ),
+                    yhLang("Only a temporary illness", "শুধু অস্থায়ী অসুস্থতা"),
+                    yhLang("Changes that happen only to boys", "শুধু ছেলেদের পরিবর্তন"),
+                    yhLang("Unrelated to hormones", "হরমোনের সাথে সম্পর্কহীন"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const description = yhLang(
+                "Puberty is the phase when adolescents experience physical transformations that bring sexual maturity.",
+                "বয়ঃসন্ধিকাল হলো শারীরিক পরিবর্তনের প্রক্রিয়া যখন ছেলে-মেয়ে যৌন পরিপক্বতা লাভ করে।"
+              );
+
+              const maleChanges = [
+                "উচ্চতা ও ওজন বাড়ে",
+                "বুক ও কাঁধ চওড়া হয়",
+                "হালকা গোঁফের রেখা দেখা দেয়",
+                "গলার স্বর ভেঙে যায় ও ভারী হয়",
+                "অন্ডকোষ ও লিঙ্গের আকার বৃদ্ধি পায়",
+                "লিঙ্গের চারপাশ ও বগলে লোম গজায়",
+                "কখনো কখনো ঘুমের মধ্যে বীর্যপাত হয়",
+                "চামড়া তৈলাক্ত হয়",
+              ];
+
+              const femaleChanges = [
+                "উচ্চতা ও ওজন বাড়ে",
+                "স্তনের আকার বড় হয়",
+                "গলার স্বর পরিবর্তন হয়",
+                "মাসিক শুরু হয়",
+                "উরু ও নিতম্ব ভারী হয়",
+                "যোনি অঞ্চলে ও বগলে লোম গজায়",
+                "জরায়ু ও ডিম্বাশয় বড় হয়",
+                "চামড়া তৈলাক্ত হয়",
+              ];
+
+              const mentalChanges = [
+                "মনে নানা প্রশ্ন ও কৌতূহল জাগে",
+                "বিপরীত লিঙ্গের প্রতি আকর্ষণ বোধ করে",
+                "লাজুক ভাব দেখা দেয় ও সঙ্কোচ বোধ করে",
+                "নিজের প্রতি অনেক বেশি মনোযোগ দাবি করে; আবেগপ্রবণ হয় এবং স্নেহ-ভালবাসা পেতে চায়",
+                "বন্ধু-বান্ধবের সঙ্গ এবং তাদের প্রতি নির্ভরতা বাড়ে",
+                "স্বাধীনভাবে চলাফেরা করতে চায়",
+                "বড়দের মতো আচরণ করতে চায়",
+                "ভাবুক এবং কল্পনাপ্রবণ হয়",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Puberty", "বয়ঃসন্ধিকাল")}</h2>
+                  <p class="text-muted" data-aos="fade-up" data-aos-delay="40">${description}</p>
+
+                  <div class="modern-card glass-card table-responsive" data-aos="fade-up" data-aos-delay="80">
+                    <p class="text-muted gradient-text" data-aos="fade-up" data-aos-delay="40">${yhLang("Changes during puberty", "বয়ঃসন্ধিকালীন পরিবর্তনসমূহ ")}</p>
+                    <table class="table table-borderless text-start puberty-table">
+                      <thead>
+                        <tr>
+                          <th>${yhLang("Physical changes in boys", "ছেলেদের শারীরিক পরিবর্তন")}</th>
+                          <th>${yhLang("Physical changes in girls", "মেয়েদের শারীরিক পরিবর্তন")}</th>
+                          <th>${yhLang("Emotional changes", "ছেলে-মেয়েদের মানসিক পরিবর্তন")}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><ul class="list-unstyled puberty-list">${renderList(maleChanges)}</ul></td>
+                          <td><ul class="list-unstyled puberty-list">${renderList(femaleChanges)}</ul></td>
+                          <td><ul class="list-unstyled puberty-list">${renderList(mentalChanges)}</ul></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-4",
         title: yhLang(
-          "Module-4: Menstrual Health and Hygiene Management",
-          "মডিউল-৪: মাসিক স্বাস্থ্য ও স্বাস্থ্যবিধি ব্যবস্থাপনা"
+          "Module-4: Menstrual/menstrual management",
+          "মডিউল-৪: মাসিক/ঋতুস্রাব ব্যবস্থাপনা"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch4-lesson-1",
+            title: yhLang("Menstrual/menstrual managementt", "মাসিক/ঋতুস্রাব ব্যবস্থাপনা"),
+            icon: "fa-droplet",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4a",
+                  question: yhLang(
+                    "ঋতুস্রাব সাধারণত কোন বয়সের মধ্যে শুরু হয়?",
+                    "ঋতুস্রাব সাধারণত কোন বয়সের মধ্যে শুরু হয়?"
+                  ),
+                  options: [
+                    yhLang("৯–১৪ বছর", "৯–১৪ বছর"),
+                    yhLang("১৫–২৫ বছর", "১৫–২৫ বছর"),
+                    yhLang("২৬–৩৫ বছর", "২৬–৩৫ বছর"),
+                    yhLang("৪৫–৫৫ বছর", "৪৫–৫৫ বছর"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+                const paragraphs = [
+                yhLang(
+                  "Menstruation is a normal, natural process that prepares a person for pregnancy and childbirth. The monthly bleeding through the vagina is called menstruation (periods).",
+                  "মাসিক একটি স্বাভাবিক প্রাকৃতিক প্রক্রিয়া, যার মাধ্যমে একজন নারী গর্ভধারণ/সন্তান জন্মদানের জন্য প্রস্তুত হয়। প্রতিমাসে যোনিপথ দিয়ে মেয়েদের যে রক্তস্রাব হয়, তাকে মাসিক/ঋতুস্রাব বলে।"
+                ),
+                yhLang(
+                  "Menstruation typically begins between ages 9–14 and continues monthly until about 45–55 years.",
+                  "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।"
+                ),
+                yhLang(
+                  "Bleeding usually lasts 1–7 days each month. Flow is often heavier during the first 1–3 days and becomes lighter afterwards.",
+                  "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।"
+                ),
+                yhLang(
+                  "A typical menstrual cycle occurs every 21–35 days.",
+                  "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।"
+                ),
+                yhLang(
+                  "Having periods means the body is maturing and the reproductive system is functioning properly. It is completely normal—not unclean or impure—and there is no reason to isolate someone during this time. Unless there is unusual pain or excessive bleeding, normal daily activities can continue.",
+                  "মাসিক হওয়া মানে দেহ পরিণত হচ্ছে এবং প্রজননতন্ত্র সঠিকভাবে কাজ করছে। এটি একটি সম্পূর্ণ স্বাভাবিক ঘটনা। এটি কোনো অপবিত্রতা বা অপরিচ্ছন্নতা নয় এবং এ সময় কোনো নারীকে আলাদা করে রাখারও কিছু নেই। এ সময় যদি অস্বাভাবিক ব্যথা বা অতিরিক্ত রক্তস্রাব না ঘটে, তবে সে তার স্বাভাবিক কাজ-কর্ম চালিয়ে যেতে পারে।"
+                ),
+                ];
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Menstrual/menstrual managementt",
+                    "মাসিক/ঋতুস্রাব ব্যবস্থাপনা"
+                  )}</h2>
+
+                  <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
+                    <span class="menstrual-corner-accent" aria-hidden="true"></span>
+                    <span class="menstrual-corner-pill" aria-hidden="true"></span>
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-5">
+                        <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
+                          <img src="img/modu4/masik.jpeg" alt="Menstrual care" class="img-fluid w-100 object-fit-cover" />
+                        </figure>
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="d-flex flex-column gap-3">
+                          ${paragraphs
+                            .map((text, idx) => `<p class="mb-0" data-aos="fade-left" data-aos-delay="${80 + idx * 20}">${text}</p>`)
+                            .join("")}
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch4-lesson-2",
+            title: yhLang("নারী প্রজননতন্ত্র", "নারী প্রজননতন্ত্র"),
+            icon: "fa-person-dress",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4b",
+                  question: yhLang(
+                    "জরায়ুর প্রধান কাজ কী?",
+                    "জরায়ুর প্রধান কাজ কী?"
+                  ),
+                  options: [
+                    yhLang("গর্ভধারণ করা", "গর্ভধারণ করা"),
+                    yhLang("শ্বাস-প্রশ্বাস নিয়ন্ত্রণ করা", "শ্বাস-প্রশ্বাস নিয়ন্ত্রণ করা"),
+                    yhLang("রক্ত পরিশোধন", "রক্ত পরিশোধন"),
+                    yhLang("হরমোন জমা রাখা", "হরমোন জমা রাখা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const points = [
+                "ডিম্বাশয়: জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে। প্রত্যেক মাসিক <br> চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।",
+                "জরায়ু: জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়।",
+                "ডিম্ববাহী নালি: জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।",
+                "যোনিপথ: যোনিপথ জরায়ুর ভিতর থেকে শুরু হয়ে শরীরের বাইরে এসে যোনিমুখে শেষ হয়েছে।",
+                "স্তন: স্তন সরাসরি প্রজননতন্ত্রের অংশ না হলেও এটি আনুষঙ্গিক প্রজনন অঙ্গ হিসেবে বিবেচিত হয়, কারণ শিশুর জন্মের পর স্তনেই বুকের দুধ তৈরি হয়।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "নারী প্রজননতন্ত্র",
+                    "নারী প্রজননতন্ত্র"
+                  )}</h2>
+
+                  <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
+                    <span class="menstrual-corner-accent" aria-hidden="true"></span>
+                    <span class="menstrual-corner-pill" aria-hidden="true"></span>
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-5">
+                        <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
+                          <img src="img/modu4/nari.jpg" alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 object-fit-cover" />
+                        </figure>
+                      </div>
+                      <div class="col-lg-7">
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(points)}
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch4-lesson-3",
+            title: yhLang(
+              "Care During Menstruation",
+              "মাসিক চলাকালীন মেয়েদের করণীয়"
+            ),
+            icon: "fa-heart-circle-check",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4c",
+                  question: yhLang(
+                    "মাসিকের সময় ন্যাপকিন কতবার বদলানো উচিত?",
+                    "মাসিকের সময় ন্যাপকিন কতবার বদলানো উচিত?"
+                  ),
+                  options: [
+                    yhLang("দিনে অন্তত ৪–৬ বার", "দিনে অন্তত ৪–৬ বার"),
+                    yhLang("দিনে মাত্র ১ বার", "দিনে মাত্র ১ বার"),
+                    yhLang("সপ্তাহে একবার", "সপ্তাহে একবার"),
+                    yhLang("বদলানোর প্রয়োজন নেই", "বদলানোর প্রয়োজন নেই"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const tips = [
+                "মাসিককালীন সময়ে মেয়েদের প্রচুর পরিমাণে বিভিন্ন ধরনের পুষ্টিকর খাবার, শাকসবজি এবং ফলমূল খেতে হবে এবং প্রচুর পরিমাণে পানি পান করতে হবে।",
+                "প্রতিদিন ভালোভাবে গোসল এবং প্রজনন অঙ্গ পানি ও সাবান দিয়ে পরিষ্কার করতে হবে।",
+                "মাসিকের সময় ঘরে তৈরি পরিষ্কার ন্যাপকিন/কাপড় অথবা স্যানিটারি ন্যাপকিন ব্যবহার করতে হবে। রক্তস্রাবের পরিমাণ অনুযায়ী তা দিনে অন্ততপক্ষে ৪ থেকে ৬ বার বদলাতে হবে।",
+                "ব্যবহারের পর স্যানিটারি ন্যাপকিন কাগজে মুড়িয়ে ডাস্টবিনে বা ময়লা ফেলার নির্দিষ্ট স্থানে ফেলতে হবে। কাপড় ব্যবহার করলে ব্যবহার শেষে কাপড়টি সাবান ও পানি দিয়ে ধুতে হবে এবং সূর্যের আলোতে শুকিয়ে পরিষ্কার প্যাকেটে রেখে পরবর্তীতে ব্যবহারের জন্য সংরক্ষণ করতে হবে।",
+                "মাসিকের সময় স্বাভাবিক হাঁটাচলা ও হালকা ব্যায়াম করতে হবে এবং পর্যাপ্ত পরিমাণে ঘুমাতে হবে।",
+                "মাসিক বন্ধ থাকলে, এক মাসে ২–৩ বার মাসিক হলে, প্রচুর রক্তস্রাব হলে, তীব্র ব্যথা হলে বা অস্বাভাবিক কোনো সমস্যা দেখা দিলে চিকিৎসকের পরামর্শ নিতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "মাসিক চলাকালীন মেয়েদের করণীয়",
+                    "মাসিক চলাকালীন মেয়েদের করণীয়"
+                  )}</h2>
+
+                  <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
+                    <span class="menstrual-corner-accent" aria-hidden="true"></span>
+                    <span class="menstrual-corner-pill" aria-hidden="true"></span>
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-5">
+                        <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
+                          <img src="img/modu4/masik2.jpg" alt="মাসিক চলাকালীন করণীয়" class="img-fluid w-100 object-fit-cover" />
+                        </figure>
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="menstrual-inline-divider" aria-hidden="true"></div>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(tips)}
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch4-lesson-4",
+            title: yhLang(
+              "Support Systems for Menstrual Health",
+              "মাসিক ব্যবস্থাপনায় সহযোগিতা"
+            ),
+            icon: "fa-people-roof",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4d",
+                  question: yhLang(
+                    "স্কুলে মাসিকের সময় জরুরি স্যানিটারি ন্যাপকিন কেন গুরুত্বপূর্ণ?",
+                    "স্কুলে মাসিকের সময় জরুরি স্যানিটারি ন্যাপকিন কেন গুরুত্বপূর্ণ?"
+                  ),
+                  options: [
+                    yhLang(
+                      "প্রস্তুতি ছাড়া শুরু হলে তাৎক্ষণিক সহায়তা দিতে",
+                      "প্রস্তুতি ছাড়া শুরু হলে তাৎক্ষণিক সহায়তা দিতে"
+                    ),
+                    yhLang("শুধু প্রদর্শনের জন্য", "শুধু প্রদর্শনের জন্য"),
+                    yhLang("অপ্রয়োজনীয় ব্যয়", "অপ্রয়োজনীয় ব্যয়"),
+                    yhLang("নিষिद्ध", "নিষিদ্ধ"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const parentPoints = [
+                "কৈশোরের শুরুতে কিশোরীকে মাসিক ও এর ব্যবস্থাপনা বিষয়ে তথ্য বা শিক্ষা দেওয়া।",
+                "কোনো সমস্যা হলে যেন বাবা-মায়ের সাথে আলোচনা করে—সেভাবে তাকে উৎসাহিত করা।",
+                "ঋতুস্রাবকে ভয় না পেয়ে সহজভাবে নিতে শিক্ষা দেওয়া।",
+                "এই সময়ে স্কুলে যাওয়া, খেলাধুলা করা সহ সব কাজ স্বাভাবিকভাবে করতে উৎসাহ দেওয়া।",
+                "ঋতুস্রাবের সময়ে কিশোরীকে বেশি করে পুষ্টিকর খাবার খেতে উৎসাহিত করা।",
+              ];
+
+              const schoolIntro =
+                "অনেক মেয়েই মাসিকের সময়, বিশেষ করে মাসিকের প্রথম দিনগুলোতে স্কুল/কলেজে যেতে চায় না। প্রতিমাসের এমন অনুপস্থিতি তাদের লেখাপড়া ও ফলাফলের উপর নেতিবাচক প্রভাব ফেলে। ফলাফল খারাপ হওয়ায় তারা পড়াশোনা বন্ধ করে দেয়, আবার অনেকের অভিভাবক এ সময় মেয়েদের বিয়ে দিয়ে দেন। এ অবস্থা থেকে পরিত্রাণ পেতে শিক্ষা প্রতিষ্ঠানের কর্তৃপক্ষকে ঋতুস্রাবের সময় ছাত্রীদের সহায়তা প্রদান করতে হবে। যেমন—";
+
+              const schoolPoints = [
+                "একজন বা দু’জন নারী শিক্ষককে এ বিষয়ে দায়িত্ব দেওয়া যেতে পারে যেন তারা মাসিকের সময়ে ছাত্রীদের ব্যক্তিগত পরিষ্কার-পরিচ্ছন্নতা বিষয়ে তথ্য দিয়ে সাহায্য করতে পারেন।",
+                "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা প্রস্তুতি ছাড়া হঠাৎ করে মাসিক শুরু হয়ে যেতে পারে। সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীকে সাহায্য করতে পারে।",
+                "অনেক মেয়ের মাসিকের সময় তলপেটে তীব্র ব্যথা হয়। তাই স্কুলের ফার্স্ট এইড বক্সে বেদনানাশক ট্যাবলেট রাখা প্রয়োজন।",
+                "মনে রাখতে হবে যে, ঋতুস্রাব একটি স্বাভাবিক শারীরিক প্রক্রিয়া—এ নিয়ে লজ্জা বা সংকোচের কিছু নেই। এ বিষয়টি ছাত্র-ছাত্রী, শিক্ষকসহ সবাইকে সহজভাবে দেখার জন্য এবং সহযোগিতা দেওয়ার জন্য ওরিয়েন্টেশন প্রদান করা প্রয়োজন।",
+              ];
+
+              const essentials = [
+                "ছেলে ও মেয়েদের জন্য পৃথক টয়লেটের ব্যবস্থা করতে হবে",
+                "সার্বক্ষণিক পানির ব্যবস্থা থাকতে হবে",
+                "টয়লেটে পর্যাপ্ত সাবানের ব্যবস্থা রাখতে হবে",
+                "টয়লেটে ঢাকনাযুক্ত বিন/ঝুড়ির ব্যবস্থা রাখতে হবে",
+                "টয়লেট প্রতিদিন পরিষ্কারের জন্য পরিচ্ছন্নতা কর্মীর ব্যবস্থা রাখতে হবে",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "মাসিক ব্যবস্থাপনায় বাবা-মা ও শিক্ষাপ্রতিষ্ঠানের ভূমিকা",
+                    "মাসিক ব্যবস্থাপনায় বাবা-মা ও শিক্ষাপ্রতিষ্ঠানের ভূমিকা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
+                      "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
+                      "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(parentPoints)}
+                    </ul>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
+                      "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা",
+                      "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা"
+                    )}</h3>
+                    <p class="text-muted mb-3">${schoolIntro}</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(schoolPoints)}
+                    </ul>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="120">
+                    <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
+                      "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে",
+                      "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(essentials)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch4-lesson-5",
+            title: yhLang(
+              "মাসিকের অস্বাভাবিকতা ও ব্যবস্থাপনা",
+              "মাসিকের অস্বাভাবিকতা ও ব্যবস্থাপনা"
+            ),
+            icon: "fa-heart-pulse",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4e",
+                  question: yhLang(
+                    "মাসিক বন্ধ থাকলে প্রথমে কী পরীক্ষা করা উচিত?",
+                    "মাসিক বন্ধ থাকলে প্রথমে কী পরীক্ষা করা উচিত?"
+                  ),
+                  options: [
+                    yhLang("গর্ভধারণ পরীক্ষা", "গর্ভধারণ পরীক্ষা"),
+                    yhLang("রক্তচাপ পরীক্ষা", "রক্তচাপ পরীক্ষা"),
+                    yhLang("চোখের পরীক্ষা", "চোখের পরীক্ষা"),
+                    yhLang("শ্রবণ পরীক্ষা", "শ্রবণ পরীক্ষা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const warningPoints = [
+                "মাসিক বন্ধ হয়ে গেছে অথবা এক মাসে ২/৩ বার মাসিক হচ্ছে, অর্থাৎ নিয়মিত মাসিক হচ্ছে না।",
+                "মাসিকের সময় অতিরিক্ত রক্তক্ষরণ হওয়া।",
+                "দুইটি মাসিকের মধ্যবর্তী সময়ে ফোঁটায় ফোঁটায় রক্ত যাওয়া।",
+                "দুর্গন্ধযুক্ত রক্ত যাওয়া বা মাসিকের সময় জ্বর থাকা।",
+                "মাসিকের সময় তলপেটে অস্বাভাবিক ব্যথা হওয়া।",
+              ];
+
+              const managementPoints = [
+                "মাসিক বন্ধ হয়ে যাওয়া গর্ভধারণের একটি লক্ষণ। সেক্ষেত্রে উপযুক্ত পরীক্ষা করে গর্ভধারণ নিশ্চিত হলে, স্বাস্থ্যসেবা প্রদানকারীর নিকট থেকে গর্ভজনিত সেবা গ্রহণ করতে হবে। তবে মনে রাখতে হবে, মাসিক বন্ধ মানেই নিশ্চিত গর্ভধারণ নয়—তাই অবশ্যই গর্ভধারণ পরীক্ষা (প্রীয়ড টেস্ট/প্রেগনেন্সি টেস্ট) করতে হবে।",
+                "অনিয়মিত মাসিক, মাসিকের সময় অতিরিক্ত রক্ত যাওয়া, অথবা অতিরিক্ত ব্যথা হওয়া—এসব প্রজননতন্ত্র বা হরমোনজনিত সমস্যার লক্ষণ হতে পারে। তাই মেয়েদের বিশেষজ্ঞ চিকিৎসকের কাছে রেফার করতে হবে।",
+                "মাসিকের সময় অতিরিক্ত ব্যথা হলে ব্যথানাশক ওষুধ (ডাক্তারের পরামর্শ অনুযায়ী) খেতে হবে।",
+                "চিকিৎসার পাশাপাশি মেয়েদের পুষ্টিকর খাবার খেতে, স্কুলে যেতে, এবং হালকা ব্যায়াম ও হাঁটাচলা করতে উৎসাহিত করতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "মাসিকের অস্বাভাবিকতা ও এর ব্যবস্থাপনা",
+                    "মাসিকের অস্বাভাবিকতা ও এর ব্যবস্থাপনা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text">${yhLang(
+                      "মাসিকের অস্বাভাবিকতা",
+                      "মাসিকের অস্বাভাবিকতা"
+                    )}</h3>
+                    <p class="text-muted mb-3">${yhLang(
+                      "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।",
+                      "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।"
+                    )}</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(warningPoints)}
+                    </ul>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text">${yhLang("ব্যবস্থাপনা", "ব্যবস্থাপনা")}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(managementPoints)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-5",
         title: yhLang(
           "Module-5: Wet dream (ejaculation) Hygiene and Management",
-          "মডিউল-৫: স্বপ্নদোষের স্বাস্থ্যবিধি ও ব্যবস্থাপনা"
+          "মডিউল-৫: ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch5-lesson-1",
+            title: yhLang(
+              "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
+              "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা"
+            ),
+            icon: "fa-mars",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q5a",
+                  question: yhLang(
+                    "স্বপ্নদোষ বলতে কী বোঝায়?",
+                    "স্বপ্নদোষ বলতে কী বোঝায়?"
+                  ),
+                  options: [
+                    yhLang(
+                      "ঘুমের মধ্যে স্বাভাবিকভাবে বীর্য বের হওয়া",
+                      "ঘুমের মধ্যে স্বাভাবিকভাবে বীর্য বের হওয়া"
+                    ),
+                    yhLang("দীর্ঘমেয়াদি রোগ", "দীর্ঘমেয়াদি রোগ"),
+                    yhLang("মূত্রনালির সংক্রমণ", "মূত্রনালির সংক্রমণ"),
+                    yhLang("হরমোনের ঘাটতি", "হরমোনের ঘাটতি"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const dreamInfo = [
+                "ছেলেদের সাধারণত বয়ঃসন্ধির সময় বা ১৩ থেকে ১৫ বছর বয়স থেকে বীর্যথলিতে বীর্য তৈরি শুরু হয়। অতিরিক্ত বীর্য স্বাভাবিক নিয়মে শরীর থেকে বেরিয়ে আসে। এটাই হলো বীর্যপাত। ঘুমের মধ্যে এই বীর্য বেরিয়ে আসাকে বলা হয় স্বপ্নদোষ বা স্বপ্নে বীর্যপাত।",
+                "স্বপ্নদোষ ছেলেদের জন্য একটি স্বাভাবিক প্রক্রিয়া, এটি কোনো রোগ নয়। কারো স্বপ্নদোষ না হওয়াও কোনো অস্বাভাবিক বিষয় নয় এবং এর অর্থ এই নয় যে তার বীর্য ঠিকমতো তৈরি হচ্ছে না। তাই ‘জীবন নষ্ট হয়ে গেছে’ ভেবে মন খারাপ করা বা চিকিৎসার জন্য কবিরাজ/হাতুড়ে ডাক্তারের কাছে যাওয়াও উচিত নয়।",
+              ];
+
+              const anatomySections = [
+                {
+                  title: "টেস্টিস / অণ্ডকোষ ও স্ক্রোটাম / অণ্ডকোষের থলি",
+                  text: "পেনিসের নিচে ঝুলে থাকা থলিটিকে স্ক্রোটাম বলা হয়, যার মধ্যে দুটি বলের মতো টেস্টিস (অণ্ডকোষ) থাকে। এখান থেকেই মূলত শুক্রাণু এবং পুরুষ হরমোন টেস্টোস্টেরন তৈরি হয়।",
+                },
+                {
+                  title: "শুক্রাণু",
+                  text: "বয়ঃসন্ধিকাল থেকে শুক্রাণু উৎপাদিত হতে শুরু করে। শুক্রাণুগুলো একটি সাদা তরল পদার্থের মধ্যে থাকে, যাকে বীর্য বলা হয়। পুরুষের বীর্যপাতের সময় এই বীর্য পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে। নারীর সঙ্গে শারীরিক মিলনের সময় পুরুষের বীর্য নারীর যোনি ও জরায়ুর মধ্য দিয়ে ডিম্বনালিতে প্রবেশ করে এবং ডিম্বাণুর সঙ্গে মিলিত হয়। অনেক শুক্রাণুর মধ্যে মাত্র একটি শুক্রাণু ডিম্বাণুকে নিষিক্ত করার জন্য যথেষ্ট।",
+                },
+                {
+                  title: "ইউরেথ্রা / মূত্রনালি",
+                  text: "দেহ থেকে মূত্র এবং বীর্য, উভয়ই পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে।",
+                },
+              ];
+
+              const renderParagraphs = () =>
+                dreamInfo
+                  .map(
+                    (text, idx) => `
+                      <p class="mb-3" data-aos="fade-up" data-aos-delay="${80 +
+                        idx * 20}">${text}</p>
+                    `
+                  )
+                  .join("");
+
+              const renderAnatomy = () =>
+                anatomySections
+                  .map(
+                    (item, idx) => `
+                      <div class="col-12 col-md-4">
+                        <article class="modern-card glass-card menstrual-info-card h-100" data-aos="fade-up" data-aos-delay="${80 +
+                          idx * 40}">
+                          <h4 class="gradient-text mb-2">${item.title}</h4>
+                          <p class="mb-0">${item.text}</p>
+                        </article>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
+                    "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text">${yhLang(
+                      "ছেলেদের স্বপ্নদোষ / বীর্যপাত",
+                      "ছেলেদের স্বপ্নদোষ / বীর্যপাত"
+                    )}</h3>
+                    ${renderParagraphs()}
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row align-items-center g-4">
+                      <div class="col-lg-6">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "পুরুষ প্রজননতন্ত্র",
+                          "পুরুষ প্রজননতন্ত্র"
+                        )}</h3>
+                        <h4 class="fw-semibold mb-2">${yhLang(
+                          "পেনিস / পুরুষাঙ্গ",
+                          "পেনিস / পুরুষাঙ্গ"
+                        )}</h4>
+                        <p class="mb-2">পেনিস যৌন সঙ্গমের মাধ্যমে নারীর যোনিতে শুক্রাণু প্রবেশ করায় এবং একই সাথে এটি মূত্র নির্গমনের কাজও করে। যৌন উত্তেজনার সময় পেনিসে রক্ত চলাচল বেড়ে যায় এবং এটি শক্ত ও বড় হয়। পরবর্তীতে বীর্যপাত হয়, অর্থাৎ পেনিস থেকে বীর্য বেরিয়ে আসে।</p>
+                        <p class="mb-0">বীর্যপাত অনেক সময় ঘুমের মধ্যেও হতে পারে — এটি সম্পূর্ণ স্বাভাবিক।</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <figure class="image-card mb-0" style="min-height:260px;">
+                          <img src="img/module5/birjo.jpg" alt="পেনিস / পুরুষাঙ্গ" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <div class="row g-3">
+                    ${renderAnatomy()}
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch5-lesson-2",
+            title: yhLang(
+              "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
+              "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা"
+            ),
+            icon: "fa-hand-holding-heart",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q5b",
+                  question: yhLang(
+                    "স্বপ্নদোষের পর প্রথম করণীয় কী?",
+                    "স্বপ্নদোষের পর প্রথম করণীয় কী?"
+                  ),
+                  options: [
+                    yhLang(
+                      "শরীর পরিষ্কার করে কাপড় পরিবর্তন করা",
+                      "শরীর পরিষ্কার করে কাপড় পরিবর্তন করা"
+                    ),
+                    yhLang("ডাক্তারের কাছে দৌড়ে যাওয়া", "ডাক্তারের কাছে দৌড়ে যাওয়া"),
+                    yhLang("খাবার খাওয়া বন্ধ করা", "খাবার খাওয়া বন্ধ করা"),
+                    yhLang("বন্ধুদের সঙ্গে বাজে কথা বলা", "বন্ধুদের সঙ্গে বাজে কথা বলা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const routineSteps = [
+                "<strong>১.</strong> ছেলেদের স্বপ্নদোষ বা বীর্যপাত হলে শরীর পরিষ্কার করে কাপড় পরিবর্তন করতে হবে।",
+                "<strong>২.</strong> বিষয়টি নিয়ে মন খারাপ না করে নিজেকে বিভিন্ন ধরনের কাজে (পড়াশোনার বাইরে ভালো বই পড়া, খেলাধুলা/ব্যায়াম করা, উন্নয়নমূলক/সেবামূলক কাজ করা, ধর্মীয় কাজ করা ইত্যাদি) সম্পৃক্ত করতে হবে।",
+                "<strong>৩.</strong> প্রতিদিন গোসলের সময় যৌনাঙ্গ পরিষ্কার করতে হবে। যদি পেনিসের অগ্রভাগে বাড়তি চামড়া থাকে (ফোরস্কিন), সেটিও পরিষ্কার করতে হবে।",
+                "<strong>৪.</strong> প্রতিদিন পরিষ্কার আন্ডারওয়্যার ব্যবহার করতে হবে।",
+                "<strong>৫.</strong> যৌনাঙ্গ বা মলদ্বারের ভেতরে কোনো ধরনের অপরিষ্কার বস্তু প্রবেশ করানো যাবে না।",
+                "<strong>৬.</strong> অপরিষ্কার হাতে কখনই নিজের যৌনাঙ্গ ধরা যাবে না।",
+                "<strong>৭.</strong> বয়ঃসন্ধিকালীন বৃদ্ধির কারণে এসময় ছেলেদের প্রচুর পুষ্টিকর খাবার খেতে হবে।",
+              ];
+
+              const restraintSteps = [
+                "<strong>১.</strong> বয়ঃসন্ধিকালে বিপরীত লিঙ্গের প্রতি আকর্ষণ অনুভব করা স্বাভাবিক। তবে অবশ্যই মানুষ হিসেবে নিজেকে সংযত রাখতে হবে।",
+                "<strong>২.</strong> এসময় রাস্তাঘাটে বা স্কুল–কলেজের সামনে মেয়েদের আজেবাজে কথা বলা, শিস দেওয়া বা কোনো ধরনের যৌন হয়রানি করা যাবে না।",
+                "<strong>৩.</strong> সুযোগ পেয়ে মেয়েদের শরীরের স্পর্শকাতর স্থানে হাত দেওয়া যাবে না।",
+                "<strong>৪.</strong> কোনো অবস্থাতেই বলপ্রয়োগ করে কারো সঙ্গে যৌন সম্পর্ক স্থাপন করা যাবে না।",
+                "<strong>৫.</strong> খারাপ বন্ধুদের প্ররোচনায় পতিতালয়ে যাওয়া যাবে না।",
+              ];
+
+              const reminderPoints = [
+                "স্বাস্থ্যের ক্ষতি হতে পারে",
+                "যৌনবাহিত রোগের ঝুঁকি বেড়ে যায়",
+                "এবং সামাজিকভাবে হেয়-প্রতিপন্ন হতে হয়",
+              ];
+
+              const renderTickList = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderAlertList = (items) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${120 + idx * 20}">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
+                    "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row align-items-center g-4 flex-column-reverse flex-lg-row">
+                      <div class="col-lg-6">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
+                          "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা"
+                        )}</h3>
+                        <h4 class="fw-semibold mb-3">${yhLang("✔ করণীয়", "✔ করণীয়")}</h4>
+                        <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="60">স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতা বজায় রাখার উপায়গুলো এই নির্দেশনাতে ছবির সাথে দেখানো হয়েছে, যাতে ছেলেরা সহজেই ধাপগুলো অনুসরণ করতে পারে।</p>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderTickList(routineSteps)}
+                        </ul>
+
+
+                        <section class="modern-card mb-2 glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                          <h3 class="gradient-text mb-3">${yhLang(
+                            "নিজেকে সংযত রাখা",
+                            "নিজেকে সংযত রাখা"
+                          )}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderTickList(restraintSteps, 60)}
+                          </ul>
+                        </section>
+
+
+                        <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
+                          <h3 class="gradient-text mb-3">${yhLang(
+                            "মনে রাখতে হবে",
+                            "মনে রাখতে হবে"
+                          )}</h3>
+                          <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="100">এসব অসংযত কর্মকাণ্ডের কারণে—</p>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderAlertList(reminderPoints)}
+                          </ul>
+                        </section>
+                      </div>
+                      <div class="col-lg-6">
+                        <figure class="image-card mb-0" style="min-height:260px;">
+                          <img src="img/module5/birjo2.jpg" alt="স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতার ধাপ" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                          <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: স্বপ্নদোষের পর স্বাস্থ্যবিধি অনুসরণের ভিজ্যুয়াল ধাপ</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-7",
