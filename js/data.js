@@ -3709,169 +3709,169 @@ const coursesData = [
         ],
       },
       {
-        id: "ch-7",
+        id: "ch-6",
         title:
           yhLang(
-            "Module-7: Causes, consequences and prevention of early child marriage",
-            "মডিউল-৭: বাল্যবিবাহের কারণ, প্রভাব ও প্রতিরোধ"
+            "Module-6: Child Marriage",
+            "মডিউল-৬: বাল্যবিবাহ"
           ),
+        lessons: [],
+      },
+      {
+        id: "ch-7",
+        title: yhLang(
+          "Module-7: Adolescent Pregnancy",
+          "মডিউল-৭: কৈশোরকালীন গর্ভধারণ"
+        ),
         lessons: [],
       },
       {
         id: "ch-8",
         title: yhLang(
-          "Module-8: Adolescent Pregnancy",
-          "মডিউল-৮: কৈশোরকালীন গর্ভধারণ"
+          "Module-8: Adolescent Family Planning",
+          "মডিউল-৮: কৈশোরকালীন পরিবার পরিকল্পনা"
         ),
         lessons: [],
       },
       {
         id: "ch-9",
-        title: yhLang(
-          "Module-9: Adolescent Family Planning",
-          "মডিউল-৯: কৈশোরকালীন পরিবার পরিকল্পনা"
-        ),
+        title:
+          yhLang(
+            "Module-9: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)",
+            "মডিউল-৯: যৌনবাহিত রোগ (এসটিআই) ও প্রজননতন্ত্রের সংক্রমণ (আরটিআই)"
+          ),
         lessons: [],
       },
       {
         id: "ch-10",
         title:
           yhLang(
-            "Module-10: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)",
-            "মডিউল-১০: যৌনবাহিত রোগ (এসটিআই) ও প্রজননতন্ত্রের সংক্রমণ (আরটিআই)"
+            "Module-10: HPV vaccination and prevention of cervical cancer in adolescents",
+            "মডিউল-১০: এইচপিভি টিকা ও কৈশোরে জরায়ুমুখ ক্যান্সার প্রতিরোধ"
           ),
         lessons: [],
       },
       {
         id: "ch-11",
-        title:
-          yhLang(
-            "Module-11: HPV vaccination and prevention of cervical cancer in adolescents",
-            "মডিউল-১১: এইচপিভি টিকা ও কৈশোরে জরায়ুমুখ ক্যান্সার প্রতিরোধ"
-          ),
+        title: yhLang(
+          "Module-11: Polycystic ovary syndrome (PCOS) in adolescents",
+          "মডিউল-১১: কৈশোরে পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
+        ),
         lessons: [],
       },
       {
         id: "ch-12",
-        title: yhLang(
-          "Module-12: Polycystic ovary syndrome (PCOS) in adolescents",
-          "মডিউল-১২: কৈশোরে পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
-        ),
+        title:
+          yhLang(
+            "Module-12: Adolescent nutrition: Nutritional deficiency and prevention",
+            "মডিউল-১২: কৈশোর পুষ্টি—ঘাটতি ও প্রতিরোধ"
+          ),
         lessons: [],
       },
       {
         id: "ch-13",
         title:
           yhLang(
-            "Module-13: Adolescent nutrition: Nutritional deficiency and prevention",
-            "মডিউল-১৩: কৈশোর পুষ্টি—ঘাটতি ও প্রতিরোধ"
+            "Module-13: Non-communicable diseases (NCDs) in adolescents and their prevention",
+            "মডিউল-১৩: কৈশোরে অসংক্রামক রোগ ও প্রতিরোধ"
           ),
         lessons: [],
       },
       {
         id: "ch-14",
-        title:
-          yhLang(
-            "Module-14: Non-communicable diseases (NCDs) in adolescents and their prevention",
-            "মডিউল-১৪: কৈশোরে অসংক্রামক রোগ ও প্রতিরোধ"
-          ),
-        lessons: [],
-      },
-      {
-        id: "ch-15",
         title: yhLang(
-          "Module-15: Sex, Gender and Gender Discrimination",
-          "মডিউল-১৫: লিঙ্গ, জেন্ডার ও বৈষম্য"
+          "Module-14: Sex, Gender and Gender Discrimination",
+          "মডিউল-১৪: লিঙ্গ, জেন্ডার ও বৈষম্য"
         ),
         lessons: [],
       },
       {
         id: "ch-16",
         title: yhLang(
-          "Module-16: Violence Related to Adolescents",
-          "মডিউল-১৬: কৈশোরে সহিংসতা"
+          "Module-15: Violence Related to Adolescents",
+          "মডিউল-১৫: কৈশোরে সহিংসতা"
+        ),
+        lessons: [],
+      },
+      {
+        id: "ch-16",
+        title: yhLang(
+          "Module-16: Adolescent Mental Health -  Problems and Solutions",
+          "মডিউল-১৬: কৈশোর মানসিক স্বাস্থ্য—সমস্যা ও সমাধান"
         ),
         lessons: [],
       },
       {
         id: "ch-17",
-        title: yhLang(
-          "Module-17: Adolescent Mental Health -  Problems and Solutions",
-          "মডিউল-১৭: কৈশোর মানসিক স্বাস্থ্য—সমস্যা ও সমাধান"
-        ),
+        title:
+          yhLang(
+            "Module-17: Psychosocial changes and Psychosocial complications during adolescence",
+            "মডিউল-১৭: কৈশোরে মনোসামাজিক পরিবর্তন ও জটিলতা"
+          ),
         lessons: [],
       },
       {
         id: "ch-18",
-        title:
-          yhLang(
-            "Module-18: Psychosocial changes and Psychosocial complications during adolescence",
-            "মডিউল-১৮: কৈশোরে মনোসামাজিক পরিবর্তন ও জটিলতা"
-          ),
+        title: yhLang(
+          "Module-18: Psychosocial support for adolescents",
+          "মডিউল-১৮: কৈশোরে মনোসামাজিক সহায়তা"
+        ),
         lessons: [],
       },
       {
         id: "ch-19",
         title: yhLang(
-          "Module-19: Psychosocial support for adolescents",
-          "মডিউল-১৯: কৈশোরে মনোসামাজিক সহায়তা"
+          "Module-19: Drug addiction - Consequences and prevention",
+          "মডিউল-১৯: মাদকাসক্তি—পরিণতি ও প্রতিরোধ"
         ),
         lessons: [],
       },
       {
         id: "ch-20",
         title: yhLang(
-          "Module-20: Drug addiction - Consequences and prevention",
-          "মডিউল-২০: মাদকাসক্তি—পরিণতি ও প্রতিরোধ"
+          "Module-20: Special care for vulnerable adolescents",
+          "মডিউল-২০: ঝুঁকিপূর্ণ কিশোর-কিশোরীর বিশেষ যত্ন"
         ),
         lessons: [],
       },
       {
         id: "ch-21",
         title: yhLang(
-          "Module-21: Special care for vulnerable adolescents",
-          "মডিউল-২১: ঝুঁকিপূর্ণ কিশোর-কিশোরীর বিশেষ যত্ন"
+          "Module-21: Climate change and special attention to adolescents",
+          "মডিউল-২১: জলবায়ু পরিবর্তন ও কিশোর-কিশোরীর বিশেষ সুরক্ষা"
         ),
         lessons: [],
       },
       {
         id: "ch-22",
         title: yhLang(
-          "Module-22: Climate change and special attention to adolescents",
-          "মডিউল-২২: জলবায়ু পরিবর্তন ও কিশোর-কিশোরীর বিশেষ সুরক্ষা"
+          "Module-22: Injury prevention and first aid for adolescents",
+          "মডিউল-২২: কিশোরদের আঘাত প্রতিরোধ ও প্রাথমিক চিকিৎসা"
         ),
         lessons: [],
       },
       {
         id: "ch-23",
         title: yhLang(
-          "Module-23: Injury prevention and first aid for adolescents",
-          "মডিউল-২৩: কিশোরদের আঘাত প্রতিরোধ ও প্রাথমিক চিকিৎসা"
+          "Module-23: Life skills, morality, and values",
+          "মডিউল-২৩: জীবনদক্ষতা, নৈতিকতা ও মূল্যবোধ"
         ),
         lessons: [],
       },
       {
         id: "ch-24",
         title: yhLang(
-          "Module-24: Life skills, morality, and values",
-          "মডিউল-২৪: জীবনদক্ষতা, নৈতিকতা ও মূল্যবোধ"
+          "Module-24: Communication and counseling with adolescents",
+          "মডিউল-২৪: কিশোরদের সঙ্গে যোগাযোগ ও পরামর্শ"
         ),
         lessons: [],
       },
       {
         id: "ch-25",
-        title: yhLang(
-          "Module-25: Communication and counseling with adolescents",
-          "মডিউল-২৫: কিশোরদের সঙ্গে যোগাযোগ ও পরামর্শ"
-        ),
-        lessons: [],
-      },
-      {
-        id: "ch-26",
         title:
           yhLang(
-            "Module-26: Human Rights, Child Rights, and Sexual and Reproductive Health Rights",
-            "মডিউল-২৬: মানবাধিকার, শিশুর অধিকার ও যৌন ও প্রজনন স্বাস্থ্য অধিকার"
+            "Module-25: Human Rights, Child Rights, and Sexual and Reproductive Health Rights",
+            "মডিউল-২৫: মানবাধিকার, শিশুর অধিকার ও যৌন ও প্রজনন স্বাস্থ্য অধিকার"
           ),
         lessons: [],
       },
