@@ -3556,7 +3556,7 @@ const coursesData = [
                       </div>
                       <div class="col-lg-6">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/module5/birjo.jpg" alt="পেনিস / পুরুষাঙ্গ" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu5/birjo.jpg" alt="পেনিস / পুরুষাঙ্গ" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
@@ -3696,7 +3696,7 @@ const coursesData = [
                       </div>
                       <div class="col-lg-6">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/module5/birjo2.jpg" alt="স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতার ধাপ" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu5/birjo2.jpg" alt="স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতার ধাপ" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
                           <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: স্বপ্নদোষের পর স্বাস্থ্যবিধি অনুসরণের ভিজ্যুয়াল ধাপ</figcaption>
                         </figure>
                       </div>
@@ -3715,23 +3715,1223 @@ const coursesData = [
             "Module-6: Child Marriage",
             "মডিউল-৬: বাল্যবিবাহ"
           ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch6-lesson-1",
+            title: yhLang("বাল্যবিবাহ", "বাল্যবিবাহ"),
+            icon: "fa-ring",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q6a",
+                  question: yhLang(
+                    "বাংলাদেশে মেয়েদের ন্যূনতম বিয়ের বয়স কত?",
+                    "বাংলাদেশে মেয়েদের ন্যূনতম বিয়ের বয়স কত?"
+                  ),
+                  options: [
+                    yhLang("১৮ বছর", "১৮ বছর"),
+                    yhLang("১৬ বছর", "১৬ বছর"),
+                    yhLang("২১ বছর", "২১ বছর"),
+                    yhLang("১৫ বছর", "১৫ বছর"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const bdhsStats = [
+                "বিবাহিত নারীদের <strong>৫০%</strong>-এর বিয়ে হয়েছে <strong>১৮ বছরের আগে</strong>।",
+                "গর্ভবতী কিশোরীদের মধ্যে <strong>জন্মহার প্রতি হাজারে ৯২</strong>।",
+                "<strong>১৫–১৯ বছর</strong> বয়সী চারজন কিশোরীর মধ্যে একজন (২৪%) গর্ভধারণ করে।",
+                "প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।",
+              ];
+
+              const renderStats = (items) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "বাল্যবিবাহ",
+                    "বাল্যবিবাহ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-7">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "বাংলাদেশের আইন ও বাস্তবতা",
+                          "বাংলাদেশের আইন ও বাস্তবতা"
+                        )}</h3>
+                        <p>বাংলাদেশের আইনে মেয়েদের বিয়ের বয়স কমপক্ষে <strong>১৮ বছর</strong> এবং ছেলেদের ক্ষেত্রে <strong>২১ বছর</strong>। এর কম বয়সে বিয়ে হলে তা বাল্যবিবাহ বলে গণ্য করা হয়।</p>
+                        <p>বর্তমানে বিশেষ কিছু কারণে <strong>১৬ বছর বয়সে</strong> বিয়ে দেওয়ার বিষয়টি বাল্যবিবাহ নিরোধ আইনে অন্তর্ভুক্ত থাকলেও, বিয়ের বয়স <strong>১৮ বছরই মূল বয়স</strong> হিসেবে বিবেচনা করতে হবে।</p>
+                        <div class="alert alert-info rounded-4" role="note">
+                          <strong>বিডিএইচএস ২০২২</strong> অনুসারে—
+                        </div>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderStats(bdhsStats)}
+                        </ul>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="modern-card glass-card h-100" data-aos="fade-left" data-aos-delay="80">
+                          <h4 class="mb-2">${yhLang(
+                            "বাল্যবিবাহের ঝুঁকি",
+                            "বাল্যবিবাহের ঝুঁকি"
+                          )}</h4>
+                          <p class="mb-0 text-muted">স্বাস্থ্য, শিক্ষা, অর্থনীতি ও সামাজিক নিরাপত্তা—সব দিক থেকেই বাল্যবিবাহ কিশোর-কিশোরীদের ভবিষ্যৎকে ঝুঁকির মুখে ফেলে। সঠিক তথ্য জানিয়ে পরিবার ও সম্প্রদায়কে সচেতন করাই প্রথম পদক্ষেপ।</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <div class="row g-3 align-items-center justify-content-between">
+                    <div class="col-12 col-md-6 d-flex justify-content-md-start justify-content-center">
+                      <div class="circular-callout circular-callout--warning" data-aos="zoom-in" data-aos-delay="40">
+                        বাল্যবিবাহ আইনের চোখে একটি দণ্ডনীয় অপরাধ।
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-md-end justify-content-center">
+                      <div class="circular-callout circular-callout--info" data-aos="zoom-in" data-aos-delay="80">
+                        বাল্যবিবাহ সম্পর্কে কোনো তথ্য থাকলে চাইল্ড হেল্পলাইন <strong>১০৯৮</strong>-এ কল করে রিপোর্ট করা উচিত।
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch6-lesson-2",
+            title: yhLang("বাল্যবিবাহের কারণ", "বাল্যবিবাহের কারণ"),
+            icon: "fa-diagram-project",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q6b",
+                  question: yhLang(
+                    "বাল্যবিবাহের একটি প্রধান কারণ কী?",
+                    "বাল্যবিবাহের একটি প্রধান কারণ কী?"
+                  ),
+                  options: [
+                    yhLang("দারিদ্র্য", "দারিদ্র্য"),
+                    yhLang("বেশি খেলাধুলা", "বেশি খেলাধুলা"),
+                    yhLang("জলবায়ু পরিবর্তন", "জলবায়ু পরিবর্তন"),
+                    yhLang("কম্পিউটার ব্যবহার", "কম্পিউটার ব্যবহার"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const orbitCauses = [
+                "দারিদ্র্য",
+                "প্রচলিত সামাজিক প্রথা ও কুসংস্কার",
+                "জেন্ডার বৈষম্য",
+                "কন্যাদায়গ্রস্ত পিতার দায়মুক্ত হওয়ার চেষ্টা",
+                "সামাজিক নিরাপত্তাহীনতা",
+                "শিক্ষা ও সচেতনতার অভাব",
+                "মেয়ে শিশুর প্রতি অবহেলা বা তাকে বোঝা মনে করা",
+                "স্কুল থেকে ঝরে পড়া",
+                "বিবাহ আইন সম্পর্কে অজ্ঞতা",
+                "বাল্যবিবাহ নিরোধ আইনের যথাযথ প্রয়োগ না হওয়া",
+              ];
+
+              const colorCycle = [
+                "bg-gradient-orange",
+                "bg-gradient-blue",
+                "bg-gradient-rose",
+                "bg-gradient-green",
+                "bg-gradient-teal",
+                "bg-gradient-purple",
+                "bg-gradient-tangerine",
+                "bg-gradient-emerald",
+              ];
+
+              const renderOrbitItems = () => {
+                const radius = 150;
+                const angleStep = 360 / orbitCauses.length;
+                return orbitCauses
+                  .map((label, idx) => {
+                    const angle = angleStep * idx;
+                    const color = colorCycle[idx % colorCycle.length];
+                    return `
+                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 +
+                      idx * 30}">
+                        <div class="orbit-card ${color}">
+                          <span class="orbit-title">${label}</span>
+                        </div>
+                      </div>
+                    `;
+                  })
+                  .join("");
+              };
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "বাল্যবিবাহের কারণ",
+                    "বাল্যবিবাহের কারণ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" aria-labelledby="orbit-child-marriage-causes" data-aos="zoom-in" data-aos-delay="60">
+                    <h3 id="orbit-child-marriage-causes" class="d-none">${yhLang(
+                      "বাল্যবিবাহ",
+                      "বাল্যবিবাহ"
+                    )}</h3>
+                    <div class="orbit-layout" data-orbit-manual="true">
+                      <div class="orbit-center icon-spin-on-hover">
+                        <div class="orbit-card bg-gradient-rose">
+                          <div class="orbit-title fw-bold">বাল্যবিবাহ</div>
+                        </div>
+                      </div>
+                      ${renderOrbitItems()}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch6-lesson-3",
+            title: yhLang("বাল্যবিবাহের পরিণতি", "বাল্যবিবাহের পরিণতি"),
+            icon: "fa-heart-crack",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q6c",
+                  question: yhLang(
+                    "বাল্যবিবাহের ফলে কোন ঝুঁকি বেড়ে যায়?",
+                    "বাল্যবিবাহের ফলে কোন ঝুঁকি বেড়ে যায়?"
+                  ),
+                  options: [
+                    yhLang("মা ও শিশুমৃত্যু", "মা ও শিশুমৃত্যু"),
+                    yhLang("খেলাধুলার সাফল্য", "খেলাধুলার সাফল্য"),
+                    yhLang("উচ্চশিক্ষার সুযোগ", "উচ্চশিক্ষার সুযোগ"),
+                    yhLang("পর্যটনের সম্ভাবনা", "পর্যটনের সম্ভাবনা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const consequences = [
+                "অপরিণত, অপুষ্ট ও স্বল্প ওজনের শিশুর জন্ম",
+                "কিশোরী মায়ের পুষ্টিহীনতা ও স্বাস্থ্যগত সমস্যা",
+                "দীর্ঘস্থায়ী প্রজননস্বাস্থ্যজনিত জটিলতা",
+                "প্রসব ও প্রসব-পরবর্তী জটিলতায় ভোগা",
+                "মা ও শিশুমৃত্যুর ঝুঁকি বৃদ্ধি",
+                "দাম্পত্য কলহ",
+                "সহিংসতার ঝুঁকি ও আত্মহত্যার প্রবণতা",
+                "ঝুঁকিপূর্ণ ও অনিরাপদ যৌন আচরণ",
+                "বিবাহ বিচ্ছেদ",
+              ];
+
+              const renderList = () =>
+                consequences
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "বাল্যবিবাহের পরিণতি",
+                    "বাল্যবিবাহের পরিণতি"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList()}
+                        </ul>
+                      </div>
+                      <div class="col-lg-5">
+                        <figure class="image-card mb-0" style="min-height:260px;">
+                          <img src="img/modu6/ballo.jpg" alt="অপরিণত, অপুষ্ট ও স্বল্প ওজনের শিশুর জন্ম" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch6-lesson-4",
+            title: yhLang("বাল্যবিবাহ প্রতিরোধে করণীয়", "বাল্যবিবাহ প্রতিরোধে করণীয়"),
+            icon: "fa-shield-alt",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q6d",
+                  question: yhLang(
+                    "বাল্যবিবাহ প্রতিরোধে কোন একটি করণীয়?",
+                    "বাল্যবিবাহ প্রতিরোধে কোন একটি করণীয়?"
+                  ),
+                  options: [
+                    yhLang("ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা", "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা"),
+                    yhLang("স্কুল বন্ধ করা", "স্কুল বন্ধ করা"),
+                    yhLang("বিস্কুট বিতরণ করা", "বিস্কুট বিতরণ করা"),
+                    yhLang("বাল্যবিবাহ উৎসাহিত করা", "বাল্যবিবাহ উৎসাহিত করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const measures = [
+                "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা",
+                "বিয়ে সম্পাদনের সময় কাজী যেন অবশ্যই জন্মসনদ যাচাই করেন—এ বিষয়ে কাজীকে সচেতন করা",
+                "বাল্যবিবাহের আইন সম্পর্কে কাজী, অভিভাবক ও জনসাধারণকে সচেতন করা",
+                "বাল্যবিবাহ ও এর ভয়াবহ পরিণতি সম্পর্কে জনসচেতনতা তৈরি করা",
+                "বাল্যবিবাহ হলেও জন্মনিয়ন্ত্রণ পদ্ধতি ব্যবহার ও দেরিতে সন্তান গ্রহণ সম্পর্কে কিশোর-কিশোরী ও অভিভাবকদের সচেতন করা",
+                "কিশোর-কিশোরীদের জন্য উপযুক্ত জন্মনিয়ন্ত্রণ পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
+                "‘বাল্যবিবাহ’ নিয়ে কমিউনিটি পর্যায়ে আলোচনা ও প্রতিরোধব্যবস্থা তৈরি করা",
+                "বাল্যবিবাহ নিরোধ আইন, ২০১৭ এবং বাল্যবিবাহ নিরোধ বিধিমালা-এর বাস্তব প্রয়োগে সংশ্লিষ্টদের দায়িত্বশীল ভূমিকা নিশ্চিত করা",
+                "বাল্যবিবাহ সম্পর্কে জানতে পারলে চাইল্ড হেল্পলাইন <strong>১০৯৮</strong>-এ কল করে রিপোর্ট করা",
+              ];
+
+              const renderMeasures = () =>
+                measures
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "বাল্যবিবাহ প্রতিরোধে করণীয়",
+                    "বাল্যবিবাহ প্রতিরোধে করণীয়"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4">
+                      <div class="col-12">
+                        <ul class="list-unstyled puberty-list mb-3">
+                          ${renderMeasures()}
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="gradient-text">${yhLang("বিয়ে বাতিলের আইন (মুসলিম বিবাহ বাতিল আইন, ১৯৩৯)", "বিয়ে বাতিলের আইন (মুসলিম বিবাহ বাতিল আইন, ১৯৩৯)")}</h3>
+                    <p>যদি কোনো নারীর <strong>১৮ বছর পূর্ণ হওয়ার আগে</strong> এবং <strong>তার সম্মতি ছাড়া</strong> বিয়ে হয়, তাহলে সে আদালতে বিবাহ বাতিলের আবেদন করতে পারে— যদি:</p>
+                    <ul>
+                      <li>সে স্বামীর সঙ্গে দাম্পত্য সম্পর্ক স্থাপন না করে থাকে, এবং</li>
+                      <li>১৮ বছর পূর্ণ হওয়ার আগের সম্মতি ছাড়া বিয়ের পর <strong>১৯ বছর পূর্ণ হওয়ার আগেই</strong> বিবাহ বাতিলের আবেদন করে।</li>
+                    </ul>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text">${yhLang("বাল্যবিবাহ নিরোধ আইন ও বিধিমালা", "বাল্যবিবাহ নিরোধ আইন ও বিধিমালা")}</h3>
+                    <ul>
+                      <li><strong>বাল্যবিবাহ নিরোধ আইন, ২০১৭</strong></li>
+                      <li><strong>বাল্যবিবাহ নিরোধ বিধিমালা, ২০১৮</strong></li>
+                    </ul>
+                    <p>এসব আইনের অধীনে বাল্যবিবাহ প্রতিরোধের কার্যক্রম চলমান রয়েছে।</p>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="gradient-text">${yhLang("বাল্যবিবাহ করার শাস্তি", "বাল্যবিবাহ করার শাস্তি")}</h3>
+                    <ul>
+                      <li><strong>সর্বোচ্চ ২ বছর কারাদণ্ড</strong>, অথবা</li>
+                      <li><strong>সর্বোচ্চ ১ লক্ষ টাকা অর্থদণ্ড</strong>, অথবা</li>
+                      <li>উভয় দণ্ডই হতে পারে</li>
+                      <li>অর্থদণ্ড অনাদায়ে সর্বোচ্চ <strong>৩ মাস কারাদণ্ড</strong></li>
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-7",
         title: yhLang(
-          "Module-7: Adolescent Pregnancy",
-          "মডিউল-৭: কৈশোরকালীন গর্ভধারণ"
+          "Module-7: Adolescent Family Planning",
+          "মডিউল-৭: কৈশোরকালীন পরিবার পরিকল্পনা"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch7-lesson-1",
+            title: yhLang("কৈশোরকালীন পরিবার পরিকল্পনা", "কৈশোরকালীন পরিবার পরিকল্পনা"),
+            icon: "fa-people-roof",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q7a",
+                  question: yhLang(
+                    "পরিবার পরিকল্পনা বলতে কী বোঝায়?",
+                    "পরিবার পরিকল্পনা বলতে কী বোঝায়?"
+                  ),
+                  options: [
+                    yhLang(
+                      "আয় ও সামাজিক অবস্থার সাথে সন্তান গ্রহণের পরিকল্পনা",
+                      "আয় ও সামাজিক অবস্থার সাথে সন্তান গ্রহণের পরিকল্পনা"
+                    ),
+                    yhLang("ইচ্ছেমতো সন্তান জন্ম দেওয়া", "ইচ্ছেমতো সন্তান জন্ম দেওয়া"),
+                    yhLang("কেবল চিকিৎসকের কাজ", "কেবল চিকিৎসকের কাজ"),
+                    yhLang("শুধু ভ্রমণ পরিকল্পনা", "শুধু ভ্রমণ পরিকল্পনা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const permanentMethods = [
+                "নারী স্থায়ী পদ্ধতি (টিউবেকটমি)",
+                "পুরুষ স্থায়ী পদ্ধতি (ভ্যাসেকটমি)",
+              ];
+
+              const shortTermMethods = ["খাবার বড়ি", "কনডম", "ইনজেকশন"];
+
+              const longTermMethods = ["ইমপ্ল্যান্ট", "আইইউডি"];
+
+              const methodTableRows = [
+                { type: "স্থায়ী পদ্ধতি", items: permanentMethods },
+                { type: "স্বল্পমেয়াদি পদ্ধতি", items: shortTermMethods },
+                { type: "দীর্ঘমেয়াদি পদ্ধতি", items: longTermMethods },
+              ];
+
+              const renderTableRows = () =>
+                methodTableRows
+                  .map((row, idx) => `
+                    <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                      <td class="fw-semibold">${row.type}</td>
+                      <td>${row.items
+                        .map((item) => `<span class="d-block">${item}</span>`)
+                        .join("")}</td>
+                    </tr>
+                  `)
+                  .join("");
+
+              const detailedMethodRows = [
+                {
+                  category: "স্থায়ী পদ্ধতি",
+                  subtype: "নারী",
+                  methods: [permanentMethods[0]],
+                },
+                {
+                  category: "স্থায়ী পদ্ধতি",
+                  subtype: "পুরুষ",
+                  methods: [permanentMethods[1]],
+                },
+                {
+                  category: "অস্থায়ী পদ্ধতি",
+                  subtype: "স্বল্পমেয়াদি",
+                  methods: shortTermMethods,
+                },
+                {
+                  category: "অস্থায়ী পদ্ধতি",
+                  subtype: "দীর্ঘমেয়াদি",
+                  methods: longTermMethods,
+                },
+              ];
+
+              const renderDetailedRows = () =>
+                detailedMethodRows
+                  .map(
+                    (row, idx) => `
+                      <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                        <td class="fw-semibold">${row.category}</td>
+                        <td>${row.subtype}</td>
+                        <td>${row.methods
+                          .map((item) => `<span class="d-block">${item}</span>`)
+                          .join("")}</td>
+                      </tr>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কৈশোরকালীন পরিবার পরিকল্পনা",
+                    "কৈশোরকালীন পরিবার পরিকল্পনা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">একটি দম্পতি তার আয়ের সাথে এবং পারিপার্শ্বিক আর্থ–সামাজিক অবস্থার সাথে সঙ্গতি রেখে কখন এবং কয়টি সন্তান গ্রহণ করবে, দুইটি সন্তানের মাঝে ব্যবধান কতদিনের হবে বা তাদের পরিবার কত ছোট বা বড় হবে, তা ঠিক করা এবং সে লক্ষ্য অর্জনের জন্য যথাযথ ব্যবস্থা গ্রহণ করাই হলো <strong>পরিবার পরিকল্পনা</strong>।</p>
+                    <p class="mb-0">যেকোনো কিশোরীই শারীরিক ও মানসিকভাবে সন্তান ধারণের জন্য উপযুক্ত নয়। প্রজনন স্বাস্থ্য বিষয়ে প্রয়োজনীয় তথ্য না থাকার কারণে এই সময়ে গর্ভধারণ মা ও সন্তান উভয়ের জন্যই অত্যন্ত ঝুঁকিপূর্ণ হতে পারে।</p>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ",
+                          "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ"
+                        )}</h3>
+                        <p class="text-muted">বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রম অনুযায়ী যেকোনো সক্ষম দম্পতি আধুনিক পরিবার পরিকল্পনা পদ্ধতি গ্রহণ করতে পারেন। বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রমে <strong>বৈবাহিক অবস্থা</strong> এবং <strong>সন্তান সংখ্যা</strong> বিবেচনা করে পদ্ধতি প্রদান করা হয়।</p>
+                        <div class="table-responsive">
+                          <table class="table table-bordered text-center align-middle modern-table">
+                            <thead class="table-light">
+                              <tr>
+                                <th>পদ্ধতির ধরণ</th>
+                                <th>পদ্ধতির তালিকা</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              ${renderTableRows()}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <figure class="image-card mb-0" style="min-height:260px;">
+                          <img src="img/modu7/kishor.jpg" alt="কৈশোরকালীন পরিবার পরিকল্পনা" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "স্থায়ী ও অস্থায়ী পদ্ধতির তথ্যসারণি",
+                      "স্থায়ী ও অস্থায়ী পদ্ধতির তথ্যসারণি"
+                    )}</h3>
+                    <p class="text-muted">স্থায়ী এবং অস্থায়ী—উভয় ধরণের পরিবার পরিকল্পনা পদ্ধতি দম্পতির শারীরিক ও সামাজিক উপযোগিতা বিবেচনা করে নির্বাচন করা উচিত। নিচের সারণিতে প্রতিটি শ্রেণি ও উপধরণের উদাহরণ দেখানো হলো।</p>
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered text-center align-middle modern-table">
+                        <thead class="table-light">
+                          <tr>
+                            <th>পদ্ধতির ধরন</th>
+                            <th>উপধরন</th>
+                            <th>পদ্ধতির তালিকা</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${renderDetailedRows()}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch7-lesson-2",
+            title: yhLang("কৈশোরকালীন পরিবার পরিকল্পনা", "কৈশোরকালীন পরিবার পরিকল্পনা"),
+            icon: "fa-table",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q7b",
+                  question: yhLang(
+                    "সন্তান সংখ্যাভেদে কোন পদ্ধতি বেছে নেওয়া যায়?",
+                    "সন্তান সংখ্যাভেদে কোন পদ্ধতি বেছে নেওয়া যায়?"
+                  ),
+                  options: [
+                    yhLang("টেবিলে দেখানো অনুযায়ী", "টেবিলে দেখানো অনুযায়ী"),
+                    yhLang("শুধু একটি পদ্ধতি", "শুধু একটি পদ্ধতি"),
+                    yhLang("সবসময় টিউবেকটমি", "সবসময় টিউবেকটমি"),
+                    yhLang("কোনো পদ্ধতি নয়", "কোনো পদ্ধতি নয়"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const methodHeaders = [
+                { key: "pill", label: "খাবার বড়ি" },
+                { key: "condom", label: "কনডম" },
+                { key: "injection", label: "ইনজেকশন" },
+                { key: "implant", label: "ইমপ্লান্ট" },
+                { key: "iud", label: "আইইউডি" },
+                { key: "tubectomy", label: "টিউবেকটমি" },
+                { key: "vasectomy", label: "ভেসেকটমি" },
+              ];
+
+              const opportunityRows = [
+                {
+                  label: "নবদম্পতি বা এখনো সন্তান নেয়ার পরিকল্পনা নেই",
+                  availability: {
+                    pill: true,
+                    condom: true,
+                    injection: false,
+                    implant: true,
+                    iud: false,
+                    tubectomy: false,
+                    vasectomy: false,
+                  },
+                },
+                {
+                  label: "একটি জীবিত সন্তান আছে এবং পরবর্তী সন্তান",
+                  availability: {
+                    pill: true,
+                    condom: true,
+                    injection: true,
+                    implant: true,
+                    iud: true,
+                    tubectomy: false,
+                    vasectomy: false,
+                  },
+                },
+                {
+                  label: "দুই বা ততোধিক জীবিত সন্তান আছে",
+                  availability: {
+                    pill: true,
+                    condom: true,
+                    injection: true,
+                    implant: true,
+                    iud: true,
+                    tubectomy: true,
+                    vasectomy: true,
+                  },
+                },
+              ];
+
+              const methodUsage = [
+                {
+                  method: "খাবার বড়ি",
+                  usage: "প্রতিদিন খেতে হয়",
+                  duration: "প্রতিদিন",
+                },
+                {
+                  method: "কনডম",
+                  usage: "প্রতিবার সহবাসের সময় ব্যবহার করতে হয়",
+                  duration: "ব্যবহারের সময়",
+                },
+                {
+                  method: "ইনজেকশন",
+                  usage: "গভীর মাংসপেশীতে দিতে হয়",
+                  duration: "তিন মাস",
+                },
+                {
+                  method: "ইমপ্ল্যান্ট",
+                  usage: "চামড়ার নিচে স্থাপন করা হয়",
+                  duration: "প্রকারভেদে ৩ বছর বা ৫ বছর",
+                },
+                {
+                  method: "আইইউডি",
+                  usage: "জরায়ুতে প্রয়োগ করা হয়",
+                  duration: "১০ বছর",
+                },
+                {
+                  method: "ভ্যাসেকটমি/এনএসভি",
+                  usage: "অন্ডথলির চামড়াতে ছোট অপারেশনের মাধ্যমে করা হয়",
+                  duration: "স্থায়ী",
+                },
+                {
+                  method: "টিউবেকটমি",
+                  usage: "তলপেটে ছোট অপারেশনের মাধ্যমে করা হয়",
+                  duration: "স্থায়ী",
+                },
+              ];
+
+              const renderOpportunityRows = () =>
+                opportunityRows
+                  .map(
+                    (row, idx) => `
+                      <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                        <td class="fw-semibold text-start">${row.label}</td>
+                        ${methodHeaders
+                          .map(
+                            (method) =>
+                              `<td>${row.availability[method.key] ? "&#10003;" : ""}</td>`
+                          )
+                          .join("")}
+                      </tr>
+                    `
+                  )
+                  .join("");
+
+              const renderUsageRows = () =>
+                methodUsage
+                  .map(
+                    (item, idx) => `
+                      <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                        <td class="fw-semibold">${item.method}</td>
+                        <td>${item.usage}</td>
+                        <td>${item.duration}</td>
+                      </tr>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কৈশোরকালীন পরিবার পরিকল্পনা",
+                    "কৈশোরকালীন পরিবার পরিকল্পনা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ",
+                      "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ"
+                    )}</h3>
+                    <p class="text-muted">কতোজন সন্তান আছে বা নিতে চান—তা অনুযায়ী পরিবার পরিকল্পনা পদ্ধতি নির্বাচন করা উচিত। নিচের সারণিতে সেই নির্দেশনা দেখানো হলো।</p>
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered text-center align-middle modern-table">
+                        <thead class="table-light">
+                          <tr>
+                            <th>সন্তান সংখ্যা</th>
+                            ${methodHeaders
+                              .map((method) => `<th>${method.label}</th>`)
+                              .join("")}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${renderOpportunityRows()}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="70">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল",
+                      "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল"
+                    )}</h3>
+                    <p class="text-muted">প্রতিটি পদ্ধতির প্রয়োগপদ্ধতি ও স্থায়িত্বকাল জানলে কিশোর-কিশোরী ও নবদম্পতিরা তথ্যভিত্তিক সিদ্ধান্ত নিতে পারে।</p>
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered text-center align-middle modern-table">
+                        <thead class="table-light">
+                          <tr>
+                            <th>পদ্ধতিসমূহ</th>
+                            <th>ব্যবহার ও প্রয়োগ</th>
+                            <th>মেয়াদকাল</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${renderUsageRows()}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-8",
         title: yhLang(
           "Module-8: Adolescent Family Planning",
-          "মডিউল-৮: কৈশোরকালীন পরিবার পরিকল্পনা"
+          "মডিউল-৮: কৈশোরকালীন মাতৃত্ব"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch8-lesson-1",
+            title: yhLang("কৈশোরকালীন মাতৃত্ব", "কৈশোরকালীন মাতৃত্ব"),
+            icon: "fa-baby",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q8a",
+                  question: yhLang(
+                    "কৈশোরে গর্ভধারণ কেন ঝুঁকিপূর্ণ?",
+                    "কৈশোরে গর্ভধারণ কেন ঝুঁকিপূর্ণ?"
+                  ),
+                  options: [
+                    yhLang("মা ও শিশুর মৃত্যু ও জটিলতার ঝুঁকি বাড়ে", "মা ও শিশুর মৃত্যু ও জটিলতার ঝুঁকি বাড়ে"),
+                    yhLang("সবসময় সহজ প্রসব হয়", "সবসময় সহজ প্রসব হয়"),
+                    yhLang("শরীর বেশি শক্তিশালী থাকে", "শরীর বেশি শক্তিশালী থাকে"),
+                    yhLang("কোনো প্রভাব পড়ে না", "কোনো প্রভাব পড়ে না"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introParagraphs = [
+                "কিশোরীদের গর্ভধারণে মা ও শিশু মৃত্যুর ঝুঁকি অনেক বেশি। শারীরিক গঠন ও সামাজিক অবস্থার কারণে তাদের গর্ভকালীন, প্রসবকালীন এবং প্রসব-পরবর্তী সময়ে এই ঝুঁকির পরিমাণ অনেক বেড়ে যায়।",
+              ];
+
+              const riskDescription =
+                "কৈশোরে গর্ভধারণ অত্যন্ত ঝুঁকিপূর্ণ। কারণ এ সময় কিশোরীর নিজেরই শারীরিক বৃদ্ধি অসম্পূর্ণ থাকে এবং তার শারীরিক ও মানসিক বিকাশ তখনও চলমান থাকে। এ অবস্থায় গর্ভধারণ করলে কিশোরী মা ও শিশু উভয়ই ঝুঁকির মধ্যে পড়ে যায়। গর্ভাবস্থায় কিশোরীর সাথে সাথে তার মধ্যে বেড়ে ওঠা সন্তানেরও নানা প্রকার সেবা–পুষ্টির দরকার হয় যা কিশোরী মায়ের জন্য সবসময় পাওয়া সচরাচর সম্ভব নয়। কৈশোরে সন্তান ধারণ এবং জন্মদানের ক্ষেত্রে মা এবং সন্তান নানাবিধ ঝুঁকির সম্মুখীন হতে পারে।";
+
+              const orbitRisks = [
+                "প্রসব-পরবর্তী বিষণ্নতা",
+                "অপর্যাপ্ত শিশু পরিচর্যা ও বুকের দুধ খাওয়ানো",
+                "গর্ভজনিত উচ্চ রক্তচাপ",
+                "গর্ভকালীন রক্তস্বল্পতা",
+                "প্রি-একলাম্পসিয়া",
+                "বাধাগ্রস্ত প্রসব",
+                "বিলম্বিত প্রসব",
+                "মৃত সন্তান প্রসব",
+                "সময়ের আগে সন্তান জন্মদান",
+                "কম ওজনের সন্তান জন্ম দেওয়া",
+              ];
+
+              const colorCycle = [
+                "bg-gradient-rose",
+                "bg-gradient-blue",
+                "bg-gradient-green",
+                "bg-gradient-purple",
+                "bg-gradient-teal",
+                "bg-gradient-orange",
+                "bg-gradient-tangerine",
+                "bg-gradient-emerald",
+              ];
+
+              const renderParagraphs = () =>
+                introParagraphs
+                  .map(
+                    (text, idx) => `
+                      <p class="mb-3" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">${text}</p>
+                    `
+                  )
+                  .join("");
+
+              const renderOrbitItems = () => {
+                const radius = 150;
+                const angleStep = 360 / orbitRisks.length;
+                return orbitRisks
+                  .map((label, idx) => {
+                    const angle = angleStep * idx;
+                    const color = colorCycle[idx % colorCycle.length];
+                    return `
+                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 + idx * 30}">
+                        <div class="orbit-card ${color}">
+                          <span class="orbit-title">${label}</span>
+                        </div>
+                      </div>
+                    `;
+                  })
+                  .join("");
+              };
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কৈশোরকালীন মাতৃত্ব",
+                    "কৈশোরকালীন মাতৃত্ব"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "কৈশোরকালীন মাতৃত্ব",
+                      "কৈশোরকালীন মাতৃত্ব"
+                    )}</h3>
+                    ${renderParagraphs()}
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-6">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
+                          "কিশোরীদের মাতৃত্বজনিত ঝুঁকি"
+                        )}</h3>
+                        <p class="text-muted" data-aos="fade-up" data-aos-delay="80">${riskDescription}</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="orbit-layout" data-orbit-manual="true">
+                          <div class="orbit-center icon-spin-on-hover">
+                            <div class="orbit-card bg-gradient-rose">
+                              <div class="orbit-title fw-bold">${yhLang(
+                                "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
+                                "কিশোরীদের মাতৃত্বজনিত ঝুঁকি"
+                              )}</div>
+                            </div>
+                          </div>
+                          ${renderOrbitItems()}
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch8-lesson-2",
+            title: yhLang(
+              "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
+              "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
+            ),
+            icon: "fa-shield-heart",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q8b",
+                  question: yhLang(
+                    "কৈশোরকালীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?",
+                    "কৈশোরকালীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?"
+                  ),
+                  options: [
+                    yhLang(
+                      "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা",
+                      "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা"
+                    ),
+                    yhLang("সময়মতো স্কুল বন্ধ করা", "সময়মতো স্কুল বন্ধ করা"),
+                    yhLang("খেলাধুলা কমানো", "খেলাধুলা কমানো"),
+                    yhLang("সব সময় ভ্রমণ করা", "সব সময় ভ্রমণ করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introText =
+                "নিরাপদ মাতৃত্বের জন্য কৈশোরকালীন গর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।";
+
+              const orbitActions = [
+                "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা",
+                "দেশের প্রচলিত আইনের যথাযথ প্রয়োগ (১৮-এর আগে মেয়েদের বিয়ে নয়, ২০-এর আগে সন্তান নয়)",
+                "পরিবার পরিকল্পনা সম্পর্কে জনগণের মধ্যে সচেতনতা বাড়ানো এবং পরিবার পরিকল্পনা পদ্ধতি ব্যবহারে উৎসাহ প্রদান",
+                "কৈশোরকালীন গর্ভধারণের কুফল ও এর ভয়াবহ পরিণতি সম্পর্কে সচেতনতা তৈরি করা",
+                "কৈশোরে বিয়ে হলেও দেরিতে সন্তান গ্রহণে স্বামী, স্ত্রী ও অভিভাবকদের সচেতন করা",
+                "কৈশোরে পরিবার পরিকল্পনা পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
+              ];
+
+              const colorCycle = [
+                "bg-gradient-rose",
+                "bg-gradient-blue",
+                "bg-gradient-green",
+                "bg-gradient-orange",
+                "bg-gradient-teal",
+                "bg-gradient-purple",
+              ];
+
+              const renderOrbitItems = () => {
+                const radius = 150;
+                const angleStep = 360 / orbitActions.length;
+                return orbitActions
+                  .map((label, idx) => {
+                    const angle = angleStep * idx;
+                    const color = colorCycle[idx % colorCycle.length];
+                    return `
+                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 + idx * 40}">
+                        <div class="orbit-card ${color}">
+                          <span class="orbit-title">${label}</span>
+                        </div>
+                      </div>
+                    `;
+                  })
+                  .join("");
+              };
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
+                    "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
+                      "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
+                    )}</h3>
+                    <p class="mb-0">${introText}</p>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                    <div class="orbit-layout" data-orbit-manual="true">
+                      <div class="orbit-center icon-spin-on-hover">
+                        <div class="orbit-card bg-gradient-purple">
+                          <div class="orbit-title fw-bold">${yhLang(
+                            "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
+                            "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
+                          )}</div>
+                        </div>
+                      </div>
+                      ${renderOrbitItems()}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch8-lesson-3",
+            title: yhLang("গর্ভকালীন বিপদচিহ্নসমূহ", "গর্ভকালীন বিপদচিহ্নসমূহ"),
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q8c",
+                  question: yhLang(
+                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?",
+                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?"
+                  ),
+                  options: [
+                    yhLang("অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া", "অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া"),
+                    yhLang("নিজে নিজে ওষুধ খাওয়া", "নিজে নিজে ওষুধ খাওয়া"),
+                    yhLang("উপেক্ষা করা", "উপেক্ষা করা"),
+                    yhLang("কেবল বিশ্রাম নেওয়া", "কেবল বিশ্রাম নেওয়া"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "গর্ভকালীন বিপদচিহ্নসমূহ",
+                    "গর্ভকালীন বিপদচিহ্নসমূহ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0" style="min-height:260px;">
+                      <img src="img/modu8/gorvo.jpg" alt="গর্ভকালীন বিপদচিহ্ন" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                    </figure>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch8-lesson-4",
+            title: yhLang("কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা", "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"),
+            icon: "fa-user-nurse",
+            gradientClass: "bg-gradient-green",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q8d",
+                  question: yhLang(
+                    "গর্ভনির্ণয়ের পর কিশোরী মায়ের জন্য কী নিশ্চিত করা উচিত?",
+                    "গর্ভনির্ণয়ের পর কিশোরী মায়ের জন্য কী নিশ্চিত করা উচিত?"
+                  ),
+                  options: [
+                    yhLang("কমপক্ষে ৪টি গর্ভকালীন চেকআপ", "কমপক্ষে ৪টি গর্ভকালীন চেকআপ"),
+                    yhLang("একেবারেই চেকআপ না করা", "একেবারেই চেকআপ না করা"),
+                    yhLang("শুধু বাড়িতে বিশ্রাম", "শুধু বাড়িতে বিশ্রাম"),
+                    yhLang("শুধু ওষুধ খাওয়া", "শুধু ওষুধ খাওয়া"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introText =
+                "গর্ভবতী কিশোরী সবসময়ই ঝুঁকিপূর্ণ—গর্ভকালীন, প্রসবকালীন বা প্রসব পরবর্তী সময়েও। এজন্য গর্ভনির্ণয় হওয়ার সাথে সাথেই ন্যূনতম ৪টি গর্ভকালীন চেকআপ নিশ্চিত করার জন্য নিকটস্থ স্বাস্থ্যকেন্দ্রে সেবা নিতে হবে এবং কিশোরী মায়ের প্রসব ব্যথা শুরু হলে তাকে জরুরি ভিত্তিতে হাসপাতালে নিয়ে ডেলিভারি করাতে হবে। যদি কিশোরী মায়ের ঝুঁকিসমূহ সময়মতো শনাক্ত করা যায় এবং ঠিক সময়ে জরুরি প্রসূতি সেবাকেন্দ্রে রেফার করা যায়, তাহলে তা কিশোরী মা ও শিশুর জীবন বাঁচাতে গুরুত্বপূর্ণ ভূমিকা রাখবে। কিশোরী মায়ের প্রসব বেশি ঝুঁকিপূর্ণ বিধায় হাসপাতাল ছাড়া কোনোভাবেই প্রসব করানো উচিত নয়।";
+
+              const careSteps = [
+                {
+                  heading: "১. কিশোরীর গর্ভ শনাক্ত ও সহায়তা",
+                  details:
+                    "প্রাথমিক অবস্থায় কিশোরীর গর্ভ শনাক্ত করে সে যাতে পরিবারে প্রয়োজনীয় যত্ন ও সহায়তা পায়, সেটা নিশ্চিত করার জন্য পরিবারের সকলকে উদ্বুদ্ধ করতে হবে।",
+                },
+                {
+                  heading: "২. গর্ভকালীন চেকআপ",
+                  bulletIntro: "প্রশিক্ষিত সেবা প্রদানকারীর দ্বারা কমপক্ষে ৪ বার (১–৪ মাসে ১ বার, ৬–৭ মাসে ১ বার, ৮ মাসে ১ বার এবং ৯ মাসে ১ বার) চেকআপ নিশ্চিত করতে হবে।",
+                  bullets: [
+                    "প্রশিক্ষিত সেবাদানকারীর দ্বারা কিশোরী মায়ের পুষ্টি, বিশ্রাম, কাজ, পরিচ্ছন্নতা বিষয়ে স্বাস্থ্যশিক্ষা দেওয়া, টিটেনাস-ডিফথেরিয়া (টিডি) টিকা (৫ ডোজ না দেয়া থাকলে) নেওয়া ও প্রসব পরিকল্পনার পরামর্শ দেওয়া।",
+                    "এ সময়ে কিশোরীদের কোনো জটিলতা দেখা দিলে তৎক্ষণাৎ উপযুক্ত হাসপাতালে রেফার করতে হবে, যেখানে গর্ভবতীর অপারেশন বা রক্ত সঞ্চালনের ব্যবস্থা আছে।",
+                  ],
+                },
+                {
+                  heading: "৩. প্রসব-পূর্ব পরিকল্পনা",
+                  details:
+                    "প্রসবের আগে পরিকল্পনা করলে মা ও শিশুর মৃত্যুঝুঁকি অনেকাংশে কমানো যায়, যেমন—",
+                  bullets: [
+                    "প্রসবের স্থান নির্বাচন",
+                    "ব্যথা শুরু হলে দ্রুত হাসপাতালে নিতে আগে থেকেই যানবাহন ঠিক করে রাখা",
+                    "আগে থেকে টাকা জমানো",
+                    "রক্তদাতা ঠিক করে রাখা",
+                  ],
+                },
+              ];
+
+              const renderBullets = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderCareCards = () =>
+                careSteps
+                  .map((step, idx) => {
+                    const hasBullets = step.bullets && step.bullets.length;
+                    return `
+                      <article class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="${80 +
+                      idx * 40}">
+                        <h4 class="gradient-text mb-3">${step.heading}</h4>
+                        ${step.details ? `<p class="mb-3">${step.details}</p>` : ""}
+                        ${step.bulletIntro ? `<p class="mb-2">${step.bulletIntro}</p>` : ""}
+                        ${hasBullets
+                          ? `<ul class="list-unstyled puberty-list mb-0">${renderBullets(
+                              step.bullets,
+                              60
+                            )}</ul>`
+                          : ""}
+                      </article>
+                    `;
+                  })
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা",
+                    "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${introText}</p>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <div class="row g-3">
+                    <div class="col-12">
+                      ${renderCareCards()}
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch8-lesson-5",
+            title: yhLang("প্রসব পরবর্তী যত্ন", "প্রসব পরবর্তী যত্ন"),
+            icon: "fa-heart-circle-check",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q8e",
+                  question: yhLang(
+                    "প্রসব পরবর্তী চেকআপ কয়বার নিশ্চিত করা উচিত?",
+                    "প্রসব পরবর্তী চেকআপ কয়বার নিশ্চিত করা উচিত?"
+                  ),
+                  options: [
+                    yhLang("কমপক্ষে ৪ বার", "কমপক্ষে ৪ বার"),
+                    yhLang("১ বার", "১ বার"),
+                    yhLang("২ বার", "২ বার"),
+                    yhLang("চেকআপের প্রয়োজন নেই", "চেকআপের প্রয়োজন নেই"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const postpartumPoints = [
+                "মা ও নবজাতকের চেকআপ (কমপক্ষে ৪টি — ১ম বার: প্রসবের ২৪ ঘণ্টার মধ্যে, ২য় বার: ২–৩ দিনের মধ্যে, ৩য় বার: ৪–৭ দিনের মধ্যে এবং ৪র্থ বার: প্রসবের ৪২–৪৫ দিনের মধ্যে)",
+                "প্রাথমিক অবস্থায় প্রসব পরবর্তী জটিলতা শনাক্তকরণ, প্রতিরোধ এবং চিকিৎসা",
+                "মাকে ভিটামিন এ খাওয়ানো, শিশুকে শালদুধ ও শুধুমাত্র বুকের দুধ খাওয়ানো, মা ও শিশুর পুষ্টি, পরিবার পরিকল্পনা পদ্ধতি এবং শিশুর টিকা ও পরিচর্যা বিষয়ক তথ্য প্রদানসহ কাউন্সেলিং এই সময়ে করা হয়।",
+                "কিশোরী মায়েদের এসব পরবর্তী সময়ে বিষণ্নতায় আক্রান্ত হওয়ার হার অনেক বেশি থাকে, যা সময়মতো শনাক্তকরণ ও চিকিৎসার আওতায় নিয়ে আসা প্রয়োজন; অনথায় তা মা ও শিশু দুজনের জন্যই মৃত্যু ঝুঁকি বাড়াতে পারে।",
+              ];
+
+              const renderPoints = () =>
+                postpartumPoints
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "প্রসব পরবর্তী যত্ন",
+                    "প্রসব পরবর্তী যত্ন"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "প্রসব পরবর্তী যত্ন",
+                          "প্রসব পরবর্তী যত্ন"
+                        )}</h3>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderPoints()}
+                        </ul>
+                      </div>
+                      <div class="col-lg-5">
+                        <figure class="image-card mb-0" style="min-height:260px;">
+                          <img src="img/modu8/prosob.jpg" alt="প্রসব পরবর্তী যত্ন" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-9",
@@ -3740,7 +4940,117 @@ const coursesData = [
             "Module-9: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)",
             "মডিউল-৯: যৌনবাহিত রোগ (এসটিআই) ও প্রজননতন্ত্রের সংক্রমণ (আরটিআই)"
           ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch9-lesson-1",
+            title: yhLang(
+              "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
+              "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ"
+            ),
+            icon: "fa-virus",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q9a",
+                  question: yhLang(
+                    "যৌনবাহিত সংক্রমণ কীভাবে ছড়ায়?",
+                    "যৌনবাহিত সংক্রমণ কীভাবে ছড়ায়?"
+                  ),
+                  options: [
+                    yhLang("যৌনসম্পর্ক ও সংক্রমিত শরীরবাহিত তরল", "যৌনসম্পর্ক ও সংক্রমিত শরীরবাহিত তরল"),
+                    yhLang("শুধু বাতাসে", "শুধু বাতাসে"),
+                    yhLang("শুধু খাবারে", "শুধু খাবারে"),
+                    yhLang("কখনো ছড়ায় না", "কখনো ছড়ায় না"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introText =
+                "যৌন সম্পর্কের মাধ্যমে একজন থেকে অন্যজনের মধ্যে যেসব সংক্রমণ ছড়ায় সেগুলোই ‘যৌনবাহিত সংক্রমণ’। অন্যদিকে, প্রজনন অঙ্গসমূহের সংক্রমণকে ‘প্রজননতন্ত্রের সংক্রমণ’ বলে। যৌন সম্পর্ক (যৌনবাহিত সংক্রমণ) ছাড়াও সংক্রমিত রক্ত/রক্তজাত দ্রব্য গ্রহণ, সংক্রমিত সূঁচ/যন্ত্রপাতি ও আক্রান্ত মায়ের বুকের দুধের মাধ্যমে প্রজননতন্ত্রের সংক্রমণ হতে পারে। সকল যৌনবাহিত সংক্রমণই প্রজননতন্ত্রের সংক্রমণের আওতায় পড়ে।";
+
+              const causes = [
+                "ব্যক্তিগত অপরিচ্ছন্নতা",
+                "প্রজননতন্ত্রের জীবাণুগুলোর অতিবৃদ্ধি",
+                "অনিরাপদ যৌনমিলন",
+                "জীবাণুযুক্ত পরিবেশ",
+                "সংক্রমিত রক্ত গ্রহণ",
+                "সংক্রমিত মায়ের গর্ভধারণ",
+              ];
+
+              const symptoms = [
+                "যৌনাঙ্গে চুলকানি হওয়া",
+                "যৌনাঙ্গ থেকে দুর্গন্ধযুক্ত বা দুর্গন্ধবিহীন স্রাব যাওয়া",
+                "যৌনাঙ্গ থেকে পুঁজ বা পুঁজের মতো যাওয়া ও বারবার প্রস্রাব হওয়া",
+                "যৌনাঙ্গে ক্ষত হওয়া",
+                "যৌনমিলনে ব্যথা হওয়া",
+                "শরীরে চুলকানি বা ঘামাচির মতো দানা হওয়া",
+                "শরীরে লসিকা গ্রন্থি (কুঁচকি বা অন্যান্য স্থানে গুটি হওয়া)",
+              ];
+
+              const renderList = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const closingNote =
+                "অধিকাংশ ক্ষেত্রেই যৌনরোগের লক্ষণ বোঝা যায় না। বিশেষ করে ছেলেদের তুলনায় মেয়েদের এই লক্ষণগুলো অপ্রকাশিত থাকে। তাই চিকিৎসা নিতে তারা অনেক দেরি করে ফেলে, যা থেকে জটিলতাও হতে পারে।";
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
+                    "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${introText}</p>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-6">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ",
+                          "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ"
+                        )}</h3>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(causes)}
+                        </ul>
+                      </div>
+                      <div class="col-lg-6">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ",
+                          "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ"
+                        )}</h3>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(symptoms, 60)}
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <p class="mb-0 text-muted">${closingNote}</p>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-10",
