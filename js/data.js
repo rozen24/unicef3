@@ -2995,6 +2995,48 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch11-lesson-3",
+            title: yhLang("Other Vaccines for Women", "মহিলাদের অন্যান্য  টিকা"),
+            icon: "fa-syringe",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q11c",
+                  question: yhLang(
+                    "Why should women consult health centers about additional vaccines?",
+                    "মহিলাদের কেন অতিরিক্ত টিকা সম্পর্কে স্বাস্থ্যকেন্দ্রের পরামর্শ নেওয়া উচিত?"
+                  ),
+                  options: [
+                    yhLang("To stay protected against preventable diseases", "প্রতিরোধযোগ্য রোগ থেকে সুরক্ষিত থাকতে"),
+                    yhLang("Because vaccines are optional luxuries", "কারণ টিকা বিলাসী পছন্দ"),
+                    yhLang("Vaccines always cause illness", "টিকা সবসময় অসুস্থতা আনে"),
+                    yhLang("No reason at all", "কোনো কারণ নেই"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "মহিলাদের অন্যান্য  টিকা",
+                    "মহিলাদের অন্যান্য  টিকা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0" style="min-height:150px; max-width:80%; margin:0 auto;">
+                      <img src="img/modu11/tika.jpg" alt="${yhLang("Women's additional vaccines", "মহিলাদের অন্যান্য টিকা")}" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                    </figure>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
@@ -5050,6 +5092,136 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch9-lesson-2",
+            title: yhLang("যৌনবাহিত রোগের ঝুঁকিসমূহ", "যৌনবাহিত রোগের ঝুঁকিসমূহ"),
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q9b",
+                  question: yhLang(
+                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?",
+                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?"
+                  ),
+                  options: [
+                    yhLang("সচেতনতা ও নিরাপদ আচরণ", "সচেতনতা ও নিরাপদ আচরণ"),
+                    yhLang("ঝুঁকি উপেক্ষা করা", "ঝুঁকি উপেক্ষা করা"),
+                    yhLang("অপরিচ্ছন্ন থাকা", "অপরিচ্ছন্ন থাকা"),
+                    yhLang("অচেনা সূঁচ ব্যবহার", "অচেনা সূঁচ ব্যবহার"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "যৌনবাহিত রোগের ঝুঁকিসমূহ",
+                    "যৌনবাহিত রোগের ঝুঁকিসমূহ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0" style="min-height:260px;">
+                      <img src="img/modu9/jouno.jpg" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                    </figure>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch9-lesson-3",
+            title: yhLang(
+              "Complications of Reproductive or Sexually Transmitted Diseases",
+              "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ"
+            ),
+            icon: "fa-notes-medical",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q9c",
+                  question: yhLang(
+                    "প্রজননতন্ত্রের বা যৌনরোগের কোন জটিলতা ঘটতে পারে?",
+                    "প্রজননতন্ত্রের বা যৌনরোগের কোন জটিলতা ঘটতে পারে?"
+                  ),
+                  options: [
+                    yhLang("এইচআইভি সংক্রমণের ঝুঁকি", "এইচআইভি সংক্রমণের ঝুঁকি"),
+                    yhLang("মুহূর্তেই সব রোগ সেরে যায়", "মুহূর্তেই সব রোগ সেরে যায়"),
+                    yhLang("যেকোনো ওষুধে সার্বজনীন প্রতিরোধ", "যেকোনো ওষুধে সার্বজনীন প্রতিরোধ"),
+                    yhLang("শরীরে কোনো প্রভাব পড়ে না", "শরীরে কোনো প্রভাব পড়ে না"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const complications = [
+                "এইচআইভি সংক্রমণের সম্ভাবনা বেড়ে যায়",
+                "হিউম্যান প্যাপিলোমা ভাইরাসে (এইচপিভি) আক্রান্ত নারীদের জরায়ুর মুখে ক্যান্সার হবার সম্ভাবনা থাকে",
+                "সংক্রমিত নারী বা পুরুষের পরবর্তীতে স্থায়ী বন্ধ্যাত্ব হতে পারে",
+                "মস্তিষ্ক, যকৃত বা হৃৎপিণ্ডে জটিলতা দেখা দিতে পারে",
+                "সংক্রমিত পুরুষের মূত্রনালী সরু হয়ে যেতে পারে",
+                "আক্রান্ত মায়ের গর্ভপাত হতে পারে বা মৃত সন্তান প্রসব করতে পারে",
+                "আক্রান্ত মায়ের জরায়ুর পরিবর্তে ডিম্বনালীতে ভ্রূণ বড় হতে পারে",
+                "আক্রান্ত মায়ের শিশু জন্মগত ত্রুটি নিয়ে বা চোখে ইনফেকশন নিয়ে জন্ম নিতে পারে, যা থেকে পরবর্তীতে অন্ধত্বও হতে পারে",
+              ];
+
+              const management = [
+                "বর্তমানে যৌনবাহিত সংক্রমণে আক্রান্ত কিশোর-কিশোরীরা প্রাপ্তবয়স্কদের মতো একই ব্যবস্থা পাচ্ছে।",
+                "আদর্শ হলো ঝুঁকি নির্ণয় কৌশল অবলম্বন করে বাছাইকরণ (ট্রায়াজ) পরীক্ষার মাধ্যমে প্রাসঙ্গিক ও পর্যাপ্ত চিকিৎসা প্রদান করা।",
+                "যৌন সংক্রমণের সিনড্রোমিক ব্যবস্থাপনার জন্য বাংলাদেশ সরকারের জাতীয় এইচআইভি এইডস কর্মসূচির (এএসপি) গাইডলাইন ব্যবহার করা যেতে পারে।",
+              ];
+
+              const renderList = (items, baseDelay = 60) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
+                    "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
+                      "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(complications)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "কিশোর-কিশোরীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা",
+                      "কিশোর-কিশোরীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(management, 80)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
@@ -5059,24 +5231,1009 @@ const coursesData = [
             "Module-10: HPV vaccination and prevention of cervical cancer in adolescents",
             "মডিউল-১০: এইচপিভি টিকা ও কৈশোরে জরায়ুমুখ ক্যান্সার প্রতিরোধ"
           ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch10-lesson-1",
+            title: yhLang("HIV and AIDS", "এইচআইভি ও এইডস"),
+            icon: "fa-ribbon",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q10a",
+                  question: yhLang(
+                    "এইচআইভি দেহে কী ক্ষতি করে?",
+                    "এইচআইভি দেহে কী ক্ষতি করে?"
+                  ),
+                  options: [
+                    yhLang("রোগ প্রতিরোধক্ষমতা ধ্বংস করে", "রোগ প্রতিরোধক্ষমতা ধ্বংস করে"),
+                    yhLang("তাৎক্ষণিকভাবে শক্তি বাড়ায়", "তাৎক্ষণিকভাবে শক্তি বাড়ায়"),
+                    yhLang("সব রোগ প্রতিরোধ করে", "সব রোগ প্রতিরোধ করে"),
+                    yhLang("শরীরে কোনো প্রভাব ফেলে না", "শরীরে কোনো প্রভাব ফেলে না"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introText = yhLang(
+                "HIV is a virus that gradually destroys the body’s immune system, leaving the person defenseless against infections like diarrhoea, tuberculosis, or cholera. Once immunity collapses completely, even minor illnesses cannot be fought off—this state is called AIDS.",
+                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্তে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধক্ষমতা একেবারেই থাকে না। এ সময় বিভিন্ন রোগ যেমন—ডায়রিয়া, যক্ষা, কলেরা ইত্যাদি মানবদেহকে আক্রমণ করলে মানবদেহ তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম <strong>এইডস</strong>."
+              );
+
+              const latencyNote = yhLang(
+                "HIV can remain dormant in the human body for 2–10 years.",
+                "২–১০ বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে।"
+              );
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "এইচআইভি ও এইডস",
+                    "এইচআইভি ও এইডস"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "এইচআইভি ও এইডস",
+                      "এইচআইভি ও এইডস"
+                    )}</h3>
+                    <p class="mb-3">${introText}</p>
+                    <p class="mb-0">${latencyNote}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <figure class="image-card mb-0" style="min-height:260px;">
+                      <img src="img/modu10/hiv.jpg" alt="এইচআইভি ও এইডস" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                    </figure>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch10-lesson-2",
+            title: yhLang("HIV Window Period", "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)"),
+            icon: "fa-hourglass-half",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q10b",
+                  question: yhLang(
+                    "What does the HIV window period describe?",
+                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড) বলতে কী বোঝায়?"
+                  ),
+                  options: [
+                    yhLang(
+                      "Time needed to develop detectable antibodies",
+                      "রক্তে অ্যান্টিবডি তৈরি হতে যে সময় লাগে"
+                    ),
+                    yhLang("তাৎক্ষণিক সেরে ওঠার সময়", "তাৎক্ষণিক সেরে ওঠার সময়"),
+                    yhLang("শুধু জ্বর হওয়ার সময়", "শুধু জ্বর হওয়ার সময়"),
+                    yhLang("শরীরে কোনো পরিবর্তন না হওয়া সময়", "শরীরে কোনো পরিবর্তন না হওয়া সময়"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const windowDefinition = yhLang(
+                "After HIV enters the body it may take up to 12 weeks for antibodies to appear in blood—this span is called the window period.",
+                "এইচআইভিতে আক্রান্ত হওয়ার পর রক্তে ভাইরাসের বিরুদ্ধে প্রতিরোধমূলক ব্যবস্থা (অ্যান্টিবডি) তৈরি হতে যে সময় লাগে তাকে অন্তর্বর্তীকালীন সময় বা উইন্ডো পিরিয়ড বলে। এ জন্য সাধারণত ১২ সপ্তাহ পর্যন্ত লাগতে পারে।"
+              );
+
+              const silentSpread = yhLang(
+                "Most people with HIV look healthy for years before symptoms emerge, often without realizing they can still transmit the virus to others.",
+                "বেশিরভাগ এইচআইভি–আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভিজনিত লক্ষণসমূহ প্রকাশ পাওয়ার আগ পর্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি–আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।"
+              );
+
+              const preventionPoints = [
+                "ধর্মীয় অনুশাসন মেনে চললে",
+                "বিবাহবহির্ভূত যৌনমিলন থেকে বিরত থাকলে",
+                "স্ত্রী বা সঙ্গীর প্রতি বিশ্বস্ত থাকলে",
+                "যৌনমিলনে সবসময় কনডম ব্যবহার করলে",
+                "কেবলমাত্র অনুমোদিত ব্লাড ব্যাংক থেকে এইচআইভি পরীক্ষিত রক্ত গ্রহণ করলে",
+                "যে কোনো ধরণের ড্রাগ ব্যবহার থেকে বিরত থাকলে; যদি আপনি একজন শিরায় মাদক গ্রহণকারী হয়ে থাকেন, তবে যে কোনো ধরনের সূঁই (সিরিঞ্জ) জাতীয় বস্তু ভাগাভাগি করা থেকে বিরত থাকলে",
+                "যে কোনো ধরনের যৌনবাহিত সংক্রমণ (এসটিআই)/প্রজননতন্ত্রের সংক্রমণ (আরটিআই) পরীক্ষা করতে হবে এবং চিকিৎসা গ্রহণ করতে হবে।",
+              ];
+
+              const treatmentInfo = yhLang(
+                "Bangladesh prioritizes EMTCT services to stop mother-to-child transmission of HIV, hepatitis B, and syphilis. Preventing, testing, and treating STIs/RTIs remain core to HIV prevention because untreated infections significantly raise HIV risk.",
+                "মা থেকে শিশুর শরীরে এইচআইভি, হেপাটাইটিস বি এবং সিফিলিসের সংক্রমণ নির্মূল করার লক্ষ্যে (Elimination of Mother-to-Child Transmission - EMTCT) বাংলাদেশ এইচআইভি ও যৌনবাহিত রোগসমূহ প্রতিরোধ এবং যৌন ও প্রজনন স্বাস্থ্যসেবায় গুরুত্ব দিয়েছে। এইচআইভি প্রতিরোধ কৌশলের গুরুত্বপূর্ণ উপাদান হলো যৌনবাহিত সংক্রমণ প্রতিরোধ ও চিকিৎসা, কারণ যৌনবাহিত সংক্রমণ এইচআইভি সংক্রমণের ঝুঁকি বৃদ্ধি করে। চিকিৎসা না করালে যৌনবাহিত সংক্রমণের উপস্থিতি এইচআইভি সংক্রমণের ঝুঁকি বাড়াতে পারে।"
+              );
+
+              const renderList = (items, baseDelay = 60) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)",
+                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${windowDefinition}</p>
+                    <p class="mb-0">${silentSpread}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "কিশোর-কিশোরীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়",
+                      "কিশোর-কিশোরীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(preventionPoints)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="120">
+                    <h3 class="gradient-text mb-3">${yhLang("চিকিৎসা", "চিকিৎসা")}</h3>
+                    <p class="mb-0">${treatmentInfo}</p>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-11",
         title: yhLang(
           "Module-11: Polycystic ovary syndrome (PCOS) in adolescents",
-          "মডিউল-১১: কৈশোরে পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
+          "মডিউল-১১: জরায়ু মুখের ক্যান্সার)"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch11-lesson-1",
+            title: yhLang("Cervical Cancer", "জরায়ুমুখ ক্যান্সার"),
+            icon: "fa-ribbon",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q11a",
+                  question: yhLang(
+                    "Which virus most commonly causes cervical cancer?",
+                    "জরায়ুমুখ ক্যান্সারের প্রধান কারণ কোন ভাইরাস?"
+                  ),
+                  options: [
+                    yhLang("Human Papillomavirus (HPV)", "হিউম্যান প্যাপিলোমা ভাইরাস (এইচপিভি)"),
+                    yhLang("Common cold virus", "সাধারণ সর্দি ভাইরাস"),
+                    yhLang("Malaria parasite", "ম্যালেরিয়ার পরজীবী"),
+                    yhLang("None", "কোনোটিই নয়"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const paragraphs = [
+                yhLang(
+                  "Cervical cancer is preventable when detected early and treated promptly, yet it remains one of the leading causes of cancer mortality among women—globally the fourth most common, and the second most common among Bangladeshi women.",
+                  "জরায়ুমুখ ক্যান্সার প্রতিরোধযোগ্য একটি রোগ। দ্রুত রোগ নির্ণয় ও প্রয়োজনীয় চিকিৎসার মাধ্যমে এই রোগ থেকে সম্পূর্ণ সেরে ওঠা সম্ভব। তথাপি এটি সকল ধরণের ক্যান্সার এবং নারীদের ক্যান্সারজনিত মৃত্যুর অন্যতম প্রধান কারণ। সাধারণত নারীরা যেসব ক্যান্সারে আক্রান্ত হয়ে থাকেন, বৈশ্বিকভাবে তাদের মধ্যে জরায়ুমুখ ক্যান্সার চতুর্থ সর্বোচ্চ। বাংলাদেশি নারীদের ক্ষেত্রে এটি দ্বিতীয় সর্বোচ্চ।"
+                ),
+                yhLang(
+                  "According to 2020 data, over 600,000 women are diagnosed with cervical cancer annually and about 342,000 die, 90% of them in low- and middle-income countries like Bangladesh.",
+                  "২০২০ সালের তথ্য-উপাত্ত অনুযায়ী প্রতিবছর বিশ্বের ছয় লক্ষাধিক নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হন, যার মধ্যে প্রায় তিন লক্ষ বিয়াল্লিশ হাজার জন মৃত্যুবরণ করে থাকেন। এর প্রায় ৯০% মৃত্যুই বাংলাদেশের মতো উন্নয়নশীল বা স্বল্পোন্নত দেশে ঘটে থাকে।"
+                ),
+                yhLang(
+                  "Human Papillomavirus (HPV)—a sexually transmitted virus—is the primary cause. WHO recommends regular screening and HPV vaccination to reduce incidence and deaths. Without strong prevention and control, projections suggest 700,000 cases and 400,000 deaths by 2030, mostly in developing nations.",
+                  "হিউম্যান প্যাপিলোমা ভাইরাস (এইচপিভি), যা একটি যৌনবাহিত ভাইরাস, এটি জরায়ুমুখ ক্যান্সার সৃষ্টি করে থাকে। বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব। ধারণা করা হচ্ছে, জরায়ুমুখ ক্যান্সার প্রতিরোধ ও নিয়ন্ত্রণ কার্যক্রম সফলভাবে বাস্তবায়িত না হলে ২০৩০ সালে বিশ্বব্যাপী প্রায় সাত লক্ষ নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হবেন, যার প্রায় চার লক্ষ মৃত্যুবরণ করবেন এবং এর সিংহভাগই ঘটবে উন্নয়নশীল দেশে।"
+                ),
+              ];
+
+              const renderParagraphs = () =>
+                paragraphs
+                  .map(
+                    (text, idx) => `
+                      <p class="mb-3" data-aos="fade-right" data-aos-delay="${60 + idx * 20}">${text}</p>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "জরায়ুমুখ ক্যান্সার",
+                    "জরায়ুমুখ ক্যান্সার"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        ${renderParagraphs()}
+                      </div>
+                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="80">
+                        <figure class="image-card mb-0" style="min-height:150px; max-width:80%; margin:0 auto;">
+                          <img src="img/modu11/jorau.jpg" alt="জরায়ুমুখ ক্যান্সার" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch11-lesson-2",
+            title: yhLang("HPV Vaccine", "এইচপিভি টিকা"),
+            icon: "fa-syringe",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q11b",
+                  question: yhLang(
+                    "How many HPV vaccine doses are recommended here?",
+                    "এইচপিভি টিকার ডোজ সংখ্যা কত উল্লেখ করা হয়েছে?"
+                  ),
+                  options: [
+                    yhLang("One dose", "এক ডোজ"),
+                    yhLang("Two doses", "দুই ডোজ"),
+                    yhLang("Three doses", "তিন ডোজ"),
+                    yhLang("Four doses", "চার ডোজ"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro = yhLang(
+                "Regular screening plus a single HPV vaccine dose can prevent cervical cancer and reduce related deaths.",
+                "বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এক ডোজ এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব।"
+              );
+
+              const advantages = [
+                "এইচপিভি টিকা জরায়ুমুখ ক্যান্সার প্রতিরোধ করে।",
+                "জরায়ুমুখ ক্যান্সার প্রতিরোধে এইচপিভি টিকার একটি ডোজই যথেষ্ট।",
+                "এইচপিভি টিকা বিশ্বব্যাপী পরীক্ষিত, নিরাপদ ও কার্যকর।",
+                "গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের উদ্যোগে এই টিকা বিনামূল্যে প্রদান করা হয়।",
+              ];
+
+              const locations = [
+                "ইপিআই স্থায়ী ও অস্থায়ী টিকা কেন্দ্র থেকে এই টিকা গ্রহণ করা যাবে।",
+              ];
+
+              const eligibility = [
+                "পঞ্চম শ্রেণিতে অধ্যয়নরত সকল ছাত্রী অথবা ১০ বছর বয়সী সকল কিশোরী।",
+              ];
+
+              const doses = [
+                "এক ডোজ",
+              ];
+
+              const renderList = (items, baseDelay = 60) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "এইচপিভি টিকা",
+                    "এইচপিভি টিকা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <p class="mb-4" data-aos="fade-right" data-aos-delay="60">${intro}</p>
+
+                        <article class="mb-3" data-aos="fade-right" data-aos-delay="80">
+                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকা গ্রহণের সুবিধা", "টিকা গ্রহণের সুবিধা")}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(advantages, 80)}
+                          </ul>
+                        </article>
+
+                        <article class="mb-3" data-aos="fade-right" data-aos-delay="120">
+                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকা গ্রহণের স্থান", "টিকা গ্রহণের স্থান")}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(locations, 120)}
+                          </ul>
+                        </article>
+
+                        <article class="mb-3" data-aos="fade-right" data-aos-delay="140">
+                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকাগুলো কারা গ্রহণ করতে পারবেন", "টিকাগুলো কারা গ্রহণ করতে পারবেন")}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(eligibility, 140)}
+                          </ul>
+                        </article>
+
+                        <article data-aos="fade-right" data-aos-delay="160">
+                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকার ডোজ সংখ্যা", "টিকার ডোজ সংখ্যা")}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(doses, 160)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="row g-3">
+                          <div class="col-12" data-aos="fade-left" data-aos-delay="80">
+                            <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto;">
+                              <img src="img/modu11/dose1.jpg" alt="${yhLang("HPV vaccine awareness", "এইচপিভি টিকা")}" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                            </figure>
+                          </div>
+                          <div class="col-12" data-aos="fade-left" data-aos-delay="110">
+                            <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto;">
+                              <img src="img/modu11/dose2.jpg" alt="${yhLang("HPV vaccine dose", "এইচপিভি টিকা ডোজ")}" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                            </figure>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch11-lesson-3",
+            title: yhLang("Other Vaccines for Women", "মহিলাদের অন্যান্য  টিকা"),
+            icon: "fa-notes-medical",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q11c",
+                  question: yhLang(
+                    "Why should women stay informed about additional vaccines?",
+                    "মহিলাদের কেন অতিরিক্ত টিকা সম্পর্কে সচেতন থাকা জরুরি?"
+                  ),
+                  options: [
+                    yhLang("To protect against preventable diseases", "প্রতিরোধযোগ্য রোগ থেকে সুরক্ষা পেতে"),
+                    yhLang("Because vaccines cause illness", "কারণ টিকা অসুস্থ করে"),
+                    yhLang("Vaccines are unnecessary", "টিকা অপ্রয়োজনীয়"),
+                    yhLang("No reason", "কোনো কারণ নেই"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "মহিলাদের অন্যান্য  টিকা",
+                    "মহিলাদের অন্যান্য  টিকা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0" style="margin:0 auto;">
+                      <img src="img/modu11/tika.jpg" alt="মহিলাদের অন্যান্য টিকা" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                    </figure>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-12",
         title:
           yhLang(
             "Module-12: Adolescent nutrition: Nutritional deficiency and prevention",
-            "মডিউল-১২: কৈশোর পুষ্টি—ঘাটতি ও প্রতিরোধ"
+            "মডিউল-১২: পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
           ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch12-lesson-1",
+            title: yhLang(
+              "Polycystic Ovary Syndrome (PCOS)",
+              "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
+            ),
+            icon: "fa-circle-nodes",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q12a",
+                  question: yhLang(
+                    "PCOS becomes more common when which hormone rises above normal?",
+                    "শরীরে কোন হরমোন স্বাভাবিকের তুলনায় বেড়ে গেলে পিসিওএস দেখা দিতে পারে?"
+                  ),
+                  options: [
+                    yhLang("Androgen", "অ্যান্ড্রোজেন"),
+                    yhLang("Insulin", "ইনসুলিন"),
+                    yhLang("Thyroxine", "থাইরোক্সিন"),
+                    yhLang("Estrogen", "ইস্ট্রোজেন"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const paragraphs = [
+                yhLang(
+                  "PCOS is a major global health issue for women. Multiple cysts form in the ovaries, affecting as many as 1 in 10 women of any age, with the highest incidence between 15 and 45 years.",
+                  "সারা বিশ্বেই নারীদের একটি বড় স্বাস্থ্য সমস্যা পলিসিস্টিক ওভারিয়ান সিনড্রোম বা পিসিওএস। এই রোগে ডিম্বাশয়ে অনেকগুলো সিস্ট হয় বলেই এর এমন নামকরণ। গবেষণা বলছে, প্রতি ১০ জন নারীর মধ্যে ১ জনের এ সমস্যা আছে। যেকোনো বয়সী নারীই এতে আক্রান্ত হতে পারেন। তবে প্রজননক্ষম বা ১৫ থেকে ৪৫ বছর বয়সী নারীরা বেশি আক্রান্ত হন।"
+                ),
+                yhLang(
+                  "PCOS is both hereditary and hormonal. When androgen levels rise, ovulation is disrupted, follicles do not rupture, and periods become irregular or even absent.",
+                  "এটি বংশগত এবং হরমোনাল সমস্যা। নারীর শরীরে পুরুষ হরমোন (অ্যান্ড্রোজেন) স্বাভাবিকের তুলনায় বেড়ে গেলে এ সমস্যা দেখা দেয়। এই হরমোন বৃদ্ধির কারণে নারীর ওভুলেশন বা প্রতি মাসে ডিম্বাণু পরিপক্ব হওয়ার পরও ফলিকল ফেটে যায় না এবং ডিম্বাণু বের হতে পারে না। একসময় মেয়েদের ওভুলেশন বন্ধ হয়ে যায় এবং অনিয়মিত মাসিক হয় বা মাসিক একেবারেই হয় না।"
+                ),
+                yhLang(
+                  "Although 60–70% of people with PCOS can still conceive, fertility declines after age 35.",
+                  "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয় না, তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়।"
+                ),
+              ];
+
+              const renderParagraphs = () =>
+                paragraphs
+                  .map(
+                    (text, idx) => `
+                      <p class="mb-3" data-aos="fade-right" data-aos-delay="${60 + idx * 20}">${text}</p>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)",
+                    "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    ${renderParagraphs()}
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch12-lesson-2",
+            title: yhLang("PCOS Complications", "সমস্যা সমূহঃ"),
+            icon: "fa-list-check",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q12b",
+                  question: yhLang(
+                    "Which of the following is a possible complication of PCOS?",
+                    "পিসিওএস-এর সম্ভাব্য জটিলতা কোনটি?"
+                  ),
+                  options: [
+                    yhLang("টাইপ-২ ডায়াবেটিসের ঝুঁকি", "টাইপ-২ ডায়াবেটিসের ঝুঁকি"),
+                    yhLang("তাৎক্ষণিক রোগমুক্তি", "তাৎক্ষণিক রোগমুক্তি"),
+                    yhLang("চোখে বেশি পানি আসা", "চোখে বেশি পানি আসা"),
+                    yhLang("কোনো শারীরিক পরিবর্তন নয়", "কোনো শারীরিক পরিবর্তন নয়"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const complications = [
+                "অনিয়মিতভাবে মাসিক হওয়া / মাসিক বন্ধ থাকা",
+                "মানসিক সমস্যা",
+                "শরীরের বিভিন্ন জায়গায় অবাঞ্ছিত লোম গজানো",
+                "চুল পড়ে যাওয়া",
+                "মুখে ব্রণ বের হওয়া",
+                "গর্ভধারণে বিভিন্ন সমস্যা হওয়া, এমনকি জটিলতাও হতে পারে",
+                "ওজন বেড়ে যাওয়া",
+                "ঘুমের ব্যাঘাত হওয়া",
+                "টাইপ-২ ডায়বেটিস রোগের ঝুঁকি",
+                "হৃদরোগের ঝুঁকি",
+                "জরায়ু ক্যান্সারের ঝুঁকি বাড়ায়",
+              ];
+
+              const note =
+                "সবারই সব সমস্যা একসাথে হবে তা নয়, আবার বয়সের সাথে সমস্যাগুলো পরিবর্তনও হতে পারে।";
+
+              const renderList = (items, baseDelay = 60) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 15}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "সমস্যা সমূহঃ",
+                    "সমস্যা সমূহঃ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <h3 class="gradient-text h5 mb-3" data-aos="fade-right" data-aos-delay="60">${yhLang(
+                          "পিসিওএস-এ দেখা দিতে পারে এমন জটিলতা",
+                          "পিসিওএস-এ দেখা দিতে পারে এমন জটিলতা"
+                        )}</h3>
+                        <ul class="list-unstyled puberty-list mb-3">
+                          ${renderList(complications)}
+                        </ul>
+                        <p class="text-muted mb-0" data-aos="fade-right" data-aos-delay="220">${note}</p>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="row g-3">
+                          <div class="col-12" data-aos="fade-left" data-aos-delay="80">
+                            <figure class="image-card mb-0" style="max-height:260px; max-width:80%; margin:0 auto;">
+                              <img src="img/modu12/pcos1.jpg" alt="পিসিওএস সচেতনতা চিত্র" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                            </figure>
+                          </div>
+                          <div class="col-12" data-aos="fade-left" data-aos-delay="110">
+                            <figure class="image-card mb-0" style="max-height:260px; max-width:80%; margin:0 auto;">
+                              <img src="img/modu12/pcos2.jpg" alt="পিসিওএস সমস্যা চিত্র" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                            </figure>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch12-lesson-3",
+            title: yhLang("Managing PCOS", "সমাধানের উপায়"),
+            icon: "fa-heart-circle-check",
+            gradientClass: "bg-gradient-green",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q12c",
+                  question: yhLang(
+                    "What helps keep PCOS under control?",
+                    "পিসিওএস নিয়ন্ত্রণে রাখতে কী সহায়ক?"
+                  ),
+                  options: [
+                    yhLang("Lifestyle changes and treatment", "জীবনযাত্রায় পরিবর্তন ও চিকিৎসা"),
+                    yhLang("কোনো পদক্ষেপের প্রয়োজন নেই", "কোনো পদক্ষেপের প্রয়োজন নেই"),
+                    yhLang("শুধু মিষ্টি খাবার", "শুধু মিষ্টি খাবার"),
+                    yhLang("সম্পূর্ণ বিশ্রাম", "সম্পূর্ণ বিশ্রাম"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro = yhLang(
+                "PCOS cannot be fully cured, but healthy habits and proper care can keep symptoms manageable.",
+                "পিসিওএস হলে মনে রাখতে হবে যে, এটি কখনও নির্মূল হবে না। কিন্তু, চিকিৎসা নিয়ে সুস্থ থাকা সম্ভব।"
+              );
+
+              const lifestyleTips = [
+                "শারীরিকভাবে কর্মক্ষম থাকতে হাঁটা, সাইকেল চালানো বা পছন্দের খেলাধুলা করুন।",
+                "ধূমপান ও মদ্যপানের মতো অস্বাস্থ্যকর অভ্যাস বর্জন করুন।",
+                "খাবারে সতর্ক থাকুন, সুষম খাদ্যগ্রহণ করুন এবং শর্করা কমিয়ে ওজন নিয়ন্ত্রণে রাখুন।",
+                "সুষম খাবার পরিমাণমতো খান এবং অপ্রয়োজনীয় শর্করা কমান।",
+                "ওজন নিয়ন্ত্রণে রাখতে মোট ক্যালরি কমান বা পুষ্টিবিদের সহায়তা নিন; ভাজা খাবারের বদলে ভাপানো খাবার ও শাকসবজি বেশি খান।",
+                "কম চর্বিযুক্ত মাংস, মাছ, ডিম, দুধজাত খাবার, বাদাম ও ফাইবারসমৃদ্ধ খাদ্য খান।",
+                "প্রোবায়োটিক সমৃদ্ধ দই ওজন কমাতে এবং অন্ত্রজীবাণু সুস্থ রাখতে সহায়ক।",
+                "চিনিযুক্ত খাবার, কোমল পানীয়, চকোলেট ও ফাস্টফুড এড়িয়ে চলুন।",
+                "ফল ও শাকসবজি প্রদাহ কমায়, তাই এগুলো বেশি করে খান।",
+                "নিয়মিত ব্যায়াম মানসিক প্রশান্তি দেয়, শক্তি বাড়ায় ও রক্তে চিনির মাত্রা নিয়ন্ত্রণ করে; প্রয়োজনে গ্রুপ ব্যায়ামে যুক্ত হোন।",
+              ];
+
+              const renderList = (items, baseDelay = 60) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 15}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "সমাধানের উপায়",
+                    "সমাধানের উপায়"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-4">${intro}</p>
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "জীবনযাপনের কলাকৌশল",
+                      "জীবনযাপনের কলাকৌশল"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(lifestyleTips)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch12-lesson-4",
+            title: yhLang("Managing PCOS Visuals", "ম্যানেজিং পিসিসিস"),
+            icon: "fa-hand-holding-heart",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q12d",
+                  question: yhLang(
+                    "Which approach supports PCOS management?",
+                    "পিসিওএস ব্যবস্থাপনায় কোনটি সহায়ক?"
+                  ),
+                  options: [
+                    yhLang("Balanced lifestyle and guidance", "সুষম জীবনযাপন ও পরামর্শ"),
+                    yhLang("Only sugary drinks", "শুধু চিনিযুক্ত পানীয়"),
+                    yhLang("Ignoring health entirely", "স্বাস্থ্য সম্পূর্ণ উপেক্ষা করা"),
+                    yhLang("Sleeping all day", "সারাদিন শুধু ঘুমানো"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "ম্যানেজিং পিসিসিস",
+                    "ম্যানেজিং পিসিসিস"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
+                        <figure class="image-card mb-0" style="min-height: 730px; margin:0 auto;">
+                          <img src="img/modu12/manage1.jpg" alt="PCOS management visual 1", "পিসিওএস ব্যবস্থাপনা চিত্র ১" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                        </figure>
+                      </div>
+                      <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
+                        <figure class="image-card mb-0" style="min-height: 730px; margin:0 auto;">
+                          <img src="img/modu12/manage2.jpg" alt="PCOS management visual 2", "পিসিওএস ব্যবস্থাপনা চিত্র ২" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch12-lesson-5",
+            title: yhLang("BMI Guidance", "বি এম আই"),
+            icon: "fa-scale-balanced",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q12e",
+                  question: yhLang(
+                    "Why is tracking BMI important for PCOS?",
+                    "পিসিওএস ব্যবস্থাপনায় বিএমআই পরিমাপ কেন জরুরি?"
+                  ),
+                  options: [
+                    yhLang("It helps set target weight and manage symptoms", "এটি কাঙ্ক্ষিত ওজন ঠিক করে উপসর্গ নিয়ন্ত্রণে সাহায্য করে"),
+                    yhLang("It has no connection", "এর কোনো সম্পর্ক নেই"),
+                    yhLang("It increases complications", "এটি জটিলতা বাড়ায়"),
+                    yhLang("It replaces healthy food", "এটি স্বাস্থ্যকর খাবারের বিকল্প"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const message = yhLang(
+                "Monitor your BMI, set a healthy weight goal, and keep PCOS under control through portioned meals and regular exercise.",
+                "নিজের BMI পরিমাপ করে, কাঙ্ক্ষিত ওজন সেট করতে হবে, ওজন নিয়ন্ত্রণে রাখতে পরিমিত খাবার গ্রহণ ও নিয়মিত ব্যায়ামের মাধ্যমে পিসিওএস নিয়ন্ত্রণে রাখতে হবে।"
+              );
+
+              const images = [
+                { src: "img/modu12/BMI.jpg" },
+                { src: "img/modu12/BMI2.jpg" },
+                { src: "img/modu12/BMI3.jpg" },
+              ];
+
+              const renderImages = () =>
+                images
+                  .map(
+                    (img, idx) => `
+                      <div class="col-12 col-md-4" data-aos="zoom-in" data-aos-delay="${80 + idx * 20}">
+                        <figure class="image-card mb-0" style="margin:0 auto;">
+                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                        </figure>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "বি এম আই",
+                    "বি এম আই"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-4">${message}</p>
+                    <div class="row g-3 align-items-stretch">
+                      ${renderImages()}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch12-lesson-6",
+            title: yhLang("PCOS Reminders", "পিসিওএস"),
+            icon: "fa-lightbulb",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q12f",
+                  question: yhLang(
+                    "When should someone with PCOS seek medical care for irregular periods?",
+                    "পিসিওএস থাকলে মাসিক বছরে কয়বারের কম হলে চিকিৎসা নিতে হবে?"
+                  ),
+                  options: [
+                    yhLang("Less than four times a year", "বছরে চার বারের কম হলে"),
+                    yhLang("প্রতিদিন", "প্রতিদিন"),
+                    yhLang("শুধু শীতে", "শুধু শীতে"),
+                    yhLang("কখনো নয়", "কখনো নয়"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const reminders = [
+                "পিসিওএসে মাসিক নিয়মিত নাও হতে পারে। বছরে ৪ বারের কম হলে চিকিৎসা নিতে হবে।",
+                "পিসিওএস হলে ঘুমের সমস্যা হতে পারে, তাই স্বাস্থ্যসম্মত ঘুমের অভ্যাস গড়ে তুলতে হবে।",
+                "পিসিওএস সম্পর্কে জানতে হবে, সাপোর্ট নিতে হবে ও সময়মতো সঠিক চিকিৎসা নিতে হবে। পরিবার, বন্ধু, সাপোর্ট গ্রুপের সহযোগিতা ও কাউন্সেলিংয়ের মাধ্যমে সমস্যার সমাধান করতে হবে।",
+              ];
+
+              const renderReminders = () =>
+                reminders
+                  .map(
+                    (text, idx) => `
+                      <article class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="${40 + idx * 20}">
+                        <p class="mb-0"><strong>${text}</strong></p>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "পিসিওএস",
+                    "পিসিওএস"
+                  )}</h2>
+
+                  ${renderReminders()}
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch12-lesson-7",
+            title: yhLang(
+              "Child and Human Rights Charter",
+              "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার"
+            ),
+            icon: "fa-scale-balanced",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q12g",
+                  question: yhLang(
+                    "Which CRC article prioritizes the best interests of the child?",
+                    "সিআরসি অনুযায়ী কোন ধারায় শিশুর সর্বোচ্চ স্বার্থকে অগ্রাধিকার দেওয়া হয়েছে?"
+                  ),
+                  options: [
+                    yhLang("Article 3", "ধারা ৩"),
+                    yhLang("Article 9", "ধারা ৯"),
+                    yhLang("Article 20", "ধারা ২০"),
+                    yhLang("Article 42", "ধারা ৪২"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "বিশ্বের সব মানুষ কিছু অধিকার ও স্বাধীনতার দাবিদার। তার জন্মস্থান/মতবাদ/বিশ্বাস/জীবনযাপন—সবকিছুর ঊর্ধ্বে এ অধিকার তার প্রাপ্য যা থেকে কখনো তাকে বঞ্চিত করা যাবে না। আর ১৯৪৮ সালে প্রণীত হয় মানবাধিকারের বৈশ্বিক ঘোষণা, যার ভিত্তি সমতা, মর্যাদা, স্বাধীনতা, শান্তি ও ন্যায়।";
+
+              const crcOverview =
+                "শিশু অধিকার হচ্ছে শিশুদের মানবাধিকার। এ অধিকারগুলো আন্তর্জাতিক শিশু অধিকার সনদের (সিআরসি) মাধ্যমে সুরক্ষিত। সিআরসি অনুযায়ী, প্রত্যেক শিশুই বেড়ে উঠবে শান্তি ও মর্যাদাপূর্ণ, সহিষ্ণু ও মুক্ত স্বাধীন পরিবেশে; সমতা ও সৌহার্দ্যের মাধ্যমে। আন্তর্জাতিক শিশু অধিকার সনদে ৫৪টি ধারা রয়েছে। মূলত চারটি স্তম্ভের আলোকে অনুচ্ছেদগুলো ভাগ করা হয়েছে।";
+
+              const articles = [
+                {
+                  title: "ধারা ২ — বৈষম্যহীনতা",
+                  text: "কোনো শিশুই বৈষম্যের শিকার হবে না। যেকোনো পরিস্থিতিতেই সব শিশুই তাদের সম্ভাবনা বিকাশের সমান সুযোগ পাবে; যেমন—লিঙ্গ, বর্ণ, জাতীয়তা, ধর্ম, প্রতিবন্ধিতা, যৌনতার ধরণ বা অন্য কোনো মর্যাদার ভিত্তিতে বৈষম্যের শিকার না হয়ে শিক্ষায় অংশগ্রহণের সুযোগ পাবে।",
+                },
+                {
+                  title: "ধারা ৩ — শিশুর সর্বোচ্চ স্বার্থ",
+                  text: "শিশুদের ওপর প্রভাব ফেলবে এমন কোনো সিদ্ধান্তের ক্ষেত্রে তাদের স্বার্থগুলো সবসময় অগ্রাধিকার পাবে। যেমন—বাজেট প্রণয়নের সময় খেয়াল রাখতে হবে কোনো খাতে অর্থ বরাদ্দ বা কর্তনের ক্ষেত্রে যেন শিশুদের সর্বোচ্চ স্বার্থটাই গুরুত্ব পায়।",
+                },
+                {
+                  title: "ধারা ৬ — বেঁচে থাকা ও বিকাশ",
+                  text: "বেঁচে থাকার ও সুস্থভাবে বিকাশের অধিকার সব শিশুরই রয়েছে। মৌলিক সেবাগুলোয় শিশুদের প্রবেশাধিকার ও তাদের পূর্ণ সম্ভাবনা বিকাশের সমান অধিকার নিশ্চিত করতে হবে; যেমন—প্রতিবন্ধী শিশুর অবশ্যই শিক্ষা ও স্বাস্থ্যসেবা গ্রহণের অধিকার থাকবে।",
+                },
+                {
+                  title: "ধারা ১২ — মতামত প্রদান",
+                  text: "শিশুদের ওপর প্রভাব রাখবে এমন বিষয়ে তাদের মতামত বিবেচনায় নেওয়া বাধ্যতামূলক। শিশুদের অধিকারভুক্ত সব বিষয়ে তাদের মতামত শুনতে হবে ও শ্রদ্ধা রাখতে হবে; যেমন—শিশুবিষয়ক নীতি বা পরিকল্পনা গ্রহণে শিশুদের উপলব্ধিগুলো গ্রাহ্য করতে হবে।",
+                },
+              ];
+
+              const renderArticles = () =>
+                articles
+                  .map(
+                    (item, idx) => `
+                      <article class="modern-card glass-card" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">
+                        <h3 class="h6 gradient-text mb-2">${item.title}</h3>
+                        <p class="mb-0">${item.text}</p>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার",
+                    "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${intro}</p>
+                    <p class="mb-0">${crcOverview}</p>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "আন্তর্জাতিক শিশু অধিকার সনদের প্রধান ধারা",
+                      "আন্তর্জাতিক শিশু অধিকার সনদের প্রধান ধারা"
+                    )}</h3>
+                    <div class="row g-3">
+                      ${renderArticles()}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch12-lesson-8",
+            title: yhLang(
+              "Sexual and Reproductive Health Rights",
+              "যৌন ও প্রজনন স্বাস্থ্য অধিকার"
+            ),
+            icon: "fa-venus-mars",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q12h",
+                  question: yhLang(
+                    "Why are sexual and reproductive health rights critical for adolescents?",
+                    "কিশোর-কিশোরীদের জন্য যৌন ও প্রজনন স্বাস্থ্য অধিকার কেন গুরুত্বপূর্ণ?"
+                  ),
+                  options: [
+                    yhLang(
+                      "They protect against disease, unwanted pregnancy, and uphold autonomy",
+                      "এগুলো রোগ, অনাকাঙ্ক্ষিত গর্ভধারণ থেকে সুরক্ষা দেয় এবং স্বায়ত্তশাসন নিশ্চিত করে"
+                    ),
+                    yhLang("Only for entertainment", "শুধু বিনোদনের জন্য"),
+                    yhLang("No relation to health", "স্বাস্থ্যের সাথে কোনো সম্পর্ক নেই"),
+                    yhLang("Applies only to adults", "শুধু প্রাপ্তবয়স্কদের প্রযোজ্য"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এ বয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্ত হওয়ার সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।";
+
+              const whoDefinition =
+                "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডব্লিউএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।";
+
+              const importance = [
+                "যৌন ও প্রজনন স্বাস্থ্য অধিকার মৌলিক মানবাধিকারের অংশ।",
+                "লিঙ্গ সমতা ও টেকসই উন্নয়নের জন্য এ অধিকার নিশ্চিত করা খুবই গুরুত্বপূর্ণ।",
+                "নিজের শরীর ও যৌন সম্পর্কের ক্ষেত্রে কিশোরী এবং নারীদের নিয়ন্ত্রণ তাদের ক্ষমতায়নের পূর্বশর্ত।",
+                "সামাজিক, অর্থনৈতিক, রাজনৈতিক ও সাংস্কৃতিক অঙ্গনে পূর্ণ অংশগ্রহণের জন্য এ অধিকার জরুরি।",
+                "যৌন ও প্রজনন স্বাস্থ্য অধিকার কিশোরী ও নারীদের বৈষম্য, সহিংসতা ও নির্যাতন থেকে মুক্ত থাকার অধিকারকে সুরক্ষিত করে।",
+                "মর্যাদা, সমতা ও বৈচিত্র্যের প্রতি সম্মানের নীতিগুলো বজায় রাখতে এই অধিকার অপরিহার্য।",
+              ];
+
+              const renderList = (items, baseDelay = 60) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 15}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার",
+                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${intro}</p>
+                    <p class="mb-0">${whoDefinition}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "এ অধিকার কেন গুরুত্বপূর্ণ",
+                      "এ অধিকার কেন গুরুত্বপূর্ণ"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(importance)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-13",
