@@ -6240,9 +6240,1250 @@ const coursesData = [
         title:
           yhLang(
             "Module-13: Non-communicable diseases (NCDs) in adolescents and their prevention",
-            "মডিউল-১৩: কৈশোরে অসংক্রামক রোগ ও প্রতিরোধ"
+            "মডিউল-১৩: লিঙ্গ ভিত্তিক বৈষম্য"
           ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch13-lesson-1",
+            title: yhLang("Gender-Based Discrimination", "লিঙ্গ ভিত্তিক বৈষম্য"),
+            icon: "fa-venus-mars",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13a",
+                  question: yhLang(
+                    "Which statement best describes gender?",
+                    "জেন্ডারকে কীভাবে সংজ্ঞায়িত করা যায়?"
+                  ),
+                  options: [
+                    yhLang("A socially constructed identity that can change", "সমাজসৃষ্ট ও পরিবর্তনশীল পরিচয়"),
+                    yhLang("A fixed biological trait", "একটি স্থির জৈবিক বৈশিষ্ট্য"),
+                    yhLang("Only physical features", "শুধু শারীরিক বৈশিষ্ট্য"),
+                    yhLang("Unrelated to society", "সমাজের সাথে সম্পর্কহীন"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const sexDefinition =
+                "সেক্স: সেক্স বা লিঙ্গ হচ্ছে প্রাকৃতিক বা জৈবিক কারণে সৃষ্ট নারী-পুরুষের বৈশিষ্ট্যসূচক ভিন্নতা বা শারীরিক বৈশিষ্ট্যের ভিত্তিতে নারী-পুরুষের স্বাতন্ত্র্য, কিংবা নারী-পুরুষের শারীরিক বৈশিষ্ট্য, যা পরিবর্তনযোগ্য নয়।";
+
+              const genderDefinition =
+                "জেন্ডার: জেন্ডার হচ্ছে সমাজ কর্তৃক নির্ধারিত নারী ও পুরুষের সামাজিক পরিচয়, তাদের মধ্যকার বৈশিষ্ট্য এবং নারী ও পুরুষের ভূমিকা, যা পরিবর্তনীয় এবং সমাজ, সংস্কৃতি ইত্যাদি ভেদে ভিন্ন ভিন্ন। অর্থাৎ, জেন্ডার সামাজিকভাবে নির্মিত একটি বিষয়, যা পরিবর্তনশীল।";
+
+              const genderPoints = [
+                "পরিবর্তনশীল",
+                "সমাজ ও সংস্কৃতি ভেদে ভিন্ন ভিন্ন",
+                "অনির্ধারিত",
+                "সমাজ কর্তৃক আরোপিত",
+                "মানুষ কর্তৃক সৃষ্ট",
+                "রীতিনীতি অর্জিত/অর্পিত হয়",
+                "সমাজসৃষ্ট ভূমিকা, দায়িত্ব, আচরণ",
+              ];
+
+              const sexPoints = [
+                "অপরিবর্তনীয়",
+                "পৃথিবীর সব জায়গায় একই রকম",
+                "নির্ধারিত",
+                "আবহমান কাল ধরে একই",
+                "প্রকৃতি প্রদত্ত",
+                "জন্মগত",
+                "শারীরিক",
+              ];
+
+              const renderList = (items, delayStart = 80) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${delayStart + idx * 15}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "লিঙ্গ ভিত্তিক বৈষম্য",
+                    "লিঙ্গ ভিত্তিক বৈষম্য"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text h5 mb-2">${yhLang("সেক্স", "সেক্স")}</h3>
+                    <p class="mb-3">${sexDefinition}</p>
+                    <h3 class="gradient-text h5 mb-2">${yhLang("জেন্ডার", "জেন্ডার")}</h3>
+                    <p class="mb-0">${genderDefinition}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "জেন্ডার ও সেক্সের মধ্যে পার্থক্য",
+                      "জেন্ডার ও সেক্সের মধ্যে পার্থক্য"
+                    )}</h3>
+                    <div class="table-responsive">
+                      <table class="table table-modern align-middle" aria-label="
+                        জেন্ডার ও সেক্স তুলনামূলক সারণি">
+                        <thead>
+                          <tr>
+                            <th scope="col">${yhLang("জেন্ডার", "জেন্ডার")}</th>
+                            <th scope="col">${yhLang("সেক্স", "সেক্স")}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${genderPoints
+                            .map(
+                              (genderPoint, idx) => `
+                                <tr data-aos="fade-up" data-aos-delay="${100 + idx * 15}">
+                                  <td>${genderPoint}</td>
+                                  <td>${sexPoints[idx] || ""}</td>
+                                </tr>
+                              `
+                            )
+                            .join("")}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-2",
+            title: yhLang("Understanding Gender Inequity", "জেন্ডার বৈষম্য"),
+            icon: "fa-people-arrows",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13b",
+                  question: yhLang(
+                    "What helps achieve gender equality?",
+                    "জেন্ডার সমতা অর্জনে কী সহায়ক?"
+                  ),
+                  options: [
+                    yhLang("Ensuring equity and equal opportunities", "সাম্য নিশ্চিত করে সমান সুযোগ তৈরি করা"),
+                    yhLang("Ignoring discrimination", "বৈষম্য উপেক্ষা করা"),
+                    yhLang("Limiting participation", "অংশগ্রহণ সীমিত করা"),
+                    yhLang("Only focusing on men", "শুধু পুরুষদের গুরুত্ব দেওয়া"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "নারী ও পুরুষের ভিন্নতা, আচরণ ও সামাজিক অভ্যাসভেদে নারী ও পুরুষের মধ্যে কিছু বৈষম্য সৃষ্টি হয়। সামাজিক দৃষ্টিভঙ্গি, ধর্মের অপব্যাখ্যা, মেয়েদের ছোট করে দেখার মানসিকতা ইত্যাদি জেন্ডার বৈষম্য সৃষ্টিতে প্রধান ভূমিকা পালন করে। জেন্ডারের এই বৈষম্যকে পরিবার, সমাজ যখন মেনে নেয় ও আইন, নীতি বা মূল্যবোধের মাধ্যমে রাষ্ট্র যখন বৈধতা দেয় তখন তা প্রাতিষ্ঠানিক রূপ লাভ করে এবং সেটি বৈষম্য হিসেবে গণ্য হয়। এই বৈষম্য সামাজিকভাবে তৈরি যা পরিবার, সমাজ ও সংস্কৃতি থেকে গৃহীত, সমাজ ও স্থান ভেদে ভিন্ন, এবং অবশ্যই পরিবর্তনশীল।";
+
+              const sections = [
+                {
+                  title: "সমতা",
+                  body:
+                    "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়। সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-সুবিধা লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।",
+                },
+                {
+                  title: "ন্যায্যতা",
+                  body:
+                    "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-সুবিধা লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।",
+                },
+                {
+                  title: "জেন্ডার সমতা",
+                  body:
+                    "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-সুবিধা এবং অধিকার সমান হবে তা নিশ্চিত করে।",
+                },
+                {
+                  title: "সাম্য ও সমতার পার্থক্য",
+                  body:
+                    "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-সুবিধা দিয়ে সাম্য (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।",
+                },
+              ];
+
+              const renderSections = () =>
+                sections
+                  .map(
+                    (section, idx) => `
+                      <article class="mb-4" data-aos="fade-right" data-aos-delay="${80 + idx * 20}">
+                        <h3 class="h6 gradient-text mb-2">${section.title}</h3>
+                        <p class="mb-0">${section.body}</p>
+                        ${idx < sections.length - 1 ? '<hr class="my-3" />' : ""}
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "জেন্ডার বৈষম্য",
+                    "জেন্ডার বৈষম্য"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <p class="mb-4">${intro}</p>
+                        ${renderSections()}
+                      </div>
+                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="80">
+                        <figure class="image-card mb-0" style="max-height:360px; max-width:80%; margin:0 auto;">
+                          <img src="img/modu13/gender.jpg" alt="${yhLang(
+                            "Gender equity illustration",
+                            "জেন্ডার সমতা চিত্র"
+                          )}" class="img-fluid rounded-4 shadow-sm animate-float-slow" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-3",
+            title: yhLang(
+              "Gender Bias Across Society",
+              "সমাজে বিরাজমান জেন্ডার বৈষম্য"
+            ),
+            icon: "fa-scale-unbalanced",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13c",
+                  question: yhLang(
+                    "Which area shows gender bias in the examples?",
+                    "উদাহরণগুলোর কোনটি জেন্ডার বৈষম্যের দৃষ্টান্ত?"
+                  ),
+                  options: [
+                    yhLang("Girls receiving less nutritious food", "মেয়েদের কম পুষ্টিকর খাবার দেওয়া"),
+                    yhLang("সব শিশু সমান সহায়তা পায়", "সব শিশু সমান সহায়তা পায়"),
+                    yhLang("নারী-পুরুষ একই মজুরি পায়", "নারী-পুরুষ একই মজুরি পায়"),
+                    yhLang("মেয়েদের সিদ্ধান্তের প্রতি সম্মান", "মেয়েদের সিদ্ধান্তের প্রতি সম্মান"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const biasList = [
+                "সমাজে সকল ক্ষেত্রে, যেমন—শিক্ষা, স্বাস্থ্যসেবা পাওয়ার ক্ষেত্রে মেয়েদের তুলনায় ছেলেদের অগ্রাধিকার",
+                "পরিবারে কন্যা সন্তান থেকে পুত্র সন্তানের অধিক মূল্যায়ন",
+                "পরিবারে মেয়েদের তুলনায় ছেলেদের বেশি ও পুষ্টিকর খাবার খেতে দেওয়া",
+                "কন্যা সন্তানকে লেখাপড়া শেখাতে বাবা-মায়ের অনীহা, পুত্রের পড়াশোনার জন্য ব্যয় করা",
+                "কন্যা সন্তানকে পরিবারের বোঝা মনে করে অল্প বয়সে বিয়ে দিয়ে দেওয়া",
+                "যৌতুক দাবি করা এবং যৌতুকের কারণে মেয়েদের উপর শারীরিক ও মানসিক নির্যাতন করা",
+                "অসুস্থ হলে মেয়েদের স্বাস্থ্যসেবা গ্রহণের ব্যাপারে পরিবারের উদাসীনতা",
+                "সন্তান গ্রহণ ও নিজের শরীর সম্পর্কে সিদ্ধান্ত নিতে না পারার প্রথা",
+                "কৈশোরে সন্তানধারণ করা",
+                "নারীর উপর শারীরিক ও মানসিক নির্যাতন খুব স্বাভাবিকভাবে গ্রহণ করা",
+                "পুরুষের তুলনায় নারীকে কম পারিশ্রমিক দেওয়া",
+              ];
+
+              const orbitItems = [
+                "গর্ভধারণ বিষয়ক জটিলতা থেকে দীর্ঘস্থায়ী অসুস্থতা",
+                "মাতৃমৃত্যু",
+                "কন্যাশিশু মৃত্যু",
+                "প্রজননতন্ত্রের প্রদাহ ও যৌনরোগ",
+                "রক্তস্বল্পতা",
+                "পুষ্টির অভাবজনিত সমস্যা",
+                "মানসিক অসুস্থতা",
+                "প্রলম্বিত অসুস্থতা",
+                "অকাল বার্ধক্য",
+                "অপরিণত বয়সে গর্ভধারণ",
+              ];
+
+              const colorCycle = [
+                "bg-gradient-blue",
+                "bg-gradient-rose",
+                "bg-gradient-green",
+                "bg-gradient-teal",
+                "bg-gradient-purple",
+                "bg-gradient-tangerine",
+                "bg-gradient-emerald",
+              ];
+
+              const renderBiasList = () =>
+                biasList
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${60 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderOrbit = () => {
+                const radius = 150;
+                const angleStep = 360 / orbitItems.length;
+                return orbitItems
+                  .map((item, idx) => {
+                    const angle = angleStep * idx;
+                    const color = colorCycle[idx % colorCycle.length];
+                    return `
+                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 + idx * 30}">
+                        <div class="orbit-card ${color}">
+                          <span class="orbit-title">${item}</span>
+                        </div>
+                      </div>
+                    `;
+                  })
+                  .join("");
+              };
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "সমাজে বিরাজমান জেন্ডার বৈষম্য",
+                    "সমাজে বিরাজমান জেন্ডার বৈষম্য"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-6">
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderBiasList()}
+                        </ul>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="80">
+                        <div class="orbit-layout" data-orbit-manual="true">
+                          <div class="orbit-center icon-spin-on-hover">
+                            <div class="orbit-card bg-gradient-rose">
+                              <div class="orbit-title fw-bold">${yhLang(
+                                "প্রজনন স্বাস্থ্যে জেন্ডার বৈষম্যের প্রভাব",
+                                "প্রজনন স্বাস্থ্যে জেন্ডার বৈষম্যের প্রভাব"
+                              )}</div>
+                            </div>
+                          </div>
+                          ${renderOrbit()}
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-4",
+            title: yhLang(
+              "Forms of Gender-Based Violence",
+              "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ"
+            ),
+            icon: "fa-hand-fist",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13d",
+                  question: yhLang(
+                    "Which act falls under physical abuse?",
+                    "নিম্নের কোনটি শারীরিক নির্যাতনের উদাহরণ?"
+                  ),
+                  options: [
+                    yhLang("হত্যা বা মারধর", "হত্যা বা মারধর"),
+                    yhLang("সমর্থনমূলক আলোচনায় অংশগ্রহণ", "সমর্থনমূলক আলোচনায় অংশগ্রহণ"),
+                    yhLang("সবার মতামত শোনা", "সবার মতামত শোনা"),
+                    yhLang("পারিবারিক সহায়তা প্রদান", "পারিবারিক সহায়তা প্রদান"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "সাধারণত আমাদের চারপাশে যে সব সহিংসতা ও নির্যাতন ঘটে সেগুলোকে পারিবারিক সহিংসতা (প্রতিরোধ ও সুরক্ষা) আইন ২০১০ অনুযায়ী চার ভাগে ভাগ করা হয়েছে।";
+
+              const lawHighlights = [
+                {
+                  title: "আইন ২০১০",
+                  desc: "পারিবারিক সহিংসতা প্রতিরোধ ও সুরক্ষা আইন"
+                },
+                {
+                  title: "৪টি ধরণ",
+                  desc: "শারীরিক, মানসিক, আর্থিক ও যৌন"
+                },
+                {
+                  title: "সুরক্ষার পরিধি",
+                  desc: "পরিবারের সকল সদস্য ও সুরক্ষিত ব্যক্তিরা"
+                }
+              ];
+
+              const physicalDescription =
+                "এমন কোনো কাজ বা আচরণ করা, যার দ্বারা সংক্ষুব্ধ ব্যক্তির জীবন, স্বাস্থ্য, নিরাপত্তা বা শরীরের কোনো অঙ্গ ক্ষতিগ্রস্ত হয় অথবা ক্ষতিগ্রস্ত হওয়ার সম্ভাবনা থাকে এবং সংক্ষুব্ধ ব্যক্তিকে অপরাধমূলক কাজ করতে বাধ্য করা বা প্ররোচনা প্রদান করা বা বলপ্রয়োগ।";
+
+              const physicalExamples = [
+                "মারধর, আঘাত ও যেকোনো শারীরিক নির্যাতন",
+                "এসিড আক্রমণ",
+                "পাচার",
+                "অপহরণ",
+                "হত্যা",
+                "আত্মহত্যায় প্ররোচনা বা বাধ্য করা",
+                "ধাক্কা দেয়া",
+                "গলা চিপে ধরা",
+                "চুলের মুঠি ধরে টানা",
+                "চড়, থাপ্পড় ইত্যাদি",
+              ];
+
+              const renderHighlights = () =>
+                lawHighlights
+                  .map(
+                    (item, idx) => `
+                      <article class="policy-journey-card compact" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">
+                        <div class="policy-journey-seal bg-gradient-rose">
+                          <span class="policy-journey-step">${item.title}</span>
+                        </div>
+                        <div class="policy-journey-body">
+                          <p class="mb-0 fw-semibold">${item.desc}</p>
+                        </div>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderExamples = () =>
+                physicalExamples
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${100 + idx * 15}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ",
+                    "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-4 fw-semibold">${intro}</p>
+                    <div class="policy-journey-grid" role="list">
+                      ${renderHighlights()}
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-purple text-white">
+                              <i class="fa-solid fa-hand-fist"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "ধরণ",
+                                "ধরণ"
+                              )}</p>
+                              <h3 class="h5 gradient-text mb-0">${yhLang(
+                                "১. শারীরিক নির্যাতন",
+                                "১. শারীরিক নির্যাতন"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <p class="mb-0">${physicalDescription}</p>
+                        </article>
+                      </div>
+                      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="120">
+                        <div class="glass-card h-100 p-4 shadow-sm">
+                          <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                            "প্রধান উদাহরণ",
+                            "প্রধান উদাহরণ"
+                          )}</h4>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderExamples()}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-5",
+            title: yhLang(
+              "Psychological Violence",
+              "মানসিক নির্যাতন"
+            ),
+            icon: "fa-brain",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13e",
+                  question: yhLang(
+                    "Which action is a form of mental abuse?",
+                    "নিম্নের কোনটি মানসিক নির্যাতনের অন্তর্ভুক্ত?"
+                  ),
+                  options: [
+                    yhLang("কোথাও যেতে বাধা দেয়া", "কোথাও যেতে বাধা দেয়া"),
+                    yhLang("সমর্থন দিয়ে উৎসাহিত করা", "সমর্থন দিয়ে উৎসাহিত করা"),
+                    yhLang("স্বাধীন মত প্রকাশে সহায়তা", "স্বাধীন মত প্রকাশে সহায়তা"),
+                    yhLang("সমান সুযোগ দেওয়া", "সমান সুযোগ দেওয়া"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "নিম্নবর্ণিত বিষয়সমূহ অন্তর্ভুক্ত হবে —";
+
+              const mentalDefinitions = [
+                {
+                  title: "ক. মৌখিক নির্যাতন ও অপমান",
+                  text: "মৌখিক নির্যাতন, অপমান, অবজ্ঞা, ভীতি প্রদর্শন বা এমন কোনো উক্তি করা, যা দ্বারা সংক্ষুব্ধ ব্যক্তির মানসিকভাবে ক্ষতি হয়।",
+                },
+                {
+                  title: "খ. হয়রানি",
+                  text: "অবিরাম হয়রানি, অনুসরণ, ভয় দেখানো বা মানসিক চাপ সৃষ্টি করে ব্যক্তিেকে দুর্বল করে দেওয়া।",
+                },
+                {
+                  title: "গ. স্বাধীনতায় হস্তক্ষেপ",
+                  text: "ব্যক্তির স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত ইচ্ছা ও মতামত প্রকাশের স্বাধীনতার উপর হস্তক্ষেপ করে তাকে নিয়ন্ত্রণে রাখার প্রয়াস।",
+                },
+              ];
+
+              const controlExamples = [
+                "কোথাও যেতে বাধা দেয়া",
+                "গালমন্দ করা",
+                "অপমান করা",
+                "হেয় করে কথা বলা",
+                "বিরক্ত করা",
+                "সন্দেহ করা",
+                "বিভিন্ন ধরনের বাধ্যবাধকতা আরোপ করা",
+                "মানসিক অশান্তি বা অস্থিরতা সৃষ্টি করা",
+              ];
+
+              const renderDefinitions = () =>
+                mentalDefinitions
+                  .map(
+                    (item, idx) => `
+                      <article class="modern-card glass-card" data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                        <h3 class="h6 gradient-text mb-2">${item.title}</h3>
+                        <p class="mb-0">${item.text}</p>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderExamples = () =>
+                controlExamples
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${100 + idx * 15}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "মানসিক নির্যাতন",
+                    "মানসিক নির্যাতন"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${intro}</p>
+                    <div class="row g-3">
+                      ${renderDefinitions()}
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-5">
+                        <article class="glass-card p-4 shadow-sm h-100" data-aos="fade-right" data-aos-delay="100">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-rose text-white">
+                              <i class="fa-solid fa-head-side-virus"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "মানসিক প্রভাব",
+                                "মানসিক প্রভাব"
+                              )}</p>
+                              <h3 class="h5 gradient-text mb-0">${yhLang(
+                                "স্বাধীনতায় হস্তক্ষেপ",
+                                "স্বাধীনতায় হস্তক্ষেপ"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <p class="mb-0">${yhLang(
+                            "স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত মতামত প্রকাশে বাধা সৃষ্টি করে মানসিক অশান্তি ও অস্থিরতা তৈরি করা হয়।",
+                            "স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত মতামত প্রকাশে বাধা সৃষ্টি করে মানসিক অশান্তি ও অস্থিরতা তৈরি করা হয়।"
+                          )}</p>
+                        </article>
+                      </div>
+                      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="120">
+                        <div class="glass-card h-100 p-4 shadow-sm">
+                          <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                            "প্রধান উদাহরণ",
+                            "প্রধান উদাহরণ"
+                          )}</h4>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderExamples()}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-6",
+            title: yhLang(
+              "Sexual Violence",
+              "যৌন নির্যাতন"
+            ),
+            icon: "fa-venus-double",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13f",
+                  question: yhLang(
+                    "Which act is considered sexual violence?",
+                    "কোনটি যৌন নির্যাতনের অন্তর্ভুক্ত?"
+                  ),
+                  options: [
+                    yhLang("ধর্ষণ ও ধর্ষণের চেষ্টা", "ধর্ষণ ও ধর্ষণের চেষ্টা"),
+                    yhLang("সম্মানজনক সংলাপ", "সম্মানজনক সংলাপ"),
+                    yhLang("পারস্পরিক সম্মত সিদ্ধান্ত", "পারস্পরিক সম্মত সিদ্ধান্ত"),
+                    yhLang("সহায়ক পরামর্শ", "সহায়ক পরামর্শ"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "নিপীড়ন যা দ্বারা সংক্ষুব্ধ ব্যক্তির সম্মান, সুনাম ও সম্ভ্রমের ক্ষতি হয়। যৌন আকাঙ্ক্ষা ও চাহিদা পূরণে বিশেষ ধরণের নির্যাতন, যা শরীর ও মনের উপর সংঘটিত একটি জঘন্যতম অপরাধ।";
+
+              const sexualExamples = [
+                "ধর্ষণ",
+                "ধর্ষণের চেষ্টা",
+                "দলবদ্ধ ধর্ষণ",
+                "প্রতারণামূলক বিয়ে বা যৌন সম্পর্ক স্থাপন",
+                "জোরপূর্বক যৌন ব্যবসায় বাধ্য করা",
+              ];
+
+              const renderExamples = () =>
+                sexualExamples
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${100 + idx * 15}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "যৌন নির্যাতন",
+                    "যৌন নির্যাতন"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-12">
+                        <p class="mb-0">${intro}</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "উদাহরণ",
+                      "উদাহরণ"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderExamples()}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-7",
+            title: yhLang(
+              "Sexual Harassment Awareness",
+              "যৌন হয়রানি"
+            ),
+            icon: "fa-shield-heart",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13g",
+                  question: yhLang(
+                    "Which action directly helps prevent sexual harassment?",
+                    "নিম্নের কোনটি যৌন হয়রানি প্রতিরোধে সহায়ক পদক্ষেপ?"
+                  ),
+                  options: [
+                    yhLang("বিশ্বস্ত ব্যক্তির কাছে ঘটনাটি জানানো", "বিশ্বস্ত ব্যক্তির কাছে ঘটনাটি জানানো"),
+                    yhLang("ঘটনাটি গোপন রাখা", "ঘটনাটি গোপন রাখা"),
+                    yhLang("হয়রানিকারীর সাথে একা দেখা করা", "হয়রানিকারীর সাথে একা দেখা করা"),
+                    yhLang("সহায়তা প্রত্যাখ্যান করা", "সহায়তা প্রত্যাখ্যান করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const definition =
+                "যৌন হয়রানি হলো এমন সব অশোভন আচরণ, ইঙ্গিত, মন্তব্য বা শারীরিক স্পর্শ যা কারো সম্মতি ছাড়া করা হয় এবং যার ফলে ভুক্তভোগী ব্যক্তি অপমান, ভয় বা নিরাপত্তাহীনতায় ভোগে।";
+
+              const legalPoint =
+                "বাংলাদেশের নারী ও শিশু নির্যাতন দমন আইন, কর্মক্ষেত্রে যৌন হয়রানি প্রতিরোধ নীতিমালা এবং ডিজিটাল নিরাপত্তা আইন যৌন হয়রানি অপরাধ হিসেবে বিবেচনা করে এবং প্রতিকার পাওয়ার সুযোগ দেয়।";
+
+              const harassmentForms = [
+                {
+                  title: "মৌখিক ও অনলাইন হয়রানি",
+                  desc: "অশালীন মন্তব্য, অশ্লীল কৌতুক, ফোন/মেসেজে বিরক্ত করা, সামাজিক যোগাযোগমাধ্যমে অপমানজনক কন্টেন্ট প্রকাশ।",
+                  icon: "fa-comment-slash",
+                },
+                {
+                  title: "অমৌখিক ইঙ্গিত",
+                  desc: "অশোভন অঙ্গভঙ্গি, বারবার তাকিয়ে থাকা, যৌন ইঙ্গিতপূর্ণ ছবি প্রদর্শন, অকারণ অনুসরণ করা।",
+                  icon: "fa-eye",
+                },
+                {
+                  title: "শারীরিক হয়রানি",
+                  desc: "অবাঞ্ছিত স্পর্শ, ধাক্কা, হাত ধরা, আলিঙ্গনে বাধ্য করা বা যেকোনো শারীরিক ঘনিষ্ঠতার চেষ্টা।",
+                  icon: "fa-hand-dots",
+                },
+              ];
+
+              const protectionSteps = [
+                "হয়রানির সময় যত দ্রুত সম্ভব নিরাপদ জায়গায় সরে যান এবং আশেপাশের মানুষের সহায়তা নিন।",
+                "ঘটনার তারিখ, সময়, স্থান ও উপস্থিত সাক্ষীদের নামসহ নোট করে রাখুন।",
+                "বিশ্বস্ত অভিভাবক, শিক্ষক, সহকর্মী বা সহপাঠীকে সঙ্গে সঙ্গে জানান।",
+                "প্রতিষ্ঠানে বিদ্যমান অভিযোগ বক্স, কমিটি বা হটলাইন ব্যবহার করুন এবং প্রয়োজনে ৯৯৯ বা সংশ্লিষ্ট কর্তৃপক্ষকে যোগাযোগ করুন।",
+                "মানসিক চাপ কমাতে কাউন্সেলিং বা মনোসামাজিক সহায়তা গ্রহণ করুন।",
+              ];
+
+              const supportChannels = [
+                "বিদ্যালয়/কলেজের যৌন হয়রানি প্রতিরোধ কমিটি",
+                "উপজেলা মহিলা বিষয়ক কর্মকর্তার অফিস",
+                "জাতীয় হেল্পলাইন ১০৯",
+                "জরুরি সহায়তা ৯৯৯",
+                "বিশ্বস্ত এনজিও বা কমিউনিটি সাপোর্ট গ্রুপ",
+              ];
+
+              const renderFormCards = () =>
+                harassmentForms
+                  .map(
+                    (item, idx) => `
+                      <article class="policy-journey-card" data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
+                        <div class="policy-journey-seal bg-gradient-rose">
+                          <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <div class="policy-journey-body">
+                          <h3 class="h6 gradient-text mb-1">${item.title}</h3>
+                          <p class="mb-0">${item.desc}</p>
+                        </div>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderList = (items, baseDelay = 60) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "যৌন হয়রানি",
+                    "যৌন হয়রানি"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${definition}</p>
+                    <div class="alert alert-modern" role="alert">
+                      <i class="fa-solid fa-scale-balanced me-2"></i>
+                      <span>${legalPoint}</span>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "হয়রানির প্রধান ধরন",
+                      "হয়রানির প্রধান ধরন"
+                    )}</h3>
+                    <div class="policy-journey-grid" role="list">
+                      ${renderFormCards()}
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                          "তাৎক্ষণিক করণীয়",
+                          "তাৎক্ষণিক করণীয়"
+                        )}</h3>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(protectionSteps)}
+                        </ul>
+                      </div>
+                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="120">
+                        <div class="glass-card h-100 p-4 shadow-sm">
+                          <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                            "সহায়তা ও অভিযোগের ঠিকানা",
+                            "সহায়তা ও অভিযোগের ঠিকানা"
+                          )}</h4>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(supportChannels, 80)}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-8",
+            title: yhLang(
+              "Financial Harm and Economic Violence",
+              "“আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা—"
+            ),
+            icon: "fa-coins",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13h",
+                  question: yhLang(
+                    "Which situation is an example of financial harm?",
+                    "নিম্নের কোনটি আর্থিক ক্ষতির উদাহরণ?"
+                  ),
+                  options: [
+                    yhLang("স্ত্রীর যৌতুক ও সম্পত্তি জোর করে নিয়ে নেওয়া", "স্ত্রীর যৌতুক ও সম্পত্তি জোর করে নিয়ে নেওয়া"),
+                    yhLang("পারিবারিক সম্পদে সবার সমান অংশ নিশ্চিত করা", "পারিবারিক সম্পদে সবার সমান অংশ নিশ্চিত করা"),
+                    yhLang("আয়ের উৎস বাড়াতে প্রশিক্ষণ দেওয়া", "আয়ের উৎস বাড়াতে প্রশিক্ষণ দেওয়া"),
+                    yhLang("অর্থনৈতিক সহায়তা প্রস্তাব করা", "অর্থনৈতিক সহায়তা প্রস্তাব করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "আইন অনুযায়ী “আর্থিক ক্ষতি” কেবল অর্থ ছিনিয়ে নেওয়া নয়; বরং সম্পদ ও বৈধ সুযোগ থেকে কাউকে বঞ্চিত করার যে কোনো প্রচেষ্টা।";
+
+              const clauseItems = [
+                {
+                  title: "(১)",
+                  text: "আইন, প্রথা বা আদালতের আদেশ অনুযায়ী যে সম্পদ, সুযোগ বা সম্পত্তি পাওয়ার অধিকার রয়েছে, তা থেকে সংক্ষুব্ধ ব্যক্তিকে বঞ্চিত করা বা বাধা দেওয়া।",
+                },
+                {
+                  title: "(২)",
+                  text: "সংক্ষুব্ধ ব্যক্তিকে নিত্য প্রয়োজনীয় জিনিসপত্র ও দৈনন্দিন চাহিদা পূরণের সামগ্রী প্রদান না করা।",
+                },
+                {
+                  title: "(৩)",
+                  text: "বিবাহের সময় প্রাপ্ত উপহার, স্ত্রীধন বা দান হিসেবে প্রাপ্ত সম্পদ থেকে বঞ্চিত করা বা বৈধ অধিকার আদায়ে বাধা প্রদান।",
+                },
+                {
+                  title: "(৪)",
+                  text: "সংক্ষুব্ধ ব্যক্তির মালিকানাধীন স্থাবর বা অস্থাবর সম্পত্তি তার অনুমতি ছাড়া হস্তান্তর করা অথবা তার বৈধ অধিকার প্রয়োগে বাধা দেওয়া।",
+                },
+                {
+                  title: "(৫)",
+                  text: "পারিবারিক সম্পর্কের কারণে কোনো সম্পদ বা সুবিধা ব্যবহারের অধিকার থাকা সত্ত্বেও তা থেকে বঞ্চিত করা বা ভোগ-দখলে বাধা প্রদান।",
+                },
+              ];
+
+              const examples = [
+                "যৌতুক দাবি করা",
+                "গয়না বা ব্যক্তিগত সম্পত্তি নিয়ে নেওয়া",
+                "বেতন বা আয় কেড়ে নেওয়া",
+                "স্বামী কর্তৃক স্ত্রীকে ভরণপোষণ না দেওয়া",
+                "অর্থনৈতিক/উপার্জনমূলক কাজে অংশ নিতে বাধা দেওয়া",
+              ];
+
+              const renderClauseCards = () =>
+                clauseItems
+                  .map(
+                    (item, idx) => `
+                      <article class="policy-journey-card" data-aos="fade-up" data-aos-delay="${80 + idx * 30}">
+                        <div class="policy-journey-seal bg-gradient-teal">
+                          <span class="policy-journey-step">${item.title}</span>
+                        </div>
+                        <div class="policy-journey-body">
+                          <p class="mb-0">${item.text}</p>
+                        </div>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderExamples = () =>
+                examples
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Financial harm provisions",
+                    "“আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা—"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${intro}</p>
+                    <div class="alert alert-modern" role="alert">
+                      <i class="fa-solid fa-scale-balanced me-2"></i>
+                      <span>${yhLang(
+                        "আইন আর্থিক নির্যাতনের শিকার ব্যক্তিকে সম্পদ পুনরুদ্ধার ও নিরাপত্তা দাবি করার সুযোগ দেয়।",
+                        "আইন আর্থিক নির্যাতনের শিকার ব্যক্তিকে সম্পদ পুনরুদ্ধার ও নিরাপত্তা দাবি করার সুযোগ দেয়।"
+                      )}</span>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "আইন অনুযায়ী অন্তর্ভুক্ত বিষয়সমূহ",
+                      "আইন অনুযায়ী অন্তর্ভুক্ত বিষয়সমূহ"
+                    )}</h3>
+                    <div class="policy-journey-grid" role="list">
+                      ${renderClauseCards()}
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                          "যেমন —",
+                          "যেমন —"
+                        )}</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderExamples()}
+                        </ul>
+                      </div>
+                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="120">
+                        <article class="glass-card p-4 shadow-sm h-100">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-emerald text-white">
+                              <i class="fa-solid fa-house-chimney"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "অধিকার",
+                                "অধিকার"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "ভোগ-দখল ও ভরণপোষণ",
+                                "ভোগ-দখল ও ভরণপোষণ"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <p class="mb-0">${yhLang(
+                            "সম্পদ ব্যবহার, আয় উপভোগ ও ভরণপোষণ গ্রহণ করা প্রতিটি ব্যক্তির মৌলিক অধিকার এবং সীমিত করার যে কোনো চেষ্টা আইনি অপরাধ।",
+                            "সম্পদ ব্যবহার, আয় উপভোগ ও ভরণপোষণ গ্রহণ করা প্রতিটি ব্যক্তির মৌলিক অধিকার এবং সীমিত করার যে কোনো চেষ্টা আইনি অপরাধ।"
+                          )}</p>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-9",
+            title: yhLang(
+              "Actions to End Gender Discrimination",
+              "জেন্ডার বৈষম্য দূর করার জন্য করণীয়"
+            ),
+            icon: "fa-scale-balanced",
+            gradientClass: "bg-gradient-tangerine",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13i",
+                  question: yhLang(
+                    "What is a key step toward eliminating gender discrimination?",
+                    "জেন্ডার বৈষম্য দূর করতে কোন পদক্ষেপটি গুরুত্বপূর্ণ?"
+                  ),
+                  options: [
+                    yhLang("নারী-পুরুষের সমান অধিকার ও সিদ্ধান্তে অংশগ্রহণ নিশ্চিত করা", "নারী-পুরুষের সমান অধিকার ও সিদ্ধান্তে অংশগ্রহণ নিশ্চিত করা"),
+                    yhLang("নারীদের শিক্ষা সীমিত রাখা", "নারীদের শিক্ষা সীমিত রাখা"),
+                    yhLang("মেয়েদের মতামত উপেক্ষা করা", "মেয়েদের মতামত উপেক্ষা করা"),
+                    yhLang("নারীদের কর্মসংস্থান নিরুৎসাহিত করা", "নারীদের কর্মসংস্থান নিরুৎসাহিত করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "জেন্ডার বৈষম্য দূর করতে পরিবার, সমাজ ও রাষ্ট্রকে একসাথে কাজ করতে হয় যাতে নারী-পুরুষ উভয়েই সম্মান, সুযোগ ও নিরাপত্তা পায়।";
+
+              const actionList = [
+                "জেন্ডার বৈষম্য রোধে সমাজের সকল স্তরে সচেতনতার সৃষ্টি করা।",
+                "সম মর্যাদা ও স্বাধীনতা নিয়ে নারী-পুরুষ মানুষ হিসেবে বেড়ে উঠবে তা নিশ্চিত করা।",
+                "লিঙ্গভিত্তিক আলাদা ভূমিকার বদলে মানুষ হিসেবে একীভূত ভূমিকা পালনের সুযোগ তৈরি করা।",
+                "নারী শিক্ষা, কর্মসংস্থান, স্বাস্থ্যসেবা ও নির্যাতন প্রতিরোধসহ সব মানবাধিকার নিশ্চিত করা।",
+                "দেশের উন্নয়নে দক্ষ নারীশক্তি গড়ে তোলা এবং তাদের চাকরি ও ব্যবসায় সম্পৃক্ত করা।",
+                "দক্ষতার ভিত্তিতে সব কর্মকাণ্ডে নারী-পুরুষের সমান অংশগ্রহণ নিশ্চিত করা।",
+                "পরিবার ও সমাজে সিদ্ধান্ত গ্রহণে নারীর মতামতকে গুরুত্ব দেওয়া।",
+                "নারীর অধিকার রক্ষায় প্রয়োজনীয় সকল আইনি সহায়তা প্রদান নিশ্চিত করা।",
+                "সমতা বজায় রেখে নারীর ক্ষমতায়ন নিশ্চিত করা ও সুরক্ষার জন্য প্রচলিত আইন প্রয়োগ করা।",
+                "জেন্ডার বৈষম্য টিকিয়ে রাখা প্রথা বা রীতিনীতি শনাক্ত করে সম্মিলিতভাবে প্রতিরোধ করা।",
+              ];
+
+              const focusPoints = [
+                {
+                  title: "সমতা ও স্বাধীনতা",
+                  text: "নারী-পুরুষ উভয়েই মানুষ হিসেবে মর্যাদা ও স্বাধীনতা ভোগ করবে—এটাই পরিবর্তনের কেন্দ্রবিন্দু।",
+                  icon: "fa-people-group",
+                },
+                {
+                  title: "ক্ষমতায়ন",
+                  text: "শিক্ষা, কর্মসংস্থান ও আইনি সহায়তায় নারীদের ক্ষমতায়ন দ্রুত জেন্ডার বৈষম্য কমায়।",
+                  icon: "fa-bolt",
+                },
+              ];
+
+              const renderList = () =>
+                actionList
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderFocusCards = () =>
+                focusPoints
+                  .map(
+                    (item, idx) => `
+                      <article class="modern-card glass-card" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                          <div class="icon-circle bg-gradient-rose text-white">
+                            <i class="fa-solid ${item.icon}"></i>
+                          </div>
+                          <h3 class="h6 gradient-text mb-0">${item.title}</h3>
+                        </div>
+                        <p class="mb-0">${item.text}</p>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Ending gender discrimination",
+                    "জেন্ডার বৈষম্য দূর করার জন্য করণীয়"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${intro}</p>
+                    <div class="row g-3">
+                      ${renderFocusCards()}
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "মূল করণীয়",
+                      "মূল করণীয়"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList()}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-10",
+            title: yhLang(
+              "Violence Against Adolescents",
+              "কিশোর-কিশোরীদের প্রতি সহিংসতা"
+            ),
+            icon: "fa-children",
+            gradientClass: "bg-gradient-crimson",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13j",
+                  question: yhLang(
+                    "Which action helps protect adolescents from violence?",
+                    "কিশোর-কিশোরীদের সহিংসতা থেকে রক্ষা করতে কোন পদক্ষেপ সহায়ক?"
+                  ),
+                  options: [
+                    yhLang("নিরাপদ পরিবেশ ও পরামর্শ প্রদান", "নিরাপদ পরিবেশ ও পরামর্শ প্রদান"),
+                    yhLang("সহিংস ঘটনার কথা গোপন রাখা", "সহিংস ঘটনার কথা গোপন রাখা"),
+                    yhLang("ঝুঁকিপূর্ণ স্থানে একা পাঠানো", "ঝুঁকিপূর্ণ স্থানে একা পাঠানো"),
+                    yhLang("সহিংস আচরণকে স্বাভাবিক ধরা", "সহিংস আচরণকে স্বাভাবিক ধরা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "পারিবারিক, শিক্ষা প্রতিষ্ঠান, কর্মক্ষেত্র বা অনলাইন—প্রতিটি পরিসরেই কিশোর-কিশোরীরা সহিংসতার ঝুঁকির মুখে থাকে। সচেতনতা, প্রতিরোধমূলক পদক্ষেপ ও সহায়তা ব্যবস্থাই নিরাপত্তার মূলভিত্তি।";
+
+              const violenceTypes = [
+                {
+                  title: "শারীরিক ও মানসিক সহিংসতা",
+                  text: "মারধর, শারীরিক শাস্তি, গালমন্দ, হেয় প্রতিপন্ন করা বা সামাজিকভাবে একঘরে করে দেওয়া।",
+                  icon: "fa-shield-halved",
+                },
+                {
+                  title: "অর্থনৈতিক ও অনলাইন সহিংসতা",
+                  text: "জোরপূর্বক শ্রমে বাধ্য করা, মোবাইল/ইন্টারনেটে ব্ল্যাকমেইল, সাইবার বুলিং ও ব্যক্তিগত তথ্য ফাঁস করা।",
+                  icon: "fa-wifi",
+                },
+                {
+                  title: "যৌন ও লিঙ্গভিত্তিক সহিংসতা",
+                  text: "অবাঞ্ছিত স্পর্শ, হুমকি, বাল্যবিবাহ, যৌন হয়রানি ও ক্ষমতার অপব্যবহার।",
+                  icon: "fa-venus-mars",
+                },
+              ];
+
+              const protectiveActions = [
+                "শিশু ও কিশোরবান্ধব নিরাপদ স্থান, স্কুল ও কমিউনিটি সেন্টার গড়ে তোলা।",
+                "বিশ্বস্ত প্রাপ্তবয়স্কের সাথে অবাধ যোগাযোগ নিশ্চিত করা ও অভিযোগ গ্রহণকারী হটলাইন প্রচার করা।",
+                "অনলাইন নিরাপত্তা, আত্মরক্ষা ও সহপাঠী সমর্থনমুলক কর্মশালা আয়োজন করা।",
+                "শারীরিক ও মানসিক স্বাস্থ্যসেবা, কাউন্সেলিং ও আইনি সহায়তার সহজ প্রাপ্যতা নিশ্চিত করা।",
+                "সহিংসতার ঘটনা দেখলে নীরব না থেকে কর্তৃপক্ষকে জানানো ও প্রমাণ সংরক্ষণ করা।",
+              ];
+
+              const renderViolenceCards = () =>
+                violenceTypes
+                  .map(
+                    (item, idx) => `
+                      <article class="policy-journey-card" data-aos="fade-up" data-aos-delay="${70 + idx * 30}">
+                        <div class="policy-journey-seal bg-gradient-rose">
+                          <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <div class="policy-journey-body">
+                          <h3 class="h6 gradient-text mb-1">${item.title}</h3>
+                          <p class="mb-0">${item.text}</p>
+                        </div>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderProtectiveList = () =>
+                protectiveActions
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Violence against adolescents",
+                    "কিশোর-কিশোরীদের প্রতি সহিংসতা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4 align-items-center">
+                      
+                      <div class="col-lg-12" data-aos="fade-left" data-aos-delay="80">
+                        <figure class="image-card mb-0" style="max-height:360px;">
+                          <img src="img/modu13/sohongsotas.jpg" alt="কিশোর-কিশোরীদের প্রতি সহিংসতা" class="img-fluid rounded-4 shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+
+              
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-14",
