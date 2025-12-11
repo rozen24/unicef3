@@ -7469,16 +7469,295 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4 align-items-center">
-                      
-                      <div class="col-lg-12" data-aos="fade-left" data-aos-delay="80">
+                      <div class="col-lg-6">
+                        <p class="mb-3">${intro}</p>
+                        <div class="policy-journey-grid" role="list">
+                          ${renderViolenceCards()}
+                        </div>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="80">
                         <figure class="image-card mb-0" style="max-height:360px;">
-                          <img src="img/modu13/sohongsotas.jpg" alt="কিশোর-কিশোরীদের প্রতি সহিংসতা" class="img-fluid rounded-4 shadow-sm" />
+                          <img src="img/modu13/sohongsotas.jpg" alt="${yhLang(
+                            "Adolescent violence prevention illustration",
+                            "কিশোর-কিশোরীদের প্রতি সহিংসতা"
+                          )}" class="img-fluid rounded-4 shadow-sm" />
                         </figure>
                       </div>
                     </div>
                   </section>
 
-              
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "সহিংসতা প্রতিরোধে করণীয়",
+                      "সহিংসতা প্রতিরোধে করণীয়"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderProtectiveList()}
+                    </ul>
+                  </section>
+
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch13-lesson-11",
+            title: yhLang(
+              "Understanding Violence and Abuse",
+              "সহিংসতা বা নির্যাতন"
+            ),
+            icon: "fa-hand-holding-heart",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q13k",
+                  question: yhLang(
+                    "Which initiative directly helps prevent violence?",
+                    "সহিংসতা প্রতিরোধে কোন পদক্ষেপ কার্যকর?"
+                  ),
+                  options: [
+                    yhLang("পরিবারে নিরাপদ ও বন্ধুত্বপূর্ণ সম্পর্ক তৈরি", "পরিবারে নিরাপদ ও বন্ধুত্বপূর্ণ সম্পর্ক তৈরি"),
+                    yhLang("সহিংস ঘটনার প্রমাণ লুকিয়ে রাখা", "সহিংস ঘটনার প্রমাণ লুকিয়ে রাখা"),
+                    yhLang("মাদকদ্রব্যের সহজলভ্যতা বৃদ্ধি", "মাদকদ্রব্যের সহজলভ্যতা বৃদ্ধি"),
+                    yhLang("বৈষম্যমূলক রীতি বজায় রাখা", "বৈষম্যমূলক রীতি বজায় রাখা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const definitionText =
+                "‘সহিংসতা বা নির্যাতন হলো কারো বিরুদ্ধে ইচ্ছাকৃতভাবে দেহের শক্তি বা বল প্রয়োগ করা, যা হুমকি বা সত্যিকারের হতে পারে। এর ফলে শারীরিক ক্ষতি, মৃত্যু, মানসিক আঘাত, বিকাশে বাধা বা সুযোগ থেকে বঞ্চিত হওয়ার মতো পরিণতি ঘটে।’";
+
+              const violenceFact =
+                "বিশ্বে সহিংসতার কারণে প্রতি ১০ মিনিটে একজন কিশোরীর মৃত্যু হয়—এটি সমস্যাটির ভয়াবহতা তুলে ধরে।";
+
+              const violenceForms = [
+                "দৈহিক সহিংসতা",
+                "যৌন সহিংসতা",
+                "মানসিক সহিংসতা",
+                "অর্থনৈতিক সহিংসতা",
+                "সাইবার ক্রাইম",
+                "বুলিং",
+                "বাল্যবিবাহ",
+                "পাচার",
+                "যৌন হয়রানি/ইভটিজিং",
+                "এসিড নিক্ষেপ",
+                "পর্নোগ্রাফি ও অশ্লীল প্রকাশনা",
+                "পতিতাবৃত্তি",
+                "শিশুশ্রম",
+              ];
+
+              const causeCards = [
+                {
+                  title: "ব্যক্তিগত কারণ",
+                  body: "বংশগত বা শারীরিক অক্ষমতা, নৈতিকতার অবক্ষয়, মাদকাসক্তি, ব্যক্তিত্বের বৈকল্য, মানসিক অস্থিরতা এবং বয়স-শিক্ষা-আয়ের মতো ব্যক্তিগত বৈশিষ্ট্য সহিংসতার ঝুঁকি বাড়ায়।",
+                },
+                {
+                  title: "পারস্পরিক কারণ",
+                  body: "পরিবার বা বন্ধুদের দ্বন্দ্ব, বিবাহিত জীবনে অবনতি, বিবাহবহির্ভূত সম্পর্ক, পারস্পরিক শ্রদ্ধাহীনতা সম্পর্ককে সহিংস করে তোলে।",
+                },
+                {
+                  title: "পারিপার্শ্বিক কারণ",
+                  body: "শিক্ষা প্রতিষ্ঠান, অফিস বা রাস্তায় সমবয়সীদের চাপ, রাজনৈতিক প্রভাব, সুস্থ বিনোদনের অভাব এবং সামাজিক নিরাপত্তা বেষ্টনীর দুর্বলতা নির্যাতনে ভূমিকা রাখে।",
+                },
+                {
+                  title: "সামাজিক কারণ",
+                  body: "নিম্ন আর্থ-সামাজিক অবস্থা, বেকারত্ব, হতাশা, পরনির্ভরশীলতা, হীনমন্যতা এবং অপসংস্কৃতি থেকে প্রাপ্ত আচরণও সহিংসতাকে প্রলম্বিত করে।",
+                },
+              ];
+
+              const impactCategories = [
+                {
+                  title: "শারীরিক প্রভাব",
+                  items: ["মাথা ব্যথা", "ক্ষুধামন্দা", "বমিভাব", "অনিদ্রা"],
+                },
+                {
+                  title: "মানসিক প্রভাব",
+                  items: [
+                    "দুশ্চিন্তা ও মনমরা ভাব",
+                    "বিষণ্নতা, বিরক্তি ও রাগ",
+                    "ভয়, নিরাপত্তাহীনতা ও ভবিষ্যৎ অনিশ্চয়তা",
+                    "অপমানবোধ, অপরাধবোধ ও আত্মহত্যার প্রবণতা",
+                  ],
+                },
+                {
+                  title: "আচরণগত প্রভাব",
+                  items: ["কান্নাকাটি", "মনোযোগের অভাব", "ভিড় বা গণপরিবহন এড়ানো"],
+                },
+                {
+                  title: "সামাজিক প্রভাব",
+                  items: [
+                    "সমাজে হেয় হওয়া ও তিরস্কার",
+                    "সামাজিক কর্মকাণ্ড থেকে সরে আসা",
+                    "অল্প বয়সে বিয়ের চাপ",
+                  ],
+                },
+              ];
+
+              const preventionSteps = [
+                "পারিবারিক ও বন্ধুত্বপূর্ণ সম্পর্ক জোরদার করা।",
+                "সন্তান ও অভিভাবকের মধ্যে নিরাপদ, বন্ধুত্বপূর্ণ যোগাযোগ তৈরি।",
+                "মাদকের অপব্যবহার ও সহজলভ্যতা হ্রাস।",
+                "জেন্ডার বৈষম্য দূরীকরণে সচেতনতামূলক কর্মসূচি চালু করা।",
+                "নারী ও শিশুর প্রতি সহিংসতা দমন আইন সম্পর্কে জনসচেতনতা বৃদ্ধি।",
+                "বেকারত্ব কমাতে প্রশিক্ষণ ও সহজ শর্তে ঋণ প্রদানের সুযোগ তৈরি।",
+              ];
+
+              const programSections = [
+                {
+                  title: "মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের কর্মসূচি",
+                  items: [
+                    "চৌদ্দটি মেডিকেল কলেজে ওয়ান-স্টপ ক্রাইসিস সেন্টার—চিকিৎসা, কাউন্সেলিং, পুলিশি ও আইনি সহায়তা, পুনর্বাসন।",
+                    "সাতচল্লিশ জেলা ও বিশটি উপজেলায় ওয়ান-স্টপ ক্রাইসিস সেল।",
+                    "ন্যাশনাল হেল্পলাইন সেন্টার (টোলফ্রি ১০৯) ও ‘জয়’ অ্যাপ।",
+                    "মানসিক সংকটে বিনামূল্যে মনোসামাজিক কাউন্সেলিং সেবা।",
+                  ],
+                },
+                {
+                  title: "সমাজকল্যাণ মন্ত্রণালয়ের কর্মসূচি",
+                  items: [
+                    "সামাজিক নিরাপত্তা বেষ্টনি কার্যক্রম।",
+                    "চাইল্ড হেল্পলাইন ১০৯৮ (টোল ফ্রি)।",
+                  ],
+                },
+              ];
+
+              const renderSimpleList = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderCauseCards = () =>
+                causeCards
+                  .map(
+                    (item, idx) => `
+                      <article class="modern-card glass-card" data-aos="fade-up" data-aos-delay="${70 + idx * 20}">
+                        <h3 class="h6 gradient-text mb-2">${item.title}</h3>
+                        <p class="mb-0">${item.body}</p>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderImpactCards = () =>
+                impactCategories
+                  .map(
+                    (category, idx) => `
+                      <article class="glass-card p-4 h-100" data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                          <div class="icon-circle bg-gradient-purple text-white">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                          </div>
+                          <h3 class="h6 gradient-text mb-0">${category.title}</h3>
+                        </div>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderSimpleList(category.items, 90)}
+                        </ul>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderPrograms = () =>
+                programSections
+                  .map(
+                    (section, idx) => `
+                      <article class="policy-journey-card" data-aos="fade-up" data-aos-delay="${90 + idx * 30}">
+                        <div class="policy-journey-seal bg-gradient-emerald">
+                          <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="policy-journey-body">
+                          <h3 class="h6 gradient-text mb-2">${section.title}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderSimpleList(section.items, 100)}
+                          </ul>
+                        </div>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Violence and abuse overview",
+                    "সহিংসতা বা নির্যাতন"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${definitionText}</p>
+                    <div class="alert alert-modern" role="alert">
+                      <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                      <span>${violenceFact}</span>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "কিশোর-কিশোরীদের প্রতি সহিংসতার বিভিন্ন রূপ",
+                      "কিশোর-কিশোরীদের প্রতি সহিংসতার বিভিন্ন রূপ"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderSimpleList(violenceForms)}
+                    </ul>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "কৈশোরকালীন সহিংসতার কারণ",
+                      "কৈশোরকালীন সহিংসতার কারণ"
+                    )}</h3>
+                    <div class="row g-3">
+                      ${renderCauseCards()}
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="120">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "সহিংসতার প্রভাব",
+                      "সহিংসতার প্রভাব"
+                    )}</h3>
+                    <div class="row g-4">
+                      ${renderImpactCards()}
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="140">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থা",
+                      "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থা"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderSimpleList(preventionSteps)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="160">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "সহায়তা ও সরকারি উদ্যোগ",
+                      "সহায়তা ও সরকারি উদ্যোগ"
+                    )}</h3>
+                    <div class="policy-journey-grid" role="list">
+                      ${renderPrograms()}
+                    </div>
+                  </section>
                 </div>
               `;
             })(),
@@ -7489,17 +7768,2492 @@ const coursesData = [
         id: "ch-14",
         title: yhLang(
           "Module-14: Sex, Gender and Gender Discrimination",
-          "মডিউল-১৪: লিঙ্গ, জেন্ডার ও বৈষম্য"
+          "মডিউল-১৪: কৈশোরকালীন মনোসামাজিক পরিবর্তন ও জটিলতাসমূহ"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch14-lesson-1",
+            title: yhLang(
+              "Adolescent Psychosocial Changes",
+              "কৈশোরকালীন মনোসামাজিক পরিবর্তন"
+            ),
+            icon: "fa-people-roof",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14a",
+                  question: yhLang(
+                    "Which factor strongly influences psychosocial change during adolescence?",
+                    "কৈশোরকালীন মনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?"
+                  ),
+                  options: [
+                    yhLang("পরিবার, বন্ধু ও সামাজিক পরিবেশ", "পরিবার, বন্ধু ও সামাজিক পরিবেশ"),
+                    yhLang("একই রকম অভিজ্ঞতা সবার থাকে", "একই রকম অভিজ্ঞতা সবার থাকে"),
+                    yhLang("শুধু পড়াশোনা", "শুধু পড়াশোনা"),
+                    yhLang("শুধুমাত্র শারীরিক বৃদ্ধি", "শুধুমাত্র শারীরিক বৃদ্ধি"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introPrimary =
+                "কৈশোরকালীন সময়ে কিশোর-কিশোরীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।";
+
+              const introSecondary =
+                "মনোসামাজিক বিকাশকে প্রভাবিত করে জিনগত বৈশিষ্ট্য, মস্তিষ্কের বিকাশ, অভিজ্ঞতা এবং চারপাশের পরিবেশ। এর মাধ্যমে আত্মনির্ভরশীলতা ও প্রাপ্তবয়স্ক বৈশিষ্ট্য ধীরে ধীরে বিকশিত হয়।";
+
+              const socialChanges = [
+                yhLang("Exploring personal identity", "ব্যক্তিগত পরিচয় অনুসন্ধান করা"),
+                yhLang("Developing greater independence", "অধিক স্বাধীনচেতা মনোভাব"),
+                yhLang("Seeking more responsibility", "অধিক দায়িত্ব অন্বেষণ করা"),
+                yhLang("Engaging in risk-taking behavior", "ঝুঁকি-গ্রহণমূলক আচরণ"),
+                yhLang("Navigating relationships", "সম্পর্কজনিত বিষয়"),
+              ];
+
+              const emotionalChanges = [
+                yhLang("Periods of low self-esteem", "নিম্ন আত্মসম্মানবোধ"),
+                yhLang(
+                  "Emotional challenges like anger, anxiety, stress, depression",
+                  "আবেগীয় সমস্যা (অত্যধিক রাগ, নিরাপত্তাহীনতা, উদ্বেগ, চাপ, হতাশা, বিষণ্নতা)"
+                ),
+                yhLang("Withdrawal or isolation", "প্রত্যাহারমূলক মনোভাব"),
+                yhLang("Rebellious or defiant actions", "বিদ্রোহী আচরণ"),
+              ];
+
+              const psychosocialComplexities = [
+                yhLang("Peer pressure", "সহপাঠীর প্রভাব"),
+                yhLang("Interference in studies", "পড়াশোনায় ব্যাঘাত"),
+                yhLang("Communication gaps", "যোগাযোগের অভাব"),
+                yhLang("Difficulty achieving institutional success", "প্রাতিষ্ঠানিক সফলতা অর্জনে জটিলতা"),
+                yhLang("Substance use and addiction", "মাদক গ্রহণ ও অন্যান্য আসক্তি"),
+                yhLang("Struggling with decision-making", "সিদ্ধান্ত গ্রহণে জটিলতা"),
+              ];
+
+              const renderList = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Psychosocial transitions in adolescence",
+                    "কৈশোরকালীন মনোসামাজিক পরিবর্তন"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${introPrimary}</p>
+                    <p class="mb-0">${introSecondary}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <div class="row g-4">
+                      <div class="col-lg-6">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-emerald text-white">
+                              <i class="fa-solid fa-people-group"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "সামাজিক পরিবর্তন",
+                                "সামাজিক পরিবর্তন"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "Social adjustments",
+                                "সামাজিক পরিবর্তনসমূহ"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(socialChanges)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-6">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-rose text-white">
+                              <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "আবেগজনিত পরিবর্তন",
+                                "আবেগজনিত পরিবর্তন"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "Emotional shifts",
+                                "আবেগজনিত/আবেগীয় পরিবর্তনসমূহ"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(emotionalChanges, 90)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "কৈশোরকালীন মনোসামাজিক জটিলতাসমূহ",
+                      "কৈশোরকালীন মনোসামাজিক জটিলতাসমূহ"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(psychosocialComplexities)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-2",
+            title: yhLang(
+              "Understanding Emotions",
+              "আবেগ (Emotion)"
+            ),
+            icon: "fa-face-smile",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14b",
+                  question: yhLang(
+                    "Why is emotion management important in daily life?",
+                    "দৈনন্দিন জীবনে আবেগ ব্যবস্থাপনা কেন জরুরি?"
+                  ),
+                  options: [
+                    yhLang("এটা আত্মনিয়ন্ত্রণ ও সঠিক প্রতিক্রিয়ায় সহায়তা করে", "এটা আত্মনিয়ন্ত্রণ ও সঠিক প্রতিক্রিয়ায় সহায়তা করে"),
+                    yhLang("কারণ আবেগ নিয়ে ভাবার দরকার নেই", "কারণ আবেগ নিয়ে ভাবার দরকার নেই"),
+                    yhLang("এটা শুধুই শারীরিক শক্তি বাড়ায়", "এটা শুধুই শারীরিক শক্তি বাড়ায়"),
+                    yhLang("সব আবেগ একই রকম", "সব আবেগ একই রকম"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const emotionDefinition =
+                "আবেগ হলো এক ধরনের মানসিক অবস্থা যা চিন্তন, অনুভূতি, আচরণগত প্রতিক্রিয়া এবং আনন্দ-বেদনার মাত্রার সাথে সম্পর্কিত। এর ফলে আমাদের শারীরিক, আচরণগত ও চিন্তার পরিবর্তন ঘটে।";
+
+              const emotionContext =
+                "আবেগ হলো অভ্যন্তরীণ এবং বাহ্যিক ঘটনার প্রতি শরীর ও আচরণের প্রতিক্রিয়া (রহমান, জ. ১৯৯৮)। ব্যক্তি থেকে ব্যক্তিতে আবেগের বহিঃপ্রকাশ ভিন্ন হয়। আবেগ ব্যবস্থাপনার অভাবে নানা পরিস্থিতিতে গোলযোগ দেখা দিতে পারে, তবে যথাযথ কৌশল শিখলে তা নিয়ন্ত্রণ করা সম্ভব।";
+
+              const managementIntro =
+                "দৈনন্দিন জীবনের নেতিবাচক অভিজ্ঞতা আমাদের আবেগকে সহজেই বিপর্যস্ত করে, ফলে কী করতে হবে তা নিয়ে অনিশ্চয়তা তৈরি হয়।";
+
+              const managementDetails =
+                "সুশৃঙ্খল আবেগ ব্যবস্থাপনা ব্যক্তিকে আত্মনিয়ন্ত্রণে সহায়তা করে, নেতিবাচক পরিস্থিতিতে সঠিক প্রতিক্রিয়া বেছে নিতে শেখায় এবং ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করার শক্তি দেয়। এতে আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বৃদ্ধি পায়।";
+
+              const basicEmotions = [
+                yhLang("Joy", "সুখ"),
+                yhLang("Sadness", "দুঃখ"),
+                yhLang("Anger", "রাগ"),
+                yhLang("Fear", "ভয়"),
+              ];
+
+              const managementBenefits = [
+                "আত্মনিয়ন্ত্রণে সহায়তা করে এবং নেতিবাচক পরিস্থিতি সামলানো সহজ হয়।",
+                "পরিস্থিতি অনুযায়ী কীভাবে প্রতিক্রিয়া দিতে হবে তা বুঝতে সাহায্য করে।",
+                "ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করতে উৎসাহিত করে।",
+                "আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বাড়ায়।",
+              ];
+
+              const renderList = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Emotion essentials",
+                    "আবেগ (Emotion)"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${emotionDefinition}</p>
+                    <p class="mb-0">${emotionContext}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-6">
+                        <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                          "মৌলিক আবেগ",
+                          "মৌলিক আবেগ"
+                        )}</h3>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(basicEmotions)}
+                        </ul>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                        <article class="glass-card p-4 shadow-sm h-100">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-indigo text-white">
+                              <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "আবেগের বৈশিষ্ট্য",
+                                "আবেগের বৈশিষ্ট্য"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "ব্যক্তিভেদে ভিন্ন",
+                                "ব্যক্তিভেদে ভিন্ন"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <p class="mb-0">${yhLang(
+                            "প্রতিটি ব্যক্তি ভিন্নভাবে আবেগ প্রকাশ করে এবং সঠিক কৌশল ছাড়া সহজেই আবেগীয় গোলযোগ দেখা দেয়।",
+                            "প্রতিটি ব্যক্তি ভিন্নভাবে আবেগ প্রকাশ করে এবং সঠিক কৌশল ছাড়া সহজেই আবেগীয় গোলযোগ দেখা দেয়।"
+                          )}</p>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "কেন আবেগ ব্যবস্থাপনা জরুরি",
+                      "কেন আবেগ ব্যবস্থাপনা জরুরি"
+                    )}</h3>
+                    <p class="mb-3">${managementIntro}</p>
+                    <p class="mb-4">${managementDetails}</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(managementBenefits)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-3",
+            title: yhLang(
+              "Understanding Anxiety",
+              "উদ্বেগ (Anxiety)"
+            ),
+            icon: "fa-face-frown",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14c",
+                  question: yhLang(
+                    "Why should adolescents address anxiety early?",
+                    "উদ্বেগ দ্রুত নিয়ন্ত্রণ করা কেন জরুরি?"
+                  ),
+                  options: [
+                    yhLang("এটি স্বাভাবিক জীবনযাত্রা ব্যাহত হওয়া থেকে রক্ষা করে", "এটি স্বাভাবিক জীবনযাত্রা ব্যাহত হওয়া থেকে রক্ষা করে"),
+                    yhLang("উদ্বেগ সবসময় উপেক্ষা করা উচিত", "উদ্বেগ সবসময় উপেক্ষা করা উচিত"),
+                    yhLang("উদ্বেগ বাড়ালে মনোযোগ বাড়ে", "উদ্বেগ বাড়ালে মনোযোগ বাড়ে"),
+                    yhLang("উদ্বেগ কেবল শারীরিক সমস্যা", "উদ্বেগ কেবল শারীরিক সমস্যা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const anxietyDefinition =
+                "“উদ্বেগ হলো এক ধরনের আবেগ, যাকে তীব্র অনুভূতি, দুশ্চিন্তা এবং রক্তচাপ বৃদ্ধি করার মতো শারীরিক পরিবর্তনগুলো দ্বারা চিহ্নিত করা হয়।”";
+
+              const anxietyContext =
+                "স্বাভাবিক মাত্রায় উদ্বেগ ব্যক্তিকে সতর্ক করে ও বিপদ মোকাবিলায় প্রস্তুত করে। তবে মাত্রাতিরিক্ত উদ্বেগ স্বাভাবিক জীবনধারা ব্যাহত করে ও মানসিক অবস্থাকে ঝুঁকিতে ফেলে।";
+
+              const anxietySignificance =
+                "বহু আবেগের মধ্যে উদ্বেগ একটি উল্লেখযোগ্য আবেগ যা সময়মতো নিয়ন্ত্রণ না করলে দীর্ঘমেয়াদি জটিলতা তৈরি করতে পারে।";
+
+              const mentalSymptoms = [
+                "অত্যধিক রাগ",
+                "বিরক্ত বোধ",
+                "মনোযোগের অসুবিধা",
+                "অস্থিরতা",
+                "যেকোনো পরিস্থিতি খুব বিপজ্জনক মনে করা",
+                "খারাপ কিছু ঘটবে বলে আশঙ্কা",
+                "নেতিবাচক চিন্তা",
+              ];
+
+              const physicalSymptoms = [
+                "হৃদস্পন্দন বেড়ে যাওয়া",
+                "রক্তচাপ বেড়ে যাওয়া",
+                "বমি বমি ভাব",
+                "ঘাম হওয়া",
+                "মুখ শুকিয়ে যাওয়া",
+                "ডায়রিয়া",
+                "পেট ব্যথা, মাথা ব্যথা",
+                "শ্বাসকষ্ট",
+                "ঘুম না হওয়া বা ঘুমের পরিমাণ বেড়ে যাওয়া",
+              ];
+
+              const behavioralSymptoms = [
+                "পরিস্থিতি এড়িয়ে চলা",
+                "খাবারে অরুচি বা অত্যধিক খাবার গ্রহণ",
+                "অলসতা বা অনীহা",
+                "মাদক দ্রব্য গ্রহণ/মদ্যপান",
+                "প্রত্যাহারমূলক আচরণ",
+              ];
+
+              const anxietyCauses = [
+                "চাহিদা ও যোগানের মধ্যে পার্থক্য থাকা",
+                "অবাস্তব প্রত্যাশা",
+                "আত্মনিয়ন্ত্রণের অভাব",
+                "প্রত্যাখ্যাত ও বিচ্ছিন্ন হওয়ার ভয়",
+                "তুলনা করা",
+                "কর্মক্ষেত্র ও স্কুলের কাজের চাপ",
+                "ব্যক্তিগত ও পারিবারিক সম্পর্কের অবনতি",
+                "অর্থনৈতিক সমস্যা",
+                "অসুস্থতা",
+                "নেতিবাচক অভিজ্ঞতা ইত্যাদি",
+              ];
+
+              const emotionalIntelligenceIntro =
+                "আবেগীয় বুদ্ধিমত্তা (Emotional Intelligence) হলো নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা।";
+
+              const emotionalIntelligencePoints = [
+                "নিজের আবেগগুলো চিহ্নিত করতে পারা এবং তাদের কারণগুলো বুঝতে পারা",
+                "আবেগগুলো যেন কোনো নেতিবাচক প্রভাব না ফেলে, সে জন্য নিজেকে নিয়ন্ত্রণ করতে পারা",
+                "অন্যদের আবেগগুলো বুঝতে পারা এবং তাদের সাথে সংবেদনশীলভাবে আচরণ করা",
+                "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা",
+              ];
+
+              const renderList = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 18}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderSymptomList = (items) =>
+                `<ul class="list-unstyled puberty-list mb-0">${items
+                  .map(
+                    (item, idx) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("")}</ul>`;
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Anxiety overview",
+                    "উদ্বেগ (Anxiety)"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${anxietyDefinition}</p>
+                    <p class="mb-2">${anxietyContext}</p>
+                    <p class="mb-0">${anxietySignificance}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-7">
+                        <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                          "উদ্বেগের লক্ষণ ও উপসর্গ",
+                          "উদ্বেগের লক্ষণ ও উপসর্গ"
+                        )}</h3>
+                        <div class="table-responsive">
+                          <table class="table table-modern align-middle">
+                            <thead>
+                              <tr>
+                                <th>${yhLang("মানসিক লক্ষণ", "মানসিক লক্ষণ")}</th>
+                                <th>${yhLang("শারীরিক লক্ষণ", "শারীরিক লক্ষণ")}</th>
+                                <th>${yhLang("আচরণগত লক্ষণ", "আচরণগত লক্ষণ")}</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>${renderSymptomList(mentalSymptoms)}</td>
+                                <td>${renderSymptomList(physicalSymptoms)}</td>
+                                <td>${renderSymptomList(behavioralSymptoms)}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                            "উদ্বেগের কারণ",
+                            "উদ্বেগের কারণ"
+                          )}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(anxietyCauses, 90)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="120">
+                    <h3 class="gradient-text h5 mb-3">${yhLang(
+                      "আবেগীয় বুদ্ধিমত্তা",
+                      "আবেগীয় বুদ্ধিমত্তা"
+                    )}</h3>
+                    <p class="mb-3">${emotionalIntelligenceIntro}</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(emotionalIntelligencePoints, 100)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-4",
+            title: yhLang(
+              "মানসিক চাপ (Stress)",
+              "মানসিক চাপ (Stress)"
+            ),
+            icon: "fa-children",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14d",
+                  question: yhLang(
+                    "What triggers stress according to the lesson?",
+                    "এই পাঠ অনুযায়ী মানসিক চাপ কীভাবে সৃষ্টি হয়?"
+                  ),
+                  options: [
+                    yhLang("চাহিদা ও সক্ষমতার মধ্যে দ্বন্দ্ব", "চাহিদা ও সক্ষমতার মধ্যে দ্বন্দ্ব"),
+                    yhLang("সম্পূর্ণ বিশ্রামের ফলে", "সম্পূর্ণ বিশ্রামের ফলে"),
+                    yhLang("কোনো কাজ না থাকলে", "কোনো কাজ না থাকলে"),
+                    yhLang("অন্যের সাফল্যে আনন্দ পেলে", "অন্যের সাফল্যে আনন্দ পেলে"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const stressDefinition =
+                "ব্যক্তির চাহিদা এবং ক্ষমতার মধ্যে দ্বন্দ্ব তৈরি হলে যে অভ্যন্তরীণ চাপ সৃষ্টি হয় সেটাই মানসিক চাপ বা স্ট্রেস।";
+
+              const stressExplanation =
+                "যে কাজটি আমরা পরিবেশ বা পরিস্থিতির কারণে প্রত্যাশিতভাবে করতে পারি না, তখন উদ্বেগ, দুশ্চিন্তা ও চাপ বাড়ে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত হয়।";
+
+              const physicalChanges = [
+                "বুক ধড়ফড় করা",
+                "রক্তচাপ বেড়ে যাওয়া",
+                "ইনসমনিয়া (অনিদ্রা)",
+                "মাথাব্যথা",
+                "বুকে ব্যথা",
+                "শ্বাসকষ্ট",
+                "বমি বমি ভাব",
+                "ডায়রিয়া",
+                "পেট ব্যথা",
+                "ঘাম হওয়া",
+              ];
+
+              const emotionalChanges = [
+                "বিরক্ত বোধ",
+                "অত্যধিক রাগ",
+                "বিষণ্নতা",
+                "উত্তেজনা",
+                "হতাশা",
+                "কষ্ট",
+                "আত্মবিশ্বাসের অভাব",
+                "অপরাধবোধ",
+                "অস্থিরতা",
+              ];
+
+              const behavioralChanges = [
+                "ঘুম না হওয়া",
+                "মাদক দ্রব্য গ্রহণ / মদ্যপান",
+                "অমনোযোগীতা",
+                "অলসতা বা অনীহা",
+                "অকারণে হাঁটাহাঁটি করা",
+                "চিৎকার-চেঁচামেচি করা",
+                "কান্নাকাটি করা",
+                "ভুলে যাওয়া",
+                "দোষারোপ করা",
+                "খাবারে অরুচি বা অত্যধিক খাবার গ্রহণ",
+              ];
+
+              const anxietyCauses = [
+                "চাহিদা ও যোগানের মধ্যে পার্থক্য থাকা",
+                "অবাস্তব প্রত্যাশা",
+                "আত্মনিয়ন্ত্রণের অভাব",
+                "প্রত্যাখ্যাত ও বিচ্ছিন্ন হওয়ার ভয়",
+                "তুলনা করা",
+                "কর্মক্ষেত্র ও স্কুলের কাজের চাপ",
+                "ব্যক্তিগত ও পারিবারিক সম্পর্কের অবনতি",
+                "অর্থনৈতিক সমস্যা",
+                "অসুস্থতা",
+                "নেতিবাচক অভিজ্ঞতা ইত্যাদি",
+              ];
+
+              const renderList = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 18}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderSymptomList = (items) =>
+                `<ul class="list-unstyled puberty-list mb-0">${items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("")}</ul>`;
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Drivers of early marriage",
+                    "বাল্যবিবাহের কারণ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${stressDefinition}</p>
+                    <p class="mb-0">${stressExplanation}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-7">
+                        <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                          "মানসিক চাপের ফলে সৃষ্ট পরিবর্তনসমূহ",
+                          "মানসিক চাপের ফলে সৃষ্ট পরিবর্তনসমূহ"
+                        )}</h3>
+                        <div class="table-responsive">
+                          <table class="table table-modern align-middle">
+                            <thead>
+                              <tr>
+                                <th>${yhLang("শারীরিক পরিবর্তনসমূহ", "শারীরিক পরিবর্তনসমূহ")}</th>
+                                <th>${yhLang("আবেগীয় পরিবর্তনসমূহ", "আবেগীয় পরিবর্তনসমূহ")}</th>
+                                <th>${yhLang("আচরণগত পরিবর্তনসমূহ", "আচরণগত পরিবর্তনসমূহ")}</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>${renderSymptomList(physicalChanges)}</td>
+                                <td>${renderSymptomList(emotionalChanges)}</td>
+                                <td>${renderSymptomList(behavioralChanges)}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                            "উদ্বেগের কারণ",
+                            "উদ্বেগের কারণ"
+                          )}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(anxietyCauses, 90)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-5",
+            title: yhLang(
+              "Causes of Stress",
+              "মানসিক চাপের কারণসমূহ"
+            ),
+            icon: "fa-head-side-virus",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14e",
+                  question: yhLang(
+                    "Which environmental issue does the lesson highlight as a stressor?",
+                    "নিম্নের কোন পরিবেশগত বিষয়টি মানসিক চাপ সৃষ্টিকারী হিসেবে উল্লেখ করা হয়েছে?"
+                  ),
+                  options: [
+                    yhLang("শব্দদূষণ ও যানজট", "শব্দদূষণ ও যানজট"),
+                    yhLang("শান্ত ও নিরিবিলি বন", "শান্ত ও নিরিবিলি বন"),
+                    yhLang("সমুদ্র তীরে ছুটি", "সমুদ্র তীরে ছুটি"),
+                    yhLang("গভীর ঘুম", "গভীর ঘুম"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const stressIntro =
+                "দৈনন্দিন জীবনের নানা ক্ষেত্র যেমন পরিবার, শিক্ষা, কর্মজীবন, বেকারত্ব ও পারিপার্শ্বিক পরিবেশের সংঘাত আমাদের প্রত্যাশা ও সক্ষমতার মধ্যে দ্বন্দ্ব তৈরি করে, যা মানসিক চাপকে বাড়িয়ে তোলে।";
+
+              const stressCauses = [
+                {
+                  title: "কলহ",
+                  description:
+                    "পারিবারিক, সামাজিক, রাজনৈতিক, ধর্মীয়, জাতিগত, প্রথাগত ইত্যাদি ক্ষেত্রে সৃষ্ট কলহ আমাদের মধ্যে মানসিক চাপ সৃষ্টি করে।",
+                  icon: "fa-people-arrows",
+                },
+                {
+                  title: "শিক্ষা",
+                  description:
+                    "শিক্ষাক্ষেত্রে অতিরিক্ত প্রতিযোগিতামূলক মনোভাব, কাঙ্ক্ষিত ফলাফল অর্জন করতে না পারা, শিক্ষাবান্ধব পরিবেশের অভাব, আর্থিক অস্বচ্ছলতা, সঠিক দিকনির্দেশনার অভাব এবং সহপাঠীদের সাথে তুলনা শিক্ষার্থীদের মধ্যে মানসিক চাপ সৃষ্টি করে।",
+                  icon: "fa-graduation-cap",
+                },
+                {
+                  title: "কর্মক্ষেত্র",
+                  description:
+                    "কর্মক্ষেত্রে কাজের চাপ থাকা স্বাভাবিক; কিন্তু অতিরিক্ত কাজের চাপ কর্মীদের মধ্যে মানসিক চাপ সৃষ্টি করে, যা কাজের গুণগত মান, উৎপাদনশীলতা, কাজের প্রতি আগ্রহ ও আত্মবিশ্বাস কমিয়ে দেয়।",
+                  icon: "fa-briefcase",
+                },
+                {
+                  title: "বেকারত্ব",
+                  description:
+                    "যখন কোনো ব্যক্তি তার প্রত্যাশা অনুযায়ী কাজের সুযোগ না পায় কিংবা যোগ্যতার অভাবে কাজে অন্তর্ভুক্ত হতে না পারে, তখন সে মানসিক চাপ অনুভব করে।",
+                  icon: "fa-user-clock",
+                },
+                {
+                  title: "পারিপার্শ্বিক",
+                  description:
+                    "পারিপার্শ্বিক পরিবেশ যেমন শব্দদূষণ, বায়ুদূষণ, পানিদূষণ, যানজট, তীব্র আলো, কক্ষে অপর্যাপ্ত বায়ুচলাচল ও অপরিচ্ছন্ন পরিবেশ মানসিক চাপ সৃষ্টি করে।",
+                  icon: "fa-city",
+                },
+              ];
+
+              const managementTips = [
+                "বাইরে হাঁটতে যাওয়া",
+                "বিশ্বস্ত বন্ধু এবং পরিবারের সদস্যদের সাথে সুন্দর সময় অতিবাহিত করা",
+                "বিশ্বস্ত কারো সাথে মনের কথা শেয়ার করা",
+                "পছন্দের বই পড়া, গান শোনা",
+                "ডায়েরি লেখা",
+                "ব্যায়াম করা",
+                "আয়নায় নিজেকে দেখা",
+                "হাত-মুখ ধোয়া বা গোসল করা",
+                "প্রার্থনা করা",
+                "পর্যাপ্ত পরিমাণে ঘুমানো",
+                "প্রাকৃতিক পরিবেশে সময় অতিবাহিত করা",
+                "নাক দিয়ে গভীর নিঃশ্বাস নিয়ে মুখ দিয়ে প্রশ্বাস ছাড়া",
+              ];
+
+              const renderCauses = (items) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <div class="cause-item" data-aos="fade-left" data-aos-delay="${80 +
+                        idx * 20}">
+                        <div class="d-flex align-items-start gap-3">
+                          <div class="icon-circle bg-gradient-rose text-white">
+                            <i class="fa-solid ${item.icon}"></i>
+                          </div>
+                          <div>
+                            <h4 class="h6 mb-2">${item.title}</h4>
+                            <p class="mb-0">${item.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              const renderTips = (items) =>
+                items
+                  .map(
+                    (tip, idx) => `
+                      <li>
+                        <span class="fw-semibold me-2">${idx + 1}.</span>
+                        <span>${tip}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Key drivers of stress",
+                    "মানসিক চাপের কারণসমূহ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${stressIntro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <div class="row g-4 align-items-stretch">
+                      <div class="col-lg-12 d-flex flex-column gap-4">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-emerald text-white">
+                              <i class="fa-solid fa-exclamation"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "প্রধান কারণ",
+                                "প্রধান কারণ"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "Stress triggers",
+                                "মানসিক চাপের উৎস"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column gap-4">
+                            ${renderCauses(stressCauses)}
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                     <div class="row">
+                          <article class=" col-lg-7 glass-card p-4 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-sunrise text-white">
+                              <i class="fa-solid fa-seedling"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "উপায়",
+                                "উপায়"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "মানসিক চাপ ব্যবস্থাপনার জন্য প্রয়োজনীয় কিছু উপায়",
+                                "মানসিক চাপ ব্যবস্থাপনার জন্য প্রয়োজনীয় কিছু উপায়"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderTips(managementTips)}
+                          </ul>
+                        </article>
+                        <div class="col-lg-5" data-aos="fade-left" data-aos-delay="120">
+                          <figure class="glass-card p-3 h-100 shadow-sm text-center">
+                            <img src="img/modu14/mental.jpg" alt="Stress reflection" class="img-fluid rounded-4 mb-3">
+                            <figcaption class="small text-muted">${yhLang(
+                              "মানসিক প্রশান্তির জন্য একটু বিরতি",
+                              "মানসিক প্রশান্তির জন্য একটু বিরতি"
+                            )}</figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-6",
+            title: yhLang("Understanding Anger", "রাগ (Anger)"),
+            icon: "fa-face-angry",
+            gradientClass: "bg-gradient-amber",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14f",
+                  question: yhLang(
+                    "Which type of anger signal includes rapid heartbeat and muscle tension?",
+                    "কোন ধরনের রাগের সংকেতে দ্রুত হৃদস্পন্দন ও মাংসপেশির টান দেখা যায়?"
+                  ),
+                  options: [
+                    yhLang("শারীরিক সংকেত", "শারীরিক সংকেত"),
+                    yhLang("আবেগীয় সংকেত", "আবেগীয় সংকেত"),
+                    yhLang("চিন্তামূলক সংকেত", "চিন্তামূলক সংকেত"),
+                    yhLang("আচরণমূলক সংকেত", "আচরণমূলক সংকেত"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const angerIntro =
+                "রাগ হলো এক ধরনের মৌলিক অনুভূতি যার উৎপত্তি ঘটে কষ্ট, হতাশা, বিরক্তি, আশাহত হওয়া ইত্যাদি থেকে। সামান্য শব্দ থেকে ধ্বংসাত্মক আচরণ পর্যন্ত নানা উপায়ে রাগ প্রকাশ পেতে পারে। রাগ আমাদের স্বাভাবিক আবেগ এবং সঠিকভাবে ব্যবস্থাপনা করলে তা ক্ষতিকর নয়।";
+
+              const preSignalIntro =
+                "রাগের পূর্ব সংকেত হলো এমন সতর্কতামূলক ইঙ্গিত যা আমাদের বুঝতে সাহায্য করে একজন মানুষ কখন রেগে যাচ্ছে। এগুলো সম্পর্কে সচেতন থাকলে রাগ নিয়ন্ত্রণ করা সহজ হয় এবং অনেক ক্ষতি এড়ানো যায়।";
+
+              const physicalSignals = [
+                "হৃৎস্পন্দন বেড়ে যাওয়া",
+                "বুকে চাপ অনুভব করা",
+                "মাথা ব্যথা হওয়া",
+                "বেশি বেশি চোখের পলক পড়া",
+                "মাংসপেশিতে টান টান ভাব",
+                "ঘাম হওয়া",
+                "শ্বাসকষ্ট হওয়া",
+                "শরীর কাঁপা",
+              ];
+
+              const emotionalSignals = [
+                "বিরক্তিবোধ",
+                "হতাশা",
+                "বিষণ্নতা",
+                "হিংসা",
+                "নিরাপত্তাহীনতা",
+                "অগ্রহণযোগ্যতা",
+                "মানসিক অবসাদ",
+                "ভয় পাওয়া",
+                "অসম্মানবোধ",
+                "অপরাধবোধ",
+                "লজ্জাবোধ",
+                "ভবিষ্যতের জন্য দুশ্চিন্তা",
+              ];
+
+              const cognitiveSignals = [
+                "নিজের সাথে অতিরিক্ত নেতিবাচক কথা বলা",
+                "আক্রমণাত্মক মনোভাব",
+                "প্রতিশোধপরায়ণতা",
+              ];
+
+              const behavioralSignals = [
+                "খুব দ্রুত কথা বলা",
+                "উচ্চ স্বরে কথা বলা",
+                "চিৎকার করা",
+                "জোরে দরজায় আঘাত করা",
+                "ভাঙচুর করা",
+                "মারামারি করা",
+                "পরিস্থিতি এড়িয়ে যাওয়া",
+                "নীরব থাকা বা চুপ করে থাকা",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderColumn = (title, items, delay = 80) => `
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="${delay}">
+                  <article class="glass-card p-4 h-100 shadow-sm">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <div class="icon-circle bg-gradient-rose text-white">
+                        <i class="fa-solid fa-bolt"></i>
+                      </div>
+                      <div>
+                        <p class="text-uppercase text-muted small mb-1">${yhLang(
+                          "রাগের পূর্ব সংকেত",
+                          "রাগের পূর্ব সংকেত"
+                        )}</p>
+                        <h3 class="h6 gradient-text mb-0">${title}</h3>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(items)}
+                    </ul>
+                  </article>
+                </div>
+              `;
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding anger signals",
+                    "রাগ (Anger)"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${angerIntro}</p>
+                    <p class="mb-0">${preSignalIntro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "রাগের পূর্ব সংকেতসমূহ",
+                      "রাগের পূর্ব সংকেতসমূহ"
+                    )}</h3>
+                    <div class="row g-4 align-items-stretch">
+                      ${renderColumn("শারীরিক সংকেত", physicalSignals, 80)}
+                      ${renderColumn("আবেগীয় সংকেত", emotionalSignals, 100)}
+                      ${renderColumn("চিন্তামূলক সংকেত", cognitiveSignals, 120)}
+                      ${renderColumn("আচরণমূলক সংকেত", behavioralSignals, 140)}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-7",
+            title: yhLang(
+              "Why We Get Angry Easily",
+              "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই"
+            ),
+            icon: "fa-burst",
+            gradientClass: "bg-gradient-crimson",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14g",
+                  question: yhLang(
+                    "Which situation from the lesson can quickly trigger anger?",
+                    "পাঠ অনুযায়ী কোন পরিস্থিতি আমাদের খুব সহজেই রাগান্বিত করতে পারে?"
+                  ),
+                  options: [
+                    yhLang("সামাজিক সমর্থনের অভাব", "সামাজিক সমর্থনের অভাব"),
+                    yhLang("শান্ত ধ্যানের সময়", "শান্ত ধ্যানের সময়"),
+                    yhLang("ছুটির দিনে পর্যাপ্ত বিশ্রাম", "ছুটির দিনে পর্যাপ্ত বিশ্রাম"),
+                    yhLang("প্রিয় খাবার খাওয়া", "প্রিয় খাবার খাওয়া"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const angerContext =
+                "চ্যালেঞ্জিং আচরণ, সামাজিক সমর্থনের অভাব, আবেগীয় বিশৃঙ্খলা, মানসিক আঘাত, মানসিক চাপ কিংবা অপমানকর আচরণ আমাদের খুব সহজেই রাগান্বিত করে। লক্ষ্য পূরণে বাধা, অসম্মান বা অধিকার খর্ব হলে রাগের মাত্রা আরও বেড়ে যায়।";
+
+              const angerTriggers = [
+                "চ্যালেঞ্জিং আচরণ বা নেতিবাচক আচরণের ফলে",
+                "সামাজিক সমর্থনের অভাব",
+                "আবেগীয় বিশৃঙ্খলা — বিষণ্ণতা, উদ্বেগ ইত্যাদি",
+                "মানসিক আঘাতজনিত ঘটনা",
+                "মানসিক চাপ",
+                "আঘাত/অপমান করে কথা বললে",
+                "হুমকির সম্মুখীন হলে",
+                "নিজের লক্ষ্যে পৌঁছাতে বাধাগ্রস্ত হয়ে হতাশ হওয়ার ফলে",
+                "অসম্মানিত হওয়ার ফলে",
+                "অধিকার খর্ব হলে",
+              ];
+
+              const angerDamages = [
+                "শারীরিক ক্ষতি",
+                "মানসিক ক্ষতি",
+                "পেশাগত ক্ষতি",
+                "পড়ালেখার ক্ষতি",
+                "সম্পর্কের ক্ষতি",
+                "বিষণ্নতায় ভোগা",
+                "ভবিষ্যৎ নিয়ে দুশ্চিন্তা করা",
+                "ঘুমের সমস্যা",
+                "নেশায় জড়িয়ে পড়া",
+                "একই কাজ বারবার করার প্রবণতা",
+                "আত্ম-ক্ষতি বা নিজের ক্ষতি করা",
+                "রক্তচাপ বেড়ে যাওয়া",
+              ];
+
+              const reflectionText =
+                "অপ্রত্যাশিত ঘটনা ঘটলে অসংখ্য নেতিবাচক চিন্তা মাথায় আসে এবং রাগ দ্রুত বেড়ে যায়। এই রাগ বিভিন্ন আচরণের মাধ্যমে প্রকাশ পায় এবং শারীরিক, মানসিক ও আচরণগত সংকেত দিয়ে বোঝা যায়। সময়মতো রাগকে সঠিক উপায়ে প্রকাশ, নিজের অধিকারের কথা বলা এবং স্বাস্থ্যকর কৌশল গ্রহণ করলে এর ক্ষতি কমানো সম্ভব।";
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Anger triggers and impacts",
+                    "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${angerContext}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <div class="row g-4">
+                      <div class="col-lg-6">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-rose text-white">
+                              <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "রাগের কারণ",
+                                "রাগের কারণ"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "সহজে রেগে যাওয়ার কারণ",
+                                "সহজে রেগে যাওয়ার কারণ"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(angerTriggers)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-indigo text-white">
+                              <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "রাগের ক্ষতি",
+                                "রাগের ক্ষতি"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "রাগের ফলে ক্ষয়ক্ষতি",
+                                "রাগের ফলে ক্ষয়ক্ষতি"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(angerDamages)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="110">
+                    <p class="mb-0">${reflectionText}</p>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-8",
+            title: yhLang(
+              "Anger Management Techniques",
+              "রাগ ব্যবস্থাপনার কৌশল"
+            ),
+            icon: "fa-hand-holding-heart",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14h",
+                  question: yhLang(
+                    "Which strategy involves pausing before reacting?",
+                    "কোন কৌশলটি প্রতিক্রিয়া প্রকাশের আগে একটু সময় নেওয়ার উপর গুরুত্ব দেয়?"
+                  ),
+                  options: [
+                    yhLang("প্রতিক্রিয়ার আগে বিরতি", "প্রতিক্রিয়ার আগে বিরতি"),
+                    yhLang("পর্যাপ্ত ঘুম", "পর্যাপ্ত ঘুম"),
+                    yhLang("নিয়মিত ব্যায়াম", "নিয়মিত ব্যায়াম"),
+                    yhLang("মনোচিকিৎসকের কাছে যাওয়া", "মনোচিকিৎসকের কাছে যাওয়া"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "রাগকে নিয়ন্ত্রণে রাখতে সচেতন বিরতি, শ্বাস-প্রশ্বাস, শারীরিক ব্যায়াম ও পেশাদার সহায়তার মতো কৌশল কার্যকর ভূমিকা পালন করে। ছোট ছোট ব্যবস্থাপনা কৌশল রাগের নেতিবাচক প্রভাব কমিয়ে আনে।";
+
+              const strategies = [
+                "প্রতিক্রিয়া প্রকাশের আগে কিছুটা সময় নেওয়া",
+                "১–১০ পর্যন্ত ধীরে ধীরে গুণতে থাকা",
+                "সততার সাথে যুক্তিসঙ্গত কথা বলা",
+                "পর্যাপ্ত ঘুম",
+                "ডায়েরি লেখা",
+                "নিয়মিত শরীরচর্চা বা ব্যায়াম করা",
+                "নিয়মিত নিঃশ্বাসের ব্যায়াম করা",
+                "পরিস্থিতি থেকে নিজেকে সরিয়ে নেওয়া",
+                "মনোচিকিৎসকের শরণাপন্ন হওয়া",
+              ];
+
+              const professionalNote =
+                "কিছু কিছু রাগ সম্পর্কিত সমস্যাগুলি নিজে নিজে ব্যবস্থাপনা সম্ভব হয় না। এমন ক্ষেত্রে পেশাদার মনোচিকিৎসকের সহায়তা নিলে উন্নত ফল পাওয়া যায় এবং নিরাপদে রাগ নিয়ন্ত্রণ সম্ভব হয়।";
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Practical anger strategies",
+                    "রাগ ব্যবস্থাপনার কৌশল"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <div class="row g-4 align-items-stretch">
+                      <div class="col-lg-7">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-emerald text-white">
+                              <i class="fa-solid fa-hands-praying"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "কৌশল",
+                                "কৌশল"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "রাগ নিয়ন্ত্রণের ব্যবহারিক পদ্ধতি",
+                                "রাগ নিয়ন্ত্রণের ব্যবহারিক পদ্ধতি"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(strategies)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+                        <article class="glass-card p-4 h-100 shadow-sm text-center d-flex flex-column justify-content-center">
+                          <div class="icon-circle bg-gradient-sunrise text-white mb-3 mx-auto">
+                            <i class="fa-solid fa-user-md"></i>
+                          </div>
+                          <p class="mb-0">${professionalNote}</p>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-9",
+            title: yhLang("Understanding Exam Anxiety", "পরীক্ষা-ভীতি"),
+            icon: "fa-book-open-reader",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14i",
+                  question: yhLang(
+                    "Which of the following is a common symptom of exam fear?",
+                    "নিম্নের কোনটি পরীক্ষা-ভীতির সাধারণ উপসর্গ?"
+                  ),
+                  options: [
+                    yhLang("বুক ধড়ফড় করা", "বুক ধড়ফড় করা"),
+                    yhLang("অতিরিক্ত ঘুম", "অতিরিক্ত ঘুম"),
+                    yhLang("পরীক্ষার কথা ভুলে যাওয়া", "পরীক্ষার কথা ভুলে যাওয়া"),
+                    yhLang("অনিয়ন্ত্রিত হাসি", "অনিয়ন্ত্রিত হাসি"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const examFearIntro =
+                "পরীক্ষাকে ঘিরে স্বাভাবিক এক ধরনের উদ্বেগ শিক্ষার্থীদের প্রস্তুতিতে সহায়তা করে, তবে অতিরিক্ত ভয় পরীক্ষার প্রস্তুতি ও কাঙ্ক্ষিত ফল অর্জনে বড় বাধা হয়ে দাঁড়ায়। অতিরিক্ত পরীক্ষাভীতি শারীরিক ও মানসিক নানা উপসর্গের মাধ্যমে প্রকাশ পায়।";
+
+              const examFearDetails =
+                "পরীক্ষার কথা শুনলেই বুক ধড়ফড় করা, ঘাম হওয়া, হাত-পা ঠান্ডা হয়ে যাওয়া, বমি বমি লাগার মতো লক্ষণ দেখা যেতে পারে। আগে থেকেই পরিকল্পিত প্রস্তুতি, সময় ব্যবস্থাপনা ও ভীতি দূরীকরণ কৌশল অনুশীলনের মাধ্যমে এই ভয়কে নিয়ন্ত্রণ করা সম্ভব।";
+
+              const physicalSymptoms = [
+                "বমি বমি ভাব হওয়া, কোনো কোনো ক্ষেত্রে বমি হয়ে যাওয়া",
+                "খাওয়া-দাওয়া করতে না পারা",
+                "বুক ধড়ফড় করা",
+                "মাথাব্যথা করা, মাথা ভার ভার লাগা, মাথা ঘোরা",
+                "চোখে ঝাপসা দেখা",
+                "ঘুম না আসা",
+                "বাস্তবের সাথে সামঞ্জস্যহীনতা",
+                "হঠাৎ করে হাত-পা প্রচণ্ড ঠান্ডা হয়ে আসা",
+                "ঘনঘন পাতলা পায়খানা হওয়া",
+                "মূর্ছা যাওয়া",
+              ];
+
+              const mentalSymptoms = [
+                "মনোযোগ দিতে না পারা",
+                "অল্পতেই একাগ্রতা হারিয়ে ফেলা",
+                "স্মৃতিশক্তিতে সাময়িক ব্যাহত হওয়া",
+              ];
+
+              const copingNote =
+                "পরীক্ষার আগে নিয়মিত পুনরাবৃত্তি, সঠিক ঘুম, সুষম খাদ্য, শ্বাস-প্রশ্বাসের ব্যায়াম ও ইতিবাচক মানসিক প্রস্তুতি পরীক্ষাভীতি মোকাবিলায় সহায়তা করে। যাদের ক্ষেত্রে সমস্যা বাড়ে, তারা পরামর্শদাতা বা শিক্ষকের সহায়তা নিতে পারে।";
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding exam fear",
+                    "পরীক্ষা-ভীতি"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${examFearIntro}</p>
+                    <p class="mb-0">${examFearDetails}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "পরীক্ষা-ভীতির শারীরিক ও মানসিক উপসর্গসমূহ",
+                      "পরীক্ষা-ভীতির শারীরিক ও মানসিক উপসর্গসমূহ"
+                    )}</h3>
+                    <div class="row g-4 align-items-stretch">
+                      <div class="col-lg-7">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-rose text-white">
+                              <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "শারীরিক উপসর্গ",
+                                "শারীরিক উপসর্গ"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "Physical indicators",
+                                "শারীরিক সংকেত"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(physicalSymptoms)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="icon-circle bg-gradient-indigo text-white">
+                              <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                              <p class="text-uppercase text-muted small mb-1">${yhLang(
+                                "মানসিক উপসর্গ",
+                                "মানসিক উপসর্গ"
+                              )}</p>
+                              <h3 class="h6 gradient-text mb-0">${yhLang(
+                                "Mental indicators",
+                                "মানসিক সংকেত"
+                              )}</h3>
+                            </div>
+                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(mentalSymptoms)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="110">
+                    <p class="mb-0">${copingNote}</p>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-10",
+            title: yhLang(
+              "Solutions to Exam Fear",
+              "পরীক্ষা-ভীতি দূর করার উপায়"
+            ),
+            icon: "fa-pen-to-square",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14j",
+                  question: yhLang(
+                    "Which strategy focuses on gathering accurate exam details?",
+                    "কোন কৌশলটি পরীক্ষার সঠিক তথ্য সংগ্রহের উপর জোর দেয়?"
+                  ),
+                  options: [
+                    yhLang("Exam related information", "পরীক্ষা সংক্রান্ত তথ্য সংগ্রহ"),
+                    yhLang("Group study", "দলবদ্ধ পড়াশোনা"),
+                    yhLang("পর্যাপ্ত ঘুম", "পর্যাপ্ত ঘুম"),
+                    yhLang("Positive mindset", "ইতিবাচক মনোভাব"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "পরীক্ষা-ভীতি দূর করতে তথ্যভিত্তিক প্রস্তুতি, কার্যকর অধ্যয়ন, দলগত সমর্থন, স্বাস্থ্যকর জীবনযাপন ও ইতিবাচক মনোভাব গুরুত্বপূর্ণ ভূমিকা রাখে।";
+
+              const strategies = [
+                {
+                  title: "পরীক্ষা সংক্রান্ত সঠিক তথ্য সংগ্রহ করা (Exam Related Information):",
+                  description:
+                    `পরীক্ষার নির্দিষ্ট তারিখ, সময়সূচি, রুটিন, সিলেবাস ঠিকমতো জোগাড় করে সে অনুযায়ী প্রস্তুতি নেওয়া।`,
+                  icon: "fa-calendar-check",
+                },
+                {
+                  title: "পর্যাপ্ত এবং কার্যকরী অনুশীলনসহ পড়াশোনা করা (Effective Study & Practice):",
+                  description:
+                    `প্রতিদিন নিয়মিত পড়া, পরীক্ষার সময়সূচী, প্রতিটি পরীক্ষার আগে কয় দিন ছুটি, কোন বিষয়টি কঠিন তাই বেশিদিন পড়তে হবে, কোনটি সহজ তাই অল্পদিন পড়তে হবে—সবকিছু উল্লেখ করে পড়ালেখার একটি দৃশ্যমান তালিকা তৈরি করা। বুঝে পড়া, মুখস্থ করা, উদাহরণের সাথে সম্পর্ক করে পড়া।`,
+                  icon: "fa-book",
+                },
+                {
+                  title: "পরীক্ষা-উপযোগী পড়াশোনা করা (Exam-Oriented Study)",
+                  description:
+                    `ভালভাবে পরীক্ষায় অংশগ্রহণের জন্য পরীক্ষার সিলেবাস ও পূর্বের ক্লাসগুলোর ওপর জোর দিতে হবে। পূর্ববর্তী বছরের প্রশ্নপত্রগুলো ব্যাখ্যা করে প্রশ্নের ধরন বুঝতে হবে এবং প্রশ্নগুলোর সমাধান করতে হবে।`,
+                  icon: "fa-list-check",
+                },
+                {
+                  title: "বন্ধুদের সাথে দলবদ্ধভাবে পড়ালেখা করা (Group Study)",
+                  description:
+                    `একে অপরকে প্রশ্ন করা, উত্তর দেওয়া, আলোচনা করে গুরুত্বপূর্ণ প্রশ্ন নির্ধারণ করা এবং একে অপরকে বুঝিয়ে শেখানোর মাধ্যমে পড়ালেখা করা।`,
+                  icon: "fa-users",
+                },
+                {
+                  title: "স্বাস্থ্যকর জীবনযাপন করা (Healthy Lifestyle):",
+                  description:
+                    `পরিমিত ঘুম (৭/৮ ঘণ্টা), পুষ্টিকর খাবার খাওয়া, বেশি পানি পান করা, ব্যায়াম, খেলাধুলা ও বিনোদন—যেমন টিভি দেখা/গল্প করা—ইত্যাদির মাধ্যমে জীবনযাপন করা।`,
+                  icon: "fa-heart",
+                },
+                {
+                  title: "মনোভাব উন্নতকরণ",
+                  description:
+                    `প্রথমেই নির্ধারণ করতে হবে দুশ্চিন্তার কারণ কী—প্রয়োজনীয় প্রস্তুতির অভাবে, নাকি ফলাফল খারাপ হলে অন্যরা কি বলবে সেই ভাবনায়।
+যদি "অন্যরা কী বলবে"—এটাই দুশ্চিন্তার প্রধান কারণ হয়, তাহলে মনে রাখতে হবে জীবনে পরীক্ষা থাকবেই। পড়াশোনার সাথে পরীক্ষা ওতপ্রোতভাবে জড়িত। একটি পরীক্ষা কখনই পুরো জীবনের সফলতা বা ব্যর্থতা নির্ধারণ করে না।
+পরীক্ষাকে জীবনের একটি অংশ হিসেবে গ্রহণ করার মানসিকতা অর্জনের চেষ্টা করতে হবে।`,
+                  icon: "fa-lightbulb",
+                },
+              ];
+
+              const renderStrategies = (items) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <article class="glass-card p-4 h-100 shadow-sm" data-aos="fade-up" data-aos-delay="${60 +
+                        idx * 30}">
+                        <div class="d-flex align-items-start gap-3 mb-3">
+                          <div class="icon-circle bg-gradient-indigo text-white">
+                            <i class="fa-solid ${item.icon}"></i>
+                          </div>
+                          <div>
+                            <h3 class="h6 gradient-text mb-1">${item.title}</h3>
+                            <p class="mb-0">${item.description}</p>
+                          </div>
+                        </div>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Exam fear solutions",
+                    "পরীক্ষা-ভীতি দূর করার উপায়"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <div class="row g-4">
+                      ${renderStrategies(strategies)}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-16",
         title: yhLang(
           "Module-15: Violence Related to Adolescents",
-          "মডিউল-১৫: কৈশোরে সহিংসতা"
+          "মডিউল-১৫: কৈশোরকালীন মানসিক স্বাস্থ্য সমস্যা ও সমাধানের উপায়"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch15-lesson-1",
+            title: yhLang("Mental Health", "মানসিক স্বাস্থ্য"),
+            icon: "fa-brain",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15a",
+                  question: yhLang(
+                    "According to the lesson, what does mental health help a person do?",
+                    "এই পাঠ অনুযায়ী মানসিক স্বাস্থ্য একজন মানুষকে কী করতে সহায়তা করে?"
+                  ),
+                  options: [
+                    yhLang("দৈনন্দিন চাপের সাথে মানিয়ে চলতে", "দৈনন্দিন চাপের সাথে মানিয়ে চলতে"),
+                    yhLang("সমস্ত আবেগ লুকিয়ে রাখতে", "সমস্ত আবেগ লুকিয়ে রাখতে"),
+                    yhLang("সম্পূর্ণ নিঃসঙ্গ হয়ে থাকতে", "সম্পূর্ণ নিঃসঙ্গ হয়ে থাকতে"),
+                    yhLang("সমাজ থেকে দূরে থাকতে", "সমাজ থেকে দূরে থাকতে"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const definition =
+                "মানসিক স্বাস্থ্য হলো এমন এক সাম্যাবস্থা যেখানে ব্যক্তি নিজের সক্ষমতা ও দুর্বলতা বোঝে, দৈনন্দিন চাপের সাথে খাপ খাইয়ে সামাজিক রীতি মেনে উৎপাদনশীল থাকে এবং সমাজে অবদান রাখতে পারে।";
+
+              const wellBeingTraits = [
+                {
+                  title: "আবেগের নিয়ন্ত্রণ",
+                  detail:
+                    "রাগ, ভয়, দুঃখ, আনন্দ, হিংসা, অপরাধবোধ ও ভালোবাসার মতো অনুভূতিগুলো সুষমভাবে প্রকাশ করতে পারে।",
+                },
+                {
+                  title: "নিজের সক্ষমতা ও দুর্বলতা বোঝা",
+                  detail:
+                    "আত্মসচেতন থাকে এবং সক্ষমতাকে কাজে লাগাতে ও সীমাবদ্ধতাকে মেনে নিতে পারে।",
+                },
+                {
+                  title: "আত্মসম্মানবোধ বজায় রাখা",
+                  detail: "নিজের মর্যাদাবোধ অটুট থাকে এবং নিজেকে মূল্যবান মনে করে।",
+                },
+                {
+                  title: "পরিস্থিতির সাথে খাপ খাওয়ানো",
+                  detail: "বিভিন্ন নতুন বা চ্যালেঞ্জিং পরিস্থিতিতে নমনীয়ভাবে মানিয়ে নিতে পারে।",
+                },
+                {
+                  title: "সম্পর্ক বজায় রাখা",
+                  detail: "অন্যের সাথে দীর্ঘস্থায়ী ও ফলপ্রসূ সম্পর্ক গড়ে তুলতে সক্ষম হয়।",
+                },
+                {
+                  title: "সমাজে কার্যকর ভূমিকা",
+                  detail: "সামাজিক রীতি-নীতি মেনে সমাজে ইতিবাচক অবদান রাখে।",
+                },
+                {
+                  title: "সিদ্ধান্ত গ্রহণের ক্ষমতা",
+                  detail: "পরিস্থিতি অনুযায়ী সঠিক সিদ্ধান্ত নিতে পারে।",
+                },
+                {
+                  title: "দায়িত্বশীলতা",
+                  detail:
+                    "ব্যক্তিগত, সামাজিক ও পেশাগত সম্পর্কের ক্ষেত্রে দায়িত্বশীল আচরণ করে।",
+                },
+              ];
+
+              const renderTraits = (items) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <div class="col-md-6" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">
+                        <article class="glass-card p-4 h-100 shadow-sm">
+                          <div class="d-flex align-items-start gap-3">
+                            <div class="icon-circle bg-gradient-rose text-white">
+                              <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                              <h3 class="h6 gradient-text mb-1">${item.title}</h3>
+                              <p class="mb-0">${item.detail}</p>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Foundations of mental health",
+                    "মানসিক স্বাস্থ্য"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${definition}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "মানসিক সুস্থতার বৈশিষ্ট্যসমূহ",
+                      "মানসিক সুস্থতার বৈশিষ্ট্যসমূহ"
+                    )}</h3>
+                    <div class="row g-4">
+                      ${renderTraits(wellBeingTraits)}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-2",
+            title: yhLang(
+              "Adolescent Mental Health",
+              "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য"
+            ),
+            icon: "fa-children",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15b",
+                  question: yhLang(
+                    "According to WHO 2019, what fraction of people live with a mental disorder?",
+                    "WHO ২০১৯ অনুযায়ী কতজন মানুষ কোনো না কোনো মানসিক সমস্যায় ভোগে?"
+                  ),
+                  options: [
+                    yhLang("প্রতি ৫ জনে ১ জন", "প্রতি ৫ জনে ১ জন"),
+                    yhLang("প্রতি ১০ জনে ১ জন", "প্রতি ১০ জনে ১ জন"),
+                    yhLang("প্রতি ২০ জনে ১ জন", "প্রতি ২০ জনে ১ জন"),
+                    yhLang("প্রতি ৫০ জনে ১ জন", "প্রতি ৫০ জনে ১ জন"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introPrimary =
+                "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য অত্যন্ত গুরুত্বপূর্ণ। মানসিক চাপ থেকে মুক্ত থাকতে না পারলে বড় হওয়ার পথে নানা ঝুঁকিপূর্ণ আচরণ ও জটিলতা তৈরি হয়।";
+
+              const introSecondary =
+                "বিশ্বস্বাস্থ্য সংস্থার (২০১৯) তথ্যমতে, বিশ্বে প্রতি ৫ জনের ১ জন (২২.১%) মানসিক রোগে ভোগেন এবং প্রতি ১০ জনের ১ জন (৯%) মধ্যম থেকে মারাত্মক মানসিক সমস্যায় আক্রান্ত।";
+
+              const whoStats = [
+                {
+                  value: "22.1%",
+                  label: "প্রতি ৫ জনে ১ জন মানসিক সমস্যায় ভোগে",
+                },
+                {
+                  value: "9%",
+                  label: "প্রতি ১০ জনে ১ জন মধ্যম থেকে মারাত্মক অসুখে",
+                },
+                {
+                  value: "16%",
+                  label: "১০–১৯ বছরের কিশোর-কিশোরীদের মানসিক সমস্যা",
+                },
+                {
+                  value: "50%",
+                  label: "মানসিক সমস্যার অর্ধেকই শুরু হয় ১৪ বছরের আগে",
+                },
+              ];
+
+              const adolescentImpacts = [
+                "কৈশোরকালীন বিষণ্নতা কিশোর-কিশোরীদের অসুস্থতা ও পঙ্গুত্বের প্রধান কারণগুলোর একটি।",
+                "বিশ্বব্যাপী ১৫–১৯ বছর বয়সী কিশোর-কিশোরীদের মৃত্যুর তৃতীয় কারণ আত্মহত্যা।",
+                "কৈশোরের মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতি করে।",
+                "কৈশোরকালীন মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতিসাধন করে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত করে।",
+              ];
+
+              const renderStats = (items) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="${70 +
+                        idx * 20}">
+                        <article class="glass-card p-4 h-100 shadow-sm text-center">
+                          <p class="display-6 fw-bold gradient-text mb-2">${item.value}</p>
+                          <p class="mb-0 small">${item.label}</p>
+                        </article>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Mental health for adolescents",
+                    "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${introPrimary}</p>
+                    <p class="mb-0">${introSecondary}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "বিশ্বস্বাস্থ্য সংস্থার তথ্য (২০১৯)",
+                      "বিশ্বস্বাস্থ্য সংস্থার তথ্য (২০১৯)"
+                    )}</h3>
+                    <div class="row g-4">
+                      ${renderStats(whoStats)}
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "কৈশোরের মানসিক স্বাস্থ্য প্রভাব",
+                      "কৈশোরের মানসিক স্বাস্থ্য প্রভাব"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(adolescentImpacts)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-3",
+            title: yhLang(
+              "Childhood and Adolescent Mental Issues",
+              "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
+            ),
+            icon: "fa-child",
+            gradientClass: "bg-gradient-amber",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15c",
+                  question: yhLang(
+                    "What is it called when a child over five frequently urinates in bed or clothes?",
+                    "পাঁচ বছরের বেশি বয়সী শিশু বারবার বিছানায় বা জামায় প্রস্রাব করলে তাকে কী বলা হয়?"
+                  ),
+                  options: [
+                    yhLang("ইনিউরেসিস (Enuresis)", "ইনিউরেসিস (Enuresis)"),
+                    yhLang("এনকোপ্রেসিস (Encopresis)", "এনকোপ্রেসিস (Encopresis)"),
+                    yhLang("ADHD", "ADHD"),
+                    yhLang("বিচ্ছিন্নতার ভয়", "বিচ্ছিন্নতার ভয়"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "শৈশব ও কৈশোরে মানসিক চাপ, নির্যাতন বা সমর্থনের অভাবে বিভিন্ন ধরনের মানসিক সমস্যা দেখা দিতে পারে, যা ঘুম, আচরণ ও আবেগে প্রভাব ফেলে।";
+
+              const disorders = [
+                {
+                  title: "ক) ঘুমের সমস্যা (Sleep Disorders)",
+                  description:
+                    "শৈশবে শারীরিক, মানসিক বা যৌন নির্যাতনের মতো মানসিক চাপ থাকলে ঘুমের মধ্যে হাঁটা, বিছানা ভিজিয়ে ফেলা, ঘুম নিয়ে দুশ্চিন্তা, দেরিতে ঘুম আসা ও দুঃস্বপ্ন দেখা পর্যন্ত সমস্যা দেখা দেয়।",
+                },
+                {
+                  title: "খ) মলমূত্র ত্যাগজনিত সমস্যা (Elimination Disorder)",
+                  description:
+                    "শিশু উপযুক্ত স্থানে মলমূত্র ত্যাগ করতে না শেখার ফলে এই সমস্যা দেখা দেয়। ৪ বছর বয়সী শিশু যদি অনুপযুক্ত স্থানে মলত্যাগ করে তবে তাকে এনকোপ্রেসিস (Encopresis) বলা হয় এবং ৫ বছর বয়সী শিশু যদি বিছানায় বা পরনের কাপড়ে প্রস্রাব করে তবে তাকে ইনিউরেসিস (Enuresis) বলা হয়।",
+                },
+                {
+                  title: "গ) বিচ্ছিন্নতার ভয় (Separation Anxiety)",
+                  description:
+                    "এই সমস্যায় আক্রান্ত শিশুরা বিশেষ করে বাবা-মা বা পরিচিত অভিভাবককে ছেড়ে থাকতে পারে না। স্কুলে যেতে চায় না, একটু দূরে গেলেই কান্নাকাটি করে এবং একা কোনো ঘরে থাকতে ভয় পায়।",
+                },
+                {
+                  title: "ঘ) অতিচঞ্চল অমনোযোগিতা (ADHD)",
+                  description:
+                    "এ ধরনের শিশুরা পড়াশোনা থেকে খেলাধুলা—সব ক্ষেত্রেই মনোযোগ ধরে রাখতে পারে না। ৩–৫ বছর বয়সেই লক্ষণ দেখা দিতে পারে; তারা অতিরিক্ত সক্রিয় হয়ে পড়ে এবং ঝোঁকের বশে কাজ করে ফেলে।",
+                },
+              ];
+
+              const renderDisorders = (items) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <article class="glass-card p-4 h-100 shadow-sm" data-aos="fade-up" data-aos-delay="${60 +
+                        idx * 30}">
+                        <h3 class="h6 gradient-text mb-2">${item.title}</h3>
+                        <p class="mb-0">${item.description}</p>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Common childhood mental issues",
+                    "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <div class="row g-4">
+                      ${renderDisorders(disorders)}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-4",
+            title: yhLang(
+              "Childhood Behavioral Issues",
+              "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
+            ),
+            icon: "fa-people-arrows",
+            gradientClass: "bg-gradient-crimson",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15d",
+                  question: yhLang(
+                    "Which disorder features persistent rule-breaking and aggression?",
+                    "কোন সমস্যায় সামাজিক নিয়ম ভাঙা ও আক্রমণাত্মক আচরণ দেখা যায়?"
+                  ),
+                  options: [
+                    yhLang("কন্ডাক্ট ডিসঅর্ডার", "কন্ডাক্ট ডিসঅর্ডার"),
+                    yhLang("ইনিউরেসিস", "ইনিউরেসিস"),
+                    yhLang("সেপারেশন অ্যানজাইটি", "সেপারেশন অ্যানজাইটি"),
+                    yhLang("ঘুমের সমস্যা", "ঘুমের সমস্যা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const behaviorIntro =
+                "আচরণগত সমস্যায় আক্রান্ত শিশুরা প্রায়ই বয়স ও সামাজিক মানদণ্ডের সাথে অসামঞ্জস্যপূর্ণ আচরণ করে থাকে। কন্ডাক্ট ডিসঅর্ডার এদের মধ্যে অন্যতম, যেখানে নিয়ম ভাঙা থেকে শুরু করে আক্রমণাত্মকতা পর্যন্ত দেখা যায়।";
+
+              const conductBehaviors = [
+                "সামাজিক নিয়ম-শৃঙ্খলা ভঙ্গ করা",
+                "স্কুল বা বাড়ি থেকে পালিয়ে যাওয়া",
+                "চুরি করা",
+                "অন্যের সম্পত্তির ক্ষতি করা",
+                "মানুষ ও অন্য প্রাণীর প্রতি আক্রমণাত্মক হওয়া",
+                "অকারণে মিথ্যা কথা বলা",
+                "নেশা করা",
+                "সামাজিক অপরাধের সাথে জড়িয়ে পড়া",
+                "পিতা-মাতা ও শিক্ষকের অবাধ্য হওয়া",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Behavioral mental health issues",
+                    "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${behaviorIntro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "কন্ডাক্ট ডিসঅর্ডারের আচরণ",
+                      "কন্ডাক্ট ডিসঅর্ডারের আচরণ"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(conductBehaviors)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-5",
+            title: yhLang(
+              "Autism Spectrum Disorder",
+              "অটিজম স্পেকট্রাম ডিসঅর্ডার"
+            ),
+            icon: "fa-puzzle-piece",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15e",
+                  question: yhLang(
+                    "Which core areas do autism symptoms primarily affect?",
+                    "অটিজমের লক্ষণ প্রধানত কোন ক্ষেত্রগুলোকে প্রভাবিত করে?"
+                  ),
+                  options: [
+                    yhLang("সামাজিক মিথস্ক্রিয়া, যোগাযোগ ও আচরণ", "সামাজিক মিথস্ক্রিয়া, যোগাযোগ ও আচরণ"),
+                    yhLang("শুধু শারীরিক শক্তি", "শুধু শারীরিক শক্তি"),
+                    yhLang("শুধু খাদ্যাভ্যাস", "শুধু খাদ্যাভ্যাস"),
+                    yhLang("শুধু ঘুম", "শুধু ঘুম"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "অটিজম একটি স্নায়ুবিকাশজনিত সমস্যা, যাতে সামাজিক সম্পর্ক স্থাপন, আশেপাশের পরিবেশ ও ব্যক্তির সাথে যোগাযোগের সমস্যা এবং একই ধরনের আচরণের পুনরাবৃত্তি দেখা যায়।";
+
+              const overview =
+                "অটিজমের লক্ষণ সাধারণত তিনটি ক্ষেত্রে বিভক্ত: সামাজিক মিথস্ক্রিয়া, যোগাযোগ এবং আচরণগত বৈশিষ্ট্য।";
+
+              const socialItems = [
+                {
+                  title: "চোখে চোখ রেখে কথা বলার অভাব",
+                  description:
+                    "অটিজম আক্রান্ত শিশুরা প্রায়ই চোখে চোখ রেখে কথা বলতে অসুবিধা বোধ করে।",
+                },
+                {
+                  title: "অনুভূতি বোঝার ক্ষমতার অভাব",
+                  description:
+                    "অন্যদের অনুভূতি বা মানসিক অবস্থা বোঝা ও প্রতিক্রিয়া জানানোর ক্ষমতা কম থাকে।",
+                },
+                {
+                  title: "বন্ধুত্ব স্থাপনের সমস্যা",
+                  description:
+                    "তারা সাধারণত অন্য শিশুদের সাথে খেলতে বা বন্ধুত্ব করতে সমস্যায় পড়ে।",
+                },
+                {
+                  title: "সামাজিক সংকেত বোঝার ঘাটতি",
+                  description:
+                    "সামাজিক নিয়ম বা সংকেত বুঝতে এবং অনুসরণ করতে অসুবিধা হয়।",
+                },
+              ];
+
+              const communicationItems = [
+                {
+                  title: "বিলম্বিত ভাষার বিকাশ",
+                  description:
+                    "অনেক সময় অটিজম আক্রান্ত শিশুরা কথা বলা শুরু করতে দেরি করে।",
+                },
+                {
+                  title: "অস্বাভাবিক ভাষার ব্যবহার",
+                  description:
+                    "একই শব্দ বা বাক্যাংশ বারবার পুনরাবৃত্তি করতে দেখা যায়।",
+                },
+                {
+                  title: "অভিব্যক্তি ব্যাখ্যা করতে সমস্যা",
+                  description:
+                    "অভিব্যক্তি ও মুখের অভিব্যক্তি বোঝাতে বা সঠিকভাবে ব্যবহার করতে অসুবিধা হয়।",
+                },
+                {
+                  title: "দুর্বল কথোপকথন",
+                  description:
+                    "কথা বলায় অনিচ্ছা প্রকাশ করে বা এক শব্দে উত্তর দেয়।",
+                },
+              ];
+
+              const behaviorItems = [
+                {
+                  title: "নির্দিষ্ট রুটিনে অটল থাকা",
+                  description:
+                    "একটি নির্দিষ্ট রুটিন বা কার্যকলাপ পরিবর্তনে কঠিন মনে হয়।",
+                },
+                {
+                  title: "নির্দিষ্ট বিষয় বা বস্তুতে অতিরিক্ত আগ্রহ",
+                  description:
+                    "কিছু নির্দিষ্ট বিষয় বা বস্তুর প্রতি অতিরিক্ত মনোযোগ দেয়।",
+                },
+                {
+                  title: "সংবেদনশীলতা",
+                  description:
+                    "আলো, শব্দ বা স্পর্শের প্রতি অতিরিক্ত সংবেদনশীল হতে পারে।",
+                },
+                {
+                  title: "আচরণগত পুনরাবৃত্তি",
+                  description:
+                    "একই কাজ বা আচরণ বারবার করে।",
+                },
+              ];
+
+              const renderDetailedList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                          <strong>${item.title}:</strong>
+                          <span>${item.description}</span>
+                        </div>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderColumn = (title, items, delay) => `
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="${delay}">
+                  <article class="glass-card p-4 h-100 shadow-sm">
+                    <h3 class="h6 gradient-text mb-3">${title}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderDetailedList(items)}
+                    </ul>
+                  </article>
+                </div>
+              `;
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding autism spectrum disorder",
+                    "অটিজম স্পেকট্রাম ডিসঅর্ডার"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${intro}</p>
+                    <p class="mb-0">${overview}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <div class="row g-4">
+                      ${renderColumn("১. সামাজিক মিথস্ক্রিয়ার সমস্যা", socialItems, 70)}
+                      ${renderColumn("২. যোগাযোগের সমস্যা", communicationItems, 90)}
+                      ${renderColumn("৩. আচরণগত বৈশিষ্ট্য", behaviorItems, 110)}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-6",
+            title: yhLang(
+              "Intellectual Disability",
+              "বুদ্ধি প্রতিবন্ধিতা"
+            ),
+            icon: "fa-lightbulb",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15f",
+                  question: yhLang(
+                    "When does intellectual disability typically become apparent?",
+                    "বুদ্ধি প্রতিবন্ধিতা সাধারণত কখন প্রকাশ পায়?"
+                  ),
+                  options: [
+                    yhLang("১৮ বছরের আগেই", "১৮ বছরের আগেই"),
+                    yhLang("২৫ বছরের পরে", "২৫ বছরের পরে"),
+                    yhLang("৪০ বছরের পরে", "৪০ বছরের পরে"),
+                    yhLang("৬০ বছরের পরে", "৬০ বছরের পরে"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "শৈশবে মানসিক আঘাত পাওয়া কিংবা গর্ভাবস্থায় মায়ের প্রতি নির্যাতনের কারণে গর্ভস্থ সন্তানের মস্তিষ্কের বিকাশ ব্যাহত হয়ে বুদ্ধি প্রতিবন্ধিতা সৃষ্টি হতে পারে।";
+
+              const traits = [
+                "বুদ্ধিমত্তা সমবয়সী শিশুদের তুলনায় কম থাকে",
+                "পরিবেশের সাথে খাপ খাওয়াতে পারে না",
+                "পড়াশোনায় অগ্রগতি হয় না",
+                "১৮ বছরের আগেই এ সমস্যা দেখা দেয়",
+              ];
+
+              const moodSection = {
+                title: "জ) আবেগজনিত সম্পর্কিত সমস্যা",
+                description: "আবেগজনিত সমস্যার দুইটি রূপ দেখা যায়:",
+                list: ["বিষণ্নতা", "প্যানিক"],
+              };
+
+              const renderTraits = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderMoodList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding intellectual disability",
+                    "বুদ্ধি প্রতিবন্ধিতা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                      "বুদ্ধি প্রতিবন্ধিতার বৈশিষ্ট্য",
+                      "বুদ্ধি প্রতিবন্ধিতার বৈশিষ্ট্য"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderTraits(traits)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="90">
+                    <h3 class="h6 gradient-text mb-2">${moodSection.title}</h3>
+                    <p class="mb-2">${moodSection.description}</p>
+                    <ul class="list-inline mb-0">
+                      ${renderMoodList(moodSection.list)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-7",
+            title: yhLang("Depression", "বিষণ্নতা"),
+            icon: "fa-face-frown",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15g",
+                  question: yhLang(
+                    "Which areas of life can depression impact?",
+                    "বিষণ্নতা জীবনের কোন কোন দিককে প্রভাবিত করে?"
+                  ),
+                  options: [
+                    yhLang(
+                      "আবেগ, চিন্তা, কর্মক্ষমতা ও শারীরিক পরিবর্তন",
+                      "আবেগ, চিন্তা, কর্মক্ষমতা ও শারীরিক পরিবর্তন"
+                    ),
+                    yhLang("শুধু অর্থনৈতিক জীবন", "শুধু অর্থনৈতিক জীবন"),
+                    yhLang("শুধু শারীরিক শক্তি", "শুধু শারীরিক শক্তি"),
+                    yhLang("শুধু সামাজিক যোগাযোগ", "শুধু সামাজিক যোগাযোগ"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "বিষণ্নতা হল একটি মানসিক অবস্থা যা একজন ব্যক্তির চিন্তা, অনুভূতি এবং আচরণকে প্রভাবিত করতে পারে। বিষণ্নতায় আক্রান্ত ব্যক্তির নিম্নলিখিত বৈশিষ্ট্যগুলো দেখা যায়।";
+
+              const tableSections = [
+                {
+                  title: "আবেগ/অনুভূতি",
+                  items: [
+                    "মনমরা",
+                    "শূন্যতা বোধ",
+                    "অপরাধবোধ",
+                    "অসহায় বোধ",
+                    "হতাশ",
+                    "বিরক্ত",
+                    "কোনো কিছুতে আনন্দ না পাওয়া",
+                  ],
+                },
+                {
+                  title: "চিন্তা",
+                  items: [
+                    "নেতিবাচক চিন্তা / মনোযোগের অভাব",
+                    "সিদ্ধান্তহীনতা",
+                    "বারবার মৃত্যু কামনা করা বা আত্মহত্যার চিন্তা করা",
+                  ],
+                },
+                {
+                  title: "কর্মক্ষমতা",
+                  items: [
+                    "অল্পতেই ক্লান্ত হয়ে পড়া",
+                    "কর্মক্ষমতা হ্রাস",
+                    "যেকোনো কাজে অনীহা",
+                    "গুছিয়ে কাজ করতে না পারা",
+                    "সামাজিক যোগাযোগ থেকে নিজেকে গুটিয়ে নেওয়া",
+                  ],
+                },
+                {
+                  title: "শারীরিক পরিবর্তন",
+                  items: [
+                    "ঘুম বেশি বা কম হওয়া",
+                    "ওজন বেড়ে বা কমে যাওয়া",
+                    "ক্ষুধা বেড়ে বা কমে যাওয়া",
+                    "অস্বাভাবিক ব্যথা",
+                    "যৌন চাহিদা কমে যাওয়া",
+                  ],
+                },
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderHeader = (sections) =>
+                sections
+                  .map(
+                    (section) => `
+                      <th scope="col">${section.title}</th>
+                    `
+                  )
+                  .join("");
+
+              const renderBodyRow = (sections) =>
+                sections
+                  .map(
+                    (section) => `
+                      <td>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(section.items)}
+                        </ul>
+                      </td>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding depression",
+                    "বিষণ্নতা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <div class="table-responsive">
+                      <table class="table table-bordered align-middle depression-table">
+                        <thead>
+                          <tr>
+                            ${renderHeader(tableSections)}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            ${renderBodyRow(tableSections)}
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-8",
+            title: yhLang("Childhood Depression", "শৈশবকালীন বিষণ্নতা"),
+            icon: "fa-children",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15h",
+                  question: yhLang(
+                    "Which of these behaviors may signal childhood depression?",
+                    "নিচের কোন আচরণটি শৈশবকালীন বিষণ্নতার লক্ষণ হতে পারে?"
+                  ),
+                  options: [
+                    yhLang("অকারণে কান্নাকাটি করা", "অকারণে কান্নাকাটি করা"),
+                    yhLang("অতিরিক্ত ঘুম না পেয়ে থাকা", "অতিরিক্ত ঘুম না পেয়ে থাকা"),
+                    yhLang("শুধু বেশি খাওয়া", "শুধু বেশি খাওয়া"),
+                    yhLang("শুধু বেশি পড়াশোনা করা", "শুধু বেশি পড়াশোনা করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "শৈশবকাল হতেই বিষণ্নতার শিকার হতে পারে কোনো কোনো শিশু; বিশেষ করে যারা শারীরিক, মানসিক, যৌন নির্যাতনের শিকার হয়েছে। তবে প্রাপ্তবয়স্কদের বিষণ্নতার সাথে শৈশবকালীন বিষণ্নতার লক্ষণসমূহে কিছুটা পার্থক্য রয়েছে। যেমন:";
+
+              const symptoms = [
+                "অকারণে কান্নাকাটি করে",
+                "মেজাজ খুব খিটখিটে হয়ে যায়, অকারণে রাগ করে",
+                "পড়াশোনা, খেলাধুলা সবকিছুর প্রতি আগ্রহ হারিয়ে ফেলে এবং আনন্দ পায় না",
+                "খাদ্যগ্রহণে অনীহা দেখা দেয়",
+                "অল্পতেই ক্লান্ত বোধ করে ও মনোযোগ কমে যায়",
+                "অহেতুক শারীরিক সমস্যার কথা বলে",
+              ];
+
+              const manicPara =
+                "সাধারণত, প্যানিক অবস্থা বাইপোলার ডিসঅর্ডারের একটি অংশ হিসেবে দেখা যায়, যেখানে ব্যক্তি প্যানিক এবং বিষণ্ন অবস্থার মধ্যে চক্কর ঘুরতে থাকে। প্যানিক অবস্থায় তাদের মধ্যে স্বাভাবিকের থেকে বেশি মাত্রায় সবকিছুতে আগ্রহ ও উৎসাহ, অতিমাত্রায় আনন্দ ও উৎফুল্লতা, যৌন চাহিদা বেড়ে যাওয়া, ঘুম কমে যাওয়া, বেশি কথা বলার প্রবণতা এবং নিজের সম্পর্কে উচ্চ ধারণা পোষণ করতে দেখা যায় যেমন বেশি বেশি কেনাকাটা করা, অতিরিক্ত সাজগোজ করা, খরচ করার প্রবণতা ইত্যাদি। কেউ কেউ উত্তেজিত হয়ে আগ্রাসী আচরণ করে। অর্থাৎ বিষণ্নতার বিপরীত চিত্র দেখা যায়। এ ক্ষেত্রে বিশেষ চিকিৎসকের পরামর্শ অনুযায়ী ওষুধ সেবন করতে হবে।";
+
+              const renderSymptoms = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding childhood depression",
+                    "শৈশবকালীন বিষণ্নতা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderSymptoms(symptoms)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="90">
+                    <h3 class="h6 gradient-text mb-2">২) ম্যানিক</h3>
+                    <p class="mb-0">${manicPara}</p>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-9",
+            title: yhLang("Anxiety Disorder", "অতি উদ্বিগ্নতা"),
+            icon: "fa-heart-pulse",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15i",
+                  question: yhLang(
+                    "Which statement describes conversion disorder?",
+                    "কনভার্সন ডিসঅর্ডারকে কোন বিবরণটি বোঝায়?"
+                  ),
+                  options: [
+                    yhLang(
+                      "দুশ্চিন্তার কারণে শারীরিক সমস্যার প্রকাশ",
+                      "দুশ্চিন্তার কারণে শারীরিক সমস্যার প্রকাশ"
+                    ),
+                    yhLang("শুধু শারীরিক আঘাত", "শুধু শারীরিক আঘাত"),
+                    yhLang("শুধু খাদ্যাভ্যাস", "শুধু খাদ্যাভ্যাস"),
+                    yhLang("শুধু ঘুম", "শুধু ঘুম"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "অতি উদ্বিগ্নতা হলো এক ধরনের মানসিক সমস্যায যেখানে অতিরিক্ত এবং অনিয়মিত উদ্বেগ ও দুশ্চিন্তা দেখা যায়, যা স্বাভাবিক জীবনযাত্রাকে ব্যাহত করে।";
+
+              const sections = [
+                {
+                  title: "১) সার্বিক উদ্বিগ্নতা (Generalized Anxiety Disorder)",
+                  description:
+                    "এক্ষেত্রে ব্যক্তির মধ্যে সারাক্ষণই বিভিন্ন বিষয় নিয়ে দুশ্চিন্তা হতে থাকে।",
+                },
+                {
+                  title: "২) সামাজিক ভীতি (Social Anxiety Disorder)",
+                  description:
+                    "এক্ষেত্রে ব্যক্তি সামাজিক পরিস্থিতিতে লজ্জিত, অপমানিত এবং ঠাট্টার পাত্র হতে পারে ভেবে আতঙ্কিত বা দুশ্চিন্তাগ্রস্ত থাকে।",
+                },
+              ];
+
+              const panicDescription =
+                "প্যানিক অ্যাটাক সাধারণত ব্যক্তি যখন কোনো বড় খোলা জায়গা বা বন্ধ জায়গাতে যায়, কোথাও একা থাকে, লিফটে, যানবাহনে ভ্রমণ করে, জনসমাগমে বা ভিড়ের মধ্যে যায় তখন তার দমবন্ধ বোধ হয়, জ্ঞান হারানোর ভয় হয়, অসাড় হয়ে পড়ে।";
+
+              const panicFeatures = [
+                "নিশ্বাস বন্ধ হয়ে আসা",
+                "বুক ধরফর করা",
+                "উদ্বিগ্নতা",
+                "মাংসপেশীতে টান",
+                "জ্ঞান হারিয়ে ফেলা",
+                "বুকে তীব্র ব্যথা",
+                "তীব্র আতঙ্ক",
+                "অস্থিরতা",
+                "অতিরিক্ত ঘেমে যাওয়া",
+                "অসাড়তার মত বৈশিষ্ট্যসমূহ",
+              ];
+
+              const conversionDescription =
+                "দুশ্চিন্তাজনিত কারণে যখন শারীরিক সমস্যা দেখা দেয়, তখন তাকে কনভার্সন ডিসঅর্ডার বলে। কনভার্সন ডিসঅর্ডারের বৈশিষ্ট্যগুলো হচ্ছে:";
+
+              const conversionFeatures = [
+                "হাত-পা নড়াচড়াতে, চলাফেরা করতে সমস্যা হওয়া, দুর্বলতা বা অবশ অনুভব করা",
+                "দেখা, শোনা, ঘ্রাণ পাওয়া, স্পর্শ অনুভব করা বা স্বাদ গ্রহণের সক্ষমতা লোপ পাওয়া",
+                "মূর্ছা যাওয়া/চেতনাশূন্য হয়ে যাওয়া",
+                "শারীরিক কোনো কারণ খুঁজে পাওয়া যায় না",
+                "কোনো কিছু নিয়ে দ্বিধা-দ্বন্দ্ব থাকা বা মনের উপর চাপ অনুভব করা",
+              ];
+
+              const ptsdDescription =
+                "ভয়াবহ কোনো দুর্ঘটনার সম্মুখীন হলে বা কোনো নেতিবাচক অভিজ্ঞতার শিকার হলে ব্যক্তির মধ্যে কিছু মানসিক সমস্যা দেখা দেয়। এই সমস্যাগুলো যদি দুর্ঘটনা ঘটার এক মাস বা তার অধিক সময় স্থায়ী হয় তখন তাকে দুর্ঘটনা-পরবর্তী মানসিক আঘাতজনিত বিকলতা বলে।";
+
+              const ptsdFeatures = [
+                "দুর্যোগ স্মৃতি বারবার মনে পড়া",
+                "দুর্যোগ সংশ্লিষ্ট উদ্দীপককে এড়িয়ে চলা",
+                "অতিমাত্রায় সজাগ থাকা (যেমন ঘুমের সমস্যা, বিরক্তভাব, হঠাৎ রেগে যাওয়া, মনোনিবেশ করতে না পারা, অতি সতর্কভাব, চমকে ওঠা)",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderSimpleSection = (section, delay) => `
+                <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="${delay}">
+                  <h3 class="h6 gradient-text mb-2">${section.title}</h3>
+                  <p class="mb-0">${section.description}</p>
+                </section>
+              `;
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding anxiety disorder",
+                    "অতি উদ্বিগ্নতা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  ${sections
+                    .map((section, index) => renderSimpleSection(section, 70 + index * 20))
+                    .join("")}
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="110">
+                    <h3 class="h6 gradient-text mb-2">৩) প্যানিক অ্যাটাক (Panic Attack)</h3>
+                    <p class="mb-3">${panicDescription}</p>
+                    <p class="mb-2">এক্ষেত্রে নিশ্বাস বন্ধ হয়ে আসা, বুক ধরফর করা, উদ্বিগ্নতা, মাংসপেশীতে টান, জ্ঞান হারিয়ে ফেলা, বুকে তীব্র ব্যথা, তীব্র আতঙ্ক, অস্থিরতা, অতিরিক্ত ঘেমে যাওয়া ও অসাড়তার মত বৈশিষ্ট্যসমূহ দেখা যায়।</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(panicFeatures)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="130">
+                    <h3 class="h6 gradient-text mb-2">৪) কনভার্সন ডিসঅর্ডার (Conversion Disorder)</h3>
+                    <p class="mb-3">${conversionDescription}</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(conversionFeatures)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="150">
+                    <h3 class="h6 gradient-text mb-2">৫) দুর্ঘটনা-পরবর্তী মানসিক আঘাতজনিত সমস্যা (Post Traumatic Stress Disorder)</h3>
+                    <p class="mb-3">${ptsdDescription}</p>
+                    <p class="mb-2">এক্ষেত্রে—</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(ptsdFeatures)}
+                    </ul>
+                    <p class="mt-3 mb-0">ইত্যাদি বৈশিষ্ট্যসমূহ দেখা যায়।</p>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-16",
