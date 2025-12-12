@@ -10253,24 +10253,1091 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch15-lesson-10",
+            title: yhLang(
+              "Obsessive-Compulsive Disorder",
+              "অবসেসিভ-কম্পালসিভ ডিসঅর্ডার"
+            ),
+            icon: "fa-arrows-spin",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15j",
+                  question: yhLang(
+                    "Which pair correctly describes OCD components?",
+                    "ওসিডির দুইটি অংশ কী কী?"
+                  ),
+                  options: [
+                    yhLang("অবসেশন ও কম্পালশন", "অবসেশন ও কম্পালশন"),
+                    yhLang("ঘুম ও খাওয়া", "ঘুম ও খাওয়া"),
+                    yhLang("কল্পনা ও বাস্তবতা", "কল্পনা ও বাস্তবতা"),
+                    yhLang("ব্যথা ও আনন্দ", "ব্যথা ও আনন্দ"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "এই ধরনের মানসিক সমস্যায় সাধারণত দুটি অংশ রয়েছে—একটি অবসেশন, অপরটি কম্পালশন।";
+
+              const obsessionDesc =
+                "সাধারণ অবসেশনের মধ্যে বারবার অপ্রয়োজনীয় একই চিন্তা, কোনো বাক্য, কোনো কাহিনি, কোনো ছবি মনে আসে বা রোগীরা মাথা থেকে সরাতে পারে না এবং বিরক্ত বোধ করে।";
+
+              const compulsionDesc =
+                "সাধারণ কম্পালশনের মধ্যে বারবার হাত ধোয়া, চেক করা ইত্যাদি।";
+
+              const issues = [
+                {
+                  title: "জীবাণু বা ময়লা সংক্রমণের ভয়",
+                  description:
+                    "ময়লা লেগে আছে এই ভাবনায় বারবার হাত ধুয়ে অনেকে হাত ক্ষত করে ফেলে। আবার কেউ কেউ জীবাণুর ভয়ের কারণে ঘর থেকে বাইরে বের হয় না।",
+                },
+                {
+                  title: "চেকিং অভ্যাস",
+                  description:
+                    "কোনো কিছু বারবার চেক করার প্রবণতা। যেমন—গ্যাসের চুলা নেভানো হলো কি না? ফ্যান বন্ধ করেছে কিনা? ঘর কিংবা দোকানে তালা লাগানো হয়েছে কিনা? ইত্যাদি।",
+                },
+              ];
+
+              const renderIssues = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                          <strong>${item.title}:</strong>
+                          <span>${item.description}</span>
+                        </div>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding obsessive-compulsive disorder",
+                    "অবসেসিভ-কম্পালসিভ ডিসঅর্ডার"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <h3 class="h6 gradient-text mb-2">অবসেশন</h3>
+                    <p class="mb-0">${obsessionDesc}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="90">
+                    <h3 class="h6 gradient-text mb-2">কম্পালশন</h3>
+                    <p class="mb-0">${compulsionDesc}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="110">
+                    <h3 class="h6 text-uppercase text-muted mb-3">সাধারণত ওসিডিতে নিচের সমস্যাগুলো বেশি থাকে</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderIssues(issues)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="130">
+                    <div class="image-wrapper text-center">
+                      <img src="img/modu15/obsessive.jpg" alt="Obsessive Compulsive Disorder illustration" class="img-fluid rounded shadow-sm" />
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-11",
+            title: yhLang("Schizophrenia", "সিজোফ্রেনিয়া"),
+            icon: "fa-brain",
+            gradientClass: "bg-gradient-slate",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15k",
+                  question: yhLang(
+                    "How long must symptoms persist to consider schizophrenia?",
+                    "সিজোফ্রেনিয়ার লক্ষণ কতদিন থাকতে হয়?"
+                  ),
+                  options: [
+                    yhLang("কমপক্ষে একমাসব্যাপী", "কমপক্ষে একমাসব্যাপী"),
+                    yhLang("একদিন", "একদিন"),
+                    yhLang("এক সপ্তাহ", "এক সপ্তাহ"),
+                    yhLang("এক বছর", "এক বছর"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introHeading = "৭) সিজোফ্রেনিয়া:";
+              const introParagraph =
+                "সিজোফ্রেনিয়া হচ্ছে একটি গুরুতর মানসিক রোগ যেখানে একজন বয্ক্তির চিন্তা, আচরণ ও প্রতয্ক্ষণের (ঢ়বৎপবঢ়ঃরড়হ) অস্বাভাবিকতা দেখা যায়। পারিপার্শ্বিকতার প্রতি আμান্ত বয্ক্তির ধারণা পরিবর্তিত হয় এবং তার মধেয্ অমূলক বিশ্বাস জন্মায়। সিজোফ্রেনিয়া একটি দীর্ঘমেয়াদী রোগ। এ রোগের কারণে তার বয্ক্তিগত, সামাজিক ও কর্মক্ষেত্রে স্বাভাবিক সম্পর্ক ও কর্মকাÐসমূহ বয্াহত হয়।";
+
+              const symptomIntro =
+                "সিজোফ্রেনিয়ার নানাবিধ লক্ষণ দেখা যায়। তবে কোনো লক্ষণ অল্প সময়ের জন্য কারো মধ্যে দেখা গেলেই ধরে নেয়া যাবে না তার সিজোফ্রেনিয়া আছে। সিজোফ্রেনিয়ার ক্ষেত্রে কমপক্ষে একমাসব্যাপী লক্ষণগুলো উপস্থিত থাকতে হবে। সিজোফ্রেনিয়ার গুরুত্বপূর্ণ লক্ষণগুলো হচ্ছে—";
+
+              const symptoms = [
+                {
+                  title: "চিন্তার অস্বাভাবিকতা",
+                  description:
+                    "যুক্তিযুক্ত চিন্তা করতে নাপারা, অবাস্তব অলীক চিন্তা করা। চিন্তার ধারাবাহিকতা হারিয়ে ফেলা, এক চিন্তা থেকে দ্রæত অপ্রাসঙ্গিকভাবে অনয্ চিন্তা করা। মনে করতে পারে যে তার চিন্তা অন্য কেউ নিয়ে যাচ্ছে বা রেডিও টিভির মাধ্যমে তার চিন্তা সবাই জেনে যাচ্ছে। আবার কেউ বিশ্বাস করেন যে তার চিন্তার মধেয্ অনয্ কারো চিন্তা অনুপ্রবেশ করছে। কোনো বস্তু, বিষয় বা ঘটনা সম্পর্কে বদ্ধমূল ভ্রান্ত বিশ্বাস বা ডিল্যুশন দেখা দিতে পারে।",
+                },
+                {
+                  title: "হয্ালুসিনেশন (ঐধষষঁপরহধঃরড়হ) বা অলীক প্রত্যক্ষণ",
+                  description:
+                    "কোনো ধরনের উদ্দীপনার উপস্থিতি ছাড়াই তা প্রত্যক্ষণ করা। যেমন—কানেগায়েবী আওয়াজ শোনা, সামনে কিছু নেই অথচ কিছু দেখা, গায়ে কিছুর স্পর্শ অনুভব করা ইত্যাদি। সিজোফ্রেনিয়ার ক্ষেত্রে রোগি জানান যে, এক বা একাধিক বয্ক্তি তাকে নিয়ে বা তার সম্পর্কে বিভিন্ন কথা বলেন এবং তিনি তা শোনেন বলে বিশ্বাস করেন— অথচ বাস্তবে তাদের কারো উপস্থিতি নেই।",
+                },
+                {
+                  title: "অহেতুক সন্দেহ",
+                  description:
+                    "কোনো কারণ ছাড়াই অন্যকে সন্দেহ করা। রোগি মনে করে অন্যেরা তার ক্ষতি করতে চায়, তার খাবারে বিষ মেশাতে চায়, তাকে নিয়ে বদনাম রটাতে চায় ইত্যাদি।",
+                },
+                {
+                  title: "বাইরে থেকে নিয়ন্ত্রিত হওয়া",
+                  description:
+                    "মানসিক সমসয্ায় আμান্ত ব্যক্তি মনে করতে পারে যে তার চিন্তা, আচরণ কোনো কিছুই তার নিজের নয়— অন্য কেউ বা বাইরের কোনো শক্তি তাকে নিয়ন্ত্রণ করছে।",
+                },
+                {
+                  title: "নিজের মধেয্ গুটিয়ে থাকা",
+                  description:
+                    "অনেয্র সাথে কথা বলতে চান না, নিজের ভেতর গুটিয়ে থাকেন। অনেক সময় কম কথা বলেন, অন্যের চোখে চোখ রেখে তাকান না। কোনো কাজে উৎসাহ বোধ না করা, আবেগের অনুভূতি কমে যাওয়া ইত্যাদি।",
+                },
+              ];
+
+              const behaviorHeading = "কথা ও আচরণে অস্বাভাবিকতা";
+              const behaviorList = [
+                "নিজের মনের কথা শোনা: অনেক সময় নিজে নিজে যা ভাবছেন তা নিজ কানে শুনতে পান।",
+                "অহেতুক উত্তেজনা: কোনো কারণ ছাড়াই অতিরিক্ত উত্তেজিত হয়ে ওঠা।",
+                "একা একা কথা: অনেক সময় একা একা কথা বলা, একা একা হাসা বা কাঁদা।",
+                "ঘুমের সমস্যা: ঘুম না হওয়া ইত্যাদি।",
+                "সমস্যাটিকে অস্বীকার করা: তার মধ্যে মানসিক সমস্যা আছে— তা স্বীকার করতে না চাওয়া।",
+                "স্বাভাবিক জীবনযাত্রা ব্যাহত: ব্যক্তিগত, সামাজিক ও কর্মক্ষেত্রে স্বাভাবিক কর্মকাÐ ব্যাহত হওয়া।",
+              ];
+
+              const renderDetailedList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                          <strong>${item.title}:</strong>
+                          <span>${item.description}</span>
+                        </div>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderSimpleList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding schizophrenia",
+                    "সিজোফ্রেনিয়া"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="h6 gradient-text mb-2">${introHeading}</h3>
+                    <p class="mb-0">${introParagraph}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <h3 class="h6 gradient-text mb-2">লক্ষণ</h3>
+                    <p class="mb-3">${symptomIntro}</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderDetailedList(symptoms)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="h6 gradient-text mb-2">${behaviorHeading}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderSimpleList(behaviorList)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch15-lesson-12",
+            title: yhLang(
+              "Digital Health & Device Addiction Prevention",
+              "কিশোর-কিশোরীদের ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তি প্রতিরোধ"
+            ),
+            icon: "fa-mobile-screen",
+            gradientClass: "bg-gradient-cyan",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q15l",
+                  question: yhLang(
+                    "What is a recommended daily screen time limit for adolescents?",
+                    "কিশোরদের জন্য দিনে সর্বোচ্চ কতক্ষণ স্ক্রিন টাইম রাখা উচিত?"
+                  ),
+                  options: [
+                    yhLang("২ ঘণ্টার বেশি নয়", "২ ঘণ্টার বেশি নয়"),
+                    yhLang("৫ ঘণ্টা", "৫ ঘণ্টা"),
+                    yhLang("১০ ঘণ্টা", "১০ ঘণ্টা"),
+                    yhLang("যত ইচ্ছা", "যত ইচ্ছা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "কিশোর-কিশোরীরা আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে 􀊍ার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্যাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়েউঠেছে। যদিও এই প্রযুক্তিগুলো বিভিনড়ব সুযোগ এবং সুবিধা প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিনড়বতার মতো সমস্যাগুলোর জন্ম দিতে পারে। এই প্রসঙ্গে, স্বাস্থ্য সেবা প্রদানকারীদের একটি গুরুত্বপূর্ণ ভূমিকা রয়েছে কিশোর-কিশোরীদের সঠিক নির্দেশনা প্রদান এবং তাদের ডিজিটাল স্বাস্থ্য সুরক্ষা নিশ্চিত করার জন্য।";
+
+              const impactIntro =
+                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব কিশোর-কিশোরীদের মধ্যে বিশেষভাবে গভীর হতে পারে:";
+
+              const impacts = [
+                "১. মানসিক স্বাস্থ্য: অতিরিক্ত প্রযুক্তি ব্যবহারের ফলে বিষণড়বতা, উদ্বেগ, এবং নিদ্রাহীনতা তৈরি হতে পারে।",
+                "২. শারীরিক স্বাস্থ্য: দীর্ঘ সময়ধরে ডিভাইস ব্যবহার করলে চোখের ক্লাšিত, মাথাব্যথা, এবং ঘাড়ও পিঠে ব্যথা দেখা দিতে পারে।",
+                "৩. সামাজিক বিচ্ছিনড়বতা: অতিরিক্ত সামাজিক মিডিয়া ব্যবহারের ফলে বাস্তব সামাজিক মিথ¯িঙঊয়ার অভাব তৈরি হতে পারে, যা পরবর্তীতে সামাজিক দক্ষতার অভাব সৃষ্টি করতে পারে।",
+              ];
+
+              const guidelinesIntro = "প্রযুক্তি বয্বহারের জনয্ গাইডলাইন";
+
+              const guidelines = [
+                "১. দিনে ২ ঘণ্টার বেশি ¯িঙঊন টাইম পরিহার করা।",
+                "২. শারীরিক এবং মানসিক চাপ কমানোর জন্য ডিজিটাল ডিটক্সের অভ্যাস গড়ে তোলা।",
+                "৩. ঘুমের আগে অšতত ১ ঘণ্টা ডিভাইস ব্যবহার না করা।",
+                "৪. পরিবারের সঙ্গে খোলামেলা আলোচনা করে প্রযুক্তি ব্যবহারের নিয়মাবলি তৈরি করা।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Digital wellbeing guidance",
+                    "কিশোর-কিশোরীদের ডিজিটাল স্বাস্থ্য"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <div class="row g-4 align-items-stretch">
+                      <div class="col-lg-6" data-aos="fade-right">
+                        <article class="p-4 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-2">ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তির প্রভাব</h3>
+                          <p class="mb-3">${impactIntro}</p>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(impacts)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-left">
+                        <article class="p-4 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-2">${guidelinesIntro}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(guidelines)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
         id: "ch-16",
         title: yhLang(
           "Module-16: Adolescent Mental Health -  Problems and Solutions",
-          "মডিউল-১৬: কৈশোর মানসিক স্বাস্থ্য—সমস্যা ও সমাধান"
+          "মডিউল-১৬: মনোসামাজিক সহায়তা"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch16-lesson-1",
+            title: yhLang("Psychosocial Support", "মনোসামাজিক সহায়তা"),
+            icon: "fa-hands-holding-heart",
+            gradientClass: "bg-gradient-lilac",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q16a",
+                  question: yhLang(
+                    "What helps adolescents return to normal routines after crises?",
+                    "কিসের মাধ্যমে কিশোর-কিশোরীরা বিপর্যয়ের পর স্বাভাবিক জীবনে ফিরতে পারে?"
+                  ),
+                  options: [
+                    yhLang("মনোসামাজিক শিক্ষা", "মনোসামাজিক শিক্ষা"),
+                    yhLang("শুধু শারীরিক ব্যায়াম", "শুধু শারীরিক ব্যায়াম"),
+                    yhLang("অতিরিক্ত স্ক্রিন টাইম", "অতিরিক্ত স্ক্রিন টাইম"),
+                    yhLang("অনিয়ন্ত্রিত ডিভাইস ব্যবহার", "অনিয়ন্ত্রিত ডিভাইস ব্যবহার"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "এটি এমন এক ধরণের সেবা যার দ্বারা মানুষ আত্মসচেতন হওয়ার মাধ্যমে নিজের আচরণ ও মনোভাবের কাক্সিক্ষত পরিবর্তন আনতে সক্ষম হয়।";
+
+              const sections = [
+                {
+                  title: "মনোসামাজিক সহায়তাকারী",
+                  description:
+                    "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অসুবিধা হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।",
+                },
+                {
+                  title: "মনোসামাজিক শিক্ষা",
+                  description:
+                    "মনোসামাজিক শিক্ষা হল এমন এক ধরনের শিক্ষণ প্রক্রিয়া যার মাধ্যমে একজন ব্যক্তির আকস্মিক বিপর্যয়, বিপত্তি, উৎপীড়ন, নিপীড়নের ফলে যে মানসিক অবস্থার সৃষ্টি হয় তা থেকে স্বাভাবিক অবস্থায় ফিরিয়ে আনতে ও স্বাভাবিক জীবনে মানিয়ে নিতে সহায়তা করে। মনোসামাজিক শিক্ষা ব্যক্তিকে তার প্রাত্যহিক জীবনে স্বাভাবিক কর্মকান্ড পরিচালনায় সহায়তা করে এবং পরিস্থিতি মোকাবেলার জন্য প্রস্তুত করে।",
+                },
+                {
+                  title: "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা",
+                  description:
+                    "কিশোর-কিশোরীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে কিশোর-কিশোরীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
+                },
+              ];
+
+              const renderSections = (items) =>
+                items
+                  .map(
+                    (section, index) => `
+                      <section class="modern-card glass-card menstrual-info-card mt-${index === 0 ? 0 : 3}" data-aos="fade-up" data-aos-delay="${40 + index * 30}">
+                        <h3 class="h6 gradient-text mb-2">${section.title}</h3>
+                        <p class="mb-0">${section.description}</p>
+                      </section>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Psychosocial support",
+                    "মনোসামাজিক সহায়তা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  ${renderSections(sections)}
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch16-lesson-2",
+            title: yhLang(
+              "Skills for Psychosocial Support",
+              "মনোসামাজিক সহায়তার দক্ষতাসমূহ"
+            ),
+            icon: "fa-people-arrows",
+            gradientClass: "bg-gradient-gold",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q16b",
+                  question: yhLang(
+                    "What distinguishes empathy from sympathy?",
+                    "সমবেদনা ও সমমর্মিতার পার্থক্য কী?"
+                  ),
+                  options: [
+                    yhLang(
+                      "সমমর্মিতা অপরের অবস্থান থেকে বোঝার ক্ষমতা যোগ করে",
+                      "সমমর্মিতা অপরের অবস্থান থেকে বোঝার ক্ষমতা যোগ করে"
+                    ),
+                    yhLang("উভয়ই ঠিক একই", "উভয়ই ঠিক একই"),
+                    yhLang("সমমর্মিতা শুধু অনুভূতি", "সমমর্মিতা শুধু অনুভূতি"),
+                    yhLang("সমবেদনা বোঝার ক্ষমতা", "সমবেদনা বোঝার ক্ষমতা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "১. সমমর্মিতা (Empathy) সমমর্মিতা হলো যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতা (Empathy) এক নয়, সমবেদনা হলো শুধুই অনুভূতি আর সমমর্মিতা হলো অনুভূতিও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা।";
+
+              const empathyHeading = "সহমর্মী হবার ফলাফল";
+
+              const outcomes = [
+                "সেবাগ্রহীতার অনুভূতিকে তার অবস্থান থেকে বুঝতে পারা",
+                "সেবাগ্রহীতা তার ঘটনাকে বিস্তারিতভাবে বলতে উৎসাহী হবে",
+                "সেবাগ্রহীতা বুঝতে পারবে যে সহায়তাকারী তার কথাগুলোকে খুব মনোযোগ দিয়ে শুনছেন",
+                "সেবাগ্রহীতার পক্ষে কথা চালিয়ে যাওয়া সহজ হবে",
+                "সেবাগ্রহীতা এবং সহায়তাকারীর মধ্যে সুসম্পর্ক তৈরি করতে সাহায্য করবে",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Empathy skills",
+                    "সমমর্মিতা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="h6 gradient-text mb-2">${empathyHeading}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(outcomes)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch16-lesson-3",
+            title: yhLang("Attentive Listening", "মনোযোগী শ্রবণ"),
+            icon: "fa-ear-listen",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q16c",
+                  question: yhLang(
+                    "How often should direct eye contact be maintained for attentive listening?",
+                    "মনোযোগী শ্রোতা হওয়ার জন্য কত সময় পর পর দৃষ্টি সংযোগ করা উচিত?"
+                  ),
+                  options: [
+                    yhLang("প্রতি ৩/৪ সেকেন্ডে", "প্রতি ৩/৪ সেকেন্ডে"),
+                    yhLang("প্রতি ১০ মিনিটে", "প্রতি ১০ মিনিটে"),
+                    yhLang("কখনো না", "কখনো না"),
+                    yhLang("শুধু শেষে", "শুধু শেষে"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "এটি এমন একটি দক্ষতা যার মাধ্যমে শ্রোতা বক্তার কথা মনোযোগ দিয়ে শোনার সাথে সাথে সেই কথার অন্তর্নিহিত অর্থও বুঝতে পারেন।";
+
+              const sections = [
+                {
+                  title: "১। প্রশ্ন করার মাধ্যমে",
+                  description:
+                    "অংশগ্রহণকারীর কথা শুনে তার কাছে বিভিন্ন ধরনের প্রশ্ন করার মাধ্যমে তার ঘটনাটা বিস্তারিতভাবে জানা সম্ভব। যেমনঃ কবে ঘটেছিল, কোথায় ঘটেছিল, কে করেছে ইত্যাদি। অংশগ্রহণকারীর কথার ফাঁকে ফাঁকে প্রশ্ন করার মাধ্যমে ঘটনাটা বিস্তারিতভাবে জানা সম্ভব।",
+                },
+              ];
+
+              const attentivePoints = [
+                "খেয়াল করা – কীভাবে অংশগ্রহণকারী কথা বলছেন",
+                "কোন কোন শব্দগুলোকে সে জোর দিয়ে বলছে, কোন কথার মাধ্যমে সে তার আবেগকে প্রকাশ করছে",
+                "তার অভিজ্ঞতাকে বর্ণনা করতে গিয়ে সে কি কি শব্দ ব্যবহার করছে",
+                "তার বসার ভঙ্গি খেয়াল করা",
+                "মুখের ভঙ্গি খেয়াল করা",
+              ];
+
+              const additionalSections = [
+                {
+                  title: "৩। দৃষ্টি সংযোগ",
+                  description:
+                    "সঠিকভাবে চোখে চোখ রেখে কথা বলা খুবই জরুরী। ফলে সহায়তাকারী অন্যের কথা খুবই আগ্রহ নিয়ে শুনছেন তা প্রকাশ পায়। প্রতি ৩/৪ সেকেন্ডে পরপর সরাসরি দৃষ্টি সংযোগ করা মনোযোগী শ্রোতা হবার জন্য খুবই গুরুত্বপূর্ণ।",
+                },
+                {
+                  title: "৪। মৌখিকভাবে বলা",
+                  description:
+                    "আমি তোমার সাথে আছি, তোমার অবস্থাটা আমি বুঝতে পারছি ইত্যাদি।",
+                },
+                {
+                  title: "৫। স্বাভাবিকভাবে বসা",
+                  description:
+                    "মুখোমুখি একটি নির্দিষ্ট দূরত্বে জড়তাহীন ভাবে বসা, একটি ফলপ্রসূ মনোসামাজিক সহায়তা নিশ্চিত করে।",
+                },
+                {
+                  title: "৬। অবহেলা প্রদর্শনমূলক আচরণ করা যাবে না",
+                  description:
+                    "আমাদের শারীরিক ভাষা বা Body Language / Body Movement — মুখভঙ্গী, হাত-পা দিয়ে এমন আচরণ করা যাবে না যার মাধ্যমে অংশগ্রহণকারীর প্রতি অবহেলা প্রদর্শন বোঝায়।",
+                },
+                {
+                  title: "৭। সঠিক দৃষ্টিভঙ্গি (Posture)",
+                  description:
+                    "একটি ইতিবাচক আচরণ নিয়ে আসে যার মাধ্যমে অংশগ্রহণকারী সংকেত পায় যে সহায়তাকারী তার কথা খুব মনোযোগ দিয়ে শুনছে।",
+                },
+                {
+                  title: "৮। মুখের প্রকাশভঙ্গী (Facial Expression)",
+                  description:
+                    "এর মাধ্যমে সংকেত পাওয়া যায় যে অংশগ্রহণকারীর কথা শোনার জন্য প্রস্তুত ও যথেষ্ট আগ্রহী আছে।",
+                },
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderSection = (section) => `
+                <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up">
+                  <h3 class="h6 gradient-text mb-2">${section.title}</h3>
+                  <p class="mb-0">${section.description}</p>
+                </section>
+              `;
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Attentive listening skills",
+                    "মনোযোগী শ্রবণ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="h6 gradient-text mb-2">মনোযোগী শ্রোতা হওয়ার ধাপসমূহ</h3>
+                  </section>
+
+                  ${sections.map((s) => renderSection(s)).join("")}
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up">
+                    <h3 class="h6 gradient-text mb-2">২। মনোযোগী শ্রবণ</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(attentivePoints)}
+                    </ul>
+                  </section>
+
+                  ${additionalSections.map((s) => renderSection(s)).join("")}
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch16-lesson-4",
+            title: yhLang("Values", "মূল্যবোধ"),
+            icon: "fa-scale-balanced",
+            gradientClass: "bg-gradient-sage",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q16d",
+                  question: yhLang(
+                    "Which influences commonly shape personal values?",
+                    "কোন কোন প্রভাব সাধারণত আমাদের মূল্যবোধ গঠন করে?"
+                  ),
+                  options: [
+                    yhLang("পরিবার, বিদ্যালয়, সমাজ, ধর্ম", "পরিবার, বিদ্যালয়, সমাজ, ধর্ম"),
+                    yhLang("শুধু প্রযুক্তি", "শুধু প্রযুক্তি"),
+                    yhLang("শুধু বিনোদন", "শুধু বিনোদন"),
+                    yhLang("শুধু অর্থ", "শুধু অর্থ"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "মূল্যবোধ হলো আমাদের বিশ্বাস, আদর্শ ও নীতি, যার প্রভাব আমাদের আচরণের উপর পড়ে এবং জীবন পরিচালনায় সহায়তা করে। মূল্যবোধের আলোকে মানুষ তার জীবন পরিচালনা করতে উদ্বুদ্ধ হয়।";
+
+              const sourceHeading = "মূল্যবোধের উৎস";
+              const sources = [
+                "পরিবার",
+                "বিদ্যালয়",
+                "সমাজ",
+                "ধর্ম",
+                "গোত্র/গোষ্ঠী",
+                "শিক্ষা ও সংস্কৃতি",
+              ];
+
+              const examples =
+                "যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সম্মান করতে ইত্যাদি। আবার সমাজ থেকেও আমরা বিভিন্ন মূল্যবোধ শেখা যায়, যেমন—বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সম্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধূমপান না করা ইত্যাদি।";
+
+              const diversity =
+                "দেশ, সমাজ, জাতি, ধর্ম ও বর্ণভেদে মূল্যবোধ ভিন্ন হতে পারে। নিজের স্বতন্ত্র ব্যক্তিগত বিশ্বাস থেকে কিছু মূল্যবোধ তৈরি হতে পারে। এই বিভিন্নতাকে গ্রহণ এবং সম্মান করা বাঞ্ছনীয়।";
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding values",
+                    "মূল্যবোধ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="h6 gradient-text mb-2">${sourceHeading}</h3>
+                    <ul class="list-unstyled puberty-list mb-3">
+                      ${renderList(sources)}
+                    </ul>
+                    <p class="mb-0">${examples}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <p class="mb-0">${diversity}</p>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch16-lesson-5",
+            title: yhLang("Behavior", "আচরণ"),
+            icon: "fa-hands-praying",
+            gradientClass: "bg-gradient-coral",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q16e",
+                  question: yhLang(
+                    "What guides human behavior according to the lesson?",
+                    "মানুষের আচরণকে কী দ্বারা পরিচালিত বলা হয়েছে?"
+                  ),
+                  options: [
+                    yhLang("ব্যক্তির মূল্যবোধ", "ব্যক্তির মূল্যবোধ"),
+                    yhLang("মৌসুমি আবহাওয়া", "মৌসুমি আবহাওয়া"),
+                    yhLang("শুধু অর্থ", "শুধু অর্থ"),
+                    yhLang("দৈব ঘটনা", "দৈব ঘটনা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ ব্যক্তির বিশ্বাসের প্রতিফলন। যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা তাহলে আচরণ হবে অন্যের সাথে ভদ্রতার সহিত কথা বলা। মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়।";
+
+              const neutralityParagraph =
+                "প্রতিটি মানুষই আলাদা, প্রত্যেকের চিন্তা, বিশ্বাস, মূল্যবোধ এবং বিচার-বিবেচনা করার ক্ষমতা আলাদা — সেই বিষয়টির প্রতি সম্মান রেখে নিরপেক্ষ আচরণ করা একজন মনোসামাজিক সহায়তাকারীর অন্যতম গুণাবলীর মধ্যে একটি।";
+
+              const neutralHeading = "নিরপেক্ষ হবার উপায়";
+              const neutralSteps = [
+                "১. নিজের চিন্তা ও অনুভূতি সম্পর্কে সচেতন থাকা",
+                "২. নিজের মূল্যবোধ এবং বিশ্বাস খুঁজে বের করা",
+                "৩. অন্যের ব্যক্তি স্বাধীনতায় বিশ্বাস করা এবং অন্যের মূল্যবোধের প্রতি সহনশীল থাকা",
+                "৪. মনোযোগী শ্রোতা হওয়া",
+                "৫. নিজের সাথে ইতিবাচক কথা বলা",
+                "৬. অন্যের প্রতি সহমর্মিতা প্রকাশ করা",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding behavior",
+                    "আচরণ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <p class="mb-0">${neutralityParagraph}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="h6 gradient-text mb-2">${neutralHeading}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(neutralSteps)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-17",
         title:
           yhLang(
             "Module-17: Psychosocial changes and Psychosocial complications during adolescence",
-            "মডিউল-১৭: কৈশোরে মনোসামাজিক পরিবর্তন ও জটিলতা"
+            "মডিউল-১৭: মাদকাসক্তি পরিণতি ও প্রতিরোধ"
           ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch17-lesson-1",
+            title: yhLang("Drug Addiction", "মাদকাসক্তি"),
+            icon: "fa-syringe",
+            gradientClass: "bg-gradient-ruby",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q17a",
+                  question: yhLang(
+                    "What happens when a person stops taking addictive substances?",
+                    "মাদক গ্রহণ বন্ধ করলে কী ধরনের প্রভাব দেখা যায়?"
+                  ),
+                  options: [
+                    yhLang("Withdrawal-এর মতো প্রভাব", "Withdrawal-এর মতো প্রভাব"),
+                    yhLang("তাৎক্ষণিক সাফল্য", "তাৎক্ষণিক সাফল্য"),
+                    yhLang("শুধু ক্ষুধা বৃদ্ধি", "শুধু ক্ষুধা বৃদ্ধি"),
+                    yhLang("কোনো পরিবর্তন হয় না", "কোনো পরিবর্তন হয় না"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "মদ, গাঁজা, আফিম, পেথেড্রিন, হেরোইন, সিসা, ইয়াবা, ডায়াজেপাম—যে সব বস্তুকে গ্রহণ করলে আসক্তির উদ্রেক ঘটায় এবং পরবর্তীতে গ্রহণ না করলে শরীরে তৎপরতার পরিবর্তন বা Withdrawal-এর মতো প্রভাব ফেলে, তাই মাদকদ্রব্য হিসাবে পরিচিত। নিয়মিত মাদক সেবন করতে করতে এক পর্যায়ে ব্যক্তিটি পুরোপুরি মাদকনির্ভর হয়ে পড়ে এবং মাদক ছাড়া চলতে পারে না। এই অবস্থাই হলো মাদকাসক্তি।";
+
+              const causesHeading = "মাদকাসক্তির কারণ";
+              const causes = [
+                "মাদকদ্রব্যের সহজলভ্যতা",
+                "মাদকদ্রব্য সম্পর্কে কৌতূহল",
+                "বন্ধুদের চাপে পড়ে মাদক গ্রহণ",
+                "হতাশা ও ব্যর্থতা কাটাতে মাদক গ্রহণ",
+                "পারিপার্শ্বিক পরিবেশের প্রভাব",
+                "নিছক আনন্দের জন্য",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Understanding drug addiction",
+                    "মাদকাসক্তি"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-6" data-aos="fade-right">
+                        <article class="p-4 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${causesHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(causes)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-left">
+                        <div class="image-wrapper text-center">
+                          <img src="img/modu17/madok.jpg" alt="Drug addiction" class="img-fluid rounded shadow-sm" />
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch17-lesson-2",
+            title: yhLang("Signs of Addiction", "মাদকাসক্তির লক্ষণসমূহ"),
+            icon: "fa-eye",
+            gradientClass: "bg-gradient-amber",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q17b",
+                  question: yhLang(
+                    "Which column covers behavioral signs of drug addiction?",
+                    "মাদকাসক্তির আচরণগত লক্ষণ কোন কলামে রয়েছে?"
+                  ),
+                  options: [
+                    yhLang("আচরণগত লক্ষণসমূহ", "আচরণগত লক্ষণসমূহ"),
+                    yhLang("শারীরিক লক্ষণসমূহ", "শারীরিক লক্ষণসমূহ"),
+                    yhLang("দুটি-ই", "দুটি-ই"),
+                    yhLang("কোনোটিই নয়", "কোনোটিই নয়"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const physicalSigns = [
+                "১. লাল ও ছলছলে চোখ",
+                "২. ক্ষুধামন্দা, বমিবমি ভাব, বমি হওয়া",
+                "৩. ভারসাম্যহীনতা (অস্থিরতা)",
+                "৪. হাত-পা কাঁপা",
+                "৫. বুক ধড়ফড় করা",
+                "৬. অতিরিক্ত দুর্বল লাগা, ঘুম ঘুম ভাব",
+                "৭. হাত-পায়ের শিরায় সুঁচ ফোটানোর দাগ এবং ফুলহাতা শার্ট পরে এগুলো ঢাকার প্রচেষ্টা",
+                "৮. স্বাস্থ্য ভেঙে যাওয়া এবং খাওয়া-দাওয়ার অভ্যাসে পরিবর্তন হওয়া",
+              ];
+
+              const behavioralSigns = [
+                "১. সারা রাত জেগে থাকা এবং দিনের বেলায় ঘুমানো",
+                "২. লেখাপড়া খারাপ করা",
+                "৩. নিজের ও পোশাক-পরিচ্ছদের প্রতি উদাসীনতা প্রদর্শন",
+                "৪. যখন-তখন বাইরে যাওয়া, অধিক রাতে ঘরে ফেরা",
+                "৫. পরিবারের কাছ থেকে বেশি হাতখরচের টাকা-পয়সা চাওয়া",
+                "৬. বিছানার আশপাশে এবং বালিশ ও বিছানার নিচে ট্যাবলেটের খালি স্ট্রিপ পড়ে থাকা",
+                "৭. অনেক সময় অপ্রকৃতস্থ অবস্থায় ঘরে ফেরা এবং পরিবারের লোকজনদের সাথে দুর্ব্যবহার করা",
+                "৮. খিটখিটে মেজাজ",
+                "৯. প্রায়ই মিথ্যা কথা বলা, চুরি করা",
+                "১০. দেনাগ্রস্ত হয়ে পড়া",
+                "১১. ঘনঘন মোবাইলের সিম পরিবর্তন",
+                "১২. প্রায়ই রাস্তাঘাটে দুর্ঘটনার কবলে পড়া",
+                "১৩. অসামাজিক ও অপরাধমূলক কাজকর্মে লিপ্ত হওয়া",
+                "১৪. নতুন (নেশাগ্রস্ত) বন্ধুবান্ধব হওয়া এবং পুরোনো ভালো বন্ধুদের সাথে সম্পর্ক না রাখা",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Drug addiction signs",
+                    "মাদকাসক্তির লক্ষণসমূহ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="30">
+                    <div class="table-responsive">
+                      <table class="table table-bordered align-middle addiction-table">
+                        <thead>
+                          <tr>
+                            <th class="text-uppercase text-muted">${yhLang(
+                              "শারীরিক লক্ষণসমূহ",
+                              "শারীরিক লক্ষণসমূহ"
+                            )}</th>
+                            <th class="text-uppercase text-muted">${yhLang(
+                              "আচরণগত লক্ষণসমূহ",
+                              "আচরণগত লক্ষণসমূহ"
+                            )}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <ul class="list-unstyled puberty-list mb-0">
+                                ${renderList(physicalSigns)}
+                              </ul>
+                            </td>
+                            <td>
+                              <ul class="list-unstyled puberty-list mb-0">
+                                ${renderList(behavioralSigns)}
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch17-lesson-3",
+            title: yhLang("মাদকাসক্তির পরিণতি ও প্রতিরোধ", "মাদকাসক্তির পরিণতি ও প্রতিরোধ"),
+            icon: "fa-scale-balanced",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q17c",
+                  question: yhLang(
+                    "পাঠে উল্লেখিত কোনটি মাদকাসক্তির পরিণতি?",
+                    "পাঠে উল্লেখিত কোনটি মাদকাসক্তির পরিণতি?"
+                  ),
+                  options: [
+                    yhLang("সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া", "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া"),
+                    yhLang("মাদক সহজলভ্য করা", "মাদক সহজলভ্য করা"),
+                    yhLang("মাদকাসক্তিকে উৎসাহিত করা", "মাদকাসক্তিকে উৎসাহিত করা"),
+                    yhLang("মাদকাসক্তদের অবহেলা করা", "মাদকাসক্তদের অবহেলা করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const consequences = [
+                "ব্যক্তিগত, পারিবারিক ও সামাজিক কর্মকাণ্ড ব্যাহত হয়",
+                "বিভিন্ন ধরনের শারীরিক রোগ যেমন– লিভার, কিডনি, ব্রেইন ইত্যাদি অঙ্গের রোগ হতে পারে, এমনকি মৃত্যু হতে পারে এমন রোগেও আক্রান্ত হয় যেমন– এইডস, হেপাটাইটিস ইত্যাদি",
+                "ধীরে ধীরে স্বাস্থ্যহানি হতে থাকে (ওজন অতিরিক্ত কম বা বেশি হতে পারে)",
+                "যৌন সমস্যা যেমন যৌন অক্ষমতা, পুরুষত্বহীনতা হয়",
+                "গর্ভকালীন সময়ে মাদকাসক্তি হলে গর্ভস্থ বাচ্চার ক্ষতি হয়",
+                "ফুসফুস, খাদ্যনালী, পাকস্থলি, লিভার ইত্যাদির ক্যান্সারে আক্রান্ত হতে পারে",
+                "অপরাধমূলক কর্মকাণ্ডে জড়িয়ে পড়া",
+                "লেখাপড়া ও পেশাগত কাজে পিছিয়ে পড়া",
+                "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া",
+                "আর্থিকভাবে ক্ষতিগ্রস্ত হওয়া",
+                "মানসিক চাপে ভোগা ও আত্মহত্যার প্রবণতা দেখা দেয়",
+              ];
+
+              const prevention = [
+                "সহজলভ্যতা কমানো",
+                "সুশৃঙ্খল পারিবারিক বন্ধনে সহায়তা করা",
+                "স্থানীয় পর্যায়ে তরুণদের মধ্যে মাদকের ক্ষতিকর দিক সম্পর্কে সচেতনতা বৃদ্ধি",
+                "ধর্মীয় ও নৈতিক অনুশাসন মেনে চলতে উদ্বুদ্ধ করা",
+                "খেলাধুলা ও সুস্থ বিনোদনমূলক কর্মকাণ্ডে সম্পৃক্ততা বৃদ্ধি করা",
+                "দ্রুত মাদকাসক্তি শনাক্তকরণ ও চিকিৎসার জন্য প্রেরণ করা",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "মাদকাসক্তির পরিণতি ও প্রতিরোধ",
+                    "মাদকাসক্তির পরিণতি ও প্রতিরোধ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="30">
+                    <div class="row g-4 align-items-stretch">
+                      <div class="col-lg-6" data-aos="fade-right">
+                        <article class="p-4 h-100 glass-card shadow-sm">
+                          <h3 class="h5 gradient-text mb-3">${yhLang(
+                            "মাদকাসক্তির পরিণতি",
+                            "মাদকাসক্তির পরিণতি"
+                          )}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(consequences)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-left">
+                        <article class="p-4 h-100 glass-card shadow-sm d-flex flex-column justify-content-between">
+                          <div>
+                            <h3 class="h5 gradient-text mb-3">${yhLang(
+                              "মাদকাসক্তি প্রতিরোধ",
+                              "মাদকাসক্তি প্রতিরোধ"
+                            )}</h3>
+                            <ul class="list-unstyled puberty-list mb-0">
+                              ${renderList(prevention)}
+                            </ul>
+                          </div>
+                          <div class="text-center mt-4">
+                            <img src="img/modu17/madok2.jpg" alt="মাদকাসক্তি প্রতিরোধ" class="img-fluid rounded shadow-sm" />
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-18",
