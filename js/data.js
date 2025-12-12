@@ -11807,6 +11807,380 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch18-lesson-6",
+            title: yhLang("Snake Bite Response", "সাপের কামড়"),
+            icon: "fa-snake",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18f",
+                  question: yhLang(
+                    "সাপের কামড়ে আক্রান্ত অঙ্গকে কীভাবে রাখা উচিত?",
+                    "সাপের কামড়ে আক্রান্ত অঙ্গকে কীভাবে রাখা উচিত?"
+                  ),
+                  options: [
+                    yhLang("যথাসম্ভব স্থির ও বাঁধা অবস্থায়", "যথাসম্ভব স্থির ও বাঁধা অবস্থায়"),
+                    yhLang("বারবার নাড়াচাড়া করে", "বারবার নাড়াচাড়া করে"),
+                    yhLang("গরম পানিতে ডুবিয়ে", "গরম পানিতে ডুবিয়ে"),
+                    yhLang("গিঁট বেঁধে রক্ত চলাচল বন্ধ করে", "গিঁট বেঁধে রক্ত চলাচল বন্ধ করে"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "বাংলাদেশে বেশির ভাগ সাপের কামড় বিষহীন সাপ দ্বারা হয়ে থাকে। যদি কোনো ব্যক্তিকে বিষধর সাপে কামড়েছে বলে মনে হয়, তাহলে প্রধান কাজ হল বিষ দ্রুত শরীরে ছড়িয়ে পড়া প্রতিরোধ করা। সে কারণে আক্রান্ত ব্যক্তি যেন নড়াচড়া না করে তার ব্যবস্থা নিতে হবে।";
+
+              const steps = [
+                "যদি আক্রান্ত ব্যক্তির শ্বাস-প্রশ্বাস স্বাভাবিক থাকে, তাহলে ব্যক্তিকে স্থির এবং শান্ত থাকতে বলুন। কামড়ের জায়গা ফুলে যেতে পারে, তাই কোনো আংটি, ঘড়ি, অলংকার বা বাঁধন থাকলে তা খুলে দিন।",
+                "ক্ষত স্থানটি পরীক্ষা করে দেখুন, সাপে কামড়ের স্থানটি ছিদ্র হয়ে গেছে কিনা। কামড়ের স্থানটি পরিষ্কার পানি দিয়ে ভাল করে ধুয়ে ফেলুন।",
+                "আক্রান্ত অঙ্গটিকে নড়াচড়া কম করতে দিন এবং লাঠি, কাঠ বা বাঁশের ফালি দিয়ে বেঁধে দিন যেন অঙ্গটি যথাসম্ভব স্থির থাকে।",
+                "আক্রান্ত ব্যক্তির দিকে খেয়াল রাখুন নিচের কোনো বিপদ লক্ষণ আছে কিনা, যেমন—ক্ষতস্থান থেকে রক্তপাত হওয়া, মাথা ঘোরানো, বমি করা, কামড়ের অংশ ফুলে যাওয়া, চোখের পাতা বন্ধ হয়ে আসা বা চোখে ঝাপসা দেখা, শ্বাসকষ্ট হওয়া, প্রস্রাবের পরিমাণ কমে যাওয়া / গাঢ় বর্ণের প্রস্রাব হওয়া।",
+                "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে সিপিআর শুরু করুন। কামড়ের স্থানে কোনো গিঁট বাঁধা যাবে না / ক্ষত স্থানটি কাটা যাবে না।",
+                "সুঁই দিয়ে ক্ষতস্থানটি খোচানো যাবেনা বা মলম বা লোশন জাতীয় কিছু লাগানো যাবে না।",
+                "স্থানীয় কবিরাজ বা ওঝার কাছে চিকিৎসা নেয়া অথবা কোনো ভেষজ ওষুধ প্রয়োগ করা যাবে না।",
+                "আক্রান্ত ব্যক্তিকে দ্রুত হাসপাতালে নিতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "সাপের কামড়",
+                    "সাপের কামড়"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-12">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(steps)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch18-lesson-7",
+            title: yhLang("Dog Bite Care", "কুকুরের কামড়"),
+            icon: "fa-dog",
+            gradientClass: "bg-gradient-brown",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18g",
+                  question: yhLang(
+                    "কুকুরের কামড়ের ক্ষত কতক্ষণ ধুয়ে রাখতে বলা হয়েছে?",
+                    "কুকুরের কামড়ের ক্ষত কতক্ষণ ধুয়ে রাখতে বলা হয়েছে?"
+                  ),
+                  options: [
+                    yhLang("কমপক্ষে ১৫ মিনিট", "কমপক্ষে ১৫ মিনিট"),
+                    yhLang("৫ মিনিট", "৫ মিনিট"),
+                    yhLang("৩০ সেকেন্ড", "৩০ সেকেন্ড"),
+                    yhLang("১ মিনিট", "১ মিনিট"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "কুকুরের কামড়ের ক্ষত থেকে অতিরিক্ত রক্তপাত বা সংক্রমণজনিত রোগ যেমন জলাতংক বা র‌্যাবিস হতে পারে। জলাতংক রোগে জীবণনাশের সম্ভাবনা শতভাগ। বাংলাদেশে জলাতঙ্ক একটি জনস্বাস্থ্য বিষয়ক সমস্যা এবং লক্ষ্য রাখতে হবে প্রাথমিক চিকিৎসা প্রদানকারী যেন নিজেকে এ রোগ সংক্রমণের ঝুঁকিতে না রাখে।";
+
+              const symptomsHeading = "কুকুরের কামড়ের সম্ভাব্য লক্ষণ";
+              const symptoms = [
+                "ক্ষত স্থানে ব্যথা",
+                "ক্ষত স্থান লাল হয়ে যাওয়া",
+                "ক্ষত স্থান ফুলে যাওয়া",
+                "ক্ষত স্থান থেকে পুঁজ বের হওয়া",
+                "জ্বর হওয়া",
+                "শরীরের গ্ল্যান্ড বা গ্রন্থি ফুলে যাওয়া",
+              ];
+
+              const careSteps = [
+                "প্রাথমিক চিকিৎসা প্রদানের পূর্বে ঘটনাস্থলের নিরাপত্তা এবং প্রাণীটি যাতে আর কামড় দিতে না পারে, তা নিশ্চিত করতে হবে।",
+                "কামড়ানো অংশে যদি কোন আংটি বা বাঁধন থাকে তা খুলে দিতে হবে, কারণ সে অংশটি ফুলে যেতে পারে।",
+                "ক্ষতস্থানটি পরিষ্কার পানি ও ক্ষার জাতীয় সাবান ব্যবহার করে কমপক্ষে ১৫ মিনিটের মতো ধুয়ে ফেলতে হবে। প্রবাহমান পানির উৎস যেমন ট্যাপের পানি ব্যবহার করতে হবে, তবে যদি প্রবাহমান পানির ব্যবস্থা না থাকে, তাহলে কিছুক্ষণ পরপর পানি বদলিয়ে কামড়ের জায়গাটি ভালোভাবে ধুয়ে নিতে হবে। ক্ষত স্থান হাত দিয়ে ধরা যাবে না।",
+                "ক্ষত স্থান শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে রাখতে হবে। যদি ক্ষতস্থান থেকে প্রচুর রক্তপাত হয়, তবে “রক্তক্ষরণ নিয়ন্ত্রণ” অংশে বর্ণিত পদ্ধতি অনুযায়ী প্রাথমিক চিকিৎসা দিতে হবে।",
+                "পরবর্তী চিকিৎসার জন্য আহত ব্যক্তিকে দ্রুত নিকটস্থ হাসপাতালে নিতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কুকুরের কামড়",
+                    "কুকুরের কামড়"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-6">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${symptomsHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(symptoms)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-6">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${yhLang(
+                            "প্রাথমিক চিকিৎসার ধাপ",
+                            "প্রাথমিক চিকিৎসার ধাপ"
+                          )}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(careSteps)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch18-lesson-8",
+            title: yhLang("Poisoning Response", "বিষক্রিয়া"),
+            icon: "fa-skull-crossbones",
+            gradientClass: "bg-gradient-plum",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18h",
+                  question: yhLang(
+                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?",
+                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?"
+                  ),
+                  options: [
+                    yhLang("ঝাপসা দৃষ্টি", "ঝাপসা দৃষ্টি"),
+                    yhLang("শুধু ঘুম", "শুধু ঘুম"),
+                    yhLang("চুলে ব্যথা", "চুলে ব্যথা"),
+                    yhLang("নখ লম্বা হওয়া", "নখ লম্বা হওয়া"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "বাংলাদেশে কীটনাশকজনিত বিষক্রিয়া (অর্গানোফসফরাস/ওপিসি) একটি সাধারণ ঘটনা। বিভিন্ন ভাবে বিষাক্ত দ্রব্য ব্যক্তির শরীরে প্রবেশ করতে পারে যা ইচ্ছাকৃত বা অনিচ্ছাকৃত দুইভাবেই হতে পারে।";
+
+              const signsHeading = "বিষক্রিয়ার লক্ষণ-চিহ্নঃ";
+              const signs = [
+                "সাড়া না থাকা / অজ্ঞান হয়ে যাওয়া",
+                "বমি বমি ভাব",
+                "বমি করা",
+                "ঠোঁট, জিহ্বা পুড়ে যাওয়া (এসিড, ক্ষার বা দাহ্য বস্তু দ্বারা হলে)",
+                "মাথাব্যথা",
+                "ঝাপসা দৃষ্টি",
+                "খিঁচুনি",
+                "চামড়ার অস্বাভাবিক রঙ",
+              ];
+
+              const followUp =
+                "যদি মনে হয় কোন ব্যক্তি বিষক্রিয়ায় আক্রান্ত, তবে বিষাক্ত দ্রব্যটি চিহ্নিত করার চেষ্টা করতে হবে এবং তৎক্ষণাৎ চিকিৎসকের কাছে বা হাসপাতালে নিতে হবে। এই সময়ের মাঝে নিম্নলিখিত প্রাথমিক চিকিৎসা পদ্ধতি গুলো ব্যবহার করা যেতে পারে।";
+
+              const careHeading = "বিষক্রিয়ার প্রাথমিক চিকিৎসা";
+              const careSteps = [
+                "আক্রান্ত ব্যক্তিটিকে যথাসম্ভব স্থির রাখার চেষ্টা করতে হবে।",
+                "নিশ্বাস-প্রশ্বাসের মাধ্যমে বিষক্রিয়া হয়ে থাকলে, অবিলম্বে ব্যক্তিকে সতেজ বাতাসে নিয়ে আসতে হবে।",
+                "আক্রান্ত ব্যক্তিকে প্রচুর পরিমাণে পানি খাওয়ানোর চেষ্টা করতে হবে।",
+                "ঘটনাস্থল এবং আক্রান্ত ব্যক্তিকে পরীক্ষা করতে হবে। ব্যক্তিটি কী বিষ গ্রহণ করেছিল তা খুঁজে বের করার চেষ্টা করতে হবে এবং খুঁজে পেলে তা আক্রান্ত ব্যক্তির সাথে হাসপাতালে নিয়ে যেতে হবে।",
+                "যদি আক্রান্ত ব্যক্তির শরীরের চামড়ায় কোনো বিষাক্ত পদার্থ পাওয়া যায়, তাহলে আক্রান্ত স্থানটি পরিষ্কার পানি দিয়ে ধুয়ে ফেলতে হবে।",
+              ];
+
+              const caution =
+                "অ্যাসিড, ক্ষার বা কোনো দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তিকে বমি করাবেন না (যেমন—ব্লিচ, সালফিউরিক অ্যাসিড, কেরোসিন, পেট্রোলিয়াম)।";
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderDividers = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <div class="poison-step">
+                        <p class="mb-0">${item}</p>
+                        <hr class="my-3" />
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "বিষক্রিয়া",
+                    "বিষক্রিয়া"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-6">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${signsHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-3">
+                            ${renderList(signs)}
+                          </ul>
+                          <p class="mb-0">${followUp}</p>
+                        </article>
+                      </div>
+                      <div class="col-lg-6">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${careHeading}</h3>
+                          ${renderDividers(careSteps)}
+                          <div class="alert alert-warning mt-3 mb-0" role="alert">
+                            <strong>${yhLang("সতর্কতা:", "সতর্কতা:")}</strong> ${caution}
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch18-lesson-9",
+            title: yhLang("Drowning Response", "পানিতে ডুবা"),
+            icon: "fa-life-ring",
+            gradientClass: "bg-gradient-cyan",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18i",
+                  question: yhLang(
+                    "সাঁতরে গেলে ডুবন্ত ব্যক্তির থেকে কত দূরে থাকতে বলা হয়েছে?",
+                    "সাঁতরে গেলে ডুবন্ত ব্যক্তির থেকে কত দূরে থাকতে বলা হয়েছে?"
+                  ),
+                  options: [
+                    yhLang("কমপক্ষে ২ মিটার", "কমপক্ষে ২ মিটার"),
+                    yhLang("অর্ধ মিটার", "অর্ধ মিটার"),
+                    yhLang("৫ সেমি", "৫ সেমি"),
+                    yhLang("১০ মিটার", "১০ মিটার"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা। কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে। ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে। ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে। যদি পুকুর বা জলাশয় অগভীর থাকে তবে পানিতে নেমে ডুবন্ত ব্যক্তির কাছে যাওয়া যেতে পারে। সবসময় ডুবন্ত ব্যক্তির কাছ থেকে কমপক্ষে ২ মিটার দূরে থাকতে হবে যেন ডুবন্ত ব্যক্তি কখনোই যাকে বাঁচাতে যায় তাকেই জাপটে ধরতে না পারে।";
+
+              const rescueHeading = "ডুবন্ত অজ্ঞান ব্যক্তিকে উদ্ধার এবং প্রাথমিক চিকিৎসা";
+              const rescueSteps = [
+                "পানিতে নেমে সাঁতরে ডুবন্ত ব্যক্তির কাছে যেতে হবে।",
+                "ডুবন্ত ব্যক্তিকে পানিতে চিত করতে হবে।",
+                "ডুবন্ত ব্যক্তির থুতনি ধরে পানি থেকে তীরে আনতে হবে।",
+                "কারো সাহায্য নিয়ে ডুবন্ত ব্যক্তিকে পানি থেকে তুলে আনতে হবে।",
+                "আক্রান্ত ব্যক্তিকে শক্ত ও সমতল স্থানে মুখ উপরের দিকে করে শুইয়ে দিতে হবে।",
+                "শ্বাসপথ এবং শ্বাসপ্রশ্বাস যাচাই করতে হবে।",
+                "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে। যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।",
+              ];
+
+              const renderSteps = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <div class="poison-step">
+                        <p class="mb-0">${item}</p>
+                        <hr class="my-3" />
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "পানিতে ডুবা",
+                    "পানিতে ডুবা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-7">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${rescueHeading}</h3>
+                          ${renderSteps(rescueSteps)}
+                        </article>
+                      </div>
+                      <div class="col-lg-5">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu18/pani.jpg" alt="ডুবন্ত ব্যক্তিকে উদ্ধার" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
