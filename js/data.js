@@ -11343,9 +11343,471 @@ const coursesData = [
         id: "ch-18",
         title: yhLang(
           "Module-18: Psychosocial support for adolescents",
-          "মডিউল-১৮: কৈশোরে মনোসামাজিক সহায়তা"
+          "মডিউল-১৮: কিশোর কিশোরীদের ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবা"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch18-lesson-1",
+            title: yhLang("First Aid Support", "প্রাথমিক চিকিৎসা"),
+            icon: "fa-briefcase-medical",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18a",
+                  question: yhLang(
+                    "প্রাথমিক চিকিৎসার প্রথম লক্ষ্য কী?",
+                    "প্রাথমিক চিকিৎসার প্রথম লক্ষ্য কী?"
+                  ),
+                  options: [
+                    yhLang("জীবন বাঁচানো", "জীবন বাঁচানো"),
+                    yhLang("অনর্থক ভিড় করা", "অনর্থক ভিড় করা"),
+                    yhLang("আক্রান্তকে অবহেলা করা", "আক্রান্তকে অবহেলা করা"),
+                    yhLang("চিকিৎসাসেবা বিলম্বিত করা", "চিকিৎসাসেবা বিলম্বিত করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "বিভিন্ন পরিস্থিতিতে ইনজুরির কারণে আহত ব্যক্তি বা হঠাৎ করে অসুস্থ হয়ে পড়া ব্যক্তিকে প্রাথমিকভাবে যে সহায়তা দেওয়া হয়, তাকে প্রাথমিক চিকিৎসা বলে। সাধারণত প্রাথমিক চিকিৎসা দেওয়া হয় ঘটনাস্থলে চিকিৎসক বা প্যারামেডিকস আসার পূর্বে, অথবা অ্যাম্বুলেন্স আসার পূর্বে, অথবা আক্রান্ত ব্যক্তিকে চিকিৎসাকেন্দ্র বা হাসপাতালে নিয়ে যাওয়া পর্যন্ত।";
+
+              const goalsHeading = "প্রাথমিক চিকিৎসার লক্ষ্য হলোঃ";
+              const goals = [
+                "জীবন বাঁচানো",
+                "আহত বা আক্রান্ত ব্যক্তির শারীরিক অবস্থার অবনতি রোধ করা",
+                "আক্রান্ত ব্যক্তির অবনতির অবস্থা এবং ফলস্বরূপ প্রতিবন্ধিতার সম্ভাবনা কমানো",
+                "আরোগ্য লাভে সাহায্য করা",
+                "নিকটস্থ চিকিৎসাসেবা কেন্দ্রে আক্রান্ত ব্যক্তিকে নিরাপদে পরিবহন করা",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "প্রাথমিক চিকিৎসার পরিচিতি",
+                    "প্রাথমিক চিকিৎসার পরিচিতি"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="h6 gradient-text mb-3">${goalsHeading}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(goals)}
+                    </ul>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch18-lesson-2",
+            title: yhLang("Bleeding Control", "রক্তক্ষরণ নিয়ন্ত্রণ"),
+            icon: "fa-bandage",
+            gradientClass: "bg-gradient-crimson",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18b",
+                  question: yhLang(
+                    "রক্তক্ষরণে চাপ দিয়ে রাখা কাপড় ভিজে গেলে কী করতে হবে?",
+                    "রক্তক্ষরণে চাপ দিয়ে রাখা কাপড় ভিজে গেলে কী করতে হবে?"
+                  ),
+                  options: [
+                    yhLang("উপর থেকে আরেকটি পরিষ্কার কাপড় লাগাতে হবে", "উপর থেকে আরেকটি পরিষ্কার কাপড় লাগাতে হবে"),
+                    yhLang("আগের কাপড় খুলে ফেলতে হবে", "আগের কাপড় খুলে ফেলতে হবে"),
+                    yhLang("ক্ষতস্থান ধুয়ে নিতে হবে", "ক্ষতস্থান ধুয়ে নিতে হবে"),
+                    yhLang("ক্ষতস্থানে চাপ দেওয়া বন্ধ করতে হবে", "ক্ষতস্থানে চাপ দেওয়া বন্ধ করতে হবে"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "কোন আঘাত বা দুর্ঘটনার ফলে প্রচুর রক্তপাত ঘটতে পারে যা আক্রান্ত ব্যক্তির জন্য জীবন-সংশয় তৈরি করতে পারে। এমন অবস্থায় তাৎক্ষণিক ব্যবস্থাপনা প্রয়োজন এবং দ্রুত রক্তপাত বন্ধ করা প্রাথমিক চিকিৎসার মূল লক্ষ্য।";
+
+              const stepsHeading = "রক্তক্ষরণের প্রাথমিক চিকিৎসা";
+              const steps = [
+                "আক্রান্ত ব্যক্তিকে আরামদায়ক অবস্থানে বসানোর বা শোয়ানোর ব্যবস্থা করতে হবে।",
+                "পরিষ্কার কাপড় বা গজ দিয়ে ক্ষতস্থানটি চেপে ধরতে হবে। ক্ষতস্থানটি যদি অল্প জায়গা জুড়ে হয়, তবে কাপড় বা গজ ১০ মিনিট পর্যন্ত চাপ দিয়ে ধরে রাখতে হবে (যতক্ষণ রক্তপাত বন্ধ না হয়)।",
+                "চাপ দিয়ে ধরে রাখা গজ বা কাপড়ের প্রথম স্তরটি যদি রক্তে ভিজে যায়, তবুও গজ বা কাপড়টি সরানো যাবে না। এর উপরে অন্য একটি পরিষ্কার কাপড় বা গজ দিয়ে চেপে ধরতে হবে।",
+                "গজ/কাপড়সহ ক্ষতস্থানটি একটি পরিষ্কার কাপড় বা ব্যান্ডেজের সাহায্যে বাঁধতে হবে।",
+                "ক্ষতস্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিণ্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয়—এর ফলে রক্তপাত কমে যাবে। কারণ অধিক রক্তক্ষরণে অজ্ঞান হয়ে যাওয়ার সম্ভাবনা থাকে।",
+                "ক্ষত গভীর হলে বা রক্তক্ষরণ বন্ধ না হলে দক্ষ স্বাস্থ্যকর্মীর সাহায্য নিতে হবে এবং আক্রান্ত ব্যক্তিকে স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে। প্রয়োজনে ক্ষতস্থানে আরো গজ বা কাপড়ের সাহায্যে চেপে ধরে রাখতে হতে পারে।",
+                "কোন ব্যক্তির শরীরে কোন বস্তু ঢুকে রক্তপাত হলে (যেমন ভাঙা কাঁচ বা কাঠি), ক্ষতস্থান থেকে বস্তুটি বের করার চেষ্টা করা যাবে না। ক্ষতস্থানের দুই পাশে চেপে ধরতে হবে, তবে ক্ষতস্থানের উপর চাপ দেওয়া যাবে না।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "রক্তক্ষরণ নিয়ন্ত্রণ",
+                    "রক্তক্ষরণ নিয়ন্ত্রণ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7" data-aos="fade-left">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${stepsHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(steps)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-5" data-aos="fade-right">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu18/rokto.jpg" alt="রক্তক্ষরণ নিয়ন্ত্রণ" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch18-lesson-3",
+            title: yhLang("Burn Injuries", "পোড়া"),
+            icon: "fa-fire",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18c",
+                  question: yhLang(
+                    "তৃতীয় ডিগ্রি বার্নে কোন স্তর ক্ষতিগ্রস্ত হয়?",
+                    "তৃতীয় ডিগ্রি বার্নে কোন স্তর ক্ষতিগ্রস্ত হয়?"
+                  ),
+                  options: [
+                    yhLang("ত্বকের সব স্তর", "ত্বকের সব স্তর"),
+                    yhLang("শুধু এপিডার্মিস", "শুধু এপিডার্মিস"),
+                    yhLang("শুধু ডার্মিস", "শুধু ডার্মিস"),
+                    yhLang("শুধু চুল", "শুধু চুল"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "বাংলাদেশে পুড়ে যাওয়া হল ইনজুরির অন্যতম কারণ। পুড়ে যাওয়া স্থানের দ্রুত চিকিৎসা করা প্রয়োজন।";
+
+              const burnTypesHeading = "পোড়া ক্ষতের প্রকারভেদ";
+              const burnTypes = [
+                {
+                  title: "প্রথম ডিগ্রি বার্ন",
+                  text: "ত্বকের উপরিভাগ ক্ষতিগ্রস্ত হয়। লক্ষণগুলোর মধ্যে রয়েছে লালভাব, ফোলা এবং হালকা ব্যথা।",
+                },
+                {
+                  title: "দ্বিতীয় ডিগ্রি বার্ন",
+                  text: "ত্বকের উপরের স্তর এবং নিচের ডার্মিস স্তর ক্ষতিগ্রস্ত হয়। ফোসকা, তীব্র ব্যথা এবং লালভাব দেখা দেয়।",
+                },
+                {
+                  title: "তৃতীয় ডিগ্রি বার্ন",
+                  text: "ত্বকের সব স্তর ক্ষতিগ্রস্ত হয় এবং টিস্যু মারা যেতে পারে। ক্ষতস্থান কালো, সাদা বা বাদামী রঙের হতে পারে এবং ব্যথা অনুভূত নাও হতে পারে।",
+                },
+              ];
+
+              const causesHeading = "পোড়া ক্ষতের কারণ";
+              const causes = [
+                "তাপ: আগুন, গরম পানি, বাষ্প বা গরম বস্তু সংস্পর্শ",
+                "রাসায়নিক: এসিড, ক্ষার বা অন্যান্য রাসায়নিকের সংস্পর্শ",
+                "বিদ্যুৎ: বৈদ্যুতিক শক বা বিদ্যুৎ প্রবাহ",
+                "বিকিরণ: সূর্যের অতিবেগুনি রশ্মি বা রেডিওথেরাপির কারণে",
+              ];
+
+              const renderTypeCards = (items) =>
+                items
+                  .map(
+                    (item, index) => `
+                      <article class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="${60 +
+                        index * 40}">
+                        <h4 class="h6 gradient-text mb-1">${item.title}</h4>
+                        <p class="mb-0">${item.text}</p>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "পোড়া",
+                    "পোড়া"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <div class="burn-types">
+                          <h3 class="h6 gradient-text mb-3">${burnTypesHeading}</h3>
+                          ${renderTypeCards(burnTypes)}
+                          <h3 class="h6 gradient-text mb-3">${causesHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(causes)}
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu18/pora.jpg" alt="পোড়া" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch18-lesson-4",
+            title: yhLang("Burn First Aid", "পোড়ার প্রাথমিক চিকিৎসা"),
+            icon: "fa-hand-holding-medical",
+            gradientClass: "bg-gradient-gold",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18d",
+                  question: yhLang(
+                    "পোড়া স্থানে কোনটি ব্যবহার করা উচিত নয়?",
+                    "পোড়া স্থানে কোনটি ব্যবহার করা উচিত নয়?"
+                  ),
+                  options: [
+                    yhLang("ক্রিম, লোশন বা টুথপেস্ট", "ক্রিম, লোশন বা টুথপেস্ট"),
+                    yhLang("শুকনো গজ", "শুকনো গজ"),
+                    yhLang("আয়োডোফর্ম গজ", "আয়োডোফর্ম গজ"),
+                    yhLang("ঠান্ডা পানি", "ঠান্ডা পানি"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const steps = [
+                "ত্বক কতটা পুড়েছে, তার ধরন নির্ধারণ করে চিকিৎসা করা হয়। আঘাতপ্রাপ্ত ব্যক্তিকে দ্রুত পোড়ার উৎস (যেমন—আগুন বা ধোঁয়া) থেকে সরিয়ে নিতে হবে যেন পুড়ে যাওয়ার প্রক্রিয়াটি ধীর হয় বা একেবারে বন্ধ হয়।",
+                "পোড়া জায়গা ফুলে যাওয়ার সম্ভাবনা থাকায় ঘড়ি বা জুয়েলারি খুলে ফেলতে হবে।",
+                "চামড়ার সাথে কাপড় লেগে থাকলে তা উঠানোর প্রয়োজন নেই।",
+                "পোড়া জায়গায় কমপক্ষে ১০–১৫ মিনিট ধরে স্বাভাবিক তাপমাত্রার ঠান্ডা পানি ঢালতে হবে (খুব ঠান্ডা বা উষ্ণ পানি নয়)।",
+                "পোড়া স্থানের কোনো ফোসকা গলিয়ে দেওয়া যাবেনা।",
+                "পোড়া স্থানে ক্রিম, লোশন, ডিম, লবণ-পানি, হলুদ বা টুথপেস্ট লাগানো যাবেনা।",
+                "পোড়া স্থানটিকে একটি শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে দিতে হবে (ড্রেসিং)। যদি নিকটস্থ ফার্মেসিতে পাওয়া যায়, প্রাথমিকভাবে ড্রেসিং করতে পোড়া স্থানে আয়োডোফর্ম গজ (যা লিকুইড প্যারাফিনযুক্ত এবং চামড়ায় লেগে থাকে না) ব্যবহার করতে হবে, তার উপরে শুকনো গজ দিয়ে বেঁধে দিতে হবে।",
+                "আঘাতপ্রাপ্ত ব্যক্তি যেন পর্যাপ্ত তরল পান করে তা নিশ্চিত করতে হবে।",
+                "যদি ব্যক্তির পোড়া গুরুতর হয়, তবে প্রাথমিক চিকিৎসা দিয়ে দ্রুত স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে।",
+                "শরীরে আগুন লাগলে জ্বলন্ত ব্যক্তিটিকে মাটিতে শুয়ে গড়াগড়ি দিতে বলতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "পোড়ার প্রাথমিক চিকিৎসা",
+                    "পোড়ার প্রাথমিক চিকিৎসা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(steps)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-5">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu18/pora2.jpg" alt="পোড়ার প্রাথমিক চিকিৎসা" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch18-lesson-5",
+            title: yhLang("Bone Fractures", "হাড় ভাঙ্গা"),
+            icon: "fa-bone",
+            gradientClass: "bg-gradient-slate",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18e",
+                  question: yhLang(
+                    "উন্মুক্ত হাড় ভাঙ্গায় প্রথমে কোন পদক্ষেপ নিতে হবে?",
+                    "উন্মুক্ত হাড় ভাঙ্গায় প্রথমে কোন পদক্ষেপ নিতে হবে?"
+                  ),
+                  options: [
+                    yhLang("রক্তক্ষরণ বন্ধ করার ব্যবস্থা করা", "রক্তক্ষরণ বন্ধ করার ব্যবস্থা করা"),
+                    yhLang("অঙ্গটি জোর করে সোজা করা", "অঙ্গটি জোর করে সোজা করা"),
+                    yhLang("তৎক্ষণাৎ ব্যায়াম করানো", "তৎক্ষণাৎ ব্যায়াম করানো"),
+                    yhLang("গরম পানি ঢালানো", "গরম পানি ঢালানো"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "হাড় ভাঙ্গা (ফ্র্যাকচার) হল এমন একটি অবস্থা যেখানে শরীরের এক বা একাধিক হাড় ভেঙে যায় বা ফাটল ধরে বা কোন আঘাতের কারণে বেঁকে যায়। সাধারণত শক্তিশালী আঘাত বা ইনজুরির কারণে কোনো ব্যক্তির হাড় ভেঙে যেতে পারে, তবে কখনো কখনো বয়স বা অসুস্থতাজনিত কারণেও কোনো ব্যক্তি হাড় ভাঙ্গার শিকার হতে পারে।";
+
+              const typeIntro =
+                "হাড় ভাঙ্গা মূলত দুই ধরনের হতে পারে—উন্মুক্ত হাড় ভাঙ্গা ও আবদ্ধ হাড় ভাঙ্গা। উন্মুক্ত হাড় ভাঙ্গা হচ্ছে যখন রোগীর ভাঙ্গা হাড় চামড়ার ভেতর থেকে বেরিয়ে আসে এবং বাইরে থেকে দেখা যায়। আর আবদ্ধ হাড় ভাঙ্গা হলো ভাঙ্গা হাড়টি শরীরের ভেতরে অবস্থান করে এবং বাইরে থেকে দেখা যায় না।";
+
+              const openFractureHeading = "হাড় ভাঙ্গার প্রাথমিক চিকিৎসা";
+              const openFractureSubheading = "উন্মুক্ত হাড় ভাঙ্গার ক্ষেত্রে";
+              const openFractureSteps = [
+                "যদি রক্তপাত হয়, সবার প্রথমে রক্তক্ষরণ বন্ধ করার ব্যবস্থা করতে হবে।",
+                "আক্রান্ত অঙ্গটি যতটা সম্ভব স্থির রাখার চেষ্টা করতে হবে।",
+                "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য দ্রুত হাসপাতালে নিয়ে যেতে হবে।",
+              ];
+
+              const closedFractureHeading = "আবদ্ধ হাড় ভাঙ্গার ক্ষেত্রে";
+              const closedFractureSteps = [
+                "আক্রান্ত অঙ্গটি জোরপূর্বক সোজা করার চেষ্টা করা যাবেনা।",
+                "অঙ্গটি সুবিধাজনক অবস্থানে রাখতে হবে এবং যথাসম্ভব কম নড়াচড়া করতে হবে।",
+                "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য হাসপাতালে নিয়ে যেতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "হাড় ভাঙ্গা",
+                    "হাড় ভাঙ্গা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-3">${intro}</p>
+                    <p class="mb-0">${typeIntro}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${openFractureHeading}</h3>
+                          <h4 class="h6 text-muted mb-2">${openFractureSubheading}</h4>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(openFractureSteps)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="d-flex flex-column gap-3">
+                          <figure class="text-center mb-0">
+                            <img src="img/modu18/har.jpg" alt="উন্মুক্ত হাড় ভাঙ্গা" class="img-fluid rounded shadow-sm" />
+                          </figure>
+                          <figure class="text-center mb-0">
+                            <img src="img/modu18/har2.jpg" alt="উন্মুক্ত হাড় ভাঙ্গার সেবা" class="img-fluid rounded shadow-sm" />
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7 order-2 order-lg-1">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${closedFractureHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(closedFractureSteps)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-5 order-1 order-lg-2">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu18/har3.jpg" alt="আবদ্ধ হাড় ভাঙ্গা" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-19",
