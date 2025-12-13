@@ -12455,9 +12455,499 @@ const coursesData = [
         id: "ch-19",
         title: yhLang(
           "Module-19: Drug addiction - Consequences and prevention",
-          "মডিউল-১৯: মাদকাসক্তি—পরিণতি ও প্রতিরোধ"
+          "মডিউল-১৯: কৈশোরকালীন পুষ্টি"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch19-lesson-1",
+            title: yhLang(
+              "Importance of Nutritious Food in Adolescence",
+              "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব"
+            ),
+            icon: "fa-apple-whole",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Importance of Nutritious Food in Adolescence",
+                    "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব"
+                  )}</h2>
+                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60">
+                    <p class="mb-3">কৈশোরকালে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলস্বরূপ লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।</p>
+                    <p class="mb-0">খাদ্য মানবদেহকে সুস্থ-সবল রাখার জন্য খাদ্য অপরিহার্য। খাদ্য বলতে সেই সকল জৈব উপাদানকে বোঝায় যেগুলো মানবদেহ গঠনে ভূমিকা রাখে, ক্ষয়পূরণ করে, শক্তি বৃদ্ধি সহ শরীরের রোগ প্রতিরোধ ক্ষমতা তৈরি করে।</p>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-2",
+            title: yhLang("Nutrition", "পুষ্টি"),
+            icon: "fa-leaf",
+            gradientClass: "bg-gradient-forest",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Nutrition", "পুষ্টি")}</h2>
+                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60">
+                    <p class="mb-3">পুষ্টি হলো একটি প্রক্রিয়া। এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙে সরল উপাদানে পরিণত হয়। মানবদেহ এসব সরল উপাদান শোষণ করে নেয়। এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্বাস্থ্য নিশ্চিত করে।</p>
+                    <p class="mb-3">কৈশোরকালে ছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।</p>
+                    <p class="mb-3"><strong>পুষ্টিকর খাদ্য</strong><br>যেসব খাদ্য খেলে শরীরে তাপ ও শক্তি উৎপাদিত হয়, দেহের গঠন ও বৃদ্ধি হয়, শরীর সবল ও কর্মক্ষম থাকে, তাকে পুষ্টিকর খাদ্য বলে। খাদ্য ও পুষ্টি একে অপরের সাথে জড়িত। প্রতিটি খাদ্য অবশ্যই পুষ্টিকর ও নিরাপদ হতে হবে। নিয়মিত পুষ্টিকর খাদ্য গ্রহণ করলে শরীর ও মন ভালো থাকে, মনে প্রফুল্লতা আসে এবং পড়াশোনা ও কাজে মনোযোগ বাড়ে। মনে রাখতে হবে পুষ্টিকর খাদ্য গ্রহণ না করলে রোগ প্রতিরোধ ক্ষমতা কমে যায় এবং বিভিন্ন রোগে আক্রান্ত হওয়ার ঝুঁকি বেড়ে যায়।</p>
+                    <p class="mb-3"><strong>ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান</strong><br>বিশ্ব স্বাস্থ্য সংস্থা অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে। যদি কোনো শিশু বা কিশোর-কিশোরীর উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে, তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।</p>
+                    <p class="mb-0"><strong>বি.এম.আই (বডি মাস ইনডেক্স)</strong><br>কোন ব্যক্তির ওজন এবং উচ্চতার হারের বর্গের অনুপাতই হলো বি.এম.আই। এটি পুষ্টিগত অবস্থা নির্ণয়ের একটি উল্লেখযোগ্য পদ্ধতি। বি.এম.আই নির্ণয় করতে ব্যক্তির ওজন কিলোগ্রাম এককে ও উচ্চতা মিটার এককে জানা প্রয়োজন। ওজনকে উচ্চতার বর্গ দিয়ে ভাগ করলেই বি.এম.আই পাওয়া যাবে। নিচে সূত্রটি দেওয়া হলো—<br>বি.এম.আই = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²</p>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-3",
+            title: yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)"),
+            icon: "fa-scale-balanced",
+            gradientClass: "bg-gradient-sky",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const girlsBmi = [
+                { age: "১০", low: "১৪.৮", normal: "১৬.৬", overweight: "১৯.০" },
+                { age: "১১", low: "১৫.৩", normal: "১৭.২", overweight: "১৯.৯" },
+                { age: "১২", low: "১৬.০", normal: "১৮.০", overweight: "২০.৮" },
+                { age: "১৩", low: "১৬.৬", normal: "১৮.৮", overweight: "২১.৮" },
+                { age: "১৪", low: "১৭.২", normal: "১৯.৬", overweight: "২২.৭" },
+                { age: "১৫", low: "১৭.৮", normal: "২০.২", overweight: "২৩.৫" },
+                { age: "১৬", low: "১৮.২", normal: "২০.৭", overweight: "২৪.১" },
+                { age: "১৭", low: "১৮.৪", normal: "২১.০", overweight: "২৪.৫" },
+                { age: "১৮", low: "১৮.৬", normal: "২১.৩", overweight: "২৪.৮" },
+                { age: "১৯", low: "১৮.৭", normal: "২১.৪", overweight: "২৫.০" },
+              ];
+
+              const boysBmi = [
+                { age: "১০", low: "১৪.৮", normal: "১৬.৬", overweight: "১৯.০" },
+                { age: "১১", low: "১৫.৩", normal: "১৬.৯", overweight: "১৯.২" },
+                { age: "১২", low: "১৫.৮", normal: "১৭.৫", overweight: "১৯.৯" },
+                { age: "১৩", low: "১৬.৪", normal: "১৮.২", overweight: "২০.৮" },
+                { age: "১৪", low: "১৭.০", normal: "১৯.০", overweight: "২১.৮" },
+                { age: "১৫", low: "১৭.৬", normal: "১৯.৮", overweight: "২২.৭" },
+                { age: "১৬", low: "১৮.২", normal: "২০.৫", overweight: "২৩.৫" },
+                { age: "১৭", low: "১৮.৮", normal: "২১.১", overweight: "২৪.৩" },
+                { age: "১৮", low: "১৯.২", normal: "২১.৭", overweight: "২৪.৯" },
+                { age: "১৯", low: "১৯.৬", normal: "২২.২", overweight: "২৫.৪" },
+              ];
+
+              const renderRows = (rows) =>
+                rows
+                  .map(
+                    (row) => `
+                      <tr>
+                        <td>${row.age}</td>
+                        <td>${row.low}</td>
+                        <td>${row.normal}</td>
+                        <td>${row.overweight}</td>
+                      </tr>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)")}</h2>
+                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
+                    <div class="col-12 col-lg-6">
+                      <div class="glass-card p-3 h-100">
+                        <div class="table-responsive">
+                          <table class="table table-bordered table-striped align-middle text-center mb-0">
+                            <thead>
+                              <tr>
+                                <th colspan="4">১০–১৯ বছর বয়সি কিশোরীদের ওজন ও উচ্চতার আদর্শ মান</th>
+                              </tr>
+                              <tr>
+                                <th>বয়স (বছর)</th>
+                                <th>স্বল্প অপুষ্টি (বি.এম.আই.)</th>
+                                <th>স্বাভাবিক পুষ্টি (বি.এম.আই.)</th>
+                                <th>স্বল্প মুটিয়ে যাওয়া (বি.এম.আই.)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              ${renderRows(girlsBmi)}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="glass-card p-3 h-100">
+                        <div class="table-responsive">
+                          <table class="table table-bordered table-striped align-middle text-center mb-0">
+                            <thead>
+                              <tr>
+                                <th colspan="4">১০–১৯ বছর বয়সি কিশোরদের ওজন ও উচ্চতার আদর্শ মান</th>
+                              </tr>
+                              <tr>
+                                <th>বয়স (বছর)</th>
+                                <th>স্বল্প অপুষ্টি (বি.এম.আই.)</th>
+                                <th>স্বাভাবিক পুষ্টি (বি.এম.আই.)</th>
+                                <th>স্বল্প মুটিয়ে যাওয়া (বি.এম.আই.)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              ${renderRows(boysBmi)}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-4",
+            title: yhLang(
+              "Nutrition Components, Sources, and Functions",
+              "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ"
+            ),
+            icon: "fa-bowl-food",
+            gradientClass: "bg-gradient-gold",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const nutrientTable = [
+                {
+                  label: "১.",
+                  nutrient: "শ্বেতসার বা শর্করা (কার্বোহাইড্রেট)",
+                  sources:
+                    "ভাত, রুটি, পাউরুটি, বিস্কুট, মুড়ি, চিড়া, চিনি, গুড়, মধু, আলু, মিষ্টি আলু",
+                  functions: "শরীরের শক্তি জোগায়, কাজ করার ক্ষমতা দেয়।",
+                },
+                {
+                  label: "২.",
+                  nutrient: "তেল ও চর্বি",
+                  sources: "তেল, ঘি, মাখন, মাছ-মাংসের চর্বি, বাদাম, নারিকেল",
+                  functions: "",
+                },
+                {
+                  label: "৩.",
+                  nutrient: "আমিষ (প্রোটিন)",
+                  sources:
+                    "প্রাণীজ: মাছ, মাংস, কলিজা, দুধ, ডিম, শুঁটকি মাছ<br>উদ্ভিদজ: বাদাম, বিভিন্ন ধরনের বীজ, বিভিন্ন ধরনের ডাল, তিল/তিসি",
+                  functions: "শরীরের বৃদ্ধি সাধন ও ক্ষয়পূরণ করে।",
+                },
+                {
+                  label: "৪.",
+                  nutrient: "ভিটামিন ও খনিজ লবণ",
+                  sources:
+                    "প্রাণীজ: দুধ, মাছ, মাংস, কলিজা<br>উদ্ভিদজ: বাদাম, বিভিন্ন ধরনের বীজ, শাক, সবজি ও ফলমূল<br>ভিটামিন ‘এ’: বিভিন্ন ধরনের রঙিন শাক-সবজি, লালশাক, গাজর, মিষ্টি কুমড়া<br>ভিটামিন ‘ডি’: ডিমের কুসুম, মাছের তেল, কলিজা, মাখন, পনির ইত্যাদি<br>ভিটামিন ‘সি’: আমলকি, কমলা, ধনেপাতা, আমড়া, তাজা ও টক জাতীয় শাক-সবজি ও ফল ইত্যাদি<br>ক্যালসিয়াম: দুধ ও দুগ্ধজাত খাদ্য, গাঢ় সবুজ শাকসবজি, শুঁটকি মাছ, ছোট মাছ, গুড়, ছোলা ইত্যাদি<br>আয়রন: মাছ, মাংস, কলিজা, ডিম, কচু, পুঁইশাক, লালশাক, তেঁতুল ইত্যাদি<br>আয়োডিন: সামুদ্রিক মাছ, আয়োডিনযুক্ত লবণ",
+                  functions:
+                    "পরিপাক ও পুষ্টিসাধনের প্রক্রিয়াকে সহায়তা করে।<br>রোগ প্রতিরোধ ক্ষমতা তৈরি করে।<br>শরীরকে রোগজীবাণু থেকে রক্ষা করে।<br>রাতকানা রোগ প্রতিরোধ করে ও চামড়া মসৃণ করে।<br>হাড় ও দাঁতের গঠন মজবুত করে, রিকেট প্রতিরোধ করে।<br>ক্ষত দূর করে, দাঁতের মাড়ি থেকে রক্ত পড়া বন্ধ করে, ঘাপাঁচড়া প্রতিরোধ করে।<br>রক্তস্বল্পতা, ক্ষুধামন্দা ও দুর্বলতা দূর করে।<br>শিশুর মানসিক বিকাশ নিশ্চিত করে ও গলগণ্ড রোধ করে।",
+                },
+                {
+                  label: "৫.",
+                  nutrient: "পানি",
+                  sources:
+                    "খাওয়ার পানি, বিভিন্ন তরল ও পানীয় জাতীয় খাবার এবং বিভিন্ন খাবারের জলীয় অংশ",
+                  functions: "উপরের ৫টি উপাদানের কার্যক্রম পানি ব্যতীত অসম্ভব।",
+                },
+              ];
+
+              const renderRows = () =>
+                nutrientTable
+                  .map(
+                    (item) => `
+                      <tr>
+                        <td>${item.label}</td>
+                        <td>${item.nutrient}</td>
+                        <td>${item.sources}</td>
+                        <td>${item.functions || "&nbsp;"}</td>
+                      </tr>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Nutrition Components, Sources, and Functions",
+                    "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ"
+                  )}</h2>
+                  <div class="glass-card p-3" data-aos="fade-up" data-aos-delay="60">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped align-middle text-center mb-0">
+                        <thead>
+                          <tr>
+                            <th>&nbsp;</th>
+                            <th>পুষ্টি উপাদান</th>
+                            <th>খাদ্য উৎস</th>
+                            <th>শরীরের প্রধান কাজসমূহ</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${renderRows()}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-5",
+            title: yhLang(
+              "Importance of Safe, Nutritious Food and Daily Meal Plan",
+              "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
+            ),
+            icon: "fa-utensils",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const meals = [
+                {
+                  time: "সকালের খাবার",
+                  energy: "মাঝারি সাইজের ২/৩টি রুটি অথবা ২টি পরোটা অথবা ১ বাটি ভাত",
+                  growth: "১টি ডিম অথবা ১ বাটি ডাল",
+                  immunity:
+                    "১ বাটি সবজি (২/৩ রকম সবজি মিশিয়ে) অথবা সবজি ভাজি (পটল ভাজি, পেঁপে ভাজি ইত্যাদি)",
+                },
+                {
+                  time: "মধ্য-সকালের নাস্তা",
+                  energy:
+                    "বাড়িতে তৈরি নাস্তা জাতীয় খাবার (চিড়া/মুড়ি + গুড়) ও পাকা কলা",
+                  growth:
+                    "যেকোনো দেশি মৌসুমী ফল (আম, কাঁঠাল, পেঁপে, আনারস ইত্যাদি)। ঋতুভেদে যেসব ফল সহজেই আমরা পাই।",
+                  immunity: "",
+                },
+                {
+                  time: "দুপুরের খাবার",
+                  energy: "২/৩ বাটি ভাত",
+                  growth:
+                    "১ বাটি মাঝারি ঘন ডাল ও ১ টুকরা (মাঝারি সাইজের) মাছ/মাংস/কলিজা",
+                  immunity: "১ বাটি শাক (লাল শাক, কচুশাক, পুঁই শাক) অথবা সবজি",
+                },
+                {
+                  time: "বিকালের নাস্তা",
+                  energy:
+                    "১ গ্লাস দুধ অথবা দুধ দিয়ে তৈরি যেকোনো ঘন খাবার (ফিরনি, সেমাই, পায়েস, পিঠা, দই ইত্যাদি)",
+                  growth:
+                    "যেকোনো দেশি মৌসুমী ফল। ঋতুভেদে যেসব ফল সহজেই আমরা পাই।",
+                  immunity: "",
+                },
+                {
+                  time: "রাতের খাবার",
+                  energy: "২/৩ বাটি ভাত",
+                  growth: "১ বাটি ঘন ডাল (যদি সম্ভব হয় ১ টুকরা মাছ/মাংস)",
+                  immunity: "১ বাটি শাক অথবা সবজি",
+                },
+              ];
+
+              const renderRows = () =>
+                meals
+                  .map(
+                    (item) => `
+                      <tr>
+                        <td>${item.time}</td>
+                        <td>${item.energy}</td>
+                        <td>${item.growth || "&nbsp;"}</td>
+                        <td>${item.immunity || "&nbsp;"}</td>
+                      </tr>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Importance of Safe, Nutritious Food and Daily Meal Plan",
+                    "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
+                  )}</h2>
+                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
+                    <div class="col-12 col-lg-8">
+                      <div class="glass-card p-3 h-100">
+                        <div class="table-responsive">
+                          <table class="table table-bordered table-striped align-middle text-center mb-0">
+                            <thead>
+                              <tr>
+                                <th>সময়</th>
+                                <th>তাপ ও শক্তি উৎপাদনকারী খাদ্য<br><small>(শর্করা জাতীয় খাবার: ভাত, রুটি, চিড়া, মুড়ি, আলু, মিষ্টি আলু)</small></th>
+                                <th>শরীরের ক্ষয়পূরণ ও বৃদ্ধিকারক খাদ্য<br><small>(আমিষ জাতীয় খাবার: ডিম, মাছ, মাংস, দুধ, ডাল ও বিচি জাতীয় খাবার)</small></th>
+                                <th>রোগ প্রতিরোধকারী খাদ্য<br><small>(ভিটামিন ও খনিজ উপাদান সমৃদ্ধ খাবার: রঙিন শাক অথবা সবজি, দেশি মৌসুমী ফল)</small></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              ${renderRows()}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <div class="glass-card p-3 h-100 d-flex align-items-center justify-content-center">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu19/food.jpg" alt="Nutrition meal plan" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-6",
+            title: yhLang(
+              "Adolescent Food Diversity",
+              "কৈশোরকালীন খাদ্য বৈচিত্র্য"
+            ),
+            icon: "fa-seedling",
+            gradientClass: "bg-gradient-mint",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const points = [
+                {
+                  icon: "fa-bowl-food",
+                  text:
+                    "কৈশোরকালে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।",
+                },
+                {
+                  icon: "fa-shapes",
+                  text:
+                    "দৈনিক একই খাবার খেতে ভালো লাগবে না, কাজেই খাবারে ভিন্নতা ও নতুনত্ব থাকলে তা রুচি বাড়াতে সক্ষম হবে।",
+                },
+                {
+                  icon: "fa-house",
+                  text:
+                    "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।",
+                },
+                {
+                  icon: "fa-triangle-exclamation",
+                  text:
+                    "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।",
+                },
+                {
+                  icon: "fa-apple-whole",
+                  text:
+                    "প্রতিটি খাবারকে যথাসম্ভব প্রাকৃতিক অবস্থায় খেলেই সর্বোচ্চ পুষ্টি পাওয়া যায়। যেমন: ফলের জুস না খেয়ে তাজা ফল খেলে সর্বোচ্চ পুষ্টি পাওয়া যায়।",
+                },
+              ];
+
+              const renderCards = () =>
+                points
+                  .map(
+                    (item, idx) => `
+                      <div class="col-12">
+                        <div class="definition-card hover-lift-sm hover-shadow-glow transition-base" data-aos="fade-up" data-aos-delay="${
+                          60 + idx * 40
+                        }">
+                          <div class="d-flex align-items-start gap-3">
+                            <span class="icon-circle"><i class="fa-solid ${item.icon}"></i></span>
+                            <p class="mb-0">${item.text}</p>
+                          </div>
+                        </div>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Adolescent Food Diversity",
+                    "কৈশোরকালীন খাদ্য বৈচিত্র্য"
+                  )}</h2>
+                  <div class="row g-3 mt-2">
+                    ${renderCards()}
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-7",
+            title: yhLang(
+              "Nutritious Food During Menstruation",
+              "মাসিককালীন সময়ে পুষ্টিকর খাদ্য"
+            ),
+            icon: "fa-droplet",
+            gradientClass: "bg-gradient-lilac",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const rows = [
+                {
+                  title: "আয়রনযুক্ত খাবার মাসিকের সময় আয়রনের ঘাটতি দূর করে।",
+                  details:
+                    "মাছ, মাংস, কলিজা, ডিম, ঘন সবুজ পাতাজাতীয় শাকসবজি, দানাজাতীয় শস্য, মটরশুঁটি, সিম, বরবটি, বাদাম, সয়াবিন, গুড় ও শুকনা ফলে যথেষ্ট পরিমাণে আয়রন থাকে।",
+                },
+                {
+                  title: "ক্যালসিয়ামযুক্ত খাবার রক্ত জমাট বাঁধায় সাহায্য করে।",
+                  details:
+                    "দুধ ক্যালসিয়ামের উৎকৃষ্ট উৎস। দুগ্ধজাতীয় খাদ্য যেমন দই, ছানা, পনির, মাওয়া, কাঁটাসহ ছোট মাছে প্রচুর ক্যালসিয়াম আছে। সবুজ শাকসবজি যেমন কলমিশাক, ডাঁটাশাক, পুঁইশাক, সজনে পাতা, লালশাক ইত্যাদিতে প্রচুর পরিমাণে ক্যালসিয়াম থাকে। সবজির মধ্যে ঢ্যাঁড়স, ধুন্দুল, বাঁধাকপি, ফুলকপি, সিম ইত্যাদি, ছোলা, মাসকলাই, মুগ ও সয়াবিনে ক্যালসিয়াম থাকে।",
+                },
+                {
+                  title:
+                    "ম্যাগনেসিয়ামসমৃদ্ধ খাবার মাথাব্যথা ও পায়ের মাংসপেশীর যন্ত্রণা কমাতে সাহায্য করে।",
+                  details:
+                    "প্রায় সব ধরনের মাছেই উচ্চমাত্রায় ম্যাগনেসিয়াম আছে। গমের রুটি, সাদা ভাত, সবুজ পাতাযুক্ত শাকসবজি, পালংশাক, শিম, শিমের বিচি, বরবটি, মটরশুঁটি, কলা, কুমড়া, লেটুস পাতা ম্যাগনেসিয়ামের অন্যতম প্রধান উৎস। কাজুবাদাম, চীনাবাদাম—এগুলো ম্যাগনেসিয়ামের উৎকৃষ্ট উৎস।",
+                },
+                {
+                  title: "আঁশযুক্ত খাবার হজম বা পরিপাকে সহায়ক।",
+                  details:
+                    "ডাঁটাশাক, মটরশুঁটি, সিম, বরবটি, মিষ্টি আলু, গমের রুটি, ঢেঁকিছাটা চাল, ওটস, বাদাম, আপেল, কালো আঙুর, খেজুর ইত্যাদি।",
+                },
+                {
+                  title:
+                    "ভিটামিনসমৃদ্ধ খাবার অনিয়মিত মাসিক ও মাসিকের সময়ে মাথাব্যথা কমাতে সাহায্য করে।",
+                  details:
+                    "ভিটামিন বি-১ সমৃদ্ধ খাবার: দুধ, ডিম, সামুদ্রিক মাছ, কড লিভার, কলিজা, মুরগি, ছোলা, পালংশাক, মটরশুঁটি, পাকা কলা ইত্যাদি। ভিটামিন ডি সমৃদ্ধ খাবার: ভেটকি বা কোরাল মাছ, তেলাপিয়া, মাগুর ও শুঁটকি মাছে ভিটামিন ডি আছে। ভিটামিন ডি-এর অপর একটি চমৎকার উৎস হচ্ছে দুধ। গরু ও খাসির মাংসের কলিজায় ভিটামিন ডি আছে। ডিমে অতিরিক্ত পরিমাণে ভিটামিন ডি আছে। যাদের উচ্চ রক্তচাপ আছে, তাদের ডিমের কুসুম খাওয়ার ক্ষেত্রে সতর্ক থাকতে হবে। শস্যদানায় ও মাশরুমে ভিটামিন ডি আছে। রোদ ভিটামিন ডি-এর অন্যতম উৎস। সকাল ১০টা থেকে বিকেল ৩টা পর্যন্ত রোদ সবচেয়ে ভালো। পাঁচ মিনিট থেকে আধাঘণ্টা পর্যন্ত সপ্তাহে দুবার রোদে বসলে অনেক উপকার পাওয়া যায়।",
+                },
+              ];
+
+              const renderRows = () =>
+                rows
+                  .map(
+                    (row) => `
+                      <tr>
+                        <td>${row.title}</td>
+                        <td>${row.details}</td>
+                      </tr>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Nutritious Food During Menstruation",
+                    "মাসিককালীন সময়ে পুষ্টিকর খাদ্য"
+                  )}</h2>
+                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60">
+                    <p class="mb-4">মাসিকের সময় দেহ থেকে রক্তক্ষরণ হয়, ফলে পুষ্টিহীনতা ও রক্তস্বল্পতা দেখা দিতে পারে। এই ঘাটতি পূরণের জন্য স্বাভাবিক খাবারের পাশাপাশি আয়রন, ক্যালসিয়াম, ম্যাগনেসিয়াম, আঁশযুক্ত ও ভিটামিনসমৃদ্ধ খাবার খাওয়া দরকার। এসব খাবার মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে সাহায্য করে।</p>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped align-middle">
+                        <thead>
+                          <tr>
+                            <th>খাদ্যের ধরণ ও ভূমিকা</th>
+                            <th>খাবারের উদাহরণ ও বিস্তারিত</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${renderRows()}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-20",
