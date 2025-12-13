@@ -12099,6 +12099,94 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch18-lesson-9",
+            title: yhLang("Drowning Response", "পানিতে ডুবা"),
+            icon: "fa-person-swimming",
+            gradientClass: "bg-gradient-cyan",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18i",
+                  question: yhLang(
+                    "ডুবন্ত ব্যক্তিকে বাঁচাতে গিয়ে কত দূরত্ব বজায় রাখতে বলা হয়েছে?",
+                    "ডুবন্ত ব্যক্তিকে বাঁচাতে গিয়ে কত দূরত্ব বজায় রাখতে বলা হয়েছে?"
+                  ),
+                  options: [
+                    yhLang("কমপক্ষে ২ মিটার", "কমপক্ষে ২ মিটার"),
+                    yhLang("১ মিটার", "১ মিটার"),
+                    yhLang("৫০ সেন্টিমিটার", "৫০ সেন্টিমিটার"),
+                    yhLang("দূরত্বের প্রয়োজন নেই", "দূরত্বের প্রয়োজন নেই"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা। কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে। ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে। ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে।";
+
+              const shallowTip =
+                "যদি পুকুর বা জলাশয় অগভীর থাকে তবে পানিতে নেমে ডুবন্ত ব্যক্তির কাছে যাওয়া যেতে পারে। সবসময় ডুবন্ত ব্যক্তির কাছ থেকে কমপক্ষে <strong>২ মিটার</strong> দূরে থাকতে হবে যেন ডুবন্ত ব্যক্তি কখনোই যাকে বাঁচাতে যায় তাকেই জাপটে ধরতে না পারে।";
+
+              const rescueHeading = "ডুবন্ত অজ্ঞান ব্যক্তিকে উদ্ধার এবং প্রাথমিক চিকিৎসা";
+              const rescueSteps = [
+                "পানিতে নেমে সাঁতরে ডুবন্ত ব্যক্তির কাছে যেতে হবে।",
+                "ডুবন্ত ব্যক্তিকে পানিতে চিত করতে হবে।",
+                "ডুবন্ত ব্যক্তির থুতনি ধরে পানি থেকে তীরে আনতে হবে।",
+                "কারো সাহায্য নিয়ে ডুবন্ত ব্যক্তিকে পানি থেকে তুলে আনতে হবে।",
+                "আক্রান্ত ব্যক্তিকে শক্ত ও সমতল স্থানে মুখ উপরের দিকে করে শুইয়ে দিতে হবে।",
+                "শ্বাসপথ এবং শ্বাসপ্রশ্বাস যাচাই করতে হবে।",
+                "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে। যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "পানিতে ডুবা",
+                    "পানিতে ডুবা"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p>${intro}</p>
+                    <p class="mb-0">${shallowTip}</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-6">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${rescueHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(rescueSteps)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-6">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu18/pani.jpg" alt="ডুবন্ত ব্যক্তিকে উদ্ধার" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
