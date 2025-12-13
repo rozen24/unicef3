@@ -12187,6 +12187,268 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch18-lesson-10",
+            title: yhLang(
+              "Choking and Airway Block",
+              "শ্বাস আটকে যাওয়া বা গলায় কিছু আটকে যাওয়া"
+            ),
+            icon: "fa-lungs",
+            gradientClass: "bg-gradient-steel",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18j",
+                  question: yhLang(
+                    "শ্বাস আটকে যাওয়া অবস্থাকে কেন জরুরি বলা হয়?",
+                    "শ্বাস আটকে যাওয়া অবস্থাকে কেন জরুরি বলা হয়?"
+                  ),
+                  options: [
+                    yhLang("এটি জীবন-সংশয়ী জরুরি অবস্থা", "এটি জীবন-সংশয়ী জরুরি অবস্থা"),
+                    yhLang("শুধু একটু অস্বস্তি", "শুধু একটু অস্বস্তি"),
+                    yhLang("কোনো বিপদ নেই", "কোনো বিপদ নেই"),
+                    yhLang("শুধু ঘুম পায়", "শুধু ঘুম পায়"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro =
+                "শ্বাসনালীতে কিছু আটকে আংশিক বা পরিপূর্ণ প্রতিবন্ধকতা তৈরি হওয়ার ফলে বাতাসের অভাবের কারণে ব্যক্তির শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়। সাধারণত খাবার খাওয়ার সময় বা মুখে কিছু দেওয়ার সময় এটি ঘটে থাকে, যা একটি জীবন-সংশয়কারী জরুরি অবস্থা।";
+
+              const scenarios =
+                "শিশুদের ক্ষেত্রে অনেক সময় খাদ্যবস্তু ছাড়াও অন্যান্য বস্তু (যেমন— কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা) গলায় আটকে গিয়ে এমন শ্বাসরোধকারী পরিস্থিতির সৃষ্টি হতে পারে। প্রাপ্তবয়স্কদের বেশির ভাগ ক্ষেত্রেই খাওয়ার সময় খাদ্যবস্তু শ্বাসনালীতে আটকে এরূপ পরিস্থিতি উদ্ভূত হয়ে থাকে।";
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "শ্বাস আটকে যাওয়া (Choking)",
+                    "শ্বাস আটকে যাওয়া (Choking)"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p>${intro}</p>
+                    <p class="mb-0">${scenarios}</p>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch18-lesson-11",
+            title: yhLang(
+              "Adult & Child Choking First Aid",
+              "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)"
+            ),
+            icon: "fa-hands-holding-child",
+            gradientClass: "bg-gradient-grape",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18k",
+                  question: yhLang(
+                    "পিঠে চাপড় দেওয়ার পরে কী লক্ষ্য করতে হবে?",
+                    "পিঠে চাপড় দেওয়ার পরে কী লক্ষ্য করতে হবে?"
+                  ),
+                  options: [
+                    yhLang("বস্তুটি বের হয়েছে এবং শ্বাস নিতে পারছে কিনা", "বস্তুটি বের হয়েছে এবং শ্বাস নিতে পারছে কিনা"),
+                    yhLang("ব্যক্তি হাসছে কিনা", "ব্যক্তি হাসছে কিনা"),
+                    yhLang("খাবার শেষ হয়েছে কিনা", "খাবার শেষ হয়েছে কিনা"),
+                    yhLang("কেউ ছবি তুলছে কিনা", "কেউ ছবি তুলছে কিনা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const firstGuidance = [
+                "শ্বাস আটকে যাওয়া ব্যক্তির পিছনে এবং সামান্য পাশে দাঁড়াতে হবে।",
+                "এক হাতের সাহায্যে ব্যক্তিকে যতদূর সম্ভব সামনের দিকে হেলতে সহযোগিতা করতে হবে।",
+                "আপনার অন্য হাতের তালু দিয়ে ব্যক্তির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
+                "আঘাতের পর লক্ষ্য করতে হবে যে গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং আক্রান্ত ব্যক্তি শ্বাস নিতে পারছে কিনা?",
+              ];
+
+              const followupText = [
+                "আক্রান্ত ব্যক্তির পিছনে দাঁড়িয়ে ব্যক্তির পাঁজরের নিচে কোমর বরাবর প্রাথমিক চিকিৎসা প্রদানকারী তার দুই হাত দিয়ে আঁকড়ে ধরবেন।",
+                "এক হাত মুষ্টিবদ্ধ করে মুষ্টির বুড়ো আঙুলের দিকটি আক্রান্ত ব্যক্তির নাভি বরাবর বা সামান্য উপরে, পেটের মাঝখানে রাখতে হবে।",
+                "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।",
+                "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।",
+                "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।",
+                "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।",
+                "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।",
+                "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।",
+                "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।",
+                "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderParagraphs = (items) =>
+                items.map((item) => `<p class="mb-3"> <i class="fa-solid fa-circle-check"></i> ${item}</p>`).join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "প্রাথমিক চিকিৎসা",
+                    "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)"
+                  )}</h2>
+                  
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-5">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu18/basic-treatment.bmp" alt="চোকিং প্রাথমিক চিকিৎসা" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                      <div class="col-lg-7">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(firstGuidance)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
+                  <h3 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "প্রাথমিক চিকিৎসা",
+                    "যদিবস্তুটি বের না হয় এবং আক্রান্ত ব্যক্তির শ্বাসকষ্ট বজায় থাকে—"
+                  )}</h3>
+                    ${renderParagraphs(followupText)}
+                    <div class="row g-3 mt-3">
+                      ${["img/modu18/basic.jpg", "img/modu18/basic2.jpg", "img/modu18/basic3.jpg"]
+                        .map(
+                          (src) => `
+                            <div class="col-md-4">
+                              <figure class="text-center mb-0">
+                                <img src="${src}" alt="চোকিং প্রাথমিক চিকিৎসা" class="img-fluid rounded shadow-sm" />
+                              </figure>
+                            </div>
+                          `
+                        )
+                        .join("")}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch18-lesson-12",
+            title: yhLang(
+              "Infant Choking First Aid",
+              "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচে)"
+            ),
+            icon: "fa-baby",
+            gradientClass: "bg-gradient-sky",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q18l",
+                  question: yhLang(
+                    "শিশুর পিঠে কয়বার চাপড় দিতে নির্দেশনা দেওয়া হয়েছে?",
+                    "শিশুর পিঠে কয়বার চাপড় দিতে নির্দেশনা দেওয়া হয়েছে?"
+                  ),
+                  options: [
+                    yhLang("৫ বার", "৫ বার"),
+                    yhLang("২ বার", "২ বার"),
+                    yhLang("৮ বার", "৮ বার"),
+                    yhLang("একবার", "একবার"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const steps = [
+                "চিৎকার করে সাহায্য চান অথবা জরুরি সেবার নাম্বারে (৯৯৯) কল করতে হবে।",
+                "চিত্রের মতো করে বসে শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার কোলে নেবেন।",
+                "শিশুকে এমনভাবে এক হাতের ওপর সাবধানে শুইয়ে দিতে হবে যেন মাথা এবং ঘাড় ধরে রাখা যায়, কিন্তু শিশুর মুখ ঢেকে যাবে না এবং মুখ নিচের দিকে থাকবে।",
+                "এই অবস্থানে রেখে শিশুটির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
+                "শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার এক হাতের ওপর দ্রুত চিত করে শুইয়ে দেবেন।",
+                "শিশুর গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং শ্বাস-প্রশ্বাস স্বাভাবিক কিনা তা লক্ষ্য করতে হবে। যদি না হয়, তাহলে উপরে বর্ণিত প্রক্রিয়াটির পুনরাবৃত্তি করতে হবে।",
+              ];
+
+              const unconsciousSteps = [
+                "যদি শিশুটি অজ্ঞান হয়ে পড়ে—",
+                "শিশুটিকে একটি শক্ত ও নিরাপদ সমতল স্থানে শুইয়ে দিতে হবে।",
+                "সিপিআর শুরু করতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderParagraphs = (items) =>
+                items.map((item) => `<p class="mb-2">${item}</p>`).join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা",
+                    "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচের শিশুর ক্ষেত্রে)"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-5">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu18/breath.jpg" alt="শিশুর চোকিং চিকিৎসা" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                      <div class="col-lg-7">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(steps)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7 order-2 order-lg-1">
+                        ${renderParagraphs(unconsciousSteps)}
+                      </div>
+                      <div class="col-lg-5 order-1 order-lg-2">
+                        <figure class="text-center mb-0">
+                          <img src="img/modu18/breath2.jpg" alt="শিশুর সিপিআর" class="img-fluid rounded shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
