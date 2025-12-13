@@ -31,7 +31,6 @@
 
   api.setSidebarHidden = function (flag) {
     writeFlag(flag);
-    return api.sidebarHidden;
   };
 
   api.getLessonShellClass = function () {
@@ -54,9 +53,11 @@
       const positiveSteps = document.querySelectorAll('.pyramid-positive .pyramid-steps .pyramid-step');
       positiveSteps.forEach((step) => {
         if (api.sidebarHidden) {
-          step.classList.add('pyramid-positive-collapsed').remove('pyramid-step');
+          step.classList.add('pyramid-positive-collapsed');
+          step.classList.remove('pyramid-step');
         } else {
-          step.classList.add('pyramid-step').remove('pyramid-positive-collapsed');
+          step.classList.add('pyramid-step');
+          step.classList.remove('pyramid-positive-collapsed');
         }
       });
     } catch (_) {}
@@ -12947,15 +12948,432 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch19-lesson-8",
+            title: yhLang(
+              "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
+              "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
+            ),
+            icon: "fa-apple-whole",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q19h",
+                  question: yhLang(
+                    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?",
+                    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?"
+                  ),
+                  options: [
+                    yhLang("প্রতি সপ্তাহে", "প্রতি সপ্তাহে"),
+                    yhLang("প্রতি মাসে", "প্রতি মাসে"),
+                    yhLang("প্রতি দিনে", "প্রতি দিনে"),
+                    yhLang("প্রতি বছরে", "প্রতি বছরে"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const symptomPoints = [
+                "অবসাদ, কাজ-কর্মে অনীহা, দুর্বলতাবোধ করা ও ঘুমঘুমভাব অনুভব করা",
+                "শরীরের চামড়া ফ্যাকাসে হয়ে যায়",
+                "শ্বাস-প্রশ্বাসে কষ্ট হয়",
+                "দীর্ঘদিন রক্তস্বল্পতা থাকলে মাসিকের সমস্যা দেখা দিতে পারে (এলোমেলো মাসিক, কম রক্তপাত ইত্যাদি)",
+              ];
+
+              const preventionPoints = [
+                "গাঢ় সবুজ শাক-সবজি, টমেটো ইত্যাদি নিয়মিত খেতে হবে।",
+                "কলিজা, মাংস এবং ডিম নিয়মিত খেতে হবে।",
+                "ভিটামিন-সি সমৃদ্ধ খাবার যেমন : লেবু, কমলালেবু, রসালো ফল, লিচু, পেয়ারা, পেঁপে, আনারস, তরমুজ, আম ইত্যাদি নিয়মিত খেতে হবে।",
+                "ব্যক্তিগতভাবে পরিষ্কার-পরিচ্ছন্ন থাকতে হবে।",
+                "স্বল্প আঁচে/জ্বালে খাদ্যদ্রব্য ঢেকে রান্না করতে হবে।",
+                "পায়ে সব সময় জুতা/স্যান্ডেল ব্যবহার করতে হবে যাতে পেটে কৃমি না জন্মায়। ডাক্তারের পরামর্শ অনুযায়ী নিয়মিত বিরতিতে কৃমিনাশক ওষুধ খেতে হবে।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
+                    "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="10">
+                    <p>এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। কিশোরীদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় কিশোরীদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।</p>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row g-4">
+                      <div class="col-lg-6">
+                        <article class="h-100 p-3">
+                          <h3 class="gradient-text">রক্তস্বল্পতা দেখা দিলে শরীরে যেসব সমস্যা দেখা যায় :</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(symptomPoints)}
+                          </ul>
+                        </article>
+                      </div>
+                      <div class="col-lg-6">
+                        <article class="h-100 p-3">
+                          <h3 class="gradient-text">কীভাবে এনিমিয়া বা রক্তস্বল্পতা দূর করা যায় :</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderList(preventionPoints)}
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                    <div class="row g-4">
+                      <div class="col-lg-4">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h4 class="gradient-text mb-3">আয়রন ফলিক এসিড ট্যাবলেট</h4>
+                          <p>রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে। সরকারি স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।</p>
+                        </article>
+                      </div>
+                      <div class="col-lg-4">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h4 class="gradient-text mb-3">আয়োডিন ঘাটতি :</h4>
+                          <p>মানবদেহে আয়োডিন একটি গুরুত্বপূর্ণ পুষ্টি উপাদান। আয়োডিন ঘাটতি হলে গলগণ্ড, খর্বতা ও বুদ্ধি প্রতিবন্ধিতাসহ বিভিন্ন সমস্যা দেখা দেয়, যা প্রতিরোধে আয়োডিনযুক্ত লবণ খেতে হয়।</p>
+                        </article>
+                      </div>
+                      <div class="col-lg-4">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h4 class="gradient-text mb-3">ক্যালসিয়াম ঘাটতি :</h4>
+                          <p>ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই কৈশোরে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।</p>
+                        </article>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-9",
+            title: yhLang(
+              "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র",
+              "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র"
+            ),
+            icon: "fa-heart-pulse",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র",
+                    "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র"
+                  )}</h2>
+                  <div class="row g-3 mb-3 align-items-center" data-aos="fade-up" data-aos-delay="60">
+                    <div class="col-12 col-md-12">
+                      <div class="glass-card p-4 h-100">
+                        <p class="mb-0">
+                          অপুষ্টি চক্র বংশপরম্পরায় চলতে থাকে। পুষ্টিজনিত সমস্যায় ভোগা কিশোরীদের পর্যাপ্ত দৈহিক বৃদ্ধি না হওয়ায় বেঁটে/খাটো হয় এবং তারা কম ওজনের শিশুর জন্ম দিয়ে থাকে। আর এই কম ওজনের শিশুরা যদি মেয়ে হয়, তাহলে তারাও বড় হলে খাটো হয় এবং বিয়ে হলে আবারও কম ওজনের শিশুর জন্ম দেয়, যা আরও ভয়াবহ। এভাবেই এই চক্র চলতে থাকে যতক্ষণ পর্যন্ত না এই চক্র ভেঙে যায়। এজন্য জীবনের সকল স্তরেই, বিশেষ করে শৈশব ও কৈশোরে, পুষ্টিকর খাবার গ্রহণের মাধ্যমে কিশোরী ও নারীদের পুষ্টি নিশ্চিত করতে হবে।
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3 align-items-center" data-aos="fade-up" data-aos-delay="60">
+                    <div class="col-12 col-md-6">
+                      <figure class="text-center mb-0">
+                        <img src="img/modu19/pusti1.jpg" alt="পুষ্টি সচেতনতা" class="img-fluid rounded shadow-sm" />
+                      </figure>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <figure class="text-center mb-0">
+                        <img src="img/modu19/pusti2.jpg" alt="কৈশোরকালীন পুষ্টি" class="img-fluid rounded shadow-sm" />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-10",
+            title: yhLang(
+              "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়",
+              "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়"
+            ),
+            icon: "fa-shield-heart",
+            gradientClass: "bg-gradient-sunrise",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়",
+                    "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়"
+                  )}</h2>
+                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="60">
+                    <ul class="list-unstyled puberty-list mb-0">
+                      <li><i class="fa-solid fa-circle-check"></i> সুষম খাবার, যেমন— শর্করাজাতীয় খাবার (ভাত, রুটি, মুড়ি, চিনি, গুড়, মধু, আলু, চিড়া ইত্যাদি), আমিষজাতীয় খাবার (ডিম, দুধ, মাছ, মাংস, ডাল, বাদাম, বীচি ইত্যাদি), আয়রনসমৃদ্ধ খাবার (মাংস, কলিজা এবং গাঢ় সবুজ শাক-সবজি), ভিটামিন এ সমৃদ্ধ খাবার (কলিজা, পাকা পেঁপে, আম, গাজর, মিষ্টি কুমড়া, ছোট মাছ, ডিম, সবুজ শাক-সবজি ও হলুদ রঙের ফলমূল) খাওয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> প্রতিদিন কমপক্ষে ৮–১০ গ্লাস পানি পান করা</li>
+                      <li><i class="fa-solid fa-circle-check"></i> প্রতিদিন পর্যাপ্ত পরিমাণে ভিটামিন বি এবং ভিটামিন সি-যুক্ত খাবার খাওয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> প্রতি সপ্তাহে ১টি করে আয়রন-ফলিক এসিড (আইএফএ) ট্যাবলেট খাওয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> আয়োডিনসমৃদ্ধ খাবার (সামুদ্রিক মাছ এবং সমুদ্র তীরবর্তী এলাকার শাক-সবজি) এবং আয়োডিনযুক্ত লবণ খাওয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> প্রত্যেক কিশোর-কিশোরীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি গ্রহণ করা</li>
+                      <li><i class="fa-solid fa-circle-check"></i> খাবার খাওয়ার আগে ও পরে সাবান এবং নিরাপদ পানি দিয়ে হাত ধোয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> স্বাস্থ্যসম্মত ল্যাট্রিন ব্যবহার করা</li>
+                      <li><i class="fa-solid fa-circle-check"></i> ১৮-এর আগে বিয়ে নয়, ২০-এর আগে সন্তান নয়</li>
+                    </ul>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-11",
+            title: yhLang(
+              "অধিক ওজন ও স্থূলতা",
+              "অধিক ওজন ও স্থূলতা"
+            ),
+            icon: "fa-weight-scale",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const causePoints = [
+                "প্রতিদিন প্রয়োজনের তুলনায় বেশি ক্যালোরিযুক্ত খাদ্য গ্রহণ",
+                "কম পরিশ্রম বা নিয়মিত খেলাধুলা না করা",
+                "অনিয়মিত জীবনযাপন করা (যেমন: রাতজাগা, ঘুম থেকে দেরিতে ওঠা, নাশতা না করে পরে অপরিমিত খাওয়া, বেশি পরিমাণে মোবাইল ফোন ব্যবহার/স্ক্রিনটাইম বেশি হওয়া)",
+                "তেলে ভাজা, অধিক তৈলাক্ত ও চর্বিজাতীয় খাবার খাওয়া (যেমন: ফাস্ট ফুড, কোকাকোলা, চিপস ইত্যাদি)",
+                "চিনি ও মিষ্টিজাতীয় খাবার বেশি খাওয়া",
+              ];
+
+              const renderCauses = () =>
+                causePoints
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "অধিক ওজন ও স্থূলতা",
+                    "অধিক ওজন ও স্থূলতা"
+                  )}</h2>
+                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60">
+                    <p class="mb-0">
+                      বডি মাস ইনডেক্স (বিএমআই) ২৫ থেকে ২৯.৯ এর মধ্যে থাকলে তাকে অতিরিক্ত ওজন হিসেবে ধরা হয়। অন্যদিকে বিএমআই ৩০ বা তার বেশি হলে তাকে স্থূলতা বলা হয়। কিশোর-কিশোরীদের মধ্যে স্থূলতার হার বৃদ্ধির জন্য ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধুলা, ব্যায়াম ও সুযোগ-সুবিধার প্রভাব বিদ্যমান। সুষম খাবারের প্রয়োজনীয়তা ও সুষম খাবার কোনগুলো এবং তার সুফল সম্পর্কে পরিবারের মধ্যে ধারণা কম রয়েছে। তাছাড়া গ্রাম ও শহরে মেয়েদের উপযুক্ত খেলার স্থান ও নিরাপদ কাঠামোর সংকট রয়েছে।
+                    </p>
+                  </div>
+                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="gradient-text mb-3">অধিক ওজন ও স্থূলতার কারণ :</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderCauses()}
+                    </ul>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-12",
+            title: yhLang(
+              "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
+              "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব"
+            ),
+            icon: "fa-exclamation-circle",
+            gradientClass: "bg-gradient-crimson",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
+                    "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব"
+                  )}</h2>
+                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="60">
+                    <figure class="text-center mb-0">
+                      <img src="img/modu19/odhik.jpg" alt="অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব" class="img-fluid rounded shadow-sm" />
+                    </figure>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-13",
+            title: yhLang(
+              "অধিক ওজন ও স্থূলতার ঝুঁকি",
+              "অধিক ওজন ও স্থূলতার ঝুঁকি"
+            ),
+            icon: "fa-notes-medical",
+            gradientClass: "bg-gradient-sunset",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const diseasePoints = [
+                "উচ্চ রক্তচাপ",
+                "ডায়াবেটিস",
+                "হৃদরোগ",
+                "রক্তে অধিক পরিমাণ চর্বি জমা",
+                "পিত্তথলির পাথর, ক্যান্সার ইত্যাদি",
+              ];
+
+              const preventionPoints = [
+                "পরিমিত সুষম খাবার খেতে হবে",
+                "নিয়মিত শরীরচর্চা, ব্যায়াম ও খেলাধুলা করতে হবে",
+                "কিশোর-কিশোরীদের সারা সপ্তাহে প্রতিদিন গড়ে অন্তত ৬০ মিনিট মাঝারি থেকে ভারী শারীরিক ব্যায়াম করা উচিত",
+                "তেলেভাজা, অধিক তৈলাক্ত, লবণাক্ত ও চর্বিজাতীয় খাবার যেমন ফাস্টফুড, চিপস, ফ্রাইড ফুড ইত্যাদি পরিত্যাগ করতে হবে",
+                "প্রতিদিন ফলমূল খাওয়ার অভ্যাস করতে হবে এবং ফলের রসের বদলে আস্ত ফল খেতে হবে",
+                "কোমল পানীয় (সফট ড্রিংকস, এনার্জি ড্রিংকস, কৃত্রিম ফলের রস ইত্যাদি) পান করা থেকে বিরত থাকতে হবে",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "অধিক ওজন ও স্থূলতার ঝুঁকি",
+                    "অধিক ওজন ও স্থূলতার ঝুঁকি"
+                  )}</h2>
+                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60">
+                    <p class="mb-3">কৈশোরকালীন বয়সে অধিক ওজন ও স্থূলতার কারণে বিভিন্ন ধরনের অসংক্রামক রোগে আক্রান্ত হওয়ার প্রবণতা বেড়ে যায়। যেমন –</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(diseasePoints)}
+                    </ul>
+                  </div>
+                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="gradient-text mb-3">অধিক ওজন ও স্থূলতা প্রতিরোধে করণীয় :</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(preventionPoints)}
+                    </ul>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
         id: "ch-20",
         title: yhLang(
           "Module-20: Special care for vulnerable adolescents",
-          "মডিউল-২০: ঝুঁকিপূর্ণ কিশোর-কিশোরীর বিশেষ যত্ন"
+          "মডিউল-২০: কিশোর-কিশোরীদের অসংক্রামক রোগ ও তার প্রতিরোধ"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch20-lesson-1",
+            title: yhLang(
+              "অসংক্রামক রোগ",
+              "অসংক্রামক রোগ"
+            ),
+            icon: "fa-virus-slash",
+            gradientClass: "bg-gradient-cyan",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const whoRisks = [
+                "ত্রুটিপূর্ণ খাদ্যাভ্যাস",
+                "কায়িক পরিশ্রমের অভাব",
+                "তামাকজাত দ্রব্য ব্যবহার",
+                "মদ্যপান ও অন্যান্য",
+              ];
+
+              const preventionList = [
+                "নিয়মিত ব্যায়াম করতে হবে। সপ্তাহে অন্তত ৫ দিন ৩০ থেকে ৪০ মিনিট করে দ্রুত হাঁটতে হবে।",
+                "সুষম খাবার খেতে হবে। অতিরিক্ত তেলেভাজা, প্রক্রিয়াজাত খাবার, চর্বিযুক্ত খাবার, ফাস্টফুড, কোমল পানীয়, অতিরিক্ত চিনিযুক্ত খাবার খাওয়া যাবে না।",
+                "প্রতিদিন ৪০০ গ্রাম শাকসবজি ও ১০০ গ্রাম ফল খাওয়া উচিত।",
+                "জনপ্রতি দৈনিক পাঁচ গ্রামের বেশি লবণ খাওয়া যাবে না।",
+                "প্রত্যক্ষ ধূমপানের সাথে সাথে পরোক্ষ ধূমপান পরিহার করতে হবে।",
+              ];
+
+              const renderList = (items, type = "ul") =>
+                items
+                  .map((item) => `
+                    <li>
+                      <span><i class="fa-solid fa-circle-check"></i> ${item}</span>
+                    </li>
+                  `)
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "অসংক্রামক রোগ",
+                    "অসংক্রামক রোগ"
+                  )}</h2>
+                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60">
+                    <p class="mb-0">
+                      অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও কিশোর-কিশোরী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।
+                    </p>
+                  </div>
+                  <div class="row g-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 col-lg-6">
+                      <div class="glass-card p-4 h-100">
+                        <h3 class="gradient-text mb-3">বিশ্ব স্বাস্থ্য সংস্থা অসংক্রামক রোগের চারটি ঝুঁকি চিহ্নিত করেছে। ঝুঁকিগুলো হলো:</h3>
+                        <ol class="mb-0 ps-3">
+                          ${renderList(whoRisks)}
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="glass-card p-4 h-100">
+                        <h3 class="gradient-text mb-3">করণীয় :</h3>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(preventionList)}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3 mt-3" data-aos="fade-up" data-aos-delay="140">
+                    <div class="col-12 col-md-4">
+                      <figure class="text-center mb-0">
+                        <img src="img/modu20/rog1.jpg" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid rounded shadow-sm" />
+                      </figure>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <figure class="text-center mb-0">
+                        <img src="img/modu20/rog2.jpg" alt="ঝুঁকির কারণ" class="img-fluid rounded shadow-sm" />
+                      </figure>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <figure class="text-center mb-0">
+                        <img src="img/modu20/rog3.jpg" alt="করণীয়" class="img-fluid rounded shadow-sm" />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-21",
