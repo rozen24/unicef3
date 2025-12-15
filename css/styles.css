@@ -2444,6 +2444,50 @@ img {
     border-radius: 10px;
 }
 
+#mobileLessonBrowser .accordion-item.is-active-module {
+  position: sticky;
+  top: 0.65rem;
+  z-index: 15;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 0.35rem 0.4rem 0.9rem;
+  box-shadow: 0 24px 55px rgba(12, 55, 107, 0.18);
+  border: 1px solid rgba(0, 117, 190, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+#mobileLessonBrowser [data-active-module="true"] {
+  scroll-margin-top: 1rem;
+}
+
+#mobileLessonBrowser .accordion-item.is-active-module .module-header {
+  background: linear-gradient(135deg, rgba(0, 159, 255, 0.22), rgba(0, 210, 255, 0.16));
+  box-shadow: 0 18px 40px rgba(0, 128, 255, 0.25);
+}
+
+#mobileLessonBrowser .module-header .chapter-title {
+  flex: 1;
+  font-weight: 600;
+}
+
+#mobileLessonBrowser .module-active-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.15rem 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+  color: #fff;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 12px 30px rgba(34, 211, 238, 0.3);
+}
+
+#mobileLessonBrowser .module-active-pill i {
+  font-size: 0.65rem;
+}
+
 #mobileLessonBrowser .fw-semibold,
 #mobileLessonBrowserFlat .fw-semibold {
   font-weight: 700 !important;

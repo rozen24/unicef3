@@ -99,6 +99,18 @@ class YouthHealthLMS {
     this.render();
   }
 
+  hasFullModuleAccess() {
+    try {
+      const email = (this.currentUser?.email || "").trim().toLowerCase();
+      return (
+        email === "dr.ehtesham.kabir@gmail.com" ||
+        email === "srafi@unicef.org"
+      );
+    } catch (_) {
+      return false;
+    }
+  }
+
   getStoredLanguage() {
     try {
       const stored = localStorage.getItem("preferredLanguage");
@@ -132,6 +144,7 @@ class YouthHealthLMS {
     } catch (_) {}
   }
 
+
   bindLanguageToggle() {
     try {
       document.querySelectorAll("[data-lang-option]").forEach((btn) => {
@@ -144,6 +157,40 @@ class YouthHealthLMS {
         btn.dataset.bound = "true";
       });
       this.updateLanguageToggleUI();
+    } catch (_) {}
+  }
+
+  bindLessonBrowserEvents() {
+    try {
+      const offcanvas = document.getElementById("mobileLessonBrowser");
+      if (!offcanvas) return;
+
+      const scrollActiveModule = () => {
+        try {
+          const activeModule = offcanvas.querySelector(
+            "[data-active-module='true']"
+          );
+          if (!activeModule) return;
+          activeModule.scrollIntoView({ block: "start", behavior: "smooth" });
+        } catch (_) {}
+      };
+
+      if (offcanvas.dataset.activeModuleScrollBound !== "true") {
+        offcanvas.addEventListener("shown.bs.offcanvas", () => {
+          scrollActiveModule();
+        });
+        offcanvas.dataset.activeModuleScrollBound = "true";
+      }
+
+      document
+        .querySelectorAll('[data-bs-target="#mobileLessonBrowser"]')
+        .forEach((btn) => {
+          if (btn.dataset.activeModuleScrollBound === "true") return;
+          btn.addEventListener("click", () => {
+            setTimeout(scrollActiveModule, 350);
+          });
+          btn.dataset.activeModuleScrollBound = "true";
+        });
     } catch (_) {}
   }
 
@@ -709,7 +756,9 @@ class YouthHealthLMS {
       this.initializeProgress(this.selectedCourse.id);
     const items = this.selectedCourse.lessons || this.selectedCourse.lessions;
     const unlocked =
-      index === 0 || progress.completedlessions.includes(items[index - 1]?.id);
+      this.hasFullModuleAccess() ||
+      index === 0 ||
+      progress.completedlessions.includes(items[index - 1]?.id);
 
     if (unlocked) {
       this.currentlessionIndex = index;
@@ -753,6 +802,7 @@ class YouthHealthLMS {
         app.innerHTML = this.renderLessonSlider();
         // Initialize lesson audio controls/state after DOM is ready
         this.initLessonAudio();
+        try { this.bindLessonBrowserEvents(); } catch (_) {}
         this.initAOS();
         // Initialize any lesson-specific interactive enhancements (charts, counters)
         try { this.initLessonEnhancements(); } catch (_) {}
@@ -2562,6 +2612,8 @@ class YouthHealthLMS {
       ? "All programmes successfully completed"
       : "Choose any course to begin";
 
+    const hasFullAccess = this.hasFullModuleAccess();
+
     const formatNumber = (value) =>
       typeof value === "number" ? value.toLocaleString("en-US") : value;
 
@@ -2579,7 +2631,7 @@ class YouthHealthLMS {
           const progress = this.getUserProgress(course.id) || this.initializeProgress(course.id);
           const doneSet = new Set(progress.completedlessions || []);
           // Find first unlocked chapter (module) where previous module quiz is passed
-          const isUnlocked = (ci) => ci === 0 || doneSet.has(`${course.chapters[ci - 1].id}-quiz`);
+          const isUnlocked = (ci) => hasFullAccess || ci === 0 || doneSet.has(`${course.chapters[ci - 1].id}-quiz`);
           const isCompletedModule = (ci) => doneSet.has(`${course.chapters[ci].id}-quiz`);
           let targetChapter = course.chapters.findIndex((_, ci) => isUnlocked(ci) && !isCompletedModule(ci));
           if (targetChapter < 0) {
@@ -2685,7 +2737,7 @@ class YouthHealthLMS {
                     const moduleQuizId = `${ch.id}-quiz`;
                     const quizPassed = doneSet.has(moduleQuizId);
                     const completed = contentDone && quizPassed;
-                    const unlocked = ci === 0 || (course.chapters[ci - 1] && doneSet.has(`${course.chapters[ci - 1].id}-quiz`));
+                    const unlocked = hasFullAccess || ci === 0 || (course.chapters[ci - 1] && doneSet.has(`${course.chapters[ci - 1].id}-quiz`));
                     const state = completed ? 'completed' : unlocked ? 'unlocked' : 'locked';
                     const icon = completed ? 'fa-check-circle' : unlocked ? 'fa-lock-open' : 'fa-lock';
                     const stateCls = completed ? 'module-card--completed' : unlocked ? 'module-card--unlocked' : 'module-card--locked';
@@ -2720,12 +2772,14 @@ class YouthHealthLMS {
     const progress =
       this.getUserProgress(this.selectedCourse.id) ||
       this.initializeProgress(this.selectedCourse.id);
+    const fullAccess = this.hasFullModuleAccess();
     const currentlession =
       this.selectedCourse.lessions[this.currentlessionIndex];
     const islessionCompleted = progress.completedlessions.includes(
       currentlession.id
     );
     const islessionUnlocked =
+      fullAccess ||
       this.currentlessionIndex === 0 ||
       progress.completedlessions.includes(
         this.selectedCourse.lessions[this.currentlessionIndex - 1]?.id
@@ -2775,6 +2829,7 @@ class YouthHealthLMS {
                         lession.id
                       );
                       const unlocked =
+                        fullAccess ||
                         index === 0 ||
                         progress.completedlessions.includes(
                           this.selectedCourse.lessions[index - 1]?.id
@@ -3222,6 +3277,7 @@ class YouthHealthLMS {
     const course = this.selectedCourse;
     const hasChapters = Array.isArray(course?.chapters) && course.chapters.length > 0;
     const sidebarHidden = (window.YHUI ? window.YHUI.sidebarHidden : this.isLessonSidebarHidden());
+    const fullAccess = this.hasFullModuleAccess();
 
     if (hasChapters) {
       const totalChapters = course.chapters.length;
@@ -3324,7 +3380,7 @@ class YouthHealthLMS {
 
   // Determine if module quiz is passed to allow moving to next module
   const moduleQuizId = `${course.chapters[chIndex].id}-quiz`;
-  const modulePassed = completedIds.has(moduleQuizId);
+  const modulePassed = fullAccess || completedIds.has(moduleQuizId);
 
       // Icon mapping for chapters (fallback rotates through when out of range)
       const chapterIcons = [
@@ -3359,15 +3415,25 @@ class YouthHealthLMS {
           <div class="offcanvas-body">
             ${course.chapters.map((ch, ci) => {
               const lessons = ch.lessons || [];
+              const isActiveModule = ci === chIndex;
+              const moduleLessonPointer = isActiveModule && lessons.length
+                ? Math.min(activeIndex, lessons.length - 1)
+                : -1;
+              const doneCount = lessons.reduce((acc, ls) => acc + (completedIds.has(ls.id) ? 1 : 0), 0);
               return `
-                <div class="mb-3 accordion-item">
-                  <div class="module-header accordion-button fw-semibold"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2 shadow-lg"></i>${ch.title}</div>
+                <div class="mb-3 accordion-item ${isActiveModule ? 'is-active-module' : ''}" ${isActiveModule ? 'data-active-module="true"' : ''}>
+                  <div class="module-header accordion-button fw-semibold ${isActiveModule ? 'module-header--active' : ''}">
+                    <span class="chapter-icon me-2"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2 shadow-lg"></i></span>
+                    <span class="chapter-title flex-grow-1">${ch.title}</span>
+                    ${isActiveModule ? `<span class="module-active-pill me-2"><i class="fa-solid fa-circle-dot me-1"></i>${this.lang("Now learning", "এখন শিখছেন")}</span>` : ''}
+                    <span class="chapter-progress-pill" title="${doneCount} of ${lessons.length} lessons">${doneCount}/${lessons.length}</span>
+                  </div>
                   <div class="list-group">
                     ${lessons.map((ls, li) => {
                       const prevId = lessons[Math.max(0, li - 1)]?.id;
-                      const isUnlocked = li === 0 || (prevId && completedIds.has(prevId));
+                      const isUnlocked = fullAccess || li === 0 || (prevId && completedIds.has(prevId));
                       const isDone = completedIds.has(ls.id);
-                      const isCurrent = ci === chIndex && li === activeIndex;
+                      const isCurrent = isActiveModule && li === moduleLessonPointer;
                       // Estimate reading time from content length (~200 wpm)
                       let estMin = 1;
                       try {
@@ -3427,7 +3493,7 @@ class YouthHealthLMS {
                       .map((ls, li) => {
                         const isActive = ci === chIndex && li === activeIndex;
                         const isDone = completedIds.has(ls.id);
-                        const isUnlocked = li === 0 || completedIds.has((ch.lessons || [])[li - 1]?.id);
+                        const isUnlocked = fullAccess || li === 0 || completedIds.has((ch.lessons || [])[li - 1]?.id);
                         const lockIcon = isDone ? 'fa-check' : (isUnlocked ? 'fa-lock-open' : 'fa-lock');
                         const maybeOnclick = isUnlocked ? `onclick=\"app.changeChapterLesson(${ci}, ${li})\"` : '';
                         const ariaDisabled = isUnlocked ? '' : 'aria-disabled="true"';
@@ -3860,7 +3926,7 @@ class YouthHealthLMS {
       try {
         const progress = this.getUserProgress(this.selectedCourse.id) || this.initializeProgress(this.selectedCourse.id);
         const prevId = lessons[Math.max(0, (lessonIndex || 0) - 1)]?.id;
-        const isUnlocked = (lessonIndex || 0) === 0 || (prevId && (progress.completedlessions || []).includes(prevId));
+        const isUnlocked = this.hasFullModuleAccess() || (lessonIndex || 0) === 0 || (prevId && (progress.completedlessions || []).includes(prevId));
         if (!isUnlocked) {
           // Do not navigate to locked lessons
           return;
