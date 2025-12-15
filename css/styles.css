@@ -2484,6 +2484,146 @@ img {
   font-size: 0.65rem;
 }
 
+/* Climate impact comparison table */
+.table-modern {
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 18px 45px rgba(6, 23, 58, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.table-modern thead th {
+  background: linear-gradient(120deg, rgba(14, 165, 233, 0.25), rgba(59, 130, 246, 0.4));
+  color: #0f172a;
+  font-weight: 700;
+  padding: 1.25rem;
+  border-color: transparent;
+}
+
+.table-modern tbody td {
+  vertical-align: top;
+  padding: 1.5rem 1.75rem;
+  border-color: rgba(15, 23, 42, 0.07);
+  background: #fff;
+}
+
+.impact-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.impact-heading i {
+  color: #0ea5e9;
+  font-size: 1.1rem;
+}
+
+.impact-block + .impact-block {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed rgba(15, 23, 42, 0.08);
+}
+
+.impact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.impact-badge--direct {
+  background: rgba(249, 115, 22, 0.15);
+  color: #b45309;
+}
+
+.impact-badge--indirect {
+  background: rgba(14, 165, 233, 0.15);
+  color: #0f4c75;
+}
+
+.impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.impact-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.45rem;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.impact-list li::before {
+  content: "";
+  position: absolute;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  left: 0;
+  top: 0.45rem;
+}
+
+/* AQI table styling */
+.table-aqi {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 55px rgba(9, 30, 66, 0.12);
+}
+
+.table-aqi thead th {
+  background: linear-gradient(120deg, rgba(16, 185, 129, 0.3), rgba(14, 165, 233, 0.35));
+  color: #052c3b;
+  font-weight: 700;
+  text-align: center;
+  border-color: transparent;
+  padding: 1rem 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table-aqi tbody td {
+  padding: 0.9rem 1.2rem;
+  border-color: rgba(15, 23, 42, 0.08);
+  font-weight: 600;
+  text-align: center;
+}
+
+.aqi-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #0f172a;
+}
+
+.aqi-chip--good { background: #bbf7d0; }
+.aqi-chip--fair { background: #d9f99d; }
+.aqi-chip--caution { background: #fef08a; }
+.aqi-chip--unhealthy { background: #fed7aa; }
+.aqi-chip--very-unhealthy { background: #fecaca; }
+.aqi-chip--hazardous { background: #f3e8ff; }
+
 #mobileLessonBrowser .fw-semibold,
 #mobileLessonBrowserFlat .fw-semibold {
   font-weight: 700 !important;

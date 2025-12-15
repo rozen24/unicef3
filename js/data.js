@@ -14533,6 +14533,217 @@ const coursesData = [
                 </div>`;
             })(),
           },
+          {
+            id: "ch22-lesson-2",
+            title: yhLang(
+              "জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর",
+              "জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর"
+            ),
+            icon: "fa-heart-pulse",
+            gradientClass: "bg-gradient-aurora",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর</h2>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="60">
+                    <div class="col-12 col-md-6">
+                      <div class="modern-card glass-card h-100 text-center">
+                        <img src="img/modu22/climate1.jpg" id="imageZoom" class="img-fluid rounded shadow-sm" alt="জলবায়ু পরিবর্তনের তাপমাত্রা বৃদ্ধি" loading="lazy">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="modern-card glass-card h-100 text-center">
+                        <img src="img/modu22/climate2.png" id="imageZoom" class="img-fluid rounded shadow-sm" alt="জলবায়ুর পরিবর্তনে স্বাস্থ্যঝুঁকি" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-3",
+            title: yhLang(
+              "জলবায়ু পরিবর্তন কীভাবে মানব স্বাস্থ্যে প্রভাব ফেলে",
+              "জলবায়ু পরিবর্তন কীভাবে মানব স্বাস্থ্যে প্রভাব ফেলে"
+            ),
+            icon: "fa-stethoscope",
+            gradientClass: "bg-gradient-sunrise",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তন কীভাবে মানব স্বাস্থ্যে প্রভাব ফেলে</h2>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                    <p>মানব স্বাস্থ্যের উপর জলবায়ু পরিবর্তন ও তার অনুসঙ্গিক বিষয়ের প্রভাব অস্বীকার্য ও ব্যাপক। বাংলাদেশের জলবায়ু পরিবর্তনের কারণে কৃষি, পানি, অবকাঠামো, শিল্প, বাসস্থান এবং স্বাস্থ্য ইত্যাদি বিষয়গুলির উপর ব্যাপকভাবে প্রভাব বিস্তার করেছে, যা অনেক ক্ষেত্রেই আশঙ্কাজনক।</p>
+                    <p>জলবায়ু পরিবর্তনের ফলে রোগের বিস্তার, বাস্তুসংস্থান ও আর্থসামাজিক অবস্থার পরিবর্তন হয়। মানব স্বাস্থ্যের মতো একটি অত্যন্ত গুরুত্বপূর্ণ বিষয় উপরোক্ত পরিবর্তনসমূহের কারণে বিভিন্নভাবে প্রভাবিত হয়। জলবায়ু পরিবর্তনের প্রত্যক্ষ প্রভাবের ক্ষেত্রে উষ্ণতা, ঘূর্ণিঝড়, বন্যা এসব ঘটনা সবচেয়ে বেশি প্রভাব ফেলে। পরোক্ষ প্রভাবসমূহ সাধারণ পানিবাহিত রোগ, কীটপতঙ্গ বাহিত রোগ, বায়ুদূষণ ইত্যাদির মাধ্যমে পরিলক্ষিত হয়। পেশাগত স্বাস্থ্য ও মানসিক স্বাস্থ্য প্রত্যক্ষ ও পরোক্ষ উভয় কারণেই প্রভাবিত হয়।</p>
+                    <p><strong>জলবায়ু পরিবর্তনের তীব্রতা</strong></p>
+                    <p>বাংলাদেশে শিশু-কিশোরদের স্বাস্থ্যের উপর প্রভাব ফেলছে এমন দুটি প্রধান সমস্যা হলো তাপদাহ এবং পানি সম্পর্কিত দুর্যোগ। বিশ্বব্যাপী এক তৃতীয়াংশেরও বেশি শিশু-কিশোর (n = ৯২০ মিলিয়ন) পানির অভাবের সম্মুখীন হয় এবং ৮২০ মিলিয়ন জনসংখ্যা তাপপ্রবাহের সম্মুখীন হয়।</p>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-4",
+            title: yhLang(
+              "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি",
+              "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি"
+            ),
+            icon: "fa-children",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি</h2>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-7">
+                      <div class="modern-card glass-card">
+                        <div class="table-responsive">
+                          <table class="table table-bordered table-modern align-middle">
+                            <thead>
+                              <tr>
+                                <th class="text-center">
+                                  <span class="impact-heading"><i class="fa-solid fa-temperature-high"></i> তাপদাহ</span>
+                                </th>
+                                <th class="text-center">
+                                  <span class="impact-heading"><i class="fa-solid fa-water"></i> পানি সম্পর্কিত দুর্যোগ</span>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="impact-block">
+                                    <span class="impact-badge impact-badge--direct">সরাসরি প্রভাব</span>
+                                    <ul class="impact-list">
+                                      <li>সময়ের আগে অকাল জন্ম, মৃত শিশুর জন্ম</li>
+                                      <li>শিশু মৃত্যুহার বৃদ্ধি</li>
+                                      <li>ইডিমা, ফুসকুড়ি, খিঁচুনি</li>
+                                      <li>মূর্ছা, ক্লান্তি এবং স্ট্রোক</li>
+                                    </ul>
+                                  </div>
+                                  <div class="impact-block">
+                                    <span class="impact-badge impact-badge--indirect">পরোক্ষ প্রভাব</span>
+                                    <ul class="impact-list">
+                                      <li>বায়ু দূষণ</li>
+                                      <li>খাদ্যবাহিত সংক্রমণ</li>
+                                      <li>ম্যালেরিয়া</li>
+                                      <li>কালাজ্বর</li>
+                                      <li>ক্যান্সার</li>
+                                    </ul>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="impact-block">
+                                    <span class="impact-badge impact-badge--direct">সরাসরি প্রভাব</span>
+                                    <ul class="impact-list">
+                                      <li>ডায়রিয়া</li>
+                                      <li>আমাশয়</li>
+                                      <li>পোলিওমাইলাইটিস</li>
+                                      <li>টাইফয়েড জ্বর</li>
+                                      <li>অ্যামিবিয়াসিস</li>
+                                      <li>জিয়ার্ডিয়াসিস</li>
+                                      <li>কৃমির উপদ্রব</li>
+                                      <li>আর্সেনিকোসিস</li>
+                                    </ul>
+                                  </div>
+                                  <div class="impact-block">
+                                    <span class="impact-badge impact-badge--indirect">পরোক্ষ প্রভাব</span>
+                                    <ul class="impact-list">
+                                      <li>অপুষ্টি</li>
+                                      <li>মানসিক চাপ</li>
+                                      <li>ক্যান্সার</li>
+                                      <li>সামাজিক সহিংসতা</li>
+                                      <li>স্থানচ্যুতি</li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div class="modern-card glass-card text-center">
+                        <img src="img/modu22/heart.png" class="img-fluid rounded shadow-sm" alt="শিশু-কিশোরদের স্বাস্থ্য ঝুঁকি" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-5",
+            title: yhLang(
+              "বায়ু দূষণ",
+              "বায়ু দূষণ"
+            ),
+            icon: "fa-wind",
+            gradientClass: "bg-gradient-cyan",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">বায়ু দূষণ</h2>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                    <p>বায়ু দূষণকে এক বা একাধিক দূষিত পদার্থের উপস্থিতি হিসাবে সংজ্ঞায়িত করা যেতে পারে, যেমন ধূলিকণা, ধোঁয়া, গ্যাস, কুয়াশা, গন্ধ, ধোঁয়া বা বাষ্প, যেগুলো মানুষ, প্রাণী বা উদ্ভিদ জীবনের জন্য ক্ষতিকারক।</p>
+                    <p><strong>বায়ু দূষণ প্রাথমিক ভাবে দুই ধরনের:</strong></p>
+                    <p>১. পরিবেষ্টিত বা অ্যাম্বিয়েন্ট (বাহ্যিক) বায়ু দূষণ বলতে বাইরের বাতাসের দূষণকে বোঝায়। এর মধ্যে সাধারণত কার্বন মনোক্সাইড (CO), নাইট্রোজেন অক্সাইড (NOx), সীসা, আর্সেনিক, পারদ, সালফার ডাই অক্সাইড (SO2), পলিসাইক্লিক অ্যারোমেটিক হাইড্রোকার্বন (PAHs) এবং কণা পদার্থ (PM) অন্তর্ভুক্ত থাকে।</p>
+                    <p>২. গৃহস্থালির (অভ্যন্তরীণ) বায়ু দূষণ বলতে রান্না, তাপ এবং আলো জ্বালানোর জন্য জ্বালানি (কাঠ, জৈববস্তু, কয়লা, কেরোসিন ইত্যাদি) অপ্রয়োজনীয় দহনের ফলে সৃষ্ট ঘরের ভেতরে এবং আশেপাশের দূষণকে বোঝায়।</p>
+                    <p>বায়ু কতটা দূষিত তা বায়ুর মান সূচক (AQI) দ্বারা পরিমাপ করা যায়। বাংলাদেশে, পাঁচটি দূষণকারী পদার্থের (কণা পদার্থ PM10 এবং PM2.5, NO2, CO, SO2 এবং O3) বিদ্যমান ঘনত্বের উপর ভিত্তি করে AQI গণনা করা হয়।</p>
+                    <div class="table-responsive mt-4">
+                      <table class="table table-bordered table-aqi align-middle">
+                        <thead>
+                          <tr>
+                            <th>বায়ুর মান সূচক (AQI)</th>
+                            <th>ক্যাটাগরি</th>
+                            <th>রং</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>০–৫০</td>
+                            <td>ভালো</td>
+                            <td><span class="aqi-chip aqi-chip--good">সবুজ</span></td>
+                          </tr>
+                          <tr>
+                            <td>৫১–১০০</td>
+                            <td>মোটামুটি</td>
+                            <td><span class="aqi-chip aqi-chip--fair">হালকা সবুজ</span></td>
+                          </tr>
+                          <tr>
+                            <td>১০১–১৫০</td>
+                            <td>সতর্কতামূলক</td>
+                            <td><span class="aqi-chip aqi-chip--caution">হলুদ</span></td>
+                          </tr>
+                          <tr>
+                            <td>১৫১–২০০</td>
+                            <td>অস্বাস্থ্যকর</td>
+                            <td><span class="aqi-chip aqi-chip--unhealthy">কমলা</span></td>
+                          </tr>
+                          <tr>
+                            <td>২০১–৩০০</td>
+                            <td>খুব অস্বাস্থ্যকর</td>
+                            <td><span class="aqi-chip aqi-chip--very-unhealthy">লাল</span></td>
+                          </tr>
+                          <tr>
+                            <td>৩০১–৫০০</td>
+                            <td>অত্যন্ত অস্বাস্থ্যকর</td>
+                            <td><span class="aqi-chip aqi-chip--hazardous">বেগুনি</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
         ],
       },
       {
