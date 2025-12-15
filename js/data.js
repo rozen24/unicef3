@@ -14744,6 +14744,496 @@ const coursesData = [
                 </div>`;
             })(),
           },
+          {
+            id: "ch22-lesson-6",
+            title: yhLang(
+              "বায়ু দূষণের উৎস:",
+              "বায়ু দূষণের উৎস:"
+            ),
+            icon: "fa-industry",
+            gradientClass: "bg-gradient-amber",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">বায়ু দূষণের উৎস:</h2>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-6">
+                      <div class="modern-card glass-card h-100">
+                        <h4 class=" mb-3">WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:</h3>
+                        <ul class="list-unstyled feature-list mb-4">
+                          <li>i. সূক্ষ্ম কণা(PM 2.5)</li>
+                          <li>ii. মোটা কণা(PM10)</li>
+                          <li>iii. পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)</li>
+                          <li>iv. নাইট্রোজেন ডাই অক্সাইড (NO2)</li>
+                          <li>v. সালফার ডাই অক্সাইড(SO2)</li>
+                          <li>vi. কার্বন মনোক্সাইড (CO)</li>
+                        </ul>
+                        <p class="mb-4">বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে ।</p>
+                        <div class="card-divider mb-3"></div>
+                        <h4 class="mb-3">বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা বায়ু দূষণ প্রতিরোধ:</h4>
+                        <ul class="list-unstyled feature-list mb-0">
+                          <li>i. খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা</li>
+                          <li>ii. স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা</li>
+                          <li>iii. গণপরিবহনের ব্যবহার বাড়ানো , হাঁটা বা সাইকেল চালানোতে উৎসাহ দেওয়া</li>
+                          <li>iv. কালো ধোঁওয়া উৎপন্ন কারী যানবাহন, ইট ভাটা বন্ধ করা</li>
+                          <li>v. ধুলো কমাতে রাস্তা ঘাটে পানি ছিটানো</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="modern-card glass-card h-100">
+                        <h4 class=" mb-3">বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থ্যগত প্রভাব:</h3>
+                        <div class="health-block mb-4">
+                          <h4 class="section-subtitle mb-3">১. প্রতিকূল জন্মের ফলাফল</h4>
+                          <ul class="list-unstyled feature-list mb-0">
+                            <li>i. অকাল জন্ম:</li>
+                            <li>ii. গর্ভস্থ ভ্রূণের বৃদ্ধি প্রতিবন্ধকতা (IUGR)</li>
+                            <li>iii. কম জন্ম ওজন</li>
+                            <li>iv. স্থির জন্ম</li>
+                          </ul>
+                        </div>
+                        <div class="health-block mb-4">
+                          <h4 class="section-subtitle mb-3">২. শৈশবে শ্বাসযন্ত্রের প্রভাব</h4>
+                          <ul class="list-unstyled feature-list mb-0">
+                            <li>i. উচ্চ শ্বাস নালীর সংক্রমণ</li>
+                            <li>ii. ওটিটিস মিডিয়া</li>
+                          </ul>
+                        </div>
+                        <div class="health-block mb-4">
+                          <h4 class="section-subtitle mb-3">৩. নিউমোনিয়া</h4>
+                        </div>
+                        <div class="health-block mb-4">
+                          <h4 class="section-subtitle mb-3">৪. হাঁপানি</h4>
+                        </div>
+                        <div class="health-block">
+                          <h4 class="section-subtitle mb-3">৫. অন্যান্য স্বাস্থ্যগত ফলাফল</h4>
+                          <ul class="list-unstyled feature-list mb-0">
+                            <li>i. স্নায়ু বিকাশগত প্রতিবন্ধকতা (আইকিউ হ্রাস এবং অটিজম)</li>
+                            <li>ii. শৈশবকালীন ম্যালিগন্যান্সি</li>
+                            <li>iii. শিশু ও শিশু মৃত্যুহার</li>
+                            <li>iv. স্টান্টিং/ খর্বাকৃতি</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-7",
+            title: yhLang(
+              "শব্দ দূষণ",
+              "শব্দ দূষণ"
+            ),
+            icon: "fa-volume-high",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">শব্দ দূষণ</h2>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-12">
+                      <div class="modern-card glass-card mb-3">
+                        <p>বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে " কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ" হিসেবে সংজ্ঞায়িত করেছে। জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।</p>
+                        <div class="card-divider my-3"></div>
+                        <h3 class="mb-3">উৎস</h3>
+                        <p>শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন। বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।</p>
+                      </div>
+                      <div class="modern-card glass-card">
+                        <h3 class="mb-3">শব্দ দূষণের প্রভাব</h3>
+                        <ul class="list-unstyled feature-list mb-0">
+                          <li>i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায়</li>
+                          <li>ii. শ্রবণশক্তি হ্রাস করে</li>
+                          <li>iii. ঘুমের ব্যাঘাত ঘটায়</li>
+                          <li>iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায়,</li>
+                          <li>v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের  ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে</li>
+                          <li>vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-8",
+            title: yhLang(
+              "শব্দ দূষণ প্রতিরোধে করনীয়",
+              "শব্দ দূষণ প্রতিরোধে করনীয়"
+            ),
+            icon: "fa-ear-listen",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const preventionList = [
+                "শব্দ দূষণের কুফল নিয়ে সচেতনতা বৃদ্ধি করতে হবে",
+                "অপ্রয়োজনে হর্ন বাজানো ও উচ্চ স্বরে মাইক বাজানো থেকে থেকে বিরত থাকতে হবে",
+                "বাড়িতে টিভি, সাউন্ড সিস্টেম বা হেডফোনে শব্দের মাত্রা যৌক্তিক পর্যায়ে রাখতে হবে",
+                "বিভিন্ন এলাকাকে আবাসিক, বাণিজ্যিক, নীরব (হাসপাতাল) এলাকায় ভাগ করে তাদের জন্য শব্দের মাত্রা (dB level) নির্ধারণ করে দেওয়া যেতে পারে",
+                "শব্দ দূষণ (নিয়ন্ত্রণ) বিধিমালা কঠোরভাবে প্রয়োগ করতে হবে",
+              ];
+
+              const renderListItems = () =>
+                preventionList
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-check-circle text-primary me-2"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">শব্দ দূষণ প্রতিরোধে করনীয়</h2>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                    <ul class="list-unstyled prevention-list mb-0">
+                      ${renderListItems()}
+                    </ul>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-9",
+            title: yhLang(
+              "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক",
+              "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক"
+            ),
+            icon: "fa-flask",
+            gradientClass: "bg-gradient-crimson",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const chemicalList = [
+                "সীসা",
+                "আর্সেনিক",
+                "নাইট্রোজেন ডাই অক্সাইড কার্বন মনোক্সাইড",
+                "হাইড্রোকার্বন- কেরোসিন, টারপেন,",
+                "প্যারাফন ইত্যাদি",
+                "অ্যাসবেস্টস",
+                "ফ্লোরাইড",
+                "পারদ",
+                "বেনজিন",
+                "ক্যাডমিয়াম",
+                "ডাইঅক্সিন",
+              ];
+
+              const preventionList = [
+                "সীসা যুক্ত ব্যাটারি ও রঙের সংস্পর্শে আসা থেকে শিশু-কিশোর এবং গর্ভবতী মহিলাদের বিরত রাখতে হবে",
+                "কীটনাশক হতে শিশু-কিশোরদের দুরে রাখতে হবে",
+                "শিল্প ও বর্জ্য ব্যবস্থাপনা সঠিক ভাবে পালন করতে হবে",
+                "যথাযথ স্বাস্থ্যবিধি মেনে চলতে হবে",
+                "পুনর্ব্যবহার নিরুৎসাহিত করে সীসা-অ্যাসিড ব্যাটারির পরিবেশগত ব্যবস্থাপনার জন্য একটি জাতীয় কৌশল তৈরি করতে হবে",
+              ];
+
+              const renderItems = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-chevron-right text-primary me-2"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক</h2>
+                  <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="20">
+                    <p>উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে ।</p>
+                    <p>সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:</p>
+                    <p>পানির চেয়ে ৫ গুণ বা তার বেশি পারমাণবিক ঘনত্ব সম্পন্ন ধাতুসমূহের গ্রুপকে ভারী ধাতু বা ক্ষতিকারক রাসায়নিক পদার্থ হিসাবে উল্লেখ করা হয়। জনস্বাস্থ্যের জন্য প্রধান প্রধান ক্ষতিকারক রাসায়নিক পদার্থ  গুলি নীচে দেয়া হল:</p>
+                  </div>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="60">
+                    <div class="col-12 col-lg-6">
+                      <div class="modern-card glass-card h-100">
+                        <h3 class="mb-3">ক্ষতিকারক রাসায়নিক পদার্থ</h3>
+                        <ul class="list-unstyled feature-list mb-0">
+                          ${renderItems(chemicalList)}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="modern-card glass-card h-100">
+                        <h3 class="mb-3">ক্ষতিকারক রাসায়নিক পদার্থের সাথে সম্পর্কিত স্বাস্থ্য সমস্যা</h3>
+                        <p>তীব্র বমি, ডায়রিয়া, চর্মরোগ, ক্যান্সার, হৃদরোগ, কম জন্মওজন, সময়ের পূর্বে জন্ম, মৃত শিশুর জন্ম, প্রজনন ও বিকাশজনিত সমস্যা, অকাল মৃত্যু</p>
+                        <div class="card-divider my-3"></div>
+                        <h3 class="mb-3">প্রতিরোধ ও ব্যবস্থাপনা</h3>
+                        <ul class="list-unstyled feature-list mb-0">
+                          ${renderItems(preventionList)}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-10",
+            title: yhLang(
+              "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়",
+              "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়"
+            ),
+            icon: "fa-shield-heart",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const actions = [
+                "রোগ প্রতিরোধের জন্য শিশুদের টিকা দিতে হবে",
+                "জরুরি পরিস্থিতিতে আশ্রয়ের স্থান সম্পর্কে সচেতন থাকতে হবে",
+                "তাপ এড়াতে ছাদ সাদা রঙ করতে হবে",
+                "জলবায়ু পরিবর্তন প্রতিরোধে ব্যক্তিগত পদক্ষেপ নিতে হবে; যেমন একবার ব্যবহারযোগ্য প্লাস্টিক ব্যবহার না করা, নিয়মিত গোসল করা, গণপরিবহন ব্যবহার করা ইত্যাদি।",
+                "পানীয় জল সরবরাহ এবং গুণমান রক্ষা করতে হবে",
+                "বিশেষ স্বাস্থ্যসেবা প্রাপ্ত শিশুদের চাহিদা অনুযায়ী ঝুঁকিপূর্ণ শিশুদের সনাক্ত করুন এবং দুর্যোগ প্রস্তুতিতে পরিবারগুলিকে সহায়তা করতে হবে",
+              ];
+
+              const renderItems = () =>
+                actions
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-check text-primary me-2"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়</h2>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-7">
+                      <div class="modern-card glass-card h-100">
+                        <ul class="list-unstyled feature-list mb-0">
+                          ${renderItems()}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div class="modern-card glass-card text-center h-100">
+                        <img src="img/modu22/climate3.png" class="img-fluid rounded shadow-sm" alt="জলবায়ু পরিবর্তন প্রতিরোধ" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-11",
+            title: yhLang(
+              "খাবারপানি",
+              "খাবারপানি"
+            ),
+            icon: "fa-faucet-drip",
+            gradientClass: "bg-gradient-sky",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const waterSources = [
+                "১।  ভূগর্ভস্থ পানি",
+                "২। ভূপৃষ্ঠের উপরিভাগ যেমনঃ নদি-নলা, খাল-বিল, পুকুর প্রভিতি",
+                "৩। অন্যান্যঃ  বৃষ্টির পানি, হিমবাহ",
+              ];
+
+              const renderSources = () =>
+                waterSources
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-droplet text-primary me-2"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">খাবারপানি</h2>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-12">
+                      <div class="modern-card glass-card">
+                        <p>পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।</p>
+                        <p class="mb-3">শিশু-কিশোরদের সু-স্বাস্থ্যের জন্য বিশুদ্ধ খাবারপানি, স্যানিটেশন এবং স্বাস্থ্যবিধি মেনে চলা অত্যাবশ্যক, যদিও অনেক গ্রামীণ, শহরের ঘিঞ্জি বস্তি এলাকা এবং দরিদ্র সম্প্রদায়ের অনেকক্ষেত্রে নিরাপদ খাবারপানি সহজলভ্য নয়।</p>
+                        <h3 class="mb-3">খাবারপানির উৎসঃ</h3>
+                        <ul class="list-unstyled feature-list mb-0">
+                          ${renderSources()}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-12",
+            title: yhLang(
+              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ",
+              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ"
+            ),
+            icon: "fa-water",
+            gradientClass: "bg-gradient-coral",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const pollutionCauses = [
+                {
+                  title: "১. শিল্পকারখানার বর্জ্য",
+                  desc: "বিভিন্ন কারখানা থেকে নির্গত রাসায়নিক, ভারী ধাতু, রঙ, এসিড-ক্ষার ইত্যাদি সরাসরি নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।",
+                },
+                {
+                  title: "২. কৃষিকাজে ব্যবহৃত রাসায়নিক",
+                  desc: "কীটনাশক, সার, আগাছানাশক মাটির সাথে মিশে ভূগর্ভস্থ পানিতে পৌঁছায় এবং পানির মান নষ্ট করে।",
+                },
+                {
+                  title: "৩. গৃহস্থালি বর্জ্য ও নোংরা পানি",
+                  desc: "রান্নাঘর, বাথরুম ও টয়লেটের নোংরা পানি সঠিকভাবে পরিশোধন না করে ফেলে দিলে নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।",
+                },
+                {
+                  title: "৪. মানববর্জ্য ও স্যানিটেশন সমস্যা",
+                  desc: "উন্মুক্ত স্থানে শৌচকর্ম, অপর্যাপ্ত ল্যাট্রিন/পায়খানা  ও ড্রেনেজ ব্যবস্থা পানিতে ব্যাকটেরিয়া, ভাইরাস, পরজীবী ছড়িয়ে দেয় ও পানিকে দূষিত করে।",
+                },
+                {
+                  title: "৫. নদী-নালা ও খালে প্লাস্টিক ও কঠিন বর্জ্য ফেলা",
+                  desc: "পলিথিন, প্লাস্টিকের বোতল, পুরনো ইলেকট্রনিক বর্জ্য পানিতে ফেললে  তা  পানিতে মিশে বিষাক্ত উপাদান ছড়ায় ও পানিকে দূষিত করে।",
+                },
+                {
+                  title: "৬. তেল ও জ্বালানি পদার্থের নিঃসরণ",
+                  desc: "নৌযান/ জাহাজের পাম্প, জেনারেটর থেকে বা দুর্ঘটনার কারণে তেল পানিতে মিশে জীববৈচিত্র্য ও পানির মান নষ্ট করে।",
+                },
+                {
+                  title: "৭. অপরিকল্পিত নগরায়ণ ও নির্মাণকাজ",
+                  desc: "মাটিক্ষয়, ধুলা-বালু, কংক্রিটের মিশ্রণসহ অন্যান্য উপাদান পানিতে পড়ে দূষণ বাড়ায়।",
+                },
+                {
+                  title: "৮. চিকিৎসা বর্জ্য ও রাসায়নিক ওষুধ",
+                  desc: "হাসপাতাল বা ক্লিনিকের বর্জ্য সঠিকভাবে ব্যবস্থাপনা না করলে পানি জীবাণু ও রাসায়নিক দ্বারা দূষিত হয়।",
+                },
+              ];
+
+              const renderCauses = () =>
+                pollutionCauses
+                  .map(
+                    (item) => `
+                      <li class="mb-3">
+                        <h4 class="mb-1">${item.title}</h4>
+                        <p class="mb-0">${item.desc}</p>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ</h2>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                    <ul class="list-unstyled feature-list mb-0">
+                      ${renderCauses()}
+                    </ul>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-13",
+            title: yhLang(
+              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ",
+              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ"
+            ),
+            icon: "fa-hand-holding-droplet",
+            gradientClass: "bg-gradient-violet",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const leftSections = [
+                {
+                  title: "১. পানিবাহিত রোগ",
+                  items: ["ডায়রিয়া", "ডিজেন্ট্রি (আমাশয়)", "টাইফয়েড", "কলেরা", "হেপাটাইটিস–এ", "জিয়ার্ডিয়াসিস"],
+                },
+                {
+                  title: "২. পেটের সমস্যা ও অপুষ্টি",
+                  items: ["পেটের সংক্রমণ", "বমি", "পেট ব্যথা", "ডায়রিয়া", "পানিশূন্যতা", "দীর্ঘমেয়াদে অপুষ্টির কারণ"],
+                },
+              ];
+
+              const rightSections = [
+                {
+                  title: "৩. রাসায়নিক দূষণের ক্ষতি",
+                  items: [
+                    "আর্সেনিকোসিস (ত্বকে কালো দাগ, চর্মরোগ, ক্যান্সারের ঝুঁকি)",
+                    "ডেন্টাল বা স্কেলেটাল ফ্লুরোসিস",
+                    "স্নায়ুতন্ত্রের ক্ষতি",
+                    "বুদ্ধি ও স্মৃতিশক্তি হ্রাস (বিশেষত শিশুদের)",
+                    "কিডনি ও লিভারের সমস্যা",
+                  ],
+                },
+                {
+                  title: "৪. ত্বকের রোগ",
+                  description: "চর্মরোগ, একজিমা, চুলকানি, ফাঙ্গাল সংক্রমণ হতে পারে।",
+                },
+                {
+                  title: "৫. দীর্ঘমেয়াদি ক্রনিক রোগ",
+                  items: [
+                    "ক্যান্সারের ঝুঁকি বৃদ্ধি",
+                    "কিডনি ফেইলিওর",
+                    "লিভার সিরোসিস",
+                    "হরমোনের ভারসাম্যহীনতা",
+                    "হৃদরোগের ঝুঁকি বাড়তে পারে।",
+                  ],
+                },
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check text-primary me-2"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderSection = (section) => `
+                <div class="health-section mb-4">
+                  <h4 class="mb-3">${section.title}</h4>
+                  ${section.items ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : `<p class="mb-0">${section.description}</p>`}
+                </div>
+              `;
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ</h2>
+                  <p class="mt-3" data-aos="fade-up" data-aos-delay="20">অনিরাপদ বা দূষিত খাবারপানির কারণে নানা ধরনের গুরুতর স্বাস্থ্য ঝুঁকি হতে পারে। প্রধান স্বাস্থ্য ঝুঁকিগুলো হলো:</p>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-6">
+                      <div class="modern-card glass-card h-100">
+                        ${leftSections.map(renderSection).join("")}
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="modern-card glass-card h-100">
+                        ${rightSections.map(renderSection).join("")}
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
         ],
       },
       {
