@@ -15494,20 +15494,26 @@ const coursesData = [
             quiz: null,
             content: (function () {
               const cautionPoints = [
-                "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়জনে নাক মুখ ধেকে বাতাসের অনুকুলে কীটনাশক ছিটানো ।",
+                "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়জনে নাক মুখ ধেকে বাতাসের অনুকূলে কীটনাশক ছিটানো ।",
                 "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা। খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধ্যে নিতে হবে।",
                 "কীটনাশক রাখার জায়গা শিশুদের নাগালের বাইরে রাখতে হবে।",
                 "প্রয়োজনে কীটনাশক  প্রয়গের পর সাবানের পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয়  কাপড় পরিবর্তনকরতে হবে।",
                 "বিসক্রিয়ার যেকোন লক্ষণ দেখা দিলে বিষক্রিয়ায় আক্রান্ত ব্যক্তিকে  দ্রুত নিকটস্থ হাস্পাতালে নিয়ে জেতে হবে।",
               ];
 
+              const formatIndex = (value) => String(value).padStart(2, "0");
+
               const renderItems = () =>
                 cautionPoints
                   .map(
                     (item, idx) => `
                       <li>
-                        <div class="caution-index">${idx + 1}</div>
-                        <p class="mb-0">${item}</p>
+                        <article class="caution-item">
+                          <div class="caution-index">${formatIndex(idx + 1)}</div>
+                          <div class="caution-item__body">
+                            <p class="mb-0">${item}</p>
+                          </div>
+                        </article>
                       </li>
                     `
                   )
@@ -15517,11 +15523,14 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">সতর্কতাঃ</h2>
                   <div class="modern-card glass-card caution-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="caution-card__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-                    <p class="text-muted mb-4">কীটনাশক ব্যবহারের সময় নিম্নোক্ত সতর্কতা মেনে চললে পরিবার-পরিবেশের ঝুঁকি কমানো যায়।</p>
-                    <ul class="list-unstyled caution-list mb-0">
-                      ${renderItems()}
-                    </ul>
+                    <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
+                    <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
+                    <div class="caution-card__body">
+                      <div class="caution-card__head">
+                        <ul class="list-unstyled caution-list mb-0">
+                        ${renderItems()}
+                      </ul>
+                    </div>
                   </div>
                 </div>`;
             })(),
