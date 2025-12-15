@@ -15541,9 +15541,840 @@ const coursesData = [
         id: "ch-23",
         title: yhLang(
           "Module-23: Life skills, morality, and values",
-          "মডিউল-২৩: জীবনদক্ষতা, নৈতিকতা ও মূল্যবোধ"
+          "মডিউল-২৩: উদীয়মান ও পুনরাবির্ভূত রোগ"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch23-lesson-1",
+            title: yhLang(
+              "Emerging and Re-emerging Diseases",
+              "উদীয়মান ও পুনরাবির্ভূত রোগ"
+            ),
+            icon: "fa-virus-covid",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const diseaseCards = [
+                {
+                  title: yhLang("Emerging diseases", "উদীয়মান রোগ"),
+                  description: yhLang(
+                    "Diseases that have recently been identified in humans for the first time, or were previously absent, are called emerging diseases.",
+                    "যে সব রোগ সম্প্রতি প্রথমবারের মতো মানুষের মধ্যে শনাক্ত হয়েছে, অথবা আগে ছিল না—সেসব রোগকে উদীয়মান (Emerging) রোগ বলা হয়।"
+                  ),
+                  examples: [
+                    yhLang("COVID-19", "কোভিড-১৯"),
+                    yhLang("Nipah virus", "নিপাহ ভাইরাস"),
+                    yhLang("Zika virus", "জিকা ভাইরাস"),
+                  ],
+                  icon: "fa-seedling",
+                  color: "bg-gradient-purple",
+                },
+                {
+                  title: yhLang("Re-emerging diseases", "পুনরাবির্ভূত রোগ"),
+                  description: yhLang(
+                    "Diseases that were once controlled or almost eradicated but have resurged to create fresh health risks are called re-emerging diseases.",
+                    "যে সব রোগ আগে নিয়ন্ত্রণে ছিল বা প্রায় বিলুপ্ত হয়ে গিয়েছিল, কিন্তু পুনরায় বৃদ্ধি পেয়ে স্বাস্থ্যঝুঁকি সৃষ্টি করছে, সেগুলোকে পুনরাবির্ভূত (Re-emerging) রোগ বলা হয়।"
+                  ),
+                  examples: [
+                    yhLang("Dengue", "ডেঙ্গু"),
+                    yhLang("Tuberculosis (TB)", "যক্ষ্মা (টিবি)"),
+                    yhLang("Cholera", "কলেরা"),
+                  ],
+                  icon: "fa-arrows-rotate",
+                  color: "bg-gradient-teal",
+                },
+              ];
+
+              const bangladeshContext = yhLang(
+                "Bangladesh has faced numerous emerging and re-emerging diseases in recent years, spanning infectious, non-communicable, and water-borne conditions.",
+                "বাংলাদেশ বিগত বছরগুলোতে সংক্রামক রোগ, অসংক্রামক রোগ এবং পানিবাহিত রোগসহ অনেক উদীয়মান ও পুনরাবির্ভূত রোগের মুখোমুখি হয়েছে।"
+              );
+
+              const renderExamples = (examples) =>
+                examples
+                  .map(
+                    (item) => `
+                      <span class="badge-pill disease-tag">${item}</span>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang(
+                        "Emerging and Re-emerging Diseases",
+                        "উদীয়মান ও পুনরাবির্ভূত রোগ"
+                      )}</h2>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-indigo"><i class="fa-solid fa-virus"></i></div>
+                  </header>
+
+                  <div class="row g-3 mt-2">
+                    ${diseaseCards
+                      .map(
+                        (card, idx) => `
+                          <div class="col-12 col-md-6">
+                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${
+                              100 + idx * 80
+                            }">
+                              <div class="d-flex align-items-center gap-3 mb-3">
+                                <span class="badge-pill ${card.color}"><i class="fa-solid ${card.icon}"></i></span>
+                                <div>
+                                  <h5 class="mb-1 gradient-text">${card.title}</h5>
+                                  <p class="mb-0 text-muted">${card.description}</p>
+                                </div>
+                              </div>
+                              <div class="d-flex flex-wrap gap-2">
+                                ${renderExamples(card.examples)}
+                              </div>
+                            </article>
+                          </div>
+                        `
+                      )
+                      .join("")}
+                  </div>
+
+                  <section class="modern-card glass-card alert-info hover-lift-sm transition-base mt-3" data-aos="fade-up" data-aos-delay="220">
+                    <div class="d-flex align-items-start gap-3">
+                      <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-landmark"></i></span>
+                      <p class="mb-0">${bangladeshContext}</p>
+                    </div>
+                  </section>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-2",
+            title: yhLang(
+              "Global Examples of Emerging and Re-emerging Infectious Diseases",
+              "উদীয়মান এবং পুনরাবির্ভূত সংক্রামক রোগের বিশ্বব্যাপী উদাহরণ"
+            ),
+            icon: "fa-earth-asia",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang(
+                        "Global Examples of Emerging and Re-emerging Infectious Diseases",
+                        "উদীয়মান এবং পুনরাবির্ভূত সংক্রামক রোগের বিশ্বব্যাপী উদাহরণ"
+                      )}</h2>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-blue"><i class="fa-solid fa-globe"></i></div>
+                  </header>
+
+                  <section class="modern-card glass-card full-bleed-gallery mt-3" data-aos="fade-up" data-aos-delay="120">
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <figure class="image-card w-100 mb-0">
+                          <img src="img/modu23/global.jpg" alt="Global map of infectious diseases" class="img-fluid rounded-4 shadow-sm" />
+                        </figure>
+                      </div>
+                      <div class="col-12">
+                        <figure class="image-card w-100 mb-0">
+                          <img src="img/modu23/global2.jpg" alt="Re-emerging disease hotspots" class="img-fluid rounded-4 shadow-sm" />
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-3",
+            title: yhLang("Dengue", "ডেঙ্গু"),
+            icon: "fa-mosquito",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const generalIntro = [
+                "ডেঙ্গু ভাইরাসে আক্রান্ত এডিস মশার কামড়ের মাধ্যমে মানুষের মধ্যে এই রোগ সংক্রমিত হয়। বিশ্বের ক্রান্তীয় ও উপক্রান্তীয় অঞ্চলগুলোর জন্য এটি একটি উল্লেখযোগ্য জনস্বাস্থ্য সমস্যা।",
+                "ডেঙ্গুর জন্য কোনো নির্দিষ্ট চিকিৎসা নেই, তবে দ্রুত শনাক্তকরণ এবং সঠিক চিকিৎসা প্রদানের মাধ্যমে এর মৃত্যুহার এক শতাংশের নিচে রাখা সম্ভব।",
+                "মশা নিয়ন্ত্রণ ডেঙ্গু প্রতিরোধের প্রধান হাতিয়ার, যার মধ্যে রয়েছে মশার প্রজনন স্থান ধ্বংস এবং কীটনাশক ব্যবহার করা।",
+              ];
+
+              const commonSymptoms = [
+                "তীব্র জ্বর (৪০° সেলসিয়াস / ১০৬° ফারেনহাইট)",
+                "তীব্র মাথাব্যথা",
+                "চোখের পেছনে ব্যথার অনুভূতি",
+                "মাংসপেশি ও অস্থি-সন্ধিতে ব্যথা",
+                "বমিভাব",
+                "মাথা ঘোরা",
+                "ত্বকের বিভিন্ন স্থানে র‍্যাশ / ফুসকুড়ি",
+              ];
+
+              const severeSymptoms = [
+                "প্রচণ্ড পেট ব্যথা",
+                "ক্রমাগত বমি হওয়া",
+                "মাড়ি বা নাক থেকে রক্তপাত",
+                "প্রস্রাবে এবং মলের সঙ্গে রক্তপাত",
+                "অনিয়ন্ত্রিত পায়খানা",
+                "ত্বকের নিচে রক্তক্ষরণ",
+                "দ্রুত শ্বাস-প্রশ্বাস",
+                "ক্লান্তি",
+                "অস্থিরতা",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text) => `
+                      <li>
+                        <span class="symptom-bullet"><i class="fa-solid fa-check"></i></span>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang("Dengue", "ডেঙ্গু")}</h2>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-orange"><i class="fa-solid fa-mosquito"></i></div>
+                  </header>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
+                    ${generalIntro
+                      .map((paragraph) => `<p class="mb-2">${paragraph}</p>`)
+                      .join("")}
+                  </section>
+
+                  <div class="row g-3 mt-2">
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100 hover-lift-sm transition-base" data-aos="fade-right" data-aos-delay="140">
+                        <h3 class="mb-3">ডেঙ্গু জ্বরের লক্ষণ:</h3>
+                        <p class="mb-2">বেশির ভাগ ক্ষেত্রে প্রথমবার ডেঙ্গুতে আক্রান্ত রোগীর বিশেষ কোনো উপসর্গ বা লক্ষণ দেখা যায় না। ডেঙ্গুর সাধারণ উপসর্গগুলো হলো—</p>
+                        <ul class="list-unstyled symptom-list mb-3">
+                          ${renderList(commonSymptoms)}
+                        </ul>
+                        <p class="mb-2">এই উপসর্গগুলো রোগ সংক্রমণের ৪–১০ দিনের মধ্যে দেখা দেয়। সাধারণত ২–৭ দিন পর্যন্ত উপসর্গ স্থায়ী হতে পারে।</p>
+                        <p class="mb-0">দ্বিতীয়বার ডেঙ্গুতে আক্রান্ত হলে রোগের ভয়াবহতা বৃদ্ধি পায়। সে কারণে পূর্বে ডেঙ্গুতে আক্রান্ত ব্যক্তিদের অতিরিক্ত সতর্কতা মেনে চলতে বলা হয়।</p>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100 hover-lift-sm transition-base" data-aos="fade-left" data-aos-delay="180">
+                        <h3 class="mb-3">ডেঙ্গুর গুরুতর উপসর্গ:</h3>
+                        <ul class="list-unstyled symptom-list mb-0">
+                          ${renderList(severeSymptoms)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-4",
+            title: yhLang("Treatment", "চিকিৎসা"),
+            icon: "fa-notes-medical",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const preventionSteps = [
+                "বাড়ির চারপাশে পানি জমতে দেবেন না। জমা পানিতে মশারা বংশবিস্তার করে।",
+                "গাছের টব, ফুলদানি, পরে থাকা গাড়ির টায়ারের জমে থাকা পানি ফেলে দিন। তিন দিনে একদিন জমা পানি ফেলে দিন।",
+                "শরীর ঢাকা জামা কাপড় যেমন লম্বা-হাতা শার্ট, লম্বা প্যান্ট, মোজা এবং জুতা পরুন।",
+                "ডেঙ্গু ভাইরাস বহনকারী মশা ভোর থেকে সন্ধ্যা পর্যন্ত সবচেয়ে বেশি সক্রিয় থাকে। এই সময় অতিরিক্ত সতর্ক থাকুন।",
+                "রাতে শোবার সময় মশারি ব্যবহার করুন।",
+                "মশা নিধনকারী কেমিক্যাল / মশার কয়েল ব্যবহার করুন।",
+              ];
+
+              const renderSteps = () =>
+                preventionSteps
+                  .map(
+                    (text, idx) => `
+                      <li class="prevention-item" data-aos="fade-up" data-aos-delay="${120 + idx * 30}">
+                        <div class="prevention-chip shadow-sm">
+                          <span>${String(idx + 1).padStart(2, "0")}</span>
+                        </div>
+                        <div class="prevention-copy">
+                          <p class="my-2">${text}</p>
+                        </div>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang("Treatment", "চিকিৎসা")}</h2>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-notes-medical"></i></div>
+                  </header>
+
+                  <section class="modern-card glass-card mt-3 treatment-lede" data-aos="fade-up" data-aos-delay="100">
+                    <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+                      <div class="lede-icon bg-gradient-teal text-white"><i class="fa-solid fa-user-nurse"></i></div>
+                      <p class="mb-0">ডেঙ্গুর চিকিৎসার জন্য বিশেষ কোনো ওষুধ বা প্রতিষেধক এখনো আবিষ্কৃত হয়নি। চিকিৎসকরা প্যারাসিটামল জাতীয় ওষুধ দিয়ে ব্যথা এবং জ্বরের মাত্রা নিয়ন্ত্রণ করেন। রোগের মাত্রা অতিরিক্তভাবে বৃদ্ধি পেলে রোগীকে হাসপাতালে ভর্তি রাখা একান্ত জরুরি।</p>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="140">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+                      <h3 class="mb-0">ডেঙ্গু প্রতিরোধে করণীয়:</h3>
+                      <span class="badge-pill bg-gradient-teal text-white"><i class="fa-solid fa-shield-virus me-1"></i>Checklist</span>
+                    </div>
+                    <ul class="list-unstyled prevention-list mb-0">
+                      ${renderSteps()}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card alert-warning mt-3" data-aos="fade-up" data-aos-delay="180">
+                    <div class="d-flex align-items-start gap-3">
+                      <span class="badge-pill bg-gradient-orange"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                      <p class="mb-0">ডেঙ্গু জ্বর একটি সাধারণ রোগ। কিন্তু অবহেলা করলে এই রোগ মারাত্মক হতে পারে। শহরাঞ্চলে এর প্রকোপ বেশি। তাই নগরবাসীকে আরও একটু সচেতন ও সতর্ক হতে হবে। বিশেষ করে যাদের ডেঙ্গু হয়েছে তাদের অতিরিক্ত সতর্ক থাকতে হবে। দ্বিতীয়বার ডেঙ্গু সংক্রমণ মারাত্মক হতে পারে।</p>
+                    </div>
+                  </section>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-5",
+            title: yhLang("Nipah Virus Infection", "নিপাহ ভাইরাস সংক্রমণ"),
+            icon: "fa-biohazard",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const introCopy = [
+                "নিপাহ একটি ভাইরাসজনিত মারাত্মক প্রাণঘাতী রোগ। নিপাহ ভাইরাসে আক্রান্ত হলে মস্তিষ্কের প্রদাহ ঘটে।",
+                "কাঁচা খেজুরের রসে বাদুড়ের বিষ্ঠা ও লালা মিশ্রিত হয় এবং ওই বিষ্ঠা ও লালায় নিপাহ ভাইরাসের জীবাণু থাকে। ফলে খেজুরের কাঁচা রস পান করলে মানুষ নিপাহ ভাইরাসে আক্রান্ত হতে পারে।",
+                "অনেকেই মনে করেন, রস গরম করে খেলে বিপদ কাটবে। কিন্তু তা মোটেও গ্রহণযোগ্য নয়। গাছের নিচে পড়ে থাকা আধা খাওয়া কিংবা ফাটা ফল খাওয়া যাবে না।",
+                "বর্তমানে বড়দের পাশাপাশি শিশু-কিশোরেরাও নিপাহ ভাইরাসে বেশি আক্রান্ত হচ্ছে। এই রোগে মৃত্যুহার ৭০ শতাংশের বেশি। তাই প্রতিরোধই হচ্ছে এই রোগ থেকে বাঁচার উপায়।",
+              ];
+
+              const symptoms = [
+                "তীব্র জ্বরসহ মাথাব্যথা",
+                "খিঁচুনি",
+                "প্রলাপ বকা",
+                "অজ্ঞান হওয়া",
+                "কোনো কোনো ক্ষেত্রে শ্বাসকষ্ট হওয়া",
+                "মুখ দিয়ে লালা ঝরা",
+              ];
+
+              const renderSymptoms = () =>
+                symptoms
+                  .map(
+                    (item, idx) => `
+                      <li class="symptom-item" data-aos="fade-up" data-aos-delay="${140 + idx * 30}">
+                        <span class="symptom-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang("Nipah Virus Infection", "নিপাহ ভাইরাস সংক্রমণ")}</h2>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-purple"><i class="fa-solid fa-biohazard"></i></div>
+                  </header>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
+                    ${introCopy
+                      .map((paragraph) => `<p class="mb-2">${paragraph}</p>`)
+                      .join("")}
+                  </section>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="140">
+                    <h3 class="mb-3">নিপাহ ভাইরাস সংক্রমণের প্রধান লক্ষণগুলো হচ্ছে:</h3>
+                    <ul class="list-unstyled symptom-list mb-0">
+                      ${renderSymptoms()}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="200">
+                    <figure class="image-card w-100 mb-0">
+                      <img src="img/modu23/badur.png" alt="নিপাহ ভাইরাস সংক্রমণ" class="img-fluid rounded-4 shadow-sm" />
+                    </figure>
+                  </section>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-6",
+            title: yhLang(
+              "Preventing Nipah Virus Infection",
+              "নিপাহ ভাইরাস সংক্রমণ প্রতিরোধে করণীয়"
+            ),
+            icon: "fa-shield-virus",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const measures = [
+                "খেজুরের কাঁচা রস খাবেন না",
+                "কোনো ধরনের আধা খাওয়া ফল খাবেন না",
+                "ফলমূল পরিষ্কার পানি দিয়ে ভালোভাবে ধুয়ে খাবেন",
+                "নিপাহ রোগের লক্ষণ দেখা দিলে রোগীকে অতিদ্রুত কাছাকাছি সরকারি হাসপাতালে নিতে হবে",
+                "আক্রান্ত রোগীর সংস্পর্শে আসার পর সাবান ও পানি দিয়ে দুই হাত ভালোভাবে ধুয়ে ফেলতে হবে",
+              ];
+
+              const renderMeasures = () =>
+                measures
+                  .map(
+                    (text, idx) => `
+                      <li class="prevention-card" data-aos="fade-up" data-aos-delay="${120 + idx * 40}">
+                        <div class="prevention-card__badge">
+                          <span>${String(idx + 1).padStart(2, "0")}</span>
+                        </div>
+                        <div class="prevention-card__content">
+                          <p class="mb-0">${text}</p>
+                        </div>
+                        <div class="prevention-card__icon"><i class="fa-solid fa-check"></i></div>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang(
+                        "Preventing Nipah Virus Infection",
+                        "নিপাহ ভাইরাস সংক্রমণ প্রতিরোধে করণীয়"
+                      )}</h2>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-emerald"><i class="fa-solid fa-shield-virus"></i></div>
+                  </header>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+                      <p class="mb-0 text-muted">${yhLang("Action steps to stay safe from Nipah", "নিপাহ থেকে সুরক্ষায় করণীয় ধাপ")}</p>
+                      <span class="badge-pill bg-gradient-emerald text-white"><i class="fa-solid fa-clipboard-list me-1"></i>Checklist</span>
+                    </div>
+                    <ul class="list-unstyled nipah-prevention-list mb-0">
+                      ${renderMeasures()}
+                    </ul>
+                  </section>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-7",
+            title: yhLang("COVID-19", "কোভিড-১৯"),
+            icon: "fa-virus-covid",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const spreadPoints = [
+                "এই ভাইরাস প্রাণী থেকে মানুষের দেহে ঢুকে এখন মানুষ থেকে মানুষে সংক্রমণ হচ্ছে।",
+                "করোনাভাইরাস মানুষের ফুসফুসে সংক্রমণ ঘটায় এবং শ্বাসতন্ত্রের মাধ্যমে (হাঁচি/কাশি/কফ/থুতু) অথবা আক্রান্ত ব্যক্তির সংস্পর্শে আসলে একজন থেকে আরেকজনের মধ্যে ছড়ায়।",
+              ];
+
+              const symptomPoints = [
+                "ভাইরাস শরীরে ঢোকার পর সংক্রমণের লক্ষণ দেখা দিতে প্রায় ২–১৪ দিন লাগে।",
+                "বেশির ভাগ ক্ষেত্রে প্রথম লক্ষণ জ্বর।",
+                "এছাড়া শুকনো কাশি / গলা ব্যথা হতে পারে।",
+                "শ্বাসকষ্ট / নিউমোনিয়া দেখা দিতে পারে।",
+                "অন্যান্য অসুস্থতা (ডায়াবেটিস / উচ্চ রক্তচাপ / শ্বাসকষ্ট / হৃদরোগ / কিডনি সমস্যা / ক্যান্সার ইত্যাদি) থাকলে অঙ্গ বিকল হওয়া বা দেহের বিভিন্ন প্রত্যঙ্গ বিকল হতে পারে।",
+              ];
+
+              const remedyPoints = [
+                "টিকা / ভ্যাকসিন",
+                "চিকিৎসা — লক্ষণভিত্তিক",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li class="info-list-item" data-aos="fade-up" data-aos-delay="${140 + idx * 30}">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <p class="mb-0">${text}</p>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang("COVID-19", "কোভিড-১৯")}</h2>
+                      <p class="mb-0 text-muted">করোনাভাইরাস রোগ (COVID-19) হলো SARS-CoV-2 ভাইরাস দ্বারা সৃষ্ট একটি সংক্রামক রোগ। বিশ্ব স্বাস্থ্য সংস্থা ১১ই ফেব্রুয়ারি ২০২০ তারিখে এই রোগটিকে “কোভিড-১৯” হিসেবে আনুষ্ঠানিক নামকরণ করে। এখানে “কো” কথাটি এসেছে “করোনা” থেকে, “ভি” এসেছে ভাইরাস থেকে, “ডি” এসেছে “ডিজিজ” (রোগ) থেকে এবং “১৯” এসেছে ২০১৯ সাল থেকে।</p>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-indigo"><i class="fa-solid fa-virus-covid"></i></div>
+                  </header>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="mb-3">যেভাবে ছড়ায়:</h3>
+                    <ul class="list-unstyled info-list mb-0">
+                      ${renderList(spreadPoints)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="140">
+                    <h3 class="mb-3">লক্ষণসমূহ:</h3>
+                    <ul class="list-unstyled info-list mb-0">
+                      ${renderList(symptomPoints)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="180">
+                    <h3 class="mb-3">প্রতিকার:</h3>
+                    <ul class="list-unstyled info-list mb-0">
+                      ${renderList(remedyPoints)}
+                    </ul>
+                  </section>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-8",
+            title: yhLang("Preventive Actions", "প্রতিরোধে করণীয়"),
+            icon: "fa-hands-bubbles",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const personalAwarenessPrimary = [
+                "ঘন ঘন সাবান ও পানি দিয়ে হাত ধুবেন (অন্তত ২০ সেকেন্ড ধরে)",
+                "অপরিষ্কার হাতে চোখ, নাক ও মুখ স্পর্শ করবেন না",
+                "মাস্ক পরিধান করতে হবে",
+                "ইতোমধ্যে আক্রান্ত এমন ব্যক্তিদের সংস্পর্শ এড়িয়ে চলা",
+                "জনসমাগম হয় এমন জায়গা এড়িয়ে চলা",
+                "কাশি শিষ্টাচার মেনে চলুন (হাঁচি-কাশির সময় বাহু/টিস্যু/কাপড় দিয়ে নাক-মুখ ঢাকুন)",
+                "অসুস্থ পশু/পাখির সংস্পর্শ পরিহার করা",
+                "মাছ-মাংস ভালোভাবে রান্না করে খাওয়া",
+                "শাক-সবজি ও ফলমূল ভালোভাবে ধুয়ে খেতে হবে",
+              ];
+
+              const personalAwarenessSecondary = [
+                "অসুস্থ হলে ঘরে থাকতে হবে, বাইরে যাওয়া অত্যাবশ্যক না হলে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে হবে",
+                "জরুরি প্রয়োজন ব্যতীত অহেতুক ভ্রমণ করা থেকে বিরত থাকতে হবে",
+                "অত্যাবশ্যকীয় ভ্রমণে সাবধানতা অবলম্বন করতে হবে",
+              ];
+
+              const suspectedCaseActions = [
+                "অসুস্থ রোগীকে ঘরে থাকতে বলুন",
+                "মারাত্মক অসুস্থ রোগীকে নিকটস্থ সদর হাসপাতালে যেতে বলুন",
+                "রোগীকে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে বলুন",
+                "রোগীকে প্রচুর পানি পান করতে হবে; এন্টি-অক্সিডেন্ট, ভিটামিন-সি, ভিটামিন-ডি ও আমিষ জাতীয় খাবার বেশি বেশি খেতে হবে",
+              ];
+
+              const renderList = (items, delayBase = 120) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li class="prevention-step" data-aos="fade-up" data-aos-delay="${delayBase + idx * 30}">
+                        <span class="prevention-step__icon"><i class="fa-solid fa-check"></i></span>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang("Preventive Actions", "প্রতিরোধে করণীয়")}</h2>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-hands-bubbles"></i></div>
+                  </header>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <span class="badge-pill bg-gradient-teal text-white">ব্যক্তিগত সচেতনতা</span>
+                      <div class="flex-grow-1"><hr class="m-0 opacity-25" /></div>
+                    </div>
+                    <ul class="list-unstyled prevention-steps mb-0">
+                      ${renderList(personalAwarenessPrimary)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="140">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <span class="badge-pill bg-gradient-teal text-white">ব্যক্তিগত সচেতনতা</span>
+                      <div class="flex-grow-1"><hr class="m-0 opacity-25" /></div>
+                    </div>
+                    <ul class="list-unstyled prevention-steps mb-0">
+                      ${renderList(personalAwarenessSecondary, 140)}
+                    </ul>
+                  </section>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="180">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <span class="badge-pill bg-gradient-orange text-white">সন্দেহভাজন রোগীর ক্ষেত্রে করণীয়</span>
+                      <div class="flex-grow-1"><hr class="m-0 opacity-25" /></div>
+                    </div>
+                    <ul class="list-unstyled prevention-steps mb-0">
+                      ${renderList(suspectedCaseActions, 160)}
+                    </ul>
+                  </section>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-9",
+            title: yhLang("Influenza", "ইনফ্লুয়েঞ্জা"),
+            icon: "fa-virus",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const introParagraphs = [
+                "ঋতু পরিবর্তন কিংবা অন্য যেকোনো সময় হালকা জ্বর বা সর্দি-কাশিকে মানুষ মৌসুমি অসুখ বলে ধরে নিলেও অনেক সময় এটি ইনফ্লুয়েঞ্জার লক্ষণ হতে পারে।",
+                "ইনফ্লুয়েঞ্জা মূলত একটি ভাইরাল সংক্রমণ, যা হাঁচি-কাশির মাধ্যমে ছড়ায়।",
+                "বছরের যেকোনো সময়ই ইনফ্লুয়েঞ্জা হতে পারে। তবে শীতকালে এর প্রকোপ বাড়ে।",
+              ];
+
+              const spreadInfo = `
+                <h3 class="mb-2">কিভাবে ছড়ায়</h3>
+                <p class="mb-2">সাধারণত ইতোমধ্যেই সংক্রমিত হয়েছে এমন ব্যক্তির হাঁচি-কাশি, কথা বলা কিংবা তার ব্যবহৃত কিছু ব্যবহারের মাধ্যমে ইনফ্লুয়েঞ্জা ছড়ায়। এ ছাড়া ইনফ্লুয়েঞ্জা ভাইরাস আছে এমন কিছু স্পর্শ করার মাধ্যমেও ইনফ্লুয়েঞ্জা ছড়াতে পারে।</p>
+                <p class="mb-0">এই ভাইরাস প্রতিনিয়ত নিজেকে পরিবর্তন করে থাকে, যাকে বলা হয় মিউটেশন।</p>`;
+
+              const generalSymptoms = `
+                <h3 class="mb-2">লক্ষণ</h3>
+                <p class="mb-2">প্রাথমিকভাবে ইনফ্লুয়েঞ্জার সংক্রমণ হলে সাধারণ ঠান্ডা লাগার মতোই লক্ষণ দেখা দেয়। যেমন জ্বর, গলা ব্যথা, নাক দিয়ে পানি পড়া, সর্দি, কাশি ইত্যাদি।</p>
+                <p class="mb-0">সাধারণ ঠান্ডা লাগার সঙ্গে ইনফ্লুয়েঞ্জা সংক্রমণের পার্থক্য হলো—এটি দ্রুত বেড়ে যায়। পরিবারের একজন আক্রান্ত হলে অন্যদেরও আক্রান্ত হওয়ার আশঙ্কা থাকে।</p>`;
+
+              const detailedSymptoms = [
+                "হঠাৎ ১০০ ডিগ্রি সেলসিয়াস বা তার বেশি জ্বর",
+                "গলা ব্যথা",
+                "সর্দি-কাশি",
+                "মাথাব্যথা",
+                "ডায়রিয়া",
+                "শরীর দুর্বল হয়ে যাওয়া",
+                "নাক বন্ধ হয়ে যাওয়া",
+                "বমিভাব হওয়া কিংবা বমি হওয়া",
+              ];
+
+              const treatmentPoints = [
+                "ইনফ্লুয়েঞ্জার সংক্রমণ হলে প্রথমেই আক্রান্ত ব্যক্তির পর্যাপ্ত বিশ্রাম নিশ্চিত করতে হবে।",
+                "শরীরে যেন পানির ঘাটতি দেখা না দেয়, সে জন্য প্রচুর পরিমাণে পানি ও ফলের রস পান করতে হবে।",
+                "ঠান্ডা আবহাওয়া থেকে দূরে থাকতে হবে এবং নিজেকে উষ্ণ আবহাওয়ার ভেতর রাখতে হবে।",
+                "ইনফ্লুয়েঞ্জায় আক্রান্ত ব্যক্তির ব্যবহৃত জিনিস যেন আর কেউ ব্যবহার না করে—সেটি খেয়াল রাখতে হবে।",
+                "ফ্লু-এর টিকা দেওয়া হলে আক্রান্ত হওয়ার ঝুঁকি অনেকাংশে কমে যায়। টিকাটি প্রতি বছর একবার করে নিতে হয়।",
+              ];
+
+              const renderList = (items, delayBase = 150) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li class="info-list-item" data-aos="fade-up" data-aos-delay="${delayBase + idx * 30}">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang("Influenza", "ইনফ্লুয়েঞ্জা")}</h2>
+                      <p class="mb-0 text-muted">${introParagraphs.join(" ")}</p>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-blue"><i class="fa-solid fa-virus"></i></div>
+                  </header>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
+                    ${spreadInfo}
+                  </section>
+
+                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="130">
+                    ${generalSymptoms}
+                  </section>
+
+                  <div class="row g-3 mt-2">
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100" data-aos="fade-right" data-aos-delay="150">
+                        <h3 class="mb-3">ইনফ্লুয়েঞ্জার সংক্রমণের লক্ষণগুলো হলো:</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(detailedSymptoms)}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100" data-aos="fade-left" data-aos-delay="160">
+                        <h3 class="mb-3">চিকিৎসা ও প্রতিকার</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(treatmentPoints, 160)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-10",
+            title: yhLang("এভিয়ান ইনফ্লুয়েঞ্জা", "এভিয়ান ইনফ্লুয়েঞ্জা"),
+            icon: "fa-dove",
+            gradientClass: "bg-gradient-tangerine",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const riskFactors = [
+                "পোলট্রি খামারে কর্মরত থাকলে",
+                "আক্রান্ত এলাকায় গমন করলে",
+                "সংক্রমিত পাখির সংস্পর্শে আসলে",
+                "কম রান্না করা মুরগি বা ডিম খেলে",
+              ];
+
+              const symptoms = [
+                "কাশি",
+                "ডায়রিয়া",
+                "শ্বাসকষ্ট",
+                "জ্বর",
+                "মাথা / পেশি ব্যথা",
+                "অসুস্থতাবোধ",
+                "সর্দি",
+              ];
+
+              const prevention = [
+                "বন্য পাখি বা গৃহপালিত পাখি খাওয়া এড়িয়ে চলুন",
+                "প্রতিরোধমূলক ব্যবস্থার জন্য আপনার ডাক্তারের সঙ্গে পরামর্শ করার পর ইনফ্লুয়েঞ্জা অ্যান্টিভাইরাল ওষুধ বা ভ্যাকসিন নিতে হবে",
+                "পোলট্রি বা দুগ্ধজাত দ্রব্য ভালোভাবে রান্না করার পর খেতে হবে",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text) => `
+                      <li>
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title">এভিয়ান ইনফ্লুয়েঞ্জা</h2>
+                      <p>এভিয়ান ইনফ্লুয়েঞ্জা বা বার্ড ফ্লু ভাইরাসজনিত মুরগির একটি মারাত্মক সংক্রামক ও ছোঁয়াচে রোগ। মুরগি, টার্কি, কোয়েল, হাঁস, রাজহাঁস এবং আরও নানা জাতের পাখি এ রোগে আক্রান্ত হয়ে থাকে। ধারণা করা হয় বন্য জলচর পাখিরা এ ভাইরাসের বাহক হিসেবে কাজ করে, তবে সাধারণত তারা এ রোগে আক্রান্ত হয় না। এটি একটি জুনোটিক ডিজিজ, যা মানুষকেও আক্রান্ত করতে পারে।</p>
+                      <p>বাংলাদেশে বর্তমানে যে ভাইরাসটি সচরাচর শনাক্ত করা হচ্ছে সেটি H5N1 প্রকৃতির। এভিয়ান ইনফ্লুয়েঞ্জার এই ভাইরাসটি অত্যন্ত সক্রিয় ও ভয়ংকর। এটি মানুষকেও সংক্রমিত করে।</p>
+                    </div>
+                  </header>
+
+                  <div class="row g-3 mt-2 align-items-stretch">
+                    <div class="col-12 col-lg-4">
+                      <article class="modern-card h-100" data-aos="fade-up">
+                        <h3 class="mb-3">ঝুঁকির কারণ</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(riskFactors)}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <article class="modern-card h-100" data-aos="fade-up">
+                        <h3 class="mb-3">লক্ষণ</h3>
+                        <p class="mb-2">একজন ব্যক্তির H5N1 সংক্রমণ আছে বলে সন্দেহ করা হয় যদি তিনি নিম্নলিখিত উপসর্গগুলির সম্মুখীন হন:</p>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(symptoms)}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <article class="modern-card h-100" data-aos="fade-up">
+                        <h3 class="mb-3">প্রতিরোধ</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(prevention)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch23-lesson-11",
+            title: yhLang("এমপক্স", "এমপক্স"),
+            icon: "fa-virus-slash",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const heroParagraphs = [
+                "এমপক্স একটি ভাইরাসজনিত প্রাণীবাহিত (Zoonotic) রোগ।",
+                "১৯৫৮ সালে ডেনমার্কে বানরের দেহে সর্বপ্রথম এ রোগ শনাক্ত হয় বলে একে মাঙ্কিপক্স বলা হয়। ২০২২ সালের নভেম্বর মাসে বিশ্ব স্বাস্থ্য সংস্থা (WHO) রোগের নামকরণের জন্য আধুনিক নির্দেশিকা অনুসরণ করে রোগটির নাম পরিবর্তন করে এমপক্স (Mpox) রাখা হয়।",
+                "এই রোগটির প্রাদুর্ভাব প্রধানত মধ্য ও পশ্চিম আফ্রিকায় দেখা যায়। ইতিপূর্বে এ ছাড়া অন্যান্য দেশেও এ রোগের প্রাদুর্ভাব দেখা গেছে। তবে সে ক্ষেত্রে উক্ত দেশসমূহে ভ্রমণের ইতিহাস অথবা উক্ত দেশসমূহ হতে আমদানিকৃত প্রাণীর সংস্পর্শে আসার প্রমাণ রয়েছে।",
+              ];
+
+              const generalSymptoms = [
+                "জ্বর (৩৮° সেলসিয়াসের বেশি তাপমাত্রা)",
+                "প্রচণ্ড মাথা ব্যথা",
+                "শরীরের বিভিন্ন জায়গায় লসিকাগ্রন্থি ফুলে যাওয়া ও ব্যথা (Lymphadenopathy)",
+                "মাংসপেশিতে ব্যথা",
+                "অবসাদগ্রস্ততা",
+                "ফুসকুড়ি—যা মুখ থেকে শুরু হয়ে পর্যায়ক্রমে হাতের তালু, পায়ের তালুসহ শরীরের বিভিন্ন জায়গায় ছড়িয়ে পড়ে (সাধারণত জ্বরের ৩ দিনের মধ্যে)",
+              ];
+
+              const actionSteps = [
+                "সবার আগে নিজেকে অন্যদের কাছ থেকে আলাদা (Isolation) করুন",
+                "সঙ্গে সঙ্গে চিকিৎসক / নিকটস্থ স্থানীয় স্বাস্থ্য কেন্দ্র / হাসপাতালে যোগাযোগ করুন",
+                "বিশেষ করে যারা আগে থেকেই দীর্ঘমেয়াদি অসুস্থতায় ভুগছেন (যেমন: অনিয়ন্ত্রিত ডায়াবেটিস, উচ্চ রক্তচাপ, ক্যান্সার), তারা অতিদ্রুত চিকিৎসকের পরামর্শ নেবেন",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (text) => `
+                      <li class="info-list-item">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">${yhLang("এমপক্স", "এমপক্স")}</h2>
+                      ${heroParagraphs.map((text) => `<p class="mb-2">${text}</p>`).join("")}
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-rose"><i class="fa-solid fa-virus-slash"></i></div>
+                  </header>
+
+                  <div class="row g-3 mt-2 align-items-stretch">
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100" data-aos="fade-right">
+                        <h3 class="mb-3">সাধারণ উপসর্গগুলো হলো:</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(generalSymptoms)}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100" data-aos="fade-left">
+                        <p class="text-muted mb-3">সাধারণত উপসর্গ ২–৪ সপ্তাহ পর্যন্ত স্থায়ী হয়।</p>
+                        <h3 class="mb-3">উপসর্গ দেখা দিলে করণীয়:</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(actionSteps)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-24",

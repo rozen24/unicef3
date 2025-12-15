@@ -1833,7 +1833,7 @@ img {
 .caution-item {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
   padding: 1rem 1.2rem;
   border-radius: 18px;
   background: rgba(255, 247, 237, 0.95);
