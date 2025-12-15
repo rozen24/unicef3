@@ -15234,6 +15234,298 @@ const coursesData = [
                 </div>`;
             })(),
           },
+          {
+            id: "ch22-lesson-14",
+            title: yhLang(
+              "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ",
+              "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ"
+            ),
+            icon: "fa-hands-bubbles",
+            gradientClass: "bg-gradient-mint",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const personalPractices = [
+                "নিরাপদ টয়লেট ও স্যানিটেশন ব্যবস্থায় সার্বজনীন অংশগ্রহন",
+                "পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি সুবিধা নিশ্চিত করন",
+                "বাড়িতে  ফুটিয়ে, ফিল্টার ও ক্লোরিন/ ফিটকিরি ব্যাবহার করে পানি বিশুদ্ধ করণ",
+                "পুনঃদূষণ রোধ করার জন্য সঠিক ভাবে নিরাপদ খাবার পানি সংরক্ষণ  অত্যন্ত গুরুত্বপূর্ণ।",
+                "সঠিকভাবে হাত ধোয়া নিশ্ছিত করা",
+              ];
+
+              const communityActions = [
+                "স্থানীয় বা কমিউনিটি পর্যায়ে সেবার  অংশ হিসেবে নিরাপদ স্যানিটেশন সেবা নিশ্চিত করতে হবে।",
+                "স্যানিটেশন এবং স্বাস্থ্যবিধিতে জাতীয় পর্যায়ে সহজলভ্যতা নিশ্চিত করা এবং প্রয়জনীয় তথ্য সকলের নিকট পৌঁছানো নিশ্চিত করতে হবে।",
+                "স্কুল এবং স্বাস্থ্যকেন্দ্রে পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি সেবা নিশ্চিত ও সকলের প্রাপ্যতা নিশ্চিত করা।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-check text-primary me-2"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ</h2>
+                  <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40">
+                    <span class="hygiene-shape hygiene-shape-corner" aria-hidden="true"></span>
+                    <span class="hygiene-shape hygiene-shape-orb" aria-hidden="true"></span>
+                    <div class="hygiene-card__body">
+                      <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-6">
+                          <div class="hygiene-list mb-3">
+                            <div class="hygiene-list__title">
+                              <i class="fa-solid fa-hands-bubbles me-2"></i>ব্যক্তিগত অনুশীলন:
+                            </div>
+                            <ul class="list-unstyled hygiene-list__items mb-0">
+                              ${renderList(personalPractices)}
+                            </ul>
+                          </div>
+                          <div class="hygiene-list">
+                            <div class="hygiene-list__title">
+                              <i class="fa-solid fa-people-group me-2"></i>কমিউনিটি স্তর:
+                            </div>
+                            <ul class="list-unstyled hygiene-list__items mb-0">
+                              ${renderList(communityActions)}
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          <figure class="image-card hygiene-figure mb-0">
+                            <img src="img/modu22/hand-wash.png" class="img-fluid rounded shadow-sm" alt="Handwashing illustration" loading="lazy">
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-15",
+            title: yhLang("জাতীয় পর্যায়:", "জাতীয় পর্যায়:"),
+            icon: "fa-landmark",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const nationalActions = [
+                "সকল স্টেকহোলডারদের  সম্পৃক্ত করার জন্য বহুপক্ষীয়  সহযোগিতা জোরদার করা",
+                "সরকারি বেসরকারি অংশীদারিত্ব (পিপিপি)ও শক্তিশালী সরকারি বিভিন্ন  বিভাগের মধ্যে সমন্বয় নিশ্চিত করা",
+                "অপর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধির সাথে সম্পর্কিত সংক্রামক রোগের প্রাদুর্ভাব পরিমাপ এবং প্রতিরোধ করার জন্য কার্যকর নজরদারি ব্যবস্থা প্রতিষ্ঠা করা",
+                "বৈধ এবং অবৈধ শিল্প থেকে দূষণ নিয়ন্ত্রণে কার্যকর ব্যবস্থা গ্রহণ করা।",
+                "পয়ঃনিষ্কাশন শোধনাগার এবং কল কারখানার বর্জ্য ব্যস্থাপনার জন্য প্রয়োজনীয় ব্যবস্থা গ্রহণ",
+                "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি সংক্রান্ত আইন ও বিধিমালা পর্যবেক্ষণ এবং প্রয়োগ নিশ্চিত করা।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li>
+                        <span class="national-wash-bullet"><i class="fa-solid fa-circle"></i></span>
+                        <p class="mb-0">${item}</p>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">জাতীয় পর্যায়</h2>
+                  <div class="modern-card glass-card national-wash-card" data-aos="fade-up" data-aos-delay="40">
+                    <span class="national-wash-shape national-wash-shape--corner" aria-hidden="true"></span>
+                    <span class="national-wash-shape national-wash-shape--orb" aria-hidden="true"></span>
+                    <div class="national-wash-card__body">
+                      <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-12">
+                          <div class="national-wash-head d-flex align-items-center gap-2 mb-3">
+                          </div>
+                          <ul class="list-unstyled national-wash-list mb-0">
+                            ${renderList(nationalActions)}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-16",
+            title: yhLang(
+              "কীটনাশক এবং শিশু-কিশোর দের স্বাস্থ্য ঝুঁকি",
+              "কীটনাশক এবং শিশু-কিশোর দের স্বাস্থ্য ঝুঁকি"
+            ),
+            icon: "fa-spray-can-sparkles",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const pesticidePoints = [
+                "কীটনাশক রাসায়নিক উপাদানের একটি বিস্তৃত শ্রেণীবিভাগ যা কৃষি, বাড়ি, উঠান, বাগান, গাছপালা, পোকামাকড় এবং ইঁদুরের মতো অবাঞ্ছিত কীটপতঙ্গ হত্যা এবং নিয়ন্ত্রণের জন্য তৈরি করা হয়। বাংলাদেশ একটি কৃষিপ্রধান দেশ হওয়ায়, ফসল রক্ষার জন্য এই রাসায়নিকগুলি ব্যাপকভাবে ব্যবহৃত হয়।",
+                "সকল কীটনাশক সহজাতভাবে বিষাক্ত এবং তীব্র এবং দীর্ঘস্থায়ী স্বাস্থ্য ঝুঁকি বহন করে যার মধ্যে রয়েছে কার্সিনোজেনিসিটি এবং মিউটেজেনিসিটি। খাদ্যাভ্যাস, বিকাশ-জনিত এবং শারীরবৃত্তীয় কারণগুলির কারণে শিশুরা কীটনাশকের গ্রহণ এবং প্রতিকূল প্রভাবের জন্য বেশি ঝুঁকিপূর্ণ।",
+                "শ্বাসপ্রশ্বাস, খাবার বা পানীয়ের মাদ্ধমে বা ত্বকের সংস্পর্শে আসার মাধ্যমে কীটনাশক আমাদের শরীরে প্রবেশ করে ও বিসক্রিয়া ঘটায়।",
+              ];
+
+              const renderPoints = () =>
+                pesticidePoints
+                  .map(
+                    (item) => `
+                      <li>
+                        <span class="pesticide-bullet"><i class="fa-solid fa-check"></i></span>
+                        <p class="mb-0">${item}</p>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">কীটনাশক এবং শিশু-কিশোর দের স্বাস্থ্য ঝুঁকি</h2>
+                  <div class="modern-card glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40">
+                    <span class="pesticide-shape pesticide-shape--corner" aria-hidden="true"></span>
+                    <span class="pesticide-shape pesticide-shape--dots" aria-hidden="true"></span>
+                    <div class="pesticide-card__body">
+                      <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-7 order-2 order-lg-1">
+                          <ul class="list-unstyled pesticide-list mb-0">
+                            ${renderPoints()}
+                          </ul>
+                        </div>
+                        <div class="col-12 col-lg-5 order-1 order-lg-2">
+                          <figure class="image-card pesticide-figure mb-0">
+                            <img src="img/modu22/kit.png" class="img-fluid" alt="Pesticide exposure risk" loading="lazy">
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-17",
+            title: yhLang(
+              "কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ",
+              "কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ"
+            ),
+            icon: "fa-notes-medical",
+            gradientClass: "bg-gradient-tangerine",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const riskCards = [
+                {
+                  title: "১. স্নায়ুতন্ত্রের ক্ষতি",
+                  description:
+                    "কীটনাশকের অনেক রাসায়নিক উপাদান স্নায়ুতন্ত্রকে সরাসরি ক্ষতি করে। এতে স্মৃতিশক্তি কমে যাওয়া, মনোযোগের ঘাটতি, শেখার সমস্যা বা স্নায়বিক বিকাশ ব্যাহত হয়।",
+                },
+                {
+                  title: "২. হরমোনের ভারসাম্যহীনতা",
+                  description:
+                    "কিছু কীটনাশক দেহের হরমোনের স্বাভাবিক কাজ ব্যাহত করে। এর ফলে বয়ঃসন্ধির সমস্যা, বৃদ্ধি ব্যাহত হওয়া ও প্রজনন অঙ্গের বিকাশে সমস্যা দেখা দেয়।",
+                },
+                {
+                  title: "৩. শ্বাস-প্রশ্বাসের সমস্যা",
+                  description:
+                    "কীটনাশকের গন্ধ বা বাষ্পে শ্বাস নিলে হাঁপানি, কাশি, শ্বাসকষ্ট, অ্যালার্জি ও ফুসফুসের প্রদাহ হতে পারে।",
+                },
+                {
+                  title: "৪. ত্বক ও চোখের জ্বালা",
+                  description:
+                    "কীটনাশকের সরাসরি সংস্পর্শে চর্মরোগ, চুলকানি, র‌্যাশ, চোখে জ্বালা, লালভাব বা পোড়া অনুভূতি হয়।",
+                },
+                {
+                  title: "৫. পেটের সমস্যা ও বিষক্রিয়া",
+                  description:
+                    "খাবার বা পানির মাধ্যমে কীটনাশক শরীরে ঢুকলে বমি, পেট ব্যথা, মাথা ঘোরা, ডায়রিয়া, গুরুতর ক্ষেত্রে অচেতন হওয়া বা খিঁচুনি দেখা যায়।",
+                },
+                {
+                  title: "৬. ক্যান্সারের ঝুঁকি",
+                  description:
+                    "দীর্ঘমেয়াদে কিছু কীটনাশক লিউকেমিয়া, লিম্ফোমা, মস্তিষ্কের টিউমারসহ বিভিন্ন ক্যান্সারের ঝুঁকি বাড়ায়, বিশেষত যারা কৃষি-সম্পর্কিত কাজে থাকে।",
+                },
+                {
+                  title: "৭. রোগ প্রতিরোধ ক্ষমতা কমে যাওয়া",
+                  description:
+                    "কীটনাশক ইমিউন সিস্টেম দুর্বল করে, ফলে শিশু-কিশোররা সহজে অসুস্থ হয়ে পড়ে।",
+                },
+              ];
+
+              const renderCards = () =>
+                riskCards
+                  .map(
+                    (card, idx) => `
+                      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
+                        <article class="risk-card">
+                          <div class="risk-card__icon"><i class="fa-solid fa-shield-virus"></i></div>
+                          <h5 class="risk-card__title">${card.title}</h5>
+                          <p class="mb-0">${card.description}</p>
+                        </article>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ</h2>
+                  <p class="text-muted" data-aos="fade-up" data-aos-delay="30">নিচে প্রধান স্বাস্থ্য ঝুঁকিগুলো তুলে ধরা হলো:</p>
+                  <div class="row g-3 risk-grid" data-aos="fade-up" data-aos-delay="60">
+                    ${renderCards()}
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-18",
+            title: yhLang("সতর্কতাঃ", "সতর্কতাঃ"),
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-yellow",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const cautionPoints = [
+                "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়জনে নাক মুখ ধেকে বাতাসের অনুকুলে কীটনাশক ছিটানো ।",
+                "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা। খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধ্যে নিতে হবে।",
+                "কীটনাশক রাখার জায়গা শিশুদের নাগালের বাইরে রাখতে হবে।",
+                "প্রয়োজনে কীটনাশক  প্রয়গের পর সাবানের পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয়  কাপড় পরিবর্তনকরতে হবে।",
+                "বিসক্রিয়ার যেকোন লক্ষণ দেখা দিলে বিষক্রিয়ায় আক্রান্ত ব্যক্তিকে  দ্রুত নিকটস্থ হাস্পাতালে নিয়ে জেতে হবে।",
+              ];
+
+              const renderItems = () =>
+                cautionPoints
+                  .map(
+                    (item, idx) => `
+                      <li>
+                        <div class="caution-index">${idx + 1}</div>
+                        <p class="mb-0">${item}</p>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">সতর্কতাঃ</h2>
+                  <div class="modern-card glass-card caution-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="caution-card__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <p class="text-muted mb-4">কীটনাশক ব্যবহারের সময় নিম্নোক্ত সতর্কতা মেনে চললে পরিবার-পরিবেশের ঝুঁকি কমানো যায়।</p>
+                    <ul class="list-unstyled caution-list mb-0">
+                      ${renderItems()}
+                    </ul>
+                  </div>
+                </div>`;
+            })(),
+          },
         ],
       },
       {
