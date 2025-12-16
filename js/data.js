@@ -16380,16 +16380,216 @@ const coursesData = [
         id: "ch-24",
         title: yhLang(
           "Module-24: Communication and counseling with adolescents",
-          "মডিউল-২৪: কিশোরদের সঙ্গে যোগাযোগ ও পরামর্শ"
+          "মডিউল-২৪: কিশোর-কিশোরীদের জীবন দক্ষতা, নৈতিকতা ও মূল্যবোধ"
         ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch24-lesson-1",
+            title: yhLang("জীবন দক্ষতা শিক্ষা", "জীবন দক্ষতা শিক্ষা"),
+            icon: "fa-brain",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            content: (function () {
+              const bulletPoints = [
+                "নিজেকে জানা",
+                "আবেগের সঠিক ব্যবস্থাপনা",
+                "সমস্যা চিহ্নিতকরণ ও সমাধান",
+                "গভীরভাবে চিন্তা ও বিশ্লেষণ করা",
+                "সিদ্ধান্ত গ্রহণ",
+                "সহমর্মিতা",
+                "পারিপার্শ্বিক চাপ বিশেষ করে বন্ধুদের প্রভাব সঠিকভাবে সামলানো",
+                "কার্যকর যোগাযোগ",
+                "“না” বলতে পারা",
+                "সমঝোতা করার মানসিকতা",
+              ];
+
+              const renderList = (items) =>
+                (items || [])
+                  .map(
+                    (text) => `
+                      <li class="info-item">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="info-text">${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">জীবন দক্ষতা শিক্ষা</h2>
+                      <p class="mb-2">জীবন দক্ষতা হলো প্রতিদিনকার জীবনের সমস্যা ও চাহিদা বুঝে সেগুলোর সঠিক ব্যবস্থাপনার সক্ষমতা।</p>
+                      <p class="mb-0">কিশোর-কিশোরীদের এ বিষয়ক শিক্ষা তাদের জীবনের বিভিন্ন সমস্যা সমাধানে গুরুত্বপূর্ণ ভূমিকা পালন করে।</p>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-brain"></i></div>
+                  </header>
+
+                  <div class="row g-3 mt-2 align-items-stretch">
+                    <div class="col-12">
+                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="mb-3">যেমন—</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(bulletPoints)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+
+                  <div class="program-intro hover-lift-sm transition-base mt-3" data-aos="fade-up" data-aos-delay="160">
+                    <p class="mb-2">এগুলোর কোনোটি কঠিন নয় যদি তা সঠিকভাবে অনুশীলন করা যায়।</p>
+                    <p class="mb-0">জীবন দক্ষতা বিষয়ক শিক্ষা প্রদান করার ক্ষেত্রে বড়রা যেমন মা-বাবা, আত্মীয়-স্বজন, শিক্ষক ইত্যাদি কিশোর-কিশোরীদের সহায়তা করতে পারেন।</p>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch24-lesson-2",
+            title: yhLang("সামাজিক মূল্যবোধ", "সামাজিক মূল্যবোধ"),
+            icon: "fa-people-group",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            content: (function () {
+              const valuesDefinitionPoints = [
+                "মূল্যবোধ অর্থাৎ যে বোধ দিয়ে আমরা ভালো ও খারাপ দিক/বিষয় মূল্যায়ন করি সেটাই মূল্যবোধ। মূল্যবোধ হচ্ছে মূল্য (মূল্যায়ন) + বোধ (বুদ্ধি/বিবেচনা)।",
+                "অর্থাৎ নিজের বুদ্ধি/বিবেচনা ও সক্ষমতা ব্যবহার করে যেকোনো ঘটনা বা কাজের ভালো-মন্দ, দোষ-গুণ বিচার, বিশ্লেষণ বা মূল্যায়ন করে ভালো, সঠিক বা ন্যায়সংগত দিকগুলোকে চর্চা করাই হলো মূল্যবোধ।",
+                "ধর্মীয় ও পারিবারিক শিক্ষার মাধ্যমে মূল্যবোধ বা নৈতিকতার উন্নয়ন ঘটানো যায়।",
+              ];
+
+              const degradationCauses = [
+                "পারিবারিক অনুশাসনের ঘাটতি ও সামাজিক অবক্ষয়ের প্রভাবে",
+                "ধর্মীয় শিক্ষার অভাব",
+                "সমাজ ও সংস্কৃতির পরিবর্তনকে সঠিকভাবে গ্রহণ করতে না পারা",
+                "আধুনিক হতে গিয়ে বেপরোয়া হয়ে পড়া",
+                "নিজেকে “হিরো” মনে করা",
+                "মাদক সেবন করা",
+                "মোবাইল ফোনের অযৌক্তিক ও অনিয়ন্ত্রিত ব্যবহার",
+                "ইন্টারনেটের অপব্যবহার",
+                "নেতিবাচক বিপণন ব্যবস্থা",
+              ];
+
+              const renderList = (items) =>
+                (items || [])
+                  .map(
+                    (text) => `
+                      <li class="info-item">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="info-text">${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">সামাজিক মূল্যবোধ</h2>
+                      <p class="mb-0"><strong>সামাজিক পরিবর্তনের সাথে সাথে পারিবারিক ও সামাজিক মূল্যবোধও বদলে যাচ্ছে। যত পরিবর্তনই হোক, মূল্যবোধ ও নৈতিকতার অবক্ষয় কোনোভাবেই কারও কাম্য হতে পারে না। পরিবর্তনের কারণে কিশোর-কিশোরীরা নানা অপরাধমূলক ঘটনার শিকার হচ্ছে। পারিবারিক ও সামাজিক অনুশাসন না থাকায় কিশোর-কিশোরীরা অনেক ভয়ংকর ঘটনারও জন্ম দিচ্ছে। সমাজ ও সংস্কৃতির সুস্থধারার পরিবর্তন ও সমন্বয় এ ধরনের ঘটনা প্রতিরোধে সহায়ক।</strong></p>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-people-group"></i></div>
+                  </header>
+
+                  <div class="row g-3 mt-2 align-items-stretch">
+                    <div class="col-12">
+                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="mb-3">মূল্যবোধ কী?</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(valuesDefinitionPoints)}
+                        </ul>
+                      </article>
+                    </div>
+
+                    <div class="col-12">
+                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="140">
+                        <h3 class="mb-3">মূল্যবোধ অবক্ষয়ের কারণসমূহ</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(degradationCauses)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch24-lesson-3",
+            title: yhLang(
+              "কিভাবে মূল্যবোধের উন্নয়ন করা যায়",
+              "কিভাবে মূল্যবোধের উন্নয়ন করা যায়"
+            ),
+            icon: "fa-hand-holding-heart",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            content: (function () {
+              const improvementSteps = [
+                "নিজস্ব মনুষ্যত্বকে জাগিয়ে তুলতে হবে",
+                "কিশোর-কিশোরীদের সাথে সঠিক ও অভিভাবকসুলভ আচরণ করতে হবে",
+                "সন্তানের সাথে বন্ধুত্বপূর্ণ আচরণ করতে হবে, যেন সন্তান কোনো বিষয় পিতামাতার কাছে গোপন না করে",
+                "পরিবারের সকলে সত্য কথা বলার অভ্যাস করতে হবে এবং মিথ্যাকে ঘৃণা করা শেখাতে হবে",
+                "কিশোর-কিশোরীদের সঠিক তথ্য দিয়ে সহায়তা করতে হবে—যেমন যৌনতা সম্পর্কে পুরোপুরি সত্য ও সঠিক শিক্ষা দিতে হবে",
+                "সন্তানকে প্রত্যেকটি বিষয়ের ভালো ও মন্দ পরিণতিগুলো উপলব্ধি করতে সাহায্য করতে হবে",
+                "সন্তানকে সূক্ষ্ম বিচার-বিবেচনা করে সঠিক সিদ্ধান্ত নিতে উৎসাহিত করতে হবে এবং প্রয়োজনবোধে সহযোগিতা করতে হবে",
+              ];
+
+              const educationImpactPoints = [
+                "পারিবারিক, সামাজিক ও ধর্মীয় মূল্যবোধ শিক্ষার মাধ্যমে এ ধরনের সংকট থেকে বেরিয়ে আসা সম্ভব। বিদ্যালয়ের শিক্ষাও কিশোর-কিশোরীদের বিষয়গুলো জানতে ও অনুশীলন করতে সাহায্য করতে পারে, যা ভবিষ্যতে তাদের অপরাধপ্রবণতাসহ অন্যান্য নেতিবাচক আচরণ দূর করতে বা কমাতে পারে।",
+                "শিক্ষকেরা ক্লাসে বিভিন্ন বিষয় আলোচনার সময় নৈতিকতার দিকগুলোও তুলে ধরে শিক্ষার্থীদের সেগুলোতে উদ্বুদ্ধ করতে পারেন।",
+                "কিশোর-কিশোরীদের জীবন দক্ষতা শিক্ষাদানের মাধ্যমে (জোর করে নয়) বিষয়গুলো জানতে সহায়তা করা যায়। নৈতিকতা ও মূল্যবোধে সচেতন মানুষ গড়ে তোলা গেলে এ ধরনের অপরাধপ্রবণতা কমে আসবে, যা সুস্থ ও সুন্দর জীবন গঠনে অবদান রাখবে।",
+              ];
+
+              const renderList = (items) =>
+                (items || [])
+                  .map(
+                    (text) => `
+                      <li class="info-item">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="info-text">${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">কিভাবে মূল্যবোধের উন্নয়ন করা যায়</h2>
+                      <p class="mb-0">অপরাধ বিশেষজ্ঞ ও মনোবিজ্ঞানীরা বলেছেন, পারিবারিক অনুশাসনের ঘাটতি ও সামাজিক অবক্ষয়ের প্রভাবেই মূলত কিশোর-কিশোরীরা ভুল পথে পা দিচ্ছে। সুতরাং মূল্যবোধের উন্নয়ন করতে হলে—</p>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                  </header>
+
+                  <div class="row g-3 mt-2 align-items-stretch">
+                    <div class="col-12">
+                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="100">
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(improvementSteps)}
+                        </ul>
+                      </article>
+                    </div>
+
+                    <div class="col-12">
+                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="140">
+                        <h3 class="mb-3">কিভাবে নৈতিকতা/মূল্যবোধ শিক্ষা সুস্থ ও সুন্দর জীবনে অবদান রাখে</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(educationImpactPoints)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+        ],
       },
       {
         id: "ch-25",
         title:
           yhLang(
             "Module-25: Human Rights, Child Rights, and Sexual and Reproductive Health Rights",
-            "মডিউল-২৫: মানবাধিকার, শিশুর অধিকার ও যৌন ও প্রজনন স্বাস্থ্য অধিকার"
+            "মডিউল-২৫: কিশোর-কিশোরীদের সাথে যোগাযোগ ও কাউন্সেলিং"
           ),
         lessons: [],
       },
