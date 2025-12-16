@@ -4616,17 +4616,17 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" >
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-6">
+                      <div class="col-lg-12">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
                           "কিশোরীদের মাতৃত্বজনিত ঝুঁকি"
                         )}</h3>
                         <p class="text-muted" data-aos="fade-up" data-aos-delay="80">${riskDescription}</p>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="orbit-layout" data-orbit-manual="true">
+                      <div class="col-lg-12">
+                        <div class="orbit-layout" data-orbit-radius="220">
                           <div class="orbit-center icon-spin-on-hover">
-                            <div class="orbit-card bg-gradient-rose">
+                            <div class="orbit-card kishori bg-gradient-rose">
                               <div class="orbit-title fw-bold">${yhLang(
                                 "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
                                 "কিশোরীদের মাতৃত্বজনিত ঝুঁকি"
@@ -4731,12 +4731,14 @@ const coursesData = [
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
                   <section class="modern-card glass-card menstrual-info-card">
-                    <div class="orbit-layout" data-orbit-radius="190" data-orbit-manual="true">
+                    <div class="orbit-layout" data-orbit-radius="190">
+                      <div class="orbit-ring-1" aria-hidden="true"></div>
+                      <div class="orbit-ring-2" aria-hidden="true"></div>
                       <div class="orbit-center icon-spin-on-hover">
-                        <div class="orbit-card bg-gradient-purple">
+                        <div class="orbit-card bg-gradient-teal">
                           <div class="orbit-title fw-bold">${yhLang(
-                            "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
-                            "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
+                            "কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল",
+                            "কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল"
                           )}</div>
                         </div>
                       </div>
@@ -6558,7 +6560,7 @@ const coursesData = [
                         </ul>
                       </div>
                       <div class="col-lg-6">
-                        <div class="orbit-layout" data-orbit-manual="true">
+                        <div class="orbit-layout" data-orbit-radius="195">
                           <div class="orbit-center icon-spin-on-hover">
                             <div class="orbit-card bg-gradient-rose">
                               <div class="orbit-title fw-bold">${yhLang(

@@ -2342,8 +2342,8 @@ img {
     }
 
     .orbit-center .orbit-card {
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
     color: #fff;
     display: flex;
@@ -2354,6 +2354,10 @@ img {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+   .kishori {
+    width: 325px !important;
+    height: 325px !important;
+   }
 
     .orbit-center .orbit-card:hover {
       transform: scale(1.05);
