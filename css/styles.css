@@ -7,6 +7,10 @@ tr {
   background-color: #eaeaea !important;
 }
 
+.fa-circle-check {
+  color: #1CAEEA !important;
+}
+
 /* Pyramid collapsed state when modules sidebar hidden */
 .pyramid-positive .pyramid-steps .pyramid-positive-collapsed {
   opacity: 0.25;
