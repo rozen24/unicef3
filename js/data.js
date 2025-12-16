@@ -16582,6 +16582,63 @@ const coursesData = [
                 </div>`;
             })(),
           },
+          {
+            id: "ch24-lesson-4",
+            title: yhLang("যোগাযোগ", "যোগাযোগ"),
+            icon: "fa-comments",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            content: (function () {
+              const purposePoints = [
+                "ভাব প্রকাশ করা |",
+                "তথ্য আদান-প্রদান করা |",
+                "অন্যের মতামত ও ধারণা বোঝা |",
+                "নিজের মতামত অন্যের কাছে তুলে ধরা |",
+                "মানুষকে সচেতন করে আচরণের পরিবর্তন আনা |",
+              ];
+
+              const renderList = (items) =>
+                (items || [])
+                  .map(
+                    (text) => `
+                      <li class="info-item">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="info-text">${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">যোগাযোগ</h2>
+                      <p class="mb-2">যোগাযোগ হলো একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহায্যে অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে।</p>
+                      <p class="mb-0"><strong>যোগাযোগের উপাদান:</strong> প্রেরক, প্রাপক, বার্তা, মাধ্যম ও প্রতিক্রিয়া।</p>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-comments"></i></div>
+                  </header>
+
+                  <div class="row g-3 mt-2 align-items-stretch">
+                    <div class="col-12">
+                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="100">
+                        <p class="mb-0">স্বাস্থ্য সেবাদানকারী যদি সেবাগ্রহীতাকে কোনো তথ্য দেন তাহলে স্বাস্থ্য সেবাদানকারী হচ্ছেন প্রেরক এবং যে তথ্যটি দিতে চান সেটি হচ্ছে বার্তা এবং সেবাগ্রহীতা হচ্ছেন প্রাপক। বার্তাটি পৌঁছানোর জন্য একটি মাধ্যম লাগবে এবং যখন বার্তাটি প্রাপকের কাছে পৌঁছাবে তখন প্রেরক একটি ফিরতি বার্তা প্রত্যাশা করবেন যাকে বলা হয় প্রতিক্রিয়া।</p>
+                      </article>
+                    </div>
+
+                    <div class="col-12">
+                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="140">
+                        <h3 class="mb-3">যোগাযোগের উদ্দেশ্য</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(purposePoints)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
         ],
       },
       {
@@ -16591,7 +16648,349 @@ const coursesData = [
             "Module-25: Human Rights, Child Rights, and Sexual and Reproductive Health Rights",
             "মডিউল-২৫: কিশোর-কিশোরীদের সাথে যোগাযোগ ও কাউন্সেলিং"
           ),
-        lessons: [],
+        lessons: [
+          {
+            id: "ch25-lesson-1",
+            title: yhLang("যোগাযোগের প্রকারভেদ", "যোগাযোগের প্রকারভেদ"),
+            icon: "fa-diagram-project",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            content: (function () {
+              const verbalPoints = [
+                "মুখোমুখি কথা বলা",
+                "টেলিফোনে কথা বলা",
+                "বক্তৃতা",
+                "রেডিও শোনা",
+              ];
+              const groupPoints = [
+                "দলীয় আলোচনা",
+                "দলীয় সভা",
+                "বক্তৃতা",
+              ];
+
+              const renderList = (items) =>
+                (items || [])
+                  .map(
+                    (text) => `
+                      <li class="info-item">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="info-text">${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">যোগাযোগের প্রকারভেদ</h2>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-diagram-project"></i></div>
+                  </header>
+
+                  <div class="row g-3 mt-2 align-items-stretch">
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100" data-aos="fade-right" data-aos-delay="90">
+                        <h3 class="mb-3">দু’জনের মধ্যে যোগাযোগের পদ্ধতিসমূহ</h3>
+                        <div class="mt-3">
+                          <img src="img/modu25/contact.png" alt="দু’জনের মধ্যে যোগাযোগের পদ্ধতিসমূহ" class="img-fluid w-100 rounded" loading="lazy">
+                        </div>
+                      </article>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100" data-aos="fade-left" data-aos-delay="110">
+                        <h3 class="mb-2">১. মৌখিক যোগাযোগ</h3>
+                        <ul class="list-unstyled info-list mb-3">
+                          ${renderList(verbalPoints)}
+                        </ul>
+
+                        <h3 class="mb-2">২. শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে (অমৌখিক)</h3>
+                        <ul class="list-unstyled info-list mb-3">
+                          ${renderList(["ইঙ্গিত বা প্রতীকের মাধ্যমে"])}
+                        </ul>
+
+                        <h3 class="mb-2">দলীয় যোগাযোগের পদ্ধতিসমূহ</h3>
+                        <ul class="list-unstyled info-list mb-3">
+                          ${renderList(groupPoints)}
+                        </ul>
+
+                        <h3 class="mb-2">গণযোগাযোগ</h3>
+                        <p class="mb-0">বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যবহার করা হয়। এ ক্ষেত্রে প্রেরক ও প্রাপকের মধ্যে সংযোগ ঘটে না।</p>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch25-lesson-2",
+            title: yhLang(
+              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলি",
+              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলি"
+            ),
+            icon: "fa-handshake",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            content: (function () {
+              const relationshipConditions = [
+                "বন্ধুত্বপূর্ণ আচরণ (friendly)",
+                "গ্রহণযোগ্যতা (acceptance)",
+                "সম্মান (respect)",
+                "স্বচ্ছতা (genuineness)",
+                "সহমর্মিতা (empathy)",
+                "সহজ কথোপকথন (simple language)",
+                "উষ্ণতা (warmth)",
+                "সহানুভূতিশীল (sympathy)",
+                "গোপনীয়তা (privacy)",
+                "বিচার না করা (non-judgmental)",
+              ];
+
+              const activeListenerTips = [
+                "বক্তার কথা বলার সময় মাঝপথে বাধা দেওয়া পরিহার করা",
+                "চুপ থাকা",
+                "বিষয়বস্তু যেন বিচ্ছিন্ন না হয় সে বিষয়ে নজর দেওয়া",
+                "ইতিবাচক দেহভঙ্গি দেখানো",
+              ];
+
+              const principles = [
+                {
+                  title: "১. দৃঢ়তা (Assertiveness)",
+                  desc: "যা বলতে চাই তা পরিষ্কার, সংক্ষিপ্ত এবং সহজ ভাষায় প্রকাশ করা। ঘুরিয়ে বা অস্পষ্টভাবে না বলে সরাসরি বিষয়টি বোঝানো।",
+                },
+                {
+                  title: "২. মনোযোগ দিয়ে শোনা (Active Listening)",
+                  desc: "অন্যের কথা ধৈর্য ধরে শোনা, মাঝখানে বাধা না দেওয়া এবং প্রয়োজন হলে শেষে বিনয়ের সঙ্গে প্রশ্ন করা। এতে বুঝতে সুবিধা হয় ও ভুল ধারণা কমে।",
+                },
+                {
+                  title: "৩. সম্মান ও সহানুভূতি (Respect & Empathy)",
+                  desc: "অন্যের অনুভূতি ও মতামতকে মূল্য দেওয়া, তাদের দৃষ্টিভঙ্গি বোঝার চেষ্টা করা এবং বিনয়ী ও শান্তভাবে প্রতিক্রিয়া দেওয়া।",
+                },
+              ];
+
+              const renderList = (items) =>
+                (items || [])
+                  .map(
+                    (text) => `
+                      <li class="info-item">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="info-text">${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const renderPrinciples = () =>
+                principles
+                  .map(
+                    (p) => `
+                      <li class="info-item">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="info-text">
+                          <strong>${p.title}</strong><br>
+                          ${p.desc}
+                        </span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const orbitItems = ["দৃঢ়তা", "মনোযোগ দিয়ে শোনা", "সম্মান ও সহানুভূতি"];
+              const orbitColors = ["bg-gradient-blue", "bg-gradient-green", "bg-gradient-rose"];
+
+              const renderOrbitItems = () =>
+                orbitItems
+                  .map(
+                    (label, idx) => `
+                      <div class="orbit-item" data-aos="zoom-in" data-aos-delay="${140 + idx * 60}">
+                        <div class="orbit-card ${orbitColors[idx % orbitColors.length]}">
+                          <span class="orbit-title">${label}</span>
+                        </div>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলি</h2>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-handshake"></i></div>
+                  </header>
+
+                  <div class="row g-3 mt-2 align-items-stretch">
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100" data-aos="fade-right" data-aos-delay="90">
+                        <ul class="list-unstyled info-list mb-4">
+                          ${renderList(relationshipConditions)}
+                        </ul>
+
+                        <h3 class="mb-3">সক্রিয় শ্রোতা হওয়ার কিছু টিপস</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderList(activeListenerTips)}
+                        </ul>
+                      </article>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100" data-aos="fade-left" data-aos-delay="110">
+                        <h3 class="mb-3">কার্যকর যোগাযোগের তিনটি নীতি</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderPrinciples()}
+                        </ul>
+
+                        <div class="mt-4">
+                          <div class="orbit-layout" data-orbit-radius="150" data-aos="zoom-in" data-aos-delay="180">
+                            <div class="orbit-ring-1" aria-hidden="true"></div>
+                            <div class="orbit-ring-2" aria-hidden="true"></div>
+                            <div class="orbit-center icon-spin-on-hover">
+                              <div class="orbit-card bg-gradient-teal">
+                                <div class="orbit-title fw-bold">কার্যকর যোগাযোগের নীতি</div>
+                              </div>
+                            </div>
+                            ${renderOrbitItems()}
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch25-lesson-3",
+            title: yhLang("কার্যকর যোগাযোগ", "কার্যকর যোগাযোগ"),
+            icon: "fa-comment-dots",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            content: (function () {
+              const techniqueItems = [
+                {
+                  title: "১. মনোযোগ দিয়ে শোনা (Active Listening)",
+                  desc: "অন্য কেউ কথা বললে মাঝপথে বাধা না দিয়ে শোনো। প্রয়োজন হলে শেষে বিনয়ের সঙ্গে প্রশ্ন করো। এতে সম্পর্ক ভালো হয়।",
+                },
+                {
+                  title: "২. পরিষ্কার ও সহজ ভাষায় কথা বলা",
+                  desc: "জটিল শব্দ বা ঘুরিয়ে কথা না বলে নিজের ভাবনা স্পষ্টভাবে প্রকাশ করো। এতে ভুল বোঝাবুঝি কমে।",
+                },
+                {
+                  title: "৩. অভিযোগ না করে নিজের অনুভূতি প্রকাশ করা",
+                  desc: "কাউকে দোষারোপ না করে শান্তভাবে বলা যে কোনো পরিস্থিতি তোমাকে কীভাবে অনুভব করাচ্ছে। এটি সম্পর্ককে আরও সম্মানজনক ও বোঝাপড়াপূর্ণ করে তোলে।",
+                },
+                {
+                  title: "৪. শরীরের ভাষা ঠিক রাখা",
+                  desc: "চোখে চোখ রেখে কথা বলা, সোজা ভঙ্গিতে দাঁড়ানো বা বসা—এগুলো আত্মবিশ্বাস বাড়ায় এবং কথা বেশি বিশ্বাসযোগ্য করে তোলে।",
+                },
+                {
+                  title: "৫. রাগ বা আবেগ নিয়ন্ত্রণ করা",
+                  desc: "রাগের মাথায় কথা না বলা ভালো। শান্ত হয়ে কথা বললে সমস্যা সমাধান সহজ হয়।",
+                },
+                {
+                  title: "৬. সম্মান দেখানো",
+                  desc: "বন্ধু, পরিবার বা শিক্ষক—যেই হোক, তাদের মতামতকে সম্মান করো। অসম্মান করলে যোগাযোগ ভেঙে যায়।",
+                },
+                {
+                  title: "৭. গুজব বা বাড়াবাড়ি এড়িয়ে চলা",
+                  desc: "সত্য যাচাই না করে কিছু বলো না। এতে আস্থা বজায় থাকে।",
+                },
+                {
+                  title: "৮. প্রয়োজন হলে সাহায্য চাওয়া",
+                  desc: "কিছু বুঝতে না পারলে ভেবে না নিয়ে স্পষ্টভাবে জিজ্ঞেস করো। এতে শেখা সহজ হয়।",
+                },
+              ];
+
+              const renderTechniques = () =>
+                techniqueItems
+                  .map(
+                    (t) => `
+                      <li class="info-item">
+                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="info-text">
+                          <strong>${t.title}</strong><br>
+                          ${t.desc}
+                        </span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const orbitItems = [
+                "মনোযোগ দিয়ে শোনা",
+                "পরিষ্কার ও সহজ ভাষায় কথা বলা",
+                "†অভিযোগ না করে নিজের অনুভূতি প্রকাশ করা",
+                "শরীরের ভাষা ঠিক রাখা",
+                "রাগ বা আবেগ নিয়ন্ত্রণ করা",
+                "সম্মান দেখানো",
+                "গুজব বা বাড়াবাড়ি এড়িয়ে চলা",
+                "প্রয়োজন হলে সাহায্য চাওয়া",
+              ];
+
+              const colorCycle = [
+                "bg-gradient-orange",
+                "bg-gradient-blue",
+                "bg-gradient-rose",
+                "bg-gradient-green",
+                "bg-gradient-teal",
+                "bg-gradient-purple",
+                "bg-gradient-tangerine",
+                "bg-gradient-emerald",
+              ];
+
+              const renderOrbitItems = () =>
+                orbitItems
+                  .map(
+                    (label, idx) => `
+                      <div class="orbit-item" data-aos="zoom-in" data-aos-delay="${120 + idx * 35}">
+                        <div class="orbit-card ${colorCycle[idx % colorCycle.length]}">
+                          <span class="orbit-title">${label}</span>
+                        </div>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="hero-tile__body">
+                      <h2 class="slide-title gradient-text mb-2">কার্যকর যোগাযোগ</h2>
+                      <p class="mb-0">কার্যকর যোগাযোগ হলো এমনভাবে কথা বলা, শোনা ও প্রতিক্রিয়া করা, যাতে দু’পক্ষই একে অপরকে স্পষ্টভাবে বুঝতে পারে। কিশোর বয়সে পরিবার, বন্ধু, শিক্ষক—সবাইয়ের সঙ্গে পরিষ্কার ও সম্মানজনকভাবে যোগাযোগ করা খুব গুরুত্বপূর্ণ। ভালো যোগাযোগের জন্য প্রয়োজন মনোযোগ দিয়ে শোনা, অন্যের মতামতকে সম্মান করা এবং নিজের অনুভূতি বা ভাবনা শান্তভাবে প্রকাশ করা। এতে ভুল বোঝাবুঝি কমে, সম্পর্ক শক্ত হয়, এবং আত্মবিশ্বাসও বাড়ে। মুখের ভাষার পাশাপাশি শরীরের ভাষা, চোখের যোগাযোগ এবং কথা বলার টোনও যোগাযোগকে প্রভাবিত করে। নিয়মিত চর্চা করলে যেকোনো পরিস্থিতিতে পরিষ্কার ও আত্মবিশ্বাসের সঙ্গে কথা বলা সহজ হয়ে ওঠে।</p>
+                    </div>
+                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-comment-dots"></i></div>
+                  </header>
+
+                  <div class="row g-3 mt-2 align-items-stretch">
+                    <div class="col-12">
+                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="mb-3">কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল</h3>
+                        <ul class="list-unstyled info-list mb-0">
+                          ${renderTechniques()}
+                        </ul>
+                      </article>
+                    </div>
+
+                    <div class="col-12">
+                      <article class="modern-card glass-card h-100" data-aos="zoom-in" data-aos-delay="140">
+                        <div class="orbit-layout" data-orbit-radius="190" data-aos="zoom-in" data-aos-delay="180">
+                          <div class="orbit-ring-1" aria-hidden="true"></div>
+                          <div class="orbit-ring-2" aria-hidden="true"></div>
+                          <div class="orbit-center icon-spin-on-hover">
+                            <div class="orbit-card bg-gradient-teal">
+                              <div class="orbit-title fw-bold">কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল</div>
+                            </div>
+                          </div>
+                          ${renderOrbitItems()}
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+        ],
       },
     ],
     // Flat lessons kept for backward compatibility (legacy renderers)
