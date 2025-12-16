@@ -3938,7 +3938,7 @@ const coursesData = [
                       "বাল্যবিবাহ",
                       "বাল্যবিবাহ"
                     )}</h3>
-                    <div class="orbit-layout" data-orbit-manual="true">
+                    <div class="orbit-layout" data-orbit-radius="190" data-orbit-manual="true">
                       <div class="orbit-center icon-spin-on-hover">
                         <div class="orbit-card bg-gradient-rose">
                           <div class="orbit-title fw-bold">বাল্যবিবাহ</div>
@@ -4587,7 +4587,7 @@ const coursesData = [
                     const angle = angleStep * idx;
                     const color = colorCycle[idx % colorCycle.length];
                     return `
-                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 + idx * 30}">
+                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" >
                         <div class="orbit-card ${color}">
                           <span class="orbit-title">${label}</span>
                         </div>
@@ -4614,7 +4614,7 @@ const coursesData = [
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                  <section class="modern-card glass-card menstrual-info-card" >
                     <div class="row g-4 align-items-center">
                       <div class="col-lg-6">
                         <h3 class="gradient-text mb-3">${yhLang(
@@ -4730,8 +4730,8 @@ const coursesData = [
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
-                    <div class="orbit-layout" data-orbit-manual="true">
+                  <section class="modern-card glass-card menstrual-info-card">
+                    <div class="orbit-layout" data-orbit-radius="190" data-orbit-manual="true">
                       <div class="orbit-center icon-spin-on-hover">
                         <div class="orbit-card bg-gradient-purple">
                           <div class="orbit-title fw-bold">${yhLang(
@@ -6557,7 +6557,7 @@ const coursesData = [
                           ${renderBiasList()}
                         </ul>
                       </div>
-                      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="80">
+                      <div class="col-lg-6">
                         <div class="orbit-layout" data-orbit-manual="true">
                           <div class="orbit-center icon-spin-on-hover">
                             <div class="orbit-card bg-gradient-rose">
@@ -16843,7 +16843,7 @@ const coursesData = [
                         </ul>
 
                         <div class="mt-4">
-                          <div class="orbit-layout" data-orbit-radius="150" data-aos="zoom-in" data-aos-delay="180">
+                          <div class="orbit-layout" data-orbit-radius="150">
                             <div class="orbit-ring-1" aria-hidden="true"></div>
                             <div class="orbit-ring-2" aria-hidden="true"></div>
                             <div class="orbit-center icon-spin-on-hover">
@@ -16973,8 +16973,8 @@ const coursesData = [
                     </div>
 
                     <div class="col-12">
-                      <article class="modern-card glass-card h-100" data-aos="zoom-in" data-aos-delay="140">
-                        <div class="orbit-layout" data-orbit-radius="190" data-aos="zoom-in" data-aos-delay="180">
+                      <article class="modern-card glass-card h-100">
+                        <div class="orbit-layout" data-orbit-radius="190">
                           <div class="orbit-ring-1" aria-hidden="true"></div>
                           <div class="orbit-ring-2" aria-hidden="true"></div>
                           <div class="orbit-center icon-spin-on-hover">
