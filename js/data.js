@@ -3107,12 +3107,12 @@ const coursesData = [
                     <span class="menstrual-corner-accent" aria-hidden="true"></span>
                     <span class="menstrual-corner-pill" aria-hidden="true"></span>
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-5">
+                      <div class="col-lg-12">
                         <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
-                          <img src="img/modu4/masik.jpeg" alt="Menstrual care" class="img-fluid w-100 object-fit-cover img-zoom" />
+                          <img src="img/modu4/masik.png" alt="Menstrual care" class="img-fluid w-100 object-fit-cover img-zoom" />
                         </figure>
                       </div>
-                      <div class="col-lg-7">
+                      <div class="col-lg-12">
                         <div class="d-flex flex-column gap-3">
                           ${paragraphs
                             .map((text, idx) => `<p class="mb-0" data-aos="fade-left" data-aos-delay="${80 + idx * 20}">${text}</p>`)
@@ -3182,12 +3182,12 @@ const coursesData = [
                     <span class="menstrual-corner-accent" aria-hidden="true"></span>
                     <span class="menstrual-corner-pill" aria-hidden="true"></span>
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-5">
+                      <div class="col-lg-6">
                         <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
                           <img src="img/modu4/nari.jpg" alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 object-fit-cover img-zoom" />
                         </figure>
                       </div>
-                      <div class="col-lg-7">
+                      <div class="col-lg-6">
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(points)}
                         </ul>
@@ -3259,12 +3259,12 @@ const coursesData = [
                     <span class="menstrual-corner-accent" aria-hidden="true"></span>
                     <span class="menstrual-corner-pill" aria-hidden="true"></span>
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-5">
+                      <div class="col-lg-12">
                         <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
-                          <img src="img/modu4/masik2.jpg" alt="মাসিক চলাকালীন করণীয়" class="img-fluid w-100 object-fit-cover img-zoom"/>
+                          <img src="img/modu4/masik2.png" alt="মাসিক চলাকালীন করণীয়" class="img-fluid w-100 object-fit-cover img-zoom"/>
                         </figure>
                       </div>
-                      <div class="col-lg-7">
+                      <div class="col-lg-12">
                         <div class="menstrual-inline-divider" aria-hidden="true"></div>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(tips)}
@@ -3585,7 +3585,7 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
                     <div class="row align-items-center g-4">
-                      <div class="col-lg-6">
+                      <div class="col-lg-7">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "পুরুষ প্রজননতন্ত্র",
                           "পুরুষ প্রজননতন্ত্র"
@@ -3597,9 +3597,9 @@ const coursesData = [
                         <p class="mb-2">পেনিস যৌন সঙ্গমের মাধ্যমে নারীর যোনিতে শুক্রাণু প্রবেশ করায় এবং একই সাথে এটি মূত্র নির্গমনের কাজও করে। যৌন উত্তেজনার সময় পেনিসে রক্ত চলাচল বেড়ে যায় এবং এটি শক্ত ও বড় হয়। পরবর্তীতে বীর্যপাত হয়, অর্থাৎ পেনিস থেকে বীর্য বেরিয়ে আসে।</p>
                         <p class="mb-0">বীর্যপাত অনেক সময় ঘুমের মধ্যেও হতে পারে — এটি সম্পূর্ণ স্বাভাবিক।</p>
                       </div>
-                      <div class="col-lg-6">
+                      <div class="col-lg-5">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu5/birjo.jpg" alt="পেনিস / পুরুষাঙ্গ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu5/birjo.jpg" alt="পেনিস / পুরুষাঙ্গ" style="height: 440px; object-fit: cover;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
@@ -3703,7 +3703,7 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row align-items-center g-4 flex-column-reverse flex-lg-row">
-                      <div class="col-lg-6">
+                      <div class="col-lg-5">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
                           "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা"
@@ -3737,9 +3737,9 @@ const coursesData = [
                           </ul>
                         </section>
                       </div>
-                      <div class="col-lg-6">
+                      <div class="col-lg-7">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu5/birjo2.jpg" alt="স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতার ধাপ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu5/birjo2.jpg" style = "height: 1306px; object-fit: cover;" alt="স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতার ধাপ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                           <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: স্বপ্নদোষের পর স্বাস্থ্যবিধি অনুসরণের ভিজ্যুয়াল ধাপ</figcaption>
                         </figure>
                       </div>
@@ -3938,7 +3938,7 @@ const coursesData = [
                       "বাল্যবিবাহ",
                       "বাল্যবিবাহ"
                     )}</h3>
-                    <div class="orbit-layout" data-orbit-radius="190" data-orbit-manual="true">
+                    <div class="orbit-layout" data-orbit-radius="190">
                       <div class="orbit-center icon-spin-on-hover">
                         <div class="orbit-card bg-gradient-rose">
                           <div class="orbit-title fw-bold">বাল্যবিবাহ</div>
@@ -4017,7 +4017,7 @@ const coursesData = [
                       </div>
                       <div class="col-lg-5">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu6/ballo.jpg" alt="অপরিণত, অপুষ্ট ও স্বল্প ওজনের শিশুর জন্ম" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu6/ballo.jpg" alt="অপরিণত, অপুষ্ট ও স্বল্প ওজনের শিশুর জন্ম" style = "height: 400px;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
@@ -4271,7 +4271,7 @@ const coursesData = [
                       </div>
                       <div class="col-lg-5">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu7/kishor.jpg" alt="কৈশোরকালীন পরিবার পরিকল্পনা" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu7/kishor.png" alt="কৈশোরকালীন পরিবার পরিকল্পনা" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
@@ -4784,7 +4784,7 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <figure class="image-card mb-0" style="min-height:260px;">
-                      <img src="img/modu8/gorvo.jpg" alt="গর্ভকালীন বিপদচিহ্ন" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                      <img src="img/modu8/gorvo.png" alt="গর্ভকালীন বিপদচিহ্ন" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
                   </section>
                 </div>
@@ -4956,7 +4956,7 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
+                      <div class="col-lg-6">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "প্রসব পরবর্তী যত্ন",
                           "প্রসব পরবর্তী যত্ন"
@@ -4965,9 +4965,9 @@ const coursesData = [
                           ${renderPoints()}
                         </ul>
                       </div>
-                      <div class="col-lg-5">
+                      <div class="col-lg-6">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu8/prosob.jpg" alt="প্রসব পরবর্তী যত্ন" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu8/prosob.jpg" alt="প্রসব পরবর্তী যত্ন" style="height:400px;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
@@ -5289,7 +5289,7 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <figure class="image-card mb-0" style="min-height:260px;">
-                      <img src="img/modu10/hiv.jpg" alt="এইচআইভি ও এইডস" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                      <img src="img/modu10/hiv.png" alt="এইচআইভি ও এইডস" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
                   </section>
                 </div>
@@ -5580,12 +5580,12 @@ const coursesData = [
                         <div class="row g-3">
                           <div class="col-12" data-aos="fade-left" data-aos-delay="80">
                             <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto;">
-                              <img src="img/modu11/dose1.jpg" alt="${yhLang("HPV vaccine awareness", "এইচপিভি টিকা")}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
+                              <img src="img/modu11/dose1.jpg" alt="${yhLang("HPV vaccine awareness", "এইচপিভি টিকা")}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" style="height: 200px; object-fit: cover;" />
                             </figure>
                           </div>
                           <div class="col-12" data-aos="fade-left" data-aos-delay="110">
                             <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto;">
-                              <img src="img/modu11/dose2.jpg" alt="${yhLang("HPV vaccine dose", "এইচপিভি টিকা ডোজ")}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
+                              <img src="img/modu11/dose2.jpg" alt="${yhLang("HPV vaccine dose", "এইচপিভি টিকা ডোজ")}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" style="height: 200px; object-fit: cover;" />
                             </figure>
                           </div>
                         </div>
@@ -5779,7 +5779,7 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
+                      <div class="col-lg-12">
                         <h3 class="gradient-text h5 mb-3" data-aos="fade-right" data-aos-delay="60">${yhLang(
                           "পিসিওএস-এ দেখা দিতে পারে এমন জটিলতা",
                           "পিসিওএস-এ দেখা দিতে পারে এমন জটিলতা"
@@ -5789,16 +5789,16 @@ const coursesData = [
                         </ul>
                         <p class="text-muted mb-0" data-aos="fade-right" data-aos-delay="220">${note}</p>
                       </div>
-                      <div class="col-lg-5">
+                      <div class="col-lg-12">
                         <div class="row g-3">
                           <div class="col-12" data-aos="fade-left" data-aos-delay="80">
-                            <figure class="image-card mb-0" style="max-height:260px; max-width:80%; margin:0 auto;">
-                              <img src="img/modu12/pcos1.jpg" alt="পিসিওএস সচেতনতা চিত্র" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                            <figure class="image-card mb-0" style=" margin:0 auto;">
+                              <img src="img/modu12/pcos1.png" alt="পিসিওএস সচেতনতা চিত্র" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                             </figure>
                           </div>
                           <div class="col-12" data-aos="fade-left" data-aos-delay="110">
-                            <figure class="image-card mb-0" style="max-height:260px; max-width:80%; margin:0 auto;">
-                              <img src="img/modu12/pcos2.jpg" alt="পিসিওএস সমস্যা চিত্র" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                            <figure class="image-card mb-0" style=" margin:0 auto;">
+                              <img src="img/modu12/pcos2.png" alt="পিসিওএস সমস্যা চিত্র" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                             </figure>
                           </div>
                         </div>
@@ -5923,12 +5923,12 @@ const coursesData = [
                     <div class="row g-4 align-items-center">
                       <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
                         <figure class="image-card mb-0" style="min-height: 730px; margin:0 auto;">
-                          <img src="img/modu12/manage1.jpg" alt="PCOS management visual 1", "পিসিওএস ব্যবস্থাপনা চিত্র ১" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu12/manage1.png" alt="PCOS management visual 1", "পিসিওএস ব্যবস্থাপনা চিত্র ১" style="height: 920px;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                       <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
                         <figure class="image-card mb-0" style="min-height: 730px; margin:0 auto;">
-                          <img src="img/modu12/manage2.jpg" alt="PCOS management visual 2", "পিসিওএস ব্যবস্থাপনা চিত্র ২" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu12/manage2.png" alt="PCOS management visual 2", "পিসিওএস ব্যবস্থাপনা চিত্র ২" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
@@ -5969,16 +5969,16 @@ const coursesData = [
               );
 
               const images = [
-                { src: "img/modu12/BMI.jpg" },
-                { src: "img/modu12/BMI2.jpg" },
-                { src: "img/modu12/BMI3.jpg" },
+                { src: "img/modu12/BMI.png" },
+                { src: "img/modu12/BMI2.png" },
+                { src: "img/modu12/BMI3.png" },
               ];
 
               const renderImages = () =>
                 images
                   .map(
                     (img, idx) => `
-                      <div class="col-12 col-md-4" data-aos="zoom-in" data-aos-delay="${80 + idx * 20}">
+                      <div class="col-12 col-md-12" data-aos="zoom-in" data-aos-delay="${80 + idx * 20}">
                         <figure class="image-card mb-0" style="margin:0 auto;">
                           <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
                         </figure>
@@ -6436,11 +6436,8 @@ const coursesData = [
                         ${renderSections()}
                       </div>
                       <div class="col-lg-5" data-aos="fade-left" data-aos-delay="80">
-                        <figure class="image-card mb-0" style="max-height:360px; max-width:80%; margin:0 auto;">
-                          <img src="img/modu13/gender.jpg" alt="${yhLang(
-                            "Gender equity illustration",
-                            "জেন্ডার সমতা চিত্র"
-                          )}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
+                        <figure class="image-card mb-0">
+                          <img src="img/modu13/gender.png" alt="জেন্ডার সমতা চিত্র" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
                         </figure>
                       </div>
                     </div>
@@ -7479,11 +7476,8 @@ const coursesData = [
                         </div>
                       </div>
                       <div class="col-lg-6" data-aos="fade-left" data-aos-delay="80">
-                        <figure class="image-card mb-0" style="max-height:360px;">
-                          <img src="img/modu13/sohongsotas.jpg" alt="${yhLang(
-                            "Adolescent violence prevention illustration",
-                            "কিশোর-কিশোরীদের প্রতি সহিংসতা"
-                          )}" class="img-fluid rounded-4 shadow-sm img-zoom" />
+                        <figure class="image-card mb-0">
+                          <img src="img/modu13/sohongsotas.png" alt="কিশোর-কিশোরীদের প্রতি সহিংসতা" class="img-fluid rounded-4 shadow-sm img-zoom" />
                         </figure>
                       </div>
                     </div>
@@ -8555,7 +8549,7 @@ const coursesData = [
                       </div>
                     </div>
                      <div class="row">
-                          <article class=" col-lg-7 glass-card p-4 shadow-sm">
+                          <article class=" col-lg-12 glass-card p-4 shadow-sm">
                           <div class="d-flex align-items-center gap-3 mb-3">
                             <div class="icon-circle bg-gradient-sunrise text-white">
                               <i class="fa-solid fa-seedling"></i>
@@ -8575,9 +8569,9 @@ const coursesData = [
                             ${renderTips(managementTips)}
                           </ul>
                         </article>
-                        <div class="col-lg-5" data-aos="fade-left" data-aos-delay="120">
+                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="120">
                           <figure class="glass-card p-3 h-100 shadow-sm text-center">
-                            <img src="img/modu14/mental.jpg" alt="Stress reflection" class="img-fluid rounded-4 mb-3 img-zoom">
+                            <img src="img/modu14/mental.png" alt="Stress reflection" class="img-fluid rounded-4 mb-3 img-zoom">
                             <figcaption class="small text-muted">${yhLang(
                               "মানসিক প্রশান্তির জন্য একটু বিরতি",
                               "মানসিক প্রশান্তির জন্য একটু বিরতি"
@@ -10352,7 +10346,7 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="130">
                     <div class="image-wrapper text-center">
-                      <img src="img/modu15/obsessive.jpg" alt="Obsessive Compulsive Disorder illustration" class="img-fluid rounded shadow-sm img-zoom" />
+                      <img src="img/modu15/obsessive.png" alt="Obsessive Compulsive Disorder illustration" class="img-fluid rounded shadow-sm img-zoom" />
                     </div>
                   </section>
                 </div>
@@ -12770,7 +12764,7 @@ const coursesData = [
                     "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
                   )}</h2>
                   <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
-                    <div class="col-12 col-lg-8">
+                    <div class="col-12 col-lg-12">
                       <div class="glass-card p-3 h-100">
                         <div class="table-responsive">
                           <table class="table table-bordered table-striped align-middle text-center mb-0">
@@ -12789,7 +12783,7 @@ const coursesData = [
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-12">
                       <div class="glass-card p-3 h-100 d-flex align-items-center justify-content-center">
                         <figure class="text-center mb-0">
                           <img src="img/modu19/food.jpg" alt="Nutrition meal plan" class="img-fluid rounded shadow-sm img-zoom" />
@@ -13092,14 +13086,14 @@ const coursesData = [
                     </div>
                   </div>
                   <div class="row g-3 align-items-center" data-aos="fade-up" data-aos-delay="60">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                       <figure class="text-center mb-0">
-                        <img src="img/modu19/pusti1.jpg" alt="পুষ্টি সচেতনতা" class="img-fluid rounded shadow-sm img-zoom" />
+                        <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" class="img-fluid rounded shadow-sm img-zoom" style="width: 100%;" />
                       </figure>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                       <figure class="text-center mb-0">
-                        <img src="img/modu19/pusti2.jpg" alt="কৈশোরকালীন পুষ্টি" class="img-fluid rounded shadow-sm img-zoom" />
+                        <img src="img/modu19/pusti2.png" alt="কৈশোরকালীন পুষ্টি" class="img-fluid rounded shadow-sm img-zoom" style="width: 100%;" />
                       </figure>
                     </div>
                   </div>
@@ -13212,7 +13206,7 @@ const coursesData = [
                   )}</h2>
                   <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="60">
                     <figure class="text-center mb-0">
-                      <img src="img/modu19/odhik.jpg" alt="অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব" class="img-fluid img-zoom rounded shadow-sm" />
+                      <img src="img/modu19/odhik.jpg" alt="অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব" class="img-fluid img-zoom rounded shadow-sm" style="width:100%" />
                     </figure>
                   </div>
                 </div>
@@ -13355,19 +13349,19 @@ const coursesData = [
                     </div>
                   </div>
                   <div class="row g-3 mt-3" data-aos="fade-up" data-aos-delay="140">
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-12">
                       <figure class="text-center mb-0">
-                        <img src="img/modu20/rog1.jpg" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid rounded shadow-sm img-zoom" />
+                        <img src="img/modu20/rog1.png" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid rounded shadow-sm img-zoom" style= "width: 100%;"/>
                       </figure>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-12">
                       <figure class="text-center mb-0">
-                        <img src="img/modu20/rog2.jpg" alt="ঝুঁকির কারণ" class="img-fluid rounded shadow-sm img-zoom" />
+                        <img src="img/modu20/rog2.jpg" alt="ঝুঁকির কারণ" class="img-fluid rounded shadow-sm img-zoom" style= "width: 100%;"/>
                       </figure>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-12">
                       <figure class="text-center mb-0">
-                        <img src="img/modu20/rog3.jpg" alt="করণীয়" class="img-fluid rounded shadow-sm img-zoom" />
+                        <img src="img/modu20/rog3.jpg" alt="করণীয়" class="img-fluid rounded shadow-sm img-zoom" style= "width: 100%;"/>
                       </figure>
                     </div>
                   </div>
@@ -14341,9 +14335,9 @@ const coursesData = [
                 nefroImages
                   .map(
                     (img, idx) => `
-                      <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
+                      <div class="col-12 col-md-6" style="margin: 0 auto;" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
                         <figure class="glass-card p-3 h-100 text-center">
-                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
+                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom"/>
                         </figure>
                       </div>
                     `
@@ -14550,14 +14544,14 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর</h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="60">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                       <div class="modern-card glass-card h-100 text-center">
-                        <img src="img/modu22/climate1.jpg" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ু পরিবর্তনের তাপমাত্রা বৃদ্ধি" loading="lazy">
+                        <img src="img/modu22/climate1.png" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ু পরিবর্তনের তাপমাত্রা বৃদ্ধি" loading="lazy" style="width: 100%;">
                       </div>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                       <div class="modern-card glass-card h-100 text-center">
-                        <img src="img/modu22/climate2.png" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ুর পরিবর্তনে স্বাস্থ্যঝুঁকি" loading="lazy">
+                        <img src="img/modu22/climate2.png" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ুর পরিবর্তনে স্বাস্থ্যঝুঁকি" loading="lazy" style="width: 100%;">
                       </div>
                     </div>
                   </div>
@@ -14602,7 +14596,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি</h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-7">
+                    <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card">
                         <div class="table-responsive">
                           <table class="table table-bordered table-modern align-middle">
@@ -14670,9 +14664,9 @@ const coursesData = [
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-5">
+                    <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card text-center">
-                        <img src="img/modu22/heart.png" class="img-fluid rounded shadow-sm img-zoom" alt="শিশু-কিশোরদের স্বাস্থ্য ঝুঁকি" loading="lazy">
+                        <img src="img/modu22/heart.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="শিশু-কিশোরদের স্বাস্থ্য ঝুঁকি" loading="lazy">
                       </div>
                     </div>
                   </div>
@@ -15017,16 +15011,16 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়</h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-7">
+                    <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card h-100">
                         <ul class="list-unstyled feature-list mb-0">
                           ${renderItems()}
                         </ul>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-5">
+                    <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card text-center h-100">
-                        <img src="img/modu22/climate3.png" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ু পরিবর্তন প্রতিরোধ" loading="lazy">
+                        <img src="img/modu22/climate3.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="জলবায়ু পরিবর্তন প্রতিরোধ" loading="lazy">
                       </div>
                     </div>
                   </div>
@@ -15281,7 +15275,7 @@ const coursesData = [
                     <span class="hygiene-shape hygiene-shape-orb" aria-hidden="true"></span>
                     <div class="hygiene-card__body">
                       <div class="row g-4 align-items-center">
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-12">
                           <div class="hygiene-list mb-3">
                             <div class="hygiene-list__title">
                               <i class="fa-solid fa-hands-bubbles me-2"></i>ব্যক্তিগত অনুশীলন:
@@ -15299,9 +15293,9 @@ const coursesData = [
                             </ul>
                           </div>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-12">
                           <figure class="image-card hygiene-figure mb-0">
-                            <img src="img/modu22/hand-wash.png" class="img-fluid rounded shadow-sm img-zoom" alt="Handwashing illustration" loading="lazy">
+                            <img src="img/modu22/hand-wash.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
                           </figure>
                         </div>
                       </div>
@@ -15397,14 +15391,14 @@ const coursesData = [
                     <span class="pesticide-shape pesticide-shape--dots" aria-hidden="true"></span>
                     <div class="pesticide-card__body">
                       <div class="row g-4 align-items-center">
-                        <div class="col-12 col-lg-7 order-2 order-lg-1">
+                        <div class="col-12 col-lg-12 order-2 order-lg-1">
                           <ul class="list-unstyled pesticide-list mb-0">
                             ${renderPoints()}
                           </ul>
                         </div>
-                        <div class="col-12 col-lg-5 order-1 order-lg-2">
+                        <div class="col-12 col-lg-12 order-1 order-lg-2">
                           <figure class="image-card pesticide-figure mb-0">
-                            <img src="img/modu22/kit.png" class="img-fluid img-zoom" alt="Pesticide exposure risk" loading="lazy">
+                            <img src="img/modu22/kit.png" class="img-fluid img-zoom w-100" alt="Pesticide exposure risk" loading="lazy">
                           </figure>
                         </div>
                       </div>
@@ -15675,12 +15669,12 @@ const coursesData = [
                     <div class="row g-3">
                       <div class="col-12">
                         <figure class="image-card w-100 mb-0">
-                          <img src="img/modu23/global.jpg" alt="Global map of infectious diseases" class="img-fluid img-zoom rounded-4 shadow-sm" />
+                          <img src="img/modu23/global.png" alt="Global map of infectious diseases" class="img-fluid w-100 img-zoom rounded-4 shadow-sm" />
                         </figure>
                       </div>
                       <div class="col-12">
                         <figure class="image-card w-100 mb-0">
-                          <img src="img/modu23/global2.jpg" alt="Re-emerging disease hotspots" class="img-fluid img-zoom rounded-4 shadow-sm" />
+                          <img src="img/modu23/global2.png" alt="Re-emerging disease hotspots" class="img-fluid img-zoom w-100 rounded-4 shadow-sm" />
                         </figure>
                       </div>
                     </div>
