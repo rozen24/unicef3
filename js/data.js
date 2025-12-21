@@ -4956,7 +4956,7 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-6">
+                      <div class="col-lg-12">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "প্রসব পরবর্তী যত্ন",
                           "প্রসব পরবর্তী যত্ন"
@@ -4965,9 +4965,9 @@ const coursesData = [
                           ${renderPoints()}
                         </ul>
                       </div>
-                      <div class="col-lg-6">
-                        <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu8/prosob.jpg" alt="প্রসব পরবর্তী যত্ন" style="height:400px;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                      <div class="col-lg-12">
+                        <figure class="image-card mb-0">
+                          <img src="img/modu8/prosob.png" alt="প্রসব পরবর্তী যত্ন" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
