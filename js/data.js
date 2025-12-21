@@ -3598,8 +3598,8 @@ const coursesData = [
                         <p class="mb-0">বীর্যপাত অনেক সময় ঘুমের মধ্যেও হতে পারে — এটি সম্পূর্ণ স্বাভাবিক।</p>
                       </div>
                       <div class="col-lg-5">
-                        <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu5/birjo.jpg" alt="পেনিস / পুরুষাঙ্গ" style="height: 440px; object-fit: cover;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                        <figure class="image-card mb-0">
+                          <img src="img/modu5/birjo.jpg" alt="পেনিস / পুরুষাঙ্গ" style="height: 500px; object-fit: cover;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
@@ -3739,7 +3739,7 @@ const coursesData = [
                       </div>
                       <div class="col-lg-7">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu5/birjo2.jpg" style = "height: 1306px; object-fit: cover;" alt="স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতার ধাপ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu5/birjo2.png" style = "height: 1306px; object-fit: cover;" alt="স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতার ধাপ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                           <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: স্বপ্নদোষের পর স্বাস্থ্যবিধি অনুসরণের ভিজ্যুয়াল ধাপ</figcaption>
                         </figure>
                       </div>
