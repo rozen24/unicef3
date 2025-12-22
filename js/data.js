@@ -5927,7 +5927,7 @@ const coursesData = [
                         </figure>
                       </div>
                       <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
-                        <figure class="image-card mb-0" style="min-height: 730px; margin:0 auto;">
+                        <figure class="image-card mb-0" style="min-height: 820px; margin:0 auto;">
                           <img src="img/modu12/manage2.png" alt="PCOS management visual 2", "পিসিওএস ব্যবস্থাপনা চিত্র ২" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
