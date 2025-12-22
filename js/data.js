@@ -5922,7 +5922,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4 align-items-center">
                       <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
-                        <figure class="image-card mb-0" style="min-height: 730px; margin:0 auto;">
+                        <figure class="image-card mb-0" style="min-height: 820px; margin:0 auto;">
                           <img src="img/modu12/manage1.png" alt="PCOS management visual 1", "পিসিওএস ব্যবস্থাপনা চিত্র ১" style="height: 920px;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
