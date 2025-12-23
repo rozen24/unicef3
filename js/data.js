@@ -10511,7 +10511,7 @@ const coursesData = [
             },
             content: (function () {
               const intro =
-                "কিশোর-কিশোরীরা আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে 􀊍ার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্যাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়েউঠেছে। যদিও এই প্রযুক্তিগুলো বিভিনড়ব সুযোগ এবং সুবিধা প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিনড়বতার মতো সমস্যাগুলোর জন্ম দিতে পারে। এই প্রসঙ্গে, স্বাস্থ্য সেবা প্রদানকারীদের একটি গুরুত্বপূর্ণ ভূমিকা রয়েছে কিশোর-কিশোরীদের সঠিক নির্দেশনা প্রদান এবং তাদের ডিজিটাল স্বাস্থ্য সুরক্ষা নিশ্চিত করার জন্য।";
+                "কিশোর-কিশোরীরা আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে 􀊍ার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্যাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়েউঠেছে। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ এবং সুবিধা প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিনড়বতার মতো সমস্যাগুলোর জন্ম দিতে পারে। এই প্রসঙ্গে, স্বাস্থ্য সেবা প্রদানকারীদের একটি গুরুত্বপূর্ণ ভূমিকা রয়েছে কিশোর-কিশোরীদের সঠিক নির্দেশনা প্রদান এবং তাদের ডিজিটাল স্বাস্থ্য সুরক্ষা নিশ্চিত করার জন্য।";
 
               const impactIntro =
                 "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব কিশোর-কিশোরীদের মধ্যে বিশেষভাবে গভীর হতে পারে:";
@@ -16642,7 +16642,7 @@ const coursesData = [
         title:
           yhLang(
             "Module-25: Human Rights, Child Rights, and Sexual and Reproductive Health Rights",
-            "মডিউল-২৫: কিশোর-কিশোরীদের সাথে যোগাযোগ ও কাউন্সেলিং"
+            "মডিউল-২৫: তরুণদের সাথে যোগাযোগ ও কাউন্সেলিং"
           ),
         lessons: [
           {
@@ -16700,7 +16700,7 @@ const coursesData = [
                             <div class="timeline-track" aria-hidden="true"></div>
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                              <div class="timeline-dot bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></div>
+                              <div class="timeline-dot bg-gradient-blue" aria-hidden="true">---</i></div>
                               <article class="timeline-card tl-blue">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></div>
                                 <h6 class="timeline-card-title">প্রেরক</h6>
@@ -16708,7 +16708,7 @@ const coursesData = [
                             </div>
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="260">
-                              <div class="timeline-dot bg-gradient-teal" aria-hidden="true"><i class="fa-solid fa-user-check"></i></div>
+                              <div class="timeline-dot bg-gradient-teal" aria-hidden="true">---</i></div>
                               <article class="timeline-card tl-cyan">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-user-check"></i></div>
                                 <h6 class="timeline-card-title">প্রাপক</h6>
@@ -16716,7 +16716,7 @@ const coursesData = [
                             </div>
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="320">
-                              <div class="timeline-dot bg-gradient-rose" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></div>
+                              <div class="timeline-dot bg-gradient-rose" aria-hidden="true">---</i></div>
                               <article class="timeline-card tl-rose">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></div>
                                 <h6 class="timeline-card-title">বার্তা</h6>
@@ -16724,7 +16724,7 @@ const coursesData = [
                             </div>
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="380">
-                              <div class="timeline-dot bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></div>
+                              <div class="timeline-dot bg-gradient-mint" aria-hidden="true">---</div>
                               <article class="timeline-card tl-emerald">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></div>
                                 <h6 class="timeline-card-title">মাধ্যম</h6>
@@ -16732,7 +16732,7 @@ const coursesData = [
                             </div>
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="440">
-                              <div class="timeline-dot bg-gradient-yellow" aria-hidden="true"><i class="fa-solid fa-reply"></i></div>
+                              <div class="timeline-dot bg-gradient-yellow" aria-hidden="true">---</div>
                               <article class="timeline-card tl-amber">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-reply"></i></div>
                                 <h6 class="timeline-card-title">প্রতিবার্তা</h6>
@@ -16816,8 +16816,8 @@ const coursesData = [
           {
             id: "ch25-lesson-3",
             title: yhLang(
-              "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ",
-              "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ"
+              "যোগাযোগের পদ্ধতি",
+              "যোগাযোগের পদ্ধতি"
             ),
             icon: "fa-people-arrows-left-right",
             gradientClass: "bg-gradient-pink",
@@ -16835,7 +16835,7 @@ const coursesData = [
               ];
               const groupItems = ["দলীয় আলোচনা", "দলীয় সভা", "বক্তৃতা"];
               const massText =
-                "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিনড়ব ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।";
+                "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।";
 
               const iconForBullet = (text) => {
                 const t = String(text || "").trim();
@@ -16924,7 +16924,7 @@ const coursesData = [
                   <div class="row g-3 mt-3 align-items-stretch">
                     <div class="col-12 col-lg-6">
                       <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-right" data-aos-delay="90">
-                        <div class="m25l3-card__title" data-aos="fade-up" data-aos-delay="130">
+                        <div class="m25l3-card__title yhap_box_shadow" data-aos="fade-up" data-aos-delay="130">
                           <span class="m25l3-icon bg-gradient-blue icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-table"></i></span>
                           <h3 class="mb-0" data-aos="fade-up" data-aos-delay="170">আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ</h3>
                         </div>
@@ -16965,21 +16965,21 @@ const coursesData = [
                     <div class="col-12 col-lg-6">
                       <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-left" data-aos-delay="110">
                         <section class="m25l3-section m25l3-section--group" data-aos="zoom-in" data-aos-delay="140">
-                          <div class="m25l3-section__title">
+                          <div class="m25l3-section__title yhap_box_shadow">
                             <span class="m25l3-icon bg-gradient-purple icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="180">দলীয় যোগাযোগের পদ্ধতি সমূহ</h3>
                           </div>
-                          <ul class="list-unstyled info-list mb-0">
+                          <ul class="list-unstyled info-list mb-0 yhap_box_shadow">
                             ${renderInfoList(groupItems, 220, 60)}
                           </ul>
                         </section>
 
                         <section class="mt-3 m25l3-section m25l3-section--mass" data-aos="zoom-in" data-aos-delay="220">
-                          <div class="m25l3-section__title">
+                          <div class="m25l3-section__title yhap_box_shadow">
                             <span class="m25l3-icon bg-gradient-yellow icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="260">গণযোগাযোগ</h3>
                           </div>
-                          <p class="mb-0 m25l3-mass">${renderParagraphLines(massText, 300, 80)}</p>
+                          <p class="mb-0 m25l3-mass yhap_box_shadow">${renderParagraphLines(massText, 300, 80)}</p>
                         </section>
                       </article>
                     </div>
@@ -17002,7 +17002,7 @@ const coursesData = [
                 { text: "গ্রহণযোগ্যতা", icon: "fa-handshake-angle" },
                 { text: "সম্মান", icon: "fa-award" },
                 { text: "স্বচ্ছতা", icon: "fa-eye" },
-                { text: "সহমর্মিতা", icon: "fa-hands-holding-heart" },
+                { text: "সহমর্মিতা", icon: "fa-handshake" },
               ];
 
               const renderPoints = () =>
