@@ -16647,59 +16647,11 @@ const coursesData = [
         lessons: [
           {
             id: "ch25-lesson-1",
-            title: yhLang("যোগাযোগের প্রকারভেদ", "যোগাযোগের প্রকারভেদ"),
-            icon: "fa-diagram-project",
-            gradientClass: "bg-gradient-teal",
+            title: yhLang("যোগাযোগ", "যোগাযোগ"),
+            icon: "fa-comments",
+            gradientClass: "bg-gradient-mint",
             audioFile: "",
             content: (function () {
-              const verbalPoints = [
-                "মুখোমুখি কথা বলা",
-                "টেলিফোনে কথা বলা",
-                "বক্তৃতা",
-                "রেডিও শোনা",
-              ];
-              const groupPoints = [
-                "দলীয় আলোচনা",
-                "দলীয় সভা",
-                "বক্তৃতা",
-              ];
-
-              const iconForCommunicationItem = (text) => {
-                const t = String(text || "").trim();
-                switch (t) {
-                  case "মুখোমুখি কথা বলা":
-                    return "fa-people-arrows-left-right";
-                  case "টেলিফোনে কথা বলা":
-                    return "fa-phone";
-                  case "বক্তৃতা":
-                    return "fa-person-chalkboard";
-                  case "রেডিও শোনা":
-                    return "fa-radio";
-                  case "দলীয় আলোচনা":
-                    return "fa-comments";
-                  case "দলীয় সভা":
-                    return "fa-users";
-                  case "ইঙ্গিত বা প্রতীকের মাধ্যমে":
-                    return "fa-hand-pointer";
-                  default:
-                    return "fa-circle-check";
-                }
-              };
-
-              const renderList = (items, baseDelay = 160, step = 55) =>
-                (items || [])
-                  .map((text, idx) => {
-                    const icon = iconForCommunicationItem(text);
-                    const delay = baseDelay + idx * step;
-                    return `
-                      <li class="info-item" data-aos="fade-up" data-aos-delay="${delay}">
-                        <span class="info-bullet"><i class="fa-solid ${icon}"></i></span>
-                        <span class="info-text">${text}</span>
-                      </li>
-                    `;
-                  })
-                  .join("");
-
               return `
                 <div class="lesson-slide mod25-lesson1">
                   <div class="m25l1-neo-bg" aria-hidden="true">
@@ -16716,71 +16668,79 @@ const coursesData = [
                     <span class="m25-shape m25-shape--kite"></span>
                   </div>
 
-                  <header class="m25-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-diagram-project"></i>
+                  <header class="m25l1-header" data-aos="fade-up">
+                    <div class="m25l1-title" data-aos="fade-up" data-aos-delay="0">
+                      <span class="m25l1-title__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
+                      <h2 class="slide-title gradient-text mb-0">যোগাযোগ</h2>
                     </div>
-                    <div class="m25-hero__body">
-                      <h2 class="slide-title gradient-text mb-0">যোগাযোগের প্রকারভেদ</h2>
-                    </div>
+                    <p class="m25l1-lead mb-0" data-aos="fade-up" data-aos-delay="80">
+                      যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহামযয অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে |
+                    </p>
                   </header>
 
                   <div class="row g-3 mt-3 align-items-stretch">
-                    <div class="col-12 col-lg-6">
-                      <article class="modern-card glass-card m25-card" data-aos="fade-right" data-aos-delay="90">
-                        <div class="m25-card__title">
-                          <span class="m25-icon bg-gradient-blue icon-spin-on-hover"><i class="fa-solid fa-comments"></i></span>
-                          <h3 class="mb-0">দু’জনের মধ্যে যোগাযোগের পদ্ধতিসমূহ</h3>
+                    <div class="col-12 col-lg-4">
+                      <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
+                        <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
+                          <span class="m25l1-circle__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
+                          <span class="m25l1-circle__text" data-aos="fade-up" data-aos-delay="220">যোগাযোগের উপাদান</span>
                         </div>
-                        <div class="mt-3 position-relative">
-                          <div class="m25-image-frame">
-                            <img src="img/modu25/contact.png" alt="দু’জনের মধ্যে যোগাযোগের পদ্ধতিসমূহ" class="img-fluid w-100 rounded img-zoom" loading="lazy">
-                          </div>
-                        </div>
-                      </article>
-                      <section class="m25-section m25-section--verbal mt-3" data-aos="zoom-in" data-aos-delay="140">
-                          <div class="m25-section__title">
-                            <span class="m25-icon bg-gradient-rose icon-spin-on-hover"><i class="fa-solid fa-microphone-lines"></i></span>
-                            <h3 class="mb-0">১. মৌখিক যোগাযোগ</h3>
-                          </div>
-                          <ul class="list-unstyled info-list mb-0">
-                            ${renderList(verbalPoints, 200, 60)}
-                          </ul>
-                        </section>
+                      </div>
                     </div>
 
-                    <div class="col-12 col-lg-6">
-                      <article class="modern-card glass-card h-100 m25-card" data-aos="fade-left" data-aos-delay="110">
-                        
+                    <div class="col-12 col-lg-8">
+                      <div class="m25l1-right" data-aos="fade-left" data-aos-delay="140">
+                        <div class="m25l1-timeline">
+                          <svg class="m25l1-timeline-curve" viewBox="0 0 40 320" preserveAspectRatio="none" aria-hidden="true">
+                            <path d="M 28 0 C 10 60, 10 120, 28 170 C 40 205, 36 260, 18 320" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="6" stroke-linecap="round" />
+                            <path d="M 28 0 C 10 60, 10 120, 28 170 C 40 205, 36 260, 18 320" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="2" stroke-linecap="round" />
+                          </svg>
 
-                        <section class="m25-section m25-section--nonverbal" data-aos="zoom-in" data-aos-delay="180">
-                          <div class="m25-section__title">
-                            <span class="m25-icon bg-gradient-green icon-spin-on-hover"><i class="fa-solid fa-hands"></i></span>
-                            <h3 class="mb-0">২. শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে (অমৌখিক)</h3>
-                          </div>
-                          <ul class="list-unstyled info-list mb-0">
-                            ${renderList(["ইঙ্গিত বা প্রতীকের মাধ্যমে"], 220, 60)}
-                          </ul>
-                        </section>
+                          <section class="timeline-chart m25l1-comm-timeline" aria-label="যোগাযোগের উপাদানসমূহ">
+                            <div class="timeline-track" aria-hidden="true"></div>
 
-                        <section class="mt-4 m25-section m25-section--group" data-aos="zoom-in" data-aos-delay="220">
-                          <div class="m25-section__title">
-                            <span class="m25-icon bg-gradient-purple icon-spin-on-hover"><i class="fa-solid fa-user-group"></i></span>
-                            <h3 class="mb-0">দলীয় যোগাযোগের পদ্ধতিসমূহ</h3>
-                          </div>
-                          <ul class="list-unstyled info-list mb-0">
-                            ${renderList(groupPoints, 240, 60)}
-                          </ul>
-                        </section>
+                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                              <div class="timeline-dot bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></div>
+                              <article class="timeline-card tl-blue">
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></div>
+                                <h6 class="timeline-card-title">প্রেরক</h6>
+                              </article>
+                            </div>
 
-                        <section class="mt-4 m25-section m25-section--mass" data-aos="zoom-in" data-aos-delay="260">
-                          <div class="m25-section__title">
-                            <span class="m25-icon bg-gradient-teal icon-spin-on-hover"><i class="fa-solid fa-bullhorn"></i></span>
-                            <h3 class="mb-0">গণযোগাযোগ</h3>
-                          </div>
-                          <p class="mt-4" data-aos="fade-up" data-aos-delay="320">বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যবহার করা হয়। এ ক্ষেত্রে প্রেরক ও প্রাপকের মধ্যে সংযোগ ঘটে না।</p>
-                        </section>
-                      </article>
+                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="260">
+                              <div class="timeline-dot bg-gradient-teal" aria-hidden="true"><i class="fa-solid fa-user-check"></i></div>
+                              <article class="timeline-card tl-cyan">
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-user-check"></i></div>
+                                <h6 class="timeline-card-title">প্রাপক</h6>
+                              </article>
+                            </div>
+
+                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="320">
+                              <div class="timeline-dot bg-gradient-rose" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></div>
+                              <article class="timeline-card tl-rose">
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></div>
+                                <h6 class="timeline-card-title">বার্তা</h6>
+                              </article>
+                            </div>
+
+                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="380">
+                              <div class="timeline-dot bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></div>
+                              <article class="timeline-card tl-emerald">
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></div>
+                                <h6 class="timeline-card-title">মাধ্যম</h6>
+                              </article>
+                            </div>
+
+                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="440">
+                              <div class="timeline-dot bg-gradient-yellow" aria-hidden="true"><i class="fa-solid fa-reply"></i></div>
+                              <article class="timeline-card tl-amber">
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-reply"></i></div>
+                                <h6 class="timeline-card-title">প্রতিবার্তা</h6>
+                              </article>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>`;
@@ -16789,101 +16749,13 @@ const coursesData = [
           {
             id: "ch25-lesson-2",
             title: yhLang(
-              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলি",
-              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলি"
+              "যোগাযোগের প্রকারভেদ",
+              "যোগাযোগের প্রকারভেদ"
             ),
-            icon: "fa-handshake",
-            gradientClass: "bg-gradient-teal",
+            icon: "fa-diagram-project",
+            gradientClass: "bg-gradient-lavender",
             audioFile: "",
             content: (function () {
-              const relationshipConditions = [
-                { text: "বন্ধুত্বপূর্ণ আচরণ (friendly)", icon: "fa-face-smile" },
-                { text: "গ্রহণযোগ্যতা (acceptance)", icon: "fa-hand-holding-heart" },
-                { text: "সম্মান (respect)", icon: "fa-hands-praying" },
-                { text: "স্বচ্ছতা (genuineness)", icon: "fa-fingerprint" },
-                { text: "সহমর্মিতা (empathy)", icon: "fa-heart" },
-                { text: "সহজ কথোপকথন (simple language)", icon: "fa-comment-dots" },
-                { text: "উষ্ণতা (warmth)", icon: "fa-sun" },
-                { text: "সহানুভূতিশীল (sympathy)", icon: "fa-handshake-angle" },
-                { text: "গোপনীয়তা (privacy)", icon: "fa-user-shield" },
-                { text: "বিচার না করা (non-judgmental)", icon: "fa-scale-balanced" },
-              ];
-
-              const activeListenerTips = [
-                { text: "বক্তার কথা বলার সময় মাঝপথে বাধা দেওয়া পরিহার করা", icon: "fa-hand" },
-                { text: "চুপ থাকা", icon: "fa-volume-xmark" },
-                { text: "বিষয়বস্তু যেন বিচ্ছিন্ন না হয় সে বিষয়ে নজর দেওয়া", icon: "fa-link" },
-                { text: "ইতিবাচক দেহভঙ্গি দেখানো", icon: "fa-person-rays" },
-              ];
-
-              const principles = [
-                {
-                  title: "১. দৃঢ়তা (Assertiveness)",
-                  desc: "যা বলতে চাই তা পরিষ্কার, সংক্ষিপ্ত এবং সহজ ভাষায় প্রকাশ করা। ঘুরিয়ে বা অস্পষ্টভাবে না বলে সরাসরি বিষয়টি বোঝানো।",
-                },
-                {
-                  title: "২. মনোযোগ দিয়ে শোনা (Active Listening)",
-                  desc: "অন্যের কথা ধৈর্য ধরে শোনা, মাঝখানে বাধা না দেওয়া এবং প্রয়োজন হলে শেষে বিনয়ের সঙ্গে প্রশ্ন করা। এতে বুঝতে সুবিধা হয় ও ভুল ধারণা কমে।",
-                },
-                {
-                  title: "৩. সম্মান ও সহানুভূতি (Respect & Empathy)",
-                  desc: "অন্যের অনুভূতি ও মতামতকে মূল্য দেওয়া, তাদের দৃষ্টিভঙ্গি বোঝার চেষ্টা করা এবং বিনয়ী ও শান্তভাবে প্রতিক্রিয়া দেওয়া।",
-                },
-              ];
-
-              const renderList = (items, baseDelay = 170, step = 55) =>
-                (items || [])
-                  .map((item, idx) => {
-                    const text = typeof item === "string" ? item : item?.text;
-                    const icon = typeof item === "string" ? "fa-circle-check" : item?.icon || "fa-circle-check";
-                    const delay = baseDelay + idx * step;
-                    return `
-                      <li class="info-item" data-aos="fade-up" data-aos-delay="${delay}">
-                        <span class="info-bullet"><i class="fa-solid ${icon}"></i></span>
-                        <span class="info-text">${text}</span>
-                      </li>
-                    `;
-                  })
-                  .join("");
-
-              const renderPrinciples = (baseDelay = 170, step = 70) =>
-                principles
-                  .map((p, idx) => {
-                    const principleIcons = [
-                      "fa-bullseye",
-                      "fa-ear-listen",
-                      "fa-handshake",
-                    ];
-                    const icon = principleIcons[idx] || "fa-circle-check";
-                    const delay = baseDelay + idx * step;
-                    return `
-                      <li class="info-item" data-aos="fade-up" data-aos-delay="${delay}">
-                        <span class="info-bullet"><i class="fa-solid ${icon}"></i></span>
-                        <span class="info-text">
-                          <strong>${p.title}</strong><br>
-                          ${p.desc}
-                        </span>
-                      </li>
-                    `;
-                  })
-                  .join("");
-
-              const orbitItems = ["দৃঢ়তা", "মনোযোগ দিয়ে শোনা", "সম্মান ও সহানুভূতি"];
-              const orbitColors = ["bg-gradient-blue", "bg-gradient-green", "bg-gradient-rose"];
-
-              const renderOrbitItems = () =>
-                orbitItems
-                  .map(
-                    (label, idx) => `
-                      <div class="orbit-item" data-aos="zoom-in" data-aos-delay="${140 + idx * 60}">
-                        <div class="orbit-card ${orbitColors[idx % orbitColors.length]}">
-                          <span class="orbit-title">${label}</span>
-                        </div>
-                      </div>
-                    `
-                  )
-                  .join("");
-
               return `
                 <div class="lesson-slide mod25-lesson2">
                   <div class="m25l2-neo-bg" aria-hidden="true">
@@ -16902,62 +16774,39 @@ const coursesData = [
 
                   <header class="m25l2-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
                     <div class="m25l2-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-handshake"></i>
+                      <i class="fa-solid fa-diagram-project"></i>
                     </div>
                     <div class="m25l2-hero__body">
-                      <h2 class="slide-title gradient-text mb-0">আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলি</h2>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="80">যোগাযোগের প্রকারভেদ</h2>
                     </div>
                   </header>
 
-                  <div class="row g-3 mt-3 align-items-stretch">
-                    <div class="col-12 col-lg-6">
-                      <article class="modern-card glass-card h-100 m25l2-card" data-aos="fade-right" data-aos-delay="90">
-                        <section class="m25l2-section m25l2-section--conditions" data-aos="zoom-in" data-aos-delay="120">
+                  <div class="row g-3 mt-3">
+                    <div class="col-12">
+                      <article class="modern-card glass-card m25l2-card" data-aos="fade-up" data-aos-delay="120">
+                        <section class="m25l2-section m25l2-section--types" data-aos="zoom-in" data-aos-delay="160">
                           <div class="m25l2-section__title">
-                            <span class="m25l2-icon bg-gradient-purple icon-spin-on-hover"><i class="fa-solid fa-people-arrows"></i></span>
-                            <h3 class="mb-0">আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলি</h3>
+                            <span class="m25l2-icon bg-gradient-blue icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
+                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="200">যোগাযোগের প্রকারভেদ</h3>
                           </div>
-                          <ul class="list-unstyled info-list mb-0">
-                            ${renderList(relationshipConditions, 170, 55)}
-                          </ul>
-                        </section>
-
-                        <section class="m25l2-section m25l2-section--listening" data-aos="zoom-in" data-aos-delay="170">
-                          <div class="m25l2-section__title">
-                            <span class="m25l2-icon bg-gradient-teal icon-spin-on-hover"><i class="fa-solid fa-ear-listen"></i></span>
-                            <h3 class="mb-0">সক্রিয় শ্রোতা হওয়ার কিছু টিপস</h3>
+                          <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="240">
+                            <img src="img/modu25/jogajok.jpg" alt="যোগাযোগের প্রকারভেদ" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
                           </div>
-                          <ul class="list-unstyled info-list mb-0">
-                            ${renderList(activeListenerTips, 190, 70)}
-                          </ul>
                         </section>
                       </article>
                     </div>
 
-                    <div class="col-12 col-lg-6">
-                      <article class="modern-card glass-card h-100 m25l2-card" data-aos="fade-left" data-aos-delay="110">
-                        <section class="m25l2-section m25l2-section--principles" data-aos="zoom-in" data-aos-delay="140">
+                    <div class="col-12">
+                      <article class="modern-card glass-card m25l2-card" data-aos="fade-up" data-aos-delay="160">
+                        <section class="m25l2-section m25l2-section--model" data-aos="zoom-in" data-aos-delay="200">
                           <div class="m25l2-section__title">
-                            <span class="m25l2-icon bg-gradient-rose icon-spin-on-hover"><i class="fa-solid fa-compass"></i></span>
-                            <h3 class="mb-0">কার্যকর যোগাযোগের তিনটি নীতি</h3>
+                            <span class="m25l2-icon bg-gradient-purple icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-sitemap"></i></span>
+                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="240">যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল</h3>
                           </div>
-                          <ul class="list-unstyled info-list mb-0">
-                            ${renderPrinciples(170, 75)}
-                          </ul>
+                          <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="280">
+                            <img src="img/modu25/jogajok2.jpg" alt="যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
+                          </div>
                         </section>
-
-                        <div class="mt-4 m25l2-orbit" data-aos="fade-up" data-aos-delay="210">
-                          <div class="orbit-layout" data-orbit-radius="150">
-                            <div class="orbit-ring-1" aria-hidden="true"></div>
-                            <div class="orbit-ring-2" aria-hidden="true"></div>
-                            <div class="orbit-center icon-spin-on-hover">
-                              <div class="orbit-card bg-gradient-teal">
-                                <div class="orbit-title fw-bold">কার্যকর যোগাযোগের নীতি</div>
-                              </div>
-                            </div>
-                            ${renderOrbitItems()}
-                          </div>
-                        </div>
                       </article>
                     </div>
                   </div>
@@ -16966,98 +16815,86 @@ const coursesData = [
           },
           {
             id: "ch25-lesson-3",
-            title: yhLang("কার্যকর যোগাযোগ", "কার্যকর যোগাযোগ"),
-            icon: "fa-comment-dots",
-            gradientClass: "bg-gradient-teal",
+            title: yhLang(
+              "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ",
+              "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ"
+            ),
+            icon: "fa-people-arrows-left-right",
+            gradientClass: "bg-gradient-pink",
             audioFile: "",
             content: (function () {
-              const techniqueItems = [
-                {
-                  title: "১. মনোযোগ দিয়ে শোনা (Active Listening)",
-                  desc: "অন্য কেউ কথা বললে মাঝপথে বাধা না দিয়ে শোনো। প্রয়োজন হলে শেষে বিনয়ের সঙ্গে প্রশ্ন করো। এতে সম্পর্ক ভালো হয়।",
-                },
-                {
-                  title: "২. পরিষ্কার ও সহজ ভাষায় কথা বলা",
-                  desc: "জটিল শব্দ বা ঘুরিয়ে কথা না বলে নিজের ভাবনা স্পষ্টভাবে প্রকাশ করো। এতে ভুল বোঝাবুঝি কমে।",
-                },
-                {
-                  title: "৩. অভিযোগ না করে নিজের অনুভূতি প্রকাশ করা",
-                  desc: "কাউকে দোষারোপ না করে শান্তভাবে বলা যে কোনো পরিস্থিতি তোমাকে কীভাবে অনুভব করাচ্ছে। এটি সম্পর্ককে আরও সম্মানজনক ও বোঝাপড়াপূর্ণ করে তোলে।",
-                },
-                {
-                  title: "৪. শরীরের ভাষা ঠিক রাখা",
-                  desc: "চোখে চোখ রেখে কথা বলা, সোজা ভঙ্গিতে দাঁড়ানো বা বসা—এগুলো আত্মবিশ্বাস বাড়ায় এবং কথা বেশি বিশ্বাসযোগ্য করে তোলে।",
-                },
-                {
-                  title: "৫. রাগ বা আবেগ নিয়ন্ত্রণ করা",
-                  desc: "রাগের মাথায় কথা না বলা ভালো। শান্ত হয়ে কথা বললে সমস্যা সমাধান সহজ হয়।",
-                },
-                {
-                  title: "৬. সম্মান দেখানো",
-                  desc: "বন্ধু, পরিবার বা শিক্ষক—যেই হোক, তাদের মতামতকে সম্মান করো। অসম্মান করলে যোগাযোগ ভেঙে যায়।",
-                },
-                {
-                  title: "৭. গুজব বা বাড়াবাড়ি এড়িয়ে চলা",
-                  desc: "সত্য যাচাই না করে কিছু বলো না। এতে আস্থা বজায় থাকে।",
-                },
-                {
-                  title: "৮. প্রয়োজন হলে সাহায্য চাওয়া",
-                  desc: "কিছু বুঝতে না পারলে ভেবে না নিয়ে স্পষ্টভাবে জিজ্ঞেস করো। এতে শেখা সহজ হয়।",
-                },
+              const verbalItems = [
+                "মুখোমুখি কথা বলা",
+                "টেলিফোনে কথা বলা",
+                "বক্তৃতা",
+                "রেডিও শোনা",
               ];
-
-              const techniqueIcons = [
-                "fa-ear-listen",
-                "fa-comment-dots",
-                "fa-heart",
-                "fa-eye",
-                "fa-brain",
-                "fa-hands-praying",
-                "fa-magnifying-glass",
-                "fa-circle-question",
+              const nonverbalItems = [
+                "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে",
+                "ইঙ্গিত বা প্রতীকের মাধ্যমে",
               ];
+              const groupItems = ["দলীয় আলোচনা", "দলীয় সভা", "বক্তৃতা"];
+              const massText =
+                "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিনড়ব ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।";
 
-              const renderTechniques = (baseDelay = 160, step = 70) => {
-                const cards = techniqueItems
-                  .map((t, idx) => {
-                    const icon = techniqueIcons[idx] || "fa-circle-check";
+              const iconForBullet = (text) => {
+                const t = String(text || "").trim();
+                switch (t) {
+                  case "মুখোমুখি কথা বলা":
+                    return "fa-people-arrows-left-right";
+                  case "টেলিফোনে কথা বলা":
+                    return "fa-phone";
+                  case "বক্তৃতা":
+                    return "fa-person-chalkboard";
+                  case "রেডিও শোনা":
+                    return "fa-radio";
+                  case "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে":
+                    return "fa-person-rays";
+                  case "ইঙ্গিত বা প্রতীকের মাধ্যমে":
+                    return "fa-hand-pointer";
+                  case "দলীয় আলোচনা":
+                    return "fa-comments";
+                  case "দলীয় সভা":
+                    return "fa-users";
+                  default:
+                    return "fa-circle-check";
+                }
+              };
+
+              const renderTableList = (items, baseDelay, step) =>
+                (items || [])
+                  .map((text, idx) => {
                     const delay = baseDelay + idx * step;
+                    const icon = iconForBullet(text);
                     return `
-                      <div class="m25l3-info-card" data-aos="fade-up" data-aos-delay="${delay}">
-                        <div class="m25l3-info-card__icon ${colorCycle[idx % colorCycle.length]} icon-spin-on-hover" aria-hidden="true">
-                          <i class="fa-solid ${icon}"></i>
-                        </div>
-                        <div class="m25l3-info-card__body">
-                          <div class="m25l3-info-card__title" data-aos="fade-up" data-aos-delay="${delay + 40}"><strong>${t.title}</strong></div>
-                          <div class="m25l3-info-card__desc" data-aos="fade-up" data-aos-delay="${delay + 70}">${t.desc}</div>
-                        </div>
-                      </div>
+                      <li class="m25l3-table-item" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m25l3-td-icon" aria-hidden="true"><i class="fa-solid ${icon}"></i></span>
+                        <span class="m25l3-td-text">${text}</span>
+                      </li>
                     `;
                   })
                   .join("");
 
-                return `
-                  <div class="m25l3-techniques-neo" data-aos="fade-up" data-aos-delay="${Math.max(0, baseDelay - 40)}">
-                    <div class="m25l3-tech-bg" aria-hidden="true">
-                      <span class="m25l3-tech-orb m25l3-tech-orb--a"></span>
-                      <span class="m25l3-tech-orb m25l3-tech-orb--b"></span>
-                      <span class="m25l3-tech-orb m25l3-tech-orb--c"></span>
-                      <span class="m25l3-tech-orb m25l3-tech-orb--d"></span>
-                      <span class="m25l3-tech-orb m25l3-tech-orb--e"></span>
-                    </div>
-                    <div class="m25l3-infographic" role="list">${cards}</div>
-                  </div>
-                `;
-              };
+              const renderInfoList = (items, baseDelay = 220, step = 55) =>
+                (items || [])
+                  .map((text, idx) => {
+                    const delay = baseDelay + idx * step;
+                    const icon = iconForBullet(text);
+                    return `
+                      <li class="info-item" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="info-bullet" aria-hidden="true"><i class="fa-solid ${icon}"></i></span>
+                        <span class="info-text">${text}</span>
+                      </li>
+                    `;
+                  })
+                  .join("");
 
-              const renderParagraphLines = (text, baseDelay = 150, step = 70) => {
+              const renderParagraphLines = (text, baseDelay = 260, step = 70) => {
                 const raw = String(text || "");
-                // Split by Bengali danda while keeping readable sentence lines
                 const parts = raw
                   .split("।")
                   .map((s) => s.trim())
                   .filter(Boolean);
-
                 return parts
                   .map((sentence, idx) => {
                     const delay = baseDelay + idx * step;
@@ -17065,44 +16902,6 @@ const coursesData = [
                   })
                   .join(" ");
               };
-
-              const orbitItems = [
-                "মনোযোগ দিয়ে শোনা",
-                "পরিষ্কার ও সহজ ভাষায় কথা বলা",
-                "†অভিযোগ না করে নিজের অনুভূতি প্রকাশ করা",
-                "শরীরের ভাষা ঠিক রাখা",
-                "রাগ বা আবেগ নিয়ন্ত্রণ করা",
-                "সম্মান দেখানো",
-                "গুজব বা বাড়াবাড়ি এড়িয়ে চলা",
-                "প্রয়োজন হলে সাহায্য চাওয়া",
-              ];
-
-              const colorCycle = [
-                "bg-gradient-orange",
-                "bg-gradient-blue",
-                "bg-gradient-rose",
-                "bg-gradient-green",
-                "bg-gradient-teal",
-                "bg-gradient-purple",
-                "bg-gradient-tangerine",
-                "bg-gradient-emerald",
-              ];
-
-              const renderOrbitItems = () =>
-                orbitItems
-                  .map(
-                    (label, idx) => `
-                      <div class="orbit-item" data-aos="zoom-in" data-aos-delay="${120 + idx * 35}">
-                        <div class="orbit-card ${colorCycle[idx % colorCycle.length]}">
-                          <span class="orbit-title">${label}</span>
-                        </div>
-                      </div>
-                    `
-                  )
-                  .join("");
-
-              const introParagraph =
-                "কার্যকর যোগাযোগ হলো এমনভাবে কথা বলা, শোনা ও প্রতিক্রিয়া করা, যাতে দু’পক্ষই একে অপরকে স্পষ্টভাবে বুঝতে পারে। কিশোর বয়সে পরিবার, বন্ধু, শিক্ষক—সবাইয়ের সঙ্গে পরিষ্কার ও সম্মানজনকভাবে যোগাযোগ করা খুব গুরুত্বপূর্ণ। ভালো যোগাযোগের জন্য প্রয়োজন মনোযোগ দিয়ে শোনা, অন্যের মতামতকে সম্মান করা এবং নিজের অনুভূতি বা ভাবনা শান্তভাবে প্রকাশ করা। এতে ভুল বোঝাবুঝি কমে, সম্পর্ক শক্ত হয়, এবং আত্মবিশ্বাসও বাড়ে। মুখের ভাষার পাশাপাশি শরীরের ভাষা, চোখের যোগাযোগ এবং কথা বলার টোনও যোগাযোগকে প্রভাবিত করে। নিয়মিত চর্চা করলে যেকোনো পরিস্থিতিতে পরিষ্কার ও আত্মবিশ্বাসের সঙ্গে কথা বলা সহজ হয়ে ওঠে।";
 
               return `
                 <div class="lesson-slide mod25-lesson3">
@@ -17115,52 +16914,141 @@ const coursesData = [
 
                   <header class="m25l3-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
                     <div class="m25l3-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-comment-dots"></i>
+                      <i class="fa-solid fa-people-arrows-left-right"></i>
                     </div>
                     <div class="m25l3-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">কার্যকর যোগাযোগ</h2>
-                      <p class="mb-0 mt-2 m25l3-intro">${renderParagraphLines(introParagraph, 140, 70)}</p>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ</h2>
                     </div>
                   </header>
 
                   <div class="row g-3 mt-3 align-items-stretch">
-                    <div class="col-12">
-                      <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="m25l3-card__title" data-aos="fade-up" data-aos-delay="140">
-                          <span class="m25l3-icon bg-gradient-rose icon-spin-on-hover"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
-                          <h3 class="mb-0">কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল</h3>
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-right" data-aos-delay="90">
+                        <div class="m25l3-card__title" data-aos="fade-up" data-aos-delay="130">
+                          <span class="m25l3-icon bg-gradient-blue icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-table"></i></span>
+                          <h3 class="mb-0" data-aos="fade-up" data-aos-delay="170">আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ</h3>
                         </div>
-                        <div class="mt-3">
-                          ${renderTechniques(180, 70)}
+
+                        <div class="mt-3 m25l3-table-wrap" data-aos="zoom-in" data-aos-delay="200">
+                          <table class="table m25l3-table mb-0" role="table" aria-label="যোগাযোগের পদ্ধতিসমূহ (টেবিল)">
+                            <thead>
+                              <tr data-aos="fade-up" data-aos-delay="240">
+                                <th scope="col">
+                                  <span class="m25l3-th-icon bg-gradient-teal" aria-hidden="true"><i class="fa-solid fa-microphone-lines"></i></span>
+                                  <span class="m25l3-th-text">বাচনিক যোগাযোগ</span>
+                                </th>
+                                <th scope="col">
+                                  <span class="m25l3-th-icon bg-gradient-rose" aria-hidden="true"><i class="fa-solid fa-hands"></i></span>
+                                  <span class="m25l3-th-text">অবাচনিক যোগাযোগ</span>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <ul class="m25l3-table-list" role="list">
+                                    ${renderTableList(verbalItems, 280, 60)}
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul class="m25l3-table-list" role="list">
+                                    ${renderTableList(nonverbalItems, 320, 60)}
+                                  </ul>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </article>
                     </div>
 
-                    <div class="col-12">
-                      <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-up" data-aos-delay="160">
-                        <div class="m25l3-card__title" data-aos="fade-up" data-aos-delay="190">
-                          <span class="m25l3-icon bg-gradient-teal icon-spin-on-hover"><i class="fa-solid fa-diagram-project"></i></span>
-                          <h3 class="mb-0">কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল</h3>
-                        </div>
-                        <div class="mt-3 m25l3-orbit m25l3-orbit--neo" data-aos="fade-up" data-aos-delay="210">
-                          <div class="m25l3-orbit-bg" aria-hidden="true">
-                            <span class="m25l3-orb m25l3-orb--1"></span>
-                            <span class="m25l3-orb m25l3-orb--2"></span>
-                            <span class="m25l3-orb m25l3-orb--3"></span>
-                            <span class="m25l3-orb m25l3-orb--4"></span>
-                            <span class="m25l3-orb m25l3-orb--5"></span>
+                    <div class="col-12 col-lg-6">
+                      <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-left" data-aos-delay="110">
+                        <section class="m25l3-section m25l3-section--group" data-aos="zoom-in" data-aos-delay="140">
+                          <div class="m25l3-section__title">
+                            <span class="m25l3-icon bg-gradient-purple icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
+                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="180">দলীয় যোগাযোগের পদ্ধতি সমূহ</h3>
                           </div>
-                          <div class="orbit-layout m25l3-orbit-layout" data-orbit-radius="190">
-                            <div class="orbit-ring-1" aria-hidden="true"></div>
-                            <div class="orbit-ring-2" aria-hidden="true"></div>
-                            <div class="orbit-center icon-spin-on-hover">
-                              <div class="orbit-card bg-gradient-teal">
-                                <div class="orbit-title fw-bold">কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল</div>
-                              </div>
-                            </div>
-                            ${renderOrbitItems()}
+                          <ul class="list-unstyled info-list mb-0">
+                            ${renderInfoList(groupItems, 220, 60)}
+                          </ul>
+                        </section>
+
+                        <section class="mt-3 m25l3-section m25l3-section--mass" data-aos="zoom-in" data-aos-delay="220">
+                          <div class="m25l3-section__title">
+                            <span class="m25l3-icon bg-gradient-yellow icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
+                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="260">গণযোগাযোগ</h3>
                           </div>
-                        </div>
+                          <p class="mb-0 m25l3-mass">${renderParagraphLines(massText, 300, 80)}</p>
+                        </section>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch25-lesson-4",
+            title: yhLang(
+              "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী",
+              "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী"
+            ),
+            icon: "fa-handshake",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            content: (function () {
+              const points = [
+                { text: "উষ্ণতা", icon: "fa-heart" },
+                { text: "গ্রহণযোগ্যতা", icon: "fa-handshake-angle" },
+                { text: "সম্মান", icon: "fa-award" },
+                { text: "স্বচ্ছতা", icon: "fa-eye" },
+                { text: "সহমর্মিতা", icon: "fa-hands-holding-heart" },
+              ];
+
+              const renderPoints = () =>
+                points
+                  .map((p, idx) => {
+                    const delay = 240 + idx * 70;
+                    return `
+                      <li class="m25l4-point" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m25l4-bullet bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${p.icon}"></i></span>
+                        <span class="m25l4-text">${p.text}</span>
+                      </li>
+                    `;
+                  })
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod25-lesson4">
+                  <div class="m25l4-shapes" aria-hidden="true">
+                    <span class="m25l4-shape m25l4-shape--orb"></span>
+                    <span class="m25l4-shape m25l4-shape--wave"></span>
+                    <span class="m25l4-shape m25l4-shape--ring"></span>
+                    <span class="m25l4-shape m25l4-shape--diamond"></span>
+                  </div>
+
+                  <header class="m25l4-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="m25l4-hero__badge icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <div class="m25l4-hero__body">
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী</h2>
+                    </div>
+                  </header>
+
+                  <div class="row g-3 mt-3 align-items-stretch">
+                    <div class="col-12 col-lg-5">
+                      <div class="m25l4-square" data-aos="zoom-in" data-aos-delay="120">
+                        <span class="m25l4-square__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-people-arrows-left-right"></i></span>
+                        <span class="m25l4-square__text" data-aos="fade-up" data-aos-delay="180">আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী</span>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <article class="modern-card glass-card m25l4-card h-100" data-aos="fade-left" data-aos-delay="140">
+                        <ul class="list-unstyled m25l4-list mb-0" role="list">
+                          ${renderPoints()}
+                        </ul>
                       </article>
                     </div>
                   </div>
