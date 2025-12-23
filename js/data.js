@@ -17211,6 +17211,143 @@ const coursesData = [
                 </div>`;
             })(),
           },
+          {
+            id: "ch25-lesson-6",
+            title: yhLang(
+              "The word GATHER can be used to easily remember the steps of counseling.",
+              "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার কৌশল"
+            ),
+            icon: "fa-list-check",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            content: (function () {
+              const gatherSteps = [
+                {
+                  letter: "G",
+                  left: "Greet (সম্ভাষণ)",
+                  icon: "fa-handshake-angle",
+                  right: yhLang( "Warmly and politely greet the client.", 
+                    "সম্মুখ বাক্তিকে বিনীত ও উষ্ণ সম্ভাষণ জানানো"
+                  )
+                },
+                {
+                  letter: "A",
+                  left: "Ask (প্রশ্ন করা)",
+                  icon: "fa-circle-question",
+                  right: "সম্মুখ বাক্তিকে তার নিজের অনুভূতি, সমস্যা ও পরিবার সম্পর্কে প্রশ্ন করা",
+                },
+                {
+                  letter: "T",
+                  left: "Tell (বলা)",
+                  icon: "fa-bullhorn",
+                  right: "এই অবস্থায় কী কী সমাধান আছে তা বিস্তারিত বলা",
+                },
+                {
+                  letter: "H",
+                  left: "Help (সাহায্য)",
+                  icon: "fa-hands-holding-heart",
+                  right: "সম্মুখ বাক্তিকে সর্বতোভাবে সাহায্য করা। তিনি যেন স্বাচ্ছন্দ্যবোধ করেন এবং সঠিক সিদ্ধান্ত নিতে পারেন",
+                },
+                {
+                  letter: "E",
+                  left: "Explain (বিস্তারিত ব্যাখ্যা)",
+                  icon: "fa-circle-info",
+                  right: "সম্মুখ বাক্তিকে কোন বিষয়ের সার্বিক ফলাফল সম্পর্কে বিস্তারিত ব্যাখ্যা করা",
+                },
+                {
+                  letter: "R",
+                  left: "Return visit, referral and/or follow-up (পরবর্তী পদক্ষেপ)",
+                  icon: "fa-rotate-left",
+                  right: "পরবর্তীতে কবে কোথায় যেতে হবে তা সম্মুখ বাক্তিকে এবং তার আত্মীয়-স্বজনদের বুঝিয়ে বলা",
+                },
+              ];
+
+              const counselingTitleBn = "কাউন্সেলিং";
+              const counselingText1 =
+                "গ্রহীতা ও সেবাদানকারীর মধ্যে দ্বিমুখী আলোচনার মাধ্যমে বিস্তারিত তথ্য প্রদানের পর সেবাদানকারী গ্রহীতাকে তার নিজের স্বাস্থ্যসম্পর্কিত কোনো সিদ্ধান্ত গ্রহণে সহায়তা করার প্রক্রিয়াই হল কাউন্সেলিং।";
+              const counselingText2 =
+                "এর ফলে কিশোর-কিশোরী ও তরুণ সেবাগ্রহীতারা তাদের ব্যক্তিগত অনুভূতি ও সমস্যা নিয়ে খোলাখুলি আলোচনা করার সুযোগ পায় ও নিজেই সিদ্ধান্ত গ্রহণ করে সমস্যা সমাধান করতে পারে।";
+
+              const renderSentenceLines = (text, baseDelay, step) => {
+                const raw = String(text || "");
+                const parts = raw
+                  .split("।")
+                  .map((s) => s.trim())
+                  .filter(Boolean);
+                return parts
+                  .map((sentence, idx) => {
+                    const delay = baseDelay + idx * step;
+                    return `<span class="m25l6-line" data-aos="fade-up" data-aos-delay="${delay}">${sentence}।</span>`;
+                  })
+                  .join(" ");
+              };
+
+              const renderGatherSteps = () =>
+                gatherSteps
+                  .map((s, idx) => {
+                    const delay = 220 + idx * 85;
+                    const innerDelay = delay + 60;
+                    return `
+                      <div class="m25l6-step" data-aos="fade-up" data-aos-delay="${delay}" role="listitem">
+                        <div class="m25l6-step-left" data-aos="zoom-in" data-aos-delay="${delay + 30}">
+                          <div class="m25l6-letter" aria-hidden="true">${s.letter}</div>
+                          <div class="m25l6-left-text" data-aos="fade-up" data-aos-delay="${innerDelay}">${s.left}</div>
+                        </div>
+                        <div class="m25l6-step-right" data-aos="fade-left" data-aos-delay="${delay + 40}">
+                          <span class="m25l6-bullet bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
+                          <div class="m25l6-right-text" data-aos="fade-up" data-aos-delay="${innerDelay + 40}">${s.right}</div>
+                        </div>
+                      </div>
+                    `;
+                  })
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod25-lesson6">
+                  <div class="m25l6-shapes" aria-hidden="true">
+                    <span class="m25l6-shape m25l6-shape--orb"></span>
+                    <span class="m25l6-shape m25l6-shape--blob"></span>
+                    <span class="m25l6-shape m25l6-shape--ring"></span>
+                    <span class="m25l6-shape m25l6-shape--zig"></span>
+                  </div>
+
+                  <header class="m25l6-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="m25l6-hero__badge icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <div class="m25l6-hero__body">
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার কৌশল</h2>
+                      <p class="m25l6-lead mb-0" data-aos="fade-up" data-aos-delay="130">কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য <strong>GATHER</strong> শব্দটির সাহায্য নেয়া যায়</p>
+                    </div>
+                  </header>
+
+                  <div class="row g-3 mt-3 align-items-stretch">
+                    <div class="col-12 col-lg-7">
+                      <article class="modern-card glass-card m25l6-gather h-100" data-aos="fade-right" data-aos-delay="120">
+                        <div class="m25l6-gather-head yhap_box_shadow" data-aos="fade-up" data-aos-delay="160">
+                          <span class="m25l6-chip bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-spell-check"></i></span>
+                          <h3 class="mb-0" data-aos="fade-up" data-aos-delay="210">GATHER</h3>
+                        </div>
+                        <div class="m25l6-steps" role="list" aria-label="GATHER ধাপসমূহ">
+                          ${renderGatherSteps()}
+                        </div>
+                      </article>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                      <article class="modern-card glass-card m25l6-counsel h-100" data-aos="fade-left" data-aos-delay="140">
+                        <div class="m25l6-counsel-head yhap_box_shadow" data-aos="fade-up" data-aos-delay="180">
+                          <span class="m25l6-chip bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
+                          <h3 class="mb-0" data-aos="fade-up" data-aos-delay="230">${counselingTitleBn}</h3>
+                        </div>
+                        <p class="m25l6-paragraph mb-3 yhap_box_shadow">${renderSentenceLines(counselingText1, 260, 70)}</p>
+                        <p class="m25l6-paragraph mb-0 yhap_box_shadow">${renderSentenceLines(counselingText2, 360, 70)}</p>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
         ],
       },
     ],
