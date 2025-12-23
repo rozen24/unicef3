@@ -17055,6 +17055,162 @@ const coursesData = [
                 </div>`;
             })(),
           },
+          {
+            id: "ch25-lesson-5",
+            title: yhLang(
+              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল",
+              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল"
+            ),
+            icon: "fa-wand-magic-sparkles",
+            gradientClass: "bg-gradient-green",
+            audioFile: "",
+            content: (function () {
+              const sections = [
+                {
+                  title: "মূল দক্ষতা",
+                  icon: "fa-screwdriver-wrench",
+                  items: [
+                    {
+                      icon: "fa-clipboard-check",
+                      text: "১. প্রস্তুত হওয়া: নিজের উদ্দেশ্য বা অভিপ্রায় সম্পর্কে চিন্তা করা, যে ব্যক্তি সম্মুখে আছে তার সম্পর্কে ধারণা করা এবং শেষ সাক্ষাতের সময় কি কথা হয়েছিল তা মনে করে প্রস্তুত হওয়া",
+                    },
+                    {
+                      icon: "fa-ear-listen",
+                      text: "২. মনোযোগী হওয়া: সম্পূর্ণ মনোযোগের সাথে উপস্থিত হতে হবে",
+                    },
+                    {
+                      icon: "fa-person-walking",
+                      text: "৩. অনুগামী হওয়া: প্রথমে যে ব্যক্তি সম্মুখে আছে তার বক্তব্য প্রদানের সুযোগ দেয়া এবং অনুগামী হওয়া",
+                    },
+                    {
+                      icon: "fa-arrows-rotate",
+                      text: "৪. প্রতিফলিত করা: নিজের উদ্দেশ্য, পূর্বের তথ্য এবং ভবিষ্যৎ দিক প্রবাহের সাথে বক্তার বক্তব্যের সমন্বয় করা",
+                    },
+                  ],
+                },
+                {
+                  title: "সোলার মনোযোগ মডেল",
+                  icon: "fa-sun",
+                  items: [
+                    {
+                      icon: "fa-people-arrows-left-right",
+                      text: "এস= সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা",
+                    },
+                    { icon: "fa-comments", text: "ও= খোলাখুলি কথা বলা" },
+                    { icon: "fa-person-arrow-up-from-line", text: "এল= সামনের দিকে ঝুঁকে বসা" },
+                    { icon: "fa-eye", text: "এল= সম্মুখ বাক্তির প্রতি দৃষ্টি নিবদ্ধ রাখা" },
+                    { icon: "fa-couch", text: "ই= আরামদায়ক ভঙ্গিতে বা স্বাচ্ছন্দ্যে বসা" },
+                    { icon: "fa-location-dot", text: "আর= ঘটনার ভিতর উপস্থিত থাকতে ভুলবেন না।" },
+                  ],
+                },
+                {
+                  title: "ব্যবহারিক টিপস",
+                  icon: "fa-lightbulb",
+                  items: [
+                    {
+                      icon: "fa-hand",
+                      text: "বক্তার কথা বলার সময় মধ্যপথে বাধা দেয়া পরিহার করা",
+                    },
+                    { icon: "fa-volume-xmark", text: "চুপ থাকা" },
+                    {
+                      icon: "fa-bullseye",
+                      text: "বিষয়বস্তু যেন বিক্ষিপ্ত না হয় সে বিষয়ে নজর দেয়া",
+                    },
+                    {
+                      icon: "fa-thumbs-up",
+                      text: "ইতিবাচক দেহভঙ্গিমা দেখানো",
+                    },
+                  ],
+                },
+                {
+                  title: "মূল কৌশল",
+                  icon: "fa-compass",
+                  items: [
+                    {
+                      icon: "fa-clipboard-list",
+                      text: "ব্যাখ্যা/সারাংশ: পরিস্কার ভাবে বুঝতে পারা নিশ্চিত করা (যেমন, \"তাহলে তুমি বলছো...\")।",
+                    },
+                    {
+                      icon: "fa-circle-question",
+                      text: "খোলাখুলি প্রশ্ন জিজ্ঞাসা করা: সংক্ষিপ্ত, স্পষ্ট, সরাসরি।",
+                    },
+                    {
+                      icon: "fa-wave-square",
+                      text: "স্বর ও ভঙ্গি শোনা: মানসিক অবস্থা পরিমাপ করা।",
+                    },
+                    {
+                      icon: "fa-brain",
+                      text: "প্রতিফলনশীল দক্ষতা ব্যবহার করা: অনুভূতি স্বীকার করা, আত্ম-প্রতিফলনকে উৎসাহিত করা।",
+                    },
+                  ],
+                },
+              ];
+
+              const renderItems = (items, baseDelay) =>
+                (items || [])
+                  .map((it, idx) => {
+                    const delay = baseDelay + idx * 70;
+                    return `
+                      <li class="m25l5-item" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m25l5-bullet bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${it.icon}"></i></span>
+                        <span class="m25l5-item-text">${it.text}</span>
+                      </li>
+                    `;
+                  })
+                  .join("");
+
+              const renderSections = () =>
+                sections
+                  .map((s, sIdx) => {
+                    const blockDelay = 130 + sIdx * 90;
+                    const listDelay = 210 + sIdx * 90;
+                    return `
+                      <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay}">
+                        <div class="row g-3 align-items-stretch">
+                          <div class="col-12 col-lg-4">
+                            <div class="m25l5-left" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
+                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
+                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-lg-8">
+                            <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
+                              <ul class="list-unstyled m25l5-list mb-0" role="list">
+                                ${renderItems(s.items, listDelay)}
+                              </ul>
+                            </article>
+                          </div>
+                        </div>
+                      </section>
+                    `;
+                  })
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod25-lesson5">
+                  <div class="m25l5-shapes" aria-hidden="true">
+                    <span class="m25l5-shape m25l5-shape--orb"></span>
+                    <span class="m25l5-shape m25l5-shape--blob"></span>
+                    <span class="m25l5-shape m25l5-shape--ring"></span>
+                    <span class="m25l5-shape m25l5-shape--kite"></span>
+                  </div>
+
+                  <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="m25l5-hero__body">
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল</h2>
+                    </div>
+                  </header>
+
+                  <div class="mt-3 d-grid gap-3">
+                    ${renderSections()}
+                  </div>
+                </div>`;
+            })(),
+          },
         ],
       },
     ],
