@@ -16671,10 +16671,10 @@ const coursesData = [
                   <header class="m25l1-header" data-aos="fade-up">
                     <div class="m25l1-title" data-aos="fade-up" data-aos-delay="0">
                       <span class="m25l1-title__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
-                      <h2 class="slide-title gradient-text mb-0">যোগাযোগ</h2>
+                      <h2 class="slide-title gradient-text mb-0">${yhLang("Communication", "যোগাযোগ")}</h2>
                     </div>
                     <p class="m25l1-lead mb-0" data-aos="fade-up" data-aos-delay="80">
-                      যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহামযয অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে |
+                     ${yhLang("Communication is a process through which people meaningfully and effectively exchange information, knowledge, experiences, ideas, and opinions using speech, gestures, writing, images, or symbols.", "যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহামযয অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে |")} 
                     </p>
                   </header>
 
@@ -16683,7 +16683,7 @@ const coursesData = [
                       <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
                         <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
                           <span class="m25l1-circle__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
-                          <span class="m25l1-circle__text" data-aos="fade-up" data-aos-delay="220">যোগাযোগের উপাদান</span>
+                          <span class="m25l1-circle__text" data-aos="fade-up" data-aos-delay="220">${yhLang("Elements of communication", "যোগাযোগের উপাদান")}</span>
                         </div>
                       </div>
                     </div>
@@ -16703,7 +16703,7 @@ const coursesData = [
                               <div class="timeline-dot bg-gradient-blue" aria-hidden="true">---</i></div>
                               <article class="timeline-card tl-blue">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></div>
-                                <h6 class="timeline-card-title">প্রেরক</h6>
+                                <h6 class="timeline-card-title">${yhLang("Sender", "প্রেরক")}</h6>
                               </article>
                             </div>
 
@@ -16711,7 +16711,7 @@ const coursesData = [
                               <div class="timeline-dot bg-gradient-teal" aria-hidden="true">---</i></div>
                               <article class="timeline-card tl-cyan">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-user-check"></i></div>
-                                <h6 class="timeline-card-title">প্রাপক</h6>
+                                <h6 class="timeline-card-title">${yhLang("Receiver", "প্রাপক")}</h6>
                               </article>
                             </div>
 
@@ -16719,7 +16719,7 @@ const coursesData = [
                               <div class="timeline-dot bg-gradient-rose" aria-hidden="true">---</i></div>
                               <article class="timeline-card tl-rose">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></div>
-                                <h6 class="timeline-card-title">বার্তা</h6>
+                                <h6 class="timeline-card-title">${yhLang("Message", "বার্তা")}</h6>
                               </article>
                             </div>
 
@@ -16727,7 +16727,7 @@ const coursesData = [
                               <div class="timeline-dot bg-gradient-mint" aria-hidden="true">---</div>
                               <article class="timeline-card tl-emerald">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></div>
-                                <h6 class="timeline-card-title">মাধ্যম</h6>
+                                <h6 class="timeline-card-title">${yhLang("Medium", "মাধ্যম")}</h6>
                               </article>
                             </div>
 
@@ -16735,7 +16735,7 @@ const coursesData = [
                               <div class="timeline-dot bg-gradient-yellow" aria-hidden="true">---</div>
                               <article class="timeline-card tl-amber">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-reply"></i></div>
-                                <h6 class="timeline-card-title">প্রতিবার্তা</h6>
+                                <h6 class="timeline-card-title">${yhLang("Feedback", "প্রতিবার্তা")}</h6>
                               </article>
                             </div>
                           </section>
@@ -16749,7 +16749,7 @@ const coursesData = [
           {
             id: "ch25-lesson-2",
             title: yhLang(
-              "যোগাযোগের প্রকারভেদ",
+              "Types of Communication",
               "যোগাযোগের প্রকারভেদ"
             ),
             icon: "fa-diagram-project",
@@ -16777,17 +16777,17 @@ const coursesData = [
                       <i class="fa-solid fa-diagram-project"></i>
                     </div>
                     <div class="m25l2-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="80">যোগাযোগের প্রকারভেদ</h2>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="80">${yhLang("Types of Communication", "যোগাযোগের প্রকারভেদ")}</h2>
                     </div>
                   </header>
 
                   <div class="row g-3 mt-3">
                     <div class="col-12">
-                      <article class="modern-card glass-card m25l2-card bg-gradient-violet" data-aos="fade-up" data-aos-delay="120">
-                        <section class="m25l2-section m25l2-section--types" data-aos="zoom-in" data-aos-delay="160">
-                          <div class="m25l2-section__title">
+                      <article class="modern-card glass-card m25l2-card bg-gradient-blue" data-aos="fade-up" data-aos-delay="120">
+                        <section class="m25l2-section m25l2-section--types bg-gradient-blue" data-aos="zoom-in" data-aos-delay="160">
+                          <div class="m25l2-section__title yhap_box_shadow">
                             <span class="m25l2-icon bg-gradient-blue icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
-                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="200">যোগাযোগের প্রকারভেদ</h3>
+                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="200">${yhLang("Types of Communication", "যোগাযোগের প্রকারভেদ")}</h3>
                           </div>
                           <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="240">
                             <img src="img/modu25/jogajok-Picsart-BackgroundRemover.png" alt="যোগাযোগের প্রকারভেদ" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
@@ -16799,9 +16799,9 @@ const coursesData = [
                     <div class="col-12">
                       <article class="modern-card glass-card m25l2-card" data-aos="fade-up" data-aos-delay="160">
                         <section class="m25l2-section m25l2-section--model" data-aos="zoom-in" data-aos-delay="200">
-                          <div class="m25l2-section__title">
+                          <div class="m25l2-section__title yhap_box_shadow">
                             <span class="m25l2-icon bg-gradient-purple icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-sitemap"></i></span>
-                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="240">যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল</h3>
+                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="240">${yhLang("Models of Communication", "যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল")}</h3>
                           </div>
                           <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="280">
                             <img src="img/modu25/jogajok2-Picsart-BackgroundRemover.png" alt="যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
@@ -16816,7 +16816,7 @@ const coursesData = [
           {
             id: "ch25-lesson-3",
             title: yhLang(
-              "যোগাযোগের পদ্ধতি",
+              "Methods of communication",
               "যোগাযোগের পদ্ধতি"
             ),
             icon: "fa-people-arrows-left-right",
@@ -16824,37 +16824,38 @@ const coursesData = [
             audioFile: "",
             content: (function () {
               const verbalItems = [
-                "মুখোমুখি কথা বলা",
-                "টেলিফোনে কথা বলা",
-                "বক্তৃতা",
-                "রেডিও শোনা",
+                yhLang("Face-to-face conversation", "মুখোমুখি কথা বলা"),
+                yhLang("Phone call", "টেলিফোনে কথা বলা"),
+                yhLang("Lecture", "বক্তৃতা"),
+                yhLang("Listening to radio", "রেডিও শোনা"),
               ];
+
               const nonverbalItems = [
-                "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে",
-                "ইঙ্গিত বা প্রতীকের মাধ্যমে",
+                yhLang("Through body language or facial expressions", "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে"),
+                yhLang("Through signs or symbols", "ইঙ্গিত বা প্রতীকের মাধ্যমে"),
               ];
-              const groupItems = ["দলীয় আলোচনা", "দলীয় সভা", "বক্তৃতা"];
-              const massText =
-                "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।";
+              const groupItems = [yhLang("Group discussion", "দলীয় আলোচনা"),
+                 yhLang("Group meeting", "দলীয় সভা"), 
+                 yhLang("Lecture", "বক্তৃতা")];
 
               const iconForBullet = (text) => {
                 const t = String(text || "").trim();
                 switch (t) {
-                  case "মুখোমুখি কথা বলা":
+                  case yhLang("Face-to-face conversation", "মুখোমুখি কথা বলা"):
                     return "fa-people-arrows-left-right";
-                  case "টেলিফোনে কথা বলা":
+                  case yhLang("Phone call", "টেলিফোনে কথা বলা"):
                     return "fa-phone";
-                  case "বক্তৃতা":
+                  case yhLang("Lecture", "বক্তৃতা"):
                     return "fa-person-chalkboard";
-                  case "রেডিও শোনা":
+                  case yhLang("Listening to radio", "রেডিও শোনা"):
                     return "fa-radio";
-                  case "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে":
+                  case yhLang("Through body language or facial expressions", "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে"):
                     return "fa-person-rays";
-                  case "ইঙ্গিত বা প্রতীকের মাধ্যমে":
+                  case yhLang("Through signs or symbols", "ইঙ্গিত বা প্রতীকের মাধ্যমে"):
                     return "fa-hand-pointer";
-                  case "দলীয় আলোচনা":
+                  case yhLang("Group discussion", "দলীয় আলোচনা"):
                     return "fa-comments";
-                  case "দলীয় সভা":
+                  case yhLang("Group meeting", "দলীয় সভা"):
                     return "fa-users";
                   default:
                     return "fa-circle-check";
@@ -16917,7 +16918,7 @@ const coursesData = [
                       <i class="fa-solid fa-people-arrows-left-right"></i>
                     </div>
                     <div class="m25l3-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ</h2>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Methods of One-to-One Communication", "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ")}</h2>
                     </div>
                   </header>
 
@@ -16926,7 +16927,7 @@ const coursesData = [
                       <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-right" data-aos-delay="90">
                         <div class="m25l3-card__title yhap_box_shadow" data-aos="fade-up" data-aos-delay="130">
                           <span class="m25l3-icon bg-gradient-blue icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-table"></i></span>
-                          <h3 class="mb-0" data-aos="fade-up" data-aos-delay="170">আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ</h3>
+                          <h3 class="mb-0" data-aos="fade-up" data-aos-delay="170">${yhLang("Methods of One-to-One Communication", "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ")}</h3>
                         </div>
 
                         <div class="mt-3 m25l3-table-wrap" data-aos="zoom-in" data-aos-delay="200">
@@ -16935,11 +16936,11 @@ const coursesData = [
                               <tr data-aos="fade-up" data-aos-delay="240">
                                 <th scope="col">
                                   <span class="m25l3-th-icon bg-gradient-teal" aria-hidden="true"><i class="fa-solid fa-microphone-lines"></i></span>
-                                  <span class="m25l3-th-text">বাচনিক যোগাযোগ</span>
+                                  <span class="m25l3-th-text">  ${yhLang("Verbal Communication", "বাচনিক যোগাযোগ")}</span>
                                 </th>
                                 <th scope="col">
                                   <span class="m25l3-th-icon bg-gradient-rose" aria-hidden="true"><i class="fa-solid fa-hands"></i></span>
-                                  <span class="m25l3-th-text">অবাচনিক যোগাযোগ</span>
+                                  <span class="m25l3-th-text">${yhLang("Non-verbal Communication", "অবাচনিক যোগাযোগ")}</span>
                                 </th>
                               </tr>
                             </thead>
@@ -16967,7 +16968,7 @@ const coursesData = [
                         <section class="m25l3-section m25l3-section--group" data-aos="zoom-in" data-aos-delay="140">
                           <div class="m25l3-section__title yhap_box_shadow">
                             <span class="m25l3-icon bg-gradient-purple icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
-                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="180">দলীয় যোগাযোগের পদ্ধতি সমূহ</h3>
+                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="180"> ${yhLang("Methods of Group Communication", "দলীয় যোগাযোগের পদ্ধতি সমূহ")}</h3>
                           </div>
                           <ul class="list-unstyled info-list mb-0 yhap_box_shadow">
                             ${renderInfoList(groupItems, 220, 60)}
@@ -16977,9 +16978,9 @@ const coursesData = [
                         <section class="mt-3 m25l3-section m25l3-section--mass" data-aos="zoom-in" data-aos-delay="220">
                           <div class="m25l3-section__title yhap_box_shadow">
                             <span class="m25l3-icon bg-gradient-yellow icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
-                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="260">গণযোগাযোগ</h3>
+                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="260"> ${yhLang("Mass Communication", "গণযোগাযোগ")}</h3>
                           </div>
-                          <p class="mb-0 m25l3-mass yhap_box_shadow">${renderParagraphLines(massText, 300, 80)}</p>
+                          <p class="mb-0 m25l3-mass yhap_box_shadow">${yhLang("Different forms of mass media are used to deliver messages to large audiences. In this case, the sender and receiver do not interact directly.", "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।")}</p>
                         </section>
                       </article>
                     </div>
@@ -16990,7 +16991,7 @@ const coursesData = [
           {
             id: "ch25-lesson-4",
             title: yhLang(
-              "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী",
+              "Conditions Required for Establishing Interpersonal Relationships",
               "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী"
             ),
             icon: "fa-handshake",
@@ -16998,11 +16999,11 @@ const coursesData = [
             audioFile: "",
             content: (function () {
               const points = [
-                { text: "উষ্ণতা", icon: "fa-heart" },
-                { text: "গ্রহণযোগ্যতা", icon: "fa-handshake-angle" },
-                { text: "সম্মান", icon: "fa-award" },
-                { text: "স্বচ্ছতা", icon: "fa-eye" },
-                { text: "সহমর্মিতা", icon: "fa-handshake" },
+                { text: yhLang("Warmth", "উষ্ণতা"), icon: "fa-heart" },
+                { text:   yhLang("Acceptability", "গ্রহণযোগ্যতা"), icon: "fa-handshake-angle" },
+                { text: yhLang("Respect", "সম্মান"), icon: "fa-award" },
+                { text: yhLang("Openness/Genuineness", "স্বচ্ছতা"), icon: "fa-eye" },
+                { text: yhLang("Empathy", "সহমর্মিতা"), icon: "fa-handshake" },
               ];
 
               const renderPoints = () =>
@@ -17032,7 +17033,7 @@ const coursesData = [
                       <i class="fa-solid fa-handshake"></i>
                     </div>
                     <div class="m25l4-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী</h2>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70"> ${yhLang("Conditions Required for Establishing Interpersonal Relationships", "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী")}</h2>
                     </div>
                   </header>
 
@@ -17040,7 +17041,7 @@ const coursesData = [
                     <div class="col-12 col-lg-5">
                       <div class="m25l4-square" data-aos="zoom-in" data-aos-delay="120">
                         <span class="m25l4-square__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-people-arrows-left-right"></i></span>
-                        <span class="m25l4-square__text" data-aos="fade-up" data-aos-delay="180">আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী</span>
+                        <span class="m25l4-square__text" data-aos="fade-up" data-aos-delay="180">${yhLang("Conditions Required for Establishing Interpersonal Relationships", "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী")}</span>
                       </div>
                     </div>
 
@@ -17058,7 +17059,7 @@ const coursesData = [
           {
             id: "ch25-lesson-5",
             title: yhLang(
-              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল",
+              "Techniques of interpersonal relationship",
               "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল"
             ),
             icon: "fa-wand-magic-sparkles",
@@ -17067,80 +17068,80 @@ const coursesData = [
             content: (function () {
               const sections = [
                 {
-                  title: "মূল দক্ষতা",
+                  title: yhLang("Core Skills", "মূল দক্ষতা"),
                   icon: "fa-screwdriver-wrench",
                   items: [
                     {
                       icon: "fa-clipboard-check",
-                      text: "১. প্রস্তুত হওয়া: নিজের উদ্দেশ্য বা অভিপ্রায় সম্পর্কে চিন্তা করা, যে ব্যক্তি সম্মুখে আছে তার সম্পর্কে ধারণা করা এবং শেষ সাক্ষাতের সময় কি কথা হয়েছিল তা মনে করে প্রস্তুত হওয়া",
+                      text: yhLang("1. Prepare: Purpose, recall past talks.", "১. প্রস্তুত হওয়া: নিজের উদ্দেশ্য বা অভিপ্রায় সম্পর্কে চিন্তা করা, যে ব্যক্তি সম্মুখে আছে তার সম্পর্কে ধারণা করা এবং শেষ সাক্ষাতের সময় কি কথা হয়েছিল তা মনে করে প্রস্তুত হওয়া"),
                     },
                     {
                       icon: "fa-ear-listen",
-                      text: "২. মনোযোগী হওয়া: সম্পূর্ণ মনোযোগের সাথে উপস্থিত হতে হবে",
+                      text:  yhLang("2. Be Attentive: Fully present.", "২. মনোযোগী হওয়া: সম্পূর্ণ মনোযোগের সাথে উপস্থিত হতে হবে"),
                     },
                     {
                       icon: "fa-person-walking",
-                      text: "৩. অনুগামী হওয়া: প্রথমে যে ব্যক্তি সম্মুখে আছে তার বক্তব্য প্রদানের সুযোগ দেয়া এবং অনুগামী হওয়া",
+                      text:  yhLang("3. Follow: Let speaker lead.", "৩. অনুগামী হওয়া: প্রথমে যে ব্যক্তি সম্মুখে আছে তার বক্তব্য প্রদানের সুযোগ দেয়া এবং অনুগামী হওয়া"),
                     },
                     {
                       icon: "fa-arrows-rotate",
-                      text: "৪. প্রতিফলিত করা: নিজের উদ্দেশ্য, পূর্বের তথ্য এবং ভবিষ্যৎ দিক প্রবাহের সাথে বক্তার বক্তব্যের সমন্বয় করা",
+                      text: yhLang("4. Reflect: Align message with purpose and context.", "৪. প্রতিফলিত করা: নিজের উদ্দেশ্য, পূর্বের তথ্য এবং ভবিষ্যৎ দিক প্রবাহের সাথে বক্তার বক্তব্যের সমন্বয় করা"),
                     },
                   ],
                 },
                 {
-                  title: "সোলার মনোযোগ মডেল",
+                  title:  yhLang("SOLLER Attentiveness Model", "সোলার মনোযোগ মডেল"),
                   icon: "fa-sun",
                   items: [
                     {
                       icon: "fa-people-arrows-left-right",
-                      text: "এস= সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা",
+                      text: yhLang("S: Sit squarely.", "এস= সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা"),
                     },
-                    { icon: "fa-comments", text: "ও= খোলাখুলি কথা বলা" },
-                    { icon: "fa-person-arrow-up-from-line", text: "এল= সামনের দিকে ঝুঁকে বসা" },
-                    { icon: "fa-eye", text: "এল= সম্মুখ বাক্তির প্রতি দৃষ্টি নিবদ্ধ রাখা" },
-                    { icon: "fa-couch", text: "ই= আরামদায়ক ভঙ্গিতে বা স্বাচ্ছন্দ্যে বসা" },
-                    { icon: "fa-location-dot", text: "আর= ঘটনার ভিতর উপস্থিত থাকতে ভুলবেন না।" },
+                    { icon: "fa-comments", text: yhLang("O: Open posture.", "ও= খোলাখুলি কথা বলা") },
+                    { icon: "fa-person-arrow-up-from-line", text: yhLang("L: Lean forward.", "এল= সামনের দিকে ঝুঁকে বসা") },
+                    { icon: "fa-eye", text: yhLang("L: Let eyes maintain contact.", "এল= সম্মুখ বাক্তির প্রতি দৃষ্টি নিবদ্ধ রাখা") },
+                    { icon: "fa-couch", text: yhLang("E: Engage with a relaxed posture.", "ই= আরামদায়ক ভঙ্গিতে বা স্বাচ্ছন্দ্যে বসা") },
+                    { icon: "fa-location-dot", text: yhLang("R: Remember to be present.", "আর= ঘটনার ভিতর উপস্থিত থাকতে ভুলবেন না।") },
                   ],
                 },
                 {
-                  title: "ব্যবহারিক টিপস",
+                  title:  yhLang("Practical Tips", "ব্যবহারিক টিপস"),
                   icon: "fa-lightbulb",
                   items: [
                     {
                       icon: "fa-hand",
-                      text: "বক্তার কথা বলার সময় মধ্যপথে বাধা দেয়া পরিহার করা",
+                      text: yhLang("• Don't interrupt.", "বক্তার কথা বলার সময় মধ্যপথে বাধা দেয়া পরিহার করা"),
                     },
-                    { icon: "fa-volume-xmark", text: "চুপ থাকা" },
+                    { icon: "fa-volume-xmark", text: yhLang("• Listen quietly.", "চুপ থাকা") },
                     {
                       icon: "fa-bullseye",
-                      text: "বিষয়বস্তু যেন বিক্ষিপ্ত না হয় সে বিষয়ে নজর দেয়া",
+                      text: yhLang("• Keep conversation focused.", "বিষয়বস্তু যেন বিক্ষিপ্ত না হয় সে বিষয়ে নজর দেয়া"),
                     },
                     {
                       icon: "fa-thumbs-up",
-                      text: "ইতিবাচক দেহভঙ্গিমা দেখানো",
+                      text: yhLang("• Use positive body language.", "ইতিবাচক দেহভঙ্গিমা দেখানো"),
                     },
                   ],
                 },
                 {
-                  title: "মূল কৌশল",
+                  title: yhLang("Key Techniques", "মূল কৌশল"),
                   icon: "fa-compass",
                   items: [
                     {
                       icon: "fa-clipboard-list",
-                      text: "ব্যাখ্যা/সারাংশ: পরিস্কার ভাবে বুঝতে পারা নিশ্চিত করা (যেমন, \"তাহলে তুমি বলছো...\")।",
+                      text: yhLang("• Paraphrase/Summarize: Confirm understanding (e.g., \"So you're saying...\").", "ব্যাখ্যা/সারাংশ: পরিস্কার ভাবে বুঝতে পারা নিশ্চিত করা (যেমন, \"তাহলে তুমি বলছো...\")।"),
                     },
                     {
                       icon: "fa-circle-question",
-                      text: "খোলাখুলি প্রশ্ন জিজ্ঞাসা করা: সংক্ষিপ্ত, স্পষ্ট, সরাসরি।",
+                      text: yhLang("• Ask Open-Ended Questions: Short, clear, direct.", "খোলাখুলি প্রশ্ন জিজ্ঞাসা করা: সংক্ষিপ্ত, স্পষ্ট, সরাসরি।"),
                     },
                     {
                       icon: "fa-wave-square",
-                      text: "স্বর ও ভঙ্গি শোনা: মানসিক অবস্থা পরিমাপ করা।",
+                      text: yhLang("• Listen to Tone & Manner: Gauge emotional state.", "স্বর ও ভঙ্গি শোনা: মানসিক অবস্থা পরিমাপ করা।"),
                     },
                     {
                       icon: "fa-brain",
-                      text: "প্রতিফলনশীল দক্ষতা ব্যবহার করা: অনুভূতি স্বীকার করা, আত্ম-প্রতিফলনকে উৎসাহিত করা।",
+                      text: yhLang("• Use Reflective Skills: Acknowledge feelings, encourage self-reflection.", "প্রতিফলনশীল দক্ষতা ব্যবহার করা: অনুভূতি স্বীকার করা, আত্ম-প্রতিফলনকে উৎসাহিত করা।"),
                     },
                   ],
                 },
@@ -17201,7 +17202,7 @@ const coursesData = [
                       <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
                     <div class="m25l5-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল</h2>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল")}</h2>
                     </div>
                   </header>
 
@@ -17214,8 +17215,8 @@ const coursesData = [
           {
             id: "ch25-lesson-6",
             title: yhLang(
-              "The word GATHER can be used to easily remember the steps of counseling.",
-              "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার কৌশল"
+              "Steps of counseling.",
+              "কাউন্সেলিংয়ের ধাপসমূহ"
             ),
             icon: "fa-list-check",
             gradientClass: "bg-gradient-blue",
@@ -17234,39 +17235,38 @@ const coursesData = [
                   letter: "A",
                   left: "Ask (প্রশ্ন করা)",
                   icon: "fa-circle-question",
-                  right: "সম্মুখ বাক্তিকে তার নিজের অনুভূতি, সমস্যা ও পরিবার সম্পর্কে প্রশ্ন করা",
+                  right: yhLang( "Ask the client about their feelings, problems, and family.", "সম্মুখ বাক্তিকে তার নিজের অনুভূতি, সমস্যা ও পরিবার সম্পর্কে প্রশ্ন করা"),
                 },
                 {
                   letter: "T",
                   left: "Tell (বলা)",
                   icon: "fa-bullhorn",
-                  right: "এই অবস্থায় কী কী সমাধান আছে তা বিস্তারিত বলা",
+                  right: yhLang( "Explain what solutions are possible in this situation.", "এই অবস্থায় কী কী সমাধান আছে তা বিস্তারিত বলা"),
                 },
                 {
                   letter: "H",
                   left: "Help (সাহায্য)",
-                  icon: "fa-hands-holding-heart",
-                  right: "সম্মুখ বাক্তিকে সর্বতোভাবে সাহায্য করা। তিনি যেন স্বাচ্ছন্দ্যবোধ করেন এবং সঠিক সিদ্ধান্ত নিতে পারেন",
+                  icon: "fa-hand-holding-heart",
+                  right: yhLang( "Support the client fully so they feel comfortable and can make the right decision.", "সম্মুখ বাক্তিকে সর্বতোভাবে সাহায্য করা। তিনি যেন স্বাচ্ছন্দ্যবোধ করেন এবং সঠিক সিদ্ধান্ত নিতে পারেন"),
                 },
                 {
                   letter: "E",
                   left: "Explain (বিস্তারিত ব্যাখ্যা)",
                   icon: "fa-circle-info",
-                  right: "সম্মুখ বাক্তিকে কোন বিষয়ের সার্বিক ফলাফল সম্পর্কে বিস্তারিত ব্যাখ্যা করা",
+                  right: yhLang( "Explain in detail about postnatal care, instructions, side effects of medicines, nutritional value of local foods, and nutritional needs.", "সম্মুখ বাক্তিকে কোন বিষয়ের সার্বিক ফলাফল সম্পর্কে বিস্তারিত ব্যাখ্যা করা"),
                 },
                 {
                   letter: "R",
                   left: "Return visit, referral and/or follow-up (পরবর্তী পদক্ষেপ)",
                   icon: "fa-rotate-left",
-                  right: "পরবর্তীতে কবে কোথায় যেতে হবে তা সম্মুখ বাক্তিকে এবং তার আত্মীয়-স্বজনদের বুঝিয়ে বলা",
+                  right: yhLang( "Explain when and where the client and their family members need to come for follow-up.", "পরবর্তীতে কবে কোথায় যেতে হবে তা সম্মুখ বাক্তিকে এবং তার আত্মীয়-স্বজনদের বুঝিয়ে বলা"),
                 },
               ];
 
-              const counselingTitleBn = "কাউন্সেলিং";
-              const counselingText1 =
-                "গ্রহীতা ও সেবাদানকারীর মধ্যে দ্বিমুখী আলোচনার মাধ্যমে বিস্তারিত তথ্য প্রদানের পর সেবাদানকারী গ্রহীতাকে তার নিজের স্বাস্থ্যসম্পর্কিত কোনো সিদ্ধান্ত গ্রহণে সহায়তা করার প্রক্রিয়াই হল কাউন্সেলিং।";
-              const counselingText2 =
-                "এর ফলে কিশোর-কিশোরী ও তরুণ সেবাগ্রহীতারা তাদের ব্যক্তিগত অনুভূতি ও সমস্যা নিয়ে খোলাখুলি আলোচনা করার সুযোগ পায় ও নিজেই সিদ্ধান্ত গ্রহণ করে সমস্যা সমাধান করতে পারে।";
+              const counselingTitleBn = yhLang("counseling", "কাউন্সেলিং");
+              const counselingText1 = yhLang("Counseling is the process through which, following two-way discussion and detailed information sharing, the provider helps the client make decisions about their own health.", "গ্রহীতা ও সেবাদানকারীর মধ্যে দ্বিমুখী আলোচনার মাধ্যমে বিস্তারিত তথ্য প্রদানের পর সেবাদানকারী গ্রহীতাকে তার নিজের স্বাস্থ্যসম্পর্কিত কোনো সিদ্ধান্ত গ্রহণে সহায়তা করার প্রক্রিয়াই হল কাউন্সেলিং।");
+              
+              const counselingText2 = yhLang("It gives young person to get the opportunity to openly discuss their personal feelings and problems and enables them to make their own decisions.", "এর ফলে কিশোর-কিশোরী ও তরুণ সেবাগ্রহীতারা তাদের ব্যক্তিগত অনুভূতি ও সমস্যা নিয়ে খোলাখুলি আলোচনা করার সুযোগ পায় ও নিজেই সিদ্ধান্ত গ্রহণ করে সমস্যা সমাধান করতে পারে।");
 
               const renderSentenceLines = (text, baseDelay, step) => {
                 const raw = String(text || "");
@@ -17316,8 +17316,7 @@ const coursesData = [
                       <i class="fa-solid fa-list-check"></i>
                     </div>
                     <div class="m25l6-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার কৌশল</h2>
-                      <p class="m25l6-lead mb-0" data-aos="fade-up" data-aos-delay="130">কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য <strong>GATHER</strong> শব্দটির সাহায্য নেয়া যায়</p>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">  ${yhLang("The word GATHER can be used to easily remember the steps of counseling.", "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য <strong>GATHER</strong> শব্দটির সাহায্য নেয়া যায়")} </h2>
                     </div>
                   </header>
 
