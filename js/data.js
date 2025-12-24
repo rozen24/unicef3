@@ -16790,7 +16790,7 @@ const coursesData = [
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="200">যোগাযোগের প্রকারভেদ</h3>
                           </div>
                           <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="240">
-                            <img src="img/modu25/jogajok.jpg" alt="যোগাযোগের প্রকারভেদ" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
+                            <img src="img/modu25/jogajok.png" alt="যোগাযোগের প্রকারভেদ" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
                           </div>
                         </section>
                       </article>
