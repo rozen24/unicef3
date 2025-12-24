@@ -16783,14 +16783,14 @@ const coursesData = [
 
                   <div class="row g-3 mt-3">
                     <div class="col-12">
-                      <article class="modern-card glass-card m25l2-card" data-aos="fade-up" data-aos-delay="120">
+                      <article class="modern-card glass-card m25l2-card bg-gradient-violet" data-aos="fade-up" data-aos-delay="120">
                         <section class="m25l2-section m25l2-section--types" data-aos="zoom-in" data-aos-delay="160">
                           <div class="m25l2-section__title">
                             <span class="m25l2-icon bg-gradient-blue icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="200">যোগাযোগের প্রকারভেদ</h3>
                           </div>
                           <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="240">
-                            <img src="img/modu25/jogajok.png" alt="যোগাযোগের প্রকারভেদ" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
+                            <img src="img/modu25/jogajok-Picsart-BackgroundRemover.png" alt="যোগাযোগের প্রকারভেদ" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
                           </div>
                         </section>
                       </article>
@@ -16804,7 +16804,7 @@ const coursesData = [
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="240">যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল</h3>
                           </div>
                           <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="280">
-                            <img src="img/modu25/jogajok2.jpg" alt="যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
+                            <img src="img/modu25/jogajok2-Picsart-BackgroundRemover.png" alt="যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
                           </div>
                         </section>
                       </article>
