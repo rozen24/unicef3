@@ -1,165 +1,3 @@
-tbody, td, tfoot, th, thead, tr {
-    border-color: inherit;
-    border-style: solid;
-    border-width: 1px !important;
-}
-.table thead th {
-    background-color: #4ec2ff !important;
-}
-
-.fa-circle-check {
-  color: #1CAEEA !important;
-}
-
-/* Pyramid collapsed state when modules sidebar hidden */
-.pyramid-positive .pyramid-steps .pyramid-positive-collapsed {
-  opacity: 0.25;
-  filter: grayscale(0.6) brightness(0.85);
-  transform: translateY(6px) scale(.95);
-  transition: opacity .4s ease, transform .4s ease, filter .4s ease;
-}
-
-/* Provide a subtle animate-in when expanding again */
-.modules-expanded .pyramid-positive .pyramid-positive-collapsed {
-  opacity: 1;
-  filter: none;
-  transform: translateY(0) scale(1);
-}
-/* Regional shares map styles */
-.regional-map-wrap {
-  position: relative;
-  width: 100%;
-  min-height: 420px;
-  background-color: #0b1324; /* fallback color */
-  background-image: url('../img/Distribution/global.jpg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-}
-
-.regional-map-wrap::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at center, rgba(255,255,255,0.04), rgba(0,0,0,0.22) 70%),
-    repeating-linear-gradient(
-      to right,
-      rgba(255,255,255,0.04) 0,
-      rgba(255,255,255,0.04) 1px,
-      transparent 1px,
-      transparent 24px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.04) 0,
-      rgba(255,255,255,0.04) 1px,
-      transparent 1px,
-      transparent 24px
-    );
-  pointer-events: none;
-}
-
-/* Inline SVG sizing */
-/* If an inline SVG is ever used, keep sensible defaults */
-.regional-map-svg { width: 100%; height: 100%; display: block; }
-.regional-map-svg .region-shape {
-  fill: transparent;
-  stroke: transparent;
-}
-
-.region-chip {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  color: #0b1324;
-  background: rgba(255,255,255,0.9);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 999px;
-  backdrop-filter: saturate(130%) blur(2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.region-chip .chip-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--chip-color, #60A5FA);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--chip-color, #60A5FA) 25%, white 75%);
-}
-
-.region-chip .chip-text { font-size: 0.9rem; line-height: 1; }
-
-/* Legend list at the bottom of the map */
-.region-legend {
-  position: absolute;
-  left: 0; right: 0; bottom: 8px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 16px;
-  justify-content: center;
-  padding: 8px 12px;
-  margin: 0;
-  list-style: none;
-}
-
-.region-legend li {
-  color: #f9fafb;
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.85rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.region-legend .legend-swatch {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-}
-
-/* Rough pin positions per region (tweak as needed) */
-.region-north-america { top: 36%; left: 18%; }
-.region-latin-america { top: 58%; left: 30%; }
-.region-europe { top: 28%; left: 52%; }
-.region-mena { top: 40%; left: 54%; }
-.region-ssa { top: 60%; left: 52%; }
-.region-asia-pacific { top: 44%; left: 74%; }
-@media (max-width: 600px) {
-  .region-north-america { top: 10% !important; left: 18%; }
-  .region-latin-america { top: 58% !important; left: 30%; }
-  .region-europe { top: 18%!important; left: 52%; }
-  .region-mena { top: 40% !important; left: 53%; }
-  .region-ssa { top: 70% !important; left: 52%; }
-  .region-asia-pacific { top: 29% !important; left: 74%; }
-  .region-legend {display: none;}
-}
-
-/* Responsive heights similar to chart */
-@media (min-width: 992px) {
-  .regional-map-wrap { min-height: 520px; }
-}
-/* Responsive height for population pyramid chart */
-.chart-pyramid {
-  height: 480px; /* small screens */
-}
-
-@media (min-width: 992px) { /* Bootstrap lg breakpoint */
-  .chart-pyramid {
-    height: 640px; /* large screens */
-  }
-}
 /* Young Health Ambassador Programme - Modern UI/UX Styles */
 
 /* ==================== ROOT VARIABLES ==================== */
@@ -203,8 +41,8 @@ tbody, td, tfoot, th, thead, tr {
   --shadow-glow: 0 0 30px rgba(102, 126, 234, 0.3);
   
   /* Typography */
-  --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-primary: 'SolaimanLipi', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-secondary: 'SolaimanLipi', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   
   /* Transitions */
   --transition-fast: all 0.2s ease;
@@ -218,6 +56,8 @@ tbody, td, tfoot, th, thead, tr {
   --pestel-fg: #0b2a4a;            /* default text on soft */
   --pestel-fg-active: #ffffff;     /* text on active */
 }
+
+
 
 /* PESTEL palettes (optional container classes to override variables) */
 .pestel-learner { /* identical to root defaults */
@@ -351,6 +191,39 @@ body {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
 }
+
+@font-face {
+  font-family: 'SolaimanLipi';
+  src: url('../fonts/SolaimanLipi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0980-09FF, U+200C-200D, U+0964-0965;
+}
+
+/* Bengali text sizing */
+html:lang(bn) lang {
+  font-family: 'SolaimanLipi', sans-serif;
+  font-size: 18px;
+}
+html:lang(bn) span lang {
+  font-size: 18px !important;
+}
+body.lang-bn {
+  font-family: 'SolaimanLipi', sans-serif;
+}
+
+/* body.lang-bn p,
+body.lang-bn li,
+body.lang-bn a,
+body.lang-bn span,
+body.lang-bn label,
+body.lang-bn button,
+body.lang-bn input,
+body.lang-bn textarea,
+body.lang-bn select {
+  font-size: 14px !important;
+} */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
@@ -7956,6 +7829,7 @@ input::placeholder {
 .mod25-lesson6 .m25l6-left-text {
   font-weight: 800;
   line-height: 1.35;
+  font-size: 18px;
 }
 
 .mod25-lesson6 .m25l6-step-right {
@@ -7987,6 +7861,7 @@ input::placeholder {
 .mod25-lesson6 .m25l6-right-text {
   font-weight: 650;
   line-height: 1.6;
+  font-size: 18px;
 }
 
 .mod25-lesson6 .m25l6-paragraph {
@@ -12245,7 +12120,7 @@ p.lead {
 .h-region {
   height: 650px;
 }
-/* My Codes */
+/* My Codes  custom lines 1 */ 
 .pyramid-positive .pyramid-step:nth-child(1) {  
     background-color: #1192D8; /* base */
     color: #fff;
@@ -12466,4 +12341,169 @@ p.lead {
 @media(max-width: 600px) {
   p.lead {
   font-size: 21px; }
+}
+
+/* custom lines 2 */
+
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 1px !important;
+}
+.table thead th {
+    background-color: #4ec2ff !important;
+}
+
+.fa-circle-check {
+  color: #1CAEEA !important;
+}
+
+/* Pyramid collapsed state when modules sidebar hidden */
+.pyramid-positive .pyramid-steps .pyramid-positive-collapsed {
+  opacity: 0.25;
+  filter: grayscale(0.6) brightness(0.85);
+  transform: translateY(6px) scale(.95);
+  transition: opacity .4s ease, transform .4s ease, filter .4s ease;
+}
+
+/* Provide a subtle animate-in when expanding again */
+.modules-expanded .pyramid-positive .pyramid-positive-collapsed {
+  opacity: 1;
+  filter: none;
+  transform: translateY(0) scale(1);
+}
+/* Regional shares map styles */
+.regional-map-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  background-color: #0b1324; /* fallback color */
+  background-image: url('../img/Distribution/global.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.regional-map-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(255,255,255,0.04), rgba(0,0,0,0.22) 70%),
+    repeating-linear-gradient(
+      to right,
+      rgba(255,255,255,0.04) 0,
+      rgba(255,255,255,0.04) 1px,
+      transparent 1px,
+      transparent 24px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.04) 0,
+      rgba(255,255,255,0.04) 1px,
+      transparent 1px,
+      transparent 24px
+    );
+  pointer-events: none;
+}
+
+/* Inline SVG sizing */
+/* If an inline SVG is ever used, keep sensible defaults */
+.regional-map-svg { width: 100%; height: 100%; display: block; }
+.regional-map-svg .region-shape {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.region-chip {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #0b1324;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 999px;
+  backdrop-filter: saturate(130%) blur(2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.region-chip .chip-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--chip-color, #60A5FA);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--chip-color, #60A5FA) 25%, white 75%);
+}
+
+.region-chip .chip-text { font-size: 0.9rem; line-height: 1; }
+
+/* Legend list at the bottom of the map */
+.region-legend {
+  position: absolute;
+  left: 0; right: 0; bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  justify-content: center;
+  padding: 8px 12px;
+  margin: 0;
+  list-style: none;
+}
+
+.region-legend li {
+  color: #f9fafb;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.region-legend .legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+/* Rough pin positions per region (tweak as needed) */
+.region-north-america { top: 36%; left: 18%; }
+.region-latin-america { top: 58%; left: 30%; }
+.region-europe { top: 28%; left: 52%; }
+.region-mena { top: 40%; left: 54%; }
+.region-ssa { top: 60%; left: 52%; }
+.region-asia-pacific { top: 44%; left: 74%; }
+@media (max-width: 600px) {
+  .region-north-america { top: 10% !important; left: 18%; }
+  .region-latin-america { top: 58% !important; left: 30%; }
+  .region-europe { top: 18%!important; left: 52%; }
+  .region-mena { top: 40% !important; left: 53%; }
+  .region-ssa { top: 70% !important; left: 52%; }
+  .region-asia-pacific { top: 29% !important; left: 74%; }
+  .region-legend {display: none;}
+}
+
+/* Responsive heights similar to chart */
+@media (min-width: 992px) {
+  .regional-map-wrap { min-height: 520px; }
+}
+/* Responsive height for population pyramid chart */
+.chart-pyramid {
+  height: 480px; /* small screens */
+}
+
+@media (min-width: 992px) { /* Bootstrap lg breakpoint */
+  .chart-pyramid {
+    height: 640px; /* large screens */
+  }
 }
