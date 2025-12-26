@@ -208,7 +208,7 @@ html:lang(bn) lang {
 }
 html:lang(bn) .lesson-hero__top  lang,
 html[lang|="bn"] .lesson-hero__top lang {
-  font-size: 22px !important;
+  font-size: 18px !important;
 }
 html:lang(bn) .offcanvas  lang,
 html[lang|="bn"] .offcanvas lang {
