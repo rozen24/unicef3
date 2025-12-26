@@ -204,13 +204,67 @@ body {
 /* Bengali text sizing */
 html:lang(bn) lang {
   font-family: 'SolaimanLipi', sans-serif;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
-html:lang(bn) span lang {
-  font-size: 18px !important;
+html:lang(bn) .lesson-hero__top  lang,
+html[lang|="bn"] .lesson-hero__top lang {
+  font-size: 22px !important;
 }
-body.lang-bn {
-  font-family: 'SolaimanLipi', sans-serif;
+html:lang(bn) .offcanvas  lang,
+html[lang|="bn"] .offcanvas lang {
+  font-size: 22px !important;
+}
+html:lang(bn) .m25l3-th-text lang,
+html[lang|="bn"] .m25l3-th-text lang,
+html:lang(bn) .m25l6-right-text, .m25l6-left-text lang,
+html[lang|="bn"] .m25l6-right-text, .m25l6-left-text lang {
+  font-size: 24px !important;
+}
+
+html:lang(bn) .m25l3-td-text, .info-text lang,
+html[lang|="bn"] .m25l3-td-text, .info-text lang {
+  font-size: 22px !important;
+}
+
+html:lang(bn) .m25l5-item-text lang,
+html[lang|="bn"] .m25l5-th-text lang {
+  font-size: 26px !important;
+}
+
+
+
+html:lang(bn) h2 lang,
+html[lang|="bn"] h2 lang {
+  font-size: 44px !important;
+}
+html:lang(bn) h6 lang,
+html[lang|="bn"] h6 lang {
+  font-size: 28px !important;
+}
+html:lang(bn) h3 lang,
+html[lang|="bn"] h3 lang {
+  font-size: 36px !important;
+}
+html:lang(bn) .m25l4-text lang,
+html[lang|="bn"] .m25l4-text lang {
+  font-size: 24px !important;
+}
+html:lang(bn) p lang,
+html[lang|="bn"] p lang {
+  font-size: 24px !important;
+}
+
+html:lang(bn)  .m25l1-circle__text lang,
+html[lang|="bn"] .m25l1-circle__text lang {
+  font-size: 34px !important;
+}
+html:lang(bn)  .m25l4-square__text lang,
+html[lang|="bn"] .m25l4-square__text lang {
+  font-size: 34px !important;
+}
+html:lang(bn)  .m25l5-left__title lang,
+html[lang|="bn"] .m25l5-left__title lang {
+  font-size: 34px !important;
 }
 
 /* body.lang-bn p,
@@ -256,6 +310,10 @@ img {
   height: auto;
 }
 
+html:lang(bn) h2,
+html[lang|="bn"] h2 {
+  font-size: 24px !important;
+}
 /* ==================== UTILITY CLASSES ==================== */
 .gradient-text {
   background: var(--primary-gradient);
@@ -7714,7 +7772,7 @@ input::placeholder {
 
 .mod25-lesson6 .m25l6-hero {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   padding: 16px 18px;
   border-radius: 20px;
