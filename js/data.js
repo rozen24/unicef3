@@ -16635,6 +16635,771 @@ const coursesData = [
                 </div>`;
             })(),
           },
+          {
+            id: "ch24-lesson-5",
+            title: yhLang("What are Life Skills?", "জীবন দক্ষতা কী?"),
+            icon: "fa-compass",
+            gradientClass: "bg-gradient-lavender",
+            audioFile: "",
+            content: (function () {
+              const items = [
+                {
+                  icon: "fa-gears",
+                  bulletClass: "m24l5-bullet--a",
+                  text: yhLang(
+                    "Life skills are the ability to manage daily life problems and needs properly by understanding them.",
+                    "জীবন দক্ষতা হলো দৈনন্দিন জীবনের সমস্যা ও চাহিদা বুঝে সেগুলোর সঠিক ব্যবস্থাপনার সক্ষমতা |"
+                  ),
+                  delay: 120,
+                },
+                {
+                  icon: "fa-shield-heart",
+                  bulletClass: "m24l5-bullet--b",
+                  text: yhLang(
+                    "It helps adolescents face the various challenges of life.",
+                    "এটি কিশোর-কিশোরীদের জীবনের নানা চ্যালেঞ্জ মোকাবিলায় সহায়তা করে |"
+                  ),
+                  delay: 200,
+                },
+              ];
+
+              const renderItems = (rows) =>
+                (rows || [])
+                  .map(
+                    (row, idx) => `
+                      <li class="m24l5-item" data-aos="fade-up" data-aos-delay="${row.delay}" style="--d:${idx * 90}ms">
+                        <span class="m24l5-bullet ${row.bulletClass}" aria-hidden="true"><i class="fa-solid ${row.icon}"></i></span>
+                        <p class="m24l5-text m24l5-highlight mb-0">${row.text}</p>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod24-lesson5">
+                  <div class="m24l5-shapes" aria-hidden="true">
+                    <span class="m24l5-shape m24l5-shape--orb"></span>
+                    <span class="m24l5-shape m24l5-shape--blob"></span>
+                    <span class="m24l5-shape m24l5-shape--ring"></span>
+                    <span class="m24l5-shape m24l5-shape--kite"></span>
+                  </div>
+
+                  <header class="m24l5-hero" data-aos="fade-up" style="--d:0ms">
+                    <div class="m24l5-hero__badge bg-gradient-lavender icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h2 class="slide-title gradient-text mb-0 m24l5-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">
+                      ${yhLang("What are Life Skills?", "জীবন দক্ষতা কী?")}
+                    </h2>
+                  </header>
+
+                  <article class="m24l5-card modern-card glass-card" data-aos="fade-up" data-aos-delay="90" style="--d:90ms">
+                    <ul class="list-unstyled m24l5-list mb-0">
+                      ${renderItems(items)}
+                    </ul>
+                  </article>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch24-lesson-6",
+            title: yhLang("Important Life Skills", "গুরুত্বপূর্ণ জীবন দক্ষতা"),
+            icon: "fa-stars",
+            gradientClass: "bg-gradient-mint",
+            audioFile: "",
+            content: (function () {
+              const skills = [
+                {
+                  icon: "fa-user-check",
+                  accent: "m24l6-skill--a",
+                  text: yhLang("Self-awareness", "নিজেকে জানা"),
+                },
+                {
+                  icon: "fa-face-smile-beam",
+                  accent: "m24l6-skill--b",
+                  text: yhLang("Managing emotions", "আবেগের সঠিক ব্যবস্থাপনা"),
+                },
+                {
+                  icon: "fa-puzzle-piece",
+                  accent: "m24l6-skill--c",
+                  text: yhLang("Identifying & solving problems", "সমস্যা চিহ্নিতকরণ ও সমাধান"),
+                },
+                {
+                  icon: "fa-magnifying-glass",
+                  accent: "m24l6-skill--d",
+                  text: yhLang("Critical thinking & analysis", "গভীরভাবে চিন্তা ও বিশ্লেষণ"),
+                },
+                {
+                  icon: "fa-square-check",
+                  accent: "m24l6-skill--e",
+                  text: yhLang("Decision making", "সিদ্ধান্ত গ্রহণ"),
+                },
+                {
+                  icon: "fa-hands-holding-heart",
+                  accent: "m24l6-skill--f",
+                  text: yhLang("Empathy", "সহমর্মিতা"),
+                },
+                {
+                  icon: "fa-people-arrows",
+                  accent: "m24l6-skill--g",
+                  text: yhLang(
+                    "Dealing with friends & peer pressure",
+                    "বন্ধু ও পারিপার্শ্বিক চাপ (Peer Pressure) মোকাবিলা"
+                  ),
+                },
+                {
+                  icon: "fa-comments",
+                  accent: "m24l6-skill--h",
+                  text: yhLang("Effective communication", "কার্যকর যোগাযোগ"),
+                },
+                {
+                  icon: "fa-hand",
+                  accent: "m24l6-skill--i",
+                  text: yhLang("Saying ‘No’ when needed", "প্রয়োজনে ‘না’ বলতে পারা"),
+                },
+                {
+                  icon: "fa-handshake",
+                  accent: "m24l6-skill--j",
+                  text: yhLang("Willingness to compromise", "সমঝোতার মানসিকতা"),
+                },
+              ];
+
+              const renderSkills = (items) =>
+                (items || [])
+                  .map(
+                    (item, idx) => `
+                      <li class="m24l6-skill ${item.accent}" data-aos="fade-up" data-aos-delay="${120 + idx * 55}" style="--d:${80 + idx * 85}ms">
+                        <span class="m24l6-skill__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m24l6-skill__text m24l6-line">${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod24-lesson6">
+                  <div class="m24l6-shapes" aria-hidden="true">
+                    <span class="m24l6-shape m24l6-shape--wave"></span>
+                    <span class="m24l6-shape m24l6-shape--dots"></span>
+                    <span class="m24l6-shape m24l6-shape--pill"></span>
+                    <span class="m24l6-shape m24l6-shape--ring"></span>
+                  </div>
+
+                  <header class="m24l6-hero" data-aos="fade-up">
+                    <span class="m24l6-hero__icon bg-gradient-mint icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-stars"></i></span>
+                    <h2 class="slide-title gradient-text mb-0 m24l6-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">${yhLang(
+                      "Important Life Skills",
+                      "গুরুত্বপূর্ণ জীবন দক্ষতা"
+                    )}</h2>
+                  </header>
+
+                  <ul class="list-unstyled m24l6-grid mb-0">
+                    ${renderSkills(skills)}
+                  </ul>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch24-lesson-7",
+            title: yhLang("Is it hard to learn life skills?", "জীবন দক্ষতা শেখা কি কঠিন?"),
+            icon: "fa-feather-pointed",
+            gradientClass: "bg-gradient-yellow",
+            audioFile: "",
+            content: (function () {
+              const quoteLines = [
+                {
+                  icon: "fa-circle-check",
+                  text: yhLang(
+                    "No part of life skills is difficult",
+                    "জীবন দক্ষতার কোনো বিষয়ই কঠিন নয়"
+                  ),
+                },
+                {
+                  icon: "fa-arrows-rotate",
+                  text: yhLang(
+                    "if it is practiced correctly and regularly.",
+                    "যদি তা সঠিকভাবে ও নিয়মিত অনুশীলন করা যায়।"
+                  ),
+                },
+              ];
+
+              const helpersTitle = yhLang(
+                "Who can help you learn life skills?",
+                "কারা জীবন দক্ষতা শেখাতে সাহায্য করতে পারেন?"
+              );
+
+              const helpers = [
+                {
+                  icon: "fa-people-roof",
+                  accent: "m24l7-help--a",
+                  text: yhLang("Parents", "মা–বাবা"),
+                },
+                {
+                  icon: "fa-user-group",
+                  accent: "m24l7-help--b",
+                  text: yhLang("Relatives", "আত্মীয়-স্বজন"),
+                },
+                {
+                  icon: "fa-chalkboard-user",
+                  accent: "m24l7-help--c",
+                  text: yhLang("Teacher", "শিক্ষক"),
+                },
+                {
+                  icon: "fa-user-gear",
+                  accent: "m24l7-help--d",
+                  text: yhLang("Trainer & Service Provider", "প্রশিক্ষক ও সার্ভিস প্রোভাইডার"),
+                },
+              ];
+
+              const renderQuote = (lines) =>
+                (lines || [])
+                  .map(
+                    (row, idx) => `
+                      <p class="m24l7-quote-line m24l7-line mb-2" data-aos="fade-up" data-aos-delay="${120 + idx * 80}" style="--d:${80 + idx * 110}ms">
+                        <span class="m24l7-quote-icon" aria-hidden="true"><i class="fa-solid ${row.icon}"></i></span>
+                        <span>${row.text}</span>
+                      </p>
+                    `
+                  )
+                  .join("");
+
+              const renderHelpers = (items) =>
+                (items || [])
+                  .map(
+                    (item, idx) => `
+                      <li class="m24l7-help ${item.accent}" data-aos="fade-up" data-aos-delay="${280 + idx * 70}" style="--d:${220 + idx * 95}ms">
+                        <span class="m24l7-help__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m24l7-help__text m24l7-line">${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod24-lesson7">
+                  <div class="m24l7-shapes" aria-hidden="true">
+                    <span class="m24l7-shape m24l7-shape--sun"></span>
+                    <span class="m24l7-shape m24l7-shape--confetti"></span>
+                    <span class="m24l7-shape m24l7-shape--paper"></span>
+                    <span class="m24l7-shape m24l7-shape--arc"></span>
+                  </div>
+
+                  <header class="m24l7-hero" data-aos="fade-up">
+                    <span class="m24l7-hero__badge bg-gradient-yellow icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-feather-pointed"></i>
+                    </span>
+                    <h2 class="slide-title gradient-text mb-0 m24l7-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">${yhLang(
+                      "Is it hard to learn life skills?",
+                      "জীবন দক্ষতা শেখা কি কঠিন?"
+                    )}</h2>
+                  </header>
+
+                  <div class="row g-3 mt-3 align-items-stretch">
+                    <div class="col-12 col-lg-6">
+                      <article class="m24l7-quote" data-aos="zoom-in" data-aos-delay="90">
+                        ${renderQuote(quoteLines)}
+                      </article>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <article class="m24l7-panel" data-aos="fade-left" data-aos-delay="120">
+                        <h3 class="m24l7-question m24l7-line mb-3" data-aos="fade-up" data-aos-delay="200" style="--d:180ms">${helpersTitle}</h3>
+                        <ul class="list-unstyled m24l7-helpers mb-0">
+                          ${renderHelpers(helpers)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch24-lesson-8",
+            title: yhLang("What are Values?", "মূল্যবোধ কী?"),
+            icon: "fa-scale-balanced",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            content: (function () {
+              const highlights = [
+                {
+                  icon: "fa-scale-balanced",
+                  text: yhLang("Values are—", "মূল্যবোধ হলো—"),
+                },
+                {
+                  icon: "fa-thumbs-up",
+                  text: yhLang(
+                    "the sense of judging right and wrong.",
+                    "ভালো ও খারাপ বিচার করার বোধ।"
+                  ),
+                },
+                {
+                  icon: "fa-equals",
+                  text: yhLang(
+                    "Values = evaluation + sense",
+                    " মূল্যবোধ = মূল্যায়ন + বোধ"
+                  ),
+                },
+                {
+                  icon: "fa-compass-drafting",
+                  text: yhLang(
+                    "That means choosing what is right and just using intellect and judgement.",
+                    "অর্থাৎ বুদ্ধি ও বিবেচনা দিয়ে সঠিক ও ন্যায়সংগত কাজ বেছে নেওয়া।"
+                  ),
+                },
+              ];
+
+              const explanationTitle = yhLang(
+                "Explanation of values",
+                "মূল্যবোধের ব্যাখ্যা"
+              );
+              const explanationText = yhLang(
+                "Using your intellect and judgement to assess what is good or bad in an action, and practicing the good and just aspects—that is values.",
+                "নিজের বুদ্ধি ও বিবেচনা ব্যবহার করে কোনো কাজের ভালো-মন্দ বিচার করে ভালো ও ন্যায়সংগত দিকগুলো চর্চা করাই হলো মূল্যবোধ।"
+              );
+
+              const learnTitle = yhLang(
+                "How can values be learned",
+                "মূল্যবোধ শেখা যায় কীভাবে"
+              );
+              const learnItems = [
+                {
+                  icon: "fa-house-chimney-heart",
+                  accent: "m24l8-learn--a",
+                  text: yhLang("Family education", "পারিবারিক শিক্ষা"),
+                },
+                {
+                  icon: "fa-place-of-worship",
+                  accent: "m24l8-learn--b",
+                  text: yhLang("Religious education", "ধর্মীয় শিক্ষা"),
+                },
+                {
+                  icon: "fa-people-group",
+                  accent: "m24l8-learn--c",
+                  text: yhLang("Through social practice", "সামাজিক চর্চার মাধ্যমে"),
+                },
+              ];
+
+              const renderHighlights = (items) =>
+                (items || [])
+                  .map(
+                    (row, idx) => `
+                      <div class="m24l8-hi m24l8-line" data-aos="fade-up" data-aos-delay="${120 + idx * 70}" style="--d:${80 + idx * 95}ms">
+                        <span class="m24l8-hi__icon" aria-hidden="true"><i class="fa-solid ${row.icon}"></i></span>
+                        <span class="m24l8-hi__text">${row.text}</span>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              const renderLearn = (items) =>
+                (items || [])
+                  .map(
+                    (item, idx) => `
+                      <li class="m24l8-learn ${item.accent} m24l8-line" data-aos="fade-up" data-aos-delay="${380 + idx * 90}" style="--d:${320 + idx * 110}ms">
+                        <span class="m24l8-learn__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m24l8-learn__text">${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod24-lesson8">
+                  <div class="m24l8-shapes" aria-hidden="true">
+                    <span class="m24l8-shape m24l8-shape--hex"></span>
+                    <span class="m24l8-shape m24l8-shape--triangle"></span>
+                    <span class="m24l8-shape m24l8-shape--grid"></span>
+                    <span class="m24l8-shape m24l8-shape--ring"></span>
+                  </div>
+
+                  <header class="m24l8-hero" data-aos="fade-up">
+                    <span class="m24l8-hero__badge bg-gradient-blue icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-scale-balanced"></i>
+                    </span>
+                    <h2 class="slide-title gradient-text mb-0 m24l8-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">${yhLang(
+                      "What are Values?",
+                      "মূল্যবোধ কী?"
+                    )}</h2>
+                  </header>
+
+                  <div class="row g-3 mt-3 align-items-stretch">
+                    <div class="col-12 col-lg-6">
+                      <section class="m24l8-card m24l8-card--hi" data-aos="zoom-in" data-aos-delay="90">
+                        ${renderHighlights(highlights)}
+                      </section>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <section class="m24l8-card m24l8-card--body" data-aos="fade-left" data-aos-delay="120">
+                        <h3 class="m24l8-subtitle m24l8-line mb-2" data-aos="fade-up" data-aos-delay="200" style="--d:180ms">${explanationTitle}</h3>
+                        <p class="m24l8-paragraph m24l8-line mb-3" data-aos="fade-up" data-aos-delay="240" style="--d:220ms">${explanationText}</p>
+
+                        <h3 class="m24l8-subtitle m24l8-line mb-2" data-aos="fade-up" data-aos-delay="280" style="--d:260ms">${learnTitle}</h3>
+                        <ul class="list-unstyled m24l8-learnList mb-0">
+                          ${renderLearn(learnItems)}
+                        </ul>
+                      </section>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch24-lesson-9",
+            title: yhLang("Causes of Value Degradation", "মূল্যবোধ অবক্ষয়ের কারণ"),
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            content: (function () {
+              const causes = [
+                {
+                  icon: "fa-house-lock",
+                  accent: "m24l9-cause--a",
+                  text: yhLang(
+                    "Lack of family guidance",
+                    "পারিবারিক অনুশাসনের অভাব"
+                  ),
+                },
+                {
+                  icon: "fa-place-of-worship",
+                  accent: "m24l9-cause--b",
+                  text: yhLang(
+                    "Lack of religious education",
+                    "ধর্মীয় শিক্ষার ঘাটতি"
+                  ),
+                },
+                {
+                  icon: "fa-masks-theater",
+                  accent: "m24l9-cause--c",
+                  text: yhLang(
+                    "Social and cultural decline",
+                    "সামাজিক ও সাংস্কৃতিক অবক্ষয়"
+                  ),
+                },
+                {
+                  icon: "fa-person-running",
+                  accent: "m24l9-cause--d",
+                  text: yhLang(
+                    "Reckless behavior in the name of being modern",
+                    "আধুনিক হতে গিয়ে বেপরোয়া আচরণ"
+                  ),
+                },
+                {
+                  icon: "fa-star",
+                  accent: "m24l9-cause--e",
+                  text: yhLang(
+                    "Thinking of oneself as a ‘hero’",
+                    "নিজেকে ‘হিরো’ মনে করা"
+                  ),
+                },
+                {
+                  icon: "fa-pills",
+                  accent: "m24l9-cause--f",
+                  text: yhLang("Drug use", "মাদক সেবন"),
+                },
+                {
+                  icon: "fa-mobile-screen-button",
+                  accent: "m24l9-cause--g",
+                  text: yhLang(
+                    "Uncontrolled use of mobile phones",
+                    "মোবাইল ফোনের অনিয়ন্ত্রিত ব্যবহার"
+                  ),
+                },
+                {
+                  icon: "fa-wifi",
+                  accent: "m24l9-cause--h",
+                  text: yhLang(
+                    "Misuse of the internet",
+                    "ইন্টারনেটের অপব্যবহার"
+                  ),
+                },
+                {
+                  icon: "fa-bullhorn",
+                  accent: "m24l9-cause--i",
+                  text: yhLang(
+                    "Negative marketing practices",
+                    "নেতিবাচক বিপণন ব্যবস্থা"
+                  ),
+                },
+              ];
+
+              const renderCauses = (items) =>
+                (items || [])
+                  .map(
+                    (item, idx) => `
+                      <li class="m24l9-cause ${item.accent} m24l9-line" data-aos="fade-up" data-aos-delay="${140 + idx * 55}" style="--d:${90 + idx * 75}ms">
+                        <span class="m24l9-cause__badge" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m24l9-cause__text">${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod24-lesson9">
+                  <div class="m24l9-shapes" aria-hidden="true">
+                    <span class="m24l9-shape m24l9-shape--ribbon"></span>
+                    <span class="m24l9-shape m24l9-shape--dots"></span>
+                    <span class="m24l9-shape m24l9-shape--tile"></span>
+                    <span class="m24l9-shape m24l9-shape--ring"></span>
+                  </div>
+
+                  <header class="m24l9-hero" data-aos="fade-up">
+                    <span class="m24l9-hero__icon bg-gradient-orange icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                    </span>
+                    <h2 class="slide-title gradient-text mb-0 m24l9-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">
+                      ${yhLang("Causes of Value Degradation", "মূল্যবোধ অবক্ষয়ের কারণ")}
+                    </h2>
+                  </header>
+
+                  <ul class="list-unstyled m24l9-grid mb-0">
+                    ${renderCauses(causes)}
+                  </ul>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch24-lesson-10",
+            title: yhLang("How to develop values", "কীভাবে মূল্যবোধ উন্নয়ন করা যায়"),
+            icon: "fa-seedling",
+            gradientClass: "bg-gradient-pink",
+            audioFile: "",
+            content: (function () {
+              const highlight = [
+                {
+                  icon: "fa-user-shield",
+                  text: yhLang(
+                    "According to crime experts—",
+                    "অপরাধ বিশেষজ্ঞদের মতে—"
+                  ),
+                },
+                {
+                  icon: "fa-house-crack",
+                  text: yhLang(
+                    "Lack of family guidance pushes adolescents onto the wrong path.",
+                    "পারিবারিক অনুশাসনের অভাবই কিশোর-কিশোরীদের ভুল পথে ঠেলে দেয়।"
+                  ),
+                },
+              ];
+
+              const methodsTitle = yhLang(
+                "Ways to develop values:",
+                "মূল্যবোধ উন্নয়নের উপায়:"
+              );
+
+              const methods = [
+                {
+                  icon: "fa-heart",
+                  accent: "m24l10-step--a",
+                  text: yhLang(
+                    "Awaken your humanity",
+                    "নিজের মানবিক সত্তাকে জাগিয়ে তোলা"
+                  ),
+                },
+                {
+                  icon: "fa-user-shield",
+                  accent: "m24l10-step--b",
+                  text: yhLang(
+                    "Avoid unguardian-like behavior with adolescents",
+                    "কিশোর-কিশোরীদের সাথে অ-অভিভাবকসুলভ আচরণ"
+                  ),
+                },
+                {
+                  icon: "fa-user-friends",
+                  accent: "m24l10-step--c",
+                  text: yhLang(
+                    "Build a friendly relationship with your child",
+                    "সন্তানের সাথে বন্ধুত্বপূর্ণ সম্পর্ক"
+                  ),
+                },
+                {
+                  icon: "fa-check-double",
+                  accent: "m24l10-step--d",
+                  text: yhLang(
+                    "Develop the habit of telling the truth",
+                    "সত্য বলার অভ্যাস গড়ে তোলা"
+                  ),
+                },
+                {
+                  icon: "fa-ban",
+                  accent: "m24l10-step--e",
+                  text: yhLang(
+                    "Teach to hate lies",
+                    "মিথ্যাকে ঘৃণা করতে শেখানো"
+                  ),
+                },
+                {
+                  icon: "fa-circle-info",
+                  accent: "m24l10-step--f",
+                  text: yhLang(
+                    "Provide correct and truthful information about sexuality",
+                    "যৌনতা বিষয়ে সঠিক ও সত্য তথ্য দেওয়া"
+                  ),
+                },
+                {
+                  icon: "fa-scale-balanced",
+                  accent: "m24l10-step--g",
+                  text: yhLang(
+                    "Help understand good and bad consequences",
+                    "ভালো ও মন্দ পরিণতি বুঝতে সহায়তা করা"
+                  ),
+                },
+                {
+                  icon: "fa-thumbs-up",
+                  accent: "m24l10-step--h",
+                  text: yhLang(
+                    "Encourage making the right decision",
+                    "সঠিক সিদ্ধান্ত নিতে উৎসাহ দেওয়া"
+                  ),
+                },
+              ];
+
+              const renderHighlight = (items) =>
+                (items || [])
+                  .map(
+                    (row, idx) => `
+                      <p class="m24l10-quoteLine m24l10-line mb-2" data-aos="fade-up" data-aos-delay="${140 + idx * 90}" style="--d:${90 + idx * 110}ms">
+                        <span class="m24l10-quoteIcon" aria-hidden="true"><i class="fa-solid ${row.icon}"></i></span>
+                        <span>${row.text}</span>
+                      </p>
+                    `
+                  )
+                  .join("");
+
+              const renderMethods = (items) =>
+                (items || [])
+                  .map(
+                    (item, idx) => `
+                      <li class="m24l10-step ${item.accent} m24l10-line" data-aos="fade-up" data-aos-delay="${320 + idx * 60}" style="--d:${260 + idx * 80}ms">
+                        <span class="m24l10-step__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m24l10-step__text">${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod24-lesson10">
+                  <div class="m24l10-shapes" aria-hidden="true">
+                    <span class="m24l10-shape m24l10-shape--leaf"></span>
+                    <span class="m24l10-shape m24l10-shape--ribbon"></span>
+                    <span class="m24l10-shape m24l10-shape--grid"></span>
+                    <span class="m24l10-shape m24l10-shape--ring"></span>
+                  </div>
+
+                  <header class="m24l10-hero" data-aos="fade-up">
+                    <span class="m24l10-hero__badge bg-gradient-pink icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-seedling"></i>
+                    </span>
+                    <h2 class="slide-title gradient-text mb-0 m24l10-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">
+                      ${yhLang("How to develop values", "কীভাবে মূল্যবোধ উন্নয়ন করা যায়")}
+                    </h2>
+                  </header>
+
+                  <div class="row g-3 mt-3 align-items-stretch">
+                    <div class="col-12 col-lg-5">
+                      <article class="m24l10-quote" data-aos="zoom-in" data-aos-delay="100">
+                        ${renderHighlight(highlight)}
+                      </article>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <article class="m24l10-panel" data-aos="fade-left" data-aos-delay="130">
+                        <h3 class="m24l10-title m24l10-line mb-3" data-aos="fade-up" data-aos-delay="220" style="--d:200ms">${methodsTitle}</h3>
+                        <ul class="list-unstyled m24l10-steps mb-0">
+                          ${renderMethods(methods)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch24-lesson-11",
+            title: yhLang(
+              "How ethics and values education contributes to a healthy and beautiful life",
+              "কীভাবে নৈতিকতা ও মূল্যবোধ শিক্ষা সুস্থ ও সুন্দর জীবনে অবদান রাখে"
+            ),
+            icon: "fa-hand-holding-heart",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            content: (function () {
+              const points = [
+                {
+                  icon: "fa-people-roof",
+                  accent: "m24l11-item--a",
+                  text: yhLang(
+                    "Family, social, and religious values education helps young people stay away from crises and risky behaviors.",
+                    "পারিবারিক, সামাজিক ও ধর্মীয় মূল্যবোধ শিক্ষা তরুণ-তরুণীদের সংকট ও ঝুঁকিপূর্ণ আচরণ থেকে দূরে রাখতে সহায়তা করে"
+                  ),
+                },
+                {
+                  icon: "fa-school",
+                  accent: "m24l11-item--b",
+                  text: yhLang(
+                    "When schools and teachers highlight ethics during lessons, students get opportunities to practice them.",
+                    "বিদ্যালয় ও শিক্ষকেরা পাঠদানের সময় নৈতিকতার বিষয়গুলো তুলে ধরলে শিক্ষার্থীরা সেগুলো অনুশীলনের সুযোগ পায়"
+                  ),
+                },
+                {
+                  icon: "fa-people-group",
+                  accent: "m24l11-item--c",
+                  text: yhLang(
+                    "Life skills education (through group activities) helps build moral thinking and responsible behavior.",
+                    "জীবন দক্ষতা শিক্ষা (দলগত কার্যক্রমের মাধ্যমে) নৈতিক চিন্তা ও দায়িত্বশীল আচরণ গড়ে তুলতে সাহায্য করে"
+                  ),
+                },
+                {
+                  icon: "fa-leaf",
+                  accent: "m24l11-item--d",
+                  text: yhLang(
+                    "When people become conscious of ethics and values, crime-proneness and negative behaviors decrease, leading to a healthy and beautiful life.",
+                    "নৈতিকতা ও মূল্যবোধে সচেতন মানুষ তৈরি হলে অপরাধপ্রবণতা ও নেতিবাচক আচরণ কমে গিয়ে সুস্থ ও সুন্দর জীবন গড়ে ওঠে"
+                  ),
+                },
+              ];
+
+              const render = (items) =>
+                (items || [])
+                  .map(
+                    (item, idx) => `
+                      <li class="m24l11-item ${item.accent} m24l11-line" data-aos="fade-up" data-aos-delay="${150 + idx * 70}" style="--d:${90 + idx * 95}ms">
+                        <span class="m24l11-item__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m24l11-item__text">${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod24-lesson11">
+                  <div class="m24l11-shapes" aria-hidden="true">
+                    <span class="m24l11-shape m24l11-shape--petal"></span>
+                    <span class="m24l11-shape m24l11-shape--wave"></span>
+                    <span class="m24l11-shape m24l11-shape--sparkles"></span>
+                    <span class="m24l11-shape m24l11-shape--ring"></span>
+                  </div>
+
+                  <header class="m24l11-hero" data-aos="fade-up">
+                    <span class="m24l11-hero__badge bg-gradient-purple icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-hand-holding-heart"></i>
+                    </span>
+                    <h2 class="slide-title gradient-text mb-0 m24l11-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">
+                      ${yhLang(
+                        "How ethics and values education contributes to a healthy and beautiful life",
+                        "কীভাবে নৈতিকতা ও মূল্যবোধ শিক্ষা সুস্থ ও সুন্দর জীবনে অবদান রাখে"
+                      )}
+                    </h2>
+                  </header>
+
+                  <ul class="list-unstyled m24l11-list mb-0">
+                    ${render(points)}
+                  </ul>
+                </div>`;
+            })(),
+          },
         ],
       },
       {

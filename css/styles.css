@@ -1872,6 +1872,1271 @@ html[lang|="bn"] h2 {
   background: linear-gradient(135deg, #FB7185 0%, #F43F5E 100%);
 }
 
+/* ==================== MODULE 24 • LESSON 5 ==================== */
+.mod24-lesson5 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: 1.25rem;
+  background: var(--lavender-gradient);
+}
+
+.mod24-lesson5 .m24l5-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.mod24-lesson5 .m24l5-hero__badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.12);
+}
+
+.mod24-lesson5 .m24l5-hero__badge i {
+  font-size: 1.35rem;
+  color: #2d3748;
+}
+
+.mod24-lesson5 .m24l5-card {
+  margin-top: 1rem;
+  padding: 1.1rem;
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(8px);
+}
+
+.mod24-lesson5 .m24l5-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.mod24-lesson5 .m24l5-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: start;
+  gap: 0.85rem;
+}
+
+.mod24-lesson5 .m24l5-bullet {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.12);
+}
+
+.mod24-lesson5 .m24l5-bullet--a {
+  background: var(--mint-gradient);
+}
+
+.mod24-lesson5 .m24l5-bullet--b {
+  background: var(--pink-gradient);
+}
+
+.mod24-lesson5 .m24l5-bullet i {
+  font-size: 1.15rem;
+  color: #1f2937;
+}
+
+.mod24-lesson5 .m24l5-highlight {
+  padding: 0.85rem 0.95rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.70);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 10px 22px rgba(16, 24, 40, 0.08);
+}
+
+/* Decorative shapes */
+.mod24-lesson5 .m24l5-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod24-lesson5 .m24l5-shape {
+  position: absolute;
+  opacity: 0.55;
+  filter: blur(0.2px);
+  transform: translateZ(0);
+}
+
+.mod24-lesson5 .m24l5-shape--orb {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  background: var(--teal-gradient);
+  top: -32px;
+  left: -36px;
+}
+
+.mod24-lesson5 .m24l5-shape--blob {
+  width: 160px;
+  height: 130px;
+  border-radius: 52% 48% 52% 48% / 52% 58% 42% 48%;
+  background: var(--yellow-gradient);
+  bottom: -46px;
+  right: -54px;
+}
+
+.mod24-lesson5 .m24l5-shape--ring {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  border: 10px solid rgba(255, 255, 255, 0.55);
+  top: 18px;
+  right: 16px;
+}
+
+.mod24-lesson5 .m24l5-shape--kite {
+  width: 110px;
+  height: 110px;
+  background: var(--purple-gradient);
+  border-radius: 18px;
+  transform: rotate(18deg);
+  bottom: 18px;
+  left: 20px;
+}
+
+/* Ensure content renders above shapes */
+.mod24-lesson5 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-line animation (in addition to AOS) */
+.mod24-lesson5 .m24l5-line,
+.mod24-lesson5 .m24l5-text {
+  animation: m24l5LineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m24l5LineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod24-lesson5 .m24l5-line,
+  .mod24-lesson5 .m24l5-text {
+    animation: none !important;
+  }
+}
+
+/* ==================== MODULE 24 • LESSON 6 ==================== */
+.mod24-lesson6 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 1.25rem;
+  background: var(--mint-gradient);
+}
+
+.mod24-lesson6 .m24l6-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.mod24-lesson6 .m24l6-hero__icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 32px rgba(16, 24, 40, 0.12);
+}
+
+.mod24-lesson6 .m24l6-hero__icon i {
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.mod24-lesson6 .m24l6-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+@media (max-width: 767.98px) {
+  .mod24-lesson6 .m24l6-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mod24-lesson6 .m24l6-skill {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson6 .m24l6-skill__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson6 .m24l6-skill__icon i {
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+/* Different pastel accents per bullet */
+.mod24-lesson6 .m24l6-skill--a .m24l6-skill__icon { background: var(--blue-gradient); }
+.mod24-lesson6 .m24l6-skill--b .m24l6-skill__icon { background: var(--pink-gradient); }
+.mod24-lesson6 .m24l6-skill--c .m24l6-skill__icon { background: var(--yellow-gradient); }
+.mod24-lesson6 .m24l6-skill--d .m24l6-skill__icon { background: var(--lavender-gradient); }
+.mod24-lesson6 .m24l6-skill--e .m24l6-skill__icon { background: var(--green-gradient); }
+.mod24-lesson6 .m24l6-skill--f .m24l6-skill__icon { background: var(--purple-gradient); }
+.mod24-lesson6 .m24l6-skill--g .m24l6-skill__icon { background: var(--orange-gradient); }
+.mod24-lesson6 .m24l6-skill--h .m24l6-skill__icon { background: var(--teal-gradient); }
+.mod24-lesson6 .m24l6-skill--i .m24l6-skill__icon { background: var(--pink-gradient); }
+.mod24-lesson6 .m24l6-skill--j .m24l6-skill__icon { background: var(--lavender-gradient); }
+
+/* Decorative shapes */
+.mod24-lesson6 .m24l6-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod24-lesson6 .m24l6-shape {
+  position: absolute;
+  opacity: 0.55;
+}
+
+.mod24-lesson6 .m24l6-shape--wave {
+  width: 520px;
+  height: 220px;
+  left: -140px;
+  top: -110px;
+  border-radius: 999px;
+  background: var(--blue-gradient);
+  filter: blur(0.2px);
+  transform: rotate(-12deg);
+}
+
+.mod24-lesson6 .m24l6-shape--dots {
+  width: 220px;
+  height: 220px;
+  right: -60px;
+  top: 10px;
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.55) 2px, transparent 3px) 0 0 / 26px 26px;
+}
+
+.mod24-lesson6 .m24l6-shape--pill {
+  width: 190px;
+  height: 110px;
+  left: 16px;
+  bottom: -35px;
+  border-radius: 999px;
+  background: var(--yellow-gradient);
+  transform: rotate(10deg);
+}
+
+.mod24-lesson6 .m24l6-shape--ring {
+  width: 150px;
+  height: 150px;
+  right: 18px;
+  bottom: -40px;
+  border-radius: 999px;
+  border: 10px solid rgba(255,255,255,0.55);
+}
+
+/* Ensure content above shapes */
+.mod24-lesson6 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-line animation (in addition to AOS) */
+.mod24-lesson6 .m24l6-line {
+  animation: m24l6LineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m24l6LineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod24-lesson6 .m24l6-line {
+    animation: none !important;
+  }
+}
+
+/* ==================== MODULE 24 • LESSON 7 ==================== */
+.mod24-lesson7 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background: var(--yellow-gradient);
+}
+
+.mod24-lesson7 .m24l7-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.mod24-lesson7 .m24l7-hero__badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 34px rgba(16, 24, 40, 0.12);
+}
+
+.mod24-lesson7 .m24l7-hero__badge i {
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.mod24-lesson7 .m24l7-quote {
+  position: relative;
+  padding: 1.05rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson7 .m24l7-quote::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  bottom: 14px;
+  width: 10px;
+  border-radius: 999px;
+  background: var(--lavender-gradient);
+  opacity: 0.9;
+}
+
+.mod24-lesson7 .m24l7-quote-line {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  padding-left: 18px;
+  margin-bottom: 0.75rem;
+}
+
+.mod24-lesson7 .m24l7-quote-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--mint-gradient);
+  box-shadow: 0 12px 24px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson7 .m24l7-quote-icon i {
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.mod24-lesson7 .m24l7-panel {
+  padding: 1.05rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.60);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson7 .m24l7-question {
+  margin: 0;
+}
+
+.mod24-lesson7 .m24l7-helpers {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.mod24-lesson7 .m24l7-help {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson7 .m24l7-help__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson7 .m24l7-help__icon i {
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+/* Per-bullet icon backgrounds */
+.mod24-lesson7 .m24l7-help--a .m24l7-help__icon { background: var(--pink-gradient); }
+.mod24-lesson7 .m24l7-help--b .m24l7-help__icon { background: var(--purple-gradient); }
+.mod24-lesson7 .m24l7-help--c .m24l7-help__icon { background: var(--blue-gradient); }
+.mod24-lesson7 .m24l7-help--d .m24l7-help__icon { background: var(--teal-gradient); }
+
+/* Decorative shapes */
+.mod24-lesson7 .m24l7-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod24-lesson7 .m24l7-shape {
+  position: absolute;
+  opacity: 0.55;
+}
+
+.mod24-lesson7 .m24l7-shape--sun {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background: var(--orange-gradient);
+  top: -44px;
+  right: -44px;
+}
+
+.mod24-lesson7 .m24l7-shape--confetti {
+  width: 240px;
+  height: 240px;
+  left: -70px;
+  bottom: -80px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.55), transparent 60%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.45) 0 10px,
+      rgba(255,255,255,0) 10px 20px
+    );
+  border-radius: 38% 62% 60% 40% / 44% 40% 60% 56%;
+}
+
+.mod24-lesson7 .m24l7-shape--paper {
+  width: 170px;
+  height: 120px;
+  left: 14px;
+  top: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.55);
+  transform: rotate(-10deg);
+}
+
+.mod24-lesson7 .m24l7-shape--arc {
+  width: 220px;
+  height: 220px;
+  right: 18px;
+  bottom: -92px;
+  border-radius: 999px;
+  border: 12px solid rgba(255, 255, 255, 0.55);
+}
+
+/* Keep content above shapes */
+.mod24-lesson7 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-line animation (in addition to AOS) */
+.mod24-lesson7 .m24l7-line {
+  animation: m24l7LineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m24l7LineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod24-lesson7 .m24l7-line {
+    animation: none !important;
+  }
+}
+
+/* ==================== MODULE 24 • LESSON 8 ==================== */
+.mod24-lesson8 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background: var(--blue-gradient);
+}
+
+.mod24-lesson8 .m24l8-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.mod24-lesson8 .m24l8-hero__badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 34px rgba(16, 24, 40, 0.14);
+}
+
+.mod24-lesson8 .m24l8-hero__badge i {
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.mod24-lesson8 .m24l8-card {
+  padding: 1.05rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson8 .m24l8-card--hi {
+  position: relative;
+}
+
+.mod24-lesson8 .m24l8-card--hi::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 18px;
+  border: 1px dashed rgba(15, 23, 42, 0.12);
+  pointer-events: none;
+}
+
+.mod24-lesson8 .m24l8-hi {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 0.8rem;
+  align-items: start;
+  padding: 0.7rem 0.75rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.70);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 10px 22px rgba(16, 24, 40, 0.08);
+  margin-bottom: 0.75rem;
+}
+
+.mod24-lesson8 .m24l8-hi:last-child {
+  margin-bottom: 0;
+}
+
+.mod24-lesson8 .m24l8-hi__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--lavender-gradient);
+  box-shadow: 0 12px 24px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson8 .m24l8-hi__icon i {
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.mod24-lesson8 .m24l8-subtitle {
+  margin: 0;
+}
+
+.mod24-lesson8 .m24l8-paragraph {
+  margin: 0;
+}
+
+.mod24-lesson8 .m24l8-learnList {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.mod24-lesson8 .m24l8-learn {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson8 .m24l8-learn__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson8 .m24l8-learn__icon i {
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.mod24-lesson8 .m24l8-learn--a .m24l8-learn__icon { background: var(--pink-gradient); }
+.mod24-lesson8 .m24l8-learn--b .m24l8-learn__icon { background: var(--purple-gradient); }
+.mod24-lesson8 .m24l8-learn--c .m24l8-learn__icon { background: var(--mint-gradient); }
+
+/* Decorative shapes */
+.mod24-lesson8 .m24l8-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod24-lesson8 .m24l8-shape {
+  position: absolute;
+  opacity: 0.55;
+}
+
+.mod24-lesson8 .m24l8-shape--hex {
+  width: 150px;
+  height: 150px;
+  top: -42px;
+  left: -42px;
+  background: var(--mint-gradient);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.mod24-lesson8 .m24l8-shape--triangle {
+  width: 160px;
+  height: 160px;
+  right: -50px;
+  top: 10px;
+  background: var(--yellow-gradient);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.mod24-lesson8 .m24l8-shape--grid {
+  width: 260px;
+  height: 260px;
+  left: 10px;
+  bottom: -90px;
+  border-radius: 26px;
+  background:
+    linear-gradient(rgba(255,255,255,0.24) 1px, transparent 1px) 0 0 / 26px 26px,
+    linear-gradient(90deg, rgba(255,255,255,0.24) 1px, transparent 1px) 0 0 / 26px 26px;
+}
+
+.mod24-lesson8 .m24l8-shape--ring {
+  width: 210px;
+  height: 210px;
+  right: 18px;
+  bottom: -90px;
+  border-radius: 999px;
+  border: 12px solid rgba(255,255,255,0.55);
+}
+
+/* Keep content above shapes */
+.mod24-lesson8 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-line animation (in addition to AOS) */
+.mod24-lesson8 .m24l8-line {
+  animation: m24l8LineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m24l8LineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod24-lesson8 .m24l8-line {
+    animation: none !important;
+  }
+}
+
+/* ==================== MODULE 24 • LESSON 9 ==================== */
+.mod24-lesson9 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background: var(--orange-gradient);
+}
+
+.mod24-lesson9 .m24l9-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.mod24-lesson9 .m24l9-hero__icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 34px rgba(16, 24, 40, 0.14);
+}
+
+.mod24-lesson9 .m24l9-hero__icon i {
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.mod24-lesson9 .m24l9-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+@media (max-width: 991.98px) {
+  .mod24-lesson9 .m24l9-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mod24-lesson9 .m24l9-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mod24-lesson9 .m24l9-cause {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.9rem 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(9px);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson9 .m24l9-cause__badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson9 .m24l9-cause__badge i {
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+
+/* Different icon backgrounds per bullet */
+.mod24-lesson9 .m24l9-cause--a .m24l9-cause__badge { background: var(--blue-gradient); }
+.mod24-lesson9 .m24l9-cause--b .m24l9-cause__badge { background: var(--lavender-gradient); }
+.mod24-lesson9 .m24l9-cause--c .m24l9-cause__badge { background: var(--mint-gradient); }
+.mod24-lesson9 .m24l9-cause--d .m24l9-cause__badge { background: var(--yellow-gradient); }
+.mod24-lesson9 .m24l9-cause--e .m24l9-cause__badge { background: var(--pink-gradient); }
+.mod24-lesson9 .m24l9-cause--f .m24l9-cause__badge { background: var(--purple-gradient); }
+.mod24-lesson9 .m24l9-cause--g .m24l9-cause__badge { background: var(--teal-gradient); }
+.mod24-lesson9 .m24l9-cause--h .m24l9-cause__badge { background: var(--green-gradient); }
+.mod24-lesson9 .m24l9-cause--i .m24l9-cause__badge { background: var(--lavender-gradient); }
+
+/* Decorative shapes */
+.mod24-lesson9 .m24l9-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod24-lesson9 .m24l9-shape {
+  position: absolute;
+  opacity: 0.55;
+}
+
+.mod24-lesson9 .m24l9-shape--ribbon {
+  width: 520px;
+  height: 190px;
+  left: -170px;
+  top: -90px;
+  border-radius: 999px;
+  background: var(--pink-gradient);
+  transform: rotate(12deg);
+}
+
+.mod24-lesson9 .m24l9-shape--dots {
+  width: 220px;
+  height: 220px;
+  right: -50px;
+  top: 18px;
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.55) 2px, transparent 3px) 0 0 / 26px 26px;
+}
+
+.mod24-lesson9 .m24l9-shape--tile {
+  width: 240px;
+  height: 240px;
+  left: 18px;
+  bottom: -92px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.35), transparent 60%),
+    linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px) 0 0 / 24px 24px;
+}
+
+.mod24-lesson9 .m24l9-shape--ring {
+  width: 200px;
+  height: 200px;
+  right: 16px;
+  bottom: -86px;
+  border-radius: 999px;
+  border: 12px solid rgba(255,255,255,0.55);
+}
+
+/* Keep content above shapes */
+.mod24-lesson9 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-line animation (in addition to AOS) */
+.mod24-lesson9 .m24l9-line {
+  animation: m24l9LineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m24l9LineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod24-lesson9 .m24l9-line {
+    animation: none !important;
+  }
+}
+
+/* ==================== MODULE 24 • LESSON 10 ==================== */
+.mod24-lesson10 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background: var(--pink-gradient);
+}
+
+.mod24-lesson10 .m24l10-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.mod24-lesson10 .m24l10-hero__badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 34px rgba(16, 24, 40, 0.14);
+}
+
+.mod24-lesson10 .m24l10-hero__badge i {
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.mod24-lesson10 .m24l10-quote {
+  position: relative;
+  padding: 1.05rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson10 .m24l10-quote::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(0,0,0,0.04), transparent 55%);
+  pointer-events: none;
+}
+
+.mod24-lesson10 .m24l10-quoteLine {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.mod24-lesson10 .m24l10-quoteLine:last-child { margin-bottom: 0; }
+
+.mod24-lesson10 .m24l10-quoteIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: var(--lavender-gradient);
+  box-shadow: 0 12px 24px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson10 .m24l10-quoteIcon i {
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.mod24-lesson10 .m24l10-panel {
+  padding: 1.05rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.60);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson10 .m24l10-title {
+  margin: 0;
+}
+
+.mod24-lesson10 .m24l10-steps {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.mod24-lesson10 .m24l10-step {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson10 .m24l10-step__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson10 .m24l10-step__icon i {
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+/* Different icon backgrounds per bullet */
+.mod24-lesson10 .m24l10-step--a .m24l10-step__icon { background: var(--mint-gradient); }
+.mod24-lesson10 .m24l10-step--b .m24l10-step__icon { background: var(--blue-gradient); }
+.mod24-lesson10 .m24l10-step--c .m24l10-step__icon { background: var(--yellow-gradient); }
+.mod24-lesson10 .m24l10-step--d .m24l10-step__icon { background: var(--green-gradient); }
+.mod24-lesson10 .m24l10-step--e .m24l10-step__icon { background: var(--orange-gradient); }
+.mod24-lesson10 .m24l10-step--f .m24l10-step__icon { background: var(--lavender-gradient); }
+.mod24-lesson10 .m24l10-step--g .m24l10-step__icon { background: var(--purple-gradient); }
+.mod24-lesson10 .m24l10-step--h .m24l10-step__icon { background: var(--teal-gradient); }
+
+/* Decorative shapes */
+.mod24-lesson10 .m24l10-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod24-lesson10 .m24l10-shape {
+  position: absolute;
+  opacity: 0.55;
+}
+
+.mod24-lesson10 .m24l10-shape--leaf {
+  width: 170px;
+  height: 170px;
+  left: -54px;
+  top: -54px;
+  background: var(--mint-gradient);
+  border-radius: 40% 60% 60% 40% / 50% 45% 55% 50%;
+  transform: rotate(-12deg);
+}
+
+.mod24-lesson10 .m24l10-shape--ribbon {
+  width: 520px;
+  height: 180px;
+  right: -190px;
+  top: -92px;
+  border-radius: 999px;
+  background: var(--yellow-gradient);
+  transform: rotate(14deg);
+}
+
+.mod24-lesson10 .m24l10-shape--grid {
+  width: 260px;
+  height: 260px;
+  left: 16px;
+  bottom: -98px;
+  border-radius: 26px;
+  background:
+    linear-gradient(rgba(255,255,255,0.22) 1px, transparent 1px) 0 0 / 26px 26px,
+    linear-gradient(90deg, rgba(255,255,255,0.22) 1px, transparent 1px) 0 0 / 26px 26px;
+}
+
+.mod24-lesson10 .m24l10-shape--ring {
+  width: 210px;
+  height: 210px;
+  right: 18px;
+  bottom: -96px;
+  border-radius: 999px;
+  border: 12px solid rgba(255,255,255,0.55);
+}
+
+/* Keep content above shapes */
+.mod24-lesson10 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-line animation (in addition to AOS) */
+.mod24-lesson10 .m24l10-line {
+  animation: m24l10LineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m24l10LineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod24-lesson10 .m24l10-line {
+    animation: none !important;
+  }
+}
+
+/* ==================== MODULE 24 • LESSON 11 ==================== */
+.mod24-lesson11 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background: var(--purple-gradient);
+}
+
+.mod24-lesson11 .m24l11-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.mod24-lesson11 .m24l11-hero__badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 34px rgba(16, 24, 40, 0.14);
+}
+
+.mod24-lesson11 .m24l11-hero__badge i {
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.mod24-lesson11 .m24l11-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.mod24-lesson11 .m24l11-item {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson11 .m24l11-item__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+}
+
+.mod24-lesson11 .m24l11-item__icon i {
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+/* Different icon backgrounds per statement */
+.mod24-lesson11 .m24l11-item--a .m24l11-item__icon { background: var(--mint-gradient); }
+.mod24-lesson11 .m24l11-item--b .m24l11-item__icon { background: var(--blue-gradient); }
+.mod24-lesson11 .m24l11-item--c .m24l11-item__icon { background: var(--yellow-gradient); }
+.mod24-lesson11 .m24l11-item--d .m24l11-item__icon { background: var(--green-gradient); }
+
+/* Decorative shapes */
+.mod24-lesson11 .m24l11-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod24-lesson11 .m24l11-shape {
+  position: absolute;
+  opacity: 0.55;
+}
+
+.mod24-lesson11 .m24l11-shape--petal {
+  width: 220px;
+  height: 160px;
+  left: -70px;
+  top: -60px;
+  background: var(--pink-gradient);
+  border-radius: 50% 50% 60% 40% / 55% 45% 55% 45%;
+  transform: rotate(-18deg);
+}
+
+.mod24-lesson11 .m24l11-shape--wave {
+  width: 560px;
+  height: 210px;
+  right: -220px;
+  top: -110px;
+  border-radius: 999px;
+  background: var(--teal-gradient);
+  transform: rotate(14deg);
+}
+
+.mod24-lesson11 .m24l11-shape--sparkles {
+  width: 260px;
+  height: 260px;
+  left: 14px;
+  bottom: -110px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 10px 12px, rgba(255,255,255,0.55) 2px, transparent 3px) 0 0 / 28px 28px;
+}
+
+.mod24-lesson11 .m24l11-shape--ring {
+  width: 210px;
+  height: 210px;
+  right: 18px;
+  bottom: -96px;
+  border-radius: 999px;
+  border: 12px solid rgba(255,255,255,0.55);
+}
+
+/* Keep content above shapes */
+.mod24-lesson11 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-line animation (in addition to AOS) */
+.mod24-lesson11 .m24l11-line {
+  animation: m24l11LineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m24l11LineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod24-lesson11 .m24l11-line {
+    animation: none !important;
+  }
+}
+
 /* ==================== SDG/SDC lean cards ==================== */
 .sdc_main .modern-card {
   padding: 1.25rem;
