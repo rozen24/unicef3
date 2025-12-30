@@ -16790,7 +16790,14 @@ const coursesData = [
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="200">${yhLang("Types of Communication", "যোগাযোগের প্রকারভেদ")}</h3>
                           </div>
                           <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="240">
-                            <img src="img/modu25/jogajok-Picsart-BackgroundRemover.png" alt="যোগাযোগের প্রকারভেদ" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
+                            <img
+                              src="img/modu25/jogajoke-Picsart-BackgroundRemover.png"
+                              data-src-en="img/modu25/jogajoke-Picsart-BackgroundRemover.png"
+                              data-src-bn="img/modu25/jogajok-Picsart-BackgroundRemover.png"
+                              alt="যোগাযোগের প্রকারভেদ"
+                              class="img-fluid w-100 rounded img-zoom"
+                              loading="lazy"
+                            />
                           </div>
                         </section>
                       </article>
@@ -16804,7 +16811,12 @@ const coursesData = [
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="240">${yhLang("Models of Communication", "যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল")}</h3>
                           </div>
                           <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="280">
-                            <img src="img/modu25/jogajok2-Picsart-BackgroundRemover.png" alt="যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল" class="img-fluid w-100 rounded img-zoom" loading="lazy" />
+                            <img src="img/modu25/jogajok2-Picsart-BackgroundRemover.png"
+                            data-src-en="img/modu25/jogajok2e-Picsart-BackgroundRemover.png"
+                            data-src-bn="img/modu25/jogajok2-Picsart-BackgroundRemover.png"
+                            alt="যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল" 
+                            class="img-fluid w-100 rounded img-zoom" 
+                            loading="lazy" />
                           </div>
                         </section>
                       </article>

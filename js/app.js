@@ -141,6 +141,16 @@ class YouthHealthLMS {
         const text = node.getAttribute(lang) || fallback;
         node.innerHTML = text;
       });
+
+      // Localize image sources (and similar cases) via data-src-en / data-src-bn
+      document
+        .querySelectorAll("img[data-src-en], img[data-src-bn]")
+        .forEach((img) => {
+          const enSrc = img.getAttribute("data-src-en") || "";
+          const bnSrc = img.getAttribute("data-src-bn") || enSrc;
+          const desired = lang === "bn" ? bnSrc : enSrc;
+          if (desired) img.setAttribute("src", desired);
+        });
     } catch (_) {}
   }
 
