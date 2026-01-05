@@ -941,7 +941,7 @@ const coursesData = [
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> ${yhLang("Lifelong learning", "আজীবন শিক্ষা")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> ${yhLang("Work-life Balance", "কর্মজীবন-ব্যক্তিজীবনের ভারসাম্য")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> ${yhLang("Security of Place", "বাসস্থানের নিরাপত্তা")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-hands-holding-child"></i> ${yhLang("Healthy children", "স্বাস্থ্যবান শিশু")}</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-handshake"></i> ${yhLang("Healthy children", "স্বাস্থ্যবান শিশু")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> ${yhLang("Secure old-age", "নিরাপদ বার্ধক্য")}</li>
                         </ul>
                       </div>
@@ -16375,268 +16375,12 @@ const coursesData = [
       {
         id: "ch-24",
         title: yhLang(
-          "Module-24: Communication and counseling with adolescents",
-          "মডিউল-২৪: কিশোর-কিশোরীদের জীবন দক্ষতা, নৈতিকতা ও মূল্যবোধ"
+          "Module-24: Life Skills, Ethics and Values Education for Adolescents",
+          "মডিউল-২৪: তরুণ–তরুণীদের জীবন দক্ষতা, নৈতিকতা ও মূল্যবোধ শিক্ষা"
         ),
         lessons: [
           {
             id: "ch24-lesson-1",
-            title: yhLang("জীবন দক্ষতা শিক্ষা", "জীবন দক্ষতা শিক্ষা"),
-            icon: "fa-brain",
-            gradientClass: "bg-gradient-teal",
-            audioFile: "",
-            content: (function () {
-              const bulletPoints = [
-                "নিজেকে জানা",
-                "আবেগের সঠিক ব্যবস্থাপনা",
-                "সমস্যা চিহ্নিতকরণ ও সমাধান",
-                "গভীরভাবে চিন্তা ও বিশ্লেষণ করা",
-                "সিদ্ধান্ত গ্রহণ",
-                "সহমর্মিতা",
-                "পারিপার্শ্বিক চাপ বিশেষ করে বন্ধুদের প্রভাব সঠিকভাবে সামলানো",
-                "কার্যকর যোগাযোগ",
-                "“না” বলতে পারা",
-                "সমঝোতা করার মানসিকতা",
-              ];
-
-              const renderList = (items) =>
-                (items || [])
-                  .map(
-                    (text) => `
-                      <li class="info-item">
-                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
-                        <span class="info-text">${text}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">জীবন দক্ষতা শিক্ষা</h2>
-                      <p class="mb-2">জীবন দক্ষতা হলো প্রতিদিনকার জীবনের সমস্যা ও চাহিদা বুঝে সেগুলোর সঠিক ব্যবস্থাপনার সক্ষমতা।</p>
-                      <p class="mb-0">কিশোর-কিশোরীদের এ বিষয়ক শিক্ষা তাদের জীবনের বিভিন্ন সমস্যা সমাধানে গুরুত্বপূর্ণ ভূমিকা পালন করে।</p>
-                    </div>
-                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-brain"></i></div>
-                  </header>
-
-                  <div class="row g-3 mt-2 align-items-stretch">
-                    <div class="col-12">
-                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="mb-3">যেমন—</h3>
-                        <ul class="list-unstyled info-list mb-0">
-                          ${renderList(bulletPoints)}
-                        </ul>
-                      </article>
-                    </div>
-                  </div>
-
-                  <div class="program-intro hover-lift-sm transition-base mt-3" data-aos="fade-up" data-aos-delay="160">
-                    <p class="mb-2">এগুলোর কোনোটি কঠিন নয় যদি তা সঠিকভাবে অনুশীলন করা যায়।</p>
-                    <p class="mb-0">জীবন দক্ষতা বিষয়ক শিক্ষা প্রদান করার ক্ষেত্রে বড়রা যেমন মা-বাবা, আত্মীয়-স্বজন, শিক্ষক ইত্যাদি কিশোর-কিশোরীদের সহায়তা করতে পারেন।</p>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch24-lesson-2",
-            title: yhLang("সামাজিক মূল্যবোধ", "সামাজিক মূল্যবোধ"),
-            icon: "fa-people-group",
-            gradientClass: "bg-gradient-teal",
-            audioFile: "",
-            content: (function () {
-              const valuesDefinitionPoints = [
-                "মূল্যবোধ অর্থাৎ যে বোধ দিয়ে আমরা ভালো ও খারাপ দিক/বিষয় মূল্যায়ন করি সেটাই মূল্যবোধ। মূল্যবোধ হচ্ছে মূল্য (মূল্যায়ন) + বোধ (বুদ্ধি/বিবেচনা)।",
-                "অর্থাৎ নিজের বুদ্ধি/বিবেচনা ও সক্ষমতা ব্যবহার করে যেকোনো ঘটনা বা কাজের ভালো-মন্দ, দোষ-গুণ বিচার, বিশ্লেষণ বা মূল্যায়ন করে ভালো, সঠিক বা ন্যায়সংগত দিকগুলোকে চর্চা করাই হলো মূল্যবোধ।",
-                "ধর্মীয় ও পারিবারিক শিক্ষার মাধ্যমে মূল্যবোধ বা নৈতিকতার উন্নয়ন ঘটানো যায়।",
-              ];
-
-              const degradationCauses = [
-                "পারিবারিক অনুশাসনের ঘাটতি ও সামাজিক অবক্ষয়ের প্রভাবে",
-                "ধর্মীয় শিক্ষার অভাব",
-                "সমাজ ও সংস্কৃতির পরিবর্তনকে সঠিকভাবে গ্রহণ করতে না পারা",
-                "আধুনিক হতে গিয়ে বেপরোয়া হয়ে পড়া",
-                "নিজেকে “হিরো” মনে করা",
-                "মাদক সেবন করা",
-                "মোবাইল ফোনের অযৌক্তিক ও অনিয়ন্ত্রিত ব্যবহার",
-                "ইন্টারনেটের অপব্যবহার",
-                "নেতিবাচক বিপণন ব্যবস্থা",
-              ];
-
-              const renderList = (items) =>
-                (items || [])
-                  .map(
-                    (text) => `
-                      <li class="info-item">
-                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
-                        <span class="info-text">${text}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">সামাজিক মূল্যবোধ</h2>
-                      <p class="mb-0"><strong>সামাজিক পরিবর্তনের সাথে সাথে পারিবারিক ও সামাজিক মূল্যবোধও বদলে যাচ্ছে। যত পরিবর্তনই হোক, মূল্যবোধ ও নৈতিকতার অবক্ষয় কোনোভাবেই কারও কাম্য হতে পারে না। পরিবর্তনের কারণে কিশোর-কিশোরীরা নানা অপরাধমূলক ঘটনার শিকার হচ্ছে। পারিবারিক ও সামাজিক অনুশাসন না থাকায় কিশোর-কিশোরীরা অনেক ভয়ংকর ঘটনারও জন্ম দিচ্ছে। সমাজ ও সংস্কৃতির সুস্থধারার পরিবর্তন ও সমন্বয় এ ধরনের ঘটনা প্রতিরোধে সহায়ক।</strong></p>
-                    </div>
-                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-people-group"></i></div>
-                  </header>
-
-                  <div class="row g-3 mt-2 align-items-stretch">
-                    <div class="col-12">
-                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="mb-3">মূল্যবোধ কী?</h3>
-                        <ul class="list-unstyled info-list mb-0">
-                          ${renderList(valuesDefinitionPoints)}
-                        </ul>
-                      </article>
-                    </div>
-
-                    <div class="col-12">
-                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="140">
-                        <h3 class="mb-3">মূল্যবোধ অবক্ষয়ের কারণসমূহ</h3>
-                        <ul class="list-unstyled info-list mb-0">
-                          ${renderList(degradationCauses)}
-                        </ul>
-                      </article>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch24-lesson-3",
-            title: yhLang(
-              "কিভাবে মূল্যবোধের উন্নয়ন করা যায়",
-              "কিভাবে মূল্যবোধের উন্নয়ন করা যায়"
-            ),
-            icon: "fa-hand-holding-heart",
-            gradientClass: "bg-gradient-teal",
-            audioFile: "",
-            content: (function () {
-              const improvementSteps = [
-                "নিজস্ব মনুষ্যত্বকে জাগিয়ে তুলতে হবে",
-                "কিশোর-কিশোরীদের সাথে সঠিক ও অভিভাবকসুলভ আচরণ করতে হবে",
-                "সন্তানের সাথে বন্ধুত্বপূর্ণ আচরণ করতে হবে, যেন সন্তান কোনো বিষয় পিতামাতার কাছে গোপন না করে",
-                "পরিবারের সকলে সত্য কথা বলার অভ্যাস করতে হবে এবং মিথ্যাকে ঘৃণা করা শেখাতে হবে",
-                "কিশোর-কিশোরীদের সঠিক তথ্য দিয়ে সহায়তা করতে হবে—যেমন যৌনতা সম্পর্কে পুরোপুরি সত্য ও সঠিক শিক্ষা দিতে হবে",
-                "সন্তানকে প্রত্যেকটি বিষয়ের ভালো ও মন্দ পরিণতিগুলো উপলব্ধি করতে সাহায্য করতে হবে",
-                "সন্তানকে সূক্ষ্ম বিচার-বিবেচনা করে সঠিক সিদ্ধান্ত নিতে উৎসাহিত করতে হবে এবং প্রয়োজনবোধে সহযোগিতা করতে হবে",
-              ];
-
-              const educationImpactPoints = [
-                "পারিবারিক, সামাজিক ও ধর্মীয় মূল্যবোধ শিক্ষার মাধ্যমে এ ধরনের সংকট থেকে বেরিয়ে আসা সম্ভব। বিদ্যালয়ের শিক্ষাও কিশোর-কিশোরীদের বিষয়গুলো জানতে ও অনুশীলন করতে সাহায্য করতে পারে, যা ভবিষ্যতে তাদের অপরাধপ্রবণতাসহ অন্যান্য নেতিবাচক আচরণ দূর করতে বা কমাতে পারে।",
-                "শিক্ষকেরা ক্লাসে বিভিন্ন বিষয় আলোচনার সময় নৈতিকতার দিকগুলোও তুলে ধরে শিক্ষার্থীদের সেগুলোতে উদ্বুদ্ধ করতে পারেন।",
-                "কিশোর-কিশোরীদের জীবন দক্ষতা শিক্ষাদানের মাধ্যমে (জোর করে নয়) বিষয়গুলো জানতে সহায়তা করা যায়। নৈতিকতা ও মূল্যবোধে সচেতন মানুষ গড়ে তোলা গেলে এ ধরনের অপরাধপ্রবণতা কমে আসবে, যা সুস্থ ও সুন্দর জীবন গঠনে অবদান রাখবে।",
-              ];
-
-              const renderList = (items) =>
-                (items || [])
-                  .map(
-                    (text) => `
-                      <li class="info-item">
-                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
-                        <span class="info-text">${text}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">কিভাবে মূল্যবোধের উন্নয়ন করা যায়</h2>
-                      <p class="mb-0">অপরাধ বিশেষজ্ঞ ও মনোবিজ্ঞানীরা বলেছেন, পারিবারিক অনুশাসনের ঘাটতি ও সামাজিক অবক্ষয়ের প্রভাবেই মূলত কিশোর-কিশোরীরা ভুল পথে পা দিচ্ছে। সুতরাং মূল্যবোধের উন্নয়ন করতে হলে—</p>
-                    </div>
-                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                  </header>
-
-                  <div class="row g-3 mt-2 align-items-stretch">
-                    <div class="col-12">
-                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="100">
-                        <ul class="list-unstyled info-list mb-0">
-                          ${renderList(improvementSteps)}
-                        </ul>
-                      </article>
-                    </div>
-
-                    <div class="col-12">
-                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="140">
-                        <h3 class="mb-3">কিভাবে নৈতিকতা/মূল্যবোধ শিক্ষা সুস্থ ও সুন্দর জীবনে অবদান রাখে</h3>
-                        <ul class="list-unstyled info-list mb-0">
-                          ${renderList(educationImpactPoints)}
-                        </ul>
-                      </article>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch24-lesson-4",
-            title: yhLang("যোগাযোগ", "যোগাযোগ"),
-            icon: "fa-comments",
-            gradientClass: "bg-gradient-teal",
-            audioFile: "",
-            content: (function () {
-              const purposePoints = [
-                "ভাব প্রকাশ করা |",
-                "তথ্য আদান-প্রদান করা |",
-                "অন্যের মতামত ও ধারণা বোঝা |",
-                "নিজের মতামত অন্যের কাছে তুলে ধরা |",
-                "মানুষকে সচেতন করে আচরণের পরিবর্তন আনা |",
-              ];
-
-              const renderList = (items) =>
-                (items || [])
-                  .map(
-                    (text) => `
-                      <li class="info-item">
-                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
-                        <span class="info-text">${text}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">যোগাযোগ</h2>
-                      <p class="mb-2">যোগাযোগ হলো একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহায্যে অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে।</p>
-                      <p class="mb-0"><strong>যোগাযোগের উপাদান:</strong> প্রেরক, প্রাপক, বার্তা, মাধ্যম ও প্রতিক্রিয়া।</p>
-                    </div>
-                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-comments"></i></div>
-                  </header>
-
-                  <div class="row g-3 mt-2 align-items-stretch">
-                    <div class="col-12">
-                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="100">
-                        <p class="mb-0">স্বাস্থ্য সেবাদানকারী যদি সেবাগ্রহীতাকে কোনো তথ্য দেন তাহলে স্বাস্থ্য সেবাদানকারী হচ্ছেন প্রেরক এবং যে তথ্যটি দিতে চান সেটি হচ্ছে বার্তা এবং সেবাগ্রহীতা হচ্ছেন প্রাপক। বার্তাটি পৌঁছানোর জন্য একটি মাধ্যম লাগবে এবং যখন বার্তাটি প্রাপকের কাছে পৌঁছাবে তখন প্রেরক একটি ফিরতি বার্তা প্রত্যাশা করবেন যাকে বলা হয় প্রতিক্রিয়া।</p>
-                      </article>
-                    </div>
-
-                    <div class="col-12">
-                      <article class="modern-card glass-card h-100" data-aos="fade-up" data-aos-delay="140">
-                        <h3 class="mb-3">যোগাযোগের উদ্দেশ্য</h3>
-                        <ul class="list-unstyled info-list mb-0">
-                          ${renderList(purposePoints)}
-                        </ul>
-                      </article>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch24-lesson-5",
             title: yhLang("What are Life Skills?", "জীবন দক্ষতা কী?"),
             icon: "fa-compass",
             gradientClass: "bg-gradient-lavender",
@@ -16648,7 +16392,7 @@ const coursesData = [
                   bulletClass: "m24l5-bullet--a",
                   text: yhLang(
                     "Life skills are the ability to manage daily life problems and needs properly by understanding them.",
-                    "জীবন দক্ষতা হলো দৈনন্দিন জীবনের সমস্যা ও চাহিদা বুঝে সেগুলোর সঠিক ব্যবস্থাপনার সক্ষমতা |"
+                    "জীবন দক্ষতা হলো দৈনন্দিন জীবনের সমস্যা ও চাহিদা বুঝে সেগুলোর সঠিক ব্যবস্থাপনার সক্ষমতা।"
                   ),
                   delay: 120,
                 },
@@ -16657,7 +16401,7 @@ const coursesData = [
                   bulletClass: "m24l5-bullet--b",
                   text: yhLang(
                     "It helps adolescents face the various challenges of life.",
-                    "এটি কিশোর-কিশোরীদের জীবনের নানা চ্যালেঞ্জ মোকাবিলায় সহায়তা করে |"
+                    "এটি কিশোর-কিশোরীদের জীবনের নানা চ্যালেঞ্জ মোকাবিলায় সহায়তা করে।"
                   ),
                   delay: 200,
                 },
@@ -16702,9 +16446,9 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch24-lesson-6",
+            id: "ch24-lesson-2",
             title: yhLang("Important Life Skills", "গুরুত্বপূর্ণ জীবন দক্ষতা"),
-            icon: "fa-stars",
+            icon: "fa-star",
             gradientClass: "bg-gradient-mint",
             audioFile: "",
             content: (function () {
@@ -16735,7 +16479,7 @@ const coursesData = [
                   text: yhLang("Decision making", "সিদ্ধান্ত গ্রহণ"),
                 },
                 {
-                  icon: "fa-hands-holding-heart",
+                  icon: "fa-handshake",
                   accent: "m24l6-skill--f",
                   text: yhLang("Empathy", "সহমর্মিতা"),
                 },
@@ -16770,7 +16514,7 @@ const coursesData = [
                     (item, idx) => `
                       <li class="m24l6-skill ${item.accent}" data-aos="fade-up" data-aos-delay="${120 + idx * 55}" style="--d:${80 + idx * 85}ms">
                         <span class="m24l6-skill__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m24l6-skill__text m24l6-line">${item.text}</span>
+                        <p class="m24l6-skill__text m24l6-line">${item.text}</p>
                       </li>
                     `
                   )
@@ -16786,7 +16530,7 @@ const coursesData = [
                   </div>
 
                   <header class="m24l6-hero" data-aos="fade-up">
-                    <span class="m24l6-hero__icon bg-gradient-mint icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-stars"></i></span>
+                    <span class="m24l6-hero__icon bg-gradient-mint icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-star"></i></span>
                     <h2 class="slide-title gradient-text mb-0 m24l6-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">${yhLang(
                       "Important Life Skills",
                       "গুরুত্বপূর্ণ জীবন দক্ষতা"
@@ -16800,7 +16544,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch24-lesson-7",
+            id: "ch24-lesson-3",
             title: yhLang("Is it hard to learn life skills?", "জীবন দক্ষতা শেখা কি কঠিন?"),
             icon: "fa-feather-pointed",
             gradientClass: "bg-gradient-yellow",
@@ -16811,7 +16555,7 @@ const coursesData = [
                   icon: "fa-circle-check",
                   text: yhLang(
                     "No part of life skills is difficult",
-                    "জীবন দক্ষতার কোনো বিষয়ই কঠিন নয়"
+                    "জীবন দক্ষতার কোনো বিষয়ই কঠিন নয়।"
                   ),
                 },
                 {
@@ -16869,7 +16613,7 @@ const coursesData = [
                     (item, idx) => `
                       <li class="m24l7-help ${item.accent}" data-aos="fade-up" data-aos-delay="${280 + idx * 70}" style="--d:${220 + idx * 95}ms">
                         <span class="m24l7-help__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m24l7-help__text m24l7-line">${item.text}</span>
+                        <p class="m24l7-help__text m24l7-line">${item.text}</p>
                       </li>
                     `
                   )
@@ -16894,14 +16638,14 @@ const coursesData = [
                     )}</h2>
                   </header>
 
-                  <div class="row g-3 mt-3 align-items-stretch">
-                    <div class="col-12 col-lg-6">
+                  <div class="row g-3 mt-3 align-items-center justify-content-center">
+                    <div class="col-12 col-lg-8">
                       <article class="m24l7-quote" data-aos="zoom-in" data-aos-delay="90">
                         ${renderQuote(quoteLines)}
                       </article>
                     </div>
 
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-8">
                       <article class="m24l7-panel" data-aos="fade-left" data-aos-delay="120">
                         <h3 class="m24l7-question m24l7-line mb-3" data-aos="fade-up" data-aos-delay="200" style="--d:180ms">${helpersTitle}</h3>
                         <ul class="list-unstyled m24l7-helpers mb-0">
@@ -16914,7 +16658,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch24-lesson-8",
+            id: "ch24-lesson-4",
             title: yhLang("What are Values?", "মূল্যবোধ কী?"),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-blue",
@@ -16963,7 +16707,7 @@ const coursesData = [
               );
               const learnItems = [
                 {
-                  icon: "fa-house-chimney-heart",
+                  icon: "fa-book",
                   accent: "m24l8-learn--a",
                   text: yhLang("Family education", "পারিবারিক শিক্ষা"),
                 },
@@ -16985,7 +16729,7 @@ const coursesData = [
                     (row, idx) => `
                       <div class="m24l8-hi m24l8-line" data-aos="fade-up" data-aos-delay="${120 + idx * 70}" style="--d:${80 + idx * 95}ms">
                         <span class="m24l8-hi__icon" aria-hidden="true"><i class="fa-solid ${row.icon}"></i></span>
-                        <span class="m24l8-hi__text">${row.text}</span>
+                        <p class="m24l8-hi__text">${row.text}</p>
                       </div>
                     `
                   )
@@ -16997,7 +16741,7 @@ const coursesData = [
                     (item, idx) => `
                       <li class="m24l8-learn ${item.accent} m24l8-line" data-aos="fade-up" data-aos-delay="${380 + idx * 90}" style="--d:${320 + idx * 110}ms">
                         <span class="m24l8-learn__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m24l8-learn__text">${item.text}</span>
+                        <p class="m24l8-learn__text">${item.text}</p>
                       </li>
                     `
                   )
@@ -17045,7 +16789,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch24-lesson-9",
+            id: "ch24-lesson-5",
             title: yhLang("Causes of Value Degradation", "মূল্যবোধ অবক্ষয়ের কারণ"),
             icon: "fa-triangle-exclamation",
             gradientClass: "bg-gradient-orange",
@@ -17129,7 +16873,7 @@ const coursesData = [
                     (item, idx) => `
                       <li class="m24l9-cause ${item.accent} m24l9-line" data-aos="fade-up" data-aos-delay="${140 + idx * 55}" style="--d:${90 + idx * 75}ms">
                         <span class="m24l9-cause__badge" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m24l9-cause__text">${item.text}</span>
+                        <p class="m24l9-cause__text">${item.text}</p>
                       </li>
                     `
                   )
@@ -17160,7 +16904,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch24-lesson-10",
+            id: "ch24-lesson-6",
             title: yhLang("How to develop values", "কীভাবে মূল্যবোধ উন্নয়ন করা যায়"),
             icon: "fa-seedling",
             gradientClass: "bg-gradient-pink",
@@ -17273,7 +17017,7 @@ const coursesData = [
                     (item, idx) => `
                       <li class="m24l10-step ${item.accent} m24l10-line" data-aos="fade-up" data-aos-delay="${320 + idx * 60}" style="--d:${260 + idx * 80}ms">
                         <span class="m24l10-step__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m24l10-step__text">${item.text}</span>
+                        <p class="m24l10-step__text">${item.text}</p>
                       </li>
                     `
                   )
@@ -17297,14 +17041,14 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <div class="row g-3 mt-3 align-items-stretch">
-                    <div class="col-12 col-lg-5">
+                  <div class="row g-3 mt-3 justify-content-center">
+                    <div class="col-12 col-lg-8">
                       <article class="m24l10-quote" data-aos="zoom-in" data-aos-delay="100">
                         ${renderHighlight(highlight)}
                       </article>
                     </div>
 
-                    <div class="col-12 col-lg-7">
+                    <div class="col-12 col-lg-8">
                       <article class="m24l10-panel" data-aos="fade-left" data-aos-delay="130">
                         <h3 class="m24l10-title m24l10-line mb-3" data-aos="fade-up" data-aos-delay="220" style="--d:200ms">${methodsTitle}</h3>
                         <ul class="list-unstyled m24l10-steps mb-0">
@@ -17317,7 +17061,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch24-lesson-11",
+            id: "ch24-lesson-7",
             title: yhLang(
               "How ethics and values education contributes to a healthy and beautiful life",
               "কীভাবে নৈতিকতা ও মূল্যবোধ শিক্ষা সুস্থ ও সুন্দর জীবনে অবদান রাখে"
@@ -17367,7 +17111,7 @@ const coursesData = [
                     (item, idx) => `
                       <li class="m24l11-item ${item.accent} m24l11-line" data-aos="fade-up" data-aos-delay="${150 + idx * 70}" style="--d:${90 + idx * 95}ms">
                         <span class="m24l11-item__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m24l11-item__text">${item.text}</span>
+                        <p class="m24l11-item__text">${item.text}</p>
                       </li>
                     `
                   )
