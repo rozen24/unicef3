@@ -223,7 +223,7 @@ html[lang|="bn"] .m25l6-right-text, .m25l6-left-text lang {
 
 html:lang(bn) .m25l3-td-text, .info-text lang,
 html[lang|="bn"] .m25l3-td-text, .info-text lang {
-  font-size: 22px !important;
+  font-size: 24px !important;
 }
 
 html:lang(bn) .m25l5-item-text lang,
@@ -7954,7 +7954,7 @@ input::placeholder {
 }
 
 .mod25-lesson3 .m25l3-td-text {
-    font-weight: 650;
+    font-weight: 400;
     font-size: 18px;
     line-height: 30px;
 }
