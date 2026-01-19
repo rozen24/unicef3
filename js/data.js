@@ -17311,6 +17311,46 @@ const coursesData = [
                         </section>
                       </article>
                     </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+           {
+            id: "ch25-lesson-3",
+            title: yhLang(
+              "Models of Communication",
+              "যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল"
+            ),
+            icon: "fa-diagram-project",
+            gradientClass: "bg-gradient-lavender",
+            audioFile: "",
+            content: (function () {
+              return `
+                <div class="lesson-slide mod25-lesson2">
+                  <div class="m25l2-neo-bg" aria-hidden="true">
+                    <span class="m25l2-neo-orb m25l2-neo-orb--a"></span>
+                    <span class="m25l2-neo-orb m25l2-neo-orb--b"></span>
+                    <span class="m25l2-neo-orb m25l2-neo-orb--c"></span>
+                    <span class="m25l2-neo-orb m25l2-neo-orb--d"></span>
+                    <span class="m25l2-neo-orb m25l2-neo-orb--e"></span>
+                  </div>
+                  <div class="m25l2-shapes" aria-hidden="true">
+                    <span class="m25l2-shape m25l2-shape--halo"></span>
+                    <span class="m25l2-shape m25l2-shape--wave"></span>
+                    <span class="m25l2-shape m25l2-shape--star"></span>
+                    <span class="m25l2-shape m25l2-shape--ring"></span>
+                  </div>
+
+                  <header class="m25l2-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="m25l2-hero__badge icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <div class="m25l2-hero__body">
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="80">${yhLang("Types of Communication", "যোগাযোগের প্রকারভেদ")}</h2>
+                    </div>
+                  </header>
+
+                  <div class="row g-3 mt-3">
 
                     <div class="col-12">
                       <article class="modern-card glass-card m25l2-card" data-aos="fade-up" data-aos-delay="160">
@@ -17335,7 +17375,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-3",
+            id: "ch25-lesson-4",
             title: yhLang(
               "Methods of communication",
               "যোগাযোগের পদ্ধতি"
@@ -17510,7 +17550,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-4",
+            id: "ch25-lesson-5",
             title: yhLang(
               "Conditions Required for Establishing Interpersonal Relationships",
               "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী"
@@ -17578,7 +17618,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-5",
+            id: "ch25-lesson-6",
             title: yhLang(
               "Techniques of interpersonal relationship",
               "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল"
@@ -17734,7 +17774,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-6",
+            id: "ch25-lesson-7",
             title: yhLang(
               "Steps of counseling.",
               "কাউন্সেলিংয়ের ধাপসমূহ"
