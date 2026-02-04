@@ -7748,6 +7748,270 @@ input::placeholder {
 .dark-mode .mod25-lesson2 .m25l2-shape { opacity: 0.70; }
 .dark-mode .mod25-lesson2 .m25l2-section,
 .dark-mode .mod25-lesson2 .m25l2-hero,
+
+/* ==================== MODULE 25 • LESSON 2 FLOWCHART ==================== */
+.mod25-lesson2-flow {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background: var(--teal-gradient);
+}
+
+.mod25-lesson2-flow .m25l2f-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.mod25-lesson2-flow .m25l2f-hero__badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 34px rgba(16, 24, 40, 0.14);
+}
+
+.mod25-lesson2-flow .m25l2f-hero__badge i {
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+/* Flowchart container */
+.mod25-lesson2-flow .m25l2f-flowchart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* Node styles */
+.mod25-lesson2-flow .m25l2f-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+  position: relative;
+}
+
+.mod25-lesson2-flow .m25l2f-node--root {
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.12);
+}
+
+.mod25-lesson2-flow .m25l2f-node--main {
+  padding: 0.95rem 1.1rem;
+  background: rgba(255, 255, 255, 0.70);
+  border: 2px solid rgba(255, 255, 255, 0.60);
+}
+
+.mod25-lesson2-flow .m25l2f-node--sub {
+  padding: 0.8rem 0.95rem;
+  background: rgba(255, 255, 255, 0.68);
+  max-width: 280px;
+}
+
+.mod25-lesson2-flow .m25l2f-node--media {
+  max-width: 480px;
+}
+
+.mod25-lesson2-flow .m25l2f-node__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+  flex-shrink: 0;
+}
+
+.mod25-lesson2-flow .m25l2f-node--root .m25l2f-node__icon {
+  width: 52px;
+  height: 52px;
+}
+
+.mod25-lesson2-flow .m25l2f-node__icon i {
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.mod25-lesson2-flow .m25l2f-node__text {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* SVG connectors with dotted arrows */
+.mod25-lesson2-flow .m25l2f-connector {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.mod25-lesson2-flow .m25l2f-connector--root {
+  max-width: 400px;
+  height: 80px;
+  margin: -4px 0;
+}
+
+.mod25-lesson2-flow .m25l2f-connector--sub {
+  max-width: 300px;
+  height: 60px;
+  margin: -4px auto;
+}
+
+.mod25-lesson2-flow .m25l2f-connector--sub-single {
+  max-width: 200px;
+  height: 60px;
+  margin: -4px auto;
+}
+
+.mod25-lesson2-flow .m25l2f-path {
+  fill: none;
+  stroke: rgba(15, 23, 42, 0.45);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Branches layout */
+.mod25-lesson2-flow .m25l2f-branches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mod25-lesson2-flow .m25l2f-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.mod25-lesson2-flow .m25l2f-subnodes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 0;
+}
+
+.mod25-lesson2-flow .m25l2f-subnodes--single {
+  grid-template-columns: 1fr;
+}
+
+/* Decorative shapes */
+.mod25-lesson2-flow .m25l2f-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod25-lesson2-flow .m25l2f-shape {
+  position: absolute;
+  opacity: 0.55;
+}
+
+.mod25-lesson2-flow .m25l2f-shape--orb {
+  width: 180px;
+  height: 180px;
+  top: -60px;
+  left: -60px;
+  border-radius: 999px;
+  background: var(--pink-gradient);
+}
+
+.mod25-lesson2-flow .m25l2f-shape--wave {
+  width: 480px;
+  height: 200px;
+  right: -180px;
+  top: -90px;
+  border-radius: 999px;
+  background: var(--yellow-gradient);
+  transform: rotate(14deg);
+}
+
+.mod25-lesson2-flow .m25l2f-shape--dots {
+  width: 240px;
+  height: 240px;
+  left: 16px;
+  bottom: -100px;
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.55) 2px, transparent 3px) 0 0 / 26px 26px;
+}
+
+.mod25-lesson2-flow .m25l2f-shape--ring {
+  width: 200px;
+  height: 200px;
+  right: 18px;
+  bottom: -90px;
+  border-radius: 999px;
+  border: 12px solid rgba(255,255,255,0.55);
+}
+
+/* Keep content above shapes */
+.mod25-lesson2-flow > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-line animation */
+.mod25-lesson2-flow .m25l2f-line {
+  animation: m25l2fLineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m25l2fLineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .mod25-lesson2-flow .m25l2f-branches {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mod25-lesson2-flow .m25l2f-connector--root {
+    max-width: 300px;
+    height: 100px;
+  }
+
+  .mod25-lesson2-flow .m25l2f-subnodes {
+    grid-template-columns: 1fr;
+  }
+
+  .mod25-lesson2-flow .m25l2f-node--media {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod25-lesson2-flow .m25l2f-line {
+    animation: none !important;
+  }
+}
+
 .dark-mode .mod25-lesson2 .m25l2-card,
 .dark-mode .mod25-lesson2 .m25l2-orbit {
   border-color: rgba(255,255,255,0.10);

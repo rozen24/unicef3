@@ -17257,59 +17257,105 @@ const coursesData = [
           },
           {
             id: "ch25-lesson-2",
-            title: yhLang(
-              "Types of Communication",
-              "যোগাযোগের প্রকারভেদ"
-            ),
+            title: yhLang("Communication", "যোগাযোগ"),
             icon: "fa-diagram-project",
-            gradientClass: "bg-gradient-lavender",
+            gradientClass: "bg-gradient-teal",
             audioFile: "",
             content: (function () {
               return `
-                <div class="lesson-slide mod25-lesson2">
-                  <div class="m25l2-neo-bg" aria-hidden="true">
-                    <span class="m25l2-neo-orb m25l2-neo-orb--a"></span>
-                    <span class="m25l2-neo-orb m25l2-neo-orb--b"></span>
-                    <span class="m25l2-neo-orb m25l2-neo-orb--c"></span>
-                    <span class="m25l2-neo-orb m25l2-neo-orb--d"></span>
-                    <span class="m25l2-neo-orb m25l2-neo-orb--e"></span>
-                  </div>
-                  <div class="m25l2-shapes" aria-hidden="true">
-                    <span class="m25l2-shape m25l2-shape--halo"></span>
-                    <span class="m25l2-shape m25l2-shape--wave"></span>
-                    <span class="m25l2-shape m25l2-shape--star"></span>
-                    <span class="m25l2-shape m25l2-shape--ring"></span>
+                <div class="lesson-slide mod25-lesson2-flow">
+                  <div class="m25l2f-shapes" aria-hidden="true">
+                    <span class="m25l2f-shape m25l2f-shape--orb"></span>
+                    <span class="m25l2f-shape m25l2f-shape--wave"></span>
+                    <span class="m25l2f-shape m25l2f-shape--dots"></span>
+                    <span class="m25l2f-shape m25l2f-shape--ring"></span>
                   </div>
 
-                  <header class="m25l2-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25l2-hero__badge icon-spin-on-hover" aria-hidden="true">
+                  <header class="m25l2f-hero" data-aos="fade-up">
+                    <span class="m25l2f-hero__badge bg-gradient-teal icon-spin-on-hover" aria-hidden="true">
                       <i class="fa-solid fa-diagram-project"></i>
-                    </div>
-                    <div class="m25l2-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="80">${yhLang("Types of Communication", "যোগাযোগের প্রকারভেদ")}</h2>
-                    </div>
+                    </span>
+                    <h2 class="slide-title gradient-text mb-0 m25l2f-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">
+                      ${yhLang("Communication", "যোগাযোগ")}
+                    </h2>
                   </header>
 
-                  <div class="row g-3 mt-3">
-                    <div class="col-12">
-                      <article class="modern-card glass-card m25l2-card bg-gradient-blue" data-aos="fade-up" data-aos-delay="120">
-                        <section class="m25l2-section m25l2-section--types bg-gradient-blue" data-aos="zoom-in" data-aos-delay="160">
-                          <div class="m25l2-section__title yhap_box_shadow">
-                            <span class="m25l2-icon bg-gradient-blue icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
-                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="200">${yhLang("Types of Communication", "যোগাযোগের প্রকারভেদ")}</h3>
+                  <div class="m25l2f-flowchart" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Root node -->
+                    <div class="m25l2f-node m25l2f-node--root m25l2f-line" data-aos="zoom-in" data-aos-delay="140" style="--d:100ms">
+                      <span class="m25l2f-node__icon bg-gradient-blue" aria-hidden="true">
+                        <i class="fa-solid fa-comments"></i>
+                      </span>
+                      <span class="m25l2f-node__text">${yhLang("Communication", "যোগাযোগ")}</span>
+                    </div>
+
+                    <!-- SVG connector from root to main branches -->
+                    <svg class="m25l2f-connector m25l2f-connector--root" viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true">
+                      <path d="M 200 0 L 200 30 L 100 30 L 100 80" class="m25l2f-path" stroke-dasharray="6 4" />
+                      <path d="M 200 30 L 300 30 L 300 80" class="m25l2f-path" stroke-dasharray="6 4" />
+                    </svg>
+
+                    <!-- Main branches -->
+                    <div class="m25l2f-branches">
+                      <!-- Left branch: Interpersonal -->
+                      <div class="m25l2f-branch m25l2f-branch--left">
+                        <div class="m25l2f-node m25l2f-node--main m25l2f-line" data-aos="zoom-in" data-aos-delay="200" style="--d:160ms">
+                          <span class="m25l2f-node__icon bg-gradient-mint" aria-hidden="true">
+                            <i class="fa-solid fa-people-arrows"></i>
+                          </span>
+                          <span class="m25l2f-node__text">${yhLang("Interpersonal Communication", "অন্তর্ব্যক্তিক যোগাযোগ")}</span>
+                        </div>
+
+                        <!-- SVG connector to sub-nodes -->
+                        <svg class="m25l2f-connector m25l2f-connector--sub" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true">
+                          <path d="M 150 0 L 150 20 L 75 20 L 75 60" class="m25l2f-path" stroke-dasharray="6 4" />
+                          <path d="M 150 20 L 225 20 L 225 60" class="m25l2f-path" stroke-dasharray="6 4" />
+                        </svg>
+
+                        <!-- Sub-nodes -->
+                        <div class="m25l2f-subnodes">
+                          <div class="m25l2f-node m25l2f-node--sub m25l2f-line" data-aos="zoom-in" data-aos-delay="280" style="--d:240ms">
+                            <span class="m25l2f-node__icon bg-gradient-pink" aria-hidden="true">
+                              <i class="fa-solid fa-user-friends"></i>
+                            </span>
+                            <span class="m25l2f-node__text">${yhLang("Communication between two people", "দুই ব্যক্তির মধ্যে যোগাযোগ")}</span>
                           </div>
-                          <div class="m25l2-image-frame" data-aos="zoom-in" data-aos-delay="240">
-                            <img
-                              src="img/modu25/jogajoke-Picsart-BackgroundRemover.png"
-                              data-src-en="img/modu25/jogajoke-Picsart-BackgroundRemover.png"
-                              data-src-bn="img/modu25/jogajok-Picsart-BackgroundRemover.png"
-                              alt="যোগাযোগের প্রকারভেদ"
-                              class="img-fluid w-100 rounded img-zoom"
-                              loading="lazy"
-                            />
+                          <div class="m25l2f-node m25l2f-node--sub m25l2f-line" data-aos="zoom-in" data-aos-delay="340" style="--d:300ms">
+                            <span class="m25l2f-node__icon bg-gradient-lavender" aria-hidden="true">
+                              <i class="fa-solid fa-users"></i>
+                            </span>
+                            <span class="m25l2f-node__text">${yhLang("Group communication", "দলীয় যোগাযোগ")}</span>
                           </div>
-                        </section>
-                      </article>
+                        </div>
+                      </div>
+
+                      <!-- Right branch: Mass Communication -->
+                      <div class="m25l2f-branch m25l2f-branch--right">
+                        <div class="m25l2f-node m25l2f-node--main m25l2f-line" data-aos="zoom-in" data-aos-delay="240" style="--d:200ms">
+                          <span class="m25l2f-node__icon bg-gradient-yellow" aria-hidden="true">
+                            <i class="fa-solid fa-tower-broadcast"></i>
+                          </span>
+                          <span class="m25l2f-node__text">${yhLang("Mass Communication", "গণযোগাযোগ")}</span>
+                        </div>
+
+                        <!-- SVG connector to sub-node -->
+                        <svg class="m25l2f-connector m25l2f-connector--sub-single" viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true">
+                          <path d="M 100 0 L 100 60" class="m25l2f-path" stroke-dasharray="6 4" />
+                        </svg>
+
+                        <!-- Sub-node -->
+                        <div class="m25l2f-subnodes m25l2f-subnodes--single">
+                          <div class="m25l2f-node m25l2f-node--sub m25l2f-node--media m25l2f-line" data-aos="zoom-in" data-aos-delay="320" style="--d:280ms">
+                            <span class="m25l2f-node__icon bg-gradient-orange" aria-hidden="true">
+                              <i class="fa-solid fa-tv"></i>
+                            </span>
+                            <span class="m25l2f-node__text">${yhLang(
+                              "Radio, television, newspapers, cinema, posters, other print & electronic media",
+                              "রেডিও, টেলিভিশন, খবরের কাগজ, চলচ্চিত্র, পোস্টার, অন্যান্য মুদ্রণ ও ইলেকট্রনিক মিডিয়া"
+                            )}</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>`;
