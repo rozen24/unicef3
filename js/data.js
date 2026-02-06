@@ -348,7 +348,7 @@ const coursesData = [
                   .join("")}
               </div>
 
-              <div class="row g-3 mt-3">
+              <div class="row g-1 mt-1">
                 ${[
                   {
                     title: yhLang("Early Adolescence", "প্রারম্ভিক কৈশোর"),
@@ -12329,7 +12329,7 @@ const coursesData = [
                     "যদিবস্তুটি বের না হয় এবং আক্রান্ত ব্যক্তির শ্বাসকষ্ট বজায় থাকে—"
                   )}</h3>
                     ${renderParagraphs(followupText)}
-                    <div class="row g-3 mt-3">
+                    <div class="row g-1 mt-1">
                       ${["img/modu18/basic.jpg", "img/modu18/basic2.jpg", "img/modu18/basic3.jpg"]
                         .map(
                           (src) => `
@@ -13348,7 +13348,7 @@ const coursesData = [
                       </div>
                     </div>
                   </div>
-                  <div class="row g-3 mt-3" data-aos="fade-up" data-aos-delay="140">
+                  <div class="row g-1 mt-1" data-aos="fade-up" data-aos-delay="140">
                     <div class="col-12 col-md-12">
                       <figure class="text-center mb-0">
                         <img src="img/modu20/rog1.png" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid rounded shadow-sm img-zoom" style= "width: 100%;"/>
@@ -16638,7 +16638,7 @@ const coursesData = [
                     )}</h2>
                   </header>
 
-                  <div class="row g-3 mt-3 align-items-center justify-content-center">
+                  <div class="row g-1 mt-1 align-items-center justify-content-center">
                     <div class="col-12 col-lg-8">
                       <article class="m24l7-quote" data-aos="zoom-in" data-aos-delay="90">
                         ${renderQuote(quoteLines)}
@@ -16766,7 +16766,7 @@ const coursesData = [
                     )}</h2>
                   </header>
 
-                  <div class="row g-3 mt-3 align-items-stretch">
+                  <div class="row g-1 mt-1 align-items-stretch">
                     <div class="col-12 col-lg-6">
                       <section class="m24l8-card m24l8-card--hi" data-aos="zoom-in" data-aos-delay="90">
                         ${renderHighlights(highlights)}
@@ -17041,7 +17041,7 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <div class="row g-3 mt-3 justify-content-center">
+                  <div class="row g-1 mt-1 justify-content-center">
                     <div class="col-12 col-lg-8">
                       <article class="m24l10-quote" data-aos="zoom-in" data-aos-delay="100">
                         ${renderHighlight(highlight)}
@@ -17187,7 +17187,7 @@ const coursesData = [
                     </p>
                   </header>
 
-                  <div class="row g-3 mt-3 align-items-stretch">
+                  <div class="row g-1 mt-1 align-items-stretch">
                     <div class="col-12 col-lg-4">
                       <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
                         <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
@@ -17396,7 +17396,7 @@ const coursesData = [
                     </div>
                   </header>
 
-                  <div class="row g-3 mt-3">
+                  <div class="row g-1 mt-1">
 
                     <div class="col-12">
                       <article class="modern-card glass-card m25l2-card" data-aos="fade-up" data-aos-delay="160">
@@ -17529,7 +17529,7 @@ const coursesData = [
                     </div>
                   </header>
 
-                  <div class="row g-3 mt-3 align-items-stretch">
+                  <div class="row g-1 mt-1 align-items-stretch">
                     <div class="col-12 col-lg-6">
                       <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-right" data-aos-delay="90">
                         <div class="m25l3-card__title yhap_box_shadow" data-aos="fade-up" data-aos-delay="130">
@@ -17644,7 +17644,7 @@ const coursesData = [
                     </div>
                   </header>
 
-                  <div class="row g-3 mt-3 align-items-stretch">
+                  <div class="row g-1 mt-1 align-items-stretch">
                     <div class="col-12 col-lg-5">
                       <div class="m25l4-square" data-aos="zoom-in" data-aos-delay="120">
                         <span class="m25l4-square__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-people-arrows-left-right"></i></span>
@@ -17927,7 +17927,7 @@ const coursesData = [
                     </div>
                   </header>
 
-                  <div class="row g-3 mt-3 align-items-stretch">
+                  <div class="row g-1 mt-1 align-items-stretch">
                     <div class="col-12 col-lg-7">
                       <article class="modern-card glass-card m25l6-gather h-100" data-aos="fade-right" data-aos-delay="120">
                         <div class="m25l6-gather-head yhap_box_shadow" data-aos="fade-up" data-aos-delay="160">

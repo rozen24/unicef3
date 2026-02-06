@@ -208,7 +208,7 @@ html:lang(bn) lang {
 }
 html:lang(bn) .lesson-hero__top  lang,
 html[lang|="bn"] .lesson-hero__top lang {
-  font-size: 18px !important;
+  font-size: 15px !important;
 }
 html:lang(bn) .offcanvas  lang,
 html[lang|="bn"] .offcanvas lang {
@@ -1054,7 +1054,7 @@ html[lang|="bn"] h2 {
 .modern-card {
   background: var(--white);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: 0rem;
   box-shadow: var(--shadow-md);
   transition: var(--transition-normal);
   border: 1px solid var(--border-color);
@@ -6817,7 +6817,7 @@ input::placeholder {
 .lesson-slide {
   background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,246,255,0.94));
   border-radius: 24px;
-  padding: clamp(2.25rem, 4vw, 3rem);
+  padding: 0px;
   box-shadow: 0 28px 80px rgba(15, 53, 110, 0.12);
   animation: lessonEnter 0.65s var(--transition-curve);
   position: relative; /* ensure content sits above floating backgrounds */
@@ -7650,9 +7650,7 @@ input::placeholder {
   gap: 14px;
   padding: 16px 18px;
   border-radius: 20px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.76), rgba(255,255,255,0.56));
   border: 1px solid rgba(0,0,0,0.06);
-  backdrop-filter: blur(8px);
   box-shadow: 0 18px 45px rgba(15, 53, 110, 0.10);
 }
 
@@ -7695,7 +7693,6 @@ input::placeholder {
   padding: 14px 14px 12px;
   border-radius: 18px;
   border: 1px solid rgba(0,0,0,0.06);
-  background: linear-gradient(135deg, rgba(255,255,255,0.70), rgba(255,255,255,0.55));
   box-shadow: 0 12px 28px rgba(15, 53, 110, 0.08);
 }
 
@@ -7715,7 +7712,7 @@ input::placeholder {
 
 /* Pastel section accents (Lesson 2 content) */
 .mod25-lesson2 .m25l2-section--types { background: linear-gradient(135deg, rgba(255,255,255,0.70), rgba(255,255,255,0.52)), var(--lavender-gradient); }
-.mod25-lesson2 .m25l2-section--model { background: linear-gradient(135deg, rgba(255,255,255,0.70), rgba(255,255,255,0.52)), var(--yellow-gradient); }
+.mod25-lesson2 .m25l2-section--model { }
 
 .mod25-lesson2 .m25l2-image-frame {
   position: relative;
@@ -7802,16 +7799,16 @@ input::placeholder {
 }
 
 .mod25-lesson2-flow .m25l2f-node--root {
-  padding: 1rem 1.2rem;
+  padding: 5px 10px;
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid rgba(255, 255, 255, 0.65);
   box-shadow: 0 14px 30px rgba(16, 24, 40, 0.12);
 }
 
 .mod25-lesson2-flow .m25l2f-node--main {
-  padding: 0.95rem 1.1rem;
+  padding: 5px 10px;
   background: rgba(255, 255, 255, 0.70);
-  border: 2px solid rgba(255, 255, 255, 0.60);
+  border: 2px solid rgba(255, 255, 255, 0.060);
 }
 
 .mod25-lesson2-flow .m25l2f-node--sub {
@@ -7858,20 +7855,20 @@ input::placeholder {
 }
 
 .mod25-lesson2-flow .m25l2f-connector--root {
-  max-width: 400px;
-  height: 80px;
+  max-width: 800px;
+  height: 50px;
   margin: -4px 0;
 }
 
 .mod25-lesson2-flow .m25l2f-connector--sub {
   max-width: 300px;
-  height: 60px;
+  height: 50px;
   margin: -4px auto;
 }
 
 .mod25-lesson2-flow .m25l2f-connector--sub-single {
   max-width: 200px;
-  height: 60px;
+  height: 50px;
   margin: -4px auto;
 }
 
@@ -7993,7 +7990,7 @@ input::placeholder {
   }
 
   .mod25-lesson2-flow .m25l2f-connector--root {
-    max-width: 300px;
+    max-width: 800px;
     height: 100px;
   }
 
@@ -12161,7 +12158,7 @@ dashboard-titled-title {
     top: 0;
     z-index: 9;
     border-radius: var(--radius-xl);
-    padding: clamp(0.8rem, 2vw, 1.8rem);
+    padding: clamp(0.8rem, 1vw, 1.8rem);
     background: var(--hero-gradient);
     color: rgb(244, 249, 255);
     box-shadow: var(--shadow-bold);
@@ -12496,7 +12493,7 @@ dashboard-titled-title {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(0, 95, 175, 0.12);
-  padding: clamp(2rem, 0.5vw, 2.75rem);
+  padding: clamp(0.5rem, 0.5vw, 2.75rem);
   display: grid;
   gap: 2.2rem;
   /* overflow-y: auto; */
