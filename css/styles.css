@@ -2083,7 +2083,7 @@ html[lang|="bn"] h2 {
   display: grid;
   grid-template-columns: 44px 1fr;
   gap: 0.75rem;
-  padding: 0.9rem 0.95rem;
+  padding: 7px 10px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -2289,6 +2289,7 @@ html[lang|="bn"] h2 {
 .mod24-lesson7 .m24l7-helpers {
   display: grid;
   gap: 0.75rem;
+  grid-template-columns: 50% 2fr;
 }
 
 .mod24-lesson7 .m24l7-help {
@@ -2501,6 +2502,7 @@ html[lang|="bn"] h2 {
 .mod24-lesson8 .m24l8-learnList {
   display: grid;
   gap: 0.7rem;
+  grid-template-columns: 50% 2fr;
 }
 
 .mod24-lesson8 .m24l8-learn {
@@ -2854,7 +2856,7 @@ html[lang|="bn"] h2 {
 }
 
 .mod24-lesson10 .m24l10-panel {
-  padding: 1.05rem 1.1rem;
+  padding: 5px 15px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.60);
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -2867,15 +2869,16 @@ html[lang|="bn"] h2 {
 }
 
 .mod24-lesson10 .m24l10-steps {
-  display: grid;
-  gap: 0.75rem;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 38% 1fr;
 }
 
 .mod24-lesson10 .m24l10-step {
   display: grid;
   grid-template-columns: 46px 1fr;
   gap: 0.75rem;
-  padding: 0.85rem 0.95rem;
+  padding: 5px 10px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.68);
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -6821,7 +6824,7 @@ input::placeholder {
 .lesson-slide {
   background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,246,255,0.94));
   border-radius: 24px;
-  padding: 0px;
+  padding: 10px;
   box-shadow: 0 28px 80px rgba(15, 53, 110, 0.12);
   animation: lessonEnter 0.65s var(--transition-curve);
   position: relative; /* ensure content sits above floating backgrounds */
@@ -8007,6 +8010,48 @@ input::placeholder {
   }
 }
 
+@media (max-width: 575.98px) {
+  .mod25-lesson2-flow {
+    padding: 1rem;
+  }
+
+  .mod25-lesson2-flow .m25l2f-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .mod25-lesson2-flow .m25l2f-flowchart {
+    align-items: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .mod25-lesson2-flow .m25l2f-connector--root,
+  .mod25-lesson2-flow .m25l2f-branches {
+    min-width: 720px;
+  }
+
+  .mod25-lesson2-flow .m25l2f-connector--sub,
+  .mod25-lesson2-flow .m25l2f-connector--sub-single {
+    min-width: 320px;
+  }
+
+  .mod25-lesson2-flow .m25l2f-node {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .mod25-lesson2-flow .m25l2f-node__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mod25-lesson2-flow .m25l2f-node__text {
+    font-size: 0.98rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .mod25-lesson2-flow .m25l2f-line {
     animation: none !important;
@@ -8544,6 +8589,60 @@ input::placeholder {
   .mod25-lesson3-flow .m25l3f-node,
   .mod25-lesson3-flow .m25l3f-chip {
     min-width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mod25-lesson3-flow {
+    padding: 1rem;
+  }
+
+  .mod25-lesson3-flow .m25l3f-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .mod25-lesson3-flow .m25l3f-flow {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .mod25-lesson3-flow .m25l3f-row {
+    flex-wrap: nowrap;
+    min-width: 760px;
+    justify-content: flex-start;
+  }
+
+  .mod25-lesson3-flow .m25l3f-row--right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .mod25-lesson3-flow .m25l3f-node,
+  .mod25-lesson3-flow .m25l3f-chip {
+    min-width: 220px;
+  }
+
+  .mod25-lesson3-flow .m25l3f-node__icon,
+  .mod25-lesson3-flow .m25l3f-chip__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mod25-lesson3-flow .m25l3f-node__title,
+  .mod25-lesson3-flow .m25l3f-chip__text {
+    font-size: 0.98rem;
+  }
+
+  .mod25-lesson3-flow .m25l3f-arrows-horiz {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .mod25-lesson3-flow .m25l3f-arrow {
+    width: 28px;
   }
 }
 
@@ -14358,5 +14457,10 @@ tbody, td, tfoot, th, thead, tr {
 @media (min-width: 992px) { /* Bootstrap lg breakpoint */
   .chart-pyramid {
     height: 640px; /* large screens */
+  }
+}
+@media (min-width: 992px) {
+  .w-lg-80 {
+    width: 80% !important;
   }
 }

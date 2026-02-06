@@ -16437,7 +16437,7 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <article class="m24l5-card modern-card glass-card" data-aos="fade-up" data-aos-delay="90" style="--d:90ms">
+                  <article class="m24l5-card modern-card glass-card w-lg-75 mx-auto mb-3" data-aos="fade-up" data-aos-delay="90" style="--d:90ms">
                     <ul class="list-unstyled m24l5-list mb-0">
                       ${renderItems(items)}
                     </ul>
@@ -16537,7 +16537,7 @@ const coursesData = [
                     )}</h2>
                   </header>
 
-                  <ul class="list-unstyled m24l6-grid mb-0">
+                  <ul class="list-unstyled m24l6-grid mb-0 w-lg-75 mx-auto">
                     ${renderSkills(skills)}
                   </ul>
                 </div>`;
@@ -17041,17 +17041,17 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <div class="row g-1 mt-1 justify-content-center">
-                    <div class="col-12 col-lg-8">
+                  <div class="row g-1 mt-1 justify-content-center w-lg-100 mx-auto">
+                    <div class="col-12 col-lg-12">
                       <article class="m24l10-quote" data-aos="zoom-in" data-aos-delay="100">
                         ${renderHighlight(highlight)}
                       </article>
                     </div>
 
-                    <div class="col-12 col-lg-8">
+                    <div class="col-12 col-lg-12">
                       <article class="m24l10-panel" data-aos="fade-left" data-aos-delay="130">
-                        <h3 class="m24l10-title m24l10-line mb-3" data-aos="fade-up" data-aos-delay="220" style="--d:200ms">${methodsTitle}</h3>
-                        <ul class="list-unstyled m24l10-steps mb-0">
+                        <h3 class="m24l10-title m24l10-line" data-aos="fade-up" data-aos-delay="220" style="--d:200ms">${methodsTitle}</h3>
+                        <ul class="list-unstyled m24l10-steps mb-0 p-0">
                           ${renderMethods(methods)}
                         </ul>
                       </article>
@@ -17138,7 +17138,7 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <ul class="list-unstyled m24l11-list mb-0">
+                  <ul class="list-unstyled m24l11-list mb-0 w-lg-80 mx-auto">
                     ${render(points)}
                   </ul>
                 </div>`;
