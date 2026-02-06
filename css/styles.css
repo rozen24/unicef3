@@ -210,6 +210,10 @@ html:lang(bn) .lesson-hero__top  lang,
 html[lang|="bn"] .lesson-hero__top lang {
   font-size: 15px !important;
 }
+html:lang(bn) span  lang,
+html[lang|="bn"] span lang {
+  font-size: 20px !important;
+}
 html:lang(bn) .offcanvas  lang,
 html[lang|="bn"] .offcanvas lang {
   font-size: 22px !important;
@@ -7785,9 +7789,10 @@ input::placeholder {
 
 /* Node styles */
 .mod25-lesson2-flow .m25l2f-node {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0rem;
   padding: 0.85rem 1rem;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.65);
@@ -7831,8 +7836,8 @@ input::placeholder {
 }
 
 .mod25-lesson2-flow .m25l2f-node--root .m25l2f-node__icon {
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
 }
 
 .mod25-lesson2-flow .m25l2f-node__icon i {
@@ -8322,7 +8327,7 @@ input::placeholder {
   gap: 0.85rem;
 }
 .mod25-lesson3-flow .f_line {
-  gap: 5.85rem;
+  gap: 12.85rem;
 }
 .mod25-lesson3-flow .m25l3f-row--center {
   justify-content: center;
@@ -8330,7 +8335,7 @@ input::placeholder {
 
 .mod25-lesson3-flow .m25l3f-row--right {
   justify-content: flex-end;
-  width: 95%;
+  width: 90%;
 }
 
 .mod25-lesson3-flow .m25l3f-row--bridge {
@@ -8409,6 +8414,13 @@ input::placeholder {
   border-color: transparent transparent transparent rgba(15, 23, 42, 0.6);
 }
 
+.mod25-lesson3-flow .m25l3f-arrow--left::after {
+  right: auto;
+  left: -6px;
+  border-width: 6px 8px 6px 0;
+  border-color: transparent rgba(15, 23, 42, 0.6) transparent transparent;
+}
+
 .mod25-lesson3-flow .m25l3f-arrow--down,
 .mod25-lesson3-flow .m25l3f-arrow--up {
   width: 2px;
@@ -8418,7 +8430,6 @@ input::placeholder {
     rgba(15, 23, 42, 0.6) 0 6px,
     transparent 6px 12px
   );
-  right: 76px;
 }
 
 .mod25-lesson3-flow .m25l3f-arrow--down::after {
@@ -8435,6 +8446,21 @@ input::placeholder {
   bottom: auto;
   border-width: 0 6px 8px 6px;
   border-color: transparent transparent rgba(15, 23, 42, 0.6) transparent;
+}
+
+.mod25-lesson3-flow .m25l3f-arrows-vert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 4px;
+}
+.mod25-lesson3-flow .m25l3f-arrows-horiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 0 4px;
 }
 
 /* Decorative shapes */
