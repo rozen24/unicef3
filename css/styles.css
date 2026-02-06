@@ -7712,7 +7712,6 @@ input::placeholder {
 
 /* Pastel section accents (Lesson 2 content) */
 .mod25-lesson2 .m25l2-section--types { background: linear-gradient(135deg, rgba(255,255,255,0.70), rgba(255,255,255,0.52)), var(--lavender-gradient); }
-.mod25-lesson2 .m25l2-section--model { }
 
 .mod25-lesson2 .m25l2-image-frame {
   position: relative;
@@ -8276,6 +8275,254 @@ input::placeholder {
 
 @media (prefers-reduced-motion: reduce) {
   .mod25-lesson3 .m25l3-shape {
+    animation: none !important;
+  }
+}
+
+/* ==================== MODULE 25 • LESSON 3 FLOW MODEL ==================== */
+.mod25-lesson3-flow {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background: var(--mint-gradient);
+}
+
+.mod25-lesson3-flow .m25l3f-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.mod25-lesson3-flow .m25l3f-hero__badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 34px rgba(16, 24, 40, 0.14);
+}
+
+.mod25-lesson3-flow .m25l3f-hero__badge i {
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.mod25-lesson3-flow .m25l3f-flow {
+  display: grid;
+  gap: 1rem;
+}
+
+.mod25-lesson3-flow .m25l3f-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+.mod25-lesson3-flow .f_line {
+  gap: 5.85rem;
+}
+.mod25-lesson3-flow .m25l3f-row--center {
+  justify-content: center;
+}
+
+.mod25-lesson3-flow .m25l3f-row--right {
+  justify-content: flex-end;
+  width: 95%;
+}
+
+.mod25-lesson3-flow .m25l3f-row--bridge {
+  gap: 4.5rem;
+  margin-top: -0.25rem;
+  margin-bottom: -0.25rem;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.mod25-lesson3-flow .m25l3f-node,
+.mod25-lesson3-flow .m25l3f-chip {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.70);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+  min-width: 220px;
+}
+
+.mod25-lesson3-flow .m25l3f-node--wide {
+  min-width: 300px;
+}
+
+.mod25-lesson3-flow .m25l3f-node__icon,
+.mod25-lesson3-flow .m25l3f-chip__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+}
+
+.mod25-lesson3-flow .m25l3f-node__icon i,
+.mod25-lesson3-flow .m25l3f-chip__icon i {
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.mod25-lesson3-flow .m25l3f-node__title,
+.mod25-lesson3-flow .m25l3f-chip__text {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.mod25-lesson3-flow .m25l3f-node__subtitle {
+  display: block;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+/* Dotted arrows */
+.mod25-lesson3-flow .m25l3f-arrow {
+  position: relative;
+  width: 64px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.6) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+.mod25-lesson3-flow .m25l3f-arrow::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: -4px;
+  border-width: 6px 0 6px 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(15, 23, 42, 0.6);
+}
+
+.mod25-lesson3-flow .m25l3f-arrow--down,
+.mod25-lesson3-flow .m25l3f-arrow--up {
+  width: 2px;
+  height: 28px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.6) 0 6px,
+    transparent 6px 12px
+  );
+  right: 76px;
+}
+
+.mod25-lesson3-flow .m25l3f-arrow--down::after {
+  right: -4px;
+  top: auto;
+  bottom: -6px;
+  border-width: 8px 6px 0 6px;
+  border-color: rgba(15, 23, 42, 0.6) transparent transparent transparent;
+}
+
+.mod25-lesson3-flow .m25l3f-arrow--up::after {
+  right: -4px;
+  top: -6px;
+  bottom: auto;
+  border-width: 0 6px 8px 6px;
+  border-color: transparent transparent rgba(15, 23, 42, 0.6) transparent;
+}
+
+/* Decorative shapes */
+.mod25-lesson3-flow .m25l3f-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod25-lesson3-flow .m25l3f-shape {
+  position: absolute;
+  opacity: 0.55;
+}
+
+.mod25-lesson3-flow .m25l3f-shape--orb {
+  width: 180px;
+  height: 180px;
+  top: -60px;
+  left: -60px;
+  border-radius: 999px;
+  background: var(--blue-gradient);
+}
+
+.mod25-lesson3-flow .m25l3f-shape--ribbon {
+  width: 520px;
+  height: 200px;
+  right: -200px;
+  top: -90px;
+  border-radius: 999px;
+  background: var(--yellow-gradient);
+  transform: rotate(12deg);
+}
+
+.mod25-lesson3-flow .m25l3f-shape--dots {
+  width: 240px;
+  height: 240px;
+  left: 16px;
+  bottom: -100px;
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.55) 2px, transparent 3px) 0 0 / 26px 26px;
+}
+
+.mod25-lesson3-flow .m25l3f-shape--ring {
+  width: 200px;
+  height: 200px;
+  right: 18px;
+  bottom: -90px;
+  border-radius: 999px;
+  border: 12px solid rgba(255,255,255,0.55);
+}
+
+/* Keep content above shapes */
+.mod25-lesson3-flow > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-line animation */
+.mod25-lesson3-flow .m25l3f-line {
+  animation: m25l3fLineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m25l3fLineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mod25-lesson3-flow .m25l3f-arrow {
+    width: 36px;
+  }
+
+  .mod25-lesson3-flow .m25l3f-node,
+  .mod25-lesson3-flow .m25l3f-chip {
+    min-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod25-lesson3-flow .m25l3f-line {
     animation: none !important;
   }
 }
