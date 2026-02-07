@@ -200,7 +200,9 @@ body {
   font-display: swap;
   unicode-range: U+0980-09FF, U+200C-200D, U+0964-0965;
 }
-
+.lession_11_title {
+  font-size: 29px !important;
+}
 /* Bengali text sizing */
 html:lang(bn) lang {
   font-family: 'SolaimanLipi', sans-serif;
@@ -209,6 +211,10 @@ html:lang(bn) lang {
 html:lang(bn) .lesson-hero__top  lang,
 html[lang|="bn"] .lesson-hero__top lang {
   font-size: 15px !important;
+}
+html:lang(bn) .lession_11_title  lang,
+html[lang|="bn"] .lession_11_title lang {
+  font-size: 38px !important;
 }
 html:lang(bn) span  lang,
 html[lang|="bn"] span lang {
@@ -10169,7 +10175,11 @@ input::placeholder {
   border: 1px solid rgba(0,0,0,0.06);
   box-shadow: 0 18px 44px rgba(15, 53, 110, 0.10);
 }
-
+.mod25-lesson6 .m25l6-counsel {
+  display: grid;
+  grid-template-columns: 50% 2fr;
+  gap: 20px;
+}
 .mod25-lesson6 .m25l6-gather-head,
 .mod25-lesson6 .m25l6-counsel-head {
   display: flex;
@@ -10195,7 +10205,8 @@ input::placeholder {
 
 .mod25-lesson6 .m25l6-steps {
   display: grid;
-  gap: 12px;
+  gap: 5px;
+  grid-template-columns: 50% 2fr;
 }
 
 .mod25-lesson6 .m25l6-step {

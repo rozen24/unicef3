@@ -18219,8 +18219,8 @@ const coursesData = [
           {
             id: "ch25-lesson-11",
             title: yhLang(
-              "Steps of counseling.",
-              "কাউন্সেলিংয়ের ধাপসমূহ"
+              "The word GATHER can be used to easily remember the steps of counseling.",
+              "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য GATHER শব্দটির সাহায্য নেয়া যায়"
             ),
             icon: "fa-list-check",
             gradientClass: "bg-gradient-blue",
@@ -18267,25 +18267,6 @@ const coursesData = [
                 },
               ];
 
-              const counselingTitleBn = yhLang("counseling", "কাউন্সেলিং");
-              const counselingText1 = yhLang("Counseling is the process through which, following two-way discussion and detailed information sharing, the provider helps the client make decisions about their own health.", "গ্রহীতা ও সেবাদানকারীর মধ্যে দ্বিমুখী আলোচনার মাধ্যমে বিস্তারিত তথ্য প্রদানের পর সেবাদানকারী গ্রহীতাকে তার নিজের স্বাস্থ্যসম্পর্কিত কোনো সিদ্ধান্ত গ্রহণে সহায়তা করার প্রক্রিয়াই হল কাউন্সেলিং।");
-              
-              const counselingText2 = yhLang("It gives young person to get the opportunity to openly discuss their personal feelings and problems and enables them to make their own decisions.", "এর ফলে কিশোর-কিশোরী ও তরুণ সেবাগ্রহীতারা তাদের ব্যক্তিগত অনুভূতি ও সমস্যা নিয়ে খোলাখুলি আলোচনা করার সুযোগ পায় ও নিজেই সিদ্ধান্ত গ্রহণ করে সমস্যা সমাধান করতে পারে।");
-
-              const renderSentenceLines = (text, baseDelay, step) => {
-                const raw = String(text || "");
-                const parts = raw
-                  .split("।")
-                  .map((s) => s.trim())
-                  .filter(Boolean);
-                return parts
-                  .map((sentence, idx) => {
-                    const delay = baseDelay + idx * step;
-                    return `<span class="m25l6-line" data-aos="fade-up" data-aos-delay="${delay}">${sentence}।</span>`;
-                  })
-                  .join(" ");
-              };
-
               const renderGatherSteps = () =>
                 gatherSteps
                   .map((s, idx) => {
@@ -18320,26 +18301,73 @@ const coursesData = [
                       <i class="fa-solid fa-list-check"></i>
                     </div>
                     <div class="m25l6-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">  ${yhLang("The word GATHER can be used to easily remember the steps of counseling.", "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য <strong>GATHER</strong> শব্দটির সাহায্য নেয়া যায়")} </h2>
+                      <h2 class="slide-title lession_11_title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("The word GATHER can be used to easily remember the steps of counseling.", "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য GATHER শব্দটির সাহায্য নেয়া যায়")}</h2>
                     </div>
                   </header>
 
                   <div class="row g-1 mt-1 align-items-stretch">
-                    <div class="col-12 col-lg-7">
-                      <article class="modern-card glass-card m25l6-gather h-100" data-aos="fade-right" data-aos-delay="120">
-                        <div class="m25l6-gather-head yhap_box_shadow" data-aos="fade-up" data-aos-delay="160">
-                          <span class="m25l6-chip bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-spell-check"></i></span>
-                          <h3 class="mb-0" data-aos="fade-up" data-aos-delay="210">GATHER</h3>
-                        </div>
+                    <div class="col-12">
+                      <article class="modern-card glass-card m25l6-gather" data-aos="fade-right" data-aos-delay="120">
                         <div class="m25l6-steps" role="list" aria-label="GATHER ধাপসমূহ">
                           ${renderGatherSteps()}
                         </div>
                       </article>
                     </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch25-lesson-12",
+            title: yhLang(
+              "Counseling",
+              "কাউন্সেলিং"
+            ),
+            icon: "fa-comments",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            content: (function () {
+              const counselingTitleBn = yhLang("Counseling", "কাউন্সেলিং");
+              const counselingText1 = yhLang("Counseling is the process through which, following two-way discussion and detailed information sharing, the provider helps the client make decisions about their own health.", "গ্রহীতা ও সেবাদানকারীর মধ্যে দ্বিমুখী আলোচনার মাধ্যমে বিস্তারিত তথ্য প্রদানের পর সেবাদানকারী গ্রহীতাকে তার নিজের স্বাস্থ্যসম্পর্কিত কোনো সিদ্ধান্ত গ্রহণে সহায়তা করার প্রক্রিয়াই হল কাউন্সেলিং।");
 
-                    <div class="col-12 col-lg-5">
-                      <article class="modern-card glass-card m25l6-counsel h-100" data-aos="fade-left" data-aos-delay="140">
-                        <div class="m25l6-counsel-head yhap_box_shadow" data-aos="fade-up" data-aos-delay="180">
+              const counselingText2 = yhLang("It gives young person to get the opportunity to openly discuss their personal feelings and problems and enables them to make their own decisions.", "এর ফলে কিশোর-কিশোরী ও তরুণ সেবাগ্রহীতারা তাদের ব্যক্তিগত অনুভূতি ও সমস্যা নিয়ে খোলাখুলি আলোচনা করার সুযোগ পায় ও নিজেই সিদ্ধান্ত গ্রহণ করে সমস্যা সমাধান করতে পারে।");
+
+              const renderSentenceLines = (text, baseDelay, step) => {
+                const raw = String(text || "");
+                const parts = raw
+                  .split("।")
+                  .map((s) => s.trim())
+                  .filter(Boolean);
+                return parts
+                  .map((sentence, idx) => {
+                    const delay = baseDelay + idx * step;
+                    return `<span class="m25l6-line" data-aos="fade-up" data-aos-delay="${delay}">${sentence}।</span>`;
+                  })
+                  .join(" ");
+              };
+
+              return `
+                <div class="lesson-slide mod25-lesson6">
+                  <div class="m25l6-shapes" aria-hidden="true">
+                    <span class="m25l6-shape m25l6-shape--orb"></span>
+                    <span class="m25l6-shape m25l6-shape--blob"></span>
+                    <span class="m25l6-shape m25l6-shape--ring"></span>
+                    <span class="m25l6-shape m25l6-shape--zig"></span>
+                  </div>
+
+                  <header class="m25l6-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="m25l6-hero__badge icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="m25l6-hero__body">
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Counseling", "কাউন্সেলিং")}</h2>
+                    </div>
+                  </header>
+
+                  <div class="row g-1 mt-1 align-items-stretch">
+                    <div class="col-12">
+                      <article class="modern-card glass-card m25l6-counsel" data-aos="fade-left" data-aos-delay="140">
+                        <div class="d-none m25l6-counsel-head yhap_box_shadow" data-aos="fade-up" data-aos-delay="180">
                           <span class="m25l6-chip bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
                           <h3 class="mb-0" data-aos="fade-up" data-aos-delay="230">${counselingTitleBn}</h3>
                         </div>
