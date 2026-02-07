@@ -17773,7 +17773,7 @@ const coursesData = [
                   </header>
 
                   <div class="row g-1 mt-1 align-items-stretch">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-5">
                       <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-right" data-aos-delay="90">
                         <div class="m25l3-card__title yhap_box_shadow" data-aos="fade-up" data-aos-delay="130">
                           <span class="m25l3-icon bg-gradient-blue icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-table"></i></span>
@@ -17813,7 +17813,7 @@ const coursesData = [
                       </article>
                     </div>
 
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-7">
                       <article class="modern-card glass-card h-100 m25l3-card grid_2" data-aos="fade-left" data-aos-delay="110">
                         <section class="m25l3-section m25l3-section--group" data-aos="zoom-in" data-aos-delay="140">
                           <div class="m25l3-section__title yhap_box_shadow">
@@ -17825,7 +17825,7 @@ const coursesData = [
                           </ul>
                         </section>
 
-                        <section class="mt-3 m25l3-section m25l3-section--mass" data-aos="zoom-in" data-aos-delay="220">
+                        <section class="m25l3-section m25l3-section--mass" data-aos="zoom-in" data-aos-delay="220">
                           <div class="m25l3-section__title yhap_box_shadow">
                             <span class="m25l3-icon bg-gradient-yellow icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="260"> ${yhLang("Mass Communication", "গণযোগাযোগ")}</h3>

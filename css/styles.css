@@ -7994,6 +7994,7 @@ input::placeholder {
 .grid_2 {
   display: grid;
   grid-template-columns: 60% 2fr;
+  gap: 10px;
 }
 /* Per-line animation */
 .mod25-lesson-elements-qualities .m25l5e-line {
@@ -8724,7 +8725,7 @@ input::placeholder {
 }
 
 .mod25-lesson3 .m25l3-section__title {
-  display: flex;
+  text-align: center;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
@@ -9103,9 +9104,9 @@ input::placeholder {
 }
 
 .mod25-lesson3 .m25l3-card__title {
-  display: flex;
+  text-align: center;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 /* Techniques: Unique circular floating background (Module 25 Lesson 3 only) */
