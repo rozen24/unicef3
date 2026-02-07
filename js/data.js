@@ -17208,7 +17208,7 @@ const coursesData = [
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                               <div class="timeline-dot bg-gradient-blue" aria-hidden="true">---</i></div>
                               <article class="timeline-card jogajok tl-blue">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></div>
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-comments"></i></div>
                                 <h6 class="timeline-card-title">${yhLang("Sender", "কথা")}</h6>
                               </article>
                             </div>
@@ -17216,7 +17216,7 @@ const coursesData = [
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="260">
                               <div class="timeline-dot bg-gradient-teal" aria-hidden="true">---</i></div>
                               <article class="timeline-card jogajok tl-cyan">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-user-check"></i></div>
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-hand"></i></div>
                                 <h6 class="timeline-card-title">${yhLang("Receiver", "আকার–ইঙ্গিত")}</h6>
                               </article>
                             </div>
@@ -17224,7 +17224,7 @@ const coursesData = [
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="320">
                               <div class="timeline-dot bg-gradient-rose" aria-hidden="true">---</i></div>
                               <article class="timeline-card jogajok tl-rose">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></div>
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-pen-nib"></i></div>
                                 <h6 class="timeline-card-title">${yhLang("Message", "লেখা")}</h6>
                               </article>
                             </div>
@@ -17232,7 +17232,7 @@ const coursesData = [
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="380">
                               <div class="timeline-dot bg-gradient-mint" aria-hidden="true">---</div>
                               <article class="timeline-card jogajok tl-emerald">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></div>
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-image"></i></div>
                                 <h6 class="timeline-card-title">${yhLang("Medium", "ছবি")}</h6>
                               </article>
                             </div>
@@ -17240,7 +17240,7 @@ const coursesData = [
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="440">
                               <div class="timeline-dot bg-gradient-yellow" aria-hidden="true">---</div>
                               <article class="timeline-card jogajok tl-amber">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-reply"></i></div>
+                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-icons"></i></div>
                                 <h6 class="timeline-card-title">${yhLang("Feedback", "প্রতীক এর সাহায্যে অর্থবহ উপায়ে ও কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে")}</h6>
                               </article>
                             </div>
@@ -17539,7 +17539,7 @@ const coursesData = [
                     <!-- Line 3: Recipient ideas/questions/opinions <-> Feedback -->
                     <div class="m25l3f-row m25l3f-row--right" data-aos="fade-up" data-aos-delay="">
                       <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="" style="--d:320ms">
-                        <span class="m25l3f-node__icon bg-gradient-orange" aria-hidden="true"><i class="fa-solid fa-circle-question"></i></span>
+                        <span class="m25l3f-node__icon bg-gradient-orange" aria-hidden="true"><i class="fa-solid fa-comment-dots"></i></span>
                         <span class="m25l3f-node__title">${yhLang("Recipient's response", "প্রাপকের প্রতিক্রিয়া")}</span>
                       </div>
                       <div class="m25l3f-arrows-horiz" aria-hidden="true">
