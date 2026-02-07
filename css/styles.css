@@ -1876,6 +1876,16 @@ html[lang|="bn"] h2 {
   background: linear-gradient(135deg, #FB7185 0%, #F43F5E 100%);
 }
 
+/* Module 25 purpose-specific pastel gradient */
+.bg-gradient-m25-purpose {
+  background: linear-gradient(135deg, #e8def8 0%, #d7fbe8 50%, #fff3b0 100%);
+}
+
+/* Module 25 elements-specific pastel gradient */
+.bg-gradient-m25-elements {
+  background: linear-gradient(135deg, #bde0fe 0%, #c8f7f1 50%, #ffd6e7 100%);
+}
+
 /* ==================== MODULE 24 • LESSON 5 ==================== */
 .mod24-lesson5 {
   position: relative;
@@ -7419,7 +7429,15 @@ input::placeholder {
   font-weight: 750;
   font-size: 1.05rem;
 }
-
+.mod25-lesson1 .jogajok {
+  display: flex !important;
+  padding: 10px !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+.mod25-lesson1 .timeline-card-icon {
+  margin-bottom: 0px !important;
+}
 @media (max-width: 991.98px) {
   .mod25-lesson1 .m25l1-left {
     padding: 6px 0 12px;
@@ -7759,6 +7777,431 @@ input::placeholder {
   border-radius: 22px;
   padding: 1.25rem;
   background: var(--teal-gradient);
+}
+
+/* ==================== MODULE 25 • LESSON 3 (Purpose of Communication) ==================== */
+.lesson-slide.mod25-lesson3-purpose {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.80), rgba(255,255,255,0.62)),
+    linear-gradient(135deg, #e8def8 0%, #d7fbe8 48%, #fff3b0 100%);
+}
+
+/* ==================== MODULE 25 • LESSON (Elements characteristics) ==================== */
+.lesson-slide.mod25-lesson-elements-qualities {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.80), rgba(255,255,255,0.62)),
+    linear-gradient(135deg, #bde0fe 0%, #c8f7f1 50%, #ffd6e7 100%);
+}
+
+.lesson-slide.mod25-lesson-elements-qualities::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(6, 182, 212, 0.16), rgba(6, 182, 212, 0) 58%),
+    radial-gradient(circle at 75% 75%, rgba(251, 113, 133, 0.16), rgba(251, 113, 133, 0) 58%);
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.lesson-slide.mod25-lesson-elements-qualities > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-shape {
+  position: absolute;
+  opacity: 0.55;
+  transform: translate3d(0,0,0);
+  filter: saturate(1.2) contrast(1.05) drop-shadow(0 18px 44px rgba(15, 53, 110, 0.16));
+  animation: orbGlide 16s ease-in-out infinite;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-shape--orb {
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  top: -90px;
+  left: -90px;
+  background: var(--blue-gradient);
+}
+
+.mod25-lesson-elements-qualities .m25l5e-shape--wave {
+  width: 520px;
+  height: 210px;
+  right: -210px;
+  top: -100px;
+  border-radius: 999px;
+  background: var(--yellow-gradient);
+  transform: rotate(14deg);
+  opacity: 0.38;
+  animation-duration: 20s;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-shape--dots {
+  width: 260px;
+  height: 260px;
+  left: 18px;
+  bottom: -120px;
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.55) 2px, transparent 3px) 0 0 / 26px 26px;
+  opacity: 0.55;
+  animation-duration: 18s;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-shape--ring {
+  width: 220px;
+  height: 220px;
+  right: 18px;
+  bottom: -100px;
+  border-radius: 999px;
+  border: 14px solid rgba(255,255,255,0.60);
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.18), rgba(255,255,255,0) 62%);
+  opacity: 0.75;
+  animation-duration: 19s;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-shape--kite {
+  width: 210px;
+  height: 210px;
+  left: 62%;
+  top: -110px;
+  background: var(--pink-gradient);
+  clip-path: polygon(50% 0%, 100% 38%, 50% 100%, 0% 38%);
+  opacity: 0.28;
+  animation-duration: 22s;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.56));
+  border: 1px solid rgba(0,0,0,0.06);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 18px 45px rgba(15, 53, 110, 0.10);
+  margin-bottom: 1rem;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-hero__badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 34px rgba(16, 24, 40, 0.14);
+}
+
+.mod25-lesson-elements-qualities .m25l5e-hero__badge i {
+  font-size: 1.35rem;
+  color: rgba(15, 23, 42, 0.85);
+}
+
+.mod25-lesson-elements-qualities .m25l5e-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-card {
+  background: rgba(255,255,255,0.68);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 20px;
+  padding: 14px 14px 12px;
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+}
+
+.mod25-lesson-elements-qualities .m25l5e-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.14);
+}
+
+.mod25-lesson-elements-qualities .m25l5e-card__badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+  flex-shrink: 0;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-card__badge i {
+  font-size: 1.05rem;
+  color: rgba(15, 23, 42, 0.85);
+}
+
+.mod25-lesson-elements-qualities .m25l5e-card__title {
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-list {
+  display: grid;
+  gap: 5px;
+}
+
+.mod25-lesson-elements-qualities .m25l5e-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 5px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.mod25-lesson-elements-qualities .m25l5e-bullet {
+  width: 30px;
+  height: 30px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 12px 22px rgba(16, 24, 40, 0.10);
+}
+
+.mod25-lesson-elements-qualities .m25l5e-bullet i {
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.85);
+}
+
+.mod25-lesson-elements-qualities .m25l5e-text {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Per-line animation */
+.mod25-lesson-elements-qualities .m25l5e-line {
+  animation: m25l5eLineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m25l5eLineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mod25-lesson-elements-qualities .m25l5e-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod25-lesson-elements-qualities .m25l5e-line,
+  .mod25-lesson-elements-qualities .m25l5e-shape {
+    animation: none !important;
+  }
+}
+
+.lesson-slide.mod25-lesson3-purpose::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 22% 26%, rgba(251, 113, 133, 0.18), rgba(251, 113, 133, 0) 55%),
+    radial-gradient(circle at 78% 72%, rgba(6, 182, 212, 0.16), rgba(6, 182, 212, 0) 58%);
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.lesson-slide.mod25-lesson3-purpose > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mod25-lesson3-purpose .m25l3p-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod25-lesson3-purpose .m25l3p-shape {
+  position: absolute;
+  opacity: 0.55;
+  filter: saturate(1.2) contrast(1.05) drop-shadow(0 18px 44px rgba(15, 53, 110, 0.16));
+  transform: translate3d(0,0,0);
+  animation: orbGlide 16s ease-in-out infinite;
+}
+
+.mod25-lesson3-purpose .m25l3p-shape--orb {
+  width: 210px;
+  height: 210px;
+  border-radius: 999px;
+  top: -80px;
+  left: -90px;
+  background: var(--lavender-gradient);
+}
+
+.mod25-lesson3-purpose .m25l3p-shape--blob {
+  width: 340px;
+  height: 230px;
+  right: -160px;
+  top: 10%;
+  background: var(--mint-gradient);
+  border-radius: 44% 56% 62% 38% / 44% 46% 54% 56%;
+  opacity: 0.42;
+  animation-duration: 18s;
+}
+
+.mod25-lesson3-purpose .m25l3p-shape--ribbon {
+  width: 520px;
+  height: 190px;
+  left: -220px;
+  bottom: -120px;
+  background: var(--yellow-gradient);
+  border-radius: 999px;
+  transform: rotate(-10deg);
+  opacity: 0.35;
+  animation-duration: 20s;
+}
+
+.mod25-lesson3-purpose .m25l3p-shape--ring {
+  width: 210px;
+  height: 210px;
+  right: 18px;
+  bottom: -100px;
+  border-radius: 999px;
+  border: 14px solid rgba(255,255,255,0.60);
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.18), rgba(255,255,255,0) 62%);
+  opacity: 0.75;
+  animation-duration: 19s;
+}
+
+.mod25-lesson3-purpose .m25l3p-shape--diamond {
+  width: 170px;
+  height: 170px;
+  left: 60%;
+  top: -90px;
+  background: var(--pink-gradient);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  opacity: 0.32;
+  animation-duration: 22s;
+}
+
+.mod25-lesson3-purpose .m25l3p-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.56));
+  border: 1px solid rgba(0,0,0,0.06);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 18px 45px rgba(15, 53, 110, 0.10);
+  margin-bottom: 1rem;
+}
+
+.mod25-lesson3-purpose .m25l3p-hero__badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 16px 34px rgba(16, 24, 40, 0.14);
+}
+
+.mod25-lesson3-purpose .m25l3p-hero__badge i {
+  font-size: 1.35rem;
+  color: rgba(15, 23, 42, 0.85);
+}
+
+.mod25-lesson3-purpose .m25l3p-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.mod25-lesson3-purpose .m25l3p-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.68);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+}
+
+.mod25-lesson3-purpose .m25l3p-bullet {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.10);
+}
+
+.mod25-lesson3-purpose .m25l3p-bullet i {
+  font-size: 1.05rem;
+  color: rgba(15, 23, 42, 0.85);
+}
+
+.mod25-lesson3-purpose .m25l3p-text {
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* Per-line animation */
+.mod25-lesson3-purpose .m25l3p-line {
+  animation: m25l3pLineIn 700ms ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes m25l3pLineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mod25-lesson3-purpose .m25l3p-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod25-lesson3-purpose .m25l3p-line {
+    animation: none !important;
+  }
+  .mod25-lesson3-purpose .m25l3p-shape {
+    animation: none !important;
+  }
 }
 
 .mod25-lesson2-flow .m25l2f-hero {

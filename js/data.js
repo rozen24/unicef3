@@ -17182,9 +17182,6 @@ const coursesData = [
                       <span class="m25l1-title__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
                       <h2 class="slide-title gradient-text mb-0">${yhLang("Communication", "যোগাযোগ")}</h2>
                     </div>
-                    <p class="m25l1-lead mb-0" data-aos="fade-up" data-aos-delay="80">
-                     ${yhLang("Communication is a process through which people meaningfully and effectively exchange information, knowledge, experiences, ideas, and opinions using speech, gestures, writing, images, or symbols.", "যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহামযয অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে |")} 
-                    </p>
                   </header>
 
                   <div class="row g-1 mt-1 align-items-stretch">
@@ -17192,7 +17189,7 @@ const coursesData = [
                       <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
                         <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
                           <span class="m25l1-circle__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
-                          <span class="m25l1-circle__text" data-aos="fade-up" data-aos-delay="220">${yhLang("Elements of communication", "যোগাযোগের উপাদান")}</span>
+                          <span class="m25l1-circle__text" data-aos="fade-up" data-aos-delay="220">${yhLang("Elements of communication", "যোগাযোগ হচ্ছে একটি প্রক্রিয়া, যার মাধ্যমে মানুষ")}</span>
                         </div>
                       </div>
                     </div>
@@ -17210,41 +17207,41 @@ const coursesData = [
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                               <div class="timeline-dot bg-gradient-blue" aria-hidden="true">---</i></div>
-                              <article class="timeline-card tl-blue">
+                              <article class="timeline-card jogajok tl-blue">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Sender", "প্রেরক")}</h6>
+                                <h6 class="timeline-card-title">${yhLang("Sender", "কথা")}</h6>
                               </article>
                             </div>
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="260">
                               <div class="timeline-dot bg-gradient-teal" aria-hidden="true">---</i></div>
-                              <article class="timeline-card tl-cyan">
+                              <article class="timeline-card jogajok tl-cyan">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-user-check"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Receiver", "প্রাপক")}</h6>
+                                <h6 class="timeline-card-title">${yhLang("Receiver", "আকার–ইঙ্গিত")}</h6>
                               </article>
                             </div>
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="320">
                               <div class="timeline-dot bg-gradient-rose" aria-hidden="true">---</i></div>
-                              <article class="timeline-card tl-rose">
+                              <article class="timeline-card jogajok tl-rose">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Message", "বার্তা")}</h6>
+                                <h6 class="timeline-card-title">${yhLang("Message", "লেখা")}</h6>
                               </article>
                             </div>
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="380">
                               <div class="timeline-dot bg-gradient-mint" aria-hidden="true">---</div>
-                              <article class="timeline-card tl-emerald">
+                              <article class="timeline-card jogajok tl-emerald">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Medium", "মাধ্যম")}</h6>
+                                <h6 class="timeline-card-title">${yhLang("Medium", "ছবি")}</h6>
                               </article>
                             </div>
 
                             <div class="timeline-item" data-aos="fade-up" data-aos-delay="440">
                               <div class="timeline-dot bg-gradient-yellow" aria-hidden="true">---</div>
-                              <article class="timeline-card tl-amber">
+                              <article class="timeline-card jogajok tl-amber">
                                 <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-reply"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Feedback", "প্রতিবার্তা")}</h6>
+                                <h6 class="timeline-card-title">${yhLang("Feedback", "প্রতীক এর সাহায্যে অর্থবহ উপায়ে ও কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে")}</h6>
                               </article>
                             </div>
                           </section>
@@ -17255,8 +17252,91 @@ const coursesData = [
                 </div>`;
             })(),
           },
+          
           {
             id: "ch25-lesson-2",
+            title: yhLang("Purpose of Communication", "যোগাযোগের উদ্দেশ্য"),
+            icon: "fa-bullseye",
+            gradientClass: "bg-gradient-m25-purpose",
+            audioFile: "",
+            content: (function () {
+              const points = [
+                {
+                  icon: "fa-face-smile",
+                  accent: "bg-gradient-rose",
+                  text: yhLang("Express feelings", "ভাব প্রকাশ করা"),
+                },
+                {
+                  icon: "fa-right-left",
+                  accent: "bg-gradient-teal",
+                  text: yhLang("Exchange information", "তথ্য আদান-প্রদান করা"),
+                },
+                {
+                  icon: "fa-ear-listen",
+                  accent: "bg-gradient-lavender",
+                  text: yhLang(
+                    "Understand others' opinions and ideas",
+                    "অন্যের মতামত ও ধারণা বোঝা"
+                  ),
+                },
+                {
+                  icon: "fa-comment-dots",
+                  accent: "bg-gradient-mint",
+                  text: yhLang(
+                    "Present your opinion to others",
+                    "নিজের মতামত অন্যের কাছে তুলে ধরা"
+                  ),
+                },
+                {
+                  icon: "fa-bullhorn",
+                  accent: "bg-gradient-yellow",
+                  text: yhLang(
+                    "Raise awareness to bring behavior change",
+                    "মানুষকে সচেতন করে আচরণের পরিবর্তন আনা"
+                  ),
+                },
+              ];
+
+              const render = () =>
+                points
+                  .map((p, idx) => {
+                    const delay = 160 + idx * 80;
+                    return `
+                      <li class="m25l3p-item m25l3p-line" data-aos="fade-up" data-aos-delay="${delay}" style="--d:${120 + idx * 90}ms">
+                        <span class="m25l3p-bullet ${p.accent} icon-spin-on-hover" aria-hidden="true"><i class="fa-solid ${p.icon}"></i></span>
+                        <span class="m25l3p-text">${p.text}</span>
+                      </li>
+                    `;
+                  })
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod25-lesson3-purpose">
+                  <div class="m25l3p-shapes" aria-hidden="true">
+                    <span class="m25l3p-shape m25l3p-shape--orb"></span>
+                    <span class="m25l3p-shape m25l3p-shape--blob"></span>
+                    <span class="m25l3p-shape m25l3p-shape--ribbon"></span>
+                    <span class="m25l3p-shape m25l3p-shape--ring"></span>
+                    <span class="m25l3p-shape m25l3p-shape--diamond"></span>
+                  </div>
+
+                  <header class="m25l3p-hero" data-aos="fade-up">
+                    <span class="m25l3p-hero__badge bg-gradient-m25-purpose icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-bullseye"></i>
+                    </span>
+                    <h2 class="slide-title gradient-text mb-0 m25l3p-line" data-aos="fade-up" data-aos-delay="70" style="--d:70ms">
+                      ${yhLang("Purpose of Communication", "যোগাযোগের উদ্দেশ্য")}
+                    </h2>
+                  </header>
+
+                  <ul class="list-unstyled m25l3p-list mb-0" role="list">
+                    ${render()}
+                  </ul>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch25-lesson-3",
             title: yhLang("Communication", "যোগাযোগ"),
             icon: "fa-diagram-project",
             gradientClass: "bg-gradient-teal",
@@ -17361,8 +17441,8 @@ const coursesData = [
                 </div>`;
             })(),
           },
-           {
-            id: "ch25-lesson-3",
+          {
+            id: "ch25-lesson-4",
             title: yhLang(
               "A simple model of the communication process",
               "যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল"
@@ -17461,7 +17541,130 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-4",
+            id: "ch25-lesson-5",
+            title: yhLang(
+              "Characteristics of the Elements of Communication",
+              "যোগাযোগের উপাদানের বৈশিষ্ট্য"
+            ),
+            icon: "fa-layer-group",
+            gradientClass: "bg-gradient-m25-elements",
+            audioFile: "",
+            content: (function () {
+              const sections = [
+                {
+                  icon: "fa-paper-plane",
+                  accent: "bg-gradient-blue",
+                  title: yhLang("Sender", "প্রেরক"),
+                  items: [
+                    { icon: "fa-shield-halved", accent: "bg-gradient-lavender", text: yhLang("Trustworthy", "আত্মাভাজন") },
+                    { icon: "fa-heart", accent: "bg-gradient-rose", text: yhLang("Sincere", "আন্তরিক") },
+                    { icon: "fa-eye", accent: "bg-gradient-teal", text: yhLang("Careful", "সতর্ক") },
+                    { icon: "fa-scale-balanced", accent: "bg-gradient-mint", text: yhLang("Neutral", "নিরপেক্ষ") },
+                    { icon: "fa-bullseye", accent: "bg-gradient-yellow", text: yhLang("Accurate", "নির্ভুল") },
+                    { icon: "fa-comment-dots", accent: "bg-gradient-pink", text: yhLang("Clear-spoken", "স্পষ্টভাষী") },
+                  ],
+                },
+                {
+                  icon: "fa-user-check",
+                  accent: "bg-gradient-teal",
+                  title: yhLang("Receiver", "প্রাপক"),
+                  items: [
+                    { icon: "fa-magnifying-glass", accent: "bg-gradient-yellow", text: yhLang("Interested and curious", "আগ্রহী ও উৎসুক") },
+                    { icon: "fa-ear-listen", accent: "bg-gradient-mint", text: yhLang("Attentive", "মনযোগী") },
+                    { icon: "fa-hourglass-half", accent: "bg-gradient-lavender", text: yhLang("Patient", "ধৈর্য্যশীল") },
+                    { icon: "fa-brain", accent: "bg-gradient-blue", text: yhLang("Able to understand the message", "বার্তা বুঝতে সক্ষম") },
+                    { icon: "fa-reply", accent: "bg-gradient-rose", text: yhLang("Able to send feedback", "ফিরতি বার্তা প্রেরণে সক্ষম") },
+                  ],
+                },
+                {
+                  icon: "fa-envelope-open-text",
+                  accent: "bg-gradient-rose",
+                  title: yhLang("Message", "বার্তা"),
+                  items: [
+                    { icon: "fa-location-crosshairs", accent: "bg-gradient-teal", text: yhLang("Relevant for the target audience", "উদ্দিষ্ট জনগোষ্ঠীর জন্য প্রাসঙ্গিক") },
+                    { icon: "fa-book-open", accent: "bg-gradient-mint", text: yhLang("Easy to understand", "সহজবোধ্য") },
+                    { icon: "fa-list-check", accent: "bg-gradient-lavender", text: yhLang("Specific", "সুনির্দিষ্ট") },
+                    { icon: "fa-circle-check", accent: "bg-gradient-blue", text: yhLang("Clear", "স্পষ্ট") },
+                    { icon: "fa-wand-magic-sparkles", accent: "bg-gradient-pink", text: yhLang("Appealing", "আবেদনসৃষ্টিকারী") },
+                    { icon: "fa-thumbs-up", accent: "bg-gradient-yellow", text: yhLang("Appropriate", "উপযুক্ত") },
+                  ],
+                },
+                {
+                  icon: "fa-tower-broadcast",
+                  accent: "bg-gradient-yellow",
+                  title: yhLang("Medium", "মাধ্যম"),
+                  items: [
+                    { icon: "fa-users", accent: "bg-gradient-mint", text: yhLang("Suitable for the target audience", "উদ্দিষ্ট জনগোষ্ঠীর জন্য উপযুক্ত") },
+                    { icon: "fa-sliders", accent: "bg-gradient-lavender", text: yhLang("Suitable for the message", "বার্তার জন্য উপযুক্ত") },
+                    { icon: "fa-hand", accent: "bg-gradient-teal", text: yhLang("Easily accessible", "সহজলভ্য") },
+                    { icon: "fa-shield", accent: "bg-gradient-blue", text: yhLang("Credible", "বিশ্বাসযোগ্য") },
+                    { icon: "fa-clock", accent: "bg-gradient-rose", text: yhLang("Timely", "সময়োপযোগী") },
+                    { icon: "fa-check-double", accent: "bg-gradient-yellow", text: yhLang("Acceptable", "গ্রহণযোগ্য") },
+                  ],
+                },
+              ];
+
+              const renderItems = (items, baseDelay, baseD) =>
+                (items || [])
+                  .map((it, idx) => {
+                    const delay = baseDelay + idx * 65;
+                    const d = baseD + idx * 85;
+                    return `
+                      <li class="m25l5e-item m25l5e-line" data-aos="fade-up" data-aos-delay="${delay}" style="--d:${d}ms">
+                        <span class="m25l5e-bullet ${it.accent} icon-spin-on-hover" aria-hidden="true"><i class="fa-solid ${it.icon}"></i></span>
+                        <span class="m25l5e-text">${it.text}</span>
+                      </li>
+                    `;
+                  })
+                  .join("");
+
+              const renderSections = () =>
+                sections
+                  .map((s, idx) => {
+                    const cardDelay = 120 + idx * 90;
+                    const listDelay = 220 + idx * 90;
+                    const baseD = 120 + idx * 120;
+                    return `
+                      <article class="m25l5e-card m25l5e-line" data-aos="fade-up" data-aos-delay="${cardDelay}" style="--d:${baseD}ms">
+                        <header class="m25l5e-card__head" data-aos="fade-up" data-aos-delay="${cardDelay + 40}">
+                          <span class="m25l5e-card__badge ${s.accent} icon-spin-on-hover" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
+                          <h3 class="m25l5e-card__title mb-0">${s.title}</h3>
+                        </header>
+                        <ul class="list-unstyled m25l5e-list mb-0" role="list">
+                          ${renderItems(s.items, listDelay, baseD + 80)}
+                        </ul>
+                      </article>
+                    `;
+                  })
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod25-lesson-elements-qualities">
+                  <div class="m25l5e-shapes" aria-hidden="true">
+                    <span class="m25l5e-shape m25l5e-shape--orb"></span>
+                    <span class="m25l5e-shape m25l5e-shape--wave"></span>
+                    <span class="m25l5e-shape m25l5e-shape--dots"></span>
+                    <span class="m25l5e-shape m25l5e-shape--ring"></span>
+                    <span class="m25l5e-shape m25l5e-shape--kite"></span>
+                  </div>
+
+                  <header class="m25l5e-hero" data-aos="fade-up">
+                    <span class="m25l5e-hero__badge bg-gradient-m25-elements icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-layer-group"></i>
+                    </span>
+                    <h2 class="slide-title gradient-text mb-0 m25l5e-line" data-aos="fade-up" data-aos-delay="70" style="--d:70ms">
+                      ${yhLang("Characteristics of the Elements of Communication", "যোগাযোগের উপাদানের বৈশিষ্ট্য")}
+                    </h2>
+                  </header>
+
+                  <div class="m25l5e-grid">
+                    ${renderSections()}
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch25-lesson-6",
             title: yhLang(
               "Methods of communication",
               "যোগাযোগের পদ্ধতি"
@@ -17636,7 +17839,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-5",
+            id: "ch25-lesson-7",
             title: yhLang(
               "Conditions Required for Establishing Interpersonal Relationships",
               "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী"
@@ -17704,7 +17907,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-6",
+            id: "ch25-lesson-8",
             title: yhLang(
               "Techniques of interpersonal relationship",
               "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল"
@@ -17860,7 +18063,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-7",
+            id: "ch25-lesson-9",
             title: yhLang(
               "Steps of counseling.",
               "কাউন্সেলিংয়ের ধাপসমূহ"
