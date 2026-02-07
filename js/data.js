@@ -17814,14 +17814,14 @@ const coursesData = [
                     </div>
 
                     <div class="col-12 col-lg-6">
-                      <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-left" data-aos-delay="110">
+                      <article class="modern-card glass-card h-100 m25l3-card grid_2" data-aos="fade-left" data-aos-delay="110">
                         <section class="m25l3-section m25l3-section--group" data-aos="zoom-in" data-aos-delay="140">
                           <div class="m25l3-section__title yhap_box_shadow">
                             <span class="m25l3-icon bg-gradient-purple icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="180"> ${yhLang("Methods of Group Communication", "দলীয় যোগাযোগের পদ্ধতি সমূহ")}</h3>
                           </div>
                           <ul class="list-unstyled info-list mb-0 yhap_box_shadow">
-                            ${renderInfoList(groupItems, 220, 60)}
+                            <span>${renderInfoList(groupItems, 220, 60)}</span>
                           </ul>
                         </section>
 
@@ -17830,7 +17830,7 @@ const coursesData = [
                             <span class="m25l3-icon bg-gradient-yellow icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="260"> ${yhLang("Mass Communication", "গণযোগাযোগ")}</h3>
                           </div>
-                          <p class="mb-0 m25l3-mass yhap_box_shadow">${yhLang("Different forms of mass media are used to deliver messages to large audiences. In this case, the sender and receiver do not interact directly.", "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।")}</p>
+                          <span class="mb-0 m25l3-mass yhap_box_shadow">${yhLang("Different forms of mass media are used to deliver messages to large audiences. In this case, the sender and receiver do not interact directly.", "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।")}</span>
                         </section>
                       </article>
                     </div>

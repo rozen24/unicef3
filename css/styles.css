@@ -7991,7 +7991,10 @@ input::placeholder {
   font-weight: 700;
   line-height: 1.3;
 }
-
+.grid_2 {
+  display: grid;
+  grid-template-columns: 60% 2fr;
+}
 /* Per-line animation */
 .mod25-lesson-elements-qualities .m25l5e-line {
   animation: m25l5eLineIn 700ms ease both;
