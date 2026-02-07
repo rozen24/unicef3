@@ -1929,8 +1929,9 @@ html[lang|="bn"] h2 {
 }
 
 .mod24-lesson5 .m24l5-list {
-  display: grid;
-  gap: 0.9rem;
+    display: grid;
+    gap: 2.9rem;
+    grid-template-columns: 50% 2fr;
 }
 
 .mod24-lesson5 .m24l5-item {
@@ -2828,6 +2829,8 @@ html[lang|="bn"] h2 {
 }
 
 .mod24-lesson10 .m24l10-quote {
+  display: grid;
+  grid-template-columns: 50% 2fr;
   position: relative;
   padding: 1.05rem 1.1rem;
   border-radius: 20px;
@@ -3040,6 +3043,7 @@ html[lang|="bn"] h2 {
 .mod24-lesson11 .m24l11-list {
   display: grid;
   gap: 0.85rem;
+  grid-template-columns: 50% 2fr;
 }
 
 .mod24-lesson11 .m24l11-item {

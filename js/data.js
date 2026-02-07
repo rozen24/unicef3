@@ -16537,7 +16537,7 @@ const coursesData = [
                     )}</h2>
                   </header>
 
-                  <ul class="list-unstyled m24l6-grid mb-0 w-lg-75 mx-auto">
+                  <ul class="list-unstyled m24l6-grid mb-0 w-lg-80 mx-auto">
                     ${renderSkills(skills)}
                   </ul>
                 </div>`;
@@ -16915,7 +16915,7 @@ const coursesData = [
                   icon: "fa-user-shield",
                   text: yhLang(
                     "According to crime experts—",
-                    "অপরাধ বিশেষজ্ঞদের মতে—"
+                    "অপরাধ বিশেষজ্ঞদের মতে —"
                   ),
                 },
                 {
@@ -17041,9 +17041,9 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <div class="row g-1 mt-1 justify-content-center w-lg-100 mx-auto">
+                  <div class="row g-1 mt-1 justify-content-center ">
                     <div class="col-12 col-lg-12">
-                      <article class="m24l10-quote" data-aos="zoom-in" data-aos-delay="100">
+                      <article class="m24l10-quote w-lg-100 mx-auto" data-aos="zoom-in" data-aos-delay="100">
                         ${renderHighlight(highlight)}
                       </article>
                     </div>
