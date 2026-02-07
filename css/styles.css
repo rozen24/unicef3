@@ -8811,6 +8811,15 @@ input::placeholder {
   gap: 1rem;
 }
 
+/* Center the example highlight (quiz-warning is inline-flex globally) */
+.mod25-lesson3-flow .quiz-warning {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+}
+
 .mod25-lesson3-flow .m25l3f-row {
   display: flex;
   align-items: center;
@@ -8819,7 +8828,9 @@ input::placeholder {
   gap: 0.85rem;
 }
 .mod25-lesson3-flow .f_line {
-  gap: 12.85rem;
+  gap: 0.85rem;
+  justify-content: space-around;
+  width: 100%;
 }
 .mod25-lesson3-flow .m25l3f-row--center {
   justify-content: center;
@@ -8827,9 +8838,12 @@ input::placeholder {
 
 .mod25-lesson3-flow .m25l3f-row--right {
   justify-content: flex-end;
-  width: 90%;
+  width: 96%;
 }
-
+.m25l3f-node {
+  display: flex !important;
+  justify-content: center !important;
+}
 .mod25-lesson3-flow .m25l3f-row--bridge {
   gap: 4.5rem;
   margin-top: -0.25rem;
@@ -9689,7 +9703,8 @@ input::placeholder {
 
 .mod25-lesson4 .m25l4-list {
   display: grid;
-  gap: 12px;
+  gap: 5px;
+  grid-template-columns: 50% 2fr;
 }
 
 .mod25-lesson4 .m25l4-point {
@@ -9828,7 +9843,7 @@ input::placeholder {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: 9999;
 }
 
 .mod25-lesson5 .m25l5-shape {
@@ -9970,6 +9985,7 @@ input::placeholder {
 .mod25-lesson5 .m25l5-list {
   display: grid;
   gap: 12px;
+  grid-template-columns: 50% 2fr;
 }
 
 .mod25-lesson5 .m25l5-item {

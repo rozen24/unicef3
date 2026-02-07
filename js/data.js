@@ -17469,25 +17469,40 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <div class="m25l3f-flow">
-                    <!-- Line 1: Service provider -> Reproductive health info -> Service recipient -->
+                  <div class="quiz-warning m25l3f-line text-center w-75 mx-auto" data-aos="fade-up" data-aos-delay="90" style="--d:90ms; margin-bottom:0.75rem">
+                    <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                    <span>
+                      ${yhLang(
+                        "Example (in health services): If a health care provider gives some information to a service recipient—",
+                        "উদাহরণ (স্বাস্থ্য সেবার ক্ষেত্রে):স্বাস্থ্য সেবাদানকারী যদি সেবাগ্রহীতাকে কোনো তথ্য দেন—"
+                      )}
+                    </span>
+                  </div>
+
+                  <div class="m25l3f-flow mb-5">
+                    <!-- Line 1: Sender -> Message -> Medium -> Receiver -->
                     <div class="m25l3f-row f_line" data-aos="fade-up" data-aos-delay="120">
                       <div class="m25l3f-node m25l3f-line" data-aos="zoom-in" data-aos-delay="160" style="--d:120ms">
-                        <span class="m25l3f-node__icon bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-user-nurse"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Service Provider", "সেবাদানকারী")}</span>
+                        <span class="m25l3f-node__icon bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></span>
+                        <span class="m25l3f-node__title">${yhLang("Sender", "প্রেরক")}</span>
                       </div>
                       <div class="m25l3f-node m25l3f-line" data-aos="zoom-in" data-aos-delay="220" style="--d:180ms">
-                        <span class="m25l3f-node__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-notes-medical"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Reproductive Health Information", "প্রজনন স্বাস্থ্যবিষয়ক তথ্য")}</span>
+                        <span class="m25l3f-node__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></span>
+                        <span class="m25l3f-node__title">${yhLang("Message", "বার্তা")}</span>
                       </div>
                       <div class="m25l3f-node m25l3f-line" data-aos="zoom-in" data-aos-delay="280" style="--d:240ms">
+                        <span class="m25l3f-node__icon bg-gradient-yellow" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></span>
+                        <span class="m25l3f-node__title">${yhLang("Medium", "মাধ্যম")}</span>
+                      </div>
+                      <div class="m25l3f-node m25l3f-line" data-aos="zoom-in" data-aos-delay="340" style="--d:300ms">
                         <span class="m25l3f-node__icon bg-gradient-teal" aria-hidden="true"><i class="fa-solid fa-user-check"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Service Recipient", "সেবাগ্রহীতা")}</span>
+                        <span class="m25l3f-node__title">${yhLang("Receiver", "প্রাপক")}</span>
                       </div>
                     </div>
 
                     <!-- Line 1 to Line 2 connectors -->
                     <div class="m25l3f-row m25l3f-row--bridge" data-aos="fade-up" data-aos-delay="170">
+                      <span class="m25l3f-arrow m25l3f-arrow--down" aria-hidden="true"></span>
                       <span class="m25l3f-arrow m25l3f-arrow--down" aria-hidden="true"></span>
                       <span class="m25l3f-arrow m25l3f-arrow--down" aria-hidden="true"></span>
                       <span class="m25l3f-arrow m25l3f-arrow--down" aria-hidden="true"></span>
@@ -17497,41 +17512,41 @@ const coursesData = [
                     <div class="m25l3f-row" data-aos="fade-up" data-aos-delay="200">
                       <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="240" style="--d:200ms">
                         <span class="m25l3f-chip__icon bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></span>
-                        <span class="m25l3f-chip__text">${yhLang("Sender", "প্রেরক")}</span>
+                        <span class="m25l3f-chip__text">${yhLang("The health care provider <br> is the sender", "স্বাস্থ্য সেবাদানকারী <br> হচ্ছেন প্রেরক")}</span>
                       </div>
                       <span class="m25l3f-arrow" aria-hidden="true"></span>
                       <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="280" style="--d:240ms">
                         <span class="m25l3f-chip__icon bg-gradient-pink" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></span>
-                        <span class="m25l3f-chip__text">${yhLang("Message", "বার্তা")}</span>
+                        <span class="m25l3f-chip__text">${yhLang("The information you want <br> to give is the message", "যে তথ্যটি দিতে চান <br> সেটি হচ্ছে বার্তা")}</span>
                       </div>
                       <span class="m25l3f-arrow" aria-hidden="true"></span>
                       <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="320" style="--d:280ms">
                         <span class="m25l3f-chip__icon bg-gradient-yellow" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></span>
-                        <span class="m25l3f-chip__text">${yhLang("Medium", "মাধ্যম")}</span>
+                        <span class="m25l3f-chip__text">${yhLang("A medium is needed to <br> deliver the message", "বার্তাটি পৌঁছানোর জন্য <br> প্রয়োজন হয় একটি মাধ্যম")}</span>
                       </div>
                       <span class="m25l3f-arrow" aria-hidden="true"></span>
                       <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="360" style="--d:320ms">
                         <span class="m25l3f-chip__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-user-check"></i></span>
-                        <span class="m25l3f-chip__text">${yhLang("Receiver", "প্রাপক")}</span>
+                        <span class="m25l3f-chip__text">${yhLang("The service recipient <br> is the receiver", "সেবাগ্রহীতা <br> হচ্ছেন প্রাপক")}</span>
                       </div>
                     </div>
 
                     <!-- Line 2 to Line 3 connector (Receiver -> Feedback) -->
                     <div class="m25l3f-row m25l3f-row--right" data-aos="fade-up" data-aos-delay="260">
-                      <span class="m25l3f-arrow m25l3f-arrow--down" aria-hidden="true"></span>
+                      <span class="m25l3f-arrow m25l3f-arrow--down" style="margin-right: 80px" aria-hidden="true"></span>
                     </div>
 
                     <!-- Line 3: Recipient ideas/questions/opinions <-> Feedback -->
-                    <div class="m25l3f-row m25l3f-row--right" data-aos="fade-up" data-aos-delay="300">
-                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="340" style="--d:320ms">
+                    <div class="m25l3f-row m25l3f-row--right" data-aos="fade-up" data-aos-delay="">
+                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="" style="--d:320ms">
                         <span class="m25l3f-node__icon bg-gradient-orange" aria-hidden="true"><i class="fa-solid fa-circle-question"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Recipient's ideas, questions, or opinions", "সেবাগ্রহীতার ধারণা, প্রশ্ন বা মতামত")}</span>
+                        <span class="m25l3f-node__title">${yhLang("Recipient's response", "প্রাপকের প্রতিক্রিয়া")}</span>
                       </div>
                       <div class="m25l3f-arrows-horiz" aria-hidden="true">
                         <span class="m25l3f-arrow"></span>
                         <span class="m25l3f-arrow m25l3f-arrow--left"></span>
                       </div>
-                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="380" style="--d:360ms">
+                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="" style="--d:360ms">
                         <span class="m25l3f-node__icon bg-gradient-purple" aria-hidden="true"><i class="fa-solid fa-reply"></i></span>
                         <span class="m25l3f-node__title">${yhLang("Feedback", "প্রতিবার্তা")}</span>
                       </div>
@@ -17718,7 +17733,7 @@ const coursesData = [
                     const delay = baseDelay + idx * step;
                     const icon = iconForBullet(text);
                     return `
-                      <li class="m25l3-table-item" data-aos="fade-up" data-aos-delay="${delay}">
+                      <li class="m25l3-table-item" data-aos="" data-aos-delay="">
                         <span class="m25l3-td-icon" aria-hidden="true"><i class="fa-solid ${icon}"></i></span>
                         <span class="m25l3-td-text">${text}</span>
                       </li>
@@ -17854,6 +17869,11 @@ const coursesData = [
                 { text: yhLang("Respect", "সম্মান"), icon: "fa-award" },
                 { text: yhLang("Openness/Genuineness", "স্বচ্ছতা"), icon: "fa-eye" },
                 { text: yhLang("Empathy", "সহমর্মিতা"), icon: "fa-handshake" },
+                { text: yhLang("Fluent conversation", "সাবলীল কথপোকথন"), icon: "fa-comments" },
+                { text: yhLang("Warmth", "উষ্ণতা"), icon: "fa-heart" },
+                { text: yhLang("Sympathetic", "সহানুভূতিশীল"), icon: "fa-hand-holding-heart" },
+                { text: yhLang("Confidentiality", "গোপনীয়তা"), icon: "fa-user-shield" },
+                { text: yhLang("Avoid interrogation", "জেরা না করা"), icon: "fa-comment-slash" },
               ];
 
               const renderPoints = () =>
@@ -17909,8 +17929,8 @@ const coursesData = [
           {
             id: "ch25-lesson-8",
             title: yhLang(
-              "Techniques of interpersonal relationship",
-              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল"
+              "Techniques of interpersonal relationship (Part - 1)",
+              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 1)"
             ),
             icon: "fa-wand-magic-sparkles",
             gradientClass: "bg-gradient-green",
@@ -17918,42 +17938,98 @@ const coursesData = [
             content: (function () {
               const sections = [
                 {
-                  title: yhLang("Core Skills", "মূল দক্ষতা"),
-                  icon: "fa-screwdriver-wrench",
-                  items: [
-                    {
-                      icon: "fa-clipboard-check",
-                      text: yhLang("1. Prepare: Purpose, recall past talks.", "১. প্রস্তুত হওয়া: নিজের উদ্দেশ্য বা অভিপ্রায় সম্পর্কে চিন্তা করা, যে ব্যক্তি সম্মুখে আছে তার সম্পর্কে ধারণা করা এবং শেষ সাক্ষাতের সময় কি কথা হয়েছিল তা মনে করে প্রস্তুত হওয়া"),
-                    },
-                    {
-                      icon: "fa-ear-listen",
-                      text:  yhLang("2. Be Attentive: Fully present.", "২. মনোযোগী হওয়া: সম্পূর্ণ মনোযোগের সাথে উপস্থিত হতে হবে"),
-                    },
-                    {
-                      icon: "fa-person-walking",
-                      text:  yhLang("3. Follow: Let speaker lead.", "৩. অনুগামী হওয়া: প্রথমে যে ব্যক্তি সম্মুখে আছে তার বক্তব্য প্রদানের সুযোগ দেয়া এবং অনুগামী হওয়া"),
-                    },
-                    {
-                      icon: "fa-arrows-rotate",
-                      text: yhLang("4. Reflect: Align message with purpose and context.", "৪. প্রতিফলিত করা: নিজের উদ্দেশ্য, পূর্বের তথ্য এবং ভবিষ্যৎ দিক প্রবাহের সাথে বক্তার বক্তব্যের সমন্বয় করা"),
-                    },
-                  ],
-                },
-                {
                   title:  yhLang("SOLLER Attentiveness Model", "সোলার মনোযোগ মডেল"),
                   icon: "fa-sun",
                   items: [
                     {
                       icon: "fa-people-arrows-left-right",
-                      text: yhLang("S: Sit squarely.", "এস= সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা"),
+                      text: yhLang("S: Sit squarely.", "এস = সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা"),
                     },
-                    { icon: "fa-comments", text: yhLang("O: Open posture.", "ও= খোলাখুলি কথা বলা") },
-                    { icon: "fa-person-arrow-up-from-line", text: yhLang("L: Lean forward.", "এল= সামনের দিকে ঝুঁকে বসা") },
-                    { icon: "fa-eye", text: yhLang("L: Let eyes maintain contact.", "এল= সম্মুখ বাক্তির প্রতি দৃষ্টি নিবদ্ধ রাখা") },
-                    { icon: "fa-couch", text: yhLang("E: Engage with a relaxed posture.", "ই= আরামদায়ক ভঙ্গিতে বা স্বাচ্ছন্দ্যে বসা") },
-                    { icon: "fa-location-dot", text: yhLang("R: Remember to be present.", "আর= ঘটনার ভিতর উপস্থিত থাকতে ভুলবেন না।") },
+                    { icon: "fa-comments", text: yhLang("O: Open posture.", "ও = খোলাখুলি কথা বলা") },
+                    { icon: "fa-person-arrow-up-from-line", text: yhLang("L: Lean forward.", "এল = সামনের দিকে ঝুঁকে বসা") },
+                    { icon: "fa-eye", text: yhLang("L: Let eyes maintain contact.", "এল = সম্মুখ বাক্তির প্রতি দৃষ্টি নিবদ্ধ রাখা") },
+                    { icon: "fa-couch", text: yhLang("E: Engage with a relaxed posture.", "ই = আরামদায়ক ভঙ্গিতে বা স্বাচ্ছন্দ্যে বসা") },
+                    { icon: "fa-location-dot", text: yhLang("R: Remember to be present.", "আর = ঘটনার ভিতর উপস্থিত থাকতে ভুলবেন না।") },
                   ],
                 },
+              ];
+
+              const renderItems = (items, baseDelay) =>
+                (items || [])
+                  .map((it, idx) => {
+                    const delay = baseDelay + idx * 70;
+                    return `
+                      <li class="m25l5-item" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m25l5-bullet bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${it.icon}"></i></span>
+                        <span class="m25l5-item-text">${it.text}</span>
+                      </li>
+                    `;
+                  })
+                  .join("");
+
+              const renderSections = () =>
+                sections
+                  .map((s, sIdx) => {
+                    const blockDelay = 130 + sIdx * 90;
+                    const listDelay = 210 + sIdx * 90;
+                    return `
+                      <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay}">
+                        <div class="row g-3 align-items-stretch">
+                          <div class="col-12 col-lg-4">
+                            <div class="m25l5-left" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
+                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
+                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-lg-8">
+                            <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
+                              <ul class="list-unstyled m25l5-list mb-0" role="list">
+                                ${renderItems(s.items, listDelay)}
+                              </ul>
+                            </article>
+                          </div>
+                        </div>
+                      </section>
+                    `;
+                  })
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod25-lesson5">
+                  <div class="m25l5-shapes" aria-hidden="true">
+                    <span class="m25l5-shape m25l5-shape--orb"></span>
+                    <span class="m25l5-shape m25l5-shape--blob"></span>
+                    <span class="m25l5-shape m25l5-shape--ring"></span>
+                    <span class="m25l5-shape m25l5-shape--kite"></span>
+                  </div>
+
+                  <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="m25l5-hero__body">
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship (Part - 1)", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 1)")}</h2>
+                    </div>
+                  </header>
+
+                  <div class="mt-3 d-grid gap-3">
+                    ${renderSections()}
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch25-lesson-9",
+            title: yhLang(
+              "Techniques of interpersonal relationship (Part - 2)",
+              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 2)"
+            ),
+            icon: "fa-wand-magic-sparkles",
+            gradientClass: "bg-gradient-green",
+            audioFile: "",
+            content: (function () {
+              const sections = [
                 {
                   title:  yhLang("Practical Tips", "ব্যবহারিক টিপস"),
                   icon: "fa-lightbulb",
@@ -17973,6 +18049,84 @@ const coursesData = [
                     },
                   ],
                 },
+              ];
+
+              const renderItems = (items, baseDelay) =>
+                (items || [])
+                  .map((it, idx) => {
+                    const delay = baseDelay + idx * 70;
+                    return `
+                      <li class="m25l5-item" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m25l5-bullet bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${it.icon}"></i></span>
+                        <span class="m25l5-item-text">${it.text}</span>
+                      </li>
+                    `;
+                  })
+                  .join("");
+
+              const renderSections = () =>
+                sections
+                  .map((s, sIdx) => {
+                    const blockDelay = 130 + sIdx * 90;
+                    const listDelay = 210 + sIdx * 90;
+                    return `
+                      <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay}">
+                        <div class="row g-3 align-items-stretch">
+                          <div class="col-12 col-lg-4">
+                            <div class="m25l5-left" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
+                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
+                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-lg-8">
+                            <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
+                              <ul class="list-unstyled m25l5-list mb-0" role="list">
+                                ${renderItems(s.items, listDelay)}
+                              </ul>
+                            </article>
+                          </div>
+                        </div>
+                      </section>
+                    `;
+                  })
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod25-lesson5">
+                  <div class="m25l5-shapes" aria-hidden="true">
+                    <span class="m25l5-shape m25l5-shape--orb"></span>
+                    <span class="m25l5-shape m25l5-shape--blob"></span>
+                    <span class="m25l5-shape m25l5-shape--ring"></span>
+                    <span class="m25l5-shape m25l5-shape--kite"></span>
+                  </div>
+
+                  <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="m25l5-hero__body">
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship (Part - 2)", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 2)")}</h2>
+                    </div>
+                  </header>
+
+                  <div class="mt-3 d-grid gap-3">
+                    ${renderSections()}
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch25-lesson-10",
+            title: yhLang(
+              "Techniques of interpersonal relationship (Part - 3)",
+              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 3)"
+            ),
+            icon: "fa-wand-magic-sparkles",
+            gradientClass: "bg-gradient-green",
+            audioFile: "",
+            content: (function () {
+              const sections = [
                 {
                   title: yhLang("Key Techniques", "মূল কৌশল"),
                   icon: "fa-compass",
@@ -18052,7 +18206,7 @@ const coursesData = [
                       <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
                     <div class="m25l5-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল")}</h2>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship (Part - 3)", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 3)")}</h2>
                     </div>
                   </header>
 
@@ -18063,7 +18217,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-9",
+            id: "ch25-lesson-11",
             title: yhLang(
               "Steps of counseling.",
               "কাউন্সেলিংয়ের ধাপসমূহ"
