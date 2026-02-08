@@ -17554,7 +17554,7 @@ const coursesData = [
                     </div>
 
                     <!-- Line 3: Recipient ideas/questions/opinions <-> Feedback -->
-                    <div class="m25l3f-row m25l3f-row--right" data-aos="fade-up" data-aos-delay="">
+                    <div class="m25l3f-row m25l3f-row--right" data-aos="" data-aos-delay="">
                       <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="" style="--d:320ms">
                         <span class="m25l3f-node__icon bg-gradient-orange" aria-hidden="true"><i class="fa-solid fa-comment-dots"></i></span>
                         <span class="m25l3f-node__title">${yhLang("Recipient's response", "প্রাপকের প্রতিক্রিয়া")}</span>
@@ -17563,7 +17563,7 @@ const coursesData = [
                         <span class="m25l3f-arrow"></span>
                         <span class="m25l3f-arrow m25l3f-arrow--left"></span>
                       </div>
-                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="" style="--d:360ms">
+                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="" data-aos-delay="" style="--d:360ms">
                         <span class="m25l3f-node__icon bg-gradient-purple" aria-hidden="true"><i class="fa-solid fa-reply"></i></span>
                         <span class="m25l3f-node__title">${yhLang("Feedback", "প্রতিবার্তা")}</span>
                       </div>
