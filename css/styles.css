@@ -212,6 +212,10 @@ html:lang(bn) .lesson-hero__top  lang,
 html[lang|="bn"] .lesson-hero__top lang {
   font-size: 15px !important;
 }
+html:lang(bn) .jogagok_text  lang,
+html[lang|="bn"] .jogagok_text lang {
+  font-size: 30px !important;
+}
 html:lang(bn) .lession_11_title  lang,
 html[lang|="bn"] .lession_11_title lang {
   font-size: 38px !important;
@@ -8245,14 +8249,20 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0;
+  place-items: center;
 }
 
 /* Node styles */
+.m25l2f-node {
+  min-width: 180px;
+}
 .mod25-lesson2-flow .m25l2f-node {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0rem;
   padding: 0.85rem 1rem;
   border-radius: 18px;
@@ -8261,6 +8271,7 @@ input::placeholder {
   backdrop-filter: blur(10px);
   box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
   position: relative;
+  text-align: center;
 }
 
 .mod25-lesson2-flow .m25l2f-node--root {
@@ -8309,6 +8320,7 @@ input::placeholder {
 .mod25-lesson2-flow .m25l2f-node__text {
   font-weight: 600;
   line-height: 1.4;
+  text-align: center;
 }
 
 /* SVG connectors with dotted arrows */
@@ -8340,7 +8352,7 @@ input::placeholder {
 .mod25-lesson2-flow .m25l2f-path {
   fill: none;
   stroke: rgba(15, 23, 42, 0.45);
-  stroke-width: 2.5;
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -8352,7 +8364,7 @@ input::placeholder {
   gap: 2rem;
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0px;
 }
 
 .mod25-lesson2-flow .m25l2f-branch {
@@ -8360,6 +8372,61 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
   gap: 0;
+}
+
+/* Horizontal flow overrides */
+.mod25-lesson2-flow .m25l2f-flowchart--horizontal {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+  text-align: center;
+  margin-right: -160px;
+}
+
+.mod25-lesson2-flow .m25l2f-flowchart--horizontal > * {
+  flex: 0 0 auto;
+}
+
+.mod25-lesson2-flow .m25l2f-flowchart--horizontal .m25l2f-branches {
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+.mod25-lesson2-flow .m25l2f-flowchart--horizontal .m25l2f-branch {
+  flex-direction: row;
+  align-items: center;
+  gap: 0rem;
+}
+
+.mod25-lesson2-flow .m25l2f-flowchart--horizontal .m25l2f-subnodes {
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.mod25-lesson2-flow .m25l2f-flowchart--horizontal .m25l2f-connector {
+  width: auto;
+}
+
+.mod25-lesson2-flow .m25l2f-connector--root-h {
+  width: 120px;
+  height: 285px;
+  margin-top: 32px;
+}
+
+.mod25-lesson2-flow .m25l2f-connector--sub-h {
+  width: 120px;
+  height: 200px;
+  margin: 0;
+}
+
+.mod25-lesson2-flow .m25l2f-connector--sub-single-h {
+  width: 120px;
+  height: 120px;
+  margin: 0;
 }
 
 .mod25-lesson2-flow .m25l2f-subnodes {
@@ -8901,6 +8968,12 @@ input::placeholder {
 .mod25-lesson3-flow .m25l3f-chip__text {
   font-weight: 700;
   line-height: 1.4;
+}
+.mod25-lesson3-flow .m25l3f-chip.m25l3f-line {
+  grid-template-columns: 46px auto;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
 }
 
 .mod25-lesson3-flow .m25l3f-node__subtitle {

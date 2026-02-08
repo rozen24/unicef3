@@ -17351,7 +17351,7 @@ const coursesData = [
                     <span class="m25l2f-shape m25l2f-shape--ring"></span>
                   </div>
 
-                  <header class="m25l2f-hero" data-aos="fade-up">
+                  <header class="m25l2f-hero mb-0" data-aos="fade-up">
                     <span class="m25l2f-hero__badge bg-gradient-teal icon-spin-on-hover" aria-hidden="true">
                       <i class="fa-solid fa-diagram-project"></i>
                     </span>
@@ -17360,19 +17360,25 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <div class="m25l2f-flowchart" data-aos="fade-up" data-aos-delay="100">
+                  <div class="m25l2f-flowchart m25l2f-flowchart--horizontal mb-5" data-aos="fade-up" data-aos-delay="100">
                     <!-- Root node -->
                     <div class="m25l2f-node m25l2f-node--root m25l2f-line" data-aos="zoom-in" data-aos-delay="140" style="--d:100ms">
                       <span class="m25l2f-node__icon bg-gradient-blue" aria-hidden="true">
                         <i class="fa-solid fa-comments"></i>
                       </span>
-                      <span class="m25l2f-node__text">${yhLang("Communication", "যোগাযোগ")}</span>
+                      <span class="m25l2f-node__text jogagok_text">${yhLang("Communication", "যোগাযোগ")}</span>
                     </div>
 
                     <!-- SVG connector from root to main branches -->
-                    <svg class="m25l2f-connector m25l2f-connector--root" viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true">
-                      <path d="M 200 0 L 200 30 L 100 30 L 100 80" class="m25l2f-path" stroke-dasharray="6 4" />
-                      <path d="M 200 30 L 300 30 L 300 80" class="m25l2f-path" stroke-dasharray="6 4" />
+                    <svg class="m25l2f-connector m25l2f-connector--root-h" viewBox="0 0 120 285" preserveAspectRatio="none" aria-hidden="true">
+                      <defs>
+                        <marker id="m25l2f-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+                          <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(15, 23, 42, 0.6)" />
+                        </marker>
+                      </defs>
+                      <path d="M 0 120 L 50 120" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
+                      <path d="M 50 120 L 50 40 L 120 40" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
+                      <path d="M 50 120 L 50 257 L 120 257" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
                     </svg>
 
                     <!-- Main branches -->
@@ -17387,9 +17393,15 @@ const coursesData = [
                         </div>
 
                         <!-- SVG connector to sub-nodes -->
-                        <svg class="m25l2f-connector m25l2f-connector--sub" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true">
-                          <path d="M 150 0 L 150 20 L 75 20 L 75 60" class="m25l2f-path" stroke-dasharray="6 4" />
-                          <path d="M 150 20 L 225 20 L 225 60" class="m25l2f-path" stroke-dasharray="6 4" />
+                        <svg class="m25l2f-connector m25l2f-connector--sub-h" viewBox="0 0 120 200" preserveAspectRatio="none" aria-hidden="true">
+                          <defs>
+                            <marker id="m25l2f-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+                              <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(15, 23, 42, 0.6)" />
+                            </marker>
+                          </defs>
+                          <path d="M 0 100 L 50 100" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
+                          <path d="M 50 100 L 50 40 L 120 40" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
+                          <path d="M 50 100 L 50 160 L 120 160" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
                         </svg>
 
                         <!-- Sub-nodes -->
@@ -17419,8 +17431,13 @@ const coursesData = [
                         </div>
 
                         <!-- SVG connector to sub-node -->
-                        <svg class="m25l2f-connector m25l2f-connector--sub-single" viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true">
-                          <path d="M 100 0 L 100 60" class="m25l2f-path" stroke-dasharray="6 4" />
+                        <svg class="m25l2f-connector m25l2f-connector--sub-single-h" viewBox="0 0 120 120" preserveAspectRatio="none" aria-hidden="true">
+                          <defs>
+                            <marker id="m25l2f-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+                              <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(15, 23, 42, 0.6)" />
+                            </marker>
+                          </defs>
+                          <path d="M 0 60 L 120 60" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
                         </svg>
 
                         <!-- Sub-node -->
@@ -17469,12 +17486,12 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <div class="quiz-warning m25l3f-line text-center w-75 mx-auto" data-aos="fade-up" data-aos-delay="90" style="--d:90ms; margin-bottom:0.75rem">
+                  <div class="quiz-warning m25l3f-line text-center w-75 mb-lg-4" data-aos="fade-up" data-aos-delay="90" style="--d:90ms; margin-bottom:0.75rem">
                     <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
                     <span>
                       ${yhLang(
                         "Example (in health services): If a health care provider gives some information to a service recipient—",
-                        "উদাহরণ (স্বাস্থ্য সেবার ক্ষেত্রে):স্বাস্থ্য সেবাদানকারী যদি সেবাগ্রহীতাকে কোনো তথ্য দেন—"
+                        "উদাহরণ (স্বাস্থ্য সেবার ক্ষেত্রে):স্বাস্থ্য সেবাদানকারী যদি সেবাগ্রহীতাকে কোনো তথ্য দেন —"
                       )}
                     </span>
                   </div>
