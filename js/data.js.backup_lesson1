@@ -17156,36 +17156,31 @@ const coursesData = [
         lessons: [
           {
             id: "ch25-lesson-1",
-            title: yhLang("যোগাযোগ", "যোগাযোগ"),
+            title: yhLang("Communication", "যোগাযোগ"),
             icon: "fa-comments",
             gradientClass: "bg-gradient-mint",
             audioFile: "",
             content: (function () {
               return `
-                <div class="lesson-slide mod25-lesson1">
-                  <div class="m25l1-neo-bg" aria-hidden="true">
-                    <span class="m25l1-neo-orb m25l1-neo-orb--a"></span>
-                    <span class="m25l1-neo-orb m25l1-neo-orb--b"></span>
-                    <span class="m25l1-neo-orb m25l1-neo-orb--c"></span>
-                    <span class="m25l1-neo-orb m25l1-neo-orb--d"></span>
-                    <span class="m25l1-neo-orb m25l1-neo-orb--e"></span>
-                  </div>
-                  <div class="m25-shapes" aria-hidden="true">
-                    <span class="m25-shape m25-shape--orb"></span>
-                    <span class="m25-shape m25-shape--blob"></span>
-                    <span class="m25-shape m25-shape--ring"></span>
-                    <span class="m25-shape m25-shape--kite"></span>
+                <div class="lesson-slide mod25-lesson1-new">
+                  <!-- Pastel Gradient Background -->
+                  <div class="m25l1-pastel-bg" aria-hidden="true">
+                    <div class="m25l1-gradient-layer"></div>
                   </div>
 
-                  <header class="m25l1-header" data-aos="fade-up">
-                    <div class="m25l1-title" data-aos="fade-up" data-aos-delay="0">
-                      <span class="m25l1-title__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
-                      <h2 class="slide-title gradient-text mb-0">${yhLang("Communication", "যোগাযোগ")}</h2>
-                    </div>
-                    <p class="m25l1-lead" data-aos="fade-up" data-aos-delay="100">${yhLang("Communication is a process through which people exchange information, knowledge, experience, ideas, and opinions in a meaningful and effective way through speech, gestures, writing, pictures, or symbols", "যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহায্যে অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে")}</p>
+                  <!-- Header with Title and Subtitle -->
+                  <header class="m25l1-new-header" data-aos="fade-down" data-aos-duration="800">
+                    <h1 class="m25l1-main-title" data-aos="zoom-in" data-aos-delay="100">
+                      <i class="fa-solid fa-comments m25l1-title-icon" aria-hidden="true"></i>
+                      ${yhLang("Communication", "যোগাযোগ")}
+                    </h1>
+                    <p class="m25l1-subtitle" data-aos="fade-up" data-aos-delay="200">
+                      ${yhLang("Understanding the Communication Process", "যোগাযোগ প্রক্রিয়া বোঝা")}
+                    </p>
                   </header>
 
-                  <div class="row g-1 mt-1 align-items-stretch">
+                  <!-- Two Column Layout -->
+                  <div class="row g-4 mt-3">
                     <div class="col-12 col-lg-4">
                       <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
                         <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
@@ -17195,103 +17190,49 @@ const coursesData = [
                       </div>
                     </div>
 
-                    <div class="col-12 col-lg-4">
-                      <div class="m25l1-right" data-aos="fade-left" data-aos-delay="140">
-                        <div class="m25l1-timeline">
-                          <svg class="m25l1-timeline-curve" viewBox="0 0 40 320" preserveAspectRatio="none" aria-hidden="true">
-                            <path d="M 28 0 C 10 60, 10 120, 28 170 C 40 205, 36 260, 18 320" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="6" stroke-linecap="round" />
-                            <path d="M 28 0 C 10 60, 10 120, 28 170 C 40 205, 36 260, 18 320" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="2" stroke-linecap="round" />
-                          </svg>
-
-                          <section class="timeline-chart m25l1-comm-timeline" aria-label="যোগাযোগের উপাদানসমূহ">
-                            <div class="timeline-track" aria-hidden="true"></div>
-
-                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                              <div class="timeline-dot bg-gradient-blue" aria-hidden="true">---</i></div>
-                              <article class="timeline-card jogajok tl-blue">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-comments"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Sender", "প্রেরক")}</h6>
-                              </article>
-                            </div>
-
-                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="260">
-                              <div class="timeline-dot bg-gradient-teal" aria-hidden="true">---</i></div>
-                              <article class="timeline-card jogajok tl-cyan">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-hand"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Receiver", "প্রাপক")}</h6>
-                              </article>
-                            </div>
-
-                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="320">
-                              <div class="timeline-dot bg-gradient-rose" aria-hidden="true">---</i></div>
-                              <article class="timeline-card jogajok tl-rose">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-pen-nib"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Message", "বার্তা")}</h6>
-                              </article>
-                            </div>
-
-                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="380">
-                              <div class="timeline-dot bg-gradient-mint" aria-hidden="true">---</div>
-                              <article class="timeline-card jogajok tl-emerald">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-image"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Medium", "মাধ্যম")}</h6>
-                              </article>
-                            </div>
-
-                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="440">
-                              <div class="timeline-dot bg-gradient-yellow" aria-hidden="true">---</div>
-                              <article class="timeline-card jogajok tl-amber">
-                                <div class="timeline-card-icon" aria-hidden="true"><i class="fa-solid fa-icons"></i></div>
-                                <h6 class="timeline-card-title">${yhLang("Feedback", "প্রতিবার্তা")}</h6>
-                              </article>
-                            </div>
-                          </section>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                      <div class="m25l1-left" data-aos="fade-left" data-aos-delay="160">
-                        <div class="m25-section" style="height: 100%;">
-                          <h3 class="mb-3" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 10px;">
-                            <span class="m25-icon bg-gradient-lavender" aria-hidden="true">
-                              <i class="fa-solid fa-bullseye"></i>
-                            </span>
-                            <span>${yhLang("Purpose of Communication", "যোগাযোগের উদ্দেশ্য")}</span>
+                    <div class="col-12 col-lg-6">
+                      <div class="m25l1-purpose-container" data-aos="fade-left" data-aos-delay="350">
+                        <div class="m25l1-purpose-box">
+                          <h3 class="m25l1-purpose-title" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+                            ${yhLang("Purpose of Communication", "যোগাযোগের উদ্দেশ্য")}
                           </h3>
-                          <ul class="list-unstyled mb-0" style="display: flex; flex-direction: column; gap: 10px;">
-                            <li data-aos="fade-left" data-aos-delay="240" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
-                              <span class="m25-icon bg-gradient-rose" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
-                                <i class="fa-solid fa-heart" style="font-size: 0.95rem;"></i>
+                          
+                          <ul class="m25l1-purpose-list">
+                            <li class="m25l1-purpose-item" data-aos="fade-left" data-aos-delay="450">
+                              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                              <span data-aos="fade-up" data-aos-delay="500">
+                                ${yhLang("To inform and share information", "তথ্য জানানো এবং ভাগাভাগি করা")}
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Expressing feelings", "ভাব প্রকাশ করা")}</span>
                             </li>
-                            <li data-aos="fade-left" data-aos-delay="280" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
-                              <span class="m25-icon bg-gradient-teal" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
-                                <i class="fa-solid fa-arrows-left-right" style="font-size: 0.95rem;"></i>
+                            <li class="m25l1-purpose-item" data-aos="fade-left" data-aos-delay="550">
+                              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                              <span data-aos="fade-up" data-aos-delay="600">
+                                ${yhLang("To persuade and influence others", "অন্যদের বোঝানো এবং প্রভাবিত করা")}
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Exchanging information", "তথ্য আদান-প্রদান করা")}</span>
                             </li>
-                            <li data-aos="fade-left" data-aos-delay="320" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
-                              <span class="m25-icon bg-gradient-blue" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
-                                <i class="fa-solid fa-ear-listen" style="font-size: 0.95rem;"></i>
+                            <li class="m25l1-purpose-item" data-aos="fade-left" data-aos-delay="650">
+                              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                              <span data-aos="fade-up" data-aos-delay="700">
+                                ${yhLang("To build relationships and connect", "সম্পর্ক তৈরি করা এবং সংযোগ স্থাপন")}
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Understanding others' opinions and ideas", "অন্যের মতামত ও ধারণা বোঝা")}</span>
                             </li>
-                            <li data-aos="fade-left" data-aos-delay="360" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
-                              <span class="m25-icon bg-gradient-mint" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
-                                <i class="fa-solid fa-comment-dots" style="font-size: 0.95rem;"></i>
+                            <li class="m25l1-purpose-item" data-aos="fade-left" data-aos-delay="750">
+                              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                              <span data-aos="fade-up" data-aos-delay="800">
+                                ${yhLang("To express feelings and emotions", "অনুভূতি এবং আবেগ প্রকাশ করা")}
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Presenting one's opinion to others", "নিজের মতামত অন্যের কাছে তুলে ধরা")}</span>
                             </li>
-                            <li data-aos="fade-left" data-aos-delay="400" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
-                              <span class="m25-icon bg-gradient-yellow" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
-                                <i class="fa-solid fa-lightbulb" style="font-size: 0.95rem;"></i>
+                            <li class="m25l1-purpose-item" data-aos="fade-left" data-aos-delay="850">
+                              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                              <span data-aos="fade-up" data-aos-delay="900">
+                                ${yhLang("To solve problems and make decisions", "সমস্যা সমাধান এবং সিদ্ধান্ত নেওয়া")}
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Raising awareness and bringing behavioral change", "মানুষকে সচেতন করে আচরণের পরিবর্তন আনা")}</span>
                             </li>
                           </ul>
                         </div>
                       </div>
+                    </div>
                   </div>
                 </div>`;
             })(),
