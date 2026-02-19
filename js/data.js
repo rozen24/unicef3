@@ -17962,108 +17962,9 @@ const coursesData = [
                 </div>`;
             })(),
           },
+
           {
-            id: "ch25-lesson-10",
-            title: yhLang(
-              "Techniques of interpersonal relationship (Part - 3)",
-              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 3)"
-            ),
-            icon: "fa-wand-magic-sparkles",
-            gradientClass: "bg-gradient-green",
-            audioFile: "",
-            content: (function () {
-              const sections = [
-                {
-                  title: yhLang("Key Techniques", "মূল কৌশল"),
-                  icon: "fa-compass",
-                  items: [
-                    {
-                      icon: "fa-clipboard-list",
-                      text: yhLang("• Paraphrase/Summarize: Confirm understanding (e.g., \"So you're saying...\").", "ব্যাখ্যা/সারাংশ: পরিস্কার ভাবে বুঝতে পারা নিশ্চিত করা (যেমন, \"তাহলে তুমি বলছো...\")।"),
-                    },
-                    {
-                      icon: "fa-circle-question",
-                      text: yhLang("• Ask Open-Ended Questions: Short, clear, direct.", "খোলাখুলি প্রশ্ন জিজ্ঞাসা করা: সংক্ষিপ্ত, স্পষ্ট, সরাসরি।"),
-                    },
-                    {
-                      icon: "fa-wave-square",
-                      text: yhLang("• Listen to Tone & Manner: Gauge emotional state.", "স্বর ও ভঙ্গি শোনা: মানসিক অবস্থা পরিমাপ করা।"),
-                    },
-                    {
-                      icon: "fa-brain",
-                      text: yhLang("• Use Reflective Skills: Acknowledge feelings, encourage self-reflection.", "প্রতিফলনশীল দক্ষতা ব্যবহার করা: অনুভূতি স্বীকার করা, আত্ম-প্রতিফলনকে উৎসাহিত করা।"),
-                    },
-                  ],
-                },
-              ];
-
-              const renderItems = (items, baseDelay) =>
-                (items || [])
-                  .map((it, idx) => {
-                    const delay = baseDelay + idx * 70;
-                    return `
-                      <li class="m25l5-item" data-aos="fade-up" data-aos-delay="${delay}">
-                        <span class="m25l5-bullet bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${it.icon}"></i></span>
-                        <span class="m25l5-item-text">${it.text}</span>
-                      </li>
-                    `;
-                  })
-                  .join("");
-
-              const renderSections = () =>
-                sections
-                  .map((s, sIdx) => {
-                    const blockDelay = 130 + sIdx * 90;
-                    const listDelay = 210 + sIdx * 90;
-                    return `
-                      <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay}">
-                        <div class="row g-3 align-items-stretch">
-                          <div class="col-12 col-lg-4">
-                            <div class="m25l5-left" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
-                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
-                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>
-                            </div>
-                          </div>
-
-                          <div class="col-12 col-lg-8">
-                            <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
-                              <ul class="list-unstyled m25l5-list mb-0" role="list">
-                                ${renderItems(s.items, listDelay)}
-                              </ul>
-                            </article>
-                          </div>
-                        </div>
-                      </section>
-                    `;
-                  })
-                  .join("");
-
-              return `
-                <div class="lesson-slide mod25-lesson5">
-                  <div class="m25l5-shapes" aria-hidden="true">
-                    <span class="m25l5-shape m25l5-shape--orb"></span>
-                    <span class="m25l5-shape m25l5-shape--blob"></span>
-                    <span class="m25l5-shape m25l5-shape--ring"></span>
-                    <span class="m25l5-shape m25l5-shape--kite"></span>
-                  </div>
-
-                  <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div class="m25l5-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship (Part - 3)", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 3)")}</h2>
-                    </div>
-                  </header>
-
-                  <div class="mt-3 d-grid gap-3">
-                    ${renderSections()}
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch25-lesson-11",
+            id: "ch25-lesson-6",
             title: yhLang(
               "The word GATHER can be used to easily remember the steps of counseling.",
               "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য GATHER শব্দটির সাহায্য নেয়া যায়"
@@ -18149,6 +18050,7 @@ const coursesData = [
                     <div class="m25l6-hero__body">
                       <h2 class="slide-title lession_11_title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("The word GATHER can be used to easily remember the steps of counseling.", "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য GATHER শব্দটির সাহায্য নেয়া যায়")}</h2>
                     </div>
+                    <p class="m25l1-lead" data-aos="fade-up" data-aos-delay="100">${yhLang("Communication is a process through which people exchange information, knowledge, experience, ideas, and opinions in a meaningful and effective way through speech, gestures, writing, pictures, or symbols", "এর ফলে কিশোর-কিশোরী ও তরুণ সেবাগ্রহীতারা তাদের ব্যক্তিগত অনুভূতি ও সমস্যা নিয়ে খোলাখুলি আলোচনা করার সুযোগ পায় ও নিজেই সিদ্ধান্ত গ্রহণ করে সমস্যা সমাধান করতে পারে। <br> গ্রহীতা ও সেবাদানকারীর মধ্যে দ্বিমুখী আলোচনার মাধ্যমে বিস্তারিত তথ্য প্রদানের পর সেবাদানকারী গ্রহীতাকে তার নিজের স্বাস্থ্যসম্পর্কিত কোনো সিদ্ধান্ত গ্রহণে সহায়তা করার প্রক্রিয়াই হল কাউন্সেলিং।")}</p>
                   </header>
 
                   <div class="row g-1 mt-1 align-items-stretch">
