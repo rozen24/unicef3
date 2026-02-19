@@ -7790,7 +7790,9 @@ input::placeholder {
   overflow: hidden;
   border-radius: 22px;
   padding: 1.25rem;
+  padding-bottom: 0px !important;
   background: var(--teal-gradient);
+  margin-top: -55px;
 }
 
 /* ==================== MODULE 25 • LESSON 3 (Purpose of Communication) ==================== */
@@ -8331,6 +8333,13 @@ input::placeholder {
   padding: 0;
 }
 
+.mod25-lesson3-flow .m25l2f-connector {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
 .mod25-lesson2-flow .m25l2f-connector--root {
   max-width: 800px;
   height: 50px;
@@ -8343,6 +8352,19 @@ input::placeholder {
   margin: -4px auto;
 }
 
+.mod25-lesson3-flow .m25l2f-connector--feedback {
+  max-width: 420px;
+  height: 120px;
+  margin: -6px auto 0;
+}
+
+.mod25-lesson3-flow .m25l2f-connector--feedback-up {
+  max-width: 1250px;
+  height: 100px;
+  margin: -14px auto -14px;
+  display: block;
+}
+
 .mod25-lesson2-flow .m25l2f-connector--sub-single {
   max-width: 200px;
   height: 50px;
@@ -8350,6 +8372,14 @@ input::placeholder {
 }
 
 .mod25-lesson2-flow .m25l2f-path {
+  fill: none;
+  stroke: rgba(15, 23, 42, 0.45);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mod25-lesson3-flow .m25l2f-path {
   fill: none;
   stroke: rgba(15, 23, 42, 0.45);
   stroke-width: 1.5;
@@ -8860,6 +8890,7 @@ input::placeholder {
   overflow: hidden;
   border-radius: 22px;
   padding: 1.25rem;
+  padding-bottom: 0px !important;
   background: var(--mint-gradient);
 }
 
@@ -8912,6 +8943,7 @@ input::placeholder {
 }
 .mod25-lesson3-flow .m25l3f-row--center {
   justify-content: center;
+  margin-top: -66px;
 }
 
 .mod25-lesson3-flow .m25l3f-row--right {

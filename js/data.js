@@ -17296,97 +17296,82 @@ const coursesData = [
                 </div>`;
             })(),
           },
-          
           {
             id: "ch25-lesson-2",
-            title: yhLang("Purpose of Communication", "যোগাযোগের উদ্দেশ্য"),
-            icon: "fa-bullseye",
-            gradientClass: "bg-gradient-m25-purpose",
-            audioFile: "",
-            content: (function () {
-              const points = [
-                {
-                  icon: "fa-face-smile",
-                  accent: "bg-gradient-rose",
-                  text: yhLang("Express feelings", "ভাব প্রকাশ করা"),
-                },
-                {
-                  icon: "fa-right-left",
-                  accent: "bg-gradient-teal",
-                  text: yhLang("Exchange information", "তথ্য আদান-প্রদান করা"),
-                },
-                {
-                  icon: "fa-ear-listen",
-                  accent: "bg-gradient-lavender",
-                  text: yhLang(
-                    "Understand others' opinions and ideas",
-                    "অন্যের মতামত ও ধারণা বোঝা"
-                  ),
-                },
-                {
-                  icon: "fa-comment-dots",
-                  accent: "bg-gradient-mint",
-                  text: yhLang(
-                    "Present your opinion to others",
-                    "নিজের মতামত অন্যের কাছে তুলে ধরা"
-                  ),
-                },
-                {
-                  icon: "fa-bullhorn",
-                  accent: "bg-gradient-yellow",
-                  text: yhLang(
-                    "Raise awareness to bring behavior change",
-                    "মানুষকে সচেতন করে আচরণের পরিবর্তন আনা"
-                  ),
-                },
-              ];
-
-              const render = () =>
-                points
-                  .map((p, idx) => {
-                    const delay = 160 + idx * 80;
-                    return `
-                      <li class="m25l3p-item m25l3p-line" data-aos="fade-up" data-aos-delay="${delay}" style="--d:${120 + idx * 90}ms">
-                        <span class="m25l3p-bullet ${p.accent} icon-spin-on-hover" aria-hidden="true"><i class="fa-solid ${p.icon}"></i></span>
-                        <span class="m25l3p-text">${p.text}</span>
-                      </li>
-                    `;
-                  })
-                  .join("");
-
-              return `
-                <div class="lesson-slide mod25-lesson3-purpose">
-                  <div class="m25l3p-shapes" aria-hidden="true">
-                    <span class="m25l3p-shape m25l3p-shape--orb"></span>
-                    <span class="m25l3p-shape m25l3p-shape--blob"></span>
-                    <span class="m25l3p-shape m25l3p-shape--ribbon"></span>
-                    <span class="m25l3p-shape m25l3p-shape--ring"></span>
-                    <span class="m25l3p-shape m25l3p-shape--diamond"></span>
-                  </div>
-
-                  <header class="m25l3p-hero" data-aos="fade-up">
-                    <span class="m25l3p-hero__badge bg-gradient-m25-purpose icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-bullseye"></i>
-                    </span>
-                    <h2 class="slide-title gradient-text mb-0 m25l3p-line" data-aos="fade-up" data-aos-delay="70" style="--d:70ms">
-                      ${yhLang("Purpose of Communication", "যোগাযোগের উদ্দেশ্য")}
-                    </h2>
-                  </header>
-
-                  <ul class="list-unstyled m25l3p-list mb-0" role="list">
-                    ${render()}
-                  </ul>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch25-lesson-3",
             title: yhLang("Communication", "যোগাযোগ"),
             icon: "fa-diagram-project",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
             content: (function () {
               return `
+                <div class="lesson-slide mod25-lesson3-flow">
+                  <div class="m25l3f-shapes" aria-hidden="true">
+                    <span class="m25l3f-shape m25l3f-shape--orb"></span>
+                    <span class="m25l3f-shape m25l3f-shape--ribbon"></span>
+                    <span class="m25l3f-shape m25l3f-shape--dots"></span>
+                    <span class="m25l3f-shape m25l3f-shape--ring"></span>
+                  </div>
+
+                  <header class="m25l3f-hero" data-aos="fade-up">
+                    <span class="m25l3f-hero__badge bg-gradient-mint icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-sitemap"></i>
+                    </span>
+                    <h2 class="slide-title gradient-text mb-0 m25l3f-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">
+                      ${yhLang("A simple model of the communication process", "যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল")}
+                    </h2>
+                  </header>
+
+                  <div class="m25l3f-flow mb-5">
+
+                    <!-- Line 1: Sender -> Message -> Medium -> Receiver -->
+                    <div class="m25l3f-row" data-aos="fade-up" data-aos-delay="200">
+                      <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="240" style="--d:200ms">
+                        <span class="m25l3f-chip__icon bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></span>
+                        <span class="m25l3f-chip__text">${yhLang("Sender", "প্রেরক")}</span>
+                      </div>
+                      <span class="m25l3f-arrow" aria-hidden="true"></span>
+                      <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="280" style="--d:240ms">
+                        <span class="m25l3f-chip__icon bg-gradient-pink" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></span>
+                        <span class="m25l3f-chip__text">${yhLang("Message", "বার্তা")}</span>
+                      </div>
+                      <span class="m25l3f-arrow" aria-hidden="true"></span>
+                      <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="320" style="--d:280ms">
+                        <span class="m25l3f-chip__icon bg-gradient-yellow" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></span>
+                        <span class="m25l3f-chip__text">${yhLang("Medium", "মাধ্যম")}</span>
+                      </div>
+                      <span class="m25l3f-arrow" aria-hidden="true"></span>
+                      <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="360" style="--d:320ms">
+                        <span class="m25l3f-chip__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-user-check"></i></span>
+                        <span class="m25l3f-chip__text">${yhLang("Receiver", "প্রাপক")}</span>
+                      </div>
+                    </div>
+
+                     <!-- SVG connector: arrows from Feedback (bottom) up to Sender (left) and Receiver (right) -->
+                    <svg class="m25l2f-connector m25l2f-connector--feedback-up" viewBox="0 0 1750 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                      <defs>
+                        <marker id="m25l3f-arrow-up" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+                          <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(15, 23, 42, 0.6)" />
+                        </marker>
+                      </defs>
+                      <!-- Left path: Feedback to Sender -->
+                      <path d="M 875 150 L 875 100 L 175 100 L 175 0" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l3f-arrow-up)" />
+                      <!-- Right path: Feedback to Receiver -->
+                      <path d="M 875 150 L 875 100 L 1575 100 L 1575 0" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l3f-arrow-up)" />
+                    </svg>
+                    
+                    <!-- Line 2: Centered Feedback node -->
+                    <div class="m25l3f-row m25l3f-row--center" data-aos="fade-up" data-aos-delay="440">
+                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="480" style="--d:440ms">
+                        <span class="m25l3f-node__icon bg-gradient-purple" aria-hidden="true"><i class="fa-solid fa-reply-all"></i></span>
+                        <span class="m25l3f-node__title">${yhLang("Feedback", "প্রতিবার্তা")}</span>
+                      </div>
+                    </div>
+                    
+                   
+                  </div>
+                </div>
+
+
                 <div class="lesson-slide mod25-lesson2-flow">
                   <div class="m25l2f-shapes" aria-hidden="true">
                     <span class="m25l2f-shape m25l2f-shape--orb"></span>
@@ -17503,121 +17488,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-4",
-            title: yhLang(
-              "A simple model of the communication process",
-              "যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল"
-            ),
-            icon: "fa-sitemap",
-            gradientClass: "bg-gradient-mint",
-            audioFile: "",
-            content: (function () {
-              return `
-                <div class="lesson-slide mod25-lesson3-flow">
-                  <div class="m25l3f-shapes" aria-hidden="true">
-                    <span class="m25l3f-shape m25l3f-shape--orb"></span>
-                    <span class="m25l3f-shape m25l3f-shape--ribbon"></span>
-                    <span class="m25l3f-shape m25l3f-shape--dots"></span>
-                    <span class="m25l3f-shape m25l3f-shape--ring"></span>
-                  </div>
-
-                  <header class="m25l3f-hero" data-aos="fade-up">
-                    <span class="m25l3f-hero__badge bg-gradient-mint icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-sitemap"></i>
-                    </span>
-                    <h2 class="slide-title gradient-text mb-0 m25l3f-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">
-                      ${yhLang("A simple model of the communication process", "যোগাযোগ প্রক্রিয়ার একটি সহজ মডেল")}
-                    </h2>
-                  </header>
-
-                  <div class="quiz-warning m25l3f-line text-center w-75 mb-lg-4" data-aos="fade-up" data-aos-delay="90" style="--d:90ms; margin-bottom:0.75rem">
-                    <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
-                    <span>
-                      ${yhLang(
-                        "Example (in health services): If a health care provider gives some information to a service recipient—",
-                        "উদাহরণ (স্বাস্থ্য সেবার ক্ষেত্রে):স্বাস্থ্য সেবাদানকারী যদি সেবাগ্রহীতাকে কোনো তথ্য দেন —"
-                      )}
-                    </span>
-                  </div>
-
-                  <div class="m25l3f-flow mb-5">
-                    <!-- Line 1: Sender -> Message -> Medium -> Receiver -->
-                    <div class="m25l3f-row f_line" data-aos="fade-up" data-aos-delay="120">
-                      <div class="m25l3f-node m25l3f-line" data-aos="zoom-in" data-aos-delay="160" style="--d:120ms">
-                        <span class="m25l3f-node__icon bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Sender", "প্রেরক")}</span>
-                      </div>
-                      <div class="m25l3f-node m25l3f-line" data-aos="zoom-in" data-aos-delay="220" style="--d:180ms">
-                        <span class="m25l3f-node__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Message", "বার্তা")}</span>
-                      </div>
-                      <div class="m25l3f-node m25l3f-line" data-aos="zoom-in" data-aos-delay="280" style="--d:240ms">
-                        <span class="m25l3f-node__icon bg-gradient-yellow" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Medium", "মাধ্যম")}</span>
-                      </div>
-                      <div class="m25l3f-node m25l3f-line" data-aos="zoom-in" data-aos-delay="340" style="--d:300ms">
-                        <span class="m25l3f-node__icon bg-gradient-teal" aria-hidden="true"><i class="fa-solid fa-user-check"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Receiver", "প্রাপক")}</span>
-                      </div>
-                    </div>
-
-                    <!-- Line 1 to Line 2 connectors -->
-                    <div class="m25l3f-row m25l3f-row--bridge" data-aos="fade-up" data-aos-delay="170">
-                      <span class="m25l3f-arrow m25l3f-arrow--down" aria-hidden="true"></span>
-                      <span class="m25l3f-arrow m25l3f-arrow--down" aria-hidden="true"></span>
-                      <span class="m25l3f-arrow m25l3f-arrow--down" aria-hidden="true"></span>
-                      <span class="m25l3f-arrow m25l3f-arrow--down" aria-hidden="true"></span>
-                    </div>
-
-                    <!-- Line 2: Sender -> Message -> Medium -> Receiver -->
-                    <div class="m25l3f-row" data-aos="fade-up" data-aos-delay="200">
-                      <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="240" style="--d:200ms">
-                        <span class="m25l3f-chip__icon bg-gradient-blue" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></span>
-                        <span class="m25l3f-chip__text">${yhLang("The health care provider <br> is the sender", "স্বাস্থ্য সেবাদানকারী <br> হচ্ছেন প্রেরক")}</span>
-                      </div>
-                      <span class="m25l3f-arrow" aria-hidden="true"></span>
-                      <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="280" style="--d:240ms">
-                        <span class="m25l3f-chip__icon bg-gradient-pink" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></span>
-                        <span class="m25l3f-chip__text">${yhLang("The information you want <br> to give is the message", "যে তথ্যটি দিতে চান <br> সেটি হচ্ছে বার্তা")}</span>
-                      </div>
-                      <span class="m25l3f-arrow" aria-hidden="true"></span>
-                      <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="320" style="--d:280ms">
-                        <span class="m25l3f-chip__icon bg-gradient-yellow" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></span>
-                        <span class="m25l3f-chip__text">${yhLang("A medium is needed to <br> deliver the message", "বার্তাটি পৌঁছানোর জন্য <br> প্রয়োজন হয় একটি মাধ্যম")}</span>
-                      </div>
-                      <span class="m25l3f-arrow" aria-hidden="true"></span>
-                      <div class="m25l3f-chip m25l3f-line" data-aos="zoom-in" data-aos-delay="360" style="--d:320ms">
-                        <span class="m25l3f-chip__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-user-check"></i></span>
-                        <span class="m25l3f-chip__text">${yhLang("The service recipient <br> is the receiver", "সেবাগ্রহীতা <br> হচ্ছেন প্রাপক")}</span>
-                      </div>
-                    </div>
-
-                    <!-- Line 2 to Line 3 connector (Receiver -> Feedback) -->
-                    <div class="m25l3f-row m25l3f-row--right" data-aos="fade-up" data-aos-delay="260">
-                      <span class="m25l3f-arrow m25l3f-arrow--down" style="margin-right: 80px" aria-hidden="true"></span>
-                    </div>
-
-                    <!-- Line 3: Recipient ideas/questions/opinions <-> Feedback -->
-                    <div class="m25l3f-row m25l3f-row--right" data-aos="" data-aos-delay="">
-                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="" style="--d:320ms">
-                        <span class="m25l3f-node__icon bg-gradient-orange" aria-hidden="true"><i class="fa-solid fa-comment-dots"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Recipient's response", "প্রাপকের প্রতিক্রিয়া")}</span>
-                      </div>
-                      <div class="m25l3f-arrows-horiz" aria-hidden="true">
-                        <span class="m25l3f-arrow"></span>
-                        <span class="m25l3f-arrow m25l3f-arrow--left"></span>
-                      </div>
-                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="" data-aos-delay="" style="--d:360ms">
-                        <span class="m25l3f-node__icon bg-gradient-purple" aria-hidden="true"><i class="fa-solid fa-reply"></i></span>
-                        <span class="m25l3f-node__title">${yhLang("Feedback", "প্রতিবার্তা")}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch25-lesson-5",
+            id: "ch25-lesson-3",
             title: yhLang(
               "Characteristics of the Elements of Communication",
               "যোগাযোগের উপাদানের বৈশিষ্ট্য"
