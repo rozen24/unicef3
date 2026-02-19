@@ -17736,7 +17736,7 @@ const coursesData = [
                     const listDelay = 210 + sIdx * 90;
                     return `
                       <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay}">
-                        <div class="row g-3 align-items-stretch">
+                        <div class="row g-1 align-items-center">
                           <div class="col-12 col-lg-4">
                             <div class="m25l5-left" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
                               <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
@@ -17765,6 +17765,15 @@ const coursesData = [
                     <span class="m25l4-shape m25l4-shape--ring"></span>
                     <span class="m25l4-shape m25l4-shape--diamond"></span>
                   </div>
+
+                   <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                    <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="m25l5-hero__body">
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল")}</h2>
+                    </div>
+                  </header>
 
                   <div class="row g-1 mt-1 align-items-stretch">
                     <div class="col-12 col-lg-4">
@@ -17834,24 +17843,81 @@ const coursesData = [
                     const blockDelay = 130 + sIdx * 90;
                     const listDelay = 210 + sIdx * 90;
                     return `
-                      <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay}">
-                        <div class="row g-3 align-items-stretch">
-                          <div class="col-12 col-lg-4">
-                            <div class="m25l5-left" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
-                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
-                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>
-                            </div>
-                          </div>
 
-                          <div class="col-12 col-lg-8">
-                            <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
-                              <ul class="list-unstyled m25l5-list mb-0" role="list">
-                                ${renderItems(s.items, listDelay)}
-                              </ul>
-                            </article>
-                          </div>
+                      <div class="col-12 col-lg-12">
+                        <div class="m25l5-left mb-2">
+                          <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
+                          <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>
                         </div>
-                      </section>
+                        <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
+                          <ul class="list-unstyled m25l5-list mb-0" role="list">
+                            ${renderItems(s.items, listDelay)}
+                          </ul>
+                        </article>
+                      </div>
+                    `;
+                  })
+                  .join("");
+
+
+
+                  const sections2 = [
+                {
+                  title: yhLang("Key Techniques", "মূল কৌশল"),
+                  icon: "fa-compass",
+                  items: [
+                    {
+                      icon: "fa-clipboard-list",
+                      text: yhLang("• Paraphrase/Summarize: Confirm understanding (e.g., \"So you're saying...\").", "ব্যাখ্যা/সারাংশ: পরিস্কার ভাবে বুঝতে পারা নিশ্চিত করা (যেমন, \"তাহলে তুমি বলছো...\")।"),
+                    },
+                    {
+                      icon: "fa-circle-question",
+                      text: yhLang("• Ask Open-Ended Questions: Short, clear, direct.", "খোলাখুলি প্রশ্ন জিজ্ঞাসা করা: সংক্ষিপ্ত, স্পষ্ট, সরাসরি।"),
+                    },
+                    {
+                      icon: "fa-wave-square",
+                      text: yhLang("• Listen to Tone & Manner: Gauge emotional state.", "স্বর ও ভঙ্গি শোনা: মানসিক অবস্থা পরিমাপ করা।"),
+                    },
+                    {
+                      icon: "fa-brain",
+                      text: yhLang("• Use Reflective Skills: Acknowledge feelings, encourage self-reflection.", "প্রতিফলনশীল দক্ষতা ব্যবহার করা: অনুভূতি স্বীকার করা, আত্ম-প্রতিফলনকে উৎসাহিত করা।"),
+                    },
+                  ],
+                },
+              ];
+
+              const renderItems2 = (items2, baseDelay2) =>
+                (items2 || [])
+                  .map((it2, idx2) => {
+                    const delay2 = baseDelay2 + idx2 * 70;
+                    return `
+                      <li class="m25l5-item" data-aos="fade-up" data-aos-delay="${delay2}">
+                        <span class="m25l5-bullet bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${it2.icon}"></i></span>
+                        <span class="m25l5-item-text">${it2.text}</span>
+                      </li>
+                    `;
+                  })
+                  .join("");
+
+              const renderSections2 = () =>
+                sections2
+                  .map((s2, sIdx2) => {
+                    const blockDelay2 = 130 + sIdx2 * 90;
+                    const listDelay2 = 210 + sIdx2 * 90;
+                    return `
+                     
+
+                      <div class="col-12 col-lg-12">
+                        <div class="m25l5-left mb-2">
+                          <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s2.icon}"></i></span>
+                          <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay2 + 90}">${s2.title}</h3>
+                        </div>
+                        <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay2 + 60}">
+                          <ul class="list-unstyled m25l5-list mb-0" role="list">
+                            ${renderItems2(s2.items, listDelay2)}
+                          </ul>
+                        </article>
+                      </div>
                     `;
                   })
                   .join("");
@@ -17874,8 +17940,24 @@ const coursesData = [
                     </div>
                   </header>
 
-                  <div class="mt-3 d-grid gap-3">
-                    ${renderSections()}
+                  <div class="mt-3">
+                    <div class="row g-3 align-items-stretch">
+                      <div class="col-12 col-lg-6">
+                        <section class="m25l5-block" data-aos="fade-up" data-aos-delay="130">
+                          <div class="row g-3 align-items-stretch">
+                            ${renderSections()}
+                          </div>
+                        </section>
+                      </div>
+
+                      <div class="col-12 col-lg-6">
+                        <section class="m25l5-block" data-aos="fade-up" data-aos-delay="160">
+                          <div class="row g-3 align-items-stretch">
+                            ${renderSections2()}
+                          </div>
+                        </section>
+                      </div>
+                    </div>
                   </div>
                 </div>`;
             })(),

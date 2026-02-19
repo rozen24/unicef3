@@ -10051,8 +10051,6 @@ input::placeholder {
 }
 
 .mod25-lesson5 .m25l5-left {
-  height: 100%;
-  min-height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
