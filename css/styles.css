@@ -9819,7 +9819,7 @@ input::placeholder {
 
 .mod25-lesson4 .m25l4-list {
   display: grid;
-  gap: 5px;
+  gap: 10px;
   grid-template-columns: 50% 2fr;
 }
 

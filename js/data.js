@@ -17490,129 +17490,6 @@ const coursesData = [
           {
             id: "ch25-lesson-3",
             title: yhLang(
-              "Characteristics of the Elements of Communication",
-              "যোগাযোগের উপাদানের বৈশিষ্ট্য"
-            ),
-            icon: "fa-layer-group",
-            gradientClass: "bg-gradient-m25-elements",
-            audioFile: "",
-            content: (function () {
-              const sections = [
-                {
-                  icon: "fa-paper-plane",
-                  accent: "bg-gradient-blue",
-                  title: yhLang("Sender", "প্রেরক"),
-                  items: [
-                    { icon: "fa-shield-halved", accent: "bg-gradient-lavender", text: yhLang("Trustworthy", "আত্মাভাজন") },
-                    { icon: "fa-heart", accent: "bg-gradient-rose", text: yhLang("Sincere", "আন্তরিক") },
-                    { icon: "fa-eye", accent: "bg-gradient-teal", text: yhLang("Careful", "সতর্ক") },
-                    { icon: "fa-scale-balanced", accent: "bg-gradient-mint", text: yhLang("Neutral", "নিরপেক্ষ") },
-                    { icon: "fa-bullseye", accent: "bg-gradient-yellow", text: yhLang("Accurate", "নির্ভুল") },
-                    { icon: "fa-comment-dots", accent: "bg-gradient-pink", text: yhLang("Clear-spoken", "স্পষ্টভাষী") },
-                  ],
-                },
-                {
-                  icon: "fa-user-check",
-                  accent: "bg-gradient-teal",
-                  title: yhLang("Receiver", "প্রাপক"),
-                  items: [
-                    { icon: "fa-magnifying-glass", accent: "bg-gradient-yellow", text: yhLang("Interested and curious", "আগ্রহী ও উৎসুক") },
-                    { icon: "fa-ear-listen", accent: "bg-gradient-mint", text: yhLang("Attentive", "মনযোগী") },
-                    { icon: "fa-hourglass-half", accent: "bg-gradient-lavender", text: yhLang("Patient", "ধৈর্য্যশীল") },
-                    { icon: "fa-brain", accent: "bg-gradient-blue", text: yhLang("Able to understand the message", "বার্তা বুঝতে সক্ষম") },
-                    { icon: "fa-reply", accent: "bg-gradient-rose", text: yhLang("Able to send feedback", "ফিরতি বার্তা প্রেরণে সক্ষম") },
-                  ],
-                },
-                {
-                  icon: "fa-envelope-open-text",
-                  accent: "bg-gradient-rose",
-                  title: yhLang("Message", "বার্তা"),
-                  items: [
-                    { icon: "fa-location-crosshairs", accent: "bg-gradient-teal", text: yhLang("Relevant for the target audience", "উদ্দিষ্ট জনগোষ্ঠীর জন্য প্রাসঙ্গিক") },
-                    { icon: "fa-book-open", accent: "bg-gradient-mint", text: yhLang("Easy to understand", "সহজবোধ্য") },
-                    { icon: "fa-list-check", accent: "bg-gradient-lavender", text: yhLang("Specific", "সুনির্দিষ্ট") },
-                    { icon: "fa-circle-check", accent: "bg-gradient-blue", text: yhLang("Clear", "স্পষ্ট") },
-                    { icon: "fa-wand-magic-sparkles", accent: "bg-gradient-pink", text: yhLang("Appealing", "আবেদনসৃষ্টিকারী") },
-                    { icon: "fa-thumbs-up", accent: "bg-gradient-yellow", text: yhLang("Appropriate", "উপযুক্ত") },
-                  ],
-                },
-                {
-                  icon: "fa-tower-broadcast",
-                  accent: "bg-gradient-yellow",
-                  title: yhLang("Medium", "মাধ্যম"),
-                  items: [
-                    { icon: "fa-users", accent: "bg-gradient-mint", text: yhLang("Suitable for the target audience", "উদ্দিষ্ট জনগোষ্ঠীর জন্য উপযুক্ত") },
-                    { icon: "fa-sliders", accent: "bg-gradient-lavender", text: yhLang("Suitable for the message", "বার্তার জন্য উপযুক্ত") },
-                    { icon: "fa-hand", accent: "bg-gradient-teal", text: yhLang("Easily accessible", "সহজলভ্য") },
-                    { icon: "fa-shield", accent: "bg-gradient-blue", text: yhLang("Credible", "বিশ্বাসযোগ্য") },
-                    { icon: "fa-clock", accent: "bg-gradient-rose", text: yhLang("Timely", "সময়োপযোগী") },
-                    { icon: "fa-check-double", accent: "bg-gradient-yellow", text: yhLang("Acceptable", "গ্রহণযোগ্য") },
-                  ],
-                },
-              ];
-
-              const renderItems = (items, baseDelay, baseD) =>
-                (items || [])
-                  .map((it, idx) => {
-                    const delay = baseDelay + idx * 65;
-                    const d = baseD + idx * 85;
-                    return `
-                      <li class="m25l5e-item m25l5e-line" data-aos="fade-up" data-aos-delay="${delay}" style="--d:${d}ms">
-                        <span class="m25l5e-bullet ${it.accent} icon-spin-on-hover" aria-hidden="true"><i class="fa-solid ${it.icon}"></i></span>
-                        <span class="m25l5e-text">${it.text}</span>
-                      </li>
-                    `;
-                  })
-                  .join("");
-
-              const renderSections = () =>
-                sections
-                  .map((s, idx) => {
-                    const cardDelay = 120 + idx * 90;
-                    const listDelay = 220 + idx * 90;
-                    const baseD = 120 + idx * 120;
-                    return `
-                      <article class="m25l5e-card m25l5e-line" data-aos="fade-up" data-aos-delay="${cardDelay}" style="--d:${baseD}ms">
-                        <header class="m25l5e-card__head" data-aos="fade-up" data-aos-delay="${cardDelay + 40}">
-                          <span class="m25l5e-card__badge ${s.accent} icon-spin-on-hover" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
-                          <h3 class="m25l5e-card__title mb-0">${s.title}</h3>
-                        </header>
-                        <ul class="list-unstyled m25l5e-list mb-0" role="list">
-                          ${renderItems(s.items, listDelay, baseD + 80)}
-                        </ul>
-                      </article>
-                    `;
-                  })
-                  .join("");
-
-              return `
-                <div class="lesson-slide mod25-lesson-elements-qualities">
-                  <div class="m25l5e-shapes" aria-hidden="true">
-                    <span class="m25l5e-shape m25l5e-shape--orb"></span>
-                    <span class="m25l5e-shape m25l5e-shape--wave"></span>
-                    <span class="m25l5e-shape m25l5e-shape--dots"></span>
-                    <span class="m25l5e-shape m25l5e-shape--ring"></span>
-                    <span class="m25l5e-shape m25l5e-shape--kite"></span>
-                  </div>
-
-                  <header class="m25l5e-hero" data-aos="fade-up">
-                    <span class="m25l5e-hero__badge bg-gradient-m25-elements icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-layer-group"></i>
-                    </span>
-                    <h2 class="slide-title gradient-text mb-0 m25l5e-line" data-aos="fade-up" data-aos-delay="70" style="--d:70ms">
-                      ${yhLang("Characteristics of the Elements of Communication", "যোগাযোগের উপাদানের বৈশিষ্ট্য")}
-                    </h2>
-                  </header>
-
-                  <div class="m25l5e-grid">
-                    ${renderSections()}
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch25-lesson-6",
-            title: yhLang(
               "Methods of communication",
               "যোগাযোগের পদ্ধতি"
             ),
@@ -17786,7 +17663,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch25-lesson-7",
+            id: "ch25-lesson-4",
             title: yhLang(
               "Conditions Required for Establishing Interpersonal Relationships",
               "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী"
@@ -17821,54 +17698,7 @@ const coursesData = [
                   })
                   .join("");
 
-              return `
-                <div class="lesson-slide mod25-lesson4">
-                  <div class="m25l4-shapes" aria-hidden="true">
-                    <span class="m25l4-shape m25l4-shape--orb"></span>
-                    <span class="m25l4-shape m25l4-shape--wave"></span>
-                    <span class="m25l4-shape m25l4-shape--ring"></span>
-                    <span class="m25l4-shape m25l4-shape--diamond"></span>
-                  </div>
-
-                  <header class="m25l4-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25l4-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-handshake"></i>
-                    </div>
-                    <div class="m25l4-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70"> ${yhLang("Conditions Required for Establishing Interpersonal Relationships", "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী")}</h2>
-                    </div>
-                  </header>
-
-                  <div class="row g-1 mt-1 align-items-stretch">
-                    <div class="col-12 col-lg-5">
-                      <div class="m25l4-square" data-aos="zoom-in" data-aos-delay="120">
-                        <span class="m25l4-square__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-people-arrows-left-right"></i></span>
-                        <span class="m25l4-square__text" data-aos="fade-up" data-aos-delay="180">${yhLang("Conditions Required for Establishing Interpersonal Relationships", "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী")}</span>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-lg-7">
-                      <article class="modern-card glass-card m25l4-card h-100" data-aos="fade-left" data-aos-delay="140">
-                        <ul class="list-unstyled m25l4-list mb-0" role="list">
-                          ${renderPoints()}
-                        </ul>
-                      </article>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch25-lesson-8",
-            title: yhLang(
-              "Techniques of interpersonal relationship (Part - 1)",
-              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 1)"
-            ),
-            icon: "fa-wand-magic-sparkles",
-            gradientClass: "bg-gradient-green",
-            audioFile: "",
-            content: (function () {
-              const sections = [
+                  const sections = [
                 {
                   title:  yhLang("SOLLER Attentiveness Model", "সোলার মনোযোগ মডেল"),
                   icon: "fa-sun",
@@ -17928,31 +17758,33 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide mod25-lesson5">
-                  <div class="m25l5-shapes" aria-hidden="true">
-                    <span class="m25l5-shape m25l5-shape--orb"></span>
-                    <span class="m25l5-shape m25l5-shape--blob"></span>
-                    <span class="m25l5-shape m25l5-shape--ring"></span>
-                    <span class="m25l5-shape m25l5-shape--kite"></span>
+                <div class="lesson-slide mod25-lesson4 mod25-lesson5">
+                  <div class="m25l4-shapes" aria-hidden="true">
+                    <span class="m25l4-shape m25l4-shape--orb"></span>
+                    <span class="m25l4-shape m25l4-shape--wave"></span>
+                    <span class="m25l4-shape m25l4-shape--ring"></span>
+                    <span class="m25l4-shape m25l4-shape--diamond"></span>
                   </div>
 
-                  <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  <div class="row g-1 mt-1 align-items-stretch">
+                    <div class="col-12 col-lg-4">
+                      <article class="modern-card glass-card m25l4-card h-100" data-aos="fade-left" data-aos-delay="140">
+                        <ul class="list-unstyled m25l4-list mb-0" role="list">
+                          ${renderPoints()}
+                        </ul>
+                      </article>
                     </div>
-                    <div class="m25l5-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship (Part - 1)", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 1)")}</h2>
+                    <div class="col-12 col-lg-8">
+                      <div class="mt-3 mt-lg-0 d-grid gap-1">
+                        ${renderSections()}
+                      </div>
                     </div>
-                  </header>
-
-                  <div class="mt-3 d-grid gap-3">
-                    ${renderSections()}
                   </div>
                 </div>`;
             })(),
           },
           {
-            id: "ch25-lesson-9",
+            id: "ch25-lesson-5",
             title: yhLang(
               "Techniques of interpersonal relationship (Part - 2)",
               "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 2)"
