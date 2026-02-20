@@ -17673,8 +17673,8 @@ const coursesData = [
             audioFile: "",
             content: (function () {
               const points = [
-                { text: yhLang("Warmth", "উষ্ণতা"), icon: "fa-heart" },
-                { text:   yhLang("Acceptability", "গ্রহণযোগ্যতা"), icon: "fa-handshake-angle" },
+                { text: yhLang("Warmth", "বন্ধুত্বপূর্ণ আচরন"), icon: "fa-heart" },
+                { text: yhLang("Acceptability", "গ্রহণযোগ্যতা"), icon: "fa-handshake-angle" },
                 { text: yhLang("Respect", "সম্মান"), icon: "fa-award" },
                 { text: yhLang("Openness/Genuineness", "স্বচ্ছতা"), icon: "fa-eye" },
                 { text: yhLang("Empathy", "সহমর্মিতা"), icon: "fa-handshake" },
@@ -17736,21 +17736,26 @@ const coursesData = [
                     const listDelay = 210 + sIdx * 90;
                     return `
                       <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay}">
-                        <div class="row g-1 align-items-center">
-                          <div class="col-12 col-lg-4">
-                            <div class="m25l5-left" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
-                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
-                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>
-                            </div>
+                        <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base mb-1 py-2" data-aos="fade-up">
+                          <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
                           </div>
+                          <div class="m25l5-hero__body">
+                            <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল")}</h2>
+                          </div>
+                        </header>
+                        <div class="row g-1 align-items-center"> 
 
-                          <div class="col-12 col-lg-8">
-                            <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
-                              <ul class="list-unstyled m25l5-list mb-0" role="list">
-                                ${renderItems(s.items, listDelay)}
-                              </ul>
-                            </article>
-                          </div>
+                          
+                          <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
+                            <div class="m25l5-left mb-1" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
+                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
+                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>                   
+                            </div>
+                            <ul class="list-unstyled m25l5-list mb-0" role="list">
+                              ${renderItems(s.items, listDelay)}
+                            </ul>
+                          </article>
                         </div>
                       </section>
                     `;
@@ -17766,17 +17771,16 @@ const coursesData = [
                     <span class="m25l4-shape m25l4-shape--diamond"></span>
                   </div>
 
-                   <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div class="m25l5-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল")}</h2>
-                    </div>
-                  </header>
-
                   <div class="row g-1 mt-1 align-items-stretch">
                     <div class="col-12 col-lg-4">
+                      <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base mb-1 py-2" data-aos="fade-up">
+                          <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                          </div>
+                          <div class="m25l5-hero__body">
+                            <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী")}</h2>
+                          </div>
+                        </header>
                       <article class="modern-card glass-card m25l4-card h-100" data-aos="fade-left" data-aos-delay="140">
                         <ul class="list-unstyled m25l4-list mb-0" role="list">
                           ${renderPoints()}
