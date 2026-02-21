@@ -17407,7 +17407,7 @@ const coursesData = [
                       </defs>
                       <path d="M 0 147 L 50 147" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
                       <path d="M 50 120 L 50 50 L 120 50" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
-                      <path d="M 50 120 L 50 257 L 120 257" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
+                      <path d="M 50 120 L 50 250 L 120 250" class="m25l2f-path" stroke-dasharray="6 4" marker-end="url(#m25l2f-arrow)" />
                     </svg>
 
                     <!-- Main branches -->
@@ -17698,7 +17698,7 @@ const coursesData = [
                   })
                   .join("");
 
-                  const sections = [
+                  const sections3 = [
                 {
                   title:  yhLang("SOLLER Attentiveness Model", "সোলার মনোযোগ মডেল"),
                   icon: "fa-sun",
@@ -17716,26 +17716,26 @@ const coursesData = [
                 },
               ];
 
-              const renderItems = (items, baseDelay) =>
-                (items || [])
-                  .map((it, idx) => {
-                    const delay = baseDelay + idx * 70;
+              const renderItems3 = (items3, baseDelay3) =>
+                (items3 || [])
+                  .map((it3, idx3) => {
+                    const delay3 = baseDelay3 + idx3 * 70;
                     return `
-                      <li class="m25l5-item" data-aos="fade-up" data-aos-delay="${delay}">
-                        <span class="m25l5-bullet bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${it.icon}"></i></span>
-                        <span class="m25l5-item-text">${it.text}</span>
+                      <li class="m25l5-item" data-aos="fade-up" data-aos-delay="${delay3}">
+                        <span class="m25l5-bullet bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${it3.icon}"></i></span>
+                        <span class="m25l5-item-text">${it3.text}</span>
                       </li>
                     `;
                   })
                   .join("");
 
-              const renderSections = () =>
-                sections
-                  .map((s, sIdx) => {
-                    const blockDelay = 130 + sIdx * 90;
-                    const listDelay = 210 + sIdx * 90;
+              const renderSections3 = () =>
+                sections3
+                  .map((s3, sIdx3) => {
+                    const blockDelay3 = 130 + sIdx3 * 90;
+                    const listDelay3 = 210 + sIdx3 * 90;
                     return `
-                      <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay}">
+                      <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay3}">
                         <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base mb-1 py-2" data-aos="fade-up">
                           <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -17747,13 +17747,13 @@ const coursesData = [
                         <div class="row g-1 align-items-center"> 
 
                           
-                          <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
-                            <div class="m25l5-left mb-1" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
-                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
-                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>                   
+                          <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay3 + 60}">
+                            <div class="m25l5-left mb-1" data-aos="zoom-in" data-aos-delay="${blockDelay3 + 40}">
+                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s3.icon}"></i></span>
+                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay3 + 90}">${s3.title}</h3>                   
                             </div>
                             <ul class="list-unstyled m25l5-list mb-0" role="list">
-                              ${renderItems(s.items, listDelay)}
+                              ${renderItems3(s3.items, listDelay3)}
                             </ul>
                           </article>
                         </div>
@@ -17762,50 +17762,6 @@ const coursesData = [
                   })
                   .join("");
 
-              return `
-                <div class="lesson-slide mod25-lesson4 mod25-lesson5">
-                  <div class="m25l4-shapes" aria-hidden="true">
-                    <span class="m25l4-shape m25l4-shape--orb"></span>
-                    <span class="m25l4-shape m25l4-shape--wave"></span>
-                    <span class="m25l4-shape m25l4-shape--ring"></span>
-                    <span class="m25l4-shape m25l4-shape--diamond"></span>
-                  </div>
-
-                  <div class="row g-1 mt-1 align-items-stretch">
-                    <div class="col-12 col-lg-4">
-                      <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base mb-1 py-2" data-aos="fade-up">
-                          <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                          </div>
-                          <div class="m25l5-hero__body">
-                            <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী")}</h2>
-                          </div>
-                        </header>
-                      <article class="modern-card glass-card m25l4-card h-100" data-aos="fade-left" data-aos-delay="140">
-                        <ul class="list-unstyled m25l4-list mb-0" role="list">
-                          ${renderPoints()}
-                        </ul>
-                      </article>
-                    </div>
-                    <div class="col-12 col-lg-8">
-                      <div class="mt-3 mt-lg-0 d-grid gap-1">
-                        ${renderSections()}
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch25-lesson-5",
-            title: yhLang(
-              "Techniques of interpersonal relationship (Part - 2)",
-              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 2)"
-            ),
-            icon: "fa-wand-magic-sparkles",
-            gradientClass: "bg-gradient-green",
-            audioFile: "",
-            content: (function () {
               const sections = [
                 {
                   title:  yhLang("Practical Tips", "ব্যবহারিক টিপস"),
@@ -17847,18 +17803,22 @@ const coursesData = [
                     const blockDelay = 130 + sIdx * 90;
                     const listDelay = 210 + sIdx * 90;
                     return `
+                      <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay}">
+                        
+                        <div class="row g-1 align-items-center"> 
 
-                      <div class="col-12 col-lg-12">
-                        <div class="m25l5-left mb-2">
-                          <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
-                          <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>
+                          
+                          <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
+                            <div class="m25l5-left mb-1" data-aos="zoom-in" data-aos-delay="${blockDelay + 40}">
+                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s.icon}"></i></span>
+                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay + 90}">${s.title}</h3>                   
+                            </div>
+                            <ul class="list-unstyled m25l5-list mb-0" role="list">
+                              ${renderItems(s.items, listDelay)}
+                            </ul>
+                          </article>
                         </div>
-                        <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay + 60}">
-                          <ul class="list-unstyled m25l5-list mb-0" role="list">
-                            ${renderItems(s.items, listDelay)}
-                          </ul>
-                        </article>
-                      </div>
+                      </section>
                     `;
                   })
                   .join("");
@@ -17909,66 +17869,68 @@ const coursesData = [
                     const blockDelay2 = 130 + sIdx2 * 90;
                     const listDelay2 = 210 + sIdx2 * 90;
                     return `
-                     
+                      <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay2}">
+                        
+                        <div class="row g-1 align-items-center"> 
 
-                      <div class="col-12 col-lg-12">
-                        <div class="m25l5-left mb-2">
-                          <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s2.icon}"></i></span>
-                          <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay2 + 90}">${s2.title}</h3>
+                          
+                          <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay2 + 60}">
+                            <div class="m25l5-left mb-1" data-aos="zoom-in" data-aos-delay="${blockDelay2 + 40}">
+                              <span class="m25l5-left__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid ${s2.icon}"></i></span>
+                              <h3 class="m25l5-left__title mb-0" data-aos="fade-up" data-aos-delay="${blockDelay2 + 90}">${s2.title}</h3>                   
+                            </div>
+                            <ul class="list-unstyled m25l5-list mb-0" role="list">
+                              ${renderItems2(s2.items, listDelay2)}
+                            </ul>
+                          </article>
                         </div>
-                        <article class="modern-card glass-card m25l5-right h-100" data-aos="fade-left" data-aos-delay="${blockDelay2 + 60}">
-                          <ul class="list-unstyled m25l5-list mb-0" role="list">
-                            ${renderItems2(s2.items, listDelay2)}
-                          </ul>
-                        </article>
-                      </div>
+                      </section>
                     `;
                   })
-                  .join("");
+                  .join("");    
 
               return `
-                <div class="lesson-slide mod25-lesson5">
-                  <div class="m25l5-shapes" aria-hidden="true">
-                    <span class="m25l5-shape m25l5-shape--orb"></span>
-                    <span class="m25l5-shape m25l5-shape--blob"></span>
-                    <span class="m25l5-shape m25l5-shape--ring"></span>
-                    <span class="m25l5-shape m25l5-shape--kite"></span>
+                <div class="lesson-slide mod25-lesson4 mod25-lesson5">
+                  <div class="m25l4-shapes" aria-hidden="true">
+                    <span class="m25l4-shape m25l4-shape--orb"></span>
+                    <span class="m25l4-shape m25l4-shape--wave"></span>
+                    <span class="m25l4-shape m25l4-shape--ring"></span>
+                    <span class="m25l4-shape m25l4-shape--diamond"></span>
                   </div>
 
-                  <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div class="m25l5-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship (Part - 2)", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনের কৌশল (Part - 2)")}</h2>
-                    </div>
-                  </header>
-
-                  <div class="mt-3">
-                    <div class="row g-3 align-items-stretch">
-                      <div class="col-12 col-lg-6">
-                        <section class="m25l5-block" data-aos="fade-up" data-aos-delay="130">
-                          <div class="row g-3 align-items-stretch">
-                            ${renderSections()}
+                  <div class="row g-1 mt-1 align-items-stretch">
+                    <div class="col-12 col-lg-4">
+                       <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base mb-1 py-2" data-aos="fade-up">
+                          <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
                           </div>
-                        </section>
+                          <div class="m25l5-hero__body">
+                            <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী")}</h2>
+                          </div>
+                        </header>
+                      <article class="modern-card glass-card m25l4-card h-100" data-aos="fade-left" data-aos-delay="140">
+                        <ul class="list-unstyled m25l4-list mb-0" role="list">
+                          ${renderPoints()}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                      <div class="mt-3 mt-lg-1 d-grid gap-1">
+                        ${renderSections3()}
                       </div>
-
-                      <div class="col-12 col-lg-6">
-                        <section class="m25l5-block" data-aos="fade-up" data-aos-delay="160">
-                          <div class="row g-3 align-items-stretch">
-                            ${renderSections2()}
-                          </div>
-                        </section>
+                      <div class="mt-3 mt-lg-1 d-grid gap-1">
+                        ${renderSections()}
+                      </div>
+                      <div class="mt-3 mt-lg-1 d-grid gap-1">
+                        ${renderSections2()}
                       </div>
                     </div>
                   </div>
                 </div>`;
             })(),
           },
-
           {
-            id: "ch25-lesson-6",
+            id: "ch25-lesson-5",
             title: yhLang(
               "The word GATHER can be used to easily remember the steps of counseling.",
               "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য GATHER শব্দটির সাহায্য নেয়া যায়"
@@ -18054,77 +18016,27 @@ const coursesData = [
                     <div class="m25l6-hero__body">
                       <h2 class="slide-title lession_11_title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("The word GATHER can be used to easily remember the steps of counseling.", "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য GATHER শব্দটির সাহায্য নেয়া যায়")}</h2>
                     </div>
-                    <p class="m25l1-lead" data-aos="fade-up" data-aos-delay="100">${yhLang("Communication is a process through which people exchange information, knowledge, experience, ideas, and opinions in a meaningful and effective way through speech, gestures, writing, pictures, or symbols", "এর ফলে কিশোর-কিশোরী ও তরুণ সেবাগ্রহীতারা তাদের ব্যক্তিগত অনুভূতি ও সমস্যা নিয়ে খোলাখুলি আলোচনা করার সুযোগ পায় ও নিজেই সিদ্ধান্ত গ্রহণ করে সমস্যা সমাধান করতে পারে। <br> গ্রহীতা ও সেবাদানকারীর মধ্যে দ্বিমুখী আলোচনার মাধ্যমে বিস্তারিত তথ্য প্রদানের পর সেবাদানকারী গ্রহীতাকে তার নিজের স্বাস্থ্যসম্পর্কিত কোনো সিদ্ধান্ত গ্রহণে সহায়তা করার প্রক্রিয়াই হল কাউন্সেলিং।")}</p>
                   </header>
-
                   <div class="row g-1 mt-1 align-items-stretch">
-                    <div class="col-12">
+                    <div class="col-12 col-md-3">
+                      <header class="m25l6-hero mb-2 gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                        <div class="m25l6-hero__badge icon-spin-on-hover" aria-hidden="true">
+                          <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="m25l6-hero__body">
+                          <h2 class="slide-title lession_11_title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Counseling.", "কাউন্সেলিং")}</h2>
+                        </div>
+                      </header>
+                      <article class="modern-card glass-card m25l6-gather" data-aos="fade-right" data-aos-delay="120">
+                      <p class="m25l1-lead" data-aos="fade-up" data-aos-delay="100">${yhLang("Communication is a process through which people exchange information, knowledge, experience, ideas, and opinions in a meaningful and effective way through speech, gestures, writing, pictures, or symbols", "গ্রহীতা ও সেবাদানকারীর মধ্যে দ্বিমুখী আলোচনার মাধ্যমে বিস্তারিত তথ্য প্রদানের পর সেবাদানকারী গ্রহীতাকে তার নিজের স্বাস্থ্যসম্পর্কিত কোনো সিদ্ধান্ত গ্রহণে সহায়তা করার প্রক্রিয়াই হল কাউন্সেলিং। <br> </br>এর ফলে সেবাগ্রহীতারা  তাদের ব্যক্তিগত অনুভূতি ও সমস্যা নিয়ে খোলাখুলি আলোচনা করার সুযোগ পায় ও নিজেই সিদ্ধান্ত গ্রহণ করে সমস্যা সমাধান করতে পারে।")}</p>
+
+                      </article>
+                    </div>
+                    <div class="col-12 col-md-9">
                       <article class="modern-card glass-card m25l6-gather" data-aos="fade-right" data-aos-delay="120">
                         <div class="m25l6-steps" role="list" aria-label="GATHER ধাপসমূহ">
                           ${renderGatherSteps()}
                         </div>
-                      </article>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch25-lesson-12",
-            title: yhLang(
-              "Counseling",
-              "কাউন্সেলিং"
-            ),
-            icon: "fa-comments",
-            gradientClass: "bg-gradient-blue",
-            audioFile: "",
-            content: (function () {
-              const counselingTitleBn = yhLang("Counseling", "কাউন্সেলিং");
-              const counselingText1 = yhLang("Counseling is the process through which, following two-way discussion and detailed information sharing, the provider helps the client make decisions about their own health.", "গ্রহীতা ও সেবাদানকারীর মধ্যে দ্বিমুখী আলোচনার মাধ্যমে বিস্তারিত তথ্য প্রদানের পর সেবাদানকারী গ্রহীতাকে তার নিজের স্বাস্থ্যসম্পর্কিত কোনো সিদ্ধান্ত গ্রহণে সহায়তা করার প্রক্রিয়াই হল কাউন্সেলিং।");
-
-              const counselingText2 = yhLang("It gives young person to get the opportunity to openly discuss their personal feelings and problems and enables them to make their own decisions.", "এর ফলে কিশোর-কিশোরী ও তরুণ সেবাগ্রহীতারা তাদের ব্যক্তিগত অনুভূতি ও সমস্যা নিয়ে খোলাখুলি আলোচনা করার সুযোগ পায় ও নিজেই সিদ্ধান্ত গ্রহণ করে সমস্যা সমাধান করতে পারে।");
-
-              const renderSentenceLines = (text, baseDelay, step) => {
-                const raw = String(text || "");
-                const parts = raw
-                  .split("।")
-                  .map((s) => s.trim())
-                  .filter(Boolean);
-                return parts
-                  .map((sentence, idx) => {
-                    const delay = baseDelay + idx * step;
-                    return `<span class="m25l6-line" data-aos="fade-up" data-aos-delay="${delay}">${sentence}।</span>`;
-                  })
-                  .join(" ");
-              };
-
-              return `
-                <div class="lesson-slide mod25-lesson6">
-                  <div class="m25l6-shapes" aria-hidden="true">
-                    <span class="m25l6-shape m25l6-shape--orb"></span>
-                    <span class="m25l6-shape m25l6-shape--blob"></span>
-                    <span class="m25l6-shape m25l6-shape--ring"></span>
-                    <span class="m25l6-shape m25l6-shape--zig"></span>
-                  </div>
-
-                  <header class="m25l6-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25l6-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-comments"></i>
-                    </div>
-                    <div class="m25l6-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Counseling", "কাউন্সেলিং")}</h2>
-                    </div>
-                  </header>
-
-                  <div class="row g-1 mt-1 align-items-stretch">
-                    <div class="col-12">
-                      <article class="modern-card glass-card m25l6-counsel" data-aos="fade-left" data-aos-delay="140">
-                        <div class="d-none m25l6-counsel-head yhap_box_shadow" data-aos="fade-up" data-aos-delay="180">
-                          <span class="m25l6-chip bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
-                          <h3 class="mb-0" data-aos="fade-up" data-aos-delay="230">${counselingTitleBn}</h3>
-                        </div>
-                        <p class="m25l6-paragraph mb-3 yhap_box_shadow">${renderSentenceLines(counselingText1, 260, 70)}</p>
-                        <p class="m25l6-paragraph mb-0 yhap_box_shadow">${renderSentenceLines(counselingText2, 360, 70)}</p>
                       </article>
                     </div>
                   </div>

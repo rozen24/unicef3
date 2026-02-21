@@ -10314,7 +10314,6 @@ input::placeholder {
 .mod25-lesson6 .m25l6-steps {
   display: grid;
   gap: 5px;
-  grid-template-columns: 50% 2fr;
 }
 
 .mod25-lesson6 .m25l6-step {
