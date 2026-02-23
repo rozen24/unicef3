@@ -249,8 +249,8 @@ html[lang|="bn"] .m25l5-th-text lang {
 
 html:lang(bn) h2 lang,
 html[lang|="bn"] h2 lang {
-  font-size: 36px !important;
-  line-height: 37px;
+  font-size: 27px !important;
+  line-height: 27px;
 }
 html:lang(bn) h6 lang,
 html[lang|="bn"] h6 lang {
@@ -280,7 +280,7 @@ html[lang|="bn"] .m25l4-square__text lang {
 }
 html:lang(bn)  .m25l5-left__title lang,
 html[lang|="bn"] .m25l5-left__title lang {
-  font-size: 34px !important;
+  font-size: 22px !important;
 }
 
 /* body.lang-bn p,
@@ -6849,7 +6849,7 @@ input::placeholder {
 .lesson-slide {
   background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,246,255,0.94));
   border-radius: 24px;
-  padding: 5px;
+  padding: 0px 5px;
   box-shadow: 0 28px 80px rgba(15, 53, 110, 0.12);
   animation: lessonEnter 0.65s var(--transition-curve);
   position: relative; /* ensure content sits above floating backgrounds */
@@ -8710,7 +8710,7 @@ input::placeholder {
 
 .mod25-lesson3 .m25l3-hero {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   padding: 16px 18px;
   border-radius: 20px;
@@ -10031,8 +10031,8 @@ input::placeholder {
 }
 
 .mod25-lesson5 .m25l5-hero__badge {
-  width: 56px;
-  height: 56px;
+  width: 36px;
+  height: 36px;
   border-radius: 16px;
   display: inline-flex;
   align-items: center;
@@ -10067,8 +10067,8 @@ input::placeholder {
 }
 
 .mod25-lesson5 .m25l5-left__icon {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   border-radius: 20px;
   display: inline-flex;
   align-items: center;
@@ -11493,10 +11493,6 @@ input::placeholder {
     height: 100vh;
     border-right: none;
     border-bottom: 2px solid #e2e8f0;
-  }
-  
-  .lesson-slide {
-    padding: 2rem 1.5rem;
   }
   
   .slide-title {
