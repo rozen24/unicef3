@@ -17298,7 +17298,7 @@ const coursesData = [
           },
           {
             id: "ch25-lesson-2",
-            title: yhLang("Communication", "যোগাযোগ"),
+            title: yhLang("Communication", "যোগাযোগ প্রক্রিয়া"),
             icon: "fa-diagram-project",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
@@ -17898,7 +17898,7 @@ const coursesData = [
                     <span class="m25l4-shape m25l4-shape--diamond"></span>
                   </div>
 
-                  <div class="row g-1 mt-1 align-items-stretch">
+                  <div class="row g-1 mt-md-0 mt-sm-1 align-items-stretch">
                     <div class="col-12 col-lg-4">
                        <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base mb-1 py-2" data-aos="fade-up">
                           <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
