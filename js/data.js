@@ -16666,10 +16666,6 @@ const coursesData = [
             content: (function () {
               const highlights = [
                 {
-                  icon: "fa-scale-balanced",
-                  text: yhLang("Values are—", "মূল্যবোধ হলো—"),
-                },
-                {
                   icon: "fa-thumbs-up",
                   text: yhLang(
                     "the sense of judging right and wrong.",
@@ -16695,6 +16691,10 @@ const coursesData = [
               const explanationTitle = yhLang(
                 "Explanation of values",
                 "মূল্যবোধের ব্যাখ্যা"
+              );
+              const explanationTitle2 = yhLang(
+                "Values are —",
+                "মূল্যবোধ হলো —"
               );
               const explanationText = yhLang(
                 "Using your intellect and judgement to assess what is good or bad in an action, and practicing the good and just aspects—that is values.",
@@ -16727,7 +16727,7 @@ const coursesData = [
                 (items || [])
                   .map(
                     (row, idx) => `
-                      <div class="m24l8-hi m24l8-line" data-aos="fade-up" data-aos-delay="${120 + idx * 70}" style="--d:${80 + idx * 95}ms">
+                      <div class="m24l8-hi m24l8-line mx-2" data-aos="fade-up" data-aos-delay="${120 + idx * 70}" style="--d:${80 + idx * 95}ms">
                         <span class="m24l8-hi__icon" aria-hidden="true"><i class="fa-solid ${row.icon}"></i></span>
                         <p class="m24l8-hi__text">${row.text}</p>
                       </div>
@@ -16769,6 +16769,8 @@ const coursesData = [
                   <div class="row g-1 mt-1 align-items-stretch">
                     <div class="col-12 col-lg-6">
                       <section class="m24l8-card m24l8-card--hi" data-aos="zoom-in" data-aos-delay="90">
+                      <h3 class="m24l8-subtitle m24l8-line mb-2 mx-3" data-aos="fade-up" data-aos-delay="200" style="--d:180ms">${explanationTitle2}</h3>
+
                         ${renderHighlights(highlights)}
                       </section>
                     </div>

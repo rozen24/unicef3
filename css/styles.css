@@ -2696,6 +2696,7 @@ html[lang|="bn"] h2 {
   border: 1px solid rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(9px);
   box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+  align-items: center;
 }
 
 .mod24-lesson9 .m24l9-cause__badge {
@@ -2858,7 +2859,7 @@ html[lang|="bn"] h2 {
 .mod24-lesson10 .m24l10-quoteLine {
   display: grid;
   grid-template-columns: 40px 1fr;
-  align-items: start;
+  align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
 }
@@ -2908,6 +2909,7 @@ html[lang|="bn"] h2 {
   background: rgba(255, 255, 255, 0.68);
   border: 1px solid rgba(255, 255, 255, 0.55);
   box-shadow: 0 12px 26px rgba(16, 24, 40, 0.10);
+  align-items: center;
 }
 
 .mod24-lesson10 .m24l10-step__icon {
@@ -6850,7 +6852,7 @@ input::placeholder {
 .lesson-slide {
   background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,246,255,0.94));
   border-radius: 24px;
-  padding: 0px 5px;
+  padding: 5px 5px;
   box-shadow: 0 28px 80px rgba(15, 53, 110, 0.12);
   animation: lessonEnter 0.65s var(--transition-curve);
   position: relative; /* ensure content sits above floating backgrounds */
