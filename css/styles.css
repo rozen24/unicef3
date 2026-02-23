@@ -10254,8 +10254,8 @@ input::placeholder {
 }
 
 .mod25-lesson6 .m25l6-hero__badge {
-  width: 56px;
-  height: 56px;
+  width: 42px;
+  height: 42px;
   border-radius: 16px;
   display: inline-flex;
   align-items: center;
@@ -10278,7 +10278,7 @@ input::placeholder {
 .mod25-lesson6 .m25l6-gather,
 .mod25-lesson6 .m25l6-counsel {
   border-radius: 20px;
-  padding: 16px;
+  padding: 8px;
   background: linear-gradient(135deg, rgba(255,255,255,0.86), rgba(255,255,255,0.72));
   border: 1px solid rgba(0,0,0,0.06);
   box-shadow: 0 18px 44px rgba(15, 53, 110, 0.10);
@@ -10321,7 +10321,7 @@ input::placeholder {
   grid-template-columns: 1fr;
   gap: 10px;
   border-radius: 18px;
-  padding: 12px;
+  padding: 8px;
   border: 1px solid rgba(0,0,0,0.06);
   background: linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.56));
 }
@@ -10335,7 +10335,7 @@ input::placeholder {
 
 .mod25-lesson6 .m25l6-step-left {
   border-radius: 16px;
-  padding: 12px;
+  padding: 8px;
   background:
     radial-gradient(circle at 30% 30%, rgba(255,255,255,0.86), rgba(255,255,255,0) 58%),
     var(--blue-gradient);
@@ -10347,8 +10347,8 @@ input::placeholder {
 }
 
 .mod25-lesson6 .m25l6-letter {
-  width: 52px;
-  height: 52px;
+  width: 40px;
+  height: 40px;
   border-radius: 18px;
   display: grid;
   place-items: center;
@@ -10361,13 +10361,13 @@ input::placeholder {
 
 .mod25-lesson6 .m25l6-left-text {
   font-weight: 800;
-  line-height: 1.35;
+  line-height: 20px;
   font-size: 18px;
 }
 
 .mod25-lesson6 .m25l6-step-right {
   border-radius: 16px;
-  padding: 12px;
+  padding: 8px;
   background: linear-gradient(135deg, rgba(255,255,255,0.80), rgba(255,255,255,0.60));
   border: 1px solid rgba(0,0,0,0.06);
   display: flex;
@@ -10393,7 +10393,7 @@ input::placeholder {
 
 .mod25-lesson6 .m25l6-right-text {
   font-weight: 650;
-  line-height: 1.6;
+  line-height: 25px;
   font-size: 18px;
 }
 
