@@ -5528,6 +5528,7 @@ html[lang|="bn"] h2 {
   display: flex;
   justify-content: space-between;
   gap: .75rem;
+  margin-top: -20px;
 }
 .inline-lesson-nav .btn { border-radius: 999px; }
 .inline-lesson-nav .btn:disabled { opacity: .6; cursor: not-allowed; }
@@ -8944,7 +8945,7 @@ input::placeholder {
 }
 .mod25-lesson3-flow .m25l3f-row--center {
   justify-content: center;
-  margin-top: -66px;
+  margin-top: -80px;
 }
 
 .mod25-lesson3-flow .m25l3f-row--right {
@@ -13112,7 +13113,6 @@ dashboard-titled-title {
     color: rgb(244, 249, 255);
     box-shadow: var(--shadow-bold);
     overflow: hidden;
-    margin: clamp(0px, 1vw, 4px) auto clamp(5px, 2vw, 6px) !important;
 }
 
 .lesson-hero::after {
@@ -13305,11 +13305,6 @@ dashboard-titled-title {
 
 .lesson-body {
   padding: 0 0 clamp(0px, 10vw, 0px);
-  height: 100vh;
-}
-
-.lesson-body .container {
-  max-width: 100vw !important;
 }
 
 

@@ -17185,7 +17185,7 @@ const coursesData = [
                     <p class="m25l1-lead" data-aos="fade-up" data-aos-delay="100">${yhLang("Communication is a process through which people exchange information, knowledge, experience, ideas, and opinions in a meaningful and effective way through speech, gestures, writing, pictures, or symbols", "যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহায্যে অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে")}</p>
                   </header>
 
-                  <div class="row g-1 mt-1 align-items-stretch">
+                  <div class="row g-1 mt-1 mb-5 align-items-stretch">
                     <div class="col-12 col-lg-4">
                       <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
                         <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
@@ -17361,7 +17361,7 @@ const coursesData = [
                     
                     <!-- Line 2: Centered Feedback node -->
                     <div class="m25l3f-row m25l3f-row--center" data-aos="fade-up" data-aos-delay="440">
-                      <div class="m25l3f-node m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="480" style="--d:440ms">
+                      <div class="m25l3f-node bg-white m25l3f-node--wide m25l3f-line" data-aos="zoom-in" data-aos-delay="480" style="--d:440ms">
                         <span class="m25l3f-node__icon bg-gradient-purple" aria-hidden="true"><i class="fa-solid fa-reply-all"></i></span>
                         <span class="m25l3f-node__title">${yhLang("Feedback", "প্রতিবার্তা")}</span>
                       </div>
@@ -17389,7 +17389,7 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <div class="m25l2f-flowchart m25l2f-flowchart--horizontal mb-5" data-aos="fade-up" data-aos-delay="100">
+                  <div class="m25l2f-flowchart m25l2f-flowchart--horizontal" data-aos="fade-up" data-aos-delay="100">
                     <!-- Root node -->
                     <div class="m25l2f-node m25l2f-node--root m25l2f-line" data-aos="zoom-in" data-aos-delay="140" style="--d:100ms">
                       <span class="m25l2f-node__icon bg-gradient-blue" aria-hidden="true">
@@ -17654,7 +17654,7 @@ const coursesData = [
                             <span class="m25l3-icon bg-gradient-yellow icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="260"> ${yhLang("Mass Communication", "গণযোগাযোগ")}</h3>
                           </div>
-                          <span class="mb-0 m25l3-mass yhap_box_shadow">${yhLang("Different forms of mass media are used to deliver messages to large audiences. In this case, the sender and receiver do not interact directly.", "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।")}</span>
+                          <span class="mb-0 m25l3-mass">${yhLang("Different forms of mass media are used to deliver messages to large audiences. In this case, the sender and receiver do not interact directly.", "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।")}</span>
                         </section>
                       </article>
                     </div>
