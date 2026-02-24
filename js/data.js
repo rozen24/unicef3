@@ -15551,94 +15551,171 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const diseaseCards = [
+              const emergingExamples = [
                 {
-                  title: yhLang("Emerging diseases", "উদীয়মান রোগ"),
-                  description: yhLang(
-                    "Diseases that have recently been identified in humans for the first time, or were previously absent, are called emerging diseases.",
-                    "যে সব রোগ সম্প্রতি প্রথমবারের মতো মানুষের মধ্যে শনাক্ত হয়েছে, অথবা আগে ছিল না—সেসব রোগকে উদীয়মান (Emerging) রোগ বলা হয়।"
-                  ),
-                  examples: [
-                    yhLang("COVID-19", "কোভিড-১৯"),
-                    yhLang("Nipah virus", "নিপাহ ভাইরাস"),
-                    yhLang("Zika virus", "জিকা ভাইরাস"),
-                  ],
-                  icon: "fa-seedling",
-                  color: "bg-gradient-purple",
+                  text: yhLang("COVID-19", "কোভিড-১৯"),
+                  icon: "fa-virus",
+                  tone: "bg-gradient-rose",
                 },
                 {
-                  title: yhLang("Re-emerging diseases", "পুনরাবির্ভূত রোগ"),
-                  description: yhLang(
-                    "Diseases that were once controlled or almost eradicated but have resurged to create fresh health risks are called re-emerging diseases.",
-                    "যে সব রোগ আগে নিয়ন্ত্রণে ছিল বা প্রায় বিলুপ্ত হয়ে গিয়েছিল, কিন্তু পুনরায় বৃদ্ধি পেয়ে স্বাস্থ্যঝুঁকি সৃষ্টি করছে, সেগুলোকে পুনরাবির্ভূত (Re-emerging) রোগ বলা হয়।"
-                  ),
-                  examples: [
-                    yhLang("Dengue", "ডেঙ্গু"),
-                    yhLang("Tuberculosis (TB)", "যক্ষ্মা (টিবি)"),
-                    yhLang("Cholera", "কলেরা"),
-                  ],
-                  icon: "fa-arrows-rotate",
-                  color: "bg-gradient-teal",
+                  text: yhLang("Nipah virus", "নিপাহ ভাইরাস"),
+                  icon: "fa-biohazard",
+                  tone: "bg-gradient-lavender",
+                },
+                {
+                  text: yhLang("Zika virus", "জিকা ভাইরাস"),
+                  icon: "fa-mosquito",
+                  tone: "bg-gradient-teal",
                 },
               ];
 
-              const bangladeshContext = yhLang(
-                "Bangladesh has faced numerous emerging and re-emerging diseases in recent years, spanning infectious, non-communicable, and water-borne conditions.",
-                "বাংলাদেশ বিগত বছরগুলোতে সংক্রামক রোগ, অসংক্রামক রোগ এবং পানিবাহিত রোগসহ অনেক উদীয়মান ও পুনরাবির্ভূত রোগের মুখোমুখি হয়েছে।"
-              );
+              const reemergingExamples = [
+                {
+                  text: yhLang("Dengue", "ডেঙ্গু"),
+                  icon: "fa-mosquito",
+                  tone: "bg-gradient-mint",
+                },
+                {
+                  text: yhLang("Tuberculosis (TB)", "যক্ষ্মা (TB)"),
+                  icon: "fa-lungs",
+                  tone: "bg-gradient-blue",
+                },
+                {
+                  text: yhLang("Cholera", "কলেরা"),
+                  icon: "fa-droplet",
+                  tone: "bg-gradient-yellow",
+                },
+              ];
 
-              const renderExamples = (examples) =>
-                examples
-                  .map(
-                    (item) => `
-                      <span class="badge-pill disease-tag">${item}</span>
-                    `
-                  )
+              const renderExamples = (examples, baseDelay) =>
+                (examples || [])
+                  .map((item, idx) => {
+                    const delay = baseDelay + idx * 70;
+                    return `
+                      <li class="m23l1-example" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m23l1-bullet ${item.tone}" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m23l1-example-text">${item.text}</span>
+                      </li>
+                    `;
+                  })
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">${yhLang(
-                        "Emerging and Re-emerging Diseases",
-                        "উদীয়মান ও পুনরাবির্ভূত রোগ"
-                      )}</h2>
-                    </div>
-                    <div class="hero-tile__icon bg-gradient-indigo"><i class="fa-solid fa-virus"></i></div>
-                  </header>
-
-                  <div class="row g-3 mt-2">
-                    ${diseaseCards
-                      .map(
-                        (card, idx) => `
-                          <div class="col-12 col-md-6">
-                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${
-                              100 + idx * 80
-                            }">
-                              <div class="d-flex align-items-center gap-3 mb-3">
-                                <span class="badge-pill ${card.color}"><i class="fa-solid ${card.icon}"></i></span>
-                                <div>
-                                  <h5 class="mb-1 gradient-text">${card.title}</h5>
-                                  <p class="mb-0 text-muted">${card.description}</p>
-                                </div>
-                              </div>
-                              <div class="d-flex flex-wrap gap-2">
-                                ${renderExamples(card.examples)}
-                              </div>
-                            </article>
-                          </div>
-                        `
-                      )
-                      .join("")}
+                <div class="lesson-slide mod23-lesson1">
+                  <div class="m23l1-shapes" aria-hidden="true">
+                    <span class="m23l1-shape m23l1-shape--orb"></span>
+                    <span class="m23l1-shape m23l1-shape--ribbon"></span>
+                    <span class="m23l1-shape m23l1-shape--kite"></span>
+                    <span class="m23l1-shape m23l1-shape--ring"></span>
                   </div>
 
-                  <section class="modern-card glass-card alert-info hover-lift-sm transition-base mt-3" data-aos="fade-up" data-aos-delay="220">
-                    <div class="d-flex align-items-start gap-3">
-                      <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-landmark"></i></span>
-                      <p class="mb-0">${bangladeshContext}</p>
+                  <header class="m23l1-hero mb-1" data-aos="fade-up">
+                    <span class="m23l1-hero__badge bg-gradient-yellow icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-shield-virus"></i>
+                    </span>
+                    <div class="m23l1-hero__body">
+                      <h2 class="slide-title gradient-text mb-0 m23l1-line" data-aos="fade-up" data-aos-delay="60">${yhLang(
+                        "Emerging and Re-emerging Diseases",
+                        "ইমারজিং এবং রি-ইমারজিং ডিজিজেস"
+                      )}</h2>
                     </div>
-                  </section>
+                  </header>
+
+                  <div class="row g-2">
+                    <div class="col-12 col-lg-5">
+                      <div class="m23l1-stack">
+                        <article class="m23l1-card" data-aos="fade-up" data-aos-delay="120">
+                          <div class="m23l1-card__head" data-aos="fade-up" data-aos-delay="160">
+                            <span class="m23l1-card__icon bg-gradient-mint" aria-hidden="true">
+                              <i class="fa-solid fa-seedling"></i>
+                            </span>
+                            <h3 class="m23l1-card__title m23l1-line" data-aos="fade-up" data-aos-delay="200">${yhLang(
+                              "Emerging diseases",
+                              "ইমারজিং বা উদীয়মান রোগ"
+                            )}</h3>
+                          </div>
+                          <p class="m23l1-card__line m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
+                            "Diseases recently identified in humans for the first time, or previously absent, are called emerging diseases. Examples:",
+                            "যে সব রোগ সম্প্রতি প্রথমবারের মতো মানুষের মধ্যে শনাক্ত হয়েছে, অথবা আগে ছিল না—সেসব রোগকে ইমারজিং বা উদীয়মান রোগ বলা হয়। উদাহরণ: "
+                          )}</p>
+                          <ul class="list-unstyled m23l1-examples" role="list">
+                           ${renderExamples(emergingExamples, 340)}
+                          </ul>
+                        </article>
+
+                        <article class="m23l1-card" data-aos="fade-up" data-aos-delay="160">
+                          <div class="m23l1-card__head" data-aos="fade-up" data-aos-delay="200">
+                            <span class="m23l1-card__icon bg-gradient-blue" aria-hidden="true">
+                              <i class="fa-solid fa-arrows-rotate"></i>
+                            </span>
+                            <h3 class="m23l1-card__title m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
+                              "Re-emerging diseases",
+                              "রি-ইমারজিং বা পুনরুদ্ভূত রোগ"
+                            )}</h3>
+                          </div>
+                          <p class="m23l1-card__line m23l1-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
+                            "Diseases once controlled or nearly eradicated but resurging to create health risks are called re-emerging diseases. Examples:",
+                            "যে সব রোগ আগে নিয়ন্ত্রণে ছিল বা প্রায় বিলুপ্ত হয়ে গিয়েছিল, কিন্তু পুনরায় বৃদ্ধি পেয়ে স্বাস্থ্যঝুঁকি সৃষ্টি করছে, সেগুলোকে রি-ইমারজিং বা পুনরুদ্ভূত রোগ বলা হয়। উদাহরণ:"
+                          )}</p>
+                          <ul class="list-unstyled m23l1-examples" role="list">
+                            ${renderExamples(reemergingExamples, 380)}
+                          </ul>
+                        </article>
+
+                        <article class="m23l1-card" data-aos="fade-up" data-aos-delay="200">
+                          <div class="m23l1-card__head" data-aos="fade-up" data-aos-delay="240">
+                            <span class="m23l1-card__icon bg-gradient-rose" aria-hidden="true">
+                              <i class="fa-solid fa-triangle-exclamation"></i>
+                            </span>
+                            <h3 class="m23l1-card__title m23l1-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
+                              "Deliberately emerging diseases",
+                              "ডেলিবারেটলি ইমারজিং বা ইচ্ছাকৃতভাবে উদ্ভূত রোগ"
+                            )}</h3>
+                          </div>
+                          <p class="m23l1-card__line m23l1-line" data-aos="fade-up" data-aos-delay="320">${yhLang(
+                            "Infectious diseases intentionally spread by pathogens (bacteria, viruses, or toxins) for harmful purposes such as terrorism.",
+                            "এটি হলো এমন সংক্রামক ব্যাধি যা কোনো রোগজীবাণু (ব্যাকটেরিয়া, ভাইরাস বা টক্সিন) ইচ্ছাকৃতভাবে, উদ্দেশ্যপ্রণোদিতভাবে বা কোনো অশুভ উদ্দেশ্যে (যেমন- সন্ত্রাসবাদ) জনসাধারণের মধ্যে ছড়িয়ে দেওয়া হয়।"
+                          )}</p>
+                        </article>
+
+                        <section class="m23l1-callout" data-aos="fade-up" data-aos-delay="240">
+                          <span class="m23l1-callout__icon bg-gradient-lavender" aria-hidden="true">
+                            <i class="fa-solid fa-flag"></i>
+                          </span>
+                          <div class="m23l1-callout__body">
+                            <p class="m23l1-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
+                              "Bangladesh has faced many emerging and re-emerging diseases in recent years.",
+                              "বাংলাদেশ বিগত বছরগুলোতে সংক্রামক রোগ, অসংক্রামক রোগ সহ অনেক ইমারজিং এবং রি-ইমারজিং রোগের মুখোমুখি হয়েছে।"
+                            )}</p>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                      <div class="m23l1-stack">
+                        <article class="m23l1-media" data-aos="fade-up" data-aos-delay="140">
+                          <h4 class="m23l1-media__title m23l1-line mx-2" data-aos="fade-up" data-aos-delay="180">${yhLang(
+                            "Examples of emerging and re-emerging diseases",
+                            "ইমারজিং বা উদীয়মান রোগ ও রি-ইমারজিং বা পুনরুদ্ভূত রোগের উদাহরণ সমূহ"
+                          )}</h4>
+                          <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="220">
+                            <img class="img-zoom" style="max-height: 350px" src="img/modu23/global.png" alt="ইমারজিং ও রি-ইমারজিং রোগের উদাহরণ">
+                          </div>
+                        </article>
+
+                        <article class="m23l1-media" data-aos="fade-up" data-aos-delay="200">
+                          <h4 class="m23l1-media__title mx-2 m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
+                            "Factors that accelerate transmission",
+                            "সংক্রমণকে ত্বরান্বিত করনে প্রভাবক সমূহ"
+                          )}</h4>
+                          <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="280">
+                            <img class="img-zoom" style="max-height: 350px" src="img/modu23/global2.png" alt="সংক্রমণকে ত্বরান্বিত করার প্রভাবক">
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
                 </div>`;
             })(),
           },
