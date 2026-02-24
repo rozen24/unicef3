@@ -15748,7 +15748,7 @@ const coursesData = [
                 { text: yhLang("Blood in urine and stool", "প্রস্রাবে এবং মলের সাথে রক্তপাত"), icon: "fa-triangle-exclamation" },
                 { text: yhLang("Uncontrolled diarrhea", "অনিয়ন্ত্রিত পায়খানা"), icon: "fa-bed" },
                 { text: yhLang("Bleeding under skin", "ত্বকের নিচে রক্তক্ষরণ"), icon: "fa-hand-dots" },
-                { text: yhLang("Rapid breathing", "দ্রুত শ্বাস প্রশ্বাস"), icon: "fa-lung" },
+                { text: yhLang("Rapid breathing", "দ্রুত শ্বাস প্রশ্বাস"), icon: "fa-lungs" },
                 { text: yhLang("Fatigue", "ক্লান্তি"), icon: "fa-face-tired" },
                 { text: yhLang("Restlessness", "অস্থিরতা"), icon: "fa-triangle-exclamation" },
               ];
@@ -15842,88 +15842,124 @@ const coursesData = [
           },
           {
             id: "ch23-lesson-3",
-            title: yhLang("Dengue", "ডেঙ্গু"),
-            icon: "fa-mosquito",
-            gradientClass: "bg-gradient-orange",
+            title: yhLang("Treatment", "চিকিৎসা"),
+            icon: "fa-notes-medical",
+            gradientClass: "bg-gradient-teal",
             audioFile: "",
             quiz: null,
             content: (function () {
-              const generalIntro = [
-                "ডেঙ্গু ভাইরাসে আক্রান্ত এডিস মশার কামড়ের মাধ্যমে মানুষের মধ্যে এই রোগ সংক্রমিত হয়। বিশ্বের ক্রান্তীয় ও উপক্রান্তীয় অঞ্চলগুলোর জন্য এটি একটি উল্লেখযোগ্য জনস্বাস্থ্য সমস্যা।",
-                "ডেঙ্গুর জন্য কোনো নির্দিষ্ট চিকিৎসা নেই, তবে দ্রুত শনাক্তকরণ এবং সঠিক চিকিৎসা প্রদানের মাধ্যমে এর মৃত্যুহার এক শতাংশের নিচে রাখা সম্ভব।",
-                "মশা নিয়ন্ত্রণ ডেঙ্গু প্রতিরোধের প্রধান হাতিয়ার, যার মধ্যে রয়েছে মশার প্রজনন স্থান ধ্বংস এবং কীটনাশক ব্যবহার করা।",
+              const preventionSteps = [
+                {
+                  text: yhLang(
+                    "Do not allow water to accumulate around your home. Mosquitoes breed in stagnant water.",
+                    "বাড়ির চারপাশে পানি জমতে দেবেন না। জমা পানিতে মশারা বংশবিস্তার করে।"
+                  ),
+                  icon: "fa-house-circle-xmark",
+                },
+                {
+                  text: yhLang(
+                    "Empty water from plant pots, flower vases, and old car tires. Dispose of stagnant water once every three days.",
+                    "গাছের টব, ফুলদানি, পরে থাকা গাড়ির টায়ারের জমে থাকা পানি ফেলে দিন। তিন দিনে একদিন জমা পানি ফেলে দিন।"
+                  ),
+                  icon: "fa-recycle",
+                },
+                {
+                  text: yhLang(
+                    "Wear body-covering clothes such as long-sleeve shirts, long pants, socks, and shoes.",
+                    "শরীর ঢাকা জামা কাপড় যেমন লম্বা-হাতা শার্ট, লম্বা প্যান্ট, মোজা এবং জুতা পরুন।"
+                  ),
+                  icon: "fa-shirt",
+                },
+                {
+                  text: yhLang(
+                    "Dengue-carrying mosquitoes are most active from dawn to dusk. Be extra cautious during this time.",
+                    "ডেংগু  ভাইরাস বহনকারী মশা ভোর থেকে সন্ধ্যা পর্যন্ত সবচেয়ে বেশি সক্রিয় থাকে। এই সময় অতিরিক্ত সতর্ক থাকুন।"
+                  ),
+                  icon: "fa-clock",
+                },
+                {
+                  text: yhLang(
+                    "Use mosquito nets when sleeping at night.",
+                    "রাতে শোবার সময় মশারী ব্যবহার করুন।"
+                  ),
+                  icon: "fa-bed",
+                },
+                {
+                  text: yhLang(
+                    "Use mosquito-repelling chemicals or mosquito coils.",
+                    "মশা নিরোধক কেমিক্যাল/ মশার কয়েল ব্যবহার করুন।"
+                  ),
+                  icon: "fa-spray-can",
+                },
               ];
 
-              const commonSymptoms = [
-                "তীব্র জ্বর (৪০° সেলসিয়াস / ১০৬° ফারেনহাইট)",
-                "তীব্র মাথাব্যথা",
-                "চোখের পেছনে ব্যথার অনুভূতি",
-                "মাংসপেশি ও অস্থি-সন্ধিতে ব্যথা",
-                "বমিভাব",
-                "মাথা ঘোরা",
-                "ত্বকের বিভিন্ন স্থানে র‍্যাশ / ফুসকুড়ি",
-              ];
-
-              const severeSymptoms = [
-                "প্রচণ্ড পেট ব্যথা",
-                "ক্রমাগত বমি হওয়া",
-                "মাড়ি বা নাক থেকে রক্তপাত",
-                "প্রস্রাবে এবং মলের সঙ্গে রক্তপাত",
-                "অনিয়ন্ত্রিত পায়খানা",
-                "ত্বকের নিচে রক্তক্ষরণ",
-                "দ্রুত শ্বাস-প্রশ্বাস",
-                "ক্লান্তি",
-                "অস্থিরতা",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (text) => `
-                      <li>
-                        <span class="symptom-bullet"><i class="fa-solid fa-check"></i></span>
-                        <span>${text}</span>
+              const renderPreventionSteps = (items, baseDelay) =>
+                (items || [])
+                  .map((item, idx) => {
+                    const delay = baseDelay + idx * 70;
+                    return `
+                      <li class="m23l3-step" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m23l3-step__icon bg-gradient-teal" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m23l3-step__text">${item.text}</span>
                       </li>
-                    `
-                  )
+                    `;
+                  })
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">${yhLang("Dengue", "ডেঙ্গু")}</h2>
+                <div class="lesson-slide mod23-lesson3">
+                  <div class="m23l3-shapes" aria-hidden="true">
+                    <span class="m23l3-shape m23l3-shape--orb"></span>
+                    <span class="m23l3-shape m23l3-shape--pill"></span>
+                    <span class="m23l3-shape m23l3-shape--diamond"></span>
+                    <span class="m23l3-shape m23l3-shape--ring"></span>
+                  </div>
+
+                  <header class="m23l3-hero" data-aos="fade-up">
+                    <span class="m23l3-hero__badge bg-gradient-mint icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-notes-medical"></i>
+                    </span>
+                    <div class="m23l3-hero__body">
+                      <h2 class="slide-title gradient-text mb-0 m23l3-line" data-aos="fade-up" data-aos-delay="60">${yhLang(
+                        "Treatment",
+                        "চিকিৎসা"
+                      )}</h2>
                     </div>
-                    <div class="hero-tile__icon bg-gradient-orange"><i class="fa-solid fa-mosquito"></i></div>
                   </header>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
-                    ${generalIntro
-                      .map((paragraph) => `<p class="mb-2">${paragraph}</p>`)
-                      .join("")}
+                  <section class="m23l3-intro" data-aos="fade-up" data-aos-delay="120">
+                    <p class="m23l3-intro__line m23l3-line mx-2" data-aos="fade-up" data-aos-delay="160">${yhLang(
+                      "No specific medicine or vaccine for dengue has been discovered yet. Doctors control pain and fever using paracetamol-type medications. If the disease worsens significantly, hospitalization of the patient is essential.",
+                      "ডেংগুর চিকিৎসার বিশেষ কোন ওষুধ বা প্রতিষেধক এখনো পর্যন্ত আবিষ্কৃত হয়নি। চিকিৎসকরা পেরাসিটামিল জাতীয় ওষুধ দিয়ে ব্যথা এবং জ্বরের মাত্রা নিয়ন্ত্রণ করেন। রোগের মাত্রা অতিরিক্ত ভাবে বৃদ্ধি পেলে রোগী কে হাসপাতালে ভর্তি রাখা একান্ত জরুরী।"
+                    )}</p>
                   </section>
 
-                  <div class="row g-3 mt-2">
-                    <div class="col-12 col-lg-6">
-                      <article class="modern-card glass-card h-100 hover-lift-sm transition-base" data-aos="fade-right" data-aos-delay="140">
-                        <h3 class="mb-3">ডেঙ্গু জ্বরের লক্ষণ:</h3>
-                        <p class="mb-2">বেশির ভাগ ক্ষেত্রে প্রথমবার ডেঙ্গুতে আক্রান্ত রোগীর বিশেষ কোনো উপসর্গ বা লক্ষণ দেখা যায় না। ডেঙ্গুর সাধারণ উপসর্গগুলো হলো—</p>
-                        <ul class="list-unstyled symptom-list mb-3">
-                          ${renderList(commonSymptoms)}
-                        </ul>
-                        <p class="mb-2">এই উপসর্গগুলো রোগ সংক্রমণের ৪–১০ দিনের মধ্যে দেখা দেয়। সাধারণত ২–৭ দিন পর্যন্ত উপসর্গ স্থায়ী হতে পারে।</p>
-                        <p class="mb-0">দ্বিতীয়বার ডেঙ্গুতে আক্রান্ত হলে রোগের ভয়াবহতা বৃদ্ধি পায়। সে কারণে পূর্বে ডেঙ্গুতে আক্রান্ত ব্যক্তিদের অতিরিক্ত সতর্কতা মেনে চলতে বলা হয়।</p>
-                      </article>
+                  <article class="m23l3-panel" data-aos="fade-up" data-aos-delay="180">
+                    <div class="m23l3-panel__head" data-aos="fade-up" data-aos-delay="220">
+                      <span class="m23l3-panel__icon bg-gradient-blue" aria-hidden="true">
+                        <i class="fa-solid fa-shield-halved"></i>
+                      </span>
+                      <h3 class="m23l3-panel__title m23l3-line" data-aos="fade-up" data-aos-delay="260">${yhLang(
+                        "Dengue Prevention Measures",
+                        "ডেংগু প্রতিরোধে করণীয়"
+                      )}</h3>
                     </div>
-                    <div class="col-12 col-lg-6">
-                      <article class="modern-card glass-card h-100 hover-lift-sm transition-base" data-aos="fade-left" data-aos-delay="180">
-                        <h3 class="mb-3">ডেঙ্গুর গুরুতর উপসর্গ:</h3>
-                        <ul class="list-unstyled symptom-list mb-0">
-                          ${renderList(severeSymptoms)}
-                        </ul>
-                      </article>
+                    <ul class="list-unstyled m23l3-list" role="list">
+                      ${renderPreventionSteps(preventionSteps, 300)}
+                    </ul>
+                  </article>
+
+                  <section class="m23l3-callout mt-4" data-aos="fade-up" data-aos-delay="240">
+                    <span class="m23l3-callout__icon bg-gradient-lavender" aria-hidden="true">
+                      <i class="fa-solid fa-circle-info"></i>
+                    </span>
+                    <div class="m23l3-callout__body">
+                      <p class="m23l3-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
+                        "Dengue fever is a common disease, but if neglected, it can become fatal. It is more prevalent in urban areas, so city dwellers need to be more alert and aware. Those who have had dengue previously must be especially cautious, as a second dengue infection can be severe.",
+                        "ডেংগু জ্বর একটি সাধারণ রোগ। কিন্তু অবহেলা করলে এই রোগ মারাত্মক হতে পারে। শহরাঞ্চলে এর প্রকোপ বেশি। তাই নগরবাসীকে আরেকটু সজাগ ও সচেতন হতে হবে। বিশেষ করে যাদের ডেংগু হয়েছে তাদের অতিরিক্ত সতর্ক থাকতে হবে। দ্বিতীয় ডেংগু সংক্রমণ মারাত্মক হতে পারে।"
+                      )}</p>
                     </div>
-                  </div>
+                  </section>
                 </div>`;
             })(),
           },
