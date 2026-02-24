@@ -15624,6 +15624,18 @@ const coursesData = [
                   <div class="row g-2">
                     <div class="col-12 col-lg-5">
                       <div class="m23l1-stack">
+                        
+                        <section class="m23l1-callout" data-aos="fade-up" data-aos-delay="240">
+                          <span class="m23l1-callout__icon bg-gradient-lavender" aria-hidden="true">
+                            <i class="fa-solid fa-flag"></i>
+                          </span>
+                          <div class="m23l1-callout__body">
+                            <p class="m23l1-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
+                              "Bangladesh has faced many emerging and re-emerging diseases in recent years.",
+                              "বাংলাদেশ বিগত বছরগুলোতে সংক্রামক রোগ, অসংক্রামক রোগ সহ অনেক ইমারজিং এবং রি-ইমারজিং রোগের মুখোমুখি হয়েছে।"
+                            )}</p>
+                          </div>
+                        </section>
                         <article class="m23l1-card" data-aos="fade-up" data-aos-delay="120">
                           <div class="m23l1-card__head" data-aos="fade-up" data-aos-delay="160">
                             <span class="m23l1-card__icon bg-gradient-mint" aria-hidden="true">
@@ -15678,17 +15690,6 @@ const coursesData = [
                           )}</p>
                         </article>
 
-                        <section class="m23l1-callout" data-aos="fade-up" data-aos-delay="240">
-                          <span class="m23l1-callout__icon bg-gradient-lavender" aria-hidden="true">
-                            <i class="fa-solid fa-flag"></i>
-                          </span>
-                          <div class="m23l1-callout__body">
-                            <p class="m23l1-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
-                              "Bangladesh has faced many emerging and re-emerging diseases in recent years.",
-                              "বাংলাদেশ বিগত বছরগুলোতে সংক্রামক রোগ, অসংক্রামক রোগ সহ অনেক ইমারজিং এবং রি-ইমারজিং রোগের মুখোমুখি হয়েছে।"
-                            )}</p>
-                          </div>
-                        </section>
                       </div>
                     </div>
 
@@ -15722,40 +15723,120 @@ const coursesData = [
           {
             id: "ch23-lesson-2",
             title: yhLang(
-              "Global Examples of Emerging and Re-emerging Infectious Diseases",
-              "উদীয়মান এবং পুনরাবির্ভূত সংক্রামক রোগের বিশ্বব্যাপী উদাহরণ"
+              "Dengue",
+              "ডেংগু"
             ),
-            icon: "fa-earth-asia",
-            gradientClass: "bg-gradient-blue",
+            icon: "fa-mosquito",
+            gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: null,
             content: (function () {
+              const symptoms = [
+                { text: yhLang("High fever (40°C / 106°F)", "তীব্র জ্বর (৪০০ সে:/ ১০৬০ ফা:)"), icon: "fa-fire" },
+                { text: yhLang("Severe headache", "তীব্র মাথা ব্যথা"), icon: "fa-head-side-virus" },
+                { text: yhLang("Pain behind the eyes", "চোখের পিছনে ব্যথার অনুভূতি"), icon: "fa-eye" },
+                { text: yhLang("Muscle and joint pain", "মাংসপেশি এবং অস্থি-সন্ধিতে ব্যথা"), icon: "fa-person-hiking" },
+                { text: yhLang("Nausea", "বমিভাব"), icon: "fa-stomach" },
+                { text: yhLang("Dizziness", "মাথাঘোরা"), icon: "fa-head-side" },
+                { text: yhLang("Skin rash or hives", "ত্বকের বিভিন্ন স্থানে র‍্যাশ/ ফুসকুড়ি"), icon: "fa-hand" },
+              ];
+
+              const severeSymptoms = [
+                { text: yhLang("Severe abdominal pain", "প্রচন্ড পেট ব্যথা"), icon: "fa-person-cane" },
+                { text: yhLang("Persistent vomiting", "ক্রমাগত বমি হওয়া"), icon: "fa-bowl-food" },
+                { text: yhLang("Bleeding gums or nosebleeds", "মাড়ি বা নাক থেকে রক্তপাত"), icon: "fa-droplet-slash" },
+                { text: yhLang("Blood in urine and stool", "প্রস্রাবে এবং মলের সাথে রক্তপাত"), icon: "fa-triangle-exclamation" },
+                { text: yhLang("Uncontrolled diarrhea", "অনিয়ন্ত্রিত পায়খানা"), icon: "fa-bed" },
+                { text: yhLang("Bleeding under skin", "ত্বকের নিচে রক্তক্ষরণ"), icon: "fa-hand-dots" },
+                { text: yhLang("Rapid breathing", "দ্রুত শ্বাস প্রশ্বাস"), icon: "fa-lung" },
+                { text: yhLang("Fatigue", "ক্লান্তি"), icon: "fa-face-tired" },
+                { text: yhLang("Restlessness", "অস্থিরতা"), icon: "fa-triangle-exclamation" },
+              ];
+
+              const renderSymptoms = (items, baseDelay) =>
+                (items || [])
+                  .map((item, idx) => {
+                    const delay = baseDelay + idx * 65;
+                    return `
+                      <li class="m23l2-symptom" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m23l2-symptom__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m23l2-symptom__text">${item.text}</span>
+                      </li>
+                    `;
+                  })
+                  .join("");
+
               return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">${yhLang(
-                        "Global Examples of Emerging and Re-emerging Infectious Diseases",
-                        "উদীয়মান এবং পুনরাবির্ভূত সংক্রামক রোগের বিশ্বব্যাপী উদাহরণ"
+                <div class="lesson-slide mod23-lesson2">
+                  <div class="m23l2-shapes" aria-hidden="true">
+                    <span class="m23l2-shape m23l2-shape--orb"></span>
+                    <span class="m23l2-shape m23l2-shape--wave"></span>
+                    <span class="m23l2-shape m23l2-shape--blob"></span>
+                    <span class="m23l2-shape m23l2-shape--ring"></span>
+                  </div>
+
+                  <header class="m23l2-hero" data-aos="fade-up">
+                    <span class="m23l2-hero__badge bg-gradient-rose icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-mosquito"></i>
+                    </span>
+                    <div class="m23l2-hero__body">
+                      <h2 class="slide-title gradient-text mb-0 m23l2-line" data-aos="fade-up" data-aos-delay="60">${yhLang(
+                        "Dengue",
+                        "ডেংগু"
                       )}</h2>
                     </div>
-                    <div class="hero-tile__icon bg-gradient-blue"><i class="fa-solid fa-globe"></i></div>
                   </header>
 
-                  <section class="modern-card glass-card full-bleed-gallery mt-3" data-aos="fade-up" data-aos-delay="120">
-                    <div class="row g-3">
-                      <div class="col-12">
-                        <figure class="image-card w-100 mb-0">
-                          <img src="img/modu23/global.png" alt="Global map of infectious diseases" class="img-fluid w-100 img-zoom rounded-4 shadow-sm" />
-                        </figure>
-                      </div>
-                      <div class="col-12">
-                        <figure class="image-card w-100 mb-0">
-                          <img src="img/modu23/global2.png" alt="Re-emerging disease hotspots" class="img-fluid img-zoom w-100 rounded-4 shadow-sm" />
-                        </figure>
-                      </div>
-                    </div>
+                  <section class="m23l2-intro" data-aos="fade-up" data-aos-delay="120">
+                    <p class="m23l2-intro__line m23l2-line" data-aos="fade-up" data-aos-delay="160">${yhLang(
+                      "Dengue is transmitted to humans through bites of Aedes mosquitoes infected with dengue virus. It is a significant public health problem for tropical and subtropical regions of the world.",
+                      "ডেংগু ভাইরাসে আক্রান্ত এডিস মশার কামড়ের মাধ্যমে মানুষের মধ্যে এই রোগ সংক্রমিত হয়। বিশ্বের ক্রান্তীয় এবং উপক্রান্তীয় অঞ্চলগুলোর জন্য এটি একটি উল্লেখযোগ্য জনস্বাস্থ্য সমস্যা।"
+                    )}</p>
+                    <p class="m23l2-intro__line m23l2-line" data-aos="fade-up" data-aos-delay="220">${yhLang(
+                      "There is no specific treatment for dengue, but early detection and proper care can keep mortality below one percent. Mosquito control is the primary strategy for dengue prevention, including destroying breeding sites and using pesticides.",
+                      "ডেংগুর জন্য কোন নির্দিষ্ট চিকিৎসা নেই, তবে দ্রুত সনাক্তকরণ এবং সঠিক চিকিৎসা প্রদানের মাধ্যমে এর মৃত্যুহার এক শতাংশের নিচে রাখা সম্ভব। মশা নিয়ন্ত্রণ ডেংগু প্রতিরোধের প্রধান হাতিয়ার যার মধ্যে রয়েছে মশার প্রজনন স্থান ধ্বংস এবং কীটনাশক ব্যবহার করা।"
+                    )}</p>
                   </section>
+
+                  <div class="row g-2 mt_1">
+                    <div class="col-12 col-lg-6">
+                      <article class="m23l2-panel" data-aos="fade-up" data-aos-delay="140">
+                        <div class="m23l2-panel__head" data-aos="fade-up" data-aos-delay="180">
+                          <span class="m23l2-panel__icon bg-gradient-yellow" aria-hidden="true">
+                            <i class="fa-solid fa-temperature-high"></i>
+                          </span>
+                          <h3 class="m23l2-panel__title m23l2-line" data-aos="fade-up" data-aos-delay="220">${yhLang(
+                            "Dengue Fever Symptoms",
+                            "ডেংগু জ্বরের লক্ষণ"
+                          )}</h3>
+                        </div>
+                        <p class="m23l2-panel__desc m23l2-line" data-aos="fade-up" data-aos-delay="260">${yhLang(
+                          "Most first-time dengue patients show no specific symptoms. Common symptoms appear within 4-10 days of infection and last 2-7 days.",
+                          "বেশীর ভাগ ক্ষেত্রে প্রথমবার ডেংগু-তে আক্রান্ত রোগীর বিশেষ কোন উপসর্গ বা লক্ষণ দেখা যায় না। এই উপসর্গ গুলি রোগ সংক্রমণের ৪-১০ দিনের মধ্যে দেখা দেয় এবং সাধারণত ২-৭ দিন পর্যন্ত উপসর্গ স্থায়ী হতে পারে।"
+                        )}</p>
+                        <ul class="list-unstyled m23l2-list" role="list">
+                          ${renderSymptoms(symptoms, 300)}
+                        </ul>
+                      </article>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <article class="m23l2-panel m23l2-panel--danger" data-aos="fade-up" data-aos-delay="180">
+                        <div class="m23l2-panel__head" data-aos="fade-up" data-aos-delay="220">
+                          <span class="m23l2-panel__icon bg-gradient-rose" aria-hidden="true">
+                            <i class="fa-solid fa-exclamation"></i>
+                          </span>
+                          <h3 class="m23l2-panel__title m23l2-line" data-aos="fade-up" data-aos-delay="260">${yhLang(
+                            "Severe Dengue Symptoms",
+                            "ডেংগুর গুরুতর উপসর্গ"
+                          )}</h3>
+                        </div>
+                        <ul class="list-unstyled m23l2-list m23l2-list--danger" role="list">
+                          ${renderSymptoms(severeSymptoms, 340)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
                 </div>`;
             })(),
           },
