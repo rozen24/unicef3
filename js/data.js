@@ -16273,61 +16273,93 @@ const coursesData = [
           },
           {
             id: "ch23-lesson-6",
-            title: yhLang(
-              "Preventing Nipah Virus Infection",
-              "নিপাহ ভাইরাস সংক্রমণ প্রতিরোধে করণীয়"
-            ),
-            icon: "fa-shield-virus",
-            gradientClass: "bg-gradient-emerald",
+            title: yhLang("Prevention Measures", "প্রতিরোধে করণীয়"),
+            icon: "fa-shield-check",
+            gradientClass: "bg-gradient-teal",
             audioFile: "",
             quiz: null,
             content: (function () {
-              const measures = [
-                "খেজুরের কাঁচা রস খাবেন না",
-                "কোনো ধরনের আধা খাওয়া ফল খাবেন না",
-                "ফলমূল পরিষ্কার পানি দিয়ে ভালোভাবে ধুয়ে খাবেন",
-                "নিপাহ রোগের লক্ষণ দেখা দিলে রোগীকে অতিদ্রুত কাছাকাছি সরকারি হাসপাতালে নিতে হবে",
-                "আক্রান্ত রোগীর সংস্পর্শে আসার পর সাবান ও পানি দিয়ে দুই হাত ভালোভাবে ধুয়ে ফেলতে হবে",
+              const section1 = [
+                { text: yhLang("Wash hands frequently with soap and water for at least 20 seconds", "ঘন ঘন সাবান ও পানি দিয়ে হাত ধুবেন (অন্তত ২০ সেকেন্ড যাবৎ)"), icon: "fa-hands-bubbles" },
+                { text: yhLang("Don't touch eyes, nose and mouth with unwashed hands", "অপরিষ্কার হাতে চোখ, নাক ও মুখ স্পর্শ করবেন না"), icon: "fa-hand" },
+                { text: yhLang("Wear a mask", "মাস্ক পরিধান করতে হবে"), icon: "fa-mask" },
+                { text: yhLang("Avoid contact with already infected people", "ইতোমধ্যে আক্রান্ত এমন ব্যক্তিদের সংস্পর্শ এড়িয়ে চলা"), icon: "fa-person-circle-xmark" },
+                { text: yhLang("Avoid crowded places", "জনসমাগম হয় এমন জায়গা এড়িয়ে চলা"), icon: "fa-people-group" },
+                { text: yhLang("Follow coughing etiquette (cover nose/mouth with arm/tissue/cloth when sneezing/coughing)", "কাশি শিষ্টাচার মেনে চলুন (হাঁচি-কাশির সময় বাহু/টিস্যু/কাপড় দিয়ে নাক-মুখ ঢাকা)"), icon: "fa-lungs" },
+                { text: yhLang("Avoid contact with sick animals/birds", "অসুস্থ পশু/পাখির সংস্পর্শ পরিহার করা"), icon: "fa-paw" },
+                { text: yhLang("Cook fish and meat thoroughly", "মাছ-মাংস ভালোভাবে রান্না করে খাওয়া"), icon: "fa-utensils" },
+                { text: yhLang("Wash vegetables and fruits thoroughly", "শাক-সব্জি ও ফল-মূল ভালোভাবে ধুয়ে খেতে হবে"), icon: "fa-apple-whole" },
               ];
 
-              const renderMeasures = () =>
-                measures
+              const section2 = [
+                { text: yhLang("Stay home when sick; use mask if going out is necessary", "অসুস্থ হলে ঘরে থাকতে হবে, বাইরে যাওয়া অত্যাবশ্যক হলে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে হবে"), icon: "fa-house-medical" },
+                { text: yhLang("Avoid unnecessary travels", "জরুরী প্রয়োজন ব্যতীত অযাথা ভ্রমণ করা থেকে বিরত থাকতে হবে"), icon: "fa-ban" },
+                { text: yhLang("Take precautions during essential travels", "অত্যাবশ্যকীয় ভ্রমণে সাবধানতা অবলম্বন করতে হবে"), icon: "fa-car-side" },
+              ];
+
+              const section3 = [
+                { text: yhLang("Tell the sick patient to stay home", "অসুস্থ রোগীকে ঘরে থাকতে বলুন"), icon: "fa-person-dots-from-line" },
+                { text: yhLang("Advise severely ill patients to visit the nearest hospital", "মারাত্মক অসুস্থ রোগীকে নিকটস্থ সদর হাসপাতালে যেতে বলুন"), icon: "fa-hospital" },
+                { text: yhLang("Tell patient to use mask to cover nose and mouth", "রোগীকে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে বলুন"), icon: "fa-mask" },
+                { text: yhLang("Patient must drink plenty of water and eat healthy foods with antioxidants, vitamin C, vitamin D and protein", "রোগীকে প্রচুর পানি পান করতে হবে; এন্টি-অক্সিডেন্ট, ভিটামিন-সি, ভিটামিন-ডি ও আমিষ জাতীয় খাবার বেশী বেশী খেতে হবে"), icon: "fa-water" },
+              ];
+
+              const renderPoints = (items, baseDelay) =>
+                items
                   .map(
-                    (text, idx) => `
-                      <li class="prevention-card" data-aos="fade-up" data-aos-delay="${120 + idx * 40}">
-                        <div class="prevention-card__badge">
-                          <span>${String(idx + 1).padStart(2, "0")}</span>
-                        </div>
-                        <div class="prevention-card__content">
-                          <p class="mb-0">${text}</p>
-                        </div>
-                        <div class="prevention-card__icon"><i class="fa-solid fa-check"></i></div>
+                    (item, idx) => `
+                      <li class="m23l6-point" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 60}">
+                        <span class="m23l6-point__icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m23l6-point__text">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                <div class="lesson-slide mod23-lesson6">
+                  <div class="m23l6-shapes" aria-hidden="true">
+                    <span class="m23l6-shape m23l6-shape--orb"></span>
+                    <span class="m23l6-shape m23l6-shape--wave"></span>
+                    <span class="m23l6-shape m23l6-shape--blob"></span>
+                    <span class="m23l6-shape m23l6-shape--ring"></span>
+                  </div>
+
+                  <header class="m23l6-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="20">
                     <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">${yhLang(
-                        "Preventing Nipah Virus Infection",
-                        "নিপাহ ভাইরাস সংক্রমণ প্রতিরোধে করণীয়"
-                      )}</h2>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="40">${yhLang("Prevention Measures", "প্রতিরোধে করণীয়")}</h2>
                     </div>
-                    <div class="hero-tile__icon bg-gradient-emerald"><i class="fa-solid fa-shield-virus"></i></div>
+                    <div class="m23l6-icon"><i class="fa-solid fa-shield"></i></div>
                   </header>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-                      <p class="mb-0 text-muted">${yhLang("Action steps to stay safe from Nipah", "নিপাহ থেকে সুরক্ষায় করণীয় ধাপ")}</p>
-                      <span class="badge-pill bg-gradient-emerald text-white"><i class="fa-solid fa-clipboard-list me-1"></i>Checklist</span>
-                    </div>
-                    <ul class="list-unstyled nipah-prevention-list mb-0">
-                      ${renderMeasures()}
-                    </ul>
-                  </section>
+                  <div class="section_wrap lession_6">
+                    <section class="m23l6-panel glass-card" data-aos="fade-up" data-aos-delay="80">
+                      <h3 class="m23l6-section-title" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-person-hiking"></i>${yhLang("Personal Awareness", "ব্যক্তিগত সচেতনতা")}
+                      </h3>
+                      <ul class="list-unstyled m23l6-list mb-0">
+                        ${renderPoints(section1, 140)}
+                      </ul>
+                    </section>
+
+                    <section class="m23l6-panel glass-card" data-aos="fade-up" data-aos-delay="680">
+                      <h3 class="m23l6-section-title" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fa-solid fa-plane"></i>${yhLang("When Sick or Traveling", "অসুস্থ হলে বা ভ্রমণের সময়")}
+                      </h3>
+                      <ul class="list-unstyled m23l6-list mb-0">
+                        ${renderPoints(section2, 740)}
+                      </ul>
+                    </section>
+
+                    <section class="m23l6-panel glass-card" data-aos="fade-up" data-aos-delay="920">
+                      <h3 class="m23l6-section-title" data-aos="fade-up" data-aos-delay="940">
+                        <i class="fa-solid fa-heart-pulse"></i>${yhLang("For Suspected Patients", "সন্দেহভাজন রোগীর ক্ষেত্রে করণীয়")}
+                      </h3>
+                      <ul class="list-unstyled m23l6-list mb-0">
+                        ${renderPoints(section3, 980)}
+                      </ul>
+                    </section>
+                  </div>  
                 </div>`;
             })(),
           },
