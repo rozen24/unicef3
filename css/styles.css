@@ -8041,10 +8041,17 @@ input::placeholder {
 .modu23_less_7_1 {
   grid-template-columns: 2fr 2fr 3fr;
 }
+.modu23_less_8_1 {
+  grid-template-columns: 2fr 4fr 2fr;
+}
 
 .modu_lession_7_3 {
   display: grid !important;
   grid-template-columns: 1fr 1fr;
+}
+.modu24_less_8_ui {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
 }
 .mod23-lesson4 .m23l4-panel--danger .m23l4-symptom {
   background: rgba(255,240,245,0.65);
@@ -8880,6 +8887,261 @@ input::placeholder {
   background: radial-gradient(circle at 70% 70%, rgba(79, 172, 254, 0.26), rgba(79, 172, 254, 0));
   z-index: 0;
   opacity: 0.9;
+}
+
+/* ==================== Module 23 • Lesson 8 Redesign (Scoped) ==================== */
+.lesson-slide.mod23-lesson8 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 5px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.80), rgba(255,255,255,0.62)),
+    linear-gradient(135deg, #d4f1e4 0%, #c1ebe0 45%, #a8e0d8 100%);
+}
+
+.lesson-slide.mod23-lesson8::before {
+  background: radial-gradient(circle at 18% 22%, rgba(29, 131, 91, 0.16), rgba(29, 131, 91, 0));
+  z-index: 0;
+  opacity: 0.95;
+}
+.lesson-slide.mod23-lesson8::after {
+  background: radial-gradient(circle at 80% 76%, rgba(56, 142, 60, 0.14), rgba(56, 142, 60, 0));
+  z-index: 0;
+  opacity: 0.95;
+}
+
+.lesson-slide.mod23-lesson8 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mod23-lesson8 .m23l8-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod23-lesson8 .m23l8-shape {
+  position: absolute;
+  opacity: 0.70;
+  transform: translate3d(0,0,0);
+  filter: saturate(1.20) contrast(1.08) drop-shadow(0 18px 44px rgba(15, 53, 110, 0.16));
+  animation: orbGlide 18s ease-in-out infinite;
+}
+
+.mod23-lesson8 .m23l8-shape--orb {
+  width: 360px;
+  height: 360px;
+  top: -160px;
+  left: -140px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.82), rgba(255,255,255,0) 58%),
+    linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+  opacity: 0.48;
+  animation-duration: 22s;
+}
+
+.mod23-lesson8 .m23l8-shape--wave {
+  width: 480px;
+  height: 240px;
+  bottom: -120px;
+  right: -180px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #81c784 0%, #66bb6a 100%);
+  transform: rotate(-12deg);
+  opacity: 0.36;
+  animation-duration: 20s;
+}
+
+.mod23-lesson8 .m23l8-shape--hexagon {
+  width: 260px;
+  height: 260px;
+  top: 35%;
+  right: -80px;
+  background: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  opacity: 0.28;
+  animation-duration: 24s;
+}
+
+.mod23-lesson8 .m23l8-shape--ring {
+  width: 300px;
+  height: 300px;
+  left: 12%;
+  bottom: -100px;
+  border-radius: 999px;
+  border: 16px solid rgba(76, 175, 80, 0.18);
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.18), rgba(255,255,255,0) 62%);
+  opacity: 0.72;
+  animation-duration: 19s;
+}
+
+.mod23-lesson8 .m23l8-hero {
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.70);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  box-shadow: 0 12px 24px rgba(15, 53, 110, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.mod23-lesson8 .m23l8-hero__body {
+  flex: 1;
+}
+
+.mod23-lesson8 .m23l8-hero__title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1b5e20 0%, #388e3c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mod23-lesson8 .m23l8-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 16px rgba(76, 175, 80, 0.2);
+}
+
+.mod23-lesson8 .m23l8-icon i {
+  font-size: 26px;
+  color: #fff;
+}
+
+.mod23-lesson8 .m23l8-intro {
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.70);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+
+.mod23-lesson8 .m23l8-intro__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(15, 23, 42, 0.80);
+}
+
+.mod23-lesson8 .m23l8-panel {
+  padding: 0px 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  box-shadow: 0 12px 24px rgba(15, 53, 110, 0.08);
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mod23-lesson8 .m23l8-section-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #1b5e20;
+  margin: 0px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mod23-lesson8 .m23l8-section-title i {
+  color: #66bb6a;
+  font-size: 1.1rem;
+}
+
+.mod23-lesson8 .m23l8-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mod23-lesson8 .m23l8-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  color: rgba(15, 23, 42, 0.80);
+  line-height: 1.5;
+}
+
+.mod23-lesson8 .m23l8-point:last-child {
+  border-bottom: none;
+}
+
+.mod23-lesson8 .m23l8-point__icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.15);
+}
+
+.mod23-lesson8 .m23l8-point__icon i {
+  font-size: 0.88rem;
+  color: #fff;
+}
+
+.mod23-lesson8 .m23l8-point__text {
+  font-weight: 500;
+  color: rgba(15, 23, 42, 0.80);
+  font-size: 0.93rem;
+}
+
+.dark-mode .lesson-slide.mod23-lesson8 {
+  background:
+    linear-gradient(145deg, rgba(17, 24, 39, 0.82), rgba(15, 23, 42, 0.78)),
+    linear-gradient(135deg, #d4f1e4 0%, #c1ebe0 45%, #a8e0d8 100%);
+}
+
+.dark-mode .mod23-lesson8 .m23l8-panel,
+.dark-mode .mod23-lesson8 .m23l8-hero,
+.dark-mode .mod23-lesson8 .m23l8-intro {
+  border-color: rgba(255,255,255,0.10);
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.dark-mode .mod23-lesson8 .m23l8-section-title {
+  color: rgba(255,255,255,0.90);
+}
+
+.dark-mode .mod23-lesson8 .m23l8-point,
+.dark-mode .mod23-lesson8 .m23l8-intro__text {
+  color: rgba(255,255,255,0.80);
+  border-color: rgba(255,255,255,0.10);
+}
+
+.dark-mode .mod23-lesson8 .m23l8-shape { opacity: 0.60; }
+.dark-mode .mod23-lesson8 .m23l8-shape--ring { border-color: rgba(255,255,255,0.20); }
+
+@media (prefers-reduced-motion: reduce) {
+  .mod23-lesson8 .m23l8-shape {
+    animation: none !important;
+  }
 }
 
 /* Ensure content stays above decorative shapes/pseudo orbs */

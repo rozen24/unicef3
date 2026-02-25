@@ -15836,6 +15836,17 @@ const coursesData = [
                         </ul>
                       </article>
                     </div>
+                    <div class="col-12 col-lg-12">
+                        <article class="m23l2-panel m23l2-panel--danger" data-aos="fade-up" data-aos-delay="180">
+                          <div class="m23l2-panel__head" data-aos="fade-up" data-aos-delay="220">
+                            
+                            <span class="m23l2-panel__title m23l2-line" data-aos="fade-up" data-aos-delay="260">${yhLang(
+                              "These symptoms appear within 4-10 days of infection. Symptoms can usually last for 2-7 days. The risk of the disease increases if you get infected with dengue a second time. Therefore, people who have previously been infected with dengue are advised to take extra precautions.",
+                              "এই উপসর্গ গুলি রোগ সংক্রমণের ৪-১০ দিনের মধ্যে দেখা দেয়। সাধারণত ২-৭ দিন পর্যন্ত উপসর্গ স্থায়ী হতে পারে। দ্বিতীয় বার ডেংগু তে আক্রান্ত হলে রোগের ভয়াভয়তা বৃদ্ধি পায়। সেই কারনে পূর্বে ডেংগু তে আক্রান্ত ব্যক্তিদের অতিরিক্ত সতর্কতা মেনে চলতে বলা হয়।"
+                            )}</span>
+                          </div>
+                        </article>
+                      </div>
                   </div>
                 </div>`;
             })(),
@@ -16472,88 +16483,165 @@ const coursesData = [
           },
           {
             id: "ch23-lesson-8",
-            title: yhLang("Preventive Actions", "প্রতিরোধে করণীয়"),
-            icon: "fa-hands-bubbles",
-            gradientClass: "bg-gradient-teal",
+            title: yhLang("Avian Influenza", "এভিয়ান ইনফ্লুয়েঞ্জা"),
+            icon: "fa-dove",
+            gradientClass: "bg-gradient-sky",
             audioFile: "",
             quiz: null,
             content: (function () {
-              const personalAwarenessPrimary = [
-                "ঘন ঘন সাবান ও পানি দিয়ে হাত ধুবেন (অন্তত ২০ সেকেন্ড ধরে)",
-                "অপরিষ্কার হাতে চোখ, নাক ও মুখ স্পর্শ করবেন না",
-                "মাস্ক পরিধান করতে হবে",
-                "ইতোমধ্যে আক্রান্ত এমন ব্যক্তিদের সংস্পর্শ এড়িয়ে চলা",
-                "জনসমাগম হয় এমন জায়গা এড়িয়ে চলা",
-                "কাশি শিষ্টাচার মেনে চলুন (হাঁচি-কাশির সময় বাহু/টিস্যু/কাপড় দিয়ে নাক-মুখ ঢাকুন)",
-                "অসুস্থ পশু/পাখির সংস্পর্শ পরিহার করা",
-                "মাছ-মাংস ভালোভাবে রান্না করে খাওয়া",
-                "শাক-সবজি ও ফলমূল ভালোভাবে ধুয়ে খেতে হবে",
+              const introText = yhLang(
+                "Avian Influenza, or Bird Flu, is a severe contagious viral disease of poultry. Chickens, turkeys, quails, ducks, geese and many other types of birds are affected by this disease. It is believed that wild waterfowl serve as carriers of this virus; however, they are not usually affected by the disease. It is a zoonotic disease that can also affect humans.",
+                "এভিয়ান ইনফ্লুয়েঞ্জা বা বার্ড ফ্লু ভাইরাসজনিত মুরগির একটি মারাত্বক সংক্রামক ও ছোঁয়াচে রোগ। মুরগি, টার্কি, কোয়েল, হাঁস, রাজহাঁস এবং আরও নানা জাতীয় পাখি এ রোগে আক্রান্ত হয়ে থাকে। ধারণা করা হয় বন্য জলচর পাখিরা এ ভাইরাসের বাহক হিসেবে কাজ করে, তবে সাধারণত এরা এ রোগে আক্রান্ত হয়না। এটি একটি জুনোটিক ডিজিজ, যা মানুষকেও আক্রান্ত করতে পারে। "
+              );
+              const introText2 = yhLang(
+                "The virus currently detected in Bangladesh is H5N1 in nature. The H5N1 virus of avian influenza is highly active and dangerous. It can also infect humans.",
+                "বাংলাদেশে বর্তমানে যে ভাইরাসটি সচারাচর সনাক্ত করা হচ্ছে সেটি  H5N1 প্রকৃতির। এভিয়ান ইনফ্লুয়েঞ্জার এই ভাইরাসটি অত্যন্ত সক্রিয় ও ভয়ঙ্কর। এটি মানুষকেও সংক্রমিত করে। "
+              );
+              const riskFactors = [
+                {
+                  text: yhLang(
+                    "Working in poultry farms",
+                    "পোল্ট্রি খামারে কর্মরত থাকলে"
+                  ),
+                  icon: "fa-industry",
+                },
+                {
+                  text: yhLang(
+                    "Traveling to affected areas",
+                    "আক্রান্ত এলাকায় গমন করলে"
+                  ),
+                  icon: "fa-map-location-dot",
+                },
+                {
+                  text: yhLang(
+                    "Contact with infected birds",
+                    "সংক্রামিত পাখির সংস্পর্শে আসলে"
+                  ),
+                  icon: "fa-crow",
+                },
+                {
+                  text: yhLang(
+                    "Consuming undercooked chicken or eggs",
+                    "কম রান্না করা মুরগি বা ডিম খেলে"
+                  ),
+                  icon: "fa-drumstick-bite",
+                },
               ];
-
-              const personalAwarenessSecondary = [
-                "অসুস্থ হলে ঘরে থাকতে হবে, বাইরে যাওয়া অত্যাবশ্যক না হলে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে হবে",
-                "জরুরি প্রয়োজন ব্যতীত অহেতুক ভ্রমণ করা থেকে বিরত থাকতে হবে",
-                "অত্যাবশ্যকীয় ভ্রমণে সাবধানতা অবলম্বন করতে হবে",
+              const symptomsIntro = yhLang(
+                "A person is suspected of having H5N1 infection if they experience the following symptoms:",
+                "একজন ব্যক্তির H5N1 সংক্রমণ আছে বলে সন্দেহ করা হয় যদি তিনি নিম্নলিখিত উপসর্গগুলির সম্মুখীন হন:"
+              );
+              const symptoms = [
+                {
+                  text: yhLang("Cough", "কাশি"),
+                  icon: "fa-lungs",
+                },
+                {
+                  text: yhLang("Diarrhea", "ডায়রিয়া"),
+                  icon: "fa-toilet",
+                },
+                {
+                  text: yhLang("Difficulty breathing", "শ্বাসকষ্ট"),
+                  icon: "fa-wind",
+                },
+                {
+                  text: yhLang("Fever", "জ্বর"),
+                  icon: "fa-thermometer",
+                },
+                {
+                  text: yhLang("Head/Muscle pain", "মাথা/ পেশী ব্যাথা"),
+                  icon: "fa-head-side-virus",
+                },
+                {
+                  text: yhLang("Malaise", "অসুস্থতাবোধ"),
+                  icon: "fa-face-tired",
+                },
+                {
+                  text: yhLang("Cold", "সর্দি"),
+                  icon: "fa-icicles",
+                },
               ];
-
-              const suspectedCaseActions = [
-                "অসুস্থ রোগীকে ঘরে থাকতে বলুন",
-                "মারাত্মক অসুস্থ রোগীকে নিকটস্থ সদর হাসপাতালে যেতে বলুন",
-                "রোগীকে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে বলুন",
-                "রোগীকে প্রচুর পানি পান করতে হবে; এন্টি-অক্সিডেন্ট, ভিটামিন-সি, ভিটামিন-ডি ও আমিষ জাতীয় খাবার বেশি বেশি খেতে হবে",
+              const prevention = [
+                {
+                  text: yhLang(
+                    "Avoid eating wild or domestic birds.",
+                    "বন্য পাখি বা গৃহপালিত পাখি খাওয়া এড়িয়ে চলুন।"
+                  ),
+                  icon: "fa-ban",
+                },
+                {
+                  text: yhLang(
+                    "Take influenza antiviral drugs or vaccine after consulting with your doctor for preventive measures.",
+                    "প্রতিরোধমূলক ব্যবস্থার জন্য আপনার ডাক্তারের সাথে পরামর্শ করার পরে ইনফ্লুয়েঞ্জা অ্যান্টিভাইরাল ওষুধ বা ভ্যাকসিন নিতে হবে।"
+                  ),
+                  icon: "fa-user-doctor",
+                },
+                {
+                  text: yhLang(
+                    "Cook poultry or dairy products well before eating.",
+                    "পোল্ট্রি বা দুগ্ধজাত দ্রব্য ভালভাবে রান্না করার পর খেতে হবে।"
+                  ),
+                  icon: "fa-fire-burner",
+                },
               ];
-
-              const renderList = (items, delayBase = 120) =>
+              const renderPoints = (items, baseDelay) =>
                 items
                   .map(
-                    (text, idx) => `
-                      <li class="prevention-step" data-aos="fade-up" data-aos-delay="${delayBase + idx * 30}">
-                        <span class="prevention-step__icon"><i class="fa-solid fa-check"></i></span>
-                        <span>${text}</span>
-                      </li>
-                    `
+                    (item, idx) => `
+                    <li class="m23l8-point" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 60}">
+                      <span class="m23l8-point__icon"><i class="fa-solid ${item.icon}"></i></span>
+                      <span class="m23l8-point__text">${item.text}</span>
+                    </li>
+                  `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">${yhLang("Preventive Actions", "প্রতিরোধে করণীয়")}</h2>
+                <div class="lesson-slide mod23-lesson8">
+                  <div class="m23l8-shapes">
+                    <div class="m23l8-shape m23l8-shape--orb"></div>
+                    <div class="m23l8-shape m23l8-shape--wave"></div>
+                    <div class="m23l8-shape m23l8-shape--hexagon"></div>
+                    <div class="m23l8-shape m23l8-shape--ring"></div>
+                  </div>
+
+                  <header class="m23l8-hero" data-aos="fade-up">
+                    <div class="m23l8-icon"><i class="fa-solid fa-dove"></i></div>
+                    <div class="m23l8-hero__body">
+                      <h2 class="m23l8-hero__title">${yhLang("Avian Influenza", "এভিয়ান ইনফ্লুয়েঞ্জা")}</h2>
                     </div>
-                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-hands-bubbles"></i></div>
                   </header>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                      <span class="badge-pill bg-gradient-teal text-white">ব্যক্তিগত সচেতনতা</span>
-                      <div class="flex-grow-1"><hr class="m-0 opacity-25" /></div>
-                    </div>
-                    <ul class="list-unstyled prevention-steps mb-0">
-                      ${renderList(personalAwarenessPrimary)}
-                    </ul>
-                  </section>
+                  <div class="m23l8-intro" data-aos="fade-up" data-aos-delay="80">
+                    <p class="m23l8-intro__text mb-3">${introText}</p>
+                    <p class="m23l8-intro__text" data-aos="fade-up" data-aos-delay="60">${introText2}</p>
+                  </div>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="140">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                      <span class="badge-pill bg-gradient-teal text-white">ব্যক্তিগত সচেতনতা</span>
-                      <div class="flex-grow-1"><hr class="m-0 opacity-25" /></div>
-                    </div>
-                    <ul class="list-unstyled prevention-steps mb-0">
-                      ${renderList(personalAwarenessSecondary, 140)}
-                    </ul>
-                  </section>
+                  <div class="section_wrap modu23_less_8_1">
+                    <section class="m23l8-panel" data-aos="fade-up" data-aos-delay="140">
+                      <h3 class="m23l8-section-title"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("Risk Factors", "ঝুঁকির কারণ")}</h3>
+                      <ul class="m23l8-list list-unstyled">
+                        ${renderPoints(riskFactors, 200)}
+                      </ul>
+                    </section>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="180">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                      <span class="badge-pill bg-gradient-orange text-white">সন্দেহভাজন রোগীর ক্ষেত্রে করণীয়</span>
-                      <div class="flex-grow-1"><hr class="m-0 opacity-25" /></div>
-                    </div>
-                    <ul class="list-unstyled prevention-steps mb-0">
-                      ${renderList(suspectedCaseActions, 160)}
-                    </ul>
-                  </section>
-                </div>`;
+                    <section class="m23l8-panel" data-aos="fade-up" data-aos-delay="380">
+                      <h3 class="m23l8-section-title"><i class="fa-solid fa-stethoscope"></i> ${yhLang("Symptoms", "লক্ষণ")}</h3>
+                      <p class="m23l8-intro__text" data-aos="fade-up" data-aos-delay="40">${symptomsIntro}</p>
+                      <ul class="m23l8-list list-unstyled modu24_less_8_ui">
+                        ${renderPoints(symptoms, 440)}
+                      </ul>
+                    </section>
+
+                    <section class="m23l8-panel" data-aos="fade-up" data-aos-delay="620">
+                      <h3 class="m23l8-section-title"><i class="fa-solid fa-shield-heart"></i> ${yhLang("Prevention", "প্রতিরোধ")}</h3>
+                      <ul class="m23l8-list list-unstyled">
+                        ${renderPoints(prevention, 680)}
+                      </ul>
+                    </section>
+                  </div>
+                </div>
+              `;
             })(),
           },
           {
