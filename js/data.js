@@ -16273,7 +16273,7 @@ const coursesData = [
           },
           {
             id: "ch23-lesson-6",
-            title: yhLang("Prevention Measures", "প্রতিরোধে করণীয়"),
+            title: yhLang("What to do to prevent COVID-19", "কোভিড-১৯ প্রতিরোধে করণীয়"),
             icon: "fa-shield-check",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
@@ -16327,7 +16327,7 @@ const coursesData = [
 
                   <header class="m23l6-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="20">
                     <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="40">${yhLang("Prevention Measures", "প্রতিরোধে করণীয়")}</h2>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="40">${yhLang("What to do to prevent COVID-19", "কোভিড-১৯ প্রতিরোধে করণীয়")}</h2>
                     </div>
                     <div class="m23l6-icon"><i class="fa-solid fa-shield"></i></div>
                   </header>
@@ -16365,70 +16365,106 @@ const coursesData = [
           },
           {
             id: "ch23-lesson-7",
-            title: yhLang("COVID-19", "কোভিড-১৯"),
+            title: yhLang("Influenza", "ইনফ্লুয়েঞ্জা"),
             icon: "fa-virus-covid",
-            gradientClass: "bg-gradient-indigo",
+            gradientClass: "bg-gradient-orange",
             audioFile: "",
             quiz: null,
             content: (function () {
+              const introText = yhLang(
+                "Light fever or cold during seasonal changes or any other time might seem like a common illness, but it can sometimes be a symptom of influenza. Influenza is primarily a viral infection spread through sneezing and coughing. It can occur at any time of year, but becomes more prevalent during winter.",
+                "ঋতু পরিবর্তন কিংবা অন্য যেকোনো সময়ে হালকা জ্বর বা সর্দি-কাশিকে মানুষ মৌসুমি অসুখ বলে ধরে নিলেও অনেক সময় এটা ইনফ্লুয়েঞ্জার লক্ষণ হতে পারে।  ইনফ্লুয়েঞ্জা মূলত একটি ভাইরাল সংক্রমণ, যা হাঁচি-কাশির মাধ্যমে ছড়ায়। বছরের যেকোনো সময়ই ইনফ্লুয়েঞ্জা হতে পারে। তবে শীতকালে এর প্রকোপ বাড়ে।"
+              );
+
               const spreadPoints = [
-                "এই ভাইরাস প্রাণী থেকে মানুষের দেহে ঢুকে এখন মানুষ থেকে মানুষে সংক্রমণ হচ্ছে।",
-                "করোনাভাইরাস মানুষের ফুসফুসে সংক্রমণ ঘটায় এবং শ্বাসতন্ত্রের মাধ্যমে (হাঁচি/কাশি/কফ/থুতু) অথবা আক্রান্ত ব্যক্তির সংস্পর্শে আসলে একজন থেকে আরেকজনের মধ্যে ছড়ায়।",
+                { text: yhLang("Sneezing, coughing, or speaking from an infected person", "সংক্রমিত ব্যক্তির হাঁচি-কাশি বা কথা বলার মাধ্যমে"), icon: "fa-person-cane" },
+                { text: yhLang("Using items used by an infected person", "সংক্রমিত ব্যক্তির ব্যবহৃত জিনিস ব্যবহারের মাধ্যমে"), icon: "fa-hand-holding" },
+                { text: yhLang("Touching contaminated surfaces", "দূষিত পৃষ্ঠ স্পর্শের মাধ্যমে"), icon: "fa-hand" },
               ];
 
-              const symptomPoints = [
-                "ভাইরাস শরীরে ঢোকার পর সংক্রমণের লক্ষণ দেখা দিতে প্রায় ২–১৪ দিন লাগে।",
-                "বেশির ভাগ ক্ষেত্রে প্রথম লক্ষণ জ্বর।",
-                "এছাড়া শুকনো কাশি / গলা ব্যথা হতে পারে।",
-                "শ্বাসকষ্ট / নিউমোনিয়া দেখা দিতে পারে।",
-                "অন্যান্য অসুস্থতা (ডায়াবেটিস / উচ্চ রক্তচাপ / শ্বাসকষ্ট / হৃদরোগ / কিডনি সমস্যা / ক্যান্সার ইত্যাদি) থাকলে অঙ্গ বিকল হওয়া বা দেহের বিভিন্ন প্রত্যঙ্গ বিকল হতে পারে।",
+              const awarenessPoints = [
+                { text: yhLang("Stay at home if sick; use a mask if going out is necessary", "অসুস্থ হলে ঘরে থাকতে হবে, বাইরে যাওয়া অত্যাবশ্যক হলে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে হবে"), icon: "fa-house" },
+                { text: yhLang("Avoid unnecessary travel except in emergencies", "জরুরী প্রয়োজন ব্যতীত অযাথা ভ্রমণ করা থেকে বিরত থাকতে হবে"), icon: "fa-car" },
+                { text: yhLang("Take precautions during essential travel", "অত্যাবশ্যকীয় ভ্রমণে সাবধানতা অবলম্বন করতে হবে"), icon: "fa-shield" },
               ];
 
-              const remedyPoints = [
-                "টিকা / ভ্যাকসিন",
-                "চিকিৎসা — লক্ষণভিত্তিক",
+              const symptomsPoints = [
+                { text: yhLang("Sudden fever of 100°C or higher", "হঠাৎ ১০০ ডিগ্রি সেলসিয়াস বা তার বেশি জ্বর"), icon: "fa-thermometer" },
+                { text: yhLang("Sore throat", "গলাব্যথা"), icon: "fa-droplet" },
+                { text: yhLang("Cold and cough", "সর্দি-কাশি"), icon: "fa-lungs" },
+                { text: yhLang("Headache", "মাথাব্যথা"), icon: "fa-brain" },
+                { text: yhLang("Diarrhea", "ডায়রিয়া"), icon: "fa-tint-slash" },
+                { text: yhLang("Body weakness", "শরীর দুর্বল হয়ে যাওয়া"), icon: "fa-person-hiking" },
+                { text: yhLang("Nasal congestion", "নাক বন্ধ হয়ে যাওয়া"), icon: "fa-wind" },
+                { text: yhLang("Nausea or vomiting", "বমি-ভাব হওয়া কিংবা বমি হওয়া"), icon: "fa-triangle-exclamation" },
               ];
 
-              const renderList = (items) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li class="info-list-item" data-aos="fade-up" data-aos-delay="${140 + idx * 30}">
-                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
-                        <p class="mb-0">${text}</p>
-                      </li>
-                    `
-                  )
-                  .join("");
+              const treatmentPoints = [
+                { text: yhLang("Ensure adequate rest for the infected person", "ইনফ্লুয়েঞ্জার সংক্রমণ হলে প্রথমেই আক্রান্ত ব্যক্তির পর্যাপ্ত বিশ্রাম নিশ্চিত করতে হবে।"), icon: "fa-bed" },
+                { text: yhLang("Drink plenty of water and fruit juice to prevent dehydration", "শরীরে যেন পানির ঘাটতি দেখা না দেয়, সে জন্য প্রচুর পরিমাণে পানি ও ফলের রস পান করতে হবে।"), icon: "fa-glass-water" },
+                { text: yhLang("Avoid cold weather and stay warm", "ঠান্ডা আবহাওয়া থেকে দূরে থাকতে হবে এবং নিজেকে উষ্ণ আবহাওয়ার ভেতর রাখতে হবে।"), icon: "fa-sun" },
+                { text: yhLang("Do not share items used by infected person", "ইনফ্লুয়েঞ্জায় আক্রান্ত ব্যক্তির ব্যবহৃত জিনিস যেন আর কেউ ব্যবহার না করে সেটি খেয়াল রাখতে হবে।"), icon: "fa-ban" },
+                { text: yhLang("Get annual flu vaccine to reduce infection risk", "ফ্লুর টিকা দেওয়া হলে আক্রান্ত হওয়ার ঝুঁকি অনেকাংশে কমে যায়। টিকাটি প্রতিবছর একবার করে নিতে হয়।"), icon: "fa-syringe" },
+              ];
+
+              const renderPoints = (items, baseDelay) =>
+                items.map(
+                  (item, idx) => `
+                    <li class="m23l7-point" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 60}">
+                      <span class="m23l7-point__icon"><i class="fa-solid ${item.icon}"></i></span>
+                      <span class="m23l7-point__text">${item.text}</span>
+                    </li>
+                  `
+                ).join("");
 
               return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">${yhLang("COVID-19", "কোভিড-১৯")}</h2>
-                      <p class="mb-0 text-muted">করোনাভাইরাস রোগ (COVID-19) হলো SARS-CoV-2 ভাইরাস দ্বারা সৃষ্ট একটি সংক্রামক রোগ। বিশ্ব স্বাস্থ্য সংস্থা ১১ই ফেব্রুয়ারি ২০২০ তারিখে এই রোগটিকে “কোভিড-১৯” হিসেবে আনুষ্ঠানিক নামকরণ করে। এখানে “কো” কথাটি এসেছে “করোনা” থেকে, “ভি” এসেছে ভাইরাস থেকে, “ডি” এসেছে “ডিজিজ” (রোগ) থেকে এবং “১৯” এসেছে ২০১৯ সাল থেকে।</p>
+                <div class="lesson-slide mod23-lesson7">
+                  <div class="m23l7-shapes">
+                    <div class="m23l7-shape m23l7-shape--orb"></div>
+                    <div class="m23l7-shape m23l7-shape--wave"></div>
+                    <div class="m23l7-shape m23l7-shape--hexagon"></div>
+                    <div class="m23l7-shape m23l7-shape--ring"></div>
+                  </div>
+
+                  <header class="m23l7-hero" data-aos="fade-up">
+                    <div class="m23l7-icon"><i class="fa-solid fa-virus"></i></div>
+                    <div class="m23l7-hero__body">
+                      <h2 class="m23l7-hero__title">${yhLang("Influenza", "ইনফ্লুয়েঞ্জা")}</h2>
                     </div>
-                    <div class="hero-tile__icon bg-gradient-indigo"><i class="fa-solid fa-virus-covid"></i></div>
                   </header>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="mb-3">যেভাবে ছড়ায়:</h3>
-                    <ul class="list-unstyled info-list mb-0">
-                      ${renderList(spreadPoints)}
-                    </ul>
-                  </section>
+                  <div class="m23l7-intro" data-aos="fade-up" data-aos-delay="80">
+                    <p class="m23l7-intro__text">${introText}</p>
+                  </div>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="140">
-                    <h3 class="mb-3">লক্ষণসমূহ:</h3>
-                    <ul class="list-unstyled info-list mb-0">
-                      ${renderList(symptomPoints)}
-                    </ul>
-                  </section>
+                  <div class="section_wrap modu23_less_7_1">
+                    <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="140">
+                      <h3 class="m23l7-section-title"><i class="fa-solid fa-arrows-spin"></i> ${yhLang("How It Spreads:", "কীভাবে ছড়ায়:")}</h3>
+                      <ul class="m23l7-list list-unstyled">
+                        ${renderPoints(spreadPoints, 200)}
+                      </ul>
+                    </section>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="180">
-                    <h3 class="mb-3">প্রতিকার:</h3>
-                    <ul class="list-unstyled info-list mb-0">
-                      ${renderList(remedyPoints)}
+                    <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="380">
+                      <h3 class="m23l7-section-title"><i class="fa-solid fa-shield-heart"></i> ${yhLang("Personal Awareness:", "ব্যক্তিগত সচেতনতা :")}</h3>
+                      <ul class="m23l7-list list-unstyled">
+                        ${renderPoints(awarenessPoints, 440)}
+                      </ul>
+                    </section>
+                    <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="620">
+                      <h3 class="m23l7-section-title"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("Influenza Symptoms:", "ইনফ্লুয়েঞ্জার সংক্রমণের লক্ষণগুলো হলো:")}</h3>
+                      <ul class="m23l7-list list-unstyled modu_lession_7_3">
+                        ${renderPoints(symptomsPoints, 680)}
+                      </ul>
+                    </section>
+                  </div>
+
+                  
+
+                  <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="1100">
+                    <h3 class="m23l7-section-title"><i class="fa-solid fa-flask-vial"></i> ${yhLang("Treatment & Prevention:", "চিকিৎসা ও প্রতিকার:")}</h3>
+                    <ul class="m23l7-list list-unstyled modu_lession_7_3">
+                      ${renderPoints(treatmentPoints, 1160)}
                     </ul>
                   </section>
                 </div>`;
