@@ -5533,7 +5533,7 @@ html[lang|="bn"] h2 {
   display: flex;
   justify-content: space-between;
   gap: .75rem;
-  margin-top: -20px;
+  /* margin-top: -20px; */
 }
 .inline-lesson-nav .btn { border-radius: 999px; }
 .inline-lesson-nav .btn:disabled { opacity: .6; cursor: not-allowed; }
@@ -8049,6 +8049,10 @@ input::placeholder {
   display: grid !important;
   grid-template-columns: 1fr 1fr;
 }
+.modu23_less_9 {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr;
+}
 .modu24_less_8_ui {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
@@ -9144,6 +9148,293 @@ input::placeholder {
   }
 }
 
+/* ==============================
+   Module 23 - Lesson 9: Mpox (Lavender Gradient)
+   ============================== */
+.lesson-slide.mod23-lesson9 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 5px;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 45%, #ddd6fe 100%);
+}
+
+.lesson-slide.mod23-lesson9::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -20%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.16), rgba(139, 92, 246, 0) 58%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.lesson-slide.mod23-lesson9::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  right: -15%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle at 70% 60%, rgba(167, 139, 250, 0.14), rgba(167, 139, 250, 0) 56%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod23-lesson9 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mod23-lesson9 .m23l9-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mod23-lesson9 .m23l9-shape {
+  position: absolute;
+  opacity: 0.72;
+  filter: saturate(1.20) contrast(1.08) drop-shadow(0 18px 44px rgba(15, 53, 110, 0.18));
+  transform: translate3d(0,0,0);
+  animation: orbGlide 18s ease-in-out infinite;
+}
+
+.mod23-lesson9 .m23l9-shape--orb {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  top: -180px;
+  left: -160px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.88), rgba(255,255,255,0.18) 55%, rgba(255,255,255,0) 74%),
+              linear-gradient(135deg, #a78bfa, #8b5cf6);
+  box-shadow: 0 26px 70px rgba(139, 92, 246, 0.22);
+  animation-duration: 22s;
+}
+
+.mod23-lesson9 .m23l9-shape--wave {
+  width: 500px;
+  height: 250px;
+  bottom: -100px;
+  right: -200px;
+  background: linear-gradient(135deg, #c4b5fd, #a78bfa);
+  border-radius: 48% 52% 60% 40% / 48% 45% 55% 52%;
+  opacity: 0.48;
+  filter: blur(1px) saturate(1.25) contrast(1.08) drop-shadow(0 18px 44px rgba(139, 92, 246, 0.18));
+  animation-duration: 20s;
+}
+
+.mod23-lesson9 .m23l9-shape--star {
+  width: 280px;
+  height: 280px;
+  top: 48%;
+  left: 68%;
+  background: linear-gradient(135deg, #ddd6fe, #c4b5fd);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  opacity: 0.52;
+  filter: saturate(1.25) contrast(1.08) drop-shadow(0 20px 52px rgba(139, 92, 246, 0.18));
+  animation-duration: 24s;
+}
+
+.mod23-lesson9 .m23l9-shape--ring {
+  width: 320px;
+  height: 320px;
+  bottom: -140px;
+  left: 12%;
+  border-radius: 50%;
+  border: 16px solid rgba(139, 92, 246, 0.18);
+  opacity: 0.58;
+  animation-duration: 19s;
+}
+
+.mod23-lesson9 .m23l9-hero {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.80), rgba(255,255,255,0.62));
+  border: 1px solid rgba(0,0,0,0.06);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 18px 45px rgba(15, 53, 110, 0.12);
+}
+
+.mod23-lesson9 .m23l9-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  box-shadow: 0 12px 24px rgba(139, 92, 246, 0.28);
+}
+
+.mod23-lesson9 .m23l9-icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.mod23-lesson9 .m23l9-hero__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #6d28d9, #7c3aed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mod23-lesson9 .m23l9-intro {
+  padding: 18px 20px;
+  margin-top: 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.58));
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 14px 32px rgba(15, 53, 110, 0.08);
+}
+
+.mod23-lesson9 .m23l9-intro__text {
+  margin: 0;
+  line-height: 1.68;
+  color: rgba(0,0,0,0.78);
+}
+
+.mod23-lesson9 .m23l9-intro__text + .m23l9-intro__text {
+  margin-top: 12px;
+}
+
+.mod23-lesson9 .section_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.mod23-lesson9 .m23l9-panel {
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.60));
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 14px 32px rgba(15, 53, 110, 0.08);
+}
+
+.mod23-lesson9 .m23l9-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: #6d28d9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mod23-lesson9 .m23l9-section-title i {
+  color: #8b5cf6;
+  font-size: 1.25rem;
+}
+
+.mod23-lesson9 .m23l9-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mod23-lesson9 .m23l9-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 3px 14px;
+  margin-bottom: 3px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(139, 92, 246, 0.12);
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mod23-lesson9 .m23l9-point:hover {
+  background: rgba(255,255,255,0.75);
+  border-color: rgba(139, 92, 246, 0.22);
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.12);
+  transform: translateY(-2px);
+}
+
+.mod23-lesson9 .m23l9-point__icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  box-shadow: 0 6px 14px rgba(139, 92, 246, 0.22);
+}
+
+.mod23-lesson9 .m23l9-point__icon i {
+  font-size: 0.88rem;
+  color: #fff;
+}
+
+.mod23-lesson9 .m23l9-point__text {
+  flex: 1;
+  line-height: 1.62;
+  color: rgba(0,0,0,0.80);
+}
+
+.dark-mode .mod23-lesson9 {
+  background: linear-gradient(135deg, #2d1b4e 0%, #3b2667 45%, #4c3575 100%);
+}
+
+.dark-mode .mod23-lesson9 .m23l9-hero,
+.dark-mode .mod23-lesson9 .m23l9-intro,
+.dark-mode .mod23-lesson9 .m23l9-panel {
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border-color: rgba(255,255,255,0.12);
+}
+
+.dark-mode .mod23-lesson9 .m23l9-hero__title {
+  background: linear-gradient(135deg, #c4b5fd, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark-mode .mod23-lesson9 .m23l9-section-title {
+  color: #c4b5fd;
+}
+
+.dark-mode .mod23-lesson9 .m23l9-section-title i {
+  color: #a78bfa;
+}
+
+.dark-mode .mod23-lesson9 .m23l9-point {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(139, 92, 246, 0.20);
+}
+
+.dark-mode .mod23-lesson9 .m23l9-point:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+.dark-mode .mod23-lesson9 .m23l9-point__text,
+.dark-mode .mod23-lesson9 .m23l9-intro__text {
+  color: rgba(255,255,255,0.80);
+}
+
+.dark-mode .mod23-lesson9 .m23l9-shape { opacity: 0.60; }
+.dark-mode .mod23-lesson9 .m23l9-shape--ring { border-color: rgba(255,255,255,0.20); }
+
+@media (prefers-reduced-motion: reduce) {
+  .mod23-lesson9 .m23l9-shape {
+    animation: none !important;
+  }
+}
 /* Ensure content stays above decorative shapes/pseudo orbs */
 .lesson-slide.mod25-lesson1 > * {
   position: relative;

@@ -16646,94 +16646,142 @@ const coursesData = [
           },
           {
             id: "ch23-lesson-9",
-            title: yhLang("Influenza", "ইনফ্লুয়েঞ্জা"),
-            icon: "fa-virus",
-            gradientClass: "bg-gradient-blue",
+            title: yhLang("Mpox", "এমপক্স"),
+            icon: "fa-bacteria",
+            gradientClass: "bg-gradient-lavender",
             audioFile: "",
             quiz: null,
             content: (function () {
-              const introParagraphs = [
-                "ঋতু পরিবর্তন কিংবা অন্য যেকোনো সময় হালকা জ্বর বা সর্দি-কাশিকে মানুষ মৌসুমি অসুখ বলে ধরে নিলেও অনেক সময় এটি ইনফ্লুয়েঞ্জার লক্ষণ হতে পারে।",
-                "ইনফ্লুয়েঞ্জা মূলত একটি ভাইরাল সংক্রমণ, যা হাঁচি-কাশির মাধ্যমে ছড়ায়।",
-                "বছরের যেকোনো সময়ই ইনফ্লুয়েঞ্জা হতে পারে। তবে শীতকালে এর প্রকোপ বাড়ে।",
+              const introText = yhLang(
+                "Mpox is a zoonotic viral disease.",
+                "এমপক্স একটি ভাইরাস জনিত প্রাণিবাহিত (Zoonotic) রোগ।"
+              );
+              const introText2 = yhLang(
+                "First identified in monkeys in Denmark in 1958, it was called Monkeypox. In November 2022, WHO renamed it to Mpox following modern naming guidelines.",
+                "১৯৫৮ সালে ডেনমার্ক-এ বানরের দেহে সর্বপ্রথম এ রোগ সনাক্ত হয় বলে একে মাঙ্কিপক্স বলা হয়। ২০২২ সালের নভেম্বরে বিশ্ব স্বাস্থ্য সংস্থা (WHO) রোগের নামকরণের জন্য আধুনিক নির্দেশিকা অনুসরণ করে রোগটির নাম পরিবর্তন করে এমপক্স (Mpox) রাখা হয়।"
+              );
+              const introText3 = yhLang(
+                "This disease is primarily found in Central and West Africa. It has appeared in other countries, but in those cases, there is evidence of travel history to affected regions or contact with animals imported from those areas.",
+                "এ রোগটির প্রাদুর্ভাব প্রধানত মধ্য ও পশ্চিম আফ্রিকায় দেখা যায়। ইতিপূর্বে এ ছাড়া অন্যান্য দেশেও এ রোগের প্রাদুর্ভাব দেখা গেছে। তবে সে ক্ষেত্রে উক্ত দেশ সমূহে ভ্রমণের ইতিহাস অথবা উক্ত দেশ সমূহ হতে আমদানিকৃত প্রাণীর সংস্পর্শে আসার প্রমাণ আছে।"
+              );
+              const symptoms = [
+                {
+                  text: yhLang(
+                    "Fever (above 38°C)",
+                    "জ্বর (৩৮ ডিগ্রি সেন্টিগ্রেডের বেশী তাপমাত্রা)"
+                  ),
+                  icon: "fa-temperature-high",
+                },
+                {
+                  text: yhLang(
+                    "Severe headache",
+                    "প্রচন্ড মাথা ব্যথা"
+                  ),
+                  icon: "fa-head-side-virus",
+                },
+                {
+                  text: yhLang(
+                    "Swollen lymph nodes and pain (Lymphadenopathy)",
+                    "শরীরের বিভিন্ন জায়গায় লসিকাগ্রন্থি ফুলে যাওয়া ও ব্যথা (Lymphadenopathy)"
+                  ),
+                  icon: "fa-hand-dots",
+                },
+                {
+                  text: yhLang(
+                    "Muscle pain",
+                    "মাংসপেশীতে ব্যথা"
+                  ),
+                  icon: "fa-dumbbell",
+                },
+                {
+                  text: yhLang(
+                    "Fatigue",
+                    "অবসাদগ্রস্ততা"
+                  ),
+                  icon: "fa-bed-pulse",
+                },
+                {
+                  text: yhLang(
+                    "Rash - starting from face and spreading to palms, soles, and other body parts (usually within 3 days of fever)",
+                    "ফুসকুড়ি- যা মুখ থেকে শুরু হয়ে পর্যায়ক্রমে হাতের তালু, পায়ের তালু সহ শরীরের বিভিন্ন জায়গায় ছড়িয়ে পড়ে (সাধারণত জ্বরের ৩ দিনের মধ্যে)"
+                  ),
+                  icon: "fa-virus",
+                },
               ];
-
-              const spreadInfo = `
-                <h3 class="mb-2">কিভাবে ছড়ায়</h3>
-                <p class="mb-2">সাধারণত ইতোমধ্যেই সংক্রমিত হয়েছে এমন ব্যক্তির হাঁচি-কাশি, কথা বলা কিংবা তার ব্যবহৃত কিছু ব্যবহারের মাধ্যমে ইনফ্লুয়েঞ্জা ছড়ায়। এ ছাড়া ইনফ্লুয়েঞ্জা ভাইরাস আছে এমন কিছু স্পর্শ করার মাধ্যমেও ইনফ্লুয়েঞ্জা ছড়াতে পারে।</p>
-                <p class="mb-0">এই ভাইরাস প্রতিনিয়ত নিজেকে পরিবর্তন করে থাকে, যাকে বলা হয় মিউটেশন।</p>`;
-
-              const generalSymptoms = `
-                <h3 class="mb-2">লক্ষণ</h3>
-                <p class="mb-2">প্রাথমিকভাবে ইনফ্লুয়েঞ্জার সংক্রমণ হলে সাধারণ ঠান্ডা লাগার মতোই লক্ষণ দেখা দেয়। যেমন জ্বর, গলা ব্যথা, নাক দিয়ে পানি পড়া, সর্দি, কাশি ইত্যাদি।</p>
-                <p class="mb-0">সাধারণ ঠান্ডা লাগার সঙ্গে ইনফ্লুয়েঞ্জা সংক্রমণের পার্থক্য হলো—এটি দ্রুত বেড়ে যায়। পরিবারের একজন আক্রান্ত হলে অন্যদেরও আক্রান্ত হওয়ার আশঙ্কা থাকে।</p>`;
-
-              const detailedSymptoms = [
-                "হঠাৎ ১০০ ডিগ্রি সেলসিয়াস বা তার বেশি জ্বর",
-                "গলা ব্যথা",
-                "সর্দি-কাশি",
-                "মাথাব্যথা",
-                "ডায়রিয়া",
-                "শরীর দুর্বল হয়ে যাওয়া",
-                "নাক বন্ধ হয়ে যাওয়া",
-                "বমিভাব হওয়া কিংবা বমি হওয়া",
+              const symptomsNote = yhLang(
+                "Symptoms usually last 2-4 weeks.",
+                "সাধারণত উপসর্গ ২-৪ সপ্তাহ পর্যন্ত স্থায়ী হয়।"
+              );
+              const actions = [
+                {
+                  text: yhLang(
+                    "Isolate yourself from others immediately.",
+                    "সাবার আগে নিজেকে অন্যদের কাছ হতে আলাদা (Isolation) করুন।"
+                  ),
+                  icon: "fa-user-slash",
+                },
+                {
+                  text: yhLang(
+                    "Contact a doctor/local health center/hospital immediately.",
+                    "সাথে সাথে চিকিৎসক/ নিকটস্থ স্থানীয় স্বাস্থ্য কেন্দ্র/ হাসপাতালে যোগাযোগ করুন।"
+                  ),
+                  icon: "fa-hospital",
+                },
+                {
+                  text: yhLang(
+                    "Especially those already suffering from chronic illnesses (uncontrolled diabetes, high blood pressure, cancer) should seek medical advice urgently.",
+                    "বিশেষ করে যারা আগে থেকেই দীর্ঘমেয়াদী অসুস্থতায় ভুগছেন (যেমনঃ অনিয়ন্ত্রিত ডায়াবেটিস, উচ্চ রক্তচাপ, ক্যান্সার) তারা অতিদ্রুত চিকিৎসকের পরামর্শ নেবেন।"
+                  ),
+                  icon: "fa-user-doctor",
+                },
               ];
-
-              const treatmentPoints = [
-                "ইনফ্লুয়েঞ্জার সংক্রমণ হলে প্রথমেই আক্রান্ত ব্যক্তির পর্যাপ্ত বিশ্রাম নিশ্চিত করতে হবে।",
-                "শরীরে যেন পানির ঘাটতি দেখা না দেয়, সে জন্য প্রচুর পরিমাণে পানি ও ফলের রস পান করতে হবে।",
-                "ঠান্ডা আবহাওয়া থেকে দূরে থাকতে হবে এবং নিজেকে উষ্ণ আবহাওয়ার ভেতর রাখতে হবে।",
-                "ইনফ্লুয়েঞ্জায় আক্রান্ত ব্যক্তির ব্যবহৃত জিনিস যেন আর কেউ ব্যবহার না করে—সেটি খেয়াল রাখতে হবে।",
-                "ফ্লু-এর টিকা দেওয়া হলে আক্রান্ত হওয়ার ঝুঁকি অনেকাংশে কমে যায়। টিকাটি প্রতি বছর একবার করে নিতে হয়।",
-              ];
-
-              const renderList = (items, delayBase = 150) =>
+              const renderPoints = (items, baseDelay) =>
                 items
                   .map(
-                    (text, idx) => `
-                      <li class="info-list-item" data-aos="fade-up" data-aos-delay="${delayBase + idx * 30}">
-                        <span class="info-bullet"><i class="fa-solid fa-circle-check"></i></span>
-                        <span>${text}</span>
-                      </li>
+                    (item, idx) => `
+                    <li class="m23l9-point" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 60}">
+                      <span class="m23l9-point__icon"><i class="fa-solid ${item.icon}"></i></span>
+                      <span class="m23l9-point__text">${item.text}</span>
+                    </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">${yhLang("Influenza", "ইনফ্লুয়েঞ্জা")}</h2>
-                      <p class="mb-0 text-muted">${introParagraphs.join(" ")}</p>
+                <div class="lesson-slide mod23-lesson9">
+                  <div class="m23l9-shapes">
+                    <div class="m23l9-shape m23l9-shape--orb"></div>
+                    <div class="m23l9-shape m23l9-shape--wave"></div>
+                    <div class="m23l9-shape m23l9-shape--star"></div>
+                    <div class="m23l9-shape m23l9-shape--ring"></div>
+                  </div>
+                  <header class="m23l9-hero" data-aos="fade-up">
+                    <div class="m23l9-icon"><i class="fa-solid fa-bacteria"></i></div>
+                    <div class="m23l9-hero__body">
+                      <h2 class="m23l9-hero__title">${yhLang("Mpox", "এমপক্স")}</h2>
                     </div>
-                    <div class="hero-tile__icon bg-gradient-blue"><i class="fa-solid fa-virus"></i></div>
                   </header>
-
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
-                    ${spreadInfo}
-                  </section>
-
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="130">
-                    ${generalSymptoms}
-                  </section>
-
-                  <div class="row g-3 mt-2">
-                    <div class="col-12 col-lg-6">
-                      <article class="modern-card glass-card h-100" data-aos="fade-right" data-aos-delay="150">
-                        <h3 class="mb-3">ইনফ্লুয়েঞ্জার সংক্রমণের লক্ষণগুলো হলো:</h3>
-                        <ul class="list-unstyled info-list mb-0">
-                          ${renderList(detailedSymptoms)}
-                        </ul>
-                      </article>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <article class="modern-card glass-card h-100" data-aos="fade-left" data-aos-delay="160">
-                        <h3 class="mb-3">চিকিৎসা ও প্রতিকার</h3>
-                        <ul class="list-unstyled info-list mb-0">
-                          ${renderList(treatmentPoints, 160)}
-                        </ul>
-                      </article>
-                    </div>
+                  <div class="m23l9-intro" data-aos="fade-up" data-aos-delay="80">
+                    <p class="m23l9-intro__text">${introText}</p>
+                    <p class="m23l9-intro__text" data-aos="fade-up" data-aos-delay="60">${introText2}</p>
+                    <p class="m23l9-intro__text" data-aos="fade-up" data-aos-delay="120">${introText3}</p>
+                                    <div class="section_wrap modu23_less_9_1">
+                                      <div class="section_wrap modu23_less_9">
+                                        <section class="m23l9-panel" data-aos="fade-up" data-aos-delay="140">
+                                          <h3 class="m23l9-section-title"><i class="fa-solid fa-stethoscope"></i> ${yhLang("Common Symptoms", "সাধারণ উপসর্গগুলো হলঃ")}</h3>
+                                          <ul class="m23l9-list list-unstyled modu24_less_8_ui">
+                                            ${renderPoints(symptoms, 200)}
+                                          </ul>
+                                          <p class="m23l9-intro__text mt-3" data-aos="fade-up" data-aos-delay="560">${symptomsNote}</p>
+                                        </section>
+                                        <section class="m23l9-panel" data-aos="fade-up" data-aos-delay="640">
+                                          <h3 class="m23l9-section-title"><i class="fa-solid fa-notes-medical"></i> ${yhLang("What to Do If Symptoms Appear", "উপসর্গ দেখা দিলে করণীয়ঃ")}</h3>
+                                          <ul class="m23l9-list list-unstyled">
+                                            ${renderPoints(actions, 700)}
+                                          </ul>
+                                        </section>
+                                      <div>
+                                    </div>
                   </div>
                 </div>`;
             })(),
