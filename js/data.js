@@ -15965,69 +15965,176 @@ const coursesData = [
           },
           {
             id: "ch23-lesson-4",
-            title: yhLang("Treatment", "চিকিৎসা"),
-            icon: "fa-notes-medical",
-            gradientClass: "bg-gradient-teal",
+            title: yhLang("Nipah Virus Infection", "নিপাহ ভাইরাস সংক্রমন"),
+            icon: "fa-biohazard",
+            gradientClass: "bg-gradient-purple",
             audioFile: "",
             quiz: null,
             content: (function () {
-              const preventionSteps = [
-                "বাড়ির চারপাশে পানি জমতে দেবেন না। জমা পানিতে মশারা বংশবিস্তার করে।",
-                "গাছের টব, ফুলদানি, পরে থাকা গাড়ির টায়ারের জমে থাকা পানি ফেলে দিন। তিন দিনে একদিন জমা পানি ফেলে দিন।",
-                "শরীর ঢাকা জামা কাপড় যেমন লম্বা-হাতা শার্ট, লম্বা প্যান্ট, মোজা এবং জুতা পরুন।",
-                "ডেঙ্গু ভাইরাস বহনকারী মশা ভোর থেকে সন্ধ্যা পর্যন্ত সবচেয়ে বেশি সক্রিয় থাকে। এই সময় অতিরিক্ত সতর্ক থাকুন।",
-                "রাতে শোবার সময় মশারি ব্যবহার করুন।",
-                "মশা নিধনকারী কেমিক্যাল / মশার কয়েল ব্যবহার করুন।",
+              const symptoms = [
+                {
+                  text: yhLang("High fever with severe headache", "তীব্র জ্বরসহ মাথাব্যথা"),
+                  icon: "fa-fire",
+                },
+                {
+                  text: yhLang("Convulsions", "খিঁচুনি"),
+                  icon: "fa-brain",
+                },
+                {
+                  text: yhLang("Delirium", "প্রলাপ বকা"),
+                  icon: "fa-comment-slash",
+                },
+                {
+                  text: yhLang("Loss of consciousness", "অজ্ঞান হওয়া"),
+                  icon: "fa-user-injured",
+                },
+                {
+                  text: yhLang("Breathing difficulties in some cases", "কোনো কোনো ক্ষেত্রে শ্বাসকষ্ট হওয়া"),
+                  icon: "fa-lungs",
+                },
+                {
+                  text: yhLang("Excessive salivation", "মুখ দিয়ে লালা ঝরা"),
+                  icon: "fa-droplet",
+                },
               ];
 
-              const renderSteps = () =>
-                preventionSteps
-                  .map(
-                    (text, idx) => `
-                      <li class="prevention-item" data-aos="fade-up" data-aos-delay="${120 + idx * 30}">
-                        <div class="prevention-chip shadow-sm">
-                          <span>${String(idx + 1).padStart(2, "0")}</span>
-                        </div>
-                        <div class="prevention-copy">
-                          <p class="my-2">${text}</p>
-                        </div>
+              const preventionMeasures = [
+                {
+                  text: yhLang("Do not drink raw date palm sap", "খেজুরের কাঁচা রস খাবেন না"),
+                  icon: "fa-ban",
+                },
+                {
+                  text: yhLang("Do not eat partially eaten fruits", "কোনো ধরনের আংশিক খাওয়া ফল খাবেন না"),
+                  icon: "fa-apple-whole",
+                },
+                {
+                  text: yhLang("Wash fruits thoroughly with clean water before eating", "ফলমূল পরিষ্কার পানি দিয়ে ভালোভাবে ধুয়ে খাবেন"),
+                  icon: "fa-hands-bubbles",
+                },
+                {
+                  text: yhLang("Take the patient to the nearest government hospital immediately if Nipah symptoms appear", "নিপাহ রোগের লক্ষণ দেখা দিলে রোগীকে অতিদ্রুত কাছাকাছি সরকারি হাসপাতালে নিতে হবে"),
+                  icon: "fa-hospital",
+                },
+                {
+                  text: yhLang("Wash both hands thoroughly with soap and water after contacting an infected patient", "আক্রান্ত রোগীর সংস্পর্শে আসার পর সাবান ও পানি দিয়ে দুই হাত ভালোভাবে ধুয়ে ফেলতে হবে"),
+                  icon: "fa-soap",
+                },
+              ];
+
+              const renderSymptoms = (items, baseDelay) =>
+                (items || [])
+                  .map((item, idx) => {
+                    const delay = baseDelay + idx * 65;
+                    return `
+                      <li class="m23l4-symptom" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m23l4-symptom__icon bg-gradient-rose" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m23l4-symptom__text">${item.text}</span>
                       </li>
-                    `
-                  )
+                    `;
+                  })
+                  .join("");
+
+              const renderPrevention = (items, baseDelay) =>
+                (items || [])
+                  .map((item, idx) => {
+                    const delay = baseDelay + idx * 70;
+                    return `
+                      <li class="m23l4-prevent" data-aos="fade-up" data-aos-delay="${delay}">
+                        <span class="m23l4-prevent__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m23l4-prevent__text">${item.text}</span>
+                      </li>
+                    `;
+                  })
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">${yhLang("Treatment", "চিকিৎসা")}</h2>
+                <div class="lesson-slide mod23-lesson4">
+                  <div class="m23l4-shapes" aria-hidden="true">
+                    <span class="m23l4-shape m23l4-shape--orb"></span>
+                    <span class="m23l4-shape m23l4-shape--wave"></span>
+                    <span class="m23l4-shape m23l4-shape--triangle"></span>
+                    <span class="m23l4-shape m23l4-shape--ring"></span>
+                  </div>
+
+                  <header class="m23l4-hero" data-aos="fade-up">
+                    <span class="m23l4-hero__badge bg-gradient-purple icon-spin-on-hover" aria-hidden="true">
+                      <i class="fa-solid fa-biohazard"></i>
+                    </span>
+                    <div class="m23l4-hero__body">
+                      <h2 class="slide-title gradient-text mb-0 m23l4-line" data-aos="fade-up" data-aos-delay="60">${yhLang(
+                        "Nipah Virus Infection",
+                        "নিপাহ ভাইরাস সংক্রমন"
+                      )}</h2>
                     </div>
-                    <div class="hero-tile__icon bg-gradient-teal"><i class="fa-solid fa-notes-medical"></i></div>
                   </header>
 
-                  <section class="modern-card glass-card mt-3 treatment-lede" data-aos="fade-up" data-aos-delay="100">
-                    <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3">
-                      <div class="lede-icon bg-gradient-teal text-white"><i class="fa-solid fa-user-nurse"></i></div>
-                      <p class="mb-0">ডেঙ্গুর চিকিৎসার জন্য বিশেষ কোনো ওষুধ বা প্রতিষেধক এখনো আবিষ্কৃত হয়নি। চিকিৎসকরা প্যারাসিটামল জাতীয় ওষুধ দিয়ে ব্যথা এবং জ্বরের মাত্রা নিয়ন্ত্রণ করেন। রোগের মাত্রা অতিরিক্তভাবে বৃদ্ধি পেলে রোগীকে হাসপাতালে ভর্তি রাখা একান্ত জরুরি।</p>
-                    </div>
-                  </section>
+                  <div class="row g-2 mt_1">
+                    <div class="col-12 col-lg-5">
+                      <div class="m23l4-stack">
+                        <article class="m23l4-panel" data-aos="fade-up" data-aos-delay="120">
+                          <div class="m23l4-panel__head" data-aos="fade-up" data-aos-delay="160">
+                            <span class="m23l4-panel__icon bg-gradient-rose" aria-hidden="true">
+                              <i class="fa-solid fa-virus"></i>
+                            </span>
+                            <h3 class="m23l4-panel__title m23l4-line" data-aos="fade-up" data-aos-delay="200">${yhLang(
+                              "Nipah Virus Infection",
+                              "নিপাহ ভাইরাস সংক্রমন"
+                            )}</h3>
+                          </div>
+                          <p class="m23l4-panel__desc m23l4-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
+                            "Nipah is a deadly viral disease. Infection causes brain inflammation. Bat droppings and saliva mix with raw date palm sap, carrying Nipah virus. Drinking raw date palm sap can cause infection. Many think heating the sap makes it safe—this is not acceptable.",
+                            "নিপাহ একটি ভাইরাসজনিত মারাত্মক প্রাণঘাতী রোগ। নিপাহ ভাইরাসে আক্রান্ত হলে মস্তিষ্কের প্রদাহ ঘটে। কাঁচা খেজুরের রসে বাদুড়ের বিষ্ঠা ও লালা মিশ্রিত হয় এবং ওই বিষ্ঠা ও লালাতে নিপাহ ভাইরাসের জীবাণু থাকে। ফলে খেজুরের কাঁচা রস পান করলে মানুষ নিপাহ ভাইরাসে আক্রান্ত হতে পারে। অনেকেই মনে করেন, রস গরম করে খেলে বিপদ কাটবে। কিন্তু তা মোটেও গ্রহণযোগ্য নয়।"
+                          )}</p>
+                          <p class="m23l4-panel__desc m23l4-line" data-aos="fade-up" data-aos-delay="300">${yhLang(
+                            "Do not eat fallen or partially eaten fruits from under trees. Adults and children are both affected. Mortality rate exceeds 70%. Prevention is the only way to survive.",
+                            "গাছের নিচে পড়ে থাকা আধা খাওয়া কিংবা ফাটা ফল খাওয়া যাবে না। বর্তমান সময়ে বড়দের পাশাপাশি শিশু-কিশোরেরা নিপাহ ভাইরাসে বেশি আক্রান্ত হচ্ছে। এই রোগে মৃত্যু ৭০ শতাংশের বেশি। তাই প্রতিরোধই হচ্ছে এই রোগ থেকে বাঁচার উপায়।"
+                          )}</p>
+                        </article>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="140">
-                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-                      <h3 class="mb-0">ডেঙ্গু প্রতিরোধে করণীয়:</h3>
-                      <span class="badge-pill bg-gradient-teal text-white"><i class="fa-solid fa-shield-virus me-1"></i>Checklist</span>
+                        <article class="m23l4-panel m23l4-panel--danger" data-aos="fade-up" data-aos-delay="160">
+                          <div class="m23l4-panel__head" data-aos="fade-up" data-aos-delay="200">
+                            <span class="m23l4-panel__icon bg-gradient-orange" aria-hidden="true">
+                              <i class="fa-solid fa-exclamation-triangle"></i>
+                            </span>
+                            <h3 class="m23l4-panel__title m23l4-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
+                              "Main Symptoms of Nipah Virus Infection",
+                              "নিপাহ ভাইরাস সংক্রমনের প্রধান লক্ষণগুলো হচ্ছে"
+                            )}</h3>
+                          </div>
+                          <ul class="list-unstyled m23l4-symptom-list" role="list">
+                            ${renderSymptoms(symptoms, 280)}
+                          </ul>
+                        </article>
+                      </div>
                     </div>
-                    <ul class="list-unstyled prevention-list mb-0">
-                      ${renderSteps()}
-                    </ul>
-                  </section>
 
-                  <section class="modern-card glass-card alert-warning mt-3" data-aos="fade-up" data-aos-delay="180">
-                    <div class="d-flex align-items-start gap-3">
-                      <span class="badge-pill bg-gradient-orange"><i class="fa-solid fa-triangle-exclamation"></i></span>
-                      <p class="mb-0">ডেঙ্গু জ্বর একটি সাধারণ রোগ। কিন্তু অবহেলা করলে এই রোগ মারাত্মক হতে পারে। শহরাঞ্চলে এর প্রকোপ বেশি। তাই নগরবাসীকে আরও একটু সচেতন ও সতর্ক হতে হবে। বিশেষ করে যাদের ডেঙ্গু হয়েছে তাদের অতিরিক্ত সতর্ক থাকতে হবে। দ্বিতীয়বার ডেঙ্গু সংক্রমণ মারাত্মক হতে পারে।</p>
+                    <div class="col-12 col-lg-7">
+                      <div class="m23l4-stack">
+                        <article class="m23l4-media" data-aos="fade-up" data-aos-delay="180">
+                          <div class="m23l4-media__frame" data-aos="zoom-in" data-aos-delay="220">
+                            <img class="img-zoom" style="max-height: 350px;" src="img/modu23/badur.png" alt="
+                             
+                              "বাদুড় এবং খেজুরের রস সংক্রমণ">
+                          </div>
+                        </article>
+
+                        <article class="m23l4-panel" data-aos="fade-up" data-aos-delay="200">
+                          <div class="m23l4-panel__head" data-aos="fade-up" data-aos-delay="240">
+                            <span class="m23l4-panel__icon bg-gradient-green" aria-hidden="true">
+                              <i class="fa-solid fa-shield-halved"></i>
+                            </span>
+                            <h3 class="m23l4-panel__title m23l4-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
+                              "Nipah Virus Prevention Measures",
+                              "নিপাহ ভাইরাস সংক্রমন প্রতিরোধে করণীয়"
+                            )}</h3>
+                          </div>
+                          <ul class="list-unstyled m23l4-prevent-list" role="list">
+                            ${renderPrevention(preventionMeasures, 320)}
+                          </ul>
+                        </article>
+                      </div>
                     </div>
-                  </section>
+                  </div>
                 </div>`;
             })(),
           },
