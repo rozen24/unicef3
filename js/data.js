@@ -16140,67 +16140,134 @@ const coursesData = [
           },
           {
             id: "ch23-lesson-5",
-            title: yhLang("Nipah Virus Infection", "নিপাহ ভাইরাস সংক্রমণ"),
-            icon: "fa-biohazard",
-            gradientClass: "bg-gradient-purple",
+            title: yhLang("COVID-19", "কোভিড-১৯"),
+            icon: "fa-virus-covid",
+            gradientClass: "bg-gradient-indigo",
             audioFile: "",
             quiz: null,
             content: (function () {
-              const introCopy = [
-                "নিপাহ একটি ভাইরাসজনিত মারাত্মক প্রাণঘাতী রোগ। নিপাহ ভাইরাসে আক্রান্ত হলে মস্তিষ্কের প্রদাহ ঘটে।",
-                "কাঁচা খেজুরের রসে বাদুড়ের বিষ্ঠা ও লালা মিশ্রিত হয় এবং ওই বিষ্ঠা ও লালায় নিপাহ ভাইরাসের জীবাণু থাকে। ফলে খেজুরের কাঁচা রস পান করলে মানুষ নিপাহ ভাইরাসে আক্রান্ত হতে পারে।",
-                "অনেকেই মনে করেন, রস গরম করে খেলে বিপদ কাটবে। কিন্তু তা মোটেও গ্রহণযোগ্য নয়। গাছের নিচে পড়ে থাকা আধা খাওয়া কিংবা ফাটা ফল খাওয়া যাবে না।",
-                "বর্তমানে বড়দের পাশাপাশি শিশু-কিশোরেরাও নিপাহ ভাইরাসে বেশি আক্রান্ত হচ্ছে। এই রোগে মৃত্যুহার ৭০ শতাংশের বেশি। তাই প্রতিরোধই হচ্ছে এই রোগ থেকে বাঁচার উপায়।",
+              const intro = yhLang(
+                "Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus. The World Health Organization officially named it 'COVID-19' on February 11, 2020. Here, 'CO' comes from Corona, 'VI' from Virus, 'D' from Disease, and '19' from 2019.",
+                "করোনাভাইরাস রোগ (কোভিড-১৯) হল সার্স-কোভ-২ ভাইরাস দ্বারা সৃষ্ট একটি সংক্রামক রোগ। বিশ্ব স্বাস্থ্য সংস্থা ১১ই ফেব্রুয়ারী ২০২০ তারিখে এই রোগ টিকে কে ‘কোভিড-১৯’ হিসেবে আনুষ্ঠানিক নামকরণ করে। এখানে ‘কো’ কথাটি এসেছে ‘করোনা’ থেকে, ‘ভি’- ভাইরাস থেকে, ‘ডি’- ‘ডিজিজ’ (রোগ) আর ‘১৯’- ২০১৯ থেকে এসেছে।"
+              );
+
+              const spreadPoints = [
+                {
+                  text: yhLang(
+                    "This virus entered humans from animals and now spreads from human to human.",
+                    "এই ভাইরাস প্রাণী থেকে মানুষের দেহে ঢুকে এখন মানুষ থেকে মানুষে সংক্রমণ হচ্ছে"
+                  ),
+                  icon: "fa-paw",
+                },
+                {
+                  text: yhLang(
+                    "Coronavirus infects human lungs and spreads through the respiratory system (sneeze/cough/sputum/saliva) or contact with an infected person.",
+                    "করোনা ভাইরাস মানুষের ফুসফুেস সংক্রমণ ঘটায় এবং শ্বাসতন্ত্রের মাধ্যমে (হাঁচি/কাশি/কফ/থুথু) অথবা আক্রান্তব্যক্তির সংস্পর্শে আসলে একজন থেকে আরেকজনে ছড়ায়"
+                  ),
+                  icon: "fa-lungs",
+                },
               ];
 
               const symptoms = [
-                "তীব্র জ্বরসহ মাথাব্যথা",
-                "খিঁচুনি",
-                "প্রলাপ বকা",
-                "অজ্ঞান হওয়া",
-                "কোনো কোনো ক্ষেত্রে শ্বাসকষ্ট হওয়া",
-                "মুখ দিয়ে লালা ঝরা",
+                {
+                  text: yhLang(
+                    "Symptoms appear about 2-14 days after the virus enters the body.",
+                    "ভাইরাস শরীরে ঢোকার পর সংক্রমণের লক্ষণ দেখা দিতে প্রায় ২-১৪ দিন লাগে"
+                  ),
+                  icon: "fa-calendar-days",
+                },
+                {
+                  text: yhLang("In most cases, the first symptom is fever.", "বেশির ভাগ ক্ষেত্রে প্রথম লক্ষণ জ¦র"),
+                  icon: "fa-temperature-high",
+                },
+                {
+                  text: yhLang("Dry cough or sore throat may occur.", "এছাড়া শুকনো কাশি/ গলা ব্যথা হতে পারে"),
+                  icon: "fa-head-side-cough",
+                },
+                {
+                  text: yhLang("Shortness of breath or pneumonia may develop.", "শ্বাসকষ্ট/ নিউমোনিয়া দেখা দিতে পারে"),
+                  icon: "fa-wind",
+                },
+                {
+                  text: yhLang(
+                    "With other illnesses (diabetes/high blood pressure/asthma/heart disease/kidney problems/cancer), organ failure or multiple organ dysfunction can occur.",
+                    "অন্যান্য অসুস্থতা (ডায়াবেটিস/ উচ্চ রক্তচাপ/ শ্বাসকষ্ট/ হৃদরোগ/ কিডনী সমস্যা/ ক্যান্সার ইত্যাদি) থাকলে অরগ্যান ফেইলিওর বা দেহের বিভিন্নপ্রত্যঙ্গ বিকল হতে পারে"
+                  ),
+                  icon: "fa-triangle-exclamation",
+                },
               ];
 
-              const renderSymptoms = () =>
-                symptoms
+              const remedies = [
+                {
+                  text: yhLang("Vaccine/Vaccination", "টিকা/ভ্যাকসিন"),
+                  icon: "fa-syringe",
+                },
+                {
+                  text: yhLang("Treatment - Symptomatic", "চিকিৎসা- লক্ষণভিত্তিক"),
+                  icon: "fa-pills",
+                },
+              ];
+
+              const renderPoints = (items, baseDelay) =>
+                items
                   .map(
                     (item, idx) => `
-                      <li class="symptom-item" data-aos="fade-up" data-aos-delay="${140 + idx * 30}">
-                        <span class="symptom-bullet"><i class="fa-solid fa-circle-check"></i></span>
-                        <span>${item}</span>
+                      <li class="m23l5-point" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 60}">
+                        <span class="m23l5-point__icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m23l5-point__text">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <header class="hero-tile gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
+                <div class="lesson-slide mod23-lesson5">
+                  <div class="m23l5-shapes" aria-hidden="true">
+                    <span class="m23l5-shape m23l5-shape--orb"></span>
+                    <span class="m23l5-shape m23l5-shape--ribbon"></span>
+                    <span class="m23l5-shape m23l5-shape--kite"></span>
+                    <span class="m23l5-shape m23l5-shape--ring"></span>
+                  </div>
+
+                  <header class="m23l5-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="20">
                     <div class="hero-tile__body">
-                      <h2 class="slide-title gradient-text mb-2">${yhLang("Nipah Virus Infection", "নিপাহ ভাইরাস সংক্রমণ")}</h2>
+                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="40">${yhLang("COVID-19", "কোভিড-১৯")}</h2>
                     </div>
-                    <div class="hero-tile__icon bg-gradient-purple"><i class="fa-solid fa-biohazard"></i></div>
+                    <div class="m23l5-icon"><i class="fa-solid fa-virus-covid"></i></div>
                   </header>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="100">
-                    ${introCopy
-                      .map((paragraph) => `<p class="mb-2">${paragraph}</p>`)
-                      .join("")}
+                  <section class="m23l5-panel glass-card" data-aos="fade-up" data-aos-delay="80">
+                    <p class="m23l5-line" data-aos="fade-up" data-aos-delay="100">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="140">
-                    <h3 class="mb-3">নিপাহ ভাইরাস সংক্রমণের প্রধান লক্ষণগুলো হচ্ছে:</h3>
-                    <ul class="list-unstyled symptom-list mb-0">
-                      ${renderSymptoms()}
-                    </ul>
-                  </section>
+                  <div class="section_wrap">
+                    <section class="m23l5-panel glass-card" data-aos="fade-up" data-aos-delay="140">
+                      <h3 class="m23l5-section-title" data-aos="fade-up" data-aos-delay="160">
+                        <i class="fa-solid fa-share-nodes"></i>${yhLang("How It Spreads", "যেভাবে ছড়ায়")}
+                      </h3>
+                      <ul class="list-unstyled m23l5-list mb-0">
+                        ${renderPoints(spreadPoints, 200)}
+                      </ul>
+                    </section>
 
-                  <section class="modern-card glass-card mt-3" data-aos="fade-up" data-aos-delay="200">
-                    <figure class="image-card w-100 mb-0">
-                      <img src="img/modu23/badur.png" alt="নিপাহ ভাইরাস সংক্রমণ" class="img-fluid rounded-4 shadow-sm img-zoom" />
-                    </figure>
-                  </section>
+                    <section class="m23l5-panel glass-card" data-aos="fade-up" data-aos-delay="320">
+                      <h3 class="m23l5-section-title" data-aos="fade-up" data-aos-delay="340">
+                        <i class="fa-solid fa-stethoscope"></i>${yhLang("Symptoms", "লক্ষণসমূহ")}
+                      </h3>
+                      <ul class="list-unstyled m23l5-list mb-0">
+                        ${renderPoints(symptoms, 380)}
+                      </ul>
+                    </section>
+
+                    <section class="m23l5-panel glass-card" data-aos="fade-up" data-aos-delay="620">
+                      <h3 class="m23l5-section-title" data-aos="fade-up" data-aos-delay="640">
+                        <i class="fa-solid fa-heart-pulse"></i>${yhLang("Remedy", "প্রতিকার")}
+                      </h3>
+                      <ul class="list-unstyled m23l5-list mb-0">
+                        ${renderPoints(remedies, 680)}
+                      </ul>
+                    </section>
+                  </div>
                 </div>`;
             })(),
           },
