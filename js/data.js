@@ -16996,16 +16996,65 @@ const coursesData = [
 
               const decayCauses = [
                 {
-                  icon: "fa-house-crack",
-                  text: "পারিবারিক শিক্ষা",
+                  icon: "fa-house-lock",
+                  accent: "m24l9-cause--a",
+                  text: yhLang(
+                    "Lack of family guidance",
+                    "পারিবারিক অনুশাসনের অভাব"
+                  ),
                 },
                 {
-                  icon: "fa-mosque",
-                  text: "ধর্মীয় শিক্ষা",
+                  icon: "fa-place-of-worship",
+                  accent: "m24l9-cause--b",
+                  text: yhLang(
+                    "Lack of religious education",
+                    "ধর্মীয় শিক্ষার ঘাটতি"
+                  ),
                 },
                 {
-                  icon: "fa-people-arrows",
-                  text: "সামাজিক চর্চার মাধ্যমে",
+                  icon: "fa-masks-theater",
+                  accent: "m24l9-cause--c",
+                  text: yhLang(
+                    "Social and cultural decline",
+                    "সামাজিক ও সাংস্কৃতিক অবক্ষয়"
+                  ),
+                },
+                {
+                  icon: "fa-person-running",
+                  accent: "m24l9-cause--d",
+                  text: yhLang(
+                    "Reckless behavior in the name of being modern",
+                    "আধুনিক হতে গিয়ে বেপরোয়া আচরণ"
+                  ),
+                },
+                {
+                  icon: "fa-pills",
+                  accent: "m24l9-cause--f",
+                  text: yhLang("Drug use", "মাদক সেবন"),
+                },
+                {
+                  icon: "fa-mobile-screen-button",
+                  accent: "m24l9-cause--g",
+                  text: yhLang(
+                    "Uncontrolled use of mobile phones",
+                    "মোবাইল ফোনের অনিয়ন্ত্রিত ব্যবহার"
+                  ),
+                },
+                {
+                  icon: "fa-wifi",
+                  accent: "m24l9-cause--h",
+                  text: yhLang(
+                    "Misuse of the internet",
+                    "ইন্টারনেটের অপব্যবহার"
+                  ),
+                },
+                {
+                  icon: "fa-bullhorn",
+                  accent: "m24l9-cause--i",
+                  text: yhLang(
+                    "Negative marketing practices",
+                    "নেতিবাচক বিপণন ব্যবস্থা"
+                  ),
                 },
               ];
 
