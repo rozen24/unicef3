@@ -13287,83 +13287,133 @@ const coursesData = [
           {
             id: "ch20-lesson-1",
             title: yhLang(
-              "অসংক্রামক রোগ",
+              "Non-communicable diseases",
               "অসংক্রামক রোগ"
             ),
-            icon: "fa-virus-slash",
-            gradientClass: "bg-gradient-cyan",
+            icon: "fa-shield-virus",
+            gradientClass: "bg-gradient-lavender",
             audioFile: "",
             quiz: null,
             content: (function () {
               const whoRisks = [
-                "ত্রুটিপূর্ণ খাদ্যাভ্যাস",
-                "কায়িক পরিশ্রমের অভাব",
-                "তামাকজাত দ্রব্য ব্যবহার",
-                "মদ্যপান ও অন্যান্য",
+                { text: yhLang("Unhealthy diet", "ত্রুটিপূর্ণ খাদ্যাভ্যাস"), icon: "fa-utensils" },
+                { text: yhLang("Physical inactivity", "কায়িক পরিশ্রমের অভাব"), icon: "fa-person-running" },
+                { text: yhLang("Tobacco use", "তামাকজাত দ্রব্য ব্যবহার"), icon: "fa-smoking" },
+                { text: yhLang("Alcohol and others", "মদ্যপান ও অন্যান্য"), icon: "fa-wine-bottle" },
               ];
 
               const preventionList = [
-                "নিয়মিত ব্যায়াম করতে হবে। সপ্তাহে অন্তত ৫ দিন ৩০ থেকে ৪০ মিনিট করে দ্রুত হাঁটতে হবে।",
-                "সুষম খাবার খেতে হবে। অতিরিক্ত তেলেভাজা, প্রক্রিয়াজাত খাবার, চর্বিযুক্ত খাবার, ফাস্টফুড, কোমল পানীয়, অতিরিক্ত চিনিযুক্ত খাবার খাওয়া যাবে না।",
-                "প্রতিদিন ৪০০ গ্রাম শাকসবজি ও ১০০ গ্রাম ফল খাওয়া উচিত।",
-                "জনপ্রতি দৈনিক পাঁচ গ্রামের বেশি লবণ খাওয়া যাবে না।",
-                "প্রত্যক্ষ ধূমপানের সাথে সাথে পরোক্ষ ধূমপান পরিহার করতে হবে।",
+                {
+                  text: yhLang(
+                    "Do not stay on an empty stomach in the morning and do not sleep immediately after dinner.",
+                    "সকালে খালি পেটে থাকা উচিত নয় এবং রাতের খাওয়ার সাথে সাথে ঘুমাতে য্ওয়া যাবেনা।"
+                  ),
+                  icon: "fa-clock",
+                },
+                {
+                  text: yhLang(
+                    "Do not add extra salt to meals. Daily salt intake should not exceed five grams per person.",
+                    "পাতে অতিরিক্ত লবণ নেওয়া যাবেনা। জনপ্রতি দৈনিক পাঁচ গ্রামের বেশি লবণ খাওয়া যাবেনা।"
+                  ),
+                  icon: "fa-flask",
+                },
+                {
+                  text: yhLang(
+                    "Be cautious with high-calorie foods such as cakes, pastries, fast food, and soft drinks.",
+                    "উচ্চ ক্যালরিযুক্ত খাবার যেমন: কেক, পেস্ট্রিফাস্টফুড ও কোমল পানীয় গ্রহণে সাবধানতা অবলম্বন করতে হবে।"
+                  ),
+                  icon: "fa-burger",
+                },
+                {
+                  text: yhLang(
+                    "Foods like biryani, kacchi, processed meats, and grilled chicken contain trans fat. Eat them in moderation.",
+                    "বিরিয়ানি, কাচ্চি, প্রক্রিয়াজাত মাংস, গ্রিল চিকেন জাতীয় খাবারে ট্রান্সফ্যাট রয়েছে। এ জাতীয় খাবার কম খেতে হবে।"
+                  ),
+                  icon: "fa-drumstick-bite",
+                },
+                {
+                  text: yhLang(
+                    "Avoid deep-fried foods and foods fried in palm oil or burnt oil.",
+                    "অতিরিক্ত তেলেভাজা, পাম তেলে বা পোড়া তেলে ভাজা খাবার খাওয়া যাবেনা।"
+                  ),
+                  icon: "fa-fire-burner",
+                },
+                {
+                  text: yhLang(
+                    "Limit red meats such as beef, mutton, buffalo, sheep, and duck because they are high in fat.",
+                    "গরু, খাসি, মহিষ, ভেড়া, হাঁস এ জাতীয় খাবারে লাল রংযুক্ত মাংস গ্রহণে চর্বির অংশ বেশি থাকায় এগুলো পরিমিত খেতে হবে।"
+                  ),
+                  icon: "fa-bacon",
+                },
+                {
+                  text: yhLang(
+                    "Eat 400 grams of vegetables and 100 grams of fruit daily.",
+                    "প্রতিদিন ৪০০ গ্রাম শাকসবজি ও ১০০ গ্রাম ফল খাওয়া উচিত।"
+                  ),
+                  icon: "fa-carrot",
+                },
               ];
 
-              const renderList = (items, type = "ul") =>
+              const renderList = (items, baseDelay = 0) =>
                 items
-                  .map((item) => `
-                    <li>
-                      <span><i class="fa-solid fa-circle-check"></i> ${item}</span>
-                    </li>
-                  `)
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-up" class="m20_1" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
+                      </li>
+                    `
+                  )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "অসংক্রামক রোগ",
+                <div class="lesson-slide mod20-lesson mod20-lesson-1">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-shield-virus"></i>${yhLang(
+                    "Non-communicable diseases",
                     "অসংক্রামক রোগ"
                   )}</h2>
-                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60">
-                    <p class="mb-0">
-                      অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও কিশোর-কিশোরী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।
+                  <div class="glass-card p-4 mb-3">
+                    <p class="mb-0" data-aos="fade-up" data-aos-delay="80">
+                      ${yhLang(
+                        "Non-communicable diseases are not spread directly from one person to another. They are also called chronic diseases because they usually develop slowly and persist for a long time. Around three thousand children and adolescents die every day from NCDs worldwide. These diseases account for about 68 percent of all deaths globally, making them a major public health problem.",
+                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও কিশোর-কিশোরী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।"
+                      )}
                     </p>
                   </div>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-12 col-lg-6">
-                      <div class="glass-card p-4 h-100">
-                        <h3 class="gradient-text mb-3">বিশ্ব স্বাস্থ্য সংস্থা অসংক্রামক রোগের চারটি ঝুঁকি চিহ্নিত করেছে। ঝুঁকিগুলো হলো:</h3>
-                        <ol class="mb-0 ps-3">
-                          ${renderList(whoRisks)}
-                        </ol>
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-4">
+                      <div class="glass-card p-2 mb-3">
+                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang(
+                          "WHO has identified four key risk factors for NCDs. They are:",
+                          "বিশ্ব স্বাস্থ্য সংস্থা অসংক্রামক রোগের চারটি ঝুঁকি চিহ্নিত করেছে। ঝুঁকিগুলো হলো:"
+                        )}</h3>
+                        <ul class="mb-0 puberty-list mod20_grid1">
+                          ${renderList(whoRisks, 120)}
+                        </ul>
                       </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="glass-card p-4 h-100">
-                        <h3 class="gradient-text mb-3">করণীয় :</h3>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(preventionList)}
+                      <div class="glass-card p-2">
+                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-clipboard-check"></i>${yhLang(
+                          "Actions to prevent unhealthy diet:",
+                          "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতরিোধে করণীয়:"
+                        )}</h3>
+                        <ul class="list-unstyled puberty-list mb-0 m20_1 mod20_grid1">
+                          ${renderList(preventionList, 120)}
                         </ul>
                       </div>
                     </div>
+                    <div class="col-12 col-lg-8">
+                      <figure class="text-center mb-0" data-aos="zoom-in" data-aos-delay="140">
+                        <img src="img/modu20/rog1_new.jpg" style="max-height: 450px; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
+                      </figure>
+                    </div>
                   </div>
-                  <div class="row g-1 mt-1" data-aos="fade-up" data-aos-delay="140">
-                    <div class="col-12 col-md-12">
-                      <figure class="text-center mb-0">
-                        <img src="img/modu20/rog1.png" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid rounded shadow-sm img-zoom" style= "width: 100%;"/>
-                      </figure>
-                    </div>
-                    <div class="col-12 col-md-12">
-                      <figure class="text-center mb-0">
-                        <img src="img/modu20/rog2.jpg" alt="ঝুঁকির কারণ" class="img-fluid rounded shadow-sm img-zoom" style= "width: 100%;"/>
-                      </figure>
-                    </div>
-                    <div class="col-12 col-md-12">
-                      <figure class="text-center mb-0">
-                        <img src="img/modu20/rog3.jpg" alt="করণীয়" class="img-fluid rounded shadow-sm img-zoom" style= "width: 100%;"/>
-                      </figure>
-                    </div>
                   </div>
                 </div>
               `;
@@ -13372,66 +13422,146 @@ const coursesData = [
           {
             id: "ch20-lesson-2",
             title: yhLang(
-              "ত্রুটিপূর্ণ খাদ্যাভ্যাস ও কায়িক পরিশ্রমে করণীয়",
+              "Actions for unhealthy diet and physical inactivity",
               "ত্রুটিপূর্ণ খাদ্যাভ্যাস ও কায়িক পরিশ্রমে করণীয়"
             ),
-            icon: "fa-bowl-food",
-            gradientClass: "bg-gradient-emerald",
+            icon: "fa-apple-whole",
+            gradientClass: "bg-gradient-mint",
             audioFile: "",
             quiz: null,
             content: (function () {
               const dietTips = [
-                "সকালে খালি পেটে থাকা উচিত নয় এবং রাতের খাবার রাত ৮টার মধ্যে খেয়ে ফেলতে হবে, খাবার খাওয়ার সাথে সাথে ঘুমাতে যাওয়া যাবে না।",
-                "পাতে অতিরিক্ত লবণ নেওয়া যাবে না। জনপ্রতি দৈনিক পাঁচ গ্রামের বেশি লবণ খাওয়া যাবে না।",
-                "উচ্চ ক্যালরিযুক্ত খাবার যেমন : কেক, পেস্ট্রি, ফাস্টফুড ও কোমল পানীয় গ্রহণে সাবধানতা অবলম্বন করতে হবে।",
-                "বিরিয়ানি, কাচ্চি, প্রক্রিয়াজাত মাংস, গ্রিল চিকেন জাতীয় খাবারে ট্রান্সফ্যাট রয়েছে। এ জাতীয় খাবার কম খেতে হবে।",
-                "অতিরিক্ত তেলেভাজা, পাম তেলে বা পোড়া তেলে ভাজা খাবার খাওয়া যাবে না।",
-                "গরু, খাসি, মহিষ, ভেড়া, হাঁস—এ জাতীয় খাবারের লাল রংযুক্ত মাংস গ্রহণে চর্বির অংশ বেশি থাকায় এগুলো পরিমিত খেতে হবে।",
-                "প্রতিদিন ৪০০ গ্রাম শাকসবজি ও ১০০ গ্রাম ফল খাওয়া উচিত।",
+                {
+                  text: yhLang(
+                    "Do not stay on an empty stomach in the morning and finish dinner by 8 pm; do not sleep immediately after eating.",
+                    "সকালে খালি পেটে থাকা উচিত নয় এবং রাতের খাবার রাত ৮টার মধ্যে খেয়ে ফেলতে হবে, খাবার খাওয়ার সাথে সাথে ঘুমাতে যাওয়া যাবে না।"
+                  ),
+                  icon: "fa-clock",
+                },
+                {
+                  text: yhLang(
+                    "Do not add extra salt to food. Daily salt intake should not exceed five grams per person.",
+                    "পাতে অতিরিক্ত লবণ নেওয়া যাবে না। জনপ্রতি দৈনিক পাঁচ গ্রামের বেশি লবণ খাওয়া যাবে না।"
+                  ),
+                  icon: "fa-salt-shaker",
+                },
+                {
+                  text: yhLang(
+                    "Be cautious with high-calorie foods such as cakes, pastries, fast food, and soft drinks.",
+                    "উচ্চ ক্যালরিযুক্ত খাবার যেমন : কেক, পেস্ট্রি, ফাস্টফুড ও কোমল পানীয় গ্রহণে সাবধানতা অবলম্বন করতে হবে।"
+                  ),
+                  icon: "fa-burger",
+                },
+                {
+                  text: yhLang(
+                    "Foods like biryani, kacchi, processed meats, and grilled chicken contain trans fat. Eat them in moderation.",
+                    "বিরিয়ানি, কাচ্চি, প্রক্রিয়াজাত মাংস, গ্রিল চিকেন জাতীয় খাবারে ট্রান্সফ্যাট রয়েছে। এ জাতীয় খাবার কম খেতে হবে।"
+                  ),
+                  icon: "fa-drumstick-bite",
+                },
+                {
+                  text: yhLang(
+                    "Avoid deep-fried foods and foods fried in palm oil or burnt oil.",
+                    "অতিরিক্ত তেলেভাজা, পাম তেলে বা পোড়া তেলে ভাজা খাবার খাওয়া যাবে না।"
+                  ),
+                  icon: "fa-fire-burner",
+                },
+                {
+                  text: yhLang(
+                    "Limit red meats such as beef, mutton, buffalo, sheep, and duck because they are high in fat.",
+                    "গরু, খাসি, মহিষ, ভেড়া, হাঁস—এ জাতীয় খাবারের লাল রংযুক্ত মাংস গ্রহণে চর্বির অংশ বেশি থাকায় এগুলো পরিমিত খেতে হবে।"
+                  ),
+                  icon: "fa-bacon",
+                },
+                {
+                  text: yhLang(
+                    "Eat 400 grams of vegetables and 100 grams of fruit daily.",
+                    "প্রতিদিন ৪০০ গ্রাম শাকসবজি ও ১০০ গ্রাম ফল খাওয়া উচিত।"
+                  ),
+                  icon: "fa-carrot",
+                },
               ];
 
               const activityTips = [
-                "অলস জীবন পরিহার করে কর্মময় জীবন গড়ে তুলতে হবে।",
-                "৩০ থেকে ৪০ মিনিট করে সপ্তাহে অন্তত ৫ দিন দ্রুত হাঁটতে হবে।",
-                "বাচ্চাদের ছোটবেলা থেকে খেলাধুলা বা শারীরিক ব্যায়াম করার প্রতি উৎসাহ প্রদান করতে হবে, প্রয়োজনে নিজ বাড়ির আঙিনা, ছাদে বা ঘরের মধ্যে খেলাধুলার পরিবেশ তৈরি করতে হবে।",
-                "সামাজিক প্রথা পরিহার করে কিশোরীদের শারীরিক ব্যায়াম করতে উৎসাহ প্রদান করতে হবে এবং ঘরে ও বাইরে ব্যায়াম করার পরিবেশ নিশ্চিত করতে হবে।",
+                {
+                  text: yhLang(
+                    "Avoid a sedentary lifestyle and build an active routine.",
+                    "অলস জীবন পরিহার করে কর্মময় জীবন গড়ে তুলতে হবে।"
+                  ),
+                  icon: "fa-person-walking",
+                },
+                {
+                  text: yhLang(
+                    "Walk briskly for 30–40 minutes at least five days a week.",
+                    "৩০ থেকে ৪০ মিনিট করে সপ্তাহে অন্তত ৫ দিন দ্রুত হাঁটতে হবে।"
+                  ),
+                  icon: "fa-person-running",
+                },
+                {
+                  text: yhLang(
+                    "Encourage children to play or exercise from an early age; create play spaces at home, on rooftops, or indoors if needed.",
+                    "বাচ্চাদের ছোটবেলা থেকে খেলাধুলা বা শারীরিক ব্যায়াম করার প্রতি উৎসাহ প্রদান করতে হবে, প্রয়োজনে নিজ বাড়ির আঙিনা, ছাদে বা ঘরের মধ্যে খেলাধুলার পরিবেশ তৈরি করতে হবে।"
+                  ),
+                  icon: "fa-futbol",
+                },
+                {
+                  text: yhLang(
+                    "Encourage adolescent girls to exercise by addressing social barriers and ensuring safe spaces indoors and outdoors.",
+                    "সামাজিক প্রথা পরিহার করে কিশোরীদের শারীরিক ব্যায়াম করতে উৎসাহ প্রদান করতে হবে এবং ঘরে ও বাইরে ব্যায়াম করার পরিবেশ নিশ্চিত করতে হবে।"
+                  ),
+                  icon: "fa-dumbbell",
+                },
               ];
 
-              const renderList = (items) =>
+              const renderList = (items, baseDelay = 0) =>
                 items
                   .map(
-                    (item) => `
-                    <li>
-                      <i class="fa-solid fa-circle-check"></i>
-                      <span>${item}</span>
+                    (item, idx) => `
+                    <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                      <i class="fa-solid ${item.icon}"></i>
+                      <span>${item.text}</span>
                     </li>
                   `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধ ও কায়িক পরিশ্রমের করণীয়",
+                <div class="lesson-slide mod20-lesson mod20-lesson-2">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-apple-whole"></i>${yhLang(
+                    "Preventing unhealthy diet and physical inactivity",
                     "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধ ও কায়িক পরিশ্রমের করণীয়"
                   )}</h2>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
+                  <div class="row g-3">
                     <div class="col-12 col-lg-6">
                       <div class="glass-card p-4 h-100">
-                        <h3 class="gradient-text mb-3">ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধে করণীয় :</h3>
+                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-utensils"></i>${yhLang(
+                          "Actions to prevent unhealthy diet:",
+                          "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধে করণীয় :"
+                        )}</h3>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(dietTips)}
+                          ${renderList(dietTips, 80)}
                         </ul>
                       </div>
                     </div>
                     <div class="col-12 col-lg-6">
                       <div class="glass-card p-4 h-100">
-                        <h3 class="gradient-text mb-3">কায়িক পরিশ্রমের অভাব পূরণে করণীয় :</h3>
+                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-running"></i>${yhLang(
+                          "Actions to address lack of physical activity:",
+                          "কায়িক পরিশ্রমের অভাব পূরণে করণীয় :"
+                        )}</h3>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(activityTips)}
+                          ${renderList(activityTips, 80)}
                         </ul>
                       </div>
                     </div>
+                  </div>
                   </div>
                 </div>
               `;
@@ -13443,8 +13573,8 @@ const coursesData = [
               "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়",
               "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়"
             ),
-            icon: "fa-bowl-food",
-            gradientClass: "bg-gradient-emerald",
+              icon: "fa-ban-smoking",
+              gradientClass: "bg-gradient-blue",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -13453,20 +13583,22 @@ const coursesData = [
               const leftSections = [
                 {
                   heading: "১. পারিবারিক ও ব্যক্তিগত পর্যায়ে করণীয়",
+                  icon: "fa-house-chimney",
                   bullets: [
-                    "শিশু-কিশোরেরা অনুকরণপ্রিয়, অতএব বাবা-মা বা পরিবারের বড় সদস্যদের তাদের সামনে তামাক ও মদ্যপান পরিহার করা উচিত।",
-                    "তামাক ও মদের ক্ষতিকর প্রভাব নিয়ে সন্তানদের সাথে খোলামেলা আলোচনা করতে হব",
-                    "বাড়িতে ধূমপান ও মদ্যপানমুক্ত পরিবেশ তৈরি করতে হবে।",
-                    "সন্তান কার সাথে বন্ধুত্ব করছে এবং কার সাথে মেলামিশা করছে তা লক্ষ্য রাখা ও প্রয়োজনীয় উপদেশ দিয়ে সহায়তা করা।",
+                      { text: "শিশু-কিশোরেরা অনুকরণপ্রিয়, অতএব বাবা-মা বা পরিবারের বড় সদস্যদের তাদের সামনে তামাক ও মদ্যপান পরিহার করা উচিত।", icon: "fa-house-chimney" },
+                      { text: "তামাক ও মদের ক্ষতিকর প্রভাব নিয়ে সন্তানদের সাথে খোলামেলা আলোচনা করতে হব", icon: "fa-comments" },
+                      { text: "বাড়িতে ধূমপান ও মদ্যপানমুক্ত পরিবেশ তৈরি করতে হবে।", icon: "fa-ban-smoking" },
+                      { text: "সন্তান কার সাথে বন্ধুত্ব করছে এবং কার সাথে মেলামিশা করছে তা লক্ষ্য রাখা ও প্রয়োজনীয় উপদেশ দিয়ে সহায়তা করা।", icon: "fa-user-check" },
                   ],
                 },
                 {
                   heading: "২. শিক্ষাপ্রতিষ্ঠানের ভূমিকা",
+                  icon: "fa-school",
                   bullets: [
-                    "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে কিশোর-কিশোরীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।",
-                    "স্কুল-কলেজে তামাক ও মাদকের বিরুদ্ধে নিয়মিত সেমিনার, পোস্টার প্রদর্শনী বা বিতর্ক প্রতিযোগিতা আয়োজন।",
-                    "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং সুবিধা দেওয়া।",
-                    "শিক্ষকরা ঝুঁকিপূর্ণ শিক্ষার্থীদের প্রতি বিশেষ নজর দেওয়া।",
+                      { text: "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে কিশোর-কিশোরীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।", icon: "fa-user-shield" },
+                      { text: "স্কুল-কলেজে তামাক ও মাদকের বিরুদ্ধে নিয়মিত সেমিনার, পোস্টার প্রদর্শনী বা বিতর্ক প্রতিযোগিতা আয়োজন।", icon: "fa-chalkboard-user" },
+                      { text: "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং সুবিধা দেওয়া।", icon: "fa-hand-holding-heart" },
+                      { text: "শিক্ষকরা ঝুঁকিপূর্ণ শিক্ষার্থীদের প্রতি বিশেষ নজর দেওয়া।", icon: "fa-eye" },
                   ],
                 },
               ];
@@ -13474,71 +13606,82 @@ const coursesData = [
               const rightSections = [
                 {
                   heading: "৩. সামাজিক ও সরকারি উদ্যোগ",
+                  icon: "fa-gavel",
                   bullets: [
-                    "ধূমপান ও মদ্যপান জনসম্মুখে নিষিদ্ধকরণ সংক্রান্ত আইনের সঠিক বাস্তবায়ন করা।",
-                    "তামাক ও মদের বিজ্ঞাপন নিষিদ্ধ করা এবং তামাক ও মদের ক্ষতিকর প্রভাব সম্পর্কে মূলধারার মিডিয়া ও সোশ্যাল মিডিয়াতে তথ্য প্রচার।",
-                    "কমিউনিটি লিডার ও ইনফ্লুয়েন্সার যেমন ইমাম, শিক্ষক, চিকিৎসক ইত্যাদিদের মাধ্যমে বার্তা ছড়িয়ে দেওয়া।",
-                    "তামাক ও মদ্যপান থেকে মুক্তির জন্য সরকারি-বেসরকারি কাউন্সেলিং সেন্টার বাড়ানো।",
+                      { text: "ধূমপান ও মদ্যপান জনসম্মুখে নিষিদ্ধকরণ সংক্রান্ত আইনের সঠিক বাস্তবায়ন করা।", icon: "fa-gavel" },
+                      { text: "তামাক ও মদের বিজ্ঞাপন নিষিদ্ধ করা এবং তামাক ও মদের ক্ষতিকর প্রভাব সম্পর্কে মূলধারার মিডিয়া ও সোশ্যাল মিডিয়াতে তথ্য প্রচার।", icon: "fa-bullhorn" },
+                      { text: "কমিউনিটি লিডার ও ইনফ্লুয়েন্সার যেমন ইমাম, শিক্ষক, চিকিৎসক ইত্যাদিদের মাধ্যমে বার্তা ছড়িয়ে দেওয়া।", icon: "fa-users" },
+                      { text: "তামাক ও মদ্যপান থেকে মুক্তির জন্য সরকারি-বেসরকারি কাউন্সেলিং সেন্টার বাড়ানো।", icon: "fa-hospital" },
                   ],
                 },
                 {
                   heading: "৪. ব্যক্তিগত সচেতনতা ও বিকল্প পথ",
+                  icon: "fa-hand",
                   bullets: [
-                    "বন্ধু-বান্ধবদের চাপে মদ বা তামাক গ্রহণ থেকে বিরত থাকতে তামাক ও মদ্যপানকে “না” বলতে পারা।",
-                    "স্বাস্থ্যকর বিকল্প যেমন ফলমূল, হারবাল চা বা ব্যায়ামকে অভ্যাসে পরিণত করা।",
+                      { text: "বন্ধু-বান্ধবদের চাপে মদ বা তামাক গ্রহণ থেকে বিরত থাকতে তামাক ও মদ্যপানকে “না” বলতে পারা।", icon: "fa-hand" },
+                      { text: "স্বাস্থ্যকর বিকল্প যেমন ফলমূল, হারবাল চা বা ব্যায়ামকে অভ্যাসে পরিণত করা।", icon: "fa-leaf" },
                   ],
                 },
                 {
                   heading: "৫. ধর্মীয় ও নৈতিক শিক্ষার প্রসার",
+                  icon: "fa-scale-balanced",
                   bullets: [
-                    "ইসলামসহ সকল ধর্মে মাদক ও তামাক নিষিদ্ধ—এই বার্তা প্রচার করতে হবে এবং ধর্মীয় উপাসনালয়গুলোতে তামাক ও মদ্যপান প্রতিরোধের আলোচনা অন্তর্ভুক্ত করা।",
-                    "তামাক ও মাদক সমাজের জন্য ক্ষতিকর—এ বিষয়ে সর্বস্তরে নৈতিক দৃষ্টিভঙ্গি গড়ে তুলতে হবে।",
+                      { text: "ইসলামসহ সকল ধর্মে মাদক ও তামাক নিষিদ্ধ—এই বার্তা প্রচার করতে হবে এবং ধর্মীয় উপাসনালয়গুলোতে তামাক ও মদ্যপান প্রতিরোধের আলোচনা অন্তর্ভুক্ত করা।", icon: "fa-place-of-worship" },
+                      { text: "তামাক ও মাদক সমাজের জন্য ক্ষতিকর—এ বিষয়ে সর্বস্তরে নৈতিক দৃষ্টিভঙ্গি গড়ে তুলতে হবে।", icon: "fa-scale-balanced" },
                   ],
                 },
               ];
 
-              const renderBullets = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
+                const renderBullets = (items, baseDelay = 0) =>
+                  items
+                    .map(
+                      (item, idx) => `
+                        <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                          <i class="fa-solid ${item.icon}"></i>
+                          <span>${item.text}</span>
+                        </li>
+                      `
+                    )
+                    .join("");
 
-              const renderSections = (sections) =>
-                sections
-                  .map(
-                    (section) => `
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">${section.heading}</h4>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderBullets(section.bullets)}
-                        </ul>
-                      </article>
-                    `
-                  )
-                  .join("");
+                const renderSections = (sections, baseDelay = 0) =>
+                  sections
+                    .map(
+                      (section, idx) => `
+                        <article class="glass-card p-4 h-100">
+                          <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h4>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderBullets(section.bullets, baseDelay + idx * 40 + 20)}
+                          </ul>
+                        </article>
+                      `
+                    )
+                    .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-3">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-ban-smoking"></i>${yhLang(
                     "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়",
                     "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়"
                   )}</h2>
-                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-0">${introText}</p>
+                  <div class="glass-card p-4 mb-3">
+                    <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
                   </div>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
+                  <div class="row g-3">
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-                      ${renderSections(leftSections)}
+                      ${renderSections(leftSections, 60)}
                     </div>
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-                      ${renderSections(rightSections)}
+                      ${renderSections(rightSections, 60)}
                     </div>
+                  </div>
                   </div>
                 </div>
               `;
@@ -13551,87 +13694,95 @@ const coursesData = [
               "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
             ),
             icon: "fa-lungs",
-            gradientClass: "bg-gradient-sky",
+            gradientClass: "bg-gradient-purple",
             audioFile: "",
             quiz: null,
             content: (function () {
               const introText = "অ্যাজমা একটি দীর্ঘস্থায়ী শ্বাসযন্ত্রের রোগ। তবে নিয়মিত এবং সঠিকভাবে ওষুধ গ্রহণ করলে দীর্ঘদিন সুস্থ থাকা সম্ভব।";
 
               const earlySymptoms = [
-                "বারবার কাশি",
-                "বুকে বাঁশির মতো শব্দ হওয়া",
-                "শ্বাসকষ্ট / দম ফেলতে কষ্ট হওয়া",
-                "বুক চেপে ধরা",
-                "অতিরিক্ত আবেগের মাধ্যমে উপসর্গ বেড়ে যায়",
-                "সাধারণত রাতে / সকালে উপসর্গ বেশি দেখা দেয়",
-                "স্যাঁতসেঁতে বাতাসে উপসর্গ বেড়ে যায়",
+                { text: "বারবার কাশি", icon: "fa-head-side-cough" },
+                { text: "বুকে বাঁশির মতো শব্দ হওয়া", icon: "fa-volume-high" },
+                { text: "শ্বাসকষ্ট / দম ফেলতে কষ্ট হওয়া", icon: "fa-lungs" },
+                { text: "বুক চেপে ধরা", icon: "fa-heart-circle-bolt" },
+                { text: "অতিরিক্ত আবেগের মাধ্যমে উপসর্গ বেড়ে যায়", icon: "fa-face-frown" },
+                { text: "সাধারণত রাতে / সকালে উপসর্গ বেশি দেখা দেয়", icon: "fa-moon" },
+                { text: "স্যাঁতসেঁতে বাতাসে উপসর্গ বেড়ে যায়", icon: "fa-cloud-rain" },
               ];
 
               const dangerSigns = [
-                "শ্বাসকষ্টের কারণে কথা বলতে না পারা",
-                "শ্বাসকষ্টের কারণে পানি খেতে না পারা",
-                "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব",
-                "দ্রুত শ্বাস-প্রশ্বাস নেওয়া",
-                "রক্তে অক্সিজেনের মাত্রা (SpO₂) ৯২% এর নিচে",
-                "সায়ানোসিস (ত্বক বা ঠোঁটের নীলচে রঙ ধারণ করা)",
+                { text: "শ্বাসকষ্টের কারণে কথা বলতে না পারা", icon: "fa-comment-slash" },
+                { text: "শ্বাসকষ্টের কারণে পানি খেতে না পারা", icon: "fa-glass-water" },
+                { text: "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব", icon: "fa-bed" },
+                { text: "দ্রুত শ্বাস-প্রশ্বাস নেওয়া", icon: "fa-gauge-high" },
+                { text: "রক্তে অক্সিজেনের মাত্রা (SpO₂) ৯২% এর নিচে", icon: "fa-wave-square" },
+                { text: "সায়ানোসিস (ত্বক বা ঠোঁটের নীলচে রঙ ধারণ করা)", icon: "fa-triangle-exclamation" },
               ];
 
               const preventionCauses = [
-                "ধুলা-বালি",
-                "ফুলের রেণু",
-                "ঠান্ডা বাতাস",
-                "ভাইরাস সংক্রমণ",
-                "অতিরিক্ত আবেগ-উত্তেজনা",
-                "স্যাঁতসেঁতে পরিবেশ",
-                "সিগারেটের ও অন্যান্য ধোঁয়া",
+                { text: "ধুলা-বালি", icon: "fa-broom" },
+                { text: "ফুলের রেণু", icon: "fa-seedling" },
+                { text: "ঠান্ডা বাতাস", icon: "fa-wind" },
+                { text: "ভাইরাস সংক্রমণ", icon: "fa-virus" },
+                { text: "অতিরিক্ত আবেগ-উত্তেজনা", icon: "fa-face-flushed" },
+                { text: "স্যাঁতসেঁতে পরিবেশ", icon: "fa-water" },
+                { text: "সিগারেটের ও অন্যান্য ধোঁয়া", icon: "fa-smoking" },
               ];
 
-              const renderList = (items) =>
+              const renderList = (items, baseDelay = 0) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-4">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-lungs"></i>${yhLang(
                     "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা",
                     "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
                   )}</h2>
-                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="40">
-                    <h4 class="mb-2 gradient-text">অ্যাজমা বা হাঁপানি রোগঃ</h4>
-                    <p class="mb-0">${introText}</p>
+                  <div class="glass-card p-4 mb-3">
+                    <h4 class="mb-2 gradient-text" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-lungs"></i>অ্যাজমা বা হাঁপানি রোগঃ</h4>
+                    <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${introText}</p>
                   </div>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
+                  <div class="row g-3">
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">অ্যাজমা বা হাঁপানি রোগের প্রাথমিক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-stethoscope"></i>অ্যাজমা বা হাঁপানি রোগের প্রাথমিক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(earlySymptoms)}
+                          ${renderList(earlySymptoms, 100)}
                         </ul>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">বিপজ্জনক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-triangle-exclamation"></i>বিপজ্জনক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(dangerSigns)}
+                          ${renderList(dangerSigns, 100)}
                         </ul>
                       </article>
                     </div>
                     <div class="col-12 col-lg-6">
                       <div class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">অ্যাজমা বা হাঁপানি রোগ প্রতিরোধে করণীয়ঃ</h4>
-                        <p class="small text-muted mb-3">নিম্নলিখিত কারণগুলো অ্যাজমা বা হাঁপানির জন্য দায়ী, সুতরাং এগুলো থেকে যতটা সম্ভব নিজেকে সুরক্ষিত রাখতে হবে—</p>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-shield-heart"></i>অ্যাজমা বা হাঁপানি রোগ প্রতিরোধে করণীয়ঃ</h4>
+                        <p class="small text-muted mb-3" data-aos="fade-up" data-aos-delay="100">নিম্নলিখিত কারণগুলো অ্যাজমা বা হাঁপানির জন্য দায়ী, সুতরাং এগুলো থেকে যতটা সম্ভব নিজেকে সুরক্ষিত রাখতে হবে—</p>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(preventionCauses)}
+                          ${renderList(preventionCauses, 120)}
                         </ul>
                       </div>
                     </div>
+                  </div>
                   </div>
                 </div>
               `;
@@ -13643,8 +13794,8 @@ const coursesData = [
               "অ্যাজমা বা হাঁপানি রোগঃ",
               "অ্যাজমা বা হাঁপানি রোগঃ"
             ),
-            icon: "fa-person-breastfeeding",
-            gradientClass: "bg-gradient-indigo",
+            icon: "fa-wind",
+            gradientClass: "bg-gradient-pink",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -13669,13 +13820,21 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-5">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-wind"></i>${yhLang(
                     "অ্যাজমা বা হাঁপানি রোগঃ",
                     "অ্যাজমা বা হাঁপানি রোগঃ"
                   )}</h2>
                   <div class="row g-3 mt-1">
                     ${renderImageGrid()}
+                  </div>
                   </div>
                 </div>
               `;
@@ -13687,8 +13846,8 @@ const coursesData = [
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
             ),
-            icon: "fa-droplet",
-            gradientClass: "bg-gradient-rose",
+            icon: "fa-vial",
+            gradientClass: "bg-gradient-yellow",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -13696,93 +13855,101 @@ const coursesData = [
                 "ডায়াবেটিস একটি দীর্ঘমেয়াদী রোগ, যাতে রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে বেশি হয়ে যায়। এর প্রধান কারণ হলো ইনসুলিন হরমোনের অভাব বা ইনসুলিনের কার্যকারিতা হ্রাস পাওয়া। প্রাপ্তবয়স্কদের পাশাপাশি কিশোর-কিশোরীরাও ডায়াবেটিসে আক্রান্ত হতে পারে। কিশোর-কিশোরীদের ডায়াবেটিসকে সাধারণত টাইপ-১ ডায়াবেটিস বলা হয়।";
 
               const diabetesEarly = [
-                "বারবার পিপাসা পাওয়া",
-                "বারবার প্রস্রাব হওয়া",
-                "অতিরিক্ত ক্ষুধা পাওয়া",
-                "যথেষ্ট খাওয়া সত্ত্বেও ওজন কমে যাওয়া",
-                "সবসময় ক্লান্তি, অবসাদ বা দুর্বলতা অনুভব করা",
+                { text: "বারবার পিপাসা পাওয়া", icon: "fa-glass-water" },
+                { text: "বারবার প্রস্রাব হওয়া", icon: "fa-toilet" },
+                { text: "অতিরিক্ত ক্ষুধা পাওয়া", icon: "fa-bowl-food" },
+                { text: "যথেষ্ট খাওয়া সত্ত্বেও ওজন কমে যাওয়া", icon: "fa-weight-scale" },
+                { text: "সবসময় ক্লান্তি, অবসাদ বা দুর্বলতা অনুভব করা", icon: "fa-battery-quarter" },
               ];
 
               const diabetesDanger = [
-                "মুখ ও জিহ্বা শুকিয়ে যাওয়া",
-                "দ্রুত / লম্বা শ্বাস",
-                "শ্বাসে মিষ্টি ফলের মতো (এসিটোন) গন্ধ",
-                "পেটে ব্যথা",
-                "বমির প্রবণতা / বমি",
+                { text: "মুখ ও জিহ্বা শুকিয়ে যাওয়া", icon: "fa-droplet" },
+                { text: "দ্রুত / লম্বা শ্বাস", icon: "fa-lungs" },
+                { text: "শ্বাসে মিষ্টি ফলের মতো (এসিটোন) গন্ধ", icon: "fa-wind" },
+                { text: "পেটে ব্যথা", icon: "fa-circle-exclamation" },
+                { text: "বমির প্রবণতা / বমি", icon: "fa-face-dizzy" },
               ];
 
               const hypoIntro =
                 "রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে অত্যধিক কমে যাওয়াকে হাইপোগ্লাইসেমিয়া বলে। সাধারণত রক্তে গ্লুকোজের মাত্রা ৭০ মিলিগ্রাম/ডেসি লিটার (৩.৯ মিলিমল/লিটার) এর নিচে নামলে এটি ঘটে।";
 
               const hypoSymptoms = [
-                "অতিরিক্ত ঘাম হওয়া",
-                "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব",
-                "চোখে ঝাপসা বা ঘোলা দেখা",
-                "কাঁপুনি – হাত-পা কাঁপতে শুরু করা",
-                "অচেতনতা / অজ্ঞান হয়ে যাওয়া – শরীরের অবস্থা খারাপ হলে মানুষ অজ্ঞান হয়ে যেতে পারে বা জ্ঞান হারাতে পারে",
+                { text: "অতিরিক্ত ঘাম হওয়া", icon: "fa-droplet" },
+                { text: "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব", icon: "fa-bed" },
+                { text: "চোখে ঝাপসা বা ঘোলা দেখা", icon: "fa-eye-low-vision" },
+                { text: "কাঁপুনি – হাত-পা কাঁপতে শুরু করা", icon: "fa-hands" },
+                { text: "অচেতনতা / অজ্ঞান হয়ে যাওয়া – শরীরের অবস্থা খারাপ হলে মানুষ অজ্ঞান হয়ে যেতে পারে বা জ্ঞান হারাতে পারে", icon: "fa-person-falling" },
               ];
 
               const parentActions = [
-                "ডায়াবেটিসে আক্রান্ত শিশু-কিশোরকে বোঝানো যে নিয়ম মেনে চললে তার স্বাভাবিক জীবনযাপনে কোনো সমস্যা হবে না",
-                "প্রতিদিন কমপক্ষে ৩০ মিনিট দ্রুত হাঁটা / সাইকেল চালানো / সাঁতার কাটা / খেলাধুলা করা / ব্যায়াম করতে হবে",
-                "পর্যাপ্ত পরিমাণে ফলমূল ও শাকসবজি খেতে হবে",
-                "নিয়মিত রক্তে গ্লুকোজের মাত্রা পর্যবেক্ষণ করতে হবে",
+                { text: "ডায়াবেটিসে আক্রান্ত শিশু-কিশোরকে বোঝানো যে নিয়ম মেনে চললে তার স্বাভাবিক জীবনযাপনে কোনো সমস্যা হবে না", icon: "fa-comments" },
+                { text: "প্রতিদিন কমপক্ষে ৩০ মিনিট দ্রুত হাঁটা / সাইকেল চালানো / সাঁতার কাটা / খেলাধুলা করা / ব্যায়াম করতে হবে", icon: "fa-person-running" },
+                { text: "পর্যাপ্ত পরিমাণে ফলমূল ও শাকসবজি খেতে হবে", icon: "fa-apple-whole" },
+                { text: "নিয়মিত রক্তে গ্লুকোজের মাত্রা পর্যবেক্ষণ করতে হবে", icon: "fa-gauge" },
               ];
 
-              const renderList = (items) =>
+              const renderList = (items, baseDelay = 0) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-6">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-vial"></i>${yhLang(
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
                   )}</h2>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="40">
+                  <div class="row g-3">
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
                       <article class="glass-card p-4 h-100">
-                        <p class="mb-0">${diabetesInfo}</p>
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${diabetesInfo}</p>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">ডায়াবেটিসের প্রাথমিক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>ডায়াবেটিসের প্রাথমিক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(diabetesEarly)}
+                          ${renderList(diabetesEarly, 80)}
                         </ul>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">ডায়াবেটিসের বিপজ্জনক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>ডায়াবেটিসের বিপজ্জনক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(diabetesDanger)}
+                          ${renderList(diabetesDanger, 80)}
                         </ul>
                       </article>
                     </div>
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-2">হাইপোগ্লাইসেমিয়া</h4>
-                        <p class="mb-0">${hypoIntro}</p>
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-droplet"></i>হাইপোগ্লাইসেমিয়া</h4>
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="80">${hypoIntro}</p>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">হাইপোগ্লাইসেমিয়ার লক্ষণ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>হাইপোগ্লাইসেমিয়ার লক্ষণ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(hypoSymptoms)}
+                          ${renderList(hypoSymptoms, 80)}
                         </ul>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">পিতা-মাতা / অভিভাবকদের করণীয়</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(parentActions)}
+                          ${renderList(parentActions, 80)}
                         </ul>
                       </article>
                     </div>
+                  </div>
                   </div>
                 </div>
               `;
@@ -13795,7 +13962,7 @@ const coursesData = [
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
             ),
             icon: "fa-syringe",
-            gradientClass: "bg-gradient-blue",
+            gradientClass: "bg-gradient-teal",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -13820,13 +13987,21 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-7">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-syringe"></i>${yhLang(
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
                   )}</h2>
                   <div class="row g-3 mt-1">
                     ${renderImageGrid()}
+                  </div>
                   </div>
                 </div>
               `;
@@ -13838,8 +14013,8 @@ const coursesData = [
               "থ্যালাসেমিয়া কী?",
               "থ্যালাসেমিয়া কী?"
             ),
-            icon: "fa-vial",
-            gradientClass: "bg-gradient-purple",
+            icon: "fa-dna",
+            gradientClass: "bg-gradient-orange",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -13847,72 +14022,80 @@ const coursesData = [
                 "থ্যালাসেমিয়া একটি বংশগত রক্তরোগ। এ রোগে আক্রান্ত হলে রক্তে হিমোগ্লোবিন তৈরি বাধাগ্রস্ত হয়। ফলে শরীরে রক্তশূন্যতা (অ্যানিমিয়া) দেখা দেয়। মা–বাবা থ্যালাসেমিয়ায় আক্রান্ত হলে বা নীরব বাহক হলে সন্তানের থ্যালাসেমিয়া হতে পারে।";
 
               const earlySymptoms = [
-                "দিনে দিনে ফ্যাকাসে হয়ে যাওয়া",
-                "অতিরিক্ত শারীরিক দুর্বলতা",
-                "স্বাভাবিক খেলাধুলায় হাঁপিয়ে যাওয়া",
-                "জন্ডিস হওয়া",
-                "ধীরে ধীরে পেট ফুলে যাওয়া",
-                "খাদ্যদ্রব্য নয় এমন জিনিস, বিশেষ করে মাটি, কাদা ইত্যাদি খাওয়ার প্রবণতা",
-                "বয়স অনুযায়ী শারীরিক বৃদ্ধি না হওয়া, বারবার মুখের কোণায় ঘা হওয়া",
+                { text: "দিনে দিনে ফ্যাকাসে হয়ে যাওয়া", icon: "fa-face-frown" },
+                { text: "অতিরিক্ত শারীরিক দুর্বলতা", icon: "fa-battery-empty" },
+                { text: "স্বাভাবিক খেলাধুলায় হাঁপিয়ে যাওয়া", icon: "fa-person-walking" },
+                { text: "জন্ডিস হওয়া", icon: "fa-sun" },
+                { text: "ধীরে ধীরে পেট ফুলে যাওয়া", icon: "fa-circle" },
+                { text: "খাদ্যদ্রব্য নয় এমন জিনিস, বিশেষ করে মাটি, কাদা ইত্যাদি খাওয়ার প্রবণতা", icon: "fa-triangle-exclamation" },
+                { text: "বয়স অনুযায়ী শারীরিক বৃদ্ধি না হওয়া, বারবার মুখের কোণায় ঘা হওয়া", icon: "fa-child" },
               ];
 
               const dangerSymptoms = [
-                "অতিরিক্ত ফ্যাকাসে হয়ে যাওয়া",
-                "বুক ধরফর করা",
-                "অতিরিক্ত শ্বাসকষ্ট",
-                "থ্যালাসেমিক মুখ",
+                { text: "অতিরিক্ত ফ্যাকাসে হয়ে যাওয়া", icon: "fa-face-frown-open" },
+                { text: "বুক ধরফর করা", icon: "fa-heart-pulse" },
+                { text: "অতিরিক্ত শ্বাসকষ্ট", icon: "fa-lungs" },
+                { text: "থ্যালাসেমিক মুখ", icon: "fa-user" },
               ];
 
               const guardianActions = [
-                "রক্তসম্পর্কিত আত্মীয়দের (মামাতো, চাচাতো, ফুপাতো, খালাতো ভাই-বোন) মধ্যে বিবাহ থেকে বিরত থাকতে হবে",
-                "বিয়ের আগে বর ও কনে থ্যালাসেমিয়া বাহক কি না, তা পরীক্ষা করে দেখতে হবে",
-                "কলিজা, ডিম, মাংস, ডাল (বিশেষত মুগডাল), দুধ ও দুধজাত খাবার, মাছ, শিম, মিষ্টি কুমড়া, ফুলকপি, মটর, সবুজ শাকসবজি বিশেষ করে কচুশাক/লালশাক, আমলকী, জাম্বুরা, কমলা, লেবু ইত্যাদি খাবার বেশি খেতে হবে",
+                { text: "রক্তসম্পর্কিত আত্মীয়দের (মামাতো, চাচাতো, ফুপাতো, খালাতো ভাই-বোন) মধ্যে বিবাহ থেকে বিরত থাকতে হবে", icon: "fa-people-arrows" },
+                { text: "বিয়ের আগে বর ও কনে থ্যালাসেমিয়া বাহক কি না, তা পরীক্ষা করে দেখতে হবে", icon: "fa-vial" },
+                { text: "কলিজা, ডিম, মাংস, ডাল (বিশেষত মুগডাল), দুধ ও দুধজাত খাবার, মাছ, শিম, মিষ্টি কুমড়া, ফুলকপি, মটর, সবুজ শাকসবজি বিশেষ করে কচুশাক/লালশাক, আমলকী, জাম্বুরা, কমলা, লেবু ইত্যাদি খাবার বেশি খেতে হবে", icon: "fa-carrot" },
               ];
 
-              const renderList = (items) =>
+              const renderList = (items, baseDelay = 0) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-8">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-dna"></i>${yhLang(
                     "থ্যালাসেমিয়া কী?",
                     "থ্যালাসেমিয়া কী?"
                   )}</h2>
-                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-0">${introText}</p>
+                  <div class="glass-card p-4 mb-3">
+                    <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
                   </div>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
+                  <div class="row g-3">
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">থ্যালাসেমিয়া বা আয়রন ডেফিসিয়েন্সি এনিমিয়ার প্রাথমিক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>থ্যালাসেমিয়া বা আয়রন ডেফিসিয়েন্সি এনিমিয়ার প্রাথমিক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(earlySymptoms)}
+                          ${renderList(earlySymptoms, 80)}
                         </ul>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">থ্যালাসেমিয়া রোগের বিপজ্জনক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>থ্যালাসেমিয়া রোগের বিপজ্জনক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(dangerSymptoms)}
+                          ${renderList(dangerSymptoms, 80)}
                         </ul>
                       </article>
                     </div>
                     <div class="col-12 col-lg-6">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">পিতা-মাতা / অভিভাবকদের করণীয়</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(guardianActions)}
+                          ${renderList(guardianActions, 80)}
                         </ul>
                       </article>
                     </div>
+                  </div>
                   </div>
                 </div>
               `;
@@ -13924,8 +14107,8 @@ const coursesData = [
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
             ),
-            icon: "fa-heart-circle-bolt",
-            gradientClass: "bg-gradient-teal",
+            icon: "fa-notes-medical",
+            gradientClass: "bg-gradient-green",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -13950,13 +14133,21 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-9">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-notes-medical"></i>${yhLang(
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
                   )}</h2>
                   <div class="row g-3 mt-1">
                     ${renderImageGrid()}
+                  </div>
                   </div>
                 </div>
               `;
@@ -13969,7 +14160,7 @@ const coursesData = [
               "হৃদরোগ ও উচ্চ রক্তচাপ"
             ),
             icon: "fa-heart-pulse",
-            gradientClass: "bg-gradient-crimson",
+            gradientClass: "bg-gradient-lavender",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -13977,91 +14168,99 @@ const coursesData = [
                 "জন্মগত হৃদরোগ বলতে সেই সমস্ত হার্টের অসঙ্গতি বা ত্রুটিকে বোঝায়, যেগুলো শিশুর জন্মের সময় উপস্থিত থাকে। যেমন—হার্টের পর্দায় ছিদ্র অথবা হার্টের পর্দার অনুপস্থিতি, হার্টের ভাল্ব সরু হওয়া বা ভাল্ব তৈরি না হওয়া, রক্তনালীতে সমস্যা, হার্টের রক্তনালী ও প্রকোষ্ঠসমূহের অস্বাভাবিক অবস্থান ইত্যাদি।";
 
               const heartEarly = [
-                "ঘন ঘন ঠান্ডা, সর্দি ও কাশিতে আক্রান্ত হওয়া",
-                "শ্বাসকষ্ট হওয়া",
-                "হাঁটতে / চলাচলের সময় হাঁপিয়ে যাওয়া",
-                "পা ফুলে যাওয়া বা পায়ে পানি আসা",
-                "বাচ্চা অস্বাভাবিক কান্না করা",
-                "বাচ্চার বুকের দুধ টানতে কষ্ট হওয়া",
+                { text: "ঘন ঘন ঠান্ডা, সর্দি ও কাশিতে আক্রান্ত হওয়া", icon: "fa-head-side-cough" },
+                { text: "শ্বাসকষ্ট হওয়া", icon: "fa-lungs" },
+                { text: "হাঁটতে / চলাচলের সময় হাঁপিয়ে যাওয়া", icon: "fa-person-walking" },
+                { text: "পা ফুলে যাওয়া বা পায়ে পানি আসা", icon: "fa-droplet" },
+                { text: "বাচ্চা অস্বাভাবিক কান্না করা", icon: "fa-baby" },
+                { text: "বাচ্চার বুকের দুধ টানতে কষ্ট হওয়া", icon: "fa-bottle-water" },
               ];
 
               const heartDanger = [
-                "কাঁদতে কাঁদতে বাচ্চা নীল হয়ে যাওয়া",
-                "খিঁচুনি হওয়া",
-                "বাচ্চা নিস্তেজ হয়ে যাওয়া",
+                { text: "কাঁদতে কাঁদতে বাচ্চা নীল হয়ে যাওয়া", icon: "fa-face-frown" },
+                { text: "খিঁচুনি হওয়া", icon: "fa-bolt" },
+                { text: "বাচ্চা নিস্তেজ হয়ে যাওয়া", icon: "fa-face-dizzy" },
               ];
 
               const bpIntro =
                 "কিশোর-কিশোরীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।";
 
               const bpEarly = [
-                "রক্তচাপ ১৪০/৯০ বা এর বেশি",
-                "মানসিকভাবে অস্থির লাগা",
-                "মাথাব্যথা বা মাথা ঘোরা",
+                { text: "রক্তচাপ ১৪০/৯০ বা এর বেশি", icon: "fa-gauge-high" },
+                { text: "মানসিকভাবে অস্থির লাগা", icon: "fa-face-meh" },
+                { text: "মাথাব্যথা বা মাথা ঘোরা", icon: "fa-head-side-virus" },
               ];
 
               const bpPrevention = [
-                "অতিরিক্ত লবণ পরিহার করতে হবে",
-                "তামাকজাত দ্রব্য পরিহার করতে হবে",
-                "মাংস ও চর্বিযুক্ত খাবার কম খাওয়া উচিত",
-                "নিয়মিত হাঁটাহাঁটির অভ্যাস করতে হবে",
+                { text: "অতিরিক্ত লবণ পরিহার করতে হবে", icon: "fa-salt-shaker" },
+                { text: "তামাকজাত দ্রব্য পরিহার করতে হবে", icon: "fa-ban-smoking" },
+                { text: "মাংস ও চর্বিযুক্ত খাবার কম খাওয়া উচিত", icon: "fa-drumstick-bite" },
+                { text: "নিয়মিত হাঁটাহাঁটির অভ্যাস করতে হবে", icon: "fa-person-walking" },
               ];
 
-              const renderList = (items) =>
+              const renderList = (items, baseDelay = 0) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-10">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-heart-pulse"></i>${yhLang(
                     "হৃদরোগ ও উচ্চ রক্তচাপ",
                     "হৃদরোগ ও উচ্চ রক্তচাপ"
                   )}</h2>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="40">
+                  <div class="row g-3">
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-2">হৃদরোগ</h4>
-                        <p class="mb-0">${heartIntro}</p>
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-heart-pulse"></i>হৃদরোগ</h4>
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${heartIntro}</p>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">শিশুর জন্মগত হৃদরোগের প্রাথমিক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>শিশুর জন্মগত হৃদরোগের প্রাথমিক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(heartEarly)}
+                          ${renderList(heartEarly, 80)}
                         </ul>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">শিশুর জন্মগত হৃদরোগের বিপজ্জনক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>শিশুর জন্মগত হৃদরোগের বিপজ্জনক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(heartDanger)}
+                          ${renderList(heartDanger, 80)}
                         </ul>
                       </article>
                     </div>
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-2">উচ্চ রক্তচাপ</h4>
-                        <p class="mb-0">${bpIntro}</p>
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h4>
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${bpIntro}</p>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(bpEarly)}
+                          ${renderList(bpEarly, 80)}
                         </ul>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">উচ্চ রক্তচাপ প্রতিরোধের উপায়</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-shield-heart"></i>উচ্চ রক্তচাপ প্রতিরোধের উপায়</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(bpPrevention)}
+                          ${renderList(bpPrevention, 80)}
                         </ul>
                       </article>
                     </div>
+                  </div>
                   </div>
                 </div>
               `;
@@ -14073,8 +14272,8 @@ const coursesData = [
               "হৃদরোগ ও উচ্চ রক্তচাপ",
               "হৃদরোগ ও উচ্চ রক্তচাপ"
             ),
-            icon: "fa-heart",
-            gradientClass: "bg-gradient-rose",
+            icon: "fa-heart-circle-bolt",
+            gradientClass: "bg-gradient-mint",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -14099,13 +14298,21 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-11">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-heart-circle-bolt"></i>${yhLang(
                     "হৃদরোগ ও উচ্চ রক্তচাপ",
                     "হৃদরোগ ও উচ্চ রক্তচাপ"
                   )}</h2>
                   <div class="row g-3 mt-1">
                     ${renderImageGrid()}
+                  </div>
                   </div>
                 </div>
               `;
@@ -14126,71 +14333,79 @@ const coursesData = [
                 "মস্তিষ্কের কোনো স্নায়ুকোষের হঠাৎ অস্বাভাবিক উদ্দীপনার ফলে শারীরিক যে পরিবর্তন বা অবস্থা তৈরি হয়, তাকে বলা হয় মৃগীরোগ বা এপিলেপ্সি। এই পরিবর্তন শরীরের কোনো একটি অংশে বা সম্পূর্ণ শরীরজুড়ে হতে পারে। এটি মানসিক বা ছোঁয়াচে রোগ নয়, আলগা বাতাস বা জ্বিন-ভূতের আছর নয়। বরং এ রোগ যে কারোরই হতে পারে।";
 
               const detectionPoints = [
-                "জ্বর ছাড়া সমস্ত শরীরের অথবা শরীরের যেকোনো অঙ্গের একবার বা তার অধিক ঝাঁকুনি বা কাঁপুনি",
-                "কোনো রকম ঝাঁকুনি বা কাঁপুনি ছাড়াই শরীর শক্ত / বাঁকা হয়ে যাওয়া",
-                "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া",
+                { text: "জ্বর ছাড়া সমস্ত শরীরের অথবা শরীরের যেকোনো অঙ্গের একবার বা তার অধিক ঝাঁকুনি বা কাঁপুনি", icon: "fa-bolt" },
+                { text: "কোনো রকম ঝাঁকুনি বা কাঁপুনি ছাড়াই শরীর শক্ত / বাঁকা হয়ে যাওয়া", icon: "fa-person-falling" },
+                { text: "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া", icon: "fa-person-falling-burst" },
               ];
 
               const symptomPoints = [
-                "জ্ঞান হারানো",
-                "মুখ দিয়ে ফেনা বা লালা পড়া",
-                "জিহ্বায় কামড় খাওয়া",
-                "চোখের মণি উপরের দিকে উঠে যাওয়া",
-                "শরীর শক্ত / বাঁকা হয়ে যাওয়া",
-                "প্রস্রাব / পায়খানা করে দেওয়া",
-                "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া",
+                { text: "জ্ঞান হারানো", icon: "fa-face-dizzy" },
+                { text: "মুখ দিয়ে ফেনা বা লালা পড়া", icon: "fa-droplet" },
+                { text: "জিহ্বায় কামড় খাওয়া", icon: "fa-teeth" },
+                { text: "চোখের মণি উপরের দিকে উঠে যাওয়া", icon: "fa-eye" },
+                { text: "শরীর শক্ত / বাঁকা হয়ে যাওয়া", icon: "fa-person-falling" },
+                { text: "প্রস্রাব / পায়খানা করে দেওয়া", icon: "fa-toilet-paper" },
+                { text: "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া", icon: "fa-circle-exclamation" },
               ];
 
               const guardianActions = [
-                "খিঁচুনিরত অবস্থায় বাম পাশে কাত করে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রে নিয়ে যেতে হবে",
-                "মৃগীরোগের ওষুধ চিকিৎসকের পরামর্শ ছাড়া বন্ধ করা যাবে না",
-                "খিঁচুনির দিন, তারিখ ও বর্ণনা মনে রেখে চিকিৎসককে জানাতে হবে",
+                { text: "খিঁচুনিরত অবস্থায় বাম পাশে কাত করে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রে নিয়ে যেতে হবে", icon: "fa-truck-medical" },
+                { text: "মৃগীরোগের ওষুধ চিকিৎসকের পরামর্শ ছাড়া বন্ধ করা যাবে না", icon: "fa-pills" },
+                { text: "খিঁচুনির দিন, তারিখ ও বর্ণনা মনে রেখে চিকিৎসককে জানাতে হবে", icon: "fa-clipboard-list" },
               ];
 
-              const renderList = (items) =>
+              const renderList = (items, baseDelay = 0) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-12">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-brain"></i>${yhLang(
                     "কিশোর-কিশোরীদের মৃগীরোগ",
                     "কিশোর-কিশোরীদের মৃগীরোগ"
                   )}</h2>
-                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-0">${introText}</p>
+                  <div class="glass-card p-4 mb-3">
+                    <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
                   </div>
-                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60">
-                    <h4 class="gradient-text mb-3">মৃগীরোগ শনাক্তকরণের লক্ষণসমূহ</h4>
+                  <div class="glass-card p-4 mb-3">
+                    <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-magnifying-glass"></i>মৃগীরোগ শনাক্তকরণের লক্ষণসমূহ</h4>
                     <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(detectionPoints)}
+                      ${renderList(detectionPoints, 80)}
                     </ul>
                   </div>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="80">
+                  <div class="row g-3">
                     <div class="col-12 col-lg-6">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">কিশোর-কিশোরীদের মৃগীরোগের লক্ষণসমূহের সাথে অন্যান্য উপসর্গ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-heart-pulse"></i>কিশোর-কিশোরীদের মৃগীরোগের লক্ষণসমূহের সাথে অন্যান্য উপসর্গ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(symptomPoints)}
+                          ${renderList(symptomPoints, 100)}
                         </ul>
                       </article>
                     </div>
                     <div class="col-12 col-lg-6">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">পিতা-মাতা / অভিভাবকদের করণীয়</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(guardianActions)}
+                          ${renderList(guardianActions, 100)}
                         </ul>
                       </article>
                     </div>
+                  </div>
                   </div>
                 </div>
               `;
@@ -14203,7 +14418,7 @@ const coursesData = [
               "কিশোর-কিশোরীদের মৃগীরোগ"
             ),
             icon: "fa-bolt",
-            gradientClass: "bg-gradient-violet",
+            gradientClass: "bg-gradient-pink",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -14228,13 +14443,21 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-13">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-bolt"></i>${yhLang(
                     "কিশোর-কিশোরীদের মৃগীরোগ",
                     "কিশোর-কিশোরীদের মৃগীরোগ"
                   )}</h2>
                   <div class="row g-3 mt-1">
                     ${renderImageGrid()}
+                  </div>
                   </div>
                 </div>
               `;
@@ -14246,8 +14469,8 @@ const coursesData = [
               "নেফ্রোটিক সিনড্রোম রোগ",
               "নেফ্রোটিক সিনড্রোম রোগ"
             ),
-            icon: "fa-droplet",
-            gradientClass: "bg-gradient-emerald",
+            icon: "fa-kidneys",
+            gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -14255,60 +14478,68 @@ const coursesData = [
                 "নেফ্রোটিক সিনড্রোম এক ধরনের অসুখ, যার ফলে প্রস্রাবে প্রোটিনের মাত্রা বেড়ে যায়। শিশু বয়সে ও কৈশোরকালে নেফ্রোটিক সিনড্রোম সমস্যার অন্তর্নিহিত কারণ এখনো অজানা। এক্ষেত্রে মনে রাখা প্রয়োজন যে—";
 
               const syndromeNotes = [
-                "নেফ্রোটিক সিনড্রোম সাধারণত কোনো বংশগত রোগ নয়।",
-                "নিয়মিত চিকিৎসা করলে এ রোগ নিয়ন্ত্রণে থাকে, কিন্তু এই রোগ ১৮ বছর পর্যন্ত বারবার হতে পারে।",
-                "তবে আশার কথা হলো শতকরা ৮০ ভাগ রোগী ১৬–১৮ বছর পর ভালো হয়ে যায় এবং তাদের কিডনিও সম্পূর্ণ কার্যক্ষম থাকে।",
+                { text: "নেফ্রোটিক সিনড্রোম সাধারণত কোনো বংশগত রোগ নয়।", icon: "fa-dna" },
+                { text: "নিয়মিত চিকিৎসা করলে এ রোগ নিয়ন্ত্রণে থাকে, কিন্তু এই রোগ ১৮ বছর পর্যন্ত বারবার হতে পারে।", icon: "fa-calendar-check" },
+                { text: "তবে আশার কথা হলো শতকরা ৮০ ভাগ রোগী ১৬–১৮ বছর পর ভালো হয়ে যায় এবং তাদের কিডনিও সম্পূর্ণ কার্যক্ষম থাকে।", icon: "fa-heart-circle-check" },
               ];
 
               const syndromeSymptoms = [
-                "চোখের চারপাশে ফোলাভাব",
-                "মুখমণ্ডল ও তার চারপাশ ফুলে যাওয়া",
-                "পেট ফুলে যাওয়া",
-                "হাত ও পায়ে ফোলা ভাব",
-                "প্রস্রাবের পরিমাণ কমে যাওয়া",
+                { text: "চোখের চারপাশে ফোলাভাব", icon: "fa-eye" },
+                { text: "মুখমণ্ডল ও তার চারপাশ ফুলে যাওয়া", icon: "fa-face-frown" },
+                { text: "পেট ফুলে যাওয়া", icon: "fa-circle" },
+                { text: "হাত ও পায়ে ফোলা ভাব", icon: "fa-hands" },
+                { text: "প্রস্রাবের পরিমাণ কমে যাওয়া", icon: "fa-droplet-slash" },
               ];
 
               const guardianNote =
                 "লক্ষণসমূহ দেখা দিলে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রের অসংক্রামক রোগ বিভাগে যোগাযোগ করতে হবে।";
 
-              const renderList = (items) =>
+              const renderList = (items, baseDelay = 0) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-14">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-kidneys"></i>${yhLang(
                     "নেফ্রোটিক সিনড্রোম রোগ",
                     "নেফ্রোটিক সিনড্রোম রোগ"
                   )}</h2>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="40">
+                  <div class="row g-3">
                     <div class="col-12 col-lg-12 d-flex flex-column gap-3">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-2">নেফ্রোটিক সিনড্রোম</h4>
-                        <p>${syndromeIntro}</p>
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-kidneys"></i>নেফ্রোটিক সিনড্রোম</h4>
+                        <p data-aos="fade-up" data-aos-delay="60">${syndromeIntro}</p>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(syndromeNotes)}
+                          ${renderList(syndromeNotes, 80)}
                         </ul>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">কিশোর-কিশোরীদের নেফ্রোটিক সিনড্রোম রোগের লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>কিশোর-কিশোরীদের নেফ্রোটিক সিনড্রোম রোগের লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(syndromeSymptoms)}
+                          ${renderList(syndromeSymptoms, 80)}
                         </ul>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3">পিতা-মাতা / অভিভাবকদের করণীয়</h4>
-                        <p class="mb-0">${guardianNote}</p>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="80">${guardianNote}</p>
                       </article>
                     </div>
+                  </div>
                   </div>
                 </div>
               `;
@@ -14320,8 +14551,8 @@ const coursesData = [
               "নেফ্রোটিক সিনড্রোম রোগ",
               "নেফ্রোটিক সিনড্রোম রোগ"
             ),
-            icon: "fa-water",
-            gradientClass: "bg-gradient-cyan",
+            icon: "fa-droplet",
+            gradientClass: "bg-gradient-emerald",
             audioFile: "",
             quiz: null,
             content: (function () {
@@ -14345,13 +14576,21 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod20-lesson mod20-lesson-15">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--diamond"></span>
+                    <span class="mod20-shape mod20-shape--hexagon"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-droplet"></i>${yhLang(
                     "নেফ্রোটিক সিনড্রোম রোগ",
                     "নেফ্রোটিক সিনড্রোম রোগ"
                   )}</h2>
                   <div class="row g-3 mt-1">
                     ${renderImageGrid()}
+                  </div>
                   </div>
                 </div>
               `;

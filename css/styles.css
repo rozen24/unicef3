@@ -223,7 +223,9 @@ html[lang|="bn"] .lession_11_title lang {
 html:lang(bn) span  lang,
 html[lang|="bn"] span lang {
   font-size: 20px !important;
+  line-height: 16px;
 }
+span {line-height: 18px;}
 html:lang(bn) .offcanvas  lang,
 html[lang|="bn"] .offcanvas lang {
   font-size: 22px !important;
@@ -258,7 +260,8 @@ html[lang|="bn"] h6 lang {
 }
 html:lang(bn) h3 lang,
 html[lang|="bn"] h3 lang {
-  font-size: 36px !important;
+  font-size: 26px !important;
+  line-height: 24px;
 }
 html:lang(bn) .m25l4-text lang,
 html[lang|="bn"] .m25l4-text lang {
@@ -1886,6 +1889,270 @@ html[lang|="bn"] h2 {
 
 .bg-gradient-rose {
   background: linear-gradient(135deg, #FB7185 0%, #F43F5E 100%);
+}
+
+/* ==================== MODULE 20 ==================== */
+.mod20-lesson {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  padding: 24px;
+  background-size: 200% 200%;
+  animation: gradientShift 18s ease infinite;
+}
+
+.mod20-content {
+  position: relative;
+  z-index: 2;
+}
+
+.mod20-shapes {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mod20-shape {
+  position: absolute;
+  opacity: 0.35;
+  filter: blur(0.5px);
+}
+
+.mod20-shape--orb {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 70%);
+  top: -70px;
+  left: -70px;
+}
+
+.mod20-shape--ring {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  bottom: -40px;
+  right: 6%;
+}
+
+.mod20-shape--triangle {
+  width: 180px;
+  height: 160px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 12%;
+  right: -20px;
+}
+
+.mod20-shape--wave {
+  width: 240px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.2));
+  border-radius: 999px 999px 0 0;
+  bottom: -30px;
+  left: 12%;
+  transform: rotate(-6deg);
+}
+
+.mod20-lesson-1 { background: linear-gradient(135deg, #fff1eb 0%, #e6f7ff 100%); }
+.mod20-lesson-2 { background: linear-gradient(135deg, #e6f7ff 0%, #fef6e4 100%); }
+.mod20-lesson-3 { background: linear-gradient(135deg, #f3e8ff 0%, #e8f9f1 100%); }
+.mod20-lesson-4 { background: linear-gradient(135deg, #e2f5ff 0%, #fde2f3 100%); }
+.mod20-lesson-5 { background: linear-gradient(135deg, #fef3c7 0%, #e0f2fe 100%); }
+.mod20-lesson-6 { background: linear-gradient(135deg, #fce7f3 0%, #ecfccb 100%); }
+.mod20-lesson-7 { background: linear-gradient(135deg, #e0f2f1 0%, #fde68a 100%); }
+.mod20-lesson-8 { background: linear-gradient(135deg, #e9d5ff 0%, #cffafe 100%); }
+.mod20-lesson-9 { background: linear-gradient(135deg, #dbeafe 0%, #fae8ff 100%); }
+.mod20-lesson-10 { background: linear-gradient(135deg, #dcfce7 0%, #fde2e4 100%); }
+.mod20-lesson-11 { background: linear-gradient(135deg, #e0e7ff 0%, #d1fae5 100%); }
+.mod20-lesson-12 { background: linear-gradient(135deg, #fef9c3 0%, #e0f2fe 100%); }
+.mod20-lesson-13 { background: linear-gradient(135deg, #ffe4e6 0%, #e2e8f0 100%); }
+.mod20-lesson-14 { background: linear-gradient(135deg, #f1f5f9 0%, #e0f2fe 100%); }
+.mod20-lesson-15 { background: linear-gradient(135deg, #ffedd5 0%, #e0e7ff 100%); }
+
+/* Module 20 Enhanced Card Shadows */
+.mod20-lesson .glass-card {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.mod20-lesson .glass-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+/* Module 20 Heading Icons & Colors */
+.mod20-lesson h2.slide-title {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mod20-lesson h2.slide-title i {
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(2px 2px 4px rgba(102, 126, 234, 0.3));
+}
+
+.mod20-lesson h3.gradient-text,
+.mod20-lesson h4.gradient-text,
+.mod20-lesson h5.gradient-text,
+.mod20-lesson h6.gradient-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.mod20-lesson h3.gradient-text i,
+.mod20-lesson h4.gradient-text i,
+.mod20-lesson h5.gradient-text i,
+.mod20-lesson h6.gradient-text i {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Rotating color scheme for heading icons (like bullets) */
+.mod20-lesson :is(h3.gradient-text, h4.gradient-text, h5.gradient-text, h6.gradient-text):nth-of-type(4n+1) i {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.mod20-lesson :is(h3.gradient-text, h4.gradient-text, h5.gradient-text, h6.gradient-text):nth-of-type(4n+2) i {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.mod20-lesson :is(h3.gradient-text, h4.gradient-text, h5.gradient-text, h6.gradient-text):nth-of-type(4n+3) i {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.mod20-lesson :is(h3.gradient-text, h4.gradient-text, h5.gradient-text, h6.gradient-text):nth-of-type(4n+4) i {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+/* Hover effects for all heading icons */
+.mod20-lesson h3.gradient-text:hover i,
+.mod20-lesson h4.gradient-text:hover i,
+.mod20-lesson h5.gradient-text:hover i,
+.mod20-lesson h6.gradient-text:hover i {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mod20-lesson article:nth-child(4) h3.gradient-text::before,
+.mod20-lesson article:nth-child(6) h3.gradient-text::before {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.mod20-lesson article:nth-child(2) h4.gradient-text::before {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.mod20-lesson article:nth-child(3) h4.gradient-text::before {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.mod20-lesson article:nth-child(4) h4.gradient-text::before {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Module 20 Bullet Point Styling */
+
+.puberty-list li {
+    transition: all 0.2s ease;
+    list-style: none;
+    position: relative;
+    transition: all 0.2s ease;
+    list-style: none;
+    align-items: center;
+    vertical-align: inherit;
+    display: flex;
+    gap: 10px;
+}
+.puberty-list li:hover {
+  transform: translateX(4px);
+}
+
+.puberty-list li i {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.m20_1 li i {
+  width: 82px !important;
+  height: 34px !important;
+}
+.mod20_grid1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+/* Colored icon backgrounds */
+.mod20-lesson .puberty-list li:nth-child(4n+1) i {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.mod20-lesson .puberty-list li:nth-child(4n+2) i {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+}
+
+.mod20-lesson .puberty-list li:nth-child(4n+3) i {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #fff;
+}
+
+.mod20-lesson .puberty-list li:nth-child(4n+4) i {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+}
+
+.mod20-lesson .puberty-list li:hover i {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Additional decorative shapes for variety */
+.mod20-shape--diamond {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+  transform: rotate(45deg);
+  top: 50%;
+  right: 10%;
+}
+
+.mod20-shape--hexagon {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  bottom: 15%;
+  left: 5%;
 }
 
 /* Module 25 purpose-specific pastel gradient */
