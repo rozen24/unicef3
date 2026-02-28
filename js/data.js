@@ -2959,10 +2959,10 @@ const coursesData = [
               const renderList = (items) =>
                 items
                   .map(
-                    (text) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
+                    (text, idx) => `
+                      <li style="background: ${idx % 2 === 0 ? 'rgba(255,255,255,.6)' : 'rgba(255,240,245,.5)'}; border-left: 4px solid #f06292; border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; box-shadow: 0 ${5 + (idx % 3) * 2}px ${12 + (idx % 3) * 3}px rgba(240,107,147,${.1 + (idx % 3) * .05});">
+                        <i class="fa-solid fa-circle-check" style="color: #e91e63; margin-right: 8px;"></i>
+                        <span style="color: #6d4c41;">${text}</span>
                       </li>
                     `
                   )
@@ -2975,12 +2975,12 @@ const coursesData = [
 
                   <div class="modern-card glass-card table-responsive" data-aos="fade-up" data-aos-delay="80">
                     <p class="text-muted gradient-text" data-aos="fade-up" data-aos-delay="40">${yhLang("Changes during puberty", "বয়ঃসন্ধিকালীন পরিবর্তনসমূহ ")}</p>
-                    <table class="table table-borderless text-start puberty-table">
-                      <thead>
-                        <tr>
-                          <th>${yhLang("Physical changes in boys", "ছেলেদের শারীরিক পরিবর্তন")}</th>
-                          <th>${yhLang("Physical changes in girls", "মেয়েদের শারীরিক পরিবর্তন")}</th>
-                          <th>${yhLang("Emotional changes", "ছেলে-মেয়েদের মানসিক পরিবর্তন")}</th>
+                    <table class="table table-borderless text-start puberty-table" style="border-collapse: collapse; width: 100%;">
+                      <thead style="background: linear-gradient(135deg, rgba(251,195,144,.25) 0%, rgba(255,193,7,.15) 100%);">
+                        <tr style="border-bottom: 3px solid #ff8a65;">
+                          <th style="padding: 14px; color: #5d4037; font-weight: 700; text-align: left;">${yhLang("Physical changes in boys", "ছেলেদের শারীরিক পরিবর্তন")}</th>
+                          <th style="padding: 14px; color: #5d4037; font-weight: 700; text-align: left;">${yhLang("Physical changes in girls", "মেয়েদের শারীরিক পরিবর্তন")}</th>
+                          <th style="padding: 14px; color: #5d4037; font-weight: 700; text-align: left;">${yhLang("Emotional changes", "ছেলে-মেয়েদের মানসিক পরিবর্তন")}</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -13287,8 +13287,8 @@ const coursesData = [
           {
             id: "ch20-lesson-1",
             title: yhLang(
-              "Non-communicable diseases",
-              "অসংক্রামক রোগ"
+              "What to do to prevent non-communicable diseases and poor eating habits",
+              "অসংক্রামক রোগ ও  ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধে করণীয়"
             ),
             icon: "fa-shield-virus",
             gradientClass: "bg-gradient-lavender",
@@ -13301,6 +13301,77 @@ const coursesData = [
                 { text: yhLang("Tobacco use", "তামাকজাত দ্রব্য ব্যবহার"), icon: "fa-smoking" },
                 { text: yhLang("Alcohol and others", "মদ্যপান ও অন্যান্য"), icon: "fa-wine-bottle" },
               ];
+
+              
+
+              const renderList = (items, baseDelay = 0) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-up" class="m20_1" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod20-lesson mod20-lesson-1">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-shield-virus"></i>${yhLang(
+                    "What to do to prevent non-communicable diseases and poor eating habits",
+                    "অসংক্রামক রোগ ও  ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধে করণীয়"
+                  )}</h2>
+                  <div class="glass-card p-4 mb-3">
+                    <p class="mb-0" data-aos="fade-up" data-aos-delay="80">
+                      ${yhLang(
+                        "Non-communicable diseases are not spread directly from one person to another. They are also called chronic diseases because they usually develop slowly and persist for a long time. Around three thousand children and adolescents die every day from NCDs worldwide. These diseases account for about 68 percent of all deaths globally, making them a major public health problem.",
+                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও কিশোর-কিশোরী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।"
+                      )}
+                    </p>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-2">
+                      <div class="glass-card p-2 mb-3">
+                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang(
+                          "WHO has identified four key risk factors for NCDs. They are:",
+                          "বিশ্ব স্বাস্থ্য সংস্থা অসংক্রামক রোগের চারটি ঝুঁকি চিহ্নিত করেছে। ঝুঁকিগুলো হলো:"
+                        )}</h3>
+                        <ul class="mb-0 puberty-list">
+                          ${renderList(whoRisks, 120)}
+                        </ul>
+                      </div>
+                      
+                    </div>
+                    <div class="col-12 col-lg-10">
+                      <figure class="text-center mb-0" data-aos="zoom-in" data-aos-delay="140">
+                        <img src="img/modu20/rog1_new.png" style="max-height: 500px; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
+                      </figure>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch20-lesson-2",
+            title: yhLang(
+              "What to do about faulty eating habits and physical exertion",
+              "ত্রুটিপূর্ণ খাদ্যাভ্যাস  ও কায়িক পরিশ্রমের করণীয়"
+            ),
+            icon: "fa-apple-whole",
+            gradientClass: "bg-gradient-mint",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
 
               const preventionList = [
                 {
@@ -13342,134 +13413,6 @@ const coursesData = [
                   text: yhLang(
                     "Limit red meats such as beef, mutton, buffalo, sheep, and duck because they are high in fat.",
                     "গরু, খাসি, মহিষ, ভেড়া, হাঁস এ জাতীয় খাবারে লাল রংযুক্ত মাংস গ্রহণে চর্বির অংশ বেশি থাকায় এগুলো পরিমিত খেতে হবে।"
-                  ),
-                  icon: "fa-bacon",
-                },
-                {
-                  text: yhLang(
-                    "Eat 400 grams of vegetables and 100 grams of fruit daily.",
-                    "প্রতিদিন ৪০০ গ্রাম শাকসবজি ও ১০০ গ্রাম ফল খাওয়া উচিত।"
-                  ),
-                  icon: "fa-carrot",
-                },
-              ];
-
-              const renderList = (items, baseDelay = 0) =>
-                items
-                  .map(
-                    (item, idx) => `
-                      <li data-aos="fade-up" class="m20_1" data-aos-delay="${baseDelay + idx * 30}">
-                        <i class="fa-solid ${item.icon}"></i>
-                        <span>${item.text}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide mod20-lesson mod20-lesson-1">
-                  <div class="mod20-shapes">
-                    <span class="mod20-shape mod20-shape--orb"></span>
-                    <span class="mod20-shape mod20-shape--ring"></span>
-                    <span class="mod20-shape mod20-shape--triangle"></span>
-                    <span class="mod20-shape mod20-shape--wave"></span>
-                  </div>
-                  <div class="mod20-content">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-shield-virus"></i>${yhLang(
-                    "Non-communicable diseases",
-                    "অসংক্রামক রোগ"
-                  )}</h2>
-                  <div class="glass-card p-4 mb-3">
-                    <p class="mb-0" data-aos="fade-up" data-aos-delay="80">
-                      ${yhLang(
-                        "Non-communicable diseases are not spread directly from one person to another. They are also called chronic diseases because they usually develop slowly and persist for a long time. Around three thousand children and adolescents die every day from NCDs worldwide. These diseases account for about 68 percent of all deaths globally, making them a major public health problem.",
-                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও কিশোর-কিশোরী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।"
-                      )}
-                    </p>
-                  </div>
-                  <div class="row g-3">
-                    <div class="col-12 col-lg-4">
-                      <div class="glass-card p-2 mb-3">
-                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang(
-                          "WHO has identified four key risk factors for NCDs. They are:",
-                          "বিশ্ব স্বাস্থ্য সংস্থা অসংক্রামক রোগের চারটি ঝুঁকি চিহ্নিত করেছে। ঝুঁকিগুলো হলো:"
-                        )}</h3>
-                        <ul class="mb-0 puberty-list mod20_grid1">
-                          ${renderList(whoRisks, 120)}
-                        </ul>
-                      </div>
-                      <div class="glass-card p-2">
-                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-clipboard-check"></i>${yhLang(
-                          "Actions to prevent unhealthy diet:",
-                          "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতরিোধে করণীয়:"
-                        )}</h3>
-                        <ul class="list-unstyled puberty-list mb-0 m20_1 mod20_grid1">
-                          ${renderList(preventionList, 120)}
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-8">
-                      <figure class="text-center mb-0" data-aos="zoom-in" data-aos-delay="140">
-                        <img src="img/modu20/rog1_new.jpg" style="max-height: 450px; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
-                      </figure>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch20-lesson-2",
-            title: yhLang(
-              "Actions for unhealthy diet and physical inactivity",
-              "ত্রুটিপূর্ণ খাদ্যাভ্যাস ও কায়িক পরিশ্রমে করণীয়"
-            ),
-            icon: "fa-apple-whole",
-            gradientClass: "bg-gradient-mint",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              const dietTips = [
-                {
-                  text: yhLang(
-                    "Do not stay on an empty stomach in the morning and finish dinner by 8 pm; do not sleep immediately after eating.",
-                    "সকালে খালি পেটে থাকা উচিত নয় এবং রাতের খাবার রাত ৮টার মধ্যে খেয়ে ফেলতে হবে, খাবার খাওয়ার সাথে সাথে ঘুমাতে যাওয়া যাবে না।"
-                  ),
-                  icon: "fa-clock",
-                },
-                {
-                  text: yhLang(
-                    "Do not add extra salt to food. Daily salt intake should not exceed five grams per person.",
-                    "পাতে অতিরিক্ত লবণ নেওয়া যাবে না। জনপ্রতি দৈনিক পাঁচ গ্রামের বেশি লবণ খাওয়া যাবে না।"
-                  ),
-                  icon: "fa-salt-shaker",
-                },
-                {
-                  text: yhLang(
-                    "Be cautious with high-calorie foods such as cakes, pastries, fast food, and soft drinks.",
-                    "উচ্চ ক্যালরিযুক্ত খাবার যেমন : কেক, পেস্ট্রি, ফাস্টফুড ও কোমল পানীয় গ্রহণে সাবধানতা অবলম্বন করতে হবে।"
-                  ),
-                  icon: "fa-burger",
-                },
-                {
-                  text: yhLang(
-                    "Foods like biryani, kacchi, processed meats, and grilled chicken contain trans fat. Eat them in moderation.",
-                    "বিরিয়ানি, কাচ্চি, প্রক্রিয়াজাত মাংস, গ্রিল চিকেন জাতীয় খাবারে ট্রান্সফ্যাট রয়েছে। এ জাতীয় খাবার কম খেতে হবে।"
-                  ),
-                  icon: "fa-drumstick-bite",
-                },
-                {
-                  text: yhLang(
-                    "Avoid deep-fried foods and foods fried in palm oil or burnt oil.",
-                    "অতিরিক্ত তেলেভাজা, পাম তেলে বা পোড়া তেলে ভাজা খাবার খাওয়া যাবে না।"
-                  ),
-                  icon: "fa-fire-burner",
-                },
-                {
-                  text: yhLang(
-                    "Limit red meats such as beef, mutton, buffalo, sheep, and duck because they are high in fat.",
-                    "গরু, খাসি, মহিষ, ভেড়া, হাঁস—এ জাতীয় খাবারের লাল রংযুক্ত মাংস গ্রহণে চর্বির অংশ বেশি থাকায় এগুলো পরিমিত খেতে হবে।"
                   ),
                   icon: "fa-bacon",
                 },
@@ -13535,23 +13478,21 @@ const coursesData = [
                   </div>
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-apple-whole"></i>${yhLang(
-                    "Preventing unhealthy diet and physical inactivity",
-                    "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধ ও কায়িক পরিশ্রমের করণীয়"
+                    "What to do about faulty eating habits and physical exertion",
+                    "ত্রুটিপূর্ণ খাদ্যাভ্যাস  ও কায়িক পরিশ্রমের করণীয়"
                   )}</h2>
                   <div class="row g-3">
-                    <div class="col-12 col-lg-6">
-                      <div class="glass-card p-4 h-100">
-                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-utensils"></i>${yhLang(
+                    <div class="col-12 col-lg-5">
+                      <div class="glass-card p-2 mb-2">
+                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-clipboard-check"></i>${yhLang(
                           "Actions to prevent unhealthy diet:",
-                          "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধে করণীয় :"
+                          "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতরিোধে করণীয়:"
                         )}</h3>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(dietTips, 80)}
+                        <ul class="list-unstyled puberty-list mb-0 m20_1 mod20_grid1">
+                          ${renderList(preventionList, 120)}
                         </ul>
                       </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="glass-card p-4 h-100">
+                      <div class="glass-card p-4">
                         <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-running"></i>${yhLang(
                           "Actions to address lack of physical activity:",
                           "কায়িক পরিশ্রমের অভাব পূরণে করণীয় :"
@@ -13560,6 +13501,11 @@ const coursesData = [
                           ${renderList(activityTips, 80)}
                         </ul>
                       </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                      <figure class="text-center mb-0" data-aos="zoom-in" data-aos-delay="140">
+                        <img src="img/modu20/unhealthy.png" style="height: 650px; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
+                      </figure>
                     </div>
                   </div>
                   </div>
@@ -13648,8 +13594,8 @@ const coursesData = [
                   sections
                     .map(
                       (section, idx) => `
-                        <article class="glass-card p-4 h-100">
-                          <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h4>
+                        <article class="glass-card p-2 h-100">
+                          <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h4>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderBullets(section.bullets, baseDelay + idx * 40 + 20)}
                           </ul>
@@ -13671,7 +13617,7 @@ const coursesData = [
                     "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়",
                     "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়"
                   )}</h2>
-                  <div class="glass-card p-4 mb-3">
+                  <div class="glass-card p-2 mb-2">
                     <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
                   </div>
                   <div class="row g-3">
@@ -14608,8 +14554,8 @@ const coursesData = [
           {
             id: "ch21-lesson-1",
             title: yhLang(
-              "কৈশোরকাল",
-              "কৈশোরকাল"
+              "Adolescence: Opportunities and Risks",
+              "কৈশোরকাল: সম্ভাবনা ও ঝুঁকি"
             ),
             icon: "fa-helmet-safety",
             gradientClass: "bg-gradient-teal",
@@ -14618,8 +14564,24 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <div class="modern-card glass-card" data-aos="fade-up">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">
+                    <i class="fa-solid fa-seedling" style="color: #81c784; margin-right: 12px;"></i>
+                    কৈশোরকাল: সম্ভাবনা ও ঝুঁকি
+                  </h2>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(233, 30, 99, 0.15);">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #c2185b;">
+                      <i class="fa-solid fa-lightbulb" style="margin-right: 10px; font-size: 1.3em; color: #f06292;"></i>
+                      সম্ভাবনাময় সময়
+                    </h3>
                     <p class="mb-3">কৈশোরকাল একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে কিশোর-কিশোরীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ কিশোর-কিশোরী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
+                  </div>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #e1f5fe 0%, #e8eaf6 100%); border-radius: 25px; box-shadow: 0 10px 35px rgba(63, 81, 181, 0.2); margin-top: 20px;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #1565c0;">
+                      <i class="fa-solid fa-shield-heart" style="margin-right: 10px; font-size: 1.3em; color: #42a5f5;"></i>
+                      বিশেষ যত্নের প্রয়োজন
+                    </h3>
                     <p class="mb-0">এটা শুধুমাত্র সাধারণ কিশোর-কিশোরীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন কিশোর-কিশোরীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
                   </div>
                 </div>`;
@@ -14628,8 +14590,8 @@ const coursesData = [
           {
             id: "ch21-lesson-2",
             title: yhLang(
-              "ঝুঁকিপূর্ণ কিশোর-কিশোরীদের ঝুঁকি নিরসনে করণীয়",
-              "ঝুঁকিপূর্ণ কিশোর-কিশোরীদের ঝুঁকি নিরসনে করণীয়"
+              "What to Do to Mitigate Risks for At-Risk Adolescents",
+              "ঝুঁকিপূর্ণ কিশোর-কিশোরীদের ঝুঁকি নিরসনে করণীয়"
             ),
             icon: "fa-user-shield",
             gradientClass: "bg-gradient-rose",
@@ -14637,38 +14599,38 @@ const coursesData = [
             quiz: null,
             content: (function () {
               const primaryList = [
-                "শারীরিকভাবে বা মানসিকভাবে প্রতিবন্ধী",
-                "যে কিশোর-কিশোরীর পিতা-মাতা, একজন বা উভয়েই মারা গেছেন",
-                "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী",
-                "বিবাহবহির্ভূত সম্পর্কে জন্ম নেয়া কিশোর-কিশোরী অথবা যে কিশোর-কিশোরীর কোনো আইনগত বা বৈধ অভিভাবক নেই",
-                "বস্তিতে বসবাস করে এমন কিশোর-কিশোরী অথবা যে যার কোনো নির্দিষ্ট বাসস্থান বা আবাস নেই বা যার বেঁচে থাকার কোনো সুস্পষ্ট উপায় নেই (পথশিশু বা রাস্তায় কাজ করে এমন কিশোর-কিশোরী) অথবা অতি দরিদ্র কিশোর-কিশোরী",
-                "যে কিশোর-কিশোরী কারাবন্দী পিতা-মাতার উপর নির্ভরশীল বা কারাবন্দী মায়ের সাথে কারাগারে বসবাস করছে",
-                "পতিতালয়ে জন্ম নেয়া ও বড় হওয়া কিশোর-কিশোরী অথবা এসব কাজে সম্পৃক্ত কিশোর-কিশোরী",
-                "যে কিশোর-কিশোরী যাযাবর বা হরিজন (অচ্ছুত)",
-                "ঝুঁকিপূর্ণ কাজ, যেমন—বাস/টেম্পুর হেল্পার, লেদ মেশিন/ওয়েলডিং/ইলেকট্রিক/বয়লার/ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভিক্ষাবৃত্তি বা শিশুর কল্যাণের বিরোধী কোনো কাজে জড়িত",
-                "যে কিশোর-কিশোরী যৌন নিপীড়ন বা হয়রানির শিকার অথবা প্রত্যক্ষদর্শী কিশোর-কিশোরী",
-                "তৃতীয় লিঙ্গ/হিজড়া বা সমকামী কিশোর-কিশোরী",
-                "যে শিশুর মাদক বা অন্য কোনো কারণে অস্বাভাবিক আচরণগত ব্যাধি হয়েছে",
-                "যে শিশু এইচআইভি–এইডসে আক্রান্ত বা ক্ষতিগ্রস্ত",
-                "যে কিশোর-কিশোরী অসৎ সঙ্গীতে জড়িত, বা যার নৈতিক অবক্ষয় ঘটতে পারে বা যে অপরাধজগতে প্রবেশের ঝুঁকিতে আছে",
-                "যে শিশুকে শিশু আদালত বা বোর্ড বিশেষ সুরক্ষা, যত্ন ও উন্নয়নের প্রয়োজন রয়েছে বলে বিবেচনা করে",
+                { icon: "fa-wheelchair", color: "#9c27b0", text: "শারীরিকভাবে বা মানসিকভাবে প্রতিবন্ধী" },
+                { icon: "fa-heart-crack", color: "#e91e63", text: "যে কিশোর-কিশোরীর পিতা-মাতা, একজন বা উভয়েই মারা গেছেন" },
+                { icon: "fa-people-arrows", color: "#ff5722", text: "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী" },
+                { icon: "fa-person-circle-question", color: "#f44336", text: "বিবাহবহির্ভূত সম্পর্কে জন্ম নেয়া কিশোর-কিশোরী অথবা যে কিশোর-কিশোরীর কোনো আইনগত বা বৈধ অভিভাবক নেই" },
+                { icon: "fa-house-crack", color: "#ff9800", text: "বস্তিতে বসবাস করে এমন কিশোর-কিশোরী অথবা যে যার কোনো নির্দিষ্ট বাসস্থান বা আবাস নেই বা যার বেঁচে থাকার কোনো সুস্পষ্ট উপায় নেই (পথশিশু বা রাস্তায় কাজ করে এমন কিশোর-কিশোরী) অথবা অতি দরিদ্র কিশোর-কিশোরী" },
+                { icon: "fa-handcuffs", color: "#795548", text: "যে কিশোর-কিশোরী কারাবন্দী পিতা-মাতার উপর নির্ভরশীল বা কারাবন্দী মায়ের সাথে কারাগারে বসবাস করছে" },
+                { icon: "fa-person-dress", color: "#880e4f", text: "পতিতালয়ে জন্ম নেয়া ও বড় হওয়া কিশোর-কিশোরী অথবা এসব কাজে সম্পৃক্ত কিশোর-কিশোরী" },
+                { icon: "fa-caravan", color: "#6d4c41", text: "যে কিশোর-কিশোরী যাযাবর বা হরিজন (অচ্ছুত)" },
+                { icon: "fa-industry", color: "#607d8b", text: "ঝুঁকিপূর্ণ কাজ, যেমন—বাস/টেম্পুর হেল্পার, লেদ মেশিন/ওয়েলডিং/ইলেকট্রিক/বয়লার/ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভিক্ষাবৃত্তি বা শিশুর কল্যাণের বিরোধী কোনো কাজে জড়িত" },
+                { icon: "fa-hand-fist", color: "#d32f2f", text: "যে কিশোর-কিশোরী যৌন নিপীড়ন বা হয়রানির শিকার অথবা প্রত্যক্ষদর্শী কিশোর-কিশোরী" },
+                { icon: "fa-rainbow", color: "#ab47bc", text: "তৃতীয় লিঙ্গ/হিজড়া বা সমকামী কিশোর-কিশোরী" },
+                { icon: "fa-pills", color: "#e53935", text: "যে শিশুর মাদক বা অন্য কোনো কারণে অস্বাভাবিক আচরণগত ব্যাধি হয়েছে" },
+                { icon: "fa-virus", color: "#c62828", text: "যে শিশু এইচআইভি–এইডসে আক্রান্ত বা ক্ষতিগ্রস্ত" },
+                { icon: "fa-user-xmark", color: "#6a1b9a", text: "যে কিশোর-কিশোরী অসৎ সঙ্গীতে জড়িত, বা যার নৈতিক অবক্ষয় ঘটতে পারে বা যে অপরাধজগতে প্রবেশের ঝুঁকিতে আছে" },
+                { icon: "fa-gavel", color: "#455a64", text: "যে শিশুকে শিশু আদালত বা বোর্ড বিশেষ সুরক্ষা, যত্ন ও উন্নয়নের প্রয়োজন রয়েছে বলে বিবেচনা করে" },
               ];
 
               const secondaryList = [
-                "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া কিশোর-কিশোরী;",
-                "পাচার বা জোরপূর্বক যৌনকর্মী হওয়া কিশোর-কিশোরী;",
-                "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত কিশোর-কিশোরী;",
-                "শরণার্থী শিবিরে বসবাসরত কিশোর-কিশোরী;",
-                "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার কিশোর-কিশোরী",
+                { icon: "fa-house-tsunami", color: "#0288d1", text: "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া কিশোর-কিশোরী;" },
+                { icon: "fa-person-walking-arrow-right", color: "#c2185b", text: "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া কিশোর-কিশোরী;" },
+                { icon: "fa-burst", color: "#d84315", text: "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত কিশোর-কিশোরী;" },
+                { icon: "fa-tent", color: "#f57c00", text: "শরণার্থী শিবিরে বসবাসরত কিশোর-কিশোরী;" },
+                { icon: "fa-mountain", color: "#558b2f", text: "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার কিশোর-কিশোরী" },
               ];
 
               const renderList = (items) =>
                 items
                   .map(
                     (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 15px; padding: 14px; margin-bottom: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid ${item.color}; transition: all 0.3s ease;">
+                        <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 12px; font-size: 1.2em;"></i>
+                        <span>${item.text}</span>
                       </li>
                     `
                   )
@@ -14676,13 +14638,28 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">ঝুঁকিপূর্ণ কিশোর-কিশোরীদের ঝুঁকি নিরসনে করণীয়</h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
-                    <ul class="list-unstyled puberty-list mb-0">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-triangle-exclamation" style="color: #f44336; margin-right: 12px; font-size: 1.2em;"></i>
+                    ঝুঁকিপূর্ণ কিশোর-কিশোরীদের ঝুঁকি নিরসনে করণীয়
+                  </h2>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(255, 152, 0, 0.2);">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; color: #e65100;">
+                      <i class="fa-solid fa-users" style="margin-right: 10px; font-size: 1.3em; color: #ff6f00;"></i>
+                      প্রধান ঝুঁকিপূর্ণ গোষ্ঠী
+                    </h3>
+                    <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
                       ${renderList(primaryList)}
                     </ul>
-                    <p class="fw-semibold mt-4 mb-2">এছাড়াও যেকোনো কিশোর-কিশোরী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন—</p>
-                    <ul class="list-unstyled puberty-list mb-0">
+                  </div>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(233, 30, 99, 0.2); margin-top: 24px;">
+                    <h5 style="display: flex; align-items: center; margin-bottom: 16px; color: #ad1457; font-weight: 600;">
+                      <i class="fa-solid fa-exclamation-circle" style="margin-right: 10px; font-size: 1.2em; color: #e91e63;"></i>
+                      যেকোনো সময়ে ঝুঁকিপূর্ণ হতে পারে
+                    </h5>
+                    <p class="fw-semibold mb-3" style="color: #880e4f;">এছাড়াও যেকোনো কিশোর-কিশোরী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন—</p>
+                    <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
                       ${renderList(secondaryList)}
                     </ul>
                   </div>
@@ -14692,8 +14669,8 @@ const coursesData = [
           {
             id: "ch21-lesson-3",
             title: yhLang(
-              "সুবিধাবঞ্চিত কিশোর-কিশোরীদের সুবিধা নিরসনে করণীয়",
-              "সুবিধাবঞ্চিত কিশোর-কিশোরীদের সুবিধা নিরসনে করণীয়"
+              "What to Do to Address Disadvantages of Marginalized Adolescents",
+              "সুবিধাবঞ্চিত কিশোর-কিশোরীদের সুবিধা নিরসনে করণীয়"
             ),
             icon: "fa-hands-holding-child",
             gradientClass: "bg-gradient-green",
@@ -14701,22 +14678,22 @@ const coursesData = [
             quiz: null,
             content: (function () {
               const actionItems = [
-                "<strong>সুবিধা শনাক্তকরণ:</strong> সুবিধাবঞ্চিত কিশোর-কিশোরীদের মধ্যে সম্ভাব্য সুবিধা ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।",
-                "<strong>সক্ষমতা বৃদ্ধি:</strong> কিশোর-কিশোরীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের সুবিধা কমাতে সহায়ক হবে।",
-                "<strong>পরামর্শ ও সহায়তা:</strong> প্রত্যেক কিশোর-কিশোরীর জন্য ব্যক্তিগত পরামর্শ ও সহায়তার ব্যবস্থা করা, যাতে তারা তাদের সমস্যাগুলি সমাধান করতে এবং সুস্থভাবে জীবনযাপন করতে সক্ষম হয়।",
-                "<strong>সংকট ব্যবস্থাপনা:</strong> সুবিধাবঞ্চিত পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।",
-                "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> কিশোর-কিশোরীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।",
-                "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও সুবিধা মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।",
-                "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> কিশোর-কিশোরীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।",
+                { icon: "fa-magnifying-glass-chart", color: "#1976d2", text: "<strong>সুবিধা শনাক্তকরণ:</strong> সুবিধাবঞ্চিত কিশোর-কিশোরীদের মধ্যে সম্ভাব্য সুবিধা ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।" },
+                { icon: "fa-chart-line", color: "#388e3c", text: "<strong>সক্ষমতা বৃদ্ধি:</strong> কিশোর-কিশোরীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের সুবিধা কমাতে সহায়ক হবে।" },
+                { icon: "fa-comments", color: "#7b1fa2", text: "<strong>পরামর্শ ও সহায়তা:</strong> প্রত্যেক কিশোর-কিশোরীর জন্য ব্যক্তিগত পরামর্শ ও সহায়তার ব্যবস্থা করা, যাতে তারা তাদের সমস্যাগুলি সমাধান করতে এবং সুস্থভাবে জীবনযাপন করতে সক্ষম হয়।" },
+                { icon: "fa-shield-halved", color: "#d32f2f", text: "<strong>সংকট ব্যবস্থাপনা:</strong> সুবিধাবঞ্চিত পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।" },
+                { icon: "fa-people-group", color: "#f57c00", text: "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> কিশোর-কিশোরীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।" },
+                { icon: "fa-bell", color: "#0288d1", text: "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও সুবিধা মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।" },
+                { icon: "fa-brain", color: "#c2185b", text: "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> কিশোর-কিশোরীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।" },
               ];
 
               const renderList = (items) =>
                 items
                   .map(
                     (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(245,245,250,0.75) 100%); border-radius: 18px; padding: 16px; margin-bottom: 14px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); border-left: 5px solid ${item.color}; transition: all 0.3s ease;">
+                        <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 14px; font-size: 1.3em;"></i>
+                        <span>${item.text}</span>
                       </li>
                     `
                   )
@@ -14724,12 +14701,27 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">সুবিধাবঞ্চিত কিশোর-কিশোরীদের সুবিধা নিরসনে করণীয়</h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
-                    <ul class="list-unstyled puberty-list mb-4">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-hands-holding-circle" style="color: #43a047; margin-right: 12px; font-size: 1.2em;"></i>
+                    সুবিধাবঞ্চিত কিশোর-কিশোরীদের সুবিধা নিরসনে করণীয়
+                  </h2>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); border-radius: 22px; box-shadow: 0 12px 45px rgba(76, 175, 80, 0.25);">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 22px; color: #2e7d32;">
+                      <i class="fa-solid fa-list-check" style="margin-right: 10px; font-size: 1.3em; color: #66bb6a;"></i>
+                      প্রধান কার্যক্রম
+                    </h3>
+                    <ul class="list-unstyled puberty-list mb-4" style="padding-left: 0;">
                       ${renderList(actionItems)}
                     </ul>
-                    <p class="mb-2">উল্লেখিত বিষয়গুলো নিশ্চিত করে কিশোর-কিশোরীদের সুবিধা কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।</p>
+                    
+                    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%); border-radius: 15px; padding: 18px; margin-top: 20px; border-left: 4px solid #1976d2; box-shadow: 0 4px 15px rgba(25, 118, 210, 0.15);">
+                      <h6 style="display: flex; align-items: center; color: #1565c0; margin-bottom: 12px;">
+                        <i class="fa-solid fa-handshake" style="margin-right: 10px; color: #42a5f5;"></i>
+                        সমন্বিত প্রচেষ্টা
+                      </h6>
+                      <p class="mb-0" style="color: #0d47a1;">উল্লেখিত বিষয়গুলো নিশ্চিত করে কিশোর-কিশোরীদের সুবিধা কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।</p>
+                    </div>
                   </div>
                 </div>`;
             })(),
@@ -14739,14 +14731,14 @@ const coursesData = [
       {
         id: "ch-22",
         title: yhLang(
-          "Module-22: Injury prevention and first aid for adolescents",
+          "Module-22: Climate Change and Health Sector Impact",
           "মডিউল-২২: জলবায়ু পরিবর্তনের ফলে স্বাস্থ্য খাতে প্রভাব"
         ),
         lessons: [
           {
-            id: "ch22-lesson-1",
+            id: "ch22-lesson-1",  
             title: yhLang(
-              "আবহাওয়া ও জলবায়ু",
+              "Weather and Climate",
               "আবহাওয়া ও জলবায়ু"
             ),
             icon: "fa-cloud-sun",
@@ -14756,14 +14748,46 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">আবহাওয়া ও জলবায়ু</h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-earth-americas" style="color: #26a69a; margin-right: 12px; font-size: 1.2em;"></i>
+                    আবহাওয়া ও জলবায়ু
+                  </h2>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(38, 166, 154, 0.15);">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #00695c;">
+                      <i class="fa-solid fa-cloud-sun" style="margin-right: 10px; font-size: 1.3em; color: #26a69a;"></i>
+                      আবহাওয়া ও জলবায়ুর সংজ্ঞা
+                    </h3>
                     <p>আবহাওয়া হলো বায়ুমণ্ডলের নিম্নস্তরের দৈনন্দিন অবস্থা। স্থানভেদে আবহাওয়া সহজেই পরিবর্তিত হয়। আবহাওয়া কোনো জায়গার স্বল্প সময়ের অবস্থাকে প্রকাশ করে। অন্যদিকে, জলবায়ু হলো কোনো বিস্তৃত অঞ্চলের কমপক্ষে ৩০ বছরের আবহাওয়ার গড় অবস্থা। জলবায়ুর পরিবর্তন হয় স্থানভেদে ও ঋতুভেদে।</p>
+                  </div>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 22px; box-shadow: 0 10px 35px rgba(255, 152, 0, 0.2); margin-top: 20px;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #e65100;">
+                      <i class="fa-solid fa-exclamation-triangle" style="margin-right: 10px; font-size: 1.3em; color: #ff6f00;"></i>
+                      বাংলাদেশে জলবায়ু পরিবর্তনের প্রভাব
+                    </h3>
                     <p>বাংলাদেশে জলবায়ু পরিবর্তনজনিত কারণে মানবস্বাস্থ্যে, বিশেষ করে শিশু-কিশোরদের ওপর মারাত্মকভাবে ক্ষতিকর প্রভাব পড়ছে। জলবায়ু সংবেদনশীল রোগ যেমন ডেঙ্গু, চিকুনগুনিয়া, কালাজ্বর, কলেরা, অপুষ্টি ইত্যাদি বৃদ্ধি পাচ্ছে এবং নতুন নতুন চ্যালেঞ্জ তৈরি হচ্ছে।</p>
-                    <p><strong>জলবায়ু পরিবর্তন</strong></p>
-                    <p>জলবায়ু পরিবর্তন একটি বৈশ্বিক বাস্তবতা। পৃথিবী ক্রমাগত উষ্ণ হয়ে চলেছে, সমুদ্রের জলস্তর বৃদ্ধি পাচ্ছে এবং বরফের স্তর গলতে থাকায় বিশ্বের জলবায়ু ব্যবস্থায় আমূল পরিবর্তন ঘটছে। গত কয়েক দশকের রেকর্ডে দেখা গেছে, শিল্পযুগ-পূর্ব সময়ের তুলনায় পৃথিবীর আবহাওয়া আজ অনেক বেশি অপ্রত্যাশিত ও চরম আচরণ করছে। ঘনঘন ও তীব্রতর হয়ে উঠছে বন্যা, খরা, দাবানল ও ঘূর্ণিঝড়ের মতো দুর্যোগ, যা বিশ্বজুড়ে পরিবেশ, অর্থনীতি এবং মানবসমাজের ওপর গভীর প্রভাব ফেলছে। এই বদ্ধমূল সংকট মোকাবেলায় প্রশমন ও অভিযোজন কৌশলগুলি আন্তর্জাতিক ও জাতীয় নীতি ও কর্মপরিকল্পনার অপরিহার্য অঙ্গে পরিণত হয়েছে।</p>
-                    <p><strong>জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাবসমূহ</strong></p>
-                    <p>জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাবসমূহের মধ্যে রয়েছে তাপমাত্রা বৃদ্ধি, বৃষ্টিপাতের অস্বাভাবিকতা বা ভিন্নতা, খরা, ঘূর্ণিঝড়, সমুদ্রপৃষ্ঠের উচ্চতা বৃদ্ধি, পানির লবণাক্ততা বৃদ্ধি, তাপপ্রবাহ, শৈত্যপ্রবাহ এবং এ সম্পর্কিত অন্যান্য ঘটনাসমূহ, যা মানুষের জীবন ও জীবিকার ওপর বিরূপ প্রভাব ফেলছে। বিশ্বব্যাপী পানির প্রাপ্যতা, বাস্তুতন্ত্র, খাদ্য ও কৃষি, উপকূলীয় জনজীবন এবং সামগ্রিকভাবে স্বাস্থ্যের ওপর জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাব এখন দৃশ্যমান এবং এ ব্যাপারে এখনই উপযুক্ত পদক্ষেপ না নিলে ঝুঁকির মাত্রা আরও বেড়ে যাবে। জলবায়ু পরিবর্তনে বিপন্ন খাতসমূহ হলো: খাদ্য নিরাপত্তা, স্বাস্থ্য, কৃষি, পানি সম্পদ, উপকূলীয় সম্পদ, শিক্ষা, জীবিকা ও বাসস্থান।</p>
+                  </div>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 25px; box-shadow: 0 12px 40px rgba(233, 30, 99, 0.18); margin-top: 20px;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 18px; color: #c2185b;">
+                      <i class="fa-solid fa-temperature-arrow-up" style="margin-right: 10px; font-size: 1.3em; color: #e91e63;"></i>
+                      জলবায়ু পরিবর্তন: বৈশ্বিক বাস্তবতা
+                    </h3>
+                    <p>জলবায়ু পরিবর্তন একটি বৈশ্বিক বাস্তবতা। পৃথিবী ক্রমাগত উষ্ণ হয়ে চলেছে, সমুদ্রের জলস্তর বৃদ্ধি পাচ্ছে এবং বরফের স্তর গলতে থাকায় বিশ্বের জলবায়ু ব্যবস্থায় আমূল পরিবর্তন ঘটছে। গত কয়েক দশকের রেকর্ডে দেখা গেছে, শিল্পযুগ-পূর্ব সময়ের তুলনায় পৃথিবীর আবহাওয়া আজ অনেক বেশি অপ্রত্যাশিত ও চরম আচরণ করছে। ঘনঘন ও তীব্রতর হয়ে উঠছে বন্যা, খরা, দাবানল ও ঘূর্ণিঝড়ের মতো দুর্যোগ, যা বিশ্বজুড়ে পরিবেশ, অর্থনীতি এবং মানবসমাজের ওপর গভীর প্রভাব ফেলছে।</p>
+                  </div>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-radius: 20px; box-shadow: 0 8px 35px rgba(156, 39, 176, 0.15); margin-top: 20px;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 18px; color: #7b1fa2;">
+                      <i class="fa-solid fa-list-ul" style="margin-right: 10px; font-size: 1.3em; color: #9c27b0;"></i>
+                      জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাবসমূহ
+                    </h3>
+                    <p class="mb-3">জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাবসমূহের মধ্যে রয়েছে তাপমাত্রা বৃদ্ধি, বৃষ্টিপাতের অস্বাভাবিকতা বা ভিন্নতা, খরা, ঘূর্ণিঝড়, সমুদ্রপৃষ্ঠের উচ্চতা বৃদ্ধি, পানির লবণাক্ততা বৃদ্ধি, তাপপ্রবাহ, শৈত্যপ্রবাহ এবং এ সম্পর্কিত অন্যান্য ঘটনাসমূহ, যা মানুষের জীবন ও জীবিকার ওপর বিরূপ প্রভাব ফেলছে।</p>
+                    <h6 style="display: flex; align-items: center; margin-bottom: 14px; color: #6a1b9a; font-weight: 600;">
+                      <i class="fa-solid fa-triangle-exclamation" style="margin-right: 8px; font-size: 1.1em; color: #8e24aa;"></i>
+                      বিপন্ন খাতসমূহ
+                    </h6>
+                    <p class="mb-0">খাদ্য নিরাপত্তা, স্বাস্থ্য, কৃষি, পানি সম্পদ, উপকূলীয় সম্পদ, শিক্ষা, জীবিকা ও বাসস্থান।</p>
                   </div>
                 </div>`;
             })(),
@@ -14771,7 +14795,7 @@ const coursesData = [
           {
             id: "ch22-lesson-2",
             title: yhLang(
-              "জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর",
+              "Impact of Climate Change on Human Health",
               "জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর"
             ),
             icon: "fa-heart-pulse",
@@ -14781,16 +14805,32 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর</h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-heart-pulse" style="color: #e91e63; margin-right: 12px; font-size: 1.2em;"></i>
+                    জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর
+                  </h2>
+                  
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="60">
                     <div class="col-12 col-md-12">
-                      <div class="modern-card glass-card h-100 text-center">
-                        <img src="img/modu22/climate1.png" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ু পরিবর্তনের তাপমাত্রা বৃদ্ধি" loading="lazy" style="width: 100%;">
+                      <div class="modern-card glass-card h-100" style="background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border-radius: 25px; box-shadow: 0 12px 45px rgba(63, 81, 181, 0.25); overflow: hidden; border: 2px solid rgba(255,255,255,0.3);">
+                        <h5 style="display: flex; align-items: center; padding: 15px 20px; margin: 0; color: #3f51b5; border-bottom: 2px solid rgba(63, 81, 181, 0.2);">
+                          <i class="fa-solid fa-temperature-arrow-up" style="margin-right: 10px; font-size: 1.2em; color: #ff5722;"></i>
+                          তাপমাত্রা বৃদ্ধি এবং স্বাস্থ্য প্রভাব
+                        </h5>
+                        <div style="padding: 15px;">
+                          <img src="img/modu22/climate1.png" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ু পরিবর্তনের তাপমাত্রা বৃদ্ধি" loading="lazy" style="width: 100%; border-radius: 15px;">
+                        </div>
                       </div>
                     </div>
                     <div class="col-12 col-md-12">
-                      <div class="modern-card glass-card h-100 text-center">
-                        <img src="img/modu22/climate2.png" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ুর পরিবর্তনে স্বাস্থ্যঝুঁকি" loading="lazy" style="width: 100%;">
+                      <div class="modern-card glass-card h-100" style="background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%); border-radius: 25px; box-shadow: 0 12px 45px rgba(139, 195, 74, 0.25); overflow: hidden; border: 2px solid rgba(255,255,255,0.3);">
+                        <h5 style="display: flex; align-items: center; padding: 15px 20px; margin: 0; color: #689f38; border-bottom: 2px solid rgba(139, 195, 74, 0.2);">
+                          <i class="fa-solid fa-chart-line" style="margin-right: 10px; font-size: 1.2em; color: #7cb342;"></i>
+                          জলবায়ু পরিবর্তনের স্বাস্থ্য ঝুঁকির চিত্র
+                        </h5>
+                        <div style="padding: 15px;">
+                          <img src="img/modu22/climate2.png" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ুর পরিবর্তনে স্বাস্থ্যঝুঁকি" loading="lazy" style="width: 100%; border-radius: 15px;">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -14800,7 +14840,7 @@ const coursesData = [
           {
             id: "ch22-lesson-3",
             title: yhLang(
-              "জলবায়ু পরিবর্তন কীভাবে মানব স্বাস্থ্যে প্রভাব ফেলে",
+              "How Climate Change Affects Human Health",
               "জলবায়ু পরিবর্তন কীভাবে মানব স্বাস্থ্যে প্রভাব ফেলে"
             ),
             icon: "fa-stethoscope",
@@ -14810,12 +14850,75 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তন কীভাবে মানব স্বাস্থ্যে প্রভাব ফেলে</h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
-                    <p>মানব স্বাস্থ্যের উপর জলবায়ু পরিবর্তন ও তার অনুসঙ্গিক বিষয়ের প্রভাব অস্বীকার্য ও ব্যাপক। বাংলাদেশের জলবায়ু পরিবর্তনের কারণে কৃষি, পানি, অবকাঠামো, শিল্প, বাসস্থান এবং স্বাস্থ্য ইত্যাদি বিষয়গুলির উপর ব্যাপকভাবে প্রভাব বিস্তার করেছে, যা অনেক ক্ষেত্রেই আশঙ্কাজনক।</p>
-                    <p>জলবায়ু পরিবর্তনের ফলে রোগের বিস্তার, বাস্তুসংস্থান ও আর্থসামাজিক অবস্থার পরিবর্তন হয়। মানব স্বাস্থ্যের মতো একটি অত্যন্ত গুরুত্বপূর্ণ বিষয় উপরোক্ত পরিবর্তনসমূহের কারণে বিভিন্নভাবে প্রভাবিত হয়। জলবায়ু পরিবর্তনের প্রত্যক্ষ প্রভাবের ক্ষেত্রে উষ্ণতা, ঘূর্ণিঝড়, বন্যা এসব ঘটনা সবচেয়ে বেশি প্রভাব ফেলে। পরোক্ষ প্রভাবসমূহ সাধারণ পানিবাহিত রোগ, কীটপতঙ্গ বাহিত রোগ, বায়ুদূষণ ইত্যাদির মাধ্যমে পরিলক্ষিত হয়। পেশাগত স্বাস্থ্য ও মানসিক স্বাস্থ্য প্রত্যক্ষ ও পরোক্ষ উভয় কারণেই প্রভাবিত হয়।</p>
-                    <p><strong>জলবায়ু পরিবর্তনের তীব্রতা</strong></p>
-                    <p>বাংলাদেশে শিশু-কিশোরদের স্বাস্থ্যের উপর প্রভাব ফেলছে এমন দুটি প্রধান সমস্যা হলো তাপদাহ এবং পানি সম্পর্কিত দুর্যোগ। বিশ্বব্যাপী এক তৃতীয়াংশেরও বেশি শিশু-কিশোর (n = ৯২০ মিলিয়ন) পানির অভাবের সম্মুখীন হয় এবং ৮২০ মিলিয়ন জনসংখ্যা তাপপ্রবাহের সম্মুখীন হয়।</p>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-stethoscope" style="color: #2196f3; margin-right: 12px; font-size: 1.2em;"></i>
+                    জলবায়ু পরিবর্তন কীভাবে মানব স্বাস্থ্যে প্রভাব ফেলে
+                  </h2>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); border-radius: 20px; box-shadow: 0 10px 38px rgba(255, 160, 0, 0.2);">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #f57c00;">
+                      <i class="fa-solid fa-heartbeat" style="margin-right: 10px; font-size: 1.3em; color: #ff6f00;"></i>
+                      স্বাস্থ্যের উপর ব্যাপক প্রভাব
+                    </h3>
+                    <p>মানব স্বাস্থ্যের উপর জলবায়ু পরিবর্তন ও তার অনুসঙ্গিক বিষয়ের প্রভাব অস্বীকার্য ও ব্যাপক। বাংলাদেশে জলবায়ু পরিবর্তনের কারণে কৃষি, পানি, অবকাঠামো, শিল্প, বাসস্থান এবং স্বাস্থ্য ইত্যাদি বিষয়গুলির উপর ব্যাপকভাবে প্রভাব বিস্তার করেছে, যা অনেক ক্ষেত্রেই আশঙ্কাজনক।</p>
+                  </div>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border-radius: 22px; box-shadow: 0 12px 42px rgba(244, 67, 54, 0.22); margin-top: 20px;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #c62828;">
+                      <i class="fa-solid fa-virus" style="margin-right: 10px; font-size: 1.3em; color: #d32f2f;"></i>
+                      প্রত্যক্ষ ও পরোক্ষ প্রভাব
+                    </h3>
+                    <p>জলবায়ু পরিবর্তনের ফলে রোগের বিস্তার, বাস্তুসংস্থান ও আর্থসামাজিক অবস্থার পরিবর্তন হয়। মানব স্বাস্থ্যের মতো একটি অত্যন্ত গুরুত্বপূর্ণ বিষয় উপরোক্ত পরিবর্তনসমূহের কারণে বিভিন্নভাবে প্রভাবিত হয়।</p>
+                    
+                    <div class="row g-3 mt-3">
+                      <div class="col-md-6">
+                        <div style="background: rgba(255,255,255,0.5); padding: 15px; border-radius: 15px; border-left: 4px solid #d32f2f;">
+                          <h6 style="display: flex; align-items: center; color: #c62828; margin-bottom: 10px;">
+                            <i class="fa-solid fa-bolt-lightning" style="margin-right: 8px; color: #ff5252;"></i>
+                            প্রত্যক্ষ প্রভাব
+                          </h6>
+                          <p class="mb-0" style="font-size: 0.95em;">উষ্ণতা, ঘূর্ণিঝড়, বন্যা এসব ঘটনা সবচেয়ে বেশি প্রভাব ফেলে।</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div style="background: rgba(255,255,255,0.5); padding: 15px; border-radius: 15px; border-left: 4px solid #ff6f00;">
+                          <h6 style="display: flex; align-items: center; color: #ef6c00; margin-bottom: 10px;">
+                            <i class="fa-solid fa-arrows-spin" style="margin-right: 8px; color: #ff9800;"></i>
+                            পরোক্ষ প্রভাব
+                          </h6>
+                          <p class="mb-0" style="font-size: 0.95em;">পানিবাহিত রোগ, কীটপতঙ্গ বাহিত রোগ, বায়ুদূষণ ইত্যাদির মাধ্যমে পরিলক্ষিত।</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 20px; box-shadow: 0 10px 38px rgba(33, 150, 243, 0.2); margin-top: 20px;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #1565c0;">
+                      <i class="fa-solid fa-children" style="margin-right: 10px; font-size: 1.3em; color: #1976d2;"></i>
+                      বাংলাদেশে তীব্রতা
+                    </h3>
+                    <p class="mb-3">বাংলাদেশে শিশু-কিশোরদের স্বাস্থ্যের উপর প্রভাব ফেলছে এমন দুটি প্রধান সমস্যা হলো:</p>
+                    
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div style="background: linear-gradient(135deg, #ff8a80 0%, #ff5252 100%); padding: 18px; border-radius: 18px; box-shadow: 0 6px 20px rgba(255, 82, 82, 0.3); color: white;">
+                          <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <i class="fa-solid fa-temperature-high" style="font-size: 2.5em; margin-right: 12px;"></i>
+                            <h5 class="mb-0" style="color: white;">তাপদাহ</h5>
+                          </div>
+                          <p class="mb-0" style="font-size: 0.9em; opacity: 0.95;">৮২০ মিলিয়ন শিশু-কিশোর তাপপ্রবাহের সম্মুখীন</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div style="background: linear-gradient(135deg, #448aff 0%, #2979ff 100%); padding: 18px; border-radius: 18px; box-shadow: 0 6px 20px rgba(41, 121, 255, 0.3); color: white;">
+                          <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <i class="fa-solid fa-water" style="font-size: 2.5em; margin-right: 12px;"></i>
+                            <h5 class="mb-0" style="color: white;">পানির অভাব</h5>
+                          </div>
+                          <p class="mb-0" style="font-size: 0.9em; opacity: 0.95;">৯২০ মিলিয়ন শিশু-কিশোর পানির অভাবে</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>`;
             })(),
@@ -14823,7 +14926,7 @@ const coursesData = [
           {
             id: "ch22-lesson-4",
             title: yhLang(
-              "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি",
+              "Health Risks for Children and Adolescents Due to Climate Change",
               "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি"
             ),
             icon: "fa-children",
@@ -14833,18 +14936,25 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি</h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;">
+                    <i class="fa-solid fa-children" style="color:#ec407a;margin-right:12px;font-size:1.2em;"></i>
+                    জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি
+                  </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card">
+                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 100%);border-radius:22px;box-shadow:0 12px 40px rgba(236,64,122,.18);">
+                        <h3 style="display:flex;align-items:center;color:#ad1457;margin-bottom:16px;">
+                          <i class="fa-solid fa-shield-virus" style="margin-right:10px;color:#d81b60;"></i>
+                          স্বাস্থ্যঝুঁকির তুলনামূলক চিত্র
+                        </h3>
                         <div class="table-responsive">
-                          <table class="table table-bordered table-modern align-middle">
+                          <table class="table table-bordered table-modern align-middle" style="background:rgba(255,255,255,.72);border-radius:16px;overflow:hidden;">
                             <thead>
                               <tr>
-                                <th class="text-center">
+                                <th class="text-center" style="background:linear-gradient(135deg,#ff8a65,#ff7043);color:#fff;">
                                   <span class="impact-heading"><i class="fa-solid fa-temperature-high"></i> তাপদাহ</span>
                                 </th>
-                                <th class="text-center">
+                                <th class="text-center" style="background:linear-gradient(135deg,#42a5f5,#1e88e5);color:#fff;">
                                   <span class="impact-heading"><i class="fa-solid fa-water"></i> পানি সম্পর্কিত দুর্যোগ</span>
                                 </th>
                               </tr>
@@ -14855,20 +14965,20 @@ const coursesData = [
                                   <div class="impact-block">
                                     <span class="impact-badge impact-badge--direct">সরাসরি প্রভাব</span>
                                     <ul class="impact-list">
-                                      <li>সময়ের আগে অকাল জন্ম, মৃত শিশুর জন্ম</li>
-                                      <li>শিশু মৃত্যুহার বৃদ্ধি</li>
-                                      <li>ইডিমা, ফুসকুড়ি, খিঁচুনি</li>
-                                      <li>মূর্ছা, ক্লান্তি এবং স্ট্রোক</li>
+                                      <li><i class="fa-solid fa-baby text-danger me-2"></i>সময়ের আগে অকাল জন্ম, মৃত শিশুর জন্ম</li>
+                                      <li><i class="fa-solid fa-heart-crack text-danger me-2"></i>শিশু মৃত্যুহার বৃদ্ধি</li>
+                                      <li><i class="fa-solid fa-bandage text-danger me-2"></i>ইডিমা, ফুসকুড়ি, খিঁচুনি</li>
+                                      <li><i class="fa-solid fa-user-injured text-danger me-2"></i>মূর্ছা, ক্লান্তি এবং স্ট্রোক</li>
                                     </ul>
                                   </div>
                                   <div class="impact-block">
                                     <span class="impact-badge impact-badge--indirect">পরোক্ষ প্রভাব</span>
                                     <ul class="impact-list">
-                                      <li>বায়ু দূষণ</li>
-                                      <li>খাদ্যবাহিত সংক্রমণ</li>
-                                      <li>ম্যালেরিয়া</li>
-                                      <li>কালাজ্বর</li>
-                                      <li>ক্যান্সার</li>
+                                      <li><i class="fa-solid fa-smog text-warning me-2"></i>বায়ু দূষণ</li>
+                                      <li><i class="fa-solid fa-utensils text-warning me-2"></i>খাদ্যবাহিত সংক্রমণ</li>
+                                      <li><i class="fa-solid fa-mosquito text-warning me-2"></i>ম্যালেরিয়া</li>
+                                      <li><i class="fa-solid fa-virus text-warning me-2"></i>কালাজ্বর</li>
+                                      <li><i class="fa-solid fa-ribbon text-warning me-2"></i>ক্যান্সার</li>
                                     </ul>
                                   </div>
                                 </td>
@@ -14876,24 +14986,24 @@ const coursesData = [
                                   <div class="impact-block">
                                     <span class="impact-badge impact-badge--direct">সরাসরি প্রভাব</span>
                                     <ul class="impact-list">
-                                      <li>ডায়রিয়া</li>
-                                      <li>আমাশয়</li>
-                                      <li>পোলিওমাইলাইটিস</li>
-                                      <li>টাইফয়েড জ্বর</li>
-                                      <li>অ্যামিবিয়াসিস</li>
-                                      <li>জিয়ার্ডিয়াসিস</li>
-                                      <li>কৃমির উপদ্রব</li>
-                                      <li>আর্সেনিকোসিস</li>
+                                      <li><i class="fa-solid fa-droplet text-primary me-2"></i>ডায়রিয়া</li>
+                                      <li><i class="fa-solid fa-bacteria text-primary me-2"></i>আমাশয়</li>
+                                      <li><i class="fa-solid fa-virus text-primary me-2"></i>পোলিওমাইলাইটিস</li>
+                                      <li><i class="fa-solid fa-temperature-high text-primary me-2"></i>টাইফয়েড জ্বর</li>
+                                      <li><i class="fa-solid fa-microscope text-primary me-2"></i>অ্যামিবিয়াসিস</li>
+                                      <li><i class="fa-solid fa-vial-virus text-primary me-2"></i>জিয়ার্ডিয়াসিস</li>
+                                      <li><i class="fa-solid fa-bug text-primary me-2"></i>কৃমির উপদ্রব</li>
+                                      <li><i class="fa-solid fa-skull-crossbones text-primary me-2"></i>আর্সেনিকোসিস</li>
                                     </ul>
                                   </div>
                                   <div class="impact-block">
                                     <span class="impact-badge impact-badge--indirect">পরোক্ষ প্রভাব</span>
                                     <ul class="impact-list">
-                                      <li>অপুষ্টি</li>
-                                      <li>মানসিক চাপ</li>
-                                      <li>ক্যান্সার</li>
-                                      <li>সামাজিক সহিংসতা</li>
-                                      <li>স্থানচ্যুতি</li>
+                                      <li><i class="fa-solid fa-bowl-food text-info me-2"></i>অপুষ্টি</li>
+                                      <li><i class="fa-solid fa-brain text-info me-2"></i>মানসিক চাপ</li>
+                                      <li><i class="fa-solid fa-ribbon text-info me-2"></i>ক্যান্সার</li>
+                                      <li><i class="fa-solid fa-hand-fist text-info me-2"></i>সামাজিক সহিংসতা</li>
+                                      <li><i class="fa-solid fa-person-walking-luggage text-info me-2"></i>স্থানচ্যুতি</li>
                                     </ul>
                                   </div>
                                 </td>
@@ -14904,7 +15014,11 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card text-center">
+                      <div class="modern-card glass-card text-center" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 100%);border-radius:20px;box-shadow:0 10px 32px rgba(255,152,0,.2);">
+                        <h5 style="display:flex;align-items:center;justify-content:center;color:#e65100;margin-bottom:14px;">
+                          <i class="fa-solid fa-heart-pulse" style="margin-right:8px;"></i>
+                          ঝুঁকির ভিজ্যুয়াল উপস্থাপন
+                        </h5>
                         <img src="img/modu22/heart.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="শিশু-কিশোরদের স্বাস্থ্য ঝুঁকি" loading="lazy">
                       </div>
                     </div>
@@ -14915,7 +15029,7 @@ const coursesData = [
           {
             id: "ch22-lesson-5",
             title: yhLang(
-              "বায়ু দূষণ",
+              "Air Pollution",
               "বায়ু দূষণ"
             ),
             icon: "fa-wind",
@@ -14925,20 +15039,27 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">বায়ু দূষণ</h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-wind" style="color: #607d8b; margin-right: 12px; font-size: 1.2em;"></i>
+                    বায়ু দূষণ
+                  </h2>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#eceff1 0%,#e1f5fe 100%);border-radius:22px;box-shadow:0 10px 35px rgba(84,110,122,.18);">
+                    <h3 style="display:flex;align-items:center;color:#455a64;margin-bottom:14px;">
+                      <i class="fa-solid fa-lungs" style="margin-right:10px;color:#546e7a;"></i>
+                      বায়ু দূষণের ধরন ও প্রভাব
+                    </h3>
                     <p>বায়ু দূষণকে এক বা একাধিক দূষিত পদার্থের উপস্থিতি হিসাবে সংজ্ঞায়িত করা যেতে পারে, যেমন ধূলিকণা, ধোঁয়া, গ্যাস, কুয়াশা, গন্ধ, ধোঁয়া বা বাষ্প, যেগুলো মানুষ, প্রাণী বা উদ্ভিদ জীবনের জন্য ক্ষতিকারক।</p>
                     <p><strong>বায়ু দূষণ প্রাথমিক ভাবে দুই ধরনের:</strong></p>
                     <p>১. পরিবেষ্টিত বা অ্যাম্বিয়েন্ট (বাহ্যিক) বায়ু দূষণ বলতে বাইরের বাতাসের দূষণকে বোঝায়। এর মধ্যে সাধারণত কার্বন মনোক্সাইড (CO), নাইট্রোজেন অক্সাইড (NOx), সীসা, আর্সেনিক, পারদ, সালফার ডাই অক্সাইড (SO2), পলিসাইক্লিক অ্যারোমেটিক হাইড্রোকার্বন (PAHs) এবং কণা পদার্থ (PM) অন্তর্ভুক্ত থাকে।</p>
                     <p>২. গৃহস্থালির (অভ্যন্তরীণ) বায়ু দূষণ বলতে রান্না, তাপ এবং আলো জ্বালানোর জন্য জ্বালানি (কাঠ, জৈববস্তু, কয়লা, কেরোসিন ইত্যাদি) অপ্রয়োজনীয় দহনের ফলে সৃষ্ট ঘরের ভেতরে এবং আশেপাশের দূষণকে বোঝায়।</p>
                     <p>বায়ু কতটা দূষিত তা বায়ুর মান সূচক (AQI) দ্বারা পরিমাপ করা যায়। বাংলাদেশে, পাঁচটি দূষণকারী পদার্থের (কণা পদার্থ PM10 এবং PM2.5, NO2, CO, SO2 এবং O3) বিদ্যমান ঘনত্বের উপর ভিত্তি করে AQI গণনা করা হয়।</p>
                     <div class="table-responsive mt-4">
-                      <table class="table table-bordered table-aqi align-middle">
+                      <table class="table table-bordered table-aqi align-middle" style="background:rgba(255,255,255,.76);border-radius:16px;overflow:hidden;">
                         <thead>
                           <tr>
-                            <th>বায়ুর মান সূচক (AQI)</th>
-                            <th>ক্যাটাগরি</th>
-                            <th>রং</th>
+                            <th style="background:linear-gradient(135deg,#4fc3f7,#29b6f6);color:#fff;">বায়ুর মান সূচক (AQI)</th>
+                            <th style="background:linear-gradient(135deg,#4dd0e1,#26c6da);color:#fff;">ক্যাটাগরি</th>
+                            <th style="background:linear-gradient(135deg,#81c784,#66bb6a);color:#fff;">রং</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -14982,8 +15103,8 @@ const coursesData = [
           {
             id: "ch22-lesson-6",
             title: yhLang(
-              "বায়ু দূষণের উৎস:",
-              "বায়ু দূষণের উৎস:"
+              "Sources of Air Pollution",
+              "বায়ু দূষণের উৎস"
             ),
             icon: "fa-industry",
             gradientClass: "bg-gradient-amber",
@@ -14992,48 +15113,51 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">বায়ু দূষণের উৎস:</h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-industry" style="color: #ff6f00; margin-right: 12px; font-size: 1.2em;"></i>
+                    বায়ু দূষণের উৎস:
+                  </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100">
-                        <h4 class=" mb-3">WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:</h3>
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fff8e1 0%,#ffe0b2 100%);border-radius:22px;box-shadow:0 10px 35px rgba(255,152,0,.18);">
+                        <h4 class=" mb-3" style="display:flex;align-items:center;color:#ef6c00;"><i class="fa-solid fa-smog" style="margin-right:10px;"></i>WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:</h4>
                         <ul class="list-unstyled feature-list mb-4">
-                          <li>i. সূক্ষ্ম কণা(PM 2.5)</li>
-                          <li>ii. মোটা কণা(PM10)</li>
-                          <li>iii. পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)</li>
-                          <li>iv. নাইট্রোজেন ডাই অক্সাইড (NO2)</li>
-                          <li>v. সালফার ডাই অক্সাইড(SO2)</li>
-                          <li>vi. কার্বন মনোক্সাইড (CO)</li>
+                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>i. সূক্ষ্ম কণা(PM 2.5)</li>
+                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>ii. মোটা কণা(PM10)</li>
+                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>iii. পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)</li>
+                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>iv. নাইট্রোজেন ডাই অক্সাইড (NO2)</li>
+                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>v. সালফার ডাই অক্সাইড(SO2)</li>
+                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>vi. কার্বন মনোক্সাইড (CO)</li>
                         </ul>
                         <p class="mb-4">বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে ।</p>
                         <div class="card-divider mb-3"></div>
-                        <h4 class="mb-3">বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা বায়ু দূষণ প্রতিরোধ:</h4>
+                        <h4 class="mb-3" style="display:flex;align-items:center;color:#e65100;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:</h4>
                         <ul class="list-unstyled feature-list mb-0">
-                          <li>i. খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা</li>
-                          <li>ii. স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা</li>
-                          <li>iii. গণপরিবহনের ব্যবহার বাড়ানো , হাঁটা বা সাইকেল চালানোতে উৎসাহ দেওয়া</li>
-                          <li>iv. কালো ধোঁওয়া উৎপন্ন কারী যানবাহন, ইট ভাটা বন্ধ করা</li>
-                          <li>v. ধুলো কমাতে রাস্তা ঘাটে পানি ছিটানো</li>
+                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>i. খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা</li>
+                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>ii. স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা</li>
+                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>iii. গণপরিবহনের ব্যবহার বাড়ানো , হাঁটা বা সাইকেল চালানোতে উৎসাহ দেওয়া</li>
+                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>iv. কালো ধোঁওয়া উৎপন্ন কারী যানবাহন, ইট ভাটা বন্ধ করা</li>
+                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>v. ধুলো কমাতে রাস্তা ঘাটে পানি ছিটানো</li>
                         </ul>
                       </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100">
-                        <h4 class=" mb-3">বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থ্যগত প্রভাব:</h3>
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:22px;box-shadow:0 10px 35px rgba(156,39,176,.18);">
+                        <h4 class=" mb-3" style="display:flex;align-items:center;color:#6a1b9a;"><i class="fa-solid fa-heart-pulse" style="margin-right:10px;"></i>বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থ্যগত প্রভাব:</h4>
                         <div class="health-block mb-4">
                           <h4 class="section-subtitle mb-3">১. প্রতিকূল জন্মের ফলাফল</h4>
                           <ul class="list-unstyled feature-list mb-0">
-                            <li>i. অকাল জন্ম:</li>
-                            <li>ii. গর্ভস্থ ভ্রূণের বৃদ্ধি প্রতিবন্ধকতা (IUGR)</li>
-                            <li>iii. কম জন্ম ওজন</li>
-                            <li>iv. স্থির জন্ম</li>
+                            <li><i class="fa-solid fa-baby-carriage text-danger me-2"></i>i. অকাল জন্ম:</li>
+                            <li><i class="fa-solid fa-child text-danger me-2"></i>ii. গর্ভস্থ ভ্রূণের বৃদ্ধি প্রতিবন্ধকতা (IUGR)</li>
+                            <li><i class="fa-solid fa-weight-scale text-danger me-2"></i>iii. কম জন্ম ওজন</li>
+                            <li><i class="fa-solid fa-heart-crack text-danger me-2"></i>iv. স্থির জন্ম</li>
                           </ul>
                         </div>
                         <div class="health-block mb-4">
                           <h4 class="section-subtitle mb-3">২. শৈশবে শ্বাসযন্ত্রের প্রভাব</h4>
                           <ul class="list-unstyled feature-list mb-0">
-                            <li>i. উচ্চ শ্বাস নালীর সংক্রমণ</li>
-                            <li>ii. ওটিটিস মিডিয়া</li>
+                            <li><i class="fa-solid fa-lungs text-warning me-2"></i>i. উচ্চ শ্বাস নালীর সংক্রমণ</li>
+                            <li><i class="fa-solid fa-ear-listen text-warning me-2"></i>ii. ওটিটিস মিডিয়া</li>
                           </ul>
                         </div>
                         <div class="health-block mb-4">
@@ -15045,10 +15169,10 @@ const coursesData = [
                         <div class="health-block">
                           <h4 class="section-subtitle mb-3">৫. অন্যান্য স্বাস্থ্যগত ফলাফল</h4>
                           <ul class="list-unstyled feature-list mb-0">
-                            <li>i. স্নায়ু বিকাশগত প্রতিবন্ধকতা (আইকিউ হ্রাস এবং অটিজম)</li>
-                            <li>ii. শৈশবকালীন ম্যালিগন্যান্সি</li>
-                            <li>iii. শিশু ও শিশু মৃত্যুহার</li>
-                            <li>iv. স্টান্টিং/ খর্বাকৃতি</li>
+                            <li><i class="fa-solid fa-brain text-info me-2"></i>i. স্নায়ু বিকাশগত প্রতিবন্ধকতা (আইকিউ হ্রাস এবং অটিজম)</li>
+                            <li><i class="fa-solid fa-ribbon text-info me-2"></i>ii. শৈশবকালীন ম্যালিগন্যান্সি</li>
+                            <li><i class="fa-solid fa-heart-circle-xmark text-info me-2"></i>iii. শিশু ও শিশু মৃত্যুহার</li>
+                            <li><i class="fa-solid fa-ruler-vertical text-info me-2"></i>iv. স্টান্টিং/ খর্বাকৃতি</li>
                           </ul>
                         </div>
                       </div>
@@ -15060,7 +15184,7 @@ const coursesData = [
           {
             id: "ch22-lesson-7",
             title: yhLang(
-              "শব্দ দূষণ",
+              "Noise Pollution",
               "শব্দ দূষণ"
             ),
             icon: "fa-volume-high",
@@ -15070,24 +15194,27 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">শব্দ দূষণ</h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-volume-high" style="color: #5e35b1; margin-right: 12px; font-size: 1.2em;"></i>
+                    শব্দ দূষণ
+                  </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card mb-3">
+                      <div class="modern-card glass-card mb-3" style="background:linear-gradient(135deg,#ede7f6 0%,#d1c4e9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(94,53,177,.2);">
                         <p>বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে " কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ" হিসেবে সংজ্ঞায়িত করেছে। জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।</p>
                         <div class="card-divider my-3"></div>
-                        <h3 class="mb-3">উৎস</h3>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i>উৎস</h3>
                         <p>শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন। বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।</p>
                       </div>
-                      <div class="modern-card glass-card">
-                        <h3 class="mb-3">শব্দ দূষণের প্রভাব</h3>
+                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(63,81,181,.2);">
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#3949ab;"><i class="fa-solid fa-ear-listen" style="margin-right:10px;"></i>শব্দ দূষণের প্রভাব</h3>
                         <ul class="list-unstyled feature-list mb-0">
-                          <li>i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায়</li>
-                          <li>ii. শ্রবণশক্তি হ্রাস করে</li>
-                          <li>iii. ঘুমের ব্যাঘাত ঘটায়</li>
-                          <li>iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায়,</li>
-                          <li>v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের  ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে</li>
-                          <li>vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায়</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>ii. শ্রবণশক্তি হ্রাস করে</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>iii. ঘুমের ব্যাঘাত ঘটায়</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায়,</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের  ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি</li>
                         </ul>
                       </div>
                     </div>
@@ -15117,10 +15244,10 @@ const coursesData = [
               const renderListItems = () =>
                 preventionList
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-check-circle text-primary me-2"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.62)' : 'rgba(255,255,255,.5)'};border-left:4px solid ${idx % 2 === 0 ? '#7e57c2' : '#5e35b1'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(126,87,194,.18)' : '0 8px 18px rgba(94,53,177,.16)'};">
+                        <i class="fa-solid ${idx < 2 ? 'fa-bullhorn' : idx < 4 ? 'fa-sliders' : 'fa-gavel'} ${idx < 2 ? 'text-danger' : idx < 4 ? 'text-primary' : 'text-success'} me-2"></i>
+                        <span style="color:#4a148c;">${item}</span>
                       </li>
                     `
                   )
@@ -15128,8 +15255,12 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">শব্দ দূষণ প্রতিরোধে করনীয়</h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;">
+                    <i class="fa-solid fa-ear-listen" style="color:#7e57c2;margin-right:12px;font-size:1.2em;"></i>
+                    শব্দ দূষণ প্রতিরোধে করনীয়
+                  </h2>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:22px;box-shadow:0 10px 35px rgba(126,87,194,.2);">
+                    <h3 style="display:flex;align-items:center;color:#6a1b9a;margin-bottom:14px;"><i class="fa-solid fa-volume-xmark" style="margin-right:10px;"></i>প্রতিরোধের করণীয়</h3>
                     <ul class="list-unstyled prevention-list mb-0">
                       ${renderListItems()}
                     </ul>
@@ -15140,7 +15271,7 @@ const coursesData = [
           {
             id: "ch22-lesson-9",
             title: yhLang(
-              "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক",
+              "Lead and Other Hazardous Chemicals",
               "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক"
             ),
             icon: "fa-flask",
@@ -15184,27 +15315,30 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক</h2>
-                  <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="20">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-flask" style="color: #c62828; margin-right: 12px; font-size: 1.2em;"></i>
+                    সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক
+                  </h2>
+                  <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#ffebee 0%,#ffcdd2 100%);border-radius:22px;box-shadow:0 10px 35px rgba(198,40,40,.18);">
                     <p>উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে ।</p>
-                    <p>সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:</p>
+                    <h5 style="display:flex;align-items:center;color:#b71c1c;"><i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:</h5>
                     <p>পানির চেয়ে ৫ গুণ বা তার বেশি পারমাণবিক ঘনত্ব সম্পন্ন ধাতুসমূহের গ্রুপকে ভারী ধাতু বা ক্ষতিকারক রাসায়নিক পদার্থ হিসাবে উল্লেখ করা হয়। জনস্বাস্থ্যের জন্য প্রধান প্রধান ক্ষতিকারক রাসায়নিক পদার্থ  গুলি নীচে দেয়া হল:</p>
                   </div>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="60">
                     <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100">
-                        <h3 class="mb-3">ক্ষতিকারক রাসায়নিক পদার্থ</h3>
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 100%);border-radius:20px;box-shadow:0 8px 28px rgba(216,27,96,.18);">
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#ad1457;"><i class="fa-solid fa-vial-circle-check" style="margin-right:10px;"></i>ক্ষতিকারক রাসায়নিক পদার্থ</h3>
                         <ul class="list-unstyled feature-list mb-0">
                           ${renderItems(chemicalList)}
                         </ul>
                       </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100">
-                        <h3 class="mb-3">ক্ষতিকারক রাসায়নিক পদার্থের সাথে সম্পর্কিত স্বাস্থ্য সমস্যা</h3>
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:20px;box-shadow:0 8px 28px rgba(123,31,162,.18);">
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#6a1b9a;"><i class="fa-solid fa-heart-circle-xmark" style="margin-right:10px;"></i>ক্ষতিকারক রাসায়নিক পদার্থের সাথে সম্পর্কিত স্বাস্থ্য সমস্যা</h3>
                         <p>তীব্র বমি, ডায়রিয়া, চর্মরোগ, ক্যান্সার, হৃদরোগ, কম জন্মওজন, সময়ের পূর্বে জন্ম, মৃত শিশুর জন্ম, প্রজনন ও বিকাশজনিত সমস্যা, অকাল মৃত্যু</p>
                         <div class="card-divider my-3"></div>
-                        <h3 class="mb-3">প্রতিরোধ ও ব্যবস্থাপনা</h3>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#4a148c;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>প্রতিরোধ ও ব্যবস্থাপনা</h3>
                         <ul class="list-unstyled feature-list mb-0">
                           ${renderItems(preventionList)}
                         </ul>
@@ -15237,9 +15371,9 @@ const coursesData = [
               const renderItems = () =>
                 actions
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-check text-primary me-2"></i>
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.64)' : 'rgba(232,245,233,.75)'};border-left:4px solid ${idx % 2 === 0 ? '#43a047' : '#66bb6a'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(67,160,71,.2)' : '0 8px 20px rgba(102,187,106,.18)'};">
+                        <i class="fa-solid ${idx < 2 ? 'fa-shield-heart' : idx < 4 ? 'fa-seedling' : 'fa-hand-holding-droplet'} ${idx < 2 ? 'text-success' : idx < 4 ? 'text-primary' : 'text-info'} me-2"></i>
                         <span>${item}</span>
                       </li>
                     `
@@ -15248,17 +15382,22 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়</h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;">
+                    <i class="fa-solid fa-shield-heart" style="color:#43a047;margin-right:12px;font-size:1.2em;"></i>
+                    জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়
+                  </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card h-100">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#e8f5e9 0%,#c8e6c9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(67,160,71,.2);">
+                        <h3 style="display:flex;align-items:center;color:#2e7d32;margin-bottom:12px;"><i class="fa-solid fa-list-check" style="margin-right:10px;"></i>প্রতিরোধমূলক পদক্ষেপ</h3>
                         <ul class="list-unstyled feature-list mb-0">
                           ${renderItems()}
                         </ul>
                       </div>
                     </div>
                     <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card text-center h-100">
+                      <div class="modern-card glass-card text-center h-100" style="background:linear-gradient(135deg,#e3f2fd 0%,#bbdefb 100%);border-radius:20px;box-shadow:0 10px 30px rgba(30,136,229,.2);">
+                        <h5 style="display:flex;align-items:center;justify-content:center;color:#1565c0;margin-bottom:14px;"><i class="fa-solid fa-cloud-sun-rain" style="margin-right:8px;"></i>জলবায়ু অভিযোজন চিত্র</h5>
                         <img src="img/modu22/climate3.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="জলবায়ু পরিবর্তন প্রতিরোধ" loading="lazy">
                       </div>
                     </div>
@@ -15269,7 +15408,7 @@ const coursesData = [
           {
             id: "ch22-lesson-11",
             title: yhLang(
-              "খাবারপানি",
+              "Food and Water",
               "খাবারপানি"
             ),
             icon: "fa-faucet-drip",
@@ -15286,9 +15425,9 @@ const coursesData = [
               const renderSources = () =>
                 waterSources
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-droplet text-primary me-2"></i>
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.68)' : 'rgba(227,242,253,.72)'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(3,155,229,.16)' : '0 8px 20px rgba(2,119,189,.16)'};">
+                        <i class="fa-solid ${idx === 0 ? 'fa-well' : idx === 1 ? 'fa-water' : 'fa-cloud-rain'} text-primary me-2"></i>
                         <span>${item}</span>
                       </li>
                     `
@@ -15297,13 +15436,17 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">খাবারপানি</h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-faucet-drip" style="color: #039be5; margin-right: 12px; font-size: 1.2em;"></i>
+                    খাবারপানি
+                  </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card">
+                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e1f5fe 0%,#b3e5fc 100%);border-radius:22px;box-shadow:0 10px 35px rgba(3,155,229,.18);">
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#0277bd;"><i class="fa-solid fa-glass-water" style="margin-right:10px;"></i>নিরাপদ খাবারপানির গুরুত্ব</h3>
                         <p>পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।</p>
                         <p class="mb-3">শিশু-কিশোরদের সু-স্বাস্থ্যের জন্য বিশুদ্ধ খাবারপানি, স্যানিটেশন এবং স্বাস্থ্যবিধি মেনে চলা অত্যাবশ্যক, যদিও অনেক গ্রামীণ, শহরের ঘিঞ্জি বস্তি এলাকা এবং দরিদ্র সম্প্রদায়ের অনেকক্ষেত্রে নিরাপদ খাবারপানি সহজলভ্য নয়।</p>
-                        <h3 class="mb-3">খাবারপানির উৎসঃ</h3>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#01579b;"><i class="fa-solid fa-water" style="margin-right:10px;"></i>খাবারপানির উৎসঃ</h3>
                         <ul class="list-unstyled feature-list mb-0">
                           ${renderSources()}
                         </ul>
@@ -15316,8 +15459,8 @@ const coursesData = [
           {
             id: "ch22-lesson-12",
             title: yhLang(
-              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ",
-              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ"
+              "Main Causes of Food and Water Contamination",
+              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ"
             ),
             icon: "fa-water",
             gradientClass: "bg-gradient-coral",
@@ -15362,10 +15505,13 @@ const coursesData = [
               const renderCauses = () =>
                 pollutionCauses
                   .map(
-                    (item) => `
-                      <li class="mb-3">
-                        <h4 class="mb-1">${item.title}</h4>
-                        <p class="mb-0">${item.desc}</p>
+                    (item, idx) => `
+                      <li class="mb-3" style="background:rgba(255,255,255,.65);border-radius:14px;padding:12px;box-shadow:${idx % 2 === 0 ? '0 6px 18px rgba(2,136,209,.14)' : '0 8px 20px rgba(255,112,67,.16)'};">
+                        <h4 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? '#0277bd' : '#d84315'};">
+                          <i class="fa-solid ${idx < 2 ? 'fa-industry' : idx < 4 ? 'fa-house' : idx < 6 ? 'fa-oil-can' : 'fa-truck-medical'} me-2"></i>
+                          ${item.title}
+                        </h4>
+                        <p class="mb-0"><i class="fa-solid fa-circle-info me-2 text-secondary"></i>${item.desc}</p>
                       </li>
                     `
                   )
@@ -15373,8 +15519,12 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ</h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-water" style="color: #ff7043; margin-right: 12px; font-size: 1.2em;"></i>
+                    খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ
+                  </h2>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fff3e0 0%,#ffccbc 100%);border-radius:22px;box-shadow:0 10px 35px rgba(255,112,67,.2);">
+                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:14px;"><i class="fa-solid fa-industry" style="margin-right:10px;"></i>দূষণের প্রধান উৎসসমূহ</h3>
                     <ul class="list-unstyled feature-list mb-0">
                       ${renderCauses()}
                     </ul>
@@ -15385,8 +15535,8 @@ const coursesData = [
           {
             id: "ch22-lesson-13",
             title: yhLang(
-              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ",
-              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ"
+              "Health Risks from Contaminated Food and Water",
+              "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি"
             ),
             icon: "fa-hand-holding-droplet",
             gradientClass: "bg-gradient-violet",
@@ -15434,9 +15584,9 @@ const coursesData = [
               const renderList = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check text-primary me-2"></i>
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.58)' : 'rgba(243,229,245,.6)'};border-radius:12px;padding:9px 11px;margin-bottom:8px;box-shadow:${idx % 2 === 0 ? '0 5px 14px rgba(123,31,162,.16)' : '0 7px 16px rgba(94,53,177,.15)'};">
+                        <i class="fa-solid ${item.includes('ক্যান্সার') ? 'fa-ribbon' : item.includes('কিডনি') ? 'fa-kidneys' : item.includes('লিভার') ? 'fa-user-doctor' : 'fa-circle-check'} ${item.includes('ক্যান্সার') ? 'text-danger' : 'text-primary'} me-2"></i>
                         <span>${item}</span>
                       </li>
                     `
@@ -15452,16 +15602,21 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ</h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-hand-holding-droplet" style="color: #9c27b0; margin-right: 12px; font-size: 1.2em;"></i>
+                    খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ
+                  </h2>
                   <p class="mt-3" data-aos="fade-up" data-aos-delay="20">অনিরাপদ বা দূষিত খাবারপানির কারণে নানা ধরনের গুরুতর স্বাস্থ্য ঝুঁকি হতে পারে। প্রধান স্বাস্থ্য ঝুঁকিগুলো হলো:</p>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#ede7f6 0%,#d1c4e9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(103,58,183,.2);">
+                        <h3 style="display:flex;align-items:center;color:#5e35b1;margin-bottom:12px;"><i class="fa-solid fa-briefcase-medical" style="margin-right:10px;"></i>তাৎক্ষণিক স্বাস্থ্যঝুঁকি</h3>
                         ${leftSections.map(renderSection).join("")}
                       </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:22px;box-shadow:0 10px 35px rgba(171,71,188,.2);">
+                        <h3 style="display:flex;align-items:center;color:#7b1fa2;margin-bottom:12px;"><i class="fa-solid fa-heart-circle-xmark" style="margin-right:10px;"></i>দীর্ঘমেয়াদি স্বাস্থ্যঝুঁকি</h3>
                         ${rightSections.map(renderSection).join("")}
                       </div>
                     </div>
@@ -15472,7 +15627,7 @@ const coursesData = [
           {
             id: "ch22-lesson-14",
             title: yhLang(
-              "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ",
+              "Steps to Improve Water, Sanitation and Hygiene",
               "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ"
             ),
             icon: "fa-hands-bubbles",
@@ -15497,9 +15652,9 @@ const coursesData = [
               const renderList = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-check text-primary me-2"></i>
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(224,242,241,.72)'};border-left:4px solid ${idx % 2 === 0 ? '#26a69a' : '#00acc1'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(0,150,136,.18)' : '0 8px 18px rgba(0,172,193,.16)'};">
+                        <i class="fa-solid ${idx < 2 ? 'fa-soap' : idx < 4 ? 'fa-droplet' : 'fa-people-group'} ${idx < 2 ? 'text-success' : idx < 4 ? 'text-info' : 'text-primary'} me-2"></i>
                         <span>${item}</span>
                       </li>
                     `
@@ -15508,15 +15663,18 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ</h2>
-                  <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-hands-bubbles" style="color: #00acc1; margin-right: 12px; font-size: 1.2em;"></i>
+                    পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ
+                  </h2>
+                  <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e0f2f1 0%,#b2dfdb 100%);border-radius:22px;box-shadow:0 10px 35px rgba(0,172,193,.2);">
                     <span class="hygiene-shape hygiene-shape-corner" aria-hidden="true"></span>
                     <span class="hygiene-shape hygiene-shape-orb" aria-hidden="true"></span>
                     <div class="hygiene-card__body">
                       <div class="row g-4 align-items-center">
                         <div class="col-12 col-lg-12">
                           <div class="hygiene-list mb-3">
-                            <div class="hygiene-list__title">
+                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00695c;font-weight:600;">
                               <i class="fa-solid fa-hands-bubbles me-2"></i>ব্যক্তিগত অনুশীলন:
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
@@ -15524,7 +15682,7 @@ const coursesData = [
                             </ul>
                           </div>
                           <div class="hygiene-list">
-                            <div class="hygiene-list__title">
+                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;">
                               <i class="fa-solid fa-people-group me-2"></i>কমিউনিটি স্তর:
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
@@ -15533,7 +15691,7 @@ const coursesData = [
                           </div>
                         </div>
                         <div class="col-12 col-lg-12">
-                          <figure class="image-card hygiene-figure mb-0">
+                          <figure class="image-card hygiene-figure mb-0" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);padding:12px;border-radius:18px;box-shadow:0 8px 26px rgba(3,155,229,.18);">
                             <img src="img/modu22/hand-wash.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
                           </figure>
                         </div>
@@ -15563,10 +15721,10 @@ const coursesData = [
               const renderList = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <span class="national-wash-bullet"><i class="fa-solid fa-circle"></i></span>
-                        <p class="mb-0">${item}</p>
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.72)' : 'rgba(227,242,253,.8)'};border-left:4px solid ${idx % 2 === 0 ? '#1e88e5' : '#42a5f5'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(30,136,229,.18)' : '0 8px 18px rgba(66,165,245,.16)'};">
+                        <span class="national-wash-bullet"><i class="fa-solid ${idx < 2 ? 'fa-building-columns' : idx < 4 ? 'fa-scale-balanced' : 'fa-book-open-reader'}"></i></span>
+                        <p class="mb-0" style="color:#0d47a1;">${item}</p>
                       </li>
                     `
                   )
@@ -15574,14 +15732,19 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">জাতীয় পর্যায়</h2>
-                  <div class="modern-card glass-card national-wash-card" data-aos="fade-up" data-aos-delay="40">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;">
+                    <i class="fa-solid fa-landmark" style="color:#1e88e5;margin-right:12px;font-size:1.2em;"></i>
+                    জাতীয় পর্যায়
+                  </h2>
+                  <div class="modern-card glass-card national-wash-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e3f2fd 0%,#bbdefb 100%);border-radius:22px;box-shadow:0 10px 35px rgba(30,136,229,.2);">
                     <span class="national-wash-shape national-wash-shape--corner" aria-hidden="true"></span>
                     <span class="national-wash-shape national-wash-shape--orb" aria-hidden="true"></span>
                     <div class="national-wash-card__body">
                       <div class="row g-4 align-items-center">
                         <div class="col-12 col-lg-12">
-                          <div class="national-wash-head d-flex align-items-center gap-2 mb-3">
+                          <div class="national-wash-head d-flex align-items-center gap-2 mb-3" style="color:#1565c0;font-weight:700;">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            জাতীয় পর্যায়ের করণীয়
                           </div>
                           <ul class="list-unstyled national-wash-list mb-0">
                             ${renderList(nationalActions)}
@@ -15596,8 +15759,8 @@ const coursesData = [
           {
             id: "ch22-lesson-16",
             title: yhLang(
-              "কীটনাশক এবং শিশু-কিশোর দের স্বাস্থ্য ঝুঁকি",
-              "কীটনাশক এবং শিশু-কিশোর দের স্বাস্থ্য ঝুঁকি"
+              "Pesticides and Health Risks for Children and Adolescents",
+              "কীটনাশক এবং শিশু-কিশোরদের স্বাস্থ্য ঝুঁকি"
             ),
             icon: "fa-spray-can-sparkles",
             gradientClass: "bg-gradient-rose",
@@ -15613,9 +15776,9 @@ const coursesData = [
               const renderPoints = () =>
                 pesticidePoints
                   .map(
-                    (item) => `
-                      <li>
-                        <span class="pesticide-bullet"><i class="fa-solid fa-check"></i></span>
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(255,241,118,.28)'};border-left:4px solid ${idx % 2 === 0 ? '#f06292' : '#ff8a65'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(240,98,146,.18)' : '0 8px 18px rgba(255,138,101,.16)'};">
+                        <span class="pesticide-bullet"><i class="fa-solid ${idx === 0 ? 'fa-spray-can' : idx === 1 ? 'fa-skull-crossbones' : 'fa-lungs'}"></i></span>
                         <p class="mb-0">${item}</p>
                       </li>
                     `
@@ -15624,8 +15787,11 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">কীটনাশক এবং শিশু-কিশোর দের স্বাস্থ্য ঝুঁকি</h2>
-                  <div class="modern-card glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-spray-can" style="color: #f06292; margin-right: 12px; font-size: 1.2em;"></i>
+                    কীটনাশক এবং শিশু-কিশোর দের স্বাস্থ্য ঝুঁকি
+                  </h2>
+                  <div class="modern-card glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 100%);border-radius:22px;box-shadow:0 10px 35px rgba(240,98,146,.2);">
                     <span class="pesticide-shape pesticide-shape--corner" aria-hidden="true"></span>
                     <span class="pesticide-shape pesticide-shape--dots" aria-hidden="true"></span>
                     <div class="pesticide-card__body">
@@ -15636,7 +15802,7 @@ const coursesData = [
                           </ul>
                         </div>
                         <div class="col-12 col-lg-12 order-1 order-lg-2">
-                          <figure class="image-card pesticide-figure mb-0">
+                            <figure class="image-card pesticide-figure mb-0" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);padding:12px;border-radius:18px;box-shadow:0 8px 26px rgba(255,112,67,.18);">
                             <img src="img/modu22/kit.png" class="img-fluid img-zoom w-100" alt="Pesticide exposure risk" loading="lazy">
                           </figure>
                         </div>
@@ -15649,7 +15815,7 @@ const coursesData = [
           {
             id: "ch22-lesson-17",
             title: yhLang(
-              "কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ",
+              "Pesticide Exposure Particularly Risks for Children and Adolescents",
               "কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ"
             ),
             icon: "fa-notes-medical",
@@ -15712,8 +15878,11 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ</h2>
-                  <p class="text-muted" data-aos="fade-up" data-aos-delay="30">নিচে প্রধান স্বাস্থ্য ঝুঁকিগুলো তুলে ধরা হলো:</p>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-notes-medical" style="color: #ff8a65; margin-right: 12px; font-size: 1.2em;"></i>
+                    কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ
+                  </h2>
+                  <p class="text-muted" data-aos="fade-up" data-aos-delay="30" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 100%);padding:10px 14px;border-radius:12px;display:inline-flex;align-items:center;box-shadow:0 4px 14px rgba(255,138,101,.2);"><i class="fa-solid fa-circle-info me-2 text-warning"></i>নিচে প্রধান স্বাস্থ্য ঝুঁকিগুলো তুলে ধরা হলো:</p>
                   <div class="row g-3 risk-grid" data-aos="fade-up" data-aos-delay="60">
                     ${renderCards()}
                   </div>
@@ -15722,7 +15891,7 @@ const coursesData = [
           },
           {
             id: "ch22-lesson-18",
-            title: yhLang("সতর্কতাঃ", "সতর্কতাঃ"),
+            title: yhLang("Precautions", "সতর্কতাসমূহ"),
             icon: "fa-triangle-exclamation",
             gradientClass: "bg-gradient-yellow",
             audioFile: "",
@@ -15743,10 +15912,10 @@ const coursesData = [
                   .map(
                     (item, idx) => `
                       <li>
-                        <article class="caution-item">
-                          <div class="caution-index">${formatIndex(idx + 1)}</div>
+                        <article class="caution-item" style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.75)' : 'rgba(255,249,196,.82)'};border-left:4px solid ${idx % 2 === 0 ? '#fbc02d' : '#f57f17'};box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(251,192,45,.2)' : '0 8px 20px rgba(245,127,23,.18)'};border-radius:12px;">
+                          <div class="caution-index" style="background:${idx % 2 === 0 ? 'linear-gradient(135deg,#fdd835,#fbc02d)' : 'linear-gradient(135deg,#ffb300,#f57f17)'};color:#fff;">${formatIndex(idx + 1)}</div>
                           <div class="caution-item__body">
-                            <p class="mb-0">${item}</p>
+                            <p class="mb-0"><i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>${item}</p>
                           </div>
                         </article>
                       </li>
@@ -15756,12 +15925,18 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">সতর্কতাঃ</h2>
-                  <div class="modern-card glass-card caution-card" data-aos="fade-up" data-aos-delay="40">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-triangle-exclamation" style="color: #fbc02d; margin-right: 12px; font-size: 1.2em;"></i>
+                    সতর্কতাঃ
+                  </h2>
+                  <div class="modern-card glass-card caution-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fffde7 0%,#fff9c4 100%);border-radius:22px;box-shadow:0 10px 35px rgba(251,192,45,.22);">
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
-                      <div class="caution-card__head">
+                      <div class="caution-card__head" style="display:flex;align-items:center;color:#f57f17;font-weight:700;margin-bottom:10px;">
+                        <i class="fa-solid fa-shield-halved me-2"></i> নিরাপত্তা নির্দেশনা
+                      </div>
+                      <div>
                         <ul class="list-unstyled caution-list mb-0">
                         ${renderItems()}
                       </ul>
@@ -15775,7 +15950,7 @@ const coursesData = [
       {
         id: "ch-23",
         title: yhLang(
-          "Module-23: Life skills, morality, and values",
+          "Module-23: Emerging and Re-emerging Diseases",
           "মডিউল-২৩: উদীয়মান ও পুনরাবির্ভূত রোগ"
         ),
         lessons: [
@@ -17030,7 +17205,7 @@ const coursesData = [
       {
         id: "ch-24",
         title: yhLang(
-          "Module-24: Life Skills, Ethics and Values Education for Adolescents",
+          "Module-24: Life Skills, Ethics and Values for Adolescents",
           "মডিউল-২৪: তরুণ–তরুণীদের জীবন দক্ষতা, নৈতিকতা ও মূল্যবোধ শিক্ষা"
         ),
         lessons: [

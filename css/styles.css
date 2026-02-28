@@ -2085,14 +2085,15 @@ html[lang|="bn"] h2 {
     vertical-align: inherit;
     display: flex;
     gap: 10px;
+    margin-bottom: 5px;
 }
 .puberty-list li:hover {
   transform: translateX(4px);
 }
 
 .puberty-list li i {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16673,7 +16674,7 @@ dashboard-titled-title {
 
 .lesson-content-body {
   display: grid;
-  gap: 1.8rem;
+  gap: 10px;
 }
 
 .lesson-quiz-card {

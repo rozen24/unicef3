@@ -1,0 +1,2042 @@
+/* ============================================
+   UNICEF YHA PROGRAMME - MODULE STYLING
+   Comprehensive UI Enhancement System
+   ============================================ */
+
+/* ============================================
+   SHARED VARIABLES & ROOT STYLES
+   ============================================ */
+
+:root {
+  /* Gradient Colors by Module */
+  --gradient-mod3: linear-gradient(135deg, #ff8a65 0%, #ffe0b2 100%);
+  --gradient-mod4: linear-gradient(135deg, #e91e63 0%, #f8bbd0 100%);
+  --gradient-mod5: linear-gradient(135deg, #1976d2 0%, #e1f5fe 100%);
+  --gradient-mod6: linear-gradient(135deg, #d32f2f 0%, #ffcdd2 100%);
+  --gradient-mod7: linear-gradient(135deg, #00897b 0%, #b2dfdb 100%);
+  --gradient-mod8: linear-gradient(135deg, #f57c00 0%, #ffe0b2 100%);
+  --gradient-mod9: linear-gradient(135deg, #c2185b 0%, #f8bbd0 100%);
+  --gradient-mod10: linear-gradient(135deg, #388e3c 0%, #c8e6c9 100%);
+  --gradient-mod11: linear-gradient(135deg, #1565c0 0%, #bbdefb 100%);
+  --gradient-mod12: linear-gradient(135deg, #ff9800 0%, #ffe0b2 100%);
+  --gradient-mod13: linear-gradient(135deg, #00897b 0%, #b2dfdb 100%);
+  --gradient-mod14: linear-gradient(135deg, #7b1fa2 0%, #e1bee7 100%);
+  --gradient-mod15: linear-gradient(135deg, #d32f2f 0%, #ffcdd2 100%);
+  --gradient-mod16: linear-gradient(135deg, #0277bd 0%, #b3e5fc 100%);
+  --gradient-mod17: linear-gradient(135deg, #5e35b1 0%, #e1bee7 100%);
+  --gradient-mod18: linear-gradient(135deg, #00695c 0%, #b2dfdb 100%);
+  --gradient-mod19: linear-gradient(135deg, #e838ef 0%, #f8e7ff 100%);
+}
+
+/* ============================================
+   TYPOGRAPHY & HEADING STYLES
+   ============================================ */
+
+h2.slide-title,
+.slide-title {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px !important;
+  margin-bottom: 1.5rem !important;
+  position: relative;
+  display: inline-block;
+}
+
+h2.slide-title::before,
+.slide-title::before {
+  content: "" !important;
+  display: inline-block !important;
+  margin-right: 12px !important;
+  font-size: 1.3em !important;
+  vertical-align: -0.15em !important;
+  animation: iconPulse 2s ease-in-out infinite !important;
+}
+
+h3 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.3px !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.8rem !important;
+  color: #2c3e50 !important;
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+}
+
+h3::before {
+  content: "" !important;
+  display: inline-block !important;
+  margin-right: 10px !important;
+  font-size: 1.2em !important;
+  color: inherit !important;
+  flex-shrink: 0 !important;
+}
+
+h5 {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.2px !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.6rem !important;
+  color: #34495e !important;
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+}
+
+h5::before {
+  content: "" !important;
+  display: inline-block !important;
+  margin-right: 8px !important;
+  font-size: 1.1em !important;
+  color: inherit !important;
+  flex-shrink: 0 !important;
+}
+
+.gradient-text {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* ============================================
+   MODULE 3: PUBERTY & MENSTRUAL MANAGEMENT
+   ============================================ */
+
+#ch3-lesson-1 h2.slide-title::before,
+#ch3-lesson-2 h2.slide-title::before,
+#ch3-lesson-3 h2.slide-title::before {
+  content: "\f240";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #f06292;
+}
+
+#ch3-lesson-1 h3::before,
+#ch3-lesson-2 h3::before,
+#ch3-lesson-3 h3::before {
+  content: "\f0f9";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ec407a;
+}
+
+#ch3-lesson-1 h5::before,
+#ch3-lesson-2 h5::before,
+#ch3-lesson-3 h5::before {
+  content: "\f25c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e91e63;
+}
+
+/* ============================================
+   MODULE 4: MENSTRUAL MANAGEMENT
+   ============================================ */
+
+#ch4-lesson-1 h2.slide-title::before,
+#ch4-lesson-2 h2.slide-title::before,
+#ch4-lesson-3 h2.slide-title::before,
+#ch4-lesson-4 h2.slide-title::before,
+#ch4-lesson-5 h2.slide-title::before {
+  content: "\f3ba";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e91e63;
+}
+
+#ch4-lesson-1 h3::before,
+#ch4-lesson-2 h3::before,
+#ch4-lesson-3 h3::before,
+#ch4-lesson-4 h3::before,
+#ch4-lesson-5 h3::before {
+  content: "\f0f9";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #c2185b;
+}
+
+#ch4-lesson-1 h5::before,
+#ch4-lesson-2 h5::before,
+#ch4-lesson-3 h5::before,
+#ch4-lesson-4 h5::before,
+#ch4-lesson-5 h5::before {
+  content: "\f028";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ad1457;
+}
+
+/* ============================================
+   MODULE 5: WET DREAMS & HYGIENE
+   ============================================ */
+
+#ch5-lesson-1 h2.slide-title::before,
+#ch5-lesson-2 h2.slide-title::before {
+  content: "\f6e2";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #1976d2;
+}
+
+#ch5-lesson-1 h3::before,
+#ch5-lesson-2 h3::before {
+  content: "\f1bb";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #1565c0;
+}
+
+#ch5-lesson-1 h5::before,
+#ch5-lesson-2 h5::before {
+  content: "\f5f1";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #0d47a1;
+}
+
+/* ============================================
+   MODULE 6: CHILD MARRIAGE
+   ============================================ */
+
+#ch6-lesson-1 h2.slide-title::before,
+#ch6-lesson-2 h2.slide-title::before,
+#ch6-lesson-3 h2.slide-title::before,
+#ch6-lesson-4 h2.slide-title::before {
+  content: "\f0f8";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #d32f2f;
+}
+
+#ch6-lesson-1 h3::before,
+#ch6-lesson-2 h3::before,
+#ch6-lesson-3 h3::before,
+#ch6-lesson-4 h3::before {
+  content: "\f007";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #c62828;
+}
+
+#ch6-lesson-1 h5::before,
+#ch6-lesson-2 h5::before,
+#ch6-lesson-3 h5::before,
+#ch6-lesson-4 h5::before {
+  content: "\f206";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #b71c1c;
+}
+
+/* ============================================
+   MODULE 7: FAMILY PLANNING
+   ============================================ */
+
+#ch7-lesson-1 h2.slide-title::before,
+#ch7-lesson-2 h2.slide-title::before {
+  content: "\f300";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #00897b;
+}
+
+#ch7-lesson-1 h3::before,
+#ch7-lesson-2 h3::before {
+  content: "\f1ae";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #00796b;
+}
+
+#ch7-lesson-1 h5::before,
+#ch7-lesson-2 h5::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #004d40;
+}
+
+/* ============================================
+   MODULE 8: ADOLESCENT MOTHERHOOD
+   ============================================ */
+
+#ch8-lesson-1 h2.slide-title::before,
+#ch8-lesson-2 h2.slide-title::before {
+  content: "\f233";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #f57c00;
+}
+
+#ch8-lesson-1 h3::before,
+#ch8-lesson-2 h3::before {
+  content: "\f1b5";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e65100;
+}
+
+#ch8-lesson-1 h5::before,
+#ch8-lesson-2 h5::before {
+  content: "\f6d3";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e64a19;
+}
+
+/* ============================================
+   MODULE 9: STIs & SEXUAL HEALTH
+   ============================================ */
+
+#ch9-lesson-1 h2.slide-title::before,
+#ch9-lesson-2 h2.slide-title::before,
+#ch9-lesson-3 h2.slide-title::before {
+  content: "\f6b6";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #c2185b;
+}
+
+#ch9-lesson-1 h3::before,
+#ch9-lesson-2 h3::before,
+#ch9-lesson-3 h3::before {
+  content: "\f0f1";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ad1457;
+}
+
+#ch9-lesson-1 h5::before,
+#ch9-lesson-2 h5::before,
+#ch9-lesson-3 h5::before {
+  content: "\f524";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #880e4f;
+}
+
+/* ============================================
+   MODULE 10: HPV & CERVICAL CANCER
+   ============================================ */
+
+#ch10-lesson-1 h2.slide-title::before,
+#ch10-lesson-2 h2.slide-title::before,
+#ch10-lesson-3 h2.slide-title::before {
+  content: "\f204";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #388e3c;
+}
+
+#ch10-lesson-1 h3::before,
+#ch10-lesson-2 h3::before,
+#ch10-lesson-3 h3::before {
+  content: "\f3ce";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #2e7d32;
+}
+
+#ch10-lesson-1 h5::before,
+#ch10-lesson-2 h5::before,
+#ch10-lesson-3 h5::before {
+  content: "\f0e7";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #1b5e20;
+}
+
+/* ============================================
+   MODULES 11-19: ADDITIONAL STYLING
+   ============================================ */
+
+/* Module 11: Contraception */
+#ch11-lesson-1 h2.slide-title::before,
+#ch11-lesson-2 h2.slide-title::before,
+#ch11-lesson-3 h2.slide-title::before {
+  content: "\f195";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #1565c0;
+}
+
+#ch11-lesson-1 h3::before,
+#ch11-lesson-2 h3::before,
+#ch11-lesson-3 h3::before {
+  content: "\f0a4";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #0d47a1;
+}
+
+#ch11-lesson-1 h5::before,
+#ch11-lesson-2 h5::before,
+#ch11-lesson-3 h5::before {
+  content: "\f51e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #0d47a1;
+}
+
+/* Module 12: Breast Health */
+#ch12-lesson-1 h2.slide-title::before,
+#ch12-lesson-2 h2.slide-title::before {
+  content: "\f3ff";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ff9800;
+}
+
+#ch12-lesson-1 h3::before,
+#ch12-lesson-2 h3::before {
+  content: "\f0a0";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e65100;
+}
+
+#ch12-lesson-1 h5::before,
+#ch12-lesson-2 h5::before {
+  content: "\f0e7";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e65100;
+}
+
+/* Module 13: Testicular Health */
+#ch13-lesson-1 h2.slide-title::before,
+#ch13-lesson-2 h2.slide-title::before {
+  content: "\f6e3";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #00897b;
+}
+
+#ch13-lesson-1 h3::before,
+#ch13-lesson-2 h3::before {
+  content: "\f1b5";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #00796b;
+}
+
+#ch13-lesson-1 h5::before,
+#ch13-lesson-2 h5::before {
+  content: "\f524";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #004d40;
+}
+
+/* Module 14: PCOS */
+#ch14-lesson-1 h2.slide-title::before,
+#ch14-lesson-2 h2.slide-title::before {
+  content: "\f188";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #7b1fa2;
+}
+
+#ch14-lesson-1 h3::before,
+#ch14-lesson-2 h3::before {
+  content: "\f3a0";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #6a1b9a;
+}
+
+#ch14-lesson-1 h5::before,
+#ch14-lesson-2 h5::before {
+  content: "\f514";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #4a148c;
+}
+
+/* Module 15: Gender-Based Violence */
+#ch15-lesson-1 h2.slide-title::before,
+#ch15-lesson-2 h2.slide-title::before,
+#ch15-lesson-3 h2.slide-title::before {
+  content: "\f132";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #d32f2f;
+}
+
+#ch15-lesson-1 h3::before,
+#ch15-lesson-2 h3::before,
+#ch15-lesson-3 h3::before {
+  content: "\f712";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #c62828;
+}
+
+#ch15-lesson-1 h5::before,
+#ch15-lesson-2 h5::before,
+#ch15-lesson-3 h5::before {
+  content: "\f132";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #b71c1c;
+}
+
+/* Module 16: Mental Health */
+#ch16-lesson-1 h2.slide-title::before,
+#ch16-lesson-2 h2.slide-title::before {
+  content: "\f504";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #0277bd;
+}
+
+#ch16-lesson-1 h3::before,
+#ch16-lesson-2 h3::before {
+  content: "\f5a4";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #01579b;
+}
+
+#ch16-lesson-1 h5::before,
+#ch16-lesson-2 h5::before {
+  content: "\f119";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #01579b;
+}
+
+/* Module 17: Substance Abuse */
+#ch17-lesson-1 h2.slide-title::before,
+#ch17-lesson-2 h2.slide-title::before {
+  content: "\f1b6";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #5e35b1;
+}
+
+#ch17-lesson-1 h3::before,
+#ch17-lesson-2 h3::before {
+  content: "\f192";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #4527a0;
+}
+
+#ch17-lesson-1 h5::before,
+#ch17-lesson-2 h5::before {
+  content: "\f05e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #311b92;
+}
+
+/* Module 18: Rights & Responsibilities */
+#ch18-lesson-1 h2.slide-title::before,
+#ch18-lesson-2 h2.slide-title::before {
+  content: "\f14a";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #00695c;
+}
+
+#ch18-lesson-1 h3::before,
+#ch18-lesson-2 h3::before {
+  content: "\f06d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #004d40;
+}
+
+#ch18-lesson-1 h5::before,
+#ch18-lesson-2 h5::before {
+  content: "\f0f3";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #004d40;
+}
+
+/* Module 19: Sexual Decision-Making */
+#ch19-lesson-1 h2.slide-title::before,
+#ch19-lesson-2 h2.slide-title::before {
+  content: "\f5a7";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e838ef;
+}
+
+#ch19-lesson-1 h3::before,
+#ch19-lesson-2 h3::before {
+  content: "\f550";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #6a0080;
+}
+
+#ch19-lesson-1 h5::before,
+#ch19-lesson-2 h5::before {
+  content: "\f1d8";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #6a0080;
+}
+
+/* TABLE HEADER STYLING - Overall */
+.module-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.module-table thead {
+  background: linear-gradient(135deg, #ff8a65 0%, #ffe0b2 100%);
+  border-top: 3px solid #d84315;
+}
+
+.module-table thead th {
+  border: 2px solid #d84315;
+  padding: 14px 16px !important;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  letter-spacing: 0.3px;
+  text-align: left;
+  background: inherit;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
+}
+
+.module-table tbody td {
+  padding: 12px 16px !important;
+  border-bottom: 1px solid #e0e0e0;
+  color: #424242;
+}
+
+.module-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.module-table tbody tr:hover {
+  background-color: rgba(255, 152, 0, 0.05) !important;
+  box-shadow: inset 0 0 8px rgba(255, 152, 0, 0.1);
+}
+
+.module-table tbody tr:nth-child(even) {
+  background-color: rgba(245, 245, 245, 0.7) !important;
+}
+
+/* Responsive table adjustments */
+@media (max-width: 768px) {
+  .module-table {
+    font-size: 0.9rem;
+  }
+  
+  .module-table thead th {
+    padding: 10px 8px !important;
+  }
+  
+  .module-table tbody td {
+    padding: 10px 8px !important;
+  }
+}
+
+/* MODULE-SPECIFIC LIST ITEM STYLING */
+
+/* Module 4, Lesson 2: Female Reproductive System */
+#ch4-lesson-2 .puberty-list li {
+  background: rgba(255, 255, 255, 0.68) !important;
+  border-left: 4px solid #e91e63 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #6d4c41 !important;
+}
+
+#ch4-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(248, 187, 208, 0.35) !important;
+}
+
+#ch4-lesson-2 .puberty-list li:nth-child(2) {
+  border-left-color: #c2185b !important;
+  box-shadow: 0 8px 20px rgba(193, 24, 91, 0.12) !important;
+}
+
+#ch4-lesson-2 .puberty-list li:nth-child(3) {
+  border-left-color: #ad1457 !important;
+  box-shadow: 0 10px 24px rgba(173, 20, 87, 0.12) !important;
+}
+
+#ch4-lesson-2 .puberty-list li:nth-child(4) {
+  border-left-color: #880e4f !important;
+  box-shadow: 0 12px 28px rgba(136, 14, 79, 0.12) !important;
+}
+
+#ch4-lesson-2 .puberty-list li:nth-child(5) {
+  border-left-color: #6a1b9a !important;
+  box-shadow: 0 14px 32px rgba(106, 27, 154, 0.12) !important;
+}
+
+/* Icons styling for reproductive system */
+#ch4-lesson-2 .puberty-list li i {
+  color: #e91e63 !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+  vertical-align: text-bottom;
+}
+
+#ch4-lesson-2 .puberty-list li:nth-child(2) i {
+  color: #c2185b !important;
+}
+
+#ch4-lesson-2 .puberty-list li:nth-child(3) i {
+  color: #ad1457 !important;
+}
+
+#ch4-lesson-2 .puberty-list li:nth-child(4) i {
+  color: #880e4f !important;
+}
+
+#ch4-lesson-2 .puberty-list li:nth-child(5) i {
+  color: #6a1b9a !important;
+}
+
+/* Module 3: Puberty & Menstruation - General Styling */
+#ch3-lesson-1 .puberty-list li,
+#ch3-lesson-2 .puberty-list li,
+#ch3-lesson-3 .puberty-list li {
+  background: rgba(255, 255, 255, 0.68) !important;
+  border-left: 4px solid #f06292 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(240, 98, 146, 0.12) !important;
+  color: #6d4c41 !important;
+  transition: all 0.3s ease;
+}
+
+#ch3-lesson-1 .puberty-list li:nth-child(even),
+#ch3-lesson-2 .puberty-list li:nth-child(even),
+#ch3-lesson-3 .puberty-list li:nth-child(even) {
+  background: rgba(245, 200, 210, 0.35) !important;
+}
+
+#ch3-lesson-1 .puberty-list li i,
+#ch3-lesson-2 .puberty-list li i,
+#ch3-lesson-3 .puberty-list li i {
+  color: #f06292 !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* MODULE 4: MENSTRUAL MANAGEMENT - All Lessons */
+#ch4-lesson-1 .puberty-list li,
+#ch4-lesson-3 .puberty-list li,
+#ch4-lesson-4 .puberty-list li,
+#ch4-lesson-5 .puberty-list li {
+  background: rgba(255, 255, 255, 0.68) !important;
+  border-left: 4px solid #e91e63 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(233, 30, 99, 0.12) !important;
+  color: #6d4c41 !important;
+}
+
+#ch4-lesson-1 .puberty-list li:nth-child(even),
+#ch4-lesson-3 .puberty-list li:nth-child(even),
+#ch4-lesson-4 .puberty-list li:nth-child(even),
+#ch4-lesson-5 .puberty-list li:nth-child(even) {
+  background: rgba(248, 187, 208, 0.35) !important;
+}
+
+#ch4-lesson-3 .puberty-list li,
+#ch4-lesson-4 .puberty-list li,
+#ch4-lesson-5 .puberty-list li {
+  border-left-color: #c2185b !important;
+  box-shadow: 0 8px 18px rgba(193, 24, 91, 0.12) !important;
+}
+
+#ch4-lesson-1 .puberty-list li i,
+#ch4-lesson-3 .puberty-list li i,
+#ch4-lesson-4 .puberty-list li i,
+#ch4-lesson-5 .puberty-list li i {
+  color: #e91e63 !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+#ch4-lesson-3 .puberty-list li i,
+#ch4-lesson-4 .puberty-list li i,
+#ch4-lesson-5 .puberty-list li i {
+  color: #c2185b !important;
+}
+
+/* ============================================
+   MODULE 5: WET DREAMS & HYGIENE
+   ============================================ */
+#ch5-lesson-1 .puberty-list li,
+#ch5-lesson-2 .puberty-list li {
+  background: rgba(236, 239, 241, 0.7) !important;
+  border-left: 4px solid #1976d2 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(25, 118, 210, 0.11) !important;
+  color: #1565c0 !important;
+}
+
+#ch5-lesson-1 .puberty-list li:nth-child(even),
+#ch5-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(225, 245, 254, 0.5) !important;
+}
+
+#ch5-lesson-1 .puberty-list li i,
+#ch5-lesson-2 .puberty-list li i {
+  color: #1976d2 !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 6: CHILD MARRIAGE
+   ============================================ */
+#ch6-lesson-1 .puberty-list li,
+#ch6-lesson-2 .puberty-list li,
+#ch6-lesson-3 .puberty-list li,
+#ch6-lesson-4 .puberty-list li {
+  background: rgba(252, 228, 236, 0.7) !important;
+  border-left: 4px solid #d32f2f !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(211, 47, 47, 0.12) !important;
+  color: #b71c1c !important;
+}
+
+#ch6-lesson-1 .puberty-list li:nth-child(even),
+#ch6-lesson-2 .puberty-list li:nth-child(even),
+#ch6-lesson-3 .puberty-list li:nth-child(even),
+#ch6-lesson-4 .puberty-list li:nth-child(even) {
+  background: rgba(239, 154, 154, 0.2) !important;
+}
+
+#ch6-lesson-1 .puberty-list li i,
+#ch6-lesson-2 .puberty-list li i,
+#ch6-lesson-3 .puberty-list li i,
+#ch6-lesson-4 .puberty-list li i {
+  color: #d32f2f !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 7: FAMILY PLANNING
+   ============================================ */
+#ch7-lesson-1 .puberty-list li,
+#ch7-lesson-2 .puberty-list li {
+  background: rgba(224, 242, 241, 0.7) !important;
+  border-left: 4px solid #00897b !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(0, 137, 123, 0.12) !important;
+  color: #004d40 !important;
+}
+
+#ch7-lesson-1 .puberty-list li:nth-child(even),
+#ch7-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(178, 223, 219, 0.35) !important;
+}
+
+#ch7-lesson-1 .puberty-list li i,
+#ch7-lesson-2 .puberty-list li i {
+  color: #00897b !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 8: ADOLESCENT MOTHERHOOD
+   ============================================ */
+#ch8-lesson-1 .puberty-list li,
+#ch8-lesson-2 .puberty-list li {
+  background: rgba(255, 243, 224, 0.7) !important;
+  border-left: 4px solid #f57c00 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(245, 124, 0, 0.12) !important;
+  color: #e65100 !important;
+}
+
+#ch8-lesson-1 .puberty-list li:nth-child(even),
+#ch8-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(255, 224, 178, 0.35) !important;
+}
+
+#ch8-lesson-1 .puberty-list li i,
+#ch8-lesson-2 .puberty-list li i {
+  color: #f57c00 !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 9: STIs & SEXUAL HEALTH
+   ============================================ */
+#ch9-lesson-1 .puberty-list li,
+#ch9-lesson-2 .puberty-list li,
+#ch9-lesson-3 .puberty-list li {
+  background: rgba(248, 220, 232, 0.7) !important;
+  border-left: 4px solid #c2185b !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(194, 24, 91, 0.12) !important;
+  color: #880e4f !important;
+}
+
+#ch9-lesson-1 .puberty-list li:nth-child(even),
+#ch9-lesson-2 .puberty-list li:nth-child(even),
+#ch9-lesson-3 .puberty-list li:nth-child(even) {
+  background: rgba(236, 180, 200, 0.3) !important;
+}
+
+#ch9-lesson-1 .puberty-list li i,
+#ch9-lesson-2 .puberty-list li i,
+#ch9-lesson-3 .puberty-list li i {
+  color: #c2185b !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 10: HPV & CERVICAL CANCER
+   ============================================ */
+#ch10-lesson-1 .puberty-list li,
+#ch10-lesson-2 .puberty-list li,
+#ch10-lesson-3 .puberty-list li {
+  background: rgba(232, 245, 233, 0.7) !important;
+  border-left: 4px solid #388e3c !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(56, 142, 60, 0.12) !important;
+  color: #1b5e20 !important;
+}
+
+#ch10-lesson-1 .puberty-list li:nth-child(even),
+#ch10-lesson-2 .puberty-list li:nth-child(even),
+#ch10-lesson-3 .puberty-list li:nth-child(even) {
+  background: rgba(165, 214, 167, 0.3) !important;
+}
+
+#ch10-lesson-1 .puberty-list li i,
+#ch10-lesson-2 .puberty-list li i,
+#ch10-lesson-3 .puberty-list li i {
+  color: #388e3c !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 11: CONTRACEPTION & FAMILY PLANNING
+   ============================================ */
+#ch11-lesson-1 .puberty-list li,
+#ch11-lesson-2 .puberty-list li,
+#ch11-lesson-3 .puberty-list li {
+  background: rgba(227, 242, 253, 0.7) !important;
+  border-left: 4px solid #1565c0 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(21, 101, 192, 0.12) !important;
+  color: #0d47a1 !important;
+}
+
+#ch11-lesson-1 .puberty-list li:nth-child(even),
+#ch11-lesson-2 .puberty-list li:nth-child(even),
+#ch11-lesson-3 .puberty-list li:nth-child(even) {
+  background: rgba(144, 202, 249, 0.25) !important;
+}
+
+#ch11-lesson-1 .puberty-list li i,
+#ch11-lesson-2 .puberty-list li i,
+#ch11-lesson-3 .puberty-list li i {
+  color: #1565c0 !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 12: BREAST HEALTH
+   ============================================ */
+#ch12-lesson-1 .puberty-list li,
+#ch12-lesson-2 .puberty-list li {
+  background: rgba(252, 243, 224, 0.7) !important;
+  border-left: 4px solid #ff9800 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(255, 152, 0, 0.12) !important;
+  color: #e65100 !important;
+}
+
+#ch12-lesson-1 .puberty-list li:nth-child(even),
+#ch12-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(255, 204, 129, 0.28) !important;
+}
+
+#ch12-lesson-1 .puberty-list li i,
+#ch12-lesson-2 .puberty-list li i {
+  color: #ff9800 !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 13: TESTICULAR HEALTH
+   ============================================ */
+#ch13-lesson-1 .puberty-list li,
+#ch13-lesson-2 .puberty-list li {
+  background: rgba(224, 242, 241, 0.7) !important;
+  border-left: 4px solid #00897b !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(0, 137, 123, 0.12) !important;
+  color: #004d40 !important;
+}
+
+#ch13-lesson-1 .puberty-list li:nth-child(even),
+#ch13-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(178, 223, 219, 0.3) !important;
+}
+
+#ch13-lesson-1 .puberty-list li i,
+#ch13-lesson-2 .puberty-list li i {
+  color: #00897b !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 14: POLYCYSTIC OVARY SYNDROME (PCOS)
+   ============================================ */
+#ch14-lesson-1 .puberty-list li,
+#ch14-lesson-2 .puberty-list li {
+  background: rgba(243, 229, 245, 0.7) !important;
+  border-left: 4px solid #7b1fa2 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(123, 31, 162, 0.12) !important;
+  color: #4a148c !important;
+}
+
+#ch14-lesson-1 .puberty-list li:nth-child(even),
+#ch14-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(206, 147, 216, 0.28) !important;
+}
+
+#ch14-lesson-1 .puberty-list li i,
+#ch14-lesson-2 .puberty-list li i {
+  color: #7b1fa2 !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 15: GENDER-BASED VIOLENCE (GBV)
+   ============================================ */
+#ch15-lesson-1 .puberty-list li,
+#ch15-lesson-2 .puberty-list li,
+#ch15-lesson-3 .puberty-list li {
+  background: rgba(254, 224, 224, 0.7) !important;
+  border-left: 4px solid #d32f2f !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(211, 47, 47, 0.12) !important;
+  color: #b71c1c !important;
+}
+
+#ch15-lesson-1 .puberty-list li:nth-child(even),
+#ch15-lesson-2 .puberty-list li:nth-child(even),
+#ch15-lesson-3 .puberty-list li:nth-child(even) {
+  background: rgba(229, 57, 53, 0.12) !important;
+}
+
+#ch15-lesson-1 .puberty-list li i,
+#ch15-lesson-2 .puberty-list li i,
+#ch15-lesson-3 .puberty-list li i {
+  color: #d32f2f !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 16: MENTAL HEALTH & WELLBEING
+   ============================================ */
+#ch16-lesson-1 .puberty-list li,
+#ch16-lesson-2 .puberty-list li {
+  background: rgba(225, 245, 254, 0.7) !important;
+  border-left: 4px solid #0277bd !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(2, 119, 189, 0.12) !important;
+  color: #01579b !important;
+}
+
+#ch16-lesson-1 .puberty-list li:nth-child(even),
+#ch16-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(129, 212, 250, 0.25) !important;
+}
+
+#ch16-lesson-1 .puberty-list li i,
+#ch16-lesson-2 .puberty-list li i {
+  color: #0277bd !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 17: SUBSTANCE ABUSE & ADDICTION
+   ============================================ */
+#ch17-lesson-1 .puberty-list li,
+#ch17-lesson-2 .puberty-list li {
+  background: rgba(237, 231, 246, 0.7) !important;
+  border-left: 4px solid #5e35b1 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(94, 53, 177, 0.12) !important;
+  color: #311b92 !important;
+}
+
+#ch17-lesson-1 .puberty-list li:nth-child(even),
+#ch17-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(171, 145, 214, 0.25) !important;
+}
+
+#ch17-lesson-1 .puberty-list li i,
+#ch17-lesson-2 .puberty-list li i {
+  color: #5e35b1 !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 18: RIGHTS & RESPONSIBILITIES
+   ============================================ */
+#ch18-lesson-1 .puberty-list li,
+#ch18-lesson-2 .puberty-list li {
+  background: rgba(240, 248, 245, 0.7) !important;
+  border-left: 4px solid #00695c !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(0, 105, 92, 0.12) !important;
+  color: #004d40 !important;
+}
+
+#ch18-lesson-1 .puberty-list li:nth-child(even),
+#ch18-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(128, 203, 196, 0.2) !important;
+}
+
+#ch18-lesson-1 .puberty-list li i,
+#ch18-lesson-2 .puberty-list li i {
+  color: #00695c !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MODULE 19: SEXUAL DECISION-MAKING
+   ============================================ */
+#ch19-lesson-1 .puberty-list li,
+#ch19-lesson-2 .puberty-list li {
+  background: rgba(248, 218, 234, 0.7) !important;
+  border-left: 4px solid #e838ef !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 6px 14px rgba(232, 56, 239, 0.12) !important;
+  color: #6a0080 !important;
+}
+
+#ch19-lesson-1 .puberty-list li:nth-child(even),
+#ch19-lesson-2 .puberty-list li:nth-child(even) {
+  background: rgba(240, 130, 245, 0.2) !important;
+}
+
+#ch19-lesson-1 .puberty-list li i,
+#ch19-lesson-2 .puberty-list li i {
+  color: #e838ef !important;
+  margin-right: 10px !important;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   SHARED STYLES FOR ALL LESSONS
+   ============================================ */
+
+/* Hover effects on list items */
+.puberty-list li {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.puberty-list li:hover {
+  transform: translateX(6px) !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15) !important;
+}
+
+/* Icon animation on hover */
+.puberty-list li:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.puberty-list li i {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Accessibility: Focus states */
+.puberty-list li:focus-within {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Enhanced list styling */
+.puberty-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ============================================
+   TYPOGRAPHY ENHANCEMENTS
+   ============================================ */
+
+/* Body text styling */
+p, li span {
+  line-height: 1.7;
+  color: #616161;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* Strong/bold text */
+strong, b {
+  font-weight: 700;
+  color: #212121;
+}
+
+/* Emphasis */
+em, i {
+  font-style: italic;
+  color: #455a64;
+}
+
+/* Code blocks and inline code */
+code, pre {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  color: #c62828;
+}
+
+pre {
+  padding: 12px 16px;
+  overflow-x: auto;
+  border-left: 4px solid #1976d2;
+}
+
+/* Links styling */
+a {
+  color: #1976d2;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #1565c0;
+  border-bottom-color: #1565c0;
+}
+
+a:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   ACCESSIBILITY & CONTRAST FEATURES
+   ============================================ */
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+  .puberty-list li {
+    border-left-width: 5px !important;
+  }
+  
+  h2, h3, h5 {
+    font-weight: 800 !important;
+  }
+  
+  .module-table thead th {
+    border-width: 3px !important;
+    font-weight: 800 !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .puberty-list li:hover {
+    transform: none !important;
+  }
+  
+  .puberty-list li:hover i {
+    transform: none !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  .puberty-list li {
+    color: #bdbdbd !important;
+  }
+  
+  .modern-card,
+  .glass-card {
+    background: rgba(30, 30, 30, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  a {
+    color: #64b5f6;
+  }
+  
+  a:hover {
+    color: #90caf9;
+  }
+}
+
+/* ============================================
+   CARD & CONTAINER STYLING
+   ============================================ */
+
+.modern-card,
+.glass-card {
+  border-radius: 20px !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-card:hover,
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.modern-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* MODULE-SPECIFIC CARD GRADIENTS */
+#ch3-lesson-1 .modern-card,
+#ch3-lesson-1 .glass-card,
+#ch3-lesson-2 .modern-card,
+#ch3-lesson-2 .glass-card,
+#ch3-lesson-3 .modern-card,
+#ch3-lesson-3 .glass-card {
+  background: linear-gradient(135deg, rgba(255, 138, 101, 0.08) 0%, rgba(255, 224, 178, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch4-lesson-1 .modern-card,
+#ch4-lesson-1 .glass-card,
+#ch4-lesson-2 .modern-card,
+#ch4-lesson-2 .glass-card,
+#ch4-lesson-3 .modern-card,
+#ch4-lesson-3 .glass-card,
+#ch4-lesson-4 .modern-card,
+#ch4-lesson-4 .glass-card,
+#ch4-lesson-5 .modern-card,
+#ch4-lesson-5 .glass-card {
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.08) 0%, rgba(248, 187, 208, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch5-lesson-1 .modern-card,
+#ch5-lesson-1 .glass-card,
+#ch5-lesson-2 .modern-card,
+#ch5-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.08) 0%, rgba(225, 245, 254, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch6-lesson-1 .modern-card,
+#ch6-lesson-1 .glass-card,
+#ch6-lesson-2 .modern-card,
+#ch6-lesson-2 .glass-card,
+#ch6-lesson-3 .modern-card,
+#ch6-lesson-3 .glass-card,
+#ch6-lesson-4 .modern-card,
+#ch6-lesson-4 .glass-card {
+  background: linear-gradient(135deg, rgba(211, 47, 47, 0.08) 0%, rgba(255, 205, 210, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch7-lesson-1 .modern-card,
+#ch7-lesson-1 .glass-card,
+#ch7-lesson-2 .modern-card,
+#ch7-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(0, 137, 123, 0.08) 0%, rgba(178, 223, 219, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch8-lesson-1 .modern-card,
+#ch8-lesson-1 .glass-card,
+#ch8-lesson-2 .modern-card,
+#ch8-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(245, 124, 0, 0.08) 0%, rgba(255, 224, 178, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch9-lesson-1 .modern-card,
+#ch9-lesson-1 .glass-card,
+#ch9-lesson-2 .modern-card,
+#ch9-lesson-2 .glass-card,
+#ch9-lesson-3 .modern-card,
+#ch9-lesson-3 .glass-card {
+  background: linear-gradient(135deg, rgba(194, 24, 91, 0.08) 0%, rgba(248, 187, 208, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch10-lesson-1 .modern-card,
+#ch10-lesson-1 .glass-card,
+#ch10-lesson-2 .modern-card,
+#ch10-lesson-2 .glass-card,
+#ch10-lesson-3 .modern-card,
+#ch10-lesson-3 .glass-card {
+  background: linear-gradient(135deg, rgba(56, 142, 60, 0.08) 0%, rgba(200, 230, 201, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch11-lesson-1 .modern-card,
+#ch11-lesson-1 .glass-card,
+#ch11-lesson-2 .modern-card,
+#ch11-lesson-2 .glass-card,
+#ch11-lesson-3 .modern-card,
+#ch11-lesson-3 .glass-card {
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.08) 0%, rgba(187, 222, 251, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch12-lesson-1 .modern-card,
+#ch12-lesson-1 .glass-card,
+#ch12-lesson-2 .modern-card,
+#ch12-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.08) 0%, rgba(255, 224, 178, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch13-lesson-1 .modern-card,
+#ch13-lesson-1 .glass-card,
+#ch13-lesson-2 .modern-card,
+#ch13-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(0, 137, 123, 0.08) 0%, rgba(178, 223, 219, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch14-lesson-1 .modern-card,
+#ch14-lesson-1 .glass-card,
+#ch14-lesson-2 .modern-card,
+#ch14-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(123, 31, 162, 0.08) 0%, rgba(225, 190, 231, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch15-lesson-1 .modern-card,
+#ch15-lesson-1 .glass-card,
+#ch15-lesson-2 .modern-card,
+#ch15-lesson-2 .glass-card,
+#ch15-lesson-3 .modern-card,
+#ch15-lesson-3 .glass-card {
+  background: linear-gradient(135deg, rgba(211, 47, 47, 0.08) 0%, rgba(255, 205, 210, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch16-lesson-1 .modern-card,
+#ch16-lesson-1 .glass-card,
+#ch16-lesson-2 .modern-card,
+#ch16-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(2, 119, 189, 0.08) 0%, rgba(179, 229, 252, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch17-lesson-1 .modern-card,
+#ch17-lesson-1 .glass-card,
+#ch17-lesson-2 .modern-card,
+#ch17-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(94, 53, 177, 0.08) 0%, rgba(225, 190, 231, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch18-lesson-1 .modern-card,
+#ch18-lesson-1 .glass-card,
+#ch18-lesson-2 .modern-card,
+#ch18-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(0, 105, 92, 0.08) 0%, rgba(178, 223, 219, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+#ch19-lesson-1 .modern-card,
+#ch19-lesson-1 .glass-card,
+#ch19-lesson-2 .modern-card,
+#ch19-lesson-2 .glass-card {
+  background: linear-gradient(135deg, rgba(232, 56, 239, 0.08) 0%, rgba(248, 231, 255, 0.08) 100%), rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Abstract corner accents */
+.menstrual-corner-accent {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255, 200, 200, 0.4), rgba(255, 200, 200, 0));
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+  z-index: 1;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+.menstrual-corner-pill {
+  position: absolute;
+  width: 220px;
+  height: 90px;
+  background: linear-gradient(135deg, rgba(200, 200, 255, 0.25), transparent);
+  border-radius: 50px;
+  bottom: -30px;
+  left: -60px;
+  z-index: 1;
+  pointer-events: none;
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Additional floating elements for visual interest */
+.lesson-slide::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at 30% 30%, rgba(200, 230, 255, 0.2), rgba(200, 230, 255, 0));
+  border-radius: 45% 55% 50% 50%;
+  z-index: 0;
+  pointer-events: none;
+  animation: rotate 10s linear infinite;
+}
+
+.lesson-slide::after {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 70% 70%, rgba(255, 220, 100, 0.15), rgba(255, 220, 100, 0));
+  border-radius: 25% 75% 70% 30%;
+  z-index: 0;
+  pointer-events: none;
+  animation: rotate 15s linear infinite reverse;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Badge styling for content types */
+.content-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+.badge-tip,
+.badge-example,
+.badge-warning,
+.badge-definition {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.badge-tip {
+  background: linear-gradient(135deg, #a4de6c 0%, #d1ffb3 100%);
+  color: #2d5016;
+}
+
+.badge-example {
+  background: linear-gradient(135deg, #ffa726 0%, #ffcc80 100%);
+  color: #3e2723;
+}
+
+.badge-warning {
+  background: linear-gradient(135deg, #ef5350 0%, #ff8a80 100%);
+  color: #fff;
+}
+
+.badge-definition {
+  background: linear-gradient(135deg, #42a5f5 0%, #90caf9 100%);
+  color: #fff;
+}
+
+@keyframes badgePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ============================================
+   HEADING STYLES WITH ICONS
+   ============================================ */
+
+h2.slide-title .fa-solid,
+h3.slide-subtitle .fa-solid,
+h5 .fa-solid {
+  margin-right: 10px;
+  font-size: 1.1em;
+  vertical-align: -0.125em;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 1024px) {
+  h2.slide-title {
+    font-size: 1.6rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  h5 {
+    font-size: 1rem !important;
+  }
+  
+  .modern-card,
+  .glass-card {
+    border-radius: 16px !important;
+  }
+  
+  .menstrual-corner-accent {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .menstrual-corner-pill {
+    width: 160px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  h2.slide-title {
+    font-size: 1.4rem !important;
+  }
+  
+  h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  h5 {
+    font-size: 0.95rem !important;
+  }
+  
+  .puberty-list li {
+    padding: 10px 12px !important;
+    font-size: 0.95rem;
+    margin-bottom: 8px !important;
+  }
+  
+  .puberty-list li i {
+    font-size: 1rem !important;
+    margin-right: 8px !important;
+  }
+  
+  .modern-card,
+  .glass-card {
+    border-radius: 14px !important;
+  }
+  
+  .menstrual-corner-accent {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    right: -30px;
+  }
+  
+  .menstrual-corner-pill {
+    width: 120px;
+    height: 55px;
+    bottom: -15px;
+    left: -40px;
+  }
+  
+  .module-table {
+    font-size: 0.85rem;
+  }
+  
+  .module-table thead th {
+    padding: 10px 8px !important;
+    font-size: 0.9rem;
+  }
+  
+  .module-table tbody td {
+    padding: 8px 6px !important;
+  }
+  
+  h2.slide-title::before,
+  h3::before,
+  h5::before {
+    font-size: 1em !important;
+    margin-right: 6px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h2.slide-title {
+    font-size: 1.2rem !important;
+  }
+  
+  h3 {
+    font-size: 1rem !important;
+  }
+  
+  h5 {
+    font-size: 0.9rem !important;
+  }
+  
+  .puberty-list li {
+    padding: 8px 10px !important;
+    font-size: 0.9rem;
+    margin-bottom: 6px !important;
+  }
+  
+  .puberty-list li i {
+    font-size: 0.95rem !important;
+    margin-right: 6px !important;
+  }
+  
+  .modern-card,
+  .glass-card {
+    border-radius: 12px !important;
+  }
+  
+  .menstrual-corner-accent {
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    right: -20px;
+  }
+  
+  .menstrual-corner-pill {
+    width: 100px;
+    height: 45px;
+    bottom: -10px;
+    left: -30px;
+  }
+  
+  .module-table {
+    font-size: 0.8rem;
+  }
+  
+  .module-table thead th,
+  .module-table tbody td {
+    padding: 6px 4px !important;
+  }
+  
+  h2.slide-title::before,
+  h3::before,
+  h5::before {
+    font-size: 0.9em !important;
+    margin-right: 4px !important;
+  }
+  
+  /* Stack two-column layouts vertically */
+  .row.g-4 {
+    gap: 1.5rem !important;
+  }
+  
+  .row.g-4 > * {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* ============================================
+   ANIMATION SUPPORT (for AOS library)
+   ============================================ */
+
+[data-aos] {
+  opacity: 1 !important;
+  will-change: transform, opacity;
+}
+
+[data-aos="fade-up"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-aos="fade-left"] {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-aos="fade-right"] {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-aos="fade-down"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-aos="zoom-in"] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Smooth transitions for AOS animations */
+[data-aos] {
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .puberty-list li {
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    border: 1px solid #ddd !important;
+    background: white !important;
+  }
+  
+  .modern-card,
+  .glass-card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+  }
+  
+  .menstrual-corner-accent,
+  .menstrual-corner-pill,
+  .lesson-slide::before,
+  .lesson-slide::after {
+    display: none;
+  }
+  
+  h2.slide-title::before,
+  h3::before,
+  h5::before {
+    display: none !important;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    display: none;
+  }
+  
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+  
+  .module-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .module-table,
+  .module-table td,
+  .module-table th {
+    border: 1px solid #ddd !important;
+  }
+}
+
+/* ============================================
+   SMOOTH SCROLLING & ANIMATIONS
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General transition timing for interactive elements */
+button, .btn, input, select, textarea {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+button:active, .btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   ADDITIONAL UTILITY CLASSES
+   ============================================ */
+
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow-medium {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.shadow-strong {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15) !important;
+}
+
+.rounded-soft {
+  border-radius: 14px;
+}
+
+.rounded-medium {
+  border-radius: 18px;
+}
+
+.rounded-large {
+  border-radius: 24px;
+}
+
+.border-soft {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.border-medium {
+  border: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================
+   QUIZ & INTERACTIVE ELEMENTS
+   ============================================ */
+
+.quiz-container {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border-left: 4px solid #667eea;
+  margin: 20px 0;
+}
+
+.quiz-question {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.quiz-option {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-option:hover {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.quiz-option.selected {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.quiz-option.correct {
+  background: #4caf50;
+  border-color: #4caf50;
+  color: white;
+}
+
+.quiz-option.incorrect {
+  background: #f44336;
+  border-color: #f44336;
+  color: white;
+}
