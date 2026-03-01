@@ -15206,7 +15206,7 @@ const coursesData = [
               ];
 
               const bpIntro =
-                "কিশোর-কিশোরীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।";
+                "তরুন তরুনীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।";
 
               const bpEarly = [
                 { text: "রক্তচাপ ১৪০/৯০ বা এর বেশি", icon: "fa-gauge-high" },
@@ -15248,40 +15248,27 @@ const coursesData = [
                   )}</h2>
                   <div class="row g-3">
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-heart-pulse"></i>হৃদরোগ</h4>
-                        <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${heartIntro}</p>
-                      </article>
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>শিশুর জন্মগত হৃদরোগের প্রাথমিক লক্ষণসমূহ</h4>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(heartEarly, 80)}
-                        </ul>
-                      </article>
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>শিশুর জন্মগত হৃদরোগের বিপজ্জনক লক্ষণসমূহ</h4>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(heartDanger, 80)}
-                        </ul>
-                      </article>
-                    </div>
-                    <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h4>
+                      <article class="glass-card p-1">
+                        <h4 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h4>
                         <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${bpIntro}</p>
                       </article>
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h4>
+                      <article class="glass-card p-1">
+                        <h4 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(bpEarly, 80)}
                         </ul>
                       </article>
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-shield-heart"></i>উচ্চ রক্তচাপ প্রতিরোধের উপায়</h4>
+                      <article class="glass-card p-1">
+                        <h4 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-shield-heart"></i>উচ্চ রক্তচাপ প্রতিরোধের উপায়</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(bpPrevention, 80)}
                         </ul>
                       </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <figure class="glass-card p-1 mb-0 text-center">
+                        <img src="img/modu20/blood-pressure.jpg" alt="" style="height: 650px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                      </figure>
                     </div>
                   </div>
                   </div>
