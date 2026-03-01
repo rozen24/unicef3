@@ -17179,7 +17179,7 @@ const coursesData = [
                             "ইমারজিং বা উদীয়মান রোগ ও রি-ইমারজিং বা পুনরুদ্ভূত রোগের উদাহরণ সমূহ"
                           )}</h4>
                           <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="220">
-                            <img class="img-zoom" style="max-height: 350px" src="img/modu23/global.png" alt="ইমারজিং ও রি-ইমারজিং রোগের উদাহরণ">
+                            <img class="img-zoom" style="max-height: 300px" src="img/modu23/global_new.png" alt="ইমারজিং ও রি-ইমারজিং রোগের উদাহরণ">
                           </div>
                         </article>
 
@@ -17189,7 +17189,7 @@ const coursesData = [
                             "সংক্রমণকে ত্বরান্বিত করনে প্রভাবক সমূহ"
                           )}</h4>
                           <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="280">
-                            <img class="img-zoom" style="max-height: 350px" src="img/modu23/global2.png" alt="সংক্রমণকে ত্বরান্বিত করার প্রভাবক">
+                            <img class="img-zoom" style="max-height: 300px" src="img/modu23/global2_new.png" alt="সংক্রমণকে ত্বরান্বিত করার প্রভাবক">
                           </div>
                         </article>
                       </div>
