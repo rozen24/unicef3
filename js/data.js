@@ -15444,8 +15444,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-3 h-100 text-center">
-                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
+                        <figure class="glass-card p-1 mb-0 text-center">
+                          <img src="${img.src}" alt="${img.alt}" style="height: 310px" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
