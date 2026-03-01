@@ -2111,6 +2111,11 @@ html[lang|="bn"] h2 {
   grid-template-columns: 1fr 1fr;
   gap: 5px;
 }
+.list-unstyled {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 5px;
+}
 /* Colored icon backgrounds */
 .mod20-lesson .puberty-list li:nth-child(4n+1) i {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
