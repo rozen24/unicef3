@@ -566,7 +566,7 @@ const coursesData = [
                 icon: "fa-chart-line",
                 text: yhLang(
                   "I drive awareness and demand creation within communities, inspiring collective responsibility and action towards better health outcomes for adolescents and youth.",
-                  "আমি সম্প্রদায়জুড়ে সচেতনতা ও চাহিদা সৃষ্টিতে ভূমিকা রাখি, যাতে সবাই মিলে তরুণ-তরুণীদের উন্নত স্বাস্থ্যফল নিশ্চিত করতে পারে।"
+                  "আমি সম্প্রদায়জুড়ে সচেতনতা ও চাহিদা সৃষ্টিতে ভূমিকা রাখি, যাতে সবাই মিলে কিশোর-কিশোরীদের উন্নত স্বাস্থ্যফল নিশ্চিত করতে পারে।"
                 ),
               },
             ]
@@ -1177,7 +1177,7 @@ const coursesData = [
 
                 <!-- Sex-disaggregated Top 5 Causes (UNICEF Adolescent Data Portal 2019) -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="60">
-                  <h5 class="gradient-text mb-3">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ‘অ্যাডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী, বাংলাদেশে ১০–১৯ বছর বয়সী তরুণ-তরুণীদের মৃত্যুর শীর্ষ ৫ কারণ হলো:")}
+                  <h5 class="gradient-text mb-3">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ‘অ্যাডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী, বাংলাদেশে ১০–১৯ বছর বয়সী কিশোর-কিশোরীদের মৃত্যুর শীর্ষ ৫ কারণ হলো:")}
                   </h5>
                   <div class="row g-3">
                     <div class="col-lg-6">
@@ -1291,7 +1291,7 @@ const coursesData = [
                     <div class="col-md-6">
                       <div class="modern-card glass-card h-100">
                         <div class="d-flex align-items-center justify-content-between mb-2">
-                          <span class="badge-pill">${yhLang("Adolescents (10–19)", "তরুণ-তরুণী (১০–১৯)")}</span>
+                          <span class="badge-pill">${yhLang("Adolescents (10–19)", "কিশোর-কিশোরী (১০–১৯)")}</span>
                         </div>
                         <div style="position:relative; height:320px;">
                           <canvas id="bdMortalityAdolescents" aria-label="Adolescent mortality distribution (relative)" role="img"></canvas>
@@ -1626,7 +1626,7 @@ const coursesData = [
                 ),
                 yhLang(
                   'Anaemia: nearly <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> adolescents are anaemic.',
-                  'রক্তস্বল্পতা: প্রায় <span class="stat-chip"><span class="value">৩০</span><span class="unit">%</span></span> তরুণ-তরুণী রক্তস্বল্পতায় ভোগে।'
+                  'রক্তস্বল্পতা: প্রায় <span class="stat-chip"><span class="value">৩০</span><span class="unit">%</span></span> কিশোর-কিশোরী রক্তস্বল্পতায় ভোগে।'
                 ),
               ];
 
@@ -1660,7 +1660,7 @@ const coursesData = [
                 ),
                 yhLang(
                   'About <span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents remain in child labour.',
-                  'প্রায় <span class="stat-chip"><span class="value">১.৭৮</span><span class="unit">মিলিয়ন</span></span> তরুণ-তরুণী শিশুশ্রমে নিযুক্ত।'
+                  'প্রায় <span class="stat-chip"><span class="value">১.৭৮</span><span class="unit">মিলিয়ন</span></span> কিশোর-কিশোরী শিশুশ্রমে নিযুক্ত।'
                 ),
                 yhLang(
                   'During monsoon <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown (~<span class="stat-chip"><span class="value">14,000</span></span> annually).',
@@ -1699,7 +1699,7 @@ const coursesData = [
 
                 <div class="fact-card alert-info hover-lift-sm transition-base icon-spin-on-hover mb-3" data-aos="fade-up" data-aos-delay="60">
                   <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                  <p class="mb-0">${yhLang("Actions to improve adolescent health and wellbeing need to address established and emerging determinants and <strong>meaningfully engage</strong> with adolescents and young people.", "কৈশোর স্বাস্থ্য ও সুস্থতা উন্নত করতে বিদ্যমান ও নতুন নির্ধারকগুলো মোকাবিলা করতে হবে এবং তরুণ-তরুণীদের <strong>অর্থবহভাবে সম্পৃক্ত</strong> করতে হবে।")}</p>
+                  <p class="mb-0">${yhLang("Actions to improve adolescent health and wellbeing need to address established and emerging determinants and <strong>meaningfully engage</strong> with adolescents and young people.", "কৈশোর স্বাস্থ্য ও সুস্থতা উন্নত করতে বিদ্যমান ও নতুন নির্ধারকগুলো মোকাবিলা করতে হবে এবং কিশোর-কিশোরীদের <strong>অর্থবহভাবে সম্পৃক্ত</strong> করতে হবে।")}</p>
                 </div>
 
                 <section class="issue-matrix" aria-labelledby="issue-matrix-title">
@@ -2093,7 +2093,7 @@ const coursesData = [
             id: "ch2-lesson-9",
             title: yhLang(
               "SDG related to adolescent health",
-              "তরুণ-তরুণীদের স্বাস্থ্য সম্পর্কিত SDG"
+              "কিশোর-কিশোরীদের স্বাস্থ্য সম্পর্কিত SDG"
             ),
             icon: "fa-diagram-project",
             gradientClass: "bg-gradient-violet",
@@ -2111,7 +2111,7 @@ const coursesData = [
             },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("SDG related to adolescent health", "তরুণ-তরুণীদের স্বাস্থ্য সম্পর্কিত SDG")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("SDG related to adolescent health", "কিশোর-কিশোরীদের স্বাস্থ্য সম্পর্কিত SDG")}</h2>
 
                 <!-- SDG/SDC cards with distinct lean gradients, icons, and hover effects -->
                 <div class="row g-3 d-none">${[
@@ -2294,7 +2294,7 @@ const coursesData = [
                   options: [
                     yhLang("Providers", "সেবা প্রদানকারী"),
                     yhLang("Parents", "অভিভাবক"),
-                    yhLang("Adolescents", "তরুণ-তরুণী"),
+                    yhLang("Adolescents", "কিশোর-কিশোরী"),
                     yhLang("Donors", "দাতা"),
                   ],
                   correctAnswer: 2,
@@ -2311,7 +2311,7 @@ const coursesData = [
                   ),
                   desc: yhLang(
                     "Adolescents were formally acknowledged as a group with unique SRHR needs.",
-                    "তরুণ-তরুণীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।"
+                    "কিশোর-কিশোরীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।"
                   ),
                   icon: "fa-people-group",
                   cls: "tl-rose",
@@ -3098,69 +3098,25 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title d-flex align-items-center gap-3" data-aos="fade-up" style="background: linear-gradient(135deg, #FF6B9D 0%, #C239B3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                    <i class="fa-solid fa-droplet" style="background: linear-gradient(135deg, #FF6B9D, #C239B3); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                    ${yhLang("Menstrual/menstrual managementt", "মাসিক/ঋতুস্রাব ব্যবস্থাপনা")}
-                  </h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Menstrual/menstrual managementt",
+                    "মাসিক/ঋতুস্রাব ব্যবস্থাপনা"
+                  )}</h2>
 
-                  <section style="background: linear-gradient(135deg, #FFF5F7 0%, #FFE4E9 100%); padding: 2rem; border-radius: 24px; box-shadow: 0 10px 40px rgba(255, 105, 180, 0.12); position: relative; overflow: hidden;" data-aos="fade-up" data-aos-delay="40">
-                    <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,182,193,0.3) 0%, transparent 70%); border-radius: 50%;"></div>
-                    <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255,105,180,0.2) 0%, transparent 70%); border-radius: 50%;"></div>
-                    
-                    <div class="row g-4 align-items-center position-relative">
+                  <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
+                    <span class="menstrual-corner-accent" aria-hidden="true"></span>
+                    <span class="menstrual-corner-pill" aria-hidden="true"></span>
+                    <div class="row g-4 align-items-center">
                       <div class="col-lg-12">
-                        <figure class="rounded-4 overflow-hidden mb-0" style="box-shadow: 0 12px 32px rgba(255, 105, 180, 0.18); border: 3px solid rgba(255, 255, 255, 0.8);">
+                        <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
                           <img src="img/modu4/masik.png" alt="Menstrual care" class="img-fluid w-100 object-fit-cover img-zoom" />
                         </figure>
                       </div>
                       <div class="col-lg-12">
-                        <div class="row g-3">
-                          ${[
-                            {
-                              icon: "fa-heart-circle-bolt",
-                              gradient: "linear-gradient(135deg, #FFE8F0 0%, #FFF0F7 100%)",
-                              shadow: "0 8px 24px rgba(255, 105, 180, 0.15)",
-                              iconBg: "linear-gradient(135deg, #FF69B4, #FF1493)",
-                              text: paragraphs[0]
-                            },
-                            {
-                              icon: "fa-calendar-days",
-                              gradient: "linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%)",
-                              shadow: "0 8px 24px rgba(56, 189, 248, 0.15)",
-                              iconBg: "linear-gradient(135deg, #38BDF8, #0EA5E9)",
-                              text: paragraphs[1]
-                            },
-                            {
-                              icon: "fa-droplet",
-                              gradient: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)",
-                              shadow: "0 8px 24px rgba(147, 51, 234, 0.15)",
-                              iconBg: "linear-gradient(135deg, #C084FC, #9333EA)",
-                              text: paragraphs[2]
-                            },
-                            {
-                              icon: "fa-clock-rotate-left",
-                              gradient: "linear-gradient(135deg, #F3E8FF 0%, #FAF5FF 100%)",
-                              shadow: "0 8px 24px rgba(168, 85, 247, 0.15)",
-                              iconBg: "linear-gradient(135deg, #A855F7, #7C3AED)",
-                              text: paragraphs[3]
-                            },
-                            {
-                              icon: "fa-user-check",
-                              gradient: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)",
-                              shadow: "0 8px 24px rgba(16, 185, 129, 0.15)",
-                              iconBg: "linear-gradient(135deg, #10B981, #059669)",
-                              text: paragraphs[4]
-                            }
-                          ].map((card, idx) => `
-                            <div class="col-12" data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                              <div style="background: ${card.gradient}; padding: 1.5rem; border-radius: 16px; box-shadow: ${card.shadow}; border-left: 4px solid transparent; border-image: ${card.iconBg} 1; display: flex; gap: 1rem; align-items: start; transition: all 0.3s ease;">
-                                <div style="background: ${card.iconBg}; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                                  <i class="fa-solid ${card.icon}" style="color: white; font-size: 1.25rem;"></i>
-                                </div>
-                                <p class="mb-0" style="color: #1F2937; line-height: 1.7; font-size: 1rem;">${card.text}</p>
-                              </div>
-                            </div>
-                          `).join('')}
+                        <div class="d-flex flex-column gap-3">
+                          ${paragraphs
+                            .map((text, idx) => `<p class="mb-0" data-aos="fade-left" data-aos-delay="${80 + idx * 20}">${text}</p>`)
+                            .join("")}
                         </div>
                       </div>
                     </div>
@@ -3217,68 +3173,24 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title d-flex align-items-center gap-3" data-aos="fade-up" style="background: linear-gradient(135deg, #E879F9 0%, #C026D3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                    <i class="fa-solid fa-person-dress" style="background: linear-gradient(135deg, #E879F9, #C026D3); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                    ${yhLang("নারী প্রজননতন্ত্র", "নারী প্রজননতন্ত্র")}
-                  </h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "নারী প্রজননতন্ত্র",
+                    "নারী প্রজননতন্ত্র"
+                  )}</h2>
 
-                  <section style="background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%); padding: 2rem; border-radius: 24px; box-shadow: 0 10px 40px rgba(192, 132, 252, 0.12); position: relative; overflow: hidden;" data-aos="fade-up" data-aos-delay="40">
-                    <div style="position: absolute; top: -40px; left: -40px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(192,132,252,0.2) 0%, transparent 70%); border-radius: 50%;"></div>
-                    <div style="position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
-                    
-                    <div class="row g-4 align-items-center position-relative">
+                  <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
+                    <span class="menstrual-corner-accent" aria-hidden="true"></span>
+                    <span class="menstrual-corner-pill" aria-hidden="true"></span>
+                    <div class="row g-4 align-items-center">
                       <div class="col-lg-6">
-                        <figure class="rounded-4 overflow-hidden mb-0" style="box-shadow: 0 12px 32px rgba(192, 132, 252, 0.18); border: 3px solid rgba(255, 255, 255, 0.9);">
+                        <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
                           <img src="img/modu4/nari.jpg" alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 object-fit-cover img-zoom" />
                         </figure>
                       </div>
                       <div class="col-lg-6">
-                        <div class="d-flex flex-column gap-3">
-                          ${[
-                            {
-                              icon: "fa-egg",
-                              gradient: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)",
-                              shadow: "0 6px 20px rgba(236, 72, 153, 0.12)",
-                              iconBg: "linear-gradient(135deg, #EC4899, #DB2777)",
-                              text: points[0]
-                            },
-                            {
-                              icon: "fa-baby",
-                              gradient: "linear-gradient(135deg, #E0E7FF 0%, #EEF2FF 100%)",
-                              shadow: "0 6px 20px rgba(99, 102, 241, 0.12)",
-                              iconBg: "linear-gradient(135deg, #6366F1, #4F46E5)",
-                              text: points[1]
-                            },
-                            {
-                              icon: "fa-arrows-left-right",
-                              gradient: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)",
-                              shadow: "0 6px 20px rgba(59, 130, 246, 0.12)",
-                              iconBg: "linear-gradient(135deg, #3B82F6, #2563EB)",
-                              text: points[2]
-                            },
-                            {
-                              icon: "fa-venus",
-                              gradient: "linear-gradient(135deg, #FEF3C7 0%, #FEF9E7 100%)",
-                              shadow: "0 6px 20px rgba(251, 191, 36, 0.12)",
-                              iconBg: "linear-gradient(135deg, #F59E0B, #D97706)",
-                              text: points[3]
-                            },
-                            {
-                              icon: "fa-heart",
-                              gradient: "linear-gradient(135deg, #DCFCE7 0%, #F0FDF4 100%)",
-                              shadow: "0 6px 20px rgba(34, 197, 94, 0.12)",
-                              iconBg: "linear-gradient(135deg, #22C55E, #16A34A)",
-                              text: points[4]
-                            }
-                          ].map((item, idx) => `
-                            <div data-aos="fade-left" data-aos-delay="${80 + idx * 20}" style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start; transition: transform 0.3s ease;">
-                              <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                                <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                              </div>
-                              <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                            </div>
-                          `).join('')}
-                        </div>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(points)}
+                        </ul>
                       </div>
                     </div>
                   </section>
@@ -3353,61 +3265,10 @@ const coursesData = [
                         </figure>
                       </div>
                       <div class="col-lg-12">
-                        <div class="row g-3">
-                          ${[
-                            {
-                              icon: "fa-apple-whole",
-                              gradient: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)",
-                              shadow: "0 6px 20px rgba(16, 185, 129, 0.12)",
-                              iconBg: "linear-gradient(135deg, #10B981, #059669)",
-                              text: tips[0]
-                            },
-                            {
-                              icon: "fa-shower",
-                              gradient: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)",
-                              shadow: "0 6px 20px rgba(59, 130, 246, 0.12)",
-                              iconBg: "linear-gradient(135deg, #3B82F6, #2563EB)",
-                              text: tips[1]
-                            },
-                            {
-                              icon: "fa-box-tissue",
-                              gradient: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)",
-                              shadow: "0 6px 20px rgba(236, 72, 153, 0.12)",
-                              iconBg: "linear-gradient(135deg, #EC4899, #DB2777)",
-                              text: tips[2]
-                            },
-                            {
-                              icon: "fa-recycle",
-                              gradient: "linear-gradient(135deg, #F3E8FF 0%, #FAF5FF 100%)",
-                              shadow: "0 6px 20px rgba(168, 85, 247, 0.12)",
-                              iconBg: "linear-gradient(135deg, #A855F7, #7C3AED)",
-                              text: tips[3]
-                            },
-                            {
-                              icon: "fa-person-walking",
-                              gradient: "linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%)",
-                              shadow: "0 6px 20px rgba(56, 189, 248, 0.12)",
-                              iconBg: "linear-gradient(135deg, #38BDF8, #0EA5E9)",
-                              text: tips[4]
-                            },
-                            {
-                              icon: "fa-user-doctor",
-                              gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)",
-                              shadow: "0 6px 20px rgba(239, 68, 68, 0.12)",
-                              iconBg: "linear-gradient(135deg, #EF4444, #DC2626)",
-                              text: tips[5]
-                            }
-                          ].map((item, idx) => `
-                            <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                              <div style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start; min-height: 100%; transition: transform 0.3s ease;">
-                                <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                                  <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                                </div>
-                                <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                              </div>
-                            </div>
-                          `).join('')}
-                        </div>
+                        <div class="menstrual-inline-divider" aria-hidden="true"></div>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(tips)}
+                        </ul>
                       </div>
                     </div>
                   </section>
@@ -3497,22 +3358,9 @@ const coursesData = [
                       "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
                       "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা"
                     )}</h3>
-                    <div style="display: grid; gap: 1rem;">
-                      ${[
-  { text: parentPoints[0], icon: "fa-graduation-cap", gradient: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", iconBg: "linear-gradient(135deg, #10B981 0%, #059669 100%)", shadow: "rgba(16, 185, 129, 0.12)" },
-  { text: parentPoints[1], icon: "fa-comments", gradient: "linear-gradient(135deg, #CFFAFE 0%, #ECFEFF 100%)", iconBg: "linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)", shadow: "rgba(6, 182, 212, 0.12)" },
-  { text: parentPoints[2], icon: "fa-face-smile", gradient: "linear-gradient(135deg, #FEF3C7 0%, #FEF9E7 100%)", iconBg: "linear-gradient(135deg, #F59E0B 0%, #D97706 100%)", shadow: "rgba(251, 191, 36, 0.12)" },
-  { text: parentPoints[3], icon: "fa-person-running", gradient: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", iconBg: "linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)", shadow: "rgba(59, 130, 246, 0.12)" },
-  { text: parentPoints[4], icon: "fa-apple-whole", gradient: "linear-gradient(135deg, #DCFCE7 0%, #F0FDF4 100%)", iconBg: "linear-gradient(135deg, #22C55E 0%, #16A34A 100%)", shadow: "rgba(34, 197, 94, 0.12)" }
-].map((item, idx) => `
-                        <div data-aos="fade-up" data-aos-delay="${80 + idx * 20}" style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: 0 4px 15px ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start;">
-                          <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                            <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                          </div>
-                          <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                        </div>
-                      `).join('')}
-                    </div>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(parentPoints)}
+                    </ul>
                   </section>
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
@@ -3522,21 +3370,10 @@ const coursesData = [
                       "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা",
                       "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা"
                     )}</h3>
-                    <div style="display: grid; gap: 1rem;">
-                      ${[
-  { text: schoolPoints[0], icon: "fa-user-nurse", gradient: "linear-gradient(135deg, #F5E6FF 0%, #FAF5FF 100%)", iconBg: "linear-gradient(135deg, #A855F7 0%, #9333EA 100%)", shadow: "rgba(168, 85, 247, 0.12)" },
-  { text: schoolPoints[1], icon: "fa-kit-medical", gradient: "linear-gradient(135deg, #FFE6E6 0%, #FFF5F5 100%)", iconBg: "linear-gradient(135deg, #EF4444 0%, #DC2626 100%)", shadow: "rgba(239, 68, 68, 0.12)" },
-  { text: schoolPoints[2], icon: "fa-pills", gradient: "linear-gradient(135deg, #FFF4E6 0%, #FFFBF0 100%)", iconBg: "linear-gradient(135deg, #EA580C 0%, #C2410C 100%)", shadow: "rgba(234, 88, 12, 0.12)" },
-  { text: schoolPoints[3], icon: "fa-handshake", gradient: "linear-gradient(135deg, #E0F2FE 0%, #F0F9FE 100%)", iconBg: "linear-gradient(135deg, #0284C7 0%, #0369A1 100%)", shadow: "rgba(2, 132, 199, 0.12)" }
-].map((item, idx) => `
-                        <div data-aos="fade-up" data-aos-delay="${100 + idx * 20}" style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: 0 4px 15px ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start;">
-                          <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                            <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                          </div>
-                          <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                        </div>
-                      `).join('')}
-                    </div>
+                    <p class="text-muted mb-3">${schoolIntro}</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(schoolPoints)}
+                    </ul>
                   </section>
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
@@ -3546,22 +3383,9 @@ const coursesData = [
                       "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে",
                       "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে"
                     )}</h3>
-                    <div style="display: grid; gap: 1rem;">
-                      ${[
-  { text: essentials[0], icon: "fa-restroom", gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)", shadow: "rgba(220, 38, 38, 0.12)" },
-  { text: essentials[1], icon: "fa-droplet", gradient: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", iconBg: "linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)", shadow: "rgba(59, 130, 246, 0.12)" },
-  { text: essentials[2], icon: "fa-soap", gradient: "linear-gradient(135deg, #E0E7FF 0%, #F0F4FF 100%)", iconBg: "linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)", shadow: "rgba(99, 102, 241, 0.12)" },
-  { text: essentials[3], icon: "fa-trash", gradient: "linear-gradient(135deg, #FCCCE7 0%, #FEF1F5 100%)", iconBg: "linear-gradient(135deg, #EC4899 0%, #DB2777 100%)", shadow: "rgba(236, 72, 153, 0.12)" },
-  { text: essentials[4], icon: "fa-broom", gradient: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", iconBg: "linear-gradient(135deg, #10B981 0%, #059669 100%)", shadow: "rgba(16, 185, 129, 0.12)" }
-].map((item, idx) => `
-                        <div data-aos="fade-up" data-aos-delay="${120 + idx * 20}" style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: 0 4px 15px ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start;">
-                          <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                            <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                          </div>
-                          <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                        </div>
-                      `).join('')}
-                    </div>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(essentials)}
+                    </ul>
                   </section>
                 </div>
               `;
@@ -3639,42 +3463,18 @@ const coursesData = [
                       "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।",
                       "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।"
                     )}</p>
-                    <div style="display: grid; gap: 1rem;">
-                      ${[
-  { text: warningPoints[0], icon: "fa-calendar-xmark", gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)", shadow: "rgba(220, 38, 38, 0.12)" },
-  { text: warningPoints[1], icon: "fa-droplet", gradient: "linear-gradient(135deg, #FFE6E6 0%, #FFF5F5 100%)", iconBg: "linear-gradient(135deg, #EF4444 0%, #DC2626 100%)", shadow: "rgba(239, 68, 68, 0.12)" },
-  { text: warningPoints[2], icon: "fa-arrow-right-arrow-left", gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)", shadow: "rgba(220, 38, 38, 0.12)" },
-  { text: warningPoints[3], icon: "fa-bug", gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)", shadow: "rgba(220, 38, 38, 0.12)" },
-  { text: warningPoints[4], icon: "fa-face-grimace", gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)", shadow: "rgba(220, 38, 38, 0.12)" }
-].map((item, idx) => `
-                        <div data-aos="fade-up" data-aos-delay="${80 + idx * 20}" style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: 0 4px 15px ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start;">
-                          <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                            <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                          </div>
-                          <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                        </div>
-                      `).join('')}
-                    </div>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(warningPoints)}
+                    </ul>
                   </section>
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <div style="display: grid; gap: 1rem;">
-                      ${[
-  { text: managementPoints[0], icon: "fa-heart", gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)", shadow: "rgba(220, 38, 38, 0.12)" },
-  { text: managementPoints[1], icon: "fa-stethoscope", gradient: "linear-gradient(135deg, #E0E7FF 0%, #F0F4FF 100%)", iconBg: "linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)", shadow: "rgba(99, 102, 241, 0.12)" },
-  { text: managementPoints[2], icon: "fa-capsules", gradient: "linear-gradient(135deg, #FFF4E6 0%, #FFFBF0 100%)", iconBg: "linear-gradient(135deg, #EA580C 0%, #C2410C 100%)", shadow: "rgba(234, 88, 12, 0.12)" },
-  { text: managementPoints[3], icon: "fa-utensils", gradient: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", iconBg: "linear-gradient(135deg, #10B981 0%, #059669 100%)", shadow: "rgba(16, 185, 129, 0.12)" }
-].map((item, idx) => `
-                        <div data-aos="fade-up" data-aos-delay="${80 + idx * 20}" style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: 0 4px 15px ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start;">
-                          <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                            <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                          </div>
-                          <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                        </div>
-                      `).join('')}
-                    </div>
+                    <h3 class="gradient-text">${yhLang("ব্যবস্থাপনা", "ব্যবস্থাপনা")}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(managementPoints)}
+                    </ul>
                   </section>
                 </div>
               `;
@@ -3741,72 +3541,56 @@ const coursesData = [
                 },
               ];
 
+              const renderParagraphs = () =>
+                dreamInfo
+                  .map(
+                    (text, idx) => `
+                      <p class="mb-3" data-aos="fade-up" data-aos-delay="${80 +
+                        idx * 20}">${text}</p>
+                    `
+                  )
+                  .join("");
+
+              const renderAnatomy = () =>
+                anatomySections
+                  .map(
+                    (item, idx) => `
+                      <div class="col-12 col-md-4">
+                        <article class="modern-card glass-card menstrual-info-card h-100" data-aos="fade-up" data-aos-delay="${80 +
+                          idx * 40}">
+                          <h4 class="gradient-text mb-2">${item.title}</h4>
+                          <p class="mb-0">${item.text}</p>
+                        </article>
+                      </div>
+                    `
+                  )
+                  .join("");
+
               return `
                 <div class="lesson-slide">
-                  <div style="position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-                    <div style="position: absolute; bottom: -150px; left: -150px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(168, 85, 247, 0.06) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-                    
-                    <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative;">
-                      <i class="fa-solid fa-mars me-2" style="background: linear-gradient(135deg, #3B82F6, #8B5CF6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                      ${yhLang(
-                        "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
-                        "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা"
-                      )}
-                    </h2>
-                  </div>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
+                    "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা"
+                  )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(168, 85, 247, 0.03) 100%);">
-                    <h3 class="gradient-text mb-4">
-                      <i class="fa-solid fa-book-medical me-2" style="background: linear-gradient(135deg, #3B82F6, #8B5CF6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                      ${yhLang(
-                        "ছেলেদের স্বপ্নদোষ / বীর্যপাত",
-                        "ছেলেদের স্বপ্নদোষ / বীর্যপাত"
-                      )}
-                    </h3>
-                    <div class="d-flex flex-column gap-3">
-                      ${[
-                        {
-                          icon: "fa-moon",
-                          gradient: "linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%)",
-                          shadow: "0 6px 20px rgba(59, 130, 246, 0.15)",
-                          iconBg: "linear-gradient(135deg, #3B82F6, #2563EB)",
-                          text: dreamInfo[0]
-                        },
-                        {
-                          icon: "fa-heart-pulse",
-                          gradient: "linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%)",
-                          shadow: "0 6px 20px rgba(16, 185, 129, 0.15)",
-                          iconBg: "linear-gradient(135deg, #10B981, #059669)",
-                          text: dreamInfo[1]
-                        }
-                      ].map((item, idx) => `
-                        <div data-aos="fade-up" data-aos-delay="${80 + idx * 20}" style="background: ${item.gradient}; padding: 1.5rem; border-radius: 16px; box-shadow: ${item.shadow}; border-top: 3px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1.25rem; align-items: start; transition: all 0.3s ease; position: relative; overflow: hidden;">
-                          <div style="position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-                          <div style="background: ${item.iconBg}; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.18); position: relative; z-index: 1;">
-                            <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.25rem;"></i>
-                          </div>
-                          <span style="color: #1F2937; line-height: 1.8; font-size: 0.98rem; position: relative; z-index: 1;">${item.text}</span>
-                        </div>
-                      `).join('')}
-                    </div>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text">${yhLang(
+                      "ছেলেদের স্বপ্নদোষ / বীর্যপাত",
+                      "ছেলেদের স্বপ্নদোষ / বীর্যপাত"
+                    )}</h3>
+                    ${renderParagraphs()}
                   </section>
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(20, 184, 166, 0.05) 100%); position: relative; overflow: hidden;">
-                    <div style="position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-                    <div class="row align-items-center g-4 position-relative">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row align-items-center g-4">
                       <div class="col-lg-7">
-                        <h3 class="gradient-text mb-3">
-                          <i class="fa-solid fa-venus-mars me-2" style="background: linear-gradient(135deg, #06B6D4, #14B8A6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                          ${yhLang(
+                        <h3 class="gradient-text mb-3">${yhLang(
                           "পুরুষ প্রজননতন্ত্র",
                           "পুরুষ প্রজননতন্ত্র"
                         )}</h3>
-                        <h4 class="fw-semibold mb-2" style="background: linear-gradient(135deg, #0891B2, #0D9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                          <i class="fa-solid fa-mars me-2" style="background: linear-gradient(135deg, #0891B2, #0D9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                          ${yhLang(
+                        <h4 class="fw-semibold mb-2">${yhLang(
                           "পেনিস / পুরুষাঙ্গ",
                           "পেনিস / পুরুষাঙ্গ"
                         )}</h4>
@@ -3823,56 +3607,9 @@ const coursesData = [
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.03) 0%, rgba(6, 182, 212, 0.03) 100%);">
-                    <h3 class="gradient-text mb-4">
-                      <i class="fa-solid fa-microscope me-2" style="background: linear-gradient(135deg, #A855F7, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                      ${yhLang(
-                        "পুরুষ প্রজননতন্ত্রের গুরুত্বপূর্ণ অংশ",
-                        "পুরুষ প্রজননতন্ত্রের গুরুত্বপূর্ণ অংশ"
-                      )}
-                    </h3>
-                    <div class="row g-4">
-                      ${[
-                        {
-                          icon: "fa-dna",
-                          gradient: "linear-gradient(135deg, #E9D5FF 0%, #F3E8FF 100%)",
-                          shadow: "0 6px 20px rgba(168, 85, 247, 0.15)",
-                          iconBg: "linear-gradient(135deg, #A855F7, #7C3AED)",
-                          title: anatomySections[0].title,
-                          text: anatomySections[0].text
-                        },
-                        {
-                          icon: "fa-droplet",
-                          gradient: "linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%)",
-                          shadow: "0 6px 20px rgba(59, 130, 246, 0.15)",
-                          iconBg: "linear-gradient(135deg, #3B82F6, #2563EB)",
-                          title: anatomySections[1].title,
-                          text: anatomySections[1].text
-                        },
-                        {
-                          icon: "fa-pipe-section",
-                          gradient: "linear-gradient(135deg, #CFFAFE 0%, #A5F3FC 100%)",
-                          shadow: "0 6px 20px rgba(6, 182, 212, 0.15)",
-                          iconBg: "linear-gradient(135deg, #06B6D4, #0891B2)",
-                          title: anatomySections[2].title,
-                          text: anatomySections[2].text
-                        }
-                      ].map((item, idx) => `
-                        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="${100 + idx * 30}">
-                          <article style="background: ${item.gradient}; padding: 1.75rem; border-radius: 18px; box-shadow: ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; height: 100%; display: flex; flex-direction: column; gap: 1rem; transition: all 0.3s ease; position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: -30px; right: -30px; width: 140px; height: 140px; background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-                            <div style="background: ${item.iconBg}; width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(0,0,0,0.2); position: relative; z-index: 1;">
-                              <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <div style="position: relative; z-index: 1;">
-                              <h4 style="background: ${item.iconBg}; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 600; margin-bottom: 0.75rem; font-size: 1.05rem;">${item.title}</h4>
-                              <p style="color: #374151; line-height: 1.75; margin: 0; font-size: 0.95rem;">${item.text}</p>
-                            </div>
-                          </article>
-                        </div>
-                      `).join('')}
-                    </div>
-                  </section>
+                  <div class="row g-3">
+                    ${renderAnatomy()}
+                  </div>
                 </div>
               `;
             })(),
@@ -3933,194 +3670,71 @@ const coursesData = [
                 "এবং সামাজিকভাবে হেয়-প্রতিপন্ন হতে হয়",
               ];
 
+              const renderTickList = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
 
+              const renderAlertList = (items) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${120 + idx * 20}">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">
-                    <i class="fa-solid fa-hand-holding-heart me-2" style="background: linear-gradient(135deg, #14B8A6, #0D9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                    ${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
                     "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, rgba(240, 253, 250, 0.6) 0%, rgba(204, 251, 241, 0.4) 100%); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -40px; right: -40px; width: 160px; height: 160px; background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-                    <div style="position: absolute; bottom: -50px; left: -50px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-                    <div style="position: absolute; top: 50%; right: 5%; width: 100px; height: 100px; background: radial-gradient(circle, rgba(13, 148, 136, 0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row align-items-center g-4 flex-column-reverse flex-lg-row">
                       <div class="col-lg-5">
-                        <h3 class="gradient-text mb-3">
-                          <i class="fa-solid fa-clipboard-list me-2" style="background: linear-gradient(135deg, #14B8A6, #0D9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                          ${yhLang(
+                        <h3 class="gradient-text mb-3">${yhLang(
                           "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
                           "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা"
                         )}</h3>
-                        <h4 class="fw-semibold mb-3">
-                          <i class="fa-solid fa-circle-check me-2" style="background: linear-gradient(135deg, #14B8A6, #0D9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                          ${yhLang("করণীয়", "করণীয়")}
-                        </h4>
+                        <h4 class="fw-semibold mb-3">${yhLang("✔ করণীয়", "✔ করণীয়")}</h4>
                         <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="60">স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতা বজায় রাখার উপায়গুলো এই নির্দেশনাতে ছবির সাথে দেখানো হয়েছে, যাতে ছেলেরা সহজেই ধাপগুলো অনুসরণ করতে পারে।</p>
-                        <div class="d-flex flex-column gap-3">
-                          ${[
-                            {
-                              icon: "fa-shower",
-                              gradient: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)",
-                              shadow: "0 6px 20px rgba(59, 130, 246, 0.12)",
-                              iconBg: "linear-gradient(135deg, #3B82F6, #2563EB)",
-                              text: routineSteps[0]
-                            },
-                            {
-                              icon: "fa-book-open",
-                              gradient: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)",
-                              shadow: "0 6px 20px rgba(16, 185, 129, 0.12)",
-                              iconBg: "linear-gradient(135deg, #10B981, #059669)",
-                              text: routineSteps[1]
-                            },
-                            {
-                              icon: "fa-hands-bubbles",
-                              gradient: "linear-gradient(135deg, #CFFAFE 0%, #ECFEFF 100%)",
-                              shadow: "0 6px 20px rgba(6, 182, 212, 0.12)",
-                              iconBg: "linear-gradient(135deg, #06B6D4, #0891B2)",
-                              text: routineSteps[2]
-                            },
-                            {
-                              icon: "fa-shirt",
-                              gradient: "linear-gradient(135deg, #E9D5FF 0%, #F3E8FF 100%)",
-                              shadow: "0 6px 20px rgba(168, 85, 247, 0.12)",
-                              iconBg: "linear-gradient(135deg, #A855F7, #7C3AED)",
-                              text: routineSteps[3]
-                            },
-                            {
-                              icon: "fa-hand",
-                              gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)",
-                              shadow: "0 6px 20px rgba(239, 68, 68, 0.12)",
-                              iconBg: "linear-gradient(135deg, #EF4444, #DC2626)",
-                              text: routineSteps[4]
-                            },
-                            {
-                              icon: "fa-hand-sparkles",
-                              gradient: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)",
-                              shadow: "0 6px 20px rgba(249, 115, 22, 0.12)",
-                              iconBg: "linear-gradient(135deg, #F97316, #EA580C)",
-                              text: routineSteps[5]
-                            },
-                            {
-                              icon: "fa-apple-whole",
-                              gradient: "linear-gradient(135deg, #BBF7D0 0%, #DCFCE7 100%)",
-                              shadow: "0 6px 20px rgba(34, 197, 94, 0.12)",
-                              iconBg: "linear-gradient(135deg, #22C55E, #16A34A)",
-                              text: routineSteps[6]
-                            }
-                          ].map((item, idx) => `
-                            <div data-aos="fade-left" data-aos-delay="${80 + idx * 20}" style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start; transition: transform 0.3s ease;">
-                              <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                                <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                              </div>
-                              <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                            </div>
-                          `).join('')}
-                        </div>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderTickList(routineSteps)}
+                        </ul>
 
 
-                        <section class="modern-card mb-2 glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, rgba(254, 243, 199, 0.4) 0%, rgba(255, 251, 235, 0.3) 100%); position: relative; overflow: hidden;">
-                          <div style="position: absolute; top: -30px; right: -30px; width: 140px; height: 140px; background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-                          <h3 class="gradient-text mb-3">
-                            <i class="fa-solid fa-shield-heart me-2" style="background: linear-gradient(135deg, #F59E0B, #D97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                            ${yhLang(
+                        <section class="modern-card mb-2 glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                          <h3 class="gradient-text mb-3">${yhLang(
                             "নিজেকে সংযত রাখা",
                             "নিজেকে সংযত রাখা"
                           )}</h3>
-                          <div class="d-flex flex-column gap-3">
-                            ${[
-                              {
-                                icon: "fa-heart",
-                                gradient: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)",
-                                shadow: "0 6px 20px rgba(236, 72, 153, 0.12)",
-                                iconBg: "linear-gradient(135deg, #EC4899, #DB2777)",
-                                text: restraintSteps[0]
-                              },
-                              {
-                                icon: "fa-ban",
-                                gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)",
-                                shadow: "0 6px 20px rgba(239, 68, 68, 0.12)",
-                                iconBg: "linear-gradient(135deg, #EF4444, #DC2626)",
-                                text: restraintSteps[1]
-                              },
-                              {
-                                icon: "fa-hand-point-up",
-                                gradient: "linear-gradient(135deg, #FFEDD5 0%, #FFF7ED 100%)",
-                                shadow: "0 6px 20px rgba(249, 115, 22, 0.12)",
-                                iconBg: "linear-gradient(135deg, #F97316, #EA580C)",
-                                text: restraintSteps[2]
-                              },
-                              {
-                                icon: "fa-shield-halved",
-                                gradient: "linear-gradient(135deg, #FECACA 0%, #FEE2E2 100%)",
-                                shadow: "0 6px 20px rgba(220, 38, 38, 0.12)",
-                                iconBg: "linear-gradient(135deg, #DC2626, #B91C1C)",
-                                text: restraintSteps[3]
-                              },
-                              {
-                                icon: "fa-location-crosshairs",
-                                gradient: "linear-gradient(135deg, #DDD6FE 0%, #EDE9FE 100%)",
-                                shadow: "0 6px 20px rgba(139, 92, 246, 0.12)",
-                                iconBg: "linear-gradient(135deg, #8B5CF6, #7C3AED)",
-                                text: restraintSteps[4]
-                              }
-                            ].map((item, idx) => `
-                              <div data-aos="fade-left" data-aos-delay="${60 + idx * 20}" style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start; transition: transform 0.3s ease;">
-                                <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                                  <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                                </div>
-                                <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                              </div>
-                            `).join('')}
-                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderTickList(restraintSteps, 60)}
+                          </ul>
                         </section>
 
 
-                        <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(135deg, rgba(254, 226, 226, 0.4) 0%, rgba(254, 242, 242, 0.3) 100%); position: relative; overflow: hidden;">
-                          <div style="position: absolute; bottom: -35px; left: -35px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-                          <h3 class="gradient-text mb-3">
-                            <i class="fa-solid fa-triangle-exclamation me-2" style="background: linear-gradient(135deg, #EF4444, #DC2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                            ${yhLang(
+                        <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
+                          <h3 class="gradient-text mb-3">${yhLang(
                             "মনে রাখতে হবে",
                             "মনে রাখতে হবে"
                           )}</h3>
                           <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="100">এসব অসংযত কর্মকাণ্ডের কারণে—</p>
-                          <div class="d-flex flex-column gap-3">
-                            ${[
-                              {
-                                icon: "fa-heart-crack",
-                                gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)",
-                                shadow: "0 6px 20px rgba(185, 28, 28, 0.12)",
-                                iconBg: "linear-gradient(135deg, #B91C1C, #991B1B)",
-                                text: reminderPoints[0]
-                              },
-                              {
-                                icon: "fa-virus",
-                                gradient: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)",
-                                shadow: "0 6px 20px rgba(234, 88, 12, 0.12)",
-                                iconBg: "linear-gradient(135deg, #EA580C, #C2410C)",
-                                text: reminderPoints[1]
-                              },
-                              {
-                                icon: "fa-user-xmark",
-                                gradient: "linear-gradient(135deg, #FEF3C7 0%, #FEF9E7 100%)",
-                                shadow: "0 6px 20px rgba(217, 119, 6, 0.12)",
-                                iconBg: "linear-gradient(135deg, #D97706, #B45309)",
-                                text: reminderPoints[2]
-                              }
-                            ].map((item, idx) => `
-                              <div data-aos="fade-up" data-aos-delay="${120 + idx * 20}" style="background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: ${item.shadow}; border-left: 4px solid transparent; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: start; transition: transform 0.3s ease;">
-                                <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                                  <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                                </div>
-                                <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
-                              </div>
-                            `).join('')}
-                          </div>
+                          <ul class="list-unstyled puberty-list mb-0">
+                            ${renderAlertList(reminderPoints)}
+                          </ul>
                         </section>
                       </div>
                       <div class="col-lg-7">
@@ -4178,22 +3792,13 @@ const coursesData = [
                 "প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।",
               ];
 
-              const statsCards = [
-                { text: bdhsStats[0], icon: "fa-calendar-x", gradient: "linear-gradient(135deg, #FFE4E9 0%, #FFF5F7 100%)", iconBg: "linear-gradient(135deg, #EC4899 0%, #DB2777 100%)", shadow: "rgba(236, 72, 153, 0.12)" },
-                { text: bdhsStats[1], icon: "fa-chart-line", gradient: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)", iconBg: "linear-gradient(135deg, #EA580C 0%, #C2410C 100%)", shadow: "rgba(234, 88, 12, 0.12)" },
-                { text: bdhsStats[2], icon: "fa-heart-pulse", gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)", shadow: "rgba(220, 38, 38, 0.12)" },
-                { text: bdhsStats[3], icon: "fa-baby", gradient: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", iconBg: "linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)", shadow: "rgba(59, 130, 246, 0.12)" }
-              ];
-
-              const renderStats = () =>
-                statsCards
+              const renderStats = (items) =>
+                items
                   .map(
-                    (item, idx) => `
-                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 40}" style="list-style: none; background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: 0 4px 15px ${item.shadow}; border-left: 4px solid; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: flex-start;">
-                        <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                          <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                        </div>
-                        <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
+                    (text, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
                       </li>
                     `
                   )
@@ -4218,8 +3823,8 @@ const coursesData = [
                         <div class="alert alert-info rounded-4" role="note">
                           <strong>বিডিএইচএস ২০২২</strong> অনুসারে—
                         </div>
-                        <ul class="list-unstyled puberty-list mb-0" style="display: grid; gap: 1rem;">
-                          ${renderStats()}
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderStats(bdhsStats)}
                         </ul>
                       </div>
                       <div class="col-lg-5">
@@ -4228,7 +3833,7 @@ const coursesData = [
                             "বাল্যবিবাহের ঝুঁকি",
                             "বাল্যবিবাহের ঝুঁকি"
                           )}</h4>
-                          <p class="mb-0 text-muted">স্বাস্থ্য, শিক্ষা, অর্থনীতি ও সামাজিক নিরাপত্তা—সব দিক থেকেই বাল্যবিবাহ তরুণ-তরুণীদের ভবিষ্যৎকে ঝুঁকির মুখে ফেলে। সঠিক তথ্য জানিয়ে পরিবার ও সম্প্রদায়কে সচেতন করাই প্রথম পদক্ষেপ।</p>
+                          <p class="mb-0 text-muted">স্বাস্থ্য, শিক্ষা, অর্থনীতি ও সামাজিক নিরাপত্তা—সব দিক থেকেই বাল্যবিবাহ কিশোর-কিশোরীদের ভবিষ্যৎকে ঝুঁকির মুখে ফেলে। সঠিক তথ্য জানিয়ে পরিবার ও সম্প্রদায়কে সচেতন করাই প্রথম পদক্ষেপ।</p>
                         </div>
                       </div>
                     </div>
@@ -4384,27 +3989,13 @@ const coursesData = [
                 "বিবাহ বিচ্ছেদ",
               ];
 
-              const consequencesCards = [
-                { text: consequences[0], icon: "fa-baby", gradient: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)", iconBg: "linear-gradient(135deg, #EA580C 0%, #C2410C 100%)", shadow: "rgba(234, 88, 12, 0.12)" },
-                { text: consequences[1], icon: "fa-bowl-food", gradient: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", iconBg: "linear-gradient(135deg, #10B981 0%, #047857 100%)", shadow: "rgba(16, 185, 129, 0.12)" },
-                { text: consequences[2], icon: "fa-heart-pulse", gradient: "linear-gradient(135deg, #CFFAFE 0%, #ECFDF5 100%)", iconBg: "linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)", shadow: "rgba(6, 182, 212, 0.12)" },
-                { text: consequences[3], icon: "fa-hospital-user", gradient: "linear-gradient(135deg, #E9D5FF 0%, #F5F3FF 100%)", iconBg: "linear-gradient(135deg, #A855F7 0%, #7E22CE 100%)", shadow: "rgba(168, 85, 247, 0.12)" },
-                { text: consequences[4], icon: "fa-person-walking-with-cane", gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)", shadow: "rgba(220, 38, 38, 0.12)" },
-                { text: consequences[5], icon: "fa-people", gradient: "linear-gradient(135deg, #E0E7FF 0%, #F5F3FF 100%)", iconBg: "linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)", shadow: "rgba(99, 102, 241, 0.12)" },
-                { text: consequences[6], icon: "fa-hand-fist", gradient: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)", iconBg: "linear-gradient(135deg, #EC4899 0%, #DB2777 100%)", shadow: "rgba(236, 72, 153, 0.12)" },
-                { text: consequences[7], icon: "fa-shield-exclamation", gradient: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", iconBg: "linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)", shadow: "rgba(59, 130, 246, 0.12)" },
-                { text: consequences[8], icon: "fa-ring-slash", gradient: "linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)", iconBg: "linear-gradient(135deg, #14B8A6 0%, #0D9488 100%)", shadow: "rgba(20, 184, 166, 0.12)" }
-              ];
-
               const renderList = () =>
-                consequencesCards
+                consequences
                   .map(
-                    (item, idx) => `
-                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 20}" style="list-style: none; background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: 0 4px 15px ${item.shadow}; border-left: 4px solid; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: flex-start;">
-                        <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                          <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                        </div>
-                        <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
+                    (text, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
                       </li>
                     `
                   )
@@ -4420,7 +4011,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4 align-items-center">
                       <div class="col-lg-7">
-                        <ul class="list-unstyled puberty-list mb-0" style="display: grid; gap: 1rem;">
+                        <ul class="list-unstyled puberty-list mb-0">
                           ${renderList()}
                         </ul>
                       </div>
@@ -4466,34 +4057,20 @@ const coursesData = [
                 "বিয়ে সম্পাদনের সময় কাজী যেন অবশ্যই জন্মসনদ যাচাই করেন—এ বিষয়ে কাজীকে সচেতন করা",
                 "বাল্যবিবাহের আইন সম্পর্কে কাজী, অভিভাবক ও জনসাধারণকে সচেতন করা",
                 "বাল্যবিবাহ ও এর ভয়াবহ পরিণতি সম্পর্কে জনসচেতনতা তৈরি করা",
-                "বাল্যবিবাহ হলেও জন্মনিয়ন্ত্রণ পদ্ধতি ব্যবহার ও দেরিতে সন্তান গ্রহণ সম্পর্কে তরুণ-তরুণী ও অভিভাবকদের সচেতন করা",
-                "তরুণ-তরুণীদের জন্য উপযুক্ত জন্মনিয়ন্ত্রণ পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
+                "বাল্যবিবাহ হলেও জন্মনিয়ন্ত্রণ পদ্ধতি ব্যবহার ও দেরিতে সন্তান গ্রহণ সম্পর্কে কিশোর-কিশোরী ও অভিভাবকদের সচেতন করা",
+                "কিশোর-কিশোরীদের জন্য উপযুক্ত জন্মনিয়ন্ত্রণ পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
                 "‘বাল্যবিবাহ’ নিয়ে কমিউনিটি পর্যায়ে আলোচনা ও প্রতিরোধব্যবস্থা তৈরি করা",
                 "বাল্যবিবাহ নিরোধ আইন, ২০১৭ এবং বাল্যবিবাহ নিরোধ বিধিমালা-এর বাস্তব প্রয়োগে সংশ্লিষ্টদের দায়িত্বশীল ভূমিকা নিশ্চিত করা",
                 "বাল্যবিবাহ সম্পর্কে জানতে পারলে চাইল্ড হেল্পলাইন <strong>১০৯৮</strong>-এ কল করে রিপোর্ট করা",
               ];
 
-              const measuresCards = [
-                { text: measures[0], icon: "fa-id-card", gradient: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", iconBg: "linear-gradient(135deg, #10B981 0%, #047857 100%)", shadow: "rgba(16, 185, 129, 0.12)" },
-                { text: measures[1], icon: "fa-scroll", gradient: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", iconBg: "linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)", shadow: "rgba(59, 130, 246, 0.12)" },
-                { text: measures[2], icon: "fa-scale-balanced", gradient: "linear-gradient(135deg, #E9D5FF 0%, #F5F3FF 100%)", iconBg: "linear-gradient(135deg, #A855F7 0%, #7E22CE 100%)", shadow: "rgba(168, 85, 247, 0.12)" },
-                { text: measures[3], icon: "fa-megaphone", gradient: "linear-gradient(135deg, #CFFAFE 0%, #ECFDF5 100%)", iconBg: "linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)", shadow: "rgba(6, 182, 212, 0.12)" },
-                { text: measures[4], icon: "fa-parachute-box", gradient: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)", iconBg: "linear-gradient(135deg, #EA580C 0%, #C2410C 100%)", shadow: "rgba(234, 88, 12, 0.12)" },
-                { text: measures[5], icon: "fa-pills", gradient: "linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)", iconBg: "linear-gradient(135deg, #14B8A6 0%, #0D9488 100%)", shadow: "rgba(20, 184, 166, 0.12)" },
-                { text: measures[6], icon: "fa-people-group", gradient: "linear-gradient(135deg, #E0E7FF 0%, #F5F3FF 100%)", iconBg: "linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)", shadow: "rgba(99, 102, 241, 0.12)" },
-                { text: measures[7], icon: "fa-gavel", gradient: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)", iconBg: "linear-gradient(135deg, #EC4899 0%, #DB2777 100%)", shadow: "rgba(236, 72, 153, 0.12)" },
-                { text: measures[8], icon: "fa-phone", gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)", shadow: "rgba(220, 38, 38, 0.12)" }
-              ];
-
               const renderMeasures = () =>
-                measuresCards
+                measures
                   .map(
-                    (item, idx) => `
-                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 20}" style="list-style: none; background: ${item.gradient}; padding: 1.25rem; border-radius: 14px; box-shadow: 0 4px 15px ${item.shadow}; border-left: 4px solid; border-image: ${item.iconBg} 1; display: flex; gap: 1rem; align-items: flex-start;">
-                        <div style="background: ${item.iconBg}; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                          <i class="fa-solid ${item.icon}" style="color: white; font-size: 1.1rem;"></i>
-                        </div>
-                        <span style="color: #374151; line-height: 1.7; font-size: 0.95rem;">${item.text}</span>
+                    (text, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
                       </li>
                     `
                   )
@@ -4509,7 +4086,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4">
                       <div class="col-12">
-                        <ul class="list-unstyled puberty-list mb-3" style="display: grid; gap: 1rem;">
+                        <ul class="list-unstyled puberty-list mb-3">
                           ${renderMeasures()}
                         </ul>
                       </div>
@@ -4519,7 +4096,7 @@ const coursesData = [
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
-                    <h3 class="gradient-text">⚖️ ${yhLang("বিয়ে বাতিলের আইন (মুসলিম বিবাহ বাতিল আইন, ১৯৩৯)", "বিয়ে বাতিলের আইন (মুসলিম বিবাহ বাতিল আইন, ১৯৩৯)")}</h3>
+                    <h3 class="gradient-text">${yhLang("বিয়ে বাতিলের আইন (মুসলিম বিবাহ বাতিল আইন, ১৯৩৯)", "বিয়ে বাতিলের আইন (মুসলিম বিবাহ বাতিল আইন, ১৯৩৯)")}</h3>
                     <p>যদি কোনো নারীর <strong>১৮ বছর পূর্ণ হওয়ার আগে</strong> এবং <strong>তার সম্মতি ছাড়া</strong> বিয়ে হয়, তাহলে সে আদালতে বিবাহ বাতিলের আবেদন করতে পারে— যদি:</p>
                     <ul>
                       <li>সে স্বামীর সঙ্গে দাম্পত্য সম্পর্ক স্থাপন না করে থাকে, এবং</li>
@@ -4530,7 +4107,7 @@ const coursesData = [
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text">📜 ${yhLang("বাল্যবিবাহ নিরোধ আইন ও বিধিমালা", "বাল্যবিবাহ নিরোধ আইন ও বিধিমালা")}</h3>
+                    <h3 class="gradient-text">${yhLang("বাল্যবিবাহ নিরোধ আইন ও বিধিমালা", "বাল্যবিবাহ নিরোধ আইন ও বিধিমালা")}</h3>
                     <ul>
                       <li><strong>বাল্যবিবাহ নিরোধ আইন, ২০১৭</strong></li>
                       <li><strong>বাল্যবিবাহ নিরোধ বিধিমালা, ২০১৮</strong></li>
@@ -4541,7 +4118,7 @@ const coursesData = [
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="gradient-text">⚠️ ${yhLang("বাল্যবিবাহ করার শাস্তি", "বাল্যবিবাহ করার শাস্তি")}</h3>
+                    <h3 class="gradient-text">${yhLang("বাল্যবিবাহ করার শাস্তি", "বাল্যবিবাহ করার শাস্তি")}</h3>
                     <ul>
                       <li><strong>সর্বোচ্চ ২ বছর কারাদণ্ড</strong>, অথবা</li>
                       <li><strong>সর্বোচ্চ ১ লক্ষ টাকা অর্থদণ্ড</strong>, অথবা</li>
@@ -4606,111 +4183,13 @@ const coursesData = [
                 { type: "দীর্ঘমেয়াদি পদ্ধতি", items: longTermMethods },
               ];
 
-              const methodMeta = {
-                "নারী স্থায়ী পদ্ধতি (টিউবেকটমি)": {
-                  icon: "fa-person-dress",
-                  bg: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)",
-                  iconBg: "linear-gradient(135deg, #EC4899 0%, #DB2777 100%)",
-                  shadow: "rgba(236, 72, 153, 0.14)",
-                },
-                "পুরুষ স্থায়ী পদ্ধতি (ভ্যাসেকটমি)": {
-                  icon: "fa-person",
-                  bg: "linear-gradient(135deg, #E0E7FF 0%, #EEF2FF 100%)",
-                  iconBg: "linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)",
-                  shadow: "rgba(99, 102, 241, 0.14)",
-                },
-                "খাবার বড়ি": {
-                  icon: "fa-pills",
-                  bg: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)",
-                  iconBg: "linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)",
-                  shadow: "rgba(59, 130, 246, 0.14)",
-                },
-                "কনডম": {
-                  icon: "fa-shield-virus",
-                  bg: "linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)",
-                  iconBg: "linear-gradient(135deg, #14B8A6 0%, #0D9488 100%)",
-                  shadow: "rgba(20, 184, 166, 0.14)",
-                },
-                "ইনজেকশন": {
-                  icon: "fa-syringe",
-                  bg: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)",
-                  iconBg: "linear-gradient(135deg, #EA580C 0%, #C2410C 100%)",
-                  shadow: "rgba(234, 88, 12, 0.14)",
-                },
-                "ইমপ্ল্যান্ট": {
-                  icon: "fa-bandage",
-                  bg: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)",
-                  iconBg: "linear-gradient(135deg, #10B981 0%, #047857 100%)",
-                  shadow: "rgba(16, 185, 129, 0.14)",
-                },
-                "আইইউডি": {
-                  icon: "fa-staff-snake",
-                  bg: "linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)",
-                  iconBg: "linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)",
-                  shadow: "rgba(139, 92, 246, 0.14)",
-                },
-              };
-
-              const typeMeta = {
-                "স্থায়ী পদ্ধতি": {
-                  icon: "fa-lock",
-                  bg: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)",
-                  shadow: "rgba(220, 38, 38, 0.12)",
-                },
-                "স্বল্পমেয়াদি পদ্ধতি": {
-                  icon: "fa-clock",
-                  bg: "linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%)",
-                  shadow: "rgba(217, 119, 6, 0.12)",
-                },
-                "দীর্ঘমেয়াদি পদ্ধতি": {
-                  icon: "fa-hourglass-half",
-                  bg: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)",
-                  shadow: "rgba(16, 185, 129, 0.12)",
-                },
-                "অস্থায়ী পদ্ধতি": {
-                  icon: "fa-repeat",
-                  bg: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)",
-                  shadow: "rgba(59, 130, 246, 0.12)",
-                },
-              };
-
-              const subtypeMeta = {
-                নারী: "fa-person-dress",
-                পুরুষ: "fa-person",
-                স্বল্পমেয়াদি: "fa-calendar-day",
-                দীর্ঘমেয়াদি: "fa-calendar-check",
-              };
-
-              const renderMethodBadge = (item, idx) => {
-                const fallback = {
-                  icon: "fa-circle-info",
-                  bg: "linear-gradient(135deg, #E5E7EB 0%, #F9FAFB 100%)",
-                  iconBg: "linear-gradient(135deg, #6B7280 0%, #4B5563 100%)",
-                  shadow: "rgba(107, 114, 128, 0.12)",
-                };
-                const meta = methodMeta[item] || fallback;
-                return `
-                  <span class="d-flex align-items-center mb-2" style="background: ${meta.bg}; border-radius: 12px; padding: 0.55rem 0.75rem; gap: 0.6rem; box-shadow: 0 6px 16px ${meta.shadow};">
-                    <span style="width: 30px; height: 30px; border-radius: 9px; background: ${meta.iconBg}; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.14);">
-                      <i class="fa-solid ${meta.icon}" style="color:#fff; font-size:0.82rem;"></i>
-                    </span>
-                    <span style="color:#1F2937; font-size:0.92rem; line-height:1.4;">${item}</span>
-                  </span>
-                `;
-              };
-
               const renderTableRows = () =>
                 methodTableRows
                   .map((row, idx) => `
                     <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                      <td class="fw-semibold">
-                        <span class="d-inline-flex align-items-center" style="background: ${(typeMeta[row.type] || typeMeta["স্বল্পমেয়াদি পদ্ধতি"]).bg}; border-radius: 10px; padding: 0.45rem 0.7rem; gap: 0.45rem; box-shadow: 0 6px 14px ${(typeMeta[row.type] || typeMeta["স্বল্পমেয়াদি পদ্ধতি"]).shadow};">
-                          <i class="fa-solid ${(typeMeta[row.type] || typeMeta["স্বল্পমেয়াদি পদ্ধতি"]).icon}" style="color:#1F2937;"></i>
-                          <span>${row.type}</span>
-                        </span>
-                      </td>
+                      <td class="fw-semibold">${row.type}</td>
                       <td>${row.items
-                        .map((item, itemIdx) => renderMethodBadge(item, itemIdx))
+                        .map((item) => `<span class="d-block">${item}</span>`)
                         .join("")}</td>
                     </tr>
                   `)
@@ -4744,20 +4223,10 @@ const coursesData = [
                   .map(
                     (row, idx) => `
                       <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <td class="fw-semibold">
-                          <span class="d-inline-flex align-items-center" style="background: ${(typeMeta[row.category] || typeMeta["অস্থায়ী পদ্ধতি"]).bg}; border-radius: 10px; padding: 0.45rem 0.7rem; gap: 0.45rem; box-shadow: 0 6px 14px ${(typeMeta[row.category] || typeMeta["অস্থায়ী পদ্ধতি"]).shadow};">
-                            <i class="fa-solid ${(typeMeta[row.category] || typeMeta["অস্থায়ী পদ্ধতি"]).icon}" style="color:#1F2937;"></i>
-                            <span>${row.category}</span>
-                          </span>
-                        </td>
-                        <td>
-                          <span class="d-inline-flex align-items-center" style="background: linear-gradient(135deg, #F3F4F6 0%, #FFFFFF 100%); border-radius: 10px; padding: 0.4rem 0.65rem; gap: 0.45rem; box-shadow: 3px 6px 14px rgba(107, 114, 128, 0.12);">
-                            <i class="fa-solid ${subtypeMeta[row.subtype] || "fa-tag"}" style="color:#4B5563;"></i>
-                            <span>${row.subtype}</span>
-                          </span>
-                        </td>
+                        <td class="fw-semibold">${row.category}</td>
+                        <td>${row.subtype}</td>
                         <td>${row.methods
-                          .map((item, itemIdx) => renderMethodBadge(item, itemIdx))
+                          .map((item) => `<span class="d-block">${item}</span>`)
                           .join("")}</td>
                       </tr>
                     `
@@ -4766,35 +4235,32 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-people-roof me-2" style="color:#0EA5E9;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "কৈশোরকালীন পরিবার পরিকল্পনা",
                     "কৈশোরকালীন পরিবার পরিকল্পনা"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%); border-radius: 22px; box-shadow: -8px 14px 30px rgba(14, 165, 233, 0.14); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; top:-26px; right:-18px; width:86px; height:86px; background: rgba(14,165,233,0.12); border-radius: 28px;"></span>
-                    <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-book-medical me-2" style="color:#0284C7;"></i>${yhLang("পরিবার পরিকল্পনার ধারণা", "পরিবার পরিকল্পনার ধারণা")}</h3>
-                    <p class="mb-3" style="position:relative; color:#1F2937;">একটি দম্পতি তার আয়ের সাথে এবং পারিপার্শ্বিক আর্থ–সামাজিক অবস্থার সাথে সঙ্গতি রেখে কখন এবং কয়টি সন্তান গ্রহণ করবে, দুইটি সন্তানের মাঝে ব্যবধান কতদিনের হবে বা তাদের পরিবার কত ছোট বা বড় হবে, তা ঠিক করা এবং সে লক্ষ্য অর্জনের জন্য যথাযথ ব্যবস্থা গ্রহণ করাই হলো <strong>পরিবার পরিকল্পনা</strong>।</p>
-                    <p class="mb-0" style="position:relative; color:#1F2937;">যেকোনো কিশোরীই শারীরিক ও মানসিকভাবে সন্তান ধারণের জন্য উপযুক্ত নয়। প্রজনন স্বাস্থ্য বিষয়ে প্রয়োজনীয় তথ্য না থাকার কারণে এই সময়ে গর্ভধারণ মা ও সন্তান উভয়ের জন্যই অত্যন্ত ঝুঁকিপূর্ণ হতে পারে।</p>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">একটি দম্পতি তার আয়ের সাথে এবং পারিপার্শ্বিক আর্থ–সামাজিক অবস্থার সাথে সঙ্গতি রেখে কখন এবং কয়টি সন্তান গ্রহণ করবে, দুইটি সন্তানের মাঝে ব্যবধান কতদিনের হবে বা তাদের পরিবার কত ছোট বা বড় হবে, তা ঠিক করা এবং সে লক্ষ্য অর্জনের জন্য যথাযথ ব্যবস্থা গ্রহণ করাই হলো <strong>পরিবার পরিকল্পনা</strong>।</p>
+                    <p class="mb-0">যেকোনো কিশোরীই শারীরিক ও মানসিকভাবে সন্তান ধারণের জন্য উপযুক্ত নয়। প্রজনন স্বাস্থ্য বিষয়ে প্রয়োজনীয় তথ্য না থাকার কারণে এই সময়ে গর্ভধারণ মা ও সন্তান উভয়ের জন্যই অত্যন্ত ঝুঁকিপূর্ণ হতে পারে।</p>
                   </section>
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #EEF2FF 0%, #F8FAFC 100%); border-radius: 24px; box-shadow: 10px 16px 32px rgba(99, 102, 241, 0.14); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; bottom:-22px; left:-14px; width:92px; height:92px; background: rgba(99,102,241,0.10); border-radius: 50%;"></span>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
                     <div class="row g-4 align-items-center">
                       <div class="col-lg-7">
-                        <h3 class="gradient-text mb-3"><i class="fa-solid fa-table-list me-2" style="color:#4F46E5;"></i>${yhLang(
+                        <h3 class="gradient-text mb-3">${yhLang(
                           "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ",
                           "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ"
                         )}</h3>
-                        <p class="text-muted" style="color:#334155 !important;">বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রম অনুযায়ী যেকোনো সক্ষম দম্পতি আধুনিক পরিবার পরিকল্পনা পদ্ধতি গ্রহণ করতে পারেন। বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রমে <strong>বৈবাহিক অবস্থা</strong> এবং <strong>সন্তান সংখ্যা</strong> বিবেচনা করে পদ্ধতি প্রদান করা হয়।</p>
+                        <p class="text-muted">বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রম অনুযায়ী যেকোনো সক্ষম দম্পতি আধুনিক পরিবার পরিকল্পনা পদ্ধতি গ্রহণ করতে পারেন। বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রমে <strong>বৈবাহিক অবস্থা</strong> এবং <strong>সন্তান সংখ্যা</strong> বিবেচনা করে পদ্ধতি প্রদান করা হয়।</p>
                         <div class="table-responsive">
-                          <table class="table table-bordered text-center align-middle modern-table" style="background: rgba(255,255,255,0.82); border-radius: 14px; overflow: hidden; box-shadow: 0 10px 24px rgba(79, 70, 229, 0.14);">
+                          <table class="table table-bordered text-center align-middle modern-table">
                             <thead class="table-light">
                               <tr>
-                                <th><i class="fa-solid fa-layer-group me-1" style="color:#4F46E5;"></i>পদ্ধতির ধরণ</th>
-                                <th><i class="fa-solid fa-list-check me-1" style="color:#0EA5E9;"></i>পদ্ধতির তালিকা</th>
+                                <th>পদ্ধতির ধরণ</th>
+                                <th>পদ্ধতির তালিকা</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -4813,20 +4279,19 @@ const coursesData = [
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #ECFDF5 0%, #F0FDFA 100%); border-radius: 24px; box-shadow: 0 18px 34px rgba(16, 185, 129, 0.14); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; top:-18px; left:-18px; width:84px; height:84px; background: rgba(16,185,129,0.12); border-radius: 22px;"></span>
-                    <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-file-medical me-2" style="color:#059669;"></i>${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text mb-3">${yhLang(
                       "স্থায়ী ও অস্থায়ী পদ্ধতির তথ্যসারণি",
                       "স্থায়ী ও অস্থায়ী পদ্ধতির তথ্যসারণি"
                     )}</h3>
-                    <p class="text-muted" style="position:relative; color:#334155 !important;">স্থায়ী এবং অস্থায়ী—উভয় ধরণের পরিবার পরিকল্পনা পদ্ধতি দম্পতির শারীরিক ও সামাজিক উপযোগিতা বিবেচনা করে নির্বাচন করা উচিত। নিচের সারণিতে প্রতিটি শ্রেণি ও উপধরণের উদাহরণ দেখানো হলো।</p>
+                    <p class="text-muted">স্থায়ী এবং অস্থায়ী—উভয় ধরণের পরিবার পরিকল্পনা পদ্ধতি দম্পতির শারীরিক ও সামাজিক উপযোগিতা বিবেচনা করে নির্বাচন করা উচিত। নিচের সারণিতে প্রতিটি শ্রেণি ও উপধরণের উদাহরণ দেখানো হলো।</p>
                     <div class="table-responsive mt-3">
-                      <table class="table table-bordered text-center align-middle modern-table" style="background: rgba(255,255,255,0.84); border-radius: 14px; overflow: hidden; box-shadow: -8px 12px 26px rgba(5, 150, 105, 0.15);">
+                      <table class="table table-bordered text-center align-middle modern-table">
                         <thead class="table-light">
                           <tr>
-                            <th><i class="fa-solid fa-sitemap me-1" style="color:#059669;"></i>পদ্ধতির ধরন</th>
-                            <th><i class="fa-solid fa-tags me-1" style="color:#0F766E;"></i>উপধরন</th>
-                            <th><i class="fa-solid fa-notes-medical me-1" style="color:#0284C7;"></i>পদ্ধতির তালিকা</th>
+                            <th>পদ্ধতির ধরন</th>
+                            <th>উপধরন</th>
+                            <th>পদ্ধতির তালিকা</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -4874,98 +4339,6 @@ const coursesData = [
                 { key: "tubectomy", label: "টিউবেকটমি" },
                 { key: "vasectomy", label: "ভেসেকটমি" },
               ];
-
-              const headerMeta = {
-                pill: {
-                  icon: "fa-pills",
-                  bg: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)",
-                  iconBg: "linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)",
-                },
-                condom: {
-                  icon: "fa-shield-virus",
-                  bg: "linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)",
-                  iconBg: "linear-gradient(135deg, #14B8A6 0%, #0D9488 100%)",
-                },
-                injection: {
-                  icon: "fa-syringe",
-                  bg: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)",
-                  iconBg: "linear-gradient(135deg, #EA580C 0%, #C2410C 100%)",
-                },
-                implant: {
-                  icon: "fa-bandage",
-                  bg: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)",
-                  iconBg: "linear-gradient(135deg, #10B981 0%, #047857 100%)",
-                },
-                iud: {
-                  icon: "fa-staff-snake",
-                  bg: "linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)",
-                  iconBg: "linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)",
-                },
-                tubectomy: {
-                  icon: "fa-person-dress",
-                  bg: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)",
-                  iconBg: "linear-gradient(135deg, #EC4899 0%, #DB2777 100%)",
-                },
-                vasectomy: {
-                  icon: "fa-person",
-                  bg: "linear-gradient(135deg, #E0E7FF 0%, #EEF2FF 100%)",
-                  iconBg: "linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)",
-                },
-              };
-
-              const usageMeta = {
-                "খাবার বড়ি": "pill",
-                কনডম: "condom",
-                ইনজেকশন: "injection",
-                ইমপ্ল্যান্ট: "implant",
-                আইইউডি: "iud",
-                "ভ্যাসেকটমি/এনএসভি": "vasectomy",
-                টিউবেকটমি: "tubectomy",
-              };
-
-              const durationMeta = {
-                প্রতিদিন: {
-                  bg: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)",
-                  shadow: "rgba(59, 130, 246, 0.14)",
-                  icon: "fa-calendar-day",
-                },
-                "ব্যবহারের সময়": {
-                  bg: "linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)",
-                  shadow: "rgba(20, 184, 166, 0.14)",
-                  icon: "fa-stopwatch",
-                },
-                "তিন মাস": {
-                  bg: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)",
-                  shadow: "rgba(234, 88, 12, 0.14)",
-                  icon: "fa-calendar-week",
-                },
-                "প্রকারভেদে ৩ বছর বা ৫ বছর": {
-                  bg: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)",
-                  shadow: "rgba(16, 185, 129, 0.14)",
-                  icon: "fa-calendar-check",
-                },
-                "১০ বছর": {
-                  bg: "linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)",
-                  shadow: "rgba(139, 92, 246, 0.14)",
-                  icon: "fa-hourglass-half",
-                },
-                স্থায়ী: {
-                  bg: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)",
-                  shadow: "rgba(220, 38, 38, 0.14)",
-                  icon: "fa-lock",
-                },
-              };
-
-              const renderHeaderCell = (method) => {
-                const meta = headerMeta[method.key];
-                return `<th style="padding:0.55rem;"><span class="d-inline-flex align-items-center justify-content-center" style="gap:0.35rem; background:${meta.bg}; border-radius:10px; padding:0.35rem 0.5rem; box-shadow:0 5px 14px rgba(15,23,42,0.10);"><span style="width:22px;height:22px;border-radius:7px;background:${meta.iconBg};display:inline-flex;align-items:center;justify-content:center;"><i class="fa-solid ${meta.icon}" style="color:#fff;font-size:0.68rem;"></i></span><span style="font-size:0.8rem;line-height:1.2;">${method.label}</span></span></th>`;
-              };
-
-              const renderMethodChip = (methodLabel) => {
-                const key = usageMeta[methodLabel] || "pill";
-                const meta = headerMeta[key];
-                return `<span class="d-inline-flex align-items-center" style="gap:0.45rem; background:${meta.bg}; border-radius:10px; padding:0.42rem 0.65rem; box-shadow:0 6px 14px rgba(15,23,42,0.11);"><span style="width:26px;height:26px;border-radius:8px;background:${meta.iconBg};display:inline-flex;align-items:center;justify-content:center;"><i class="fa-solid ${meta.icon}" style="color:#fff;font-size:0.74rem;"></i></span><span>${methodLabel}</span></span>`;
-              };
 
               const opportunityRows = [
                 {
@@ -5049,17 +4422,11 @@ const coursesData = [
                   .map(
                     (row, idx) => `
                       <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <td class="fw-semibold text-start" style="background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%); box-shadow: -4px 6px 16px rgba(100, 116, 139, 0.12); border-radius: 10px;">${row.label}</td>
+                        <td class="fw-semibold text-start">${row.label}</td>
                         ${methodHeaders
                           .map(
-                            (method, methodIdx) => {
-                              const on = row.availability[method.key];
-                              const onStyle = "background: linear-gradient(135deg, #DCFCE7 0%, #F0FDF4 100%); box-shadow: 0 6px 14px rgba(34,197,94,0.14);";
-                              const offStyle = "background: linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%); box-shadow: 0 6px 14px rgba(239,68,68,0.14);";
-                              const icon = on ? "fa-circle-check" : "fa-circle-minus";
-                              const iconColor = on ? "#16A34A" : "#DC2626";
-                              return `<td><span class=\"d-inline-flex align-items-center justify-content-center\" style=\"width:34px;height:34px;border-radius:10px;${on ? onStyle : offStyle}\"><i class=\"fa-solid ${icon}\" style=\"color:${iconColor};\"></i></span></td>`;
-                            }
+                            (method) =>
+                              `<td>${row.availability[method.key] ? "&#10003;" : ""}</td>`
                           )
                           .join("")}
                       </tr>
@@ -5072,14 +4439,9 @@ const coursesData = [
                   .map(
                     (item, idx) => `
                       <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <td class="fw-semibold">${renderMethodChip(item.method)}</td>
-                        <td style="background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%); box-shadow: 4px 6px 14px rgba(100,116,139,0.12); border-radius: 10px;">${item.usage}</td>
-                        <td>
-                          <span class="d-inline-flex align-items-center" style="gap:0.45rem; border-radius:10px; padding:0.42rem 0.65rem; background:${(durationMeta[item.duration] || durationMeta["প্রতিদিন"]).bg}; box-shadow:0 6px 14px ${(durationMeta[item.duration] || durationMeta["প্রতিদিন"]).shadow};">
-                            <i class="fa-solid ${(durationMeta[item.duration] || durationMeta["প্রতিদিন"]).icon}" style="color:#1F2937;"></i>
-                            <span>${item.duration}</span>
-                          </span>
-                        </td>
+                        <td class="fw-semibold">${item.method}</td>
+                        <td>${item.usage}</td>
+                        <td>${item.duration}</td>
                       </tr>
                     `
                   )
@@ -5087,25 +4449,24 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-chart-column me-2" style="color:#0EA5E9;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "কৈশোরকালীন পরিবার পরিকল্পনা",
                     "কৈশোরকালীন পরিবার পরিকল্পনা"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #F5F3FF 0%, #EEF2FF 100%); border-radius: 24px; box-shadow: 10px 16px 32px rgba(99, 102, 241, 0.15); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; right:-18px; top:-22px; width:92px; height:92px; background: rgba(99,102,241,0.12); border-radius: 26px;"></span>
-                    <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-children me-2" style="color:#4F46E5;"></i>${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
                       "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ",
                       "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ"
                     )}</h3>
-                    <p class="text-muted" style="position:relative; color:#334155 !important;">কতোজন সন্তান আছে বা নিতে চান—তা অনুযায়ী পরিবার পরিকল্পনা পদ্ধতি নির্বাচন করা উচিত। নিচের সারণিতে সেই নির্দেশনা দেখানো হলো।</p>
+                    <p class="text-muted">কতোজন সন্তান আছে বা নিতে চান—তা অনুযায়ী পরিবার পরিকল্পনা পদ্ধতি নির্বাচন করা উচিত। নিচের সারণিতে সেই নির্দেশনা দেখানো হলো।</p>
                     <div class="table-responsive mt-3">
-                      <table class="table table-bordered text-center align-middle modern-table" style="background: rgba(255,255,255,0.88); border-radius: 14px; overflow: hidden; box-shadow: 0 12px 26px rgba(79, 70, 229, 0.14);">
+                      <table class="table table-bordered text-center align-middle modern-table">
                         <thead class="table-light">
                           <tr>
-                            <th><i class="fa-solid fa-users me-1" style="color:#4F46E5;"></i>সন্তান সংখ্যা</th>
+                            <th>সন্তান সংখ্যা</th>
                             ${methodHeaders
-                              .map((method) => renderHeaderCell(method))
+                              .map((method) => `<th>${method.label}</th>`)
                               .join("")}
                           </tr>
                         </thead>
@@ -5118,20 +4479,19 @@ const coursesData = [
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="70" style="background: linear-gradient(135deg, #ECFEFF 0%, #F0FDFA 100%); border-radius: 24px; box-shadow: -10px 16px 30px rgba(20, 184, 166, 0.15); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; left:-16px; bottom:-18px; width:84px; height:84px; background: rgba(20,184,166,0.12); border-radius: 50%;"></span>
-                    <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-notes-medical me-2" style="color:#0D9488;"></i>${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="70">
+                    <h3 class="gradient-text mb-3">${yhLang(
                       "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল",
                       "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল"
                     )}</h3>
-                    <p class="text-muted" style="position:relative; color:#334155 !important;">প্রতিটি পদ্ধতির প্রয়োগপদ্ধতি ও স্থায়িত্বকাল জানলে তরুণ-তরুণী ও নবদম্পতিরা তথ্যভিত্তিক সিদ্ধান্ত নিতে পারে।</p>
+                    <p class="text-muted">প্রতিটি পদ্ধতির প্রয়োগপদ্ধতি ও স্থায়িত্বকাল জানলে কিশোর-কিশোরী ও নবদম্পতিরা তথ্যভিত্তিক সিদ্ধান্ত নিতে পারে।</p>
                     <div class="table-responsive mt-3">
-                      <table class="table table-bordered text-center align-middle modern-table" style="background: rgba(255,255,255,0.88); border-radius: 14px; overflow: hidden; box-shadow: 0 12px 26px rgba(13, 148, 136, 0.15);">
+                      <table class="table table-bordered text-center align-middle modern-table">
                         <thead class="table-light">
                           <tr>
-                            <th><i class="fa-solid fa-list-check me-1" style="color:#0D9488;"></i>পদ্ধতিসমূহ</th>
-                            <th><i class="fa-solid fa-hand-holding-medical me-1" style="color:#0284C7;"></i>ব্যবহার ও প্রয়োগ</th>
-                            <th><i class="fa-solid fa-business-time me-1" style="color:#0F766E;"></i>মেয়াদকাল</th>
+                            <th>পদ্ধতিসমূহ</th>
+                            <th>ব্যবহার ও প্রয়োগ</th>
+                            <th>মেয়াদকাল</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -5239,14 +4599,13 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-baby me-2" style="color:#E11D48;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "কৈশোরকালীন মাতৃত্ব",
                     "কৈশোরকালীন মাতৃত্ব"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%); border-radius: 24px; box-shadow: 10px 16px 32px rgba(225, 29, 72, 0.14); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; top:-22px; right:-18px; width:88px; height:88px; background: rgba(225,29,72,0.12); border-radius: 24px;"></span>
-                    <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-heart-pulse me-2" style="color:#E11D48;"></i>${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
                       "কৈশোরকালীন মাতৃত্ব",
                       "কৈশোরকালীন মাতৃত্ব"
                     )}</h3>
@@ -5255,15 +4614,14 @@ const coursesData = [
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" style="background: linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%); border-radius: 24px; box-shadow: -10px 16px 30px rgba(217, 119, 6, 0.14); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; left:-16px; bottom:-18px; width:92px; height:92px; background: rgba(217,119,6,0.10); border-radius: 50%;"></span>
+                  <section class="modern-card glass-card menstrual-info-card" >
                     <div class="row g-4 align-items-center">
                       <div class="col-lg-12">
-                        <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-triangle-exclamation me-2" style="color:#D97706;"></i>${yhLang(
+                        <h3 class="gradient-text mb-3">${yhLang(
                           "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
                           "কিশোরীদের মাতৃত্বজনিত ঝুঁকি"
                         )}</h3>
-                        <p class="text-muted" data-aos="fade-up" data-aos-delay="80" style="color:#334155 !important; position:relative;">${riskDescription}</p>
+                        <p class="text-muted" data-aos="fade-up" data-aos-delay="80">${riskDescription}</p>
                       </div>
                       <div class="col-lg-12">
                         <div class="orbit-layout" data-orbit-radius="220">
@@ -5357,32 +4715,30 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-shield-heart me-2" style="color:#7C3AED;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
                     "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%); border-radius: 24px; box-shadow: 10px 16px 32px rgba(124, 58, 237, 0.14); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; top:-20px; right:-18px; width:88px; height:88px; background: rgba(124,58,237,0.12); border-radius: 24px;"></span>
-                    <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-list-check me-2" style="color:#7C3AED;"></i>${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
                       "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
                       "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
                     )}</h3>
-                    <p class="mb-0" style="color:#1F2937; position:relative;">${introText}</p>
+                    <p class="mb-0">${introText}</p>
                   </section>
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" style="background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%); border-radius: 24px; box-shadow: -10px 16px 30px rgba(124, 58, 237, 0.14); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; left:-16px; bottom:-18px; width:92px; height:92px; background: rgba(124,58,237,0.10); border-radius: 50%;"></span>
+                  <section class="modern-card glass-card menstrual-info-card">
                     <div class="orbit-layout" data-orbit-radius="190">
                       <div class="orbit-ring-1" aria-hidden="true"></div>
                       <div class="orbit-ring-2" aria-hidden="true"></div>
                       <div class="orbit-center icon-spin-on-hover">
-                        <div class="orbit-card bg-gradient-purple">
+                        <div class="orbit-card bg-gradient-teal">
                           <div class="orbit-title fw-bold">${yhLang(
-                            "প্রতিরোধমূলক কার্যক্রম",
-                            "প্রতিরোধমূলক কার্যক্রম"
+                            "কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল",
+                            "কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল"
                           )}</div>
                         </div>
                       </div>
@@ -5421,15 +4777,13 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-triangle-exclamation me-2" style="color:#EA580C;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "গর্ভকালীন বিপদচিহ্নসমূহ",
                     "গর্ভকালীন বিপদচিহ্নসমূহ"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%); border-radius: 24px; box-shadow: 0 18px 34px rgba(234, 88, 12, 0.15); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; left:-20px; top:-20px; width:94px; height:94px; background: rgba(234,88,12,0.12); border-radius: 26px;"></span>
-                    <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-hospital-user me-2" style="color:#EA580C;"></i>${yhLang("বিপদচিহ্নসমূহ", "বিপদচিহ্নসমূহ")}</h3>
-                    <figure class="image-card mb-0" style="min-height:260px; position:relative;">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0" style="min-height:260px;">
                       <img src="img/modu8/gorvo.png" alt="গর্ভকালীন বিপদচিহ্ন" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
                   </section>
@@ -5493,52 +4847,34 @@ const coursesData = [
                 },
               ];
 
-              const bulletMeta = [
-                { icon: "fa-user-check", bg: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", iconBg: "linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)", shadow: "rgba(59, 130, 246, 0.14)" },
-                { icon: "fa-stethoscope", bg: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", iconBg: "linear-gradient(135deg, #10B981 0%, #047857 100%)", shadow: "rgba(16, 185, 129, 0.14)" },
-                { icon: "fa-syringe", bg: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)", iconBg: "linear-gradient(135deg, #EA580C 0%, #C2410C 100%)", shadow: "rgba(234, 88, 12, 0.14)" },
-                { icon: "fa-hospital", bg: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)", iconBg: "linear-gradient(135deg, #EC4899 0%, #DB2777 100%)", shadow: "rgba(236, 72, 153, 0.14)" },
-                { icon: "fa-calendar-check", bg: "linear-gradient(135deg, #E0E7FF 0%, #EEF2FF 100%)", iconBg: "linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)", shadow: "rgba(99, 102, 241, 0.14)" },
-                { icon: "fa-car", bg: "linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)", iconBg: "linear-gradient(135deg, #14B8A6 0%, #0D9488 100%)", shadow: "rgba(20, 184, 166, 0.14)" },
-                { icon: "fa-coins", bg: "linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%)", iconBg: "linear-gradient(135deg, #F59E0B 0%, #D97706 100%)", shadow: "rgba(245, 158, 11, 0.14)" },
-                { icon: "fa-droplet", bg: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)", iconBg: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)", shadow: "rgba(220, 38, 38, 0.14)" },
-              ];
-
               const renderBullets = (items, baseDelay = 80) =>
                 items
                   .map(
-                    (text, idx) => {
-                      const meta = bulletMeta[idx % bulletMeta.length];
-                      return `
-                        <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}" style="list-style: none; background: ${meta.bg}; padding: 1.1rem 1.25rem; border-radius: 14px; box-shadow: 0 6px 16px ${meta.shadow}; border-left: 4px solid; border-image: ${meta.iconBg} 1; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.85rem;">
-                          <div style="background: ${meta.iconBg}; width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                            <i class="fa-solid ${meta.icon}" style="color: white; font-size: 0.95rem;"></i>
-                          </div>
-                          <span style="color: #1F2937; line-height: 1.7; font-size: 0.95rem;">${text}</span>
-                        </li>
-                      `;
-                    }
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
                   )
                   .join("");
-
-              const cardGradients = [
-                { bg: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", shadow: "rgba(16, 185, 129, 0.14)", icon: "fa-magnifying-glass-plus", iconColor: "#059669" },
-                { bg: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", shadow: "rgba(59, 130, 246, 0.14)", icon: "fa-heartbeat", iconColor: "#2563EB" },
-                { bg: "linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)", shadow: "rgba(124, 58, 237, 0.14)", icon: "fa-calendar-alt", iconColor: "#7C3AED" },
-              ];
 
               const renderCareCards = () =>
                 careSteps
                   .map((step, idx) => {
                     const hasBullets = step.bullets && step.bullets.length;
-                    const grad = cardGradients[idx % cardGradients.length];
                     return `
-                      <article class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="${80 + idx * 40}" style="background: ${grad.bg}; border-radius: 20px; box-shadow: ${idx % 2 === 0 ? '' : '-'}8px 14px 28px ${grad.shadow}; position: relative; overflow: hidden; margin-bottom: 1.5rem;">
-                        <span aria-hidden="true" style="position:absolute; ${idx % 2 === 0 ? 'right' : 'left'}:-16px; top:-16px; width:82px; height:82px; background: rgba(${idx === 0 ? '16,185,129' : idx === 1 ? '59,130,246' : '124,58,237'},0.10); border-radius: 50%;"></span>
-                        <h4 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid ${grad.icon} me-2" style="color:${grad.iconColor};"></i>${step.heading}</h4>
-                        ${step.details ? `<p class="mb-3" style="position:relative; color:#1F2937;">${step.details}</p>` : ""}
-                        ${step.bulletIntro ? `<p class="mb-2" style="position:relative; color:#1F2937;">${step.bulletIntro}</p>` : ""}
-                        ${hasBullets ? `<ul class="list-unstyled puberty-list mb-0" style="position:relative;">${renderBullets(step.bullets, 60)}</ul>` : ""}
+                      <article class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="${80 +
+                      idx * 40}">
+                        <h4 class="gradient-text mb-3">${step.heading}</h4>
+                        ${step.details ? `<p class="mb-3">${step.details}</p>` : ""}
+                        ${step.bulletIntro ? `<p class="mb-2">${step.bulletIntro}</p>` : ""}
+                        ${hasBullets
+                          ? `<ul class="list-unstyled puberty-list mb-0">${renderBullets(
+                              step.bullets,
+                              60
+                            )}</ul>`
+                          : ""}
                       </article>
                     `;
                   })
@@ -5546,15 +4882,13 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-user-nurse me-2" style="color:#10B981;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা",
                     "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #ECFDF5 0%, #F0FDFA 100%); border-radius: 24px; box-shadow: 10px 16px 32px rgba(16, 185, 129, 0.14); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; top:-20px; right:-18px; width:88px; height:88px; background: rgba(16,185,129,0.12); border-radius: 24px;"></span>
-                    <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-clipboard-check me-2" style="color:#10B981;"></i>${yhLang("ব্যবস্থাপনার পরিচিতি", "ব্যবস্থাপনার পরিচিতি")}</h3>
-                    <p class="mb-0" style="color:#1F2937; position:relative;">${introText}</p>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${introText}</p>
                   </section>
 
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
@@ -5601,46 +4935,33 @@ const coursesData = [
                 "কিশোরী মায়েদের এসব পরবর্তী সময়ে বিষণ্নতায় আক্রান্ত হওয়ার হার অনেক বেশি থাকে, যা সময়মতো শনাক্তকরণ ও চিকিৎসার আওতায় নিয়ে আসা প্রয়োজন; অনথায় তা মা ও শিশু দুজনের জন্যই মৃত্যু ঝুঁকি বাড়াতে পারে।",
               ];
 
-              const pointMeta = [
-                { icon: "fa-user-doctor", bg: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", iconBg: "linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)", shadow: "rgba(59, 130, 246, 0.14)" },
-                { icon: "fa-triangle-exclamation", bg: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)", iconBg: "linear-gradient(135deg, #EA580C 0%, #C2410C 100%)", shadow: "rgba(234, 88, 12, 0.14)" },
-                { icon: "fa-book-medical", bg: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", iconBg: "linear-gradient(135deg, #10B981 0%, #047857 100%)", shadow: "rgba(16, 185, 129, 0.14)" },
-                { icon: "fa-brain", bg: "linear-gradient(135deg, #E0E7FF 0%, #EEF2FF 100%)", iconBg: "linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)", shadow: "rgba(99, 102, 241, 0.14)" },
-              ];
-
               const renderPoints = () =>
                 postpartumPoints
                   .map(
-                    (text, idx) => {
-                      const meta = pointMeta[idx % pointMeta.length];
-                      return `
-                        <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}" style="list-style: none; background: ${meta.bg}; padding: 1.15rem 1.3rem; border-radius: 14px; box-shadow: 0 6px 16px ${meta.shadow}; border-left: 4px solid; border-image: ${meta.iconBg} 1; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.9rem;">
-                          <div style="background: ${meta.iconBg}; width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-                            <i class="fa-solid ${meta.icon}" style="color: white; font-size: 0.96rem;"></i>
-                          </div>
-                          <span style="color: #1F2937; line-height: 1.7; font-size: 0.95rem;">${text}</span>
-                        </li>
-                      `;
-                    }
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-heart-circle-check me-2" style="color:#14B8A6;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "প্রসব পরবর্তী যত্ন",
                     "প্রসব পরবর্তী যত্ন"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%); border-radius: 24px; box-shadow: -10px 16px 30px rgba(20, 184, 166, 0.14); position: relative; overflow: hidden;">
-                    <span aria-hidden="true" style="position:absolute; left:-18px; bottom:-18px; width:90px; height:90px; background: rgba(20,184,166,0.11); border-radius: 50%;"></span>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4 align-items-center">
                       <div class="col-lg-12">
-                        <h3 class="gradient-text mb-3" style="position:relative;"><i class="fa-solid fa-list-check me-2" style="color:#14B8A6;"></i>${yhLang(
+                        <h3 class="gradient-text mb-3">${yhLang(
                           "প্রসব পরবর্তী যত্ন",
                           "প্রসব পরবর্তী যত্ন"
                         )}</h3>
-                        <ul class="list-unstyled puberty-list mb-0" style="position:relative;">
+                        <ul class="list-unstyled puberty-list mb-0">
                           ${renderPoints()}
                         </ul>
                       </div>
@@ -5695,24 +5016,83 @@ const coursesData = [
             },
             content: (function () {
               const introText =
-                "যৌন সম্পর্কের মাধ্যমে একজন থেকে অন্যজনের মধ্যে যেসব সংক্রমণ ছড়ায় সেগুলোই 'যৌনবাহিত সংক্রমণ'। অন্যদিকে, প্রজনন অঙ্গসমূহের সংক্রমণকে 'প্রজননতন্ত্রের সংক্রমণ' বলে। যৌন সম্পর্ক (যৌনবাহিত সংক্রমণ) ছাড়াও সংক্রমিত রক্ত/রক্তজাত দ্রব্য গ্রহণ, সংক্রমিত সূঁচ/যন্ত্রপাতি ও আক্রান্ত মায়ের বুকের দুধের মাধ্যমে প্রজননতন্ত্রের সংক্রমণ হতে পারে। সকল যৌনবাহিত সংক্রমণই প্রজননতন্ত্রের সংক্রমণের আওতায় পড়ে।";
+                "যৌন সম্পর্কের মাধ্যমে একজন থেকে অন্যজনের মধ্যে যেসব সংক্রমণ ছড়ায় সেগুলোই ‘যৌনবাহিত সংক্রমণ’। অন্যদিকে, প্রজনন অঙ্গসমূহের সংক্রমণকে ‘প্রজননতন্ত্রের সংক্রমণ’ বলে। যৌন সম্পর্ক (যৌনবাহিত সংক্রমণ) ছাড়াও সংক্রমিত রক্ত/রক্তজাত দ্রব্য গ্রহণ, সংক্রমিত সূঁচ/যন্ত্রপাতি ও আক্রান্ত মায়ের বুকের দুধের মাধ্যমে প্রজননতন্ত্রের সংক্রমণ হতে পারে। সকল যৌনবাহিত সংক্রমণই প্রজননতন্ত্রের সংক্রমণের আওতায় পড়ে।";
 
-              const causes = ["ব্যক্তিগত অপরিচ্ছন্নতা","প্রজননতন্ত্রের জীবাণুগুলোর অতিবৃদ্ধি","অনিরাপদ যৌনমিলন","জীবাণুযুক্ত পরিবেশ","সংক্রমিত রক্ত গ্রহণ","সংক্রমিত মায়ের গর্ভধারণ"];
-              const symptoms = ["যৌনাঙ্গে চুলকানি হওয়া","যৌনাঙ্গ থেকে দুর্গন্ধযুক্ত বা দুর্গন্ধবিহীন স্রাব যাওয়া","যৌনাঙ্গ থেকে পুঁজ বা পুঁজের মতো যাওয়া ও বারবার প্রস্রাব হওয়া","যৌনাঙ্গে ক্ষত হওয়া","যৌনমিলনে ব্যথা হওয়া","শরীরে চুলকানি বা ঘামাচির মতো দানা হওয়া","শরীরে লসিকা গ্রন্থি (কুঁচকি বা অন্যান্য স্থানে গুটি হওয়া)"];
-              
-              const causesIcons = ["fa-hand-sparkles","fa-microbe","fa-exclamation-circle","fa-biohazard","fa-droplet-slash","fa-mother-and-child"];
-              const causesGradients = ["linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)","linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)","linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)","linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)","linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)","linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)"];
-              const causesShadows = ["rgba(59, 130, 246, 0.14)","rgba(234, 88, 12, 0.14)","rgba(16, 185, 129, 0.14)","rgba(124, 58, 237, 0.14)","rgba(236, 72, 153, 0.14)","rgba(20, 184, 166, 0.14)"];
-              const causesIconBgs = ["linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)","linear-gradient(135deg, #EA580C 0%, #F97316 100%)","linear-gradient(135deg, #10B981 0%, #34D399 100%)","linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)","linear-gradient(135deg, #EC4899 0%, #F472B6 100%)","linear-gradient(135deg, #14B8A6 0%, #2DD4BF 100%)"];
-              
-              const symptomsIcons = ["fa-itching","fa-water","fa-syringe-check","fa-bandage","fa-pain","fa-bug","fa-sweat-droplets"];
-              const symptomsGradients = ["linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)","linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)","linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)","linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)","linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)","linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%)","linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)"];
-              const symptomsShadows = ["rgba(234, 88, 12, 0.14)","rgba(16, 185, 129, 0.14)","rgba(124, 58, 237, 0.14)","rgba(236, 72, 153, 0.14)","rgba(20, 184, 166, 0.14)","rgba(217, 119, 6, 0.14)","rgba(220, 38, 38, 0.14)"];
-              const symptomsIconBgs = ["linear-gradient(135deg, #EA580C 0%, #F97316 100%)","linear-gradient(135deg, #10B981 0%, #34D399 100%)","linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)","linear-gradient(135deg, #EC4899 0%, #F472B6 100%)","linear-gradient(135deg, #14B8A6 0%, #2DD4BF 100%)","linear-gradient(135deg, #D97706 0%, #FBBF24 100%)","linear-gradient(135deg, #DC2626 0%, #EF4444 100%)"];
-              
-              const closingNote = "অধিকাংশ ক্ষেত্রেই যৌনরোগের লক্ষণ বোঝা যায় না। বিশেষ করে ছেলেদের তুলনায় মেয়েদের এই লক্ষণগুলো অপ্রকাশিত থাকে। তাই চিকিৎসা নিতে তারা অনেক দেরি করে ফেলে, যা থেকে জটিলতাও হতে পারে।";
+              const causes = [
+                "ব্যক্তিগত অপরিচ্ছন্নতা",
+                "প্রজননতন্ত্রের জীবাণুগুলোর অতিবৃদ্ধি",
+                "অনিরাপদ যৌনমিলন",
+                "জীবাণুযুক্ত পরিবেশ",
+                "সংক্রমিত রক্ত গ্রহণ",
+                "সংক্রমিত মায়ের গর্ভধারণ",
+              ];
 
-              return `<div class="lesson-slide"><h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-virus" style="color:#E11D48; margin-right:0.5rem;"></i>${yhLang("যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ","যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ")}</h2><div style="position: relative; overflow: hidden;"><div style="position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: rgba(220, 38, 38, 0.12); z-index: 0;"></div><div style="position: absolute; bottom: -60px; left: -60px; width: 250px; height: 250px; border-radius: 20px; background: rgba(220, 38, 38, 0.08); transform: rotate(45deg); z-index: 0;"></div><section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%); box-shadow: 0 18px 34px rgba(220, 38, 38, 0.14); position: relative; z-index: 1;"><p class="mb-0">${introText}</p></section><section class="modern-card glass-card menstrual-info-card mt-4" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #FFECEB 0%, #FEF7F7 100%); box-shadow: 0 18px 34px rgba(220, 38, 38, 0.14); position: relative; z-index: 1;"><div class="row g-4 align-items-start"><div class="col-lg-6"><h3 class="d-flex align-items-center mb-3" style="font-size: 1.3rem; font-weight: 600; color: #1F2937;"><i class="fa-solid fa-exclamation-triangle" style="color:#DC2626; margin-right:0.5rem;"></i>${yhLang("কারণ","কারণ")}</h3><ul class="list-unstyled mb-0">${causes.map((text,idx)=>`<li data-aos="fade-left" data-aos-delay="${60+idx*15}" style="list-style: none; background: ${causesGradients[idx]}; padding: 1.1rem 1.25rem; border-radius: 14px; box-shadow: 0 6px 16px ${causesShadows[idx]}; border-left: 4px solid #DC2626; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.85rem;"><div style="width:38px; height:38px; border-radius:10px; background: ${causesIconBgs[idx]}; display:flex; align-items:center; justify-content:center; flex-shrink: 0;"><i class="fa-solid ${causesIcons[idx]}" style="color:white; font-size:0.95rem;"></i></div><span style="color:#1F2937; line-height:1.7; font-size:0.95rem;">${text}</span></li>`).join("")}</ul></div><div class="col-lg-6"><h3 class="d-flex align-items-center mb-3" style="font-size: 1.3rem; font-weight: 600; color: #1F2937;"><i class="fa-solid fa-triangle-exclamation" style="color:#F59E0B; margin-right:0.5rem;"></i>${yhLang("লক্ষণ","লক্ষণ")}</h3><ul class="list-unstyled mb-0">${symptoms.map((text,idx)=>`<li data-aos="fade-left" data-aos-delay="${75+idx*15}" style="list-style: none; background: ${symptomsGradients[idx]}; padding: 1.1rem 1.25rem; border-radius: 14px; box-shadow: 0 6px 16px ${symptomsShadows[idx]}; border-left: 4px solid #F59E0B; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.85rem;"><div style="width:38px; height:38px; border-radius:10px; background: ${symptomsIconBgs[idx]}; display:flex; align-items:center; justify-content:center; flex-shrink: 0;"><i class="fa-solid ${symptomsIcons[idx]}" style="color:white; font-size:0.95rem;"></i></div><span style="color:#1F2937; line-height:1.7; font-size:0.95rem;">${text}</span></li>`).join("")}</ul></div></div></section><section class="modern-card glass-card menstrual-info-card mt-4" data-aos="fade-up" data-aos-delay="120" style="background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%); box-shadow: 0 18px 34px rgba(220, 38, 38, 0.14); position: relative; z-index: 1;"><p class="mb-0" style="color: #374151; font-style: italic;">${closingNote}</p></section></div></div>`;
+              const symptoms = [
+                "যৌনাঙ্গে চুলকানি হওয়া",
+                "যৌনাঙ্গ থেকে দুর্গন্ধযুক্ত বা দুর্গন্ধবিহীন স্রাব যাওয়া",
+                "যৌনাঙ্গ থেকে পুঁজ বা পুঁজের মতো যাওয়া ও বারবার প্রস্রাব হওয়া",
+                "যৌনাঙ্গে ক্ষত হওয়া",
+                "যৌনমিলনে ব্যথা হওয়া",
+                "শরীরে চুলকানি বা ঘামাচির মতো দানা হওয়া",
+                "শরীরে লসিকা গ্রন্থি (কুঁচকি বা অন্যান্য স্থানে গুটি হওয়া)",
+              ];
+
+              const renderList = (items, baseDelay = 80) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const closingNote =
+                "অধিকাংশ ক্ষেত্রেই যৌনরোগের লক্ষণ বোঝা যায় না। বিশেষ করে ছেলেদের তুলনায় মেয়েদের এই লক্ষণগুলো অপ্রকাশিত থাকে। তাই চিকিৎসা নিতে তারা অনেক দেরি করে ফেলে, যা থেকে জটিলতাও হতে পারে।";
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
+                    "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ"
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-0">${introText}</p>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-6">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ",
+                          "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ"
+                        )}</h3>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(causes)}
+                        </ul>
+                      </div>
+                      <div class="col-lg-6">
+                        <h3 class="gradient-text mb-3">${yhLang(
+                          "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ",
+                          "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ"
+                        )}</h3>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(symptoms, 60)}
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <p class="mb-0 text-muted">${closingNote}</p>
+                  </section>
+                </div>
+              `;
             })(),
           },
           {
@@ -5743,21 +5123,16 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-triangle-exclamation" style="color:#9333EA; margin-right:0.5rem;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "যৌনবাহিত রোগের ঝুঁকিসমূহ",
                     "যৌনবাহিত রোগের ঝুঁকিসমূহ"
                   )}</h2>
 
-                  <div style="position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: rgba(168, 85, 247, 0.12); z-index: 0;"></div>
-                    <div style="position: absolute; bottom: -60px; left: -60px; width: 250px; height: 250px; border-radius: 20px; background: rgba(168, 85, 247, 0.08); transform: rotate(45deg); z-index: 0;"></div>
-                    
-                    <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #E9D5FF 0%, #F5F3FF 100%); box-shadow: -10px 16px 30px rgba(168, 85, 247, 0.14); position: relative; z-index: 1;">
-                      <figure class="image-card mb-0">
-                        <img src="img/modu9/jouno.png" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                      </figure>
-                    </section>
-                  </div>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0">
+                      <img src="img/modu9/jouno.png" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                    </figure>
+                  </section>
                 </div>
               `;
             })(),
@@ -5792,69 +5167,60 @@ const coursesData = [
             },
             content: (function () {
               const complications = [
-                "এইচআইভি সংক্রমণের সম্ভাবনা বেড়ে যায়",
-                "হিউম্যান প্যাপিলোমা ভাইরাসে (এইচপিভি) আক্রান্ত নারীদের জরায়ুর মুখে ক্যান্সার হবার সম্ভাবনা থাকে",
-                "সংক্রমিত নারী বা পুরুষের পরবর্তীতে স্থায়ী বন্ধ্যাত্ব হতে পারে",
+                "এইচআইভি সংক্রমণের সম্ভাবনা বেড়ে যায়",
+                "হিউম্যান প্যাপিলোমা ভাইরাসে (এইচপিভি) আক্রান্ত নারীদের জরায়ুর মুখে ক্যান্সার হবার সম্ভাবনা থাকে",
+                "সংক্রমিত নারী বা পুরুষের পরবর্তীতে স্থায়ী বন্ধ্যাত্ব হতে পারে",
                 "মস্তিষ্ক, যকৃত বা হৃৎপিণ্ডে জটিলতা দেখা দিতে পারে",
-                "সংক্রমিত পুরুষের মূত্রনালী সরু হয়ে যেতে পারে",
-                "আক্রান্ত মায়ের গর্ভপাত হতে পারে বা মৃত সন্তান প্রসব করতে পারে",
-                "আক্রান্ত মায়ের জরায়ুর পরিবর্তে ডিম্বনালীতে ভ্রূণ বড় হতে পারে",
-                "আক্রান্ত মায়ের শিশু জন্মগত ত্রুটি নিয়ে বা চোখে ইনফেকশন নিয়ে জন্ম নিতে পারে, যা থেকে পরবর্তীতে অন্ধত্বও হতে পারে",
+                "সংক্রমিত পুরুষের মূত্রনালী সরু হয়ে যেতে পারে",
+                "আক্রান্ত মায়ের গর্ভপাত হতে পারে বা মৃত সন্তান প্রসব করতে পারে",
+                "আক্রান্ত মায়ের জরায়ুর পরিবর্তে ডিম্বনালীতে ভ্রূণ বড় হতে পারে",
+                "আক্রান্ত মায়ের শিশু জন্মগত ত্রুটি নিয়ে বা চোখে ইনফেকশন নিয়ে জন্ম নিতে পারে, যা থেকে পরবর্তীতে অন্ধত্বও হতে পারে",
               ];
-
-              const complicationIcons = ["fa-virus","fa-dna","fa-ban","fa-brain","fa-heart","fa-uterus","fa-test-tube","fa-eye-slash"];
-              const complicationGradients = ["linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)","linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)","linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)","linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)","linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)","linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)","linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%)","linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)"];
-              const complicationShadows = ["rgba(59, 130, 246, 0.14)","rgba(234, 88, 12, 0.14)","rgba(16, 185, 129, 0.14)","rgba(124, 58, 237, 0.14)","rgba(236, 72, 153, 0.14)","rgba(20, 184, 166, 0.14)","rgba(217, 119, 6, 0.14)","rgba(220, 38, 38, 0.14)"];
-              const complicationIconBgs = ["linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)","linear-gradient(135deg, #EA580C 0%, #F97316 100%)","linear-gradient(135deg, #10B981 0%, #34D399 100%)","linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)","linear-gradient(135deg, #EC4899 0%, #F472B6 100%)","linear-gradient(135deg, #14B8A6 0%, #2DD4BF 100%)","linear-gradient(135deg, #D97706 0%, #FBBF24 100%)","linear-gradient(135deg, #DC2626 0%, #EF4444 100%)"];
 
               const management = [
-                "বর্তমানে যৌনবাহিত সংক্রমণে আক্রান্ত তরুণ-তরুণীরা প্রাপ্তবয়স্কদের মতো একই ব্যবস্থা পাচ্ছে।",
-                "আদর্শ হলো ঝুঁকি নির্ণয় কৌশল অবলম্বন করে বাছাইকরণ (ট্রায়াজ) পরীক্ষার মাধ্যমে প্রাসঙ্গিক ও পর্যাপ্ত চিকিৎসা প্রদান করা।",
-                "যৌন সংক্রমণের সিনড্রোমিক ব্যবস্থাপনার জন্য বাংলাদেশ সরকারের জাতীয় এইচআইভি এইডস কর্মসূচির (এএসপি) গাইডলাইন ব্যবহার করা যেতে পারে।",
+                "বর্তমানে যৌনবাহিত সংক্রমণে আক্রান্ত কিশোর-কিশোরীরা প্রাপ্তবয়স্কদের মতো একই ব্যবস্থা পাচ্ছে।",
+                "আদর্শ হলো ঝুঁকি নির্ণয় কৌশল অবলম্বন করে বাছাইকরণ (ট্রায়াজ) পরীক্ষার মাধ্যমে প্রাসঙ্গিক ও পর্যাপ্ত চিকিৎসা প্রদান করা।",
+                "যৌন সংক্রমণের সিনড্রোমিক ব্যবস্থাপনার জন্য বাংলাদেশ সরকারের জাতীয় এইচআইভি এইডস কর্মসূচির (এএসপি) গাইডলাইন ব্যবহার করা যেতে পারে।",
               ];
 
-              const managementIcons = ["fa-person-dots","fa-stethoscope","fa-book"];
-              const managementGradients = ["linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)","linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)","linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)"];
-              const managementShadows = ["rgba(59, 130, 246, 0.14)","rgba(234, 88, 12, 0.14)","rgba(16, 185, 129, 0.14)"];
-              const managementIconBgs = ["linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)","linear-gradient(135deg, #EA580C 0%, #F97316 100%)","linear-gradient(135deg, #10B981 0%, #34D399 100%)"];
+              const renderList = (items, baseDelay = 60) =>
+                items
+                  .map(
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-clipboard-list" style="color:#EA580C; margin-right:0.5rem;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
                     "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ"
                   )}</h2>
 
-                  <div style="position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: rgba(234, 88, 12, 0.12); z-index: 0;"></div>
-                    <div style="position: absolute; bottom: -60px; left: -60px; width: 250px; height: 250px; border-radius: 20px; background: rgba(234, 88, 12, 0.08); transform: rotate(45deg); z-index: 0;"></div>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
+                      "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(complications)}
+                    </ul>
+                  </section>
 
-                    <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%); box-shadow: 10px 16px 32px rgba(234, 88, 12, 0.14); position: relative; z-index: 1;">
-                      <h3 class="d-flex align-items-center mb-3" style="font-size: 1.4rem; font-weight: 600; color: #1F2937;">
-                        <i class="fa-solid fa-exclamation-triangle" style="color:#EA580C; margin-right:0.5rem;"></i>
-                        ${yhLang(
-                          "জটিলতাসমূহ",
-                          "জটিলতাসমূহ"
-                        )}
-                      </h3>
-                      <ul class="list-unstyled mb-0">
-                        ${complications.map((text,idx)=>`<li data-aos="fade-left" data-aos-delay="${40+idx*20}" style="list-style: none; background: ${complicationGradients[idx]}; padding: 1.1rem 1.25rem; border-radius: 14px; box-shadow: 0 6px 16px ${complicationShadows[idx]}; border-left: 4px solid #EA580C; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.85rem;"><div style="width:38px; height:38px; border-radius:10px; background: ${complicationIconBgs[idx]}; display:flex; align-items:center; justify-content:center; flex-shrink: 0;"><i class="fa-solid ${complicationIcons[idx]}" style="color:white; font-size:0.95rem;"></i></div><span style="color:#1F2937; line-height:1.7; font-size:0.95rem;">${text}</span></li>`).join("")}
-                      </ul>
-                    </section>
-
-                    <section class="modern-card glass-card menstrual-info-card mt-4" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #FFEDD5 0%, #FEF3C7 100%); box-shadow: 10px 16px 32px rgba(234, 88, 12, 0.14); position: relative; z-index: 1;">
-                      <h3 class="d-flex align-items-center mb-3" style="font-size: 1.4rem; font-weight: 600; color: #1F2937;">
-                        <i class="fa-solid fa-wrench" style="color:#0EA5E9; margin-right:0.5rem;"></i>
-                        ${yhLang(
-                          "ব্যবস্থাপনা",
-                          "ব্যবস্থাপনা"
-                        )}
-                      </h3>
-                      <ul class="list-unstyled mb-0">
-                        ${management.map((text,idx)=>`<li data-aos="fade-left" data-aos-delay="${80+idx*20}" style="list-style: none; background: ${managementGradients[idx]}; padding: 1.1rem 1.25rem; border-radius: 14px; box-shadow: 0 6px 16px ${managementShadows[idx]}; border-left: 4px solid #0EA5E9; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.85rem;"><div style="width:38px; height:38px; border-radius:10px; background: ${managementIconBgs[idx]}; display:flex; align-items:center; justify-content:center; flex-shrink: 0;"><i class="fa-solid ${managementIcons[idx]}" style="color:white; font-size:0.95rem;"></i></div><span style="color:#1F2937; line-height:1.7; font-size:0.95rem;">${text}</span></li>`).join("")}
-                      </ul>
-                    </section>
-                  </div>
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "কিশোর-কিশোরীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা",
+                      "কিশোর-কিশোরীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(management, 80)}
+                    </ul>
+                  </section>
                 </div>
               `;
             })(),
@@ -5907,31 +5273,21 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">
-                    <i class="fa-solid fa-virus" style="color:#DC2626; margin-right:0.5rem;"></i>
-                    ${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "এইচআইভি ও এইডস",
                     "এইচআইভি ও এইডস"
-                  )}
-                  </h2>
+                  )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%); box-shadow: 0 18px 34px rgba(220, 38, 38, 0.14); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -80px; right: -80px; width: 220px; height: 220px; background: rgba(220, 38, 38, 0.12); border-radius: 50%; z-index: 0;"></div>
-                    <div style="position: absolute; bottom: -60px; left: -60px; width: 180px; height: 180px; background: rgba(220, 38, 38, 0.12); transform: rotate(45deg); z-index: 0;"></div>
-                    <div style="position: relative; z-index: 1;">
-                      <h3 class="gradient-text mb-3">
-                        <i class="fa-solid fa-shield-virus" style="color:#DC2626; margin-right:0.5rem;"></i>
-                        ${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="gradient-text mb-3">${yhLang(
                       "এইচআইভি ও এইডস",
                       "এইচআইভি ও এইডস"
-                    )}
-                      </h3>
-                      <p class="mb-3">${introText}</p>
-                      <p class="mb-0">${latencyNote}</p>
-                    </div>
+                    )}</h3>
+                    <p class="mb-3">${introText}</p>
+                    <p class="mb-0">${latencyNote}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #FEF2F2 0%, #FFEDD5 100%); box-shadow: 0 18px 34px rgba(220, 38, 38, 0.14);">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <figure class="image-card mb-0" style="min-height:260px;">
                       <img src="img/modu10/hiv.png" alt="এইচআইভি ও এইডস" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
@@ -5994,88 +5350,43 @@ const coursesData = [
                 "মা থেকে শিশুর শরীরে এইচআইভি, হেপাটাইটিস বি এবং সিফিলিসের সংক্রমণ নির্মূল করার লক্ষ্যে (Elimination of Mother-to-Child Transmission - EMTCT) বাংলাদেশ এইচআইভি ও যৌনবাহিত রোগসমূহ প্রতিরোধ এবং যৌন ও প্রজনন স্বাস্থ্যসেবায় গুরুত্ব দিয়েছে। এইচআইভি প্রতিরোধ কৌশলের গুরুত্বপূর্ণ উপাদান হলো যৌনবাহিত সংক্রমণ প্রতিরোধ ও চিকিৎসা, কারণ যৌনবাহিত সংক্রমণ এইচআইভি সংক্রমণের ঝুঁকি বৃদ্ধি করে। চিকিৎসা না করালে যৌনবাহিত সংক্রমণের উপস্থিতি এইচআইভি সংক্রমণের ঝুঁকি বাড়াতে পারে।"
               );
 
-              const preventionIcons = [
-                "fa-book-quran",
-                "fa-ban",
-                "fa-heart-circle-check",
-                "fa-shield-halved",
-                "fa-droplet",
-                "fa-syringe",
-                "fa-stethoscope"
-              ];
-
-              const gradients = [
-                { bg: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", shadow: "rgba(59, 130, 246, 0.14)", border: "#3B82F6", iconBg: "linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)" },
-                { bg: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)", shadow: "rgba(234, 88, 12, 0.14)", border: "#EA580C", iconBg: "linear-gradient(135deg, #EA580C 0%, #F97316 100%)" },
-                { bg: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", shadow: "rgba(16, 185, 129, 0.14)", border: "#10B981", iconBg: "linear-gradient(135deg, #10B981 0%, #34D399 100%)" },
-                { bg: "linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)", shadow: "rgba(124, 58, 237, 0.14)", border: "#7C3AED", iconBg: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)" },
-                { bg: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)", shadow: "rgba(236, 72, 153, 0.14)", border: "#EC4899", iconBg: "linear-gradient(135deg, #EC4899 0%, #F472B6 100%)" },
-                { bg: "linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)", shadow: "rgba(20, 184, 166, 0.14)", border: "#14B8A6", iconBg: "linear-gradient(135deg, #14B8A6 0%, #2DD4BF 100%)" },
-                { bg: "linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%)", shadow: "rgba(217, 119, 6, 0.14)", border: "#D97706", iconBg: "linear-gradient(135deg, #D97706 0%, #FBBF24 100%)" }
-              ];
-
-              const renderPreventionList = () =>
-                preventionPoints
+              const renderList = (items, baseDelay = 60) =>
+                items
                   .map(
-                    (text, idx) => {
-                      const gradient = gradients[idx % gradients.length];
-                      const icon = preventionIcons[idx];
-                      return `
-                      <li data-aos="fade-left" data-aos-delay="${60 + idx * 20}" style="list-style: none; background: ${gradient.bg}; padding: 1.1rem 1.25rem; border-radius: 14px; box-shadow: 0 6px 16px ${gradient.shadow}; border-left: 4px solid ${gradient.border}; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.85rem;">
-                        <div style="width: 38px; height: 38px; border-radius: 10px; background: ${gradient.iconBg}; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px ${gradient.shadow};">
-                          <i class="fa-solid ${icon}" style="color: white; font-size: 0.95rem;"></i>
-                        </div>
-                        <span style="color: #1F2937; line-height: 1.7; font-size: 0.95rem;">${text}</span>
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
                       </li>
-                    `;
-                    }
+                    `
                   )
                   .join("");
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">
-                    <i class="fa-solid fa-hourglass-half" style="color:#7C3AED; margin-right:0.5rem;"></i>
-                    ${yhLang(
-                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)",
-                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)"
-                  )}
-                  </h2>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)",
+                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)"
+                  )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%); box-shadow: -10px 16px 30px rgba(124, 58, 237, 0.14); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -70px; right: -70px; width: 200px; height: 200px; background: rgba(124, 58, 237, 0.12); border-radius: 50%; z-index: 0;"></div>
-                    <div style="position: relative; z-index: 1;">
-                      <p class="mb-3">${windowDefinition}</p>
-                      <p class="mb-0">${silentSpread}</p>
-                    </div>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="mb-3">${windowDefinition}</p>
+                    <p class="mb-0">${silentSpread}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%); box-shadow: -10px 16px 30px rgba(16, 185, 129, 0.14); position: relative; overflow: hidden;">
-                    <div style="position: absolute; bottom: -90px; left: -90px; width: 250px; height: 250px; background: rgba(16, 185, 129, 0.12); border-radius: 50%; z-index: 0;"></div>
-                    <div style="position: absolute; top: -50px; right: -50px; width: 180px; height: 180px; background: rgba(16, 185, 129, 0.1); transform: rotate(45deg); z-index: 0;"></div>
-                    <div style="position: relative; z-index: 1;">
-                      <h3 class="gradient-text mb-3">
-                        <i class="fa-solid fa-shield-heart" style="color:#10B981; margin-right:0.5rem;"></i>
-                        ${yhLang(
-                      "তরুণ-তরুণীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়",
-                      "তরুণ-তরুণীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়"
-                    )}
-                      </h3>
-                      <ul class="list-unstyled mb-0" style="padding: 0;">
-                        ${renderPreventionList()}
-                      </ul>
-                    </div>
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="gradient-text mb-3">${yhLang(
+                      "কিশোর-কিশোরীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়",
+                      "কিশোর-কিশোরীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়"
+                    )}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(preventionPoints)}
+                    </ul>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="120" style="background: linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%); box-shadow: -10px 16px 30px rgba(234, 88, 12, 0.14); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -60px; left: -60px; width: 190px; height: 190px; background: rgba(234, 88, 12, 0.12); transform: rotate(45deg); z-index: 0;"></div>
-                    <div style="position: relative; z-index: 1;">
-                      <h3 class="gradient-text mb-3">
-                        <i class="fa-solid fa-notes-medical" style="color:#EA580C; margin-right:0.5rem;"></i>
-                        ${yhLang("চিকিৎসা", "চিকিৎসা")}
-                      </h3>
-                      <p class="mb-0">${treatmentInfo}</p>
-                    </div>
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="120">
+                    <h3 class="gradient-text mb-3">${yhLang("চিকিৎসা", "চিকিৎসা")}</h3>
+                    <p class="mb-0">${treatmentInfo}</p>
                   </section>
                 </div>
               `;
@@ -6135,34 +5446,30 @@ const coursesData = [
                 paragraphs
                   .map(
                     (text, idx) => `
-                      <p class="mb-3" data-aos="fade-right" data-aos-delay="${60 + idx * 20}" style="background: ${idx === 0 ? "linear-gradient(135deg, #FFEDD5 0%, #FFF7ED 100%)" : idx === 1 ? "linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%)" : "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)"}; border-left: 4px solid ${idx === 0 ? "#EA580C" : idx === 1 ? "#D97706" : "#DC2626"}; border-radius: 12px; padding: 0.85rem 1rem; box-shadow: ${idx === 0 ? "8px 10px 20px rgba(234, 88, 12, 0.12)" : idx === 1 ? "-8px 10px 20px rgba(217, 119, 6, 0.12)" : "0 10px 22px rgba(220, 38, 38, 0.12)"};">${text}</p>
+                      <p class="mb-3" data-aos="fade-right" data-aos-delay="${60 + idx * 20}">${text}</p>
                     `
                   )
                   .join("");
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-ribbon" style="color:#DC2626; margin-right:0.5rem;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "জরায়ুমুখ ক্যান্সার",
                     "জরায়ুমুখ ক্যান্সার"
                   )}</h2>
 
-                  <div style="position:relative; overflow:hidden;">
-                    <div style="position:absolute; top:-70px; right:-70px; width:210px; height:210px; border-radius:50%; background:rgba(220,38,38,0.12); z-index:0;"></div>
-                    <div style="position:absolute; bottom:-70px; left:-70px; width:220px; height:220px; border-radius:24px; transform:rotate(45deg); background:rgba(234,88,12,0.10); z-index:0;"></div>
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #FFE4E6 0%, #FFF7ED 100%); box-shadow: 10px 16px 30px rgba(220, 38, 38, 0.14); position:relative; z-index:1;">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4 align-items-center">
                       <div class="col-lg-7">
                         ${renderParagraphs()}
                       </div>
                       <div class="col-lg-5" data-aos="fade-left" data-aos-delay="80">
-                        <figure class="image-card mb-0" style="min-height:150px; max-width:80%; margin:0 auto; background: linear-gradient(135deg, #FECACA 0%, #FFEDD5 100%); border-radius: 18px; padding: 0.65rem; box-shadow: -10px 14px 26px rgba(234, 88, 12, 0.16);">
+                        <figure class="image-card mb-0" style="min-height:150px; max-width:80%; margin:0 auto;">
                           <img src="img/modu11/jorau.jpg" alt="জরায়ুমুখ ক্যান্সার" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
                   </section>
-                  </div>
                 </div>
               `;
             })(),
@@ -6217,90 +5524,67 @@ const coursesData = [
                 "এক ডোজ",
               ];
 
-              const advantagesIcons = ["fa-shield-heart", "fa-syringe", "fa-certificate", "fa-hand-holding-heart"];
-              const locationIcons = ["fa-hospital"];
-              const eligibilityIcons = ["fa-users"];
-              const doseIcons = ["fa-droplet"];
-
-              const listPalette = [
-                { bg: "linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%)", shadow: "rgba(59, 130, 246, 0.14)", border: "#2563EB", iconBg: "linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)" },
-                { bg: "linear-gradient(135deg, #FED7AA 0%, #FFEDD5 100%)", shadow: "rgba(234, 88, 12, 0.14)", border: "#EA580C", iconBg: "linear-gradient(135deg, #EA580C 0%, #F97316 100%)" },
-                { bg: "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)", shadow: "rgba(16, 185, 129, 0.14)", border: "#059669", iconBg: "linear-gradient(135deg, #10B981 0%, #34D399 100%)" },
-                { bg: "linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)", shadow: "rgba(124, 58, 237, 0.14)", border: "#7C3AED", iconBg: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)" },
-                { bg: "linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%)", shadow: "rgba(236, 72, 153, 0.14)", border: "#DB2777", iconBg: "linear-gradient(135deg, #EC4899 0%, #F472B6 100%)" },
-                { bg: "linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%)", shadow: "rgba(20, 184, 166, 0.14)", border: "#0D9488", iconBg: "linear-gradient(135deg, #14B8A6 0%, #2DD4BF 100%)" },
-                { bg: "linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%)", shadow: "rgba(217, 119, 6, 0.14)", border: "#D97706", iconBg: "linear-gradient(135deg, #D97706 0%, #FBBF24 100%)" },
-              ];
-
-              const renderList = (items, icons, baseDelay = 60, paletteOffset = 0) =>
+              const renderList = (items, baseDelay = 60) =>
                 items
                   .map(
-                    (text, idx) => {
-                      const style = listPalette[(paletteOffset + idx) % listPalette.length];
-                      return `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}" style="list-style: none; background: ${style.bg}; padding: 1.1rem 1.25rem; border-radius: 14px; box-shadow: ${idx % 2 === 0 ? "0 6px 16px" : "-6px 8px 16px"} ${style.shadow}; border-left: 4px solid ${style.border}; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.85rem;">
-                        <div style="width:38px; height:38px; border-radius:10px; background:${style.iconBg}; display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow: 0 4px 10px ${style.shadow};">
-                          <i class="fa-solid ${icons[idx] || "fa-circle-check"}" style="color:white; font-size:0.95rem;"></i>
-                        </div>
-                        <span style="color:#1F2937; line-height:1.7; font-size:0.95rem;">${text}</span>
+                    (text, idx) => `
+                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${text}</span>
                       </li>
-                    `;
-                    }
+                    `
                   )
                   .join("");
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-syringe" style="color:#7C3AED; margin-right:0.5rem;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "এইচপিভি টিকা",
                     "এইচপিভি টিকা"
                   )}</h2>
 
-                  <div style="position: relative; overflow: hidden;">
-                    <div style="position:absolute; top:-60px; right:-70px; width:210px; height:210px; border-radius:50%; background:rgba(124,58,237,0.12); z-index:0;"></div>
-                    <div style="position:absolute; bottom:-70px; left:-70px; width:240px; height:240px; border-radius:20px; transform:rotate(45deg); background:rgba(20,184,166,0.10); z-index:0;"></div>
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #F3E8FF 0%, #F5F3FF 100%); box-shadow: -10px 16px 30px rgba(124, 58, 237, 0.14); position:relative; z-index:1;">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4 align-items-center">
                       <div class="col-lg-7">
-                        <p class="mb-4" data-aos="fade-right" data-aos-delay="60" style="background: linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%); border-left: 4px solid #7C3AED; border-radius: 12px; padding: 0.9rem 1rem; box-shadow: -8px 10px 20px rgba(124, 58, 237, 0.12);">${intro}</p>
+                        <p class="mb-4" data-aos="fade-right" data-aos-delay="60">${intro}</p>
 
-                        <article class="mb-3" data-aos="fade-right" data-aos-delay="80" style="background: linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%); border-radius: 14px; padding: 0.9rem; box-shadow: 10px 14px 26px rgba(16, 185, 129, 0.14);">
-                          <h3 class="gradient-text h5 mb-3"><i class="fa-solid fa-circle-check" style="color:#059669; margin-right:0.5rem;"></i>${yhLang("টিকা গ্রহণের সুবিধা", "টিকা গ্রহণের সুবিধা")}</h3>
+                        <article class="mb-3" data-aos="fade-right" data-aos-delay="80">
+                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকা গ্রহণের সুবিধা", "টিকা গ্রহণের সুবিধা")}</h3>
                           <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(advantages, advantagesIcons, 80, 0)}
+                            ${renderList(advantages, 80)}
                           </ul>
                         </article>
 
-                        <article class="mb-3" data-aos="fade-right" data-aos-delay="120" style="background: linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%); border-radius: 14px; padding: 0.9rem; box-shadow: -10px 14px 24px rgba(59, 130, 246, 0.14);">
-                          <h3 class="gradient-text h5 mb-3"><i class="fa-solid fa-hospital" style="color:#2563EB; margin-right:0.5rem;"></i>${yhLang("টিকা গ্রহণের স্থান", "টিকা গ্রহণের স্থান")}</h3>
+                        <article class="mb-3" data-aos="fade-right" data-aos-delay="120">
+                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকা গ্রহণের স্থান", "টিকা গ্রহণের স্থান")}</h3>
                           <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(locations, locationIcons, 120, 4)}
+                            ${renderList(locations, 120)}
                           </ul>
                         </article>
 
-                        <article class="mb-3" data-aos="fade-right" data-aos-delay="140" style="background: linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%); border-radius: 14px; padding: 0.9rem; box-shadow: 0 14px 24px rgba(236, 72, 153, 0.14);">
-                          <h3 class="gradient-text h5 mb-3"><i class="fa-solid fa-users" style="color:#DB2777; margin-right:0.5rem;"></i>${yhLang("টিকাগুলো কারা গ্রহণ করতে পারবেন", "টিকাগুলো কারা গ্রহণ করতে পারবেন")}</h3>
+                        <article class="mb-3" data-aos="fade-right" data-aos-delay="140">
+                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকাগুলো কারা গ্রহণ করতে পারবেন", "টিকাগুলো কারা গ্রহণ করতে পারবেন")}</h3>
                           <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(eligibility, eligibilityIcons, 140, 5)}
+                            ${renderList(eligibility, 140)}
                           </ul>
                         </article>
 
-                        <article data-aos="fade-right" data-aos-delay="160" style="background: linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%); border-radius: 14px; padding: 0.9rem; box-shadow: 10px 14px 24px rgba(217, 119, 6, 0.14);">
-                          <h3 class="gradient-text h5 mb-3"><i class="fa-solid fa-vial" style="color:#D97706; margin-right:0.5rem;"></i>${yhLang("টিকার ডোজ সংখ্যা", "টিকার ডোজ সংখ্যা")}</h3>
+                        <article data-aos="fade-right" data-aos-delay="160">
+                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকার ডোজ সংখ্যা", "টিকার ডোজ সংখ্যা")}</h3>
                           <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(doses, doseIcons, 160, 6)}
+                            ${renderList(doses, 160)}
                           </ul>
                         </article>
                       </div>
                       <div class="col-lg-5">
                         <div class="row g-3">
                           <div class="col-12" data-aos="fade-left" data-aos-delay="80">
-                            <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto; background: linear-gradient(135deg, #DDD6FE 0%, #EDE9FE 100%); border-radius: 16px; padding: 0.55rem; box-shadow: -10px 12px 24px rgba(124, 58, 237, 0.16);">
+                            <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto;">
                               <img src="img/modu11/dose1.jpg" alt="${yhLang("HPV vaccine awareness", "এইচপিভি টিকা")}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" style="height: 200px; object-fit: cover;" />
                             </figure>
                           </div>
                           <div class="col-12" data-aos="fade-left" data-aos-delay="110">
-                            <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto; background: linear-gradient(135deg, #CCFBF1 0%, #F0FDFA 100%); border-radius: 16px; padding: 0.55rem; box-shadow: 10px 12px 24px rgba(13, 148, 136, 0.16);">
+                            <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto;">
                               <img src="img/modu11/dose2.jpg" alt="${yhLang("HPV vaccine dose", "এইচপিভি টিকা ডোজ")}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" style="height: 200px; object-fit: cover;" />
                             </figure>
                           </div>
@@ -6308,7 +5592,6 @@ const coursesData = [
                       </div>
                     </div>
                   </section>
-                  </div>
                 </div>
               `;
             })(),
@@ -6341,20 +5624,16 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-notes-medical" style="color:#0D9488; margin-right:0.5rem;"></i>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "মহিলাদের অন্যান্য  টিকা",
                     "মহিলাদের অন্যান্য  টিকা"
                   )}</h2>
 
-                  <div style="position:relative; overflow:hidden;">
-                    <div style="position:absolute; top:-65px; right:-65px; width:200px; height:200px; border-radius:50%; background:rgba(20,184,166,0.12); z-index:0;"></div>
-                    <div style="position:absolute; bottom:-75px; left:-75px; width:230px; height:230px; border-radius:24px; transform:rotate(45deg); background:rgba(59,130,246,0.10); z-index:0;"></div>
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #CCFBF1 0%, #ECFEFF 100%); box-shadow: 0 18px 30px rgba(13, 148, 136, 0.14); position:relative; z-index:1;">
-                    <figure class="image-card mb-0" style="margin:0 auto; background: linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%); border-radius: 18px; padding: 0.65rem; box-shadow: -10px 14px 24px rgba(59, 130, 246, 0.15);">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0" style="margin:0 auto;">
                       <img src="img/modu11/tika.jpg" alt="মহিলাদের অন্যান্য টিকা" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
                   </section>
-                  </div>
                 </div>
               `;
             })(),
@@ -6889,7 +6168,7 @@ const coursesData = [
                   id: "q12h",
                   question: yhLang(
                     "Why are sexual and reproductive health rights critical for adolescents?",
-                    "তরুণ-তরুণীদের জন্য যৌন ও প্রজনন স্বাস্থ্য অধিকার কেন গুরুত্বপূর্ণ?"
+                    "কিশোর-কিশোরীদের জন্য যৌন ও প্রজনন স্বাস্থ্য অধিকার কেন গুরুত্বপূর্ণ?"
                   ),
                   options: [
                     yhLang(
@@ -6906,7 +6185,7 @@ const coursesData = [
             },
             content: (function () {
               const intro =
-                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ তরুণ-তরুণী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে তরুণ-তরুণীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এ বয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্ত হওয়ার সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।";
+                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এ বয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্ত হওয়ার সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।";
 
               const whoDefinition =
                 "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডব্লিউএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।";
@@ -8098,7 +7377,7 @@ const coursesData = [
             id: "ch13-lesson-10",
             title: yhLang(
               "Violence Against Adolescents",
-              "তরুণ-তরুণীদের প্রতি সহিংসতা"
+              "কিশোর-কিশোরীদের প্রতি সহিংসতা"
             ),
             icon: "fa-children",
             gradientClass: "bg-gradient-crimson",
@@ -8110,7 +7389,7 @@ const coursesData = [
                   id: "q13j",
                   question: yhLang(
                     "Which action helps protect adolescents from violence?",
-                    "তরুণ-তরুণীদের সহিংসতা থেকে রক্ষা করতে কোন পদক্ষেপ সহায়ক?"
+                    "কিশোর-কিশোরীদের সহিংসতা থেকে রক্ষা করতে কোন পদক্ষেপ সহায়ক?"
                   ),
                   options: [
                     yhLang("নিরাপদ পরিবেশ ও পরামর্শ প্রদান", "নিরাপদ পরিবেশ ও পরামর্শ প্রদান"),
@@ -8124,7 +7403,7 @@ const coursesData = [
             },
             content: (function () {
               const intro =
-                "পারিবারিক, শিক্ষা প্রতিষ্ঠান, কর্মক্ষেত্র বা অনলাইন—প্রতিটি পরিসরেই তরুণ-তরুণীরা সহিংসতার ঝুঁকির মুখে থাকে। সচেতনতা, প্রতিরোধমূলক পদক্ষেপ ও সহায়তা ব্যবস্থাই নিরাপত্তার মূলভিত্তি।";
+                "পারিবারিক, শিক্ষা প্রতিষ্ঠান, কর্মক্ষেত্র বা অনলাইন—প্রতিটি পরিসরেই কিশোর-কিশোরীরা সহিংসতার ঝুঁকির মুখে থাকে। সচেতনতা, প্রতিরোধমূলক পদক্ষেপ ও সহায়তা ব্যবস্থাই নিরাপত্তার মূলভিত্তি।";
 
               const violenceTypes = [
                 {
@@ -8185,7 +7464,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Violence against adolescents",
-                    "তরুণ-তরুণীদের প্রতি সহিংসতা"
+                    "কিশোর-কিশোরীদের প্রতি সহিংসতা"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -8198,7 +7477,7 @@ const coursesData = [
                       </div>
                       <div class="col-lg-6" data-aos="fade-left" data-aos-delay="80">
                         <figure class="image-card mb-0">
-                          <img src="img/modu13/sohongsotas.png" alt="তরুণ-তরুণীদের প্রতি সহিংসতা" class="img-fluid rounded-4 shadow-sm img-zoom" />
+                          <img src="img/modu13/sohongsotas.png" alt="কিশোর-কিশোরীদের প্রতি সহিংসতা" class="img-fluid rounded-4 shadow-sm img-zoom" />
                         </figure>
                       </div>
                     </div>
@@ -8425,8 +7704,8 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "তরুণ-তরুণীদের প্রতি সহিংসতার বিভিন্ন রূপ",
-                      "তরুণ-তরুণীদের প্রতি সহিংসতার বিভিন্ন রূপ"
+                      "কিশোর-কিশোরীদের প্রতি সহিংসতার বিভিন্ন রূপ",
+                      "কিশোর-কিশোরীদের প্রতি সহিংসতার বিভিন্ন রূপ"
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderSimpleList(violenceForms)}
@@ -8519,7 +7798,7 @@ const coursesData = [
             },
             content: (function () {
               const introPrimary =
-                "কৈশোরকালীন সময়ে তরুণ-তরুণীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।";
+                "কৈশোরকালীন সময়ে কিশোর-কিশোরীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।";
 
               const introSecondary =
                 "মনোসামাজিক বিকাশকে প্রভাবিত করে জিনগত বৈশিষ্ট্য, মস্তিষ্কের বিকাশ, অভিজ্ঞতা এবং চারপাশের পরিবেশ। এর মাধ্যমে আত্মনির্ভরশীলতা ও প্রাপ্তবয়স্ক বৈশিষ্ট্য ধীরে ধীরে বিকশিত হয়।";
@@ -9380,45 +8659,19 @@ const coursesData = [
                 "নীরব থাকা বা চুপ করে থাকা",
               ];
 
-              const physicalIcons = ["fa-heart-pulse", "fa-compress", "fa-head-side-virus", "fa-eye", "fa-dumbbell", "fa-droplet", "fa-lungs", "fa-person-falling"];
-              const emotionalIcons = ["fa-face-angry", "fa-face-frown", "fa-cloud-rain", "fa-fire", "fa-shield-halved", "fa-circle-xmark", "fa-brain", "fa-triangle-exclamation", "fa-user-slash", "fa-hand-fist", "fa-face-flushed", "fa-clock"];
-              const cognitiveIcons = ["fa-comment-slash", "fa-user-ninja", "fa-arrows-rotate"];
-              const behavioralIcons = ["fa-comments", "fa-volume-high", "fa-bullhorn", "fa-door-open", "fa-hammer", "fa-people-arrows", "fa-person-walking-arrow-right", "fa-face-meh"];
-              const fallbackIcons = ["fa-circle-check"];
-
-              const listPalettes = [
-                { bg: "#eef9ff,#e0f4ff", border: "#4a9fe3", badge: "#68b0ec,#3f87cd" },
-                { bg: "#ecfff5,#dff7ec", border: "#2ea66f", badge: "#4ccf89,#2f9a63" },
-                { bg: "#fff6ec,#ffe8d6", border: "#e19246", badge: "#f0aa64,#d9873a" },
-                { bg: "#fff0f0,#ffe2e2", border: "#db6767", badge: "#ef8b8b,#cc5f5f" },
-                { bg: "#f4f1ff,#e8e2ff", border: "#8b71d8", badge: "#ab96ef,#7f63d0" },
-                { bg: "#fff2f8,#ffe3f2", border: "#d66aaa", badge: "#e78fc3,#c75b97" },
-              ];
-
-              const renderList = (items, iconSet = fallbackIcons, offset = 0) =>
+              const renderList = (items) =>
                 items
-                  .map((item, idx) => {
-                    const palette = listPalettes[(idx + offset) % listPalettes.length];
-                    const icons = Array.isArray(iconSet) && iconSet.length > 0 ? iconSet : fallbackIcons;
-                    return `
-                      <li style="list-style:none; border-radius:14px; padding:1.05rem 1.2rem; display:flex; gap:0.9rem; align-items:flex-start; margin-bottom:0.8rem; background:linear-gradient(135deg,${palette.bg}); border-left:5px solid ${palette.border}; box-shadow:${[
-                        "12px 12px 24px rgba(92,154,212,.14)",
-                        "-10px 12px 22px rgba(81,167,124,.15)",
-                        "12px -8px 22px rgba(218,154,98,.16)",
-                        "-12px 10px 22px rgba(208,110,110,.15)",
-                        "10px 12px 22px rgba(131,107,199,.16)",
-                        "-10px 10px 20px rgba(198,104,159,.15)",
-                      ][(idx + offset) % 6]};">
-                        <span style="width:38px; min-width:38px; height:38px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,${palette.badge}); color:#fff; box-shadow:0 8px 14px rgba(0,0,0,.14);">
-                          <i class="fa-solid ${icons[idx % icons.length]}"></i>
-                        </span>
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `;
-                  })
+                    `
+                  )
                   .join("");
 
-              const renderColumn = (title, items, iconSet, offset = 0, delay = 80) => `
+              const renderColumn = (title, items, delay = 80) => `
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="${delay}">
                   <article class="glass-card p-4 h-100 shadow-sm">
                     <div class="d-flex align-items-center gap-3 mb-3">
@@ -9434,7 +8687,7 @@ const coursesData = [
                       </div>
                     </div>
                     <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(items, iconSet, offset)}
+                      ${renderList(items)}
                     </ul>
                   </article>
                 </div>
@@ -9458,10 +8711,10 @@ const coursesData = [
                       "রাগের পূর্ব সংকেতসমূহ"
                     )}</h3>
                     <div class="row g-4 align-items-stretch">
-                      ${renderColumn("শারীরিক সংকেত", physicalSignals, physicalIcons, 0, 80)}
-                      ${renderColumn("আবেগীয় সংকেত", emotionalSignals, emotionalIcons, 1, 100)}
-                      ${renderColumn("চিন্তামূলক সংকেত", cognitiveSignals, cognitiveIcons, 2, 120)}
-                      ${renderColumn("আচরণমূলক সংকেত", behavioralSignals, behavioralIcons, 3, 140)}
+                      ${renderColumn("শারীরিক সংকেত", physicalSignals, 80)}
+                      ${renderColumn("আবেগীয় সংকেত", emotionalSignals, 100)}
+                      ${renderColumn("চিন্তামূলক সংকেত", cognitiveSignals, 120)}
+                      ${renderColumn("আচরণমূলক সংকেত", behavioralSignals, 140)}
                     </div>
                   </section>
                 </div>
@@ -10094,7 +9347,7 @@ const coursesData = [
             id: "ch15-lesson-2",
             title: yhLang(
               "Adolescent Mental Health",
-              "তরুণ-তরুণীদের জন্য মানসিক স্বাস্থ্য"
+              "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য"
             ),
             icon: "fa-children",
             gradientClass: "bg-gradient-rose",
@@ -10120,7 +9373,7 @@ const coursesData = [
             },
             content: (function () {
               const introPrimary =
-                "তরুণ-তরুণীদের জন্য মানসিক স্বাস্থ্য অত্যন্ত গুরুত্বপূর্ণ। মানসিক চাপ থেকে মুক্ত থাকতে না পারলে বড় হওয়ার পথে নানা ঝুঁকিপূর্ণ আচরণ ও জটিলতা তৈরি হয়।";
+                "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য অত্যন্ত গুরুত্বপূর্ণ। মানসিক চাপ থেকে মুক্ত থাকতে না পারলে বড় হওয়ার পথে নানা ঝুঁকিপূর্ণ আচরণ ও জটিলতা তৈরি হয়।";
 
               const introSecondary =
                 "বিশ্বস্বাস্থ্য সংস্থার (২০১৯) তথ্যমতে, বিশ্বে প্রতি ৫ জনের ১ জন (২২.১%) মানসিক রোগে ভোগেন এবং প্রতি ১০ জনের ১ জন (৯%) মধ্যম থেকে মারাত্মক মানসিক সমস্যায় আক্রান্ত।";
@@ -10136,7 +9389,7 @@ const coursesData = [
                 },
                 {
                   value: "16%",
-                  label: "১০–১৯ বছরের তরুণ-তরুণীদের মানসিক সমস্যা",
+                  label: "১০–১৯ বছরের কিশোর-কিশোরীদের মানসিক সমস্যা",
                 },
                 {
                   value: "50%",
@@ -10145,8 +9398,8 @@ const coursesData = [
               ];
 
               const adolescentImpacts = [
-                "কৈশোরকালীন বিষণ্নতা তরুণ-তরুণীদের অসুস্থতা ও পঙ্গুত্বের প্রধান কারণগুলোর একটি।",
-                "বিশ্বব্যাপী ১৫–১৯ বছর বয়সী তরুণ-তরুণীদের মৃত্যুর তৃতীয় কারণ আত্মহত্যা।",
+                "কৈশোরকালীন বিষণ্নতা কিশোর-কিশোরীদের অসুস্থতা ও পঙ্গুত্বের প্রধান কারণগুলোর একটি।",
+                "বিশ্বব্যাপী ১৫–১৯ বছর বয়সী কিশোর-কিশোরীদের মৃত্যুর তৃতীয় কারণ আত্মহত্যা।",
                 "কৈশোরের মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতি করে।",
                 "কৈশোরকালীন মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতিসাধন করে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত করে।",
               ];
@@ -10182,7 +9435,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Mental health for adolescents",
-                    "তরুণ-তরুণীদের জন্য মানসিক স্বাস্থ্য"
+                    "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -11232,7 +10485,7 @@ const coursesData = [
             id: "ch15-lesson-12",
             title: yhLang(
               "Digital Health & Device Addiction Prevention",
-              "তরুণ-তরুণীদের ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তি প্রতিরোধ"
+              "কিশোর-কিশোরীদের ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তি প্রতিরোধ"
             ),
             icon: "fa-mobile-screen",
             gradientClass: "bg-gradient-cyan",
@@ -11258,10 +10511,10 @@ const coursesData = [
             },
             content: (function () {
               const intro =
-                "তরুণ-তরুণীরা আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে 􀊍ার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্যাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়েউঠেছে। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ এবং সুবিধা প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিনড়বতার মতো সমস্যাগুলোর জন্ম দিতে পারে। এই প্রসঙ্গে, স্বাস্থ্য সেবা প্রদানকারীদের একটি গুরুত্বপূর্ণ ভূমিকা রয়েছে তরুণ-তরুণীদের সঠিক নির্দেশনা প্রদান এবং তাদের ডিজিটাল স্বাস্থ্য সুরক্ষা নিশ্চিত করার জন্য।";
+                "কিশোর-কিশোরীরা আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে 􀊍ার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্যাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়েউঠেছে। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ এবং সুবিধা প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিনড়বতার মতো সমস্যাগুলোর জন্ম দিতে পারে। এই প্রসঙ্গে, স্বাস্থ্য সেবা প্রদানকারীদের একটি গুরুত্বপূর্ণ ভূমিকা রয়েছে কিশোর-কিশোরীদের সঠিক নির্দেশনা প্রদান এবং তাদের ডিজিটাল স্বাস্থ্য সুরক্ষা নিশ্চিত করার জন্য।";
 
               const impactIntro =
-                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব তরুণ-তরুণীদের মধ্যে বিশেষভাবে গভীর হতে পারে:";
+                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব কিশোর-কিশোরীদের মধ্যে বিশেষভাবে গভীর হতে পারে:";
 
               const impacts = [
                 "১. মানসিক স্বাস্থ্য: অতিরিক্ত প্রযুক্তি ব্যবহারের ফলে বিষণড়বতা, উদ্বেগ, এবং নিদ্রাহীনতা তৈরি হতে পারে।",
@@ -11294,7 +10547,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Digital wellbeing guidance",
-                    "তরুণ-তরুণীদের ডিজিটাল স্বাস্থ্য"
+                    "কিশোর-কিশোরীদের ডিজিটাল স্বাস্থ্য"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -11348,7 +10601,7 @@ const coursesData = [
                   id: "q16a",
                   question: yhLang(
                     "What helps adolescents return to normal routines after crises?",
-                    "কিসের মাধ্যমে তরুণ-তরুণীরা বিপর্যয়ের পর স্বাভাবিক জীবনে ফিরতে পারে?"
+                    "কিসের মাধ্যমে কিশোর-কিশোরীরা বিপর্যয়ের পর স্বাভাবিক জীবনে ফিরতে পারে?"
                   ),
                   options: [
                     yhLang("মনোসামাজিক শিক্ষা", "মনোসামাজিক শিক্ষা"),
@@ -11378,7 +10631,7 @@ const coursesData = [
                 {
                   title: "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা",
                   description:
-                    "তরুণ-তরুণীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে তরুণ-তরুণীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
+                    "কিশোর-কিশোরীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে কিশোর-কিশোরীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
                 },
               ];
 
@@ -12128,47 +11381,34 @@ const coursesData = [
                 "নিকটস্থ চিকিৎসাসেবা কেন্দ্রে আক্রান্ত ব্যক্তিকে নিরাপদে পরিবহন করা",
               ];
 
-              const colors = ['#3498db', '#2ecc71', '#e67e22', '#9b59b6', '#e74c3c', '#1abc9c'];
-              const icons = ['fa-heart-pulse', 'fa-band-aid', 'fa-shield-heart', 'fa-handshake', 'fa-ambulance', 'fa-person-hiking'];
-              const rgbColors = ['52,152,219', '46,204,113', '230,126,34', '155,89,182', '231,76,60', '26,188,156'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 3px 10px rgba(${rgb},0.2); margin-bottom: 12px; padding: 12px 16px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 12px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 20px; left: 40px; width: 60px; height: 60px; border-radius: 50%; background-color: rgba(52, 152, 219, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 100px; right: 50px; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(46, 204, 113, 0.15); z-index: 0;"></div>
-                  <div style="position: absolute; top: 50%; right: 30px; width: 50px; height: 50px; border-radius: 20px; background-color: rgba(230, 126, 34, 0.1); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-heart-pulse" style="margin-right: 10px; color: #3498db;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "প্রাথমিক চিকিৎসার পরিচিতি",
                     "প্রাথমিক চিকিৎসার পরিচিতি"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #ffeef7 0%, #fff4e6 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
                     <p class="mb-0">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50" style="background: linear-gradient(135deg, #fff9e6 0%, #ffe6f0 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <h3 class="h6 gradient-text mb-3" style="position: relative; z-index: 1;"><i class="fa-solid fa-list-check" style="margin-right: 8px; color: #9b59b6;"></i>${goalsHeading}</h3>
-                    <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="h6 gradient-text mb-3">${goalsHeading}</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(goals)}
-                    </div>
+                    </ul>
                   </section>
                 </div>
               `;
@@ -12214,50 +11454,37 @@ const coursesData = [
                 "কোন ব্যক্তির শরীরে কোন বস্তু ঢুকে রক্তপাত হলে (যেমন ভাঙা কাঁচ বা কাঠি), ক্ষতস্থান থেকে বস্তুটি বের করার চেষ্টা করা যাবে না। ক্ষতস্থানের দুই পাশে চেপে ধরতে হবে, তবে ক্ষতস্থানের উপর চাপ দেওয়া যাবে না।",
               ];
 
-              const colors = ['#e74c3c', '#c0392b', '#3498db', '#2ecc71', '#e67e22', '#9b59b6'];
-              const icons = ['fa-droplet', 'fa-heartbeat', 'fa-bandage', 'fa-syringe', 'fa-first-aid', 'fa-person-hiking'];
-              const rgbColors = ['231,76,60', '192,57,43', '52,152,219', '46,204,113', '230,126,34', '155,89,182'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 4px 12px rgba(${rgb},0.15); margin-bottom: 12px; padding: 12px 16px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 12px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 40px; right: 60px; width: 70px; height: 70px; border-radius: 50%; background-color: rgba(231, 76, 60, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 80px; left: 30px; width: 45px; height: 45px; border-radius: 50%; background-color: rgba(52, 152, 219, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; top: 300px; right: 40px; width: 55px; height: 55px; border-radius: 15px; background-color: rgba(46, 204, 113, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-droplet" style="margin-right: 10px; color: #e74c3c;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "রক্তক্ষরণ নিয়ন্ত্রণ",
                     "রক্তক্ষরণ নিয়ন্ত্রণ"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #ffe6e6 0%, #fff0f0 100%); position: relative; z-index: 1; box-shadow: 0 4px 12px rgba(231,76,60,0.1);">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
                     <p class="mb-0">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50" style="background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%); position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
                     <div class="row g-4 align-items-center">
                       <div class="col-lg-7" data-aos="fade-left">
-                        <article class="p-3 h-100 glass-card shadow-sm" style="box-shadow: 0 3px 10px rgba(46,204,113,0.15);">
-                          <h3 class="h6 gradient-text mb-3" style="position: relative; z-index: 1;"><i class="fa-solid fa-list-check" style="margin-right: 8px; color: #e74c3c;"></i>${stepsHeading}</h3>
-                          <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h3 class="h6 gradient-text mb-3">${stepsHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(steps)}
-                          </div>
+                          </ul>
                         </article>
                       </div>
                       <div class="col-lg-5" data-aos="fade-right">
@@ -12329,60 +11556,47 @@ const coursesData = [
                   .map(
                     (item, index) => `
                       <article class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="${60 +
-                        index * 40}" style="box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 3px solid #e67e22;">
-                        <h4 class="h6 gradient-text mb-1" style="color: #e67e22;"><i class="fa-solid fa-fire-alt" style="margin-right: 6px;"></i>${item.title}</h4>
+                        index * 40}">
+                        <h4 class="h6 gradient-text mb-1">${item.title}</h4>
                         <p class="mb-0">${item.text}</p>
                       </article>
                     `
                   )
                   .join("");
 
-              const colors = ['#e67e22', '#d35400', '#f39c12', '#c0392b', '#e74c3c', '#9b59b6'];
-              const icons = ['fa-fire', 'fa-temperature-high', 'fa-water', 'fa-zap', 'fa-droplet', 'fa-triangle-exclamation'];
-              const rgbColors = ['230,126,34', '211,84,0', '243,156,18', '192,57,43', '231,76,60', '155,89,182'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.08); border-left: 4px solid ${color}; box-shadow: 0 2px 8px rgba(${rgb},0.1); margin-bottom: 10px; padding: 10px 14px; border-radius: 5px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 10px; font-size: 0.9rem;"></i>
-                          <span style="font-size: 0.95rem;">${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 30px; right: 80px; width: 65px; height: 65px; border-radius: 50%; background-color: rgba(243, 156, 18, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 120px; left: 50px; width: 38px; height: 38px; border-radius: 50%; background-color: rgba(227, 126, 34, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; top: 250px; left: 30px; width: 48px; height: 48px; border-radius: 18px; background-color: rgba(192, 57, 43, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-fire" style="margin-right: 10px; color: #e67e22;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "পোড়া",
                     "পোড়া"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #fff4e6 0%, #fffacd 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
                     <p class="mb-0">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #fffcf0 0%, #fff9e6 100%); position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
                     <div class="row g-4 align-items-center">
                       <div class="col-lg-7">
-                        <div class="burn-types" style="position: relative; z-index: 1;">
-                          <h3 class="h6 gradient-text mb-3" style="color: #e67e22;"><i class="fa-solid fa-list-check" style="margin-right: 8px;"></i>${burnTypesHeading}</h3>
+                        <div class="burn-types">
+                          <h3 class="h6 gradient-text mb-3">${burnTypesHeading}</h3>
                           ${renderTypeCards(burnTypes)}
-                          <h3 class="h6 gradient-text mb-3" style="color: #c0392b; margin-top: 20px;"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 8px;"></i>${causesHeading}</h3>
-                          <div class="list-unstyled puberty-list mb-0">
+                          <h3 class="h6 gradient-text mb-3">${causesHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(causes)}
-                          </div>
+                          </ul>
                         </div>
                       </div>
                       <div class="col-lg-5">
@@ -12435,45 +11649,32 @@ const coursesData = [
                 "শরীরে আগুন লাগলে জ্বলন্ত ব্যক্তিটিকে মাটিতে শুয়ে গড়াগড়ি দিতে বলতে হবে।",
               ];
 
-              const colors = ['#e67e22', '#d35400', '#f39c12', '#c0392b', '#e74c3c', '#ff8c00'];
-              const icons = ['fa-fire', 'fa-water', 'fa-bandage', 'fa-heart-pulse', 'fa-droplet', 'fa-hospital'];
-              const rgbColors = ['230,126,34', '211,84,0', '243,156,18', '192,57,43', '231,76,60', '255,140,0'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 3px 10px rgba(${rgb},0.2); margin-bottom: 12px; padding: 12px 16px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 12px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 20px; right: 50px; width: 65px; height: 65px; border-radius: 50%; background-color: rgba(230, 126, 34, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 100px; left: 40px; width: 45px; height: 45px; border-radius: 50%; background-color: rgba(243, 156, 18, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; top: 300px; right: 30px; width: 55px; height: 55px; border-radius: 20px; background-color: rgba(211, 84, 0, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-hand-holding-medical" style="margin-right: 10px; color: #e67e22;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "পোড়ার প্রাথমিক চিকিৎসা",
                     "পোড়ার প্রাথমিক চিকিৎসা"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #fff4e6 0%, #ffe8d6 100%); position: relative; z-index: 1; box-shadow: 0 4px 12px rgba(230,126,34,0.15);">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-7" style="position: relative; z-index: 1;">
+                      <div class="col-lg-7">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(steps)}
-                          </div>
+                          </ul>
                         </article>
                       </div>
                       <div class="col-lg-5">
@@ -12534,52 +11735,39 @@ const coursesData = [
                 "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য হাসপাতালে নিয়ে যেতে হবে।",
               ];
 
-              const colors = ['#4a5568', '#667eae', '#718096', '#2d3748', '#4299e1', '#90cdf4'];
-              const icons = ['fa-bone', 'fa-hospital', 'fa-bandage', 'fa-heart-pulse', 'fa-person-hiking', 'fa-wheelchair'];
-              const rgbColors = ['74,85,104', '102,126,174', '113,128,150', '45,55,72', '66,153,225', '144,205,244'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 3px 10px rgba(${rgb},0.2); margin-bottom: 12px; padding: 12px 16px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 12px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 30px; left: 50px; width: 60px; height: 60px; border-radius: 50%; background-color: rgba(74, 85, 104, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 120px; right: 40px; width: 50px; height: 50px; border-radius: 50%; background-color: rgba(102, 126, 174, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; top: 200px; left: 30px; width: 48px; height: 48px; border-radius: 18px; background-color: rgba(66, 153, 225, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-bone" style="margin-right: 10px; color: #4a5568;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "হাড় ভাঙ্গা",
                     "হাড় ভাঙ্গা"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <p class="mb-3" style="position: relative; z-index: 1;">${intro}</p>
-                    <p class="mb-0" style="position: relative; z-index: 1;">${typeIntro}</p>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-3">${intro}</p>
+                    <p class="mb-0">${typeIntro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-7" style="position: relative; z-index: 1;">
+                      <div class="col-lg-7">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3" style="color: #4a5568;"><i class="fa-solid fa-list-check" style="margin-right: 8px;"></i>${openFractureHeading}</h3>
-                          <h4 class="h6 text-muted mb-3" style="color: #667eae;"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 6px;"></i>${openFractureSubheading}</h4>
-                          <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                          <h3 class="h6 gradient-text mb-3">${openFractureHeading}</h3>
+                          <h4 class="h6 text-muted mb-2">${openFractureSubheading}</h4>
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(openFractureSteps)}
-                          </div>
+                          </ul>
                         </article>
                       </div>
                       <div class="col-lg-5">
@@ -12595,14 +11783,14 @@ const coursesData = [
                     </div>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #edf2f7 0%, #dbe9f4 100%); position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-7 order-2 order-lg-1" style="position: relative; z-index: 1;">
+                      <div class="col-lg-7 order-2 order-lg-1">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3" style="color: #4a5568;"><i class="fa-solid fa-hand-fist" style="margin-right: 8px;"></i>${closedFractureHeading}</h3>
-                          <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                          <h3 class="h6 gradient-text mb-3">${closedFractureHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(closedFractureSteps)}
-                          </div>
+                          </ul>
                         </article>
                       </div>
                       <div class="col-lg-5 order-1 order-lg-2">
@@ -12656,53 +11844,36 @@ const coursesData = [
                 "আক্রান্ত ব্যক্তিকে দ্রুত হাসপাতালে নিতে হবে।",
               ];
 
-              const colors = ['#22863a', '#28a745', '#6f42c1', '#20c997', '#17a2b8', '#6c757d'];
-              const icons = ['fa-snake', 'fa-triangle-exclamation', 'fa-heart-pulse', 'fa-water', 'fa-hospital', 'fa-person-hiking'];
-              const rgbColors = ['34,134,58', '40,199,69', '111,66,193', '32,201,151', '23,162,184', '108,117,125'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 3px 10px rgba(${rgb},0.2); margin-bottom: 12px; padding: 12px 16px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 12px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 50px; right: 60px; width: 70px; height: 70px; border-radius: 50%; background-color: rgba(34, 134, 58, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 80px; left: 50px; width: 45px; height: 45px; border-radius: 50%; background-color: rgba(40, 199, 69, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; top: 350px; right: 40px; width: 55px; height: 55px; border-radius: 20px; background-color: rgba(32, 201, 151, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-snake" style="margin-right: 10px; color: #22863a;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "সাপের কামড়",
                     "সাপের কামড়"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #e6f7ed 0%, #f0fdf4 100%); position: relative; z-index: 1; box-shadow: 0 4px 12px rgba(34,134,58,0.12);">
-                    <p class="mb-0" style="position: relative; z-index: 1;">${intro}</p>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-12" style="position: relative; z-index: 1;">
+                      <div class="col-lg-12">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3" style="color: #22863a;"><i class="fa-solid fa-list-check" style="margin-right: 8px;"></i>${yhLang(
-                            "প্রাথমিক চিকিৎসার ধাপ",
-                            "প্রাথমিক চিকিৎসার ধাপ"
-                          )}</h3>
-                          <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(steps)}
-                          </div>
+                          </ul>
                         </article>
                       </div>
                     </div>
@@ -12758,61 +11929,48 @@ const coursesData = [
                 "পরবর্তী চিকিৎসার জন্য আহত ব্যক্তিকে দ্রুত নিকটস্থ হাসপাতালে নিতে হবে।",
               ];
 
-              const colors = ['#a0522d', '#8b4513', '#cd853f', '#c0392b', '#e74c3c', '#d35400'];
-              const icons = ['fa-dog', 'fa-bandage', 'fa-water', 'fa-heart-pulse', 'fa-triangle-exclamation', 'fa-hospital'];
-              const rgbColors = ['160,82,45', '139,69,19', '205,133,63', '192,57,43', '231,76,60', '211,84,0'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 3px 10px rgba(${rgb},0.2); margin-bottom: 12px; padding: 12px 16px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 12px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 40px; left: 60px; width: 70px; height: 70px; border-radius: 50%; background-color: rgba(160, 82, 45, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 100px; right: 50px; width: 50px; height: 50px; border-radius: 50%; background-color: rgba(139, 69, 19, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; top: 280px; right: 40px; width: 55px; height: 55px; border-radius: 20px; background-color: rgba(205, 133, 63, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-dog" style="margin-right: 10px; color: #a0522d;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "কুকুরের কামড়",
                     "কুকুরের কামড়"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #f5e6d3 0%, #ffe8d6 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <p class="mb-0" style="position: relative; z-index: 1;">${intro}</p>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50" style="background: linear-gradient(135deg, #faf0e6 0%, #f5dcc8 100%); position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
                     <div class="row g-4 align-items-start">
-                      <div class="col-lg-6" style="position: relative; z-index: 1;">
+                      <div class="col-lg-6">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3" style="color: #a0522d;"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 8px;"></i>${symptomsHeading}</h3>
-                          <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                          <h3 class="h6 gradient-text mb-3">${symptomsHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(symptoms)}
-                          </div>
+                          </ul>
                         </article>
                       </div>
-                      <div class="col-lg-6" style="position: relative; z-index: 1;">
+                      <div class="col-lg-6">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3" style="color: #8b4513;"><i class="fa-solid fa-list-check" style="margin-right: 8px;"></i>${yhLang(
+                          <h3 class="h6 gradient-text mb-3">${yhLang(
                             "প্রাথমিক চিকিৎসার ধাপ",
                             "প্রাথমিক চিকিৎসার ধাপ"
                           )}</h3>
-                          <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(careSteps)}
-                          </div>
+                          </ul>
                         </article>
                       </div>
                     </div>
@@ -12877,78 +12035,58 @@ const coursesData = [
               const caution =
                 "অ্যাসিড, ক্ষার বা কোনো দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তিকে বমি করাবেন না (যেমন—ব্লিচ, সালফিউরিক অ্যাসিড, কেরোসিন, পেট্রোলিয়াম)।";
 
-              const colors = ['#9b59b6', '#8e44ad', '#ba4a9e', '#c0392b', '#e74c3c', '#d35400'];
-              const icons = ['fa-skull-crossbones', 'fa-triangle-exclamation', 'fa-person-vomiting', 'fa-heart-pulse', 'fa-hospital', 'fa-hand-holding-hand'];
-              const rgbColors = ['155,89,182', '142,68,173', '186,74,158', '192,57,43', '231,76,60', '211,84,0'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 3px 10px rgba(${rgb},0.2); margin-bottom: 12px; padding: 12px 16px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 12px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
-              const renderDividers = (items, colors, icons, rgbColors) =>
+              const renderDividers = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="poison-step list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 2px 8px rgba(${rgb},0.15); padding: 12px 16px; margin-bottom: 12px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 10px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <div class="poison-step">
+                        <p class="mb-0">${item}</p>
+                        <hr class="my-3" />
+                      </div>
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 30px; right: 60px; width: 70px; height: 70px; border-radius: 50%; background-color: rgba(155, 89, 182, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 120px; left: 40px; width: 50px; height: 50px; border-radius: 50%; background-color: rgba(142, 68, 173, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; top: 300px; right: 50px; width: 55px; height: 55px; border-radius: 20px; background-color: rgba(186, 74, 158, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-skull-crossbones" style="margin-right: 10px; color: #9b59b6;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "বিষক্রিয়া",
                     "বিষক্রিয়া"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <p class="mb-0" style="position: relative; z-index: 1;">${intro}</p>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50" style="background: linear-gradient(135deg, #f5f3f8 0%, #eee9f7 100%); position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
                     <div class="row g-4 align-items-start">
-                      <div class="col-lg-6" style="position: relative; z-index: 1;">
+                      <div class="col-lg-6">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3" style="color: #9b59b6;"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 8px;"></i>${signsHeading}</h3>
-                          <div class="list-unstyled puberty-list mb-3" style="position: relative; z-index: 1;">
+                          <h3 class="h6 gradient-text mb-3">${signsHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-3">
                             ${renderList(signs)}
-                          </div>
-                          <p class="mb-0" style="position: relative; z-index: 1;">${followUp}</p>
+                          </ul>
+                          <p class="mb-0">${followUp}</p>
                         </article>
                       </div>
-                      <div class="col-lg-6" style="position: relative; z-index: 1;">
+                      <div class="col-lg-6">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3" style="color: #8e44ad;"><i class="fa-solid fa-list-check" style="margin-right: 8px;"></i>${careHeading}</h3>
-                          <div style="position: relative; z-index: 1;">
-                            ${renderDividers(careSteps, colors, icons, rgbColors)}
-                          </div>
-                          <div class="alert alert-warning mt-3 mb-0" role="alert" style="position: relative; z-index: 1; border-color: #9b59b6; background-color: rgba(155,89,182,0.1);">
-                            <strong style="color: #9b59b6;"><i class="fa-solid fa-bell" style="margin-right: 6px;"></i>${yhLang("সতর্কতা:", "সতর্কতা:")}</strong> ${caution}
+                          <h3 class="h6 gradient-text mb-3">${careHeading}</h3>
+                          ${renderDividers(careSteps)}
+                          <div class="alert alert-warning mt-3 mb-0" role="alert">
+                            <strong>${yhLang("সতর্কতা:", "সতর্কতা:")}</strong> ${caution}
                           </div>
                         </article>
                       </div>
@@ -13001,51 +12139,38 @@ const coursesData = [
                 "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে। যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।",
               ];
 
-              const colors = ['#0891b2', '#06b6d4', '#22d3ee', '#3b82f6', '#60a5fa', '#93c5fd'];
-              const icons = ['fa-person-swimming', 'fa-water', 'fa-heart-pulse', 'fa-lungs', 'fa-hospital', 'fa-hand-holding-hand'];
-              const rgbColors = ['8,145,178', '6,182,212', '34,211,238', '59,130,246', '96,165,250', '147,197,253'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 3px 10px rgba(${rgb},0.2); margin-bottom: 12px; padding: 12px 16px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 12px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 50px; left: 60px; width: 70px; height: 70px; border-radius: 50%; background-color: rgba(8, 145, 178, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 100px; right: 50px; width: 50px; height: 50px; border-radius: 50%; background-color: rgba(6, 182, 212, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; top: 350px; right: 40px; width: 55px; height: 55px; border-radius: 20px; background-color: rgba(34, 211, 238, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-person-swimming" style="margin-right: 10px; color: #0891b2;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "পানিতে ডুবা",
                     "পানিতে ডুবা"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #cffafe 0%, #e0f2fe 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <p style="position: relative; z-index: 1;">${intro}</p>
-                    <p class="mb-0" style="position: relative; z-index: 1;">${shallowTip}</p>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p>${intro}</p>
+                    <p class="mb-0">${shallowTip}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
                     <div class="row g-4 align-items-center">
-                      <div class="col-lg-6" style="position: relative; z-index: 1;">
+                      <div class="col-lg-6">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3" style="color: #0891b2;"><i class="fa-solid fa-list-check" style="margin-right: 8px;"></i>${rescueHeading}</h3>
-                          <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                          <h3 class="h6 gradient-text mb-3">${rescueHeading}</h3>
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(rescueSteps)}
-                          </div>
+                          </ul>
                         </article>
                       </div>
                       <div class="col-lg-6">
@@ -13095,19 +12220,15 @@ const coursesData = [
                 "শিশুদের ক্ষেত্রে অনেক সময় খাদ্যবস্তু ছাড়াও অন্যান্য বস্তু (যেমন— কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা) গলায় আটকে গিয়ে এমন শ্বাসরোধকারী পরিস্থিতির সৃষ্টি হতে পারে। প্রাপ্তবয়স্কদের বেশির ভাগ ক্ষেত্রেই খাওয়ার সময় খাদ্যবস্তু শ্বাসনালীতে আটকে এরূপ পরিস্থিতি উদ্ভূত হয়ে থাকে।";
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 40px; left: 70px; width: 70px; height: 70px; border-radius: 50%; background-color: rgba(107, 114, 128, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 120px; right: 60px; width: 50px; height: 50px; border-radius: 50%; background-color: rgba(75, 85, 99, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; top: 350px; right: 40px; width: 55px; height: 55px; border-radius: 20px; background-color: rgba(55, 65, 81, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-lungs" style="margin-right: 10px; color: #6b7280;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "শ্বাস আটকে যাওয়া (Choking)",
                     "শ্বাস আটকে যাওয়া (Choking)"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <p style="position: relative; z-index: 1;">${intro}</p>
-                    <p class="mb-0" style="position: relative; z-index: 1;">${scenarios}</p>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p>${intro}</p>
+                    <p class="mb-0">${scenarios}</p>
                   </section>
                 </div>
               `;
@@ -13178,18 +12299,15 @@ const coursesData = [
                 items.map((item) => `<p class="mb-3"> <i class="fa-solid fa-circle-check"></i> ${item}</p>`).join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 40px; right: 70px; width: 70px; height: 70px; border-radius: 50%; background-color: rgba(168, 85, 247, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 100px; left: 50px; width: 50px; height: 50px; border-radius: 50%; background-color: rgba(147, 51, 234, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; top: 350px; right: 40px; width: 55px; height: 55px; border-radius: 20px; background-color: rgba(192, 132, 252, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-hands-holding-child" style="margin-right: 10px; color: #a855f7;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "প্রাথমিক চিকিৎসা",
                     "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)"
                   )}</h2>
+                  
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <div class="row g-4 align-items-center" style="position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <div class="row g-4 align-items-center">
                       <div class="col-lg-5">
                         <figure class="text-center mb-0">
                           <img src="img/modu18/basic-treatment.bmp" alt="চোকিং প্রাথমিক চিকিৎসা" class="img-fluid img-zoom rounded shadow-sm" />
@@ -13205,15 +12323,13 @@ const coursesData = [
                     </div>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #faf5ff 0%, #f5f3ff 100%); position: relative; z-index: 1;">
-                  <h3 class="h6 gradient-text mb-3" style="color: #9333ea; position: relative; z-index: 1;"><i class="fa-solid fa-hand-fist" style="margin-right: 8px;"></i>${yhLang(
-                    "যদি বস্তুটি বের না হয়",
-                    "যদি বস্তুটি বের না হয় এবং শ্বাসকষ্ট বজায় থাকে"
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
+                  <h3 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "প্রাথমিক চিকিৎসা",
+                    "যদিবস্তুটি বের না হয় এবং আক্রান্ত ব্যক্তির শ্বাসকষ্ট বজায় থাকে—"
                   )}</h3>
-                    <div style="position: relative; z-index: 1;">
-                      ${renderParagraphs(followupText)}
-                    </div>
-                    <div class="row g-1 mt-4">
+                    ${renderParagraphs(followupText)}
+                    <div class="row g-1 mt-1">
                       ${["img/modu18/basic.jpg", "img/modu18/basic2.jpg", "img/modu18/basic3.jpg"]
                         .map(
                           (src) => `
@@ -13275,48 +12391,30 @@ const coursesData = [
                 "সিপিআর শুরু করতে হবে।",
               ];
 
-              const colors = ['#0284c7', '#0369a1', '#38bdf8', '#06b6d4', '#0891b2', '#06d6a6'];
-              const icons = ['fa-baby', 'fa-hand-fist', 'fa-heart-pulse', 'fa-lungs', 'fa-hospital', 'fa-person-hiking'];
-              const rgbColors = ['2,132,199', '3,105,161', '56,189,248', '6,182,212', '8,145,178', '6,214,166'];
-
               const renderList = (items) =>
                 items
                   .map(
-                    (item, index) => {
-                      const color = colors[index % colors.length];
-                      const icon = icons[index % icons.length];
-                      const rgb = rgbColors[index % rgbColors.length];
-                      return `
-                        <div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 3px 10px rgba(${rgb},0.2); margin-bottom: 12px; padding: 12px 16px; border-radius: 6px;">
-                          <i class="fa-solid ${icon}" style="color: ${color}; margin-right: 12px;"></i>
-                          <span>${item}</span>
-                        </div>
-                      `;
-                    }
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
                   )
                   .join("");
 
-              const renderParagraphs = (items, colors, icons, rgbColors) =>
-                items.map((item, index) => {
-                  const color = colors[index % colors.length];
-                  const icon = icons[index % icons.length];
-                  const rgb = rgbColors[index % rgbColors.length];
-                  return `<div class="list-item-card" style="background-color: rgba(${rgb},0.1); border-left: 4px solid ${color}; box-shadow: 0 2px 8px rgba(${rgb},0.15); padding: 12px 16px; margin-bottom: 12px; border-radius: 6px;"><i class="fa-solid ${icon}" style="color: ${color}; margin-right: 10px;"></i> ${item}</div>`;
-                }).join("");
+              const renderParagraphs = (items) =>
+                items.map((item) => `<p class="mb-2">${item}</p>`).join("");
 
               return `
-                <div class="lesson-slide" style="position: relative; overflow: hidden;">
-                  <div style="position: absolute; top: 50px; left: 60px; width: 70px; height: 70px; border-radius: 50%; background-color: rgba(2, 132, 199, 0.12); z-index: 0;"></div>
-                  <div style="position: absolute; bottom: 100px; right: 50px; width: 50px; height: 50px; border-radius: 50%; background-color: rgba(3, 105, 161, 0.1); z-index: 0;"></div>
-                  <div style="position: absolute; top: 350px; right: 40px; width: 55px; height: 55px; border-radius: 20px; background-color: rgba(56, 189, 248, 0.08); z-index: 0;"></div>
-                  
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position: relative; z-index: 1;"><i class="fa-solid fa-baby" style="margin-right: 10px; color: #0284c7;"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা",
                     "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচের শিশুর ক্ষেত্রে)"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20" style="background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <div class="row g-4 align-items-center" style="position: relative; z-index: 1;">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <div class="row g-4 align-items-center">
                       <div class="col-lg-5">
                         <figure class="text-center mb-0">
                           <img src="img/modu18/breath.jpg" alt="শিশুর চোকিং চিকিৎসা" class="img-fluid rounded shadow-sm img-zoom" />
@@ -13324,28 +12422,20 @@ const coursesData = [
                       </div>
                       <div class="col-lg-7">
                         <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3" style="color: #0284c7;"><i class="fa-solid fa-list-check" style="margin-right: 8px;"></i>${yhLang(
-                            "প্রাথমিক চিকিৎসার ধাপ",
-                            "প্রাথমিক চিকিৎসার ধাপ"
-                          )}</h3>
-                          <div class="list-unstyled puberty-list mb-0" style="position: relative; z-index: 1;">
+                          <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(steps)}
-                          </div>
+                          </ul>
                         </article>
                       </div>
                     </div>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%); position: relative; z-index: 1;">
-                    <h3 class="h6 gradient-text mb-3" style="color: #0369a1; position: relative; z-index: 1;"><i class="fa-solid fa-alert-triangle" style="margin-right: 8px;"></i>${yhLang(
-                      "অজ্ঞান হয়ে পড়লে",
-                      "যদি শিশুটি অজ্ঞান হয়ে পড়ে"
-                    )}</h3>
-                    <div style="position: relative; z-index: 1;">
-                      ${renderParagraphs(unconsciousSteps, colors, icons, rgbColors)}
-                    </div>
-                    <div class="row g-2 mt-4">
-                      <div class="col-12">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-lg-7 order-2 order-lg-1">
+                        ${renderParagraphs(unconsciousSteps)}
+                      </div>
+                      <div class="col-lg-5 order-1 order-lg-2">
                         <figure class="text-center mb-0">
                           <img src="img/modu18/breath2.jpg" alt="শিশুর সিপিআর" class="img-fluid rounded shadow-sm img-zoom" />
                         </figure>
@@ -13377,15 +12467,13 @@ const coursesData = [
             quiz: null,
             content: (function () {
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:18px; right:28px; width:88px; height:88px; border-radius:50%; background:linear-gradient(135deg,#fde7f3,#f8d9ff); opacity:.45; z-index:0;"></span>
-                  <span style="position:absolute; bottom:20px; left:26px; width:118px; height:58px; border-radius:22px; background:linear-gradient(135deg,#d9f7ef,#d9f3ff); opacity:.42; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-apple-whole me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Importance of Nutritious Food in Adolescence",
                     "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব"
                   )}</h2>
-                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1; background:linear-gradient(135deg,#fff5ea,#fdeff7,#eef9ff); box-shadow:16px 18px 34px rgba(252,149,173,.18), -6px -6px 20px rgba(255,255,255,.56); border:1px solid rgba(255,186,186,.45);">
-                    <p class="mb-3">কৈশোরকালে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুণ-তরুণীদের সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুণ-তরুণীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলস্বরূপ লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।</p>
+                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60">
+                    <p class="mb-3">কৈশোরকালে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলস্বরূপ লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।</p>
                     <p class="mb-0">খাদ্য মানবদেহকে সুস্থ-সবল রাখার জন্য খাদ্য অপরিহার্য। খাদ্য বলতে সেই সকল জৈব উপাদানকে বোঝায় যেগুলো মানবদেহ গঠনে ভূমিকা রাখে, ক্ষয়পূরণ করে, শক্তি বৃদ্ধি সহ শরীরের রোগ প্রতিরোধ ক্ষমতা তৈরি করে।</p>
                   </div>
                 </div>
@@ -13401,15 +12489,13 @@ const coursesData = [
             quiz: null,
             content: (function () {
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:22px; left:20px; width:102px; height:52px; border-radius:18px; background:linear-gradient(135deg,#dff7e6,#ebffe4); opacity:.46; z-index:0;"></span>
-                  <span style="position:absolute; bottom:22px; right:28px; width:86px; height:86px; border-radius:50%; background:linear-gradient(135deg,#e0f4ff,#d8ebff); opacity:.44; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-leaf me-2"></i>${yhLang("Nutrition", "পুষ্টি")}</h2>
-                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1; background:linear-gradient(135deg,#ecfff4,#f5fff0,#ebf8ff); box-shadow:-12px 16px 30px rgba(125,192,145,.16), 10px -8px 24px rgba(255,255,255,.62); border:1px solid rgba(170,222,186,.46);">
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Nutrition", "পুষ্টি")}</h2>
+                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60">
                     <p class="mb-3">পুষ্টি হলো একটি প্রক্রিয়া। এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙে সরল উপাদানে পরিণত হয়। মানবদেহ এসব সরল উপাদান শোষণ করে নেয়। এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্বাস্থ্য নিশ্চিত করে।</p>
-                    <p class="mb-3">কৈশোরকালে ছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুণ-তরুণীদের সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুণ-তরুণীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।</p>
+                    <p class="mb-3">কৈশোরকালে ছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।</p>
                     <p class="mb-3"><strong>পুষ্টিকর খাদ্য</strong><br>যেসব খাদ্য খেলে শরীরে তাপ ও শক্তি উৎপাদিত হয়, দেহের গঠন ও বৃদ্ধি হয়, শরীর সবল ও কর্মক্ষম থাকে, তাকে পুষ্টিকর খাদ্য বলে। খাদ্য ও পুষ্টি একে অপরের সাথে জড়িত। প্রতিটি খাদ্য অবশ্যই পুষ্টিকর ও নিরাপদ হতে হবে। নিয়মিত পুষ্টিকর খাদ্য গ্রহণ করলে শরীর ও মন ভালো থাকে, মনে প্রফুল্লতা আসে এবং পড়াশোনা ও কাজে মনোযোগ বাড়ে। মনে রাখতে হবে পুষ্টিকর খাদ্য গ্রহণ না করলে রোগ প্রতিরোধ ক্ষমতা কমে যায় এবং বিভিন্ন রোগে আক্রান্ত হওয়ার ঝুঁকি বেড়ে যায়।</p>
-                    <p class="mb-3"><strong>ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান</strong><br>বিশ্ব স্বাস্থ্য সংস্থা অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে। যদি কোনো শিশু বা তরুণ-তরুণীর উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে, তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।</p>
+                    <p class="mb-3"><strong>ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান</strong><br>বিশ্ব স্বাস্থ্য সংস্থা অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে। যদি কোনো শিশু বা কিশোর-কিশোরীর উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে, তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।</p>
                     <p class="mb-0"><strong>বি.এম.আই (বডি মাস ইনডেক্স)</strong><br>কোন ব্যক্তির ওজন এবং উচ্চতার হারের বর্গের অনুপাতই হলো বি.এম.আই। এটি পুষ্টিগত অবস্থা নির্ণয়ের একটি উল্লেখযোগ্য পদ্ধতি। বি.এম.আই নির্ণয় করতে ব্যক্তির ওজন কিলোগ্রাম এককে ও উচ্চতা মিটার এককে জানা প্রয়োজন। ওজনকে উচ্চতার বর্গ দিয়ে ভাগ করলেই বি.এম.আই পাওয়া যাবে। নিচে সূত্রটি দেওয়া হলো—<br>বি.এম.আই = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²</p>
                   </div>
                 </div>
@@ -13465,13 +12551,11 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:14px; left:18px; width:96px; height:96px; border-radius:50%; background:linear-gradient(135deg,#e6f3ff,#dcecff); opacity:.44; z-index:0;"></span>
-                  <span style="position:absolute; bottom:18px; right:18px; width:118px; height:54px; border-radius:20px; background:linear-gradient(135deg,#f1eaff,#e9f4ff); opacity:.46; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-scale-balanced me-2"></i>${yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)")}</h2>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1;">
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)")}</h2>
+                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
                     <div class="col-12 col-lg-6">
-                      <div class="glass-card p-3 h-100" style="background:linear-gradient(135deg,#eef8ff,#f6f1ff,#f1fcff); border:1px solid rgba(167,206,255,.45); box-shadow:18px 12px 30px rgba(96,144,215,.16), -8px -8px 20px rgba(255,255,255,.62);">
+                      <div class="glass-card p-3 h-100">
                         <div class="table-responsive">
                           <table class="table table-bordered table-striped align-middle text-center mb-0">
                             <thead>
@@ -13493,7 +12577,7 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                      <div class="glass-card p-3 h-100" style="background:linear-gradient(135deg,#f2f9ff,#f4edff,#ebf8f7); border:1px solid rgba(176,189,255,.45); box-shadow:-16px 14px 28px rgba(138,128,205,.16), 8px -8px 20px rgba(255,255,255,.6);">
+                      <div class="glass-card p-3 h-100">
                         <div class="table-responsive">
                           <table class="table table-bordered table-striped align-middle text-center mb-0">
                             <thead>
@@ -13583,14 +12667,12 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:20px; right:20px; width:100px; height:48px; border-radius:18px; background:linear-gradient(135deg,#fff5df,#ffeec9); opacity:.46; z-index:0;"></span>
-                  <span style="position:absolute; bottom:26px; left:18px; width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,#fff0d6,#ffe2bd); opacity:.42; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-bowl-food me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Nutrition Components, Sources, and Functions",
                     "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ"
                   )}</h2>
-                  <div class="glass-card p-3" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1; background:linear-gradient(135deg,#fff7e8,#fff1dc,#fff9f2); border:1px solid rgba(255,206,145,.48); box-shadow:14px 18px 34px rgba(224,164,99,.18), -6px -8px 20px rgba(255,255,255,.58);">
+                  <div class="glass-card p-3" data-aos="fade-up" data-aos-delay="60">
                     <div class="table-responsive">
                       <table class="table table-bordered table-striped align-middle text-center mb-0">
                         <thead>
@@ -13676,16 +12758,14 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:16px; left:22px; width:102px; height:52px; border-radius:18px; background:linear-gradient(135deg,#ffe9ef,#ffdff2); opacity:.46; z-index:0;"></span>
-                  <span style="position:absolute; bottom:20px; right:20px; width:84px; height:84px; border-radius:50%; background:linear-gradient(135deg,#ffe4ec,#ffeef7); opacity:.42; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-utensils me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Importance of Safe, Nutritious Food and Daily Meal Plan",
                     "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
                   )}</h2>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1;">
+                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
                     <div class="col-12 col-lg-12">
-                      <div class="glass-card p-3 h-100" style="background:linear-gradient(135deg,#fff0f4,#ffeef9,#fff7f0); border:1px solid rgba(255,189,205,.48); box-shadow:18px 14px 32px rgba(221,126,163,.17), -8px -8px 22px rgba(255,255,255,.58);">
+                      <div class="glass-card p-3 h-100">
                         <div class="table-responsive">
                           <table class="table table-bordered table-striped align-middle text-center mb-0">
                             <thead>
@@ -13704,9 +12784,9 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-12 col-lg-12">
-                      <div class="glass-card p-3 h-100 d-flex align-items-center justify-content-center" style="background:linear-gradient(135deg,#fff7fb,#fff0f5,#ffeef1); border:1px solid rgba(255,203,215,.46); box-shadow:-14px 12px 28px rgba(223,132,166,.14), 8px -8px 18px rgba(255,255,255,.56);">
+                      <div class="glass-card p-3 h-100 d-flex align-items-center justify-content-center">
                         <figure class="text-center mb-0">
-                          <img src="img/modu19/food.jpg" alt="Nutrition meal plan" class="img-fluid rounded shadow-sm img-zoom" style="box-shadow:10px 14px 24px rgba(187,119,151,.26);" />
+                          <img src="img/modu19/food.jpg" alt="Nutrition meal plan" class="img-fluid rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     </div>
@@ -13761,33 +12841,9 @@ const coursesData = [
                       <div class="col-12">
                         <div class="definition-card hover-lift-sm hover-shadow-glow transition-base" data-aos="fade-up" data-aos-delay="${
                           60 + idx * 40
-                        }" style="list-style:none; border-radius:14px; padding:1.05rem 1.2rem; display:flex; gap:0.9rem; align-items:flex-start; margin-bottom:0.8rem; background:linear-gradient(135deg,${[
-                          "#eafff6,#dcfbef",
-                          "#eef4ff,#e1ecff",
-                          "#fff4ea,#ffe9d8",
-                          "#fff0f0,#ffe0e0",
-                          "#f5efff,#ece2ff",
-                        ][idx % 5]}); border-left:5px solid ${[
-                          "#1ba672",
-                          "#3f80e8",
-                          "#e08a3f",
-                          "#d55a5a",
-                          "#8a63d2",
-                        ][idx % 5]}; box-shadow:${[
-                          "12px 10px 22px rgba(66,172,132,.16)",
-                          "-10px 12px 22px rgba(72,119,211,.16)",
-                          "12px -8px 20px rgba(208,145,86,.17)",
-                          "-12px 10px 22px rgba(206,94,94,.16)",
-                          "10px 12px 20px rgba(127,102,200,.16)",
-                        ][idx % 5]};">
+                        }">
                           <div class="d-flex align-items-start gap-3">
-                            <span class="icon-circle" style="width:38px; min-width:38px; height:38px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,${[
-                              "#35c98b,#1f9e6a",
-                              "#5c93f0,#3b74db",
-                              "#f2a65f,#df7f2c",
-                              "#ef7f7f,#cf5a5a",
-                              "#a38bf2,#7c5fd9",
-                            ][idx % 5]}); color:#fff; box-shadow:0 8px 14px rgba(0,0,0,.13);"><i class="fa-solid ${item.icon}"></i></span>
+                            <span class="icon-circle"><i class="fa-solid ${item.icon}"></i></span>
                             <p class="mb-0">${item.text}</p>
                           </div>
                         </div>
@@ -13797,14 +12853,12 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:18px; right:24px; width:84px; height:84px; border-radius:50%; background:linear-gradient(135deg,#dbf8ea,#d4f2e9); opacity:.44; z-index:0;"></span>
-                  <span style="position:absolute; bottom:18px; left:24px; width:120px; height:56px; border-radius:20px; background:linear-gradient(135deg,#ebfff2,#ddfae8); opacity:.4; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-seedling me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Adolescent Food Diversity",
                     "কৈশোরকালীন খাদ্য বৈচিত্র্য"
                   )}</h2>
-                  <div class="row g-3 mt-2" style="position:relative; z-index:1;">
+                  <div class="row g-3 mt-2">
                     ${renderCards()}
                   </div>
                 </div>
@@ -13865,14 +12919,12 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:20px; left:18px; width:90px; height:90px; border-radius:50%; background:linear-gradient(135deg,#ffe9f2,#ffe0ed); opacity:.44; z-index:0;"></span>
-                  <span style="position:absolute; bottom:22px; right:20px; width:122px; height:54px; border-radius:20px; background:linear-gradient(135deg,#fce6ff,#f4ddff); opacity:.42; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-droplet me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Nutritious Food During Menstruation",
                     "মাসিককালীন সময়ে পুষ্টিকর খাদ্য"
                   )}</h2>
-                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1; background:linear-gradient(135deg,#fff0f7,#ffe9f8,#fef5ff); border:1px solid rgba(238,166,205,.45); box-shadow:-14px 16px 32px rgba(197,124,163,.17), 10px -8px 20px rgba(255,255,255,.58);">
+                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60">
                     <p class="mb-4">মাসিকের সময় দেহ থেকে রক্তক্ষরণ হয়, ফলে পুষ্টিহীনতা ও রক্তস্বল্পতা দেখা দিতে পারে। এই ঘাটতি পূরণের জন্য স্বাভাবিক খাবারের পাশাপাশি আয়রন, ক্যালসিয়াম, ম্যাগনেসিয়াম, আঁশযুক্ত ও ভিটামিনসমৃদ্ধ খাবার খাওয়া দরকার। এসব খাবার মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে সাহায্য করে।</p>
                     <div class="table-responsive">
                       <table class="table table-bordered table-striped align-middle">
@@ -13895,8 +12947,8 @@ const coursesData = [
           {
             id: "ch19-lesson-8",
             title: yhLang(
-              "তরুণ-তরুণীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
-              "তরুণ-তরুণীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
+              "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
+              "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
             ),
             icon: "fa-apple-whole",
             gradientClass: "bg-gradient-emerald",
@@ -13937,43 +12989,12 @@ const coursesData = [
                 "পায়ে সব সময় জুতা/স্যান্ডেল ব্যবহার করতে হবে যাতে পেটে কৃমি না জন্মায়। ডাক্তারের পরামর্শ অনুযায়ী নিয়মিত বিরতিতে কৃমিনাশক ওষুধ খেতে হবে।",
               ];
 
-              const symptomIcons = ["fa-face-tired", "fa-user-injured", "fa-lungs", "fa-calendar-xmark"];
-              const preventionIcons = ["fa-leaf", "fa-drumstick-bite", "fa-lemon", "fa-hands-bubbles", "fa-fire-burner", "fa-shoe-prints"];
-
-              const renderList = (items, icons, offset = 0) =>
+              const renderList = (items) =>
                 items
                   .map(
-                    (item, idx) => `
-                      <li style="list-style:none; border-radius:14px; padding:1.05rem 1.2rem; display:flex; gap:0.9rem; align-items:flex-start; margin-bottom:0.8rem; background:linear-gradient(135deg,${[
-                        "#fff0f0,#ffe3e3",
-                        "#eef7ff,#e1f2ff",
-                        "#fff6ec,#ffe9d7",
-                        "#f2f1ff,#e8e4ff",
-                        "#fef0f8,#fae2f0",
-                        "#f0fff6,#e2f8ec",
-                      ][(idx + offset) % 6]}); border-left:5px solid ${[
-                        "#d96666",
-                        "#4c9ede",
-                        "#e19749",
-                        "#8771d3",
-                        "#d06ca6",
-                        "#30a56a",
-                      ][(idx + offset) % 6]}; box-shadow:${[
-                        "12px 12px 24px rgba(206,112,112,.14)",
-                        "-10px 12px 22px rgba(96,156,207,.14)",
-                        "12px -8px 22px rgba(214,155,94,.15)",
-                        "-12px 10px 22px rgba(130,111,200,.15)",
-                        "10px 12px 22px rgba(194,105,158,.15)",
-                        "-10px 10px 20px rgba(85,167,125,.14)",
-                      ][(idx + offset) % 6]};">
-                        <span style="width:38px; min-width:38px; height:38px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,${[
-                          "#ef9494,#cf6464",
-                          "#6bb5ed,#3e87cb",
-                          "#f2b06a,#db8a3d",
-                          "#ab98ef,#7f66d0",
-                          "#e790c1,#c56098",
-                          "#54ce8d,#2f9a63",
-                        ][(idx + offset) % 6]}); color:#fff; box-shadow:0 8px 14px rgba(0,0,0,.13);"><i class="fa-solid ${icons[idx % icons.length]}"></i></span>
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
                     `
@@ -13981,56 +13002,54 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:16px; right:20px; width:92px; height:92px; border-radius:50%; background:linear-gradient(135deg,#e9f6ff,#def1ff); opacity:.44; z-index:0;"></span>
-                  <span style="position:absolute; bottom:18px; left:18px; width:124px; height:56px; border-radius:20px; background:linear-gradient(135deg,#f0f8ff,#e4f0ff); opacity:.42; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-notes-medical me-2"></i>${yhLang(
-                    "তরুণ-তরুণীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
-                    "তরুণ-তরুণীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
+                    "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="10" style="position:relative; z-index:1; background:linear-gradient(135deg,#eef8ff,#e8f3ff,#f7fbff); border:1px solid rgba(160,199,236,.45); box-shadow:14px 14px 28px rgba(91,145,198,.15), -8px -8px 20px rgba(255,255,255,.6);">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="10">
                     <p>এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। কিশোরীদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় কিশোরীদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="40" style="position:relative; z-index:1; background:linear-gradient(135deg,#f3f9ff,#edf4ff,#f8fbff); border:1px solid rgba(172,202,234,.45); box-shadow:-14px 16px 30px rgba(113,156,210,.16), 8px -8px 20px rgba(255,255,255,.58);">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="40">
                     <div class="row g-4">
                       <div class="col-lg-6">
                         <article class="h-100 p-3">
-                          <h3 class="gradient-text"><i class="fa-solid fa-triangle-exclamation me-2"></i>রক্তস্বল্পতা দেখা দিলে শরীরে যেসব সমস্যা দেখা যায় :</h3>
+                          <h3 class="gradient-text">রক্তস্বল্পতা দেখা দিলে শরীরে যেসব সমস্যা দেখা যায় :</h3>
                           <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(symptomPoints, symptomIcons, 0)}
+                            ${renderList(symptomPoints)}
                           </ul>
                         </article>
                       </div>
                       <div class="col-lg-6">
                         <article class="h-100 p-3">
-                          <h3 class="gradient-text"><i class="fa-solid fa-shield-heart me-2"></i>কীভাবে এনিমিয়া বা রক্তস্বল্পতা দূর করা যায় :</h3>
+                          <h3 class="gradient-text">কীভাবে এনিমিয়া বা রক্তস্বল্পতা দূর করা যায় :</h3>
                           <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(preventionPoints, preventionIcons, 2)}
+                            ${renderList(preventionPoints)}
                           </ul>
                         </article>
                       </div>
                     </div>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70" style="position:relative; z-index:1; background:linear-gradient(135deg,#edf8ff,#f3f7ff,#f7f9ff); border:1px solid rgba(176,203,231,.46); box-shadow:12px 16px 30px rgba(109,153,208,.16), -10px -8px 18px rgba(255,255,255,.58);">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
                     <div class="row g-4">
                       <div class="col-lg-4">
-                        <article class="p-3 h-100 glass-card shadow-sm" style="background:linear-gradient(135deg,#eefbff,#e4f4ff); border:1px solid rgba(167,205,235,.45); box-shadow:10px 14px 22px rgba(102,152,198,.16);">
-                          <h4 class="gradient-text mb-3"><i class="fa-solid fa-tablets me-2"></i>আয়রন ফলিক এসিড ট্যাবলেট</h4>
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h4 class="gradient-text mb-3">আয়রন ফলিক এসিড ট্যাবলেট</h4>
                           <p>রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে। সরকারি স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।</p>
                         </article>
                       </div>
                       <div class="col-lg-4">
-                        <article class="p-3 h-100 glass-card shadow-sm" style="background:linear-gradient(135deg,#f2f4ff,#e9edff); border:1px solid rgba(181,188,240,.45); box-shadow:-10px 14px 22px rgba(117,126,196,.16);">
-                          <h4 class="gradient-text mb-3"><i class="fa-solid fa-vial-circle-check me-2"></i>আয়োডিন ঘাটতি :</h4>
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h4 class="gradient-text mb-3">আয়োডিন ঘাটতি :</h4>
                           <p>মানবদেহে আয়োডিন একটি গুরুত্বপূর্ণ পুষ্টি উপাদান। আয়োডিন ঘাটতি হলে গলগণ্ড, খর্বতা ও বুদ্ধি প্রতিবন্ধিতাসহ বিভিন্ন সমস্যা দেখা দেয়, যা প্রতিরোধে আয়োডিনযুক্ত লবণ খেতে হয়।</p>
                         </article>
                       </div>
                       <div class="col-lg-4">
-                        <article class="p-3 h-100 glass-card shadow-sm" style="background:linear-gradient(135deg,#f0fff9,#e6f9f2); border:1px solid rgba(167,222,202,.45); box-shadow:12px -8px 20px rgba(106,176,152,.15);">
-                          <h4 class="gradient-text mb-3"><i class="fa-solid fa-bone me-2"></i>ক্যালসিয়াম ঘাটতি :</h4>
+                        <article class="p-3 h-100 glass-card shadow-sm">
+                          <h4 class="gradient-text mb-3">ক্যালসিয়াম ঘাটতি :</h4>
                           <p>ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই কৈশোরে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।</p>
                         </article>
                       </div>
@@ -14052,31 +13071,29 @@ const coursesData = [
             quiz: null,
             content: (function () {
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:16px; right:20px; width:96px; height:96px; border-radius:50%; background:linear-gradient(135deg,#ffeaf1,#ffe2ee); opacity:.42; z-index:0;"></span>
-                  <span style="position:absolute; bottom:18px; left:18px; width:126px; height:52px; border-radius:20px; background:linear-gradient(135deg,#fdeef6,#fde6ef); opacity:.44; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-heart-pulse me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র",
                     "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র"
                   )}</h2>
-                  <div class="row g-3 mb-3 align-items-center" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1;">
+                  <div class="row g-3 mb-3 align-items-center" data-aos="fade-up" data-aos-delay="60">
                     <div class="col-12 col-md-12">
-                      <div class="glass-card p-4 h-100" style="background:linear-gradient(135deg,#fff2f6,#ffeff7,#fff8fb); border:1px solid rgba(245,187,211,.46); box-shadow:16px 14px 30px rgba(201,127,157,.15), -8px -6px 18px rgba(255,255,255,.6);">
+                      <div class="glass-card p-4 h-100">
                         <p class="mb-0">
                           অপুষ্টি চক্র বংশপরম্পরায় চলতে থাকে। পুষ্টিজনিত সমস্যায় ভোগা কিশোরীদের পর্যাপ্ত দৈহিক বৃদ্ধি না হওয়ায় বেঁটে/খাটো হয় এবং তারা কম ওজনের শিশুর জন্ম দিয়ে থাকে। আর এই কম ওজনের শিশুরা যদি মেয়ে হয়, তাহলে তারাও বড় হলে খাটো হয় এবং বিয়ে হলে আবারও কম ওজনের শিশুর জন্ম দেয়, যা আরও ভয়াবহ। এভাবেই এই চক্র চলতে থাকে যতক্ষণ পর্যন্ত না এই চক্র ভেঙে যায়। এজন্য জীবনের সকল স্তরেই, বিশেষ করে শৈশব ও কৈশোরে, পুষ্টিকর খাবার গ্রহণের মাধ্যমে কিশোরী ও নারীদের পুষ্টি নিশ্চিত করতে হবে।
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div class="row g-3 align-items-center" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1;">
+                  <div class="row g-3 align-items-center" data-aos="fade-up" data-aos-delay="60">
                     <div class="col-12 col-md-12">
-                      <figure class="text-center mb-0" style="background:linear-gradient(135deg,#fff6fa,#fff0f6); border:1px solid rgba(244,196,213,.45); border-radius:16px; padding:12px; box-shadow:-12px 16px 28px rgba(193,128,161,.15);">
-                        <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" class="img-fluid rounded shadow-sm img-zoom" style="width: 100%; box-shadow:8px 12px 20px rgba(172,119,146,.2);" />
+                      <figure class="text-center mb-0">
+                        <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" class="img-fluid rounded shadow-sm img-zoom" style="width: 100%;" />
                       </figure>
                     </div>
                     <div class="col-12 col-md-12">
-                      <figure class="text-center mb-0" style="background:linear-gradient(135deg,#fff1f7,#ffedf6); border:1px solid rgba(243,187,206,.45); border-radius:16px; padding:12px; box-shadow:12px 14px 28px rgba(197,119,151,.16);">
-                        <img src="img/modu19/pusti2.png" alt="কৈশোরকালীন পুষ্টি" class="img-fluid rounded shadow-sm img-zoom" style="width: 100%; box-shadow:-8px 12px 20px rgba(171,110,141,.2);" />
+                      <figure class="text-center mb-0">
+                        <img src="img/modu19/pusti2.png" alt="কৈশোরকালীন পুষ্টি" class="img-fluid rounded shadow-sm img-zoom" style="width: 100%;" />
                       </figure>
                     </div>
                   </div>
@@ -14095,62 +13112,23 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const actionItems = [
-                "সুষম খাবার, যেমন— শর্করাজাতীয় খাবার (ভাত, রুটি, মুড়ি, চিনি, গুড়, মধু, আলু, চিড়া ইত্যাদি), আমিষজাতীয় খাবার (ডিম, দুধ, মাছ, মাংস, ডাল, বাদাম, বীচি ইত্যাদি), আয়রনসমৃদ্ধ খাবার (মাংস, কলিজা এবং গাঢ় সবুজ শাক-সবজি), ভিটামিন এ সমৃদ্ধ খাবার (কলিজা, পাকা পেঁপে, আম, গাজর, মিষ্টি কুমড়া, ছোট মাছ, ডিম, সবুজ শাক-সবজি ও হলুদ রঙের ফলমূল) খাওয়া",
-                "প্রতিদিন কমপক্ষে ৮–১০ গ্লাস পানি পান করা",
-                "প্রতিদিন পর্যাপ্ত পরিমাণে ভিটামিন বি এবং ভিটামিন সি-যুক্ত খাবার খাওয়া",
-                "প্রতি সপ্তাহে ১টি করে আয়রন-ফলিক এসিড (আইএফএ) ট্যাবলেট খাওয়া",
-                "আয়োডিনসমৃদ্ধ খাবার (সামুদ্রিক মাছ এবং সমুদ্র তীরবর্তী এলাকার শাক-সবজি) এবং আয়োডিনযুক্ত লবণ খাওয়া",
-                "প্রত্যেক তরুণ-তরুণীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি গ্রহণ করা",
-                "খাবার খাওয়ার আগে ও পরে সাবান এবং নিরাপদ পানি দিয়ে হাত ধোয়া",
-                "স্বাস্থ্যসম্মত ল্যাট্রিন ব্যবহার করা",
-                "১৮-এর আগে বিয়ে নয়, ২০-এর আগে সন্তান নয়",
-              ];
-
-              const actionIcons = ["fa-bowl-food", "fa-glass-water", "fa-prescription-bottle-medical", "fa-tablets", "fa-vial", "fa-pills", "fa-hands-bubbles", "fa-toilet", "fa-user-shield"];
-
-              const actionPalettes = [
-                { bg: "#fff3ea,#ffe9d7", border: "#df8c45", badge: "#f0af74,#d98542" },
-                { bg: "#eef8ff,#dff2ff", border: "#4a9bdf", badge: "#67b3ec,#3b84c9" },
-                { bg: "#f0fff4,#e2f8eb", border: "#2fa76c", badge: "#4fce8a,#2f9961" },
-                { bg: "#fff0f5,#ffe1ee", border: "#d66998", badge: "#ea96bc,#c45f8b" },
-                { bg: "#f2f3ff,#e7e9ff", border: "#7a84d9", badge: "#9aa3ef,#6772cb" },
-                { bg: "#fff2ef,#ffe4de", border: "#d66b57", badge: "#e58c78,#c55b49" },
-              ];
-
-              const renderList = () =>
-                actionItems
-                  .map((item, idx) => {
-                    const palette = actionPalettes[idx % actionPalettes.length];
-                    return `
-                      <li style="list-style:none; border-radius:14px; padding:1.05rem 1.2rem; display:flex; gap:0.9rem; align-items:flex-start; margin-bottom:0.8rem; background:linear-gradient(135deg,${palette.bg}); border-left:5px solid ${palette.border}; box-shadow:${[
-                        "12px 12px 24px rgba(213,146,86,.14)",
-                        "-10px 12px 22px rgba(95,152,204,.14)",
-                        "12px -8px 22px rgba(84,171,127,.15)",
-                        "-12px 10px 22px rgba(209,113,159,.15)",
-                        "10px 12px 22px rgba(122,129,207,.15)",
-                        "-10px 10px 20px rgba(206,111,93,.14)",
-                      ][idx % 6]};">
-                        <span style="width:38px; min-width:38px; height:38px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,${palette.badge}); color:#fff; box-shadow:0 8px 14px rgba(0,0,0,.13);">
-                          <i class="fa-solid ${actionIcons[idx % actionIcons.length]}"></i>
-                        </span>
-                        <span>${item}</span>
-                      </li>
-                    `;
-                  })
-                  .join("");
-
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:18px; left:20px; width:92px; height:92px; border-radius:50%; background:linear-gradient(135deg,#fff1e6,#ffe7d8); opacity:.44; z-index:0;"></span>
-                  <span style="position:absolute; bottom:20px; right:20px; width:126px; height:56px; border-radius:20px; background:linear-gradient(135deg,#fff7ed,#ffeddc); opacity:.42; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-shield-heart me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়",
                     "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়"
                   )}</h2>
-                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1; background:linear-gradient(135deg,#fff5ed,#fff0e6,#fff8f1); border:1px solid rgba(243,196,147,.48); box-shadow:14px 16px 30px rgba(205,149,95,.16), -8px -8px 18px rgba(255,255,255,.58);">
+                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="60">
                     <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList()}
+                      <li><i class="fa-solid fa-circle-check"></i> সুষম খাবার, যেমন— শর্করাজাতীয় খাবার (ভাত, রুটি, মুড়ি, চিনি, গুড়, মধু, আলু, চিড়া ইত্যাদি), আমিষজাতীয় খাবার (ডিম, দুধ, মাছ, মাংস, ডাল, বাদাম, বীচি ইত্যাদি), আয়রনসমৃদ্ধ খাবার (মাংস, কলিজা এবং গাঢ় সবুজ শাক-সবজি), ভিটামিন এ সমৃদ্ধ খাবার (কলিজা, পাকা পেঁপে, আম, গাজর, মিষ্টি কুমড়া, ছোট মাছ, ডিম, সবুজ শাক-সবজি ও হলুদ রঙের ফলমূল) খাওয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> প্রতিদিন কমপক্ষে ৮–১০ গ্লাস পানি পান করা</li>
+                      <li><i class="fa-solid fa-circle-check"></i> প্রতিদিন পর্যাপ্ত পরিমাণে ভিটামিন বি এবং ভিটামিন সি-যুক্ত খাবার খাওয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> প্রতি সপ্তাহে ১টি করে আয়রন-ফলিক এসিড (আইএফএ) ট্যাবলেট খাওয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> আয়োডিনসমৃদ্ধ খাবার (সামুদ্রিক মাছ এবং সমুদ্র তীরবর্তী এলাকার শাক-সবজি) এবং আয়োডিনযুক্ত লবণ খাওয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> প্রত্যেক কিশোর-কিশোরীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি গ্রহণ করা</li>
+                      <li><i class="fa-solid fa-circle-check"></i> খাবার খাওয়ার আগে ও পরে সাবান এবং নিরাপদ পানি দিয়ে হাত ধোয়া</li>
+                      <li><i class="fa-solid fa-circle-check"></i> স্বাস্থ্যসম্মত ল্যাট্রিন ব্যবহার করা</li>
+                      <li><i class="fa-solid fa-circle-check"></i> ১৮-এর আগে বিয়ে নয়, ২০-এর আগে সন্তান নয়</li>
                     </ul>
                   </div>
                 </div>
@@ -14176,57 +13154,31 @@ const coursesData = [
                 "চিনি ও মিষ্টিজাতীয় খাবার বেশি খাওয়া",
               ];
 
-              const causeIcons = ["fa-burger", "fa-couch", "fa-moon", "fa-french-fries", "fa-candy-cane"];
-
               const renderCauses = () =>
                 causePoints
-                  .map((item, idx) => `
-                      <li style="list-style:none; border-radius:14px; padding:1.05rem 1.2rem; display:flex; gap:0.9rem; align-items:flex-start; margin-bottom:0.8rem; background:linear-gradient(135deg,${[
-                        "#fff0f0,#ffe4e4",
-                        "#fff6ea,#ffe9d6",
-                        "#f3f1ff,#e8e2ff",
-                        "#fff2e9,#ffe5d7",
-                        "#fef0fb,#f9e2f3",
-                      ][idx % 5]}); border-left:5px solid ${[
-                        "#d86464",
-                        "#e19a4e",
-                        "#8a71d7",
-                        "#d88556",
-                        "#cd69a8",
-                      ][idx % 5]}; box-shadow:${[
-                        "12px 12px 24px rgba(206,108,108,.14)",
-                        "-10px 12px 22px rgba(212,153,89,.14)",
-                        "12px -8px 22px rgba(132,108,198,.15)",
-                        "-12px 10px 22px rgba(205,129,88,.14)",
-                        "10px 12px 22px rgba(198,103,161,.15)",
-                      ][idx % 5]};">
-                        <span style="width:38px; min-width:38px; height:38px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,${[
-                          "#ef8f8f,#cf6161",
-                          "#f2b06a,#dc8b3d",
-                          "#ad98ef,#8165d0",
-                          "#eca070,#ce7c4d",
-                          "#e58cc2,#c55e98",
-                        ][idx % 5]}); color:#fff; box-shadow:0 8px 14px rgba(0,0,0,.13);"><i class="fa-solid ${causeIcons[idx % causeIcons.length]}"></i></span>
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `)
+                    `
+                  )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:16px; right:22px; width:88px; height:88px; border-radius:50%; background:linear-gradient(135deg,#f0ecff,#e8e2ff); opacity:.44; z-index:0;"></span>
-                  <span style="position:absolute; bottom:18px; left:20px; width:120px; height:54px; border-radius:20px; background:linear-gradient(135deg,#f7f2ff,#eee6ff); opacity:.42; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-weight-scale me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "অধিক ওজন ও স্থূলতা",
                     "অধিক ওজন ও স্থূলতা"
                   )}</h2>
-                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1; background:linear-gradient(135deg,#f5f1ff,#eee8ff,#faf8ff); border:1px solid rgba(190,176,239,.45); box-shadow:14px 14px 28px rgba(133,118,196,.15), -8px -8px 20px rgba(255,255,255,.58);">
+                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60">
                     <p class="mb-0">
-                      বডি মাস ইনডেক্স (বিএমআই) ২৫ থেকে ২৯.৯ এর মধ্যে থাকলে তাকে অতিরিক্ত ওজন হিসেবে ধরা হয়। অন্যদিকে বিএমআই ৩০ বা তার বেশি হলে তাকে স্থূলতা বলা হয়। তরুণ-তরুণীদের মধ্যে স্থূলতার হার বৃদ্ধির জন্য ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধুলা, ব্যায়াম ও সুযোগ-সুবিধার প্রভাব বিদ্যমান। সুষম খাবারের প্রয়োজনীয়তা ও সুষম খাবার কোনগুলো এবং তার সুফল সম্পর্কে পরিবারের মধ্যে ধারণা কম রয়েছে। তাছাড়া গ্রাম ও শহরে মেয়েদের উপযুক্ত খেলার স্থান ও নিরাপদ কাঠামোর সংকট রয়েছে।
+                      বডি মাস ইনডেক্স (বিএমআই) ২৫ থেকে ২৯.৯ এর মধ্যে থাকলে তাকে অতিরিক্ত ওজন হিসেবে ধরা হয়। অন্যদিকে বিএমআই ৩০ বা তার বেশি হলে তাকে স্থূলতা বলা হয়। কিশোর-কিশোরীদের মধ্যে স্থূলতার হার বৃদ্ধির জন্য ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধুলা, ব্যায়াম ও সুযোগ-সুবিধার প্রভাব বিদ্যমান। সুষম খাবারের প্রয়োজনীয়তা ও সুষম খাবার কোনগুলো এবং তার সুফল সম্পর্কে পরিবারের মধ্যে ধারণা কম রয়েছে। তাছাড়া গ্রাম ও শহরে মেয়েদের উপযুক্ত খেলার স্থান ও নিরাপদ কাঠামোর সংকট রয়েছে।
                     </p>
                   </div>
-                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="100" style="position:relative; z-index:1; background:linear-gradient(135deg,#f6f3ff,#efe9ff,#fbf9ff); border:1px solid rgba(195,182,240,.45); box-shadow:-12px 16px 30px rgba(133,119,198,.16), 8px -8px 18px rgba(255,255,255,.56);">
-                    <h3 class="gradient-text mb-3"><i class="fa-solid fa-list-check me-2"></i>অধিক ওজন ও স্থূলতার কারণ :</h3>
+                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="gradient-text mb-3">অধিক ওজন ও স্থূলতার কারণ :</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderCauses()}
                     </ul>
@@ -14247,16 +13199,14 @@ const coursesData = [
             quiz: null,
             content: (function () {
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:20px; left:18px; width:90px; height:90px; border-radius:50%; background:linear-gradient(135deg,#ffe9ee,#ffe0e6); opacity:.44; z-index:0;"></span>
-                  <span style="position:absolute; bottom:18px; right:18px; width:120px; height:54px; border-radius:20px; background:linear-gradient(135deg,#fff1f4,#ffe7ed); opacity:.42; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-exclamation-circle me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
                     "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব"
                   )}</h2>
-                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1; background:linear-gradient(135deg,#fff2f5,#ffebf1,#fff8fa); border:1px solid rgba(243,193,206,.45); box-shadow:16px 14px 28px rgba(204,125,153,.16), -8px -8px 20px rgba(255,255,255,.56);">
-                    <figure class="text-center mb-0" style="background:linear-gradient(135deg,#fff6f8,#fff0f3); border:1px solid rgba(245,204,217,.45); border-radius:16px; padding:12px; box-shadow:-10px 14px 24px rgba(191,123,151,.14);">
-                      <img src="img/modu19/odhik.jpg" alt="অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব" class="img-fluid img-zoom rounded shadow-sm" style="width:100%; box-shadow:10px 12px 22px rgba(177,115,141,.22);" />
+                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="60">
+                    <figure class="text-center mb-0">
+                      <img src="img/modu19/odhik.jpg" alt="অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব" class="img-fluid img-zoom rounded shadow-sm" style="width:100%" />
                     </figure>
                   </div>
                 </div>
@@ -14285,71 +13235,40 @@ const coursesData = [
               const preventionPoints = [
                 "পরিমিত সুষম খাবার খেতে হবে",
                 "নিয়মিত শরীরচর্চা, ব্যায়াম ও খেলাধুলা করতে হবে",
-                "তরুণ-তরুণীদের সারা সপ্তাহে প্রতিদিন গড়ে অন্তত ৬০ মিনিট মাঝারি থেকে ভারী শারীরিক ব্যায়াম করা উচিত",
+                "কিশোর-কিশোরীদের সারা সপ্তাহে প্রতিদিন গড়ে অন্তত ৬০ মিনিট মাঝারি থেকে ভারী শারীরিক ব্যায়াম করা উচিত",
                 "তেলেভাজা, অধিক তৈলাক্ত, লবণাক্ত ও চর্বিজাতীয় খাবার যেমন ফাস্টফুড, চিপস, ফ্রাইড ফুড ইত্যাদি পরিত্যাগ করতে হবে",
                 "প্রতিদিন ফলমূল খাওয়ার অভ্যাস করতে হবে এবং ফলের রসের বদলে আস্ত ফল খেতে হবে",
                 "কোমল পানীয় (সফট ড্রিংকস, এনার্জি ড্রিংকস, কৃত্রিম ফলের রস ইত্যাদি) পান করা থেকে বিরত থাকতে হবে",
               ];
 
-              const diseaseIcons = ["fa-heart-pulse", "fa-droplet", "fa-heart", "fa-oil-can", "fa-notes-medical"];
-              const preventionIcons = ["fa-bowl-food", "fa-person-running", "fa-stopwatch", "fa-ban", "fa-apple-whole", "fa-bottle-water"];
-
-              const renderList = (items, icons, offset = 0) =>
+              const renderList = (items) =>
                 items
-                  .map((item, idx) => `
-                      <li style="list-style:none; border-radius:14px; padding:1.05rem 1.2rem; display:flex; gap:0.9rem; align-items:flex-start; margin-bottom:0.8rem; background:linear-gradient(135deg,${[
-                        "#fff0f0,#ffe4e4",
-                        "#eef7ff,#e1f2ff",
-                        "#fff6ec,#ffe9d7",
-                        "#f2f1ff,#e8e4ff",
-                        "#fef0f8,#fae2f0",
-                        "#f0fff6,#e2f8ec",
-                      ][(idx + offset) % 6]}); border-left:5px solid ${[
-                        "#d96666",
-                        "#4c9ede",
-                        "#e19749",
-                        "#8771d3",
-                        "#d06ca6",
-                        "#30a56a",
-                      ][(idx + offset) % 6]}; box-shadow:${[
-                        "12px 12px 24px rgba(206,112,112,.14)",
-                        "-10px 12px 22px rgba(96,156,207,.14)",
-                        "12px -8px 22px rgba(214,155,94,.15)",
-                        "-12px 10px 22px rgba(130,111,200,.15)",
-                        "10px 12px 22px rgba(194,105,158,.15)",
-                        "-10px 10px 20px rgba(85,167,125,.14)",
-                      ][(idx + offset) % 6]};">
-                        <span style="width:38px; min-width:38px; height:38px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,${[
-                          "#ef9494,#cf6464",
-                          "#6bb5ed,#3e87cb",
-                          "#f2b06a,#db8a3d",
-                          "#ab98ef,#7f66d0",
-                          "#e790c1,#c56098",
-                          "#54ce8d,#2f9a63",
-                        ][(idx + offset) % 6]}); color:#fff; box-shadow:0 8px 14px rgba(0,0,0,.13);"><i class="fa-solid ${icons[idx % icons.length]}"></i></span>
+                  .map(
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `)
+                    `
+                  )
                   .join("");
 
               return `
-                <div class="lesson-slide" style="position:relative; overflow:hidden;">
-                  <span style="position:absolute; top:18px; right:20px; width:90px; height:90px; border-radius:50%; background:linear-gradient(135deg,#fff2ef,#ffe6df); opacity:.44; z-index:0;"></span>
-                  <span style="position:absolute; bottom:20px; left:20px; width:122px; height:54px; border-radius:20px; background:linear-gradient(135deg,#fff8f3,#ffefdf); opacity:.42; z-index:0;"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="position:relative; z-index:1;"><i class="fa-solid fa-notes-medical me-2"></i>${yhLang(
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "অধিক ওজন ও স্থূলতার ঝুঁকি",
                     "অধিক ওজন ও স্থূলতার ঝুঁকি"
                   )}</h2>
-                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60" style="position:relative; z-index:1; background:linear-gradient(135deg,#fff4ef,#ffede5,#fff8f3); border:1px solid rgba(241,196,164,.46); box-shadow:14px 16px 30px rgba(202,147,107,.16), -8px -8px 18px rgba(255,255,255,.58);">
+                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60">
                     <p class="mb-3">কৈশোরকালীন বয়সে অধিক ওজন ও স্থূলতার কারণে বিভিন্ন ধরনের অসংক্রামক রোগে আক্রান্ত হওয়ার প্রবণতা বেড়ে যায়। যেমন –</p>
                     <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(diseasePoints, diseaseIcons, 0)}
+                      ${renderList(diseasePoints)}
                     </ul>
                   </div>
-                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="100" style="position:relative; z-index:1; background:linear-gradient(135deg,#fff7ef,#fff1e5,#fffbf6); border:1px solid rgba(241,204,170,.46); box-shadow:-12px 16px 30px rgba(200,146,107,.16), 8px -8px 18px rgba(255,255,255,.56);">
-                    <h3 class="gradient-text mb-3"><i class="fa-solid fa-shield-heart me-2"></i>অধিক ওজন ও স্থূলতা প্রতিরোধে করণীয় :</h3>
+                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="gradient-text mb-3">অধিক ওজন ও স্থূলতা প্রতিরোধে করণীয় :</h3>
                     <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(preventionPoints, preventionIcons, 2)}
+                      ${renderList(preventionPoints)}
                     </ul>
                   </div>
                 </div>
@@ -14362,7 +13281,7 @@ const coursesData = [
         id: "ch-20",
         title: yhLang(
           "Module-20: Special care for vulnerable adolescents",
-          "মডিউল-২০: তরুণ-তরুণীদের অসংক্রামক রোগ ও তার প্রতিরোধ"
+          "মডিউল-২০: কিশোর-কিশোরীদের অসংক্রামক রোগ ও তার প্রতিরোধ"
         ),
         lessons: [
           {
@@ -14414,12 +13333,12 @@ const coursesData = [
                     <p class="mb-0" data-aos="fade-up" data-aos-delay="80">
                       ${yhLang(
                         "Non-communicable diseases are not spread directly from one person to another. They are also called chronic diseases because they usually develop slowly and persist for a long time. Around three thousand children and adolescents die every day from NCDs worldwide. These diseases account for about 68 percent of all deaths globally, making them a major public health problem.",
-                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও তরুণ-তরুণী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।"
+                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও কিশোর-কিশোরী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।"
                       )}
                     </p>
                   </div>
                   <div class="row g-3">
-                    <div class="col-12 col-lg-2">
+                    <div class="col-12 col-lg-5">
                       <div class="glass-card p-2 mb-3">
                         <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang(
                           "WHO has identified four key risk factors for NCDs. They are:",
@@ -14431,9 +13350,9 @@ const coursesData = [
                       </div>
                       
                     </div>
-                    <div class="col-12 col-lg-10">
-                      <figure class="text-center mb-0" data-aos="zoom-in" data-aos-delay="140">
-                        <img src="img/modu20/rog1_new.png" style="max-height: 500px; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
+                    <div class="col-12 col-lg-7">
+                      <figure class="text-center mb-0 " data-aos="zoom-in" data-aos-delay="140">
+                        <img src="img/modu20/rog1_new.png" style="border-radius: 18px !important; max-height: 500px; width: 100%;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
                       </figure>
                     </div>
                   </div>
@@ -14445,8 +13364,8 @@ const coursesData = [
           {
             id: "ch20-lesson-2",
             title: yhLang(
-              "What to do about faulty eating habits and physical exertion",
-              "ত্রুটিপূর্ণ খাদ্যাভ্যাস  ও কায়িক পরিশ্রমের করণীয়"
+              "Preventing physical inactivity",
+              "কায়িক পরিশ্রমের করণীয়"
             ),
             icon: "fa-apple-whole",
             gradientClass: "bg-gradient-mint",
@@ -14559,8 +13478,8 @@ const coursesData = [
                   </div>
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-apple-whole"></i>${yhLang(
-                    "What to do about faulty eating habits and physical exertion",
-                    "ত্রুটিপূর্ণ খাদ্যাভ্যাস  ও কায়িক পরিশ্রমের করণীয়"
+                    "Preventing physical inactivity",
+                    "কায়িক পরিশ্রমের করণীয়"
                   )}</h2>
                   <div class="row g-3">
                     <div class="col-12 col-lg-5">
@@ -14573,7 +13492,7 @@ const coursesData = [
                           ${renderList(preventionList, 120)}
                         </ul>
                       </div>
-                      <div class="glass-card p-4">
+                      <div class="glass-card p-4 h-100">
                         <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-running"></i>${yhLang(
                           "Actions to address lack of physical activity:",
                           "কায়িক পরিশ্রমের অভাব পূরণে করণীয় :"
@@ -14585,7 +13504,7 @@ const coursesData = [
                     </div>
                     <div class="col-12 col-lg-7">
                       <figure class="text-center mb-0" data-aos="zoom-in" data-aos-delay="140">
-                        <img src="img/modu20/unhealthy.png" style="height: 650px; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
+                        <img src="img/modu20/unhealthy.png" style="max-height: 580px; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
                       </figure>
                     </div>
                   </div>
@@ -14622,7 +13541,7 @@ const coursesData = [
                   heading: "২. শিক্ষাপ্রতিষ্ঠানের ভূমিকা",
                   icon: "fa-school",
                   bullets: [
-                      { text: "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে তরুণ-তরুণীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।", icon: "fa-user-shield" },
+                      { text: "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে কিশোর-কিশোরীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।", icon: "fa-user-shield" },
                       { text: "স্কুল-কলেজে তামাক ও মাদকের বিরুদ্ধে নিয়মিত সেমিনার, পোস্টার প্রদর্শনী বা বিতর্ক প্রতিযোগিতা আয়োজন।", icon: "fa-chalkboard-user" },
                       { text: "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং সুবিধা দেওয়া।", icon: "fa-hand-holding-heart" },
                       { text: "শিক্ষকরা ঝুঁকিপূর্ণ শিক্ষার্থীদের প্রতি বিশেষ নজর দেওয়া।", icon: "fa-eye" },
@@ -14675,8 +13594,8 @@ const coursesData = [
                   sections
                     .map(
                       (section, idx) => `
-                        <article class="glass-card p-2 h-100">
-                          <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h4>
+                        <article class="glass-card p-4 h-100">
+                          <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h4>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderBullets(section.bullets, baseDelay + idx * 40 + 20)}
                           </ul>
@@ -14698,7 +13617,7 @@ const coursesData = [
                     "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়",
                     "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়"
                   )}</h2>
-                  <div class="glass-card p-2 mb-2">
+                  <div class="glass-card p-4 mb-3">
                     <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
                   </div>
                   <div class="row g-3">
@@ -14714,109 +13633,109 @@ const coursesData = [
               `;
             })(),
           },
-          // {
-          //   id: "ch20-lesson-4",
-          //   title: yhLang(
-          //     "তরুণ-তরুণীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা",
-          //     "তরুণ-তরুণীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
-          //   ),
-          //   icon: "fa-lungs",
-          //   gradientClass: "bg-gradient-purple",
-          //   audioFile: "",
-          //   quiz: null,
-          //   content: (function () {
-          //     const introText = "অ্যাজমা একটি দীর্ঘস্থায়ী শ্বাসযন্ত্রের রোগ। তবে নিয়মিত এবং সঠিকভাবে ওষুধ গ্রহণ করলে দীর্ঘদিন সুস্থ থাকা সম্ভব।";
-
-          //     const earlySymptoms = [
-          //       { text: "বারবার কাশি", icon: "fa-head-side-cough" },
-          //       { text: "বুকে বাঁশির মতো শব্দ হওয়া", icon: "fa-volume-high" },
-          //       { text: "শ্বাসকষ্ট / দম ফেলতে কষ্ট হওয়া", icon: "fa-lungs" },
-          //       { text: "বুক চেপে ধরা", icon: "fa-heart-circle-bolt" },
-          //       { text: "অতিরিক্ত আবেগের মাধ্যমে উপসর্গ বেড়ে যায়", icon: "fa-face-frown" },
-          //       { text: "সাধারণত রাতে / সকালে উপসর্গ বেশি দেখা দেয়", icon: "fa-moon" },
-          //       { text: "স্যাঁতসেঁতে বাতাসে উপসর্গ বেড়ে যায়", icon: "fa-cloud-rain" },
-          //     ];
-
-          //     const dangerSigns = [
-          //       { text: "শ্বাসকষ্টের কারণে কথা বলতে না পারা", icon: "fa-comment-slash" },
-          //       { text: "শ্বাসকষ্টের কারণে পানি খেতে না পারা", icon: "fa-glass-water" },
-          //       { text: "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব", icon: "fa-bed" },
-          //       { text: "দ্রুত শ্বাস-প্রশ্বাস নেওয়া", icon: "fa-gauge-high" },
-          //       { text: "রক্তে অক্সিজেনের মাত্রা (SpO₂) ৯২% এর নিচে", icon: "fa-wave-square" },
-          //       { text: "সায়ানোসিস (ত্বক বা ঠোঁটের নীলচে রঙ ধারণ করা)", icon: "fa-triangle-exclamation" },
-          //     ];
-
-          //     const preventionCauses = [
-          //       { text: "ধুলা-বালি", icon: "fa-broom" },
-          //       { text: "ফুলের রেণু", icon: "fa-seedling" },
-          //       { text: "ঠান্ডা বাতাস", icon: "fa-wind" },
-          //       { text: "ভাইরাস সংক্রমণ", icon: "fa-virus" },
-          //       { text: "অতিরিক্ত আবেগ-উত্তেজনা", icon: "fa-face-flushed" },
-          //       { text: "স্যাঁতসেঁতে পরিবেশ", icon: "fa-water" },
-          //       { text: "সিগারেটের ও অন্যান্য ধোঁয়া", icon: "fa-smoking" },
-          //     ];
-
-          //     const renderList = (items, baseDelay = 0) =>
-          //       items
-          //         .map(
-          //           (item, idx) => `
-          //             <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
-          //               <i class="fa-solid ${item.icon}"></i>
-          //               <span>${item.text}</span>
-          //             </li>
-          //           `
-          //         )
-          //         .join("");
-
-          //     return `
-          //       <div class="lesson-slide mod20-lesson mod20-lesson-4">
-          //         <div class="mod20-shapes">
-          //           <span class="mod20-shape mod20-shape--orb"></span>
-          //           <span class="mod20-shape mod20-shape--ring"></span>
-          //           <span class="mod20-shape mod20-shape--triangle"></span>
-          //           <span class="mod20-shape mod20-shape--wave"></span>
-          //         </div>
-          //         <div class="mod20-content">
-          //         <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-lungs"></i>${yhLang(
-          //           "তরুণ-তরুণীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা",
-          //           "তরুণ-তরুণীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
-          //         )}</h2>
-          //         <div class="glass-card p-4 mb-3">
-          //           <h4 class="mb-2 gradient-text" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-lungs"></i>অ্যাজমা বা হাঁপানি রোগঃ</h4>
-          //           <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${introText}</p>
-          //         </div>
-          //         <div class="row g-3">
-          //           <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-stethoscope"></i>অ্যাজমা বা হাঁপানি রোগের প্রাথমিক লক্ষণসমূহ</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(earlySymptoms, 100)}
-          //               </ul>
-          //             </article>
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-triangle-exclamation"></i>বিপজ্জনক লক্ষণসমূহ</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(dangerSigns, 100)}
-          //               </ul>
-          //             </article>
-          //           </div>
-          //           <div class="col-12 col-lg-6">
-          //             <div class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-shield-heart"></i>অ্যাজমা বা হাঁপানি রোগ প্রতিরোধে করণীয়ঃ</h4>
-          //               <p class="small text-muted mb-3" data-aos="fade-up" data-aos-delay="100">নিম্নলিখিত কারণগুলো অ্যাজমা বা হাঁপানির জন্য দায়ী, সুতরাং এগুলো থেকে যতটা সম্ভব নিজেকে সুরক্ষিত রাখতে হবে—</p>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(preventionCauses, 120)}
-          //               </ul>
-          //             </div>
-          //           </div>
-          //         </div>
-          //         </div>
-          //       </div>
-          //     `;
-          //   })(),
-          // },
           {
             id: "ch20-lesson-4",
+            title: yhLang(
+              "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা",
+              "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
+            ),
+            icon: "fa-lungs",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const introText = "অ্যাজমা একটি দীর্ঘস্থায়ী শ্বাসযন্ত্রের রোগ। তবে নিয়মিত এবং সঠিকভাবে ওষুধ গ্রহণ করলে দীর্ঘদিন সুস্থ থাকা সম্ভব।";
+
+              const earlySymptoms = [
+                { text: "বারবার কাশি", icon: "fa-head-side-cough" },
+                { text: "বুকে বাঁশির মতো শব্দ হওয়া", icon: "fa-volume-high" },
+                { text: "শ্বাসকষ্ট / দম ফেলতে কষ্ট হওয়া", icon: "fa-lungs" },
+                { text: "বুক চেপে ধরা", icon: "fa-heart-circle-bolt" },
+                { text: "অতিরিক্ত আবেগের মাধ্যমে উপসর্গ বেড়ে যায়", icon: "fa-face-frown" },
+                { text: "সাধারণত রাতে / সকালে উপসর্গ বেশি দেখা দেয়", icon: "fa-moon" },
+                { text: "স্যাঁতসেঁতে বাতাসে উপসর্গ বেড়ে যায়", icon: "fa-cloud-rain" },
+              ];
+
+              const dangerSigns = [
+                { text: "শ্বাসকষ্টের কারণে কথা বলতে না পারা", icon: "fa-comment-slash" },
+                { text: "শ্বাসকষ্টের কারণে পানি খেতে না পারা", icon: "fa-glass-water" },
+                { text: "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব", icon: "fa-bed" },
+                { text: "দ্রুত শ্বাস-প্রশ্বাস নেওয়া", icon: "fa-gauge-high" },
+                { text: "রক্তে অক্সিজেনের মাত্রা (SpO₂) ৯২% এর নিচে", icon: "fa-wave-square" },
+                { text: "সায়ানোসিস (ত্বক বা ঠোঁটের নীলচে রঙ ধারণ করা)", icon: "fa-triangle-exclamation" },
+              ];
+
+              const preventionCauses = [
+                { text: "ধুলা-বালি", icon: "fa-broom" },
+                { text: "ফুলের রেণু", icon: "fa-seedling" },
+                { text: "ঠান্ডা বাতাস", icon: "fa-wind" },
+                { text: "ভাইরাস সংক্রমণ", icon: "fa-virus" },
+                { text: "অতিরিক্ত আবেগ-উত্তেজনা", icon: "fa-face-flushed" },
+                { text: "স্যাঁতসেঁতে পরিবেশ", icon: "fa-water" },
+                { text: "সিগারেটের ও অন্যান্য ধোঁয়া", icon: "fa-smoking" },
+              ];
+
+              const renderList = (items, baseDelay = 0) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod20-lesson mod20-lesson-4">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-lungs"></i>${yhLang(
+                    "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা",
+                    "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
+                  )}</h2>
+                  <div class="glass-card p-4 mb-3">
+                    <h4 class="mb-2 gradient-text" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-lungs"></i>অ্যাজমা বা হাঁপানি রোগঃ</h4>
+                    <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${introText}</p>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-stethoscope"></i>অ্যাজমা বা হাঁপানি রোগের প্রাথমিক লক্ষণসমূহ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(earlySymptoms, 100)}
+                        </ul>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-triangle-exclamation"></i>বিপজ্জনক লক্ষণসমূহ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(dangerSigns, 100)}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-shield-heart"></i>অ্যাজমা বা হাঁপানি রোগ প্রতিরোধে করণীয়ঃ</h4>
+                        <p class="small text-muted mb-3" data-aos="fade-up" data-aos-delay="100">নিম্নলিখিত কারণগুলো অ্যাজমা বা হাঁপানির জন্য দায়ী, সুতরাং এগুলো থেকে যতটা সম্ভব নিজেকে সুরক্ষিত রাখতে হবে—</p>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(preventionCauses, 120)}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch20-lesson-5",
             title: yhLang(
               "অ্যাজমা বা হাঁপানি রোগঃ",
               "অ্যাজমা বা হাঁপানি রোগঃ"
@@ -14838,8 +13757,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-1 text-center">
-                          <img src="${img.src}" style="max-height: 450px; height:310px" alt="${img.alt}" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        <figure class="glass-card p-3 h-100 text-center">
+                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
@@ -14859,7 +13778,7 @@ const coursesData = [
                     "অ্যাজমা বা হাঁপানি রোগঃ",
                     "অ্যাজমা বা হাঁপানি রোগঃ"
                   )}</h2>
-                  <div class="row g-1 mt-1">
+                  <div class="row g-3 mt-1">
                     ${renderImageGrid()}
                   </div>
                   </div>
@@ -14867,123 +13786,123 @@ const coursesData = [
               `;
             })(),
           },
-          // {
-          //   id: "ch20-lesson-6",
-          //   title: yhLang(
-          //     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
-          //     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
-          //   ),
-          //   icon: "fa-vial",
-          //   gradientClass: "bg-gradient-yellow",
-          //   audioFile: "",
-          //   quiz: null,
-          //   content: (function () {
-          //     const diabetesInfo =
-          //       "ডায়াবেটিস একটি দীর্ঘমেয়াদী রোগ, যাতে রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে বেশি হয়ে যায়। এর প্রধান কারণ হলো ইনসুলিন হরমোনের অভাব বা ইনসুলিনের কার্যকারিতা হ্রাস পাওয়া। প্রাপ্তবয়স্কদের পাশাপাশি তরুণ-তরুণীরাও ডায়াবেটিসে আক্রান্ত হতে পারে। তরুণ-তরুণীদের ডায়াবেটিসকে সাধারণত টাইপ-১ ডায়াবেটিস বলা হয়।";
-
-          //     const diabetesEarly = [
-          //       { text: "বারবার পিপাসা পাওয়া", icon: "fa-glass-water" },
-          //       { text: "বারবার প্রস্রাব হওয়া", icon: "fa-toilet" },
-          //       { text: "অতিরিক্ত ক্ষুধা পাওয়া", icon: "fa-bowl-food" },
-          //       { text: "যথেষ্ট খাওয়া সত্ত্বেও ওজন কমে যাওয়া", icon: "fa-weight-scale" },
-          //       { text: "সবসময় ক্লান্তি, অবসাদ বা দুর্বলতা অনুভব করা", icon: "fa-battery-quarter" },
-          //     ];
-
-          //     const diabetesDanger = [
-          //       { text: "মুখ ও জিহ্বা শুকিয়ে যাওয়া", icon: "fa-droplet" },
-          //       { text: "দ্রুত / লম্বা শ্বাস", icon: "fa-lungs" },
-          //       { text: "শ্বাসে মিষ্টি ফলের মতো (এসিটোন) গন্ধ", icon: "fa-wind" },
-          //       { text: "পেটে ব্যথা", icon: "fa-circle-exclamation" },
-          //       { text: "বমির প্রবণতা / বমি", icon: "fa-face-dizzy" },
-          //     ];
-
-          //     const hypoIntro =
-          //       "রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে অত্যধিক কমে যাওয়াকে হাইপোগ্লাইসেমিয়া বলে। সাধারণত রক্তে গ্লুকোজের মাত্রা ৭০ মিলিগ্রাম/ডেসি লিটার (৩.৯ মিলিমল/লিটার) এর নিচে নামলে এটি ঘটে।";
-
-          //     const hypoSymptoms = [
-          //       { text: "অতিরিক্ত ঘাম হওয়া", icon: "fa-droplet" },
-          //       { text: "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব", icon: "fa-bed" },
-          //       { text: "চোখে ঝাপসা বা ঘোলা দেখা", icon: "fa-eye-low-vision" },
-          //       { text: "কাঁপুনি – হাত-পা কাঁপতে শুরু করা", icon: "fa-hands" },
-          //       { text: "অচেতনতা / অজ্ঞান হয়ে যাওয়া – শরীরের অবস্থা খারাপ হলে মানুষ অজ্ঞান হয়ে যেতে পারে বা জ্ঞান হারাতে পারে", icon: "fa-person-falling" },
-          //     ];
-
-          //     const parentActions = [
-          //       { text: "ডায়াবেটিসে আক্রান্ত শিশু-কিশোরকে বোঝানো যে নিয়ম মেনে চললে তার স্বাভাবিক জীবনযাপনে কোনো সমস্যা হবে না", icon: "fa-comments" },
-          //       { text: "প্রতিদিন কমপক্ষে ৩০ মিনিট দ্রুত হাঁটা / সাইকেল চালানো / সাঁতার কাটা / খেলাধুলা করা / ব্যায়াম করতে হবে", icon: "fa-person-running" },
-          //       { text: "পর্যাপ্ত পরিমাণে ফলমূল ও শাকসবজি খেতে হবে", icon: "fa-apple-whole" },
-          //       { text: "নিয়মিত রক্তে গ্লুকোজের মাত্রা পর্যবেক্ষণ করতে হবে", icon: "fa-gauge" },
-          //     ];
-
-          //     const renderList = (items, baseDelay = 0) =>
-          //       items
-          //         .map(
-          //           (item, idx) => `
-          //             <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
-          //               <i class="fa-solid ${item.icon}"></i>
-          //               <span>${item.text}</span>
-          //             </li>
-          //           `
-          //         )
-          //         .join("");
-
-          //     return `
-          //       <div class="lesson-slide mod20-lesson mod20-lesson-6">
-          //         <div class="mod20-shapes">
-          //           <span class="mod20-shape mod20-shape--orb"></span>
-          //           <span class="mod20-shape mod20-shape--ring"></span>
-          //           <span class="mod20-shape mod20-shape--triangle"></span>
-          //           <span class="mod20-shape mod20-shape--wave"></span>
-          //         </div>
-          //         <div class="mod20-content">
-          //         <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-vial"></i>${yhLang(
-          //           "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
-          //           "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
-          //         )}</h2>
-          //         <div class="row g-3">
-          //           <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-          //             <article class="glass-card p-4 h-100">
-          //               <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${diabetesInfo}</p>
-          //             </article>
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>ডায়াবেটিসের প্রাথমিক লক্ষণসমূহ</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(diabetesEarly, 80)}
-          //               </ul>
-          //             </article>
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>ডায়াবেটিসের বিপজ্জনক লক্ষণসমূহ</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(diabetesDanger, 80)}
-          //               </ul>
-          //             </article>
-          //           </div>
-          //           <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-droplet"></i>হাইপোগ্লাইসেমিয়া</h4>
-          //               <p class="mb-0" data-aos="fade-up" data-aos-delay="80">${hypoIntro}</p>
-          //             </article>
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>হাইপোগ্লাইসেমিয়ার লক্ষণ</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(hypoSymptoms, 80)}
-          //               </ul>
-          //             </article>
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(parentActions, 80)}
-          //               </ul>
-          //             </article>
-          //           </div>
-          //         </div>
-          //         </div>
-          //       </div>
-          //     `;
-          //   })(),
-          // },
           {
-            id: "ch20-lesson-5",
+            id: "ch20-lesson-6",
+            title: yhLang(
+              "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
+              "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
+            ),
+            icon: "fa-vial",
+            gradientClass: "bg-gradient-yellow",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const diabetesInfo =
+                "ডায়াবেটিস একটি দীর্ঘমেয়াদী রোগ, যাতে রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে বেশি হয়ে যায়। এর প্রধান কারণ হলো ইনসুলিন হরমোনের অভাব বা ইনসুলিনের কার্যকারিতা হ্রাস পাওয়া। প্রাপ্তবয়স্কদের পাশাপাশি কিশোর-কিশোরীরাও ডায়াবেটিসে আক্রান্ত হতে পারে। কিশোর-কিশোরীদের ডায়াবেটিসকে সাধারণত টাইপ-১ ডায়াবেটিস বলা হয়।";
+
+              const diabetesEarly = [
+                { text: "বারবার পিপাসা পাওয়া", icon: "fa-glass-water" },
+                { text: "বারবার প্রস্রাব হওয়া", icon: "fa-toilet" },
+                { text: "অতিরিক্ত ক্ষুধা পাওয়া", icon: "fa-bowl-food" },
+                { text: "যথেষ্ট খাওয়া সত্ত্বেও ওজন কমে যাওয়া", icon: "fa-weight-scale" },
+                { text: "সবসময় ক্লান্তি, অবসাদ বা দুর্বলতা অনুভব করা", icon: "fa-battery-quarter" },
+              ];
+
+              const diabetesDanger = [
+                { text: "মুখ ও জিহ্বা শুকিয়ে যাওয়া", icon: "fa-droplet" },
+                { text: "দ্রুত / লম্বা শ্বাস", icon: "fa-lungs" },
+                { text: "শ্বাসে মিষ্টি ফলের মতো (এসিটোন) গন্ধ", icon: "fa-wind" },
+                { text: "পেটে ব্যথা", icon: "fa-circle-exclamation" },
+                { text: "বমির প্রবণতা / বমি", icon: "fa-face-dizzy" },
+              ];
+
+              const hypoIntro =
+                "রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে অত্যধিক কমে যাওয়াকে হাইপোগ্লাইসেমিয়া বলে। সাধারণত রক্তে গ্লুকোজের মাত্রা ৭০ মিলিগ্রাম/ডেসি লিটার (৩.৯ মিলিমল/লিটার) এর নিচে নামলে এটি ঘটে।";
+
+              const hypoSymptoms = [
+                { text: "অতিরিক্ত ঘাম হওয়া", icon: "fa-droplet" },
+                { text: "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব", icon: "fa-bed" },
+                { text: "চোখে ঝাপসা বা ঘোলা দেখা", icon: "fa-eye-low-vision" },
+                { text: "কাঁপুনি – হাত-পা কাঁপতে শুরু করা", icon: "fa-hands" },
+                { text: "অচেতনতা / অজ্ঞান হয়ে যাওয়া – শরীরের অবস্থা খারাপ হলে মানুষ অজ্ঞান হয়ে যেতে পারে বা জ্ঞান হারাতে পারে", icon: "fa-person-falling" },
+              ];
+
+              const parentActions = [
+                { text: "ডায়াবেটিসে আক্রান্ত শিশু-কিশোরকে বোঝানো যে নিয়ম মেনে চললে তার স্বাভাবিক জীবনযাপনে কোনো সমস্যা হবে না", icon: "fa-comments" },
+                { text: "প্রতিদিন কমপক্ষে ৩০ মিনিট দ্রুত হাঁটা / সাইকেল চালানো / সাঁতার কাটা / খেলাধুলা করা / ব্যায়াম করতে হবে", icon: "fa-person-running" },
+                { text: "পর্যাপ্ত পরিমাণে ফলমূল ও শাকসবজি খেতে হবে", icon: "fa-apple-whole" },
+                { text: "নিয়মিত রক্তে গ্লুকোজের মাত্রা পর্যবেক্ষণ করতে হবে", icon: "fa-gauge" },
+              ];
+
+              const renderList = (items, baseDelay = 0) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod20-lesson mod20-lesson-6">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-vial"></i>${yhLang(
+                    "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
+                    "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
+                  )}</h2>
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+                      <article class="glass-card p-4 h-100">
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${diabetesInfo}</p>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>ডায়াবেটিসের প্রাথমিক লক্ষণসমূহ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(diabetesEarly, 80)}
+                        </ul>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>ডায়াবেটিসের বিপজ্জনক লক্ষণসমূহ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(diabetesDanger, 80)}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-droplet"></i>হাইপোগ্লাইসেমিয়া</h4>
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="80">${hypoIntro}</p>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>হাইপোগ্লাইসেমিয়ার লক্ষণ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(hypoSymptoms, 80)}
+                        </ul>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(parentActions, 80)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch20-lesson-7",
             title: yhLang(
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
@@ -15005,8 +13924,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-1 text-center">
-                          <img src="${img.src}" style="height: 310px" alt="${img.alt}" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        <figure class="glass-card p-3 h-100 text-center">
+                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
@@ -15017,12 +13936,16 @@ const coursesData = [
                 <div class="lesson-slide mod20-lesson mod20-lesson-7">
                   <div class="mod20-shapes">
                     <span class="mod20-shape mod20-shape--orb"></span>
-                    <span cl              <div class="mod20-content">
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-syringe"></i>${yhLang(
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
                   )}</h2>
-                  <div class="row g-1 mt-1">
+                  <div class="row g-3 mt-1">
                     ${renderImageGrid()}
                   </div>
                   </div>
@@ -15030,102 +13953,102 @@ const coursesData = [
               `;
             })(),
           },
-          // {
-          //   id: "ch20-lesson-8",
-          //   title: yhLang(
-          //     "থ্যালাসেমিয়া কী?",
-          //     "থ্যালাসেমিয়া কী?"
-          //   ),
-          //   icon: "fa-dna",
-          //   gradientClass: "bg-gradient-orange",
-          //   audioFile: "",
-          //   quiz: null,
-          //   content: (function () {
-          //     const introText =
-          //       "থ্যালাসেমিয়া একটি বংশগত রক্তরোগ। এ রোগে আক্রান্ত হলে রক্তে হিমোগ্লোবিন তৈরি বাধাগ্রস্ত হয়। ফলে শরীরে রক্তশূন্যতা (অ্যানিমিয়া) দেখা দেয়। মা–বাবা থ্যালাসেমিয়ায় আক্রান্ত হলে বা নীরব বাহক হলে সন্তানের থ্যালাসেমিয়া হতে পারে।";
-
-          //     const earlySymptoms = [
-          //       { text: "দিনে দিনে ফ্যাকাসে হয়ে যাওয়া", icon: "fa-face-frown" },
-          //       { text: "অতিরিক্ত শারীরিক দুর্বলতা", icon: "fa-battery-empty" },
-          //       { text: "স্বাভাবিক খেলাধুলায় হাঁপিয়ে যাওয়া", icon: "fa-person-walking" },
-          //       { text: "জন্ডিস হওয়া", icon: "fa-sun" },
-          //       { text: "ধীরে ধীরে পেট ফুলে যাওয়া", icon: "fa-circle" },
-          //       { text: "খাদ্যদ্রব্য নয় এমন জিনিস, বিশেষ করে মাটি, কাদা ইত্যাদি খাওয়ার প্রবণতা", icon: "fa-triangle-exclamation" },
-          //       { text: "বয়স অনুযায়ী শারীরিক বৃদ্ধি না হওয়া, বারবার মুখের কোণায় ঘা হওয়া", icon: "fa-child" },
-          //     ];
-
-          //     const dangerSymptoms = [
-          //       { text: "অতিরিক্ত ফ্যাকাসে হয়ে যাওয়া", icon: "fa-face-frown-open" },
-          //       { text: "বুক ধরফর করা", icon: "fa-heart-pulse" },
-          //       { text: "অতিরিক্ত শ্বাসকষ্ট", icon: "fa-lungs" },
-          //       { text: "থ্যালাসেমিক মুখ", icon: "fa-user" },
-          //     ];
-
-          //     const guardianActions = [
-          //       { text: "রক্তসম্পর্কিত আত্মীয়দের (মামাতো, চাচাতো, ফুপাতো, খালাতো ভাই-বোন) মধ্যে বিবাহ থেকে বিরত থাকতে হবে", icon: "fa-people-arrows" },
-          //       { text: "বিয়ের আগে বর ও কনে থ্যালাসেমিয়া বাহক কি না, তা পরীক্ষা করে দেখতে হবে", icon: "fa-vial" },
-          //       { text: "কলিজা, ডিম, মাংস, ডাল (বিশেষত মুগডাল), দুধ ও দুধজাত খাবার, মাছ, শিম, মিষ্টি কুমড়া, ফুলকপি, মটর, সবুজ শাকসবজি বিশেষ করে কচুশাক/লালশাক, আমলকী, জাম্বুরা, কমলা, লেবু ইত্যাদি খাবার বেশি খেতে হবে", icon: "fa-carrot" },
-          //     ];
-
-          //     const renderList = (items, baseDelay = 0) =>
-          //       items
-          //         .map(
-          //           (item, idx) => `
-          //             <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
-          //               <i class="fa-solid ${item.icon}"></i>
-          //               <span>${item.text}</span>
-          //             </li>
-          //           `
-          //         )
-          //         .join("");
-
-          //     return `
-          //       <div class="lesson-slide mod20-lesson mod20-lesson-8">
-          //         <div class="mod20-shapes">
-          //           <span class="mod20-shape mod20-shape--orb"></span>
-          //           <span class="mod20-shape mod20-shape--ring"></span>
-          //           <span class="mod20-shape mod20-shape--triangle"></span>
-          //           <span class="mod20-shape mod20-shape--wave"></span>
-          //         </div>
-          //         <div class="mod20-content">
-          //         <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-dna"></i>${yhLang(
-          //           "থ্যালাসেমিয়া কী?",
-          //           "থ্যালাসেমিয়া কী?"
-          //         )}</h2>
-          //         <div class="glass-card p-4 mb-3">
-          //           <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
-          //         </div>
-          //         <div class="row g-3">
-          //           <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>থ্যালাসেমিয়া বা আয়রন ডেফিসিয়েন্সি এনিমিয়ার প্রাথমিক লক্ষণসমূহ</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(earlySymptoms, 80)}
-          //               </ul>
-          //             </article>
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>থ্যালাসেমিয়া রোগের বিপজ্জনক লক্ষণসমূহ</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(dangerSymptoms, 80)}
-          //               </ul>
-          //             </article>
-          //           </div>
-          //           <div class="col-12 col-lg-6">
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(guardianActions, 80)}
-          //               </ul>
-          //             </article>
-          //           </div>
-          //         </div>
-          //         </div>
-          //       </div>
-          //     `;
-          //   })(),
-          // },
           {
-            id: "ch20-lesson-6",
+            id: "ch20-lesson-8",
+            title: yhLang(
+              "থ্যালাসেমিয়া কী?",
+              "থ্যালাসেমিয়া কী?"
+            ),
+            icon: "fa-dna",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const introText =
+                "থ্যালাসেমিয়া একটি বংশগত রক্তরোগ। এ রোগে আক্রান্ত হলে রক্তে হিমোগ্লোবিন তৈরি বাধাগ্রস্ত হয়। ফলে শরীরে রক্তশূন্যতা (অ্যানিমিয়া) দেখা দেয়। মা–বাবা থ্যালাসেমিয়ায় আক্রান্ত হলে বা নীরব বাহক হলে সন্তানের থ্যালাসেমিয়া হতে পারে।";
+
+              const earlySymptoms = [
+                { text: "দিনে দিনে ফ্যাকাসে হয়ে যাওয়া", icon: "fa-face-frown" },
+                { text: "অতিরিক্ত শারীরিক দুর্বলতা", icon: "fa-battery-empty" },
+                { text: "স্বাভাবিক খেলাধুলায় হাঁপিয়ে যাওয়া", icon: "fa-person-walking" },
+                { text: "জন্ডিস হওয়া", icon: "fa-sun" },
+                { text: "ধীরে ধীরে পেট ফুলে যাওয়া", icon: "fa-circle" },
+                { text: "খাদ্যদ্রব্য নয় এমন জিনিস, বিশেষ করে মাটি, কাদা ইত্যাদি খাওয়ার প্রবণতা", icon: "fa-triangle-exclamation" },
+                { text: "বয়স অনুযায়ী শারীরিক বৃদ্ধি না হওয়া, বারবার মুখের কোণায় ঘা হওয়া", icon: "fa-child" },
+              ];
+
+              const dangerSymptoms = [
+                { text: "অতিরিক্ত ফ্যাকাসে হয়ে যাওয়া", icon: "fa-face-frown-open" },
+                { text: "বুক ধরফর করা", icon: "fa-heart-pulse" },
+                { text: "অতিরিক্ত শ্বাসকষ্ট", icon: "fa-lungs" },
+                { text: "থ্যালাসেমিক মুখ", icon: "fa-user" },
+              ];
+
+              const guardianActions = [
+                { text: "রক্তসম্পর্কিত আত্মীয়দের (মামাতো, চাচাতো, ফুপাতো, খালাতো ভাই-বোন) মধ্যে বিবাহ থেকে বিরত থাকতে হবে", icon: "fa-people-arrows" },
+                { text: "বিয়ের আগে বর ও কনে থ্যালাসেমিয়া বাহক কি না, তা পরীক্ষা করে দেখতে হবে", icon: "fa-vial" },
+                { text: "কলিজা, ডিম, মাংস, ডাল (বিশেষত মুগডাল), দুধ ও দুধজাত খাবার, মাছ, শিম, মিষ্টি কুমড়া, ফুলকপি, মটর, সবুজ শাকসবজি বিশেষ করে কচুশাক/লালশাক, আমলকী, জাম্বুরা, কমলা, লেবু ইত্যাদি খাবার বেশি খেতে হবে", icon: "fa-carrot" },
+              ];
+
+              const renderList = (items, baseDelay = 0) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod20-lesson mod20-lesson-8">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-dna"></i>${yhLang(
+                    "থ্যালাসেমিয়া কী?",
+                    "থ্যালাসেমিয়া কী?"
+                  )}</h2>
+                  <div class="glass-card p-4 mb-3">
+                    <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>থ্যালাসেমিয়া বা আয়রন ডেফিসিয়েন্সি এনিমিয়ার প্রাথমিক লক্ষণসমূহ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(earlySymptoms, 80)}
+                        </ul>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>থ্যালাসেমিয়া রোগের বিপজ্জনক লক্ষণসমূহ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(dangerSymptoms, 80)}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(guardianActions, 80)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch20-lesson-9",
             title: yhLang(
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
@@ -15147,8 +14070,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-1 mb-0 text-center">
-                          <img src="${img.src}" alt="${img.alt}" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        <figure class="glass-card p-3 h-100 text-center">
+                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
@@ -15168,7 +14091,7 @@ const coursesData = [
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
                   )}</h2>
-                  <div class="row g-1 mt-1">
+                  <div class="row g-3 mt-1">
                     ${renderImageGrid()}
                   </div>
                   </div>
@@ -15177,7 +14100,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch20-lesson-7",
+            id: "ch20-lesson-10",
             title: yhLang(
               "হৃদরোগ ও উচ্চ রক্তচাপ",
               "হৃদরোগ ও উচ্চ রক্তচাপ"
@@ -15206,7 +14129,7 @@ const coursesData = [
               ];
 
               const bpIntro =
-                "তরুন তরুনীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।";
+                "কিশোর-কিশোরীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।";
 
               const bpEarly = [
                 { text: "রক্তচাপ ১৪০/৯০ বা এর বেশি", icon: "fa-gauge-high" },
@@ -15248,27 +14171,40 @@ const coursesData = [
                   )}</h2>
                   <div class="row g-3">
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-                      <article class="glass-card p-1">
-                        <h4 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h4>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-heart-pulse"></i>হৃদরোগ</h4>
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${heartIntro}</p>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>শিশুর জন্মগত হৃদরোগের প্রাথমিক লক্ষণসমূহ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(heartEarly, 80)}
+                        </ul>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>শিশুর জন্মগত হৃদরোগের বিপজ্জনক লক্ষণসমূহ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(heartDanger, 80)}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h4>
                         <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${bpIntro}</p>
                       </article>
-                      <article class="glass-card p-1">
-                        <h4 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h4>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(bpEarly, 80)}
                         </ul>
                       </article>
-                      <article class="glass-card p-1">
-                        <h4 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-shield-heart"></i>উচ্চ রক্তচাপ প্রতিরোধের উপায়</h4>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-shield-heart"></i>উচ্চ রক্তচাপ প্রতিরোধের উপায়</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(bpPrevention, 80)}
                         </ul>
                       </article>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <figure class="glass-card p-1 mb-0 text-center">
-                        <img src="img/modu20/blood-pressure.jpg" alt="" style="height: 650px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
-                      </figure>
                     </div>
                   </div>
                   </div>
@@ -15276,156 +14212,156 @@ const coursesData = [
               `;
             })(),
           },
-          // {
-          //   id: "ch20-lesson-11",
-          //   title: yhLang(
-          //     "হৃদরোগ ও উচ্চ রক্তচাপ",
-          //     "হৃদরোগ ও উচ্চ রক্তচাপ"
-          //   ),
-          //   icon: "fa-heart-circle-bolt",
-          //   gradientClass: "bg-gradient-mint",
-          //   audioFile: "",
-          //   quiz: null,
-          //   content: (function () {
-          //     const heartImages = [
-          //       { src: "img/modu20/heart1.jpg", alt: "হৃদরোগ সচেতনতা ১" },
-          //       { src: "img/modu20/heart2.jpg", alt: "হৃদরোগ সচেতনতা ২" },
-          //       { src: "img/modu20/heart3.jpg", alt: "হৃদরোগ সচেতনতা ৩" },
-          //       { src: "img/modu20/heart4.jpg", alt: "হৃদরোগ সচেতনতা ৪" },
-          //     ];
-
-          //     const renderImageGrid = () =>
-          //       heartImages
-          //         .map(
-          //           (img, idx) => `
-          //             <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-          //               <figure class="glass-card p-3 h-100 text-center">
-          //                 <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
-          //               </figure>
-          //             </div>
-          //           `
-          //         )
-          //         .join("");
-
-          //     return `
-          //       <div class="lesson-slide mod20-lesson mod20-lesson-11">
-          //         <div class="mod20-shapes">
-          //           <span class="mod20-shape mod20-shape--orb"></span>
-          //           <span class="mod20-shape mod20-shape--ring"></span>
-          //           <span class="mod20-shape mod20-shape--triangle"></span>
-          //           <span class="mod20-shape mod20-shape--wave"></span>
-          //         </div>
-          //         <div class="mod20-content">
-          //         <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-heart-circle-bolt"></i>${yhLang(
-          //           "হৃদরোগ ও উচ্চ রক্তচাপ",
-          //           "হৃদরোগ ও উচ্চ রক্তচাপ"
-          //         )}</h2>
-          //         <div class="row g-3 mt-1">
-          //           ${renderImageGrid()}
-          //         </div>
-          //         </div>
-          //       </div>
-          //     `;
-          //   })(),
-          // },
-          // {
-          //   id: "ch20-lesson-12",
-          //   title: yhLang(
-          //     "তরুণ-তরুণীদের মৃগীরোগ",
-          //     "তরুণ-তরুণীদের মৃগীরোগ"
-          //   ),
-          //   icon: "fa-brain",
-          //   gradientClass: "bg-gradient-indigo",
-          //   audioFile: "",
-          //   quiz: null,
-          //   content: (function () {
-          //     const introText =
-          //       "মস্তিষ্কের কোনো স্নায়ুকোষের হঠাৎ অস্বাভাবিক উদ্দীপনার ফলে শারীরিক যে পরিবর্তন বা অবস্থা তৈরি হয়, তাকে বলা হয় মৃগীরোগ বা এপিলেপ্সি। এই পরিবর্তন শরীরের কোনো একটি অংশে বা সম্পূর্ণ শরীরজুড়ে হতে পারে। এটি মানসিক বা ছোঁয়াচে রোগ নয়, আলগা বাতাস বা জ্বিন-ভূতের আছর নয়। বরং এ রোগ যে কারোরই হতে পারে।";
-
-          //     const detectionPoints = [
-          //       { text: "জ্বর ছাড়া সমস্ত শরীরের অথবা শরীরের যেকোনো অঙ্গের একবার বা তার অধিক ঝাঁকুনি বা কাঁপুনি", icon: "fa-bolt" },
-          //       { text: "কোনো রকম ঝাঁকুনি বা কাঁপুনি ছাড়াই শরীর শক্ত / বাঁকা হয়ে যাওয়া", icon: "fa-person-falling" },
-          //       { text: "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া", icon: "fa-person-falling-burst" },
-          //     ];
-
-          //     const symptomPoints = [
-          //       { text: "জ্ঞান হারানো", icon: "fa-face-dizzy" },
-          //       { text: "মুখ দিয়ে ফেনা বা লালা পড়া", icon: "fa-droplet" },
-          //       { text: "জিহ্বায় কামড় খাওয়া", icon: "fa-teeth" },
-          //       { text: "চোখের মণি উপরের দিকে উঠে যাওয়া", icon: "fa-eye" },
-          //       { text: "শরীর শক্ত / বাঁকা হয়ে যাওয়া", icon: "fa-person-falling" },
-          //       { text: "প্রস্রাব / পায়খানা করে দেওয়া", icon: "fa-toilet-paper" },
-          //       { text: "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া", icon: "fa-circle-exclamation" },
-          //     ];
-
-          //     const guardianActions = [
-          //       { text: "খিঁচুনিরত অবস্থায় বাম পাশে কাত করে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রে নিয়ে যেতে হবে", icon: "fa-truck-medical" },
-          //       { text: "মৃগীরোগের ওষুধ চিকিৎসকের পরামর্শ ছাড়া বন্ধ করা যাবে না", icon: "fa-pills" },
-          //       { text: "খিঁচুনির দিন, তারিখ ও বর্ণনা মনে রেখে চিকিৎসককে জানাতে হবে", icon: "fa-clipboard-list" },
-          //     ];
-
-          //     const renderList = (items, baseDelay = 0) =>
-          //       items
-          //         .map(
-          //           (item, idx) => `
-          //             <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
-          //               <i class="fa-solid ${item.icon}"></i>
-          //               <span>${item.text}</span>
-          //             </li>
-          //           `
-          //         )
-          //         .join("");
-
-          //     return `
-          //       <div class="lesson-slide mod20-lesson mod20-lesson-12">
-          //         <div class="mod20-shapes">
-          //           <span class="mod20-shape mod20-shape--orb"></span>
-          //           <span class="mod20-shape mod20-shape--ring"></span>
-          //           <span class="mod20-shape mod20-shape--triangle"></span>
-          //           <span class="mod20-shape mod20-shape--wave"></span>
-          //         </div>
-          //         <div class="mod20-content">
-          //         <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-brain"></i>${yhLang(
-          //           "তরুণ-তরুণীদের মৃগীরোগ",
-          //           "তরুণ-তরুণীদের মৃগীরোগ"
-          //         )}</h2>
-          //         <div class="glass-card p-4 mb-3">
-          //           <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
-          //         </div>
-          //         <div class="glass-card p-4 mb-3">
-          //           <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-magnifying-glass"></i>মৃগীরোগ শনাক্তকরণের লক্ষণসমূহ</h4>
-          //           <ul class="list-unstyled puberty-list mb-0">
-          //             ${renderList(detectionPoints, 80)}
-          //           </ul>
-          //         </div>
-          //         <div class="row g-3">
-          //           <div class="col-12 col-lg-6">
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-heart-pulse"></i>তরুণ-তরুণীদের মৃগীরোগের লক্ষণসমূহের সাথে অন্যান্য উপসর্গ</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(symptomPoints, 100)}
-          //               </ul>
-          //             </article>
-          //           </div>
-          //           <div class="col-12 col-lg-6">
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(guardianActions, 100)}
-          //               </ul>
-          //             </article>
-          //           </div>
-          //         </div>
-          //         </div>
-          //       </div>
-          //     `;
-          //   })(),
-          // },
           {
-            id: "ch20-lesson-8",
+            id: "ch20-lesson-11",
             title: yhLang(
-              "তরুণ-তরুণীদের মৃগীরোগ",
-              "তরুণ-তরুণীদের মৃগীরোগ"
+              "হৃদরোগ ও উচ্চ রক্তচাপ",
+              "হৃদরোগ ও উচ্চ রক্তচাপ"
+            ),
+            icon: "fa-heart-circle-bolt",
+            gradientClass: "bg-gradient-mint",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const heartImages = [
+                { src: "img/modu20/heart1.jpg", alt: "হৃদরোগ সচেতনতা ১" },
+                { src: "img/modu20/heart2.jpg", alt: "হৃদরোগ সচেতনতা ২" },
+                { src: "img/modu20/heart3.jpg", alt: "হৃদরোগ সচেতনতা ৩" },
+                { src: "img/modu20/heart4.jpg", alt: "হৃদরোগ সচেতনতা ৪" },
+              ];
+
+              const renderImageGrid = () =>
+                heartImages
+                  .map(
+                    (img, idx) => `
+                      <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
+                        <figure class="glass-card p-3 h-100 text-center">
+                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
+                        </figure>
+                      </div>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod20-lesson mod20-lesson-11">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-heart-circle-bolt"></i>${yhLang(
+                    "হৃদরোগ ও উচ্চ রক্তচাপ",
+                    "হৃদরোগ ও উচ্চ রক্তচাপ"
+                  )}</h2>
+                  <div class="row g-3 mt-1">
+                    ${renderImageGrid()}
+                  </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch20-lesson-12",
+            title: yhLang(
+              "কিশোর-কিশোরীদের মৃগীরোগ",
+              "কিশোর-কিশোরীদের মৃগীরোগ"
+            ),
+            icon: "fa-brain",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const introText =
+                "মস্তিষ্কের কোনো স্নায়ুকোষের হঠাৎ অস্বাভাবিক উদ্দীপনার ফলে শারীরিক যে পরিবর্তন বা অবস্থা তৈরি হয়, তাকে বলা হয় মৃগীরোগ বা এপিলেপ্সি। এই পরিবর্তন শরীরের কোনো একটি অংশে বা সম্পূর্ণ শরীরজুড়ে হতে পারে। এটি মানসিক বা ছোঁয়াচে রোগ নয়, আলগা বাতাস বা জ্বিন-ভূতের আছর নয়। বরং এ রোগ যে কারোরই হতে পারে।";
+
+              const detectionPoints = [
+                { text: "জ্বর ছাড়া সমস্ত শরীরের অথবা শরীরের যেকোনো অঙ্গের একবার বা তার অধিক ঝাঁকুনি বা কাঁপুনি", icon: "fa-bolt" },
+                { text: "কোনো রকম ঝাঁকুনি বা কাঁপুনি ছাড়াই শরীর শক্ত / বাঁকা হয়ে যাওয়া", icon: "fa-person-falling" },
+                { text: "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া", icon: "fa-person-falling-burst" },
+              ];
+
+              const symptomPoints = [
+                { text: "জ্ঞান হারানো", icon: "fa-face-dizzy" },
+                { text: "মুখ দিয়ে ফেনা বা লালা পড়া", icon: "fa-droplet" },
+                { text: "জিহ্বায় কামড় খাওয়া", icon: "fa-teeth" },
+                { text: "চোখের মণি উপরের দিকে উঠে যাওয়া", icon: "fa-eye" },
+                { text: "শরীর শক্ত / বাঁকা হয়ে যাওয়া", icon: "fa-person-falling" },
+                { text: "প্রস্রাব / পায়খানা করে দেওয়া", icon: "fa-toilet-paper" },
+                { text: "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া", icon: "fa-circle-exclamation" },
+              ];
+
+              const guardianActions = [
+                { text: "খিঁচুনিরত অবস্থায় বাম পাশে কাত করে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রে নিয়ে যেতে হবে", icon: "fa-truck-medical" },
+                { text: "মৃগীরোগের ওষুধ চিকিৎসকের পরামর্শ ছাড়া বন্ধ করা যাবে না", icon: "fa-pills" },
+                { text: "খিঁচুনির দিন, তারিখ ও বর্ণনা মনে রেখে চিকিৎসককে জানাতে হবে", icon: "fa-clipboard-list" },
+              ];
+
+              const renderList = (items, baseDelay = 0) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod20-lesson mod20-lesson-12">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-brain"></i>${yhLang(
+                    "কিশোর-কিশোরীদের মৃগীরোগ",
+                    "কিশোর-কিশোরীদের মৃগীরোগ"
+                  )}</h2>
+                  <div class="glass-card p-4 mb-3">
+                    <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
+                  </div>
+                  <div class="glass-card p-4 mb-3">
+                    <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-magnifying-glass"></i>মৃগীরোগ শনাক্তকরণের লক্ষণসমূহ</h4>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(detectionPoints, 80)}
+                    </ul>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-6">
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-heart-pulse"></i>কিশোর-কিশোরীদের মৃগীরোগের লক্ষণসমূহের সাথে অন্যান্য উপসর্গ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(symptomPoints, 100)}
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(guardianActions, 100)}
+                        </ul>
+                      </article>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch20-lesson-13",
+            title: yhLang(
+              "কিশোর-কিশোরীদের মৃগীরোগ",
+              "কিশোর-কিশোরীদের মৃগীরোগ"
             ),
             icon: "fa-bolt",
             gradientClass: "bg-gradient-pink",
@@ -15444,8 +14380,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-1 mb-0 text-center">
-                          <img src="${img.src}" alt="${img.alt}" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        <figure class="glass-card p-3 h-100 text-center">
+                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
@@ -15462,8 +14398,8 @@ const coursesData = [
                   </div>
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-bolt"></i>${yhLang(
-                    "তরুণ-তরুণীদের মৃগীরোগ",
-                    "তরুণ-তরুণীদের মৃগীরোগ"
+                    "কিশোর-কিশোরীদের মৃগীরোগ",
+                    "কিশোর-কিশোরীদের মৃগীরোগ"
                   )}</h2>
                   <div class="row g-3 mt-1">
                     ${renderImageGrid()}
@@ -15473,90 +14409,90 @@ const coursesData = [
               `;
             })(),
           },
-          // {
-          //   id: "ch20-lesson-14",
-          //   title: yhLang(
-          //     "নেফ্রোটিক সিনড্রোম রোগ",
-          //     "নেফ্রোটিক সিনড্রোম রোগ"
-          //   ),
-          //   icon: "fa-kidneys",
-          //   gradientClass: "bg-gradient-rose",
-          //   audioFile: "",
-          //   quiz: null,
-          //   content: (function () {
-          //     const syndromeIntro =
-          //       "নেফ্রোটিক সিনড্রোম এক ধরনের অসুখ, যার ফলে প্রস্রাবে প্রোটিনের মাত্রা বেড়ে যায়। শিশু বয়সে ও কৈশোরকালে নেফ্রোটিক সিনড্রোম সমস্যার অন্তর্নিহিত কারণ এখনো অজানা। এক্ষেত্রে মনে রাখা প্রয়োজন যে—";
-
-          //     const syndromeNotes = [
-          //       { text: "নেফ্রোটিক সিনড্রোম সাধারণত কোনো বংশগত রোগ নয়।", icon: "fa-dna" },
-          //       { text: "নিয়মিত চিকিৎসা করলে এ রোগ নিয়ন্ত্রণে থাকে, কিন্তু এই রোগ ১৮ বছর পর্যন্ত বারবার হতে পারে।", icon: "fa-calendar-check" },
-          //       { text: "তবে আশার কথা হলো শতকরা ৮০ ভাগ রোগী ১৬–১৮ বছর পর ভালো হয়ে যায় এবং তাদের কিডনিও সম্পূর্ণ কার্যক্ষম থাকে।", icon: "fa-heart-circle-check" },
-          //     ];
-
-          //     const syndromeSymptoms = [
-          //       { text: "চোখের চারপাশে ফোলাভাব", icon: "fa-eye" },
-          //       { text: "মুখমণ্ডল ও তার চারপাশ ফুলে যাওয়া", icon: "fa-face-frown" },
-          //       { text: "পেট ফুলে যাওয়া", icon: "fa-circle" },
-          //       { text: "হাত ও পায়ে ফোলা ভাব", icon: "fa-hands" },
-          //       { text: "প্রস্রাবের পরিমাণ কমে যাওয়া", icon: "fa-droplet-slash" },
-          //     ];
-
-          //     const guardianNote =
-          //       "লক্ষণসমূহ দেখা দিলে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রের অসংক্রামক রোগ বিভাগে যোগাযোগ করতে হবে।";
-
-          //     const renderList = (items, baseDelay = 0) =>
-          //       items
-          //         .map(
-          //           (item, idx) => `
-          //             <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
-          //               <i class="fa-solid ${item.icon}"></i>
-          //               <span>${item.text}</span>
-          //             </li>
-          //           `
-          //         )
-          //         .join("");
-
-          //     return `
-          //       <div class="lesson-slide mod20-lesson mod20-lesson-14">
-          //         <div class="mod20-shapes">
-          //           <span class="mod20-shape mod20-shape--orb"></span>
-          //           <span class="mod20-shape mod20-shape--ring"></span>
-          //           <span class="mod20-shape mod20-shape--triangle"></span>
-          //           <span class="mod20-shape mod20-shape--wave"></span>
-          //         </div>
-          //         <div class="mod20-content">
-          //         <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-kidneys"></i>${yhLang(
-          //           "নেফ্রোটিক সিনড্রোম রোগ",
-          //           "নেফ্রোটিক সিনড্রোম রোগ"
-          //         )}</h2>
-          //         <div class="row g-3">
-          //           <div class="col-12 col-lg-12 d-flex flex-column gap-3">
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-kidneys"></i>নেফ্রোটিক সিনড্রোম</h4>
-          //               <p data-aos="fade-up" data-aos-delay="60">${syndromeIntro}</p>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(syndromeNotes, 80)}
-          //               </ul>
-          //             </article>
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>তরুণ-তরুণীদের নেফ্রোটিক সিনড্রোম রোগের লক্ষণসমূহ</h4>
-          //               <ul class="list-unstyled puberty-list mb-0">
-          //                 ${renderList(syndromeSymptoms, 80)}
-          //               </ul>
-          //             </article>
-          //             <article class="glass-card p-4 h-100">
-          //               <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
-          //               <p class="mb-0" data-aos="fade-up" data-aos-delay="80">${guardianNote}</p>
-          //             </article>
-          //           </div>
-          //         </div>
-          //         </div>
-          //       </div>
-          //     `;
-          //   })(),
-          // },
           {
-            id: "ch20-lesson-9",
+            id: "ch20-lesson-14",
+            title: yhLang(
+              "নেফ্রোটিক সিনড্রোম রোগ",
+              "নেফ্রোটিক সিনড্রোম রোগ"
+            ),
+            icon: "fa-kidneys",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const syndromeIntro =
+                "নেফ্রোটিক সিনড্রোম এক ধরনের অসুখ, যার ফলে প্রস্রাবে প্রোটিনের মাত্রা বেড়ে যায়। শিশু বয়সে ও কৈশোরকালে নেফ্রোটিক সিনড্রোম সমস্যার অন্তর্নিহিত কারণ এখনো অজানা। এক্ষেত্রে মনে রাখা প্রয়োজন যে—";
+
+              const syndromeNotes = [
+                { text: "নেফ্রোটিক সিনড্রোম সাধারণত কোনো বংশগত রোগ নয়।", icon: "fa-dna" },
+                { text: "নিয়মিত চিকিৎসা করলে এ রোগ নিয়ন্ত্রণে থাকে, কিন্তু এই রোগ ১৮ বছর পর্যন্ত বারবার হতে পারে।", icon: "fa-calendar-check" },
+                { text: "তবে আশার কথা হলো শতকরা ৮০ ভাগ রোগী ১৬–১৮ বছর পর ভালো হয়ে যায় এবং তাদের কিডনিও সম্পূর্ণ কার্যক্ষম থাকে।", icon: "fa-heart-circle-check" },
+              ];
+
+              const syndromeSymptoms = [
+                { text: "চোখের চারপাশে ফোলাভাব", icon: "fa-eye" },
+                { text: "মুখমণ্ডল ও তার চারপাশ ফুলে যাওয়া", icon: "fa-face-frown" },
+                { text: "পেট ফুলে যাওয়া", icon: "fa-circle" },
+                { text: "হাত ও পায়ে ফোলা ভাব", icon: "fa-hands" },
+                { text: "প্রস্রাবের পরিমাণ কমে যাওয়া", icon: "fa-droplet-slash" },
+              ];
+
+              const guardianNote =
+                "লক্ষণসমূহ দেখা দিলে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রের অসংক্রামক রোগ বিভাগে যোগাযোগ করতে হবে।";
+
+              const renderList = (items, baseDelay = 0) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
+                        <i class="fa-solid ${item.icon}"></i>
+                        <span>${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide mod20-lesson mod20-lesson-14">
+                  <div class="mod20-shapes">
+                    <span class="mod20-shape mod20-shape--orb"></span>
+                    <span class="mod20-shape mod20-shape--ring"></span>
+                    <span class="mod20-shape mod20-shape--triangle"></span>
+                    <span class="mod20-shape mod20-shape--wave"></span>
+                  </div>
+                  <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-kidneys"></i>${yhLang(
+                    "নেফ্রোটিক সিনড্রোম রোগ",
+                    "নেফ্রোটিক সিনড্রোম রোগ"
+                  )}</h2>
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-12 d-flex flex-column gap-3">
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-kidneys"></i>নেফ্রোটিক সিনড্রোম</h4>
+                        <p data-aos="fade-up" data-aos-delay="60">${syndromeIntro}</p>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(syndromeNotes, 80)}
+                        </ul>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>কিশোর-কিশোরীদের নেফ্রোটিক সিনড্রোম রোগের লক্ষণসমূহ</h4>
+                        <ul class="list-unstyled puberty-list mb-0">
+                          ${renderList(syndromeSymptoms, 80)}
+                        </ul>
+                      </article>
+                      <article class="glass-card p-4 h-100">
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="80">${guardianNote}</p>
+                      </article>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch20-lesson-15",
             title: yhLang(
               "নেফ্রোটিক সিনড্রোম রোগ",
               "নেফ্রোটিক সিনড্রোম রোগ"
@@ -15577,8 +14513,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" style="margin: 0 auto;" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-1 mb-1">
-                          <img src="${img.src}" height: 310px; alt="${img.alt}" class="img-fluid w-100 rounded shadow-sm img-zoom"/>
+                        <figure class="glass-card p-3 h-100 text-center">
+                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom"/>
                         </figure>
                       </div>
                     `
@@ -15612,7 +14548,7 @@ const coursesData = [
         id: "ch-21",
         title: yhLang(
           "Module-21: Climate change and special attention to adolescents",
-          "মডিউল-২১: ঝুঁকিপূর্ণ তরুণ-তরুণীদের বিশেষ যত্ন"
+          "মডিউল-২১: ঝুঁকিপূর্ণ কিশোর-কিশোরীদের বিশেষ যত্ন"
         ),
         lessons: [
           {
@@ -15635,18 +14571,18 @@ const coursesData = [
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(233, 30, 99, 0.15);">
                     <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #c2185b;">
-                      <i class="fa-solid fa-lightbulb" style="margin-right: 10px; font-size: 1.3em; color: #f06292;"></i>
+                      <i class="fa-solid fa-lightbulb" style="margin-right: 10px; font-size: 24px; color: #f06292;"></i>
                       সম্ভাবনাময় সময়
                     </h3>
-                    <p class="mb-3">কৈশোরকাল একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুণ-তরুণীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুণ-তরুণী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
+                    <p class="mb-3">কৈশোরকাল একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে কিশোর-কিশোরীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ কিশোর-কিশোরী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
                   </div>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #e1f5fe 0%, #e8eaf6 100%); border-radius: 25px; box-shadow: 0 10px 35px rgba(63, 81, 181, 0.2); margin-top: 20px;">
                     <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #1565c0;">
-                      <i class="fa-solid fa-shield-heart" style="margin-right: 10px; font-size: 1.3em; color: #42a5f5;"></i>
+                      <i class="fa-solid fa-shield-heart" style="margin-right: 10px; font-size: 24px; color: #42a5f5;"></i>
                       বিশেষ যত্নের প্রয়োজন
                     </h3>
-                    <p class="mb-0">এটা শুধুমাত্র সাধারণ তরুণ-তরুণীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুণ-তরুণীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
+                    <p class="mb-0">এটা শুধুমাত্র সাধারণ কিশোর-কিশোরীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন কিশোর-কিশোরীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
                   </div>
                 </div>`;
             })(),
@@ -15655,7 +14591,7 @@ const coursesData = [
             id: "ch21-lesson-2",
             title: yhLang(
               "What to Do to Mitigate Risks for At-Risk Adolescents",
-              "ঝুঁকিপূর্ণ তরুণ-তরুণীরা কারা"
+              "ঝুঁকিপূর্ণ কিশোর-কিশোরীদের ঝুঁকি নিরসনে করণীয়"
             ),
             icon: "fa-user-shield",
             gradientClass: "bg-gradient-rose",
@@ -15664,36 +14600,36 @@ const coursesData = [
             content: (function () {
               const primaryList = [
                 { icon: "fa-wheelchair", color: "#9c27b0", text: "শারীরিকভাবে বা মানসিকভাবে প্রতিবন্ধী" },
-                { icon: "fa-heart-crack", color: "#e91e63", text: "যে তরুণ-তরুণীদরে পতিা-মাতা, একজন বা উভয়ইে মারা গছেনে" },
-                { icon: "fa-person-circle-exclamation", color: "#ff5722", text: "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী তরুণ-তরুণীরা" },
-                { icon: "fa-person-circle-xmark", color: "#f44336", text: "বিবাহবহির্ভূত সম্পর্কে জন্ম নেয়া তরুণ-তরুণী অথবা যে তরুণ-তরুণীদরে কোনো আইনগত বা বধৈ অভভিাবক নইে" },
-                { icon: "fa-house-crack", color: "#ff9800", text: "বস্তিতে বসবাস করে এমন তরুণ-তরুণী অথবা যে যার কোনো নর্দিষ্টি বাসস্থান বা আবাস নইে বা যার বঁেচে থাকার কোনো সুস্পষ্ট উপায় নইে অথবা অতি দরিদ্র তরুণ-তরুণী" },
-                { icon: "fa-handcuffs", color: "#795548", text: "যে তরুণ-তরুণী কারাবন্দী পতিা-মাতার উপর নর্ভিরশীল বা কারাবন্দী মায়রে সাথে কারাগারে বসবাস করছে" },
-                { icon: "fa-ban", color: "#880e4f", text: "পতিতালয়ে জন্ম নেয়া ও বড় হওয়া তরুণ-তরুণী অথবা এসব কাজে সম্পৃক্ত তরুণ-তরুণী" },
-                { icon: "fa-caravan", color: "#6d4c41", text: "যে তরুণ-তরুণীরা যাযাবর বা হরজিন (অচ্ছুত)" },
-                { icon: "fa-industry", color: "#607d8b", text: "ঝুঁকিপূর্ণ কাজ, যেমন- বাস/ টেম্পুর হেল্পার, লেদ মেশিন/ ওয়েলডিং/ ইলেকট্রিক/ বয়লার/ ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভক্ষিাবৃত্তি" },
-                { icon: "fa-shield", color: "#d32f2f", text: "যে তরুণ-তরুণী যৌন নপিীড়ন বা হয়রানরি শকিার অথবা প্রত্যক্ষদর্শী তরুণ-তরুণী" },
-                { icon: "fa-rainbow", color: "#ab47bc", text: "তৃতীয় লিঙ্গ/ হিজড়া বা সমকামী তরুণ-তরুণী" },
-                { icon: "fa-pills", color: "#e53935", text: "যে তরুণ-তরুণীর মাদক বা অন্য কোনো কারণে অস্বাভাবকি আচরণগত ব্যাধি হয়ছেে" },
-                { icon: "fa-virus", color: "#c62828", text: "যে তরুণ-তরুণী এইচআইভ-িএইডসে আক্রান্ত বা ক্ষতগ্রিস্ত" },
-                { icon: "fa-user-xmark", color: "#6a1b9a", text: "যে তরুণ-তরুণী অসৎ সঙ্গীতে জড়তি, বা যার নতৈকি অবক্ষয় ঘটতে পারে বা যে অপরাধজগতে প্রবশেরে ঝুঁকতিে আছে" },
-                { icon: "fa-gavel", color: "#455a64", text: "যে তরুণ-তরুণীকে আদালত বা র্বোড বশিষে সুরক্ষা, যত্ন ও উন্নয়নরে প্রয়োজনে রয়ছেে বলে ববিচেনা করে" },
+                { icon: "fa-heart-crack", color: "#e91e63", text: "যে কিশোর-কিশোরীর পিতা-মাতা, একজন বা উভয়েই মারা গেছেন" },
+                { icon: "fa-people-arrows", color: "#ff5722", text: "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী" },
+                { icon: "fa-person-circle-question", color: "#f44336", text: "বিবাহবহির্ভূত সম্পর্কে জন্ম নেয়া কিশোর-কিশোরী অথবা যে কিশোর-কিশোরীর কোনো আইনগত বা বৈধ অভিভাবক নেই" },
+                { icon: "fa-house-crack", color: "#ff9800", text: "বস্তিতে বসবাস করে এমন কিশোর-কিশোরী অথবা যে যার কোনো নির্দিষ্ট বাসস্থান বা আবাস নেই বা যার বেঁচে থাকার কোনো সুস্পষ্ট উপায় নেই (পথশিশু বা রাস্তায় কাজ করে এমন কিশোর-কিশোরী) অথবা অতি দরিদ্র কিশোর-কিশোরী" },
+                { icon: "fa-handcuffs", color: "#795548", text: "যে কিশোর-কিশোরী কারাবন্দী পিতা-মাতার উপর নির্ভরশীল বা কারাবন্দী মায়ের সাথে কারাগারে বসবাস করছে" },
+                { icon: "fa-person-dress", color: "#880e4f", text: "পতিতালয়ে জন্ম নেয়া ও বড় হওয়া কিশোর-কিশোরী অথবা এসব কাজে সম্পৃক্ত কিশোর-কিশোরী" },
+                { icon: "fa-caravan", color: "#6d4c41", text: "যে কিশোর-কিশোরী যাযাবর বা হরিজন (অচ্ছুত)" },
+                { icon: "fa-industry", color: "#607d8b", text: "ঝুঁকিপূর্ণ কাজ, যেমন—বাস/টেম্পুর হেল্পার, লেদ মেশিন/ওয়েলডিং/ইলেকট্রিক/বয়লার/ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভিক্ষাবৃত্তি বা শিশুর কল্যাণের বিরোধী কোনো কাজে জড়িত" },
+                { icon: "fa-hand-fist", color: "#d32f2f", text: "যে কিশোর-কিশোরী যৌন নিপীড়ন বা হয়রানির শিকার অথবা প্রত্যক্ষদর্শী কিশোর-কিশোরী" },
+                { icon: "fa-rainbow", color: "#ab47bc", text: "তৃতীয় লিঙ্গ/হিজড়া বা সমকামী কিশোর-কিশোরী" },
+                { icon: "fa-pills", color: "#e53935", text: "যে শিশুর মাদক বা অন্য কোনো কারণে অস্বাভাবিক আচরণগত ব্যাধি হয়েছে" },
+                { icon: "fa-virus", color: "#c62828", text: "যে শিশু এইচআইভি–এইডসে আক্রান্ত বা ক্ষতিগ্রস্ত" },
+                { icon: "fa-user-xmark", color: "#6a1b9a", text: "যে কিশোর-কিশোরী অসৎ সঙ্গীতে জড়িত, বা যার নৈতিক অবক্ষয় ঘটতে পারে বা যে অপরাধজগতে প্রবেশের ঝুঁকিতে আছে" },
+                { icon: "fa-gavel", color: "#455a64", text: "যে শিশুকে শিশু আদালত বা বোর্ড বিশেষ সুরক্ষা, যত্ন ও উন্নয়নের প্রয়োজন রয়েছে বলে বিবেচনা করে" },
               ];
 
               const secondaryList = [
-                { icon: "fa-house-tsunami", color: "#0288d1", text: "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া তরুণ-তরুণী;" },
-                { icon: "fa-person-walking-arrow-right", color: "#c2185b", text: "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া তরুণ-তরুণী;" },
-                { icon: "fa-burst", color: "#d84315", text: "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত তরুণ-তরুণী;" },
-                { icon: "fa-tent", color: "#f57c00", text: "শরণার্থী শিবিরে বসবাসরত তরুণ-তরুণী;" },
-                { icon: "fa-mountain", color: "#558b2f", text: "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার তরুণ-তরুণী" },
+                { icon: "fa-house-tsunami", color: "#0288d1", text: "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া কিশোর-কিশোরী;" },
+                { icon: "fa-person-walking-arrow-right", color: "#c2185b", text: "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া কিশোর-কিশোরী;" },
+                { icon: "fa-burst", color: "#d84315", text: "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত কিশোর-কিশোরী;" },
+                { icon: "fa-tent", color: "#f57c00", text: "শরণার্থী শিবিরে বসবাসরত কিশোর-কিশোরী;" },
+                { icon: "fa-mountain", color: "#558b2f", text: "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার কিশোর-কিশোরী" },
               ];
 
               const renderList = (items) =>
                 items
                   .map(
                     (item) => `
-                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 15px; padding: 0px; margin-bottom: 2px; box-shadow: 0 4px 5px rgba(0,0,0,0.08); border-left: 4px solid ${item.color}; transition: all 0.3s ease;">
-                        <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 5px; font-size: 1.2em;"></i>
+                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 15px; padding: 14px; margin-bottom: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid ${item.color}; transition: all 0.3s ease;">
+                        <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 12px; font-size: 1.2em;"></i>
                         <span>${item.text}</span>
                       </li>
                     `
@@ -15704,12 +14640,12 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-triangle-exclamation" style="color: #f44336; margin-right: 12px; font-size: 1.2em;"></i>
-                    ঝুঁকিপূর্ণ তরুণ-তরুণীরা কারা
+                    ঝুঁকিপূর্ণ কিশোর-কিশোরীদের ঝুঁকি নিরসনে করণীয়
                   </h2>
                   
-                  <div class="modern-card p-1 glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(255, 152, 0, 0.2);">
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(255, 152, 0, 0.2);">
                     <h3 style="display: flex; align-items: center; margin-bottom: 20px; color: #e65100;">
-                      <i class="fa-solid fa-users" style="margin-right: 10px; font-size: 20px; color: #ff6f00;"></i>
+                      <i class="fa-solid fa-users" style="margin-right: 10px; font-size: 24px; color: #ff6f00;"></i>
                       প্রধান ঝুঁকিপূর্ণ গোষ্ঠী
                     </h3>
                     <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
@@ -15717,12 +14653,12 @@ const coursesData = [
                     </ul>
                   </div>
                   
-                  <div class="modern-card p-1 glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(233, 30, 99, 0.2); margin-top: 24px;">
-                    <h5 style="display: flex; align-items: center; margin-bottom: 5px; color: #ad1457; font-weight: 500;">
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(233, 30, 99, 0.2); margin-top: 24px;">
+                    <h5 style="display: flex; align-items: center; margin-bottom: 16px; color: #ad1457; font-weight: 600;">
                       <i class="fa-solid fa-exclamation-circle" style="margin-right: 10px; font-size: 1.2em; color: #e91e63;"></i>
                       যেকোনো সময়ে ঝুঁকিপূর্ণ হতে পারে
                     </h5>
-                    <p class="fw-semibold mb-1" style="color: #880e4f;">এছাড়াও যেকোনো তরুণ-তরুণী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন—</p>
+                    <p class="fw-semibold mb-3" style="color: #880e4f;">এছাড়াও যেকোনো কিশোর-কিশোরী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন—</p>
                     <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
                       ${renderList(secondaryList)}
                     </ul>
@@ -15734,7 +14670,7 @@ const coursesData = [
             id: "ch21-lesson-3",
             title: yhLang(
               "What to Do to Address Disadvantages of Marginalized Adolescents",
-              "ঝুঁকিপূর্ণ তরুণ-তরুণীদের সুবিধা নিরসনে করণীয়"
+              "সুবিধাবঞ্চিত কিশোর-কিশোরীদের সুবিধা নিরসনে করণীয়"
             ),
             icon: "fa-hands-holding-child",
             gradientClass: "bg-gradient-green",
@@ -15742,13 +14678,13 @@ const coursesData = [
             quiz: null,
             content: (function () {
               const actionItems = [
-                { icon: "fa-magnifying-glass-chart", color: "#1976d2", text: "<strong>সুবিধা শনাক্তকরণ:</strong> ঝুঁকিপূর্ণ তরুণ-তরুণীদের মধ্যে সম্ভাব্য সুবিধা ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।" },
-                { icon: "fa-chart-line", color: "#388e3c", text: "<strong>সক্ষমতা বৃদ্ধি:</strong> তরুণ-তরুণীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের সুবিধা কমাতে সহায়ক হবে।" },
-                { icon: "fa-comments", color: "#7b1fa2", text: "<strong>পরামর্শ ও সহায়তা:</strong> প্রত্যেক তরুণ-তরুণীর জন্য ব্যক্তিগত পরামর্শ ও সহায়তার ব্যবস্থা করা, যাতে তারা তাদের সমস্যাগুলি সমাধান করতে এবং সুস্থভাবে জীবনযাপন করতে সক্ষম হয়।" },
-                { icon: "fa-shield-halved", color: "#d32f2f", text: "<strong>সংকট ব্যবস্থাপনা:</strong> ঝুঁকিপূর্ণ পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।" },
-                { icon: "fa-people-group", color: "#f57c00", text: "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> তরুণ-তরুণীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।" },
+                { icon: "fa-magnifying-glass-chart", color: "#1976d2", text: "<strong>সুবিধা শনাক্তকরণ:</strong> সুবিধাবঞ্চিত কিশোর-কিশোরীদের মধ্যে সম্ভাব্য সুবিধা ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।" },
+                { icon: "fa-chart-line", color: "#388e3c", text: "<strong>সক্ষমতা বৃদ্ধি:</strong> কিশোর-কিশোরীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের সুবিধা কমাতে সহায়ক হবে।" },
+                { icon: "fa-comments", color: "#7b1fa2", text: "<strong>পরামর্শ ও সহায়তা:</strong> প্রত্যেক কিশোর-কিশোরীর জন্য ব্যক্তিগত পরামর্শ ও সহায়তার ব্যবস্থা করা, যাতে তারা তাদের সমস্যাগুলি সমাধান করতে এবং সুস্থভাবে জীবনযাপন করতে সক্ষম হয়।" },
+                { icon: "fa-shield-halved", color: "#d32f2f", text: "<strong>সংকট ব্যবস্থাপনা:</strong> সুবিধাবঞ্চিত পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।" },
+                { icon: "fa-people-group", color: "#f57c00", text: "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> কিশোর-কিশোরীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।" },
                 { icon: "fa-bell", color: "#0288d1", text: "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও সুবিধা মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।" },
-                { icon: "fa-brain", color: "#c2185b", text: "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> তরুণ-তরুণীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।" },
+                { icon: "fa-brain", color: "#c2185b", text: "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> কিশোর-কিশোরীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।" },
               ];
 
               const renderList = (items) =>
@@ -15767,12 +14703,12 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-hands-holding-circle" style="color: #43a047; margin-right: 12px; font-size: 1.2em;"></i>
-                    ঝুঁকিপূর্ণ তরুণ-তরুণীদের সুবিধা নিরসনে করণীয়
+                    সুবিধাবঞ্চিত কিশোর-কিশোরীদের সুবিধা নিরসনে করণীয়
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); border-radius: 22px; box-shadow: 0 12px 45px rgba(76, 175, 80, 0.25);">
                     <h3 style="display: flex; align-items: center; margin-bottom: 22px; color: #2e7d32;">
-                      <i class="fa-solid fa-list-check" style="margin-right: 10px; font-size: 1.3em; color: #66bb6a;"></i>
+                      <i class="fa-solid fa-list-check" style="margin-right: 10px; font-size: 24px; color: #66bb6a;"></i>
                       প্রধান কার্যক্রম
                     </h3>
                     <ul class="list-unstyled puberty-list mb-4" style="padding-left: 0;">
@@ -15784,7 +14720,7 @@ const coursesData = [
                         <i class="fa-solid fa-handshake" style="margin-right: 10px; color: #42a5f5;"></i>
                         সমন্বিত প্রচেষ্টা
                       </h6>
-                      <p class="mb-0" style="color: #0d47a1;">উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুণ-তরুণীদের সুবিধা কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।</p>
+                      <p class="mb-0" style="color: #0d47a1;">উল্লেখিত বিষয়গুলো নিশ্চিত করে কিশোর-কিশোরীদের সুবিধা কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।</p>
                     </div>
                   </div>
                 </div>`;
@@ -15814,176 +14750,43 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-earth-americas" style="color: #26a69a; margin-right: 12px; font-size: 1.2em;"></i>
-                    আবহাওয়া ও জলবায়ু
+                    ${yhLang("Weather and Climate", "আবহাওয়া ও জলবায়ু")}
                   </h2>
                   
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(38, 166, 154, 0.15);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #00695c;">
-                      <i class="fa-solid fa-cloud-sun" style="margin-right: 10px; font-size: 1.3em; color: #26a69a;"></i>
-                      আবহাওয়া ও জলবায়ুর সংজ্ঞা
-                    </h3>
-                    <p>আবহাওয়া হলো বায়ুমণ্ডলের নিম্নস্তরের দৈনন্দিন অবস্থা। স্থানভেদে আবহাওয়া সহজেই পরিবর্তিত হয়। আবহাওয়া কোনো জায়গার স্বল্প সময়ের অবস্থাকে প্রকাশ করে। অন্যদিকে, জলবায়ু হলো কোনো বিস্তৃত অঞ্চলের কমপক্ষে ৩০ বছরের আবহাওয়ার গড় অবস্থা। জলবায়ুর পরিবর্তন হয় স্থানভেদে ও ঋতুভেদে।</p>
-                  </div>
-                  
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 22px; box-shadow: 0 10px 35px rgba(255, 152, 0, 0.2); margin-top: 20px;">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #e65100;">
-                      <i class="fa-solid fa-exclamation-triangle" style="margin-right: 10px; font-size: 1.3em; color: #ff6f00;"></i>
-                      বাংলাদেশে জলবায়ু পরিবর্তনের প্রভাব
-                    </h3>
-                    <p>বাংলাদেশে জলবায়ু পরিবর্তনজনিত কারণে মানবস্বাস্থ্যে, বিশেষ করে শিশু-কিশোরদের ওপর মারাত্মকভাবে ক্ষতিকর প্রভাব পড়ছে। জলবায়ু সংবেদনশীল রোগ যেমন ডেঙ্গু, চিকুনগুনিয়া, কালাজ্বর, কলেরা, অপুষ্টি ইত্যাদি বৃদ্ধি পাচ্ছে এবং নতুন নতুন চ্যালেঞ্জ তৈরি হচ্ছে।</p>
-                  </div>
-                  
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 25px; box-shadow: 0 12px 40px rgba(233, 30, 99, 0.18); margin-top: 20px;">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 18px; color: #c2185b;">
-                      <i class="fa-solid fa-temperature-arrow-up" style="margin-right: 10px; font-size: 1.3em; color: #e91e63;"></i>
-                      জলবায়ু পরিবর্তন: বৈশ্বিক বাস্তবতা
-                    </h3>
-                    <p>জলবায়ু পরিবর্তন একটি বৈশ্বিক বাস্তবতা। পৃথিবী ক্রমাগত উষ্ণ হয়ে চলেছে, সমুদ্রের জলস্তর বৃদ্ধি পাচ্ছে এবং বরফের স্তর গলতে থাকায় বিশ্বের জলবায়ু ব্যবস্থায় আমূল পরিবর্তন ঘটছে। গত কয়েক দশকের রেকর্ডে দেখা গেছে, শিল্পযুগ-পূর্ব সময়ের তুলনায় পৃথিবীর আবহাওয়া আজ অনেক বেশি অপ্রত্যাশিত ও চরম আচরণ করছে। ঘনঘন ও তীব্রতর হয়ে উঠছে বন্যা, খরা, দাবানল ও ঘূর্ণিঝড়ের মতো দুর্যোগ, যা বিশ্বজুড়ে পরিবেশ, অর্থনীতি এবং মানবসমাজের ওপর গভীর প্রভাব ফেলছে।</p>
-                  </div>
-                  
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-radius: 20px; box-shadow: 0 8px 35px rgba(156, 39, 176, 0.15); margin-top: 20px;">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 18px; color: #7b1fa2;">
-                      <i class="fa-solid fa-list-ul" style="margin-right: 10px; font-size: 1.3em; color: #9c27b0;"></i>
-                      জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাবসমূহ
-                    </h3>
-                    <p class="mb-3">জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাবসমূহের মধ্যে রয়েছে তাপমাত্রা বৃদ্ধি, বৃষ্টিপাতের অস্বাভাবিকতা বা ভিন্নতা, খরা, ঘূর্ণিঝড়, সমুদ্রপৃষ্ঠের উচ্চতা বৃদ্ধি, পানির লবণাক্ততা বৃদ্ধি, তাপপ্রবাহ, শৈত্যপ্রবাহ এবং এ সম্পর্কিত অন্যান্য ঘটনাসমূহ, যা মানুষের জীবন ও জীবিকার ওপর বিরূপ প্রভাব ফেলছে।</p>
-                    <h6 style="display: flex; align-items: center; margin-bottom: 14px; color: #6a1b9a; font-weight: 600;">
-                      <i class="fa-solid fa-triangle-exclamation" style="margin-right: 8px; font-size: 1.1em; color: #8e24aa;"></i>
-                      বিপন্ন খাতসমূহ
-                    </h6>
-                    <p class="mb-0">খাদ্য নিরাপত্তা, স্বাস্থ্য, কৃষি, পানি সম্পদ, উপকূলীয় সম্পদ, শিক্ষা, জীবিকা ও বাসস্থান।</p>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch22-lesson-2",
-            title: yhLang(
-              "Impact of Climate Change on Human Health",
-              "জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর"
-            ),
-            icon: "fa-heart-pulse",
-            gradientClass: "bg-gradient-aurora",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-heart-pulse" style="color: #e91e63; margin-right: 12px; font-size: 1.2em;"></i>
-                    জলবায়ু পরিবর্তনের প্রভাব মানব স্বাস্থ্যের উপর
-                  </h2>
-                  
-                  <div class="row g-4" data-aos="fade-up" data-aos-delay="60">
-                    <div class="col-12 col-md-12">
-                      <div class="modern-card glass-card h-100" style="background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border-radius: 25px; box-shadow: 0 12px 45px rgba(63, 81, 181, 0.25); overflow: hidden; border: 2px solid rgba(255,255,255,0.3);">
-                        <h5 style="display: flex; align-items: center; padding: 15px 20px; margin: 0; color: #3f51b5; border-bottom: 2px solid rgba(63, 81, 181, 0.2);">
-                          <i class="fa-solid fa-temperature-arrow-up" style="margin-right: 10px; font-size: 1.2em; color: #ff5722;"></i>
-                          তাপমাত্রা বৃদ্ধি এবং স্বাস্থ্য প্রভাব
-                        </h5>
-                        <div style="padding: 15px;">
-                          <img src="img/modu22/climate1.png" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ু পরিবর্তনের তাপমাত্রা বৃদ্ধি" loading="lazy" style="width: 100%; border-radius: 15px;">
+                <div class="row g-2">
+                      <div class="col-md-5">
+                        <div class="modern-card glass-card mb-0" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(38, 166, 154, 0.15);">
+                          <h3 style="display: flex; align-items: center; margin-bottom: 5px; color: #00695c;">
+                            <i class="fa-solid fa-cloud-sun" style="margin-right: 10px; font-size: 24px; color: #26a69a;"></i>
+                            ${yhLang("Definition of Weather and Climate", "আবহাওয়া ও জলবায়ুর সংজ্ঞা")}
+                          </h3>
+                          <p class="mb-1">${yhLang(
+                            "Weather is the daily condition of the lower atmosphere. Weather changes easily from place to place. Weather represents the short-term conditions of a place. On the other hand, climate is the average weather conditions of a large area over at least 30 years. Climate changes with location and season.",
+                            "আবহাওয়া হলো বায়ুমণ্ডলের নিম্নস্তরের দৈনন্দিন অবস্থা। স্থানভেদে আবহাওয়া সহজেই পরিবর্তিত হয়। আবহাওয়া কোনো জায়গার স্বল্প সময়ের অবস্থাকে প্রকাশ করে। অন্যদিকে, জলবায়ু হলো কোনো বিস্তৃত অঞ্চলের কমপক্ষে ৩০ বছরের আবহাওয়ার গড় অবস্থা। জলবায়ুর পরিবর্তন হয় স্থানভেদে ও ঋতুভেদে।"
+                          )}</p>
+                          <p>${yhLang(
+                            "In Bangladesh, climate change is having a serious adverse effect on human health, especially on children and adolescents. Climate-sensitive diseases such as dengue, chikungunya, kala-azar, cholera, malnutrition, etc. are increasing and creating new challenges.",
+                            "বাংলাদেশে জলবায়ু পরিবর্তনজনিত কারণে মানবস্বাস্থ্যে, বিশেষ করে শিশু-কিশোরদের ওপর মারাত্মকভাবে ক্ষতিকর প্রভাব পড়ছে। জলবায়ু সংবেদনশীল রোগ যেমন ডেঙ্গু, চিকুনগুনিয়া, কালাজ্বর, কলেরা, অপুষ্টি ইত্যাদি বৃদ্ধি পাচ্ছে এবং নতুন নতুন চ্যালেঞ্জ তৈরি হচ্ছে।"
+                          )}</p>
                         </div>
+                        
+                        <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 25px; box-shadow: 0 12px 40px rgba(233, 30, 99, 0.18); margin-top: 20px;">
+                          <h3 style="display: flex; align-items: center; margin-bottom: 5px; color: #c2185b;">
+                            <i class="fa-solid fa-temperature-arrow-up" style="margin-right: 10px; font-size: 24px; color: #e91e63;"></i>
+                            ${yhLang("Climate Change: A Global Reality", "জলবায়ু পরিবর্তন")}
+                          </h3>
+                          <p>${yhLang(
+                            "Climate change is a global reality. The Earth is continuously warming, sea levels are rising, and as ice sheets melt, the world's climate system is undergoing radical changes. Records from recent decades show that Earth's weather is now much more unpredictable and extreme compared to pre-industrial times. Disasters such as floods, droughts, wildfires, and cyclones are becoming more frequent and intense, having profound effects on the environment, economy, and human society worldwide.Mitigation and adaptation strategies have become essential components of international and national policies and action plans to address this deep-rooted crisis.",
+                            "জলবায়ু পরিবর্তন একটি বৈশ্বিক বাস্তবতা। পৃথিবী ক্রমাগত উষ্ণ হয়ে চলেছে, সমুদ্রের জলস্তর বৃদ্ধি পাচ্ছে এবং বরফের স্তর গলতে থাকায় বিশ্বের জলবায়ু ব্যবস্থায় আমূল পরিবর্তন ঘটছে। গত কয়েক দশকের রেকর্ডে দেখা গেছে, শিল্পযুগ-পূর্ব সময়ের তুলনায় পৃথিবীর আবহাওয়া আজ অনেক বেশি অপ্রত্যাশিত ও চরম আচরণ করছে। ঘনঘন ও তীব্রতর হয়ে উঠছে বন্যা, খরা, দাবানল ও ঘূর্ণিঝড়ের মতো দুর্যোগ, যা বিশ্বজুড়ে পরিবেশ, অর্থনীতি এবং মানবসমাজের ওপর গভীর প্রভাব ফেলছে। এই বদ্ধমূল সঙ্কট মোকাবেলায় প্রশমন ও অভিযোজন কৌশলগুলি আন্তর্জাতিক ও জাতীয় নীতি ও কর্মপরিকল্পনার অপরিহার্য অঙ্গে পরিণত হয়েছে।"
+                          )}</p>
+                        </div>
+                      </div>
+                      <div class="col-md-7">
+                        <figure class="glass-card p-1 h-100 mb-0 text-center">
+                          <img src="img/modu22/jolbau_b.png" alt="img/modu22/jolbau_b.png" style="height: 100%;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
                       </div>
                     </div>
-                    <div class="col-12 col-md-12">
-                      <div class="modern-card glass-card h-100" style="background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%); border-radius: 25px; box-shadow: 0 12px 45px rgba(139, 195, 74, 0.25); overflow: hidden; border: 2px solid rgba(255,255,255,0.3);">
-                        <h5 style="display: flex; align-items: center; padding: 15px 20px; margin: 0; color: #689f38; border-bottom: 2px solid rgba(139, 195, 74, 0.2);">
-                          <i class="fa-solid fa-chart-line" style="margin-right: 10px; font-size: 1.2em; color: #7cb342;"></i>
-                          জলবায়ু পরিবর্তনের স্বাস্থ্য ঝুঁকির চিত্র
-                        </h5>
-                        <div style="padding: 15px;">
-                          <img src="img/modu22/climate2.png" id="imageZoom" class="img-fluid rounded shadow-sm img-zoom" alt="জলবায়ুর পরিবর্তনে স্বাস্থ্যঝুঁকি" loading="lazy" style="width: 100%; border-radius: 15px;">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch22-lesson-3",
-            title: yhLang(
-              "How Climate Change Affects Human Health",
-              "জলবায়ু পরিবর্তন কীভাবে মানব স্বাস্থ্যে প্রভাব ফেলে"
-            ),
-            icon: "fa-stethoscope",
-            gradientClass: "bg-gradient-sunrise",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-stethoscope" style="color: #2196f3; margin-right: 12px; font-size: 1.2em;"></i>
-                    জলবায়ু পরিবর্তন কীভাবে মানব স্বাস্থ্যে প্রভাব ফেলে
-                  </h2>
-                  
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); border-radius: 20px; box-shadow: 0 10px 38px rgba(255, 160, 0, 0.2);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #f57c00;">
-                      <i class="fa-solid fa-heartbeat" style="margin-right: 10px; font-size: 1.3em; color: #ff6f00;"></i>
-                      স্বাস্থ্যের উপর ব্যাপক প্রভাব
-                    </h3>
-                    <p>মানব স্বাস্থ্যের উপর জলবায়ু পরিবর্তন ও তার অনুসঙ্গিক বিষয়ের প্রভাব অস্বীকার্য ও ব্যাপক। বাংলাদেশে জলবায়ু পরিবর্তনের কারণে কৃষি, পানি, অবকাঠামো, শিল্প, বাসস্থান এবং স্বাস্থ্য ইত্যাদি বিষয়গুলির উপর ব্যাপকভাবে প্রভাব বিস্তার করেছে, যা অনেক ক্ষেত্রেই আশঙ্কাজনক।</p>
-                  </div>
-                  
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border-radius: 22px; box-shadow: 0 12px 42px rgba(244, 67, 54, 0.22); margin-top: 20px;">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #c62828;">
-                      <i class="fa-solid fa-virus" style="margin-right: 10px; font-size: 1.3em; color: #d32f2f;"></i>
-                      প্রত্যক্ষ ও পরোক্ষ প্রভাব
-                    </h3>
-                    <p>জলবায়ু পরিবর্তনের ফলে রোগের বিস্তার, বাস্তুসংস্থান ও আর্থসামাজিক অবস্থার পরিবর্তন হয়। মানব স্বাস্থ্যের মতো একটি অত্যন্ত গুরুত্বপূর্ণ বিষয় উপরোক্ত পরিবর্তনসমূহের কারণে বিভিন্নভাবে প্রভাবিত হয়।</p>
-                    
-                    <div class="row g-3 mt-3">
-                      <div class="col-md-6">
-                        <div style="background: rgba(255,255,255,0.5); padding: 15px; border-radius: 15px; border-left: 4px solid #d32f2f;">
-                          <h6 style="display: flex; align-items: center; color: #c62828; margin-bottom: 10px;">
-                            <i class="fa-solid fa-bolt-lightning" style="margin-right: 8px; color: #ff5252;"></i>
-                            প্রত্যক্ষ প্রভাব
-                          </h6>
-                          <p class="mb-0" style="font-size: 0.95em;">উষ্ণতা, ঘূর্ণিঝড়, বন্যা এসব ঘটনা সবচেয়ে বেশি প্রভাব ফেলে।</p>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div style="background: rgba(255,255,255,0.5); padding: 15px; border-radius: 15px; border-left: 4px solid #ff6f00;">
-                          <h6 style="display: flex; align-items: center; color: #ef6c00; margin-bottom: 10px;">
-                            <i class="fa-solid fa-arrows-spin" style="margin-right: 8px; color: #ff9800;"></i>
-                            পরোক্ষ প্রভাব
-                          </h6>
-                          <p class="mb-0" style="font-size: 0.95em;">পানিবাহিত রোগ, কীটপতঙ্গ বাহিত রোগ, বায়ুদূষণ ইত্যাদির মাধ্যমে পরিলক্ষিত।</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 20px; box-shadow: 0 10px 38px rgba(33, 150, 243, 0.2); margin-top: 20px;">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #1565c0;">
-                      <i class="fa-solid fa-children" style="margin-right: 10px; font-size: 1.3em; color: #1976d2;"></i>
-                      বাংলাদেশে তীব্রতা
-                    </h3>
-                    <p class="mb-3">বাংলাদেশে শিশু-কিশোরদের স্বাস্থ্যের উপর প্রভাব ফেলছে এমন দুটি প্রধান সমস্যা হলো:</p>
-                    
-                    <div class="row g-3">
-                      <div class="col-md-6">
-                        <div style="background: linear-gradient(135deg, #ff8a80 0%, #ff5252 100%); padding: 18px; border-radius: 18px; box-shadow: 0 6px 20px rgba(255, 82, 82, 0.3); color: white;">
-                          <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <i class="fa-solid fa-temperature-high" style="font-size: 2.5em; margin-right: 12px;"></i>
-                            <h5 class="mb-0" style="color: white;">তাপদাহ</h5>
-                          </div>
-                          <p class="mb-0" style="font-size: 0.9em; opacity: 0.95;">৮২০ মিলিয়ন শিশু-কিশোর তাপপ্রবাহের সম্মুখীন</p>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div style="background: linear-gradient(135deg, #448aff 0%, #2979ff 100%); padding: 18px; border-radius: 18px; box-shadow: 0 6px 20px rgba(41, 121, 255, 0.3); color: white;">
-                          <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <i class="fa-solid fa-water" style="font-size: 2.5em; margin-right: 12px;"></i>
-                            <h5 class="mb-0" style="color: white;">পানির অভাব</h5>
-                          </div>
-                          <p class="mb-0" style="font-size: 0.9em; opacity: 0.95;">৯২০ মিলিয়ন শিশু-কিশোর পানির অভাবে</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>`;
             })(),
           },
@@ -16009,17 +14812,17 @@ const coursesData = [
                       <div class="modern-card glass-card" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 100%);border-radius:22px;box-shadow:0 12px 40px rgba(236,64,122,.18);">
                         <h3 style="display:flex;align-items:center;color:#ad1457;margin-bottom:16px;">
                           <i class="fa-solid fa-shield-virus" style="margin-right:10px;color:#d81b60;"></i>
-                          স্বাস্থ্যঝুঁকির তুলনামূলক চিত্র
+                          ${yhLang("Comparative Picture of Health Risks", "স্বাস্থ্যঝুঁকির তুলনামূলক চিত্র")}
                         </h3>
                         <div class="table-responsive">
                           <table class="table table-bordered table-modern align-middle" style="background:rgba(255,255,255,.72);border-radius:16px;overflow:hidden;">
                             <thead>
                               <tr>
                                 <th class="text-center" style="background:linear-gradient(135deg,#ff8a65,#ff7043);color:#fff;">
-                                  <span class="impact-heading"><i class="fa-solid fa-temperature-high"></i> তাপদাহ</span>
+                                  <span class="impact-heading"><i class="fa-solid fa-temperature-high"></i> ${yhLang("Heat Waves", "তাপদাহ")}</span>
                                 </th>
                                 <th class="text-center" style="background:linear-gradient(135deg,#42a5f5,#1e88e5);color:#fff;">
-                                  <span class="impact-heading"><i class="fa-solid fa-water"></i> পানি সম্পর্কিত দুর্যোগ</span>
+                                  <span class="impact-heading"><i class="fa-solid fa-water"></i> ${yhLang("Water-Related Disasters", "পানি সম্পর্কিত দুর্যোগ")}</span>
                                 </th>
                               </tr>
                             </thead>
@@ -16105,47 +14908,47 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-wind" style="color: #607d8b; margin-right: 12px; font-size: 1.2em;"></i>
-                    বায়ু দূষণ
+                    ${yhLang("Air Pollution", "বায়ু দূষণ")}
                   </h2>
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#eceff1 0%,#e1f5fe 100%);border-radius:22px;box-shadow:0 10px 35px rgba(84,110,122,.18);">
                     <h3 style="display:flex;align-items:center;color:#455a64;margin-bottom:14px;">
                       <i class="fa-solid fa-lungs" style="margin-right:10px;color:#546e7a;"></i>
-                      বায়ু দূষণের ধরন ও প্রভাব
+                      ${yhLang("Types and Effects of Air Pollution", "বায়ু দূষণের ধরন ও প্রভাব")}
                     </h3>
-                    <p>বায়ু দূষণকে এক বা একাধিক দূষিত পদার্থের উপস্থিতি হিসাবে সংজ্ঞায়িত করা যেতে পারে, যেমন ধূলিকণা, ধোঁয়া, গ্যাস, কুয়াশা, গন্ধ, ধোঁয়া বা বাষ্প, যেগুলো মানুষ, প্রাণী বা উদ্ভিদ জীবনের জন্য ক্ষতিকারক।</p>
-                    <p><strong>বায়ু দূষণ প্রাথমিক ভাবে দুই ধরনের:</strong></p>
-                    <p>১. পরিবেষ্টিত বা অ্যাম্বিয়েন্ট (বাহ্যিক) বায়ু দূষণ বলতে বাইরের বাতাসের দূষণকে বোঝায়। এর মধ্যে সাধারণত কার্বন মনোক্সাইড (CO), নাইট্রোজেন অক্সাইড (NOx), সীসা, আর্সেনিক, পারদ, সালফার ডাই অক্সাইড (SO2), পলিসাইক্লিক অ্যারোমেটিক হাইড্রোকার্বন (PAHs) এবং কণা পদার্থ (PM) অন্তর্ভুক্ত থাকে।</p>
-                    <p>২. গৃহস্থালির (অভ্যন্তরীণ) বায়ু দূষণ বলতে রান্না, তাপ এবং আলো জ্বালানোর জন্য জ্বালানি (কাঠ, জৈববস্তু, কয়লা, কেরোসিন ইত্যাদি) অপ্রয়োজনীয় দহনের ফলে সৃষ্ট ঘরের ভেতরে এবং আশেপাশের দূষণকে বোঝায়।</p>
+                    <p>${yhLang("Air pollution can be defined as the presence of one or more pollutants such as dust, smoke, gases, fog, odor, fumes or vapors that are harmful to humans, animals or plant life.", "বায়ু দূষণকে এক বা একাধিক দূষিত পদার্থের উপস্থিতি হিসাবে সংজ্ঞায়িত করা যেতে পারে, যেমন ধূলিকণা, ধোঁয়া, গ্যাস, কুয়াশা, গন্ধ, ধোঁয়া বা বাষ্প, যেগুলো মানুষ, প্রাণী বা উদ্ভিদ জীবনের জন্য ক্ষতিকারক।")}</p>
+                    <p><strong>${yhLang("Air pollution is primarily of two types:", "বায়ু দূষণ প্রাথমিক ভাবে দুই ধরনের:")}</strong></p>
+                    <p>${yhLang("1. Ambient or outdoor air pollution refers to outdoor air pollution. It typically includes carbon monoxide (CO), nitrogen oxides (NOx), lead, arsenic, mercury, sulfur dioxide (SO2), polycyclic aromatic hydrocarbons (PAHs), and particulate matter (PM).", "১. পরিবেষ্টিত বা অ্যাম্বিয়েন্ট (বাহ্যিক) বায়ু দূষণ বলতে বাইরের বাতাসের দূষণকে বোঝায়। এর মধ্যে সাধারণত কার্বন মনোক্সাইড (CO), নাইট্রোজেন অক্সাইড (NOx), সীসা, আর্সেনিক, পারদ, সালফার ডাই অক্সাইড (SO2), পলিসাইক্লিক অ্যারোমেটিক হাইড্রোকার্বন (PAHs) এবং কণা পদার্থ (PM) অন্তর্ভুক্ত থাকে।")}</p>
+                    <p>${yhLang("2. Indoor air pollution refers to pollution created inside and around homes due to unnecessary burning of fuels (wood, biomass, coal, kerosene, etc.) for cooking, heating, and lighting.", "২. গৃহস্থালির (অভ্যন্তরীণ) বায়ু দূষণ বলতে রান্না, তাপ এবং আলো জ্বালানোর জন্য জ্বালানি (কাঠ, জৈববস্তু, কয়লা, কেরোসিন ইত্যাদি) অপ্রয়োজনীয় দহনের ফলে সৃষ্ট ঘরের ভেতরে এবং আশেপাশের দূষণকে বোঝায়।")}</p>
                     <p>বায়ু কতটা দূষিত তা বায়ুর মান সূচক (AQI) দ্বারা পরিমাপ করা যায়। বাংলাদেশে, পাঁচটি দূষণকারী পদার্থের (কণা পদার্থ PM10 এবং PM2.5, NO2, CO, SO2 এবং O3) বিদ্যমান ঘনত্বের উপর ভিত্তি করে AQI গণনা করা হয়।</p>
                     <div class="table-responsive mt-4">
                       <table class="table table-bordered table-aqi align-middle" style="background:rgba(255,255,255,.76);border-radius:16px;overflow:hidden;">
                         <thead>
                           <tr>
-                            <th style="background:linear-gradient(135deg,#4fc3f7,#29b6f6);color:#fff;">বায়ুর মান সূচক (AQI)</th>
-                            <th style="background:linear-gradient(135deg,#4dd0e1,#26c6da);color:#fff;">ক্যাটাগরি</th>
-                            <th style="background:linear-gradient(135deg,#81c784,#66bb6a);color:#fff;">রং</th>
+                            <th style="background:linear-gradient(135deg,#4fc3f7,#29b6f6);color:#fff;">${yhLang("Air Quality Index (AQI)", "বায়ুর মান সূচক (AQI)")}</th>
+                            <th style="background:linear-gradient(135deg,#4dd0e1,#26c6da);color:#fff;">${yhLang("Category", "ক্যাটাগরি")}</th>
+                            <th style="background:linear-gradient(135deg,#81c784,#66bb6a);color:#fff;">${yhLang("Color", "রং")}</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>০–৫০</td>
                             <td>ভালো</td>
-                            <td><span class="aqi-chip aqi-chip--good">সবুজ</span></td>
+                            <td><span class="aqi-chip aqi-chip--good"></span></td>
                           </tr>
                           <tr>
                             <td>৫১–১০০</td>
                             <td>মোটামুটি</td>
-                            <td><span class="aqi-chip aqi-chip--fair">হালকা সবুজ</span></td>
+                            <td><span class="aqi-chip aqi-chip--fair"></span></td>
                           </tr>
                           <tr>
                             <td>১০১–১৫০</td>
                             <td>সতর্কতামূলক</td>
-                            <td><span class="aqi-chip aqi-chip--caution">হলুদ</span></td>
+                            <td><span class="aqi-chip aqi-chip--caution"></span></td>
                           </tr>
                           <tr>
                             <td>১৫১–২০০</td>
                             <td>অস্বাস্থ্যকর</td>
-                            <td><span class="aqi-chip aqi-chip--unhealthy">কমলা</span></td>
+                            <td><span class="aqi-chip aqi-chip--unhealthy"></span></td>
                           </tr>
                           <tr>
                             <td>২০১–৩০০</td>
@@ -16179,12 +14982,12 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-industry" style="color: #ff6f00; margin-right: 12px; font-size: 1.2em;"></i>
-                    বায়ু দূষণের উৎস:
+                    ${yhLang("Sources of Air Pollution:", "বায়ু দূষণের উৎস:")}
                   </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-6">
                       <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fff8e1 0%,#ffe0b2 100%);border-radius:22px;box-shadow:0 10px 35px rgba(255,152,0,.18);">
-                        <h4 class=" mb-3" style="display:flex;align-items:center;color:#ef6c00;"><i class="fa-solid fa-smog" style="margin-right:10px;"></i>WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:</h4>
+                        <h4 class=" mb-3" style="display:flex;align-items:center;color:#ef6c00;"><i class="fa-solid fa-smog" style="margin-right:10px;"></i>${yhLang("WHO has identified at least six air pollutants important for public health:", "WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:")}</h4>
                         <ul class="list-unstyled feature-list mb-4">
                           <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>i. সূক্ষ্ম কণা(PM 2.5)</li>
                           <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>ii. মোটা কণা(PM10)</li>
@@ -16193,9 +14996,9 @@ const coursesData = [
                           <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>v. সালফার ডাই অক্সাইড(SO2)</li>
                           <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>vi. কার্বন মনোক্সাইড (CO)</li>
                         </ul>
-                        <p class="mb-4">বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে ।</p>
+                        <p class="mb-4">${yhLang("In Bangladesh, residential use of solid fuels for cooking is the primary source of PM2.5 pollution, with 74.2% of the population still relying on fuels like wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে ।")}</p>
                         <div class="card-divider mb-3"></div>
-                        <h4 class="mb-3" style="display:flex;align-items:center;color:#e65100;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:</h4>
+                        <h4 class="mb-3" style="display:flex;align-items:center;color:#e65100;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>${yhLang("Air Pollution Prevention & Management:", "বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:")}</h4>
                         <ul class="list-unstyled feature-list mb-0">
                           <li><i class="fa-solid fa-check-circle text-success me-2"></i>i. খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা</li>
                           <li><i class="fa-solid fa-check-circle text-success me-2"></i>ii. স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা</li>
@@ -16207,9 +15010,9 @@ const coursesData = [
                     </div>
                     <div class="col-12 col-lg-6">
                       <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:22px;box-shadow:0 10px 35px rgba(156,39,176,.18);">
-                        <h4 class=" mb-3" style="display:flex;align-items:center;color:#6a1b9a;"><i class="fa-solid fa-heart-pulse" style="margin-right:10px;"></i>বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থ্যগত প্রভাব:</h4>
+                        <h4 class=" mb-3" style="display:flex;align-items:center;color:#6a1b9a;"><i class="fa-solid fa-heart-pulse" style="margin-right:10px;"></i>${yhLang("Health Effects Associated with Air Pollution:", "বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থ্যগত প্রভাব:")}</h4>
                         <div class="health-block mb-4">
-                          <h4 class="section-subtitle mb-3">১. প্রতিকূল জন্মের ফলাফল</h4>
+                          <h4 class="section-subtitle mb-3">${yhLang("1. Adverse Birth Outcomes", "১. প্রতিকূল জন্মের ফলাফল")}</h4>
                           <ul class="list-unstyled feature-list mb-0">
                             <li><i class="fa-solid fa-baby-carriage text-danger me-2"></i>i. অকাল জন্ম:</li>
                             <li><i class="fa-solid fa-child text-danger me-2"></i>ii. গর্ভস্থ ভ্রূণের বৃদ্ধি প্রতিবন্ধকতা (IUGR)</li>
@@ -16218,20 +15021,20 @@ const coursesData = [
                           </ul>
                         </div>
                         <div class="health-block mb-4">
-                          <h4 class="section-subtitle mb-3">২. শৈশবে শ্বাসযন্ত্রের প্রভাব</h4>
+                          <h4 class="section-subtitle mb-3">${yhLang("2. Childhood Respiratory Effects", "২. শৈশবে শ্বাসযন্ত্রের প্রভাব")}</h4>
                           <ul class="list-unstyled feature-list mb-0">
                             <li><i class="fa-solid fa-lungs text-warning me-2"></i>i. উচ্চ শ্বাস নালীর সংক্রমণ</li>
                             <li><i class="fa-solid fa-ear-listen text-warning me-2"></i>ii. ওটিটিস মিডিয়া</li>
                           </ul>
                         </div>
                         <div class="health-block mb-4">
-                          <h4 class="section-subtitle mb-3">৩. নিউমোনিয়া</h4>
+                          <h4 class="section-subtitle mb-3">${yhLang("3. Pneumonia", "৩. নিউমোনিয়া")}</h4>
                         </div>
                         <div class="health-block mb-4">
-                          <h4 class="section-subtitle mb-3">৪. হাঁপানি</h4>
+                          <h4 class="section-subtitle mb-3">${yhLang("4. Asthma", "৪. হাঁপানি")}</h4>
                         </div>
                         <div class="health-block">
-                          <h4 class="section-subtitle mb-3">৫. অন্যান্য স্বাস্থ্যগত ফলাফল</h4>
+                          <h4 class="section-subtitle mb-3">${yhLang("5. Other Health Outcomes", "৫. অন্যান্য স্বাস্থ্যগত ফলাফল")}</h4>
                           <ul class="list-unstyled feature-list mb-0">
                             <li><i class="fa-solid fa-brain text-info me-2"></i>i. স্নায়ু বিকাশগত প্রতিবন্ধকতা (আইকিউ হ্রাস এবং অটিজম)</li>
                             <li><i class="fa-solid fa-ribbon text-info me-2"></i>ii. শৈশবকালীন ম্যালিগন্যান্সি</li>
@@ -16260,18 +15063,18 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-volume-high" style="color: #5e35b1; margin-right: 12px; font-size: 1.2em;"></i>
-                    শব্দ দূষণ
+                    ${yhLang("Noise Pollution", "শব্দ দূষণ")}
                   </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card mb-3" style="background:linear-gradient(135deg,#ede7f6 0%,#d1c4e9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(94,53,177,.2);">
-                        <p>বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে " কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ" হিসেবে সংজ্ঞায়িত করেছে। জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।</p>
+                        <p>${yhLang("The World Health Organization (WHO) defines noise pollution as 'unwanted and harmful sound caused by activities'. A United Nations Environment Programme (UNEP, 2022) report declared Dhaka the noisiest city in the world. Compared to the WHO's permissible limit of 55 decibels, noise levels in Dhaka are at least double, found at 110-132 decibels. 75% of noise pollution in Dhaka originates from vehicles. A Department of Environment (DoE) study states that approximately 11.7% of Bangladesh's population has lost hearing due to noise pollution.", "বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ হিসেবে সংজ্ঞায়িত করেছে। জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।")}</p>
                         <div class="card-divider my-3"></div>
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i>উৎস</h3>
-                        <p>শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন। বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।</p>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i>${yhLang("Sources", "উৎস")}</h3>
+                        <p>${yhLang("Noise pollution comes from many everyday sources, including loud toys, household appliances, entertainment devices, and mobile phones. In Bangladesh, the primary source of noise pollution is high-volume vehicle horns. Urbanization and deforestation also indirectly increase noise in once-quiet areas.", "শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন। বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।")}</p>
                       </div>
                       <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(63,81,181,.2);">
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#3949ab;"><i class="fa-solid fa-ear-listen" style="margin-right:10px;"></i>শব্দ দূষণের প্রভাব</h3>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#3949ab;"><i class="fa-solid fa-ear-listen" style="margin-right:10px;"></i>${yhLang("Effects of Noise Pollution", "শব্দ দূষণের প্রভাব")}</h3>
                         <ul class="list-unstyled feature-list mb-0">
                           <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায়</li>
                           <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>ii. শ্রবণশক্তি হ্রাস করে</li>
@@ -16324,7 +15127,7 @@ const coursesData = [
                     শব্দ দূষণ প্রতিরোধে করনীয়
                   </h2>
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:22px;box-shadow:0 10px 35px rgba(126,87,194,.2);">
-                    <h3 style="display:flex;align-items:center;color:#6a1b9a;margin-bottom:14px;"><i class="fa-solid fa-volume-xmark" style="margin-right:10px;"></i>প্রতিরোধের করণীয়</h3>
+                    <h3 style="display:flex;align-items:center;color:#6a1b9a;margin-bottom:14px;"><i class="fa-solid fa-volume-xmark" style="margin-right:10px;"></i>${yhLang("Prevention Measures", "প্রতিরোধের করণীয়")}</h3>
                     <ul class="list-unstyled prevention-list mb-0">
                       ${renderListItems()}
                     </ul>
@@ -16381,7 +15184,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-flask" style="color: #c62828; margin-right: 12px; font-size: 1.2em;"></i>
-                    সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক
+                    ${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}
                   </h2>
                   <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#ffebee 0%,#ffcdd2 100%);border-radius:22px;box-shadow:0 10px 35px rgba(198,40,40,.18);">
                     <p>উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে ।</p>
@@ -16391,7 +15194,7 @@ const coursesData = [
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="60">
                     <div class="col-12 col-lg-6">
                       <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 100%);border-radius:20px;box-shadow:0 8px 28px rgba(216,27,96,.18);">
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#ad1457;"><i class="fa-solid fa-vial-circle-check" style="margin-right:10px;"></i>ক্ষতিকারক রাসায়নিক পদার্থ</h3>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#ad1457;"><i class="fa-solid fa-vial-circle-check" style="margin-right:10px;"></i>${yhLang("Harmful Chemicals", "ক্ষতিকারক রাসায়নিক পদার্থ")}</h3>
                         <ul class="list-unstyled feature-list mb-0">
                           ${renderItems(chemicalList)}
                         </ul>
@@ -16402,7 +15205,7 @@ const coursesData = [
                         <h3 class="mb-3" style="display:flex;align-items:center;color:#6a1b9a;"><i class="fa-solid fa-heart-circle-xmark" style="margin-right:10px;"></i>ক্ষতিকারক রাসায়নিক পদার্থের সাথে সম্পর্কিত স্বাস্থ্য সমস্যা</h3>
                         <p>তীব্র বমি, ডায়রিয়া, চর্মরোগ, ক্যান্সার, হৃদরোগ, কম জন্মওজন, সময়ের পূর্বে জন্ম, মৃত শিশুর জন্ম, প্রজনন ও বিকাশজনিত সমস্যা, অকাল মৃত্যু</p>
                         <div class="card-divider my-3"></div>
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#4a148c;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>প্রতিরোধ ও ব্যবস্থাপনা</h3>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#4a148c;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>${yhLang("Prevention & Management", "প্রতিরোধ ও ব্যবস্থাপনা")}</h3>
                         <ul class="list-unstyled feature-list mb-0">
                           ${renderItems(preventionList)}
                         </ul>
@@ -16453,7 +15256,7 @@ const coursesData = [
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#e8f5e9 0%,#c8e6c9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(67,160,71,.2);">
-                        <h3 style="display:flex;align-items:center;color:#2e7d32;margin-bottom:12px;"><i class="fa-solid fa-list-check" style="margin-right:10px;"></i>প্রতিরোধমূলক পদক্ষেপ</h3>
+                        <h3 style="display:flex;align-items:center;color:#2e7d32;margin-bottom:12px;"><i class="fa-solid fa-list-check" style="margin-right:10px;"></i>${yhLang("Prevention Measures", "প্রতিরোধমূলক পদক্ষেপ")}</h3>
                         <ul class="list-unstyled feature-list mb-0">
                           ${renderItems()}
                         </ul>
@@ -16461,7 +15264,7 @@ const coursesData = [
                     </div>
                     <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card text-center h-100" style="background:linear-gradient(135deg,#e3f2fd 0%,#bbdefb 100%);border-radius:20px;box-shadow:0 10px 30px rgba(30,136,229,.2);">
-                        <h5 style="display:flex;align-items:center;justify-content:center;color:#1565c0;margin-bottom:14px;"><i class="fa-solid fa-cloud-sun-rain" style="margin-right:8px;"></i>জলবায়ু অভিযোজন চিত্র</h5>
+                        <h5 style="display:flex;align-items:center;justify-content:center;color:#1565c0;margin-bottom:14px;"><i class="fa-solid fa-cloud-sun-rain" style="margin-right:8px;"></i>${yhLang("Climate Adaptation Diagram", "জলবায়ু অভিযোজন চিত্র")}</h5>
                         <img src="img/modu22/climate3.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="জলবায়ু পরিবর্তন প্রতিরোধ" loading="lazy">
                       </div>
                     </div>
@@ -16502,12 +15305,12 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-faucet-drip" style="color: #039be5; margin-right: 12px; font-size: 1.2em;"></i>
-                    খাবারপানি
+                    ${yhLang("Food and Water", "খাবারপানি")}
                   </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e1f5fe 0%,#b3e5fc 100%);border-radius:22px;box-shadow:0 10px 35px rgba(3,155,229,.18);">
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#0277bd;"><i class="fa-solid fa-glass-water" style="margin-right:10px;"></i>নিরাপদ খাবারপানির গুরুত্ব</h3>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#0277bd;"><i class="fa-solid fa-glass-water" style="margin-right:10px;"></i>${yhLang("Importance of Safe Drinking Water", "নিরাপদ খাবারপানির গুরুত্ব")}</h3>
                         <p>পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।</p>
                         <p class="mb-3">শিশু-কিশোরদের সু-স্বাস্থ্যের জন্য বিশুদ্ধ খাবারপানি, স্যানিটেশন এবং স্বাস্থ্যবিধি মেনে চলা অত্যাবশ্যক, যদিও অনেক গ্রামীণ, শহরের ঘিঞ্জি বস্তি এলাকা এবং দরিদ্র সম্প্রদায়ের অনেকক্ষেত্রে নিরাপদ খাবারপানি সহজলভ্য নয়।</p>
                         <h3 class="mb-3" style="display:flex;align-items:center;color:#01579b;"><i class="fa-solid fa-water" style="margin-right:10px;"></i>খাবারপানির উৎসঃ</h3>
@@ -16668,7 +15471,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-hand-holding-droplet" style="color: #9c27b0; margin-right: 12px; font-size: 1.2em;"></i>
-                    খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ
+                    ${yhLang("Main Causes of Contamination in Food and Water:", "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ")}
                   </h2>
                   <p class="mt-3" data-aos="fade-up" data-aos-delay="20">অনিরাপদ বা দূষিত খাবারপানির কারণে নানা ধরনের গুরুতর স্বাস্থ্য ঝুঁকি হতে পারে। প্রধান স্বাস্থ্য ঝুঁকিগুলো হলো:</p>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
@@ -17179,7 +15982,7 @@ const coursesData = [
                             "ইমারজিং বা উদীয়মান রোগ ও রি-ইমারজিং বা পুনরুদ্ভূত রোগের উদাহরণ সমূহ"
                           )}</h4>
                           <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="220">
-                            <img class="img-zoom" style="max-height: 300px" src="img/modu23/global_new.png" alt="ইমারজিং ও রি-ইমারজিং রোগের উদাহরণ">
+                            <img class="img-zoom" style="max-height: 350px" src="img/modu23/global.png" alt="ইমারজিং ও রি-ইমারজিং রোগের উদাহরণ">
                           </div>
                         </article>
 
@@ -17189,7 +15992,7 @@ const coursesData = [
                             "সংক্রমণকে ত্বরান্বিত করনে প্রভাবক সমূহ"
                           )}</h4>
                           <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="280">
-                            <img class="img-zoom" style="max-height: 300px" src="img/modu23/global2_new.png" alt="সংক্রমণকে ত্বরান্বিত করার প্রভাবক">
+                            <img class="img-zoom" style="max-height: 350px" src="img/modu23/global2.png" alt="সংক্রমণকে ত্বরান্বিত করার প্রভাবক">
                           </div>
                         </article>
                       </div>
@@ -18687,7 +17490,7 @@ const coursesData = [
                               accent: "m24l10-step--b",
                               text: yhLang(
                                 "Avoid unguardian-like behavior with adolescents",
-                                "তরুণ-তরুণীদের সাথে অ-অভিভাবকসুলভ আচরণ"
+                                "কিশোর-কিশোরীদের সাথে অ-অভিভাবকসুলভ আচরণ"
                               ),
                             },
                             {
@@ -19105,7 +17908,7 @@ const coursesData = [
                   icon: "fa-house-crack",
                   text: yhLang(
                     "Lack of family guidance pushes adolescents onto the wrong path.",
-                    "পারিবারিক অনুশাসনের অভাবই তরুণ-তরুণীদের ভুল পথে ঠেলে দেয়।"
+                    "পারিবারিক অনুশাসনের অভাবই কিশোর-কিশোরীদের ভুল পথে ঠেলে দেয়।"
                   ),
                 },
               ];
@@ -19129,7 +17932,7 @@ const coursesData = [
                   accent: "m24l10-step--b",
                   text: yhLang(
                     "Avoid unguardian-like behavior with adolescents",
-                    "তরুণ-তরুণীদের সাথে অ-অভিভাবকসুলভ আচরণ"
+                    "কিশোর-কিশোরীদের সাথে অ-অভিভাবকসুলভ আচরণ"
                   ),
                 },
                 {
