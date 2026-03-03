@@ -15009,7 +15009,7 @@ const coursesData = [
                   <div class="row g-2" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-6">
                       <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e1f5fe 0%,#b3e5fc 100%);border-radius:22px;box-shadow:0 10px 35px rgba(3,155,229,.18);">
-                        <h3 class="mb-2" style="display:flex;align-items:center;color:#0277bd; font-weight:700;"><span style="background:linear-gradient(135deg,#03a9f4,#0288d1); width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(3,169,244,0.35);"><i class="fa-solid fa-glass-water" style="color:#fff; font-size:22px;"></i></span>${yhLang("Importance of Safe Drinking Water", "নিরাপদ খাবারপানির গুরুত্ব")}</h3>
+                        <h3 class="mb-2" style="display:flex;align-items:center;color:#0277bd; font-weight:700;"><span style="background:linear-gradient(135deg,#03a9f4,#0288d1); width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(3,169,244,0.35);"><i class="fa-solid fa-glass-water" style="color:#fff; font-size:22px;"></i></span>${yhLang("Water Polution", "পানি দূষণ")}</h3>
                         <p>পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।</p>
                        
                       </div>
@@ -15026,57 +15026,7 @@ const coursesData = [
                 </div>`;
             })(),
           },
-                    {
-            id: "ch22-lesson-6",
-            title: yhLang(
-              "Food and Water",
-              "খাবারপানি"
-            ),
-            icon: "fa-faucet-drip",
-            gradientClass: "bg-gradient-sky",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              const waterSources = [
-                "১।  ভূগর্ভস্থ পানি",
-                "২। ভূপৃষ্ঠের উপরিভাগ যেমনঃ নদি-নলা, খাল-বিল, পুকুর প্রভিতি",
-                "৩। অন্যান্যঃ  বৃষ্টির পানি, হিমবাহ",
-              ];
 
-              const renderSources = () =>
-                waterSources
-                  .map(
-                    (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.68)' : 'rgba(227,242,253,.72)'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(3,155,229,.16)' : '0 8px 20px rgba(2,119,189,.16)'};">
-                        <i class="fa-solid ${idx === 0 ? 'fa-well' : idx === 1 ? 'fa-water' : 'fa-cloud-rain'} text-primary me-2"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-faucet-drip" style="color: #039be5; margin-right: 12px; font-size: 1.2em;"></i>
-                    ${yhLang("Food and Water", "খাবারপানি")}
-                  </h2>
-                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e1f5fe 0%,#b3e5fc 100%);border-radius:22px;box-shadow:0 10px 35px rgba(3,155,229,.18);">
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#0277bd; font-weight:700;"><span style="background:linear-gradient(135deg,#03a9f4,#0288d1); width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(3,169,244,0.35);"><i class="fa-solid fa-glass-water" style="color:#fff; font-size:22px;"></i></span>${yhLang("Importance of Safe Drinking Water", "নিরাপদ খাবারপানির গুরুত্ব")}</h3>
-                        <p>পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।</p>
-                        <p class="mb-3">শিশু-কিশোরদের সু-স্বাস্থ্যের জন্য বিশুদ্ধ খাবারপানি, স্যানিটেশন এবং স্বাস্থ্যবিধি মেনে চলা অত্যাবশ্যক, যদিও অনেক গ্রামীণ, শহরের ঘিঞ্জি বস্তি এলাকা এবং দরিদ্র সম্প্রদায়ের অনেকক্ষেত্রে নিরাপদ খাবারপানি সহজলভ্য নয়।</p>
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#01579b; font-weight:700;"><span style="background:linear-gradient(135deg,#039be5,#0277bd); width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(3,155,229,0.35);"><i class="fa-solid fa-water" style="color:#fff; font-size:22px;"></i></span>খাবারপানির উৎসঃ</h3>
-                        <ul class="list-unstyled feature-list mb-0">
-                          ${renderSources()}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
           {
             id: "ch22-lesson-7",
             title: yhLang(
@@ -15090,36 +15040,36 @@ const coursesData = [
             content: (function () {
               const pollutionCauses = [
                 {
-                  title: "১. শিল্পকারখানার বর্জ্য",
-                  desc: "বিভিন্ন কারখানা থেকে নির্গত রাসায়নিক, ভারী ধাতু, রঙ, এসিড-ক্ষার ইত্যাদি সরাসরি নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।",
+                  title: yhLang("1. Industrial Waste", "১. শিল্পকারখানার বর্জ্য"),
+                  desc: yhLang("Chemicals, heavy metals, dyes, and acids from factories enter rivers and ponds, contaminating water.", "বিভিন্ন কারখানা থেকে নির্গত রাসায়নিক, ভারী ধাতু, রঙ, এসিড-ক্ষার ইত্যাদি সরাসরি নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।"),
                 },
                 {
-                  title: "২. কৃষিকাজে ব্যবহৃত রাসায়নিক",
-                  desc: "কীটনাশক, সার, আগাছানাশক মাটির সাথে মিশে ভূগর্ভস্থ পানিতে পৌঁছায় এবং পানির মান নষ্ট করে।",
+                  title: yhLang("2. Agricultural Chemicals", "২. কৃষিকাজে ব্যবহৃত রাসায়নিক"),
+                  desc: yhLang("Pesticides, fertilizers, and herbicides mix with soil and reach groundwater, degrading water quality.", "কীটনাশক, সার, আগাছানাশক মাটির সাথে মিশে ভূগর্ভস্থ পানিতে পৌঁছায় এবং পানির মান নষ্ট করে।"),
                 },
                 {
-                  title: "৩. গৃহস্থালি বর্জ্য ও নোংরা পানি",
-                  desc: "রান্নাঘর, বাথরুম ও টয়লেটের নোংরা পানি সঠিকভাবে পরিশোধন না করে ফেলে দিলে নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।",
+                  title: yhLang("3. Household Waste & Sewage", "৩. গৃহস্থালি বর্জ্য ও নোংরা পানি"),
+                  desc: yhLang("Dirty water from kitchens, bathrooms, and toilets without proper treatment pollutes rivers and streams.", "রান্নাঘর, বাথরুম ও টয়লেটের নোংরা পানি সঠিকভাবে পরিশোধন না করে ফেলে দিলে নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।"),
                 },
                 {
-                  title: "৪. মানববর্জ্য ও স্যানিটেশন সমস্যা",
-                  desc: "উন্মুক্ত স্থানে শৌচকর্ম, অপর্যাপ্ত ল্যাট্রিন/পায়খানা  ও ড্রেনেজ ব্যবস্থা পানিতে ব্যাকটেরিয়া, ভাইরাস, পরজীবী ছড়িয়ে দেয় ও পানিকে দূষিত করে।",
+                  title: yhLang("4. Human Waste & Sanitation Problems", "৪. মানববর্জ্য ও স্যানিটেশন সমস্যা"),
+                  desc: yhLang("Open defecation and poor drainage systems spread bacteria, viruses, and parasites in water.", "উন্মুক্ত স্থানে শৌচকর্ম, অপর্যাপ্ত ল্যাট্রিন/পায়খানা  ও ড্রেনেজ ব্যবস্থা পানিতে ব্যাকটেরিয়া, ভাইরাস, পরজীবী ছড়িয়ে দেয় ও পানিকে দূষিত করে।"),
                 },
                 {
-                  title: "৫. নদী-নালা ও খালে প্লাস্টিক ও কঠিন বর্জ্য ফেলা",
-                  desc: "পলিথিন, প্লাস্টিকের বোতল, পুরনো ইলেকট্রনিক বর্জ্য পানিতে ফেললে  তা  পানিতে মিশে বিষাক্ত উপাদান ছড়ায় ও পানিকে দূষিত করে।",
+                  title: yhLang("5. Plastic & Solid Waste", "৫. নদী-নালা ও খালে প্লাস্টিক ও কঠিন বর্জ্য ফেলা"),
+                  desc: yhLang("Plastic bottles and electronic waste in water release toxic substances and contaminate it.", "পলিথিন, প্লাস্টিকের বোতল, পুরনো ইলেকট্রনিক বর্জ্য পানিতে ফেললে  তা  পানিতে মিশে বিষাক্ত উপাদান ছড়ায় ও পানিকে দূষিত করে।"),
                 },
                 {
-                  title: "৬. তেল ও জ্বালানি পদার্থের নিঃসরণ",
-                  desc: "নৌযান/ জাহাজের পাম্প, জেনারেটর থেকে বা দুর্ঘটনার কারণে তেল পানিতে মিশে জীববৈচিত্র্য ও পানির মান নষ্ট করে।",
+                  title: yhLang("6. Oil & Fuel Spills", "৬. তেল ও জ্বালানি পদার্থের নিঃসরণ"),
+                  desc: yhLang("Oil leaks from boats and generators damage aquatic life and water quality.", "নৌযান/ জাহাজের পাম্প, জেনারেটর থেকে বা দুর্ঘটনার কারণে তেল পানিতে মিশে জীববৈচিত্র্য ও পানির মান নষ্ট করে।"),
                 },
                 {
-                  title: "৭. অপরিকল্পিত নগরায়ণ ও নির্মাণকাজ",
-                  desc: "মাটিক্ষয়, ধুলা-বালু, কংক্রিটের মিশ্রণসহ অন্যান্য উপাদান পানিতে পড়ে দূষণ বাড়ায়।",
+                  title: yhLang("7. Unplanned Urbanization", "৭. অপরিকল্পিত নগরায়ন ও নির্মাণকাজ"),
+                  desc: yhLang("Dust, soil, and concrete from construction pollute water sources.", "মাটিক্ষয়, ধুলা-বালু, কংক্রিটের মিশ্রণসহ অন্যান্য উপাদান পানিতে পড়ে দূষণ বাড়ায়।"),
                 },
                 {
-                  title: "৮. চিকিৎসা বর্জ্য ও রাসায়নিক ওষুধ",
-                  desc: "হাসপাতাল বা ক্লিনিকের বর্জ্য সঠিকভাবে ব্যবস্থাপনা না করলে পানি জীবাণু ও রাসায়নিক দ্বারা দূষিত হয়।",
+                  title: yhLang("8. Medical Waste & Chemicals", "৮. চিকিৎসা বর্জ্য ও রাসায়নিক ওষুধ"),
+                  desc: yhLang("Hospital and clinic waste contaminates water with germs and harmful chemicals.", "হাসপাতাল বা ক্লিনিকের বর্জ্য সঠিকভাবে ব্যবস্থাপনা না করলে পানি জীবাণু ও রাসায়নিক দ্বারা দূষিত হয়।"),
                 },
               ];
 
@@ -15142,10 +15092,16 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-water" style="color: #ff7043; margin-right: 12px; font-size: 1.2em;"></i>
-                    খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ
+                    ${yhLang(
+                        "Main Causes of Food and Water Contamination",
+                        "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ"
+                    )}
                   </h2>
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 50%, #ffcc80 100%);border-radius:24px;box-shadow:0 14px 42px rgba(255,112,67,.28), 0 6px 18px rgba(244,81,30,.15);">
-                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:14px; font-weight:700;"><span style="background:linear-gradient(135deg,#ff7043,#f4511e); width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(255,112,67,0.35);"><i class="fa-solid fa-industry" style="color:#fff; font-size:24px;"></i></span>দূষণের প্রধান উৎসসমূহ</h3>
+                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:14px; font-weight:700;"><span style="background:linear-gradient(135deg,#ff7043,#f4511e); width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(255,112,67,0.35);"><i class="fa-solid fa-industry" style="color:#fff; font-size:24px;"></i></span>${yhLang(
+                        "Main Causes of Food and Water Contamination",
+                        "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ"
+                    )}</h3>
                     <ul class="list-unstyled feature-list mb-0">
                       ${renderCauses()}
                     </ul>
