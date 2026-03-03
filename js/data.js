@@ -15028,7 +15028,7 @@ const coursesData = [
           },
 
           {
-            id: "ch22-lesson-7",
+            id: "ch22-lesson-4",
             title: yhLang(
               "Main Causes of Food and Water Contamination",
               "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ"
@@ -15110,7 +15110,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-8",
+            id: "ch22-lesson-6",
             title: yhLang(
               "Health Risks from Contaminated Food and Water",
               "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি"
@@ -15122,79 +15122,162 @@ const coursesData = [
             content: (function () {
               const leftSections = [
                 {
-                  title: "১. পানিবাহিত রোগ",
-                  items: ["ডায়রিয়া", "ডিজেন্ট্রি (আমাশয়)", "টাইফয়েড", "কলেরা", "হেপাটাইটিস–এ", "জিয়ার্ডিয়াসিস"],
+                  title: yhLang("1. Waterborne Diseases", "১. পানিবাহিত রোগ"),
+                  items: [
+                    yhLang("Diarrhea", "ডায়রিয়া"),
+                    yhLang("Dysentery", "ডিজেন্ট্রি (আমাশয়)"),
+                    yhLang("Typhoid", "টাইফয়েড"),
+                    yhLang("Cholera", "কলেরা"),
+                    yhLang("Hepatitis A", "হেপাটাইটিস–এ"),
+                    yhLang("Giardiasis", "জিয়ার্ডিয়াসিস")
+                  ],
                 },
                 {
-                  title: "২. পেটের সমস্যা ও অপুষ্টি",
-                  items: ["পেটের সংক্রমণ", "বমি", "পেট ব্যথা", "ডায়রিয়া", "পানিশূন্যতা", "দীর্ঘমেয়াদে অপুষ্টির কারণ"],
+                  title: yhLang("2. Digestive Problems & Malnutrition", "২. পেটের সমস্যা ও অপুষ্টি"),
+                  items: [
+                    yhLang("Stomach infection", "পেটের সংক্রমণ"),
+                    yhLang("Vomiting", "বমি"),
+                    yhLang("Stomach pain", "পেট ব্যথা"),
+                    yhLang("Diarrhea", "ডায়রিয়া"),
+                    yhLang("Dehydration", "পানিশূন্যতা"),
+                    yhLang("Long-term malnutrition", "দীর্ঘমেয়াদে অপুষ্টির কারণ")
+                  ],
                 },
               ];
 
-              const rightSections = [
+
+
+              const rightSections1 = [
                 {
-                  title: "৩. রাসায়নিক দূষণের ক্ষতি",
+                  title: yhLang("3. Chemical Pollution Damage", "৩. রাসায়নিক দূষণের ক্ষতি"),
                   items: [
-                    "আর্সেনিকোসিস (ত্বকে কালো দাগ, চর্মরোগ, ক্যান্সারের ঝুঁকি)",
-                    "ডেন্টাল বা স্কেলেটাল ফ্লুরোসিস",
-                    "স্নায়ুতন্ত্রের ক্ষতি",
-                    "বুদ্ধি ও স্মৃতিশক্তি হ্রাস (বিশেষত শিশুদের)",
-                    "কিডনি ও লিভারের সমস্যা",
+                    yhLang("Arsenicosis (dark spots on skin, skin diseases, cancer risk)", "আর্সেনিকোসিস (ত্বকে কালো দাগ, চর্মরোগ, ক্যান্সারের ঝুঁকি)"),
+                    yhLang("Dental or skeletal fluorosis", "ডেন্টাল বা স্কেলেটাল ফ্লুরোসিস"),
+                    yhLang("Nervous system damage", "স্নায়ুতন্ত্রের ক্ষতি"),
+                    yhLang("Reduced intelligence & memory (especially in children)", "বুদ্ধি ও স্মৃতিশক্তি হ্রাস (বিশেষত শিশুদের)"),
+                    yhLang("Kidney & liver problems", "কিডনি ও লিভারের সমস্যা"),
                   ],
                 },
+                
+              ];
+
+              const rightSections2 = [
+              
                 {
-                  title: "৪. ত্বকের রোগ",
-                  description: "চর্মরোগ, একজিমা, চুলকানি, ফাঙ্গাল সংক্রমণ হতে পারে।",
+                  title: yhLang("4. Skin Diseases", "৪. ত্বকের রোগ"),
+                  description: yhLang("Can cause skin diseases, eczema, itching, and fungal infections.", "চর্মরোগ, একজিমা, চুলকানি, ফাঙ্গাল সংক্রমণ হতে পারে।"),
                 },
                 {
-                  title: "৫. দীর্ঘমেয়াদি ক্রনিক রোগ",
+                  title: yhLang("5. Long-term Chronic Diseases", "৫. দীর্ঘমেয়াদি ক্রনিক রোগ"),
                   items: [
-                    "ক্যান্সারের ঝুঁকি বৃদ্ধি",
-                    "কিডনি ফেইলিওর",
-                    "লিভার সিরোসিস",
-                    "হরমোনের ভারসাম্যহীনতা",
-                    "হৃদরোগের ঝুঁকি বাড়তে পারে।",
+                    yhLang("Increased cancer risk", "ক্যান্সারের ঝুঁকি বৃদ্ধি"),
+                    yhLang("Kidney failure", "কিডনি ফেইলিওর"),
+                    yhLang("Liver cirrhosis", "লিভার সিরোসিস"),
+                    yhLang("Hormonal imbalance", "হরমোনের ভারসাম্যহীনতা"),
+                    yhLang("Increased risk of heart disease", "হৃদরোগের ঝুঁকি বাড়তে পারে।"),
                   ],
                 },
               ];
+
+
+
+              const getItemIcon = (item) => {
+                if (item.includes('ডায়রিয়া') || item.includes('Diarrhea')) return { icon: 'fa-droplet', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
+                if (item.includes('ডিজেন্ট্রি') || item.includes('আমাশয়') || item.includes('Dysentery')) return { icon: 'fa-virus', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
+                if (item.includes('টাইফয়েড') || item.includes('Typhoid')) return { icon: 'fa-temperature-high', color: '#e65100', bg: 'rgba(230,81,0,.12)' };
+                if (item.includes('কলেরা') || item.includes('Cholera')) return { icon: 'fa-disease', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                if (item.includes('হেপাটাইটিস') || item.includes('Hepatitis')) return { icon: 'fa-syringe', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
+                if (item.includes('জিয়ার্ডিয়াসিস') || item.includes('Giardiasis')) return { icon: 'fa-bacterium', color: '#ef6c00', bg: 'rgba(239,108,0,.12)' };
+                if (item.includes('পেটের সংক্রমণ') || item.includes('Stomach infection')) return { icon: 'fa-stomach', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
+                if (item.includes('বমি') || item.includes('Vomiting')) return { icon: 'fa-head-side-cough', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
+                if (item.includes('পেট ব্যথা') || item.includes('Stomach pain')) return { icon: 'fa-circle-exclamation', color: '#ff8f00', bg: 'rgba(255,143,0,.12)' };
+                if (item.includes('পানিশূন্যতা') || item.includes('Dehydration')) return { icon: 'fa-droplet-slash', color: '#f4511e', bg: 'rgba(244,81,30,.12)' };
+                if (item.includes('অপুষ্টি') || item.includes('malnutrition')) return { icon: 'fa-child', color: '#e64a19', bg: 'rgba(230,74,25,.12)' };
+                if (item.includes('আর্সেনিকোসিস') || item.includes('Arsenicosis')) return { icon: 'fa-skull-crossbones', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
+                if (item.includes('ফ্লুরোসিস') || item.includes('fluorosis')) return { icon: 'fa-tooth', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                if (item.includes('স্নায়ুতন্ত্র') || item.includes('Nervous')) return { icon: 'fa-brain', color: '#ad1457', bg: 'rgba(173,20,87,.12)' };
+                if (item.includes('বুদ্ধি') || item.includes('স্মৃতিশক্তি') || item.includes('intelligence') || item.includes('memory')) return { icon: 'fa-book-medical', color: '#6a1b9a', bg: 'rgba(106,27,154,.12)' };
+                if (item.includes('কিডনি') || item.includes('Kidney')) return { icon: 'fa-kidneys', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                if (item.includes('লিভার') || item.includes('Liver') || item.includes('liver')) return { icon: 'fa-user-doctor', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
+                if (item.includes('ক্যান্সার') || item.includes('cancer')) return { icon: 'fa-ribbon', color: '#b71c1c', bg: 'rgba(183,28,28,.12)' };
+                if (item.includes('হরমোন') || item.includes('Hormonal')) return { icon: 'fa-dna', color: '#880e4f', bg: 'rgba(136,14,79,.12)' };
+                if (item.includes('হৃদরোগ') || item.includes('heart')) return { icon: 'fa-heart-pulse', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                return { icon: 'fa-circle-check', color: '#7b1fa2', bg: 'rgba(123,31,162,.12)' };
+              };
 
               const renderList = (items) =>
                 items
                   .map(
-                    (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.58)' : 'rgba(243,229,245,.6)'};border-radius:12px;padding:9px 11px;margin-bottom:8px;box-shadow:${idx % 2 === 0 ? '0 5px 14px rgba(123,31,162,.16)' : '0 7px 16px rgba(94,53,177,.15)'};">
-                        <i class="fa-solid ${item.includes('ক্যান্সার') ? 'fa-ribbon' : item.includes('কিডনি') ? 'fa-kidneys' : item.includes('লিভার') ? 'fa-user-doctor' : 'fa-circle-check'} ${item.includes('ক্যান্সার') ? 'text-danger' : 'text-primary'} me-2"></i>
-                        <span>${item}</span>
+                    (item, idx) => {
+                      const iconData = getItemIcon(item);
+                      return `
+                      <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:5px 5px;margin-bottom:5px;box-shadow:0 6px 18px rgba(103,58,183,.14), 0 2px 8px ${iconData.bg};transition:all 0.3s ease;">
+                        <span style="background:linear-gradient(135deg,${iconData.color},${iconData.color}dd);width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;margin-right:5px;box-shadow:0 4px 12px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:16px;"></i></span>
+                        <span style="color:#333;font-weight:500;">${item}</span>
                       </li>
-                    `
+                    `;
+                    }
                   )
                   .join("");
 
-              const renderSection = (section) => `
-                <div class="health-section mb-4">
-                  <h4 class="mb-3">${section.title}</h4>
-                  ${section.items ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : `<p class="mb-0">${section.description}</p>`}
+              const getSectionIcon = (title) => {
+                if (title.includes('পানিবাহিত রোগ') || title.includes('Waterborne')) return { icon: 'fa-water', color: '#0277bd', gradient: 'linear-gradient(135deg,#0288d1,#01579b)' };
+                if (title.includes('পেটের সমস্যা') || title.includes('Digestive')) return { icon: 'fa-stomach', color: '#ff6f00', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
+                if (title.includes('রাসায়নিক দূষণ') || title.includes('Chemical')) return { icon: 'fa-flask', color: '#d32f2f', gradient: 'linear-gradient(135deg,#e53935,#c62828)' };
+                if (title.includes('ত্বকের রোগ') || title.includes('Skin')) return { icon: 'fa-hand-dots', color: '#f57c00', gradient: 'linear-gradient(135deg,#fb8c00,#ef6c00)' };
+                if (title.includes('দীর্ঘমেয়াদি') || title.includes('ক্রনিক') || title.includes('Long-term') || title.includes('Chronic')) return { icon: 'fa-heart-circle-xmark', color: '#c62828', gradient: 'linear-gradient(135deg,#d32f2f,#b71c1c)' };
+                return { icon: 'fa-circle-info', color: '#7b1fa2', gradient: 'linear-gradient(135deg,#8e24aa,#6a1b9a)' };
+              };
+
+              const renderSection = (section) => {
+                const iconData = getSectionIcon(section.title);
+                return `
+                <div class="health-section mb-1" style="background:rgba(255,255,255,.4);border-radius:18px;padding:5px;box-shadow:0 8px 22px rgba(103,58,183,.12);">
+                  <h4 class="mb-1" style="display:flex;align-items:center;color:#4a148c;font-weight:700;">
+                    <span style="background:${iconData.gradient};width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
+                    ${section.title}
+                  </h4>
+                  ${section.items ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : `<div style="background:linear-gradient(135deg,rgba(255,255,255,.9) 0%,rgba(255,243,224,.7) 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
                 </div>
-              `;
+              `;};
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-hand-holding-droplet" style="color: #9c27b0; margin-right: 12px; font-size: 1.2em;"></i>
-                    ${yhLang("Main Causes of Contamination in Food and Water:", "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ")}
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:5px;">
+                    <span style="background:linear-gradient(135deg,#9c27b0,#7b1fa2);width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 20px rgba(156,39,176,.35), 0 2px 10px rgba(123,31,162,.2);"><i class="fa-solid fa-hand-holding-droplet" style="color:#fff;font-size:28px;"></i></span>
+                    ${yhLang("Health Risks from Contaminated Food and Water", "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি")}
                   </h2>
-                  <p class="mt-3" data-aos="fade-up" data-aos-delay="20">অনিরাপদ বা দূষিত খাবারপানির কারণে নানা ধরনের গুরুতর স্বাস্থ্য ঝুঁকি হতে পারে। প্রধান স্বাস্থ্য ঝুঁকিগুলো হলো:</p>
-                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#ede7f6 0%,#d1c4e9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(103,58,183,.2);">
-                        <h3 style="display:flex;align-items:center;color:#5e35b1;margin-bottom:12px;"><i class="fa-solid fa-briefcase-medical" style="margin-right:10px;"></i>তাৎক্ষণিক স্বাস্থ্যঝুঁকি</h3>
+                  
+                  <div class="modern-card glass-card mb-4" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 50%,#ce93d8 100%);border-radius:20px;padding:18px 22px;box-shadow:0 10px 32px rgba(156,39,176,.22), 0 4px 14px rgba(123,31,162,.15);border-left:5px solid #9c27b0;">
+                    <div style="display:flex;align-items:center;">
+                      <span style="background:linear-gradient(135deg,#ab47bc,#8e24aa);width:44px;height:44px;min-width:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 5px 16px rgba(171,71,188,.3);"><i class="fa-solid fa-triangle-exclamation" style="color:#fff;font-size:20px;"></i></span>
+                      <p class="mb-0" style="color:#4a148c;font-size:1.05em;font-weight:500;line-height:1.7;">${yhLang("Contaminated food and water can cause various serious health risks. The main health risks are:", "অনিরাপদ বা দূষিত খাবারপানির কারণে নানা ধরনের গুরুতর স্বাস্থ্য ঝুঁকি হতে পারে। প্রধান স্বাস্থ্য ঝুঁকিগুলো হলো:")}</p>
+                    </div>
+                  </div>
+
+                  <div class="row g-1" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-4">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%,#9fa8da 100%);border-radius:24px;padding:24px;box-shadow:0 12px 38px rgba(63,81,181,.24), 0 5px 18px rgba(48,63,159,.18);">
+                        <h3 style="display:flex;align-items:center;color:#1a237e;margin-bottom:5px;font-weight:700;font-size:1.4em;">
+                          <span style="background:linear-gradient(135deg,#5c6bc0,#3949ab);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(92,107,192,.4), 0 2px 8px rgba(57,73,171,.25);"><i class="fa-solid fa-briefcase-medical" style="color:#fff;font-size:24px;"></i></span>
+                          ${yhLang("Immediate Health Risks", "তাৎক্ষণিক স্বাস্থ্যঝুঁকি")}
+                        </h3>
                         ${leftSections.map(renderSection).join("")}
                       </div>
                     </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:22px;box-shadow:0 10px 35px rgba(171,71,188,.2);">
-                        <h3 style="display:flex;align-items:center;color:#7b1fa2;margin-bottom:12px;"><i class="fa-solid fa-heart-circle-xmark" style="margin-right:10px;"></i>দীর্ঘমেয়াদি স্বাস্থ্যঝুঁকি</h3>
-                        ${rightSections.map(renderSection).join("")}
+                    <div class="col-12 col-lg-4">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%,#f48fb1 100%);border-radius:24px;padding:24px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
+                        <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:5px;font-weight:700;font-size:1.4em;">
+                          <span style="background:linear-gradient(135deg,#ec407a,#d81b60);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(236,64,122,.4), 0 2px 8px rgba(216,27,96,.25);"><i class="fa-solid fa-heart-circle-xmark" style="color:#fff;font-size:24px;"></i></span>
+                          ${yhLang("Long-term Health Risks", "দীর্ঘমেয়াদি স্বাস্থ্যঝুঁকি")}
+                        </h3>
+                        ${rightSections1.map(renderSection).join("")}
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%,#f48fb1 100%);border-radius:24px;padding:24px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
+                        
+                        ${rightSections2.map(renderSection).join("")}
                       </div>
                     </div>
                   </div>
