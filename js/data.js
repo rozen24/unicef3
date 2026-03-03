@@ -14755,9 +14755,11 @@ const coursesData = [
                   
                 <div class="row g-2">
                       <div class="col-md-5">
-                        <div class="modern-card glass-card mb-0" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(38, 166, 154, 0.15);">
-                          <h3 style="display: flex; align-items: center; margin-bottom: 5px; color: #00695c;">
-                            <i class="fa-solid fa-cloud-sun" style="margin-right: 10px; font-size: 24px; color: #26a69a;"></i>
+                        <div class="modern-card glass-card mb-0" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #d5f4e6 0%, #a0d8f1 50%, #e0f7fa 100%); border-radius: 24px; box-shadow: 0 12px 40px rgba(38, 166, 154, 0.25), 0 4px 12px rgba(0, 150, 136, 0.15);">
+                          <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #00695c; font-weight: 700;">
+                            <span style="background: linear-gradient(135deg, #26a69a, #00897b); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 12px rgba(38, 166, 154, 0.3);">
+                              <i class="fa-solid fa-cloud-sun" style="font-size: 24px; color: #fff;"></i>
+                            </span>
                             ${yhLang("Definition of Weather and Climate", "আবহাওয়া ও জলবায়ুর সংজ্ঞা")}
                           </h3>
                           <p class="mb-1">${yhLang(
@@ -14770,9 +14772,11 @@ const coursesData = [
                           )}</p>
                         </div>
                         
-                        <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 25px; box-shadow: 0 12px 40px rgba(233, 30, 99, 0.18); margin-top: 20px;">
-                          <h3 style="display: flex; align-items: center; margin-bottom: 5px; color: #c2185b;">
-                            <i class="fa-solid fa-temperature-arrow-up" style="margin-right: 10px; font-size: 24px; color: #e91e63;"></i>
+                        <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #ffebee 0%, #fce4ec 50%, #f8bbd0 100%); border-radius: 28px; box-shadow: 0 16px 48px rgba(233, 30, 99, 0.28), 0 6px 16px rgba(194, 24, 91, 0.2); margin-top: 20px;">
+                          <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #c2185b; font-weight: 700;">
+                            <span style="background: linear-gradient(135deg, #e91e63, #c2185b); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);">
+                              <i class="fa-solid fa-temperature-arrow-up" style="font-size: 24px; color: #fff;"></i>
+                            </span>
                             ${yhLang("Climate Change: A Global Reality", "জলবায়ু পরিবর্তন")}
                           </h3>
                           <p>${yhLang(
@@ -14790,111 +14794,9 @@ const coursesData = [
                 </div>`;
             })(),
           },
+
           {
-            id: "ch22-lesson-4",
-            title: yhLang(
-              "Health Risks for Children and Adolescents Due to Climate Change",
-              "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি"
-            ),
-            icon: "fa-children",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;">
-                    <i class="fa-solid fa-children" style="color:#ec407a;margin-right:12px;font-size:1.2em;"></i>
-                    জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্যের ঝুঁকি
-                  </h2>
-                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 100%);border-radius:22px;box-shadow:0 12px 40px rgba(236,64,122,.18);">
-                        <h3 style="display:flex;align-items:center;color:#ad1457;margin-bottom:16px;">
-                          <i class="fa-solid fa-shield-virus" style="margin-right:10px;color:#d81b60;"></i>
-                          ${yhLang("Comparative Picture of Health Risks", "স্বাস্থ্যঝুঁকির তুলনামূলক চিত্র")}
-                        </h3>
-                        <div class="table-responsive">
-                          <table class="table table-bordered table-modern align-middle" style="background:rgba(255,255,255,.72);border-radius:16px;overflow:hidden;">
-                            <thead>
-                              <tr>
-                                <th class="text-center" style="background:linear-gradient(135deg,#ff8a65,#ff7043);color:#fff;">
-                                  <span class="impact-heading"><i class="fa-solid fa-temperature-high"></i> ${yhLang("Heat Waves", "তাপদাহ")}</span>
-                                </th>
-                                <th class="text-center" style="background:linear-gradient(135deg,#42a5f5,#1e88e5);color:#fff;">
-                                  <span class="impact-heading"><i class="fa-solid fa-water"></i> ${yhLang("Water-Related Disasters", "পানি সম্পর্কিত দুর্যোগ")}</span>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <div class="impact-block">
-                                    <span class="impact-badge impact-badge--direct">সরাসরি প্রভাব</span>
-                                    <ul class="impact-list">
-                                      <li><i class="fa-solid fa-baby text-danger me-2"></i>সময়ের আগে অকাল জন্ম, মৃত শিশুর জন্ম</li>
-                                      <li><i class="fa-solid fa-heart-crack text-danger me-2"></i>শিশু মৃত্যুহার বৃদ্ধি</li>
-                                      <li><i class="fa-solid fa-bandage text-danger me-2"></i>ইডিমা, ফুসকুড়ি, খিঁচুনি</li>
-                                      <li><i class="fa-solid fa-user-injured text-danger me-2"></i>মূর্ছা, ক্লান্তি এবং স্ট্রোক</li>
-                                    </ul>
-                                  </div>
-                                  <div class="impact-block">
-                                    <span class="impact-badge impact-badge--indirect">পরোক্ষ প্রভাব</span>
-                                    <ul class="impact-list">
-                                      <li><i class="fa-solid fa-smog text-warning me-2"></i>বায়ু দূষণ</li>
-                                      <li><i class="fa-solid fa-utensils text-warning me-2"></i>খাদ্যবাহিত সংক্রমণ</li>
-                                      <li><i class="fa-solid fa-mosquito text-warning me-2"></i>ম্যালেরিয়া</li>
-                                      <li><i class="fa-solid fa-virus text-warning me-2"></i>কালাজ্বর</li>
-                                      <li><i class="fa-solid fa-ribbon text-warning me-2"></i>ক্যান্সার</li>
-                                    </ul>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="impact-block">
-                                    <span class="impact-badge impact-badge--direct">সরাসরি প্রভাব</span>
-                                    <ul class="impact-list">
-                                      <li><i class="fa-solid fa-droplet text-primary me-2"></i>ডায়রিয়া</li>
-                                      <li><i class="fa-solid fa-bacteria text-primary me-2"></i>আমাশয়</li>
-                                      <li><i class="fa-solid fa-virus text-primary me-2"></i>পোলিওমাইলাইটিস</li>
-                                      <li><i class="fa-solid fa-temperature-high text-primary me-2"></i>টাইফয়েড জ্বর</li>
-                                      <li><i class="fa-solid fa-microscope text-primary me-2"></i>অ্যামিবিয়াসিস</li>
-                                      <li><i class="fa-solid fa-vial-virus text-primary me-2"></i>জিয়ার্ডিয়াসিস</li>
-                                      <li><i class="fa-solid fa-bug text-primary me-2"></i>কৃমির উপদ্রব</li>
-                                      <li><i class="fa-solid fa-skull-crossbones text-primary me-2"></i>আর্সেনিকোসিস</li>
-                                    </ul>
-                                  </div>
-                                  <div class="impact-block">
-                                    <span class="impact-badge impact-badge--indirect">পরোক্ষ প্রভাব</span>
-                                    <ul class="impact-list">
-                                      <li><i class="fa-solid fa-bowl-food text-info me-2"></i>অপুষ্টি</li>
-                                      <li><i class="fa-solid fa-brain text-info me-2"></i>মানসিক চাপ</li>
-                                      <li><i class="fa-solid fa-ribbon text-info me-2"></i>ক্যান্সার</li>
-                                      <li><i class="fa-solid fa-hand-fist text-info me-2"></i>সামাজিক সহিংসতা</li>
-                                      <li><i class="fa-solid fa-person-walking-luggage text-info me-2"></i>স্থানচ্যুতি</li>
-                                    </ul>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card text-center" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 100%);border-radius:20px;box-shadow:0 10px 32px rgba(255,152,0,.2);">
-                        <h5 style="display:flex;align-items:center;justify-content:center;color:#e65100;margin-bottom:14px;">
-                          <i class="fa-solid fa-heart-pulse" style="margin-right:8px;"></i>
-                          ঝুঁকির ভিজ্যুয়াল উপস্থাপন
-                        </h5>
-                        <img src="img/modu22/heart.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="শিশু-কিশোরদের স্বাস্থ্য ঝুঁকি" loading="lazy">
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch22-lesson-5",
+            id: "ch22-lesson-2",
             title: yhLang(
               "Air Pollution",
               "বায়ু দূষণ"
@@ -14910,65 +14812,102 @@ const coursesData = [
                     <i class="fa-solid fa-wind" style="color: #607d8b; margin-right: 12px; font-size: 1.2em;"></i>
                     ${yhLang("Air Pollution", "বায়ু দূষণ")}
                   </h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#eceff1 0%,#e1f5fe 100%);border-radius:22px;box-shadow:0 10px 35px rgba(84,110,122,.18);">
-                    <h3 style="display:flex;align-items:center;color:#455a64;margin-bottom:14px;">
-                      <i class="fa-solid fa-lungs" style="margin-right:10px;color:#546e7a;"></i>
-                      ${yhLang("Types and Effects of Air Pollution", "বায়ু দূষণের ধরন ও প্রভাব")}
-                    </h3>
-                    <p>${yhLang("Air pollution can be defined as the presence of one or more pollutants such as dust, smoke, gases, fog, odor, fumes or vapors that are harmful to humans, animals or plant life.", "বায়ু দূষণকে এক বা একাধিক দূষিত পদার্থের উপস্থিতি হিসাবে সংজ্ঞায়িত করা যেতে পারে, যেমন ধূলিকণা, ধোঁয়া, গ্যাস, কুয়াশা, গন্ধ, ধোঁয়া বা বাষ্প, যেগুলো মানুষ, প্রাণী বা উদ্ভিদ জীবনের জন্য ক্ষতিকারক।")}</p>
-                    <p><strong>${yhLang("Air pollution is primarily of two types:", "বায়ু দূষণ প্রাথমিক ভাবে দুই ধরনের:")}</strong></p>
-                    <p>${yhLang("1. Ambient or outdoor air pollution refers to outdoor air pollution. It typically includes carbon monoxide (CO), nitrogen oxides (NOx), lead, arsenic, mercury, sulfur dioxide (SO2), polycyclic aromatic hydrocarbons (PAHs), and particulate matter (PM).", "১. পরিবেষ্টিত বা অ্যাম্বিয়েন্ট (বাহ্যিক) বায়ু দূষণ বলতে বাইরের বাতাসের দূষণকে বোঝায়। এর মধ্যে সাধারণত কার্বন মনোক্সাইড (CO), নাইট্রোজেন অক্সাইড (NOx), সীসা, আর্সেনিক, পারদ, সালফার ডাই অক্সাইড (SO2), পলিসাইক্লিক অ্যারোমেটিক হাইড্রোকার্বন (PAHs) এবং কণা পদার্থ (PM) অন্তর্ভুক্ত থাকে।")}</p>
-                    <p>${yhLang("2. Indoor air pollution refers to pollution created inside and around homes due to unnecessary burning of fuels (wood, biomass, coal, kerosene, etc.) for cooking, heating, and lighting.", "২. গৃহস্থালির (অভ্যন্তরীণ) বায়ু দূষণ বলতে রান্না, তাপ এবং আলো জ্বালানোর জন্য জ্বালানি (কাঠ, জৈববস্তু, কয়লা, কেরোসিন ইত্যাদি) অপ্রয়োজনীয় দহনের ফলে সৃষ্ট ঘরের ভেতরে এবং আশেপাশের দূষণকে বোঝায়।")}</p>
-                    <p>বায়ু কতটা দূষিত তা বায়ুর মান সূচক (AQI) দ্বারা পরিমাপ করা যায়। বাংলাদেশে, পাঁচটি দূষণকারী পদার্থের (কণা পদার্থ PM10 এবং PM2.5, NO2, CO, SO2 এবং O3) বিদ্যমান ঘনত্বের উপর ভিত্তি করে AQI গণনা করা হয়।</p>
-                    <div class="table-responsive mt-4">
-                      <table class="table table-bordered table-aqi align-middle" style="background:rgba(255,255,255,.76);border-radius:16px;overflow:hidden;">
-                        <thead>
-                          <tr>
-                            <th style="background:linear-gradient(135deg,#4fc3f7,#29b6f6);color:#fff;">${yhLang("Air Quality Index (AQI)", "বায়ুর মান সূচক (AQI)")}</th>
-                            <th style="background:linear-gradient(135deg,#4dd0e1,#26c6da);color:#fff;">${yhLang("Category", "ক্যাটাগরি")}</th>
-                            <th style="background:linear-gradient(135deg,#81c784,#66bb6a);color:#fff;">${yhLang("Color", "রং")}</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>০–৫০</td>
-                            <td>ভালো</td>
-                            <td><span class="aqi-chip aqi-chip--good"></span></td>
-                          </tr>
-                          <tr>
-                            <td>৫১–১০০</td>
-                            <td>মোটামুটি</td>
-                            <td><span class="aqi-chip aqi-chip--fair"></span></td>
-                          </tr>
-                          <tr>
-                            <td>১০১–১৫০</td>
-                            <td>সতর্কতামূলক</td>
-                            <td><span class="aqi-chip aqi-chip--caution"></span></td>
-                          </tr>
-                          <tr>
-                            <td>১৫১–২০০</td>
-                            <td>অস্বাস্থ্যকর</td>
-                            <td><span class="aqi-chip aqi-chip--unhealthy"></span></td>
-                          </tr>
-                          <tr>
-                            <td>২০১–৩০০</td>
-                            <td>খুব অস্বাস্থ্যকর</td>
-                            <td><span class="aqi-chip aqi-chip--very-unhealthy">লাল</span></td>
-                          </tr>
-                          <tr>
-                            <td>৩০১–৫০০</td>
-                            <td>অত্যন্ত অস্বাস্থ্যকর</td>
-                            <td><span class="aqi-chip aqi-chip--hazardous">বেগুনি</span></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                  <div class="row g-2">
+                      <div class="col-md-7">
+                          <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%, #9fa8da 100%);border-radius:26px;box-shadow:0 14px 42px rgba(84,110,122,.25), 0 6px 18px rgba(69,90,100,.15);">
+                            <h3 style="display:flex;align-items:center;color:#283593;margin-bottom:16px; font-weight:700;">
+                              <span style="background: linear-gradient(135deg, #5c6bc0, #3f51b5); width: 50px; height: 50px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 6px 18px rgba(84, 110, 122, 0.3);">
+                                <i class="fa-solid fa-lungs" style="color:#fff; font-size: 26px;"></i>
+                              </span>
+                              ${yhLang("Air Pollution", "বায়ু দূষণ")}
+                            </h3>
+                            <p style="background:rgba(255,255,255,0.65); padding:10px 12px; border-radius:12px; margin-bottom:12px; border-left:3px solid #5c6bc0; box-shadow:0 3px 10px rgba(92,107,192,0.15);">
+                              <i class="fa-solid fa-circle-info" style="color:#3f51b5; margin-right:8px;"></i>
+                              ${yhLang("Air pollution can be defined as the presence of one or more pollutants such as dust, smoke, gases, fog, odor, fumes or vapors that are harmful to humans, animals or plant life.", "বায়ু দূষণকে এক বা একাধিক দূষিত পদার্থের উপস্থিতি হিসাবে সংজ্ঞায়িত করা যেতে পারে, যেমন ধূলিকণা, ধোঁয়া, গ্যাস, কুয়াশা, গন্ধ, ধোঁয়া বা বাষ্প, যেগুলো মানুষ, প্রাণী বা উদ্ভিদ জীবনের জন্য ক্ষতিকারক।")}
+                            </p>
+                            <h4 style="display:flex; align-items:center; color:#3949ab; margin-top:18px; margin-bottom:12px; font-weight:700;">
+                              <span style="background:linear-gradient(135deg,#7986cb,#5c6bc0); width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 12px rgba(121,134,203,0.3);">
+                                <i class="fa-solid fa-layer-group" style="color:#fff; font-size:20px;"></i>
+                              </span>
+                              ${yhLang("Air pollution is primarily of two types:", "বায়ু দূষণ প্রাথমিক ভাবে দুই ধরনের:")}
+                            </h4>
+                            <div style="background:linear-gradient(135deg,rgba(255,255,255,0.7), rgba(227,242,253,0.75)); padding:12px; border-radius:14px; margin-bottom:12px; border-left:4px solid #42a5f5; box-shadow:0 5px 15px rgba(66,165,245,0.2);">
+                              <h5 style="display:flex; align-items:center; color:#1976d2; margin-bottom:8px; font-weight:600;">
+                                <i class="fa-solid fa-city" style="margin-right:8px; color:#1976d2; background:rgba(25,118,210,0.1); padding:8px; border-radius:8px;"></i>
+                                ${yhLang("1. Ambient or Outdoor Air Pollution", "১. পরিবেষ্টিত বা বাহ্যিক বায়ু দূষণ")}
+                              </h5>
+                              <p style="margin:0;">
+                                ${yhLang("Refers to outdoor air pollution. It typically includes carbon monoxide (CO), nitrogen oxides (NOx), lead, arsenic, mercury, sulfur dioxide (SO2), polycyclic aromatic hydrocarbons (PAHs), and particulate matter (PM).", "বাইরের বাতাসের দূষণকে বোঝায়। এর মধ্যে সাধারণত কার্বন মনোক্সাইড (CO), নাইট্রোজেন অক্সাইড (NOx), সীসা, আর্সেনিক, পারদ, সালফার ডাই অক্সাইড (SO2), পলিসাইক্লিক অ্যারোমেটিক হাইড্রোকার্বন (PAHs) এবং কণা পদার্থ (PM) অন্তর্ভুক্ত থাকে।")}
+                              </p>
+                            </div>
+                            <div style="background:linear-gradient(135deg,rgba(255,255,255,0.7), rgba(243,229,245,0.75)); padding:12px; border-radius:14px; margin-bottom:14px; border-left:4px solid #ab47bc; box-shadow:0 5px 15px rgba(171,71,188,0.2);">
+                              <h5 style="display:flex; align-items:center; color:#8e24aa; margin-bottom:8px; font-weight:600;">
+                                <i class="fa-solid fa-house-chimney-window" style="margin-right:8px; color:#8e24aa; background:rgba(142,36,170,0.1); padding:8px; border-radius:8px;"></i>
+                                ${yhLang("2. Indoor Air Pollution", "২. গৃহস্থালির (অভ্যন্তরীণ) বায়ু দূষণ")}
+                              </h5>
+                              <p style="margin:0;">
+                                ${yhLang("Refers to pollution created inside and around homes due to unnecessary burning of fuels (wood, biomass, coal, kerosene, etc.) for cooking, heating, and lighting.", "রান্না, তাপ এবং আলো জ্বালানোর জন্য জ্বালানি (কাঠ, জৈববস্তু, কয়লা, কেরোসিন ইত্যাদি) অপ্রয়োজনীয় দহনের ফলে সৃষ্ট ঘরের ভেতরে এবং আশেপাশের দূষণকে বোঝায়।")}
+                              </p>
+                            </div>
+                            </div>
+                          </div>
+                      
+                      <div class="col-md-5">
+                         <div class="modern-card glass-card" h-100 p-2 data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%, #9fa8da 100%);border-radius:26px;box-shadow:0 14px 42px rgba(84,110,122,.25), 0 6px 18px rgba(69,90,100,.15);">
+                          
+                            <p>বায়ু কতটা দূষিত তা বায়ুর মান সূচক (AQI) দ্বারা পরিমাপ করা যায়। বাংলাদেশে, পাঁচটি দূষণকারী পদার্থের (কণা পদার্থ PM10 এবং PM2.5, NO2, CO, SO2 এবং O3) বিদ্যমান ঘনত্বের উপর ভিত্তি করে AQI গণনা করা হয়।</p>
+                            <div class="table-responsive mt-4">
+                              <table class="table table-bordered table-aqi align-middle" style="background:rgba(255,255,255,.76);border-radius:16px;overflow:hidden;">
+                                <thead>
+                                  <tr>
+                                    <th style="background:linear-gradient(135deg,#4fc3f7,#29b6f6);color:#fff;">${yhLang("Air Quality Index (AQI)", "বায়ুর মান সূচক (AQI)")}</th>
+                                    <th style="background:linear-gradient(135deg,#4dd0e1,#26c6da);color:#fff;">${yhLang("Category", "ক্যাটাগরি")}</th>
+                                    <th style="background:linear-gradient(135deg,#81c784,#66bb6a);color:#fff;">${yhLang("Color", "রং")}</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>০–৫০</td>
+                                    <td>ভালো</td>
+                                    <td class="aqi-chip--good"><span class="aqi-chip"></span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>৫১–১০০</td>
+                                    <td>মোটামুটি</td>
+                                    <td class="aqi-chip--fair"><span class="aqi-chip"></span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>১০১–১৫০</td>
+                                    <td>সতর্কতামূলক</td>
+                                    <td class="aqi-chip--caution"><span class="aqi-chip"></span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>১৫১–২০০</td>
+                                    <td>অস্বাস্থ্যকর</td>
+                                    <td class="aqi-chip--unhealthy"><span class="aqi-chip"></span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>২০১–৩০০</td>
+                                    <td>খুব অস্বাস্থ্যকর</td>
+                                    <td class="aqi-chip--very-unhealthy"><span class="aqi-chip"></span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>৩০১–৫০০</td>
+                                    <td>অত্যন্ত অস্বাস্থ্যকর</td>
+                                    <td class="aqi-chip--hazardous"><span class="aqi-chip"></span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                         </div> 
+                      </div>
                   </div>
                 </div>`;
             })(),
           },
           {
-            id: "ch22-lesson-6",
+            id: "ch22-lesson-3",
             title: yhLang(
               "Sources of Air Pollution",
               "বায়ু দূষণের উৎস"
@@ -14986,15 +14925,20 @@ const coursesData = [
                   </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fff8e1 0%,#ffe0b2 100%);border-radius:22px;box-shadow:0 10px 35px rgba(255,152,0,.18);">
-                        <h4 class=" mb-3" style="display:flex;align-items:center;color:#ef6c00;"><i class="fa-solid fa-smog" style="margin-right:10px;"></i>${yhLang("WHO has identified at least six air pollutants important for public health:", "WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:")}</h4>
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fff9e6 0%,#fff3cd 50%, #ffe0b2 100%);border-radius:24px;box-shadow:0 14px 42px rgba(255,152,0,.25), 0 6px 18px rgba(239,108,0,.15);">
+                        <h4 class="mb-3" style="display:flex;align-items:center;color:#e65100; font-weight:700;">
+                          <span style="background: linear-gradient(135deg, #ff9800, #ef6c00); width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 10px; box-shadow: 0 4px 14px rgba(255, 152, 0, 0.35);">
+                            <i class="fa-solid fa-smog" style="color:#fff; font-size:22px;"></i>
+                          </span>
+                          ${yhLang("WHO has identified at least six air pollutants important for public health:", "WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:")}
+                        </h4>
                         <ul class="list-unstyled feature-list mb-4">
-                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>i. সূক্ষ্ম কণা(PM 2.5)</li>
-                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>ii. মোটা কণা(PM10)</li>
-                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>iii. পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)</li>
-                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>iv. নাইট্রোজেন ডাই অক্সাইড (NO2)</li>
-                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>v. সালফার ডাই অক্সাইড(SO2)</li>
-                          <li><i class="fa-solid fa-circle-dot text-warning me-2"></i>vi. কার্বন মনোক্সাইড (CO)</li>
+                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ffb74d; box-shadow:0 3px 10px rgba(255,183,77,0.2);"><i class="fa-solid fa-wind" style="color:#ff9800; margin-right:8px;"></i>i. সূক্ষ্ম কণা(PM 2.5)</li>
+                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ffa726; box-shadow:0 3px 10px rgba(255,167,38,0.2);"><i class="fa-solid fa-cloud" style="color:#fb8c00; margin-right:8px;"></i>ii. মোটা কণা(PM10)</li>
+                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ff9800; box-shadow:0 3px 10px rgba(255,152,0,0.2);"><i class="fa-solid fa-sun" style="color:#ef6c00; margin-right:8px;"></i>iii. পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)</li>
+                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #fb8c00; box-shadow:0 3px 10px rgba(251,140,0,0.2);"><i class="fa-solid fa-industry-windows" style="color:#ff6f00; margin-right:8px;"></i>iv. নাইট্রোজেন ডাই অক্সাইড (NO2)</li>
+                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #f57c00; box-shadow:0 3px 10px rgba(245,124,0,0.2);"><i class="fa-solid fa-smog" style="color:#e65100; margin-right:8px;"></i>v. সালফার ডাই অক্সাইড(SO2)</li>
+                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ef6c00; box-shadow:0 3px 10px rgba(239,108,0,0.2);"><i class="fa-solid fa-car-side" style="color:#d84315; margin-right:8px;"></i>vi. কার্বন মনোক্সাইড (CO)</li>
                         </ul>
                         <p class="mb-4">${yhLang("In Bangladesh, residential use of solid fuels for cooking is the primary source of PM2.5 pollution, with 74.2% of the population still relying on fuels like wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে ।")}</p>
                         <div class="card-divider mb-3"></div>
@@ -15048,95 +14992,9 @@ const coursesData = [
                 </div>`;
             })(),
           },
-          {
-            id: "ch22-lesson-7",
-            title: yhLang(
-              "Noise Pollution",
-              "শব্দ দূষণ"
-            ),
-            icon: "fa-volume-high",
-            gradientClass: "bg-gradient-indigo",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-volume-high" style="color: #5e35b1; margin-right: 12px; font-size: 1.2em;"></i>
-                    ${yhLang("Noise Pollution", "শব্দ দূষণ")}
-                  </h2>
-                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card mb-3" style="background:linear-gradient(135deg,#ede7f6 0%,#d1c4e9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(94,53,177,.2);">
-                        <p>${yhLang("The World Health Organization (WHO) defines noise pollution as 'unwanted and harmful sound caused by activities'. A United Nations Environment Programme (UNEP, 2022) report declared Dhaka the noisiest city in the world. Compared to the WHO's permissible limit of 55 decibels, noise levels in Dhaka are at least double, found at 110-132 decibels. 75% of noise pollution in Dhaka originates from vehicles. A Department of Environment (DoE) study states that approximately 11.7% of Bangladesh's population has lost hearing due to noise pollution.", "বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ হিসেবে সংজ্ঞায়িত করেছে। জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।")}</p>
-                        <div class="card-divider my-3"></div>
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i>${yhLang("Sources", "উৎস")}</h3>
-                        <p>${yhLang("Noise pollution comes from many everyday sources, including loud toys, household appliances, entertainment devices, and mobile phones. In Bangladesh, the primary source of noise pollution is high-volume vehicle horns. Urbanization and deforestation also indirectly increase noise in once-quiet areas.", "শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন। বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।")}</p>
-                      </div>
-                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(63,81,181,.2);">
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#3949ab;"><i class="fa-solid fa-ear-listen" style="margin-right:10px;"></i>${yhLang("Effects of Noise Pollution", "শব্দ দূষণের প্রভাব")}</h3>
-                        <ul class="list-unstyled feature-list mb-0">
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায়</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>ii. শ্রবণশক্তি হ্রাস করে</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>iii. ঘুমের ব্যাঘাত ঘটায়</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায়,</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের  ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch22-lesson-8",
-            title: yhLang(
-              "শব্দ দূষণ প্রতিরোধে করনীয়",
-              "শব্দ দূষণ প্রতিরোধে করনীয়"
-            ),
-            icon: "fa-ear-listen",
-            gradientClass: "bg-gradient-purple",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              const preventionList = [
-                "শব্দ দূষণের কুফল নিয়ে সচেতনতা বৃদ্ধি করতে হবে",
-                "অপ্রয়োজনে হর্ন বাজানো ও উচ্চ স্বরে মাইক বাজানো থেকে থেকে বিরত থাকতে হবে",
-                "বাড়িতে টিভি, সাউন্ড সিস্টেম বা হেডফোনে শব্দের মাত্রা যৌক্তিক পর্যায়ে রাখতে হবে",
-                "বিভিন্ন এলাকাকে আবাসিক, বাণিজ্যিক, নীরব (হাসপাতাল) এলাকায় ভাগ করে তাদের জন্য শব্দের মাত্রা (dB level) নির্ধারণ করে দেওয়া যেতে পারে",
-                "শব্দ দূষণ (নিয়ন্ত্রণ) বিধিমালা কঠোরভাবে প্রয়োগ করতে হবে",
-              ];
 
-              const renderListItems = () =>
-                preventionList
-                  .map(
-                    (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.62)' : 'rgba(255,255,255,.5)'};border-left:4px solid ${idx % 2 === 0 ? '#7e57c2' : '#5e35b1'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(126,87,194,.18)' : '0 8px 18px rgba(94,53,177,.16)'};">
-                        <i class="fa-solid ${idx < 2 ? 'fa-bullhorn' : idx < 4 ? 'fa-sliders' : 'fa-gavel'} ${idx < 2 ? 'text-danger' : idx < 4 ? 'text-primary' : 'text-success'} me-2"></i>
-                        <span style="color:#4a148c;">${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;">
-                    <i class="fa-solid fa-ear-listen" style="color:#7e57c2;margin-right:12px;font-size:1.2em;"></i>
-                    শব্দ দূষণ প্রতিরোধে করনীয়
-                  </h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:22px;box-shadow:0 10px 35px rgba(126,87,194,.2);">
-                    <h3 style="display:flex;align-items:center;color:#6a1b9a;margin-bottom:14px;"><i class="fa-solid fa-volume-xmark" style="margin-right:10px;"></i>${yhLang("Prevention Measures", "প্রতিরোধের করণীয়")}</h3>
-                    <ul class="list-unstyled prevention-list mb-0">
-                      ${renderListItems()}
-                    </ul>
-                  </div>
-                </div>`;
-            })(),
-          },
           {
-            id: "ch22-lesson-9",
+            id: "ch22-lesson-4",
             title: yhLang(
               "Lead and Other Hazardous Chemicals",
               "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক"
@@ -15173,7 +15031,7 @@ const coursesData = [
                   .map(
                     (item) => `
                       <li>
-                        <i class="fa-solid fa-circle-chevron-right text-primary me-2"></i>
+                        <i class="fa-solid fa-vial" style="color:#e91e63; margin-right:8px; background:rgba(233,30,99,0.1); padding:6px; border-radius:6px;"></i>
                         <span>${item}</span>
                       </li>
                     `
@@ -15216,7 +15074,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-10",
+            id: "ch22-lesson-5",
             title: yhLang(
               "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়",
               "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়"
@@ -15273,7 +15131,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-11",
+            id: "ch22-lesson-6",
             title: yhLang(
               "Food and Water",
               "খাবারপানি"
@@ -15310,10 +15168,10 @@ const coursesData = [
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e1f5fe 0%,#b3e5fc 100%);border-radius:22px;box-shadow:0 10px 35px rgba(3,155,229,.18);">
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#0277bd;"><i class="fa-solid fa-glass-water" style="margin-right:10px;"></i>${yhLang("Importance of Safe Drinking Water", "নিরাপদ খাবারপানির গুরুত্ব")}</h3>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#0277bd; font-weight:700;"><span style="background:linear-gradient(135deg,#03a9f4,#0288d1); width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(3,169,244,0.35);"><i class="fa-solid fa-glass-water" style="color:#fff; font-size:22px;"></i></span>${yhLang("Importance of Safe Drinking Water", "নিরাপদ খাবারপানির গুরুত্ব")}</h3>
                         <p>পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।</p>
                         <p class="mb-3">শিশু-কিশোরদের সু-স্বাস্থ্যের জন্য বিশুদ্ধ খাবারপানি, স্যানিটেশন এবং স্বাস্থ্যবিধি মেনে চলা অত্যাবশ্যক, যদিও অনেক গ্রামীণ, শহরের ঘিঞ্জি বস্তি এলাকা এবং দরিদ্র সম্প্রদায়ের অনেকক্ষেত্রে নিরাপদ খাবারপানি সহজলভ্য নয়।</p>
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#01579b;"><i class="fa-solid fa-water" style="margin-right:10px;"></i>খাবারপানির উৎসঃ</h3>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#01579b; font-weight:700;"><span style="background:linear-gradient(135deg,#039be5,#0277bd); width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(3,155,229,0.35);"><i class="fa-solid fa-water" style="color:#fff; font-size:22px;"></i></span>খাবারপানির উৎসঃ</h3>
                         <ul class="list-unstyled feature-list mb-0">
                           ${renderSources()}
                         </ul>
@@ -15324,7 +15182,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-12",
+            id: "ch22-lesson-7",
             title: yhLang(
               "Main Causes of Food and Water Contamination",
               "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ"
@@ -15390,8 +15248,8 @@ const coursesData = [
                     <i class="fa-solid fa-water" style="color: #ff7043; margin-right: 12px; font-size: 1.2em;"></i>
                     খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহঃ
                   </h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fff3e0 0%,#ffccbc 100%);border-radius:22px;box-shadow:0 10px 35px rgba(255,112,67,.2);">
-                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:14px;"><i class="fa-solid fa-industry" style="margin-right:10px;"></i>দূষণের প্রধান উৎসসমূহ</h3>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 50%, #ffcc80 100%);border-radius:24px;box-shadow:0 14px 42px rgba(255,112,67,.28), 0 6px 18px rgba(244,81,30,.15);">
+                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:14px; font-weight:700;"><span style="background:linear-gradient(135deg,#ff7043,#f4511e); width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(255,112,67,0.35);"><i class="fa-solid fa-industry" style="color:#fff; font-size:24px;"></i></span>দূষণের প্রধান উৎসসমূহ</h3>
                     <ul class="list-unstyled feature-list mb-0">
                       ${renderCauses()}
                     </ul>
@@ -15400,7 +15258,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-13",
+            id: "ch22-lesson-8",
             title: yhLang(
               "Health Risks from Contaminated Food and Water",
               "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি"
@@ -15492,7 +15350,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-14",
+            id: "ch22-lesson-9",
             title: yhLang(
               "Steps to Improve Water, Sanitation and Hygiene",
               "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ"
@@ -15569,7 +15427,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-15",
+            id: "ch22-lesson-10",
             title: yhLang("জাতীয় পর্যায়:", "জাতীয় পর্যায়:"),
             icon: "fa-landmark",
             gradientClass: "bg-gradient-blue",
@@ -15624,7 +15482,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-16",
+            id: "ch22-lesson-11",
             title: yhLang(
               "Pesticides and Health Risks for Children and Adolescents",
               "কীটনাশক এবং শিশু-কিশোরদের স্বাস্থ্য ঝুঁকি"
@@ -15658,7 +15516,7 @@ const coursesData = [
                     <i class="fa-solid fa-spray-can" style="color: #f06292; margin-right: 12px; font-size: 1.2em;"></i>
                     কীটনাশক এবং শিশু-কিশোর দের স্বাস্থ্য ঝুঁকি
                   </h2>
-                  <div class="modern-card glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 100%);border-radius:22px;box-shadow:0 10px 35px rgba(240,98,146,.2);">
+                  <div class="modern-card glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%, #f48fb1 100%);border-radius:26px;box-shadow:0 16px 48px rgba(240,98,146,.3), 0 6px 20px rgba(216,27,96,.2);">
                     <span class="pesticide-shape pesticide-shape--corner" aria-hidden="true"></span>
                     <span class="pesticide-shape pesticide-shape--dots" aria-hidden="true"></span>
                     <div class="pesticide-card__body">
@@ -15680,7 +15538,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-17",
+            id: "ch22-lesson-12",
             title: yhLang(
               "Pesticide Exposure Particularly Risks for Children and Adolescents",
               "কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ"
@@ -15757,7 +15615,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-18",
+            id: "ch22-lesson-13",
             title: yhLang("Precautions", "সতর্কতাসমূহ"),
             icon: "fa-triangle-exclamation",
             gradientClass: "bg-gradient-yellow",
@@ -15796,7 +15654,7 @@ const coursesData = [
                     <i class="fa-solid fa-triangle-exclamation" style="color: #fbc02d; margin-right: 12px; font-size: 1.2em;"></i>
                     সতর্কতাঃ
                   </h2>
-                  <div class="modern-card glass-card caution-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fffde7 0%,#fff9c4 100%);border-radius:22px;box-shadow:0 10px 35px rgba(251,192,45,.22);">
+                  <div class="modern-card glass-card caution-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fffde7 0%,#fff9c4 50%, #fff59d 100%);border-radius:26px;box-shadow:0 16px 48px rgba(251,192,45,.3), 0 6px 20px rgba(245,127,23,.2);">
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
@@ -15808,6 +15666,93 @@ const coursesData = [
                         ${renderItems()}
                       </ul>
                     </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-14",
+            title: yhLang(
+              "Noise Pollution",
+              "শব্দ দূষণ"
+            ),
+            icon: "fa-volume-high",
+            gradientClass: "bg-gradient-indigo",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-volume-high" style="color: #5e35b1; margin-right: 12px; font-size: 1.2em;"></i>
+                    ${yhLang("Noise Pollution", "শব্দ দূষণ")}
+                  </h2>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-12">
+                      <div class="modern-card glass-card mb-3" style="background:linear-gradient(135deg,#ede7f6 0%,#d1c4e9 50%, #b39ddb 100%);border-radius:24px;box-shadow:0 14px 42px rgba(94,53,177,.28), 0 6px 18px rgba(81,45,168,.15);">
+                        <p>${yhLang("The World Health Organization (WHO) defines noise pollution as 'unwanted and harmful sound caused by activities'. A United Nations Environment Programme (UNEP, 2022) report declared Dhaka the noisiest city in the world. Compared to the WHO's permissible limit of 55 decibels, noise levels in Dhaka are at least double, found at 110-132 decibels. 75% of noise pollution in Dhaka originates from vehicles. A Department of Environment (DoE) study states that approximately 11.7% of Bangladesh's population has lost hearing due to noise pollution.", "বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ হিসেবে সংজ্ঞায়িত করেছে। জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।")}</p>
+                        <div class="card-divider my-3"></div>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i>${yhLang("Sources", "উৎস")}</h3>
+                        <p>${yhLang("Noise pollution comes from many everyday sources, including loud toys, household appliances, entertainment devices, and mobile phones. In Bangladesh, the primary source of noise pollution is high-volume vehicle horns. Urbanization and deforestation also indirectly increase noise in once-quiet areas.", "শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন। বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।")}</p>
+                      </div>
+                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%, #9fa8da 100%);border-radius:24px;box-shadow:0 14px 42px rgba(63,81,181,.28), 0 6px 18px rgba(57,73,171,.15);">
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#3949ab; font-weight:700;"><span style="background:linear-gradient(135deg,#5c6bc0,#3f51b5); width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(92,107,192,0.35);"><i class="fa-solid fa-ear-listen" style="color:#fff; font-size:22px;"></i></span>${yhLang("Effects of Noise Pollution", "শব্দ দূষণের প্রভাব")}</h3>
+                        <ul class="list-unstyled feature-list mb-0">
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায়</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>ii. শ্রবণশক্তি হ্রাস করে</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>iii. ঘুমের ব্যাঘাত ঘটায়</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায়,</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের  ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে</li>
+                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch22-lesson-15",
+            title: yhLang(
+              "শব্দ দূষণ প্রতিরোধে করনীয়",
+              "শব্দ দূষণ প্রতিরোধে করনীয়"
+            ),
+            icon: "fa-ear-listen",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const preventionList = [
+                "শব্দ দূষণের কুফল নিয়ে সচেতনতা বৃদ্ধি করতে হবে",
+                "অপ্রয়োজনে হর্ন বাজানো ও উচ্চ স্বরে মাইক বাজানো থেকে থেকে বিরত থাকতে হবে",
+                "বাড়িতে টিভি, সাউন্ড সিস্টেম বা হেডফোনে শব্দের মাত্রা যৌক্তিক পর্যায়ে রাখতে হবে",
+                "বিভিন্ন এলাকাকে আবাসিক, বাণিজ্যিক, নীরব (হাসপাতাল) এলাকায় ভাগ করে তাদের জন্য শব্দের মাত্রা (dB level) নির্ধারণ করে দেওয়া যেতে পারে",
+                "শব্দ দূষণ (নিয়ন্ত্রণ) বিধিমালা কঠোরভাবে প্রয়োগ করতে হবে",
+              ];
+
+              const renderListItems = () =>
+                preventionList
+                  .map(
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.62)' : 'rgba(255,255,255,.5)'};border-left:4px solid ${idx % 2 === 0 ? '#7e57c2' : '#5e35b1'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(126,87,194,.18)' : '0 8px 18px rgba(94,53,177,.16)'};">
+                        <i class="fa-solid ${idx < 2 ? 'fa-bullhorn' : idx < 4 ? 'fa-sliders' : 'fa-gavel'} ${idx < 2 ? 'text-danger' : idx < 4 ? 'text-primary' : 'text-success'} me-2"></i>
+                        <span style="color:#4a148c;">${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;">
+                    <i class="fa-solid fa-ear-listen" style="color:#7e57c2;margin-right:12px;font-size:1.2em;"></i>
+                    শব্দ দূষণ প্রতিরোধে করনীয়
+                  </h2>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 50%, #ce93d8 100%);border-radius:26px;box-shadow:0 16px 48px rgba(126,87,194,.3), 0 6px 20px rgba(106,27,154,.2);">
+                    <h3 style="display:flex;align-items:center;color:#6a1b9a;margin-bottom:14px; font-weight:700;"><span style="background:linear-gradient(135deg,#ab47bc,#8e24aa); width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(171,71,188,0.35);"><i class="fa-solid fa-volume-xmark" style="color:#fff; font-size:22px;"></i></span>${yhLang("Prevention Measures", "প্রতিরোধের করণীয়")}</h3>
+                    <ul class="list-unstyled prevention-list mb-0">
+                      ${renderListItems()}
+                    </ul>
                   </div>
                 </div>`;
             })(),

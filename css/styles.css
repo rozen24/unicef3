@@ -5104,12 +5104,12 @@ body {
   color: #0f172a;
 }
 
-.aqi-chip--good { background: #bbf7d0; }
-.aqi-chip--fair { background: #d9f99d; }
-.aqi-chip--caution { background: #fef08a; }
-.aqi-chip--unhealthy { background: #fed7aa; }
-.aqi-chip--very-unhealthy { background: #fecaca; }
-.aqi-chip--hazardous { background: #f3e8ff; }
+td.aqi-chip--good { background: #70AD47; }
+td.aqi-chip--fair { background: #A8D08D; }
+td.aqi-chip--caution { background: #FFFF00; }
+td.aqi-chip--unhealthy { background: #FFC000; }
+td.aqi-chip--very-unhealthy { background: #EE0000; }
+td.aqi-chip--hazardous { background: #7030A0; }
 
 #mobileLessonBrowser .fw-semibold,
 #mobileLessonBrowserFlat .fw-semibold {
@@ -7728,6 +7728,7 @@ input::placeholder {
     animation: gradientShift 7s ease-in-out infinite !important;
     color: radial-gradient(circle at 70% 70%, rgba(16,185,129,0.42), rgba(16,185,129,0));
     border-radius: 13px;
+    display: none !important;
 }
 
 .lesson-slide .slide-title.gradient-text::after {
