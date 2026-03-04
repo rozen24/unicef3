@@ -15550,180 +15550,34 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const introduction = yhLang(
-                "Due to development and industrialization, chemicals are increasingly used in every aspect of our lives. These chemicals have adverse effects on both our environment and our health. Children and pregnant women are at the greatest risk from the short-term and long-term effects of chemicals.",
-                "উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে।"
-              );
-
-              const definition = yhLang(
-                "Metals with atomic density 5 times or more than water are referred to as heavy metals or hazardous chemical substances. The main hazardous chemicals for public health are listed below:",
-                "পানির চেয়ে ৫ গুণ বা তার বেশি পারমাণবিক ঘনত্ব সম্পন্ন ধাতুসমূহের গ্রুপকে ভারী ধাতু বা ক্ষতিকারক রাসায়নিক পদার্থ হিসাবে উল্লেখ করা হয়। জনস্বাস্থ্যের জন্য প্রধান প্রধান ক্ষতিকারক রাসায়নিক পদার্থ গুলি নীচে দেয়া হল:"
-              );
-
-              const chemicals = [
-                { icon: "fa-flask-vial", color: "m22l7-chem-lead", text: yhLang("Lead", "সীসা") },
-                { icon: "fa-flask-vial", color: "m22l7-chem-arsenic", text: yhLang("Arsenic", "আর্সেনিক") },
-                { icon: "fa-wind", color: "m22l7-chem-nitrogen", text: yhLang("Nitrogen Dioxide & Carbon Monoxide", "নাইট্রোজেন ডাই অক্সাইড কার্বন মনোক্সাইড") },
-                { icon: "fa-droplet", color: "m22l7-chem-hydrocarbon", text: yhLang("Hydrocarbons: Kerosene, Turpentine, Paraffin, etc.", "হাইড্রোকার্বন- কেরোসিন, টারপেন, প্যারাফন ইত্যাদি") },
-                { icon: "fa-warning", color: "m22l7-chem-asbestos", text: yhLang("Asbestos", "অ্যাসবেস্টস") },
-                { icon: "fa-teeth", color: "m22l7-chem-fluoride", text: yhLang("Fluoride", "ফ্লোরাইড") },
-                { icon: "fa-flask-vial", color: "m22l7-chem-mercury", text: yhLang("Mercury", "পারদ") },
-                { icon: "fa-flask-vial", color: "m22l7-chem-benzene", text: yhLang("Benzene", "বেনজিন") },
-                { icon: "fa-flask-vial", color: "m22l7-chem-cadmium", text: yhLang("Cadmium", "ক্যাডমিয়াম") },
-                { icon: "fa-biohazard", color: "m22l7-chem-dioxin", text: yhLang("Dioxin", "ডাইঅক্সিন") },
+              const chemicalList = [
+                "সীসা",
+                "আর্সেনিক",
+                "নাইট্রোজেন ডাই অক্সাইড কার্বন মনোক্সাইড",
+                "হাইড্রোকার্বন- কেরোসিন, টারপেন,",
+                "প্যারাফন ইত্যাদি",
+                "অ্যাসবেস্টস",
+                "ফ্লোরাইড",
+                "পারদ",
+                "বেনজিন",
+                "ক্যাডমিয়াম",
+                "ডাইঅক্সিন",
               ];
 
-              const healthProblems = [
-                yhLang("Severe vomiting, diarrhea", "তীব্র বমি, ডায়রিয়া"),
-                yhLang("Skin diseases", "চর্মরোগ"),
-                yhLang("Cancer", "ক্যান্সার"),
-                yhLang("Heart disease", "হৃদরোগ"),
-                yhLang("Low birth weight", "কম জন্মওজন"),
-                yhLang("Premature birth", "সময়ের পূর্বে জন্ম"),
-                yhLang("Stillbirth", "মৃত শিশুর জন্ম"),
-                yhLang("Reproductive and developmental problems", "প্রজনন ও বিকাশজনিত সমস্যা"),
-                yhLang("Premature death", "অকাল মৃত্যু"),
+              const preventionList = [
+                "সীসা যুক্ত ব্যাটারি ও রঙের সংস্পর্শে আসা থেকে শিশু-কিশোর এবং গর্ভবতী মহিলাদের বিরত রাখতে হবে",
+                "কীটনাশক হতে শিশু-কিশোরদের দুরে রাখতে হবে",
+                "শিল্প ও বর্জ্য ব্যবস্থাপনা সঠিক ভাবে পালন করতে হবে",
+                "যথাযথ স্বাস্থ্যবিধি মেনে চলতে হবে",
+                "পুনর্ব্যবহার নিরুৎসাহিত করে সীসা-অ্যাসিড ব্যাটারির পরিবেশগত ব্যবস্থাপনার জন্য একটি জাতীয় কৌশল তৈরি করতে হবে",
               ];
 
-              const preventionMeasures = [
-                { icon: "fa-hand-fist", color: "m22l7-prev-a", text: yhLang("Keep children and pregnant women away from lead-containing batteries and paints", "সীসা যুক্ত ব্যাটারি ও রঙের সংস্পর্শে আসা থেকে শিশু-কিশোর এবং গর্ভবতী মহিলাদের বিরত রাখতে হবে") },
-                { icon: "fa-shield", color: "m22l7-prev-b", text: yhLang("Keep children away from pesticides", "কীটনাশক হতে শিশু-কিশোরদের দুরে রাখতে হবে") },
-                { icon: "fa-recycle", color: "m22l7-prev-c", text: yhLang("Proper industrial and waste management", "শিল্প ও বর্জ্য ব্যবস্থাপনা সঠিক ভাবে পালন করতে হবে") },
-                { icon: "fa-soap", color: "m22l7-prev-d", text: yhLang("Maintain proper hygiene practices", "যথাযথ স্বাস্থ্যবিধি মেনে চলতে হবে") },
-                { icon: "fa-lightbulb", color: "m22l7-prev-e", text: yhLang("Develop national strategy for environmental management of lead-acid batteries, discouraging reuse", "পুনর্ব্যবহার নিরুৎসাহিত করে সীসা-অ্যাসিড ব্যাটারির পরিবেশগত ব্যবস্থাপনার জন্য একটি জাতীয় কৌশল তৈরি করতে হবে") },
-              ];
-
-              const renderChemicals = (items, delay) =>
+              const renderItems = (items) =>
                 items
-                  .map((item, idx) => `
-                    <li class="m22l7-chem-item ${item.color}" data-aos="flip-left" data-aos-delay="${delay + idx * 50}">
-                      <div class="m22l7-chem-icon">
-                        <i class="fa-solid ${item.icon}"></i>
-                      </div>
-                      <span class="m22l7-chem-text">${item.text}</span>
-                    </li>
-                  `)
-                  .join("");
-
-              const renderHealthProblems = (items, delay) =>
-                items
-                  .map((item, idx) => `
-                    <li class="m22l7-health-item" data-aos="zoom-in" data-aos-delay="${delay + idx * 40}">
-                      <div class="m22l7-health-icon">
-                        <i class="fa-solid fa-circle-exclamation"></i>
-                      </div>
-                      <span class="m22l7-health-text">${item}</span>
-                    </li>
-                  `)
-                  .join("");
-
-              const renderPrevention = (items, delay) =>
-                items
-                  .map((item, idx) => `
-                    <li class="m22l7-prevent-item ${item.color}" data-aos="fade-right" data-aos-delay="${delay + idx * 55}">
-                      <div class="m22l7-prevent-icon">
-                        <i class="fa-solid ${item.icon}"></i>
-                      </div>
-                      <span class="m22l7-prevent-text">${item.text}</span>
-                    </li>
-                  `)
-                  .join("");
-
-              return `
-                <div class="lesson-slide mod22-lesson7">
-                  <div class="m22l7-shapes" aria-hidden="true">
-                    <span class="m22l7-shape m22l7-shape--circle"></span>
-                    <span class="m22l7-shape m22l7-shape--square"></span>
-                    <span class="m22l7-shape m22l7-shape--hexagon"></span>
-                  </div>
-
-                  <header class="m22l7-hero d-none"  data-aos="fade-down">
-                    <div class="m22l7-hero__badge">
-                      <i class="fa-solid fa-flask"></i>
-                    </div>
-                    <h1 class="m22l7-hero__title">${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}</h1>
-                    <p class="m22l7-hero__subtitle">${yhLang("Health risks and prevention strategies", "স্বাস্থ্য ঝুঁকি এবং প্রতিরোধ কৌশল")}</p>
-                  </header>
-
-                  <section class="m22l7-intro-section" data-aos="fade-up" data-aos-delay="150">
-                    <div class="m22l7-section-header">
-                      <div class="m22l7-section-icon m22l7-section-icon--chemicals">
-                        <i class="fa-solid fa-flask"></i>
-                      </div>
-                      <h2 class="m22l7-section-title">${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}</h2>
-                    </div>
-                    <div class="m22l7-intro-card">
-                      <p class="m22l7-intro-text">${introduction}</p>
-                      <div class="m22l7-definition-card" data-aos="zoom-in" data-aos-delay="220">
-                        <p class="m22l7-definition-text">${definition}</p>
-                      </div>
-                    </div>
-                  </section>
-
-                  <section class="m22l7-chemicals-section" data-aos="fade-up" data-aos-delay="280">
-                    <div class="m22l7-section-header">
-                      <div class="m22l7-section-icon m22l7-section-icon--chemicals">
-                        <i class="fa-solid fa-flask-vial"></i>
-                      </div>
-                      <h2 class="m22l7-section-title">${yhLang("Harmful Chemicals", "ক্ষতিকারক রাসায়নিক পদার্থ")}</h2>
-                    </div>
-                    <ul class="m22l7-chemicals-grid">
-                      ${renderChemicals(chemicals, 350)}
-                    </ul>
-                  </section>
-
-                  <section class="m22l7-health-section" data-aos="fade-up" data-aos-delay="400">
-                    <div class="m22l7-section-header">
-                      <div class="m22l7-section-icon m22l7-section-icon--health">
-                        <i class="fa-solid fa-heart-pulse"></i>
-                      </div>
-                      <h2 class="m22l7-section-title">${yhLang("Health Problems Associated with Hazardous Chemicals", "ক্ষতিকারক রাসায়নিক পদার্থের সাথে সম্পর্কিত স্বাস্থ্য সমস্যা")}</h2>
-                    </div>
-                    <ul class="m22l7-health-grid">
-                      ${renderHealthProblems(healthProblems, 480)}
-                    </ul>
-                  </section>
-
-                  <section class="m22l7-prevention-section" data-aos="fade-up" data-aos-delay="520">
-                    <div class="m22l7-section-header">
-                      <div class="m22l7-section-icon m22l7-section-icon--prevention">
-                        <i class="fa-solid fa-shield-heart"></i>
-                      </div>
-                      <h2 class="m22l7-section-title">${yhLang("Prevention and Management", "প্রতিরোধ ও ব্যবস্থাপনা")}</h2>
-                    </div>
-                    <ul class="m22l7-prevention-list">
-                      ${renderPrevention(preventionMeasures, 600)}
-                    </ul>
-                  </section>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch22-lesson-8",
-            title: yhLang(
-              "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়",
-              "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়"
-            ),
-            icon: "fa-shield-heart",
-            gradientClass: "bg-gradient-emerald",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              const actions = [
-                "রোগ প্রতিরোধের জন্য শিশুদের টিকা দিতে হবে",
-                "জরুরি পরিস্থিতিতে আশ্রয়ের স্থান সম্পর্কে সচেতন থাকতে হবে",
-                "তাপ এড়াতে ছাদ সাদা রঙ করতে হবে",
-                "জলবায়ু পরিবর্তন প্রতিরোধে ব্যক্তিগত পদক্ষেপ নিতে হবে; যেমন একবার ব্যবহারযোগ্য প্লাস্টিক ব্যবহার না করা, নিয়মিত গোসল করা, গণপরিবহন ব্যবহার করা ইত্যাদি।",
-                "পানীয় জল সরবরাহ এবং গুণমান রক্ষা করতে হবে",
-                "বিশেষ স্বাস্থ্যসেবা প্রাপ্ত শিশুদের চাহিদা অনুযায়ী ঝুঁকিপূর্ণ শিশুদের সনাক্ত করুন এবং দুর্যোগ প্রস্তুতিতে পরিবারগুলিকে সহায়তা করতে হবে",
-              ];
-
-              const renderItems = () =>
-                actions
                   .map(
-                    (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.64)' : 'rgba(232,245,233,.75)'};border-left:4px solid ${idx % 2 === 0 ? '#43a047' : '#66bb6a'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(67,160,71,.2)' : '0 8px 20px rgba(102,187,106,.18)'};">
-                        <i class="fa-solid ${idx < 2 ? 'fa-shield-heart' : idx < 4 ? 'fa-seedling' : 'fa-hand-holding-droplet'} ${idx < 2 ? 'text-success' : idx < 4 ? 'text-primary' : 'text-info'} me-2"></i>
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-vial" style="color:#e91e63; margin-right:8px; background:rgba(233,30,99,0.1); padding:6px; border-radius:6px;"></i>
                         <span>${item}</span>
                       </li>
                     `
@@ -15732,32 +15586,166 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;">
-                    <i class="fa-solid fa-shield-heart" style="color:#43a047;margin-right:12px;font-size:1.2em;"></i>
-                    জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-flask" style="color: #c62828; margin-right: 12px; font-size: 1.2em;"></i>
+                    ${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}
                   </h2>
-                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#e8f5e9 0%,#c8e6c9 100%);border-radius:22px;box-shadow:0 10px 35px rgba(67,160,71,.2);">
-                        <h3 style="display:flex;align-items:center;color:#2e7d32;margin-bottom:12px;"><i class="fa-solid fa-list-check" style="margin-right:10px;"></i>${yhLang("Prevention Measures", "প্রতিরোধমূলক পদক্ষেপ")}</h3>
+                  <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#ffebee 0%,#ffcdd2 100%);border-radius:22px;box-shadow:0 10px 35px rgba(198,40,40,.18);">
+                    <h5 style="display:flex;align-items:center;color:#b71c1c;"> <i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}</h5>
+
+                    <p>উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে ।</p>
+                    <h5 style="display:flex;align-items:center;color:#b71c1c;"><i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:</h5>
+                    <p>পানির চেয়ে ৫ গুণ বা তার বেশি পারমাণবিক ঘনত্ব সম্পন্ন ধাতুসমূহের গ্রুপকে ভারী ধাতু বা ক্ষতিকারক রাসায়নিক পদার্থ হিসাবে উল্লেখ করা হয়। জনস্বাস্থ্যের জন্য প্রধান প্রধান ক্ষতিকারক রাসায়নিক পদার্থ  গুলি নীচে দেয়া হল:</p>
+                  </div>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="60">
+                    <div class="col-12 col-lg-6">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 100%);border-radius:20px;box-shadow:0 8px 28px rgba(216,27,96,.18);">
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#ad1457;"><i class="fa-solid fa-vial-circle-check" style="margin-right:10px;"></i>${yhLang("Harmful Chemicals", "ক্ষতিকারক রাসায়নিক পদার্থ")}</h3>
                         <ul class="list-unstyled feature-list mb-0">
-                          ${renderItems()}
+                          ${renderItems(chemicalList)}
                         </ul>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card text-center h-100" style="background:linear-gradient(135deg,#e3f2fd 0%,#bbdefb 100%);border-radius:20px;box-shadow:0 10px 30px rgba(30,136,229,.2);">
-                        <h5 style="display:flex;align-items:center;justify-content:center;color:#1565c0;margin-bottom:14px;"><i class="fa-solid fa-cloud-sun-rain" style="margin-right:8px;"></i>${yhLang("Climate Adaptation Diagram", "জলবায়ু অভিযোজন চিত্র")}</h5>
-                        <img src="img/modu22/climate3.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="জলবায়ু পরিবর্তন প্রতিরোধ" loading="lazy">
+                    <div class="col-12 col-lg-6">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:20px;box-shadow:0 8px 28px rgba(123,31,162,.18);">
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#6a1b9a;"><i class="fa-solid fa-heart-circle-xmark" style="margin-right:10px;"></i>ক্ষতিকারক রাসায়নিক পদার্থের সাথে সম্পর্কিত স্বাস্থ্য সমস্যা</h3>
+                        <p>তীব্র বমি, ডায়রিয়া, চর্মরোগ, ক্যান্সার, হৃদরোগ, কম জন্মওজন, সময়ের পূর্বে জন্ম, মৃত শিশুর জন্ম, প্রজনন ও বিকাশজনিত সমস্যা, অকাল মৃত্যু</p>
+                        <div class="card-divider my-3"></div>
+                        <h3 class="mb-3" style="display:flex;align-items:center;color:#4a148c;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>${yhLang("Prevention & Management", "প্রতিরোধ ও ব্যবস্থাপনা")}</h3>
+                        <ul class="list-unstyled feature-list mb-0">
+                          ${renderItems(preventionList)}
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>`;
             })(),
           },
+          {
+          {
+            id: "ch22-lesson-8",
+            title: yhLang(
+              "Prevention of Health Problems in Children and Adolescents Due to Climate Change",
+              "জলবায়ু পরিবর্তনের কারণে শিশু-কিশোরদের স্বাস্থ্য সমস্যা প্রতিরোধে করনীয়"
+            ),
+            icon: "fa-shield-heart",
+            gradientClass: "bg-gradient-emerald",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const actions = [
+                {
+                  icon: "fa-syringe",
+                  color: "m22l8-item-green",
+                  text: yhLang(
+                    "Vaccinate children to prevent diseases",
+                    "রোগ প্রতিরোধের জন্য শিশুদের টিকা দিতে হবে"
+                  ),
+                },
+                {
+                  icon: "fa-home",
+                  color: "m22l8-item-blue",
+                  text: yhLang(
+                    "Know shelter locations in case of emergencies",
+                    "জরুরি পরিস্থিতিতে আশ্রয়ের স্থান সম্পর্কে সচেতন থাকতে হবে"
+                  ),
+                },
+                {
+                  icon: "fa-sun",
+                  color: "m22l8-item-yellow",
+                  text: yhLang(
+                    "Paint roofs white to avoid heat",
+                    "তাপ এড়াতে ছাদ সাদা রঙ করতে হবে"
+                  ),
+                },
+                {
+                  icon: "fa-leaf",
+                  color: "m22l8-item-teal",
+                  text: yhLang(
+                    "Take personal steps to prevent climate change: avoid single-use plastics, bathe regularly, use public transport, etc.",
+                    "জলবায়ু পরিবর্তন প্রতিরোধে ব্যক্তিগত পদক্ষেপ নিতে হবে; যেমন একবার ব্যবহারযোগ্য প্লাস্টিক ব্যবহার না করা, নিয়মিত গোসল করা, গণপরিবহন ব্যবহার করা ইত্যাদি।"
+                  ),
+                },
+                {
+                  icon: "fa-droplet",
+                  color: "m22l8-item-cyan",
+                  text: yhLang(
+                    "Ensure clean drinking water supply and quality",
+                    "পানীয় জল সরবরাহ এবং গুণমান রক্ষা করতে হবে"
+                  ),
+                },
+                {
+                  icon: "fa-hands-holding-child",
+                  color: "m22l8-item-purple",
+                  text: yhLang(
+                    "Identify vulnerable children according to their needs and support families in disaster preparedness",
+                    "বিশেষ স্বাস্থ্যসেবা প্রাপ্ত শিশুদের চাহিদা অনুযায়ী ঝুঁকিপূর্ণ শিশুদের সনাক্ত করুন এবং দুর্যোগ প্রস্তুতিতে পরিবারগুলিকে সহায়তা করতে হবে"
+                  ),
+                },
+              ];
 
+              const renderItems = (items, delay) =>
+                items
+                  .map((item, idx) => `
+                    <li class="m22l8-action-item ${item.color}" data-aos="fade-up" data-aos-delay="${delay + idx * 60}">
+                      <div class="m22l8-action-icon">
+                        <i class="fa-solid ${item.icon}"></i>
+                      </div>
+                      <span class="m22l8-action-text">${item.text}</span>
+                    </li>
+                  `)
+                  .join("");
 
- 
+              return `
+                <div class="lesson-slide mod22-lesson8">
+                  <div class="m22l8-shapes" aria-hidden="true">
+                    <span class="m22l8-shape m22l8-shape--circle"></span>
+                    <span class="m22l8-shape m22l8-shape--square"></span>
+                    <span class="m22l8-shape m22l8-shape--triangle"></span>
+                    <span class="m22l8-shape m22l8-shape--wave"></span>
+                  </div>
+
+                  <header class="m22l8-hero" data-aos="fade-down">
+                    <div class="m22l8-hero__badge">
+                      <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h1 class="m22l8-hero__title">${yhLang(
+                      "Prevention of Health Problems in Children and Adolescents",
+                      "জলবায়ু পরিবর্তনের কারণে স্বাস্থ্য সমস্যা প্রতিরোধ"
+                    )}</h1>
+                    <p class="m22l8-hero__subtitle">${yhLang(
+                      "Climate change and preventive measures",
+                      "জলবায়ু পরিবর্তন এবং প্রতিরোধমূলক পদক্ষেপ"
+                    )}</p>
+                  </header>
+
+                  <section class="m22l8-actions-section" data-aos="fade-up" data-aos-delay="150">
+                    <div class="m22l8-section-header">
+                      <div class="m22l8-section-icon m22l8-section-icon--actions">
+                        <i class="fa-solid fa-list-check"></i>
+                      </div>
+                      <h2 class="m22l8-section-title">${yhLang("Prevention Measures", "প্রতিরোধমূলক পদক্ষেপ")}</h2>
+                    </div>
+                    <ul class="m22l8-actions-list">
+                      ${renderItems(actions, 200)}
+                    </ul>
+                  </section>
+
+                  <section class="m22l8-diagram-section" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="m22l8-section-header">
+                      <div class="m22l8-section-icon m22l8-section-icon--diagram">
+                        <i class="fa-solid fa-image"></i>
+                      </div>
+                      <h2 class="m22l8-section-title">${yhLang("Climate Adaptation Diagram", "জলবায়ু অভিযোজন চিত্র")}</h2>
+                    </div>
+                    <div class="m22l8-diagram-card">
+                      <img src="img/modu22/climate3.png" class="img-fluid img-zoom" alt="${yhLang("Climate change prevention", "জলবায়ু পরিবর্তন প্রতিরোধ")}" loading="lazy">
+                    </div>
+                  </section>
+                </div>`;
+            })(),
+          },
+
           {
             id: "ch22-lesson-11",
             title: yhLang(

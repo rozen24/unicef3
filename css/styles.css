@@ -5388,6 +5388,1241 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 }
 
+/* ==================== MODULE 22 • LESSON 8 - CLIMATE PREVENTION ==================== */
+.lesson-slide.mod22-lesson8 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    #e8f5e9 0%, 
+    #c8e6c9 25%, 
+    #a5d6a7 50%,
+    #81c784 75%, 
+    #66bb6a 100%
+  );
+  padding: 28px 16px;
+  overflow: hidden;
+}
+
+.lesson-slide.mod22-lesson8::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(102, 187, 106, 0.2), transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  animation: floatSlow 28s ease-in-out infinite;
+}
+
+.lesson-slide.mod22-lesson8::after {
+  content: '';
+  position: absolute;
+  bottom: -35%;
+  left: -20%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(129, 199, 132, 0.15), transparent 65%);
+  border-radius: 50%;
+  filter: blur(55px);
+  pointer-events: none;
+  animation: floatSlow 25s ease-in-out infinite reverse;
+}
+
+/* Decorative Shapes */
+.m22l8-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.25;
+}
+
+.m22l8-shape {
+  position: absolute;
+  border: 2px solid rgba(102, 187, 106, 0.3);
+  animation: float 22s ease-in-out infinite;
+}
+
+.m22l8-shape--circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  top: 15%;
+  right: 12%;
+  animation-delay: 0s;
+  background: radial-gradient(circle, rgba(102, 187, 106, 0.1), transparent);
+}
+
+.m22l8-shape--square {
+  width: 70px;
+  height: 70px;
+  top: 70%;
+  left: 10%;
+  animation-delay: 1.5s;
+  transform: rotate(20deg);
+  background: linear-gradient(135deg, rgba(129, 199, 132, 0.08), transparent);
+}
+
+.m22l8-shape--triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid rgba(81, 194, 120, 0.18);
+  bottom: 15%;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+.m22l8-shape--wave {
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  right: 5%;
+  animation-delay: 2s;
+  clip-path: polygon(0% 40%, 10% 30%, 20% 40%, 30% 25%, 40% 40%, 50% 20%, 60% 40%, 70% 25%, 80% 40%, 90% 30%, 100% 40%, 100% 100%, 0% 100%);
+  background: linear-gradient(90deg, rgba(76, 175, 80, 0.1), transparent);
+}
+
+/* Hero Section */
+.m22l8-hero {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 
+    0 12px 40px rgba(102, 187, 106, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(129, 199, 132, 0.25);
+  margin-bottom: 20px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.m22l8-hero__badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 
+    0 8px 24px rgba(102, 187, 106, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  animation: m22l8Pulse 3s ease-in-out infinite;
+}
+
+@keyframes m22l8Pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(102, 187, 106, 0.4); }
+  50% { transform: scale(1.08); box-shadow: 0 12px 32px rgba(102, 187, 106, 0.5); }
+}
+
+.m22l8-hero__badge i {
+  font-size: 1.8rem;
+  color: #fff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.m22l8-hero__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, #1b5e20, #388e3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  max-width: 600px;
+}
+
+.m22l8-hero__subtitle {
+  font-size: 1.05rem;
+  margin: 0;
+  color: rgba(27, 94, 32, 0.75);
+  font-weight: 500;
+}
+
+/* Section Header */
+.m22l8-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.m22l8-section-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  font-size: 1.3rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.m22l8-section-icon--actions {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  box-shadow: 0 6px 18px rgba(102, 187, 106, 0.3);
+}
+
+.m22l8-section-icon--diagram {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  box-shadow: 0 6px 18px rgba(25, 118, 210, 0.3);
+}
+
+.m22l8-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #1b5e20, #388e3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Actions Section */
+.m22l8-actions-section {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 28px;
+}
+
+.m22l8-actions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.m22l8-action-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  border-left: 4px solid;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.m22l8-action-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background: linear-gradient(135deg, currentColor, transparent);
+  pointer-events: none;
+}
+
+.m22l8-action-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Item Color Variants */
+.m22l8-item-green {
+  border-left-color: #4caf50;
+}
+
+.m22l8-item-green .m22l8-action-icon {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  box-shadow: 0 4px 12px rgba(102, 187, 106, 0.35);
+}
+
+.m22l8-item-blue {
+  border-left-color: #2196f3;
+}
+
+.m22l8-item-blue .m22l8-action-icon {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.35);
+}
+
+.m22l8-item-yellow {
+  border-left-color: #fbc02d;
+}
+
+.m22l8-item-yellow .m22l8-action-icon {
+  background: linear-gradient(135deg, #fbc02d, #f9a825);
+  box-shadow: 0 4px 12px rgba(251, 192, 45, 0.35);
+}
+
+.m22l8-item-teal {
+  border-left-color: #009688;
+}
+
+.m22l8-item-teal .m22l8-action-icon {
+  background: linear-gradient(135deg, #009688, #00897b);
+  box-shadow: 0 4px 12px rgba(0, 150, 136, 0.35);
+}
+
+.m22l8-item-cyan {
+  border-left-color: #00bcd4;
+}
+
+.m22l8-item-cyan .m22l8-action-icon {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.35);
+}
+
+.m22l8-item-purple {
+  border-left-color: #9c27b0;
+}
+
+.m22l8-item-purple .m22l8-action-icon {
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.35);
+}
+
+.m22l8-action-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.m22l8-action-icon i {
+  font-size: 1.05rem;
+  color: #fff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.m22l8-action-item:hover .m22l8-action-icon {
+  transform: scale(1.15) rotate(360deg);
+}
+
+.m22l8-action-text {
+  flex: 1;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.82);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+/* Diagram Section */
+.m22l8-diagram-section {
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+}
+
+.m22l8-diagram-card {
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 
+    0 12px 40px rgba(25, 118, 210, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(25, 118, 210, 0.15);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+}
+
+.m22l8-diagram-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 16px 48px rgba(25, 118, 210, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.m22l8-diagram-card img {
+  border-radius: 12px;
+  display: block;
+  transition: all 0.4s ease;
+}
+
+.m22l8-diagram-card:hover img {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .lesson-slide.mod22-lesson8 {
+    background: linear-gradient(135deg, 
+      #1b5e20 0%, 
+      #2e7d32 25%, 
+      #388e3c 50%,
+      #43a047 75%, 
+      #4caf50 100%
+    );
+  }
+  
+  .lesson-slide.mod22-lesson8::before {
+    background: radial-gradient(circle, rgba(102, 187, 106, 0.15), transparent 70%);
+  }
+  
+  .lesson-slide.mod22-lesson8::after {
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.1), transparent 65%);
+  }
+  
+  .m22l8-hero {
+    background: rgba(33, 33, 33, 0.95);
+    border-color: rgba(102, 187, 106, 0.2);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.4),
+      0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .m22l8-hero__title {
+    background: linear-gradient(135deg, #81c784, #4caf50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .m22l8-hero__subtitle {
+    color: rgba(165, 214, 167, 0.8);
+  }
+  
+  .m22l8-section-title {
+    background: linear-gradient(135deg, #81c784, #4caf50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .m22l8-action-item {
+    background: rgba(0, 0, 0, 0.3);
+    border-left-color: inherit;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .m22l8-action-item:hover {
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+  }
+  
+  .m22l8-action-text {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .m22l8-diagram-card {
+    background: rgba(33, 33, 33, 0.95);
+    border-color: rgba(25, 118, 210, 0.2);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.4),
+      0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .m22l8-shape {
+    border-color: rgba(102, 187, 106, 0.15);
+  }
+}
+
+/* Responsive - Tablets */
+@media (max-width: 1024px) {
+  .m22l8-actions-list {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .lesson-slide.mod22-lesson8 {
+    padding: 20px 12px;
+  }
+  
+  .m22l8-hero {
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+  
+  .m22l8-hero__title {
+    font-size: 1.4rem;
+  }
+  
+  .m22l8-hero__subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .m22l8-section-title {
+    font-size: 1.15rem;
+  }
+  
+  .m22l8-actions-list {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+  
+  .m22l8-action-item {
+    padding: 12px 14px;
+  }
+  
+  .m22l8-action-text {
+    font-size: 0.92rem;
+  }
+  
+  .m22l8-diagram-card {
+    padding: 16px;
+  }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 480px) {
+  .m22l8-hero__title {
+    font-size: 1.2rem;
+  }
+  
+  .m22l8-section-title {
+    font-size: 1rem;
+  }
+  
+  .m22l8-action-icon {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .m22l8-action-icon i {
+    font-size: 0.9rem;
+  }
+  
+  .m22l8-action-text {
+    font-size: 0.88rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .m22l8-hero__badge,
+  .m22l8-shape,
+  .m22l8-action-item {
+    animation: none !important;
+  }
+  
+  .lesson-slide.mod22-lesson8::before,
+  .lesson-slide.mod22-lesson8::after,
+  .m22l8-action-item:hover {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* ==================== MODULE 22 • LESSON 7 - HAZARDOUS CHEMICALS ==================== */
+.lesson-slide.mod22-lesson7 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    #ffebee 0%, 
+    #ffcdd2 20%, 
+    #ef9a9a 40%,
+    #e57373 65%, 
+    #ef5350 85%, 
+    #e53935 100%
+  );
+  padding: 16px 12px;
+  overflow: hidden;
+}
+
+.lesson-slide.mod22-lesson7::before {
+  content: '';
+  position: absolute;
+  top: -45%;
+  right: -18%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(239, 83, 80, 0.22), transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  animation: floatSlow 30s ease-in-out infinite;
+}
+
+.lesson-slide.mod22-lesson7::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -22%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(229, 57, 53, 0.18), transparent 68%);
+  border-radius: 50%;
+  filter: blur(58px);
+  pointer-events: none;
+  animation: floatSlow 27s ease-in-out infinite reverse;
+}
+
+/* Decorative Shapes */
+.m22l7-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.24;
+}
+
+.m22l7-shape {
+  position: absolute;
+  border: 2px solid rgba(229, 57, 53, 0.32);
+  animation: float 24s ease-in-out infinite;
+}
+
+.m22l7-shape--circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  top: 18%;
+  right: 14%;
+  animation-delay: 0s;
+  background: radial-gradient(circle, rgba(239, 83, 80, 0.12), transparent);
+}
+
+.m22l7-shape--square {
+  width: 52px;
+  height: 52px;
+  top: 72%;
+  left: 8%;
+  animation-delay: 1.8s;
+  transform: rotate(25deg);
+  background: linear-gradient(135deg, rgba(229, 57, 53, 0.09), transparent);
+}
+
+.m22l7-shape--hexagon {
+  width: 58px;
+  height: 58px;
+  bottom: 18%;
+  right: 22%;
+  animation-delay: 2.5s;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(135deg, rgba(244, 67, 54, 0.11), transparent);
+}
+
+/* Hero Section */
+.m22l7-hero {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 16px;
+  box-shadow: 
+    0 8px 28px rgba(229, 57, 53, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(229, 57, 53, 0.24);
+  margin-bottom: 16px;
+  backdrop-filter: blur(13px);
+  text-align: center;
+}
+
+.m22l7-hero__badge {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 
+    0 6px 18px rgba(239, 83, 80, 0.35),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+  animation: m22l7Pulse 3s ease-in-out infinite;
+}
+
+@keyframes m22l7Pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 10px 28px rgba(239, 83, 80, 0.45); }
+  50% { transform: scale(1.09); box-shadow: 0 14px 36px rgba(229, 57, 53, 0.55); }
+}
+
+.m22l7-hero__badge i {
+  font-size: 1.35rem;
+  color: #fff;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+}
+
+.m22l7-hero__title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, #b71c1c, #c62828);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  max-width: 540px;
+}
+
+.m22l7-hero__subtitle {
+  font-size: 0.85rem;
+  margin: 0;
+  color: rgba(198, 40, 40, 0.75);
+  font-weight: 500;
+}
+
+/* Section Header */
+.m22l7-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.m22l7-section-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  font-size: 1rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.m22l7-section-icon--chemicals {
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  box-shadow: 0 4px 12px rgba(239, 83, 80, 0.28);
+}
+
+.m22l7-section-icon--health {
+  background: linear-gradient(135deg, #ec407a, #ad1457);
+  box-shadow: 0 4px 12px rgba(236, 64, 122, 0.28);
+}
+
+.m22l7-section-icon--prevention {
+  background: linear-gradient(135deg, #ff7043, #d84315);
+  box-shadow: 0 4px 12px rgba(255, 112, 67, 0.28);
+}
+
+.m22l7-section-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #b71c1c, #c62828);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Introduction Section */
+.m22l7-intro-section {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 18px;
+}
+
+.m22l7-intro-card {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 13px;
+  box-shadow: 
+    0 5px 16px rgba(229, 57, 53, 0.12),
+    0 1px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(229, 57, 53, 0.18);
+  backdrop-filter: blur(11px);
+}
+
+.m22l7-intro-text {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.76);
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.m22l7-definition-card {
+  padding: 10px 12px;
+  background: linear-gradient(135deg, rgba(239, 83, 80, 0.05), rgba(229, 57, 53, 0.03));
+  border-left: 3px solid #ef5350;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.m22l7-definition-text {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.72);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Chemicals Section */
+.m22l7-chemicals-section {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 18px;
+}
+
+.m22l7-chemicals-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 9px;
+}
+
+.m22l7-chem-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  background: rgba(255, 255, 255, 0.91);
+  border-radius: 10px;
+  border-left: 2.5px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.m22l7-chem-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background: linear-gradient(135deg, currentColor, transparent);
+  pointer-events: none;
+}
+
+.m22l7-chem-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.97);
+}
+
+/* Chemical Color Variants */
+.m22l7-chem-lead { border-left-color: #c62828; }
+.m22l7-chem-lead .m22l7-chem-icon { background: linear-gradient(135deg, #ef5350, #c62828); box-shadow: 0 2px 7px rgba(239, 83, 80, 0.25); }
+
+.m22l7-chem-arsenic { border-left-color: #d32f2f; }
+.m22l7-chem-arsenic .m22l7-chem-icon { background: linear-gradient(135deg, #f44336, #d32f2f); box-shadow: 0 2px 7px rgba(244, 67, 54, 0.25); }
+
+.m22l7-chem-nitrogen { border-left-color: #e53935; }
+.m22l7-chem-nitrogen .m22l7-chem-icon { background: linear-gradient(135deg, #ef5350, #e53935); box-shadow: 0 2px 7px rgba(239, 83, 80, 0.25); }
+
+.m22l7-chem-hydrocarbon { border-left-color: #ec407a; }
+.m22l7-chem-hydrocarbon .m22l7-chem-icon { background: linear-gradient(135deg, #ec407a, #c2185b); box-shadow: 0 2px 7px rgba(236, 64, 122, 0.25); }
+
+.m22l7-chem-asbestos { border-left-color: #ff7043; }
+.m22l7-chem-asbestos .m22l7-chem-icon { background: linear-gradient(135deg, #ff7043, #d84315); box-shadow: 0 2px 7px rgba(255, 112, 67, 0.25); }
+
+.m22l7-chem-fluoride { border-left-color: #ffa726; }
+.m22l7-chem-fluoride .m22l7-chem-icon { background: linear-gradient(135deg, #ffa726, #f57c00); box-shadow: 0 2px 7px rgba(255, 167, 38, 0.25); }
+
+.m22l7-chem-mercury { border-left-color: #5e35b1; }
+.m22l7-chem-mercury .m22l7-chem-icon { background: linear-gradient(135deg, #7e57c2, #5e35b1); box-shadow: 0 2px 7px rgba(94, 53, 177, 0.25); }
+
+.m22l7-chem-benzene { border-left-color: #1565c0; }
+.m22l7-chem-benzene .m22l7-chem-icon { background: linear-gradient(135deg, #1976d2, #1565c0); box-shadow: 0 2px 7px rgba(21, 101, 192, 0.25); }
+
+.m22l7-chem-cadmium { border-left-color: #00897b; }
+.m22l7-chem-cadmium .m22l7-chem-icon { background: linear-gradient(135deg, #009688, #00897b); box-shadow: 0 2px 7px rgba(0, 150, 136, 0.25); }
+
+.m22l7-chem-dioxin { border-left-color: #f57f17; }
+.m22l7-chem-dioxin .m22l7-chem-icon { background: linear-gradient(135deg, #f9a825, #f57f17); box-shadow: 0 2px 7px rgba(249, 168, 37, 0.25); }
+
+.m22l7-chem-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.m22l7-chem-icon i {
+  font-size: 0.75rem;
+  color: #fff;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
+}
+
+.m22l7-chem-item:hover .m22l7-chem-icon {
+  transform: scale(1.12) rotate(-360deg);
+}
+
+.m22l7-chem-text {
+  flex: 1;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.78);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+/* Health Problems Section */
+.m22l7-health-section {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 18px;
+}
+
+.m22l7-health-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.m22l7-health-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 11px;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 9px;
+  border-top: 2.5px solid #ec407a;
+  box-shadow: 0 2px 10px rgba(236, 64, 122, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.m22l7-health-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background: linear-gradient(135deg, #ec407a, transparent);
+  pointer-events: none;
+}
+
+.m22l7-health-item:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 6px 18px rgba(236, 64, 122, 0.18);
+}
+
+.m22l7-health-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ec407a, #c2185b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 7px rgba(236, 64, 122, 0.25);
+}
+
+.m22l7-health-icon i {
+  font-size: 0.65rem;
+  color: #fff;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
+.m22l7-health-text {
+  flex: 1;
+  font-size: 0.76rem;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+/* Prevention Section */
+.m22l7-prevention-section {
+  position: relative;
+  z-index: 10;
+}
+
+.m22l7-prevention-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.m22l7-prevent-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 11px;
+  border-left: 3px solid;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  transition: all 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.m22l7-prevent-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background: linear-gradient(135deg, currentColor, transparent);
+  pointer-events: none;
+}
+
+.m22l7-prevent-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+  background: rgba(255, 255, 255, 0.97);
+}
+
+/* Prevention Color Variants */
+.m22l7-prev-a { border-left-color: #ef5350; }
+.m22l7-prev-a .m22l7-prevent-icon { background: linear-gradient(135deg, #ef5350, #c62828); box-shadow: 0 2px 9px rgba(239, 83, 80, 0.28); }
+
+.m22l7-prev-b { border-left-color: #ab47bc; }
+.m22l7-prev-b .m22l7-prevent-icon { background: linear-gradient(135deg, #ab47bc, #7b1fa2); box-shadow: 0 2px 9px rgba(171, 71, 188, 0.28); }
+
+.m22l7-prev-c { border-left-color: #29b6f6; }
+.m22l7-prev-c .m22l7-prevent-icon { background: linear-gradient(135deg, #29b6f6, #1565c0); box-shadow: 0 2px 9px rgba(41, 182, 246, 0.28); }
+
+.m22l7-prev-d { border-left-color: #66bb6a; }
+.m22l7-prev-d .m22l7-prevent-icon { background: linear-gradient(135deg, #66bb6a, #388e3c); box-shadow: 0 2px 9px rgba(102, 187, 106, 0.28); }
+
+.m22l7-prev-e { border-left-color: #ffa726; }
+.m22l7-prev-e .m22l7-prevent-icon { background: linear-gradient(135deg, #ffa726, #f57c00); box-shadow: 0 2px 9px rgba(255, 167, 38, 0.28); }
+
+.m22l7-prevent-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.m22l7-prevent-icon i {
+  font-size: 0.85rem;
+  color: #fff;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12));
+}
+
+.m22l7-prevent-item:hover .m22l7-prevent-icon {
+  transform: scale(1.15) rotate(360deg);
+}
+
+.m22l7-prevent-text {
+  flex: 1;
+  font-size: 0.80rem;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.78);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .lesson-slide.mod22-lesson7 {
+    background: linear-gradient(135deg, 
+      #5d1f1a 0%, 
+      #6d4c41 20%, 
+      #795548 40%,
+      #8d6e63 65%, 
+      #a1887f 85%, 
+      #bcaaa4 100%
+    );
+  }
+  
+  .lesson-slide.mod22-lesson7::before,
+  .lesson-slide.mod22-lesson7::after {
+    background: radial-gradient(circle, rgba(198, 40, 40, 0.15), transparent);
+  }
+  
+  .m22l7-hero {
+    background: rgba(33, 33, 33, 0.96);
+    border-color: rgba(229, 57, 53, 0.23);
+    box-shadow: 
+      0 8px 24px rgba(0, 0, 0, 0.38),
+      0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .m22l7-hero__title,
+  .m22l7-section-title {
+    background: linear-gradient(135deg, #ef5350, #ff7043);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .m22l7-hero__subtitle {
+    color: rgba(239, 83, 80, 0.75);
+  }
+  
+  .m22l7-intro-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(239, 83, 80, 0.18);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .m22l7-intro-text,
+  .m22l7-definition-text {
+    color: rgba(255, 255, 255, 0.88);
+  }
+  
+  .m22l7-chem-item,
+  .m22l7-health-item,
+  .m22l7-prevent-item {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .m22l7-chem-item:hover,
+  .m22l7-health-item:hover,
+  .m22l7-prevent-item:hover {
+    background: rgba(0, 0, 0, 0.38);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  }
+  
+  .m22l7-chem-text,
+  .m22l7-health-text,
+  .m22l7-prevent-text {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .m22l7-shape {
+    border-color: rgba(229, 57, 53, 0.15);
+  }
+}
+
+/* Responsive - Tablets */
+@media (max-width: 1024px) {
+  .m22l7-chemicals-grid {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
+  
+  .m22l7-health-grid {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .lesson-slide.mod22-lesson7 {
+    padding: 14px 10px;
+  }
+  
+  .m22l7-hero {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+  
+  .m22l7-hero__title {
+    font-size: 1rem;
+  }
+  
+  .m22l7-hero__subtitle {
+    font-size: 0.75rem;
+  }
+  
+  .m22l7-section-title {
+    font-size: 0.95rem;
+  }
+  
+  .m22l7-chemicals-grid,
+  .m22l7-health-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .m22l7-chem-item,
+  .m22l7-health-item,
+  .m22l7-prevent-item {
+    padding: 8px 10px;
+  }
+  
+  .m22l7-chem-text,
+  .m22l7-health-text,
+  .m22l7-prevent-text {
+    font-size: 0.73rem;
+  }
+  
+  .m22l7-intro-card {
+    padding: 10px;
+  }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 480px) {
+  .m22l7-hero__title {
+    font-size: 0.95rem;
+  }
+  
+  .m22l7-section-title {
+    font-size: 0.85rem;
+  }
+  
+  .m22l7-chem-icon,
+  .m22l7-health-icon,
+  .m22l7-prevent-icon {
+    min-width: 24px;
+  }
+  
+  .m22l7-chem-text,
+  .m22l7-health-text,
+  .m22l7-prevent-text {
+    font-size: 0.68rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .m22l7-hero__badge,
+  .m22l7-shape,
+  .m22l7-chem-item,
+  .m22l7-health-item,
+  .m22l7-prevent-item {
+    animation: none !important;
+  }
+  
+  .lesson-slide.mod22-lesson7::before,
+  .lesson-slide.mod22-lesson7::after,
+  .m22l7-chem-item:hover,
+  .m22l7-health-item:hover,
+  .m22l7-prevent-item:hover {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* ==================== MODULE 24 • LESSON 10 ==================== */
 .mod24-lesson10 {
   position: relative;
