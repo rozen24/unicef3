@@ -3316,7 +3316,7 @@ class YouthHealthLMS {
         audioFile: '',
         quiz: { passingScore: 80, questions: aggregatedQuestions },
         content: `
-          <div class="lesson-slide">
+          <div class="lesson-slide lession_slide_none">
             <h2 class="slide-title gradient-text" data-aos="fade-up">Module Quiz</h2>
             <p class="text-muted" data-aos="fade-up" data-aos-delay="60">
               This quiz checks your understanding of the key ideas in this module.
@@ -3391,6 +3391,10 @@ class YouthHealthLMS {
   // Determine if module quiz is passed to allow moving to next module
   const moduleQuizId = `${course.chapters[chIndex].id}-quiz`;
   const modulePassed = fullAccess || completedIds.has(moduleQuizId);
+  const isModuleQuizLesson =
+    currentLesson &&
+    typeof currentLesson.id === "string" &&
+    currentLesson.id.endsWith("-quiz");
 
       // Icon mapping for chapters (fallback rotates through when out of range)
       const chapterIcons = [
@@ -3623,26 +3627,23 @@ class YouthHealthLMS {
                           ? currentLesson.content
                           : "<p>No lesson selected.</p>"
                       }
-                      ${currentLesson && currentLesson.id.endsWith('-quiz') ? '' : `
                       <div class="inline-lesson-nav">
-                        <button class="btn btn-outline-primary" ${
-                          hasPrevLesson
-                            ? 'onclick="app.previousLesson()"'
-                            : "disabled"
-                        }>
+                        ${!isModuleQuizLesson && hasPrevChapter ? `<button class="btn btn-outline-secondary" onclick="app.previousChapter()">
+                          <i class="fa-solid fa-arrow-left me-2"></i>Previous module
+                        </button>` : ''}
+                        ${!isModuleQuizLesson && hasPrevLesson ? `<button class="btn btn-outline-primary" onclick="app.previousLesson()">
                           <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
-                        </button>
-                        <button class="btn btn-primary" ${
-                          hasNextLesson
-                            ? 'onclick="app.nextLesson()"'
-                            : "disabled"
-                        }>
+                        </button>` : !isModuleQuizLesson ? `<span></span>` : ''}
+                        ${!isModuleQuizLesson && hasNextLesson ? `<button class="btn btn-primary" onclick="app.nextLesson()">
                           Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
-                        </button>
-                      </div>`}
+                        </button>` : !isModuleQuizLesson ? `<span></span>` : ''}
+                        ${!isModuleQuizLesson && hasNextChapter ? `<button class="btn btn-primary" onclick="app.nextChapter()">
+                          Next module<i class="fa-solid fa-arrow-right ms-2"></i>
+                        </button>` : ''}
+                      </div>
                     </div>
 
-                    ${currentLesson && currentLesson.id.endsWith('-quiz') ? `
+                    ${isModuleQuizLesson ? `
                       <div class="lesson-quiz-card ${lessonCompleted ? 'lesson-quiz-card--complete' : ''}">
                         <div class="lesson-quiz-card__header">
                           <span class="lesson-quiz-badge"><i class="fa-solid fa-circle-question"></i> Module quiz</span>
@@ -3658,26 +3659,14 @@ class YouthHealthLMS {
                           </div>` : ''}
                         <p class="lesson-quiz-text">
                           This quiz has <strong>${currentLesson.quiz.questions.length}</strong> questions.
-                          You must pass this quiz to unlock the next module. You can retake it and your best score will be saved.
+                          You must pass this quiz to unlock the next module.
+                          You can retake it and your best score will be saved.
                         </p>
                         <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
                           ${lessonCompleted ? 'Retake quiz' : 'Start quiz'}
                           <i class="fa-solid fa-arrow-right-long ms-2"></i>
                         </button>
                       </div>` : ''}
-
-                      <div class="chapter-nav-actions" ${modulePassed ? '' : 'style="display:none"'}>
-                        <button class="btn btn-outline-primary" ${
-                          hasPrevChapter ? 'onclick="app.previousChapter()"' : 'disabled'
-                        }>
-                          <i class="fa-solid fa-arrow-left me-2"></i>Previous module
-                        </button>
-                        <button class="btn btn-primary" ${
-                          hasNextChapter ? 'onclick="app.nextChapter()"' : 'disabled'
-                        }>
-                          Next module<i class="fa-solid fa-arrow-right ms-2"></i>
-                        </button>
-                      </div>
                   </article>
                 </div>
               </div>

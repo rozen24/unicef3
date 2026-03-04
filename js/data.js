@@ -18292,7 +18292,7 @@ const coursesData = [
                       <span class="m25l1-title__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
                       <h2 class="slide-title gradient-text mb-0">${yhLang("Communication", "যোগাযোগ")}</h2>
                     </div>
-                    <p class="m25l1-lead" data-aos="fade-up" data-aos-delay="100">${yhLang("Communication is a process through which people exchange information, knowledge, experience, ideas, and opinions in a meaningful and effective way through speech, gestures, writing, pictures, or symbols", "যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহায্যে অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে")}</p>
+                    <p class="m25l1-lead" data-aos="fade-up" data-aos-delay="100">${yhLang("Communication is a process through which people exchange information, knowledge, experience, ideas, and opinions in a meaningful and effective way through speech, gestures, writing, pictures, or symbols", "যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহায্যে অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে ")}</p>
                   </header>
 
                   <div class="row g-1 mt-1 mb-5 align-items-stretch">
