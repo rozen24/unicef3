@@ -14902,7 +14902,7 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-earth-americas" style="color: #26a69a; margin-right: 12px; font-size: 1.2em;"></i>
                     ${yhLang("Weather and Climate", "আবহাওয়া ও জলবায়ু")}
                   </h2>
@@ -14962,7 +14962,7 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-wind" style="color: #607d8b; margin-right: 12px; font-size: 1.2em;"></i>
                     ${yhLang("Air Pollution", "বায়ু দূষণ")}
                   </h2>
@@ -15090,7 +15090,7 @@ const coursesData = [
                   .join("");
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-industry" style="color: #ff6f00; margin-right: 12px; font-size: 1.2em;"></i>
                     ${yhLang("Sources of Air Pollution:", "বায়ু দূষণের উৎস:")}
                   </h2>
@@ -15244,7 +15244,7 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-water" style="color: #ff7043; margin-right: 12px; font-size: 1.2em;"></i>
                     ${yhLang(
                         "Main Causes of Food and Water Contamination",
@@ -15342,7 +15342,7 @@ const coursesData = [
                 if (item.includes('কলেরা') || item.includes('Cholera')) return { icon: 'fa-disease', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
                 if (item.includes('হেপাটাইটিস') || item.includes('Hepatitis')) return { icon: 'fa-syringe', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
                 if (item.includes('জিয়ার্ডিয়াসিস') || item.includes('Giardiasis')) return { icon: 'fa-bacterium', color: '#ef6c00', bg: 'rgba(239,108,0,.12)' };
-                if (item.includes('পেটের সংক্রমণ') || item.includes('Stomach infection')) return { icon: 'fa-stomach', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
+                if (item.includes('পেটের সংক্রমণ') || item.includes('Stomach infection')) return { icon: 'fa-lungs-virus', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
                 if (item.includes('বমি') || item.includes('Vomiting')) return { icon: 'fa-head-side-cough', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
                 if (item.includes('পেট ব্যথা') || item.includes('Stomach pain')) return { icon: 'fa-circle-exclamation', color: '#ff8f00', bg: 'rgba(255,143,0,.12)' };
                 if (item.includes('পানিশূন্যতা') || item.includes('Dehydration')) return { icon: 'fa-droplet-slash', color: '#f4511e', bg: 'rgba(244,81,30,.12)' };
@@ -15351,7 +15351,7 @@ const coursesData = [
                 if (item.includes('ফ্লুরোসিস') || item.includes('fluorosis')) return { icon: 'fa-tooth', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
                 if (item.includes('স্নায়ুতন্ত্র') || item.includes('Nervous')) return { icon: 'fa-brain', color: '#ad1457', bg: 'rgba(173,20,87,.12)' };
                 if (item.includes('বুদ্ধি') || item.includes('স্মৃতিশক্তি') || item.includes('intelligence') || item.includes('memory')) return { icon: 'fa-book-medical', color: '#6a1b9a', bg: 'rgba(106,27,154,.12)' };
-                if (item.includes('কিডনি') || item.includes('Kidney')) return { icon: 'fa-kidneys', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                if (item.includes('কিডনি') || item.includes('Kidney')) return { icon: 'fa-person-breastfeeding', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
                 if (item.includes('লিভার') || item.includes('Liver') || item.includes('liver')) return { icon: 'fa-user-doctor', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
                 if (item.includes('ক্যান্সার') || item.includes('cancer')) return { icon: 'fa-ribbon', color: '#b71c1c', bg: 'rgba(183,28,28,.12)' };
                 if (item.includes('হরমোন') || item.includes('Hormonal')) return { icon: 'fa-dna', color: '#880e4f', bg: 'rgba(136,14,79,.12)' };
@@ -15376,7 +15376,7 @@ const coursesData = [
 
               const getSectionIcon = (title) => {
                 if (title.includes('পানিবাহিত রোগ') || title.includes('Waterborne')) return { icon: 'fa-water', color: '#0277bd', gradient: 'linear-gradient(135deg,#0288d1,#01579b)' };
-                if (title.includes('পেটের সমস্যা') || title.includes('Digestive')) return { icon: 'fa-stomach', color: '#ff6f00', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
+                if (title.includes('পেটের সমস্যা') || title.includes('Digestive')) return { icon: 'fa-person-breastfeeding', color: '#ff6f00', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
                 if (title.includes('রাসায়নিক দূষণ') || title.includes('Chemical')) return { icon: 'fa-flask', color: '#d32f2f', gradient: 'linear-gradient(135deg,#e53935,#c62828)' };
                 if (title.includes('ত্বকের রোগ') || title.includes('Skin')) return { icon: 'fa-hand-dots', color: '#f57c00', gradient: 'linear-gradient(135deg,#fb8c00,#ef6c00)' };
                 if (title.includes('দীর্ঘমেয়াদি') || title.includes('ক্রনিক') || title.includes('Long-term') || title.includes('Chronic')) return { icon: 'fa-heart-circle-xmark', color: '#c62828', gradient: 'linear-gradient(135deg,#d32f2f,#b71c1c)' };
@@ -15397,7 +15397,7 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:5px;">
+                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:5px;">
                     <span style="background:linear-gradient(135deg,#9c27b0,#7b1fa2);width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 20px rgba(156,39,176,.35), 0 2px 10px rgba(123,31,162,.2);"><i class="fa-solid fa-hand-holding-droplet" style="color:#fff;font-size:28px;"></i></span>
                     ${yhLang("Health Risks from Contaminated Food and Water", "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি")}
                   </h2>
