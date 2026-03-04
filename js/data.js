@@ -17209,12 +17209,18 @@ const coursesData = [
             content: (function () {
               const whatIsDesc = [
                 {
-                  text: "জীবন দক্ষতা হলো দৈনন্দিন জীবনের সমস্যা ও চাহিদা বুঝে সেগুলোর সঠিক ব্যবস্থাপনার সক্ষমতা",
+                  text: yhLang(
+                    "Life skills are the ability to understand daily life problems and needs and manage them properly",
+                    "জীবন দক্ষতা হলো দৈনন্দিন জীবনের সমস্যা ও চাহিদা বুঝে সেগুলোর সঠিক ব্যবস্থাপনার সক্ষমতা"
+                  ),
                   icon: "fa-brain",
                   color: "m24l1-item-blue"
                 },
                 {
-                  text: "এটি তরুন-তরুনীদের জীবনের নানা চ্যালেঞ্জ মোকাবিলায় সহায়তা করে",
+                  text: yhLang(
+                    "It helps young people deal with various challenges in life",
+                    "এটি তরুন-তরুনীদের জীবনের নানা চ্যালেঞ্জ মোকাবিলায় সহায়তা করে"
+                  ),
                   icon: "fa-hand-holding-heart",
                   color: "m24l1-item-teal"
                 },
@@ -17222,12 +17228,18 @@ const coursesData = [
 
               const isHardDesc = [
                 {
-                  text: "জীবন দক্ষতার কোনো বিষয়ই কঠিন নয়",
+                  text: yhLang(
+                    "No aspect of life skills is difficult",
+                    "জীবন দক্ষতার কোনো বিষয়ই কঠিন নয়"
+                  ),
                   icon: "fa-circle-check",
                   color: "m24l1-item-green"
                 },
                 {
-                  text: "যদি তা সঠিকভাবে ও নিয়মিত অনুশীলন করা যায়।",
+                  text: yhLang(
+                    "If it is practiced properly and regularly.",
+                    "যদি তা সঠিকভাবে ও নিয়মিত অনুশীলন করা যায়।"
+                  ),
                   icon: "fa-dumbbell",
                   color: "m24l1-item-purple"
                 },
@@ -17235,40 +17247,40 @@ const coursesData = [
 
               const helpers = [
                 {
-                  text: "মা–বাবা",
+                  text: yhLang("Parents", "মা–বাবা"),
                   icon: "fa-house-user",
                   color: "m24l1-item-rose"
                 },
                 {
-                  text: "আত্মীয়-স্বজন",
+                  text: yhLang("Relatives", "আত্মীয়-স্বজন"),
                   icon: "fa-people-roof",
                   color: "m24l1-item-orange"
                 },
                 {
-                  text: "শিক্ষক",
+                  text: yhLang("Teachers", "শিক্ষক"),
                   icon: "fa-chalkboard-user",
                   color: "m24l1-item-indigo"
                 },
                 {
-                  text: "প্রশিক্ষক ও সার্ভিস প্রোভাইডার",
+                  text: yhLang("Trainers and Service Providers", "প্রশিক্ষক ও সার্ভিস প্রোভাইডার"),
                   icon: "fa-user-doctor",
                   color: "m24l1-item-cyan"
                 },
               ];
 
               const skillsList = [
-                { text: "আত্ম সচেতনতা", icon: "fa-eye", gradient: "bg-gradient-blue" },
-                { text: "সমমর্মিতা", icon: "fa-handshake-angle", gradient: "bg-gradient-rose" },
-                { text: "কার্যকর যোগাযোগের দক্ষতা", icon: "fa-comments", gradient: "bg-gradient-green" },
-                { text: "আন্ত: ব্যক্তিক সম্পর্ক দক্ষতা", icon: "fa-people-arrows", gradient: "bg-gradient-teal" },
-                { text: "সমালোচনা মুলক চিন্তাভাবনা", icon: "fa-microscope", gradient: "bg-gradient-purple" },
-                { text: "সৃজনশীল চিন্তাভাবনা", icon: "fa-palette", gradient: "bg-gradient-tangerine" },
-                { text: "সিদ্ধান্ত গ্রহণ দক্ষতা", icon: "fa-gavel", gradient: "bg-gradient-emerald" },
-                { text: "সমস্যা সমাধান দক্ষতা", icon: "fa-puzzle-piece", gradient: "bg-gradient-blue" },
-                { text: "চাপ মোকাবেলার দক্ষতা", icon: "fa-spa", gradient: "bg-gradient-rose" },
-                { text: "আবেগ মোকাবেলার দক্ষতা", icon: "fa-heart-pulse", gradient: "bg-gradient-green" },
-                { text: "প্রয়োজনে না বলতে পারা", icon: "fa-hand", gradient: "bg-gradient-teal" },
-                { text: "সমঝোতার মানসিকতা", icon: "fa-scale-balanced", gradient: "bg-gradient-purple" },
+                { text: yhLang("Effective Communication Skills", "কার্যকর যোগাযোগের দক্ষতা"), icon: "fa-comments", gradient: "bg-gradient-green" },
+                { text: yhLang("Self-awareness", "আত্ম সচেতনতা"), icon: "fa-eye", gradient: "bg-gradient-blue" },
+                { text: yhLang("Empathy", "সমমর্মিতা"), icon: "fa-handshake-angle", gradient: "bg-gradient-rose" },
+                { text: yhLang("Creative Thinking", "সৃজনশীল চিন্তাভাবনা"), icon: "fa-palette", gradient: "bg-gradient-tangerine" },
+                { text: yhLang("Interpersonal Relationship Skills", "আন্ত:ব্যক্তিক সম্পর্ক দক্ষতা"), icon: "fa-people-arrows", gradient: "bg-gradient-teal" },
+                { text: yhLang("Critical Thinking", " সমালোচনা মুলক চিন্তাভাবনা "), icon: "fa-microscope", gradient: "bg-gradient-purple" },
+                { text: yhLang("Decision Making Skills", "সিদ্ধান্ত গ্রহণ দক্ষতা"), icon: "fa-gavel", gradient: "bg-gradient-emerald" },
+                { text: yhLang("Problem Solving Skills", "সমস্যা সমাধান দক্ষতা"), icon: "fa-puzzle-piece", gradient: "bg-gradient-blue" },
+                { text: yhLang("Stress Management Skills", "চাপ মোকাবেলার দক্ষতা"), icon: "fa-spa", gradient: "bg-gradient-rose" },
+                { text: yhLang("Emotion Management Skills", "আবেগ মোকাবেলার দক্ষতা"), icon: "fa-heart-pulse", gradient: "bg-gradient-green" },
+                { text: yhLang("Ability to Say No When Needed", "প্রয়োজনে না বলতে পারা"), icon: "fa-hand", gradient: "bg-gradient-teal" },
+                { text: yhLang("Compromise Mindset", "সমঝোতার মানসিকতা"), icon: "fa-scale-balanced", gradient: "bg-gradient-purple" },
               ];
 
               const renderWhatIsPoints = (items, delay) =>
@@ -17337,7 +17349,7 @@ const coursesData = [
                     <span class="m24l1-shape m24l1-shape--hexagon"></span>
                   </div>
 
-                  <header class="m24l1-hero" data-aos="fade-down">
+                  <header class="m24l1-hero d-none" data-aos="fade-down">
                     <span class="m24l1-hero__badge" aria-hidden="true">
                       <i class="fa-solid fa-lightbulb"></i>
                     </span>
@@ -17386,22 +17398,22 @@ const coursesData = [
                           </span>
                           <span class="m24l1-heading-text">${yhLang("Who Can Help Teach?", "কারা জীবন দক্ষতা শেখাতে সাহায্য করতে পারেন?")}</span>
                         </h3>
-                        <ul class="m24l1-enhanced-list">
+                        <ul class="m24l1-enhanced-list list_2grid">
                           ${renderHelpers(helpers, 680)}
                         </ul>
                       </section>
                     </div>
 
-                    <div class="m24l1-right">
+                    <div class="m24l1-right h-100">
                       <div class="m24l1-orbit-container" data-aos="zoom-in" data-aos-delay="300">
                         <div class="m24l1-orbit-center">
                           <div class="m24l1-orbit-center-icon">
                             <i class="fa-solid fa-star"></i>
                           </div>
-                          <div class="m24l1-orbit-center-text">${yhLang(
+                          <div class="m24l1-orbit-center-text"><h2 class="text-white"> ${yhLang(
                             "Important Life Skills",
-                            "গুরুত্বপূর্ণ জীবনদক্ষতা"
-                          )}</div>
+                            "গুরুত্বপূরণ জীবনদক্ষতা"
+                          )} </h2></div>
                         </div>
                         <div class="m24l1-orbit-ring"></div>
                         ${renderOrbit()}
