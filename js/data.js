@@ -17160,13 +17160,19 @@ const coursesData = [
                     <div class="m23l9-shape m23l9-shape--star"></div>
                     <div class="m23l9-shape m23l9-shape--ring"></div>
                   </div>
-                  <header class="m23l9-hero" data-aos="fade-up">
+                  <header class="m23l9-hero d-none" data-aos="fade-up">
                     <div class="m23l9-icon"><i class="fa-solid fa-bacteria"></i></div>
                     <div class="m23l9-hero__body">
                       <h2 class="m23l9-hero__title">${yhLang("Mpox", "এমপক্স")}</h2>
                     </div>
                   </header>
                   <div class="m23l9-intro" data-aos="fade-up" data-aos-delay="80">
+                     <header class="m23l9-hero" data-aos="fade-up">
+                        <div class="m23l9-icon"><i class="fa-solid fa-bacteria"></i></div>
+                        <div class="m23l9-hero__body">
+                          <h2 class="m23l9-hero__title">${yhLang("Mpox", "এমপক্স")}</h2>
+                        </div>
+                      </header>
                     <p class="m23l9-intro__text">${introText}</p>
                     <p class="m23l9-intro__text" data-aos="fade-up" data-aos-delay="60">${introText2}</p>
                     <p class="m23l9-intro__text" data-aos="fade-up" data-aos-delay="120">${introText3}</p>
@@ -17174,14 +17180,14 @@ const coursesData = [
                                       <div class="section_wrap modu23_less_9">
                                         <section class="m23l9-panel" data-aos="fade-up" data-aos-delay="140">
                                           <h3 class="m23l9-section-title"><i class="fa-solid fa-stethoscope"></i> ${yhLang("Common Symptoms", "সাধারণ উপসর্গগুলো হলঃ")}</h3>
-                                          <ul class="m23l9-list list-unstyled modu24_less_8_ui">
+                                          <ul class="m23l9-list list-unstyled list-unstyled_flex">
                                             ${renderPoints(symptoms, 200)}
                                           </ul>
                                           <p class="m23l9-intro__text mt-3" data-aos="fade-up" data-aos-delay="560">${symptomsNote}</p>
                                         </section>
                                         <section class="m23l9-panel" data-aos="fade-up" data-aos-delay="640">
                                           <h3 class="m23l9-section-title"><i class="fa-solid fa-notes-medical"></i> ${yhLang("What to Do If Symptoms Appear", "উপসর্গ দেখা দিলে করণীয়ঃ")}</h3>
-                                          <ul class="m23l9-list list-unstyled">
+                                          <ul class="m23l9-list list-unstyled list-unstyled_flex">
                                             ${renderPoints(actions, 700)}
                                           </ul>
                                         </section>
@@ -17928,7 +17934,7 @@ const coursesData = [
                       <span class="m25l1-title__icon bg-gradient-mint" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
                       <h2 class="slide-title gradient-text mb-0">${yhLang("Communication", "যোগাযোগ")}</h2>
                     </div>
-                    <p class="m25l1-lead" data-aos="fade-up" data-aos-delay="100">${yhLang("Communication is a process through which people exchange information, knowledge, experience, ideas, and opinions in a meaningful and effective way through speech, gestures, writing, pictures, or symbols", "যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহায্যে অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে ")}</p>
+                    <p class="m25l1-lead" data-aos="fade-up" data-aos-delay="100">${yhLang("Communication is a process through which people exchange information, knowledge, experience, ideas, and opinions in a meaningful and effective way through speech, gestures, writing, pictures, or symbols", "যোগাযোগ হচ্ছে একটি প্রক্রিয়া যার মাধ্যমে মানুষ কথা, আকার-ইঙ্গিত, লেখা, ছবি বা প্রতীকের সাহায্যে অর্থবহ উপায়ে এবং কার্যকরভাবে তথ্য, জ্ঞান, অভিজ্ঞতা, ধারণা ও মত বিনিময় করে থাকে।")}</p>
                   </header>
 
                   <div class="row g-1 mt-1 mb-5 align-items-stretch">

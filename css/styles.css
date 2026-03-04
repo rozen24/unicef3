@@ -2116,6 +2116,11 @@ html[lang|="bn"] h2 {
   grid-template-columns: 1fr 1fr;
   gap: 0px 5px;
 }
+.list-unstyled_flex {
+  display: flex !important;
+  flex-direction: column;
+  gap: 2px;
+}
 .image-wrapper_450 {
   width: 100%;
   aspect-ratio: 1693 / 1080;
@@ -10632,7 +10637,7 @@ input::placeholder {
 }
 .modu23_less_9 {
   display: grid !important;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr;
 }
 .modu24_less_8_ui {
   display: grid !important;
@@ -11836,12 +11841,12 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 16px 18px;
+  /* padding: 16px 18px;
   border-radius: 20px;
   background: linear-gradient(135deg, rgba(255,255,255,0.80), rgba(255,255,255,0.62));
   border: 1px solid rgba(0,0,0,0.06);
   backdrop-filter: blur(8px);
-  box-shadow: 0 18px 45px rgba(15, 53, 110, 0.12);
+  box-shadow: 0 18px 45px rgba(15, 53, 110, 0.12); */
 }
 
 .mod23-lesson9 .m23l9-icon {
@@ -11872,8 +11877,7 @@ input::placeholder {
 }
 
 .mod23-lesson9 .m23l9-intro {
-  padding: 18px 20px;
-  margin-top: 14px;
+  padding: 5px 20px;
   border-radius: 18px;
   background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.58));
   border: 1px solid rgba(0,0,0,0.06);
