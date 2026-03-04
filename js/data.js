@@ -9225,7 +9225,7 @@ const coursesData = [
         ],
       },
       {
-        id: "ch-16",
+        id: "ch-15",
         title: yhLang(
           "Module-15: Violence Related to Adolescents",
           "মডিউল-১৫: কৈশোরকালীন মানসিক স্বাস্থ্য সমস্যা ও সমাধানের উপায়"
@@ -9298,18 +9298,24 @@ const coursesData = [
                 },
               ];
 
+              const headingIcon = (iconClass) => `
+                <span class="m16-heading-icon" aria-hidden="true"><i class="fa-solid ${iconClass}"></i></span>
+              `;
+
+              const cardTone = ["definition", "tip", "example", "info"];
+
               const renderTraits = (items) =>
                 items
                   .map(
                     (item, idx) => `
                       <div class="col-md-6" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">
-                        <article class="glass-card p-4 h-100 shadow-sm">
+                        <article class="glass-card p-4 h-100 shadow-sm m16-trait-card m16-${cardTone[idx % cardTone.length]}">
                           <div class="d-flex align-items-start gap-3">
-                            <div class="icon-circle bg-gradient-rose text-white">
-                              <i class="fa-solid fa-check"></i>
+                            <div class="icon-circle m16-trait-icon text-white">
+                              <i class="fa-solid fa-seedling"></i>
                             </div>
                             <div>
-                              <h3 class="h6 gradient-text mb-1">${item.title}</h3>
+                              <h3 class="h6 gradient-text mb-1 m16-subheading">${headingIcon("fa-stars")}<span>${item.title}</span></h3>
                               <p class="mb-0">${item.detail}</p>
                             </div>
                           </div>
@@ -9320,21 +9326,37 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod16-l1-ui position-relative overflow-hidden" style="background: linear-gradient(135deg, #f4efff 0%, #e9f8ff 55%, #fff5eb 100%); border-radius: 1.25rem; padding: 1.25rem;">
+                  <style>
+                    .mod16-l1-ui .m16-orb { position: absolute; border-radius: 999px; filter: blur(0.5px); opacity: .45; pointer-events: none; }
+                    .mod16-l1-ui .m16-orb.a { width: 140px; height: 140px; top: -30px; right: -20px; background: radial-gradient(circle, #ffd9ec 0%, transparent 70%); }
+                    .mod16-l1-ui .m16-orb.b { width: 170px; height: 170px; bottom: -55px; left: -35px; background: radial-gradient(circle, #dff6ff 0%, transparent 72%); }
+                    .mod16-l1-ui :is(h1,h2,h3,h4,h5,h6).m16-subheading,
+                    .mod16-l1-ui .slide-title { display: flex; align-items: center; gap: .5rem; }
+                    .mod16-l1-ui .m16-heading-icon { width: 1.85rem; height: 1.85rem; border-radius: .7rem; display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #6a8dff, #8ec5ff); color: #fff; font-size: .9rem; box-shadow: 0 8px 20px -10px rgba(41, 92, 255, .65); }
+                    .mod16-l1-ui .m16-trait-icon { background: linear-gradient(135deg, #fd8ba9, #f9b4c4); box-shadow: 0 10px 24px -12px rgba(215, 88, 126, .7); }
+                    .mod16-l1-ui .m16-trait-card { border-radius: 1rem; background: rgba(255,255,255,.88); border: 1px solid rgba(255,255,255,.7); }
+                    .mod16-l1-ui .m16-definition { box-shadow: 14px 14px 28px -20px rgba(52, 116, 255, .5); }
+                    .mod16-l1-ui .m16-tip { box-shadow: -12px 14px 26px -18px rgba(18, 161, 122, .45); }
+                    .mod16-l1-ui .m16-example { box-shadow: 12px -12px 28px -20px rgba(249, 146, 60, .45); }
+                    .mod16-l1-ui .m16-info { box-shadow: 0 14px 30px -18px rgba(98, 97, 255, .45); }
+                  </style>
+                  <span class="m16-orb a"></span>
+                  <span class="m16-orb b"></span>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-brain")}<span>${yhLang(
                     "Foundations of mental health",
                     "মানসিক স্বাস্থ্য"
-                  )}</h2>
+                  )}</span></h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                  <section class="modern-card glass-card menstrual-info-card m16-definition" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.85); border-radius: 1rem;">
                     <p class="mb-0">${definition}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card mt-3 m16-info" data-aos="fade-up" data-aos-delay="70" style="background: rgba(255,255,255,.85); border-radius: 1rem;">
+                    <h3 class="h6 text-uppercase text-muted mb-3 m16-subheading">${headingIcon("fa-list-check")}<span>${yhLang(
                       "মানসিক সুস্থতার বৈশিষ্ট্যসমূহ",
                       "মানসিক সুস্থতার বৈশিষ্ট্যসমূহ"
-                    )}</h3>
+                    )}</span></h3>
                     <div class="row g-4">
                       ${renderTraits(wellBeingTraits)}
                     </div>
@@ -9404,13 +9426,25 @@ const coursesData = [
                 "কৈশোরকালীন মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতিসাধন করে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত করে।",
               ];
 
+              const headingIcon = (iconClass) => `
+                <span class="m16-heading-icon" aria-hidden="true"><i class="fa-solid ${iconClass}"></i></span>
+              `;
+
+              const detectTone = (text, idx) => {
+                if (/মৃত্যু|আত্মহত্যা|ক্ষতি/.test(text)) return { tone: "warning", icon: "fa-triangle-exclamation" };
+                if (/অসুস্থতা|সমস্যা|বিষণ্নতা/.test(text)) return { tone: "danger", icon: "fa-heart-crack" };
+                if (/স্বাস্থ্য|জীবনযাত্রা|প্রভাব/.test(text)) return { tone: "info", icon: "fa-circle-info" };
+                const fallback = ["fa-check", "fa-chart-line", "fa-shield-heart", "fa-seedling"];
+                return { tone: "success", icon: fallback[idx % fallback.length] };
+              };
+
               const renderStats = (items) =>
                 items
                   .map(
                     (item, idx) => `
                       <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="${70 +
                         idx * 20}">
-                        <article class="glass-card p-4 h-100 shadow-sm text-center">
+                        <article class="glass-card p-4 h-100 shadow-sm text-center m16-stat-card m16-stat-${idx + 1}">
                           <p class="display-6 fw-bold gradient-text mb-2">${item.value}</p>
                           <p class="mb-0 small">${item.label}</p>
                         </article>
@@ -9422,42 +9456,65 @@ const coursesData = [
               const renderList = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
+                    (item, idx) => {
+                      const meta = detectTone(item, idx);
+                      return `
+                      <li class="m16-context-item m16-${meta.tone}">
+                        <i class="fa-solid ${meta.icon}"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `;
+                    }
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod16-l2-ui position-relative overflow-hidden" style="background: linear-gradient(135deg, #fdf0ff 0%, #edf6ff 48%, #eefcf4 100%); border-radius: 1.25rem; padding: 1.25rem;">
+                  <style>
+                    .mod16-l2-ui .m16-orb { position: absolute; border-radius: 999px; opacity: .45; pointer-events: none; }
+                    .mod16-l2-ui .m16-orb.a { width: 160px; height: 160px; top: -45px; right: -35px; background: radial-gradient(circle, #f3c7ff 0%, transparent 72%); }
+                    .mod16-l2-ui .m16-orb.b { width: 150px; height: 150px; bottom: -40px; left: -20px; background: radial-gradient(circle, #b7ebff 0%, transparent 72%); }
+                    .mod16-l2-ui .slide-title, .mod16-l2-ui :is(h1,h2,h3,h4,h5,h6).m16-subheading { display: flex; align-items: center; gap: .5rem; }
+                    .mod16-l2-ui .m16-heading-icon { width: 1.85rem; height: 1.85rem; border-radius: .7rem; display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #7c6dff, #61b8ff); color: #fff; font-size: .9rem; box-shadow: 0 10px 22px -12px rgba(57, 93, 255, .65); }
+                    .mod16-l2-ui .m16-stat-card { border-radius: 1rem; background: rgba(255,255,255,.88); border: 1px solid rgba(255,255,255,.7); }
+                    .mod16-l2-ui .m16-stat-1 { box-shadow: 12px 14px 24px -16px rgba(90, 94, 255, .45); }
+                    .mod16-l2-ui .m16-stat-2 { box-shadow: -12px 14px 24px -16px rgba(244, 114, 182, .45); }
+                    .mod16-l2-ui .m16-stat-3 { box-shadow: 10px -12px 24px -16px rgba(34, 197, 94, .4); }
+                    .mod16-l2-ui .m16-stat-4 { box-shadow: 0 14px 26px -16px rgba(249, 115, 22, .45); }
+                    .mod16-l2-ui .m16-context-item { display: flex; align-items: flex-start; gap: .6rem; padding: .65rem .8rem; border-radius: .85rem; margin-bottom: .6rem; border: 1px solid rgba(255,255,255,.55); }
+                    .mod16-l2-ui .m16-context-item i { margin-top: .15rem; }
+                    .mod16-l2-ui .m16-info { background: linear-gradient(135deg, #e8f4ff, #f0f9ff); box-shadow: 10px 10px 18px -16px rgba(37, 99, 235, .65); color: #1d4ed8; }
+                    .mod16-l2-ui .m16-success { background: linear-gradient(135deg, #ebfff4, #f2fef8); box-shadow: -10px 10px 18px -16px rgba(22, 163, 74, .65); color: #15803d; }
+                    .mod16-l2-ui .m16-warning { background: linear-gradient(135deg, #fff3e7, #fff8ef); box-shadow: 10px -10px 18px -16px rgba(234, 88, 12, .7); color: #c2410c; }
+                    .mod16-l2-ui .m16-danger { background: linear-gradient(135deg, #ffecef, #fff1f2); box-shadow: -10px 12px 20px -16px rgba(225, 29, 72, .75); color: #be123c; }
+                  </style>
+                  <span class="m16-orb a"></span>
+                  <span class="m16-orb b"></span>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-children")}<span>${yhLang(
                     "Mental health for adolescents",
                     "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য"
-                  )}</h2>
+                  )}</span></h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.88); border-radius: 1rem; box-shadow: 12px 12px 24px -18px rgba(79, 70, 229, .45);">
                     <p class="mb-3">${introPrimary}</p>
                     <p class="mb-0">${introSecondary}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70" style="background: rgba(255,255,255,.88); border-radius: 1rem; box-shadow: -12px 14px 24px -18px rgba(236, 72, 153, .4);">
+                    <h3 class="h6 text-uppercase text-muted mb-3 m16-subheading">${headingIcon("fa-chart-column")}<span>${yhLang(
                       "বিশ্বস্বাস্থ্য সংস্থার তথ্য (২০১৯)",
                       "বিশ্বস্বাস্থ্য সংস্থার তথ্য (২০১৯)"
-                    )}</h3>
+                    )}</span></h3>
                     <div class="row g-4">
                       ${renderStats(whoStats)}
                     </div>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="100" style="background: rgba(255,255,255,.88); border-radius: 1rem; box-shadow: 0 14px 26px -20px rgba(14, 116, 144, .55);">
+                    <h3 class="h6 text-uppercase text-muted mb-3 m16-subheading">${headingIcon("fa-triangle-exclamation")}<span>${yhLang(
                       "কৈশোরের মানসিক স্বাস্থ্য প্রভাব",
                       "কৈশোরের মানসিক স্বাস্থ্য প্রভাব"
-                    )}</h3>
+                    )}</span></h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(adolescentImpacts)}
                     </ul>
@@ -9521,13 +9578,24 @@ const coursesData = [
                 },
               ];
 
+              const headingIcon = (iconClass) => `
+                <span class="m16-heading-icon" aria-hidden="true"><i class="fa-solid ${iconClass}"></i></span>
+              `;
+
+              const sectionMeta = [
+                { cls: "definition", icon: "fa-moon" },
+                { cls: "example", icon: "fa-toilet" },
+                { cls: "warning", icon: "fa-link-slash" },
+                { cls: "tip", icon: "fa-bolt" },
+              ];
+
               const renderDisorders = (items) =>
                 items
                   .map(
                     (item, idx) => `
-                      <article class="glass-card p-4 h-100 shadow-sm" data-aos="fade-up" data-aos-delay="${60 +
+                      <article class="glass-card p-4 h-100 shadow-sm m16-disorder-card m16-${sectionMeta[idx % sectionMeta.length].cls}" data-aos="fade-up" data-aos-delay="${60 +
                         idx * 30}">
-                        <h3 class="h6 gradient-text mb-2">${item.title}</h3>
+                        <h3 class="h6 gradient-text mb-2 m16-subheading">${headingIcon(sectionMeta[idx % sectionMeta.length].icon)}<span>${item.title}</span></h3>
                         <p class="mb-0">${item.description}</p>
                       </article>
                     `
@@ -9535,17 +9603,31 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod16-l3-ui position-relative overflow-hidden" style="background: linear-gradient(135deg, #fff4ef 0%, #eef7ff 50%, #f4fff4 100%); border-radius: 1.25rem; padding: 1.25rem;">
+                  <style>
+                    .mod16-l3-ui .m16-orb { position: absolute; border-radius: 999px; opacity: .45; pointer-events: none; }
+                    .mod16-l3-ui .m16-orb.a { width: 155px; height: 155px; top: -36px; right: -28px; background: radial-gradient(circle, #ffd7bf 0%, transparent 70%); }
+                    .mod16-l3-ui .m16-orb.b { width: 165px; height: 165px; bottom: -42px; left: -30px; background: radial-gradient(circle, #c8ecff 0%, transparent 72%); }
+                    .mod16-l3-ui .slide-title, .mod16-l3-ui :is(h1,h2,h3,h4,h5,h6).m16-subheading { display: flex; align-items: center; gap: .5rem; }
+                    .mod16-l3-ui .m16-heading-icon { width: 1.85rem; height: 1.85rem; border-radius: .7rem; display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #5c7cfa, #4dabf7); color: #fff; font-size: .9rem; box-shadow: 0 9px 20px -12px rgba(33, 85, 214, .7); }
+                    .mod16-l3-ui .m16-disorder-card { border-radius: 1rem; background: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.7); }
+                    .mod16-l3-ui .m16-definition { box-shadow: 12px 14px 24px -16px rgba(59, 130, 246, .45); }
+                    .mod16-l3-ui .m16-example { box-shadow: -12px 14px 24px -16px rgba(249, 115, 22, .45); }
+                    .mod16-l3-ui .m16-warning { box-shadow: 10px -12px 24px -16px rgba(220, 38, 38, .45); }
+                    .mod16-l3-ui .m16-tip { box-shadow: 0 14px 24px -16px rgba(22, 163, 74, .45); }
+                  </style>
+                  <span class="m16-orb a"></span>
+                  <span class="m16-orb b"></span>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-child-reaching")}<span>${yhLang(
                     "Common childhood mental issues",
                     "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
-                  )}</h2>
+                  )}</span></h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                  <section class="modern-card glass-card menstrual-info-card m16-definition" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem;">
                     <p class="mb-0">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                  <section class="modern-card glass-card menstrual-info-card mt-3 m16-tip" data-aos="fade-up" data-aos-delay="70" style="background: rgba(255,255,255,.9); border-radius: 1rem;">
                     <div class="row g-4">
                       ${renderDisorders(disorders)}
                     </div>
@@ -9598,34 +9680,73 @@ const coursesData = [
                 "পিতা-মাতা ও শিক্ষকের অবাধ্য হওয়া",
               ];
 
+              const headingIcon = (iconClass) => `
+                <span class="m16-heading-icon" aria-hidden="true"><i class="fa-solid ${iconClass}"></i></span>
+              `;
+
+              const iconPool = [
+                "fa-scale-balanced",
+                "fa-person-running",
+                "fa-user-ninja",
+                "fa-house-crack",
+                "fa-paw",
+                "fa-comments",
+                "fa-wine-bottle",
+                "fa-gavel",
+                "fa-user-slash",
+              ];
+
+              const toneFor = (text, idx) => {
+                if (/আক্রমণাত্মক|অপরাধ|চুরি|নেশা/.test(text)) return { tone: "danger", icon: iconPool[idx % iconPool.length] };
+                if (/ক্ষতি|ভঙ্গ|পালিয়ে/.test(text)) return { tone: "warning", icon: iconPool[idx % iconPool.length] };
+                return { tone: "info", icon: iconPool[idx % iconPool.length] };
+              };
+
               const renderList = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
+                    (item, idx) => {
+                      const meta = toneFor(item, idx);
+                      return `
+                      <li class="m16-conduct-item m16-${meta.tone}">
+                        <i class="fa-solid ${meta.icon}"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `;
+                    }
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod16-l4-ui position-relative overflow-hidden" style="background: linear-gradient(135deg, #fff1ef 0%, #f5f3ff 48%, #edf9ff 100%); border-radius: 1.25rem; padding: 1.25rem;">
+                  <style>
+                    .mod16-l4-ui .m16-orb { position: absolute; border-radius: 999px; opacity: .45; pointer-events: none; }
+                    .mod16-l4-ui .m16-orb.a { width: 150px; height: 150px; top: -36px; right: -26px; background: radial-gradient(circle, #fecaca 0%, transparent 70%); }
+                    .mod16-l4-ui .m16-orb.b { width: 170px; height: 170px; bottom: -45px; left: -30px; background: radial-gradient(circle, #ddd6fe 0%, transparent 72%); }
+                    .mod16-l4-ui .slide-title, .mod16-l4-ui :is(h1,h2,h3,h4,h5,h6).m16-subheading { display: flex; align-items: center; gap: .5rem; }
+                    .mod16-l4-ui .m16-heading-icon { width: 1.85rem; height: 1.85rem; border-radius: .7rem; display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #fb7185, #a78bfa); color: #fff; font-size: .9rem; box-shadow: 0 10px 22px -12px rgba(190, 24, 93, .65); }
+                    .mod16-l4-ui .m16-conduct-item { display: flex; align-items: flex-start; gap: .65rem; padding: .68rem .8rem; border-radius: .85rem; margin-bottom: .55rem; border: 1px solid rgba(255,255,255,.55); }
+                    .mod16-l4-ui .m16-conduct-item i { margin-top: .15rem; }
+                    .mod16-l4-ui .m16-info { background: linear-gradient(135deg, #ebf4ff, #eff6ff); color: #1d4ed8; box-shadow: 12px 12px 20px -16px rgba(37, 99, 235, .7); }
+                    .mod16-l4-ui .m16-warning { background: linear-gradient(135deg, #fff4e5, #fff8ef); color: #c2410c; box-shadow: -10px 12px 20px -16px rgba(234, 88, 12, .75); }
+                    .mod16-l4-ui .m16-danger { background: linear-gradient(135deg, #ffe9ee, #fff1f2); color: #be123c; box-shadow: 10px -12px 22px -16px rgba(225, 29, 72, .8); }
+                  </style>
+                  <span class="m16-orb a"></span>
+                  <span class="m16-orb b"></span>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-people-arrows-left-right")}<span>${yhLang(
                     "Behavioral mental health issues",
                     "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
-                  )}</h2>
+                  )}</span></h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem; box-shadow: 12px 14px 24px -18px rgba(190, 24, 93, .45);">
                     <p class="mb-0">${behaviorIntro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70" style="background: rgba(255,255,255,.9); border-radius: 1rem; box-shadow: -12px 14px 24px -18px rgba(147, 51, 234, .4);">
+                    <h3 class="h6 text-uppercase text-muted mb-3 m16-subheading">${headingIcon("fa-list-ul")}<span>${yhLang(
                       "কন্ডাক্ট ডিসঅর্ডারের আচরণ",
                       "কন্ডাক্ট ডিসঅর্ডারের আচরণ"
-                    )}</h3>
+                    )}</span></h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(conductBehaviors)}
                     </ul>
@@ -9738,25 +9859,40 @@ const coursesData = [
                 },
               ];
 
+              const headingIcon = (iconClass) => `
+                <span class="m16-heading-icon" aria-hidden="true"><i class="fa-solid ${iconClass}"></i></span>
+              `;
+
+              const listIconPool = ["fa-eye", "fa-face-meh", "fa-user-group", "fa-puzzle-piece", "fa-comments", "fa-volume-high", "fa-language", "fa-repeat"];
+
+              const toneForItem = (text, idx) => {
+                if (/সমস্যা|অভাব|ঘাটতি|অসুবিধা/.test(text)) return { tone: "warning", icon: listIconPool[idx % listIconPool.length] };
+                if (/পুনরাবৃত্তি|সংবেদনশীলতা|রুটিন/.test(text)) return { tone: "info", icon: listIconPool[idx % listIconPool.length] };
+                return { tone: "success", icon: listIconPool[idx % listIconPool.length] };
+              };
+
               const renderDetailedList = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
+                    (item, idx) => {
+                      const meta = toneForItem(item.title, idx);
+                      return `
+                      <li class="m16-autism-item m16-${meta.tone}">
+                        <i class="fa-solid ${meta.icon}"></i>
                         <div>
                           <strong>${item.title}:</strong>
                           <span>${item.description}</span>
                         </div>
                       </li>
-                    `
+                    `;
+                    }
                   )
                   .join("");
 
-              const renderColumn = (title, items, delay) => `
+              const renderColumn = (title, items, delay, icon, toneClass) => `
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="${delay}">
-                  <article class="glass-card p-4 h-100 shadow-sm">
-                    <h3 class="h6 gradient-text mb-3">${title}</h3>
+                  <article class="glass-card p-4 h-100 shadow-sm m16-column-card ${toneClass}">
+                    <h3 class="h6 gradient-text mb-3 m16-subheading">${headingIcon(icon)}<span>${title}</span></h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderDetailedList(items)}
                     </ul>
@@ -9765,22 +9901,40 @@ const coursesData = [
               `;
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                <div class="lesson-slide mod16-l5-ui position-relative overflow-hidden" style="background: linear-gradient(135deg, #ecfffb 0%, #eef3ff 48%, #fff4f8 100%); border-radius: 1.25rem; padding: 1.25rem;">
+                  <style>
+                    .mod16-l5-ui .m16-orb { position: absolute; border-radius: 999px; opacity: .45; pointer-events: none; }
+                    .mod16-l5-ui .m16-orb.a { width: 158px; height: 158px; top: -40px; right: -30px; background: radial-gradient(circle, #99f6e4 0%, transparent 70%); }
+                    .mod16-l5-ui .m16-orb.b { width: 160px; height: 160px; bottom: -42px; left: -28px; background: radial-gradient(circle, #c7d2fe 0%, transparent 72%); }
+                    .mod16-l5-ui .slide-title, .mod16-l5-ui :is(h1,h2,h3,h4,h5,h6).m16-subheading { display: flex; align-items: center; gap: .5rem; }
+                    .mod16-l5-ui .m16-heading-icon { width: 1.85rem; height: 1.85rem; border-radius: .7rem; display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #06b6d4, #6366f1); color: #fff; font-size: .9rem; box-shadow: 0 10px 22px -12px rgba(8, 145, 178, .7); }
+                    .mod16-l5-ui .m16-column-card { border-radius: 1rem; background: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.7); }
+                    .mod16-l5-ui .m16-column-social { box-shadow: 12px 14px 24px -16px rgba(14, 116, 144, .45); }
+                    .mod16-l5-ui .m16-column-comm { box-shadow: -12px 14px 24px -16px rgba(79, 70, 229, .45); }
+                    .mod16-l5-ui .m16-column-behavior { box-shadow: 10px -12px 24px -16px rgba(236, 72, 153, .4); }
+                    .mod16-l5-ui .m16-autism-item { display: flex; gap: .65rem; align-items: flex-start; padding: .62rem .75rem; border-radius: .8rem; margin-bottom: .5rem; border: 1px solid rgba(255,255,255,.55); }
+                    .mod16-l5-ui .m16-autism-item i { margin-top: .15rem; }
+                    .mod16-l5-ui .m16-success { background: linear-gradient(135deg, #ebfff5, #f2fef8); color: #15803d; box-shadow: 10px 10px 18px -16px rgba(21, 128, 61, .72); }
+                    .mod16-l5-ui .m16-info { background: linear-gradient(135deg, #e8f4ff, #f0f9ff); color: #1d4ed8; box-shadow: -10px 10px 18px -16px rgba(29, 78, 216, .68); }
+                    .mod16-l5-ui .m16-warning { background: linear-gradient(135deg, #fff4e8, #fff8f0); color: #c2410c; box-shadow: 10px -10px 18px -16px rgba(194, 65, 12, .72); }
+                  </style>
+                  <span class="m16-orb a"></span>
+                  <span class="m16-orb b"></span>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-puzzle-piece")}<span>${yhLang(
                     "Understanding autism spectrum disorder",
                     "অটিজম স্পেকট্রাম ডিসঅর্ডার"
-                  )}</h2>
+                  )}</span></h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem; box-shadow: 12px 14px 24px -18px rgba(14, 116, 144, .45);">
                     <p class="mb-3">${intro}</p>
                     <p class="mb-0">${overview}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
+                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70" style="background: rgba(255,255,255,.9); border-radius: 1rem; box-shadow: 0 14px 24px -18px rgba(99, 102, 241, .45);">
                     <div class="row g-4">
-                      ${renderColumn("১. সামাজিক মিথস্ক্রিয়ার সমস্যা", socialItems, 70)}
-                      ${renderColumn("২. যোগাযোগের সমস্যা", communicationItems, 90)}
-                      ${renderColumn("৩. আচরণগত বৈশিষ্ট্য", behaviorItems, 110)}
+                      ${renderColumn("১. সামাজিক মিথস্ক্রিয়ার সমস্যা", socialItems, 70, "fa-users", "m16-column-social")}
+                      ${renderColumn("২. যোগাযোগের সমস্যা", communicationItems, 90, "fa-comments", "m16-column-comm")}
+                      ${renderColumn("৩. আচরণগত বৈশিষ্ট্য", behaviorItems, 110, "fa-repeat", "m16-column-behavior")}
                     </div>
                   </section>
                 </div>
@@ -15110,7 +15264,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch22-lesson-6",
+            id: "ch22-lesson-5",
             title: yhLang(
               "Health Risks from Contaminated Food and Water",
               "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি"
@@ -15122,63 +15276,86 @@ const coursesData = [
             content: (function () {
               const leftSections = [
                 {
-                  title: "১. পানিবাহিত রোগ",
-                  items: ["ডায়রিয়া", "ডিজেন্ট্রি (আমাশয়)", "টাইফয়েড", "কলেরা", "হেপাটাইটিস–এ", "জিয়ার্ডিয়াসিস"],
+                  title: yhLang("1. Waterborne Diseases", "১. পানিবাহিত রোগ"),
+                  items: [
+                    yhLang("Diarrhea", "ডায়রিয়া"),
+                    yhLang("Dysentery", "ডিজেন্ট্রি (আমাশয়)"),
+                    yhLang("Typhoid", "টাইফয়েড"),
+                    yhLang("Cholera", "কলেরা"),
+                    yhLang("Hepatitis A", "হেপাটাইটিস–এ"),
+                    yhLang("Giardiasis", "জিয়ার্ডিয়াসিস")
+                  ],
                 },
                 {
-                  title: "২. পেটের সমস্যা ও অপুষ্টি",
-                  items: ["পেটের সংক্রমণ", "বমি", "পেট ব্যথা", "ডায়রিয়া", "পানিশূন্যতা", "দীর্ঘমেয়াদে অপুষ্টির কারণ"],
+                  title: yhLang("2. Digestive Problems & Malnutrition", "২. পেটের সমস্যা ও অপুষ্টি"),
+                  items: [
+                    yhLang("Stomach infection", "পেটের সংক্রমণ"),
+                    yhLang("Vomiting", "বমি"),
+                    yhLang("Stomach pain", "পেট ব্যথা"),
+                    yhLang("Diarrhea", "ডায়রিয়া"),
+                    yhLang("Dehydration", "পানিশূন্যতা"),
+                    yhLang("Long-term malnutrition", "দীর্ঘমেয়াদে অপুষ্টির কারণ")
+                  ],
                 },
               ];
 
-              const rightSections = [
+
+
+              const rightSections1 = [
                 {
-                  title: "৩. রাসায়নিক দূষণের ক্ষতি",
+                  title: yhLang("3. Chemical Pollution Damage", "৩. রাসায়নিক দূষণের ক্ষতি"),
                   items: [
-                    "আর্সেনিকোসিস (ত্বকে কালো দাগ, চর্মরোগ, ক্যান্সারের ঝুঁকি)",
-                    "ডেন্টাল বা স্কেলেটাল ফ্লুরোসিস",
-                    "স্নায়ুতন্ত্রের ক্ষতি",
-                    "বুদ্ধি ও স্মৃতিশক্তি হ্রাস (বিশেষত শিশুদের)",
-                    "কিডনি ও লিভারের সমস্যা",
+                    yhLang("Arsenicosis (dark spots on skin, skin diseases, cancer risk)", "আর্সেনিকোসিস (ত্বকে কালো দাগ, চর্মরোগ, ক্যান্সারের ঝুঁকি)"),
+                    yhLang("Dental or skeletal fluorosis", "ডেন্টাল বা স্কেলেটাল ফ্লুরোসিস"),
+                    yhLang("Nervous system damage", "স্নায়ুতন্ত্রের ক্ষতি"),
+                    yhLang("Reduced intelligence & memory (especially in children)", "বুদ্ধি ও স্মৃতিশক্তি হ্রাস (বিশেষত শিশুদের)"),
+                    yhLang("Kidney & liver problems", "কিডনি ও লিভারের সমস্যা"),
                   ],
                 },
+                
+              ];
+
+              const rightSections2 = [
+              
                 {
-                  title: "৪. ত্বকের রোগ",
-                  description: "চর্মরোগ, একজিমা, চুলকানি, ফাঙ্গাল সংক্রমণ হতে পারে।",
+                  title: yhLang("4. Skin Diseases", "৪. ত্বকের রোগ"),
+                  description: yhLang("Can cause skin diseases, eczema, itching, and fungal infections.", "চর্মরোগ, একজিমা, চুলকানি, ফাঙ্গাল সংক্রমণ হতে পারে।"),
                 },
                 {
-                  title: "৫. দীর্ঘমেয়াদি ক্রনিক রোগ",
+                  title: yhLang("5. Long-term Chronic Diseases", "৫. দীর্ঘমেয়াদি ক্রনিক রোগ"),
                   items: [
-                    "ক্যান্সারের ঝুঁকি বৃদ্ধি",
-                    "কিডনি ফেইলিওর",
-                    "লিভার সিরোসিস",
-                    "হরমোনের ভারসাম্যহীনতা",
-                    "হৃদরোগের ঝুঁকি বাড়তে পারে।",
+                    yhLang("Increased cancer risk", "ক্যান্সারের ঝুঁকি বৃদ্ধি"),
+                    yhLang("Kidney failure", "কিডনি ফেইলিওর"),
+                    yhLang("Liver cirrhosis", "লিভার সিরোসিস"),
+                    yhLang("Hormonal imbalance", "হরমোনের ভারসাম্যহীনতা"),
+                    yhLang("Increased risk of heart disease", "হৃদরোগের ঝুঁকি বাড়তে পারে।"),
                   ],
                 },
               ];
+
+
 
               const getItemIcon = (item) => {
-                if (item.includes('ডায়রিয়া')) return { icon: 'fa-droplet', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
-                if (item.includes('ডিজেন্ট্রি') || item.includes('আমাশয়')) return { icon: 'fa-virus', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('টাইফয়েড')) return { icon: 'fa-temperature-high', color: '#e65100', bg: 'rgba(230,81,0,.12)' };
-                if (item.includes('কলেরা')) return { icon: 'fa-disease', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
-                if (item.includes('হেপাটাইটিস')) return { icon: 'fa-syringe', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
-                if (item.includes('জিয়ার্ডিয়াসিস')) return { icon: 'fa-bacterium', color: '#ef6c00', bg: 'rgba(239,108,0,.12)' };
-                if (item.includes('পেটের সংক্রমণ')) return { icon: 'fa-stomach', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
-                if (item.includes('বমি')) return { icon: 'fa-head-side-cough', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
-                if (item.includes('পেট ব্যথা')) return { icon: 'fa-circle-exclamation', color: '#ff8f00', bg: 'rgba(255,143,0,.12)' };
-                if (item.includes('পানিশূন্যতা')) return { icon: 'fa-droplet-slash', color: '#f4511e', bg: 'rgba(244,81,30,.12)' };
-                if (item.includes('অপুষ্টি')) return { icon: 'fa-child', color: '#e64a19', bg: 'rgba(230,74,25,.12)' };
-                if (item.includes('আর্সেনিকোসিস')) return { icon: 'fa-skull-crossbones', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('ফ্লুরোসিস')) return { icon: 'fa-tooth', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
-                if (item.includes('স্নায়ুতন্ত্র')) return { icon: 'fa-brain', color: '#ad1457', bg: 'rgba(173,20,87,.12)' };
-                if (item.includes('বুদ্ধি') || item.includes('স্মৃতিশক্তি')) return { icon: 'fa-book-medical', color: '#6a1b9a', bg: 'rgba(106,27,154,.12)' };
-                if (item.includes('কিডনি')) return { icon: 'fa-kidneys', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
-                if (item.includes('লিভার')) return { icon: 'fa-user-doctor', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('ক্যান্সার')) return { icon: 'fa-ribbon', color: '#b71c1c', bg: 'rgba(183,28,28,.12)' };
-                if (item.includes('হরমোন')) return { icon: 'fa-dna', color: '#880e4f', bg: 'rgba(136,14,79,.12)' };
-                if (item.includes('হৃদরোগ')) return { icon: 'fa-heart-pulse', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                if (item.includes('ডায়রিয়া') || item.includes('Diarrhea')) return { icon: 'fa-droplet', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
+                if (item.includes('ডিজেন্ট্রি') || item.includes('আমাশয়') || item.includes('Dysentery')) return { icon: 'fa-virus', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
+                if (item.includes('টাইফয়েড') || item.includes('Typhoid')) return { icon: 'fa-temperature-high', color: '#e65100', bg: 'rgba(230,81,0,.12)' };
+                if (item.includes('কলেরা') || item.includes('Cholera')) return { icon: 'fa-disease', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                if (item.includes('হেপাটাইটিস') || item.includes('Hepatitis')) return { icon: 'fa-syringe', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
+                if (item.includes('জিয়ার্ডিয়াসিস') || item.includes('Giardiasis')) return { icon: 'fa-bacterium', color: '#ef6c00', bg: 'rgba(239,108,0,.12)' };
+                if (item.includes('পেটের সংক্রমণ') || item.includes('Stomach infection')) return { icon: 'fa-stomach', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
+                if (item.includes('বমি') || item.includes('Vomiting')) return { icon: 'fa-head-side-cough', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
+                if (item.includes('পেট ব্যথা') || item.includes('Stomach pain')) return { icon: 'fa-circle-exclamation', color: '#ff8f00', bg: 'rgba(255,143,0,.12)' };
+                if (item.includes('পানিশূন্যতা') || item.includes('Dehydration')) return { icon: 'fa-droplet-slash', color: '#f4511e', bg: 'rgba(244,81,30,.12)' };
+                if (item.includes('অপুষ্টি') || item.includes('malnutrition')) return { icon: 'fa-child', color: '#e64a19', bg: 'rgba(230,74,25,.12)' };
+                if (item.includes('আর্সেনিকোসিস') || item.includes('Arsenicosis')) return { icon: 'fa-skull-crossbones', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
+                if (item.includes('ফ্লুরোসিস') || item.includes('fluorosis')) return { icon: 'fa-tooth', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                if (item.includes('স্নায়ুতন্ত্র') || item.includes('Nervous')) return { icon: 'fa-brain', color: '#ad1457', bg: 'rgba(173,20,87,.12)' };
+                if (item.includes('বুদ্ধি') || item.includes('স্মৃতিশক্তি') || item.includes('intelligence') || item.includes('memory')) return { icon: 'fa-book-medical', color: '#6a1b9a', bg: 'rgba(106,27,154,.12)' };
+                if (item.includes('কিডনি') || item.includes('Kidney')) return { icon: 'fa-kidneys', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                if (item.includes('লিভার') || item.includes('Liver') || item.includes('liver')) return { icon: 'fa-user-doctor', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
+                if (item.includes('ক্যান্সার') || item.includes('cancer')) return { icon: 'fa-ribbon', color: '#b71c1c', bg: 'rgba(183,28,28,.12)' };
+                if (item.includes('হরমোন') || item.includes('Hormonal')) return { icon: 'fa-dna', color: '#880e4f', bg: 'rgba(136,14,79,.12)' };
+                if (item.includes('হৃদরোগ') || item.includes('heart')) return { icon: 'fa-heart-pulse', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
                 return { icon: 'fa-circle-check', color: '#7b1fa2', bg: 'rgba(123,31,162,.12)' };
               };
 
@@ -15188,8 +15365,8 @@ const coursesData = [
                     (item, idx) => {
                       const iconData = getItemIcon(item);
                       return `
-                      <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:11px 14px;margin-bottom:10px;box-shadow:0 6px 18px rgba(103,58,183,.14), 0 2px 8px ${iconData.bg};transition:all 0.3s ease;">
-                        <span style="background:linear-gradient(135deg,${iconData.color},${iconData.color}dd);width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 4px 12px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:16px;"></i></span>
+                      <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:5px 5px;margin-bottom:5px;box-shadow:0 6px 18px rgba(103,58,183,.14), 0 2px 8px ${iconData.bg};transition:all 0.3s ease;">
+                        <span style="background:linear-gradient(135deg,${iconData.color},${iconData.color}dd);width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;margin-right:5px;box-shadow:0 4px 12px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:16px;"></i></span>
                         <span style="color:#333;font-weight:500;">${item}</span>
                       </li>
                     `;
@@ -15198,19 +15375,19 @@ const coursesData = [
                   .join("");
 
               const getSectionIcon = (title) => {
-                if (title.includes('পানিবাহিত রোগ')) return { icon: 'fa-water', color: '#0277bd', gradient: 'linear-gradient(135deg,#0288d1,#01579b)' };
-                if (title.includes('পেটের সমস্যা')) return { icon: 'fa-stomach', color: '#ff6f00', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
-                if (title.includes('রাসায়নিক দূষণ')) return { icon: 'fa-flask', color: '#d32f2f', gradient: 'linear-gradient(135deg,#e53935,#c62828)' };
-                if (title.includes('ত্বকের রোগ')) return { icon: 'fa-hand-dots', color: '#f57c00', gradient: 'linear-gradient(135deg,#fb8c00,#ef6c00)' };
-                if (title.includes('দীর্ঘমেয়াদি') || title.includes('ক্রনিক')) return { icon: 'fa-heart-circle-xmark', color: '#c62828', gradient: 'linear-gradient(135deg,#d32f2f,#b71c1c)' };
+                if (title.includes('পানিবাহিত রোগ') || title.includes('Waterborne')) return { icon: 'fa-water', color: '#0277bd', gradient: 'linear-gradient(135deg,#0288d1,#01579b)' };
+                if (title.includes('পেটের সমস্যা') || title.includes('Digestive')) return { icon: 'fa-stomach', color: '#ff6f00', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
+                if (title.includes('রাসায়নিক দূষণ') || title.includes('Chemical')) return { icon: 'fa-flask', color: '#d32f2f', gradient: 'linear-gradient(135deg,#e53935,#c62828)' };
+                if (title.includes('ত্বকের রোগ') || title.includes('Skin')) return { icon: 'fa-hand-dots', color: '#f57c00', gradient: 'linear-gradient(135deg,#fb8c00,#ef6c00)' };
+                if (title.includes('দীর্ঘমেয়াদি') || title.includes('ক্রনিক') || title.includes('Long-term') || title.includes('Chronic')) return { icon: 'fa-heart-circle-xmark', color: '#c62828', gradient: 'linear-gradient(135deg,#d32f2f,#b71c1c)' };
                 return { icon: 'fa-circle-info', color: '#7b1fa2', gradient: 'linear-gradient(135deg,#8e24aa,#6a1b9a)' };
               };
 
               const renderSection = (section) => {
                 const iconData = getSectionIcon(section.title);
                 return `
-                <div class="health-section mb-4" style="background:rgba(255,255,255,.4);border-radius:18px;padding:18px;box-shadow:0 8px 22px rgba(103,58,183,.12);">
-                  <h4 class="mb-3" style="display:flex;align-items:center;color:#4a148c;font-weight:700;">
+                <div class="health-section mb-1" style="background:rgba(255,255,255,.4);border-radius:18px;padding:5px;box-shadow:0 8px 22px rgba(103,58,183,.12);">
+                  <h4 class="mb-1" style="display:flex;align-items:center;color:#4a148c;font-weight:700;">
                     <span style="background:${iconData.gradient};width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
                     ${section.title}
                   </h4>
@@ -15220,44 +15397,129 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:24px;">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:5px;">
                     <span style="background:linear-gradient(135deg,#9c27b0,#7b1fa2);width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 20px rgba(156,39,176,.35), 0 2px 10px rgba(123,31,162,.2);"><i class="fa-solid fa-hand-holding-droplet" style="color:#fff;font-size:28px;"></i></span>
                     ${yhLang("Health Risks from Contaminated Food and Water", "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি")}
                   </h2>
                   
-                  <div class="modern-card glass-card mb-4" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 50%,#ce93d8 100%);border-radius:20px;padding:18px 22px;box-shadow:0 10px 32px rgba(156,39,176,.22), 0 4px 14px rgba(123,31,162,.15);border-left:5px solid #9c27b0;">
-                    <div style="display:flex;align-items:start;">
+                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 50%,#ce93d8 100%);border-radius:20px;padding:18px 22px;box-shadow:0 10px 32px rgba(156,39,176,.22), 0 4px 14px rgba(123,31,162,.15);border-left:5px solid #9c27b0;">
+                    <div style="display:flex;align-items:center;">
                       <span style="background:linear-gradient(135deg,#ab47bc,#8e24aa);width:44px;height:44px;min-width:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 5px 16px rgba(171,71,188,.3);"><i class="fa-solid fa-triangle-exclamation" style="color:#fff;font-size:20px;"></i></span>
-                      <p class="mb-0" style="color:#4a148c;font-size:1.05em;font-weight:500;line-height:1.7;">অনিরাপদ বা দূষিত খাবারপানির কারণে নানা ধরনের গুরুতর স্বাস্থ্য ঝুঁকি হতে পারে। প্রধান স্বাস্থ্য ঝুঁকিগুলো হলো:</p>
+                      <p class="mb-0" style="color:#4a148c;font-size:1.05em;font-weight:500;line-height:1.7;">${yhLang("Contaminated food and water can cause various serious health risks. The main health risks are:", "অনিরাপদ বা দূষিত খাবারপানির কারণে নানা ধরনের গুরুতর স্বাস্থ্য ঝুঁকি হতে পারে। প্রধান স্বাস্থ্য ঝুঁকিগুলো হলো:")}</p>
                     </div>
                   </div>
 
-                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%,#9fa8da 100%);border-radius:24px;padding:24px;box-shadow:0 12px 38px rgba(63,81,181,.24), 0 5px 18px rgba(48,63,159,.18);">
-                        <h3 style="display:flex;align-items:center;color:#1a237e;margin-bottom:20px;font-weight:700;font-size:1.4em;">
+                  <div class="row g-1" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-4">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%,#9fa8da 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(63,81,181,.24), 0 5px 18px rgba(48,63,159,.18);">
+                        <h3 style="display:flex;align-items:center;color:#1a237e;margin-bottom:5px;font-weight:700;font-size:1.4em;">
                           <span style="background:linear-gradient(135deg,#5c6bc0,#3949ab);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(92,107,192,.4), 0 2px 8px rgba(57,73,171,.25);"><i class="fa-solid fa-briefcase-medical" style="color:#fff;font-size:24px;"></i></span>
-                          তাৎক্ষণিক স্বাস্থ্যঝুঁকি
+                          ${yhLang("Immediate Health Risks", "তাৎক্ষণিক স্বাস্থ্যঝুঁকি")}
                         </h3>
                         ${leftSections.map(renderSection).join("")}
                       </div>
                     </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%,#f48fb1 100%);border-radius:24px;padding:24px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
-                        <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:20px;font-weight:700;font-size:1.4em;">
+                    <div class="col-12 col-lg-4">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%,#f48fb1 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
+                        <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:5px;font-weight:700;font-size:1.4em;">
                           <span style="background:linear-gradient(135deg,#ec407a,#d81b60);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(236,64,122,.4), 0 2px 8px rgba(216,27,96,.25);"><i class="fa-solid fa-heart-circle-xmark" style="color:#fff;font-size:24px;"></i></span>
-                          দীর্ঘমেয়াদি স্বাস্থ্যঝুঁকি
+                          ${yhLang("Long-term Health Risks", "দীর্ঘমেয়াদি স্বাস্থ্যঝুঁকি")}
                         </h3>
-                        ${rightSections.map(renderSection).join("")}
+                        ${rightSections1.map(renderSection).join("")}
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%,#f48fb1 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
+                        
+                        ${rightSections2.map(renderSection).join("")}
                       </div>
                     </div>
                   </div>
                 </div>`;
             })(),
           },
+                    {
+            id: "ch22-lesson-9",
+            title: yhLang(
+              "Steps to Improve Water, Sanitation and Hygiene",
+              "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ"
+            ),
+            icon: "fa-hands-bubbles",
+            gradientClass: "bg-gradient-mint",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const personalPractices = [
+                "নিরাপদ টয়লেট ও স্যানিটেশন ব্যবস্থায় সার্বজনীন অংশগ্রহন",
+                "পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি সুবিধা নিশ্চিত করন",
+                "বাড়িতে  ফুটিয়ে, ফিল্টার ও ক্লোরিন/ ফিটকিরি ব্যাবহার করে পানি বিশুদ্ধ করণ",
+                "পুনঃদূষণ রোধ করার জন্য সঠিক ভাবে নিরাপদ খাবার পানি সংরক্ষণ  অত্যন্ত গুরুত্বপূর্ণ।",
+                "সঠিকভাবে হাত ধোয়া নিশ্ছিত করা",
+              ];
 
+              const communityActions = [
+                "স্থানীয় বা কমিউনিটি পর্যায়ে সেবার  অংশ হিসেবে নিরাপদ স্যানিটেশন সেবা নিশ্চিত করতে হবে।",
+                "স্যানিটেশন এবং স্বাস্থ্যবিধিতে জাতীয় পর্যায়ে সহজলভ্যতা নিশ্চিত করা এবং প্রয়জনীয় তথ্য সকলের নিকট পৌঁছানো নিশ্চিত করতে হবে।",
+                "স্কুল এবং স্বাস্থ্যকেন্দ্রে পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি সেবা নিশ্চিত ও সকলের প্রাপ্যতা নিশ্চিত করা।",
+              ];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(224,242,241,.72)'};border-left:4px solid ${idx % 2 === 0 ? '#26a69a' : '#00acc1'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(0,150,136,.18)' : '0 8px 18px rgba(0,172,193,.16)'};">
+                        <i class="fa-solid ${idx < 2 ? 'fa-soap' : idx < 4 ? 'fa-droplet' : 'fa-people-group'} ${idx < 2 ? 'text-success' : idx < 4 ? 'text-info' : 'text-primary'} me-2"></i>
+                        <span>${item}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-hands-bubbles" style="color: #00acc1; margin-right: 12px; font-size: 1.2em;"></i>
+                    পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ
+                  </h2>
+                  <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00695c;font-weight:600;">
+                    <i class="fa-solid fa-hands-bubbles me-2"></i>পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ
+                  </div>
+                  <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e0f2f1 0%,#b2dfdb 100%);border-radius:22px;box-shadow:0 10px 35px rgba(0,172,193,.2);">
+                    <span class="hygiene-shape hygiene-shape-corner" aria-hidden="true"></span>
+                    <span class="hygiene-shape hygiene-shape-orb" aria-hidden="true"></span>
+                    <div class="hygiene-card__body">
+                      <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-12">
+                          <div class="hygiene-list mb-3">
+                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00695c;font-weight:600;">
+                              <i class="fa-solid fa-hands-bubbles me-2"></i>ব্যক্তিগত অনুশীলন:
+                            </div>
+                            <ul class="list-unstyled hygiene-list__items mb-0">
+                              ${renderList(personalPractices)}
+                            </ul>
+                          </div>
+                          <div class="hygiene-list">
+                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;">
+                              <i class="fa-solid fa-people-group me-2"></i>কমিউনিটি স্তর:
+                            </div>
+                            <ul class="list-unstyled hygiene-list__items mb-0">
+                              ${renderList(communityActions)}
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-12">
+                          <figure class="image-card hygiene-figure mb-0" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);padding:12px;border-radius:18px;box-shadow:0 8px 26px rgba(3,155,229,.18);">
+                            <img src="img/modu22/hand-wash.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            })(),
+          },
           {
-            id: "ch22-lesson-4",
+            id: "ch22-lesson-7",
             title: yhLang(
               "Lead and Other Hazardous Chemicals",
               "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক"
@@ -15308,6 +15570,8 @@ const coursesData = [
                     ${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}
                   </h2>
                   <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#ffebee 0%,#ffcdd2 100%);border-radius:22px;box-shadow:0 10px 35px rgba(198,40,40,.18);">
+                    <h5 style="display:flex;align-items:center;color:#b71c1c;"> <i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}</h5>
+
                     <p>উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে ।</p>
                     <h5 style="display:flex;align-items:center;color:#b71c1c;"><i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:</h5>
                     <p>পানির চেয়ে ৫ গুণ বা তার বেশি পারমাণবিক ঘনত্ব সম্পন্ন ধাতুসমূহের গ্রুপকে ভারী ধাতু বা ক্ষতিকারক রাসায়নিক পদার্থ হিসাবে উল্লেখ করা হয়। জনস্বাস্থ্যের জন্য প্রধান প্রধান ক্ষতিকারক রাসায়নিক পদার্থ  গুলি নীচে দেয়া হল:</p>
@@ -15394,83 +15658,7 @@ const coursesData = [
             })(),
           },
 
-          {
-            id: "ch22-lesson-9",
-            title: yhLang(
-              "Steps to Improve Water, Sanitation and Hygiene",
-              "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ"
-            ),
-            icon: "fa-hands-bubbles",
-            gradientClass: "bg-gradient-mint",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              const personalPractices = [
-                "নিরাপদ টয়লেট ও স্যানিটেশন ব্যবস্থায় সার্বজনীন অংশগ্রহন",
-                "পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি সুবিধা নিশ্চিত করন",
-                "বাড়িতে  ফুটিয়ে, ফিল্টার ও ক্লোরিন/ ফিটকিরি ব্যাবহার করে পানি বিশুদ্ধ করণ",
-                "পুনঃদূষণ রোধ করার জন্য সঠিক ভাবে নিরাপদ খাবার পানি সংরক্ষণ  অত্যন্ত গুরুত্বপূর্ণ।",
-                "সঠিকভাবে হাত ধোয়া নিশ্ছিত করা",
-              ];
 
-              const communityActions = [
-                "স্থানীয় বা কমিউনিটি পর্যায়ে সেবার  অংশ হিসেবে নিরাপদ স্যানিটেশন সেবা নিশ্চিত করতে হবে।",
-                "স্যানিটেশন এবং স্বাস্থ্যবিধিতে জাতীয় পর্যায়ে সহজলভ্যতা নিশ্চিত করা এবং প্রয়জনীয় তথ্য সকলের নিকট পৌঁছানো নিশ্চিত করতে হবে।",
-                "স্কুল এবং স্বাস্থ্যকেন্দ্রে পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি সেবা নিশ্চিত ও সকলের প্রাপ্যতা নিশ্চিত করা।",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(224,242,241,.72)'};border-left:4px solid ${idx % 2 === 0 ? '#26a69a' : '#00acc1'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(0,150,136,.18)' : '0 8px 18px rgba(0,172,193,.16)'};">
-                        <i class="fa-solid ${idx < 2 ? 'fa-soap' : idx < 4 ? 'fa-droplet' : 'fa-people-group'} ${idx < 2 ? 'text-success' : idx < 4 ? 'text-info' : 'text-primary'} me-2"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-hands-bubbles" style="color: #00acc1; margin-right: 12px; font-size: 1.2em;"></i>
-                    পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ
-                  </h2>
-                  <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e0f2f1 0%,#b2dfdb 100%);border-radius:22px;box-shadow:0 10px 35px rgba(0,172,193,.2);">
-                    <span class="hygiene-shape hygiene-shape-corner" aria-hidden="true"></span>
-                    <span class="hygiene-shape hygiene-shape-orb" aria-hidden="true"></span>
-                    <div class="hygiene-card__body">
-                      <div class="row g-4 align-items-center">
-                        <div class="col-12 col-lg-12">
-                          <div class="hygiene-list mb-3">
-                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00695c;font-weight:600;">
-                              <i class="fa-solid fa-hands-bubbles me-2"></i>ব্যক্তিগত অনুশীলন:
-                            </div>
-                            <ul class="list-unstyled hygiene-list__items mb-0">
-                              ${renderList(personalPractices)}
-                            </ul>
-                          </div>
-                          <div class="hygiene-list">
-                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;">
-                              <i class="fa-solid fa-people-group me-2"></i>কমিউনিটি স্তর:
-                            </div>
-                            <ul class="list-unstyled hygiene-list__items mb-0">
-                              ${renderList(communityActions)}
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-12 col-lg-12">
-                          <figure class="image-card hygiene-figure mb-0" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);padding:12px;border-radius:18px;box-shadow:0 8px 26px rgba(3,155,229,.18);">
-                            <img src="img/modu22/hand-wash.png" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
  
           {
             id: "ch22-lesson-11",
@@ -18226,7 +18414,7 @@ const coursesData = [
             audioFile: "",
             content: (function () {
               return `
-                <div class="lesson-slide mod25-lesson3-flow">
+                <div class="lesson-slide lession_slide_none mod25-lesson3-flow">
                   <div class="m25l3f-shapes" aria-hidden="true">
                     <span class="m25l3f-shape m25l3f-shape--orb"></span>
                     <span class="m25l3f-shape m25l3f-shape--ribbon"></span>
@@ -18294,7 +18482,7 @@ const coursesData = [
                 </div>
 
 
-                <div class="lesson-slide mod25-lesson2-flow">
+                <div class="lesson-slide lession_slide_none mod25-lesson2-flow">
                   <div class="m25l2f-shapes" aria-hidden="true">
                     <span class="m25l2f-shape m25l2f-shape--orb"></span>
                     <span class="m25l2f-shape m25l2f-shape--wave"></span>
