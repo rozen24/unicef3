@@ -17412,7 +17412,7 @@ const coursesData = [
                           </div>
                           <div class="m24l1-orbit-center-text"><h2 class="text-white"> ${yhLang(
                             "Important Life Skills",
-                            "গুরুত্বপূরণ জীবনদক্ষতা"
+                            "গুরুত্বপূর্ণ জীবন দক্ষতা"
                           )} </h2></div>
                         </div>
                         <div class="m24l1-orbit-ring"></div>
@@ -17433,133 +17433,97 @@ const coursesData = [
               const highlights = [
                 {
                   icon: "fa-thumbs-up",
+                  color: "m24l2-item-blue",
                   text: yhLang(
-                    "the sense of judging right and wrong.",
-                    "ভালো ও খারাপ বিচার করার বোধ।"
+                    "The sense of judging right and wrong",
+                    "মূল্যবোধ হলো — ভালো ও খারাপ বিচার করার বোধ।"
                   ),
                 },
                 {
                   icon: "fa-equals",
+                  color: "m24l2-item-purple",
                   text: yhLang(
                     "Values = evaluation + sense",
-                    " মূল্যবোধ = মূল্যায়ন + বোধ"
+                    "মূল্যবোধ = মূল্যায়ন + বোধ।"
                   ),
                 },
                 {
                   icon: "fa-compass-drafting",
+                  color: "m24l2-item-teal",
                   text: yhLang(
-                    "That means choosing what is right and just using intellect and judgement.",
-                    "অর্থাৎ বুদ্ধি ও বিবেচনা দিয়ে সঠিক ও ন্যায়সংগত কাজ বেছে নেওয়া।"
+                    "Choosing what is right and just using intellect and judgement",
+                    "অর্থাৎ বুদ্ধি ও বিবেচনা দিয়ে সঠিক ও ন্যায়সংগত কাজ বেছে নেওয়া।"
                   ),
                 },
               ];
 
-              const explanationTitle = yhLang(
-                "Explanation of values",
-                "মূল্যবোধের ব্যাখ্যা"
-              );
-              
-              const explanationText = yhLang(
-                "Using your intellect and judgement to assess what is good or bad in an action, and practicing the good and just aspects—that is values.",
-                "নিজের বুদ্ধি ও বিবেচনা ব্যবহার করে কোনো কাজের ভালো-মন্দ বিচার করে ভালো ও ন্যায়সংগত দিকগুলো চর্চা করাই হলো মূল্যবোধ।"
-              );
-
-              const learnTitle = yhLang(
-                "How can values be learned",
-                "মূল্যবোধ শেখা যায় কীভাবে"
-              );
               const learnItems = [
                 {
-                  icon: "fa-book",
-                  accent: "m24l8-learn--a",
+                  icon: "fa-house",
+                  color: "m24l2-item-rose",
                   text: yhLang("Family education", "পারিবারিক শিক্ষা"),
                 },
                 {
                   icon: "fa-place-of-worship",
-                  accent: "m24l8-learn--b",
-                  text: yhLang("Religious education", "ধর্মীয় শিক্ষা"),
+                  color: "m24l2-item-indigo",
+                  text: yhLang("Religious education", "ধর্মীয় শিক্ষা"),
                 },
                 {
-                  icon: "fa-people-group",
-                  accent: "m24l8-learn--c",
+                  icon: "fa-users",
+                  color: "m24l2-item-green",
                   text: yhLang("Through social practice", "সামাজিক চর্চার মাধ্যমে"),
                 },
               ];
 
-              const renderHighlights = (items) =>
-                (items || [])
-                  .map(
-                    (row, idx) => `
-                      <div class="m24l8-hi m24l8-line mx-2" data-aos="fade-up" data-aos-delay="${120 + idx * 70}" style="--d:${80 + idx * 95}ms">
-                        <span class="m24l8-hi__icon" aria-hidden="true"><i class="fa-solid ${row.icon}"></i></span>
-                        <p class="m24l8-hi__text">${row.text}</p>
-                      </div>
-                    `
-                  )
-                  .join("");
-
-              const renderLearn = (items) =>
-                (items || [])
-                  .map(
-                    (item, idx) => `
-                      <li class="m24l8-learn ${item.accent} m24l8-line" data-aos="fade-up" data-aos-delay="${380 + idx * 90}" style="--d:${320 + idx * 110}ms">
-                        <span class="m24l8-learn__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
-                        <p class="m24l8-learn__text">${item.text}</p>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               const causes = [
                 {
-                  icon: "fa-house-lock",
-                  accent: "m24l9-cause--a",
+                  icon: "fa-house-crack",
+                  color: "m24l2-warn-red",
                   text: yhLang(
                     "Lack of family guidance",
                     "পারিবারিক অনুশাসনের অভাব"
                   ),
                 },
                 {
-                  icon: "fa-place-of-worship",
-                  accent: "m24l9-cause--b",
+                  icon: "fa-book-skull",
+                  color: "m24l2-warn-orange",
                   text: yhLang(
                     "Lack of religious education",
-                    "ধর্মীয় শিক্ষার ঘাটতি"
+                    "ধর্মীয় শিক্ষার ঘাটতি"
                   ),
                 },
                 {
                   icon: "fa-masks-theater",
-                  accent: "m24l9-cause--c",
+                  color: "m24l2-warn-amber",
                   text: yhLang(
                     "Social and cultural decline",
-                    "সামাজিক ও সাংস্কৃতিক অবক্ষয়"
+                    "সামাজিক ও সাংস্কৃতিক অবক্ষয়"
                   ),
                 },
                 {
                   icon: "fa-person-running",
-                  accent: "m24l9-cause--d",
+                  color: "m24l2-warn-yellow",
                   text: yhLang(
                     "Reckless behavior in the name of being modern",
-                    "আধুনিক হতে গিয়ে বেপরোয়া আচরণ"
+                    "আধুনিক হতে গিয়ে বেপরোয়া আচরণ"
                   ),
                 },
-              
                 {
                   icon: "fa-pills",
-                  accent: "m24l9-cause--f",
+                  color: "m24l2-warn-red",
                   text: yhLang("Drug use", "মাদক সেবন"),
                 },
                 {
                   icon: "fa-mobile-screen-button",
-                  accent: "m24l9-cause--g",
+                  color: "m24l2-warn-orange",
                   text: yhLang(
                     "Uncontrolled use of mobile phones",
-                    "মোবাইল ফোনের অনিয়ন্ত্রিত ব্যবহার"
+                    "মোবাইল ফোনের অনিয়ন্ত্রিত ব্যবহার"
                   ),
                 },
                 {
                   icon: "fa-wifi",
-                  accent: "m24l9-cause--h",
+                  color: "m24l2-warn-amber",
                   text: yhLang(
                     "Misuse of the internet",
                     "ইন্টারনেটের অপব্যবহার"
@@ -17567,7 +17531,7 @@ const coursesData = [
                 },
                 {
                   icon: "fa-bullhorn",
-                  accent: "m24l9-cause--i",
+                  color: "m24l2-warn-yellow",
                   text: yhLang(
                     "Negative marketing practices",
                     "নেতিবাচক বিপণন ব্যবস্থা"
@@ -17575,134 +17539,173 @@ const coursesData = [
                 },
               ];
 
-              const renderCauses = (items) =>
-                (items || [])
-                  .map(
-                    (item, idx) => `
-                      <li class="m24l9-cause ${item.accent} m24l9-line" data-aos="fade-up" data-aos-delay="${140 + idx * 55}" style="--d:${90 + idx * 75}ms">
-                        <span class="m24l9-cause__badge" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
-                        <p class="m24l9-cause__text">${item.text}</p>
-                      </li>
-                    `
-                  )
-                  .join("");  
-              const orbitItems = [
-                "সততা",
-                "শৃঙ্খলা",
-                "দায়িত্ববোধ",
-                "সহযোগিতার মানসিকতা",
-                "সম্মানবোধ",
-                "পরিশ্রমী মনোভাব",
-                "আত্মসংযম",
-                "ন্যায়পরায়ণতা",
-                "সহানুভূতিশীলতা",
-                "দেশপ্রেম",
-                "নৈতিক সাহস",
-                "নৈতিকতা",
+              const valuesList = [
+                { text: yhLang("Honesty", "সততা"), icon: "fa-shield-heart", gradient: "bg-gradient-blue" },
+                { text: yhLang("Discipline", "শৃঙ্খলা"), icon: "fa-list-check", gradient: "bg-gradient-rose" },
+                { text: yhLang("Responsibility", "দায়িত্ববোধ"), icon: "fa-handshake", gradient: "bg-gradient-green" },
+                { text: yhLang("Cooperation", "সহযোগিতার </br>মানসিকতা"), icon: "fa-people-carry-box", gradient: "bg-gradient-teal" },
+                { text: yhLang("Respect", "সম্মানবোধ"), icon: "fa-hands-praying", gradient: "bg-gradient-purple" },
+                { text: yhLang("Self-control", "আত্মসংযম"), icon: "fa-hand-fist", gradient: "bg-gradient-emerald" },
+                { text: yhLang("Justice", "ন্যায় </br> পরায়ণতা"), icon: "fa-scale-balanced", gradient: "bg-gradient-blue" },
+                { text: yhLang("Empathy", "সহানুভূতিশীলতা"), icon: "fa-heart-circle-plus", gradient: "bg-gradient-rose" },
+                { text: yhLang("Patriotism", "দেশপ্রেম"), icon: "fa-flag", gradient: "bg-gradient-green" },
+                { text: yhLang("Hard Work", "পরিশ্রমী </br> মনোভাব"), icon: "fa-person-digging", gradient: "bg-gradient-tangerine" },
+                { text: yhLang("Moral Courage", "নৈতিক </br> সাহস"), icon: "fa-hand-fist", gradient: "bg-gradient-teal" },
+                { text: yhLang("Ethics", "নৈতিকতা"), icon: "fa-book-open", gradient: "bg-gradient-purple" },
               ];
 
-              const colorCycle = [
-                "bg-gradient-blue",
-                "bg-gradient-rose",
-                "bg-gradient-green",
-                "bg-gradient-teal",
-                "bg-gradient-purple",
-                "bg-gradient-tangerine",
-                "bg-gradient-emerald",
-              ];
-
-              const renderList = (items, baseDelay) =>
-                (items || [])
-                  .map(
-                    (item, idx) => `
-                      <li class="m24l2-list-item" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 60}">
-                        <span class="m24l2-list-icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m24l2-list-text">${item.text}</span>
-                      </li>
-                    `
-                  )
+              const renderHighlights = (items, delay) =>
+                items
+                  .map((item, idx) => `
+                    <li class="m24l2-highlight-item ${item.color}" data-aos="flip-left" data-aos-delay="${delay + idx * 70}">
+                      <div class="m24l2-highlight-icon">
+                        <i class="fa-solid ${item.icon}"></i>
+                      </div>
+                      <span class="m24l2-highlight-text">${item.text}</span>
+                    </li>
+                  `)
                   .join("");
 
-              const renderOrbit = () => {
-                const radius = 150;
-                const angleStep = 360 / orbitItems.length;
-                return orbitItems
+              const renderLearnItems = (items, delay) =>
+                items
+                  .map((item, idx) => `
+                    <li class="m24l2-learn-item ${item.color}" data-aos="fade-right" data-aos-delay="${delay + idx * 80}">
+                      <div class="m24l2-learn-icon">
+                        <i class="fa-solid ${item.icon}"></i>
+                      </div>
+                      <span class="m24l2-learn-text">${item.text}</span>
+                    </li>
+                  `)
+                  .join("");
+
+              const renderCauses = (items, delay) =>
+                items
+                  .map((item, idx) => `
+                    <li class="m24l2-cause-item ${item.color}" data-aos="zoom-in" data-aos-delay="${delay + idx * 60}">
+                      <div class="m24l2-cause-icon">
+                        <i class="fa-solid ${item.icon}"></i>
+                      </div>
+                      <span class="m24l2-cause-text">${item.text}</span>
+                    </li>
+                  `)
+                  .join("");
+
+              const  renderValuesOrbit = () => {
+                const angleStep = 360 / valuesList.length;
+                return valuesList
                   .map((item, idx) => {
                     const angle = angleStep * idx;
-                    const color = colorCycle[idx % colorCycle.length];
                     return `
-                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 + idx * 30}">
-                        <div class="orbit-card ${color}">
-                          <span class="orbit-title">${item}</span>
+                      <div class="m24l2-orbit-item" style="--angle: ${angle}deg; --item-index: ${idx};" data-aos="zoom-in" data-aos-delay="${120 + idx * 30}">
+                        <div class="m24l2-orbit-card ${item.gradient}">
+                          <div class="m24l2-orbit-card-icon">
+                            <i class="fa-solid ${item.icon}"></i>
+                          </div>
+                          <span class="m24l2-orbit-card-text">${item.text}</span>
                         </div>
                       </div>
                     `;
                   })
                   .join("");
               };
-      
 
               return `
-                <div class="lesson-slide mod24-lesson8 mod24-lesson9">
-                  <div class="m24l8-shapes" aria-hidden="true">
-                    <span class="m24l8-shape m24l8-shape--hex"></span>
-                    <span class="m24l8-shape m24l8-shape--triangle"></span>
-                    <span class="m24l8-shape m24l8-shape--grid"></span>
-                    <span class="m24l8-shape m24l8-shape--ring"></span>
+                <div class="lesson-slide mod24-lesson2">
+                  <div class="m24l2-shapes" aria-hidden="true">
+                    <span class="m24l2-shape m24l2-shape--circle"></span>
+                    <span class="m24l2-shape m24l2-shape--diamond"></span>
+                    <span class="m24l2-shape m24l2-shape--pentagon"></span>
+                    <span class="m24l2-shape m24l2-shape--square"></span>
+                    <span class="m24l2-shape m24l2-shape--triangle"></span>
                   </div>
 
-                  <header class="m24l8-hero" data-aos="fade-up">
-                    <span class="m24l8-hero__badge bg-gradient-blue icon-spin-on-hover" aria-hidden="true">
+                  <header class="m24l2-hero d-none" data-aos="fade-down">
+                    <span class="m24l2-hero__badge" aria-hidden="true">
                       <i class="fa-solid fa-scale-balanced"></i>
                     </span>
-                    <h2 class="slide-title gradient-text mb-0 m24l8-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">${yhLang(
-                      "What are Values?",
-                      "মূল্যবোধ কী?"
-                    )}</h2>
+                    <div class="m24l2-hero__body">
+                      <h1 class="m24l2-hero__title">${yhLang(
+                        "What are Values?",
+                        "মূল্যবোধ কী?"
+                      )}</h1>
+                      <p class="m24l2-hero__subtitle">${yhLang(
+                        "Understanding Ethics and Moral Principles",
+                        "নৈতিকতা এবং নৈতিক নীতি বোঝা"
+                      )}</p>
+                    </div>
                   </header>
 
-                  <div class="row g-1 mt-1 align-items-stretch">
-                    <div class="col-12 col-lg-4">
-                      <section class="m24l8-card mb-1 m24l8-card--hi" data-aos="zoom-in" data-aos-delay="90">
-                        <p class="m24l8-paragraph m24l8-line mb-1" data-aos="fade-up" data-aos-delay="240" style="--d:220ms">
-                         ${yhLang("What are Values?","মূল্যবোধ হলো — ভালো ও খারাপ বিচার করার বোধ")}
-                        </p>
-                        
-                        <h3 class="m24l8-subtitle m24l8-line mb-2" data-aos="fade-up" data-aos-delay="200" style="--d:180ms">
-                        ${yhLang("What are Values?","মূল্যবোধ = মূল্যায়ন + বোধ")}</h3>
-                        <p class="m24l8-paragraph m24l8-line mb-1" data-aos="fade-up" data-aos-delay="240" style="--d:220ms">
-                         ${yhLang("What are Values?","অর্থাৎ বুদ্ধি ও বিবেচনা দিয়ে সঠিক ও ন্যায়সংগত কাজ বেছে নেওয়া।")}
-                        </p>
-                      </section>
-                      <section class="m24l8-card mb-1 m24l8-card--body" data-aos="fade-left" data-aos-delay="120">
-                        <h3 class="m24l8-subtitle m24l8-line mb-2" data-aos="fade-up" data-aos-delay="200" style="--d:180ms">${explanationTitle}</h3>
-                        <p class="m24l8-paragraph m24l8-line mb-3" data-aos="fade-up" data-aos-delay="240" style="--d:220ms">${explanationText}</p>
-
-                        <h3 class="m24l8-subtitle m24l8-line mb-2" data-aos="fade-up" data-aos-delay="280" style="--d:260ms">${learnTitle}</h3>
-                        <ul class="list-unstyled m24l8-learnList mb-0">
-                          ${renderLearn(learnItems)}
+                  <div class="m24l2-content-wrapper" data-aos="fade-up" data-aos-delay="150">
+                    <div class="m24l2-left">
+                      <section class="m24l2-panel m24l2-panel-highlights" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="m24l2-section-heading">
+                          <span class="m24l2-heading-icon m24l2-icon-highlight">
+                            <i class="fa-solid fa-lightbulb"></i>
+                          </span>
+                          <span class="m24l2-heading-text">${yhLang(
+                        "What are Values?",
+                        "মূল্যবোধ কী?"
+                      )}</span>
+                        </h3>
+                        <ul class="m24l2-highlight-list">
+                          ${renderHighlights(highlights, 280)}
                         </ul>
                       </section>
-                      
-                    </div>
-                      <div class="col-12 col-lg-8 m24l2-right">
-                        <section class="m24l8-card m24l8-card--body" data-aos="fade-left" data-aos-delay="120">
 
-                          <h3 class="m24l8-subtitle m24l8-line mb-2" data-aos="fade-up" data-aos-delay="280" style="--d:260ms">${yhLang("Causes of Value Degradation", "মূল্যবোধ অবক্ষয়ের কারণ")}</h3>
-                          <ul class="list-unstyled m24l9-grid mb-0">
-                            ${renderCauses(causes)}
-                          </ul>
-                        </section>
-                        <div class="m24l2-orbit">
-                          <div class="orbit-layout" data-orbit-radius="195">
-                            <div class="orbit-center icon-spin-on-hover">
-                              <div class="orbit-card bg-gradient-rose">
-                                <div class="orbit-title fw-bold">গুরুত্বপূর্ণ নৈতিক মূল্যবোধ</div>
-                              </div>
-                            </div>
-                            ${renderOrbit()}
+                      <section class="m24l2-panel m24l2-panel-explanation" data-aos="fade-up" data-aos-delay="350">
+                        <h3 class="m24l2-section-heading">
+                          <span class="m24l2-heading-icon m24l2-icon-explanation">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                          </span>
+                          <span class="m24l2-heading-text">${yhLang("Explanation of Values", "মূল্যবোধের ব্যাখ্যা")}</span>
+                        </h3>
+                        <p class="m24l2-explanation-text" data-aos="fade-up" data-aos-delay="430">
+                          ${yhLang(
+                            "Using your intellect and judgement to assess what is good or bad in an action, and practicing the good and just aspects—that is values.",
+                            "নিজের বুদ্ধি ও বিবেচনা ব্যবহার করে কোনো কাজের ভালো-মন্দ বিচার করে ভালো ও ন্যায়সংগত দিকগুলো চর্চা করাই হলো মূল্যবোধ।"
+                          )}
+                        </p>
+                      </section>
+
+                      <section class="m24l2-panel m24l2-panel-learn" data-aos="fade-up" data-aos-delay="500">
+                        <h3 class="m24l2-section-heading">
+                          <span class="m24l2-heading-icon m24l2-icon-learn">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                          </span>
+                          <span class="m24l2-heading-text">${yhLang("How Values are Learned", "মূল্যবোধ শেখা যায় কীভাবে")}</span>
+                        </h3>
+                        <ul class="m24l2-learn-list">
+                          ${renderLearnItems(learnItems, 580)}
+                        </ul>
+                      </section>
+                    </div>
+
+                    <div class="m24l2-right">
+                      <section class="m24l2-panel m24l2-panel-causes" data-aos="fade-left" data-aos-delay="300">
+                        <h3 class="m24l2-section-heading">
+                          <span class="m24l2-heading-icon m24l2-icon-causes">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                          </span>
+                          <span class="m24l2-heading-text">${yhLang("Causes of Value Degradation", "মূল্যবোধ অবক্ষয়ের কারণ")}</span>
+                        </h3>
+                        <ul class="m24l2-cause-grid">
+                          ${renderCauses(causes, 380)}
+                        </ul>
+                      </section>
+
+                      <div class="m24l2-orbit-container" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="m24l2-orbit-center">
+                          <div class="m24l2-orbit-center-icon">
+                            <i class="fa-solid fa-gem"></i>
                           </div>
+                          <div class="m24l2-orbit-center-text"> <h2>${yhLang(
+                            "Important Moral Values",
+                            "গুরুত্বপূর্ণ নৈতিক মূল্যবোধ"
+                          )}</h2></div>
                         </div>
+                        <div class="m24l2-orbit-ring"></div>
+                        ${renderValuesOrbit()}
+                      </div>
                     </div>
                   </div>
                 </div>`;
