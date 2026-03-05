@@ -11120,102 +11120,195 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
+              const definition =
                 "এটি এমন একটি দক্ষতা যার মাধ্যমে শ্রোতা বক্তার কথা মনোযোগ দিয়ে শোনার সাথে সাথে সেই কথার অন্তর্নিহিত অর্থও বুঝতে পারেন।";
 
-              const sections = [
+              const techniques = [
                 {
-                  title: "১। প্রশ্ন করার মাধ্যমে",
+                  icon: "fa-clipboard-question",
+                  color: "m16l3-tech-questioning",
+                  number: "১",
+                  title: yhLang("Through Asking Questions", "প্রশ্ন করার মাধ্যমে"),
                   description:
                     "অংশগ্রহণকারীর কথা শুনে তার কাছে বিভিন্ন ধরনের প্রশ্ন করার মাধ্যমে তার ঘটনাটা বিস্তারিতভাবে জানা সম্ভব। যেমনঃ কবে ঘটেছিল, কোথায় ঘটেছিল, কে করেছে ইত্যাদি। অংশগ্রহণকারীর কথার ফাঁকে ফাঁকে প্রশ্ন করার মাধ্যমে ঘটনাটা বিস্তারিতভাবে জানা সম্ভব।",
                 },
-              ];
-
-              const attentivePoints = [
-                "খেয়াল করা – কীভাবে অংশগ্রহণকারী কথা বলছেন",
-                "কোন কোন শব্দগুলোকে সে জোর দিয়ে বলছে, কোন কথার মাধ্যমে সে তার আবেগকে প্রকাশ করছে",
-                "তার অভিজ্ঞতাকে বর্ণনা করতে গিয়ে সে কি কি শব্দ ব্যবহার করছে",
-                "তার বসার ভঙ্গি খেয়াল করা",
-                "মুখের ভঙ্গি খেয়াল করা",
-              ];
-
-              const additionalSections = [
                 {
-                  title: "৩। দৃষ্টি সংযোগ",
+                  icon: "fa-eye",
+                  color: "m16l3-tech-eyecontact",
+                  number: "৩",
+                  title: yhLang("Eye Contact", "দৃষ্টি সংযোগ"),
                   description:
                     "সঠিকভাবে চোখে চোখ রেখে কথা বলা খুবই জরুরী। ফলে সহায়তাকারী অন্যের কথা খুবই আগ্রহ নিয়ে শুনছেন তা প্রকাশ পায়। প্রতি ৩/৪ সেকেন্ডে পরপর সরাসরি দৃষ্টি সংযোগ করা মনোযোগী শ্রোতা হবার জন্য খুবই গুরুত্বপূর্ণ।",
                 },
                 {
-                  title: "৪। মৌখিকভাবে বলা",
+                  icon: "fa-message",
+                  color: "m16l3-tech-verbal",
+                  number: "৪",
+                  title: yhLang("Verbal Acknowledgment", "মৌখিকভাবে বলা"),
                   description:
                     "আমি তোমার সাথে আছি, তোমার অবস্থাটা আমি বুঝতে পারছি ইত্যাদি।",
                 },
                 {
-                  title: "৫। স্বাভাবিকভাবে বসা",
+                  icon: "fa-chair",
+                  color: "m16l3-tech-sitting",
+                  number: "৫",
+                  title: yhLang("Natural Sitting Position", "স্বাভাবিকভাবে বসা"),
                   description:
                     "মুখোমুখি একটি নির্দিষ্ট দূরত্বে জড়তাহীন ভাবে বসা, একটি ফলপ্রসূ মনোসামাজিক সহায়তা নিশ্চিত করে।",
                 },
                 {
-                  title: "৬। অবহেলা প্রদর্শনমূলক আচরণ করা যাবে না",
+                  icon: "fa-hand-back-fist",
+                  color: "m16l3-tech-bodylang",
+                  number: "৬",
+                  title: yhLang("Avoid Dismissive Behavior", "অবহেলা প্রদর্শনমূলক আচরণ করা যাবে না"),
                   description:
                     "আমাদের শারীরিক ভাষা বা Body Language / Body Movement — মুখভঙ্গী, হাত-পা দিয়ে এমন আচরণ করা যাবে না যার মাধ্যমে অংশগ্রহণকারীর প্রতি অবহেলা প্রদর্শন বোঝায়।",
                 },
                 {
-                  title: "৭। সঠিক দৃষ্টিভঙ্গি (Posture)",
+                  icon: "fa-person-rays",
+                  color: "m16l3-tech-posture",
+                  number: "৭",
+                  title: yhLang("Proper Posture", "সঠিক দৃষ্টিভঙ্গি"),
                   description:
                     "একটি ইতিবাচক আচরণ নিয়ে আসে যার মাধ্যমে অংশগ্রহণকারী সংকেত পায় যে সহায়তাকারী তার কথা খুব মনোযোগ দিয়ে শুনছে।",
                 },
                 {
-                  title: "৮। মুখের প্রকাশভঙ্গী (Facial Expression)",
+                  icon: "fa-face-smile",
+                  color: "m16l3-tech-facial",
+                  number: "৮",
+                  title: yhLang("Facial Expression", "মুখের প্রকাশভঙ্গী"),
                   description:
                     "এর মাধ্যমে সংকেত পাওয়া যায় যে অংশগ্রহণকারীর কথা শোনার জন্য প্রস্তুত ও যথেষ্ট আগ্রহী আছে।",
                 },
               ];
 
-              const renderList = (items) =>
+              const observations = [
+                {
+                  icon: "fa-comment-dots",
+                  color: "m16l3-obs-speech",
+                  text: yhLang("Notice how the participant is speaking", "খেয়াল করা – কীভাবে অংশগ্রহণকারী কথা বলছেন"),
+                },
+                {
+                  icon: "fa-volume-high",
+                  color: "m16l3-obs-emphasis",
+                  text: yhLang(
+                    "Which words they emphasize and how they express emotions",
+                    "কোন কোন শব্দগুলোকে সে জোর দিয়ে বলছে, কোন কথার মাধ্যমে সে তার আবেগকে প্রকাশ করছে"
+                  ),
+                },
+                {
+                  icon: "fa-spell-check",
+                  color: "m16l3-obs-words",
+                  text: yhLang(
+                    "What words they use to describe their experience",
+                    "তার অভিজ্ঞতাকে বর্ণনা করতে গিয়ে সে কি কি শব্দ ব্যবহার করছে"
+                  ),
+                },
+                {
+                  icon: "fa-person-walking",
+                  color: "m16l3-obs-posture",
+                  text: yhLang("Notice their sitting posture", "তার বসার ভঙ্গি খেয়াল করা"),
+                },
+                {
+                  icon: "fa-face-grin-wide",
+                  color: "m16l3-obs-face",
+                  text: yhLang("Notice their facial expressions", "মুখের ভঙ্গি খেয়াল করা"),
+                },
+              ];
+
+              const renderTechniques = (items, delay = 100) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (tech, index) => `
+                      <article class="m16l3-technique-card ${tech.color}" data-aos="fade-up" data-aos-delay="${delay + index * 55}">
+                        <div class="m16l3-technique-header">
+                          <div class="m16l3-technique-badge">
+                            <span class="m16l3-technique-number">${tech.number}</span>
+                          </div>
+                          <div class="m16l3-technique-icon" aria-hidden="true">
+                            <i class="fa-solid ${tech.icon}"></i>
+                          </div>
+                          <h3 class="m16l3-technique-title">${tech.title}</h3>
+                        </div>
+                        <p class="m16l3-technique-text">${tech.description}</p>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderObservations = (items, delay = 600) =>
+                items
+                  .map(
+                    (obs, index) => `
+                      <li class="m16l3-obs-item ${obs.color}" data-aos="zoom-in" data-aos-delay="${delay + index * 40}">
+                        <div class="m16l3-obs-icon" aria-hidden="true">
+                          <i class="fa-solid ${obs.icon}"></i>
+                        </div>
+                        <span class="m16l3-obs-text">${obs.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
-              const renderSection = (section) => `
-                <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up">
-                  <h3 class="h6 gradient-text mb-2">${section.title}</h3>
-                  <p class="mb-0">${section.description}</p>
-                </section>
-              `;
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Attentive listening skills",
-                    "মনোযোগী শ্রবণ"
-                  )}</h2>
+                <div class="lesson-slide mod16-lesson3">
+                  <div class="m16l3-shapes" aria-hidden="true">
+                    <span class="m16l3-shape m16l3-shape--wave"></span>
+                    <span class="m16l3-shape m16l3-shape--circle"></span>
+                    <span class="m16l3-shape m16l3-shape--triangle"></span>
+                  </div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
+                  <section class="m16l3-hero" data-aos="fade-down">
+                    <div class="m16l3-hero__badge" aria-hidden="true">
+                      <i class="fa-solid fa-ear-listen"></i>
+                    </div>
+                    <div class="m16l3-hero__content">
+                      <h2 class="m16l3-hero__title">${yhLang(
+                        "Attentive Listening",
+                        "মনোযোগী শ্রবণ"
+                      )}</h2>
+                      <p class="m16l3-hero__subtitle">${yhLang(
+                        "Essential skill for understanding deeper meaning",
+                        "গভীর অর্থ বোঝার অপরিহার্য দক্ষতা"
+                      )}</p>
+                    </div>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="h6 gradient-text mb-2">মনোযোগী শ্রোতা হওয়ার ধাপসমূহ</h3>
+                  <section class="m16l3-definition" data-aos="fade-up" data-aos-delay="40">
+                    <div class="m16l3-definition-icon" aria-hidden="true">
+                      <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <p class="m16l3-definition-text">${definition}</p>
                   </section>
 
-                  ${sections.map((s) => renderSection(s)).join("")}
+                  <section class="m16l3-section-header" data-aos="fade-up" data-aos-delay="70">
+                    <div class="m16l3-section-icon" aria-hidden="true">
+                      <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3 class="m16l3-section-title">${yhLang(
+                      "Steps to Becoming an Attentive Listener",
+                      "মনোযোগী শ্রোতা হওয়ার ধাপসমূহ"
+                    )}</h3>
+                  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up">
-                    <h3 class="h6 gradient-text mb-2">২। মনোযোগী শ্রবণ</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(attentivePoints)}
+                  <div class="m16l3-techniques-grid">
+                    ${renderTechniques(techniques, 100)}
+                  </div>
+
+                  <section class="m16l3-observations-section" data-aos="fade-up" data-aos-delay="560">
+                    <div class="m16l3-obs-header">
+                      <div class="m16l3-obs-header-icon" aria-hidden="true">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                      <h3 class="m16l3-obs-title">${yhLang(
+                        "Key Observations",
+                        "মনোযোগী শ্রবণ"
+                      )}<span class="m16l3-obs-number">২</span></h3>
+                    </div>
+                    <ul class="m16l3-obs-list">
+                      ${renderObservations(observations, 600)}
                     </ul>
                   </section>
-
-                  ${additionalSections.map((s) => renderSection(s)).join("")}
                 </div>
               `;
             })(),
@@ -11246,58 +11339,136 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
+              const definition =
                 "মূল্যবোধ হলো আমাদের বিশ্বাস, আদর্শ ও নীতি, যার প্রভাব আমাদের আচরণের উপর পড়ে এবং জীবন পরিচালনায় সহায়তা করে। মূল্যবোধের আলোকে মানুষ তার জীবন পরিচালনা করতে উদ্বুদ্ধ হয়।";
 
-              const sourceHeading = "মূল্যবোধের উৎস";
               const sources = [
-                "পরিবার",
-                "বিদ্যালয়",
-                "সমাজ",
-                "ধর্ম",
-                "গোত্র/গোষ্ঠী",
-                "শিক্ষা ও সংস্কৃতি",
+                {
+                  icon: "fa-people-roof",
+                  color: "m16l4-source-family",
+                  text: yhLang("Family", "পরিবার"),
+                },
+                {
+                  icon: "fa-book-open",
+                  color: "m16l4-source-school",
+                  text: yhLang("School", "বিদ্যালয়"),
+                },
+                {
+                  icon: "fa-user-group",
+                  color: "m16l4-source-society",
+                  text: yhLang("Society", "সমাজ"),
+                },
+                {
+                  icon: "fa-mosque",
+                  color: "m16l4-source-religion",
+                  text: yhLang("Religion", "ধর্ম"),
+                },
+                {
+                  icon: "fa-handshake",
+                  color: "m16l4-source-community",
+                  text: yhLang("Community/Tribe", "গোত্র/গোষ্ঠী"),
+                },
+                {
+                  icon: "fa-graduation-cap",
+                  color: "m16l4-source-culture",
+                  text: yhLang("Education & Culture", "শিক্ষা ও সংস্কৃতি"),
+                },
               ];
 
-              const examples =
+              const exampleText =
                 "যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সম্মান করতে ইত্যাদি। আবার সমাজ থেকেও আমরা বিভিন্ন মূল্যবোধ শেখা যায়, যেমন—বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সম্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধূমপান না করা ইত্যাদি।";
 
-              const diversity =
+              const diversityText =
                 "দেশ, সমাজ, জাতি, ধর্ম ও বর্ণভেদে মূল্যবোধ ভিন্ন হতে পারে। নিজের স্বতন্ত্র ব্যক্তিগত বিশ্বাস থেকে কিছু মূল্যবোধ তৈরি হতে পারে। এই বিভিন্নতাকে গ্রহণ এবং সম্মান করা বাঞ্ছনীয়।";
 
-              const renderList = (items) =>
+              const renderSources = (items, delay = 100) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (source, index) => `
+                      <li class="m16l4-source-item ${source.color}" data-aos="zoom-in" data-aos-delay="${delay + index * 45}">
+                        <div class="m16l4-source-icon" aria-hidden="true">
+                          <i class="fa-solid ${source.icon}"></i>
+                        </div>
+                        <span class="m16l4-source-text">${source.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Understanding values",
-                    "মূল্যবোধ"
-                  )}</h2>
+                <div class="lesson-slide mod16-lesson4">
+                  <div class="m16l4-shapes" aria-hidden="true">
+                    <span class="m16l4-shape m16l4-shape--leaf"></span>
+                    <span class="m16l4-shape m16l4-shape--circle"></span>
+                    <span class="m16l4-shape m16l4-shape--arc"></span>
+                  </div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
+                  <section class="m16l4-hero" data-aos="fade-down">
+                    <div class="m16l4-hero__badge" aria-hidden="true">
+                      <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <div class="m16l4-hero__content">
+                      <h2 class="m16l4-hero__title">${yhLang(
+                        "Understanding Values",
+                        "মূল্যবোধ"
+                      )}</h2>
+                      <p class="m16l4-hero__subtitle">${yhLang(
+                        "Beliefs that guide our behavior",
+                        "আমাদের আচরণকে পরিচালিত করার বিশ্বাস"
+                      )}</p>
+                    </div>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <h3 class="h6 gradient-text mb-2">${sourceHeading}</h3>
-                    <ul class="list-unstyled puberty-list mb-3">
-                      ${renderList(sources)}
+                  <section class="m16l4-definition" data-aos="fade-up" data-aos-delay="40">
+                    <div class="m16l4-definition-icon" aria-hidden="true">
+                      <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <p class="m16l4-definition-text">${definition}</p>
+                  </section>
+
+                  <section class="m16l4-sources-section" data-aos="fade-up" data-aos-delay="80">
+                    <div class="m16l4-sources-header">
+                      <div class="m16l4-sources-icon" aria-hidden="true">
+                        <i class="fa-solid fa-list-check"></i>
+                      </div>
+                      <h3 class="m16l4-sources-title">${yhLang(
+                        "Sources of Values",
+                        "মূল্যবোধের উৎস"
+                      )}</h3>
+                    </div>
+                    <ul class="m16l4-sources-list">
+                      ${renderSources(sources, 130)}
                     </ul>
-                    <p class="mb-0">${examples}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <p class="mb-0">${diversity}</p>
+                  <section class="m16l4-example-section" data-aos="fade-up" data-aos-delay="430">
+                    <div class="m16l4-example-card">
+                      <div class="m16l4-example-icon" aria-hidden="true">
+                        <i class="fa-solid fa-book"></i>
+                      </div>
+                      <div class="m16l4-example-content">
+                        <h4 class="m16l4-example-title">${yhLang(
+                          "Real-Life Examples",
+                          "বাস্তব উদাহরণ"
+                        )}</h4>
+                        <p class="m16l4-example-text">${exampleText}</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="m16l4-diversity-section" data-aos="fade-up" data-aos-delay="470">
+                    <div class="m16l4-diversity-card">
+                      <div class="m16l4-diversity-icon" aria-hidden="true">
+                        <i class="fa-solid fa-hands-holding-heart"></i>
+                      </div>
+                      <div class="m16l4-diversity-content">
+                        <h4 class="m16l4-diversity-title">${yhLang(
+                          "Valuing Diversity",
+                          "বৈচিত্র্যকে সম্মান করা"
+                        )}</h4>
+                        <p class="m16l4-diversity-text">${diversityText}</p>
+                      </div>
+                    </div>
                   </section>
                 </div>
               `;
