@@ -12519,53 +12519,133 @@ const coursesData = [
             },
             content: (function () {
               const steps = [
-                "ত্বক কতটা পুড়েছে, তার ধরন নির্ধারণ করে চিকিৎসা করা হয়। আঘাতপ্রাপ্ত ব্যক্তিকে দ্রুত পোড়ার উৎস (যেমন—আগুন বা ধোঁয়া) থেকে সরিয়ে নিতে হবে যেন পুড়ে যাওয়ার প্রক্রিয়াটি ধীর হয় বা একেবারে বন্ধ হয়।",
-                "পোড়া জায়গা ফুলে যাওয়ার সম্ভাবনা থাকায় ঘড়ি বা জুয়েলারি খুলে ফেলতে হবে।",
-                "চামড়ার সাথে কাপড় লেগে থাকলে তা উঠানোর প্রয়োজন নেই।",
-                "পোড়া জায়গায় কমপক্ষে ১০–১৫ মিনিট ধরে স্বাভাবিক তাপমাত্রার ঠান্ডা পানি ঢালতে হবে (খুব ঠান্ডা বা উষ্ণ পানি নয়)।",
-                "পোড়া স্থানের কোনো ফোসকা গলিয়ে দেওয়া যাবেনা।",
-                "পোড়া স্থানে ক্রিম, লোশন, ডিম, লবণ-পানি, হলুদ বা টুথপেস্ট লাগানো যাবেনা।",
-                "পোড়া স্থানটিকে একটি শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে দিতে হবে (ড্রেসিং)। যদি নিকটস্থ ফার্মেসিতে পাওয়া যায়, প্রাথমিকভাবে ড্রেসিং করতে পোড়া স্থানে আয়োডোফর্ম গজ (যা লিকুইড প্যারাফিনযুক্ত এবং চামড়ায় লেগে থাকে না) ব্যবহার করতে হবে, তার উপরে শুকনো গজ দিয়ে বেঁধে দিতে হবে।",
-                "আঘাতপ্রাপ্ত ব্যক্তি যেন পর্যাপ্ত তরল পান করে তা নিশ্চিত করতে হবে।",
-                "যদি ব্যক্তির পোড়া গুরুতর হয়, তবে প্রাথমিক চিকিৎসা দিয়ে দ্রুত স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে।",
-                "শরীরে আগুন লাগলে জ্বলন্ত ব্যক্তিটিকে মাটিতে শুয়ে গড়াগড়ি দিতে বলতে হবে।",
+                {
+                  text: yhLang(
+                    "Determine burn type and quickly remove from source (fire, smoke) to stop/slow the burning process",
+                    "ত্বক কতটা পুড়েছে, তার ধরন নির্ধারণ করে চিকিৎসা করা হয়। আঘাতপ্রাপ্ত ব্যক্তিকে দ্রুত পোড়ার উৎস থেকে সরিয়ে নিতে হবে"
+                  ),
+                  icon: "fa-hand-fist",
+                  color: "m18l4-step-remove",
+                },
+                {
+                  text: yhLang(
+                    "Remove watches and jewelry as burn area may swell",
+                    "পোড়া জায়গা ফুলে যাওয়ার সম্ভাবনা থাকায় ঘড়ি বা জুয়েলারি খুলে ফেলতে হবে"
+                  ),
+                  icon: "fa-ring",
+                  color: "m18l4-step-jewelry",
+                },
+                {
+                  text: yhLang(
+                    "Leave clothes attached to skin if stuck - do not remove",
+                    "চামড়ার সাথে কাপড় লেগে থাকলে তা উঠানোর প্রয়োজন নেই"
+                  ),
+                  icon: "fa-shirt",
+                  color: "m18l4-step-clothes",
+                },
+                {
+                  text: yhLang(
+                    "Cool burn area with cool water (10-15 minutes, room temperature - not ice cold)",
+                    "পোড়া জায়গায় কমপক্ষে ১০-১৫ মিনিট ধরে স্বাভাবিক তাপমাত্রার ঠান্ডা পানি ঢালতে হবে"
+                  ),
+                  icon: "fa-droplet",
+                  color: "m18l4-step-cool",
+                },
+                {
+                  text: yhLang(
+                    "Do not pop any blisters",
+                    "পোড়া স্থানের কোনো ফোসকা গলিয়ে দেওয়া যাবেনা"
+                  ),
+                  icon: "fa-ban",
+                  color: "m18l4-step-noblister",
+                },
+                {
+                  text: yhLang(
+                    "Do not apply cream, lotion, egg, salt water, turmeric, or toothpaste to burn area",
+                    "পোড়া স্থানে ক্রিম, লোশন, ডিম, লবণ-পানি, হলুদ বা টুথপেস্ট লাগানো যাবেনা"
+                  ),
+                  icon: "fa-triangle-exclamation",
+                  color: "m18l4-step-notopical",
+                },
+                {
+                  text: yhLang(
+                    "Cover burn with sterile, clean gauze (dressing). Use iodoform gauze if available",
+                    "পোড়া স্থানটিকে শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে দিতে হবে"
+                  ),
+                  icon: "fa-bandage",
+                  color: "m18l4-step-dress",
+                },
+                {
+                  text: yhLang(
+                    "Ensure the person drinks adequate fluids",
+                    "আঘাতপ্রাপ্ত ব্যক্তি যেন পর্যাপ্ত তরল পান করে তা নিশ্চিত করতে হবে"
+                  ),
+                  icon: "fa-water",
+                  color: "m18l4-step-fluids",
+                },
+                {
+                  text: yhLang(
+                    "For severe burns, provide first aid and transport quickly to hospital",
+                    "যদি ব্যক্তির পোড়া গুরুতর হয়, তবে প্রাথমিক চিকিৎসা দিয়ে দ্রুত স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে"
+                  ),
+                  icon: "fa-truck-medical",
+                  color: "m18l4-step-severe",
+                },
+                {
+                  text: yhLang(
+                    "If clothes catch fire, tell person to lie down and roll on ground",
+                    "শরীরে আগুন লাগলে জ্বলন্ত ব্যক্তিটিকে মাটিতে শুয়ে গড়াগড়ি দিতে বলতে হবে"
+                  ),
+                  icon: "fa-person-hiking",
+                  color: "m18l4-step-fire",
+                },
               ];
 
-              const renderList = (items) =>
+              const renderSteps = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
+                    (item, index) => `
+                      <div class="m18l4-step-item ${item.color}" data-aos="fade-up" data-aos-delay="${35 + index * 30}">
+                        <span class="m18l4-step-num">${index + 1}</span>
+                        <span class="m18l4-step-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <p class="mb-0">${item.text}</p>
+                      </div>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "পোড়ার প্রাথমিক চিকিৎসা",
-                    "পোড়ার প্রাথমিক চিকিৎসা"
-                  )}</h2>
+                <div class="lesson-slide mod18-lesson4">
+                  <div class="m18l4-shape m18l4-shape-1"></div>
+                  <div class="m18l4-shape m18l4-shape-2"></div>
+                  <div class="m18l4-shape m18l4-shape-3"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(steps)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-5">
-                        <figure class="text-center mb-0">
-                          <img src="img/modu18/pora2.jpg" alt="পোড়ার প্রাথমিক চিকিৎসা" class="img-fluid rounded shadow-sm img-zoom" />
-                        </figure>
-                      </div>
+                  <header class="m18l4-hero" data-aos="zoom-in" data-aos-duration="600">
+                    <div class="m18l4-hero-badge"><i class="fa-solid fa-hand-holding-medical"></i></div>
+                    <h2 class="m18l4-hero-title">
+                      <i class="fa-solid fa-shield-medical"></i>
+                      ${yhLang("Burn First Aid", "পোড়ার প্রাথমিক চিকিৎসা")}
+                    </h2>
+                  </header>
+
+                  <section class="m18l4-steps" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="m18l4-section-title">
+                      <i class="fa-solid fa-list-ol"></i>
+                      ${yhLang("Treatment Steps", "চিকিৎসার ধাপ")}
+                    </h3>
+                    <div class="m18l4-steps-list">
+                      ${renderSteps(steps)}
                     </div>
                   </section>
+
+                  <aside class="m18l4-media" data-aos="fade-left" data-aos-delay="80">
+                    <figure class="m18l4-figure mb-0">
+                      <img src="img/modu18/pora2.jpg" alt="${yhLang(
+                        "Burn First Aid",
+                        "পোড়ার প্রাথমিক চিকিৎসা"
+                      )}" class="img-fluid m18l4-image" />
+                    </figure>
+                  </aside>
                 </div>
               `;
             })(),
