@@ -11887,57 +11887,57 @@ const coursesData = [
             content: (function () {
               const consequences = [
                 {
-                  text: "ব্যক্তিগত, পারিবারিক ও সামাজিক কর্মকাণ্ড ব্যাহত হয়",
+                  text: yhLang("Disrupts personal, family and social activities", "ব্যক্তিগত, পারিবারিক ও সামাজিক কর্মকাণ্ড ব্যাহত হয়"),
                   icon: "fa-users-slash",
                   color: "m17l3-cons-social",
                 },
                 {
-                  text: "বিভিন্ন ধরনের শারীরিক রোগ যেমন– লিভার, কিডনি, ব্রেইন ইত্যাদি অঙ্গের রোগ হতে পারে, এমনকি মৃত্যু হতে পারে এমন রোগেও আক্রান্ত হয় যেমন– এইডস, হেপাটাইটিস ইত্যাদি",
+                  text: yhLang("Various physical diseases such as liver, kidney, brain disorders can occur, and can contract fatal diseases like AIDS, hepatitis, etc.", "বিভিন্ন ধরনের শারীরিক রোগ যেমন– লিভার, কিডনি, ব্রেইন ইত্যাদি অঙ্গের রোগ হতে পারে, এমনকি মৃত্যু হতে পারে এমন রোগেও আক্রান্ত হয় যেমন– এইডস, হেপাটাইটিস ইত্যাদি"),
                   icon: "fa-heart-pulse",
                   color: "m17l3-cons-disease",
                 },
                 {
-                  text: "ধীরে ধীরে স্বাস্থ্যহানি হতে থাকে (ওজন অতিরিক্ত কম বা বেশি হতে পারে)",
+                  text: yhLang("Gradual deterioration of health (weight can become too low or too high)", "ধীরে ধীরে স্বাস্থ্যহানি হতে থাকে (ওজন অতিরিক্ত কম বা বেশি হতে পারে)"),
                   icon: "fa-weight-scale",
                   color: "m17l3-cons-health",
                 },
                 {
-                  text: "যৌন সমস্যা যেমন যৌন অক্ষমতা, পুরুষত্বহীনতা হয়",
+                  text: yhLang("Sexual problems such as sexual dysfunction, impotence occur", "যৌন সমস্যা যেমন যৌন অক্ষমতা, পুরুষত্বহীনতা হয়"),
                   icon: "fa-venus-mars",
                   color: "m17l3-cons-sexual",
                 },
                 {
-                  text: "গর্ভকালীন সময়ে মাদকাসক্তি হলে গর্ভস্থ বাচ্চার ক্ষতি হয়",
+                  text: yhLang("Drug addiction during pregnancy harms the unborn child", "গর্ভকালীন সময়ে মাদকাসক্তি হলে গর্ভস্থ বাচ্চার ক্ষতি হয়"),
                   icon: "fa-baby",
                   color: "m17l3-cons-pregnancy",
                 },
                 {
-                  text: "ফুসফুস, খাদ্যনালী, পাকস্থলি, লিভার ইত্যাদির ক্যান্সারে আক্রান্ত হতে পারে",
+                  text: yhLang("Can develop cancers of lungs, esophagus, stomach, liver, etc.", "ফুসফুস, খাদ্যনালী, পাকস্থলি, লিভার ইত্যাদির ক্যান্সারে আক্রান্ত হতে পারে"),
                   icon: "fa-lungs",
                   color: "m17l3-cons-cancer",
                 },
                 {
-                  text: "অপরাধমূলক কর্মকাণ্ডে জড়িয়ে পড়া",
+                  text: yhLang("Involvement in criminal activities", "অপরাধমূলক কর্মকাণ্ডে জড়িয়ে পড়া"),
                   icon: "fa-gavel",
                   color: "m17l3-cons-crime",
                 },
                 {
-                  text: "লেখাপড়া ও পেশাগত কাজে পিছিয়ে পড়া",
+                  text: yhLang("Falling behind in education and professional work", "লেখাপড়া ও পেশাগত কাজে পিছিয়ে পড়া"),
                   icon: "fa-book-open-reader",
                   color: "m17l3-cons-education",
                 },
                 {
-                  text: "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া",
+                  text: yhLang("Becoming isolated from society", "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া"),
                   icon: "fa-user-minus",
                   color: "m17l3-cons-isolation",
                 },
                 {
-                  text: "আর্থিকভাবে ক্ষতিগ্রস্ত হওয়া",
+                  text: yhLang("Financial losses", "আর্থিকভাবে ক্ষতিগ্রস্ত হওয়া"),
                   icon: "fa-sack-dollar",
                   color: "m17l3-cons-finance",
                 },
                 {
-                  text: "মানসিক চাপে ভোগা ও আত্মহত্যার প্রবণতা দেখা দেয়",
+                  text: yhLang("Suffering from mental stress and suicidal tendencies", "মানসিক চাপে ভোগা ও আত্মহত্যার প্রবণতা দেখা দেয়"),
                   icon: "fa-brain",
                   color: "m17l3-cons-mental",
                 },
@@ -11945,32 +11945,32 @@ const coursesData = [
 
               const prevention = [
                 {
-                  text: "সহজলভ্যতা কমানো",
+                  text: yhLang("Reducing availability", "সহজলভ্যতা কমানো"),
                   icon: "fa-ban",
                   color: "m17l3-prev-access",
                 },
                 {
-                  text: "সুশৃঙ্খল পারিবারিক বন্ধনে সহায়তা করা",
+                  text: yhLang("Supporting disciplined family bonds", "সুশৃঙ্খল পারিবারিক বন্ধনে সহায়তা করা"),
                   icon: "fa-house-user",
                   color: "m17l3-prev-family",
                 },
                 {
-                  text: "স্থানীয় পর্যায়ে তরুণদের মধ্যে মাদকের ক্ষতিকর দিক সম্পর্কে সচেতনতা বৃদ্ধি",
+                  text: yhLang("Increasing awareness among youth at local level about harmful effects of drugs", "স্থানীয় পর্যায়ে তরুণদের মধ্যে মাদকের ক্ষতিকর দিক সম্পর্কে সচেতনতা বৃদ্ধি"),
                   icon: "fa-bullhorn",
                   color: "m17l3-prev-awareness",
                 },
                 {
-                  text: "ধর্মীয় ও নৈতিক অনুশাসন মেনে চলতে উদ্বুদ্ধ করা",
+                  text: yhLang("Encouraging adherence to religious and moral discipline", "ধর্মীয় ও নৈতিক অনুশাসন মেনে চলতে উদ্বুদ্ধ করা"),
                   icon: "fa-scale-balanced",
                   color: "m17l3-prev-values",
                 },
                 {
-                  text: "খেলাধুলা ও সুস্থ বিনোদনমূলক কর্মকাণ্ডে সম্পৃক্ততা বৃদ্ধি করা",
+                  text: yhLang("Increasing involvement in sports and healthy recreational activities", "খেলাধুলা ও সুস্থ বিনোদনমূলক কর্মকাণ্ডে সম্পৃক্ততা বৃদ্ধি করা"),
                   icon: "fa-futbol",
                   color: "m17l3-prev-sports",
                 },
                 {
-                  text: "দ্রুত মাদকাসক্তি শনাক্তকরণ ও চিকিৎসার জন্য প্রেরণ করা",
+                  text: yhLang("Quick identification of drug addiction and referral for treatment", "দ্রুত মাদকাসক্তি শনাক্তকরণ ও চিকিৎসার জন্য প্রেরণ করা"),
                   icon: "fa-hospital-user",
                   color: "m17l3-prev-treatment",
                 },
@@ -12092,47 +12092,83 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "বিভিন্ন পরিস্থিতিতে ইনজুরির কারণে আহত ব্যক্তি বা হঠাৎ করে অসুস্থ হয়ে পড়া ব্যক্তিকে প্রাথমিকভাবে যে সহায়তা দেওয়া হয়, তাকে প্রাথমিক চিকিৎসা বলে। সাধারণত প্রাথমিক চিকিৎসা দেওয়া হয় ঘটনাস্থলে চিকিৎসক বা প্যারামেডিকস আসার পূর্বে, অথবা অ্যাম্বুলেন্স আসার পূর্বে, অথবা আক্রান্ত ব্যক্তিকে চিকিৎসাকেন্দ্র বা হাসপাতালে নিয়ে যাওয়া পর্যন্ত।";
-
-              const goalsHeading = "প্রাথমিক চিকিৎসার লক্ষ্য হলোঃ";
               const goals = [
-                "জীবন বাঁচানো",
-                "আহত বা আক্রান্ত ব্যক্তির শারীরিক অবস্থার অবনতি রোধ করা",
-                "আক্রান্ত ব্যক্তির অবনতির অবস্থা এবং ফলস্বরূপ প্রতিবন্ধিতার সম্ভাবনা কমানো",
-                "আরোগ্য লাভে সাহায্য করা",
-                "নিকটস্থ চিকিৎসাসেবা কেন্দ্রে আক্রান্ত ব্যক্তিকে নিরাপদে পরিবহন করা",
+                {
+                  text: yhLang("Save life", "জীবন বাঁচানো"),
+                  icon: "fa-heart-pulse",
+                  color: "m18l1-goal-life",
+                },
+                {
+                  text: yhLang("Prevent deterioration of the injured or affected person's physical condition", "আহত বা আক্রান্ত ব্যক্তির শারীরিক অবস্থার অবনতি রোধ করা"),
+                  icon: "fa-shield-heart",
+                  color: "m18l1-goal-prevent",
+                },
+                {
+                  text: yhLang("Reduce the possibility of deterioration and resulting disability of the affected person", "আক্রান্ত ব্যক্তির অবনতির অবস্থা এবং ফলস্বরূপ প্রতিবন্ধিতার সম্ভাবনা কমানো"),
+                  icon: "fa-user-shield",
+                  color: "m18l1-goal-reduce",
+                },
+                {
+                  text: yhLang("Help in recovery", "আরোগ্য লাভে সাহায্য করা"),
+                  icon: "fa-hands-holding-heart",
+                  color: "m18l1-goal-recovery",
+                },
+                {
+                  text: yhLang("Safely transport the affected person to the nearest medical center", "নিকটস্থ চিকিৎসাসেবা কেন্দ্রে আক্রান্ত ব্যক্তিকে নিরাপদে পরিবহন করা"),
+                  icon: "fa-truck-medical",
+                  color: "m18l1-goal-transport",
+                },
               ];
 
-              const renderList = (items) =>
+              const renderGoals = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
+                    (item, index) => `
+                      <div class="m18l1-goal-item ${item.color}" data-aos="fade-up" data-aos-delay="${35 + index * 35}">
+                        <div class="m18l1-goal-icon">
+                          <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <div class="m18l1-goal-content">
+                          <p class="mb-0">${item.text}</p>
+                        </div>
+                      </div>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "প্রাথমিক চিকিৎসার পরিচিতি",
-                    "প্রাথমিক চিকিৎসার পরিচিতি"
-                  )}</h2>
+                <div class="lesson-slide mod18-lesson1">
+                  <div class="m18l1-shape m18l1-shape-1"></div>
+                  <div class="m18l1-shape m18l1-shape-2"></div>
+                  <div class="m18l1-shape m18l1-shape-3"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
-                  </section>
+                  <div class="m18l1-hero" data-aos="zoom-in" data-aos-duration="600">
+                    <div class="m18l1-hero__badge">
+                      <i class="fa-solid fa-briefcase-medical"></i>
+                    </div>
+                    <h2 class="m18l1-hero__title">
+                      ${yhLang("First Aid Support", "প্রাথমিক চিকিৎসা")}
+                    </h2>
+                  </div>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <h3 class="h6 gradient-text mb-3">${goalsHeading}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(goals)}
-                    </ul>
-                  </section>
+                  <div class="m18l1-intro" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">
+                      ${yhLang(
+                        "First aid is the initial assistance given to an injured person due to injury in various situations or to a person who suddenly becomes ill. First aid is usually given at the scene before a doctor or paramedic arrives, or before an ambulance arrives, or until the affected person is taken to a medical center or hospital.",
+                        "বিভিন্ন পরিস্থিতিতে ইনজুরির কারণে আহত ব্যক্তি বা হঠাৎ করে অসুস্থ হয়ে পড়া ব্যক্তিকে প্রাথমিকভাবে যে সহায়তা দেওয়া হয়, তাকে প্রাথমিক চিকিৎসা বলে। সাধারণত প্রাথমিক চিকিৎসা দেওয়া হয় ঘটনাস্থলে চিকিৎসক বা প্যারামেডিকস আসার পূর্বে, অথবা অ্যাম্বুলেন্স আসার পূর্বে, অথবা আক্রান্ত ব্যক্তিকে চিকিৎসাকেন্দ্র বা হাসপাতালে নিয়ে যাওয়া পর্যন্ত।"
+                      )}
+                    </p>
+                  </div>
+
+                  <div class="m18l1-goals-section">
+                    <h3 class="m18l1-section-title" data-aos="fade-right">
+                      <i class="fa-solid fa-bullseye"></i>
+                      ${yhLang("Goals of First Aid", "প্রাথমিক চিকিৎসার লক্ষ্য হলোঃ")}
+                    </h3>
+                    <div class="m18l1-goals-grid">
+                      ${renderGoals(goals)}
+                    </div>
+                  </div>
                 </div>
               `;
             })(),
@@ -12163,59 +12199,126 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "কোন আঘাত বা দুর্ঘটনার ফলে প্রচুর রক্তপাত ঘটতে পারে যা আক্রান্ত ব্যক্তির জন্য জীবন-সংশয় তৈরি করতে পারে। এমন অবস্থায় তাৎক্ষণিক ব্যবস্থাপনা প্রয়োজন এবং দ্রুত রক্তপাত বন্ধ করা প্রাথমিক চিকিৎসার মূল লক্ষ্য।";
-
-              const stepsHeading = "রক্তক্ষরণের প্রাথমিক চিকিৎসা";
               const steps = [
-                "আক্রান্ত ব্যক্তিকে আরামদায়ক অবস্থানে বসানোর বা শোয়ানোর ব্যবস্থা করতে হবে।",
-                "পরিষ্কার কাপড় বা গজ দিয়ে ক্ষতস্থানটি চেপে ধরতে হবে। ক্ষতস্থানটি যদি অল্প জায়গা জুড়ে হয়, তবে কাপড় বা গজ ১০ মিনিট পর্যন্ত চাপ দিয়ে ধরে রাখতে হবে (যতক্ষণ রক্তপাত বন্ধ না হয়)।",
-                "চাপ দিয়ে ধরে রাখা গজ বা কাপড়ের প্রথম স্তরটি যদি রক্তে ভিজে যায়, তবুও গজ বা কাপড়টি সরানো যাবে না। এর উপরে অন্য একটি পরিষ্কার কাপড় বা গজ দিয়ে চেপে ধরতে হবে।",
-                "গজ/কাপড়সহ ক্ষতস্থানটি একটি পরিষ্কার কাপড় বা ব্যান্ডেজের সাহায্যে বাঁধতে হবে।",
-                "ক্ষতস্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিণ্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয়—এর ফলে রক্তপাত কমে যাবে। কারণ অধিক রক্তক্ষরণে অজ্ঞান হয়ে যাওয়ার সম্ভাবনা থাকে।",
-                "ক্ষত গভীর হলে বা রক্তক্ষরণ বন্ধ না হলে দক্ষ স্বাস্থ্যকর্মীর সাহায্য নিতে হবে এবং আক্রান্ত ব্যক্তিকে স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে। প্রয়োজনে ক্ষতস্থানে আরো গজ বা কাপড়ের সাহায্যে চেপে ধরে রাখতে হতে পারে।",
-                "কোন ব্যক্তির শরীরে কোন বস্তু ঢুকে রক্তপাত হলে (যেমন ভাঙা কাঁচ বা কাঠি), ক্ষতস্থান থেকে বস্তুটি বের করার চেষ্টা করা যাবে না। ক্ষতস্থানের দুই পাশে চেপে ধরতে হবে, তবে ক্ষতস্থানের উপর চাপ দেওয়া যাবে না।",
+                {
+                  text: yhLang(
+                    "Place the affected person in a comfortable sitting or lying position.",
+                    "আক্রান্ত ব্যক্তিকে আরামদায়ক অবস্থানে বসানোর বা শোয়ানোর ব্যবস্থা করতে হবে।"
+                  ),
+                  icon: "fa-bed-pulse",
+                  tone: "m18l2-step-position",
+                },
+                {
+                  text: yhLang(
+                    "Press the wound with a clean cloth or gauze. If the wound area is small, keep pressure for up to 10 minutes (until bleeding stops).",
+                    "পরিষ্কার কাপড় বা গজ দিয়ে ক্ষতস্থানটি চেপে ধরতে হবে। ক্ষতস্থানটি যদি অল্প জায়গা জুড়ে হয়, তবে কাপড় বা গজ ১০ মিনিট পর্যন্ত চাপ দিয়ে ধরে রাখতে হবে (যতক্ষণ রক্তপাত বন্ধ না হয়)।"
+                  ),
+                  icon: "fa-hand-holding-medical",
+                  tone: "m18l2-step-pressure",
+                },
+                {
+                  text: yhLang(
+                    "If the first gauze or cloth layer gets soaked with blood, do not remove it. Add another clean layer on top and keep pressing.",
+                    "চাপ দিয়ে ধরে রাখা গজ বা কাপড়ের প্রথম স্তরটি যদি রক্তে ভিজে যায়, তবুও গজ বা কাপড়টি সরানো যাবে না। এর উপরে অন্য একটি পরিষ্কার কাপড় বা গজ দিয়ে চেপে ধরতে হবে।"
+                  ),
+                  icon: "fa-layer-group",
+                  tone: "m18l2-step-layer",
+                },
+                {
+                  text: yhLang(
+                    "Secure the wound with a clean cloth or bandage along with gauze/cloth.",
+                    "গজ/কাপড়সহ ক্ষতস্থানটি একটি পরিষ্কার কাপড় বা ব্যান্ডেজের সাহায্যে বাঁধতে হবে।"
+                  ),
+                  icon: "fa-bandage",
+                  tone: "m18l2-step-bandage",
+                },
+                {
+                  text: yhLang(
+                    "If the wound is on hand or leg, raise the limb above heart level to reduce blood flow and bleeding.",
+                    "ক্ষতস্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিণ্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয়—এর ফলে রক্তপাত কমে যাবে। কারণ অধিক রক্তক্ষরণে অজ্ঞান হয়ে যাওয়ার সম্ভাবনা থাকে।"
+                  ),
+                  icon: "fa-arrow-up-right-dots",
+                  tone: "m18l2-step-elevate",
+                },
+                {
+                  text: yhLang(
+                    "If the wound is deep or bleeding does not stop, seek skilled health worker support and refer to a health center.",
+                    "ক্ষত গভীর হলে বা রক্তক্ষরণ বন্ধ না হলে দক্ষ স্বাস্থ্যকর্মীর সাহায্য নিতে হবে এবং আক্রান্ত ব্যক্তিকে স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে। প্রয়োজনে ক্ষতস্থানে আরো গজ বা কাপড়ের সাহায্যে চেপে ধরে রাখতে হতে পারে।"
+                  ),
+                  icon: "fa-truck-medical",
+                  tone: "m18l2-step-referral",
+                },
+                {
+                  text: yhLang(
+                    "If an object is embedded in the body (e.g., broken glass or stick), do not remove it; apply pressure around both sides, not directly on top.",
+                    "কোন ব্যক্তির শরীরে কোন বস্তু ঢুকে রক্তপাত হলে (যেমন ভাঙা কাঁচ বা কাঠি), ক্ষতস্থান থেকে বস্তুটি বের করার চেষ্টা করা যাবে না। ক্ষতস্থানের দুই পাশে চেপে ধরতে হবে, তবে ক্ষতস্থানের উপর চাপ দেওয়া যাবে না।"
+                  ),
+                  icon: "fa-triangle-exclamation",
+                  tone: "m18l2-step-warning",
+                },
               ];
 
-              const renderList = (items) =>
+              const renderSteps = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
+                    (item, index) => `
+                      <div class="m18l2-step-item ${item.tone}" data-aos="fade-up" data-aos-delay="${35 +
+                        index * 30}">
+                        <div class="m18l2-step-icon">
+                          <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <div class="m18l2-step-content">
+                          <p class="mb-0">${item.text}</p>
+                        </div>
+                      </div>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "রক্তক্ষরণ নিয়ন্ত্রণ",
-                    "রক্তক্ষরণ নিয়ন্ত্রণ"
-                  )}</h2>
+                <div class="lesson-slide mod18-lesson2">
+                  <div class="m18l2-shape m18l2-shape-1"></div>
+                  <div class="m18l2-shape m18l2-shape-2"></div>
+                  <div class="m18l2-shape m18l2-shape-3"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
+                  <div class="m18l2-hero" data-aos="zoom-in" data-aos-duration="600">
+                    <div class="m18l2-hero__badge">
+                      <i class="fa-solid fa-bandage"></i>
+                    </div>
+                    <h2 class="m18l2-hero__title">
+                      <i class="fa-solid fa-droplet"></i>
+                      ${yhLang("Bleeding Control", "রক্তক্ষরণ নিয়ন্ত্রণ")}
+                    </h2>
+                  </div>
+
+                  <section class="m18l2-intro" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">
+                      ${yhLang(
+                        "Heavy bleeding may occur due to injury or accidents and can become life-threatening for the affected person. In such cases, immediate management is necessary, and quickly controlling bleeding is a primary first-aid objective.",
+                        "কোন আঘাত বা দুর্ঘটনার ফলে প্রচুর রক্তপাত ঘটতে পারে যা আক্রান্ত ব্যক্তির জন্য জীবন-সংশয় তৈরি করতে পারে। এমন অবস্থায় তাৎক্ষণিক ব্যবস্থাপনা প্রয়োজন এবং দ্রুত রক্তপাত বন্ধ করা প্রাথমিক চিকিৎসার মূল লক্ষ্য।"
+                      )}
+                    </p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7" data-aos="fade-left">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3">${stepsHeading}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(steps)}
-                          </ul>
-                        </article>
+                  <section class="m18l2-grid" data-aos="fade-up" data-aos-delay="50">
+                    <article class="m18l2-steps-panel" data-aos="fade-right" data-aos-delay="80">
+                      <h3 class="m18l2-section-title">
+                        <i class="fa-solid fa-kit-medical"></i>
+                        ${yhLang("First Aid Steps for Bleeding", "রক্তক্ষরণের প্রাথমিক চিকিৎসা")}
+                      </h3>
+                      <div class="m18l2-steps-list">
+                        ${renderSteps(steps)}
                       </div>
-                      <div class="col-lg-5" data-aos="fade-right">
-                        <figure class="text-center mb-0">
-                          <img src="img/modu18/rokto.jpg" alt="রক্তক্ষরণ নিয়ন্ত্রণ" class="img-fluid rounded shadow-sm img-zoom" />
-                        </figure>
-                      </div>
-                    </div>
+                    </article>
+
+                    <aside class="m18l2-media-panel" data-aos="fade-left" data-aos-delay="120">
+                      <figure class="m18l2-figure mb-0">
+                        <img src="img/modu18/rokto.jpg" alt="${yhLang(
+                          "Bleeding control first aid",
+                          "রক্তক্ষরণ নিয়ন্ত্রণ"
+                        )}" class="img-fluid m18l2-image" />
+                      </figure>
+                    </aside>
                   </section>
                 </div>
               `;

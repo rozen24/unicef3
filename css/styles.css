@@ -10293,6 +10293,924 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 }
 
+/* ==================== MODULE 18 • LESSON 1 - FIRST AID SUPPORT ==================== */
+.lesson-slide.mod18-lesson1 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 25%, #90caf9 50%, #64b5f6 75%, #42a5f5 100%);
+  padding: 14px 11px;
+  overflow: hidden;
+}
+
+.lesson-slide.mod18-lesson1::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -15%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(66, 165, 245, 0.18), transparent 68%);
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: m18l1Float 18s ease-in-out infinite;
+}
+
+.lesson-slide.mod18-lesson1::after {
+  content: '';
+  position: absolute;
+  bottom: -25%;
+  right: -12%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(33, 150, 243, 0.16), transparent 65%);
+  border-radius: 50%;
+  filter: blur(45px);
+  animation: m18l1Float 16s ease-in-out infinite reverse;
+}
+
+@keyframes m18l1Float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(18px, -22px) scale(1.06); }
+  66% { transform: translate(-15px, 20px) scale(0.96); }
+}
+
+.m18l1-shape {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.m18l1-shape-1 {
+  top: 12%;
+  right: 8%;
+  width: 110px;
+  height: 110px;
+  border: 3px solid #1976d2;
+  border-radius: 50%;
+  animation: m18l1Rotate 25s linear infinite;
+}
+
+.m18l1-shape-2 {
+  bottom: 18%;
+  left: 6%;
+  width: 95px;
+  height: 95px;
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation: m18l1Rotate 20s linear infinite reverse;
+}
+
+.m18l1-shape-3 {
+  top: 45%;
+  right: 4%;
+  width: 125px;
+  height: 125px;
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: m18l1Morph 22s ease-in-out infinite;
+}
+
+@keyframes m18l1Rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes m18l1Morph {
+  0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+}
+
+.m18l1-hero {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.m18l1-hero__badge {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 12px;
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.35), 0 0 0 4px rgba(255, 255, 255, 0.22);
+  animation: m18l1Pulse 2.8s ease-in-out infinite;
+}
+
+.m18l1-hero__badge i {
+  font-size: 1.9rem;
+  color: #fff;
+}
+
+@keyframes m18l1Pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 4px 12px rgba(25, 118, 210, 0.35), 0 0 0 4px rgba(255, 255, 255, 0.22); }
+  50% { transform: scale(1.08); box-shadow: 0 6px 18px rgba(25, 118, 210, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.35); }
+}
+
+.m18l1-hero__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0d47a1;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(13, 71, 161, 0.15);
+}
+
+.m18l1-intro {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  padding: 13px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 10px rgba(25, 118, 210, 0.12), 0 1px 3px rgba(13, 71, 161, 0.08);
+}
+
+.m18l1-intro p {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #263238;
+}
+
+.m18l1-goals-section {
+  position: relative;
+  z-index: 10;
+}
+
+.m18l1-section-title {
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #0d47a1;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 4px;
+}
+
+.m18l1-section-title i {
+  font-size: 1.15rem;
+  color: #1976d2;
+}
+
+.m18l1-goals-grid {
+  display: grid;
+  gap: 11px;
+}
+
+.m18l1-goal-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 3px solid;
+  border-radius: 8px;
+  padding: 11px 12px;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.m18l1-goal-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 14px rgba(25, 118, 210, 0.2), 0 2px 6px rgba(13, 71, 161, 0.12);
+}
+
+.m18l1-goal-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.m18l1-goal-content p {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 2px;
+}
+
+/* Color Variants for Goals */
+.m18l1-goal-life {
+  border-left-color: #d32f2f;
+  background: rgba(255, 235, 238, 0.88);
+}
+
+.m18l1-goal-life .m18l1-goal-icon {
+  background: linear-gradient(135deg, #ef5350, #d32f2f);
+}
+
+.m18l1-goal-life .m18l1-goal-content p {
+  color: #b71c1c;
+}
+
+.m18l1-goal-prevent {
+  border-left-color: #1976d2;
+  background: rgba(227, 242, 253, 0.88);
+}
+
+.m18l1-goal-prevent .m18l1-goal-icon {
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+}
+
+.m18l1-goal-prevent .m18l1-goal-content p {
+  color: #0d47a1;
+}
+
+.m18l1-goal-reduce {
+  border-left-color: #7b1fa2;
+  background: rgba(243, 229, 245, 0.88);
+}
+
+.m18l1-goal-reduce .m18l1-goal-icon {
+  background: linear-gradient(135deg, #ab47bc, #7b1fa2);
+}
+
+.m18l1-goal-reduce .m18l1-goal-content p {
+  color: #4a148c;
+}
+
+.m18l1-goal-recovery {
+  border-left-color: #388e3c;
+  background: rgba(232, 245, 233, 0.88);
+}
+
+.m18l1-goal-recovery .m18l1-goal-icon {
+  background: linear-gradient(135deg, #66bb6a, #388e3c);
+}
+
+.m18l1-goal-recovery .m18l1-goal-content p {
+  color: #1b5e20;
+}
+
+.m18l1-goal-transport {
+  border-left-color: #f57c00;
+  background: rgba(255, 243, 224, 0.88);
+}
+
+.m18l1-goal-transport .m18l1-goal-icon {
+  background: linear-gradient(135deg, #ffa726, #f57c00);
+}
+
+.m18l1-goal-transport .m18l1-goal-content p {
+  color: #e65100;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .lesson-slide.mod18-lesson1 {
+    padding: 12px 10px;
+  }
+
+  .m18l1-hero__badge {
+    width: 66px;
+    height: 66px;
+  }
+
+  .m18l1-hero__badge i {
+    font-size: 1.7rem;
+  }
+
+  .m18l1-hero__title {
+    font-size: 1.28rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson-slide.mod18-lesson1 {
+    padding: 11px 9px;
+  }
+
+  .m18l1-hero__badge {
+    width: 60px;
+    height: 60px;
+  }
+
+  .m18l1-hero__badge i {
+    font-size: 1.5rem;
+  }
+
+  .m18l1-hero__title {
+    font-size: 1.15rem;
+  }
+
+  .m18l1-section-title {
+    font-size: 0.96rem;
+  }
+
+  .m18l1-goals-grid {
+    gap: 10px;
+  }
+
+  .m18l1-goal-item {
+    padding: 10px 11px;
+  }
+
+  .m18l1-goal-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lesson-slide.mod18-lesson1 {
+    padding: 10px 8px;
+  }
+
+  .m18l1-hero__badge {
+    width: 54px;
+    height: 54px;
+  }
+
+  .m18l1-hero__badge i {
+    font-size: 1.35rem;
+  }
+
+  .m18l1-hero__title {
+    font-size: 1.05rem;
+  }
+
+  .m18l1-intro {
+    padding: 11px;
+  }
+
+  .m18l1-intro p {
+    font-size: 0.76rem;
+  }
+
+  .m18l1-section-title {
+    font-size: 0.88rem;
+  }
+
+  .m18l1-goal-item {
+    gap: 9px;
+    padding: 9px 10px;
+  }
+
+  .m18l1-goal-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .m18l1-goal-content p {
+    font-size: 0.72rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .lesson-slide.mod18-lesson1 {
+    background: linear-gradient(135deg, #1a237e 0%, #283593 25%, #303f9f 50%, #3949ab 75%, #3f51b5 100%);
+  }
+
+  .m18l1-intro,
+  .m18l1-goal-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #e3f2fd;
+  }
+
+  .m18l1-hero__title,
+  .m18l1-section-title {
+    color: #e3f2fd;
+  }
+
+  .m18l1-intro p {
+    color: #bbdefb;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .m18l1-hero__badge,
+  .m18l1-shape,
+  .m18l1-goal-item {
+    animation: none !important;
+  }
+
+  .lesson-slide.mod18-lesson1::before,
+  .lesson-slide.mod18-lesson1::after,
+  .m18l1-goal-item:hover {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* ==================== MODULE 18 • LESSON 2 - BLEEDING CONTROL ==================== */
+.lesson-slide.mod18-lesson2 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 25%, #ef9a9a 50%, #e57373 75%, #ef5350 100%);
+  padding: 14px 11px;
+  overflow: hidden;
+}
+
+.lesson-slide.mod18-lesson2::before {
+  content: '';
+  position: absolute;
+  top: -28%;
+  right: -16%;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, rgba(239, 83, 80, 0.2), transparent 66%);
+  border-radius: 50%;
+  filter: blur(48px);
+  animation: m18l2Float 17s ease-in-out infinite;
+}
+
+.lesson-slide.mod18-lesson2::after {
+  content: '';
+  position: absolute;
+  bottom: -22%;
+  left: -14%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(244, 67, 54, 0.18), transparent 64%);
+  border-radius: 50%;
+  filter: blur(42px);
+  animation: m18l2Float 15s ease-in-out infinite reverse;
+}
+
+@keyframes m18l2Float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(16px, -20px) scale(1.05); }
+  66% { transform: translate(-14px, 18px) scale(0.97); }
+}
+
+.m18l2-shape {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.09;
+  pointer-events: none;
+}
+
+.m18l2-shape-1 {
+  top: 15%;
+  left: 7%;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #c62828;
+  border-radius: 50%;
+  animation: m18l2Rotate 24s linear infinite;
+}
+
+.m18l2-shape-2 {
+  bottom: 20%;
+  right: 5%;
+  width: 85px;
+  height: 85px;
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: m18l2Rotate 19s linear infinite reverse;
+}
+
+.m18l2-shape-3 {
+  top: 48%;
+  left: 3%;
+  width: 115px;
+  height: 115px;
+  background: linear-gradient(135deg, #e57373, #d32f2f);
+  border-radius: 35% 65% 70% 30% / 35% 35% 65% 65%;
+  animation: m18l2Morph 21s ease-in-out infinite;
+}
+
+@keyframes m18l2Rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes m18l2Morph {
+  0%, 100% { border-radius: 35% 65% 70% 30% / 35% 35% 65% 65%; }
+  50% { border-radius: 65% 35% 30% 70% / 65% 65% 35% 35%; }
+}
+
+.m18l2-hero {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.m18l2-hero__badge {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 11px;
+  background: linear-gradient(135deg, #c62828, #b71c1c);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 13px rgba(198, 40, 40, 0.38), 0 0 0 4px rgba(255, 255, 255, 0.25);
+  animation: m18l2Pulse 2.6s ease-in-out infinite;
+}
+
+.m18l2-hero__badge i {
+  font-size: 1.85rem;
+  color: #fff;
+}
+
+@keyframes m18l2Pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 4px 13px rgba(198, 40, 40, 0.38), 0 0 0 4px rgba(255, 255, 255, 0.25); }
+  50% { transform: scale(1.07); box-shadow: 0 6px 17px rgba(198, 40, 40, 0.52), 0 0 0 6px rgba(255, 255, 255, 0.38); }
+}
+
+.m18l2-hero__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #b71c1c;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(183, 28, 28, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.m18l2-hero__title i {
+  font-size: 1.25rem;
+  color: #c62828;
+}
+
+.m18l2-intro {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 4px solid #c62828;
+  border-radius: 10px;
+  padding: 12px 13px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 11px rgba(198, 40, 40, 0.14), 0 1px 4px rgba(183, 28, 28, 0.1);
+}
+
+.m18l2-intro p {
+  font-size: 0.8rem;
+  line-height: 1.56;
+  color: #4e342e;
+}
+
+.m18l2-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.m18l2-steps-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 11px;
+  padding: 14px;
+  box-shadow: 0 3px 12px rgba(198, 40, 40, 0.12), 0 1px 4px rgba(183, 28, 28, 0.08);
+}
+
+.m18l2-section-title {
+  font-size: 1.02rem;
+  font-weight: 660;
+  color: #b71c1c;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 3px;
+}
+
+.m18l2-section-title i {
+  font-size: 1.1rem;
+  color: #c62828;
+}
+
+.m18l2-steps-list {
+  display: grid;
+  gap: 10px;
+}
+
+.m18l2-step-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-left: 3px solid;
+  border-radius: 8px;
+  padding: 10px 11px;
+  transition: all 0.27s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.m18l2-step-item:hover {
+  transform: translateX(3px);
+  box-shadow: 0 4px 13px rgba(198, 40, 40, 0.18), 0 2px 6px rgba(183, 28, 28, 0.11);
+}
+
+.m18l2-step-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.96rem;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+.m18l2-step-content p {
+  font-size: 0.76rem;
+  line-height: 1.52;
+  margin: 0;
+  padding-top: 2px;
+}
+
+.m18l2-media-panel {
+  position: relative;
+}
+
+.m18l2-figure {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 12px rgba(198, 40, 40, 0.13), 0 1px 4px rgba(183, 28, 28, 0.09);
+  overflow: hidden;
+}
+
+.m18l2-image {
+  border-radius: 7px;
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Color Variants for Steps */
+.m18l2-step-position {
+  border-left-color: #5e35b1;
+  background: rgba(237, 231, 246, 0.9);
+}
+
+.m18l2-step-position .m18l2-step-icon {
+  background: linear-gradient(135deg, #7e57c2, #5e35b1);
+}
+
+.m18l2-step-position .m18l2-step-content p {
+  color: #4527a0;
+}
+
+.m18l2-step-pressure {
+  border-left-color: #d32f2f;
+  background: rgba(255, 235, 238, 0.9);
+}
+
+.m18l2-step-pressure .m18l2-step-icon {
+  background: linear-gradient(135deg, #ef5350, #d32f2f);
+}
+
+.m18l2-step-pressure .m18l2-step-content p {
+  color: #b71c1c;
+}
+
+.m18l2-step-layer {
+  border-left-color: #1976d2;
+  background: rgba(227, 242, 253, 0.9);
+}
+
+.m18l2-step-layer .m18l2-step-icon {
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+}
+
+.m18l2-step-layer .m18l2-step-content p {
+  color: #0d47a1;
+}
+
+.m18l2-step-bandage {
+  border-left-color: #00796b;
+  background: rgba(224, 242, 241, 0.9);
+}
+
+.m18l2-step-bandage .m18l2-step-icon {
+  background: linear-gradient(135deg, #26a69a, #00796b);
+}
+
+.m18l2-step-bandage .m18l2-step-content p {
+  color: #004d40;
+}
+
+.m18l2-step-elevate {
+  border-left-color: #f57c00;
+  background: rgba(255, 243, 224, 0.9);
+}
+
+.m18l2-step-elevate .m18l2-step-icon {
+  background: linear-gradient(135deg, #ffa726, #f57c00);
+}
+
+.m18l2-step-elevate .m18l2-step-content p {
+  color: #e65100;
+}
+
+.m18l2-step-referral {
+  border-left-color: #c62828;
+  background: rgba(255, 235, 238, 0.9);
+}
+
+.m18l2-step-referral .m18l2-step-icon {
+  background: linear-gradient(135deg, #e53935, #c62828);
+}
+
+.m18l2-step-referral .m18l2-step-content p {
+  color: #b71c1c;
+}
+
+.m18l2-step-warning {
+  border-left-color: #fbc02d;
+  background: rgba(255, 253, 231, 0.9);
+}
+
+.m18l2-step-warning .m18l2-step-icon {
+  background: linear-gradient(135deg, #fdd835, #fbc02d);
+}
+
+.m18l2-step-warning .m18l2-step-content p {
+  color: #f57f17;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .m18l2-grid {
+    grid-template-columns: 1fr 0.85fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lesson-slide.mod18-lesson2 {
+    padding: 12px 10px;
+  }
+
+  .m18l2-hero__badge {
+    width: 64px;
+    height: 64px;
+  }
+
+  .m18l2-hero__badge i {
+    font-size: 1.65rem;
+  }
+
+  .m18l2-hero__title {
+    font-size: 1.24rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson-slide.mod18-lesson2 {
+    padding: 11px 9px;
+  }
+
+  .m18l2-hero__badge {
+    width: 58px;
+    height: 58px;
+  }
+
+  .m18l2-hero__badge i {
+    font-size: 1.48rem;
+  }
+
+  .m18l2-hero__title {
+    font-size: 1.12rem;
+  }
+
+  .m18l2-section-title {
+    font-size: 0.94rem;
+  }
+
+  .m18l2-steps-list {
+    gap: 9px;
+  }
+
+  .m18l2-step-item {
+    padding: 9px 10px;
+  }
+
+  .m18l2-step-icon {
+    width: 31px;
+    height: 31px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lesson-slide.mod18-lesson2 {
+    padding: 10px 8px;
+  }
+
+  .m18l2-hero__badge {
+    width: 52px;
+    height: 52px;
+  }
+
+  .m18l2-hero__badge i {
+    font-size: 1.32rem;
+  }
+
+  .m18l2-hero__title {
+    font-size: 1.02rem;
+  }
+
+  .m18l2-intro {
+    padding: 10px 11px;
+  }
+
+  .m18l2-intro p {
+    font-size: 0.74rem;
+  }
+
+  .m18l2-section-title {
+    font-size: 0.86rem;
+  }
+
+  .m18l2-step-item {
+    gap: 9px;
+    padding: 8px 9px;
+  }
+
+  .m18l2-step-icon {
+    width: 29px;
+    height: 29px;
+    font-size: 0.82rem;
+  }
+
+  .m18l2-step-content p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .lesson-slide.mod18-lesson2 {
+    background: linear-gradient(135deg, #7f0000 0%, #b71c1c 25%, #c62828 50%, #d32f2f 75%, #e53935 100%);
+  }
+
+  .m18l2-intro,
+  .m18l2-steps-panel,
+  .m18l2-step-item,
+  .m18l2-figure {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.16);
+    color: #ffebee;
+  }
+
+  .m18l2-hero__title,
+  .m18l2-section-title {
+    color: #ffebee;
+  }
+
+  .m18l2-intro p {
+    color: #ffcdd2;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .m18l2-hero__badge,
+  .m18l2-shape,
+  .m18l2-step-item {
+    animation: none !important;
+  }
+
+  .lesson-slide.mod18-lesson2::before,
+  .lesson-slide.mod18-lesson2::after,
+  .m18l2-step-item:hover {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* ==================== MODULE 22 • LESSON 7 - HAZARDOUS CHEMICALS ==================== */
 .lesson-slide.mod22-lesson7 {
   position: relative;
