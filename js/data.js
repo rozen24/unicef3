@@ -11886,77 +11886,172 @@ const coursesData = [
             },
             content: (function () {
               const consequences = [
-                "ব্যক্তিগত, পারিবারিক ও সামাজিক কর্মকাণ্ড ব্যাহত হয়",
-                "বিভিন্ন ধরনের শারীরিক রোগ যেমন– লিভার, কিডনি, ব্রেইন ইত্যাদি অঙ্গের রোগ হতে পারে, এমনকি মৃত্যু হতে পারে এমন রোগেও আক্রান্ত হয় যেমন– এইডস, হেপাটাইটিস ইত্যাদি",
-                "ধীরে ধীরে স্বাস্থ্যহানি হতে থাকে (ওজন অতিরিক্ত কম বা বেশি হতে পারে)",
-                "যৌন সমস্যা যেমন যৌন অক্ষমতা, পুরুষত্বহীনতা হয়",
-                "গর্ভকালীন সময়ে মাদকাসক্তি হলে গর্ভস্থ বাচ্চার ক্ষতি হয়",
-                "ফুসফুস, খাদ্যনালী, পাকস্থলি, লিভার ইত্যাদির ক্যান্সারে আক্রান্ত হতে পারে",
-                "অপরাধমূলক কর্মকাণ্ডে জড়িয়ে পড়া",
-                "লেখাপড়া ও পেশাগত কাজে পিছিয়ে পড়া",
-                "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া",
-                "আর্থিকভাবে ক্ষতিগ্রস্ত হওয়া",
-                "মানসিক চাপে ভোগা ও আত্মহত্যার প্রবণতা দেখা দেয়",
+                {
+                  text: "ব্যক্তিগত, পারিবারিক ও সামাজিক কর্মকাণ্ড ব্যাহত হয়",
+                  icon: "fa-users-slash",
+                  color: "m17l3-cons-social",
+                },
+                {
+                  text: "বিভিন্ন ধরনের শারীরিক রোগ যেমন– লিভার, কিডনি, ব্রেইন ইত্যাদি অঙ্গের রোগ হতে পারে, এমনকি মৃত্যু হতে পারে এমন রোগেও আক্রান্ত হয় যেমন– এইডস, হেপাটাইটিস ইত্যাদি",
+                  icon: "fa-heart-pulse",
+                  color: "m17l3-cons-disease",
+                },
+                {
+                  text: "ধীরে ধীরে স্বাস্থ্যহানি হতে থাকে (ওজন অতিরিক্ত কম বা বেশি হতে পারে)",
+                  icon: "fa-weight-scale",
+                  color: "m17l3-cons-health",
+                },
+                {
+                  text: "যৌন সমস্যা যেমন যৌন অক্ষমতা, পুরুষত্বহীনতা হয়",
+                  icon: "fa-venus-mars",
+                  color: "m17l3-cons-sexual",
+                },
+                {
+                  text: "গর্ভকালীন সময়ে মাদকাসক্তি হলে গর্ভস্থ বাচ্চার ক্ষতি হয়",
+                  icon: "fa-baby",
+                  color: "m17l3-cons-pregnancy",
+                },
+                {
+                  text: "ফুসফুস, খাদ্যনালী, পাকস্থলি, লিভার ইত্যাদির ক্যান্সারে আক্রান্ত হতে পারে",
+                  icon: "fa-lungs",
+                  color: "m17l3-cons-cancer",
+                },
+                {
+                  text: "অপরাধমূলক কর্মকাণ্ডে জড়িয়ে পড়া",
+                  icon: "fa-gavel",
+                  color: "m17l3-cons-crime",
+                },
+                {
+                  text: "লেখাপড়া ও পেশাগত কাজে পিছিয়ে পড়া",
+                  icon: "fa-book-open-reader",
+                  color: "m17l3-cons-education",
+                },
+                {
+                  text: "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া",
+                  icon: "fa-user-minus",
+                  color: "m17l3-cons-isolation",
+                },
+                {
+                  text: "আর্থিকভাবে ক্ষতিগ্রস্ত হওয়া",
+                  icon: "fa-sack-dollar",
+                  color: "m17l3-cons-finance",
+                },
+                {
+                  text: "মানসিক চাপে ভোগা ও আত্মহত্যার প্রবণতা দেখা দেয়",
+                  icon: "fa-brain",
+                  color: "m17l3-cons-mental",
+                },
               ];
 
               const prevention = [
-                "সহজলভ্যতা কমানো",
-                "সুশৃঙ্খল পারিবারিক বন্ধনে সহায়তা করা",
-                "স্থানীয় পর্যায়ে তরুণদের মধ্যে মাদকের ক্ষতিকর দিক সম্পর্কে সচেতনতা বৃদ্ধি",
-                "ধর্মীয় ও নৈতিক অনুশাসন মেনে চলতে উদ্বুদ্ধ করা",
-                "খেলাধুলা ও সুস্থ বিনোদনমূলক কর্মকাণ্ডে সম্পৃক্ততা বৃদ্ধি করা",
-                "দ্রুত মাদকাসক্তি শনাক্তকরণ ও চিকিৎসার জন্য প্রেরণ করা",
+                {
+                  text: "সহজলভ্যতা কমানো",
+                  icon: "fa-ban",
+                  color: "m17l3-prev-access",
+                },
+                {
+                  text: "সুশৃঙ্খল পারিবারিক বন্ধনে সহায়তা করা",
+                  icon: "fa-house-user",
+                  color: "m17l3-prev-family",
+                },
+                {
+                  text: "স্থানীয় পর্যায়ে তরুণদের মধ্যে মাদকের ক্ষতিকর দিক সম্পর্কে সচেতনতা বৃদ্ধি",
+                  icon: "fa-bullhorn",
+                  color: "m17l3-prev-awareness",
+                },
+                {
+                  text: "ধর্মীয় ও নৈতিক অনুশাসন মেনে চলতে উদ্বুদ্ধ করা",
+                  icon: "fa-scale-balanced",
+                  color: "m17l3-prev-values",
+                },
+                {
+                  text: "খেলাধুলা ও সুস্থ বিনোদনমূলক কর্মকাণ্ডে সম্পৃক্ততা বৃদ্ধি করা",
+                  icon: "fa-futbol",
+                  color: "m17l3-prev-sports",
+                },
+                {
+                  text: "দ্রুত মাদকাসক্তি শনাক্তকরণ ও চিকিৎসার জন্য প্রেরণ করা",
+                  icon: "fa-hospital-user",
+                  color: "m17l3-prev-treatment",
+                },
               ];
 
-              const renderList = (items) =>
+              const renderList = (items, delayBase = 110) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li class="m17l3-list-item ${item.color}" data-aos="zoom-in" data-aos-delay="${delayBase + idx * 35}">
+                        <div class="m17l3-list-icon" aria-hidden="true">
+                          <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <span class="m17l3-list-text">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "মাদকাসক্তির পরিণতি ও প্রতিরোধ",
-                    "মাদকাসক্তির পরিণতি ও প্রতিরোধ"
-                  )}</h2>
+                <div class="lesson-slide mod17-lesson3">
+                  <div class="m17l3-shapes" aria-hidden="true">
+                    <span class="m17l3-shape m17l3-shape--ring"></span>
+                    <span class="m17l3-shape m17l3-shape--hex"></span>
+                    <span class="m17l3-shape m17l3-shape--blob"></span>
+                  </div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="30">
-                    <div class="row g-4 align-items-stretch">
-                      <div class="col-lg-6" data-aos="fade-right">
-                        <article class="p-4 h-100 glass-card shadow-sm">
-                          <h3 class="h5 gradient-text mb-3">${yhLang(
-                            "মাদকাসক্তির পরিণতি",
-                            "মাদকাসক্তির পরিণতি"
-                          )}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(consequences)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-6" data-aos="fade-left">
-                        <article class="p-4 h-100 glass-card shadow-sm d-flex flex-column justify-content-between">
-                          <div>
-                            <h3 class="h5 gradient-text mb-3">${yhLang(
-                              "মাদকাসক্তি প্রতিরোধ",
-                              "মাদকাসক্তি প্রতিরোধ"
-                            )}</h3>
-                            <ul class="list-unstyled puberty-list mb-0">
-                              ${renderList(prevention)}
-                            </ul>
-                          </div>
-                          <div class="text-center mt-4">
-                            <img src="img/modu17/madok2.jpg" alt="মাদকাসক্তি প্রতিরোধ" class="img-fluid rounded shadow-sm img-zoom" />
-                          </div>
-                        </article>
-                      </div>
+                  <section class="m17l3-hero" data-aos="fade-down">
+                    <div class="m17l3-hero__badge" aria-hidden="true">
+                      <i class="fa-solid fa-scale-balanced"></i>
                     </div>
+                    <div class="m17l3-hero__content">
+                      <h2 class="m17l3-hero__title">${yhLang(
+                        "Consequences and Prevention of Drug Addiction",
+                        "মাদকাসক্তির পরিণতি ও প্রতিরোধ"
+                      )}</h2>
+                      <p class="m17l3-hero__subtitle">${yhLang(
+                        "Understand risks and protect adolescents",
+                        "ঝুঁকি বুঝে কিশোরদের সুরক্ষা নিশ্চিত করুন"
+                      )}</p>
+                    </div>
+                  </section>
+
+                  <section class="m17l3-grid">
+                    <article class="m17l3-panel m17l3-panel--consequence" data-aos="fade-right" data-aos-delay="40">
+                      <div class="m17l3-panel-header">
+                        <div class="m17l3-panel-icon" aria-hidden="true">
+                          <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <h3 class="m17l3-panel-title">${yhLang(
+                          "Consequences of Addiction",
+                          "মাদকাসক্তির পরিণতি"
+                        )}</h3>
+                      </div>
+                      <ul class="m17l3-list">
+                        ${renderList(consequences, 120)}
+                      </ul>
+                    </article>
+
+                    <article class="m17l3-panel m17l3-panel--prevention" data-aos="fade-left" data-aos-delay="70">
+                      <div class="m17l3-panel-header">
+                        <div class="m17l3-panel-icon" aria-hidden="true">
+                          <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <h3 class="m17l3-panel-title">${yhLang(
+                          "Addiction Prevention",
+                          "মাদকাসক্তি প্রতিরোধ"
+                        )}</h3>
+                      </div>
+                      <ul class="m17l3-list">
+                        ${renderList(prevention, 140)}
+                      </ul>
+
+                      <figure class="m17l3-image-wrap" data-aos="zoom-in" data-aos-delay="360">
+                        <img
+                          src="img/modu17/madok2.jpg"
+                          alt="মাদকাসক্তি প্রতিরোধ"
+                          class="m17l3-image"
+                        />
+                      </figure>
+                    </article>
                   </section>
                 </div>
               `;

@@ -9863,6 +9863,436 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 }
 
+/* ==================== MODULE 17 • LESSON 3 - CONSEQUENCES & PREVENTION ==================== */
+.lesson-slide.mod17-lesson3 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg,
+    #e8f5e9 0%,
+    #dcedc8 22%,
+    #c5e1a5 45%,
+    #b2dfdb 70%,
+    #80cbc4 100%
+  );
+  padding: 12px 10px;
+  overflow: hidden;
+}
+
+.lesson-slide.mod17-lesson3::before {
+  content: "";
+  position: absolute;
+  top: -38%;
+  right: -14%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 142, 60, 0.18), transparent 70%);
+  filter: blur(52px);
+  pointer-events: none;
+  animation: floatSlow 27s ease-in-out infinite;
+}
+
+.lesson-slide.mod17-lesson3::after {
+  content: "";
+  position: absolute;
+  bottom: -35%;
+  left: -18%;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(38, 166, 154, 0.18), transparent 72%);
+  filter: blur(48px);
+  pointer-events: none;
+  animation: floatSlow 24s ease-in-out infinite reverse;
+}
+
+.m17l3-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.24;
+}
+
+.m17l3-shape {
+  position: absolute;
+  border: 1.5px solid rgba(56, 142, 60, 0.24);
+  animation: float 24s ease-in-out infinite;
+}
+
+.m17l3-shape--ring {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  top: 12%;
+  right: 10%;
+  background: radial-gradient(circle, rgba(129, 199, 132, 0.16), transparent);
+}
+
+.m17l3-shape--hex {
+  width: 44px;
+  height: 44px;
+  bottom: 16%;
+  right: 16%;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  animation-delay: 1.6s;
+  background: linear-gradient(135deg, rgba(38, 166, 154, 0.16), transparent);
+}
+
+.m17l3-shape--blob {
+  width: 48px;
+  height: 48px;
+  border-radius: 42% 58% 62% 38% / 45% 35% 65% 55%;
+  left: 8%;
+  top: 68%;
+  animation-delay: 2.2s;
+  background: linear-gradient(135deg, rgba(104, 159, 56, 0.16), transparent);
+}
+
+.m17l3-hero {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 142, 60, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 5px 16px rgba(56, 142, 60, 0.14),
+    0 1px 4px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.84);
+  margin-bottom: 11px;
+  backdrop-filter: blur(10px);
+}
+
+.m17l3-hero__badge {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #43a047, #00796b);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(67, 160, 71, 0.34);
+  animation: m17l3Pulse 3s ease-in-out infinite;
+}
+
+@keyframes m17l3Pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 4px 12px rgba(67, 160, 71, 0.3); }
+  50% { transform: scale(1.08); box-shadow: 0 6px 16px rgba(0, 121, 107, 0.36); }
+}
+
+.m17l3-hero__badge i {
+  font-size: 1rem;
+}
+
+.m17l3-hero__title {
+  margin: 0 0 3px;
+  font-size: 0.96rem;
+  font-weight: 800;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #2e7d32, #00796b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.m17l3-hero__subtitle {
+  margin: 0;
+  font-size: 0.68rem;
+  color: rgba(46, 125, 50, 0.78);
+  font-weight: 600;
+}
+
+.m17l3-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.m17l3-panel {
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 10px;
+  border: 1px solid rgba(56, 142, 60, 0.16);
+}
+
+.m17l3-panel--consequence {
+  box-shadow:
+    -4px 7px 16px rgba(198, 40, 40, 0.14),
+    0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.m17l3-panel--prevention {
+  box-shadow:
+    4px 7px 16px rgba(0, 121, 107, 0.14),
+    0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.m17l3-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 9px;
+}
+
+.m17l3-panel-icon {
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.78rem;
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  box-shadow: 0 2px 8px rgba(67, 160, 71, 0.26);
+}
+
+.m17l3-panel--prevention .m17l3-panel-icon {
+  background: linear-gradient(135deg, #26a69a, #00796b);
+  box-shadow: 0 2px 8px rgba(38, 166, 154, 0.26);
+}
+
+.m17l3-panel-title {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.m17l3-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.m17l3-list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 8px;
+  border-radius: 9px;
+  border-left: 2.5px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 0.28s ease;
+}
+
+.m17l3-list-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background: linear-gradient(135deg, currentColor, transparent);
+  pointer-events: none;
+}
+
+.m17l3-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.11);
+}
+
+.m17l3-list-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.66rem;
+  transition: transform 0.3s ease;
+}
+
+.m17l3-list-item:hover .m17l3-list-icon {
+  transform: scale(1.1) rotate(8deg);
+}
+
+.m17l3-list-text {
+  flex: 1;
+  font-size: 0.64rem;
+  line-height: 1.35;
+  color: rgba(0, 0, 0, 0.79);
+  font-weight: 500;
+}
+
+.m17l3-cons-social { color: #8e24aa; border-left-color: #8e24aa; background: rgba(245, 232, 255, 0.88); }
+.m17l3-cons-social .m17l3-list-icon { background: linear-gradient(135deg, #ba68c8, #8e24aa); }
+
+.m17l3-cons-disease { color: #d32f2f; border-left-color: #d32f2f; background: rgba(255, 235, 238, 0.9); }
+.m17l3-cons-disease .m17l3-list-icon { background: linear-gradient(135deg, #ef5350, #d32f2f); }
+
+.m17l3-cons-health { color: #ef6c00; border-left-color: #ef6c00; background: rgba(255, 243, 224, 0.9); }
+.m17l3-cons-health .m17l3-list-icon { background: linear-gradient(135deg, #ffb74d, #ef6c00); }
+
+.m17l3-cons-sexual { color: #c2185b; border-left-color: #c2185b; background: rgba(252, 228, 236, 0.9); }
+.m17l3-cons-sexual .m17l3-list-icon { background: linear-gradient(135deg, #ec407a, #c2185b); }
+
+.m17l3-cons-pregnancy { color: #5e35b1; border-left-color: #5e35b1; background: rgba(237, 231, 246, 0.9); }
+.m17l3-cons-pregnancy .m17l3-list-icon { background: linear-gradient(135deg, #7e57c2, #5e35b1); }
+
+.m17l3-cons-cancer { color: #6d4c41; border-left-color: #6d4c41; background: rgba(239, 235, 233, 0.9); }
+.m17l3-cons-cancer .m17l3-list-icon { background: linear-gradient(135deg, #8d6e63, #6d4c41); }
+
+.m17l3-cons-crime { color: #ad1457; border-left-color: #ad1457; background: rgba(252, 228, 236, 0.9); }
+.m17l3-cons-crime .m17l3-list-icon { background: linear-gradient(135deg, #d81b60, #ad1457); }
+
+.m17l3-cons-education { color: #1565c0; border-left-color: #1565c0; background: rgba(227, 242, 253, 0.9); }
+.m17l3-cons-education .m17l3-list-icon { background: linear-gradient(135deg, #42a5f5, #1565c0); }
+
+.m17l3-cons-isolation { color: #455a64; border-left-color: #455a64; background: rgba(236, 239, 241, 0.9); }
+.m17l3-cons-isolation .m17l3-list-icon { background: linear-gradient(135deg, #78909c, #455a64); }
+
+.m17l3-cons-finance { color: #2e7d32; border-left-color: #2e7d32; background: rgba(232, 245, 233, 0.92); }
+.m17l3-cons-finance .m17l3-list-icon { background: linear-gradient(135deg, #66bb6a, #2e7d32); }
+
+.m17l3-cons-mental { color: #37474f; border-left-color: #37474f; background: rgba(236, 239, 241, 0.92); }
+.m17l3-cons-mental .m17l3-list-icon { background: linear-gradient(135deg, #607d8b, #37474f); }
+
+.m17l3-prev-access { color: #c62828; border-left-color: #c62828; background: rgba(255, 235, 238, 0.92); }
+.m17l3-prev-access .m17l3-list-icon { background: linear-gradient(135deg, #ef5350, #c62828); }
+
+.m17l3-prev-family { color: #6d4c41; border-left-color: #6d4c41; background: rgba(239, 235, 233, 0.92); }
+.m17l3-prev-family .m17l3-list-icon { background: linear-gradient(135deg, #8d6e63, #6d4c41); }
+
+.m17l3-prev-awareness { color: #0277bd; border-left-color: #0277bd; background: rgba(227, 242, 253, 0.92); }
+.m17l3-prev-awareness .m17l3-list-icon { background: linear-gradient(135deg, #29b6f6, #0277bd); }
+
+.m17l3-prev-values { color: #7b1fa2; border-left-color: #7b1fa2; background: rgba(243, 229, 245, 0.92); }
+.m17l3-prev-values .m17l3-list-icon { background: linear-gradient(135deg, #ab47bc, #7b1fa2); }
+
+.m17l3-prev-sports { color: #2e7d32; border-left-color: #2e7d32; background: rgba(232, 245, 233, 0.92); }
+.m17l3-prev-sports .m17l3-list-icon { background: linear-gradient(135deg, #66bb6a, #2e7d32); }
+
+.m17l3-prev-treatment { color: #00897b; border-left-color: #00897b; background: rgba(224, 242, 241, 0.92); }
+.m17l3-prev-treatment .m17l3-list-icon { background: linear-gradient(135deg, #26a69a, #00897b); }
+
+.m17l3-image-wrap {
+  margin: 9px 0 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 121, 107, 0.2);
+  box-shadow: 0 7px 16px rgba(0, 121, 107, 0.2);
+}
+
+.m17l3-image {
+  width: 100%;
+  display: block;
+  max-height: 165px;
+  object-fit: cover;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lesson-slide.mod17-lesson3 {
+    background: linear-gradient(135deg,
+      #1b5e20 0%,
+      #2e7d32 26%,
+      #00796b 60%,
+      #004d40 100%
+    );
+  }
+
+  .m17l3-hero,
+  .m17l3-panel,
+  .m17l3-list-item {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(167, 255, 235, 0.2);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+  }
+
+  .m17l3-panel-title,
+  .m17l3-hero__subtitle,
+  .m17l3-list-text {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .m17l3-hero__title {
+    background: linear-gradient(135deg, #a5d6a7, #80cbc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@media (max-width: 1024px) {
+  .m17l3-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .m17l3-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson-slide.mod17-lesson3 {
+    padding: 10px 8px;
+  }
+
+  .m17l3-hero,
+  .m17l3-panel {
+    padding: 9px;
+  }
+
+  .m17l3-hero__title {
+    font-size: 0.86rem;
+  }
+
+  .m17l3-hero__subtitle {
+    font-size: 0.62rem;
+  }
+
+  .m17l3-panel-title {
+    font-size: 0.74rem;
+  }
+
+  .m17l3-list-text {
+    font-size: 0.61rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .m17l3-list-icon,
+  .m17l3-panel-icon {
+    min-width: 22px;
+  }
+
+  .m17l3-list-text {
+    font-size: 0.58rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m17l3-hero__badge,
+  .m17l3-shape,
+  .m17l3-list-item {
+    animation: none !important;
+  }
+
+  .lesson-slide.mod17-lesson3::before,
+  .lesson-slide.mod17-lesson3::after,
+  .m17l3-list-item:hover,
+  .m17l3-list-icon {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* ==================== MODULE 22 • LESSON 7 - HAZARDOUS CHEMICALS ==================== */
 .lesson-slide.mod22-lesson7 {
   position: relative;
