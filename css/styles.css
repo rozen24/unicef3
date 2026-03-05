@@ -11211,6 +11211,379 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 }
 
+/* ==================== MODULE 18 • LESSON 3 - BURN INJURIES ==================== */
+.lesson-slide.mod18-lesson3 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 28%, #ffccbc 58%, #f8bbd0 100%);
+  padding: 13px 10px;
+  overflow: hidden;
+}
+
+.lesson-slide.mod18-lesson3::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: -14%;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 138, 101, 0.22), transparent 68%);
+  filter: blur(46px);
+  animation: m18l3Float 18s ease-in-out infinite;
+}
+
+.lesson-slide.mod18-lesson3::after {
+  content: "";
+  position: absolute;
+  right: -16%;
+  bottom: -23%;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 143, 177, 0.2), transparent 66%);
+  filter: blur(42px);
+  animation: m18l3Float 16s ease-in-out infinite reverse;
+}
+
+@keyframes m18l3Float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  35% { transform: translate(14px, -18px) scale(1.05); }
+  70% { transform: translate(-12px, 16px) scale(0.97); }
+}
+
+.m18l3-shape {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.m18l3-shape-1 {
+  top: 12%;
+  right: 7%;
+  width: 95px;
+  height: 95px;
+  border: 3px solid #ef6c00;
+  border-radius: 50%;
+  animation: m18l3Rotate 24s linear infinite;
+}
+
+.m18l3-shape-2 {
+  left: 5%;
+  bottom: 17%;
+  width: 82px;
+  height: 82px;
+  background: linear-gradient(135deg, #ff8a65, #f4511e);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation: m18l3Rotate 20s linear infinite reverse;
+}
+
+.m18l3-shape-3 {
+  top: 46%;
+  right: 3%;
+  width: 112px;
+  height: 112px;
+  background: linear-gradient(135deg, #ffb74d, #ff7043);
+  border-radius: 34% 66% 72% 28% / 34% 34% 66% 66%;
+  animation: m18l3Morph 21s ease-in-out infinite;
+}
+
+@keyframes m18l3Rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes m18l3Morph {
+  0%, 100% { border-radius: 34% 66% 72% 28% / 34% 34% 66% 66%; }
+  50% { border-radius: 66% 34% 28% 72% / 66% 66% 34% 34%; }
+}
+
+.m18l3-hero,
+.m18l3-intro,
+.m18l3-panel {
+  position: relative;
+  z-index: 10;
+}
+
+.m18l3-hero {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.m18l3-hero-badge {
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #f4511e, #d84315);
+  box-shadow: 0 4px 12px rgba(216, 67, 21, 0.35), 0 0 0 4px rgba(255, 255, 255, 0.25);
+  animation: m18l3Pulse 2.8s ease-in-out infinite;
+}
+
+.m18l3-hero-badge i {
+  font-size: 1.7rem;
+}
+
+@keyframes m18l3Pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+.m18l3-hero-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #bf360c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.m18l3-hero-title i {
+  font-size: 1.1rem;
+  color: #e65100;
+}
+
+.m18l3-intro {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-left: 4px solid #ef6c00;
+  border-radius: 10px;
+  padding: 11px 12px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  box-shadow: 0 4px 12px rgba(239, 108, 0, 0.12), 0 2px 5px rgba(191, 54, 12, 0.08);
+}
+
+.m18l3-intro p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.52;
+  color: #4e342e;
+}
+
+.m18l3-panel {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 11px;
+  padding: 12px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.m18l3-panel-types {
+  box-shadow: -6px 8px 14px rgba(255, 112, 67, 0.16), 0 2px 5px rgba(230, 81, 0, 0.08);
+}
+
+.m18l3-panel-causes {
+  box-shadow: 6px 8px 14px rgba(244, 143, 177, 0.16), 0 2px 5px rgba(173, 20, 87, 0.08);
+}
+
+.m18l3-section-title {
+  margin: 0 0 10px;
+  font-size: 0.98rem;
+  font-weight: 650;
+  color: #bf360c;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.m18l3-section-title i {
+  color: #ef6c00;
+  font-size: 1rem;
+}
+
+.m18l3-types-grid,
+.m18l3-cause-list {
+  display: grid;
+  gap: 9px;
+}
+
+.m18l3-type-card,
+.m18l3-cause-item {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-left: 3px solid;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.m18l3-type-card {
+  padding: 9px 10px;
+  box-shadow: 0 2px 7px rgba(121, 85, 72, 0.08);
+}
+
+.m18l3-type-title {
+  margin: 0 0 6px;
+  font-size: 0.83rem;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #4e342e;
+}
+
+.m18l3-type-icon,
+.m18l3-cause-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+}
+
+.m18l3-type-card p,
+.m18l3-cause-item p {
+  font-size: 0.73rem;
+  line-height: 1.48;
+}
+
+.m18l3-cause-item {
+  padding: 9px 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(121, 85, 72, 0.1);
+}
+
+.m18l3-cause-item:hover,
+.m18l3-type-card:hover {
+  transform: translateX(3px);
+  transition: transform 0.25s ease;
+}
+
+.m18l3-type-first {
+  border-left-color: #f57c00;
+  background: rgba(255, 243, 224, 0.9);
+}
+
+.m18l3-type-first .m18l3-type-icon { background: linear-gradient(135deg, #ffa726, #f57c00); }
+.m18l3-type-first p { color: #e65100; }
+
+.m18l3-type-second {
+  border-left-color: #e53935;
+  background: rgba(255, 235, 238, 0.9);
+}
+
+.m18l3-type-second .m18l3-type-icon { background: linear-gradient(135deg, #ef5350, #e53935); }
+.m18l3-type-second p { color: #b71c1c; }
+
+.m18l3-type-third {
+  border-left-color: #6d4c41;
+  background: rgba(239, 235, 233, 0.92);
+}
+
+.m18l3-type-third .m18l3-type-icon { background: linear-gradient(135deg, #8d6e63, #6d4c41); }
+.m18l3-type-third p { color: #4e342e; }
+
+.m18l3-cause-heat {
+  border-left-color: #ff7043;
+  background: rgba(255, 243, 224, 0.9);
+}
+
+.m18l3-cause-heat .m18l3-cause-icon { background: linear-gradient(135deg, #ff8a65, #ff7043); }
+.m18l3-cause-heat p { color: #bf360c; }
+
+.m18l3-cause-chemical {
+  border-left-color: #8e24aa;
+  background: rgba(243, 229, 245, 0.9);
+}
+
+.m18l3-cause-chemical .m18l3-cause-icon { background: linear-gradient(135deg, #ab47bc, #8e24aa); }
+.m18l3-cause-chemical p { color: #6a1b9a; }
+
+.m18l3-cause-electric {
+  border-left-color: #1e88e5;
+  background: rgba(227, 242, 253, 0.9);
+}
+
+.m18l3-cause-electric .m18l3-cause-icon { background: linear-gradient(135deg, #42a5f5, #1e88e5); }
+.m18l3-cause-electric p { color: #0d47a1; }
+
+.m18l3-cause-radiation {
+  border-left-color: #f9a825;
+  background: rgba(255, 253, 231, 0.92);
+}
+
+.m18l3-cause-radiation .m18l3-cause-icon { background: linear-gradient(135deg, #fdd835, #f9a825); }
+.m18l3-cause-radiation p { color: #f57f17; }
+
+@media (max-width: 1024px) {
+  .lesson-slide.mod18-lesson3 { padding: 12px 9px; }
+  .m18l3-hero-badge { width: 60px; height: 60px; }
+  .m18l3-hero-badge i { font-size: 1.52rem; }
+  .m18l3-hero-title { font-size: 1.14rem; }
+}
+
+@media (max-width: 768px) {
+  .lesson-slide.mod18-lesson3 { padding: 10px 8px; }
+  .m18l3-hero-badge { width: 55px; height: 55px; }
+  .m18l3-hero-badge i { font-size: 1.35rem; }
+  .m18l3-hero-title { font-size: 1.02rem; }
+  .m18l3-section-title { font-size: 0.88rem; }
+  .m18l3-type-card p,
+  .m18l3-cause-item p { font-size: 0.69rem; }
+}
+
+@media (max-width: 480px) {
+  .m18l3-intro,
+  .m18l3-panel,
+  .m18l3-type-card,
+  .m18l3-cause-item { padding: 8px 9px; }
+  .m18l3-type-icon,
+  .m18l3-cause-icon { width: 25px; height: 25px; font-size: 0.74rem; }
+  .m18l3-intro p { font-size: 0.72rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .lesson-slide.mod18-lesson3 {
+    background: linear-gradient(135deg, #4e342e 0%, #5d4037 30%, #6d4c41 65%, #795548 100%);
+  }
+
+  .m18l3-intro,
+  .m18l3-panel,
+  .m18l3-type-card,
+  .m18l3-cause-item {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+
+  .m18l3-hero-title,
+  .m18l3-section-title,
+  .m18l3-type-title,
+  .m18l3-intro p,
+  .m18l3-type-card p,
+  .m18l3-cause-item p {
+    color: #fff3e0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-slide.mod18-lesson3::before,
+  .lesson-slide.mod18-lesson3::after,
+  .m18l3-shape,
+  .m18l3-hero-badge {
+    animation: none !important;
+  }
+
+  .m18l3-cause-item:hover,
+  .m18l3-type-card:hover {
+    transform: none !important;
+  }
+}
+
 /* ==================== MODULE 22 • LESSON 7 - HAZARDOUS CHEMICALS ==================== */
 .lesson-slide.mod22-lesson7 {
   position: relative;

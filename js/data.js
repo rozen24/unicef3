@@ -12350,86 +12350,142 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "বাংলাদেশে পুড়ে যাওয়া হল ইনজুরির অন্যতম কারণ। পুড়ে যাওয়া স্থানের দ্রুত চিকিৎসা করা প্রয়োজন।";
+              const intro = yhLang(
+                "Burn injury is one of the common causes of injury in Bangladesh. A burned area needs quick and proper treatment.",
+                "বাংলাদেশে পুড়ে যাওয়া হল ইনজুরির অন্যতম কারণ। পুড়ে যাওয়া স্থানের দ্রুত চিকিৎসা করা প্রয়োজন।"
+              );
 
-              const burnTypesHeading = "পোড়া ক্ষতের প্রকারভেদ";
               const burnTypes = [
                 {
-                  title: "প্রথম ডিগ্রি বার্ন",
-                  text: "ত্বকের উপরিভাগ ক্ষতিগ্রস্ত হয়। লক্ষণগুলোর মধ্যে রয়েছে লালভাব, ফোলা এবং হালকা ব্যথা।",
+                  title: yhLang("First-degree burn", "প্রথম ডিগ্রি বার্ন"),
+                  text: yhLang(
+                    "The outer skin layer is affected. Common signs include redness, mild swelling, and mild pain.",
+                    "ত্বকের উপরিভাগ ক্ষতিগ্রস্ত হয়। লক্ষণগুলোর মধ্যে রয়েছে লালভাব, ফোলা এবং হালকা ব্যথা।"
+                  ),
+                  icon: "fa-temperature-low",
+                  color: "m18l3-type-first",
                 },
                 {
-                  title: "দ্বিতীয় ডিগ্রি বার্ন",
-                  text: "ত্বকের উপরের স্তর এবং নিচের ডার্মিস স্তর ক্ষতিগ্রস্ত হয়। ফোসকা, তীব্র ব্যথা এবং লালভাব দেখা দেয়।",
+                  title: yhLang("Second-degree burn", "দ্বিতীয় ডিগ্রি বার্ন"),
+                  text: yhLang(
+                    "Both the outer skin layer and dermis are affected. Blisters, severe pain, and redness can appear.",
+                    "ত্বকের উপরের স্তর এবং নিচের ডার্মিস স্তর ক্ষতিগ্রস্ত হয়। ফোসকা, তীব্র ব্যথা এবং লালভাব দেখা দেয়।"
+                  ),
+                  icon: "fa-fire-flame-curved",
+                  color: "m18l3-type-second",
                 },
                 {
-                  title: "তৃতীয় ডিগ্রি বার্ন",
-                  text: "ত্বকের সব স্তর ক্ষতিগ্রস্ত হয় এবং টিস্যু মারা যেতে পারে। ক্ষতস্থান কালো, সাদা বা বাদামী রঙের হতে পারে এবং ব্যথা অনুভূত নাও হতে পারে।",
+                  title: yhLang("Third-degree burn", "তৃতীয় ডিগ্রি বার্ন"),
+                  text: yhLang(
+                    "All skin layers are damaged and tissue may die. The wound may look black, white, or brown, and pain may be absent.",
+                    "ত্বকের সব স্তর ক্ষতিগ্রস্ত হয় এবং টিস্যু মারা যেতে পারে। ক্ষতস্থান কালো, সাদা বা বাদামী রঙের হতে পারে এবং ব্যথা অনুভূত নাও হতে পারে।"
+                  ),
+                  icon: "fa-skull-crossbones",
+                  color: "m18l3-type-third",
                 },
               ];
 
-              const causesHeading = "পোড়া ক্ষতের কারণ";
               const causes = [
-                "তাপ: আগুন, গরম পানি, বাষ্প বা গরম বস্তু সংস্পর্শ",
-                "রাসায়নিক: এসিড, ক্ষার বা অন্যান্য রাসায়নিকের সংস্পর্শ",
-                "বিদ্যুৎ: বৈদ্যুতিক শক বা বিদ্যুৎ প্রবাহ",
-                "বিকিরণ: সূর্যের অতিবেগুনি রশ্মি বা রেডিওথেরাপির কারণে",
+                {
+                  text: yhLang(
+                    "Heat: fire, hot water, steam, or contact with hot objects",
+                    "তাপ: আগুন, গরম পানি, বাষ্প বা গরম বস্তু সংস্পর্শ"
+                  ),
+                  icon: "fa-fire",
+                  color: "m18l3-cause-heat",
+                },
+                {
+                  text: yhLang(
+                    "Chemical: exposure to acid, alkali, or other chemicals",
+                    "রাসায়নিক: এসিড, ক্ষার বা অন্যান্য রাসায়নিকের সংস্পর্শ"
+                  ),
+                  icon: "fa-flask-vial",
+                  color: "m18l3-cause-chemical",
+                },
+                {
+                  text: yhLang(
+                    "Electric: electric shock or current flow",
+                    "বিদ্যুৎ: বৈদ্যুতিক শক বা বিদ্যুৎ প্রবাহ"
+                  ),
+                  icon: "fa-bolt",
+                  color: "m18l3-cause-electric",
+                },
+                {
+                  text: yhLang(
+                    "Radiation: ultraviolet rays from sun or radiotherapy",
+                    "বিকিরণ: সূর্যের অতিবেগুনি রশ্মি বা রেডিওথেরাপির কারণে"
+                  ),
+                  icon: "fa-sun",
+                  color: "m18l3-cause-radiation",
+                },
               ];
 
               const renderTypeCards = (items) =>
                 items
                   .map(
                     (item, index) => `
-                      <article class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="${60 +
-                        index * 40}">
-                        <h4 class="h6 gradient-text mb-1">${item.title}</h4>
+                      <article class="m18l3-type-card ${item.color}" data-aos="fade-up" data-aos-delay="${40 + index * 40}">
+                        <h4 class="m18l3-type-title">
+                          <span class="m18l3-type-icon"><i class="fa-solid ${item.icon}"></i></span>
+                          ${item.title}
+                        </h4>
                         <p class="mb-0">${item.text}</p>
                       </article>
                     `
                   )
                   .join("");
 
-              const renderList = (items) =>
+              const renderCauseList = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
+                    (item, index) => `
+                      <div class="m18l3-cause-item ${item.color}" data-aos="fade-up" data-aos-delay="${55 + index * 35}">
+                        <span class="m18l3-cause-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <p class="mb-0">${item.text}</p>
+                      </div>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "পোড়া",
-                    "পোড়া"
-                  )}</h2>
+                <div class="lesson-slide mod18-lesson3">
+                  <div class="m18l3-shape m18l3-shape-1"></div>
+                  <div class="m18l3-shape m18l3-shape-2"></div>
+                  <div class="m18l3-shape m18l3-shape-3"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                  <header class="m18l3-hero" data-aos="zoom-in" data-aos-duration="600">
+                    <div class="m18l3-hero-badge"><i class="fa-solid fa-fire"></i></div>
+                    <h2 class="m18l3-hero-title">
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                      ${yhLang("Burn Injuries", "পোড়া")}
+                    </h2>
+                  </header>
+
+                  <section class="m18l3-intro" data-aos="fade-up" data-aos-delay="20">
+                    <h3 class="m18l3-section-title">
+                      <i class="fa-solid fa-circle-info"></i>
+                      ${yhLang("Overview", "পরিচিতি")}
+                    </h3>
                     <p class="mb-0">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        <div class="burn-types">
-                          <h3 class="h6 gradient-text mb-3">${burnTypesHeading}</h3>
-                          ${renderTypeCards(burnTypes)}
-                          <h3 class="h6 gradient-text mb-3">${causesHeading}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(causes)}
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-lg-5">
-                        <figure class="text-center mb-0">
-                          <img src="img/modu18/pora.jpg" alt="পোড়া" class="img-fluid rounded shadow-sm img-zoom" />
-                        </figure>
-                      </div>
+                  <section class="m18l3-panel m18l3-panel-types" data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="m18l3-section-title">
+                      <i class="fa-solid fa-layer-group"></i>
+                      ${yhLang("Types of Burn Injuries", "পোড়া ক্ষতের প্রকারভেদ")}
+                    </h3>
+                    <div class="m18l3-types-grid">
+                      ${renderTypeCards(burnTypes)}
+                    </div>
+                  </section>
+
+                  <section class="m18l3-panel m18l3-panel-causes" data-aos="fade-up" data-aos-delay="90">
+                    <h3 class="m18l3-section-title">
+                      <i class="fa-solid fa-list-check"></i>
+                      ${yhLang("Causes of Burn Injuries", "পোড়া ক্ষতের কারণ")}
+                    </h3>
+                    <div class="m18l3-cause-list">
+                      ${renderCauseList(causes)}
                     </div>
                   </section>
                 </div>
