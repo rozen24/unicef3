@@ -13470,209 +13470,129 @@ const coursesData = [
             },
             content: (function () {
               const firstGuidance = [
-                "শ্বাস আটকে যাওয়া ব্যক্তির পিছনে এবং সামান্য পাশে দাঁড়াতে হবে।",
-                "এক হাতের সাহায্যে ব্যক্তিকে যতদূর সম্ভব সামনের দিকে হেলতে সহযোগিতা করতে হবে।",
-                "আপনার অন্য হাতের তালু দিয়ে ব্যক্তির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
-                "আঘাতের পর লক্ষ্য করতে হবে যে গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং আক্রান্ত ব্যক্তি শ্বাস নিতে পারছে কিনা?",
+                {
+                  text: yhLang(
+                    "Stand behind and slightly to the side of the choking person.",
+                    "শ্বাস আটকে যাওয়া ব্যক্তির পিছনে এবং সামান্য পাশে দাঁড়াতে হবে।"
+                  ),
+                  icon: "fa-user-check",
+                  color: "m18l11-first-position",
+                },
+                {
+                  text: yhLang(
+                    "Support the person with one hand and help them lean forward as much as possible.",
+                    "এক হাতের সাহায্যে ব্যক্তিকে যতদূর সম্ভব সামনের দিকে হেলতে সহযোগিতা করতে হবে।"
+                  ),
+                  icon: "fa-forward",
+                  color: "m18l11-first-lean",
+                },
+                {
+                  text: yhLang(
+                    "Using the heel of your other hand, give 5 firm back blows between the shoulder blades.",
+                    "আপনার অন্য হাতের তালু দিয়ে ব্যক্তির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।"
+                  ),
+                  icon: "fa-hand",
+                  color: "m18l11-first-backblow",
+                },
+                {
+                  text: yhLang(
+                    "After each blow, check whether the object is expelled and the person can breathe.",
+                    "আঘাতের পর লক্ষ্য করতে হবে যে গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং আক্রান্ত ব্যক্তি শ্বাস নিতে পারছে কিনা?"
+                  ),
+                  icon: "fa-binoculars",
+                  color: "m18l11-first-check",
+                },
               ];
 
               const followupText = [
-                "আক্রান্ত ব্যক্তির পিছনে দাঁড়িয়ে ব্যক্তির পাঁজরের নিচে কোমর বরাবর প্রাথমিক চিকিৎসা প্রদানকারী তার দুই হাত দিয়ে আঁকড়ে ধরবেন।",
-                "এক হাত মুষ্টিবদ্ধ করে মুষ্টির বুড়ো আঙুলের দিকটি আক্রান্ত ব্যক্তির নাভি বরাবর বা সামান্য উপরে, পেটের মাঝখানে রাখতে হবে।",
-                "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।",
-                "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।",
-                "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।",
-                "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।",
-                "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।",
-                "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।",
-                "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।",
-                "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              const renderParagraphs = (items) =>
-                items.map((item) => `<p class="mb-3"> <i class="fa-solid fa-circle-check"></i> ${item}</p>`).join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "প্রাথমিক চিকিৎসা",
-                    "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)"
-                  )}</h2>
-                  
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-5">
-                        <figure class="text-center mb-0">
-                          <img src="img/modu18/basic-treatment.bmp" alt="চোকিং প্রাথমিক চিকিৎসা" class="img-fluid img-zoom rounded shadow-sm" />
-                        </figure>
-                      </div>
-                      <div class="col-lg-7">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(firstGuidance)}
-                          </ul>
-                        </article>
-                      </div>
-                    </div>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
-                  <h3 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "প্রাথমিক চিকিৎসা",
-                    "যদিবস্তুটি বের না হয় এবং আক্রান্ত ব্যক্তির শ্বাসকষ্ট বজায় থাকে—"
-                  )}</h3>
-                    ${renderParagraphs(followupText)}
-                    <div class="row g-1 mt-1">
-                      ${["img/modu18/basic.jpg", "img/modu18/basic2.jpg", "img/modu18/basic3.jpg"]
-                        .map(
-                          (src) => `
-                            <div class="col-md-4">
-                              <figure class="text-center mb-0">
-                                <img src="${src}" alt="চোকিং প্রাথমিক চিকিৎসা" class="img-fluid rounded shadow-sm img-zoom" />
-                              </figure>
-                            </div>
-                          `
-                        )
-                        .join("")}
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch18-lesson-12",
-            title: yhLang(
-              "Infant Choking First Aid",
-              "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচে)"
-            ),
-            icon: "fa-baby",
-            gradientClass: "bg-gradient-sky",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
                 {
-                  id: "q18l",
-                  question: yhLang(
-                    "শিশুর পিঠে কয়বার চাপড় দিতে নির্দেশনা দেওয়া হয়েছে?",
-                    "শিশুর পিঠে কয়বার চাপড় দিতে নির্দেশনা দেওয়া হয়েছে?"
+                  text: yhLang(
+                    "Stand behind the person and wrap both arms around their waist below the ribs.",
+                    "আক্রান্ত ব্যক্তির পিছনে দাঁড়িয়ে ব্যক্তির পাঁজরের নিচে কোমর বরাবর প্রাথমিক চিকিৎসা প্রদানকারী তার দুই হাত দিয়ে আঁকড়ে ধরবেন।"
                   ),
-                  options: [
-                    yhLang("৫ বার", "৫ বার"),
-                    yhLang("২ বার", "২ বার"),
-                    yhLang("৮ বার", "৮ বার"),
-                    yhLang("একবার", "একবার"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const chokingIntro =
-                "শ্বাসনালীতে কিছু আটকে আংশিক বা পরিপূর্ণ প্রতিবন্ধকতা তৈরি হওয়ার ফলে বাতাসের অভাবের কারণে ব্যক্তির শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়। সাধারণত খাবার খাওয়ার সময় বা মুখে কিছু দেওয়ার সময় এটি ঘটে থাকে, যা একটি জীবন-সংশয়কারী জরুরি অবস্থা।";
-
-              const chokingScenarios =
-                "শিশুদের ক্ষেত্রে অনেক সময় খাদ্যবস্তু ছাড়াও অন্যান্য বস্তু (যেমন— কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা) গলায় আটকে গিয়ে এমন শ্বাসরোধকারী পরিস্থিতির সৃষ্টি হতে পারে। প্রাপ্তবয়স্কদের বেশির ভাগ ক্ষেত্রেই খাওয়ার সময় খাদ্যবস্তু শ্বাসনালীতে আটকে এরূপ পরিস্থিতি উদ্ভূত হয়ে থাকে।";
-
-              const chokingPoints = [
-                {
-                  text: "শ্বাসনালীতে কিছু আটকে আংশিক বা পূর্ণ প্রতিবন্ধকতা তৈরি হতে পারে।",
-                  icon: "fa-road-barrier",
-                  color: "m18l10-point-block",
+                  icon: "fa-people-arrows",
+                  color: "m18l11-follow-grip",
                 },
                 {
-                  text: "বাতাসের অভাবে শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়।",
-                  icon: "fa-wind",
-                  color: "m18l10-point-breath",
+                  text: yhLang(
+                    "Make a fist and place the thumb side at or slightly above the navel, in the center of the abdomen.",
+                    "এক হাত মুষ্টিবদ্ধ করে মুষ্টির বুড়ো আঙুলের দিকটি আক্রান্ত ব্যক্তির নাভি বরাবর বা সামান্য উপরে, পেটের মাঝখানে রাখতে হবে।"
+                  ),
+                  icon: "fa-hand-back-fist",
+                  color: "m18l11-follow-fist",
                 },
                 {
-                  text: "খাবার খাওয়া বা মুখে কিছু দেওয়ার সময় এ সমস্যা বেশি দেখা যায়।",
-                  icon: "fa-utensils",
-                  color: "m18l10-point-food",
+                  text: yhLang(
+                    "Hold the fist with the other hand and give 5 strong inward and upward abdominal thrusts.",
+                    "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।"
+                  ),
+                  icon: "fa-arrow-up-right-dots",
+                  color: "m18l11-follow-thrust",
                 },
                 {
-                  text: "এটি একটি জীবন-সংশয়কারী জরুরি অবস্থা।",
-                  icon: "fa-triangle-exclamation",
-                  color: "m18l10-point-danger",
+                  text: yhLang(
+                    "After each thrust, check if the object is expelled. If not, continue alternating back blows and abdominal thrusts until the object comes out or the person becomes unconscious.",
+                    "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।"
+                  ),
+                  icon: "fa-repeat",
+                  color: "m18l11-follow-repeat",
                 },
                 {
-                  text: "শিশুদের ক্ষেত্রে কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা গলায় আটকে যেতে পারে।",
-                  icon: "fa-baby",
-                  color: "m18l10-point-child",
+                  text: yhLang(
+                    "If the person is pregnant or obese, avoid abdominal thrusts; lean them forward and apply chest thrusts from lower to upper center chest.",
+                    "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।"
+                  ),
+                  icon: "fa-person-pregnant",
+                  color: "m18l11-follow-special",
                 },
                 {
-                  text: "প্রাপ্তবয়স্কদের ক্ষেত্রে বেশির ভাগ সময় খাবার শ্বাসনালীতে আটকে যায়।",
-                  icon: "fa-user",
-                  color: "m18l10-point-adult",
-                },
-              ];
-
-              const infantSteps = [
-                {
-                  text: "চিৎকার করে সাহায্য চান অথবা জরুরি সেবার নাম্বারে (৯৯৯) কল করতে হবে।",
-                  icon: "fa-phone-volume",
-                  color: "m18l12-step-call",
-                },
-                {
-                  text: "চিত্রের মতো করে বসে শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার কোলে নেবেন।",
-                  icon: "fa-chair",
-                  color: "m18l12-step-seat",
-                },
-                {
-                  text: "শিশুকে এমনভাবে এক হাতের ওপর সাবধানে শুইয়ে দিতে হবে যেন মাথা এবং ঘাড় ধরে রাখা যায়, কিন্তু শিশুর মুখ ঢেকে যাবে না এবং মুখ নিচের দিকে থাকবে।",
-                  icon: "fa-hand-holding-heart",
-                  color: "m18l12-step-hold",
-                },
-                {
-                  text: "এই অবস্থানে রেখে শিশুটির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
-                  icon: "fa-hand",
-                  color: "m18l12-step-back",
-                },
-                {
-                  text: "শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার এক হাতের ওপর দ্রুত চিত করে শুইয়ে দেবেন।",
-                  icon: "fa-arrows-rotate",
-                  color: "m18l12-step-turn",
-                },
-                {
-                  text: "শিশুর গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং শ্বাস-প্রশ্বাস স্বাভাবিক কিনা তা লক্ষ্য করতে হবে। যদি না হয়, তাহলে উপরে বর্ণিত প্রক্রিয়াটির পুনরাবৃত্তি করতে হবে।",
-                  icon: "fa-stethoscope",
-                  color: "m18l12-step-check",
-                },
-              ];
-
-              const unconsciousSteps = [
-                {
-                  text: "শিশুটিকে একটি শক্ত ও নিরাপদ সমতল স্থানে শুইয়ে দিতে হবে।",
-                  icon: "fa-bed",
-                  color: "m18l12-alert-place",
-                },
-                {
-                  text: "সিপিআর শুরু করতে হবে।",
+                  text: yhLang(
+                    "If the person becomes unconscious, start CPR.",
+                    "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।"
+                  ),
                   icon: "fa-heart-pulse",
-                  color: "m18l12-alert-cpr",
+                  color: "m18l11-follow-cpr",
+                },
+                {
+                  text: yhLang(
+                    "Hold the fist with the other hand and give 5 strong inward and upward abdominal thrusts.",
+                    "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।"
+                  ),
+                  icon: "fa-hand-fist",
+                  color: "m18l11-follow-thrust2",
+                },
+                {
+                  text: yhLang(
+                    "After each thrust, check if the object is expelled. If not, continue alternating back blows and abdominal thrusts until the object comes out or the person becomes unconscious.",
+                    "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।"
+                  ),
+                  icon: "fa-rotate-right",
+                  color: "m18l11-follow-repeat2",
+                },
+                {
+                  text: yhLang(
+                    "If the person is pregnant or obese, avoid abdominal thrusts; lean them forward and apply chest thrusts from lower to upper center chest.",
+                    "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।"
+                  ),
+                  icon: "fa-shield-heart",
+                  color: "m18l11-follow-special2",
+                },
+                {
+                  text: yhLang(
+                    "If the person becomes unconscious, start CPR.",
+                    "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।"
+                  ),
+                  icon: "fa-kit-medical",
+                  color: "m18l11-follow-cpr2",
                 },
               ];
 
               const renderList = (items) =>
-                `<div class="m18l10x12-list">${items
+                `<div class="m18l11-list">${items
                   .map(
                     (item, index) => `
-                      <div class="m18l10x12-item ${item.color}" data-aos="fade-up" data-aos-delay="${50 + index * 35}">
-                        <div class="m18l10x12-item-icon"><i class="fa-solid ${item.icon}"></i></div>
+                      <div class="m18l11-item ${item.color}" data-aos="fade-up" data-aos-delay="${45 + index * 28}">
+                        <div class="m18l11-item-icon"><i class="fa-solid ${item.icon}"></i></div>
                         <p>${item.text}</p>
                       </div>
                     `
@@ -13680,41 +13600,53 @@ const coursesData = [
                   .join("")}</div>`;
 
               return `
-                <div class="mod18-lesson10-12">
-                  <span class="m18l10x12-shape m18l10x12-shape-1"></span>
-                  <span class="m18l10x12-shape m18l10x12-shape-2"></span>
-                  <span class="m18l10x12-shape m18l10x12-shape-3"></span>
+                <div class="mod18-lesson11">
+                  <span class="m18l11-shape m18l11-shape-1"></span>
+                  <span class="m18l11-shape m18l11-shape-2"></span>
+                  <span class="m18l11-shape m18l11-shape-3"></span>
 
-                  <header class="m18l10x12-hero" data-aos="fade-down">
-                    <h2 class="m18l10x12-hero-title">
-                      <i class="fa-solid fa-baby"></i>
-                      ${yhLang("Choking and Infant Choking", "শ্বাস আটকে যাওয়া: পাঠ ১০ ও ১২")}
+                  <header class="m18l11-hero" data-aos="fade-down">
+                    <h2 class="m18l11-hero-title">
+                      <i class="fa-solid fa-hands-holding-child"></i>
+                      ${yhLang(
+                        "Adult & Child Choking First Aid",
+                        "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)"
+                      )}
                     </h2>
                   </header>
 
-                  <div class="m18l10x12-grid">
-                    <section class="m18l10x12-panel m18l10x12-panel-main" data-aos="fade-right" data-aos-delay="20">
-                      <h3 class="m18l10x12-panel-title">
-                        <i class="fa-solid fa-lungs"></i>
-                        ${yhLang("Choking and Airway Block", "শ্বাস আটকে যাওয়া বা গলায় কিছু আটকে যাওয়া")}
+                  <div class="m18l11-grid">
+                    <section class="m18l11-panel m18l11-panel-initial" data-aos="fade-right" data-aos-delay="20">
+                      <h3 class="m18l11-panel-title">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+                        ${yhLang("Initial Back Blow Steps", "প্রাথমিক ধাপ")}
                       </h3>
-                      <p class="m18l10x12-intro-text">${chokingIntro}</p>
-                      <div class="m18l10x12-context-box">
-                        <h4 class="m18l10x12-subtitle"><i class="fa-solid fa-magnifying-glass"></i> ${yhLang("Common Scenarios", "সাধারণ পরিস্থিতি")}</h4>
-                        <p class="mb-0">${chokingScenarios}</p>
-                      </div>
-                      ${renderList(chokingPoints)}
+                      <figure class="m18l11-image-wrap mb-1">
+                        <img src="img/modu18/basic-treatment.bmp" alt="চোকিং প্রাথমিক চিকিৎসা" class="img-fluid rounded img-zoom" />
+                      </figure>
+                      ${renderList(firstGuidance)}
                     </section>
 
-                    <section class="m18l10x12-panel m18l10x12-panel-infant" data-aos="fade-left" data-aos-delay="40">
-                      <h3 class="m18l10x12-panel-title">
-                        <i class="fa-solid fa-baby"></i>
-                        ${yhLang("Infant Choking First Aid", "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচে)")}
+                    <section class="m18l11-panel m18l11-panel-followup" data-aos="fade-left" data-aos-delay="40">
+                      <h3 class="m18l11-panel-title">
+                        <i class="fa-solid fa-lungs"></i>
+                        ${yhLang("If Object Does Not Come Out", "যদি বস্তুটি বের না হয় এবং শ্বাসকষ্ট বজায় থাকে")}
                       </h3>
-                      ${renderList(infantSteps)}
-                      <div class="m18l10x12-alert-box" role="alert" data-aos="zoom-in" data-aos-delay="110">
-                        <h4 class="m18l10x12-alert-title"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("If Infant Becomes Unconscious", "যদি শিশুটি অজ্ঞান হয়ে পড়ে")}</h4>
-                        ${renderList(unconsciousSteps)}
+                      ${renderList(followupText)}
+
+                      <div class="m18l11-gallery-box" data-aos="zoom-in" data-aos-delay="120">
+                        <h4 class="m18l11-gallery-title"><i class="fa-solid fa-images"></i> ${yhLang("Reference Images", "সহায়ক চিত্র")}</h4>
+                        <div class="m18l11-gallery-grid">
+                          ${["img/modu18/basic.jpg", "img/modu18/basic2.jpg", "img/modu18/basic3.jpg"]
+                            .map(
+                              (src) => `
+                                <figure class="m18l11-gallery-item mb-0">
+                                  <img src="${src}" alt="চোকিং প্রাথমিক চিকিৎসা" class="img-fluid rounded img-zoom" />
+                                </figure>
+                              `
+                            )
+                            .join("")}
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -13722,6 +13654,7 @@ const coursesData = [
               `;
             })(),
           },
+
         ],
       },
       {
