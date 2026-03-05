@@ -11963,6 +11963,1121 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 }
 
+/* ==================== MODULE 18 • LESSON 5 - BONE FRACTURES ==================== */
+.lesson-slide.mod18-lesson5 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 28%, #80cbc4 56%, #4db6ac 85%, #26a69a 100%);
+  padding: 11px 8px;
+  overflow: hidden;
+}
+
+.lesson-slide.mod18-lesson5::before {
+  content: "";
+  position: absolute;
+  top: -24%;
+  left: -14%;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(38, 166, 154, 0.2), transparent 70%);
+  filter: blur(46px);
+  animation: m18l5Float 18s ease-in-out infinite;
+}
+
+.lesson-slide.mod18-lesson5::after {
+  content: "";
+  position: absolute;
+  right: -15%;
+  bottom: -24%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(77, 182, 172, 0.18), transparent 68%);
+  filter: blur(42px);
+  animation: m18l5Float 16s ease-in-out infinite reverse;
+}
+
+@keyframes m18l5Float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(14px, -18px) scale(1.05); }
+  66% { transform: translate(-12px, 16px) scale(0.97); }
+}
+
+.m18l5-shape {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.m18l5-shape-1 {
+  top: 13%;
+  right: 6%;
+  width: 92px;
+  height: 92px;
+  border: 3px solid #00897b;
+  border-radius: 50%;
+  animation: m18l5Rotate 24s linear infinite;
+}
+
+.m18l5-shape-2 {
+  left: 4%;
+  bottom: 18%;
+  width: 78px;
+  height: 78px;
+  background: linear-gradient(135deg, #4db6ac, #00897b);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation: m18l5Rotate 19s linear infinite reverse;
+}
+
+.m18l5-shape-3 {
+  top: 45%;
+  right: 3%;
+  width: 115px;
+  height: 115px;
+  background: linear-gradient(135deg, #80cbc4, #26a69a);
+  border-radius: 36% 64% 68% 32% / 36% 36% 64% 64%;
+  animation: m18l5Morph 21s ease-in-out infinite;
+}
+
+@keyframes m18l5Rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes m18l5Morph {
+  0%, 100% { border-radius: 36% 64% 68% 32% / 36% 36% 64% 64%; }
+  50% { border-radius: 64% 36% 32% 68% / 64% 64% 36% 36%; }
+}
+
+.m18l5-hero {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.m18l5-hero-badge {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 9px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #26a69a, #00897b);
+  box-shadow: 0 4px 12px rgba(0, 137, 123, 0.35), 0 0 0 4px rgba(255, 255, 255, 0.3);
+  animation: m18l5Pulse 2.8s ease-in-out infinite;
+}
+
+.m18l5-hero-badge i {
+  font-size: 1.6rem;
+}
+
+@keyframes m18l5Pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+.m18l5-hero-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #006064;
+}
+
+.m18l5-intro-panel {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-left: 4px solid #00897b;
+  border-radius: 10px;
+  padding: 10px 11px;
+  margin-bottom: 11px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 3px 10px rgba(0, 137, 123, 0.12), 0 1px 3px rgba(0, 96, 100, 0.08);
+}
+
+.m18l5-intro-text {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #263238;
+}
+
+.m18l5-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.m18l5-fracture-panel {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 11px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.m18l5-open {
+  box-shadow: -5px 7px 13px rgba(244, 67, 54, 0.12), 0 2px 5px rgba(229, 57, 53, 0.08);
+  border-top: 3px solid #ef5350;
+}
+
+.m18l5-closed {
+  box-shadow: 5px 7px 13px rgba(66, 165, 245, 0.12), 0 2px 5px rgba(25, 118, 210, 0.08);
+  border-top: 3px solid #42a5f5;
+}
+
+.m18l5-panel-title {
+  margin: 0 0 9px;
+  font-size: 0.95rem;
+  font-weight: 660;
+  color: #006064;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.m18l5-open .m18l5-panel-title {
+  color: #c62828;
+}
+
+.m18l5-open .m18l5-panel-title i {
+  color: #ef5350;
+}
+
+.m18l5-closed .m18l5-panel-title {
+  color: #0d47a1;
+}
+
+.m18l5-closed .m18l5-panel-title i {
+  color: #42a5f5;
+}
+
+.m18l5-steps-list {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+
+.m18l5-step-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-left: 3px solid;
+  border-radius: 8px;
+  padding: 8px 9px;
+  background: rgba(255, 255, 255, 0.88);
+  transition: all 0.26s ease;
+}
+
+.m18l5-step-item:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 7px rgba(0, 137, 123, 0.12);
+}
+
+.m18l5-step-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.m18l5-step-item p {
+  margin: 0;
+  font-size: 0.73rem;
+  line-height: 1.48;
+  padding-top: 1px;
+}
+
+.m18l5-image-container {
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  padding: 7px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+}
+
+.m18l5-image {
+  border-radius: 6px;
+  width: 100%;
+  height: auto;
+}
+
+/* Open Fracture Colors */
+.m18l5-open-hemostasis {
+  border-left-color: #d32f2f;
+  background: rgba(255, 235, 238, 0.9);
+}
+.m18l5-open-hemostasis .m18l5-step-icon { background: linear-gradient(135deg, #ef5350, #d32f2f); }
+.m18l5-open-hemostasis p { color: #b71c1c; }
+
+.m18l5-open-immobilize {
+  border-left-color: #1976d2;
+  background: rgba(227, 242, 253, 0.9);
+}
+.m18l5-open-immobilize .m18l5-step-icon { background: linear-gradient(135deg, #42a5f5, #1976d2); }
+.m18l5-open-immobilize p { color: #0d47a1; }
+
+.m18l5-open-transport {
+  border-left-color: #f57c00;
+  background: rgba(255, 243, 224, 0.9);
+}
+.m18l5-open-transport .m18l5-step-icon { background: linear-gradient(135deg, #ffa726, #f57c00); }
+.m18l5-open-transport p { color: #e65100; }
+
+/* Closed Fracture Colors */
+.m18l5-closed-avoid {
+  border-left-color: #c62828;
+  background: rgba(255, 235, 238, 0.9);
+}
+.m18l5-closed-avoid .m18l5-step-icon { background: linear-gradient(135deg, #e53935, #c62828); }
+.m18l5-closed-avoid p { color: #b71c1c; }
+
+.m18l5-closed-position {
+  border-left-color: #00796b;
+  background: rgba(224, 242, 241, 0.9);
+}
+.m18l5-closed-position .m18l5-step-icon { background: linear-gradient(135deg, #4db6ac, #00796b); }
+.m18l5-closed-position p { color: #004d40; }
+
+.m18l5-closed-hospital {
+  border-left-color: #388e3c;
+  background: rgba(232, 245, 233, 0.9);
+}
+.m18l5-closed-hospital .m18l5-step-icon { background: linear-gradient(135deg, #66bb6a, #388e3c); }
+.m18l5-closed-hospital p { color: #1b5e20; }
+
+@media (min-width: 768px) {
+  .m18l5-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lesson-slide.mod18-lesson5 { padding: 10px 7px; }
+  .m18l5-hero-badge { width: 56px; height: 56px; }
+  .m18l5-hero-badge i { font-size: 1.44rem; }
+  .m18l5-hero-title { font-size: 1.08rem; }
+}
+
+@media (max-width: 768px) {
+  .lesson-slide.mod18-lesson5 { padding: 9px 6px; }
+  .m18l5-hero-badge { width: 52px; height: 52px; }
+  .m18l5-hero-badge i { font-size: 1.3rem; }
+  .m18l5-hero-title { font-size: 1rem; }
+  .m18l5-intro-text { font-size: 0.71rem; }
+  .m18l5-panel-title { font-size: 0.87rem; }
+  .m18l5-step-item { padding: 7px 8px; gap: 7px; }
+  .m18l5-step-item p { font-size: 0.69rem; }
+  .m18l5-step-icon { width: 25px; height: 25px; font-size: 0.71rem; }
+}
+
+@media (max-width: 480px) {
+  .lesson-slide.mod18-lesson5 { padding: 8px 5px; }
+  .m18l5-fracture-panel { padding: 8px; }
+  .m18l5-hero-badge { width: 48px; height: 48px; }
+  .m18l5-hero-badge i { font-size: 1.18rem; }
+  .m18l5-hero-title { font-size: 0.94rem; }
+  .m18l5-intro-text { font-size: 0.68rem; }
+  .m18l5-panel-title { font-size: 0.81rem; }
+  .m18l5-step-item { padding: 6px 7px; }
+  .m18l5-step-icon { width: 23px; height: 23px; font-size: 0.65rem; }
+  .m18l5-step-item p { font-size: 0.66rem; }
+  .m18l5-image-container { padding: 6px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .lesson-slide.mod18-lesson5 {
+    background: linear-gradient(135deg, #004d40 0%, #00695c 28%, #00796b 56%, #00897b 85%, #009688 100%);
+  }
+
+  .m18l5-intro-panel,
+  .m18l5-fracture-panel,
+  .m18l5-step-item,
+  .m18l5-image-container {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .m18l5-hero-title,
+  .m18l5-panel-title,
+  .m18l5-intro-text,
+  .m18l5-step-item p {
+    color: #b2dfdb;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-slide.mod18-lesson5::before,
+  .lesson-slide.mod18-lesson5::after,
+  .m18l5-shape,
+  .m18l5-hero-badge,
+  .m18l5-step-item {
+    animation: none !important;
+  }
+
+  .m18l5-step-item:hover {
+    transform: none !important;
+  }
+}
+
+/* ==================== MODULE 18 • LESSON 6 - SNAKE BITE RESPONSE ==================== */
+.mod18-lesson6 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 28%, #81c784 56%, #66bb6a 85%, #4caf50 100%);
+  padding: 11px 8px;
+  overflow: hidden;
+}
+
+.mod18-lesson6::before {
+  content: "";
+  position: absolute;
+  top: -26%;
+  right: -12%;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.22), transparent 72%);
+  filter: blur(50px);
+  animation: m18l6Float 19s ease-in-out infinite;
+}
+
+.mod18-lesson6::after {
+  content: "";
+  position: absolute;
+  left: -16%;
+  bottom: -28%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(102, 187, 106, 0.2), transparent 70%);
+  filter: blur(44px);
+  animation: m18l6Float 17s ease-in-out infinite reverse;
+}
+
+@keyframes m18l6Float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(16px, -20px) scale(1.06); }
+  66% { transform: translate(-14px, 18px) scale(0.96); }
+}
+
+.m18l6-shape {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.11;
+  pointer-events: none;
+}
+
+.m18l6-shape-1 {
+  top: 11%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #2e7d32;
+  border-radius: 50%;
+  animation: m18l6Rotate 26s linear infinite;
+}
+
+.m18l6-shape-2 {
+  right: 6%;
+  top: 35%;
+  width: 84px;
+  height: 84px;
+  background: linear-gradient(135deg, #66bb6a, #2e7d32);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation: m18l6Rotate 21s linear infinite reverse;
+}
+
+.m18l6-shape-3 {
+  bottom: 16%;
+  right: 12%;
+  width: 128px;
+  height: 128px;
+  background: linear-gradient(135deg, #a5d6a7, #2e7d32);
+  border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%;
+  animation: m18l6Morph 23s ease-in-out infinite;
+}
+
+@keyframes m18l6Rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes m18l6Morph {
+  0%, 100% { border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%; }
+  50% { border-radius: 60% 40% 30% 70% / 60% 60% 40% 40%; }
+}
+
+.m18l6-hero {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.m18l6-hero-badge {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 9px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.36), 0 0 0 4px rgba(255, 255, 255, 0.32);
+  animation: m18l6Pulse 2.9s ease-in-out infinite;
+}
+
+.m18l6-hero-badge i {
+  font-size: 1.6rem;
+}
+
+@keyframes m18l6Pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+}
+
+.m18l6-hero-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.m18l6-intro-panel {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-left: 4px solid #2e7d32;
+  border-radius: 10px;
+  padding: 10px 11px;
+  margin-bottom: 11px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.12), 0 1px 3px rgba(46, 125, 50, 0.08);
+}
+
+.m18l6-intro-text {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #263238;
+}
+
+.m18l6-main-panel {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.83);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 11px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 14px rgba(76, 175, 80, 0.13), 0 2px 5px rgba(46, 125, 50, 0.08);
+  border-top: 3px solid #2e7d32;
+}
+
+.m18l6-panel-title {
+  margin: 0 0 9px;
+  font-size: 0.95rem;
+  font-weight: 660;
+  color: #1b5e20;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.m18l6-panel-title i {
+  color: #2e7d32;
+}
+
+.m18l6-steps-list {
+  display: grid;
+  gap: 8px;
+}
+
+.m18l6-step-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-left: 3px solid;
+  border-radius: 8px;
+  padding: 8px 9px;
+  background: rgba(255, 255, 255, 0.88);
+  transition: all 0.26s ease;
+}
+
+.m18l6-step-item:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 7px rgba(76, 175, 80, 0.12);
+}
+
+.m18l6-step-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.m18l6-step-item p {
+  margin: 0;
+  font-size: 0.73rem;
+  line-height: 1.48;
+  padding-top: 1px;
+}
+
+/* Step Color Variants */
+.m18l6-step-calm {
+  border-left-color: #26a69a;
+  background: rgba(224, 242, 241, 0.9);
+}
+.m18l6-step-calm .m18l6-step-icon { background: linear-gradient(135deg, #4db6ac, #26a69a); }
+.m18l6-step-calm p { color: #004d40; }
+
+.m18l6-step-clean {
+  border-left-color: #1976d2;
+  background: rgba(227, 242, 253, 0.9);
+}
+.m18l6-step-clean .m18l6-step-icon { background: linear-gradient(135deg, #42a5f5, #1976d2); }
+.m18l6-step-clean p { color: #0d47a1; }
+
+.m18l6-step-immob {
+  border-left-color: #f57c00;
+  background: rgba(255, 243, 224, 0.9);
+}
+.m18l6-step-immob .m18l6-step-icon { background: linear-gradient(135deg, #ffa726, #f57c00); }
+.m18l6-step-immob p { color: #e65100; }
+
+.m18l6-step-monitor {
+  border-left-color: #d32f2f;
+  background: rgba(255, 235, 238, 0.9);
+}
+.m18l6-step-monitor .m18l6-step-icon { background: linear-gradient(135deg, #ef5350, #d32f2f); }
+.m18l6-step-monitor p { color: #b71c1c; }
+
+.m18l6-step-cpr {
+  border-left-color: #e91e63;
+  background: rgba(252, 228, 236, 0.9);
+}
+.m18l6-step-cpr .m18l6-step-icon { background: linear-gradient(135deg, #f06292, #e91e63); }
+.m18l6-step-cpr p { color: #ad1457; }
+
+.m18l6-step-avoid {
+  border-left-color: #7b1fa2;
+  background: rgba(243, 229, 245, 0.9);
+}
+.m18l6-step-avoid .m18l6-step-icon { background: linear-gradient(135deg, #ab47bc, #7b1fa2); }
+.m18l6-step-avoid p { color: #4a148c; }
+
+.m18l6-step-remedy {
+  border-left-color: #5e35b1;
+  background: rgba(237, 231, 246, 0.9);
+}
+.m18l6-step-remedy .m18l6-step-icon { background: linear-gradient(135deg, #7e57c2, #5e35b1); }
+.m18l6-step-remedy p { color: #311b92; }
+
+.m18l6-step-hospital {
+  border-left-color: #388e3c;
+  background: rgba(232, 245, 233, 0.9);
+}
+.m18l6-step-hospital .m18l6-step-icon { background: linear-gradient(135deg, #66bb6a, #388e3c); }
+.m18l6-step-hospital p { color: #1b5e20; }
+
+@media (max-width: 1024px) {
+  .mod18-lesson6 { padding: 10px 7px; }
+  .m18l6-hero-badge { width: 56px; height: 56px; }
+  .m18l6-hero-badge i { font-size: 1.44rem; }
+  .m18l6-hero-title { font-size: 1.08rem; }
+}
+
+@media (max-width: 768px) {
+  .mod18-lesson6 { padding: 9px 6px; }
+  .m18l6-hero-badge { width: 52px; height: 52px; }
+  .m18l6-hero-badge i { font-size: 1.3rem; }
+  .m18l6-hero-title { font-size: 1rem; }
+  .m18l6-intro-text { font-size: 0.71rem; }
+  .m18l6-panel-title { font-size: 0.87rem; }
+  .m18l6-step-item { padding: 7px 8px; gap: 7px; }
+  .m18l6-step-item p { font-size: 0.69rem; }
+  .m18l6-step-icon { width: 25px; height: 25px; font-size: 0.71rem; }
+}
+
+@media (max-width: 480px) {
+  .mod18-lesson6 { padding: 8px 5px; }
+  .m18l6-main-panel { padding: 8px; }
+  .m18l6-hero-badge { width: 48px; height: 48px; }
+  .m18l6-hero-badge i { font-size: 1.18rem; }
+  .m18l6-hero-title { font-size: 0.94rem; }
+  .m18l6-intro-text { font-size: 0.68rem; }
+  .m18l6-panel-title { font-size: 0.81rem; }
+  .m18l6-step-item { padding: 6px 7px; }
+  .m18l6-step-icon { width: 23px; height: 23px; font-size: 0.65rem; }
+  .m18l6-step-item p { font-size: 0.66rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .mod18-lesson6 {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 28%, #388e3c 56%, #43a047 85%, #4caf50 100%);
+  }
+
+  .m18l6-intro-panel,
+  .m18l6-main-panel,
+  .m18l6-step-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .m18l6-hero-title,
+  .m18l6-panel-title,
+  .m18l6-intro-text,
+  .m18l6-step-item p {
+    color: #c8e6c9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod18-lesson6::before,
+  .mod18-lesson6::after,
+  .m18l6-shape,
+  .m18l6-hero-badge,
+  .m18l6-step-item {
+    animation: none !important;
+  }
+
+  .m18l6-step-item:hover {
+    transform: none !important;
+  }
+}
+
+/* ==================== MODULE 18 • LESSON 7 - DOG BITE CARE ==================== */
+.mod18-lesson7 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 28%, #ffb74d 56%, #ffa726 85%, #ff9800 100%);
+  padding: 11px 8px;
+  overflow: hidden;
+}
+
+.mod18-lesson7::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -18%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 152, 0, 0.24), transparent 74%);
+  filter: blur(52px);
+  animation: m18l7Float 20s ease-in-out infinite;
+}
+
+.mod18-lesson7::after {
+  content: "";
+  position: absolute;
+  left: -12%;
+  bottom: -22%;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 167, 38, 0.2), transparent 71%);
+  filter: blur(46px);
+  animation: m18l7Float 18s ease-in-out infinite reverse;
+}
+
+@keyframes m18l7Float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(18px, -22px) scale(1.08); }
+  66% { transform: translate(-16px, 20px) scale(0.95); }
+}
+
+.m18l7-shape {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.m18l7-shape-1 {
+  top: 8%;
+  left: 4%;
+  width: 110px;
+  height: 110px;
+  border: 3px solid #e65100;
+  border-radius: 50%;
+  animation: m18l7Rotate 28s linear infinite;
+}
+
+.m18l7-shape-2 {
+  right: 8%;
+  bottom: 20%;
+  width: 92px;
+  height: 92px;
+  background: linear-gradient(135deg, #ffa726, #e65100);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation: m18l7Rotate 22s linear infinite reverse;
+}
+
+.m18l7-shape-3 {
+  top: 40%;
+  left: 12%;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, #ffb74d, #e65100);
+  border-radius: 38% 62% 72% 28% / 42% 38% 62% 58%;
+  animation: m18l7Morph 24s ease-in-out infinite;
+}
+
+@keyframes m18l7Rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes m18l7Morph {
+  0%, 100% { border-radius: 38% 62% 72% 28% / 42% 38% 62% 58%; }
+  50% { border-radius: 62% 38% 28% 72% / 58% 62% 38% 42%; }
+}
+
+.m18l7-hero {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.m18l7-hero-badge {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 9px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9800, #e65100);
+  box-shadow: 0 4px 12px rgba(230, 81, 0, 0.37), 0 0 0 4px rgba(255, 255, 255, 0.33);
+  animation: m18l7Pulse 3s ease-in-out infinite;
+}
+
+.m18l7-hero-badge i {
+  font-size: 1.6rem;
+}
+
+@keyframes m18l7Pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.m18l7-hero-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e65100;
+}
+
+.m18l7-intro-panel {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  border-left: 4px solid #e65100;
+  border-radius: 10px;
+  padding: 10px 11px;
+  margin-bottom: 11px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 3px 10px rgba(255, 152, 0, 0.13), 0 1px 3px rgba(230, 81, 0, 0.09);
+}
+
+.m18l7-intro-text {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #263238;
+}
+
+.m18l7-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.m18l7-symptoms-panel,
+.m18l7-care-panel {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.51);
+  border-radius: 11px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.m18l7-symptoms-panel {
+  box-shadow: -4px 8px 14px rgba(255, 152, 0, 0.14), 0 2px 5px rgba(230, 81, 0, 0.09);
+  border-top: 3px solid #ff9800;
+}
+
+.m18l7-care-panel {
+  box-shadow: 4px 8px 14px rgba(230, 81, 0, 0.13), 0 2px 5px rgba(255, 152, 0, 0.09);
+  border-top: 3px solid #e65100;
+}
+
+.m18l7-panel-title {
+  margin: 0 0 9px;
+  font-size: 0.95rem;
+  font-weight: 660;
+  color: #e65100;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.m18l7-panel-title i {
+  color: #ff9800;
+}
+
+.m18l7-symptoms-list,
+.m18l7-care-list {
+  display: grid;
+  gap: 8px;
+}
+
+.m18l7-symptom-item,
+.m18l7-care-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.61);
+  border-left: 3px solid;
+  border-radius: 8px;
+  padding: 8px 9px;
+  background: rgba(255, 255, 255, 0.89);
+  transition: all 0.26s ease;
+}
+
+.m18l7-symptom-item:hover,
+.m18l7-care-item:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 7px rgba(255, 152, 0, 0.13);
+}
+
+.m18l7-symptom-icon,
+.m18l7-care-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.13);
+}
+
+.m18l7-symptom-item p,
+.m18l7-care-item p {
+  margin: 0;
+  font-size: 0.73rem;
+  line-height: 1.48;
+  padding-top: 1px;
+}
+
+/* Symptom Colors */
+.m18l7-symptom-pain {
+  border-left-color: #d32f2f;
+  background: rgba(255, 235, 238, 0.9);
+}
+.m18l7-symptom-pain .m18l7-symptom-icon { background: linear-gradient(135deg, #ef5350, #d32f2f); }
+.m18l7-symptom-pain p { color: #b71c1c; }
+
+.m18l7-symptom-red {
+  border-left-color: #c62828;
+  background: rgba(255, 245, 243, 0.9);
+}
+.m18l7-symptom-red .m18l7-symptom-icon { background: linear-gradient(135deg, #e57373, #c62828); }
+.m18l7-symptom-red p { color: #b71c1c; }
+
+.m18l7-symptom-swell {
+  border-left-color: #e65100;
+  background: rgba(255, 243, 224, 0.9);
+}
+.m18l7-symptom-swell .m18l7-symptom-icon { background: linear-gradient(135deg, #ffb74d, #e65100); }
+.m18l7-symptom-swell p { color: #bf360c; }
+
+.m18l7-symptom-pus {
+  border-left-color: #00796b;
+  background: rgba(224, 242, 241, 0.9);
+}
+.m18l7-symptom-pus .m18l7-symptom-icon { background: linear-gradient(135deg, #4db6ac, #00796b); }
+.m18l7-symptom-pus p { color: #004d40; }
+
+.m18l7-symptom-fever {
+  border-left-color: #f57c00;
+  background: rgba(255, 236, 210, 0.9);
+}
+.m18l7-symptom-fever .m18l7-symptom-icon { background: linear-gradient(135deg, #ffb74d, #f57c00); }
+.m18l7-symptom-fever p { color: #e65100; }
+
+.m18l7-symptom-gland {
+  border-left-color: #1976d2;
+  background: rgba(227, 242, 253, 0.9);
+}
+.m18l7-symptom-gland .m18l7-symptom-icon { background: linear-gradient(135deg, #42a5f5, #1976d2); }
+.m18l7-symptom-gland p { color: #0d47a1; }
+
+/* Care Step Colors */
+.m18l7-care-safety {
+  border-left-color: #d32f2f;
+  background: rgba(255, 235, 238, 0.9);
+}
+.m18l7-care-safety .m18l7-care-icon { background: linear-gradient(135deg, #ef5350, #d32f2f); }
+.m18l7-care-safety p { color: #b71c1c; }
+
+.m18l7-care-remove {
+  border-left-color: #6a1b9a;
+  background: rgba(243, 229, 245, 0.9);
+}
+.m18l7-care-remove .m18l7-care-icon { background: linear-gradient(135deg, #ab47bc, #6a1b9a); }
+.m18l7-care-remove p { color: #4a148c; }
+
+.m18l7-care-wash {
+  border-left-color: #0277bd;
+  background: rgba(225, 245, 254, 0.9);
+}
+.m18l7-care-wash .m18l7-care-icon { background: linear-gradient(135deg, #29b6f6, #0277bd); }
+.m18l7-care-wash p { color: #01579b; }
+
+.m18l7-care-cover {
+  border-left-color: #1976d2;
+  background: rgba(227, 242, 253, 0.9);
+}
+.m18l7-care-cover .m18l7-care-icon { background: linear-gradient(135deg, #42a5f5, #1976d2); }
+.m18l7-care-cover p { color: #0d47a1; }
+
+.m18l7-care-hospital {
+  border-left-color: #388e3c;
+  background: rgba(232, 245, 233, 0.9);
+}
+.m18l7-care-hospital .m18l7-care-icon { background: linear-gradient(135deg, #66bb6a, #388e3c); }
+.m18l7-care-hospital p { color: #1b5e20; }
+
+@media (min-width: 768px) {
+  .m18l7-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 11px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mod18-lesson7 { padding: 10px 7px; }
+  .m18l7-hero-badge { width: 56px; height: 56px; }
+  .m18l7-hero-badge i { font-size: 1.44rem; }
+  .m18l7-hero-title { font-size: 1.08rem; }
+}
+
+@media (max-width: 768px) {
+  .mod18-lesson7 { padding: 9px 6px; }
+  .m18l7-hero-badge { width: 52px; height: 52px; }
+  .m18l7-hero-badge i { font-size: 1.3rem; }
+  .m18l7-hero-title { font-size: 1rem; }
+  .m18l7-intro-text { font-size: 0.71rem; }
+  .m18l7-panel-title { font-size: 0.87rem; }
+  .m18l7-symptom-item,
+  .m18l7-care-item { padding: 7px 8px; gap: 7px; }
+  .m18l7-symptom-item p,
+  .m18l7-care-item p { font-size: 0.69rem; }
+  .m18l7-symptom-icon,
+  .m18l7-care-icon { width: 25px; height: 25px; font-size: 0.71rem; }
+}
+
+@media (max-width: 480px) {
+  .mod18-lesson7 { padding: 8px 5px; }
+  .m18l7-symptoms-panel,
+  .m18l7-care-panel { padding: 8px; }
+  .m18l7-hero-badge { width: 48px; height: 48px; }
+  .m18l7-hero-badge i { font-size: 1.18rem; }
+  .m18l7-hero-title { font-size: 0.94rem; }
+  .m18l7-intro-text { font-size: 0.68rem; }
+  .m18l7-panel-title { font-size: 0.81rem; }
+  .m18l7-symptom-item,
+  .m18l7-care-item { padding: 6px 7px; }
+  .m18l7-symptom-icon,
+  .m18l7-care-icon { width: 23px; height: 23px; font-size: 0.65rem; }
+  .m18l7-symptom-item p,
+  .m18l7-care-item p { font-size: 0.66rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .mod18-lesson7 {
+    background: linear-gradient(135deg, #bf360c 0%, #d84315 28%, #e64a19 56%, #ff5722 85%, #ff7043 100%);
+  }
+
+  .m18l7-intro-panel,
+  .m18l7-symptoms-panel,
+  .m18l7-care-panel,
+  .m18l7-symptom-item,
+  .m18l7-care-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+
+  .m18l7-hero-title,
+  .m18l7-panel-title,
+  .m18l7-intro-text,
+  .m18l7-symptom-item p,
+  .m18l7-care-item p {
+    color: #ffe0b2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod18-lesson7::before,
+  .mod18-lesson7::after,
+  .m18l7-shape,
+  .m18l7-hero-badge,
+  .m18l7-symptom-item,
+  .m18l7-care-item {
+    animation: none !important;
+  }
+
+  .m18l7-symptom-item:hover,
+  .m18l7-care-item:hover {
+    transform: none !important;
+  }
+}
+
 /* ==================== MODULE 22 • LESSON 7 - HAZARDOUS CHEMICALS ==================== */
 .lesson-slide.mod22-lesson7 {
   position: relative;
