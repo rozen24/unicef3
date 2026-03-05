@@ -11500,56 +11500,83 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ ব্যক্তির বিশ্বাসের প্রতিফলন। যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা তাহলে আচরণ হবে অন্যের সাথে ভদ্রতার সহিত কথা বলা। মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়।";
-
-              const neutralityParagraph =
-                "প্রতিটি মানুষই আলাদা, প্রত্যেকের চিন্তা, বিশ্বাস, মূল্যবোধ এবং বিচার-বিবেচনা করার ক্ষমতা আলাদা — সেই বিষয়টির প্রতি সম্মান রেখে নিরপেক্ষ আচরণ করা একজন মনোসামাজিক সহায়তাকারীর অন্যতম গুণাবলীর মধ্যে একটি।";
-
-              const neutralHeading = "নিরপেক্ষ হবার উপায়";
-              const neutralSteps = [
-                "১. নিজের চিন্তা ও অনুভূতি সম্পর্কে সচেতন থাকা",
-                "২. নিজের মূল্যবোধ এবং বিশ্বাস খুঁজে বের করা",
-                "৩. অন্যের ব্যক্তি স্বাধীনতায় বিশ্বাস করা এবং অন্যের মূল্যবোধের প্রতি সহনশীল থাকা",
-                "৪. মনোযোগী শ্রোতা হওয়া",
-                "৫. নিজের সাথে ইতিবাচক কথা বলা",
-                "৬. অন্যের প্রতি সহমর্মিতা প্রকাশ করা",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Understanding behavior",
-                    "আচরণ"
-                  )}</h2>
+                <!-- Module 16 Lesson 5: Behavior -->
+<div class="lesson-slide mod16-lesson5">
+  <div class="m16l5-shapes" role="presentation"></div>
+  
+  <!-- Hero Section -->
+  <section class="m16l5-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m16l5-hero__badge">
+      <i class="fa-solid fa-hands-praying"></i>
+    </div>
+    <div class="m16l5-hero__content">
+      <h2 class="m16l5-hero__title">${yhLang("Understanding Behavior", "আচরণ বোঝা")}</h2>
+      <p class="m16l5-hero__subtitle">${yhLang("How Values Guide Our Actions", "মূল্যবোধ কীভাবে আমাদের কাজ পরিচালনা করে")}</p>
+    </div>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
-                  </section>
+  <!-- Definition Card -->
+  <section class="m16l5-definition" data-aos="fade-up" data-aos-delay="40">
+    <div class="m16l5-definition-icon">
+      <i class="fa-solid fa-lightbulb"></i>
+    </div>
+    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ ব্যক্তির বিশ্বাসের প্রতিফলন। মূল্যবোধ আমাদের আচরণকে প্রভাবিত করে।")}</p>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <p class="mb-0">${neutralityParagraph}</p>
-                  </section>
+  <!-- Neutrality Card -->
+  <section class="m16l5-neutrality-card" data-aos="fade-up" data-aos-delay="50">
+    <p class="m16l5-neutrality-text">${yhLang("Every person is unique with different thoughts, beliefs, values, and judgment abilities. An important quality of a psychosocial helper is to respect these differences and act neutrally, without imposing their own values on others.", "প্রতিটি মানুষই আলাদা, এবং নিরপেক্ষ আচরণ করা মনোসামাজিক সহায়তাকারীর গুরুত্বপূর্ণ গুণ।")}</p>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="h6 gradient-text mb-2">${neutralHeading}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(neutralSteps)}
-                    </ul>
-                  </section>
-                </div>
+  <!-- Methods Section -->
+  <section class="m16l5-methods-section" data-aos="fade-up" data-aos-delay="60">
+    <div class="m16l5-methods-header">
+      <div class="m16l5-methods-icon">
+        <i class="fa-solid fa-list-check"></i>
+      </div>
+      <h3 class="m16l5-methods-title">${yhLang("Ways to Remain Neutral", "নিরপেক্ষ থাকার উপায়")}</h3>
+    </div>
+    <ul class="m16l5-methods-list">
+      <li class="m16l5-method-item m16l5-method-awareness" data-aos="fade-up" data-aos-delay="65">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Be aware of your own thoughts and feelings", "নিজের চিন্তা ও অনুভূতি সম্পর্কে সচেতন থাকা")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-discovery" data-aos="fade-up" data-aos-delay="70">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Identify your own beliefs and values", "নিজের বিশ্বাস ও মূল্যবোধ খুঁজে বের করা")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-autonomy" data-aos="fade-up" data-aos-delay="75">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-person"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Respect others' personal freedom and tolerance", "অন্যের ব্যক্তি স্বাধীনতা ও মূল্যবোধের প্রতি সহনশীল থাকা")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-listening" data-aos="fade-up" data-aos-delay="80">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-ear-listen"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Be an attentive listener", "মনোযোগী শ্রোতা হওয়া")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-selftalk" data-aos="fade-up" data-aos-delay="85">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Engage in positive self-talk", "নিজের সাথে ইতিবাচক কথা বলা")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-empathy" data-aos="fade-up" data-aos-delay="90">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Show empathy toward others", "অন্যের প্রতি সহমর্মিতা প্রকাশ করা")}</span>
+      </li>
+    </ul>
+  </section>
+</div>
               `;
             })(),
           },
@@ -11563,7 +11590,7 @@ const coursesData = [
             "মডিউল-১৭: মাদকাসক্তি পরিণতি ও প্রতিরোধ"
           ),
         lessons: [
-          {
+                   {
             id: "ch17-lesson-1",
             title: yhLang("Drug Addiction", "মাদকাসক্তি"),
             icon: "fa-syringe",
@@ -11589,60 +11616,89 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "মদ, গাঁজা, আফিম, পেথেড্রিন, হেরোইন, সিসা, ইয়াবা, ডায়াজেপাম—যে সব বস্তুকে গ্রহণ করলে আসক্তির উদ্রেক ঘটায় এবং পরবর্তীতে গ্রহণ না করলে শরীরে তৎপরতার পরিবর্তন বা Withdrawal-এর মতো প্রভাব ফেলে, তাই মাদকদ্রব্য হিসাবে পরিচিত। নিয়মিত মাদক সেবন করতে করতে এক পর্যায়ে ব্যক্তিটি পুরোপুরি মাদকনির্ভর হয়ে পড়ে এবং মাদক ছাড়া চলতে পারে না। এই অবস্থাই হলো মাদকাসক্তি।";
-
-              const causesHeading = "মাদকাসক্তির কারণ";
-              const causes = [
-                "মাদকদ্রব্যের সহজলভ্যতা",
-                "মাদকদ্রব্য সম্পর্কে কৌতূহল",
-                "বন্ধুদের চাপে পড়ে মাদক গ্রহণ",
-                "হতাশা ও ব্যর্থতা কাটাতে মাদক গ্রহণ",
-                "পারিপার্শ্বিক পরিবেশের প্রভাব",
-                "নিছক আনন্দের জন্য",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Understanding drug addiction",
-                    "মাদকাসক্তি"
-                  )}</h2>
+                <!-- Module 17 Lesson 1: Drug Addiction -->
+<div class="lesson-slide mod17-lesson1">
+  <div class="m17l1-shapes" role="presentation"></div>
+  
+  <!-- Hero Section -->
+  <section class="m17l1-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m17l1-hero__badge">
+      <i class="fa-solid fa-syringe"></i>
+    </div>
+    <div class="m17l1-hero__content">
+      <h2 class="m17l1-hero__title">${yhLang("Understanding Drug Addiction", "মাদকাসক্তি বোঝা")}</h2>
+      <p class="m17l1-hero__subtitle">${yhLang("Causes, Effects & Prevention", "কারণ, প্রভাব ও প্রতিরোধ")}</p>
+    </div>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
-                  </section>
+  <!-- Definition Card -->
+  <section class="m17l1-definition" data-aos="fade-up" data-aos-delay="40">
+    <div class="m17l1-definition-icon">
+      <i class="fa-solid fa-lightbulb"></i>
+    </div>
+    <p class="m17l1-definition-text">${yhLang("Addictive substances include alcohol, cannabis, opium, heroin, and other drugs that create dependency and cause withdrawal symptoms when not used. Drug addiction is the state where a person becomes completely dependent on these substances and cannot function without them.", "মাদকদ্রব্য হল এমন বস্তু যা গ্রহণ করলে আসক্তি সৃষ্টি হয় এবং মাদক ছাড়া চলা যায় না। এটাই মাদকাসক্তি।")}</p>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-6" data-aos="fade-right">
-                        <article class="p-4 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3">${causesHeading}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(causes)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-6" data-aos="fade-left">
-                        <div class="image-wrapper text-center">
-                          <img src="img/modu17/madok.jpg" alt="Drug addiction" class="img-fluid rounded shadow-sm img-zoom" />
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
+  <!-- Addiction Card -->
+  <section class="m17l1-addiction-card" data-aos="fade-up" data-aos-delay="50">
+    <div class="m17l1-addiction-icon">
+      <i class="fa-solid fa-warning"></i>
+    </div>
+    <div class="m17l1-addiction-content">
+      <h3 class="m17l1-addiction-title">${yhLang("What is Drug Addiction?", "মাদকাসক্তি কী?")}</h3>
+      <p class="m17l1-addiction-text">${yhLang("Regular drug use leads to physical and psychological dependence. At a certain point, the person cannot stop using drugs even if they want to. They experience withdrawal symptoms—physical and mental discomfort when trying to quit. This compels them to continue using drugs despite knowing the harm.", "নিয়মিত মাদক ব্যবহার সম্পূর্ণ নির্ভরতার দিকে নিয়ে যায় যেখানে ব্যক্তি মাদক ছাড়া চলতে পারে না এবং বন্ধ করতে পারে না।")}</p>
+    </div>
+  </section>
+
+  <!-- Causes Section -->
+  <section class="m17l1-causes-section" data-aos="fade-up" data-aos-delay="60">
+    <div class="m17l1-causes-header">
+      <div class="m17l1-causes-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <h3 class="m17l1-causes-title">${yhLang("Causes of Drug Addiction", "মাদকাসক্তির কারণ")}</h3>
+    </div>
+    <ul class="m17l1-causes-list">
+      <li class="m17l1-cause-item m17l1-cause-availability" data-aos="fade-up" data-aos-delay="65">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-pills"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Easy availability of drugs", "মাদকদ্রব্যের সহজলভ্যতা")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-curiosity" data-aos="fade-up" data-aos-delay="70">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Curiosity about drugs", "মাদক সম্পর্কে কৌতূহল")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-peer" data-aos="fade-up" data-aos-delay="75">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Peer pressure from friends", "বন্ধুদের চাপে পড়ে মাদক গ্রহণ")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-escape" data-aos="fade-up" data-aos-delay="80">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Escape from despair and failure", "হতাশা ও ব্যর্থতা কাটাতে মাদক গ্রহণ")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-environment" data-aos="fade-up" data-aos-delay="85">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-wind"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Environmental influence", "পারিপার্শ্বিক পরিবেশের প্রভাব")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-pleasure" data-aos="fade-up" data-aos-delay="90">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-smile"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Seeking pleasure and enjoyment", "নিছক আনন্দের জন্য মাদক গ্রহণ")}</span>
+      </li>
+    </ul>
+  </section>
+</div>
               `;
             })(),
           },
@@ -11672,90 +11728,138 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const physicalSigns = [
-                "১. লাল ও ছলছলে চোখ",
-                "২. ক্ষুধামন্দা, বমিবমি ভাব, বমি হওয়া",
-                "৩. ভারসাম্যহীনতা (অস্থিরতা)",
-                "৪. হাত-পা কাঁপা",
-                "৫. বুক ধড়ফড় করা",
-                "৬. অতিরিক্ত দুর্বল লাগা, ঘুম ঘুম ভাব",
-                "৭. হাত-পায়ের শিরায় সুঁচ ফোটানোর দাগ এবং ফুলহাতা শার্ট পরে এগুলো ঢাকার প্রচেষ্টা",
-                "৮. স্বাস্থ্য ভেঙে যাওয়া এবং খাওয়া-দাওয়ার অভ্যাসে পরিবর্তন হওয়া",
-              ];
-
-              const behavioralSigns = [
-                "১. সারা রাত জেগে থাকা এবং দিনের বেলায় ঘুমানো",
-                "২. লেখাপড়া খারাপ করা",
-                "৩. নিজের ও পোশাক-পরিচ্ছদের প্রতি উদাসীনতা প্রদর্শন",
-                "৪. যখন-তখন বাইরে যাওয়া, অধিক রাতে ঘরে ফেরা",
-                "৫. পরিবারের কাছ থেকে বেশি হাতখরচের টাকা-পয়সা চাওয়া",
-                "৬. বিছানার আশপাশে এবং বালিশ ও বিছানার নিচে ট্যাবলেটের খালি স্ট্রিপ পড়ে থাকা",
-                "৭. অনেক সময় অপ্রকৃতস্থ অবস্থায় ঘরে ফেরা এবং পরিবারের লোকজনদের সাথে দুর্ব্যবহার করা",
-                "৮. খিটখিটে মেজাজ",
-                "৯. প্রায়ই মিথ্যা কথা বলা, চুরি করা",
-                "১০. দেনাগ্রস্ত হয়ে পড়া",
-                "১১. ঘনঘন মোবাইলের সিম পরিবর্তন",
-                "১২. প্রায়ই রাস্তাঘাটে দুর্ঘটনার কবলে পড়া",
-                "১৩. অসামাজিক ও অপরাধমূলক কাজকর্মে লিপ্ত হওয়া",
-                "১৪. নতুন (নেশাগ্রস্ত) বন্ধুবান্ধব হওয়া এবং পুরোনো ভালো বন্ধুদের সাথে সম্পর্ক না রাখা",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Drug addiction signs",
-                    "মাদকাসক্তির লক্ষণসমূহ"
-                  )}</h2>
+                <!-- Module 17 Lesson 2: Signs of Addiction -->
+<div class="lesson-slide mod17-lesson2">
+  <div class="m17l2-shapes" role="presentation"></div>
+  
+  <!-- Hero Section -->
+  <section class="m17l2-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m17l2-hero__badge">
+      <i class="fa-solid fa-eye"></i>
+    </div>
+    <div class="m17l2-hero__content">
+      <h2 class="m17l2-hero__title">${yhLang("Signs of Drug Addiction", "মাদকাসক্তির লক্ষণসমূহ")}</h2>
+      <p class="m17l2-hero__subtitle">${yhLang("Physical & Behavioral Indicators", "শারীরিক ও আচরণগত সূচক")}</p>
+    </div>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="30">
-                    <div class="table-responsive">
-                      <table class="table table-bordered align-middle addiction-table">
-                        <thead>
-                          <tr>
-                            <th class="text-uppercase text-muted">${yhLang(
-                              "শারীরিক লক্ষণসমূহ",
-                              "শারীরিক লক্ষণসমূহ"
-                            )}</th>
-                            <th class="text-uppercase text-muted">${yhLang(
-                              "আচরণগত লক্ষণসমূহ",
-                              "আচরণগত লক্ষণসমূহ"
-                            )}</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <ul class="list-unstyled puberty-list mb-0">
-                                ${renderList(physicalSigns)}
-                              </ul>
-                            </td>
-                            <td>
-                              <ul class="list-unstyled puberty-list mb-0">
-                                ${renderList(behavioralSigns)}
-                              </ul>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </section>
-                </div>
+  <!-- Physical Signs Section -->
+  <section class="m17l2-physical-signs" data-aos="fade-up" data-aos-delay="40">
+    <div class="m17l2-signs-header">
+      <div class="m17l2-signs-icon">
+        <i class="fa-solid fa-heart"></i>
+      </div>
+      <h3 class="m17l2-signs-title">${yhLang("Physical Signs", "শারীরিক লক্ষণসমূহ")}</h3>
+    </div>
+    <ul class="m17l2-physical-signs-list">
+      <li class="m17l2-sign-item m17l2-sign-eyes" data-aos="fade-up" data-aos-delay="45">
+        <span class="m17l2-sign-number">1</span>
+        <span class="m17l2-sign-text">${yhLang("Red and watery eyes", "লাল ও ছলছলে চোখ")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-appetite" data-aos="fade-up" data-aos-delay="50">
+        <span class="m17l2-sign-number">2</span>
+        <span class="m17l2-sign-text">${yhLang("Loss of appetite, nausea, and vomiting", "ক্ষুধামন্দা, বমিবমি ভাব, বমি হওয়া")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-balance" data-aos="fade-up" data-aos-delay="55">
+        <span class="m17l2-sign-number">3</span>
+        <span class="m17l2-sign-text">${yhLang("Lack of balance and instability", "ভারসাম্যহীনতা ও অস্থিরতা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-tremor" data-aos="fade-up" data-aos-delay="60">
+        <span class="m17l2-sign-number">4</span>
+        <span class="m17l2-sign-text">${yhLang("Trembling hands and body", "হাত-পা কাঁপা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-heart" data-aos="fade-up" data-aos-delay="65">
+        <span class="m17l2-sign-number">5</span>
+        <span class="m17l2-sign-text">${yhLang("Heart palpitations", "বুক ধড়ফড় করা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-weakness" data-aos="fade-up" data-aos-delay="70">
+        <span class="m17l2-sign-number">6</span>
+        <span class="m17l2-sign-text">${yhLang("Extreme weakness and drowsiness", "অতিরিক্ত দুর্বল লাগা, ঘুম ঘুম ভাব")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-marks" data-aos="fade-up" data-aos-delay="75">
+        <span class="m17l2-sign-number">7</span>
+        <span class="m17l2-sign-text">${yhLang("Injection marks on arms/attempts to hide", "সুঁচ ফোটানোর দাগ ও লুকানোর প্রচেষ্টা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-health" data-aos="fade-up" data-aos-delay="80">
+        <span class="m17l2-sign-number">8</span>
+        <span class="m17l2-sign-text">${yhLang("Poor health and eating habit changes", "স্বাস্থ্য ভেঙে যাওয়া এবং খাওয়ার অভ্যাস পরিবর্তন")}</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Behavioral Signs Section -->
+  <section class="m17l2-behavioral-signs" data-aos="fade-up" data-aos-delay="85">
+    <div class="m17l2-signs-header">
+      <div class="m17l2-signs-icon">
+        <i class="fa-solid fa-person"></i>
+      </div>
+      <h3 class="m17l2-signs-title">${yhLang("Behavioral Signs", "আচরণগত লক্ষণসমূহ")}</h3>
+    </div>
+    <ul class="m17l2-behavioral-signs-list">
+      <li class="m17l2-sign-item m17l2-sign-sleep" data-aos="fade-up" data-aos-delay="90">
+        <span class="m17l2-sign-number">1</span>
+        <span class="m17l2-sign-text">${yhLang("Staying awake all night and sleeping during day", "রাত জেগে থাকা এবং দিনে ঘুম")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-studies" data-aos="fade-up" data-aos-delay="95">
+        <span class="m17l2-sign-number">2</span>
+        <span class="m17l2-sign-text">${yhLang("Poor academic performance", "লেখাপড়া খারাপ করা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-hygiene" data-aos="fade-up" data-aos-delay="100">
+        <span class="m17l2-sign-number">3</span>
+        <span class="m17l2-sign-text">${yhLang("Neglect of personal and clothing hygiene", "নিজের ও পোশাকের প্রতি উদাসীনতা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-absence" data-aos="fade-up" data-aos-delay="105">
+        <span class="m17l2-sign-number">4</span>
+        <span class="m17l2-sign-text">${yhLang("Frequent outings and late night returns", "যখন-তখন বাইরে যাওয়া, অধিক রাতে ফেরা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-money" data-aos="fade-up" data-aos-delay="110">
+        <span class="m17l2-sign-number">5</span>
+        <span class="m17l2-sign-text">${yhLang("Asking for extra money from family", "পরিবারের কাছ থেকে বেশি টাকা চাওয়া")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-evidence" data-aos="fade-up" data-aos-delay="115">
+        <span class="m17l2-sign-number">6</span>
+        <span class="m17l2-sign-text">${yhLang("Empty tablet strips found in room", "বিছানার আশপাশে ট্যাবলেটের খালি স্ট্রিপ")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-behavior" data-aos="fade-up" data-aos-delay="120">
+        <span class="m17l2-sign-number">7</span>
+        <span class="m17l2-sign-text">${yhLang("Intoxicated behavior and mistreatment of family", "অপ্রকৃতস্থ অবস্থায় ফেরা এবং দুর্ব্যবহার")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-mood" data-aos="fade-up" data-aos-delay="125">
+        <span class="m17l2-sign-number">8</span>
+        <span class="m17l2-sign-text">${yhLang("Irritable and moody behavior", "খিটখিটে মেজাজ")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-honesty" data-aos="fade-up" data-aos-delay="130">
+        <span class="m17l2-sign-number">9</span>
+        <span class="m17l2-sign-text">${yhLang("Frequent lying and stealing", "প্রায়ই মিথ্যা বলা ও চুরি করা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-debt" data-aos="fade-up" data-aos-delay="135">
+        <span class="m17l2-sign-number">10</span>
+        <span class="m17l2-sign-text">${yhLang("Getting into debt", "দেনাগ্রস্ত হয়ে পড়া")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-phone" data-aos="fade-up" data-aos-delay="140">
+        <span class="m17l2-sign-number">11</span>
+        <span class="m17l2-sign-text">${yhLang("Frequently changing mobile SIMs", "ঘনঘন মোবাইল সিম পরিবর্তন")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-accidents" data-aos="fade-up" data-aos-delay="145">
+        <span class="m17l2-sign-number">12</span>
+        <span class="m17l2-sign-text">${yhLang("Frequent accidents on roads", "ঘনঘন রাস্তায় দুর্ঘটনা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-crime" data-aos="fade-up" data-aos-delay="150">
+        <span class="m17l2-sign-number">13</span>
+        <span class="m17l2-sign-text">${yhLang("Involvement in antisocial and criminal activities", "অসামাজিক ও অপরাধমূলক কাজে লিপ্ত")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-friends" data-aos="fade-up" data-aos-delay="155">
+        <span class="m17l2-sign-number">14</span>
+        <span class="m17l2-sign-text">${yhLang("New friends (addicted) and abandoning old friends", "নেশাগ্রস্ত নতুন বন্ধু এবং পুরোনো ভাল বন্ধু পরিত্যাগ")}</span>
+      </li>
+    </ul>
+  </section>
+</div>
               `;
             })(),
-          },
-          {
+          }, 
+         {
             id: "ch17-lesson-3",
             title: yhLang("মাদকাসক্তির পরিণতি ও প্রতিরোধ", "মাদকাসক্তির পরিণতি ও প্রতিরোধ"),
             icon: "fa-scale-balanced",
@@ -19269,5 +19373,4 @@ const coursesData = [
     });
   } catch (_) {}
 })(typeof window !== "undefined" ? window : globalThis);
-
 

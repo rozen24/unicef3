@@ -10768,51 +10768,87 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "এটি এমন এক ধরণের সেবা যার দ্বারা মানুষ আত্মসচেতন হওয়ার মাধ্যমে নিজের আচরণ ও মনোভাবের কাক্সিক্ষত পরিবর্তন আনতে সক্ষম হয়।";
+              const definition =
+                "এটি এমন এক ধরণের সেবা যার দ্বারা মানুষ আত্মসচেতন হওয়ার মাধ্যমে নিজের আচরণ ও মনোভাবের কাক্সিক্ষত পরিবর্তন আনতে সক্ষম হয়।";
 
-              const sections = [
+              const benefits = [
                 {
-                  title: "মনোসামাজিক সহায়তাকারী",
-                  description:
-                    "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অসুবিধা হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।",
+                  text: yhLang("Helps overcome crises", "সংকট অতিক্রম করতে সহায়তা করে"),
+                  icon: "fa-shield",
+                  color: "m16l1-benefit-resilience",
                 },
                 {
-                  title: "মনোসামাজিক শিক্ষা",
-                  description:
-                    "মনোসামাজিক শিক্ষা হল এমন এক ধরনের শিক্ষণ প্রক্রিয়া যার মাধ্যমে একজন ব্যক্তির আকস্মিক বিপর্যয়, বিপত্তি, উৎপীড়ন, নিপীড়নের ফলে যে মানসিক অবস্থার সৃষ্টি হয় তা থেকে স্বাভাবিক অবস্থায় ফিরিয়ে আনতে ও স্বাভাবিক জীবনে মানিয়ে নিতে সহায়তা করে। মনোসামাজিক শিক্ষা ব্যক্তিকে তার প্রাত্যহিক জীবনে স্বাভাবিক কর্মকান্ড পরিচালনায় সহায়তা করে এবং পরিস্থিতি মোকাবেলার জন্য প্রস্তুত করে।",
+                  text: yhLang("Improves mental health", "মানসিক স্বাস্থ্য উন্নত করে"),
+                  icon: "fa-heart",
+                  color: "m16l1-benefit-health",
                 },
                 {
-                  title: "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা",
-                  description:
-                    "কিশোর-কিশোরীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে কিশোর-কিশোরীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
+                  text: yhLang("Develops coping skills", "মোকাবেলা দক্ষতা বিকাশ করে"),
+                  icon: "fa-toolbox",
+                  color: "m16l1-benefit-skills",
+                },
+                {
+                  text: yhLang("Builds confidence", "আত্মবিশ্বাস তৈরি করে"),
+                  icon: "fa-star",
+                  color: "m16l1-benefit-confidence",
+                },
+                {
+                  text: yhLang("Promotes social support", "সামাজিক সহায়তা প্রচার করে"),
+                  icon: "fa-people-arrows",
+                  color: "m16l1-benefit-community",
                 },
               ];
 
-              const renderSections = (items) =>
+              const renderBenefits = (items, startDelay = 130) =>
                 items
                   .map(
-                    (section, index) => `
-                      <section class="modern-card glass-card menstrual-info-card mt-${index === 0 ? 0 : 3}" data-aos="fade-up" data-aos-delay="${40 + index * 30}">
-                        <h3 class="h6 gradient-text mb-2">${section.title}</h3>
-                        <p class="mb-0">${section.description}</p>
-                      </section>
+                    (item, idx) => `
+                      <li class="m16l1-benefit-item ${item.color}" data-aos="zoom-in" data-aos-delay="${startDelay + idx * 50}">
+                        <div class="m16l1-benefit-icon" aria-hidden="true">
+                          <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <span class="m16l1-benefit-text">${item.text}</span>
+                      </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Psychosocial support",
-                    "মনোসামাজিক সহায়তা"
-                  )}</h2>
+                <div class="lesson-slide mod16-lesson1">
+                  <div class="m16l1-shapes">
+                    <div class="m16l1-shape m16l1-shape--circle"></div>
+                    <div class="m16l1-shape m16l1-shape--square"></div>
+                    <div class="m16l1-shape m16l1-shape--hexagon"></div>
+                  </div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
+                  <section class="m16l1-hero" data-aos="fade-down">
+                    <div class="m16l1-hero__badge" aria-hidden="true">
+                      <i class="fa-solid fa-hands-holding-heart"></i>
+                    </div>
+                    <div class="m16l1-hero__content">
+                      <h2 class="m16l1-hero__title">${yhLang("Understanding Psychosocial Support", "মনোসামাজিক সহায়তা")}</h2>
+                      <p class="m16l1-hero__subtitle">${yhLang("Emotional and social support", "আবেগজনিত এবং সামাজিক সহায়তা")}</p>
+                    </div>
                   </section>
 
-                  ${renderSections(sections)}
+                  <div class="m16l1-definition" data-aos="fade-up" data-aos-delay="40">
+                    <div class="m16l1-definition-icon" aria-hidden="true">
+                      <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <p class="m16l1-definition-text">${definition}</p>
+                  </div>
+
+                  <section class="m16l1-benefits-section">
+                    <div class="m16l1-benefits-header" data-aos="fade-up" data-aos-delay="110">
+                      <div class="m16l1-benefits-icon" aria-hidden="true">
+                        <i class="fa-solid fa-list-check"></i>
+                      </div>
+                      <h3 class="m16l1-benefits-title">${yhLang("Key Benefits", "প্রধান সুবিধাসমূহ")}</h3>
+                    </div>
+                    <ul class="m16l1-benefits-list">
+                      ${renderBenefits(benefits)}
+                    </ul>
+                  </section>
                 </div>
               `;
             })(),
@@ -10849,140 +10885,87 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "১. সমমর্মিতা (Empathy) সমমর্মিতা হলো যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতা (Empathy) এক নয়, সমবেদনা হলো শুধুই অনুভূতি আর সমমর্মিতা হলো অনুভূতিও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা।";
-
-              const comparisonNote = yhLang(
-                "Sympathy is only emotional response, while empathy combines emotional understanding with seeing from the other person's position.",
-                "সমবেদনা শুধু অনুভূতি, আর সমমর্মিতা হলো অনুভূতির পাশাপাশি অপরের অবস্থান থেকে বোঝার ক্ষমতা।"
-              );
-
-              const empathyHeading = yhLang(
-                "Results of Being Empathetic",
-                "সহমর্মী হবার ফলাফল"
-              );
-
-              const outcomes = [
-                {
-                  icon: "fa-eye",
-                  color: "m16l2-outcome-insight",
-                  text: yhLang(
-                    "Understanding the beneficiary's emotions from their own perspective.",
-                    "সেবাগ্রহীতার অনুভূতিকে তার অবস্থান থেকে বুঝতে পারা"
-                  ),
-                },
-                {
-                  icon: "fa-comments",
-                  color: "m16l2-outcome-expression",
-                  text: yhLang(
-                    "The beneficiary becomes more interested in sharing events in detail.",
-                    "সেবাগ্রহীতা তার ঘটনাকে বিস্তারিতভাবে বলতে উৎসাহী হবে"
-                  ),
-                },
-                {
-                  icon: "fa-ear-listen",
-                  color: "m16l2-outcome-listening",
-                  text: yhLang(
-                    "The beneficiary feels the helper is listening with full attention.",
-                    "সেবাগ্রহীতা বুঝতে পারবে যে সহায়তাকারী তার কথাগুলোকে খুব মনোযোগ দিয়ে শুনছেন"
-                  ),
-                },
-                {
-                  icon: "fa-arrow-right-long",
-                  color: "m16l2-outcome-flow",
-                  text: yhLang(
-                    "It becomes easier for the beneficiary to continue speaking.",
-                    "সেবাগ্রহীতার পক্ষে কথা চালিয়ে যাওয়া সহজ হবে"
-                  ),
-                },
-                {
-                  icon: "fa-people-group",
-                  color: "m16l2-outcome-trust",
-                  text: yhLang(
-                    "It helps build a strong relationship between beneficiary and helper.",
-                    "সেবাগ্রহীতা এবং সহায়তাকারীর মধ্যে সুসম্পর্ক তৈরি করতে সাহায্য করবে"
-                  ),
-                },
-              ];
-
-              const renderOutcomes = (items, startDelay = 0) =>
-                items
-                  .map(
-                    (item, index) => `
-                      <li class="m16l2-outcome-item ${item.color}" data-aos="zoom-in" data-aos-delay="${startDelay + index * 45}">
-                        <div class="m16l2-outcome-icon">
-                          <i class="fa-solid ${item.icon}"></i>
-                        </div>
-                        <span class="m16l2-outcome-text">${item.text}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide mod16-lesson2">
-                  <div class="m16l2-shapes" aria-hidden="true">
-                    <span class="m16l2-shape m16l2-shape--circle"></span>
-                    <span class="m16l2-shape m16l2-shape--pill"></span>
-                    <span class="m16l2-shape m16l2-shape--diamond"></span>
-                  </div>
+                <!-- Module 16 Lesson 2: Empathy Skills -->
+<div class="lesson-slide mod16-lesson2">
+  <div class="m16l2-shapes" role="presentation"></div>
+  
+  <!-- Hero Section -->
+  <section class="m16l2-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m16l2-hero__badge">
+      <i class="fa-solid fa-hands-holding-heart"></i>
+    </div>
+    <div class="m16l2-hero__content">
+      <h2 class="m16l2-hero__title">${yhLang("Empathy Skills", "সমমর্মিতা দক্ষতা")}</h2>
+      <p class="m16l2-hero__subtitle">${yhLang("Understanding from Others' Perspective", "অন্যের অবস্থান থেকে বোঝা")}</p>
+    </div>
+  </section>
 
-                  <section class="m16l2-hero" data-aos="fade-down">
-                    <div class="m16l2-hero__badge" aria-hidden="true">
-                      <i class="fa-solid fa-hands-holding-heart"></i>
-                    </div>
-                    <div class="m16l2-hero__content">
-                      <h2 class="m16l2-hero__title">${yhLang(
-                        "Empathy Skills",
-                        "সমমর্মিতা"
-                      )}</h2>
-                      <p class="m16l2-hero__subtitle">${yhLang(
-                        "Core psychosocial support competency",
-                        "মনোসামাজিক সহায়তার গুরুত্বপূর্ণ দক্ষতা"
-                      )}</p>
-                    </div>
-                  </section>
+  <!-- Info Cards Grid -->
+  <div class="m16l2-info-grid" data-aos="fade-up" data-aos-delay="40">
+    <div class="m16l2-info-card m16l2-info-card--definition">
+      <div class="m16l2-info-card__header">
+        <div class="m16l2-info-card__icon">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <h3 class="m16l2-info-card__title">${yhLang("Empathy", "সমমর্মিতা")}</h3>
+      </div>
+      <p class="m16l2-info-card__text">${yhLang("Empathy is the ability to feel others' emotions from their perspective and understand them the way they do. It differs from sympathy which is only feeling; empathy includes understanding others' situations.", "সমমর্মিতা হল অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে বুঝতে পারা। এটি সমবেদনা থেকে ভিন্ন কারণ সমবেদনা শুধু অনুভূতি আর সমমর্মিতা অনুভূতি ও বোঝার ক্ষমতা উভয়ই অন্তর্ভুক্ত করে।")}</p>
+    </div>
 
-                  <section class="m16l2-info-grid" data-aos="fade-up" data-aos-delay="40">
-                    <article class="m16l2-info-card m16l2-info-card--definition">
-                      <div class="m16l2-info-card__header">
-                        <div class="m16l2-info-card__icon" aria-hidden="true">
-                          <i class="fa-solid fa-lightbulb"></i>
-                        </div>
-                        <h3 class="m16l2-info-card__title">${yhLang(
-                          "Empathy Definition",
-                          "সমমর্মিতার সংজ্ঞা"
-                        )}</h3>
-                      </div>
-                      <p class="m16l2-info-card__text">${intro}</p>
-                    </article>
+    <div class="m16l2-info-card m16l2-info-card--comparison">
+      <div class="m16l2-info-card__header">
+        <div class="m16l2-info-card__icon">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <h3 class="m16l2-info-card__title">${yhLang("Sympathy vs Empathy", "সমবেদনা বনাম সমমর্মিতা")}</h3>
+      </div>
+      <p class="m16l2-info-card__text">${yhLang("Sympathy is feeling compassion for someone's situation, while empathy goes deeper to understand their feelings and perspective. Empathy creates better relationships and support.", "সমবেদনা হল সহানুভূতি দেখানো, কিন্তু সমমর্মিতা আরও গভীর বোঝাপড়া তৈরি করে এবং ভাল সম্পর্ক গড়ে তোলে।")}</p>
+    </div>
+  </div>
 
-                    <article class="m16l2-info-card m16l2-info-card--comparison">
-                      <div class="m16l2-info-card__header">
-                        <div class="m16l2-info-card__icon" aria-hidden="true">
-                          <i class="fa-solid fa-balance-scale"></i>
-                        </div>
-                        <h3 class="m16l2-info-card__title">${yhLang(
-                          "Empathy vs Sympathy",
-                          "সমমর্মিতা বনাম সমবেদনা"
-                        )}</h3>
-                      </div>
-                      <p class="m16l2-info-card__text">${comparisonNote}</p>
-                    </article>
-                  </section>
-
-                  <section class="m16l2-outcomes-section" data-aos="fade-up" data-aos-delay="110">
-                    <div class="m16l2-outcomes-header">
-                      <div class="m16l2-outcomes-header__icon" aria-hidden="true">
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                      <h3 class="m16l2-outcomes-title">${empathyHeading}</h3>
-                    </div>
-                    <ul class="m16l2-outcomes-list">
-                      ${renderOutcomes(outcomes, 150)}
-                    </ul>
-                  </section>
-                </div>
+  <!-- Outcomes Section -->
+  <section class="m16l2-outcomes-section" data-aos="fade-up" data-aos-delay="60">
+    <div class="m16l2-outcomes-header">
+      <div class="m16l2-outcomes-header__icon">
+        <i class="fa-solid fa-sparkles"></i>
+      </div>
+      <h3 class="m16l2-outcomes-title">${yhLang("Results of Being Empathetic", "সহমর্মী হবার ফলাফল")}</h3>
+    </div>
+    <ul class="m16l2-outcomes-list">
+      <li class="m16l2-outcome-item m16l2-outcome-insight" data-aos="fade-up" data-aos-delay="65">
+        <div class="m16l2-outcome-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <span class="m16l2-outcome-text">${yhLang("Understand others' feelings from their perspective", "অন্যের অনুভূতি তাদের অবস্থান থেকে বুঝতে পারা")}</span>
+      </li>
+      <li class="m16l2-outcome-item m16l2-outcome-expression" data-aos="fade-up" data-aos-delay="70">
+        <div class="m16l2-outcome-icon">
+          <i class="fa-solid fa-microphone"></i>
+        </div>
+        <span class="m16l2-outcome-text">${yhLang("Service user becomes eager to share their story in detail", "সেবাগ্রহীতা তাদের ঘটনা বিস্তারিতভাবে বলতে আগ্রহী হয়")}</span>
+      </li>
+      <li class="m16l2-outcome-item m16l2-outcome-listening" data-aos="fade-up" data-aos-delay="75">
+        <div class="m16l2-outcome-icon">
+          <i class="fa-solid fa-ear"></i>
+        </div>
+        <span class="m16l2-outcome-text">${yhLang("Service user realizes the helper is listening carefully", "সেবাগ্রহীতা বুঝে যে সহায়তাকারী মনোযোগ দিয়ে শুনছে")}</span>
+      </li>
+      <li class="m16l2-outcome-item m16l2-outcome-flow" data-aos="fade-up" data-aos-delay="80">
+        <div class="m16l2-outcome-icon">
+          <i class="fa-solid fa-forward"></i>
+        </div>
+        <span class="m16l2-outcome-text">${yhLang("Service user finds it easy to continue sharing", "সেবাগ্রহীতার কথা চালিয়ে যাওয়া সহজ হয়")}</span>
+      </li>
+      <li class="m16l2-outcome-item m16l2-outcome-trust" data-aos="fade-up" data-aos-delay="85">
+        <div class="m16l2-outcome-icon">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <span class="m16l2-outcome-text">${yhLang("Builds strong relationship between helper and service user", "সহায়তাকারী এবং সেবাগ্রহীতার মধ্যে শক্তিশালী সম্পর্ক তৈরি হয়")}</span>
+      </li>
+    </ul>
+  </section>
+</div>
               `;
             })(),
           },
@@ -11012,103 +10995,114 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "এটি এমন একটি দক্ষতা যার মাধ্যমে শ্রোতা বক্তার কথা মনোযোগ দিয়ে শোনার সাথে সাথে সেই কথার অন্তর্নিহিত অর্থও বুঝতে পারেন।";
-
-              const sections = [
-                {
-                  title: "১। প্রশ্ন করার মাধ্যমে",
-                  description:
-                    "অংশগ্রহণকারীর কথা শুনে তার কাছে বিভিন্ন ধরনের প্রশ্ন করার মাধ্যমে তার ঘটনাটা বিস্তারিতভাবে জানা সম্ভব। যেমনঃ কবে ঘটেছিল, কোথায় ঘটেছিল, কে করেছে ইত্যাদি। অংশগ্রহণকারীর কথার ফাঁকে ফাঁকে প্রশ্ন করার মাধ্যমে ঘটনাটা বিস্তারিতভাবে জানা সম্ভব।",
-                },
-              ];
-
-              const attentivePoints = [
-                "খেয়াল করা – কীভাবে অংশগ্রহণকারী কথা বলছেন",
-                "কোন কোন শব্দগুলোকে সে জোর দিয়ে বলছে, কোন কথার মাধ্যমে সে তার আবেগকে প্রকাশ করছে",
-                "তার অভিজ্ঞতাকে বর্ণনা করতে গিয়ে সে কি কি শব্দ ব্যবহার করছে",
-                "তার বসার ভঙ্গি খেয়াল করা",
-                "মুখের ভঙ্গি খেয়াল করা",
-              ];
-
-              const additionalSections = [
-                {
-                  title: "৩। দৃষ্টি সংযোগ",
-                  description:
-                    "সঠিকভাবে চোখে চোখ রেখে কথা বলা খুবই জরুরী। ফলে সহায়তাকারী অন্যের কথা খুবই আগ্রহ নিয়ে শুনছেন তা প্রকাশ পায়। প্রতি ৩/৪ সেকেন্ডে পরপর সরাসরি দৃষ্টি সংযোগ করা মনোযোগী শ্রোতা হবার জন্য খুবই গুরুত্বপূর্ণ।",
-                },
-                {
-                  title: "৪। মৌখিকভাবে বলা",
-                  description:
-                    "আমি তোমার সাথে আছি, তোমার অবস্থাটা আমি বুঝতে পারছি ইত্যাদি।",
-                },
-                {
-                  title: "৫। স্বাভাবিকভাবে বসা",
-                  description:
-                    "মুখোমুখি একটি নির্দিষ্ট দূরত্বে জড়তাহীন ভাবে বসা, একটি ফলপ্রসূ মনোসামাজিক সহায়তা নিশ্চিত করে।",
-                },
-                {
-                  title: "৬। অবহেলা প্রদর্শনমূলক আচরণ করা যাবে না",
-                  description:
-                    "আমাদের শারীরিক ভাষা বা Body Language / Body Movement — মুখভঙ্গী, হাত-পা দিয়ে এমন আচরণ করা যাবে না যার মাধ্যমে অংশগ্রহণকারীর প্রতি অবহেলা প্রদর্শন বোঝায়।",
-                },
-                {
-                  title: "৭। সঠিক দৃষ্টিভঙ্গি (Posture)",
-                  description:
-                    "একটি ইতিবাচক আচরণ নিয়ে আসে যার মাধ্যমে অংশগ্রহণকারী সংকেত পায় যে সহায়তাকারী তার কথা খুব মনোযোগ দিয়ে শুনছে।",
-                },
-                {
-                  title: "৮। মুখের প্রকাশভঙ্গী (Facial Expression)",
-                  description:
-                    "এর মাধ্যমে সংকেত পাওয়া যায় যে অংশগ্রহণকারীর কথা শোনার জন্য প্রস্তুত ও যথেষ্ট আগ্রহী আছে।",
-                },
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              const renderSection = (section) => `
-                <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up">
-                  <h3 class="h6 gradient-text mb-2">${section.title}</h3>
-                  <p class="mb-0">${section.description}</p>
-                </section>
-              `;
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Attentive listening skills",
-                    "মনোযোগী শ্রবণ"
-                  )}</h2>
+                <!-- Module 16 Lesson 3: Attentive Listening -->
+<div class="lesson-slide mod16-lesson3">
+  <div class="m16l3-shapes" role="presentation"></div>
+  
+  <!-- Hero Section -->
+  <section class="m16l3-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m16l3-hero__badge">
+      <i class="fa-solid fa-ear-listen"></i>
+    </div>
+    <div class="m16l3-hero__content">
+      <h2 class="m16l3-hero__title">${yhLang("Attentive Listening", "মনোযোগী শ্রবণ")}</h2>
+      <p class="m16l3-hero__subtitle">${yhLang("Listening with Focus & Understanding", "মনোযোগ এবং বোঝার সাথে শোনা")}</p>
+    </div>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
-                  </section>
+  <!-- Definition Card -->
+  <section class="m16l3-definition" data-aos="fade-up" data-aos-delay="40">
+    <div class="m16l3-definition-icon">
+      <i class="fa-solid fa-lightbulb"></i>
+    </div>
+    <p class="m16l3-definition-text">${yhLang("Attentive listening is a skill through which the listener hears the speaker's words carefully while understanding the underlying meaning and context of what is being conveyed.", "মনোযোগী শ্রবণ হল এমন দক্ষতা যার মাধ্যমে শ্রোতা বক্তার কথা মনোযোগ দিয়ে শোনে এবং সেই কথার অন্তর্নিহিত অর্থও বোঝে।")}</p>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="h6 gradient-text mb-2">মনোযোগী শ্রোতা হওয়ার ধাপসমূহ</h3>
-                  </section>
+  <!-- Technique Cards (7 cards with numbered badges) -->
+  <section class="m16l3-technique-card" data-aos="fade-up" data-aos-delay="50">
+    <div class="m16l3-technique-header">
+      <span class="m16l3-technique-badge">1</span>
+      <h3 class="m16l3-technique-title">${yhLang("Asking Questions", "প্রশ্ন করা")}</h3>
+    </div>
+    <p class="m16l3-technique-text">${yhLang("Ask about specific details like when, where, and who was involved. Ask questions between pauses to help the speaker share their story more completely.", "সময়, স্থান এবং কে জড়িত সে সম্পর্কে বিশেষ প্রশ্ন করুন যা ঘটনা বিস্তারিত জানায়।")}</p>
+  </section>
 
-                  ${sections.map((s) => renderSection(s)).join("")}
+  <section class="m16l3-technique-card" data-aos="fade-up" data-aos-delay="55">
+    <div class="m16l3-technique-header">
+      <span class="m16l3-technique-badge">2</span>
+      <h3 class="m16l3-technique-title">${yhLang("Observing Carefully", "মনোযোগী পর্যবেক্ষণ")}</h3>
+    </div>
+    <p class="m16l3-technique-text">${yhLang("Observe how the speaker is talking. Notice which words they emphasize, what emotional expressions they use, and their body language to understand their feelings better.", "বক্তা কীভাবে কথা বলছে তা লক্ষ্য করুন এবং তাদের শারীরিক ভাষা থেকে আবেগ বুঝুন।")}</p>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up">
-                    <h3 class="h6 gradient-text mb-2">২। মনোযোগী শ্রবণ</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(attentivePoints)}
-                    </ul>
-                  </section>
+  <section class="m16l3-technique-card" data-aos="fade-up" data-aos-delay="60">
+    <div class="m16l3-technique-header">
+      <span class="m16l3-technique-badge">3</span>
+      <h3 class="m16l3-technique-title">${yhLang("Eye Contact", "দৃষ্টি সংযোগ")}</h3>
+    </div>
+    <p class="m16l3-technique-text">${yhLang("Maintain direct eye contact every 3-4 seconds. This shows the speaker that you are genuinely interested and paying close attention to what they are saying.", "প্রতি ৩/৪ সেকেন্ডে দৃষ্টি সংযোগ করুন যা আগ্রহ প্রকাশ করে।")}</p>
+  </section>
 
-                  ${additionalSections.map((s) => renderSection(s)).join("")}
-                </div>
+  <section class="m16l3-technique-card" data-aos="fade-up" data-aos-delay="65">
+    <div class="m16l3-technique-header">
+      <span class="m16l3-technique-badge">4</span>
+      <h3 class="m16l3-technique-title">${yhLang("Verbal Affirmation", "মৌখিক সমর্থন")}</h3>
+    </div>
+    <p class="m16l3-technique-text">${yhLang("Say things like \"I'm with you,\" \"I understand your situation\" to show the speaker that you genuinely care and understand what they're going through.", "'আমি তোমার সাথে আছি' বা 'আমি বুঝতে পারছি' বলুন যা সংযোগ তৈরি করে।")}</p>
+  </section>
+
+  <section class="m16l3-technique-card" data-aos="fade-up" data-aos-delay="70">
+    <div class="m16l3-technique-header">
+      <span class="m16l3-technique-badge">5</span>
+      <h3 class="m16l3-technique-title">${yhLang("Comfortable Posture", "স্বাভাবিক বসার ভঙ্গি")}</h3>
+    </div>
+    <p class="m16l3-technique-text">${yhLang("Sit face-to-face at a comfortable distance without tension. A relaxed posture helps create a safe and supportive environment for the speaker.", "মুখোমুখি একটি নিশ্চিত দূরত্বে স্বাভাবিকভাবে বসুন যা নিরাপদ পরিবেশ তৈরি করে।")}</p>
+  </section>
+
+  <section class="m16l3-technique-card" data-aos="fade-up" data-aos-delay="75">
+    <div class="m16l3-technique-header">
+      <span class="m16l3-technique-badge">6</span>
+      <h3 class="m16l3-technique-title">${yhLang("Avoid Negligent Behavior", "অবহেলা প্রদর্শন এড়িয়ে চলা")}</h3>
+    </div>
+    <p class="m16l3-technique-text">${yhLang("Avoid body language or movements that suggest disinterest or dismissal. Your body language should show respect and genuine engagement with the speaker.", "আপনার শারীরিক ভাষা দিয়ে অবহেলা বোঝান এমন কাজ এড়িয়ে চলুন যা সম্মান নষ্ট করে।")}</p>
+  </section>
+
+  <section class="m16l3-technique-card" data-aos="fade-up" data-aos-delay="80">
+    <div class="m16l3-technique-header">
+      <span class="m16l3-technique-badge">7</span>
+      <h3 class="m16l3-technique-title">${yhLang("Positive Expressions", "ইতিবাচক মুখের ভাব")}</h3>
+    </div>
+    <p class="m16l3-technique-text">${yhLang("Use facial expressions that show you are ready and interested. Positive expressions signal openness and willingness to listen attentively to what the speaker has to say.", "আপনার মুখের ভাব দিয়ে প্রস্তুতি এবং আগ্রহ প্রকাশ করুন যা শোনার ইচ্ছা দেখায়।")}</p>
+  </section>
+
+  <!-- Observation Items -->
+  <section class="m16l3-observation-section" data-aos="fade-up" data-aos-delay="90">
+    <h3 class="m16l3-observation-title">${yhLang("Key Things to Observe", "পর্যবেক্ষণের মূল বিষয়")}</h3>
+    <ul class="m16l3-observation-list">
+      <li class="m16l3-observation-item" data-aos="fade-up" data-aos-delay="95">
+        <i class="fa-solid fa-check-circle"></i>
+        <span>${yhLang("Notice how the speaker is talking", "বক্তা কীভাবে কথা বলছে লক্ষ্য করুন")}</span>
+      </li>
+      <li class="m16l3-observation-item" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-check-circle"></i>
+        <span>${yhLang("Which words they emphasize strongly", "কোন শব্দে জোর দিচ্ছে তা লক্ষ্য করুন")}</span>
+      </li>
+      <li class="m16l3-observation-item" data-aos="fade-up" data-aos-delay="105">
+        <i class="fa-solid fa-check-circle"></i>
+        <span>${yhLang("What words they use to describe their experience", "অভিজ্ঞতা বর্ণনায় কী শব্দ ব্যবহার করছে")}</span>
+      </li>
+      <li class="m16l3-observation-item" data-aos="fade-up" data-aos-delay="110">
+        <i class="fa-solid fa-check-circle"></i>
+        <span>${yhLang("Their body posture and gestures", "তাদের বসার ভঙ্গি ও অঙ্গভঙ্গি")}</span>
+      </li>
+      <li class="m16l3-observation-item" data-aos="fade-up" data-aos-delay="115">
+        <i class="fa-solid fa-check-circle"></i>
+        <span>${yhLang("Their facial expressions and emotions", "মুখের ভাব এবং আবেগ")}</span>
+      </li>
+    </ul>
+  </section>
+</div>
               `;
             })(),
           },
@@ -11138,60 +11132,104 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "মূল্যবোধ হলো আমাদের বিশ্বাস, আদর্শ ও নীতি, যার প্রভাব আমাদের আচরণের উপর পড়ে এবং জীবন পরিচালনায় সহায়তা করে। মূল্যবোধের আলোকে মানুষ তার জীবন পরিচালনা করতে উদ্বুদ্ধ হয়।";
-
-              const sourceHeading = "মূল্যবোধের উৎস";
-              const sources = [
-                "পরিবার",
-                "বিদ্যালয়",
-                "সমাজ",
-                "ধর্ম",
-                "গোত্র/গোষ্ঠী",
-                "শিক্ষা ও সংস্কৃতি",
-              ];
-
-              const examples =
-                "যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সম্মান করতে ইত্যাদি। আবার সমাজ থেকেও আমরা বিভিন্ন মূল্যবোধ শেখা যায়, যেমন—বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সম্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধূমপান না করা ইত্যাদি।";
-
-              const diversity =
-                "দেশ, সমাজ, জাতি, ধর্ম ও বর্ণভেদে মূল্যবোধ ভিন্ন হতে পারে। নিজের স্বতন্ত্র ব্যক্তিগত বিশ্বাস থেকে কিছু মূল্যবোধ তৈরি হতে পারে। এই বিভিন্নতাকে গ্রহণ এবং সম্মান করা বাঞ্ছনীয়।";
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Understanding values",
-                    "মূল্যবোধ"
-                  )}</h2>
+                <!-- Module 16 Lesson 4: Values -->
+<div class="lesson-slide mod16-lesson4">
+  <div class="m16l4-shapes" role="presentation"></div>
+  
+  <!-- Hero Section -->
+  <section class="m16l4-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m16l4-hero__badge">
+      <i class="fa-solid fa-scale-balanced"></i>
+    </div>
+    <div class="m16l4-hero__content">
+      <h2 class="m16l4-hero__title">${yhLang("Understanding Values", "মূল্যবোধ বোঝা")}</h2>
+      <p class="m16l4-hero__subtitle">${yhLang("Beliefs That Guide Our Behavior", "আমাদের আচরণকে পরিচালনা করে এমন বিশ্বাস")}</p>
+    </div>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
-                  </section>
+  <!-- Definition Card -->
+  <section class="m16l4-definition" data-aos="fade-up" data-aos-delay="40">
+    <div class="m16l4-definition-icon">
+      <i class="fa-solid fa-lightbulb"></i>
+    </div>
+    <p class="m16l4-definition-text">${yhLang("Values are our beliefs, ideals, and principles that influence our behavior and guide us in leading our lives. They motivate us to act in accordance with what we believe is right and important.", "মূল্যবোধ আমাদের বিশ্বাস, আদর্শ ও নীতি যা আমাদের আচরণকে প্রভাবিত করে এবং জীবন পরিচালনায় সাহায্য করে।")}</p>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <h3 class="h6 gradient-text mb-2">${sourceHeading}</h3>
-                    <ul class="list-unstyled puberty-list mb-3">
-                      ${renderList(sources)}
-                    </ul>
-                    <p class="mb-0">${examples}</p>
-                  </section>
+  <!-- Sources Section -->
+  <section class="m16l4-sources-section" data-aos="fade-up" data-aos-delay="50">
+    <div class="m16l4-sources-header">
+      <div class="m16l4-sources-icon">
+        <i class="fa-solid fa-water"></i>
+      </div>
+      <h3 class="m16l4-sources-title">${yhLang("Sources of Values", "মূল্যবোধের উৎস")}</h3>
+    </div>
+    <ul class="m16l4-sources-list">
+      <li class="m16l4-source-item m16l4-source-family" data-aos="fade-up" data-aos-delay="55">
+        <div class="m16l4-source-icon">
+          <i class="fa-solid fa-home"></i>
+        </div>
+        <span class="m16l4-source-text">${yhLang("Family", "পরিবার")}</span>
+      </li>
+      <li class="m16l4-source-item m16l4-source-school" data-aos="fade-up" data-aos-delay="60">
+        <div class="m16l4-source-icon">
+          <i class="fa-solid fa-school"></i>
+        </div>
+        <span class="m16l4-source-text">${yhLang("School", "বিদ্যালয়")}</span>
+      </li>
+      <li class="m16l4-source-item m16l4-source-society" data-aos="fade-up" data-aos-delay="65">
+        <div class="m16l4-source-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <span class="m16l4-source-text">${yhLang("Society", "সমাজ")}</span>
+      </li>
+      <li class="m16l4-source-item m16l4-source-religion" data-aos="fade-up" data-aos-delay="70">
+        <div class="m16l4-source-icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <span class="m16l4-source-text">${yhLang("Religion", "ধর্ম")}</span>
+      </li>
+      <li class="m16l4-source-item m16l4-source-community" data-aos="fade-up" data-aos-delay="75">
+        <div class="m16l4-source-icon">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <span class="m16l4-source-text">${yhLang("Community/Group", "সম্প্রদায়/গোষ্ঠী")}</span>
+      </li>
+      <li class="m16l4-source-item m16l4-source-culture" data-aos="fade-up" data-aos-delay="80">
+        <div class="m16l4-source-icon">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <span class="m16l4-source-text">${yhLang("Culture & Education", "সংস্কৃতি ও শিক্ষা")}</span>
+      </li>
+    </ul>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <p class="mb-0">${diversity}</p>
-                  </section>
-                </div>
+  <!-- Example Card -->
+  <section class="m16l4-example-section" data-aos="fade-up" data-aos-delay="85">
+    <div class="m16l4-example-card">
+      <div class="m16l4-example-icon">
+        <i class="fa-solid fa-book"></i>
+      </div>
+      <div class="m16l4-example-content">
+        <h4 class="m16l4-example-title">${yhLang("Example of Values", "মূল্যবোধের উদাহরণ")}</h4>
+        <p class="m16l4-example-text">${yhLang("In families, children learn to always tell the truth and respect elders. In society, people learn values like getting married, religious beliefs, and the importance of honest work rather than stealing. These values shape how we interact with others every day.", "পরিবারে শিশুদের সত্য বলা শেখানো হয়। সমাজ থেকে বিয়ে, ধর্মীয় মূল্যবোধ এবং সম্মানজনক কাজের মূল্যবোধ শেখা যায়।")}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diversity Card -->
+  <section class="m16l4-diversity-section" data-aos="fade-up" data-aos-delay="90">
+    <div class="m16l4-diversity-card">
+      <div class="m16l4-diversity-icon">
+        <i class="fa-solid fa-earth-americas"></i>
+      </div>
+      <div class="m16l4-diversity-content">
+        <h4 class="m16l4-diversity-title">${yhLang("Diversity in Values", "মূল্যবোধের বৈচিত্র্য")}</h4>
+        <p class="m16l4-diversity-text">${yhLang("Values differ across countries, societies, religions, and cultures. Some values come from personal beliefs and experiences. It is important to respect and accept this diversity in values, as each person has the right to their own beliefs and perspectives.", "দেশ, সমাজ, ধর্ম ও সংস্কৃতিতে মূল্যবোধ ভিন্ন হয়। এই বৈচিত্র্যকে গ্রহণ এবং সম্মান করা গুরুত্বপূর্ণ।")}</p>
+      </div>
+    </div>
+  </section>
+</div>
               `;
             })(),
           },
@@ -11221,56 +11259,83 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ ব্যক্তির বিশ্বাসের প্রতিফলন। যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা তাহলে আচরণ হবে অন্যের সাথে ভদ্রতার সহিত কথা বলা। মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়।";
-
-              const neutralityParagraph =
-                "প্রতিটি মানুষই আলাদা, প্রত্যেকের চিন্তা, বিশ্বাস, মূল্যবোধ এবং বিচার-বিবেচনা করার ক্ষমতা আলাদা — সেই বিষয়টির প্রতি সম্মান রেখে নিরপেক্ষ আচরণ করা একজন মনোসামাজিক সহায়তাকারীর অন্যতম গুণাবলীর মধ্যে একটি।";
-
-              const neutralHeading = "নিরপেক্ষ হবার উপায়";
-              const neutralSteps = [
-                "১. নিজের চিন্তা ও অনুভূতি সম্পর্কে সচেতন থাকা",
-                "২. নিজের মূল্যবোধ এবং বিশ্বাস খুঁজে বের করা",
-                "৩. অন্যের ব্যক্তি স্বাধীনতায় বিশ্বাস করা এবং অন্যের মূল্যবোধের প্রতি সহনশীল থাকা",
-                "৪. মনোযোগী শ্রোতা হওয়া",
-                "৫. নিজের সাথে ইতিবাচক কথা বলা",
-                "৬. অন্যের প্রতি সহমর্মিতা প্রকাশ করা",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Understanding behavior",
-                    "আচরণ"
-                  )}</h2>
+                <!-- Module 16 Lesson 5: Behavior -->
+<div class="lesson-slide mod16-lesson5">
+  <div class="m16l5-shapes" role="presentation"></div>
+  
+  <!-- Hero Section -->
+  <section class="m16l5-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m16l5-hero__badge">
+      <i class="fa-solid fa-hands-praying"></i>
+    </div>
+    <div class="m16l5-hero__content">
+      <h2 class="m16l5-hero__title">${yhLang("Understanding Behavior", "আচরণ বোঝা")}</h2>
+      <p class="m16l5-hero__subtitle">${yhLang("How Values Guide Our Actions", "মূল্যবোধ কীভাবে আমাদের কাজ পরিচালনা করে")}</p>
+    </div>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
-                  </section>
+  <!-- Definition Card -->
+  <section class="m16l5-definition" data-aos="fade-up" data-aos-delay="40">
+    <div class="m16l5-definition-icon">
+      <i class="fa-solid fa-lightbulb"></i>
+    </div>
+    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ ব্যক্তির বিশ্বাসের প্রতিফলন। মূল্যবোধ আমাদের আচরণকে প্রভাবিত করে।")}</p>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <p class="mb-0">${neutralityParagraph}</p>
-                  </section>
+  <!-- Neutrality Card -->
+  <section class="m16l5-neutrality-card" data-aos="fade-up" data-aos-delay="50">
+    <p class="m16l5-neutrality-text">${yhLang("Every person is unique with different thoughts, beliefs, values, and judgment abilities. An important quality of a psychosocial helper is to respect these differences and act neutrally, without imposing their own values on others.", "প্রতিটি মানুষই আলাদা, এবং নিরপেক্ষ আচরণ করা মনোসামাজিক সহায়তাকারীর গুরুত্বপূর্ণ গুণ।")}</p>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="h6 gradient-text mb-2">${neutralHeading}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(neutralSteps)}
-                    </ul>
-                  </section>
-                </div>
+  <!-- Methods Section -->
+  <section class="m16l5-methods-section" data-aos="fade-up" data-aos-delay="60">
+    <div class="m16l5-methods-header">
+      <div class="m16l5-methods-icon">
+        <i class="fa-solid fa-list-check"></i>
+      </div>
+      <h3 class="m16l5-methods-title">${yhLang("Ways to Remain Neutral", "নিরপেক্ষ থাকার উপায়")}</h3>
+    </div>
+    <ul class="m16l5-methods-list">
+      <li class="m16l5-method-item m16l5-method-awareness" data-aos="fade-up" data-aos-delay="65">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Be aware of your own thoughts and feelings", "নিজের চিন্তা ও অনুভূতি সম্পর্কে সচেতন থাকা")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-discovery" data-aos="fade-up" data-aos-delay="70">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Identify your own beliefs and values", "নিজের বিশ্বাস ও মূল্যবোধ খুঁজে বের করা")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-autonomy" data-aos="fade-up" data-aos-delay="75">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-person"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Respect others' personal freedom and tolerance", "অন্যের ব্যক্তি স্বাধীনতা ও মূল্যবোধের প্রতি সহনশীল থাকা")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-listening" data-aos="fade-up" data-aos-delay="80">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-ear-listen"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Be an attentive listener", "মনোযোগী শ্রোতা হওয়া")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-selftalk" data-aos="fade-up" data-aos-delay="85">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Engage in positive self-talk", "নিজের সাথে ইতিবাচক কথা বলা")}</span>
+      </li>
+      <li class="m16l5-method-item m16l5-method-empathy" data-aos="fade-up" data-aos-delay="90">
+        <div class="m16l5-method-icon">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <span class="m16l5-method-text">${yhLang("Show empathy toward others", "অন্যের প্রতি সহমর্মিতা প্রকাশ করা")}</span>
+      </li>
+    </ul>
+  </section>
+</div>
               `;
             })(),
           },
@@ -11310,60 +11375,89 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "মদ, গাঁজা, আফিম, পেথেড্রিন, হেরোইন, সিসা, ইয়াবা, ডায়াজেপাম—যে সব বস্তুকে গ্রহণ করলে আসক্তির উদ্রেক ঘটায় এবং পরবর্তীতে গ্রহণ না করলে শরীরে তৎপরতার পরিবর্তন বা Withdrawal-এর মতো প্রভাব ফেলে, তাই মাদকদ্রব্য হিসাবে পরিচিত। নিয়মিত মাদক সেবন করতে করতে এক পর্যায়ে ব্যক্তিটি পুরোপুরি মাদকনির্ভর হয়ে পড়ে এবং মাদক ছাড়া চলতে পারে না। এই অবস্থাই হলো মাদকাসক্তি।";
-
-              const causesHeading = "মাদকাসক্তির কারণ";
-              const causes = [
-                "মাদকদ্রব্যের সহজলভ্যতা",
-                "মাদকদ্রব্য সম্পর্কে কৌতূহল",
-                "বন্ধুদের চাপে পড়ে মাদক গ্রহণ",
-                "হতাশা ও ব্যর্থতা কাটাতে মাদক গ্রহণ",
-                "পারিপার্শ্বিক পরিবেশের প্রভাব",
-                "নিছক আনন্দের জন্য",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Understanding drug addiction",
-                    "মাদকাসক্তি"
-                  )}</h2>
+                <!-- Module 17 Lesson 1: Drug Addiction -->
+<div class="lesson-slide mod17-lesson1">
+  <div class="m17l1-shapes" role="presentation"></div>
+  
+  <!-- Hero Section -->
+  <section class="m17l1-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m17l1-hero__badge">
+      <i class="fa-solid fa-syringe"></i>
+    </div>
+    <div class="m17l1-hero__content">
+      <h2 class="m17l1-hero__title">${yhLang("Understanding Drug Addiction", "মাদকাসক্তি বোঝা")}</h2>
+      <p class="m17l1-hero__subtitle">${yhLang("Causes, Effects & Prevention", "কারণ, প্রভাব ও প্রতিরোধ")}</p>
+    </div>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
-                  </section>
+  <!-- Definition Card -->
+  <section class="m17l1-definition" data-aos="fade-up" data-aos-delay="40">
+    <div class="m17l1-definition-icon">
+      <i class="fa-solid fa-lightbulb"></i>
+    </div>
+    <p class="m17l1-definition-text">${yhLang("Addictive substances include alcohol, cannabis, opium, heroin, and other drugs that create dependency and cause withdrawal symptoms when not used. Drug addiction is the state where a person becomes completely dependent on these substances and cannot function without them.", "মাদকদ্রব্য হল এমন বস্তু যা গ্রহণ করলে আসক্তি সৃষ্টি হয় এবং মাদক ছাড়া চলা যায় না। এটাই মাদকাসক্তি।")}</p>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-6" data-aos="fade-right">
-                        <article class="p-4 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3">${causesHeading}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(causes)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-6" data-aos="fade-left">
-                        <div class="image-wrapper text-center">
-                          <img src="img/modu17/madok.jpg" alt="Drug addiction" class="img-fluid rounded shadow-sm img-zoom" />
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
+  <!-- Addiction Card -->
+  <section class="m17l1-addiction-card" data-aos="fade-up" data-aos-delay="50">
+    <div class="m17l1-addiction-icon">
+      <i class="fa-solid fa-warning"></i>
+    </div>
+    <div class="m17l1-addiction-content">
+      <h3 class="m17l1-addiction-title">${yhLang("What is Drug Addiction?", "মাদকাসক্তি কী?")}</h3>
+      <p class="m17l1-addiction-text">${yhLang("Regular drug use leads to physical and psychological dependence. At a certain point, the person cannot stop using drugs even if they want to. They experience withdrawal symptoms—physical and mental discomfort when trying to quit. This compels them to continue using drugs despite knowing the harm.", "নিয়মিত মাদক ব্যবহার সম্পূর্ণ নির্ভরতার দিকে নিয়ে যায় যেখানে ব্যক্তি মাদক ছাড়া চলতে পারে না এবং বন্ধ করতে পারে না।")}</p>
+    </div>
+  </section>
+
+  <!-- Causes Section -->
+  <section class="m17l1-causes-section" data-aos="fade-up" data-aos-delay="60">
+    <div class="m17l1-causes-header">
+      <div class="m17l1-causes-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <h3 class="m17l1-causes-title">${yhLang("Causes of Drug Addiction", "মাদকাসক্তির কারণ")}</h3>
+    </div>
+    <ul class="m17l1-causes-list">
+      <li class="m17l1-cause-item m17l1-cause-availability" data-aos="fade-up" data-aos-delay="65">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-pills"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Easy availability of drugs", "মাদকদ্রব্যের সহজলভ্যতা")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-curiosity" data-aos="fade-up" data-aos-delay="70">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Curiosity about drugs", "মাদক সম্পর্কে কৌতূহল")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-peer" data-aos="fade-up" data-aos-delay="75">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Peer pressure from friends", "বন্ধুদের চাপে পড়ে মাদক গ্রহণ")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-escape" data-aos="fade-up" data-aos-delay="80">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Escape from despair and failure", "হতাশা ও ব্যর্থতা কাটাতে মাদক গ্রহণ")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-environment" data-aos="fade-up" data-aos-delay="85">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-wind"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Environmental influence", "পারিপার্শ্বিক পরিবেশের প্রভাব")}</span>
+      </li>
+      <li class="m17l1-cause-item m17l1-cause-pleasure" data-aos="fade-up" data-aos-delay="90">
+        <div class="m17l1-cause-icon">
+          <i class="fa-solid fa-smile"></i>
+        </div>
+        <span class="m17l1-cause-text">${yhLang("Seeking pleasure and enjoyment", "নিছক আনন্দের জন্য মাদক গ্রহণ")}</span>
+      </li>
+    </ul>
+  </section>
+</div>
               `;
             })(),
           },
@@ -11393,86 +11487,134 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const physicalSigns = [
-                "১. লাল ও ছলছলে চোখ",
-                "২. ক্ষুধামন্দা, বমিবমি ভাব, বমি হওয়া",
-                "৩. ভারসাম্যহীনতা (অস্থিরতা)",
-                "৪. হাত-পা কাঁপা",
-                "৫. বুক ধড়ফড় করা",
-                "৬. অতিরিক্ত দুর্বল লাগা, ঘুম ঘুম ভাব",
-                "৭. হাত-পায়ের শিরায় সুঁচ ফোটানোর দাগ এবং ফুলহাতা শার্ট পরে এগুলো ঢাকার প্রচেষ্টা",
-                "৮. স্বাস্থ্য ভেঙে যাওয়া এবং খাওয়া-দাওয়ার অভ্যাসে পরিবর্তন হওয়া",
-              ];
-
-              const behavioralSigns = [
-                "১. সারা রাত জেগে থাকা এবং দিনের বেলায় ঘুমানো",
-                "২. লেখাপড়া খারাপ করা",
-                "৩. নিজের ও পোশাক-পরিচ্ছদের প্রতি উদাসীনতা প্রদর্শন",
-                "৪. যখন-তখন বাইরে যাওয়া, অধিক রাতে ঘরে ফেরা",
-                "৫. পরিবারের কাছ থেকে বেশি হাতখরচের টাকা-পয়সা চাওয়া",
-                "৬. বিছানার আশপাশে এবং বালিশ ও বিছানার নিচে ট্যাবলেটের খালি স্ট্রিপ পড়ে থাকা",
-                "৭. অনেক সময় অপ্রকৃতস্থ অবস্থায় ঘরে ফেরা এবং পরিবারের লোকজনদের সাথে দুর্ব্যবহার করা",
-                "৮. খিটখিটে মেজাজ",
-                "৯. প্রায়ই মিথ্যা কথা বলা, চুরি করা",
-                "১০. দেনাগ্রস্ত হয়ে পড়া",
-                "১১. ঘনঘন মোবাইলের সিম পরিবর্তন",
-                "১২. প্রায়ই রাস্তাঘাটে দুর্ঘটনার কবলে পড়া",
-                "১৩. অসামাজিক ও অপরাধমূলক কাজকর্মে লিপ্ত হওয়া",
-                "১৪. নতুন (নেশাগ্রস্ত) বন্ধুবান্ধব হওয়া এবং পুরোনো ভালো বন্ধুদের সাথে সম্পর্ক না রাখা",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Drug addiction signs",
-                    "মাদকাসক্তির লক্ষণসমূহ"
-                  )}</h2>
+                <!-- Module 17 Lesson 2: Signs of Addiction -->
+<div class="lesson-slide mod17-lesson2">
+  <div class="m17l2-shapes" role="presentation"></div>
+  
+  <!-- Hero Section -->
+  <section class="m17l2-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m17l2-hero__badge">
+      <i class="fa-solid fa-eye"></i>
+    </div>
+    <div class="m17l2-hero__content">
+      <h2 class="m17l2-hero__title">${yhLang("Signs of Drug Addiction", "মাদকাসক্তির লক্ষণসমূহ")}</h2>
+      <p class="m17l2-hero__subtitle">${yhLang("Physical & Behavioral Indicators", "শারীরিক ও আচরণগত সূচক")}</p>
+    </div>
+  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="30">
-                    <div class="table-responsive">
-                      <table class="table table-bordered align-middle addiction-table">
-                        <thead>
-                          <tr>
-                            <th class="text-uppercase text-muted">${yhLang(
-                              "শারীরিক লক্ষণসমূহ",
-                              "শারীরিক লক্ষণসমূহ"
-                            )}</th>
-                            <th class="text-uppercase text-muted">${yhLang(
-                              "আচরণগত লক্ষণসমূহ",
-                              "আচরণগত লক্ষণসমূহ"
-                            )}</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <ul class="list-unstyled puberty-list mb-0">
-                                ${renderList(physicalSigns)}
-                              </ul>
-                            </td>
-                            <td>
-                              <ul class="list-unstyled puberty-list mb-0">
-                                ${renderList(behavioralSigns)}
-                              </ul>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </section>
-                </div>
+  <!-- Physical Signs Section -->
+  <section class="m17l2-physical-signs" data-aos="fade-up" data-aos-delay="40">
+    <div class="m17l2-signs-header">
+      <div class="m17l2-signs-icon">
+        <i class="fa-solid fa-heart"></i>
+      </div>
+      <h3 class="m17l2-signs-title">${yhLang("Physical Signs", "শারীরিক লক্ষণসমূহ")}</h3>
+    </div>
+    <ul class="m17l2-physical-signs-list">
+      <li class="m17l2-sign-item m17l2-sign-eyes" data-aos="fade-up" data-aos-delay="45">
+        <span class="m17l2-sign-number">1</span>
+        <span class="m17l2-sign-text">${yhLang("Red and watery eyes", "লাল ও ছলছলে চোখ")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-appetite" data-aos="fade-up" data-aos-delay="50">
+        <span class="m17l2-sign-number">2</span>
+        <span class="m17l2-sign-text">${yhLang("Loss of appetite, nausea, and vomiting", "ক্ষুধামন্দা, বমিবমি ভাব, বমি হওয়া")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-balance" data-aos="fade-up" data-aos-delay="55">
+        <span class="m17l2-sign-number">3</span>
+        <span class="m17l2-sign-text">${yhLang("Lack of balance and instability", "ভারসাম্যহীনতা ও অস্থিরতা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-tremor" data-aos="fade-up" data-aos-delay="60">
+        <span class="m17l2-sign-number">4</span>
+        <span class="m17l2-sign-text">${yhLang("Trembling hands and body", "হাত-পা কাঁপা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-heart" data-aos="fade-up" data-aos-delay="65">
+        <span class="m17l2-sign-number">5</span>
+        <span class="m17l2-sign-text">${yhLang("Heart palpitations", "বুক ধড়ফড় করা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-weakness" data-aos="fade-up" data-aos-delay="70">
+        <span class="m17l2-sign-number">6</span>
+        <span class="m17l2-sign-text">${yhLang("Extreme weakness and drowsiness", "অতিরিক্ত দুর্বল লাগা, ঘুম ঘুম ভাব")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-marks" data-aos="fade-up" data-aos-delay="75">
+        <span class="m17l2-sign-number">7</span>
+        <span class="m17l2-sign-text">${yhLang("Injection marks on arms/attempts to hide", "সুঁচ ফোটানোর দাগ ও লুকানোর প্রচেষ্টা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-health" data-aos="fade-up" data-aos-delay="80">
+        <span class="m17l2-sign-number">8</span>
+        <span class="m17l2-sign-text">${yhLang("Poor health and eating habit changes", "স্বাস্থ্য ভেঙে যাওয়া এবং খাওয়ার অভ্যাস পরিবর্তন")}</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Behavioral Signs Section -->
+  <section class="m17l2-behavioral-signs" data-aos="fade-up" data-aos-delay="85">
+    <div class="m17l2-signs-header">
+      <div class="m17l2-signs-icon">
+        <i class="fa-solid fa-person"></i>
+      </div>
+      <h3 class="m17l2-signs-title">${yhLang("Behavioral Signs", "আচরণগত লক্ষণসমূহ")}</h3>
+    </div>
+    <ul class="m17l2-behavioral-signs-list">
+      <li class="m17l2-sign-item m17l2-sign-sleep" data-aos="fade-up" data-aos-delay="90">
+        <span class="m17l2-sign-number">1</span>
+        <span class="m17l2-sign-text">${yhLang("Staying awake all night and sleeping during day", "রাত জেগে থাকা এবং দিনে ঘুম")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-studies" data-aos="fade-up" data-aos-delay="95">
+        <span class="m17l2-sign-number">2</span>
+        <span class="m17l2-sign-text">${yhLang("Poor academic performance", "লেখাপড়া খারাপ করা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-hygiene" data-aos="fade-up" data-aos-delay="100">
+        <span class="m17l2-sign-number">3</span>
+        <span class="m17l2-sign-text">${yhLang("Neglect of personal and clothing hygiene", "নিজের ও পোশাকের প্রতি উদাসীনতা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-absence" data-aos="fade-up" data-aos-delay="105">
+        <span class="m17l2-sign-number">4</span>
+        <span class="m17l2-sign-text">${yhLang("Frequent outings and late night returns", "যখন-তখন বাইরে যাওয়া, অধিক রাতে ফেরা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-money" data-aos="fade-up" data-aos-delay="110">
+        <span class="m17l2-sign-number">5</span>
+        <span class="m17l2-sign-text">${yhLang("Asking for extra money from family", "পরিবারের কাছ থেকে বেশি টাকা চাওয়া")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-evidence" data-aos="fade-up" data-aos-delay="115">
+        <span class="m17l2-sign-number">6</span>
+        <span class="m17l2-sign-text">${yhLang("Empty tablet strips found in room", "বিছানার আশপাশে ট্যাবলেটের খালি স্ট্রিপ")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-behavior" data-aos="fade-up" data-aos-delay="120">
+        <span class="m17l2-sign-number">7</span>
+        <span class="m17l2-sign-text">${yhLang("Intoxicated behavior and mistreatment of family", "অপ্রকৃতস্থ অবস্থায় ফেরা এবং দুর্ব্যবহার")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-mood" data-aos="fade-up" data-aos-delay="125">
+        <span class="m17l2-sign-number">8</span>
+        <span class="m17l2-sign-text">${yhLang("Irritable and moody behavior", "খিটখিটে মেজাজ")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-honesty" data-aos="fade-up" data-aos-delay="130">
+        <span class="m17l2-sign-number">9</span>
+        <span class="m17l2-sign-text">${yhLang("Frequent lying and stealing", "প্রায়ই মিথ্যা বলা ও চুরি করা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-debt" data-aos="fade-up" data-aos-delay="135">
+        <span class="m17l2-sign-number">10</span>
+        <span class="m17l2-sign-text">${yhLang("Getting into debt", "দেনাগ্রস্ত হয়ে পড়া")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-phone" data-aos="fade-up" data-aos-delay="140">
+        <span class="m17l2-sign-number">11</span>
+        <span class="m17l2-sign-text">${yhLang("Frequently changing mobile SIMs", "ঘনঘন মোবাইল সিম পরিবর্তন")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-accidents" data-aos="fade-up" data-aos-delay="145">
+        <span class="m17l2-sign-number">12</span>
+        <span class="m17l2-sign-text">${yhLang("Frequent accidents on roads", "ঘনঘন রাস্তায় দুর্ঘটনা")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-crime" data-aos="fade-up" data-aos-delay="150">
+        <span class="m17l2-sign-number">13</span>
+        <span class="m17l2-sign-text">${yhLang("Involvement in antisocial and criminal activities", "অসামাজিক ও অপরাধমূলক কাজে লিপ্ত")}</span>
+      </li>
+      <li class="m17l2-sign-item m17l2-sign-friends" data-aos="fade-up" data-aos-delay="155">
+        <span class="m17l2-sign-number">14</span>
+        <span class="m17l2-sign-text">${yhLang("New friends (addicted) and abandoning old friends", "নেশাগ্রস্ত নতুন বন্ধু এবং পুরোনো ভাল বন্ধু পরিত্যাগ")}</span>
+      </li>
+    </ul>
+  </section>
+</div>
               `;
             })(),
           },
@@ -15852,6 +15994,23 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
+              const pesticidePoints = [
+                "কীটনাশক রাসায়নিক উপাদানের একটি বিস্তৃত শ্রেণীবিভাগ যা কৃষি, বাড়ি, উঠান, বাগান, গাছপালা, পোকামাকড় এবং ইঁদুরের মতো অবাঞ্ছিত কীটপতঙ্গ হত্যা এবং নিয়ন্ত্রণের জন্য তৈরি করা হয়। বাংলাদেশ একটি কৃষিপ্রধান দেশ হওয়ায়, ফসল রক্ষার জন্য এই রাসায়নিকগুলি ব্যাপকভাবে ব্যবহৃত হয়।",
+                "সকল কীটনাশক সহজাতভাবে বিষাক্ত এবং তীব্র এবং দীর্ঘস্থায়ী স্বাস্থ্য ঝুঁকি বহন করে যার মধ্যে রয়েছে কার্সিনোজেনিসিটি এবং মিউটেজেনিসিটি। খাদ্যাভ্যাস, বিকাশ-জনিত এবং শারীরবৃত্তীয় কারণগুলির কারণে শিশুরা কীটনাশকের গ্রহণ এবং প্রতিকূল প্রভাবের জন্য বেশি ঝুঁকিপূর্ণ।",
+                "শ্বাসপ্রশ্বাস, খাবার বা পানীয়ের মাদ্ধমে বা ত্বকের সংস্পর্শে আসার মাধ্যমে কীটনাশক আমাদের শরীরে প্রবেশ করে ও বিসক্রিয়া ঘটায়।",
+              ];
+
+              const renderPoints = () =>
+                pesticidePoints
+                  .map(
+                    (item, idx) => `
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(255,241,118,.28)'};border-left:4px solid ${idx % 2 === 0 ? '#f06292' : '#ff8a65'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(240,98,146,.18)' : '0 8px 18px rgba(255,138,101,.16)'};">
+                        <span class="pesticide-bullet"><i class="fa-solid ${idx === 0 ? 'fa-spray-can' : idx === 1 ? 'fa-skull-crossbones' : 'fa-lungs'}"></i></span>
+                        <p class="mb-0">${item}</p>
+                      </li>
+                    `
+                  )
+                  .join("");
               const riskCards = [
                 {
                   title: "১. স্নায়ুতন্ত্রের ক্ষতি",
@@ -17809,6 +17968,18 @@ const coursesData = [
                           ${renderLearnItems(learnItems, 580)}
                         </ul>
                       </section>
+                      <section class="m24l2-panel m24l2-panel-causes" data-aos="fade-left" data-aos-delay="300">
+                        <h3 class="m24l2-section-heading">
+                          <span class="m24l2-heading-icon m24l2-icon-causes">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                          </span>
+                          <span class="m24l2-heading-text">${yhLang("Causes of Value Degradation", "মূল্যবোধ অবক্ষয়ের কারণ")}</span>
+                        </h3>
+                        <ul class="m24l2-cause-grid">
+                          ${renderCauses(causes, 380)}
+                        </ul>
+                      </section>
+
                     </div>
 
                     <div class="m24l2-right">
