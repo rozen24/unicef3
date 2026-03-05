@@ -14538,6 +14538,285 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 }
 
+/* ==================== MODULE 19 • LESSON 1 + 2 - NUTRITION MERGED VIEW ==================== */
+
+.mod19-lesson1-2 {
+  position: relative;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 30%, #fff8e1 64%, #ffe0b2 100%);
+  border-radius: 12px;
+  padding: 11px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  overflow: hidden;
+}
+
+.m19l1x2-shape {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.m19l1x2-shape-1 {
+  width: 126px;
+  height: 126px;
+  top: -42px;
+  right: -20px;
+  border-radius: 42% 58% 60% 40%;
+  background: radial-gradient(circle, #66bb6a, transparent 72%);
+  animation: pulse 6.5s ease-in-out infinite;
+}
+
+.m19l1x2-shape-2 {
+  width: 102px;
+  height: 102px;
+  left: -24px;
+  bottom: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffb74d, transparent 72%);
+  animation: rotate 14s linear infinite;
+}
+
+.m19l1x2-shape-3 {
+  width: 74px;
+  height: 74px;
+  right: 34%;
+  bottom: -22px;
+  border-radius: 38% 62% 45% 55%;
+  background: linear-gradient(135deg, #81c784, #ffd54f);
+  animation: morph 8s ease-in-out infinite;
+}
+
+.m19l1x2-hero {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 3px 9px rgba(46, 125, 50, 0.14);
+  padding: 8px 10px;
+}
+
+.m19l1x2-hero-title {
+  margin: 0;
+  font-size: 1.03rem;
+  font-weight: 700;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.m19l1x2-hero-title i {
+  color: #ef6c00;
+  font-size: 1.12rem;
+}
+
+.m19l1x2-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.m19l1x2-panel {
+  border-radius: 10px;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.m19l1x2-panel-importance {
+  background: linear-gradient(160deg, rgba(232, 245, 233, 0.95), rgba(200, 230, 201, 0.9));
+  border: 1px solid rgba(102, 187, 106, 0.35);
+  box-shadow: 5px 7px 12px rgba(56, 142, 60, 0.15);
+}
+
+.m19l1x2-panel-nutrition {
+  background: linear-gradient(160deg, rgba(255, 248, 225, 0.95), rgba(255, 224, 178, 0.9));
+  border: 1px solid rgba(255, 183, 77, 0.35);
+  box-shadow: -5px 7px 12px rgba(245, 124, 0, 0.15);
+}
+
+.m19l1x2-panel-title {
+  margin: 0;
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: #1b5e20;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.m19l1x2-panel-title i {
+  color: #f57c00;
+  font-size: 0.95rem;
+}
+
+.m19l1x2-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.m19l1x2-item {
+  border-left: 3px solid;
+  border-radius: 8px;
+  padding: 7px 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.m19l1x2-item:hover {
+  transform: translateX(3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.m19l1x2-item-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+
+.m19l1x2-item p {
+  margin: 0;
+  font-size: 0.7rem;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.m19l1x2-tip-box {
+  border-radius: 8px;
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 167, 38, 0.34);
+  box-shadow: inset 0 0 0 1px rgba(255, 167, 38, 0.18), 0 3px 9px rgba(245, 124, 0, 0.14);
+}
+
+.m19l1x2-tip-title {
+  margin: 0 0 5px 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #e65100;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.m19l1x2-tip-box p {
+  margin: 0;
+  font-size: 0.69rem;
+  line-height: 1.26;
+  color: #5d4037;
+}
+
+/* Importance list colors */
+.m19l1x2-importance-growth { border-left-color: #2e7d32; background: rgba(232, 245, 233, 0.95); }
+.m19l1x2-importance-growth .m19l1x2-item-icon { background: linear-gradient(135deg, #66bb6a, #2e7d32); }
+.m19l1x2-importance-growth p { color: #1b5e20; }
+
+.m19l1x2-importance-balanced { border-left-color: #0277bd; background: rgba(227, 242, 253, 0.95); }
+.m19l1x2-importance-balanced .m19l1x2-item-icon { background: linear-gradient(135deg, #4fc3f7, #0277bd); }
+.m19l1x2-importance-balanced p { color: #01579b; }
+
+.m19l1x2-importance-mind { border-left-color: #6a1b9a; background: rgba(243, 229, 245, 0.95); }
+.m19l1x2-importance-mind .m19l1x2-item-icon { background: linear-gradient(135deg, #ab47bc, #6a1b9a); }
+.m19l1x2-importance-mind p { color: #4a148c; }
+
+.m19l1x2-importance-performance { border-left-color: #ef6c00; background: rgba(255, 243, 224, 0.95); }
+.m19l1x2-importance-performance .m19l1x2-item-icon { background: linear-gradient(135deg, #ffb74d, #ef6c00); }
+.m19l1x2-importance-performance p { color: #bf360c; }
+
+/* Nutrition list colors */
+.m19l1x2-nutrition-process { border-left-color: #5e35b1; background: rgba(237, 231, 246, 0.95); }
+.m19l1x2-nutrition-process .m19l1x2-item-icon { background: linear-gradient(135deg, #7e57c2, #5e35b1); }
+.m19l1x2-nutrition-process p { color: #311b92; }
+
+.m19l1x2-nutrition-health { border-left-color: #00897b; background: rgba(224, 242, 241, 0.95); }
+.m19l1x2-nutrition-health .m19l1x2-item-icon { background: linear-gradient(135deg, #26a69a, #00897b); }
+.m19l1x2-nutrition-health p { color: #004d40; }
+
+.m19l1x2-nutrition-food { border-left-color: #d32f2f; background: rgba(255, 235, 238, 0.95); }
+.m19l1x2-nutrition-food .m19l1x2-item-icon { background: linear-gradient(135deg, #ef5350, #d32f2f); }
+.m19l1x2-nutrition-food p { color: #b71c1c; }
+
+.m19l1x2-nutrition-standard { border-left-color: #3949ab; background: rgba(232, 234, 246, 0.95); }
+.m19l1x2-nutrition-standard .m19l1x2-item-icon { background: linear-gradient(135deg, #5c6bc0, #3949ab); }
+.m19l1x2-nutrition-standard p { color: #1a237e; }
+
+.m19l1x2-nutrition-bmi { border-left-color: #6d4c41; background: rgba(239, 235, 233, 0.95); }
+.m19l1x2-nutrition-bmi .m19l1x2-item-icon { background: linear-gradient(135deg, #8d6e63, #6d4c41); }
+.m19l1x2-nutrition-bmi p { color: #3e2723; }
+
+@media (max-width: 1024px) {
+  .mod19-lesson1-2 { padding: 10px 9px; }
+  .m19l1x2-hero-title { font-size: 0.98rem; }
+  .m19l1x2-panel-title { font-size: 0.83rem; }
+}
+
+@media (max-width: 768px) {
+  .m19l1x2-grid { grid-template-columns: 1fr; }
+  .m19l1x2-panel { padding: 8px; }
+  .m19l1x2-item { padding: 7px; }
+  .m19l1x2-item-icon { width: 23px; height: 23px; font-size: 0.68rem; }
+  .m19l1x2-item p,
+  .m19l1x2-tip-box p { font-size: 0.68rem; }
+}
+
+@media (max-width: 480px) {
+  .mod19-lesson1-2 { padding: 8px 5px; }
+  .m19l1x2-hero { padding: 7px 8px; }
+  .m19l1x2-hero-title { font-size: 0.9rem; }
+  .m19l1x2-panel-title,
+  .m19l1x2-tip-title { font-size: 0.74rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .mod19-lesson1-2 {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 34%, #e65100 70%, #bf360c 100%);
+  }
+
+  .m19l1x2-hero,
+  .m19l1x2-panel-importance,
+  .m19l1x2-panel-nutrition,
+  .m19l1x2-item,
+  .m19l1x2-tip-box {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .m19l1x2-hero-title,
+  .m19l1x2-panel-title,
+  .m19l1x2-tip-title,
+  .m19l1x2-item p,
+  .m19l1x2-tip-box p {
+    color: #f1f8e9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m19l1x2-shape,
+  .m19l1x2-item {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .m19l1x2-item:hover {
+    transform: none !important;
+  }
+}
+
 /* ==================== MODULE 22 • LESSON 7 - HAZARDOUS CHEMICALS ==================== */
 .lesson-slide.mod22-lesson7 {
   position: relative;

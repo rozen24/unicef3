@@ -13675,15 +13675,106 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
+              const importancePoints = [
+                {
+                  text: "কৈশোরকালে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে।",
+                  icon: "fa-arrow-up-right-dots",
+                  color: "m19l1x2-importance-growth",
+                },
+                {
+                  text: "সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন।",
+                  icon: "fa-bowl-food",
+                  color: "m19l1x2-importance-balanced",
+                },
+                {
+                  text: "সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয়।",
+                  icon: "fa-brain",
+                  color: "m19l1x2-importance-mind",
+                },
+                {
+                  text: "ফলস্বরূপ লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
+                  icon: "fa-graduation-cap",
+                  color: "m19l1x2-importance-performance",
+                },
+              ];
+
+              const nutritionPoints = [
+                {
+                  text: "পুষ্টি হলো একটি প্রক্রিয়া, যেখানে খাদ্য পরিপাক হয়ে জটিল উপাদান ভেঙে সরল উপাদানে পরিণত হয় এবং শরীর তা শোষণ করে।",
+                  icon: "fa-gears",
+                  color: "m19l1x2-nutrition-process",
+                },
+                {
+                  text: "এসব খাদ্য উপাদান দেহের শক্তি, বৃদ্ধি, রোগ প্রতিরোধ এবং সুস্বাস্থ্য নিশ্চিত করে।",
+                  icon: "fa-shield-heart",
+                  color: "m19l1x2-nutrition-health",
+                },
+                {
+                  text: "পুষ্টিকর খাদ্য দেহের গঠন, ক্ষয়পূরণ, কর্মক্ষমতা ও মানসিক প্রফুল্লতা বজায় রাখতে সহায়তা করে।",
+                  icon: "fa-heart-pulse",
+                  color: "m19l1x2-nutrition-food",
+                },
+                {
+                  text: "বয়সভিত্তিক ওজন-উচ্চতার আদর্শ মান থেকে কম হলে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
+                  icon: "fa-ruler-combined",
+                  color: "m19l1x2-nutrition-standard",
+                },
+                {
+                  text: "বি.এম.আই = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²; এটি পুষ্টিগত অবস্থা মূল্যায়নের গুরুত্বপূর্ণ পদ্ধতি।",
+                  icon: "fa-calculator",
+                  color: "m19l1x2-nutrition-bmi",
+                },
+              ];
+
+              const renderList = (items) =>
+                `<div class="m19l1x2-list">${items
+                  .map(
+                    (item, index) => `
+                      <div class="m19l1x2-item ${item.color}" data-aos="fade-up" data-aos-delay="${45 + index * 30}">
+                        <div class="m19l1x2-item-icon"><i class="fa-solid ${item.icon}"></i></div>
+                        <p>${item.text}</p>
+                      </div>
+                    `
+                  )
+                  .join("")}</div>`;
+
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Importance of Nutritious Food in Adolescence",
-                    "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব"
-                  )}</h2>
-                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60">
-                    <p class="mb-3">কৈশোরকালে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলস্বরূপ লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।</p>
-                    <p class="mb-0">খাদ্য মানবদেহকে সুস্থ-সবল রাখার জন্য খাদ্য অপরিহার্য। খাদ্য বলতে সেই সকল জৈব উপাদানকে বোঝায় যেগুলো মানবদেহ গঠনে ভূমিকা রাখে, ক্ষয়পূরণ করে, শক্তি বৃদ্ধি সহ শরীরের রোগ প্রতিরোধ ক্ষমতা তৈরি করে।</p>
+                <div class="mod19-lesson1-2">
+                  <span class="m19l1x2-shape m19l1x2-shape-1"></span>
+                  <span class="m19l1x2-shape m19l1x2-shape-2"></span>
+                  <span class="m19l1x2-shape m19l1x2-shape-3"></span>
+
+                  <header class="m19l1x2-hero" data-aos="fade-down">
+                    <h2 class="m19l1x2-hero-title">
+                      <i class="fa-solid fa-apple-whole"></i>
+                      ${yhLang("Adolescent Nutrition Overview", "কৈশোরে পুষ্টিকর খাবার ও পুষ্টি")}
+                    </h2>
+                  </header>
+
+                  <div class="m19l1x2-grid">
+                    <section class="m19l1x2-panel m19l1x2-panel-importance" data-aos="fade-right" data-aos-delay="20">
+                      <h3 class="m19l1x2-panel-title">
+                        <i class="fa-solid fa-seedling"></i>
+                        ${yhLang("Importance of Nutritious Food", "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব")}
+                      </h3>
+                      ${renderList(importancePoints)}
+                    </section>
+
+                    <section class="m19l1x2-panel m19l1x2-panel-nutrition" data-aos="fade-left" data-aos-delay="40">
+                      <h3 class="m19l1x2-panel-title">
+                        <i class="fa-solid fa-leaf"></i>
+                        ${yhLang("Nutrition Essentials", "পুষ্টির মূল বিষয়সমূহ")}
+                      </h3>
+                      ${renderList(nutritionPoints)}
+
+                      <div class="m19l1x2-tip-box" data-aos="zoom-in" data-aos-delay="120">
+                        <h4 class="m19l1x2-tip-title"><i class="fa-solid fa-lightbulb"></i> ${yhLang("Key Tip", "গুরুত্বপূর্ণ পরামর্শ")}</h4>
+                        <p class="mb-0">${yhLang(
+                          "Balanced and safe food intake in adolescence directly supports healthy growth, learning performance, and long-term wellbeing.",
+                          "কৈশোরে সুষম ও নিরাপদ খাবার গ্রহণ শারীরিক বৃদ্ধি, শেখার সক্ষমতা ও দীর্ঘমেয়াদি সুস্থতা নিশ্চিত করে।"
+                        )}</p>
+                      </div>
+                    </section>
                   </div>
                 </div>
               `;
@@ -13697,15 +13788,106 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
+              const importancePoints = [
+                {
+                  text: "কৈশোরকালে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে।",
+                  icon: "fa-arrow-up-right-dots",
+                  color: "m19l1x2-importance-growth",
+                },
+                {
+                  text: "সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন।",
+                  icon: "fa-bowl-food",
+                  color: "m19l1x2-importance-balanced",
+                },
+                {
+                  text: "সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয়।",
+                  icon: "fa-brain",
+                  color: "m19l1x2-importance-mind",
+                },
+                {
+                  text: "ফলস্বরূপ লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
+                  icon: "fa-graduation-cap",
+                  color: "m19l1x2-importance-performance",
+                },
+              ];
+
+              const nutritionPoints = [
+                {
+                  text: "পুষ্টি হলো একটি প্রক্রিয়া, যেখানে খাদ্য পরিপাক হয়ে জটিল উপাদান ভেঙে সরল উপাদানে পরিণত হয় এবং শরীর তা শোষণ করে।",
+                  icon: "fa-gears",
+                  color: "m19l1x2-nutrition-process",
+                },
+                {
+                  text: "এসব খাদ্য উপাদান দেহের শক্তি, বৃদ্ধি, রোগ প্রতিরোধ এবং সুস্বাস্থ্য নিশ্চিত করে।",
+                  icon: "fa-shield-heart",
+                  color: "m19l1x2-nutrition-health",
+                },
+                {
+                  text: "পুষ্টিকর খাদ্য দেহের গঠন, ক্ষয়পূরণ, কর্মক্ষমতা ও মানসিক প্রফুল্লতা বজায় রাখতে সহায়তা করে।",
+                  icon: "fa-heart-pulse",
+                  color: "m19l1x2-nutrition-food",
+                },
+                {
+                  text: "বয়সভিত্তিক ওজন-উচ্চতার আদর্শ মান থেকে কম হলে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
+                  icon: "fa-ruler-combined",
+                  color: "m19l1x2-nutrition-standard",
+                },
+                {
+                  text: "বি.এম.আই = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²; এটি পুষ্টিগত অবস্থা মূল্যায়নের গুরুত্বপূর্ণ পদ্ধতি।",
+                  icon: "fa-calculator",
+                  color: "m19l1x2-nutrition-bmi",
+                },
+              ];
+
+              const renderList = (items) =>
+                `<div class="m19l1x2-list">${items
+                  .map(
+                    (item, index) => `
+                      <div class="m19l1x2-item ${item.color}" data-aos="fade-up" data-aos-delay="${45 + index * 30}">
+                        <div class="m19l1x2-item-icon"><i class="fa-solid ${item.icon}"></i></div>
+                        <p>${item.text}</p>
+                      </div>
+                    `
+                  )
+                  .join("")}</div>`;
+
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Nutrition", "পুষ্টি")}</h2>
-                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60">
-                    <p class="mb-3">পুষ্টি হলো একটি প্রক্রিয়া। এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙে সরল উপাদানে পরিণত হয়। মানবদেহ এসব সরল উপাদান শোষণ করে নেয়। এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্বাস্থ্য নিশ্চিত করে।</p>
-                    <p class="mb-3">কৈশোরকালে ছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।</p>
-                    <p class="mb-3"><strong>পুষ্টিকর খাদ্য</strong><br>যেসব খাদ্য খেলে শরীরে তাপ ও শক্তি উৎপাদিত হয়, দেহের গঠন ও বৃদ্ধি হয়, শরীর সবল ও কর্মক্ষম থাকে, তাকে পুষ্টিকর খাদ্য বলে। খাদ্য ও পুষ্টি একে অপরের সাথে জড়িত। প্রতিটি খাদ্য অবশ্যই পুষ্টিকর ও নিরাপদ হতে হবে। নিয়মিত পুষ্টিকর খাদ্য গ্রহণ করলে শরীর ও মন ভালো থাকে, মনে প্রফুল্লতা আসে এবং পড়াশোনা ও কাজে মনোযোগ বাড়ে। মনে রাখতে হবে পুষ্টিকর খাদ্য গ্রহণ না করলে রোগ প্রতিরোধ ক্ষমতা কমে যায় এবং বিভিন্ন রোগে আক্রান্ত হওয়ার ঝুঁকি বেড়ে যায়।</p>
-                    <p class="mb-3"><strong>ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান</strong><br>বিশ্ব স্বাস্থ্য সংস্থা অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে। যদি কোনো শিশু বা কিশোর-কিশোরীর উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে, তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।</p>
-                    <p class="mb-0"><strong>বি.এম.আই (বডি মাস ইনডেক্স)</strong><br>কোন ব্যক্তির ওজন এবং উচ্চতার হারের বর্গের অনুপাতই হলো বি.এম.আই। এটি পুষ্টিগত অবস্থা নির্ণয়ের একটি উল্লেখযোগ্য পদ্ধতি। বি.এম.আই নির্ণয় করতে ব্যক্তির ওজন কিলোগ্রাম এককে ও উচ্চতা মিটার এককে জানা প্রয়োজন। ওজনকে উচ্চতার বর্গ দিয়ে ভাগ করলেই বি.এম.আই পাওয়া যাবে। নিচে সূত্রটি দেওয়া হলো—<br>বি.এম.আই = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²</p>
+                <div class="mod19-lesson1-2">
+                  <span class="m19l1x2-shape m19l1x2-shape-1"></span>
+                  <span class="m19l1x2-shape m19l1x2-shape-2"></span>
+                  <span class="m19l1x2-shape m19l1x2-shape-3"></span>
+
+                  <header class="m19l1x2-hero" data-aos="fade-down">
+                    <h2 class="m19l1x2-hero-title">
+                      <i class="fa-solid fa-leaf"></i>
+                      ${yhLang("Adolescent Nutrition Overview", "কৈশোরে পুষ্টিকর খাবার ও পুষ্টি")}
+                    </h2>
+                  </header>
+
+                  <div class="m19l1x2-grid">
+                    <section class="m19l1x2-panel m19l1x2-panel-importance" data-aos="fade-right" data-aos-delay="20">
+                      <h3 class="m19l1x2-panel-title">
+                        <i class="fa-solid fa-seedling"></i>
+                        ${yhLang("Importance of Nutritious Food", "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব")}
+                      </h3>
+                      ${renderList(importancePoints)}
+                    </section>
+
+                    <section class="m19l1x2-panel m19l1x2-panel-nutrition" data-aos="fade-left" data-aos-delay="40">
+                      <h3 class="m19l1x2-panel-title">
+                        <i class="fa-solid fa-leaf"></i>
+                        ${yhLang("Nutrition Essentials", "পুষ্টির মূল বিষয়সমূহ")}
+                      </h3>
+                      ${renderList(nutritionPoints)}
+
+                      <div class="m19l1x2-tip-box" data-aos="zoom-in" data-aos-delay="120">
+                        <h4 class="m19l1x2-tip-title"><i class="fa-solid fa-lightbulb"></i> ${yhLang("Key Tip", "গুরুত্বপূর্ণ পরামর্শ")}</h4>
+                        <p class="mb-0">${yhLang(
+                          "Balanced and safe food intake in adolescence directly supports healthy growth, learning performance, and long-term wellbeing.",
+                          "কৈশোরে সুষম ও নিরাপদ খাবার গ্রহণ শারীরিক বৃদ্ধি, শেখার সক্ষমতা ও দীর্ঘমেয়াদি সুস্থতা নিশ্চিত করে।"
+                        )}</p>
+                      </div>
+                    </section>
                   </div>
                 </div>
               `;
