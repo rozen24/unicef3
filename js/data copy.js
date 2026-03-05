@@ -10768,159 +10768,51 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const definition =
+              const intro =
                 "এটি এমন এক ধরণের সেবা যার দ্বারা মানুষ আত্মসচেতন হওয়ার মাধ্যমে নিজের আচরণ ও মনোভাবের কাক্সিক্ষত পরিবর্তন আনতে সক্ষম হয়।";
 
               const sections = [
                 {
-                  icon: "fa-user-doctor",
-                  color: "m16l1-section-provider",
-                  title: yhLang("Psychosocial Support Provider", "মনোসামাজিক সহায়তাকারী"),
+                  title: "মনোসামাজিক সহায়তাকারী",
                   description:
                     "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অসুবিধা হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।",
                 },
                 {
-                  icon: "fa-graduation-cap",
-                  color: "m16l1-section-education",
-                  title: yhLang("Psychosocial Education", "মনোসামাজিক শিক্ষা"),
+                  title: "মনোসামাজিক শিক্ষা",
                   description:
                     "মনোসামাজিক শিক্ষা হল এমন এক ধরনের শিক্ষণ প্রক্রিয়া যার মাধ্যমে একজন ব্যক্তির আকস্মিক বিপর্যয়, বিপত্তি, উৎপীড়ন, নিপীড়নের ফলে যে মানসিক অবস্থার সৃষ্টি হয় তা থেকে স্বাভাবিক অবস্থায় ফিরিয়ে আনতে ও স্বাভাবিক জীবনে মানিয়ে নিতে সহায়তা করে। মনোসামাজিক শিক্ষা ব্যক্তিকে তার প্রাত্যহিক জীবনে স্বাভাবিক কর্মকান্ড পরিচালনায় সহায়তা করে এবং পরিস্থিতি মোকাবেলার জন্য প্রস্তুত করে।",
                 },
                 {
-                  icon: "fa-school",
-                  color: "m16l1-section-necessity",
-                  title: yhLang(
-                    "Need for Psychosocial Education",
-                    "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা"
-                  ),
+                  title: "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা",
                   description:
                     "কিশোর-কিশোরীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে কিশোর-কিশোরীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
                 },
               ];
 
-              const benefits = [
-                {
-                  icon: "fa-brain",
-                  color: "m16l1-benefit-a",
-                  text: yhLang(
-                    "Supports better emotional regulation and self-awareness.",
-                    "আবেগ নিয়ন্ত্রণ ও আত্মসচেতনতা বৃদ্ধিতে সহায়তা করে।"
-                  ),
-                },
-                {
-                  icon: "fa-heart-pulse",
-                  color: "m16l1-benefit-b",
-                  text: yhLang(
-                    "Reduces stress effects after crises and difficult events.",
-                    "বিপর্যয়ের পর মানসিক চাপের প্রভাব কমাতে সাহায্য করে।"
-                  ),
-                },
-                {
-                  icon: "fa-people-group",
-                  color: "m16l1-benefit-c",
-                  text: yhLang(
-                    "Improves healthy communication and social connection.",
-                    "সুস্থ যোগাযোগ ও সামাজিক সম্পর্ক উন্নত করে।"
-                  ),
-                },
-                {
-                  icon: "fa-shield-heart",
-                  color: "m16l1-benefit-d",
-                  text: yhLang(
-                    "Builds resilience for handling daily challenges.",
-                    "দৈনন্দিন চ্যালেঞ্জ মোকাবেলায় সহনশীলতা তৈরি করে।"
-                  ),
-                },
-                {
-                  icon: "fa-hands-holding-heart",
-                  color: "m16l1-benefit-e",
-                  text: yhLang(
-                    "Encourages supportive school and community environments.",
-                    "সহায়ক বিদ্যালয় ও কমিউনিটি পরিবেশ গঠনে উৎসাহ দেয়।"
-                  ),
-                },
-              ];
-
-              const renderSections = (items, delay = 80) =>
+              const renderSections = (items) =>
                 items
                   .map(
                     (section, index) => `
-                      <section class="m16l1-section-card ${section.color}" data-aos="fade-up" data-aos-delay="${delay + index * 60}">
-                        <div class="m16l1-section-header">
-                          <div class="m16l1-section-icon" aria-hidden="true">
-                            <i class="fa-solid ${section.icon}"></i>
-                          </div>
-                          <h3 class="m16l1-section-title">${section.title}</h3>
-                        </div>
-                        <p class="m16l1-section-text">${section.description}</p>
+                      <section class="modern-card glass-card menstrual-info-card mt-${index === 0 ? 0 : 3}" data-aos="fade-up" data-aos-delay="${40 + index * 30}">
+                        <h3 class="h6 gradient-text mb-2">${section.title}</h3>
+                        <p class="mb-0">${section.description}</p>
                       </section>
                     `
                   )
                   .join("");
 
-              const renderBenefits = (items, delay = 320) =>
-                items
-                  .map(
-                    (benefit, index) => `
-                      <li class="m16l1-benefit-item ${benefit.color}" data-aos="zoom-in" data-aos-delay="${delay + index * 45}">
-                        <div class="m16l1-benefit-icon" aria-hidden="true">
-                          <i class="fa-solid ${benefit.icon}"></i>
-                        </div>
-                        <span class="m16l1-benefit-text">${benefit.text}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide mod16-lesson1">
-                  <div class="m16l1-shapes" aria-hidden="true">
-                    <span class="m16l1-shape m16l1-shape--circle"></span>
-                    <span class="m16l1-shape m16l1-shape--square"></span>
-                    <span class="m16l1-shape m16l1-shape--hexagon"></span>
-                  </div>
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Psychosocial support",
+                    "মনোসামাজিক সহায়তা"
+                  )}</h2>
 
-                  <section class="m16l1-hero" data-aos="fade-down">
-                    <div class="m16l1-hero__badge" aria-hidden="true">
-                      <i class="fa-solid fa-hands-holding-heart"></i>
-                    </div>
-                    <div class="m16l1-hero__content">
-                      <h2 class="m16l1-hero__title">${yhLang(
-                        "Psychosocial Support",
-                        "মনোসামাজিক সহায়তা"
-                      )}</h2>
-                      <p class="m16l1-hero__subtitle">${yhLang(
-                        "Support for emotional wellbeing and daily functioning",
-                        "মানসিক সুস্থতা ও দৈনন্দিন কার্যকারিতার সহায়তা"
-                      )}</p>
-                    </div>
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
+                    <p class="mb-0">${intro}</p>
                   </section>
 
-                  <section class="m16l1-definition-section" data-aos="fade-up" data-aos-delay="50">
-                    <div class="m16l1-definition-card">
-                      <div class="m16l1-definition-icon" aria-hidden="true">
-                        <i class="fa-solid fa-lightbulb"></i>
-                      </div>
-                      <p class="m16l1-definition-text">${definition}</p>
-                    </div>
-                  </section>
-
-                  ${renderSections(sections, 130)}
-
-                  <section class="m16l1-benefits-section" data-aos="fade-up" data-aos-delay="340">
-                    <div class="m16l1-section-header-main">
-                      <div class="m16l1-section-icon-main" aria-hidden="true">
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                      <h3 class="m16l1-section-title-main">${yhLang(
-                        "Key Benefits",
-                        "প্রধান সুবিধাসমূহ"
-                      )}</h3>
-                    </div>
-                    <ul class="m16l1-benefits-list">
-                      ${renderBenefits(benefits, 390)}
-                    </ul>
-                  </section>
+                  ${renderSections(sections)}
                 </div>
               `;
             })(),
