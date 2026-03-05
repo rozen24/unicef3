@@ -12925,93 +12925,170 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "বাংলাদেশে কীটনাশকজনিত বিষক্রিয়া (অর্গানোফসফরাস/ওপিসি) একটি সাধারণ ঘটনা। বিভিন্ন ভাবে বিষাক্ত দ্রব্য ব্যক্তির শরীরে প্রবেশ করতে পারে যা ইচ্ছাকৃত বা অনিচ্ছাকৃত দুইভাবেই হতে পারে।";
+              const intro = yhLang(
+                "Pesticide poisoning (organophosphorus/OPC) is a common incident in Bangladesh. Toxic substances can enter the body in different ways, either intentionally or accidentally.",
+                "বাংলাদেশে কীটনাশকজনিত বিষক্রিয়া (অর্গানোফসফরাস/ওপিসি) একটি সাধারণ ঘটনা। বিভিন্ন ভাবে বিষাক্ত দ্রব্য ব্যক্তির শরীরে প্রবেশ করতে পারে যা ইচ্ছাকৃত বা অনিচ্ছাকৃত দুইভাবেই হতে পারে।"
+              );
 
-              const signsHeading = "বিষক্রিয়ার লক্ষণ-চিহ্নঃ";
+              const signsHeading = yhLang("Signs and Symptoms of Poisoning:", "বিষক্রিয়ার লক্ষণ-চিহ্নঃ");
               const signs = [
-                "সাড়া না থাকা / অজ্ঞান হয়ে যাওয়া",
-                "বমি বমি ভাব",
-                "বমি করা",
-                "ঠোঁট, জিহ্বা পুড়ে যাওয়া (এসিড, ক্ষার বা দাহ্য বস্তু দ্বারা হলে)",
-                "মাথাব্যথা",
-                "ঝাপসা দৃষ্টি",
-                "খিঁচুনি",
-                "চামড়ার অস্বাভাবিক রঙ",
+                {
+                  text: yhLang("No response / unconsciousness", "সাড়া না থাকা / অজ্ঞান হয়ে যাওয়া"),
+                  icon: "fa-person-falling",
+                  color: "m18l8-sign-consciousness",
+                },
+                {
+                  text: yhLang("Nausea", "বমি বমি ভাব"),
+                  icon: "fa-face-dizzy",
+                  color: "m18l8-sign-nausea",
+                },
+                {
+                  text: yhLang("Vomiting", "বমি করা"),
+                  icon: "fa-bucket",
+                  color: "m18l8-sign-vomit",
+                },
+                {
+                  text: yhLang(
+                    "Burning of lips/tongue (if caused by acid, alkali, or corrosive substances)",
+                    "ঠোঁট, জিহ্বা পুড়ে যাওয়া (এসিড, ক্ষার বা দাহ্য বস্তু দ্বারা হলে)"
+                  ),
+                  icon: "fa-fire-flame-curved",
+                  color: "m18l8-sign-burn",
+                },
+                {
+                  text: yhLang("Headache", "মাথাব্যথা"),
+                  icon: "fa-head-side-virus",
+                  color: "m18l8-sign-headache",
+                },
+                {
+                  text: yhLang("Blurred vision", "ঝাপসা দৃষ্টি"),
+                  icon: "fa-eye-low-vision",
+                  color: "m18l8-sign-vision",
+                },
+                {
+                  text: yhLang("Seizures", "খিঁচুনি"),
+                  icon: "fa-bolt",
+                  color: "m18l8-sign-seizure",
+                },
+                {
+                  text: yhLang("Abnormal skin color", "চামড়ার অস্বাভাবিক রঙ"),
+                  icon: "fa-palette",
+                  color: "m18l8-sign-skin",
+                },
               ];
 
-              const followUp =
-                "যদি মনে হয় কোন ব্যক্তি বিষক্রিয়ায় আক্রান্ত, তবে বিষাক্ত দ্রব্যটি চিহ্নিত করার চেষ্টা করতে হবে এবং তৎক্ষণাৎ চিকিৎসকের কাছে বা হাসপাতালে নিতে হবে। এই সময়ের মাঝে নিম্নলিখিত প্রাথমিক চিকিৎসা পদ্ধতি গুলো ব্যবহার করা যেতে পারে।";
+              const followUp = yhLang(
+                "If poisoning is suspected, identify the toxic substance if possible and take the person to a doctor or hospital immediately. During this time, the following first aid steps may be used.",
+                "যদি মনে হয় কোন ব্যক্তি বিষক্রিয়ায় আক্রান্ত, তবে বিষাক্ত দ্রব্যটি চিহ্নিত করার চেষ্টা করতে হবে এবং তৎক্ষণাৎ চিকিৎসকের কাছে বা হাসপাতালে নিতে হবে। এই সময়ের মাঝে নিম্নলিখিত প্রাথমিক চিকিৎসা পদ্ধতি গুলো ব্যবহার করা যেতে পারে।"
+              );
 
-              const careHeading = "বিষক্রিয়ার প্রাথমিক চিকিৎসা";
+              const careHeading = yhLang("First Aid for Poisoning", "বিষক্রিয়ার প্রাথমিক চিকিৎসা");
               const careSteps = [
-                "আক্রান্ত ব্যক্তিটিকে যথাসম্ভব স্থির রাখার চেষ্টা করতে হবে।",
-                "নিশ্বাস-প্রশ্বাসের মাধ্যমে বিষক্রিয়া হয়ে থাকলে, অবিলম্বে ব্যক্তিকে সতেজ বাতাসে নিয়ে আসতে হবে।",
-                "আক্রান্ত ব্যক্তিকে প্রচুর পরিমাণে পানি খাওয়ানোর চেষ্টা করতে হবে।",
-                "ঘটনাস্থল এবং আক্রান্ত ব্যক্তিকে পরীক্ষা করতে হবে। ব্যক্তিটি কী বিষ গ্রহণ করেছিল তা খুঁজে বের করার চেষ্টা করতে হবে এবং খুঁজে পেলে তা আক্রান্ত ব্যক্তির সাথে হাসপাতালে নিয়ে যেতে হবে।",
-                "যদি আক্রান্ত ব্যক্তির শরীরের চামড়ায় কোনো বিষাক্ত পদার্থ পাওয়া যায়, তাহলে আক্রান্ত স্থানটি পরিষ্কার পানি দিয়ে ধুয়ে ফেলতে হবে।",
+                {
+                  text: yhLang("Try to keep the affected person as still as possible.", "আক্রান্ত ব্যক্তিটিকে যথাসম্ভব স্থির রাখার চেষ্টা করতে হবে।"),
+                  icon: "fa-hand-holding-heart",
+                  color: "m18l8-care-still",
+                },
+                {
+                  text: yhLang(
+                    "If poisoning happened through inhalation, move the person to fresh air immediately.",
+                    "নিশ্বাস-প্রশ্বাসের মাধ্যমে বিষক্রিয়া হয়ে থাকলে, অবিলম্বে ব্যক্তিকে সতেজ বাতাসে নিয়ে আসতে হবে।"
+                  ),
+                  icon: "fa-wind",
+                  color: "m18l8-care-air",
+                },
+                {
+                  text: yhLang("Try to give the affected person plenty of water.", "আক্রান্ত ব্যক্তিকে প্রচুর পরিমাণে পানি খাওয়ানোর চেষ্টা করতে হবে।"),
+                  icon: "fa-glass-water",
+                  color: "m18l8-care-water",
+                },
+                {
+                  text: yhLang(
+                    "Examine the scene and the person. Try to identify what poison was taken and, if found, bring it to the hospital with the patient.",
+                    "ঘটনাস্থল এবং আক্রান্ত ব্যক্তিকে পরীক্ষা করতে হবে। ব্যক্তিটি কী বিষ গ্রহণ করেছিল তা খুঁজে বের করার চেষ্টা করতে হবে এবং খুঁজে পেলে তা আক্রান্ত ব্যক্তির সাথে হাসপাতালে নিয়ে যেতে হবে।"
+                  ),
+                  icon: "fa-magnifying-glass",
+                  color: "m18l8-care-check",
+                },
+                {
+                  text: yhLang(
+                    "If any toxic substance is on the skin, wash the affected area thoroughly with clean water.",
+                    "যদি আক্রান্ত ব্যক্তির শরীরের চামড়ায় কোনো বিষাক্ত পদার্থ পাওয়া যায়, তাহলে আক্রান্ত স্থানটি পরিষ্কার পানি দিয়ে ধুয়ে ফেলতে হবে।"
+                  ),
+                  icon: "fa-hand-sparkles",
+                  color: "m18l8-care-wash",
+                },
               ];
 
-              const caution =
-                "অ্যাসিড, ক্ষার বা কোনো দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তিকে বমি করাবেন না (যেমন—ব্লিচ, সালফিউরিক অ্যাসিড, কেরোসিন, পেট্রোলিয়াম)।";
+              const caution = yhLang(
+                "Do NOT induce vomiting if acid, alkali, or any corrosive substance was swallowed (e.g., bleach, sulfuric acid, kerosene, petroleum).",
+                "অ্যাসিড, ক্ষার বা কোনো দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তিকে বমি করাবেন না (যেমন—ব্লিচ, সালফিউরিক অ্যাসিড, কেরোসিন, পেট্রোলিয়াম)।"
+              );
 
-              const renderList = (items) =>
-                items
+              const renderSigns = (items) =>
+                `<div class="m18l8-signs-list">${items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
-
-              const renderDividers = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <div class="poison-step">
-                        <p class="mb-0">${item}</p>
-                        <hr class="my-3" />
+                    (item, index) => `
+                      <div class="m18l8-sign-item ${item.color}" data-aos="fade-right" data-aos-delay="${50 + index * 35}">
+                        <div class="m18l8-sign-icon"><i class="fa-solid ${item.icon}"></i></div>
+                        <p>${item.text}</p>
                       </div>
                     `
                   )
-                  .join("");
+                  .join("")}</div>`;
+
+              const renderCare = (items) =>
+                `<div class="m18l8-care-list">${items
+                  .map(
+                    (item, index) => `
+                      <div class="m18l8-care-item ${item.color}" data-aos="fade-left" data-aos-delay="${50 + index * 35}">
+                        <div class="m18l8-care-icon"><i class="fa-solid ${item.icon}"></i></div>
+                        <p>${item.text}</p>
+                      </div>
+                    `
+                  )
+                  .join("")}</div>`;
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "বিষক্রিয়া",
-                    "বিষক্রিয়া"
-                  )}</h2>
+                <div class="mod18-lesson8">
+                  <div class="m18l8-shape m18l8-shape-1"></div>
+                  <div class="m18l8-shape m18l8-shape-2"></div>
+                  <div class="m18l8-shape m18l8-shape-3"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
+                  <header class="m18l8-hero" data-aos="zoom-in" data-aos-duration="600">
+                    <div class="m18l8-hero-badge"><i class="fa-solid fa-skull-crossbones"></i></div>
+                    <h2 class="m18l8-hero-title">
+                      <i class="fa-solid fa-vial-circle-check"></i>
+                      ${yhLang("Poisoning Response", "বিষক্রিয়া")}
+                    </h2>
+                  </header>
+
+                  <section class="m18l8-intro-panel" data-aos="fade-up" data-aos-delay="20">
+                    <p class="m18l8-intro-text mb-0">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <div class="row g-4 align-items-start">
-                      <div class="col-lg-6">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3">${signsHeading}</h3>
-                          <ul class="list-unstyled puberty-list mb-3">
-                            ${renderList(signs)}
-                          </ul>
-                          <p class="mb-0">${followUp}</p>
-                        </article>
+                  <div class="m18l8-grid">
+                    <section class="m18l8-signs-panel" data-aos="fade-right" data-aos-delay="40">
+                      <h3 class="m18l8-panel-title">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        ${signsHeading}
+                      </h3>
+                      ${renderSigns(signs)}
+                      <p class="m18l8-followup mt-2 mb-0">${followUp}</p>
+                    </section>
+
+                    <section class="m18l8-care-panel" data-aos="fade-left" data-aos-delay="60">
+                      <h3 class="m18l8-panel-title">
+                        <i class="fa-solid fa-kit-medical"></i>
+                        ${careHeading}
+                      </h3>
+                      ${renderCare(careSteps)}
+                      <div class="m18l8-warning" role="alert" data-aos="zoom-in" data-aos-delay="120">
+                        <h4 class="m18l8-warning-title mb-1"><i class="fa-solid fa-ban"></i> ${yhLang("সতর্কতা:", "সতর্কতা:")}</h4>
+                        <p class="mb-0">${caution}</p>
                       </div>
-                      <div class="col-lg-6">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3">${careHeading}</h3>
-                          ${renderDividers(careSteps)}
-                          <div class="alert alert-warning mt-3 mb-0" role="alert">
-                            <strong>${yhLang("সতর্কতা:", "সতর্কতা:")}</strong> ${caution}
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                  </section>
+                    </section>
+                  </div>
                 </div>
               `;
             })(),
@@ -13042,63 +13119,110 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা। কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে। ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে। ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে।";
+              const intro = yhLang(
+                "Drowning is one of the leading causes of child deaths in Bangladesh. If you see a child or person drowning in a pond, lake, or river, immediately call for help. Extend a stick, bamboo, or rope towards the drowning person to help them reach safety. Once grasped, they can swim back to shore with assistance.",
+                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা। কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে। ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে। ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে।"
+              );
 
-              const shallowTip =
-                "যদি পুকুর বা জলাশয় অগভীর থাকে তবে পানিতে নেমে ডুবন্ত ব্যক্তির কাছে যাওয়া যেতে পারে। সবসময় ডুবন্ত ব্যক্তির কাছ থেকে কমপক্ষে <strong>২ মিটার</strong> দূরে থাকতে হবে যেন ডুবন্ত ব্যক্তি কখনোই যাকে বাঁচাতে যায় তাকেই জাপটে ধরতে না পারে।";
+              const shallowTip = yhLang(
+                "In shallow water, you can enter the water to approach the drowning person. Always maintain at least 2 meters distance so they don't panic and grab you, potentially pulling you down.",
+                "যদি পুকুর বা জলাশয় অগভীর থাকে তবে পানিতে নেমে ডুবন্ত ব্যক্তির কাছে যাওয়া যেতে পারে। সবসময় ডুবন্ত ব্যক্তির কাছ থেকে কমপক্ষে ২ মিটার দূরে থাকতে হবে যেন ডুবন্ত ব্যক্তি কখনোই যাকে বাঁচাতে যায় তাকেই জাপটে ধরতে না পারে।"
+              );
 
-              const rescueHeading = "ডুবন্ত অজ্ঞান ব্যক্তিকে উদ্ধার এবং প্রাথমিক চিকিৎসা";
+              const rescueHeading = yhLang(
+                "Rescue & First Aid for Unconscious Drowning Victim",
+                "ডুবন্ত অজ্ঞান ব্যক্তিকে উদ্ধার এবং প্রাথমিক চিকিৎসা"
+              );
+
               const rescueSteps = [
-                "পানিতে নেমে সাঁতরে ডুবন্ত ব্যক্তির কাছে যেতে হবে।",
-                "ডুবন্ত ব্যক্তিকে পানিতে চিত করতে হবে।",
-                "ডুবন্ত ব্যক্তির থুতনি ধরে পানি থেকে তীরে আনতে হবে।",
-                "কারো সাহায্য নিয়ে ডুবন্ত ব্যক্তিকে পানি থেকে তুলে আনতে হবে।",
-                "আক্রান্ত ব্যক্তিকে শক্ত ও সমতল স্থানে মুখ উপরের দিকে করে শুইয়ে দিতে হবে।",
-                "শ্বাসপথ এবং শ্বাসপ্রশ্বাস যাচাই করতে হবে।",
-                "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে। যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।",
+                {
+                  text: yhLang(
+                    "Enter water and swim towards drowning person",
+                    "পানিতে নেমে সাঁতরে ডুবন্ত ব্যক্তির কাছে যেতে হবে।"
+                  ),
+                  icon: "fa-person-swimming",
+                  color: "m18l9-rescue-approach"
+                },
+                {
+                  text: yhLang(
+                    "Turn victim to face upward (supine position)",
+                    "ডুবন্ত ব্যক্তিকে পানিতে চিত করতে হবে।"
+                  ),
+                  icon: "fa-arrow-rotate-right",
+                  color: "m18l9-rescue-turn"
+                },
+                {
+                  text: yhLang(
+                    "Support chin and bring to shore",
+                    "ডুবন্ত ব্যক্তির থুতনি ধরে পানি থেকে তীরে আনতে হবে।"
+                  ),
+                  icon: "fa-hand",
+                  color: "m18l9-rescue-support"
+                },
+                {
+                  text: yhLang(
+                    "Get help to carefully remove from water",
+                    "কারো সাহায্য নিয়ে ডুবন্ত ব্যক্তিকে পানি থেকে তুলে আনতে হবে।"
+                  ),
+                  icon: "fa-handshake",
+                  color: "m18l9-rescue-lift"
+                },
+                {
+                  text: yhLang(
+                    "Place on firm, flat surface facing upward",
+                    "আক্রান্ত ব্যক্তিকে শক্ত ও সমতল স্থানে মুখ উপরের দিকে করে শুইয়ে দিতে হবে।"
+                  ),
+                  icon: "fa-person-hiking",
+                  color: "m18l9-rescue-position"
+                },
+                {
+                  text: yhLang(
+                    "Check airway and breathing",
+                    "শ্বাসপথ এবং শ্বাসপ্রশ্বাস যাচাই করতে হবে।"
+                  ),
+                  icon: "fa-wind",
+                  color: "m18l9-rescue-check"
+                },
+                {
+                  text: yhLang(
+                    "Give 2 rescue breaths and 30 chest compressions. Continue CPR if needed",
+                    "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে। যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।"
+                  ),
+                  icon: "fa-heart-pulse",
+                  color: "m18l9-rescue-cpr"
+                }
               ];
 
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `
-                  )
-                  .join("");
+              const renderRescue = (items) =>
+                `<div class="m18l9-rescue-list">
+                  ${items.map((item, index) => `
+                    <div class="m18l9-rescue-item ${item.color}" data-aos="fade-right" data-aos-delay="${50 + index * 35}">
+                      <div class="m18l9-rescue-icon"><i class="fa-solid ${item.icon}"></i></div>
+                      <p>${item.text}</p>
+                    </div>
+                  `).join("")}
+                </div>`;
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "পানিতে ডুবা",
-                    "পানিতে ডুবা"
-                  )}</h2>
+                <div class="mod18-lesson9">
+                  <header class="m18l9-hero" data-aos="fade-down">
+                    <h2 class="m18l9-hero-title">
+                      <i class="fa-solid fa-person-swimming"></i>
+                      ${yhLang("Drowning Response", "পানিতে ডুবা")}
+                    </h2>
+                  </header>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p>${intro}</p>
-                    <p class="mb-0">${shallowTip}</p>
+                  <section class="m18l9-intro-panel" data-aos="fade-up" data-aos-delay="20">
+                    <p class="m18l9-intro-text mb-2">${intro}</p>
+                    <p class="m18l9-shallow-tip mb-0">${shallowTip}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-6">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3">${rescueHeading}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(rescueSteps)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-6">
-                        <figure class="text-center mb-0">
-                          <img src="img/modu18/pani.jpg" alt="ডুবন্ত ব্যক্তিকে উদ্ধার" class="img-fluid rounded shadow-sm img-zoom" />
-                        </figure>
-                      </div>
-                    </div>
+                  <section class="m18l9-rescue-panel" data-aos="fade-left" data-aos-delay="40">
+                    <h3 class="m18l9-panel-title">
+                      <i class="fa-solid fa-heart-pulse"></i>
+                      ${rescueHeading}
+                    </h3>
+                    ${renderRescue(rescueSteps)}
                   </section>
                 </div>
               `;
@@ -13133,23 +13257,185 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "শ্বাসনালীতে কিছু আটকে আংশিক বা পরিপূর্ণ প্রতিবন্ধকতা তৈরি হওয়ার ফলে বাতাসের অভাবের কারণে ব্যক্তির শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়। সাধারণত খাবার খাওয়ার সময় বা মুখে কিছু দেওয়ার সময় এটি ঘটে থাকে, যা একটি জীবন-সংশয়কারী জরুরি অবস্থা।";
+              const chokingIntro = yhLang(
+                "A partial or complete blockage in the airway can make breathing very difficult or stop breathing entirely because of lack of airflow. This usually happens while eating or when objects are put in the mouth, and it is a life-threatening emergency.",
+                "শ্বাসনালীতে কিছু আটকে আংশিক বা পরিপূর্ণ প্রতিবন্ধকতা তৈরি হওয়ার ফলে বাতাসের অভাবের কারণে ব্যক্তির শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়। সাধারণত খাবার খাওয়ার সময় বা মুখে কিছু দেওয়ার সময় এটি ঘটে থাকে, যা একটি জীবন-সংশয়কারী জরুরি অবস্থা।"
+              );
 
-              const scenarios =
-                "শিশুদের ক্ষেত্রে অনেক সময় খাদ্যবস্তু ছাড়াও অন্যান্য বস্তু (যেমন— কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা) গলায় আটকে গিয়ে এমন শ্বাসরোধকারী পরিস্থিতির সৃষ্টি হতে পারে। প্রাপ্তবয়স্কদের বেশির ভাগ ক্ষেত্রেই খাওয়ার সময় খাদ্যবস্তু শ্বাসনালীতে আটকে এরূপ পরিস্থিতি উদ্ভূত হয়ে থাকে।";
+              const chokingScenarios = yhLang(
+                "In children, besides food, objects such as coins, marbles, seeds, buttons, or small toys may get stuck in the throat and cause choking. In adults, choking most commonly occurs when food gets lodged in the airway during eating.",
+                "শিশুদের ক্ষেত্রে অনেক সময় খাদ্যবস্তু ছাড়াও অন্যান্য বস্তু (যেমন— কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা) গলায় আটকে গিয়ে এমন শ্বাসরোধকারী পরিস্থিতির সৃষ্টি হতে পারে। প্রাপ্তবয়স্কদের বেশির ভাগ ক্ষেত্রেই খাওয়ার সময় খাদ্যবস্তু শ্বাসনালীতে আটকে এরূপ পরিস্থিতি উদ্ভূত হয়ে থাকে।"
+              );
+
+              const chokingPoints = [
+                {
+                  text: yhLang(
+                    "A lodged object can create partial or full airway blockage.",
+                    "শ্বাসনালীতে কিছু আটকে আংশিক বা পূর্ণ প্রতিবন্ধকতা তৈরি হতে পারে।"
+                  ),
+                  icon: "fa-road-barrier",
+                  color: "m18l10-point-block",
+                },
+                {
+                  text: yhLang(
+                    "Lack of airflow causes severe breathing difficulty or choking.",
+                    "বাতাসের অভাবে শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়।"
+                  ),
+                  icon: "fa-wind",
+                  color: "m18l10-point-breath",
+                },
+                {
+                  text: yhLang(
+                    "This often happens during eating or while putting objects in the mouth.",
+                    "খাবার খাওয়া বা মুখে কিছু দেওয়ার সময় এ সমস্যা বেশি দেখা যায়।"
+                  ),
+                  icon: "fa-utensils",
+                  color: "m18l10-point-food",
+                },
+                {
+                  text: yhLang(
+                    "This is a life-threatening emergency.",
+                    "এটি একটি জীবন-সংশয়কারী জরুরি অবস্থা।"
+                  ),
+                  icon: "fa-triangle-exclamation",
+                  color: "m18l10-point-danger",
+                },
+                {
+                  text: yhLang(
+                    "In children, coins, marbles, seeds, buttons, or small toys may get stuck in the throat.",
+                    "শিশুদের ক্ষেত্রে কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা গলায় আটকে যেতে পারে।"
+                  ),
+                  icon: "fa-baby",
+                  color: "m18l10-point-child",
+                },
+                {
+                  text: yhLang(
+                    "In adults, food is the most common cause of airway blockage.",
+                    "প্রাপ্তবয়স্কদের ক্ষেত্রে বেশির ভাগ সময় খাবার শ্বাসনালীতে আটকে যায়।"
+                  ),
+                  icon: "fa-user",
+                  color: "m18l10-point-adult",
+                },
+              ];
+
+              const infantSteps = [
+                {
+                  text: yhLang(
+                    "Call for help loudly or dial emergency service (999).",
+                    "চিৎকার করে সাহায্য চান অথবা জরুরি সেবার নাম্বারে (৯৯৯) কল করতে হবে।"
+                  ),
+                  icon: "fa-phone-volume",
+                  color: "m18l12-step-call",
+                },
+                {
+                  text: yhLang(
+                    "Sit as shown and place the infant on the rescuer's lap.",
+                    "চিত্রের মতো করে বসে শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার কোলে নেবেন।"
+                  ),
+                  icon: "fa-chair",
+                  color: "m18l12-step-seat",
+                },
+                {
+                  text: yhLang(
+                    "Lay the infant carefully on one forearm, supporting the head and neck, with the face downward and unobstructed.",
+                    "শিশুকে এমনভাবে এক হাতের ওপর সাবধানে শুইয়ে দিতে হবে যেন মাথা এবং ঘাড় ধরে রাখা যায়, কিন্তু শিশুর মুখ ঢেকে যাবে না এবং মুখ নিচের দিকে থাকবে।"
+                  ),
+                  icon: "fa-hand-holding-heart",
+                  color: "m18l12-step-hold",
+                },
+                {
+                  text: yhLang(
+                    "In this position, deliver 5 firm back blows between the shoulder blades.",
+                    "এই অবস্থানে রেখে শিশুটির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।"
+                  ),
+                  icon: "fa-hand",
+                  color: "m18l12-step-back",
+                },
+                {
+                  text: yhLang(
+                    "Quickly turn the infant onto the back on one forearm.",
+                    "শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার এক হাতের ওপর দ্রুত চিত করে শুইয়ে দেবেন।"
+                  ),
+                  icon: "fa-arrows-rotate",
+                  color: "m18l12-step-turn",
+                },
+                {
+                  text: yhLang(
+                    "Check whether the object has come out and breathing has normalized; if not, repeat the above process.",
+                    "শিশুর গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং শ্বাস-প্রশ্বাস স্বাভাবিক কিনা তা লক্ষ্য করতে হবে। যদি না হয়, তাহলে উপরে বর্ণিত প্রক্রিয়াটির পুনরাবৃত্তি করতে হবে।"
+                  ),
+                  icon: "fa-stethoscope",
+                  color: "m18l12-step-check",
+                },
+              ];
+
+              const unconsciousSteps = [
+                {
+                  text: yhLang(
+                    "Place the infant on a firm and safe flat surface.",
+                    "শিশুটিকে একটি শক্ত ও নিরাপদ সমতল স্থানে শুইয়ে দিতে হবে।"
+                  ),
+                  icon: "fa-bed",
+                  color: "m18l12-alert-place",
+                },
+                {
+                  text: yhLang("Start CPR.", "সিপিআর শুরু করতে হবে।"),
+                  icon: "fa-heart-pulse",
+                  color: "m18l12-alert-cpr",
+                },
+              ];
+
+              const renderList = (items) =>
+                `<div class="m18l10x12-list">${items
+                  .map(
+                    (item, index) => `
+                      <div class="m18l10x12-item ${item.color}" data-aos="fade-up" data-aos-delay="${50 + index * 35}">
+                        <div class="m18l10x12-item-icon"><i class="fa-solid ${item.icon}"></i></div>
+                        <p>${item.text}</p>
+                      </div>
+                    `
+                  )
+                  .join("")}</div>`;
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "শ্বাস আটকে যাওয়া (Choking)",
-                    "শ্বাস আটকে যাওয়া (Choking)"
-                  )}</h2>
+                <div class="mod18-lesson10-12">
+                  <span class="m18l10x12-shape m18l10x12-shape-1"></span>
+                  <span class="m18l10x12-shape m18l10x12-shape-2"></span>
+                  <span class="m18l10x12-shape m18l10x12-shape-3"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p>${intro}</p>
-                    <p class="mb-0">${scenarios}</p>
-                  </section>
+                  <header class="m18l10x12-hero" data-aos="fade-down">
+                    <h2 class="m18l10x12-hero-title">
+                      <i class="fa-solid fa-lungs"></i>
+                      ${yhLang("Choking and Infant Choking", "শ্বাস আটকে যাওয়া: পাঠ ১০ ও ১২")}
+                    </h2>
+                  </header>
+
+                  <div class="m18l10x12-grid">
+                    <section class="m18l10x12-panel m18l10x12-panel-main" data-aos="fade-right" data-aos-delay="20">
+                      <h3 class="m18l10x12-panel-title">
+                        <i class="fa-solid fa-lungs"></i>
+                        ${yhLang("Choking and Airway Block", "শ্বাস আটকে যাওয়া বা গলায় কিছু আটকে যাওয়া")}
+                      </h3>
+                      <p class="m18l10x12-intro-text">${chokingIntro}</p>
+                      <div class="m18l10x12-context-box">
+                        <h4 class="m18l10x12-subtitle"><i class="fa-solid fa-magnifying-glass"></i> ${yhLang("Common Scenarios", "সাধারণ পরিস্থিতি")}</h4>
+                        <p class="mb-0">${chokingScenarios}</p>
+                      </div>
+                      ${renderList(chokingPoints)}
+                    </section>
+
+                    <section class="m18l10x12-panel m18l10x12-panel-infant" data-aos="fade-left" data-aos-delay="40">
+                      <h3 class="m18l10x12-panel-title">
+                        <i class="fa-solid fa-baby"></i>
+                        ${yhLang("Infant Choking First Aid", "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচে)")}
+                      </h3>
+                      ${renderList(infantSteps)}
+                      <div class="m18l10x12-alert-box" role="alert" data-aos="zoom-in" data-aos-delay="110">
+                        <h4 class="m18l10x12-alert-title"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("If Infant Becomes Unconscious", "যদি শিশুটি অজ্ঞান হয়ে পড়ে")}</h4>
+                        ${renderList(unconsciousSteps)}
+                      </div>
+                    </section>
+                  </div>
                 </div>
               `;
             })(),
@@ -13296,72 +13582,142 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const steps = [
-                "চিৎকার করে সাহায্য চান অথবা জরুরি সেবার নাম্বারে (৯৯৯) কল করতে হবে।",
-                "চিত্রের মতো করে বসে শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার কোলে নেবেন।",
-                "শিশুকে এমনভাবে এক হাতের ওপর সাবধানে শুইয়ে দিতে হবে যেন মাথা এবং ঘাড় ধরে রাখা যায়, কিন্তু শিশুর মুখ ঢেকে যাবে না এবং মুখ নিচের দিকে থাকবে।",
-                "এই অবস্থানে রেখে শিশুটির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
-                "শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার এক হাতের ওপর দ্রুত চিত করে শুইয়ে দেবেন।",
-                "শিশুর গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং শ্বাস-প্রশ্বাস স্বাভাবিক কিনা তা লক্ষ্য করতে হবে। যদি না হয়, তাহলে উপরে বর্ণিত প্রক্রিয়াটির পুনরাবৃত্তি করতে হবে।",
+              const chokingIntro =
+                "শ্বাসনালীতে কিছু আটকে আংশিক বা পরিপূর্ণ প্রতিবন্ধকতা তৈরি হওয়ার ফলে বাতাসের অভাবের কারণে ব্যক্তির শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়। সাধারণত খাবার খাওয়ার সময় বা মুখে কিছু দেওয়ার সময় এটি ঘটে থাকে, যা একটি জীবন-সংশয়কারী জরুরি অবস্থা।";
+
+              const chokingScenarios =
+                "শিশুদের ক্ষেত্রে অনেক সময় খাদ্যবস্তু ছাড়াও অন্যান্য বস্তু (যেমন— কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা) গলায় আটকে গিয়ে এমন শ্বাসরোধকারী পরিস্থিতির সৃষ্টি হতে পারে। প্রাপ্তবয়স্কদের বেশির ভাগ ক্ষেত্রেই খাওয়ার সময় খাদ্যবস্তু শ্বাসনালীতে আটকে এরূপ পরিস্থিতি উদ্ভূত হয়ে থাকে।";
+
+              const chokingPoints = [
+                {
+                  text: "শ্বাসনালীতে কিছু আটকে আংশিক বা পূর্ণ প্রতিবন্ধকতা তৈরি হতে পারে।",
+                  icon: "fa-road-barrier",
+                  color: "m18l10-point-block",
+                },
+                {
+                  text: "বাতাসের অভাবে শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়।",
+                  icon: "fa-wind",
+                  color: "m18l10-point-breath",
+                },
+                {
+                  text: "খাবার খাওয়া বা মুখে কিছু দেওয়ার সময় এ সমস্যা বেশি দেখা যায়।",
+                  icon: "fa-utensils",
+                  color: "m18l10-point-food",
+                },
+                {
+                  text: "এটি একটি জীবন-সংশয়কারী জরুরি অবস্থা।",
+                  icon: "fa-triangle-exclamation",
+                  color: "m18l10-point-danger",
+                },
+                {
+                  text: "শিশুদের ক্ষেত্রে কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা গলায় আটকে যেতে পারে।",
+                  icon: "fa-baby",
+                  color: "m18l10-point-child",
+                },
+                {
+                  text: "প্রাপ্তবয়স্কদের ক্ষেত্রে বেশির ভাগ সময় খাবার শ্বাসনালীতে আটকে যায়।",
+                  icon: "fa-user",
+                  color: "m18l10-point-adult",
+                },
+              ];
+
+              const infantSteps = [
+                {
+                  text: "চিৎকার করে সাহায্য চান অথবা জরুরি সেবার নাম্বারে (৯৯৯) কল করতে হবে।",
+                  icon: "fa-phone-volume",
+                  color: "m18l12-step-call",
+                },
+                {
+                  text: "চিত্রের মতো করে বসে শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার কোলে নেবেন।",
+                  icon: "fa-chair",
+                  color: "m18l12-step-seat",
+                },
+                {
+                  text: "শিশুকে এমনভাবে এক হাতের ওপর সাবধানে শুইয়ে দিতে হবে যেন মাথা এবং ঘাড় ধরে রাখা যায়, কিন্তু শিশুর মুখ ঢেকে যাবে না এবং মুখ নিচের দিকে থাকবে।",
+                  icon: "fa-hand-holding-heart",
+                  color: "m18l12-step-hold",
+                },
+                {
+                  text: "এই অবস্থানে রেখে শিশুটির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
+                  icon: "fa-hand",
+                  color: "m18l12-step-back",
+                },
+                {
+                  text: "শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার এক হাতের ওপর দ্রুত চিত করে শুইয়ে দেবেন।",
+                  icon: "fa-arrows-rotate",
+                  color: "m18l12-step-turn",
+                },
+                {
+                  text: "শিশুর গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং শ্বাস-প্রশ্বাস স্বাভাবিক কিনা তা লক্ষ্য করতে হবে। যদি না হয়, তাহলে উপরে বর্ণিত প্রক্রিয়াটির পুনরাবৃত্তি করতে হবে।",
+                  icon: "fa-stethoscope",
+                  color: "m18l12-step-check",
+                },
               ];
 
               const unconsciousSteps = [
-                "যদি শিশুটি অজ্ঞান হয়ে পড়ে—",
-                "শিশুটিকে একটি শক্ত ও নিরাপদ সমতল স্থানে শুইয়ে দিতে হবে।",
-                "সিপিআর শুরু করতে হবে।",
+                {
+                  text: "শিশুটিকে একটি শক্ত ও নিরাপদ সমতল স্থানে শুইয়ে দিতে হবে।",
+                  icon: "fa-bed",
+                  color: "m18l12-alert-place",
+                },
+                {
+                  text: "সিপিআর শুরু করতে হবে।",
+                  icon: "fa-heart-pulse",
+                  color: "m18l12-alert-cpr",
+                },
               ];
 
               const renderList = (items) =>
-                items
+                `<div class="m18l10x12-list">${items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
+                    (item, index) => `
+                      <div class="m18l10x12-item ${item.color}" data-aos="fade-up" data-aos-delay="${50 + index * 35}">
+                        <div class="m18l10x12-item-icon"><i class="fa-solid ${item.icon}"></i></div>
+                        <p>${item.text}</p>
+                      </div>
                     `
                   )
-                  .join("");
-
-              const renderParagraphs = (items) =>
-                items.map((item) => `<p class="mb-2">${item}</p>`).join("");
+                  .join("")}</div>`;
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা",
-                    "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচের শিশুর ক্ষেত্রে)"
-                  )}</h2>
+                <div class="mod18-lesson10-12">
+                  <span class="m18l10x12-shape m18l10x12-shape-1"></span>
+                  <span class="m18l10x12-shape m18l10x12-shape-2"></span>
+                  <span class="m18l10x12-shape m18l10x12-shape-3"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-5">
-                        <figure class="text-center mb-0">
-                          <img src="img/modu18/breath.jpg" alt="শিশুর চোকিং চিকিৎসা" class="img-fluid rounded shadow-sm img-zoom" />
-                        </figure>
-                      </div>
-                      <div class="col-lg-7">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(steps)}
-                          </ul>
-                        </article>
-                      </div>
-                    </div>
-                  </section>
+                  <header class="m18l10x12-hero" data-aos="fade-down">
+                    <h2 class="m18l10x12-hero-title">
+                      <i class="fa-solid fa-baby"></i>
+                      ${yhLang("Choking and Infant Choking", "শ্বাস আটকে যাওয়া: পাঠ ১০ ও ১২")}
+                    </h2>
+                  </header>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7 order-2 order-lg-1">
-                        ${renderParagraphs(unconsciousSteps)}
+                  <div class="m18l10x12-grid">
+                    <section class="m18l10x12-panel m18l10x12-panel-main" data-aos="fade-right" data-aos-delay="20">
+                      <h3 class="m18l10x12-panel-title">
+                        <i class="fa-solid fa-lungs"></i>
+                        ${yhLang("Choking and Airway Block", "শ্বাস আটকে যাওয়া বা গলায় কিছু আটকে যাওয়া")}
+                      </h3>
+                      <p class="m18l10x12-intro-text">${chokingIntro}</p>
+                      <div class="m18l10x12-context-box">
+                        <h4 class="m18l10x12-subtitle"><i class="fa-solid fa-magnifying-glass"></i> ${yhLang("Common Scenarios", "সাধারণ পরিস্থিতি")}</h4>
+                        <p class="mb-0">${chokingScenarios}</p>
                       </div>
-                      <div class="col-lg-5 order-1 order-lg-2">
-                        <figure class="text-center mb-0">
-                          <img src="img/modu18/breath2.jpg" alt="শিশুর সিপিআর" class="img-fluid rounded shadow-sm img-zoom" />
-                        </figure>
+                      ${renderList(chokingPoints)}
+                    </section>
+
+                    <section class="m18l10x12-panel m18l10x12-panel-infant" data-aos="fade-left" data-aos-delay="40">
+                      <h3 class="m18l10x12-panel-title">
+                        <i class="fa-solid fa-baby"></i>
+                        ${yhLang("Infant Choking First Aid", "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচে)")}
+                      </h3>
+                      ${renderList(infantSteps)}
+                      <div class="m18l10x12-alert-box" role="alert" data-aos="zoom-in" data-aos-delay="110">
+                        <h4 class="m18l10x12-alert-title"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("If Infant Becomes Unconscious", "যদি শিশুটি অজ্ঞান হয়ে পড়ে")}</h4>
+                        ${renderList(unconsciousSteps)}
                       </div>
-                    </div>
-                  </section>
+                    </section>
+                  </div>
                 </div>
               `;
             })(),
