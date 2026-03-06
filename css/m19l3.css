@@ -1,0 +1,360 @@
+/* Module 19 Lesson 3 - Nutrition Table Styling */
+
+.m19l3-table-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #FFF3E0 0%, #E8F5E9 50%, #E0F2F1 100%);
+  overflow: hidden;
+}
+
+/* Table Header */
+.m19l3-table-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.m19l3-table-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2C3E50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.m19l3-table-header i {
+  font-size: 2.2rem;
+  color: #FF8A65;
+}
+
+/* Table Wrapper */
+.m19l3-table-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Main Table */
+.m19l3-nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-size: 0.9rem;
+}
+
+.m19l3-nutrition-table thead {
+  background: linear-gradient(135deg, #FF8A65, #FF6E40);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.m19l3-nutrition-table th {
+  padding: 1.4rem 1rem;
+  text-align: left;
+  border: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.m19l3-nutrition-table th.col-num {
+  width: 8%;
+  text-align: center;
+}
+
+.m19l3-nutrition-table th.col-nutrient {
+  width: 18%;
+}
+
+.m19l3-nutrition-table th.col-sources {
+  width: 37%;
+}
+
+.m19l3-nutrition-table th.col-functions {
+  width: 37%;
+}
+
+/* Table Rows */
+.m19l3-nutrition-table tbody tr {
+  border-bottom: 2px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.m19l3-nutrition-table tbody tr:hover {
+  background-color: #fafafa;
+  box-shadow: inset 4px 0 0 0 currentColor;
+}
+
+.m19l3-nutrition-table td {
+  padding: 1.2rem 1rem;
+  text-align: left;
+  color: #37474F;
+  line-height: 1.6;
+}
+
+.m19l3-nutrition-table td.col-num {
+  text-align: center;
+  padding: 1.2rem 0.6rem;
+}
+
+/* Row Colors */
+.m19l3-row.m19l3-carbs {
+  border-left: 5px solid #FF8A65;
+  background: linear-gradient(90deg, rgba(255,138,101,0.08) 0%, transparent 30%);
+}
+
+.m19l3-row.m19l3-carbs:hover {
+  background: linear-gradient(90deg, rgba(255,138,101,0.12) 0%, transparent 30%);
+}
+
+.m19l3-row.m19l3-fats {
+  border-left: 5px solid #FFD54F;
+  background: linear-gradient(90deg, rgba(255,213,79,0.08) 0%, transparent 30%);
+}
+
+.m19l3-row.m19l3-fats:hover {
+  background: linear-gradient(90deg, rgba(255,213,79,0.12) 0%, transparent 30%);
+}
+
+.m19l3-row.m19l3-protein {
+  border-left: 5px solid #EF5350;
+  background: linear-gradient(90deg, rgba(239,83,80,0.08) 0%, transparent 30%);
+}
+
+.m19l3-row.m19l3-protein:hover {
+  background: linear-gradient(90deg, rgba(239,83,80,0.12) 0%, transparent 30%);
+}
+
+.m19l3-row.m19l3-vitamins {
+  border-left: 5px solid #66BB6A;
+  background: linear-gradient(90deg, rgba(102,187,106,0.08) 0%, transparent 30%);
+}
+
+.m19l3-row.m19l3-vitamins:hover {
+  background: linear-gradient(90deg, rgba(102,187,106,0.12) 0%, transparent 30%);
+}
+
+.m19l3-row.m19l3-water {
+  border-left: 5px solid #42A5F5;
+  background: linear-gradient(90deg, rgba(66,165,245,0.08) 0%, transparent 30%);
+}
+
+.m19l3-row.m19l3-water:hover {
+  background: linear-gradient(90deg, rgba(66,165,245,0.12) 0%, transparent 30%);
+}
+
+/* Number Badge */
+.m19l3-num-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-weight: 700;
+  color: #2C3E50;
+}
+
+.m19l3-num-badge i {
+  font-size: 1.4rem;
+  color: #FF8A65;
+}
+
+.m19l3-num-badge span {
+  font-size: 0.9rem;
+}
+
+/* Nutrient Title */
+.m19l3-nutrient-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #2C3E50;
+  line-height: 1.4;
+}
+
+/* Sources and Functions Text */
+.m19l3-sources-text,
+.m19l3-functions-text {
+  color: #546E7A;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+/* Color Legend */
+.m19l3-color-legend {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.m19l3-color-legend h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 1.2rem;
+}
+
+.legend-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.legend-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.legend-color {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.legend-item.m19l3-carbs .legend-color {
+  background: #FF8A65;
+}
+
+.legend-item.m19l3-fats .legend-color {
+  background: #FFD54F;
+}
+
+.legend-item.m19l3-protein .legend-color {
+  background: #EF5350;
+}
+
+.legend-item.m19l3-vitamins .legend-color {
+  background: #66BB6A;
+}
+
+.legend-item.m19l3-water .legend-color {
+  background: #42A5F5;
+}
+
+.legend-item span {
+  font-weight: 600;
+  color: #2C3E50;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .m19l3-nutrition-table {
+    font-size: 0.85rem;
+  }
+  
+  .m19l3-nutrition-table th,
+  .m19l3-nutrition-table td {
+    padding: 1rem 0.7rem;
+  }
+  
+  .m19l3-table-header h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .m19l3-table-container {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .m19l3-nutrition-table {
+    font-size: 0.75rem;
+  }
+  
+  .m19l3-nutrition-table th,
+  .m19l3-nutrition-table td {
+    padding: 0.8rem 0.5rem;
+  }
+  
+  .m19l3-table-header h2 {
+    font-size: 1.3rem;
+    gap: 0.5rem;
+  }
+  
+  .m19l3-table-header i {
+    font-size: 1.5rem;
+  }
+  
+  .legend-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .m19l3-table-container {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d3d2f 50%, #0d2d3d 100%);
+  }
+  
+  .m19l3-table-header h2 {
+    color: #E0E0E0;
+  }
+  
+  .m19l3-nutrition-table {
+    background: #263238;
+  }
+  
+  .m19l3-nutrition-table tbody tr {
+    border-bottom-color: #455A64;
+  }
+  
+  .m19l3-nutrition-table tbody tr:hover {
+    background-color: #37474F;
+  }
+  
+  .m19l3-nutrition-table td {
+    color: #CFD8DC;
+  }
+  
+  .m19l3-nutrient-title {
+    color: #E0E0E0;
+  }
+  
+  .m19l3-sources-text,
+  .m19l3-functions-text {
+    color: #B0BEC5;
+  }
+  
+  .legend-item {
+    background: #37474F;
+  }
+  
+  .legend-item span {
+    color: #E0E0E0;
+  }
+  
+  .m19l3-color-legend h3 {
+    color: #E0E0E0;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .m19l3-nutrition-table tbody tr,
+  .legend-item {
+    transition: none;
+  }
+}
+

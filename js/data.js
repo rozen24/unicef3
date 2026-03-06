@@ -13936,87 +13936,125 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const nutrientTable = [
+              const nutrients = [
                 {
-                  label: "১.",
-                  nutrient: "শ্বেতসার বা শর্করা (কার্বোহাইড্রেট)",
-                  sources:
-                    "ভাত, রুটি, পাউরুটি, বিস্কুট, মুড়ি, চিড়া, চিনি, গুড়, মধু, আলু, মিষ্টি আলু",
-                  functions: "শরীরের শক্তি জোগায়, কাজ করার ক্ষমতা দেয়।",
+                  num: "১",
+                  name: yhLang("Carbohydrates", "শ্বেতসার বা শর্করা (কার্বোহাইড্রেট)"),
+                  sources: yhLang(
+                    "Rice, bread, toast, biscuits, puffed rice, flattened rice, sugar, jaggery, honey, potato, sweet potato",
+                    "ভাত, রুটি, পাউরুটি, বিস্কুট, মুড়ি, চিড়া, চিনি, গুড়, মধু, আলু, মিষ্টি আলু"
+                  ),
+                  functions: yhLang(
+                    "Provides energy to the body and supports work capacity",
+                    "শরীরের শক্তি জোগায়, কাজ করার ক্ষমতা দেয়"
+                  ),
+                  icon: "fa-bread-slice",
+                  color: "carbs",
                 },
                 {
-                  label: "২.",
-                  nutrient: "তেল ও চর্বি",
-                  sources: "তেল, ঘি, মাখন, মাছ-মাংসের চর্বি, বাদাম, নারিকেল",
-                  functions: "",
+                  num: "২",
+                  name: yhLang("Fats and Oils", "তেল ও চর্বি"),
+                  sources: yhLang(
+                    "Oil, ghee, butter, fish and meat fat, nuts, coconut",
+                    "তেল, ঘি, মাখন, মাছ-মাংসের চর্বি, বাদাম, নারিকেল"
+                  ),
+                  functions: yhLang(
+                    "Provides concentrated energy and helps absorb vitamins",
+                    "কেন্দ্রীভূত শক্তি প্রদান করে, ভিটামিন শোষণে সাহায্য করে"
+                  ),
+                  icon: "fa-droplet",
+                  color: "fats",
                 },
                 {
-                  label: "৩.",
-                  nutrient: "আমিষ (প্রোটিন)",
-                  sources:
-                    "প্রাণীজ: মাছ, মাংস, কলিজা, দুধ, ডিম, শুঁটকি মাছ<br>উদ্ভিদজ: বাদাম, বিভিন্ন ধরনের বীজ, বিভিন্ন ধরনের ডাল, তিল/তিসি",
-                  functions: "শরীরের বৃদ্ধি সাধন ও ক্ষয়পূরণ করে।",
+                  num: "৩",
+                  name: yhLang("Proteins", "আমিষ (প্রোটিন)"),
+                  sources: yhLang(
+                    "Animal: fish, meat, liver, milk, egg, dried fish; Plant: nuts, seeds, lentils, sesame/flax",
+                    "প্রাণীজ: মাছ, মাংস, কলিজা, দুধ, ডিম, শুঁটকি মাছ; উদ্ভিদজ: বাদাম, বিভিন্ন ধরনের বীজ, বিভিন্ন ধরনের ডাল, তিল/তিসি"
+                  ),
+                  functions: yhLang(
+                    "Promotes growth and repairs body tissues",
+                    "শরীরের বৃদ্ধি সাধন ও ক্ষয়পূরণ করে"
+                  ),
+                  icon: "fa-drumstick-bite",
+                  color: "protein",
                 },
                 {
-                  label: "৪.",
-                  nutrient: "ভিটামিন ও খনিজ লবণ",
-                  sources:
-                    "প্রাণীজ: দুধ, মাছ, মাংস, কলিজা<br>উদ্ভিদজ: বাদাম, বিভিন্ন ধরনের বীজ, শাক, সবজি ও ফলমূল<br>ভিটামিন ‘এ’: বিভিন্ন ধরনের রঙিন শাক-সবজি, লালশাক, গাজর, মিষ্টি কুমড়া<br>ভিটামিন ‘ডি’: ডিমের কুসুম, মাছের তেল, কলিজা, মাখন, পনির ইত্যাদি<br>ভিটামিন ‘সি’: আমলকি, কমলা, ধনেপাতা, আমড়া, তাজা ও টক জাতীয় শাক-সবজি ও ফল ইত্যাদি<br>ক্যালসিয়াম: দুধ ও দুগ্ধজাত খাদ্য, গাঢ় সবুজ শাকসবজি, শুঁটকি মাছ, ছোট মাছ, গুড়, ছোলা ইত্যাদি<br>আয়রন: মাছ, মাংস, কলিজা, ডিম, কচু, পুঁইশাক, লালশাক, তেঁতুল ইত্যাদি<br>আয়োডিন: সামুদ্রিক মাছ, আয়োডিনযুক্ত লবণ",
-                  functions:
-                    "পরিপাক ও পুষ্টিসাধনের প্রক্রিয়াকে সহায়তা করে।<br>রোগ প্রতিরোধ ক্ষমতা তৈরি করে।<br>শরীরকে রোগজীবাণু থেকে রক্ষা করে।<br>রাতকানা রোগ প্রতিরোধ করে ও চামড়া মসৃণ করে।<br>হাড় ও দাঁতের গঠন মজবুত করে, রিকেট প্রতিরোধ করে।<br>ক্ষত দূর করে, দাঁতের মাড়ি থেকে রক্ত পড়া বন্ধ করে, ঘাপাঁচড়া প্রতিরোধ করে।<br>রক্তস্বল্পতা, ক্ষুধামন্দা ও দুর্বলতা দূর করে।<br>শিশুর মানসিক বিকাশ নিশ্চিত করে ও গলগণ্ড রোধ করে।",
+                  num: "৪",
+                  name: yhLang("Vitamins and Minerals", "ভিটামিন ও খনিজ লবণ"),
+                  sources: yhLang(
+                    "Animal and plant foods including milk, fish, meat, liver, nuts, seeds, leafy vegetables and fruits",
+                    "প্রাণীজ ও উদ্ভিজ্জ খাদ্য যেমন দুধ, মাছ, মাংস, কলিজা, বাদাম, বীজ, শাকসবজি ও ফলমূল"
+                  ),
+                  functions: yhLang(
+                    "Supports digestion, immunity, vision, bone strength and disease prevention",
+                    "পরিপাক, রোগপ্রতিরোধ, দৃষ্টি, হাড়ের গঠন ও রোগ প্রতিরোধে সহায়তা করে"
+                  ),
+                  icon: "fa-pills",
+                  color: "vitamins",
                 },
                 {
-                  label: "৫.",
-                  nutrient: "পানি",
-                  sources:
-                    "খাওয়ার পানি, বিভিন্ন তরল ও পানীয় জাতীয় খাবার এবং বিভিন্ন খাবারের জলীয় অংশ",
-                  functions: "উপরের ৫টি উপাদানের কার্যক্রম পানি ব্যতীত অসম্ভব।",
+                  num: "৫",
+                  name: yhLang("Water", "পানি"),
+                  sources: yhLang(
+                    "Drinking water, liquids, beverages and water in foods",
+                    "খাওয়ার পানি, বিভিন্ন তরল ও পানীয় জাতীয় খাবার এবং বিভিন্ন খাবারের জলীয় অংশ"
+                  ),
+                  functions: yhLang(
+                    "Essential for all nutrient functions in the body",
+                    "উপরের ৫টি উপাদানের কার্যক্রম পানি ব্যতীত অসম্ভব"
+                  ),
+                  icon: "fa-glass-water",
+                  color: "water",
                 },
               ];
 
-              const renderRows = () =>
-                nutrientTable
-                  .map(
-                    (item) => `
-                      <tr>
-                        <td>${item.label}</td>
-                        <td>${item.nutrient}</td>
-                        <td>${item.sources}</td>
-                        <td>${item.functions || "&nbsp;"}</td>
-                      </tr>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Nutrition Components, Sources, and Functions",
-                    "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ"
-                  )}</h2>
-                  <div class="glass-card p-3" data-aos="fade-up" data-aos-delay="60">
-                    <div class="table-responsive">
-                      <table class="table table-bordered table-striped align-middle text-center mb-0">
-                        <thead>
-                          <tr>
-                            <th>&nbsp;</th>
-                            <th>পুষ্টি উপাদান</th>
-                            <th>খাদ্য উৎস</th>
-                            <th>শরীরের প্রধান কাজসমূহ</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          ${renderRows()}
-                        </tbody>
-                      </table>
-                    </div>
+                <div class="m19l3-table-container">
+                  <div class="m19l3-table-header" data-aos="fade-up">
+                    <h2><i class="fa-solid fa-bowl-food"></i>${yhLang(
+                      "Nutrition Components, Sources, and Functions",
+                      "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ"
+                    )}</h2>
+                  </div>
+
+                  <div class="m19l3-table-wrapper" data-aos="fade-up" data-aos-delay="80">
+                    <table class="m19l3-nutrition-table">
+                      <thead>
+                        <tr>
+                          <th class="col-num">${yhLang("No.", "নং")}</th>
+                          <th class="col-nutrient">${yhLang("Nutrient", "পুষ্টি উপাদান")}</th>
+                          <th class="col-sources">${yhLang("Sources", "খাদ্য উৎস")}</th>
+                          <th class="col-functions">${yhLang("Functions", "শরীরের প্রধান কাজসমূহ")}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        ${nutrients
+                          .map(
+                            (item, idx) => `
+                            <tr class="m19l3-row m19l3-${item.color}" data-aos="fade-up" data-aos-delay="${100 + idx * 40}">
+                              <td class="col-num">
+                                <div class="m19l3-num-badge">
+                                  <i class="fa-solid ${item.icon}"></i>
+                                  <span>${item.num}</span>
+                                </div>
+                              </td>
+                              <td class="col-nutrient"><div class="m19l3-nutrient-title">${item.name}</div></td>
+                              <td class="col-sources"><div class="m19l3-sources-text">${item.sources}</div></td>
+                              <td class="col-functions"><div class="m19l3-functions-text">${item.functions}</div></td>
+                            </tr>
+                          `
+                          )
+                          .join("")}
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               `;
             })(),
           },
           {
-            id: "ch19-lesson-5",
+            id: "ch19-lesson-4",
             title: yhLang(
               "Importance of Safe, Nutritious Food and Daily Meal Plan",
               "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
