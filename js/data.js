@@ -13705,7 +13705,7 @@ const coursesData = [
                   color: "m19l1x2-nutrition-process",
                 },
                 {
-                  text: "এসব খাদ্য উপাদান দেহের শক্তি, বৃদ্ধি, রোগ প্রতিরোধ এবং সুস্বাস্থ্য নিশ্চিত করে।",
+                  text: yhLang("These nutrients ensure the body's energy, growth, disease resistance, and good health.", "এসব খাদ্য উপাদান দেহের শক্তি, বৃদ্ধি, রোগ প্রতিরোধ এবং সুস্বাস্থ্য নিশ্চিত করে।"),
                   icon: "fa-shield-heart",
                   color: "m19l1x2-nutrition-health",
                 },
@@ -13781,7 +13781,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch19-lesson-3",
+            id: "ch19-lesson-2",
             title: yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)"),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-sky",
@@ -13789,90 +13789,134 @@ const coursesData = [
             quiz: null,
             content: (function () {
               const girlsBmi = [
-                { age: "১০", low: "১৪.৮", normal: "১৬.৬", overweight: "১৯.০" },
-                { age: "১১", low: "১৫.৩", normal: "১৭.২", overweight: "১৯.৯" },
-                { age: "১২", low: "১৬.০", normal: "১৮.০", overweight: "২০.৮" },
-                { age: "১৩", low: "১৬.৬", normal: "১৮.৮", overweight: "২১.৮" },
-                { age: "১৪", low: "১৭.২", normal: "১৯.৬", overweight: "২২.৭" },
-                { age: "১৫", low: "১৭.৮", normal: "২০.২", overweight: "২৩.৫" },
-                { age: "১৬", low: "১৮.২", normal: "২০.৭", overweight: "২৪.১" },
-                { age: "১৭", low: "১৮.৪", normal: "২১.০", overweight: "২৪.৫" },
-                { age: "১৮", low: "১৮.৬", normal: "২১.৩", overweight: "২৪.৮" },
-                { age: "১৯", low: "১৮.৭", normal: "২১.৪", overweight: "২৫.০" },
+                { age: "১০", ageEn: "10", low: "১৪.৮", normal: "১৬.৬", overweight: "১৯.০" },
+                { age: "১১", ageEn: "11", low: "১৫.৩", normal: "১৭.২", overweight: "১৯.৯" },
+                { age: "১২", ageEn: "12", low: "১৬.০", normal: "১৮.০", overweight: "২০.৮" },
+                { age: "১৩", ageEn: "13", low: "১৬.৬", normal: "১৮.৮", overweight: "২১.৮" },
+                { age: "১৪", ageEn: "14", low: "১৭.২", normal: "১৯.৬", overweight: "২২.৭" },
+                { age: "১৫", ageEn: "15", low: "১৭.৮", normal: "২০.২", overweight: "২৩.৫" },
+                { age: "১৬", ageEn: "16", low: "১৮.২", normal: "২০.৭", overweight: "২৪.১" },
+                { age: "১৭", ageEn: "17", low: "১৮.৪", normal: "২১.০", overweight: "২৪.৫" },
+                { age: "১৮", ageEn: "18", low: "১৮.৬", normal: "২১.৩", overweight: "২৪.৮" },
+                { age: "১৯", ageEn: "19", low: "১৮.৭", normal: "২১.৪", overweight: "২৫.০" },
               ];
 
               const boysBmi = [
-                { age: "১০", low: "১৪.৮", normal: "১৬.৬", overweight: "১৯.০" },
-                { age: "১১", low: "১৫.৩", normal: "১৬.৯", overweight: "১৯.২" },
-                { age: "১২", low: "১৫.৮", normal: "১৭.৫", overweight: "১৯.৯" },
-                { age: "১৩", low: "১৬.৪", normal: "১৮.২", overweight: "২০.৮" },
-                { age: "১৪", low: "১৭.০", normal: "১৯.০", overweight: "২১.৮" },
-                { age: "১৫", low: "১৭.৬", normal: "১৯.৮", overweight: "২২.৭" },
-                { age: "১৬", low: "১৮.২", normal: "২০.৫", overweight: "২৩.৫" },
-                { age: "১৭", low: "১৮.৮", normal: "২১.১", overweight: "২৪.৩" },
-                { age: "১৮", low: "১৯.২", normal: "২১.৭", overweight: "২৪.৯" },
-                { age: "১৯", low: "১৯.৬", normal: "২২.২", overweight: "২৫.৪" },
+                { age: "১০", ageEn: "10", low: "১৪.৮", normal: "১৬.৬", overweight: "১৯.০" },
+                { age: "১১", ageEn: "11", low: "১৫.৩", normal: "১৬.৯", overweight: "১৯.২" },
+                { age: "১২", ageEn: "12", low: "১৫.৮", normal: "১৭.৫", overweight: "১৯.৯" },
+                { age: "১৩", ageEn: "13", low: "১৬.৪", normal: "১৮.২", overweight: "২০.৮" },
+                { age: "১৪", ageEn: "14", low: "১৭.০", normal: "১৯.০", overweight: "২১.৮" },
+                { age: "১৫", ageEn: "15", low: "১৭.৬", normal: "১৯.৮", overweight: "২২.৭" },
+                { age: "১৬", ageEn: "16", low: "১৮.২", normal: "২০.৫", overweight: "২৩.৫" },
+                { age: "১৭", ageEn: "17", low: "১৮.৮", normal: "২১.১", overweight: "২৪.৩" },
+                { age: "১৮", ageEn: "18", low: "১৯.২", normal: "২১.৭", overweight: "২৪.৯" },
+                { age: "১৯", ageEn: "19", low: "১৯.৬", normal: "২২.২", overweight: "২৫.৪" },
               ];
 
-              const renderRows = (rows) =>
-                rows
-                  .map(
-                    (row) => `
-                      <tr>
-                        <td>${row.age}</td>
-                        <td>${row.low}</td>
-                        <td>${row.normal}</td>
-                        <td>${row.overweight}</td>
-                      </tr>
-                    `
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)")}</h2>
-                  <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
-                    <div class="col-12 col-lg-6">
-                      <div class="glass-card p-3 h-100">
-                        <div class="table-responsive">
-                          <table class="table table-bordered table-striped align-middle text-center mb-0">
-                            <thead>
-                              <tr>
-                                <th colspan="4">১০–১৯ বছর বয়সি কিশোরীদের ওজন ও উচ্চতার আদর্শ মান</th>
+                <div class="m19l2-container">
+                  <div class="m19l2-shape m19l2-shape-1"></div>
+                  <div class="m19l2-shape m19l2-shape-2"></div>
+                  <div class="m19l2-shape m19l2-shape-3"></div>
+
+                  <div class="m19l2-header" data-aos="fade-up">
+                    <h2 class="m19l2-title">
+                      <i class="fa-solid fa-scale-balanced"></i>
+                      ${yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)")}
+                    </h2>
+                    <p class="m19l2-subtitle">${yhLang("Standard BMI Values for Adolescents (Ages 10-19)", "কৈশোরকালীন (১০-১৯ বছর) পর্যায়ে আদর্শ বি.এম.আই মান")}</p>
+                  </div>
+
+                  <div class="m19l2-cards-grid">
+                    <div class="m19l2-bmi-card m19l2-girls-card" data-aos="fade-right" data-aos-delay="100">
+                      <div class="m19l2-card-header m19l2-girls-header">
+                        <i class="fa-solid fa-person-dress"></i>
+                        <div class="m19l2-header-text">
+                          <h3>${yhLang("Girls", "কিশোরী")}</h3>
+                          <span>${yhLang("Ages 10-19", "বয়স ১০-১৯ বছর")}</span>
+                        </div>
+                      </div>
+                      <div class="m19l2-table-wrapper">
+                        <table class="m19l2-bmi-table">
+                          <thead>
+                            <tr>
+                              <th>${yhLang("Age", "বয়স")}</th>
+                              <th>${yhLang("Low", "কম")}</th>
+                              <th>${yhLang("Normal", "স্বাভাবিক")}</th>
+                              <th>${yhLang("Overweight", "বেশি")}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            ${girlsBmi.map((row, idx) => `
+                              <tr data-aos="zoom-in" data-aos-delay="${120 + idx * 15}">
+                                <td class="m19l2-age">${yhLang(row.ageEn, row.age)}</td>
+                                <td class="m19l2-low">${row.low}</td>
+                                <td class="m19l2-normal">${row.normal}</td>
+                                <td class="m19l2-overweight">${row.overweight}</td>
                               </tr>
-                              <tr>
-                                <th>বয়স (বছর)</th>
-                                <th>স্বল্প অপুষ্টি (বি.এম.আই.)</th>
-                                <th>স্বাভাবিক পুষ্টি (বি.এম.আই.)</th>
-                                <th>স্বল্প মুটিয়ে যাওয়া (বি.এম.আই.)</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              ${renderRows(girlsBmi)}
-                            </tbody>
-                          </table>
+                            `).join('')}
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="m19l2-color-legend">
+                        <div class="m19l2-legend-item">
+                          <span class="m19l2-legend-color m19l2-low-color"></span>
+                          <small>${yhLang("Low", "কম")}</small>
+                        </div>
+                        <div class="m19l2-legend-item">
+                          <span class="m19l2-legend-color m19l2-normal-color"></span>
+                          <small>${yhLang("Normal", "স্বাভাবিক")}</small>
+                        </div>
+                        <div class="m19l2-legend-item">
+                          <span class="m19l2-legend-color m19l2-overweight-color"></span>
+                          <small>${yhLang("Overweight", "বেশি")}</small>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="glass-card p-3 h-100">
-                        <div class="table-responsive">
-                          <table class="table table-bordered table-striped align-middle text-center mb-0">
-                            <thead>
-                              <tr>
-                                <th colspan="4">১০–১৯ বছর বয়সি কিশোরদের ওজন ও উচ্চতার আদর্শ মান</th>
+
+                    <div class="m19l2-bmi-card m19l2-boys-card" data-aos="fade-left" data-aos-delay="100">
+                      <div class="m19l2-card-header m19l2-boys-header">
+                        <i class="fa-solid fa-person"></i>
+                        <div class="m19l2-header-text">
+                          <h3>${yhLang("Boys", "কিশোর")}</h3>
+                          <span>${yhLang("Ages 10-19", "বয়স ১০-১৯ বছর")}</span>
+                        </div>
+                      </div>
+                      <div class="m19l2-table-wrapper">
+                        <table class="m19l2-bmi-table">
+                          <thead>
+                            <tr>
+                              <th>${yhLang("Age", "বয়স")}</th>
+                              <th>${yhLang("Low", "কম")}</th>
+                              <th>${yhLang("Normal", "স্বাভাবিক")}</th>
+                              <th>${yhLang("Overweight", "বেশি")}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            ${boysBmi.map((row, idx) => `
+                              <tr data-aos="zoom-in" data-aos-delay="${120 + idx * 15}">
+                                <td class="m19l2-age">${yhLang(row.ageEn, row.age)}</td>
+                                <td class="m19l2-low">${row.low}</td>
+                                <td class="m19l2-normal">${row.normal}</td>
+                                <td class="m19l2-overweight">${row.overweight}</td>
                               </tr>
-                              <tr>
-                                <th>বয়স (বছর)</th>
-                                <th>স্বল্প অপুষ্টি (বি.এম.আই.)</th>
-                                <th>স্বাভাবিক পুষ্টি (বি.এম.আই.)</th>
-                                <th>স্বল্প মুটিয়ে যাওয়া (বি.এম.আই.)</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              ${renderRows(boysBmi)}
-                            </tbody>
-                          </table>
+                            `).join('')}
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="m19l2-color-legend">
+                        <div class="m19l2-legend-item">
+                          <span class="m19l2-legend-color m19l2-low-color"></span>
+                          <small>${yhLang("Low", "কম")}</small>
+                        </div>
+                        <div class="m19l2-legend-item">
+                          <span class="m19l2-legend-color m19l2-normal-color"></span>
+                          <small>${yhLang("Normal", "স্বাভাবিক")}</small>
+                        </div>
+                        <div class="m19l2-legend-item">
+                          <span class="m19l2-legend-color m19l2-overweight-color"></span>
+                          <small>${yhLang("Overweight", "বেশি")}</small>
                         </div>
                       </div>
                     </div>
@@ -13882,7 +13926,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch19-lesson-4",
+            id: "ch19-lesson-3",
             title: yhLang(
               "Nutrition Components, Sources, and Functions",
               "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ"

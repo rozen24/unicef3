@@ -1,0 +1,429 @@
+/* Module 19 Lesson 2 - BMI (Modern UI Redesign) */
+
+.m19l2-container {
+  position: relative;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FCE4EC 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+/* Floating Background Shapes */
+.m19l2-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+  animation: m19l2-float 7s ease-in-out infinite;
+}
+
+.m19l2-shape-1 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #42A5F5, #64B5F6);
+  top: -80px;
+  right: -60px;
+  animation-delay: 0s;
+}
+
+.m19l2-shape-2 {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #EF5350, #E57373);
+  bottom: 80px;
+  left: -50px;
+  animation-delay: 2.5s;
+}
+
+.m19l2-shape-3 {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #AB47BC, #CE93D8);
+  top: 40%;
+  right: 5%;
+  animation-delay: 5s;
+}
+
+@keyframes m19l2-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(25px); }
+}
+
+/* Header Section */
+.m19l2-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.m19l2-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin: 0 0 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  letter-spacing: -0.5px;
+}
+
+.m19l2-title i {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #42A5F5, #EF5350);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: m19l2-pulse 2s ease-in-out infinite;
+}
+
+@keyframes m19l2-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.m19l2-subtitle {
+  font-size: 0.95rem;
+  color: #455a64;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Cards Grid */
+.m19l2-cards-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .m19l2-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* BMI Card Styles */
+.m19l2-bmi-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.8rem 1.4rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.m19l2-bmi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, currentColor, transparent);
+}
+
+.m19l2-bmi-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Girls Card */
+.m19l2-girls-card {
+  color: #C2185B;
+  border-top: 6px solid #FFB6C1;
+  background: linear-gradient(135deg, #FFF9FC 0%, white 100%);
+}
+
+/* Boys Card */
+.m19l2-boys-card {
+  color: #1565C0;
+  border-top: 6px solid #87CEEB;
+  background: linear-gradient(135deg, #F3F5FD 0%, white 100%);
+}
+
+/* Card Headers */
+.m19l2-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.m19l2-card-header i {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.m19l2-girls-header i {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(244, 67, 54, 0.2));
+  color: #C2185B;
+}
+
+.m19l2-boys-header i {
+  background: linear-gradient(135deg, rgba(135, 206, 235, 0.3), rgba(33, 150, 243, 0.2));
+  color: #1565C0;
+}
+
+.m19l2-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.m19l2-header-text h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  color: inherit;
+}
+
+.m19l2-header-text span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.7;
+  letter-spacing: 0.2px;
+}
+
+/* Table Wrapper */
+.m19l2-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.m19l2-table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.m19l2-table-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.m19l2-table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* Table Styles */
+.m19l2-bmi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  color: #424242;
+}
+
+.m19l2-bmi-table thead {
+  background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%);
+  font-weight: 700;
+  color: #1B5E20;
+  text-transform: capitalize;
+  letter-spacing: 0.4px;
+}
+
+.m19l2-bmi-table th {
+  padding: 0.9rem 0.7rem;
+  text-align: center;
+  border-bottom: 3px solid #4CAF50;
+  font-size: 0.8rem;
+}
+
+.m19l2-bmi-table td {
+  padding: 0.7rem;
+  text-align: center;
+  border-bottom: 1px solid #F0F0F0;
+  transition: background-color 0.2s;
+}
+
+.m19l2-bmi-table tbody tr:hover {
+  background-color: #FAFAFA;
+}
+
+.m19l2-bmi-table tbody tr:nth-child(even) {
+  background-color: #FCFCFC;
+}
+
+/* Column Specific Styles */
+.m19l2-age {
+  font-weight: 600;
+  color: #1a237e;
+}
+
+.m19l2-low {
+  color: #D32F2F;
+  font-weight: 600;
+}
+
+.m19l2-normal {
+  color: #388E3C;
+  font-weight: 600;
+}
+
+.m19l2-overweight {
+  color: #F57F17;
+  font-weight: 600;
+}
+
+/* Color Legend */
+.m19l2-color-legend {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(232, 245, 233, 0.4), rgba(240, 248, 245, 0.4));
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.m19l2-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.m19l2-legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.m19l2-low-color {
+  background-color: #D32F2F;
+}
+
+.m19l2-normal-color {
+  background-color: #388E3C;
+}
+
+.m19l2-overweight-color {
+  background-color: #F57F17;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .m19l2-container {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d1b3d 50%, #3d1f2f 100%);
+  }
+
+  .m19l2-title {
+    color: #E3F2FD;
+  }
+
+  .m19l2-subtitle {
+    color: #B0BEC5;
+  }
+
+  .m19l2-bmi-card {
+    background-color: #263238;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .m19l2-bmi-card:hover {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .m19l2-girls-card {
+    background: linear-gradient(135deg, #37202a 0%, #263238 100%);
+  }
+
+  .m19l2-boys-card {
+    background: linear-gradient(135deg, #1a2535 0%, #263238 100%);
+  }
+
+  .m19l2-header-text span {
+    opacity: 0.6;
+  }
+
+  .m19l2-bmi-table thead {
+    background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+    color: #C8E6C9;
+  }
+
+  .m19l2-bmi-table td {
+    border-bottom-color: #404040;
+    color: #E0E0E0;
+  }
+
+  .m19l2-bmi-table tbody tr:hover {
+    background-color: #37474F;
+  }
+
+  .m19l2-bmi-table tbody tr:nth-child(even) {
+    background-color: #2F3F47;
+  }
+
+  .m19l2-age,
+  .m19l2-low,
+  .m19l2-normal,
+  .m19l2-overweight {
+    color: #FFE082;
+  }
+
+  .m19l2-color-legend {
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.2), rgba(69, 90, 100, 0.2));
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .m19l2-shape,
+  .m19l2-title i,
+  .m19l2-bmi-card {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .m19l2-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .m19l2-title {
+    font-size: 1.7rem;
+  }
+
+  .m19l2-title i {
+    font-size: 2rem;
+  }
+
+  .m19l2-bmi-card {
+    padding: 1.2rem 1rem;
+  }
+
+  .m19l2-cards-grid {
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .m19l2-color-legend {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .m19l2-bmi-table {
+    font-size: 0.75rem;
+  }
+
+  .m19l2-bmi-table th,
+  .m19l2-bmi-table td {
+    padding: 0.5rem 0.4rem;
+  }
+}
