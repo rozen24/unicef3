@@ -1,0 +1,405 @@
+/* Module 19 Lesson 5 - Adolescent Food Diversity Styling */
+
+.m19l5-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 0.8rem 0.5rem;
+  background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 35%, #80DEEA 70%, #4DD0E1 100%);
+  overflow: hidden;
+}
+
+/* Floating Background Shapes */
+.m19l5-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.m19l5-shape-1 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #00BCD4, #00ACC1);
+  top: 5%;
+  right: 8%;
+  animation: float-slow 24s ease-in-out infinite;
+}
+
+.m19l5-shape-2 {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(135deg, #26C6DA, #00BCD4);
+  bottom: 8%;
+  left: 2%;
+  animation: float-slow 30s ease-in-out infinite reverse;
+}
+
+.m19l5-shape-3 {
+  width: 85px;
+  height: 85px;
+  background: linear-gradient(135deg, #4DD0E1, #80DEEA);
+  top: 50%;
+  right: 15%;
+  animation: float-slow 22s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(18px, -30px) rotate(90deg); }
+  50% { transform: translate(-25px, 18px) rotate(180deg); }
+  75% { transform: translate(20px, 25px) rotate(270deg); }
+}
+
+/* Header Section */
+.m19l5-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 0.9rem;
+}
+
+.m19l5-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #00695C;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.m19l5-title i {
+  font-size: 1.15rem;
+  color: #009688;
+}
+
+.m19l5-subtitle {
+  font-size: 0.68rem;
+  color: #004D40;
+  font-weight: 500;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Points Grid */
+.m19l5-points-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Point Card */
+.m19l5-point-card {
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 0.65rem;
+  border-left: 3px solid;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.m19l5-point-card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -40%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.m19l5-point-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 150, 136, 0.16);
+}
+
+/* Point Card Colors - Different for each point */
+.m19l5-point-1 {
+  border-left-color: #009688;
+  background: linear-gradient(135deg, #FFFFFF 0%, #E0F2F1 100%);
+  box-shadow: 0 4px 16px rgba(0, 150, 136, 0.12);
+}
+
+.m19l5-point-2 {
+  border-left-color: #00796B;
+  background: linear-gradient(135deg, #FFFFFF 0%, #E0F2F1 100%);
+  box-shadow: 0 4px 16px rgba(0, 121, 107, 0.12);
+}
+
+.m19l5-point-3 {
+  border-left-color: #004D40;
+  background: linear-gradient(135deg, #FFFFFF 0%, #C8E6E5 100%);
+  box-shadow: 0 4px 16px rgba(0, 77, 64, 0.12);
+}
+
+.m19l5-point-4 {
+  border-left-color: #D32F2F;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFEBEE 100%);
+  box-shadow: 0 4px 16px rgba(211, 47, 47, 0.12);
+}
+
+.m19l5-point-5 {
+  border-left-color: #F57C00;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF3E9 100%);
+  box-shadow: 0 4px 16px rgba(245, 124, 0, 0.12);
+}
+
+/* Point Header with Icon */
+.m19l5-point-header {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.45rem;
+}
+
+.m19l5-point-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon colors for each point */
+.m19l5-point-1 .m19l5-point-icon {
+  background: linear-gradient(135deg, #009688, #00897B);
+}
+
+.m19l5-point-2 .m19l5-point-icon {
+  background: linear-gradient(135deg, #00796B, #00695C);
+}
+
+.m19l5-point-3 .m19l5-point-icon {
+  background: linear-gradient(135deg, #004D40, #00403A);
+}
+
+.m19l5-point-4 .m19l5-point-icon {
+  background: linear-gradient(135deg, #E53935, #D32F2F);
+}
+
+.m19l5-point-5 .m19l5-point-icon {
+  background: linear-gradient(135deg, #F57C00, #E65100);
+}
+
+.m19l5-point-number {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+/* Point Title and Text */
+.m19l5-point-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1A3A3A;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.m19l5-point-text {
+  font-size: 0.7rem;
+  line-height: 1.45;
+  color: #455A64;
+  margin: 0;
+}
+
+/* Badge for point type */
+.m19l5-point-badge {
+  display: inline-block;
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  padding: 0.18rem 0.4rem;
+  border-radius: 3px;
+  margin-top: 0.4rem;
+  opacity: 0.85;
+}
+
+.m19l5-point-1 .m19l5-point-badge {
+  background: rgba(0, 150, 136, 0.15);
+  color: #00695C;
+}
+
+.m19l5-point-2 .m19l5-point-badge {
+  background: rgba(0, 121, 107, 0.15);
+  color: #004D40;
+}
+
+.m19l5-point-3 .m19l5-point-badge {
+  background: rgba(0, 77, 64, 0.15);
+  color: #00403A;
+}
+
+.m19l5-point-4 .m19l5-point-badge {
+  background: rgba(211, 47, 47, 0.15);
+  color: #B71C1C;
+}
+
+.m19l5-point-5 .m19l5-point-badge {
+  background: rgba(245, 124, 0, 0.15);
+  color: #E65100;
+}
+
+/* Summary Box */
+.m19l5-summary {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 1rem auto 0;
+  background: #FFFFFF;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border-left: 3px solid #009688;
+  box-shadow: 0 3px 10px rgba(0, 150, 136, 0.12);
+  display: flex;
+  gap: 0.45rem;
+  align-items: flex-start;
+}
+
+.m19l5-summary-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #009688, #00897B);
+  box-shadow: 0 2px 6px rgba(0, 150, 136, 0.2);
+}
+
+.m19l5-summary-text {
+  font-size: 0.7rem;
+  line-height: 1.45;
+  color: #424242;
+  flex: 1;
+}
+
+.m19l5-summary-text strong {
+  color: #00695C;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .m19l5-container {
+    padding: 1rem 0.7rem;
+  }
+
+  .m19l5-title {
+    font-size: 1.25rem;
+  }
+
+  .m19l5-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .m19l5-points-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .m19l5-point-card {
+    padding: 0.8rem;
+  }
+
+  .m19l5-summary {
+    padding: 0.85rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .m19l5-points-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .m19l5-point-5 {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .m19l5-container {
+    background: linear-gradient(135deg, #0D2B2A 0%, #1A4D47 35%, #0F4B47 70%, #155652 100%);
+  }
+
+  .m19l5-title,
+  .m19l5-point-title {
+    color: #80DEEA;
+  }
+
+  .m19l5-subtitle {
+    color: #B2EBF2;
+  }
+
+  .m19l5-point-card {
+    background: #1F2C2C;
+    border-left-color: inherit;
+  }
+
+  .m19l5-point-1,
+  .m19l5-point-2,
+  .m19l5-point-3 {
+    background: linear-gradient(135deg, #1F2C2C 0%, #132F2D 100%);
+  }
+
+  .m19l5-point-4 {
+    background: linear-gradient(135deg, #1F2C2C 0%, #2B1F1F 100%);
+  }
+
+  .m19l5-point-5 {
+    background: linear-gradient(135deg, #1F2C2C 0%, #2A2918 100%);
+  }
+
+  .m19l5-point-text {
+    color: #B0BEC5;
+  }
+
+  .m19l5-summary,
+  .m19l5-point-card {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .m19l5-summary-text {
+    color: #CFD8DC;
+  }
+
+  .m19l5-summary-text strong {
+    color: #80DEEA;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .m19l5-shape,
+  .m19l5-point-card {
+    animation: none;
+    transition: none;
+  }
+
+  .m19l5-point-card:hover {
+    transform: none;
+  }
+}

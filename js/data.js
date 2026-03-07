@@ -14238,6 +14238,190 @@ const coursesData = [
             })(),
           },
           {
+            id: "ch19-lesson-5",
+            title: yhLang(
+              "Importance of Safe, Nutritious Food and Daily Meal Plan",
+              "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
+            ),
+            icon: "fa-utensils",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              const meals = [
+                {
+                  timeEn: "Breakfast",
+                  timeBn: "সকালের খাবার",
+                  icon: "fa-mug-saucer",
+                  color: "breakfast",
+                  energy: yhLang(
+                    "2-3 medium chapatis OR 2 parathas OR 1 bowl rice",
+                    "মাঝারি সাইজের ২/৩টি রুটি অথবা ২টি পরোটা অথবা ১ বাটি ভাত"
+                  ),
+                  growth: yhLang(
+                    "1 egg OR 1 bowl lentils",
+                    "১টি ডিম অথবা ১ বাটি ডাল"
+                  ),
+                  immunity: yhLang(
+                    "1 bowl mixed vegetables (2-3 types) OR vegetable stir-fry",
+                    "১ বাটি সবজি (২/৩ রকম সবজি মিশিয়ে) অথবা সবজি ভাজি (পটল ভাজি, পেঁপে ভাজি ইত্যাদি)"
+                  ),
+                },
+                {
+                  timeEn: "Mid-Morning Snack",
+                  timeBn: "মধ্য-সকালের নাস্তা",
+                  icon: "fa-cookie-bite",
+                  color: "midmorning",
+                  energy: yhLang(
+                    "Homemade snacks (flattened rice/puffed rice + jaggery) and ripe banana",
+                    "বাড়িতে তৈরি নাস্তা জাতীয় খাবার (চিড়া/মুড়ি + গুড়) ও পাকা কলা"
+                  ),
+                  growth: yhLang(
+                    "Any local seasonal fruit (mango, jackfruit, papaya, pineapple, etc.)",
+                    "যেকোনো দেশি মৌসুমী ফল (আম, কাঁঠাল, পেঁপে, আনারস ইত্যাদি)"
+                  ),
+                  immunity: "",
+                },
+                {
+                  timeEn: "Lunch",
+                  timeBn: "দুপুরের খাবার",
+                  icon: "fa-bowl-rice",
+                  color: "lunch",
+                  energy: yhLang(
+                    "2-3 bowls rice",
+                    "২/৩ বাটি ভাত"
+                  ),
+                  growth: yhLang(
+                    "1 bowl thick lentils & 1 piece (medium) fish/meat/liver",
+                    "১ বাটি মাঝারি ঘন ডাল ও ১ টুকরা (মাঝারি সাইজের) মাছ/মাংস/কলিজা"
+                  ),
+                  immunity: yhLang(
+                    "1 bowl leafy greens (red spinach, taro leaves) OR vegetables",
+                    "১ বাটি শাক (লাল শাক, কচুশাক, পুঁই শাক) অথবা সবজি"
+                  ),
+                },
+                {
+                  timeEn: "Afternoon Snack",
+                  timeBn: "বিকালের নাস্তা",
+                  icon: "fa-ice-cream",
+                  color: "afternoon",
+                  energy: yhLang(
+                    "1 glass milk OR any milk-based dessert (pudding, vermicelli, rice pudding, cake, yogurt, etc.)",
+                    "১ গ্লাস দুধ অথবা দুধ দিয়ে তৈরি যেকোনো ঘন খাবার (ফিরনি, সেমাই, পায়েস, পিঠা, দই ইত্যাদি)"
+                  ),
+                  growth: yhLang(
+                    "Any local seasonal fruit available",
+                    "যেকোনো দেশি মৌসুমী ফল। ঋতুভেদে যেসব ফল সহজেই আমরা পাই"
+                  ),
+                  immunity: "",
+                },
+                {
+                  timeEn: "Dinner",
+                  timeBn: "রাতের খাবার",
+                  icon: "fa-plate-wheat",
+                  color: "dinner",
+                  energy: yhLang(
+                    "2-3 bowls rice",
+                    "২/৩ বাটি ভাত"
+                  ),
+                  growth: yhLang(
+                    "1 bowl thick lentils (if possible, 1 piece fish/meat)",
+                    "১ বাটি ঘন ডাল (যদি সম্ভব হয় ১ টুকরা মাছ/মাংস)"
+                  ),
+                  immunity: yhLang(
+                    "1 bowl leafy greens OR vegetables",
+                    "১ বাটি শাক অথবা সবজি"
+                  ),
+                },
+              ];
+
+              const renderRows = () =>
+                meals
+                  .map(
+                    (meal, idx) => `
+                      <tr class="m19l4-row m19l4-row-${meal.color}" data-aos="fade-up" data-aos-delay="${80 + idx * 50}">
+                        <td class="m19l4-time-cell">
+                          <span class="m19l4-time-icon m19l4-time-icon-${meal.color}">
+                            <i class="fa-solid ${meal.icon}"></i>
+                          </span>
+                          <span class="m19l4-time-text">${yhLang(meal.timeEn, meal.timeBn)}</span>
+                        </td>
+                        <td>${meal.energy || "&mdash;"}</td>
+                        <td>${meal.growth || "&mdash;"}</td>
+                        <td>${meal.immunity || "&mdash;"}</td>
+                      </tr>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <link rel="stylesheet" href="css/m19l4.css">
+                <div class="m19l4-container">
+                  <div class="m19l4-shape m19l4-shape-1"></div>
+                  <div class="m19l4-shape m19l4-shape-2"></div>
+                  <div class="m19l4-shape m19l4-shape-3"></div>
+
+                  <div class="m19l4-header" data-aos="fade-up">
+                    <h2 class="m19l4-title">
+                      <i class="fa-solid fa-utensils"></i>
+                      ${yhLang(
+                        "Daily Meal Plan for Adolescents",
+                        "কৈশোরকালীন প্রতিদিনের খাদ্য তালিকার নমুনা"
+                      )}
+                    </h2>
+                    <p class="m19l4-subtitle">${yhLang(
+                      "A balanced meal plan ensuring energy, growth, and immunity for healthy adolescent development",
+                      "সুস্থ কৈশোরকালীন বিকাশের জন্য শক্তি, বৃদ্ধি এবং রোগ প্রতিরোধ ক্ষমতা নিশ্চিত করার জন্য একটি সুষম খাদ্য পরিকল্পনা"
+                    )}</p>
+                  </div>
+
+                  <div class="m19l4-table-card" data-aos="fade-up" data-aos-delay="120">
+                    <div class="m19l4-table-responsive">
+                      <table class="m19l4-data-table">
+                        <thead>
+                          <tr>
+                            <th>${yhLang("Meal Time", "সময়")}</th>
+                            <th>
+                              ${yhLang("Energy Foods", "তাপ ও শক্তি উৎপাদনকারী খাদ্য")}
+                              <small>${yhLang(
+                                "Carbohydrates: rice, bread, flattened rice, puffed rice, potato",
+                                "শর্করা: ভাত, রুটি, চিড়া, মুড়ি, আলু"
+                              )}</small>
+                            </th>
+                            <th>
+                              ${yhLang("Growth Foods", "শরীরের ক্ষয়পূরণ ও বৃদ্ধিকারক খাদ্য")}
+                              <small>${yhLang(
+                                "Proteins: egg, fish, meat, milk, lentils",
+                                "আমিষ: ডিম, মাছ, মাংস, দুধ, ডাল"
+                              )}</small>
+                            </th>
+                            <th>
+                              ${yhLang("Immunity Foods", "রোগ প্রতিরোধকারী খাদ্য")}
+                              <small>${yhLang(
+                                "Vitamins and minerals: vegetables and seasonal fruits",
+                                "ভিটামিন ও খনিজ: সবজি ও দেশি মৌসুমী ফল"
+                              )}</small>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${renderRows()}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="m19l4-image-section" data-aos="fade-up" data-aos-delay="220">
+                    <img src="img/modu19/food.jpg" alt="${yhLang(
+                      "Nutritious meal plan illustration",
+                      "পুষ্টিকর খাদ্য তালিকা চিত্র"
+                    )}" />
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
             id: "ch19-lesson-6",
             title: yhLang(
               "Adolescent Food Diversity",
@@ -14248,60 +14432,108 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const points = [
-                {
-                  icon: "fa-bowl-food",
-                  text:
-                    "কৈশোরকালে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।",
-                },
-                {
-                  icon: "fa-shapes",
-                  text:
-                    "দৈনিক একই খাবার খেতে ভালো লাগবে না, কাজেই খাবারে ভিন্নতা ও নতুনত্ব থাকলে তা রুচি বাড়াতে সক্ষম হবে।",
-                },
-                {
-                  icon: "fa-house",
-                  text:
-                    "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।",
-                },
-                {
-                  icon: "fa-triangle-exclamation",
-                  text:
-                    "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।",
-                },
-                {
-                  icon: "fa-apple-whole",
-                  text:
-                    "প্রতিটি খাবারকে যথাসম্ভব প্রাকৃতিক অবস্থায় খেলেই সর্বোচ্চ পুষ্টি পাওয়া যায়। যেমন: ফলের জুস না খেয়ে তাজা ফল খেলে সর্বোচ্চ পুষ্টি পাওয়া যায়।",
-                },
+            const points = [
+            {
+              icon: "fa-bowl-food",
+              text: yhLang(
+                "During adolescence, food should be in the right quantity and contain all six essential food components.",
+                "কৈশোরকালে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।"
+              ),
+            },
+            {
+              icon: "fa-shapes",
+              text: yhLang(
+                "Eating the same food every day can become boring, so variety and newness in meals can increase appetite.",
+                "দৈনিক একই খাবার খেতে ভালো লাগবে না, কাজেই খাবারে ভিন্নতা ও নতুনত্ব থাকলে তা রুচি বাড়াতে সক্ষম হবে।"
+              ),
+            },
+            {
+              icon: "fa-house",
+              text: yhLang(
+                "During adolescence, boys and girls should be encouraged to eat nutritious homemade food. Bottled, canned, and processed foods contain fewer nutrients and may reduce interest in healthy home-cooked meals.",
+                "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।"
+              ),
+            },
+            {
+              icon: "fa-triangle-exclamation",
+              text: yhLang(
+                "It is important to note that adolescents often eat street foods such as chanachur, pickles, chotpoti, chips, ice cream, cake, soft drinks, juices, and energy drinks. These foods contain high levels of salt, fat, and sugar, which increase the risk of obesity, heart disease, and diabetes later in life.",
+                "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।"
+              ),
+            },
+            {
+              icon: "fa-apple-whole",
+              text: yhLang(
+                "Foods provide the highest nutrition when eaten in their natural form. For example, eating fresh fruit instead of fruit juice provides more nutrients.",
+                "প্রতিটি খাবারকে যথাসম্ভব প্রাকৃতিক অবস্থায় খেলেই সর্বোচ্চ পুষ্টি পাওয়া যায়। যেমন: ফলের জুস না খেয়ে তাজা ফল খেলে সর্বোচ্চ পুষ্টি পাওয়া যায়।"
+              ),
+            },
+          ];
+
+              const pointLabels = [
+                yhLang("Balanced Nutrition", "সুষম খাদ্য"),
+                yhLang("Food Variety", "খাবারের বৈচিত্র্য"),
+                yhLang("Home-Made Foods", "ঘরে তৈরি খাবার"),
+                yhLang("Avoid Junk Food", "জাঙ্ক ফুড এড়িয়ে চলুন"),
+                yhLang("Natural Foods", "প্রাকৃতিক খাবার"),
               ];
 
-              const renderCards = () =>
+              const renderPoints = () =>
                 points
                   .map(
                     (item, idx) => `
-                      <div class="col-12">
-                        <div class="definition-card hover-lift-sm hover-shadow-glow transition-base" data-aos="fade-up" data-aos-delay="${
-                          60 + idx * 40
-                        }">
-                          <div class="d-flex align-items-start gap-3">
-                            <span class="icon-circle"><i class="fa-solid ${item.icon}"></i></span>
-                            <p class="mb-0">${item.text}</p>
+                      <div class="m19l5-point-card m19l5-point-${idx + 1}" data-aos="fade-up" data-aos-delay="${80 + idx * 60}">
+                        <div class="m19l5-point-header">
+                          <div class="m19l5-point-icon">
+                            <span class="m19l5-point-number">${idx + 1}</span>
+                          </div>
+                          <div style="flex: 1;">
+                            <h3 class="m19l5-point-title">${pointLabels[idx]}</h3>
                           </div>
                         </div>
+                        <p class="m19l5-point-text">${item.text}</p>
+                        <span class="m19l5-point-badge">${yhLang("Tip", "পরামর্শ")}</span>
                       </div>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Adolescent Food Diversity",
-                    "কৈশোরকালীন খাদ্য বৈচিত্র্য"
-                  )}</h2>
-                  <div class="row g-3 mt-2">
-                    ${renderCards()}
+                <link rel="stylesheet" href="css/m19l5.css">
+                <div class="m19l5-container">
+                  <div class="m19l5-shape m19l5-shape-1"></div>
+                  <div class="m19l5-shape m19l5-shape-2"></div>
+                  <div class="m19l5-shape m19l5-shape-3"></div>
+
+                  <div class="m19l5-header" data-aos="fade-up">
+                    <h2 class="m19l5-title">
+                      <i class="fa-solid fa-leaf"></i>
+                      ${yhLang(
+                        "Adolescent Food Diversity",
+                        "কৈশোরকালীন খাদ্য বৈচিত্র্য"
+                      )}
+                    </h2>
+                    <p class="m19l5-subtitle">${yhLang(
+                      "Eating a variety of nutritious foods ensures proper growth and development",
+                      "বিভিন্ন ধরনের পুষ্টিকর খাবার খাওয়া সঠিক বৃদ্ধি এবং বিকাশ নিশ্চিত করে"
+                    )}</p>
+                  </div>
+
+                  <div class="m19l5-points-grid">
+                    ${renderPoints()}
+                  </div>
+
+                  <div class="m19l5-summary" data-aos="fade-up" data-aos-delay="400">
+                    <div class="m19l5-summary-icon">
+                      <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div class="m19l5-summary-text">
+                      <strong>${yhLang("Key Takeaway:", "মূল বিষয়:")}</strong>
+                      ${yhLang(
+                        "Healthy eating during adolescence creates habits that last a lifetime. Include diverse, home-cooked foods and avoid processed junk food to support optimal growth and well-being.",
+                        "কৈশোরকালে স্বাস্থ্যকর খাওয়ার অভ্যাস সারাজীবন থাকে। সর্বোত্তম বৃদ্ধি এবং সুস্থতা নিশ্চিত করতে বৈচিত্র্যময় ঘরে তৈরি খাবার অন্তর্ভুক্ত করুন এবং প্রক্রিয়াজাত জাঙ্ক ফুড এড়িয়ে চলুন।"
+                      )}
+                    </div>
                   </div>
                 </div>
               `;
