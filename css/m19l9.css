@@ -1,0 +1,455 @@
+/* Module 19 Lesson 9 - Beautiful Design Following Lesson 1 Pattern */
+
+.m19l9-container {
+  position: relative;
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 30%, #fff9c4 64%, #e1bee7 100%);
+  border-radius: 12px;
+  padding: 11px 10px;
+  overflow: hidden;
+  font-family: "Noto Sans Bengali", "Hind Siliguri", "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+/* Floating Shapes */
+.m19l9-shape {
+  position: absolute;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.m19l9-shape-1 {
+  width: 126px;
+  height: 126px;
+  top: -42px;
+  right: -20px;
+  border-radius: 42% 58% 60% 40%;
+  background: radial-gradient(circle, #ec407a, transparent 72%);
+  animation: pulse 6.5s ease-in-out infinite;
+}
+
+.m19l9-shape-2 {
+  width: 102px;
+  height: 102px;
+  left: -24px;
+  bottom: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ba68c8, transparent 72%);
+  animation: rotate 14s linear infinite;
+}
+
+.m19l9-shape-3 {
+  width: 74px;
+  height: 74px;
+  right: 34%;
+  bottom: -22px;
+  border-radius: 38% 62% 45% 55%;
+  background: linear-gradient(135deg, #f06292, #ab47bc);
+  animation: morph 8s ease-in-out infinite;
+}
+
+.m19l9-header {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 3px 9px rgba(194, 24, 91, 0.14);
+  padding: 8px 10px;
+}
+
+/* Headings */
+.m19l9-h2,
+.m19l9-h3,
+.m19l9-h4,
+.m19l9-h5,
+.m19l9-h6 {
+  margin: 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.25;
+}
+
+.m19l9-h2 {
+  font-size: 0.87rem;
+  color: #c2185b;
+}
+
+.m19l9-h3 {
+  font-size: 0.83rem;
+  color: #7b1fa2;
+}
+
+.m19l9-h4 {
+  font-size: 0.79rem;
+  color: #6a1b9a;
+}
+
+.m19l9-h5 {
+  font-size: 0.75rem;
+  color: #e91e63;
+}
+
+.m19l9-h6 {
+  font-size: 0.71rem;
+  color: #880e4f;
+}
+
+.m19l9-h2 i {
+  color: #f06292;
+  font-size: 0.95rem;
+}
+
+.m19l9-h3 i {
+  color: #ba68c8;
+  font-size: 0.95rem;
+}
+
+.m19l9-h4 i {
+  color: #ab47bc;
+  font-size: 0.95rem;
+}
+
+.m19l9-h5 i {
+  color: #ff4081;
+  font-size: 0.95rem;
+}
+
+.m19l9-h6 i {
+  color: #ad1457;
+  font-size: 0.95rem;
+}
+
+/* Paragraphs */
+.m19l9-p {
+  margin: 0;
+  font-size: 0.7rem;
+  line-height: 1.25;
+  color: #37474f;
+  font-weight: 500;
+}
+
+/* Intro Box */
+.m19l9-intro-box {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(240, 98, 146, 0.34);
+  border-radius: 8px;
+  padding: 7px;
+  margin-bottom: 4px;
+  box-shadow: inset 0 0 0 1px rgba(240, 98, 146, 0.18), 0 3px 9px rgba(194, 24, 91, 0.14);
+}
+
+/* Sections */
+.m19l9-section {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.m19l9-section-a {
+  background: linear-gradient(160deg, rgba(255, 235, 238, 0.95), rgba(248, 187, 208, 0.9));
+  border: 1px solid rgba(240, 98, 146, 0.35);
+  box-shadow: 5px 7px 12px rgba(194, 24, 91, 0.15);
+}
+
+.m19l9-section-b {
+  background: linear-gradient(160deg, rgba(243, 229, 245, 0.95), rgba(206, 147, 216, 0.9));
+  border: 1px solid rgba(171, 71, 188, 0.35);
+  box-shadow: -5px 7px 12px rgba(106, 27, 154, 0.15);
+}
+
+.m19l9-section-c {
+  background: linear-gradient(160deg, rgba(255, 249, 196, 0.95), rgba(240, 230, 140, 0.9));
+  border: 1px solid rgba(205, 180, 90, 0.35);
+  box-shadow: 5px -3px 12px rgba(175, 130, 50, 0.15);
+}
+
+/* Lists */
+.m19l9-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.m19l9-li {
+  border-left: 3px solid;
+  border-radius: 8px;
+  padding: 7px 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.m19l9-li:hover {
+  transform: translateX(3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.m19l9-li-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+
+.m19l9-li-text {
+  margin: 0;
+  font-size: 0.7rem;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #263238;
+}
+
+/* Contextual List Item Colors */
+.m19l9-success {
+  border-left-color: #2e7d32;
+  background: rgba(232, 245, 233, 0.95);
+}
+
+.m19l9-success .m19l9-li-icon {
+  background: linear-gradient(135deg, #66bb6a, #2e7d32);
+}
+
+.m19l9-success .m19l9-li-text {
+  color: #1b5e20;
+}
+
+.m19l9-info {
+  border-left-color: #0277bd;
+  background: rgba(227, 242, 253, 0.95);
+}
+
+.m19l9-info .m19l9-li-icon {
+  background: linear-gradient(135deg, #4fc3f7, #0277bd);
+}
+
+.m19l9-info .m19l9-li-text {
+  color: #01579b;
+}
+
+.m19l9-warn {
+  border-left-color: #ef6c00;
+  background: rgba(255, 243, 224, 0.95);
+}
+
+.m19l9-warn .m19l9-li-icon {
+  background: linear-gradient(135deg, #ffb74d, #ef6c00);
+}
+
+.m19l9-warn .m19l9-li-text {
+  color: #bf360c;
+}
+
+.m19l9-danger {
+  border-left-color: #d32f2f;
+  background: rgba(255, 235, 238, 0.95);
+}
+
+.m19l9-danger .m19l9-li-icon {
+  background: linear-gradient(135deg, #ef5350, #d32f2f);
+}
+
+.m19l9-danger .m19l9-li-text {
+  color: #b71c1c;
+}
+
+.m19l9-accent {
+  border-left-color: #6a1b9a;
+  background: rgba(243, 229, 245, 0.95);
+}
+
+.m19l9-accent .m19l9-li-icon {
+  background: linear-gradient(135deg, #ab47bc, #6a1b9a);
+}
+
+.m19l9-accent .m19l9-li-text {
+  color: #4a148c;
+}
+
+/* Gallery */
+.m19l9-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.m19l9-gallery-item {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.m19l9-gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+.m19l9-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.m19l9-caption {
+  padding: 6px 8px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-align: center;
+  color: #4a148c;
+  background: rgba(243, 229, 245, 0.85);
+  margin: 0;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.28;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 38% 62% 45% 55%;
+  }
+  50% {
+    border-radius: 62% 38% 55% 45%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .m19l9-container {
+    padding: 10px 9px;
+  }
+
+  .m19l9-h2 {
+    font-size: 0.83rem;
+  }
+
+  .m19l9-h3 {
+    font-size: 0.79rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .m19l9-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .m19l9-section {
+    padding: 8px;
+  }
+
+  .m19l9-li {
+    padding: 7px;
+  }
+
+  .m19l9-li-icon {
+    width: 23px;
+    height: 23px;
+    font-size: 0.68rem;
+  }
+
+  .m19l9-li-text,
+  .m19l9-p {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .m19l9-container {
+    padding: 8px 5px;
+  }
+
+  .m19l9-header {
+    padding: 7px 8px;
+  }
+
+  .m19l9-h2 {
+    font-size: 0.74rem;
+  }
+
+  .m19l9-h3 {
+    font-size: 0.71rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .m19l9-container {
+    background: linear-gradient(135deg, #880e4f 0%, #6a1b9a 34%, #4a148c 70%, #38006b 100%);
+  }
+
+  .m19l9-header,
+  .m19l9-section-a,
+  .m19l9-section-b,
+  .m19l9-section-c,
+  .m19l9-li,
+  .m19l9-intro-box,
+  .m19l9-gallery-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .m19l9-h2,
+  .m19l9-h3,
+  .m19l9-h4,
+  .m19l9-h5,
+  .m19l9-h6,
+  .m19l9-li-text,
+  .m19l9-p,
+  .m19l9-caption {
+    color: #f8e1f5;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .m19l9-shape,
+  .m19l9-li,
+  .m19l9-gallery-item {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .m19l9-li:hover,
+  .m19l9-gallery-item:hover {
+    transform: none !important;
+  }
+}

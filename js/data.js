@@ -14874,7 +14874,7 @@ const coursesData = [
           {
             id: "ch19-lesson-9",
             title: yhLang(
-              "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র",
+              "Adolescent Nutrition and Malnutrition Cycle",
               "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র"
             ),
             icon: "fa-heart-pulse",
@@ -14882,33 +14882,149 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
+              const cycleProblems = [
+              {
+                text: yhLang(
+                  "Adolescent girls suffering from nutrition-related problems may not achieve proper physical growth and may become short in height.",
+                  "পুষ্টিজনিত সমস্যায় ভোগা কিশোরীদের পর্যাপ্ত দৈহিক বৃদ্ধি না হওয়ায় বেঁটে/খাটো হয়"
+                ),
+                icon: "fa-child",
+                tone: "danger",
+              },
+              {
+                text: yhLang(
+                  "Adolescent girls may give birth to low-birth-weight babies.",
+                  "কিশোরীরা কম ওজনের শিশুর জন্ম দিয়ে থাকে"
+                ),
+                icon: "fa-baby",
+                tone: "warn",
+              },
+              {
+                text: yhLang(
+                  "Girls born with low birth weight may also become short when they grow up.",
+                  "কম ওজনের মেয়ে শিশুরা বড় হলে আবারও খাটো হয়"
+                ),
+                icon: "fa-person-arrow-down-to-line",
+                tone: "danger",
+              },
+              {
+                text: yhLang(
+                  "This cycle continues from generation to generation and becomes more severe.",
+                  "এই চক্র বংশপরম্পরায় চলতে থাকে এবং আরও ভয়াবহ হয়"
+                ),
+                icon: "fa-arrows-spin",
+                tone: "danger",
+              },
+              {
+                text: yhLang(
+                  "Long-term health problems develop in families and society.",
+                  "পরিবার ও সমাজে দীর্ঘমেয়াদী স্বাস্থ্য সমস্যা তৈরি হয়"
+                ),
+                icon: "fa-house-medical-circle-xmark",
+                tone: "warn",
+              },
+            ];
+
+            const solutions = [
+              {
+                text: yhLang(
+                  "Nutritious food intake should be ensured at every stage of life.",
+                  "জীবনের সকল স্তরেই পুষ্টিকর খাবার গ্রহণ নিশ্চিত করতে হবে"
+                ),
+                icon: "fa-bowl-food",
+                tone: "success",
+              },
+              {
+                text: yhLang(
+                  "Special attention should be given to nutrition during childhood and adolescence.",
+                  "শৈশব ও কৈশোরে বিশেষ গুরুত্ব দিয়ে পুষ্টি নিশ্চিত করতে হবে"
+                ),
+                icon: "fa-seedling",
+                tone: "success",
+              },
+              {
+                text: yhLang(
+                  "Health and nutrition services should be provided to adolescent girls and women.",
+                  "কিশোরী ও নারীদের স্বাস্থ্য ও পুষ্টি সেবা প্রদান করতে হবে"
+                ),
+                icon: "fa-user-nurse",
+                tone: "info",
+              },
+              {
+                text: yhLang(
+                  "Balanced diet, iron–folic acid, and other nutrients should be provided.",
+                  "সুষম খাদ্য, আয়রন-ফলিক এসিড ও অন্যান্য পুষ্টি উপাদান সরবরাহ করতে হবে"
+                ),
+                icon: "fa-pills",
+                tone: "accent",
+              },
+              {
+                text: yhLang(
+                  "Nutrition awareness should be increased within families and communities.",
+                  "পরিবার ও সমাজে পুষ্টি সচেতনতা বৃদ্ধি করতে হবে"
+                ),
+                icon: "fa-lightbulb",
+                tone: "info",
+              },
+              {
+                text: yhLang(
+                  "Regular health check-ups and monitoring should be conducted.",
+                  "নিয়মিত স্বাস্থ্য পরীক্ষা ও পর্যবেক্ষণ করতে হবে"
+                ),
+                icon: "fa-stethoscope",
+                tone: "accent",
+              },
+            ];
+
+              const renderList = (items) =>
+                `<ul class="m19l9-list">${items
+                  .map(
+                    (item, index) => `
+                      <li class="m19l9-li m19l9-${item.tone}" data-aos="fade-up" data-aos-delay="${45 + index * 30}">
+                        <span class="m19l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m19l9-li-text">${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("")}</ul>`;
+
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র",
-                    "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র"
-                  )}</h2>
-                  <div class="row g-3 mb-3 align-items-center" data-aos="fade-up" data-aos-delay="60">
-                    <div class="col-12 col-md-12">
-                      <div class="glass-card p-4 h-100">
-                        <p class="mb-0">
-                          অপুষ্টি চক্র বংশপরম্পরায় চলতে থাকে। পুষ্টিজনিত সমস্যায় ভোগা কিশোরীদের পর্যাপ্ত দৈহিক বৃদ্ধি না হওয়ায় বেঁটে/খাটো হয় এবং তারা কম ওজনের শিশুর জন্ম দিয়ে থাকে। আর এই কম ওজনের শিশুরা যদি মেয়ে হয়, তাহলে তারাও বড় হলে খাটো হয় এবং বিয়ে হলে আবারও কম ওজনের শিশুর জন্ম দেয়, যা আরও ভয়াবহ। এভাবেই এই চক্র চলতে থাকে যতক্ষণ পর্যন্ত না এই চক্র ভেঙে যায়। এজন্য জীবনের সকল স্তরেই, বিশেষ করে শৈশব ও কৈশোরে, পুষ্টিকর খাবার গ্রহণের মাধ্যমে কিশোরী ও নারীদের পুষ্টি নিশ্চিত করতে হবে।
-                        </p>
-                      </div>
-                    </div>
+                <link rel="stylesheet" href="css/m19l9.css">
+                <div class="m19l9-container">
+                  <div class="m19l9-shape m19l9-shape-1"></div>
+                  <div class="m19l9-shape m19l9-shape-2"></div>
+                  <div class="m19l9-shape m19l9-shape-3"></div>
+
+                  <div class="m19l9-header" data-aos="fade-up">
+                    <h2 class="m19l9-h2"><i class="fa-solid fa-rotate"></i>${yhLang("Adolescent Nutrition and Malnutrition Cycle", "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র")}</h2>
                   </div>
-                  <div class="row g-3 align-items-center" data-aos="fade-up" data-aos-delay="60">
-                    <div class="col-12 col-md-12">
-                      <figure class="text-center mb-0">
-                        <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" class="img-fluid rounded shadow-sm img-zoom" style="width: 100%;" />
+
+                  <section class="m19l9-section m19l9-section-a" data-aos="fade-up" data-aos-delay="20">
+                    <h3 class="m19l9-h3"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Malnutrition Cycle Problems", "অপুষ্টি চক্রের সমস্যাসমূহ")}</h3>
+                    <div class="m19l9-intro-box">
+                      <p class="m19l9-p"><strong>${yhLang("The malnutrition cycle continues through generations.", "অপুষ্টি চক্র বংশপরম্পরায় চলতে থাকে।")}</strong> ${yhLang("If this cycle is not broken, long-term health problems arise in families and society.", "এই চক্র ভেঙে না ফেললে পরিবার ও সমাজে দীর্ঘমেয়াদী স্বাস্থ্য সমস্যা সৃষ্টি হয়।")}</p>
+                    </div>
+                    ${renderList(cycleProblems)}
+                  </section>
+
+                  <section class="m19l9-section m19l9-section-b" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="m19l9-h3"><i class="fa-solid fa-hand-holding-heart"></i>${yhLang("How to Break the Malnutrition Cycle", "কীভাবে অপুষ্টি চক্র ভাঙা যায়")}</h3>
+                    ${renderList(solutions)}
+                  </section>
+
+                  <section class="m19l9-section m19l9-section-c" data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="m19l9-h3"><i class="fa-solid fa-images"></i>${yhLang("Nutrition Cycle Diagrams", "পুষ্টি চক্র চিত্র")}</h3>
+                    <div class="m19l9-gallery">
+                      <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="80">
+                        <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" class="img-fluid rounded img-zoom" />
+                        <figcaption class="m19l9-caption">${yhLang("Nutrition Awareness Cycle", "পুষ্টি সচেতনতা চক্র")}</figcaption>
+                      </figure>
+                      <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="img/modu19/pusti2.png" alt="কৈশোরকালীন পুষ্টি" class="img-fluid rounded img-zoom" />
+                        <figcaption class="m19l9-caption">${yhLang("Adolescent Nutrition Cycle", "কৈশোরকালীন পুষ্টি চক্র")}</figcaption>
                       </figure>
                     </div>
-                    <div class="col-12 col-md-12">
-                      <figure class="text-center mb-0">
-                        <img src="img/modu19/pusti2.png" alt="কৈশোরকালীন পুষ্টি" class="img-fluid rounded shadow-sm img-zoom" style="width: 100%;" />
-                      </figure>
-                    </div>
-                  </div>
+                  </section>
                 </div>
               `;
             })(),
