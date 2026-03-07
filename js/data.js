@@ -8218,154 +8218,205 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const anxietyDefinition =
-                "“উদ্বেগ হলো এক ধরনের আবেগ, যাকে তীব্র অনুভূতি, দুশ্চিন্তা এবং রক্তচাপ বৃদ্ধি করার মতো শারীরিক পরিবর্তনগুলো দ্বারা চিহ্নিত করা হয়।”";
+              const anxietyDefinition = yhLang(
+                "Anxiety is an emotion characterized by intense worry and physical changes such as elevated blood pressure.",
+                "উদ্বেগ হলো এক ধরনের আবেগ, যাকে তীব্র অনুভূতি, দুশ্চিন্তা এবং রক্তচাপ বৃদ্ধি করার মতো শারীরিক পরিবর্তনগুলো দ্বারা চিহ্নিত করা হয়।"
+              );
 
-              const anxietyContext =
-                "স্বাভাবিক মাত্রায় উদ্বেগ ব্যক্তিকে সতর্ক করে ও বিপদ মোকাবিলায় প্রস্তুত করে। তবে মাত্রাতিরিক্ত উদ্বেগ স্বাভাবিক জীবনধারা ব্যাহত করে ও মানসিক অবস্থাকে ঝুঁকিতে ফেলে।";
+              const anxietyContext = yhLang(
+                "At a normal level, anxiety can help a person stay alert and prepared. Excessive anxiety disrupts daily life and creates psychosocial risk.",
+                "স্বাভাবিক মাত্রায় উদ্বেগ ব্যক্তিকে সতর্ক করে ও বিপদ মোকাবিলায় প্রস্তুত করে। তবে মাত্রাতিরিক্ত উদ্বেগ স্বাভাবিক জীবনধারা ব্যাহত করে ও মানসিক অবস্থাকে ঝুঁকিতে ফেলে।"
+              );
 
-              const anxietySignificance =
-                "বহু আবেগের মধ্যে উদ্বেগ একটি উল্লেখযোগ্য আবেগ যা সময়মতো নিয়ন্ত্রণ না করলে দীর্ঘমেয়াদি জটিলতা তৈরি করতে পারে।";
+              const anxietySignificance = yhLang(
+                "Among many emotions, anxiety is especially important because delayed management can lead to long-term complications.",
+                "বহু আবেগের মধ্যে উদ্বেগ একটি উল্লেখযোগ্য আবেগ যা সময়মতো নিয়ন্ত্রণ না করলে দীর্ঘমেয়াদি জটিলতা তৈরি করতে পারে।"
+              );
 
               const mentalSymptoms = [
-                "অত্যধিক রাগ",
-                "বিরক্ত বোধ",
-                "মনোযোগের অসুবিধা",
-                "অস্থিরতা",
-                "যেকোনো পরিস্থিতি খুব বিপজ্জনক মনে করা",
-                "খারাপ কিছু ঘটবে বলে আশঙ্কা",
-                "নেতিবাচক চিন্তা",
+                { text: yhLang("Excessive anger", "অত্যধিক রাগ"), icon: "fa-fire", tone: "danger" },
+                { text: yhLang("Feeling irritated", "বিরক্ত বোধ"), icon: "fa-face-tired", tone: "warn" },
+                { text: yhLang("Difficulty concentrating", "মনোযোগের অসুবিধা"), icon: "fa-bullseye", tone: "info" },
+                { text: yhLang("Restlessness", "অস্থিরতা"), icon: "fa-person-running", tone: "sun" },
+                { text: yhLang("Perceiving situations as very dangerous", "যেকোনো পরিস্থিতি খুব বিপজ্জনক মনে করা"), icon: "fa-triangle-exclamation", tone: "red" },
+                { text: yhLang("Fear that something bad will happen", "খারাপ কিছু ঘটবে বলে আশঙ্কা"), icon: "fa-cloud-bolt", tone: "amber" },
+                { text: yhLang("Negative thinking", "নেতিবাচক চিন্তা"), icon: "fa-circle-minus", tone: "slate" },
               ];
 
               const physicalSymptoms = [
-                "হৃদস্পন্দন বেড়ে যাওয়া",
-                "রক্তচাপ বেড়ে যাওয়া",
-                "বমি বমি ভাব",
-                "ঘাম হওয়া",
-                "মুখ শুকিয়ে যাওয়া",
-                "ডায়রিয়া",
-                "পেট ব্যথা, মাথা ব্যথা",
-                "শ্বাসকষ্ট",
-                "ঘুম না হওয়া বা ঘুমের পরিমাণ বেড়ে যাওয়া",
+                { text: yhLang("Increased heartbeat", "হৃদস্পন্দন বেড়ে যাওয়া"), icon: "fa-heart-pulse", tone: "danger" },
+                { text: yhLang("Increased blood pressure", "রক্তচাপ বেড়ে যাওয়া"), icon: "fa-gauge-high", tone: "red" },
+                { text: yhLang("Nausea", "বমি বমি ভাব"), icon: "fa-face-dizzy", tone: "warn" },
+                { text: yhLang("Sweating", "ঘাম হওয়া"), icon: "fa-droplet", tone: "teal" },
+                { text: yhLang("Dry mouth", "মুখ শুকিয়ে যাওয়া"), icon: "fa-mouth-open", tone: "peach" },
+                { text: yhLang("Diarrhea", "ডায়রিয়া"), icon: "fa-notes-medical", tone: "mint" },
+                { text: yhLang("Stomach pain or headache", "পেট ব্যথা, মাথা ব্যথা"), icon: "fa-head-side-cough", tone: "violet" },
+                { text: yhLang("Shortness of breath", "শ্বাসকষ্ট"), icon: "fa-lungs", tone: "sky" },
+                { text: yhLang("Sleep disturbance", "ঘুম না হওয়া বা ঘুমের পরিমাণ বেড়ে যাওয়া"), icon: "fa-bed", tone: "indigo" },
               ];
 
               const behavioralSymptoms = [
-                "পরিস্থিতি এড়িয়ে চলা",
-                "খাবারে অরুচি বা অত্যধিক খাবার গ্রহণ",
-                "অলসতা বা অনীহা",
-                "মাদক দ্রব্য গ্রহণ/মদ্যপান",
-                "প্রত্যাহারমূলক আচরণ",
+                { text: yhLang("Avoiding situations", "পরিস্থিতি এড়িয়ে চলা"), icon: "fa-person-circle-xmark", tone: "slate" },
+                { text: yhLang("Loss of appetite or overeating", "খাবারে অরুচি বা অত্যধিক খাবার গ্রহণ"), icon: "fa-utensils", tone: "amber" },
+                { text: yhLang("Laziness or low motivation", "অলসতা বা অনীহা"), icon: "fa-battery-quarter", tone: "sun" },
+                { text: yhLang("Substance use / alcohol use", "মাদক দ্রব্য গ্রহণ/মদ্যপান"), icon: "fa-wine-bottle", tone: "danger" },
+                { text: yhLang("Withdrawal behavior", "প্রত্যাহারমূলক আচরণ"), icon: "fa-door-closed", tone: "peach" },
               ];
 
               const anxietyCauses = [
-                "চাহিদা ও যোগানের মধ্যে পার্থক্য থাকা",
-                "অবাস্তব প্রত্যাশা",
-                "আত্মনিয়ন্ত্রণের অভাব",
-                "প্রত্যাখ্যাত ও বিচ্ছিন্ন হওয়ার ভয়",
-                "তুলনা করা",
-                "কর্মক্ষেত্র ও স্কুলের কাজের চাপ",
-                "ব্যক্তিগত ও পারিবারিক সম্পর্কের অবনতি",
-                "অর্থনৈতিক সমস্যা",
-                "অসুস্থতা",
-                "নেতিবাচক অভিজ্ঞতা ইত্যাদি",
+                { text: yhLang("Mismatch between needs and resources", "চাহিদা ও যোগানের মধ্যে পার্থক্য থাকা"), icon: "fa-scale-balanced", tone: "info" },
+                { text: yhLang("Unrealistic expectations", "অবাস্তব প্রত্যাশা"), icon: "fa-chart-line", tone: "warn" },
+                { text: yhLang("Lack of self-control", "আত্মনিয়ন্ত্রণের অভাব"), icon: "fa-sliders", tone: "accent" },
+                { text: yhLang("Fear of rejection and isolation", "প্রত্যাখ্যাত ও বিচ্ছিন্ন হওয়ার ভয়"), icon: "fa-user-slash", tone: "danger" },
+                { text: yhLang("Constant comparison", "তুলনা করা"), icon: "fa-arrows-left-right-to-line", tone: "violet" },
+                { text: yhLang("Work and school pressure", "কর্মক্ষেত্র ও স্কুলের কাজের চাপ"), icon: "fa-briefcase", tone: "sky" },
+                { text: yhLang("Relationship deterioration", "ব্যক্তিগত ও পারিবারিক সম্পর্কের অবনতি"), icon: "fa-people-arrows-left-right", tone: "peach" },
+                { text: yhLang("Economic hardship", "অর্থনৈতিক সমস্যা"), icon: "fa-sack-dollar", tone: "amber" },
+                { text: yhLang("Illness", "অসুস্থতা"), icon: "fa-house-medical", tone: "mint" },
+                { text: yhLang("Other negative experiences", "নেতিবাচক অভিজ্ঞতা ইত্যাদি"), icon: "fa-cloud-rain", tone: "indigo" },
               ];
 
-              const emotionalIntelligenceIntro =
-                "আবেগীয় বুদ্ধিমত্তা (Emotional Intelligence) হলো নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা।";
+              const emotionalIntelligenceIntro = yhLang(
+                "Emotional Intelligence is the ability to recognize, regulate, and apply your own emotions and understand others' emotions effectively.",
+                "আবেগীয় বুদ্ধিমত্তা (Emotional Intelligence) হলো নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা।"
+              );
 
               const emotionalIntelligencePoints = [
-                "নিজের আবেগগুলো চিহ্নিত করতে পারা এবং তাদের কারণগুলো বুঝতে পারা",
-                "আবেগগুলো যেন কোনো নেতিবাচক প্রভাব না ফেলে, সে জন্য নিজেকে নিয়ন্ত্রণ করতে পারা",
-                "অন্যদের আবেগগুলো বুঝতে পারা এবং তাদের সাথে সংবেদনশীলভাবে আচরণ করা",
-                "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা",
+                {
+                  text: yhLang(
+                    "Identify personal emotions and understand their causes.",
+                    "নিজের আবেগগুলো চিহ্নিত করতে পারা এবং তাদের কারণগুলো বুঝতে পারা"
+                  ),
+                  icon: "fa-magnifying-glass",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "Regulate emotions to prevent negative impact.",
+                    "আবেগগুলো যেন কোনো নেতিবাচক প্রভাব না ফেলে, সে জন্য নিজেকে নিয়ন্ত্রণ করতে পারা"
+                  ),
+                  icon: "fa-shield-heart",
+                  tone: "success",
+                },
+                {
+                  text: yhLang(
+                    "Understand others' emotions and respond sensitively.",
+                    "অন্যদের আবেগগুলো বুঝতে পারা এবং তাদের সাথে সংবেদনশীলভাবে আচরণ করা"
+                  ),
+                  icon: "fa-hand-holding-heart",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang(
+                    "Build healthier relationships through emotional intelligence.",
+                    "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা"
+                  ),
+                  icon: "fa-people-group",
+                  tone: "accent",
+                },
               ];
 
-              const renderList = (items, baseDelay = 80) =>
+              const renderList = (items, baseDelay = 86) =>
                 items
                   .map(
                     (item, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 18}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                      <li class="m14l3-li m14l3-${item.tone}" data-aos="fade-left" data-aos-delay="${baseDelay + idx * 14}">
+                        <span class="m14l3-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l3-li-text">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
-              const renderSymptomList = (items) =>
-                `<ul class="list-unstyled puberty-list mb-0">${items
+              const renderTableChip = (item) =>
+                item
+                  ? `<span class="m14l3-chip m14l3-${item.tone}"><i class="fa-solid ${item.icon}"></i><span>${item.text}</span></span>`
+                  : `<span class="m14l3-chip m14l3-empty">-</span>`;
+
+              const renderSymptomRows = () => {
+                const maxRows = Math.max(
+                  mentalSymptoms.length,
+                  physicalSymptoms.length,
+                  behavioralSymptoms.length
+                );
+
+                return Array.from({ length: maxRows })
                   .map(
-                    (item, idx) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
+                    (_, idx) => `
+                      <tr data-aos="fade-up" data-aos-delay="${80 + idx * 12}">
+                        <td>${renderTableChip(mentalSymptoms[idx])}</td>
+                        <td>${renderTableChip(physicalSymptoms[idx])}</td>
+                        <td>${renderTableChip(behavioralSymptoms[idx])}</td>
+                      </tr>
                     `
                   )
-                  .join("")}</ul>`;
+                  .join("");
+              };
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Anxiety overview",
-                    "উদ্বেগ (Anxiety)"
-                  )}</h2>
+                <link rel="stylesheet" href="css/m14.css">
+                <div class="m14l3-slide">
+                  <span class="m14l3-shape m14l3-shape-a" aria-hidden="true"></span>
+                  <span class="m14l3-shape m14l3-shape-b" aria-hidden="true"></span>
+                  <span class="m14l3-shape m14l3-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${anxietyDefinition}</p>
-                    <p class="mb-2">${anxietyContext}</p>
-                    <p class="mb-0">${anxietySignificance}</p>
+                  <header class="m14l3-header" data-aos="fade-up">
+                    <h2 class="m14l3-title">
+                      <i class="fa-solid fa-face-frown-open"></i>
+                      ${yhLang("Anxiety overview", "উদ্বেগ (Anxiety)")}
+                    </h2>
+                  </header>
+
+                  <section class="m14l3-card m14l3-card-intro" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="m14l3-subtitle">
+                      <i class="fa-solid fa-circle-info"></i>
+                      ${yhLang("What is anxiety", "উদ্বেগ কী")}
+                    </h3>
+                    <p class="m14l3-p">${anxietyDefinition}</p>
+                    <p class="m14l3-p">${anxietyContext}</p>
+                    <p class="m14l3-p m14l3-p-last">${anxietySignificance}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <div class="row g-4 align-items-start">
-                      <div class="col-lg-7">
-                        <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                          "উদ্বেগের লক্ষণ ও উপসর্গ",
-                          "উদ্বেগের লক্ষণ ও উপসর্গ"
-                        )}</h3>
-                        <div class="table-responsive">
-                          <table class="table table-modern align-middle">
-                            <thead>
-                              <tr>
-                                <th>${yhLang("মানসিক লক্ষণ", "মানসিক লক্ষণ")}</th>
-                                <th>${yhLang("শারীরিক লক্ষণ", "শারীরিক লক্ষণ")}</th>
-                                <th>${yhLang("আচরণগত লক্ষণ", "আচরণগত লক্ষণ")}</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>${renderSymptomList(mentalSymptoms)}</td>
-                                <td>${renderSymptomList(physicalSymptoms)}</td>
-                                <td>${renderSymptomList(behavioralSymptoms)}</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
+                  <section class="m14l3-grid" data-aos="fade-up" data-aos-delay="70">
+                    <article class="m14l3-card m14l3-card-symptoms">
+                      <h3 class="m14l3-subtitle">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        ${yhLang("Anxiety symptoms table", "উদ্বেগের লক্ষণ ও উপসর্গের টেবিল")}
+                      </h3>
+                      <div class="m14l3-table-wrap">
+                        <table class="m14l3-table">
+                          <thead>
+                            <tr>
+                              <th><i class="fa-solid fa-brain"></i>${yhLang("Mental symptoms", "মানসিক লক্ষণ")}</th>
+                              <th><i class="fa-solid fa-heart-pulse"></i>${yhLang("Physical symptoms", "শারীরিক লক্ষণ")}</th>
+                              <th><i class="fa-solid fa-person-walking"></i>${yhLang("Behavioral symptoms", "আচরণগত লক্ষণ")}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            ${renderSymptomRows()}
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                            "উদ্বেগের কারণ",
-                            "উদ্বেগের কারণ"
-                          )}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(anxietyCauses, 90)}
-                          </ul>
-                        </article>
-                      </div>
-                    </div>
+                    </article>
+
+                    <article class="m14l3-card m14l3-card-causes" data-aos="fade-left" data-aos-delay="95">
+                      <h3 class="m14l3-subtitle">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                        ${yhLang("Causes of anxiety", "উদ্বেগের কারণ")}
+                      </h3>
+                      <ul class="m14l3-list">
+                        ${renderList(anxietyCauses, 92)}
+                      </ul>
+                    </article>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="120">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "আবেগীয় বুদ্ধিমত্তা",
-                      "আবেগীয় বুদ্ধিমত্তা"
-                    )}</h3>
-                    <p class="mb-3">${emotionalIntelligenceIntro}</p>
-                    <ul class="list-unstyled puberty-list mb-0">
+                  <section class="m14l3-card m14l3-card-ei d-none" data-aos="fade-up" data-aos-delay="115">
+                    <h3 class="m14l3-subtitle">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      ${yhLang("Emotional intelligence", "আবেগীয় বুদ্ধিমত্তা")}
+                    </h3>
+                    <p class="m14l3-p">${emotionalIntelligenceIntro}</p>
+                    <ul class="m14l3-list">
                       ${renderList(emotionalIntelligencePoints, 100)}
                     </ul>
                   </section>
