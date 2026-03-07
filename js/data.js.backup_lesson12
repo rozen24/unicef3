@@ -15217,9 +15217,9 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch19-lesson-12",
+            id: "ch19-lesson-13",
             title: yhLang(
-              "Risks of Overweight and Obesity",
+              "অধিক ওজন ও স্থূলতার ঝুঁকি",
               "অধিক ওজন ও স্থূলতার ঝুঁকি"
             ),
             icon: "fa-notes-medical",
@@ -15227,72 +15227,53 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
+              const diseasePoints = [
+                "উচ্চ রক্তচাপ",
+                "ডায়াবেটিস",
+                "হৃদরোগ",
+                "রক্তে অধিক পরিমাণ চর্বি জমা",
+                "পিত্তথলির পাথর, ক্যান্সার ইত্যাদি",
+              ];
+
               const preventionPoints = [
-                {
-                  text: yhLang("Eat a balanced diet in moderation.", "পরিমিত সুষম খাবার খেতে হবে"),
-                  icon: "fa-bowl-food",
-                  tone: "success",
-                },
-                {
-                  text: yhLang("Practice regular exercise, physical activity, and sports.", "নিয়মিত শরীরচর্চা, ব্যায়াম ও খেলাধুলা করতে হবে"),
-                  icon: "fa-person-running",
-                  tone: "info",
-                },
-                {
-                  text: yhLang("Adolescents should do at least 60 minutes of moderate to vigorous physical activity daily throughout the week.", "কিশোর-কিশোরীদের সারা সপ্তাহে প্রতিদিন গড়ে অন্তত ৬০ মিনিট মাঝারি থেকে ভারী শারীরিক ব্যায়াম করা উচিত"),
-                  icon: "fa-stopwatch",
-                  tone: "accent",
-                },
-                {
-                  text: yhLang("Avoid fried, oily, salty, and fatty foods such as fast food, chips, and fried snacks.", "তেলেভাজা, অধিক তৈলাক্ত, লবণাক্ত ও চর্বিজাতীয় খাবার যেমন ফাস্টফুড, চিপস, ফ্রাইড ফুড ইত্যাদি পরিত্যাগ করতে হবে"),
-                  icon: "fa-ban",
-                  tone: "warn",
-                },
-                {
-                  text: yhLang("Build a daily fruit-eating habit and choose whole fruits instead of fruit juice.", "প্রতিদিন ফলমূল খাওয়ার অভ্যাস করতে হবে এবং ফলের রসের বদলে আস্ত ফল খেতে হবে"),
-                  icon: "fa-apple-whole",
-                  tone: "success",
-                },
-                {
-                  text: yhLang("Avoid soft drinks such as soda, energy drinks, and artificial fruit beverages.", "কোমল পানীয় (সফট ড্রিংকস, এনার্জি ড্রিংকস, কৃত্রিম ফলের রস ইত্যাদি) পান করা থেকে বিরত থাকতে হবে"),
-                  icon: "fa-bottle-droplet",
-                  tone: "danger",
-                },
+                "পরিমিত সুষম খাবার খেতে হবে",
+                "নিয়মিত শরীরচর্চা, ব্যায়াম ও খেলাধুলা করতে হবে",
+                "কিশোর-কিশোরীদের সারা সপ্তাহে প্রতিদিন গড়ে অন্তত ৬০ মিনিট মাঝারি থেকে ভারী শারীরিক ব্যায়াম করা উচিত",
+                "তেলেভাজা, অধিক তৈলাক্ত, লবণাক্ত ও চর্বিজাতীয় খাবার যেমন ফাস্টফুড, চিপস, ফ্রাইড ফুড ইত্যাদি পরিত্যাগ করতে হবে",
+                "প্রতিদিন ফলমূল খাওয়ার অভ্যাস করতে হবে এবং ফলের রসের বদলে আস্ত ফল খেতে হবে",
+                "কোমল পানীয় (সফট ড্রিংকস, এনার্জি ড্রিংকস, কৃত্রিম ফলের রস ইত্যাদি) পান করা থেকে বিরত থাকতে হবে",
               ];
 
               const renderList = (items) =>
-                `<ul class="m19-12-list">${items
+                items
                   .map(
-                    (item, idx) => `
-                      <li class="m19-12-li m19-12-${item.tone}" data-aos="fade-up" data-aos-delay="${50 + idx * 26}">
-                        <span class="m19-12-li-icon"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m19-12-li-text">${item.text}</span>
+                    (item) => `
+                      <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${item}</span>
                       </li>
                     `
                   )
-                  .join("")}</ul>`;
+                  .join("");
 
               return `
-                <link rel="stylesheet" href="css/m19.css">
-                <div class="m19-12-slide">
-                  <div class="m19-12-shape m19-12-shape-a"></div>
-                  <div class="m19-12-shape m19-12-shape-b"></div>
-                  <div class="m19-12-shape m19-12-shape-c"></div>
-
-                  <header class="m19-12-header" data-aos="fade-up">
-                    <h2 class="m19-12-title"><i class="fa-solid fa-notes-medical"></i>${yhLang(
-                      "Risks of Overweight and Obesity",
-                      "অধিক ওজন ও স্থূলতার ঝুঁকি"
-                    )}</h2>
-                  </header>
-
-                  <section class="m19-12-card m19-12-card--guidance" data-aos="fade-up" data-aos-delay="70">
-                    <h3 class="m19-12-subtitle"><i class="fa-solid fa-shield-heart"></i>${yhLang(
-                      "How to Prevent Overweight and Obesity",
-                      "অধিক ওজন ও স্থূলতা প্রতিরোধে করণীয়"
-                    )}</h3>
-                    ${renderList(preventionPoints)}
-                  </section>
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "অধিক ওজন ও স্থূলতার ঝুঁকি",
+                    "অধিক ওজন ও স্থূলতার ঝুঁকি"
+                  )}</h2>
+                  <div class="glass-card p-4 mb-3" data-aos="fade-up" data-aos-delay="60">
+                    <p class="mb-3">কৈশোরকালীন বয়সে অধিক ওজন ও স্থূলতার কারণে বিভিন্ন ধরনের অসংক্রামক রোগে আক্রান্ত হওয়ার প্রবণতা বেড়ে যায়। যেমন –</p>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(diseasePoints)}
+                    </ul>
+                  </div>
+                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="gradient-text mb-3">অধিক ওজন ও স্থূলতা প্রতিরোধে করণীয় :</h3>
+                    <ul class="list-unstyled puberty-list mb-0">
+                      ${renderList(preventionPoints)}
+                    </ul>
+                  </div>
                 </div>
               `;
             })(),
