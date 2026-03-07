@@ -8676,73 +8676,128 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const stressIntro =
-                "দৈনন্দিন জীবনের নানা ক্ষেত্র যেমন পরিবার, শিক্ষা, কর্মজীবন, বেকারত্ব ও পারিপার্শ্বিক পরিবেশের সংঘাত আমাদের প্রত্যাশা ও সক্ষমতার মধ্যে দ্বন্দ্ব তৈরি করে, যা মানসিক চাপকে বাড়িয়ে তোলে।";
+              const stressIntro = yhLang(
+                "Stress grows when expectations and real-life capacity do not match across daily settings.",
+                "দৈনন্দিন জীবনের নানা ক্ষেত্র যেমন পরিবার, শিক্ষা, কর্মজীবন, বেকারত্ব ও পারিপার্শ্বিক পরিবেশের সংঘাত আমাদের প্রত্যাশা ও সক্ষমতার মধ্যে দ্বন্দ্ব তৈরি করে, যা মানসিক চাপকে বাড়িয়ে তোলে।"
+              );
+
+              const stressFocus = yhLang(
+                "Identifying stress sources early helps us choose practical coping actions.",
+                "চাপের উৎস আগে শনাক্ত করতে পারলে বাস্তবসম্মত ব্যবস্থাপনা নেওয়া সহজ হয়।"
+              );
 
               const stressCauses = [
                 {
-                  title: "কলহ",
-                  description:
-                    "পারিবারিক, সামাজিক, রাজনৈতিক, ধর্মীয়, জাতিগত, প্রথাগত ইত্যাদি ক্ষেত্রে সৃষ্ট কলহ আমাদের মধ্যে মানসিক চাপ সৃষ্টি করে।",
-                  icon: "fa-people-arrows",
+                  title: yhLang("Conflict", "কলহ"),
+                  description: yhLang(
+                    "Family, social, political, religious, and cultural conflicts can trigger stress.",
+                    "পারিবারিক, সামাজিক, রাজনৈতিক, ধর্মীয়, জাতিগত ও প্রথাগত ক্ষেত্রে সৃষ্ট কলহ মানসিক চাপ বাড়ায়।"
+                  ),
+                  icon: "fa-people-arrows-left-right",
+                  tone: "danger",
                 },
                 {
-                  title: "শিক্ষা",
-                  description:
-                    "শিক্ষাক্ষেত্রে অতিরিক্ত প্রতিযোগিতামূলক মনোভাব, কাঙ্ক্ষিত ফলাফল অর্জন করতে না পারা, শিক্ষাবান্ধব পরিবেশের অভাব, আর্থিক অস্বচ্ছলতা, সঠিক দিকনির্দেশনার অভাব এবং সহপাঠীদের সাথে তুলনা শিক্ষার্থীদের মধ্যে মানসিক চাপ সৃষ্টি করে।",
+                  title: yhLang("Education Pressure", "শিক্ষা"),
+                  description: yhLang(
+                    "Competition, poor support systems, financial limits, and comparison increase student stress.",
+                    "প্রতিযোগিতা, কাঙ্ক্ষিত ফল না পাওয়া, আর্থিক অস্বচ্ছলতা ও সহপাঠীদের সাথে তুলনা শিক্ষার্থীদের চাপ বাড়ায়।"
+                  ),
                   icon: "fa-graduation-cap",
+                  tone: "violet",
                 },
                 {
-                  title: "কর্মক্ষেত্র",
-                  description:
-                    "কর্মক্ষেত্রে কাজের চাপ থাকা স্বাভাবিক; কিন্তু অতিরিক্ত কাজের চাপ কর্মীদের মধ্যে মানসিক চাপ সৃষ্টি করে, যা কাজের গুণগত মান, উৎপাদনশীলতা, কাজের প্রতি আগ্রহ ও আত্মবিশ্বাস কমিয়ে দেয়।",
+                  title: yhLang("Workload", "কর্মক্ষেত্র"),
+                  description: yhLang(
+                    "Excessive workload reduces productivity, confidence, and motivation.",
+                    "অতিরিক্ত কাজের চাপ উৎপাদনশীলতা, আত্মবিশ্বাস ও কাজের আগ্রহ কমিয়ে দেয়।"
+                  ),
                   icon: "fa-briefcase",
+                  tone: "warn",
                 },
                 {
-                  title: "বেকারত্ব",
-                  description:
-                    "যখন কোনো ব্যক্তি তার প্রত্যাশা অনুযায়ী কাজের সুযোগ না পায় কিংবা যোগ্যতার অভাবে কাজে অন্তর্ভুক্ত হতে না পারে, তখন সে মানসিক চাপ অনুভব করে।",
+                  title: yhLang("Unemployment", "বেকারত্ব"),
+                  description: yhLang(
+                    "Lack of expected job opportunity can create long-term stress.",
+                    "প্রত্যাশিত কাজের সুযোগ না পাওয়া বা যোগ্যতার অসামঞ্জস্য মানসিক চাপ তৈরি করে।"
+                  ),
                   icon: "fa-user-clock",
+                  tone: "slate",
                 },
                 {
-                  title: "পারিপার্শ্বিক",
-                  description:
-                    "পারিপার্শ্বিক পরিবেশ যেমন শব্দদূষণ, বায়ুদূষণ, পানিদূষণ, যানজট, তীব্র আলো, কক্ষে অপর্যাপ্ত বায়ুচলাচল ও অপরিচ্ছন্ন পরিবেশ মানসিক চাপ সৃষ্টি করে।",
+                  title: yhLang("Environment", "পারিপার্শ্বিক"),
+                  description: yhLang(
+                    "Noise, air and water pollution, traffic, heat, and poor ventilation affect mental wellbeing.",
+                    "শব্দদূষণ, বায়ু/পানিদূষণ, যানজট, তীব্র আলো ও অপর্যাপ্ত বায়ুচলাচল মানসিক চাপ সৃষ্টি করে।"
+                  ),
                   icon: "fa-city",
+                  tone: "sky",
+                },
+              ];
+
+              const stressDomainRows = [
+                {
+                  area: yhLang("Family", "পরিবার"),
+                  stressor: yhLang("Relationship tension", "সম্পর্কের টানাপোড়েন"),
+                  example: yhLang("Frequent arguments", "ঘন ঘন ঝগড়া"),
+                },
+                {
+                  area: yhLang("Education", "শিক্ষা"),
+                  stressor: yhLang("Performance pressure", "ফলাফলের চাপ"),
+                  example: yhLang("Exam anxiety", "পরীক্ষা নিয়ে উদ্বেগ"),
+                },
+                {
+                  area: yhLang("Work", "কর্মক্ষেত্র"),
+                  stressor: yhLang("Overload", "অতিরিক্ত কাজ"),
+                  example: yhLang("Deadline stress", "সময়সীমার চাপ"),
+                },
+                {
+                  area: yhLang("Environment", "পরিবেশ"),
+                  stressor: yhLang("Pollution and noise", "দূষণ ও শব্দ"),
+                  example: yhLang("Traffic congestion", "যানজট"),
                 },
               ];
 
               const managementTips = [
-                "বাইরে হাঁটতে যাওয়া",
-                "বিশ্বস্ত বন্ধু এবং পরিবারের সদস্যদের সাথে সুন্দর সময় অতিবাহিত করা",
-                "বিশ্বস্ত কারো সাথে মনের কথা শেয়ার করা",
-                "পছন্দের বই পড়া, গান শোনা",
-                "ডায়েরি লেখা",
-                "ব্যায়াম করা",
-                "আয়নায় নিজেকে দেখা",
-                "হাত-মুখ ধোয়া বা গোসল করা",
-                "প্রার্থনা করা",
-                "পর্যাপ্ত পরিমাণে ঘুমানো",
-                "প্রাকৃতিক পরিবেশে সময় অতিবাহিত করা",
-                "নাক দিয়ে গভীর নিঃশ্বাস নিয়ে মুখ দিয়ে প্রশ্বাস ছাড়া",
+                { text: yhLang("Take a short walk", "বাইরে হাঁটতে যাওয়া"), icon: "fa-person-walking", tone: "info" },
+                { text: yhLang("Talk with trusted people", "বিশ্বস্ত মানুষের সাথে কথা বলা"), icon: "fa-people-group", tone: "success" },
+                { text: yhLang("Share your emotions", "মনের কথা শেয়ার করা"), icon: "fa-hand-holding-heart", tone: "peach" },
+                { text: yhLang("Read or listen to music", "বই পড়া বা গান শোনা"), icon: "fa-book-open", tone: "violet" },
+                { text: yhLang("Write a diary", "ডায়েরি লেখা"), icon: "fa-pen", tone: "accent" },
+                { text: yhLang("Exercise regularly", "নিয়মিত ব্যায়াম"), icon: "fa-person-running", tone: "sky" },
+                { text: yhLang("Freshen up", "হাত-মুখ ধোয়া বা গোসল"), icon: "fa-droplet", tone: "teal" },
+                { text: yhLang("Pray or meditate", "প্রার্থনা বা ধ্যান"), icon: "fa-hands-praying", tone: "mint" },
+                { text: yhLang("Sleep adequately", "পর্যাপ্ত ঘুমানো"), icon: "fa-moon", tone: "indigo" },
+                { text: yhLang("Spend time in nature", "প্রকৃতির কাছে সময়"), icon: "fa-leaf", tone: "sun" },
+                { text: yhLang("Deep breathing", "গভীর শ্বাস-প্রশ্বাস"), icon: "fa-lungs", tone: "cyan" },
+                { text: yhLang("Limit comparison", "অন্যের সাথে তুলনা কমানো"), icon: "fa-scale-balanced", tone: "amber" },
               ];
 
-              const renderCauses = (items) =>
+              const renderCauseCards = (items) =>
                 items
                   .map(
                     (item, idx) => `
-                      <div class="cause-item" data-aos="fade-left" data-aos-delay="${80 +
-                        idx * 20}">
-                        <div class="d-flex align-items-start gap-3">
-                          <div class="icon-circle bg-gradient-rose text-white">
-                            <i class="fa-solid ${item.icon}"></i>
-                          </div>
-                          <div>
-                            <h4 class="h6 mb-2">${item.title}</h4>
-                            <p class="mb-0">${item.description}</p>
-                          </div>
+                      <article class="m14l5-cause-card m14l5-${item.tone}" data-aos="fade-up" data-aos-delay="${80 + idx * 18}">
+                        <div class="m14l5-cause-icon">
+                          <i class="fa-solid ${item.icon}"></i>
                         </div>
-                      </div>
+                        <div>
+                          <h4 class="m14l5-cause-title">${item.title}</h4>
+                          <p class="m14l5-cause-desc">${item.description}</p>
+                        </div>
+                      </article>
+                    `
+                  )
+                  .join("");
+
+              const renderDomainRows = () =>
+                stressDomainRows
+                  .map(
+                    (item, idx) => `
+                      <tr data-aos="fade-up" data-aos-delay="${90 + idx * 14}">
+                        <td>${item.area}</td>
+                        <td>${item.stressor}</td>
+                        <td>${item.example}</td>
+                      </tr>
                     `
                   )
                   .join("");
@@ -8750,83 +8805,60 @@ const coursesData = [
               const renderTips = (items) =>
                 items
                   .map(
-                    (tip, idx) => `
-                      <li>
-                        <span class="fw-semibold me-2">${idx + 1}.</span>
-                        <span>${tip}</span>
+                    (item, idx) => `
+                      <li class="m14l5-li m14l5-${item.tone}" data-aos="fade-right" data-aos-delay="${90 + idx * 12}">
+                        <span class="m14l5-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l5-li-text">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Key drivers of stress",
-                    "মানসিক চাপের কারণসমূহ"
-                  )}</h2>
+                <div class="m14l5-slide">
+                  <div class="m14l5-shape m14l5-shape-a"></div>
+                  <div class="m14l5-shape m14l5-shape-b"></div>
+                  <div class="m14l5-shape m14l5-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-0">${stressIntro}</p>
+                  <header class="m14l5-header">
+                    <h2 class="m14l5-title">
+                      <i class="fa-solid fa-head-side-virus"></i>
+                      ${yhLang("Causes of Stress", "মানসিক চাপের কারণসমূহ")}
+                    </h2>
+                  </header>
+
+                  <section class="m14l5-card m14l5-card-intro">
+                    <h3 class="m14l5-subtitle">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      ${yhLang("Overview", "সংক্ষিপ্ত পরিচিতি")}
+                    </h3>
+                    <p class="m14l5-p">${stressIntro}</p>
+                    <p class="m14l5-p m14l5-p-last">${stressFocus}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
-                    <div class="row g-4 align-items-stretch">
-                      <div class="col-lg-12 d-flex flex-column gap-4">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-emerald text-white">
-                              <i class="fa-solid fa-exclamation"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "প্রধান কারণ",
-                                "প্রধান কারণ"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "Stress triggers",
-                                "মানসিক চাপের উৎস"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <div class="d-flex flex-column gap-4">
-                            ${renderCauses(stressCauses)}
-                          </div>
-                        </article>
+                  <div class="m14l5-grid">
+                    <section class="m14l5-card m14l5-card-causes">
+                      <h3 class="m14l5-subtitle">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        ${yhLang("Major Stress Triggers", "চাপ সৃষ্টির প্রধান কারণ")}
+                      </h3>
+                      <div class="m14l5-cause-list">
+                        ${renderCauseCards(stressCauses)}
                       </div>
-                    </div>
-                     <div class="row">
-                          <article class=" col-lg-12 glass-card p-4 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-sunrise text-white">
-                              <i class="fa-solid fa-seedling"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "উপায়",
-                                "উপায়"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "মানসিক চাপ ব্যবস্থাপনার জন্য প্রয়োজনীয় কিছু উপায়",
-                                "মানসিক চাপ ব্যবস্থাপনার জন্য প্রয়োজনীয় কিছু উপায়"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderTips(managementTips)}
-                          </ul>
-                        </article>
-                        <div class="col-lg-12" data-aos="fade-left" data-aos-delay="120">
-                          <figure class="glass-card p-3 h-100 shadow-sm text-center">
-                            <img src="img/modu14/mental.png" alt="Stress reflection" class="img-fluid rounded-4 mb-3 img-zoom">
-                            <figcaption class="small text-muted">${yhLang(
-                              "মানসিক প্রশান্তির জন্য একটু বিরতি",
-                              "মানসিক প্রশান্তির জন্য একটু বিরতি"
-                            )}</figcaption>
-                          </figure>
-                        </div>
-                      </div>
+                    </section>
+                    <section class="m14l5-card m14l5-card-manage">
+                    <h3 class="m14l5-subtitle">
+                      <i class="fa-solid fa-seedling"></i>
+                      ${yhLang("Stress Management Tips", "মানসিক চাপ ব্যবস্থাপনার উপায়")}
+                    </h3>
+                    <ul class="m14l5-list">
+                      ${renderTips(managementTips)}
+                    </ul>
                   </section>
+
+                  </div>
+
+                  
                 </div>
               `;
             })(),
@@ -8857,122 +8889,116 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const angerIntro =
-                "রাগ হলো এক ধরনের মৌলিক অনুভূতি যার উৎপত্তি ঘটে কষ্ট, হতাশা, বিরক্তি, আশাহত হওয়া ইত্যাদি থেকে। সামান্য শব্দ থেকে ধ্বংসাত্মক আচরণ পর্যন্ত নানা উপায়ে রাগ প্রকাশ পেতে পারে। রাগ আমাদের স্বাভাবিক আবেগ এবং সঠিকভাবে ব্যবস্থাপনা করলে তা ক্ষতিকর নয়।";
+              const angerIntro = yhLang(
+                "Anger is a natural emotion that can range from mild irritation to intense reaction; awareness helps manage it safely.",
+                "রাগ হলো একটি স্বাভাবিক আবেগ, যা বিরক্তি থেকে তীব্র প্রতিক্রিয়া পর্যন্ত হতে পারে; সচেতনতা থাকলে এটি নিরাপদভাবে নিয়ন্ত্রণ করা যায়।"
+              );
 
-              const preSignalIntro =
-                "রাগের পূর্ব সংকেত হলো এমন সতর্কতামূলক ইঙ্গিত যা আমাদের বুঝতে সাহায্য করে একজন মানুষ কখন রেগে যাচ্ছে। এগুলো সম্পর্কে সচেতন থাকলে রাগ নিয়ন্ত্রণ করা সহজ হয় এবং অনেক ক্ষতি এড়ানো যায়।";
+              const preSignalIntro = yhLang(
+                "Early warning signs of anger allow us to pause, regulate, and avoid harm.",
+                "রাগের পূর্ব সংকেত আমাদের আগে থেকে থামতে, নিয়ন্ত্রণ নিতে এবং ক্ষতি এড়াতে সহায়তা করে।"
+              );
 
               const physicalSignals = [
-                "হৃৎস্পন্দন বেড়ে যাওয়া",
-                "বুকে চাপ অনুভব করা",
-                "মাথা ব্যথা হওয়া",
-                "বেশি বেশি চোখের পলক পড়া",
-                "মাংসপেশিতে টান টান ভাব",
-                "ঘাম হওয়া",
-                "শ্বাসকষ্ট হওয়া",
-                "শরীর কাঁপা",
+                { text: yhLang("Fast heartbeat", "হৃৎস্পন্দন বেড়ে যাওয়া"), icon: "fa-heart-pulse", tone: "danger" },
+                { text: yhLang("Chest pressure", "বুকে চাপ অনুভব করা"), icon: "fa-heart-crack", tone: "warn" },
+                { text: yhLang("Headache", "মাথা ব্যথা হওয়া"), icon: "fa-head-side-virus", tone: "amber" },
+                { text: yhLang("Frequent blinking", "চোখের পলক বেশি পড়া"), icon: "fa-eye", tone: "info" },
+                { text: yhLang("Muscle tension", "মাংসপেশিতে টান"), icon: "fa-dumbbell", tone: "slate" },
+                { text: yhLang("Sweating", "ঘাম হওয়া"), icon: "fa-droplets", tone: "teal" },
+                { text: yhLang("Breath shortness", "শ্বাসকষ্ট হওয়া"), icon: "fa-wind", tone: "sky" },
+                { text: yhLang("Body trembling", "শরীর কাঁপা"), icon: "fa-person", tone: "accent" },
               ];
 
               const emotionalSignals = [
-                "বিরক্তিবোধ",
-                "হতাশা",
-                "বিষণ্নতা",
-                "হিংসা",
-                "নিরাপত্তাহীনতা",
-                "অগ্রহণযোগ্যতা",
-                "মানসিক অবসাদ",
-                "ভয় পাওয়া",
-                "অসম্মানবোধ",
-                "অপরাধবোধ",
-                "লজ্জাবোধ",
-                "ভবিষ্যতের জন্য দুশ্চিন্তা",
+                { text: yhLang("Irritability", "বিরক্তিবোধ"), icon: "fa-face-frown", tone: "warn" },
+                { text: yhLang("Frustration", "হতাশা"), icon: "fa-cloud-rain", tone: "slate" },
+                { text: yhLang("Sadness", "বিষণ্নতা"), icon: "fa-face-sad-tear", tone: "violet" },
+                { text: yhLang("Jealousy", "হিংসা"), icon: "fa-eye", tone: "red" },
+                { text: yhLang("Insecurity", "নিরাপত্তাহীনতা"), icon: "fa-user-shield", tone: "sun" },
+                { text: yhLang("Feeling rejected", "অগ্রহণযোগ্যতা"), icon: "fa-user-xmark", tone: "danger" },
+                { text: yhLang("Mental exhaustion", "মানসিক অবসাদ"), icon: "fa-battery-quarter", tone: "peach" },
+                { text: yhLang("Fear", "ভয় পাওয়া"), icon: "fa-triangle-exclamation", tone: "amber" },
+                { text: yhLang("Feeling disrespected", "অসম্মানবোধ"), icon: "fa-hand", tone: "accent" },
+                { text: yhLang("Guilt", "অপরাধবোধ"), icon: "fa-scale-balanced", tone: "indigo" },
+                { text: yhLang("Shame", "লজ্জাবোধ"), icon: "fa-face-meh", tone: "mint" },
+                { text: yhLang("Future anxiety", "ভবিষ্যতের দুশ্চিন্তা"), icon: "fa-hourglass-half", tone: "info" },
               ];
 
               const cognitiveSignals = [
-                "নিজের সাথে অতিরিক্ত নেতিবাচক কথা বলা",
-                "আক্রমণাত্মক মনোভাব",
-                "প্রতিশোধপরায়ণতা",
+                { text: yhLang("Negative self-talk", "নিজের সাথে নেতিবাচক কথা"), icon: "fa-comment-slash", tone: "slate" },
+                { text: yhLang("Aggressive thinking", "আক্রমণাত্মক মনোভাব"), icon: "fa-bolt", tone: "danger" },
+                { text: yhLang("Revenge thoughts", "প্রতিশোধপরায়ণতা"), icon: "fa-gavel", tone: "red" },
               ];
 
               const behavioralSignals = [
-                "খুব দ্রুত কথা বলা",
-                "উচ্চ স্বরে কথা বলা",
-                "চিৎকার করা",
-                "জোরে দরজায় আঘাত করা",
-                "ভাঙচুর করা",
-                "মারামারি করা",
-                "পরিস্থিতি এড়িয়ে যাওয়া",
-                "নীরব থাকা বা চুপ করে থাকা",
+                { text: yhLang("Speaking too fast", "খুব দ্রুত কথা বলা"), icon: "fa-gauge-high", tone: "warn" },
+                { text: yhLang("Loud voice", "উচ্চ স্বরে কথা বলা"), icon: "fa-volume-high", tone: "amber" },
+                { text: yhLang("Shouting", "চিৎকার করা"), icon: "fa-bullhorn", tone: "danger" },
+                { text: yhLang("Hitting doors", "দরজায় জোরে আঘাত"), icon: "fa-door-open", tone: "red" },
+                { text: yhLang("Breaking objects", "ভাঙচুর করা"), icon: "fa-hammer", tone: "warn" },
+                { text: yhLang("Fighting", "মারামারি করা"), icon: "fa-hand-fist", tone: "danger" },
+                { text: yhLang("Avoiding situation", "পরিস্থিতি এড়িয়ে যাওয়া"), icon: "fa-route", tone: "sky" },
+                { text: yhLang("Silent withdrawal", "নীরব থাকা"), icon: "fa-volume-xmark", tone: "indigo" },
               ];
 
-              const renderList = (items, listType) => {
-                const iconPool = listType === "symptom"
-                  ? ["fa-heart-crack", "fa-face-frown", "fa-lungs", "fa-calendar-xmark", "fa-head-side-cough", "fa-person-falling"]
-                  : ["fa-leaf", "fa-egg", "fa-lemon", "fa-soap", "fa-fire-burner", "fa-shoe-prints"];
-
-                const tonePool = listType === "symptom"
-                  ? ["warn", "danger", "info", "warn", "danger", "info"]
-                  : ["success", "accent", "info", "success", "accent", "warn"];
-
-                return items
-                  .map((item, index) => {
-                    const tone = tonePool[index % tonePool.length];
-                    const icon = iconPool[index % iconPool.length];
-                    return `
-                      <li class="m19l8-li m19l8-${tone}">
-                        <span class="m19l8-li-icon"><i class="fa-solid ${icon}"></i></span>
-                        <span class="m19l8-li-text">${item}</span>
+              const renderSignalList = (items, delayBase = 80, direction = "left") =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li class="m14l6-li m14l6-${item.tone}" data-aos="fade-${direction}" data-aos-delay="${delayBase + idx * 12}">
+                        <span class="m14l6-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l6-li-text">${item.text}</span>
                       </li>
-                    `;
-                  })
+                    `
+                  )
                   .join("");
-              };
 
-              const renderColumn = (title, items, delay = 80) => `
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="${delay}">
-                  <article class="glass-card p-4 h-100 shadow-sm">
-                    <div class="d-flex align-items-center gap-3 mb-3">
-                      <div class="icon-circle bg-gradient-rose text-white">
-                        <i class="fa-solid fa-bolt"></i>
-                      </div>
-                      <div>
-                        <p class="text-uppercase text-muted small mb-1">${yhLang(
-                          "রাগের পূর্ব সংকেত",
-                          "রাগের পূর্ব সংকেত"
-                        )}</p>
-                        <h3 class="h6 gradient-text mb-0">${title}</h3>
-                      </div>
-                    </div>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(items)}
-                    </ul>
-                  </article>
-                </div>
+              const renderSignalCard = (title, icon, items, toneClass, delay, direction) => `
+                <article class="m14l6-card m14l6-card-signal ${toneClass}" data-aos="fade-up" data-aos-delay="${delay}">
+                  <h3 class="m14l6-subtitle">
+                    <i class="fa-solid ${icon}"></i>
+                    ${title}
+                  </h3>
+                  <ul class="m14l6-list">
+                    ${renderSignalList(items, delay + 20, direction)}
+                  </ul>
+                </article>
               `;
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Understanding anger signals",
-                    "রাগ (Anger)"
-                  )}</h2>
+                <div class="m14l6-slide">
+                  <div class="m14l6-shape m14l6-shape-a"></div>
+                  <div class="m14l6-shape m14l6-shape-b"></div>
+                  <div class="m14l6-shape m14l6-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${angerIntro}</p>
-                    <p class="mb-0">${preSignalIntro}</p>
+                  <header class="m14l6-header">
+                    <h2 class="m14l6-title">
+                      <i class="fa-solid fa-face-angry"></i>
+                      ${yhLang("Understanding Anger", "রাগ (Anger)")}
+                    </h2>
+                  </header>
+
+                  <section class="m14l6-card m14l6-card-intro">
+                    <h3 class="m14l6-subtitle">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      ${yhLang("Anger Basics", "রাগের মৌলিক ধারণা")}
+                    </h3>
+                    <p class="m14l6-p">${angerIntro}</p>
+                    <p class="m14l6-p m14l6-p-last">${preSignalIntro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "রাগের পূর্ব সংকেতসমূহ",
-                      "রাগের পূর্ব সংকেতসমূহ"
-                    )}</h3>
-                    <div class="row g-4 align-items-stretch">
-                      ${renderColumn("শারীরিক সংকেত", physicalSignals, 80)}
-                      ${renderColumn("আবেগীয় সংকেত", emotionalSignals, 100)}
-                      ${renderColumn("চিন্তামূলক সংকেত", cognitiveSignals, 120)}
-                      ${renderColumn("আচরণমূলক সংকেত", behavioralSignals, 140)}
+                  <section class="m14l6-card m14l6-card-signals">
+                    <h3 class="m14l6-subtitle">
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                      ${yhLang("Pre-Anger Signals", "রাগের পূর্ব সংকেতসমূহ")}
+                    </h3>
+
+                    <div class="m14l6-grid">
+                      ${renderSignalCard(yhLang("Physical Signals", "শারীরিক সংকেত"), "fa-heart-pulse", physicalSignals, "m14l6-sky", 80, "left")}
+                      ${renderSignalCard(yhLang("Emotional Signals", "আবেগীয় সংকেত"), "fa-face-frown", emotionalSignals, "m14l6-peach", 100, "right")}
+                      ${renderSignalCard(yhLang("Cognitive Signals", "চিন্তামূলক সংকেত"), "fa-brain", cognitiveSignals, "m14l6-violet", 120, "left")}
+                      ${renderSignalCard(yhLang("Behavioral Signals", "আচরণমূলক সংকেত"), "fa-person-running", behavioralSignals, "m14l6-mint", 140, "right")}
                     </div>
                   </section>
                 </div>
