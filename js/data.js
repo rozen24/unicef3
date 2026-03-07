@@ -9314,113 +9314,116 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const examFearIntro =
-                "পরীক্ষাকে ঘিরে স্বাভাবিক এক ধরনের উদ্বেগ শিক্ষার্থীদের প্রস্তুতিতে সহায়তা করে, তবে অতিরিক্ত ভয় পরীক্ষার প্রস্তুতি ও কাঙ্ক্ষিত ফল অর্জনে বড় বাধা হয়ে দাঁড়ায়। অতিরিক্ত পরীক্ষাভীতি শারীরিক ও মানসিক নানা উপসর্গের মাধ্যমে প্রকাশ পায়।";
+              const examFearIntro = yhLang(
+                "A small amount of exam anxiety can motivate preparation, but excessive fear can block performance.",
+                "পরীক্ষাকে ঘিরে স্বাভাবিক উদ্বেগ শিক্ষার্থীদের প্রস্তুতিতে সহায়ক, তবে অতিরিক্ত ভয় কাঙ্ক্ষিত ফল অর্জনে বাধা দেয়।"
+              );
 
-              const examFearDetails =
-                "পরীক্ষার কথা শুনলেই বুক ধড়ফড় করা, ঘাম হওয়া, হাত-পা ঠান্ডা হয়ে যাওয়া, বমি বমি লাগার মতো লক্ষণ দেখা যেতে পারে। আগে থেকেই পরিকল্পিত প্রস্তুতি, সময় ব্যবস্থাপনা ও ভীতি দূরীকরণ কৌশল অনুশীলনের মাধ্যমে এই ভয়কে নিয়ন্ত্রণ করা সম্ভব।";
+              const examFearDetails = yhLang(
+                "Exam fear may appear through physical and mental signs; early planning and coping practice can reduce it.",
+                "পরীক্ষার কথা শুনলেই বুক ধড়ফড়, ঘাম, হাত-পা ঠান্ডা হওয়া, বমি বমি ভাবসহ নানা লক্ষণ দেখা দিতে পারে। পরিকল্পিত প্রস্তুতি ও কৌশল অনুশীলনে এটি নিয়ন্ত্রণ করা যায়।"
+              );
 
               const physicalSymptoms = [
-                "বমি বমি ভাব হওয়া, কোনো কোনো ক্ষেত্রে বমি হয়ে যাওয়া",
-                "খাওয়া-দাওয়া করতে না পারা",
-                "বুক ধড়ফড় করা",
-                "মাথাব্যথা করা, মাথা ভার ভার লাগা, মাথা ঘোরা",
-                "চোখে ঝাপসা দেখা",
-                "ঘুম না আসা",
-                "বাস্তবের সাথে সামঞ্জস্যহীনতা",
-                "হঠাৎ করে হাত-পা প্রচণ্ড ঠান্ডা হয়ে আসা",
-                "ঘনঘন পাতলা পায়খানা হওয়া",
-                "মূর্ছা যাওয়া",
+                { text: yhLang("Nausea or vomiting", "বমি বমি ভাব/বমি হওয়া"), icon: "fa-face-nauseated", tone: "warn" },
+                { text: yhLang("Loss of appetite", "খাওয়া-দাওয়া করতে না পারা"), icon: "fa-utensils", tone: "sun" },
+                { text: yhLang("Heart pounding", "বুক ধড়ফড় করা"), icon: "fa-heart-pulse", tone: "danger" },
+                { text: yhLang("Headache or dizziness", "মাথাব্যথা/মাথা ঘোরা"), icon: "fa-head-side-virus", tone: "amber" },
+                { text: yhLang("Blurred vision", "চোখে ঝাপসা দেখা"), icon: "fa-eye", tone: "sky" },
+                { text: yhLang("Sleep problems", "ঘুম না আসা"), icon: "fa-moon", tone: "indigo" },
+                { text: yhLang("Feeling unreal", "বাস্তবের সাথে সামঞ্জস্যহীনতা"), icon: "fa-cloud", tone: "slate" },
+                { text: yhLang("Cold hands and feet", "হাত-পা ঠান্ডা হয়ে আসা"), icon: "fa-snowflake", tone: "info" },
+                { text: yhLang("Frequent loose motion", "ঘনঘন পাতলা পায়খানা"), icon: "fa-toilet", tone: "peach" },
+                { text: yhLang("Fainting tendency", "মূর্ছা যাওয়া"), icon: "fa-person-falling", tone: "red" },
               ];
 
               const mentalSymptoms = [
-                "মনোযোগ দিতে না পারা",
-                "অল্পতেই একাগ্রতা হারিয়ে ফেলা",
-                "স্মৃতিশক্তিতে সাময়িক ব্যাহত হওয়া",
+                { text: yhLang("Cannot focus", "মনোযোগ দিতে না পারা"), icon: "fa-bullseye", tone: "violet" },
+                { text: yhLang("Losing concentration quickly", "অল্পতেই একাগ্রতা হারানো"), icon: "fa-brain", tone: "accent" },
+                { text: yhLang("Temporary memory block", "স্মৃতিশক্তি সাময়িক ব্যাহত হওয়া"), icon: "fa-memory", tone: "slate" },
+                { text: yhLang("Negative self-thoughts", "নেতিবাচক আত্মকথন"), icon: "fa-comment-slash", tone: "danger" },
+                { text: yhLang("Fear of failure", "ব্যর্থতার ভয়"), icon: "fa-triangle-exclamation", tone: "warn" },
               ];
 
-              const copingNote =
-                "পরীক্ষার আগে নিয়মিত পুনরাবৃত্তি, সঠিক ঘুম, সুষম খাদ্য, শ্বাস-প্রশ্বাসের ব্যায়াম ও ইতিবাচক মানসিক প্রস্তুতি পরীক্ষাভীতি মোকাবিলায় সহায়তা করে। যাদের ক্ষেত্রে সমস্যা বাড়ে, তারা পরামর্শদাতা বা শিক্ষকের সহায়তা নিতে পারে।";
+              const copingSteps = [
+                { text: yhLang("Revise regularly", "নিয়মিত পুনরাবৃত্তি"), icon: "fa-book-open", tone: "success" },
+                { text: yhLang("Maintain sleep schedule", "সঠিক ঘুম বজায় রাখা"), icon: "fa-bed", tone: "indigo" },
+                { text: yhLang("Eat balanced meals", "সুষম খাদ্য গ্রহণ"), icon: "fa-apple-whole", tone: "mint" },
+                { text: yhLang("Practice breathing exercise", "শ্বাস-প্রশ্বাস ব্যায়াম"), icon: "fa-lungs", tone: "teal" },
+                { text: yhLang("Use positive self-talk", "ইতিবাচক মানসিক প্রস্তুতি"), icon: "fa-face-smile", tone: "sky" },
+                { text: yhLang("Seek teacher/counselor support", "শিক্ষক/পরামর্শদাতার সহায়তা"), icon: "fa-user-graduate", tone: "peach" },
+              ];
 
-              const renderList = (items) =>
+              const copingNote = yhLang(
+                "If exam anxiety rises significantly, timely support from counselor or teacher is important.",
+                "যাদের ক্ষেত্রে সমস্যা বাড়ে, তারা পরামর্শদাতা বা শিক্ষকের সহায়তা নিলে দ্রুত উন্নতি সম্ভব।"
+              );
+
+              const renderList = (items, baseDelay = 80, direction = "left") =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li class="m14l9-li m14l9-${item.tone}" data-aos="fade-${direction}" data-aos-delay="${baseDelay + idx * 12}">
+                        <span class="m14l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l9-li-text">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Understanding exam fear",
-                    "পরীক্ষা-ভীতি"
-                  )}</h2>
+                <div class="m14l9-slide">
+                  <div class="m14l9-shape m14l9-shape-a"></div>
+                  <div class="m14l9-shape m14l9-shape-b"></div>
+                  <div class="m14l9-shape m14l9-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${examFearIntro}</p>
-                    <p class="mb-0">${examFearDetails}</p>
+                  <header class="m14l9-header">
+                    <h2 class="m14l9-title">
+                      <i class="fa-solid fa-book-open-reader"></i>
+                      ${yhLang("Understanding Exam Anxiety", "পরীক্ষা-ভীতি")}
+                    </h2>
+                  </header>
+
+                  <section class="m14l9-card m14l9-card-intro">
+                    <h3 class="m14l9-subtitle">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      ${yhLang("Overview", "সংক্ষিপ্ত পরিচিতি")}
+                    </h3>
+                    <p class="m14l9-p">${examFearIntro}</p>
+                    <p class="m14l9-p m14l9-p-last">${examFearDetails}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "পরীক্ষা-ভীতির শারীরিক ও মানসিক উপসর্গসমূহ",
-                      "পরীক্ষা-ভীতির শারীরিক ও মানসিক উপসর্গসমূহ"
-                    )}</h3>
-                    <div class="row g-4 align-items-stretch">
-                      <div class="col-lg-7">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-rose text-white">
-                              <i class="fa-solid fa-heart-pulse"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "শারীরিক উপসর্গ",
-                                "শারীরিক উপসর্গ"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "Physical indicators",
-                                "শারীরিক সংকেত"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(physicalSymptoms)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-indigo text-white">
-                              <i class="fa-solid fa-brain"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "মানসিক উপসর্গ",
-                                "মানসিক উপসর্গ"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "Mental indicators",
-                                "মানসিক সংকেত"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(mentalSymptoms)}
-                          </ul>
-                        </article>
-                      </div>
-                    </div>
-                  </section>
+                  <div class="m14l9-grid">
+                    <section class="m14l9-card m14l9-card-physical">
+                      <h3 class="m14l9-subtitle">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        ${yhLang("Physical Symptoms", "শারীরিক উপসর্গ")}
+                      </h3>
+                      <ul class="m14l9-list">
+                        ${renderList(physicalSymptoms, 80, "left")}
+                      </ul>
+                    </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="110">
-                    <p class="mb-0">${copingNote}</p>
+                    <section class="m14l9-card m14l9-card-mental">
+                      <h3 class="m14l9-subtitle">
+                        <i class="fa-solid fa-brain"></i>
+                        ${yhLang("Mental Symptoms", "মানসিক উপসর্গ")}
+                      </h3>
+                      <ul class="m14l9-list">
+                        ${renderList(mentalSymptoms, 95, "right")}
+                      </ul>
+                    </section>
+                  </div>
+
+                  <section class="m14l9-card m14l9-card-coping">
+                    <h3 class="m14l9-subtitle">
+                      <i class="fa-solid fa-shield-heart"></i>
+                      ${yhLang("Coping Steps", "মোকাবিলার কৌশল")}
+                    </h3>
+                    <ul class="m14l9-list">
+                      ${renderList(copingSteps, 110, "up")}
+                    </ul>
+                    <p class="m14l9-p m14l9-p-last">${copingNote}</p>
                   </section>
                 </div>
               `;
