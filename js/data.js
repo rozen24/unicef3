@@ -9034,125 +9034,121 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const angerContext =
-                "চ্যালেঞ্জিং আচরণ, সামাজিক সমর্থনের অভাব, আবেগীয় বিশৃঙ্খলা, মানসিক আঘাত, মানসিক চাপ কিংবা অপমানকর আচরণ আমাদের খুব সহজেই রাগান্বিত করে। লক্ষ্য পূরণে বাধা, অসম্মান বা অধিকার খর্ব হলে রাগের মাত্রা আরও বেড়ে যায়।";
+              const angerContext = yhLang(
+                "Challenging behavior, lack of support, emotional instability, stress, and humiliation can quickly trigger anger.",
+                "চ্যালেঞ্জিং আচরণ, সামাজিক সমর্থনের অভাব, আবেগীয় বিশৃঙ্খলা, মানসিক আঘাত, মানসিক চাপ কিংবা অপমানকর আচরণ আমাদের খুব সহজেই রাগান্বিত করে।"
+              );
+
+              const angerFocus = yhLang(
+                "If goals are blocked, rights are denied, or we feel disrespected, anger intensity often rises fast.",
+                "লক্ষ্য পূরণে বাধা, অসম্মান বা অধিকার খর্ব হলে রাগের মাত্রা আরও বেড়ে যায়।"
+              );
 
               const angerTriggers = [
-                "চ্যালেঞ্জিং আচরণ বা নেতিবাচক আচরণের ফলে",
-                "সামাজিক সমর্থনের অভাব",
-                "আবেগীয় বিশৃঙ্খলা — বিষণ্ণতা, উদ্বেগ ইত্যাদি",
-                "মানসিক আঘাতজনিত ঘটনা",
-                "মানসিক চাপ",
-                "আঘাত/অপমান করে কথা বললে",
-                "হুমকির সম্মুখীন হলে",
-                "নিজের লক্ষ্যে পৌঁছাতে বাধাগ্রস্ত হয়ে হতাশ হওয়ার ফলে",
-                "অসম্মানিত হওয়ার ফলে",
-                "অধিকার খর্ব হলে",
+                { text: yhLang("Negative or challenging behavior", "চ্যালেঞ্জিং বা নেতিবাচক আচরণ"), icon: "fa-triangle-exclamation", tone: "warn" },
+                { text: yhLang("Lack of social support", "সামাজিক সমর্থনের অভাব"), icon: "fa-people-group", tone: "slate" },
+                { text: yhLang("Emotional imbalance", "আবেগীয় বিশৃঙ্খলা"), icon: "fa-face-frown", tone: "violet" },
+                { text: yhLang("Traumatic experiences", "মানসিক আঘাতজনিত ঘটনা"), icon: "fa-burst", tone: "danger" },
+                { text: yhLang("Stress overload", "মানসিক চাপ"), icon: "fa-head-side-virus", tone: "amber" },
+                { text: yhLang("Insulting language", "আঘাত/অপমান করে কথা"), icon: "fa-comment-slash", tone: "red" },
+                { text: yhLang("Feeling threatened", "হুমকির সম্মুখীন হওয়া"), icon: "fa-shield-halved", tone: "danger" },
+                { text: yhLang("Goal frustration", "লক্ষ্যে বাধা পেয়ে হতাশা"), icon: "fa-road-block", tone: "info" },
+                { text: yhLang("Being disrespected", "অসম্মানিত হওয়া"), icon: "fa-user-xmark", tone: "peach" },
+                { text: yhLang("Rights being denied", "অধিকার খর্ব হওয়া"), icon: "fa-scale-balanced", tone: "accent" },
               ];
 
               const angerDamages = [
-                "শারীরিক ক্ষতি",
-                "মানসিক ক্ষতি",
-                "পেশাগত ক্ষতি",
-                "পড়ালেখার ক্ষতি",
-                "সম্পর্কের ক্ষতি",
-                "বিষণ্নতায় ভোগা",
-                "ভবিষ্যৎ নিয়ে দুশ্চিন্তা করা",
-                "ঘুমের সমস্যা",
-                "নেশায় জড়িয়ে পড়া",
-                "একই কাজ বারবার করার প্রবণতা",
-                "আত্ম-ক্ষতি বা নিজের ক্ষতি করা",
-                "রক্তচাপ বেড়ে যাওয়া",
+                { text: yhLang("Physical harm", "শারীরিক ক্ষতি"), icon: "fa-heart-crack", tone: "danger" },
+                { text: yhLang("Mental harm", "মানসিক ক্ষতি"), icon: "fa-brain", tone: "violet" },
+                { text: yhLang("Career setbacks", "পেশাগত ক্ষতি"), icon: "fa-briefcase", tone: "warn" },
+                { text: yhLang("Academic loss", "পড়ালেখার ক্ষতি"), icon: "fa-book-open", tone: "sky" },
+                { text: yhLang("Relationship damage", "সম্পর্কের ক্ষতি"), icon: "fa-people-arrows-left-right", tone: "red" },
+                { text: yhLang("Depressive mood", "বিষণ্নতায় ভোগা"), icon: "fa-cloud-rain", tone: "slate" },
+                { text: yhLang("Future anxiety", "ভবিষ্যৎ নিয়ে দুশ্চিন্তা"), icon: "fa-hourglass-half", tone: "indigo" },
+                { text: yhLang("Sleep disturbance", "ঘুমের সমস্যা"), icon: "fa-moon", tone: "accent" },
+                { text: yhLang("Substance risk", "নেশায় জড়িয়ে পড়া"), icon: "fa-flask-vial", tone: "amber" },
+                { text: yhLang("Repetitive harmful acts", "একই কাজ বারবার করা"), icon: "fa-repeat", tone: "teal" },
+                { text: yhLang("Self-harm risk", "আত্ম-ক্ষতির ঝুঁকি"), icon: "fa-bandage", tone: "danger" },
+                { text: yhLang("Blood pressure rise", "রক্তচাপ বেড়ে যাওয়া"), icon: "fa-heart-pulse", tone: "sun" },
               ];
 
-              const reflectionText =
-                "অপ্রত্যাশিত ঘটনা ঘটলে অসংখ্য নেতিবাচক চিন্তা মাথায় আসে এবং রাগ দ্রুত বেড়ে যায়। এই রাগ বিভিন্ন আচরণের মাধ্যমে প্রকাশ পায় এবং শারীরিক, মানসিক ও আচরণগত সংকেত দিয়ে বোঝা যায়। সময়মতো রাগকে সঠিক উপায়ে প্রকাশ, নিজের অধিকারের কথা বলা এবং স্বাস্থ্যকর কৌশল গ্রহণ করলে এর ক্ষতি কমানো সম্ভব।";
+              const actionPoints = [
+                { text: yhLang("Pause before reacting", "প্রতিক্রিয়ার আগে বিরতি নিন"), icon: "fa-pause", tone: "info" },
+                { text: yhLang("Express feelings safely", "নিরাপদভাবে অনুভূতি প্রকাশ করুন"), icon: "fa-comment-dots", tone: "success" },
+                { text: yhLang("Use deep breathing", "গভীর শ্বাস-প্রশ্বাস নিন"), icon: "fa-lungs", tone: "teal" },
+                { text: yhLang("Seek trusted support", "বিশ্বস্ত সহায়তা নিন"), icon: "fa-handshake", tone: "mint" },
+              ];
 
-              const renderList = (items, listType) => {
-                const iconPool = listType === "symptom"
-                  ? ["fa-heart-crack", "fa-face-frown", "fa-lungs", "fa-calendar-xmark", "fa-head-side-cough", "fa-person-falling"]
-                  : ["fa-leaf", "fa-egg", "fa-lemon", "fa-soap", "fa-fire-burner", "fa-shoe-prints"];
+              const reflectionText = yhLang(
+                "Unexpected situations can create rapid negative thoughts and increase anger. Timely regulation, respectful communication, and healthy coping can reduce harm.",
+                "অপ্রত্যাশিত ঘটনা ঘটলে নেতিবাচক চিন্তা দ্রুত বাড়ে এবং রাগ বেড়ে যায়। সময়মতো রাগ নিয়ন্ত্রণ, সম্মানজনক যোগাযোগ ও স্বাস্থ্যকর কৌশল গ্রহণ করলে ক্ষতি কমানো সম্ভব।"
+              );
 
-                const tonePool = listType === "symptom"
-                  ? ["warn", "danger", "info", "warn", "danger", "info"]
-                  : ["success", "accent", "info", "success", "accent", "warn"];
-
-                return items
-                  .map((item, index) => {
-                    const tone = tonePool[index % tonePool.length];
-                    const icon = iconPool[index % iconPool.length];
-                    return `
-                      <li class="m19l8-li m19l8-${tone}">
-                        <span class="m19l8-li-icon"><i class="fa-solid ${icon}"></i></span>
-                        <span class="m19l8-li-text">${item}</span>
+              const renderList = (items, baseDelay = 80, direction = "left") =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li class="m14l7-li m14l7-${item.tone}" data-aos="fade-${direction}" data-aos-delay="${baseDelay + idx * 12}">
+                        <span class="m14l7-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l7-li-text">${item.text}</span>
                       </li>
-                    `;
-                  })
+                    `
+                  )
                   .join("");
-              };
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Anger triggers and impacts",
-                    "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই"
-                  )}</h2>
+                <div class="m14l7-slide">
+                  <div class="m14l7-shape m14l7-shape-a"></div>
+                  <div class="m14l7-shape m14l7-shape-b"></div>
+                  <div class="m14l7-shape m14l7-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-0">${angerContext}</p>
+                  <header class="m14l7-header">
+                    <h2 class="m14l7-title">
+                      <i class="fa-solid fa-burst"></i>
+                      ${yhLang("Why We Get Angry Easily", "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই")}
+                    </h2>
+                  </header>
+
+                  <section class="m14l7-card m14l7-card-intro">
+                    <h3 class="m14l7-subtitle">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      ${yhLang("Context", "প্রেক্ষাপট")}
+                    </h3>
+                    <p class="m14l7-p">${angerContext}</p>
+                    <p class="m14l7-p m14l7-p-last">${angerFocus}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
-                    <div class="row g-4">
-                      <div class="col-lg-6">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-rose text-white">
-                              <i class="fa-solid fa-bolt"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "রাগের কারণ",
-                                "রাগের কারণ"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "সহজে রেগে যাওয়ার কারণ",
-                                "সহজে রেগে যাওয়ার কারণ"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(angerTriggers)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-indigo text-white">
-                              <i class="fa-solid fa-triangle-exclamation"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "রাগের ক্ষতি",
-                                "রাগের ক্ষতি"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "রাগের ফলে ক্ষয়ক্ষতি",
-                                "রাগের ফলে ক্ষয়ক্ষতি"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(angerDamages)}
-                          </ul>
-                        </article>
-                      </div>
-                    </div>
-                  </section>
+                  <div class="m14l7-grid">
+                    <section class="m14l7-card m14l7-card-trigger">
+                      <h3 class="m14l7-subtitle">
+                        <i class="fa-solid fa-bolt"></i>
+                        ${yhLang("Anger Triggers", "সহজে রেগে যাওয়ার কারণ")}
+                      </h3>
+                      <ul class="m14l7-list">
+                        ${renderList(angerTriggers, 80, "left")}
+                      </ul>
+                    </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="110">
-                    <p class="mb-0">${reflectionText}</p>
+                    <section class="m14l7-card m14l7-card-impact">
+                      <h3 class="m14l7-subtitle">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        ${yhLang("Possible Damages", "রাগের ফলে ক্ষয়ক্ষতি")}
+                      </h3>
+                      <ul class="m14l7-list">
+                        ${renderList(angerDamages, 95, "right")}
+                      </ul>
+                    </section>
+                  </div>
+
+                  <section class="m14l7-card m14l7-card-reflect">
+                    <h3 class="m14l7-subtitle">
+                      <i class="fa-solid fa-seedling"></i>
+                      ${yhLang("Healthy Response", "স্বাস্থ্যকর প্রতিক্রিয়া")}
+                    </h3>
+                    <p class="m14l7-p">${reflectionText}</p>
+                    <ul class="m14l7-list">
+                      ${renderList(actionPoints, 110, "up")}
+                    </ul>
                   </section>
                 </div>
               `;
