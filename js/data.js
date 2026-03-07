@@ -8659,17 +8659,28 @@ const coursesData = [
                 "নীরব থাকা বা চুপ করে থাকা",
               ];
 
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+              const renderList = (items, listType) => {
+                const iconPool = listType === "symptom"
+                  ? ["fa-heart-crack", "fa-face-frown", "fa-lungs", "fa-calendar-xmark", "fa-head-side-cough", "fa-person-falling"]
+                  : ["fa-leaf", "fa-egg", "fa-lemon", "fa-soap", "fa-fire-burner", "fa-shoe-prints"];
+
+                const tonePool = listType === "symptom"
+                  ? ["warn", "danger", "info", "warn", "danger", "info"]
+                  : ["success", "accent", "info", "success", "accent", "warn"];
+
+                return items
+                  .map((item, index) => {
+                    const tone = tonePool[index % tonePool.length];
+                    const icon = iconPool[index % iconPool.length];
+                    return `
+                      <li class="m19l8-li m19l8-${tone}">
+                        <span class="m19l8-li-icon"><i class="fa-solid ${icon}"></i></span>
+                        <span class="m19l8-li-text">${item}</span>
                       </li>
-                    `
-                  )
+                    `;
+                  })
                   .join("");
+              };
 
               const renderColumn = (title, items, delay = 80) => `
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="${delay}">
@@ -8784,17 +8795,28 @@ const coursesData = [
               const reflectionText =
                 "অপ্রত্যাশিত ঘটনা ঘটলে অসংখ্য নেতিবাচক চিন্তা মাথায় আসে এবং রাগ দ্রুত বেড়ে যায়। এই রাগ বিভিন্ন আচরণের মাধ্যমে প্রকাশ পায় এবং শারীরিক, মানসিক ও আচরণগত সংকেত দিয়ে বোঝা যায়। সময়মতো রাগকে সঠিক উপায়ে প্রকাশ, নিজের অধিকারের কথা বলা এবং স্বাস্থ্যকর কৌশল গ্রহণ করলে এর ক্ষতি কমানো সম্ভব।";
 
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+              const renderList = (items, listType) => {
+                const iconPool = listType === "symptom"
+                  ? ["fa-heart-crack", "fa-face-frown", "fa-lungs", "fa-calendar-xmark", "fa-head-side-cough", "fa-person-falling"]
+                  : ["fa-leaf", "fa-egg", "fa-lemon", "fa-soap", "fa-fire-burner", "fa-shoe-prints"];
+
+                const tonePool = listType === "symptom"
+                  ? ["warn", "danger", "info", "warn", "danger", "info"]
+                  : ["success", "accent", "info", "success", "accent", "warn"];
+
+                return items
+                  .map((item, index) => {
+                    const tone = tonePool[index % tonePool.length];
+                    const icon = iconPool[index % iconPool.length];
+                    return `
+                      <li class="m19l8-li m19l8-${tone}">
+                        <span class="m19l8-li-icon"><i class="fa-solid ${icon}"></i></span>
+                        <span class="m19l8-li-text">${item}</span>
                       </li>
-                    `
-                  )
+                    `;
+                  })
                   .join("");
+              };
 
               return `
                 <div class="lesson-slide">
@@ -14634,7 +14656,7 @@ const coursesData = [
                             </div>
                           </div>
                         </td>
-                        <td class="m19l7-details-cell">${item.details}</td>
+                        <td class="m19l7-details-cell"><span>${item.details}</span></td>
                       </tr>
                     `
                   )
@@ -14722,85 +14744,127 @@ const coursesData = [
             },
             content: (function () {
               const symptomPoints = [
-                "অবসাদ, কাজ-কর্মে অনীহা, দুর্বলতাবোধ করা ও ঘুমঘুমভাব অনুভব করা",
-                "শরীরের চামড়া ফ্যাকাসে হয়ে যায়",
-                "শ্বাস-প্রশ্বাসে কষ্ট হয়",
-                "দীর্ঘদিন রক্তস্বল্পতা থাকলে মাসিকের সমস্যা দেখা দিতে পারে (এলোমেলো মাসিক, কম রক্তপাত ইত্যাদি)",
-              ];
+              yhLang(
+                "Feeling fatigued, lacking interest in work, weakness, and drowsiness",
+                "অবসাদ, কাজ-কর্মে অনীহা, দুর্বলতাবোধ করা ও ঘুমঘুমভাব অনুভব করা"
+              ),
+              yhLang(
+                "Skin becomes pale",
+                "শরীরের চামড়া ফ্যাকাসে হয়ে যায়"
+              ),
+              yhLang(
+                "Difficulty in breathing",
+                "শ্বাস-প্রশ্বাসে কষ্ট হয়"
+              ),
+              yhLang(
+                "Long-term anemia may cause menstrual problems (irregular periods, low bleeding, etc.)",
+                "দীর্ঘদিন রক্তস্বল্পতা থাকলে মাসিকের সমস্যা দেখা দিতে পারে (এলোমেলো মাসিক, কম রক্তপাত ইত্যাদি)"
+              ),
+            ];
 
-              const preventionPoints = [
-                "গাঢ় সবুজ শাক-সবজি, টমেটো ইত্যাদি নিয়মিত খেতে হবে।",
-                "কলিজা, মাংস এবং ডিম নিয়মিত খেতে হবে।",
-                "ভিটামিন-সি সমৃদ্ধ খাবার যেমন : লেবু, কমলালেবু, রসালো ফল, লিচু, পেয়ারা, পেঁপে, আনারস, তরমুজ, আম ইত্যাদি নিয়মিত খেতে হবে।",
-                "ব্যক্তিগতভাবে পরিষ্কার-পরিচ্ছন্ন থাকতে হবে।",
-                "স্বল্প আঁচে/জ্বালে খাদ্যদ্রব্য ঢেকে রান্না করতে হবে।",
-                "পায়ে সব সময় জুতা/স্যান্ডেল ব্যবহার করতে হবে যাতে পেটে কৃমি না জন্মায়। ডাক্তারের পরামর্শ অনুযায়ী নিয়মিত বিরতিতে কৃমিনাশক ওষুধ খেতে হবে।",
-              ];
+            const preventionPoints = [
+              yhLang(
+                "Eat dark green leafy vegetables and tomatoes regularly.",
+                "গাঢ় সবুজ শাক-সবজি, টমেটো ইত্যাদি নিয়মিত খেতে হবে।"
+              ),
+              yhLang(
+                "Eat liver, meat, and eggs regularly.",
+                "কলিজা, মাংস এবং ডিম নিয়মিত খেতে হবে।"
+              ),
+              yhLang(
+                "Eat vitamin C rich foods such as lemon, orange, juicy fruits, litchi, guava, papaya, pineapple, watermelon, mango, etc. regularly.",
+                "ভিটামিন-সি সমৃদ্ধ খাবার যেমন : লেবু, কমলালেবু, রসালো ফল, লিচু, পেয়ারা, পেঁপে, আনারস, তরমুজ, আম ইত্যাদি নিয়মিত খেতে হবে।"
+              ),
+              yhLang(
+                "Maintain personal cleanliness.",
+                "ব্যক্তিগতভাবে পরিষ্কার-পরিচ্ছন্ন থাকতে হবে।"
+              ),
+              yhLang(
+                "Cook food on low heat and keep it covered.",
+                "স্বল্প আঁচে/জ্বালে খাদ্যদ্রব্য ঢেকে রান্না করতে হবে।"
+              ),
+              yhLang(
+                "Always wear shoes or sandals to prevent worms in the stomach. Take deworming medicine regularly as advised by a doctor.",
+                "পায়ে সব সময় জুতা/স্যান্ডেল ব্যবহার করতে হবে যাতে পেটে কৃমি না জন্মায়। ডাক্তারের পরামর্শ অনুযায়ী নিয়মিত বিরতিতে কৃমিনাশক ওষুধ খেতে হবে।"
+              ),
+            ];
 
-              const renderList = (items) =>
-                items
-                  .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+              const renderList = (items, listType) => {
+                const iconPool = listType === "symptom"
+                  ? ["fa-heart-crack", "fa-face-frown", "fa-lungs", "fa-calendar-xmark", "fa-head-side-cough", "fa-person-falling"]
+                  : ["fa-leaf", "fa-egg", "fa-lemon", "fa-soap", "fa-fire-burner", "fa-shoe-prints"];
+
+                const tonePool = listType === "symptom"
+                  ? ["warn", "danger", "info", "warn", "danger", "info"]
+                  : ["success", "accent", "info", "success", "accent", "warn"];
+
+                return items
+                  .map((item, index) => {
+                    const tone = tonePool[index % tonePool.length];
+                    const icon = iconPool[index % iconPool.length];
+                    return `
+                      <li class="m19l8-li m19l8-${tone}">
+                        <span class="m19l8-li-icon"><i class="fa-solid ${icon}"></i></span>
+                        <span class="m19l8-li-text">${item}</span>
                       </li>
-                    `
-                  )
+                    `;
+                  })
                   .join("");
+              };
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
-                    "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
-                  )}</h2>
+                <link rel="stylesheet" href="css/m19l8.css">
+                <div class="m19l8-container">
+                  <div class="m19l8-shape m19l8-shape-1"></div>
+                  <div class="m19l8-shape m19l8-shape-2"></div>
+                  <div class="m19l8-shape m19l8-shape-3"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="10">
-                    <p>এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। কিশোরীদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় কিশোরীদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।</p>
+                  <div class="m19l8-header" data-aos="fade-up">
+                    <h2 class="m19l8-h2"><i class="fa-solid fa-apple-whole"></i>${yhLang("কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ", "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ")}</h2>
+                  </div>
+
+                  <section class="m19l8-section m19l8-section-a" data-aos="fade-up" data-aos-delay="20">
+                    <h3 class="m19l8-h3"><i class="fa-solid fa-droplet"></i>${yhLang("এনিমিয়া বা রক্তস্বল্পতা", "এনিমিয়া বা রক্তস্বল্পতা")}</h3>
+                    <p class="m19l8-p">এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। কিশোরীদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় কিশোরীদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4">
-                      <div class="col-lg-6">
-                        <article class="h-100 p-3">
-                          <h3 class="gradient-text">রক্তস্বল্পতা দেখা দিলে শরীরে যেসব সমস্যা দেখা যায় :</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(symptomPoints)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-6">
-                        <article class="h-100 p-3">
-                          <h3 class="gradient-text">কীভাবে এনিমিয়া বা রক্তস্বল্পতা দূর করা যায় :</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(preventionPoints)}
-                          </ul>
-                        </article>
-                      </div>
+                  <section class="m19l8-section m19l8-section-b" data-aos="fade-up" data-aos-delay="40">
+                    <div class="m19l8-grid">
+                      <article class="m19l8-col-6 m19l8-box is-warning">
+                        <h3 class="m19l8-h3"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("রক্তস্বল্পতা দেখা দিলে শরীরে যেসব সমস্যা দেখা যায়", "রক্তস্বল্পতা দেখা দিলে শরীরে যেসব সমস্যা দেখা যায়")}</h3>
+                        <ul class="m19l8-list">
+                          ${renderList(symptomPoints, "symptom")}
+                        </ul>
+                      </article>
+                      <article class="m19l8-col-6 m19l8-box is-tip">
+                        <h3 class="m19l8-h3"><i class="fa-solid fa-shield-heart"></i>${yhLang("কীভাবে এনিমিয়া বা রক্তস্বল্পতা দূর করা যায়", "কীভাবে এনিমিয়া বা রক্তস্বল্পতা দূর করা যায়")}</h3>
+                        <ul class="m19l8-list">
+                          ${renderList(preventionPoints, "prevention")}
+                        </ul>
+                      </article>
                     </div>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
-                    <div class="row g-4">
-                      <div class="col-lg-4">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <h4 class="gradient-text mb-3">আয়রন ফলিক এসিড ট্যাবলেট</h4>
-                          <p>রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে। সরকারি স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।</p>
-                        </article>
-                      </div>
-                      <div class="col-lg-4">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <h4 class="gradient-text mb-3">আয়োডিন ঘাটতি :</h4>
-                          <p>মানবদেহে আয়োডিন একটি গুরুত্বপূর্ণ পুষ্টি উপাদান। আয়োডিন ঘাটতি হলে গলগণ্ড, খর্বতা ও বুদ্ধি প্রতিবন্ধিতাসহ বিভিন্ন সমস্যা দেখা দেয়, যা প্রতিরোধে আয়োডিনযুক্ত লবণ খেতে হয়।</p>
-                        </article>
-                      </div>
-                      <div class="col-lg-4">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <h4 class="gradient-text mb-3">ক্যালসিয়াম ঘাটতি :</h4>
-                          <p>ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই কৈশোরে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।</p>
-                        </article>
-                      </div>
+                  <section class="m19l8-section m19l8-section-c" data-aos="fade-up" data-aos-delay="60">
+                    <div class="m19l8-grid">
+                      <article class="m19l8-col-4 m19l8-box is-tip">
+                        <h4 class="m19l8-h4"><i class="fa-solid fa-tablets"></i>আয়রন ফলিক এসিড ট্যাবলেট</h4>
+                        <h5 class="m19l8-h5"><i class="fa-solid fa-clock"></i>${yhLang("সাপ্তাহিক গ্রহণ", "সাপ্তাহিক গ্রহণ")}</h5>
+                        <h6 class="m19l8-h6"><i class="fa-solid fa-circle-info"></i>${yhLang("প্রতিরোধ বার্তা", "প্রতিরোধ বার্তা")}</h6>
+                        <p>রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে। সরকারি স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।</p>
+                      </article>
+                      <article class="m19l8-col-4 m19l8-box is-definition">
+                        <h4 class="m19l8-h4"><i class="fa-solid fa-vial-circle-check"></i>আয়োডিন ঘাটতি :</h4>
+                        <h5 class="m19l8-h5"><i class="fa-solid fa-prescription-bottle"></i>${yhLang("আয়োডিনযুক্ত লবণ", "আয়োডিনযুক্ত লবণ")}</h5>
+                        <h6 class="m19l8-h6"><i class="fa-solid fa-brain"></i>${yhLang("বুদ্ধিবিকাশ সুরক্ষা", "বুদ্ধিবিকাশ সুরক্ষা")}</h6>
+                        <p>মানবদেহে আয়োডিন একটি গুরুত্বপূর্ণ পুষ্টি উপাদান। আয়োডিন ঘাটতি হলে গলগণ্ড, খর্বতা ও বুদ্ধি প্রতিবন্ধিতাসহ বিভিন্ন সমস্যা দেখা দেয়, যা প্রতিরোধে আয়োডিনযুক্ত লবণ খেতে হয়।</p>
+                      </article>
+                      <article class="m19l8-col-4 m19l8-box is-example">
+                        <h4 class="m19l8-h4"><i class="fa-solid fa-bone"></i>ক্যালসিয়াম ঘাটতি :</h4>
+                        <h5 class="m19l8-h5"><i class="fa-solid fa-tooth"></i>${yhLang("হাড় ও দাঁত", "হাড় ও দাঁত")}</h5>
+                        <h6 class="m19l8-h6"><i class="fa-solid fa-wave-square"></i>${yhLang("স্নায়ু ও রক্তজমাট", "স্নায়ু ও রক্তজমাট")}</h6>
+                        <p>ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই কৈশোরে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।</p>
+                      </article>
                     </div>
                   </section>
                 </div>
