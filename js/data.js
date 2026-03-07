@@ -8036,104 +8036,153 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const emotionDefinition =
-                "আবেগ হলো এক ধরনের মানসিক অবস্থা যা চিন্তন, অনুভূতি, আচরণগত প্রতিক্রিয়া এবং আনন্দ-বেদনার মাত্রার সাথে সম্পর্কিত। এর ফলে আমাদের শারীরিক, আচরণগত ও চিন্তার পরিবর্তন ঘটে।";
+              const emotionDefinition = yhLang(
+                "Emotion is a mental state linked with thoughts, feelings, behavioral reactions, and levels of pleasure or distress. It influences physical responses, behavior, and decision-making.",
+                "আবেগ হলো এক ধরনের মানসিক অবস্থা যা চিন্তন, অনুভূতি, আচরণগত প্রতিক্রিয়া এবং আনন্দ-বেদনার মাত্রার সাথে সম্পর্কিত। এর ফলে আমাদের শারীরিক, আচরণগত ও চিন্তার পরিবর্তন ঘটে।"
+              );
 
-              const emotionContext =
-                "আবেগ হলো অভ্যন্তরীণ এবং বাহ্যিক ঘটনার প্রতি শরীর ও আচরণের প্রতিক্রিয়া (রহমান, জ. ১৯৯৮)। ব্যক্তি থেকে ব্যক্তিতে আবেগের বহিঃপ্রকাশ ভিন্ন হয়। আবেগ ব্যবস্থাপনার অভাবে নানা পরিস্থিতিতে গোলযোগ দেখা দিতে পারে, তবে যথাযথ কৌশল শিখলে তা নিয়ন্ত্রণ করা সম্ভব।";
+              const emotionContext = yhLang(
+                "Emotion is a body-and-behavior response to internal and external events. Emotional expression differs by person, and without management strategies, daily situations can become disruptive.",
+                "আবেগ হলো অভ্যন্তরীণ এবং বাহ্যিক ঘটনার প্রতি শরীর ও আচরণের প্রতিক্রিয়া (রহমান, জ. ১৯৯৮)। ব্যক্তি থেকে ব্যক্তিতে আবেগের বহিঃপ্রকাশ ভিন্ন হয়। আবেগ ব্যবস্থাপনার অভাবে নানা পরিস্থিতিতে গোলযোগ দেখা দিতে পারে, তবে যথাযথ কৌশল শিখলে তা নিয়ন্ত্রণ করা সম্ভব।"
+              );
 
-              const managementIntro =
-                "দৈনন্দিন জীবনের নেতিবাচক অভিজ্ঞতা আমাদের আবেগকে সহজেই বিপর্যস্ত করে, ফলে কী করতে হবে তা নিয়ে অনিশ্চয়তা তৈরি হয়।";
+              const managementIntro = yhLang(
+                "Negative experiences in daily life can quickly destabilize emotions and create uncertainty about what action to take.",
+                "দৈনন্দিন জীবনের নেতিবাচক অভিজ্ঞতা আমাদের আবেগকে সহজেই বিপর্যস্ত করে, ফলে কী করতে হবে তা নিয়ে অনিশ্চয়তা তৈরি হয়।"
+              );
 
-              const managementDetails =
-                "সুশৃঙ্খল আবেগ ব্যবস্থাপনা ব্যক্তিকে আত্মনিয়ন্ত্রণে সহায়তা করে, নেতিবাচক পরিস্থিতিতে সঠিক প্রতিক্রিয়া বেছে নিতে শেখায় এবং ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করার শক্তি দেয়। এতে আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বৃদ্ধি পায়।";
+              const managementDetails = yhLang(
+                "Organized emotion management strengthens self-control, helps select appropriate responses, and supports productive action through self-awareness.",
+                "সুশৃঙ্খল আবেগ ব্যবস্থাপনা ব্যক্তিকে আত্মনিয়ন্ত্রণে সহায়তা করে, নেতিবাচক পরিস্থিতিতে সঠিক প্রতিক্রিয়া বেছে নিতে শেখায় এবং ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করার শক্তি দেয়। এতে আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বৃদ্ধি পায়।"
+              );
+
+              const emotionTrait = yhLang(
+                "Each person experiences and expresses emotions differently. Practical regulation skills reduce emotional confusion and improve clarity.",
+                "প্রতিটি ব্যক্তি ভিন্নভাবে আবেগ প্রকাশ করে এবং সঠিক কৌশল ছাড়া সহজেই আবেগীয় গোলযোগ দেখা দেয়।"
+              );
 
               const basicEmotions = [
-                yhLang("Joy", "সুখ"),
-                yhLang("Sadness", "দুঃখ"),
-                yhLang("Anger", "রাগ"),
-                yhLang("Fear", "ভয়"),
+                {
+                  text: yhLang("Joy", "সুখ"),
+                  icon: "fa-face-smile-beam",
+                  tone: "success",
+                },
+                {
+                  text: yhLang("Sadness", "দুঃখ"),
+                  icon: "fa-face-sad-tear",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Anger", "রাগ"),
+                  icon: "fa-fire",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Fear", "ভয়"),
+                  icon: "fa-person-circle-exclamation",
+                  tone: "warn",
+                },
               ];
 
               const managementBenefits = [
-                "আত্মনিয়ন্ত্রণে সহায়তা করে এবং নেতিবাচক পরিস্থিতি সামলানো সহজ হয়।",
-                "পরিস্থিতি অনুযায়ী কীভাবে প্রতিক্রিয়া দিতে হবে তা বুঝতে সাহায্য করে।",
-                "ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করতে উৎসাহিত করে।",
-                "আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বাড়ায়।",
+                {
+                  text: yhLang(
+                    "Supports self-control and helps manage difficult situations.",
+                    "আত্মনিয়ন্ত্রণে সহায়তা করে এবং নেতিবাচক পরিস্থিতি সামলানো সহজ হয়।"
+                  ),
+                  icon: "fa-shield-heart",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "Improves response selection based on context.",
+                    "পরিস্থিতি অনুযায়ী কীভাবে প্রতিক্রিয়া দিতে হবে তা বুঝতে সাহায্য করে।"
+                  ),
+                  icon: "fa-route",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang(
+                    "Encourages productive work through personal strengths.",
+                    "ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করতে উৎসাহিত করে।"
+                  ),
+                  icon: "fa-seedling",
+                  tone: "mint",
+                },
+                {
+                  text: yhLang(
+                    "Builds confidence, self-control, and self-esteem.",
+                    "আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বাড়ায়।"
+                  ),
+                  icon: "fa-star",
+                  tone: "sun",
+                },
               ];
 
-              const renderList = (items, baseDelay = 80) =>
+              const renderList = (items, baseDelay = 78) =>
                 items
                   .map(
                     (item, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                      <li class="m14l2-li m14l2-${item.tone}" data-aos="fade-left" data-aos-delay="${baseDelay + idx * 16}">
+                        <span class="m14l2-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l2-li-text">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Emotion essentials",
-                    "আবেগ (Emotion)"
-                  )}</h2>
+                <link rel="stylesheet" href="css/m14.css">
+                <div class="m14l2-slide">
+                  <span class="m14l2-shape m14l2-shape-a" aria-hidden="true"></span>
+                  <span class="m14l2-shape m14l2-shape-b" aria-hidden="true"></span>
+                  <span class="m14l2-shape m14l2-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${emotionDefinition}</p>
-                    <p class="mb-0">${emotionContext}</p>
+                  <header class="m14l2-header" data-aos="fade-up">
+                    <h2 class="m14l2-title">
+                      <i class="fa-solid fa-face-smile"></i>
+                      ${yhLang("Emotion essentials", "আবেগ (Emotion)")}
+                    </h2>
+                  </header>
+
+                  <section class="m14l2-card m14l2-card-intro" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="m14l2-subtitle">
+                      <i class="fa-solid fa-circle-info"></i>
+                      ${yhLang("What is emotion", "আবেগ কী")}
+                    </h3>
+                    <p class="m14l2-p">${emotionDefinition}</p>
+                    <p class="m14l2-p m14l2-p-last">${emotionContext}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-6">
-                        <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                          "মৌলিক আবেগ",
-                          "মৌলিক আবেগ"
-                        )}</h3>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(basicEmotions)}
-                        </ul>
-                      </div>
-                      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                        <article class="glass-card p-4 shadow-sm h-100">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-indigo text-white">
-                              <i class="fa-solid fa-brain"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "আবেগের বৈশিষ্ট্য",
-                                "আবেগের বৈশিষ্ট্য"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "ব্যক্তিভেদে ভিন্ন",
-                                "ব্যক্তিভেদে ভিন্ন"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <p class="mb-0">${yhLang(
-                            "প্রতিটি ব্যক্তি ভিন্নভাবে আবেগ প্রকাশ করে এবং সঠিক কৌশল ছাড়া সহজেই আবেগীয় গোলযোগ দেখা দেয়।",
-                            "প্রতিটি ব্যক্তি ভিন্নভাবে আবেগ প্রকাশ করে এবং সঠিক কৌশল ছাড়া সহজেই আবেগীয় গোলযোগ দেখা দেয়।"
-                          )}</p>
-                        </article>
-                      </div>
-                    </div>
+                  <section class="m14l2-grid" data-aos="fade-up" data-aos-delay="70">
+                    <article class="m14l2-card m14l2-card-basic">
+                      <h3 class="m14l2-subtitle">
+                        <i class="fa-solid fa-icons"></i>
+                        ${yhLang("Basic emotions", "মৌলিক আবেগ")}
+                      </h3>
+                      <ul class="m14l2-list">
+                        ${renderList(basicEmotions)}
+                      </ul>
+                    </article>
+
+                    <article class="m14l2-card m14l2-card-trait" data-aos="fade-left" data-aos-delay="96">
+                      <h3 class="m14l2-subtitle">
+                        <i class="fa-solid fa-brain"></i>
+                        ${yhLang("Emotion trait", "আবেগের বৈশিষ্ট্য")}
+                      </h3>
+                      <p class="m14l2-p m14l2-p-last">${emotionTrait}</p>
+                    </article>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "কেন আবেগ ব্যবস্থাপনা জরুরি",
-                      "কেন আবেগ ব্যবস্থাপনা জরুরি"
-                    )}</h3>
-                    <p class="mb-3">${managementIntro}</p>
-                    <p class="mb-4">${managementDetails}</p>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(managementBenefits)}
+                  <section class="m14l2-card m14l2-card-manage" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="m14l2-subtitle">
+                      <i class="fa-solid fa-sliders"></i>
+                      ${yhLang("Why emotion management matters", "কেন আবেগ ব্যবস্থাপনা জরুরি")}
+                    </h3>
+                    <p class="m14l2-p">${managementIntro}</p>
+                    <p class="m14l2-p">${managementDetails}</p>
+                    <ul class="m14l2-list">
+                      ${renderList(managementBenefits, 94)}
                     </ul>
                   </section>
                 </div>
