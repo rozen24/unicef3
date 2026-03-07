@@ -14550,62 +14550,136 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const rows = [
+                const nutrients = [
                 {
-                  title: "আয়রনযুক্ত খাবার মাসিকের সময় আয়রনের ঘাটতি দূর করে।",
-                  details:
-                    "মাছ, মাংস, কলিজা, ডিম, ঘন সবুজ পাতাজাতীয় শাকসবজি, দানাজাতীয় শস্য, মটরশুঁটি, সিম, বরবটি, বাদাম, সয়াবিন, গুড় ও শুকনা ফলে যথেষ্ট পরিমাণে আয়রন থাকে।",
+                  nameEn: "Iron-Rich Foods",
+                  nameBn: "আয়রনযুক্ত খাবার",
+                  icon: "fa-heart-pulse",
+                  role: yhLang(
+                    "Prevents iron deficiency during menstruation",
+                    "মাসিকের সময় আয়রনের ঘাটতি দূর করে"
+                  ),
+                  details: yhLang(
+                    "Fish, meat, liver, eggs, dark green leafy vegetables, grains, peas, beans, yard-long beans, nuts, soybeans, molasses, and dried fruits contain a good amount of iron.",
+                    "মাছ, মাংস, কলিজা, ডিম, ঘন সবুজ পাতাজাতীয় শাকসবজি, দানাজাতীয় শস্য, মটরশুঁটি, সিম, বরবটি, বাদাম, সয়াবিন, গুড় ও শুকনা ফলে যথেষ্ট পরিমাণে আয়রন থাকে।"
+                  ),
                 },
                 {
-                  title: "ক্যালসিয়ামযুক্ত খাবার রক্ত জমাট বাঁধায় সাহায্য করে।",
-                  details:
-                    "দুধ ক্যালসিয়ামের উৎকৃষ্ট উৎস। দুগ্ধজাতীয় খাদ্য যেমন দই, ছানা, পনির, মাওয়া, কাঁটাসহ ছোট মাছে প্রচুর ক্যালসিয়াম আছে। সবুজ শাকসবজি যেমন কলমিশাক, ডাঁটাশাক, পুঁইশাক, সজনে পাতা, লালশাক ইত্যাদিতে প্রচুর পরিমাণে ক্যালসিয়াম থাকে। সবজির মধ্যে ঢ্যাঁড়স, ধুন্দুল, বাঁধাকপি, ফুলকপি, সিম ইত্যাদি, ছোলা, মাসকলাই, মুগ ও সয়াবিনে ক্যালসিয়াম থাকে।",
+                  nameEn: "Calcium-Rich Foods",
+                  nameBn: "ক্যালসিয়ামযুক্ত খাবার",
+                  icon: "fa-bone",
+                  role: yhLang(
+                    "Helps blood clotting",
+                    "রক্ত জমাট বাঁধায় সাহায্য করে"
+                  ),
+                  details: yhLang(
+                    "Milk is an excellent source of calcium. Dairy foods such as yogurt, cottage cheese, paneer, and khoa contain high amounts of calcium. Small fish eaten with bones are also rich in calcium. Green vegetables such as kolmi shak, data shak, pui shak, drumstick leaves, and red amaranth contain plenty of calcium. Vegetables like okra, sponge gourd, cabbage, cauliflower, and beans, as well as chickpeas, black gram, mung beans, and soybeans, also contain calcium.",
+                    "দুধ ক্যালসিয়ামের উৎকৃষ্ট উৎস। দুগ্ধজাতীয় খাদ্য যেমন দই, ছানা, পনির, মাওয়া, কাঁটাসহ ছোট মাছে প্রচুর ক্যালসিয়াম আছে। সবুজ শাকসবজি যেমন কলমিশাক, ডাঁটাশাক, পুঁইশাক, সজনে পাতা, লালশাক ইত্যাদিতে প্রচুর পরিমাণে ক্যালসিয়াম থাকে। সবজির মধ্যে ঢ্যাঁড়স, ধুন্দুল, বাঁধাকপি, ফুলকপি, সিম ইত্যাদি, ছোলা, মাসকলাই, মুগ ও সয়াবিনে ক্যালসিয়াম থাকে।"
+                  ),
                 },
                 {
-                  title:
-                    "ম্যাগনেসিয়ামসমৃদ্ধ খাবার মাথাব্যথা ও পায়ের মাংসপেশীর যন্ত্রণা কমাতে সাহায্য করে।",
-                  details:
-                    "প্রায় সব ধরনের মাছেই উচ্চমাত্রায় ম্যাগনেসিয়াম আছে। গমের রুটি, সাদা ভাত, সবুজ পাতাযুক্ত শাকসবজি, পালংশাক, শিম, শিমের বিচি, বরবটি, মটরশুঁটি, কলা, কুমড়া, লেটুস পাতা ম্যাগনেসিয়ামের অন্যতম প্রধান উৎস। কাজুবাদাম, চীনাবাদাম—এগুলো ম্যাগনেসিয়ামের উৎকৃষ্ট উৎস।",
+                  nameEn: "Magnesium-Rich Foods",
+                  nameBn: "ম্যাগনেসিয়ামসমৃদ্ধ খাবার",
+                  icon: "fa-seedling",
+                  role: yhLang(
+                    "Reduces headaches and muscle pain",
+                    "মাথাব্যথা ও পায়ের মাংসপেশীর যন্ত্রণা কমাতে সাহায্য করে"
+                  ),
+                  details: yhLang(
+                    "Almost all types of fish contain high levels of magnesium. Whole wheat bread, white rice, green leafy vegetables, spinach, beans, bean seeds, yard-long beans, peas, bananas, pumpkin, and lettuce leaves are major sources of magnesium. Cashew nuts and peanuts are also excellent sources of magnesium.",
+                    "প্রায় সব ধরনের মাছেই উচ্চমাত্রায় ম্যাগনেসিয়াম আছে। গমের রুটি, সাদা ভাত, সবুজ পাতাযুক্ত শাকসবজি, পালংশাক, শিম, শিমের বিচি, বরবটি, মটরশুঁটি, কলা, কুমড়া, লেটুস পাতা ম্যাগনেসিয়ামের অন্যতম প্রধান উৎস। কাজুবাদাম, চীনাবাদাম-এগুলো ম্যাগনেসিয়ামের উৎকৃষ্ট উৎস।"
+                  ),
                 },
                 {
-                  title: "আঁশযুক্ত খাবার হজম বা পরিপাকে সহায়ক।",
-                  details:
-                    "ডাঁটাশাক, মটরশুঁটি, সিম, বরবটি, মিষ্টি আলু, গমের রুটি, ঢেঁকিছাটা চাল, ওটস, বাদাম, আপেল, কালো আঙুর, খেজুর ইত্যাদি।",
+                  nameEn: "Fiber-Rich Foods",
+                  nameBn: "আঁশযুক্ত খাবার",
+                  icon: "fa-wheat-awn",
+                  role: yhLang(
+                    "Aids in digestion",
+                    "হজম বা পরিপাকে সহায়ক"
+                  ),
+                  details: yhLang(
+                    "Leafy vegetables, peas, beans, yard-long beans, sweet potatoes, whole wheat bread, brown rice, oats, nuts, apples, black grapes, and dates are good sources of fiber.",
+                    "ডাঁটাশাক, মটরশুঁটি, সিম, বরবটি, মিষ্টি আলু, গমের রুটি, ঢেঁকিছাটা চাল, ওটস, বাদাম, আপেল, কালো আঙুর, খেজুর ইত্যাদি।"
+                  ),
                 },
                 {
-                  title:
-                    "ভিটামিনসমৃদ্ধ খাবার অনিয়মিত মাসিক ও মাসিকের সময়ে মাথাব্যথা কমাতে সাহায্য করে।",
-                  details:
-                    "ভিটামিন বি-১ সমৃদ্ধ খাবার: দুধ, ডিম, সামুদ্রিক মাছ, কড লিভার, কলিজা, মুরগি, ছোলা, পালংশাক, মটরশুঁটি, পাকা কলা ইত্যাদি। ভিটামিন ডি সমৃদ্ধ খাবার: ভেটকি বা কোরাল মাছ, তেলাপিয়া, মাগুর ও শুঁটকি মাছে ভিটামিন ডি আছে। ভিটামিন ডি-এর অপর একটি চমৎকার উৎস হচ্ছে দুধ। গরু ও খাসির মাংসের কলিজায় ভিটামিন ডি আছে। ডিমে অতিরিক্ত পরিমাণে ভিটামিন ডি আছে। যাদের উচ্চ রক্তচাপ আছে, তাদের ডিমের কুসুম খাওয়ার ক্ষেত্রে সতর্ক থাকতে হবে। শস্যদানায় ও মাশরুমে ভিটামিন ডি আছে। রোদ ভিটামিন ডি-এর অন্যতম উৎস। সকাল ১০টা থেকে বিকেল ৩টা পর্যন্ত রোদ সবচেয়ে ভালো। পাঁচ মিনিট থেকে আধাঘণ্টা পর্যন্ত সপ্তাহে দুবার রোদে বসলে অনেক উপকার পাওয়া যায়।",
+                  nameEn: "Vitamin-Rich Foods",
+                  nameBn: "ভিটামিনসমৃদ্ধ খাবার",
+                  icon: "fa-capsules",
+                  role: yhLang(
+                    "Helps regulate menstruation and reduces headaches",
+                    "অনিয়মিত মাসিক ও মাসিকের সময়ে মাথাব্যথা কমাতে সাহায্য করে"
+                  ),
+                  details: yhLang(
+                    "Vitamin B1 rich foods: milk, eggs, sea fish, cod liver, liver, chicken, chickpeas, spinach, peas, ripe bananas, etc. Vitamin D rich foods: fish such as vetki or coral fish, tilapia, catfish, and dried fish contain vitamin D. Milk is another excellent source of vitamin D. Beef and mutton liver also contain vitamin D. Eggs contain a high amount of vitamin D. People with high blood pressure should be cautious when consuming egg yolk. Grains and mushrooms also contain vitamin D. Sunlight is one of the best sources of vitamin D. Sunlight from 10 AM to 3 PM is most effective. Sitting in the sun for 5 minutes to half an hour twice a week can provide many benefits.",
+                    "ভিটামিন বি-১ সমৃদ্ধ খাবার: দুধ, ডিম, সামুদ্রিক মাছ, কড লিভার, কলিজা, মুরগি, ছোলা, পালংশাক, মটরশুঁটি, পাকা কলা ইত্যাদি। ভিটামিন ডি সমৃদ্ধ খাবার: ভেটকি বা কোরাল মাছ, তেলাপিয়া, মাগুর ও শুঁটকি মাছে ভিটামিন ডি আছে। ভিটামিন ডি-এর অপর একটি চমৎকার উৎস হচ্ছে দুধ। গরু ও খাসির মাংসের কলিজায় ভিটামিন ডি আছে। ডিমে অতিরিক্ত পরিমাণে ভিটামিন ডি আছে। যাদের উচ্চ রক্তচাপ আছে, তাদের ডিমের কুসুম খাওয়ার ক্ষেত্রে সতর্ক থাকতে হবে। শস্যদানায় ও মাশরুমে ভিটামিন ডি আছে। রোদ ভিটামিন ডি-এর অন্যতম উৎস। সকাল ১০টা থেকে বিকেল ৩টা পর্যন্ত রোদ সবচেয়ে ভালো। পাঁচ মিনিট থেকে আধাঘণ্টা পর্যন্ত সপ্তাহে দুবার রোদে বসলে অনেক উপকার পাওয়া যায়।"
+                  ),
                 },
               ];
 
               const renderRows = () =>
-                rows
+                nutrients
                   .map(
-                    (row) => `
-                      <tr>
-                        <td>${row.title}</td>
-                        <td>${row.details}</td>
+                    (item, idx) => `
+                      <tr class="m19l7-row-${idx + 1}" data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
+                        <td>
+                          <div class="m19l7-nutrient-cell">
+                            <span class="m19l7-nutrient-icon">
+                              <i class="fa-solid ${item.icon}"></i>
+                            </span>
+                            <div>
+                              <span class="m19l7-nutrient-label">${yhLang(item.nameEn, item.nameBn)}</span>
+                              <span class="m19l7-nutrient-role">${item.role}</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="m19l7-details-cell">${item.details}</td>
                       </tr>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Nutritious Food During Menstruation",
-                    "মাসিককালীন সময়ে পুষ্টিকর খাদ্য"
-                  )}</h2>
-                  <div class="modern-card glass-card p-4" data-aos="fade-up" data-aos-delay="60">
-                    <p class="mb-4">মাসিকের সময় দেহ থেকে রক্তক্ষরণ হয়, ফলে পুষ্টিহীনতা ও রক্তস্বল্পতা দেখা দিতে পারে। এই ঘাটতি পূরণের জন্য স্বাভাবিক খাবারের পাশাপাশি আয়রন, ক্যালসিয়াম, ম্যাগনেসিয়াম, আঁশযুক্ত ও ভিটামিনসমৃদ্ধ খাবার খাওয়া দরকার। এসব খাবার মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে সাহায্য করে।</p>
-                    <div class="table-responsive">
-                      <table class="table table-bordered table-striped align-middle">
+                <link rel="stylesheet" href="css/m19l7.css">
+                <div class="m19l7-container">
+                  <div class="m19l7-shape m19l7-shape-1"></div>
+                  <div class="m19l7-shape m19l7-shape-2"></div>
+                  <div class="m19l7-shape m19l7-shape-3"></div>
+
+                  <div class="m19l7-header" data-aos="fade-up">
+                    <h2 class="m19l7-title">
+                      <i class="fa-solid fa-droplet"></i>
+                      ${yhLang(
+                        "Nutritious Food During Menstruation",
+                        "মাসিককালীন সময়ে পুষ্টিকর খাদ্য"
+                      )}
+                    </h2>
+                    <p class="m19l7-subtitle">${yhLang(
+                      "Essential nutrients to maintain health during menstruation",
+                      "মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে প্রয়োজনীয় পুষ্টি উপাদান"
+                    )}</p>
+                  </div>
+
+                  <div class="m19l7-info" data-aos="fade-up" data-aos-delay="60">
+                    <div class="m19l7-info-icon">
+                      <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="m19l7-info-text">
+                      ${yhLang(
+                        "During menstruation, blood loss from the body can lead to malnutrition and anemia. To compensate for this deficiency, it is necessary to eat iron, calcium, magnesium, fiber and vitamin-rich foods along with normal food. These foods help to stay healthy and strong during menstruation.",
+                        "মাসিকের সময় দেহ থেকে রক্তক্ষরণ হয়, ফলে পুষ্টিহীনতা ও রক্তস্বল্পতা দেখা দিতে পারে। এই ঘাটতি পূরণের জন্য স্বাভাবিক খাবারের পাশাপাশি আয়রন, ক্যালসিয়াম, ম্যাগনেসিয়াম, আঁশযুক্ত ও ভিটামিনসমৃদ্ধ খাবার খাওয়া দরকার। এসব খাবার মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে সাহায্য করে।"
+                      )}
+                    </div>
+                  </div>
+
+                  <div class="m19l7-table-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="m19l7-table-responsive">
+                      <table class="m19l7-data-table">
                         <thead>
                           <tr>
-                            <th>খাদ্যের ধরণ ও ভূমিকা</th>
-                            <th>খাবারের উদাহরণ ও বিস্তারিত</th>
+                            <th>${yhLang("Nutrient Type & Role", "খাদ্যের ধরণ ও ভূমিকা")}</th>
+                            <th>${yhLang("Food Sources & Details", "খাবারের উদাহরণ ও বিস্তারিত")}</th>
                           </tr>
                         </thead>
                         <tbody>
