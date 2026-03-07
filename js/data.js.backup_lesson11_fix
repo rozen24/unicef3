@@ -15032,10 +15032,10 @@ const coursesData = [
           {
             id: "ch19-lesson-10",
             title: yhLang(
-              "Adolescent Nutrition and Weight Management",
+              "Actions to Prevent Adolescent Malnutrition",
               "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়"
             ),
-            icon: "fa-weight-scale",
+            icon: "fa-shield-heart",
             gradientClass: "bg-gradient-sunrise",
             audioFile: "",
             quiz: null,
@@ -15127,34 +15127,6 @@ const coursesData = [
                   )
                   .join("")}</ul>`;
 
-              const overweightCauses = [
-                {
-                  text: yhLang("Eating more calories than needed every day.", "প্রতিদিন প্রয়োজনের তুলনায় বেশি ক্যালোরিযুক্ত খাদ্য গ্রহণ"),
-                  icon: "fa-burger",
-                  tone: "warn",
-                },
-                {
-                  text: yhLang("Low physical activity and lack of regular sports.", "কম পরিশ্রম বা নিয়মিত খেলাধুলা না করা"),
-                  icon: "fa-person-walking",
-                  tone: "info",
-                },
-                {
-                  text: yhLang("Irregular lifestyle (late sleeping, late waking, skipping breakfast, overeating later, excessive mobile/screen time).", "অনিয়মিত জীবনযাপন করা (যেমন: রাতজাগা, ঘুম থেকে দেরিতে ওঠা, নাশতা না করে পরে অপরিমিত খাওয়া, বেশি পরিমাণে মোবাইল ফোন ব্যবহার/স্ক্রিনটাইম বেশি হওয়া)"),
-                  icon: "fa-mobile-screen-button",
-                  tone: "danger",
-                },
-                {
-                  text: yhLang("Frequent intake of fried, oily, and fatty foods (fast food, cola, chips, etc.).", "তেলে ভাজা, অধিক তৈলাক্ত ও চর্বিজাতীয় খাবার খাওয়া (যেমন: ফাস্ট ফুড, কোকাকোলা, চিপস ইত্যাদি)"),
-                  icon: "fa-pizza-slice",
-                  tone: "warn",
-                },
-                {
-                  text: yhLang("High intake of sugar and sweets.", "চিনি ও মিষ্টিজাতীয় খাবার বেশি খাওয়া"),
-                  icon: "fa-candy-cane",
-                  tone: "accent",
-                },
-              ];
-
               return `
                 <link rel="stylesheet" href="css/m19l10.css">
                 <div class="m19l10-container">
@@ -15162,22 +15134,25 @@ const coursesData = [
                   <div class="m19l10-shape m19l10-shape-2"></div>
                   <div class="m19l10-shape m19l10-shape-3"></div>
 
-                  <div class="m19l10-two-col">
-                    
-                    <section class="m19l10-section m19l10-section-a mb-3" data-aos="fade-up" data-aos-delay="40">
-                    <h2 class="m19l10-h2 mb-2"><i class="fa-solid fa-user-shield"></i>${yhLang("Actions to Prevent Adolescent Malnutrition", "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়")}</h2>
-                      ${renderList(preventionItems)}
-                    </section>
+                  <header class="m19l10-header" data-aos="fade-up">
+                    <h2 class="m19l10-h2"><i class="fa-solid fa-user-shield"></i>${yhLang("Actions to Prevent Adolescent Malnutrition", "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়")}</h2>
+                  </header>
 
-                    <section class="m19l10-section m19l10-section-c" data-aos="fade-up" data-aos-delay="60">
-                      <article class="m19l10-box is-definition mb-4">
-                       <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-scale-balanced"></i>${yhLang("Understanding Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজন বোঝা")}</h3>
-                       <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "BMI ২৫ থেকে ২৯.৯ অতিরিক্ত ওজন হিসেবে বিবেচিত হয়। BMI ৩০ বা তার বেশি স্থূলতা হিসেবে শ্রেণীবদ্ধ। কিশোর-কিশোরীদের মধ্যে স্থূলতার হার পারিবারিক পরিবেশ, খাদ্যাভ্যাস, সামাজিক-অর্থনৈতিক অবস্থা, নিয়মিত শারীরিক কার্যকলাপ এবং সুবিধা দ্বারা প্রভাবিত হয়।")}</p>
-                     </article>
-                      <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Causes of Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজনের কারণ")}</h3>
-                      ${renderList(overweightCauses)}
-                    </section>
-                  </div>
+                  <section class="m19l10-section m19l10-section-a" data-aos="fade-up" data-aos-delay="20">
+                    <h3 class="m19l10-h3"><i class="fa-solid fa-list-check"></i>${yhLang("Essential Prevention Practices", "প্রতিরোধের জরুরি করণীয়")}</h3>
+                    <div class="m19l10-grid">
+                      <article class="m19l10-box is-definition">
+                        <h4 class="m19l10-h4"><i class="fa-solid fa-circle-info"></i>${yhLang("Why It Matters", "কেন গুরুত্বপূর্ণ")}</h4>
+                        <h5 class="m19l10-h5"><i class="fa-solid fa-seedling"></i>${yhLang("Healthy Growth", "সুস্থ বৃদ্ধি")}</h5>
+                        <h6 class="m19l10-h6"><i class="fa-solid fa-people-group"></i>${yhLang("Family & Community Benefit", "পরিবার ও সমাজের উপকার")}</h6>
+                        <p class="m19l10-p">${yhLang("Simple daily habits in food, hygiene, and healthcare can reduce malnutrition risk and support stronger adolescent health.", "খাদ্যাভ্যাস, পরিচ্ছন্নতা ও স্বাস্থ্যসেবার ছোট ছোট দৈনন্দিন অভ্যাস অপুষ্টির ঝুঁকি কমায় এবং কিশোর-কিশোরীদের সুস্থতা বাড়ায়।")}</p>
+                      </article>
+                    </div>
+                  </section>
+
+                  <section class="m19l10-section m19l10-section-b" data-aos="fade-up" data-aos-delay="40">
+                    ${renderList(preventionItems)}
+                  </section>
                 </div>
               `;
             })(),
@@ -15195,27 +15170,27 @@ const coursesData = [
             content: (function () {
               const causePoints = [
                 {
-                  text: yhLang("Eating more calories than needed every day.", "প্রতিদিন প্রয়োজনের তুলনায় বেশি ক্যালোরিযুক্ত খাদ্য গ্রহণ"),
+                  text: yhLang("Eating more calories than needed every day.", "প্রতিদিন প্রয়োজনের তুলনায় বেশি ক্যালোরিযুক্ত খাদ্য গ্রহণ"),
                   icon: "fa-burger",
                   tone: "warn",
                 },
                 {
-                  text: yhLang("Low physical activity and lack of regular sports.", "কম পরিশ্রম বা নিয়মিত খেলাধুলা না করা"),
+                  text: yhLang("Low physical activity and lack of regular sports.", "কম পরিশ্রম বা নিয়মিত খেলাধুলা না করা"),
                   icon: "fa-person-walking",
                   tone: "info",
                 },
                 {
-                  text: yhLang("Irregular lifestyle (late sleeping, late waking, skipping breakfast, overeating later, excessive mobile/screen time).", "অনিয়মিত জীবনযাপন করা (যেমন: রাতজাগা, ঘুম থেকে দেরিতে ওঠা, নাশতা না করে পরে অপরিমিত খাওয়া, বেশি পরিমাণে মোবাইল ফোন ব্যবহার/স্ক্রিনটাইম বেশি হওয়া)"),
+                  text: yhLang("Irregular lifestyle (late sleeping, late waking, skipping breakfast, overeating later, excessive mobile/screen time).", "অনিয়মিত জীবনযাপন করা (যেমন: রাতজাগা, ঘুম থেকে দেরিতে ওঠা, নাশতা না করে পরে অপরিমিত খাওয়া, বেশি পরিমাণে মোবাইল ফোন ব্যবহার/স্ক্রিনটাইম বেশি হওয়া)"),
                   icon: "fa-mobile-screen-button",
                   tone: "danger",
                 },
                 {
-                  text: yhLang("Frequent intake of fried, oily, and fatty foods (fast food, cola, chips, etc.).", "তেলে ভাজা, অধিক তৈলাক্ত ও চর্বিজাতীয় খাবার খাওয়া (যেমন: ফাস্ট ফুড, কোকাকোলা, চিপস ইত্যাদি)"),
+                  text: yhLang("Frequent intake of fried, oily, and fatty foods (fast food, cola, chips, etc.).", "তেলে ভাজা, অধিক তৈলাক্ত ও চর্বিজাতীয় খাবার খাওয়া (যেমন: ফাস্ট ফুড, কোকাকোলা, চিপস ইত্যাদি)"),
                   icon: "fa-pizza-slice",
                   tone: "warn",
                 },
                 {
-                  text: yhLang("High intake of sugar and sweets.", "চিনি ও মিষ্টিজাতীয় খাবার বেশি খাওয়া"),
+                  text: yhLang("High intake of sugar and sweets.", "চিনি ও মিষ্টিজাতীয় খাবার বেশি খাওয়া"),
                   icon: "fa-candy-cane",
                   tone: "accent",
                 },
@@ -15246,12 +15221,12 @@ const coursesData = [
 
                   <section class="m19l11-section m19l11-section-a" data-aos="fade-up" data-aos-delay="20">
                     <article class="m19l11-box is-definition">
-                      <p class="m19l11-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities. Families often have limited knowledge about the importance of balanced diets, what constitutes balanced meals, and their benefits. Additionally, there is a shortage of suitable and safe play spaces for girls in both rural and urban areas.", "বডি মাস ইনডেক্স (BMI) ২৫ থেকে ২৯.৯ এর মেধ্য থাকলে তাকে অতিরিক্ত ওজন হিসেবে ধরা হয়। অন্যদিকে  BMI ৩০ বা তার বেশি হলে তাকে স্থূলতা বলা হয়। কিশোর-কিশোরীদের মেধ্য স্থূলতার হার বৃিদ্ধর জন্য ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধূলা, ব্যায়াম ও সুযোগ-সুবিধার প্রভাব বিদ্যমান। সুষম খাবারের প্রয়োজনীয়তা ও সুষম খাবার কোনগুলো ও তার সুফল সম্পর্কে পরিবারের মেধ্য ধারণা কম রয়েছে। তাছাড়া গ্রাম ও শহরে মেয়েদের উপযুক্ত খেলার স্থান ও নিরাপদ কাঠামোর সংকট রয়েছে।")}</p>
+                      <p class="m19l11-p">${yhLang("Among adolescents, obesity is influenced by home environment, food habits, socioeconomic status, physical activity, and limited safe spaces for regular play and exercise.", "কিশোর-কিশোরীদের মধ্যে স্থূলতার হার বৃদ্ধির জন্য ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধুলা, ব্যায়াম এবং নিরাপদ খেলার স্থানের সীমাবদ্ধতা গুরুত্বপূর্ণ ভূমিকা রাখে।")}</p>
                     </article>
                   </section>
 
                   <section class="m19l11-section m19l11-section-b" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="m19l11-h3"><i class="fa-solid fa-list-check"></i>${yhLang("Causes of Overweight and Obesity", "অধিক ওজন ও স্থূলতার কারণ")}</h3>
+                    <h3 class="m19l11-h3"><i class="fa-solid fa-list-check"></i>${yhLang("Main Causes of Overweight and Obesity", "অধিক ওজন ও স্থূলতার প্রধান কারণ")}</h3>
                     ${renderCauses(causePoints)}
                   </section>
                 </div>
