@@ -15032,7 +15032,7 @@ const coursesData = [
           {
             id: "ch19-lesson-10",
             title: yhLang(
-              "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়",
+              "Actions to Prevent Adolescent Malnutrition",
               "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়"
             ),
             icon: "fa-shield-heart",
@@ -15040,25 +15040,119 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
+              const preventionItems = [
+                {
+                  text: yhLang(
+                    "Eat a balanced diet such as carbohydrate foods (rice, bread, puffed rice, sugar, molasses, honey, potatoes, flattened rice, etc.), protein foods (eggs, milk, fish, meat, lentils, nuts, seeds, etc.), iron-rich foods (meat, liver, and dark green leafy vegetables), and vitamin A rich foods (liver, ripe papaya, mango, carrot, pumpkin, small fish, eggs, green leafy vegetables, and yellow-colored fruits).",
+                    "সুষম খাবার, যেমন— শর্করাজাতীয় খাবার (ভাত, রুটি, মুড়ি, চিনি, গুড়, মধু, আলু, চিড়া ইত্যাদি), আমিষজাতীয় খাবার (ডিম, দুধ, মাছ, মাংস, ডাল, বাদাম, বীচি ইত্যাদি), আয়রনসমৃদ্ধ খাবার (মাংস, কলিজা এবং গাঢ় সবুজ শাক-সবজি), ভিটামিন এ সমৃদ্ধ খাবার (কলিজা, পাকা পেঁপে, আম, গাজর, মিষ্টি কুমড়া, ছোট মাছ, ডিম, সবুজ শাক-সবজি ও হলুদ রঙের ফলমূল) খাওয়া"
+                  ),
+                  icon: "fa-bowl-food",
+                  tone: "success",
+                },
+                {
+                  text: yhLang(
+                    "Drink at least 8–10 glasses of water every day.",
+                    "প্রতিদিন কমপক্ষে ৮-১০ গ্লাস পানি পান করা"
+                  ),
+                  icon: "fa-glass-water",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "Eat sufficient vitamin B and vitamin C rich foods every day.",
+                    "প্রতিদিন পর্যাপ্ত পরিমাণে ভিটামিন বি এবং ভিটামিন সি-যুক্ত খাবার খাওয়া"
+                  ),
+                  icon: "fa-lemon",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang(
+                    "Take one iron–folic acid (IFA) tablet every week.",
+                    "প্রতি সপ্তাহে ১টি করে আয়রন-ফলিক এসিড (আইএফএ) ট্যাবলেট খাওয়া"
+                  ),
+                  icon: "fa-tablets",
+                  tone: "tip",
+                },
+                {
+                  text: yhLang(
+                    "Eat iodine-rich foods (such as sea fish and vegetables from coastal areas) and use iodized salt.",
+                    "আয়োডিনসমৃদ্ধ খাবার (সামুদ্রিক মাছ এবং সমুদ্র তীরবর্তী এলাকার শাক-সবজি) এবং আয়োডিনযুক্ত লবণ খাওয়া"
+                  ),
+                  icon: "fa-fish",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "Every adolescent should take deworming tablets every six months according to a doctor's advice.",
+                    "প্রত্যেক কিশোর-কিশোরীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি গ্রহণ করা"
+                  ),
+                  icon: "fa-user-doctor",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang(
+                    "Wash hands with soap and safe water before and after eating.",
+                    "খাবার খাওয়ার আগে ও পরে সাবান এবং নিরাপদ পানি দিয়ে হাত ধোয়া"
+                  ),
+                  icon: "fa-hand-sparkles",
+                  tone: "clean",
+                },
+                {
+                  text: yhLang(
+                    "Use hygienic latrines.",
+                    "স্বাস্থ্যসম্মত ল্যাট্রিন ব্যবহার করা"
+                  ),
+                  icon: "fa-house-chimney-medical",
+                  tone: "clean",
+                },
+                {
+                  text: yhLang(
+                    "No marriage before 18 and no child before 20.",
+                    "১৮-এর আগে বিয়ে নয়, ২০-এর আগে সন্তান নয়"
+                  ),
+                  icon: "fa-shield-heart",
+                  tone: "danger",
+                },
+              ];
+
+              const renderList = (items) =>
+                `<ul class="m19l10-list">${items
+                  .map(
+                    (item, index) => `
+                      <li class="m19l10-li m19l10-${item.tone}" data-aos="fade-up" data-aos-delay="${40 + index * 26}">
+                        <span class="m19l10-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m19l10-li-text">${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("")}</ul>`;
+
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়",
-                    "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়"
-                  )}</h2>
-                  <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="60">
-                    <ul class="list-unstyled puberty-list mb-0">
-                      <li><i class="fa-solid fa-circle-check"></i> সুষম খাবার, যেমন— শর্করাজাতীয় খাবার (ভাত, রুটি, মুড়ি, চিনি, গুড়, মধু, আলু, চিড়া ইত্যাদি), আমিষজাতীয় খাবার (ডিম, দুধ, মাছ, মাংস, ডাল, বাদাম, বীচি ইত্যাদি), আয়রনসমৃদ্ধ খাবার (মাংস, কলিজা এবং গাঢ় সবুজ শাক-সবজি), ভিটামিন এ সমৃদ্ধ খাবার (কলিজা, পাকা পেঁপে, আম, গাজর, মিষ্টি কুমড়া, ছোট মাছ, ডিম, সবুজ শাক-সবজি ও হলুদ রঙের ফলমূল) খাওয়া</li>
-                      <li><i class="fa-solid fa-circle-check"></i> প্রতিদিন কমপক্ষে ৮–১০ গ্লাস পানি পান করা</li>
-                      <li><i class="fa-solid fa-circle-check"></i> প্রতিদিন পর্যাপ্ত পরিমাণে ভিটামিন বি এবং ভিটামিন সি-যুক্ত খাবার খাওয়া</li>
-                      <li><i class="fa-solid fa-circle-check"></i> প্রতি সপ্তাহে ১টি করে আয়রন-ফলিক এসিড (আইএফএ) ট্যাবলেট খাওয়া</li>
-                      <li><i class="fa-solid fa-circle-check"></i> আয়োডিনসমৃদ্ধ খাবার (সামুদ্রিক মাছ এবং সমুদ্র তীরবর্তী এলাকার শাক-সবজি) এবং আয়োডিনযুক্ত লবণ খাওয়া</li>
-                      <li><i class="fa-solid fa-circle-check"></i> প্রত্যেক কিশোর-কিশোরীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি গ্রহণ করা</li>
-                      <li><i class="fa-solid fa-circle-check"></i> খাবার খাওয়ার আগে ও পরে সাবান এবং নিরাপদ পানি দিয়ে হাত ধোয়া</li>
-                      <li><i class="fa-solid fa-circle-check"></i> স্বাস্থ্যসম্মত ল্যাট্রিন ব্যবহার করা</li>
-                      <li><i class="fa-solid fa-circle-check"></i> ১৮-এর আগে বিয়ে নয়, ২০-এর আগে সন্তান নয়</li>
-                    </ul>
-                  </div>
+                <link rel="stylesheet" href="css/m19l10.css">
+                <div class="m19l10-container">
+                  <div class="m19l10-shape m19l10-shape-1"></div>
+                  <div class="m19l10-shape m19l10-shape-2"></div>
+                  <div class="m19l10-shape m19l10-shape-3"></div>
+
+                  <header class="m19l10-header" data-aos="fade-up">
+                    <h2 class="m19l10-h2"><i class="fa-solid fa-user-shield"></i>${yhLang("Actions to Prevent Adolescent Malnutrition", "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়")}</h2>
+                  </header>
+
+                  <section class="m19l10-section m19l10-section-a" data-aos="fade-up" data-aos-delay="20">
+                    <h3 class="m19l10-h3"><i class="fa-solid fa-list-check"></i>${yhLang("Essential Prevention Practices", "প্রতিরোধের জরুরি করণীয়")}</h3>
+                    <div class="m19l10-grid">
+                      <article class="m19l10-box is-definition">
+                        <h4 class="m19l10-h4"><i class="fa-solid fa-circle-info"></i>${yhLang("Why It Matters", "কেন গুরুত্বপূর্ণ")}</h4>
+                        <h5 class="m19l10-h5"><i class="fa-solid fa-seedling"></i>${yhLang("Healthy Growth", "সুস্থ বৃদ্ধি")}</h5>
+                        <h6 class="m19l10-h6"><i class="fa-solid fa-people-group"></i>${yhLang("Family & Community Benefit", "পরিবার ও সমাজের উপকার")}</h6>
+                        <p class="m19l10-p">${yhLang("Simple daily habits in food, hygiene, and healthcare can reduce malnutrition risk and support stronger adolescent health.", "খাদ্যাভ্যাস, পরিচ্ছন্নতা ও স্বাস্থ্যসেবার ছোট ছোট দৈনন্দিন অভ্যাস অপুষ্টির ঝুঁকি কমায় এবং কিশোর-কিশোরীদের সুস্থতা বাড়ায়।")}</p>
+                      </article>
+                    </div>
+                  </section>
+
+                  <section class="m19l10-section m19l10-section-b" data-aos="fade-up" data-aos-delay="40">
+                    ${renderList(preventionItems)}
+                  </section>
                 </div>
               `;
             })(),
