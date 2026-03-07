@@ -9183,80 +9183,106 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "রাগকে নিয়ন্ত্রণে রাখতে সচেতন বিরতি, শ্বাস-প্রশ্বাস, শারীরিক ব্যায়াম ও পেশাদার সহায়তার মতো কৌশল কার্যকর ভূমিকা পালন করে। ছোট ছোট ব্যবস্থাপনা কৌশল রাগের নেতিবাচক প্রভাব কমিয়ে আনে।";
+              const intro = yhLang(
+                "Anger can be managed through pause techniques, breathing, movement, and supportive communication.",
+                "রাগকে নিয়ন্ত্রণে রাখতে সচেতন বিরতি, শ্বাস-প্রশ্বাস, শারীরিক ব্যায়াম ও পেশাদার সহায়তার মতো কৌশল কার্যকর ভূমিকা পালন করে।"
+              );
 
-              const strategies = [
-                "প্রতিক্রিয়া প্রকাশের আগে কিছুটা সময় নেওয়া",
-                "১–১০ পর্যন্ত ধীরে ধীরে গুণতে থাকা",
-                "সততার সাথে যুক্তিসঙ্গত কথা বলা",
-                "পর্যাপ্ত ঘুম",
-                "ডায়েরি লেখা",
-                "নিয়মিত শরীরচর্চা বা ব্যায়াম করা",
-                "নিয়মিত নিঃশ্বাসের ব্যায়াম করা",
-                "পরিস্থিতি থেকে নিজেকে সরিয়ে নেওয়া",
-                "মনোচিকিৎসকের শরণাপন্ন হওয়া",
+              const context = yhLang(
+                "Small daily practices reduce the harmful impact of anger and improve self-control.",
+                "ছোট ছোট ব্যবস্থাপনা কৌশল রাগের নেতিবাচক প্রভাব কমিয়ে আনে এবং আত্মনিয়ন্ত্রণ বাড়ায়।"
+              );
+
+              const immediateStrategies = [
+                { text: yhLang("Pause before reaction", "প্রতিক্রিয়া প্রকাশের আগে বিরতি"), icon: "fa-pause", tone: "info" },
+                { text: yhLang("Count slowly from 1 to 10", "১–১০ পর্যন্ত ধীরে ধীরে গুণুন"), icon: "fa-list-ol", tone: "accent" },
+                { text: yhLang("Use respectful words", "যুক্তিসঙ্গত ও সম্মানজনক কথা বলুন"), icon: "fa-comment-dots", tone: "success" },
+                { text: yhLang("Step away briefly", "পরিস্থিতি থেকে সাময়িক দূরে যান"), icon: "fa-person-walking-arrow-right", tone: "sky" },
+                { text: yhLang("Practice deep breathing", "গভীর শ্বাস-প্রশ্বাস অনুশীলন"), icon: "fa-lungs", tone: "teal" },
               ];
 
-              const professionalNote =
-                "কিছু কিছু রাগ সম্পর্কিত সমস্যাগুলি নিজে নিজে ব্যবস্থাপনা সম্ভব হয় না। এমন ক্ষেত্রে পেশাদার মনোচিকিৎসকের সহায়তা নিলে উন্নত ফল পাওয়া যায় এবং নিরাপদে রাগ নিয়ন্ত্রণ সম্ভব হয়।";
+              const lifestyleStrategies = [
+                { text: yhLang("Sleep adequately", "পর্যাপ্ত ঘুম"), icon: "fa-moon", tone: "indigo" },
+                { text: yhLang("Write a journal", "ডায়েরি লেখা"), icon: "fa-pen", tone: "violet" },
+                { text: yhLang("Exercise regularly", "নিয়মিত ব্যায়াম"), icon: "fa-person-running", tone: "sun" },
+                { text: yhLang("Keep breathing routine", "নিয়মিত শ্বাস-প্রশ্বাস ব্যায়াম"), icon: "fa-wind", tone: "mint" },
+              ];
 
-              const renderList = (items) =>
+              const supportStrategies = [
+                { text: yhLang("Talk to trusted person", "বিশ্বস্ত কারো সাথে কথা বলুন"), icon: "fa-people-group", tone: "peach" },
+                { text: yhLang("Seek counselor when needed", "প্রয়োজনে মনোচিকিৎসকের সহায়তা নিন"), icon: "fa-user-doctor", tone: "danger" },
+              ];
+
+              const professionalNote = yhLang(
+                "Some anger-related problems cannot be managed alone; professional support can provide safer and better outcomes.",
+                "কিছু কিছু রাগ সম্পর্কিত সমস্যাগুলি নিজে নিজে ব্যবস্থাপনা সম্ভব হয় না। এমন ক্ষেত্রে পেশাদার মনোচিকিৎসকের সহায়তা নিলে উন্নত ফল পাওয়া যায় এবং নিরাপদে রাগ নিয়ন্ত্রণ সম্ভব হয়।"
+              );
+
+              const renderList = (items, baseDelay = 80, direction = "left") =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, idx) => `
+                      <li class="m14l8-li m14l8-${item.tone}" data-aos="fade-${direction}" data-aos-delay="${baseDelay + idx * 12}">
+                        <span class="m14l8-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l8-li-text">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Practical anger strategies",
-                    "রাগ ব্যবস্থাপনার কৌশল"
-                  )}</h2>
+                <div class="m14l8-slide">
+                  <div class="m14l8-shape m14l8-shape-a"></div>
+                  <div class="m14l8-shape m14l8-shape-b"></div>
+                  <div class="m14l8-shape m14l8-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-0">${intro}</p>
+                  <header class="m14l8-header">
+                    <h2 class="m14l8-title">
+                      <i class="fa-solid fa-hand-holding-heart"></i>
+                      ${yhLang("Anger Management Techniques", "রাগ ব্যবস্থাপনার কৌশল")}
+                    </h2>
+                  </header>
+
+                  <section class="m14l8-card m14l8-card-intro">
+                    <h3 class="m14l8-subtitle">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      ${yhLang("Core Idea", "মূল ধারণা")}
+                    </h3>
+                    <p class="m14l8-p">${intro}</p>
+                    <p class="m14l8-p m14l8-p-last">${context}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
-                    <div class="row g-4 align-items-stretch">
-                      <div class="col-lg-7">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-emerald text-white">
-                              <i class="fa-solid fa-hands-praying"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "কৌশল",
-                                "কৌশল"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "রাগ নিয়ন্ত্রণের ব্যবহারিক পদ্ধতি",
-                                "রাগ নিয়ন্ত্রণের ব্যবহারিক পদ্ধতি"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(strategies)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
-                        <article class="glass-card p-4 h-100 shadow-sm text-center d-flex flex-column justify-content-center">
-                          <div class="icon-circle bg-gradient-sunrise text-white mb-3 mx-auto">
-                            <i class="fa-solid fa-user-md"></i>
-                          </div>
-                          <p class="mb-0">${professionalNote}</p>
-                        </article>
-                      </div>
-                    </div>
+                  <div class="m14l8-grid">
+                    <section class="m14l8-card m14l8-card-immediate">
+                      <h3 class="m14l8-subtitle">
+                        <i class="fa-solid fa-bolt"></i>
+                        ${yhLang("Immediate Techniques", "তাৎক্ষণিক কৌশল")}
+                      </h3>
+                      <ul class="m14l8-list">
+                        ${renderList(immediateStrategies, 80, "left")}
+                      </ul>
+                    </section>
+
+                    <section class="m14l8-card m14l8-card-lifestyle">
+                      <h3 class="m14l8-subtitle">
+                        <i class="fa-solid fa-seedling"></i>
+                        ${yhLang("Daily Habits", "দৈনন্দিন অভ্যাস")}
+                      </h3>
+                      <ul class="m14l8-list">
+                        ${renderList(lifestyleStrategies, 95, "right")}
+                      </ul>
+                    </section>
+                  </div>
+
+                  <section class="m14l8-card m14l8-card-support">
+                    <h3 class="m14l8-subtitle">
+                      <i class="fa-solid fa-handshake-angle"></i>
+                      ${yhLang("Support and Safety", "সহায়তা ও নিরাপত্তা")}
+                    </h3>
+                    <ul class="m14l8-list">
+                      ${renderList(supportStrategies, 110, "up")}
+                    </ul>
+                    <p class="m14l8-p m14l8-p-last">${professionalNote}</p>
                   </section>
                 </div>
               `;
