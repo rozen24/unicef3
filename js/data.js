@@ -7797,121 +7797,210 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const introPrimary =
-                "কৈশোরকালীন সময়ে কিশোর-কিশোরীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।";
+              const introPrimary = yhLang(
+                "Adolescence brings psychosocial changes that influence communication patterns with family, friends, and peers.",
+                "কৈশোরকালীন সময়ে কিশোর-কিশোরীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।"
+              );
 
-              const introSecondary =
-                "মনোসামাজিক বিকাশকে প্রভাবিত করে জিনগত বৈশিষ্ট্য, মস্তিষ্কের বিকাশ, অভিজ্ঞতা এবং চারপাশের পরিবেশ। এর মাধ্যমে আত্মনির্ভরশীলতা ও প্রাপ্তবয়স্ক বৈশিষ্ট্য ধীরে ধীরে বিকশিত হয়।";
+              const introSecondary = yhLang(
+                "Psychosocial development is influenced by genetics, brain growth, life experience, and environment, gradually shaping independence and adult traits.",
+                "মনোসামাজিক বিকাশকে প্রভাবিত করে জিনগত বৈশিষ্ট্য, মস্তিষ্কের বিকাশ, অভিজ্ঞতা এবং চারপাশের পরিবেশ। এর মাধ্যমে আত্মনির্ভরশীলতা ও প্রাপ্তবয়স্ক বৈশিষ্ট্য ধীরে ধীরে বিকশিত হয়।"
+              );
 
               const socialChanges = [
-                yhLang("Exploring personal identity", "ব্যক্তিগত পরিচয় অনুসন্ধান করা"),
-                yhLang("Developing greater independence", "অধিক স্বাধীনচেতা মনোভাব"),
-                yhLang("Seeking more responsibility", "অধিক দায়িত্ব অন্বেষণ করা"),
-                yhLang("Engaging in risk-taking behavior", "ঝুঁকি-গ্রহণমূলক আচরণ"),
-                yhLang("Navigating relationships", "সম্পর্কজনিত বিষয়"),
+                {
+                  text: yhLang("Exploring personal identity", "ব্যক্তিগত পরিচয় অনুসন্ধান করা"),
+                  icon: "fa-fingerprint",
+                  tone: "info",
+                },
+                {
+                  text: yhLang("Developing greater independence", "অধিক স্বাধীনচেতা মনোভাব"),
+                  icon: "fa-compass",
+                  tone: "success",
+                },
+                {
+                  text: yhLang("Seeking more responsibility", "অধিক দায়িত্ব অন্বেষণ করা"),
+                  icon: "fa-list-check",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang("Engaging in risk-taking behavior", "ঝুঁকি-গ্রহণমূলক আচরণ"),
+                  icon: "fa-triangle-exclamation",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Navigating relationships", "সম্পর্কজনিত বিষয়"),
+                  icon: "fa-user-group",
+                  tone: "violet",
+                },
               ];
 
               const emotionalChanges = [
-                yhLang("Periods of low self-esteem", "নিম্ন আত্মসম্মানবোধ"),
-                yhLang(
-                  "Emotional challenges like anger, anxiety, stress, depression",
-                  "আবেগীয় সমস্যা (অত্যধিক রাগ, নিরাপত্তাহীনতা, উদ্বেগ, চাপ, হতাশা, বিষণ্নতা)"
-                ),
-                yhLang("Withdrawal or isolation", "প্রত্যাহারমূলক মনোভাব"),
-                yhLang("Rebellious or defiant actions", "বিদ্রোহী আচরণ"),
+                {
+                  text: yhLang("Periods of low self-esteem", "নিম্ন আত্মসম্মানবোধ"),
+                  icon: "fa-seedling",
+                  tone: "mint",
+                },
+                {
+                  text: yhLang(
+                    "Emotional challenges like anger, anxiety, stress, depression",
+                    "আবেগীয় সমস্যা (অত্যধিক রাগ, নিরাপত্তাহীনতা, উদ্বেগ, চাপ, হতাশা, বিষণ্নতা)"
+                  ),
+                  icon: "fa-brain",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Withdrawal or isolation", "প্রত্যাহারমূলক মনোভাব"),
+                  icon: "fa-door-closed",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Rebellious or defiant actions", "বিদ্রোহী আচরণ"),
+                  icon: "fa-bolt",
+                  tone: "sun",
+                },
               ];
 
               const psychosocialComplexities = [
-                yhLang("Peer pressure", "সহপাঠীর প্রভাব"),
-                yhLang("Interference in studies", "পড়াশোনায় ব্যাঘাত"),
-                yhLang("Communication gaps", "যোগাযোগের অভাব"),
-                yhLang("Difficulty achieving institutional success", "প্রাতিষ্ঠানিক সফলতা অর্জনে জটিলতা"),
-                yhLang("Substance use and addiction", "মাদক গ্রহণ ও অন্যান্য আসক্তি"),
-                yhLang("Struggling with decision-making", "সিদ্ধান্ত গ্রহণে জটিলতা"),
+                {
+                  text: yhLang("Peer pressure", "সহপাঠীর প্রভাব"),
+                  icon: "fa-users-viewfinder",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Interference in studies", "পড়াশোনায় ব্যাঘাত"),
+                  icon: "fa-book-open-reader",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Communication gaps", "যোগাযোগের অভাব"),
+                  icon: "fa-comments",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang(
+                    "Difficulty achieving institutional success",
+                    "প্রাতিষ্ঠানিক সফলতা অর্জনে জটিলতা"
+                  ),
+                  icon: "fa-school",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Substance use and addiction", "মাদক গ্রহণ ও অন্যান্য আসক্তি"),
+                  icon: "fa-ban",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Struggling with decision-making", "সিদ্ধান্ত গ্রহণে জটিলতা"),
+                  icon: "fa-lightbulb",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang("Conflict and violent behavior", "সংর্ঘষ এবং সহিংসতামূলক আচরণ"),
+                  icon: "fa-hand-fist",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Extremist behavior", "চরম্পন্থি আচরণ"),
+                  icon: "fa-person-rifle",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Emotion dysregulation", "আবগে"),
+                  icon: "fa-heart-crack",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Anxiety", "উদ্বগে"),
+                  icon: "fa-head-side-virus",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Mental stress", "মানসকি চাপ"),
+                  icon: "fa-brain",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Anger", "রাগ"),
+                  icon: "fa-fire",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang("Exam fear", "পরীক্ষা ভীতি"),
+                  icon: "fa-file-pen",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Digital addiction", "ডিজিটাল আসক্তি"),
+                  icon: "fa-mobile-screen-button",
+                  tone: "teal",
+                },
               ];
 
-              const renderList = (items, baseDelay = 80) =>
+              const renderList = (items, baseDelay = 70) =>
                 items
                   .map(
                     (item, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                      <li class="m14l1-li m14l1-${item.tone}" data-aos="fade-left" data-aos-delay="${baseDelay + idx * 16}">
+                        <span class="m14l1-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l1-li-text">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Psychosocial transitions in adolescence",
-                    "কৈশোরকালীন মনোসামাজিক পরিবর্তন"
-                  )}</h2>
+                <link rel="stylesheet" href="css/m14.css">
+                <div class="m14l1-slide">
+                  <span class="m14l1-shape m14l1-shape-a" aria-hidden="true"></span>
+                  <span class="m14l1-shape m14l1-shape-b" aria-hidden="true"></span>
+                  <span class="m14l1-shape m14l1-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${introPrimary}</p>
-                    <p class="mb-0">${introSecondary}</p>
+                  <header class="m14l1-header" data-aos="fade-up">
+                    <h2 class="m14l1-title">
+                      <i class="fa-solid fa-people-roof"></i>
+                      ${yhLang("Psychosocial transitions in adolescence", "কৈশোরকালীন মনোসামাজিক পরিবর্তন")}
+                    </h2>
+                  </header>
+
+                  <section class="m14l1-card m14l1-card-intro" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="m14l1-subtitle">
+                      <i class="fa-solid fa-circle-info"></i>
+                      ${yhLang("Overview", "সংক্ষিপ্ত পরিচিতি")}
+                    </h3>
+                    <p class="m14l1-p">${introPrimary}</p>
+                    <p class="m14l1-p m14l1-p-last">${introSecondary}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <div class="row g-4">
-                      <div class="col-lg-6">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-emerald text-white">
-                              <i class="fa-solid fa-people-group"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "সামাজিক পরিবর্তন",
-                                "সামাজিক পরিবর্তন"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "Social adjustments",
-                                "সামাজিক পরিবর্তনসমূহ"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(socialChanges)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-6">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-rose text-white">
-                              <i class="fa-solid fa-heart"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "আবেগজনিত পরিবর্তন",
-                                "আবেগজনিত পরিবর্তন"
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "Emotional shifts",
-                                "আবেগজনিত/আবেগীয় পরিবর্তনসমূহ"
-                              )}</h3>
-                            </div>
-                          </div>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(emotionalChanges, 90)}
-                          </ul>
-                        </article>
-                      </div>
-                    </div>
+                  <section class="m14l1-grid" data-aos="fade-up" data-aos-delay="70">
+                    <article class="m14l1-card m14l1-card-social">
+                      <h3 class="m14l1-subtitle">
+                        <i class="fa-solid fa-people-group"></i>
+                        ${yhLang("Social adjustments", "সামাজিক পরিবর্তনসমূহ")}
+                      </h3>
+                      <ul class="m14l1-list">
+                        ${renderList(socialChanges)}
+                      </ul>
+                    </article>
+
+                    <article class="m14l1-card m14l1-card-emotional">
+                      <h3 class="m14l1-subtitle">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        ${yhLang("Emotional shifts", "আবেগজনিত পরিবর্তনসমূহ")}
+                      </h3>
+                      <ul class="m14l1-list">
+                        ${renderList(emotionalChanges, 85)}
+                      </ul>
+                    </article>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "কৈশোরকালীন মনোসামাজিক জটিলতাসমূহ",
-                      "কৈশোরকালীন মনোসামাজিক জটিলতাসমূহ"
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(psychosocialComplexities)}
+                  <section class="m14l1-card m14l1-card-complex" data-aos="fade-up" data-aos-delay="95">
+                    <h3 class="m14l1-subtitle">
+                      <i class="fa-solid fa-diagram-project"></i>
+                      ${yhLang("Psychosocial complexities", "কৈশোরকালীন মনোসামাজিক জটিলতাসমূহ")}
+                    </h3>
+                    <ul class="m14l1-list">
+                      ${renderList(psychosocialComplexities, 95)}
                     </ul>
                   </section>
                 </div>
