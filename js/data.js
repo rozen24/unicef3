@@ -566,7 +566,7 @@ const coursesData = [
                 icon: "fa-chart-line",
                 text: yhLang(
                   "I drive awareness and demand creation within communities, inspiring collective responsibility and action towards better health outcomes for adolescents and youth.",
-                  "আমি সম্প্রদায়জুড়ে সচেতনতা ও চাহিদা সৃষ্টিতে ভূমিকা রাখি, যাতে সবাই মিলে কিশোর-কিশোরীদের উন্নত স্বাস্থ্যফল নিশ্চিত করতে পারে।"
+                  "আমি সম্প্রদায়জুড়ে সচেতনতা ও চাহিদা সৃষ্টিতে ভূমিকা রাখি, যাতে সবাই মিলে তরুন-তরুনীদের উন্নত স্বাস্থ্যফল নিশ্চিত করতে পারে।"
                 ),
               },
             ]
@@ -1177,7 +1177,7 @@ const coursesData = [
 
                 <!-- Sex-disaggregated Top 5 Causes (UNICEF Adolescent Data Portal 2019) -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="60">
-                  <h5 class="gradient-text mb-3">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ‘অ্যাডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী, বাংলাদেশে ১০–১৯ বছর বয়সী কিশোর-কিশোরীদের মৃত্যুর শীর্ষ ৫ কারণ হলো:")}
+                  <h5 class="gradient-text mb-3">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ‘অ্যাডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী, বাংলাদেশে ১০–১৯ বছর বয়সী তরুন-তরুনীদের মৃত্যুর শীর্ষ ৫ কারণ হলো:")}
                   </h5>
                   <div class="row g-3">
                     <div class="col-lg-6">
@@ -1291,7 +1291,7 @@ const coursesData = [
                     <div class="col-md-6">
                       <div class="modern-card glass-card h-100">
                         <div class="d-flex align-items-center justify-content-between mb-2">
-                          <span class="badge-pill">${yhLang("Adolescents (10–19)", "কিশোর-কিশোরী (১০–১৯)")}</span>
+                          <span class="badge-pill">${yhLang("Adolescents (10–19)", "তরুন-তরুনী (১০–১৯)")}</span>
                         </div>
                         <div style="position:relative; height:320px;">
                           <canvas id="bdMortalityAdolescents" aria-label="Adolescent mortality distribution (relative)" role="img"></canvas>
@@ -1626,7 +1626,7 @@ const coursesData = [
                 ),
                 yhLang(
                   'Anaemia: nearly <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> adolescents are anaemic.',
-                  'রক্তস্বল্পতা: প্রায় <span class="stat-chip"><span class="value">৩০</span><span class="unit">%</span></span> কিশোর-কিশোরী রক্তস্বল্পতায় ভোগে।'
+                  'রক্তস্বল্পতা: প্রায় <span class="stat-chip"><span class="value">৩০</span><span class="unit">%</span></span> তরুন-তরুনী রক্তস্বল্পতায় ভোগে।'
                 ),
               ];
 
@@ -1660,7 +1660,7 @@ const coursesData = [
                 ),
                 yhLang(
                   'About <span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents remain in child labour.',
-                  'প্রায় <span class="stat-chip"><span class="value">১.৭৮</span><span class="unit">মিলিয়ন</span></span> কিশোর-কিশোরী শিশুশ্রমে নিযুক্ত।'
+                  'প্রায় <span class="stat-chip"><span class="value">১.৭৮</span><span class="unit">মিলিয়ন</span></span> তরুন-তরুনী শিশুশ্রমে নিযুক্ত।'
                 ),
                 yhLang(
                   'During monsoon <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown (~<span class="stat-chip"><span class="value">14,000</span></span> annually).',
@@ -1699,7 +1699,7 @@ const coursesData = [
 
                 <div class="fact-card alert-info hover-lift-sm transition-base icon-spin-on-hover mb-3" data-aos="fade-up" data-aos-delay="60">
                   <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                  <p class="mb-0">${yhLang("Actions to improve adolescent health and wellbeing need to address established and emerging determinants and <strong>meaningfully engage</strong> with adolescents and young people.", "কৈশোর স্বাস্থ্য ও সুস্থতা উন্নত করতে বিদ্যমান ও নতুন নির্ধারকগুলো মোকাবিলা করতে হবে এবং কিশোর-কিশোরীদের <strong>অর্থবহভাবে সম্পৃক্ত</strong> করতে হবে।")}</p>
+                  <p class="mb-0">${yhLang("Actions to improve adolescent health and wellbeing need to address established and emerging determinants and <strong>meaningfully engage</strong> with adolescents and young people.", "কৈশোর স্বাস্থ্য ও সুস্থতা উন্নত করতে বিদ্যমান ও নতুন নির্ধারকগুলো মোকাবিলা করতে হবে এবং তরুন-তরুনীদের <strong>অর্থবহভাবে সম্পৃক্ত</strong> করতে হবে।")}</p>
                 </div>
 
                 <section class="issue-matrix" aria-labelledby="issue-matrix-title">
@@ -2093,7 +2093,7 @@ const coursesData = [
             id: "ch2-lesson-9",
             title: yhLang(
               "SDG related to adolescent health",
-              "কিশোর-কিশোরীদের স্বাস্থ্য সম্পর্কিত SDG"
+              "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG"
             ),
             icon: "fa-diagram-project",
             gradientClass: "bg-gradient-violet",
@@ -2111,7 +2111,7 @@ const coursesData = [
             },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("SDG related to adolescent health", "কিশোর-কিশোরীদের স্বাস্থ্য সম্পর্কিত SDG")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("SDG related to adolescent health", "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG")}</h2>
 
                 <!-- SDG/SDC cards with distinct lean gradients, icons, and hover effects -->
                 <div class="row g-3 d-none">${[
@@ -2294,7 +2294,7 @@ const coursesData = [
                   options: [
                     yhLang("Providers", "সেবা প্রদানকারী"),
                     yhLang("Parents", "অভিভাবক"),
-                    yhLang("Adolescents", "কিশোর-কিশোরী"),
+                    yhLang("Adolescents", "তরুন-তরুনী"),
                     yhLang("Donors", "দাতা"),
                   ],
                   correctAnswer: 2,
@@ -2311,7 +2311,7 @@ const coursesData = [
                   ),
                   desc: yhLang(
                     "Adolescents were formally acknowledged as a group with unique SRHR needs.",
-                    "কিশোর-কিশোরীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।"
+                    "তরুন-তরুনীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।"
                   ),
                   icon: "fa-people-group",
                   cls: "tl-rose",
@@ -3833,7 +3833,7 @@ const coursesData = [
                             "বাল্যবিবাহের ঝুঁকি",
                             "বাল্যবিবাহের ঝুঁকি"
                           )}</h4>
-                          <p class="mb-0 text-muted">স্বাস্থ্য, শিক্ষা, অর্থনীতি ও সামাজিক নিরাপত্তা—সব দিক থেকেই বাল্যবিবাহ কিশোর-কিশোরীদের ভবিষ্যৎকে ঝুঁকির মুখে ফেলে। সঠিক তথ্য জানিয়ে পরিবার ও সম্প্রদায়কে সচেতন করাই প্রথম পদক্ষেপ।</p>
+                          <p class="mb-0 text-muted">স্বাস্থ্য, শিক্ষা, অর্থনীতি ও সামাজিক নিরাপত্তা—সব দিক থেকেই বাল্যবিবাহ তরুন-তরুনীদের ভবিষ্যৎকে ঝুঁকির মুখে ফেলে। সঠিক তথ্য জানিয়ে পরিবার ও সম্প্রদায়কে সচেতন করাই প্রথম পদক্ষেপ।</p>
                         </div>
                       </div>
                     </div>
@@ -4057,8 +4057,8 @@ const coursesData = [
                 "বিয়ে সম্পাদনের সময় কাজী যেন অবশ্যই জন্মসনদ যাচাই করেন—এ বিষয়ে কাজীকে সচেতন করা",
                 "বাল্যবিবাহের আইন সম্পর্কে কাজী, অভিভাবক ও জনসাধারণকে সচেতন করা",
                 "বাল্যবিবাহ ও এর ভয়াবহ পরিণতি সম্পর্কে জনসচেতনতা তৈরি করা",
-                "বাল্যবিবাহ হলেও জন্মনিয়ন্ত্রণ পদ্ধতি ব্যবহার ও দেরিতে সন্তান গ্রহণ সম্পর্কে কিশোর-কিশোরী ও অভিভাবকদের সচেতন করা",
-                "কিশোর-কিশোরীদের জন্য উপযুক্ত জন্মনিয়ন্ত্রণ পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
+                "বাল্যবিবাহ হলেও জন্মনিয়ন্ত্রণ পদ্ধতি ব্যবহার ও দেরিতে সন্তান গ্রহণ সম্পর্কে তরুন-তরুনী ও অভিভাবকদের সচেতন করা",
+                "তরুন-তরুনীদের জন্য উপযুক্ত জন্মনিয়ন্ত্রণ পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
                 "‘বাল্যবিবাহ’ নিয়ে কমিউনিটি পর্যায়ে আলোচনা ও প্রতিরোধব্যবস্থা তৈরি করা",
                 "বাল্যবিবাহ নিরোধ আইন, ২০১৭ এবং বাল্যবিবাহ নিরোধ বিধিমালা-এর বাস্তব প্রয়োগে সংশ্লিষ্টদের দায়িত্বশীল ভূমিকা নিশ্চিত করা",
                 "বাল্যবিবাহ সম্পর্কে জানতে পারলে চাইল্ড হেল্পলাইন <strong>১০৯৮</strong>-এ কল করে রিপোর্ট করা",
@@ -4136,12 +4136,12 @@ const coursesData = [
         id: "ch-7",
         title: yhLang(
           "Module-7: Adolescent Family Planning",
-          "মডিউল-৭: কৈশোরকালীন পরিবার পরিকল্পনা"
+          "মডিউল-৭: তারুণ্যীন পরিবার পরিকল্পনা"
         ),
         lessons: [
           {
             id: "ch7-lesson-1",
-            title: yhLang("কৈশোরকালীন পরিবার পরিকল্পনা", "কৈশোরকালীন পরিবার পরিকল্পনা"),
+            title: yhLang("তারুণ্যীন পরিবার পরিকল্পনা", "তারুণ্যীন পরিবার পরিকল্পনা"),
             icon: "fa-people-roof",
             gradientClass: "bg-gradient-blue",
             audioFile: "",
@@ -4236,8 +4236,8 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "কৈশোরকালীন পরিবার পরিকল্পনা",
-                    "কৈশোরকালীন পরিবার পরিকল্পনা"
+                    "তারুণ্যীন পরিবার পরিকল্পনা",
+                    "তারুণ্যীন পরিবার পরিকল্পনা"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4271,7 +4271,7 @@ const coursesData = [
                       </div>
                       <div class="col-lg-5">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu7/kishor.png" alt="কৈশোরকালীন পরিবার পরিকল্পনা" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu7/kishor.png" alt="তারুণ্যীন পরিবার পরিকল্পনা" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
@@ -4306,7 +4306,7 @@ const coursesData = [
           },
           {
             id: "ch7-lesson-2",
-            title: yhLang("কৈশোরকালীন পরিবার পরিকল্পনা", "কৈশোরকালীন পরিবার পরিকল্পনা"),
+            title: yhLang("তারুণ্যীন পরিবার পরিকল্পনা", "তারুণ্যীন পরিবার পরিকল্পনা"),
             icon: "fa-table",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
@@ -4450,8 +4450,8 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "কৈশোরকালীন পরিবার পরিকল্পনা",
-                    "কৈশোরকালীন পরিবার পরিকল্পনা"
+                    "তারুণ্যীন পরিবার পরিকল্পনা",
+                    "তারুণ্যীন পরিবার পরিকল্পনা"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4484,7 +4484,7 @@ const coursesData = [
                       "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল",
                       "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল"
                     )}</h3>
-                    <p class="text-muted">প্রতিটি পদ্ধতির প্রয়োগপদ্ধতি ও স্থায়িত্বকাল জানলে কিশোর-কিশোরী ও নবদম্পতিরা তথ্যভিত্তিক সিদ্ধান্ত নিতে পারে।</p>
+                    <p class="text-muted">প্রতিটি পদ্ধতির প্রয়োগপদ্ধতি ও স্থায়িত্বকাল জানলে তরুন-তরুনী ও নবদম্পতিরা তথ্যভিত্তিক সিদ্ধান্ত নিতে পারে।</p>
                     <div class="table-responsive mt-3">
                       <table class="table table-bordered text-center align-middle modern-table">
                         <thead class="table-light">
@@ -4510,12 +4510,12 @@ const coursesData = [
         id: "ch-8",
         title: yhLang(
           "Module-8: Adolescent Family Planning",
-          "মডিউল-৮: কৈশোরকালীন মাতৃত্ব"
+          "মডিউল-৮: তারুণ্যীন মাতৃত্ব"
         ),
         lessons: [
           {
             id: "ch8-lesson-1",
-            title: yhLang("কৈশোরকালীন মাতৃত্ব", "কৈশোরকালীন মাতৃত্ব"),
+            title: yhLang("তারুণ্যীন মাতৃত্ব", "তারুণ্যীন মাতৃত্ব"),
             icon: "fa-baby",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
@@ -4600,14 +4600,14 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "কৈশোরকালীন মাতৃত্ব",
-                    "কৈশোরকালীন মাতৃত্ব"
+                    "তারুণ্যীন মাতৃত্ব",
+                    "তারুণ্যীন মাতৃত্ব"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text mb-3">${yhLang(
-                      "কৈশোরকালীন মাতৃত্ব",
-                      "কৈশোরকালীন মাতৃত্ব"
+                      "তারুণ্যীন মাতৃত্ব",
+                      "তারুণ্যীন মাতৃত্ব"
                     )}</h3>
                     ${renderParagraphs()}
                   </section>
@@ -4645,8 +4645,8 @@ const coursesData = [
           {
             id: "ch8-lesson-2",
             title: yhLang(
-              "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
-              "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
+              "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
+              "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়"
             ),
             icon: "fa-shield-heart",
             gradientClass: "bg-gradient-purple",
@@ -4657,8 +4657,8 @@ const coursesData = [
                 {
                   id: "q8b",
                   question: yhLang(
-                    "কৈশোরকালীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?",
-                    "কৈশোরকালীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?"
+                    "তারুণ্যীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?",
+                    "তারুণ্যীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?"
                   ),
                   options: [
                     yhLang(
@@ -4675,13 +4675,13 @@ const coursesData = [
             },
             content: (function () {
               const introText =
-                "নিরাপদ মাতৃত্বের জন্য কৈশোরকালীন গর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।";
+                "নিরাপদ মাতৃত্বের জন্য তারুণ্যীন গর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।";
 
               const orbitActions = [
                 "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা",
                 "দেশের প্রচলিত আইনের যথাযথ প্রয়োগ (১৮-এর আগে মেয়েদের বিয়ে নয়, ২০-এর আগে সন্তান নয়)",
                 "পরিবার পরিকল্পনা সম্পর্কে জনগণের মধ্যে সচেতনতা বাড়ানো এবং পরিবার পরিকল্পনা পদ্ধতি ব্যবহারে উৎসাহ প্রদান",
-                "কৈশোরকালীন গর্ভধারণের কুফল ও এর ভয়াবহ পরিণতি সম্পর্কে সচেতনতা তৈরি করা",
+                "তারুণ্যীন গর্ভধারণের কুফল ও এর ভয়াবহ পরিণতি সম্পর্কে সচেতনতা তৈরি করা",
                 "কৈশোরে বিয়ে হলেও দেরিতে সন্তান গ্রহণে স্বামী, স্ত্রী ও অভিভাবকদের সচেতন করা",
                 "কৈশোরে পরিবার পরিকল্পনা পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
               ];
@@ -4716,14 +4716,14 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
-                    "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
+                    "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
+                    "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text mb-3">${yhLang(
-                      "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়",
-                      "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
+                      "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
+                      "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়"
                     )}</h3>
                     <p class="mb-0">${introText}</p>
                   </section>
@@ -4793,7 +4793,7 @@ const coursesData = [
           },
           {
             id: "ch8-lesson-4",
-            title: yhLang("কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা", "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"),
+            title: yhLang("তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা", "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা"),
             icon: "fa-user-nurse",
             gradientClass: "bg-gradient-green",
             audioFile: "",
@@ -4883,8 +4883,8 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা",
-                    "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"
+                    "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা",
+                    "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5178,7 +5178,7 @@ const coursesData = [
               ];
 
               const management = [
-                "বর্তমানে যৌনবাহিত সংক্রমণে আক্রান্ত কিশোর-কিশোরীরা প্রাপ্তবয়স্কদের মতো একই ব্যবস্থা পাচ্ছে।",
+                "বর্তমানে যৌনবাহিত সংক্রমণে আক্রান্ত তরুন-তরুনীরা প্রাপ্তবয়স্কদের মতো একই ব্যবস্থা পাচ্ছে।",
                 "আদর্শ হলো ঝুঁকি নির্ণয় কৌশল অবলম্বন করে বাছাইকরণ (ট্রায়াজ) পরীক্ষার মাধ্যমে প্রাসঙ্গিক ও পর্যাপ্ত চিকিৎসা প্রদান করা।",
                 "যৌন সংক্রমণের সিনড্রোমিক ব্যবস্থাপনার জন্য বাংলাদেশ সরকারের জাতীয় এইচআইভি এইডস কর্মসূচির (এএসপি) গাইডলাইন ব্যবহার করা যেতে পারে।",
               ];
@@ -5214,8 +5214,8 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text mb-3">${yhLang(
-                      "কিশোর-কিশোরীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা",
-                      "কিশোর-কিশোরীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা"
+                      "তরুন-তরুনীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা",
+                      "তরুন-তরুনীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা"
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(management, 80)}
@@ -5376,8 +5376,8 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text mb-3">${yhLang(
-                      "কিশোর-কিশোরীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়",
-                      "কিশোর-কিশোরীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়"
+                      "তরুন-তরুনীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়",
+                      "তরুন-তরুনীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়"
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(preventionPoints)}
@@ -6168,7 +6168,7 @@ const coursesData = [
                   id: "q12h",
                   question: yhLang(
                     "Why are sexual and reproductive health rights critical for adolescents?",
-                    "কিশোর-কিশোরীদের জন্য যৌন ও প্রজনন স্বাস্থ্য অধিকার কেন গুরুত্বপূর্ণ?"
+                    "তরুন-তরুনীদের জন্য যৌন ও প্রজনন স্বাস্থ্য অধিকার কেন গুরুত্বপূর্ণ?"
                   ),
                   options: [
                     yhLang(
@@ -6185,7 +6185,7 @@ const coursesData = [
             },
             content: (function () {
               const intro =
-                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এ বয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্ত হওয়ার সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।";
+                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ তরুন-তরুনী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে তরুন-তরুনীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এ বয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্ত হওয়ার সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।";
 
               const whoDefinition =
                 "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডব্লিউএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।";
@@ -7377,7 +7377,7 @@ const coursesData = [
             id: "ch13-lesson-10",
             title: yhLang(
               "Violence Against Adolescents",
-              "কিশোর-কিশোরীদের প্রতি সহিংসতা"
+              "তরুন-তরুনীদের প্রতি সহিংসতা"
             ),
             icon: "fa-children",
             gradientClass: "bg-gradient-crimson",
@@ -7389,7 +7389,7 @@ const coursesData = [
                   id: "q13j",
                   question: yhLang(
                     "Which action helps protect adolescents from violence?",
-                    "কিশোর-কিশোরীদের সহিংসতা থেকে রক্ষা করতে কোন পদক্ষেপ সহায়ক?"
+                    "তরুন-তরুনীদের সহিংসতা থেকে রক্ষা করতে কোন পদক্ষেপ সহায়ক?"
                   ),
                   options: [
                     yhLang("নিরাপদ পরিবেশ ও পরামর্শ প্রদান", "নিরাপদ পরিবেশ ও পরামর্শ প্রদান"),
@@ -7403,7 +7403,7 @@ const coursesData = [
             },
             content: (function () {
               const intro =
-                "পারিবারিক, শিক্ষা প্রতিষ্ঠান, কর্মক্ষেত্র বা অনলাইন—প্রতিটি পরিসরেই কিশোর-কিশোরীরা সহিংসতার ঝুঁকির মুখে থাকে। সচেতনতা, প্রতিরোধমূলক পদক্ষেপ ও সহায়তা ব্যবস্থাই নিরাপত্তার মূলভিত্তি।";
+                "পারিবারিক, শিক্ষা প্রতিষ্ঠান, কর্মক্ষেত্র বা অনলাইন—প্রতিটি পরিসরেই তরুন-তরুনীরা সহিংসতার ঝুঁকির মুখে থাকে। সচেতনতা, প্রতিরোধমূলক পদক্ষেপ ও সহায়তা ব্যবস্থাই নিরাপত্তার মূলভিত্তি।";
 
               const violenceTypes = [
                 {
@@ -7464,7 +7464,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Violence against adolescents",
-                    "কিশোর-কিশোরীদের প্রতি সহিংসতা"
+                    "তরুন-তরুনীদের প্রতি সহিংসতা"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -7477,7 +7477,7 @@ const coursesData = [
                       </div>
                       <div class="col-lg-6" data-aos="fade-left" data-aos-delay="80">
                         <figure class="image-card mb-0">
-                          <img src="img/modu13/sohongsotas.png" alt="কিশোর-কিশোরীদের প্রতি সহিংসতা" class="img-fluid rounded-4 shadow-sm img-zoom" />
+                          <img src="img/modu13/sohongsotas.png" alt="তরুন-তরুনীদের প্রতি সহিংসতা" class="img-fluid rounded-4 shadow-sm img-zoom" />
                         </figure>
                       </div>
                     </div>
@@ -7704,8 +7704,8 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "কিশোর-কিশোরীদের প্রতি সহিংসতার বিভিন্ন রূপ",
-                      "কিশোর-কিশোরীদের প্রতি সহিংসতার বিভিন্ন রূপ"
+                      "তরুন-তরুনীদের প্রতি সহিংসতার বিভিন্ন রূপ",
+                      "তরুন-তরুনীদের প্রতি সহিংসতার বিভিন্ন রূপ"
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderSimpleList(violenceForms)}
@@ -7716,8 +7716,8 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "কৈশোরকালীন সহিংসতার কারণ",
-                      "কৈশোরকালীন সহিংসতার কারণ"
+                      "তারুণ্যীন সহিংসতার কারণ",
+                      "তারুণ্যীন সহিংসতার কারণ"
                     )}</h3>
                     <div class="row g-3">
                       ${renderCauseCards()}
@@ -7765,14 +7765,14 @@ const coursesData = [
         id: "ch-14",
         title: yhLang(
           "Module-14: Sex, Gender and Gender Discrimination",
-          "মডিউল-১৪: কৈশোরকালীন মনোসামাজিক পরিবর্তন ও জটিলতাসমূহ"
+          "মডিউল-১৪: তারুণ্যীন মনোসামাজিক পরিবর্তন ও জটিলতাসমূহ"
         ),
         lessons: [
           {
             id: "ch14-lesson-1",
             title: yhLang(
               "Adolescent Psychosocial Changes",
-              "কৈশোরকালীন মনোসামাজিক পরিবর্তন"
+              "তারুণ্যীন মনোসামাজিক পরিবর্তন"
             ),
             icon: "fa-people-roof",
             gradientClass: "bg-gradient-indigo",
@@ -7784,7 +7784,7 @@ const coursesData = [
                   id: "q14a",
                   question: yhLang(
                     "Which factor strongly influences psychosocial change during adolescence?",
-                    "কৈশোরকালীন মনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?"
+                    "তারুণ্যীন মনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?"
                   ),
                   options: [
                     yhLang("পরিবার, বন্ধু ও সামাজিক পরিবেশ", "পরিবার, বন্ধু ও সামাজিক পরিবেশ"),
@@ -7799,7 +7799,7 @@ const coursesData = [
             content: (function () {
               const introPrimary = yhLang(
                 "Adolescence brings psychosocial changes that influence communication patterns with family, friends, and peers.",
-                "কৈশোরকালীন সময়ে কিশোর-কিশোরীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।"
+                "তারুণ্যীন সময়ে তরুন-তরুনীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।"
               );
 
               const introSecondary = yhLang(
@@ -7959,7 +7959,7 @@ const coursesData = [
                   <header class="m14l1-header" data-aos="fade-up">
                     <h2 class="m14l1-title">
                       <i class="fa-solid fa-people-roof"></i>
-                      ${yhLang("Psychosocial transitions in adolescence", "কৈশোরকালীন মনোসামাজিক পরিবর্তন")}
+                      ${yhLang("Psychosocial transitions in adolescence", "তারুণ্যীন মনোসামাজিক পরিবর্তন")}
                     </h2>
                   </header>
 
@@ -7997,7 +7997,7 @@ const coursesData = [
                   <section class="m14l1-card m14l1-card-complex" data-aos="fade-up" data-aos-delay="95">
                     <h3 class="m14l1-subtitle">
                       <i class="fa-solid fa-diagram-project"></i>
-                      ${yhLang("Psychosocial complexities", "কৈশোরকালীন মনোসামাজিক জটিলতাসমূহ")}
+                      ${yhLang("Psychosocial complexities", "তারুণ্যীন মনোসামাজিক জটিলতাসমূহ")}
                     </h3>
                     <ul class="m14l1-list">
                       ${renderList(psychosocialComplexities, 95)}
@@ -9642,7 +9642,7 @@ const coursesData = [
         id: "ch-15",
         title: yhLang(
           "Module-15: Violence Related to Adolescents",
-          "মডিউল-১৫: কৈশোরকালীন মানসিক স্বাস্থ্য সমস্যা ও সমাধানের উপায়"
+          "মডিউল-১৫: তারুণ্যীন মানসিক স্বাস্থ্য সমস্যা ও সমাধানের উপায়"
         ),
         lessons: [
           {
@@ -9783,7 +9783,7 @@ const coursesData = [
             id: "ch15-lesson-2",
             title: yhLang(
               "Adolescent Mental Health",
-              "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য"
+              "তরুন-তরুনীদের জন্য মানসিক স্বাস্থ্য"
             ),
             icon: "fa-children",
             gradientClass: "bg-gradient-rose",
@@ -9809,7 +9809,7 @@ const coursesData = [
             },
             content: (function () {
               const introPrimary =
-                "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য অত্যন্ত গুরুত্বপূর্ণ। মানসিক চাপ থেকে মুক্ত থাকতে না পারলে বড় হওয়ার পথে নানা ঝুঁকিপূর্ণ আচরণ ও জটিলতা তৈরি হয়।";
+                "তরুন-তরুনীদের জন্য মানসিক স্বাস্থ্য অত্যন্ত গুরুত্বপূর্ণ। মানসিক চাপ থেকে মুক্ত থাকতে না পারলে বড় হওয়ার পথে নানা ঝুঁকিপূর্ণ আচরণ ও জটিলতা তৈরি হয়।";
 
               const introSecondary =
                 "বিশ্বস্বাস্থ্য সংস্থার (২০১৯) তথ্যমতে, বিশ্বে প্রতি ৫ জনের ১ জন (২২.১%) মানসিক রোগে ভোগেন এবং প্রতি ১০ জনের ১ জন (৯%) মধ্যম থেকে মারাত্মক মানসিক সমস্যায় আক্রান্ত।";
@@ -9825,7 +9825,7 @@ const coursesData = [
                 },
                 {
                   value: "16%",
-                  label: "১০–১৯ বছরের কিশোর-কিশোরীদের মানসিক সমস্যা",
+                  label: "১০–১৯ বছরের তরুন-তরুনীদের মানসিক সমস্যা",
                 },
                 {
                   value: "50%",
@@ -9834,10 +9834,10 @@ const coursesData = [
               ];
 
               const adolescentImpacts = [
-                "কৈশোরকালীন বিষণ্নতা কিশোর-কিশোরীদের অসুস্থতা ও পঙ্গুত্বের প্রধান কারণগুলোর একটি।",
-                "বিশ্বব্যাপী ১৫–১৯ বছর বয়সী কিশোর-কিশোরীদের মৃত্যুর তৃতীয় কারণ আত্মহত্যা।",
+                "তারুণ্যীন বিষণ্নতা তরুন-তরুনীদের অসুস্থতা ও পঙ্গুত্বের প্রধান কারণগুলোর একটি।",
+                "বিশ্বব্যাপী ১৫–১৯ বছর বয়সী তরুন-তরুনীদের মৃত্যুর তৃতীয় কারণ আত্মহত্যা।",
                 "কৈশোরের মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতি করে।",
-                "কৈশোরকালীন মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতিসাধন করে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত করে।",
+                "তারুণ্যীন মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতিসাধন করে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত করে।",
               ];
 
               const headingIcon = (iconClass) => `
@@ -9906,7 +9906,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-children")}<span>${yhLang(
                     "Mental health for adolescents",
-                    "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য"
+                    "তরুন-তরুনীদের জন্য মানসিক স্বাস্থ্য"
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.88); border-radius: 1rem; box-shadow: 12px 12px 24px -18px rgba(79, 70, 229, .45);">
@@ -9941,7 +9941,7 @@ const coursesData = [
             id: "ch15-lesson-3",
             title: yhLang(
               "Childhood and Adolescent Mental Issues",
-              "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
+              "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ"
             ),
             icon: "fa-child",
             gradientClass: "bg-gradient-amber",
@@ -10034,7 +10034,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-child-reaching")}<span>${yhLang(
                     "Common childhood mental issues",
-                    "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
+                    "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ"
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card m16-definition" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem;">
@@ -10054,7 +10054,7 @@ const coursesData = [
             id: "ch15-lesson-4",
             title: yhLang(
               "Childhood Behavioral Issues",
-              "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
+              "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ"
             ),
             icon: "fa-people-arrows",
             gradientClass: "bg-gradient-crimson",
@@ -10149,7 +10149,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-people-arrows-left-right")}<span>${yhLang(
                     "Behavioral mental health issues",
-                    "শৈশব ও কৈশোরকালীন মানসিক সমস্যাসমূহ"
+                    "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ"
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem; box-shadow: 12px 14px 24px -18px rgba(190, 24, 93, .45);">
@@ -11053,7 +11053,7 @@ const coursesData = [
             id: "ch15-lesson-12",
             title: yhLang(
               "Digital Health & Device Addiction Prevention",
-              "কিশোর-কিশোরীদের ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তি প্রতিরোধ"
+              "তরুন-তরুনীদের ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তি প্রতিরোধ"
             ),
             icon: "fa-mobile-screen",
             gradientClass: "bg-gradient-cyan",
@@ -11079,10 +11079,10 @@ const coursesData = [
             },
             content: (function () {
               const intro =
-                "কিশোর-কিশোরীরা আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে 􀊍ার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্যাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়েউঠেছে। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ এবং সুবিধা প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিনড়বতার মতো সমস্যাগুলোর জন্ম দিতে পারে। এই প্রসঙ্গে, স্বাস্থ্য সেবা প্রদানকারীদের একটি গুরুত্বপূর্ণ ভূমিকা রয়েছে কিশোর-কিশোরীদের সঠিক নির্দেশনা প্রদান এবং তাদের ডিজিটাল স্বাস্থ্য সুরক্ষা নিশ্চিত করার জন্য।";
+                "তরুন-তরুনীরা আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে 􀊍ার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্যাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়েউঠেছে। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ এবং সুবিধা প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিনড়বতার মতো সমস্যাগুলোর জন্ম দিতে পারে। এই প্রসঙ্গে, স্বাস্থ্য সেবা প্রদানকারীদের একটি গুরুত্বপূর্ণ ভূমিকা রয়েছে তরুন-তরুনীদের সঠিক নির্দেশনা প্রদান এবং তাদের ডিজিটাল স্বাস্থ্য সুরক্ষা নিশ্চিত করার জন্য।";
 
               const impactIntro =
-                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব কিশোর-কিশোরীদের মধ্যে বিশেষভাবে গভীর হতে পারে:";
+                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব তরুন-তরুনীদের মধ্যে বিশেষভাবে গভীর হতে পারে:";
 
               const impacts = [
                 "১. মানসিক স্বাস্থ্য: অতিরিক্ত প্রযুক্তি ব্যবহারের ফলে বিষণড়বতা, উদ্বেগ, এবং নিদ্রাহীনতা তৈরি হতে পারে।",
@@ -11115,7 +11115,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Digital wellbeing guidance",
-                    "কিশোর-কিশোরীদের ডিজিটাল স্বাস্থ্য"
+                    "তরুন-তরুনীদের ডিজিটাল স্বাস্থ্য"
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -11169,7 +11169,7 @@ const coursesData = [
                   id: "q16a",
                   question: yhLang(
                     "What helps adolescents return to normal routines after crises?",
-                    "কিসের মাধ্যমে কিশোর-কিশোরীরা বিপর্যয়ের পর স্বাভাবিক জীবনে ফিরতে পারে?"
+                    "কিসের মাধ্যমে তরুন-তরুনীরা বিপর্যয়ের পর স্বাভাবিক জীবনে ফিরতে পারে?"
                   ),
                   options: [
                     yhLang("মনোসামাজিক শিক্ষা", "মনোসামাজিক শিক্ষা"),
@@ -11208,7 +11208,7 @@ const coursesData = [
                     "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা"
                   ),
                   description:
-                    "কিশোর-কিশোরীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে কিশোর-কিশোরীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
+                    "তরুন-তরুনীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে তরুন-তরুনীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
                 },
               ];
 
@@ -14075,7 +14075,7 @@ const coursesData = [
         id: "ch-19",
         title: yhLang(
           "Module-19: Drug addiction - Consequences and prevention",
-          "মডিউল-১৯: কৈশোরকালীন পুষ্টি"
+          "মডিউল-১৯: তারুণ্যীন পুষ্টি"
         ),
         lessons: [
           {
@@ -14091,7 +14091,7 @@ const coursesData = [
             content: (function () {
               const importancePoints = [
                 {
-                  text: "কৈশোরকালে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে।",
+                  text: "তারুণ্যে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে।",
                   icon: "fa-arrow-up-right-dots",
                   color: "m19l1x2-importance-growth",
                 },
@@ -14101,7 +14101,7 @@ const coursesData = [
                   color: "m19l1x2-importance-balanced",
                 },
                 {
-                  text: "সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয়।",
+                  text: "সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয়।",
                   icon: "fa-brain",
                   color: "m19l1x2-importance-mind",
                 },
@@ -14239,7 +14239,7 @@ const coursesData = [
                       <i class="fa-solid fa-scale-balanced"></i>
                       ${yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)")}
                     </h2>
-                    <p class="m19l2-subtitle">${yhLang("Standard BMI Values for Adolescents (Ages 10-19)", "কৈশোরকালীন (১০-১৯ বছর) পর্যায়ে আদর্শ বি.এম.আই মান")}</p>
+                    <p class="m19l2-subtitle">${yhLang("Standard BMI Values for Adolescents (Ages 10-19)", "তারুণ্যীন (১০-১৯ বছর) পর্যায়ে আদর্শ বি.এম.আই মান")}</p>
                   </div>
 
                   <div class="m19l2-cards-grid">
@@ -14471,7 +14471,7 @@ const coursesData = [
             id: "ch19-lesson-4",
             title: yhLang(
               "Importance of Safe, Nutritious Food and Daily Meal Plan",
-              "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
+              "তারুণ্যীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
             ),
             icon: "fa-utensils",
             gradientClass: "bg-gradient-rose",
@@ -14596,12 +14596,12 @@ const coursesData = [
                       <i class="fa-solid fa-utensils"></i>
                       ${yhLang(
                         "Daily Meal Plan for Adolescents",
-                        "কৈশোরকালীন প্রতিদিনের খাদ্য তালিকার নমুনা"
+                        "তারুণ্যীন প্রতিদিনের খাদ্য তালিকার নমুনা"
                       )}
                     </h2>
                     <p class="m19l4-subtitle">${yhLang(
                       "A balanced meal plan ensuring energy, growth, and immunity for healthy adolescent development",
-                      "সুস্থ কৈশোরকালীন বিকাশের জন্য শক্তি, বৃদ্ধি এবং রোগ প্রতিরোধ ক্ষমতা নিশ্চিত করার জন্য একটি সুষম খাদ্য পরিকল্পনা"
+                      "সুস্থ তারুণ্যীন বিকাশের জন্য শক্তি, বৃদ্ধি এবং রোগ প্রতিরোধ ক্ষমতা নিশ্চিত করার জন্য একটি সুষম খাদ্য পরিকল্পনা"
                     )}</p>
                   </div>
 
@@ -14655,7 +14655,7 @@ const coursesData = [
             id: "ch19-lesson-5",
             title: yhLang(
               "Importance of Safe, Nutritious Food and Daily Meal Plan",
-              "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
+              "তারুণ্যীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
             ),
             icon: "fa-utensils",
             gradientClass: "bg-gradient-rose",
@@ -14780,12 +14780,12 @@ const coursesData = [
                       <i class="fa-solid fa-utensils"></i>
                       ${yhLang(
                         "Daily Meal Plan for Adolescents",
-                        "কৈশোরকালীন প্রতিদিনের খাদ্য তালিকার নমুনা"
+                        "তারুণ্যীন প্রতিদিনের খাদ্য তালিকার নমুনা"
                       )}
                     </h2>
                     <p class="m19l4-subtitle">${yhLang(
                       "A balanced meal plan ensuring energy, growth, and immunity for healthy adolescent development",
-                      "সুস্থ কৈশোরকালীন বিকাশের জন্য শক্তি, বৃদ্ধি এবং রোগ প্রতিরোধ ক্ষমতা নিশ্চিত করার জন্য একটি সুষম খাদ্য পরিকল্পনা"
+                      "সুস্থ তারুণ্যীন বিকাশের জন্য শক্তি, বৃদ্ধি এবং রোগ প্রতিরোধ ক্ষমতা নিশ্চিত করার জন্য একটি সুষম খাদ্য পরিকল্পনা"
                     )}</p>
                   </div>
 
@@ -14839,7 +14839,7 @@ const coursesData = [
             id: "ch19-lesson-6",
             title: yhLang(
               "Adolescent Food Diversity",
-              "কৈশোরকালীন খাদ্য বৈচিত্র্য"
+              "তারুণ্যীন খাদ্য বৈচিত্র্য"
             ),
             icon: "fa-seedling",
             gradientClass: "bg-gradient-mint",
@@ -14851,7 +14851,7 @@ const coursesData = [
               icon: "fa-bowl-food",
               text: yhLang(
                 "During adolescence, food should be in the right quantity and contain all six essential food components.",
-                "কৈশোরকালে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।"
+                "তারুণ্যে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।"
               ),
             },
             {
@@ -14924,7 +14924,7 @@ const coursesData = [
                       <i class="fa-solid fa-leaf"></i>
                       ${yhLang(
                         "Adolescent Food Diversity",
-                        "কৈশোরকালীন খাদ্য বৈচিত্র্য"
+                        "তারুণ্যীন খাদ্য বৈচিত্র্য"
                       )}
                     </h2>
                     <p class="m19l5-subtitle">${yhLang(
@@ -14945,7 +14945,7 @@ const coursesData = [
                       <strong>${yhLang("Key Takeaway:", "মূল বিষয়:")}</strong>
                       ${yhLang(
                         "Healthy eating during adolescence creates habits that last a lifetime. Include diverse, home-cooked foods and avoid processed junk food to support optimal growth and well-being.",
-                        "কৈশোরকালে স্বাস্থ্যকর খাওয়ার অভ্যাস সারাজীবন থাকে। সর্বোত্তম বৃদ্ধি এবং সুস্থতা নিশ্চিত করতে বৈচিত্র্যময় ঘরে তৈরি খাবার অন্তর্ভুক্ত করুন এবং প্রক্রিয়াজাত জাঙ্ক ফুড এড়িয়ে চলুন।"
+                        "তারুণ্যে স্বাস্থ্যকর খাওয়ার অভ্যাস সারাজীবন থাকে। সর্বোত্তম বৃদ্ধি এবং সুস্থতা নিশ্চিত করতে বৈচিত্র্যময় ঘরে তৈরি খাবার অন্তর্ভুক্ত করুন এবং প্রক্রিয়াজাত জাঙ্ক ফুড এড়িয়ে চলুন।"
                       )}
                     </div>
                   </div>
@@ -15109,8 +15109,8 @@ const coursesData = [
           {
             id: "ch19-lesson-8",
             title: yhLang(
-              "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
-              "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
+              "তরুন-তরুনীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
+              "তরুন-তরুনীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
             ),
             icon: "fa-apple-whole",
             gradientClass: "bg-gradient-emerald",
@@ -15212,7 +15212,7 @@ const coursesData = [
                   <div class="m19l8-shape m19l8-shape-3"></div>
 
                   <div class="m19l8-header" data-aos="fade-up">
-                    <h2 class="m19l8-h2"><i class="fa-solid fa-apple-whole"></i>${yhLang("কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ", "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ")}</h2>
+                    <h2 class="m19l8-h2"><i class="fa-solid fa-apple-whole"></i>${yhLang("তরুন-তরুনীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ", "তরুন-তরুনীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ")}</h2>
                   </div>
 
                   <section class="m19l8-section m19l8-section-a" data-aos="fade-up" data-aos-delay="20">
@@ -15267,7 +15267,7 @@ const coursesData = [
             id: "ch19-lesson-9",
             title: yhLang(
               "Adolescent Nutrition and Malnutrition Cycle",
-              "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র"
+              "তারুণ্যীন পুষ্টি এবং অপুষ্টি চক্র"
             ),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-rose",
@@ -15388,7 +15388,7 @@ const coursesData = [
                   <div class="m19l9-shape m19l9-shape-3"></div>
 
                   <div class="m19l9-header" data-aos="fade-up">
-                    <h2 class="m19l9-h2"><i class="fa-solid fa-rotate"></i>${yhLang("Adolescent Nutrition and Malnutrition Cycle", "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র")}</h2>
+                    <h2 class="m19l9-h2"><i class="fa-solid fa-rotate"></i>${yhLang("Adolescent Nutrition and Malnutrition Cycle", "তারুণ্যীন পুষ্টি এবং অপুষ্টি চক্র")}</h2>
                   </div>
 
                   <section class="m19l9-section m19l9-section-a" data-aos="fade-up" data-aos-delay="20">
@@ -15412,8 +15412,8 @@ const coursesData = [
                         <figcaption class="m19l9-caption">${yhLang("Nutrition Awareness Cycle", "পুষ্টি সচেতনতা চক্র")}</figcaption>
                       </figure>
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="img/modu19/pusti2.png" alt="কৈশোরকালীন পুষ্টি" class="img-fluid rounded img-zoom" />
-                        <figcaption class="m19l9-caption">${yhLang("Adolescent Nutrition Cycle", "কৈশোরকালীন পুষ্টি চক্র")}</figcaption>
+                        <img src="img/modu19/pusti2.png" alt="তারুণ্যীন পুষ্টি" class="img-fluid rounded img-zoom" />
+                        <figcaption class="m19l9-caption">${yhLang("Adolescent Nutrition Cycle", "তারুণ্যীন পুষ্টি চক্র")}</figcaption>
                       </figure>
                     </div>
                   </section>
@@ -15425,7 +15425,7 @@ const coursesData = [
             id: "ch19-lesson-10",
             title: yhLang(
               "Adolescent Nutrition and Weight Management",
-              "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়"
+              "তারুণ্যীন অপুষ্টি প্রতিরোধে করণীয়"
             ),
             icon: "fa-weight-scale",
             gradientClass: "bg-gradient-sunrise",
@@ -15476,7 +15476,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Every adolescent should take deworming tablets every six months according to a doctor's advice.",
-                    "প্রত্যেক কিশোর-কিশোরীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি গ্রহণ করা"
+                    "প্রত্যেক তরুন-তরুনীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি গ্রহণ করা"
                   ),
                   icon: "fa-user-doctor",
                   tone: "warn",
@@ -15557,14 +15557,14 @@ const coursesData = [
                   <div class="m19l10-two-col">
                     
                     <section class="m19l10-section m19l10-section-a mb-3" data-aos="fade-up" data-aos-delay="40">
-                    <h2 class="m19l10-h2 mb-2"><i class="fa-solid fa-user-shield"></i>${yhLang("Actions to Prevent Adolescent Malnutrition", "কৈশোরকালীন অপুষ্টি প্রতিরোধে করণীয়")}</h2>
+                    <h2 class="m19l10-h2 mb-2"><i class="fa-solid fa-user-shield"></i>${yhLang("Actions to Prevent Adolescent Malnutrition", "তারুণ্যীন অপুষ্টি প্রতিরোধে করণীয়")}</h2>
                       ${renderList(preventionItems)}
                     </section>
 
                     <section class="m19l10-section m19l10-section-c" data-aos="fade-up" data-aos-delay="60">
                       <article class="m19l10-box is-definition mb-4">
                        <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-scale-balanced"></i>${yhLang("Understanding Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজন বোঝা")}</h3>
-                       <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "BMI ২৫ থেকে ২৯.৯ অতিরিক্ত ওজন হিসেবে বিবেচিত হয়। BMI ৩০ বা তার বেশি স্থূলতা হিসেবে শ্রেণীবদ্ধ। কিশোর-কিশোরীদের মধ্যে স্থূলতার হার পারিবারিক পরিবেশ, খাদ্যাভ্যাস, সামাজিক-অর্থনৈতিক অবস্থা, নিয়মিত শারীরিক কার্যকলাপ এবং সুবিধা দ্বারা প্রভাবিত হয়।")}</p>
+                       <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "BMI ২৫ থেকে ২৯.৯ অতিরিক্ত ওজন হিসেবে বিবেচিত হয়। BMI ৩০ বা তার বেশি স্থূলতা হিসেবে শ্রেণীবদ্ধ। তরুন-তরুনীদের মধ্যে স্থূলতার হার পারিবারিক পরিবেশ, খাদ্যাভ্যাস, সামাজিক-অর্থনৈতিক অবস্থা, নিয়মিত শারীরিক কার্যকলাপ এবং সুবিধা দ্বারা প্রভাবিত হয়।")}</p>
                      </article>
                       <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Causes of Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজনের কারণ")}</h3>
                       ${renderList(overweightCauses)}
@@ -15631,7 +15631,7 @@ const coursesData = [
                   tone: "info",
                 },
                 {
-                  text: yhLang("Adolescents should do at least 60 minutes of moderate to vigorous physical activity daily throughout the week.", "কিশোর-কিশোরীদের সারা সপ্তাহে প্রতিদিন গড়ে অন্তত ৬০ মিনিট মাঝারি থেকে ভারী শারীরিক ব্যায়াম করা উচিত"),
+                  text: yhLang("Adolescents should do at least 60 minutes of moderate to vigorous physical activity daily throughout the week.", "তরুন-তরুনীদের সারা সপ্তাহে প্রতিদিন গড়ে অন্তত ৬০ মিনিট মাঝারি থেকে ভারী শারীরিক ব্যায়াম করা উচিত"),
                   icon: "fa-stopwatch",
                   tone: "accent",
                 },
@@ -15695,7 +15695,7 @@ const coursesData = [
         id: "ch-20",
         title: yhLang(
           "Module-20: Special care for vulnerable adolescents",
-          "মডিউল-২০: কিশোর-কিশোরীদের অসংক্রামক রোগ ও তার প্রতিরোধ"
+          "মডিউল-২০: তরুন-তরুনীদের অসংক্রামক রোগ ও তার প্রতিরোধ"
         ),
         lessons: [
           {
@@ -15747,7 +15747,7 @@ const coursesData = [
                     <p class="mb-0" data-aos="fade-up" data-aos-delay="80">
                       ${yhLang(
                         "Non-communicable diseases are not spread directly from one person to another. They are also called chronic diseases because they usually develop slowly and persist for a long time. Around three thousand children and adolescents die every day from NCDs worldwide. These diseases account for about 68 percent of all deaths globally, making them a major public health problem.",
-                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও কিশোর-কিশোরী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।"
+                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও তরুন-তরুনী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।"
                       )}
                     </p>
                   </div>
@@ -15991,7 +15991,7 @@ const leftSections = [
       {
         text: yhLang(
           "Encourage students to avoid bad company both inside and outside educational institutions.",
-          "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে কিশোর-কিশোরীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।"
+          "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে তরুন-তরুনীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।"
         ),
         icon: "fa-user-shield",
       },
@@ -16164,8 +16164,8 @@ const rightSections = [
           {
             id: "ch20-lesson-4",
             title: yhLang(
-              "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা",
-              "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
+              "তরুন-তরুনীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা",
+              "তরুন-তরুনীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
             ),
             icon: "fa-lungs",
             gradientClass: "bg-gradient-purple",
@@ -16312,8 +16312,8 @@ const preventionCauses = [
                   </div>
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-lungs"></i>${yhLang(
-                    "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা",
-                    "কিশোর-কিশোরীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
+                    "তরুন-তরুনীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা",
+                    "তরুন-তরুনীদের উল্লেখযোগ্য কিছু অসংক্রামক রোগের স্বাস্থ্যকথা"
                   )}</h2>
                   <div class="glass-card p-4 mb-3">
                     <h4 class="mb-2 gradient-text" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-lungs"></i>অ্যাজমা বা হাঁপানি রোগঃ</h4>
@@ -16414,7 +16414,7 @@ const preventionCauses = [
             content: (function () {
               const diabetesInfo = yhLang(
   "Diabetes is a long-term disease in which the level of glucose (sugar) in the blood becomes higher than normal. The main cause is a lack of insulin hormone or reduced effectiveness of insulin. In addition to adults, adolescents can also develop diabetes. Diabetes in adolescents is usually called Type-1 diabetes.",
-  "ডায়াবেটিস একটি দীর্ঘমেয়াদী রোগ, যাতে রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে বেশি হয়ে যায়। এর প্রধান কারণ হলো ইনসুলিন হরমোনের অভাব বা ইনসুলিনের কার্যকারিতা হ্রাস পাওয়া। প্রাপ্তবয়স্কদের পাশাপাশি কিশোর-কিশোরীরাও ডায়াবেটিসে আক্রান্ত হতে পারে। কিশোর-কিশোরীদের ডায়াবেটিসকে সাধারণত টাইপ-১ ডায়াবেটিস বলা হয়।"
+  "ডায়াবেটিস একটি দীর্ঘমেয়াদী রোগ, যাতে রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে বেশি হয়ে যায়। এর প্রধান কারণ হলো ইনসুলিন হরমোনের অভাব বা ইনসুলিনের কার্যকারিতা হ্রাস পাওয়া। প্রাপ্তবয়স্কদের পাশাপাশি তরুন-তরুনীরাও ডায়াবেটিসে আক্রান্ত হতে পারে। তরুন-তরুনীদের ডায়াবেটিসকে সাধারণত টাইপ-১ ডায়াবেটিস বলা হয়।"
 );
 
 const diabetesEarly = [
@@ -16945,7 +16945,7 @@ const heartDanger = [
 
 const bpIntro = yhLang(
   "High blood pressure in adolescents is an increasing health concern that can raise the risk of heart disease, stroke, and other complications later in life. Unhealthy lifestyle, obesity, and mental stress are major contributors to this problem.",
-  "কিশোর-কিশোরীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।"
+  "তরুন-তরুনীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।"
 );
 
 const bpEarly = [
@@ -17126,8 +17126,8 @@ const bpPrevention = [
           {
             id: "ch20-lesson-12",
             title: yhLang(
-              "কিশোর-কিশোরীদের মৃগীরোগ",
-              "কিশোর-কিশোরীদের মৃগীরোগ"
+              "তরুন-তরুনীদের মৃগীরোগ",
+              "তরুন-তরুনীদের মৃগীরোগ"
             ),
             icon: "fa-brain",
             gradientClass: "bg-gradient-indigo",
@@ -17255,8 +17255,8 @@ const guardianActions = [
                   </div>
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-brain"></i>${yhLang(
-                    "কিশোর-কিশোরীদের মৃগীরোগ",
-                    "কিশোর-কিশোরীদের মৃগীরোগ"
+                    "তরুন-তরুনীদের মৃগীরোগ",
+                    "তরুন-তরুনীদের মৃগীরোগ"
                   )}</h2>
                   <div class="glass-card p-4 mb-3">
                     <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
@@ -17270,7 +17270,7 @@ const guardianActions = [
                   <div class="row g-3">
                     <div class="col-12 col-lg-6">
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-heart-pulse"></i>কিশোর-কিশোরীদের মৃগীরোগের লক্ষণসমূহের সাথে অন্যান্য উপসর্গ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-heart-pulse"></i>তরুন-তরুনীদের মৃগীরোগের লক্ষণসমূহের সাথে অন্যান্য উপসর্গ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(symptomPoints, 100)}
                         </ul>
@@ -17293,8 +17293,8 @@ const guardianActions = [
           {
             id: "ch20-lesson-13",
             title: yhLang(
-              "কিশোর-কিশোরীদের মৃগীরোগ",
-              "কিশোর-কিশোরীদের মৃগীরোগ"
+              "তরুন-তরুনীদের মৃগীরোগ",
+              "তরুন-তরুনীদের মৃগীরোগ"
             ),
             icon: "fa-bolt",
             gradientClass: "bg-gradient-pink",
@@ -17331,8 +17331,8 @@ const guardianActions = [
                   </div>
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-bolt"></i>${yhLang(
-                    "কিশোর-কিশোরীদের মৃগীরোগ",
-                    "কিশোর-কিশোরীদের মৃগীরোগ"
+                    "তরুন-তরুনীদের মৃগীরোগ",
+                    "তরুন-তরুনীদের মৃগীরোগ"
                   )}</h2>
                   <div class="row g-3 mt-1">
                     ${renderImageGrid()}
@@ -17355,7 +17355,7 @@ const guardianActions = [
             content: (function () {
               const syndromeIntro = yhLang(
   "Nephrotic syndrome is a condition in which the amount of protein in the urine increases. In childhood and adolescence, the underlying cause of nephrotic syndrome is still unknown. In this case, it is important to remember that—",
-  "নেফ্রোটিক সিনড্রোম এক ধরনের অসুখ, যার ফলে প্রস্রাবে প্রোটিনের মাত্রা বেড়ে যায়। শিশু বয়সে ও কৈশোরকালে নেফ্রোটিক সিনড্রোম সমস্যার অন্তর্নিহিত কারণ এখনো অজানা। এক্ষেত্রে মনে রাখা প্রয়োজন যে—"
+  "নেফ্রোটিক সিনড্রোম এক ধরনের অসুখ, যার ফলে প্রস্রাবে প্রোটিনের মাত্রা বেড়ে যায়। শিশু বয়সে ও তারুণ্যে নেফ্রোটিক সিনড্রোম সমস্যার অন্তর্নিহিত কারণ এখনো অজানা। এক্ষেত্রে মনে রাখা প্রয়োজন যে—"
 );
 
 const syndromeNotes = [
@@ -17459,7 +17459,7 @@ const guardianNote = yhLang(
                         </ul>
                       </article>
                       <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>কিশোর-কিশোরীদের নেফ্রোটিক সিনড্রোম রোগের লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>তরুন-তরুনীদের নেফ্রোটিক সিনড্রোম রোগের লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(syndromeSymptoms, 80)}
                         </ul>
@@ -17532,25 +17532,79 @@ const guardianNote = yhLang(
         id: "ch-21",
         title: yhLang(
           "Module-21: Climate change and special attention to adolescents",
-          "মডিউল-২১: ঝুঁকিপূর্ণ কিশোর-কিশোরীদের বিশেষ যত্ন"
+          "মডিউল-২১: ঝুঁকিপূর্ণ তরুন-তরুনীদের বিশেষ যত্ন"
         ),
         lessons: [
           {
             id: "ch21-lesson-1",
             title: yhLang(
               "Adolescence: Opportunities and Risks",
-              "কৈশোরকাল: সম্ভাবনা ও ঝুঁকি"
+              "তারুণ্য: সম্ভাবনা ও ঝুঁকি"
             ),
             icon: "fa-helmet-safety",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
             quiz: null,
             content: (function () {
+              const secondaryList = [
+  {
+    icon: "fa-house-tsunami",
+    color: "#0288d1",
+    text: yhLang(
+      "Adolescents displaced by natural disasters such as floods, river erosion, or earthquakes and living in shelters",
+      "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া তরুন-তরুনী;"
+    ),
+  },
+  {
+    icon: "fa-person-walking-arrow-right",
+    color: "#c2185b",
+    text: yhLang(
+      "Adolescents who are trafficked or forced into sex work",
+      "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া তরুন-তরুনী;"
+    ),
+  },
+  {
+    icon: "fa-burst",
+    color: "#d84315",
+    text: yhLang(
+      "Adolescents displaced during war or riots within or outside their country",
+      "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত তরুন-তরুনী;"
+    ),
+  },
+  {
+    icon: "fa-tent",
+    color: "#f57c00",
+    text: yhLang(
+      "Adolescents living in refugee camps",
+      "শরণার্থী শিবিরে বসবাসরত তরুন-তরুনী;"
+    ),
+  },
+  {
+    icon: "fa-mountain",
+    color: "#558b2f",
+    text: yhLang(
+      "Adolescents living in remote areas such as char lands, haor wetlands, or hilly regions",
+      "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার তরুন-তরুনী"
+    ),
+  },
+];
+
+              const renderList = (items) =>
+                items
+                  .map(
+                    (item) => `
+                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 15px; padding: 14px; margin-bottom: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid ${item.color}; transition: all 0.3s ease;">
+                        <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 12px; font-size: 1.2em;"></i>
+                        <span>${item.text}</span>
+                      </li>
+                    `
+                  )
+                  .join("");
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">
                     <i class="fa-solid fa-seedling" style="color: #81c784; margin-right: 12px;"></i>
-                    কৈশোরকাল: সম্ভাবনা ও ঝুঁকি
+                    তারুণ্য: সম্ভাবনা ও ঝুঁকি
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(233, 30, 99, 0.15);">
@@ -17558,7 +17612,7 @@ const guardianNote = yhLang(
                       <i class="fa-solid fa-lightbulb" style="margin-right: 10px; font-size: 24px; color: #f06292;"></i>
                       সম্ভাবনাময় সময়
                     </h3>
-                    <p class="mb-3">কৈশোরকাল একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে কিশোর-কিশোরীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ কিশোর-কিশোরী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
+                    <p class="mb-3">তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
                   </div>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #e1f5fe 0%, #e8eaf6 100%); border-radius: 25px; box-shadow: 0 10px 35px rgba(63, 81, 181, 0.2); margin-top: 20px;">
@@ -17566,7 +17620,18 @@ const guardianNote = yhLang(
                       <i class="fa-solid fa-shield-heart" style="margin-right: 10px; font-size: 24px; color: #42a5f5;"></i>
                       বিশেষ যত্নের প্রয়োজন
                     </h3>
-                    <p class="mb-0">এটা শুধুমাত্র সাধারণ কিশোর-কিশোরীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন কিশোর-কিশোরীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
+                    <p class="mb-0">এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
+                  </div>
+
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(233, 30, 99, 0.2); margin-top: 24px;">
+                    <h5 style="display: flex; align-items: center; margin-bottom: 16px; color: #ad1457; font-weight: 600;">
+                      <i class="fa-solid fa-exclamation-circle" style="margin-right: 10px; font-size: 1.2em; color: #e91e63;"></i>
+                      যেকোনো সময়ে ঝুঁকিপূর্ণ হতে পারে
+                    </h5>
+                    <p class="fw-semibold mb-3" style="color: #880e4f;">এছাড়াও যেকোনো তরুন-তরুনী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন—</p>
+                    <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
+                      ${renderList(secondaryList)}
+                    </ul>
                   </div>
                 </div>`;
             })(),
@@ -17575,7 +17640,7 @@ const guardianNote = yhLang(
             id: "ch21-lesson-2",
             title: yhLang(
               "What to Do to Mitigate Risks for At-Risk Adolescents",
-              "ঝুঁকিপূর্ণ কিশোর-কিশোরীদের ঝুঁকি নিরসনে করণীয়"
+              "ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়"
             ),
             icon: "fa-user-shield",
             gradientClass: "bg-gradient-rose",
@@ -17583,30 +17648,129 @@ const guardianNote = yhLang(
             quiz: null,
             content: (function () {
               const primaryList = [
-                { icon: "fa-wheelchair", color: "#9c27b0", text: "শারীরিকভাবে বা মানসিকভাবে প্রতিবন্ধী" },
-                { icon: "fa-heart-crack", color: "#e91e63", text: "যে কিশোর-কিশোরীর পিতা-মাতা, একজন বা উভয়েই মারা গেছেন" },
-                { icon: "fa-people-arrows", color: "#ff5722", text: "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী" },
-                { icon: "fa-person-circle-question", color: "#f44336", text: "বিবাহবহির্ভূত সম্পর্কে জন্ম নেয়া কিশোর-কিশোরী অথবা যে কিশোর-কিশোরীর কোনো আইনগত বা বৈধ অভিভাবক নেই" },
-                { icon: "fa-house-crack", color: "#ff9800", text: "বস্তিতে বসবাস করে এমন কিশোর-কিশোরী অথবা যে যার কোনো নির্দিষ্ট বাসস্থান বা আবাস নেই বা যার বেঁচে থাকার কোনো সুস্পষ্ট উপায় নেই (পথশিশু বা রাস্তায় কাজ করে এমন কিশোর-কিশোরী) অথবা অতি দরিদ্র কিশোর-কিশোরী" },
-                { icon: "fa-handcuffs", color: "#795548", text: "যে কিশোর-কিশোরী কারাবন্দী পিতা-মাতার উপর নির্ভরশীল বা কারাবন্দী মায়ের সাথে কারাগারে বসবাস করছে" },
-                { icon: "fa-person-dress", color: "#880e4f", text: "পতিতালয়ে জন্ম নেয়া ও বড় হওয়া কিশোর-কিশোরী অথবা এসব কাজে সম্পৃক্ত কিশোর-কিশোরী" },
-                { icon: "fa-caravan", color: "#6d4c41", text: "যে কিশোর-কিশোরী যাযাবর বা হরিজন (অচ্ছুত)" },
-                { icon: "fa-industry", color: "#607d8b", text: "ঝুঁকিপূর্ণ কাজ, যেমন—বাস/টেম্পুর হেল্পার, লেদ মেশিন/ওয়েলডিং/ইলেকট্রিক/বয়লার/ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভিক্ষাবৃত্তি বা শিশুর কল্যাণের বিরোধী কোনো কাজে জড়িত" },
-                { icon: "fa-hand-fist", color: "#d32f2f", text: "যে কিশোর-কিশোরী যৌন নিপীড়ন বা হয়রানির শিকার অথবা প্রত্যক্ষদর্শী কিশোর-কিশোরী" },
-                { icon: "fa-rainbow", color: "#ab47bc", text: "তৃতীয় লিঙ্গ/হিজড়া বা সমকামী কিশোর-কিশোরী" },
-                { icon: "fa-pills", color: "#e53935", text: "যে শিশুর মাদক বা অন্য কোনো কারণে অস্বাভাবিক আচরণগত ব্যাধি হয়েছে" },
-                { icon: "fa-virus", color: "#c62828", text: "যে শিশু এইচআইভি–এইডসে আক্রান্ত বা ক্ষতিগ্রস্ত" },
-                { icon: "fa-user-xmark", color: "#6a1b9a", text: "যে কিশোর-কিশোরী অসৎ সঙ্গীতে জড়িত, বা যার নৈতিক অবক্ষয় ঘটতে পারে বা যে অপরাধজগতে প্রবেশের ঝুঁকিতে আছে" },
-                { icon: "fa-gavel", color: "#455a64", text: "যে শিশুকে শিশু আদালত বা বোর্ড বিশেষ সুরক্ষা, যত্ন ও উন্নয়নের প্রয়োজন রয়েছে বলে বিবেচনা করে" },
-              ];
+  {
+    icon: "fa-wheelchair",
+    color: "#9c27b0",
+    text: yhLang(
+      "Physically or mentally disabled adolescents",
+      "শারীরিকভাবে বা মানসিকভাবে প্রতিবন্ধী"
+    ),
+  },
+  {
+    icon: "fa-heart-crack",
+    color: "#e91e63",
+    text: yhLang(
+      "Adolescents whose one or both parents have died",
+      "যে তরুন-তরুনীর পিতা-মাতা, একজন বা উভয়েই মারা গেছেন"
+    ),
+  },
+  {
+    icon: "fa-people-arrows",
+    color: "#ff5722",
+    text: yhLang(
+      "Living with divorced parents or stepfather/stepmother",
+      "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী"
+    ),
+  },
+  {
+    icon: "fa-person-circle-question",
+    color: "#f44336",
+    text: yhLang(
+      "Adolescents born outside marriage or those without a legal guardian",
+      "বিবাহবহির্ভূত সম্পর্কে জন্ম নেয়া তরুন-তরুনী অথবা যে তরুন-তরুনীর কোনো আইনগত বা বৈধ অভিভাবক নেই"
+    ),
+  },
+  {
+    icon: "fa-house-crack",
+    color: "#ff9800",
+    text: yhLang(
+      "Adolescents living in slums, homeless adolescents, street children, or extremely poor adolescents",
+      "বস্তিতে বসবাস করে এমন তরুন-তরুনী অথবা যে যার কোনো নির্দিষ্ট বাসস্থান বা আবাস নেই বা যার বেঁচে থাকার কোনো সুস্পষ্ট উপায় নেই (পথশিশু বা রাস্তায় কাজ করে এমন তরুন-তরুনী) অথবা অতি দরিদ্র তরুন-তরুনী"
+    ),
+  },
+  {
+    icon: "fa-handcuffs",
+    color: "#795548",
+    text: yhLang(
+      "Adolescents dependent on imprisoned parents or living in prison with their imprisoned mother",
+      "যে তরুন-তরুনী কারাবন্দী পিতা-মাতার উপর নির্ভরশীল বা কারাবন্দী মায়ের সাথে কারাগারে বসবাস করছে"
+    ),
+  },
+  {
+    icon: "fa-person-dress",
+    color: "#880e4f",
+    text: yhLang(
+      "Adolescents born and raised in brothels or involved in such activities",
+      "পতিতালয়ে জন্ম নেয়া ও বড় হওয়া তরুন-তরুনী অথবা এসব কাজে সম্পৃক্ত তরুন-তরুনী"
+    ),
+  },
+  {
+    icon: "fa-caravan",
+    color: "#6d4c41",
+    text: yhLang(
+      "Adolescents belonging to nomadic or Harijan (Dalit) communities",
+      "যে তরুন-তরুনী যাযাবর বা হরিজন (অচ্ছুত)"
+    ),
+  },
+  {
+    icon: "fa-industry",
+    color: "#607d8b",
+    text: yhLang(
+      "Adolescents engaged in hazardous work such as bus/tempo helper, welding, electrical, boiler, tannery work, bidi making, begging, or other harmful activities",
+      "ঝুঁকিপূর্ণ কাজ, যেমন—বাস/টেম্পুর হেল্পার, লেদ মেশিন/ওয়েলডিং/ইলেকট্রিক/বয়লার/ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভিক্ষাবৃত্তি বা শিশুর কল্যাণের বিরোধী কোনো কাজে জড়িত"
+    ),
+  },
+  {
+    icon: "fa-hand-fist",
+    color: "#d32f2f",
+    text: yhLang(
+      "Adolescents who are victims or witnesses of sexual abuse or harassment",
+      "যে তরুন-তরুনী যৌন নিপীড়ন বা হয়রানির শিকার অথবা প্রত্যক্ষদর্শী তরুন-তরুনী"
+    ),
+  },
+  {
+    icon: "fa-rainbow",
+    color: "#ab47bc",
+    text: yhLang(
+      "Third gender, hijra, or homosexual adolescents",
+      "তৃতীয় লিঙ্গ/হিজড়া বা সমকামী তরুন-তরুনী"
+    ),
+  },
+  {
+    icon: "fa-pills",
+    color: "#e53935",
+    text: yhLang(
+      "Children with abnormal behavioral disorders due to drugs or other causes",
+      "যে শিশুর মাদক বা অন্য কোনো কারণে অস্বাভাবিক আচরণগত ব্যাধি হয়েছে"
+    ),
+  },
+  {
+    icon: "fa-virus",
+    color: "#c62828",
+    text: yhLang(
+      "Children affected or infected with HIV/AIDS",
+      "যে শিশু এইচআইভি–এইডসে আক্রান্ত বা ক্ষতিগ্রস্ত"
+    ),
+  },
+  {
+    icon: "fa-user-xmark",
+    color: "#6a1b9a",
+    text: yhLang(
+      "Adolescents involved in bad company or at risk of moral degradation or criminal activities",
+      "যে তরুন-তরুনী অসৎ সঙ্গীতে জড়িত, বা যার নৈতিক অবক্ষয় ঘটতে পারে বা যে অপরাধজগতে প্রবেশের ঝুঁকিতে আছে"
+    ),
+  },
+  {
+    icon: "fa-gavel",
+    color: "#455a64",
+    text: yhLang(
+      "Children considered by the juvenile court or board to require special protection, care, and development",
+      "যে শিশুকে শিশু আদালত বা বোর্ড বিশেষ সুরক্ষা, যত্ন ও উন্নয়নের প্রয়োজন রয়েছে বলে বিবেচনা করে"
+    ),
+  },
+];
 
-              const secondaryList = [
-                { icon: "fa-house-tsunami", color: "#0288d1", text: "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া কিশোর-কিশোরী;" },
-                { icon: "fa-person-walking-arrow-right", color: "#c2185b", text: "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া কিশোর-কিশোরী;" },
-                { icon: "fa-burst", color: "#d84315", text: "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত কিশোর-কিশোরী;" },
-                { icon: "fa-tent", color: "#f57c00", text: "শরণার্থী শিবিরে বসবাসরত কিশোর-কিশোরী;" },
-                { icon: "fa-mountain", color: "#558b2f", text: "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার কিশোর-কিশোরী" },
-              ];
+
 
               const renderList = (items) =>
                 items
@@ -17624,29 +17788,17 @@ const guardianNote = yhLang(
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-triangle-exclamation" style="color: #f44336; margin-right: 12px; font-size: 1.2em;"></i>
-                    ঝুঁকিপূর্ণ কিশোর-কিশোরীদের ঝুঁকি নিরসনে করণীয়
+                    ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(255, 152, 0, 0.2);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; color: #e65100;">
-                      <i class="fa-solid fa-users" style="margin-right: 10px; font-size: 24px; color: #ff6f00;"></i>
-                      প্রধান ঝুঁকিপূর্ণ গোষ্ঠী
-                    </h3>
+                    
                     <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
                       ${renderList(primaryList)}
                     </ul>
                   </div>
                   
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(233, 30, 99, 0.2); margin-top: 24px;">
-                    <h5 style="display: flex; align-items: center; margin-bottom: 16px; color: #ad1457; font-weight: 600;">
-                      <i class="fa-solid fa-exclamation-circle" style="margin-right: 10px; font-size: 1.2em; color: #e91e63;"></i>
-                      যেকোনো সময়ে ঝুঁকিপূর্ণ হতে পারে
-                    </h5>
-                    <p class="fw-semibold mb-3" style="color: #880e4f;">এছাড়াও যেকোনো কিশোর-কিশোরী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন—</p>
-                    <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
-                      ${renderList(secondaryList)}
-                    </ul>
-                  </div>
+                  
                 </div>`;
             })(),
           },
@@ -17654,7 +17806,7 @@ const guardianNote = yhLang(
             id: "ch21-lesson-3",
             title: yhLang(
               "What to Do to Address Disadvantages of Marginalized Adolescents",
-              "সুবিধাবঞ্চিত কিশোর-কিশোরীদের সুবিধা নিরসনে করণীয়"
+              "সুবিধাবঞ্চিত তরুন-তরুনীদের সুবিধা নিরসনে করণীয়"
             ),
             icon: "fa-hands-holding-child",
             gradientClass: "bg-gradient-green",
@@ -17662,14 +17814,63 @@ const guardianNote = yhLang(
             quiz: null,
             content: (function () {
               const actionItems = [
-                { icon: "fa-magnifying-glass-chart", color: "#1976d2", text: "<strong>সুবিধা শনাক্তকরণ:</strong> সুবিধাবঞ্চিত কিশোর-কিশোরীদের মধ্যে সম্ভাব্য সুবিধা ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।" },
-                { icon: "fa-chart-line", color: "#388e3c", text: "<strong>সক্ষমতা বৃদ্ধি:</strong> কিশোর-কিশোরীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের সুবিধা কমাতে সহায়ক হবে।" },
-                { icon: "fa-comments", color: "#7b1fa2", text: "<strong>পরামর্শ ও সহায়তা:</strong> প্রত্যেক কিশোর-কিশোরীর জন্য ব্যক্তিগত পরামর্শ ও সহায়তার ব্যবস্থা করা, যাতে তারা তাদের সমস্যাগুলি সমাধান করতে এবং সুস্থভাবে জীবনযাপন করতে সক্ষম হয়।" },
-                { icon: "fa-shield-halved", color: "#d32f2f", text: "<strong>সংকট ব্যবস্থাপনা:</strong> সুবিধাবঞ্চিত পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।" },
-                { icon: "fa-people-group", color: "#f57c00", text: "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> কিশোর-কিশোরীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।" },
-                { icon: "fa-bell", color: "#0288d1", text: "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও সুবিধা মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।" },
-                { icon: "fa-brain", color: "#c2185b", text: "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> কিশোর-কিশোরীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।" },
-              ];
+  {
+    icon: "fa-magnifying-glass-chart",
+    color: "#1976d2",
+    text: yhLang(
+      "<strong>Identification of Needs:</strong> Identify potential needs and challenges among disadvantaged youth, such as social, mental, or physical problems.",
+      "<strong>সুবিধা শনাক্তকরণ:</strong> সুবিধাবঞ্চিত তরুন-তরুনীদের মধ্যে সম্ভাব্য সুবিধা ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।"
+    ),
+  },
+  {
+    icon: "fa-chart-line",
+    color: "#388e3c",
+    text: yhLang(
+      "<strong>Capacity Building:</strong> Provide information and training that support the mental and physical health development of youth, helping them reduce disadvantages.",
+      "<strong>সক্ষমতা বৃদ্ধি:</strong> তরুন-তরুনীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের সুবিধা কমাতে সহায়ক হবে।"
+    ),
+  },
+  {
+    icon: "fa-comments",
+    color: "#7b1fa2",
+    text: yhLang(
+      "<strong>Guidance and Support:</strong> Arrange personalized counseling and support for each adolescent so they can solve their problems and live a healthy life.",
+      "<strong>পরামর্শ ও সহায়তা:</strong> প্রত্যেক তরুন-তরুনীর জন্য ব্যক্তিগত পরামর্শ ও সহায়তার ব্যবস্থা করা, যাতে তারা তাদের সমস্যাগুলি সমাধান করতে এবং সুস্থভাবে জীবনযাপন করতে সক্ষম হয়।"
+    ),
+  },
+  {
+    icon: "fa-shield-halved",
+    color: "#d32f2f",
+    text: yhLang(
+      "<strong>Crisis Management:</strong> Teach effective strategies for managing disadvantaged situations and crises so they can remain stable in difficult circumstances.",
+      "<strong>সংকট ব্যবস্থাপনা:</strong> সুবিধাবঞ্চিত পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।"
+    ),
+  },
+  {
+    icon: "fa-people-group",
+    color: "#f57c00",
+    text: yhLang(
+      "<strong>Enhancing Social Engagement:</strong> Implement activities that help youth build connections and strengthen engagement with their community.",
+      "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> তরুন-তরুনীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।"
+    ),
+  },
+  {
+    icon: "fa-bell",
+    color: "#0288d1",
+    text: yhLang(
+      "<strong>Awareness Building:</strong> Provide necessary information and conduct awareness programs to promote healthy living and coping with disadvantages.",
+      "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও সুবিধা মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।"
+    ),
+  },
+  {
+    icon: "fa-brain",
+    color: "#c2185b",
+    text: yhLang(
+      "<strong>Building Self-Reliance and Confidence:</strong> Increase adolescents' self-confidence and self-reliance so they can solve their own problems and face life’s challenges.",
+      "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> তরুন-তরুনীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।"
+    ),
+  },
+];
 
               const renderList = (items) =>
                 items
@@ -17687,7 +17888,7 @@ const guardianNote = yhLang(
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-hands-holding-circle" style="color: #43a047; margin-right: 12px; font-size: 1.2em;"></i>
-                    সুবিধাবঞ্চিত কিশোর-কিশোরীদের সুবিধা নিরসনে করণীয়
+                    সুবিধাবঞ্চিত তরুন-তরুনীদের সুবিধা নিরসনে করণীয়
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); border-radius: 22px; box-shadow: 0 12px 45px rgba(76, 175, 80, 0.25);">
@@ -17704,7 +17905,7 @@ const guardianNote = yhLang(
                         <i class="fa-solid fa-handshake" style="margin-right: 10px; color: #42a5f5;"></i>
                         সমন্বিত প্রচেষ্টা
                       </h6>
-                      <p class="mb-0" style="color: #0d47a1;">উল্লেখিত বিষয়গুলো নিশ্চিত করে কিশোর-কিশোরীদের সুবিধা কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।</p>
+                      <p class="mb-0" style="color: #0d47a1;">উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুন-তরুনীদের সুবিধা কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।</p>
                     </div>
                   </div>
                 </div>`;
@@ -20607,7 +20808,7 @@ const guardianNote = yhLang(
                               accent: "m24l10-step--b",
                               text: yhLang(
                                 "Avoid unguardian-like behavior with adolescents",
-                                "কিশোর-কিশোরীদের সাথে অ-অভিভাবকসুলভ আচরণ"
+                                "তরুন-তরুনীদের সাথে অ-অভিভাবকসুলভ আচরণ"
                               ),
                             },
                             {
