@@ -19164,24 +19164,16 @@ const guardianNote = yhLang(
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <div class="m23l1-stack">
-                        <article class="m23l1-media" data-aos="fade-up" data-aos-delay="140">
-                          <h4 class="m23l1-media__title m23l1-line mx-2" data-aos="fade-up" data-aos-delay="180">${yhLang(
-                            "Examples of emerging and re-emerging diseases",
-                            "ইমারজিং বা উদীয়মান রোগ ও রি-ইমারজিং বা পুনরুদ্ভূত রোগের উদাহরণ সমূহ"
-                          )}</h4>
-                          <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="220">
-                            <img class="img-zoom" style="max-height: 300px" src="img/modu23/global_new.png" alt="ইমারজিং ও রি-ইমারজিং রোগের উদাহরণ">
-                          </div>
-                        </article>
+                      <div class="m23l1-stack h-100">
+                      
 
-                        <article class="m23l1-media" data-aos="fade-up" data-aos-delay="200">
+                        <article class="m23l1-media h-100" data-aos="fade-up" data-aos-delay="200">
                           <h4 class="m23l1-media__title mx-2 m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
                             "Factors that accelerate transmission",
                             "সংক্রমণকে ত্বরান্বিত করনে প্রভাবক সমূহ"
                           )}</h4>
-                          <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="280">
-                            <img class="img-zoom" style="max-height: 300px" src="img/modu23/global2_new.png" alt="সংক্রমণকে ত্বরান্বিত করার প্রভাবক">
+                          <div class="m23l1-media__frame h-100" data-aos="zoom-in" data-aos-delay="280">
+                            <img class="img-zoom w-100 h-100" style="" src="img/modu23/emerging.png" alt="সংক্রমণকে ত্বরান্বিত করার প্রভাবক">
                           </div>
                         </article>
                       </div>
