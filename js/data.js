@@ -18001,7 +18001,7 @@ const guardianNote = yhLang(
                   </h2>
                   <div class="row g-2">
                       <div class="col-md-7">
-                          <div class="modern-card glass-card p-2" data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 14px 42px rgba(84,110,122,.25), 0 6px 18px rgba(69,90,100,.15);">
+                          <div class="modern-card glass-card p-2 h-100" data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 14px 42px rgba(84,110,122,.25), 0 6px 18px rgba(69,90,100,.15);">
                             <h3 style="display:flex;align-items:center;color:#283593;margin-bottom:16px; font-weight:700;">
                               <span style="background: linear-gradient(135deg, #5c6bc0, #3f51b5); width: 50px; height: 50px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 6px 18px rgba(84, 110, 122, 0.3);">
                                 <i class="fa-solid fa-lungs" style="color:#fff; font-size: 26px;"></i>
@@ -18040,10 +18040,15 @@ const guardianNote = yhLang(
                           </div>
                       
                       <div class="col-md-5">
-                         <div class="modern-card glass-card" h-100 p-2 data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%, #9fa8da 100%);border-radius:26px;box-shadow:0 14px 42px rgba(84,110,122,.25), 0 6px 18px rgba(69,90,100,.15);">
+                         <div class="modern-card glass-card h-100 p-2"  data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 14px 42px rgba(84,110,122,.25), 0 6px 18px rgba(69,90,100,.15);">
                           
-                            <p>বায়ু কতটা দূষিত তা বায়ুর মান সূচক (AQI) দ্বারা পরিমাপ করা যায়। বাংলাদেশে, পাঁচটি দূষণকারী পদার্থের (কণা পদার্থ PM10 এবং PM2.5, NO2, CO, SO2 এবং O3) বিদ্যমান ঘনত্বের উপর ভিত্তি করে AQI গণনা করা হয়।</p>
-                            <div class="table-responsive mt-4">
+                              <p>
+                                ${yhLang(
+                                  "Air pollution levels can be measured using the Air Quality Index (AQI). In Bangladesh, AQI is calculated based on the existing concentrations of five pollutants (particulate matter PM10 and PM2.5, NO2, CO, SO2, and O3).",
+                                  "বায়ু কতটা দূষিত তা বায়ুর মান সূচক (AQI) দ্বারা পরিমাপ করা যায়। বাংলাদেশে, পাঁচটি দূষণকারী পদার্থের (কণা পদার্থ PM10 এবং PM2.5, NO2, CO, SO2 এবং O3) বিদ্যমান ঘনত্বের উপর ভিত্তি করে AQI গণনা করা হয়।"
+                                )}
+                              </p>                            
+                              <div class="table-responsive mt-4">
                               <table class="table table-bordered table-aqi align-middle" style="background:rgba(255,255,255,.76);border-radius:16px;overflow:hidden;">
                                 <thead>
                                   <tr>
