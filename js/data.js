@@ -15753,7 +15753,7 @@ const coursesData = [
                   </div>
                   <div class="row g-3">
                     <div class="col-12 col-lg-5">
-                      <div class="glass-card p-2 mb-3">
+                      <div class="glass-card p-2 h-100 mb-3">
                         <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang(
                           "WHO has identified four key risk factors for NCDs. They are:",
                           "বিশ্ব স্বাস্থ্য সংস্থা অসংক্রামক রোগের চারটি ঝুঁকি চিহ্নিত করেছে। ঝুঁকিগুলো হলো:"
@@ -15917,8 +15917,8 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-12 col-lg-7">
-                      <figure class="text-center mb-0" data-aos="zoom-in" data-aos-delay="140">
-                        <img src="img/modu20/unhealthy.png" style="max-height: 580px; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
+                      <figure class="text-center mb-0 h-100" data-aos="zoom-in" data-aos-delay="140">
+                        <img src="img/modu20/unhealthy.png" style="max-height: 100%; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 h-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
                       </figure>
                     </div>
                   </div>
@@ -15938,59 +15938,173 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const introText = "তামাকজাত দ্রব্য (ধূমপান, জর্দা, গুল ইত্যাদি) এবং মদ্যপান প্রতিরোধে একটি সমন্বিত ও কার্যকর কৌশল প্রয়োজন।";
+              const introText = yhLang(
+  "An integrated and effective strategy is needed to prevent tobacco use (smoking, jarda, gul, etc.) and alcohol consumption.",
+  "তামাকজাত দ্রব্য (ধূমপান, জর্দা, গুল ইত্যাদি) এবং মদ্যপান প্রতিরোধে একটি সমন্বিত ও কার্যকর কৌশল প্রয়োজন।"
+);
 
-              const leftSections = [
-                {
-                  heading: "১. পারিবারিক ও ব্যক্তিগত পর্যায়ে করণীয়",
-                  icon: "fa-house-chimney",
-                  bullets: [
-                      { text: "শিশু-কিশোরেরা অনুকরণপ্রিয়, অতএব বাবা-মা বা পরিবারের বড় সদস্যদের তাদের সামনে তামাক ও মদ্যপান পরিহার করা উচিত।", icon: "fa-house-chimney" },
-                      { text: "তামাক ও মদের ক্ষতিকর প্রভাব নিয়ে সন্তানদের সাথে খোলামেলা আলোচনা করতে হব", icon: "fa-comments" },
-                      { text: "বাড়িতে ধূমপান ও মদ্যপানমুক্ত পরিবেশ তৈরি করতে হবে।", icon: "fa-ban-smoking" },
-                      { text: "সন্তান কার সাথে বন্ধুত্ব করছে এবং কার সাথে মেলামিশা করছে তা লক্ষ্য রাখা ও প্রয়োজনীয় উপদেশ দিয়ে সহায়তা করা।", icon: "fa-user-check" },
-                  ],
-                },
-                {
-                  heading: "২. শিক্ষাপ্রতিষ্ঠানের ভূমিকা",
-                  icon: "fa-school",
-                  bullets: [
-                      { text: "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে কিশোর-কিশোরীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।", icon: "fa-user-shield" },
-                      { text: "স্কুল-কলেজে তামাক ও মাদকের বিরুদ্ধে নিয়মিত সেমিনার, পোস্টার প্রদর্শনী বা বিতর্ক প্রতিযোগিতা আয়োজন।", icon: "fa-chalkboard-user" },
-                      { text: "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং সুবিধা দেওয়া।", icon: "fa-hand-holding-heart" },
-                      { text: "শিক্ষকরা ঝুঁকিপূর্ণ শিক্ষার্থীদের প্রতি বিশেষ নজর দেওয়া।", icon: "fa-eye" },
-                  ],
-                },
-              ];
+const leftSections = [
+  {
+    heading: yhLang(
+      "1. Actions at Family and Personal Level",
+      "১. পারিবারিক ও ব্যক্তিগত পর্যায়ে করণীয়"
+    ),
+    icon: "fa-house-chimney",
+    bullets: [
+      {
+        text: yhLang(
+          "Children and adolescents tend to imitate adults, so parents and senior family members should avoid tobacco and alcohol in front of them.",
+          "শিশু-কিশোরেরা অনুকরণপ্রিয়, অতএব বাবা-মা বা পরিবারের বড় সদস্যদের তাদের সামনে তামাক ও মদ্যপান পরিহার করা উচিত।"
+        ),
+        icon: "fa-house-chimney",
+      },
+      {
+        text: yhLang(
+          "Parents should openly discuss the harmful effects of tobacco and alcohol with their children.",
+          "তামাক ও মদের ক্ষতিকর প্রভাব নিয়ে সন্তানদের সাথে খোলামেলা আলোচনা করতে হবে"
+        ),
+        icon: "fa-comments",
+      },
+      {
+        text: yhLang(
+          "Create a smoke-free and alcohol-free environment at home.",
+          "বাড়িতে ধূমপান ও মদ্যপানমুক্ত পরিবেশ তৈরি করতে হবে।"
+        ),
+        icon: "fa-ban-smoking",
+      },
+      {
+        text: yhLang(
+          "Keep track of your child’s friends and social circle and guide them when necessary.",
+          "সন্তান কার সাথে বন্ধুত্ব করছে এবং কার সাথে মেলামিশা করছে তা লক্ষ্য রাখা ও প্রয়োজনীয় উপদেশ দিয়ে সহায়তা করা।"
+        ),
+        icon: "fa-user-check",
+      },
+    ],
+  },
+  {
+    heading: yhLang(
+      "2. Role of Educational Institutions",
+      "২. শিক্ষাপ্রতিষ্ঠানের ভূমিকা"
+    ),
+    icon: "fa-school",
+    bullets: [
+      {
+        text: yhLang(
+          "Encourage students to avoid bad company both inside and outside educational institutions.",
+          "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে কিশোর-কিশোরীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।"
+        ),
+        icon: "fa-user-shield",
+      },
+      {
+        text: yhLang(
+          "Organize regular seminars, poster exhibitions, or debate competitions against tobacco and drugs in schools and colleges.",
+          "স্কুল-কলেজে তামাক ও মাদকের বিরুদ্ধে নিয়মিত সেমিনার, পোস্টার প্রদর্শনী বা বিতর্ক প্রতিযোগিতা আয়োজন।"
+        ),
+        icon: "fa-chalkboard-user",
+      },
+      {
+        text: yhLang(
+          "Provide counseling support to help students cope with mental stress.",
+          "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং সুবিধা দেওয়া।"
+        ),
+        icon: "fa-hand-holding-heart",
+      },
+      {
+        text: yhLang(
+          "Teachers should pay special attention to students who are at risk.",
+          "শিক্ষকরা ঝুঁকিপূর্ণ শিক্ষার্থীদের প্রতি বিশেষ নজর দেওয়া।"
+        ),
+        icon: "fa-eye",
+      },
+    ],
+  },
+];
 
-              const rightSections = [
-                {
-                  heading: "৩. সামাজিক ও সরকারি উদ্যোগ",
-                  icon: "fa-gavel",
-                  bullets: [
-                      { text: "ধূমপান ও মদ্যপান জনসম্মুখে নিষিদ্ধকরণ সংক্রান্ত আইনের সঠিক বাস্তবায়ন করা।", icon: "fa-gavel" },
-                      { text: "তামাক ও মদের বিজ্ঞাপন নিষিদ্ধ করা এবং তামাক ও মদের ক্ষতিকর প্রভাব সম্পর্কে মূলধারার মিডিয়া ও সোশ্যাল মিডিয়াতে তথ্য প্রচার।", icon: "fa-bullhorn" },
-                      { text: "কমিউনিটি লিডার ও ইনফ্লুয়েন্সার যেমন ইমাম, শিক্ষক, চিকিৎসক ইত্যাদিদের মাধ্যমে বার্তা ছড়িয়ে দেওয়া।", icon: "fa-users" },
-                      { text: "তামাক ও মদ্যপান থেকে মুক্তির জন্য সরকারি-বেসরকারি কাউন্সেলিং সেন্টার বাড়ানো।", icon: "fa-hospital" },
-                  ],
-                },
-                {
-                  heading: "৪. ব্যক্তিগত সচেতনতা ও বিকল্প পথ",
-                  icon: "fa-hand",
-                  bullets: [
-                      { text: "বন্ধু-বান্ধবদের চাপে মদ বা তামাক গ্রহণ থেকে বিরত থাকতে তামাক ও মদ্যপানকে “না” বলতে পারা।", icon: "fa-hand" },
-                      { text: "স্বাস্থ্যকর বিকল্প যেমন ফলমূল, হারবাল চা বা ব্যায়ামকে অভ্যাসে পরিণত করা।", icon: "fa-leaf" },
-                  ],
-                },
-                {
-                  heading: "৫. ধর্মীয় ও নৈতিক শিক্ষার প্রসার",
-                  icon: "fa-scale-balanced",
-                  bullets: [
-                      { text: "ইসলামসহ সকল ধর্মে মাদক ও তামাক নিষিদ্ধ—এই বার্তা প্রচার করতে হবে এবং ধর্মীয় উপাসনালয়গুলোতে তামাক ও মদ্যপান প্রতিরোধের আলোচনা অন্তর্ভুক্ত করা।", icon: "fa-place-of-worship" },
-                      { text: "তামাক ও মাদক সমাজের জন্য ক্ষতিকর—এ বিষয়ে সর্বস্তরে নৈতিক দৃষ্টিভঙ্গি গড়ে তুলতে হবে।", icon: "fa-scale-balanced" },
-                  ],
-                },
-              ];
+const rightSections = [
+  {
+    heading: yhLang(
+      "3. Social and Government Initiatives",
+      "৩. সামাজিক ও সরকারি উদ্যোগ"
+    ),
+    icon: "fa-gavel",
+    bullets: [
+      {
+        text: yhLang(
+          "Ensure proper enforcement of laws that prohibit smoking and alcohol consumption in public places.",
+          "ধূমপান ও মদ্যপান জনসম্মুখে নিষিদ্ধকরণ সংক্রান্ত আইনের সঠিক বাস্তবায়ন করা।"
+        ),
+        icon: "fa-gavel",
+      },
+      {
+        text: yhLang(
+          "Ban tobacco and alcohol advertising and promote awareness about their harmful effects through mainstream and social media.",
+          "তামাক ও মদের বিজ্ঞাপন নিষিদ্ধ করা এবং তামাক ও মদের ক্ষতিকর প্রভাব সম্পর্কে মূলধারার মিডিয়া ও সোশ্যাল মিডিয়াতে তথ্য প্রচার।"
+        ),
+        icon: "fa-bullhorn",
+      },
+      {
+        text: yhLang(
+          "Spread awareness through community leaders and influencers such as imams, teachers, and doctors.",
+          "কমিউনিটি লিডার ও ইনফ্লুয়েন্সার যেমন ইমাম, শিক্ষক, চিকিৎসক ইত্যাদিদের মাধ্যমে বার্তা ছড়িয়ে দেওয়া।"
+        ),
+        icon: "fa-users",
+      },
+      {
+        text: yhLang(
+          "Increase government and private counseling centers to help people quit tobacco and alcohol.",
+          "তামাক ও মদ্যপান থেকে মুক্তির জন্য সরকারি-বেসরকারি কাউন্সেলিং সেন্টার বাড়ানো।"
+        ),
+        icon: "fa-hospital",
+      },
+    ],
+  },
+  {
+    heading: yhLang(
+      "4. Personal Awareness and Alternative Choices",
+      "৪. ব্যক্তিগত সচেতনতা ও বিকল্প পথ"
+    ),
+    icon: "fa-hand",
+    bullets: [
+      {
+        text: yhLang(
+          "Be able to say 'No' to tobacco and alcohol, even under peer pressure.",
+          "বন্ধু-বান্ধবদের চাপে মদ বা তামাক গ্রহণ থেকে বিরত থাকতে তামাক ও মদ্যপানকে “না” বলতে পারা।"
+        ),
+        icon: "fa-hand",
+      },
+      {
+        text: yhLang(
+          "Adopt healthy alternatives such as fruits, herbal tea, or regular exercise.",
+          "স্বাস্থ্যকর বিকল্প যেমন ফলমূল, হারবাল চা বা ব্যায়ামকে অভ্যাসে পরিণত করা।"
+        ),
+        icon: "fa-leaf",
+      },
+    ],
+  },
+  {
+    heading: yhLang(
+      "5. Promotion of Religious and Moral Education",
+      "৫. ধর্মীয় ও নৈতিক শিক্ষার প্রসার"
+    ),
+    icon: "fa-scale-balanced",
+    bullets: [
+      {
+        text: yhLang(
+          "All religions, including Islam, prohibit drugs and tobacco—this message should be promoted and discussions about prevention should be included in places of worship.",
+          "ইসলামসহ সকল ধর্মে মাদক ও তামাক নিষিদ্ধ—এই বার্তা প্রচার করতে হবে এবং ধর্মীয় উপাসনালয়গুলোতে তামাক ও মদ্যপান প্রতিরোধের আলোচনা অন্তর্ভুক্ত করা।"
+        ),
+        icon: "fa-place-of-worship",
+      },
+      {
+        text: yhLang(
+          "Develop a moral perspective at all levels that tobacco and drugs are harmful to society.",
+          "তামাক ও মাদক সমাজের জন্য ক্ষতিকর—এ বিষয়ে সর্বস্তরে নৈতিক দৃষ্টিভঙ্গি গড়ে তুলতে হবে।"
+        ),
+        icon: "fa-scale-balanced",
+      },
+    ],
+  },
+];
 
                 const renderBullets = (items, baseDelay = 0) =>
                   items
@@ -16008,8 +16122,8 @@ const coursesData = [
                   sections
                     .map(
                       (section, idx) => `
-                        <article class="glass-card p-4 h-100">
-                          <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h4>
+                        <article class="glass-card p-2 h-100">
+                          <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h4>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderBullets(section.bullets, baseDelay + idx * 40 + 20)}
                           </ul>
@@ -16031,14 +16145,14 @@ const coursesData = [
                     "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়",
                     "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়"
                   )}</h2>
-                  <div class="glass-card p-4 mb-3">
+                  <div class="glass-card p-1 mb-3">
                     <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${introText}</p>
                   </div>
-                  <div class="row g-3">
-                    <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+                  <div class="row g-2">
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-2">
                       ${renderSections(leftSections, 60)}
                     </div>
-                    <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-2">
                       ${renderSections(rightSections, 60)}
                     </div>
                   </div>
@@ -16058,36 +16172,123 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const introText = "অ্যাজমা একটি দীর্ঘস্থায়ী শ্বাসযন্ত্রের রোগ। তবে নিয়মিত এবং সঠিকভাবে ওষুধ গ্রহণ করলে দীর্ঘদিন সুস্থ থাকা সম্ভব।";
+              const introText = yhLang(
+  "Asthma is a chronic respiratory disease. However, it is possible to stay healthy for a long time if medicines are taken regularly and correctly.",
+  "অ্যাজমা একটি দীর্ঘস্থায়ী শ্বাসযন্ত্রের রোগ। তবে নিয়মিত এবং সঠিকভাবে ওষুধ গ্রহণ করলে দীর্ঘদিন সুস্থ থাকা সম্ভব।"
+);
 
-              const earlySymptoms = [
-                { text: "বারবার কাশি", icon: "fa-head-side-cough" },
-                { text: "বুকে বাঁশির মতো শব্দ হওয়া", icon: "fa-volume-high" },
-                { text: "শ্বাসকষ্ট / দম ফেলতে কষ্ট হওয়া", icon: "fa-lungs" },
-                { text: "বুক চেপে ধরা", icon: "fa-heart-circle-bolt" },
-                { text: "অতিরিক্ত আবেগের মাধ্যমে উপসর্গ বেড়ে যায়", icon: "fa-face-frown" },
-                { text: "সাধারণত রাতে / সকালে উপসর্গ বেশি দেখা দেয়", icon: "fa-moon" },
-                { text: "স্যাঁতসেঁতে বাতাসে উপসর্গ বেড়ে যায়", icon: "fa-cloud-rain" },
-              ];
+const earlySymptoms = [
+  {
+    text: yhLang("Frequent coughing", "বারবার কাশি"),
+    icon: "fa-head-side-cough",
+  },
+  {
+    text: yhLang("Wheezing sound in the chest", "বুকে বাঁশির মতো শব্দ হওয়া"),
+    icon: "fa-volume-high",
+  },
+  {
+    text: yhLang(
+      "Shortness of breath / difficulty breathing",
+      "শ্বাসকষ্ট / দম ফেলতে কষ্ট হওয়া"
+    ),
+    icon: "fa-lungs",
+  },
+  {
+    text: yhLang("Chest tightness", "বুক চেপে ধরা"),
+    icon: "fa-heart-circle-bolt",
+  },
+  {
+    text: yhLang(
+      "Symptoms worsen due to strong emotions",
+      "অতিরিক্ত আবেগের মাধ্যমে উপসর্গ বেড়ে যায়"
+    ),
+    icon: "fa-face-frown",
+  },
+  {
+    text: yhLang(
+      "Symptoms usually worsen at night or early morning",
+      "সাধারণত রাতে / সকালে উপসর্গ বেশি দেখা দেয়"
+    ),
+    icon: "fa-moon",
+  },
+  {
+    text: yhLang(
+      "Symptoms worsen in humid air",
+      "স্যাঁতসেঁতে বাতাসে উপসর্গ বেড়ে যায়"
+    ),
+    icon: "fa-cloud-rain",
+  },
+];
 
-              const dangerSigns = [
-                { text: "শ্বাসকষ্টের কারণে কথা বলতে না পারা", icon: "fa-comment-slash" },
-                { text: "শ্বাসকষ্টের কারণে পানি খেতে না পারা", icon: "fa-glass-water" },
-                { text: "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব", icon: "fa-bed" },
-                { text: "দ্রুত শ্বাস-প্রশ্বাস নেওয়া", icon: "fa-gauge-high" },
-                { text: "রক্তে অক্সিজেনের মাত্রা (SpO₂) ৯২% এর নিচে", icon: "fa-wave-square" },
-                { text: "সায়ানোসিস (ত্বক বা ঠোঁটের নীলচে রঙ ধারণ করা)", icon: "fa-triangle-exclamation" },
-              ];
+const dangerSigns = [
+  {
+    text: yhLang(
+      "Unable to speak due to breathing difficulty",
+      "শ্বাসকষ্টের কারণে কথা বলতে না পারা"
+    ),
+    icon: "fa-comment-slash",
+  },
+  {
+    text: yhLang(
+      "Unable to drink water due to breathing difficulty",
+      "শ্বাসকষ্টের কারণে পানি খেতে না পারা"
+    ),
+    icon: "fa-glass-water",
+  },
+  {
+    text: yhLang("Drowsiness", "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব"),
+    icon: "fa-bed",
+  },
+  {
+    text: yhLang("Rapid breathing", "দ্রুত শ্বাস-প্রশ্বাস নেওয়া"),
+    icon: "fa-gauge-high",
+  },
+  {
+    text: yhLang(
+      "Blood oxygen level (SpO₂) below 92%",
+      "রক্তে অক্সিজেনের মাত্রা (SpO₂) ৯২% এর নিচে"
+    ),
+    icon: "fa-wave-square",
+  },
+  {
+    text: yhLang(
+      "Cyanosis (bluish discoloration of skin or lips)",
+      "সায়ানোসিস (ত্বক বা ঠোঁটের নীলচে রঙ ধারণ করা)"
+    ),
+    icon: "fa-triangle-exclamation",
+  },
+];
 
-              const preventionCauses = [
-                { text: "ধুলা-বালি", icon: "fa-broom" },
-                { text: "ফুলের রেণু", icon: "fa-seedling" },
-                { text: "ঠান্ডা বাতাস", icon: "fa-wind" },
-                { text: "ভাইরাস সংক্রমণ", icon: "fa-virus" },
-                { text: "অতিরিক্ত আবেগ-উত্তেজনা", icon: "fa-face-flushed" },
-                { text: "স্যাঁতসেঁতে পরিবেশ", icon: "fa-water" },
-                { text: "সিগারেটের ও অন্যান্য ধোঁয়া", icon: "fa-smoking" },
-              ];
+const preventionCauses = [
+  {
+    text: yhLang("Dust", "ধুলা-বালি"),
+    icon: "fa-broom",
+  },
+  {
+    text: yhLang("Pollen", "ফুলের রেণু"),
+    icon: "fa-seedling",
+  },
+  {
+    text: yhLang("Cold air", "ঠান্ডা বাতাস"),
+    icon: "fa-wind",
+  },
+  {
+    text: yhLang("Viral infection", "ভাইরাস সংক্রমণ"),
+    icon: "fa-virus",
+  },
+  {
+    text: yhLang("Excessive emotional stress", "অতিরিক্ত আবেগ-উত্তেজনা"),
+    icon: "fa-face-flushed",
+  },
+  {
+    text: yhLang("Humid environment", "স্যাঁতসেঁতে পরিবেশ"),
+    icon: "fa-water",
+  },
+  {
+    text: yhLang("Cigarette smoke and other smoke", "সিগারেটের ও অন্যান্য ধোঁয়া"),
+    icon: "fa-smoking",
+  },
+];
 
               const renderList = (items, baseDelay = 0) =>
                 items
@@ -16171,8 +16372,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-3 h-100 text-center">
-                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
+                        <figure class="glass-card p-1 h-100 text-center">
+                          <img src="${img.src}" alt="${img.alt}" style="height: 300px" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
@@ -16192,7 +16393,7 @@ const coursesData = [
                     "অ্যাজমা বা হাঁপানি রোগঃ",
                     "অ্যাজমা বা হাঁপানি রোগঃ"
                   )}</h2>
-                  <div class="row g-3 mt-1">
+                  <div class="row g-2 mt-1">
                     ${renderImageGrid()}
                   </div>
                   </div>
@@ -16211,42 +16412,133 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const diabetesInfo =
-                "ডায়াবেটিস একটি দীর্ঘমেয়াদী রোগ, যাতে রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে বেশি হয়ে যায়। এর প্রধান কারণ হলো ইনসুলিন হরমোনের অভাব বা ইনসুলিনের কার্যকারিতা হ্রাস পাওয়া। প্রাপ্তবয়স্কদের পাশাপাশি কিশোর-কিশোরীরাও ডায়াবেটিসে আক্রান্ত হতে পারে। কিশোর-কিশোরীদের ডায়াবেটিসকে সাধারণত টাইপ-১ ডায়াবেটিস বলা হয়।";
+              const diabetesInfo = yhLang(
+  "Diabetes is a long-term disease in which the level of glucose (sugar) in the blood becomes higher than normal. The main cause is a lack of insulin hormone or reduced effectiveness of insulin. In addition to adults, adolescents can also develop diabetes. Diabetes in adolescents is usually called Type-1 diabetes.",
+  "ডায়াবেটিস একটি দীর্ঘমেয়াদী রোগ, যাতে রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে বেশি হয়ে যায়। এর প্রধান কারণ হলো ইনসুলিন হরমোনের অভাব বা ইনসুলিনের কার্যকারিতা হ্রাস পাওয়া। প্রাপ্তবয়স্কদের পাশাপাশি কিশোর-কিশোরীরাও ডায়াবেটিসে আক্রান্ত হতে পারে। কিশোর-কিশোরীদের ডায়াবেটিসকে সাধারণত টাইপ-১ ডায়াবেটিস বলা হয়।"
+);
 
-              const diabetesEarly = [
-                { text: "বারবার পিপাসা পাওয়া", icon: "fa-glass-water" },
-                { text: "বারবার প্রস্রাব হওয়া", icon: "fa-toilet" },
-                { text: "অতিরিক্ত ক্ষুধা পাওয়া", icon: "fa-bowl-food" },
-                { text: "যথেষ্ট খাওয়া সত্ত্বেও ওজন কমে যাওয়া", icon: "fa-weight-scale" },
-                { text: "সবসময় ক্লান্তি, অবসাদ বা দুর্বলতা অনুভব করা", icon: "fa-battery-quarter" },
-              ];
+const diabetesEarly = [
+  {
+    text: yhLang("Frequent thirst", "বারবার পিপাসা পাওয়া"),
+    icon: "fa-glass-water",
+  },
+  {
+    text: yhLang("Frequent urination", "বারবার প্রস্রাব হওয়া"),
+    icon: "fa-toilet",
+  },
+  {
+    text: yhLang("Excessive hunger", "অতিরিক্ত ক্ষুধা পাওয়া"),
+    icon: "fa-bowl-food",
+  },
+  {
+    text: yhLang(
+      "Weight loss despite eating enough",
+      "যথেষ্ট খাওয়া সত্ত্বেও ওজন কমে যাওয়া"
+    ),
+    icon: "fa-weight-scale",
+  },
+  {
+    text: yhLang(
+      "Constant tiredness, fatigue, or weakness",
+      "সবসময় ক্লান্তি, অবসাদ বা দুর্বলতা অনুভব করা"
+    ),
+    icon: "fa-battery-quarter",
+  },
+];
 
-              const diabetesDanger = [
-                { text: "মুখ ও জিহ্বা শুকিয়ে যাওয়া", icon: "fa-droplet" },
-                { text: "দ্রুত / লম্বা শ্বাস", icon: "fa-lungs" },
-                { text: "শ্বাসে মিষ্টি ফলের মতো (এসিটোন) গন্ধ", icon: "fa-wind" },
-                { text: "পেটে ব্যথা", icon: "fa-circle-exclamation" },
-                { text: "বমির প্রবণতা / বমি", icon: "fa-face-dizzy" },
-              ];
+const diabetesDanger = [
+  {
+    text: yhLang("Dry mouth and tongue", "মুখ ও জিহ্বা শুকিয়ে যাওয়া"),
+    icon: "fa-droplet",
+  },
+  {
+    text: yhLang("Rapid or deep breathing", "দ্রুত / লম্বা শ্বাস"),
+    icon: "fa-lungs",
+  },
+  {
+    text: yhLang(
+      "Sweet fruity (acetone) smell in breath",
+      "শ্বাসে মিষ্টি ফলের মতো (এসিটোন) গন্ধ"
+    ),
+    icon: "fa-wind",
+  },
+  {
+    text: yhLang("Abdominal pain", "পেটে ব্যথা"),
+    icon: "fa-circle-exclamation",
+  },
+  {
+    text: yhLang("Nausea or vomiting", "বমির প্রবণতা / বমি"),
+    icon: "fa-face-dizzy",
+  },
+];
 
-              const hypoIntro =
-                "রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে অত্যধিক কমে যাওয়াকে হাইপোগ্লাইসেমিয়া বলে। সাধারণত রক্তে গ্লুকোজের মাত্রা ৭০ মিলিগ্রাম/ডেসি লিটার (৩.৯ মিলিমল/লিটার) এর নিচে নামলে এটি ঘটে।";
+const hypoIntro = yhLang(
+  "Hypoglycemia occurs when the level of glucose (sugar) in the blood drops significantly below normal. It usually happens when blood glucose falls below 70 mg/dL (3.9 mmol/L).",
+  "রক্তে গ্লুকোজ (শর্করা) এর মাত্রা স্বাভাবিকের চেয়ে অত্যধিক কমে যাওয়াকে হাইপোগ্লাইসেমিয়া বলে। সাধারণত রক্তে গ্লুকোজের মাত্রা ৭০ মিলিগ্রাম/ডেসি লিটার (৩.৯ মিলিমল/লিটার) এর নিচে নামলে এটি ঘটে।"
+);
 
-              const hypoSymptoms = [
-                { text: "অতিরিক্ত ঘাম হওয়া", icon: "fa-droplet" },
-                { text: "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব", icon: "fa-bed" },
-                { text: "চোখে ঝাপসা বা ঘোলা দেখা", icon: "fa-eye-low-vision" },
-                { text: "কাঁপুনি – হাত-পা কাঁপতে শুরু করা", icon: "fa-hands" },
-                { text: "অচেতনতা / অজ্ঞান হয়ে যাওয়া – শরীরের অবস্থা খারাপ হলে মানুষ অজ্ঞান হয়ে যেতে পারে বা জ্ঞান হারাতে পারে", icon: "fa-person-falling" },
-              ];
+const hypoSymptoms = [
+  {
+    text: yhLang("Excessive sweating", "অতিরিক্ত ঘাম হওয়া"),
+    icon: "fa-droplet",
+  },
+  {
+    text: yhLang("Drowsiness", "তন্দ্রাচ্ছন্নতা / ঘুম ঘুম ভাব"),
+    icon: "fa-bed",
+  },
+  {
+    text: yhLang(
+      "Blurred or unclear vision",
+      "চোখে ঝাপসা বা ঘোলা দেখা"
+    ),
+    icon: "fa-eye-low-vision",
+  },
+  {
+    text: yhLang(
+      "Trembling or shaking of hands and feet",
+      "কাঁপুনি – হাত-পা কাঁপতে শুরু করা"
+    ),
+    icon: "fa-hands",
+  },
+  {
+    text: yhLang(
+      "Loss of consciousness – a person may faint if the condition becomes severe",
+      "অচেতনতা / অজ্ঞান হয়ে যাওয়া – শরীরের অবস্থা খারাপ হলে মানুষ অজ্ঞান হয়ে যেতে পারে বা জ্ঞান হারাতে পারে"
+    ),
+    icon: "fa-person-falling",
+  },
+];
 
-              const parentActions = [
-                { text: "ডায়াবেটিসে আক্রান্ত শিশু-কিশোরকে বোঝানো যে নিয়ম মেনে চললে তার স্বাভাবিক জীবনযাপনে কোনো সমস্যা হবে না", icon: "fa-comments" },
-                { text: "প্রতিদিন কমপক্ষে ৩০ মিনিট দ্রুত হাঁটা / সাইকেল চালানো / সাঁতার কাটা / খেলাধুলা করা / ব্যায়াম করতে হবে", icon: "fa-person-running" },
-                { text: "পর্যাপ্ত পরিমাণে ফলমূল ও শাকসবজি খেতে হবে", icon: "fa-apple-whole" },
-                { text: "নিয়মিত রক্তে গ্লুকোজের মাত্রা পর্যবেক্ষণ করতে হবে", icon: "fa-gauge" },
-              ];
+const parentActions = [
+  {
+    text: yhLang(
+      "Explain to children and adolescents with diabetes that they can live a normal life if they follow proper rules and treatment.",
+      "ডায়াবেটিসে আক্রান্ত শিশু-কিশোরকে বোঝানো যে নিয়ম মেনে চললে তার স্বাভাবিক জীবনযাপনে কোনো সমস্যা হবে না"
+    ),
+    icon: "fa-comments",
+  },
+  {
+    text: yhLang(
+      "Engage in at least 30 minutes of brisk walking, cycling, swimming, sports, or exercise every day.",
+      "প্রতিদিন কমপক্ষে ৩০ মিনিট দ্রুত হাঁটা / সাইকেল চালানো / সাঁতার কাটা / খেলাধুলা করা / ব্যায়াম করতে হবে"
+    ),
+    icon: "fa-person-running",
+  },
+  {
+    text: yhLang(
+      "Eat sufficient fruits and vegetables.",
+      "পর্যাপ্ত পরিমাণে ফলমূল ও শাকসবজি খেতে হবে"
+    ),
+    icon: "fa-apple-whole",
+  },
+  {
+    text: yhLang(
+      "Regularly monitor blood glucose levels.",
+      "নিয়মিত রক্তে গ্লুকোজের মাত্রা পর্যবেক্ষণ করতে হবে"
+    ),
+    icon: "fa-gauge",
+  },
+];
 
               const renderList = (items, baseDelay = 0) =>
                 items
@@ -16273,37 +16565,37 @@ const coursesData = [
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
                   )}</h2>
-                  <div class="row g-3">
-                    <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-                      <article class="glass-card p-4 h-100">
+                  <div class="row g-2">
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-2">
+                      <article class="glass-card p-2 h-100">
                         <p class="mb-0" data-aos="fade-up" data-aos-delay="40">${diabetesInfo}</p>
                       </article>
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>ডায়াবেটিসের প্রাথমিক লক্ষণসমূহ</h4>
+                      <article class="glass-card p-2 h-100">
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>ডায়াবেটিসের প্রাথমিক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(diabetesEarly, 80)}
                         </ul>
                       </article>
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>ডায়াবেটিসের বিপজ্জনক লক্ষণসমূহ</h4>
+                      <article class="glass-card p-2 h-100">
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-triangle-exclamation"></i>ডায়াবেটিসের বিপজ্জনক লক্ষণসমূহ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(diabetesDanger, 80)}
                         </ul>
                       </article>
                     </div>
                     <div class="col-12 col-lg-6 d-flex flex-column gap-3">
-                      <article class="glass-card p-4 h-100">
+                      <article class="glass-card p-2 h-100">
                         <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-droplet"></i>হাইপোগ্লাইসেমিয়া</h4>
                         <p class="mb-0" data-aos="fade-up" data-aos-delay="80">${hypoIntro}</p>
                       </article>
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>হাইপোগ্লাইসেমিয়ার লক্ষণ</h4>
+                      <article class="glass-card p-2 h-100">
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>হাইপোগ্লাইসেমিয়ার লক্ষণ</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(hypoSymptoms, 80)}
                         </ul>
                       </article>
-                      <article class="glass-card p-4 h-100">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
+                      <article class="glass-card p-2 h-100">
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-users"></i>পিতা-মাতা / অভিভাবকদের করণীয়</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(parentActions, 80)}
                         </ul>
@@ -16338,8 +16630,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-3 h-100 text-center">
-                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
+                        <figure class="glass-card p-1 h-100 text-center">
+                          <img src="${img.src}" alt="${img.alt}" style="height: 300px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
@@ -16359,7 +16651,7 @@ const coursesData = [
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
                   )}</h2>
-                  <div class="row g-3 mt-1">
+                  <div class="row g-2 mt-1">
                     ${renderImageGrid()}
                   </div>
                   </div>
@@ -16378,31 +16670,93 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const introText =
-                "থ্যালাসেমিয়া একটি বংশগত রক্তরোগ। এ রোগে আক্রান্ত হলে রক্তে হিমোগ্লোবিন তৈরি বাধাগ্রস্ত হয়। ফলে শরীরে রক্তশূন্যতা (অ্যানিমিয়া) দেখা দেয়। মা–বাবা থ্যালাসেমিয়ায় আক্রান্ত হলে বা নীরব বাহক হলে সন্তানের থ্যালাসেমিয়া হতে পারে।";
+              const introText = yhLang(
+  "Thalassemia is a hereditary blood disorder. In this disease, the production of hemoglobin in the blood is disrupted, which causes anemia. If parents have thalassemia or are silent carriers, their child may also develop thalassemia.",
+  "থ্যালাসেমিয়া একটি বংশগত রক্তরোগ। এ রোগে আক্রান্ত হলে রক্তে হিমোগ্লোবিন তৈরি বাধাগ্রস্ত হয়। ফলে শরীরে রক্তশূন্যতা (অ্যানিমিয়া) দেখা দেয়। মা–বাবা থ্যালাসেমিয়ায় আক্রান্ত হলে বা নীরব বাহক হলে সন্তানের থ্যালাসেমিয়া হতে পারে।"
+);
 
-              const earlySymptoms = [
-                { text: "দিনে দিনে ফ্যাকাসে হয়ে যাওয়া", icon: "fa-face-frown" },
-                { text: "অতিরিক্ত শারীরিক দুর্বলতা", icon: "fa-battery-empty" },
-                { text: "স্বাভাবিক খেলাধুলায় হাঁপিয়ে যাওয়া", icon: "fa-person-walking" },
-                { text: "জন্ডিস হওয়া", icon: "fa-sun" },
-                { text: "ধীরে ধীরে পেট ফুলে যাওয়া", icon: "fa-circle" },
-                { text: "খাদ্যদ্রব্য নয় এমন জিনিস, বিশেষ করে মাটি, কাদা ইত্যাদি খাওয়ার প্রবণতা", icon: "fa-triangle-exclamation" },
-                { text: "বয়স অনুযায়ী শারীরিক বৃদ্ধি না হওয়া, বারবার মুখের কোণায় ঘা হওয়া", icon: "fa-child" },
-              ];
+const earlySymptoms = [
+  {
+    text: yhLang("Gradually becoming pale", "দিনে দিনে ফ্যাকাসে হয়ে যাওয়া"),
+    icon: "fa-face-frown",
+  },
+  {
+    text: yhLang("Excessive physical weakness", "অতিরিক্ত শারীরিক দুর্বলতা"),
+    icon: "fa-battery-empty",
+  },
+  {
+    text: yhLang(
+      "Becoming breathless during normal play or activities",
+      "স্বাভাবিক খেলাধুলায় হাঁপিয়ে যাওয়া"
+    ),
+    icon: "fa-person-walking",
+  },
+  {
+    text: yhLang("Jaundice", "জন্ডিস হওয়া"),
+    icon: "fa-sun",
+  },
+  {
+    text: yhLang("Gradual swelling of the abdomen", "ধীরে ধীরে পেট ফুলে যাওয়া"),
+    icon: "fa-circle",
+  },
+  {
+    text: yhLang(
+      "Craving for non-food items such as soil or mud",
+      "খাদ্যদ্রব্য নয় এমন জিনিস, বিশেষ করে মাটি, কাদা ইত্যাদি খাওয়ার প্রবণতা"
+    ),
+    icon: "fa-triangle-exclamation",
+  },
+  {
+    text: yhLang(
+      "Lack of proper physical growth according to age and frequent sores at the corners of the mouth",
+      "বয়স অনুযায়ী শারীরিক বৃদ্ধি না হওয়া, বারবার মুখের কোণায় ঘা হওয়া"
+    ),
+    icon: "fa-child",
+  },
+];
 
-              const dangerSymptoms = [
-                { text: "অতিরিক্ত ফ্যাকাসে হয়ে যাওয়া", icon: "fa-face-frown-open" },
-                { text: "বুক ধরফর করা", icon: "fa-heart-pulse" },
-                { text: "অতিরিক্ত শ্বাসকষ্ট", icon: "fa-lungs" },
-                { text: "থ্যালাসেমিক মুখ", icon: "fa-user" },
-              ];
+const dangerSymptoms = [
+  {
+    text: yhLang("Severe paleness", "অতিরিক্ত ফ্যাকাসে হয়ে যাওয়া"),
+    icon: "fa-face-frown-open",
+  },
+  {
+    text: yhLang("Palpitations (rapid heartbeat)", "বুক ধরফর করা"),
+    icon: "fa-heart-pulse",
+  },
+  {
+    text: yhLang("Severe breathing difficulty", "অতিরিক্ত শ্বাসকষ্ট"),
+    icon: "fa-lungs",
+  },
+  {
+    text: yhLang("Thalassemic facial appearance", "থ্যালাসেমিক মুখ"),
+    icon: "fa-user",
+  },
+];
 
-              const guardianActions = [
-                { text: "রক্তসম্পর্কিত আত্মীয়দের (মামাতো, চাচাতো, ফুপাতো, খালাতো ভাই-বোন) মধ্যে বিবাহ থেকে বিরত থাকতে হবে", icon: "fa-people-arrows" },
-                { text: "বিয়ের আগে বর ও কনে থ্যালাসেমিয়া বাহক কি না, তা পরীক্ষা করে দেখতে হবে", icon: "fa-vial" },
-                { text: "কলিজা, ডিম, মাংস, ডাল (বিশেষত মুগডাল), দুধ ও দুধজাত খাবার, মাছ, শিম, মিষ্টি কুমড়া, ফুলকপি, মটর, সবুজ শাকসবজি বিশেষ করে কচুশাক/লালশাক, আমলকী, জাম্বুরা, কমলা, লেবু ইত্যাদি খাবার বেশি খেতে হবে", icon: "fa-carrot" },
-              ];
+const guardianActions = [
+  {
+    text: yhLang(
+      "Avoid marriage between close blood relatives (such as cousins).",
+      "রক্তসম্পর্কিত আত্মীয়দের (মামাতো, চাচাতো, ফুপাতো, খালাতো ভাই-বোন) মধ্যে বিবাহ থেকে বিরত থাকতে হবে"
+    ),
+    icon: "fa-people-arrows",
+  },
+  {
+    text: yhLang(
+      "Before marriage, both bride and groom should be tested to determine whether they are thalassemia carriers.",
+      "বিয়ের আগে বর ও কনে থ্যালাসেমিয়া বাহক কি না, তা পরীক্ষা করে দেখতে হবে"
+    ),
+    icon: "fa-vial",
+  },
+  {
+    text: yhLang(
+      "Eat more nutritious foods such as liver, eggs, meat, lentils (especially mung dal), milk and dairy products, fish, beans, pumpkin, cauliflower, peas, green leafy vegetables (especially taro leaves or red amaranth), amla, grapefruit, oranges, lemons, etc.",
+      "কলিজা, ডিম, মাংস, ডাল (বিশেষত মুগডাল), দুধ ও দুধজাত খাবার, মাছ, শিম, মিষ্টি কুমড়া, ফুলকপি, মটর, সবুজ শাকসবজি বিশেষ করে কচুশাক/লালশাক, আমলকী, জাম্বুরা, কমলা, লেবু ইত্যাদি খাবার বেশি খেতে হবে"
+    ),
+    icon: "fa-carrot",
+  },
+];
 
               const renderList = (items, baseDelay = 0) =>
                 items
@@ -16485,7 +16839,7 @@ const coursesData = [
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
                         <figure class="glass-card p-3 h-100 text-center">
-                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
+                          <img src="${img.src}" alt="${img.alt}" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
@@ -16524,39 +16878,130 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const heartIntro =
-                "জন্মগত হৃদরোগ বলতে সেই সমস্ত হার্টের অসঙ্গতি বা ত্রুটিকে বোঝায়, যেগুলো শিশুর জন্মের সময় উপস্থিত থাকে। যেমন—হার্টের পর্দায় ছিদ্র অথবা হার্টের পর্দার অনুপস্থিতি, হার্টের ভাল্ব সরু হওয়া বা ভাল্ব তৈরি না হওয়া, রক্তনালীতে সমস্যা, হার্টের রক্তনালী ও প্রকোষ্ঠসমূহের অস্বাভাবিক অবস্থান ইত্যাদি।";
+              const heartIntro = yhLang(
+  "Congenital heart disease refers to structural abnormalities or defects in the heart that are present at birth. Examples include holes in the heart wall or absence of the wall, narrowing or absence of heart valves, problems in blood vessels, and abnormal positioning of the heart’s chambers and blood vessels.",
+  "জন্মগত হৃদরোগ বলতে সেই সমস্ত হার্টের অসঙ্গতি বা ত্রুটিকে বোঝায়, যেগুলো শিশুর জন্মের সময় উপস্থিত থাকে। যেমন—হার্টের পর্দায় ছিদ্র অথবা হার্টের পর্দার অনুপস্থিতি, হার্টের ভাল্ব সরু হওয়া বা ভাল্ব তৈরি না হওয়া, রক্তনালীতে সমস্যা, হার্টের রক্তনালী ও প্রকোষ্ঠসমূহের অস্বাভাবিক অবস্থান ইত্যাদি।"
+);
 
-              const heartEarly = [
-                { text: "ঘন ঘন ঠান্ডা, সর্দি ও কাশিতে আক্রান্ত হওয়া", icon: "fa-head-side-cough" },
-                { text: "শ্বাসকষ্ট হওয়া", icon: "fa-lungs" },
-                { text: "হাঁটতে / চলাচলের সময় হাঁপিয়ে যাওয়া", icon: "fa-person-walking" },
-                { text: "পা ফুলে যাওয়া বা পায়ে পানি আসা", icon: "fa-droplet" },
-                { text: "বাচ্চা অস্বাভাবিক কান্না করা", icon: "fa-baby" },
-                { text: "বাচ্চার বুকের দুধ টানতে কষ্ট হওয়া", icon: "fa-bottle-water" },
-              ];
+const heartEarly = [
+  {
+    text: yhLang(
+      "Frequent cold, runny nose, and cough",
+      "ঘন ঘন ঠান্ডা, সর্দি ও কাশিতে আক্রান্ত হওয়া"
+    ),
+    icon: "fa-head-side-cough",
+  },
+  {
+    text: yhLang("Shortness of breath", "শ্বাসকষ্ট হওয়া"),
+    icon: "fa-lungs",
+  },
+  {
+    text: yhLang(
+      "Becoming breathless while walking or moving",
+      "হাঁটতে / চলাচলের সময় হাঁপিয়ে যাওয়া"
+    ),
+    icon: "fa-person-walking",
+  },
+  {
+    text: yhLang(
+      "Swelling of the legs or fluid accumulation in the legs",
+      "পা ফুলে যাওয়া বা পায়ে পানি আসা"
+    ),
+    icon: "fa-droplet",
+  },
+  {
+    text: yhLang("Baby crying abnormally", "বাচ্চা অস্বাভাবিক কান্না করা"),
+    icon: "fa-baby",
+  },
+  {
+    text: yhLang(
+      "Difficulty in breastfeeding",
+      "বাচ্চার বুকের দুধ টানতে কষ্ট হওয়া"
+    ),
+    icon: "fa-bottle-water",
+  },
+];
 
-              const heartDanger = [
-                { text: "কাঁদতে কাঁদতে বাচ্চা নীল হয়ে যাওয়া", icon: "fa-face-frown" },
-                { text: "খিঁচুনি হওয়া", icon: "fa-bolt" },
-                { text: "বাচ্চা নিস্তেজ হয়ে যাওয়া", icon: "fa-face-dizzy" },
-              ];
+const heartDanger = [
+  {
+    text: yhLang(
+      "Baby turning blue while crying",
+      "কাঁদতে কাঁদতে বাচ্চা নীল হয়ে যাওয়া"
+    ),
+    icon: "fa-face-frown",
+  },
+  {
+    text: yhLang("Seizures", "খিঁচুনি হওয়া"),
+    icon: "fa-bolt",
+  },
+  {
+    text: yhLang(
+      "Baby becoming unusually weak or lethargic",
+      "বাচ্চা নিস্তেজ হয়ে যাওয়া"
+    ),
+    icon: "fa-face-dizzy",
+  },
+];
 
-              const bpIntro =
-                "কিশোর-কিশোরীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।";
+const bpIntro = yhLang(
+  "High blood pressure in adolescents is an increasing health concern that can raise the risk of heart disease, stroke, and other complications later in life. Unhealthy lifestyle, obesity, and mental stress are major contributors to this problem.",
+  "কিশোর-কিশোরীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।"
+);
 
-              const bpEarly = [
-                { text: "রক্তচাপ ১৪০/৯০ বা এর বেশি", icon: "fa-gauge-high" },
-                { text: "মানসিকভাবে অস্থির লাগা", icon: "fa-face-meh" },
-                { text: "মাথাব্যথা বা মাথা ঘোরা", icon: "fa-head-side-virus" },
-              ];
+const bpEarly = [
+  {
+    text: yhLang(
+      "Blood pressure 140/90 or higher",
+      "রক্তচাপ ১৪০/৯০ বা এর বেশি"
+    ),
+    icon: "fa-gauge-high",
+  },
+  {
+    text: yhLang(
+      "Feeling mentally restless or uneasy",
+      "মানসিকভাবে অস্থির লাগা"
+    ),
+    icon: "fa-face-meh",
+  },
+  {
+    text: yhLang(
+      "Headache or dizziness",
+      "মাথাব্যথা বা মাথা ঘোরা"
+    ),
+    icon: "fa-head-side-virus",
+  },
+];
 
-              const bpPrevention = [
-                { text: "অতিরিক্ত লবণ পরিহার করতে হবে", icon: "fa-salt-shaker" },
-                { text: "তামাকজাত দ্রব্য পরিহার করতে হবে", icon: "fa-ban-smoking" },
-                { text: "মাংস ও চর্বিযুক্ত খাবার কম খাওয়া উচিত", icon: "fa-drumstick-bite" },
-                { text: "নিয়মিত হাঁটাহাঁটির অভ্যাস করতে হবে", icon: "fa-person-walking" },
-              ];
+const bpPrevention = [
+  {
+    text: yhLang(
+      "Avoid excessive salt intake",
+      "অতিরিক্ত লবণ পরিহার করতে হবে"
+    ),
+    icon: "fa-salt-shaker",
+  },
+  {
+    text: yhLang(
+      "Avoid tobacco products",
+      "তামাকজাত দ্রব্য পরিহার করতে হবে"
+    ),
+    icon: "fa-ban-smoking",
+  },
+  {
+    text: yhLang(
+      "Reduce consumption of meat and fatty foods",
+      "মাংস ও চর্বিযুক্ত খাবার কম খাওয়া উচিত"
+    ),
+    icon: "fa-drumstick-bite",
+  },
+  {
+    text: yhLang(
+      "Develop a habit of regular walking or physical activity",
+      "নিয়মিত হাঁটাহাঁটির অভ্যাস করতে হবে"
+    ),
+    icon: "fa-person-walking",
+  },
+];
 
               const renderList = (items, baseDelay = 0) =>
                 items
@@ -16649,8 +17094,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-3 h-100 text-center">
-                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
+                        <figure class="glass-card p-1 h-100 text-center">
+                          <img src="${img.src}" style="height: 300px;" alt="${img.alt}" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
@@ -16689,30 +17134,104 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const introText =
-                "মস্তিষ্কের কোনো স্নায়ুকোষের হঠাৎ অস্বাভাবিক উদ্দীপনার ফলে শারীরিক যে পরিবর্তন বা অবস্থা তৈরি হয়, তাকে বলা হয় মৃগীরোগ বা এপিলেপ্সি। এই পরিবর্তন শরীরের কোনো একটি অংশে বা সম্পূর্ণ শরীরজুড়ে হতে পারে। এটি মানসিক বা ছোঁয়াচে রোগ নয়, আলগা বাতাস বা জ্বিন-ভূতের আছর নয়। বরং এ রোগ যে কারোরই হতে পারে।";
+              const introText = yhLang(
+  "Epilepsy is a condition caused by sudden abnormal electrical activity in brain nerve cells, leading to physical changes in the body. These changes may affect a specific part of the body or the whole body. It is not a mental illness, not contagious, and not caused by supernatural forces. Anyone can develop this condition.",
+  "মস্তিষ্কের কোনো স্নায়ুকোষের হঠাৎ অস্বাভাবিক উদ্দীপনার ফলে শারীরিক যে পরিবর্তন বা অবস্থা তৈরি হয়, তাকে বলা হয় মৃগীরোগ বা এপিলেপ্সি। এই পরিবর্তন শরীরের কোনো একটি অংশে বা সম্পূর্ণ শরীরজুড়ে হতে পারে। এটি মানসিক বা ছোঁয়াচে রোগ নয়, আলগা বাতাস বা জ্বিন-ভূতের আছর নয়। বরং এ রোগ যে কারোরই হতে পারে।"
+);
 
-              const detectionPoints = [
-                { text: "জ্বর ছাড়া সমস্ত শরীরের অথবা শরীরের যেকোনো অঙ্গের একবার বা তার অধিক ঝাঁকুনি বা কাঁপুনি", icon: "fa-bolt" },
-                { text: "কোনো রকম ঝাঁকুনি বা কাঁপুনি ছাড়াই শরীর শক্ত / বাঁকা হয়ে যাওয়া", icon: "fa-person-falling" },
-                { text: "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া", icon: "fa-person-falling-burst" },
-              ];
+const detectionPoints = [
+  {
+    text: yhLang(
+      "Jerking or shaking of the whole body or any body part once or multiple times without fever",
+      "জ্বর ছাড়া সমস্ত শরীরের অথবা শরীরের যেকোনো অঙ্গের একবার বা তার অধিক ঝাঁকুনি বা কাঁপুনি"
+    ),
+    icon: "fa-bolt",
+  },
+  {
+    text: yhLang(
+      "Body becoming stiff or bent without jerking or shaking",
+      "কোনো রকম ঝাঁকুনি বা কাঁপুনি ছাড়াই শরীর শক্ত / বাঁকা হয়ে যাওয়া"
+    ),
+    icon: "fa-person-falling",
+  },
+  {
+    text: yhLang(
+      "Suddenly falling without any warning signs",
+      "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া"
+    ),
+    icon: "fa-person-falling-burst",
+  },
+];
 
-              const symptomPoints = [
-                { text: "জ্ঞান হারানো", icon: "fa-face-dizzy" },
-                { text: "মুখ দিয়ে ফেনা বা লালা পড়া", icon: "fa-droplet" },
-                { text: "জিহ্বায় কামড় খাওয়া", icon: "fa-teeth" },
-                { text: "চোখের মণি উপরের দিকে উঠে যাওয়া", icon: "fa-eye" },
-                { text: "শরীর শক্ত / বাঁকা হয়ে যাওয়া", icon: "fa-person-falling" },
-                { text: "প্রস্রাব / পায়খানা করে দেওয়া", icon: "fa-toilet-paper" },
-                { text: "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া", icon: "fa-circle-exclamation" },
-              ];
+const symptomPoints = [
+  {
+    text: yhLang("Loss of consciousness", "জ্ঞান হারানো"),
+    icon: "fa-face-dizzy",
+  },
+  {
+    text: yhLang(
+      "Foam or saliva coming out of the mouth",
+      "মুখ দিয়ে ফেনা বা লালা পড়া"
+    ),
+    icon: "fa-droplet",
+  },
+  {
+    text: yhLang("Biting the tongue", "জিহ্বায় কামড় খাওয়া"),
+    icon: "fa-teeth",
+  },
+  {
+    text: yhLang(
+      "Eyes rolling upward",
+      "চোখের মণি উপরের দিকে উঠে যাওয়া"
+    ),
+    icon: "fa-eye",
+  },
+  {
+    text: yhLang(
+      "Body becoming stiff or bent",
+      "শরীর শক্ত / বাঁকা হয়ে যাওয়া"
+    ),
+    icon: "fa-person-falling",
+  },
+  {
+    text: yhLang(
+      "Passing urine or stool involuntarily",
+      "প্রস্রাব / পায়খানা করে দেওয়া"
+    ),
+    icon: "fa-toilet-paper",
+  },
+  {
+    text: yhLang(
+      "Suddenly falling without any symptoms",
+      "কোনো লক্ষণ ছাড়াই হঠাৎ পড়ে যাওয়া"
+    ),
+    icon: "fa-circle-exclamation",
+  },
+];
 
-              const guardianActions = [
-                { text: "খিঁচুনিরত অবস্থায় বাম পাশে কাত করে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রে নিয়ে যেতে হবে", icon: "fa-truck-medical" },
-                { text: "মৃগীরোগের ওষুধ চিকিৎসকের পরামর্শ ছাড়া বন্ধ করা যাবে না", icon: "fa-pills" },
-                { text: "খিঁচুনির দিন, তারিখ ও বর্ণনা মনে রেখে চিকিৎসককে জানাতে হবে", icon: "fa-clipboard-list" },
-              ];
+const guardianActions = [
+  {
+    text: yhLang(
+      "During a seizure, turn the patient onto the left side and take them quickly to the nearest health facility",
+      "খিঁচুনিরত অবস্থায় বাম পাশে কাত করে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রে নিয়ে যেতে হবে"
+    ),
+    icon: "fa-truck-medical",
+  },
+  {
+    text: yhLang(
+      "Epilepsy medication should not be stopped without a doctor's advice",
+      "মৃগীরোগের ওষুধ চিকিৎসকের পরামর্শ ছাড়া বন্ধ করা যাবে না"
+    ),
+    icon: "fa-pills",
+  },
+  {
+    text: yhLang(
+      "Remember the date, time, and description of the seizure and inform the doctor",
+      "খিঁচুনির দিন, তারিখ ও বর্ণনা মনে রেখে চিকিৎসককে জানাতে হবে"
+    ),
+    icon: "fa-clipboard-list",
+  },
+];
 
               const renderList = (items, baseDelay = 0) =>
                 items
@@ -16794,8 +17313,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-3 h-100 text-center">
-                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom" />
+                        <figure class="glass-card p-1 h-100 text-center">
+                          <img src="${img.src}" style="height: 300px;" alt="${img.alt}" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     `
@@ -16834,26 +17353,77 @@ const coursesData = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const syndromeIntro =
-                "নেফ্রোটিক সিনড্রোম এক ধরনের অসুখ, যার ফলে প্রস্রাবে প্রোটিনের মাত্রা বেড়ে যায়। শিশু বয়সে ও কৈশোরকালে নেফ্রোটিক সিনড্রোম সমস্যার অন্তর্নিহিত কারণ এখনো অজানা। এক্ষেত্রে মনে রাখা প্রয়োজন যে—";
+              const syndromeIntro = yhLang(
+  "Nephrotic syndrome is a condition in which the amount of protein in the urine increases. In childhood and adolescence, the underlying cause of nephrotic syndrome is still unknown. In this case, it is important to remember that—",
+  "নেফ্রোটিক সিনড্রোম এক ধরনের অসুখ, যার ফলে প্রস্রাবে প্রোটিনের মাত্রা বেড়ে যায়। শিশু বয়সে ও কৈশোরকালে নেফ্রোটিক সিনড্রোম সমস্যার অন্তর্নিহিত কারণ এখনো অজানা। এক্ষেত্রে মনে রাখা প্রয়োজন যে—"
+);
 
-              const syndromeNotes = [
-                { text: "নেফ্রোটিক সিনড্রোম সাধারণত কোনো বংশগত রোগ নয়।", icon: "fa-dna" },
-                { text: "নিয়মিত চিকিৎসা করলে এ রোগ নিয়ন্ত্রণে থাকে, কিন্তু এই রোগ ১৮ বছর পর্যন্ত বারবার হতে পারে।", icon: "fa-calendar-check" },
-                { text: "তবে আশার কথা হলো শতকরা ৮০ ভাগ রোগী ১৬–১৮ বছর পর ভালো হয়ে যায় এবং তাদের কিডনিও সম্পূর্ণ কার্যক্ষম থাকে।", icon: "fa-heart-circle-check" },
-              ];
+const syndromeNotes = [
+  {
+    text: yhLang(
+      "Nephrotic syndrome is usually not a hereditary disease.",
+      "নেফ্রোটিক সিনড্রোম সাধারণত কোনো বংশগত রোগ নয়।"
+    ),
+    icon: "fa-dna",
+  },
+  {
+    text: yhLang(
+      "With regular treatment, the disease can be controlled, but it may recur repeatedly until the age of 18.",
+      "নিয়মিত চিকিৎসা করলে এ রোগ নিয়ন্ত্রণে থাকে, কিন্তু এই রোগ ১৮ বছর পর্যন্ত বারবার হতে পারে।"
+    ),
+    icon: "fa-calendar-check",
+  },
+  {
+    text: yhLang(
+      "However, the good news is that about 80% of patients recover after the age of 16–18, and their kidneys remain fully functional.",
+      "তবে আশার কথা হলো শতকরা ৮০ ভাগ রোগী ১৬–১৮ বছর পর ভালো হয়ে যায় এবং তাদের কিডনিও সম্পূর্ণ কার্যক্ষম থাকে।"
+    ),
+    icon: "fa-heart-circle-check",
+  },
+];
 
-              const syndromeSymptoms = [
-                { text: "চোখের চারপাশে ফোলাভাব", icon: "fa-eye" },
-                { text: "মুখমণ্ডল ও তার চারপাশ ফুলে যাওয়া", icon: "fa-face-frown" },
-                { text: "পেট ফুলে যাওয়া", icon: "fa-circle" },
-                { text: "হাত ও পায়ে ফোলা ভাব", icon: "fa-hands" },
-                { text: "প্রস্রাবের পরিমাণ কমে যাওয়া", icon: "fa-droplet-slash" },
-              ];
+const syndromeSymptoms = [
+  {
+    text: yhLang(
+      "Swelling around the eyes",
+      "চোখের চারপাশে ফোলাভাব"
+    ),
+    icon: "fa-eye",
+  },
+  {
+    text: yhLang(
+      "Swelling of the face and surrounding areas",
+      "মুখমণ্ডল ও তার চারপাশ ফুলে যাওয়া"
+    ),
+    icon: "fa-face-frown",
+  },
+  {
+    text: yhLang(
+      "Abdominal swelling",
+      "পেট ফুলে যাওয়া"
+    ),
+    icon: "fa-circle",
+  },
+  {
+    text: yhLang(
+      "Swelling of the hands and feet",
+      "হাত ও পায়ে ফোলা ভাব"
+    ),
+    icon: "fa-hands",
+  },
+  {
+    text: yhLang(
+      "Reduced amount of urine",
+      "প্রস্রাবের পরিমাণ কমে যাওয়া"
+    ),
+    icon: "fa-droplet-slash",
+  },
+];
 
-              const guardianNote =
-                "লক্ষণসমূহ দেখা দিলে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রের অসংক্রামক রোগ বিভাগে যোগাযোগ করতে হবে।";
-
+const guardianNote = yhLang(
+  "If these symptoms appear, contact the non-communicable disease department of the nearest health center immediately.",
+  "লক্ষণসমূহ দেখা দিলে দ্রুত নিকটস্থ স্বাস্থ্যকেন্দ্রের অসংক্রামক রোগ বিভাগে যোগাযোগ করতে হবে।"
+);
               const renderList = (items, baseDelay = 0) =>
                 items
                   .map(
@@ -16927,8 +17497,8 @@ const coursesData = [
                   .map(
                     (img, idx) => `
                       <div class="col-12 col-md-6" style="margin: 0 auto;" data-aos="zoom-in" data-aos-delay="${60 + idx * 40}">
-                        <figure class="glass-card p-3 h-100 text-center">
-                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded shadow-sm img-zoom"/>
+                        <figure class="glass-card p-1 h-100 text-center">
+                          <img src="${img.src}" style="height: 300px" alt="${img.alt}" class="img-fluid w-100 rounded shadow-sm img-zoom"/>
                         </figure>
                       </div>
                     `
