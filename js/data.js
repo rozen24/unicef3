@@ -9458,85 +9458,179 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "পরীক্ষা-ভীতি দূর করতে তথ্যভিত্তিক প্রস্তুতি, কার্যকর অধ্যয়ন, দলগত সমর্থন, স্বাস্থ্যকর জীবনযাপন ও ইতিবাচক মনোভাব গুরুত্বপূর্ণ ভূমিকা রাখে।";
+              const intro = yhLang(
+                "Exam fear is reduced through informed planning, smart study habits, healthy routines, and supportive mindset.",
+                "পরীক্ষা-ভীতি দূর করতে তথ্যভিত্তিক প্রস্তুতি, কার্যকর অধ্যয়ন, দলগত সমর্থন, স্বাস্থ্যকর জীবনযাপন ও ইতিবাচক মনোভাব গুরুত্বপূর্ণ ভূমিকা রাখে।"
+              );
 
-              const strategies = [
+              const examPlanSteps = [
                 {
-                  title: "পরীক্ষা সংক্রান্ত সঠিক তথ্য সংগ্রহ করা (Exam Related Information):",
-                  description:
-                    `পরীক্ষার নির্দিষ্ট তারিখ, সময়সূচি, রুটিন, সিলেবাস ঠিকমতো জোগাড় করে সে অনুযায়ী প্রস্তুতি নেওয়া।`,
+                  text: yhLang(
+                    "Collect exam date, routine, syllabus, and instructions clearly.",
+                    "পরীক্ষার তারিখ, সময়সূচি, রুটিন, সিলেবাস ও নির্দেশনা সঠিকভাবে সংগ্রহ করুন।"
+                  ),
                   icon: "fa-calendar-check",
+                  tone: "info",
                 },
                 {
-                  title: "পর্যাপ্ত এবং কার্যকরী অনুশীলনসহ পড়াশোনা করা (Effective Study & Practice):",
-                  description:
-                    `প্রতিদিন নিয়মিত পড়া, পরীক্ষার সময়সূচী, প্রতিটি পরীক্ষার আগে কয় দিন ছুটি, কোন বিষয়টি কঠিন তাই বেশিদিন পড়তে হবে, কোনটি সহজ তাই অল্পদিন পড়তে হবে—সবকিছু উল্লেখ করে পড়ালেখার একটি দৃশ্যমান তালিকা তৈরি করা। বুঝে পড়া, মুখস্থ করা, উদাহরণের সাথে সম্পর্ক করে পড়া।`,
-                  icon: "fa-book",
-                },
-                {
-                  title: "পরীক্ষা-উপযোগী পড়াশোনা করা (Exam-Oriented Study)",
-                  description:
-                    `ভালভাবে পরীক্ষায় অংশগ্রহণের জন্য পরীক্ষার সিলেবাস ও পূর্বের ক্লাসগুলোর ওপর জোর দিতে হবে। পূর্ববর্তী বছরের প্রশ্নপত্রগুলো ব্যাখ্যা করে প্রশ্নের ধরন বুঝতে হবে এবং প্রশ্নগুলোর সমাধান করতে হবে।`,
+                  text: yhLang(
+                    "Create a realistic daily and weekly plan.",
+                    "দৈনিক ও সাপ্তাহিক বাস্তবসম্মত প্রস্তুতি পরিকল্পনা তৈরি করুন।"
+                  ),
                   icon: "fa-list-check",
+                  tone: "accent",
                 },
                 {
-                  title: "বন্ধুদের সাথে দলবদ্ধভাবে পড়ালেখা করা (Group Study)",
-                  description:
-                    `একে অপরকে প্রশ্ন করা, উত্তর দেওয়া, আলোচনা করে গুরুত্বপূর্ণ প্রশ্ন নির্ধারণ করা এবং একে অপরকে বুঝিয়ে শেখানোর মাধ্যমে পড়ালেখা করা।`,
-                  icon: "fa-users",
+                  text: yhLang(
+                    "Prioritize difficult topics with more time.",
+                    "কঠিন বিষয়কে বেশি সময় দিয়ে অগ্রাধিকার দিন।"
+                  ),
+                  icon: "fa-layer-group",
+                  tone: "warn",
                 },
                 {
-                  title: "স্বাস্থ্যকর জীবনযাপন করা (Healthy Lifestyle):",
-                  description:
-                    `পরিমিত ঘুম (৭/৮ ঘণ্টা), পুষ্টিকর খাবার খাওয়া, বেশি পানি পান করা, ব্যায়াম, খেলাধুলা ও বিনোদন—যেমন টিভি দেখা/গল্প করা—ইত্যাদির মাধ্যমে জীবনযাপন করা।`,
-                  icon: "fa-heart",
-                },
-                {
-                  title: "মনোভাব উন্নতকরণ",
-                  description:
-                    `প্রথমেই নির্ধারণ করতে হবে দুশ্চিন্তার কারণ কী—প্রয়োজনীয় প্রস্তুতির অভাবে, নাকি ফলাফল খারাপ হলে অন্যরা কি বলবে সেই ভাবনায়।
-যদি "অন্যরা কী বলবে"—এটাই দুশ্চিন্তার প্রধান কারণ হয়, তাহলে মনে রাখতে হবে জীবনে পরীক্ষা থাকবেই। পড়াশোনার সাথে পরীক্ষা ওতপ্রোতভাবে জড়িত। একটি পরীক্ষা কখনই পুরো জীবনের সফলতা বা ব্যর্থতা নির্ধারণ করে না।
-পরীক্ষাকে জীবনের একটি অংশ হিসেবে গ্রহণ করার মানসিকতা অর্জনের চেষ্টা করতে হবে।`,
-                  icon: "fa-lightbulb",
+                  text: yhLang(
+                    "Practice with previous questions and timed sessions.",
+                    "পূর্ববর্তী প্রশ্ন ও সময় ধরে অনুশীলন করুন।"
+                  ),
+                  icon: "fa-stopwatch",
+                  tone: "sky",
                 },
               ];
 
-              const renderStrategies = (items) =>
+              const studySupportSteps = [
+                {
+                  text: yhLang(
+                    "Use active learning: explain, discuss, and teach peers.",
+                    "সক্রিয়ভাবে শিখুন: ব্যাখ্যা করা, আলোচনা করা ও সহপাঠীকে শেখানো।"
+                  ),
+                  icon: "fa-people-group",
+                  tone: "success",
+                },
+                {
+                  text: yhLang(
+                    "Group study with focused question-answer rounds.",
+                    "দলগত পড়াশোনায় প্রশ্ন-উত্তর ভিত্তিক অনুশীলন করুন।"
+                  ),
+                  icon: "fa-users-between-lines",
+                  tone: "mint",
+                },
+                {
+                  text: yhLang(
+                    "Sleep 7-8 hours and eat balanced meals.",
+                    "৭-৮ ঘণ্টা ঘুম ও সুষম খাদ্য নিশ্চিত করুন।"
+                  ),
+                  icon: "fa-bed",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang(
+                    "Stay hydrated and include light exercise.",
+                    "পর্যাপ্ত পানি পান করুন এবং হালকা ব্যায়াম করুন।"
+                  ),
+                  icon: "fa-person-running",
+                  tone: "teal",
+                },
+              ];
+
+              const mindsetSteps = [
+                {
+                  text: yhLang(
+                    "Identify the real cause of anxiety before reacting.",
+                    "প্রতিক্রিয়া দেওয়ার আগে দুশ্চিন্তার আসল কারণ শনাক্ত করুন।"
+                  ),
+                  icon: "fa-magnifying-glass",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang(
+                    "Do not define your life by one exam result.",
+                    "একটি পরীক্ষার ফলাফল দিয়ে পুরো জীবনকে বিচার করবেন না।"
+                  ),
+                  icon: "fa-scale-balanced",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang(
+                    "Use positive self-talk and calm breathing.",
+                    "ইতিবাচক আত্মকথন ও শান্ত শ্বাস-প্রশ্বাস অনুশীলন করুন।"
+                  ),
+                  icon: "fa-face-smile",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang(
+                    "Seek teacher/counselor support if fear remains high.",
+                    "ভয় বেশি থাকলে শিক্ষক/পরামর্শদাতার সহায়তা নিন।"
+                  ),
+                  icon: "fa-user-graduate",
+                  tone: "danger",
+                },
+              ];
+
+              const renderList = (items, baseDelay = 80, direction = "left") =>
                 items
                   .map(
                     (item, idx) => `
-                      <article class="glass-card p-4 h-100 shadow-sm" data-aos="fade-up" data-aos-delay="${60 +
-                        idx * 30}">
-                        <div class="d-flex align-items-start gap-3 mb-3">
-                          <div class="icon-circle bg-gradient-indigo text-white">
-                            <i class="fa-solid ${item.icon}"></i>
-                          </div>
-                          <div>
-                            <h3 class="h6 gradient-text mb-1">${item.title}</h3>
-                            <p class="mb-0">${item.description}</p>
-                          </div>
-                        </div>
-                      </article>
+                      <li class="m14l10-li m14l10-${item.tone}" data-aos="fade-${direction}" data-aos-delay="${baseDelay + idx * 12}">
+                        <span class="m14l10-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l10-li-text">${item.text}</span>
+                      </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Exam fear solutions",
-                    "পরীক্ষা-ভীতি দূর করার উপায়"
-                  )}</h2>
+                <div class="m14l10-slide">
+                  <div class="m14l10-shape m14l10-shape-a"></div>
+                  <div class="m14l10-shape m14l10-shape-b"></div>
+                  <div class="m14l10-shape m14l10-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-0">${intro}</p>
+                  <header class="m14l10-header">
+                    <h2 class="m14l10-title">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      ${yhLang("Solutions to Exam Fear", "পরীক্ষা-ভীতি দূর করার উপায়")}
+                    </h2>
+                  </header>
+
+                  <section class="m14l10-card m14l10-card-intro">
+                    <h3 class="m14l10-subtitle">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      ${yhLang("Core Strategy", "মূল কৌশল")}
+                    </h3>
+                    <p class="m14l10-p m14l10-p-last">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
-                    <div class="row g-4">
-                      ${renderStrategies(strategies)}
-                    </div>
+                  <div class="m14l10-grid">
+                    <section class="m14l10-card m14l10-card-plan">
+                      <h3 class="m14l10-subtitle">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        ${yhLang("Plan and Preparation", "পরিকল্পনা ও প্রস্তুতি")}
+                      </h3>
+                      <ul class="m14l10-list">
+                        ${renderList(examPlanSteps, 80, "left")}
+                      </ul>
+                    </section>
+
+                    <section class="m14l10-card m14l10-card-study">
+                      <h3 class="m14l10-subtitle">
+                        <i class="fa-solid fa-book"></i>
+                        ${yhLang("Study and Lifestyle", "অধ্যয়ন ও জীবনযাপন")}
+                      </h3>
+                      <ul class="m14l10-list">
+                        ${renderList(studySupportSteps, 95, "right")}
+                      </ul>
+                    </section>
+                  </div>
+
+                  <section class="m14l10-card m14l10-card-mindset">
+                    <h3 class="m14l10-subtitle">
+                      <i class="fa-solid fa-brain"></i>
+                      ${yhLang("Mindset and Support", "মনোভাব ও সহায়তা")}
+                    </h3>
+                    <ul class="m14l10-list">
+                      ${renderList(mindsetSteps, 110, "up")}
+                    </ul>
                   </section>
                 </div>
               `;
