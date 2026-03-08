@@ -17940,35 +17940,37 @@ const guardianNote = yhLang(
                   
                 <div class="row g-2">
                       <div class="col-md-5">
-                        <div class="modern-card glass-card mb-0" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #d5f4e6 0%, #a0d8f1 50%, #e0f7fa 100%); border-radius: 24px; box-shadow: 0 12px 40px rgba(38, 166, 154, 0.25), 0 4px 12px rgba(0, 150, 136, 0.15);">
-                          <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #00695c; font-weight: 700;">
-                            <span style="background: linear-gradient(135deg, #26a69a, #00897b); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 12px rgba(38, 166, 154, 0.3);">
-                              <i class="fa-solid fa-cloud-sun" style="font-size: 24px; color: #fff;"></i>
-                            </span>
-                            ${yhLang("Definition of Weather and Climate", "আবহাওয়া ও জলবায়ুর সংজ্ঞা")}
-                          </h3>
-                          <p class="mb-1">${yhLang(
-                            "Weather is the daily condition of the lower atmosphere. Weather changes easily from place to place. Weather represents the short-term conditions of a place. On the other hand, climate is the average weather conditions of a large area over at least 30 years. Climate changes with location and season.",
-                            "আবহাওয়া হলো বায়ুমণ্ডলের নিম্নস্তরের দৈনন্দিন অবস্থা। স্থানভেদে আবহাওয়া সহজেই পরিবর্তিত হয়। আবহাওয়া কোনো জায়গার স্বল্প সময়ের অবস্থাকে প্রকাশ করে। অন্যদিকে, জলবায়ু হলো কোনো বিস্তৃত অঞ্চলের কমপক্ষে ৩০ বছরের আবহাওয়ার গড় অবস্থা। জলবায়ুর পরিবর্তন হয় স্থানভেদে ও ঋতুভেদে।"
-                          )}</p>
-                          <p>${yhLang(
-                            "In Bangladesh, climate change is having a serious adverse effect on human health, especially on children and adolescents. Climate-sensitive diseases such as dengue, chikungunya, kala-azar, cholera, malnutrition, etc. are increasing and creating new challenges.",
-                            "বাংলাদেশে জলবায়ু পরিবর্তনজনিত কারণে মানবস্বাস্থ্যে, বিশেষ করে শিশু-কিশোরদের ওপর মারাত্মকভাবে ক্ষতিকর প্রভাব পড়ছে। জলবায়ু সংবেদনশীল রোগ যেমন ডেঙ্গু, চিকুনগুনিয়া, কালাজ্বর, কলেরা, অপুষ্টি ইত্যাদি বৃদ্ধি পাচ্ছে এবং নতুন নতুন চ্যালেঞ্জ তৈরি হচ্ছে।"
-                          )}</p>
-                        </div>
+                          <div class="h-100 shadow-sm">
+                            <div class="modern-card p-1  glass-card mb-0" data-aos="fade-up" data-aos-delay="40" style="border-radius: 24px; box-shadow: 0 12px 40px rgba(38, 166, 154, 0.25), 0 4px 12px rgba(0, 150, 136, 0.15);">
+                            <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #00695c; font-weight: 700;">
+                              <span style="background: linear-gradient(135deg, #26a69a, #00897b); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 12px rgba(38, 166, 154, 0.3);">
+                                <i class="fa-solid fa-cloud-sun" style="font-size: 24px; color: #fff;"></i>
+                              </span>
+                              ${yhLang("Weather and Climate", "আবহাওয়া ও জলবায়ু")}
+                            </h3>
+                            <p class="mb-1">${yhLang(
+                              "Weather is the daily condition of the lower atmosphere. Weather changes easily from place to place. Weather represents the short-term conditions of a place. On the other hand, climate is the average weather conditions of a large area over at least 30 years. Climate changes with location and season.",
+                              "আবহাওয়া হলো বায়ুমণ্ডলের নিম্নস্তরের দৈনন্দিন অবস্থা। স্থানভেদে আবহাওয়া সহজেই পরিবর্তিত হয়। আবহাওয়া কোনো জায়গার স্বল্প সময়ের অবস্থাকে প্রকাশ করে। অন্যদিকে, জলবায়ু হলো কোনো বিস্তৃত অঞ্চলের কমপক্ষে ৩০ বছরের আবহাওয়ার গড় অবস্থা। জলবায়ুর পরিবর্তন হয় স্থানভেদে ও ঋতুভেদে।"
+                            )}</p>
+                            <p>${yhLang(
+                              "In Bangladesh, climate change is having a serious adverse effect on human health, especially on children and adolescents. Climate-sensitive diseases such as dengue, chikungunya, kala-azar, cholera, malnutrition, etc. are increasing and creating new challenges.",
+                              "বাংলাদেশে জলবায়ু পরিবর্তনজনিত কারণে মানবস্বাস্থ্যে, বিশেষ করে শিশু-কিশোরদের ওপর মারাত্মকভাবে ক্ষতিকর প্রভাব পড়ছে। জলবায়ু সংবেদনশীল রোগ যেমন ডেঙ্গু, চিকুনগুনিয়া, কালাজ্বর, কলেরা, অপুষ্টি ইত্যাদি বৃদ্ধি পাচ্ছে এবং নতুন নতুন চ্যালেঞ্জ তৈরি হচ্ছে।"
+                            )}</p>
+                          </div>
                         
-                        <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #ffebee 0%, #fce4ec 50%, #f8bbd0 100%); border-radius: 28px; box-shadow: 0 16px 48px rgba(233, 30, 99, 0.28), 0 6px 16px rgba(194, 24, 91, 0.2); margin-top: 20px;">
-                          <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #c2185b; font-weight: 700;">
-                            <span style="background: linear-gradient(135deg, #e91e63, #c2185b); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);">
-                              <i class="fa-solid fa-temperature-arrow-up" style="font-size: 24px; color: #fff;"></i>
-                            </span>
-                            ${yhLang("Climate Change: A Global Reality", "জলবায়ু পরিবর্তন")}
-                          </h3>
-                          <p>${yhLang(
-                            "Climate change is a global reality. The Earth is continuously warming, sea levels are rising, and as ice sheets melt, the world's climate system is undergoing radical changes. Records from recent decades show that Earth's weather is now much more unpredictable and extreme compared to pre-industrial times. Disasters such as floods, droughts, wildfires, and cyclones are becoming more frequent and intense, having profound effects on the environment, economy, and human society worldwide.Mitigation and adaptation strategies have become essential components of international and national policies and action plans to address this deep-rooted crisis.",
-                            "জলবায়ু পরিবর্তন একটি বৈশ্বিক বাস্তবতা। পৃথিবী ক্রমাগত উষ্ণ হয়ে চলেছে, সমুদ্রের জলস্তর বৃদ্ধি পাচ্ছে এবং বরফের স্তর গলতে থাকায় বিশ্বের জলবায়ু ব্যবস্থায় আমূল পরিবর্তন ঘটছে। গত কয়েক দশকের রেকর্ডে দেখা গেছে, শিল্পযুগ-পূর্ব সময়ের তুলনায় পৃথিবীর আবহাওয়া আজ অনেক বেশি অপ্রত্যাশিত ও চরম আচরণ করছে। ঘনঘন ও তীব্রতর হয়ে উঠছে বন্যা, খরা, দাবানল ও ঘূর্ণিঝড়ের মতো দুর্যোগ, যা বিশ্বজুড়ে পরিবেশ, অর্থনীতি এবং মানবসমাজের ওপর গভীর প্রভাব ফেলছে। এই বদ্ধমূল সঙ্কট মোকাবেলায় প্রশমন ও অভিযোজন কৌশলগুলি আন্তর্জাতিক ও জাতীয় নীতি ও কর্মপরিকল্পনার অপরিহার্য অঙ্গে পরিণত হয়েছে।"
-                          )}</p>
-                        </div>
+                          <div class="modern-card p-1 glass-card" data-aos="fade-up" data-aos-delay="80" style="border-radius: 28px; box-shadow: 0 16px 48px rgba(233, 30, 99, 0.28), 0 6px 16px rgba(194, 24, 91, 0.2); margin-top: 20px;">
+                            <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #c2185b; font-weight: 700;">
+                              <span style="background: linear-gradient(135deg, #e91e63, #c2185b); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);">
+                                <i class="fa-solid fa-temperature-arrow-up" style="font-size: 24px; color: #fff;"></i>
+                              </span>
+                              ${yhLang("Climate Change: A Global Reality", "জলবায়ু পরিবর্তন")}
+                            </h3>
+                            <p>${yhLang(
+                              "Climate change is a global reality. The Earth is continuously warming, sea levels are rising, and as ice sheets melt, the world's climate system is undergoing radical changes. Records from recent decades show that Earth's weather is now much more unpredictable and extreme compared to pre-industrial times. Disasters such as floods, droughts, wildfires, and cyclones are becoming more frequent and intense, having profound effects on the environment, economy, and human society worldwide.Mitigation and adaptation strategies have become essential components of international and national policies and action plans to address this deep-rooted crisis.",
+                              "জলবায়ু পরিবর্তন একটি বৈশ্বিক বাস্তবতা। পৃথিবী ক্রমাগত উষ্ণ হয়ে চলেছে, সমুদ্রের জলস্তর বৃদ্ধি পাচ্ছে এবং বরফের স্তর গলতে থাকায় বিশ্বের জলবায়ু ব্যবস্থায় আমূল পরিবর্তন ঘটছে। গত কয়েক দশকের রেকর্ডে দেখা গেছে, শিল্পযুগ-পূর্ব সময়ের তুলনায় পৃথিবীর আবহাওয়া আজ অনেক বেশি অপ্রত্যাশিত ও চরম আচরণ করছে। ঘনঘন ও তীব্রতর হয়ে উঠছে বন্যা, খরা, দাবানল ও ঘূর্ণিঝড়ের মতো দুর্যোগ, যা বিশ্বজুড়ে পরিবেশ, অর্থনীতি এবং মানবসমাজের ওপর গভীর প্রভাব ফেলছে। এই বদ্ধমূল সঙ্কট মোকাবেলায় প্রশমন ও অভিযোজন কৌশলগুলি আন্তর্জাতিক ও জাতীয় নীতি ও কর্মপরিকল্পনার অপরিহার্য অঙ্গে পরিণত হয়েছে।"
+                            )}</p>
+                          </div>
+                          </div>
                       </div>
                       <div class="col-md-7">
                         <figure class="glass-card p-1 h-100 mb-0 text-center">
@@ -17999,7 +18001,7 @@ const guardianNote = yhLang(
                   </h2>
                   <div class="row g-2">
                       <div class="col-md-7">
-                          <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%, #9fa8da 100%);border-radius:26px;box-shadow:0 14px 42px rgba(84,110,122,.25), 0 6px 18px rgba(69,90,100,.15);">
+                          <div class="modern-card glass-card p-2" data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 14px 42px rgba(84,110,122,.25), 0 6px 18px rgba(69,90,100,.15);">
                             <h3 style="display:flex;align-items:center;color:#283593;margin-bottom:16px; font-weight:700;">
                               <span style="background: linear-gradient(135deg, #5c6bc0, #3f51b5); width: 50px; height: 50px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 6px 18px rgba(84, 110, 122, 0.3);">
                                 <i class="fa-solid fa-lungs" style="color:#fff; font-size: 26px;"></i>
