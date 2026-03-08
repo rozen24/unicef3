@@ -20752,19 +20752,9 @@ const guardianNote = yhLang(
                     </div>
 
                     <div class="m24l2-right">
-                      <section class="m24l2-panel m24l2-panel-causes" data-aos="fade-left" data-aos-delay="300">
-                        <h3 class="m24l2-section-heading">
-                          <span class="m24l2-heading-icon m24l2-icon-causes">
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                          </span>
-                          <span class="m24l2-heading-text">${yhLang("Causes of Value Degradation", "মূল্যবোধ অবক্ষয়ের কারণ")}</span>
-                        </h3>
-                        <ul class="m24l2-cause-grid">
-                          ${renderCauses(causes, 380)}
-                        </ul>
-                      </section>
+                      
 
-                      <div class="m24l2-orbit-container" data-aos="zoom-in" data-aos-delay="400">
+                      <div class="m24l2-orbit-container " data-aos="zoom-in" data-aos-delay="400">
                         <div class="m24l2-orbit-center">
                           <div class="m24l2-orbit-center-icon">
                             <i class="fa-solid fa-gem"></i>
@@ -20777,6 +20767,17 @@ const guardianNote = yhLang(
                         <div class="m24l2-orbit-ring"></div>
                         ${renderValuesOrbit()}
                       </div>
+                      <section class="m24l2-panel m24l2-panel-causes" data-aos="fade-left" data-aos-delay="300">
+                        <h3 class="m24l2-section-heading">
+                          <span class="m24l2-heading-icon m24l2-icon-causes">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                          </span>
+                          <span class="m24l2-heading-text">${yhLang("Causes of Value Degradation", "মূল্যবোধ অবক্ষয়ের কারণ")}</span>
+                        </h3>
+                        <ul class="m24l2-cause-grid">
+                          ${renderCauses(causes, 380)}
+                        </ul>
+                      </section>
                     </div>
                   </div>
                 </div>`;
