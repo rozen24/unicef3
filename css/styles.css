@@ -2112,11 +2112,7 @@ html[lang|="bn"] h2 {
   grid-template-columns: 1fr 1fr;
   gap: 5px;
 }
-.list-unstyled {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  gap: 0px 5px;
-}
+
 .list-unstyled_flex {
   display: flex !important;
   flex-direction: column;
@@ -4523,15 +4519,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-.m24l2-panel-highlights {
-}
-
-.m24l2-panel-explanation {
-  background: linear-gradient(135deg, rgba(167, 243, 208, 0.85), rgba(209, 250, 229, 0.9));
-}
-
-.m24l2-panel-learn {
-}
 
 .m24l2-panel-causes {
   flex: 1;
@@ -20222,7 +20209,7 @@ input::placeholder {
 }
 
 .mod23-lesson2 .m23l2-symptom__text {
-  font-weight: 600;
+  font-weight: 500;
   color: rgba(15, 23, 42, 0.80);
   font-size: 0.93rem;
   line-height: 1.4;
@@ -20462,7 +20449,7 @@ input::placeholder {
 }
 
 .mod23-lesson3 .m23l3-step__text {
-  font-weight: 600;
+  font-weight: 500;
   color: rgba(15, 23, 42, 0.80);
   font-size: 0.93rem;
   line-height: 1.4;
@@ -20725,43 +20712,7 @@ input::placeholder {
   background: rgba(255,255,255,0.6);
   border: 1px solid rgba(0,0,0,0.05);
 }
-.section_wrap {
-  display: grid;
-  grid-template-columns: 2fr 4fr 1fr;
-  gap: 20px;
-}
-.section_wrap_mod24_lesson2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
-}
-.lession_6 {
-  grid-template-columns: 3fr 2fr 2fr;
-  gap: 10px;
-}
-.modu23lession_7 {
-  grid-template-columns: 3fr 2fr 2fr;
-}
-.modu23_less_7_1 {
-  grid-template-columns: 2fr 2fr 3fr;
-}
-.modu23_less_8_1 {
-  grid-template-columns: 2fr 4fr 2fr;
-}
 
-.modu_lession_7_3 {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-}
-.modu23_less_9 {
-  display: grid !important;
-  grid-template-columns: 3fr 2fr;
-}
-.modu24_less_8_ui {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 5px;
-}
 .mod23-lesson4 .m23l4-panel--danger .m23l4-symptom {
   background: rgba(255,240,245,0.65);
   border-color: rgba(233, 30, 99, 0.12);
@@ -20786,7 +20737,7 @@ input::placeholder {
 
 .mod23-lesson4 .m23l4-symptom__text,
 .mod23-lesson4 .m23l4-prevent__text {
-  font-weight: 600;
+  font-weight: 500;
   color: rgba(15, 23, 42, 0.80);
   font-size: 0.93rem;
   line-height: 1.4;
@@ -21252,7 +21203,7 @@ input::placeholder {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 0;
 }
@@ -21473,7 +21424,7 @@ input::placeholder {
 }
 
 .mod23-lesson7 .m23l7-panel {
-  padding: 0px 16px;
+  padding: 3px 16px;
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 14px;
@@ -21505,7 +21456,7 @@ input::placeholder {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 0;
 }
@@ -21752,7 +21703,7 @@ input::placeholder {
   border-radius: 14px;
   box-shadow: 0 12px 24px rgba(15, 53, 110, 0.08);
   margin-bottom: 5px;
-  display: flex;
+  display: flex !iportant;
   flex-direction: column;
   align-items: center;
 }

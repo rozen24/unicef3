@@ -19936,7 +19936,7 @@ const guardianNote = yhLang(
 
                   <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="1100">
                     <h3 class="m23l7-section-title"><i class="fa-solid fa-flask-vial"></i> ${yhLang("Treatment & Prevention:", "চিকিৎসা ও প্রতিকার:")}</h3>
-                    <ul class="m23l7-list list-unstyled modu_lession_7_3">
+                    <ul class="m23l7-list list-unstyled">
                       ${renderPoints(treatmentPoints, 1160)}
                     </ul>
                   </section>
@@ -20435,7 +20435,7 @@ const guardianNote = yhLang(
                           <span class="m24l1-heading-icon m24l1-icon-what">
                             <i class="fa-solid fa-circle-question"></i>
                           </span>
-                          <span class="m24l1-heading-text">${yhLang("What is Life Skills?", "জীবন দক্ষতা কী?")}</span>
+                          <span class="m24l1-heading-text">${yhLang("What is Life Skills?", "জীবন দক্ষতা কী ?")}</span>
                         </h3>
                         <ul class="m24l1-enhanced-list">
                           ${renderWhatIsPoints(whatIsDesc, 280)}
@@ -20447,7 +20447,7 @@ const guardianNote = yhLang(
                           <span class="m24l1-heading-icon m24l1-icon-hard">
                             <i class="fa-solid fa-graduation-cap"></i>
                           </span>
-                          <span class="m24l1-heading-text">${yhLang("Is it Hard to Learn?", "জীবন দক্ষতা শেখা কি কঠিন?")}</span>
+                          <span class="m24l1-heading-text">${yhLang("Is it Hard to Learn?", "জীবন দক্ষতা শেখা কি কঠিন ?")}</span>
                         </h3>
                         <ul class="m24l1-enhanced-list">
                           ${renderIsHardPoints(isHardDesc, 480)}
@@ -20459,7 +20459,7 @@ const guardianNote = yhLang(
                           <span class="m24l1-heading-icon m24l1-icon-help">
                             <i class="fa-solid fa-people-group"></i>
                           </span>
-                          <span class="m24l1-heading-text">${yhLang("Who Can Help Teach?", "কারা জীবন দক্ষতা শেখাতে সাহায্য করতে পারেন?")}</span>
+                          <span class="m24l1-heading-text">${yhLang("Who Can Help Teach?", "কারা জীবন দক্ষতা শেখাতে সাহায্য করতে পারেন ?")}</span>
                         </h3>
                         <ul class="m24l1-enhanced-list list_2grid">
                           ${renderHelpers(helpers, 680)}
@@ -20488,7 +20488,7 @@ const guardianNote = yhLang(
           },
           {
             id: "ch24-lesson-2",
-            title: yhLang("What are Values?", "মূল্যবোধ কী?"),
+            title: yhLang("What are Values?", "মূল্যবোধ কী ?"),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-blue",
             audioFile: "",

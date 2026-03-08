@@ -1,0 +1,37 @@
+.section_wrap {
+  display: grid;
+  grid-template-columns: 2fr 4fr 1fr;
+  gap: 20px;
+}
+.section_wrap_mod24_lesson2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.lession_6 {
+  grid-template-columns: 3fr 2fr 2fr;
+  gap: 10px;
+}
+.modu23lession_7 {
+  grid-template-columns: 3fr 2fr 2fr;
+}
+.modu23_less_7_1 {
+  grid-template-columns: 2fr 2fr 3fr;
+}
+.modu23_less_8_1 {
+  grid-template-columns: 2fr 4fr 2fr;
+}
+
+.mod23-lesson7 .modu_lession_7_3 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+.modu23_less_9 {
+  display: grid !important;
+  grid-template-columns: 3fr 2fr;
+}
+.modu24_less_8_ui {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 5px;
+}
