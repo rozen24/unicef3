@@ -17023,7 +17023,7 @@ const bpPrevention = [
                               </span>
                               ${yhLang("Weather and Climate", "আবহাওয়া ও জলবায়ু")}
                             </h3>
-                            <p class="mb-1">${yhLang(
+                            <p class="mb-3">${yhLang(
                               "Weather is the daily condition of the lower atmosphere. Weather changes easily from place to place. Weather represents the short-term conditions of a place. On the other hand, climate is the average weather conditions of a large area over at least 30 years. Climate changes with location and season.",
                               "আবহাওয়া হলো বায়ুমণ্ডলের নিম্নস্তরের দৈনন্দিন অবস্থা। স্থানভেদে আবহাওয়া সহজেই পরিবর্তিত হয়। আবহাওয়া কোনো জায়গার স্বল্প সময়ের অবস্থাকে প্রকাশ করে। অন্যদিকে, জলবায়ু হলো কোনো বিস্তৃত অঞ্চলের কমপক্ষে ৩০ বছরের আবহাওয়ার গড় অবস্থা। জলবায়ুর পরিবর্তন হয় স্থানভেদে ও ঋতুভেদে।"
                             )}</p>
@@ -17402,12 +17402,29 @@ const bpPrevention = [
                 pollutionCauses
                   .map(
                     (item, idx) => `
-                      <li class="mb-2" style="background:rgba(255,255,255,.65);border-radius:10px;padding:8px;box-shadow:${idx % 2 === 0 ? '0 4px 12px rgba(2,136,209,.12)' : '0 5px 14px rgba(255,112,67,.13)'};">
-                        <h3 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? '#0277bd' : '#d84315'};font-size:0.95em;">
-                          <i class="fa-solid ${idx < 2 ? 'fa-industry' : idx < 4 ? 'fa-house' : idx < 6 ? 'fa-oil-can' : 'fa-truck-medical'} me-2"></i>
+                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:4px;box-shadow:${idx % 2 === 0 ? '0 2px 7px rgba(2,136,209,.10)' : '0 3px 8px rgba(255,112,67,.11)'};">
+                        <h3 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? '#0277bd' : '#d84315'};font-size:0.8em;">
+                          <i class="fa-solid ${idx < 2 ? 'fa-industry' : idx < 4 ? 'fa-house' : idx < 6 ? 'fa-oil-can' : 'fa-truck-medical'} me-2" style="font-size:0.85em;"></i>
                           ${item.title}
                         </h3>
-                        <p class="mb-0" style="font-size:0.9em;"><i class="fa-solid fa-circle-info me-2 text-secondary" style="font-size:0.9em;"></i>${item.desc}</p>
+                        <p class="mb-0" style="font-size:0.74em;line-height:1.35;"><i class="fa-solid fa-circle-info me-2 text-secondary" style="font-size:0.78em;"></i>${item.desc}</p>
+                      </li>
+                    `
+                  )
+                  .join("");
+
+              const waterSources = [
+                yhLang("1. Groundwater", "১।  ভূগর্ভস্থ পানি"),
+                yhLang("2. Surface water such as rivers, canals, wetlands, and ponds", "২। ভূপৃষ্ঠের উপরিভাগ যেমনঃ নদি-নলা, খাল-বিল, পুকুর প্রভিতি"),
+                yhLang("3. Others: rainwater, glaciers", "৩। অন্যান্যঃ  বৃষ্টির পানি, হিমবাহ"),
+              ];
+
+              const renderWaterSources = () =>
+                waterSources
+                  .map(
+                    (item, idx) => `
+                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:1px; padding-left: 10px;box-shadow:${idx % 2 === 0 ? '0 2px 7px rgba(2,136,209,.10)' : '0 3px 8px rgba(255,112,67,.11)'};border-left:3px solid ${idx % 2 === 0 ? '#039be5' : '#f57c00'};">
+                        <span style="font-size:0.76em;line-height:1.35;">${item}</span>
                       </li>
                     `
                   )
@@ -17415,22 +17432,27 @@ const bpPrevention = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-water" style="color: #ff7043; margin-right: 8px; font-size: 1em;"></i>
-                    ${yhLang(
+                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="60" style="border-radius:11px;padding:5px;box-shadow:0 4px 12px rgba(3,155,229,.14), 0 2px 6px rgba(2,119,189,.1);background:linear-gradient(135deg,#e1f5fe 0%, #e3f2fd 100%);">
+                    <h3 style="display:flex;align-items:center;color:#0277bd;margin-bottom:4px; font-weight:700;font-size:20px;"><span style="background:linear-gradient(135deg,#29b6f6,#0288d1); width:26px; height:26px; border-radius:7px; display:flex; align-items:center; justify-content:center; margin-right:6px; box-shadow:0 2px 6px rgba(41,182,246,.22);"><i class="fa-solid fa-droplet" style="color:#fff; font-size:12px;"></i></span>${yhLang("Water Pollution", "পানি দূষণ")}</h3>
+
+                    <p class="mb-1" style="font-size:0.74em;line-height:1.35;">${yhLang("Only 0.75% of water on Earth is clean and easily accessible for drinking. Safe drinking water must be available and free from contamination. Due to climate change, extreme floods and droughts occur, putting safe drinking water sources at risk.", "পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।")}</p>
+
+                    <h3 style="display:flex;align-items:center;color:#1565c0;margin-bottom:4px; font-weight:700;font-size:20px;"><i class="fa-solid fa-list-check" style="margin-right:6px;font-size:0.85em;"></i>${yhLang("Sources of Drinking Water", "খাবারপানির উৎসঃ")}</h3>
+                    <ul class="list-unstyled feature-list m22l4-grid mb-0">
+                      ${renderWaterSources()}
+                    </ul>
+                  </div>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:11px;padding:5px;box-shadow:0 4px 12px rgba(255,112,67,.14), 0 2px 6px rgba(244,81,30,.1);">
+                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:4px; font-weight:700;font-size:0.86em;"><span style="background:linear-gradient(135deg,#ff7043,#f4511e); width:26px; height:26px; border-radius:7px; display:flex; align-items:center; justify-content:center; margin-right:6px; box-shadow:0 2px 6px rgba(255,112,67,0.22);"><i class="fa-solid fa-industry" style="color:#fff; font-size:12px;"></i></span>${yhLang(
                         "Main Causes of Food and Water Contamination",
                         "খাবারপানির দূষণের প্রধান কারণ সমূহ"
-                    )}
-                  </h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:16px;padding:8px;box-shadow:0 8px 24px rgba(255,112,67,.2), 0 3px 10px rgba(244,81,30,.12);">
-                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:5px; font-weight:700;font-size:1em;"><span style="background:linear-gradient(135deg,#ff7043,#f4511e); width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; margin-right:8px; box-shadow:0 3px 10px rgba(255,112,67,0.28);"><i class="fa-solid fa-industry" style="color:#fff; font-size:16px;"></i></span>${yhLang(
-                        "Main Causes of Food and Water Contamination",
-                        "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ"
                     )}</h3>
                     <ul class="list-unstyled feature-list mb-0">
                       ${renderCauses()}
                     </ul>
                   </div>
+
+                  
                 </div>`;
             })(),
           },
