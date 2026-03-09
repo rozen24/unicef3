@@ -5549,7 +5549,7 @@ const coursesData = [
                         <p class="mb-4" data-aos="fade-right" data-aos-delay="60">${intro}</p>
 
                         <article class="mb-3" data-aos="fade-right" data-aos-delay="80">
-                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকা গ্রহণের সুবিধা", "টিকা গ্রহণের সুবিধা")}</h3>
+                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকা গ্রহণের ঝুঁকি", "টিকা গ্রহণের ঝুঁকি")}</h3>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(advantages, 80)}
                           </ul>
@@ -6390,22 +6390,22 @@ const coursesData = [
                 {
                   title: "সমতা",
                   body:
-                    "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়। সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-সুবিধা লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।",
+                    "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়। সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।",
                 },
                 {
                   title: "ন্যায্যতা",
                   body:
-                    "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-সুবিধা লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।",
+                    "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।",
                 },
                 {
                   title: "জেন্ডার সমতা",
                   body:
-                    "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-সুবিধা এবং অধিকার সমান হবে তা নিশ্চিত করে।",
+                    "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।",
                 },
                 {
                   title: "সাম্য ও সমতার পার্থক্য",
                   body:
-                    "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-সুবিধা দিয়ে সাম্য (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।",
+                    "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-ঝুঁকি দিয়ে সাম্য (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।",
                 },
               ];
 
@@ -7147,7 +7147,7 @@ const coursesData = [
                 },
                 {
                   title: "(৫)",
-                  text: "পারিবারিক সম্পর্কের কারণে কোনো সম্পদ বা সুবিধা ব্যবহারের অধিকার থাকা সত্ত্বেও তা থেকে বঞ্চিত করা বা ভোগ-দখলে বাধা প্রদান।",
+                  text: "পারিবারিক সম্পর্কের কারণে কোনো সম্পদ বা ঝুঁকি ব্যবহারের অধিকার থাকা সত্ত্বেও তা থেকে বঞ্চিত করা বা ভোগ-দখলে বাধা প্রদান।",
                 },
               ];
 
@@ -8236,7 +8236,7 @@ const coursesData = [
               const mentalSymptoms = [
                 { text: yhLang("Excessive anger", "অত্যধিক রাগ"), icon: "fa-fire", tone: "danger" },
                 { text: yhLang("Feeling irritated", "বিরক্ত বোধ"), icon: "fa-face-tired", tone: "warn" },
-                { text: yhLang("Difficulty concentrating", "মনোযোগের অসুবিধা"), icon: "fa-bullseye", tone: "info" },
+                { text: yhLang("Difficulty concentrating", "মনোযোগের অঝুঁকি"), icon: "fa-bullseye", tone: "info" },
                 { text: yhLang("Restlessness", "অস্থিরতা"), icon: "fa-person-running", tone: "sun" },
                 { text: yhLang("Perceiving situations as very dangerous", "যেকোনো পরিস্থিতি খুব বিপজ্জনক মনে করা"), icon: "fa-triangle-exclamation", tone: "red" },
                 { text: yhLang("Fear that something bad will happen", "খারাপ কিছু ঘটবে বলে আশঙ্কা"), icon: "fa-cloud-bolt", tone: "amber" },
@@ -10208,7 +10208,7 @@ const coursesData = [
                 {
                   title: "চোখে চোখ রেখে কথা বলার অভাব",
                   description:
-                    "অটিজম আক্রান্ত শিশুরা প্রায়ই চোখে চোখ রেখে কথা বলতে অসুবিধা বোধ করে।",
+                    "অটিজম আক্রান্ত শিশুরা প্রায়ই চোখে চোখ রেখে কথা বলতে অঝুঁকি বোধ করে।",
                 },
                 {
                   title: "অনুভূতি বোঝার ক্ষমতার অভাব",
@@ -10223,7 +10223,7 @@ const coursesData = [
                 {
                   title: "সামাজিক সংকেত বোঝার ঘাটতি",
                   description:
-                    "সামাজিক নিয়ম বা সংকেত বুঝতে এবং অনুসরণ করতে অসুবিধা হয়।",
+                    "সামাজিক নিয়ম বা সংকেত বুঝতে এবং অনুসরণ করতে অঝুঁকি হয়।",
                 },
               ];
 
@@ -10241,7 +10241,7 @@ const coursesData = [
                 {
                   title: "অভিব্যক্তি ব্যাখ্যা করতে সমস্যা",
                   description:
-                    "অভিব্যক্তি ও মুখের অভিব্যক্তি বোঝাতে বা সঠিকভাবে ব্যবহার করতে অসুবিধা হয়।",
+                    "অভিব্যক্তি ও মুখের অভিব্যক্তি বোঝাতে বা সঠিকভাবে ব্যবহার করতে অঝুঁকি হয়।",
                 },
                 {
                   title: "দুর্বল কথোপকথন",
@@ -10280,7 +10280,7 @@ const coursesData = [
               const listIconPool = ["fa-eye", "fa-face-meh", "fa-user-group", "fa-puzzle-piece", "fa-comments", "fa-volume-high", "fa-language", "fa-repeat"];
 
               const toneForItem = (text, idx) => {
-                if (/সমস্যা|অভাব|ঘাটতি|অসুবিধা/.test(text)) return { tone: "warning", icon: listIconPool[idx % listIconPool.length] };
+                if (/সমস্যা|অভাব|ঘাটতি|অঝুঁকি/.test(text)) return { tone: "warning", icon: listIconPool[idx % listIconPool.length] };
                 if (/পুনরাবৃত্তি|সংবেদনশীলতা|রুটিন/.test(text)) return { tone: "info", icon: listIconPool[idx % listIconPool.length] };
                 return { tone: "success", icon: listIconPool[idx % listIconPool.length] };
               };
@@ -11079,7 +11079,7 @@ const coursesData = [
             },
             content: (function () {
               const intro =
-                "তরুন-তরুনীরা আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে 􀊍ার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্যাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়েউঠেছে। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ এবং সুবিধা প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিনড়বতার মতো সমস্যাগুলোর জন্ম দিতে পারে। এই প্রসঙ্গে, স্বাস্থ্য সেবা প্রদানকারীদের একটি গুরুত্বপূর্ণ ভূমিকা রয়েছে তরুন-তরুনীদের সঠিক নির্দেশনা প্রদান এবং তাদের ডিজিটাল স্বাস্থ্য সুরক্ষা নিশ্চিত করার জন্য।";
+                "তরুন-তরুনীরা আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে 􀊍ার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্যাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়েউঠেছে। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ এবং ঝুঁকি প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিনড়বতার মতো সমস্যাগুলোর জন্ম দিতে পারে। এই প্রসঙ্গে, স্বাস্থ্য সেবা প্রদানকারীদের একটি গুরুত্বপূর্ণ ভূমিকা রয়েছে তরুন-তরুনীদের সঠিক নির্দেশনা প্রদান এবং তাদের ডিজিটাল স্বাস্থ্য সুরক্ষা নিশ্চিত করার জন্য।";
 
               const impactIntro =
                 "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব তরুন-তরুনীদের মধ্যে বিশেষভাবে গভীর হতে পারে:";
@@ -11191,7 +11191,7 @@ const coursesData = [
                   color: "m16l1-section-provider",
                   title: yhLang("Psychosocial Support Provider", "মনোসামাজিক সহায়তাকারী"),
                   description:
-                    "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অসুবিধা হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।",
+                    "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অঝুঁকি হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।",
                 },
                 {
                   icon: "fa-graduation-cap",
@@ -11328,7 +11328,7 @@ const coursesData = [
                       </div>
                       <h3 class="m16l1-section-title-main">${yhLang(
                         "Key Benefits",
-                        "প্রধান সুবিধাসমূহ"
+                        "প্রধান ঝুঁকিসমূহ"
                       )}</h3>
                     </div>
                     <ul class="m16l1-benefits-list">
@@ -13107,7 +13107,7 @@ const coursesData = [
               const closedFractureHeading = "আবদ্ধ হাড় ভাঙ্গার ক্ষেত্রে";
               const closedFractureSteps = [
                 "আক্রান্ত অঙ্গটি জোরপূর্বক সোজা করার চেষ্টা করা যাবেনা।",
-                "অঙ্গটি সুবিধাজনক অবস্থানে রাখতে হবে এবং যথাসম্ভব কম নড়াচড়া করতে হবে।",
+                "অঙ্গটি ঝুঁকিজনক অবস্থানে রাখতে হবে এবং যথাসম্ভব কম নড়াচড়া করতে হবে।",
                 "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য হাসপাতালে নিয়ে যেতে হবে।",
               ];
 
@@ -15564,7 +15564,7 @@ const coursesData = [
                     <section class="m19l10-section m19l10-section-c" data-aos="fade-up" data-aos-delay="60">
                       <article class="m19l10-box is-definition mb-4">
                        <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-scale-balanced"></i>${yhLang("Understanding Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজন বোঝা")}</h3>
-                       <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "BMI ২৫ থেকে ২৯.৯ অতিরিক্ত ওজন হিসেবে বিবেচিত হয়। BMI ৩০ বা তার বেশি স্থূলতা হিসেবে শ্রেণীবদ্ধ। তরুন-তরুনীদের মধ্যে স্থূলতার হার পারিবারিক পরিবেশ, খাদ্যাভ্যাস, সামাজিক-অর্থনৈতিক অবস্থা, নিয়মিত শারীরিক কার্যকলাপ এবং সুবিধা দ্বারা প্রভাবিত হয়।")}</p>
+                       <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "BMI ২৫ থেকে ২৯.৯ অতিরিক্ত ওজন হিসেবে বিবেচিত হয়। BMI ৩০ বা তার বেশি স্থূলতা হিসেবে শ্রেণীবদ্ধ। তরুন-তরুনীদের মধ্যে স্থূলতার হার পারিবারিক পরিবেশ, খাদ্যাভ্যাস, সামাজিক-অর্থনৈতিক অবস্থা, নিয়মিত শারীরিক কার্যকলাপ এবং ঝুঁকি দ্বারা প্রভাবিত হয়।")}</p>
                      </article>
                       <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Causes of Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজনের কারণ")}</h3>
                       ${renderList(overweightCauses)}
@@ -15997,7 +15997,7 @@ const leftSections = [
       {
         text: yhLang(
           "Provide counseling support to help students cope with mental stress.",
-          "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং সুবিধা দেওয়া।"
+          "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং ঝুঁকি দেওয়া।"
         ),
         icon: "fa-hand-holding-heart",
       },
@@ -16625,7 +16625,42 @@ const bpPrevention = [
             audioFile: "",
             quiz: null,
             content: (function () {
-              const secondaryList = [
+
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">
+                    <i class="fa-solid fa-seedling" style="color: #81c784; margin-right: 8px; font-size: 0.95em;"></i>
+                    তারুণ্য: সম্ভাবনা ও ঝুঁকি
+                  </h2>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius: 14px; padding: 9px; box-shadow: 0 5px 18px rgba(233, 30, 99, 0.12);">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #c2185b; font-size: 1em;">
+                      <i class="fa-solid fa-lightbulb" style="margin-right: 8px; font-size: 16px; color: #f06292;"></i>
+                      ${yhLang("Potentially Vulnerable Period", "সম্ভাবনাময় সময়")}
+                    </h3>
+                    <p class="mb-2" style="font-size: 0.92em;">তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
+                  </div>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="border-radius: 16px; padding: 9px; box-shadow: 0 6px 20px rgba(63, 81, 181, 0.15); margin-top: 12px;">
+                    
+                    <p class="mb-0" style="font-size: 0.92em;">এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
+                  </div>
+
+                </div>`;
+            })(),
+          },
+          {
+            id: "ch21-lesson-2",
+            title: yhLang(
+              "What to Do to Mitigate Risks for At-Risk Adolescents",
+              "ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়"
+            ),
+            icon: "fa-user-shield",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+                            const secondaryList = [
   {
     icon: "fa-house-tsunami",
     color: "#0288d1",
@@ -16668,64 +16703,17 @@ const bpPrevention = [
   },
 ];
 
-              const renderList = (items) =>
+              const renderList1 = (items) =>
                 items
                   .map(
                     (item) => `
-                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 10px; padding: 8px; margin-bottom: 7px; box-shadow: 0 3px 9px rgba(0,0,0,0.07); border-left: 3px solid ${item.color}; transition: all 0.3s ease;">
+                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 10px; padding: 5px; margin-bottom: 7px; box-shadow: 0 3px 9px rgba(0,0,0,0.07); border-left: 3px solid ${item.color}; transition: all 0.3s ease;">
                         <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 8px; font-size: 0.95em;"></i>
                         <span style="font-size: 0.9em;">${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">
-                    <i class="fa-solid fa-seedling" style="color: #81c784; margin-right: 8px; font-size: 0.95em;"></i>
-                    তারুণ্য: সম্ভাবনা ও ঝুঁকি
-                  </h2>
-                  
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); border-radius: 14px; padding: 9px; box-shadow: 0 5px 18px rgba(233, 30, 99, 0.12);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #c2185b; font-size: 1em;">
-                      <i class="fa-solid fa-lightbulb" style="margin-right: 8px; font-size: 16px; color: #f06292;"></i>
-                      সম্ভাবনাময় সময়
-                    </h3>
-                    <p class="mb-2" style="font-size: 0.92em;">তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
-                  </div>
-                  
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #e1f5fe 0%, #e8eaf6 100%); border-radius: 16px; padding: 9px; box-shadow: 0 6px 20px rgba(63, 81, 181, 0.15); margin-top: 12px;">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #1565c0; font-size: 1em;">
-                      <i class="fa-solid fa-shield-heart" style="margin-right: 8px; font-size: 16px; color: #42a5f5;"></i>
-                      বিশেষ যত্নের প্রয়োজন
-                    </h3>
-                    <p class="mb-0" style="font-size: 0.92em;">এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
-                  </div>
-
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 14px; padding: 9px; box-shadow: 0 6px 20px rgba(233, 30, 99, 0.15); margin-top: 14px;">
-                    <h5 style="display: flex; align-items: center; margin-bottom: 10px; color: #ad1457; font-weight: 600; font-size: 0.95em;">
-                      <i class="fa-solid fa-exclamation-circle" style="margin-right: 8px; font-size: 0.95em; color: #e91e63;"></i>
-                      যেকোনো সময়ে ঝুঁকিপূর্ণ হতে পারে
-                    </h5>
-                    <p class="fw-semibold mb-2" style="color: #880e4f; font-size: 0.9em;">এছাড়াও যেকোনো তরুন-তরুনী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন—</p>
-                    <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
-                      ${renderList(secondaryList)}
-                    </ul>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch21-lesson-2",
-            title: yhLang(
-              "What to Do to Mitigate Risks for At-Risk Adolescents",
-              "ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়"
-            ),
-            icon: "fa-user-shield",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
               const primaryList = [
   {
     icon: "fa-wheelchair",
@@ -16740,7 +16728,7 @@ const bpPrevention = [
     color: "#e91e63",
     text: yhLang(
       "Adolescents whose one or both parents have died",
-      "যে তরুন-তরুনীর পিতা-মাতা, একজন বা উভয়েই মারা গেছেন"
+      "যে তরুন-তরুনীদের পিতা-মাতা, একজন বা উভয়েই মারা গেছেন"
     ),
   },
   {
@@ -16855,7 +16843,7 @@ const bpPrevention = [
                 items
                   .map(
                     (item) => `
-                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 10px; padding: 8px; margin-bottom: 7px; box-shadow: 0 3px 9px rgba(0,0,0,0.07); border-left: 3px solid ${item.color}; transition: all 0.3s ease;">
+                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 10px; padding: 5px; margin-bottom: 7px; box-shadow: 0 3px 9px rgba(0,0,0,0.07); border-left: 3px solid ${item.color}; transition: all 0.3s ease;">
                         <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 8px; font-size: 0.95em;"></i>
                         <span style="font-size: 0.9em;">${item.text}</span>
                       </li>
@@ -16865,15 +16853,23 @@ const bpPrevention = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                  <h2 class="slide-title gradient-text mb-1" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-triangle-exclamation" style="color: #f44336; margin-right: 8px; font-size: 1em;"></i>
-                    ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়
+                    ${yhLang("Who are the at-risk youth?","ঝুঁকিপূর্ণ তরুণ-তরুণীরা কারা?")}
                   </h2>
                   
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 14px; padding: 8px; box-shadow: 0 6px 18px rgba(255, 152, 0, 0.14);">
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius: 14px; padding: 8px; box-shadow: 0 6px 18px rgba(255, 152, 0, 0.14);">
                     
-                    <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
+                    <ul class="list-unstyled puberty-list grid-2 mb-0" style="padding-left: 0;">
                       ${renderList(primaryList)}
+                    </ul>
+                  </div>
+                  
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style=" border-radius: 14px; padding: 9px; box-shadow: 0 6px 20px rgba(233, 30, 99, 0.15); margin-top: 14px;">
+                    
+                    <p class="fw-semibold mb-2" style="color: #880e4f; font-size: 0.9em;">এছাড়াও যেকোনো তরুন-তরুনী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন —</p>
+                    <ul class="list-unstyled puberty-list grid-2 mb-0" style="padding-left: 0;">
+                      ${renderList1(secondaryList)}
                     </ul>
                   </div>
                   
@@ -16885,7 +16881,7 @@ const bpPrevention = [
             id: "ch21-lesson-3",
             title: yhLang(
               "What to Do to Address Disadvantages of Marginalized Adolescents",
-              "সুবিধাবঞ্চিত তরুন-তরুনীদের সুবিধা নিরসনে করণীয়"
+              "ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়"
             ),
             icon: "fa-hands-holding-child",
             gradientClass: "bg-gradient-green",
@@ -16898,7 +16894,7 @@ const bpPrevention = [
     color: "#1976d2",
     text: yhLang(
       "<strong>Identification of Needs:</strong> Identify potential needs and challenges among disadvantaged youth, such as social, mental, or physical problems.",
-      "<strong>সুবিধা শনাক্তকরণ:</strong> সুবিধাবঞ্চিত তরুন-তরুনীদের মধ্যে সম্ভাব্য সুবিধা ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।"
+      "<strong>ঝুঁকি শনাক্তকরণ:</strong> ঝুঁকিপূর্ণ তরুন-তরুনীদের মধ্যে সম্ভাব্য ঝুঁকি ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।"
     ),
   },
   {
@@ -16906,7 +16902,7 @@ const bpPrevention = [
     color: "#388e3c",
     text: yhLang(
       "<strong>Capacity Building:</strong> Provide information and training that support the mental and physical health development of youth, helping them reduce disadvantages.",
-      "<strong>সক্ষমতা বৃদ্ধি:</strong> তরুন-তরুনীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের সুবিধা কমাতে সহায়ক হবে।"
+      "<strong>সক্ষমতা বৃদ্ধি:</strong> তরুন-তরুনীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের ঝুঁকি কমাতে সহায়ক হবে।"
     ),
   },
   {
@@ -16922,7 +16918,7 @@ const bpPrevention = [
     color: "#d32f2f",
     text: yhLang(
       "<strong>Crisis Management:</strong> Teach effective strategies for managing disadvantaged situations and crises so they can remain stable in difficult circumstances.",
-      "<strong>সংকট ব্যবস্থাপনা:</strong> সুবিধাবঞ্চিত পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।"
+      "<strong>সংকট ব্যবস্থাপনা:</strong> ঝুঁকিপূর্ণ পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।"
     ),
   },
   {
@@ -16938,7 +16934,7 @@ const bpPrevention = [
     color: "#0288d1",
     text: yhLang(
       "<strong>Awareness Building:</strong> Provide necessary information and conduct awareness programs to promote healthy living and coping with disadvantages.",
-      "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও সুবিধা মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।"
+      "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও ঝুঁকি মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।"
     ),
   },
   {
@@ -16967,11 +16963,11 @@ const bpPrevention = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-hands-holding-circle" style="color: #43a047; margin-right: 8px; font-size: 1em;"></i>
-                    সুবিধাবঞ্চিত তরুন-তরুনীদের সুবিধা নিরসনে করণীয়
+                    ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); border-radius: 16px; padding: 9px; box-shadow: 0 7px 22px rgba(76, 175, 80, 0.17);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 12px; color: #2e7d32; font-size: 1em;">
+                    <h3 style="display: none; align-items: center; margin-bottom: 12px; color: #2e7d32; font-size: 1em;">
                       <i class="fa-solid fa-list-check" style="margin-right: 8px; font-size: 16px; color: #66bb6a;"></i>
                       প্রধান কার্যক্রম
                     </h3>
@@ -16979,12 +16975,12 @@ const bpPrevention = [
                       ${renderList(actionItems)}
                     </ul>
                     
-                    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%); border-radius: 10px; padding: 10px; margin-top: 12px; border-left: 3px solid #1976d2; box-shadow: 0 3px 10px rgba(25, 118, 210, 0.12);">
-                      <h6 style="display: flex; align-items: center; color: #1565c0; margin-bottom: 8px; font-size: 0.9em;">
+                    <div style="border-radius: 10px; padding: 10px; margin-top: 12px; border-left: 3px solid #1976d2; box-shadow: 0 3px 10px rgba(25, 118, 210, 0.12);">
+                      <h6 style="display: none; align-items: center; color: #1565c0; margin-bottom: 8px; font-size: 0.9em;">
                         <i class="fa-solid fa-handshake" style="margin-right: 8px; color: #42a5f5; font-size: 0.9em;"></i>
                         সমন্বিত প্রচেষ্টা
                       </h6>
-                      <p class="mb-0" style="color: #0d47a1; font-size: 0.9em;">উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুন-তরুনীদের সুবিধা কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।</p>
+                      <p class="mb-0" style="color: #0d47a1; font-size: 0.9em;">উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুন-তরুনীদের ঝুঁকি কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।</p>
                     </div>
                   </div>
                 </div>`;
@@ -17566,7 +17562,7 @@ const bpPrevention = [
                     <span style="background:${iconData.gradient};width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
                     ${section.title}
                   </h4>
-                  ${section.items ? `<ul class="list-unstyled feature-list pani mb-0">${renderList(section.items)}</ul>` : `<div style="border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
+                  ${section.items ? `<ul class="list-unstyled feature-list grid-2 mb-0">${renderList(section.items)}</ul>` : `<div style="border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
                 </div>
               `;};
 
@@ -17624,7 +17620,7 @@ const bpPrevention = [
                 ),
                 yhLang(
                   "Ensuring adequate sanitation and hygiene facilities",
-                  "পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি সুবিধা নিশ্চিত করন"
+                  "পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি ঝুঁকি নিশ্চিত করন"
                 ),
                 yhLang(
                   "Purifying water at home by boiling, filtering, and using chlorine/alum",
@@ -19103,7 +19099,7 @@ const renderCards = () =>
                     </section>
                     <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="620">
                       <h3 class="m23l7-section-title"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("Influenza Symptoms:", "ইনফ্লুয়েঞ্জার সংক্রমণের লক্ষণগুলো হলো:")}</h3>
-                      <ul class="m23l7-list list-unstyled modu_lession_7_3">
+                      <ul class="m23l7-list list-unstyled grid-2">
                         ${renderPoints(symptomsPoints, 680)}
                       </ul>
                     </section>

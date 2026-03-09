@@ -26,9 +26,10 @@
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
 }
-.pani {
+.grid-2 {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
+  gap: 0px 5px;
 }
 .modu23_less_9 {
   display: grid !important;
