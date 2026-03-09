@@ -1,0 +1,500 @@
+/* Module 22 Lesson 3 - Modern Enhanced UI */
+
+/* ============================================
+   BASE LAYOUT & SHAPES
+   ============================================ */
+
+.m22l3-slide {
+  position: relative;
+  padding: 12px;
+  max-width: 850px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #fef9f3 0%, #fef6ee 50%, #fdf3ea 100%);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Floating decorative shapes */
+.m22l3-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.m22l3-shape-a {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #ff9a76 0%, #ff6b9d 100%);
+  top: -40px;
+  right: 60px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.m22l3-shape-b {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  bottom: 80px;
+  left: -30px;
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+}
+
+.m22l3-shape-c {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  bottom: -30px;
+  right: 100px;
+  border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+
+.m22l3-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3),
+              0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.m22l3-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  letter-spacing: 0.3px;
+}
+
+.m22l3-title i {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* ============================================
+   CARD SECTIONS
+   ============================================ */
+
+.m22l3-card {
+  position: relative;
+  z-index: 1;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.m22l3-card:hover {
+  transform: translateY(-1px);
+}
+
+/* Different gradient backgrounds for each card type */
+.m22l3-card-sources {
+  background: linear-gradient(135deg, #fff5f7 0%, #ffe8f0 100%);
+  border-left: 3px solid #ff6b9d;
+  box-shadow: 0 2px 6px rgba(255, 107, 157, 0.15),
+              0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.m22l3-card-context {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left: 3px solid #38bdf8;
+  box-shadow: 0 2px 6px rgba(56, 189, 248, 0.15),
+              0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.m22l3-card-prevention {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-left: 3px solid #4ade80;
+  box-shadow: 0 2px 6px rgba(74, 222, 128, 0.15),
+              0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.m22l3-card-health {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 3px solid #fbbf24;
+  box-shadow: 0 2px 6px rgba(251, 191, 36, 0.15),
+              0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   SUBTITLES (H3)
+   ============================================ */
+
+.m22l3-subtitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.m22l3-subtitle i {
+  font-size: 0.8rem;
+  color: #3b82f6;
+}
+
+/* ============================================
+   LIST STYLING
+   ============================================ */
+
+.m22l3-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.m22l3-list-compact {
+  gap: 3px;
+}
+
+.m22l3-li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.m22l3-li:hover {
+  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.m22l3-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 0.6rem;
+}
+
+.m22l3-text {
+  color: #334155;
+  flex: 1;
+}
+
+.m22l3-point {
+  font-weight: 700;
+  color: #475569;
+  margin-right: 2px;
+}
+
+/* ============================================
+   CONTEXT-BASED LIST ITEM COLORS & ICONS
+   ============================================ */
+
+/* PM 2.5 - Fine particles (Purple) */
+.m22l3-li-pm25 .m22l3-icon {
+  background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(168, 85, 247, 0.4);
+}
+
+/* PM 10 - Coarse particles (Blue) */
+.m22l3-li-pm10 .m22l3-icon {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(59, 130, 246, 0.4);
+}
+
+/* Ozone (Orange) */
+.m22l3-li-ozone .m22l3-icon {
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(251, 146, 60, 0.4);
+}
+
+/* Nitrogen (Gray) */
+.m22l3-li-nitrogen .m22l3-icon {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(100, 116, 139, 0.4);
+}
+
+/* Sulfur (Yellow) */
+.m22l3-li-sulfur .m22l3-icon {
+  background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(234, 179, 8, 0.4);
+}
+
+/* Carbon (Dark) */
+.m22l3-li-carbon .m22l3-icon {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(30, 41, 59, 0.4);
+}
+
+/* Waste - Stop burning (Red) */
+.m22l3-li-waste .m22l3-icon {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(239, 68, 68, 0.4);
+}
+
+/* Tree - Plant trees (Green) */
+.m22l3-li-tree .m22l3-icon {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(34, 197, 94, 0.4);
+}
+
+/* Transport (Cyan) */
+.m22l3-li-transport .m22l3-icon {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(6, 182, 212, 0.4);
+}
+
+/* Vehicle (Amber) */
+.m22l3-li-vehicle .m22l3-icon {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(245, 158, 11, 0.4);
+}
+
+/* Water (Blue) */
+.m22l3-li-water .m22l3-icon {
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(56, 189, 248, 0.4);
+}
+
+/* Preterm birth (Pink) */
+.m22l3-li-preterm .m22l3-icon {
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(244, 114, 182, 0.4);
+}
+
+/* Growth restriction (Teal) */
+.m22l3-li-growth .m22l3-icon {
+  background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(45, 212, 191, 0.4);
+}
+
+/* Weight (Indigo) */
+.m22l3-li-weight .m22l3-icon {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(99, 102, 241, 0.4);
+}
+
+/* Stillbirth (Rose) */
+.m22l3-li-stillbirth .m22l3-icon {
+  background: linear-gradient(135deg, #fb7185 0%, #f43f5e 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(251, 113, 133, 0.4);
+}
+
+/* Infection (Red) */
+.m22l3-li-infection .m22l3-icon {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(248, 113, 113, 0.4);
+}
+
+/* Otitis (Violet) */
+.m22l3-li-otitis .m22l3-icon {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(139, 92, 246, 0.4);
+}
+
+/* Neuro (Purple) */
+.m22l3-li-neuro .m22l3-icon {
+  background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(192, 132, 252, 0.4);
+}
+
+/* Malignancy (Fuchsia) */
+.m22l3-li-malignancy .m22l3-icon {
+  background: linear-gradient(135deg, #e879f9 0%, #d946ef 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(232, 121, 249, 0.4);
+}
+
+/* Mortality (Slate) */
+.m22l3-li-mortality .m22l3-icon {
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(148, 163, 184, 0.4);
+}
+
+/* Stunting (Lime) */
+.m22l3-li-stunting .m22l3-icon {
+  background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(132, 204, 22, 0.4);
+}
+
+/* ============================================
+   PARAGRAPH STYLING
+   ============================================ */
+
+.m22l3-paragraph {
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.m22l3-inline-icon {
+  font-size: 0.85rem;
+  color: #f59e0b;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   HEALTH CATEGORIES
+   ============================================ */
+
+.m22l3-health-category {
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.m22l3-health-category:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Different backgrounds for health categories */
+.m22l3-health-birth {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  border-left: 2px solid #ec4899;
+  box-shadow: 0 1px 4px rgba(236, 72, 153, 0.15);
+}
+
+.m22l3-health-respiratory {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-left: 2px solid #3b82f6;
+  box-shadow: 0 1px 4px rgba(59, 130, 246, 0.15);
+}
+
+.m22l3-health-pneumonia {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+  border-left: 2px solid #f97316;
+  box-shadow: 0 1px 4px rgba(249, 115, 22, 0.15);
+}
+
+.m22l3-health-asthma {
+  background: linear-gradient(135deg, #d9f99d 0%, #bef264 100%);
+  border-left: 2px solid #84cc16;
+  box-shadow: 0 1px 4px rgba(132, 204, 22, 0.15);
+}
+
+.m22l3-health-other {
+  background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+  border-left: 2px solid #a855f7;
+  box-shadow: 0 1px 4px rgba(168, 85, 247, 0.15);
+}
+
+.m22l3-health-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.m22l3-health-title i {
+  font-size: 0.75rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .m22l3-slide {
+    padding: 10px;
+  }
+
+  .m22l3-title {
+    font-size: 1rem;
+  }
+
+  .m22l3-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .m22l3-card {
+    padding: 8px 10px;
+  }
+
+  .m22l3-li {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
+
+  .m22l3-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 0.55rem;
+  }
+
+  .m22l3-paragraph {
+    font-size: 0.7rem;
+  }
+
+  .m22l3-health-title {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .m22l3-title {
+    font-size: 0.9rem;
+  }
+
+  .m22l3-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .m22l3-li {
+    font-size: 0.65rem;
+  }
+
+  .m22l3-icon {
+    width: 14px;
+    height: 14px;
+    font-size: 0.5rem;
+  }
+}

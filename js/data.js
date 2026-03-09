@@ -18102,116 +18102,176 @@ const guardianNote = yhLang(
             id: "ch22-lesson-3",
             title: yhLang(
               "Sources of Air Pollution",
-              "বায়ু দূষণের উৎস"
+              "বায়ু দূষণের উৎস:"
             ),
             icon: "fa-industry",
             gradientClass: "bg-gradient-amber",
             audioFile: "",
             quiz: null,
             content: (function () {
-              const waterSources = [
-                "১।  ভূগর্ভস্থ পানি",
-                "২। ভূপৃষ্ঠের উপরিভাগ যেমনঃ নদি-নলা, খাল-বিল, পুকুর প্রভিতি",
-                "৩। অন্যান্যঃ  বৃষ্টির পানি, হিমবাহ",
+              const leftSections = [
+                {
+                  title: yhLang("Sources of Air Pollution:", "বায়ু দূষণের উৎস:"),
+                  items: [
+                    yhLang("Fine particles (PM 2.5)", "সূক্ষ্ম কণা(PM 2.5)"),
+                    yhLang("Coarse particles (PM10)", "মোটা কণা(PM10)"),
+                    yhLang("Ground-level ozone gas (O3)", "পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)"),
+                    yhLang("Nitrogen dioxide (NO2)", "নাইট্রোজেন ডাই অক্সাইড (NO2)"),
+                    yhLang("Sulfur dioxide (SO2)", "সালফার ডাই অক্সাইড(SO2)"),
+                    yhLang("Carbon monoxide (CO)", "কার্বন মনোক্সাইড (CO)"),
+                  ],
+                },
+                {
+                  title: yhLang("Air Pollution Prevention and Management:", "বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:"),
+                  items: [
+                    yhLang("Stop open waste burning", "খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা"),
+                    yhLang("Plant more trees locally", "স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা"),
+                    yhLang("Increase public transport use and encourage walking or cycling", "গণপরিবহনের ব্যবহার বাড়ানো , হাঁটা বা সাইকেল চালানোতে উৎসাহ দেওয়া"),
+                    yhLang("Control black-smoke producing vehicles and close brick kilns", "কালো ধোঁওয়া উৎপন্ন কারী যানবাহন, ইট ভাটা বন্ধ করা"),
+                    yhLang("Sprinkle water on roads to reduce dust", "ধুলো কমাতে রাস্তা ঘাটে পানি ছিটানো"),
+                  ],
+                },
               ];
 
-              const renderSources = () =>
-                waterSources
+              const rightSections1 = [
+                {
+                  title: yhLang("1. Adverse Birth Outcomes", "১. প্রতিকূল জন্মের ফলাফল"),
+                  items: [
+                    yhLang("Preterm birth", "অকাল জন্ম:"),
+                    yhLang("Intrauterine growth restriction (IUGR)", "গর্ভস্থ ভ্রূণের বৃদ্ধি প্রতিবন্ধকতা (IUGR)"),
+                    yhLang("Low birth weight", "কম জন্ম ওজন"),
+                    yhLang("Stillbirth", "স্থির জন্ম"),
+                  ],
+                },
+                {
+                  title: yhLang("2. Respiratory Effects in Childhood", "২. শৈশবে শ্বাসযন্ত্রের প্রভাব"),
+                  items: [
+                    yhLang("Upper respiratory tract infection", "উচ্চ শ্বাস নালীর সংক্রমণ"),
+                    yhLang("Otitis media", "ওটিটিস মিডিয়া"),
+                  ],
+                },
+              ];
+
+              const rightSections2 = [
+                {
+                  title: yhLang("3. Pneumonia", "৩. নিউমোনিয়া"),
+                  description: yhLang("Pneumonia is a major health effect associated with air pollution.", "নিউমোনিয়া বায়ু দূষণের সাথে সম্পর্কিত একটি প্রধান স্বাস্থ্যগত প্রভাব।"),
+                },
+                {
+                  title: yhLang("4. Asthma", "৪. হাঁপানি"),
+                  description: yhLang("Asthma can be triggered and worsened by air pollution exposure.", "বায়ু দূষণের সংস্পর্শে হাঁপানি শুরু ও বৃদ্ধি হতে পারে।"),
+                },
+                {
+                  title: yhLang("5. Other Health Outcomes", "৫. অন্যান্য স্বাস্থ্যগত ফলাফল"),
+                  items: [
+                    yhLang("Neurodevelopmental impairment (IQ reduction and autism)", "স্নায়ু বিকাশগত প্রতিবন্ধকতা (আইকিউ হ্রাস এবং অটিজম)"),
+                    yhLang("Childhood malignancy", "শৈশবকালীন ম্যালিগন্যান্সি"),
+                    yhLang("Infant and child mortality", "শিশু ও শিশু মৃত্যুহার"),
+                    yhLang("Stunting / short stature", "স্টান্টিং/ খর্বাকৃতি"),
+                  ],
+                },
+              ];
+
+              const getItemIcon = (item) => {
+                if (item.includes('PM 2.5') || item.includes('সূক্ষ্ম কণা')) return { icon: 'fa-circle-dot', color: '#7b1fa2', bg: 'rgba(123,31,162,.12)' };
+                if (item.includes('PM10') || item.includes('মোটা কণা')) return { icon: 'fa-circle', color: '#1565c0', bg: 'rgba(21,101,192,.12)' };
+                if (item.includes('O3') || item.includes('ওজোন')) return { icon: 'fa-sun', color: '#ef6c00', bg: 'rgba(239,108,0,.12)' };
+                if (item.includes('NO2') || item.includes('নাইট্রোজেন')) return { icon: 'fa-industry', color: '#546e7a', bg: 'rgba(84,110,122,.12)' };
+                if (item.includes('SO2') || item.includes('সালফার')) return { icon: 'fa-smog', color: '#f9a825', bg: 'rgba(249,168,37,.12)' };
+                if (item.includes('CO') || item.includes('কার্বন মনোক্সাইড')) return { icon: 'fa-car-side', color: '#37474f', bg: 'rgba(55,71,79,.12)' };
+                if (item.includes('বর্জ্য পোড়ানো') || item.includes('waste burning')) return { icon: 'fa-ban', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
+                if (item.includes('বৃক্ষরোপণ') || item.includes('trees')) return { icon: 'fa-tree', color: '#2e7d32', bg: 'rgba(46,125,50,.12)' };
+                if (item.includes('গণপরিবহন') || item.includes('public transport')) return { icon: 'fa-bus', color: '#00838f', bg: 'rgba(0,131,143,.12)' };
+                if (item.includes('যানবাহন') || item.includes('vehicles') || item.includes('ধোঁওয়া')) return { icon: 'fa-car-burst', color: '#e65100', bg: 'rgba(230,81,0,.12)' };
+                if (item.includes('পানি ছিটানো') || item.includes('water on roads') || item.includes('ধুলো')) return { icon: 'fa-droplet', color: '#0277bd', bg: 'rgba(2,119,189,.12)' };
+                if (item.includes('অকাল জন্ম') || item.includes('Preterm')) return { icon: 'fa-hourglass-end', color: '#c2185b', bg: 'rgba(194,24,91,.12)' };
+                if (item.includes('IUGR') || item.includes('বৃদ্ধি প্রতিবন্ধকতা')) return { icon: 'fa-chart-line', color: '#00897b', bg: 'rgba(0,137,123,.12)' };
+                if (item.includes('কম জন্ম ওজন') || item.includes('Low birth weight')) return { icon: 'fa-weight-scale', color: '#4527a0', bg: 'rgba(69,39,160,.12)' };
+                if (item.includes('স্থির জন্ম') || item.includes('Stillbirth')) return { icon: 'fa-heart-crack', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
+                if (item.includes('শ্বাস নালীর সংক্রমণ') || item.includes('respiratory tract')) return { icon: 'fa-virus', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
+                if (item.includes('ওটিটিস') || item.includes('Otitis')) return { icon: 'fa-ear-listen', color: '#6a1b9a', bg: 'rgba(106,27,154,.12)' };
+                if (item.includes('স্নায়ু') || item.includes('Neuro')) return { icon: 'fa-brain', color: '#ad1457', bg: 'rgba(173,20,87,.12)' };
+                if (item.includes('ম্যালিগন্যান্সি') || item.includes('malignancy')) return { icon: 'fa-ribbon', color: '#b71c1c', bg: 'rgba(183,28,28,.12)' };
+                if (item.includes('মৃত্যুহার') || item.includes('mortality')) return { icon: 'fa-hand-holding-heart', color: '#546e7a', bg: 'rgba(84,110,122,.12)' };
+                if (item.includes('স্টান্টিং') || item.includes('খর্বাকৃতি') || item.includes('Stunting')) return { icon: 'fa-child-reaching', color: '#558b2f', bg: 'rgba(85,139,47,.12)' };
+                return { icon: 'fa-circle-check', color: '#7b1fa2', bg: 'rgba(123,31,162,.12)' };
+              };
+
+              const renderList = (items) =>
+                items
                   .map(
-                    (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.68)' : 'rgba(227,242,253,.72)'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(3,155,229,.16)' : '0 8px 20px rgba(2,119,189,.16)'};">
-                        <i class="fa-solid ${idx === 0 ? 'fa-well' : idx === 1 ? 'fa-water' : 'fa-cloud-rain'} text-primary me-2"></i>
-                        <span>${item}</span>
+                    (item) => {
+                      const iconData = getItemIcon(item);
+                      return `
+                      <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:5px 5px;margin-bottom:5px;box-shadow:0 6px 18px rgba(103,58,183,.14), 0 2px 8px ${iconData.bg};transition:all 0.3s ease;">
+                        <span style="background:linear-gradient(135deg,${iconData.color},${iconData.color}dd);width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;margin-right:5px;box-shadow:0 4px 12px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:16px;"></i></span>
+                        <span style="color:#333;font-weight:500;">${item}</span>
                       </li>
-                    `
+                    `;
+                    }
                   )
                   .join("");
+
+              const getSectionIcon = (title) => {
+                if (title.includes('বায়ু দূষণের উৎস') || title.includes('Sources of Air')) return { icon: 'fa-wind', color: '#e65100', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
+                if (title.includes('প্রতিরোধ') || title.includes('Prevention')) return { icon: 'fa-shield-halved', color: '#2e7d32', gradient: 'linear-gradient(135deg,#43a047,#2e7d32)' };
+                if (title.includes('প্রতিকূল জন্মের') || title.includes('Adverse Birth')) return { icon: 'fa-baby', color: '#c2185b', gradient: 'linear-gradient(135deg,#e91e63,#c2185b)' };
+                if (title.includes('শ্বাসযন্ত্রের') || title.includes('Respiratory')) return { icon: 'fa-lungs', color: '#1565c0', gradient: 'linear-gradient(135deg,#1e88e5,#1565c0)' };
+                if (title.includes('নিউমোনিয়া') || title.includes('Pneumonia')) return { icon: 'fa-lungs-virus', color: '#ef6c00', gradient: 'linear-gradient(135deg,#fb8c00,#ef6c00)' };
+                if (title.includes('হাঁপানি') || title.includes('Asthma')) return { icon: 'fa-person-dots-from-line', color: '#558b2f', gradient: 'linear-gradient(135deg,#7cb342,#558b2f)' };
+                if (title.includes('অন্যান্য') || title.includes('Other Health')) return { icon: 'fa-disease', color: '#6a1b9a', gradient: 'linear-gradient(135deg,#8e24aa,#6a1b9a)' };
+                return { icon: 'fa-circle-info', color: '#7b1fa2', gradient: 'linear-gradient(135deg,#8e24aa,#6a1b9a)' };
+              };
+
+              const renderSection = (section) => {
+                const iconData = getSectionIcon(section.title);
+                return `
+                <div class="health-section mb-1" style="background:rgba(255,255,255,.4);border-radius:18px;padding:5px;box-shadow:0 8px 22px rgba(103,58,183,.12);">
+                  <h4 class="mb-1" style="display:flex;align-items:center;color:#4a148c;font-weight:700;">
+                    <span style="background:${iconData.gradient};width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
+                    ${section.title}
+                  </h4>
+                  ${section.items ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : `<div style="background:linear-gradient(135deg,rgba(255,255,255,.9) 0%,rgba(255,243,224,.7) 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
+                </div>
+              `;};
+
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-industry" style="color: #ff6f00; margin-right: 12px; font-size: 1.2em;"></i>
-                    ${yhLang("Sources of Air Pollution:", "বায়ু দূষণের উৎস:")}
+                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:5px;">
+                    <span style="background:linear-gradient(135deg,#e65100,#bf360c);width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 20px rgba(230,81,0,.35), 0 2px 10px rgba(191,54,12,.2);"><i class="fa-solid fa-wind" style="color:#fff;font-size:28px;"></i></span>
+                    ${yhLang("Sources of Air Pollution", "বায়ু দূষণের উৎস:")}
                   </h2>
-                  <div class="row g-2 mb-2" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fff9e6 0%,#fff3cd 50%, #ffe0b2 100%);border-radius:24px;box-shadow:0 14px 42px rgba(255,152,0,.25), 0 6px 18px rgba(239,108,0,.15);">
-                        <h4 class="mb-1" style="display:flex;align-items:center;color:#e65100; font-weight:700;">
-                          <span style="background: linear-gradient(135deg, #ff9800, #ef6c00); width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 10px; box-shadow: 0 4px 14px rgba(255, 152, 0, 0.35);">
-                            <i class="fa-solid fa-smog" style="color:#fff; font-size:22px;"></i>
-                          </span>
-                          ${yhLang("Source Of Air Pollution", "বায়ু দূষণের উৎস:")}
-                        </h4>
-                        <ul class="list-unstyled feature-list mb-2">
-                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ffb74d; box-shadow:0 3px 10px rgba(255,183,77,0.2);"><i class="fa-solid fa-wind" style="color:#ff9800; margin-right:8px;"></i>i. সূক্ষ্ম কণা(PM 2.5)</li>
-                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ffa726; box-shadow:0 3px 10px rgba(255,167,38,0.2);"><i class="fa-solid fa-cloud" style="color:#fb8c00; margin-right:8px;"></i>ii. মোটা কণা(PM10)</li>
-                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ff9800; box-shadow:0 3px 10px rgba(255,152,0,0.2);"><i class="fa-solid fa-sun" style="color:#ef6c00; margin-right:8px;"></i>iii. পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)</li>
-                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #fb8c00; box-shadow:0 3px 10px rgba(251,140,0,0.2);"><i class="fa-solid fa-industry-windows" style="color:#ff6f00; margin-right:8px;"></i>iv. নাইট্রোজেন ডাই অক্সাইড (NO2)</li>
-                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #f57c00; box-shadow:0 3px 10px rgba(245,124,0,0.2);"><i class="fa-solid fa-smog" style="color:#e65100; margin-right:8px;"></i>v. সালফার ডাই অক্সাইড(SO2)</li>
-                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ef6c00; box-shadow:0 3px 10px rgba(239,108,0,0.2);"><i class="fa-solid fa-car-side" style="color:#d84315; margin-right:8px;"></i>vi. কার্বন মনোক্সাইড (CO)</li>
-                        </ul>
-                        <p class="mb-2">${yhLang("In Bangladesh, residential use of solid fuels for cooking is the primary source of PM2.5 pollution, with 74.2% of the population still relying on fuels like wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে ।")}</p>
-                        <div class="card-divider mb-3"></div>
-                        <h4 class="mb-1" style="display:flex;align-items:center;color:#e65100;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>${yhLang("Air Pollution Prevention & Management:", "বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:")}</h4>
-                        <ul class="list-unstyled feature-list mb-0">
-                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>i. খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা</li>
-                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>ii. স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা</li>
-                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>iii. গণপরিবহনের ব্যবহার বাড়ানো , হাঁটা বা সাইকেল চালানোতে উৎসাহ দেওয়া</li>
-                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>iv. কালো ধোঁওয়া উৎপন্ন কারী যানবাহন, ইট ভাটা বন্ধ করা</li>
-                          <li><i class="fa-solid fa-check-circle text-success me-2"></i>v. ধুলো কমাতে রাস্তা ঘাটে পানি ছিটানো</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 100%);border-radius:22px;box-shadow:0 10px 35px rgba(156,39,176,.18);">
-                        <h4 class=" mb-1" style="display:flex;align-items:center;color:#6a1b9a;"><i class="fa-solid fa-heart-pulse" style="margin-right:10px;"></i>${yhLang("Health Effects Associated with Air Pollution:", "বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থ্যগত প্রভাব:")}</h4>
-                        <div class="health-block mb-1">
-                          <h4 class="section-subtitle mb-1">${yhLang("1. Adverse Birth Outcomes", "১. প্রতিকূল জন্মের ফলাফল")}</h4>
-                          <ul class="list-unstyled feature-list mb-0">
-                            <li><i class="fa-solid fa-baby-carriage text-danger me-2"></i>i. অকাল জন্ম:</li>
-                            <li><i class="fa-solid fa-child text-danger me-2"></i>ii. গর্ভস্থ ভ্রূণের বৃদ্ধি প্রতিবন্ধকতা (IUGR)</li>
-                            <li><i class="fa-solid fa-weight-scale text-danger me-2"></i>iii. কম জন্ম ওজন</li>
-                            <li><i class="fa-solid fa-heart-crack text-danger me-2"></i>iv. স্থির জন্ম</li>
-                          </ul>
-                        </div>
-                        <div class="health-block mb-2">
-                          <h4 class="section-subtitle mb-2">${yhLang("2. Childhood Respiratory Effects", "২. শৈশবে শ্বাসযন্ত্রের প্রভাব")}</h4>
-                          <ul class="list-unstyled feature-list mb-2">
-                            <li><i class="fa-solid fa-lungs text-warning me-2"></i>i. উচ্চ শ্বাস নালীর সংক্রমণ</li>
-                            <li><i class="fa-solid fa-ear-listen text-warning me-2"></i>ii. ওটিটিস মিডিয়া</li>
-                          </ul>
-                        </div>
-                        <div class="health-block">
-                          <h4 class="section-subtitle mb-2">${yhLang("3. Pneumonia", "৩. নিউমোনিয়া")}</h4>
-                        </div>
-                        <div class="health-block mb-2">
-                          <h4 class="section-subtitle mb-1">${yhLang("4. Asthma", "৪. হাঁপানি")}</h4>
-                        </div>
-                        <div class="health-block">
-                          <h4 class="section-subtitle mb-1">${yhLang("5. Other Health Outcomes", "৫. অন্যান্য স্বাস্থ্যগত ফলাফল")}</h4>
-                          <ul class="list-unstyled feature-list mb-0">
-                            <li><i class="fa-solid fa-brain text-info me-2"></i>i. স্নায়ু বিকাশগত প্রতিবন্ধকতা (আইকিউ হ্রাস এবং অটিজম)</li>
-                            <li><i class="fa-solid fa-ribbon text-info me-2"></i>ii. শৈশবকালীন ম্যালিগন্যান্সি</li>
-                            <li><i class="fa-solid fa-heart-circle-xmark text-info me-2"></i>iii. শিশু ও শিশু মৃত্যুহার</li>
-                            <li><i class="fa-solid fa-ruler-vertical text-info me-2"></i>iv. স্টান্টিং/ খর্বাকৃতি</li>
-                          </ul>
-                        </div>
-                      </div>
+                  
+                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 50%,#ffcc80 100%);border-radius:20px;padding:18px 22px;box-shadow:0 10px 32px rgba(230,81,0,.22), 0 4px 14px rgba(191,54,12,.15);border-left:5px solid #e65100;">
+                    <div style="display:flex;align-items:center;">
+                      <span style="background:linear-gradient(135deg,#fb8c00,#ef6c00);width:44px;height:44px;min-width:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 5px 16px rgba(251,140,0,.3);"><i class="fa-solid fa-lightbulb" style="color:#fff;font-size:20px;"></i></span>
+                      <p class="mb-0" style="color:#4a148c;font-size:1.05em;font-weight:500;line-height:1.7;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে।")}</p>
                     </div>
                   </div>
-                  <div class="row g-2" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e1f5fe 0%,#b3e5fc 100%);border-radius:22px;box-shadow:0 10px 35px rgba(3,155,229,.18);">
-                        <h3 class="mb-2" style="display:flex;align-items:center;color:#0277bd; font-weight:700;"><span style="background:linear-gradient(135deg,#03a9f4,#0288d1); width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(3,169,244,0.35);"><i class="fa-solid fa-glass-water" style="color:#fff; font-size:22px;"></i></span>${yhLang("Water Polution", "পানি দূষণ")}</h3>
-                        <p>পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।</p>
-                       
+
+                  <div class="row g-1" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-4">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 50%,#ffcc80 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(230,81,0,.24), 0 5px 18px rgba(191,54,12,.18);">
+                        
+                        ${leftSections.map(renderSection).join("")}
                       </div>
                     </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e1f5fe 0%,#b3e5fc 100%);border-radius:22px;box-shadow:0 10px 35px rgba(3,155,229,.18);">
-                        <h3 class="mb-1" style="display:flex;align-items:center;color:#01579b; font-weight:700;"><span style="background:linear-gradient(135deg,#039be5,#0277bd); width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(3,155,229,0.35);"><i class="fa-solid fa-water" style="color:#fff; font-size:22px;"></i></span>খাবারপানির উৎসঃ</h3>
-                        <ul class="list-unstyled feature-list mb-0">
-                          ${renderSources()}
-                        </ul>
+                    <div class="col-12 col-lg-4">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%,#f48fb1 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
+                        <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:5px;font-weight:700;font-size:1.4em;">
+                          <span style="background:linear-gradient(135deg,#ec407a,#c2185b);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(236,64,122,.4), 0 2px 8px rgba(194,24,91,.25);"><i class="fa-solid fa-heart-pulse" style="color:#fff;font-size:24px;"></i></span>
+                          ${yhLang("Health Effects (Birth & Respiratory)", "স্বাস্থ্যগত প্রভাব (জন্ম ও শ্বাসযন্ত্র)")}
+                        </h3>
+                        ${rightSections1.map(renderSection).join("")}
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 50%,#ce93d8 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(156,39,176,.24), 0 5px 18px rgba(106,27,154,.18);">
+                        <h3 style="display:flex;align-items:center;color:#4a148c;margin-bottom:5px;font-weight:700;font-size:1.4em;">
+                          <span style="background:linear-gradient(135deg,#ab47bc,#8e24aa);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(171,71,188,.4), 0 2px 8px rgba(142,36,170,.25);"><i class="fa-solid fa-disease" style="color:#fff;font-size:24px;"></i></span>
+                          ${yhLang("Chronic & Other Effects", "দীর্ঘস্থায়ী ও অন্যান্য প্রভাব")}
+                        </h3>
+                        ${rightSections2.map(renderSection).join("")}
                       </div>
                     </div>
                   </div>
@@ -18303,7 +18363,7 @@ const guardianNote = yhLang(
           },
           {
             id: "ch22-lesson-5",
-            title: yhLang(
+            title: yhLang(  
               "Health Risks from Contaminated Food and Water",
               "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি"
             ),
@@ -18540,10 +18600,10 @@ const guardianNote = yhLang(
               return `
                 <div class="lesson-slide">
                   <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e0f2f1 0%,#b2dfdb 100%);border-radius:22px;box-shadow:0 10px 35px rgba(0,172,193,.2);">
-                    <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <h2 class="slide-title gradient-text mb-4" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-hands-bubbles" style="color: #00acc1; margin-right: 12px; font-size: 1.2em;"></i>
                     ${yhLang("Steps to Improve Water, Sanitation and Hygiene", "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ")}
-                  </h2>
+                     </h2>
                     <span class="hygiene-shape hygiene-shape-corner" aria-hidden="true"></span>
                     <span class="hygiene-shape hygiene-shape-orb" aria-hidden="true"></span>
                     <div class="hygiene-card__body">
@@ -18551,7 +18611,7 @@ const guardianNote = yhLang(
                         <div class="col-12 col-lg-6">
                           <div class="hygiene-list mb-3">
                             <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00695c;font-weight:600;">
-                              <i class="fa-solid fa-hands-bubbles me-2"></i>${yhLang("Personal Practices:", "ব্যক্তিগত অনুশীলন:")}
+                             <h3> <i class="fa-solid fa-hands-bubbles me-2"></i>${yhLang("Personal Practices:", "ব্যক্তিগত অনুশীলন:")}</h3>
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(personalPractices)}
@@ -18567,8 +18627,8 @@ const guardianNote = yhLang(
                           </div>
                         </div>
                         <div class="col-12 col-lg-6">
-                          <figure class="image-card hygiene-figure mb-0 h-100" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);padding:0px;border-radius:18px;box-shadow:0 8px 26px rgba(3,155,229,.18);">
-                            <img src="img/modu22/sanitization_b2.png" style="height: 650px; object-fit: cover" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
+                          <figure class="image-card mb-0 h-100" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);padding:0px;border-radius:18px;box-shadow:0 8px 26px rgba(3,155,229,.18);">
+                            <img src="img/modu22/sanitization_b2.jpeg" style="height: 650px;" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
                           </figure>
                         </div>
                       </div>

@@ -302,16 +302,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-weight: 700;
   line-height: 1.3;
-  margin-bottom: 1rem;
-  color: #1a202c;
-}
+  margin-bottom: 5px;
 
-h1 { font-size: 3.5rem; color: #1a202c; }
-h2 { font-size: 2.75rem; color: #1a202c; }
-h3 { font-size: 2rem; color: #1a202c; }
-h4 { font-size: 1.5rem; color: #1a202c; }
-h5 { font-size: 1.25rem; color: #1a202c; }
-h6 { font-size: 1rem; color: #1a202c; }
+}
 
 p {
   color: #4a5568;
@@ -5122,12 +5115,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   
   .m24l2-panel-highlights {
     background: linear-gradient(135deg, rgba(30, 58, 138, 0.85), rgba(30, 64, 175, 0.9));
-  }
-  
-  .m24l2-panel-explanation {
-  }
-  
-  .m24l2-panel-learn {
   }
   
   .m24l2-panel-causes {
@@ -21703,7 +21690,7 @@ input::placeholder {
   border-radius: 14px;
   box-shadow: 0 12px 24px rgba(15, 53, 110, 0.08);
   margin-bottom: 5px;
-  display: flex !iportant;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
 }
@@ -30105,5 +30092,435 @@ tbody, td, tfoot, th, thead, tr {
 @media (min-width: 992px) {
   .w-lg-80 {
     width: 80% !important;
+  }
+}
+
+/* ==================== MODULE 22 LESSON 3 - REDESIGNED UI ==================== */
+.m22l3-redesign-slide {
+  padding: 8px;
+  background: linear-gradient(135deg, #fff9ed 0%, #f0f8ff 50%, #fef5e7 100%);
+  border-radius: 18px;
+  position: relative;
+}
+
+.m22l3-header-enhanced {
+  margin-bottom: 8px; 
+  text-align: center;
+}
+
+.m22l3-title-main {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.m22l3-title-main i {
+  color: #ff6b35;
+  -webkit-text-fill-color: #ff6b35;
+  font-size: 1.3rem;
+}
+
+.m22l3-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 6px;
+}
+
+.m22l3-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.m22l3-section-box {
+  background: linear-gradient(130deg, #fff5f0 0%, #f5f0ff 100%);
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.08);
+}
+
+.m22l3-section-pollutants {
+  background: linear-gradient(130deg, #fff8f3 0%, #fef5e7 100%);
+  border-color: rgba(255, 147, 30, 0.2);
+}
+
+.m22l3-section-prevention {
+  background: linear-gradient(130deg, #f0fff4 0%, #f5fef9 100%);
+  border-color: rgba(107, 166, 109, 0.2);
+}
+
+.m22l3-section-health {
+  background: linear-gradient(130deg, #fff0f5 0%, #f5f0ff 100%);
+  border-color: rgba(220, 53, 69, 0.2);
+}
+
+.m22l3-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #1a1a1a;
+}
+
+.m22l3-section-title i {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 107, 53, 0.15);
+  color: #ff6b35;
+  font-size: 1.1rem;
+}
+
+.m22l3-section-prevention .m22l3-section-title i {
+  background: rgba(107, 166, 109, 0.15);
+  color: #6ba66d;
+}
+
+.m22l3-section-health .m22l3-section-title i {
+  background: rgba(220, 53, 69, 0.15);
+  color: #dc3545;
+}
+
+.m22l3-list-enhanced {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.m22l3-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 5px 6px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  border: 1px solid transparent;
+}
+
+.m22l3-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+}
+
+.m22l3-text {
+  flex: 1;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* POLLUTANT ITEMS */
+.m22l3-item--pm25 {
+  background: linear-gradient(120deg, #fff4e6 0%, #fff7ed 100%);
+  border-color: rgba(213, 147, 83, 0.3value);
+}
+.m22l3-item--pm25 .m22l3-icon {
+  background: linear-gradient(135deg, #d59347 0%, #e8b96f 100%);
+  color: white;
+}
+
+.m22l3-item--pm10 {
+  background: linear-gradient(120deg, #fff0e6 0%, #fff4e6 100%);
+  border-color: rgba(212, 167, 71, 0.3);
+}
+.m22l3-item--pm10 .m22l3-icon {
+  background: linear-gradient(135deg, #d4a747 0%, #e8c96f 100%);
+  color: white;
+}
+
+.m22l3-item--o3 {
+  background: linear-gradient(120deg, #fffaeb 0%, #fffdf2 100%);
+  border-color: rgba(216, 172, 71, 0.3);
+}
+.m22l3-item--o3 .m22l3-icon {
+  background: linear-gradient(135deg, #d8ac47 0%, #f5d76e 100%);
+  color: #333;
+}
+
+.m22l3-item--no2 {
+  background: linear-gradient(120deg, #fff1f3 0%, #fff8f8 100%);
+  border-color: rgba(214, 96, 106, 0.3);
+}
+.m22l3-item--no2 .m22l3-icon {
+  background: linear-gradient(135deg, #d66066 0%, #e8969e 100%);
+  color: white;
+}
+
+.m22l3-item--so2 {
+  background: linear-gradient(120deg, #f2f6fb 0%, #f9fbfd 100%);
+  border-color: rgba(115, 142, 170, 0.3);
+}
+.m22l3-item--so2 .m22l3-icon {
+  background: linear-gradient(135deg, #738eaa 0%, #a0b4c9 100%);
+  color: white;
+}
+
+.m22l3-item--co {
+  background: linear-gradient(120deg, #f2f9ff 0%, #f7fcff 100%);
+  border-color: rgba(73, 167, 219, 0.3);
+}
+.m22l3-item--co .m22l3-icon {
+  background: linear-gradient(135deg, #49a7db 0%, #77c3ec 100%);
+  color: white;
+}
+
+/* PREVENTION ITEMS */
+.m22l3-item--stop {
+  background: linear-gradient(120deg, #ffebea 0%, #fff1f0 100%);
+  border-color: rgba(217, 83, 79, 0.3);
+}
+.m22l3-item--stop .m22l3-icon {
+  background: linear-gradient(135deg, #d9534f 0%, #e87570 100%);
+  color: white;
+}
+
+.m22l3-item--trees {
+  background: linear-gradient(120deg, #e8f5e9 0%, #f0f8ed 100%);
+  border-color: rgba(76, 175, 80, 0.3);
+}
+.m22l3-item--trees .m22l3-icon {
+  background: linear-gradient(135deg, #4caf50 0%, #76c976 100%);
+  color: white;
+}
+
+.m22l3-item--transport {
+  background: linear-gradient(120deg, #e3f2fd 0%, #ebf5fb 100%);
+  border-color: rgba(66, 133, 244, 0.3);
+}
+.m22l3-item--transport .m22l3-icon {
+  background: linear-gradient(135deg, #4285f4 0%, #64aef6 100%);
+  color: white;
+}
+
+.m22l3-item--vehicles {
+  background: linear-gradient(120deg, #fce4ec 0%, #fdf2f5 100%);
+  border-color: rgba(233, 30, 99, 0.3);
+}
+.m22l3-item--vehicles .m22l3-icon {
+  background: linear-gradient(135deg, #e91e63 0%, #f048a3 100%);
+  color: white;
+}
+
+.m22l3-item--water {
+  background: linear-gradient(120deg, #e0f7ff 0%, #e9fbff 100%);
+  border-color: rgba(0, 172, 193, 0.3);
+}
+.m22l3-item--water .m22l3-icon {
+  background: linear-gradient(135deg, #00acc1 0%, #4dd0e1 100%);
+  color: white;
+}
+
+/* HEALTH EFFECT ITEMS */
+.m22l3-item--preterm {
+  background: linear-gradient(120deg, #ffe8e8 0%, #fffbfb 100%);
+  border-color: rgba(244, 81, 30, 0.3);
+}
+.m22l3-item--preterm .m22l3-icon {
+  background: linear-gradient(135deg, #f4511e 0%, #ff8a4f 100%);
+  color: white;
+}
+
+.m22l3-item--iugr {
+  background: linear-gradient(120deg, #f3e5f5 0%, #faf1ff 100%);
+  border-color: rgba(171, 71, 188, 0.3);
+}
+.m22l3-item--iugr .m22l3-icon {
+  background: linear-gradient(135deg, #ab47bc 0%, #ce88e8 100%);
+  color: white;
+}
+
+.m22l3-item--lowbw {
+  background: linear-gradient(120deg, #e8eaf6 0%, #f2ecff 100%);
+  border-color: rgba(63, 81, 181, 0.3);
+}
+.m22l3-item--lowbw .m22l3-icon {
+  background: linear-gradient(135deg, #3f51b5 0%, #7986cb 100%);
+  color: white;
+}
+
+.m22l3-item--stillbirth {
+  background: linear-gradient(120deg, #ffebee 0%, #fff3f5 100%);
+  border-color: rgba(229, 57, 53, 0.3);
+}
+.m22l3-item--stillbirth .m22l3-icon {
+  background: linear-gradient(135deg, #e53935 0%, #ef6f6f 100%);
+  color: white;
+}
+
+.m22l3-item--infection {
+  background: linear-gradient(120deg, #ffe0b2 0%, #fff0da 100%);
+  border-color: rgba(255, 152, 0, 0.3);
+}
+.m22l3-item--infection .m22l3-icon {
+  background: linear-gradient(135deg, #ff9800 0%, #ffb84d 100%);
+  color: white;
+}
+
+.m22l3-item--otitis {
+  background: linear-gradient(120deg, #f8bbd0 0%, #fce4ec 100%);
+  border-color: rgba(236, 64, 122, 0.3);
+}
+.m22l3-item--otitis .m22l3-icon {
+  background: linear-gradient(135deg, #ec407a 0%, #f57ba8 100%);
+  color: white;
+}
+
+.m22l3-item--pneumonia {
+  background: linear-gradient(120deg, #f0f4c3 0%, #f9fde7 100%);
+  border-color: rgba(205, 220, 57, 0.3);
+}
+.m22l3-item--pneumonia .m22l3-icon {
+  background: linear-gradient(135deg, #cddc39 0%, #e6ee9c 100%);
+  color: #333;
+}
+
+.m22l3-item--asthma {
+  background: linear-gradient(120deg, #c8e6c9 0%, #e8f5e9 100%);
+  border-color: rgba(76, 175, 80, 0.3);
+}
+.m22l3-item--asthma .m22l3-icon {
+  background: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
+  color: white;
+}
+
+.m22l3-item--neuro {
+  background: linear-gradient(120deg, #e1bee7 0%, #f3e5f5 100%);
+  border-color: rgba(156, 39, 176, 0.3);
+}
+.m22l3-item--neuro .m22l3-icon {
+  background: linear-gradient(135deg, #9c27b0 0%, #ba68c8 100%);
+  color: white;
+}
+
+.m22l3-item--cancer {
+  background: linear-gradient(120deg, #ffccbc 0%, #ffe0d2 100%);
+  border-color: rgba(255, 87, 34, 0.3);
+}
+.m22l3-item--cancer .m22l3-icon {
+  background: linear-gradient(135deg, #ff5722 0%, #ff9975 100%);
+  color: white;
+}
+
+.m22l3-item--stunt {
+  background: linear-gradient(120deg, #d1c4e9 0%, #ede7f6 100%);
+  border-color: rgba(103, 58, 183, 0.3);
+}
+.m22l3-item--stunt .m22l3-icon {
+  background: linear-gradient(135deg, #673ab7 0%, #9575cd 100%);
+  color: white;
+}
+
+.m22l3-health-category {
+  background: rgba(248, 248, 252, 0.6);
+  border: 1px solid rgba(200, 200, 220, 0.2);
+  border-radius: 10px;
+  padding: 6px;
+  margin-bottom: 6px;
+}
+
+.m22l3-health-category:last-child {
+  margin-bottom: 0;
+}
+
+.m22l3-subsection-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #1a1a1a;
+}
+
+.m22l3-subsection-title i {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(100, 100, 150, 0.1);
+  color: #6464a0;
+  font-size: 0.9rem;
+}
+
+.m22l3-list-small {
+  gap: 3px;
+}
+
+.m22l3-list-small .m22l3-item {
+  padding: 4px 5px;
+  font-size: 0.8rem;
+}
+
+.m22l3-info-box {
+  background: linear-gradient(120deg, #fef7e0 0%, #fffef1 100%);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #4a4a00;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.1);
+}
+
+.m22l3-info-box i {
+  color: #ffc107;
+  margin-right: 4px;
+}
+
+@media (max-width: 991px) {
+  .m22l3-redesign-slide {
+    padding: 6px;
+  }
+  
+  .m22l3-grid-2col {
+    grid-template-columns: 1fr;
+  }
+  
+  .m22l3-title-main {
+    font-size: 1.2rem;
+  }
+  
+  .m22l3-section-title {
+    font-size: 1rem;
+  }
+  
+  .m22l3-subsection-title {
+    font-size: 0.9rem;
+  }
+  
+  .m22l3-item {
+    font-size: 0.8rem;
+    padding: 4px 5px;
+  }
+  
+  .m22l3-icon {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 0.9rem !important;
   }
 }
