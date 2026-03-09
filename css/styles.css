@@ -1584,43 +1584,43 @@ html[lang|="bn"] h2 {
 .pesticide-shape--corner {
   top: 0.75rem;
   right: 1rem;
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   border-right: 2px dotted rgba(244, 63, 94, 0.35);
   border-top: 2px dotted rgba(244, 63, 94, 0.35);
-  border-radius: 0 28px 0 0;
+  border-radius: 0 20px 0 0;
 }
 
 .pesticide-shape--dots {
   bottom: 1rem;
   left: 1rem;
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   background-image: radial-gradient(rgba(244, 63, 94, 0.2) 2px, transparent 2px);
-  background-size: 16px 16px;
+  background-size: 12px 12px;
   opacity: 0.35;
 }
 
 .pesticide-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 4px;
 }
 
 .pesticide-list li {
   display: flex;
-  gap: 0.8rem;
+  gap: 4px;
   align-items: flex-start;
   background: rgba(255, 228, 230, 0.8);
   border: 1px solid rgba(248, 113, 113, 0.35);
-  border-radius: 16px;
-  padding: 0.9rem 1.1rem;
-  box-shadow: 0 10px 24px rgba(244, 63, 94, 0.12);
+  border-radius: 11px;
+  padding: 0.2rem .6rem;
+  box-shadow: 0 6px 14px rgba(244, 63, 94, 0.1);
 }
 
 .pesticide-bullet {
-  width: 1.65rem;
-  height: 1.65rem;
+  width: 1.3rem;
+  height: 1.3rem;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
@@ -1628,16 +1628,16 @@ html[lang|="bn"] h2 {
   background: rgba(244, 63, 94, 0.15);
   color: #f43f5e;
   flex-shrink: 0;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 .pesticide-bullet i {
-  font-size: 0.7rem;
+  font-size: 0.58rem;
 }
 
 .pesticide-figure {
-  padding: 1rem;
-  border-radius: 22px;
+  padding: 0.7rem;
+  border-radius: 14px;
   background: linear-gradient(135deg, rgba(254, 226, 226, 0.7), rgba(255, 255, 255, 0.4));
 }
 
@@ -1663,39 +1663,38 @@ html[lang|="bn"] h2 {
 }
 
 .risk-card {
-  background: #fff7ed;
   border: 1px solid rgba(251, 146, 60, 0.3);
-  border-radius: 18px;
-  padding: 1.25rem;
+  border-radius: 12px;
+  padding: 3px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 2px;
   height: 100%;
-  box-shadow: 0 14px 32px rgba(249, 115, 22, 0.12);
+  box-shadow: 0 8px 18px rgba(249, 115, 22, 0.1);
 }
 
 .risk-card__icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
   background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(251, 146, 60, 0.25));
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #ea580c;
-  font-size: 1.1rem;
+  font-size: 0.58rem;
 }
 
 .risk-card__title {
   margin: 0;
   font-weight: 600;
   color: #9a3412;
-  font-size: 1rem;
+  font-size: 0.82rem;
 }
 
 .risk-card p {
   color: #572008;
-  font-size: 0.95rem;
+  font-size: 0.78rem;
 }
 
 /* ==================== CAUTION SAFETY SYSTEM ==================== */
@@ -14791,15 +14790,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 /* ==================== MODULE 22 • LESSON 7 - HAZARDOUS CHEMICALS ==================== */
 .lesson-slide.mod22-lesson7 {
   position: relative;
-  min-height: 100vh;
-  background: linear-gradient(135deg, 
-    #ffebee 0%, 
-    #ffcdd2 20%, 
-    #ef9a9a 40%,
-    #e57373 65%, 
-    #ef5350 85%, 
-    #e53935 100%
-  );
+  
   padding: 16px 12px;
   overflow: hidden;
 }
@@ -14849,8 +14840,8 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-shape--circle {
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   top: 18%;
   right: 14%;
@@ -14859,8 +14850,8 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-shape--square {
-  width: 52px;
-  height: 52px;
+  width: 42px;
+  height: 42px;
   top: 72%;
   left: 8%;
   animation-delay: 1.8s;
@@ -14869,8 +14860,8 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-shape--hexagon {
-  width: 58px;
-  height: 58px;
+  width: 46px;
+  height: 46px;
   bottom: 18%;
   right: 22%;
   animation-delay: 2.5s;
@@ -14885,24 +14876,24 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 16px;
+  gap: 8px;
+  padding: 12px;
   background: rgba(255, 255, 255, 0.96);
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: 
     0 8px 28px rgba(229, 57, 53, 0.15),
     0 2px 6px rgba(0, 0, 0, 0.05),
     inset 0 1px 1px rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(229, 57, 53, 0.24);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   backdrop-filter: blur(13px);
   text-align: center;
 }
 
 .m22l7-hero__badge {
-  width: 50px;
-  height: 50px;
-  border-radius: 13px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   background: linear-gradient(135deg, #ef5350, #c62828);
   display: flex;
   align-items: center;
@@ -14920,13 +14911,13 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-hero__badge i {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   color: #fff;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
 }
 
 .m22l7-hero__title {
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   font-weight: 800;
   margin: 0;
   background: linear-gradient(135deg, #b71c1c, #c62828);
@@ -14938,7 +14929,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-hero__subtitle {
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   margin: 0;
   color: rgba(198, 40, 40, 0.75);
   font-weight: 500;
@@ -14948,20 +14939,20 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m22l7-section-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .m22l7-section-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #fff;
   transition: all 0.3s ease;
 }
@@ -14982,7 +14973,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-section-title {
-  font-size: 1.08rem;
+  font-size: 0.92rem;
   font-weight: 700;
   margin: 0;
   background: linear-gradient(135deg, #b71c1c, #c62828);
@@ -14995,13 +14986,12 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m22l7-intro-section {
   position: relative;
   z-index: 10;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .m22l7-intro-card {
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 13px;
+  padding: 9px;
+  border-radius: 10px;
   box-shadow: 
     0 5px 16px rgba(229, 57, 53, 0.12),
     0 1px 4px rgba(0, 0, 0, 0.05);
@@ -15010,7 +15000,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-intro-text {
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   line-height: 1.55;
   color: rgba(0, 0, 0, 0.76);
   margin: 0 0 10px;
@@ -15018,15 +15008,15 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-definition-card {
-  padding: 10px 12px;
+  padding: 8px 9px;
   background: linear-gradient(135deg, rgba(239, 83, 80, 0.05), rgba(229, 57, 53, 0.03));
   border-left: 3px solid #ef5350;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-top: 8px;
 }
 
 .m22l7-definition-text {
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.72);
   margin: 0;
@@ -15037,7 +15027,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m22l7-chemicals-section {
   position: relative;
   z-index: 10;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .m22l7-chemicals-grid {
@@ -15045,18 +15035,18 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 9px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 7px;
 }
 
 .m22l7-chem-item {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 9px 10px;
+  gap: 6px;
+  padding: 7px 8px;
   background: rgba(255, 255, 255, 0.91);
-  border-radius: 10px;
+  border-radius: 8px;
   border-left: 2.5px solid;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -15110,10 +15100,10 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m22l7-chem-dioxin .m22l7-chem-icon { background: linear-gradient(135deg, #f9a825, #f57f17); box-shadow: 0 2px 7px rgba(249, 168, 37, 0.25); }
 
 .m22l7-chem-icon {
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
-  border-radius: 7px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15122,7 +15112,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-chem-icon i {
-  font-size: 0.75rem;
+  font-size: 0.66rem;
   color: #fff;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
 }
@@ -15133,7 +15123,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .m22l7-chem-text {
   flex: 1;
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   line-height: 1.4;
   color: rgba(0, 0, 0, 0.78);
   font-weight: 500;
@@ -15145,7 +15135,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m22l7-health-section {
   position: relative;
   z-index: 10;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .m22l7-health-grid {
@@ -15153,18 +15143,18 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 6px;
 }
 
 .m22l7-health-item {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 9px 11px;
+  gap: 6px;
+  padding: 7px 8px;
   background: rgba(255, 255, 255, 0.93);
-  border-radius: 9px;
+  border-radius: 7px;
   border-top: 2.5px solid #ec407a;
   box-shadow: 0 2px 10px rgba(236, 64, 122, 0.1);
   transition: all 0.3s ease;
@@ -15187,8 +15177,8 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-health-icon {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: linear-gradient(135deg, #ec407a, #c2185b);
   display: flex;
@@ -15199,14 +15189,14 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-health-icon i {
-  font-size: 0.65rem;
+  font-size: 0.56rem;
   color: #fff;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 }
 
 .m22l7-health-text {
   flex: 1;
-  font-size: 0.76rem;
+  font-size: 0.68rem;
   line-height: 1.4;
   color: rgba(0, 0, 0, 0.75);
   font-weight: 500;
@@ -15224,19 +15214,19 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
 }
 
 .m22l7-prevent-item {
   position: relative;
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  padding: 10px 12px;
+  gap: 7px;
+  padding: 7px 8px;
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 11px;
+  border-radius: 8px;
   border-left: 3px solid;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   transition: all 0.38s cubic-bezier(0.4, 0, 0.2, 1);
@@ -15275,10 +15265,10 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m22l7-prev-e .m22l7-prevent-icon { background: linear-gradient(135deg, #ffa726, #f57c00); box-shadow: 0 2px 9px rgba(255, 167, 38, 0.28); }
 
 .m22l7-prevent-icon {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  border-radius: 8px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15287,7 +15277,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-prevent-icon i {
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   color: #fff;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12));
 }
@@ -15298,7 +15288,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .m22l7-prevent-text {
   flex: 1;
-  font-size: 0.80rem;
+  font-size: 0.7rem;
   line-height: 1.45;
   color: rgba(0, 0, 0, 0.78);
   font-weight: 500;

@@ -18155,11 +18155,9 @@ const guardianNote = yhLang(
               const rightSections2 = [
                 {
                   title: yhLang("3. Pneumonia", "৩. নিউমোনিয়া"),
-                  description: yhLang("Pneumonia is a major health effect associated with air pollution.", "নিউমোনিয়া বায়ু দূষণের সাথে সম্পর্কিত একটি প্রধান স্বাস্থ্যগত প্রভাব।"),
                 },
                 {
                   title: yhLang("4. Asthma", "৪. হাঁপানি"),
-                  description: yhLang("Asthma can be triggered and worsened by air pollution exposure.", "বায়ু দূষণের সংস্পর্শে হাঁপানি শুরু ও বৃদ্ধি হতে পারে।"),
                 },
                 {
                   title: yhLang("5. Other Health Outcomes", "৫. অন্যান্য স্বাস্থ্যগত ফলাফল"),
@@ -18203,14 +18201,26 @@ const guardianNote = yhLang(
                     (item) => {
                       const iconData = getItemIcon(item);
                       return `
-                      <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:5px 5px;margin-bottom:5px;box-shadow:0 6px 18px rgba(103,58,183,.14), 0 2px 8px ${iconData.bg};transition:all 0.3s ease;">
-                        <span style="background:linear-gradient(135deg,${iconData.color},${iconData.color}dd);width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;margin-right:5px;box-shadow:0 4px 12px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:16px;"></i></span>
-                        <span style="color:#333;font-weight:500;">${item}</span>
+                      <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:3px solid ${iconData.color};border-radius:8px;padding:3px 3px;margin-bottom:3px;box-shadow:0 4px 12px rgba(103,58,183,.1), 0 1px 4px ${iconData.bg};transition:all 0.3s ease;">
+                        <span style="background:linear-gradient(135deg,${iconData.color},${iconData.color}dd);width:22px;height:22px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;margin-right:3px;box-shadow:0 2px 8px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:12px;"></i></span>
+                        <span style="color:#333;font-weight:500;font-size:0.9em;">${item}</span>
                       </li>
                     `;
                     }
                   )
                   .join("");
+
+              const renderSection = (section) => {
+                const iconData = getSectionIcon(section.title);
+                return `
+                <div class="health-section mb-1" style="border-radius:12px;padding:3px;box-shadow:0 5px 14px rgba(103,58,183,.08);">
+                  <h3 class="mb-1" style="display:flex;align-items:center;color:#4a148c;font-weight:700;font-size:0.95em;">
+                    <span style="background:${iconData.gradient};width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-right:8px;box-shadow:0 3px 10px rgba(103,58,183,.18);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:14px;"></i></span>
+                    ${section.title}
+                  </h3>
+                  ${section.items ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : ``}
+                </div>
+              `;};
 
               const getSectionIcon = (title) => {
                 if (title.includes('বায়ু দূষণের উৎস') || title.includes('Sources of Air')) return { icon: 'fa-wind', color: '#e65100', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
@@ -18223,54 +18233,42 @@ const guardianNote = yhLang(
                 return { icon: 'fa-circle-info', color: '#7b1fa2', gradient: 'linear-gradient(135deg,#8e24aa,#6a1b9a)' };
               };
 
-              const renderSection = (section) => {
-                const iconData = getSectionIcon(section.title);
-                return `
-                <div class="health-section mb-1" style="background:rgba(255,255,255,.4);border-radius:18px;padding:5px;box-shadow:0 8px 22px rgba(103,58,183,.12);">
-                  <h4 class="mb-1" style="display:flex;align-items:center;color:#4a148c;font-weight:700;">
-                    <span style="background:${iconData.gradient};width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
-                    ${section.title}
-                  </h4>
-                  ${section.items ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : `<div style="background:linear-gradient(135deg,rgba(255,255,255,.9) 0%,rgba(255,243,224,.7) 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
-                </div>
-              `;};
-
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:5px;">
-                    <span style="background:linear-gradient(135deg,#e65100,#bf360c);width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 20px rgba(230,81,0,.35), 0 2px 10px rgba(191,54,12,.2);"><i class="fa-solid fa-wind" style="color:#fff;font-size:28px;"></i></span>
+                  <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:3px;">
+                    <span style="background:linear-gradient(135deg,#e65100,#bf360c);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(230,81,0,.25), 0 1px 6px rgba(191,54,12,.15);"><i class="fa-solid fa-wind" style="color:#fff;font-size:18px;"></i></span>
                     ${yhLang("Sources of Air Pollution", "বায়ু দূষণের উৎস:")}
                   </h2>
                   
-                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 50%,#ffcc80 100%);border-radius:20px;padding:18px 22px;box-shadow:0 10px 32px rgba(230,81,0,.22), 0 4px 14px rgba(191,54,12,.15);border-left:5px solid #e65100;">
+                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="20" style="border-radius:14px;padding:10px 14px;box-shadow:0 6px 20px rgba(230,81,0,.15), 0 2px 8px rgba(191,54,12,.1);border-left:4px solid #e65100;">
                     <div style="display:flex;align-items:center;">
-                      <span style="background:linear-gradient(135deg,#fb8c00,#ef6c00);width:44px;height:44px;min-width:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 5px 16px rgba(251,140,0,.3);"><i class="fa-solid fa-lightbulb" style="color:#fff;font-size:20px;"></i></span>
-                      <p class="mb-0" style="color:#4a148c;font-size:1.05em;font-weight:500;line-height:1.7;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে।")}</p>
+                      <span style="background:linear-gradient(135deg,#fb8c00,#ef6c00);width:28px;height:28px;min-width:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 3px 10px rgba(251,140,0,.2);"><i class="fa-solid fa-lightbulb" style="color:#fff;font-size:14px;"></i></span>
+                      <p class="mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে। ")}</p>
                     </div>
                   </div>
 
                   <div class="row g-1" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-4">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 50%,#ffcc80 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(230,81,0,.24), 0 5px 18px rgba(191,54,12,.18);">
-                        
+                      <div class="modern-card glass-card h-100" style="border-radius:16px;padding:3px;box-shadow:0 8px 24px rgba(230,81,0,.18), 0 3px 12px rgba(191,54,12,.12);">
+                                                <p class="mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:")}</p>
+
                         ${leftSections.map(renderSection).join("")}
                       </div>
                     </div>
                     <div class="col-12 col-lg-4">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%,#f48fb1 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
-                        <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:5px;font-weight:700;font-size:1.4em;">
-                          <span style="background:linear-gradient(135deg,#ec407a,#c2185b);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(236,64,122,.4), 0 2px 8px rgba(194,24,91,.25);"><i class="fa-solid fa-heart-pulse" style="color:#fff;font-size:24px;"></i></span>
-                          ${yhLang("Health Effects (Birth & Respiratory)", "স্বাস্থ্যগত প্রভাব (জন্ম ও শ্বাসযন্ত্র)")}
+                      <div class="modern-card glass-card h-100" style="border-radius:16px;padding:3px;box-shadow:0 8px 24px rgba(233,30,99,.18), 0 3px 12px rgba(194,24,91,.12);">
+                        <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:3px;font-weight:700;font-size:1em;">
+                          <span style="background:linear-gradient(135deg,#ec407a,#c2185b);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(236,64,122,.3), 0 1px 6px rgba(194,24,91,.18);"><i class="fa-solid fa-heart-pulse" style="color:#fff;font-size:16px;"></i></span>
+                          ${yhLang("Health Effects (Birth & Respiratory)", "বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থগত প্রভাব")}
                         </h3>
+
                         ${rightSections1.map(renderSection).join("")}
+
                       </div>
                     </div>
                     <div class="col-12 col-lg-4">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 50%,#ce93d8 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(156,39,176,.24), 0 5px 18px rgba(106,27,154,.18);">
-                        <h3 style="display:flex;align-items:center;color:#4a148c;margin-bottom:5px;font-weight:700;font-size:1.4em;">
-                          <span style="background:linear-gradient(135deg,#ab47bc,#8e24aa);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(171,71,188,.4), 0 2px 8px rgba(142,36,170,.25);"><i class="fa-solid fa-disease" style="color:#fff;font-size:24px;"></i></span>
-                          ${yhLang("Chronic & Other Effects", "দীর্ঘস্থায়ী ও অন্যান্য প্রভাব")}
-                        </h3>
+                      <div class="modern-card glass-card h-100" style="border-radius:16px;padding:3px;box-shadow:0 8px 24px rgba(156,39,176,.18), 0 3px 12px rgba(106,27,154,.12);">
+                        
                         ${rightSections2.map(renderSection).join("")}
                       </div>
                     </div>
@@ -18329,12 +18327,12 @@ const guardianNote = yhLang(
                 pollutionCauses
                   .map(
                     (item, idx) => `
-                      <li class="mb-3" style="background:rgba(255,255,255,.65);border-radius:14px;padding:12px;box-shadow:${idx % 2 === 0 ? '0 6px 18px rgba(2,136,209,.14)' : '0 8px 20px rgba(255,112,67,.16)'};">
-                        <h4 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? '#0277bd' : '#d84315'};">
+                      <li class="mb-2" style="background:rgba(255,255,255,.65);border-radius:10px;padding:8px;box-shadow:${idx % 2 === 0 ? '0 4px 12px rgba(2,136,209,.12)' : '0 5px 14px rgba(255,112,67,.13)'};">
+                        <h3 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? '#0277bd' : '#d84315'};font-size:0.95em;">
                           <i class="fa-solid ${idx < 2 ? 'fa-industry' : idx < 4 ? 'fa-house' : idx < 6 ? 'fa-oil-can' : 'fa-truck-medical'} me-2"></i>
                           ${item.title}
-                        </h4>
-                        <p class="mb-0"><i class="fa-solid fa-circle-info me-2 text-secondary"></i>${item.desc}</p>
+                        </h3>
+                        <p class="mb-0" style="font-size:0.9em;"><i class="fa-solid fa-circle-info me-2 text-secondary" style="font-size:0.9em;"></i>${item.desc}</p>
                       </li>
                     `
                   )
@@ -18343,14 +18341,14 @@ const guardianNote = yhLang(
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-water" style="color: #ff7043; margin-right: 12px; font-size: 1.2em;"></i>
+                    <i class="fa-solid fa-water" style="color: #ff7043; margin-right: 8px; font-size: 1em;"></i>
                     ${yhLang(
                         "Main Causes of Food and Water Contamination",
-                        "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ"
+                        "খাবারপানির দূষণের প্রধান কারণ সমূহ"
                     )}
                   </h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 50%, #ffcc80 100%);border-radius:24px;box-shadow:0 14px 42px rgba(255,112,67,.28), 0 6px 18px rgba(244,81,30,.15);">
-                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:14px; font-weight:700;"><span style="background:linear-gradient(135deg,#ff7043,#f4511e); width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(255,112,67,0.35);"><i class="fa-solid fa-industry" style="color:#fff; font-size:24px;"></i></span>${yhLang(
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:16px;padding:8px;box-shadow:0 8px 24px rgba(255,112,67,.2), 0 3px 10px rgba(244,81,30,.12);">
+                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:5px; font-weight:700;font-size:1em;"><span style="background:linear-gradient(135deg,#ff7043,#f4511e); width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; margin-right:8px; box-shadow:0 3px 10px rgba(255,112,67,0.28);"><i class="fa-solid fa-industry" style="color:#fff; font-size:16px;"></i></span>${yhLang(
                         "Main Causes of Food and Water Contamination",
                         "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ"
                     )}</h3>
@@ -18489,7 +18487,7 @@ const guardianNote = yhLang(
                     <span style="background:${iconData.gradient};width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
                     ${section.title}
                   </h4>
-                  ${section.items ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : `<div style="background:linear-gradient(135deg,rgba(255,255,255,.9) 0%,rgba(255,243,224,.7) 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
+                  ${section.items ? `<ul class="list-unstyled feature-list pani mb-0">${renderList(section.items)}</ul>` : `<div style="border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
                 </div>
               `;};
 
@@ -18501,35 +18499,28 @@ const guardianNote = yhLang(
                   </h2>
                   
                   <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 50%,#ce93d8 100%);border-radius:20px;padding:18px 22px;box-shadow:0 10px 32px rgba(156,39,176,.22), 0 4px 14px rgba(123,31,162,.15);border-left:5px solid #9c27b0;">
-                    <div style="display:flex;align-items:center;">
-                      <span style="background:linear-gradient(135deg,#ab47bc,#8e24aa);width:44px;height:44px;min-width:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 5px 16px rgba(171,71,188,.3);"><i class="fa-solid fa-triangle-exclamation" style="color:#fff;font-size:20px;"></i></span>
+                    
+                    <div>
+                       <h3 style="display:flex;align-items:center;color:#1a237e;margin-bottom:5px;font-weight:700;font-size:1.4em;">
+                          <span style="background:linear-gradient(135deg,#5c6bc0,#3949ab);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(92,107,192,.4), 0 2px 8px rgba(57,73,171,.25);"><i class="fa-solid fa-briefcase-medical" style="color:#fff;font-size:24px;"></i></span>
+                          ${yhLang("Immediate Health Risks", "অনিরাপদ খাবারপানির সাথে সম্পর্কিত স্বাস্থ্য ঝুঁকি")}
+                        </h3>
                       <p class="mb-0" style="color:#4a148c;font-size:1.05em;font-weight:500;line-height:1.7;">${yhLang("Contaminated food and water can cause various serious health risks. The main health risks are:", "অনিরাপদ বা দূষিত খাবারপানির কারণে নানা ধরনের গুরুতর স্বাস্থ্য ঝুঁকি হতে পারে। প্রধান স্বাস্থ্য ঝুঁকিগুলো হলো:")}</p>
                     </div>
                   </div>
 
                   <div class="row g-1" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-4">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%,#9fa8da 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(63,81,181,.24), 0 5px 18px rgba(48,63,159,.18);">
-                        <h3 style="display:flex;align-items:center;color:#1a237e;margin-bottom:5px;font-weight:700;font-size:1.4em;">
-                          <span style="background:linear-gradient(135deg,#5c6bc0,#3949ab);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(92,107,192,.4), 0 2px 8px rgba(57,73,171,.25);"><i class="fa-solid fa-briefcase-medical" style="color:#fff;font-size:24px;"></i></span>
-                          ${yhLang("Immediate Health Risks", "তাৎক্ষণিক স্বাস্থ্যঝুঁকি")}
-                        </h3>
+                    <div class="col-12 col-lg-5">
+                      <div class="modern-card glass-card h-100" style="border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(63,81,181,.24), 0 5px 18px rgba(48,63,159,.18);">
+                        
                         ${leftSections.map(renderSection).join("")}
                       </div>
                     </div>
-                    <div class="col-12 col-lg-4">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%,#f48fb1 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
-                        <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:5px;font-weight:700;font-size:1.4em;">
-                          <span style="background:linear-gradient(135deg,#ec407a,#d81b60);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(236,64,122,.4), 0 2px 8px rgba(216,27,96,.25);"><i class="fa-solid fa-heart-circle-xmark" style="color:#fff;font-size:24px;"></i></span>
-                          ${yhLang("Long-term Health Risks", "দীর্ঘমেয়াদি স্বাস্থ্যঝুঁকি")}
-                        </h3>
-                        ${rightSections1.map(renderSection).join("")}
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                      <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%,#f48fb1 100%);border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
+                    <div class="col-12 col-lg-7">
+                      <div class="modern-card glass-card h-100" style="border-radius:24px;padding:5px;box-shadow:0 12px 38px rgba(233,30,99,.24), 0 5px 18px rgba(194,24,91,.18);">
                         
-                        ${rightSections2.map(renderSection).join("")}
+                        ${rightSections1.map(renderSection).join("")}
+                         ${rightSections2.map(renderSection).join("")}
                       </div>
                     </div>
                   </div>
@@ -18589,9 +18580,9 @@ const guardianNote = yhLang(
                 items
                   .map(
                     (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(224,242,241,.72)'};border-left:4px solid ${idx % 2 === 0 ? '#26a69a' : '#00acc1'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(0,150,136,.18)' : '0 8px 18px rgba(0,172,193,.16)'};">
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(224,242,241,.72)'};border-left:3px solid ${idx % 2 === 0 ? '#26a69a' : '#00acc1'};border-radius:9px;padding:3px 8px;margin-bottom:2px;box-shadow:${idx % 2 === 0 ? '0 4px 10px rgba(0,150,136,.15)' : '0 5px 12px rgba(0,172,193,.14)'};">
                         <i class="fa-solid ${idx < 2 ? 'fa-soap' : idx < 4 ? 'fa-droplet' : 'fa-people-group'} ${idx < 2 ? 'text-success' : idx < 4 ? 'text-info' : 'text-primary'} me-2"></i>
-                        <span>${item}</span>
+                        <span style="font-size:0.92em;">${item}</span>
                       </li>
                     `
                   )
@@ -18599,27 +18590,27 @@ const guardianNote = yhLang(
 
               return `
                 <div class="lesson-slide">
-                  <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e0f2f1 0%,#b2dfdb 100%);border-radius:22px;box-shadow:0 10px 35px rgba(0,172,193,.2);">
-                    <h2 class="slide-title gradient-text mb-4" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-hands-bubbles" style="color: #00acc1; margin-right: 12px; font-size: 1.2em;"></i>
+                  <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e0f2f1 0%,#b2dfdb 100%);border-radius:16px;padding:8px;box-shadow:0 7px 20px rgba(0,172,193,.16);">
+                    <h2 class="slide-title gradient-text mb-3" data-aos="fade-up" style="display: flex; align-items: center; font-size:1.05em;">
+                    <i class="fa-solid fa-hands-bubbles" style="color: #00acc1; margin-right: 8px; font-size: 1em;"></i>
                     ${yhLang("Steps to Improve Water, Sanitation and Hygiene", "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ")}
                      </h2>
                     <span class="hygiene-shape hygiene-shape-corner" aria-hidden="true"></span>
                     <span class="hygiene-shape hygiene-shape-orb" aria-hidden="true"></span>
                     <div class="hygiene-card__body">
-                      <div class="row g-4 align-items-center">
+                      <div class="row g-3 align-items-center">
                         <div class="col-12 col-lg-6">
-                          <div class="hygiene-list mb-3">
+                          <div class="hygiene-list mb-2">
                             <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00695c;font-weight:600;">
-                             <h3> <i class="fa-solid fa-hands-bubbles me-2"></i>${yhLang("Personal Practices:", "ব্যক্তিগত অনুশীলন:")}</h3>
+                             <h3 style="font-size:1em;margin-bottom:6px;"> <i class="fa-solid fa-hands-bubbles me-2" style="font-size:0.95em;"></i>${yhLang("Personal Practices:", "ব্যক্তিগত অনুশীলন:")}</h3>
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(personalPractices)}
                             </ul>
                           </div>
                           <div class="hygiene-list">
-                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;">
-                              <i class="fa-solid fa-people-group me-2"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}
+                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;font-size:0.98em;margin-bottom:6px;">
+                              <i class="fa-solid fa-people-group me-2" style="font-size:0.92em;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(communityActions)}
@@ -18627,8 +18618,8 @@ const guardianNote = yhLang(
                           </div>
                         </div>
                         <div class="col-12 col-lg-6">
-                          <figure class="image-card mb-0 h-100" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);padding:0px;border-radius:18px;box-shadow:0 8px 26px rgba(3,155,229,.18);">
-                            <img src="img/modu22/sanitization_b2.jpeg" style="height: 650px;" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
+                          <figure class="image-card mb-0 h-100" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);padding:0px;border-radius:12px;box-shadow:0 5px 14px rgba(3,155,229,.14);">
+                            <img src="img/modu22/sanitization_b2.jpeg" style="height: 520px;" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
                           </figure>
                         </div>
                       </div>
@@ -18809,18 +18800,92 @@ const guardianNote = yhLang(
             quiz: null,
             content: (function () {
               const pesticidePoints = [
-                "কীটনাশক রাসায়নিক উপাদানের একটি বিস্তৃত শ্রেণীবিভাগ যা কৃষি, বাড়ি, উঠান, বাগান, গাছপালা, পোকামাকড় এবং ইঁদুরের মতো অবাঞ্ছিত কীটপতঙ্গ হত্যা এবং নিয়ন্ত্রণের জন্য তৈরি করা হয়। বাংলাদেশ একটি কৃষিপ্রধান দেশ হওয়ায়, ফসল রক্ষার জন্য এই রাসায়নিকগুলি ব্যাপকভাবে ব্যবহৃত হয়।",
-                "সকল কীটনাশক সহজাতভাবে বিষাক্ত এবং তীব্র এবং দীর্ঘস্থায়ী স্বাস্থ্য ঝুঁকি বহন করে যার মধ্যে রয়েছে কার্সিনোজেনিসিটি এবং মিউটেজেনিসিটি। খাদ্যাভ্যাস, বিকাশ-জনিত এবং শারীরবৃত্তীয় কারণগুলির কারণে শিশুরা কীটনাশকের গ্রহণ এবং প্রতিকূল প্রভাবের জন্য বেশি ঝুঁকিপূর্ণ।",
-                "শ্বাসপ্রশ্বাস, খাবার বা পানীয়ের মাদ্ধমে বা ত্বকের সংস্পর্শে আসার মাধ্যমে কীটনাশক আমাদের শরীরে প্রবেশ করে ও বিসক্রিয়া ঘটায়।",
-              ];
+              yhLang(
+                "Pesticides are a broad class of chemical substances designed to kill and control unwanted pests such as insects and rodents in agriculture, homes, yards, gardens, and plants. As Bangladesh is an agriculture-based country, these chemicals are widely used to protect crops.",
+                "কীটনাশক রাসায়নিক উপাদানের একটি বিস্তৃত শ্রেণীবিভাগ যা কৃষি, বাড়ি, উঠান, বাগান, গাছপালা, পোকামাকড় এবং ইঁদুরের মতো অবাঞ্ছিত কীটপতঙ্গ হত্যা এবং নিয়ন্ত্রণের জন্য তৈরি করা হয়। বাংলাদেশ একটি কৃষিপ্রধান দেশ হওয়ায়, ফসল রক্ষার জন্য এই রাসায়নিকগুলি ব্যাপকভাবে ব্যবহৃত হয়।"
+              ),
+              yhLang(
+                "All pesticides are inherently toxic and pose both acute and long-term health risks, including carcinogenicity and mutagenicity. Due to dietary habits, developmental factors, and physiological characteristics, children are more vulnerable to pesticide exposure and its adverse effects.",
+                "সকল কীটনাশক সহজাতভাবে বিষাক্ত এবং তীব্র এবং দীর্ঘস্থায়ী স্বাস্থ্য ঝুঁকি বহন করে যার মধ্যে রয়েছে কার্সিনোজেনিসিটি এবং মিউটেজেনিসিটি। খাদ্যাভ্যাস, বিকাশ-জনিত এবং শারীরবৃত্তীয় কারণগুলির কারণে শিশুরা কীটনাশকের গ্রহণ এবং প্রতিকূল প্রভাবের জন্য বেশি ঝুঁকিপূর্ণ।"
+              ),
+              yhLang(
+                "Pesticides can enter our body through breathing, food or drinks, or through skin contact and cause toxic reactions.",
+                "শ্বাসপ্রশ্বাস, খাবার বা পানীয়ের মাদ্ধমে বা ত্বকের সংস্পর্শে আসার মাধ্যমে কীটনাশক আমাদের শরীরে প্রবেশ করে ও বিসক্রিয়া ঘটায়।"
+              ),
+            ];
+            const riskCards = [
+  {
+    title: yhLang("1. Nervous System Damage", "১. স্নায়ুতন্ত্রের ক্ষতি"),
+    description: yhLang(
+      "Many chemical components of pesticides directly damage the nervous system. This may lead to memory loss, lack of attention, learning difficulties, or impaired neurological development.",
+      "কীটনাশকের অনেক রাসায়নিক উপাদান স্নায়ুতন্ত্রকে সরাসরি ক্ষতি করে। এতে স্মৃতিশক্তি কমে যাওয়া, মনোযোগের ঘাটতি, শেখার সমস্যা বা স্নায়বিক বিকাশ ব্যাহত হয়।"
+    ),
+  },
+  {
+    title: yhLang("2. Hormonal Imbalance", "২. হরমোনের ভারসাম্যহীনতা"),
+    description: yhLang(
+      "Some pesticides disrupt the normal functioning of hormones in the body. This can cause problems during puberty, hinder growth, and affect the development of reproductive organs.",
+      "কিছু কীটনাশক দেহের হরমোনের স্বাভাবিক কাজ ব্যাহত করে। এর ফলে বয়ঃসন্ধির সমস্যা, বৃদ্ধি ব্যাহত হওয়া ও প্রজনন অঙ্গের বিকাশে সমস্যা দেখা দেয়।"
+    ),
+  },
+  {
+    title: yhLang("3. Respiratory Problems", "৩. শ্বাস-প্রশ্বাসের সমস্যা"),
+    description: yhLang(
+      "Breathing in pesticide fumes or vapors may cause asthma, coughing, breathing difficulties, allergies, and inflammation of the lungs.",
+      "কীটনাশকের গন্ধ বা বাষ্পে শ্বাস নিলে হাঁপানি, কাশি, শ্বাসকষ্ট, অ্যালার্জি ও ফুসফুসের প্রদাহ হতে পারে।"
+    ),
+  },
+  {
+    title: yhLang("4. Skin and Eye Irritation", "৪. ত্বক ও চোখের জ্বালা"),
+    description: yhLang(
+      "Direct contact with pesticides can cause skin diseases, itching, rashes, eye irritation, redness, or a burning sensation.",
+      "কীটনাশকের সরাসরি সংস্পর্শে চর্মরোগ, চুলকানি, র‌্যাশ, চোখে জ্বালা, লালভাব বা পোড়া অনুভূতি হয়।"
+    ),
+  },
+  {
+    title: yhLang("5. Stomach Problems and Poisoning", "৫. পেটের সমস্যা ও বিষক্রিয়া"),
+    description: yhLang(
+      "When pesticides enter the body through food or water, they may cause vomiting, stomach pain, dizziness, diarrhea, and in severe cases unconsciousness or seizures.",
+      "খাবার বা পানির মাধ্যমে কীটনাশক শরীরে ঢুকলে বমি, পেট ব্যথা, মাথা ঘোরা, ডায়রিয়া, গুরুতর ক্ষেত্রে অচেতন হওয়া বা খিঁচুনি দেখা যায়।"
+    ),
+  },
+  {
+    title: yhLang("6. Risk of Cancer", "৬. ক্যান্সারের ঝুঁকি"),
+    description: yhLang(
+      "Long-term exposure to some pesticides increases the risk of cancers such as leukemia, lymphoma, and brain tumors, especially among those involved in agricultural work.",
+      "দীর্ঘমেয়াদে কিছু কীটনাশক লিউকেমিয়া, লিম্ফোমা, মস্তিষ্কের টিউমারসহ বিভিন্ন ক্যান্সারের ঝুঁকি বাড়ায়, বিশেষত যারা কৃষি-সম্পর্কিত কাজে থাকে।"
+    ),
+  },
+  {
+    title: yhLang("7. Weakened Immune System", "৭. রোগ প্রতিরোধ ক্ষমতা কমে যাওয়া"),
+    description: yhLang(
+      "Pesticides weaken the immune system, making children and adolescents more vulnerable to illnesses.",
+      "কীটনাশক ইমিউন সিস্টেম দুর্বল করে, ফলে শিশু-কিশোররা সহজে অসুস্থ হয়ে পড়ে।"
+    ),
+  },
+];
+const renderCards = () =>
+                riskCards
+                  .map(
+                    (card, idx) => `
+                      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
+                        <article class="risk-card">
+                          <div class="risk-card__icon"><i class="fa-solid fa-shield-virus"></i></div>
+                          <h3 class="risk-card__title">${card.title}</h3>
+                          <p class="mb-0">${card.description}</p>
+                        </article>
+                      </div>
+                    `
+                  )
+                  .join("");
 
               const renderPoints = () =>
                 pesticidePoints
                   .map(
                     (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(255,241,118,.28)'};border-left:4px solid ${idx % 2 === 0 ? '#f06292' : '#ff8a65'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(240,98,146,.18)' : '0 8px 18px rgba(255,138,101,.16)'};">
+                      <li style="border-left:3px solid ${idx % 2 === 0 ? '#f06292' : '#ff8a65'};border-radius:9px;padding: 4px 8px;margin-bottom:0px;box-shadow:${idx % 2 === 0 ? '0 4px 10px rgba(240,98,146,.15)' : '0 5px 12px rgba(255,138,101,.14)'};">
                         <span class="pesticide-bullet"><i class="fa-solid ${idx === 0 ? 'fa-spray-can' : idx === 1 ? 'fa-skull-crossbones' : 'fa-lungs'}"></i></span>
-                        <p class="mb-0">${item}</p>
+                        <p class="mb-0" style="font-size:0.9em;">${item}</p>
                       </li>
                     `
                   )
@@ -18829,14 +18894,14 @@ const guardianNote = yhLang(
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-spray-can" style="color: #f06292; margin-right: 12px; font-size: 1.2em;"></i>
+                    <i class="fa-solid fa-spray-can" style="color: #f06292; margin-right: 8px; font-size: 1em;"></i>
                     কীটনাশক এবং শিশু-কিশোর দের স্বাস্থ্য ঝুঁকি
                   </h2>
-                  <div class="modern-card glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fce4ec 0%,#f8bbd0 50%, #f48fb1 100%);border-radius:26px;box-shadow:0 16px 48px rgba(240,98,146,.3), 0 6px 20px rgba(216,27,96,.2);">
+                  <div class="modern-card glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:16px;padding:8px;box-shadow:0 8px 22px rgba(240,98,146,.2), 0 3px 10px rgba(216,27,96,.14);">
                     <span class="pesticide-shape pesticide-shape--corner" aria-hidden="true"></span>
                     <span class="pesticide-shape pesticide-shape--dots" aria-hidden="true"></span>
                     <div class="pesticide-card__body">
-                      <div class="row g-4 align-items-center">
+                      <div class="row g-1 align-items-center">
                         <div class="col-12 col-lg-12 order-2 order-lg-1">
                           <ul class="list-unstyled pesticide-list mb-0">
                             ${renderPoints()}
@@ -18845,86 +18910,22 @@ const guardianNote = yhLang(
                       </div>
                     </div>
                   </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch22-lesson-9",
-            title: yhLang(
-              "Pesticide Exposure Particularly Risks for Children and Adolescents",
-              "কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ"
-            ),
-            icon: "fa-notes-medical",
-            gradientClass: "bg-gradient-tangerine",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              const riskCards = [
-                {
-                  title: "১. স্নায়ুতন্ত্রের ক্ষতি",
-                  description:
-                    "কীটনাশকের অনেক রাসায়নিক উপাদান স্নায়ুতন্ত্রকে সরাসরি ক্ষতি করে। এতে স্মৃতিশক্তি কমে যাওয়া, মনোযোগের ঘাটতি, শেখার সমস্যা বা স্নায়বিক বিকাশ ব্যাহত হয়।",
-                },
-                {
-                  title: "২. হরমোনের ভারসাম্যহীনতা",
-                  description:
-                    "কিছু কীটনাশক দেহের হরমোনের স্বাভাবিক কাজ ব্যাহত করে। এর ফলে বয়ঃসন্ধির সমস্যা, বৃদ্ধি ব্যাহত হওয়া ও প্রজনন অঙ্গের বিকাশে সমস্যা দেখা দেয়।",
-                },
-                {
-                  title: "৩. শ্বাস-প্রশ্বাসের সমস্যা",
-                  description:
-                    "কীটনাশকের গন্ধ বা বাষ্পে শ্বাস নিলে হাঁপানি, কাশি, শ্বাসকষ্ট, অ্যালার্জি ও ফুসফুসের প্রদাহ হতে পারে।",
-                },
-                {
-                  title: "৪. ত্বক ও চোখের জ্বালা",
-                  description:
-                    "কীটনাশকের সরাসরি সংস্পর্শে চর্মরোগ, চুলকানি, র‌্যাশ, চোখে জ্বালা, লালভাব বা পোড়া অনুভূতি হয়।",
-                },
-                {
-                  title: "৫. পেটের সমস্যা ও বিষক্রিয়া",
-                  description:
-                    "খাবার বা পানির মাধ্যমে কীটনাশক শরীরে ঢুকলে বমি, পেট ব্যথা, মাথা ঘোরা, ডায়রিয়া, গুরুতর ক্ষেত্রে অচেতন হওয়া বা খিঁচুনি দেখা যায়।",
-                },
-                {
-                  title: "৬. ক্যান্সারের ঝুঁকি",
-                  description:
-                    "দীর্ঘমেয়াদে কিছু কীটনাশক লিউকেমিয়া, লিম্ফোমা, মস্তিষ্কের টিউমারসহ বিভিন্ন ক্যান্সারের ঝুঁকি বাড়ায়, বিশেষত যারা কৃষি-সম্পর্কিত কাজে থাকে।",
-                },
-                {
-                  title: "৭. রোগ প্রতিরোধ ক্ষমতা কমে যাওয়া",
-                  description:
-                    "কীটনাশক ইমিউন সিস্টেম দুর্বল করে, ফলে শিশু-কিশোররা সহজে অসুস্থ হয়ে পড়ে।",
-                },
-              ];
-
-              const renderCards = () =>
-                riskCards
-                  .map(
-                    (card, idx) => `
-                      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
-                        <article class="risk-card">
-                          <div class="risk-card__icon"><i class="fa-solid fa-shield-virus"></i></div>
-                          <h5 class="risk-card__title">${card.title}</h5>
-                          <p class="mb-0">${card.description}</p>
-                        </article>
-                      </div>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-notes-medical" style="color: #ff8a65; margin-right: 12px; font-size: 1.2em;"></i>
+                  <div class="modern-card glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:16px;padding:8px;box-shadow:0 8px 22px rgba(240,98,146,.2), 0 3px 10px rgba(216,27,96,.14);">
+                    <span class="pesticide-shape pesticide-shape--corner" aria-hidden="true"></span>
+                    <span class="pesticide-shape pesticide-shape--dots" aria-hidden="true"></span>
+                    <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-notes-medical" style="color: #ff8a65; margin-right: 8px; font-size: 1em;"></i>
                     কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ
                   </h2>
-                  <p class="text-muted" data-aos="fade-up" data-aos-delay="30" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 100%);padding:10px 14px;border-radius:12px;display:inline-flex;align-items:center;box-shadow:0 4px 14px rgba(255,138,101,.2);"><i class="fa-solid fa-circle-info me-2 text-warning"></i>নিচে প্রধান স্বাস্থ্য ঝুঁকিগুলো তুলে ধরা হলো:</p>
-                  <div class="row g-3 risk-grid" data-aos="fade-up" data-aos-delay="60">
+                  <p class="text-muted d-none" data-aos="fade-up" data-aos-delay="30" style="padding:10px 14px;border-radius:12px;display:inline-flex;align-items:center;box-shadow:0 4px 14px rgba(255,138,101,.2);"><i class="fa-solid fa-circle-info me-2 text-warning"></i>নিচে প্রধান স্বাস্থ্য ঝুঁকিগুলো তুলে ধরা হলো:</p>
+                  <div class="row g-1 risk-grid" data-aos="fade-up" data-aos-delay="60">
                     ${renderCards()}
+                  </div>
                   </div>
                 </div>`;
             })(),
           },
+
           {
             id: "ch22-lesson-13",
             title: yhLang("Precautions", "সতর্কতাসমূহ"),
@@ -18959,13 +18960,15 @@ const guardianNote = yhLang(
                   )
                   .join("");
 
+                 
+
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-triangle-exclamation" style="color: #fbc02d; margin-right: 12px; font-size: 1.2em;"></i>
                     সতর্কতাঃ
                   </h2>
-                  <div class="modern-card glass-card caution-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#fffde7 0%,#fff9c4 50%, #fff59d 100%);border-radius:26px;box-shadow:0 16px 48px rgba(251,192,45,.3), 0 6px 20px rgba(245,127,23,.2);">
+                  <div class="modern-card glass-card caution-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 16px 48px rgba(251,192,45,.3), 0 6px 20px rgba(245,127,23,.2);">
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
@@ -18982,7 +18985,7 @@ const guardianNote = yhLang(
             })(),
           },
           {
-            id: "ch22-lesson-14",
+            id: "ch22-lesson-10",
             title: yhLang(
               "Noise Pollution",
               "শব্দ দূষণ"
@@ -18992,82 +18995,110 @@ const guardianNote = yhLang(
             audioFile: "",
             quiz: null,
             content: (function () {
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-volume-high" style="color: #5e35b1; margin-right: 12px; font-size: 1.2em;"></i>
-                    ${yhLang("Noise Pollution", "শব্দ দূষণ")}
-                  </h2>
-                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-12">
-                      <div class="modern-card glass-card mb-3" style="background:linear-gradient(135deg,#ede7f6 0%,#d1c4e9 50%, #b39ddb 100%);border-radius:24px;box-shadow:0 14px 42px rgba(94,53,177,.28), 0 6px 18px rgba(81,45,168,.15);">
-                        <p>${yhLang("The World Health Organization (WHO) defines noise pollution as 'unwanted and harmful sound caused by activities'. A United Nations Environment Programme (UNEP, 2022) report declared Dhaka the noisiest city in the world. Compared to the WHO's permissible limit of 55 decibels, noise levels in Dhaka are at least double, found at 110-132 decibels. 75% of noise pollution in Dhaka originates from vehicles. A Department of Environment (DoE) study states that approximately 11.7% of Bangladesh's population has lost hearing due to noise pollution.", "বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ হিসেবে সংজ্ঞায়িত করেছে। জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।")}</p>
-                        <div class="card-divider my-3"></div>
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i>${yhLang("Sources", "উৎস")}</h3>
-                        <p>${yhLang("Noise pollution comes from many everyday sources, including loud toys, household appliances, entertainment devices, and mobile phones. In Bangladesh, the primary source of noise pollution is high-volume vehicle horns. Urbanization and deforestation also indirectly increase noise in once-quiet areas.", "শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন। বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।")}</p>
-                      </div>
-                      <div class="modern-card glass-card" style="background:linear-gradient(135deg,#e8eaf6 0%,#c5cae9 50%, #9fa8da 100%);border-radius:24px;box-shadow:0 14px 42px rgba(63,81,181,.28), 0 6px 18px rgba(57,73,171,.15);">
-                        <h3 class="mb-3" style="display:flex;align-items:center;color:#3949ab; font-weight:700;"><span style="background:linear-gradient(135deg,#5c6bc0,#3f51b5); width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(92,107,192,0.35);"><i class="fa-solid fa-ear-listen" style="color:#fff; font-size:22px;"></i></span>${yhLang("Effects of Noise Pollution", "শব্দ দূষণের প্রভাব")}</h3>
-                        <ul class="list-unstyled feature-list mb-0">
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায়</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>ii. শ্রবণশক্তি হ্রাস করে</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>iii. ঘুমের ব্যাঘাত ঘটায়</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায়,</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের  ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে</li>
-                          <li><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-            })(),
-          },
-          {
-            id: "ch22-lesson-15",
-            title: yhLang(
-              "শব্দ দূষণ প্রতিরোধে করনীয়",
-              "শব্দ দূষণ প্রতিরোধে করনীয়"
-            ),
-            icon: "fa-ear-listen",
-            gradientClass: "bg-gradient-purple",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              const preventionList = [
-                "শব্দ দূষণের কুফল নিয়ে সচেতনতা বৃদ্ধি করতে হবে",
-                "অপ্রয়োজনে হর্ন বাজানো ও উচ্চ স্বরে মাইক বাজানো থেকে থেকে বিরত থাকতে হবে",
-                "বাড়িতে টিভি, সাউন্ড সিস্টেম বা হেডফোনে শব্দের মাত্রা যৌক্তিক পর্যায়ে রাখতে হবে",
-                "বিভিন্ন এলাকাকে আবাসিক, বাণিজ্যিক, নীরব (হাসপাতাল) এলাকায় ভাগ করে তাদের জন্য শব্দের মাত্রা (dB level) নির্ধারণ করে দেওয়া যেতে পারে",
-                "শব্দ দূষণ (নিয়ন্ত্রণ) বিধিমালা কঠোরভাবে প্রয়োগ করতে হবে",
-              ];
+               const preventionList = [
+                  yhLang(
+                    "Awareness should be raised about the harmful effects of noise pollution.",
+                    "শব্দ দূষণের কুফল নিয়ে সচেতনতা বৃদ্ধি করতে হবে"
+                  ),
+                  yhLang(
+                    "Unnecessary honking and the use of loud microphones should be avoided.",
+                    "অপ্রয়োজনে হর্ন বাজানো ও উচ্চ স্বরে মাইক বাজানো থেকে থেকে বিরত থাকতে হবে"
+                  ),
+                  yhLang(
+                    "The volume of TV, sound systems, or headphones at home should be kept at a reasonable level.",
+                    "বাড়িতে টিভি, সাউন্ড সিস্টেম বা হেডফোনে শব্দের মাত্রা যৌক্তিক পর্যায়ে রাখতে হবে"
+                  ),
+                  yhLang(
+                    "Different areas such as residential, commercial, and silent zones (e.g., hospitals) can be designated with specific permissible noise levels (dB levels).",
+                    "বিভিন্ন এলাকাকে আবাসিক, বাণিজ্যিক, নীরব (হাসপাতাল) এলাকায় ভাগ করে তাদের জন্য শব্দের মাত্রা (dB level) নির্ধারণ করে দেওয়া যেতে পারে"
+                  ),
+                  yhLang(
+                    "Noise Pollution (Control) Rules should be strictly enforced.",
+                    "শব্দ দূষণ (নিয়ন্ত্রণ) বিধিমালা কঠোরভাবে প্রয়োগ করতে হবে"
+                  ),
+                ];
 
               const renderListItems = () =>
                 preventionList
                   .map(
                     (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.62)' : 'rgba(255,255,255,.5)'};border-left:4px solid ${idx % 2 === 0 ? '#7e57c2' : '#5e35b1'};border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(126,87,194,.18)' : '0 8px 18px rgba(94,53,177,.16)'};">
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.62)' : 'rgba(255,255,255,.5)'};border-left:4px solid ${idx % 2 === 0 ? '#7e57c2' : '#5e35b1'};border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(126,87,194,.18)' : '0 8px 18px rgba(94,53,177,.16)'};">
                         <i class="fa-solid ${idx < 2 ? 'fa-bullhorn' : idx < 4 ? 'fa-sliders' : 'fa-gavel'} ${idx < 2 ? 'text-danger' : idx < 4 ? 'text-primary' : 'text-success'} me-2"></i>
                         <span style="color:#4a148c;">${item}</span>
                       </li>
                     `
                   )
                   .join("");
-
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up" style="display:flex;align-items:center;">
-                    <i class="fa-solid fa-ear-listen" style="color:#7e57c2;margin-right:12px;font-size:1.2em;"></i>
-                    শব্দ দূষণ প্রতিরোধে করনীয়
+                  <h2 class="slide-title gradient-text d-none" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <i class="fa-solid fa-volume-high" style="color: #5e35b1; margin-right: 12px; font-size: 1.2em;"></i>
+                    ${yhLang("Noise Pollution", "শব্দ দূষণ")}
                   </h2>
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 50%, #ce93d8 100%);border-radius:26px;box-shadow:0 16px 48px rgba(126,87,194,.3), 0 6px 20px rgba(106,27,154,.2);">
-                    <h3 style="display:flex;align-items:center;color:#6a1b9a;margin-bottom:14px; font-weight:700;"><span style="background:linear-gradient(135deg,#ab47bc,#8e24aa); width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(171,71,188,0.35);"><i class="fa-solid fa-volume-xmark" style="color:#fff; font-size:22px;"></i></span>${yhLang("Prevention Measures", "প্রতিরোধের করণীয়")}</h3>
-                    <ul class="list-unstyled prevention-list mb-0">
-                      ${renderListItems()}
-                    </ul>
+                  <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
+                    <div class="col-12 col-lg-12">
+                      <div class="modern-card glass-card mb-3" style="border-radius:24px;box-shadow:0 14px 42px rgba(94,53,177,.28), 0 6px 18px rgba(81,45,168,.15);">
+                        <h3 class="mb-1" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-volume-high" style="margin-right:10px;"></i>${yhLang("Noise Pollution", "শব্দ দূষণ")}</h3>
+                        <p>${yhLang("The World Health Organization (WHO) defines noise pollution as 'unwanted and harmful sound caused by activities'. A United Nations Environment Programme (UNEP, 2022) report declared Dhaka the noisiest city in the world. Compared to the WHO's permissible limit of 55 decibels, noise levels in Dhaka are at least double, found at 110-132 decibels. 75% of noise pollution in Dhaka originates from vehicles. A Department of Environment (DoE) study states that approximately 11.7% of Bangladesh's population has lost hearing due to noise pollution.", "বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ হিসেবে সংজ্ঞায়িত করেছে। জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।")}</p>
+                        <div class="card-divider my-3"></div>
+                        <h3 class="mb-1" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i>${yhLang("Sources", "উৎস")}</h3>
+                        <p>${yhLang("Noise pollution comes from many everyday sources, including loud toys, household appliances, entertainment devices, and mobile phones. In Bangladesh, the primary source of noise pollution is high-volume vehicle horns. Urbanization and deforestation also indirectly increase noise in once-quiet areas.", "শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন। বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।")}</p>
+                      </div>
+                      
+                        <div class="d-flex gap-4">
+                          <div class="modern-card glass-card p-2" style="border-radius:24px;box-shadow:0 14px 42px rgba(63,81,181,.28), 0 6px 18px rgba(57,73,171,.15);">
+                             <h3 class="mb-3" style="display:flex;align-items:center;color:#3949ab; font-weight:700;"><span style="background:linear-gradient(135deg,#5c6bc0,#3f51b5); width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(92,107,192,0.35);"><i class="fa-solid fa-ear-listen" style="color:#fff; font-size:22px;"></i></span>${yhLang("Effects of Noise Pollution", "শব্দ দূষণের প্রভাব")}</h3>
+                          <ul class="list-unstyled feature-list mb-0">
+                            <li style="background:rgba(255,255,255,.62);border-left:4px solid #7e57c2;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 6px 16px rgba(126,87,194,.18);">
+                              <i class="fa-solid fa-book-open text-danger me-2"></i>
+                              <span style="color:#4a148c;">${yhLang("i. Disrupts concentration in studies", "i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায়")}</span>
+                            </li>
+                            <li style="background:rgba(255,255,255,.5);border-left:4px solid #5e35b1;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 8px 18px rgba(94,53,177,.16);">
+                              <i class="fa-solid fa-ear-deaf text-danger me-2"></i>
+                              <span style="color:#4a148c;">${yhLang("ii. Causes hearing loss", "ii. শ্রবণশক্তি হ্রাস করে")}</span>
+                            </li>
+                            <li style="background:rgba(255,255,255,.62);border-left:4px solid #7e57c2;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 6px 16px rgba(126,87,194,.18);">
+                              <i class="fa-solid fa-bed text-danger me-2"></i>
+                              <span style="color:#4a148c;">${yhLang("iii. Disturbs sleep", "iii. ঘুমের ব্যাঘাত ঘটায়")}</span>
+                            </li>
+                            <li style="background:rgba(255,255,255,.5);border-left:4px solid #5e35b1;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 8px 18px rgba(94,53,177,.16);">
+                              <i class="fa-solid fa-heart-pulse text-danger me-2"></i>
+                              <span style="color:#4a148c;">${yhLang(
+                                "iv. Increases the risk of heart disease and death",
+                                "iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায়,"
+                              )}</span>
+                            </li>
+                            <li style="background:rgba(255,255,255,.62);border-left:4px solid #7e57c2;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 6px 16px rgba(126,87,194,.18);">
+                              <i class="fa-solid fa-brain text-danger me-2"></i>
+                              <span style="color:#4a148c;">${yhLang(
+                                "v. Increases the risk of anxiety, stress, attention deficit, and hyperactivity",
+                                "v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে"
+                              )}</span>
+                            </li>
+                            <li style="background:rgba(255,255,255,.5);border-left:4px solid #5e35b1;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 8px 18px rgba(94,53,177,.16);">
+                              <i class="fa-solid fa-baby text-danger me-2"></i>
+                              <span style="color:#4a148c;">${yhLang(
+                                "vi. Possible risk of low birth weight and developmental problems",
+                                "vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি"
+                              )}</span>
+                            </li>
+                          </ul>
+                          
+                        </div>
+                        <div class="modern-card glass-card p-2" data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 16px 48px rgba(126,87,194,.3), 0 6px 20px rgba(106,27,154,.2);">
+                          <h3 style="display:flex;align-items:center;color:#6a1b9a;margin-bottom:14px; font-weight:700;"><span style="background:linear-gradient(135deg,#ab47bc,#8e24aa); width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-right:10px; box-shadow:0 4px 14px rgba(171,71,188,0.35);"><i class="fa-solid fa-volume-xmark" style="color:#fff; font-size:22px;"></i></span>${yhLang("Prevention Measures", "প্রতিরোধের করণীয়")}</h3>
+                          <ul class="list-unstyled prevention-list mb-0">
+                            ${renderListItems()}
+                          </ul>
+                        </div>
+                      </div>
+                      
+                    </div>
                   </div>
                 </div>`;
             })(),
           },
+
         ],
       },
       {
