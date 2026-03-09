@@ -20942,7 +20942,7 @@ input::placeholder {
 
 .mod23-lesson5 .m23l5-point {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -21181,7 +21181,7 @@ input::placeholder {
 
 .mod23-lesson6 .m23l6-point {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   padding: 8px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -21420,7 +21420,7 @@ input::placeholder {
 
 .mod23-lesson7 .m23l7-section-title i {
   color: #ffb74d;
-  font-size: 1.1rem;
+  font-size: 20px;
 }
 
 .mod23-lesson7 .m23l7-list {
@@ -21434,7 +21434,7 @@ input::placeholder {
 
 .mod23-lesson7 .m23l7-point {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   padding: 8px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);

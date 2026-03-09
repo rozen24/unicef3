@@ -18289,21 +18289,9 @@ const renderCards = () =>
                     <span class="m23l1-shape m23l1-shape--ring"></span>
                   </div>
 
-                  <header class="m23l1-hero mb-1" data-aos="fade-up">
-                    <span class="m23l1-hero__badge bg-gradient-yellow icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-shield-virus"></i>
-                    </span>
-                    <div class="m23l1-hero__body">
-                      <h2 class="slide-title gradient-text mb-0 m23l1-line" data-aos="fade-up" data-aos-delay="60">${yhLang(
-                        "Emerging and Re-emerging Diseases",
-                        "ইমারজিং এবং রি-ইমারজিং ডিজিজেস"
-                      )}</h2>
-                    </div>
-                  </header>
-
                   <div class="row g-2">
                     <div class="col-12 col-lg-5">
-                      <div class="m23l1-stack">
+                      <div class="m23l1-stack h-100">
                         
                         <section class="m23l1-callout" data-aos="fade-up" data-aos-delay="240">
                           <span class="m23l1-callout__icon bg-gradient-lavender" aria-hidden="true">
@@ -18374,17 +18362,16 @@ const renderCards = () =>
                     </div>
 
                     <div class="col-12 col-lg-7">
-                      <div class="m23l1-stack h-100">
-                      
-
-                        <article class="m23l1-media h-100" data-aos="fade-up" data-aos-delay="200">
-                          <h4 class="m23l1-media__title mx-2 m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
+                        <article class="m23l1-media" data-aos="fade-up" data-aos-delay="200">
+                          <h3 class="m23l1-media__title mx-2 m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
                             "Factors that accelerate transmission",
                             "সংক্রমণকে ত্বরান্বিত করনে প্রভাবক সমূহ"
-                          )}</h4>
-                          <div class="m23l1-media__frame h-100" data-aos="zoom-in" data-aos-delay="280">
-                            <img class="img-zoom w-100 h-100" style="" src="img/modu23/emerging.png" alt="সংক্রমণকে ত্বরান্বিত করার প্রভাবক">
+                          )}</h3>
+                          <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="280">
                           </div>
+                          <figure class="glass-card p-1 mb-0 text-center">
+                            <img class="img-zoom w-100" style="height: 600px;" src="img/modu23/emerging.png" alt="সংক্রমণকে ত্বরান্বিত করার প্রভাবক">
+                          </figure>
                         </article>
                       </div>
                     </div>
@@ -18755,15 +18742,7 @@ const renderCards = () =>
                     <div class="col-12 col-lg-5">
                       <div class="m23l4-stack">
                         <article class="m23l4-panel" data-aos="fade-up" data-aos-delay="120">
-                          <div class="m23l4-panel__head" data-aos="fade-up" data-aos-delay="160">
-                            <span class="m23l4-panel__icon bg-gradient-rose" aria-hidden="true">
-                              <i class="fa-solid fa-virus"></i>
-                            </span>
-                            <h3 class="m23l4-panel__title m23l4-line" data-aos="fade-up" data-aos-delay="200">${yhLang(
-                              "Nipah Virus Infection",
-                              "নিপাহ ভাইরাস সংক্রমন"
-                            )}</h3>
-                          </div>
+                          
                           <p class="m23l4-panel__desc m23l4-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
                             "Nipah is a deadly viral disease. Infection causes brain inflammation. Bat droppings and saliva mix with raw date palm sap, carrying Nipah virus. Drinking raw date palm sap can cause infection. Many think heating the sap makes it safe—this is not acceptable.",
                             "নিপাহ একটি ভাইরাসজনিত মারাত্মক প্রাণঘাতী রোগ। নিপাহ ভাইরাসে আক্রান্ত হলে মস্তিষ্কের প্রদাহ ঘটে। কাঁচা খেজুরের রসে বাদুড়ের বিষ্ঠা ও লালা মিশ্রিত হয় এবং ওই বিষ্ঠা ও লালাতে নিপাহ ভাইরাসের জীবাণু থাকে। ফলে খেজুরের কাঁচা রস পান করলে মানুষ নিপাহ ভাইরাসে আক্রান্ত হতে পারে। অনেকেই মনে করেন, রস গরম করে খেলে বিপদ কাটবে। কিন্তু তা মোটেও গ্রহণযোগ্য নয়।"
