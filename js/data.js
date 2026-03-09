@@ -17593,9 +17593,9 @@ const guardianNote = yhLang(
                 items
                   .map(
                     (item) => `
-                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 15px; padding: 14px; margin-bottom: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid ${item.color}; transition: all 0.3s ease;">
-                        <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 12px; font-size: 1.2em;"></i>
-                        <span>${item.text}</span>
+                      <li style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.7) 100%); border-radius: 10px; padding: 8px; margin-bottom: 7px; box-shadow: 0 3px 9px rgba(0,0,0,0.07); border-left: 3px solid ${item.color}; transition: all 0.3s ease;">
+                        <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 8px; font-size: 0.95em;"></i>
+                        <span style="font-size: 0.9em;">${item.text}</span>
                       </li>
                     `
                   )
@@ -17603,32 +17603,32 @@ const guardianNote = yhLang(
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">
-                    <i class="fa-solid fa-seedling" style="color: #81c784; margin-right: 12px;"></i>
+                    <i class="fa-solid fa-seedling" style="color: #81c784; margin-right: 8px; font-size: 0.95em;"></i>
                     তারুণ্য: সম্ভাবনা ও ঝুঁকি
                   </h2>
                   
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(233, 30, 99, 0.15);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #c2185b;">
-                      <i class="fa-solid fa-lightbulb" style="margin-right: 10px; font-size: 24px; color: #f06292;"></i>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); border-radius: 14px; padding: 9px; box-shadow: 0 5px 18px rgba(233, 30, 99, 0.12);">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #c2185b; font-size: 1em;">
+                      <i class="fa-solid fa-lightbulb" style="margin-right: 8px; font-size: 16px; color: #f06292;"></i>
                       সম্ভাবনাময় সময়
                     </h3>
-                    <p class="mb-3">তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
+                    <p class="mb-2" style="font-size: 0.92em;">তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
                   </div>
                   
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #e1f5fe 0%, #e8eaf6 100%); border-radius: 25px; box-shadow: 0 10px 35px rgba(63, 81, 181, 0.2); margin-top: 20px;">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #1565c0;">
-                      <i class="fa-solid fa-shield-heart" style="margin-right: 10px; font-size: 24px; color: #42a5f5;"></i>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #e1f5fe 0%, #e8eaf6 100%); border-radius: 16px; padding: 9px; box-shadow: 0 6px 20px rgba(63, 81, 181, 0.15); margin-top: 12px;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #1565c0; font-size: 1em;">
+                      <i class="fa-solid fa-shield-heart" style="margin-right: 8px; font-size: 16px; color: #42a5f5;"></i>
                       বিশেষ যত্নের প্রয়োজন
                     </h3>
-                    <p class="mb-0">এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
+                    <p class="mb-0" style="font-size: 0.92em;">এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
                   </div>
 
-                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(233, 30, 99, 0.2); margin-top: 24px;">
-                    <h5 style="display: flex; align-items: center; margin-bottom: 16px; color: #ad1457; font-weight: 600;">
-                      <i class="fa-solid fa-exclamation-circle" style="margin-right: 10px; font-size: 1.2em; color: #e91e63;"></i>
+                  <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 14px; padding: 9px; box-shadow: 0 6px 20px rgba(233, 30, 99, 0.15); margin-top: 14px;">
+                    <h5 style="display: flex; align-items: center; margin-bottom: 10px; color: #ad1457; font-weight: 600; font-size: 0.95em;">
+                      <i class="fa-solid fa-exclamation-circle" style="margin-right: 8px; font-size: 0.95em; color: #e91e63;"></i>
                       যেকোনো সময়ে ঝুঁকিপূর্ণ হতে পারে
                     </h5>
-                    <p class="fw-semibold mb-3" style="color: #880e4f;">এছাড়াও যেকোনো তরুন-তরুনী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন—</p>
+                    <p class="fw-semibold mb-2" style="color: #880e4f; font-size: 0.9em;">এছাড়াও যেকোনো তরুন-তরুনী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন—</p>
                     <ul class="list-unstyled puberty-list mb-0" style="padding-left: 0;">
                       ${renderList(secondaryList)}
                     </ul>
