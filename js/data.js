@@ -17595,7 +17595,7 @@ const bpPrevention = [
                     ${yhLang("Health Risks from Contaminated Food and Water", "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি")}
                   </h2>
                   
-                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#f3e5f5 0%,#e1bee7 50%,#ce93d8 100%);border-radius:20px;padding:18px 22px;box-shadow:0 10px 32px rgba(156,39,176,.22), 0 4px 14px rgba(123,31,162,.15);border-left:5px solid #9c27b0;">
+                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="20" style="border-radius:20px;padding:5px;box-shadow:0 10px 32px rgba(156,39,176,.22), 0 4px 14px rgba(123,31,162,.15);border-left:5px solid #9c27b0;">
                     
                     <div>
                        <h3 style="display:flex;align-items:center;color:#1a237e;margin-bottom:5px;font-weight:700;font-size:1.4em;">
@@ -17677,9 +17677,9 @@ const bpPrevention = [
                 items
                   .map(
                     (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(224,242,241,.72)'};border-left:3px solid ${idx % 2 === 0 ? '#26a69a' : '#00acc1'};border-radius:9px;padding:3px 8px;margin-bottom:2px;box-shadow:${idx % 2 === 0 ? '0 4px 10px rgba(0,150,136,.15)' : '0 5px 12px rgba(0,172,193,.14)'};">
+                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(224,242,241,.72)'};border-left:3px solid ${idx % 2 === 0 ? '#26a69a' : '#00acc1'};border-radius:9px;padding:10px 8px;margin-bottom:px;box-shadow:${idx % 2 === 0 ? '0 4px 10px rgba(0,150,136,.15)' : '0 5px 12px rgba(0,172,193,.14)'};">
                         <i class="fa-solid ${idx < 2 ? 'fa-soap' : idx < 4 ? 'fa-droplet' : 'fa-people-group'} ${idx < 2 ? 'text-success' : idx < 4 ? 'text-info' : 'text-primary'} me-2"></i>
-                        <span style="font-size:0.92em;">${item}</span>
+                        <span style="">${item}</span>
                       </li>
                     `
                   )
@@ -17699,7 +17699,7 @@ const bpPrevention = [
                         <div class="col-12 col-lg-6">
                           <div class="hygiene-list mb-2">
                             <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00695c;font-weight:600;">
-                             <h3 style="font-size:1em;margin-bottom:6px;"> <i class="fa-solid fa-hands-bubbles me-2" style="font-size:0.95em;"></i>${yhLang("Personal Practices:", "ব্যক্তিগত অনুশীলন:")}</h3>
+                             <h3 style="font-size:1em;margin-bottom:6px;"> <i class="fa-solid fa-hands-bubbles me-2" style="font-size:20px;"></i>${yhLang("Personal Practices:", "ব্যক্তিগত অনুশীলন:")}</h3>
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(personalPractices)}
@@ -17707,7 +17707,7 @@ const bpPrevention = [
                           </div>
                           <div class="hygiene-list">
                             <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;font-size:0.98em;margin-bottom:6px;">
-                              <i class="fa-solid fa-people-group me-2" style="font-size:0.92em;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}
+                             <h3> <i class="fa-solid fa-people-group me-2" style="font-size:20px;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}</h3>
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(communityActions)}
@@ -17716,7 +17716,7 @@ const bpPrevention = [
                         </div>
                         <div class="col-12 col-lg-6">
                           <figure class="image-card mb-0 h-100" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);padding:0px;border-radius:12px;box-shadow:0 5px 14px rgba(3,155,229,.14);">
-                            <img src="img/modu22/sanitization_b2.jpeg" style="height: 520px;" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
+                            <img src="img/modu22/sanitization_b2.jpeg" style="max-height: 630px;" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
                           </figure>
                         </div>
                       </div>
@@ -17907,7 +17907,7 @@ const bpPrevention = [
               ),
               yhLang(
                 "Pesticides can enter our body through breathing, food or drinks, or through skin contact and cause toxic reactions.",
-                "শ্বাসপ্রশ্বাস, খাবার বা পানীয়ের মাদ্ধমে বা ত্বকের সংস্পর্শে আসার মাধ্যমে কীটনাশক আমাদের শরীরে প্রবেশ করে ও বিসক্রিয়া ঘটায়।"
+                "শ্বাসপ্রশ্বাস, খাবার বা পানীয়ের মাদ্ধমে বা ত্বকের সংস্পর্শে আসার মাধ্যমে কীটনাশক আমাদের শরীরে প্রবেশ করে ও বিষক্রিয়া ঘটায়।"
               ),
             ];
             const riskCards = [
@@ -17915,32 +17915,32 @@ const bpPrevention = [
     title: yhLang("1. Nervous System Damage", "১. স্নায়ুতন্ত্রের ক্ষতি"),
     description: yhLang(
       "Many chemical components of pesticides directly damage the nervous system. This may lead to memory loss, lack of attention, learning difficulties, or impaired neurological development.",
-      "কীটনাশকের অনেক রাসায়নিক উপাদান স্নায়ুতন্ত্রকে সরাসরি ক্ষতি করে। এতে স্মৃতিশক্তি কমে যাওয়া, মনোযোগের ঘাটতি, শেখার সমস্যা বা স্নায়বিক বিকাশ ব্যাহত হয়।"
+      "কীটনাশকের অনেক রাসায়নিক উপাদান স্নায়ুতন্ত্রকে সরাসরি ক্ষতি করে। এতে স্মৃতিশক্তি কমে যাওয়া, মনোযোগের ঘাটতি, শেখার সমস্যা বা স্নায়বিক ব্যাহত হতে পারে।"
     ),
   },
   {
     title: yhLang("2. Hormonal Imbalance", "২. হরমোনের ভারসাম্যহীনতা"),
     description: yhLang(
       "Some pesticides disrupt the normal functioning of hormones in the body. This can cause problems during puberty, hinder growth, and affect the development of reproductive organs.",
-      "কিছু কীটনাশক দেহের হরমোনের স্বাভাবিক কাজ ব্যাহত করে। এর ফলে বয়ঃসন্ধির সমস্যা, বৃদ্ধি ব্যাহত হওয়া ও প্রজনন অঙ্গের বিকাশে সমস্যা দেখা দেয়।"
+      "কিছু কীটনাশক দেহের হরমোনের স্বাভাবিক কাজ ব্যাহত করে। এর ফলে বয়ঃসন্ধির সমস্যা, বৃদ্ধি ব্যাহত হওয়া ও প্রজনন অঙ্গের বিকাশে সমস্যা দেখা দিতে পারে।"
     ),
   },
   {
     title: yhLang("3. Respiratory Problems", "৩. শ্বাস-প্রশ্বাসের সমস্যা"),
     description: yhLang(
       "Breathing in pesticide fumes or vapors may cause asthma, coughing, breathing difficulties, allergies, and inflammation of the lungs.",
-      "কীটনাশকের গন্ধ বা বাষ্পে শ্বাস নিলে হাঁপানি, কাশি, শ্বাসকষ্ট, অ্যালার্জি ও ফুসফুসের প্রদাহ হতে পারে।"
+      "কীটনাশকের গন্ধ বা বাষ্পে শ্বাস নিলে হাঁপানি, কাশি, শ্বাসকষ্ট, অ্যালার্জি ও ফুসফুসের প্রদাহ  দেখা দিতে পারে।"
     ),
   },
   {
     title: yhLang("4. Skin and Eye Irritation", "৪. ত্বক ও চোখের জ্বালা"),
     description: yhLang(
       "Direct contact with pesticides can cause skin diseases, itching, rashes, eye irritation, redness, or a burning sensation.",
-      "কীটনাশকের সরাসরি সংস্পর্শে চর্মরোগ, চুলকানি, র‌্যাশ, চোখে জ্বালা, লালভাব বা পোড়া অনুভূতি হয়।"
+      "কীটনাশকের সরাসরি সংস্পর্শে চর্মরোগ, চুলকানি, র‌্যাশ, চোখে জ্বালা, লালভাব বা পোড়া অনুভূতি হতে পারে।"
     ),
   },
   {
-    title: yhLang("5. Stomach Problems and Poisoning", "৫. পেটের সমস্যা ও বিষক্রিয়া"),
+    title: yhLang("5. Stomach Problems and Poisoning", "৫. তীব্র বিষক্রিয়া (Acute poisoning) হতে পারে।"),
     description: yhLang(
       "When pesticides enter the body through food or water, they may cause vomiting, stomach pain, dizziness, diarrhea, and in severe cases unconsciousness or seizures.",
       "খাবার বা পানির মাধ্যমে কীটনাশক শরীরে ঢুকলে বমি, পেট ব্যথা, মাথা ঘোরা, ডায়রিয়া, গুরুতর ক্ষেত্রে অচেতন হওয়া বা খিঁচুনি দেখা যায়।"
@@ -17950,14 +17950,14 @@ const bpPrevention = [
     title: yhLang("6. Risk of Cancer", "৬. ক্যান্সারের ঝুঁকি"),
     description: yhLang(
       "Long-term exposure to some pesticides increases the risk of cancers such as leukemia, lymphoma, and brain tumors, especially among those involved in agricultural work.",
-      "দীর্ঘমেয়াদে কিছু কীটনাশক লিউকেমিয়া, লিম্ফোমা, মস্তিষ্কের টিউমারসহ বিভিন্ন ক্যান্সারের ঝুঁকি বাড়ায়, বিশেষত যারা কৃষি-সম্পর্কিত কাজে থাকে।"
+      "দীর্ঘমেয়াদে কিছু কীটনাশক লিউকেমিয়া, লিম্ফোমা, মস্তিষ্কের টিউমারসহ বিভিন্ন ক্যান্সারের ঝুঁকি বাড়ায়, বিশেষত যারা কৃষি-সম্পর্কিত কাজে জড়িত থাকে।"
     ),
   },
   {
     title: yhLang("7. Weakened Immune System", "৭. রোগ প্রতিরোধ ক্ষমতা কমে যাওয়া"),
     description: yhLang(
       "Pesticides weaken the immune system, making children and adolescents more vulnerable to illnesses.",
-      "কীটনাশক ইমিউন সিস্টেম দুর্বল করে, ফলে শিশু-কিশোররা সহজে অসুস্থ হয়ে পড়ে।"
+      "কীটনাশক ইমিউন সিস্টেম দুর্বল করে, ফলে শিশু-কিশোররা সহজে অসুস্থ করে তুলতে পারে।"
     ),
   },
 ];
@@ -17967,7 +17967,7 @@ const renderCards = () =>
                     (card, idx) => `
                       <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
                         <article class="risk-card">
-                          <div class="risk-card__icon"><i class="fa-solid fa-shield-virus"></i></div>
+                          <div class="risk-card__icon d-none"><i class="fa-solid fa-shield-virus"></i></div>
                           <h3 class="risk-card__title">${card.title}</h3>
                           <p class="mb-0">${card.description}</p>
                         </article>
@@ -17998,7 +17998,7 @@ const renderCards = () =>
                     <span class="pesticide-shape pesticide-shape--corner" aria-hidden="true"></span>
                     <span class="pesticide-shape pesticide-shape--dots" aria-hidden="true"></span>
                     <div class="pesticide-card__body">
-                      <div class="row g-1 align-items-center">
+                      <div class="row g-2 align-items-center">
                         <div class="col-12 col-lg-12 order-2 order-lg-1">
                           <ul class="list-unstyled pesticide-list mb-0">
                             ${renderPoints()}
@@ -18007,15 +18007,15 @@ const renderCards = () =>
                       </div>
                     </div>
                   </div>
-                  <div class="modern-card glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:16px;padding:8px;box-shadow:0 8px 22px rgba(240,98,146,.2), 0 3px 10px rgba(216,27,96,.14);">
+                  <div class="modern-card mt-4 glass-card pesticide-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:16px;padding:5px;box-shadow:0 8px 22px rgba(240,98,146,.2), 0 3px 10px rgba(216,27,96,.14);">
                     <span class="pesticide-shape pesticide-shape--corner" aria-hidden="true"></span>
                     <span class="pesticide-shape pesticide-shape--dots" aria-hidden="true"></span>
-                    <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
+                    <h2 class="slide-title mb-0 gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-notes-medical" style="color: #ff8a65; margin-right: 8px; font-size: 1em;"></i>
-                    কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ
+                    ${yhLang("", "কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ")}
                   </h2>
-                  <p class="text-muted d-none" data-aos="fade-up" data-aos-delay="30" style="padding:10px 14px;border-radius:12px;display:inline-flex;align-items:center;box-shadow:0 4px 14px rgba(255,138,101,.2);"><i class="fa-solid fa-circle-info me-2 text-warning"></i>নিচে প্রধান স্বাস্থ্য ঝুঁকিগুলো তুলে ধরা হলো:</p>
-                  <div class="row g-1 risk-grid" data-aos="fade-up" data-aos-delay="60">
+                  <p class="text-muted" data-aos="fade-up" data-aos-delay="30" style="padding:3px 14px;border-radius:12px;display:inline-flex;align-items:center;box-shadow:0 4px 14px rgba(255,138,101,.2);"><i class="fa-solid fa-circle-info me-2 text-warning"></i>${yhLang("The main health risks are highlighted below:","নিচে প্রধান স্বাস্থ্য ঝুঁকিগুলো তুলে ধরা হলো:")}</p>
+                  <div class="row g-2 risk-grid" data-aos="fade-up" data-aos-delay="60">
                     ${renderCards()}
                   </div>
                   </div>
@@ -18032,12 +18032,27 @@ const renderCards = () =>
             quiz: null,
             content: (function () {
               const cautionPoints = [
-                "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়জনে নাক মুখ ধেকে বাতাসের অনুকূলে কীটনাশক ছিটানো ।",
-                "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা। খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধ্যে নিতে হবে।",
-                "কীটনাশক রাখার জায়গা শিশুদের নাগালের বাইরে রাখতে হবে।",
-                "প্রয়োজনে কীটনাশক  প্রয়গের পর সাবানের পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয়  কাপড় পরিবর্তনকরতে হবে।",
-                "বিসক্রিয়ার যেকোন লক্ষণ দেখা দিলে বিষক্রিয়ায় আক্রান্ত ব্যক্তিকে  দ্রুত নিকটস্থ হাস্পাতালে নিয়ে জেতে হবে।",
-              ];
+              yhLang(
+                "Children should be kept away while spraying pesticides at home or in the fields. If necessary, cover the nose and mouth and spray in the direction of the wind.",
+                "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়জনে নাক মুখ ধেকে বাতাসের অনুকূলে কীটনাশক ছিটানো ।"
+              ),
+              yhLang(
+                "Fruits and vegetables should not be harvested for sale or consumption immediately after applying pesticides. They should be washed thoroughly with water before eating.",
+                "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা। খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধ্যে নিতে হবে।"
+              ),
+              yhLang(
+                "Pesticides should be stored out of the reach of children.",
+                "কীটনাশক রাখার জায়গা শিশুদের নাগালের বাইরে রাখতে হবে।"
+              ),
+              yhLang(
+                "After applying pesticides, hands and face should be washed with soap and water, and clothing should be changed if necessary.",
+                "প্রয়োজনে কীটনাশক প্রয়গের পর সাবানের পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয় কাপড় পরিবর্তনকরতে হবে।"
+              ),
+              yhLang(
+                "If any symptoms of poisoning appear, the affected person should be taken to the nearest hospital immediately.",
+                "বিষক্রিয়ার যেকোন লক্ষণ দেখা দিলে বিষক্রিয়ায় আক্রান্ত ব্যক্তিকে দ্রুত নিকটস্থ হাস্পাতালে নিয়ে জেতে হবে।"
+              ),
+            ];
 
               const formatIndex = (value) => String(value).padStart(2, "0");
 
@@ -18070,7 +18085,7 @@ const renderCards = () =>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
                       <div class="caution-card__head" style="display:flex;align-items:center;color:#f57f17;font-weight:700;margin-bottom:10px;">
-                        <i class="fa-solid fa-shield-halved me-2"></i> নিরাপত্তা নির্দেশনা
+                        <h3><i class="fa-solid fa-shield-halved me-2"></i> ${yhLang("Safety Instructions", "নিরাপত্তা নির্দেশনা")}</h3>
                       </div>
                       <div>
                         <ul class="list-unstyled caution-list mb-0">
@@ -18095,23 +18110,23 @@ const renderCards = () =>
                const preventionList = [
                   yhLang(
                     "Awareness should be raised about the harmful effects of noise pollution.",
-                    "শব্দ দূষণের কুফল নিয়ে সচেতনতা বৃদ্ধি করতে হবে"
+                    "শব্দ দূষণের কুফল নিয়ে সচেতনতা বৃদ্ধি করতে হবে ।"
                   ),
                   yhLang(
                     "Unnecessary honking and the use of loud microphones should be avoided.",
-                    "অপ্রয়োজনে হর্ন বাজানো ও উচ্চ স্বরে মাইক বাজানো থেকে থেকে বিরত থাকতে হবে"
+                    "অপ্রয়োজনে হর্ন বাজানো ও উচ্চ স্বরে মাইক বাজানো থেকে থেকে বিরত থাকতে হবে ।"
                   ),
                   yhLang(
                     "The volume of TV, sound systems, or headphones at home should be kept at a reasonable level.",
-                    "বাড়িতে টিভি, সাউন্ড সিস্টেম বা হেডফোনে শব্দের মাত্রা যৌক্তিক পর্যায়ে রাখতে হবে"
+                    "বাড়িতে টিভি, সাউন্ড সিস্টেম বা হেডফোনে শব্দের মাত্রা যৌক্তিক পর্যায়ে রাখতে হবে ।"
                   ),
                   yhLang(
                     "Different areas such as residential, commercial, and silent zones (e.g., hospitals) can be designated with specific permissible noise levels (dB levels).",
-                    "বিভিন্ন এলাকাকে আবাসিক, বাণিজ্যিক, নীরব (হাসপাতাল) এলাকায় ভাগ করে তাদের জন্য শব্দের মাত্রা (dB level) নির্ধারণ করে দেওয়া যেতে পারে"
+                    "বিভিন্ন এলাকাকে আবাসিক, বাণিজ্যিক, নীরব (হাসপাতাল) এলাকায় ভাগ করে তাদের জন্য শব্দের মাত্রা (dB level) নির্ধারণ করে দেওয়া যেতে পারে ।"
                   ),
                   yhLang(
                     "Noise Pollution (Control) Rules should be strictly enforced.",
-                    "শব্দ দূষণ (নিয়ন্ত্রণ) বিধিমালা কঠোরভাবে প্রয়োগ করতে হবে"
+                    "শব্দ দূষণ (নিয়ন্ত্রণ) বিধিমালা কঠোরভাবে প্রয়োগ করতে হবে ।"
                   ),
                 ];
 
@@ -18148,35 +18163,35 @@ const renderCards = () =>
                           <ul class="list-unstyled feature-list mb-0">
                             <li style="background:rgba(255,255,255,.62);border-left:4px solid #7e57c2;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 6px 16px rgba(126,87,194,.18);">
                               <i class="fa-solid fa-book-open text-danger me-2"></i>
-                              <span style="color:#4a148c;">${yhLang("i. Disrupts concentration in studies", "i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায়")}</span>
+                              <span style="color:#4a148c;">${yhLang("i. Disrupts concentration in studies", "i. পড়াশোনায় মনযোগে বিঘ্ন ঘটায় ।")}</span>
                             </li>
                             <li style="background:rgba(255,255,255,.5);border-left:4px solid #5e35b1;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 8px 18px rgba(94,53,177,.16);">
                               <i class="fa-solid fa-ear-deaf text-danger me-2"></i>
-                              <span style="color:#4a148c;">${yhLang("ii. Causes hearing loss", "ii. শ্রবণশক্তি হ্রাস করে")}</span>
+                              <span style="color:#4a148c;">${yhLang("ii. Causes hearing loss", "ii. শ্রবণশক্তি হ্রাস করে ।")}</span>
                             </li>
                             <li style="background:rgba(255,255,255,.62);border-left:4px solid #7e57c2;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 6px 16px rgba(126,87,194,.18);">
                               <i class="fa-solid fa-bed text-danger me-2"></i>
-                              <span style="color:#4a148c;">${yhLang("iii. Disturbs sleep", "iii. ঘুমের ব্যাঘাত ঘটায়")}</span>
+                              <span style="color:#4a148c;">${yhLang("iii. Disturbs sleep", "iii. ঘুমের ব্যাঘাত ঘটায় ।")}</span>
                             </li>
                             <li style="background:rgba(255,255,255,.5);border-left:4px solid #5e35b1;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 8px 18px rgba(94,53,177,.16);">
                               <i class="fa-solid fa-heart-pulse text-danger me-2"></i>
                               <span style="color:#4a148c;">${yhLang(
                                 "iv. Increases the risk of heart disease and death",
-                                "iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায়,"
+                                "iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায় ।"
                               )}</span>
                             </li>
                             <li style="background:rgba(255,255,255,.62);border-left:4px solid #7e57c2;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 6px 16px rgba(126,87,194,.18);">
                               <i class="fa-solid fa-brain text-danger me-2"></i>
                               <span style="color:#4a148c;">${yhLang(
                                 "v. Increases the risk of anxiety, stress, attention deficit, and hyperactivity",
-                                "v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে"
+                                "v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে ।"
                               )}</span>
                             </li>
                             <li style="background:rgba(255,255,255,.5);border-left:4px solid #5e35b1;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 8px 18px rgba(94,53,177,.16);">
                               <i class="fa-solid fa-baby text-danger me-2"></i>
                               <span style="color:#4a148c;">${yhLang(
                                 "vi. Possible risk of low birth weight and developmental problems",
-                                "vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি"
+                                "vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি ।"
                               )}</span>
                             </li>
                           </ul>

@@ -308,7 +308,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   color: #4a5568;
-  font-size: 1.05rem;
   margin-bottom: 0px !important
 }
 
@@ -1431,10 +1430,10 @@ html[lang|="bn"] h2 {
 
 .hygiene-list__items li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5rem;
   color: #334155;
-  margin-bottom: 0.4rem;
+  margin-bottom: 10px;
 }
 
 .hygiene-list__items li:last-child {
@@ -1669,7 +1668,6 @@ html[lang|="bn"] h2 {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  height: 100%;
   box-shadow: 0 8px 18px rgba(249, 115, 22, 0.1);
 }
 
@@ -1694,14 +1692,10 @@ html[lang|="bn"] h2 {
 
 .risk-card p {
   color: #572008;
-  font-size: 0.78rem;
 }
 
 /* ==================== CAUTION SAFETY SYSTEM ==================== */
-.caution-card {
-  position: relative;
-  overflow: hidden;
-}
+
 
 .caution-card__shape {
   position: absolute;
@@ -15044,7 +15038,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 8px;
+  padding: 3px 6px;
   background: rgba(255, 255, 255, 0.91);
   border-radius: 8px;
   border-left: 2.5px solid;
@@ -15222,9 +15216,9 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m22l7-prevent-item {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 7px;
-  padding: 7px 8px;
+  padding: 3px 6px;
   background: rgba(255, 255, 255, 0.92);
   border-radius: 8px;
   border-left: 3px solid;
@@ -23911,9 +23905,7 @@ input::placeholder {
   border: 1px solid rgba(0,0,0,0.06);
   box-shadow: 0 12px 28px rgba(15, 53, 110, 0.08);
 }
-.info-text, p {
-  font-size: 18px !important;
-}
+
 .dark-mode .lesson-slide.mod25-lesson3 {
   background:
     linear-gradient(145deg, rgba(17, 24, 39, 0.78), rgba(15, 23, 42, 0.78)),
