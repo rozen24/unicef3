@@ -1686,7 +1686,7 @@ html[lang|="bn"] h2 {
 .risk-card__title {
   margin: 0;
   font-weight: 600;
-  color: #9a3412;
+  color: #203da9;
   font-size: 0.82rem;
 }
 
@@ -14578,8 +14578,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m19l1x2-grid {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -14967,7 +14965,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   font-size: 0.92rem;
   font-weight: 700;
   margin: 0;
-  background: linear-gradient(135deg, #b71c1c, #c62828);
+  background: #000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -15061,35 +15059,75 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 /* Chemical Color Variants */
 .m22l7-chem-lead { border-left-color: #c62828; }
-.m22l7-chem-lead .m22l7-chem-icon { background: linear-gradient(135deg, #ef5350, #c62828); box-shadow: 0 2px 7px rgba(239, 83, 80, 0.25); }
-
+.m22l7-chem-lead .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(239, 83, 80, 0.25);
+}
 .m22l7-chem-arsenic { border-left-color: #d32f2f; }
-.m22l7-chem-arsenic .m22l7-chem-icon { background: linear-gradient(135deg, #f44336, #d32f2f); box-shadow: 0 2px 7px rgba(244, 67, 54, 0.25); }
-
+.m22l7-chem-arsenic .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(244, 67, 54, 0.25);
+}
 .m22l7-chem-nitrogen { border-left-color: #e53935; }
-.m22l7-chem-nitrogen .m22l7-chem-icon { background: linear-gradient(135deg, #ef5350, #e53935); box-shadow: 0 2px 7px rgba(239, 83, 80, 0.25); }
-
+.m22l7-chem-nitrogen .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #ef5350, #e53935);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(239, 83, 80, 0.25);
+}
 .m22l7-chem-hydrocarbon { border-left-color: #ec407a; }
-.m22l7-chem-hydrocarbon .m22l7-chem-icon i{ color: red !important; box-shadow: 0 2px 7px rgba(236, 64, 122, 0.25); }
-
+.m22l7-chem-hydrocarbon .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #ec407a, #c2185b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(236, 64, 122, 0.25);
+}
 .m22l7-chem-asbestos { border-left-color: #ff7043; }
-.m22l7-chem-asbestos .m22l7-chem-icon { background: linear-gradient(135deg, #ff7043, #006cc9); box-shadow: 0 2px 7px rgba(255, 112, 67, 0.25); }
-
+.m22l7-chem-asbestos .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #ff7043, #006cc9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(255, 112, 67, 0.25);
+}
 .m22l7-chem-fluoride { border-left-color: #ffa726; }
-.m22l7-chem-fluoride .m22l7-chem-icon { background: linear-gradient(135deg, #ffa726, #f57c00); box-shadow: 0 2px 7px rgba(255, 167, 38, 0.25); }
-
+.m22l7-chem-fluoride .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #ffa726, #f57c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(255, 167, 38, 0.25);
+}
 .m22l7-chem-mercury { border-left-color: #5e35b1; }
-.m22l7-chem-mercury .m22l7-chem-icon { background: linear-gradient(135deg, #7e57c2, #5e35b1); box-shadow: 0 2px 7px rgba(94, 53, 177, 0.25); }
-
+.m22l7-chem-mercury .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #7e57c2, #5e35b1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(21, 101, 192, 0.25);
+}
 .m22l7-chem-benzene { border-left-color: #1565c0; }
-.m22l7-chem-benzene .m22l7-chem-icon { background: linear-gradient(135deg, #1976d2, #1565c0); box-shadow: 0 2px 7px rgba(21, 101, 192, 0.25); }
-
+.m22l7-chem-benzene .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(21, 101, 192, 0.25);
+}
 .m22l7-chem-cadmium { border-left-color: #00897b; }
-.m22l7-chem-cadmium .m22l7-chem-icon { background: linear-gradient(135deg, #009688, #00897b); box-shadow: 0 2px 7px rgba(0, 150, 136, 0.25); }
-
+.m22l7-chem-cadmium .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #009688, #00897b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(0, 150, 136, 0.25);
+}
 .m22l7-chem-dioxin { border-left-color: #f57f17; }
-.m22l7-chem-dioxin .m22l7-chem-icon { background: linear-gradient(135deg, #f9a825, #f57f17); box-shadow: 0 2px 7px rgba(249, 168, 37, 0.25); }
-
+.m22l7-chem-dioxin .m22l7-chem-icon i {
+  background: linear-gradient(135deg, #f9a825, #f57f17);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 7px rgba(249, 168, 37, 0.25);
+}
 .m22l7-chem-icon {
   width: 24px;
   height: 24px;
@@ -15171,7 +15209,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #383838, #c2185b);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15241,20 +15279,44 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 /* Prevention Color Variants */
 .m22l7-prev-a { border-left-color: #ef5350; }
-.m22l7-prev-a .m22l7-prevent-icon { background: linear-gradient(135deg, #ef5350, #c62828); box-shadow: 0 2px 9px rgba(239, 83, 80, 0.28); }
+.m22l7-prev-a .m22l7-prevent-icon i {
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 9px rgba(239, 83, 80, 0.28);
+}
 
 .m22l7-prev-b { border-left-color: #ab47bc; }
-.m22l7-prev-b .m22l7-prevent-icon { background: linear-gradient(135deg, #ab47bc, #7b1fa2); box-shadow: 0 2px 9px rgba(171, 71, 188, 0.28); }
+.m22l7-prev-b .m22l7-prevent-icon i {
+  background: linear-gradient(135deg, #ab47bc, #7b1fa2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 9px rgba(171, 71, 188, 0.28);
+}
 
 .m22l7-prev-c { border-left-color: #29b6f6; }
-.m22l7-prev-c .m22l7-prevent-icon { background: linear-gradient(135deg, #29b6f6, #1565c0); box-shadow: 0 2px 9px rgba(41, 182, 246, 0.28); }
+.m22l7-prev-c .m22l7-prevent-icon i {
+  background: linear-gradient(135deg, #29b6f6, #1565c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 9px rgba(41, 182, 246, 0.28);
+}
 
 .m22l7-prev-d { border-left-color: #66bb6a; }
-.m22l7-prev-d .m22l7-prevent-icon { background: linear-gradient(135deg, #66bb6a, #388e3c); box-shadow: 0 2px 9px rgba(102, 187, 106, 0.28); }
+.m22l7-prev-d .m22l7-prevent-icon i {
+  background: linear-gradient(135deg, #66bb6a, #388e3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 9px rgba(102, 187, 106, 0.28);
+}
 
 .m22l7-prev-e { border-left-color: #ffa726; }
-.m22l7-prev-e .m22l7-prevent-icon { background: linear-gradient(135deg, #ffa726, #f57c00); box-shadow: 0 2px 9px rgba(255, 167, 38, 0.28); }
-
+.m22l7-prev-e .m22l7-prevent-icon i {
+  background: linear-gradient(135deg, #ffa726, #f57c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 2px 9px rgba(255, 167, 38, 0.28);
+}
 .m22l7-prevent-icon {
   width: 26px;
   height: 26px;
@@ -15315,7 +15377,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   
   .m22l7-hero__title,
   .m22l7-section-title {
-    background: linear-gradient(135deg, #ef5350, #ff7043);
+    background: #000;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

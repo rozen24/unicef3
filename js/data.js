@@ -14086,136 +14086,252 @@ const coursesData = [
             ),
             icon: "fa-apple-whole",
             gradientClass: "bg-gradient-emerald",
-            audioFile: "",
-            quiz: null,
             content: (function () {
-              const importancePoints = [
-  {
-    text: yhLang(
-      "During adolescence, both boys and girls experience rapid growth in weight, height, and intellectual development.",
-      "তারুণ্যে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে।"
-    ),
-    icon: "fa-arrow-up-right-dots",
-    color: "m19l1x2-importance-growth",
-  },
-  {
-    text: yhLang(
-      "For proper growth, it is important to consume adequate nutritious and balanced food during this time.",
-      "সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন।"
-    ),
-    icon: "fa-bowl-food",
-    color: "m19l1x2-importance-balanced",
-  },
-  {
-    text: yhLang(
-      "Proper nutrition helps adolescents develop their intelligence and mental abilities.",
-      "সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয়।"
-    ),
-    icon: "fa-brain",
-    color: "m19l1x2-importance-mind",
-  },
-  {
-    text: yhLang(
-      "As a result, attention in studies, better academic results, and work capability increase.",
-      "ফলস্বরূপ লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।"
-    ),
-    icon: "fa-graduation-cap",
-    color: "m19l1x2-importance-performance",
-  },
-];
-
-            const nutritionPoints = [
-  {
-    text: yhLang(
-      "Nutrition is a process where food is digested, complex substances are broken down into simpler forms, and then absorbed by the body.",
-      "পুষ্টি হলো একটি প্রক্রিয়া, যেখানে খাদ্য পরিপাক হয়ে জটিল উপাদান ভেঙে সরল উপাদানে পরিণত হয় এবং শরীর তা শোষণ করে।"
-    ),
-    icon: "fa-gears",
-    color: "m19l1x2-nutrition-process",
-  },
-  {
-    text: yhLang(
-      "These nutrients ensure the body's energy, growth, disease resistance, and good health.",
-      "এসব খাদ্য উপাদান দেহের শক্তি, বৃদ্ধি, রোগ প্রতিরোধ এবং সুস্বাস্থ্য নিশ্চিত করে।"
-    ),
-    icon: "fa-shield-heart",
-    color: "m19l1x2-nutrition-health",
-  },
-  {
-    text: yhLang(
-      "Nutritious food helps maintain body structure, repair tissues, improve working ability, and support mental well-being.",
-      "পুষ্টিকর খাদ্য দেহের গঠন, ক্ষয়পূরণ, কর্মক্ষমতা ও মানসিক প্রফুল্লতা বজায় রাখতে সহায়তা করে।"
-    ),
-    icon: "fa-heart-pulse",
-    color: "m19l1x2-nutrition-food",
-  },
-  {
-    text: yhLang(
-      "If weight and height are below the standard level according to age, it is identified as malnutrition.",
-      "বয়সভিত্তিক ওজন-উচ্চতার আদর্শ মান থেকে কম হলে অপুষ্টি হিসেবে চিহ্নিত করা হয়।"
-    ),
-    icon: "fa-ruler-combined",
-    color: "m19l1x2-nutrition-standard",
-  },
-  {
-    text: yhLang(
-      "BMI = Weight (kg) / Height (m)²; it is an important method for assessing nutritional status.",
-      "বি.এম.আই = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²; এটি পুষ্টিগত অবস্থা মূল্যায়নের গুরুত্বপূর্ণ পদ্ধতি।"
-    ),
-    icon: "fa-calculator",
-    color: "m19l1x2-nutrition-bmi",
-  },
-];
-
-              const renderList = (items) =>
-                `<div class="m19l1x2-list">${items
-                  .map(
-                    (item, index) => `
-                      <div class="m19l1x2-item ${item.color}" data-aos="fade-up" data-aos-delay="${45 + index * 30}">
-                        <div class="m19l1x2-item-icon"><i class="fa-solid ${item.icon}"></i></div>
-                        <p>${item.text}</p>
-                      </div>
-                    `
-                  )
-                  .join("")}</div>`;
+              const nutritionSections = [
+                {
+                  iconClass: "fa-person",
+                  iconColor: "#f472b6",
+                  borderColor: "#f472b6",
+                  shadowColor: "rgba(244, 114, 182, 0.15)",
+                  titleEn: "Importance of Nutritious Food in Adolescence",
+                  titleBn: "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব",
+                  descriptionEn:
+                    "During adolescence, both boys and girls experience rapid weight and height growth and intellectual development. Therefore, adolescents need an adequate amount of nutritious and balanced food for proper growth. With correct nutrition, adolescents develop their intellect and abilities, improve concentration in studies, get better results, and increase work capacity.",
+                  descriptionBn:
+                    "কৈশোরকালে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলশ্রুতিতে লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।",
+                },
+                {
+                  iconClass: "fa-utensils",
+                  iconColor: "#a78bfa",
+                  borderColor: "#a78bfa",
+                  shadowColor: "rgba(167, 139, 250, 0.15)",
+                  titleEn: "Food",
+                  titleBn: "খাদ্য",
+                  descriptionEn:
+                    "Food is essential to keep the human body healthy and strong. Food refers to organic substances that play a role in building the human body, compensate for wear and tear, provide energy and build the body's disease resistance ability.",
+                  descriptionBn:
+                    "মানবদেহকে সুস্থ-সবল রাখার জন্য খাদ্য অপরিহার্য। খাদ্য বলতে সেই সকল জৈব উপাদানকে বুঝায় যেগুলো মানবদেহ গঠনে ভূমিকা রাখে, ক্ষয়পূরণ করে, শক্তি বৃদ্ধসহ শরীরের রোগ প্রতিরোধ ক্ষমতা তৈরি করে।",
+                },
+                {
+                  iconClass: "fa-apple-whole",
+                  iconColor: "#34d399",
+                  borderColor: "#34d399",
+                  shadowColor: "rgba(52, 211, 153, 0.15)",
+                  titleEn: "Nutrition",
+                  titleBn: "পুষ্টি",
+                  descriptionEn:
+                    "Nutrition is a process. In this process, food is digested after eating and complex food substances are broken down into simpler elements. The human body absorbs these simple elements. These nutrients provide the body with energy and proper growth, develop the mind and intellect, prevent diseases and ensure health.</br> Both boys and girls undergo normal physical and mental changes during adolescence. Rapid weight and height increase and intelligence develops. Therefore, it is necessary to consume nutritious and balanced food at this time for proper growth of adolescents. Growing up with proper nutrition, adolescents develop talent and intelligence. Attention in studies, good results and ability to work increase.",
+                  descriptionBn:
+                    "পুষ্টি হলো একটি প্রক্রিয়া। এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙ্গে সরল উপাদানে পরিণত হয়। মানবদেহ এসব সরল উপাদান শোষণ করে নেয়। এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্থতা নিশ্চিত করে। </br> কৈশোরকালে ছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চুার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
+                },
+                {
+                  iconClass: "fa-carrot",
+                  iconColor: "#fbbf24",
+                  borderColor: "#fbbf24",
+                  shadowColor: "rgba(251, 191, 36, 0.15)",
+                  titleEn: "Nutritious Food",
+                  titleBn: "পুষ্টিকর খাদ্য",
+                  descriptionEn:
+                    "Food that produces heat and energy, builds and develops the body, and keeps the body strong and active is called nutritious food. Food and nutrition are interrelated. Every food must be nutritious and safe. Regular intake of nutritious food keeps body and mind healthy, brings cheerfulness and increases concentration in studies and work. Lack of proper nutrition reduces disease resistance and increases the risk of diseases.",
+                  descriptionBn:
+                    "যেসব খাদ্য খেলে শরীরে তাপ ও শক্তি উৎপাদিত হয়, দেহের গঠন ও বৃদ্ধি হয়, শরীর সবল, কর্মক্ষম থাকে, তাকে পুষ্টিকর খাদ্য বলে। খাদ্য ও পুষ্টি একে অপরের সাথে জড়িত। প্রতিটি খাদ্য অবশ্যই পুষ্টিকর ও নিরাপদ হতে হবে। নিয়মিত পুষ্টিকর খাদ্য গ্রহণ করলে শরীর ও মন ভালো থাকে, মনে প্রফুল্লতা আসে এবং পড়াশোনা ও কাজে মনোযোগ বাড়ে। মনে রাখতে হবে পুষ্টিকর খাদ্য গ্রহণ না করলে রোগ প্রতিরোধ ক্ষমতা কমে যায় এবং বিভিন্ন রোগে আক্রান্ত হওয়ার ঝুঁকি বেড়ে যায়।",
+                },
+                {
+                  iconClass: "fa-ruler-vertical",
+                  iconColor: "#3b82f6",
+                  borderColor: "#3b82f6",
+                  shadowColor: "rgba(59, 130, 246, 0.15)",
+                  titleEn: "An Ideal Standard of Weight and Height Growth",
+                  titleBn: "ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান",
+                  descriptionEn:
+                    "According to the World Health Organization, there is an ideal standard for body weight and height growth with age. If a child or adolescent has lower weight compared to height, or lower weight or height compared to their age, it is identified as malnutrition.",
+                  descriptionBn:
+                    "বিশ্ব স্বাস্থ্য সংস্থা অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে। যদি কোন শিশু বা কিশোর-কিশোরীদের উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
+                },
+                {
+                  iconClass: "fa-calculator",
+                  iconColor: "#f97316",
+                  borderColor: "#f97316",
+                  shadowColor: "rgba(249, 115, 22, 0.15)",
+                  titleEn: "BMI (Body Mass Index)",
+                  titleBn: "বি.এম.আই (Body Mass Index)",
+                  descriptionEn:
+                    "Body Mass Index (BMI) is the ratio of a person's weight to the square of their height. It is an important method for determining nutritional status. To calculate BMI, weight must be in kilograms and height in meters. BMI is calculated by dividing weight by the square of height.",
+                  descriptionBn:
+                    "কোন ব্যক্তির ওজন এবং উচ্চতার হারের বর্গের অনুপাতই হলো বি.এম.আই। এটি পুষ্টিগত অবস্থা নির্ণয়ের একটি উল্লেখযোগ্য পদ্ধতি। বি.এম.আই নির্ণয় করতে ব্যক্তির ওজন কিলোগ্রাম এককে ও উচ্চতা মিটার এককে জানা প্রয়োজন। ওজন কে উচ্চতার বর্গ দিয়ে ভাগ করলেই বি.এম.আই. পাওয়া যাবে।",
+                  formulaEn: "BMI = Weight (kg) / Height (m)²",
+                  formulaBn: "বি.এম.আই. = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²",
+                },
+              ];
 
               return `
-                <div class="mod19-lesson1-2">
-                  <span class="m19l1x2-shape m19l1x2-shape-1"></span>
-                  <span class="m19l1x2-shape m19l1x2-shape-2"></span>
-                  <span class="m19l1x2-shape m19l1x2-shape-3"></span>
+                <div class="m19l1-redesigned">
+                  <style>
+                    .m19l1-redesigned {
+                      padding: 5px 10px;
+                      background: linear-gradient(180deg, #f8fafb 0%, #f3f4f6 100%);
+                      border-radius: 20px;
+                    }
 
-                  <header class="m19l1x2-hero" data-aos="fade-down">
-                    <h2 class="m19l1x2-hero-title">
-                      <i class="fa-solid fa-apple-whole"></i>
-                      ${yhLang("Adolescent Nutrition Overview", "কৈশোরে পুষ্টিকর খাবার ও পুষ্টি")}
-                    </h2>
-                  </header>
+                    .m19l1-section-grid {
+                      display: flex;
+                      flex-direction: column;
+                      gap: 3px;
+                    }
 
-                  <div class="m19l1x2-grid">
-                    <section class="m19l1x2-panel m19l1x2-panel-importance" data-aos="fade-right" data-aos-delay="20">
-                      <h3 class="m19l1x2-panel-title">
-                        <i class="fa-solid fa-seedling"></i>
-                        ${yhLang("Importance of Nutritious Food", "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব")}
-                      </h3>
-                      ${renderList(importancePoints)}
-                    </section>
+                    .m19l1-section-card {
+                      position: relative;
+                      padding: 4px 10px;
+                      border-radius: 16px;
+                      border: 1px solid #e5e7eb;
+                      background: #ffffff;
+                      overflow: hidden;
+                      transition: all 0.3s ease;
+                      box-shadow: 0 4px 12px var(--m19l1-shadow);
+                    }
 
-                    <section class="m19l1x2-panel m19l1x2-panel-nutrition" data-aos="fade-left" data-aos-delay="40">
-                      <h3 class="m19l1x2-panel-title">
-                        <i class="fa-solid fa-leaf"></i>
-                        ${yhLang("Nutrition Essentials", "পুষ্টির মূল বিষয়সমূহ")}
-                      </h3>
-                      ${renderList(nutritionPoints)}
+                    .m19l1-section-card:hover {
+                      transform: translateY(-4px);
+                      box-shadow: 0 14px 32px var(--m19l1-shadow);
+                    }
 
-                      <div class="m19l1x2-tip-box" data-aos="zoom-in" data-aos-delay="120">
-                        <h3 class="m19l1x2-tip-title"><i class="fa-solid fa-lightbulb"></i> ${yhLang("Key Tip", "গুরুত্বপূর্ণ পরামর্শ")}</h3>
-                        <p class="mb-0">${yhLang(
-                          "Balanced and safe food intake in adolescence directly supports healthy growth, learning performance, and long-term wellbeing.",
-                          "কৈশোরে সুষম ও নিরাপদ খাবার গ্রহণ শারীরিক বৃদ্ধি, শেখার সক্ষমতা ও দীর্ঘমেয়াদি সুস্থতা নিশ্চিত করে।"
-                        )}</p>
-                      </div>
-                    </section>
+                    .m19l1-section-card::before {
+                      content: "";
+                      position: absolute;
+                      top: -50%;
+                      right: -50%;
+                      width: 200px;
+                      height: 200px;
+                      border-radius: 50%;
+                      background: rgba(255, 255, 255, 0.3);
+                      pointer-events: none;
+                    }
+
+                    .m19l1-section-card::after {
+                      content: "";
+                      position: absolute;
+                      bottom: -30%;
+                      left: -30%;
+                      width: 150px;
+                      height: 150px;
+                      border-radius: 50%;
+                      background: rgba(255, 255, 255, 0.2);
+                      pointer-events: none;
+                    }
+
+                    .m19l1-section-header {
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      margin-bottom: 4px;
+                      position: relative;
+                      z-index: 1;
+                    }
+
+                    .m19l1-section-icon {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 36px;
+                      height: 36px;
+                      border-radius: 12px;
+                      background: rgba(255, 255, 255, 0.6);
+                      font-size: 1.1rem;
+                      flex-shrink: 0;
+                    }
+
+                    .m19l1-section-title {
+                      margin: 0;
+                      font-size: 0.95rem;
+                      font-weight: 800;
+                      line-height: 1.0;
+                    }
+
+                    .m19l1-section-description {
+                      margin: 0;
+                      font-size: 0.85rem;
+                      line-height: 1.6;
+                      position: relative;
+                      z-index: 1;
+                      color: rgba(0, 0, 0, 0.75);
+                      padding-left: 8px;
+                    }
+
+                    .m19l1-section-formula {
+                      margin-top: 0px;
+                      padding: 4px 10px;
+                      border-radius: 10px;
+                      background: rgba(255, 255, 255, 0.5);
+                      border: 1px solid rgba(255, 255, 255, 0.8);
+                      font-size: 0.85rem;
+                      font-weight: 700;
+                      text-align: center;
+                      position: relative;
+                      z-index: 1;
+                    }
+
+                    @media (max-width: 640px) {
+                      .m19l1-redesigned {
+                        padding: 6px;
+                      }
+
+                      .m19l1-section-grid {
+                        gap: 8px;
+                        grid-template-columns: 1fr;
+                      }
+
+                      .m19l1-section-card {
+                        padding: 10px;
+                      }
+
+                      .m19l1-section-icon {
+                        width: 28px;
+                        height: 28px;
+                        font-size: 0.95rem;
+                      }
+
+                      .m19l1-section-title {
+                        font-size: 0.9rem;
+                      }
+
+                      .m19l1-section-description {
+                        font-size: 0.8rem;
+                      }
+                    }
+                  </style>
+
+                  <div class="m19l1-section-grid">
+                    ${nutritionSections
+                      .map(
+                        (section, index) => `
+                      <article 
+                        class="m19l1-section-card" 
+                        style="--m19l1-shadow: ${section.shadowColor}; border-color: ${section.borderColor};"
+                        data-aos="fade-up" 
+                        data-aos-delay="${50 + index * 40}"
+                      >
+                        <div class="m19l1-section-header">
+                          <div class="m19l1-section-icon" style="color: ${section.iconColor};">
+                            <i class="fa-solid ${section.iconClass}"></i>
+                          </div>
+                          <h3 class="m19l1-section-title">
+                            ${yhLang(section.titleEn, section.titleBn)}
+                          </h3>
+                        </div>
+                        <p class="m19l1-section-description">
+                          ${yhLang(section.descriptionEn, section.descriptionBn)}
+                        </p>
+                        ${
+                          section.formulaEn
+                            ? `<div class="m19l1-section-formula">
+                                ${yhLang(section.formulaEn, section.formulaBn)}
+                              </div>`
+                            : ""
+                        }
+                      </article>
+                    `
+                      )
+                      .join("")}
                   </div>
                 </div>
               `;
@@ -16657,7 +16773,7 @@ const bpPrevention = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">
                     <i class="fa-solid fa-seedling" style="color: #81c784; margin-right: 8px; font-size: 0.95em;"></i>
-                    তারুণ্য: সম্ভাবনা ও ঝুঁকি
+                    ${yhLang("Adolescence: Potential and Risks", "তারুণ্য: সম্ভাবনা ও ঝুঁকি")}
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius: 14px; padding: 9px; box-shadow: 0 5px 18px rgba(233, 30, 99, 0.12);">
@@ -16665,12 +16781,21 @@ const bpPrevention = [
                       <i class="fa-solid fa-lightbulb" style="margin-right: 8px; font-size: 16px; color: #f06292;"></i>
                       ${yhLang("Potentially Vulnerable Period", "সম্ভাবনাময় সময়")}
                     </h3>
-                    <p class="mb-2" style="font-size: 0.92em;">তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।</p>
+                    <p class="mb-2" style="font-size: 0.92em;">
+                    ${yhLang(
+                      "Adolescence is a time full of potential, but it is also a period of vulnerability. During this stage, young people begin to develop sexual feelings and their interest in the opposite sex increases. They become capable of reproduction, but most adolescents cannot ensure their own protection due to lack of proper information. As a result, they may be encouraged to take various risks and, under the influence of wrong friends, may sometimes engage in risky and harmful behaviors.",
+                      "তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।"
+                    )}
+                  </p>
                   </div>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="border-radius: 16px; padding: 9px; box-shadow: 0 6px 20px rgba(63, 81, 181, 0.15); margin-top: 12px;">
-                    
-                    <p class="mb-0" style="font-size: 0.92em;">এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।</p>
+                    <p class="mb-0" style="font-size: 0.92em;">
+                      ${yhLang(
+                        "This risk is not limited to ordinary adolescents; young people with special physical and mental needs are also in a highly vulnerable situation. To reduce their risks, it is essential for service providers to offer them special care and counseling.",
+                        "এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।"
+                      )}
+                    </p>
                   </div>
 
                 </div>`;
@@ -16893,8 +17018,13 @@ const bpPrevention = [
                   </div>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style=" border-radius: 14px; padding: 9px; box-shadow: 0 6px 20px rgba(233, 30, 99, 0.15); margin-top: 14px;">
+                  <p class="fw-semibold mb-2" style="color: #880e4f; font-size: 0.9em;">
+                    ${yhLang(
+                      "In addition, any adolescent may become vulnerable at any time. For example —",
+                      "এছাড়াও যেকোনো তরুন-তরুনী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন —"
+                    )}
+                  </p>
                     
-                    <p class="fw-semibold mb-2" style="color: #880e4f; font-size: 0.9em;">এছাড়াও যেকোনো তরুন-তরুনী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন —</p>
                     <ul class="list-unstyled puberty-list grid-2 mb-0" style="padding-left: 0;">
                       ${renderList1(secondaryList)}
                     </ul>
@@ -17007,7 +17137,12 @@ const bpPrevention = [
                         <i class="fa-solid fa-handshake" style="margin-right: 8px; color: #42a5f5; font-size: 0.9em;"></i>
                         সমন্বিত প্রচেষ্টা
                       </h6>
-                      <p class="mb-0" style="color: #0d47a1; font-size: 0.9em;">উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুন-তরুনীদের ঝুঁকি কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।</p>
+                      <p class="mb-0" style="color: #0d47a1; font-size: 0.9em;">
+                      ${yhLang(
+                        "By ensuring the above-mentioned measures, it is possible to reduce the risks faced by adolescents and create a supportive environment for their development. In addition, necessary support should be provided through coordination among different ministries and departments of the government by formulating and implementing relevant policies.",
+                        "উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুন-তরুনীদের ঝুঁকি কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।"
+                      )}
+                    </p>
                     </div>
                   </div>
                 </div>`;
@@ -17042,7 +17177,7 @@ const bpPrevention = [
                   
                 <div class="row g-2">
                       <div class="col-md-5">
-                          <div class="h-100 shadow-sm">
+                          <div class=" shadow-sm">
                             <div class="modern-card p-1  glass-card mb-0" data-aos="fade-up" data-aos-delay="40" style="border-radius: 24px; box-shadow: 0 12px 40px rgba(38, 166, 154, 0.25), 0 4px 12px rgba(0, 150, 136, 0.15);">
                             <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #00695c; font-weight: 700;">
                               <span style="background: linear-gradient(135deg, #26a69a, #00897b); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 12px rgba(38, 166, 154, 0.3);">
@@ -17612,7 +17747,7 @@ const bpPrevention = [
                 const iconData = getSectionIcon(section.title);
                 return `
                 <div class="health-section mb-1" style="background:rgba(255,255,255,.4);border-radius:18px;padding:5px;box-shadow:0 8px 22px rgba(103,58,183,.12);">
-                  <h3 class="mb-3" style="display:flex;align-items:center;color:#4a148c;font-weight:700;">
+                  <h3 class="mb-3" style="display:flex;align-items:center;color:#000 important;font-weight:700;">
                     <span style="background:${iconData.gradient};width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
                     ${section.title}
                   </h3>
@@ -17630,7 +17765,7 @@ const bpPrevention = [
                   <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="20" style="border-radius:20px;padding:5px;box-shadow:0 10px 32px rgba(156,39,176,.22), 0 4px 14px rgba(123,31,162,.15);border-left:5px solid #9c27b0;">
                     
                     <div>
-                       <h3 style="display:flex;align-items:center;color:#1a237e;margin-bottom:5px;font-weight:700;font-size:1.4em;">
+                       <h3 style="display:flex;align-items:center;color:#000;margin-bottom:5px;font-weight:700;font-size:1.4em;">
                           <span style="background:linear-gradient(135deg,#5c6bc0,#3949ab);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(92,107,192,.4), 0 2px 8px rgba(57,73,171,.25);"><i class="fa-solid fa-briefcase-medical" style="color:#fff;font-size:24px;"></i></span>
                           ${yhLang("Immediate Health Risks", "অনিরাপদ খাবারপানির সাথে সম্পর্কিত স্বাস্থ্য ঝুঁকি")}
                         </h3>
@@ -18070,7 +18205,7 @@ const renderCards = () =>
               ),
               yhLang(
                 "Fruits and vegetables should not be harvested for sale or consumption immediately after applying pesticides. They should be washed thoroughly with water before eating.",
-                "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা। খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধ্যে নিতে হবে।"
+                "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা। খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধুয়ে নিতে হবে।"
               ),
               yhLang(
                 "Pesticides should be stored out of the reach of children.",
@@ -18078,11 +18213,11 @@ const renderCards = () =>
               ),
               yhLang(
                 "After applying pesticides, hands and face should be washed with soap and water, and clothing should be changed if necessary.",
-                "প্রয়োজনে কীটনাশক প্রয়গের পর সাবানের পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয় কাপড় পরিবর্তনকরতে হবে।"
+                "প্রয়োজনে কীটনাশক প্রয়গের পর সাবানের পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয় কাপড় পরিবর্তন করতে হবে।"
               ),
               yhLang(
                 "If any symptoms of poisoning appear, the affected person should be taken to the nearest hospital immediately.",
-                "বিষক্রিয়ার যেকোন লক্ষণ দেখা দিলে বিষক্রিয়ায় আক্রান্ত ব্যক্তিকে দ্রুত নিকটস্থ হাস্পাতালে নিয়ে জেতে হবে।"
+                "বিষক্রিয়ার যেকোন লক্ষণ দেখা দিলে বিষক্রিয়ায় আক্রান্ত ব্যক্তিকে দ্রুত নিকটস্থ হাস্পাতালে নিয়ে যেতে হবে।"
               ),
             ];
 
