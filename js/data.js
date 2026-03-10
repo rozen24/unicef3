@@ -14090,55 +14090,82 @@ const coursesData = [
             quiz: null,
             content: (function () {
               const importancePoints = [
-                {
-                  text: "তারুণ্যে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে।",
-                  icon: "fa-arrow-up-right-dots",
-                  color: "m19l1x2-importance-growth",
-                },
-                {
-                  text: "সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন।",
-                  icon: "fa-bowl-food",
-                  color: "m19l1x2-importance-balanced",
-                },
-                {
-                  text: "সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয়।",
-                  icon: "fa-brain",
-                  color: "m19l1x2-importance-mind",
-                },
-                {
-                  text: "ফলস্বরূপ লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
-                  icon: "fa-graduation-cap",
-                  color: "m19l1x2-importance-performance",
-                },
-              ];
+  {
+    text: yhLang(
+      "During adolescence, both boys and girls experience rapid growth in weight, height, and intellectual development.",
+      "তারুণ্যে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে।"
+    ),
+    icon: "fa-arrow-up-right-dots",
+    color: "m19l1x2-importance-growth",
+  },
+  {
+    text: yhLang(
+      "For proper growth, it is important to consume adequate nutritious and balanced food during this time.",
+      "সঠিক বৃদ্ধির জন্য এ সময় পরিমাণমতো পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন।"
+    ),
+    icon: "fa-bowl-food",
+    color: "m19l1x2-importance-balanced",
+  },
+  {
+    text: yhLang(
+      "Proper nutrition helps adolescents develop their intelligence and mental abilities.",
+      "সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয়।"
+    ),
+    icon: "fa-brain",
+    color: "m19l1x2-importance-mind",
+  },
+  {
+    text: yhLang(
+      "As a result, attention in studies, better academic results, and work capability increase.",
+      "ফলস্বরূপ লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।"
+    ),
+    icon: "fa-graduation-cap",
+    color: "m19l1x2-importance-performance",
+  },
+];
 
-              const nutritionPoints = [
-                {
-                  text: "পুষ্টি হলো একটি প্রক্রিয়া, যেখানে খাদ্য পরিপাক হয়ে জটিল উপাদান ভেঙে সরল উপাদানে পরিণত হয় এবং শরীর তা শোষণ করে।",
-                  icon: "fa-gears",
-                  color: "m19l1x2-nutrition-process",
-                },
-                {
-                  text: yhLang("These nutrients ensure the body's energy, growth, disease resistance, and good health.", "এসব খাদ্য উপাদান দেহের শক্তি, বৃদ্ধি, রোগ প্রতিরোধ এবং সুস্বাস্থ্য নিশ্চিত করে।"),
-                  icon: "fa-shield-heart",
-                  color: "m19l1x2-nutrition-health",
-                },
-                {
-                  text: "পুষ্টিকর খাদ্য দেহের গঠন, ক্ষয়পূরণ, কর্মক্ষমতা ও মানসিক প্রফুল্লতা বজায় রাখতে সহায়তা করে।",
-                  icon: "fa-heart-pulse",
-                  color: "m19l1x2-nutrition-food",
-                },
-                {
-                  text: "বয়সভিত্তিক ওজন-উচ্চতার আদর্শ মান থেকে কম হলে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
-                  icon: "fa-ruler-combined",
-                  color: "m19l1x2-nutrition-standard",
-                },
-                {
-                  text: "বি.এম.আই = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²; এটি পুষ্টিগত অবস্থা মূল্যায়নের গুরুত্বপূর্ণ পদ্ধতি।",
-                  icon: "fa-calculator",
-                  color: "m19l1x2-nutrition-bmi",
-                },
-              ];
+            const nutritionPoints = [
+  {
+    text: yhLang(
+      "Nutrition is a process where food is digested, complex substances are broken down into simpler forms, and then absorbed by the body.",
+      "পুষ্টি হলো একটি প্রক্রিয়া, যেখানে খাদ্য পরিপাক হয়ে জটিল উপাদান ভেঙে সরল উপাদানে পরিণত হয় এবং শরীর তা শোষণ করে।"
+    ),
+    icon: "fa-gears",
+    color: "m19l1x2-nutrition-process",
+  },
+  {
+    text: yhLang(
+      "These nutrients ensure the body's energy, growth, disease resistance, and good health.",
+      "এসব খাদ্য উপাদান দেহের শক্তি, বৃদ্ধি, রোগ প্রতিরোধ এবং সুস্বাস্থ্য নিশ্চিত করে।"
+    ),
+    icon: "fa-shield-heart",
+    color: "m19l1x2-nutrition-health",
+  },
+  {
+    text: yhLang(
+      "Nutritious food helps maintain body structure, repair tissues, improve working ability, and support mental well-being.",
+      "পুষ্টিকর খাদ্য দেহের গঠন, ক্ষয়পূরণ, কর্মক্ষমতা ও মানসিক প্রফুল্লতা বজায় রাখতে সহায়তা করে।"
+    ),
+    icon: "fa-heart-pulse",
+    color: "m19l1x2-nutrition-food",
+  },
+  {
+    text: yhLang(
+      "If weight and height are below the standard level according to age, it is identified as malnutrition.",
+      "বয়সভিত্তিক ওজন-উচ্চতার আদর্শ মান থেকে কম হলে অপুষ্টি হিসেবে চিহ্নিত করা হয়।"
+    ),
+    icon: "fa-ruler-combined",
+    color: "m19l1x2-nutrition-standard",
+  },
+  {
+    text: yhLang(
+      "BMI = Weight (kg) / Height (m)²; it is an important method for assessing nutritional status.",
+      "বি.এম.আই = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²; এটি পুষ্টিগত অবস্থা মূল্যায়নের গুরুত্বপূর্ণ পদ্ধতি।"
+    ),
+    icon: "fa-calculator",
+    color: "m19l1x2-nutrition-bmi",
+  },
+];
 
               const renderList = (items) =>
                 `<div class="m19l1x2-list">${items
@@ -14182,7 +14209,7 @@ const coursesData = [
                       ${renderList(nutritionPoints)}
 
                       <div class="m19l1x2-tip-box" data-aos="zoom-in" data-aos-delay="120">
-                        <h4 class="m19l1x2-tip-title"><i class="fa-solid fa-lightbulb"></i> ${yhLang("Key Tip", "গুরুত্বপূর্ণ পরামর্শ")}</h4>
+                        <h3 class="m19l1x2-tip-title"><i class="fa-solid fa-lightbulb"></i> ${yhLang("Key Tip", "গুরুত্বপূর্ণ পরামর্শ")}</h3>
                         <p class="mb-0">${yhLang(
                           "Balanced and safe food intake in adolescence directly supports healthy growth, learning performance, and long-term wellbeing.",
                           "কৈশোরে সুষম ও নিরাপদ খাবার গ্রহণ শারীরিক বৃদ্ধি, শেখার সক্ষমতা ও দীর্ঘমেয়াদি সুস্থতা নিশ্চিত করে।"
@@ -16679,7 +16706,7 @@ const bpPrevention = [
   },
   {
     icon: "fa-burst",
-    color: "#d84315",
+    color: "#006cc9",
     text: yhLang(
       "Adolescents displaced during war or riots within or outside their country",
       "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত তরুন-তরুনী;"
@@ -17049,7 +17076,7 @@ const bpPrevention = [
                       </div>
                       <div class="col-md-7">
                         <figure class="glass-card p-1 h-100 mb-0 text-center">
-                          <img src="img/modu22/jolbau_b.png" alt="img/modu22/jolbau_b.png" style="height: 100%;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <img src="img/modu22/jolbau_b.png" alt="img/modu22/jolbau_b.png" style="height: 550px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
                     </div>
@@ -17186,18 +17213,31 @@ const bpPrevention = [
             content: (function () {
               const leftSections = [
                 {
-                  title: yhLang("Sources of Air Pollution:", "বায়ু দূষণের উৎস:"),
-                  items: [
-                    yhLang("Fine particles (PM 2.5)", "সূক্ষ্ম কণা(PM 2.5)"),
-                    yhLang("Coarse particles (PM10)", "মোটা কণা(PM10)"),
-                    yhLang("Ground-level ozone gas (O3)", "পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)"),
-                    yhLang("Nitrogen dioxide (NO2)", "নাইট্রোজেন ডাই অক্সাইড (NO2)"),
-                    yhLang("Sulfur dioxide (SO2)", "সালফার ডাই অক্সাইড(SO2)"),
-                    yhLang("Carbon monoxide (CO)", "কার্বন মনোক্সাইড (CO)"),
-                  ],
-                },
+  title: yhLang("Sources of Air Pollution:", "বায়ু দূষণের উৎস:"),
+  items: [
+    `
+    <p class="p-2 mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:")}</p>
+    `,
+    yhLang("Fine particles (PM 2.5)", "সূক্ষ্ম কণা(PM 2.5)"),
+    yhLang("Coarse particles (PM10)", "মোটা কণা(PM10)"),
+    yhLang("Ground-level ozone gas (O3)", "পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)"),
+    yhLang("Nitrogen dioxide (NO2)", "নাইট্রোজেন ডাই অক্সাইড (NO2)"),
+    yhLang("Sulfur dioxide (SO2)", "সালফার ডাই অক্সাইড(SO2)"),
+    yhLang("Carbon monoxide (CO)", "কার্বন মনোক্সাইড (CO)"),
+
+    `
+    <div class="modern-card glass-card my-2 air" data-aos="fade-up" data-aos-delay="20" style="border-radius:14px;padding:10px 14px;box-shadow:0 6px 20px rgba(230,81,0,.15), 0 2px 8px rgba(191,54,12,.1);border-left:4px solid #e65100;">
+                    <div style="display:flex;align-items:center;">
+                      <span style="background:linear-gradient(135deg,#fb8c00,#ef6c00);width:28px;height:28px;min-width:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 3px 10px rgba(251,140,0,.2);"><i class="fa-solid fa-lightbulb" style="color:#fff;font-size:14px;"></i></span>
+                      <p class="mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে। ")}</p>
+                    </div>
+                  </div>
+    `
+  ],
+},
                 {
-                  title: yhLang("Air Pollution Prevention and Management:", "বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:"),
+                                    title: yhLang("Air Pollution Prevention and Management:", "বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:"),
+
                   items: [
                     yhLang("Stop open waste burning", "খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা"),
                     yhLang("Plant more trees locally", "স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা"),
@@ -17205,6 +17245,7 @@ const bpPrevention = [
                     yhLang("Control black-smoke producing vehicles and close brick kilns", "কালো ধোঁওয়া উৎপন্ন কারী যানবাহন, ইট ভাটা বন্ধ করা"),
                     yhLang("Sprinkle water on roads to reduce dust", "ধুলো কমাতে রাস্তা ঘাটে পানি ছিটানো"),
                   ],
+
                 },
               ];
 
@@ -17277,8 +17318,8 @@ const bpPrevention = [
                       const iconData = getItemIcon(item);
                       return `
                       <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:3px solid ${iconData.color};border-radius:8px;padding:3px 3px;margin-bottom:3px;box-shadow:0 4px 12px rgba(103,58,183,.1), 0 1px 4px ${iconData.bg};transition:all 0.3s ease;">
-                        <span style="background:linear-gradient(135deg,${iconData.color},${iconData.color}dd);width:22px;height:22px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;margin-right:3px;box-shadow:0 2px 8px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:12px;"></i></span>
-                        <span style="color:#333;font-weight:500;font-size:0.9em;">${item}</span>
+                        <span style="width:22px;height:22px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;margin-right:3px;box-shadow:0 2px 8px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:${iconData.color};font-size:12px;"></i></span>
+                        <span class="mb-3" style="color:#333;font-weight:500;font-size:0.9em;">${item}</span>
                       </li>
                     `;
                     }
@@ -17289,7 +17330,7 @@ const bpPrevention = [
                 const iconData = getSectionIcon(section.title);
                 return `
                 <div class="health-section mb-1" style="border-radius:12px;padding:3px;box-shadow:0 5px 14px rgba(103,58,183,.08);">
-                  <h3 class="mb-1" style="display:flex;align-items:center;color:#4a148c;font-weight:700;font-size:0.95em;">
+                  <h3 class="mb-4" style="display:flex;align-items:center;color:#4a148c;font-weight:700;font-size:0.95em;">
                     <span style="background:${iconData.gradient};width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-right:8px;box-shadow:0 3px 10px rgba(103,58,183,.18);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:14px;"></i></span>
                     ${section.title}
                   </h3>
@@ -17315,22 +17356,16 @@ const bpPrevention = [
                     ${yhLang("Sources of Air Pollution", "বায়ু দূষণের উৎস:")}
                   </h2>
                   
-                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="20" style="border-radius:14px;padding:10px 14px;box-shadow:0 6px 20px rgba(230,81,0,.15), 0 2px 8px rgba(191,54,12,.1);border-left:4px solid #e65100;">
-                    <div style="display:flex;align-items:center;">
-                      <span style="background:linear-gradient(135deg,#fb8c00,#ef6c00);width:28px;height:28px;min-width:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 3px 10px rgba(251,140,0,.2);"><i class="fa-solid fa-lightbulb" style="color:#fff;font-size:14px;"></i></span>
-                      <p class="mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে। ")}</p>
-                    </div>
-                  </div>
 
                   <div class="row g-1" data-aos="fade-up" data-aos-delay="40">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-6">
                       <div class="modern-card glass-card h-100" style="border-radius:16px;padding:3px;box-shadow:0 8px 24px rgba(230,81,0,.18), 0 3px 12px rgba(191,54,12,.12);">
-                                                <p class="mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:")}</p>
 
                         ${leftSections.map(renderSection).join("")}
+
                       </div>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-6">
                       <div class="modern-card glass-card h-100" style="border-radius:16px;padding:3px;box-shadow:0 8px 24px rgba(233,30,99,.18), 0 3px 12px rgba(194,24,91,.12);">
                         <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:3px;font-weight:700;font-size:1em;">
                           <span style="background:linear-gradient(135deg,#ec407a,#c2185b);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(236,64,122,.3), 0 1px 6px rgba(194,24,91,.18);"><i class="fa-solid fa-heart-pulse" style="color:#fff;font-size:16px;"></i></span>
@@ -17338,14 +17373,11 @@ const bpPrevention = [
                         </h3>
 
                         ${rightSections1.map(renderSection).join("")}
+                        ${rightSections2.map(renderSection).join("")}
+
 
                       </div>
                     </div>
-                    <div class="col-12 col-lg-4">
-                      <div class="modern-card glass-card h-100" style="border-radius:16px;padding:3px;box-shadow:0 8px 24px rgba(156,39,176,.18), 0 3px 12px rgba(106,27,154,.12);">
-                        
-                        ${rightSections2.map(renderSection).join("")}
-                      </div>
                     </div>
                   </div>
                 </div>`;
@@ -17403,7 +17435,7 @@ const bpPrevention = [
                   .map(
                     (item, idx) => `
                       <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:4px;box-shadow:${idx % 2 === 0 ? '0 2px 7px rgba(2,136,209,.10)' : '0 3px 8px rgba(255,112,67,.11)'};">
-                        <h3 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? '#0277bd' : '#d84315'};font-size:0.8em;">
+                        <h3 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? '#0277bd' : '#006cc9'};font-size:0.8em;">
                           <i class="fa-solid ${idx < 2 ? 'fa-industry' : idx < 4 ? 'fa-house' : idx < 6 ? 'fa-oil-can' : 'fa-truck-medical'} me-2" style="font-size:0.85em;"></i>
                           ${item.title}
                         </h3>
@@ -17432,7 +17464,7 @@ const bpPrevention = [
 
               return `
                 <div class="lesson-slide">
-                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="60" style="border-radius:11px;padding:5px;box-shadow:0 4px 12px rgba(3,155,229,.14), 0 2px 6px rgba(2,119,189,.1);background:linear-gradient(135deg,#e1f5fe 0%, #e3f2fd 100%);">
+                  <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="60" style="border-radius:11px;padding:5px;box-shadow:0 4px 12px rgba(3,155,229,.14), 0 2px 6px rgba(2,119,189,.1);">
                     <h3 style="display:flex;align-items:center;color:#0277bd;margin-bottom:4px; font-weight:700;font-size:20px;"><span style="background:linear-gradient(135deg,#29b6f6,#0288d1); width:26px; height:26px; border-radius:7px; display:flex; align-items:center; justify-content:center; margin-right:6px; box-shadow:0 2px 6px rgba(41,182,246,.22);"><i class="fa-solid fa-droplet" style="color:#fff; font-size:12px;"></i></span>${yhLang("Water Pollution", "পানি দূষণ")}</h3>
 
                     <p class="mb-1" style="font-size:0.74em;line-height:1.35;">${yhLang("Only 0.75% of water on Earth is clean and easily accessible for drinking. Safe drinking water must be available and free from contamination. Due to climate change, extreme floods and droughts occur, putting safe drinking water sources at risk.", "পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।")}</p>
@@ -17443,7 +17475,7 @@ const bpPrevention = [
                     </ul>
                   </div>
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:11px;padding:5px;box-shadow:0 4px 12px rgba(255,112,67,.14), 0 2px 6px rgba(244,81,30,.1);">
-                    <h3 style="display:flex;align-items:center;color:#d84315;margin-bottom:4px; font-weight:700;font-size:0.86em;"><span style="background:linear-gradient(135deg,#ff7043,#f4511e); width:26px; height:26px; border-radius:7px; display:flex; align-items:center; justify-content:center; margin-right:6px; box-shadow:0 2px 6px rgba(255,112,67,0.22);"><i class="fa-solid fa-industry" style="color:#fff; font-size:12px;"></i></span>${yhLang(
+                    <h3 style="display:flex;align-items:center;color:#006cc9;margin-bottom:4px; font-weight:700;font-size:0.86em;"><span style="background:linear-gradient(135deg,#29b6f6,#0288d1); width:26px; height:26px; border-radius:7px; display:flex; align-items:center; justify-content:center; margin-right:6px; box-shadow:0 2px 6px rgba(255,112,67,0.22);"><i class="fa-solid fa-industry" style="color:#fff; font-size:12px;"></i></span>${yhLang(
                         "Main Causes of Food and Water Contamination",
                         "খাবারপানির দূষণের প্রধান কারণ সমূহ"
                     )}</h3>
@@ -17558,8 +17590,8 @@ const bpPrevention = [
                     (item, idx) => {
                       const iconData = getItemIcon(item);
                       return `
-                      <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:5px 5px;margin-bottom:5px;box-shadow:0 6px 18px rgba(103,58,183,.14), 0 2px 8px ${iconData.bg};transition:all 0.3s ease;">
-                        <span style="background:linear-gradient(135deg,${iconData.color},${iconData.color}dd);width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;margin-right:5px;box-shadow:0 4px 12px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:16px;"></i></span>
+                      <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:5px 5px;margin-bottom:5px;box-shadow:0 6px 18px rgba(103,58,183,.14), 0 2px 8px ${iconData.bg};transition:all 0.3s ease; display: flex; align-items: center;">
+                        <span style="width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;margin-right:5px;box-shadow:0 4px 12px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="${iconData.color};font-size:16px;"></i></span>
                         <span style="color:#333;font-weight:500;">${item}</span>
                       </li>
                     `;
@@ -17580,13 +17612,13 @@ const bpPrevention = [
                 const iconData = getSectionIcon(section.title);
                 return `
                 <div class="health-section mb-1" style="background:rgba(255,255,255,.4);border-radius:18px;padding:5px;box-shadow:0 8px 22px rgba(103,58,183,.12);">
-                  <h4 class="mb-1" style="display:flex;align-items:center;color:#4a148c;font-weight:700;">
+                  <h3 class="mb-3" style="display:flex;align-items:center;color:#4a148c;font-weight:700;">
                     <span style="background:${iconData.gradient};width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
                     ${section.title}
-                  </h4>
+                  </h3>
                   ${section.items ? `<ul class="list-unstyled feature-list grid-2 mb-0">${renderList(section.items)}</ul>` : `<div style="border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
                 </div>
-              `;};
+              `;}
 
               return `
                 <div class="lesson-slide">
@@ -17687,7 +17719,7 @@ const bpPrevention = [
 
               return `
                 <div class="lesson-slide">
-                  <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40" style="background:linear-gradient(135deg,#e0f2f1 0%,#b2dfdb 100%);border-radius:16px;padding:8px;box-shadow:0 7px 20px rgba(0,172,193,.16);">
+                  <div class="modern-card glass-card hygiene-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:16px;padding:8px;box-shadow:0 7px 20px rgba(0,172,193,.16);">
                     <h2 class="slide-title gradient-text mb-3" data-aos="fade-up" style="display: flex; align-items: center; font-size:1.05em;">
                     <i class="fa-solid fa-hands-bubbles" style="color: #00acc1; margin-right: 8px; font-size: 1em;"></i>
                     ${yhLang("Steps to Improve Water, Sanitation and Hygiene", "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ")}
@@ -17784,7 +17816,7 @@ const bpPrevention = [
                   .map((item, idx) => `
                     <li class="m22l7-chem-item ${item.color}" data-aos="flip-left" data-aos-delay="${delay + idx * 50}">
                       <div class="m22l7-chem-icon">
-                        <i class="fa-solid ${item.icon}"></i>
+                        <i class="fa-solid ${item.icon}" style="color:${item.color}"></i>
                       </div>
                       <span class="m22l7-chem-text">${item.text}</span>
                     </li>

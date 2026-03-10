@@ -11284,7 +11284,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: linear-gradient(135deg, #f4511e, #d84315);
+  background: linear-gradient(135deg, #f4511e, #006cc9);
   box-shadow: 0 4px 12px rgba(216, 67, 21, 0.35), 0 0 0 4px rgba(255, 255, 255, 0.25);
   animation: m18l3Pulse 2.8s ease-in-out infinite;
 }
@@ -13005,7 +13005,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 @media (prefers-color-scheme: dark) {
   .mod18-lesson7 {
-    background: linear-gradient(135deg, #bf360c 0%, #d84315 28%, #e64a19 56%, #ff5722 85%, #ff7043 100%);
+    background: linear-gradient(135deg, #bf360c 0%, #006cc9 28%, #e64a19 56%, #ff5722 85%, #ff7043 100%);
   }
 
   .m18l7-intro-panel,
@@ -14506,7 +14506,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .mod19-lesson1-2 {
   position: relative;
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 30%, #fff8e1 64%, #ffe0b2 100%);
   border-radius: 12px;
   padding: 11px 10px;
   display: flex;
@@ -14593,13 +14592,11 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m19l1x2-panel-importance {
-  background: linear-gradient(160deg, rgba(232, 245, 233, 0.95), rgba(200, 230, 201, 0.9));
   border: 1px solid rgba(102, 187, 106, 0.35);
   box-shadow: 5px 7px 12px rgba(56, 142, 60, 0.15);
 }
 
 .m19l1x2-panel-nutrition {
-  background: linear-gradient(160deg, rgba(255, 248, 225, 0.95), rgba(255, 224, 178, 0.9));
   border: 1px solid rgba(255, 183, 77, 0.35);
   box-shadow: -5px 7px 12px rgba(245, 124, 0, 0.15);
 }
@@ -14670,7 +14667,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .m19l1x2-tip-title {
   margin: 0 0 5px 0;
-  font-size: 0.75rem;
+  font-size: 20px;
   font-weight: 700;
   color: #e65100;
   display: flex;
@@ -14962,7 +14959,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m22l7-section-icon--prevention {
-  background: linear-gradient(135deg, #ff7043, #d84315);
+  background: linear-gradient(135deg, #ff7043, #006cc9);
   box-shadow: 0 4px 12px rgba(255, 112, 67, 0.28);
 }
 
@@ -15073,10 +15070,10 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m22l7-chem-nitrogen .m22l7-chem-icon { background: linear-gradient(135deg, #ef5350, #e53935); box-shadow: 0 2px 7px rgba(239, 83, 80, 0.25); }
 
 .m22l7-chem-hydrocarbon { border-left-color: #ec407a; }
-.m22l7-chem-hydrocarbon .m22l7-chem-icon { background: linear-gradient(135deg, #ec407a, #c2185b); box-shadow: 0 2px 7px rgba(236, 64, 122, 0.25); }
+.m22l7-chem-hydrocarbon .m22l7-chem-icon i{ color: red !important; box-shadow: 0 2px 7px rgba(236, 64, 122, 0.25); }
 
 .m22l7-chem-asbestos { border-left-color: #ff7043; }
-.m22l7-chem-asbestos .m22l7-chem-icon { background: linear-gradient(135deg, #ff7043, #d84315); box-shadow: 0 2px 7px rgba(255, 112, 67, 0.25); }
+.m22l7-chem-asbestos .m22l7-chem-icon { background: linear-gradient(135deg, #ff7043, #006cc9); box-shadow: 0 2px 7px rgba(255, 112, 67, 0.25); }
 
 .m22l7-chem-fluoride { border-left-color: #ffa726; }
 .m22l7-chem-fluoride .m22l7-chem-icon { background: linear-gradient(135deg, #ffa726, #f57c00); box-shadow: 0 2px 7px rgba(255, 167, 38, 0.25); }
@@ -21357,7 +21354,7 @@ input::placeholder {
   margin: 0;
   font-size: 1.75rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #d84315 0%, #ff6f00 100%);
+  background: linear-gradient(135deg, #006cc9 0%, #ff6f00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -21409,7 +21406,7 @@ input::placeholder {
 .mod23-lesson7 .m23l7-section-title {
   font-size: 1.12rem;
   font-weight: 700;
-  color: #d84315;
+  color: #006cc9;
   margin: 0px;
   width: 100%;
   text-align: left;

@@ -45,3 +45,6 @@
     grid-template-columns: 1fr 3fr 2fr;
     gap: 10px;
 }
+.health-section span:has(.fa-circle-check) {
+  display: none !important;
+}
