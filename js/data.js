@@ -14380,33 +14380,31 @@ const coursesData = [
                   <div class="m19l2-header" data-aos="fade-up">
                     <h2 class="m19l2-title">
                       <i class="fa-solid fa-scale-balanced"></i>
-                      ${yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)")}
+                      ${yhLang("BMI (Body Mass Index)", "বি.এম.আই (Body Mass Index)")}
                     </h2>
-                    <p class="m19l2-subtitle">${yhLang("Standard BMI Values for Adolescents (Ages 10-19)", "তারুণ্যীন (১০-১৯ বছর) পর্যায়ে আদর্শ বি.এম.আই মান")}</p>
                   </div>
 
                   <div class="m19l2-cards-grid">
-                    <div class="m19l2-bmi-card m19l2-girls-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="m19l2-bmi-card m19l2-girls-card" data-aos="" data-aos-delay="">
                       <div class="m19l2-card-header m19l2-girls-header">
                         <i class="fa-solid fa-person-dress"></i>
                         <div class="m19l2-header-text">
-                          <h3>${yhLang("Girls", "কিশোরী")}</h3>
-                          <span>${yhLang("Ages 10-19", "বয়স ১০-১৯ বছর")}</span>
+                          <h3>${yhLang("Girls", "১০-১৯ বছর বয়সী কিশোরীদের ওজন ও উচ্চতার আদর্শ মান")}</h3>
                         </div>
                       </div>
                       <div class="m19l2-table-wrapper">
                         <table class="m19l2-bmi-table">
                           <thead>
                             <tr>
-                              <th>${yhLang("Age", "বয়স")}</th>
-                              <th>${yhLang("Low", "কম")}</th>
-                              <th>${yhLang("Normal", "স্বাভাবিক")}</th>
-                              <th>${yhLang("Overweight", "বেশি")}</th>
+                              <th><span>${yhLang("Age", "বয়স<br>(বছর)")}</span></th>
+                              <th><span>${yhLang("Low", "সল্প পুষ্টি<br>(বি.এম.আই)")}</span></th>
+                              <th><span>${yhLang("Normal", "স্বাভাবিক পুষ্টি <br> (বি.এম.আই)")}</span></th>
+                              <th><span>${yhLang("Overweight", "সল্প মুটিয়ে যাওয়া <br>(বি.এম.আই)")}</span></th>
                             </tr>
                           </thead>
                           <tbody>
                             ${girlsBmi.map((row, idx) => `
-                              <tr data-aos="zoom-in" data-aos-delay="${120 + idx * 15}">
+                              <tr data-aos="" data-aos-delay="">
                                 <td class="m19l2-age">${yhLang(row.ageEn, row.age)}</td>
                                 <td class="m19l2-low">${row.low}</td>
                                 <td class="m19l2-normal">${row.normal}</td>
@@ -14415,20 +14413,6 @@ const coursesData = [
                             `).join('')}
                           </tbody>
                         </table>
-                      </div>
-                      <div class="m19l2-color-legend">
-                        <div class="m19l2-legend-item">
-                          <span class="m19l2-legend-color m19l2-low-color"></span>
-                          <small>${yhLang("Low", "কম")}</small>
-                        </div>
-                        <div class="m19l2-legend-item">
-                          <span class="m19l2-legend-color m19l2-normal-color"></span>
-                          <small>${yhLang("Normal", "স্বাভাবিক")}</small>
-                        </div>
-                        <div class="m19l2-legend-item">
-                          <span class="m19l2-legend-color m19l2-overweight-color"></span>
-                          <small>${yhLang("Overweight", "বেশি")}</small>
-                        </div>
                       </div>
                     </div>
 
@@ -14436,23 +14420,23 @@ const coursesData = [
                       <div class="m19l2-card-header m19l2-boys-header">
                         <i class="fa-solid fa-person"></i>
                         <div class="m19l2-header-text">
-                          <h3>${yhLang("Boys", "কিশোর")}</h3>
-                          <span>${yhLang("Ages 10-19", "বয়স ১০-১৯ বছর")}</span>
+                          <h3>${yhLang("Boys", "১০-১৯ বছর বয়সী কিশোরদের ওজন ও উচ্চতার আদর্শ মান")}</h3>
+                          
                         </div>
                       </div>
                       <div class="m19l2-table-wrapper">
                         <table class="m19l2-bmi-table">
                           <thead>
                             <tr>
-                              <th>${yhLang("Age", "বয়স")}</th>
-                              <th>${yhLang("Low", "কম")}</th>
-                              <th>${yhLang("Normal", "স্বাভাবিক")}</th>
-                              <th>${yhLang("Overweight", "বেশি")}</th>
+                              <th><span>${yhLang("Age", "বয়স<br>(বছর)")}</span></th>
+                              <th><span>${yhLang("Low", "সল্প পুষ্টি<br>(বি.এম.আই)")}</span></th>
+                              <th><span>${yhLang("Normal", "স্বাভাবিক পুষ্টি <br> (বি.এম.আই)")}</span></th>
+                              <th><span>${yhLang("Overweight", "সল্প মুটিয়ে যাওয়া <br>(বি.এম.আই)")}</span></th>
                             </tr>
                           </thead>
                           <tbody>
                             ${boysBmi.map((row, idx) => `
-                              <tr data-aos="zoom-in" data-aos-delay="${120 + idx * 15}">
+                              <tr data-aos="" data-aos-delay="">
                                 <td class="m19l2-age">${yhLang(row.ageEn, row.age)}</td>
                                 <td class="m19l2-low">${row.low}</td>
                                 <td class="m19l2-normal">${row.normal}</td>
@@ -14461,20 +14445,6 @@ const coursesData = [
                             `).join('')}
                           </tbody>
                         </table>
-                      </div>
-                      <div class="m19l2-color-legend">
-                        <div class="m19l2-legend-item">
-                          <span class="m19l2-legend-color m19l2-low-color"></span>
-                          <small>${yhLang("Low", "কম")}</small>
-                        </div>
-                        <div class="m19l2-legend-item">
-                          <span class="m19l2-legend-color m19l2-normal-color"></span>
-                          <small>${yhLang("Normal", "স্বাভাবিক")}</small>
-                        </div>
-                        <div class="m19l2-legend-item">
-                          <span class="m19l2-legend-color m19l2-overweight-color"></span>
-                          <small>${yhLang("Overweight", "বেশি")}</small>
-                        </div>
                       </div>
                     </div>
                   </div>

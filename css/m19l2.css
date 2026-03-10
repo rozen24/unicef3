@@ -2,11 +2,11 @@
 
 .m19l2-container {
   position: relative;
-  padding: 2rem 1.5rem;
+  padding: 1.2rem 0.9rem;
   background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FCE4EC 100%);
   border-radius: 20px;
   overflow: hidden;
-  min-height: 600px;
+  min-height: 480px;
 }
 
 /* Floating Background Shapes */
@@ -18,8 +18,8 @@
 }
 
 .m19l2-shape-1 {
-  width: 250px;
-  height: 250px;
+  width: 170px;
+  height: 170px;
   background: linear-gradient(135deg, #42A5F5, #64B5F6);
   top: -80px;
   right: -60px;
@@ -27,8 +27,8 @@
 }
 
 .m19l2-shape-2 {
-  width: 180px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
   background: linear-gradient(135deg, #EF5350, #E57373);
   bottom: 80px;
   left: -50px;
@@ -36,8 +36,8 @@
 }
 
 .m19l2-shape-3 {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   background: linear-gradient(135deg, #AB47BC, #CE93D8);
   top: 40%;
   right: 5%;
@@ -54,23 +54,23 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .m19l2-title {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #1a237e;
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 8px;
   letter-spacing: -0.5px;
 }
 
 .m19l2-title i {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   background: linear-gradient(135deg, #42A5F5, #EF5350);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -84,7 +84,7 @@
 }
 
 .m19l2-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   color: #455a64;
   margin: 0;
   font-weight: 500;
@@ -97,8 +97,8 @@
   z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -111,8 +111,8 @@
 /* BMI Card Styles */
 .m19l2-bmi-card {
   background: white;
-  border-radius: 18px;
-  padding: 1.8rem 1.4rem;
+  border-radius: 14px;
+  padding: 1rem 0.8rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -152,20 +152,20 @@
 .m19l2-card-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
+  gap: 8px;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.08);
 }
 
 .m19l2-card-header i {
-  font-size: 2rem;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
 }
 
 .m19l2-girls-header i {
@@ -185,14 +185,14 @@
 }
 
 .m19l2-header-text h3 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 700;
   margin: 0;
   color: inherit;
 }
 
 .m19l2-header-text span {
-  font-size: 0.8rem;
+  font-size: 0.68rem;
   font-weight: 500;
   opacity: 0.7;
   letter-spacing: 0.2px;
@@ -201,8 +201,7 @@
 /* Table Wrapper */
 .m19l2-table-wrapper {
   overflow-x: auto;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -223,7 +222,7 @@
 .m19l2-bmi-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.85rem;
+  font-size: 18;
   color: #424242;
 }
 
@@ -236,16 +235,15 @@
 }
 
 .m19l2-bmi-table th {
-  padding: 0.9rem 0.7rem;
+  padding: 0.5rem 0.4rem;
   text-align: center;
   border-bottom: 3px solid #4CAF50;
-  font-size: 0.8rem;
+  font-size: 0.68rem;
 }
 
 .m19l2-bmi-table td {
-  padding: 0.7rem;
+  padding: 0.45rem;
   text-align: center;
-  border-bottom: 1px solid #F0F0F0;
   transition: background-color 0.2s;
 }
 
@@ -281,25 +279,25 @@
 /* Color Legend */
 .m19l2-color-legend {
   display: flex;
-  gap: 1.2rem;
-  padding: 1rem;
+  gap: 0.6rem;
+  padding: 0.55rem;
   background: linear-gradient(135deg, rgba(232, 245, 233, 0.4), rgba(240, 248, 245, 0.4));
-  border-radius: 10px;
+  border-radius: 8px;
   justify-content: center;
 }
 
 .m19l2-legend-item {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.75rem;
+  gap: 4px;
+  font-size: 0.65rem;
   font-weight: 600;
 }
 
 .m19l2-legend-color {
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
   display: inline-block;
 }
 
@@ -393,28 +391,28 @@
 /* Mobile Optimizations */
 @media (max-width: 768px) {
   .m19l2-container {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.7rem;
   }
 
   .m19l2-title {
-    font-size: 1.7rem;
+    font-size: 1.25rem;
   }
 
   .m19l2-title i {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .m19l2-bmi-card {
-    padding: 1.2rem 1rem;
+    padding: 0.75rem 0.6rem;
   }
 
   .m19l2-cards-grid {
-    gap: 1.2rem;
-    margin-top: 1.5rem;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
   }
 
   .m19l2-color-legend {
-    gap: 0.8rem;
+    gap: 0.45rem;
     flex-wrap: wrap;
   }
 
