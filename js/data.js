@@ -14486,8 +14486,8 @@ const coursesData = [
                     "তেল, ঘি, মাখন, মাছ-মাংসের চর্বি, বাদাম, নারিকেল"
                   ),
                   functions: yhLang(
-                    "Provides concentrated energy and helps absorb vitamins",
-                    "কেন্দ্রীভূত শক্তি প্রদান করে, ভিটামিন শোষণে সাহায্য করে"
+                    "",
+                    ""
                   ),
                   icon: "fa-droplet",
                   color: "fats",
@@ -14511,11 +14511,33 @@ const coursesData = [
                   name: yhLang("Vitamins and Minerals", "ভিটামিন ও খনিজ লবণ"),
                   sources: yhLang(
                     "Animal and plant foods including milk, fish, meat, liver, nuts, seeds, leafy vegetables and fruits",
-                    "প্রাণীজ ও উদ্ভিজ্জ খাদ্য যেমন দুধ, মাছ, মাংস, কলিজা, বাদাম, বীজ, শাকসবজি ও ফলমূল"
+                    `
+                      <b>প্রাণীজ:</b> দুধ, মাছ, মাংস, কলিজা<br>
+<b>উদ্ভিদ :</b> বাদাম, বিভিন্ন ধরনের বীজ, শাক, সবজি ও ফলমূল<br>
+<b>ভিটামিন ‘এ’ : </b>বিভিন্ন ধরনের রঙিন শাক-সবজি,
+লালশাক, গাজর, মিষ্টি কুমড়া<br>
+<b>ভিটামিন ‘ডি’ : </b>ডিমের কুসুম, মাছের তেল, কলিজা, মাখন, পনির ইত্যাদি<br>
+<b>ভিটামিন ‘সি’ : </b>আমলকি, কমলা, ধনেপাতা, আমড়া, তাজা ও টক জাতীয় শাক-সবজি ও ফল ইত্যাদি<br>
+<b>ক্যালসিয়াম : </b>দুধ ও দুগ্ধজাত খাদ্য, গাঢ় সবুজ শাকসবজি, শুটকি মাছ, ছোট মাছ, গুড়, ছোলা ইত্যাদি<br>
+<b>আয়রন : </b>মাছ, মাংস, কলিজা, ডিম, কচু/পুঁই/
+লালশাক, তেতুঁল ইত্যাদি<br>
+<b>আয়োডিন : </b>সামুদ্রিক মাছ, আয়োডিনযুক্ত লবণ
+
+                     `
                   ),
                   functions: yhLang(
                     "Supports digestion, immunity, vision, bone strength and disease prevention",
-                    "পরিপাক, রোগপ্রতিরোধ, দৃষ্টি, হাড়ের গঠন ও রোগ প্রতিরোধে সহায়তা করে"
+                    `পরিপাক ও পুষ্টিসাধনের প্রক্রিয়াকে সহায়তা করে। <br>
+রোগ প্রতিরোধ ক্ষমতা তৈরি করে।<br>
+শরীরকে রোগজীবাণুথেকে রক্ষা করে।<br>
+রাতকানা রোগ প্রতিরোধ করে ও চামড়া মসৃণ করে।<br>
+হাড় ও দাঁতের গঠন মজবুত
+করে, রিকেট প্রতিরোধ করে।<br>
+ক্ষত দূর করে, দাঁতের মাড়ি
+থেকে রক্ত পড়া বন্ধ করে, ঘাপাঁচড়া প্রতিরোধ করে।<br>
+রক্তস্বল্পতা, ক্ষুধামন্দা ও দুর্বলতা দূর করে।<br>
+শিশুর মানসিক বিকাশ নিশ্চিত ও গলগণ্ড রোধ করে।
+`
                   ),
                   icon: "fa-pills",
                   color: "vitamins",
@@ -14549,10 +14571,10 @@ const coursesData = [
                     <table class="m19l3-nutrition-table">
                       <thead>
                         <tr>
-                          <th class="col-num">${yhLang("No.", "নং")}</th>
-                          <th class="col-nutrient">${yhLang("Nutrient", "পুষ্টি উপাদান")}</th>
-                          <th class="col-sources">${yhLang("Sources", "খাদ্য উৎস")}</th>
-                          <th class="col-functions">${yhLang("Functions", "শরীরের প্রধান কাজসমূহ")}</th>
+                          <th class="col-num"><h3>${yhLang("No.", "নং")}</h3></th>
+                          <th class="col-nutrient"><h3>${yhLang("Nutrient", "পুষ্টি উপাদান")}</h3></th>
+                          <th class="col-sources"><h3>${yhLang("Sources", "খাদ্য উৎস")}</h3></th>
+                          <th class="col-functions"><h3>${yhLang("Functions", "শরীরের প্রধান কাজসমূহ")}</h3></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -14566,9 +14588,9 @@ const coursesData = [
                                   <span>${item.num}</span>
                                 </div>
                               </td>
-                              <td class="col-nutrient"><div class="m19l3-nutrient-title">${item.name}</div></td>
-                              <td class="col-sources"><div class="m19l3-sources-text">${item.sources}</div></td>
-                              <td class="col-functions"><div class="m19l3-functions-text">${item.functions}</div></td>
+                              <td class="col-nutrient"><div class="m19l3-nutrient-title"><span>${item.name}</span></div></td>
+                              <td class="col-sources"><div class="m19l3-sources-text"><span>${item.sources}</span></div></td>
+                              <td class="col-functions"><div class="m19l3-functions-text"><span>${item.functions}</span></div></td>
                             </tr>
                           `
                           )
