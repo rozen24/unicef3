@@ -12524,7 +12524,7 @@ const coursesData = [
                 },
                 {
                   text: yhLang("Help in recovery", "আরোগ্য লাভে সাহায্য করা"),
-                  icon: "fa-hands-holding-heart",
+                  icon: "fa-hand-holding-heart",
                   color: "m18l1-goal-recovery",
                 },
                 {
@@ -12579,9 +12579,20 @@ const coursesData = [
                       <i class="fa-solid fa-bullseye"></i>
                       ${yhLang("Goals of First Aid", "প্রাথমিক চিকিৎসার লক্ষ্য হলোঃ")}
                     </h3>
-                    <div class="m18l1-goals-grid">
-                      ${renderGoals(goals)}
+    
+                    <div class="row g-3">
+                       <div class="col-md-6 h-100">
+                            <div class="m18l1-goals-grid">
+                               ${renderGoals(goals)}
+                            </div>
+                       </div>
+                       <div class="col-md-6">
+                           <figure class="glass-card p-1 mb-0 text-center">
+                              <img src="img/modu18/basict.jpg" alt="" style="max-height: 335px; object-fit: auto;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                           </figure>
+                       </div>
                     </div>
+                    
                   </div>
                 </div>
               `;
@@ -12630,11 +12641,19 @@ const coursesData = [
                   icon: "fa-hand-holding-medical",
                   tone: "m18l2-step-pressure",
                 },
+                
                 {
                   text: yhLang(
                     "If the first gauze or cloth layer gets soaked with blood, do not remove it. Add another clean layer on top and keep pressing.",
                     "চাপ দিয়ে ধরে রাখা গজ বা কাপড়ের প্রথম স্তরটি যদি রক্তে ভিজে যায়, তবুও গজ বা কাপড়টি সরানো যাবে না। এর উপরে অন্য একটি পরিষ্কার কাপড় বা গজ দিয়ে চেপে ধরতে হবে।"
                   ),
+                  icon: "fa-layer-group",
+                  tone: "m18l2-step-layer",
+                }, 
+                 {
+                  text: `<figure class="m18l2-figure mb-0">
+                        <img src="img/modu18/rokto.jpg" style="height: 100px; width: 300px;" alt="রক্তক্ষরণ নিয়ন্ত্রণ" class="img-fluid m18l2-image" />
+                      </figure>`,
                   icon: "fa-layer-group",
                   tone: "m18l2-step-layer",
                 },
@@ -12646,7 +12665,8 @@ const coursesData = [
                   icon: "fa-bandage",
                   tone: "m18l2-step-bandage",
                 },
-                {
+                
+                 {
                   text: yhLang(
                     "If the wound is on hand or leg, raise the limb above heart level to reduce blood flow and bleeding.",
                     "ক্ষতস্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিণ্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয়—এর ফলে রক্তপাত কমে যাবে। কারণ অধিক রক্তক্ষরণে অজ্ঞান হয়ে যাওয়ার সম্ভাবনা থাকে।"
@@ -12714,7 +12734,7 @@ const coursesData = [
                     </p>
                   </section>
 
-                  <section class="m18l2-grid" data-aos="fade-up" data-aos-delay="50">
+                  <section class="" data-aos="fade-up" data-aos-delay="50">
                     <article class="m18l2-steps-panel" data-aos="fade-right" data-aos-delay="80">
                       <h3 class="m18l2-section-title">
                         <i class="fa-solid fa-kit-medical"></i>
@@ -12725,14 +12745,7 @@ const coursesData = [
                       </div>
                     </article>
 
-                    <aside class="m18l2-media-panel" data-aos="fade-left" data-aos-delay="120">
-                      <figure class="m18l2-figure mb-0">
-                        <img src="img/modu18/rokto.jpg" alt="${yhLang(
-                          "Bleeding control first aid",
-                          "রক্তক্ষরণ নিয়ন্ত্রণ"
-                        )}" class="img-fluid m18l2-image" />
-                      </figure>
-                    </aside>
+                    
                   </section>
                 </div>
               `;
@@ -12839,10 +12852,10 @@ const coursesData = [
                   .map(
                     (item, index) => `
                       <article class="m18l3-type-card ${item.color}" data-aos="fade-up" data-aos-delay="${40 + index * 40}">
-                        <h4 class="m18l3-type-title">
+                        <h3 class="m18l3-type-title">
                           <span class="m18l3-type-icon"><i class="fa-solid ${item.icon}"></i></span>
                           ${item.title}
-                        </h4>
+                        </h3>
                         <p class="mb-0">${item.text}</p>
                       </article>
                     `
@@ -12876,32 +12889,45 @@ const coursesData = [
                   </header>
 
                   <section class="m18l3-intro" data-aos="fade-up" data-aos-delay="20">
-                    <h3 class="m18l3-section-title">
+                     <h3 class="m18l3-section-title">
                       <i class="fa-solid fa-circle-info"></i>
-                      ${yhLang("Overview", "পরিচিতি")}
+                      ${intro}
                     </h3>
-                    <p class="mb-0">${intro}</p>
+                    
+                     
+                    
                   </section>
-
+                  
+                  <div class="row g-3">
+                       <div class="col-md-5">
+                            <section class="m18l3-panel m18l3-panel-causes" data-aos="fade-up" data-aos-delay="90">
+                    <span class="m18l3-section-title">
+                      <i class="fa-solid fa-list-check"></i>
+                      ${yhLang("Causes of Burn Injuries", "পোড়া ক্ষতের কারণ")}
+                    </span>
+                    <p class="mb-0">${yhLang("পোড়া ক্ষত বিভিন্ন কারণে হতে পারে, যেমন:", "পোড়া ক্ষত বিভিন্ন কারণে হতে পারে, যেমন:")}</p>
+                    <div class="m18l3-cause-list">
+                      ${renderCauseList(causes)}
+                    </div>
+                  </section>
+                       </div>
+                       <div class="col-md-7">
+                          
                   <section class="m18l3-panel m18l3-panel-types" data-aos="fade-up" data-aos-delay="60">
                     <h3 class="m18l3-section-title">
                       <i class="fa-solid fa-layer-group"></i>
                       ${yhLang("Types of Burn Injuries", "পোড়া ক্ষতের প্রকারভেদ")}
                     </h3>
+                    
                     <div class="m18l3-types-grid">
                       ${renderTypeCards(burnTypes)}
                     </div>
                   </section>
-
-                  <section class="m18l3-panel m18l3-panel-causes" data-aos="fade-up" data-aos-delay="90">
-                    <h3 class="m18l3-section-title">
-                      <i class="fa-solid fa-list-check"></i>
-                      ${yhLang("Causes of Burn Injuries", "পোড়া ক্ষতের কারণ")}
-                    </h3>
-                    <div class="m18l3-cause-list">
-                      ${renderCauseList(causes)}
+                       </div>
                     </div>
-                  </section>
+
+
+                  
                 </div>
               `;
             })(),
@@ -12936,7 +12962,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Determine burn type and quickly remove from source (fire, smoke) to stop/slow the burning process",
-                    "ত্বক কতটা পুড়েছে, তার ধরন নির্ধারণ করে চিকিৎসা করা হয়। আঘাতপ্রাপ্ত ব্যক্তিকে দ্রুত পোড়ার উৎস থেকে সরিয়ে নিতে হবে"
+                    "ত্বক কতটা পুড়েছে, তার ধরন নির্ধারণ করে চিকিৎসা করা হয়। আক্রান্ত ব্যক্তিকে দ্রুত পোড়ার উৎস (যেমন- আগুন বা ধোঁয়া) থেকে সরিয়ে নিতে হবে যেন পুড়ে যাওয়ার প্রক্রিয়াটি ধীর হয় বা একেবারে বন্ধ হয়। "
                   ),
                   icon: "fa-hand-fist",
                   color: "m18l4-step-remove",
@@ -12960,7 +12986,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Cool burn area with cool water (10-15 minutes, room temperature - not ice cold)",
-                    "পোড়া জায়গায় কমপক্ষে ১০-১৫ মিনিট ধরে স্বাভাবিক তাপমাত্রার ঠান্ডা পানি ঢালতে হবে"
+                    "পোড়া জায়গায় কমপক্ষে ১০-১৫ মিনিট ধরে স্বাভাবিক তাপমাত্রার ঠান্ডা পানি ঢালতে হবে (খুব ঠান্ডা বা উষ্ণ পানি নয়)।"
                   ),
                   icon: "fa-droplet",
                   color: "m18l4-step-cool",
@@ -12984,7 +13010,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Cover burn with sterile, clean gauze (dressing). Use iodoform gauze if available",
-                    "পোড়া স্থানটিকে শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে দিতে হবে"
+                    "পোড়া স্থানটিকে শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে দিতে হবে (ড্রেসিং)। যদি নিকটস্থ ফার্মেসীতে পাওয়া যায়, প্রাথমিকভাবে ড্রেসিং করতে পোড়া স্থানে আয়োডোফর্ম গজ (যা লিকুইড প্যারাফিন যুক্ত এবং চামড়ায় লেগে থাকে না) ব্যবহার করতে হবে, তার উপরে শুকনো গজ দিয়ে বেঁধে দিতে হবে।"
                   ),
                   icon: "fa-bandage",
                   color: "m18l4-step-dress",
@@ -13043,10 +13069,7 @@ const coursesData = [
                   </header>
 
                   <section class="m18l4-steps" data-aos="fade-up" data-aos-delay="50">
-                    <h3 class="m18l4-section-title">
-                      <i class="fa-solid fa-list-ol"></i>
-                      ${yhLang("Treatment Steps", "চিকিৎসার ধাপ")}
-                    </h3>
+                    
                     <div class="m18l4-steps-list">
                       ${renderSteps(steps)}
                     </div>
@@ -13054,10 +13077,7 @@ const coursesData = [
 
                   <aside class="m18l4-media" data-aos="fade-left" data-aos-delay="80">
                     <figure class="m18l4-figure mb-0">
-                      <img src="img/modu18/pora2.jpg" alt="${yhLang(
-                        "Burn First Aid",
-                        "পোড়ার প্রাথমিক চিকিৎসা"
-                      )}" class="img-fluid m18l4-image" />
+                      <img src="img/modu18/pora2.jpg" style="height: 150px;" alt="" class="img-fluid m18l4-image" />
                     </figure>
                   </aside>
                 </div>
@@ -13099,83 +13119,149 @@ const coursesData = [
               const openFractureHeading = "হাড় ভাঙ্গার প্রাথমিক চিকিৎসা";
               const openFractureSubheading = "উন্মুক্ত হাড় ভাঙ্গার ক্ষেত্রে";
               const openFractureSteps = [
-                "যদি রক্তপাত হয়, সবার প্রথমে রক্তক্ষরণ বন্ধ করার ব্যবস্থা করতে হবে।",
-                "আক্রান্ত অঙ্গটি যতটা সম্ভব স্থির রাখার চেষ্টা করতে হবে।",
-                "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য দ্রুত হাসপাতালে নিয়ে যেতে হবে।",
+                {
+                  text: "যদি রক্তপাত হয়, সবার প্রথমে রক্তক্ষরণ বন্ধ করার ব্যবস্থা করতে হবে।",
+                  icon: "fa-droplet",
+                  tone: "warning",
+                },
+                {
+                  text: "আক্রান্ত অঙ্গটি যতটা সম্ভব স্থির রাখার চেষ্টা করতে হবে।",
+                  icon: "fa-hand",
+                  tone: "info",
+                },
+                {
+                  text: "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য দ্রুত হাসপাতালে নিয়ে যেতে হবে।",
+                  icon: "fa-truck-medical",
+                  tone: "success",
+                },
               ];
 
               const closedFractureHeading = "আবদ্ধ হাড় ভাঙ্গার ক্ষেত্রে";
+              const closedFractureSubheading = "যা মনে রাখবেন";
               const closedFractureSteps = [
-                "আক্রান্ত অঙ্গটি জোরপূর্বক সোজা করার চেষ্টা করা যাবেনা।",
-                "অঙ্গটি ঝুঁকিজনক অবস্থানে রাখতে হবে এবং যথাসম্ভব কম নড়াচড়া করতে হবে।",
-                "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য হাসপাতালে নিয়ে যেতে হবে।",
+                {
+                  text: "আক্রান্ত অঙ্গটি জোরপূর্বক সোজা করার চেষ্টা করা যাবেনা।",
+                  icon: "fa-ban",
+                  tone: "danger",
+                },
+                {
+                  text: "অঙ্গটি ঝুঁকিজনক অবস্থানে রাখতে হবে এবং যথাসম্ভব কম নড়াচড়া করতে হবে।",
+                  icon: "fa-person-walking",
+                  tone: "info",
+                },
+                {
+                  text: "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য হাসপাতালে নিয়ে যেতে হবে।",
+                  icon: "fa-hospital",
+                  tone: "success",
+                },
               ];
 
-              const renderList = (items) =>
+              const renderStepList = (items, group) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, index) => `
+                      <li class="m18l5-step-item m18l5-step-${group}-${index + 1} m18l5-tone-${item.tone}">
+                        <span class="m18l5-step-icon" aria-hidden="true">
+                          <i class="fa-solid ${item.icon}"></i>
+                        </span>
+                        <span>${item.text}</span>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "হাড় ভাঙ্গা",
-                    "হাড় ভাঙ্গা"
-                  )}</h2>
+                <div class="lesson-slide mod18-lesson5">
+                  <div class="m18l5-shape m18l5-shape-1"></div>
+                  <div class="m18l5-shape m18l5-shape-2"></div>
+                  <div class="m18l5-shape m18l5-shape-3"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-3">${intro}</p>
-                    <p class="mb-0">${typeIntro}</p>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="60">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3">${openFractureHeading}</h3>
-                          <h4 class="h6 text-muted mb-2">${openFractureSubheading}</h4>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(openFractureSteps)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-5">
-                        <div class="d-flex flex-column gap-3">
-                          <figure class="text-center mb-0">
-                            <img src="img/modu18/har.jpg" alt="উন্মুক্ত হাড় ভাঙ্গা" class="img-fluid rounded shadow-sm img-zoom" />
-                          </figure>
-                          <figure class="text-center mb-0">
-                            <img src="img/modu18/har2.jpg" alt="উন্মুক্ত হাড় ভাঙ্গার সেবা" class="img-fluid rounded shadow-sm img-zoom" />
-                          </figure>
-                        </div>
-                      </div>
+                  <header class="m18l5-hero" data-aos="fade-up">
+                    <div class="m18l5-hero-badge" aria-hidden="true">
+                      <i class="fa-solid fa-bone"></i>
                     </div>
+                    <h2 class="m18l5-hero-title">
+                      <i class="fa-solid fa-kit-medical"></i>
+                      ${yhLang("হাড় ভাঙ্গা", "হাড় ভাঙ্গা")}
+                    </h2>
+                  </header>
+
+                  <section class="m18l5-intro-panel m18l5-intro-overview m18l5-shadow-definition" data-aos="fade-up" data-aos-delay="20">
+                    <h3 class="m18l5-block-title">
+                      <i class="fa-solid fa-book-medical"></i>
+                      ${yhLang("ফ্র্যাকচার কী", "ফ্র্যাকচার কী")}
+                    </h3>
+                    <p class="m18l5-intro-text">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7 order-2 order-lg-1">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <h3 class="h6 gradient-text mb-3">${closedFractureHeading}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(closedFractureSteps)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-5 order-1 order-lg-2">
-                        <figure class="text-center mb-0">
-                          <img src="img/modu18/har3.jpg" alt="আবদ্ধ হাড় ভাঙ্গা" class="img-fluid rounded shadow-sm img-zoom" />
+                  <section class="m18l5-intro-panel m18l5-intro-types m18l5-shadow-example" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="m18l5-block-title">
+                      <i class="fa-solid fa-diagram-project"></i>
+                      ${yhLang("ফ্র্যাকচারের ধরন", "ফ্র্যাকচারের ধরন")}
+                    </h3>
+                    <p class="m18l5-intro-text">${typeIntro}</p>
+                  </section>
+
+                  <div class="m18l5-grid">
+                    <article class="m18l5-fracture-panel m18l5-open m18l5-shadow-warning" data-aos="fade-right" data-aos-delay="60">
+                      <h4 class="m18l5-panel-title">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        ${openFractureHeading}
+                      </h4>
+                      <h5 class="m18l5-panel-subtitle">
+                        <i class="fa-solid fa-syringe"></i>
+                        ${openFractureSubheading}
+                      </h5>
+                      <ul class="m18l5-steps-list">
+                        ${renderStepList(openFractureSteps, "open")}
+                      </ul>
+                      <div class="m18l5-media m18l5-media-double">
+                        <figure class="m18l5-image-container mb-0">
+                          <img src="img/modu18/har.jpg" alt="উন্মুক্ত হাড় ভাঙ্গা" class="m18l5-image" />
+                          <figcaption class="m18l5-caption">
+                            <h6>
+                              <i class="fa-solid fa-image"></i>
+                              ${yhLang("উন্মুক্ত ফ্র্যাকচার", "উন্মুক্ত ফ্র্যাকচার")}
+                            </h6>
+                          </figcaption>
+                        </figure>
+                        <figure class="m18l5-image-container mb-0">
+                          <img src="img/modu18/har2.jpg" alt="উন্মুক্ত হাড় ভাঙ্গার সেবা" class="m18l5-image" />
+                          <figcaption class="m18l5-caption">
+                            <h6>
+                              <i class="fa-solid fa-briefcase-medical"></i>
+                              ${yhLang("প্রাথমিক সেবা", "প্রাথমিক সেবা")}
+                            </h6>
+                          </figcaption>
                         </figure>
                       </div>
-                    </div>
-                  </section>
+                    </article>
+
+                    <article class="m18l5-fracture-panel m18l5-closed m18l5-shadow-tip" data-aos="fade-left" data-aos-delay="80">
+                      <h4 class="m18l5-panel-title">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        ${closedFractureHeading}
+                      </h4>
+                      <h5 class="m18l5-panel-subtitle">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        ${closedFractureSubheading}
+                      </h5>
+                      <ul class="m18l5-steps-list">
+                        ${renderStepList(closedFractureSteps, "closed")}
+                      </ul>
+                      <div class="m18l5-media">
+                        <figure class="m18l5-image-container mb-0">
+                          <img src="img/modu18/har3.jpg" alt="আবদ্ধ হাড় ভাঙ্গা" class="m18l5-image" />
+                          <figcaption class="m18l5-caption">
+                            <h6>
+                              <i class="fa-solid fa-x-ray"></i>
+                              ${yhLang("আবদ্ধ ফ্র্যাকচার", "আবদ্ধ ফ্র্যাকচার")}
+                            </h6>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </article>
+                  </div>
                 </div>
               `;
             })(),
@@ -13209,50 +13295,120 @@ const coursesData = [
               const intro =
                 "বাংলাদেশে বেশির ভাগ সাপের কামড় বিষহীন সাপ দ্বারা হয়ে থাকে। যদি কোনো ব্যক্তিকে বিষধর সাপে কামড়েছে বলে মনে হয়, তাহলে প্রধান কাজ হল বিষ দ্রুত শরীরে ছড়িয়ে পড়া প্রতিরোধ করা। সে কারণে আক্রান্ত ব্যক্তি যেন নড়াচড়া না করে তার ব্যবস্থা নিতে হবে।";
 
+              const warningText =
+                "ক্ষতস্থানে গিঁট বাঁধা, কাটা, খোঁচানো, মলম লাগানো বা ওঝার চিকিৎসা নেওয়া বিপজ্জনক। নিরাপদ প্রাথমিক চিকিৎসার পর দ্রুত হাসপাতালে নেওয়াই সবচেয়ে গুরুত্বপূর্ণ পদক্ষেপ।";
+
               const steps = [
-                "যদি আক্রান্ত ব্যক্তির শ্বাস-প্রশ্বাস স্বাভাবিক থাকে, তাহলে ব্যক্তিকে স্থির এবং শান্ত থাকতে বলুন। কামড়ের জায়গা ফুলে যেতে পারে, তাই কোনো আংটি, ঘড়ি, অলংকার বা বাঁধন থাকলে তা খুলে দিন।",
-                "ক্ষত স্থানটি পরীক্ষা করে দেখুন, সাপে কামড়ের স্থানটি ছিদ্র হয়ে গেছে কিনা। কামড়ের স্থানটি পরিষ্কার পানি দিয়ে ভাল করে ধুয়ে ফেলুন।",
-                "আক্রান্ত অঙ্গটিকে নড়াচড়া কম করতে দিন এবং লাঠি, কাঠ বা বাঁশের ফালি দিয়ে বেঁধে দিন যেন অঙ্গটি যথাসম্ভব স্থির থাকে।",
-                "আক্রান্ত ব্যক্তির দিকে খেয়াল রাখুন নিচের কোনো বিপদ লক্ষণ আছে কিনা, যেমন—ক্ষতস্থান থেকে রক্তপাত হওয়া, মাথা ঘোরানো, বমি করা, কামড়ের অংশ ফুলে যাওয়া, চোখের পাতা বন্ধ হয়ে আসা বা চোখে ঝাপসা দেখা, শ্বাসকষ্ট হওয়া, প্রস্রাবের পরিমাণ কমে যাওয়া / গাঢ় বর্ণের প্রস্রাব হওয়া।",
-                "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে সিপিআর শুরু করুন। কামড়ের স্থানে কোনো গিঁট বাঁধা যাবে না / ক্ষত স্থানটি কাটা যাবে না।",
-                "সুঁই দিয়ে ক্ষতস্থানটি খোচানো যাবেনা বা মলম বা লোশন জাতীয় কিছু লাগানো যাবে না।",
-                "স্থানীয় কবিরাজ বা ওঝার কাছে চিকিৎসা নেয়া অথবা কোনো ভেষজ ওষুধ প্রয়োগ করা যাবে না।",
-                "আক্রান্ত ব্যক্তিকে দ্রুত হাসপাতালে নিতে হবে।",
+                {
+                  title: "স্থির ও শান্ত রাখা",
+                  text: "যদি আক্রান্ত ব্যক্তির শ্বাস-প্রশ্বাস স্বাভাবিক থাকে, তাহলে ব্যক্তিকে স্থির এবং শান্ত থাকতে বলুন। কামড়ের জায়গা ফুলে যেতে পারে, তাই কোনো আংটি, ঘড়ি, অলংকার বা বাঁধন থাকলে তা খুলে দিন।",
+                  icon: "fa-person-circle-check",
+                  color: "m18l6-step-calm",
+                },
+                {
+                  title: "ক্ষত স্থান পরিষ্কার",
+                  text: "ক্ষত স্থানটি পরীক্ষা করে দেখুন, সাপে কামড়ের স্থানটি ছিদ্র হয়ে গেছে কিনা। কামড়ের স্থানটি পরিষ্কার পানি দিয়ে ভাল করে ধুয়ে ফেলুন।",
+                  icon: "fa-pump-soap",
+                  color: "m18l6-step-clean",
+                },
+                {
+                  title: "অঙ্গ স্থির রাখা",
+                  text: "আক্রান্ত অঙ্গটিকে নড়াচড়া কম করতে দিন এবং লাঠি, কাঠ বা বাঁশের ফালি দিয়ে বেঁধে দিন যেন অঙ্গটি যথাসম্ভব স্থির থাকে।",
+                  icon: "fa-bandage",
+                  color: "m18l6-step-immob",
+                },
+                {
+                  title: "বিপদ লক্ষণ পর্যবেক্ষণ",
+                  text: "আক্রান্ত ব্যক্তির দিকে খেয়াল রাখুন নিচের কোনো বিপদ লক্ষণ আছে কিনা, যেমন—ক্ষতস্থান থেকে রক্তপাত হওয়া, মাথা ঘোরানো, বমি করা, কামড়ের অংশ ফুলে যাওয়া, চোখের পাতা বন্ধ হয়ে আসা বা চোখে ঝাপসা দেখা, শ্বাসকষ্ট হওয়া, প্রস্রাবের পরিমাণ কমে যাওয়া / গাঢ় বর্ণের প্রস্রাব হওয়া।",
+                  icon: "fa-triangle-exclamation",
+                  color: "m18l6-step-monitor",
+                },
+                {
+                  title: "শ্বাস বন্ধ হলে CPR",
+                  text: "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে সিপিআর শুরু করুন। কামড়ের স্থানে কোনো গিঁট বাঁধা যাবে না / ক্ষত স্থানটি কাটা যাবে না।",
+                  icon: "fa-heart-pulse",
+                  color: "m18l6-step-cpr",
+                },
+                {
+                  title: "ক্ষত খোঁচানো নিষেধ",
+                  text: "সুঁই দিয়ে ক্ষতস্থানটি খোচানো যাবেনা বা মলম বা লোশন জাতীয় কিছু লাগানো যাবে না।",
+                  icon: "fa-ban",
+                  color: "m18l6-step-avoid",
+                },
+                {
+                  title: "ভেষজ চিকিৎসা নয়",
+                  text: "স্থানীয় কবিরাজ বা ওঝার কাছে চিকিৎসা নেয়া অথবা কোনো ভেষজ ওষুধ প্রয়োগ করা যাবে না।",
+                  icon: "fa-leaf",
+                  color: "m18l6-step-remedy",
+                },
+                {
+                  title: "দ্রুত হাসপাতালে নিন",
+                  text: "আক্রান্ত ব্যক্তিকে দ্রুত হাসপাতালে নিতে হবে।",
+                  icon: "fa-hospital-user",
+                  color: "m18l6-step-hospital",
+                },
               ];
 
               const renderList = (items) =>
                 items
                   .map(
-                    (item) => `
-                      <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (item, index) => `
+                      <li class="m18l6-step-item ${item.color}" data-aos="fade-up" data-aos-delay="${50 + index * 30}">
+                        <span class="m18l6-step-icon" aria-hidden="true">
+                          <i class="fa-solid ${item.icon}"></i>
+                        </span>
+                        <div class="m18l6-step-content">
+                          <h6 class="m18l6-step-title">
+                            <i class="fa-solid ${item.icon}"></i>
+                            ${item.title}
+                          </h6>
+                          <p>${item.text}</p>
+                        </div>
                       </li>
                     `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "সাপের কামড়",
-                    "সাপের কামড়"
-                  )}</h2>
+                <div class="lesson-slide mod18-lesson6">
+                  <div class="m18l6-shape m18l6-shape-1"></div>
+                  <div class="m18l6-shape m18l6-shape-2"></div>
+                  <div class="m18l6-shape m18l6-shape-3"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="20">
-                    <p class="mb-0">${intro}</p>
+                  <header class="m18l6-hero" data-aos="fade-up">
+                    <div class="m18l6-hero-badge" aria-hidden="true">
+                      <i class="fa-solid fa-snake"></i>
+                    </div>
+                    <h2 class="m18l6-hero-title">
+                      <i class="fa-solid fa-shield-virus"></i>
+                      ${yhLang("সাপের কামড়", "সাপের কামড়")}
+                    </h2>
+                  </header>
+
+                  <section class="m18l6-intro-panel" data-aos="fade-up" data-aos-delay="20">
+                    <h3 class="m18l6-block-title">
+                      <i class="fa-solid fa-book-open-reader"></i>
+                      ${yhLang("ঘটনার প্রেক্ষাপট", "ঘটনার প্রেক্ষাপট")}
+                    </h3>
+                    <p class="m18l6-intro-text">${intro}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="50">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-12">
-                        <article class="p-3 h-100 glass-card shadow-sm">
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(steps)}
-                          </ul>
-                        </article>
-                      </div>
-                    </div>
+                  <section class="m18l6-warning-panel" data-aos="fade-up" data-aos-delay="35">
+                    <h4 class="m18l6-warning-title">
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                      ${yhLang("যা করা যাবে না", "যা করা যাবে না")}
+                    </h4>
+                    <p class="m18l6-warning-text">${warningText}</p>
+                  </section>
+
+                  <section class="m18l6-main-panel" data-aos="fade-up" data-aos-delay="50">
+                    <h5 class="m18l6-panel-title">
+                      <i class="fa-solid fa-list-check"></i>
+                      ${yhLang("প্রাথমিক চিকিৎসার ধাপ", "প্রাথমিক চিকিৎসার ধাপ")}
+                    </h5>
+                    <ul class="m18l6-steps-list">
+                      ${renderList(steps)}
+                    </ul>
                   </section>
                 </div>
               `;
