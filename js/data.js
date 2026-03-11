@@ -15538,7 +15538,7 @@ const coursesData = [
                   <div class="m19-12-shape m19-12-shape-c"></div>
 
                   <header class="m19-12-header" data-aos="fade-up">
-                    <h2 class="m19-12-title"><i class="fa-solid fa-notes-medical"></i>${yhLang(
+                    <h2 class="m19-12-title d-none"><i class="fa-solid fa-notes-medical"></i>${yhLang(
                       "Risks of Overweight and Obesity",
                       "অধিক ওজন ও স্থূলতার ঝুঁকি"
                     )}</h2>
