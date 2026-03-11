@@ -14082,7 +14082,7 @@ const coursesData = [
             id: "ch19-lesson-1",
             title: yhLang(
               "Importance of Nutritious Food in Adolescence",
-              "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব"
+              "পুষ্টিকর খাবারের গুরুত্ব"
             ),
             icon: "fa-apple-whole",
             gradientClass: "bg-gradient-emerald",
@@ -14094,7 +14094,7 @@ const coursesData = [
                   borderColor: "#f472b6",
                   shadowColor: "rgba(244, 114, 182, 0.15)",
                   titleEn: "Importance of Nutritious Food in Adolescence",
-                  titleBn: "কৈশোরে পুষ্টিকর খাবারের গুরুত্ব",
+                  titleBn: "পুষ্টিকর খাবারের গুরুত্ব",
                   descriptionEn:
                     "During adolescence, both boys and girls experience rapid weight and height growth and intellectual development. Therefore, adolescents need an adequate amount of nutritious and balanced food for proper growth. With correct nutrition, adolescents develop their intellect and abilities, improve concentration in studies, get better results, and increase work capacity.",
                   descriptionBn:
@@ -15178,7 +15178,7 @@ const coursesData = [
                   <div class="m19l8-shape m19l8-shape-3"></div>
 
                   <div class="m19l8-header" data-aos="fade-up">
-                    <h2 class="m19l8-h2"><i class="fa-solid fa-apple-whole"></i>${yhLang("কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ", "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ")}</h2>
+                    <h2 class="m19l8-h2"><i class="fa-solid fa-apple-whole"></i>${yhLang("পুষ্টিজনিত প্রধান সমস্যাসমূহ", "পুষ্টিজনিত প্রধান সমস্যাসমূহ")}</h2>
                   </div>
 
                   <section class="m19l8-section m19l8-section-a" data-aos="fade-up" data-aos-delay="20">
@@ -15186,7 +15186,7 @@ const coursesData = [
                    <p class="m19l8-p">
   ${yhLang(
     "Anemia: Anemia occurs when the number of red blood cells in the blood decreases. Iron deficiency is a very common problem among adolescent girls. Since girls lose blood every month during menstruation, if they do not consume enough iron-rich foods, iron deficiency develops in the body and anemia occurs.",
-    "এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। কিশোরীদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় কিশোরীদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।"
+    "এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। মেয়েদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় মেয়েদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।"
   )}
 </p>
                   </section>
@@ -15215,7 +15215,7 @@ const coursesData = [
                         <p>
   ${yhLang(
     "To prevent anemia, adolescent girls should take one iron–folic acid tablet every week after a meal. These iron–folic acid tablets are provided to every adolescent girl from government health service centers.",
-    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে। সরকারি স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।"
+    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে।সরকারি বিদ্যালয় ও স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।"
   )}
 </p>
                       </article>
@@ -15247,7 +15247,7 @@ const coursesData = [
             id: "ch19-lesson-9",
             title: yhLang(
               "Adolescent Nutrition and Malnutrition Cycle",
-              "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র"
+              "পুষ্টি এবং অপুষ্টি চক্র"
             ),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-rose",
@@ -15264,7 +15264,7 @@ const coursesData = [
                   <div class="m19l9-shape m19l9-shape-3"></div>
 
                   <div class="m19l9-header" data-aos="fade-up">
-                    <h2 class="m19l9-h2"><i class="fa-solid fa-rotate"></i>${yhLang("Adolescent Nutrition and Malnutrition Cycle", "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র")}</h2>
+                    <h2 class="m19l9-h2"><i class="fa-solid fa-rotate"></i>${yhLang("Adolescent Nutrition and Malnutrition Cycle", "পুষ্টি এবং অপুষ্টি চক্র")}</h2>
                   </div>
 
                   <section class="m19l9-section m19l9-section-b" data-aos="fade-up" data-aos-delay="40">
@@ -15291,7 +15291,7 @@ const coursesData = [
             id: "ch19-lesson-10",
             title: yhLang(
               "Adolescent Nutrition and Weight Management",
-              "তারুণ্যীন অপুষ্টি প্রতিরোধে করণীয়"
+              "অপুষ্টি প্রতিরোধে করণীয়"
             ),
             icon: "fa-weight-scale",
             gradientClass: "bg-gradient-sunrise",
@@ -15342,7 +15342,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Every adolescent should take deworming tablets every six months according to a doctor's advice.",
-                    "প্রত্যেক তরুন-তরুনীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি গ্রহণ করা"
+                    "প্রত্যেক তরুন-তরুনীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি খাওয়া"
                   ),
                   icon: "fa-user-doctor",
                   tone: "warn",
@@ -15415,7 +15415,7 @@ const coursesData = [
 
               return `
                 <link rel="stylesheet" href="css/m19l10.css">
-                <div class="m19l10-container">
+                <div class="m19l10-container lesson-slide">
                   <div class="m19l10-shape m19l10-shape-1"></div>
                   <div class="m19l10-shape m19l10-shape-2"></div>
                   <div class="m19l10-shape m19l10-shape-3"></div>
@@ -15423,7 +15423,7 @@ const coursesData = [
                   <div class="m19l10-two-col">
                     
                     <section class="m19l10-section m19l10-section-a mb-3" data-aos="fade-up" data-aos-delay="40">
-                    <h2 class="m19l10-h2 mb-2"><i class="fa-solid fa-user-shield"></i>${yhLang("Actions to Prevent Adolescent Malnutrition", "তারুণ্যীন অপুষ্টি প্রতিরোধে করণীয়")}</h2>
+                    <h2 class="m19l10-h2 mb-2"><i class="fa-solid fa-user-shield"></i>${yhLang("Actions to Prevent Adolescent Malnutrition", "অপুষ্টি প্রতিরোধে করণীয়")}</h2>
                       ${renderList(preventionItems)}
                     </section>
 
@@ -15532,7 +15532,7 @@ const coursesData = [
 
               return `
                 <link rel="stylesheet" href="css/m19.css">
-                <div class="m19-12-slide">
+                <div class="m19-12-slide lesson-slide">
                   <div class="m19-12-shape m19-12-shape-a"></div>
                   <div class="m19-12-shape m19-12-shape-b"></div>
                   <div class="m19-12-shape m19-12-shape-c"></div>
@@ -17228,7 +17228,7 @@ const bpPrevention = [
                       </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                      <div class="modern-card glass-card h-100" style="border-radius:16px;padding:3px;box-shadow:0 8px 24px rgba(233,30,99,.18), 0 3px 12px rgba(194,24,91,.12);">
+                      <div class="modern-card glass-card h-100" style="border-radius:16px; color: #000;padding:3px;box-shadow:0 8px 24px rgba(233,30,99,.18), 0 3px 12px rgba(194,24,91,.12);">
                         <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:3px;font-weight:700;font-size:1em;">
                           <span style="background:linear-gradient(135deg,#ec407a,#c2185b);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(236,64,122,.3), 0 1px 6px rgba(194,24,91,.18);"><i class="fa-solid fa-heart-pulse" style="color:#fff;font-size:16px;"></i></span>
                           ${yhLang("Health Effects (Birth & Respiratory)", "বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থগত প্রভাব")}
