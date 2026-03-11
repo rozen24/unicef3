@@ -14453,7 +14453,39 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch19-lesson-3",
+            id: "ch19-lesson-2",
+            title: yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)"),
+            icon: "fa-scale-balanced",
+            gradientClass: "bg-gradient-sky",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              
+
+              return `
+                <div class="m19l2-container">
+                  <div class="m19l2-shape m19l2-shape-1"></div>
+                  <div class="m19l2-shape m19l2-shape-2"></div>
+                  <div class="m19l2-shape m19l2-shape-3"></div>
+
+                  <div class="m19l2-header" data-aos="fade-up">
+                    <h2 class="m19l2-title">
+                      <i class="fa-solid fa-scale-balanced"></i>
+                      ${yhLang("BMI (Body Mass Index)", "পূর্ণ বয়স্ক তরুণ-তরুণীদের বিএমআই রেঞ্জ")}
+                    </h2>
+                  </div>
+
+                  <div class="">
+                    <figure class="glass-card p-1 mb-0 text-center">
+                          <img src="img/modu19/BMI.jpg" alt="" style="height: 610px; margin: 0 auto;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch19-lesson-4",
             title: yhLang(
               "Nutrition Components, Sources, and Functions",
               "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ"
@@ -14602,195 +14634,12 @@ const coursesData = [
               `;
             })(),
           },
-          {
-            id: "ch19-lesson-4",
-            title: yhLang(
-              "Importance of Safe, Nutritious Food and Daily Meal Plan",
-              "তারুণ্যীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
-            ),
-            icon: "fa-utensils",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
-              const meals = [
-                {
-                  timeEn: "Breakfast",
-                  timeBn: "সকালের খাবার",
-                  icon: "fa-mug-saucer",
-                  color: "breakfast",
-                  energy: yhLang(
-                    "2-3 medium chapatis OR 2 parathas OR 1 bowl rice",
-                    "মাঝারি সাইজের ২/৩টি রুটি অথবা ২টি পরোটা অথবা ১ বাটি ভাত"
-                  ),
-                  growth: yhLang(
-                    "1 egg OR 1 bowl lentils",
-                    "১টি ডিম অথবা ১ বাটি ডাল"
-                  ),
-                  immunity: yhLang(
-                    "1 bowl mixed vegetables (2-3 types) OR vegetable stir-fry",
-                    "১ বাটি সবজি (২/৩ রকম সবজি মিশিয়ে) অথবা সবজি ভাজি (পটল ভাজি, পেঁপে ভাজি ইত্যাদি)"
-                  ),
-                },
-                {
-                  timeEn: "Mid-Morning Snack",
-                  timeBn: "মধ্য-সকালের নাস্তা",
-                  icon: "fa-cookie-bite",
-                  color: "midmorning",
-                  energy: yhLang(
-                    "Homemade snacks (flattened rice/puffed rice + jaggery) and ripe banana",
-                    "বাড়িতে তৈরি নাস্তা জাতীয় খাবার (চিড়া/মুড়ি + গুড়) ও পাকা কলা"
-                  ),
-                  growth: yhLang(
-                    "Any local seasonal fruit (mango, jackfruit, papaya, pineapple, etc.)",
-                    "যেকোনো দেশি মৌসুমী ফল (আম, কাঁঠাল, পেঁপে, আনারস ইত্যাদি)"
-                  ),
-                  immunity: "",
-                },
-                {
-                  timeEn: "Lunch",
-                  timeBn: "দুপুরের খাবার",
-                  icon: "fa-bowl-rice",
-                  color: "lunch",
-                  energy: yhLang(
-                    "2-3 bowls rice",
-                    "২/৩ বাটি ভাত"
-                  ),
-                  growth: yhLang(
-                    "1 bowl thick lentils & 1 piece (medium) fish/meat/liver",
-                    "১ বাটি মাঝারি ঘন ডাল ও ১ টুকরা (মাঝারি সাইজের) মাছ/মাংস/কলিজা"
-                  ),
-                  immunity: yhLang(
-                    "1 bowl leafy greens (red spinach, taro leaves) OR vegetables",
-                    "১ বাটি শাক (লাল শাক, কচুশাক, পুঁই শাক) অথবা সবজি"
-                  ),
-                },
-                {
-                  timeEn: "Afternoon Snack",
-                  timeBn: "বিকালের নাস্তা",
-                  icon: "fa-ice-cream",
-                  color: "afternoon",
-                  energy: yhLang(
-                    "1 glass milk OR any milk-based dessert (pudding, vermicelli, rice pudding, cake, yogurt, etc.)",
-                    "১ গ্লাস দুধ অথবা দুধ দিয়ে তৈরি যেকোনো ঘন খাবার (ফিরনি, সেমাই, পায়েস, পিঠা, দই ইত্যাদি)"
-                  ),
-                  growth: yhLang(
-                    "Any local seasonal fruit available",
-                    "যেকোনো দেশি মৌসুমী ফল। ঋতুভেদে যেসব ফল সহজেই আমরা পাই"
-                  ),
-                  immunity: "",
-                },
-                {
-                  timeEn: "Dinner",
-                  timeBn: "রাতের খাবার",
-                  icon: "fa-plate-wheat",
-                  color: "dinner",
-                  energy: yhLang(
-                    "2-3 bowls rice",
-                    "২/৩ বাটি ভাত"
-                  ),
-                  growth: yhLang(
-                    "1 bowl thick lentils (if possible, 1 piece fish/meat)",
-                    "১ বাটি ঘন ডাল (যদি সম্ভব হয় ১ টুকরা মাছ/মাংস)"
-                  ),
-                  immunity: yhLang(
-                    "1 bowl leafy greens OR vegetables",
-                    "১ বাটি শাক অথবা সবজি"
-                  ),
-                },
-              ];
-
-              const renderRows = () =>
-                meals
-                  .map(
-                    (meal, idx) => `
-                      <tr class="m19l4-row m19l4-row-${meal.color}" data-aos="fade-up" data-aos-delay="${80 + idx * 50}">
-                        <td class="m19l4-time-cell">
-                          <span class="m19l4-time-icon m19l4-time-icon-${meal.color}">
-                            <i class="fa-solid ${meal.icon}"></i>
-                          </span>
-                          <span class="m19l4-time-text">${yhLang(meal.timeEn, meal.timeBn)}</span>
-                        </td>
-                        <td>${meal.energy || "&mdash;"}</td>
-                        <td>${meal.growth || "&mdash;"}</td>
-                        <td>${meal.immunity || "&mdash;"}</td>
-                      </tr>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <link rel="stylesheet" href="css/m19l4.css">
-                <div class="m19l4-container">
-                  <div class="m19l4-shape m19l4-shape-1"></div>
-                  <div class="m19l4-shape m19l4-shape-2"></div>
-                  <div class="m19l4-shape m19l4-shape-3"></div>
-
-                  <div class="m19l4-header" data-aos="fade-up">
-                    <h2 class="m19l4-title">
-                      <i class="fa-solid fa-utensils"></i>
-                      ${yhLang(
-                        "Daily Meal Plan for Adolescents",
-                        "তারুণ্যীন প্রতিদিনের খাদ্য তালিকার নমুনা"
-                      )}
-                    </h2>
-                    <p class="m19l4-subtitle">${yhLang(
-                      "A balanced meal plan ensuring energy, growth, and immunity for healthy adolescent development",
-                      "সুস্থ তারুণ্যীন বিকাশের জন্য শক্তি, বৃদ্ধি এবং রোগ প্রতিরোধ ক্ষমতা নিশ্চিত করার জন্য একটি সুষম খাদ্য পরিকল্পনা"
-                    )}</p>
-                  </div>
-
-                  <div class="m19l4-table-card" data-aos="fade-up" data-aos-delay="120">
-                    <div class="m19l4-table-responsive">
-                      <table class="m19l4-data-table">
-                        <thead>
-                          <tr>
-                            <th>${yhLang("Meal Time", "সময়")}</th>
-                            <th>
-                              ${yhLang("Energy Foods", "তাপ ও শক্তি উৎপাদনকারী খাদ্য")}
-                              <small>${yhLang(
-                                "Carbohydrates: rice, bread, flattened rice, puffed rice, potato",
-                                "শর্করা: ভাত, রুটি, চিড়া, মুড়ি, আলু"
-                              )}</small>
-                            </th>
-                            <th>
-                              ${yhLang("Growth Foods", "শরীরের ক্ষয়পূরণ ও বৃদ্ধিকারক খাদ্য")}
-                              <small>${yhLang(
-                                "Proteins: egg, fish, meat, milk, lentils",
-                                "আমিষ: ডিম, মাছ, মাংস, দুধ, ডাল"
-                              )}</small>
-                            </th>
-                            <th>
-                              ${yhLang("Immunity Foods", "রোগ প্রতিরোধকারী খাদ্য")}
-                              <small>${yhLang(
-                                "Vitamins and minerals: vegetables and seasonal fruits",
-                                "ভিটামিন ও খনিজ: সবজি ও দেশি মৌসুমী ফল"
-                              )}</small>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          ${renderRows()}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  <div class="m19l4-image-section" data-aos="fade-up" data-aos-delay="220">
-                    <img src="img/modu19/food.jpg" alt="${yhLang(
-                      "Nutritious meal plan illustration",
-                      "পুষ্টিকর খাদ্য তালিকা চিত্র"
-                    )}" />
-                  </div>
-                </div>
-              `;
-            })(),
-          },
+  
           {
             id: "ch19-lesson-5",
             title: yhLang(
               "Importance of Safe, Nutritious Food and Daily Meal Plan",
-              "তারুণ্যীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
+              "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
             ),
             icon: "fa-utensils",
             gradientClass: "bg-gradient-rose",
@@ -14825,11 +14674,11 @@ const coursesData = [
                     "Homemade snacks (flattened rice/puffed rice + jaggery) and ripe banana",
                     "বাড়িতে তৈরি নাস্তা জাতীয় খাবার (চিড়া/মুড়ি + গুড়) ও পাকা কলা"
                   ),
-                  growth: yhLang(
+                  growth: "",
+                  immunity: yhLang(
                     "Any local seasonal fruit (mango, jackfruit, papaya, pineapple, etc.)",
                     "যেকোনো দেশি মৌসুমী ফল (আম, কাঁঠাল, পেঁপে, আনারস ইত্যাদি)"
                   ),
-                  immunity: "",
                 },
                 {
                   timeEn: "Lunch",
@@ -14854,15 +14703,15 @@ const coursesData = [
                   timeBn: "বিকালের নাস্তা",
                   icon: "fa-ice-cream",
                   color: "afternoon",
-                  energy: yhLang(
+                  energy: "",
+                  growth: yhLang(
                     "1 glass milk OR any milk-based dessert (pudding, vermicelli, rice pudding, cake, yogurt, etc.)",
                     "১ গ্লাস দুধ অথবা দুধ দিয়ে তৈরি যেকোনো ঘন খাবার (ফিরনি, সেমাই, পায়েস, পিঠা, দই ইত্যাদি)"
                   ),
-                  growth: yhLang(
+                  immunity: yhLang(
                     "Any local seasonal fruit available",
-                    "যেকোনো দেশি মৌসুমী ফল। ঋতুভেদে যেসব ফল সহজেই আমরা পাই"
+                    "যেকোনো দেশি মৌসুমী ফল। ঋতুভেদে যেসব ফল সহজেই আমরা পাই "
                   ),
-                  immunity: "",
                 },
                 {
                   timeEn: "Dinner",
@@ -14895,9 +14744,9 @@ const coursesData = [
                           </span>
                           <span class="m19l4-time-text">${yhLang(meal.timeEn, meal.timeBn)}</span>
                         </td>
-                        <td>${meal.energy || "&mdash;"}</td>
-                        <td>${meal.growth || "&mdash;"}</td>
-                        <td>${meal.immunity || "&mdash;"}</td>
+                        <td><span class="m19l4-time-text">${meal.energy || "&mdash;"}</span></td>
+                        <td><span class="m19l4-time-text">${meal.growth || "&mdash;"}</span></td>
+                        <td><span class="m19l4-time-text">${meal.immunity || "&mdash;"}</span></td>
                       </tr>
                     `
                   )
@@ -14915,41 +14764,39 @@ const coursesData = [
                       <i class="fa-solid fa-utensils"></i>
                       ${yhLang(
                         "Daily Meal Plan for Adolescents",
-                        "তারুণ্যীন প্রতিদিনের খাদ্য তালিকার নমুনা"
+                        "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
                       )}
                     </h2>
-                    <p class="m19l4-subtitle">${yhLang(
-                      "A balanced meal plan ensuring energy, growth, and immunity for healthy adolescent development",
-                      "সুস্থ তারুণ্যীন বিকাশের জন্য শক্তি, বৃদ্ধি এবং রোগ প্রতিরোধ ক্ষমতা নিশ্চিত করার জন্য একটি সুষম খাদ্য পরিকল্পনা"
-                    )}</p>
-                  </div>
 
-                  <div class="m19l4-table-card" data-aos="fade-up" data-aos-delay="120">
+                  </div>
+                  <div class="row g-1 mb-2">
+                     <div class="col-md-7">
+                                           <div class="m19l4-table-card" data-aos="" data-aos-delay="">
                     <div class="m19l4-table-responsive">
                       <table class="m19l4-data-table">
                         <thead>
                           <tr>
-                            <th>${yhLang("Meal Time", "সময়")}</th>
+                            <th><h3>${yhLang("Meal Time", "সময়")}</h3></th>
                             <th>
-                              ${yhLang("Energy Foods", "তাপ ও শক্তি উৎপাদনকারী খাদ্য")}
+                              <h3>${yhLang("Energy Foods", "তাপ ও শক্তি উৎপাদনকারী খাদ্য")}
                               <small>${yhLang(
                                 "Carbohydrates: rice, bread, flattened rice, puffed rice, potato",
                                 "শর্করা: ভাত, রুটি, চিড়া, মুড়ি, আলু"
-                              )}</small>
+                              )}</small></h3>
                             </th>
                             <th>
-                              ${yhLang("Growth Foods", "শরীরের ক্ষয়পূরণ ও বৃদ্ধিকারক খাদ্য")}
+                              <h3>${yhLang("Growth Foods", "শরীরের ক্ষয়পূরণ ও বৃদ্ধিকারক খাদ্য")}
                               <small>${yhLang(
                                 "Proteins: egg, fish, meat, milk, lentils",
                                 "আমিষ: ডিম, মাছ, মাংস, দুধ, ডাল"
-                              )}</small>
+                              )}</small></h3>
                             </th>
                             <th>
-                              ${yhLang("Immunity Foods", "রোগ প্রতিরোধকারী খাদ্য")}
+                              <h3>${yhLang("Immunity Foods", "রোগ প্রতিরোধকারী খাদ্য")}
                               <small>${yhLang(
                                 "Vitamins and minerals: vegetables and seasonal fruits",
                                 "ভিটামিন ও খনিজ: সবজি ও দেশি মৌসুমী ফল"
-                              )}</small>
+                              )}</small></h3>
                             </th>
                           </tr>
                         </thead>
@@ -14960,12 +14807,15 @@ const coursesData = [
                     </div>
                   </div>
 
-                  <div class="m19l4-image-section" data-aos="fade-up" data-aos-delay="220">
-                    <img src="img/modu19/food.jpg" alt="${yhLang(
-                      "Nutritious meal plan illustration",
-                      "পুষ্টিকর খাদ্য তালিকা চিত্র"
-                    )}" />
+                  
+                     </div>
+                     <div class="col-md-5">
+                       <figure class="glass-card p-1 h-100 mb-0 text-center">
+                          <img src="img/modu19/food.jpg" alt="" style="height: 650px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
+                     <div>
                   </div>
+
                 </div>
               `;
             })(),
