@@ -2,7 +2,6 @@
 
 .m19l8-container {
   position: relative;
-  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 30%, #fff9c4 64%, #ffecb3 100%);
   border-radius: 12px;
   padding: 11px 10px;
   overflow: hidden;
@@ -133,19 +132,16 @@
 }
 
 .m19l8-section-a {
-  background: linear-gradient(160deg, rgba(255, 205, 210, 0.95), rgba(248, 187, 208, 0.9));
   border: 1px solid rgba(240, 98, 146, 0.35);
   box-shadow: 5px 7px 12px rgba(194, 24, 91, 0.15);
 }
 
 .m19l8-section-b {
-  background: linear-gradient(160deg, rgba(187, 222, 251, 0.95), rgba(144, 202, 249, 0.9));
   border: 1px solid rgba(100, 181, 246, 0.35);
   box-shadow: -5px 7px 12px rgba(13, 71, 161, 0.15);
 }
 
 .m19l8-section-c {
-  background: linear-gradient(160deg, rgba(255, 249, 196, 0.95), rgba(230, 190, 255, 0.9));
   border: 1px solid rgba(186, 104, 200, 0.35);
   box-shadow: 5px -3px 12px rgba(106, 27, 154, 0.15);
 }
@@ -181,25 +177,21 @@
 }
 
 .m19l8-box.is-warning {
-  background: rgba(255, 243, 224, 0.95);
   border-color: rgba(255, 167, 38, 0.34);
   box-shadow: inset 0 0 0 1px rgba(255, 167, 38, 0.18), 0 3px 9px rgba(245, 124, 0, 0.14);
 }
 
 .m19l8-box.is-tip {
-  background: rgba(232, 245, 233, 0.95);
   border-color: rgba(102, 187, 106, 0.35);
   box-shadow: inset 0 0 0 1px rgba(102, 187, 106, 0.18), 0 3px 9px rgba(56, 142, 60, 0.14);
 }
 
 .m19l8-box.is-definition {
-  background: rgba(227, 242, 253, 0.95);
   border-color: rgba(66, 165, 245, 0.35);
   box-shadow: inset 0 0 0 1px rgba(66, 165, 245, 0.18), 0 3px 9px rgba(13, 71, 161, 0.14);
 }
 
 .m19l8-box.is-example {
-  background: rgba(243, 229, 245, 0.95);
   border-color: rgba(171, 71, 188, 0.35);
   box-shadow: inset 0 0 0 1px rgba(171, 71, 188, 0.18), 0 3px 9px rgba(106, 27, 154, 0.14);
 }
@@ -419,8 +411,6 @@
   .m19l8-section-c,
   .m19l8-li,
   .m19l8-box {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
   }
 
   .m19l8-h1,

@@ -14824,7 +14824,7 @@ const coursesData = [
             id: "ch19-lesson-6",
             title: yhLang(
               "Adolescent Food Diversity",
-              "তারুণ্যীন খাদ্য বৈচিত্র্য"
+              "কৈশোরকালীন খাদ্য বৈচিত্র্য"
             ),
             icon: "fa-seedling",
             gradientClass: "bg-gradient-mint",
@@ -14870,11 +14870,11 @@ const coursesData = [
           ];
 
               const pointLabels = [
-                yhLang("Balanced Nutrition", "সুষম খাদ্য"),
-                yhLang("Food Variety", "খাবারের বৈচিত্র্য"),
-                yhLang("Home-Made Foods", "ঘরে তৈরি খাবার"),
-                yhLang("Avoid Junk Food", "জাঙ্ক ফুড এড়িয়ে চলুন"),
-                yhLang("Natural Foods", "প্রাকৃতিক খাবার"),
+                yhLang("Balanced Nutrition", "তারুণ্যে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।"),
+                yhLang("Food Variety", "দৈনিক একই খাবার খেতে ভালো লাগবে না, কাজেই খাবারে ভিন্নতা ও নতুনত্ব থাকলে তা রুচি বাড়াতে সক্ষম হবে।"),
+                yhLang("Home-Made Foods", "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।"),
+                yhLang("Avoid Junk Food", "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।"),
+                yhLang("Natural Foods", "প্রতিটি খাবারকে যথাসম্ভব প্রাকৃতিক অবস্থায় খেলেই সর্বোচ্চ পুষ্টি পাওয়া যায়। যেমন: ফলের জুস না খেয়ে তাজা ফল খেলে সর্বোচ্চ পুষ্টি পাওয়া যায়।"),
               ];
 
               const renderPoints = () =>
@@ -14890,8 +14890,6 @@ const coursesData = [
                             <h3 class="m19l5-point-title">${pointLabels[idx]}</h3>
                           </div>
                         </div>
-                        <p class="m19l5-point-text">${item.text}</p>
-                        <span class="m19l5-point-badge">${yhLang("Tip", "পরামর্শ")}</span>
                       </div>
                     `
                   )
@@ -14899,7 +14897,7 @@ const coursesData = [
 
               return `
                 <link rel="stylesheet" href="css/m19l5.css">
-                <div class="m19l5-container">
+                <div class="m19l5-container lesson-slide">
                   <div class="m19l5-shape m19l5-shape-1"></div>
                   <div class="m19l5-shape m19l5-shape-2"></div>
                   <div class="m19l5-shape m19l5-shape-3"></div>
@@ -14909,7 +14907,7 @@ const coursesData = [
                       <i class="fa-solid fa-leaf"></i>
                       ${yhLang(
                         "Adolescent Food Diversity",
-                        "তারুণ্যীন খাদ্য বৈচিত্র্য"
+                        "কৈশোরকালীন খাদ্য বৈচিত্র্য"
                       )}
                     </h2>
                     <p class="m19l5-subtitle">${yhLang(
@@ -14920,19 +14918,6 @@ const coursesData = [
 
                   <div class="m19l5-points-grid">
                     ${renderPoints()}
-                  </div>
-
-                  <div class="m19l5-summary" data-aos="fade-up" data-aos-delay="400">
-                    <div class="m19l5-summary-icon">
-                      <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <div class="m19l5-summary-text">
-                      <strong>${yhLang("Key Takeaway:", "মূল বিষয়:")}</strong>
-                      ${yhLang(
-                        "Healthy eating during adolescence creates habits that last a lifetime. Include diverse, home-cooked foods and avoid processed junk food to support optimal growth and well-being.",
-                        "তারুণ্যে স্বাস্থ্যকর খাওয়ার অভ্যাস সারাজীবন থাকে। সর্বোত্তম বৃদ্ধি এবং সুস্থতা নিশ্চিত করতে বৈচিত্র্যময় ঘরে তৈরি খাবার অন্তর্ভুক্ত করুন এবং প্রক্রিয়াজাত জাঙ্ক ফুড এড়িয়ে চলুন।"
-                      )}
-                    </div>
                   </div>
                 </div>
               `;
@@ -15054,10 +15039,6 @@ const coursesData = [
                         "মাসিককালীন সময়ে পুষ্টিকর খাদ্য"
                       )}
                     </h2>
-                    <p class="m19l7-subtitle">${yhLang(
-                      "Essential nutrients to maintain health during menstruation",
-                      "মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে প্রয়োজনীয় পুষ্টি উপাদান"
-                    )}</p>
                   </div>
 
                   <div class="m19l7-info" data-aos="fade-up" data-aos-delay="60">
@@ -15065,10 +15046,10 @@ const coursesData = [
                       <i class="fa-solid fa-circle-info"></i>
                     </div>
                     <div class="m19l7-info-text">
-                      ${yhLang(
+                      <span>${yhLang(
                         "During menstruation, blood loss from the body can lead to malnutrition and anemia. To compensate for this deficiency, it is necessary to eat iron, calcium, magnesium, fiber and vitamin-rich foods along with normal food. These foods help to stay healthy and strong during menstruation.",
                         "মাসিকের সময় দেহ থেকে রক্তক্ষরণ হয়, ফলে পুষ্টিহীনতা ও রক্তস্বল্পতা দেখা দিতে পারে। এই ঘাটতি পূরণের জন্য স্বাভাবিক খাবারের পাশাপাশি আয়রন, ক্যালসিয়াম, ম্যাগনেসিয়াম, আঁশযুক্ত ও ভিটামিনসমৃদ্ধ খাবার খাওয়া দরকার। এসব খাবার মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে সাহায্য করে।"
-                      )}
+                      )}</span>
                     </div>
                   </div>
 
@@ -15077,8 +15058,8 @@ const coursesData = [
                       <table class="m19l7-data-table">
                         <thead>
                           <tr>
-                            <th>${yhLang("Nutrient Type & Role", "খাদ্যের ধরণ ও ভূমিকা")}</th>
-                            <th>${yhLang("Food Sources & Details", "খাবারের উদাহরণ ও বিস্তারিত")}</th>
+                            <th><h3>${yhLang("Nutrient Type & Role", "খাদ্যের ধরণ ও ভূমিকা")}</h3></th>
+                            <th><h3>${yhLang("Food Sources & Details", "খাবারের উদাহরণ ও বিস্তারিত")}</h3></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -15197,12 +15178,17 @@ const coursesData = [
                   <div class="m19l8-shape m19l8-shape-3"></div>
 
                   <div class="m19l8-header" data-aos="fade-up">
-                    <h2 class="m19l8-h2"><i class="fa-solid fa-apple-whole"></i>${yhLang("তরুন-তরুনীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ", "তরুন-তরুনীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ")}</h2>
+                    <h2 class="m19l8-h2"><i class="fa-solid fa-apple-whole"></i>${yhLang("কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ", "কিশোর-কিশোরীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ")}</h2>
                   </div>
 
                   <section class="m19l8-section m19l8-section-a" data-aos="fade-up" data-aos-delay="20">
                     <h3 class="m19l8-h3"><i class="fa-solid fa-droplet"></i>${yhLang("এনিমিয়া বা রক্তস্বল্পতা", "এনিমিয়া বা রক্তস্বল্পতা")}</h3>
-                    <p class="m19l8-p">এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। কিশোরীদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় কিশোরীদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।</p>
+                   <p class="m19l8-p">
+  ${yhLang(
+    "Anemia: Anemia occurs when the number of red blood cells in the blood decreases. Iron deficiency is a very common problem among adolescent girls. Since girls lose blood every month during menstruation, if they do not consume enough iron-rich foods, iron deficiency develops in the body and anemia occurs.",
+    "এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। কিশোরীদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় কিশোরীদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।"
+  )}
+</p>
                   </section>
 
                   <section class="m19l8-section m19l8-section-b" data-aos="fade-up" data-aos-delay="40">
@@ -15225,22 +15211,31 @@ const coursesData = [
                   <section class="m19l8-section m19l8-section-c" data-aos="fade-up" data-aos-delay="60">
                     <div class="m19l8-grid">
                       <article class="m19l8-col-4 m19l8-box is-tip">
-                        <h4 class="m19l8-h4"><i class="fa-solid fa-tablets"></i>আয়রন ফলিক এসিড ট্যাবলেট</h4>
-                        <h5 class="m19l8-h5"><i class="fa-solid fa-clock"></i>${yhLang("সাপ্তাহিক গ্রহণ", "সাপ্তাহিক গ্রহণ")}</h5>
-                        <h6 class="m19l8-h6"><i class="fa-solid fa-circle-info"></i>${yhLang("প্রতিরোধ বার্তা", "প্রতিরোধ বার্তা")}</h6>
-                        <p>রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে। সরকারি স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।</p>
+                        <h3 class="m19l8-h4"><i class="fa-solid fa-tablets"></i>${yhLang("আয়রন ফলিক এসিড ট্যাবলেট", "আয়রন ফলিক এসিড ট্যাবলেট")}</h3>
+                        <p>
+  ${yhLang(
+    "To prevent anemia, adolescent girls should take one iron–folic acid tablet every week after a meal. These iron–folic acid tablets are provided to every adolescent girl from government health service centers.",
+    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে। সরকারি স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।"
+  )}
+</p>
                       </article>
                       <article class="m19l8-col-4 m19l8-box is-definition">
-                        <h4 class="m19l8-h4"><i class="fa-solid fa-vial-circle-check"></i>আয়োডিন ঘাটতি :</h4>
-                        <h5 class="m19l8-h5"><i class="fa-solid fa-prescription-bottle"></i>${yhLang("আয়োডিনযুক্ত লবণ", "আয়োডিনযুক্ত লবণ")}</h5>
-                        <h6 class="m19l8-h6"><i class="fa-solid fa-brain"></i>${yhLang("বুদ্ধিবিকাশ সুরক্ষা", "বুদ্ধিবিকাশ সুরক্ষা")}</h6>
-                        <p>মানবদেহে আয়োডিন একটি গুরুত্বপূর্ণ পুষ্টি উপাদান। আয়োডিন ঘাটতি হলে গলগণ্ড, খর্বতা ও বুদ্ধি প্রতিবন্ধিতাসহ বিভিন্ন সমস্যা দেখা দেয়, যা প্রতিরোধে আয়োডিনযুক্ত লবণ খেতে হয়।</p>
+                        <h3 class="m19l8-h4"><i class="fa-solid fa-vial-circle-check"></i>${yhLang("আয়োডিন ঘাটতি :", "আয়োডিন ঘাটতি :")}</h3>
+                        <p>
+  ${yhLang(
+    "Iodine is an important nutrient for the human body. Iodine deficiency can cause various problems such as goiter, stunted growth, and intellectual disability. To prevent these problems, iodized salt should be consumed.",
+    "মানবদেহে আয়োডিন একটি গুরুত্বপূর্ণ পুষ্টি উপাদান। আয়োডিন ঘাটতি হলে গলগণ্ড, খর্বতা ও বুদ্ধি প্রতিবন্ধিতাসহ বিভিন্ন সমস্যা দেখা দেয়, যা প্রতিরোধে আয়োডিনযুক্ত লবণ খেতে হয়।"
+  )}
+</p>
                       </article>
                       <article class="m19l8-col-4 m19l8-box is-example">
-                        <h4 class="m19l8-h4"><i class="fa-solid fa-bone"></i>ক্যালসিয়াম ঘাটতি :</h4>
-                        <h5 class="m19l8-h5"><i class="fa-solid fa-tooth"></i>${yhLang("হাড় ও দাঁত", "হাড় ও দাঁত")}</h5>
-                        <h6 class="m19l8-h6"><i class="fa-solid fa-wave-square"></i>${yhLang("স্নায়ু ও রক্তজমাট", "স্নায়ু ও রক্তজমাট")}</h6>
-                        <p>ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই কৈশোরে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।</p>
+                        <h3 class="m19l8-h4"><i class="fa-solid fa-bone"></i>${yhLang("ক্যালসিয়াম ঘাটতি :", "ক্যালসিয়াম ঘাটতি :")}</h3>
+                        <p>
+  ${yhLang(
+    "Calcium helps in the formation of bones and teeth, keeps the nerves strong, and supports normal blood clotting in the body. Therefore, calcium-rich foods should be consumed during adolescence.",
+    "ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই কৈশোরে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।"
+  )}
+</p>
                       </article>
                     </div>
                   </section>
@@ -15252,118 +15247,14 @@ const coursesData = [
             id: "ch19-lesson-9",
             title: yhLang(
               "Adolescent Nutrition and Malnutrition Cycle",
-              "তারুণ্যীন পুষ্টি এবং অপুষ্টি চক্র"
+              "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র"
             ),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: null,
             content: (function () {
-              const cycleProblems = [
-              {
-                text: yhLang(
-                  "Adolescent girls suffering from nutrition-related problems may not achieve proper physical growth and may become short in height.",
-                  "পুষ্টিজনিত সমস্যায় ভোগা কিশোরীদের পর্যাপ্ত দৈহিক বৃদ্ধি না হওয়ায় বেঁটে/খাটো হয়"
-                ),
-                icon: "fa-child",
-                tone: "danger",
-              },
-              {
-                text: yhLang(
-                  "Adolescent girls may give birth to low-birth-weight babies.",
-                  "কিশোরীরা কম ওজনের শিশুর জন্ম দিয়ে থাকে"
-                ),
-                icon: "fa-baby",
-                tone: "warn",
-              },
-              {
-                text: yhLang(
-                  "Girls born with low birth weight may also become short when they grow up.",
-                  "কম ওজনের মেয়ে শিশুরা বড় হলে আবারও খাটো হয়"
-                ),
-                icon: "fa-person-arrow-down-to-line",
-                tone: "danger",
-              },
-              {
-                text: yhLang(
-                  "This cycle continues from generation to generation and becomes more severe.",
-                  "এই চক্র বংশপরম্পরায় চলতে থাকে এবং আরও ভয়াবহ হয়"
-                ),
-                icon: "fa-arrows-spin",
-                tone: "danger",
-              },
-              {
-                text: yhLang(
-                  "Long-term health problems develop in families and society.",
-                  "পরিবার ও সমাজে দীর্ঘমেয়াদী স্বাস্থ্য সমস্যা তৈরি হয়"
-                ),
-                icon: "fa-house-medical-circle-xmark",
-                tone: "warn",
-              },
-            ];
-
-            const solutions = [
-              {
-                text: yhLang(
-                  "Nutritious food intake should be ensured at every stage of life.",
-                  "জীবনের সকল স্তরেই পুষ্টিকর খাবার গ্রহণ নিশ্চিত করতে হবে"
-                ),
-                icon: "fa-bowl-food",
-                tone: "success",
-              },
-              {
-                text: yhLang(
-                  "Special attention should be given to nutrition during childhood and adolescence.",
-                  "শৈশব ও কৈশোরে বিশেষ গুরুত্ব দিয়ে পুষ্টি নিশ্চিত করতে হবে"
-                ),
-                icon: "fa-seedling",
-                tone: "success",
-              },
-              {
-                text: yhLang(
-                  "Health and nutrition services should be provided to adolescent girls and women.",
-                  "কিশোরী ও নারীদের স্বাস্থ্য ও পুষ্টি সেবা প্রদান করতে হবে"
-                ),
-                icon: "fa-user-nurse",
-                tone: "info",
-              },
-              {
-                text: yhLang(
-                  "Balanced diet, iron–folic acid, and other nutrients should be provided.",
-                  "সুষম খাদ্য, আয়রন-ফলিক এসিড ও অন্যান্য পুষ্টি উপাদান সরবরাহ করতে হবে"
-                ),
-                icon: "fa-pills",
-                tone: "accent",
-              },
-              {
-                text: yhLang(
-                  "Nutrition awareness should be increased within families and communities.",
-                  "পরিবার ও সমাজে পুষ্টি সচেতনতা বৃদ্ধি করতে হবে"
-                ),
-                icon: "fa-lightbulb",
-                tone: "info",
-              },
-              {
-                text: yhLang(
-                  "Regular health check-ups and monitoring should be conducted.",
-                  "নিয়মিত স্বাস্থ্য পরীক্ষা ও পর্যবেক্ষণ করতে হবে"
-                ),
-                icon: "fa-stethoscope",
-                tone: "accent",
-              },
-            ];
-
-              const renderList = (items) =>
-                `<ul class="m19l9-list">${items
-                  .map(
-                    (item, index) => `
-                      <li class="m19l9-li m19l9-${item.tone}" data-aos="fade-up" data-aos-delay="${45 + index * 30}">
-                        <span class="m19l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m19l9-li-text">${item.text}</span>
-                      </li>
-                    `
-                  )
-                  .join("")}</ul>`;
+             
 
               return `
                 <link rel="stylesheet" href="css/m19l9.css">
@@ -15373,20 +15264,12 @@ const coursesData = [
                   <div class="m19l9-shape m19l9-shape-3"></div>
 
                   <div class="m19l9-header" data-aos="fade-up">
-                    <h2 class="m19l9-h2"><i class="fa-solid fa-rotate"></i>${yhLang("Adolescent Nutrition and Malnutrition Cycle", "তারুণ্যীন পুষ্টি এবং অপুষ্টি চক্র")}</h2>
+                    <h2 class="m19l9-h2"><i class="fa-solid fa-rotate"></i>${yhLang("Adolescent Nutrition and Malnutrition Cycle", "কৈশোরকালীন পুষ্টি এবং অপুষ্টি চক্র")}</h2>
                   </div>
 
-                  <section class="m19l9-section m19l9-section-a" data-aos="fade-up" data-aos-delay="20">
-                    <h3 class="m19l9-h3"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Malnutrition Cycle Problems", "অপুষ্টি চক্রের সমস্যাসমূহ")}</h3>
-                    <div class="m19l9-intro-box">
-                      <p class="m19l9-p"><strong>${yhLang("The malnutrition cycle continues through generations.", "অপুষ্টি চক্র বংশপরম্পরায় চলতে থাকে।")}</strong> ${yhLang("If this cycle is not broken, long-term health problems arise in families and society.", "এই চক্র ভেঙে না ফেললে পরিবার ও সমাজে দীর্ঘমেয়াদী স্বাস্থ্য সমস্যা সৃষ্টি হয়।")}</p>
-                    </div>
-                    ${renderList(cycleProblems)}
-                  </section>
-
                   <section class="m19l9-section m19l9-section-b" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="m19l9-h3"><i class="fa-solid fa-hand-holding-heart"></i>${yhLang("How to Break the Malnutrition Cycle", "কীভাবে অপুষ্টি চক্র ভাঙা যায়")}</h3>
-                    ${renderList(solutions)}
+                    <span class=""><i class="fa-solid fa-hand-holding-heart"></i>${yhLang("How to Break the Malnutrition Cycle", "অপুষ্টি চক্র বংশ পরম্পরায় চলতে থাকে। পুষ্টিজনিত সমস্যায় ভোগা কিশোরীদের পর্যাপ্ত দৈহিক বৃিদ্ধ না হওয়ায় বেঁটে/খাটো হয় এবং তারা কম ওজনের শিশুর জন্ম দিয়ে থাকে। আর এই কম ওজনের শিশুরা যদি মেয়ে হয় তাহলে তারাও বড় হলে খাটো হয় এবং বিয়ে হলে আবারো কম ওজনের শিশুর জন্ম দেয় যা আরো ভয়াবহ। এভাবেই এই চক্র চলতে থাকে যতক্ষণ পর্যন্ত না এই চক্র ভেঙে যায়। এজন্য জীবনের সকল স্তরেই, বিশেষ করে শৈশব ও কৈশোরে পুষ্টিকর খাবার গ্রহণের মাধ্যমে কিশোরী ও নারীদের পুষ্টি নিশ্চিত করতে হবে।")}</span>
+                 
                   </section>
 
                   <section class="m19l9-section m19l9-section-c" data-aos="fade-up" data-aos-delay="60">
@@ -15394,11 +15277,9 @@ const coursesData = [
                     <div class="m19l9-gallery">
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="80">
                         <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" class="img-fluid rounded img-zoom" />
-                        <figcaption class="m19l9-caption">${yhLang("Nutrition Awareness Cycle", "পুষ্টি সচেতনতা চক্র")}</figcaption>
                       </figure>
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="100">
                         <img src="img/modu19/pusti2.png" alt="তারুণ্যীন পুষ্টি" class="img-fluid rounded img-zoom" />
-                        <figcaption class="m19l9-caption">${yhLang("Adolescent Nutrition Cycle", "তারুণ্যীন পুষ্টি চক্র")}</figcaption>
                       </figure>
                     </div>
                   </section>

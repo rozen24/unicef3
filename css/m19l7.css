@@ -2,9 +2,7 @@
 
 .m19l7-container {
   position: relative;
-  min-height: 100vh;
   padding: 0.8rem 0.5rem;
-  background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 35%, #CE93D8 70%, #BA68C8 100%);
   overflow: hidden;
 }
 
@@ -97,7 +95,7 @@
   box-shadow: 0 3px 10px rgba(156, 39, 176, 0.12);
   display: flex;
   gap: 0.4rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .m19l7-info-icon {
@@ -323,7 +321,6 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   .m19l7-container {
-    background: linear-gradient(135deg, #1A0B1E 0%, #2D1435 35%, #3A1646 70%, #4A1A58 100%);
   }
 
   .m19l7-title {

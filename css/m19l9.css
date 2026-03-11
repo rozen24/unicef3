@@ -2,9 +2,8 @@
 
 .m19l9-container {
   position: relative;
-  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 30%, #fff9c4 64%, #e1bee7 100%);
   border-radius: 12px;
-  padding: 11px 10px;
+  padding-top: 5px;
   overflow: hidden;
   font-family: "Noto Sans Bengali", "Hind Siliguri", "Poppins", sans-serif;
   display: flex;
@@ -160,7 +159,6 @@
 }
 
 .m19l9-section-b {
-  background: linear-gradient(160deg, rgba(243, 229, 245, 0.95), rgba(206, 147, 216, 0.9));
   border: 1px solid rgba(171, 71, 188, 0.35);
   box-shadow: -5px 7px 12px rgba(106, 27, 154, 0.15);
 }
@@ -423,7 +421,6 @@
   .m19l9-li,
   .m19l9-intro-box,
   .m19l9-gallery-item {
-    background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.2);
   }
 
