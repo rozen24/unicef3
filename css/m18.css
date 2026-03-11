@@ -1,0 +1,398 @@
+/* Module 18 Lesson 5 - Bone Fractures (হাড় ভাঙ্গা) */
+
+/* Responsive base sizes - smaller than default */
+:root {
+  --m18l5-base-font: 0.9rem;
+  --m18l5-h2-size: 1.6rem;
+  --m18l5-h3-size: 1.2rem;
+  --m18l5-h4-size: 1rem;
+  --m18l5-h5-size: 0.9rem;
+  --m18l5-icon-size: 1.2rem;
+  --m18l5-padding-base: 0.75rem;
+  --m18l5-padding-lg: 1.2rem;
+  --m18l5-radius: 12px;
+}
+
+.mod18-lesson5 {
+  background: linear-gradient(135deg, #fef3f0 0%, #f5e9ff 50%, #e8f4f8 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+/* Decorative shapes */
+.m18l5-shape {
+  position: absolute;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.m18l5-shape-1 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #ff6b87, #ff8fa3);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  top: -50px;
+  right: -50px;
+}
+
+.m18l5-shape-2 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  bottom: 100px;
+  left: -30px;
+}
+
+.m18l5-shape-3 {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* Hero Section */
+.m18l5-hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: var(--m18l5-padding-lg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+  border-radius: var(--m18l5-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.m18l5-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ffa947, #ff7f50);
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.m18l5-hero-title {
+  font-size: var(--m18l5-h2-size);
+  font-weight: 700;
+  margin: 0;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.m18l5-hero-title i {
+  color: #ff6b6b;
+  font-size: 1.4rem;
+}
+
+/* Intro Panels */
+.m18l5-intro-panel {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.2rem;
+  padding: var(--m18l5-padding-lg);
+  border-radius: var(--m18l5-radius);
+  background: white;
+}
+
+.m18l5-intro-panel.m18l5-shadow-definition {
+  box-shadow: 0 2px 20px rgba(59, 130, 246, 0.15);
+  border-left: 4px solid #3b82f6;
+}
+
+.m18l5-intro-panel.m18l5-shadow-example {
+  box-shadow: 0 2px 20px rgba(168, 85, 247, 0.15);
+  border-left: 4px solid #a855f7;
+}
+
+.m18l5-block-title {
+  font-size: var(--m18l5-h3-size);
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: #1a202c;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.m18l5-block-title i {
+  font-size: 1.1rem;
+}
+
+.m18l5-intro-panel.m18l5-shadow-definition .m18l5-block-title i {
+  color: #3b82f6;
+}
+
+.m18l5-intro-panel.m18l5-shadow-example .m18l5-block-title i {
+  color: #a855f7;
+}
+
+.m18l5-intro-text {
+  font-size: var(--m18l5-base-font);
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.m18l5-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Fracture Panels */
+.m18l5-fracture-panel {
+  background: white;
+  border-radius: var(--m18l5-radius);
+  padding: var(--m18l5-padding-lg);
+  position: relative;
+}
+
+.m18l5-fracture-panel.m18l5-open.m18l5-shadow-warning {
+  box-shadow: 0 4px 25px rgba(239, 68, 68, 0.12);
+  border-top: 4px solid #ef4444;
+}
+
+.m18l5-fracture-panel.m18l5-closed.m18l5-shadow-tip {
+  box-shadow: 0 4px 25px rgba(16, 185, 129, 0.12);
+  border-top: 4px solid #10b981;
+}
+
+.m18l5-panel-title {
+  font-size: var(--m18l5-h4-size);
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #1a202c;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.m18l5-fracture-panel.m18l5-open .m18l5-panel-title i {
+  color: #ef4444;
+  font-size: 1.2rem;
+}
+
+.m18l5-fracture-panel.m18l5-closed .m18l5-panel-title i {
+  color: #10b981;
+  font-size: 1.2rem;
+}
+
+.m18l5-panel-subtitle {
+  font-size: var(--m18l5-h5-size);
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.m18l5-panel-subtitle i {
+  font-size: 0.95rem;
+}
+
+.m18l5-fracture-panel.m18l5-open .m18l5-panel-subtitle i {
+  color: #ef4444;
+}
+
+.m18l5-fracture-panel.m18l5-closed .m18l5-panel-subtitle i {
+  color: #10b981;
+}
+
+/* Steps List */
+.m18l5-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.m18l5-step-item {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+}
+
+/* Step Item Tones */
+.m18l5-step-item.m18l5-tone-warning {
+  background: #fef3f0;
+  border-left: 3px solid #ef4444;
+  color: #7f1d1d;
+}
+
+.m18l5-step-item.m18l5-tone-danger {
+  background: #fed7d7;
+  border-left: 3px solid #dc2626;
+  color: #7f1d1d;
+}
+
+.m18l5-step-item.m18l5-tone-success {
+  background: #f0fce7;
+  border-left: 3px solid #10b981;
+  color: #0d47a1;
+}
+
+.m18l5-step-item.m18l5-tone-info {
+  background: #eff6ff;
+  border-left: 3px solid #3b82f6;
+  color: #1e40af;
+}
+
+.m18l5-step-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.m18l5-step-item.m18l5-tone-warning .m18l5-step-icon {
+  background: #fecaca;
+  color: #991b1b;
+}
+
+.m18l5-step-item.m18l5-tone-danger .m18l5-step-icon {
+  background: #fca5a5;
+  color: #7f1d1d;
+}
+
+.m18l5-step-item.m18l5-tone-success .m18l5-step-icon {
+  background: #a7f3d0;
+  color: #065f46;
+}
+
+.m18l5-step-item.m18l5-tone-info .m18l5-step-icon {
+  background: #bfdbfe;
+  color: #1e3a8a;
+}
+
+/* Media and Images */
+.m18l5-media {
+  margin-top: 1.2rem;
+}
+
+.m18l5-media-double {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.8rem;
+}
+
+.m18l5-image-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  background: #f9fafb;
+  padding: 0;
+}
+
+.m18l5-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.m18l5-caption {
+  padding: 0.6rem;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  margin: 0;
+}
+
+.m18l5-caption h6 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.m18l5-caption h6 i {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --m18l5-base-font: 0.85rem;
+    --m18l5-h2-size: 1.4rem;
+    --m18l5-h3-size: 1rem;
+    --m18l5-h4-size: 0.9rem;
+    --m18l5-padding-base: 0.6rem;
+    --m18l5-padding-lg: 1rem;
+  }
+
+  .m18l5-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .m18l5-media-double {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --m18l5-base-font: 0.8rem;
+    --m18l5-h2-size: 1.3rem;
+    --m18l5-h3-size: 0.95rem;
+    --m18l5-h4-size: 0.85rem;
+    --m18l5-padding-base: 0.5rem;
+    --m18l5-padding-lg: 0.8rem;
+  }
+
+  .mod18-lesson5 {
+    padding: 0.75rem;
+  }
+
+  .m18l5-hero {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .m18l5-shape-1 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .m18l5-shape-2 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .m18l5-shape-3 {
+    width: 80px;
+    height: 80px;
+  }
+}
