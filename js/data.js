@@ -15605,6 +15605,10 @@ const coursesData = [
                     <span class="mod20-shape mod20-shape--wave"></span>
                   </div>
                   <div class="mod20-content">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-virus"></i>${yhLang(
+                    "অসংক্রামক রোগ",
+                    "অসংক্রামক রোগ"
+                  )}</h2>
                   <div class="glass-card p-4 mb-3">
                     <p class="mb-0" data-aos="fade-up" data-aos-delay="80">
                       ${yhLang(
@@ -15798,7 +15802,7 @@ const coursesData = [
             content: (function () {
               const introText = yhLang(
   "An integrated and effective strategy is needed to prevent tobacco use (smoking, jarda, gul, etc.) and alcohol consumption.",
-  "তামাকজাত দ্রব্য (ধূমপান, জর্দা, গুল ইত্যাদি) এবং মদ্যপান প্রতিরোধে একটি সমন্বিত ও কার্যকর কৌশল প্রয়োজন।"
+  " তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়"
 );
 
 const leftSections = [
@@ -17970,7 +17974,7 @@ const renderCards = () =>
                     <i class="fa-solid fa-triangle-exclamation" style="color: #fbc02d; margin-right: 12px; font-size: 1.2em;"></i>
                     সতর্কতাঃ
                   </h2>
-                  <div class="modern-card glass-card caution-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 16px 48px rgba(251,192,45,.3), 0 6px 20px rgba(245,127,23,.2);">
+                  <div class="modern-card glass-card caution-card lesson-slide" data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 16px 48px rgba(251,192,45,.3), 0 6px 20px rgba(245,127,23,.2);">
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
