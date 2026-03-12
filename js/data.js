@@ -13505,6 +13505,132 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch16-lesson-6",
+            title: yhLang("Ethics", "নৈতিকতা"),
+            icon: "fa-scale-balanced",
+            gradientClass: "bg-gradient-primary",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q16f",
+                  question: yhLang(
+                    "Which of the following is an ethical principle in psychosocial support?",
+                    "নিচের কোনটি মনোসামাজিক সহায়তার নৈতিক নীতি?",
+                  ),
+                  options: [
+                    yhLang("গোপনীয়তা রক্ষা করা", "গোপনীয়তা রক্ষা করা"),
+                    yhLang("ব্যক্তিগত স্বার্থ রক্ষা", "ব্যক্তিগত স্বার্থ রক্ষা"),
+                    yhLang("অন্যের মতামত উপেক্ষা করা", "অন্যের মতামত উপেক্ষা করা"),
+                    yhLang("শুধু নিজের বিশ্বাস চাপিয়ে দেওয়া", "শুধু নিজের বিশ্বাস চাপিয়ে দেওয়া"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <!-- Module 16 Lesson 6: Ethics (নৈতিকতা) -->
+<div class="lesson-slide mod16-lesson6">
+  <div class="m16l6-shapes" role="presentation">
+    <span class="m16l6-shape m16l6-shape--star"></span>
+    <span class="m16l6-shape m16l6-shape--circle"></span>
+    <span class="m16l6-shape m16l6-shape--diamond"></span>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="m16l6-hero" data-aos="fade-up" data-aos-delay="20">
+    <div class="m16l6-hero__badge">
+      <i class="fa-solid fa-scale-balanced"></i>
+    </div>
+    <div class="m16l6-hero__content">
+      <h2 class="m16l6-hero__title">${yhLang("Ethics", "নৈতিকতা")}</h2>
+    </div>
+  </section>
+
+  <!-- Description 1: Definition -->
+  <section class="m16l6-desc-card m16l6-desc--definition" data-aos="fade-up" data-aos-delay="30">
+    <div class="m16l6-desc-icon">
+      <i class="fa-solid fa-book-open"></i>
+    </div>
+    <p class="m16l6-desc-text">${yhLang("Ethics is a branch of knowledge that deals with moral problems and judgment — such as maintaining confidentiality, giving equal dignity to all, and remaining just and fair.", "নৈতিকতা হচ্ছে এমন এক প্রকার জ্ঞান যা নৈতিক সমস্যা ও বিচার বিবেচনা নিয়ে আলোচনা করে যমন- গোপনীয়তা রক্ষা করা, সবাইকে সমান মর্যাদা দেয়া, ন্যায়পরায়ণ থাকা ইত্যাদি ।")}</p>
+  </section>
+
+  <!-- Description 2: Role in Psychosocial Support -->
+  <section class="m16l6-desc-card m16l6-desc--process" data-aos="fade-up" data-aos-delay="40">
+    <div class="m16l6-desc-icon">
+      <i class="fa-solid fa-heart-circle-check"></i>
+    </div>
+    <p class="m16l6-desc-text">${yhLang("The psychosocial support process is guided by ethics such as maintaining confidentiality, giving equal dignity to all, and being fair — these guide the support process and help the helper stay aware of what kind of response is needed in any situation, by making them responsible.", "মনোসামাজিক সহায়তা প্রক্রিয়া কতগুলো নৈতিকতা যেমন- গোপনীয়তা রক্ষা করা, সবাইকে সমান মর্যাদা দেয়া, ন্যায়পরায়ণ থাকা ইত্যাদির উপর ভিত্তি করে পরিচালিত হয় যা সহায়তা প্রক্রিয়াকে দিক নির্দেশনা দিয়ে থাকে। এই নৈতিকতা সহায়তাকারীকে দায়িত্বশীল করে তোলার মাধ্যমে কোন পরিস্থিতিতে কোন ধরনের প্রতিক্রিয়া করতে হবে সে সম্পর্কে সচেতন থাকতে সহায়তা করে।")}</p>
+  </section>
+
+  <!-- Description 3: Duty -->
+  <section class="m16l6-desc-card m16l6-desc--duty" data-aos="fade-up" data-aos-delay="50">
+    <div class="m16l6-desc-icon">
+      <i class="fa-solid fa-user-shield"></i>
+    </div>
+    <p class="m16l6-desc-text">${yhLang("It is the duty of every psychosocial helper to learn about certain ethical qualities before taking responsibility, and to follow those principles after taking responsibility.", "মনোসামাজিক সহায়তাকারীর দায়িত্ব গ্রহণের পূর্বে কিছুনৈতিক গুণাবলী সম্পর্কে জানা এবং দায়িত্ব গ্রহণের পর সেই নীতিগুলো পালন করা প্রতিটি মনোসামাজিক সহায়তাকারীরই কর্তব্য।")}</p>
+  </section>
+
+  <!-- Principles Section -->
+  <section class="m16l6-principles" data-aos="fade-up" data-aos-delay="60">
+    <div class="m16l6-principles-header">
+      <div class="m16l6-principles-icon">
+        <i class="fa-solid fa-list-check"></i>
+      </div>
+      <h3 class="m16l6-principles-title">${yhLang("These core principles are:", "এ সকল নীতিগুলো হচ্ছে :")}</h3>
+    </div>
+    <ul class="m16l6-principles-list">
+      <li class="m16l6-principle-item m16l6-principle--confidentiality" data-aos="fade-up" data-aos-delay="65">
+        <div class="m16l6-principle-icon">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <span class="m16l6-principle-text">${yhLang("Maintaining confidentiality", "গোপনীয়তা রক্ষা করা")}</span>
+      </li>
+      <li class="m16l6-principle-item m16l6-principle--dignity" data-aos="fade-up" data-aos-delay="70">
+        <div class="m16l6-principle-icon">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <span class="m16l6-principle-text">${yhLang("Giving equal dignity to every person", "প্রতিটি মানুষকে সমমর্যাদা দেয়া")}</span>
+      </li>
+      <li class="m16l6-principle-item m16l6-principle--freedom" data-aos="fade-up" data-aos-delay="75">
+        <div class="m16l6-principle-icon">
+          <i class="fa-solid fa-person-walking"></i>
+        </div>
+        <span class="m16l6-principle-text">${yhLang("Respecting personal freedom", "ব্যক্তি স্বাধীনতার মর্যাদা করা")}</span>
+      </li>
+      <li class="m16l6-principle-item m16l6-principle--justice" data-aos="fade-up" data-aos-delay="80">
+        <div class="m16l6-principle-icon">
+          <i class="fa-solid fa-gavel"></i>
+        </div>
+        <span class="m16l6-principle-text">${yhLang("Remaining fair and just", "ন্যায়পরায়ণ থাকা")}</span>
+      </li>
+      <li class="m16l6-principle-item m16l6-principle--trust" data-aos="fade-up" data-aos-delay="85">
+        <div class="m16l6-principle-icon">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <span class="m16l6-principle-text">${yhLang("Maintaining trust and sincerity", "আস্থা ও আন্তরিকতা বজায় রাখা")}</span>
+      </li>
+      <li class="m16l6-principle-item m16l6-principle--empathy" data-aos="fade-up" data-aos-delay="90">
+        <div class="m16l6-principle-icon">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <span class="m16l6-principle-text">${yhLang("Behaving with compassion and empathy", "সহমর্মিতার সাথে আচরণ করা")}</span>
+      </li>
+      <li class="m16l6-principle-item m16l6-principle--accountability" data-aos="fade-up" data-aos-delay="95">
+        <div class="m16l6-principle-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <span class="m16l6-principle-text">${yhLang("Taking responsibility for one's own behavior", "নিজের আচরণের জন্য দায়িত্ব গ্রহণ করা")}</span>
+      </li>
+    </ul>
+  </section>
+</div>
+              `;
+            })(),
+          },
         ],
       },
       {

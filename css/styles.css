@@ -8700,6 +8700,495 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 }
 
+/* ==================== MODULE 16 • LESSON 6 - ETHICS (নৈতিকতা) ==================== */
+.lesson-slide.mod16-lesson6 {
+  position: relative;
+  padding: 12px 10px;
+  overflow: hidden;
+  background: linear-gradient(135deg,
+    #e8eaf6 0%,
+    #ede7f6 30%,
+    #e3f2fd 65%,
+    #e8f5e9 100%
+  );
+}
+
+.lesson-slide.mod16-lesson6::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(57, 73, 171, 0.18), transparent 70%);
+  border-radius: 50%;
+  filter: blur(54px);
+  pointer-events: none;
+  animation: floatSlow 28s ease-in-out infinite;
+}
+
+.lesson-slide.mod16-lesson6::after {
+  content: '';
+  position: absolute;
+  bottom: -36%;
+  left: -17%;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(100, 181, 246, 0.16), transparent 72%);
+  border-radius: 50%;
+  filter: blur(52px);
+  pointer-events: none;
+  animation: floatSlow 25s ease-in-out infinite reverse;
+}
+
+.m16l6-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.m16l6-shape {
+  position: absolute;
+  border: 1.5px solid rgba(57, 73, 171, 0.22);
+  animation: float 25s ease-in-out infinite;
+}
+
+.m16l6-shape--star {
+  width: 42px;
+  height: 42px;
+  border-radius: 42% 58% 38% 62% / 44% 42% 58% 56%;
+  top: 14%;
+  right: 9%;
+  background: linear-gradient(135deg, rgba(121, 134, 203, 0.12), transparent);
+}
+
+.m16l6-shape--circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  top: 70%;
+  left: 10%;
+  animation-delay: 2s;
+  background: radial-gradient(circle, rgba(57, 73, 171, 0.1), transparent);
+}
+
+.m16l6-shape--diamond {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  transform: rotate(45deg);
+  bottom: 18%;
+  right: 14%;
+  animation-delay: 1.4s;
+  background: linear-gradient(135deg, rgba(121, 134, 203, 0.1), transparent);
+}
+
+.m16l6-hero {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(57, 73, 171, 0.24);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 5px 16px rgba(57, 73, 171, 0.16),
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    inset 0 1px 1px rgba(255, 255, 255, 0.86);
+  margin-bottom: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.m16l6-hero__badge {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #5c6bc0, #3949ab);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(57, 73, 171, 0.32);
+  animation: m16l6Pulse 3s ease-in-out infinite;
+}
+
+@keyframes m16l6Pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 4px 12px rgba(57, 73, 171, 0.3); }
+  50% { transform: scale(1.08); box-shadow: 0 6px 16px rgba(57, 73, 171, 0.38); }
+}
+
+.m16l6-hero__badge i {
+  font-size: 1rem;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.18));
+}
+
+.m16l6-hero__content {
+  min-width: 0;
+}
+
+.m16l6-hero__title {
+  margin: 0 0 3px;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.m16l6-hero__subtitle {
+  margin: 0;
+  font-size: 0.7rem;
+  color: rgba(26, 35, 126, 0.76);
+  font-weight: 600;
+}
+
+.m16l6-desc-card {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.93);
+  margin-bottom: 10px;
+}
+
+.m16l6-desc--definition {
+  border: 1px solid rgba(57, 73, 171, 0.22);
+  box-shadow: 0 3px 12px rgba(57, 73, 171, 0.12), -3px 0 0 #3949ab;
+  background: linear-gradient(135deg, rgba(232, 234, 246, 0.6), rgba(255, 255, 255, 0.93));
+}
+
+.m16l6-desc--process {
+  border: 1px solid rgba(123, 31, 162, 0.22);
+  box-shadow: 0 3px 12px rgba(123, 31, 162, 0.12), -3px 0 0 #7b1fa2;
+  background: linear-gradient(135deg, rgba(237, 231, 246, 0.6), rgba(255, 255, 255, 0.93));
+}
+
+.m16l6-desc--duty {
+  border: 1px solid rgba(0, 105, 92, 0.22);
+  box-shadow: 0 3px 12px rgba(0, 105, 92, 0.12), -3px 0 0 #00695c;
+  background: linear-gradient(135deg, rgba(232, 245, 233, 0.6), rgba(255, 255, 255, 0.93));
+}
+
+.m16l6-desc-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.m16l6-desc--definition .m16l6-desc-icon {
+  background: linear-gradient(135deg, #5c6bc0, #3949ab);
+  box-shadow: 0 2px 8px rgba(57, 73, 171, 0.28);
+}
+
+.m16l6-desc--process .m16l6-desc-icon {
+  background: linear-gradient(135deg, #ab47bc, #7b1fa2);
+  box-shadow: 0 2px 8px rgba(123, 31, 162, 0.28);
+}
+
+.m16l6-desc--duty .m16l6-desc-icon {
+  background: linear-gradient(135deg, #26a69a, #00695c);
+  box-shadow: 0 2px 8px rgba(0, 105, 92, 0.28);
+}
+
+.m16l6-desc-text {
+  flex: 1;
+  margin: 0;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.76);
+  font-weight: 500;
+}
+
+.m16l6-principles {
+  position: relative;
+  z-index: 10;
+}
+
+.m16l6-principles-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(57, 73, 171, 0.2);
+  box-shadow: 0 3px 10px rgba(57, 73, 171, 0.1);
+  margin-bottom: 8px;
+}
+
+.m16l6-principles-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #5c6bc0, #3949ab);
+  color: #fff;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 8px rgba(57, 73, 171, 0.24);
+}
+
+.m16l6-principles-title {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.m16l6-principles-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.m16l6-principle-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.93);
+  border-left: 2.5px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.m16l6-principle-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background: linear-gradient(135deg, currentColor, transparent);
+  pointer-events: none;
+}
+
+.m16l6-principle-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.m16l6-principle-icon {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.m16l6-principle-item:hover .m16l6-principle-icon {
+  transform: scale(1.12) rotate(8deg);
+}
+
+.m16l6-principle-text {
+  flex: 1;
+  font-size: 0.68rem;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.78);
+  font-weight: 600;
+}
+
+.m16l6-principle--confidentiality {
+  border-left-color: #00838f;
+  color: #00838f;
+}
+
+.m16l6-principle--confidentiality .m16l6-principle-icon {
+  background: linear-gradient(135deg, #00acc1, #00838f);
+  box-shadow: 0 2px 6px rgba(0, 131, 143, 0.3);
+}
+
+.m16l6-principle--dignity {
+  border-left-color: #6a1b9a;
+  color: #6a1b9a;
+}
+
+.m16l6-principle--dignity .m16l6-principle-icon {
+  background: linear-gradient(135deg, #ab47bc, #6a1b9a);
+  box-shadow: 0 2px 6px rgba(106, 27, 154, 0.3);
+}
+
+.m16l6-principle--freedom {
+  border-left-color: #2e7d32;
+  color: #2e7d32;
+}
+
+.m16l6-principle--freedom .m16l6-principle-icon {
+  background: linear-gradient(135deg, #66bb6a, #2e7d32);
+  box-shadow: 0 2px 6px rgba(46, 125, 50, 0.3);
+}
+
+.m16l6-principle--justice {
+  border-left-color: #e65100;
+  color: #e65100;
+}
+
+.m16l6-principle--justice .m16l6-principle-icon {
+  background: linear-gradient(135deg, #ffa726, #e65100);
+  box-shadow: 0 2px 6px rgba(230, 81, 0, 0.3);
+}
+
+.m16l6-principle--trust {
+  border-left-color: #1565c0;
+  color: #1565c0;
+}
+
+.m16l6-principle--trust .m16l6-principle-icon {
+  background: linear-gradient(135deg, #42a5f5, #1565c0);
+  box-shadow: 0 2px 6px rgba(21, 101, 192, 0.3);
+}
+
+.m16l6-principle--empathy {
+  border-left-color: #ad1457;
+  color: #ad1457;
+}
+
+.m16l6-principle--empathy .m16l6-principle-icon {
+  background: linear-gradient(135deg, #ec407a, #ad1457);
+  box-shadow: 0 2px 6px rgba(173, 20, 87, 0.3);
+}
+
+.m16l6-principle--accountability {
+  border-left-color: #b71c1c;
+  color: #b71c1c;
+}
+
+.m16l6-principle--accountability .m16l6-principle-icon {
+  background: linear-gradient(135deg, #ef5350, #b71c1c);
+  box-shadow: 0 2px 6px rgba(183, 28, 28, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  .lesson-slide.mod16-lesson6 {
+    background: linear-gradient(135deg,
+      #0d0d2b 0%,
+      #1a1a3e 35%,
+      #0a1929 70%,
+      #0d1f0d 100%
+    );
+  }
+
+  .m16l6-hero,
+  .m16l6-desc-card,
+  .m16l6-principles-header,
+  .m16l6-principle-item {
+    background: rgba(0, 0, 0, 0.35);
+    border-color: rgba(140, 158, 255, 0.2);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  .m16l6-hero__title,
+  .m16l6-principles-title {
+    background: linear-gradient(135deg, #9fa8da, #c5cae9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .m16l6-hero__subtitle,
+  .m16l6-desc-text,
+  .m16l6-principle-text {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson-slide.mod16-lesson6 {
+    padding: 10px 8px;
+  }
+
+  .m16l6-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .m16l6-hero__title {
+    font-size: 0.88rem;
+  }
+
+  .m16l6-hero__subtitle {
+    font-size: 0.65rem;
+  }
+
+  .m16l6-principles-title {
+    font-size: 0.76rem;
+  }
+
+  .m16l6-desc-text,
+  .m16l6-principle-text {
+    font-size: 0.64rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .m16l6-hero__title {
+    font-size: 0.82rem;
+  }
+
+  .m16l6-principles-title {
+    font-size: 0.7rem;
+  }
+
+  .m16l6-desc-text,
+  .m16l6-principle-text {
+    font-size: 0.6rem;
+  }
+
+  .m16l6-desc-icon,
+  .m16l6-principles-icon,
+  .m16l6-principle-icon {
+    min-width: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m16l6-hero__badge,
+  .m16l6-shape,
+  .m16l6-principle-item {
+    animation: none !important;
+  }
+
+  .lesson-slide.mod16-lesson6::before,
+  .lesson-slide.mod16-lesson6::after,
+  .m16l6-principle-item:hover,
+  .m16l6-principle-icon {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* ==================== MODULE 17 • LESSON 1 - DRUG ADDICTION ==================== */
 .lesson-slide.mod17-lesson1 {
   position: relative;
