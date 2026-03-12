@@ -13110,51 +13110,89 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "হাড় ভাঙ্গা (ফ্র্যাকচার) হল এমন একটি অবস্থা যেখানে শরীরের এক বা একাধিক হাড় ভেঙে যায় বা ফাটল ধরে বা কোন আঘাতের কারণে বেঁকে যায়। সাধারণত শক্তিশালী আঘাত বা ইনজুরির কারণে কোনো ব্যক্তির হাড় ভেঙে যেতে পারে, তবে কখনো কখনো বয়স বা অসুস্থতাজনিত কারণেও কোনো ব্যক্তি হাড় ভাঙ্গার শিকার হতে পারে।";
+            const intro = yhLang(
+  "A bone fracture is a condition where one or more bones in the body break, crack, or bend due to injury. Usually, strong impacts or injuries can cause bones to break, but sometimes fractures may also occur due to age or certain diseases.",
+  "হাড় ভাঙ্গা (ফ্র্যাকচার) হল এমন একটি অবস্থা যেখানে শরীরের এক বা একাধিক হাড় ভেঙে যায় বা ফাটল ধরে বা কোন আঘাতের কারণে বেঁকে যায়। সাধারণত শক্তিশালী আঘাত বা ইনজুরির কারণে কোনো ব্যক্তির হাড় ভেঙে যেতে পারে, তবে কখনো কখনো বয়স বা অসুস্থতাজনিত কারণেও কোনো ব্যক্তি হাড় ভাঙ্গার শিকার হতে পারে।"
+);
 
-              const typeIntro =
-                "হাড় ভাঙ্গা মূলত দুই ধরনের হতে পারে—উন্মুক্ত হাড় ভাঙ্গা ও আবদ্ধ হাড় ভাঙ্গা। উন্মুক্ত হাড় ভাঙ্গা হচ্ছে যখন রোগীর ভাঙ্গা হাড় চামড়ার ভেতর থেকে বেরিয়ে আসে এবং বাইরে থেকে দেখা যায়। আর আবদ্ধ হাড় ভাঙ্গা হলো ভাঙ্গা হাড়টি শরীরের ভেতরে অবস্থান করে এবং বাইরে থেকে দেখা যায় না।";
+const typeIntro = yhLang(
+  "Bone fractures are mainly of two types—open fractures and closed fractures. An open fracture occurs when the broken bone pierces through the skin and becomes visible. A closed fracture occurs when the broken bone remains inside the body and cannot be seen from outside.",
+  "হাড় ভাঙ্গা মূলত দুই ধরনের হতে পারে—উন্মুক্ত হাড় ভাঙ্গা ও আবদ্ধ হাড় ভাঙ্গা। উন্মুক্ত হাড় ভাঙ্গা হচ্ছে যখন রোগীর ভাঙ্গা হাড় চামড়ার ভেতর থেকে বেরিয়ে আসে এবং বাইরে থেকে দেখা যায়। আর আবদ্ধ হাড় ভাঙ্গা হলো ভাঙ্গা হাড়টি শরীরের ভেতরে অবস্থান করে এবং বাইরে থেকে দেখা যায় না।"
+);
 
-              const openFractureHeading = "হাড় ভাঙ্গার প্রাথমিক চিকিৎসা";
-              const openFractureSubheading = "উন্মুক্ত হাড় ভাঙ্গার ক্ষেত্রে";
-              const openFractureSteps = [
-                {
-                  text: "যদি রক্তপাত হয়, সবার প্রথমে রক্তক্ষরণ বন্ধ করার ব্যবস্থা করতে হবে।",
-                  icon: "fa-droplet",
-                  tone: "warning",
-                },
-                {
-                  text: "আক্রান্ত অঙ্গটি যতটা সম্ভব স্থির রাখার চেষ্টা করতে হবে।",
-                  icon: "fa-hand",
-                  tone: "info",
-                },
-                {
-                  text: "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য দ্রুত হাসপাতালে নিয়ে যেতে হবে।",
-                  icon: "fa-truck-medical",
-                  tone: "success",
-                },
-              ];
+const openFractureHeading = yhLang(
+  "First Aid for Bone Fractures",
+  "হাড় ভাঙ্গার প্রাথমিক চিকিৎসা"
+);
 
-              const closedFractureHeading = "আবদ্ধ হাড় ভাঙ্গার ক্ষেত্রে";
-              const closedFractureSubheading = "যা মনে রাখবেন";
-              const closedFractureSteps = [
-                {
-                  text: "আক্রান্ত অঙ্গটি জোরপূর্বক সোজা করার চেষ্টা করা যাবেনা।",
-                  icon: "fa-ban",
-                  tone: "danger",
-                },
-                {
-                  text: "অঙ্গটি সুবিধাজনক অবস্থানে রাখতে হবে এবং যথাসম্ভব কম নড়াচড়া করতে হবে।",
-                  icon: "fa-person-walking",
-                  tone: "info",
-                },
-                {
-                  text: "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য হাসপাতালে নিয়ে যেতে হবে।",
-                  icon: "fa-hospital",
-                  tone: "success",
-                },
-              ];
+const openFractureSubheading = yhLang(
+  "In Case of Open Fracture",
+  "উন্মুক্ত হাড় ভাঙ্গার ক্ষেত্রে"
+);
+
+const openFractureSteps = [
+  {
+    text: yhLang(
+      "If there is bleeding, the first step is to stop the bleeding.",
+      "যদি রক্তপাত হয়, সবার প্রথমে রক্তক্ষরণ বন্ধ করার ব্যবস্থা করতে হবে।"
+    ),
+    icon: "fa-droplet",
+    tone: "warning",
+  },
+  {
+    text: yhLang(
+      "Try to keep the injured limb as still as possible.",
+      "আক্রান্ত অঙ্গটি যতটা সম্ভব স্থির রাখার চেষ্টা করতে হবে।"
+    ),
+    icon: "fa-hand",
+    tone: "info",
+  },
+  {
+    text: yhLang(
+      "The injured person should be taken to the hospital quickly for treatment.",
+      "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য দ্রুত হাসপাতালে নিয়ে যেতে হবে।"
+    ),
+    icon: "fa-truck-medical",
+    tone: "success",
+  },
+];
+
+const closedFractureHeading = yhLang(
+  "In Case of Closed Fracture",
+  "আবদ্ধ হাড় ভাঙ্গার ক্ষেত্রে"
+);
+
+const closedFractureSubheading = yhLang(
+  "Things to Remember",
+  "যা মনে রাখবেন"
+);
+
+const closedFractureSteps = [
+  {
+    text: yhLang(
+      "Do not try to forcefully straighten the injured limb.",
+      "আক্রান্ত অঙ্গটি জোরপূর্বক সোজা করার চেষ্টা করা যাবেনা।"
+    ),
+    icon: "fa-ban",
+    tone: "danger",
+  },
+  {
+    text: yhLang(
+      "Keep the limb in a comfortable position and minimize movement as much as possible.",
+      "অঙ্গটি সুবিধাজনক অবস্থানে রাখতে হবে এবং যথাসম্ভব কম নড়াচড়া করতে হবে।"
+    ),
+    icon: "fa-person-walking",
+    tone: "info",
+  },
+  {
+    text: yhLang(
+      "Take the injured person to a hospital for proper treatment.",
+      "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য হাসপাতালে নিয়ে যেতে হবে।"
+    ),
+    icon: "fa-hospital",
+    tone: "success",
+  },
+];
 
               const renderStepList = (items, group) =>
                 items
@@ -13187,31 +13225,27 @@ const coursesData = [
                   </header>
 
                   <section class="m18l5-intro-panel m18l5-intro-overview m18l5-shadow-definition" data-aos="fade-up" data-aos-delay="20">
-                    <h3 class="m18l5-block-title">
-                      <i class="fa-solid fa-book-medical"></i>
-                      ${yhLang("ফ্র্যাকচার কী", "ফ্র্যাকচার কী")}
-                    </h3>
-                    <p class="m18l5-intro-text">${intro}</p>
+                    <p class="m18l5-block-title">
+                      <p class="m18l5-intro-text">${intro}</p>
+                    </p>
+                    
                   </section>
 
                   <section class="m18l5-intro-panel m18l5-intro-types m18l5-shadow-example" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="m18l5-block-title">
-                      <i class="fa-solid fa-diagram-project"></i>
-                      ${yhLang("ফ্র্যাকচারের ধরন", "ফ্র্যাকচারের ধরন")}
-                    </h3>
+                    
                     <p class="m18l5-intro-text">${typeIntro}</p>
                   </section>
 
                   <div class="m18l5-grid">
                     <article class="m18l5-fracture-panel m18l5-open m18l5-shadow-warning" data-aos="fade-right" data-aos-delay="60">
-                      <h4 class="m18l5-panel-title">
+                      <h3 class="m18l5-panel-title">
                         <i class="fa-solid fa-triangle-exclamation"></i>
                         ${openFractureHeading}
-                      </h4>
-                      <h5 class="m18l5-panel-subtitle">
+                      </h3>
+                      <h3 class="m18l5-panel-subtitle">
                         <i class="fa-solid fa-syringe"></i>
                         ${openFractureSubheading}
-                      </h5>
+                      </h3>
                       <ul class="m18l5-steps-list">
                         ${renderStepList(openFractureSteps, "open")}
                       </ul>
@@ -13238,20 +13272,16 @@ const coursesData = [
                     </article>
 
                     <article class="m18l5-fracture-panel m18l5-closed m18l5-shadow-tip" data-aos="fade-left" data-aos-delay="80">
-                      <h4 class="m18l5-panel-title">
+                      <h3 class="m18l5-panel-title">
                         <i class="fa-solid fa-shield-heart"></i>
                         ${closedFractureHeading}
-                      </h4>
-                      <h5 class="m18l5-panel-subtitle">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        ${closedFractureSubheading}
-                      </h5>
+                      </h3>
                       <ul class="m18l5-steps-list">
                         ${renderStepList(closedFractureSteps, "closed")}
                       </ul>
                       <div class="m18l5-media">
                         <figure class="m18l5-image-container mb-0">
-                          <img src="img/modu18/har3.jpg" alt="আবদ্ধ হাড় ভাঙ্গা" class="m18l5-image" />
+                          <img src="img/modu18/har3.jpg" style="height: 200px !important;" alt="আবদ্ধ হাড় ভাঙ্গা" class="m18l5-image" />
                           <figcaption class="m18l5-caption">
                             <h6>
                               <i class="fa-solid fa-x-ray"></i>
@@ -13269,7 +13299,7 @@ const coursesData = [
           {
             id: "ch18-lesson-6",
             title: yhLang("Snake Bite Response", "সাপের কামড়"),
-            icon: "fa-snake",
+            icon: "fa-staff-snake",
             gradientClass: "bg-gradient-emerald",
             audioFile: "",
             quiz: {
@@ -13292,77 +13322,103 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "বাংলাদেশে বেশির ভাগ সাপের কামড় বিষহীন সাপ দ্বারা হয়ে থাকে। যদি কোনো ব্যক্তিকে বিষধর সাপে কামড়েছে বলে মনে হয়, তাহলে প্রধান কাজ হল বিষ দ্রুত শরীরে ছড়িয়ে পড়া প্রতিরোধ করা। সে কারণে আক্রান্ত ব্যক্তি যেন নড়াচড়া না করে তার ব্যবস্থা নিতে হবে।";
+              const intro = yhLang(
+  "In Bangladesh, most snake bites are caused by non-venomous snakes. If a person is suspected to be bitten by a venomous snake, the main task is to prevent the venom from spreading quickly through the body. Therefore, the affected person should be kept as still as possible.",
+  "বাংলাদেশে বেশির ভাগ সাপের কামড় বিষহীন সাপ দ্বারা হয়ে থাকে। যদি কোনো ব্যক্তিকে বিষধর সাপে কামড়েছে বলে মনে হয়, তাহলে প্রধান কাজ হল বিষ দ্রুত শরীরে ছড়িয়ে পড়া প্রতিরোধ করা। সে কারণে আক্রান্ত ব্যক্তি যেন নড়াচড়া না করে তার ব্যবস্থা নিতে হবে।ক্ষতস্থানে গিঁট বাঁধা, কাটা, খোঁচানো, মলম লাগানো বা ওঝার চিকিৎসা নেওয়া বিপজ্জনক। নিরাপদ প্রাথমিক চিকিৎসার পর দ্রুত হাসপাতালে নেওয়াই সবচেয়ে গুরুত্বপূর্ণ পদক্ষেপ।"
+);
 
-              const warningText =
-                "ক্ষতস্থানে গিঁট বাঁধা, কাটা, খোঁচানো, মলম লাগানো বা ওঝার চিকিৎসা নেওয়া বিপজ্জনক। নিরাপদ প্রাথমিক চিকিৎসার পর দ্রুত হাসপাতালে নেওয়াই সবচেয়ে গুরুত্বপূর্ণ পদক্ষেপ।";
+const warningText = yhLang(
+  "Tying a knot, cutting, puncturing the wound, applying ointments, or seeking treatment from traditional healers can be dangerous. After providing safe first aid, taking the patient quickly to a hospital is the most important step.",
+  ""
+);
 
-              const steps = [
-                {
-                  title: "স্থির ও শান্ত রাখা",
-                  text: "যদি আক্রান্ত ব্যক্তির শ্বাস-প্রশ্বাস স্বাভাবিক থাকে, তাহলে ব্যক্তিকে স্থির এবং শান্ত থাকতে বলুন। কামড়ের জায়গা ফুলে যেতে পারে, তাই কোনো আংটি, ঘড়ি, অলংকার বা বাঁধন থাকলে তা খুলে দিন।",
-                  icon: "fa-person-circle-check",
-                  color: "m18l6-step-calm",
-                },
-                {
-                  title: "ক্ষত স্থান পরিষ্কার",
-                  text: "ক্ষত স্থানটি পরীক্ষা করে দেখুন, সাপে কামড়ের স্থানটি ছিদ্র হয়ে গেছে কিনা। কামড়ের স্থানটি পরিষ্কার পানি দিয়ে ভাল করে ধুয়ে ফেলুন।",
-                  icon: "fa-pump-soap",
-                  color: "m18l6-step-clean",
-                },
-                {
-                  title: "অঙ্গ স্থির রাখা",
-                  text: "আক্রান্ত অঙ্গটিকে নড়াচড়া কম করতে দিন এবং লাঠি, কাঠ বা বাঁশের ফালি দিয়ে বেঁধে দিন যেন অঙ্গটি যথাসম্ভব স্থির থাকে।",
-                  icon: "fa-bandage",
-                  color: "m18l6-step-immob",
-                },
-                {
-                  title: "বিপদ লক্ষণ পর্যবেক্ষণ",
-                  text: "আক্রান্ত ব্যক্তির দিকে খেয়াল রাখুন নিচের কোনো বিপদ লক্ষণ আছে কিনা, যেমন—ক্ষতস্থান থেকে রক্তপাত হওয়া, মাথা ঘোরানো, বমি করা, কামড়ের অংশ ফুলে যাওয়া, চোখের পাতা বন্ধ হয়ে আসা বা চোখে ঝাপসা দেখা, শ্বাসকষ্ট হওয়া, প্রস্রাবের পরিমাণ কমে যাওয়া / গাঢ় বর্ণের প্রস্রাব হওয়া।",
-                  icon: "fa-triangle-exclamation",
-                  color: "m18l6-step-monitor",
-                },
-                {
-                  title: "শ্বাস বন্ধ হলে CPR",
-                  text: "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে সিপিআর শুরু করুন। কামড়ের স্থানে কোনো গিঁট বাঁধা যাবে না / ক্ষত স্থানটি কাটা যাবে না।",
-                  icon: "fa-heart-pulse",
-                  color: "m18l6-step-cpr",
-                },
-                {
-                  title: "ক্ষত খোঁচানো নিষেধ",
-                  text: "সুঁই দিয়ে ক্ষতস্থানটি খোচানো যাবেনা বা মলম বা লোশন জাতীয় কিছু লাগানো যাবে না।",
-                  icon: "fa-ban",
-                  color: "m18l6-step-avoid",
-                },
-                {
-                  title: "ভেষজ চিকিৎসা নয়",
-                  text: "স্থানীয় কবিরাজ বা ওঝার কাছে চিকিৎসা নেয়া অথবা কোনো ভেষজ ওষুধ প্রয়োগ করা যাবে না।",
-                  icon: "fa-leaf",
-                  color: "m18l6-step-remedy",
-                },
-                {
-                  title: "দ্রুত হাসপাতালে নিন",
-                  text: "আক্রান্ত ব্যক্তিকে দ্রুত হাসপাতালে নিতে হবে।",
-                  icon: "fa-hospital-user",
-                  color: "m18l6-step-hospital",
-                },
-              ];
+const steps = [
+  {
+    title: yhLang("Keep the Person Calm and Still", "স্থির ও শান্ত রাখা"),
+    text: yhLang(
+      "If the person's breathing is normal, ask them to remain calm and still. The bite area may swell, so remove any rings, watches, jewelry, or tight items.",
+      "যদি আক্রান্ত ব্যক্তির শ্বাস-প্রশ্বাস স্বাভাবিক থাকে, তাহলে ব্যক্তিকে স্থির এবং শান্ত থাকতে বলুন। কামড়ের জায়গা ফুলে যেতে পারে, তাই কোনো আংটি, ঘড়ি, অলংকার বা বাঁধন থাকলে তা খুলে দিন।"
+    ),
+    icon: "fa-person-circle-check",
+    color: "m18l6-step-calm",
+  },
+  {
+    title: yhLang("Clean the Wound", "ক্ষত স্থান পরিষ্কার"),
+    text: yhLang(
+      "Check the wound to see if the snake bite has punctured the skin. Wash the bite area thoroughly with clean water.",
+      "ক্ষত স্থানটি পরীক্ষা করে দেখুন, সাপে কামড়ের স্থানটি ছিদ্র হয়ে গেছে কিনা। কামড়ের স্থানটি পরিষ্কার পানি দিয়ে ভাল করে ধুয়ে ফেলতে হবে।"
+    ),
+    icon: "fa-pump-soap",
+    color: "m18l6-step-clean",
+  },
+  {
+    title: yhLang("Immobilize the Limb", "অঙ্গ স্থির রাখা"),
+    text: yhLang(
+      "Keep the affected limb as still as possible and use a stick, wooden board, or bamboo splint to support it so that the limb remains stable.",
+      "আক্রান্ত অঙ্গটিকে নড়াচড়া কম করতে দিন এবং লাঠি, কাঠ বা বাঁশের ফালি দিয়ে বেঁধে দিন যেন অঙ্গটি যথাসম্ভব স্থির থাকে।"
+    ),
+    icon: "fa-bandage",
+    color: "m18l6-step-immob",
+  },
+  {
+    title: yhLang("Observe Danger Signs", "বিপদ লক্ষণ পর্যবেক্ষণ"),
+    text: yhLang(
+      "Observe the patient for danger signs such as bleeding from the wound, dizziness, vomiting, swelling at the bite site, drooping eyelids, blurred vision, breathing difficulty, or reduced/dark urine.",
+      "আক্রান্ত ব্যক্তির দিকে খেয়াল রাখুন নিচের কোনো বিপদ লক্ষণ আছে কিনা, যেমন—ক্ষতস্থান থেকে রক্তপাত হওয়া, মাথা ঘোরানো, বমি করা, কামড়ের অংশ ফুলে যাওয়া, চোখের পাতা বন্ধ হয়ে আসা বা চোখে ঝাপসা দেখা, শ্বাসকষ্ট হওয়া, প্রস্রাবের পরিমাণ কমে যাওয়া / গাঢ় বর্ণের প্রস্রাব হওয়া।"
+    ),
+    icon: "fa-triangle-exclamation",
+    color: "m18l6-step-monitor",
+  },
+  {
+    title: yhLang("Start CPR if Breathing Stops", "শ্বাস বন্ধ হলে CPR"),
+    text: yhLang(
+      "If the person is not breathing normally, begin CPR. Do not tie a tourniquet or cut the bite wound.",
+      "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে সিপিআর শুরু করুন। কামড়ের স্থানে কোনো গিঁট বাঁধা যাবে না / ক্ষত স্থানটি কাটা যাবে না।"
+    ),
+    icon: "fa-heart-pulse",
+    color: "m18l6-step-cpr",
+  },
+  {
+    title: yhLang("Do Not Puncture the Wound", "ক্ষত খোঁচানো নিষেধ"),
+    text: yhLang(
+      "Do not puncture the wound with needles or apply ointments, creams, or lotions.",
+      "সুঁই দিয়ে ক্ষতস্থানটি খোচানো যাবেনা বা মলম বা লোশন জাতীয় কিছু লাগানো যাবে না।"
+    ),
+    icon: "fa-ban",
+    color: "m18l6-step-avoid",
+  },
+  {
+    title: yhLang("Avoid Herbal or Traditional Treatment", "ভেষজ চিকিৎসা নয়"),
+    text: yhLang(
+      "Do not seek treatment from traditional healers or apply herbal remedies.",
+      "স্থানীয় কবিরাজ বা ওঝার কাছে চিকিৎসা নেয়া অথবা কোনো ভেষজ ওষুধ প্রয়োগ করা যাবে না।"
+    ),
+    icon: "fa-leaf",
+    color: "m18l6-step-remedy",
+  },
+  {
+    title: yhLang("Take the Patient to a Hospital Immediately", "দ্রুত হাসপাতালে নিন"),
+    text: yhLang(
+      "Take the affected person to the nearest hospital as quickly as possible.",
+      "আক্রান্ত ব্যক্তিকে দ্রুত হাসপাতালে নিতে হবে।"
+    ),
+    icon: "fa-hospital-user",
+    color: "m18l6-step-hospital",
+  },
+];
 
               const renderList = (items) =>
                 items
                   .map(
                     (item, index) => `
                       <li class="m18l6-step-item ${item.color}" data-aos="fade-up" data-aos-delay="${50 + index * 30}">
-                        <span class="m18l6-step-icon" aria-hidden="true">
-                          <i class="fa-solid ${item.icon}"></i>
-                        </span>
+                       
                         <div class="m18l6-step-content">
-                          <h6 class="m18l6-step-title">
+                          <span class="m18l6-step-title">
                             <i class="fa-solid ${item.icon}"></i>
-                            ${item.title}
-                          </h6>
-                          <p>${item.text}</p>
+                            <p>${item.text}</p>
+                          </span>
+                          
                         </div>
                       </li>
                     `
@@ -13385,27 +13441,8 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <section class="m18l6-intro-panel" data-aos="fade-up" data-aos-delay="20">
-                    <h3 class="m18l6-block-title">
-                      <i class="fa-solid fa-book-open-reader"></i>
-                      ${yhLang("ঘটনার প্রেক্ষাপট", "ঘটনার প্রেক্ষাপট")}
-                    </h3>
-                    <p class="m18l6-intro-text">${intro}</p>
-                  </section>
-
-                  <section class="m18l6-warning-panel" data-aos="fade-up" data-aos-delay="35">
-                    <h4 class="m18l6-warning-title">
-                      <i class="fa-solid fa-triangle-exclamation"></i>
-                      ${yhLang("যা করা যাবে না", "যা করা যাবে না")}
-                    </h4>
-                    <p class="m18l6-warning-text">${warningText}</p>
-                  </section>
-
                   <section class="m18l6-main-panel" data-aos="fade-up" data-aos-delay="50">
-                    <h5 class="m18l6-panel-title">
-                      <i class="fa-solid fa-list-check"></i>
-                      ${yhLang("প্রাথমিক চিকিৎসার ধাপ", "প্রাথমিক চিকিৎসার ধাপ")}
-                    </h5>
+                   
                     <ul class="m18l6-steps-list">
                       ${renderList(steps)}
                     </ul>
