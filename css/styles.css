@@ -6674,7 +6674,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0;
   font-size: 0.86rem;
   font-weight: 700;
-  color: #e65100;
+  color: #545454 !important;
 }
 
 .m16l2-info-card__text {
