@@ -53,3 +53,11 @@
   align-items: center;
   gap: 10px;
 }
+.grid-3 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 5px;
+}
+.m14l1-grid {
+  gap: 3px;
+}

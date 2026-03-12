@@ -8284,14 +8284,14 @@ const coursesData = [
         id: "ch-14",
         title: yhLang(
           "Module-14: Sex, Gender and Gender Discrimination",
-          "মডিউল-১৪: তারুন্যকালীনমনোসামাজিক পরিবর্তন ও জটিলতাসমূহ",
+          "মডিউল-১৪: তারুন্যকালীন মনোসামাজিক পরিবর্তন ও জটিলতাসমূহ",
         ),
         lessons: [
           {
             id: "ch14-lesson-1",
             title: yhLang(
               "Adolescent Psychosocial Changes",
-              "তারুন্যকালীনমনোসামাজিক পরিবর্তন",
+              "তারুন্যকালীন মনোসামাজিক পরিবর্তন",
             ),
             icon: "fa-people-roof",
             gradientClass: "bg-gradient-indigo",
@@ -8327,13 +8327,9 @@ const coursesData = [
             content: (function () {
               const introPrimary = yhLang(
                 "Adolescence brings psychosocial changes that influence communication patterns with family, friends, and peers.",
-                "তারুন্যকালীনসময়ে তরুন-তরুনীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।",
+                "প্রত্যেক তরুন-তরুনীর মনোসামাজিক বিকাশ ভিন্ন; এক্ষেত্রে গুরুত্বপূর্ণ উপাদান হিসেবে জিনগত বৈশিষ্ট্য, মস্তিষ্কের বিকাশ, অভিজ্ঞতা ছাড়াও চারপাশের পরিবেশ (পরিবার, বন্ধু, সমাজ, কৃষ্টি) ইত্যাদিও বিশেষভাবে প্রভাব বিস্তার করে। মনোসামাজিক পরিবর্তনের মাধ্যমে তরুন তরুনীদের মাঝে আত্ম-নির্ভরশীলতা এবং পরিণত বয়সের বৈশিষ্ট্যগুলো ধীরে ধীরে প্রকাশ পায়।",
               );
 
-              const introSecondary = yhLang(
-                "Psychosocial development is influenced by genetics, brain growth, life experience, and environment, gradually shaping independence and adult traits.",
-                "মনোসামাজিক বিকাশকে প্রভাবিত করে জিনগত বৈশিষ্ট্য, মস্তিষ্কের বিকাশ, অভিজ্ঞতা এবং চারপাশের পরিবেশ। এর মাধ্যমে আত্মনির্ভরশীলতা ও প্রাপ্তবয়স্ক বৈশিষ্ট্য ধীরে ধীরে বিকশিত হয়।",
-              );
 
               const socialChanges = [
                 {
@@ -8517,17 +8513,13 @@ const coursesData = [
                   <header class="m14l1-header" data-aos="fade-up">
                     <h2 class="m14l1-title">
                       <i class="fa-solid fa-people-roof"></i>
-                      ${yhLang("Psychosocial transitions in adolescence", "তারুন্যকালীনমনোসামাজিক পরিবর্তন")}
+                      ${yhLang("Psychosocial transitions in adolescence", "তারুন্যকালীন মনোসামাজিক পরিবর্তন")}
                     </h2>
                   </header>
 
                   <section class="m14l1-card m14l1-card-intro" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="m14l1-subtitle">
-                      <i class="fa-solid fa-circle-info"></i>
-                      ${yhLang("Overview", "সংক্ষিপ্ত পরিচিতি")}
-                    </h3>
+                    
                     <p class="m14l1-p">${introPrimary}</p>
-                    <p class="m14l1-p m14l1-p-last">${introSecondary}</p>
                   </section>
 
                   <section class="m14l1-grid" data-aos="fade-up" data-aos-delay="70">
@@ -8544,7 +8536,7 @@ const coursesData = [
                     <article class="m14l1-card m14l1-card-emotional">
                       <h3 class="m14l1-subtitle">
                         <i class="fa-solid fa-heart-pulse"></i>
-                        ${yhLang("Emotional shifts", "আবেগজনিত পরিবর্তনসমূহ")}
+                        ${yhLang("Emotional shifts", "আবেগ জনিত/আবেগীয় পরিবর্তনসমূহ")}
                       </h3>
                       <ul class="m14l1-list">
                         ${renderList(emotionalChanges, 85)}
@@ -8555,9 +8547,9 @@ const coursesData = [
                   <section class="m14l1-card m14l1-card-complex" data-aos="fade-up" data-aos-delay="95">
                     <h3 class="m14l1-subtitle">
                       <i class="fa-solid fa-diagram-project"></i>
-                      ${yhLang("Psychosocial complexities", "তারুন্যকালীনমনোসামাজিক জটিলতাসমূহ")}
+                      ${yhLang("Psychosocial complexities", "তারুন্যকালীন মনোসামাজিক জটিলতাসমূহ")}
                     </h3>
-                    <ul class="m14l1-list">
+                    <ul class="m14l1-list grid-3 m14l1-grid">
                       ${renderList(psychosocialComplexities, 95)}
                     </ul>
                   </section>
