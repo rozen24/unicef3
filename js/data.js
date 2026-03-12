@@ -13446,7 +13446,7 @@ const coursesData = [
     <div class="m16l5-definition-icon">
       <i class="fa-solid fa-lightbulb"></i>
     </div>
-    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ স্বীয় বিশ্বাসের প্রতিফলন। যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা, তাহলে আচরণ হবে অেন্যর সাথে ভদ্রতার সহিত কথা বলা। মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়। ")}</p>
+    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ স্বীয় বিশ্বাসের প্রতিফলন। যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা, তাহলে আচরণ হবে অন্যেরসাথে ভদ্রতার সহিত কথা বলা। মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়। ")}</p>
   </section>
 
   <!-- Neutrality Card -->
@@ -13555,7 +13555,7 @@ const coursesData = [
     <div class="m16l6-desc-icon">
       <i class="fa-solid fa-book-open"></i>
     </div>
-    <p class="m16l6-desc-text">${yhLang("Ethics is a branch of knowledge that deals with moral problems and judgment — such as maintaining confidentiality, giving equal dignity to all, and remaining just and fair.", "নৈতিকতা হচ্ছে এমন এক প্রকার জ্ঞান যা নৈতিক সমস্যা ও বিচার বিবেচনা নিয়ে আলোচনা করে যমন- গোপনীয়তা রক্ষা করা, সবাইকে সমান মর্যাদা দেয়া, ন্যায়পরায়ণ থাকা ইত্যাদি ।")}</p>
+    <p class="m16l6-desc-text">${yhLang("Ethics is a branch of knowledge that deals with moral problems and judgment — such as maintaining confidentiality, giving equal dignity to all, and remaining just and fair.", "নৈতিকতা হচ্ছে এমন এক প্রকার জ্ঞান যা নৈতিক সমস্যা ও বিচার বিবেচনা নিয়ে আলোচনা করে যেমন- গোপনীয়তা রক্ষা করা, সবাইকে সমান মর্যাদা দেয়া, ন্যায়পরায়ণ থাকা ইত্যাদি ।")}</p>
   </section>
 
   <!-- Description 2: Role in Psychosocial Support -->
@@ -14356,13 +14356,7 @@ const coursesData = [
                   icon: "fa-layer-group",
                   tone: "m18l2-step-layer",
                 },
-                {
-                  text: `<figure class="m18l2-figure mb-0">
-                        <img src="img/modu18/rokto.jpg" style="height: 100px; width: 300px;" alt="রক্তক্ষরণ নিয়ন্ত্রণ" class="img-fluid m18l2-image" />
-                      </figure>`,
-                  icon: "fa-layer-group",
-                  tone: "m18l2-step-layer",
-                },
+               
                 {
                   text: yhLang(
                     "Secure the wound with a clean cloth or bandage along with gauze/cloth.",
@@ -14787,7 +14781,7 @@ const coursesData = [
 
                   <aside class="m18l4-media" data-aos="fade-left" data-aos-delay="80">
                     <figure class="m18l4-figure mb-0">
-                      <img src="img/modu18/pora2.jpg" style="height: 150px;" alt="" class="img-fluid m18l4-image" />
+                      <img src="img/modu18/pora2.jpg" style="height: 150px;" alt="" class="w-50 mx-auto m18l4-image" />
                     </figure>
                   </aside>
                 </div>
@@ -14954,13 +14948,19 @@ const coursesData = [
                     
                     <p class="m18l5-intro-text">${typeIntro}</p>
                   </section>
+                  <section class="m18l5-intro-panel m18l5-intro-types m18l5-shadow-example" data-aos="fade-up" data-aos-delay="40">
+                    
+                   <h3 class="m18l5-panel-title">
+                        <i class="fa-solid fa-bone"></i>
+                        ${openFractureHeading}
+                      </h3>
+                  </section>
+
+
 
                   <div class="m18l5-grid">
                     <article class="m18l5-fracture-panel m18l5-open m18l5-shadow-warning" data-aos="fade-right" data-aos-delay="60">
-                      <h3 class="m18l5-panel-title">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        ${openFractureHeading}
-                      </h3>
+                      
                       <h3 class="m18l5-panel-subtitle">
                         <i class="fa-solid fa-syringe"></i>
                         ${openFractureSubheading}
@@ -14971,21 +14971,11 @@ const coursesData = [
                       <div class="m18l5-media m18l5-media-double">
                         <figure class="m18l5-image-container mb-0">
                           <img src="img/modu18/har.jpg" alt="উন্মুক্ত হাড় ভাঙ্গা" class="m18l5-image" />
-                          <figcaption class="m18l5-caption">
-                            <h6>
-                              <i class="fa-solid fa-image"></i>
-                              ${yhLang("উন্মুক্ত ফ্র্যাকচার", "উন্মুক্ত ফ্র্যাকচার")}
-                            </h6>
-                          </figcaption>
+                          
                         </figure>
                         <figure class="m18l5-image-container mb-0">
                           <img src="img/modu18/har2.jpg" alt="উন্মুক্ত হাড় ভাঙ্গার সেবা" class="m18l5-image" />
-                          <figcaption class="m18l5-caption">
-                            <h6>
-                              <i class="fa-solid fa-briefcase-medical"></i>
-                              ${yhLang("প্রাথমিক সেবা", "প্রাথমিক সেবা")}
-                            </h6>
-                          </figcaption>
+                       
                         </figure>
                       </div>
                     </article>
@@ -15000,13 +14990,8 @@ const coursesData = [
                       </ul>
                       <div class="m18l5-media">
                         <figure class="m18l5-image-container mb-0">
-                          <img src="img/modu18/har3.jpg" style="height: 200px !important;" alt="আবদ্ধ হাড় ভাঙ্গা" class="m18l5-image" />
-                          <figcaption class="m18l5-caption">
-                            <h6>
-                              <i class="fa-solid fa-x-ray"></i>
-                              ${yhLang("আবদ্ধ ফ্র্যাকচার", "আবদ্ধ ফ্র্যাকচার")}
-                            </h6>
-                          </figcaption>
+                          <img src="img/modu18/har3.jpg" style="height: 185px !important;" alt="আবদ্ধ হাড় ভাঙ্গা" class="m18l5-image" />
+                         
                         </figure>
                       </div>
                     </article>
@@ -15354,7 +15339,7 @@ const coursesData = [
                       </div>      
                        <div class="col-md-4">
                          <figure class="glass-card p-1 mb-0 text-center">
-                          <img src="img/modu18/dog-byte.jpg" alt="" style="height: 530px; object-fit: cover;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <img src="img/modu18/dog-byte .jpg" alt="" style="height: 530px; object-fit: cover;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                        </div>
                    
