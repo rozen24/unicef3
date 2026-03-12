@@ -889,7 +889,7 @@ const coursesData = [
                   id: "q2b",
                   question: yhLang(
                     "Investments in adolescents yield a…",
-                    "কৈশোরে বিনিয়োগ করলে কী ধরনের ফল পাওয়া যায়?",
+                    "তারুণ্যে বিনিয়োগ করলে কী ধরনের ফল পাওয়া যায়?",
                   ),
                   options: [
                     yhLang("Single benefit", "একটি সুফল"),
@@ -2521,7 +2521,7 @@ const coursesData = [
                   ),
                   desc: yhLang(
                     "Quantified the triple dividend of investing during adolescence.",
-                    "কৈশোরে বিনিয়োগের ত্রিমুখী সুফল পরিমাপ করে উপস্থাপন করা হয়।",
+                    "তারুণ্যে বিনিয়োগের ত্রিমুখী সুফল পরিমাপ করে উপস্থাপন করা হয়।",
                   ),
                   icon: "fa-book-open",
                   cls: "tl-violet",
@@ -3623,7 +3623,7 @@ const coursesData = [
             },
             content: (function () {
               const parentPoints = [
-                "কৈশোরের শুরুতে কিশোরীকে মাসিক ও এর ব্যবস্থাপনা বিষয়ে তথ্য বা শিক্ষা দেওয়া।",
+                "তারুণ্যের শুরুতে কিশোরীকে মাসিক ও এর ব্যবস্থাপনা বিষয়ে তথ্য বা শিক্ষা দেওয়া।",
                 "কোনো সমস্যা হলে যেন বাবা-মায়ের সাথে আলোচনা করে—সেভাবে তাকে উৎসাহিত করা।",
                 "ঋতুস্রাবকে ভয় না পেয়ে সহজভাবে নিতে শিক্ষা দেওয়া।",
                 "এই সময়ে স্কুলে যাওয়া, খেলাধুলা করা সহ সব কাজ স্বাভাবিকভাবে করতে উৎসাহ দেওয়া।",
@@ -4461,14 +4461,14 @@ const coursesData = [
         id: "ch-7",
         title: yhLang(
           "Module-7: Adolescent Family Planning",
-          "মডিউল-৭: তারুণ্যীন পরিবার পরিকল্পনা",
+          "মডিউল-৭: তারুন্যকালীনপরিবার পরিকল্পনা",
         ),
         lessons: [
           {
             id: "ch7-lesson-1",
             title: yhLang(
-              "তারুণ্যীন পরিবার পরিকল্পনা",
-              "তারুণ্যীন পরিবার পরিকল্পনা",
+              "তারুন্যকালীনপরিবার পরিকল্পনা",
+              "তারুন্যকালীনপরিবার পরিকল্পনা",
             ),
             icon: "fa-people-roof",
             gradientClass: "bg-gradient-blue",
@@ -4569,8 +4569,8 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুণ্যীন পরিবার পরিকল্পনা",
-                    "তারুণ্যীন পরিবার পরিকল্পনা",
+                    "তারুন্যকালীনপরিবার পরিকল্পনা",
+                    "তারুন্যকালীনপরিবার পরিকল্পনা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4604,7 +4604,7 @@ const coursesData = [
                       </div>
                       <div class="col-lg-5">
                         <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu7/kishor.png" alt="তারুণ্যীন পরিবার পরিকল্পনা" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                          <img src="img/modu7/kishor.png" alt="তারুন্যকালীনপরিবার পরিকল্পনা" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
                         </figure>
                       </div>
                     </div>
@@ -4640,8 +4640,8 @@ const coursesData = [
           {
             id: "ch7-lesson-2",
             title: yhLang(
-              "তারুণ্যীন পরিবার পরিকল্পনা",
-              "তারুণ্যীন পরিবার পরিকল্পনা",
+              "তারুন্যকালীনপরিবার পরিকল্পনা",
+              "তারুন্যকালীনপরিবার পরিকল্পনা",
             ),
             icon: "fa-table",
             gradientClass: "bg-gradient-teal",
@@ -4786,8 +4786,8 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুণ্যীন পরিবার পরিকল্পনা",
-                    "তারুণ্যীন পরিবার পরিকল্পনা",
+                    "তারুন্যকালীনপরিবার পরিকল্পনা",
+                    "তারুন্যকালীনপরিবার পরিকল্পনা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4846,12 +4846,12 @@ const coursesData = [
         id: "ch-8",
         title: yhLang(
           "Module-8: Adolescent Family Planning",
-          "মডিউল-৮: তারুণ্যীন মাতৃত্ব",
+          "মডিউল-৮: তারুন্যকালীনমাতৃত্ব",
         ),
         lessons: [
           {
             id: "ch8-lesson-1",
-            title: yhLang("তারুণ্যীন মাতৃত্ব", "তারুণ্যীন মাতৃত্ব"),
+            title: yhLang("তারুন্যকালীনমাতৃত্ব", "তারুন্যকালীনমাতৃত্ব"),
             icon: "fa-baby",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
@@ -4861,8 +4861,8 @@ const coursesData = [
                 {
                   id: "q8a",
                   question: yhLang(
-                    "কৈশোরে গর্ভধারণ কেন ঝুঁকিপূর্ণ?",
-                    "কৈশোরে গর্ভধারণ কেন ঝুঁকিপূর্ণ?",
+                    "তারুণ্যে গর্ভধারণ কেন ঝুঁকিপূর্ণ?",
+                    "তারুণ্যে গর্ভধারণ কেন ঝুঁকিপূর্ণ?",
                   ),
                   options: [
                     yhLang(
@@ -4886,7 +4886,7 @@ const coursesData = [
               ];
 
               const riskDescription =
-                "কৈশোরে গর্ভধারণ অত্যন্ত ঝুঁকিপূর্ণ। কারণ এ সময় কিশোরীর নিজেরই শারীরিক বৃদ্ধি অসম্পূর্ণ থাকে এবং তার শারীরিক ও মানসিক বিকাশ তখনও চলমান থাকে। এ অবস্থায় গর্ভধারণ করলে কিশোরী মা ও শিশু উভয়ই ঝুঁকির মধ্যে পড়ে যায়। গর্ভাবস্থায় কিশোরীর সাথে সাথে তার মধ্যে বেড়ে ওঠা সন্তানেরও নানা প্রকার সেবা–পুষ্টির দরকার হয় যা কিশোরী মায়ের জন্য সবসময় পাওয়া সচরাচর সম্ভব নয়। কৈশোরে সন্তান ধারণ এবং জন্মদানের ক্ষেত্রে মা এবং সন্তান নানাবিধ ঝুঁকির সম্মুখীন হতে পারে।";
+                "তারুণ্যে গর্ভধারণ অত্যন্ত ঝুঁকিপূর্ণ। কারণ এ সময় কিশোরীর নিজেরই শারীরিক বৃদ্ধি অসম্পূর্ণ থাকে এবং তার শারীরিক ও মানসিক বিকাশ তখনও চলমান থাকে। এ অবস্থায় গর্ভধারণ করলে কিশোরী মা ও শিশু উভয়ই ঝুঁকির মধ্যে পড়ে যায়। গর্ভাবস্থায় কিশোরীর সাথে সাথে তার মধ্যে বেড়ে ওঠা সন্তানেরও নানা প্রকার সেবা–পুষ্টির দরকার হয় যা কিশোরী মায়ের জন্য সবসময় পাওয়া সচরাচর সম্ভব নয়। তারুণ্যে সন্তান ধারণ এবং জন্মদানের ক্ষেত্রে মা এবং সন্তান নানাবিধ ঝুঁকির সম্মুখীন হতে পারে।";
 
               const orbitRisks = [
                 "প্রসব-পরবর্তী বিষণ্নতা",
@@ -4942,14 +4942,14 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুণ্যীন মাতৃত্ব",
-                    "তারুণ্যীন মাতৃত্ব",
+                    "তারুন্যকালীনমাতৃত্ব",
+                    "তারুন্যকালীনমাতৃত্ব",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text mb-3">${yhLang(
-                      "তারুণ্যীন মাতৃত্ব",
-                      "তারুণ্যীন মাতৃত্ব",
+                      "তারুন্যকালীনমাতৃত্ব",
+                      "তারুন্যকালীনমাতৃত্ব",
                     )}</h3>
                     ${renderParagraphs()}
                   </section>
@@ -4987,8 +4987,8 @@ const coursesData = [
           {
             id: "ch8-lesson-2",
             title: yhLang(
-              "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
-              "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
+              "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
+              "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
             ),
             icon: "fa-shield-heart",
             gradientClass: "bg-gradient-purple",
@@ -4999,8 +4999,8 @@ const coursesData = [
                 {
                   id: "q8b",
                   question: yhLang(
-                    "তারুণ্যীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?",
-                    "তারুণ্যীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?",
+                    "তারুন্যকালীনগর্ভধারণ প্রতিরোধের একটি উপায় কী?",
+                    "তারুন্যকালীনগর্ভধারণ প্রতিরোধের একটি উপায় কী?",
                   ),
                   options: [
                     yhLang(
@@ -5017,15 +5017,15 @@ const coursesData = [
             },
             content: (function () {
               const introText =
-                "নিরাপদ মাতৃত্বের জন্য তারুণ্যীন গর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।";
+                "নিরাপদ মাতৃত্বের জন্য তারুন্যকালীনগর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।";
 
               const orbitActions = [
                 "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা",
                 "দেশের প্রচলিত আইনের যথাযথ প্রয়োগ (১৮-এর আগে মেয়েদের বিয়ে নয়, ২০-এর আগে সন্তান নয়)",
                 "পরিবার পরিকল্পনা সম্পর্কে জনগণের মধ্যে সচেতনতা বাড়ানো এবং পরিবার পরিকল্পনা পদ্ধতি ব্যবহারে উৎসাহ প্রদান",
-                "তারুণ্যীন গর্ভধারণের কুফল ও এর ভয়াবহ পরিণতি সম্পর্কে সচেতনতা তৈরি করা",
-                "কৈশোরে বিয়ে হলেও দেরিতে সন্তান গ্রহণে স্বামী, স্ত্রী ও অভিভাবকদের সচেতন করা",
-                "কৈশোরে পরিবার পরিকল্পনা পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
+                "তারুন্যকালীনগর্ভধারণের কুফল ও এর ভয়াবহ পরিণতি সম্পর্কে সচেতনতা তৈরি করা",
+                "তারুণ্যে বিয়ে হলেও দেরিতে সন্তান গ্রহণে স্বামী, স্ত্রী ও অভিভাবকদের সচেতন করা",
+                "তারুণ্যে পরিবার পরিকল্পনা পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
               ];
 
               const colorCycle = [
@@ -5058,14 +5058,14 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
-                    "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
+                    "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
+                    "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text mb-3">${yhLang(
-                      "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
-                      "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
+                      "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
+                      "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
                     )}</h3>
                     <p class="mb-0">${introText}</p>
                   </section>
@@ -5139,8 +5139,8 @@ const coursesData = [
           {
             id: "ch8-lesson-4",
             title: yhLang(
-              "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা",
-              "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা",
+              "তারুন্যকালীনগর্ভধারণ ব্যবস্থাপনা",
+              "তারুন্যকালীনগর্ভধারণ ব্যবস্থাপনা",
             ),
             icon: "fa-user-nurse",
             gradientClass: "bg-gradient-green",
@@ -5238,8 +5238,8 @@ const coursesData = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা",
-                    "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা",
+                    "তারুন্যকালীনগর্ভধারণ ব্যবস্থাপনা",
+                    "তারুন্যকালীনগর্ভধারণ ব্যবস্থাপনা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5603,7 +5603,7 @@ const coursesData = [
         id: "ch-10",
         title: yhLang(
           "Module-10: HPV vaccination and prevention of cervical cancer in adolescents",
-          "মডিউল-১০: এইচপিভি টিকা ও কৈশোরে জরায়ুমুখ ক্যান্সার প্রতিরোধ",
+          "মডিউল-১০: এইচপিভি টিকা ও তারুণ্যে জরায়ুমুখ ক্যান্সার প্রতিরোধ",
         ),
         lessons: [
           {
@@ -6937,7 +6937,7 @@ const coursesData = [
                 "যৌতুক দাবি করা এবং যৌতুকের কারণে মেয়েদের উপর শারীরিক ও মানসিক নির্যাতন করা",
                 "অসুস্থ হলে মেয়েদের স্বাস্থ্যসেবা গ্রহণের ব্যাপারে পরিবারের উদাসীনতা",
                 "সন্তান গ্রহণ ও নিজের শরীর সম্পর্কে সিদ্ধান্ত নিতে না পারার প্রথা",
-                "কৈশোরে সন্তানধারণ করা",
+                "তারুণ্যে সন্তানধারণ করা",
                 "নারীর উপর শারীরিক ও মানসিক নির্যাতন খুব স্বাভাবিকভাবে গ্রহণ করা",
                 "পুরুষের তুলনায় নারীকে কম পারিশ্রমিক দেওয়া",
               ];
@@ -8235,8 +8235,8 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "তারুণ্যীন সহিংসতার কারণ",
-                      "তারুণ্যীন সহিংসতার কারণ",
+                      "তারুন্যকালীনসহিংসতার কারণ",
+                      "তারুন্যকালীনসহিংসতার কারণ",
                     )}</h3>
                     <div class="row g-3">
                       ${renderCauseCards()}
@@ -8284,14 +8284,14 @@ const coursesData = [
         id: "ch-14",
         title: yhLang(
           "Module-14: Sex, Gender and Gender Discrimination",
-          "মডিউল-১৪: তারুণ্যীন মনোসামাজিক পরিবর্তন ও জটিলতাসমূহ",
+          "মডিউল-১৪: তারুন্যকালীনমনোসামাজিক পরিবর্তন ও জটিলতাসমূহ",
         ),
         lessons: [
           {
             id: "ch14-lesson-1",
             title: yhLang(
               "Adolescent Psychosocial Changes",
-              "তারুণ্যীন মনোসামাজিক পরিবর্তন",
+              "তারুন্যকালীনমনোসামাজিক পরিবর্তন",
             ),
             icon: "fa-people-roof",
             gradientClass: "bg-gradient-indigo",
@@ -8303,7 +8303,7 @@ const coursesData = [
                   id: "q14a",
                   question: yhLang(
                     "Which factor strongly influences psychosocial change during adolescence?",
-                    "তারুণ্যীন মনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?",
+                    "তারুন্যকালীনমনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?",
                   ),
                   options: [
                     yhLang(
@@ -8327,7 +8327,7 @@ const coursesData = [
             content: (function () {
               const introPrimary = yhLang(
                 "Adolescence brings psychosocial changes that influence communication patterns with family, friends, and peers.",
-                "তারুণ্যীন সময়ে তরুন-তরুনীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।",
+                "তারুন্যকালীনসময়ে তরুন-তরুনীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।",
               );
 
               const introSecondary = yhLang(
@@ -8517,7 +8517,7 @@ const coursesData = [
                   <header class="m14l1-header" data-aos="fade-up">
                     <h2 class="m14l1-title">
                       <i class="fa-solid fa-people-roof"></i>
-                      ${yhLang("Psychosocial transitions in adolescence", "তারুণ্যীন মনোসামাজিক পরিবর্তন")}
+                      ${yhLang("Psychosocial transitions in adolescence", "তারুন্যকালীনমনোসামাজিক পরিবর্তন")}
                     </h2>
                   </header>
 
@@ -8555,7 +8555,7 @@ const coursesData = [
                   <section class="m14l1-card m14l1-card-complex" data-aos="fade-up" data-aos-delay="95">
                     <h3 class="m14l1-subtitle">
                       <i class="fa-solid fa-diagram-project"></i>
-                      ${yhLang("Psychosocial complexities", "তারুণ্যীন মনোসামাজিক জটিলতাসমূহ")}
+                      ${yhLang("Psychosocial complexities", "তারুন্যকালীনমনোসামাজিক জটিলতাসমূহ")}
                     </h3>
                     <ul class="m14l1-list">
                       ${renderList(psychosocialComplexities, 95)}
@@ -11114,7 +11114,7 @@ const coursesData = [
         id: "ch-15",
         title: yhLang(
           "Module-15: Violence Related to Adolescents",
-          "মডিউল-১৫: তারুণ্যীন মানসিক স্বাস্থ্য সমস্যা ও সমাধানের উপায়",
+          "মডিউল-১৫: তারুন্যকালীনমানসিক স্বাস্থ্য সমস্যা ও সমাধানের উপায়",
         ),
         lessons: [
           {
@@ -11318,10 +11318,10 @@ const coursesData = [
               ];
 
               const adolescentImpacts = [
-                "তারুণ্যীন বিষণ্নতা তরুন-তরুনীদের অসুস্থতা ও পঙ্গুত্বের প্রধান কারণগুলোর একটি।",
+                "তারুন্যকালীনবিষণ্নতা তরুন-তরুনীদের অসুস্থতা ও পঙ্গুত্বের প্রধান কারণগুলোর একটি।",
                 "বিশ্বব্যাপী ১৫–১৯ বছর বয়সী তরুন-তরুনীদের মৃত্যুর তৃতীয় কারণ আত্মহত্যা।",
-                "কৈশোরের মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতি করে।",
-                "তারুণ্যীন মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতিসাধন করে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত করে।",
+                "তারুণ্যের মানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতি করে।",
+                "তারুন্যকালীনমানসিক স্বাস্থ্য সমস্যা প্রাপ্তবয়সে শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতিসাধন করে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত করে।",
               ];
 
               const headingIcon = (iconClass) => `
@@ -11420,8 +11420,8 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="100" style="background: rgba(255,255,255,.88); border-radius: 1rem; box-shadow: 0 14px 26px -20px rgba(14, 116, 144, .55);">
                     <h3 class="h6 text-uppercase text-muted mb-3 m16-subheading">${headingIcon("fa-triangle-exclamation")}<span>${yhLang(
-                      "কৈশোরের মানসিক স্বাস্থ্য প্রভাব",
-                      "কৈশোরের মানসিক স্বাস্থ্য প্রভাব",
+                      "তারুণ্যের মানসিক স্বাস্থ্য প্রভাব",
+                      "তারুণ্যের মানসিক স্বাস্থ্য প্রভাব",
                     )}</span></h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(adolescentImpacts)}
@@ -11435,7 +11435,7 @@ const coursesData = [
             id: "ch15-lesson-3",
             title: yhLang(
               "Childhood and Adolescent Mental Issues",
-              "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ",
+              "শৈশব ও তারুন্যকালীনমানসিক সমস্যাসমূহ",
             ),
             icon: "fa-child",
             gradientClass: "bg-gradient-amber",
@@ -11464,7 +11464,7 @@ const coursesData = [
             },
             content: (function () {
               const intro =
-                "শৈশব ও কৈশোরে মানসিক চাপ, নির্যাতন বা সমর্থনের অভাবে বিভিন্ন ধরনের মানসিক সমস্যা দেখা দিতে পারে, যা ঘুম, আচরণ ও আবেগে প্রভাব ফেলে।";
+                "শৈশব ও তারুণ্যে মানসিক চাপ, নির্যাতন বা সমর্থনের অভাবে বিভিন্ন ধরনের মানসিক সমস্যা দেখা দিতে পারে, যা ঘুম, আচরণ ও আবেগে প্রভাব ফেলে।";
 
               const disorders = [
                 {
@@ -11532,7 +11532,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-child-reaching")}<span>${yhLang(
                     "Common childhood mental issues",
-                    "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ",
+                    "শৈশব ও তারুন্যকালীনমানসিক সমস্যাসমূহ",
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card m16-definition" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem;">
@@ -11552,7 +11552,7 @@ const coursesData = [
             id: "ch15-lesson-4",
             title: yhLang(
               "Childhood Behavioral Issues",
-              "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ",
+              "শৈশব ও তারুন্যকালীনমানসিক সমস্যাসমূহ",
             ),
             icon: "fa-people-arrows",
             gradientClass: "bg-gradient-crimson",
@@ -11653,7 +11653,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-people-arrows-left-right")}<span>${yhLang(
                     "Behavioral mental health issues",
-                    "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ",
+                    "শৈশব ও তারুন্যকালীনমানসিক সমস্যাসমূহ",
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem; box-shadow: 12px 14px 24px -18px rgba(190, 24, 93, .45);">
@@ -12679,7 +12679,7 @@ const coursesData = [
         id: "ch-16",
         title: yhLang(
           "Module-16: Adolescent Mental Health -  Problems and Solutions",
-          "মডিউল-১৬: মনোসামাজিক সহায়তা",
+          "মডিউল-১৬: মনোসামাজিক শিক্ষা ও সহায়তা",
         ),
         lessons: [
           {
@@ -12888,8 +12888,8 @@ const coursesData = [
             },
             content: (function () {
               const intro = yhLang(
-  "1. Empathy: Empathy is the ability through which we can understand and feel another person's emotions from their own perspective. Sympathy and empathy are not the same. Sympathy is only a feeling for someone, whereas empathy involves both feeling and the ability to understand a situation from the other person's point of view.",
-  "১. সমমর্মিতা (Empathy) সমমর্মিতা হলো যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতা (Empathy) এক নয়, সমবেদনা হলো শুধুই অনুভূতি আর সমমর্মিতা হলো অনুভূতিও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা।"
+  "Empathy: Empathy is the ability through which we can understand and feel another person's emotions from their own perspective. Sympathy and empathy are not the same. Sympathy is only a feeling for someone, whereas empathy involves both feeling and the ability to understand a situation from the other person's point of view.",
+  "সমমর্মিতা (Empathy) সমমর্মিতা হলো যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতা (Empathy) এক নয়, সমবেদনা হলো শুধুই অনুভূতি আর সমমর্মিতা হলো অনুভূতিও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা।"
 );
               const comparisonNote = yhLang(
                 "Sympathy is only emotional response, while empathy combines emotional understanding with seeing from the other person's position.",
@@ -12984,7 +12984,7 @@ const coursesData = [
                         <div class="m16l2-info-card__icon" aria-hidden="true">
                           <i class="fa-solid fa-lightbulb"></i>
                         </div>
-                        <h3 class="m16l2-info-card__title">${intro}</h3>
+                        <span class="m16l2-info-card__title">${intro}</span>
                       </div>
                      
                     </article>
@@ -13032,8 +13032,61 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const definition =
-                "এটি এমন একটি দক্ষতা যার মাধ্যমে শ্রোতা বক্তার কথা মনোযোগ দিয়ে শোনার সাথে সাথে সেই কথার অন্তর্নিহিত অর্থও বুঝতে পারেন।";
+              const observations = [
+                {
+                  icon: "fa-comment-dots",
+                  color: "m16l3-obs-speech",
+                  text: yhLang(
+                    "Notice how the participant is speaking",
+                    "খেয়াল করা – কীভাবে অংশগ্রহণকারী কথা বলছেন",
+                  ),
+                },
+                {
+                  icon: "fa-volume-high",
+                  color: "m16l3-obs-emphasis",
+                  text: yhLang(
+                    "Which words they emphasize and how they express emotions",
+                    "কোন কোন শব্দগুলোকে সে জোর দিয়ে বলছে, কোন কথার মাধ্যমে সে তার আবেগকে প্রকাশ করছে",
+                  ),
+                },
+                {
+                  icon: "fa-spell-check",
+                  color: "m16l3-obs-words",
+                  text: yhLang(
+                    "What words they use to describe their experience",
+                    "তার অভিজ্ঞতাকে বর্ণনা করতে গিয়ে সে কি কি শব্দ ব্যবহার করছে",
+                  ),
+                },
+                {
+                  icon: "fa-person-walking",
+                  color: "m16l3-obs-posture",
+                  text: yhLang(
+                    "Notice their sitting posture",
+                    "তার বসার ভঙ্গি খেয়াল করা",
+                  ),
+                },
+                {
+                  icon: "fa-face-grin-wide",
+                  color: "m16l3-obs-face",
+                  text: yhLang(
+                    "Notice their facial expressions",
+                    "মুখের ভঙ্গি খেয়াল করা",
+                  ),
+                },
+              ];
+              const renderObservations = (items, delay = 600) =>
+                items
+                  .map(
+                    (obs, index) => `
+                      <li class="m16l3-obs-item ${obs.color}" data-aos="zoom-in" data-aos-delay="${delay + index * 40}">
+                        <div class="m16l3-obs-icon" aria-hidden="true">
+                          <i class="fa-solid ${obs.icon}"></i>
+                        </div>
+                        <span class="m16l3-obs-text">${obs.text}</span>
+                      </li>
+                    `,
+                  )
+                  .join("");
 
               const techniques = [
                 {
@@ -13046,6 +13099,23 @@ const coursesData = [
                   ),
                   description:
                     "অংশগ্রহণকারীর কথা শুনে তার কাছে বিভিন্ন ধরনের প্রশ্ন করার মাধ্যমে তার ঘটনাটা বিস্তারিতভাবে জানা সম্ভব। যেমনঃ কবে ঘটেছিল, কোথায় ঘটেছিল, কে করেছে ইত্যাদি। অংশগ্রহণকারীর কথার ফাঁকে ফাঁকে প্রশ্ন করার মাধ্যমে ঘটনাটা বিস্তারিতভাবে জানা সম্ভব।",
+                },
+                {
+                  icon: "fa-solid fa-magnifying-glass",
+                  color: "m16l3-tech-questioning",
+                  number: "২",
+                  title: yhLang(
+                        "Attentive Listening",
+                        "মনোযোগী শ্রবণ",
+                      ),
+                  description: `
+                  <section class="m16l3-observations-section" data-aos="fade-up" data-aos-delay="560">
+                    
+                    <ul class="m16l3-obs-list">
+                      ${renderObservations(observations, 600)}
+                    </ul>
+                  </section>
+                  `,
                 },
                 {
                   icon: "fa-eye",
@@ -13089,7 +13159,7 @@ const coursesData = [
                   icon: "fa-person-rays",
                   color: "m16l3-tech-posture",
                   number: "৭",
-                  title: yhLang("Proper Posture", "সঠিক দৃষ্টিভঙ্গি"),
+                  title: yhLang("Proper Posture", "সঠিক দৈহিক ভঙ্গি (Posture)"),
                   description:
                     "একটি ইতিবাচক আচরণ নিয়ে আসে যার মাধ্যমে অংশগ্রহণকারী সংকেত পায় যে সহায়তাকারী তার কথা খুব মনোযোগ দিয়ে শুনছে।",
                 },
@@ -13097,54 +13167,13 @@ const coursesData = [
                   icon: "fa-face-smile",
                   color: "m16l3-tech-facial",
                   number: "৮",
-                  title: yhLang("Facial Expression", "মুখের প্রকাশভঙ্গী"),
+                  title: yhLang("Facial Expression", "মুখের প্রকাশভঙ্গী (Facial Expression)"),
                   description:
                     "এর মাধ্যমে সংকেত পাওয়া যায় যে অংশগ্রহণকারীর কথা শোনার জন্য প্রস্তুত ও যথেষ্ট আগ্রহী আছে।",
                 },
               ];
 
-              const observations = [
-                {
-                  icon: "fa-comment-dots",
-                  color: "m16l3-obs-speech",
-                  text: yhLang(
-                    "Notice how the participant is speaking",
-                    "খেয়াল করা – কীভাবে অংশগ্রহণকারী কথা বলছেন",
-                  ),
-                },
-                {
-                  icon: "fa-volume-high",
-                  color: "m16l3-obs-emphasis",
-                  text: yhLang(
-                    "Which words they emphasize and how they express emotions",
-                    "কোন কোন শব্দগুলোকে সে জোর দিয়ে বলছে, কোন কথার মাধ্যমে সে তার আবেগকে প্রকাশ করছে",
-                  ),
-                },
-                {
-                  icon: "fa-spell-check",
-                  color: "m16l3-obs-words",
-                  text: yhLang(
-                    "What words they use to describe their experience",
-                    "তার অভিজ্ঞতাকে বর্ণনা করতে গিয়ে সে কি কি শব্দ ব্যবহার করছে",
-                  ),
-                },
-                {
-                  icon: "fa-person-walking",
-                  color: "m16l3-obs-posture",
-                  text: yhLang(
-                    "Notice their sitting posture",
-                    "তার বসার ভঙ্গি খেয়াল করা",
-                  ),
-                },
-                {
-                  icon: "fa-face-grin-wide",
-                  color: "m16l3-obs-face",
-                  text: yhLang(
-                    "Notice their facial expressions",
-                    "মুখের ভঙ্গি খেয়াল করা",
-                  ),
-                },
-              ];
+              
 
               const renderTechniques = (items, delay = 100) =>
                 items
@@ -13160,25 +13189,13 @@ const coursesData = [
                           </div>
                           <h3 class="m16l3-technique-title">${tech.title}</h3>
                         </div>
-                        <p class="m16l3-technique-text">${tech.description}</p>
+                        <span class="m16l3-technique-text">${tech.description}</span>
                       </article>
                     `,
                   )
                   .join("");
 
-              const renderObservations = (items, delay = 600) =>
-                items
-                  .map(
-                    (obs, index) => `
-                      <li class="m16l3-obs-item ${obs.color}" data-aos="zoom-in" data-aos-delay="${delay + index * 40}">
-                        <div class="m16l3-obs-icon" aria-hidden="true">
-                          <i class="fa-solid ${obs.icon}"></i>
-                        </div>
-                        <span class="m16l3-obs-text">${obs.text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
+              
 
               return `
                 <div class="lesson-slide mod16-lesson3">
@@ -13199,17 +13216,12 @@ const coursesData = [
                       )}</h2>
                       <p class="m16l3-hero__subtitle">${yhLang(
                         "Essential skill for understanding deeper meaning",
-                        "গভীর অর্থ বোঝার অপরিহার্য দক্ষতা",
+                        "এটি এমন একটি দক্ষতা যার মাধ্যমে শ্রোতা বক্তার কথা মনোযোগ দিয়ে শোনার সাথে সাথে সেই কথার অন্তর্নিহিত অর্থও বুঝতে পারেন।",
                       )}</p>
                     </div>
                   </section>
 
-                  <section class="m16l3-definition" data-aos="fade-up" data-aos-delay="40">
-                    <div class="m16l3-definition-icon" aria-hidden="true">
-                      <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <p class="m16l3-definition-text">${definition}</p>
-                  </section>
+                 
 
                   <section class="m16l3-section-header" data-aos="fade-up" data-aos-delay="70">
                     <div class="m16l3-section-icon" aria-hidden="true">
@@ -13225,20 +13237,7 @@ const coursesData = [
                     ${renderTechniques(techniques, 100)}
                   </div>
 
-                  <section class="m16l3-observations-section" data-aos="fade-up" data-aos-delay="560">
-                    <div class="m16l3-obs-header">
-                      <div class="m16l3-obs-header-icon" aria-hidden="true">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </div>
-                      <h3 class="m16l3-obs-title">${yhLang(
-                        "Key Observations",
-                        "মনোযোগী শ্রবণ",
-                      )}<span class="m16l3-obs-number">২</span></h3>
-                    </div>
-                    <ul class="m16l3-obs-list">
-                      ${renderObservations(observations, 600)}
-                    </ul>
-                  </section>
+                  
                 </div>
               `;
             })(),
@@ -14041,12 +14040,12 @@ const coursesData = [
         id: "ch-18",
         title: yhLang(
           "Module-18: Psychosocial support for adolescents",
-          "মডিউল-১৮: কিশোর কিশোরীদের ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবা",
+          "মডিউল-১৮: ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবা",
         ),
         lessons: [
           {
             id: "ch18-lesson-1",
-            title: yhLang("First Aid Support", "প্রাথমিক চিকিৎসা"),
+            title: yhLang("First Aid Support", "ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবা"),
             icon: "fa-briefcase-medical",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
@@ -14057,7 +14056,7 @@ const coursesData = [
                   id: "q18a",
                   question: yhLang(
                     "প্রাথমিক চিকিৎসার প্রথম লক্ষ্য কী?",
-                    "প্রাথমিক চিকিৎসার প্রথম লক্ষ্য কী?",
+                    "ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবার প্রথম লক্ষ্য কী?",
                   ),
                   options: [
                     yhLang("জীবন বাঁচানো", "জীবন বাঁচানো"),
@@ -14137,7 +14136,7 @@ const coursesData = [
                       <i class="fa-solid fa-briefcase-medical"></i>
                     </div>
                     <h2 class="m18l1-hero__title">
-                      ${yhLang("First Aid Support", "প্রাথমিক চিকিৎসা")}
+                      ${yhLang("First Aid Support", "ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবা")}
                     </h2>
                   </div>
 
@@ -15828,7 +15827,7 @@ const coursesData = [
             id: "ch18-lesson-11",
             title: yhLang(
               "Adult & Child Choking First Aid",
-              "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)",
+              "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)",
             ),
             icon: "fa-hands-holding-child",
             gradientClass: "bg-gradient-grape",
@@ -15999,7 +15998,7 @@ const coursesData = [
                     <section class="m18l11-panel m18l11-panel-initial" data-aos="fade-right" data-aos-delay="20">
                       <h3 class="m18l11-panel-title">
                         <i class="fa-solid fa-hand-holding-medical"></i>
-                        ${yhLang("Initial Back Blow Steps", "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)")}
+                        ${yhLang("Initial Back Blow Steps", "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)")}
                       </h3>
                       
                       ${renderList(firstGuidance)}
@@ -16044,7 +16043,7 @@ const coursesData = [
         id: "ch-19",
         title: yhLang(
           "Module-19: Drug addiction - Consequences and prevention",
-          "মডিউল-১৯: তারুণ্যীন পুষ্টি",
+          "মডিউল-১৯: তারুন্যকালীনপুষ্টি",
         ),
         lessons: [
           {
@@ -16945,14 +16944,14 @@ const coursesData = [
                   icon: "fa-house",
                   text: yhLang(
                     "During adolescence, boys and girls should be encouraged to eat nutritious homemade food. Bottled, canned, and processed foods contain fewer nutrients and may reduce interest in healthy home-cooked meals.",
-                    "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।",
+                    "তারুণ্যে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।",
                   ),
                 },
                 {
                   icon: "fa-triangle-exclamation",
                   text: yhLang(
                     "It is important to note that adolescents often eat street foods such as chanachur, pickles, chotpoti, chips, ice cream, cake, soft drinks, juices, and energy drinks. These foods contain high levels of salt, fat, and sugar, which increase the risk of obesity, heart disease, and diabetes later in life.",
-                    "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।",
+                    "উল্লেখ্য, তারুণ্যে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।",
                   ),
                 },
                 {
@@ -16975,11 +16974,11 @@ const coursesData = [
                 ),
                 yhLang(
                   "Home-Made Foods",
-                  "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।",
+                  "তারুণ্যে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।",
                 ),
                 yhLang(
                   "Avoid Junk Food",
-                  "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।",
+                  "উল্লেখ্য, তারুণ্যে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।",
                 ),
                 yhLang(
                   "Natural Foods",
@@ -17194,8 +17193,8 @@ const coursesData = [
                 {
                   id: "q19h",
                   question: yhLang(
-                    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?",
-                    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?",
+                    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?",
+                    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?",
                   ),
                   options: [
                     yhLang("প্রতি সপ্তাহে", "প্রতি সপ্তাহে"),
@@ -17339,7 +17338,7 @@ const coursesData = [
                         <p>
   ${yhLang(
     "To prevent anemia, adolescent girls should take one iron–folic acid tablet every week after a meal. These iron–folic acid tablets are provided to every adolescent girl from government health service centers.",
-    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে।সরকারি বিদ্যালয় ও স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।",
+    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে।সরকারি বিদ্যালয় ও স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।",
   )}
 </p>
                       </article>
@@ -17357,7 +17356,7 @@ const coursesData = [
                         <p>
   ${yhLang(
     "Calcium helps in the formation of bones and teeth, keeps the nerves strong, and supports normal blood clotting in the body. Therefore, calcium-rich foods should be consumed during adolescence.",
-    "ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই কৈশোরে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।",
+    "ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই তারুণ্যে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।",
   )}
 </p>
                       </article>
@@ -17390,7 +17389,7 @@ const coursesData = [
                   </div>
 
                   <section class="m19l9-section m19l9-section-b" data-aos="fade-up" data-aos-delay="40">
-                    <span class=""><i class="fa-solid fa-hand-holding-heart"></i>${yhLang("How to Break the Malnutrition Cycle", "অপুষ্টি চক্র বংশ পরম্পরায় চলতে থাকে। পুষ্টিজনিত সমস্যায় ভোগা কিশোরীদের পর্যাপ্ত দৈহিক বৃিদ্ধ না হওয়ায় বেঁটে/খাটো হয় এবং তারা কম ওজনের শিশুর জন্ম দিয়ে থাকে। আর এই কম ওজনের শিশুরা যদি মেয়ে হয় তাহলে তারাও বড় হলে খাটো হয় এবং বিয়ে হলে আবারো কম ওজনের শিশুর জন্ম দেয় যা আরো ভয়াবহ। এভাবেই এই চক্র চলতে থাকে যতক্ষণ পর্যন্ত না এই চক্র ভেঙে যায়। এজন্য জীবনের সকল স্তরেই, বিশেষ করে শৈশব ও কৈশোরে পুষ্টিকর খাবার গ্রহণের মাধ্যমে কিশোরী ও নারীদের পুষ্টি নিশ্চিত করতে হবে।")}</span>
+                    <span class=""><i class="fa-solid fa-hand-holding-heart"></i>${yhLang("How to Break the Malnutrition Cycle", "অপুষ্টি চক্র বংশ পরম্পরায় চলতে থাকে। পুষ্টিজনিত সমস্যায় ভোগা মেয়েদের  পর্যাপ্ত দৈহিক বৃিদ্ধ না হওয়ায় বেঁটে/খাটো হয় এবং তারা কম ওজনের শিশুর জন্ম দিয়ে থাকে। আর এই কম ওজনের শিশুরা যদি মেয়ে হয় তাহলে তারাও বড় হলে খাটো হয় এবং বিয়ে হলে আবারো কম ওজনের শিশুর জন্ম দেয় যা আরো ভয়াবহ। এভাবেই এই চক্র চলতে থাকে যতক্ষণ পর্যন্ত না এই চক্র ভেঙে যায়। এজন্য জীবনের সকল স্তরেই, বিশেষ করে শৈশব ও তারুণ্যে পুষ্টিকর খাবার গ্রহণের মাধ্যমে কিশোরী ও নারীদের পুষ্টি নিশ্চিত করতে হবে।")}</span>
                  
                   </section>
 
@@ -17401,7 +17400,7 @@ const coursesData = [
                         <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" class="img-fluid rounded img-zoom" />
                       </figure>
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="img/modu19/pusti2.png" alt="তারুণ্যীন পুষ্টি" class="img-fluid rounded img-zoom" />
+                        <img src="img/modu19/pusti2.png" alt="তারুন্যকালীনপুষ্টি" class="img-fluid rounded img-zoom" />
                       </figure>
                     </div>
                   </section>
@@ -17570,7 +17569,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Frequent intake of fried, oily, and fatty foods (fast food, cola, chips, etc.).",
-                    "তেলে ভাজা, অধিক তৈলাক্ত ও চর্বিজাতীয় খাবার খাওয়া (যেমন: ফাস্ট ফুড, কোকাকোলা, চিপস ইত্যাদি)",
+                    "অধিক তৈলাক্ত ও চর্বিজাতীয় খাবার খাওয়া (যেমন: ফাস্ট ফুড, কোকাকোলা, চিপস ইত্যাদি)",
                   ),
                   icon: "fa-pizza-slice",
                   tone: "warn",
@@ -17605,6 +17604,17 @@ const coursesData = [
                   
 
                   <div class="row g-1 m19l10-container">
+                       
+                       <div class="col-md-6 m19l10">
+                         <section class="m19l10-section m19l10-section-c p-4" data-aos="fade-up" data-aos-delay="60">
+                            <article class="m19l10-box is-definition mb-4">
+                            <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-scale-balanced"></i>${yhLang("Understanding Overweight and Obesity", "অধিক ওজন ও স্থূলতা")}</h3>
+                            <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "বডি মাস ইনডেক্স (BMI) ২৫ থেকে ২৯.৯ এর মধ্যে থাকলে তাকে অতিরিক্ত ওজন হিসেবে ধরা হয়। অন্যদিকে  BMI ৩০ বা তার বেশি হলে তাকে স্থূলতা বলা হয়। ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধূলা, ব্যায়াম ও সুযোগ-সুবিধা তরুণ-তরুণীদের মধ্যে স্থূলতার হার বৃিদ্ধর জন্য গুরুত্বপূর্ণ ভূমিকা পালন করে। সুষম খাবার, সুষম খাবারের প্রয়োজনীয়তা ও এর সুফল সম্পর্কে পরিবারের মধ্যে যথাযথ ধারনার অভাব রয়েছে। তাছাড়া গ্রাম ও শহরে তরুণীদের উপযুক্ত খেলার স্থান ও নিরাপদ কাঠামোর সংকট রয়েছে।")}</p>
+                          </article>
+                            <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Causes of Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজনের কারণ")}</h3>
+                            ${renderList(overweightCauses)}
+                          </section>
+                       </div>
                        <div class="col-md-6">
                             
                             <div class="m19-11-card" data-aos="fade-up" data-aos-delay="60">
@@ -17618,16 +17628,6 @@ const coursesData = [
                               <img src="img/modu19/high-pressure.jpg" style="height: 530px;" alt="অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব" class="m19-11-image img-fluid img-zoom" />
                             </figure>
                           </div>
-                       </div>
-                       <div class="col-md-6 m19l10">
-                         <section class="m19l10-section m19l10-section-c p-4" data-aos="fade-up" data-aos-delay="60">
-                            <article class="m19l10-box is-definition mb-4">
-                            <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-scale-balanced"></i>${yhLang("Understanding Overweight and Obesity", "অধিক ওজন ও স্থূলতা")}</h3>
-                            <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "বডি মাস ইনডেক্স (BMI) ২৫ থেকে ২৯.৯ এর মেধ্য থাকলে তাকে অতিরিক্ত ওজন হিসেবে ধরা হয়। অন্যদিকে  BMI ৩০ বা তার বেশি হলে তাকে স্থূলতা বলা হয়। ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধূলা, ব্যায়াম ও সুযোগ-সুবিধা তরুণ-তরুণীদের মেধ্য স্থূলতার হার বৃিদ্ধর জন্য গুরুত্বপূর্ণ ভূমিকা পালন করে। সুষম খাবার, সুষম খাবারের প্রয়োজনীয়তা ও এর সুফল সম্পর্কে পরিবারের মেধ্য যথাযথ ধারনার অভাব রয়েছে। তাছাড়া গ্রাম ও শহরে তরুণীদের উপযুক্ত খেলার স্থান ও নিরাপদ কাঠামোর সংকট রয়েছে।")}</p>
-                          </article>
-                            <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Causes of Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজনের কারণ")}</h3>
-                            ${renderList(overweightCauses)}
-                          </section>
                        </div>
                     </div>
 
