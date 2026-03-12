@@ -15698,7 +15698,7 @@ const coursesData = [
                        </div>
                        <div class="col-md-4">
                           <figure class="glass-card p-1 mb-0 text-center">
-                          <img src="img/modu18/pani-duba.jpg" alt="" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <img src="img/modu18/pani-duba.jpg" alt="" style="height: 410px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                        </div>
                     </div>
@@ -15881,7 +15881,7 @@ const coursesData = [
                   .join("")}</div>`;
 
               return `
-                <div class="mod18-lesson10-12">
+                <div class="mod18-lesson10-12 lesson-slide">
                   <span class="m18l10x12-shape m18l10x12-shape-1"></span>
                   <span class="m18l10x12-shape m18l10x12-shape-2"></span>
                   <span class="m18l10x12-shape m18l10x12-shape-3"></span>
@@ -16108,7 +16108,6 @@ const coursesData = [
                       ${renderList(firstGuidance)}
                      
                       <div class="m18l11-gallery-box" data-aos="zoom-in" data-aos-delay="120">
-                        <h3 class="m18l11-gallery-title"><i class="fa-solid fa-images"></i> ${yhLang("Reference Images", "সহায়ক চিত্র")}</h3>
                         <div class="m18l11-gallery-grid">
                           ${[
                             "img/modu18/basic.jpg",
