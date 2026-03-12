@@ -13271,8 +13271,10 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const definition =
-                "মূল্যবোধ হলো আমাদের বিশ্বাস, আদর্শ ও নীতি, যার প্রভাব আমাদের আচরণের উপর পড়ে এবং জীবন পরিচালনায় সহায়তা করে। মূল্যবোধের আলোকে মানুষ তার জীবন পরিচালনা করতে উদ্বুদ্ধ হয়।";
+             const definition = yhLang(
+  "Values are our beliefs, ideals, and principles that influence our behavior and help guide our lives. Through values, people are motivated to lead and manage their lives in a meaningful way.",
+  "মূল্যবোধ হলো আমাদের বিশ্বাস, আদর্শ ও নীতি, যার প্রভাব আমাদের আচরণের উপর পড়ে এবং জীবন পরিচালনায় সহায়তা করে। মূল্যবোধের আলোকে মানুষ তার জীবন পরিচালনা করতে উদ্বুদ্ধ হয়।"
+);
 
               const sources = [
                 {
@@ -13307,11 +13309,15 @@ const coursesData = [
                 },
               ];
 
-              const exampleText =
-                "যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সম্মান করতে ইত্যাদি। আবার সমাজ থেকেও আমরা বিভিন্ন মূল্যবোধ শেখা যায়, যেমন—বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সম্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধূমপান না করা ইত্যাদি।";
+              const exampleText = yhLang(
+                "For example, in the family, a child is taught to always tell the truth and respect elders. Similarly, we also learn different values from society, such as marriage, religious values, doing honorable work without stealing, and not smoking in front of older people.",
+                "যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সম্মান করতে ইত্যাদি। আবার সমাজ থেকেও আমরা বিভিন্ন মূল্যবোধ শেখা যায়, যেমন—বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সম্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধুমপান না করা ইত্যাদি।।"
+              );
 
-              const diversityText =
-                "দেশ, সমাজ, জাতি, ধর্ম ও বর্ণভেদে মূল্যবোধ ভিন্ন হতে পারে। নিজের স্বতন্ত্র ব্যক্তিগত বিশ্বাস থেকে কিছু মূল্যবোধ তৈরি হতে পারে। এই বিভিন্নতাকে গ্রহণ এবং সম্মান করা বাঞ্ছনীয়।";
+              const diversityText = yhLang(
+                "Values can vary across countries, societies, races, religions, and castes. Some values may also be shaped by one's personal beliefs. Embracing and respecting this diversity is desirable.",
+                "দেশ, সমাজ, জাতি, ধর্ম ও বর্ণভেদে মূল্যবোধ ভিন্ন হতে পারে। নিজের স্বতন্ত্র ব্যক্তিগত বিশ্বাস থেকে কিছু মূল্যবোধ তৈরি হতে পারে। এই বিভিন্নতাকে গ্রহণ এবং সম্মান করা বাঞ্ছনীয়।"
+              );
 
               const renderSources = (items, delay = 100) =>
                 items
@@ -13344,10 +13350,6 @@ const coursesData = [
                         "Understanding Values",
                         "মূল্যবোধ",
                       )}</h2>
-                      <p class="m16l4-hero__subtitle">${yhLang(
-                        "Beliefs that guide our behavior",
-                        "আমাদের আচরণকে পরিচালিত করার বিশ্বাস",
-                      )}</p>
                     </div>
                   </section>
 
@@ -13379,10 +13381,6 @@ const coursesData = [
                         <i class="fa-solid fa-book"></i>
                       </div>
                       <div class="m16l4-example-content">
-                        <h4 class="m16l4-example-title">${yhLang(
-                          "Real-Life Examples",
-                          "বাস্তব উদাহরণ",
-                        )}</h4>
                         <p class="m16l4-example-text">${exampleText}</p>
                       </div>
                     </div>
@@ -13391,13 +13389,9 @@ const coursesData = [
                   <section class="m16l4-diversity-section" data-aos="fade-up" data-aos-delay="470">
                     <div class="m16l4-diversity-card">
                       <div class="m16l4-diversity-icon" aria-hidden="true">
-                        <i class="fa-solid fa-hands-holding-heart"></i>
+                        <i class="fa-solid fa-hands"></i>
                       </div>
                       <div class="m16l4-diversity-content">
-                        <h4 class="m16l4-diversity-title">${yhLang(
-                          "Valuing Diversity",
-                          "বৈচিত্র্যকে সম্মান করা",
-                        )}</h4>
                         <p class="m16l4-diversity-text">${diversityText}</p>
                       </div>
                     </div>
@@ -13443,8 +13437,7 @@ const coursesData = [
       <i class="fa-solid fa-hands-praying"></i>
     </div>
     <div class="m16l5-hero__content">
-      <h2 class="m16l5-hero__title">${yhLang("Understanding Behavior", "আচরণ বোঝা")}</h2>
-      <p class="m16l5-hero__subtitle">${yhLang("How Values Guide Our Actions", "মূল্যবোধ কীভাবে আমাদের কাজ পরিচালনা করে")}</p>
+      <h2 class="m16l5-hero__title">${yhLang("Understanding Behavior", "আচরণ")}</h2>
     </div>
   </section>
 
@@ -13453,12 +13446,12 @@ const coursesData = [
     <div class="m16l5-definition-icon">
       <i class="fa-solid fa-lightbulb"></i>
     </div>
-    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ ব্যক্তির বিশ্বাসের প্রতিফলন। মূল্যবোধ আমাদের আচরণকে প্রভাবিত করে।")}</p>
+    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ স্বীয় বিশ্বাসের প্রতিফলন। যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা, তাহলে আচরণ হবে অেন্যর সাথে ভদ্রতার সহিত কথা বলা। মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়। ")}</p>
   </section>
 
   <!-- Neutrality Card -->
   <section class="m16l5-neutrality-card" data-aos="fade-up" data-aos-delay="50">
-    <p class="m16l5-neutrality-text">${yhLang("Every person is unique with different thoughts, beliefs, values, and judgment abilities. An important quality of a psychosocial helper is to respect these differences and act neutrally, without imposing their own values on others.", "প্রতিটি মানুষই আলাদা, এবং নিরপেক্ষ আচরণ করা মনোসামাজিক সহায়তাকারীর গুরুত্বপূর্ণ গুণ।")}</p>
+    <p class="m16l5-neutrality-text">${yhLang("Every person is unique with different thoughts, beliefs, values, and judgment abilities. An important quality of a psychosocial helper is to respect these differences and act neutrally, without imposing their own values on others.", "প্রতিটি মানুষই আলাদা, প্রেত্যকের চিন্তা, বিশ্বাস, মূল্যবোধ এবং বিচার-বিবেচনা করার ক্ষমতা আলাদা সেই বিষয়টির প্রতি সন্মান রেখে নিরপেক্ষ আচরণ করা একজন মনোসামাজিক সহায়তাকারীর অন্যতম গুনাবলীর মধ্যে একটি।")}</p>
   </section>
 
   <!-- Methods Section -->
