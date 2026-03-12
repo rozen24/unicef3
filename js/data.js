@@ -12716,16 +12716,6 @@ const coursesData = [
 
               const sections = [
                 {
-                  icon: "fa-user-doctor",
-                  color: "m16l1-section-provider",
-                  title: yhLang(
-                    "Psychosocial Support Provider",
-                    "মনোসামাজিক সহায়তাকারী",
-                  ),
-                  description:
-                    "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অঝুঁকি হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।",
-                },
-                {
                   icon: "fa-graduation-cap",
                   color: "m16l1-section-education",
                   title: yhLang("Psychosocial Education", "মনোসামাজিক শিক্ষা"),
@@ -12742,6 +12732,28 @@ const coursesData = [
                   description:
                     "তরুন-তরুনীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে তরুন-তরুনীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
                 },
+                {
+                  icon: "fa-school",
+                  color: "m16l1-section-necessity",
+                  title: yhLang(
+                    "Psychosocial Support",
+                    "মনোসামাজিক সহায়তা",
+                  ),
+                  description:
+                    "এটি এমন এক ধরণের সেবা যার দ্বারা মানুষ আত্মসচেতন হওয়ার মাধ্যমে নিজের আচরণ ও মনোভাবের কাঙ্ক্ষিত পরিবর্তন আনতে সক্ষম হয়।",
+                },
+                {
+                  icon: "fa-user-doctor",
+                  color: "m16l1-section-provider",
+                  title: yhLang(
+                    "Psychosocial Support Provider",
+                    "মনোসামাজিক সহায়তাকারী",
+                  ),
+                  description:
+                    "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অঝুঁকি হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।",
+                },
+                
+                
               ];
 
               const benefits = [
@@ -12798,7 +12810,7 @@ const coursesData = [
                           </div>
                           <h3 class="m16l1-section-title">${section.title}</h3>
                         </div>
-                        <p class="m16l1-section-text">${section.description}</p>
+                        <span class="m16l1-section-text">${section.description}</span>
                       </section>
                     `,
                   )
@@ -12826,23 +12838,8 @@ const coursesData = [
                     <span class="m16l1-shape m16l1-shape--hexagon"></span>
                   </div>
 
-                  <section class="m16l1-hero" data-aos="fade-down">
-                    <div class="m16l1-hero__badge" aria-hidden="true">
-                      <i class="fa-solid fa-hands-holding-heart"></i>
-                    </div>
-                    <div class="m16l1-hero__content">
-                      <h2 class="m16l1-hero__title">${yhLang(
-                        "Psychosocial Support",
-                        "মনোসামাজিক সহায়তা",
-                      )}</h2>
-                      <p class="m16l1-hero__subtitle">${yhLang(
-                        "Support for emotional wellbeing and daily functioning",
-                        "মানসিক সুস্থতা ও দৈনন্দিন কার্যকারিতার সহায়তা",
-                      )}</p>
-                    </div>
-                  </section>
 
-                  <section class="m16l1-definition-section" data-aos="fade-up" data-aos-delay="50">
+                  <section class="m16l1-definition-section d-none" data-aos="fade-up" data-aos-delay="50">
                     <div class="m16l1-definition-card">
                       <div class="m16l1-definition-icon" aria-hidden="true">
                         <i class="fa-solid fa-lightbulb"></i>
@@ -12853,20 +12850,7 @@ const coursesData = [
 
                   ${renderSections(sections, 130)}
 
-                  <section class="m16l1-benefits-section" data-aos="fade-up" data-aos-delay="340">
-                    <div class="m16l1-section-header-main">
-                      <div class="m16l1-section-icon-main" aria-hidden="true">
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                      <h3 class="m16l1-section-title-main">${yhLang(
-                        "Key Benefits",
-                        "প্রধান ঝুঁকিসমূহ",
-                      )}</h3>
-                    </div>
-                    <ul class="m16l1-benefits-list">
-                      ${renderBenefits(benefits, 390)}
-                    </ul>
-                  </section>
+                
                 </div>
               `;
             })(),
@@ -12878,7 +12862,7 @@ const coursesData = [
               "মনোসামাজিক সহায়তার দক্ষতাসমূহ",
             ),
             icon: "fa-people-arrows",
-            gradientClass: "bg-gradient-gold",
+            gradientClass: "fa-solid fa-people-group",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -12903,9 +12887,10 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "১. সমমর্মিতা (Empathy) সমমর্মিতা হলো যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতা (Empathy) এক নয়, সমবেদনা হলো শুধুই অনুভূতি আর সমমর্মিতা হলো অনুভূতিও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা।";
-
+              const intro = yhLang(
+  "1. Empathy: Empathy is the ability through which we can understand and feel another person's emotions from their own perspective. Sympathy and empathy are not the same. Sympathy is only a feeling for someone, whereas empathy involves both feeling and the ability to understand a situation from the other person's point of view.",
+  "১. সমমর্মিতা (Empathy) সমমর্মিতা হলো যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতা (Empathy) এক নয়, সমবেদনা হলো শুধুই অনুভূতি আর সমমর্মিতা হলো অনুভূতিও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা।"
+);
               const comparisonNote = yhLang(
                 "Sympathy is only emotional response, while empathy combines emotional understanding with seeing from the other person's position.",
                 "সমবেদনা শুধু অনুভূতি, আর সমমর্মিতা হলো অনুভূতির পাশাপাশি অপরের অবস্থান থেকে বোঝার ক্ষমতা।",
@@ -12983,17 +12968,13 @@ const coursesData = [
 
                   <section class="m16l2-hero" data-aos="fade-down">
                     <div class="m16l2-hero__badge" aria-hidden="true">
-                      <i class="fa-solid fa-hands-holding-heart"></i>
+                      <i class="fa-solid fa-people-group"></i>
                     </div>
                     <div class="m16l2-hero__content">
                       <h2 class="m16l2-hero__title">${yhLang(
                         "Empathy Skills",
-                        "সমমর্মিতা",
+                        "মনোসামাজিক সহায়তার দক্ষতাসমূহ",
                       )}</h2>
-                      <p class="m16l2-hero__subtitle">${yhLang(
-                        "Core psychosocial support competency",
-                        "মনোসামাজিক সহায়তার গুরুত্বপূর্ণ দক্ষতা",
-                      )}</p>
                     </div>
                   </section>
 
@@ -13003,26 +12984,11 @@ const coursesData = [
                         <div class="m16l2-info-card__icon" aria-hidden="true">
                           <i class="fa-solid fa-lightbulb"></i>
                         </div>
-                        <h3 class="m16l2-info-card__title">${yhLang(
-                          "Empathy Definition",
-                          "সমমর্মিতার সংজ্ঞা",
-                        )}</h3>
+                        <h3 class="m16l2-info-card__title">${intro}</h3>
                       </div>
-                      <p class="m16l2-info-card__text">${intro}</p>
+                     
                     </article>
 
-                    <article class="m16l2-info-card m16l2-info-card--comparison">
-                      <div class="m16l2-info-card__header">
-                        <div class="m16l2-info-card__icon" aria-hidden="true">
-                          <i class="fa-solid fa-balance-scale"></i>
-                        </div>
-                        <h3 class="m16l2-info-card__title">${yhLang(
-                          "Empathy vs Sympathy",
-                          "সমমর্মিতা বনাম সমবেদনা",
-                        )}</h3>
-                      </div>
-                      <p class="m16l2-info-card__text">${comparisonNote}</p>
-                    </article>
                   </section>
 
                   <section class="m16l2-outcomes-section" data-aos="fade-up" data-aos-delay="110">
