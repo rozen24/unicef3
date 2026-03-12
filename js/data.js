@@ -16118,7 +16118,7 @@ const coursesData = [
                   descriptionEn:
                     "During adolescence, both boys and girls experience rapid weight and height growth and intellectual development. Therefore, adolescents need an adequate amount of nutritious and balanced food for proper growth. With correct nutrition, adolescents develop their intellect and abilities, improve concentration in studies, get better results, and increase work capacity.",
                   descriptionBn:
-                    "কৈশোরকালে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলশ্রুতিতে লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।",
+                    "তারুন্যকালীন ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলশ্রুতিতে লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।",
                 },
                 {
                   iconClass: "fa-utensils",
@@ -16142,7 +16142,7 @@ const coursesData = [
                   descriptionEn:
                     "Nutrition is a process. In this process, food is digested after eating and complex food substances are broken down into simpler elements. The human body absorbs these simple elements. These nutrients provide the body with energy and proper growth, develop the mind and intellect, prevent diseases and ensure health.</br> Both boys and girls undergo normal physical and mental changes during adolescence. Rapid weight and height increase and intelligence develops. Therefore, it is necessary to consume nutritious and balanced food at this time for proper growth of adolescents. Growing up with proper nutrition, adolescents develop talent and intelligence. Attention in studies, good results and ability to work increase.",
                   descriptionBn:
-                    "পুষ্টি হলো একটি প্রক্রিয়া। এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙ্গে সরল উপাদানে পরিণত হয়। মানবদেহ এসব সরল উপাদান শোষণ করে নেয়। এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্থতা নিশ্চিত করে। </br> কৈশোরকালে ছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চুার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই কিশোর-কিশোরীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে কিশোর-কিশোরীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
+                    "পুষ্টি হলো একটি প্রক্রিয়া। এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙ্গে সরল উপাদানে পরিণত হয়। মানবদেহ এসব সরল উপাদান শোষণ করে নেয়। এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্থতা নিশ্চিত করে। </br> তারুন্যকালীন ছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চুার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
                 },
                 {
                   iconClass: "fa-carrot",
@@ -16166,7 +16166,7 @@ const coursesData = [
                   descriptionEn:
                     "According to the World Health Organization, there is an ideal standard for body weight and height growth with age. If a child or adolescent has lower weight compared to height, or lower weight or height compared to their age, it is identified as malnutrition.",
                   descriptionBn:
-                    "বিশ্ব স্বাস্থ্য সংস্থা অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে। যদি কোন শিশু বা কিশোর-কিশোরীদের উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
+                    "বিশ্ব স্বাস্থ্য সংস্থা অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে। যদি কোন শিশু বা তরুন-তরুনীদের উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
                 },
                 {
                   iconClass: "fa-calculator",
@@ -16791,7 +16791,7 @@ const coursesData = [
             id: "ch19-lesson-5",
             title: yhLang(
               "Importance of Safe, Nutritious Food and Daily Meal Plan",
-              "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
+              "তারুন্যকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
             ),
             icon: "fa-utensils",
             gradientClass: "bg-gradient-rose",
@@ -16910,7 +16910,7 @@ const coursesData = [
                       <i class="fa-solid fa-utensils"></i>
                       ${yhLang(
                         "Daily Meal Plan for Adolescents",
-                        "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
+                        "তারুন্যকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
                       )}
                     </h2>
 
@@ -16970,7 +16970,7 @@ const coursesData = [
             id: "ch19-lesson-6",
             title: yhLang(
               "Adolescent Food Diversity",
-              "কৈশোরকালীন খাদ্য বৈচিত্র্য",
+              "তারুন্যকালীন খাদ্য বৈচিত্র্য",
             ),
             icon: "fa-seedling",
             gradientClass: "bg-gradient-mint",
@@ -17068,7 +17068,7 @@ const coursesData = [
                       <i class="fa-solid fa-leaf"></i>
                       ${yhLang(
                         "Adolescent Food Diversity",
-                        "কৈশোরকালীন খাদ্য বৈচিত্র্য",
+                        "তারুন্যকালীন খাদ্য বৈচিত্র্য",
                       )}
                     </h2>
                     <p class="m19l5-subtitle">${yhLang(
@@ -17558,6 +17558,41 @@ const coursesData = [
                   )
                   .join("")}</ul>`;
 
+
+
+              return `
+                <link rel="stylesheet" href="css/m19l10.css">
+                <div class="m19l10-container lesson-slide">
+                  <div class="m19l10-shape m19l10-shape-1"></div>
+                  <div class="m19l10-shape m19l10-shape-2"></div>
+                  <div class="m19l10-shape m19l10-shape-3"></div>
+
+                  <div class="m19l10 p-4">
+                    
+                    <section class="m19l10-section m19l10-section-a mb-3" data-aos="fade-up" data-aos-delay="40">
+                    <h2 class="m19l10-h2 mb-2"><i class="fa-solid fa-user-shield"></i>${yhLang("Actions to Prevent Adolescent Malnutrition", "অপুষ্টি প্রতিরোধে করণীয়")}</h2>
+                      ${renderList(preventionItems)}
+                    </section>
+
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+
+          {
+            id: "ch19-lesson-11",
+            title: yhLang(
+              "Harmful Effects of Overweight and Obesity",
+              "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
+            ),
+            icon: "fa-exclamation-circle",
+            gradientClass: "bg-gradient-crimson",
+            audioFile: "",
+            quiz: null,
+            content: (function () {
+              
+
               const overweightCauses = [
                 {
                   text: yhLang(
@@ -17600,64 +17635,54 @@ const coursesData = [
                   tone: "accent",
                 },
               ];
-
-              return `
-                <link rel="stylesheet" href="css/m19l10.css">
-                <div class="m19l10-container lesson-slide">
-                  <div class="m19l10-shape m19l10-shape-1"></div>
-                  <div class="m19l10-shape m19l10-shape-2"></div>
-                  <div class="m19l10-shape m19l10-shape-3"></div>
-
-                  <div class="m19l10-two-col">
-                    
-                    <section class="m19l10-section m19l10-section-a mb-3" data-aos="fade-up" data-aos-delay="40">
-                    <h2 class="m19l10-h2 mb-2"><i class="fa-solid fa-user-shield"></i>${yhLang("Actions to Prevent Adolescent Malnutrition", "অপুষ্টি প্রতিরোধে করণীয়")}</h2>
-                      ${renderList(preventionItems)}
-                    </section>
-
-                    <section class="m19l10-section m19l10-section-c" data-aos="fade-up" data-aos-delay="60">
-                      <article class="m19l10-box is-definition mb-4">
-                       <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-scale-balanced"></i>${yhLang("Understanding Overweight and Obesity", "অধিক ওজন ও স্থূলতা")}</h3>
-                       <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "বডি মাস ইনডেক্স (ইগও) ২৫ থেকে ২৯.৯ এর মেধ্য থাকলে তাকে অতিরিক্ত ওজন হিসেবে ধরা হয়। অন্যদিকে  ইগও ৩০ বা তার বেশি হলে তাকে স্থূলতা বলা হয়। কিশোর-কিশোরীদের মেধ্য স্থূলতার হার বৃিদ্ধর জন্য ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধূলা, ব্যায়াম ও সুযোগ-সুবিধার প্রভাব বিদ্যমান। সুষম খাবারের প্রয়োজনীয়তা ও সুষম খাবার কোনগুলো ও তার সুফল সম্পর্কে পরিবারের মেধ্য ধারণা কম রয়েছে। তাছাড়া গ্রাম ও শহরে মেয়েদের উপযুক্ত খেলার স্থান ও নিরাপদ কাঠামোর সংকট রয়েছে।")}</p>
-                     </article>
-                      <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Causes of Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজনের কারণ")}</h3>
-                      ${renderList(overweightCauses)}
-                    </section>
-                  </div>
-                </div>
-              `;
-            })(),
-          },
-
-          {
-            id: "ch19-lesson-11",
-            title: yhLang(
-              "Harmful Effects of Overweight and Obesity",
-              "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
-            ),
-            icon: "fa-exclamation-circle",
-            gradientClass: "bg-gradient-crimson",
-            audioFile: "",
-            quiz: null,
-            content: (function () {
+              const renderList = (items) =>
+                `<ul class="m19l10-list p-1">${items
+                  .map(
+                    (item, index) => `
+                      <li class="m19l10-li m19l10-${item.tone}" data-aos="fade-up" data-aos-delay="${40 + index * 26}">
+                        <span class="m19l10-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m19l10-li-text">${item.text}</span>
+                      </li>
+                    `,
+                  )
+                  .join("")}</ul>`;
               return `
                 <link rel="stylesheet" href="css/m19.css">
-                <div class="m19-11-slide">
+                <link rel="stylesheet" href="css/m19l10.css">
+                <div class="m19-11-slide lesson-slide">
                   <div class="m19-11-shape m19-11-shape-a"></div>
                   <div class="m19-11-shape m19-11-shape-b"></div>
 
-                  <header class="m19-11-header" data-aos="fade-up">
-                    <h2 class="m19-11-title"><i class="fa-solid fa-heart-pulse"></i>${yhLang(
-                      "Harmful Effects of Overweight and Obesity",
-                      "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
-                    )}</h2>
-                  </header>
+                  
 
-                  <div class="m19-11-card" data-aos="fade-up" data-aos-delay="60">
-                    <figure class="m19-11-figure">
-                      <img src="img/modu19/high-pressure.jpg" alt="অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব" class="m19-11-image img-fluid img-zoom" />
-                    </figure>
-                  </div>
+                  <div class="row g-1 m19l10-container">
+                       <div class="col-md-6">
+                            
+                            <div class="m19-11-card" data-aos="fade-up" data-aos-delay="60">
+                            <figure class="m19-11-figure">
+                              <header class="m19-11-header" data-aos="fade-up">
+                              <h2 class="m19-11-title"><i class="fa-solid fa-heart-pulse"></i>${yhLang(
+                                "Harmful Effects of Overweight and Obesity",
+                                "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
+                              )}</h2>
+                            </header>
+                              <img src="img/modu19/high-pressure.jpg" style="height: 530px;" alt="অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব" class="m19-11-image img-fluid img-zoom" />
+                            </figure>
+                          </div>
+                       </div>
+                       <div class="col-md-6 m19l10">
+                         <section class="m19l10-section m19l10-section-c p-4" data-aos="fade-up" data-aos-delay="60">
+                            <article class="m19l10-box is-definition mb-4">
+                            <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-scale-balanced"></i>${yhLang("Understanding Overweight and Obesity", "অধিক ওজন ও স্থূলতা")}</h3>
+                            <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "বডি মাস ইনডেক্স (BMI) ২৫ থেকে ২৯.৯ এর মেধ্য থাকলে তাকে অতিরিক্ত ওজন হিসেবে ধরা হয়। অন্যদিকে  BMI ৩০ বা তার বেশি হলে তাকে স্থূলতা বলা হয়। ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধূলা, ব্যায়াম ও সুযোগ-সুবিধা তরুণ-তরুণীদের মেধ্য স্থূলতার হার বৃিদ্ধর জন্য গুরুত্বপূর্ণ ভূমিকা পালন করে। সুষম খাবার, সুষম খাবারের প্রয়োজনীয়তা ও এর সুফল সম্পর্কে পরিবারের মেধ্য যথাযথ ধারনার অভাব রয়েছে। তাছাড়া গ্রাম ও শহরে তরুণীদের উপযুক্ত খেলার স্থান ও নিরাপদ কাঠামোর সংকট রয়েছে।")}</p>
+                          </article>
+                            <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Causes of Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজনের কারণ")}</h3>
+                            ${renderList(overweightCauses)}
+                          </section>
+                       </div>
+                    </div>
+
+                  
                 </div>
               `;
             })(),
