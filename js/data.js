@@ -8743,7 +8743,7 @@ const coursesData = [
 
               const anxietySignificance = yhLang(
                 "Among many emotions, anxiety is especially important because delayed management can lead to long-term complications.",
-                "বহু আবেগের মধ্যে উদ্বেগ একটি উল্লেখযোগ্য আবেগ যা সময়মতো নিয়ন্ত্রণ না করলে দীর্ঘমেয়াদি জটিলতা তৈরি করতে পারে।",
+                "তবে উদ্বেগ বেশি মাত্রায় থাকলে ব্যক্তির জন্য ক্ষতিকর হয় ফলে ব্যক্তির স্বাভাবিক জীবন যাত্রার মান ব্যহত হয় এবং ব্যক্তির মানসিক অবস্থা হুমকির সম্মুখীন হয়।",
               );
 
               const mentalSymptoms = [
@@ -8758,7 +8758,7 @@ const coursesData = [
                   tone: "warn",
                 },
                 {
-                  text: yhLang("Difficulty concentrating", "মনোযোগের অঝুঁকি"),
+                  text: yhLang("Difficulty concentrating", "মনোযোগের অসুবিধা"),
                   icon: "fa-bullseye",
                   tone: "info",
                 },
@@ -9044,10 +9044,7 @@ const coursesData = [
                   </header>
 
                   <section class="m14l3-card m14l3-card-intro" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="m14l3-subtitle">
-                      <i class="fa-solid fa-circle-info"></i>
-                      ${yhLang("What is anxiety", "উদ্বেগ কী")}
-                    </h3>
+                
                     <p class="m14l3-p">${anxietyDefinition}</p>
                     <p class="m14l3-p">${anxietyContext}</p>
                     <p class="m14l3-p m14l3-p-last">${anxietySignificance}</p>
