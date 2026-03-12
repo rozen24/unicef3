@@ -48,3 +48,8 @@
 .health-section span:has(.fa-circle-check) {
   display: none !important;
 }
+.m17l2-signs-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

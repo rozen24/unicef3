@@ -8745,15 +8745,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 /* ==================== MODULE 17 • LESSON 1 - DRUG ADDICTION ==================== */
 .lesson-slide.mod17-lesson1 {
   position: relative;
-  min-height: 100vh;
-  background: linear-gradient(135deg,
-    #ffebee 0%,
-    #ffcdd2 20%,
-    #ef9a9a 40%,
-    #e57373 65%,
-    #d32f2f 85%,
-    #b71c1c 100%
-  );
   padding: 12px 10px;
   overflow: hidden;
 }
@@ -9251,15 +9242,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 /* ==================== MODULE 17 • LESSON 2 - SIGNS OF ADDICTION ==================== */
 .lesson-slide.mod17-lesson2 {
   position: relative;
-  min-height: 100vh;
-  background: linear-gradient(135deg,
-    #fff3e0 0%,
-    #ffe0b2 20%,
-    #ffcc80 40%,
-    #ffb74d 65%,
-    #ff9800 85%,
-    #e65100 100%
-  );
   padding: 12px 10px;
   overflow: hidden;
 }
@@ -9382,7 +9364,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   min-width: 0;
 }
 
-.m17l2-hero__title {
+.m17l2-hero__title , .m17l2-signs-header  {
   margin: 0 0 3px;
   font-size: 1rem;
   font-weight: 800;
@@ -9392,7 +9374,19 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
+.m17l2-signs-header {
+  padding: 0px 20px;
+}
+.m17l2-physical-signs-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px
+}
+.m17l2-behavioral-signs-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px
+}
 .m17l2-hero__subtitle {
   margin: 0;
   font-size: 0.7rem;
@@ -9830,14 +9824,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 /* ==================== MODULE 17 • LESSON 3 - CONSEQUENCES & PREVENTION ==================== */
 .lesson-slide.mod17-lesson3 {
   position: relative;
-  min-height: 100vh;
-  background: linear-gradient(135deg,
-    #e8f5e9 0%,
-    #dcedc8 22%,
-    #c5e1a5 45%,
-    #b2dfdb 70%,
-    #80cbc4 100%
-  );
   padding: 12px 10px;
   overflow: hidden;
 }
@@ -10156,7 +10142,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m17l3-image {
   width: 100%;
   display: block;
-  max-height: 165px;
+  max-height: 300px;
   object-fit: cover;
 }
 
@@ -28795,7 +28781,9 @@ dashboard-titled-title {
 .lesson-chip--upcoming {
   opacity: 0.9;
 }
-
+.m17l1-cause-escape .m17l1-cause-icon{
+  background-color: green;
+}
 .lesson-content-card {
   /* background: rgba(255, 255, 255, 0.97); */
   background-color: var(--hero-gradient) !important;

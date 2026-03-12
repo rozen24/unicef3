@@ -13596,8 +13596,7 @@ const coursesData = [
       <i class="fa-solid fa-syringe"></i>
     </div>
     <div class="m17l1-hero__content">
-      <h2 class="m17l1-hero__title">${yhLang("Understanding Drug Addiction", "মাদকাসক্তি বোঝা")}</h2>
-      <p class="m17l1-hero__subtitle">${yhLang("Causes, Effects & Prevention", "কারণ, প্রভাব ও প্রতিরোধ")}</p>
+      <h2 class="m17l1-hero__title">${yhLang("Understanding Drug Addiction", "মাদকাসক্তি")}</h2>
     </div>
   </section>
 
@@ -13606,68 +13605,68 @@ const coursesData = [
     <div class="m17l1-definition-icon">
       <i class="fa-solid fa-lightbulb"></i>
     </div>
-    <p class="m17l1-definition-text">${yhLang("Addictive substances include alcohol, cannabis, opium, heroin, and other drugs that create dependency and cause withdrawal symptoms when not used. Drug addiction is the state where a person becomes completely dependent on these substances and cannot function without them.", "মাদকদ্রব্য হল এমন বস্তু যা গ্রহণ করলে আসক্তি সৃষ্টি হয় এবং মাদক ছাড়া চলা যায় না। এটাই মাদকাসক্তি।")}</p>
+    <p class="m17l1-definition-text">${yhLang("Addictive substances include alcohol, cannabis, opium, heroin, and other drugs that create dependency and cause withdrawal symptoms when not used. Drug addiction is the state where a person becomes completely dependent on these substances and cannot function without them.", "মদ, গাঁজা, আফিম, পেথেড্রিন, হেরোইন, সিসা, ইয়াবা, ডান্ডি প্রভুতি যা আসক্তির উদব্রেক ঘটায় এবং পরবর্তীতে গ্রহণ না করলে শরীরে প্রত্যাহার জনিত প্রভাব ফেলে তাই মাদকদ্রব্য হিসাবে পরিচিত। ক্রমাগত মাদক সেবন করতে করতে এক পর্যায়ে ব্যক্তিটি পুরোপুরি মাদকনির্ভর হয়ে পড়ে ও মাদক ছাড়া চলে না। এই অবস্থাই হচ্ছে মাদকাসক্তি। ")}</p>
   </section>
 
-  <!-- Addiction Card -->
-  <section class="m17l1-addiction-card" data-aos="fade-up" data-aos-delay="50">
-    <div class="m17l1-addiction-icon">
-      <i class="fa-solid fa-warning"></i>
-    </div>
-    <div class="m17l1-addiction-content">
-      <h3 class="m17l1-addiction-title">${yhLang("What is Drug Addiction?", "মাদকাসক্তি কী?")}</h3>
-      <p class="m17l1-addiction-text">${yhLang("Regular drug use leads to physical and psychological dependence. At a certain point, the person cannot stop using drugs even if they want to. They experience withdrawal symptoms—physical and mental discomfort when trying to quit. This compels them to continue using drugs despite knowing the harm.", "নিয়মিত মাদক ব্যবহার সম্পূর্ণ নির্ভরতার দিকে নিয়ে যায় যেখানে ব্যক্তি মাদক ছাড়া চলতে পারে না এবং বন্ধ করতে পারে না।")}</p>
-    </div>
-  </section>
+  
 
-  <!-- Causes Section -->
-  <section class="m17l1-causes-section" data-aos="fade-up" data-aos-delay="60">
-    <div class="m17l1-causes-header">
-      <div class="m17l1-causes-icon">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
-      <h3 class="m17l1-causes-title">${yhLang("Causes of Drug Addiction", "মাদকাসক্তির কারণ")}</h3>
-    </div>
-    <ul class="m17l1-causes-list">
-      <li class="m17l1-cause-item m17l1-cause-availability" data-aos="fade-up" data-aos-delay="65">
-        <div class="m17l1-cause-icon">
-          <i class="fa-solid fa-pills"></i>
+         <div class="row g-1">
+                       <div class="col-md-7">
+                            <!-- Causes Section -->
+                            <section class="m17l1-causes-section" data-aos="fade-up" data-aos-delay="60">
+                              <div class="m17l1-causes-header">
+                                <div class="m17l1-causes-icon">
+                                  <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <h3 class="m17l1-causes-title">${yhLang("Causes of Drug Addiction", "মাদকাসক্তির কারণ")}</h3>
+                              </div>
+                              <ul class="m17l1-causes-list">
+                                <li class="m17l1-cause-item m17l1-cause-availability" data-aos="fade-up" data-aos-delay="65">
+                                  <div class="m17l1-cause-icon">
+                                    <i class="fa-solid fa-pills"></i>
+                                  </div>
+                                  <span class="m17l1-cause-text">${yhLang("Easy availability of drugs", "মাদকদ্রব্যের সহজলভ্যতা")}</span>
+                                </li>
+                                <li class="m17l1-cause-item m17l1-cause-curiosity" data-aos="fade-up" data-aos-delay="70">
+                                  <div class="m17l1-cause-icon">
+                                    <i class="fa-solid fa-star"></i>
+                                  </div>
+                                  <span class="m17l1-cause-text">${yhLang("Curiosity about drugs", "মাদক সম্পর্কে কৌতূহল")}</span>
+                                </li>
+                                <li class="m17l1-cause-item m17l1-cause-peer" data-aos="fade-up" data-aos-delay="75">
+                                  <div class="m17l1-cause-icon">
+                                    <i class="fa-solid fa-users"></i>
+                                  </div>
+                                  <span class="m17l1-cause-text">${yhLang("Peer pressure from friends", "বন্ধুদের চাপে পড়ে মাদক গ্রহণ")}</span>
+                                </li>
+                                <li class="m17l1-cause-item m17l1-cause-escape" data-aos="fade-up" data-aos-delay="80">
+                                  <div class="m17l1-cause-icon">
+                                    <i class="fa-solid fa-person"></i>
+                                  </div>
+                                  <span class="m17l1-cause-text">${yhLang("Escape from despair and failure", "হতাশা ও ব্যর্থতা কাটাতে মাদক গ্রহণ")}</span>
+                                </li>
+                                <li class="m17l1-cause-item m17l1-cause-environment" data-aos="fade-up" data-aos-delay="85">
+                                  <div class="m17l1-cause-icon">
+                                    <i class="fa-solid fa-wind"></i>
+                                  </div>
+                                  <span class="m17l1-cause-text">${yhLang("Environmental influence", "পারিপার্শ্বিক পরিবেশের প্রভাব")}</span>
+                                </li>
+                                <li class="m17l1-cause-item m17l1-cause-pleasure" data-aos="fade-up" data-aos-delay="90">
+                                  <div class="m17l1-cause-icon">
+                                    <i class="fa-solid fa-smile"></i>
+                                  </div>
+                                  <span class="m17l1-cause-text">${yhLang("Seeking pleasure and enjoyment", "নিছক আনন্দের জন্য মাদক গ্রহণ")}</span>
+                                </li>
+                              </ul>
+                            </section>
+                       </div>
+                       <div class="col-md-5">
+                         <figure class="glass-card p-1 mb-0 text-center">
+                          <img src="img/modu17/madok.jpg" alt="" style="height: 330px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
+                       </div>
+                    </div>
         </div>
-        <span class="m17l1-cause-text">${yhLang("Easy availability of drugs", "মাদকদ্রব্যের সহজলভ্যতা")}</span>
-      </li>
-      <li class="m17l1-cause-item m17l1-cause-curiosity" data-aos="fade-up" data-aos-delay="70">
-        <div class="m17l1-cause-icon">
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <span class="m17l1-cause-text">${yhLang("Curiosity about drugs", "মাদক সম্পর্কে কৌতূহল")}</span>
-      </li>
-      <li class="m17l1-cause-item m17l1-cause-peer" data-aos="fade-up" data-aos-delay="75">
-        <div class="m17l1-cause-icon">
-          <i class="fa-solid fa-users"></i>
-        </div>
-        <span class="m17l1-cause-text">${yhLang("Peer pressure from friends", "বন্ধুদের চাপে পড়ে মাদক গ্রহণ")}</span>
-      </li>
-      <li class="m17l1-cause-item m17l1-cause-escape" data-aos="fade-up" data-aos-delay="80">
-        <div class="m17l1-cause-icon">
-          <i class="fa-solid fa-cloud"></i>
-        </div>
-        <span class="m17l1-cause-text">${yhLang("Escape from despair and failure", "হতাশা ও ব্যর্থতা কাটাতে মাদক গ্রহণ")}</span>
-      </li>
-      <li class="m17l1-cause-item m17l1-cause-environment" data-aos="fade-up" data-aos-delay="85">
-        <div class="m17l1-cause-icon">
-          <i class="fa-solid fa-wind"></i>
-        </div>
-        <span class="m17l1-cause-text">${yhLang("Environmental influence", "পারিপার্শ্বিক পরিবেশের প্রভাব")}</span>
-      </li>
-      <li class="m17l1-cause-item m17l1-cause-pleasure" data-aos="fade-up" data-aos-delay="90">
-        <div class="m17l1-cause-icon">
-          <i class="fa-solid fa-smile"></i>
-        </div>
-        <span class="m17l1-cause-text">${yhLang("Seeking pleasure and enjoyment", "নিছক আনন্দের জন্য মাদক গ্রহণ")}</span>
-      </li>
-    </ul>
-  </section>
-</div>
               `;
             })(),
           },
@@ -13709,7 +13708,6 @@ const coursesData = [
     </div>
     <div class="m17l2-hero__content">
       <h2 class="m17l2-hero__title">${yhLang("Signs of Drug Addiction", "মাদকাসক্তির লক্ষণসমূহ")}</h2>
-      <p class="m17l2-hero__subtitle">${yhLang("Physical & Behavioral Indicators", "শারীরিক ও আচরণগত সূচক")}</p>
     </div>
   </section>
 
@@ -14027,27 +14025,11 @@ const coursesData = [
                     <span class="m17l3-shape m17l3-shape--blob"></span>
                   </div>
 
-                  <section class="m17l3-hero" data-aos="fade-down">
-                    <div class="m17l3-hero__badge" aria-hidden="true">
-                      <i class="fa-solid fa-scale-balanced"></i>
-                    </div>
-                    <div class="m17l3-hero__content">
-                      <h2 class="m17l3-hero__title">${yhLang(
-                        "Consequences and Prevention of Drug Addiction",
-                        "মাদকাসক্তির পরিণতি ও প্রতিরোধ",
-                      )}</h2>
-                      <p class="m17l3-hero__subtitle">${yhLang(
-                        "Understand risks and protect adolescents",
-                        "ঝুঁকি বুঝে কিশোরদের সুরক্ষা নিশ্চিত করুন",
-                      )}</p>
-                    </div>
-                  </section>
-
                   <section class="m17l3-grid">
                     <article class="m17l3-panel m17l3-panel--consequence" data-aos="fade-right" data-aos-delay="40">
                       <div class="m17l3-panel-header">
                         <div class="m17l3-panel-icon" aria-hidden="true">
-                          <i class="fa-solid fa-triangle-exclamation"></i>
+                          <i class="fa-solid fa-scale-balanced"></i>
                         </div>
                         <h3 class="m17l3-panel-title">${yhLang(
                           "Consequences of Addiction",
@@ -14078,6 +14060,7 @@ const coursesData = [
                           src="img/modu17/madok2.jpg"
                           alt="মাদকাসক্তি প্রতিরোধ"
                           class="m17l3-image"
+                          style="height: 400px;"
                         />
                       </figure>
                     </article>
