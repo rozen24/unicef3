@@ -1,12 +1,12 @@
 // UI state helpers: expose sidebarHidden-driven CSS class/state for dynamic use across templates
 // This avoids duplicating logic and lets markup compute classes like modules-collapsed/expanded on demand.
 (function (global) {
-  const STORAGE_KEY = 'lessonSidebarHidden';
+  const STORAGE_KEY = "lessonSidebarHidden";
 
   function readFlag() {
     try {
       const v = localStorage.getItem(STORAGE_KEY);
-      return v === '1' || v === 'true';
+      return v === "1" || v === "true";
     } catch (_) {
       return false;
     }
@@ -15,14 +15,14 @@
   function writeFlag(flag) {
     try {
       // Write in the existing app.js format ('1'/'0') for compatibility
-      localStorage.setItem(STORAGE_KEY, flag ? '1' : '0');
+      localStorage.setItem(STORAGE_KEY, flag ? "1" : "0");
     } catch (_) {}
   }
 
   const api = global.YHUI || {};
 
   // Live getter so it always reflects latest localStorage value
-  Object.defineProperty(api, 'sidebarHidden', {
+  Object.defineProperty(api, "sidebarHidden", {
     get() {
       return readFlag();
     },
@@ -34,30 +34,32 @@
   };
 
   api.getLessonShellClass = function () {
-    return api.sidebarHidden ? 'modules-collapsed' : 'modules-expanded';
+    return api.sidebarHidden ? "modules-collapsed" : "modules-expanded";
   };
 
   api.getLessonShellState = function () {
-    return api.sidebarHidden ? 'collapsed' : 'expanded';
+    return api.sidebarHidden ? "collapsed" : "expanded";
   };
 
   // Optional: apply classes/attributes to a given shell element immediately
   api.applyLessonShellState = function (root) {
     try {
-      const el = root || document.querySelector('.lesson-shell');
+      const el = root || document.querySelector(".lesson-shell");
       if (!el) return;
-      el.classList.remove('modules-collapsed', 'modules-expanded');
+      el.classList.remove("modules-collapsed", "modules-expanded");
       el.classList.add(api.getLessonShellClass());
-      el.setAttribute('data-modules-state', api.getLessonShellState());
+      el.setAttribute("data-modules-state", api.getLessonShellState());
       // Sync pyramid steps visual state without requiring template rebuild
-      const positiveSteps = document.querySelectorAll('.pyramid-positive .pyramid-steps .pyramid-step');
+      const positiveSteps = document.querySelectorAll(
+        ".pyramid-positive .pyramid-steps .pyramid-step",
+      );
       positiveSteps.forEach((step) => {
         if (api.sidebarHidden) {
-          step.classList.add('pyramid-positive-collapsed');
-          step.classList.remove('pyramid-step');
+          step.classList.add("pyramid-positive-collapsed");
+          step.classList.remove("pyramid-step");
         } else {
-          step.classList.add('pyramid-step');
-          step.classList.remove('pyramid-positive-collapsed');
+          step.classList.add("pyramid-step");
+          step.classList.remove("pyramid-positive-collapsed");
         }
       });
     } catch (_) {}
@@ -91,18 +93,17 @@
   };
 })(window);
 
-
 // Young Health LMS - Course Data
 const coursesData = [
   {
     id: "yhap-course",
     title: yhLang(
       "Young Health Ambassador Programme",
-      "যুব স্বাস্থ্য দূত কর্মসূচি"
+      "যুব স্বাস্থ্য দূত কর্মসূচি",
     ),
     description: yhLang(
       "Comprehensive training program for Young Health Ambassadors covering health literacy, advocacy, and community leadership.",
-      "স্বাস্থ্য সাক্ষরতা, অ্যাডভোকেসি ও সম্প্রদায়িক নেতৃত্ব নিয়ে যুব স্বাস্থ্য দূতদের জন্য সমন্বিত প্রশিক্ষণ।"
+      "স্বাস্থ্য সাক্ষরতা, অ্যাডভোকেসি ও সম্প্রদায়িক নেতৃত্ব নিয়ে যুব স্বাস্থ্য দূতদের জন্য সমন্বিত প্রশিক্ষণ।",
     ),
     duration: yhLang("10 Lessons", "১০টি পাঠ"),
     level: yhLang("Comprehensive", "সমন্বিত"),
@@ -115,7 +116,7 @@ const coursesData = [
         id: "ch-1",
         title: yhLang(
           "Module-1: Introduction of Young Health Ambassador Program (YHAP)",
-          "মডিউল-১: ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম (ওয়াইএইচএপি) পরিচিতি"
+          "মডিউল-১: ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম (ওয়াইএইচএপি) পরিচিতি",
         ),
         lessons: [
           // Understanding YHAP
@@ -123,7 +124,7 @@ const coursesData = [
             id: "ch1-lesson-1",
             title: yhLang(
               "Understanding Young Health Ambassador Programme",
-              "যুব স্বাস্থ্য দূত কর্মসূচি বোঝা"
+              "যুব স্বাস্থ্য দূত কর্মসূচি বোঝা",
             ),
             icon: "fa-heartbeat",
             gradientClass: "bg-gradient-purple",
@@ -135,7 +136,7 @@ const coursesData = [
                   id: "q1a",
                   question: yhLang(
                     "What age range defines youth according to the UN?",
-                    "জাতিসংঘের মতে কোন বয়সসীমাকে যুব বলা হয়?"
+                    "জাতিসংঘের মতে কোন বয়সসীমাকে যুব বলা হয়?",
                   ),
                   options: [
                     yhLang("15–24 years", "১৫–২৪ বছর"),
@@ -164,7 +165,7 @@ const coursesData = [
                       title: yhLang("Health", "স্বাস্থ্য"),
                       text: yhLang(
                         "As per World Health Organization (WHO), health is defined as a state of complete physical, mental, and social well-being, and not merely the absence of disease or infirmity.",
-                        "বিশ্ব স্বাস্থ্য সংস্থা (WHO) স্বাস্থ্যকে একটি পূর্ণাঙ্গ শারীরিক, মানসিক ও সামাজিক সুস্থতার অবস্থা হিসেবে চিহ্নিত করে—শুধু অসুস্থতার অনুপস্থিতি নয়।"
+                        "বিশ্ব স্বাস্থ্য সংস্থা (WHO) স্বাস্থ্যকে একটি পূর্ণাঙ্গ শারীরিক, মানসিক ও সামাজিক সুস্থতার অবস্থা হিসেবে চিহ্নিত করে—শুধু অসুস্থতার অনুপস্থিতি নয়।",
                       ),
                       delay: 160,
                     },
@@ -173,7 +174,7 @@ const coursesData = [
                       title: yhLang("Adolescence", "কৈশোর"),
                       text: yhLang(
                         "According to WHO, adolescence is the life phase between childhood and adulthood (10–19 years) marked by rapid physical, cognitive, and psychosocial growth.",
-                        "WHO–এর মতে ১০–১৯ বছর বয়সীনদের কৈশোর বলা হয়—এই পর্যায়ে দ্রুত শারীরিক, মানসিক ও সামাজিক পরিবর্তন ঘটে।"
+                        "WHO–এর মতে ১০–১৯ বছর বয়সীনদের কৈশোর বলা হয়—এই পর্যায়ে দ্রুত শারীরিক, মানসিক ও সামাজিক পরিবর্তন ঘটে।",
                       ),
                       delay: 200,
                     },
@@ -182,7 +183,7 @@ const coursesData = [
                       title: yhLang("Youth", "যুবক-যুবতী"),
                       text: yhLang(
                         "The United Nations defines youth as persons aged 15–24, marking the transition from dependence to independence.",
-                        "জাতিসংঘ ১৫–২৪ বছরের ব্যক্তিদের যুব বলে—এ সময়েই নির্ভরতামুক্ত হয়ে স্বনির্ভরতার পথে এগিয়ে যায়।"
+                        "জাতিসংঘ ১৫–২৪ বছরের ব্যক্তিদের যুব বলে—এ সময়েই নির্ভরতামুক্ত হয়ে স্বনির্ভরতার পথে এগিয়ে যায়।",
                       ),
                       delay: 240,
                     },
@@ -191,7 +192,7 @@ const coursesData = [
                       title: yhLang("Young people", "তরুণ জনগোষ্ঠী"),
                       text: yhLang(
                         "WHO describes young people as those aged 10–24.",
-                        "WHO-এর মতে ১০–২৪ বছর বয়সীরাই তরুণ জনগোষ্ঠী।"
+                        "WHO-এর মতে ১০–২৪ বছর বয়সীরাই তরুণ জনগোষ্ঠী।",
                       ),
                       delay: 280,
                     },
@@ -204,7 +205,7 @@ const coursesData = [
                           <p class="mb-0">${card.text}</p>
                         </div>
                       </div>
-                    `
+                    `,
                     )
                     .join("")}
                 </div>
@@ -213,11 +214,11 @@ const coursesData = [
                   <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>${yhLang("About YHAP", "ওয়াইএইচএপি সম্পর্কে")}</h4>
                   <p>${yhLang(
                     "The Young Health Ambassador Programme (YHAP) is a joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF to build informed health ambassadors through primary prevention and health promotion.",
-                    "ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম (ওয়াইএইচএপি) হলো স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় ও ইউনিসেফের যৌথ উদ্যোগ, যা প্রতিরোধমূলক স্বাস্থ্য প্রচারের মাধ্যমে তথ্যসমৃদ্ধ স্বাস্থ্য দূত গড়ে তোলে।"
+                    "ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম (ওয়াইএইচএপি) হলো স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় ও ইউনিসেফের যৌথ উদ্যোগ, যা প্রতিরোধমূলক স্বাস্থ্য প্রচারের মাধ্যমে তথ্যসমৃদ্ধ স্বাস্থ্য দূত গড়ে তোলে।",
                   )}</p>
                   <p>${yhLang(
                     "The course equips young people with knowledge on physical, sexual and reproductive health, nutrition, and mental wellbeing so they can champion healthier choices in their communities.",
-                    "এই কোর্স তরুণদের শারীরিক, যৌন ও প্রজনন স্বাস্থ্য, পুষ্টি ও মানসিক সুস্থতা নিয়ে জ্ঞান ও দক্ষতা দেয়, যাতে তারা নিজের সম্প্রদায়ে সুস্থ জীবনধারার অনুকূল পরিবেশ গড়তে পারে।"
+                    "এই কোর্স তরুণদের শারীরিক, যৌন ও প্রজনন স্বাস্থ্য, পুষ্টি ও মানসিক সুস্থতা নিয়ে জ্ঞান ও দক্ষতা দেয়, যাতে তারা নিজের সম্প্রদায়ে সুস্থ জীবনধারার অনুকূল পরিবেশ গড়তে পারে।",
                   )}</p>
                 </div>
               </div>`;
@@ -230,7 +231,7 @@ const coursesData = [
             id: "ch1-lesson-2",
             title: yhLang(
               "Age Progression: Adolescence to Young Adulthood (10–24)",
-              "বয়সের ধাপ: কৈশোর থেকে তরুণ প্রাপ্তবয়স্ক (১০–২৪)"
+              "বয়সের ধাপ: কৈশোর থেকে তরুণ প্রাপ্তবয়স্ক (১০–২৪)",
             ),
             icon: "fa-children",
             gradientClass: "bg-gradient-violet",
@@ -242,7 +243,7 @@ const coursesData = [
                   id: "q1a-ages-1",
                   question: yhLang(
                     "Which range is considered Mid Adolescence?",
-                    "কোন বয়সসীমাকে মধ্য কৈশোর ধরা হয়?"
+                    "কোন বয়সসীমাকে মধ্য কৈশোর ধরা হয়?",
                   ),
                   options: [
                     yhLang("10–13 years", "১০–১৩ বছর"),
@@ -326,12 +327,12 @@ const coursesData = [
                       </div>
                       <div class="d-none d-flex align-items-center justify-content-center gap-4" style="font-size: 2rem;">
                         <span class="${step.color}"><i class="fa-solid ${
-                      step.iconA
-                    }"></i></span>
+                          step.iconA
+                        }"></i></span>
                         <i class="fa-solid fa-plus text-muted" style="font-size:1rem"></i>
                         <span class="${step.color}"><i class="fa-solid ${
-                      step.iconB
-                    }"></i></span>
+                          step.iconB
+                        }"></i></span>
                       </div>
                       <figure class="image-card age-figure mt-3" style="height:160px">
                         <img src="${step.img}" alt="${step.range} years" class="animate-float-slow">
@@ -343,7 +344,7 @@ const coursesData = [
                       ? '<div class="d-none d-xl-flex align-items-center justify-content-center" style="min-width:24px"><i class="fa-solid fa-arrow-right-long"></i></div>'
                       : ""
                   }
-                `
+                `,
                   )
                   .join("")}
               </div>
@@ -353,22 +354,34 @@ const coursesData = [
                   {
                     title: yhLang("Early Adolescence", "প্রারম্ভিক কৈশোর"),
                     icon: "fa-seedling",
-                    text: yhLang("Rapid growth begins; guidance on body changes and healthy habits is essential.", "দ্রুত শারীরিক পরিবর্তন শুরু হয়; দেহের পরিবর্তন ও স্বাস্থ্যকর অভ্যাস নিয়ে দিকনির্দেশনা জরুরি।"),
+                    text: yhLang(
+                      "Rapid growth begins; guidance on body changes and healthy habits is essential.",
+                      "দ্রুত শারীরিক পরিবর্তন শুরু হয়; দেহের পরিবর্তন ও স্বাস্থ্যকর অভ্যাস নিয়ে দিকনির্দেশনা জরুরি।",
+                    ),
                   },
                   {
                     title: yhLang("Mid Adolescence", "মধ্য কৈশোর"),
                     icon: "fa-compass",
-                    text: yhLang("Identity exploration and peer influence increase—support positive choices.", "আত্মপরিচয় খোঁজা ও সহপাঠীদের প্রভাব বাড়ে—ইতিবাচক সিদ্ধান্তে সহায়তা করুন।"),
+                    text: yhLang(
+                      "Identity exploration and peer influence increase—support positive choices.",
+                      "আত্মপরিচয় খোঁজা ও সহপাঠীদের প্রভাব বাড়ে—ইতিবাচক সিদ্ধান্তে সহায়তা করুন।",
+                    ),
                   },
                   {
                     title: yhLang("Late Adolescence", "শেষ কৈশোর"),
                     icon: "fa-graduation-cap",
-                    text: yhLang("Transitions to higher studies or work—build life skills and resilience.", "উচ্চশিক্ষা বা কর্মজীবনে প্রবেশ—জীবন দক্ষতা ও স্থিতিস্থাপকতা গড়ে তুলুন।"),
+                    text: yhLang(
+                      "Transitions to higher studies or work—build life skills and resilience.",
+                      "উচ্চশিক্ষা বা কর্মজীবনে প্রবেশ—জীবন দক্ষতা ও স্থিতিস্থাপকতা গড়ে তুলুন।",
+                    ),
                   },
                   {
                     title: yhLang("Young Adulthood", "তরুণ প্রাপ্তবয়স্ক"),
                     icon: "fa-rocket",
-                    text: yhLang("Greater independence—focus on wellbeing, employability, and leadership.", "স্বাধীনতা বাড়ে—সুস্থতা, কর্মদক্ষতা ও নেতৃত্বে গুরুত্ব দিন।"),
+                    text: yhLang(
+                      "Greater independence—focus on wellbeing, employability, and leadership.",
+                      "স্বাধীনতা বাড়ে—সুস্থতা, কর্মদক্ষতা ও নেতৃত্বে গুরুত্ব দিন।",
+                    ),
                   },
                 ]
                   .map(
@@ -383,7 +396,7 @@ const coursesData = [
                       <p class="mb-0">${card.text}</p>
                     </div>
                   </div>
-                `
+                `,
                   )
                   .join("")}
               </div>
@@ -395,7 +408,7 @@ const coursesData = [
             id: "ch1-lesson-3",
             title: yhLang(
               "Six pillars that build confident health ambassadors",
-              "আত্মবিশ্বাসী স্বাস্থ্য দূত গড়তে ছয়টি স্তম্ভ"
+              "আত্মবিশ্বাসী স্বাস্থ্য দূত গড়তে ছয়টি স্তম্ভ",
             ),
             icon: "fa-layer-group",
             gradientClass: "bg-gradient-blue",
@@ -407,14 +420,14 @@ const coursesData = [
                   id: "q1b",
                   question: yhLang(
                     "Which pillar focuses on accurate messaging?",
-                    "কোন স্তম্ভ সঠিক বার্তা প্রচারে গুরুত্ব দেয়?"
+                    "কোন স্তম্ভ সঠিক বার্তা প্রচারে গুরুত্ব দেয়?",
                   ),
                   options: [
                     yhLang("Leadership", "নেতৃত্ব"),
                     yhLang("Advocacy", "অ্যাডভোকেসি"),
                     yhLang(
                       "Health Education & Awareness",
-                      "স্বাস্থ্য শিক্ষা ও সচেতনতা"
+                      "স্বাস্থ্য শিক্ষা ও সচেতনতা",
                     ),
                     yhLang("Empowerment", "ক্ষমতায়ন"),
                   ],
@@ -435,25 +448,31 @@ const coursesData = [
                 title: yhLang("Health Literacy", "স্বাস্থ্য সাক্ষরতা"),
                 description: yhLang(
                   "YHAP builds foundational health literacy through comprehensive training on essential health and wellbeing. This equips ambassadors with the expertise to act as credible sources of information and effective advocates for prevention of diseases and health promotion.",
-                  "YHAP অপরিহার্য স্বাস্থ্য ও সুস্থতা বিষয়ে সমন্বিত প্রশিক্ষণের মাধ্যমে মৌলিক স্বাস্থ্য সাক্ষরতা গড়ে তোলে। এতে দূতরা বিশ্বাসযোগ্য তথ্যদাতা ও প্রতিরোধভিত্তিক স্বাস্থ্য প্রচারের কার্যকর প্রবক্তা হয়ে উঠেন।"
+                  "YHAP অপরিহার্য স্বাস্থ্য ও সুস্থতা বিষয়ে সমন্বিত প্রশিক্ষণের মাধ্যমে মৌলিক স্বাস্থ্য সাক্ষরতা গড়ে তোলে। এতে দূতরা বিশ্বাসযোগ্য তথ্যদাতা ও প্রতিরোধভিত্তিক স্বাস্থ্য প্রচারের কার্যকর প্রবক্তা হয়ে উঠেন।",
                 ),
                 icon: "fa-book-medical",
                 color: "purple",
               },
               {
-                title: yhLang("Health Education & Awareness", "স্বাস্থ্য শিক্ষা ও সচেতনতা"),
+                title: yhLang(
+                  "Health Education & Awareness",
+                  "স্বাস্থ্য শিক্ষা ও সচেতনতা",
+                ),
                 description: yhLang(
                   "Young Health Ambassadors (YHAs) will create health education and awareness through campaigns on key health issues, comprehensive trainings, mentorships etc., Through these multifaceted efforts, they will ensure the accurate dissemination of crucial health information towards fostering well-informed and health-literate communities.",
-                  "যুব স্বাস্থ্য দূতেরা (YHA) গুরুত্বপূর্ণ স্বাস্থ্য ইস্যুতে প্রচারণা, প্রশিক্ষণ ও মেন্টরশিপের মাধ্যমে স্বাস্থ্য শিক্ষা ও সচেতনতা তৈরি করবে, যাতে সঠিক তথ্য পৌঁছে স্বাস্থ্য–সচেতন সমাজ গড়ে ওঠে।"
+                  "যুব স্বাস্থ্য দূতেরা (YHA) গুরুত্বপূর্ণ স্বাস্থ্য ইস্যুতে প্রচারণা, প্রশিক্ষণ ও মেন্টরশিপের মাধ্যমে স্বাস্থ্য শিক্ষা ও সচেতনতা তৈরি করবে, যাতে সঠিক তথ্য পৌঁছে স্বাস্থ্য–সচেতন সমাজ গড়ে ওঠে।",
                 ),
                 icon: "fa-graduation-cap",
                 color: "blue",
               },
               {
-                title: yhLang("Peer to Peer Influence", "সহপাঠী থেকে সহপাঠী প্রভাব"),
+                title: yhLang(
+                  "Peer to Peer Influence",
+                  "সহপাঠী থেকে সহপাঠী প্রভাব",
+                ),
                 description: yhLang(
                   "The programme is built on the principle that peer-to-peer engagement is a powerful catalyst for change. By facilitating supportive mentorship and encouraging positive role-modeling among contemporaries, YHAP leverages the profound impact of shared experiences to promote healthy behaviors.",
-                  "এই কর্মসূচি সহপাঠীদের পারস্পরিক সম্পৃক্ততাকে পরিবর্তনের শক্তিশালী অনুঘটক হিসেবে বিবেচনা করে। ইতিবাচক রোল মডেলিং ও সহায়ক মেন্টরশিপের মাধ্যমে অভিজ্ঞতা ভাগ করে স্বাস্থ্যকর আচরণ উৎসাহিত করা হয়।"
+                  "এই কর্মসূচি সহপাঠীদের পারস্পরিক সম্পৃক্ততাকে পরিবর্তনের শক্তিশালী অনুঘটক হিসেবে বিবেচনা করে। ইতিবাচক রোল মডেলিং ও সহায়ক মেন্টরশিপের মাধ্যমে অভিজ্ঞতা ভাগ করে স্বাস্থ্যকর আচরণ উৎসাহিত করা হয়।",
                 ),
                 icon: "fa-users",
                 color: "teal",
@@ -462,7 +481,7 @@ const coursesData = [
                 title: yhLang("Empowerment", "ক্ষমতায়ন"),
                 description: yhLang(
                   "YHAP empowers individuals by equipping them with the tools, confidence, and skills needed to take effective control and contribute to the economic development, creating a productive, resilient, and healthy workforce for the future.",
-                  "YHAP তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে ক্ষমতায়িত করে, যাতে তারা কার্যকর ভূমিকা নিয়ে অর্থনৈতিক উন্নয়নে অবদান রাখতে পারে এবং ভবিষ্যতের জন্য সৃজনশীল ও সুস্থ কর্মশক্তি গড়ে ওঠে।"
+                  "YHAP তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে ক্ষমতায়িত করে, যাতে তারা কার্যকর ভূমিকা নিয়ে অর্থনৈতিক উন্নয়নে অবদান রাখতে পারে এবং ভবিষ্যতের জন্য সৃজনশীল ও সুস্থ কর্মশক্তি গড়ে ওঠে।",
                 ),
                 icon: "fa-hand-fist",
                 color: "orange",
@@ -471,7 +490,7 @@ const coursesData = [
                 title: yhLang("Leadership", "নেতৃত্ব"),
                 description: yhLang(
                   "The program cultivates leadership qualities in youth, preparing them to become effective, ethical, and inspiring agents of change in their communities.",
-                  "এই কর্মসূচি তরুণদের মধ্যে নেতৃত্বের গুণাবলি বিকাশ করে, যাতে তারা সম্প্রদায়ের পরিবর্তনের নৈতিক, কার্যকর ও অনুপ্রেরণাদায়ী দূত হয়ে উঠতে পারে।"
+                  "এই কর্মসূচি তরুণদের মধ্যে নেতৃত্বের গুণাবলি বিকাশ করে, যাতে তারা সম্প্রদায়ের পরিবর্তনের নৈতিক, কার্যকর ও অনুপ্রেরণাদায়ী দূত হয়ে উঠতে পারে।",
                 ),
                 icon: "fa-flag",
                 color: "green",
@@ -480,7 +499,7 @@ const coursesData = [
                 title: yhLang("Advocacy", "অ্যাডভোকেসি"),
                 description: yhLang(
                   "The Youth Health Ambassador Programme (YHAP) builds foundational competencies in health advocacy, empowering youth to effectively raise voice, articulate public health priorities to drive systemic reform. This is achieved through strategic engagement with key stakeholders, evidence-based promotion of policies, and active contribution to the formulation of legislation for strengthening health systems.",
-                  "YHAP স্বাস্থ্য অ্যাডভোকেসির মৌলিক দক্ষতা তৈরি করে, যাতে তরুণরা জনস্বাস্থ্যের অগ্রাধিকার তুলে ধরে নীতিগত পরিবর্তন আনতে পারে। অংশীদারদের সঙ্গে কৌশলগত সম্পৃক্ততা, প্রমাণভিত্তিক নীতিপ্রচারণা এবং আইন প্রণয়নে অংশগ্রহণের মাধ্যমে স্বাস্থ্যব্যবস্থা শক্তিশালী করা হয়।"
+                  "YHAP স্বাস্থ্য অ্যাডভোকেসির মৌলিক দক্ষতা তৈরি করে, যাতে তরুণরা জনস্বাস্থ্যের অগ্রাধিকার তুলে ধরে নীতিগত পরিবর্তন আনতে পারে। অংশীদারদের সঙ্গে কৌশলগত সম্পৃক্ততা, প্রমাণভিত্তিক নীতিপ্রচারণা এবং আইন প্রণয়নে অংশগ্রহণের মাধ্যমে স্বাস্থ্যব্যবস্থা শক্তিশালী করা হয়।",
                 ),
                 icon: "fa-bullhorn",
                 color: "pink",
@@ -496,7 +515,7 @@ const coursesData = [
                   <h5 class="gradient-text transition-base">${pillar.title}</h5>
                   <p>${pillar.description}</p>
                 </div>
-              </div>`
+              </div>`,
               )
               .join("")}
             </div>
@@ -508,7 +527,7 @@ const coursesData = [
             id: "ch1-lesson-4",
             title: yhLang(
               "Who Am I as a Health Ambassador?",
-              "স্বাস্থ্য দূত হিসেবে আমি কে?"
+              "স্বাস্থ্য দূত হিসেবে আমি কে?",
             ),
             icon: "fa-user-shield",
             gradientClass: "bg-gradient-teal",
@@ -520,13 +539,13 @@ const coursesData = [
                   id: "q1c",
                   question: yhLang(
                     "Advocacy includes engaging which stakeholders?",
-                    "অ্যাডভোকেসিতে কোন অংশীদারদের সম্পৃক্ত করা হয়?"
+                    "অ্যাডভোকেসিতে কোন অংশীদারদের সম্পৃক্ত করা হয়?",
                   ),
                   options: [
                     yhLang("Only peers", "শুধু সহপাঠী"),
                     yhLang(
                       "Policy makers and gatekeepers",
-                      "নীতিনির্ধারক ও অভিভাবকগোষ্ঠী"
+                      "নীতিনির্ধারক ও অভিভাবকগোষ্ঠী",
                     ),
                     yhLang("Only media", "শুধু গণমাধ্যম"),
                     yhLang("No one", "কাউকেই নয়"),
@@ -545,28 +564,28 @@ const coursesData = [
                 icon: "fa-shield-heart",
                 text: yhLang(
                   "I am equipped with expertise in safeguarding health and well-being of young people, enabling me to contribute meaningfully to society while harnessing the triple dividend of health, social, and economic benefits.",
-                  "তরুণদের স্বাস্থ্য ও সুস্থতা রক্ষায় আমার জ্ঞান ও দক্ষতা আছে, যা আমাকে সমাজে কার্যকর অবদান রাখতে ও স্বাস্থ্য, সামাজিক ও অর্থনৈতিক ত্রি-মুখী সুফল অর্জনে সহায়তা করে।"
+                  "তরুণদের স্বাস্থ্য ও সুস্থতা রক্ষায় আমার জ্ঞান ও দক্ষতা আছে, যা আমাকে সমাজে কার্যকর অবদান রাখতে ও স্বাস্থ্য, সামাজিক ও অর্থনৈতিক ত্রি-মুখী সুফল অর্জনে সহায়তা করে।",
                 ),
               },
               {
                 icon: "fa-share-nodes",
                 text: yhLang(
                   "I actively empower my peers by sharing knowledge on health promotion, disease prevention, and holistic well-being, fostering informed decision-making among young people.",
-                  "স্বাস্থ্য উন্নয়ন, রোগ প্রতিরোধ ও সামগ্রিক সুস্থতা নিয়ে জ্ঞান ভাগ করে আমি সহপাঠীদের ক্ষমতায়িত করি এবং তরুণদের সুচিন্তিত সিদ্ধান্ত গ্রহণে সহায়তা করি।"
+                  "স্বাস্থ্য উন্নয়ন, রোগ প্রতিরোধ ও সামগ্রিক সুস্থতা নিয়ে জ্ঞান ভাগ করে আমি সহপাঠীদের ক্ষমতায়িত করি এবং তরুণদের সুচিন্তিত সিদ্ধান্ত গ্রহণে সহায়তা করি।",
                 ),
               },
               {
                 icon: "fa-handshake",
                 text: yhLang(
                   "Through advocacy, I engage policy makers, stakeholders and community influencer,  gatekeepers to prioritize health and wellbeing of young people, ensuring supportive policies and collaborative action for sustainable well-being.",
-                  "অ্যাডভোকেসির মাধ্যমে নীতিনির্ধারক, অংশীদার ও সম্প্রদায়ের প্রভাবশালীদের সম্পৃক্ত করি যাতে তরুণদের স্বাস্থ্য অগ্রাধিকার পায় ও সহায়ক নীতি ও সমন্বিত পদক্ষেপ নিশ্চিত হয়।"
+                  "অ্যাডভোকেসির মাধ্যমে নীতিনির্ধারক, অংশীদার ও সম্প্রদায়ের প্রভাবশালীদের সম্পৃক্ত করি যাতে তরুণদের স্বাস্থ্য অগ্রাধিকার পায় ও সহায়ক নীতি ও সমন্বিত পদক্ষেপ নিশ্চিত হয়।",
                 ),
               },
               {
                 icon: "fa-chart-line",
                 text: yhLang(
                   "I drive awareness and demand creation within communities, inspiring collective responsibility and action towards better health outcomes for adolescents and youth.",
-                  "আমি সম্প্রদায়জুড়ে সচেতনতা ও চাহিদা সৃষ্টিতে ভূমিকা রাখি, যাতে সবাই মিলে তরুন-তরুনীদের উন্নত স্বাস্থ্যফল নিশ্চিত করতে পারে।"
+                  "আমি সম্প্রদায়জুড়ে সচেতনতা ও চাহিদা সৃষ্টিতে ভূমিকা রাখি, যাতে সবাই মিলে তরুন-তরুনীদের উন্নত স্বাস্থ্যফল নিশ্চিত করতে পারে।",
                 ),
               },
             ]
@@ -584,7 +603,7 @@ const coursesData = [
                   }"></i></div>
                   <p>${f.text}</p>
                 </div>
-              </div>`
+              </div>`,
               )
               .join("")}
             </div>
@@ -596,7 +615,7 @@ const coursesData = [
             id: "ch1-lesson-5",
             title: yhLang(
               "Nine interactive steps to become a certified Young Health Ambassador",
-              "সনদপ্রাপ্ত যুব স্বাস্থ্য দূত হতে নয়টি ধাপ"
+              "সনদপ্রাপ্ত যুব স্বাস্থ্য দূত হতে নয়টি ধাপ",
             ),
             icon: "fa-clipboard-check",
             gradientClass: "bg-gradient-orange",
@@ -608,7 +627,7 @@ const coursesData = [
                   id: "q1d",
                   question: yhLang(
                     "Which step confirms identity?",
-                    "কোন ধাপ পরিচয় নিশ্চিত করে?"
+                    "কোন ধাপ পরিচয় নিশ্চিত করে?",
                   ),
                   options: [
                     yhLang("Registration", "নিবন্ধন"),
@@ -625,7 +644,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Online registration in Young Health Ambassador Program (YHAP)",
-                    "ওয়াইএইচএপি-তে অনলাইনে নিবন্ধন"
+                    "ওয়াইএইচএপি-তে অনলাইনে নিবন্ধন",
                   ),
                   icon: "fa-pen-to-square",
                   color: "purple",
@@ -638,7 +657,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Log in to the Website/App",
-                    "ওয়েবসাইট/অ্যাপে লগইন"
+                    "ওয়েবসাইট/অ্যাপে লগইন",
                   ),
                   icon: "fa-right-to-bracket",
                   color: "teal",
@@ -646,20 +665,23 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Access Young Health Ambassador Program (YAHP) course",
-                    "ইয়াং হেলথ অ্যাম্বাসেডর কোর্সে প্রবেশ"
+                    "ইয়াং হেলথ অ্যাম্বাসেডর কোর্সে প্রবেশ",
                   ),
                   icon: "fa-book-open",
                   color: "orange",
                 },
                 {
-                  text: yhLang("Complete YHAP course", "ওয়াইএইচএপি কোর্স সম্পন্ন"),
+                  text: yhLang(
+                    "Complete YHAP course",
+                    "ওয়াইএইচএপি কোর্স সম্পন্ন",
+                  ),
                   icon: "fa-list-check",
                   color: "green",
                 },
                 {
                   text: yhLang(
                     "Obtain passing marks in final assessment",
-                    "চূড়ান্ত মূল্যায়নে উত্তীর্ণ নম্বর লাভ"
+                    "চূড়ান্ত মূল্যায়নে উত্তীর্ণ নম্বর লাভ",
                   ),
                   icon: "fa-trophy",
                   color: "pink",
@@ -667,7 +689,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "System generated certificate",
-                    "সিস্টেম থেকে স্বয়ংক্রিয় সার্টিফিকেট"
+                    "সিস্টেম থেকে স্বয়ংক্রিয় সার্টিফিকেট",
                   ),
                   icon: "fa-certificate",
                   color: "yellow",
@@ -675,7 +697,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Self declaration/Oath Taking",
-                    "স্বপ্রত্যয়ন/শপথ গ্রহণ"
+                    "স্বপ্রত্যয়ন/শপথ গ্রহণ",
                   ),
                   icon: "fa-hand",
                   color: "lavender",
@@ -683,7 +705,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Final Certificate (Course validity-2 years)",
-                    "চূড়ান্ত সনদ (কোর্সের মেয়াদ ২ বছর)"
+                    "চূড়ান্ত সনদ (কোর্সের মেয়াদ ২ বছর)",
                   ),
                   icon: "fa-award",
                   color: "mint",
@@ -716,7 +738,7 @@ const coursesData = [
                 </div>
                 <h6 class="mt-2">${s.text}</h6>
               </div>
-              </div>`
+              </div>`,
                 )
                 .join("")}
             </div>
@@ -756,14 +778,14 @@ const coursesData = [
         id: "ch-2",
         title: yhLang(
           "Module-2: Global and Bangladesh Scenario",
-          "মডিউল-২: বৈশ্বিক ও বাংলাদেশ প্রেক্ষাপট"
+          "মডিউল-২: বৈশ্বিক ও বাংলাদেশ প্রেক্ষাপট",
         ),
         lessons: [
           {
             id: "ch2-lesson-1",
             title: yhLang(
               "Global Young Population and Demographics",
-              "বৈশ্বিক তরুণ জনগোষ্ঠী ও জনতাত্ত্বিক চিত্র"
+              "বৈশ্বিক তরুণ জনগোষ্ঠী ও জনতাত্ত্বিক চিত্র",
             ),
             icon: "fa-map-location-dot",
             gradientClass: "bg-gradient-blue",
@@ -775,7 +797,7 @@ const coursesData = [
                   id: "q2a",
                   question: yhLang(
                     "What percentage of the world’s youth live in developing countries?",
-                    "বিশ্বের তরুণদের কত শতাংশ উন্নয়নশীল দেশে বাস করে?"
+                    "বিশ্বের তরুণদের কত শতাংশ উন্নয়নশীল দেশে বাস করে?",
                   ),
                   options: [
                     yhLang("90%", "৯০%"),
@@ -855,7 +877,7 @@ const coursesData = [
             id: "ch2-lesson-2",
             title: yhLang(
               "Why young people’s health and wellbeing is important?",
-              "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ?"
+              "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ?",
             ),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-green",
@@ -867,7 +889,7 @@ const coursesData = [
                   id: "q2b",
                   question: yhLang(
                     "Investments in adolescents yield a…",
-                    "কৈশোরে বিনিয়োগ করলে কী ধরনের ফল পাওয়া যায়?"
+                    "কৈশোরে বিনিয়োগ করলে কী ধরনের ফল পাওয়া যায়?",
                   ),
                   options: [
                     yhLang("Single benefit", "একটি সুফল"),
@@ -972,7 +994,7 @@ const coursesData = [
             id: "ch2-lesson-3",
             title: yhLang(
               "Global scenario of mortality and morbidity among young people",
-              "তরুণদের মৃত্যু ও রোগভার নিয়ে বৈশ্বিক চিত্র"
+              "তরুণদের মৃত্যু ও রোগভার নিয়ে বৈশ্বিক চিত্র",
             ),
             icon: "fa-globe",
             gradientClass: "bg-gradient-purple",
@@ -984,7 +1006,7 @@ const coursesData = [
                   id: "q2c",
                   question: yhLang(
                     "A leading cause of adolescent death includes…",
-                    "কৈশোরদের মৃত্যুর প্রধান কারণগুলোর একটি হলো…"
+                    "কৈশোরদের মৃত্যুর প্রধান কারণগুলোর একটি হলো…",
                   ),
                   options: [
                     yhLang("Common cold", "সাধারণ সর্দি"),
@@ -1011,7 +1033,7 @@ const coursesData = [
                         color: "bg-gradient-pink",
                         text: yhLang(
                           "Globally over <strong>1.5 million</strong> young people aged 10–24 years died in 2021 — about <strong>4500 every day</strong>.",
-                          "২০২১ সালে বিশ্বব্যাপী <strong>১.৫ মিলিয়নের</strong>ও বেশি ১০–২৪ বছর বয়সী তরুণ মারা গেছে — প্রতিদিন প্রায় <strong>৪৫০০</strong> জন।"
+                          "২০২১ সালে বিশ্বব্যাপী <strong>১.৫ মিলিয়নের</strong>ও বেশি ১০–২৪ বছর বয়সী তরুণ মারা গেছে — প্রতিদিন প্রায় <strong>৪৫০০</strong> জন।",
                         ),
                       },
                       {
@@ -1019,7 +1041,7 @@ const coursesData = [
                         color: "bg-gradient-green",
                         text: yhLang(
                           "Young adolescents aged <strong>10–14</strong> have the <strong>lowest risk of death</strong> among all age groups.",
-                          "১০–১৪ বছর বয়সী কিশোরদের মৃত্যুঝুঁকি সব বয়সের মধ্যে সবচেয়ে কম।"
+                          "১০–১৪ বছর বয়সী কিশোরদের মৃত্যুঝুঁকি সব বয়সের মধ্যে সবচেয়ে কম।",
                         ),
                       },
                       {
@@ -1027,7 +1049,7 @@ const coursesData = [
                         color: "bg-gradient-orange",
                         text: yhLang(
                           "<strong>Injuries</strong> (including road traffic injuries and drowning), <strong>interpersonal violence</strong>, <strong>self-harm</strong>, and <strong>maternal conditions</strong> are leading causes of death.",
-                          "<strong>সড়ক দুর্ঘটনা ও ডুবে যাওয়াসহ বিভিন্ন আঘাত</strong>, <strong>ব্যক্তি-ব্যক্তি সহিংসতা</strong>, <strong>আত্মহানি</strong> এবং <strong>মাতৃস্বাস্থ্যজনিত কারণ</strong> তরুণ মৃত্যুর প্রধান কারণ।"
+                          "<strong>সড়ক দুর্ঘটনা ও ডুবে যাওয়াসহ বিভিন্ন আঘাত</strong>, <strong>ব্যক্তি-ব্যক্তি সহিংসতা</strong>, <strong>আত্মহানি</strong> এবং <strong>মাতৃস্বাস্থ্যজনিত কারণ</strong> তরুণ মৃত্যুর প্রধান কারণ।",
                         ),
                       },
                       {
@@ -1035,7 +1057,7 @@ const coursesData = [
                         color: "bg-gradient-purple",
                         text: yhLang(
                           "<strong>Half</strong> of all mental health disorders in adulthood start by <strong>age 18</strong>, but most cases are <strong>undetected</strong> and <strong>untreated</strong>.",
-                          "বয়ঃপ্রাপ্তদের অর্ধেক মানসিক স্বাস্থ্য সমস্যার শুরু <strong>১৮ বছর</strong>ের মধ্যেই হয়, কিন্তু অধিকাংশই <strong>অননুমোদিত</strong> এবং <strong>চিকিৎসাবিহীন</strong> থাকে।"
+                          "বয়ঃপ্রাপ্তদের অর্ধেক মানসিক স্বাস্থ্য সমস্যার শুরু <strong>১৮ বছর</strong>ের মধ্যেই হয়, কিন্তু অধিকাংশই <strong>অননুমোদিত</strong> এবং <strong>চিকিৎসাবিহীন</strong> থাকে।",
                         ),
                       },
                       {
@@ -1043,7 +1065,7 @@ const coursesData = [
                         color: "bg-gradient-blue",
                         text: yhLang(
                           "<strong>Early substance use</strong> is linked to higher risks of dependence and other problems in adult life; younger people are <strong>disproportionately affected</strong>.",
-                          "<strong>কিশোর বয়সে নেশাজাতীয় দ্রব্যের ব্যবহার</strong> প্রাপ্তবয়সে আসক্তি ও অন্যান্য ঝুঁকি বাড়ায়; তরুণরা এ থেকে <strong>বেশি ক্ষতিগ্রস্ত</strong> হয়।"
+                          "<strong>কিশোর বয়সে নেশাজাতীয় দ্রব্যের ব্যবহার</strong> প্রাপ্তবয়সে আসক্তি ও অন্যান্য ঝুঁকি বাড়ায়; তরুণরা এ থেকে <strong>বেশি ক্ষতিগ্রস্ত</strong> হয়।",
                         ),
                       },
                     ]
@@ -1065,7 +1087,7 @@ const coursesData = [
                           </div>
                         </div>
                       </div>
-                    `
+                    `,
                       )
                       .join("")}
                   </div>
@@ -1082,7 +1104,10 @@ const coursesData = [
                     <div class="row g-3">
                       ${[
                         {
-                          label: yhLang("Road traffic accident", "সড়ক দুর্ঘটনা"),
+                          label: yhLang(
+                            "Road traffic accident",
+                            "সড়ক দুর্ঘটনা",
+                          ),
                           icon: "fa-car-burst",
                           color: "bg-gradient-orange",
                         },
@@ -1099,7 +1124,7 @@ const coursesData = [
                         {
                           label: yhLang(
                             "Lower Respiratory Tract infection",
-                            "নিম্ন শ্বাসতন্ত্রের সংক্রমণ"
+                            "নিম্ন শ্বাসতন্ত্রের সংক্রমণ",
                           ),
                           icon: "fa-lungs",
                           color: "bg-gradient-blue",
@@ -1126,7 +1151,7 @@ const coursesData = [
                             </div>
                           </div>
                         </div>
-                      `
+                      `,
                         )
                         .join("")}
                     </div>
@@ -1146,7 +1171,7 @@ const coursesData = [
             id: "ch2-lesson-4",
             title: yhLang(
               "Bangladesh scenario of mortality and morbidity among young people",
-              "বাংলাদেশে তরুণদের মৃত্যু ও রোগভার পরিস্থিতি"
+              "বাংলাদেশে তরুণদের মৃত্যু ও রোগভার পরিস্থিতি",
             ),
             icon: "fa-flag",
             gradientClass: "bg-gradient-blue",
@@ -1158,7 +1183,7 @@ const coursesData = [
                   id: "q2c-bd",
                   question: yhLang(
                     "Among Bangladeshi adolescent males (10–19), which is a leading cause of death?",
-                    "বাংলাদেশি কৈশোর বয়সী ছেলেদের (১০–১৯) মৃত্যুর প্রধান কারণ কোনটি?"
+                    "বাংলাদেশি কৈশোর বয়সী ছেলেদের (১০–১৯) মৃত্যুর প্রধান কারণ কোনটি?",
                   ),
                   options: [
                     yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
@@ -1223,7 +1248,7 @@ const coursesData = [
                               }"></i></span>
                               <span>${item.label}</span>
                             </li>
-                          `
+                          `,
                             )
                             .join("")}
                         </ul>
@@ -1257,7 +1282,7 @@ const coursesData = [
                             {
                               label: yhLang(
                                 "Lower respiratory tract infections",
-                                "নিম্ন শ্বাসতন্ত্রের সংক্রমণ"
+                                "নিম্ন শ্বাসতন্ত্রের সংক্রমণ",
                               ),
                               icon: "fa-lungs",
                               color: "bg-gradient-green",
@@ -1275,7 +1300,7 @@ const coursesData = [
                               }"></i></span>
                               <span>${item.label}</span>
                             </li>
-                          `
+                          `,
                             )
                             .join("")}
                         </ul>
@@ -1363,7 +1388,7 @@ const coursesData = [
                       .map(
                         (l) => `
                       <span class="badge-pill" title="${l.label}"><i class="fa-solid ${l.icon} me-1"></i>${l.label}</span>
-                    `
+                    `,
                       )
                       .join("")}
                   </div>
@@ -1375,7 +1400,7 @@ const coursesData = [
             id: "ch2-lesson-5",
             title: yhLang(
               "Child marriage and teenage pregnancies",
-              "বাল্যবিবাহ ও কিশোরী মাতৃত্ব"
+              "বাল্যবিবাহ ও কিশোরী মাতৃত্ব",
             ),
             icon: "fa-child-reaching",
             gradientClass: "bg-gradient-orange",
@@ -1387,7 +1412,7 @@ const coursesData = [
                   id: "q2d",
                   question: yhLang(
                     "Ending child marriage helps protect…",
-                    "বাল্যবিবাহ বন্ধ করলে কী সুরক্ষিত হয়?"
+                    "বাল্যবিবাহ বন্ধ করলে কী সুরক্ষিত হয়?",
                   ),
                   options: [
                     yhLang("Education and health", "শিক্ষা ও স্বাস্থ্য"),
@@ -1476,7 +1501,7 @@ const coursesData = [
                             .map(
                               (c) => `
                             <span class="d-none badge-pill ${c.color}" title="${c.label}"><i class="fa-solid ${c.icon} me-1"></i>${c.label}</span>
-                          `
+                          `,
                             )
                             .join("")}
                         </div>
@@ -1560,7 +1585,7 @@ const coursesData = [
             id: "ch2-lesson-6",
             title: yhLang(
               "Adolescent health related issues",
-              "কৈশোর স্বাস্থ্য সম্পর্কিত চ্যালেঞ্জ"
+              "কৈশোর স্বাস্থ্য সম্পর্কিত চ্যালেঞ্জ",
             ),
             icon: "fa-circle-nodes",
             gradientClass: "bg-gradient-cyan",
@@ -1572,13 +1597,13 @@ const coursesData = [
                   id: "q2d-issues",
                   question: yhLang(
                     "Improving adolescent health requires…",
-                    "কৈশোর স্বাস্থ্য উন্নত করতে কী প্রয়োজন?"
+                    "কৈশোর স্বাস্থ্য উন্নত করতে কী প্রয়োজন?",
                   ),
                   options: [
                     yhLang("Single-sector approach", "একক খাতভিত্তিক পদ্ধতি"),
                     yhLang(
                       "Rights-based, multisectoral action",
-                      "অধিকারভিত্তিক বহুখাতীয় উদ্যোগ"
+                      "অধিকারভিত্তিক বহুখাতীয় উদ্যোগ",
                     ),
                     yhLang("Ignoring evidence", "তথ্যকে উপেক্ষা করা"),
                     yhLang("Only services", "শুধু পরিষেবা"),
@@ -1591,84 +1616,84 @@ const coursesData = [
               const healthStats = [
                 yhLang(
                   '<span class="stat-chip"><span class="value">12.6</span><span class="unit">%</span></span> children and adolescents (7–17 years) live with a diagnosable mental health condition.',
-                  '<span class="stat-chip"><span class="value">১২.৬</span><span class="unit">%</span></span> শিশু-কিশোর (৭–১৭ বছর) নির্ণয়যোগ্য মানসিক স্বাস্থ্য সমস্যায় ভোগে।'
+                  '<span class="stat-chip"><span class="value">১২.৬</span><span class="unit">%</span></span> শিশু-কিশোর (৭–১৭ বছর) নির্ণয়যোগ্য মানসিক স্বাস্থ্য সমস্যায় ভোগে।',
                 ),
                 yhLang(
                   'NCD risk factors: <span class="stat-chip"><span class="value">14</span><span class="unit">%</span></span> had one risk, <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> had two, <span class="stat-chip"><span class="value">29</span><span class="unit">%</span></span> had three, and <span class="stat-chip"><span class="value">34</span><span class="unit">%</span></span> lived with four or more.',
-                  'এনসিডি ঝুঁকি: <span class="stat-chip"><span class="value">১৪</span><span class="unit">%</span></span> কিশোর একটি ঝুঁকিতে, <span class="stat-chip"><span class="value">২২</span><span class="unit">%</span></span> দুটিতে, <span class="stat-chip"><span class="value">২৯</span><span class="unit">%</span></span> তিনটিতে এবং <span class="stat-chip"><span class="value">৩৪</span><span class="unit">%</span></span> চার বা ততোধিক ঝুঁকিতে রয়েছে।'
+                  'এনসিডি ঝুঁকি: <span class="stat-chip"><span class="value">১৪</span><span class="unit">%</span></span> কিশোর একটি ঝুঁকিতে, <span class="stat-chip"><span class="value">২২</span><span class="unit">%</span></span> দুটিতে, <span class="stat-chip"><span class="value">২৯</span><span class="unit">%</span></span> তিনটিতে এবং <span class="stat-chip"><span class="value">৩৪</span><span class="unit">%</span></span> চার বা ততোধিক ঝুঁকিতে রয়েছে।',
                 ),
                 yhLang(
                   'Substance use prevalence among 12–17 years stands at <span class="stat-chip"><span class="value">1.5</span><span class="unit">%</span></span>.',
-                  '১২–১৭ বছর বয়সী কিশোরদের মধ্যে নেশাজাতীয় দ্রব্য ব্যবহারের হার <span class="stat-chip"><span class="value">১.৫</span><span class="unit">%</span></span>।'
+                  '১২–১৭ বছর বয়সী কিশোরদের মধ্যে নেশাজাতীয় দ্রব্য ব্যবহারের হার <span class="stat-chip"><span class="value">১.৫</span><span class="unit">%</span></span>।',
                 ),
                 yhLang(
                   'Road traffic injuries cause nearly <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> of adolescent deaths; students account for over <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of fatalities.',
-                  'সড়ক দুর্ঘটনায় কিশোর মৃত্যুর প্রায় <span class="stat-chip"><span class="value">১০</span><span class="unit">%</span></span> ঘটে; নিহতদের মধ্যে শিক্ষার্থীর অনুপাত <span class="stat-chip"><span class="value">১৬</span><span class="unit">%</span></span>-এর বেশি।'
+                  'সড়ক দুর্ঘটনায় কিশোর মৃত্যুর প্রায় <span class="stat-chip"><span class="value">১০</span><span class="unit">%</span></span> ঘটে; নিহতদের মধ্যে শিক্ষার্থীর অনুপাত <span class="stat-chip"><span class="value">১৬</span><span class="unit">%</span></span>-এর বেশি।',
                 ),
                 yhLang(
                   'Internet addiction affects <span class="stat-chip"><span class="value">24.1</span><span class="unit">%</span></span> adolescents aged 13–19 years.',
-                  '১৩–১৯ বছর বয়সী কিশোরদের মধ্যে ইন্টারনেট আসক্তির হার <span class="stat-chip"><span class="value">২৪.১</span><span class="unit">%</span></span>।'
+                  '১৩–১৯ বছর বয়সী কিশোরদের মধ্যে ইন্টারনেট আসক্তির হার <span class="stat-chip"><span class="value">২৪.১</span><span class="unit">%</span></span>।',
                 ),
               ];
 
               const nutritionStats = [
                 yhLang(
                   'Stunting: one-third of girls are stunted (<span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> ever married, <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> unmarried) versus <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> of unmarried boys.',
-                  'খাটো বৃদ্ধি: প্রতি তিনজন কিশোরীর একজন খর্বাকৃতি (<span class="stat-chip"><span class="value">৩৬</span><span class="unit">%</span></span> বিবাহিত, <span class="stat-chip"><span class="value">৩২</span><span class="unit">%</span></span> অবিবাহিতা) যেখানে অবিবাহিত ছেলেদের মাত্র <span class="stat-chip"><span class="value">২২</span><span class="unit">%</span></span>।'
+                  'খাটো বৃদ্ধি: প্রতি তিনজন কিশোরীর একজন খর্বাকৃতি (<span class="stat-chip"><span class="value">৩৬</span><span class="unit">%</span></span> বিবাহিত, <span class="stat-chip"><span class="value">৩২</span><span class="unit">%</span></span> অবিবাহিতা) যেখানে অবিবাহিত ছেলেদের মাত্র <span class="stat-chip"><span class="value">২২</span><span class="unit">%</span></span>।',
                 ),
                 yhLang(
                   'Underweight: only <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> ever-married and <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> unmarried girls vs. <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> boys.',
-                  'কম ওজন: বিবাহিত কিশোরীর মাত্র <span class="stat-chip"><span class="value">৪</span><span class="unit">%</span></span> ও অবিবাহিতা <span class="stat-chip"><span class="value">৮</span><span class="unit">%</span></span> কম ওজনে; অবিবাহিত ছেলেদের মধ্যে হার <span class="stat-chip"><span class="value">১১</span><span class="unit">%</span></span>।'
+                  'কম ওজন: বিবাহিত কিশোরীর মাত্র <span class="stat-chip"><span class="value">৪</span><span class="unit">%</span></span> ও অবিবাহিতা <span class="stat-chip"><span class="value">৮</span><span class="unit">%</span></span> কম ওজনে; অবিবাহিত ছেলেদের মধ্যে হার <span class="stat-chip"><span class="value">১১</span><span class="unit">%</span></span>।',
                 ),
                 yhLang(
                   'Overweight: <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> ever-married girls, <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> unmarried girls, and <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> unmarried boys.',
-                  'অধিক ওজন: বিবাহিত কিশোরীর <span class="stat-chip"><span class="value">১৬</span><span class="unit">%</span></span>, অবিবাহিতা <span class="stat-chip"><span class="value">১০</span><span class="unit">%</span></span> ও অবিবাহিত ছেলেদের <span class="stat-chip"><span class="value">৯</span><span class="unit">%</span></span>।'
+                  'অধিক ওজন: বিবাহিত কিশোরীর <span class="stat-chip"><span class="value">১৬</span><span class="unit">%</span></span>, অবিবাহিতা <span class="stat-chip"><span class="value">১০</span><span class="unit">%</span></span> ও অবিবাহিত ছেলেদের <span class="stat-chip"><span class="value">৯</span><span class="unit">%</span></span>।',
                 ),
                 yhLang(
                   'Anaemia: nearly <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> adolescents are anaemic.',
-                  'রক্তস্বল্পতা: প্রায় <span class="stat-chip"><span class="value">৩০</span><span class="unit">%</span></span> তরুন-তরুনী রক্তস্বল্পতায় ভোগে।'
+                  'রক্তস্বল্পতা: প্রায় <span class="stat-chip"><span class="value">৩০</span><span class="unit">%</span></span> তরুন-তরুনী রক্তস্বল্পতায় ভোগে।',
                 ),
               ];
 
               const educationStats = [
                 yhLang(
                   'Secondary Gross Enrolment Ratio stands at <span class="stat-chip"><span class="value">74.81</span><span class="unit">%</span></span>.',
-                  'মাধ্যমিক মোট ভর্তি হার (GER) <span class="stat-chip"><span class="value">৭৪.৮১</span><span class="unit">%</span></span>।'
+                  'মাধ্যমিক মোট ভর্তি হার (GER) <span class="stat-chip"><span class="value">৭৪.৮১</span><span class="unit">%</span></span>।',
                 ),
                 yhLang(
                   'Net Enrolment Rate is <span class="stat-chip"><span class="value">72.20</span><span class="unit">%</span></span>.',
-                  'শুদ্ধ ভর্তি হার (NER) <span class="stat-chip"><span class="value">৭২.২০</span><span class="unit">%</span></span>।'
+                  'শুদ্ধ ভর্তি হার (NER) <span class="stat-chip"><span class="value">৭২.২০</span><span class="unit">%</span></span>।',
                 ),
                 yhLang(
                   'Secondary completion rate reaches <span class="stat-chip"><span class="value">65.1</span><span class="unit">%</span></span>.',
-                  'মাধ্যমিক সমাপ্তির হার <span class="stat-chip"><span class="value">৬৫.১</span><span class="unit">%</span></span>।'
+                  'মাধ্যমিক সমাপ্তির হার <span class="stat-chip"><span class="value">৬৫.১</span><span class="unit">%</span></span>।',
                 ),
                 yhLang(
                   'Dropout rate remains high at <span class="stat-chip"><span class="value">32.85</span><span class="unit">%</span></span>.',
-                  'পড়ালেখা থেকে ঝরে পড়ার হার <span class="stat-chip"><span class="value">৩২.৮৫</span><span class="unit">%</span></span>।'
+                  'পড়ালেখা থেকে ঝরে পড়ার হার <span class="stat-chip"><span class="value">৩২.৮৫</span><span class="unit">%</span></span>।',
                 ),
               ];
 
               const protectionStats = [
                 yhLang(
                   '<span class="stat-chip"><span class="value">1</span>/<span class="value">5</span></span> adolescent girls/women experience physical or sexual violence irrespective of marital status.',
-                  'বিয়ে হয়েছে কি-না বিবেচনা না করেই প্রতি <span class="stat-chip"><span class="value">৫</span></span> কিশোরী/নারীর মধ্যে <span class="stat-chip"><span class="value">১</span></span> জন শারীরিক বা যৌন সহিংসতার শিকার।'
+                  'বিয়ে হয়েছে কি-না বিবেচনা না করেই প্রতি <span class="stat-chip"><span class="value">৫</span></span> কিশোরী/নারীর মধ্যে <span class="stat-chip"><span class="value">১</span></span> জন শারীরিক বা যৌন সহিংসতার শিকার।',
                 ),
                 yhLang(
                   '<span class="stat-chip"><span class="value">77</span><span class="unit">%</span></span> married adolescent girls report intimate partner violence.',
-                  '<span class="stat-chip"><span class="value">৭৭</span><span class="unit">%</span></span> বিবাহিত কিশোরী স্বামীর সহিংসতার শিকার।'
+                  '<span class="stat-chip"><span class="value">৭৭</span><span class="unit">%</span></span> বিবাহিত কিশোরী স্বামীর সহিংসতার শিকার।',
                 ),
                 yhLang(
                   'About <span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents remain in child labour.',
-                  'প্রায় <span class="stat-chip"><span class="value">১.৭৮</span><span class="unit">মিলিয়ন</span></span> তরুন-তরুনী শিশুশ্রমে নিযুক্ত।'
+                  'প্রায় <span class="stat-chip"><span class="value">১.৭৮</span><span class="unit">মিলিয়ন</span></span> তরুন-তরুনী শিশুশ্রমে নিযুক্ত।',
                 ),
                 yhLang(
                   'During monsoon <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown (~<span class="stat-chip"><span class="value">14,000</span></span> annually).',
-                  'বর্ষায় প্রতিদিন গড়ে <span class="stat-chip"><span class="value">৪০</span><span class="unit">জন</span></span> শিশু ডুবে মারা যায়; বছরে প্রায় <span class="stat-chip"><span class="value">১৪,০০০</span></span> জন।'
+                  'বর্ষায় প্রতিদিন গড়ে <span class="stat-chip"><span class="value">৪০</span><span class="unit">জন</span></span> শিশু ডুবে মারা যায়; বছরে প্রায় <span class="stat-chip"><span class="value">১৪,০০০</span></span> জন।',
                 ),
                 yhLang(
                   'Around <span class="stat-chip"><span class="value">89</span><span class="unit">%</span></span> children (~<span class="stat-chip"><span class="value">45</span><span class="unit">M</span></span>) experience violent discipline at home.',
-                  'মোট শিশুদের <span class="stat-chip"><span class="value">৮৯</span><span class="unit">%</span></span> (প্রায় <span class="stat-chip"><span class="value">৪৫</span><span class="unit">মিলিয়ন</span></span>) ঘরে সহিংস শাসনের শিকার।'
+                  'মোট শিশুদের <span class="stat-chip"><span class="value">৮৯</span><span class="unit">%</span></span> (প্রায় <span class="stat-chip"><span class="value">৪৫</span><span class="unit">মিলিয়ন</span></span>) ঘরে সহিংস শাসনের শিকার।',
                 ),
               ];
 
@@ -1691,7 +1716,8 @@ const coursesData = [
                 },
               ];
 
-              const renderList = (items) => items.map((text) => `<li>${text}</li>`).join("");
+              const renderList = (items) =>
+                items.map((text) => `<li>${text}</li>`).join("");
 
               return `
               <div class="lesson-slide">
@@ -1731,7 +1757,7 @@ const coursesData = [
                                 <span class="issue-icon"><i class="${card.icon}"></i></span>
                                 <h6 class="issue-title">${card.label}</h6>
                               </article>
-                            `
+                            `,
                           )
                           .join("")}
                       </div>
@@ -1759,7 +1785,7 @@ const coursesData = [
             id: "ch2-lesson-7",
             title: yhLang(
               "Determinants for adolescent health and well-being",
-              "কৈশোর স্বাস্থ্য ও সুস্থতার নির্ধারক"
+              "কৈশোর স্বাস্থ্য ও সুস্থতার নির্ধারক",
             ),
             icon: "fa-triangle-exclamation",
             gradientClass: "bg-gradient-pink",
@@ -1771,7 +1797,7 @@ const coursesData = [
                   id: "q2e",
                   question: yhLang(
                     "Determinants include…",
-                    "নির্ধারকগুলো কী কী অন্তর্ভুক্ত করে?"
+                    "নির্ধারকগুলো কী কী অন্তর্ভুক্ত করে?",
                   ),
                   options: [
                     yhLang("Only nutrition", "শুধু পুষ্টি"),
@@ -1798,7 +1824,10 @@ const coursesData = [
                   delay: 160,
                 },
                 {
-                  label: yhLang("SRH, HIV & STIs", "যৌন ও প্রজনন স্বাস্থ্য, এইচআইভি ও এসটিআই"),
+                  label: yhLang(
+                    "SRH, HIV & STIs",
+                    "যৌন ও প্রজনন স্বাস্থ্য, এইচআইভি ও এসটিআই",
+                  ),
                   icon: "fa-venus-mars",
                   color: "bg-gradient-violet",
                   delay: 180,
@@ -1834,7 +1863,10 @@ const coursesData = [
                   delay: 280,
                 },
                 {
-                  label: yhLang("Physical activity & sedentary behavior", "শারীরিক পরিশ্রম ও স্থবির জীবনধারা"),
+                  label: yhLang(
+                    "Physical activity & sedentary behavior",
+                    "শারীরিক পরিশ্রম ও স্থবির জীবনধারা",
+                  ),
                   icon: "fa-person-running",
                   color: "bg-gradient-cyan",
                   delay: 300,
@@ -1849,13 +1881,25 @@ const coursesData = [
 
               const determinantStrata = [
                 {
-                  title: yhLang("Structural & environmental", "কাঠামোগত ও পরিবেশগত"),
+                  title: yhLang(
+                    "Structural & environmental",
+                    "কাঠামোগত ও পরিবেশগত",
+                  ),
                   icon: "fa-city",
                   color: "bg-gradient-purple",
                   bullets: [
-                    yhLang("Urban density, climate shocks, conflict and displacement shape exposure to health risks.", "নগরের ঘনত্ব, জলবায়ু আঘাত, সংঘাত ও বাস্তুচ্যুতি স্বাস্থ্যঝুঁকির মুখোমুখি হওয়া বাড়ায়।"),
-                    yhLang("Gender norms, poverty, and digital divides decide who accesses information.", "লিঙ্গভিত্তিক নিয়ম, দারিদ্র্য ও ডিজিটাল বৈষম্য তথ্যপ্রাপ্তি নির্ধারণ করে।"),
-                    yhLang("Policy coherence across education, labour, transport and justice keeps adolescents safe.", "শিক্ষা, শ্রম, পরিবহন ও বিচার খাতে নীতিসামঞ্জস্য কিশোরদের নিরাপদ রাখে।"),
+                    yhLang(
+                      "Urban density, climate shocks, conflict and displacement shape exposure to health risks.",
+                      "নগরের ঘনত্ব, জলবায়ু আঘাত, সংঘাত ও বাস্তুচ্যুতি স্বাস্থ্যঝুঁকির মুখোমুখি হওয়া বাড়ায়।",
+                    ),
+                    yhLang(
+                      "Gender norms, poverty, and digital divides decide who accesses information.",
+                      "লিঙ্গভিত্তিক নিয়ম, দারিদ্র্য ও ডিজিটাল বৈষম্য তথ্যপ্রাপ্তি নির্ধারণ করে।",
+                    ),
+                    yhLang(
+                      "Policy coherence across education, labour, transport and justice keeps adolescents safe.",
+                      "শিক্ষা, শ্রম, পরিবহন ও বিচার খাতে নীতিসামঞ্জস্য কিশোরদের নিরাপদ রাখে।",
+                    ),
                   ],
                 },
                 {
@@ -1863,9 +1907,18 @@ const coursesData = [
                   icon: "fa-people-group",
                   color: "bg-gradient-emerald",
                   bullets: [
-                    yhLang("Parenting style, peer influence and safe schools determine protection from violence.", "পিতামাতার আচরণ, সহপাঠী প্রভাব ও নিরাপদ বিদ্যালয় সহিংসতা থেকে সুরক্ষা দেয়।"),
-                    yhLang("Trusted gatekeepers improve referrals to SRHR, nutrition and mental health services.", "বিশ্বস্ত অভিভাবক ও নেতৃবৃন্দ এসআরএইচআর, পুষ্টি ও মানসিক স্বাস্থ্য সেবায় রেফারাল বাড়ায়।"),
-                    yhLang("Community clubs and digital spaces build solidarity and positive norms.", "সম্প্রদায়ভিত্তিক ক্লাব ও ডিজিটাল প্ল্যাটফর্ম সংহতি ও ইতিবাচক সামাজিক মান গড়ে তোলে।"),
+                    yhLang(
+                      "Parenting style, peer influence and safe schools determine protection from violence.",
+                      "পিতামাতার আচরণ, সহপাঠী প্রভাব ও নিরাপদ বিদ্যালয় সহিংসতা থেকে সুরক্ষা দেয়।",
+                    ),
+                    yhLang(
+                      "Trusted gatekeepers improve referrals to SRHR, nutrition and mental health services.",
+                      "বিশ্বস্ত অভিভাবক ও নেতৃবৃন্দ এসআরএইচআর, পুষ্টি ও মানসিক স্বাস্থ্য সেবায় রেফারাল বাড়ায়।",
+                    ),
+                    yhLang(
+                      "Community clubs and digital spaces build solidarity and positive norms.",
+                      "সম্প্রদায়ভিত্তিক ক্লাব ও ডিজিটাল প্ল্যাটফর্ম সংহতি ও ইতিবাচক সামাজিক মান গড়ে তোলে।",
+                    ),
                   ],
                 },
                 {
@@ -1873,22 +1926,47 @@ const coursesData = [
                   icon: "fa-user-graduate",
                   color: "bg-gradient-blue",
                   bullets: [
-                    yhLang("Body literacy, consent skills and coping mechanisms help adolescents act early.", "দেহ-জ্ঞান, সম্মতির দক্ষতা ও মোকাবিলা কৌশল কিশোরকে দ্রুত পদক্ষেপ নিতে সহায়তা করে।"),
-                    yhLang("Healthy behaviours—balanced diet, movement, digital hygiene—need supportive ecosystems.", "স্বাস্থ্যকর আচরণ—সুষম খাদ্য, নড়াচড়া, ডিজিটাল নিরাপত্তা—সহায়ক পরিবেশ ছাড়া সম্ভব নয়।"),
-                    yhLang("Access to age-appropriate commodities (iron, contraception, safety gear) completes the loop.", "বয়সোপযোগী সামগ্রী (আয়রন, গর্ভনিরোধক, সুরক্ষা সরঞ্জাম) সহজলভ্য হলে চক্র পূর্ণ হয়।"),
+                    yhLang(
+                      "Body literacy, consent skills and coping mechanisms help adolescents act early.",
+                      "দেহ-জ্ঞান, সম্মতির দক্ষতা ও মোকাবিলা কৌশল কিশোরকে দ্রুত পদক্ষেপ নিতে সহায়তা করে।",
+                    ),
+                    yhLang(
+                      "Healthy behaviours—balanced diet, movement, digital hygiene—need supportive ecosystems.",
+                      "স্বাস্থ্যকর আচরণ—সুষম খাদ্য, নড়াচড়া, ডিজিটাল নিরাপত্তা—সহায়ক পরিবেশ ছাড়া সম্ভব নয়।",
+                    ),
+                    yhLang(
+                      "Access to age-appropriate commodities (iron, contraception, safety gear) completes the loop.",
+                      "বয়সোপযোগী সামগ্রী (আয়রন, গর্ভনিরোধক, সুরক্ষা সরঞ্জাম) সহজলভ্য হলে চক্র পূর্ণ হয়।",
+                    ),
                   ],
                 },
               ];
 
               const systemActions = [
-                yhLang("Integrated surveillance & data sharing", "সমন্বিত নজরদারি ও তথ্য বিনিময়"),
-                yhLang("Youth-led accountability platforms", "তরুণ নেতৃত্বাধীন জবাবদিহি প্ল্যাটফর্ম"),
-                yhLang("Primary care readiness for SRHR & NCDs", "এসআরএইচআর ও এনসিডি সেবায় প্রাথমিক স্বাস্থ্যব্যবস্থার প্রস্তুতি"),
-                yhLang("Social protection linkages (stipends, cash transfers)", "সামাজিক সুরক্ষা সংযোগ (ভাতা, নগদ সহায়তা)"),
-                yhLang("Safe digital ecosystems & media literacy", "নিরাপদ ডিজিটাল পরিবেশ ও গণমাধ্যম সাক্ষরতা"),
+                yhLang(
+                  "Integrated surveillance & data sharing",
+                  "সমন্বিত নজরদারি ও তথ্য বিনিময়",
+                ),
+                yhLang(
+                  "Youth-led accountability platforms",
+                  "তরুণ নেতৃত্বাধীন জবাবদিহি প্ল্যাটফর্ম",
+                ),
+                yhLang(
+                  "Primary care readiness for SRHR & NCDs",
+                  "এসআরএইচআর ও এনসিডি সেবায় প্রাথমিক স্বাস্থ্যব্যবস্থার প্রস্তুতি",
+                ),
+                yhLang(
+                  "Social protection linkages (stipends, cash transfers)",
+                  "সামাজিক সুরক্ষা সংযোগ (ভাতা, নগদ সহায়তা)",
+                ),
+                yhLang(
+                  "Safe digital ecosystems & media literacy",
+                  "নিরাপদ ডিজিটাল পরিবেশ ও গণমাধ্যম সাক্ষরতা",
+                ),
               ];
 
-              const renderBullets = (items) => items.map((item) => `<li>${item}</li>`).join("");
+              const renderBullets = (items) =>
+                items.map((item) => `<li>${item}</li>`).join("");
 
               return `
               <div class="lesson-slide">
@@ -1912,7 +1990,7 @@ const coursesData = [
                               <h6 class="mt-2 mb-0">${d.label}</h6>
                             </div>
                           </div>
-                        `
+                        `,
                           )
                           .join("")}
                       </div>
@@ -1930,7 +2008,7 @@ const coursesData = [
             id: "ch2-lesson-8",
             title: yhLang(
               "Why young people need special care?",
-              "তরুণদের বিশেষ যত্ন কেন প্রয়োজন?"
+              "তরুণদের বিশেষ যত্ন কেন প্রয়োজন?",
             ),
             icon: "fa-user-nurse",
             gradientClass: "bg-gradient-teal",
@@ -1942,14 +2020,14 @@ const coursesData = [
                   id: "q2f",
                   question: yhLang(
                     "Adolescent services should be…",
-                    "কৈশোরবান্ধব সেবা কেমন হওয়া উচিত?"
+                    "কৈশোরবান্ধব সেবা কেমন হওয়া উচিত?",
                   ),
                   options: [
                     yhLang("Judgmental", "বিচারমূলক"),
                     yhLang("Exclusive", "সংকীর্ণ"),
                     yhLang(
                       "Non-judgmental and confidential",
-                      "নিরপেক্ষ ও গোপনীয়"
+                      "নিরপেক্ষ ও গোপনীয়",
                     ),
                     yhLang("Irregular", "অনিয়মিত"),
                   ],
@@ -1960,36 +2038,66 @@ const coursesData = [
             content: (function () {
               const barrierCards = [
                 {
-                  title: yhLang("Adolescents have diverse needs", "কিশোরদের চাহিদা বহুবিধ"),
-                  desc: yhLang("Needs in SRHR, mental health and other NCDs, nutrition,  violence against adolescents, vulnerable adolescents etc.", "এসআরএইচআর, মানসিক স্বাস্থ্য, এনসিডি, পুষ্টি ও সুরক্ষাসহ চলমান কিশোরদের জন্য উপযোগী প্যাকেজ দরকার।"),
+                  title: yhLang(
+                    "Adolescents have diverse needs",
+                    "কিশোরদের চাহিদা বহুবিধ",
+                  ),
+                  desc: yhLang(
+                    "Needs in SRHR, mental health and other NCDs, nutrition,  violence against adolescents, vulnerable adolescents etc.",
+                    "এসআরএইচআর, মানসিক স্বাস্থ্য, এনসিডি, পুষ্টি ও সুরক্ষাসহ চলমান কিশোরদের জন্য উপযোগী প্যাকেজ দরকার।",
+                  ),
                   icon: "fa-layer-group",
                   color: "bg-gradient-violet",
                   delay: 100,
                 },
                 {
-                  title: yhLang("Unaware of the laws, policies, rights", "আইন ও অধিকারের সম্পর্কে সীমিত ধারণা"),
-                  desc: yhLang("Sexual and reproductive health rights, Child rights.", "এসআরএইচআর, শিশুর অধিকার ও সাইবার সুরক্ষা সম্পর্কিত বিধান অনেক কিশোর ও অভিভাবকের অজানা।"),
+                  title: yhLang(
+                    "Unaware of the laws, policies, rights",
+                    "আইন ও অধিকারের সম্পর্কে সীমিত ধারণা",
+                  ),
+                  desc: yhLang(
+                    "Sexual and reproductive health rights, Child rights.",
+                    "এসআরএইচআর, শিশুর অধিকার ও সাইবার সুরক্ষা সম্পর্কিত বিধান অনেক কিশোর ও অভিভাবকের অজানা।",
+                  ),
                   icon: "fa-scale-balanced",
                   color: "bg-gradient-emerald",
                   delay: 130,
                 },
                 {
-                  title: yhLang("Limited ability to execute the rights.", "সীমিত ক্ষমতায়ন"),
-                  desc: yhLang("Lack of confidence, parental influence, peer pressure", "আত্মবিশ্বাসের অভাব, সহপাঠী চাপ ও গেটকিপিং ঝুঁকি চিনলেও সহায়তা নিতে বিলম্ব ঘটায়।"),
+                  title: yhLang(
+                    "Limited ability to execute the rights.",
+                    "সীমিত ক্ষমতায়ন",
+                  ),
+                  desc: yhLang(
+                    "Lack of confidence, parental influence, peer pressure",
+                    "আত্মবিশ্বাসের অভাব, সহপাঠী চাপ ও গেটকিপিং ঝুঁকি চিনলেও সহায়তা নিতে বিলম্ব ঘটায়।",
+                  ),
                   icon: "fa-hands-holding",
                   color: "bg-gradient-tangerine",
                   delay: 160,
                 },
                 {
-                  title: yhLang("Barriers in accessing the information, knowledge, skills.", "জ্ঞানপ্রাপ্তির বাধা"),
-                  desc: yhLang("Social stigma, discomfort among parents, family members, peers, teachers to talk about AH issues.", "পরিবার বা বিদ্যালয়ে লজ্জা ও অস্বস্তিকর আলোচনার কারণে সঠিক তথ্য চেপে রাখা হয়।"),
+                  title: yhLang(
+                    "Barriers in accessing the information, knowledge, skills.",
+                    "জ্ঞানপ্রাপ্তির বাধা",
+                  ),
+                  desc: yhLang(
+                    "Social stigma, discomfort among parents, family members, peers, teachers to talk about AH issues.",
+                    "পরিবার বা বিদ্যালয়ে লজ্জা ও অস্বস্তিকর আলোচনার কারণে সঠিক তথ্য চেপে রাখা হয়।",
+                  ),
                   icon: "fa-book-open-reader",
                   color: "bg-gradient-rose",
                   delay: 190,
                 },
                 {
-                  title: yhLang("Barriers in accessing the health services.", "সেবা প্রদানে ঘাটতি"),
-                  desc: yhLang("Limited care seeking behaviors, no dedicated service (no separate space, no privacy, no dedicated staff, negligence and unawareness among service providers.", "স্বতন্ত্র কর্নার, নিয়মিত সময়, গোপনীয়তা ও প্রশিক্ষিত কর্মীর অভাব সেবায় আস্থা কমায়।"),
+                  title: yhLang(
+                    "Barriers in accessing the health services.",
+                    "সেবা প্রদানে ঘাটতি",
+                  ),
+                  desc: yhLang(
+                    "Limited care seeking behaviors, no dedicated service (no separate space, no privacy, no dedicated staff, negligence and unawareness among service providers.",
+                    "স্বতন্ত্র কর্নার, নিয়মিত সময়, গোপনীয়তা ও প্রশিক্ষিত কর্মীর অভাব সেবায় আস্থা কমায়।",
+                  ),
                   icon: "fa-hospital-user",
                   color: "bg-gradient-cyan",
                   delay: 220,
@@ -1998,23 +2106,41 @@ const coursesData = [
 
               const carePrinciples = [
                 {
-                  title: yhLang("Respect & confidentiality", "সম্মান ও গোপনীয়তা"),
-                  text: yhLang("Service providers greet adolescents, use preferred names/pronouns and keep records secure.", "সেবা প্রদানকারীরা কিশোরদের অভিবাদন জানান, পছন্দের নাম ও সর্বনাম ব্যবহার করেন এবং নথি সুরক্ষিত রাখেন।"),
+                  title: yhLang(
+                    "Respect & confidentiality",
+                    "সম্মান ও গোপনীয়তা",
+                  ),
+                  text: yhLang(
+                    "Service providers greet adolescents, use preferred names/pronouns and keep records secure.",
+                    "সেবা প্রদানকারীরা কিশোরদের অভিবাদন জানান, পছন্দের নাম ও সর্বনাম ব্যবহার করেন এবং নথি সুরক্ষিত রাখেন।",
+                  ),
                   icon: "fa-lock",
                 },
                 {
-                  title: yhLang("Accessibility & affordability", "সহজপ্রাপ্যতা ও সাশ্রয়ী সেবা"),
-                  text: yhLang("Flexible hours, zero or low fees, disability-friendly layouts and virtual follow-up channels.", "নমনীয় সময়সূচি, স্বল্প বা বিনা ফি, প্রতিবন্ধীবান্ধব ব্যবস্থা ও ভার্চুয়াল ফলো-আপ চ্যানেল নিশ্চিত করতে হয়।"),
+                  title: yhLang(
+                    "Accessibility & affordability",
+                    "সহজপ্রাপ্যতা ও সাশ্রয়ী সেবা",
+                  ),
+                  text: yhLang(
+                    "Flexible hours, zero or low fees, disability-friendly layouts and virtual follow-up channels.",
+                    "নমনীয় সময়সূচি, স্বল্প বা বিনা ফি, প্রতিবন্ধীবান্ধব ব্যবস্থা ও ভার্চুয়াল ফলো-আপ চ্যানেল নিশ্চিত করতে হয়।",
+                  ),
                   icon: "fa-universal-access",
                 },
                 {
                   title: yhLang("Holistic packages", "সমন্বিত সেবা প্যাকেজ"),
-                  text: yhLang("SRHR, mental health, nutrition, violence response and life-skills support offered together.", "এসআরএইচআর, মানসিক স্বাস্থ্য, পুষ্টি, সহিংসতা প্রতিক্রিয়া ও জীবনদক্ষতা সহায়তা একসাথে দেওয়া হয়।"),
+                  text: yhLang(
+                    "SRHR, mental health, nutrition, violence response and life-skills support offered together.",
+                    "এসআরএইচআর, মানসিক স্বাস্থ্য, পুষ্টি, সহিংসতা প্রতিক্রিয়া ও জীবনদক্ষতা সহায়তা একসাথে দেওয়া হয়।",
+                  ),
                   icon: "fa-box",
                 },
                 {
                   title: yhLang("Youth participation", "তরুণদের অংশগ্রহণ"),
-                  text: yhLang("Adolescent advisory boards co-design spaces, IEC materials and feedback loops.", "কিশোর উপদেষ্টা বোর্ড স্থান, আইইসি উপকরণ ও প্রতিক্রিয়া পদ্ধতি সহ-নকশা করে।"),
+                  text: yhLang(
+                    "Adolescent advisory boards co-design spaces, IEC materials and feedback loops.",
+                    "কিশোর উপদেষ্টা বোর্ড স্থান, আইইসি উপকরণ ও প্রতিক্রিয়া পদ্ধতি সহ-নকশা করে।",
+                  ),
                   icon: "fa-people-group",
                 },
               ];
@@ -2023,30 +2149,58 @@ const coursesData = [
                 {
                   title: yhLang("Environment", "পরিবেশ"),
                   items: [
-                    yhLang("Separate waiting area with relatable visuals and gender-neutral signage.", "চেনা ভিজ্যুয়াল ও জেন্ডার-নিরপেক্ষ সাইনেজসহ আলাদা অপেক্ষাকক্ষ।"),
-                    yhLang("Privacy assured consultation rooms and clear referral desk.", "গোপনীয় পরামর্শ কক্ষ ও স্পষ্ট রেফারাল ডেস্ক।"),
-                    yhLang("Green & digital elements (plants, charging points, Wi-Fi).", "সবুজ ও ডিজিটাল উপাদান (গাছপালা, চার্জিং পয়েন্ট, ওয়াই-ফাই)।"),
+                    yhLang(
+                      "Separate waiting area with relatable visuals and gender-neutral signage.",
+                      "চেনা ভিজ্যুয়াল ও জেন্ডার-নিরপেক্ষ সাইনেজসহ আলাদা অপেক্ষাকক্ষ।",
+                    ),
+                    yhLang(
+                      "Privacy assured consultation rooms and clear referral desk.",
+                      "গোপনীয় পরামর্শ কক্ষ ও স্পষ্ট রেফারাল ডেস্ক।",
+                    ),
+                    yhLang(
+                      "Green & digital elements (plants, charging points, Wi-Fi).",
+                      "সবুজ ও ডিজিটাল উপাদান (গাছপালা, চার্জিং পয়েন্ট, ওয়াই-ফাই)।",
+                    ),
                   ],
                 },
                 {
                   title: yhLang("People", "মানুষ"),
                   items: [
-                    yhLang("Trained adolescent-friendly providers with job aids in Bangla & English.", "বাংলা ও ইংরেজি জব এইডসহ প্রশিক্ষিত কিশোরবান্ধব সেবাদাতা।"),
-                    yhLang("Peer educators manage triage, explain consent and accompany clients.", "সহপাঠী শিক্ষকেরা ট্রায়াজ, সম্মতি ব্যাখ্যা ও সঙ্গ দিয়ে সহায়তা করে।"),
-                    yhLang("Safeguarding focal points for disclosure of violence or abuse.", "সহিংসতা বা নির্যাতন প্রকাশের জন্য সুরক্ষা ফোকাল পয়েন্ট।"),
+                    yhLang(
+                      "Trained adolescent-friendly providers with job aids in Bangla & English.",
+                      "বাংলা ও ইংরেজি জব এইডসহ প্রশিক্ষিত কিশোরবান্ধব সেবাদাতা।",
+                    ),
+                    yhLang(
+                      "Peer educators manage triage, explain consent and accompany clients.",
+                      "সহপাঠী শিক্ষকেরা ট্রায়াজ, সম্মতি ব্যাখ্যা ও সঙ্গ দিয়ে সহায়তা করে।",
+                    ),
+                    yhLang(
+                      "Safeguarding focal points for disclosure of violence or abuse.",
+                      "সহিংসতা বা নির্যাতন প্রকাশের জন্য সুরক্ষা ফোকাল পয়েন্ট।",
+                    ),
                   ],
                 },
                 {
                   title: yhLang("Processes", "প্রক্রিয়া"),
                   items: [
-                    yhLang("Self-registration kiosks, SMS reminders and helpline numbers visible.", "স্ব-নিবন্ধন কিয়স্ক, এসএমএস স্মারক ও হেল্পলাইন দৃশ্যমান রাখা।"),
-                    yhLang("Standard operating procedures for confidentiality and referrals.", "গোপনীয়তা ও রেফারালের জন্য মানসম্মত কার্যপদ্ধতি।"),
-                    yhLang("Feedback wall/QR codes to capture youth satisfaction.", "তরুণদের মতামত সংগ্রহে ফিডব্যাক ওয়াল বা কিউআর কোড।"),
+                    yhLang(
+                      "Self-registration kiosks, SMS reminders and helpline numbers visible.",
+                      "স্ব-নিবন্ধন কিয়স্ক, এসএমএস স্মারক ও হেল্পলাইন দৃশ্যমান রাখা।",
+                    ),
+                    yhLang(
+                      "Standard operating procedures for confidentiality and referrals.",
+                      "গোপনীয়তা ও রেফারালের জন্য মানসম্মত কার্যপদ্ধতি।",
+                    ),
+                    yhLang(
+                      "Feedback wall/QR codes to capture youth satisfaction.",
+                      "তরুণদের মতামত সংগ্রহে ফিডব্যাক ওয়াল বা কিউআর কোড।",
+                    ),
                   ],
                 },
               ];
 
-              const renderList = (items) => items.map((text) => `<li>${text}</li>`).join("");
+              const renderList = (items) =>
+                items.map((text) => `<li>${text}</li>`).join("");
 
               return `
               <div class="lesson-slide">
@@ -2076,7 +2230,7 @@ const coursesData = [
                           </div>
                         </article>
                       </div>
-                    `
+                    `,
                       )
                       .join("")}
                   </div>
@@ -2093,7 +2247,7 @@ const coursesData = [
             id: "ch2-lesson-9",
             title: yhLang(
               "SDG related to adolescent health",
-              "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG"
+              "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG",
             ),
             icon: "fa-diagram-project",
             gradientClass: "bg-gradient-violet",
@@ -2166,7 +2320,7 @@ const coursesData = [
                       <h6 class="sdg-card-title">${s.label}</h6>
                     </article>
                   </div>
-                `
+                `,
                   )
                   .join("")}</div>
                    <!-- 2-column layout: first two images stacked in left column, third image beside them -->
@@ -2277,7 +2431,7 @@ const coursesData = [
             id: "ch2-lesson-10",
             title: yhLang(
               "AH in Global Agenda",
-              "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য"
+              "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য",
             ),
             icon: "fa-handshake-angle",
             gradientClass: "bg-gradient-emerald",
@@ -2289,7 +2443,7 @@ const coursesData = [
                   id: "q2h",
                   question: yhLang(
                     "Put whom at the center of design?",
-                    "ডিজাইনের কেন্দ্রবিন্দুতে কাকে রাখতে হবে?"
+                    "ডিজাইনের কেন্দ্রবিন্দুতে কাকে রাখতে হবে?",
                   ),
                   options: [
                     yhLang("Providers", "সেবা প্রদানকারী"),
@@ -2307,11 +2461,11 @@ const coursesData = [
                   year: "1994",
                   title: yhLang(
                     "International Conference on Population and Development",
-                    "আন্তর্জাতিক জনসংখ্যা ও উন্নয়ন সম্মেলন"
+                    "আন্তর্জাতিক জনসংখ্যা ও উন্নয়ন সম্মেলন",
                   ),
                   desc: yhLang(
                     "Adolescents were formally acknowledged as a group with unique SRHR needs.",
-                    "তরুন-তরুনীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।"
+                    "তরুন-তরুনীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।",
                   ),
                   icon: "fa-people-group",
                   cls: "tl-rose",
@@ -2319,10 +2473,13 @@ const coursesData = [
                 },
                 {
                   year: "2000",
-                  title: yhLang("Millennium Development Goals (MDGs)", "মিলেনিয়াম ডেভেলপমেন্ট গোলস (এমডিজি)"),
+                  title: yhLang(
+                    "Millennium Development Goals (MDGs)",
+                    "মিলেনিয়াম ডেভেলপমেন্ট গোলস (এমডিজি)",
+                  ),
                   desc: yhLang(
                     "Adolescents were referenced within child and maternal health targets but without dedicated metrics.",
-                    "শিশু ও মাতৃস্বাস্থ্য লক্ষ্যসমূহে কিশোরদের উল্লেখ ছিল, তবে আলাদা সূচক নির্ধারিত হয়নি।"
+                    "শিশু ও মাতৃস্বাস্থ্য লক্ষ্যসমূহে কিশোরদের উল্লেখ ছিল, তবে আলাদা সূচক নির্ধারিত হয়নি।",
                   ),
                   icon: "fa-bullseye",
                   cls: "tl-blue",
@@ -2332,11 +2489,11 @@ const coursesData = [
                   year: "2010",
                   title: yhLang(
                     "Global Strategy for Women’s and Children’s Health",
-                    "নারী ও শিশুর স্বাস্থ্য সম্পর্কিত বৈশ্বিক কৌশল"
+                    "নারী ও শিশুর স্বাস্থ্য সম্পর্কিত বৈশ্বিক কৌশল",
                   ),
                   desc: yhLang(
                     "Adolescent health surfaced but investments and indicators remained limited.",
-                    "কৈশোর স্বাস্থ্য আলোচনায় এলেও বিনিয়োগ ও সূচক সীমিত ছিল।"
+                    "কৈশোর স্বাস্থ্য আলোচনায় এলেও বিনিয়োগ ও সূচক সীমিত ছিল।",
                   ),
                   icon: "fa-child-reaching",
                   cls: "tl-amber",
@@ -2344,10 +2501,13 @@ const coursesData = [
                 },
                 {
                   year: "2015",
-                  title: yhLang("Sustainable Development Goals (SDGs)", "টেকসই উন্নয়ন লক্ষ্য (এসডিজি)"),
+                  title: yhLang(
+                    "Sustainable Development Goals (SDGs)",
+                    "টেকসই উন্নয়ন লক্ষ্য (এসডিজি)",
+                  ),
                   desc: yhLang(
                     "Adolescents recognised as essential to achieving targets on poverty, health, gender and jobs.",
-                    "দারিদ্র্য, স্বাস্থ্য, লিঙ্গ সমতা ও কর্মসংস্থানের লক্ষ্য অর্জনে কিশোরদের অপরিহার্য ধরা হয়।"
+                    "দারিদ্র্য, স্বাস্থ্য, লিঙ্গ সমতা ও কর্মসংস্থানের লক্ষ্য অর্জনে কিশোরদের অপরিহার্য ধরা হয়।",
                   ),
                   icon: "fa-globe",
                   cls: "tl-emerald",
@@ -2357,11 +2517,11 @@ const coursesData = [
                   year: "2016",
                   title: yhLang(
                     "Lancet Commission on Adolescent Health & Wellbeing",
-                    "ল্যানসেট কমিশন: কৈশোর স্বাস্থ্য ও সুস্থতা"
+                    "ল্যানসেট কমিশন: কৈশোর স্বাস্থ্য ও সুস্থতা",
                   ),
                   desc: yhLang(
                     "Quantified the triple dividend of investing during adolescence.",
-                    "কৈশোরে বিনিয়োগের ত্রিমুখী সুফল পরিমাপ করে উপস্থাপন করা হয়।"
+                    "কৈশোরে বিনিয়োগের ত্রিমুখী সুফল পরিমাপ করে উপস্থাপন করা হয়।",
                   ),
                   icon: "fa-book-open",
                   cls: "tl-violet",
@@ -2371,11 +2531,11 @@ const coursesData = [
                   year: "2017",
                   title: yhLang(
                     "Global Accelerated Action for the Health of Adolescents (AA-HA!)",
-                    "কৈশোর স্বাস্থ্য ত্বরান্বিত কর্মসূচি (এএ-এইচএ!)"
+                    "কৈশোর স্বাস্থ্য ত্বরান্বিত কর্মসূচি (এএ-এইচএ!)",
                   ),
                   desc: yhLang(
                     "Provided a programmatic framework covering governance, financing, platforms and accountability.",
-                    "শাসন, অর্থায়ন, প্ল্যাটফর্ম ও জবাবদিহি অন্তর্ভুক্ত প্রোগ্রামেটিক কাঠামো দেয়।"
+                    "শাসন, অর্থায়ন, প্ল্যাটফর্ম ও জবাবদিহি অন্তর্ভুক্ত প্রোগ্রামেটিক কাঠামো দেয়।",
                   ),
                   icon: "fa-rocket",
                   cls: "tl-cyan",
@@ -2385,11 +2545,11 @@ const coursesData = [
                   year: "2021",
                   title: yhLang(
                     "AA-HA! 2.0: A call to action",
-                    "এএ-এইচএ! ২.০: কর্মের আহ্বান"
+                    "এএ-এইচএ! ২.০: কর্মের আহ্বান",
                   ),
                   desc: yhLang(
                     "Updates guidance post-COVID, emphasising mental health, climate risks and digital ecosystems.",
-                    "কোভিড পরবর্তী নির্দেশনা হালনাগাদ করে মানসিক স্বাস্থ্য, জলবায়ু ঝুঁকি ও ডিজিটাল পরিবেশকে গুরুত্ব দেয়।"
+                    "কোভিড পরবর্তী নির্দেশনা হালনাগাদ করে মানসিক স্বাস্থ্য, জলবায়ু ঝুঁকি ও ডিজিটাল পরিবেশকে গুরুত্ব দেয়।",
                   ),
                   icon: "fa-flag-checkered",
                   cls: "tl-slate",
@@ -2398,13 +2558,26 @@ const coursesData = [
               ];
 
               const designPriorities = [
-                yhLang("Put adolescents at the centre of design, measurement and accountability.", "পরিকল্পনা, পরিমাপ ও জবাবদিহির কেন্দ্রবিন্দুতে কিশোরদের রাখুন।"),
-                yhLang("Invest across life-course transitions (early adolescence, older youth, young adults).", "জীবনচক্রের পরিবর্তনকাল (প্রারম্ভিক কৈশোর, বড় তরুণ, নবীন প্রাপ্তবয়স্ক) জুড়ে বিনিয়োগ করুন।"),
-                yhLang("Use digital + community platforms to reach the last mile safely.", "ডিজিটাল ও কমিউনিটি প্ল্যাটফর্ম একসাথে ব্যবহার করে নিরাপদে শেষ প্রান্তে পৌঁছান।"),
-                yhLang("Finance integrated packages that combine health, nutrition, SRHR and protection.", "স্বাস্থ্য, পুষ্টি, এসআরএইচআর ও সুরক্ষা সমন্বিত প্যাকেজে অর্থায়ন করুন।"),
+                yhLang(
+                  "Put adolescents at the centre of design, measurement and accountability.",
+                  "পরিকল্পনা, পরিমাপ ও জবাবদিহির কেন্দ্রবিন্দুতে কিশোরদের রাখুন।",
+                ),
+                yhLang(
+                  "Invest across life-course transitions (early adolescence, older youth, young adults).",
+                  "জীবনচক্রের পরিবর্তনকাল (প্রারম্ভিক কৈশোর, বড় তরুণ, নবীন প্রাপ্তবয়স্ক) জুড়ে বিনিয়োগ করুন।",
+                ),
+                yhLang(
+                  "Use digital + community platforms to reach the last mile safely.",
+                  "ডিজিটাল ও কমিউনিটি প্ল্যাটফর্ম একসাথে ব্যবহার করে নিরাপদে শেষ প্রান্তে পৌঁছান।",
+                ),
+                yhLang(
+                  "Finance integrated packages that combine health, nutrition, SRHR and protection.",
+                  "স্বাস্থ্য, পুষ্টি, এসআরএইচআর ও সুরক্ষা সমন্বিত প্যাকেজে অর্থায়ন করুন।",
+                ),
               ];
 
-              const renderList = (items) => items.map((text) => `<li>${text}</li>`).join("");
+              const renderList = (items) =>
+                items.map((text) => `<li>${text}</li>`).join("");
 
               return `
               <div class="lesson-slide">
@@ -2424,7 +2597,7 @@ const coursesData = [
                         <p class="timeline-card-text">${m.desc}</p>
                       </article>
                     </div>
-                  `
+                  `,
                     )
                     .join("")}
                 </section>
@@ -2439,7 +2612,7 @@ const coursesData = [
             id: "ch2-lesson-11",
             title: yhLang(
               "Bangladesh Government’s commitment",
-              "বাংলাদেশ সরকারের অঙ্গীকার"
+              "বাংলাদেশ সরকারের অঙ্গীকার",
             ),
             icon: "fa-landmark",
             gradientClass: "bg-gradient-tangerine",
@@ -2451,12 +2624,12 @@ const coursesData = [
                   id: "q2j",
                   question: yhLang(
                     "Bangladesh invests in adolescent health via…",
-                    "বাংলাদেশ কীভাবে কৈশোরস্বাস্থ্যে বিনিয়োগ করে?"
+                    "বাংলাদেশ কীভাবে কৈশোরস্বাস্থ্যে বিনিয়োগ করে?",
                   ),
                   options: [
                     yhLang(
                       "Policies and partnerships",
-                      "নীতিমালা ও অংশীদারিত্ব"
+                      "নীতিমালা ও অংশীদারিত্ব",
                     ),
                     yhLang("Only posters", "শুধু পোস্টার"),
                     yhLang("Only apps", "শুধু অ্যাপ"),
@@ -2472,8 +2645,14 @@ const coursesData = [
                   step: "01",
                   years: "2006–2015",
                   image: "img/policies/national-strategy.jpg",
-                  title: yhLang("National Adolescent Reproductive Health Strategy", "জাতীয় কিশোর প্রজনন স্বাস্থ্য কৌশল"),
-                  copy: yhLang("First SRHR blueprint defining adolescent-friendly corners, standards and supply chains.", "এসআরএইচআর-এর প্রথম নীলনকশা যা কিশোরবান্ধব কর্নার, মানদণ্ড ও সরবরাহ নিশ্চিত করে।"),
+                  title: yhLang(
+                    "National Adolescent Reproductive Health Strategy",
+                    "জাতীয় কিশোর প্রজনন স্বাস্থ্য কৌশল",
+                  ),
+                  copy: yhLang(
+                    "First SRHR blueprint defining adolescent-friendly corners, standards and supply chains.",
+                    "এসআরএইচআর-এর প্রথম নীলনকশা যা কিশোরবান্ধব কর্নার, মানদণ্ড ও সরবরাহ নিশ্চিত করে।",
+                  ),
                   icon: "fa-book-open",
                   color: "bg-gradient-blue",
                   delay: 80,
@@ -2482,8 +2661,14 @@ const coursesData = [
                   step: "02",
                   years: "2017–2030",
                   image: "img/policies/national-strategy.jpg",
-                  title: yhLang("National Adolescent Health Strategy", "জাতীয় কিশোর স্বাস্থ্য কৌশল"),
-                  copy: yhLang("Aligns with SDGs and UHC, expanding into mental health, nutrition, violence prevention and climate resilience.", "এসডিজি ও ইউএইচসির সাথে সামঞ্জস্য রেখে মানসিক স্বাস্থ্য, পুষ্টি, সহিংসতা প্রতিরোধ ও জলবায়ু সহনশীলতাকে অন্তর্ভুক্ত করে।"),
+                  title: yhLang(
+                    "National Adolescent Health Strategy",
+                    "জাতীয় কিশোর স্বাস্থ্য কৌশল",
+                  ),
+                  copy: yhLang(
+                    "Aligns with SDGs and UHC, expanding into mental health, nutrition, violence prevention and climate resilience.",
+                    "এসডিজি ও ইউএইচসির সাথে সামঞ্জস্য রেখে মানসিক স্বাস্থ্য, পুষ্টি, সহিংসতা প্রতিরোধ ও জলবায়ু সহনশীলতাকে অন্তর্ভুক্ত করে।",
+                  ),
                   icon: "fa-flag-checkered",
                   color: "bg-gradient-emerald",
                   delay: 120,
@@ -2492,8 +2677,14 @@ const coursesData = [
                   step: "03",
                   years: yhLang("Action Plan", "কর্মপরিকল্পনা"),
                   image: "img/policies/adolsent.png",
-                  title: yhLang("National Plan of Action", "জাতীয় কর্মপরিকল্পনা"),
-                  copy: yhLang("Breaks strategy pillars into interventions, roles and district roll-out sequences.", "কৌশলের স্তম্ভগুলোকে হস্তক্ষেপ, দায়িত্ব ও জেলা পর্যায়ে বাস্তবায়ন কর্মসূচিতে ভেঙে দেয়।"),
+                  title: yhLang(
+                    "National Plan of Action",
+                    "জাতীয় কর্মপরিকল্পনা",
+                  ),
+                  copy: yhLang(
+                    "Breaks strategy pillars into interventions, roles and district roll-out sequences.",
+                    "কৌশলের স্তম্ভগুলোকে হস্তক্ষেপ, দায়িত্ব ও জেলা পর্যায়ে বাস্তবায়ন কর্মসূচিতে ভেঙে দেয়।",
+                  ),
                   icon: "fa-clipboard-list",
                   color: "bg-gradient-violet",
                   delay: 160,
@@ -2502,8 +2693,14 @@ const coursesData = [
                   step: "04",
                   years: yhLang("Costed Plan", "ব্যয় নির্ধারিত পরিকল্পনা"),
                   image: "img/policies/national-strategy.jpg",
-                  title: yhLang("National Costed Action Plan", "জাতীয় ব্যয়ভিত্তিক কর্মপরিকল্পনা"),
-                  copy: yhLang("Details financing gaps, procurement lots and accountability indicators for each ministry.", "প্রতি মন্ত্রণালয়ের জন্য অর্থায়নের ঘাটতি, ক্রয় প্যাকেজ ও জবাবদিহি সূচক নির্দিষ্ট করে।"),
+                  title: yhLang(
+                    "National Costed Action Plan",
+                    "জাতীয় ব্যয়ভিত্তিক কর্মপরিকল্পনা",
+                  ),
+                  copy: yhLang(
+                    "Details financing gaps, procurement lots and accountability indicators for each ministry.",
+                    "প্রতি মন্ত্রণালয়ের জন্য অর্থায়নের ঘাটতি, ক্রয় প্যাকেজ ও জবাবদিহি সূচক নির্দিষ্ট করে।",
+                  ),
                   icon: "fa-coins",
                   color: "bg-gradient-rose",
                   delay: 200,
@@ -2512,29 +2709,47 @@ const coursesData = [
 
               const investmentPillars = [
                 {
-                  title: yhLang("Primary health care", "প্রাথমিক স্বাস্থ্যসেবা"),
-                  desc: yhLang("30,000+ community clinics linked to adolescent corners, telehealth and referral apps.", "৩০,০০০-এর বেশি কমিউনিটি ক্লিনিক কিশোর কর্নার, টেলিহেলথ ও রেফারেল অ্যাপের সাথে যুক্ত।"),
+                  title: yhLang(
+                    "Primary health care",
+                    "প্রাথমিক স্বাস্থ্যসেবা",
+                  ),
+                  desc: yhLang(
+                    "30,000+ community clinics linked to adolescent corners, telehealth and referral apps.",
+                    "৩০,০০০-এর বেশি কমিউনিটি ক্লিনিক কিশোর কর্নার, টেলিহেলথ ও রেফারেল অ্যাপের সাথে যুক্ত।",
+                  ),
                   icon: "fa-house-medical",
                 },
                 {
-                  title: yhLang("Education & life skills", "শিক্ষা ও জীবনদক্ষতা"),
-                  desc: yhLang("Curriculum revision embeds SRHR, climate literacy and socio-emotional learning.", "পাঠ্যক্রম হালনাগাদ করে এসআরএইচআর, জলবায়ু সচেতনতা ও সামাজিক-মানসিক শিক্ষা যুক্ত হচ্ছে।"),
+                  title: yhLang(
+                    "Education & life skills",
+                    "শিক্ষা ও জীবনদক্ষতা",
+                  ),
+                  desc: yhLang(
+                    "Curriculum revision embeds SRHR, climate literacy and socio-emotional learning.",
+                    "পাঠ্যক্রম হালনাগাদ করে এসআরএইচআর, জলবায়ু সচেতনতা ও সামাজিক-মানসিক শিক্ষা যুক্ত হচ্ছে।",
+                  ),
                   icon: "fa-book-open-reader",
                 },
                 {
-                  title: yhLang("Protection & justice", "সুরক্ষা ও ন্যায়বিচার"),
-                  desc: yhLang("Child helplines, One-Stop Crisis Centres and probation services share case data.", "শিশু হেল্পলাইন, ওয়ান-স্টপ ক্রাইসিস সেন্টার ও প্রবেশন সেবা কেস ডেটা ভাগাভাগি করে।"),
+                  title: yhLang(
+                    "Protection & justice",
+                    "সুরক্ষা ও ন্যায়বিচার",
+                  ),
+                  desc: yhLang(
+                    "Child helplines, One-Stop Crisis Centres and probation services share case data.",
+                    "শিশু হেল্পলাইন, ওয়ান-স্টপ ক্রাইসিস সেন্টার ও প্রবেশন সেবা কেস ডেটা ভাগাভাগি করে।",
+                  ),
                   icon: "fa-shield-heart",
                 },
                 {
                   title: yhLang("Digital & data", "ডিজিটাল ও ডেটা"),
-                  desc: yhLang("DHIS2 adolescent dashboard, eMIS for schools and gender-tagged budgets track progress.", "ডিএইচআইএস২ কিশোর ড্যাশবোর্ড, বিদ্যালয়ের ইএমআইএস ও লিঙ্গভিত্তিক বাজেট অগ্রগতি পর্যবেক্ষণ করে।"),
+                  desc: yhLang(
+                    "DHIS2 adolescent dashboard, eMIS for schools and gender-tagged budgets track progress.",
+                    "ডিএইচআইএস২ কিশোর ড্যাশবোর্ড, বিদ্যালয়ের ইএমআইএস ও লিঙ্গভিত্তিক বাজেট অগ্রগতি পর্যবেক্ষণ করে।",
+                  ),
                   icon: "fa-chart-line",
                 },
               ];
-
-            
-
 
               return `
               <div class="lesson-slide">
@@ -2561,7 +2776,7 @@ const coursesData = [
                             </div>
                           </div>
                         </article>
-                      `
+                      `,
                       )
                       .join("")}
                   </div>
@@ -2584,10 +2799,7 @@ const coursesData = [
           },
           {
             id: "ch2-lesson-12",
-            title: yhLang(
-              "A combined effort",
-              "সমন্বিত প্রচেষ্টা"
-            ),
+            title: yhLang("A combined effort", "সমন্বিত প্রচেষ্টা"),
             icon: "fa-people-group",
             gradientClass: "bg-gradient-green",
             audioFile: "",
@@ -2598,7 +2810,7 @@ const coursesData = [
                   id: "q2k",
                   question: yhLang(
                     "Whole-of-society approach includes…",
-                    "সমাজের সর্বস্তরের পন্থায় কী অন্তর্ভুক্ত থাকে?"
+                    "সমাজের সর্বস্তরের পন্থায় কী অন্তর্ভুক্ত থাকে?",
                   ),
                   options: [
                     yhLang("Only health", "শুধু স্বাস্থ্য"),
@@ -2614,31 +2826,52 @@ const coursesData = [
               const actorGroups = [
                 {
                   title: yhLang("Health & nutrition", "স্বাস্থ্য ও পুষ্টি"),
-                  desc: yhLang("DGHS, DGFP, DGHS RH line, community clinics, private hospitals and telehealth platforms.", "ডিজিএইচএস, ডিজিএফপি, আরএইচ লাইন, কমিউনিটি ক্লিনিক, বেসরকারি হাসপাতাল ও টেলিহেলথ প্ল্যাটফর্ম।"),
+                  desc: yhLang(
+                    "DGHS, DGFP, DGHS RH line, community clinics, private hospitals and telehealth platforms.",
+                    "ডিজিএইচএস, ডিজিএফপি, আরএইচ লাইন, কমিউনিটি ক্লিনিক, বেসরকারি হাসপাতাল ও টেলিহেলথ প্ল্যাটফর্ম।",
+                  ),
                   icon: "fa-stethoscope",
                   color: "bg-gradient-blue",
                 },
                 {
                   title: yhLang("Education & skills", "শিক্ষা ও দক্ষতা"),
-                  desc: yhLang("MoE, Madrasah Board, TVET institutes, scouts/girl guides and online learning partners.", "শিক্ষা মন্ত্রণালয়, মাদ্রাসা বোর্ড, টিভিইটি প্রতিষ্ঠান, স্কাউট/গার্ল গাইড ও অনলাইন শিক্ষাভিত্তিক অংশীদার।"),
+                  desc: yhLang(
+                    "MoE, Madrasah Board, TVET institutes, scouts/girl guides and online learning partners.",
+                    "শিক্ষা মন্ত্রণালয়, মাদ্রাসা বোর্ড, টিভিইটি প্রতিষ্ঠান, স্কাউট/গার্ল গাইড ও অনলাইন শিক্ষাভিত্তিক অংশীদার।",
+                  ),
                   icon: "fa-school",
                   color: "bg-gradient-orange",
                 },
                 {
                   title: yhLang("Protection & justice", "সুরক্ষা ও ন্যায়"),
-                  desc: yhLang("MoWCA, DSS, police, legal aid services, One-Stop Crisis Centres, probation offices.", "নারী-শিশু বিষয়ক মন্ত্রণালয়, সমাজসেবা অধিদপ্তর, পুলিশ, লিগ্যাল এইড, ওএসসিসি ও প্রবেশন অফিস।"),
+                  desc: yhLang(
+                    "MoWCA, DSS, police, legal aid services, One-Stop Crisis Centres, probation offices.",
+                    "নারী-শিশু বিষয়ক মন্ত্রণালয়, সমাজসেবা অধিদপ্তর, পুলিশ, লিগ্যাল এইড, ওএসসিসি ও প্রবেশন অফিস।",
+                  ),
                   icon: "fa-scale-balanced",
                   color: "bg-gradient-emerald",
                 },
                 {
-                  title: yhLang("Youth & civil society", "তরুণ ও সিভিল সোসাইটি"),
-                  desc: yhLang("YHAP ambassadors, youth clubs, disability organisations, faith leaders and media.", "ওয়াইএইচএপি দূত, যুব ক্লাব, প্রতিবন্ধী সংগঠন, ধর্মীয় নেতৃবৃন্দ ও গণমাধ্যম।"),
+                  title: yhLang(
+                    "Youth & civil society",
+                    "তরুণ ও সিভিল সোসাইটি",
+                  ),
+                  desc: yhLang(
+                    "YHAP ambassadors, youth clubs, disability organisations, faith leaders and media.",
+                    "ওয়াইএইচএপি দূত, যুব ক্লাব, প্রতিবন্ধী সংগঠন, ধর্মীয় নেতৃবৃন্দ ও গণমাধ্যম।",
+                  ),
                   icon: "fa-people-group",
                   color: "bg-gradient-rose",
                 },
                 {
-                  title: yhLang("Private sector & innovation", "বেসরকারি খাত ও উদ্ভাবন"),
-                  desc: yhLang("Telecoms, fintech, social enterprises and creative agencies scaling behaviour-change content.", "টেলিকম, ফিনটেক, সামাজিক উদ্যোগ ও সৃজনশীল সংস্থা আচরণ পরিবর্তন বার্তা বিস্তারে সহায়তা করে।"),
+                  title: yhLang(
+                    "Private sector & innovation",
+                    "বেসরকারি খাত ও উদ্ভাবন",
+                  ),
+                  desc: yhLang(
+                    "Telecoms, fintech, social enterprises and creative agencies scaling behaviour-change content.",
+                    "টেলিকম, ফিনটেক, সামাজিক উদ্যোগ ও সৃজনশীল সংস্থা আচরণ পরিবর্তন বার্তা বিস্তারে সহায়তা করে।",
+                  ),
                   icon: "fa-lightbulb",
                   color: "bg-gradient-purple",
                 },
@@ -2647,19 +2880,31 @@ const coursesData = [
               const collaborationSteps = [
                 {
                   title: yhLang("Diagnose", "নির্ণয়"),
-                  detail: yhLang("Shared dashboards combine DHS, DHIS2, school EMIS and citizen feedback.", "ডিএইচএস, ডিএইচআইএস২, বিদ্যালয় ইএমআইএস ও নাগরিক মতামত একত্র করে যৌথ ড্যাশবোর্ড।"),
+                  detail: yhLang(
+                    "Shared dashboards combine DHS, DHIS2, school EMIS and citizen feedback.",
+                    "ডিএইচএস, ডিএইচআইএস২, বিদ্যালয় ইএমআইএস ও নাগরিক মতামত একত্র করে যৌথ ড্যাশবোর্ড।",
+                  ),
                 },
                 {
                   title: yhLang("Co-design", "সহ-নকশা"),
-                  detail: yhLang("Youth labs, policy clinics and design sprints define prototypes for services.", "তরুণ ল্যাব, নীতি ক্লিনিক ও ডিজাইন স্প্রিন্ট সেবার প্রোটোটাইপ নির্ধারণ করে।"),
+                  detail: yhLang(
+                    "Youth labs, policy clinics and design sprints define prototypes for services.",
+                    "তরুণ ল্যাব, নীতি ক্লিনিক ও ডিজাইন স্প্রিন্ট সেবার প্রোটোটাইপ নির্ধারণ করে।",
+                  ),
                 },
                 {
                   title: yhLang("Deliver", "বাস্তবায়ন"),
-                  detail: yhLang("Blended platforms: schools, clinics, mobile vans, community radio, super apps.", "মিশ্র প্ল্যাটফর্ম: বিদ্যালয়, ক্লিনিক, মোবাইল ভ্যান, কমিউনিটি রেডিও, সুপার অ্যাপ।"),
+                  detail: yhLang(
+                    "Blended platforms: schools, clinics, mobile vans, community radio, super apps.",
+                    "মিশ্র প্ল্যাটফর্ম: বিদ্যালয়, ক্লিনিক, মোবাইল ভ্যান, কমিউনিটি রেডিও, সুপার অ্যাপ।",
+                  ),
                 },
                 {
                   title: yhLang("Measure & iterate", "পরিমাপ ও উন্নয়ন"),
-                  detail: yhLang("Joint scorecards, budget tracking and adolescent report cards drive accountability.", "যৌথ স্কোরকার্ড, বাজেট ট্র্যাকিং ও কিশোর রিপোর্ট কার্ড জবাবদিহি ত্বরান্বিত করে।"),
+                  detail: yhLang(
+                    "Joint scorecards, budget tracking and adolescent report cards drive accountability.",
+                    "যৌথ স্কোরকার্ড, বাজেট ট্র্যাকিং ও কিশোর রিপোর্ট কার্ড জবাবদিহি ত্বরান্বিত করে।",
+                  ),
                 },
               ];
 
@@ -2679,7 +2924,7 @@ const coursesData = [
             id: "ch2-lesson-13",
             title: yhLang(
               "Recommendations to protect adolescent health and wellbeing",
-              "কৈশোর স্বাস্থ্য ও সুস্থতা রক্ষায় সুপারিশ"
+              "কৈশোর স্বাস্থ্য ও সুস্থতা রক্ষায় সুপারিশ",
             ),
             icon: "fa-rocket",
             gradientClass: "bg-gradient-rose",
@@ -2691,10 +2936,13 @@ const coursesData = [
                   id: "q2l",
                   question: yhLang(
                     "Actions include…",
-                    "সুপারিশে কোন পদক্ষেপ অন্তর্ভুক্ত?"
+                    "সুপারিশে কোন পদক্ষেপ অন্তর্ভুক্ত?",
                   ),
                   options: [
-                    yhLang("Boost health literacy", "স্বাস্থ্য সাক্ষরতা বাড়ানো"),
+                    yhLang(
+                      "Boost health literacy",
+                      "স্বাস্থ্য সাক্ষরতা বাড়ানো",
+                    ),
                     yhLang("Reduce services", "সেবা কমানো"),
                     yhLang("Ignore data", "তথ্য উপেক্ষা"),
                     yhLang("Exclude young", "তরুণদের বাদ দেওয়া"),
@@ -2706,36 +2954,63 @@ const coursesData = [
             content: (function () {
               const recommendations = [
                 {
-                  title: yhLang("Rights-based & person-centred", "অধিকারভিত্তিক ও ব্যক্তি-কেন্দ্রিক"),
-                  text: yhLang("Guarantee confidentiality, informed consent and inclusive spaces for adolescents of all identities.", "সব পরিচয়ের কিশোরদের জন্য গোপনীয়তা, অবহিত সম্মতি ও অন্তর্ভুক্তিমূলক স্থান নিশ্চিত করুন।"),
+                  title: yhLang(
+                    "Rights-based & person-centred",
+                    "অধিকারভিত্তিক ও ব্যক্তি-কেন্দ্রিক",
+                  ),
+                  text: yhLang(
+                    "Guarantee confidentiality, informed consent and inclusive spaces for adolescents of all identities.",
+                    "সব পরিচয়ের কিশোরদের জন্য গোপনীয়তা, অবহিত সম্মতি ও অন্তর্ভুক্তিমূলক স্থান নিশ্চিত করুন।",
+                  ),
                   icon: "fa-scale-balanced",
                   cls: "bg-gradient-purple",
                   delay: 120,
                 },
                 {
-                  title: yhLang("Confront systemic inequities", "পদ্ধতিগত বৈষম্য মোকাবিলা"),
-                  text: yhLang("Invest in underserved districts, hard-to-reach communities, refugees and adolescents with disabilities.", "অসেবা প্রাপ্ত জেলা, দুর্গম সম্প্রদায়, শরণার্থী ও প্রতিবন্ধী কিশোরদের জন্য বিনিয়োগ বাড়ান।"),
+                  title: yhLang(
+                    "Confront systemic inequities",
+                    "পদ্ধতিগত বৈষম্য মোকাবিলা",
+                  ),
+                  text: yhLang(
+                    "Invest in underserved districts, hard-to-reach communities, refugees and adolescents with disabilities.",
+                    "অসেবা প্রাপ্ত জেলা, দুর্গম সম্প্রদায়, শরণার্থী ও প্রতিবন্ধী কিশোরদের জন্য বিনিয়োগ বাড়ান।",
+                  ),
                   icon: "fa-people-arrows-left-right",
                   cls: "bg-gradient-rose",
                   delay: 160,
                 },
                 {
-                  title: yhLang("Meaningful adolescent engagement", "অর্থবহ কিশোর অংশগ্রহণ"),
-                  text: yhLang("Create advisory boards, pay youth researchers and embed feedback loops in every programme.", "উপদেষ্টা বোর্ড গঠন, তরুণ গবেষকদের পারিশ্রমিক প্রদান ও প্রতিটি কর্মসূচিতে প্রতিক্রিয়া পদ্ধতি যুক্ত করুন।"),
+                  title: yhLang(
+                    "Meaningful adolescent engagement",
+                    "অর্থবহ কিশোর অংশগ্রহণ",
+                  ),
+                  text: yhLang(
+                    "Create advisory boards, pay youth researchers and embed feedback loops in every programme.",
+                    "উপদেষ্টা বোর্ড গঠন, তরুণ গবেষকদের পারিশ্রমিক প্রদান ও প্রতিটি কর্মসূচিতে প্রতিক্রিয়া পদ্ধতি যুক্ত করুন।",
+                  ),
                   icon: "fa-people-group",
                   cls: "bg-gradient-blue",
                   delay: 200,
                 },
                 {
-                  title: yhLang("Evidence-informed & age-responsive", "প্রমাণভিত্তিক ও বয়স-উপযোগী"),
-                  text: yhLang("Use disaggregated data, U-Report polls and implementation research to tailor solutions.", "বিযুক্ত ডেটা, ইউ-রিপোর্ট জরিপ এবং বাস্তবায়ন গবেষণা ব্যবহার করে সমাধান তৈরি করুন।"),
+                  title: yhLang(
+                    "Evidence-informed & age-responsive",
+                    "প্রমাণভিত্তিক ও বয়স-উপযোগী",
+                  ),
+                  text: yhLang(
+                    "Use disaggregated data, U-Report polls and implementation research to tailor solutions.",
+                    "বিযুক্ত ডেটা, ইউ-রিপোর্ট জরিপ এবং বাস্তবায়ন গবেষণা ব্যবহার করে সমাধান তৈরি করুন।",
+                  ),
                   icon: "fa-microscope",
                   cls: "bg-gradient-cyan",
                   delay: 240,
                 },
                 {
                   title: yhLang("Multisectoral approach", "বহুখাতীয় পন্থা"),
-                  text: yhLang("Link health, education, protection, social protection and climate financing.", "স্বাস্থ্য, শিক্ষা, সুরক্ষা, সামাজিক সুরক্ষা ও জলবায়ু অর্থায়নকে সংযুক্ত করুন।"),
+                  text: yhLang(
+                    "Link health, education, protection, social protection and climate financing.",
+                    "স্বাস্থ্য, শিক্ষা, সুরক্ষা, সামাজিক সুরক্ষা ও জলবায়ু অর্থায়নকে সংযুক্ত করুন।",
+                  ),
                   icon: "fa-diagram-project",
                   cls: "bg-gradient-teal",
                   delay: 280,
@@ -2745,23 +3020,36 @@ const coursesData = [
               const implementationSteps = [
                 {
                   title: yhLang("Plan", "পরিকল্পনা"),
-                  detail: yhLang("Map determinants, choose priority districts and define SMART indicators.", "নির্ধারক মানচিত্রায়ন, অগ্রাধিকার জেলা নির্বাচন ও স্মার্ট সূচক নির্ধারণ করুন।"),
+                  detail: yhLang(
+                    "Map determinants, choose priority districts and define SMART indicators.",
+                    "নির্ধারক মানচিত্রায়ন, অগ্রাধিকার জেলা নির্বাচন ও স্মার্ট সূচক নির্ধারণ করুন।",
+                  ),
                 },
                 {
                   title: yhLang("Resource", "সম্পদায়ন"),
-                  detail: yhLang("Blend domestic budgets with donor, private sector and youth-led funds.", "দেশীয় বাজেটের সাথে দাতা, বেসরকারি খাত ও তরুণ-নেতৃত্বাধীন তহবিল মিশ্রিত করুন।"),
+                  detail: yhLang(
+                    "Blend domestic budgets with donor, private sector and youth-led funds.",
+                    "দেশীয় বাজেটের সাথে দাতা, বেসরকারি খাত ও তরুণ-নেতৃত্বাধীন তহবিল মিশ্রিত করুন।",
+                  ),
                 },
                 {
                   title: yhLang("Implement", "বাস্তবায়ন"),
-                  detail: yhLang("Bundle services (SRHR, mental health, nutrition) and deliver via multiple platforms.", "এসআরএইচআর, মানসিক স্বাস্থ্য, পুষ্টি সেবা একত্রে দিয়ে বহু প্ল্যাটফর্মে সরবরাহ করুন।"),
+                  detail: yhLang(
+                    "Bundle services (SRHR, mental health, nutrition) and deliver via multiple platforms.",
+                    "এসআরএইচআর, মানসিক স্বাস্থ্য, পুষ্টি সেবা একত্রে দিয়ে বহু প্ল্যাটফর্মে সরবরাহ করুন।",
+                  ),
                 },
                 {
                   title: yhLang("Review & adapt", "মূল্যায়ন ও অভিযোজন"),
-                  detail: yhLang("Use adolescent scorecards, digital dashboards and learning reviews every six months.", "প্রতি ছয় মাসে কিশোর স্কোরকার্ড, ডিজিটাল ড্যাশবোর্ড ও লার্নিং রিভিউ ব্যবহার করুন।"),
+                  detail: yhLang(
+                    "Use adolescent scorecards, digital dashboards and learning reviews every six months.",
+                    "প্রতি ছয় মাসে কিশোর স্কোরকার্ড, ডিজিটাল ড্যাশবোর্ড ও লার্নিং রিভিউ ব্যবহার করুন।",
+                  ),
                 },
               ];
 
-              const renderList = (items) => items.map((item) => `<li>${item}</li>`).join("");
+              const renderList = (items) =>
+                items.map((item) => `<li>${item}</li>`).join("");
 
               return `
               <div class="lesson-slide">
@@ -2797,7 +3085,7 @@ const coursesData = [
                               <p class="timeline-card-text rec-title">${rec.text}</p>
                             </article>
                           </div>
-                        `
+                        `,
                         )
                         .join("")}
                     </div>
@@ -2819,7 +3107,7 @@ const coursesData = [
                   id: "q4b",
                   question: yhLang(
                     "নারীর কোন অঙ্গে গর্ভধারণ ঘটে?",
-                    "নারীর কোন অঙ্গে গর্ভধারণ ঘটে?"
+                    "নারীর কোন অঙ্গে গর্ভধারণ ঘটে?",
                   ),
                   options: [
                     yhLang("জরায়ু", "জরায়ু"),
@@ -2848,7 +3136,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -2856,7 +3144,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "নারী প্রজননতন্ত্র",
-                    "নারী প্রজননতন্ত্র"
+                    "নারী প্রজননতন্ত্র",
                   )}</h2>
 
                   <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
@@ -2879,14 +3167,13 @@ const coursesData = [
               `;
             })(),
           },
-          
         ],
       },
       {
         id: "ch-3",
         title: yhLang(
           "Module-3: Changes during adolescence and puberty",
-          "মডিউল-৩: কৈশোর ও বয়ঃসন্ধিকালের পরিবর্তন"
+          "মডিউল-৩: কৈশোর ও বয়ঃসন্ধিকালের পরিবর্তন",
         ),
         lessons: [
           {
@@ -2902,15 +3189,21 @@ const coursesData = [
                   id: "q3a",
                   question: yhLang(
                     "What is puberty?",
-                    "বয়ঃসন্ধিকাল বলতে কী বোঝায়?"
+                    "বয়ঃসন্ধিকাল বলতে কী বোঝায়?",
                   ),
                   options: [
                     yhLang(
                       "A process of physical changes leading to sexual maturity",
-                      "শারীরিক পরিবর্তনের এমন একটি প্রক্রিয়া যা যৌন পরিপক্বতা আনে"
+                      "শারীরিক পরিবর্তনের এমন একটি প্রক্রিয়া যা যৌন পরিপক্বতা আনে",
                     ),
-                    yhLang("Only a temporary illness", "শুধু অস্থায়ী অসুস্থতা"),
-                    yhLang("Changes that happen only to boys", "শুধু ছেলেদের পরিবর্তন"),
+                    yhLang(
+                      "Only a temporary illness",
+                      "শুধু অস্থায়ী অসুস্থতা",
+                    ),
+                    yhLang(
+                      "Changes that happen only to boys",
+                      "শুধু ছেলেদের পরিবর্তন",
+                    ),
                     yhLang("Unrelated to hormones", "হরমোনের সাথে সম্পর্কহীন"),
                   ],
                   correctAnswer: 0,
@@ -2920,7 +3213,7 @@ const coursesData = [
             content: (function () {
               const description = yhLang(
                 "Puberty is the phase when adolescents experience physical transformations that bring sexual maturity.",
-                "বয়ঃসন্ধিকাল হলো শারীরিক পরিবর্তনের প্রক্রিয়া যখন ছেলে-মেয়ে যৌন পরিপক্বতা লাভ করে।"
+                "বয়ঃসন্ধিকাল হলো শারীরিক পরিবর্তনের প্রক্রিয়া যখন ছেলে-মেয়ে যৌন পরিপক্বতা লাভ করে।",
               );
 
               const maleChanges = [
@@ -2960,11 +3253,11 @@ const coursesData = [
                 items
                   .map(
                     (text, idx) => `
-                      <li style="background: ${idx % 2 === 0 ? 'rgba(255,255,255,.6)' : 'rgba(255,240,245,.5)'}; border-left: 4px solid #f06292; border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; box-shadow: 0 ${5 + (idx % 3) * 2}px ${12 + (idx % 3) * 3}px rgba(240,107,147,${.1 + (idx % 3) * .05});">
+                      <li style="background: ${idx % 2 === 0 ? "rgba(255,255,255,.6)" : "rgba(255,240,245,.5)"}; border-left: 4px solid #f06292; border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; box-shadow: 0 ${5 + (idx % 3) * 2}px ${12 + (idx % 3) * 3}px rgba(240,107,147,${0.1 + (idx % 3) * 0.05});">
                         <i class="fa-solid fa-circle-check" style="color: #e91e63; margin-right: 8px;"></i>
                         <span style="color: #6d4c41;">${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -2998,7 +3291,10 @@ const coursesData = [
           },
           {
             id: "ch11-lesson-3",
-            title: yhLang("Other Vaccines for Women", "মহিলাদের অন্যান্য  টিকা"),
+            title: yhLang(
+              "Other Vaccines for Women",
+              "মহিলাদের অন্যান্য  টিকা",
+            ),
             icon: "fa-syringe",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
@@ -3009,12 +3305,21 @@ const coursesData = [
                   id: "q11c",
                   question: yhLang(
                     "Why should women consult health centers about additional vaccines?",
-                    "মহিলাদের কেন অতিরিক্ত টিকা সম্পর্কে স্বাস্থ্যকেন্দ্রের পরামর্শ নেওয়া উচিত?"
+                    "মহিলাদের কেন অতিরিক্ত টিকা সম্পর্কে স্বাস্থ্যকেন্দ্রের পরামর্শ নেওয়া উচিত?",
                   ),
                   options: [
-                    yhLang("To stay protected against preventable diseases", "প্রতিরোধযোগ্য রোগ থেকে সুরক্ষিত থাকতে"),
-                    yhLang("Because vaccines are optional luxuries", "কারণ টিকা বিলাসী পছন্দ"),
-                    yhLang("Vaccines always cause illness", "টিকা সবসময় অসুস্থতা আনে"),
+                    yhLang(
+                      "To stay protected against preventable diseases",
+                      "প্রতিরোধযোগ্য রোগ থেকে সুরক্ষিত থাকতে",
+                    ),
+                    yhLang(
+                      "Because vaccines are optional luxuries",
+                      "কারণ টিকা বিলাসী পছন্দ",
+                    ),
+                    yhLang(
+                      "Vaccines always cause illness",
+                      "টিকা সবসময় অসুস্থতা আনে",
+                    ),
                     yhLang("No reason at all", "কোনো কারণ নেই"),
                   ],
                   correctAnswer: 0,
@@ -3026,7 +3331,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "মহিলাদের অন্যান্য  টিকা",
-                    "মহিলাদের অন্যান্য  টিকা"
+                    "মহিলাদের অন্যান্য  টিকা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -3044,12 +3349,15 @@ const coursesData = [
         id: "ch-4",
         title: yhLang(
           "Module-4: Menstrual/menstrual management",
-          "মডিউল-৪: মাসিক/ঋতুস্রাব ব্যবস্থাপনা"
+          "মডিউল-৪: মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
         ),
         lessons: [
           {
             id: "ch4-lesson-1",
-            title: yhLang("Menstrual/menstrual managementt", "মাসিক/ঋতুস্রাব ব্যবস্থাপনা"),
+            title: yhLang(
+              "Menstrual/menstrual managementt",
+              "মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
+            ),
             icon: "fa-droplet",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
@@ -3060,7 +3368,7 @@ const coursesData = [
                   id: "q4a",
                   question: yhLang(
                     "ঋতুস্রাব সাধারণত কোন বয়সের মধ্যে শুরু হয়?",
-                    "ঋতুস্রাব সাধারণত কোন বয়সের মধ্যে শুরু হয়?"
+                    "ঋতুস্রাব সাধারণত কোন বয়সের মধ্যে শুরু হয়?",
                   ),
                   options: [
                     yhLang("৯–১৪ বছর", "৯–১৪ বছর"),
@@ -3073,34 +3381,34 @@ const coursesData = [
               ],
             },
             content: (function () {
-                const paragraphs = [
+              const paragraphs = [
                 yhLang(
                   "Menstruation is a normal, natural process that prepares a person for pregnancy and childbirth. The monthly bleeding through the vagina is called menstruation (periods).",
-                  "মাসিক একটি স্বাভাবিক প্রাকৃতিক প্রক্রিয়া, যার মাধ্যমে একজন নারী গর্ভধারণ/সন্তান জন্মদানের জন্য প্রস্তুত হয়। প্রতিমাসে যোনিপথ দিয়ে মেয়েদের যে রক্তস্রাব হয়, তাকে মাসিক/ঋতুস্রাব বলে।"
+                  "মাসিক একটি স্বাভাবিক প্রাকৃতিক প্রক্রিয়া, যার মাধ্যমে একজন নারী গর্ভধারণ/সন্তান জন্মদানের জন্য প্রস্তুত হয়। প্রতিমাসে যোনিপথ দিয়ে মেয়েদের যে রক্তস্রাব হয়, তাকে মাসিক/ঋতুস্রাব বলে।",
                 ),
                 yhLang(
                   "Menstruation typically begins between ages 9–14 and continues monthly until about 45–55 years.",
-                  "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।"
+                  "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।",
                 ),
                 yhLang(
                   "Bleeding usually lasts 1–7 days each month. Flow is often heavier during the first 1–3 days and becomes lighter afterwards.",
-                  "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।"
+                  "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।",
                 ),
                 yhLang(
                   "A typical menstrual cycle occurs every 21–35 days.",
-                  "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।"
+                  "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।",
                 ),
                 yhLang(
                   "Having periods means the body is maturing and the reproductive system is functioning properly. It is completely normal—not unclean or impure—and there is no reason to isolate someone during this time. Unless there is unusual pain or excessive bleeding, normal daily activities can continue.",
-                  "মাসিক হওয়া মানে দেহ পরিণত হচ্ছে এবং প্রজননতন্ত্র সঠিকভাবে কাজ করছে। এটি একটি সম্পূর্ণ স্বাভাবিক ঘটনা। এটি কোনো অপবিত্রতা বা অপরিচ্ছন্নতা নয় এবং এ সময় কোনো নারীকে আলাদা করে রাখারও কিছু নেই। এ সময় যদি অস্বাভাবিক ব্যথা বা অতিরিক্ত রক্তস্রাব না ঘটে, তবে সে তার স্বাভাবিক কাজ-কর্ম চালিয়ে যেতে পারে।"
+                  "মাসিক হওয়া মানে দেহ পরিণত হচ্ছে এবং প্রজননতন্ত্র সঠিকভাবে কাজ করছে। এটি একটি সম্পূর্ণ স্বাভাবিক ঘটনা। এটি কোনো অপবিত্রতা বা অপরিচ্ছন্নতা নয় এবং এ সময় কোনো নারীকে আলাদা করে রাখারও কিছু নেই। এ সময় যদি অস্বাভাবিক ব্যথা বা অতিরিক্ত রক্তস্রাব না ঘটে, তবে সে তার স্বাভাবিক কাজ-কর্ম চালিয়ে যেতে পারে।",
                 ),
-                ];
+              ];
 
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Menstrual/menstrual managementt",
-                    "মাসিক/ঋতুস্রাব ব্যবস্থাপনা"
+                    "মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
                   )}</h2>
 
                   <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
@@ -3115,7 +3423,10 @@ const coursesData = [
                       <div class="col-lg-12">
                         <div class="d-flex flex-column gap-3">
                           ${paragraphs
-                            .map((text, idx) => `<p class="mb-0" data-aos="fade-left" data-aos-delay="${80 + idx * 20}">${text}</p>`)
+                            .map(
+                              (text, idx) =>
+                                `<p class="mb-0" data-aos="fade-left" data-aos-delay="${80 + idx * 20}">${text}</p>`,
+                            )
                             .join("")}
                         </div>
                       </div>
@@ -3138,11 +3449,14 @@ const coursesData = [
                   id: "q4b",
                   question: yhLang(
                     "জরায়ুর প্রধান কাজ কী?",
-                    "জরায়ুর প্রধান কাজ কী?"
+                    "জরায়ুর প্রধান কাজ কী?",
                   ),
                   options: [
                     yhLang("গর্ভধারণ করা", "গর্ভধারণ করা"),
-                    yhLang("শ্বাস-প্রশ্বাস নিয়ন্ত্রণ করা", "শ্বাস-প্রশ্বাস নিয়ন্ত্রণ করা"),
+                    yhLang(
+                      "শ্বাস-প্রশ্বাস নিয়ন্ত্রণ করা",
+                      "শ্বাস-প্রশ্বাস নিয়ন্ত্রণ করা",
+                    ),
                     yhLang("রক্ত পরিশোধন", "রক্ত পরিশোধন"),
                     yhLang("হরমোন জমা রাখা", "হরমোন জমা রাখা"),
                   ],
@@ -3167,7 +3481,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -3175,7 +3489,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "নারী প্রজননতন্ত্র",
-                    "নারী প্রজননতন্ত্র"
+                    "নারী প্রজননতন্ত্র",
                   )}</h2>
 
                   <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
@@ -3202,7 +3516,7 @@ const coursesData = [
             id: "ch4-lesson-3",
             title: yhLang(
               "Care During Menstruation",
-              "মাসিক চলাকালীন মেয়েদের করণীয়"
+              "মাসিক চলাকালীন মেয়েদের করণীয়",
             ),
             icon: "fa-heart-circle-check",
             gradientClass: "bg-gradient-rose",
@@ -3214,7 +3528,7 @@ const coursesData = [
                   id: "q4c",
                   question: yhLang(
                     "মাসিকের সময় ন্যাপকিন কতবার বদলানো উচিত?",
-                    "মাসিকের সময় ন্যাপকিন কতবার বদলানো উচিত?"
+                    "মাসিকের সময় ন্যাপকিন কতবার বদলানো উচিত?",
                   ),
                   options: [
                     yhLang("দিনে অন্তত ৪–৬ বার", "দিনে অন্তত ৪–৬ বার"),
@@ -3244,7 +3558,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -3252,7 +3566,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "মাসিক চলাকালীন মেয়েদের করণীয়",
-                    "মাসিক চলাকালীন মেয়েদের করণীয়"
+                    "মাসিক চলাকালীন মেয়েদের করণীয়",
                   )}</h2>
 
                   <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
@@ -3280,7 +3594,7 @@ const coursesData = [
             id: "ch4-lesson-4",
             title: yhLang(
               "Support Systems for Menstrual Health",
-              "মাসিক ব্যবস্থাপনায় সহযোগিতা"
+              "মাসিক ব্যবস্থাপনায় সহযোগিতা",
             ),
             icon: "fa-people-roof",
             gradientClass: "bg-gradient-rose",
@@ -3292,12 +3606,12 @@ const coursesData = [
                   id: "q4d",
                   question: yhLang(
                     "স্কুলে মাসিকের সময় জরুরি স্যানিটারি ন্যাপকিন কেন গুরুত্বপূর্ণ?",
-                    "স্কুলে মাসিকের সময় জরুরি স্যানিটারি ন্যাপকিন কেন গুরুত্বপূর্ণ?"
+                    "স্কুলে মাসিকের সময় জরুরি স্যানিটারি ন্যাপকিন কেন গুরুত্বপূর্ণ?",
                   ),
                   options: [
                     yhLang(
                       "প্রস্তুতি ছাড়া শুরু হলে তাৎক্ষণিক সহায়তা দিতে",
-                      "প্রস্তুতি ছাড়া শুরু হলে তাৎক্ষণিক সহায়তা দিতে"
+                      "প্রস্তুতি ছাড়া শুরু হলে তাৎক্ষণিক সহায়তা দিতে",
                     ),
                     yhLang("শুধু প্রদর্শনের জন্য", "শুধু প্রদর্শনের জন্য"),
                     yhLang("অপ্রয়োজনীয় ব্যয়", "অপ্রয়োজনীয় ব্যয়"),
@@ -3342,7 +3656,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -3350,13 +3664,13 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "মাসিক ব্যবস্থাপনায় বাবা-মা ও শিক্ষাপ্রতিষ্ঠানের ভূমিকা",
-                    "মাসিক ব্যবস্থাপনায় বাবা-মা ও শিক্ষাপ্রতিষ্ঠানের ভূমিকা"
+                    "মাসিক ব্যবস্থাপনায় বাবা-মা ও শিক্ষাপ্রতিষ্ঠানের ভূমিকা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
                       "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
-                      "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা"
+                      "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(parentPoints)}
@@ -3368,7 +3682,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
                       "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা",
-                      "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা"
+                      "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা",
                     )}</h3>
                     <p class="text-muted mb-3">${schoolIntro}</p>
                     <ul class="list-unstyled puberty-list mb-0">
@@ -3381,7 +3695,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="120">
                     <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
                       "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে",
-                      "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে"
+                      "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(essentials)}
@@ -3395,7 +3709,7 @@ const coursesData = [
             id: "ch4-lesson-5",
             title: yhLang(
               "মাসিকের অস্বাভাবিকতা ও ব্যবস্থাপনা",
-              "মাসিকের অস্বাভাবিকতা ও ব্যবস্থাপনা"
+              "মাসিকের অস্বাভাবিকতা ও ব্যবস্থাপনা",
             ),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-rose",
@@ -3407,7 +3721,7 @@ const coursesData = [
                   id: "q4e",
                   question: yhLang(
                     "মাসিক বন্ধ থাকলে প্রথমে কী পরীক্ষা করা উচিত?",
-                    "মাসিক বন্ধ থাকলে প্রথমে কী পরীক্ষা করা উচিত?"
+                    "মাসিক বন্ধ থাকলে প্রথমে কী পরীক্ষা করা উচিত?",
                   ),
                   options: [
                     yhLang("গর্ভধারণ পরীক্ষা", "গর্ভধারণ পরীক্ষা"),
@@ -3443,7 +3757,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -3451,17 +3765,17 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "মাসিকের অস্বাভাবিকতা ও এর ব্যবস্থাপনা",
-                    "মাসিকের অস্বাভাবিকতা ও এর ব্যবস্থাপনা"
+                    "মাসিকের অস্বাভাবিকতা ও এর ব্যবস্থাপনা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text">${yhLang(
                       "মাসিকের অস্বাভাবিকতা",
-                      "মাসিকের অস্বাভাবিকতা"
+                      "মাসিকের অস্বাভাবিকতা",
                     )}</h3>
                     <p class="text-muted mb-3">${yhLang(
                       "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।",
-                      "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।"
+                      "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।",
                     )}</p>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(warningPoints)}
@@ -3486,14 +3800,14 @@ const coursesData = [
         id: "ch-5",
         title: yhLang(
           "Module-5: Wet dream (ejaculation) Hygiene and Management",
-          "মডিউল-৫: ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা"
+          "মডিউল-৫: ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
         ),
         lessons: [
           {
             id: "ch5-lesson-1",
             title: yhLang(
               "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
-              "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা"
+              "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
             ),
             icon: "fa-mars",
             gradientClass: "bg-gradient-blue",
@@ -3505,12 +3819,12 @@ const coursesData = [
                   id: "q5a",
                   question: yhLang(
                     "স্বপ্নদোষ বলতে কী বোঝায়?",
-                    "স্বপ্নদোষ বলতে কী বোঝায়?"
+                    "স্বপ্নদোষ বলতে কী বোঝায়?",
                   ),
                   options: [
                     yhLang(
                       "ঘুমের মধ্যে স্বাভাবিকভাবে বীর্য বের হওয়া",
-                      "ঘুমের মধ্যে স্বাভাবিকভাবে বীর্য বের হওয়া"
+                      "ঘুমের মধ্যে স্বাভাবিকভাবে বীর্য বের হওয়া",
                     ),
                     yhLang("দীর্ঘমেয়াদি রোগ", "দীর্ঘমেয়াদি রোগ"),
                     yhLang("মূত্রনালির সংক্রমণ", "মূত্রনালির সংক্রমণ"),
@@ -3545,9 +3859,10 @@ const coursesData = [
                 dreamInfo
                   .map(
                     (text, idx) => `
-                      <p class="mb-3" data-aos="fade-up" data-aos-delay="${80 +
-                        idx * 20}">${text}</p>
-                    `
+                      <p class="mb-3" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 20
+                      }">${text}</p>
+                    `,
                   )
                   .join("");
 
@@ -3556,13 +3871,14 @@ const coursesData = [
                   .map(
                     (item, idx) => `
                       <div class="col-12 col-md-4">
-                        <article class="modern-card glass-card menstrual-info-card h-100" data-aos="fade-up" data-aos-delay="${80 +
-                          idx * 40}">
+                        <article class="modern-card glass-card menstrual-info-card h-100" data-aos="fade-up" data-aos-delay="${
+                          80 + idx * 40
+                        }">
                           <h4 class="gradient-text mb-2">${item.title}</h4>
                           <p class="mb-0">${item.text}</p>
                         </article>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -3570,13 +3886,13 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
-                    "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা"
+                    "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text">${yhLang(
                       "ছেলেদের স্বপ্নদোষ / বীর্যপাত",
-                      "ছেলেদের স্বপ্নদোষ / বীর্যপাত"
+                      "ছেলেদের স্বপ্নদোষ / বীর্যপাত",
                     )}</h3>
                     ${renderParagraphs()}
                   </section>
@@ -3588,11 +3904,11 @@ const coursesData = [
                       <div class="col-lg-7">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "পুরুষ প্রজননতন্ত্র",
-                          "পুরুষ প্রজননতন্ত্র"
+                          "পুরুষ প্রজননতন্ত্র",
                         )}</h3>
                         <h4 class="fw-semibold mb-2">${yhLang(
                           "পেনিস / পুরুষাঙ্গ",
-                          "পেনিস / পুরুষাঙ্গ"
+                          "পেনিস / পুরুষাঙ্গ",
                         )}</h4>
                         <p class="mb-2">পেনিস যৌন সঙ্গমের মাধ্যমে নারীর যোনিতে শুক্রাণু প্রবেশ করায় এবং একই সাথে এটি মূত্র নির্গমনের কাজও করে। যৌন উত্তেজনার সময় পেনিসে রক্ত চলাচল বেড়ে যায় এবং এটি শক্ত ও বড় হয়। পরবর্তীতে বীর্যপাত হয়, অর্থাৎ পেনিস থেকে বীর্য বেরিয়ে আসে।</p>
                         <p class="mb-0">বীর্যপাত অনেক সময় ঘুমের মধ্যেও হতে পারে — এটি সম্পূর্ণ স্বাভাবিক।</p>
@@ -3618,7 +3934,7 @@ const coursesData = [
             id: "ch5-lesson-2",
             title: yhLang(
               "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
-              "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা"
+              "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
             ),
             icon: "fa-hand-holding-heart",
             gradientClass: "bg-gradient-teal",
@@ -3630,16 +3946,22 @@ const coursesData = [
                   id: "q5b",
                   question: yhLang(
                     "স্বপ্নদোষের পর প্রথম করণীয় কী?",
-                    "স্বপ্নদোষের পর প্রথম করণীয় কী?"
+                    "স্বপ্নদোষের পর প্রথম করণীয় কী?",
                   ),
                   options: [
                     yhLang(
                       "শরীর পরিষ্কার করে কাপড় পরিবর্তন করা",
-                      "শরীর পরিষ্কার করে কাপড় পরিবর্তন করা"
+                      "শরীর পরিষ্কার করে কাপড় পরিবর্তন করা",
                     ),
-                    yhLang("ডাক্তারের কাছে দৌড়ে যাওয়া", "ডাক্তারের কাছে দৌড়ে যাওয়া"),
+                    yhLang(
+                      "ডাক্তারের কাছে দৌড়ে যাওয়া",
+                      "ডাক্তারের কাছে দৌড়ে যাওয়া",
+                    ),
                     yhLang("খাবার খাওয়া বন্ধ করা", "খাবার খাওয়া বন্ধ করা"),
-                    yhLang("বন্ধুদের সঙ্গে বাজে কথা বলা", "বন্ধুদের সঙ্গে বাজে কথা বলা"),
+                    yhLang(
+                      "বন্ধুদের সঙ্গে বাজে কথা বলা",
+                      "বন্ধুদের সঙ্গে বাজে কথা বলা",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -3678,7 +4000,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -3690,7 +4012,7 @@ const coursesData = [
                         <i class="fa-solid fa-triangle-exclamation"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -3698,7 +4020,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
-                    "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা"
+                    "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -3706,7 +4028,7 @@ const coursesData = [
                       <div class="col-lg-5">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
-                          "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা"
+                          "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
                         )}</h3>
                         <h4 class="fw-semibold mb-3">${yhLang("✔ করণীয়", "✔ করণীয়")}</h4>
                         <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="60">স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতা বজায় রাখার উপায়গুলো এই নির্দেশনাতে ছবির সাথে দেখানো হয়েছে, যাতে ছেলেরা সহজেই ধাপগুলো অনুসরণ করতে পারে।</p>
@@ -3718,7 +4040,7 @@ const coursesData = [
                         <section class="modern-card mb-2 glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
                           <h3 class="gradient-text mb-3">${yhLang(
                             "নিজেকে সংযত রাখা",
-                            "নিজেকে সংযত রাখা"
+                            "নিজেকে সংযত রাখা",
                           )}</h3>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderTickList(restraintSteps, 60)}
@@ -3729,7 +4051,7 @@ const coursesData = [
                         <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
                           <h3 class="gradient-text mb-3">${yhLang(
                             "মনে রাখতে হবে",
-                            "মনে রাখতে হবে"
+                            "মনে রাখতে হবে",
                           )}</h3>
                           <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="100">এসব অসংযত কর্মকাণ্ডের কারণে—</p>
                           <ul class="list-unstyled puberty-list mb-0">
@@ -3753,11 +4075,7 @@ const coursesData = [
       },
       {
         id: "ch-6",
-        title:
-          yhLang(
-            "Module-6: Child Marriage",
-            "মডিউল-৬: বাল্যবিবাহ"
-          ),
+        title: yhLang("Module-6: Child Marriage", "মডিউল-৬: বাল্যবিবাহ"),
         lessons: [
           {
             id: "ch6-lesson-1",
@@ -3772,7 +4090,7 @@ const coursesData = [
                   id: "q6a",
                   question: yhLang(
                     "বাংলাদেশে মেয়েদের ন্যূনতম বিয়ের বয়স কত?",
-                    "বাংলাদেশে মেয়েদের ন্যূনতম বিয়ের বয়স কত?"
+                    "বাংলাদেশে মেয়েদের ন্যূনতম বিয়ের বয়স কত?",
                   ),
                   options: [
                     yhLang("১৮ বছর", "১৮ বছর"),
@@ -3800,7 +4118,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -3808,7 +4126,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "বাল্যবিবাহ",
-                    "বাল্যবিবাহ"
+                    "বাল্যবিবাহ",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -3816,7 +4134,7 @@ const coursesData = [
                       <div class="col-lg-7">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "বাংলাদেশের আইন ও বাস্তবতা",
-                          "বাংলাদেশের আইন ও বাস্তবতা"
+                          "বাংলাদেশের আইন ও বাস্তবতা",
                         )}</h3>
                         <p>বাংলাদেশের আইনে মেয়েদের বিয়ের বয়স কমপক্ষে <strong>১৮ বছর</strong> এবং ছেলেদের ক্ষেত্রে <strong>২১ বছর</strong>। এর কম বয়সে বিয়ে হলে তা বাল্যবিবাহ বলে গণ্য করা হয়।</p>
                         <p>বর্তমানে বিশেষ কিছু কারণে <strong>১৬ বছর বয়সে</strong> বিয়ে দেওয়ার বিষয়টি বাল্যবিবাহ নিরোধ আইনে অন্তর্ভুক্ত থাকলেও, বিয়ের বয়স <strong>১৮ বছরই মূল বয়স</strong> হিসেবে বিবেচনা করতে হবে।</p>
@@ -3831,7 +4149,7 @@ const coursesData = [
                         <div class="modern-card glass-card h-100" data-aos="fade-left" data-aos-delay="80">
                           <h4 class="mb-2">${yhLang(
                             "বাল্যবিবাহের ঝুঁকি",
-                            "বাল্যবিবাহের ঝুঁকি"
+                            "বাল্যবিবাহের ঝুঁকি",
                           )}</h4>
                           <p class="mb-0 text-muted">স্বাস্থ্য, শিক্ষা, অর্থনীতি ও সামাজিক নিরাপত্তা—সব দিক থেকেই বাল্যবিবাহ তরুন-তরুনীদের ভবিষ্যৎকে ঝুঁকির মুখে ফেলে। সঠিক তথ্য জানিয়ে পরিবার ও সম্প্রদায়কে সচেতন করাই প্রথম পদক্ষেপ।</p>
                         </div>
@@ -3870,7 +4188,7 @@ const coursesData = [
                   id: "q6b",
                   question: yhLang(
                     "বাল্যবিবাহের একটি প্রধান কারণ কী?",
-                    "বাল্যবিবাহের একটি প্রধান কারণ কী?"
+                    "বাল্যবিবাহের একটি প্রধান কারণ কী?",
                   ),
                   options: [
                     yhLang("দারিদ্র্য", "দারিদ্র্য"),
@@ -3915,8 +4233,9 @@ const coursesData = [
                     const angle = angleStep * idx;
                     const color = colorCycle[idx % colorCycle.length];
                     return `
-                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 +
-                      idx * 30}">
+                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${
+                        120 + idx * 30
+                      }">
                         <div class="orbit-card ${color}">
                           <span class="orbit-title">${label}</span>
                         </div>
@@ -3930,13 +4249,13 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "বাল্যবিবাহের কারণ",
-                    "বাল্যবিবাহের কারণ"
+                    "বাল্যবিবাহের কারণ",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" aria-labelledby="orbit-child-marriage-causes" data-aos="zoom-in" data-aos-delay="60">
                     <h3 id="orbit-child-marriage-causes" class="d-none">${yhLang(
                       "বাল্যবিবাহ",
-                      "বাল্যবিবাহ"
+                      "বাল্যবিবাহ",
                     )}</h3>
                     <div class="orbit-layout" data-orbit-radius="190">
                       <div class="orbit-center icon-spin-on-hover">
@@ -3964,7 +4283,7 @@ const coursesData = [
                   id: "q6c",
                   question: yhLang(
                     "বাল্যবিবাহের ফলে কোন ঝুঁকি বেড়ে যায়?",
-                    "বাল্যবিবাহের ফলে কোন ঝুঁকি বেড়ে যায়?"
+                    "বাল্যবিবাহের ফলে কোন ঝুঁকি বেড়ে যায়?",
                   ),
                   options: [
                     yhLang("মা ও শিশুমৃত্যু", "মা ও শিশুমৃত্যু"),
@@ -3997,7 +4316,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -4005,7 +4324,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "বাল্যবিবাহের পরিণতি",
-                    "বাল্যবিবাহের পরিণতি"
+                    "বাল্যবিবাহের পরিণতি",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4028,7 +4347,10 @@ const coursesData = [
           },
           {
             id: "ch6-lesson-4",
-            title: yhLang("বাল্যবিবাহ প্রতিরোধে করণীয়", "বাল্যবিবাহ প্রতিরোধে করণীয়"),
+            title: yhLang(
+              "বাল্যবিবাহ প্রতিরোধে করণীয়",
+              "বাল্যবিবাহ প্রতিরোধে করণীয়",
+            ),
             icon: "fa-shield-alt",
             gradientClass: "bg-gradient-emerald",
             audioFile: "",
@@ -4039,10 +4361,13 @@ const coursesData = [
                   id: "q6d",
                   question: yhLang(
                     "বাল্যবিবাহ প্রতিরোধে কোন একটি করণীয়?",
-                    "বাল্যবিবাহ প্রতিরোধে কোন একটি করণীয়?"
+                    "বাল্যবিবাহ প্রতিরোধে কোন একটি করণীয়?",
                   ),
                   options: [
-                    yhLang("ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা", "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা"),
+                    yhLang(
+                      "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা",
+                      "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা",
+                    ),
                     yhLang("স্কুল বন্ধ করা", "স্কুল বন্ধ করা"),
                     yhLang("বিস্কুট বিতরণ করা", "বিস্কুট বিতরণ করা"),
                     yhLang("বাল্যবিবাহ উৎসাহিত করা", "বাল্যবিবাহ উৎসাহিত করা"),
@@ -4072,7 +4397,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -4080,7 +4405,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "বাল্যবিবাহ প্রতিরোধে করণীয়",
-                    "বাল্যবিবাহ প্রতিরোধে করণীয়"
+                    "বাল্যবিবাহ প্রতিরোধে করণীয়",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4136,12 +4461,15 @@ const coursesData = [
         id: "ch-7",
         title: yhLang(
           "Module-7: Adolescent Family Planning",
-          "মডিউল-৭: তারুণ্যীন পরিবার পরিকল্পনা"
+          "মডিউল-৭: তারুণ্যীন পরিবার পরিকল্পনা",
         ),
         lessons: [
           {
             id: "ch7-lesson-1",
-            title: yhLang("তারুণ্যীন পরিবার পরিকল্পনা", "তারুণ্যীন পরিবার পরিকল্পনা"),
+            title: yhLang(
+              "তারুণ্যীন পরিবার পরিকল্পনা",
+              "তারুণ্যীন পরিবার পরিকল্পনা",
+            ),
             icon: "fa-people-roof",
             gradientClass: "bg-gradient-blue",
             audioFile: "",
@@ -4152,14 +4480,17 @@ const coursesData = [
                   id: "q7a",
                   question: yhLang(
                     "পরিবার পরিকল্পনা বলতে কী বোঝায়?",
-                    "পরিবার পরিকল্পনা বলতে কী বোঝায়?"
+                    "পরিবার পরিকল্পনা বলতে কী বোঝায়?",
                   ),
                   options: [
                     yhLang(
                       "আয় ও সামাজিক অবস্থার সাথে সন্তান গ্রহণের পরিকল্পনা",
-                      "আয় ও সামাজিক অবস্থার সাথে সন্তান গ্রহণের পরিকল্পনা"
+                      "আয় ও সামাজিক অবস্থার সাথে সন্তান গ্রহণের পরিকল্পনা",
                     ),
-                    yhLang("ইচ্ছেমতো সন্তান জন্ম দেওয়া", "ইচ্ছেমতো সন্তান জন্ম দেওয়া"),
+                    yhLang(
+                      "ইচ্ছেমতো সন্তান জন্ম দেওয়া",
+                      "ইচ্ছেমতো সন্তান জন্ম দেওয়া",
+                    ),
                     yhLang("কেবল চিকিৎসকের কাজ", "কেবল চিকিৎসকের কাজ"),
                     yhLang("শুধু ভ্রমণ পরিকল্পনা", "শুধু ভ্রমণ পরিকল্পনা"),
                   ],
@@ -4185,14 +4516,16 @@ const coursesData = [
 
               const renderTableRows = () =>
                 methodTableRows
-                  .map((row, idx) => `
+                  .map(
+                    (row, idx) => `
                     <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
                       <td class="fw-semibold">${row.type}</td>
                       <td>${row.items
                         .map((item) => `<span class="d-block">${item}</span>`)
                         .join("")}</td>
                     </tr>
-                  `)
+                  `,
+                  )
                   .join("");
 
               const detailedMethodRows = [
@@ -4229,7 +4562,7 @@ const coursesData = [
                           .map((item) => `<span class="d-block">${item}</span>`)
                           .join("")}</td>
                       </tr>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -4237,7 +4570,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "তারুণ্যীন পরিবার পরিকল্পনা",
-                    "তারুণ্যীন পরিবার পরিকল্পনা"
+                    "তারুণ্যীন পরিবার পরিকল্পনা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4252,7 +4585,7 @@ const coursesData = [
                       <div class="col-lg-7">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ",
-                          "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ"
+                          "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ",
                         )}</h3>
                         <p class="text-muted">বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রম অনুযায়ী যেকোনো সক্ষম দম্পতি আধুনিক পরিবার পরিকল্পনা পদ্ধতি গ্রহণ করতে পারেন। বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রমে <strong>বৈবাহিক অবস্থা</strong> এবং <strong>সন্তান সংখ্যা</strong> বিবেচনা করে পদ্ধতি প্রদান করা হয়।</p>
                         <div class="table-responsive">
@@ -4282,7 +4615,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text mb-3">${yhLang(
                       "স্থায়ী ও অস্থায়ী পদ্ধতির তথ্যসারণি",
-                      "স্থায়ী ও অস্থায়ী পদ্ধতির তথ্যসারণি"
+                      "স্থায়ী ও অস্থায়ী পদ্ধতির তথ্যসারণি",
                     )}</h3>
                     <p class="text-muted">স্থায়ী এবং অস্থায়ী—উভয় ধরণের পরিবার পরিকল্পনা পদ্ধতি দম্পতির শারীরিক ও সামাজিক উপযোগিতা বিবেচনা করে নির্বাচন করা উচিত। নিচের সারণিতে প্রতিটি শ্রেণি ও উপধরণের উদাহরণ দেখানো হলো।</p>
                     <div class="table-responsive mt-3">
@@ -4306,7 +4639,10 @@ const coursesData = [
           },
           {
             id: "ch7-lesson-2",
-            title: yhLang("তারুণ্যীন পরিবার পরিকল্পনা", "তারুণ্যীন পরিবার পরিকল্পনা"),
+            title: yhLang(
+              "তারুণ্যীন পরিবার পরিকল্পনা",
+              "তারুণ্যীন পরিবার পরিকল্পনা",
+            ),
             icon: "fa-table",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
@@ -4317,7 +4653,7 @@ const coursesData = [
                   id: "q7b",
                   question: yhLang(
                     "সন্তান সংখ্যাভেদে কোন পদ্ধতি বেছে নেওয়া যায়?",
-                    "সন্তান সংখ্যাভেদে কোন পদ্ধতি বেছে নেওয়া যায়?"
+                    "সন্তান সংখ্যাভেদে কোন পদ্ধতি বেছে নেওয়া যায়?",
                   ),
                   options: [
                     yhLang("টেবিলে দেখানো অনুযায়ী", "টেবিলে দেখানো অনুযায়ী"),
@@ -4426,11 +4762,11 @@ const coursesData = [
                         ${methodHeaders
                           .map(
                             (method) =>
-                              `<td>${row.availability[method.key] ? "&#10003;" : ""}</td>`
+                              `<td>${row.availability[method.key] ? "&#10003;" : ""}</td>`,
                           )
                           .join("")}
                       </tr>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -4443,7 +4779,7 @@ const coursesData = [
                         <td>${item.usage}</td>
                         <td>${item.duration}</td>
                       </tr>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -4451,13 +4787,13 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "তারুণ্যীন পরিবার পরিকল্পনা",
-                    "তারুণ্যীন পরিবার পরিকল্পনা"
+                    "তারুণ্যীন পরিবার পরিকল্পনা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text mb-3">${yhLang(
                       "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ",
-                      "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ"
+                      "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ",
                     )}</h3>
                     <p class="text-muted">কতোজন সন্তান আছে বা নিতে চান—তা অনুযায়ী পরিবার পরিকল্পনা পদ্ধতি নির্বাচন করা উচিত। নিচের সারণিতে সেই নির্দেশনা দেখানো হলো।</p>
                     <div class="table-responsive mt-3">
@@ -4482,7 +4818,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="70">
                     <h3 class="gradient-text mb-3">${yhLang(
                       "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল",
-                      "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল"
+                      "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল",
                     )}</h3>
                     <p class="text-muted">প্রতিটি পদ্ধতির প্রয়োগপদ্ধতি ও স্থায়িত্বকাল জানলে তরুন-তরুনী ও নবদম্পতিরা তথ্যভিত্তিক সিদ্ধান্ত নিতে পারে।</p>
                     <div class="table-responsive mt-3">
@@ -4510,7 +4846,7 @@ const coursesData = [
         id: "ch-8",
         title: yhLang(
           "Module-8: Adolescent Family Planning",
-          "মডিউল-৮: তারুণ্যীন মাতৃত্ব"
+          "মডিউল-৮: তারুণ্যীন মাতৃত্ব",
         ),
         lessons: [
           {
@@ -4526,12 +4862,18 @@ const coursesData = [
                   id: "q8a",
                   question: yhLang(
                     "কৈশোরে গর্ভধারণ কেন ঝুঁকিপূর্ণ?",
-                    "কৈশোরে গর্ভধারণ কেন ঝুঁকিপূর্ণ?"
+                    "কৈশোরে গর্ভধারণ কেন ঝুঁকিপূর্ণ?",
                   ),
                   options: [
-                    yhLang("মা ও শিশুর মৃত্যু ও জটিলতার ঝুঁকি বাড়ে", "মা ও শিশুর মৃত্যু ও জটিলতার ঝুঁকি বাড়ে"),
+                    yhLang(
+                      "মা ও শিশুর মৃত্যু ও জটিলতার ঝুঁকি বাড়ে",
+                      "মা ও শিশুর মৃত্যু ও জটিলতার ঝুঁকি বাড়ে",
+                    ),
                     yhLang("সবসময় সহজ প্রসব হয়", "সবসময় সহজ প্রসব হয়"),
-                    yhLang("শরীর বেশি শক্তিশালী থাকে", "শরীর বেশি শক্তিশালী থাকে"),
+                    yhLang(
+                      "শরীর বেশি শক্তিশালী থাকে",
+                      "শরীর বেশি শক্তিশালী থাকে",
+                    ),
                     yhLang("কোনো প্রভাব পড়ে না", "কোনো প্রভাব পড়ে না"),
                   ],
                   correctAnswer: 0,
@@ -4575,7 +4917,7 @@ const coursesData = [
                   .map(
                     (text, idx) => `
                       <p class="mb-3" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">${text}</p>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -4601,13 +4943,13 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "তারুণ্যীন মাতৃত্ব",
-                    "তারুণ্যীন মাতৃত্ব"
+                    "তারুণ্যীন মাতৃত্ব",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text mb-3">${yhLang(
                       "তারুণ্যীন মাতৃত্ব",
-                      "তারুণ্যীন মাতৃত্ব"
+                      "তারুণ্যীন মাতৃত্ব",
                     )}</h3>
                     ${renderParagraphs()}
                   </section>
@@ -4619,7 +4961,7 @@ const coursesData = [
                       <div class="col-lg-12">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
-                          "কিশোরীদের মাতৃত্বজনিত ঝুঁকি"
+                          "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
                         )}</h3>
                         <p class="text-muted" data-aos="fade-up" data-aos-delay="80">${riskDescription}</p>
                       </div>
@@ -4629,7 +4971,7 @@ const coursesData = [
                             <div class="orbit-card kishori bg-gradient-rose">
                               <div class="orbit-title fw-bold">${yhLang(
                                 "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
-                                "কিশোরীদের মাতৃত্বজনিত ঝুঁকি"
+                                "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
                               )}</div>
                             </div>
                           </div>
@@ -4646,7 +4988,7 @@ const coursesData = [
             id: "ch8-lesson-2",
             title: yhLang(
               "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
-              "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়"
+              "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
             ),
             icon: "fa-shield-heart",
             gradientClass: "bg-gradient-purple",
@@ -4658,12 +5000,12 @@ const coursesData = [
                   id: "q8b",
                   question: yhLang(
                     "তারুণ্যীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?",
-                    "তারুণ্যীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?"
+                    "তারুণ্যীন গর্ভধারণ প্রতিরোধের একটি উপায় কী?",
                   ),
                   options: [
                     yhLang(
                       "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা",
-                      "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা"
+                      "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা",
                     ),
                     yhLang("সময়মতো স্কুল বন্ধ করা", "সময়মতো স্কুল বন্ধ করা"),
                     yhLang("খেলাধুলা কমানো", "খেলাধুলা কমানো"),
@@ -4717,13 +5059,13 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
-                    "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়"
+                    "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text mb-3">${yhLang(
                       "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
-                      "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়"
+                      "তারুণ্যীন গর্ভধারণ প্রতিরোধে করণীয়",
                     )}</h3>
                     <p class="mb-0">${introText}</p>
                   </section>
@@ -4738,7 +5080,7 @@ const coursesData = [
                         <div class="orbit-card bg-gradient-teal">
                           <div class="orbit-title fw-bold">${yhLang(
                             "কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল",
-                            "কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল"
+                            "কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল",
                           )}</div>
                         </div>
                       </div>
@@ -4762,10 +5104,13 @@ const coursesData = [
                   id: "q8c",
                   question: yhLang(
                     "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?",
-                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?"
+                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?",
                   ),
                   options: [
-                    yhLang("অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া", "অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া"),
+                    yhLang(
+                      "অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া",
+                      "অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া",
+                    ),
                     yhLang("নিজে নিজে ওষুধ খাওয়া", "নিজে নিজে ওষুধ খাওয়া"),
                     yhLang("উপেক্ষা করা", "উপেক্ষা করা"),
                     yhLang("কেবল বিশ্রাম নেওয়া", "কেবল বিশ্রাম নেওয়া"),
@@ -4779,7 +5124,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "গর্ভকালীন বিপদচিহ্নসমূহ",
-                    "গর্ভকালীন বিপদচিহ্নসমূহ"
+                    "গর্ভকালীন বিপদচিহ্নসমূহ",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4793,7 +5138,10 @@ const coursesData = [
           },
           {
             id: "ch8-lesson-4",
-            title: yhLang("তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা", "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা"),
+            title: yhLang(
+              "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা",
+              "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা",
+            ),
             icon: "fa-user-nurse",
             gradientClass: "bg-gradient-green",
             audioFile: "",
@@ -4804,10 +5152,13 @@ const coursesData = [
                   id: "q8d",
                   question: yhLang(
                     "গর্ভনির্ণয়ের পর কিশোরী মায়ের জন্য কী নিশ্চিত করা উচিত?",
-                    "গর্ভনির্ণয়ের পর কিশোরী মায়ের জন্য কী নিশ্চিত করা উচিত?"
+                    "গর্ভনির্ণয়ের পর কিশোরী মায়ের জন্য কী নিশ্চিত করা উচিত?",
                   ),
                   options: [
-                    yhLang("কমপক্ষে ৪টি গর্ভকালীন চেকআপ", "কমপক্ষে ৪টি গর্ভকালীন চেকআপ"),
+                    yhLang(
+                      "কমপক্ষে ৪টি গর্ভকালীন চেকআপ",
+                      "কমপক্ষে ৪টি গর্ভকালীন চেকআপ",
+                    ),
                     yhLang("একেবারেই চেকআপ না করা", "একেবারেই চেকআপ না করা"),
                     yhLang("শুধু বাড়িতে বিশ্রাম", "শুধু বাড়িতে বিশ্রাম"),
                     yhLang("শুধু ওষুধ খাওয়া", "শুধু ওষুধ খাওয়া"),
@@ -4828,7 +5179,8 @@ const coursesData = [
                 },
                 {
                   heading: "২. গর্ভকালীন চেকআপ",
-                  bulletIntro: "প্রশিক্ষিত সেবা প্রদানকারীর দ্বারা কমপক্ষে ৪ বার (১–৪ মাসে ১ বার, ৬–৭ মাসে ১ বার, ৮ মাসে ১ বার এবং ৯ মাসে ১ বার) চেকআপ নিশ্চিত করতে হবে।",
+                  bulletIntro:
+                    "প্রশিক্ষিত সেবা প্রদানকারীর দ্বারা কমপক্ষে ৪ বার (১–৪ মাসে ১ বার, ৬–৭ মাসে ১ বার, ৮ মাসে ১ বার এবং ৯ মাসে ১ বার) চেকআপ নিশ্চিত করতে হবে।",
                   bullets: [
                     "প্রশিক্ষিত সেবাদানকারীর দ্বারা কিশোরী মায়ের পুষ্টি, বিশ্রাম, কাজ, পরিচ্ছন্নতা বিষয়ে স্বাস্থ্যশিক্ষা দেওয়া, টিটেনাস-ডিফথেরিয়া (টিডি) টিকা (৫ ডোজ না দেয়া থাকলে) নেওয়া ও প্রসব পরিকল্পনার পরামর্শ দেওয়া।",
                     "এ সময়ে কিশোরীদের কোনো জটিলতা দেখা দিলে তৎক্ষণাৎ উপযুক্ত হাসপাতালে রেফার করতে হবে, যেখানে গর্ভবতীর অপারেশন বা রক্ত সঞ্চালনের ব্যবস্থা আছে।",
@@ -4855,7 +5207,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -4864,17 +5216,20 @@ const coursesData = [
                   .map((step, idx) => {
                     const hasBullets = step.bullets && step.bullets.length;
                     return `
-                      <article class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="${80 +
-                      idx * 40}">
+                      <article class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 40
+                      }">
                         <h4 class="gradient-text mb-3">${step.heading}</h4>
                         ${step.details ? `<p class="mb-3">${step.details}</p>` : ""}
                         ${step.bulletIntro ? `<p class="mb-2">${step.bulletIntro}</p>` : ""}
-                        ${hasBullets
-                          ? `<ul class="list-unstyled puberty-list mb-0">${renderBullets(
-                              step.bullets,
-                              60
-                            )}</ul>`
-                          : ""}
+                        ${
+                          hasBullets
+                            ? `<ul class="list-unstyled puberty-list mb-0">${renderBullets(
+                                step.bullets,
+                                60,
+                              )}</ul>`
+                            : ""
+                        }
                       </article>
                     `;
                   })
@@ -4884,7 +5239,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা",
-                    "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা"
+                    "তারুণ্যীন গর্ভধারণ ব্যবস্থাপনা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4915,7 +5270,7 @@ const coursesData = [
                   id: "q8e",
                   question: yhLang(
                     "প্রসব পরবর্তী চেকআপ কয়বার নিশ্চিত করা উচিত?",
-                    "প্রসব পরবর্তী চেকআপ কয়বার নিশ্চিত করা উচিত?"
+                    "প্রসব পরবর্তী চেকআপ কয়বার নিশ্চিত করা উচিত?",
                   ),
                   options: [
                     yhLang("কমপক্ষে ৪ বার", "কমপক্ষে ৪ বার"),
@@ -4943,7 +5298,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -4951,7 +5306,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "প্রসব পরবর্তী যত্ন",
-                    "প্রসব পরবর্তী যত্ন"
+                    "প্রসব পরবর্তী যত্ন",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -4959,7 +5314,7 @@ const coursesData = [
                       <div class="col-lg-12">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "প্রসব পরবর্তী যত্ন",
-                          "প্রসব পরবর্তী যত্ন"
+                          "প্রসব পরবর্তী যত্ন",
                         )}</h3>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderPoints()}
@@ -4980,17 +5335,16 @@ const coursesData = [
       },
       {
         id: "ch-9",
-        title:
-          yhLang(
-            "Module-9: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)",
-            "মডিউল-৯: যৌনবাহিত রোগ (এসটিআই) ও প্রজননতন্ত্রের সংক্রমণ (আরটিআই)"
-          ),
+        title: yhLang(
+          "Module-9: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)",
+          "মডিউল-৯: যৌনবাহিত রোগ (এসটিআই) ও প্রজননতন্ত্রের সংক্রমণ (আরটিআই)",
+        ),
         lessons: [
           {
             id: "ch9-lesson-1",
             title: yhLang(
               "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
-              "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ"
+              "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
             ),
             icon: "fa-virus",
             gradientClass: "bg-gradient-rose",
@@ -5002,10 +5356,13 @@ const coursesData = [
                   id: "q9a",
                   question: yhLang(
                     "যৌনবাহিত সংক্রমণ কীভাবে ছড়ায়?",
-                    "যৌনবাহিত সংক্রমণ কীভাবে ছড়ায়?"
+                    "যৌনবাহিত সংক্রমণ কীভাবে ছড়ায়?",
                   ),
                   options: [
-                    yhLang("যৌনসম্পর্ক ও সংক্রমিত শরীরবাহিত তরল", "যৌনসম্পর্ক ও সংক্রমিত শরীরবাহিত তরল"),
+                    yhLang(
+                      "যৌনসম্পর্ক ও সংক্রমিত শরীরবাহিত তরল",
+                      "যৌনসম্পর্ক ও সংক্রমিত শরীরবাহিত তরল",
+                    ),
                     yhLang("শুধু বাতাসে", "শুধু বাতাসে"),
                     yhLang("শুধু খাবারে", "শুধু খাবারে"),
                     yhLang("কখনো ছড়ায় না", "কখনো ছড়ায় না"),
@@ -5045,7 +5402,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -5056,7 +5413,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
-                    "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ"
+                    "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5070,7 +5427,7 @@ const coursesData = [
                       <div class="col-lg-6">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ",
-                          "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ"
+                          "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ",
                         )}</h3>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(causes)}
@@ -5079,7 +5436,7 @@ const coursesData = [
                       <div class="col-lg-6">
                         <h3 class="gradient-text mb-3">${yhLang(
                           "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ",
-                          "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ"
+                          "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ",
                         )}</h3>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(symptoms, 60)}
@@ -5097,7 +5454,10 @@ const coursesData = [
           },
           {
             id: "ch9-lesson-2",
-            title: yhLang("যৌনবাহিত রোগের ঝুঁকিসমূহ", "যৌনবাহিত রোগের ঝুঁকিসমূহ"),
+            title: yhLang(
+              "যৌনবাহিত রোগের ঝুঁকিসমূহ",
+              "যৌনবাহিত রোগের ঝুঁকিসমূহ",
+            ),
             icon: "fa-triangle-exclamation",
             gradientClass: "bg-gradient-purple",
             audioFile: "",
@@ -5108,7 +5468,7 @@ const coursesData = [
                   id: "q9b",
                   question: yhLang(
                     "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?",
-                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?"
+                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?",
                   ),
                   options: [
                     yhLang("সচেতনতা ও নিরাপদ আচরণ", "সচেতনতা ও নিরাপদ আচরণ"),
@@ -5125,7 +5485,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "যৌনবাহিত রোগের ঝুঁকিসমূহ",
-                    "যৌনবাহিত রোগের ঝুঁকিসমূহ"
+                    "যৌনবাহিত রোগের ঝুঁকিসমূহ",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5141,7 +5501,7 @@ const coursesData = [
             id: "ch9-lesson-3",
             title: yhLang(
               "Complications of Reproductive or Sexually Transmitted Diseases",
-              "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ"
+              "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
             ),
             icon: "fa-notes-medical",
             gradientClass: "bg-gradient-orange",
@@ -5153,13 +5513,25 @@ const coursesData = [
                   id: "q9c",
                   question: yhLang(
                     "প্রজননতন্ত্রের বা যৌনরোগের কোন জটিলতা ঘটতে পারে?",
-                    "প্রজননতন্ত্রের বা যৌনরোগের কোন জটিলতা ঘটতে পারে?"
+                    "প্রজননতন্ত্রের বা যৌনরোগের কোন জটিলতা ঘটতে পারে?",
                   ),
                   options: [
-                    yhLang("এইচআইভি সংক্রমণের ঝুঁকি", "এইচআইভি সংক্রমণের ঝুঁকি"),
-                    yhLang("মুহূর্তেই সব রোগ সেরে যায়", "মুহূর্তেই সব রোগ সেরে যায়"),
-                    yhLang("যেকোনো ওষুধে সার্বজনীন প্রতিরোধ", "যেকোনো ওষুধে সার্বজনীন প্রতিরোধ"),
-                    yhLang("শরীরে কোনো প্রভাব পড়ে না", "শরীরে কোনো প্রভাব পড়ে না"),
+                    yhLang(
+                      "এইচআইভি সংক্রমণের ঝুঁকি",
+                      "এইচআইভি সংক্রমণের ঝুঁকি",
+                    ),
+                    yhLang(
+                      "মুহূর্তেই সব রোগ সেরে যায়",
+                      "মুহূর্তেই সব রোগ সেরে যায়",
+                    ),
+                    yhLang(
+                      "যেকোনো ওষুধে সার্বজনীন প্রতিরোধ",
+                      "যেকোনো ওষুধে সার্বজনীন প্রতিরোধ",
+                    ),
+                    yhLang(
+                      "শরীরে কোনো প্রভাব পড়ে না",
+                      "শরীরে কোনো প্রভাব পড়ে না",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -5191,7 +5563,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -5199,13 +5571,13 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
-                    "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ"
+                    "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text mb-3">${yhLang(
                       "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
-                      "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ"
+                      "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(complications)}
@@ -5215,7 +5587,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text mb-3">${yhLang(
                       "তরুন-তরুনীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা",
-                      "তরুন-তরুনীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা"
+                      "তরুন-তরুনীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(management, 80)}
@@ -5229,11 +5601,10 @@ const coursesData = [
       },
       {
         id: "ch-10",
-        title:
-          yhLang(
-            "Module-10: HPV vaccination and prevention of cervical cancer in adolescents",
-            "মডিউল-১০: এইচপিভি টিকা ও কৈশোরে জরায়ুমুখ ক্যান্সার প্রতিরোধ"
-          ),
+        title: yhLang(
+          "Module-10: HPV vaccination and prevention of cervical cancer in adolescents",
+          "মডিউল-১০: এইচপিভি টিকা ও কৈশোরে জরায়ুমুখ ক্যান্সার প্রতিরোধ",
+        ),
         lessons: [
           {
             id: "ch10-lesson-1",
@@ -5248,13 +5619,22 @@ const coursesData = [
                   id: "q10a",
                   question: yhLang(
                     "এইচআইভি দেহে কী ক্ষতি করে?",
-                    "এইচআইভি দেহে কী ক্ষতি করে?"
+                    "এইচআইভি দেহে কী ক্ষতি করে?",
                   ),
                   options: [
-                    yhLang("রোগ প্রতিরোধক্ষমতা ধ্বংস করে", "রোগ প্রতিরোধক্ষমতা ধ্বংস করে"),
-                    yhLang("তাৎক্ষণিকভাবে শক্তি বাড়ায়", "তাৎক্ষণিকভাবে শক্তি বাড়ায়"),
+                    yhLang(
+                      "রোগ প্রতিরোধক্ষমতা ধ্বংস করে",
+                      "রোগ প্রতিরোধক্ষমতা ধ্বংস করে",
+                    ),
+                    yhLang(
+                      "তাৎক্ষণিকভাবে শক্তি বাড়ায়",
+                      "তাৎক্ষণিকভাবে শক্তি বাড়ায়",
+                    ),
                     yhLang("সব রোগ প্রতিরোধ করে", "সব রোগ প্রতিরোধ করে"),
-                    yhLang("শরীরে কোনো প্রভাব ফেলে না", "শরীরে কোনো প্রভাব ফেলে না"),
+                    yhLang(
+                      "শরীরে কোনো প্রভাব ফেলে না",
+                      "শরীরে কোনো প্রভাব ফেলে না",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -5263,25 +5643,25 @@ const coursesData = [
             content: (function () {
               const introText = yhLang(
                 "HIV is a virus that gradually destroys the body’s immune system, leaving the person defenseless against infections like diarrhoea, tuberculosis, or cholera. Once immunity collapses completely, even minor illnesses cannot be fought off—this state is called AIDS.",
-                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্তে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধক্ষমতা একেবারেই থাকে না। এ সময় বিভিন্ন রোগ যেমন—ডায়রিয়া, যক্ষা, কলেরা ইত্যাদি মানবদেহকে আক্রমণ করলে মানবদেহ তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম <strong>এইডস</strong>."
+                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্তে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধক্ষমতা একেবারেই থাকে না। এ সময় বিভিন্ন রোগ যেমন—ডায়রিয়া, যক্ষা, কলেরা ইত্যাদি মানবদেহকে আক্রমণ করলে মানবদেহ তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম <strong>এইডস</strong>.",
               );
 
               const latencyNote = yhLang(
                 "HIV can remain dormant in the human body for 2–10 years.",
-                "২–১০ বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে।"
+                "২–১০ বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে।",
               );
 
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "এইচআইভি ও এইডস",
-                    "এইচআইভি ও এইডস"
+                    "এইচআইভি ও এইডস",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="gradient-text mb-3">${yhLang(
                       "এইচআইভি ও এইডস",
-                      "এইচআইভি ও এইডস"
+                      "এইচআইভি ও এইডস",
                     )}</h3>
                     <p class="mb-3">${introText}</p>
                     <p class="mb-0">${latencyNote}</p>
@@ -5298,7 +5678,10 @@ const coursesData = [
           },
           {
             id: "ch10-lesson-2",
-            title: yhLang("HIV Window Period", "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)"),
+            title: yhLang(
+              "HIV Window Period",
+              "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)",
+            ),
             icon: "fa-hourglass-half",
             gradientClass: "bg-gradient-purple",
             audioFile: "",
@@ -5309,16 +5692,22 @@ const coursesData = [
                   id: "q10b",
                   question: yhLang(
                     "What does the HIV window period describe?",
-                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড) বলতে কী বোঝায়?"
+                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড) বলতে কী বোঝায়?",
                   ),
                   options: [
                     yhLang(
                       "Time needed to develop detectable antibodies",
-                      "রক্তে অ্যান্টিবডি তৈরি হতে যে সময় লাগে"
+                      "রক্তে অ্যান্টিবডি তৈরি হতে যে সময় লাগে",
                     ),
-                    yhLang("তাৎক্ষণিক সেরে ওঠার সময়", "তাৎক্ষণিক সেরে ওঠার সময়"),
+                    yhLang(
+                      "তাৎক্ষণিক সেরে ওঠার সময়",
+                      "তাৎক্ষণিক সেরে ওঠার সময়",
+                    ),
                     yhLang("শুধু জ্বর হওয়ার সময়", "শুধু জ্বর হওয়ার সময়"),
-                    yhLang("শরীরে কোনো পরিবর্তন না হওয়া সময়", "শরীরে কোনো পরিবর্তন না হওয়া সময়"),
+                    yhLang(
+                      "শরীরে কোনো পরিবর্তন না হওয়া সময়",
+                      "শরীরে কোনো পরিবর্তন না হওয়া সময়",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -5327,12 +5716,12 @@ const coursesData = [
             content: (function () {
               const windowDefinition = yhLang(
                 "After HIV enters the body it may take up to 12 weeks for antibodies to appear in blood—this span is called the window period.",
-                "এইচআইভিতে আক্রান্ত হওয়ার পর রক্তে ভাইরাসের বিরুদ্ধে প্রতিরোধমূলক ব্যবস্থা (অ্যান্টিবডি) তৈরি হতে যে সময় লাগে তাকে অন্তর্বর্তীকালীন সময় বা উইন্ডো পিরিয়ড বলে। এ জন্য সাধারণত ১২ সপ্তাহ পর্যন্ত লাগতে পারে।"
+                "এইচআইভিতে আক্রান্ত হওয়ার পর রক্তে ভাইরাসের বিরুদ্ধে প্রতিরোধমূলক ব্যবস্থা (অ্যান্টিবডি) তৈরি হতে যে সময় লাগে তাকে অন্তর্বর্তীকালীন সময় বা উইন্ডো পিরিয়ড বলে। এ জন্য সাধারণত ১২ সপ্তাহ পর্যন্ত লাগতে পারে।",
               );
 
               const silentSpread = yhLang(
                 "Most people with HIV look healthy for years before symptoms emerge, often without realizing they can still transmit the virus to others.",
-                "বেশিরভাগ এইচআইভি–আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভিজনিত লক্ষণসমূহ প্রকাশ পাওয়ার আগ পর্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি–আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।"
+                "বেশিরভাগ এইচআইভি–আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভিজনিত লক্ষণসমূহ প্রকাশ পাওয়ার আগ পর্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি–আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।",
               );
 
               const preventionPoints = [
@@ -5347,7 +5736,7 @@ const coursesData = [
 
               const treatmentInfo = yhLang(
                 "Bangladesh prioritizes EMTCT services to stop mother-to-child transmission of HIV, hepatitis B, and syphilis. Preventing, testing, and treating STIs/RTIs remain core to HIV prevention because untreated infections significantly raise HIV risk.",
-                "মা থেকে শিশুর শরীরে এইচআইভি, হেপাটাইটিস বি এবং সিফিলিসের সংক্রমণ নির্মূল করার লক্ষ্যে (Elimination of Mother-to-Child Transmission - EMTCT) বাংলাদেশ এইচআইভি ও যৌনবাহিত রোগসমূহ প্রতিরোধ এবং যৌন ও প্রজনন স্বাস্থ্যসেবায় গুরুত্ব দিয়েছে। এইচআইভি প্রতিরোধ কৌশলের গুরুত্বপূর্ণ উপাদান হলো যৌনবাহিত সংক্রমণ প্রতিরোধ ও চিকিৎসা, কারণ যৌনবাহিত সংক্রমণ এইচআইভি সংক্রমণের ঝুঁকি বৃদ্ধি করে। চিকিৎসা না করালে যৌনবাহিত সংক্রমণের উপস্থিতি এইচআইভি সংক্রমণের ঝুঁকি বাড়াতে পারে।"
+                "মা থেকে শিশুর শরীরে এইচআইভি, হেপাটাইটিস বি এবং সিফিলিসের সংক্রমণ নির্মূল করার লক্ষ্যে (Elimination of Mother-to-Child Transmission - EMTCT) বাংলাদেশ এইচআইভি ও যৌনবাহিত রোগসমূহ প্রতিরোধ এবং যৌন ও প্রজনন স্বাস্থ্যসেবায় গুরুত্ব দিয়েছে। এইচআইভি প্রতিরোধ কৌশলের গুরুত্বপূর্ণ উপাদান হলো যৌনবাহিত সংক্রমণ প্রতিরোধ ও চিকিৎসা, কারণ যৌনবাহিত সংক্রমণ এইচআইভি সংক্রমণের ঝুঁকি বৃদ্ধি করে। চিকিৎসা না করালে যৌনবাহিত সংক্রমণের উপস্থিতি এইচআইভি সংক্রমণের ঝুঁকি বাড়াতে পারে।",
               );
 
               const renderList = (items, baseDelay = 60) =>
@@ -5358,7 +5747,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -5366,7 +5755,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)",
-                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)"
+                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5377,7 +5766,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text mb-3">${yhLang(
                       "তরুন-তরুনীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়",
-                      "তরুন-তরুনীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়"
+                      "তরুন-তরুনীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(preventionPoints)}
@@ -5398,7 +5787,7 @@ const coursesData = [
         id: "ch-11",
         title: yhLang(
           "Module-11: Polycystic ovary syndrome (PCOS) in adolescents",
-          "মডিউল-১১: জরায়ু মুখের ক্যান্সার)"
+          "মডিউল-১১: জরায়ু মুখের ক্যান্সার)",
         ),
         lessons: [
           {
@@ -5414,10 +5803,13 @@ const coursesData = [
                   id: "q11a",
                   question: yhLang(
                     "Which virus most commonly causes cervical cancer?",
-                    "জরায়ুমুখ ক্যান্সারের প্রধান কারণ কোন ভাইরাস?"
+                    "জরায়ুমুখ ক্যান্সারের প্রধান কারণ কোন ভাইরাস?",
                   ),
                   options: [
-                    yhLang("Human Papillomavirus (HPV)", "হিউম্যান প্যাপিলোমা ভাইরাস (এইচপিভি)"),
+                    yhLang(
+                      "Human Papillomavirus (HPV)",
+                      "হিউম্যান প্যাপিলোমা ভাইরাস (এইচপিভি)",
+                    ),
                     yhLang("Common cold virus", "সাধারণ সর্দি ভাইরাস"),
                     yhLang("Malaria parasite", "ম্যালেরিয়ার পরজীবী"),
                     yhLang("None", "কোনোটিই নয়"),
@@ -5430,15 +5822,15 @@ const coursesData = [
               const paragraphs = [
                 yhLang(
                   "Cervical cancer is preventable when detected early and treated promptly, yet it remains one of the leading causes of cancer mortality among women—globally the fourth most common, and the second most common among Bangladeshi women.",
-                  "জরায়ুমুখ ক্যান্সার প্রতিরোধযোগ্য একটি রোগ। দ্রুত রোগ নির্ণয় ও প্রয়োজনীয় চিকিৎসার মাধ্যমে এই রোগ থেকে সম্পূর্ণ সেরে ওঠা সম্ভব। তথাপি এটি সকল ধরণের ক্যান্সার এবং নারীদের ক্যান্সারজনিত মৃত্যুর অন্যতম প্রধান কারণ। সাধারণত নারীরা যেসব ক্যান্সারে আক্রান্ত হয়ে থাকেন, বৈশ্বিকভাবে তাদের মধ্যে জরায়ুমুখ ক্যান্সার চতুর্থ সর্বোচ্চ। বাংলাদেশি নারীদের ক্ষেত্রে এটি দ্বিতীয় সর্বোচ্চ।"
+                  "জরায়ুমুখ ক্যান্সার প্রতিরোধযোগ্য একটি রোগ। দ্রুত রোগ নির্ণয় ও প্রয়োজনীয় চিকিৎসার মাধ্যমে এই রোগ থেকে সম্পূর্ণ সেরে ওঠা সম্ভব। তথাপি এটি সকল ধরণের ক্যান্সার এবং নারীদের ক্যান্সারজনিত মৃত্যুর অন্যতম প্রধান কারণ। সাধারণত নারীরা যেসব ক্যান্সারে আক্রান্ত হয়ে থাকেন, বৈশ্বিকভাবে তাদের মধ্যে জরায়ুমুখ ক্যান্সার চতুর্থ সর্বোচ্চ। বাংলাদেশি নারীদের ক্ষেত্রে এটি দ্বিতীয় সর্বোচ্চ।",
                 ),
                 yhLang(
                   "According to 2020 data, over 600,000 women are diagnosed with cervical cancer annually and about 342,000 die, 90% of them in low- and middle-income countries like Bangladesh.",
-                  "২০২০ সালের তথ্য-উপাত্ত অনুযায়ী প্রতিবছর বিশ্বের ছয় লক্ষাধিক নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হন, যার মধ্যে প্রায় তিন লক্ষ বিয়াল্লিশ হাজার জন মৃত্যুবরণ করে থাকেন। এর প্রায় ৯০% মৃত্যুই বাংলাদেশের মতো উন্নয়নশীল বা স্বল্পোন্নত দেশে ঘটে থাকে।"
+                  "২০২০ সালের তথ্য-উপাত্ত অনুযায়ী প্রতিবছর বিশ্বের ছয় লক্ষাধিক নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হন, যার মধ্যে প্রায় তিন লক্ষ বিয়াল্লিশ হাজার জন মৃত্যুবরণ করে থাকেন। এর প্রায় ৯০% মৃত্যুই বাংলাদেশের মতো উন্নয়নশীল বা স্বল্পোন্নত দেশে ঘটে থাকে।",
                 ),
                 yhLang(
                   "Human Papillomavirus (HPV)—a sexually transmitted virus—is the primary cause. WHO recommends regular screening and HPV vaccination to reduce incidence and deaths. Without strong prevention and control, projections suggest 700,000 cases and 400,000 deaths by 2030, mostly in developing nations.",
-                  "হিউম্যান প্যাপিলোমা ভাইরাস (এইচপিভি), যা একটি যৌনবাহিত ভাইরাস, এটি জরায়ুমুখ ক্যান্সার সৃষ্টি করে থাকে। বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব। ধারণা করা হচ্ছে, জরায়ুমুখ ক্যান্সার প্রতিরোধ ও নিয়ন্ত্রণ কার্যক্রম সফলভাবে বাস্তবায়িত না হলে ২০৩০ সালে বিশ্বব্যাপী প্রায় সাত লক্ষ নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হবেন, যার প্রায় চার লক্ষ মৃত্যুবরণ করবেন এবং এর সিংহভাগই ঘটবে উন্নয়নশীল দেশে।"
+                  "হিউম্যান প্যাপিলোমা ভাইরাস (এইচপিভি), যা একটি যৌনবাহিত ভাইরাস, এটি জরায়ুমুখ ক্যান্সার সৃষ্টি করে থাকে। বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব। ধারণা করা হচ্ছে, জরায়ুমুখ ক্যান্সার প্রতিরোধ ও নিয়ন্ত্রণ কার্যক্রম সফলভাবে বাস্তবায়িত না হলে ২০৩০ সালে বিশ্বব্যাপী প্রায় সাত লক্ষ নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হবেন, যার প্রায় চার লক্ষ মৃত্যুবরণ করবেন এবং এর সিংহভাগই ঘটবে উন্নয়নশীল দেশে।",
                 ),
               ];
 
@@ -5447,7 +5839,7 @@ const coursesData = [
                   .map(
                     (text, idx) => `
                       <p class="mb-3" data-aos="fade-right" data-aos-delay="${60 + idx * 20}">${text}</p>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -5455,7 +5847,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "জরায়ুমুখ ক্যান্সার",
-                    "জরায়ুমুখ ক্যান্সার"
+                    "জরায়ুমুখ ক্যান্সার",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5487,7 +5879,7 @@ const coursesData = [
                   id: "q11b",
                   question: yhLang(
                     "How many HPV vaccine doses are recommended here?",
-                    "এইচপিভি টিকার ডোজ সংখ্যা কত উল্লেখ করা হয়েছে?"
+                    "এইচপিভি টিকার ডোজ সংখ্যা কত উল্লেখ করা হয়েছে?",
                   ),
                   options: [
                     yhLang("One dose", "এক ডোজ"),
@@ -5502,7 +5894,7 @@ const coursesData = [
             content: (function () {
               const intro = yhLang(
                 "Regular screening plus a single HPV vaccine dose can prevent cervical cancer and reduce related deaths.",
-                "বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এক ডোজ এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব।"
+                "বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এক ডোজ এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব।",
               );
 
               const advantages = [
@@ -5520,9 +5912,7 @@ const coursesData = [
                 "পঞ্চম শ্রেণিতে অধ্যয়নরত সকল ছাত্রী অথবা ১০ বছর বয়সী সকল কিশোরী।",
               ];
 
-              const doses = [
-                "এক ডোজ",
-              ];
+              const doses = ["এক ডোজ"];
 
               const renderList = (items, baseDelay = 60) =>
                 items
@@ -5532,7 +5922,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -5540,7 +5930,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "এইচপিভি টিকা",
-                    "এইচপিভি টিকা"
+                    "এইচপিভি টিকা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5598,7 +5988,10 @@ const coursesData = [
           },
           {
             id: "ch11-lesson-3",
-            title: yhLang("Other Vaccines for Women", "মহিলাদের অন্যান্য  টিকা"),
+            title: yhLang(
+              "Other Vaccines for Women",
+              "মহিলাদের অন্যান্য  টিকা",
+            ),
             icon: "fa-notes-medical",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
@@ -5609,11 +6002,17 @@ const coursesData = [
                   id: "q11c",
                   question: yhLang(
                     "Why should women stay informed about additional vaccines?",
-                    "মহিলাদের কেন অতিরিক্ত টিকা সম্পর্কে সচেতন থাকা জরুরি?"
+                    "মহিলাদের কেন অতিরিক্ত টিকা সম্পর্কে সচেতন থাকা জরুরি?",
                   ),
                   options: [
-                    yhLang("To protect against preventable diseases", "প্রতিরোধযোগ্য রোগ থেকে সুরক্ষা পেতে"),
-                    yhLang("Because vaccines cause illness", "কারণ টিকা অসুস্থ করে"),
+                    yhLang(
+                      "To protect against preventable diseases",
+                      "প্রতিরোধযোগ্য রোগ থেকে সুরক্ষা পেতে",
+                    ),
+                    yhLang(
+                      "Because vaccines cause illness",
+                      "কারণ টিকা অসুস্থ করে",
+                    ),
                     yhLang("Vaccines are unnecessary", "টিকা অপ্রয়োজনীয়"),
                     yhLang("No reason", "কোনো কারণ নেই"),
                   ],
@@ -5626,7 +6025,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "মহিলাদের অন্যান্য  টিকা",
-                    "মহিলাদের অন্যান্য  টিকা"
+                    "মহিলাদের অন্যান্য  টিকা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5642,17 +6041,16 @@ const coursesData = [
       },
       {
         id: "ch-12",
-        title:
-          yhLang(
-            "Module-12: Adolescent nutrition: Nutritional deficiency and prevention",
-            "মডিউল-১২: পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
-          ),
+        title: yhLang(
+          "Module-12: Adolescent nutrition: Nutritional deficiency and prevention",
+          "মডিউল-১২: পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)",
+        ),
         lessons: [
           {
             id: "ch12-lesson-1",
             title: yhLang(
               "Polycystic Ovary Syndrome (PCOS)",
-              "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
+              "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)",
             ),
             icon: "fa-circle-nodes",
             gradientClass: "bg-gradient-rose",
@@ -5664,7 +6062,7 @@ const coursesData = [
                   id: "q12a",
                   question: yhLang(
                     "PCOS becomes more common when which hormone rises above normal?",
-                    "শরীরে কোন হরমোন স্বাভাবিকের তুলনায় বেড়ে গেলে পিসিওএস দেখা দিতে পারে?"
+                    "শরীরে কোন হরমোন স্বাভাবিকের তুলনায় বেড়ে গেলে পিসিওএস দেখা দিতে পারে?",
                   ),
                   options: [
                     yhLang("Androgen", "অ্যান্ড্রোজেন"),
@@ -5680,15 +6078,15 @@ const coursesData = [
               const paragraphs = [
                 yhLang(
                   "PCOS is a major global health issue for women. Multiple cysts form in the ovaries, affecting as many as 1 in 10 women of any age, with the highest incidence between 15 and 45 years.",
-                  "সারা বিশ্বেই নারীদের একটি বড় স্বাস্থ্য সমস্যা পলিসিস্টিক ওভারিয়ান সিনড্রোম বা পিসিওএস। এই রোগে ডিম্বাশয়ে অনেকগুলো সিস্ট হয় বলেই এর এমন নামকরণ। গবেষণা বলছে, প্রতি ১০ জন নারীর মধ্যে ১ জনের এ সমস্যা আছে। যেকোনো বয়সী নারীই এতে আক্রান্ত হতে পারেন। তবে প্রজননক্ষম বা ১৫ থেকে ৪৫ বছর বয়সী নারীরা বেশি আক্রান্ত হন।"
+                  "সারা বিশ্বেই নারীদের একটি বড় স্বাস্থ্য সমস্যা পলিসিস্টিক ওভারিয়ান সিনড্রোম বা পিসিওএস। এই রোগে ডিম্বাশয়ে অনেকগুলো সিস্ট হয় বলেই এর এমন নামকরণ। গবেষণা বলছে, প্রতি ১০ জন নারীর মধ্যে ১ জনের এ সমস্যা আছে। যেকোনো বয়সী নারীই এতে আক্রান্ত হতে পারেন। তবে প্রজননক্ষম বা ১৫ থেকে ৪৫ বছর বয়সী নারীরা বেশি আক্রান্ত হন।",
                 ),
                 yhLang(
                   "PCOS is both hereditary and hormonal. When androgen levels rise, ovulation is disrupted, follicles do not rupture, and periods become irregular or even absent.",
-                  "এটি বংশগত এবং হরমোনাল সমস্যা। নারীর শরীরে পুরুষ হরমোন (অ্যান্ড্রোজেন) স্বাভাবিকের তুলনায় বেড়ে গেলে এ সমস্যা দেখা দেয়। এই হরমোন বৃদ্ধির কারণে নারীর ওভুলেশন বা প্রতি মাসে ডিম্বাণু পরিপক্ব হওয়ার পরও ফলিকল ফেটে যায় না এবং ডিম্বাণু বের হতে পারে না। একসময় মেয়েদের ওভুলেশন বন্ধ হয়ে যায় এবং অনিয়মিত মাসিক হয় বা মাসিক একেবারেই হয় না।"
+                  "এটি বংশগত এবং হরমোনাল সমস্যা। নারীর শরীরে পুরুষ হরমোন (অ্যান্ড্রোজেন) স্বাভাবিকের তুলনায় বেড়ে গেলে এ সমস্যা দেখা দেয়। এই হরমোন বৃদ্ধির কারণে নারীর ওভুলেশন বা প্রতি মাসে ডিম্বাণু পরিপক্ব হওয়ার পরও ফলিকল ফেটে যায় না এবং ডিম্বাণু বের হতে পারে না। একসময় মেয়েদের ওভুলেশন বন্ধ হয়ে যায় এবং অনিয়মিত মাসিক হয় বা মাসিক একেবারেই হয় না।",
                 ),
                 yhLang(
                   "Although 60–70% of people with PCOS can still conceive, fertility declines after age 35.",
-                  "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয় না, তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়।"
+                  "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয় না, তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়।",
                 ),
               ];
 
@@ -5697,7 +6095,7 @@ const coursesData = [
                   .map(
                     (text, idx) => `
                       <p class="mb-3" data-aos="fade-right" data-aos-delay="${60 + idx * 20}">${text}</p>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -5705,7 +6103,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)",
-                    "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
+                    "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5728,13 +6126,19 @@ const coursesData = [
                   id: "q12b",
                   question: yhLang(
                     "Which of the following is a possible complication of PCOS?",
-                    "পিসিওএস-এর সম্ভাব্য জটিলতা কোনটি?"
+                    "পিসিওএস-এর সম্ভাব্য জটিলতা কোনটি?",
                   ),
                   options: [
-                    yhLang("টাইপ-২ ডায়াবেটিসের ঝুঁকি", "টাইপ-২ ডায়াবেটিসের ঝুঁকি"),
+                    yhLang(
+                      "টাইপ-২ ডায়াবেটিসের ঝুঁকি",
+                      "টাইপ-২ ডায়াবেটিসের ঝুঁকি",
+                    ),
                     yhLang("তাৎক্ষণিক রোগমুক্তি", "তাৎক্ষণিক রোগমুক্তি"),
                     yhLang("চোখে বেশি পানি আসা", "চোখে বেশি পানি আসা"),
-                    yhLang("কোনো শারীরিক পরিবর্তন নয়", "কোনো শারীরিক পরিবর্তন নয়"),
+                    yhLang(
+                      "কোনো শারীরিক পরিবর্তন নয়",
+                      "কোনো শারীরিক পরিবর্তন নয়",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -5766,7 +6170,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -5774,7 +6178,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "সমস্যা সমূহঃ",
-                    "সমস্যা সমূহঃ"
+                    "সমস্যা সমূহঃ",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5782,7 +6186,7 @@ const coursesData = [
                       <div class="col-lg-12">
                         <h3 class="gradient-text h5 mb-3" data-aos="fade-right" data-aos-delay="60">${yhLang(
                           "পিসিওএস-এ দেখা দিতে পারে এমন জটিলতা",
-                          "পিসিওএস-এ দেখা দিতে পারে এমন জটিলতা"
+                          "পিসিওএস-এ দেখা দিতে পারে এমন জটিলতা",
                         )}</h3>
                         <ul class="list-unstyled puberty-list mb-3">
                           ${renderList(complications)}
@@ -5822,11 +6226,17 @@ const coursesData = [
                   id: "q12c",
                   question: yhLang(
                     "What helps keep PCOS under control?",
-                    "পিসিওএস নিয়ন্ত্রণে রাখতে কী সহায়ক?"
+                    "পিসিওএস নিয়ন্ত্রণে রাখতে কী সহায়ক?",
                   ),
                   options: [
-                    yhLang("Lifestyle changes and treatment", "জীবনযাত্রায় পরিবর্তন ও চিকিৎসা"),
-                    yhLang("কোনো পদক্ষেপের প্রয়োজন নেই", "কোনো পদক্ষেপের প্রয়োজন নেই"),
+                    yhLang(
+                      "Lifestyle changes and treatment",
+                      "জীবনযাত্রায় পরিবর্তন ও চিকিৎসা",
+                    ),
+                    yhLang(
+                      "কোনো পদক্ষেপের প্রয়োজন নেই",
+                      "কোনো পদক্ষেপের প্রয়োজন নেই",
+                    ),
                     yhLang("শুধু মিষ্টি খাবার", "শুধু মিষ্টি খাবার"),
                     yhLang("সম্পূর্ণ বিশ্রাম", "সম্পূর্ণ বিশ্রাম"),
                   ],
@@ -5837,7 +6247,7 @@ const coursesData = [
             content: (function () {
               const intro = yhLang(
                 "PCOS cannot be fully cured, but healthy habits and proper care can keep symptoms manageable.",
-                "পিসিওএস হলে মনে রাখতে হবে যে, এটি কখনও নির্মূল হবে না। কিন্তু, চিকিৎসা নিয়ে সুস্থ থাকা সম্ভব।"
+                "পিসিওএস হলে মনে রাখতে হবে যে, এটি কখনও নির্মূল হবে না। কিন্তু, চিকিৎসা নিয়ে সুস্থ থাকা সম্ভব।",
               );
 
               const lifestyleTips = [
@@ -5861,7 +6271,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -5869,14 +6279,14 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "সমাধানের উপায়",
-                    "সমাধানের উপায়"
+                    "সমাধানের উপায়",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <p class="mb-4">${intro}</p>
                     <h3 class="gradient-text h5 mb-3">${yhLang(
                       "জীবনযাপনের কলাকৌশল",
-                      "জীবনযাপনের কলাকৌশল"
+                      "জীবনযাপনের কলাকৌশল",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(lifestyleTips)}
@@ -5899,12 +6309,18 @@ const coursesData = [
                   id: "q12d",
                   question: yhLang(
                     "Which approach supports PCOS management?",
-                    "পিসিওএস ব্যবস্থাপনায় কোনটি সহায়ক?"
+                    "পিসিওএস ব্যবস্থাপনায় কোনটি সহায়ক?",
                   ),
                   options: [
-                    yhLang("Balanced lifestyle and guidance", "সুষম জীবনযাপন ও পরামর্শ"),
+                    yhLang(
+                      "Balanced lifestyle and guidance",
+                      "সুষম জীবনযাপন ও পরামর্শ",
+                    ),
                     yhLang("Only sugary drinks", "শুধু চিনিযুক্ত পানীয়"),
-                    yhLang("Ignoring health entirely", "স্বাস্থ্য সম্পূর্ণ উপেক্ষা করা"),
+                    yhLang(
+                      "Ignoring health entirely",
+                      "স্বাস্থ্য সম্পূর্ণ উপেক্ষা করা",
+                    ),
                     yhLang("Sleeping all day", "সারাদিন শুধু ঘুমানো"),
                   ],
                   correctAnswer: 0,
@@ -5916,7 +6332,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "ম্যানেজিং পিসিসিস",
-                    "ম্যানেজিং পিসিসিস"
+                    "ম্যানেজিং পিসিসিস",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -5950,13 +6366,19 @@ const coursesData = [
                   id: "q12e",
                   question: yhLang(
                     "Why is tracking BMI important for PCOS?",
-                    "পিসিওএস ব্যবস্থাপনায় বিএমআই পরিমাপ কেন জরুরি?"
+                    "পিসিওএস ব্যবস্থাপনায় বিএমআই পরিমাপ কেন জরুরি?",
                   ),
                   options: [
-                    yhLang("It helps set target weight and manage symptoms", "এটি কাঙ্ক্ষিত ওজন ঠিক করে উপসর্গ নিয়ন্ত্রণে সাহায্য করে"),
+                    yhLang(
+                      "It helps set target weight and manage symptoms",
+                      "এটি কাঙ্ক্ষিত ওজন ঠিক করে উপসর্গ নিয়ন্ত্রণে সাহায্য করে",
+                    ),
                     yhLang("It has no connection", "এর কোনো সম্পর্ক নেই"),
                     yhLang("It increases complications", "এটি জটিলতা বাড়ায়"),
-                    yhLang("It replaces healthy food", "এটি স্বাস্থ্যকর খাবারের বিকল্প"),
+                    yhLang(
+                      "It replaces healthy food",
+                      "এটি স্বাস্থ্যকর খাবারের বিকল্প",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -5965,7 +6387,7 @@ const coursesData = [
             content: (function () {
               const message = yhLang(
                 "Monitor your BMI, set a healthy weight goal, and keep PCOS under control through portioned meals and regular exercise.",
-                "নিজের BMI পরিমাপ করে, কাঙ্ক্ষিত ওজন সেট করতে হবে, ওজন নিয়ন্ত্রণে রাখতে পরিমিত খাবার গ্রহণ ও নিয়মিত ব্যায়ামের মাধ্যমে পিসিওএস নিয়ন্ত্রণে রাখতে হবে।"
+                "নিজের BMI পরিমাপ করে, কাঙ্ক্ষিত ওজন সেট করতে হবে, ওজন নিয়ন্ত্রণে রাখতে পরিমিত খাবার গ্রহণ ও নিয়মিত ব্যায়ামের মাধ্যমে পিসিওএস নিয়ন্ত্রণে রাখতে হবে।",
               );
 
               const images = [
@@ -5983,7 +6405,7 @@ const coursesData = [
                           <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
                         </figure>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -5991,7 +6413,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "বি এম আই",
-                    "বি এম আই"
+                    "বি এম আই",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -6017,10 +6439,13 @@ const coursesData = [
                   id: "q12f",
                   question: yhLang(
                     "When should someone with PCOS seek medical care for irregular periods?",
-                    "পিসিওএস থাকলে মাসিক বছরে কয়বারের কম হলে চিকিৎসা নিতে হবে?"
+                    "পিসিওএস থাকলে মাসিক বছরে কয়বারের কম হলে চিকিৎসা নিতে হবে?",
                   ),
                   options: [
-                    yhLang("Less than four times a year", "বছরে চার বারের কম হলে"),
+                    yhLang(
+                      "Less than four times a year",
+                      "বছরে চার বারের কম হলে",
+                    ),
                     yhLang("প্রতিদিন", "প্রতিদিন"),
                     yhLang("শুধু শীতে", "শুধু শীতে"),
                     yhLang("কখনো নয়", "কখনো নয়"),
@@ -6043,7 +6468,7 @@ const coursesData = [
                       <article class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="${40 + idx * 20}">
                         <p class="mb-0"><strong>${text}</strong></p>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6051,7 +6476,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "পিসিওএস",
-                    "পিসিওএস"
+                    "পিসিওএস",
                   )}</h2>
 
                   ${renderReminders()}
@@ -6063,7 +6488,7 @@ const coursesData = [
             id: "ch12-lesson-7",
             title: yhLang(
               "Child and Human Rights Charter",
-              "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার"
+              "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার",
             ),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-purple",
@@ -6075,7 +6500,7 @@ const coursesData = [
                   id: "q12g",
                   question: yhLang(
                     "Which CRC article prioritizes the best interests of the child?",
-                    "সিআরসি অনুযায়ী কোন ধারায় শিশুর সর্বোচ্চ স্বার্থকে অগ্রাধিকার দেওয়া হয়েছে?"
+                    "সিআরসি অনুযায়ী কোন ধারায় শিশুর সর্বোচ্চ স্বার্থকে অগ্রাধিকার দেওয়া হয়েছে?",
                   ),
                   options: [
                     yhLang("Article 3", "ধারা ৩"),
@@ -6121,7 +6546,7 @@ const coursesData = [
                         <h3 class="h6 gradient-text mb-2">${item.title}</h3>
                         <p class="mb-0">${item.text}</p>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6129,7 +6554,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার",
-                    "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার"
+                    "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -6142,7 +6567,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
                       "আন্তর্জাতিক শিশু অধিকার সনদের প্রধান ধারা",
-                      "আন্তর্জাতিক শিশু অধিকার সনদের প্রধান ধারা"
+                      "আন্তর্জাতিক শিশু অধিকার সনদের প্রধান ধারা",
                     )}</h3>
                     <div class="row g-3">
                       ${renderArticles()}
@@ -6156,7 +6581,7 @@ const coursesData = [
             id: "ch12-lesson-8",
             title: yhLang(
               "Sexual and Reproductive Health Rights",
-              "যৌন ও প্রজনন স্বাস্থ্য অধিকার"
+              "যৌন ও প্রজনন স্বাস্থ্য অধিকার",
             ),
             icon: "fa-venus-mars",
             gradientClass: "bg-gradient-rose",
@@ -6168,16 +6593,22 @@ const coursesData = [
                   id: "q12h",
                   question: yhLang(
                     "Why are sexual and reproductive health rights critical for adolescents?",
-                    "তরুন-তরুনীদের জন্য যৌন ও প্রজনন স্বাস্থ্য অধিকার কেন গুরুত্বপূর্ণ?"
+                    "তরুন-তরুনীদের জন্য যৌন ও প্রজনন স্বাস্থ্য অধিকার কেন গুরুত্বপূর্ণ?",
                   ),
                   options: [
                     yhLang(
                       "They protect against disease, unwanted pregnancy, and uphold autonomy",
-                      "এগুলো রোগ, অনাকাঙ্ক্ষিত গর্ভধারণ থেকে সুরক্ষা দেয় এবং স্বায়ত্তশাসন নিশ্চিত করে"
+                      "এগুলো রোগ, অনাকাঙ্ক্ষিত গর্ভধারণ থেকে সুরক্ষা দেয় এবং স্বায়ত্তশাসন নিশ্চিত করে",
                     ),
                     yhLang("Only for entertainment", "শুধু বিনোদনের জন্য"),
-                    yhLang("No relation to health", "স্বাস্থ্যের সাথে কোনো সম্পর্ক নেই"),
-                    yhLang("Applies only to adults", "শুধু প্রাপ্তবয়স্কদের প্রযোজ্য"),
+                    yhLang(
+                      "No relation to health",
+                      "স্বাস্থ্যের সাথে কোনো সম্পর্ক নেই",
+                    ),
+                    yhLang(
+                      "Applies only to adults",
+                      "শুধু প্রাপ্তবয়স্কদের প্রযোজ্য",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -6207,7 +6638,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6215,7 +6646,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "যৌন ও প্রজনন স্বাস্থ্য অধিকার",
-                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার"
+                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -6226,7 +6657,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
                       "এ অধিকার কেন গুরুত্বপূর্ণ",
-                      "এ অধিকার কেন গুরুত্বপূর্ণ"
+                      "এ অধিকার কেন গুরুত্বপূর্ণ",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(importance)}
@@ -6240,15 +6671,17 @@ const coursesData = [
       },
       {
         id: "ch-13",
-        title:
-          yhLang(
-            "Module-13: Non-communicable diseases (NCDs) in adolescents and their prevention",
-            "মডিউল-১৩: লিঙ্গ ভিত্তিক বৈষম্য"
-          ),
+        title: yhLang(
+          "Module-13: Non-communicable diseases (NCDs) in adolescents and their prevention",
+          "মডিউল-১৩: লিঙ্গ ভিত্তিক বৈষম্য",
+        ),
         lessons: [
           {
             id: "ch13-lesson-1",
-            title: yhLang("Gender-Based Discrimination", "লিঙ্গ ভিত্তিক বৈষম্য"),
+            title: yhLang(
+              "Gender-Based Discrimination",
+              "লিঙ্গ ভিত্তিক বৈষম্য",
+            ),
             icon: "fa-venus-mars",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
@@ -6259,11 +6692,17 @@ const coursesData = [
                   id: "q13a",
                   question: yhLang(
                     "Which statement best describes gender?",
-                    "জেন্ডারকে কীভাবে সংজ্ঞায়িত করা যায়?"
+                    "জেন্ডারকে কীভাবে সংজ্ঞায়িত করা যায়?",
                   ),
                   options: [
-                    yhLang("A socially constructed identity that can change", "সমাজসৃষ্ট ও পরিবর্তনশীল পরিচয়"),
-                    yhLang("A fixed biological trait", "একটি স্থির জৈবিক বৈশিষ্ট্য"),
+                    yhLang(
+                      "A socially constructed identity that can change",
+                      "সমাজসৃষ্ট ও পরিবর্তনশীল পরিচয়",
+                    ),
+                    yhLang(
+                      "A fixed biological trait",
+                      "একটি স্থির জৈবিক বৈশিষ্ট্য",
+                    ),
                     yhLang("Only physical features", "শুধু শারীরিক বৈশিষ্ট্য"),
                     yhLang("Unrelated to society", "সমাজের সাথে সম্পর্কহীন"),
                   ],
@@ -6306,7 +6745,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6314,7 +6753,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "লিঙ্গ ভিত্তিক বৈষম্য",
-                    "লিঙ্গ ভিত্তিক বৈষম্য"
+                    "লিঙ্গ ভিত্তিক বৈষম্য",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -6327,7 +6766,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
                       "জেন্ডার ও সেক্সের মধ্যে পার্থক্য",
-                      "জেন্ডার ও সেক্সের মধ্যে পার্থক্য"
+                      "জেন্ডার ও সেক্সের মধ্যে পার্থক্য",
                     )}</h3>
                     <div class="table-responsive">
                       <table class="table table-modern align-middle" aria-label="
@@ -6346,7 +6785,7 @@ const coursesData = [
                                   <td>${genderPoint}</td>
                                   <td>${sexPoints[idx] || ""}</td>
                                 </tr>
-                              `
+                              `,
                             )
                             .join("")}
                         </tbody>
@@ -6370,13 +6809,19 @@ const coursesData = [
                   id: "q13b",
                   question: yhLang(
                     "What helps achieve gender equality?",
-                    "জেন্ডার সমতা অর্জনে কী সহায়ক?"
+                    "জেন্ডার সমতা অর্জনে কী সহায়ক?",
                   ),
                   options: [
-                    yhLang("Ensuring equity and equal opportunities", "সাম্য নিশ্চিত করে সমান সুযোগ তৈরি করা"),
+                    yhLang(
+                      "Ensuring equity and equal opportunities",
+                      "সাম্য নিশ্চিত করে সমান সুযোগ তৈরি করা",
+                    ),
                     yhLang("Ignoring discrimination", "বৈষম্য উপেক্ষা করা"),
                     yhLang("Limiting participation", "অংশগ্রহণ সীমিত করা"),
-                    yhLang("Only focusing on men", "শুধু পুরুষদের গুরুত্ব দেওয়া"),
+                    yhLang(
+                      "Only focusing on men",
+                      "শুধু পুরুষদের গুরুত্ব দেওয়া",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -6389,23 +6834,19 @@ const coursesData = [
               const sections = [
                 {
                   title: "সমতা",
-                  body:
-                    "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়। সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।",
+                  body: "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়। সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।",
                 },
                 {
                   title: "ন্যায্যতা",
-                  body:
-                    "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।",
+                  body: "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।",
                 },
                 {
                   title: "জেন্ডার সমতা",
-                  body:
-                    "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।",
+                  body: "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।",
                 },
                 {
                   title: "সাম্য ও সমতার পার্থক্য",
-                  body:
-                    "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-ঝুঁকি দিয়ে সাম্য (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।",
+                  body: "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-ঝুঁকি দিয়ে সাম্য (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।",
                 },
               ];
 
@@ -6418,7 +6859,7 @@ const coursesData = [
                         <p class="mb-0">${section.body}</p>
                         ${idx < sections.length - 1 ? '<hr class="my-3" />' : ""}
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6426,7 +6867,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "জেন্ডার বৈষম্য",
-                    "জেন্ডার বৈষম্য"
+                    "জেন্ডার বৈষম্য",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -6450,7 +6891,7 @@ const coursesData = [
             id: "ch13-lesson-3",
             title: yhLang(
               "Gender Bias Across Society",
-              "সমাজে বিরাজমান জেন্ডার বৈষম্য"
+              "সমাজে বিরাজমান জেন্ডার বৈষম্য",
             ),
             icon: "fa-scale-unbalanced",
             gradientClass: "bg-gradient-orange",
@@ -6462,13 +6903,25 @@ const coursesData = [
                   id: "q13c",
                   question: yhLang(
                     "Which area shows gender bias in the examples?",
-                    "উদাহরণগুলোর কোনটি জেন্ডার বৈষম্যের দৃষ্টান্ত?"
+                    "উদাহরণগুলোর কোনটি জেন্ডার বৈষম্যের দৃষ্টান্ত?",
                   ),
                   options: [
-                    yhLang("Girls receiving less nutritious food", "মেয়েদের কম পুষ্টিকর খাবার দেওয়া"),
-                    yhLang("সব শিশু সমান সহায়তা পায়", "সব শিশু সমান সহায়তা পায়"),
-                    yhLang("নারী-পুরুষ একই মজুরি পায়", "নারী-পুরুষ একই মজুরি পায়"),
-                    yhLang("মেয়েদের সিদ্ধান্তের প্রতি সম্মান", "মেয়েদের সিদ্ধান্তের প্রতি সম্মান"),
+                    yhLang(
+                      "Girls receiving less nutritious food",
+                      "মেয়েদের কম পুষ্টিকর খাবার দেওয়া",
+                    ),
+                    yhLang(
+                      "সব শিশু সমান সহায়তা পায়",
+                      "সব শিশু সমান সহায়তা পায়",
+                    ),
+                    yhLang(
+                      "নারী-পুরুষ একই মজুরি পায়",
+                      "নারী-পুরুষ একই মজুরি পায়",
+                    ),
+                    yhLang(
+                      "মেয়েদের সিদ্ধান্তের প্রতি সম্মান",
+                      "মেয়েদের সিদ্ধান্তের প্রতি সম্মান",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -6520,7 +6973,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6546,7 +6999,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "সমাজে বিরাজমান জেন্ডার বৈষম্য",
-                    "সমাজে বিরাজমান জেন্ডার বৈষম্য"
+                    "সমাজে বিরাজমান জেন্ডার বৈষম্য",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -6562,7 +7015,7 @@ const coursesData = [
                             <div class="orbit-card bg-gradient-rose">
                               <div class="orbit-title fw-bold">${yhLang(
                                 "প্রজনন স্বাস্থ্যে জেন্ডার বৈষম্যের প্রভাব",
-                                "প্রজনন স্বাস্থ্যে জেন্ডার বৈষম্যের প্রভাব"
+                                "প্রজনন স্বাস্থ্যে জেন্ডার বৈষম্যের প্রভাব",
                               )}</div>
                             </div>
                           </div>
@@ -6579,7 +7032,7 @@ const coursesData = [
             id: "ch13-lesson-4",
             title: yhLang(
               "Forms of Gender-Based Violence",
-              "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ"
+              "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ",
             ),
             icon: "fa-hand-fist",
             gradientClass: "bg-gradient-teal",
@@ -6591,13 +7044,19 @@ const coursesData = [
                   id: "q13d",
                   question: yhLang(
                     "Which act falls under physical abuse?",
-                    "নিম্নের কোনটি শারীরিক নির্যাতনের উদাহরণ?"
+                    "নিম্নের কোনটি শারীরিক নির্যাতনের উদাহরণ?",
                   ),
                   options: [
                     yhLang("হত্যা বা মারধর", "হত্যা বা মারধর"),
-                    yhLang("সমর্থনমূলক আলোচনায় অংশগ্রহণ", "সমর্থনমূলক আলোচনায় অংশগ্রহণ"),
+                    yhLang(
+                      "সমর্থনমূলক আলোচনায় অংশগ্রহণ",
+                      "সমর্থনমূলক আলোচনায় অংশগ্রহণ",
+                    ),
                     yhLang("সবার মতামত শোনা", "সবার মতামত শোনা"),
-                    yhLang("পারিবারিক সহায়তা প্রদান", "পারিবারিক সহায়তা প্রদান"),
+                    yhLang(
+                      "পারিবারিক সহায়তা প্রদান",
+                      "পারিবারিক সহায়তা প্রদান",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -6610,16 +7069,16 @@ const coursesData = [
               const lawHighlights = [
                 {
                   title: "আইন ২০১০",
-                  desc: "পারিবারিক সহিংসতা প্রতিরোধ ও সুরক্ষা আইন"
+                  desc: "পারিবারিক সহিংসতা প্রতিরোধ ও সুরক্ষা আইন",
                 },
                 {
                   title: "৪টি ধরণ",
-                  desc: "শারীরিক, মানসিক, আর্থিক ও যৌন"
+                  desc: "শারীরিক, মানসিক, আর্থিক ও যৌন",
                 },
                 {
                   title: "সুরক্ষার পরিধি",
-                  desc: "পরিবারের সকল সদস্য ও সুরক্ষিত ব্যক্তিরা"
-                }
+                  desc: "পরিবারের সকল সদস্য ও সুরক্ষিত ব্যক্তিরা",
+                },
               ];
 
               const physicalDescription =
@@ -6650,7 +7109,7 @@ const coursesData = [
                           <p class="mb-0 fw-semibold">${item.desc}</p>
                         </div>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6662,7 +7121,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6670,7 +7129,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ",
-                    "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ"
+                    "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -6693,11 +7152,11 @@ const coursesData = [
                             <div>
                               <p class="text-uppercase text-muted small mb-1">${yhLang(
                                 "ধরণ",
-                                "ধরণ"
+                                "ধরণ",
                               )}</p>
                               <h3 class="h5 gradient-text mb-0">${yhLang(
                                 "১. শারীরিক নির্যাতন",
-                                "১. শারীরিক নির্যাতন"
+                                "১. শারীরিক নির্যাতন",
                               )}</h3>
                             </div>
                           </div>
@@ -6708,7 +7167,7 @@ const coursesData = [
                         <div class="glass-card h-100 p-4 shadow-sm">
                           <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
                             "প্রধান উদাহরণ",
-                            "প্রধান উদাহরণ"
+                            "প্রধান উদাহরণ",
                           )}</h4>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderExamples()}
@@ -6723,10 +7182,7 @@ const coursesData = [
           },
           {
             id: "ch13-lesson-5",
-            title: yhLang(
-              "Psychological Violence",
-              "মানসিক নির্যাতন"
-            ),
+            title: yhLang("Psychological Violence", "মানসিক নির্যাতন"),
             icon: "fa-brain",
             gradientClass: "bg-gradient-purple",
             audioFile: "",
@@ -6737,12 +7193,18 @@ const coursesData = [
                   id: "q13e",
                   question: yhLang(
                     "Which action is a form of mental abuse?",
-                    "নিম্নের কোনটি মানসিক নির্যাতনের অন্তর্ভুক্ত?"
+                    "নিম্নের কোনটি মানসিক নির্যাতনের অন্তর্ভুক্ত?",
                   ),
                   options: [
                     yhLang("কোথাও যেতে বাধা দেয়া", "কোথাও যেতে বাধা দেয়া"),
-                    yhLang("সমর্থন দিয়ে উৎসাহিত করা", "সমর্থন দিয়ে উৎসাহিত করা"),
-                    yhLang("স্বাধীন মত প্রকাশে সহায়তা", "স্বাধীন মত প্রকাশে সহায়তা"),
+                    yhLang(
+                      "সমর্থন দিয়ে উৎসাহিত করা",
+                      "সমর্থন দিয়ে উৎসাহিত করা",
+                    ),
+                    yhLang(
+                      "স্বাধীন মত প্রকাশে সহায়তা",
+                      "স্বাধীন মত প্রকাশে সহায়তা",
+                    ),
                     yhLang("সমান সুযোগ দেওয়া", "সমান সুযোগ দেওয়া"),
                   ],
                   correctAnswer: 0,
@@ -6750,8 +7212,7 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const intro =
-                "নিম্নবর্ণিত বিষয়সমূহ অন্তর্ভুক্ত হবে —";
+              const intro = "নিম্নবর্ণিত বিষয়সমূহ অন্তর্ভুক্ত হবে —";
 
               const mentalDefinitions = [
                 {
@@ -6787,7 +7248,7 @@ const coursesData = [
                         <h3 class="h6 gradient-text mb-2">${item.title}</h3>
                         <p class="mb-0">${item.text}</p>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6799,7 +7260,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6807,7 +7268,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "মানসিক নির্যাতন",
-                    "মানসিক নির্যাতন"
+                    "মানসিক নির্যাতন",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -6830,17 +7291,17 @@ const coursesData = [
                             <div>
                               <p class="text-uppercase text-muted small mb-1">${yhLang(
                                 "মানসিক প্রভাব",
-                                "মানসিক প্রভাব"
+                                "মানসিক প্রভাব",
                               )}</p>
                               <h3 class="h5 gradient-text mb-0">${yhLang(
                                 "স্বাধীনতায় হস্তক্ষেপ",
-                                "স্বাধীনতায় হস্তক্ষেপ"
+                                "স্বাধীনতায় হস্তক্ষেপ",
                               )}</h3>
                             </div>
                           </div>
                           <p class="mb-0">${yhLang(
                             "স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত মতামত প্রকাশে বাধা সৃষ্টি করে মানসিক অশান্তি ও অস্থিরতা তৈরি করা হয়।",
-                            "স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত মতামত প্রকাশে বাধা সৃষ্টি করে মানসিক অশান্তি ও অস্থিরতা তৈরি করা হয়।"
+                            "স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত মতামত প্রকাশে বাধা সৃষ্টি করে মানসিক অশান্তি ও অস্থিরতা তৈরি করা হয়।",
                           )}</p>
                         </article>
                       </div>
@@ -6848,7 +7309,7 @@ const coursesData = [
                         <div class="glass-card h-100 p-4 shadow-sm">
                           <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
                             "প্রধান উদাহরণ",
-                            "প্রধান উদাহরণ"
+                            "প্রধান উদাহরণ",
                           )}</h4>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderExamples()}
@@ -6863,10 +7324,7 @@ const coursesData = [
           },
           {
             id: "ch13-lesson-6",
-            title: yhLang(
-              "Sexual Violence",
-              "যৌন নির্যাতন"
-            ),
+            title: yhLang("Sexual Violence", "যৌন নির্যাতন"),
             icon: "fa-venus-double",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
@@ -6877,12 +7335,15 @@ const coursesData = [
                   id: "q13f",
                   question: yhLang(
                     "Which act is considered sexual violence?",
-                    "কোনটি যৌন নির্যাতনের অন্তর্ভুক্ত?"
+                    "কোনটি যৌন নির্যাতনের অন্তর্ভুক্ত?",
                   ),
                   options: [
                     yhLang("ধর্ষণ ও ধর্ষণের চেষ্টা", "ধর্ষণ ও ধর্ষণের চেষ্টা"),
                     yhLang("সম্মানজনক সংলাপ", "সম্মানজনক সংলাপ"),
-                    yhLang("পারস্পরিক সম্মত সিদ্ধান্ত", "পারস্পরিক সম্মত সিদ্ধান্ত"),
+                    yhLang(
+                      "পারস্পরিক সম্মত সিদ্ধান্ত",
+                      "পারস্পরিক সম্মত সিদ্ধান্ত",
+                    ),
                     yhLang("সহায়ক পরামর্শ", "সহায়ক পরামর্শ"),
                   ],
                   correctAnswer: 0,
@@ -6909,7 +7370,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -6917,7 +7378,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "যৌন নির্যাতন",
-                    "যৌন নির্যাতন"
+                    "যৌন নির্যাতন",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -6933,7 +7394,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
                       "উদাহরণ",
-                      "উদাহরণ"
+                      "উদাহরণ",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderExamples()}
@@ -6945,10 +7406,7 @@ const coursesData = [
           },
           {
             id: "ch13-lesson-7",
-            title: yhLang(
-              "Sexual Harassment Awareness",
-              "যৌন হয়রানি"
-            ),
+            title: yhLang("Sexual Harassment Awareness", "যৌন হয়রানি"),
             icon: "fa-shield-heart",
             gradientClass: "bg-gradient-indigo",
             audioFile: "",
@@ -6959,13 +7417,22 @@ const coursesData = [
                   id: "q13g",
                   question: yhLang(
                     "Which action directly helps prevent sexual harassment?",
-                    "নিম্নের কোনটি যৌন হয়রানি প্রতিরোধে সহায়ক পদক্ষেপ?"
+                    "নিম্নের কোনটি যৌন হয়রানি প্রতিরোধে সহায়ক পদক্ষেপ?",
                   ),
                   options: [
-                    yhLang("বিশ্বস্ত ব্যক্তির কাছে ঘটনাটি জানানো", "বিশ্বস্ত ব্যক্তির কাছে ঘটনাটি জানানো"),
+                    yhLang(
+                      "বিশ্বস্ত ব্যক্তির কাছে ঘটনাটি জানানো",
+                      "বিশ্বস্ত ব্যক্তির কাছে ঘটনাটি জানানো",
+                    ),
                     yhLang("ঘটনাটি গোপন রাখা", "ঘটনাটি গোপন রাখা"),
-                    yhLang("হয়রানিকারীর সাথে একা দেখা করা", "হয়রানিকারীর সাথে একা দেখা করা"),
-                    yhLang("সহায়তা প্রত্যাখ্যান করা", "সহায়তা প্রত্যাখ্যান করা"),
+                    yhLang(
+                      "হয়রানিকারীর সাথে একা দেখা করা",
+                      "হয়রানিকারীর সাথে একা দেখা করা",
+                    ),
+                    yhLang(
+                      "সহায়তা প্রত্যাখ্যান করা",
+                      "সহায়তা প্রত্যাখ্যান করা",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -7025,7 +7492,7 @@ const coursesData = [
                           <p class="mb-0">${item.desc}</p>
                         </div>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7037,7 +7504,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7045,7 +7512,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "যৌন হয়রানি",
-                    "যৌন হয়রানি"
+                    "যৌন হয়রানি",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -7059,7 +7526,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
                       "হয়রানির প্রধান ধরন",
-                      "হয়রানির প্রধান ধরন"
+                      "হয়রানির প্রধান ধরন",
                     )}</h3>
                     <div class="policy-journey-grid" role="list">
                       ${renderFormCards()}
@@ -7073,7 +7540,7 @@ const coursesData = [
                       <div class="col-lg-7">
                         <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
                           "তাৎক্ষণিক করণীয়",
-                          "তাৎক্ষণিক করণীয়"
+                          "তাৎক্ষণিক করণীয়",
                         )}</h3>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(protectionSteps)}
@@ -7083,7 +7550,7 @@ const coursesData = [
                         <div class="glass-card h-100 p-4 shadow-sm">
                           <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
                             "সহায়তা ও অভিযোগের ঠিকানা",
-                            "সহায়তা ও অভিযোগের ঠিকানা"
+                            "সহায়তা ও অভিযোগের ঠিকানা",
                           )}</h4>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderList(supportChannels, 80)}
@@ -7100,7 +7567,7 @@ const coursesData = [
             id: "ch13-lesson-8",
             title: yhLang(
               "Financial Harm and Economic Violence",
-              "“আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা—"
+              "“আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা—",
             ),
             icon: "fa-coins",
             gradientClass: "bg-gradient-emerald",
@@ -7112,13 +7579,25 @@ const coursesData = [
                   id: "q13h",
                   question: yhLang(
                     "Which situation is an example of financial harm?",
-                    "নিম্নের কোনটি আর্থিক ক্ষতির উদাহরণ?"
+                    "নিম্নের কোনটি আর্থিক ক্ষতির উদাহরণ?",
                   ),
                   options: [
-                    yhLang("স্ত্রীর যৌতুক ও সম্পত্তি জোর করে নিয়ে নেওয়া", "স্ত্রীর যৌতুক ও সম্পত্তি জোর করে নিয়ে নেওয়া"),
-                    yhLang("পারিবারিক সম্পদে সবার সমান অংশ নিশ্চিত করা", "পারিবারিক সম্পদে সবার সমান অংশ নিশ্চিত করা"),
-                    yhLang("আয়ের উৎস বাড়াতে প্রশিক্ষণ দেওয়া", "আয়ের উৎস বাড়াতে প্রশিক্ষণ দেওয়া"),
-                    yhLang("অর্থনৈতিক সহায়তা প্রস্তাব করা", "অর্থনৈতিক সহায়তা প্রস্তাব করা"),
+                    yhLang(
+                      "স্ত্রীর যৌতুক ও সম্পত্তি জোর করে নিয়ে নেওয়া",
+                      "স্ত্রীর যৌতুক ও সম্পত্তি জোর করে নিয়ে নেওয়া",
+                    ),
+                    yhLang(
+                      "পারিবারিক সম্পদে সবার সমান অংশ নিশ্চিত করা",
+                      "পারিবারিক সম্পদে সবার সমান অংশ নিশ্চিত করা",
+                    ),
+                    yhLang(
+                      "আয়ের উৎস বাড়াতে প্রশিক্ষণ দেওয়া",
+                      "আয়ের উৎস বাড়াতে প্রশিক্ষণ দেওয়া",
+                    ),
+                    yhLang(
+                      "অর্থনৈতিক সহায়তা প্রস্তাব করা",
+                      "অর্থনৈতিক সহায়তা প্রস্তাব করা",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -7171,7 +7650,7 @@ const coursesData = [
                           <p class="mb-0">${item.text}</p>
                         </div>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7183,7 +7662,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7191,7 +7670,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Financial harm provisions",
-                    "“আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা—"
+                    "“আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা—",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -7200,7 +7679,7 @@ const coursesData = [
                       <i class="fa-solid fa-scale-balanced me-2"></i>
                       <span>${yhLang(
                         "আইন আর্থিক নির্যাতনের শিকার ব্যক্তিকে সম্পদ পুনরুদ্ধার ও নিরাপত্তা দাবি করার সুযোগ দেয়।",
-                        "আইন আর্থিক নির্যাতনের শিকার ব্যক্তিকে সম্পদ পুনরুদ্ধার ও নিরাপত্তা দাবি করার সুযোগ দেয়।"
+                        "আইন আর্থিক নির্যাতনের শিকার ব্যক্তিকে সম্পদ পুনরুদ্ধার ও নিরাপত্তা দাবি করার সুযোগ দেয়।",
                       )}</span>
                     </div>
                   </section>
@@ -7208,7 +7687,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
                       "আইন অনুযায়ী অন্তর্ভুক্ত বিষয়সমূহ",
-                      "আইন অনুযায়ী অন্তর্ভুক্ত বিষয়সমূহ"
+                      "আইন অনুযায়ী অন্তর্ভুক্ত বিষয়সমূহ",
                     )}</h3>
                     <div class="policy-journey-grid" role="list">
                       ${renderClauseCards()}
@@ -7222,7 +7701,7 @@ const coursesData = [
                       <div class="col-lg-7">
                         <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
                           "যেমন —",
-                          "যেমন —"
+                          "যেমন —",
                         )}</h4>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderExamples()}
@@ -7237,17 +7716,17 @@ const coursesData = [
                             <div>
                               <p class="text-uppercase text-muted small mb-1">${yhLang(
                                 "অধিকার",
-                                "অধিকার"
+                                "অধিকার",
                               )}</p>
                               <h3 class="h6 gradient-text mb-0">${yhLang(
                                 "ভোগ-দখল ও ভরণপোষণ",
-                                "ভোগ-দখল ও ভরণপোষণ"
+                                "ভোগ-দখল ও ভরণপোষণ",
                               )}</h3>
                             </div>
                           </div>
                           <p class="mb-0">${yhLang(
                             "সম্পদ ব্যবহার, আয় উপভোগ ও ভরণপোষণ গ্রহণ করা প্রতিটি ব্যক্তির মৌলিক অধিকার এবং সীমিত করার যে কোনো চেষ্টা আইনি অপরাধ।",
-                            "সম্পদ ব্যবহার, আয় উপভোগ ও ভরণপোষণ গ্রহণ করা প্রতিটি ব্যক্তির মৌলিক অধিকার এবং সীমিত করার যে কোনো চেষ্টা আইনি অপরাধ।"
+                            "সম্পদ ব্যবহার, আয় উপভোগ ও ভরণপোষণ গ্রহণ করা প্রতিটি ব্যক্তির মৌলিক অধিকার এবং সীমিত করার যে কোনো চেষ্টা আইনি অপরাধ।",
                           )}</p>
                         </article>
                       </div>
@@ -7261,7 +7740,7 @@ const coursesData = [
             id: "ch13-lesson-9",
             title: yhLang(
               "Actions to End Gender Discrimination",
-              "জেন্ডার বৈষম্য দূর করার জন্য করণীয়"
+              "জেন্ডার বৈষম্য দূর করার জন্য করণীয়",
             ),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-tangerine",
@@ -7273,13 +7752,25 @@ const coursesData = [
                   id: "q13i",
                   question: yhLang(
                     "What is a key step toward eliminating gender discrimination?",
-                    "জেন্ডার বৈষম্য দূর করতে কোন পদক্ষেপটি গুরুত্বপূর্ণ?"
+                    "জেন্ডার বৈষম্য দূর করতে কোন পদক্ষেপটি গুরুত্বপূর্ণ?",
                   ),
                   options: [
-                    yhLang("নারী-পুরুষের সমান অধিকার ও সিদ্ধান্তে অংশগ্রহণ নিশ্চিত করা", "নারী-পুরুষের সমান অধিকার ও সিদ্ধান্তে অংশগ্রহণ নিশ্চিত করা"),
-                    yhLang("নারীদের শিক্ষা সীমিত রাখা", "নারীদের শিক্ষা সীমিত রাখা"),
-                    yhLang("মেয়েদের মতামত উপেক্ষা করা", "মেয়েদের মতামত উপেক্ষা করা"),
-                    yhLang("নারীদের কর্মসংস্থান নিরুৎসাহিত করা", "নারীদের কর্মসংস্থান নিরুৎসাহিত করা"),
+                    yhLang(
+                      "নারী-পুরুষের সমান অধিকার ও সিদ্ধান্তে অংশগ্রহণ নিশ্চিত করা",
+                      "নারী-পুরুষের সমান অধিকার ও সিদ্ধান্তে অংশগ্রহণ নিশ্চিত করা",
+                    ),
+                    yhLang(
+                      "নারীদের শিক্ষা সীমিত রাখা",
+                      "নারীদের শিক্ষা সীমিত রাখা",
+                    ),
+                    yhLang(
+                      "মেয়েদের মতামত উপেক্ষা করা",
+                      "মেয়েদের মতামত উপেক্ষা করা",
+                    ),
+                    yhLang(
+                      "নারীদের কর্মসংস্থান নিরুৎসাহিত করা",
+                      "নারীদের কর্মসংস্থান নিরুৎসাহিত করা",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -7323,7 +7814,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7340,7 +7831,7 @@ const coursesData = [
                         </div>
                         <p class="mb-0">${item.text}</p>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7348,7 +7839,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Ending gender discrimination",
-                    "জেন্ডার বৈষম্য দূর করার জন্য করণীয়"
+                    "জেন্ডার বৈষম্য দূর করার জন্য করণীয়",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -7363,7 +7854,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
                       "মূল করণীয়",
-                      "মূল করণীয়"
+                      "মূল করণীয়",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList()}
@@ -7377,7 +7868,7 @@ const coursesData = [
             id: "ch13-lesson-10",
             title: yhLang(
               "Violence Against Adolescents",
-              "তরুন-তরুনীদের প্রতি সহিংসতা"
+              "তরুন-তরুনীদের প্রতি সহিংসতা",
             ),
             icon: "fa-children",
             gradientClass: "bg-gradient-crimson",
@@ -7389,13 +7880,25 @@ const coursesData = [
                   id: "q13j",
                   question: yhLang(
                     "Which action helps protect adolescents from violence?",
-                    "তরুন-তরুনীদের সহিংসতা থেকে রক্ষা করতে কোন পদক্ষেপ সহায়ক?"
+                    "তরুন-তরুনীদের সহিংসতা থেকে রক্ষা করতে কোন পদক্ষেপ সহায়ক?",
                   ),
                   options: [
-                    yhLang("নিরাপদ পরিবেশ ও পরামর্শ প্রদান", "নিরাপদ পরিবেশ ও পরামর্শ প্রদান"),
-                    yhLang("সহিংস ঘটনার কথা গোপন রাখা", "সহিংস ঘটনার কথা গোপন রাখা"),
-                    yhLang("ঝুঁকিপূর্ণ স্থানে একা পাঠানো", "ঝুঁকিপূর্ণ স্থানে একা পাঠানো"),
-                    yhLang("সহিংস আচরণকে স্বাভাবিক ধরা", "সহিংস আচরণকে স্বাভাবিক ধরা"),
+                    yhLang(
+                      "নিরাপদ পরিবেশ ও পরামর্শ প্রদান",
+                      "নিরাপদ পরিবেশ ও পরামর্শ প্রদান",
+                    ),
+                    yhLang(
+                      "সহিংস ঘটনার কথা গোপন রাখা",
+                      "সহিংস ঘটনার কথা গোপন রাখা",
+                    ),
+                    yhLang(
+                      "ঝুঁকিপূর্ণ স্থানে একা পাঠানো",
+                      "ঝুঁকিপূর্ণ স্থানে একা পাঠানো",
+                    ),
+                    yhLang(
+                      "সহিংস আচরণকে স্বাভাবিক ধরা",
+                      "সহিংস আচরণকে স্বাভাবিক ধরা",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -7444,7 +7947,7 @@ const coursesData = [
                           <p class="mb-0">${item.text}</p>
                         </div>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7456,7 +7959,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7464,7 +7967,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Violence against adolescents",
-                    "তরুন-তরুনীদের প্রতি সহিংসতা"
+                    "তরুন-তরুনীদের প্রতি সহিংসতা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -7488,7 +7991,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
                       "সহিংসতা প্রতিরোধে করণীয়",
-                      "সহিংসতা প্রতিরোধে করণীয়"
+                      "সহিংসতা প্রতিরোধে করণীয়",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderProtectiveList()}
@@ -7503,7 +8006,7 @@ const coursesData = [
             id: "ch13-lesson-11",
             title: yhLang(
               "Understanding Violence and Abuse",
-              "সহিংসতা বা নির্যাতন"
+              "সহিংসতা বা নির্যাতন",
             ),
             icon: "fa-hand-holding-heart",
             gradientClass: "bg-gradient-rose",
@@ -7515,13 +8018,25 @@ const coursesData = [
                   id: "q13k",
                   question: yhLang(
                     "Which initiative directly helps prevent violence?",
-                    "সহিংসতা প্রতিরোধে কোন পদক্ষেপ কার্যকর?"
+                    "সহিংসতা প্রতিরোধে কোন পদক্ষেপ কার্যকর?",
                   ),
                   options: [
-                    yhLang("পরিবারে নিরাপদ ও বন্ধুত্বপূর্ণ সম্পর্ক তৈরি", "পরিবারে নিরাপদ ও বন্ধুত্বপূর্ণ সম্পর্ক তৈরি"),
-                    yhLang("সহিংস ঘটনার প্রমাণ লুকিয়ে রাখা", "সহিংস ঘটনার প্রমাণ লুকিয়ে রাখা"),
-                    yhLang("মাদকদ্রব্যের সহজলভ্যতা বৃদ্ধি", "মাদকদ্রব্যের সহজলভ্যতা বৃদ্ধি"),
-                    yhLang("বৈষম্যমূলক রীতি বজায় রাখা", "বৈষম্যমূলক রীতি বজায় রাখা"),
+                    yhLang(
+                      "পরিবারে নিরাপদ ও বন্ধুত্বপূর্ণ সম্পর্ক তৈরি",
+                      "পরিবারে নিরাপদ ও বন্ধুত্বপূর্ণ সম্পর্ক তৈরি",
+                    ),
+                    yhLang(
+                      "সহিংস ঘটনার প্রমাণ লুকিয়ে রাখা",
+                      "সহিংস ঘটনার প্রমাণ লুকিয়ে রাখা",
+                    ),
+                    yhLang(
+                      "মাদকদ্রব্যের সহজলভ্যতা বৃদ্ধি",
+                      "মাদকদ্রব্যের সহজলভ্যতা বৃদ্ধি",
+                    ),
+                    yhLang(
+                      "বৈষম্যমূলক রীতি বজায় রাখা",
+                      "বৈষম্যমূলক রীতি বজায় রাখা",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -7585,7 +8100,11 @@ const coursesData = [
                 },
                 {
                   title: "আচরণগত প্রভাব",
-                  items: ["কান্নাকাটি", "মনোযোগের অভাব", "ভিড় বা গণপরিবহন এড়ানো"],
+                  items: [
+                    "কান্নাকাটি",
+                    "মনোযোগের অভাব",
+                    "ভিড় বা গণপরিবহন এড়ানো",
+                  ],
                 },
                 {
                   title: "সামাজিক প্রভাব",
@@ -7633,7 +8152,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7645,7 +8164,7 @@ const coursesData = [
                         <h3 class="h6 gradient-text mb-2">${item.title}</h3>
                         <p class="mb-0">${item.body}</p>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7664,7 +8183,7 @@ const coursesData = [
                           ${renderSimpleList(category.items, 90)}
                         </ul>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7683,7 +8202,7 @@ const coursesData = [
                           </ul>
                         </div>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -7691,7 +8210,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Violence and abuse overview",
-                    "সহিংসতা বা নির্যাতন"
+                    "সহিংসতা বা নির্যাতন",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -7705,7 +8224,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
                       "তরুন-তরুনীদের প্রতি সহিংসতার বিভিন্ন রূপ",
-                      "তরুন-তরুনীদের প্রতি সহিংসতার বিভিন্ন রূপ"
+                      "তরুন-তরুনীদের প্রতি সহিংসতার বিভিন্ন রূপ",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderSimpleList(violenceForms)}
@@ -7717,7 +8236,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
                       "তারুণ্যীন সহিংসতার কারণ",
-                      "তারুণ্যীন সহিংসতার কারণ"
+                      "তারুণ্যীন সহিংসতার কারণ",
                     )}</h3>
                     <div class="row g-3">
                       ${renderCauseCards()}
@@ -7727,7 +8246,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="120">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
                       "সহিংসতার প্রভাব",
-                      "সহিংসতার প্রভাব"
+                      "সহিংসতার প্রভাব",
                     )}</h3>
                     <div class="row g-4">
                       ${renderImpactCards()}
@@ -7739,7 +8258,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="140">
                     <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
                       "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থা",
-                      "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থা"
+                      "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থা",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderSimpleList(preventionSteps)}
@@ -7749,7 +8268,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="160">
                     <h3 class="gradient-text h5 mb-3">${yhLang(
                       "সহায়তা ও সরকারি উদ্যোগ",
-                      "সহায়তা ও সরকারি উদ্যোগ"
+                      "সহায়তা ও সরকারি উদ্যোগ",
                     )}</h3>
                     <div class="policy-journey-grid" role="list">
                       ${renderPrograms()}
@@ -7765,14 +8284,14 @@ const coursesData = [
         id: "ch-14",
         title: yhLang(
           "Module-14: Sex, Gender and Gender Discrimination",
-          "মডিউল-১৪: তারুণ্যীন মনোসামাজিক পরিবর্তন ও জটিলতাসমূহ"
+          "মডিউল-১৪: তারুণ্যীন মনোসামাজিক পরিবর্তন ও জটিলতাসমূহ",
         ),
         lessons: [
           {
             id: "ch14-lesson-1",
             title: yhLang(
               "Adolescent Psychosocial Changes",
-              "তারুণ্যীন মনোসামাজিক পরিবর্তন"
+              "তারুণ্যীন মনোসামাজিক পরিবর্তন",
             ),
             icon: "fa-people-roof",
             gradientClass: "bg-gradient-indigo",
@@ -7784,13 +8303,22 @@ const coursesData = [
                   id: "q14a",
                   question: yhLang(
                     "Which factor strongly influences psychosocial change during adolescence?",
-                    "তারুণ্যীন মনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?"
+                    "তারুণ্যীন মনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?",
                   ),
                   options: [
-                    yhLang("পরিবার, বন্ধু ও সামাজিক পরিবেশ", "পরিবার, বন্ধু ও সামাজিক পরিবেশ"),
-                    yhLang("একই রকম অভিজ্ঞতা সবার থাকে", "একই রকম অভিজ্ঞতা সবার থাকে"),
+                    yhLang(
+                      "পরিবার, বন্ধু ও সামাজিক পরিবেশ",
+                      "পরিবার, বন্ধু ও সামাজিক পরিবেশ",
+                    ),
+                    yhLang(
+                      "একই রকম অভিজ্ঞতা সবার থাকে",
+                      "একই রকম অভিজ্ঞতা সবার থাকে",
+                    ),
                     yhLang("শুধু পড়াশোনা", "শুধু পড়াশোনা"),
-                    yhLang("শুধুমাত্র শারীরিক বৃদ্ধি", "শুধুমাত্র শারীরিক বৃদ্ধি"),
+                    yhLang(
+                      "শুধুমাত্র শারীরিক বৃদ্ধি",
+                      "শুধুমাত্র শারীরিক বৃদ্ধি",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -7799,32 +8327,44 @@ const coursesData = [
             content: (function () {
               const introPrimary = yhLang(
                 "Adolescence brings psychosocial changes that influence communication patterns with family, friends, and peers.",
-                "তারুণ্যীন সময়ে তরুন-তরুনীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।"
+                "তারুণ্যীন সময়ে তরুন-তরুনীদের মাঝে বিভিন্ন পরিবর্তন লক্ষ্য করা যায় যা পরিবার, বন্ধু ও সমবয়সীদের সাথে যোগাযোগের ধরনেও প্রভাব ফেলে।",
               );
 
               const introSecondary = yhLang(
                 "Psychosocial development is influenced by genetics, brain growth, life experience, and environment, gradually shaping independence and adult traits.",
-                "মনোসামাজিক বিকাশকে প্রভাবিত করে জিনগত বৈশিষ্ট্য, মস্তিষ্কের বিকাশ, অভিজ্ঞতা এবং চারপাশের পরিবেশ। এর মাধ্যমে আত্মনির্ভরশীলতা ও প্রাপ্তবয়স্ক বৈশিষ্ট্য ধীরে ধীরে বিকশিত হয়।"
+                "মনোসামাজিক বিকাশকে প্রভাবিত করে জিনগত বৈশিষ্ট্য, মস্তিষ্কের বিকাশ, অভিজ্ঞতা এবং চারপাশের পরিবেশ। এর মাধ্যমে আত্মনির্ভরশীলতা ও প্রাপ্তবয়স্ক বৈশিষ্ট্য ধীরে ধীরে বিকশিত হয়।",
               );
 
               const socialChanges = [
                 {
-                  text: yhLang("Exploring personal identity", "ব্যক্তিগত পরিচয় অনুসন্ধান করা"),
+                  text: yhLang(
+                    "Exploring personal identity",
+                    "ব্যক্তিগত পরিচয় অনুসন্ধান করা",
+                  ),
                   icon: "fa-fingerprint",
                   tone: "info",
                 },
                 {
-                  text: yhLang("Developing greater independence", "অধিক স্বাধীনচেতা মনোভাব"),
+                  text: yhLang(
+                    "Developing greater independence",
+                    "অধিক স্বাধীনচেতা মনোভাব",
+                  ),
                   icon: "fa-compass",
                   tone: "success",
                 },
                 {
-                  text: yhLang("Seeking more responsibility", "অধিক দায়িত্ব অন্বেষণ করা"),
+                  text: yhLang(
+                    "Seeking more responsibility",
+                    "অধিক দায়িত্ব অন্বেষণ করা",
+                  ),
                   icon: "fa-list-check",
                   tone: "accent",
                 },
                 {
-                  text: yhLang("Engaging in risk-taking behavior", "ঝুঁকি-গ্রহণমূলক আচরণ"),
+                  text: yhLang(
+                    "Engaging in risk-taking behavior",
+                    "ঝুঁকি-গ্রহণমূলক আচরণ",
+                  ),
                   icon: "fa-triangle-exclamation",
                   tone: "warn",
                 },
@@ -7837,25 +8377,34 @@ const coursesData = [
 
               const emotionalChanges = [
                 {
-                  text: yhLang("Periods of low self-esteem", "নিম্ন আত্মসম্মানবোধ"),
+                  text: yhLang(
+                    "Periods of low self-esteem",
+                    "নিম্ন আত্মসম্মানবোধ",
+                  ),
                   icon: "fa-seedling",
                   tone: "mint",
                 },
                 {
                   text: yhLang(
                     "Emotional challenges like anger, anxiety, stress, depression",
-                    "আবেগীয় সমস্যা (অত্যধিক রাগ, নিরাপত্তাহীনতা, উদ্বেগ, চাপ, হতাশা, বিষণ্নতা)"
+                    "আবেগীয় সমস্যা (অত্যধিক রাগ, নিরাপত্তাহীনতা, উদ্বেগ, চাপ, হতাশা, বিষণ্নতা)",
                   ),
                   icon: "fa-brain",
                   tone: "danger",
                 },
                 {
-                  text: yhLang("Withdrawal or isolation", "প্রত্যাহারমূলক মনোভাব"),
+                  text: yhLang(
+                    "Withdrawal or isolation",
+                    "প্রত্যাহারমূলক মনোভাব",
+                  ),
                   icon: "fa-door-closed",
                   tone: "slate",
                 },
                 {
-                  text: yhLang("Rebellious or defiant actions", "বিদ্রোহী আচরণ"),
+                  text: yhLang(
+                    "Rebellious or defiant actions",
+                    "বিদ্রোহী আচরণ",
+                  ),
                   icon: "fa-bolt",
                   tone: "sun",
                 },
@@ -7880,23 +8429,32 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Difficulty achieving institutional success",
-                    "প্রাতিষ্ঠানিক সফলতা অর্জনে জটিলতা"
+                    "প্রাতিষ্ঠানিক সফলতা অর্জনে জটিলতা",
                   ),
                   icon: "fa-school",
                   tone: "amber",
                 },
                 {
-                  text: yhLang("Substance use and addiction", "মাদক গ্রহণ ও অন্যান্য আসক্তি"),
+                  text: yhLang(
+                    "Substance use and addiction",
+                    "মাদক গ্রহণ ও অন্যান্য আসক্তি",
+                  ),
                   icon: "fa-ban",
                   tone: "red",
                 },
                 {
-                  text: yhLang("Struggling with decision-making", "সিদ্ধান্ত গ্রহণে জটিলতা"),
+                  text: yhLang(
+                    "Struggling with decision-making",
+                    "সিদ্ধান্ত গ্রহণে জটিলতা",
+                  ),
                   icon: "fa-lightbulb",
                   tone: "indigo",
                 },
                 {
-                  text: yhLang("Conflict and violent behavior", "সংর্ঘষ এবং সহিংসতামূলক আচরণ"),
+                  text: yhLang(
+                    "Conflict and violent behavior",
+                    "সংর্ঘষ এবং সহিংসতামূলক আচরণ",
+                  ),
                   icon: "fa-hand-fist",
                   tone: "red",
                 },
@@ -7945,7 +8503,7 @@ const coursesData = [
                         <span class="m14l1-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m14l1-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -8009,10 +8567,7 @@ const coursesData = [
           },
           {
             id: "ch14-lesson-2",
-            title: yhLang(
-              "Understanding Emotions",
-              "আবেগ (Emotion)"
-            ),
+            title: yhLang("Understanding Emotions", "আবেগ (Emotion)"),
             icon: "fa-face-smile",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
@@ -8023,12 +8578,21 @@ const coursesData = [
                   id: "q14b",
                   question: yhLang(
                     "Why is emotion management important in daily life?",
-                    "দৈনন্দিন জীবনে আবেগ ব্যবস্থাপনা কেন জরুরি?"
+                    "দৈনন্দিন জীবনে আবেগ ব্যবস্থাপনা কেন জরুরি?",
                   ),
                   options: [
-                    yhLang("এটা আত্মনিয়ন্ত্রণ ও সঠিক প্রতিক্রিয়ায় সহায়তা করে", "এটা আত্মনিয়ন্ত্রণ ও সঠিক প্রতিক্রিয়ায় সহায়তা করে"),
-                    yhLang("কারণ আবেগ নিয়ে ভাবার দরকার নেই", "কারণ আবেগ নিয়ে ভাবার দরকার নেই"),
-                    yhLang("এটা শুধুই শারীরিক শক্তি বাড়ায়", "এটা শুধুই শারীরিক শক্তি বাড়ায়"),
+                    yhLang(
+                      "এটা আত্মনিয়ন্ত্রণ ও সঠিক প্রতিক্রিয়ায় সহায়তা করে",
+                      "এটা আত্মনিয়ন্ত্রণ ও সঠিক প্রতিক্রিয়ায় সহায়তা করে",
+                    ),
+                    yhLang(
+                      "কারণ আবেগ নিয়ে ভাবার দরকার নেই",
+                      "কারণ আবেগ নিয়ে ভাবার দরকার নেই",
+                    ),
+                    yhLang(
+                      "এটা শুধুই শারীরিক শক্তি বাড়ায়",
+                      "এটা শুধুই শারীরিক শক্তি বাড়ায়",
+                    ),
                     yhLang("সব আবেগ একই রকম", "সব আবেগ একই রকম"),
                   ],
                   correctAnswer: 0,
@@ -8038,27 +8602,27 @@ const coursesData = [
             content: (function () {
               const emotionDefinition = yhLang(
                 "Emotion is a mental state linked with thoughts, feelings, behavioral reactions, and levels of pleasure or distress. It influences physical responses, behavior, and decision-making.",
-                "আবেগ হলো এক ধরনের মানসিক অবস্থা যা চিন্তন, অনুভূতি, আচরণগত প্রতিক্রিয়া এবং আনন্দ-বেদনার মাত্রার সাথে সম্পর্কিত। এর ফলে আমাদের শারীরিক, আচরণগত ও চিন্তার পরিবর্তন ঘটে।"
+                "আবেগ হলো এক ধরনের মানসিক অবস্থা যা চিন্তন, অনুভূতি, আচরণগত প্রতিক্রিয়া এবং আনন্দ-বেদনার মাত্রার সাথে সম্পর্কিত। এর ফলে আমাদের শারীরিক, আচরণগত ও চিন্তার পরিবর্তন ঘটে।",
               );
 
               const emotionContext = yhLang(
                 "Emotion is a body-and-behavior response to internal and external events. Emotional expression differs by person, and without management strategies, daily situations can become disruptive.",
-                "আবেগ হলো অভ্যন্তরীণ এবং বাহ্যিক ঘটনার প্রতি শরীর ও আচরণের প্রতিক্রিয়া (রহমান, জ. ১৯৯৮)। ব্যক্তি থেকে ব্যক্তিতে আবেগের বহিঃপ্রকাশ ভিন্ন হয়। আবেগ ব্যবস্থাপনার অভাবে নানা পরিস্থিতিতে গোলযোগ দেখা দিতে পারে, তবে যথাযথ কৌশল শিখলে তা নিয়ন্ত্রণ করা সম্ভব।"
+                "আবেগ হলো অভ্যন্তরীণ এবং বাহ্যিক ঘটনার প্রতি শরীর ও আচরণের প্রতিক্রিয়া (রহমান, জ. ১৯৯৮)। ব্যক্তি থেকে ব্যক্তিতে আবেগের বহিঃপ্রকাশ ভিন্ন হয়। আবেগ ব্যবস্থাপনার অভাবে নানা পরিস্থিতিতে গোলযোগ দেখা দিতে পারে, তবে যথাযথ কৌশল শিখলে তা নিয়ন্ত্রণ করা সম্ভব।",
               );
 
               const managementIntro = yhLang(
                 "Negative experiences in daily life can quickly destabilize emotions and create uncertainty about what action to take.",
-                "দৈনন্দিন জীবনের নেতিবাচক অভিজ্ঞতা আমাদের আবেগকে সহজেই বিপর্যস্ত করে, ফলে কী করতে হবে তা নিয়ে অনিশ্চয়তা তৈরি হয়।"
+                "দৈনন্দিন জীবনের নেতিবাচক অভিজ্ঞতা আমাদের আবেগকে সহজেই বিপর্যস্ত করে, ফলে কী করতে হবে তা নিয়ে অনিশ্চয়তা তৈরি হয়।",
               );
 
               const managementDetails = yhLang(
                 "Organized emotion management strengthens self-control, helps select appropriate responses, and supports productive action through self-awareness.",
-                "সুশৃঙ্খল আবেগ ব্যবস্থাপনা ব্যক্তিকে আত্মনিয়ন্ত্রণে সহায়তা করে, নেতিবাচক পরিস্থিতিতে সঠিক প্রতিক্রিয়া বেছে নিতে শেখায় এবং ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করার শক্তি দেয়। এতে আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বৃদ্ধি পায়।"
+                "সুশৃঙ্খল আবেগ ব্যবস্থাপনা ব্যক্তিকে আত্মনিয়ন্ত্রণে সহায়তা করে, নেতিবাচক পরিস্থিতিতে সঠিক প্রতিক্রিয়া বেছে নিতে শেখায় এবং ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করার শক্তি দেয়। এতে আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বৃদ্ধি পায়।",
               );
 
               const emotionTrait = yhLang(
                 "Each person experiences and expresses emotions differently. Practical regulation skills reduce emotional confusion and improve clarity.",
-                "প্রতিটি ব্যক্তি ভিন্নভাবে আবেগ প্রকাশ করে এবং সঠিক কৌশল ছাড়া সহজেই আবেগীয় গোলযোগ দেখা দেয়।"
+                "প্রতিটি ব্যক্তি ভিন্নভাবে আবেগ প্রকাশ করে এবং সঠিক কৌশল ছাড়া সহজেই আবেগীয় গোলযোগ দেখা দেয়।",
               );
 
               const basicEmotions = [
@@ -8088,7 +8652,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Supports self-control and helps manage difficult situations.",
-                    "আত্মনিয়ন্ত্রণে সহায়তা করে এবং নেতিবাচক পরিস্থিতি সামলানো সহজ হয়।"
+                    "আত্মনিয়ন্ত্রণে সহায়তা করে এবং নেতিবাচক পরিস্থিতি সামলানো সহজ হয়।",
                   ),
                   icon: "fa-shield-heart",
                   tone: "info",
@@ -8096,7 +8660,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Improves response selection based on context.",
-                    "পরিস্থিতি অনুযায়ী কীভাবে প্রতিক্রিয়া দিতে হবে তা বুঝতে সাহায্য করে।"
+                    "পরিস্থিতি অনুযায়ী কীভাবে প্রতিক্রিয়া দিতে হবে তা বুঝতে সাহায্য করে।",
                   ),
                   icon: "fa-route",
                   tone: "accent",
@@ -8104,7 +8668,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Encourages productive work through personal strengths.",
-                    "ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করতে উৎসাহিত করে।"
+                    "ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করতে উৎসাহিত করে।",
                   ),
                   icon: "fa-seedling",
                   tone: "mint",
@@ -8112,7 +8676,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Builds confidence, self-control, and self-esteem.",
-                    "আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বাড়ায়।"
+                    "আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বাড়ায়।",
                   ),
                   icon: "fa-star",
                   tone: "sun",
@@ -8127,7 +8691,7 @@ const coursesData = [
                         <span class="m14l2-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m14l2-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -8191,10 +8755,7 @@ const coursesData = [
           },
           {
             id: "ch14-lesson-3",
-            title: yhLang(
-              "Understanding Anxiety",
-              "উদ্বেগ (Anxiety)"
-            ),
+            title: yhLang("Understanding Anxiety", "উদ্বেগ (Anxiety)"),
             icon: "fa-face-frown",
             gradientClass: "bg-gradient-purple",
             audioFile: "",
@@ -8205,13 +8766,25 @@ const coursesData = [
                   id: "q14c",
                   question: yhLang(
                     "Why should adolescents address anxiety early?",
-                    "উদ্বেগ দ্রুত নিয়ন্ত্রণ করা কেন জরুরি?"
+                    "উদ্বেগ দ্রুত নিয়ন্ত্রণ করা কেন জরুরি?",
                   ),
                   options: [
-                    yhLang("এটি স্বাভাবিক জীবনযাত্রা ব্যাহত হওয়া থেকে রক্ষা করে", "এটি স্বাভাবিক জীবনযাত্রা ব্যাহত হওয়া থেকে রক্ষা করে"),
-                    yhLang("উদ্বেগ সবসময় উপেক্ষা করা উচিত", "উদ্বেগ সবসময় উপেক্ষা করা উচিত"),
-                    yhLang("উদ্বেগ বাড়ালে মনোযোগ বাড়ে", "উদ্বেগ বাড়ালে মনোযোগ বাড়ে"),
-                    yhLang("উদ্বেগ কেবল শারীরিক সমস্যা", "উদ্বেগ কেবল শারীরিক সমস্যা"),
+                    yhLang(
+                      "এটি স্বাভাবিক জীবনযাত্রা ব্যাহত হওয়া থেকে রক্ষা করে",
+                      "এটি স্বাভাবিক জীবনযাত্রা ব্যাহত হওয়া থেকে রক্ষা করে",
+                    ),
+                    yhLang(
+                      "উদ্বেগ সবসময় উপেক্ষা করা উচিত",
+                      "উদ্বেগ সবসময় উপেক্ষা করা উচিত",
+                    ),
+                    yhLang(
+                      "উদ্বেগ বাড়ালে মনোযোগ বাড়ে",
+                      "উদ্বেগ বাড়ালে মনোযোগ বাড়ে",
+                    ),
+                    yhLang(
+                      "উদ্বেগ কেবল শারীরিক সমস্যা",
+                      "উদ্বেগ কেবল শারীরিক সমস্যা",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -8220,72 +8793,235 @@ const coursesData = [
             content: (function () {
               const anxietyDefinition = yhLang(
                 "Anxiety is an emotion characterized by intense worry and physical changes such as elevated blood pressure.",
-                "উদ্বেগ হলো এক ধরনের আবেগ, যাকে তীব্র অনুভূতি, দুশ্চিন্তা এবং রক্তচাপ বৃদ্ধি করার মতো শারীরিক পরিবর্তনগুলো দ্বারা চিহ্নিত করা হয়।"
+                "উদ্বেগ হলো এক ধরনের আবেগ, যাকে তীব্র অনুভূতি, দুশ্চিন্তা এবং রক্তচাপ বৃদ্ধি করার মতো শারীরিক পরিবর্তনগুলো দ্বারা চিহ্নিত করা হয়।",
               );
 
               const anxietyContext = yhLang(
                 "At a normal level, anxiety can help a person stay alert and prepared. Excessive anxiety disrupts daily life and creates psychosocial risk.",
-                "স্বাভাবিক মাত্রায় উদ্বেগ ব্যক্তিকে সতর্ক করে ও বিপদ মোকাবিলায় প্রস্তুত করে। তবে মাত্রাতিরিক্ত উদ্বেগ স্বাভাবিক জীবনধারা ব্যাহত করে ও মানসিক অবস্থাকে ঝুঁকিতে ফেলে।"
+                "স্বাভাবিক মাত্রায় উদ্বেগ ব্যক্তিকে সতর্ক করে ও বিপদ মোকাবিলায় প্রস্তুত করে। তবে মাত্রাতিরিক্ত উদ্বেগ স্বাভাবিক জীবনধারা ব্যাহত করে ও মানসিক অবস্থাকে ঝুঁকিতে ফেলে।",
               );
 
               const anxietySignificance = yhLang(
                 "Among many emotions, anxiety is especially important because delayed management can lead to long-term complications.",
-                "বহু আবেগের মধ্যে উদ্বেগ একটি উল্লেখযোগ্য আবেগ যা সময়মতো নিয়ন্ত্রণ না করলে দীর্ঘমেয়াদি জটিলতা তৈরি করতে পারে।"
+                "বহু আবেগের মধ্যে উদ্বেগ একটি উল্লেখযোগ্য আবেগ যা সময়মতো নিয়ন্ত্রণ না করলে দীর্ঘমেয়াদি জটিলতা তৈরি করতে পারে।",
               );
 
               const mentalSymptoms = [
-                { text: yhLang("Excessive anger", "অত্যধিক রাগ"), icon: "fa-fire", tone: "danger" },
-                { text: yhLang("Feeling irritated", "বিরক্ত বোধ"), icon: "fa-face-tired", tone: "warn" },
-                { text: yhLang("Difficulty concentrating", "মনোযোগের অঝুঁকি"), icon: "fa-bullseye", tone: "info" },
-                { text: yhLang("Restlessness", "অস্থিরতা"), icon: "fa-person-running", tone: "sun" },
-                { text: yhLang("Perceiving situations as very dangerous", "যেকোনো পরিস্থিতি খুব বিপজ্জনক মনে করা"), icon: "fa-triangle-exclamation", tone: "red" },
-                { text: yhLang("Fear that something bad will happen", "খারাপ কিছু ঘটবে বলে আশঙ্কা"), icon: "fa-cloud-bolt", tone: "amber" },
-                { text: yhLang("Negative thinking", "নেতিবাচক চিন্তা"), icon: "fa-circle-minus", tone: "slate" },
+                {
+                  text: yhLang("Excessive anger", "অত্যধিক রাগ"),
+                  icon: "fa-fire",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Feeling irritated", "বিরক্ত বোধ"),
+                  icon: "fa-face-tired",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Difficulty concentrating", "মনোযোগের অঝুঁকি"),
+                  icon: "fa-bullseye",
+                  tone: "info",
+                },
+                {
+                  text: yhLang("Restlessness", "অস্থিরতা"),
+                  icon: "fa-person-running",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang(
+                    "Perceiving situations as very dangerous",
+                    "যেকোনো পরিস্থিতি খুব বিপজ্জনক মনে করা",
+                  ),
+                  icon: "fa-triangle-exclamation",
+                  tone: "red",
+                },
+                {
+                  text: yhLang(
+                    "Fear that something bad will happen",
+                    "খারাপ কিছু ঘটবে বলে আশঙ্কা",
+                  ),
+                  icon: "fa-cloud-bolt",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Negative thinking", "নেতিবাচক চিন্তা"),
+                  icon: "fa-circle-minus",
+                  tone: "slate",
+                },
               ];
 
               const physicalSymptoms = [
-                { text: yhLang("Increased heartbeat", "হৃদস্পন্দন বেড়ে যাওয়া"), icon: "fa-heart-pulse", tone: "danger" },
-                { text: yhLang("Increased blood pressure", "রক্তচাপ বেড়ে যাওয়া"), icon: "fa-gauge-high", tone: "red" },
-                { text: yhLang("Nausea", "বমি বমি ভাব"), icon: "fa-face-dizzy", tone: "warn" },
-                { text: yhLang("Sweating", "ঘাম হওয়া"), icon: "fa-droplet", tone: "teal" },
-                { text: yhLang("Dry mouth", "মুখ শুকিয়ে যাওয়া"), icon: "fa-mouth-open", tone: "peach" },
-                { text: yhLang("Diarrhea", "ডায়রিয়া"), icon: "fa-notes-medical", tone: "mint" },
-                { text: yhLang("Stomach pain or headache", "পেট ব্যথা, মাথা ব্যথা"), icon: "fa-head-side-cough", tone: "violet" },
-                { text: yhLang("Shortness of breath", "শ্বাসকষ্ট"), icon: "fa-lungs", tone: "sky" },
-                { text: yhLang("Sleep disturbance", "ঘুম না হওয়া বা ঘুমের পরিমাণ বেড়ে যাওয়া"), icon: "fa-bed", tone: "indigo" },
+                {
+                  text: yhLang(
+                    "Increased heartbeat",
+                    "হৃদস্পন্দন বেড়ে যাওয়া",
+                  ),
+                  icon: "fa-heart-pulse",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang(
+                    "Increased blood pressure",
+                    "রক্তচাপ বেড়ে যাওয়া",
+                  ),
+                  icon: "fa-gauge-high",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Nausea", "বমি বমি ভাব"),
+                  icon: "fa-face-dizzy",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Sweating", "ঘাম হওয়া"),
+                  icon: "fa-droplet",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang("Dry mouth", "মুখ শুকিয়ে যাওয়া"),
+                  icon: "fa-mouth-open",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Diarrhea", "ডায়রিয়া"),
+                  icon: "fa-notes-medical",
+                  tone: "mint",
+                },
+                {
+                  text: yhLang(
+                    "Stomach pain or headache",
+                    "পেট ব্যথা, মাথা ব্যথা",
+                  ),
+                  icon: "fa-head-side-cough",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Shortness of breath", "শ্বাসকষ্ট"),
+                  icon: "fa-lungs",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang(
+                    "Sleep disturbance",
+                    "ঘুম না হওয়া বা ঘুমের পরিমাণ বেড়ে যাওয়া",
+                  ),
+                  icon: "fa-bed",
+                  tone: "indigo",
+                },
               ];
 
               const behavioralSymptoms = [
-                { text: yhLang("Avoiding situations", "পরিস্থিতি এড়িয়ে চলা"), icon: "fa-person-circle-xmark", tone: "slate" },
-                { text: yhLang("Loss of appetite or overeating", "খাবারে অরুচি বা অত্যধিক খাবার গ্রহণ"), icon: "fa-utensils", tone: "amber" },
-                { text: yhLang("Laziness or low motivation", "অলসতা বা অনীহা"), icon: "fa-battery-quarter", tone: "sun" },
-                { text: yhLang("Substance use / alcohol use", "মাদক দ্রব্য গ্রহণ/মদ্যপান"), icon: "fa-wine-bottle", tone: "danger" },
-                { text: yhLang("Withdrawal behavior", "প্রত্যাহারমূলক আচরণ"), icon: "fa-door-closed", tone: "peach" },
+                {
+                  text: yhLang("Avoiding situations", "পরিস্থিতি এড়িয়ে চলা"),
+                  icon: "fa-person-circle-xmark",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang(
+                    "Loss of appetite or overeating",
+                    "খাবারে অরুচি বা অত্যধিক খাবার গ্রহণ",
+                  ),
+                  icon: "fa-utensils",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Laziness or low motivation", "অলসতা বা অনীহা"),
+                  icon: "fa-battery-quarter",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang(
+                    "Substance use / alcohol use",
+                    "মাদক দ্রব্য গ্রহণ/মদ্যপান",
+                  ),
+                  icon: "fa-wine-bottle",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Withdrawal behavior", "প্রত্যাহারমূলক আচরণ"),
+                  icon: "fa-door-closed",
+                  tone: "peach",
+                },
               ];
 
               const anxietyCauses = [
-                { text: yhLang("Mismatch between needs and resources", "চাহিদা ও যোগানের মধ্যে পার্থক্য থাকা"), icon: "fa-scale-balanced", tone: "info" },
-                { text: yhLang("Unrealistic expectations", "অবাস্তব প্রত্যাশা"), icon: "fa-chart-line", tone: "warn" },
-                { text: yhLang("Lack of self-control", "আত্মনিয়ন্ত্রণের অভাব"), icon: "fa-sliders", tone: "accent" },
-                { text: yhLang("Fear of rejection and isolation", "প্রত্যাখ্যাত ও বিচ্ছিন্ন হওয়ার ভয়"), icon: "fa-user-slash", tone: "danger" },
-                { text: yhLang("Constant comparison", "তুলনা করা"), icon: "fa-arrows-left-right-to-line", tone: "violet" },
-                { text: yhLang("Work and school pressure", "কর্মক্ষেত্র ও স্কুলের কাজের চাপ"), icon: "fa-briefcase", tone: "sky" },
-                { text: yhLang("Relationship deterioration", "ব্যক্তিগত ও পারিবারিক সম্পর্কের অবনতি"), icon: "fa-people-arrows-left-right", tone: "peach" },
-                { text: yhLang("Economic hardship", "অর্থনৈতিক সমস্যা"), icon: "fa-sack-dollar", tone: "amber" },
-                { text: yhLang("Illness", "অসুস্থতা"), icon: "fa-house-medical", tone: "mint" },
-                { text: yhLang("Other negative experiences", "নেতিবাচক অভিজ্ঞতা ইত্যাদি"), icon: "fa-cloud-rain", tone: "indigo" },
+                {
+                  text: yhLang(
+                    "Mismatch between needs and resources",
+                    "চাহিদা ও যোগানের মধ্যে পার্থক্য থাকা",
+                  ),
+                  icon: "fa-scale-balanced",
+                  tone: "info",
+                },
+                {
+                  text: yhLang("Unrealistic expectations", "অবাস্তব প্রত্যাশা"),
+                  icon: "fa-chart-line",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Lack of self-control", "আত্মনিয়ন্ত্রণের অভাব"),
+                  icon: "fa-sliders",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang(
+                    "Fear of rejection and isolation",
+                    "প্রত্যাখ্যাত ও বিচ্ছিন্ন হওয়ার ভয়",
+                  ),
+                  icon: "fa-user-slash",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Constant comparison", "তুলনা করা"),
+                  icon: "fa-arrows-left-right-to-line",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang(
+                    "Work and school pressure",
+                    "কর্মক্ষেত্র ও স্কুলের কাজের চাপ",
+                  ),
+                  icon: "fa-briefcase",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang(
+                    "Relationship deterioration",
+                    "ব্যক্তিগত ও পারিবারিক সম্পর্কের অবনতি",
+                  ),
+                  icon: "fa-people-arrows-left-right",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Economic hardship", "অর্থনৈতিক সমস্যা"),
+                  icon: "fa-sack-dollar",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Illness", "অসুস্থতা"),
+                  icon: "fa-house-medical",
+                  tone: "mint",
+                },
+                {
+                  text: yhLang(
+                    "Other negative experiences",
+                    "নেতিবাচক অভিজ্ঞতা ইত্যাদি",
+                  ),
+                  icon: "fa-cloud-rain",
+                  tone: "indigo",
+                },
               ];
 
               const emotionalIntelligenceIntro = yhLang(
                 "Emotional Intelligence is the ability to recognize, regulate, and apply your own emotions and understand others' emotions effectively.",
-                "আবেগীয় বুদ্ধিমত্তা (Emotional Intelligence) হলো নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা।"
+                "আবেগীয় বুদ্ধিমত্তা (Emotional Intelligence) হলো নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা।",
               );
 
               const emotionalIntelligencePoints = [
                 {
                   text: yhLang(
                     "Identify personal emotions and understand their causes.",
-                    "নিজের আবেগগুলো চিহ্নিত করতে পারা এবং তাদের কারণগুলো বুঝতে পারা"
+                    "নিজের আবেগগুলো চিহ্নিত করতে পারা এবং তাদের কারণগুলো বুঝতে পারা",
                   ),
                   icon: "fa-magnifying-glass",
                   tone: "info",
@@ -8293,7 +9029,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Regulate emotions to prevent negative impact.",
-                    "আবেগগুলো যেন কোনো নেতিবাচক প্রভাব না ফেলে, সে জন্য নিজেকে নিয়ন্ত্রণ করতে পারা"
+                    "আবেগগুলো যেন কোনো নেতিবাচক প্রভাব না ফেলে, সে জন্য নিজেকে নিয়ন্ত্রণ করতে পারা",
                   ),
                   icon: "fa-shield-heart",
                   tone: "success",
@@ -8301,7 +9037,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Understand others' emotions and respond sensitively.",
-                    "অন্যদের আবেগগুলো বুঝতে পারা এবং তাদের সাথে সংবেদনশীলভাবে আচরণ করা"
+                    "অন্যদের আবেগগুলো বুঝতে পারা এবং তাদের সাথে সংবেদনশীলভাবে আচরণ করা",
                   ),
                   icon: "fa-hand-holding-heart",
                   tone: "teal",
@@ -8309,7 +9045,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Build healthier relationships through emotional intelligence.",
-                    "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা"
+                    "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা",
                   ),
                   icon: "fa-people-group",
                   tone: "accent",
@@ -8324,7 +9060,7 @@ const coursesData = [
                         <span class="m14l3-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m14l3-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -8337,7 +9073,7 @@ const coursesData = [
                 const maxRows = Math.max(
                   mentalSymptoms.length,
                   physicalSymptoms.length,
-                  behavioralSymptoms.length
+                  behavioralSymptoms.length,
                 );
 
                 return Array.from({ length: maxRows })
@@ -8348,7 +9084,7 @@ const coursesData = [
                         <td>${renderTableChip(physicalSymptoms[idx])}</td>
                         <td>${renderTableChip(behavioralSymptoms[idx])}</td>
                       </tr>
-                    `
+                    `,
                   )
                   .join("");
               };
@@ -8426,10 +9162,7 @@ const coursesData = [
           },
           {
             id: "ch14-lesson-4",
-            title: yhLang(
-              "মানসিক চাপ (Stress)",
-              "মানসিক চাপ (Stress)"
-            ),
+            title: yhLang("মানসিক চাপ (Stress)", "মানসিক চাপ (Stress)"),
             icon: "fa-children",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
@@ -8440,13 +9173,19 @@ const coursesData = [
                   id: "q14d",
                   question: yhLang(
                     "What triggers stress according to the lesson?",
-                    "এই পাঠ অনুযায়ী মানসিক চাপ কীভাবে সৃষ্টি হয়?"
+                    "এই পাঠ অনুযায়ী মানসিক চাপ কীভাবে সৃষ্টি হয়?",
                   ),
                   options: [
-                    yhLang("চাহিদা ও সক্ষমতার মধ্যে দ্বন্দ্ব", "চাহিদা ও সক্ষমতার মধ্যে দ্বন্দ্ব"),
+                    yhLang(
+                      "চাহিদা ও সক্ষমতার মধ্যে দ্বন্দ্ব",
+                      "চাহিদা ও সক্ষমতার মধ্যে দ্বন্দ্ব",
+                    ),
                     yhLang("সম্পূর্ণ বিশ্রামের ফলে", "সম্পূর্ণ বিশ্রামের ফলে"),
                     yhLang("কোনো কাজ না থাকলে", "কোনো কাজ না থাকলে"),
-                    yhLang("অন্যের সাফল্যে আনন্দ পেলে", "অন্যের সাফল্যে আনন্দ পেলে"),
+                    yhLang(
+                      "অন্যের সাফল্যে আনন্দ পেলে",
+                      "অন্যের সাফল্যে আনন্দ পেলে",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -8455,94 +9194,324 @@ const coursesData = [
             content: (function () {
               const stressIntro = yhLang(
                 "Stress is the internal pressure created when there is conflict between a person's needs and abilities.",
-                "ব্যক্তির চাহিদা এবং ক্ষমতার মধ্যে দ্বন্দ্ব তৈরি হলে যে অভ্যন্তরীণ চাপ সৃষ্টি হয় সেটাই মানসিক চাপ বা স্ট্রেস।"
+                "ব্যক্তির চাহিদা এবং ক্ষমতার মধ্যে দ্বন্দ্ব তৈরি হলে যে অভ্যন্তরীণ চাপ সৃষ্টি হয় সেটাই মানসিক চাপ বা স্ট্রেস।",
               );
 
               const stressContext = yhLang(
                 "When we cannot perform a task as expected due to environment or circumstances, worry, anxiety, and stress increase, disrupting normal life.",
-                "যে কাজটি আমরা পরিবেশ বা পরিস্থিতির কারণে প্রত্যাশিতভাবে করতে পারি না, তখন উদ্বেগ, দুশ্চিন্তা ও চাপ বাড়ে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত হয়।"
+                "যে কাজটি আমরা পরিবেশ বা পরিস্থিতির কারণে প্রত্যাশিতভাবে করতে পারি না, তখন উদ্বেগ, দুশ্চিন্তা ও চাপ বাড়ে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত হয়।",
               );
 
               const physicalSymptoms = [
-                { text: yhLang("Chest tightness", "বুক ধড়ফড় করা"), icon: "fa-heart", tone: "info" },
-                { text: yhLang("High blood pressure", "রক্তচাপ বেড়ে যাওয়া"), icon: "fa-droplet", tone: "danger" },
-                { text: yhLang("Insomnia", "ইনসমনিয়া (অনিদ্রা)"), icon: "fa-moon", tone: "violet" },
-                { text: yhLang("Headache", "মাথাব্যথা"), icon: "fa-head-side-virus", tone: "warn" },
-                { text: yhLang("Chest pain", "বুকে ব্যথা"), icon: "fa-heart-crack", tone: "red" },
-                { text: yhLang("Breathing difficulty", "শ্বাসকষ্ট"), icon: "fa-wind", tone: "sky" },
-                { text: yhLang("Nausea", "বমি বমি ভাব"), icon: "fa-face-nauseated", tone: "accent" },
-                { text: yhLang("Diarrhea", "ডায়রিয়া"), icon: "fa-toilets", tone: "peach" },
-                { text: yhLang("Stomach pain", "পেট ব্যথা"), icon: "fa-person", tone: "sun" },
-                { text: yhLang("Sweating", "ঘাম হওয়া"), icon: "fa-droplets", tone: "teal" },
+                {
+                  text: yhLang("Chest tightness", "বুক ধড়ফড় করা"),
+                  icon: "fa-heart",
+                  tone: "info",
+                },
+                {
+                  text: yhLang("High blood pressure", "রক্তচাপ বেড়ে যাওয়া"),
+                  icon: "fa-droplet",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Insomnia", "ইনসমনিয়া (অনিদ্রা)"),
+                  icon: "fa-moon",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Headache", "মাথাব্যথা"),
+                  icon: "fa-head-side-virus",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Chest pain", "বুকে ব্যথা"),
+                  icon: "fa-heart-crack",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Breathing difficulty", "শ্বাসকষ্ট"),
+                  icon: "fa-wind",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Nausea", "বমি বমি ভাব"),
+                  icon: "fa-face-nauseated",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang("Diarrhea", "ডায়রিয়া"),
+                  icon: "fa-toilets",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Stomach pain", "পেট ব্যথা"),
+                  icon: "fa-person",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang("Sweating", "ঘাম হওয়া"),
+                  icon: "fa-droplets",
+                  tone: "teal",
+                },
               ];
 
               const emotionalSymptoms = [
-                { text: yhLang("Irritability", "বিরক্ত বোধ"), icon: "fa-frustration-frustrated", tone: "warn" },
-                { text: yhLang("Excessive anger", "অত্যধিক রাগ"), icon: "fa-face-angry", tone: "danger" },
-                { text: yhLang("Depression", "বিষণ্নতা"), icon: "fa-face-sad-tear", tone: "slate" },
-                { text: yhLang("Excitement", "উত্তেজনা"), icon: "fa-star", tone: "success" },
-                { text: yhLang("Hopelessness", "হতাশা"), icon: "fa-arrow-down", tone: "red" },
-                { text: yhLang("Sorrow", "কষ্ট"), icon: "fa-hand-fist", tone: "violet" },
-                { text: yhLang("Lack of confidence", "আত্মবিশ্বাসের অভাব"), icon: "fa-person-dots-question", tone: "accent" },
-                { text: yhLang("Guilt", "অপরাধবোধ"), icon: "fa-person-hiking", tone: "peach" },
-                { text: yhLang("Restlessness", "অস্থিরতা"), icon: "fa-person-walking", tone: "sky" },
+                {
+                  text: yhLang("Irritability", "বিরক্ত বোধ"),
+                  icon: "fa-frustration-frustrated",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Excessive anger", "অত্যধিক রাগ"),
+                  icon: "fa-face-angry",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Depression", "বিষণ্নতা"),
+                  icon: "fa-face-sad-tear",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Excitement", "উত্তেজনা"),
+                  icon: "fa-star",
+                  tone: "success",
+                },
+                {
+                  text: yhLang("Hopelessness", "হতাশা"),
+                  icon: "fa-arrow-down",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Sorrow", "কষ্ট"),
+                  icon: "fa-hand-fist",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Lack of confidence", "আত্মবিশ্বাসের অভাব"),
+                  icon: "fa-person-dots-question",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang("Guilt", "অপরাধবোধ"),
+                  icon: "fa-person-hiking",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Restlessness", "অস্থিরতা"),
+                  icon: "fa-person-walking",
+                  tone: "sky",
+                },
               ];
 
               const behavioralSymptoms = [
-                { text: yhLang("Sleep deprivation", "ঘুম না হওয়া"), icon: "fa-moon", tone: "violet" },
-                { text: yhLang("Substance abuse", "মাদক দ্রব্য গ্রহণ"), icon: "fa-flask-vial", tone: "danger" },
-                { text: yhLang("Inattention", "অমনোযোগীতা"), icon: "fa-brain", tone: "cyan" },
-                { text: yhLang("Lethargy", "অলসতা বা অনীহা"), icon: "fa-hand-paper", tone: "slate" },
-                { text: yhLang("Aimless walking", "অকারণে হাঁটাহাঁটি করা"), icon: "fa-person-walking", tone: "sky" },
-                { text: yhLang("Shouting", "চিৎকার-চেঁচামেচি করা"), icon: "fa-volume-high", tone: "warn" },
-                { text: yhLang("Crying", "কান্নাকাটি করা"), icon: "fa-face-sad-tear", tone: "peach" },
-                { text: yhLang("Forgetfulness", "ভুলে যাওয়া"), icon: "fa-brain", tone: "accent" },
-                { text: yhLang("Blaming others", "দোষারোপ করা"), icon: "fa-hand-point-right", tone: "red" },
-                { text: yhLang("Appetite changes", "খাবারে অরুচি বা অত্যধিক গ্রহণ"), icon: "fa-utensils", tone: "info" },
+                {
+                  text: yhLang("Sleep deprivation", "ঘুম না হওয়া"),
+                  icon: "fa-moon",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Substance abuse", "মাদক দ্রব্য গ্রহণ"),
+                  icon: "fa-flask-vial",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Inattention", "অমনোযোগীতা"),
+                  icon: "fa-brain",
+                  tone: "cyan",
+                },
+                {
+                  text: yhLang("Lethargy", "অলসতা বা অনীহা"),
+                  icon: "fa-hand-paper",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Aimless walking", "অকারণে হাঁটাহাঁটি করা"),
+                  icon: "fa-person-walking",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Shouting", "চিৎকার-চেঁচামেচি করা"),
+                  icon: "fa-volume-high",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Crying", "কান্নাকাটি করা"),
+                  icon: "fa-face-sad-tear",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Forgetfulness", "ভুলে যাওয়া"),
+                  icon: "fa-brain",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang("Blaming others", "দোষারোপ করা"),
+                  icon: "fa-hand-point-right",
+                  tone: "red",
+                },
+                {
+                  text: yhLang(
+                    "Appetite changes",
+                    "খাবারে অরুচি বা অত্যধিক গ্রহণ",
+                  ),
+                  icon: "fa-utensils",
+                  tone: "info",
+                },
               ];
 
               const stressCauses = [
-                { text: yhLang("Gap between demand and supply", "চাহিদা ও যোগানের মধ্যে পার্থক্য"), icon: "fa-arrows-left-right", tone: "info" },
-                { text: yhLang("Unrealistic expectations", "অবাস্তব প্রত্যাশা"), icon: "fa-cloud", tone: "sky" },
-                { text: yhLang("Lack of self-control", "আত্মনিয়ন্ত্রণের অভাব"), icon: "fa-person-circle-check", tone: "success" },
-                { text: yhLang("Fear of rejection", "প্রত্যাখ্যাত ও বিচ্ছিন্ন হওয়ার ভয়"), icon: "fa-heart-crack", tone: "danger" },
-                { text: yhLang("Comparison with others", "তুলনা করা"), icon: "fa-code-compare", tone: "warn" },
-                { text: yhLang("Work pressure", "কর্মক্ষেত্র ও স্কুলের চাপ"), icon: "fa-briefcase", tone: "violet" },
-                { text: yhLang("Family relationship breakdown", "পারিবারিক সম্পর্কের অবনতি"), icon: "fa-people-arrows", tone: "peach" },
-                { text: yhLang("Financial problems", "অর্থনৈতিক সমস্যা"), icon: "fa-coins", tone: "sun" },
-                { text: yhLang("Illness", "অসুস্থতা"), icon: "fa-virus", tone: "red" },
-                { text: yhLang("Negative experiences", "নেতিবাচক অভিজ্ঞতা"), icon: "fa-cloud-bolt", tone: "slate" },
+                {
+                  text: yhLang(
+                    "Gap between demand and supply",
+                    "চাহিদা ও যোগানের মধ্যে পার্থক্য",
+                  ),
+                  icon: "fa-arrows-left-right",
+                  tone: "info",
+                },
+                {
+                  text: yhLang("Unrealistic expectations", "অবাস্তব প্রত্যাশা"),
+                  icon: "fa-cloud",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Lack of self-control", "আত্মনিয়ন্ত্রণের অভাব"),
+                  icon: "fa-person-circle-check",
+                  tone: "success",
+                },
+                {
+                  text: yhLang(
+                    "Fear of rejection",
+                    "প্রত্যাখ্যাত ও বিচ্ছিন্ন হওয়ার ভয়",
+                  ),
+                  icon: "fa-heart-crack",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Comparison with others", "তুলনা করা"),
+                  icon: "fa-code-compare",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Work pressure", "কর্মক্ষেত্র ও স্কুলের চাপ"),
+                  icon: "fa-briefcase",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang(
+                    "Family relationship breakdown",
+                    "পারিবারিক সম্পর্কের অবনতি",
+                  ),
+                  icon: "fa-people-arrows",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Financial problems", "অর্থনৈতিক সমস্যা"),
+                  icon: "fa-coins",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang("Illness", "অসুস্থতা"),
+                  icon: "fa-virus",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Negative experiences", "নেতিবাচক অভিজ্ঞতা"),
+                  icon: "fa-cloud-bolt",
+                  tone: "slate",
+                },
               ];
 
               const managementTips = [
-                { text: yhLang("Take a walk outside", "বাইরে হাঁটতে যাওয়া"), icon: "fa-person-hiking", tone: "info" },
-                { text: yhLang("Spend time with trusted friends", "বিশ্বস্ত বন্ধুদের সাথে সময়"), icon: "fa-people-group", tone: "success" },
-                { text: yhLang("Share your feelings", "মনের কথা শেয়ার করা"), icon: "fa-hand-holding-heart", tone: "peach" },
-                { text: yhLang("Read books or listen to music", "বই পড়া বা গান শোনা"), icon: "fa-book", tone: "violet" },
-                { text: yhLang("Write in a diary", "ডায়েরি লেখা"), icon: "fa-pen", tone: "accent" },
-                { text: yhLang("Exercise", "ব্যায়াম করা"), icon: "fa-person-running", tone: "sky" },
-                { text: yhLang("Look at yourself in mirror", "আয়নায় নিজেকে দেখা"), icon: "fa-mirror", tone: "warn" },
-                { text: yhLang("Wash face or bathe", "হাত-মুখ ধোয়া"), icon: "fa-droplet", tone: "cyan" },
-                { text: yhLang("Pray or meditate", "প্রার্থনা করা"), icon: "fa-hands-praying", tone: "mint" },
-                { text: yhLang("Get sufficient sleep", "পর্যাপ্ত ঘুমানো"), icon: "fa-moon", tone: "indigo" },
-                { text: yhLang("Spend time in nature", "প্রাকৃতিক পরিবেশ"), icon: "fa-leaf", tone: "teal" },
-                { text: yhLang("Deep breathing exercise", "গভীর শ্বাস-প্রশ্বাস"), icon: "fa-lungs", tone: "info" },
+                {
+                  text: yhLang("Take a walk outside", "বাইরে হাঁটতে যাওয়া"),
+                  icon: "fa-person-hiking",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "Spend time with trusted friends",
+                    "বিশ্বস্ত বন্ধুদের সাথে সময়",
+                  ),
+                  icon: "fa-people-group",
+                  tone: "success",
+                },
+                {
+                  text: yhLang("Share your feelings", "মনের কথা শেয়ার করা"),
+                  icon: "fa-hand-holding-heart",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang(
+                    "Read books or listen to music",
+                    "বই পড়া বা গান শোনা",
+                  ),
+                  icon: "fa-book",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Write in a diary", "ডায়েরি লেখা"),
+                  icon: "fa-pen",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang("Exercise", "ব্যায়াম করা"),
+                  icon: "fa-person-running",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang(
+                    "Look at yourself in mirror",
+                    "আয়নায় নিজেকে দেখা",
+                  ),
+                  icon: "fa-mirror",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Wash face or bathe", "হাত-মুখ ধোয়া"),
+                  icon: "fa-droplet",
+                  tone: "cyan",
+                },
+                {
+                  text: yhLang("Pray or meditate", "প্রার্থনা করা"),
+                  icon: "fa-hands-praying",
+                  tone: "mint",
+                },
+                {
+                  text: yhLang("Get sufficient sleep", "পর্যাপ্ত ঘুমানো"),
+                  icon: "fa-moon",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang("Spend time in nature", "প্রাকৃতিক পরিবেশ"),
+                  icon: "fa-leaf",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang(
+                    "Deep breathing exercise",
+                    "গভীর শ্বাস-প্রশ্বাস",
+                  ),
+                  icon: "fa-lungs",
+                  tone: "info",
+                },
               ];
 
               const renderSymptomRows = () => {
                 const maxRows = Math.max(
                   physicalSymptoms.length,
                   emotionalSymptoms.length,
-                  behavioralSymptoms.length
+                  behavioralSymptoms.length,
                 );
                 return Array.from({ length: maxRows })
-                  .map((_, idx) => `
+                  .map(
+                    (_, idx) => `
                     <tr data-aos="fade-up" data-aos-delay="${80 + idx * 12}">
                       <td>${renderTableChip(physicalSymptoms[idx])}</td>
                       <td>${renderTableChip(emotionalSymptoms[idx])}</td>
                       <td>${renderTableChip(behavioralSymptoms[idx])}</td>
                     </tr>
-                  `)
+                  `,
+                  )
                   .join("");
               };
 
@@ -8557,26 +9526,30 @@ const coursesData = [
 
               const renderCauseList = (items) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m14l4-li m14l4-${item.tone}" data-aos="fade-left" data-aos-delay="${80 + idx * 15}">
                       <div class="m14l4-li-icon">
                         <i class="fa-solid ${item.icon}"></i>
                       </div>
                       <span class="m14l4-li-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               const renderManagementList = (items) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m14l4-li m14l4-${item.tone}" data-aos="fade-right" data-aos-delay="${100 + idx * 12}">
                       <div class="m14l4-li-icon">
                         <i class="fa-solid ${item.icon}"></i>
                       </div>
                       <span class="m14l4-li-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               return `
@@ -8649,10 +9622,7 @@ const coursesData = [
           },
           {
             id: "ch14-lesson-5",
-            title: yhLang(
-              "Causes of Stress",
-              "মানসিক চাপের কারণসমূহ"
-            ),
+            title: yhLang("Causes of Stress", "মানসিক চাপের কারণসমূহ"),
             icon: "fa-head-side-virus",
             gradientClass: "bg-gradient-indigo",
             audioFile: "",
@@ -8663,7 +9633,7 @@ const coursesData = [
                   id: "q14e",
                   question: yhLang(
                     "Which environmental issue does the lesson highlight as a stressor?",
-                    "নিম্নের কোন পরিবেশগত বিষয়টি মানসিক চাপ সৃষ্টিকারী হিসেবে উল্লেখ করা হয়েছে?"
+                    "নিম্নের কোন পরিবেশগত বিষয়টি মানসিক চাপ সৃষ্টিকারী হিসেবে উল্লেখ করা হয়েছে?",
                   ),
                   options: [
                     yhLang("শব্দদূষণ ও যানজট", "শব্দদূষণ ও যানজট"),
@@ -8678,12 +9648,12 @@ const coursesData = [
             content: (function () {
               const stressIntro = yhLang(
                 "Stress grows when expectations and real-life capacity do not match across daily settings.",
-                "দৈনন্দিন জীবনের নানা ক্ষেত্র যেমন পরিবার, শিক্ষা, কর্মজীবন, বেকারত্ব ও পারিপার্শ্বিক পরিবেশের সংঘাত আমাদের প্রত্যাশা ও সক্ষমতার মধ্যে দ্বন্দ্ব তৈরি করে, যা মানসিক চাপকে বাড়িয়ে তোলে।"
+                "দৈনন্দিন জীবনের নানা ক্ষেত্র যেমন পরিবার, শিক্ষা, কর্মজীবন, বেকারত্ব ও পারিপার্শ্বিক পরিবেশের সংঘাত আমাদের প্রত্যাশা ও সক্ষমতার মধ্যে দ্বন্দ্ব তৈরি করে, যা মানসিক চাপকে বাড়িয়ে তোলে।",
               );
 
               const stressFocus = yhLang(
                 "Identifying stress sources early helps us choose practical coping actions.",
-                "চাপের উৎস আগে শনাক্ত করতে পারলে বাস্তবসম্মত ব্যবস্থাপনা নেওয়া সহজ হয়।"
+                "চাপের উৎস আগে শনাক্ত করতে পারলে বাস্তবসম্মত ব্যবস্থাপনা নেওয়া সহজ হয়।",
               );
 
               const stressCauses = [
@@ -8691,7 +9661,7 @@ const coursesData = [
                   title: yhLang("Conflict", "কলহ"),
                   description: yhLang(
                     "Family, social, political, religious, and cultural conflicts can trigger stress.",
-                    "পারিবারিক, সামাজিক, রাজনৈতিক, ধর্মীয়, জাতিগত ও প্রথাগত ক্ষেত্রে সৃষ্ট কলহ মানসিক চাপ বাড়ায়।"
+                    "পারিবারিক, সামাজিক, রাজনৈতিক, ধর্মীয়, জাতিগত ও প্রথাগত ক্ষেত্রে সৃষ্ট কলহ মানসিক চাপ বাড়ায়।",
                   ),
                   icon: "fa-people-arrows-left-right",
                   tone: "danger",
@@ -8700,7 +9670,7 @@ const coursesData = [
                   title: yhLang("Education Pressure", "শিক্ষা"),
                   description: yhLang(
                     "Competition, poor support systems, financial limits, and comparison increase student stress.",
-                    "প্রতিযোগিতা, কাঙ্ক্ষিত ফল না পাওয়া, আর্থিক অস্বচ্ছলতা ও সহপাঠীদের সাথে তুলনা শিক্ষার্থীদের চাপ বাড়ায়।"
+                    "প্রতিযোগিতা, কাঙ্ক্ষিত ফল না পাওয়া, আর্থিক অস্বচ্ছলতা ও সহপাঠীদের সাথে তুলনা শিক্ষার্থীদের চাপ বাড়ায়।",
                   ),
                   icon: "fa-graduation-cap",
                   tone: "violet",
@@ -8709,7 +9679,7 @@ const coursesData = [
                   title: yhLang("Workload", "কর্মক্ষেত্র"),
                   description: yhLang(
                     "Excessive workload reduces productivity, confidence, and motivation.",
-                    "অতিরিক্ত কাজের চাপ উৎপাদনশীলতা, আত্মবিশ্বাস ও কাজের আগ্রহ কমিয়ে দেয়।"
+                    "অতিরিক্ত কাজের চাপ উৎপাদনশীলতা, আত্মবিশ্বাস ও কাজের আগ্রহ কমিয়ে দেয়।",
                   ),
                   icon: "fa-briefcase",
                   tone: "warn",
@@ -8718,7 +9688,7 @@ const coursesData = [
                   title: yhLang("Unemployment", "বেকারত্ব"),
                   description: yhLang(
                     "Lack of expected job opportunity can create long-term stress.",
-                    "প্রত্যাশিত কাজের সুযোগ না পাওয়া বা যোগ্যতার অসামঞ্জস্য মানসিক চাপ তৈরি করে।"
+                    "প্রত্যাশিত কাজের সুযোগ না পাওয়া বা যোগ্যতার অসামঞ্জস্য মানসিক চাপ তৈরি করে।",
                   ),
                   icon: "fa-user-clock",
                   tone: "slate",
@@ -8727,7 +9697,7 @@ const coursesData = [
                   title: yhLang("Environment", "পারিপার্শ্বিক"),
                   description: yhLang(
                     "Noise, air and water pollution, traffic, heat, and poor ventilation affect mental wellbeing.",
-                    "শব্দদূষণ, বায়ু/পানিদূষণ, যানজট, তীব্র আলো ও অপর্যাপ্ত বায়ুচলাচল মানসিক চাপ সৃষ্টি করে।"
+                    "শব্দদূষণ, বায়ু/পানিদূষণ, যানজট, তীব্র আলো ও অপর্যাপ্ত বায়ুচলাচল মানসিক চাপ সৃষ্টি করে।",
                   ),
                   icon: "fa-city",
                   tone: "sky",
@@ -8737,7 +9707,10 @@ const coursesData = [
               const stressDomainRows = [
                 {
                   area: yhLang("Family", "পরিবার"),
-                  stressor: yhLang("Relationship tension", "সম্পর্কের টানাপোড়েন"),
+                  stressor: yhLang(
+                    "Relationship tension",
+                    "সম্পর্কের টানাপোড়েন",
+                  ),
                   example: yhLang("Frequent arguments", "ঘন ঘন ঝগড়া"),
                 },
                 {
@@ -8758,18 +9731,72 @@ const coursesData = [
               ];
 
               const managementTips = [
-                { text: yhLang("Take a short walk", "বাইরে হাঁটতে যাওয়া"), icon: "fa-person-walking", tone: "info" },
-                { text: yhLang("Talk with trusted people", "বিশ্বস্ত মানুষের সাথে কথা বলা"), icon: "fa-people-group", tone: "success" },
-                { text: yhLang("Share your emotions", "মনের কথা শেয়ার করা"), icon: "fa-hand-holding-heart", tone: "peach" },
-                { text: yhLang("Read or listen to music", "বই পড়া বা গান শোনা"), icon: "fa-book-open", tone: "violet" },
-                { text: yhLang("Write a diary", "ডায়েরি লেখা"), icon: "fa-pen", tone: "accent" },
-                { text: yhLang("Exercise regularly", "নিয়মিত ব্যায়াম"), icon: "fa-person-running", tone: "sky" },
-                { text: yhLang("Freshen up", "হাত-মুখ ধোয়া বা গোসল"), icon: "fa-droplet", tone: "teal" },
-                { text: yhLang("Pray or meditate", "প্রার্থনা বা ধ্যান"), icon: "fa-hands-praying", tone: "mint" },
-                { text: yhLang("Sleep adequately", "পর্যাপ্ত ঘুমানো"), icon: "fa-moon", tone: "indigo" },
-                { text: yhLang("Spend time in nature", "প্রকৃতির কাছে সময়"), icon: "fa-leaf", tone: "sun" },
-                { text: yhLang("Deep breathing", "গভীর শ্বাস-প্রশ্বাস"), icon: "fa-lungs", tone: "cyan" },
-                { text: yhLang("Limit comparison", "অন্যের সাথে তুলনা কমানো"), icon: "fa-scale-balanced", tone: "amber" },
+                {
+                  text: yhLang("Take a short walk", "বাইরে হাঁটতে যাওয়া"),
+                  icon: "fa-person-walking",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "Talk with trusted people",
+                    "বিশ্বস্ত মানুষের সাথে কথা বলা",
+                  ),
+                  icon: "fa-people-group",
+                  tone: "success",
+                },
+                {
+                  text: yhLang("Share your emotions", "মনের কথা শেয়ার করা"),
+                  icon: "fa-hand-holding-heart",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang(
+                    "Read or listen to music",
+                    "বই পড়া বা গান শোনা",
+                  ),
+                  icon: "fa-book-open",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Write a diary", "ডায়েরি লেখা"),
+                  icon: "fa-pen",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang("Exercise regularly", "নিয়মিত ব্যায়াম"),
+                  icon: "fa-person-running",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Freshen up", "হাত-মুখ ধোয়া বা গোসল"),
+                  icon: "fa-droplet",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang("Pray or meditate", "প্রার্থনা বা ধ্যান"),
+                  icon: "fa-hands-praying",
+                  tone: "mint",
+                },
+                {
+                  text: yhLang("Sleep adequately", "পর্যাপ্ত ঘুমানো"),
+                  icon: "fa-moon",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang("Spend time in nature", "প্রকৃতির কাছে সময়"),
+                  icon: "fa-leaf",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang("Deep breathing", "গভীর শ্বাস-প্রশ্বাস"),
+                  icon: "fa-lungs",
+                  tone: "cyan",
+                },
+                {
+                  text: yhLang("Limit comparison", "অন্যের সাথে তুলনা কমানো"),
+                  icon: "fa-scale-balanced",
+                  tone: "amber",
+                },
               ];
 
               const renderCauseCards = (items) =>
@@ -8785,7 +9812,7 @@ const coursesData = [
                           <p class="m14l5-cause-desc">${item.description}</p>
                         </div>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -8798,7 +9825,7 @@ const coursesData = [
                         <td>${item.stressor}</td>
                         <td>${item.example}</td>
                       </tr>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -8810,7 +9837,7 @@ const coursesData = [
                         <span class="m14l5-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m14l5-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -8876,7 +9903,7 @@ const coursesData = [
                   id: "q14f",
                   question: yhLang(
                     "Which type of anger signal includes rapid heartbeat and muscle tension?",
-                    "কোন ধরনের রাগের সংকেতে দ্রুত হৃদস্পন্দন ও মাংসপেশির টান দেখা যায়?"
+                    "কোন ধরনের রাগের সংকেতে দ্রুত হৃদস্পন্দন ও মাংসপেশির টান দেখা যায়?",
                   ),
                   options: [
                     yhLang("শারীরিক সংকেত", "শারীরিক সংকেত"),
@@ -8891,58 +9918,189 @@ const coursesData = [
             content: (function () {
               const angerIntro = yhLang(
                 "Anger is a natural emotion that can range from mild irritation to intense reaction; awareness helps manage it safely.",
-                "রাগ হলো একটি স্বাভাবিক আবেগ, যা বিরক্তি থেকে তীব্র প্রতিক্রিয়া পর্যন্ত হতে পারে; সচেতনতা থাকলে এটি নিরাপদভাবে নিয়ন্ত্রণ করা যায়।"
+                "রাগ হলো একটি স্বাভাবিক আবেগ, যা বিরক্তি থেকে তীব্র প্রতিক্রিয়া পর্যন্ত হতে পারে; সচেতনতা থাকলে এটি নিরাপদভাবে নিয়ন্ত্রণ করা যায়।",
               );
 
               const preSignalIntro = yhLang(
                 "Early warning signs of anger allow us to pause, regulate, and avoid harm.",
-                "রাগের পূর্ব সংকেত আমাদের আগে থেকে থামতে, নিয়ন্ত্রণ নিতে এবং ক্ষতি এড়াতে সহায়তা করে।"
+                "রাগের পূর্ব সংকেত আমাদের আগে থেকে থামতে, নিয়ন্ত্রণ নিতে এবং ক্ষতি এড়াতে সহায়তা করে।",
               );
 
               const physicalSignals = [
-                { text: yhLang("Fast heartbeat", "হৃৎস্পন্দন বেড়ে যাওয়া"), icon: "fa-heart-pulse", tone: "danger" },
-                { text: yhLang("Chest pressure", "বুকে চাপ অনুভব করা"), icon: "fa-heart-crack", tone: "warn" },
-                { text: yhLang("Headache", "মাথা ব্যথা হওয়া"), icon: "fa-head-side-virus", tone: "amber" },
-                { text: yhLang("Frequent blinking", "চোখের পলক বেশি পড়া"), icon: "fa-eye", tone: "info" },
-                { text: yhLang("Muscle tension", "মাংসপেশিতে টান"), icon: "fa-dumbbell", tone: "slate" },
-                { text: yhLang("Sweating", "ঘাম হওয়া"), icon: "fa-droplets", tone: "teal" },
-                { text: yhLang("Breath shortness", "শ্বাসকষ্ট হওয়া"), icon: "fa-wind", tone: "sky" },
-                { text: yhLang("Body trembling", "শরীর কাঁপা"), icon: "fa-person", tone: "accent" },
+                {
+                  text: yhLang("Fast heartbeat", "হৃৎস্পন্দন বেড়ে যাওয়া"),
+                  icon: "fa-heart-pulse",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Chest pressure", "বুকে চাপ অনুভব করা"),
+                  icon: "fa-heart-crack",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Headache", "মাথা ব্যথা হওয়া"),
+                  icon: "fa-head-side-virus",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Frequent blinking", "চোখের পলক বেশি পড়া"),
+                  icon: "fa-eye",
+                  tone: "info",
+                },
+                {
+                  text: yhLang("Muscle tension", "মাংসপেশিতে টান"),
+                  icon: "fa-dumbbell",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Sweating", "ঘাম হওয়া"),
+                  icon: "fa-droplets",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang("Breath shortness", "শ্বাসকষ্ট হওয়া"),
+                  icon: "fa-wind",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Body trembling", "শরীর কাঁপা"),
+                  icon: "fa-person",
+                  tone: "accent",
+                },
               ];
 
               const emotionalSignals = [
-                { text: yhLang("Irritability", "বিরক্তিবোধ"), icon: "fa-face-frown", tone: "warn" },
-                { text: yhLang("Frustration", "হতাশা"), icon: "fa-cloud-rain", tone: "slate" },
-                { text: yhLang("Sadness", "বিষণ্নতা"), icon: "fa-face-sad-tear", tone: "violet" },
-                { text: yhLang("Jealousy", "হিংসা"), icon: "fa-eye", tone: "red" },
-                { text: yhLang("Insecurity", "নিরাপত্তাহীনতা"), icon: "fa-user-shield", tone: "sun" },
-                { text: yhLang("Feeling rejected", "অগ্রহণযোগ্যতা"), icon: "fa-user-xmark", tone: "danger" },
-                { text: yhLang("Mental exhaustion", "মানসিক অবসাদ"), icon: "fa-battery-quarter", tone: "peach" },
-                { text: yhLang("Fear", "ভয় পাওয়া"), icon: "fa-triangle-exclamation", tone: "amber" },
-                { text: yhLang("Feeling disrespected", "অসম্মানবোধ"), icon: "fa-hand", tone: "accent" },
-                { text: yhLang("Guilt", "অপরাধবোধ"), icon: "fa-scale-balanced", tone: "indigo" },
-                { text: yhLang("Shame", "লজ্জাবোধ"), icon: "fa-face-meh", tone: "mint" },
-                { text: yhLang("Future anxiety", "ভবিষ্যতের দুশ্চিন্তা"), icon: "fa-hourglass-half", tone: "info" },
+                {
+                  text: yhLang("Irritability", "বিরক্তিবোধ"),
+                  icon: "fa-face-frown",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Frustration", "হতাশা"),
+                  icon: "fa-cloud-rain",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Sadness", "বিষণ্নতা"),
+                  icon: "fa-face-sad-tear",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Jealousy", "হিংসা"),
+                  icon: "fa-eye",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Insecurity", "নিরাপত্তাহীনতা"),
+                  icon: "fa-user-shield",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang("Feeling rejected", "অগ্রহণযোগ্যতা"),
+                  icon: "fa-user-xmark",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Mental exhaustion", "মানসিক অবসাদ"),
+                  icon: "fa-battery-quarter",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Fear", "ভয় পাওয়া"),
+                  icon: "fa-triangle-exclamation",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Feeling disrespected", "অসম্মানবোধ"),
+                  icon: "fa-hand",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang("Guilt", "অপরাধবোধ"),
+                  icon: "fa-scale-balanced",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang("Shame", "লজ্জাবোধ"),
+                  icon: "fa-face-meh",
+                  tone: "mint",
+                },
+                {
+                  text: yhLang("Future anxiety", "ভবিষ্যতের দুশ্চিন্তা"),
+                  icon: "fa-hourglass-half",
+                  tone: "info",
+                },
               ];
 
               const cognitiveSignals = [
-                { text: yhLang("Negative self-talk", "নিজের সাথে নেতিবাচক কথা"), icon: "fa-comment-slash", tone: "slate" },
-                { text: yhLang("Aggressive thinking", "আক্রমণাত্মক মনোভাব"), icon: "fa-bolt", tone: "danger" },
-                { text: yhLang("Revenge thoughts", "প্রতিশোধপরায়ণতা"), icon: "fa-gavel", tone: "red" },
+                {
+                  text: yhLang("Negative self-talk", "নিজের সাথে নেতিবাচক কথা"),
+                  icon: "fa-comment-slash",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Aggressive thinking", "আক্রমণাত্মক মনোভাব"),
+                  icon: "fa-bolt",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Revenge thoughts", "প্রতিশোধপরায়ণতা"),
+                  icon: "fa-gavel",
+                  tone: "red",
+                },
               ];
 
               const behavioralSignals = [
-                { text: yhLang("Speaking too fast", "খুব দ্রুত কথা বলা"), icon: "fa-gauge-high", tone: "warn" },
-                { text: yhLang("Loud voice", "উচ্চ স্বরে কথা বলা"), icon: "fa-volume-high", tone: "amber" },
-                { text: yhLang("Shouting", "চিৎকার করা"), icon: "fa-bullhorn", tone: "danger" },
-                { text: yhLang("Hitting doors", "দরজায় জোরে আঘাত"), icon: "fa-door-open", tone: "red" },
-                { text: yhLang("Breaking objects", "ভাঙচুর করা"), icon: "fa-hammer", tone: "warn" },
-                { text: yhLang("Fighting", "মারামারি করা"), icon: "fa-hand-fist", tone: "danger" },
-                { text: yhLang("Avoiding situation", "পরিস্থিতি এড়িয়ে যাওয়া"), icon: "fa-route", tone: "sky" },
-                { text: yhLang("Silent withdrawal", "নীরব থাকা"), icon: "fa-volume-xmark", tone: "indigo" },
+                {
+                  text: yhLang("Speaking too fast", "খুব দ্রুত কথা বলা"),
+                  icon: "fa-gauge-high",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Loud voice", "উচ্চ স্বরে কথা বলা"),
+                  icon: "fa-volume-high",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Shouting", "চিৎকার করা"),
+                  icon: "fa-bullhorn",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Hitting doors", "দরজায় জোরে আঘাত"),
+                  icon: "fa-door-open",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Breaking objects", "ভাঙচুর করা"),
+                  icon: "fa-hammer",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Fighting", "মারামারি করা"),
+                  icon: "fa-hand-fist",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang(
+                    "Avoiding situation",
+                    "পরিস্থিতি এড়িয়ে যাওয়া",
+                  ),
+                  icon: "fa-route",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Silent withdrawal", "নীরব থাকা"),
+                  icon: "fa-volume-xmark",
+                  tone: "indigo",
+                },
               ];
 
-              const renderSignalList = (items, delayBase = 80, direction = "left") =>
+              const renderSignalList = (
+                items,
+                delayBase = 80,
+                direction = "left",
+              ) =>
                 items
                   .map(
                     (item, idx) => `
@@ -8950,11 +10108,18 @@ const coursesData = [
                         <span class="m14l6-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m14l6-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
-              const renderSignalCard = (title, icon, items, toneClass, delay, direction) => `
+              const renderSignalCard = (
+                title,
+                icon,
+                items,
+                toneClass,
+                delay,
+                direction,
+              ) => `
                 <article class="m14l6-card m14l6-card-signal ${toneClass}" data-aos="fade-up" data-aos-delay="${delay}">
                   <h3 class="m14l6-subtitle">
                     <i class="fa-solid ${icon}"></i>
@@ -9009,7 +10174,7 @@ const coursesData = [
             id: "ch14-lesson-7",
             title: yhLang(
               "Why We Get Angry Easily",
-              "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই"
+              "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই",
             ),
             icon: "fa-burst",
             gradientClass: "bg-gradient-crimson",
@@ -9021,12 +10186,15 @@ const coursesData = [
                   id: "q14g",
                   question: yhLang(
                     "Which situation from the lesson can quickly trigger anger?",
-                    "পাঠ অনুযায়ী কোন পরিস্থিতি আমাদের খুব সহজেই রাগান্বিত করতে পারে?"
+                    "পাঠ অনুযায়ী কোন পরিস্থিতি আমাদের খুব সহজেই রাগান্বিত করতে পারে?",
                   ),
                   options: [
                     yhLang("সামাজিক সমর্থনের অভাব", "সামাজিক সমর্থনের অভাব"),
                     yhLang("শান্ত ধ্যানের সময়", "শান্ত ধ্যানের সময়"),
-                    yhLang("ছুটির দিনে পর্যাপ্ত বিশ্রাম", "ছুটির দিনে পর্যাপ্ত বিশ্রাম"),
+                    yhLang(
+                      "ছুটির দিনে পর্যাপ্ত বিশ্রাম",
+                      "ছুটির দিনে পর্যাপ্ত বিশ্রাম",
+                    ),
                     yhLang("প্রিয় খাবার খাওয়া", "প্রিয় খাবার খাওয়া"),
                   ],
                   correctAnswer: 0,
@@ -9036,52 +10204,168 @@ const coursesData = [
             content: (function () {
               const angerContext = yhLang(
                 "Challenging behavior, lack of support, emotional instability, stress, and humiliation can quickly trigger anger.",
-                "চ্যালেঞ্জিং আচরণ, সামাজিক সমর্থনের অভাব, আবেগীয় বিশৃঙ্খলা, মানসিক আঘাত, মানসিক চাপ কিংবা অপমানকর আচরণ আমাদের খুব সহজেই রাগান্বিত করে।"
+                "চ্যালেঞ্জিং আচরণ, সামাজিক সমর্থনের অভাব, আবেগীয় বিশৃঙ্খলা, মানসিক আঘাত, মানসিক চাপ কিংবা অপমানকর আচরণ আমাদের খুব সহজেই রাগান্বিত করে।",
               );
 
               const angerFocus = yhLang(
                 "If goals are blocked, rights are denied, or we feel disrespected, anger intensity often rises fast.",
-                "লক্ষ্য পূরণে বাধা, অসম্মান বা অধিকার খর্ব হলে রাগের মাত্রা আরও বেড়ে যায়।"
+                "লক্ষ্য পূরণে বাধা, অসম্মান বা অধিকার খর্ব হলে রাগের মাত্রা আরও বেড়ে যায়।",
               );
 
               const angerTriggers = [
-                { text: yhLang("Negative or challenging behavior", "চ্যালেঞ্জিং বা নেতিবাচক আচরণ"), icon: "fa-triangle-exclamation", tone: "warn" },
-                { text: yhLang("Lack of social support", "সামাজিক সমর্থনের অভাব"), icon: "fa-people-group", tone: "slate" },
-                { text: yhLang("Emotional imbalance", "আবেগীয় বিশৃঙ্খলা"), icon: "fa-face-frown", tone: "violet" },
-                { text: yhLang("Traumatic experiences", "মানসিক আঘাতজনিত ঘটনা"), icon: "fa-burst", tone: "danger" },
-                { text: yhLang("Stress overload", "মানসিক চাপ"), icon: "fa-head-side-virus", tone: "amber" },
-                { text: yhLang("Insulting language", "আঘাত/অপমান করে কথা"), icon: "fa-comment-slash", tone: "red" },
-                { text: yhLang("Feeling threatened", "হুমকির সম্মুখীন হওয়া"), icon: "fa-shield-halved", tone: "danger" },
-                { text: yhLang("Goal frustration", "লক্ষ্যে বাধা পেয়ে হতাশা"), icon: "fa-road-block", tone: "info" },
-                { text: yhLang("Being disrespected", "অসম্মানিত হওয়া"), icon: "fa-user-xmark", tone: "peach" },
-                { text: yhLang("Rights being denied", "অধিকার খর্ব হওয়া"), icon: "fa-scale-balanced", tone: "accent" },
+                {
+                  text: yhLang(
+                    "Negative or challenging behavior",
+                    "চ্যালেঞ্জিং বা নেতিবাচক আচরণ",
+                  ),
+                  icon: "fa-triangle-exclamation",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang(
+                    "Lack of social support",
+                    "সামাজিক সমর্থনের অভাব",
+                  ),
+                  icon: "fa-people-group",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Emotional imbalance", "আবেগীয় বিশৃঙ্খলা"),
+                  icon: "fa-face-frown",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Traumatic experiences", "মানসিক আঘাতজনিত ঘটনা"),
+                  icon: "fa-burst",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Stress overload", "মানসিক চাপ"),
+                  icon: "fa-head-side-virus",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Insulting language", "আঘাত/অপমান করে কথা"),
+                  icon: "fa-comment-slash",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Feeling threatened", "হুমকির সম্মুখীন হওয়া"),
+                  icon: "fa-shield-halved",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Goal frustration", "লক্ষ্যে বাধা পেয়ে হতাশা"),
+                  icon: "fa-road-block",
+                  tone: "info",
+                },
+                {
+                  text: yhLang("Being disrespected", "অসম্মানিত হওয়া"),
+                  icon: "fa-user-xmark",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Rights being denied", "অধিকার খর্ব হওয়া"),
+                  icon: "fa-scale-balanced",
+                  tone: "accent",
+                },
               ];
 
               const angerDamages = [
-                { text: yhLang("Physical harm", "শারীরিক ক্ষতি"), icon: "fa-heart-crack", tone: "danger" },
-                { text: yhLang("Mental harm", "মানসিক ক্ষতি"), icon: "fa-brain", tone: "violet" },
-                { text: yhLang("Career setbacks", "পেশাগত ক্ষতি"), icon: "fa-briefcase", tone: "warn" },
-                { text: yhLang("Academic loss", "পড়ালেখার ক্ষতি"), icon: "fa-book-open", tone: "sky" },
-                { text: yhLang("Relationship damage", "সম্পর্কের ক্ষতি"), icon: "fa-people-arrows-left-right", tone: "red" },
-                { text: yhLang("Depressive mood", "বিষণ্নতায় ভোগা"), icon: "fa-cloud-rain", tone: "slate" },
-                { text: yhLang("Future anxiety", "ভবিষ্যৎ নিয়ে দুশ্চিন্তা"), icon: "fa-hourglass-half", tone: "indigo" },
-                { text: yhLang("Sleep disturbance", "ঘুমের সমস্যা"), icon: "fa-moon", tone: "accent" },
-                { text: yhLang("Substance risk", "নেশায় জড়িয়ে পড়া"), icon: "fa-flask-vial", tone: "amber" },
-                { text: yhLang("Repetitive harmful acts", "একই কাজ বারবার করা"), icon: "fa-repeat", tone: "teal" },
-                { text: yhLang("Self-harm risk", "আত্ম-ক্ষতির ঝুঁকি"), icon: "fa-bandage", tone: "danger" },
-                { text: yhLang("Blood pressure rise", "রক্তচাপ বেড়ে যাওয়া"), icon: "fa-heart-pulse", tone: "sun" },
+                {
+                  text: yhLang("Physical harm", "শারীরিক ক্ষতি"),
+                  icon: "fa-heart-crack",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Mental harm", "মানসিক ক্ষতি"),
+                  icon: "fa-brain",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Career setbacks", "পেশাগত ক্ষতি"),
+                  icon: "fa-briefcase",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang("Academic loss", "পড়ালেখার ক্ষতি"),
+                  icon: "fa-book-open",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Relationship damage", "সম্পর্কের ক্ষতি"),
+                  icon: "fa-people-arrows-left-right",
+                  tone: "red",
+                },
+                {
+                  text: yhLang("Depressive mood", "বিষণ্নতায় ভোগা"),
+                  icon: "fa-cloud-rain",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Future anxiety", "ভবিষ্যৎ নিয়ে দুশ্চিন্তা"),
+                  icon: "fa-hourglass-half",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang("Sleep disturbance", "ঘুমের সমস্যা"),
+                  icon: "fa-moon",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang("Substance risk", "নেশায় জড়িয়ে পড়া"),
+                  icon: "fa-flask-vial",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Repetitive harmful acts", "একই কাজ বারবার করা"),
+                  icon: "fa-repeat",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang("Self-harm risk", "আত্ম-ক্ষতির ঝুঁকি"),
+                  icon: "fa-bandage",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Blood pressure rise", "রক্তচাপ বেড়ে যাওয়া"),
+                  icon: "fa-heart-pulse",
+                  tone: "sun",
+                },
               ];
 
               const actionPoints = [
-                { text: yhLang("Pause before reacting", "প্রতিক্রিয়ার আগে বিরতি নিন"), icon: "fa-pause", tone: "info" },
-                { text: yhLang("Express feelings safely", "নিরাপদভাবে অনুভূতি প্রকাশ করুন"), icon: "fa-comment-dots", tone: "success" },
-                { text: yhLang("Use deep breathing", "গভীর শ্বাস-প্রশ্বাস নিন"), icon: "fa-lungs", tone: "teal" },
-                { text: yhLang("Seek trusted support", "বিশ্বস্ত সহায়তা নিন"), icon: "fa-handshake", tone: "mint" },
+                {
+                  text: yhLang(
+                    "Pause before reacting",
+                    "প্রতিক্রিয়ার আগে বিরতি নিন",
+                  ),
+                  icon: "fa-pause",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "Express feelings safely",
+                    "নিরাপদভাবে অনুভূতি প্রকাশ করুন",
+                  ),
+                  icon: "fa-comment-dots",
+                  tone: "success",
+                },
+                {
+                  text: yhLang("Use deep breathing", "গভীর শ্বাস-প্রশ্বাস নিন"),
+                  icon: "fa-lungs",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang("Seek trusted support", "বিশ্বস্ত সহায়তা নিন"),
+                  icon: "fa-handshake",
+                  tone: "mint",
+                },
               ];
 
               const reflectionText = yhLang(
                 "Unexpected situations can create rapid negative thoughts and increase anger. Timely regulation, respectful communication, and healthy coping can reduce harm.",
-                "অপ্রত্যাশিত ঘটনা ঘটলে নেতিবাচক চিন্তা দ্রুত বাড়ে এবং রাগ বেড়ে যায়। সময়মতো রাগ নিয়ন্ত্রণ, সম্মানজনক যোগাযোগ ও স্বাস্থ্যকর কৌশল গ্রহণ করলে ক্ষতি কমানো সম্ভব।"
+                "অপ্রত্যাশিত ঘটনা ঘটলে নেতিবাচক চিন্তা দ্রুত বাড়ে এবং রাগ বেড়ে যায়। সময়মতো রাগ নিয়ন্ত্রণ, সম্মানজনক যোগাযোগ ও স্বাস্থ্যকর কৌশল গ্রহণ করলে ক্ষতি কমানো সম্ভব।",
               );
 
               const renderList = (items, baseDelay = 80, direction = "left") =>
@@ -9092,7 +10376,7 @@ const coursesData = [
                         <span class="m14l7-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m14l7-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -9158,7 +10442,7 @@ const coursesData = [
             id: "ch14-lesson-8",
             title: yhLang(
               "Anger Management Techniques",
-              "রাগ ব্যবস্থাপনার কৌশল"
+              "রাগ ব্যবস্থাপনার কৌশল",
             ),
             icon: "fa-hand-holding-heart",
             gradientClass: "bg-gradient-teal",
@@ -9170,13 +10454,19 @@ const coursesData = [
                   id: "q14h",
                   question: yhLang(
                     "Which strategy involves pausing before reacting?",
-                    "কোন কৌশলটি প্রতিক্রিয়া প্রকাশের আগে একটু সময় নেওয়ার উপর গুরুত্ব দেয়?"
+                    "কোন কৌশলটি প্রতিক্রিয়া প্রকাশের আগে একটু সময় নেওয়ার উপর গুরুত্ব দেয়?",
                   ),
                   options: [
-                    yhLang("প্রতিক্রিয়ার আগে বিরতি", "প্রতিক্রিয়ার আগে বিরতি"),
+                    yhLang(
+                      "প্রতিক্রিয়ার আগে বিরতি",
+                      "প্রতিক্রিয়ার আগে বিরতি",
+                    ),
                     yhLang("পর্যাপ্ত ঘুম", "পর্যাপ্ত ঘুম"),
                     yhLang("নিয়মিত ব্যায়াম", "নিয়মিত ব্যায়াম"),
-                    yhLang("মনোচিকিৎসকের কাছে যাওয়া", "মনোচিকিৎসকের কাছে যাওয়া"),
+                    yhLang(
+                      "মনোচিকিৎসকের কাছে যাওয়া",
+                      "মনোচিকিৎসকের কাছে যাওয়া",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -9185,37 +10475,105 @@ const coursesData = [
             content: (function () {
               const intro = yhLang(
                 "Anger can be managed through pause techniques, breathing, movement, and supportive communication.",
-                "রাগকে নিয়ন্ত্রণে রাখতে সচেতন বিরতি, শ্বাস-প্রশ্বাস, শারীরিক ব্যায়াম ও পেশাদার সহায়তার মতো কৌশল কার্যকর ভূমিকা পালন করে।"
+                "রাগকে নিয়ন্ত্রণে রাখতে সচেতন বিরতি, শ্বাস-প্রশ্বাস, শারীরিক ব্যায়াম ও পেশাদার সহায়তার মতো কৌশল কার্যকর ভূমিকা পালন করে।",
               );
 
               const context = yhLang(
                 "Small daily practices reduce the harmful impact of anger and improve self-control.",
-                "ছোট ছোট ব্যবস্থাপনা কৌশল রাগের নেতিবাচক প্রভাব কমিয়ে আনে এবং আত্মনিয়ন্ত্রণ বাড়ায়।"
+                "ছোট ছোট ব্যবস্থাপনা কৌশল রাগের নেতিবাচক প্রভাব কমিয়ে আনে এবং আত্মনিয়ন্ত্রণ বাড়ায়।",
               );
 
               const immediateStrategies = [
-                { text: yhLang("Pause before reaction", "প্রতিক্রিয়া প্রকাশের আগে বিরতি"), icon: "fa-pause", tone: "info" },
-                { text: yhLang("Count slowly from 1 to 10", "১–১০ পর্যন্ত ধীরে ধীরে গুণুন"), icon: "fa-list-ol", tone: "accent" },
-                { text: yhLang("Use respectful words", "যুক্তিসঙ্গত ও সম্মানজনক কথা বলুন"), icon: "fa-comment-dots", tone: "success" },
-                { text: yhLang("Step away briefly", "পরিস্থিতি থেকে সাময়িক দূরে যান"), icon: "fa-person-walking-arrow-right", tone: "sky" },
-                { text: yhLang("Practice deep breathing", "গভীর শ্বাস-প্রশ্বাস অনুশীলন"), icon: "fa-lungs", tone: "teal" },
+                {
+                  text: yhLang(
+                    "Pause before reaction",
+                    "প্রতিক্রিয়া প্রকাশের আগে বিরতি",
+                  ),
+                  icon: "fa-pause",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "Count slowly from 1 to 10",
+                    "১–১০ পর্যন্ত ধীরে ধীরে গুণুন",
+                  ),
+                  icon: "fa-list-ol",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang(
+                    "Use respectful words",
+                    "যুক্তিসঙ্গত ও সম্মানজনক কথা বলুন",
+                  ),
+                  icon: "fa-comment-dots",
+                  tone: "success",
+                },
+                {
+                  text: yhLang(
+                    "Step away briefly",
+                    "পরিস্থিতি থেকে সাময়িক দূরে যান",
+                  ),
+                  icon: "fa-person-walking-arrow-right",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang(
+                    "Practice deep breathing",
+                    "গভীর শ্বাস-প্রশ্বাস অনুশীলন",
+                  ),
+                  icon: "fa-lungs",
+                  tone: "teal",
+                },
               ];
 
               const lifestyleStrategies = [
-                { text: yhLang("Sleep adequately", "পর্যাপ্ত ঘুম"), icon: "fa-moon", tone: "indigo" },
-                { text: yhLang("Write a journal", "ডায়েরি লেখা"), icon: "fa-pen", tone: "violet" },
-                { text: yhLang("Exercise regularly", "নিয়মিত ব্যায়াম"), icon: "fa-person-running", tone: "sun" },
-                { text: yhLang("Keep breathing routine", "নিয়মিত শ্বাস-প্রশ্বাস ব্যায়াম"), icon: "fa-wind", tone: "mint" },
+                {
+                  text: yhLang("Sleep adequately", "পর্যাপ্ত ঘুম"),
+                  icon: "fa-moon",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang("Write a journal", "ডায়েরি লেখা"),
+                  icon: "fa-pen",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang("Exercise regularly", "নিয়মিত ব্যায়াম"),
+                  icon: "fa-person-running",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang(
+                    "Keep breathing routine",
+                    "নিয়মিত শ্বাস-প্রশ্বাস ব্যায়াম",
+                  ),
+                  icon: "fa-wind",
+                  tone: "mint",
+                },
               ];
 
               const supportStrategies = [
-                { text: yhLang("Talk to trusted person", "বিশ্বস্ত কারো সাথে কথা বলুন"), icon: "fa-people-group", tone: "peach" },
-                { text: yhLang("Seek counselor when needed", "প্রয়োজনে মনোচিকিৎসকের সহায়তা নিন"), icon: "fa-user-doctor", tone: "danger" },
+                {
+                  text: yhLang(
+                    "Talk to trusted person",
+                    "বিশ্বস্ত কারো সাথে কথা বলুন",
+                  ),
+                  icon: "fa-people-group",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang(
+                    "Seek counselor when needed",
+                    "প্রয়োজনে মনোচিকিৎসকের সহায়তা নিন",
+                  ),
+                  icon: "fa-user-doctor",
+                  tone: "danger",
+                },
               ];
 
               const professionalNote = yhLang(
                 "Some anger-related problems cannot be managed alone; professional support can provide safer and better outcomes.",
-                "কিছু কিছু রাগ সম্পর্কিত সমস্যাগুলি নিজে নিজে ব্যবস্থাপনা সম্ভব হয় না। এমন ক্ষেত্রে পেশাদার মনোচিকিৎসকের সহায়তা নিলে উন্নত ফল পাওয়া যায় এবং নিরাপদে রাগ নিয়ন্ত্রণ সম্ভব হয়।"
+                "কিছু কিছু রাগ সম্পর্কিত সমস্যাগুলি নিজে নিজে ব্যবস্থাপনা সম্ভব হয় না। এমন ক্ষেত্রে পেশাদার মনোচিকিৎসকের সহায়তা নিলে উন্নত ফল পাওয়া যায় এবং নিরাপদে রাগ নিয়ন্ত্রণ সম্ভব হয়।",
               );
 
               const renderList = (items, baseDelay = 80, direction = "left") =>
@@ -9226,7 +10584,7 @@ const coursesData = [
                         <span class="m14l8-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m14l8-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -9301,12 +10659,15 @@ const coursesData = [
                   id: "q14i",
                   question: yhLang(
                     "Which of the following is a common symptom of exam fear?",
-                    "নিম্নের কোনটি পরীক্ষা-ভীতির সাধারণ উপসর্গ?"
+                    "নিম্নের কোনটি পরীক্ষা-ভীতির সাধারণ উপসর্গ?",
                   ),
                   options: [
                     yhLang("বুক ধড়ফড় করা", "বুক ধড়ফড় করা"),
                     yhLang("অতিরিক্ত ঘুম", "অতিরিক্ত ঘুম"),
-                    yhLang("পরীক্ষার কথা ভুলে যাওয়া", "পরীক্ষার কথা ভুলে যাওয়া"),
+                    yhLang(
+                      "পরীক্ষার কথা ভুলে যাওয়া",
+                      "পরীক্ষার কথা ভুলে যাওয়া",
+                    ),
                     yhLang("অনিয়ন্ত্রিত হাসি", "অনিয়ন্ত্রিত হাসি"),
                   ],
                   correctAnswer: 0,
@@ -9316,47 +10677,155 @@ const coursesData = [
             content: (function () {
               const examFearIntro = yhLang(
                 "A small amount of exam anxiety can motivate preparation, but excessive fear can block performance.",
-                "পরীক্ষাকে ঘিরে স্বাভাবিক উদ্বেগ শিক্ষার্থীদের প্রস্তুতিতে সহায়ক, তবে অতিরিক্ত ভয় কাঙ্ক্ষিত ফল অর্জনে বাধা দেয়।"
+                "পরীক্ষাকে ঘিরে স্বাভাবিক উদ্বেগ শিক্ষার্থীদের প্রস্তুতিতে সহায়ক, তবে অতিরিক্ত ভয় কাঙ্ক্ষিত ফল অর্জনে বাধা দেয়।",
               );
 
               const examFearDetails = yhLang(
                 "Exam fear may appear through physical and mental signs; early planning and coping practice can reduce it.",
-                "পরীক্ষার কথা শুনলেই বুক ধড়ফড়, ঘাম, হাত-পা ঠান্ডা হওয়া, বমি বমি ভাবসহ নানা লক্ষণ দেখা দিতে পারে। পরিকল্পিত প্রস্তুতি ও কৌশল অনুশীলনে এটি নিয়ন্ত্রণ করা যায়।"
+                "পরীক্ষার কথা শুনলেই বুক ধড়ফড়, ঘাম, হাত-পা ঠান্ডা হওয়া, বমি বমি ভাবসহ নানা লক্ষণ দেখা দিতে পারে। পরিকল্পিত প্রস্তুতি ও কৌশল অনুশীলনে এটি নিয়ন্ত্রণ করা যায়।",
               );
 
               const physicalSymptoms = [
-                { text: yhLang("Nausea or vomiting", "বমি বমি ভাব/বমি হওয়া"), icon: "fa-face-nauseated", tone: "warn" },
-                { text: yhLang("Loss of appetite", "খাওয়া-দাওয়া করতে না পারা"), icon: "fa-utensils", tone: "sun" },
-                { text: yhLang("Heart pounding", "বুক ধড়ফড় করা"), icon: "fa-heart-pulse", tone: "danger" },
-                { text: yhLang("Headache or dizziness", "মাথাব্যথা/মাথা ঘোরা"), icon: "fa-head-side-virus", tone: "amber" },
-                { text: yhLang("Blurred vision", "চোখে ঝাপসা দেখা"), icon: "fa-eye", tone: "sky" },
-                { text: yhLang("Sleep problems", "ঘুম না আসা"), icon: "fa-moon", tone: "indigo" },
-                { text: yhLang("Feeling unreal", "বাস্তবের সাথে সামঞ্জস্যহীনতা"), icon: "fa-cloud", tone: "slate" },
-                { text: yhLang("Cold hands and feet", "হাত-পা ঠান্ডা হয়ে আসা"), icon: "fa-snowflake", tone: "info" },
-                { text: yhLang("Frequent loose motion", "ঘনঘন পাতলা পায়খানা"), icon: "fa-toilet", tone: "peach" },
-                { text: yhLang("Fainting tendency", "মূর্ছা যাওয়া"), icon: "fa-person-falling", tone: "red" },
+                {
+                  text: yhLang("Nausea or vomiting", "বমি বমি ভাব/বমি হওয়া"),
+                  icon: "fa-face-nauseated",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang(
+                    "Loss of appetite",
+                    "খাওয়া-দাওয়া করতে না পারা",
+                  ),
+                  icon: "fa-utensils",
+                  tone: "sun",
+                },
+                {
+                  text: yhLang("Heart pounding", "বুক ধড়ফড় করা"),
+                  icon: "fa-heart-pulse",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Headache or dizziness", "মাথাব্যথা/মাথা ঘোরা"),
+                  icon: "fa-head-side-virus",
+                  tone: "amber",
+                },
+                {
+                  text: yhLang("Blurred vision", "চোখে ঝাপসা দেখা"),
+                  icon: "fa-eye",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang("Sleep problems", "ঘুম না আসা"),
+                  icon: "fa-moon",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang(
+                    "Feeling unreal",
+                    "বাস্তবের সাথে সামঞ্জস্যহীনতা",
+                  ),
+                  icon: "fa-cloud",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Cold hands and feet", "হাত-পা ঠান্ডা হয়ে আসা"),
+                  icon: "fa-snowflake",
+                  tone: "info",
+                },
+                {
+                  text: yhLang("Frequent loose motion", "ঘনঘন পাতলা পায়খানা"),
+                  icon: "fa-toilet",
+                  tone: "peach",
+                },
+                {
+                  text: yhLang("Fainting tendency", "মূর্ছা যাওয়া"),
+                  icon: "fa-person-falling",
+                  tone: "red",
+                },
               ];
 
               const mentalSymptoms = [
-                { text: yhLang("Cannot focus", "মনোযোগ দিতে না পারা"), icon: "fa-bullseye", tone: "violet" },
-                { text: yhLang("Losing concentration quickly", "অল্পতেই একাগ্রতা হারানো"), icon: "fa-brain", tone: "accent" },
-                { text: yhLang("Temporary memory block", "স্মৃতিশক্তি সাময়িক ব্যাহত হওয়া"), icon: "fa-memory", tone: "slate" },
-                { text: yhLang("Negative self-thoughts", "নেতিবাচক আত্মকথন"), icon: "fa-comment-slash", tone: "danger" },
-                { text: yhLang("Fear of failure", "ব্যর্থতার ভয়"), icon: "fa-triangle-exclamation", tone: "warn" },
+                {
+                  text: yhLang("Cannot focus", "মনোযোগ দিতে না পারা"),
+                  icon: "fa-bullseye",
+                  tone: "violet",
+                },
+                {
+                  text: yhLang(
+                    "Losing concentration quickly",
+                    "অল্পতেই একাগ্রতা হারানো",
+                  ),
+                  icon: "fa-brain",
+                  tone: "accent",
+                },
+                {
+                  text: yhLang(
+                    "Temporary memory block",
+                    "স্মৃতিশক্তি সাময়িক ব্যাহত হওয়া",
+                  ),
+                  icon: "fa-memory",
+                  tone: "slate",
+                },
+                {
+                  text: yhLang("Negative self-thoughts", "নেতিবাচক আত্মকথন"),
+                  icon: "fa-comment-slash",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang("Fear of failure", "ব্যর্থতার ভয়"),
+                  icon: "fa-triangle-exclamation",
+                  tone: "warn",
+                },
               ];
 
               const copingSteps = [
-                { text: yhLang("Revise regularly", "নিয়মিত পুনরাবৃত্তি"), icon: "fa-book-open", tone: "success" },
-                { text: yhLang("Maintain sleep schedule", "সঠিক ঘুম বজায় রাখা"), icon: "fa-bed", tone: "indigo" },
-                { text: yhLang("Eat balanced meals", "সুষম খাদ্য গ্রহণ"), icon: "fa-apple-whole", tone: "mint" },
-                { text: yhLang("Practice breathing exercise", "শ্বাস-প্রশ্বাস ব্যায়াম"), icon: "fa-lungs", tone: "teal" },
-                { text: yhLang("Use positive self-talk", "ইতিবাচক মানসিক প্রস্তুতি"), icon: "fa-face-smile", tone: "sky" },
-                { text: yhLang("Seek teacher/counselor support", "শিক্ষক/পরামর্শদাতার সহায়তা"), icon: "fa-user-graduate", tone: "peach" },
+                {
+                  text: yhLang("Revise regularly", "নিয়মিত পুনরাবৃত্তি"),
+                  icon: "fa-book-open",
+                  tone: "success",
+                },
+                {
+                  text: yhLang(
+                    "Maintain sleep schedule",
+                    "সঠিক ঘুম বজায় রাখা",
+                  ),
+                  icon: "fa-bed",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang("Eat balanced meals", "সুষম খাদ্য গ্রহণ"),
+                  icon: "fa-apple-whole",
+                  tone: "mint",
+                },
+                {
+                  text: yhLang(
+                    "Practice breathing exercise",
+                    "শ্বাস-প্রশ্বাস ব্যায়াম",
+                  ),
+                  icon: "fa-lungs",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang(
+                    "Use positive self-talk",
+                    "ইতিবাচক মানসিক প্রস্তুতি",
+                  ),
+                  icon: "fa-face-smile",
+                  tone: "sky",
+                },
+                {
+                  text: yhLang(
+                    "Seek teacher/counselor support",
+                    "শিক্ষক/পরামর্শদাতার সহায়তা",
+                  ),
+                  icon: "fa-user-graduate",
+                  tone: "peach",
+                },
               ];
 
               const copingNote = yhLang(
                 "If exam anxiety rises significantly, timely support from counselor or teacher is important.",
-                "যাদের ক্ষেত্রে সমস্যা বাড়ে, তারা পরামর্শদাতা বা শিক্ষকের সহায়তা নিলে দ্রুত উন্নতি সম্ভব।"
+                "যাদের ক্ষেত্রে সমস্যা বাড়ে, তারা পরামর্শদাতা বা শিক্ষকের সহায়তা নিলে দ্রুত উন্নতি সম্ভব।",
               );
 
               const renderList = (items, baseDelay = 80, direction = "left") =>
@@ -9367,7 +10836,7 @@ const coursesData = [
                         <span class="m14l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m14l9-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -9433,7 +10902,7 @@ const coursesData = [
             id: "ch14-lesson-10",
             title: yhLang(
               "Solutions to Exam Fear",
-              "পরীক্ষা-ভীতি দূর করার উপায়"
+              "পরীক্ষা-ভীতি দূর করার উপায়",
             ),
             icon: "fa-pen-to-square",
             gradientClass: "bg-gradient-emerald",
@@ -9445,10 +10914,13 @@ const coursesData = [
                   id: "q14j",
                   question: yhLang(
                     "Which strategy focuses on gathering accurate exam details?",
-                    "কোন কৌশলটি পরীক্ষার সঠিক তথ্য সংগ্রহের উপর জোর দেয়?"
+                    "কোন কৌশলটি পরীক্ষার সঠিক তথ্য সংগ্রহের উপর জোর দেয়?",
                   ),
                   options: [
-                    yhLang("Exam related information", "পরীক্ষা সংক্রান্ত তথ্য সংগ্রহ"),
+                    yhLang(
+                      "Exam related information",
+                      "পরীক্ষা সংক্রান্ত তথ্য সংগ্রহ",
+                    ),
                     yhLang("Group study", "দলবদ্ধ পড়াশোনা"),
                     yhLang("পর্যাপ্ত ঘুম", "পর্যাপ্ত ঘুম"),
                     yhLang("Positive mindset", "ইতিবাচক মনোভাব"),
@@ -9460,14 +10932,14 @@ const coursesData = [
             content: (function () {
               const intro = yhLang(
                 "Exam fear is reduced through informed planning, smart study habits, healthy routines, and supportive mindset.",
-                "পরীক্ষা-ভীতি দূর করতে তথ্যভিত্তিক প্রস্তুতি, কার্যকর অধ্যয়ন, দলগত সমর্থন, স্বাস্থ্যকর জীবনযাপন ও ইতিবাচক মনোভাব গুরুত্বপূর্ণ ভূমিকা রাখে।"
+                "পরীক্ষা-ভীতি দূর করতে তথ্যভিত্তিক প্রস্তুতি, কার্যকর অধ্যয়ন, দলগত সমর্থন, স্বাস্থ্যকর জীবনযাপন ও ইতিবাচক মনোভাব গুরুত্বপূর্ণ ভূমিকা রাখে।",
               );
 
               const examPlanSteps = [
                 {
                   text: yhLang(
                     "Collect exam date, routine, syllabus, and instructions clearly.",
-                    "পরীক্ষার তারিখ, সময়সূচি, রুটিন, সিলেবাস ও নির্দেশনা সঠিকভাবে সংগ্রহ করুন।"
+                    "পরীক্ষার তারিখ, সময়সূচি, রুটিন, সিলেবাস ও নির্দেশনা সঠিকভাবে সংগ্রহ করুন।",
                   ),
                   icon: "fa-calendar-check",
                   tone: "info",
@@ -9475,7 +10947,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Create a realistic daily and weekly plan.",
-                    "দৈনিক ও সাপ্তাহিক বাস্তবসম্মত প্রস্তুতি পরিকল্পনা তৈরি করুন।"
+                    "দৈনিক ও সাপ্তাহিক বাস্তবসম্মত প্রস্তুতি পরিকল্পনা তৈরি করুন।",
                   ),
                   icon: "fa-list-check",
                   tone: "accent",
@@ -9483,7 +10955,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Prioritize difficult topics with more time.",
-                    "কঠিন বিষয়কে বেশি সময় দিয়ে অগ্রাধিকার দিন।"
+                    "কঠিন বিষয়কে বেশি সময় দিয়ে অগ্রাধিকার দিন।",
                   ),
                   icon: "fa-layer-group",
                   tone: "warn",
@@ -9491,7 +10963,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Practice with previous questions and timed sessions.",
-                    "পূর্ববর্তী প্রশ্ন ও সময় ধরে অনুশীলন করুন।"
+                    "পূর্ববর্তী প্রশ্ন ও সময় ধরে অনুশীলন করুন।",
                   ),
                   icon: "fa-stopwatch",
                   tone: "sky",
@@ -9502,7 +10974,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Use active learning: explain, discuss, and teach peers.",
-                    "সক্রিয়ভাবে শিখুন: ব্যাখ্যা করা, আলোচনা করা ও সহপাঠীকে শেখানো।"
+                    "সক্রিয়ভাবে শিখুন: ব্যাখ্যা করা, আলোচনা করা ও সহপাঠীকে শেখানো।",
                   ),
                   icon: "fa-people-group",
                   tone: "success",
@@ -9510,7 +10982,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Group study with focused question-answer rounds.",
-                    "দলগত পড়াশোনায় প্রশ্ন-উত্তর ভিত্তিক অনুশীলন করুন।"
+                    "দলগত পড়াশোনায় প্রশ্ন-উত্তর ভিত্তিক অনুশীলন করুন।",
                   ),
                   icon: "fa-users-between-lines",
                   tone: "mint",
@@ -9518,7 +10990,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Sleep 7-8 hours and eat balanced meals.",
-                    "৭-৮ ঘণ্টা ঘুম ও সুষম খাদ্য নিশ্চিত করুন।"
+                    "৭-৮ ঘণ্টা ঘুম ও সুষম খাদ্য নিশ্চিত করুন।",
                   ),
                   icon: "fa-bed",
                   tone: "indigo",
@@ -9526,7 +10998,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Stay hydrated and include light exercise.",
-                    "পর্যাপ্ত পানি পান করুন এবং হালকা ব্যায়াম করুন।"
+                    "পর্যাপ্ত পানি পান করুন এবং হালকা ব্যায়াম করুন।",
                   ),
                   icon: "fa-person-running",
                   tone: "teal",
@@ -9537,7 +11009,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Identify the real cause of anxiety before reacting.",
-                    "প্রতিক্রিয়া দেওয়ার আগে দুশ্চিন্তার আসল কারণ শনাক্ত করুন।"
+                    "প্রতিক্রিয়া দেওয়ার আগে দুশ্চিন্তার আসল কারণ শনাক্ত করুন।",
                   ),
                   icon: "fa-magnifying-glass",
                   tone: "peach",
@@ -9545,7 +11017,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Do not define your life by one exam result.",
-                    "একটি পরীক্ষার ফলাফল দিয়ে পুরো জীবনকে বিচার করবেন না।"
+                    "একটি পরীক্ষার ফলাফল দিয়ে পুরো জীবনকে বিচার করবেন না।",
                   ),
                   icon: "fa-scale-balanced",
                   tone: "sun",
@@ -9553,7 +11025,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Use positive self-talk and calm breathing.",
-                    "ইতিবাচক আত্মকথন ও শান্ত শ্বাস-প্রশ্বাস অনুশীলন করুন।"
+                    "ইতিবাচক আত্মকথন ও শান্ত শ্বাস-প্রশ্বাস অনুশীলন করুন।",
                   ),
                   icon: "fa-face-smile",
                   tone: "violet",
@@ -9561,7 +11033,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Seek teacher/counselor support if fear remains high.",
-                    "ভয় বেশি থাকলে শিক্ষক/পরামর্শদাতার সহায়তা নিন।"
+                    "ভয় বেশি থাকলে শিক্ষক/পরামর্শদাতার সহায়তা নিন।",
                   ),
                   icon: "fa-user-graduate",
                   tone: "danger",
@@ -9576,7 +11048,7 @@ const coursesData = [
                         <span class="m14l10-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m14l10-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -9642,7 +11114,7 @@ const coursesData = [
         id: "ch-15",
         title: yhLang(
           "Module-15: Violence Related to Adolescents",
-          "মডিউল-১৫: তারুণ্যীন মানসিক স্বাস্থ্য সমস্যা ও সমাধানের উপায়"
+          "মডিউল-১৫: তারুণ্যীন মানসিক স্বাস্থ্য সমস্যা ও সমাধানের উপায়",
         ),
         lessons: [
           {
@@ -9658,12 +11130,21 @@ const coursesData = [
                   id: "q15a",
                   question: yhLang(
                     "According to the lesson, what does mental health help a person do?",
-                    "এই পাঠ অনুযায়ী মানসিক স্বাস্থ্য একজন মানুষকে কী করতে সহায়তা করে?"
+                    "এই পাঠ অনুযায়ী মানসিক স্বাস্থ্য একজন মানুষকে কী করতে সহায়তা করে?",
                   ),
                   options: [
-                    yhLang("দৈনন্দিন চাপের সাথে মানিয়ে চলতে", "দৈনন্দিন চাপের সাথে মানিয়ে চলতে"),
-                    yhLang("সমস্ত আবেগ লুকিয়ে রাখতে", "সমস্ত আবেগ লুকিয়ে রাখতে"),
-                    yhLang("সম্পূর্ণ নিঃসঙ্গ হয়ে থাকতে", "সম্পূর্ণ নিঃসঙ্গ হয়ে থাকতে"),
+                    yhLang(
+                      "দৈনন্দিন চাপের সাথে মানিয়ে চলতে",
+                      "দৈনন্দিন চাপের সাথে মানিয়ে চলতে",
+                    ),
+                    yhLang(
+                      "সমস্ত আবেগ লুকিয়ে রাখতে",
+                      "সমস্ত আবেগ লুকিয়ে রাখতে",
+                    ),
+                    yhLang(
+                      "সম্পূর্ণ নিঃসঙ্গ হয়ে থাকতে",
+                      "সম্পূর্ণ নিঃসঙ্গ হয়ে থাকতে",
+                    ),
                     yhLang("সমাজ থেকে দূরে থাকতে", "সমাজ থেকে দূরে থাকতে"),
                   ],
                   correctAnswer: 0,
@@ -9687,15 +11168,18 @@ const coursesData = [
                 },
                 {
                   title: "আত্মসম্মানবোধ বজায় রাখা",
-                  detail: "নিজের মর্যাদাবোধ অটুট থাকে এবং নিজেকে মূল্যবান মনে করে।",
+                  detail:
+                    "নিজের মর্যাদাবোধ অটুট থাকে এবং নিজেকে মূল্যবান মনে করে।",
                 },
                 {
                   title: "পরিস্থিতির সাথে খাপ খাওয়ানো",
-                  detail: "বিভিন্ন নতুন বা চ্যালেঞ্জিং পরিস্থিতিতে নমনীয়ভাবে মানিয়ে নিতে পারে।",
+                  detail:
+                    "বিভিন্ন নতুন বা চ্যালেঞ্জিং পরিস্থিতিতে নমনীয়ভাবে মানিয়ে নিতে পারে।",
                 },
                 {
                   title: "সম্পর্ক বজায় রাখা",
-                  detail: "অন্যের সাথে দীর্ঘস্থায়ী ও ফলপ্রসূ সম্পর্ক গড়ে তুলতে সক্ষম হয়।",
+                  detail:
+                    "অন্যের সাথে দীর্ঘস্থায়ী ও ফলপ্রসূ সম্পর্ক গড়ে তুলতে সক্ষম হয়।",
                 },
                 {
                   title: "সমাজে কার্যকর ভূমিকা",
@@ -9735,7 +11219,7 @@ const coursesData = [
                           </div>
                         </article>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -9759,7 +11243,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-brain")}<span>${yhLang(
                     "Foundations of mental health",
-                    "মানসিক স্বাস্থ্য"
+                    "মানসিক স্বাস্থ্য",
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card m16-definition" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.85); border-radius: 1rem;">
@@ -9769,7 +11253,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3 m16-info" data-aos="fade-up" data-aos-delay="70" style="background: rgba(255,255,255,.85); border-radius: 1rem;">
                     <h3 class="h6 text-uppercase text-muted mb-3 m16-subheading">${headingIcon("fa-list-check")}<span>${yhLang(
                       "মানসিক সুস্থতার বৈশিষ্ট্যসমূহ",
-                      "মানসিক সুস্থতার বৈশিষ্ট্যসমূহ"
+                      "মানসিক সুস্থতার বৈশিষ্ট্যসমূহ",
                     )}</span></h3>
                     <div class="row g-4">
                       ${renderTraits(wellBeingTraits)}
@@ -9783,7 +11267,7 @@ const coursesData = [
             id: "ch15-lesson-2",
             title: yhLang(
               "Adolescent Mental Health",
-              "তরুন-তরুনীদের জন্য মানসিক স্বাস্থ্য"
+              "তরুন-তরুনীদের জন্য মানসিক স্বাস্থ্য",
             ),
             icon: "fa-children",
             gradientClass: "bg-gradient-rose",
@@ -9795,7 +11279,7 @@ const coursesData = [
                   id: "q15b",
                   question: yhLang(
                     "According to WHO 2019, what fraction of people live with a mental disorder?",
-                    "WHO ২০১৯ অনুযায়ী কতজন মানুষ কোনো না কোনো মানসিক সমস্যায় ভোগে?"
+                    "WHO ২০১৯ অনুযায়ী কতজন মানুষ কোনো না কোনো মানসিক সমস্যায় ভোগে?",
                   ),
                   options: [
                     yhLang("প্রতি ৫ জনে ১ জন", "প্রতি ৫ জনে ১ জন"),
@@ -9845,41 +11329,51 @@ const coursesData = [
               `;
 
               const detectTone = (text, idx) => {
-                if (/মৃত্যু|আত্মহত্যা|ক্ষতি/.test(text)) return { tone: "warning", icon: "fa-triangle-exclamation" };
-                if (/অসুস্থতা|সমস্যা|বিষণ্নতা/.test(text)) return { tone: "danger", icon: "fa-heart-crack" };
-                if (/স্বাস্থ্য|জীবনযাত্রা|প্রভাব/.test(text)) return { tone: "info", icon: "fa-circle-info" };
-                const fallback = ["fa-check", "fa-chart-line", "fa-shield-heart", "fa-seedling"];
-                return { tone: "success", icon: fallback[idx % fallback.length] };
+                if (/মৃত্যু|আত্মহত্যা|ক্ষতি/.test(text))
+                  return { tone: "warning", icon: "fa-triangle-exclamation" };
+                if (/অসুস্থতা|সমস্যা|বিষণ্নতা/.test(text))
+                  return { tone: "danger", icon: "fa-heart-crack" };
+                if (/স্বাস্থ্য|জীবনযাত্রা|প্রভাব/.test(text))
+                  return { tone: "info", icon: "fa-circle-info" };
+                const fallback = [
+                  "fa-check",
+                  "fa-chart-line",
+                  "fa-shield-heart",
+                  "fa-seedling",
+                ];
+                return {
+                  tone: "success",
+                  icon: fallback[idx % fallback.length],
+                };
               };
 
               const renderStats = (items) =>
                 items
                   .map(
                     (item, idx) => `
-                      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="${70 +
-                        idx * 20}">
+                      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="${
+                        70 + idx * 20
+                      }">
                         <article class="glass-card p-4 h-100 shadow-sm text-center m16-stat-card m16-stat-${idx + 1}">
                           <p class="display-6 fw-bold gradient-text mb-2">${item.value}</p>
                           <p class="mb-0 small">${item.label}</p>
                         </article>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
               const renderList = (items) =>
                 items
-                  .map(
-                    (item, idx) => {
-                      const meta = detectTone(item, idx);
-                      return `
+                  .map((item, idx) => {
+                    const meta = detectTone(item, idx);
+                    return `
                       <li class="m16-context-item m16-${meta.tone}">
                         <i class="fa-solid ${meta.icon}"></i>
                         <span>${item}</span>
                       </li>
                     `;
-                    }
-                  )
+                  })
                   .join("");
 
               return `
@@ -9906,7 +11400,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-children")}<span>${yhLang(
                     "Mental health for adolescents",
-                    "তরুন-তরুনীদের জন্য মানসিক স্বাস্থ্য"
+                    "তরুন-তরুনীদের জন্য মানসিক স্বাস্থ্য",
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.88); border-radius: 1rem; box-shadow: 12px 12px 24px -18px rgba(79, 70, 229, .45);">
@@ -9917,7 +11411,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70" style="background: rgba(255,255,255,.88); border-radius: 1rem; box-shadow: -12px 14px 24px -18px rgba(236, 72, 153, .4);">
                     <h3 class="h6 text-uppercase text-muted mb-3 m16-subheading">${headingIcon("fa-chart-column")}<span>${yhLang(
                       "বিশ্বস্বাস্থ্য সংস্থার তথ্য (২০১৯)",
-                      "বিশ্বস্বাস্থ্য সংস্থার তথ্য (২০১৯)"
+                      "বিশ্বস্বাস্থ্য সংস্থার তথ্য (২০১৯)",
                     )}</span></h3>
                     <div class="row g-4">
                       ${renderStats(whoStats)}
@@ -9927,7 +11421,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="100" style="background: rgba(255,255,255,.88); border-radius: 1rem; box-shadow: 0 14px 26px -20px rgba(14, 116, 144, .55);">
                     <h3 class="h6 text-uppercase text-muted mb-3 m16-subheading">${headingIcon("fa-triangle-exclamation")}<span>${yhLang(
                       "কৈশোরের মানসিক স্বাস্থ্য প্রভাব",
-                      "কৈশোরের মানসিক স্বাস্থ্য প্রভাব"
+                      "কৈশোরের মানসিক স্বাস্থ্য প্রভাব",
                     )}</span></h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(adolescentImpacts)}
@@ -9941,7 +11435,7 @@ const coursesData = [
             id: "ch15-lesson-3",
             title: yhLang(
               "Childhood and Adolescent Mental Issues",
-              "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ"
+              "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ",
             ),
             icon: "fa-child",
             gradientClass: "bg-gradient-amber",
@@ -9953,11 +11447,14 @@ const coursesData = [
                   id: "q15c",
                   question: yhLang(
                     "What is it called when a child over five frequently urinates in bed or clothes?",
-                    "পাঁচ বছরের বেশি বয়সী শিশু বারবার বিছানায় বা জামায় প্রস্রাব করলে তাকে কী বলা হয়?"
+                    "পাঁচ বছরের বেশি বয়সী শিশু বারবার বিছানায় বা জামায় প্রস্রাব করলে তাকে কী বলা হয়?",
                   ),
                   options: [
                     yhLang("ইনিউরেসিস (Enuresis)", "ইনিউরেসিস (Enuresis)"),
-                    yhLang("এনকোপ্রেসিস (Encopresis)", "এনকোপ্রেসিস (Encopresis)"),
+                    yhLang(
+                      "এনকোপ্রেসিস (Encopresis)",
+                      "এনকোপ্রেসিস (Encopresis)",
+                    ),
                     yhLang("ADHD", "ADHD"),
                     yhLang("বিচ্ছিন্নতার ভয়", "বিচ্ছিন্নতার ভয়"),
                   ],
@@ -10007,12 +11504,13 @@ const coursesData = [
                 items
                   .map(
                     (item, idx) => `
-                      <article class="glass-card p-4 h-100 shadow-sm m16-disorder-card m16-${sectionMeta[idx % sectionMeta.length].cls}" data-aos="fade-up" data-aos-delay="${60 +
-                        idx * 30}">
+                      <article class="glass-card p-4 h-100 shadow-sm m16-disorder-card m16-${sectionMeta[idx % sectionMeta.length].cls}" data-aos="fade-up" data-aos-delay="${
+                        60 + idx * 30
+                      }">
                         <h3 class="h6 gradient-text mb-2 m16-subheading">${headingIcon(sectionMeta[idx % sectionMeta.length].icon)}<span>${item.title}</span></h3>
                         <p class="mb-0">${item.description}</p>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -10034,7 +11532,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-child-reaching")}<span>${yhLang(
                     "Common childhood mental issues",
-                    "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ"
+                    "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ",
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card m16-definition" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem;">
@@ -10054,7 +11552,7 @@ const coursesData = [
             id: "ch15-lesson-4",
             title: yhLang(
               "Childhood Behavioral Issues",
-              "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ"
+              "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ",
             ),
             icon: "fa-people-arrows",
             gradientClass: "bg-gradient-crimson",
@@ -10066,7 +11564,7 @@ const coursesData = [
                   id: "q15d",
                   question: yhLang(
                     "Which disorder features persistent rule-breaking and aggression?",
-                    "কোন সমস্যায় সামাজিক নিয়ম ভাঙা ও আক্রমণাত্মক আচরণ দেখা যায়?"
+                    "কোন সমস্যায় সামাজিক নিয়ম ভাঙা ও আক্রমণাত্মক আচরণ দেখা যায়?",
                   ),
                   options: [
                     yhLang("কন্ডাক্ট ডিসঅর্ডার", "কন্ডাক্ট ডিসঅর্ডার"),
@@ -10111,24 +11609,30 @@ const coursesData = [
               ];
 
               const toneFor = (text, idx) => {
-                if (/আক্রমণাত্মক|অপরাধ|চুরি|নেশা/.test(text)) return { tone: "danger", icon: iconPool[idx % iconPool.length] };
-                if (/ক্ষতি|ভঙ্গ|পালিয়ে/.test(text)) return { tone: "warning", icon: iconPool[idx % iconPool.length] };
+                if (/আক্রমণাত্মক|অপরাধ|চুরি|নেশা/.test(text))
+                  return {
+                    tone: "danger",
+                    icon: iconPool[idx % iconPool.length],
+                  };
+                if (/ক্ষতি|ভঙ্গ|পালিয়ে/.test(text))
+                  return {
+                    tone: "warning",
+                    icon: iconPool[idx % iconPool.length],
+                  };
                 return { tone: "info", icon: iconPool[idx % iconPool.length] };
               };
 
               const renderList = (items) =>
                 items
-                  .map(
-                    (item, idx) => {
-                      const meta = toneFor(item, idx);
-                      return `
+                  .map((item, idx) => {
+                    const meta = toneFor(item, idx);
+                    return `
                       <li class="m16-conduct-item m16-${meta.tone}">
                         <i class="fa-solid ${meta.icon}"></i>
                         <span>${item}</span>
                       </li>
                     `;
-                    }
-                  )
+                  })
                   .join("");
 
               return `
@@ -10149,7 +11653,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-people-arrows-left-right")}<span>${yhLang(
                     "Behavioral mental health issues",
-                    "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ"
+                    "শৈশব ও তারুণ্যীন মানসিক সমস্যাসমূহ",
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem; box-shadow: 12px 14px 24px -18px rgba(190, 24, 93, .45);">
@@ -10159,7 +11663,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70" style="background: rgba(255,255,255,.9); border-radius: 1rem; box-shadow: -12px 14px 24px -18px rgba(147, 51, 234, .4);">
                     <h3 class="h6 text-uppercase text-muted mb-3 m16-subheading">${headingIcon("fa-list-ul")}<span>${yhLang(
                       "কন্ডাক্ট ডিসঅর্ডারের আচরণ",
-                      "কন্ডাক্ট ডিসঅর্ডারের আচরণ"
+                      "কন্ডাক্ট ডিসঅর্ডারের আচরণ",
                     )}</span></h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(conductBehaviors)}
@@ -10173,7 +11677,7 @@ const coursesData = [
             id: "ch15-lesson-5",
             title: yhLang(
               "Autism Spectrum Disorder",
-              "অটিজম স্পেকট্রাম ডিসঅর্ডার"
+              "অটিজম স্পেকট্রাম ডিসঅর্ডার",
             ),
             icon: "fa-puzzle-piece",
             gradientClass: "bg-gradient-teal",
@@ -10185,10 +11689,13 @@ const coursesData = [
                   id: "q15e",
                   question: yhLang(
                     "Which core areas do autism symptoms primarily affect?",
-                    "অটিজমের লক্ষণ প্রধানত কোন ক্ষেত্রগুলোকে প্রভাবিত করে?"
+                    "অটিজমের লক্ষণ প্রধানত কোন ক্ষেত্রগুলোকে প্রভাবিত করে?",
                   ),
                   options: [
-                    yhLang("সামাজিক মিথস্ক্রিয়া, যোগাযোগ ও আচরণ", "সামাজিক মিথস্ক্রিয়া, যোগাযোগ ও আচরণ"),
+                    yhLang(
+                      "সামাজিক মিথস্ক্রিয়া, যোগাযোগ ও আচরণ",
+                      "সামাজিক মিথস্ক্রিয়া, যোগাযোগ ও আচরণ",
+                    ),
                     yhLang("শুধু শারীরিক শক্তি", "শুধু শারীরিক শক্তি"),
                     yhLang("শুধু খাদ্যাভ্যাস", "শুধু খাদ্যাভ্যাস"),
                     yhLang("শুধু ঘুম", "শুধু ঘুম"),
@@ -10268,8 +11775,7 @@ const coursesData = [
                 },
                 {
                   title: "আচরণগত পুনরাবৃত্তি",
-                  description:
-                    "একই কাজ বা আচরণ বারবার করে।",
+                  description: "একই কাজ বা আচরণ বারবার করে।",
                 },
               ];
 
@@ -10277,20 +11783,39 @@ const coursesData = [
                 <span class="m16-heading-icon" aria-hidden="true"><i class="fa-solid ${iconClass}"></i></span>
               `;
 
-              const listIconPool = ["fa-eye", "fa-face-meh", "fa-user-group", "fa-puzzle-piece", "fa-comments", "fa-volume-high", "fa-language", "fa-repeat"];
+              const listIconPool = [
+                "fa-eye",
+                "fa-face-meh",
+                "fa-user-group",
+                "fa-puzzle-piece",
+                "fa-comments",
+                "fa-volume-high",
+                "fa-language",
+                "fa-repeat",
+              ];
 
               const toneForItem = (text, idx) => {
-                if (/সমস্যা|অভাব|ঘাটতি|অঝুঁকি/.test(text)) return { tone: "warning", icon: listIconPool[idx % listIconPool.length] };
-                if (/পুনরাবৃত্তি|সংবেদনশীলতা|রুটিন/.test(text)) return { tone: "info", icon: listIconPool[idx % listIconPool.length] };
-                return { tone: "success", icon: listIconPool[idx % listIconPool.length] };
+                if (/সমস্যা|অভাব|ঘাটতি|অঝুঁকি/.test(text))
+                  return {
+                    tone: "warning",
+                    icon: listIconPool[idx % listIconPool.length],
+                  };
+                if (/পুনরাবৃত্তি|সংবেদনশীলতা|রুটিন/.test(text))
+                  return {
+                    tone: "info",
+                    icon: listIconPool[idx % listIconPool.length],
+                  };
+                return {
+                  tone: "success",
+                  icon: listIconPool[idx % listIconPool.length],
+                };
               };
 
               const renderDetailedList = (items) =>
                 items
-                  .map(
-                    (item, idx) => {
-                      const meta = toneForItem(item.title, idx);
-                      return `
+                  .map((item, idx) => {
+                    const meta = toneForItem(item.title, idx);
+                    return `
                       <li class="m16-autism-item m16-${meta.tone}">
                         <i class="fa-solid ${meta.icon}"></i>
                         <div>
@@ -10299,8 +11824,7 @@ const coursesData = [
                         </div>
                       </li>
                     `;
-                    }
-                  )
+                  })
                   .join("");
 
               const renderColumn = (title, items, delay, icon, toneClass) => `
@@ -10336,7 +11860,7 @@ const coursesData = [
                   <span class="m16-orb b"></span>
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-puzzle-piece")}<span>${yhLang(
                     "Understanding autism spectrum disorder",
-                    "অটিজম স্পেকট্রাম ডিসঅর্ডার"
+                    "অটিজম স্পেকট্রাম ডিসঅর্ডার",
                   )}</span></h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40" style="background: rgba(255,255,255,.9); border-radius: 1rem; box-shadow: 12px 14px 24px -18px rgba(14, 116, 144, .45);">
@@ -10357,10 +11881,7 @@ const coursesData = [
           },
           {
             id: "ch15-lesson-6",
-            title: yhLang(
-              "Intellectual Disability",
-              "বুদ্ধি প্রতিবন্ধিতা"
-            ),
+            title: yhLang("Intellectual Disability", "বুদ্ধি প্রতিবন্ধিতা"),
             icon: "fa-lightbulb",
             gradientClass: "bg-gradient-emerald",
             audioFile: "",
@@ -10371,7 +11892,7 @@ const coursesData = [
                   id: "q15f",
                   question: yhLang(
                     "When does intellectual disability typically become apparent?",
-                    "বুদ্ধি প্রতিবন্ধিতা সাধারণত কখন প্রকাশ পায়?"
+                    "বুদ্ধি প্রতিবন্ধিতা সাধারণত কখন প্রকাশ পায়?",
                   ),
                   options: [
                     yhLang("১৮ বছরের আগেই", "১৮ বছরের আগেই"),
@@ -10408,7 +11929,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -10419,7 +11940,7 @@ const coursesData = [
                       <li>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -10427,7 +11948,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Understanding intellectual disability",
-                    "বুদ্ধি প্রতিবন্ধিতা"
+                    "বুদ্ধি প্রতিবন্ধিতা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -10437,7 +11958,7 @@ const coursesData = [
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="70">
                     <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
                       "বুদ্ধি প্রতিবন্ধিতার বৈশিষ্ট্য",
-                      "বুদ্ধি প্রতিবন্ধিতার বৈশিষ্ট্য"
+                      "বুদ্ধি প্রতিবন্ধিতার বৈশিষ্ট্য",
                     )}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderTraits(traits)}
@@ -10468,12 +11989,12 @@ const coursesData = [
                   id: "q15g",
                   question: yhLang(
                     "Which areas of life can depression impact?",
-                    "বিষণ্নতা জীবনের কোন কোন দিককে প্রভাবিত করে?"
+                    "বিষণ্নতা জীবনের কোন কোন দিককে প্রভাবিত করে?",
                   ),
                   options: [
                     yhLang(
                       "আবেগ, চিন্তা, কর্মক্ষমতা ও শারীরিক পরিবর্তন",
-                      "আবেগ, চিন্তা, কর্মক্ষমতা ও শারীরিক পরিবর্তন"
+                      "আবেগ, চিন্তা, কর্মক্ষমতা ও শারীরিক পরিবর্তন",
                     ),
                     yhLang("শুধু অর্থনৈতিক জীবন", "শুধু অর্থনৈতিক জীবন"),
                     yhLang("শুধু শারীরিক শক্তি", "শুধু শারীরিক শক্তি"),
@@ -10538,7 +12059,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -10547,7 +12068,7 @@ const coursesData = [
                   .map(
                     (section) => `
                       <th scope="col">${section.title}</th>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -10560,7 +12081,7 @@ const coursesData = [
                           ${renderList(section.items)}
                         </ul>
                       </td>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -10568,7 +12089,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Understanding depression",
-                    "বিষণ্নতা"
+                    "বিষণ্নতা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -10608,11 +12129,14 @@ const coursesData = [
                   id: "q15h",
                   question: yhLang(
                     "Which of these behaviors may signal childhood depression?",
-                    "নিচের কোন আচরণটি শৈশবকালীন বিষণ্নতার লক্ষণ হতে পারে?"
+                    "নিচের কোন আচরণটি শৈশবকালীন বিষণ্নতার লক্ষণ হতে পারে?",
                   ),
                   options: [
                     yhLang("অকারণে কান্নাকাটি করা", "অকারণে কান্নাকাটি করা"),
-                    yhLang("অতিরিক্ত ঘুম না পেয়ে থাকা", "অতিরিক্ত ঘুম না পেয়ে থাকা"),
+                    yhLang(
+                      "অতিরিক্ত ঘুম না পেয়ে থাকা",
+                      "অতিরিক্ত ঘুম না পেয়ে থাকা",
+                    ),
                     yhLang("শুধু বেশি খাওয়া", "শুধু বেশি খাওয়া"),
                     yhLang("শুধু বেশি পড়াশোনা করা", "শুধু বেশি পড়াশোনা করা"),
                   ],
@@ -10644,7 +12168,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -10652,7 +12176,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Understanding childhood depression",
-                    "শৈশবকালীন বিষণ্নতা"
+                    "শৈশবকালীন বিষণ্নতা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -10686,12 +12210,12 @@ const coursesData = [
                   id: "q15i",
                   question: yhLang(
                     "Which statement describes conversion disorder?",
-                    "কনভার্সন ডিসঅর্ডারকে কোন বিবরণটি বোঝায়?"
+                    "কনভার্সন ডিসঅর্ডারকে কোন বিবরণটি বোঝায়?",
                   ),
                   options: [
                     yhLang(
                       "দুশ্চিন্তার কারণে শারীরিক সমস্যার প্রকাশ",
-                      "দুশ্চিন্তার কারণে শারীরিক সমস্যার প্রকাশ"
+                      "দুশ্চিন্তার কারণে শারীরিক সমস্যার প্রকাশ",
                     ),
                     yhLang("শুধু শারীরিক আঘাত", "শুধু শারীরিক আঘাত"),
                     yhLang("শুধু খাদ্যাভ্যাস", "শুধু খাদ্যাভ্যাস"),
@@ -10762,7 +12286,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -10777,7 +12301,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Understanding anxiety disorder",
-                    "অতি উদ্বিগ্নতা"
+                    "অতি উদ্বিগ্নতা",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -10785,7 +12309,9 @@ const coursesData = [
                   </section>
 
                   ${sections
-                    .map((section, index) => renderSimpleSection(section, 70 + index * 20))
+                    .map((section, index) =>
+                      renderSimpleSection(section, 70 + index * 20),
+                    )
                     .join("")}
 
                   <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="110">
@@ -10822,7 +12348,7 @@ const coursesData = [
             id: "ch15-lesson-10",
             title: yhLang(
               "Obsessive-Compulsive Disorder",
-              "অবসেসিভ-কম্পালসিভ ডিসঅর্ডার"
+              "অবসেসিভ-কম্পালসিভ ডিসঅর্ডার",
             ),
             icon: "fa-arrows-spin",
             gradientClass: "bg-gradient-purple",
@@ -10834,7 +12360,7 @@ const coursesData = [
                   id: "q15j",
                   question: yhLang(
                     "Which pair correctly describes OCD components?",
-                    "ওসিডির দুইটি অংশ কী কী?"
+                    "ওসিডির দুইটি অংশ কী কী?",
                   ),
                   options: [
                     yhLang("অবসেশন ও কম্পালশন", "অবসেশন ও কম্পালশন"),
@@ -10880,7 +12406,7 @@ const coursesData = [
                           <span>${item.description}</span>
                         </div>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -10888,7 +12414,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Understanding obsessive-compulsive disorder",
-                    "অবসেসিভ-কম্পালসিভ ডিসঅর্ডার"
+                    "অবসেসিভ-কম্পালসিভ ডিসঅর্ডার",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -10934,7 +12460,7 @@ const coursesData = [
                   id: "q15k",
                   question: yhLang(
                     "How long must symptoms persist to consider schizophrenia?",
-                    "সিজোফ্রেনিয়ার লক্ষণ কতদিন থাকতে হয়?"
+                    "সিজোফ্রেনিয়ার লক্ষণ কতদিন থাকতে হয়?",
                   ),
                   options: [
                     yhLang("কমপক্ষে একমাসব্যাপী", "কমপক্ষে একমাসব্যাপী"),
@@ -11003,7 +12529,7 @@ const coursesData = [
                           <span>${item.description}</span>
                         </div>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -11015,7 +12541,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -11023,7 +12549,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Understanding schizophrenia",
-                    "সিজোফ্রেনিয়া"
+                    "সিজোফ্রেনিয়া",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -11053,7 +12579,7 @@ const coursesData = [
             id: "ch15-lesson-12",
             title: yhLang(
               "Digital Health & Device Addiction Prevention",
-              "তরুন-তরুনীদের ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তি প্রতিরোধ"
+              "তরুন-তরুনীদের ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তি প্রতিরোধ",
             ),
             icon: "fa-mobile-screen",
             gradientClass: "bg-gradient-cyan",
@@ -11065,7 +12591,7 @@ const coursesData = [
                   id: "q15l",
                   question: yhLang(
                     "What is a recommended daily screen time limit for adolescents?",
-                    "কিশোরদের জন্য দিনে সর্বোচ্চ কতক্ষণ স্ক্রিন টাইম রাখা উচিত?"
+                    "কিশোরদের জন্য দিনে সর্বোচ্চ কতক্ষণ স্ক্রিন টাইম রাখা উচিত?",
                   ),
                   options: [
                     yhLang("২ ঘণ্টার বেশি নয়", "২ ঘণ্টার বেশি নয়"),
@@ -11107,7 +12633,7 @@ const coursesData = [
                         <i class="fa-solid fa-circle-check"></i>
                         <span>${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -11115,7 +12641,7 @@ const coursesData = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Digital wellbeing guidance",
-                    "তরুন-তরুনীদের ডিজিটাল স্বাস্থ্য"
+                    "তরুন-তরুনীদের ডিজিটাল স্বাস্থ্য",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
@@ -11153,7 +12679,7 @@ const coursesData = [
         id: "ch-16",
         title: yhLang(
           "Module-16: Adolescent Mental Health -  Problems and Solutions",
-          "মডিউল-১৬: মনোসামাজিক সহায়তা"
+          "মডিউল-১৬: মনোসামাজিক সহায়তা",
         ),
         lessons: [
           {
@@ -11169,13 +12695,16 @@ const coursesData = [
                   id: "q16a",
                   question: yhLang(
                     "What helps adolescents return to normal routines after crises?",
-                    "কিসের মাধ্যমে তরুন-তরুনীরা বিপর্যয়ের পর স্বাভাবিক জীবনে ফিরতে পারে?"
+                    "কিসের মাধ্যমে তরুন-তরুনীরা বিপর্যয়ের পর স্বাভাবিক জীবনে ফিরতে পারে?",
                   ),
                   options: [
                     yhLang("মনোসামাজিক শিক্ষা", "মনোসামাজিক শিক্ষা"),
                     yhLang("শুধু শারীরিক ব্যায়াম", "শুধু শারীরিক ব্যায়াম"),
                     yhLang("অতিরিক্ত স্ক্রিন টাইম", "অতিরিক্ত স্ক্রিন টাইম"),
-                    yhLang("অনিয়ন্ত্রিত ডিভাইস ব্যবহার", "অনিয়ন্ত্রিত ডিভাইস ব্যবহার"),
+                    yhLang(
+                      "অনিয়ন্ত্রিত ডিভাইস ব্যবহার",
+                      "অনিয়ন্ত্রিত ডিভাইস ব্যবহার",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -11189,7 +12718,10 @@ const coursesData = [
                 {
                   icon: "fa-user-doctor",
                   color: "m16l1-section-provider",
-                  title: yhLang("Psychosocial Support Provider", "মনোসামাজিক সহায়তাকারী"),
+                  title: yhLang(
+                    "Psychosocial Support Provider",
+                    "মনোসামাজিক সহায়তাকারী",
+                  ),
                   description:
                     "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অঝুঁকি হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।",
                 },
@@ -11205,7 +12737,7 @@ const coursesData = [
                   color: "m16l1-section-necessity",
                   title: yhLang(
                     "Need for Psychosocial Education",
-                    "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা"
+                    "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা",
                   ),
                   description:
                     "তরুন-তরুনীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে তরুন-তরুনীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
@@ -11218,7 +12750,7 @@ const coursesData = [
                   color: "m16l1-benefit-a",
                   text: yhLang(
                     "Supports better emotional regulation and self-awareness.",
-                    "আবেগ নিয়ন্ত্রণ ও আত্মসচেতনতা বৃদ্ধিতে সহায়তা করে।"
+                    "আবেগ নিয়ন্ত্রণ ও আত্মসচেতনতা বৃদ্ধিতে সহায়তা করে।",
                   ),
                 },
                 {
@@ -11226,7 +12758,7 @@ const coursesData = [
                   color: "m16l1-benefit-b",
                   text: yhLang(
                     "Reduces stress effects after crises and difficult events.",
-                    "বিপর্যয়ের পর মানসিক চাপের প্রভাব কমাতে সাহায্য করে।"
+                    "বিপর্যয়ের পর মানসিক চাপের প্রভাব কমাতে সাহায্য করে।",
                   ),
                 },
                 {
@@ -11234,7 +12766,7 @@ const coursesData = [
                   color: "m16l1-benefit-c",
                   text: yhLang(
                     "Improves healthy communication and social connection.",
-                    "সুস্থ যোগাযোগ ও সামাজিক সম্পর্ক উন্নত করে।"
+                    "সুস্থ যোগাযোগ ও সামাজিক সম্পর্ক উন্নত করে।",
                   ),
                 },
                 {
@@ -11242,7 +12774,7 @@ const coursesData = [
                   color: "m16l1-benefit-d",
                   text: yhLang(
                     "Builds resilience for handling daily challenges.",
-                    "দৈনন্দিন চ্যালেঞ্জ মোকাবেলায় সহনশীলতা তৈরি করে।"
+                    "দৈনন্দিন চ্যালেঞ্জ মোকাবেলায় সহনশীলতা তৈরি করে।",
                   ),
                 },
                 {
@@ -11250,7 +12782,7 @@ const coursesData = [
                   color: "m16l1-benefit-e",
                   text: yhLang(
                     "Encourages supportive school and community environments.",
-                    "সহায়ক বিদ্যালয় ও কমিউনিটি পরিবেশ গঠনে উৎসাহ দেয়।"
+                    "সহায়ক বিদ্যালয় ও কমিউনিটি পরিবেশ গঠনে উৎসাহ দেয়।",
                   ),
                 },
               ];
@@ -11268,7 +12800,7 @@ const coursesData = [
                         </div>
                         <p class="m16l1-section-text">${section.description}</p>
                       </section>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -11282,7 +12814,7 @@ const coursesData = [
                         </div>
                         <span class="m16l1-benefit-text">${benefit.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -11301,11 +12833,11 @@ const coursesData = [
                     <div class="m16l1-hero__content">
                       <h2 class="m16l1-hero__title">${yhLang(
                         "Psychosocial Support",
-                        "মনোসামাজিক সহায়তা"
+                        "মনোসামাজিক সহায়তা",
                       )}</h2>
                       <p class="m16l1-hero__subtitle">${yhLang(
                         "Support for emotional wellbeing and daily functioning",
-                        "মানসিক সুস্থতা ও দৈনন্দিন কার্যকারিতার সহায়তা"
+                        "মানসিক সুস্থতা ও দৈনন্দিন কার্যকারিতার সহায়তা",
                       )}</p>
                     </div>
                   </section>
@@ -11328,7 +12860,7 @@ const coursesData = [
                       </div>
                       <h3 class="m16l1-section-title-main">${yhLang(
                         "Key Benefits",
-                        "প্রধান ঝুঁকিসমূহ"
+                        "প্রধান ঝুঁকিসমূহ",
                       )}</h3>
                     </div>
                     <ul class="m16l1-benefits-list">
@@ -11343,7 +12875,7 @@ const coursesData = [
             id: "ch16-lesson-2",
             title: yhLang(
               "Skills for Psychosocial Support",
-              "মনোসামাজিক সহায়তার দক্ষতাসমূহ"
+              "মনোসামাজিক সহায়তার দক্ষতাসমূহ",
             ),
             icon: "fa-people-arrows",
             gradientClass: "bg-gradient-gold",
@@ -11355,12 +12887,12 @@ const coursesData = [
                   id: "q16b",
                   question: yhLang(
                     "What distinguishes empathy from sympathy?",
-                    "সমবেদনা ও সমমর্মিতার পার্থক্য কী?"
+                    "সমবেদনা ও সমমর্মিতার পার্থক্য কী?",
                   ),
                   options: [
                     yhLang(
                       "সমমর্মিতা অপরের অবস্থান থেকে বোঝার ক্ষমতা যোগ করে",
-                      "সমমর্মিতা অপরের অবস্থান থেকে বোঝার ক্ষমতা যোগ করে"
+                      "সমমর্মিতা অপরের অবস্থান থেকে বোঝার ক্ষমতা যোগ করে",
                     ),
                     yhLang("উভয়ই ঠিক একই", "উভয়ই ঠিক একই"),
                     yhLang("সমমর্মিতা শুধু অনুভূতি", "সমমর্মিতা শুধু অনুভূতি"),
@@ -11376,12 +12908,12 @@ const coursesData = [
 
               const comparisonNote = yhLang(
                 "Sympathy is only emotional response, while empathy combines emotional understanding with seeing from the other person's position.",
-                "সমবেদনা শুধু অনুভূতি, আর সমমর্মিতা হলো অনুভূতির পাশাপাশি অপরের অবস্থান থেকে বোঝার ক্ষমতা।"
+                "সমবেদনা শুধু অনুভূতি, আর সমমর্মিতা হলো অনুভূতির পাশাপাশি অপরের অবস্থান থেকে বোঝার ক্ষমতা।",
               );
 
               const empathyHeading = yhLang(
                 "Results of Being Empathetic",
-                "সহমর্মী হবার ফলাফল"
+                "সহমর্মী হবার ফলাফল",
               );
 
               const outcomes = [
@@ -11390,7 +12922,7 @@ const coursesData = [
                   color: "m16l2-outcome-insight",
                   text: yhLang(
                     "Understanding the beneficiary's emotions from their own perspective.",
-                    "সেবাগ্রহীতার অনুভূতিকে তার অবস্থান থেকে বুঝতে পারা"
+                    "সেবাগ্রহীতার অনুভূতিকে তার অবস্থান থেকে বুঝতে পারা",
                   ),
                 },
                 {
@@ -11398,7 +12930,7 @@ const coursesData = [
                   color: "m16l2-outcome-expression",
                   text: yhLang(
                     "The beneficiary becomes more interested in sharing events in detail.",
-                    "সেবাগ্রহীতা তার ঘটনাকে বিস্তারিতভাবে বলতে উৎসাহী হবে"
+                    "সেবাগ্রহীতা তার ঘটনাকে বিস্তারিতভাবে বলতে উৎসাহী হবে",
                   ),
                 },
                 {
@@ -11406,7 +12938,7 @@ const coursesData = [
                   color: "m16l2-outcome-listening",
                   text: yhLang(
                     "The beneficiary feels the helper is listening with full attention.",
-                    "সেবাগ্রহীতা বুঝতে পারবে যে সহায়তাকারী তার কথাগুলোকে খুব মনোযোগ দিয়ে শুনছেন"
+                    "সেবাগ্রহীতা বুঝতে পারবে যে সহায়তাকারী তার কথাগুলোকে খুব মনোযোগ দিয়ে শুনছেন",
                   ),
                 },
                 {
@@ -11414,7 +12946,7 @@ const coursesData = [
                   color: "m16l2-outcome-flow",
                   text: yhLang(
                     "It becomes easier for the beneficiary to continue speaking.",
-                    "সেবাগ্রহীতার পক্ষে কথা চালিয়ে যাওয়া সহজ হবে"
+                    "সেবাগ্রহীতার পক্ষে কথা চালিয়ে যাওয়া সহজ হবে",
                   ),
                 },
                 {
@@ -11422,7 +12954,7 @@ const coursesData = [
                   color: "m16l2-outcome-trust",
                   text: yhLang(
                     "It helps build a strong relationship between beneficiary and helper.",
-                    "সেবাগ্রহীতা এবং সহায়তাকারীর মধ্যে সুসম্পর্ক তৈরি করতে সাহায্য করবে"
+                    "সেবাগ্রহীতা এবং সহায়তাকারীর মধ্যে সুসম্পর্ক তৈরি করতে সাহায্য করবে",
                   ),
                 },
               ];
@@ -11437,7 +12969,7 @@ const coursesData = [
                         </div>
                         <span class="m16l2-outcome-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -11456,11 +12988,11 @@ const coursesData = [
                     <div class="m16l2-hero__content">
                       <h2 class="m16l2-hero__title">${yhLang(
                         "Empathy Skills",
-                        "সমমর্মিতা"
+                        "সমমর্মিতা",
                       )}</h2>
                       <p class="m16l2-hero__subtitle">${yhLang(
                         "Core psychosocial support competency",
-                        "মনোসামাজিক সহায়তার গুরুত্বপূর্ণ দক্ষতা"
+                        "মনোসামাজিক সহায়তার গুরুত্বপূর্ণ দক্ষতা",
                       )}</p>
                     </div>
                   </section>
@@ -11473,7 +13005,7 @@ const coursesData = [
                         </div>
                         <h3 class="m16l2-info-card__title">${yhLang(
                           "Empathy Definition",
-                          "সমমর্মিতার সংজ্ঞা"
+                          "সমমর্মিতার সংজ্ঞা",
                         )}</h3>
                       </div>
                       <p class="m16l2-info-card__text">${intro}</p>
@@ -11486,7 +13018,7 @@ const coursesData = [
                         </div>
                         <h3 class="m16l2-info-card__title">${yhLang(
                           "Empathy vs Sympathy",
-                          "সমমর্মিতা বনাম সমবেদনা"
+                          "সমমর্মিতা বনাম সমবেদনা",
                         )}</h3>
                       </div>
                       <p class="m16l2-info-card__text">${comparisonNote}</p>
@@ -11521,7 +13053,7 @@ const coursesData = [
                   id: "q16c",
                   question: yhLang(
                     "How often should direct eye contact be maintained for attentive listening?",
-                    "মনোযোগী শ্রোতা হওয়ার জন্য কত সময় পর পর দৃষ্টি সংযোগ করা উচিত?"
+                    "মনোযোগী শ্রোতা হওয়ার জন্য কত সময় পর পর দৃষ্টি সংযোগ করা উচিত?",
                   ),
                   options: [
                     yhLang("প্রতি ৩/৪ সেকেন্ডে", "প্রতি ৩/৪ সেকেন্ডে"),
@@ -11542,7 +13074,10 @@ const coursesData = [
                   icon: "fa-clipboard-question",
                   color: "m16l3-tech-questioning",
                   number: "১",
-                  title: yhLang("Through Asking Questions", "প্রশ্ন করার মাধ্যমে"),
+                  title: yhLang(
+                    "Through Asking Questions",
+                    "প্রশ্ন করার মাধ্যমে",
+                  ),
                   description:
                     "অংশগ্রহণকারীর কথা শুনে তার কাছে বিভিন্ন ধরনের প্রশ্ন করার মাধ্যমে তার ঘটনাটা বিস্তারিতভাবে জানা সম্ভব। যেমনঃ কবে ঘটেছিল, কোথায় ঘটেছিল, কে করেছে ইত্যাদি। অংশগ্রহণকারীর কথার ফাঁকে ফাঁকে প্রশ্ন করার মাধ্যমে ঘটনাটা বিস্তারিতভাবে জানা সম্ভব।",
                 },
@@ -11566,7 +13101,10 @@ const coursesData = [
                   icon: "fa-chair",
                   color: "m16l3-tech-sitting",
                   number: "৫",
-                  title: yhLang("Natural Sitting Position", "স্বাভাবিকভাবে বসা"),
+                  title: yhLang(
+                    "Natural Sitting Position",
+                    "স্বাভাবিকভাবে বসা",
+                  ),
                   description:
                     "মুখোমুখি একটি নির্দিষ্ট দূরত্বে জড়তাহীন ভাবে বসা, একটি ফলপ্রসূ মনোসামাজিক সহায়তা নিশ্চিত করে।",
                 },
@@ -11574,7 +13112,10 @@ const coursesData = [
                   icon: "fa-hand-back-fist",
                   color: "m16l3-tech-bodylang",
                   number: "৬",
-                  title: yhLang("Avoid Dismissive Behavior", "অবহেলা প্রদর্শনমূলক আচরণ করা যাবে না"),
+                  title: yhLang(
+                    "Avoid Dismissive Behavior",
+                    "অবহেলা প্রদর্শনমূলক আচরণ করা যাবে না",
+                  ),
                   description:
                     "আমাদের শারীরিক ভাষা বা Body Language / Body Movement — মুখভঙ্গী, হাত-পা দিয়ে এমন আচরণ করা যাবে না যার মাধ্যমে অংশগ্রহণকারীর প্রতি অবহেলা প্রদর্শন বোঝায়।",
                 },
@@ -11600,14 +13141,17 @@ const coursesData = [
                 {
                   icon: "fa-comment-dots",
                   color: "m16l3-obs-speech",
-                  text: yhLang("Notice how the participant is speaking", "খেয়াল করা – কীভাবে অংশগ্রহণকারী কথা বলছেন"),
+                  text: yhLang(
+                    "Notice how the participant is speaking",
+                    "খেয়াল করা – কীভাবে অংশগ্রহণকারী কথা বলছেন",
+                  ),
                 },
                 {
                   icon: "fa-volume-high",
                   color: "m16l3-obs-emphasis",
                   text: yhLang(
                     "Which words they emphasize and how they express emotions",
-                    "কোন কোন শব্দগুলোকে সে জোর দিয়ে বলছে, কোন কথার মাধ্যমে সে তার আবেগকে প্রকাশ করছে"
+                    "কোন কোন শব্দগুলোকে সে জোর দিয়ে বলছে, কোন কথার মাধ্যমে সে তার আবেগকে প্রকাশ করছে",
                   ),
                 },
                 {
@@ -11615,18 +13159,24 @@ const coursesData = [
                   color: "m16l3-obs-words",
                   text: yhLang(
                     "What words they use to describe their experience",
-                    "তার অভিজ্ঞতাকে বর্ণনা করতে গিয়ে সে কি কি শব্দ ব্যবহার করছে"
+                    "তার অভিজ্ঞতাকে বর্ণনা করতে গিয়ে সে কি কি শব্দ ব্যবহার করছে",
                   ),
                 },
                 {
                   icon: "fa-person-walking",
                   color: "m16l3-obs-posture",
-                  text: yhLang("Notice their sitting posture", "তার বসার ভঙ্গি খেয়াল করা"),
+                  text: yhLang(
+                    "Notice their sitting posture",
+                    "তার বসার ভঙ্গি খেয়াল করা",
+                  ),
                 },
                 {
                   icon: "fa-face-grin-wide",
                   color: "m16l3-obs-face",
-                  text: yhLang("Notice their facial expressions", "মুখের ভঙ্গি খেয়াল করা"),
+                  text: yhLang(
+                    "Notice their facial expressions",
+                    "মুখের ভঙ্গি খেয়াল করা",
+                  ),
                 },
               ];
 
@@ -11646,7 +13196,7 @@ const coursesData = [
                         </div>
                         <p class="m16l3-technique-text">${tech.description}</p>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -11660,7 +13210,7 @@ const coursesData = [
                         </div>
                         <span class="m16l3-obs-text">${obs.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -11679,11 +13229,11 @@ const coursesData = [
                     <div class="m16l3-hero__content">
                       <h2 class="m16l3-hero__title">${yhLang(
                         "Attentive Listening",
-                        "মনোযোগী শ্রবণ"
+                        "মনোযোগী শ্রবণ",
                       )}</h2>
                       <p class="m16l3-hero__subtitle">${yhLang(
                         "Essential skill for understanding deeper meaning",
-                        "গভীর অর্থ বোঝার অপরিহার্য দক্ষতা"
+                        "গভীর অর্থ বোঝার অপরিহার্য দক্ষতা",
                       )}</p>
                     </div>
                   </section>
@@ -11701,7 +13251,7 @@ const coursesData = [
                     </div>
                     <h3 class="m16l3-section-title">${yhLang(
                       "Steps to Becoming an Attentive Listener",
-                      "মনোযোগী শ্রোতা হওয়ার ধাপসমূহ"
+                      "মনোযোগী শ্রোতা হওয়ার ধাপসমূহ",
                     )}</h3>
                   </section>
 
@@ -11716,7 +13266,7 @@ const coursesData = [
                       </div>
                       <h3 class="m16l3-obs-title">${yhLang(
                         "Key Observations",
-                        "মনোযোগী শ্রবণ"
+                        "মনোযোগী শ্রবণ",
                       )}<span class="m16l3-obs-number">২</span></h3>
                     </div>
                     <ul class="m16l3-obs-list">
@@ -11740,10 +13290,13 @@ const coursesData = [
                   id: "q16d",
                   question: yhLang(
                     "Which influences commonly shape personal values?",
-                    "কোন কোন প্রভাব সাধারণত আমাদের মূল্যবোধ গঠন করে?"
+                    "কোন কোন প্রভাব সাধারণত আমাদের মূল্যবোধ গঠন করে?",
                   ),
                   options: [
-                    yhLang("পরিবার, বিদ্যালয়, সমাজ, ধর্ম", "পরিবার, বিদ্যালয়, সমাজ, ধর্ম"),
+                    yhLang(
+                      "পরিবার, বিদ্যালয়, সমাজ, ধর্ম",
+                      "পরিবার, বিদ্যালয়, সমাজ, ধর্ম",
+                    ),
                     yhLang("শুধু প্রযুক্তি", "শুধু প্রযুক্তি"),
                     yhLang("শুধু বিনোদন", "শুধু বিনোদন"),
                     yhLang("শুধু অর্থ", "শুধু অর্থ"),
@@ -11805,7 +13358,7 @@ const coursesData = [
                         </div>
                         <span class="m16l4-source-text">${source.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -11824,11 +13377,11 @@ const coursesData = [
                     <div class="m16l4-hero__content">
                       <h2 class="m16l4-hero__title">${yhLang(
                         "Understanding Values",
-                        "মূল্যবোধ"
+                        "মূল্যবোধ",
                       )}</h2>
                       <p class="m16l4-hero__subtitle">${yhLang(
                         "Beliefs that guide our behavior",
-                        "আমাদের আচরণকে পরিচালিত করার বিশ্বাস"
+                        "আমাদের আচরণকে পরিচালিত করার বিশ্বাস",
                       )}</p>
                     </div>
                   </section>
@@ -11847,7 +13400,7 @@ const coursesData = [
                       </div>
                       <h3 class="m16l4-sources-title">${yhLang(
                         "Sources of Values",
-                        "মূল্যবোধের উৎস"
+                        "মূল্যবোধের উৎস",
                       )}</h3>
                     </div>
                     <ul class="m16l4-sources-list">
@@ -11863,7 +13416,7 @@ const coursesData = [
                       <div class="m16l4-example-content">
                         <h4 class="m16l4-example-title">${yhLang(
                           "Real-Life Examples",
-                          "বাস্তব উদাহরণ"
+                          "বাস্তব উদাহরণ",
                         )}</h4>
                         <p class="m16l4-example-text">${exampleText}</p>
                       </div>
@@ -11878,7 +13431,7 @@ const coursesData = [
                       <div class="m16l4-diversity-content">
                         <h4 class="m16l4-diversity-title">${yhLang(
                           "Valuing Diversity",
-                          "বৈচিত্র্যকে সম্মান করা"
+                          "বৈচিত্র্যকে সম্মান করা",
                         )}</h4>
                         <p class="m16l4-diversity-text">${diversityText}</p>
                       </div>
@@ -11901,7 +13454,7 @@ const coursesData = [
                   id: "q16e",
                   question: yhLang(
                     "What guides human behavior according to the lesson?",
-                    "মানুষের আচরণকে কী দ্বারা পরিচালিত বলা হয়েছে?"
+                    "মানুষের আচরণকে কী দ্বারা পরিচালিত বলা হয়েছে?",
                   ),
                   options: [
                     yhLang("ব্যক্তির মূল্যবোধ", "ব্যক্তির মূল্যবোধ"),
@@ -11998,13 +13551,12 @@ const coursesData = [
       },
       {
         id: "ch-17",
-        title:
-          yhLang(
-            "Module-17: Psychosocial changes and Psychosocial complications during adolescence",
-            "মডিউল-১৭: মাদকাসক্তি পরিণতি ও প্রতিরোধ"
-          ),
+        title: yhLang(
+          "Module-17: Psychosocial changes and Psychosocial complications during adolescence",
+          "মডিউল-১৭: মাদকাসক্তি পরিণতি ও প্রতিরোধ",
+        ),
         lessons: [
-                   {
+          {
             id: "ch17-lesson-1",
             title: yhLang("Drug Addiction", "মাদকাসক্তি"),
             icon: "fa-syringe",
@@ -12017,10 +13569,13 @@ const coursesData = [
                   id: "q17a",
                   question: yhLang(
                     "What happens when a person stops taking addictive substances?",
-                    "মাদক গ্রহণ বন্ধ করলে কী ধরনের প্রভাব দেখা যায়?"
+                    "মাদক গ্রহণ বন্ধ করলে কী ধরনের প্রভাব দেখা যায়?",
                   ),
                   options: [
-                    yhLang("Withdrawal-এর মতো প্রভাব", "Withdrawal-এর মতো প্রভাব"),
+                    yhLang(
+                      "Withdrawal-এর মতো প্রভাব",
+                      "Withdrawal-এর মতো প্রভাব",
+                    ),
                     yhLang("তাৎক্ষণিক সাফল্য", "তাৎক্ষণিক সাফল্য"),
                     yhLang("শুধু ক্ষুধা বৃদ্ধি", "শুধু ক্ষুধা বৃদ্ধি"),
                     yhLang("কোনো পরিবর্তন হয় না", "কোনো পরিবর্তন হয় না"),
@@ -12129,7 +13684,7 @@ const coursesData = [
                   id: "q17b",
                   question: yhLang(
                     "Which column covers behavioral signs of drug addiction?",
-                    "মাদকাসক্তির আচরণগত লক্ষণ কোন কলামে রয়েছে?"
+                    "মাদকাসক্তির আচরণগত লক্ষণ কোন কলামে রয়েছে?",
                   ),
                   options: [
                     yhLang("আচরণগত লক্ষণসমূহ", "আচরণগত লক্ষণসমূহ"),
@@ -12272,10 +13827,13 @@ const coursesData = [
 </div>
               `;
             })(),
-          }, 
-         {
+          },
+          {
             id: "ch17-lesson-3",
-            title: yhLang("মাদকাসক্তির পরিণতি ও প্রতিরোধ", "মাদকাসক্তির পরিণতি ও প্রতিরোধ"),
+            title: yhLang(
+              "মাদকাসক্তির পরিণতি ও প্রতিরোধ",
+              "মাদকাসক্তির পরিণতি ও প্রতিরোধ",
+            ),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-indigo",
             audioFile: "",
@@ -12286,13 +13844,22 @@ const coursesData = [
                   id: "q17c",
                   question: yhLang(
                     "পাঠে উল্লেখিত কোনটি মাদকাসক্তির পরিণতি?",
-                    "পাঠে উল্লেখিত কোনটি মাদকাসক্তির পরিণতি?"
+                    "পাঠে উল্লেখিত কোনটি মাদকাসক্তির পরিণতি?",
                   ),
                   options: [
-                    yhLang("সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া", "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া"),
+                    yhLang(
+                      "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া",
+                      "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া",
+                    ),
                     yhLang("মাদক সহজলভ্য করা", "মাদক সহজলভ্য করা"),
-                    yhLang("মাদকাসক্তিকে উৎসাহিত করা", "মাদকাসক্তিকে উৎসাহিত করা"),
-                    yhLang("মাদকাসক্তদের অবহেলা করা", "মাদকাসক্তদের অবহেলা করা"),
+                    yhLang(
+                      "মাদকাসক্তিকে উৎসাহিত করা",
+                      "মাদকাসক্তিকে উৎসাহিত করা",
+                    ),
+                    yhLang(
+                      "মাদকাসক্তদের অবহেলা করা",
+                      "মাদকাসক্তদের অবহেলা করা",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -12301,57 +13868,90 @@ const coursesData = [
             content: (function () {
               const consequences = [
                 {
-                  text: yhLang("Disrupts personal, family and social activities", "ব্যক্তিগত, পারিবারিক ও সামাজিক কর্মকাণ্ড ব্যাহত হয়"),
+                  text: yhLang(
+                    "Disrupts personal, family and social activities",
+                    "ব্যক্তিগত, পারিবারিক ও সামাজিক কর্মকাণ্ড ব্যাহত হয়",
+                  ),
                   icon: "fa-users-slash",
                   color: "m17l3-cons-social",
                 },
                 {
-                  text: yhLang("Various physical diseases such as liver, kidney, brain disorders can occur, and can contract fatal diseases like AIDS, hepatitis, etc.", "বিভিন্ন ধরনের শারীরিক রোগ যেমন– লিভার, কিডনি, ব্রেইন ইত্যাদি অঙ্গের রোগ হতে পারে, এমনকি মৃত্যু হতে পারে এমন রোগেও আক্রান্ত হয় যেমন– এইডস, হেপাটাইটিস ইত্যাদি"),
+                  text: yhLang(
+                    "Various physical diseases such as liver, kidney, brain disorders can occur, and can contract fatal diseases like AIDS, hepatitis, etc.",
+                    "বিভিন্ন ধরনের শারীরিক রোগ যেমন– লিভার, কিডনি, ব্রেইন ইত্যাদি অঙ্গের রোগ হতে পারে, এমনকি মৃত্যু হতে পারে এমন রোগেও আক্রান্ত হয় যেমন– এইডস, হেপাটাইটিস ইত্যাদি",
+                  ),
                   icon: "fa-heart-pulse",
                   color: "m17l3-cons-disease",
                 },
                 {
-                  text: yhLang("Gradual deterioration of health (weight can become too low or too high)", "ধীরে ধীরে স্বাস্থ্যহানি হতে থাকে (ওজন অতিরিক্ত কম বা বেশি হতে পারে)"),
+                  text: yhLang(
+                    "Gradual deterioration of health (weight can become too low or too high)",
+                    "ধীরে ধীরে স্বাস্থ্যহানি হতে থাকে (ওজন অতিরিক্ত কম বা বেশি হতে পারে)",
+                  ),
                   icon: "fa-weight-scale",
                   color: "m17l3-cons-health",
                 },
                 {
-                  text: yhLang("Sexual problems such as sexual dysfunction, impotence occur", "যৌন সমস্যা যেমন যৌন অক্ষমতা, পুরুষত্বহীনতা হয়"),
+                  text: yhLang(
+                    "Sexual problems such as sexual dysfunction, impotence occur",
+                    "যৌন সমস্যা যেমন যৌন অক্ষমতা, পুরুষত্বহীনতা হয়",
+                  ),
                   icon: "fa-venus-mars",
                   color: "m17l3-cons-sexual",
                 },
                 {
-                  text: yhLang("Drug addiction during pregnancy harms the unborn child", "গর্ভকালীন সময়ে মাদকাসক্তি হলে গর্ভস্থ বাচ্চার ক্ষতি হয়"),
+                  text: yhLang(
+                    "Drug addiction during pregnancy harms the unborn child",
+                    "গর্ভকালীন সময়ে মাদকাসক্তি হলে গর্ভস্থ বাচ্চার ক্ষতি হয়",
+                  ),
                   icon: "fa-baby",
                   color: "m17l3-cons-pregnancy",
                 },
                 {
-                  text: yhLang("Can develop cancers of lungs, esophagus, stomach, liver, etc.", "ফুসফুস, খাদ্যনালী, পাকস্থলি, লিভার ইত্যাদির ক্যান্সারে আক্রান্ত হতে পারে"),
+                  text: yhLang(
+                    "Can develop cancers of lungs, esophagus, stomach, liver, etc.",
+                    "ফুসফুস, খাদ্যনালী, পাকস্থলি, লিভার ইত্যাদির ক্যান্সারে আক্রান্ত হতে পারে",
+                  ),
                   icon: "fa-lungs",
                   color: "m17l3-cons-cancer",
                 },
                 {
-                  text: yhLang("Involvement in criminal activities", "অপরাধমূলক কর্মকাণ্ডে জড়িয়ে পড়া"),
+                  text: yhLang(
+                    "Involvement in criminal activities",
+                    "অপরাধমূলক কর্মকাণ্ডে জড়িয়ে পড়া",
+                  ),
                   icon: "fa-gavel",
                   color: "m17l3-cons-crime",
                 },
                 {
-                  text: yhLang("Falling behind in education and professional work", "লেখাপড়া ও পেশাগত কাজে পিছিয়ে পড়া"),
+                  text: yhLang(
+                    "Falling behind in education and professional work",
+                    "লেখাপড়া ও পেশাগত কাজে পিছিয়ে পড়া",
+                  ),
                   icon: "fa-book-open-reader",
                   color: "m17l3-cons-education",
                 },
                 {
-                  text: yhLang("Becoming isolated from society", "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া"),
+                  text: yhLang(
+                    "Becoming isolated from society",
+                    "সমাজ থেকে বিচ্ছিন্ন হয়ে পড়া",
+                  ),
                   icon: "fa-user-minus",
                   color: "m17l3-cons-isolation",
                 },
                 {
-                  text: yhLang("Financial losses", "আর্থিকভাবে ক্ষতিগ্রস্ত হওয়া"),
+                  text: yhLang(
+                    "Financial losses",
+                    "আর্থিকভাবে ক্ষতিগ্রস্ত হওয়া",
+                  ),
                   icon: "fa-sack-dollar",
                   color: "m17l3-cons-finance",
                 },
                 {
-                  text: yhLang("Suffering from mental stress and suicidal tendencies", "মানসিক চাপে ভোগা ও আত্মহত্যার প্রবণতা দেখা দেয়"),
+                  text: yhLang(
+                    "Suffering from mental stress and suicidal tendencies",
+                    "মানসিক চাপে ভোগা ও আত্মহত্যার প্রবণতা দেখা দেয়",
+                  ),
                   icon: "fa-brain",
                   color: "m17l3-cons-mental",
                 },
@@ -12364,27 +13964,42 @@ const coursesData = [
                   color: "m17l3-prev-access",
                 },
                 {
-                  text: yhLang("Supporting disciplined family bonds", "সুশৃঙ্খল পারিবারিক বন্ধনে সহায়তা করা"),
+                  text: yhLang(
+                    "Supporting disciplined family bonds",
+                    "সুশৃঙ্খল পারিবারিক বন্ধনে সহায়তা করা",
+                  ),
                   icon: "fa-house-user",
                   color: "m17l3-prev-family",
                 },
                 {
-                  text: yhLang("Increasing awareness among youth at local level about harmful effects of drugs", "স্থানীয় পর্যায়ে তরুণদের মধ্যে মাদকের ক্ষতিকর দিক সম্পর্কে সচেতনতা বৃদ্ধি"),
+                  text: yhLang(
+                    "Increasing awareness among youth at local level about harmful effects of drugs",
+                    "স্থানীয় পর্যায়ে তরুণদের মধ্যে মাদকের ক্ষতিকর দিক সম্পর্কে সচেতনতা বৃদ্ধি",
+                  ),
                   icon: "fa-bullhorn",
                   color: "m17l3-prev-awareness",
                 },
                 {
-                  text: yhLang("Encouraging adherence to religious and moral discipline", "ধর্মীয় ও নৈতিক অনুশাসন মেনে চলতে উদ্বুদ্ধ করা"),
+                  text: yhLang(
+                    "Encouraging adherence to religious and moral discipline",
+                    "ধর্মীয় ও নৈতিক অনুশাসন মেনে চলতে উদ্বুদ্ধ করা",
+                  ),
                   icon: "fa-scale-balanced",
                   color: "m17l3-prev-values",
                 },
                 {
-                  text: yhLang("Increasing involvement in sports and healthy recreational activities", "খেলাধুলা ও সুস্থ বিনোদনমূলক কর্মকাণ্ডে সম্পৃক্ততা বৃদ্ধি করা"),
+                  text: yhLang(
+                    "Increasing involvement in sports and healthy recreational activities",
+                    "খেলাধুলা ও সুস্থ বিনোদনমূলক কর্মকাণ্ডে সম্পৃক্ততা বৃদ্ধি করা",
+                  ),
                   icon: "fa-futbol",
                   color: "m17l3-prev-sports",
                 },
                 {
-                  text: yhLang("Quick identification of drug addiction and referral for treatment", "দ্রুত মাদকাসক্তি শনাক্তকরণ ও চিকিৎসার জন্য প্রেরণ করা"),
+                  text: yhLang(
+                    "Quick identification of drug addiction and referral for treatment",
+                    "দ্রুত মাদকাসক্তি শনাক্তকরণ ও চিকিৎসার জন্য প্রেরণ করা",
+                  ),
                   icon: "fa-hospital-user",
                   color: "m17l3-prev-treatment",
                 },
@@ -12400,7 +14015,7 @@ const coursesData = [
                         </div>
                         <span class="m17l3-list-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -12419,11 +14034,11 @@ const coursesData = [
                     <div class="m17l3-hero__content">
                       <h2 class="m17l3-hero__title">${yhLang(
                         "Consequences and Prevention of Drug Addiction",
-                        "মাদকাসক্তির পরিণতি ও প্রতিরোধ"
+                        "মাদকাসক্তির পরিণতি ও প্রতিরোধ",
                       )}</h2>
                       <p class="m17l3-hero__subtitle">${yhLang(
                         "Understand risks and protect adolescents",
-                        "ঝুঁকি বুঝে কিশোরদের সুরক্ষা নিশ্চিত করুন"
+                        "ঝুঁকি বুঝে কিশোরদের সুরক্ষা নিশ্চিত করুন",
                       )}</p>
                     </div>
                   </section>
@@ -12436,7 +14051,7 @@ const coursesData = [
                         </div>
                         <h3 class="m17l3-panel-title">${yhLang(
                           "Consequences of Addiction",
-                          "মাদকাসক্তির পরিণতি"
+                          "মাদকাসক্তির পরিণতি",
                         )}</h3>
                       </div>
                       <ul class="m17l3-list">
@@ -12451,7 +14066,7 @@ const coursesData = [
                         </div>
                         <h3 class="m17l3-panel-title">${yhLang(
                           "Addiction Prevention",
-                          "মাদকাসক্তি প্রতিরোধ"
+                          "মাদকাসক্তি প্রতিরোধ",
                         )}</h3>
                       </div>
                       <ul class="m17l3-list">
@@ -12477,7 +14092,7 @@ const coursesData = [
         id: "ch-18",
         title: yhLang(
           "Module-18: Psychosocial support for adolescents",
-          "মডিউল-১৮: কিশোর কিশোরীদের ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবা"
+          "মডিউল-১৮: কিশোর কিশোরীদের ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবা",
         ),
         lessons: [
           {
@@ -12493,13 +14108,16 @@ const coursesData = [
                   id: "q18a",
                   question: yhLang(
                     "প্রাথমিক চিকিৎসার প্রথম লক্ষ্য কী?",
-                    "প্রাথমিক চিকিৎসার প্রথম লক্ষ্য কী?"
+                    "প্রাথমিক চিকিৎসার প্রথম লক্ষ্য কী?",
                   ),
                   options: [
                     yhLang("জীবন বাঁচানো", "জীবন বাঁচানো"),
                     yhLang("অনর্থক ভিড় করা", "অনর্থক ভিড় করা"),
                     yhLang("আক্রান্তকে অবহেলা করা", "আক্রান্তকে অবহেলা করা"),
-                    yhLang("চিকিৎসাসেবা বিলম্বিত করা", "চিকিৎসাসেবা বিলম্বিত করা"),
+                    yhLang(
+                      "চিকিৎসাসেবা বিলম্বিত করা",
+                      "চিকিৎসাসেবা বিলম্বিত করা",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -12513,12 +14131,18 @@ const coursesData = [
                   color: "m18l1-goal-life",
                 },
                 {
-                  text: yhLang("Prevent deterioration of the injured or affected person's physical condition", "আহত বা আক্রান্ত ব্যক্তির শারীরিক অবস্থার অবনতি রোধ করা"),
+                  text: yhLang(
+                    "Prevent deterioration of the injured or affected person's physical condition",
+                    "আহত বা আক্রান্ত ব্যক্তির শারীরিক অবস্থার অবনতি রোধ করা",
+                  ),
                   icon: "fa-shield-heart",
                   color: "m18l1-goal-prevent",
                 },
                 {
-                  text: yhLang("Reduce the possibility of deterioration and resulting disability of the affected person", "আক্রান্ত ব্যক্তির অবনতির অবস্থা এবং ফলস্বরূপ প্রতিবন্ধিতার সম্ভাবনা কমানো"),
+                  text: yhLang(
+                    "Reduce the possibility of deterioration and resulting disability of the affected person",
+                    "আক্রান্ত ব্যক্তির অবনতির অবস্থা এবং ফলস্বরূপ প্রতিবন্ধিতার সম্ভাবনা কমানো",
+                  ),
                   icon: "fa-user-shield",
                   color: "m18l1-goal-reduce",
                 },
@@ -12528,7 +14152,10 @@ const coursesData = [
                   color: "m18l1-goal-recovery",
                 },
                 {
-                  text: yhLang("Safely transport the affected person to the nearest medical center", "নিকটস্থ চিকিৎসাসেবা কেন্দ্রে আক্রান্ত ব্যক্তিকে নিরাপদে পরিবহন করা"),
+                  text: yhLang(
+                    "Safely transport the affected person to the nearest medical center",
+                    "নিকটস্থ চিকিৎসাসেবা কেন্দ্রে আক্রান্ত ব্যক্তিকে নিরাপদে পরিবহন করা",
+                  ),
                   icon: "fa-truck-medical",
                   color: "m18l1-goal-transport",
                 },
@@ -12546,7 +14173,7 @@ const coursesData = [
                           <p class="mb-0">${item.text}</p>
                         </div>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -12569,7 +14196,7 @@ const coursesData = [
                     <p class="mb-0">
                       ${yhLang(
                         "First aid is the initial assistance given to an injured person due to injury in various situations or to a person who suddenly becomes ill. First aid is usually given at the scene before a doctor or paramedic arrives, or before an ambulance arrives, or until the affected person is taken to a medical center or hospital.",
-                        "বিভিন্ন পরিস্থিতিতে ইনজুরির কারণে আহত ব্যক্তি বা হঠাৎ করে অসুস্থ হয়ে পড়া ব্যক্তিকে প্রাথমিকভাবে যে সহায়তা দেওয়া হয়, তাকে প্রাথমিক চিকিৎসা বলে। সাধারণত প্রাথমিক চিকিৎসা দেওয়া হয় ঘটনাস্থলে চিকিৎসক বা প্যারামেডিকস আসার পূর্বে, অথবা অ্যাম্বুলেন্স আসার পূর্বে, অথবা আক্রান্ত ব্যক্তিকে চিকিৎসাকেন্দ্র বা হাসপাতালে নিয়ে যাওয়া পর্যন্ত।"
+                        "বিভিন্ন পরিস্থিতিতে ইনজুরির কারণে আহত ব্যক্তি বা হঠাৎ করে অসুস্থ হয়ে পড়া ব্যক্তিকে প্রাথমিকভাবে যে সহায়তা দেওয়া হয়, তাকে প্রাথমিক চিকিৎসা বলে। সাধারণত প্রাথমিক চিকিৎসা দেওয়া হয় ঘটনাস্থলে চিকিৎসক বা প্যারামেডিকস আসার পূর্বে, অথবা অ্যাম্বুলেন্স আসার পূর্বে, অথবা আক্রান্ত ব্যক্তিকে চিকিৎসাকেন্দ্র বা হাসপাতালে নিয়ে যাওয়া পর্যন্ত।",
                       )}
                     </p>
                   </div>
@@ -12611,13 +14238,25 @@ const coursesData = [
                   id: "q18b",
                   question: yhLang(
                     "রক্তক্ষরণে চাপ দিয়ে রাখা কাপড় ভিজে গেলে কী করতে হবে?",
-                    "রক্তক্ষরণে চাপ দিয়ে রাখা কাপড় ভিজে গেলে কী করতে হবে?"
+                    "রক্তক্ষরণে চাপ দিয়ে রাখা কাপড় ভিজে গেলে কী করতে হবে?",
                   ),
                   options: [
-                    yhLang("উপর থেকে আরেকটি পরিষ্কার কাপড় লাগাতে হবে", "উপর থেকে আরেকটি পরিষ্কার কাপড় লাগাতে হবে"),
-                    yhLang("আগের কাপড় খুলে ফেলতে হবে", "আগের কাপড় খুলে ফেলতে হবে"),
-                    yhLang("ক্ষতস্থান ধুয়ে নিতে হবে", "ক্ষতস্থান ধুয়ে নিতে হবে"),
-                    yhLang("ক্ষতস্থানে চাপ দেওয়া বন্ধ করতে হবে", "ক্ষতস্থানে চাপ দেওয়া বন্ধ করতে হবে"),
+                    yhLang(
+                      "উপর থেকে আরেকটি পরিষ্কার কাপড় লাগাতে হবে",
+                      "উপর থেকে আরেকটি পরিষ্কার কাপড় লাগাতে হবে",
+                    ),
+                    yhLang(
+                      "আগের কাপড় খুলে ফেলতে হবে",
+                      "আগের কাপড় খুলে ফেলতে হবে",
+                    ),
+                    yhLang(
+                      "ক্ষতস্থান ধুয়ে নিতে হবে",
+                      "ক্ষতস্থান ধুয়ে নিতে হবে",
+                    ),
+                    yhLang(
+                      "ক্ষতস্থানে চাপ দেওয়া বন্ধ করতে হবে",
+                      "ক্ষতস্থানে চাপ দেওয়া বন্ধ করতে হবে",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -12628,7 +14267,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Place the affected person in a comfortable sitting or lying position.",
-                    "আক্রান্ত ব্যক্তিকে আরামদায়ক অবস্থানে বসানোর বা শোয়ানোর ব্যবস্থা করতে হবে।"
+                    "আক্রান্ত ব্যক্তিকে আরামদায়ক অবস্থানে বসানোর বা শোয়ানোর ব্যবস্থা করতে হবে।",
                   ),
                   icon: "fa-bed-pulse",
                   tone: "m18l2-step-position",
@@ -12636,21 +14275,21 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Press the wound with a clean cloth or gauze. If the wound area is small, keep pressure for up to 10 minutes (until bleeding stops).",
-                    "পরিষ্কার কাপড় বা গজ দিয়ে ক্ষতস্থানটি চেপে ধরতে হবে। ক্ষতস্থানটি যদি অল্প জায়গা জুড়ে হয়, তবে কাপড় বা গজ ১০ মিনিট পর্যন্ত চাপ দিয়ে ধরে রাখতে হবে (যতক্ষণ রক্তপাত বন্ধ না হয়)।"
+                    "পরিষ্কার কাপড় বা গজ দিয়ে ক্ষতস্থানটি চেপে ধরতে হবে। ক্ষতস্থানটি যদি অল্প জায়গা জুড়ে হয়, তবে কাপড় বা গজ ১০ মিনিট পর্যন্ত চাপ দিয়ে ধরে রাখতে হবে (যতক্ষণ রক্তপাত বন্ধ না হয়)।",
                   ),
                   icon: "fa-hand-holding-medical",
                   tone: "m18l2-step-pressure",
                 },
-                
+
                 {
                   text: yhLang(
                     "If the first gauze or cloth layer gets soaked with blood, do not remove it. Add another clean layer on top and keep pressing.",
-                    "চাপ দিয়ে ধরে রাখা গজ বা কাপড়ের প্রথম স্তরটি যদি রক্তে ভিজে যায়, তবুও গজ বা কাপড়টি সরানো যাবে না। এর উপরে অন্য একটি পরিষ্কার কাপড় বা গজ দিয়ে চেপে ধরতে হবে।"
+                    "চাপ দিয়ে ধরে রাখা গজ বা কাপড়ের প্রথম স্তরটি যদি রক্তে ভিজে যায়, তবুও গজ বা কাপড়টি সরানো যাবে না। এর উপরে অন্য একটি পরিষ্কার কাপড় বা গজ দিয়ে চেপে ধরতে হবে।",
                   ),
                   icon: "fa-layer-group",
                   tone: "m18l2-step-layer",
-                }, 
-                 {
+                },
+                {
                   text: `<figure class="m18l2-figure mb-0">
                         <img src="img/modu18/rokto.jpg" style="height: 100px; width: 300px;" alt="রক্তক্ষরণ নিয়ন্ত্রণ" class="img-fluid m18l2-image" />
                       </figure>`,
@@ -12660,16 +14299,16 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Secure the wound with a clean cloth or bandage along with gauze/cloth.",
-                    "গজ/কাপড়সহ ক্ষতস্থানটি একটি পরিষ্কার কাপড় বা ব্যান্ডেজের সাহায্যে বাঁধতে হবে।"
+                    "গজ/কাপড়সহ ক্ষতস্থানটি একটি পরিষ্কার কাপড় বা ব্যান্ডেজের সাহায্যে বাঁধতে হবে।",
                   ),
                   icon: "fa-bandage",
                   tone: "m18l2-step-bandage",
                 },
-                
-                 {
+
+                {
                   text: yhLang(
                     "If the wound is on hand or leg, raise the limb above heart level to reduce blood flow and bleeding.",
-                    "ক্ষতস্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিণ্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয়—এর ফলে রক্তপাত কমে যাবে। কারণ অধিক রক্তক্ষরণে অজ্ঞান হয়ে যাওয়ার সম্ভাবনা থাকে।"
+                    "ক্ষতস্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিণ্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয়—এর ফলে রক্তপাত কমে যাবে। কারণ অধিক রক্তক্ষরণে অজ্ঞান হয়ে যাওয়ার সম্ভাবনা থাকে।",
                   ),
                   icon: "fa-arrow-up-right-dots",
                   tone: "m18l2-step-elevate",
@@ -12677,7 +14316,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "If the wound is deep or bleeding does not stop, seek skilled health worker support and refer to a health center.",
-                    "ক্ষত গভীর হলে বা রক্তক্ষরণ বন্ধ না হলে দক্ষ স্বাস্থ্যকর্মীর সাহায্য নিতে হবে এবং আক্রান্ত ব্যক্তিকে স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে। প্রয়োজনে ক্ষতস্থানে আরো গজ বা কাপড়ের সাহায্যে চেপে ধরে রাখতে হতে পারে।"
+                    "ক্ষত গভীর হলে বা রক্তক্ষরণ বন্ধ না হলে দক্ষ স্বাস্থ্যকর্মীর সাহায্য নিতে হবে এবং আক্রান্ত ব্যক্তিকে স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে। প্রয়োজনে ক্ষতস্থানে আরো গজ বা কাপড়ের সাহায্যে চেপে ধরে রাখতে হতে পারে।",
                   ),
                   icon: "fa-truck-medical",
                   tone: "m18l2-step-referral",
@@ -12685,7 +14324,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "If an object is embedded in the body (e.g., broken glass or stick), do not remove it; apply pressure around both sides, not directly on top.",
-                    "কোন ব্যক্তির শরীরে কোন বস্তু ঢুকে রক্তপাত হলে (যেমন ভাঙা কাঁচ বা কাঠি), ক্ষতস্থান থেকে বস্তুটি বের করার চেষ্টা করা যাবে না। ক্ষতস্থানের দুই পাশে চেপে ধরতে হবে, তবে ক্ষতস্থানের উপর চাপ দেওয়া যাবে না।"
+                    "কোন ব্যক্তির শরীরে কোন বস্তু ঢুকে রক্তপাত হলে (যেমন ভাঙা কাঁচ বা কাঠি), ক্ষতস্থান থেকে বস্তুটি বের করার চেষ্টা করা যাবে না। ক্ষতস্থানের দুই পাশে চেপে ধরতে হবে, তবে ক্ষতস্থানের উপর চাপ দেওয়া যাবে না।",
                   ),
                   icon: "fa-triangle-exclamation",
                   tone: "m18l2-step-warning",
@@ -12696,8 +14335,9 @@ const coursesData = [
                 items
                   .map(
                     (item, index) => `
-                      <div class="m18l2-step-item ${item.tone}" data-aos="fade-up" data-aos-delay="${35 +
-                        index * 30}">
+                      <div class="m18l2-step-item ${item.tone}" data-aos="fade-up" data-aos-delay="${
+                        35 + index * 30
+                      }">
                         <div class="m18l2-step-icon">
                           <i class="fa-solid ${item.icon}"></i>
                         </div>
@@ -12705,7 +14345,7 @@ const coursesData = [
                           <p class="mb-0">${item.text}</p>
                         </div>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -12729,7 +14369,7 @@ const coursesData = [
                     <p class="mb-0">
                       ${yhLang(
                         "Heavy bleeding may occur due to injury or accidents and can become life-threatening for the affected person. In such cases, immediate management is necessary, and quickly controlling bleeding is a primary first-aid objective.",
-                        "কোন আঘাত বা দুর্ঘটনার ফলে প্রচুর রক্তপাত ঘটতে পারে যা আক্রান্ত ব্যক্তির জন্য জীবন-সংশয় তৈরি করতে পারে। এমন অবস্থায় তাৎক্ষণিক ব্যবস্থাপনা প্রয়োজন এবং দ্রুত রক্তপাত বন্ধ করা প্রাথমিক চিকিৎসার মূল লক্ষ্য।"
+                        "কোন আঘাত বা দুর্ঘটনার ফলে প্রচুর রক্তপাত ঘটতে পারে যা আক্রান্ত ব্যক্তির জন্য জীবন-সংশয় তৈরি করতে পারে। এমন অবস্থায় তাৎক্ষণিক ব্যবস্থাপনা প্রয়োজন এবং দ্রুত রক্তপাত বন্ধ করা প্রাথমিক চিকিৎসার মূল লক্ষ্য।",
                       )}
                     </p>
                   </section>
@@ -12764,7 +14404,7 @@ const coursesData = [
                   id: "q18c",
                   question: yhLang(
                     "তৃতীয় ডিগ্রি বার্নে কোন স্তর ক্ষতিগ্রস্ত হয়?",
-                    "তৃতীয় ডিগ্রি বার্নে কোন স্তর ক্ষতিগ্রস্ত হয়?"
+                    "তৃতীয় ডিগ্রি বার্নে কোন স্তর ক্ষতিগ্রস্ত হয়?",
                   ),
                   options: [
                     yhLang("ত্বকের সব স্তর", "ত্বকের সব স্তর"),
@@ -12779,7 +14419,7 @@ const coursesData = [
             content: (function () {
               const intro = yhLang(
                 "Burn injury is one of the common causes of injury in Bangladesh. A burned area needs quick and proper treatment.",
-                "বাংলাদেশে পুড়ে যাওয়া হল ইনজুরির অন্যতম কারণ। পুড়ে যাওয়া স্থানের দ্রুত চিকিৎসা করা প্রয়োজন।"
+                "বাংলাদেশে পুড়ে যাওয়া হল ইনজুরির অন্যতম কারণ। পুড়ে যাওয়া স্থানের দ্রুত চিকিৎসা করা প্রয়োজন।",
               );
 
               const burnTypes = [
@@ -12787,7 +14427,7 @@ const coursesData = [
                   title: yhLang("First-degree burn", "প্রথম ডিগ্রি বার্ন"),
                   text: yhLang(
                     "The outer skin layer is affected. Common signs include redness, mild swelling, and mild pain.",
-                    "ত্বকের উপরিভাগ ক্ষতিগ্রস্ত হয়। লক্ষণগুলোর মধ্যে রয়েছে লালভাব, ফোলা এবং হালকা ব্যথা।"
+                    "ত্বকের উপরিভাগ ক্ষতিগ্রস্ত হয়। লক্ষণগুলোর মধ্যে রয়েছে লালভাব, ফোলা এবং হালকা ব্যথা।",
                   ),
                   icon: "fa-temperature-low",
                   color: "m18l3-type-first",
@@ -12796,7 +14436,7 @@ const coursesData = [
                   title: yhLang("Second-degree burn", "দ্বিতীয় ডিগ্রি বার্ন"),
                   text: yhLang(
                     "Both the outer skin layer and dermis are affected. Blisters, severe pain, and redness can appear.",
-                    "ত্বকের উপরের স্তর এবং নিচের ডার্মিস স্তর ক্ষতিগ্রস্ত হয়। ফোসকা, তীব্র ব্যথা এবং লালভাব দেখা দেয়।"
+                    "ত্বকের উপরের স্তর এবং নিচের ডার্মিস স্তর ক্ষতিগ্রস্ত হয়। ফোসকা, তীব্র ব্যথা এবং লালভাব দেখা দেয়।",
                   ),
                   icon: "fa-fire-flame-curved",
                   color: "m18l3-type-second",
@@ -12805,7 +14445,7 @@ const coursesData = [
                   title: yhLang("Third-degree burn", "তৃতীয় ডিগ্রি বার্ন"),
                   text: yhLang(
                     "All skin layers are damaged and tissue may die. The wound may look black, white, or brown, and pain may be absent.",
-                    "ত্বকের সব স্তর ক্ষতিগ্রস্ত হয় এবং টিস্যু মারা যেতে পারে। ক্ষতস্থান কালো, সাদা বা বাদামী রঙের হতে পারে এবং ব্যথা অনুভূত নাও হতে পারে।"
+                    "ত্বকের সব স্তর ক্ষতিগ্রস্ত হয় এবং টিস্যু মারা যেতে পারে। ক্ষতস্থান কালো, সাদা বা বাদামী রঙের হতে পারে এবং ব্যথা অনুভূত নাও হতে পারে।",
                   ),
                   icon: "fa-skull-crossbones",
                   color: "m18l3-type-third",
@@ -12816,7 +14456,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Heat: fire, hot water, steam, or contact with hot objects",
-                    "তাপ: আগুন, গরম পানি, বাষ্প বা গরম বস্তু সংস্পর্শ"
+                    "তাপ: আগুন, গরম পানি, বাষ্প বা গরম বস্তু সংস্পর্শ",
                   ),
                   icon: "fa-fire",
                   color: "m18l3-cause-heat",
@@ -12824,7 +14464,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Chemical: exposure to acid, alkali, or other chemicals",
-                    "রাসায়নিক: এসিড, ক্ষার বা অন্যান্য রাসায়নিকের সংস্পর্শ"
+                    "রাসায়নিক: এসিড, ক্ষার বা অন্যান্য রাসায়নিকের সংস্পর্শ",
                   ),
                   icon: "fa-flask-vial",
                   color: "m18l3-cause-chemical",
@@ -12832,7 +14472,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Electric: electric shock or current flow",
-                    "বিদ্যুৎ: বৈদ্যুতিক শক বা বিদ্যুৎ প্রবাহ"
+                    "বিদ্যুৎ: বৈদ্যুতিক শক বা বিদ্যুৎ প্রবাহ",
                   ),
                   icon: "fa-bolt",
                   color: "m18l3-cause-electric",
@@ -12840,7 +14480,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Radiation: ultraviolet rays from sun or radiotherapy",
-                    "বিকিরণ: সূর্যের অতিবেগুনি রশ্মি বা রেডিওথেরাপির কারণে"
+                    "বিকিরণ: সূর্যের অতিবেগুনি রশ্মি বা রেডিওথেরাপির কারণে",
                   ),
                   icon: "fa-sun",
                   color: "m18l3-cause-radiation",
@@ -12858,7 +14498,7 @@ const coursesData = [
                         </h3>
                         <p class="mb-0">${item.text}</p>
                       </article>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -12870,7 +14510,7 @@ const coursesData = [
                         <span class="m18l3-cause-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <p class="mb-0">${item.text}</p>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -12945,10 +14585,13 @@ const coursesData = [
                   id: "q18d",
                   question: yhLang(
                     "পোড়া স্থানে কোনটি ব্যবহার করা উচিত নয়?",
-                    "পোড়া স্থানে কোনটি ব্যবহার করা উচিত নয়?"
+                    "পোড়া স্থানে কোনটি ব্যবহার করা উচিত নয়?",
                   ),
                   options: [
-                    yhLang("ক্রিম, লোশন বা টুথপেস্ট", "ক্রিম, লোশন বা টুথপেস্ট"),
+                    yhLang(
+                      "ক্রিম, লোশন বা টুথপেস্ট",
+                      "ক্রিম, লোশন বা টুথপেস্ট",
+                    ),
                     yhLang("শুকনো গজ", "শুকনো গজ"),
                     yhLang("আয়োডোফর্ম গজ", "আয়োডোফর্ম গজ"),
                     yhLang("ঠান্ডা পানি", "ঠান্ডা পানি"),
@@ -12962,7 +14605,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Determine burn type and quickly remove from source (fire, smoke) to stop/slow the burning process",
-                    "ত্বক কতটা পুড়েছে, তার ধরন নির্ধারণ করে চিকিৎসা করা হয়। আক্রান্ত ব্যক্তিকে দ্রুত পোড়ার উৎস (যেমন- আগুন বা ধোঁয়া) থেকে সরিয়ে নিতে হবে যেন পুড়ে যাওয়ার প্রক্রিয়াটি ধীর হয় বা একেবারে বন্ধ হয়। "
+                    "ত্বক কতটা পুড়েছে, তার ধরন নির্ধারণ করে চিকিৎসা করা হয়। আক্রান্ত ব্যক্তিকে দ্রুত পোড়ার উৎস (যেমন- আগুন বা ধোঁয়া) থেকে সরিয়ে নিতে হবে যেন পুড়ে যাওয়ার প্রক্রিয়াটি ধীর হয় বা একেবারে বন্ধ হয়। ",
                   ),
                   icon: "fa-hand-fist",
                   color: "m18l4-step-remove",
@@ -12970,7 +14613,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Remove watches and jewelry as burn area may swell",
-                    "পোড়া জায়গা ফুলে যাওয়ার সম্ভাবনা থাকায় ঘড়ি বা জুয়েলারি খুলে ফেলতে হবে"
+                    "পোড়া জায়গা ফুলে যাওয়ার সম্ভাবনা থাকায় ঘড়ি বা জুয়েলারি খুলে ফেলতে হবে",
                   ),
                   icon: "fa-ring",
                   color: "m18l4-step-jewelry",
@@ -12978,7 +14621,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Leave clothes attached to skin if stuck - do not remove",
-                    "চামড়ার সাথে কাপড় লেগে থাকলে তা উঠানোর প্রয়োজন নেই"
+                    "চামড়ার সাথে কাপড় লেগে থাকলে তা উঠানোর প্রয়োজন নেই",
                   ),
                   icon: "fa-shirt",
                   color: "m18l4-step-clothes",
@@ -12986,7 +14629,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Cool burn area with cool water (10-15 minutes, room temperature - not ice cold)",
-                    "পোড়া জায়গায় কমপক্ষে ১০-১৫ মিনিট ধরে স্বাভাবিক তাপমাত্রার ঠান্ডা পানি ঢালতে হবে (খুব ঠান্ডা বা উষ্ণ পানি নয়)।"
+                    "পোড়া জায়গায় কমপক্ষে ১০-১৫ মিনিট ধরে স্বাভাবিক তাপমাত্রার ঠান্ডা পানি ঢালতে হবে (খুব ঠান্ডা বা উষ্ণ পানি নয়)।",
                   ),
                   icon: "fa-droplet",
                   color: "m18l4-step-cool",
@@ -12994,7 +14637,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Do not pop any blisters",
-                    "পোড়া স্থানের কোনো ফোসকা গলিয়ে দেওয়া যাবেনা"
+                    "পোড়া স্থানের কোনো ফোসকা গলিয়ে দেওয়া যাবেনা",
                   ),
                   icon: "fa-ban",
                   color: "m18l4-step-noblister",
@@ -13002,7 +14645,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Do not apply cream, lotion, egg, salt water, turmeric, or toothpaste to burn area",
-                    "পোড়া স্থানে ক্রিম, লোশন, ডিম, লবণ-পানি, হলুদ বা টুথপেস্ট লাগানো যাবেনা"
+                    "পোড়া স্থানে ক্রিম, লোশন, ডিম, লবণ-পানি, হলুদ বা টুথপেস্ট লাগানো যাবেনা",
                   ),
                   icon: "fa-triangle-exclamation",
                   color: "m18l4-step-notopical",
@@ -13010,7 +14653,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Cover burn with sterile, clean gauze (dressing). Use iodoform gauze if available",
-                    "পোড়া স্থানটিকে শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে দিতে হবে (ড্রেসিং)। যদি নিকটস্থ ফার্মেসীতে পাওয়া যায়, প্রাথমিকভাবে ড্রেসিং করতে পোড়া স্থানে আয়োডোফর্ম গজ (যা লিকুইড প্যারাফিন যুক্ত এবং চামড়ায় লেগে থাকে না) ব্যবহার করতে হবে, তার উপরে শুকনো গজ দিয়ে বেঁধে দিতে হবে।"
+                    "পোড়া স্থানটিকে শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে দিতে হবে (ড্রেসিং)। যদি নিকটস্থ ফার্মেসীতে পাওয়া যায়, প্রাথমিকভাবে ড্রেসিং করতে পোড়া স্থানে আয়োডোফর্ম গজ (যা লিকুইড প্যারাফিন যুক্ত এবং চামড়ায় লেগে থাকে না) ব্যবহার করতে হবে, তার উপরে শুকনো গজ দিয়ে বেঁধে দিতে হবে।",
                   ),
                   icon: "fa-bandage",
                   color: "m18l4-step-dress",
@@ -13018,7 +14661,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Ensure the person drinks adequate fluids",
-                    "আঘাতপ্রাপ্ত ব্যক্তি যেন পর্যাপ্ত তরল পান করে তা নিশ্চিত করতে হবে"
+                    "আঘাতপ্রাপ্ত ব্যক্তি যেন পর্যাপ্ত তরল পান করে তা নিশ্চিত করতে হবে",
                   ),
                   icon: "fa-water",
                   color: "m18l4-step-fluids",
@@ -13026,7 +14669,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "For severe burns, provide first aid and transport quickly to hospital",
-                    "যদি ব্যক্তির পোড়া গুরুতর হয়, তবে প্রাথমিক চিকিৎসা দিয়ে দ্রুত স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে"
+                    "যদি ব্যক্তির পোড়া গুরুতর হয়, তবে প্রাথমিক চিকিৎসা দিয়ে দ্রুত স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে",
                   ),
                   icon: "fa-truck-medical",
                   color: "m18l4-step-severe",
@@ -13034,7 +14677,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "If clothes catch fire, tell person to lie down and roll on ground",
-                    "শরীরে আগুন লাগলে জ্বলন্ত ব্যক্তিটিকে মাটিতে শুয়ে গড়াগড়ি দিতে বলতে হবে"
+                    "শরীরে আগুন লাগলে জ্বলন্ত ব্যক্তিটিকে মাটিতে শুয়ে গড়াগড়ি দিতে বলতে হবে",
                   ),
                   icon: "fa-person-hiking",
                   color: "m18l4-step-fire",
@@ -13050,7 +14693,7 @@ const coursesData = [
                         <span class="m18l4-step-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <p class="mb-0">${item.text}</p>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -13097,12 +14740,21 @@ const coursesData = [
                   id: "q18e",
                   question: yhLang(
                     "উন্মুক্ত হাড় ভাঙ্গায় প্রথমে কোন পদক্ষেপ নিতে হবে?",
-                    "উন্মুক্ত হাড় ভাঙ্গায় প্রথমে কোন পদক্ষেপ নিতে হবে?"
+                    "উন্মুক্ত হাড় ভাঙ্গায় প্রথমে কোন পদক্ষেপ নিতে হবে?",
                   ),
                   options: [
-                    yhLang("রক্তক্ষরণ বন্ধ করার ব্যবস্থা করা", "রক্তক্ষরণ বন্ধ করার ব্যবস্থা করা"),
-                    yhLang("অঙ্গটি জোর করে সোজা করা", "অঙ্গটি জোর করে সোজা করা"),
-                    yhLang("তৎক্ষণাৎ ব্যায়াম করানো", "তৎক্ষণাৎ ব্যায়াম করানো"),
+                    yhLang(
+                      "রক্তক্ষরণ বন্ধ করার ব্যবস্থা করা",
+                      "রক্তক্ষরণ বন্ধ করার ব্যবস্থা করা",
+                    ),
+                    yhLang(
+                      "অঙ্গটি জোর করে সোজা করা",
+                      "অঙ্গটি জোর করে সোজা করা",
+                    ),
+                    yhLang(
+                      "তৎক্ষণাৎ ব্যায়াম করানো",
+                      "তৎক্ষণাৎ ব্যায়াম করানো",
+                    ),
                     yhLang("গরম পানি ঢালানো", "গরম পানি ঢালানো"),
                   ],
                   correctAnswer: 0,
@@ -13110,89 +14762,89 @@ const coursesData = [
               ],
             },
             content: (function () {
-            const intro = yhLang(
-  "A bone fracture is a condition where one or more bones in the body break, crack, or bend due to injury. Usually, strong impacts or injuries can cause bones to break, but sometimes fractures may also occur due to age or certain diseases.",
-  "হাড় ভাঙ্গা (ফ্র্যাকচার) হল এমন একটি অবস্থা যেখানে শরীরের এক বা একাধিক হাড় ভেঙে যায় বা ফাটল ধরে বা কোন আঘাতের কারণে বেঁকে যায়। সাধারণত শক্তিশালী আঘাত বা ইনজুরির কারণে কোনো ব্যক্তির হাড় ভেঙে যেতে পারে, তবে কখনো কখনো বয়স বা অসুস্থতাজনিত কারণেও কোনো ব্যক্তি হাড় ভাঙ্গার শিকার হতে পারে।"
-);
+              const intro = yhLang(
+                "A bone fracture is a condition where one or more bones in the body break, crack, or bend due to injury. Usually, strong impacts or injuries can cause bones to break, but sometimes fractures may also occur due to age or certain diseases.",
+                "হাড় ভাঙ্গা (ফ্র্যাকচার) হল এমন একটি অবস্থা যেখানে শরীরের এক বা একাধিক হাড় ভেঙে যায় বা ফাটল ধরে বা কোন আঘাতের কারণে বেঁকে যায়। সাধারণত শক্তিশালী আঘাত বা ইনজুরির কারণে কোনো ব্যক্তির হাড় ভেঙে যেতে পারে, তবে কখনো কখনো বয়স বা অসুস্থতাজনিত কারণেও কোনো ব্যক্তি হাড় ভাঙ্গার শিকার হতে পারে।",
+              );
 
-const typeIntro = yhLang(
-  "Bone fractures are mainly of two types—open fractures and closed fractures. An open fracture occurs when the broken bone pierces through the skin and becomes visible. A closed fracture occurs when the broken bone remains inside the body and cannot be seen from outside.",
-  "হাড় ভাঙ্গা মূলত দুই ধরনের হতে পারে—উন্মুক্ত হাড় ভাঙ্গা ও আবদ্ধ হাড় ভাঙ্গা। উন্মুক্ত হাড় ভাঙ্গা হচ্ছে যখন রোগীর ভাঙ্গা হাড় চামড়ার ভেতর থেকে বেরিয়ে আসে এবং বাইরে থেকে দেখা যায়। আর আবদ্ধ হাড় ভাঙ্গা হলো ভাঙ্গা হাড়টি শরীরের ভেতরে অবস্থান করে এবং বাইরে থেকে দেখা যায় না।"
-);
+              const typeIntro = yhLang(
+                "Bone fractures are mainly of two types—open fractures and closed fractures. An open fracture occurs when the broken bone pierces through the skin and becomes visible. A closed fracture occurs when the broken bone remains inside the body and cannot be seen from outside.",
+                "হাড় ভাঙ্গা মূলত দুই ধরনের হতে পারে—উন্মুক্ত হাড় ভাঙ্গা ও আবদ্ধ হাড় ভাঙ্গা। উন্মুক্ত হাড় ভাঙ্গা হচ্ছে যখন রোগীর ভাঙ্গা হাড় চামড়ার ভেতর থেকে বেরিয়ে আসে এবং বাইরে থেকে দেখা যায়। আর আবদ্ধ হাড় ভাঙ্গা হলো ভাঙ্গা হাড়টি শরীরের ভেতরে অবস্থান করে এবং বাইরে থেকে দেখা যায় না।",
+              );
 
-const openFractureHeading = yhLang(
-  "First Aid for Bone Fractures",
-  "হাড় ভাঙ্গার প্রাথমিক চিকিৎসা"
-);
+              const openFractureHeading = yhLang(
+                "First Aid for Bone Fractures",
+                "হাড় ভাঙ্গার প্রাথমিক চিকিৎসা",
+              );
 
-const openFractureSubheading = yhLang(
-  "In Case of Open Fracture",
-  "উন্মুক্ত হাড় ভাঙ্গার ক্ষেত্রে"
-);
+              const openFractureSubheading = yhLang(
+                "In Case of Open Fracture",
+                "উন্মুক্ত হাড় ভাঙ্গার ক্ষেত্রে",
+              );
 
-const openFractureSteps = [
-  {
-    text: yhLang(
-      "If there is bleeding, the first step is to stop the bleeding.",
-      "যদি রক্তপাত হয়, সবার প্রথমে রক্তক্ষরণ বন্ধ করার ব্যবস্থা করতে হবে।"
-    ),
-    icon: "fa-droplet",
-    tone: "warning",
-  },
-  {
-    text: yhLang(
-      "Try to keep the injured limb as still as possible.",
-      "আক্রান্ত অঙ্গটি যতটা সম্ভব স্থির রাখার চেষ্টা করতে হবে।"
-    ),
-    icon: "fa-hand",
-    tone: "info",
-  },
-  {
-    text: yhLang(
-      "The injured person should be taken to the hospital quickly for treatment.",
-      "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য দ্রুত হাসপাতালে নিয়ে যেতে হবে।"
-    ),
-    icon: "fa-truck-medical",
-    tone: "success",
-  },
-];
+              const openFractureSteps = [
+                {
+                  text: yhLang(
+                    "If there is bleeding, the first step is to stop the bleeding.",
+                    "যদি রক্তপাত হয়, সবার প্রথমে রক্তক্ষরণ বন্ধ করার ব্যবস্থা করতে হবে।",
+                  ),
+                  icon: "fa-droplet",
+                  tone: "warning",
+                },
+                {
+                  text: yhLang(
+                    "Try to keep the injured limb as still as possible.",
+                    "আক্রান্ত অঙ্গটি যতটা সম্ভব স্থির রাখার চেষ্টা করতে হবে।",
+                  ),
+                  icon: "fa-hand",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "The injured person should be taken to the hospital quickly for treatment.",
+                    "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য দ্রুত হাসপাতালে নিয়ে যেতে হবে।",
+                  ),
+                  icon: "fa-truck-medical",
+                  tone: "success",
+                },
+              ];
 
-const closedFractureHeading = yhLang(
-  "In Case of Closed Fracture",
-  "আবদ্ধ হাড় ভাঙ্গার ক্ষেত্রে"
-);
+              const closedFractureHeading = yhLang(
+                "In Case of Closed Fracture",
+                "আবদ্ধ হাড় ভাঙ্গার ক্ষেত্রে",
+              );
 
-const closedFractureSubheading = yhLang(
-  "Things to Remember",
-  "যা মনে রাখবেন"
-);
+              const closedFractureSubheading = yhLang(
+                "Things to Remember",
+                "যা মনে রাখবেন",
+              );
 
-const closedFractureSteps = [
-  {
-    text: yhLang(
-      "Do not try to forcefully straighten the injured limb.",
-      "আক্রান্ত অঙ্গটি জোরপূর্বক সোজা করার চেষ্টা করা যাবেনা।"
-    ),
-    icon: "fa-ban",
-    tone: "danger",
-  },
-  {
-    text: yhLang(
-      "Keep the limb in a comfortable position and minimize movement as much as possible.",
-      "অঙ্গটি সুবিধাজনক অবস্থানে রাখতে হবে এবং যথাসম্ভব কম নড়াচড়া করতে হবে।"
-    ),
-    icon: "fa-person-walking",
-    tone: "info",
-  },
-  {
-    text: yhLang(
-      "Take the injured person to a hospital for proper treatment.",
-      "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য হাসপাতালে নিয়ে যেতে হবে।"
-    ),
-    icon: "fa-hospital",
-    tone: "success",
-  },
-];
+              const closedFractureSteps = [
+                {
+                  text: yhLang(
+                    "Do not try to forcefully straighten the injured limb.",
+                    "আক্রান্ত অঙ্গটি জোরপূর্বক সোজা করার চেষ্টা করা যাবেনা।",
+                  ),
+                  icon: "fa-ban",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang(
+                    "Keep the limb in a comfortable position and minimize movement as much as possible.",
+                    "অঙ্গটি সুবিধাজনক অবস্থানে রাখতে হবে এবং যথাসম্ভব কম নড়াচড়া করতে হবে।",
+                  ),
+                  icon: "fa-person-walking",
+                  tone: "info",
+                },
+                {
+                  text: yhLang(
+                    "Take the injured person to a hospital for proper treatment.",
+                    "আক্রান্ত ব্যক্তিকে চিকিৎসার জন্য হাসপাতালে নিয়ে যেতে হবে।",
+                  ),
+                  icon: "fa-hospital",
+                  tone: "success",
+                },
+              ];
 
               const renderStepList = (items, group) =>
                 items
@@ -13204,7 +14856,7 @@ const closedFractureSteps = [
                         </span>
                         <span>${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -13309,13 +14961,19 @@ const closedFractureSteps = [
                   id: "q18f",
                   question: yhLang(
                     "সাপের কামড়ে আক্রান্ত অঙ্গকে কীভাবে রাখা উচিত?",
-                    "সাপের কামড়ে আক্রান্ত অঙ্গকে কীভাবে রাখা উচিত?"
+                    "সাপের কামড়ে আক্রান্ত অঙ্গকে কীভাবে রাখা উচিত?",
                   ),
                   options: [
-                    yhLang("যথাসম্ভব স্থির ও বাঁধা অবস্থায়", "যথাসম্ভব স্থির ও বাঁধা অবস্থায়"),
+                    yhLang(
+                      "যথাসম্ভব স্থির ও বাঁধা অবস্থায়",
+                      "যথাসম্ভব স্থির ও বাঁধা অবস্থায়",
+                    ),
                     yhLang("বারবার নাড়াচাড়া করে", "বারবার নাড়াচাড়া করে"),
                     yhLang("গরম পানিতে ডুবিয়ে", "গরম পানিতে ডুবিয়ে"),
-                    yhLang("গিঁট বেঁধে রক্ত চলাচল বন্ধ করে", "গিঁট বেঁধে রক্ত চলাচল বন্ধ করে"),
+                    yhLang(
+                      "গিঁট বেঁধে রক্ত চলাচল বন্ধ করে",
+                      "গিঁট বেঁধে রক্ত চলাচল বন্ধ করে",
+                    ),
                   ],
                   correctAnswer: 0,
                 },
@@ -13323,89 +14981,107 @@ const closedFractureSteps = [
             },
             content: (function () {
               const intro = yhLang(
-  "In Bangladesh, most snake bites are caused by non-venomous snakes. If a person is suspected to be bitten by a venomous snake, the main task is to prevent the venom from spreading quickly through the body. Therefore, the affected person should be kept as still as possible.",
-  "বাংলাদেশে বেশির ভাগ সাপের কামড় বিষহীন সাপ দ্বারা হয়ে থাকে। যদি কোনো ব্যক্তিকে বিষধর সাপে কামড়েছে বলে মনে হয়, তাহলে প্রধান কাজ হল বিষ দ্রুত শরীরে ছড়িয়ে পড়া প্রতিরোধ করা। সে কারণে আক্রান্ত ব্যক্তি যেন নড়াচড়া না করে তার ব্যবস্থা নিতে হবে।ক্ষতস্থানে গিঁট বাঁধা, কাটা, খোঁচানো, মলম লাগানো বা ওঝার চিকিৎসা নেওয়া বিপজ্জনক। নিরাপদ প্রাথমিক চিকিৎসার পর দ্রুত হাসপাতালে নেওয়াই সবচেয়ে গুরুত্বপূর্ণ পদক্ষেপ।"
-);
+                "In Bangladesh, most snake bites are caused by non-venomous snakes. If a person is suspected to be bitten by a venomous snake, the main task is to prevent the venom from spreading quickly through the body. Therefore, the affected person should be kept as still as possible.",
+                "বাংলাদেশে বেশির ভাগ সাপের কামড় বিষহীন সাপ দ্বারা হয়ে থাকে। যদি কোনো ব্যক্তিকে বিষধর সাপে কামড়েছে বলে মনে হয়, তাহলে প্রধান কাজ হল বিষ দ্রুত শরীরে ছড়িয়ে পড়া প্রতিরোধ করা। সে কারণে আক্রান্ত ব্যক্তি যেন নড়াচড়া না করে তার ব্যবস্থা নিতে হবে।ক্ষতস্থানে গিঁট বাঁধা, কাটা, খোঁচানো, মলম লাগানো বা ওঝার চিকিৎসা নেওয়া বিপজ্জনক। নিরাপদ প্রাথমিক চিকিৎসার পর দ্রুত হাসপাতালে নেওয়াই সবচেয়ে গুরুত্বপূর্ণ পদক্ষেপ।",
+              );
 
-const warningText = yhLang(
-  "Tying a knot, cutting, puncturing the wound, applying ointments, or seeking treatment from traditional healers can be dangerous. After providing safe first aid, taking the patient quickly to a hospital is the most important step.",
-  ""
-);
+              const warningText = yhLang(
+                "Tying a knot, cutting, puncturing the wound, applying ointments, or seeking treatment from traditional healers can be dangerous. After providing safe first aid, taking the patient quickly to a hospital is the most important step.",
+                "",
+              );
 
-const steps = [
-  {
-    title: yhLang("Keep the Person Calm and Still", "স্থির ও শান্ত রাখা"),
-    text: yhLang(
-      "If the person's breathing is normal, ask them to remain calm and still. The bite area may swell, so remove any rings, watches, jewelry, or tight items.",
-      "যদি আক্রান্ত ব্যক্তির শ্বাস-প্রশ্বাস স্বাভাবিক থাকে, তাহলে ব্যক্তিকে স্থির এবং শান্ত থাকতে বলুন। কামড়ের জায়গা ফুলে যেতে পারে, তাই কোনো আংটি, ঘড়ি, অলংকার বা বাঁধন থাকলে তা খুলে দিন।"
-    ),
-    icon: "fa-person-circle-check",
-    color: "m18l6-step-calm",
-  },
-  {
-    title: yhLang("Clean the Wound", "ক্ষত স্থান পরিষ্কার"),
-    text: yhLang(
-      "Check the wound to see if the snake bite has punctured the skin. Wash the bite area thoroughly with clean water.",
-      "ক্ষত স্থানটি পরীক্ষা করে দেখুন, সাপে কামড়ের স্থানটি ছিদ্র হয়ে গেছে কিনা। কামড়ের স্থানটি পরিষ্কার পানি দিয়ে ভাল করে ধুয়ে ফেলতে হবে।"
-    ),
-    icon: "fa-pump-soap",
-    color: "m18l6-step-clean",
-  },
-  {
-    title: yhLang("Immobilize the Limb", "অঙ্গ স্থির রাখা"),
-    text: yhLang(
-      "Keep the affected limb as still as possible and use a stick, wooden board, or bamboo splint to support it so that the limb remains stable.",
-      "আক্রান্ত অঙ্গটিকে নড়াচড়া কম করতে দিন এবং লাঠি, কাঠ বা বাঁশের ফালি দিয়ে বেঁধে দিন যেন অঙ্গটি যথাসম্ভব স্থির থাকে।"
-    ),
-    icon: "fa-bandage",
-    color: "m18l6-step-immob",
-  },
-  {
-    title: yhLang("Observe Danger Signs", "বিপদ লক্ষণ পর্যবেক্ষণ"),
-    text: yhLang(
-      "Observe the patient for danger signs such as bleeding from the wound, dizziness, vomiting, swelling at the bite site, drooping eyelids, blurred vision, breathing difficulty, or reduced/dark urine.",
-      "আক্রান্ত ব্যক্তির দিকে খেয়াল রাখুন নিচের কোনো বিপদ লক্ষণ আছে কিনা, যেমন—ক্ষতস্থান থেকে রক্তপাত হওয়া, মাথা ঘোরানো, বমি করা, কামড়ের অংশ ফুলে যাওয়া, চোখের পাতা বন্ধ হয়ে আসা বা চোখে ঝাপসা দেখা, শ্বাসকষ্ট হওয়া, প্রস্রাবের পরিমাণ কমে যাওয়া / গাঢ় বর্ণের প্রস্রাব হওয়া।"
-    ),
-    icon: "fa-triangle-exclamation",
-    color: "m18l6-step-monitor",
-  },
-  {
-    title: yhLang("Start CPR if Breathing Stops", "শ্বাস বন্ধ হলে CPR"),
-    text: yhLang(
-      "If the person is not breathing normally, begin CPR. Do not tie a tourniquet or cut the bite wound.",
-      "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে সিপিআর শুরু করুন। কামড়ের স্থানে কোনো গিঁট বাঁধা যাবে না / ক্ষত স্থানটি কাটা যাবে না।"
-    ),
-    icon: "fa-heart-pulse",
-    color: "m18l6-step-cpr",
-  },
-  {
-    title: yhLang("Do Not Puncture the Wound", "ক্ষত খোঁচানো নিষেধ"),
-    text: yhLang(
-      "Do not puncture the wound with needles or apply ointments, creams, or lotions.",
-      "সুঁই দিয়ে ক্ষতস্থানটি খোচানো যাবেনা বা মলম বা লোশন জাতীয় কিছু লাগানো যাবে না।"
-    ),
-    icon: "fa-ban",
-    color: "m18l6-step-avoid",
-  },
-  {
-    title: yhLang("Avoid Herbal or Traditional Treatment", "ভেষজ চিকিৎসা নয়"),
-    text: yhLang(
-      "Do not seek treatment from traditional healers or apply herbal remedies.",
-      "স্থানীয় কবিরাজ বা ওঝার কাছে চিকিৎসা নেয়া অথবা কোনো ভেষজ ওষুধ প্রয়োগ করা যাবে না।"
-    ),
-    icon: "fa-leaf",
-    color: "m18l6-step-remedy",
-  },
-  {
-    title: yhLang("Take the Patient to a Hospital Immediately", "দ্রুত হাসপাতালে নিন"),
-    text: yhLang(
-      "Take the affected person to the nearest hospital as quickly as possible.",
-      "আক্রান্ত ব্যক্তিকে দ্রুত হাসপাতালে নিতে হবে।"
-    ),
-    icon: "fa-hospital-user",
-    color: "m18l6-step-hospital",
-  },
-];
+              const steps = [
+                {
+                  title: yhLang(
+                    "Keep the Person Calm and Still",
+                    "স্থির ও শান্ত রাখা",
+                  ),
+                  text: yhLang(
+                    "If the person's breathing is normal, ask them to remain calm and still. The bite area may swell, so remove any rings, watches, jewelry, or tight items.",
+                    "যদি আক্রান্ত ব্যক্তির শ্বাস-প্রশ্বাস স্বাভাবিক থাকে, তাহলে ব্যক্তিকে স্থির এবং শান্ত থাকতে বলুন। কামড়ের জায়গা ফুলে যেতে পারে, তাই কোনো আংটি, ঘড়ি, অলংকার বা বাঁধন থাকলে তা খুলে দিন।",
+                  ),
+                  icon: "fa-person-circle-check",
+                  color: "m18l6-step-calm",
+                },
+                {
+                  title: yhLang("Clean the Wound", "ক্ষত স্থান পরিষ্কার"),
+                  text: yhLang(
+                    "Check the wound to see if the snake bite has punctured the skin. Wash the bite area thoroughly with clean water.",
+                    "ক্ষত স্থানটি পরীক্ষা করে দেখুন, সাপে কামড়ের স্থানটি ছিদ্র হয়ে গেছে কিনা। কামড়ের স্থানটি পরিষ্কার পানি দিয়ে ভাল করে ধুয়ে ফেলতে হবে।",
+                  ),
+                  icon: "fa-pump-soap",
+                  color: "m18l6-step-clean",
+                },
+                {
+                  title: yhLang("Immobilize the Limb", "অঙ্গ স্থির রাখা"),
+                  text: yhLang(
+                    "Keep the affected limb as still as possible and use a stick, wooden board, or bamboo splint to support it so that the limb remains stable.",
+                    "আক্রান্ত অঙ্গটিকে নড়াচড়া কম করতে দিন এবং লাঠি, কাঠ বা বাঁশের ফালি দিয়ে বেঁধে দিন যেন অঙ্গটি যথাসম্ভব স্থির থাকে।",
+                  ),
+                  icon: "fa-bandage",
+                  color: "m18l6-step-immob",
+                },
+                {
+                  title: yhLang(
+                    "Observe Danger Signs",
+                    "বিপদ লক্ষণ পর্যবেক্ষণ",
+                  ),
+                  text: yhLang(
+                    "Observe the patient for danger signs such as bleeding from the wound, dizziness, vomiting, swelling at the bite site, drooping eyelids, blurred vision, breathing difficulty, or reduced/dark urine.",
+                    "আক্রান্ত ব্যক্তির দিকে খেয়াল রাখুন নিচের কোনো বিপদ লক্ষণ আছে কিনা, যেমন—ক্ষতস্থান থেকে রক্তপাত হওয়া, মাথা ঘোরানো, বমি করা, কামড়ের অংশ ফুলে যাওয়া, চোখের পাতা বন্ধ হয়ে আসা বা চোখে ঝাপসা দেখা, শ্বাসকষ্ট হওয়া, প্রস্রাবের পরিমাণ কমে যাওয়া / গাঢ় বর্ণের প্রস্রাব হওয়া।",
+                  ),
+                  icon: "fa-triangle-exclamation",
+                  color: "m18l6-step-monitor",
+                },
+                {
+                  title: yhLang(
+                    "Start CPR if Breathing Stops",
+                    "শ্বাস বন্ধ হলে CPR",
+                  ),
+                  text: yhLang(
+                    "If the person is not breathing normally, begin CPR. Do not tie a tourniquet or cut the bite wound.",
+                    "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে সিপিআর শুরু করুন। কামড়ের স্থানে কোনো গিঁট বাঁধা যাবে না / ক্ষত স্থানটি কাটা যাবে না।",
+                  ),
+                  icon: "fa-heart-pulse",
+                  color: "m18l6-step-cpr",
+                },
+                {
+                  title: yhLang(
+                    "Do Not Puncture the Wound",
+                    "ক্ষত খোঁচানো নিষেধ",
+                  ),
+                  text: yhLang(
+                    "Do not puncture the wound with needles or apply ointments, creams, or lotions.",
+                    "সুঁই দিয়ে ক্ষতস্থানটি খোচানো যাবেনা বা মলম বা লোশন জাতীয় কিছু লাগানো যাবে না।",
+                  ),
+                  icon: "fa-ban",
+                  color: "m18l6-step-avoid",
+                },
+                {
+                  title: yhLang(
+                    "Avoid Herbal or Traditional Treatment",
+                    "ভেষজ চিকিৎসা নয়",
+                  ),
+                  text: yhLang(
+                    "Do not seek treatment from traditional healers or apply herbal remedies.",
+                    "স্থানীয় কবিরাজ বা ওঝার কাছে চিকিৎসা নেয়া অথবা কোনো ভেষজ ওষুধ প্রয়োগ করা যাবে না।",
+                  ),
+                  icon: "fa-leaf",
+                  color: "m18l6-step-remedy",
+                },
+                {
+                  title: yhLang(
+                    "Take the Patient to a Hospital Immediately",
+                    "দ্রুত হাসপাতালে নিন",
+                  ),
+                  text: yhLang(
+                    "Take the affected person to the nearest hospital as quickly as possible.",
+                    "আক্রান্ত ব্যক্তিকে দ্রুত হাসপাতালে নিতে হবে।",
+                  ),
+                  icon: "fa-hospital-user",
+                  color: "m18l6-step-hospital",
+                },
+              ];
 
               const renderList = (items) =>
                 items
@@ -13421,7 +15097,7 @@ const steps = [
                           
                         </div>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -13464,7 +15140,7 @@ const steps = [
                   id: "q18g",
                   question: yhLang(
                     "কুকুরের কামড়ের ক্ষত কতক্ষণ ধুয়ে রাখতে বলা হয়েছে?",
-                    "কুকুরের কামড়ের ক্ষত কতক্ষণ ধুয়ে রাখতে বলা হয়েছে?"
+                    "কুকুরের কামড়ের ক্ষত কতক্ষণ ধুয়ে রাখতে বলা হয়েছে?",
                   ),
                   options: [
                     yhLang("কমপক্ষে ১৫ মিনিট", "কমপক্ষে ১৫ মিনিট"),
@@ -13479,31 +15155,147 @@ const steps = [
             content: (function () {
               const intro = yhLang(
                 "Dog bites can cause severe bleeding and infection including rabies virus. Rabies is nearly 100% fatal once clinical symptoms appear. Immediate first aid and hospital treatment are absolutely critical.",
-                "কুকুরের কামড়ের ক্ষত থেকে অতিরিক্ত রক্তপাত বা সংক্রমণজনিত রোগ যেমন জলাতংক বা র‌্যাবিস হতে পারে। জলাতংক রোগে জীবণনাশের সম্ভাবনা শতভাগ।"
+                "কুকুরের কামড়ের ক্ষত থেকে অতিরিক্ত রক্তপাত বা সংক্রামক রোগ যেমন জলাতংক বা র‍্যাবিস হতে পারে। জলাতংক রোগে জীবণনাশের সম্ভাবনা শতভাগ। বাংলাদেশে জলাতঙ্ক একটি জনস্বাস্থ্যবিষয়ক সমস্যা এবং লক্ষ রাখতে হবে প্রাথমিক চিকিৎসা প্রদানকারী যেন নিজেকে এ রোগ সংক্রমণের ঝুঁকিতে না রাখে। ",
               );
 
               const dogBiteSymptoms = [
-                { text: yhLang("Pain at the wound site", "ক্ষত স্থানে ব্যথা"), icon: "fa-hand-fist", color: "m18l7-symptom-pain" },
-                { text: yhLang("Redness and inflammation around bite", "ক্ষত স্থান লাল হয়ে যাওয়া"), icon: "fa-fire", color: "m18l7-symptom-red" },
-                { text: yhLang("Swelling at and around the bite", "ক্ষত স্থান ফুলে যাওয়া"), icon: "fa-hand", color: "m18l7-symptom-swell" },
-                { text: yhLang("Pus or discharge from the wound", "ক্ষত স্থান থেকে পুঁজ বের হওয়া"), icon: "fa-droplet", color: "m18l7-symptom-pus" },
-                { text: yhLang("Fever (high body temperature)", "জ্বর হওয়া"), icon: "fa-temperature-high", color: "m18l7-symptom-fever" },
-                { text: yhLang("Swollen lymph nodes around bite area", "শরীরের গ্ল্যান্ড বা গ্রন্থি ফুলে যাওয়া"), icon: "fa-bandage", color: "m18l7-symptom-gland" }
+                {
+                  text: yhLang("Pain at the wound site", "ক্ষত স্থানে ব্যথা"),
+                  icon: "fa-hand-fist",
+                  color: "m18l7-symptom-pain",
+                },
+                {
+                  text: yhLang(
+                    "Redness and inflammation around bite",
+                    "ক্ষত স্থান লাল হয়ে যাওয়া",
+                  ),
+                  icon: "fa-fire",
+                  color: "m18l7-symptom-red",
+                },
+                {
+                  text: yhLang(
+                    "Swelling at and around the bite",
+                    "ক্ষত স্থান ফুলে যাওয়া",
+                  ),
+                  icon: "fa-hand",
+                  color: "m18l7-symptom-swell",
+                },
+                {
+                  text: yhLang(
+                    "Pus or discharge from the wound",
+                    "ক্ষত স্থান থেকে পুঁজ বের হওয়া",
+                  ),
+                  icon: "fa-droplet",
+                  color: "m18l7-symptom-pus",
+                },
+                {
+                  text: yhLang("Fever (high body temperature)", "জ্বর হওয়া"),
+                  icon: "fa-temperature-high",
+                  color: "m18l7-symptom-fever",
+                },
+                {
+                  text: yhLang(
+                    "Swollen lymph nodes around bite area",
+                    "শরীরের গ্ল্যান্ড বা গ্রন্থি ফুলে যাওয়া",
+                  ),
+                  icon: "fa-bandage",
+                  color: "m18l7-symptom-gland",
+                },
               ];
 
               const dogBiteCareSteps = [
-                { text: yhLang("Ensure scene safety first. Prevent further animal contact. Keep away from the dog.", "প্রাথমিক চিকিৎসা প্রদানের পূর্বে ঘটনাস্থলের নিরাপত্তা নিশ্চিত করুন এবং প্রাণীটি যাতে আর কামড় দিতে না পারে তা নিশ্চিত করুন।"), icon: "fa-shield", color: "m18l7-care-safety" },
-                { text: yhLang("Remove jewelry, watches, tight bindings from bitten area as swelling may occur.", "কামড়ানো অংশে যদি কোনো আংটি বা বাঁধন থাকে তা খুলে দিন, কারণ সে অংশটি ফুলে যেতে পারে।"), icon: "fa-ring", color: "m18l7-care-remove" },
-                { text: yhLang("Wash wound thoroughly with running water and soap for at least 15 minutes to remove bacteria.", "ক্ষতস্থানটি পরিষ্কার পানি ও সাবান ব্যবহার করে কমপক্ষে ১৫ মিনিটের মতো ধুয়ে ফেলুন।"), icon: "fa-water", color: "m18l7-care-wash" },
-                { text: yhLang("Cover wound with clean, dry, sterile gauze or cloth. Apply gentle pressure if bleeding continues.", "ক্ষত স্থান শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে রাখুন।"), icon: "fa-bandage", color: "m18l7-care-cover" },
-                { text: yhLang("Seek immediate hospital care for rabies vaccine and post-exposure prophylaxis (PEP). Time is critical - do not delay.", "পরবর্তী চিকিৎসার জন্য আহত ব্যক্তিকে দ্রুত নিকটস্থ হাসপাতালে নিয়ে যান। সময় অত্যন্ত গুরুত্বপূর্ণ।"), icon: "fa-hospital-user", color: "m18l7-care-hospital" }
+                {
+                  text: yhLang(
+                    "Ensure scene safety first. Prevent further animal contact. Keep away from the dog.",
+                    "প্রাথমিক চিকিৎসা প্রদানের পূর্বে ঘটনাস্থলের নিরাপত্তা নিশ্চিত করুন এবং প্রাণীটি যাতে আর কামড় দিতে না পারে তা নিশ্চিত করতে হবে।",
+                  ),
+                  icon: "fa-shield",
+                  color: "m18l7-care-safety",
+                },
+                {
+                  text: yhLang(
+                    "Remove jewelry, watches, tight bindings from bitten area as swelling may occur.",
+                    "কামড়ানো অংশে যদি কোনো আংটি বা বাঁধন থাকে তা খুলে দিন, কারণ সে অংশটি ফুলে যেতে পারে।",
+                  ),
+                  icon: "fa-ring",
+                  color: "m18l7-care-remove",
+                },
+                {
+                  text: yhLang(
+                    "Wash wound thoroughly with running water and soap for at least 15 minutes to remove bacteria.",
+                    "ক্ষতস্থানটি পরিস্কার পানি ও ক্ষার জাতীয় সাবান ব্যবহার করে কমপক্ষে ১৫ মিনিটের মত ধুয়ে ফেলতে হবে। প্রবাহমান পানির উৎস যেমন ট্যাঁপের পানি ব্যবহার করতে হবে তবে যদি প্রবাহমান পানির ব্যবস্থা না থাকে, তাহলে কিছুক্ষণ পর পর পানি বদলিয়ে কামড়ের জায়গাটি ভাল ভাবে ধুয়ে নিতে হবে। ক্ষত স্থান হাত দিয়ে ধরা যাবেনা। ",
+                  ),
+                  icon: "fa-water",
+                  color: "m18l7-care-wash",
+                },
+                {
+                  text: yhLang(
+                    "Cover wound with clean, dry, sterile gauze or cloth. Apply gentle pressure if bleeding continues.",
+                    "ক্ষত স্থান শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে রাখতে হবে। যদি ক্ষতস্থান থেকে প্রচুর রক্তপাত হয়, তবে “রক্তক্ষরণ নিয়ন্ত্রণ” অংশে বর্ণিত পদ্ধতি অনুযায়ী প্রাথমিক চিকিৎসা দিতে হবে",
+                  ),
+                  icon: "fa-bandage",
+                  color: "m18l7-care-cover",
+                },
+                {
+                  text: yhLang(
+                    "Seek immediate hospital care for rabies vaccine and post-exposure prophylaxis (PEP). Time is critical - do not delay.",
+                    "পরবর্তী চিকিৎসার জন্যে আক্রান্ত ব্যক্তিকে দ্রুত নিকটস্থ হাসপাতালে নিতে হবে।",
+                  ),
+                  icon: "fa-hospital-user",
+                  color: "m18l7-care-hospital",
+                },
               ];
 
-              const renderSymptoms = (symptoms) => `<div class="m18l7-symptoms-list">${symptoms.map((symptom, index) => `<div class="m18l7-symptom-item ${symptom.color}" data-aos="fade-right" data-aos-delay="${50 + index * 35}"><div class="m18l7-symptom-icon"><i class="fa-solid ${symptom.icon}"></i></div><p>${symptom.text}</p></div>`).join("")}</div>`;
+              const renderSymptoms = (symptoms) =>
+                `<div class="m18l7-symptoms-list">${symptoms.map((symptom, index) => `<div class="m18l7-symptom-item ${symptom.color}" data-aos="fade-right" data-aos-delay="${50 + index * 35}"><div class="m18l7-symptom-icon"><i class="fa-solid ${symptom.icon}"></i></div><p>${symptom.text}</p></div>`).join("")}</div>`;
 
-              const renderCareSteps = (steps) => `<div class="m18l7-care-list">${steps.map((step, index) => `<div class="m18l7-care-item ${step.color}" data-aos="fade-left" data-aos-delay="${50 + index * 35}"><div class="m18l7-care-icon"><i class="fa-solid ${step.icon}"></i></div><p>${step.text}</p></div>`).join("")}</div>`;
+              const renderCareSteps = (steps) =>
+                `<div class="m18l7-care-list">${steps.map((step, index) => `<div class="m18l7-care-item ${step.color}" data-aos="fade-left" data-aos-delay="${50 + index * 35}"><div class="m18l7-care-icon"><i class="fa-solid ${step.icon}"></i></div><p>${step.text}</p></div>`).join("")}</div>`;
 
-              return `<div class="mod18-lesson7"><div class="m18l7-shape m18l7-shape-1"></div><div class="m18l7-shape m18l7-shape-2"></div><div class="m18l7-shape m18l7-shape-3"></div><header class="m18l7-hero" data-aos="zoom-in" data-aos-duration="600"><div class="m18l7-hero-badge"><i class="fa-solid fa-dog"></i></div><h2 class="m18l7-hero-title">${yhLang("Dog Bite Care", "কুকুরের কামড়")}</h2></header><section class="m18l7-intro-panel" data-aos="fade-up" data-aos-delay="20"><p class="m18l7-intro-text mb-0">${intro}</p></section><div class="m18l7-grid"><section class="m18l7-symptoms-panel" data-aos="fade-right" data-aos-delay="50"><h3 class="m18l7-panel-title"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Possible Symptoms", "সম্ভাব্য লক্ষণ")}</h3>${renderSymptoms(dogBiteSymptoms)}</section><section class="m18l7-care-panel" data-aos="fade-left" data-aos-delay="50"><h3 class="m18l7-panel-title"><i class="fa-solid fa-kit-medical"></i>${yhLang("First Aid Steps", "প্রথম চিকিৎসার ধাপ")}</h3>${renderCareSteps(dogBiteCareSteps)}</section></div></div>`;
+              return `<div class="mod18-lesson7">
+    <div class="m18l7-shape m18l7-shape-1"></div>
+    <div class="m18l7-shape m18l7-shape-2"></div>
+    <div class="m18l7-shape m18l7-shape-3"></div>
+
+    <header class="m18l7-hero" data-aos="zoom-in" data-aos-duration="600">
+        <div class="m18l7-hero-badge">
+            <i class="fa-solid fa-dog"></i>
+        </div>
+        <h2 class="m18l7-hero-title">
+            ${yhLang("Dog Bite Care", "কুকুরের কামড়")}
+        </h2>
+    </header>
+
+    <section class="m18l7-intro-panel" data-aos="fade-up" data-aos-delay="20">
+        <p class="m18l7-intro-text mb-0">${intro}</p>
+    </section>
+    <div class="row g-1">
+                    <div class="col-md-8">
+                             <div class="m18l7-grid">
+                              <section class="m18l7-symptoms-panel" data-aos="fade-right" data-aos-delay="50">
+                                  <h3 class="m18l7-panel-title">
+                                      <i class="fa-solid fa-triangle-exclamation"></i>
+                                      ${yhLang("Possible Symptoms", "কুকুরের কামড় থেকে নিম্নলিখিত রোগ সংক্রমণের এক বা একাধিক লক্ষণ দেখা দিতে পারেঃ")}
+                                  </h3>
+                                  ${renderSymptoms(dogBiteSymptoms)}
+                              </section>
+
+                              <section class="m18l7-care-panel" data-aos="fade-left" data-aos-delay="50">
+                                  ${renderCareSteps(dogBiteCareSteps)}
+                              </section>
+                             </div>
+                      </div>      
+                       <div class="col-md-4">
+                         <figure class="glass-card p-1 mb-0 text-center">
+                          <img src="img/modu18/dog-byte.jpg" alt="" style="height: 530px; object-fit: cover;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
+                       </div>
+                   
+
+   
+     </div>
+  </div>
+`;
             })(),
           },
           {
@@ -13519,7 +15311,7 @@ const steps = [
                   id: "q18h",
                   question: yhLang(
                     "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?",
-                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?"
+                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?",
                   ),
                   options: [
                     yhLang("ঝাপসা দৃষ্টি", "ঝাপসা দৃষ্টি"),
@@ -13534,13 +15326,19 @@ const steps = [
             content: (function () {
               const intro = yhLang(
                 "Pesticide poisoning (organophosphorus/OPC) is a common incident in Bangladesh. Toxic substances can enter the body in different ways, either intentionally or accidentally.",
-                "বাংলাদেশে কীটনাশকজনিত বিষক্রিয়া (অর্গানোফসফরাস/ওপিসি) একটি সাধারণ ঘটনা। বিভিন্ন ভাবে বিষাক্ত দ্রব্য ব্যক্তির শরীরে প্রবেশ করতে পারে যা ইচ্ছাকৃত বা অনিচ্ছাকৃত দুইভাবেই হতে পারে।"
+                "বাংলাদেশে কীটনাশকজনিত বিষক্রিয়া (অর্গানোফসফরাস/ওপিসি) একটি সাধারণ ঘটনা। বিভিন্ন ভাবে বিষাক্ত দ্রব্য ব্যক্তির শরীরে প্রবেশ করতে পারে যা ইচ্ছাকৃত বা অনিচ্ছাকৃত দুইভাবেই হতে পারে।",
               );
 
-              const signsHeading = yhLang("Signs and Symptoms of Poisoning:", "বিষক্রিয়ার লক্ষণ-চিহ্নঃ");
+              const signsHeading = yhLang(
+                "Signs and Symptoms of Poisoning:",
+                "বিষক্রিয়ার লক্ষণ-চিহ্নঃ",
+              );
               const signs = [
                 {
-                  text: yhLang("No response / unconsciousness", "সাড়া না থাকা / অজ্ঞান হয়ে যাওয়া"),
+                  text: yhLang(
+                    "No response / unconsciousness",
+                    "সাড়া না থাকা / অজ্ঞান হয়ে যাওয়া",
+                  ),
                   icon: "fa-person-falling",
                   color: "m18l8-sign-consciousness",
                 },
@@ -13557,7 +15355,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Burning of lips/tongue (if caused by acid, alkali, or corrosive substances)",
-                    "ঠোঁট, জিহ্বা পুড়ে যাওয়া (এসিড, ক্ষার বা দাহ্য বস্তু দ্বারা হলে)"
+                    "ঠোঁট, জিহ্বা পুড়ে যাওয়া (এসিড, ক্ষার বা দাহ্য বস্তু দ্বারা হলে)",
                   ),
                   icon: "fa-fire-flame-curved",
                   color: "m18l8-sign-burn",
@@ -13586,33 +15384,42 @@ const steps = [
 
               const followUp = yhLang(
                 "If poisoning is suspected, identify the toxic substance if possible and take the person to a doctor or hospital immediately. During this time, the following first aid steps may be used.",
-                "যদি মনে হয় কোন ব্যক্তি বিষক্রিয়ায় আক্রান্ত, তবে বিষাক্ত দ্রব্যটি চিহ্নিত করার চেষ্টা করতে হবে এবং তৎক্ষণাৎ চিকিৎসকের কাছে বা হাসপাতালে নিতে হবে। এই সময়ের মাঝে নিম্নলিখিত প্রাথমিক চিকিৎসা পদ্ধতি গুলো ব্যবহার করা যেতে পারে।"
+                "যদি মনে হয় কোন ব্যক্তি বিষক্রিয়ায় আক্রান্ত, তবে বিষাক্ত দ্রব্যটি চিহ্নিত করার চেষ্টা করতে হবে এবং তৎক্ষণাৎ চিকিৎসকের কাছে বা হাসপাতালে নিতে হবে। এই সময়ের মাঝে নিম্নলিখিত প্রাথমিক চিকিৎসা পদ্ধতি গুলো ব্যবহার করা যেতে পারে।",
               );
 
-              const careHeading = yhLang("First Aid for Poisoning", "বিষক্রিয়ার প্রাথমিক চিকিৎসা");
+              const careHeading = yhLang(
+                "First Aid for Poisoning",
+                "বিষক্রিয়ার প্রাথমিক চিকিৎসা",
+              );
               const careSteps = [
                 {
-                  text: yhLang("Try to keep the affected person as still as possible.", "আক্রান্ত ব্যক্তিটিকে যথাসম্ভব স্থির রাখার চেষ্টা করতে হবে।"),
+                  text: yhLang(
+                    "Try to keep the affected person as still as possible.",
+                    "আক্রান্ত ব্যক্তিটিকে যথাসম্ভব স্থির রাখার চেষ্টা করতে হবে।",
+                  ),
                   icon: "fa-hand-holding-heart",
                   color: "m18l8-care-still",
                 },
                 {
                   text: yhLang(
                     "If poisoning happened through inhalation, move the person to fresh air immediately.",
-                    "নিশ্বাস-প্রশ্বাসের মাধ্যমে বিষক্রিয়া হয়ে থাকলে, অবিলম্বে ব্যক্তিকে সতেজ বাতাসে নিয়ে আসতে হবে।"
+                    "নিশ্বাস-প্রশ্বাসের মাধ্যমে বিষক্রিয়া হয়ে থাকলে, অবিলম্বে ব্যক্তিকে সতেজ বাতাসে নিয়ে আসতে হবে।",
                   ),
                   icon: "fa-wind",
                   color: "m18l8-care-air",
                 },
                 {
-                  text: yhLang("Try to give the affected person plenty of water.", "আক্রান্ত ব্যক্তিকে প্রচুর পরিমাণে পানি খাওয়ানোর চেষ্টা করতে হবে।"),
+                  text: yhLang(
+                    "Try to give the affected person plenty of water.",
+                    "আক্রান্ত ব্যক্তিকে প্রচুর পরিমাণে পানি খাওয়ানোর চেষ্টা করতে হবে।",
+                  ),
                   icon: "fa-glass-water",
                   color: "m18l8-care-water",
                 },
                 {
                   text: yhLang(
                     "Examine the scene and the person. Try to identify what poison was taken and, if found, bring it to the hospital with the patient.",
-                    "ঘটনাস্থল এবং আক্রান্ত ব্যক্তিকে পরীক্ষা করতে হবে। ব্যক্তিটি কী বিষ গ্রহণ করেছিল তা খুঁজে বের করার চেষ্টা করতে হবে এবং খুঁজে পেলে তা আক্রান্ত ব্যক্তির সাথে হাসপাতালে নিয়ে যেতে হবে।"
+                    "ঘটনাস্থল এবং আক্রান্ত ব্যক্তিকে পরীক্ষা করতে হবে। ব্যক্তিটি কী বিষ গ্রহণ করেছিল তা খুঁজে বের করার চেষ্টা করতে হবে এবং খুঁজে পেলে তা আক্রান্ত ব্যক্তির সাথে হাসপাতালে নিয়ে যেতে হবে।",
                   ),
                   icon: "fa-magnifying-glass",
                   color: "m18l8-care-check",
@@ -13620,7 +15427,7 @@ const steps = [
                 {
                   text: yhLang(
                     "If any toxic substance is on the skin, wash the affected area thoroughly with clean water.",
-                    "যদি আক্রান্ত ব্যক্তির শরীরের চামড়ায় কোনো বিষাক্ত পদার্থ পাওয়া যায়, তাহলে আক্রান্ত স্থানটি পরিষ্কার পানি দিয়ে ধুয়ে ফেলতে হবে।"
+                    "যদি আক্রান্ত ব্যক্তির শরীরের চামড়ায় কোনো বিষাক্ত পদার্থ পাওয়া যায়, তাহলে আক্রান্ত স্থানটি পরিষ্কার পানি দিয়ে ধুয়ে ফেলতে হবে।",
                   ),
                   icon: "fa-hand-sparkles",
                   color: "m18l8-care-wash",
@@ -13629,7 +15436,7 @@ const steps = [
 
               const caution = yhLang(
                 "Do NOT induce vomiting if acid, alkali, or any corrosive substance was swallowed (e.g., bleach, sulfuric acid, kerosene, petroleum).",
-                "অ্যাসিড, ক্ষার বা কোনো দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তিকে বমি করাবেন না (যেমন—ব্লিচ, সালফিউরিক অ্যাসিড, কেরোসিন, পেট্রোলিয়াম)।"
+                "অ্যাসিড, ক্ষার বা কোনো দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তিকে বমি করাবেন না (যেমন—ব্লিচ, সালফিউরিক অ্যাসিড, কেরোসিন, পেট্রোলিয়াম)।",
               );
 
               const renderSigns = (items) =>
@@ -13640,7 +15447,7 @@ const steps = [
                         <div class="m18l8-sign-icon"><i class="fa-solid ${item.icon}"></i></div>
                         <p>${item.text}</p>
                       </div>
-                    `
+                    `,
                   )
                   .join("")}</div>`;
 
@@ -13652,7 +15459,7 @@ const steps = [
                         <div class="m18l8-care-icon"><i class="fa-solid ${item.icon}"></i></div>
                         <p>${item.text}</p>
                       </div>
-                    `
+                    `,
                   )
                   .join("")}</div>`;
 
@@ -13691,7 +15498,6 @@ const steps = [
                       </h3>
                       ${renderCare(careSteps)}
                       <div class="m18l8-warning" role="alert" data-aos="zoom-in" data-aos-delay="120">
-                        <h4 class="m18l8-warning-title mb-1"><i class="fa-solid fa-ban"></i> ${yhLang("সতর্কতা:", "সতর্কতা:")}</h4>
                         <p class="mb-0">${caution}</p>
                       </div>
                     </section>
@@ -13713,7 +15519,7 @@ const steps = [
                   id: "q18i",
                   question: yhLang(
                     "ডুবন্ত ব্যক্তিকে বাঁচাতে গিয়ে কত দূরত্ব বজায় রাখতে বলা হয়েছে?",
-                    "ডুবন্ত ব্যক্তিকে বাঁচাতে গিয়ে কত দূরত্ব বজায় রাখতে বলা হয়েছে?"
+                    "ডুবন্ত ব্যক্তিকে বাঁচাতে গিয়ে কত দূরত্ব বজায় রাখতে বলা হয়েছে?",
                   ),
                   options: [
                     yhLang("কমপক্ষে ২ মিটার", "কমপক্ষে ২ মিটার"),
@@ -13728,86 +15534,90 @@ const steps = [
             content: (function () {
               const intro = yhLang(
                 "Drowning is one of the leading causes of child deaths in Bangladesh. If you see a child or person drowning in a pond, lake, or river, immediately call for help. Extend a stick, bamboo, or rope towards the drowning person to help them reach safety. Once grasped, they can swim back to shore with assistance.",
-                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা। কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে। ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে। ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে।"
+                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা। কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে। ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে। ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে।",
               );
 
               const shallowTip = yhLang(
                 "In shallow water, you can enter the water to approach the drowning person. Always maintain at least 2 meters distance so they don't panic and grab you, potentially pulling you down.",
-                "যদি পুকুর বা জলাশয় অগভীর থাকে তবে পানিতে নেমে ডুবন্ত ব্যক্তির কাছে যাওয়া যেতে পারে। সবসময় ডুবন্ত ব্যক্তির কাছ থেকে কমপক্ষে ২ মিটার দূরে থাকতে হবে যেন ডুবন্ত ব্যক্তি কখনোই যাকে বাঁচাতে যায় তাকেই জাপটে ধরতে না পারে।"
+                "যদি পুকুর বা জলাশয় অগভীর থাকে তবে পানিতে নেমে ডুবন্ত ব্যক্তির কাছে যাওয়া যেতে পারে। সবসময় ডুবন্ত ব্যক্তির কাছ থেকে কমপক্ষে ২ মিটার দূরে থাকতে হবে যেন ডুবন্ত ব্যক্তি কখনোই যাকে বাঁচাতে যায় তাকেই জাপটে ধরতে না পারে।",
               );
 
               const rescueHeading = yhLang(
                 "Rescue & First Aid for Unconscious Drowning Victim",
-                "ডুবন্ত অজ্ঞান ব্যক্তিকে উদ্ধার এবং প্রাথমিক চিকিৎসা"
+                "ডুবন্ত অজ্ঞান ব্যক্তিকে উদ্ধার এবং প্রাথমিক চিকিৎসা",
               );
 
               const rescueSteps = [
                 {
                   text: yhLang(
                     "Enter water and swim towards drowning person",
-                    "পানিতে নেমে সাঁতরে ডুবন্ত ব্যক্তির কাছে যেতে হবে।"
+                    "পানিতে নেমে সাঁতরে ডুবন্ত ব্যক্তির কাছে যেতে হবে।",
                   ),
                   icon: "fa-person-swimming",
-                  color: "m18l9-rescue-approach"
+                  color: "m18l9-rescue-approach",
                 },
                 {
                   text: yhLang(
                     "Turn victim to face upward (supine position)",
-                    "ডুবন্ত ব্যক্তিকে পানিতে চিত করতে হবে।"
+                    "ডুবন্ত ব্যক্তিকে পানিতে চিত করতে হবে।",
                   ),
                   icon: "fa-arrow-rotate-right",
-                  color: "m18l9-rescue-turn"
+                  color: "m18l9-rescue-turn",
                 },
                 {
                   text: yhLang(
                     "Support chin and bring to shore",
-                    "ডুবন্ত ব্যক্তির থুতনি ধরে পানি থেকে তীরে আনতে হবে।"
+                    "ডুবন্ত ব্যক্তির থুতনি ধরে পানি থেকে তীরে আনতে হবে।",
                   ),
                   icon: "fa-hand",
-                  color: "m18l9-rescue-support"
+                  color: "m18l9-rescue-support",
                 },
                 {
                   text: yhLang(
                     "Get help to carefully remove from water",
-                    "কারো সাহায্য নিয়ে ডুবন্ত ব্যক্তিকে পানি থেকে তুলে আনতে হবে।"
+                    "কারো সাহায্য নিয়ে ডুবন্ত ব্যক্তিকে পানি থেকে তুলে আনতে হবে।",
                   ),
                   icon: "fa-handshake",
-                  color: "m18l9-rescue-lift"
+                  color: "m18l9-rescue-lift",
                 },
                 {
                   text: yhLang(
                     "Place on firm, flat surface facing upward",
-                    "আক্রান্ত ব্যক্তিকে শক্ত ও সমতল স্থানে মুখ উপরের দিকে করে শুইয়ে দিতে হবে।"
+                    "আক্রান্ত ব্যক্তিকে শক্ত ও সমতল স্থানে মুখ উপরের দিকে করে শুইয়ে দিতে হবে।",
                   ),
                   icon: "fa-person-hiking",
-                  color: "m18l9-rescue-position"
+                  color: "m18l9-rescue-position",
                 },
                 {
                   text: yhLang(
                     "Check airway and breathing",
-                    "শ্বাসপথ এবং শ্বাসপ্রশ্বাস যাচাই করতে হবে।"
+                    "শ্বাসপথ এবং শ্বাসপ্রশ্বাস যাচাই করতে হবে।",
                   ),
                   icon: "fa-wind",
-                  color: "m18l9-rescue-check"
+                  color: "m18l9-rescue-check",
                 },
                 {
                   text: yhLang(
                     "Give 2 rescue breaths and 30 chest compressions. Continue CPR if needed",
-                    "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে। যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।"
+                    "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে। যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।",
                   ),
                   icon: "fa-heart-pulse",
-                  color: "m18l9-rescue-cpr"
-                }
+                  color: "m18l9-rescue-cpr",
+                },
               ];
 
               const renderRescue = (items) =>
                 `<div class="m18l9-rescue-list">
-                  ${items.map((item, index) => `
+                  ${items
+                    .map(
+                      (item, index) => `
                     <div class="m18l9-rescue-item ${item.color}" data-aos="fade-right" data-aos-delay="${50 + index * 35}">
                       <div class="m18l9-rescue-icon"><i class="fa-solid ${item.icon}"></i></div>
                       <p>${item.text}</p>
                     </div>
-                  `).join("")}
+                  `,
+                    )
+                    .join("")}
                 </div>`;
 
               return `
@@ -13824,13 +15634,24 @@ const steps = [
                     <p class="m18l9-shallow-tip mb-0">${shallowTip}</p>
                   </section>
 
-                  <section class="m18l9-rescue-panel" data-aos="fade-left" data-aos-delay="40">
-                    <h3 class="m18l9-panel-title">
-                      <i class="fa-solid fa-heart-pulse"></i>
-                      ${rescueHeading}
-                    </h3>
-                    ${renderRescue(rescueSteps)}
-                  </section>
+                  <div class="row g-1">
+                       <div class="col-md-8">
+                            <section class="m18l9-rescue-panel" data-aos="fade-left" data-aos-delay="40">
+                            <h3 class="m18l9-panel-title">
+                              <i class="fa-solid fa-heart-pulse"></i>
+                              ${rescueHeading}
+                            </h3>
+                            ${renderRescue(rescueSteps)}
+                          </section>
+                       </div>
+                       <div class="col-md-4">
+                          <figure class="glass-card p-1 mb-0 text-center">
+                          <img src="img/modu18/pani-duba.jpg" alt="" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
+                       </div>
+                    </div>
+
+                  
                 </div>
               `;
             })(),
@@ -13839,7 +15660,7 @@ const steps = [
             id: "ch18-lesson-10",
             title: yhLang(
               "Choking and Airway Block",
-              "শ্বাস আটকে যাওয়া বা গলায় কিছু আটকে যাওয়া"
+              "শ্বাস আটকে যাওয়া বা গলায় কিছু আটকে যাওয়া",
             ),
             icon: "fa-lungs",
             gradientClass: "bg-gradient-steel",
@@ -13851,10 +15672,13 @@ const steps = [
                   id: "q18j",
                   question: yhLang(
                     "শ্বাস আটকে যাওয়া অবস্থাকে কেন জরুরি বলা হয়?",
-                    "শ্বাস আটকে যাওয়া অবস্থাকে কেন জরুরি বলা হয়?"
+                    "শ্বাস আটকে যাওয়া অবস্থাকে কেন জরুরি বলা হয়?",
                   ),
                   options: [
-                    yhLang("এটি জীবন-সংশয়ী জরুরি অবস্থা", "এটি জীবন-সংশয়ী জরুরি অবস্থা"),
+                    yhLang(
+                      "এটি জীবন-সংশয়ী জরুরি অবস্থা",
+                      "এটি জীবন-সংশয়ী জরুরি অবস্থা",
+                    ),
                     yhLang("শুধু একটু অস্বস্তি", "শুধু একটু অস্বস্তি"),
                     yhLang("কোনো বিপদ নেই", "কোনো বিপদ নেই"),
                     yhLang("শুধু ঘুম পায়", "শুধু ঘুম পায়"),
@@ -13866,19 +15690,19 @@ const steps = [
             content: (function () {
               const chokingIntro = yhLang(
                 "A partial or complete blockage in the airway can make breathing very difficult or stop breathing entirely because of lack of airflow. This usually happens while eating or when objects are put in the mouth, and it is a life-threatening emergency.",
-                "শ্বাসনালীতে কিছু আটকে আংশিক বা পরিপূর্ণ প্রতিবন্ধকতা তৈরি হওয়ার ফলে বাতাসের অভাবের কারণে ব্যক্তির শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়। সাধারণত খাবার খাওয়ার সময় বা মুখে কিছু দেওয়ার সময় এটি ঘটে থাকে, যা একটি জীবন-সংশয়কারী জরুরি অবস্থা।"
+                "শ্বাসনালীতে কিছু আটকে আংশিক বা পরিপূর্ণ প্রতিবন্ধকতা তৈরি হওয়ার ফলে বাতাসের অভাবের কারণে ব্যক্তির শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়। সাধারণত খাবার খাওয়ার সময় বা মুখে কিছু দেওয়ার সময় এটি ঘটে থাকে, যা একটি জীবন-সংশয়কারী জরুরি অবস্থা।",
               );
 
               const chokingScenarios = yhLang(
                 "In children, besides food, objects such as coins, marbles, seeds, buttons, or small toys may get stuck in the throat and cause choking. In adults, choking most commonly occurs when food gets lodged in the airway during eating.",
-                "শিশুদের ক্ষেত্রে অনেক সময় খাদ্যবস্তু ছাড়াও অন্যান্য বস্তু (যেমন— কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা) গলায় আটকে গিয়ে এমন শ্বাসরোধকারী পরিস্থিতির সৃষ্টি হতে পারে। প্রাপ্তবয়স্কদের বেশির ভাগ ক্ষেত্রেই খাওয়ার সময় খাদ্যবস্তু শ্বাসনালীতে আটকে এরূপ পরিস্থিতি উদ্ভূত হয়ে থাকে।"
+                "শিশুদের ক্ষেত্রে অনেক সময় খাদ্যবস্তু ছাড়াও অন্যান্য বস্তু (যেমন— কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা) গলায় আটকে গিয়ে এমন শ্বাসরোধকারী পরিস্থিতির সৃষ্টি হতে পারে। প্রাপ্তবয়স্কদের বেশির ভাগ ক্ষেত্রেই খাওয়ার সময় খাদ্যবস্তু শ্বাসনালীতে আটকে এরূপ পরিস্থিতি উদ্ভূত হয়ে থাকে।",
               );
 
               const chokingPoints = [
                 {
                   text: yhLang(
                     "A lodged object can create partial or full airway blockage.",
-                    "শ্বাসনালীতে কিছু আটকে আংশিক বা পূর্ণ প্রতিবন্ধকতা তৈরি হতে পারে।"
+                    "শ্বাসনালীতে কিছু আটকে আংশিক বা পূর্ণ প্রতিবন্ধকতা তৈরি হতে পারে।",
                   ),
                   icon: "fa-road-barrier",
                   color: "m18l10-point-block",
@@ -13886,7 +15710,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Lack of airflow causes severe breathing difficulty or choking.",
-                    "বাতাসের অভাবে শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়।"
+                    "বাতাসের অভাবে শ্বাস নেওয়া কষ্টসাধ্য হয়ে যায় বা শ্বাস আটকে যায়।",
                   ),
                   icon: "fa-wind",
                   color: "m18l10-point-breath",
@@ -13894,7 +15718,7 @@ const steps = [
                 {
                   text: yhLang(
                     "This often happens during eating or while putting objects in the mouth.",
-                    "খাবার খাওয়া বা মুখে কিছু দেওয়ার সময় এ সমস্যা বেশি দেখা যায়।"
+                    "খাবার খাওয়া বা মুখে কিছু দেওয়ার সময় এ সমস্যা বেশি দেখা যায়।",
                   ),
                   icon: "fa-utensils",
                   color: "m18l10-point-food",
@@ -13902,7 +15726,7 @@ const steps = [
                 {
                   text: yhLang(
                     "This is a life-threatening emergency.",
-                    "এটি একটি জীবন-সংশয়কারী জরুরি অবস্থা।"
+                    "এটি একটি জীবন-সংশয়কারী জরুরি অবস্থা।",
                   ),
                   icon: "fa-triangle-exclamation",
                   color: "m18l10-point-danger",
@@ -13910,7 +15734,7 @@ const steps = [
                 {
                   text: yhLang(
                     "In children, coins, marbles, seeds, buttons, or small toys may get stuck in the throat.",
-                    "শিশুদের ক্ষেত্রে কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা গলায় আটকে যেতে পারে।"
+                    "শিশুদের ক্ষেত্রে কয়েন, মার্বেল, বীজ, বোতাম বা ছোট খেলনা গলায় আটকে যেতে পারে।",
                   ),
                   icon: "fa-baby",
                   color: "m18l10-point-child",
@@ -13918,7 +15742,7 @@ const steps = [
                 {
                   text: yhLang(
                     "In adults, food is the most common cause of airway blockage.",
-                    "প্রাপ্তবয়স্কদের ক্ষেত্রে বেশির ভাগ সময় খাবার শ্বাসনালীতে আটকে যায়।"
+                    "প্রাপ্তবয়স্কদের ক্ষেত্রে বেশির ভাগ সময় খাবার শ্বাসনালীতে আটকে যায়।",
                   ),
                   icon: "fa-user",
                   color: "m18l10-point-adult",
@@ -13929,7 +15753,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Call for help loudly or dial emergency service (999).",
-                    "চিৎকার করে সাহায্য চান অথবা জরুরি সেবার নাম্বারে (৯৯৯) কল করতে হবে।"
+                    "চিৎকার করে সাহায্য চান অথবা জরুরি সেবার নাম্বারে (৯৯৯) কল করতে হবে।",
                   ),
                   icon: "fa-phone-volume",
                   color: "m18l12-step-call",
@@ -13937,7 +15761,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Sit as shown and place the infant on the rescuer's lap.",
-                    "চিত্রের মতো করে বসে শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার কোলে নেবেন।"
+                    "চিত্রের মতো করে বসে শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার কোলে নেবেন।",
                   ),
                   icon: "fa-chair",
                   color: "m18l12-step-seat",
@@ -13945,7 +15769,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Lay the infant carefully on one forearm, supporting the head and neck, with the face downward and unobstructed.",
-                    "শিশুকে এমনভাবে এক হাতের ওপর সাবধানে শুইয়ে দিতে হবে যেন মাথা এবং ঘাড় ধরে রাখা যায়, কিন্তু শিশুর মুখ ঢেকে যাবে না এবং মুখ নিচের দিকে থাকবে।"
+                    "শিশুকে এমনভাবে এক হাতের ওপর সাবধানে শুইয়ে দিতে হবে যেন মাথা এবং ঘাড় ধরে রাখা যায়, কিন্তু শিশুর মুখ ঢেকে যাবে না এবং মুখ নিচের দিকে থাকবে।",
                   ),
                   icon: "fa-hand-holding-heart",
                   color: "m18l12-step-hold",
@@ -13953,7 +15777,7 @@ const steps = [
                 {
                   text: yhLang(
                     "In this position, deliver 5 firm back blows between the shoulder blades.",
-                    "এই অবস্থানে রেখে শিশুটির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।"
+                    "এই অবস্থানে রেখে শিশুটির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
                   ),
                   icon: "fa-hand",
                   color: "m18l12-step-back",
@@ -13961,7 +15785,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Quickly turn the infant onto the back on one forearm.",
-                    "শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার এক হাতের ওপর দ্রুত চিত করে শুইয়ে দেবেন।"
+                    "শিশুটিকে প্রাথমিক চিকিৎসা প্রদানকারী তার এক হাতের ওপর দ্রুত চিত করে শুইয়ে দেবেন।",
                   ),
                   icon: "fa-arrows-rotate",
                   color: "m18l12-step-turn",
@@ -13969,7 +15793,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Check whether the object has come out and breathing has normalized; if not, repeat the above process.",
-                    "শিশুর গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং শ্বাস-প্রশ্বাস স্বাভাবিক কিনা তা লক্ষ্য করতে হবে। যদি না হয়, তাহলে উপরে বর্ণিত প্রক্রিয়াটির পুনরাবৃত্তি করতে হবে।"
+                    "শিশুর গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং শ্বাস-প্রশ্বাস স্বাভাবিক কিনা তা লক্ষ্য করতে হবে। যদি না হয়, তাহলে উপরে বর্ণিত প্রক্রিয়াটির পুনরাবৃত্তি করতে হবে।",
                   ),
                   icon: "fa-stethoscope",
                   color: "m18l12-step-check",
@@ -13980,7 +15804,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Place the infant on a firm and safe flat surface.",
-                    "শিশুটিকে একটি শক্ত ও নিরাপদ সমতল স্থানে শুইয়ে দিতে হবে।"
+                    "শিশুটিকে একটি শক্ত ও নিরাপদ সমতল স্থানে শুইয়ে দিতে হবে।",
                   ),
                   icon: "fa-bed",
                   color: "m18l12-alert-place",
@@ -14000,7 +15824,7 @@ const steps = [
                         <div class="m18l10x12-item-icon"><i class="fa-solid ${item.icon}"></i></div>
                         <p>${item.text}</p>
                       </div>
-                    `
+                    `,
                   )
                   .join("")}</div>`;
 
@@ -14010,35 +15834,39 @@ const steps = [
                   <span class="m18l10x12-shape m18l10x12-shape-2"></span>
                   <span class="m18l10x12-shape m18l10x12-shape-3"></span>
 
-                  <header class="m18l10x12-hero" data-aos="fade-down">
-                    <h2 class="m18l10x12-hero-title">
-                      <i class="fa-solid fa-lungs"></i>
-                      ${yhLang("Choking and Infant Choking", "শ্বাস আটকে যাওয়া: পাঠ ১০ ও ১২")}
-                    </h2>
-                  </header>
 
                   <div class="m18l10x12-grid">
                     <section class="m18l10x12-panel m18l10x12-panel-main" data-aos="fade-right" data-aos-delay="20">
                       <h3 class="m18l10x12-panel-title">
                         <i class="fa-solid fa-lungs"></i>
-                        ${yhLang("Choking and Airway Block", "শ্বাস আটকে যাওয়া বা গলায় কিছু আটকে যাওয়া")}
+                        ${yhLang("Choking and Airway Block", "শ্বাস আটকে যাওয়া বা গলায় কিছু আটকে যাওয়া (Chocking)")}
                       </h3>
                       <p class="m18l10x12-intro-text">${chokingIntro}</p>
                       <div class="m18l10x12-context-box">
-                        <h4 class="m18l10x12-subtitle"><i class="fa-solid fa-magnifying-glass"></i> ${yhLang("Common Scenarios", "সাধারণ পরিস্থিতি")}</h4>
                         <p class="mb-0">${chokingScenarios}</p>
                       </div>
-                      ${renderList(chokingPoints)}
+                      <div class="row g-1">
+                       <div class="col-md-6">
+                            <figure class="glass-card p-1 mb-0 text-center">
+                             <img src="img/modu18/breath.jpg" alt="" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                           </figure>
+                       </div>
+                       <div class="col-md-6">
+                         <figure class="glass-card p-1 mb-0 text-center">
+                             <img src="img/modu18/breath2.jpg" alt="" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                           </figure>
+                       </div>
+                    </div>
                     </section>
 
                     <section class="m18l10x12-panel m18l10x12-panel-infant" data-aos="fade-left" data-aos-delay="40">
                       <h3 class="m18l10x12-panel-title">
                         <i class="fa-solid fa-baby"></i>
-                        ${yhLang("Infant Choking First Aid", "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচে)")}
+                        ${yhLang("Infant Choking First Aid", "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচের বয়সী শিশুর ক্ষেত্রে)")}
                       </h3>
                       ${renderList(infantSteps)}
                       <div class="m18l10x12-alert-box" role="alert" data-aos="zoom-in" data-aos-delay="110">
-                        <h4 class="m18l10x12-alert-title"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("If Infant Becomes Unconscious", "যদি শিশুটি অজ্ঞান হয়ে পড়ে")}</h4>
+                        <h3 class="m18l10x12-alert-title"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("If Infant Becomes Unconscious", "যদি শিশুটি অজ্ঞান হয়ে পড়ে")}</h3>
                         ${renderList(unconsciousSteps)}
                       </div>
                     </section>
@@ -14051,7 +15879,7 @@ const steps = [
             id: "ch18-lesson-11",
             title: yhLang(
               "Adult & Child Choking First Aid",
-              "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)"
+              "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)",
             ),
             icon: "fa-hands-holding-child",
             gradientClass: "bg-gradient-grape",
@@ -14063,10 +15891,13 @@ const steps = [
                   id: "q18k",
                   question: yhLang(
                     "পিঠে চাপড় দেওয়ার পরে কী লক্ষ্য করতে হবে?",
-                    "পিঠে চাপড় দেওয়ার পরে কী লক্ষ্য করতে হবে?"
+                    "পিঠে চাপড় দেওয়ার পরে কী লক্ষ্য করতে হবে?",
                   ),
                   options: [
-                    yhLang("বস্তুটি বের হয়েছে এবং শ্বাস নিতে পারছে কিনা", "বস্তুটি বের হয়েছে এবং শ্বাস নিতে পারছে কিনা"),
+                    yhLang(
+                      "বস্তুটি বের হয়েছে এবং শ্বাস নিতে পারছে কিনা",
+                      "বস্তুটি বের হয়েছে এবং শ্বাস নিতে পারছে কিনা",
+                    ),
                     yhLang("ব্যক্তি হাসছে কিনা", "ব্যক্তি হাসছে কিনা"),
                     yhLang("খাবার শেষ হয়েছে কিনা", "খাবার শেষ হয়েছে কিনা"),
                     yhLang("কেউ ছবি তুলছে কিনা", "কেউ ছবি তুলছে কিনা"),
@@ -14080,7 +15911,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Stand behind and slightly to the side of the choking person.",
-                    "শ্বাস আটকে যাওয়া ব্যক্তির পিছনে এবং সামান্য পাশে দাঁড়াতে হবে।"
+                    "শ্বাস আটকে যাওয়া ব্যক্তির পিছনে এবং সামান্য পাশে দাঁড়াতে হবে।",
                   ),
                   icon: "fa-user-check",
                   color: "m18l11-first-position",
@@ -14088,7 +15919,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Support the person with one hand and help them lean forward as much as possible.",
-                    "এক হাতের সাহায্যে ব্যক্তিকে যতদূর সম্ভব সামনের দিকে হেলতে সহযোগিতা করতে হবে।"
+                    "এক হাতের সাহায্যে ব্যক্তিকে যতদূর সম্ভব সামনের দিকে হেলতে সহযোগিতা করতে হবে।",
                   ),
                   icon: "fa-forward",
                   color: "m18l11-first-lean",
@@ -14096,7 +15927,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Using the heel of your other hand, give 5 firm back blows between the shoulder blades.",
-                    "আপনার অন্য হাতের তালু দিয়ে ব্যক্তির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।"
+                    "আপনার অন্য হাতের তালু দিয়ে ব্যক্তির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
                   ),
                   icon: "fa-hand",
                   color: "m18l11-first-backblow",
@@ -14104,7 +15935,7 @@ const steps = [
                 {
                   text: yhLang(
                     "After each blow, check whether the object is expelled and the person can breathe.",
-                    "আঘাতের পর লক্ষ্য করতে হবে যে গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং আক্রান্ত ব্যক্তি শ্বাস নিতে পারছে কিনা?"
+                    "আঘাতের পর লক্ষ্য করতে হবে যে গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং আক্রান্ত ব্যক্তি শ্বাস নিতে পারছে কিনা?",
                   ),
                   icon: "fa-binoculars",
                   color: "m18l11-first-check",
@@ -14115,7 +15946,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Stand behind the person and wrap both arms around their waist below the ribs.",
-                    "আক্রান্ত ব্যক্তির পিছনে দাঁড়িয়ে ব্যক্তির পাঁজরের নিচে কোমর বরাবর প্রাথমিক চিকিৎসা প্রদানকারী তার দুই হাত দিয়ে আঁকড়ে ধরবেন।"
+                    "আক্রান্ত ব্যক্তির পিছনে দাঁড়িয়ে ব্যক্তির পাঁজরের নিচে কোমর বরাবর প্রাথমিক চিকিৎসা প্রদানকারী তার দুই হাত দিয়ে আঁকড়ে ধরবেন।",
                   ),
                   icon: "fa-people-arrows",
                   color: "m18l11-follow-grip",
@@ -14123,7 +15954,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Make a fist and place the thumb side at or slightly above the navel, in the center of the abdomen.",
-                    "এক হাত মুষ্টিবদ্ধ করে মুষ্টির বুড়ো আঙুলের দিকটি আক্রান্ত ব্যক্তির নাভি বরাবর বা সামান্য উপরে, পেটের মাঝখানে রাখতে হবে।"
+                    "এক হাত মুষ্টিবদ্ধ করে মুষ্টির বুড়ো আঙুলের দিকটি আক্রান্ত ব্যক্তির নাভি বরাবর বা সামান্য উপরে, পেটের মাঝখানে রাখতে হবে।",
                   ),
                   icon: "fa-hand-back-fist",
                   color: "m18l11-follow-fist",
@@ -14131,7 +15962,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Hold the fist with the other hand and give 5 strong inward and upward abdominal thrusts.",
-                    "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।"
+                    "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।",
                   ),
                   icon: "fa-arrow-up-right-dots",
                   color: "m18l11-follow-thrust",
@@ -14139,7 +15970,7 @@ const steps = [
                 {
                   text: yhLang(
                     "After each thrust, check if the object is expelled. If not, continue alternating back blows and abdominal thrusts until the object comes out or the person becomes unconscious.",
-                    "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।"
+                    "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।",
                   ),
                   icon: "fa-repeat",
                   color: "m18l11-follow-repeat",
@@ -14147,7 +15978,7 @@ const steps = [
                 {
                   text: yhLang(
                     "If the person is pregnant or obese, avoid abdominal thrusts; lean them forward and apply chest thrusts from lower to upper center chest.",
-                    "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।"
+                    "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।",
                   ),
                   icon: "fa-person-pregnant",
                   color: "m18l11-follow-special",
@@ -14155,7 +15986,7 @@ const steps = [
                 {
                   text: yhLang(
                     "If the person becomes unconscious, start CPR.",
-                    "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।"
+                    "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।",
                   ),
                   icon: "fa-heart-pulse",
                   color: "m18l11-follow-cpr",
@@ -14163,7 +15994,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Hold the fist with the other hand and give 5 strong inward and upward abdominal thrusts.",
-                    "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।"
+                    "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।",
                   ),
                   icon: "fa-hand-fist",
                   color: "m18l11-follow-thrust2",
@@ -14171,7 +16002,7 @@ const steps = [
                 {
                   text: yhLang(
                     "After each thrust, check if the object is expelled. If not, continue alternating back blows and abdominal thrusts until the object comes out or the person becomes unconscious.",
-                    "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।"
+                    "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।",
                   ),
                   icon: "fa-rotate-right",
                   color: "m18l11-follow-repeat2",
@@ -14179,7 +16010,7 @@ const steps = [
                 {
                   text: yhLang(
                     "If the person is pregnant or obese, avoid abdominal thrusts; lean them forward and apply chest thrusts from lower to upper center chest.",
-                    "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।"
+                    "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।",
                   ),
                   icon: "fa-shield-heart",
                   color: "m18l11-follow-special2",
@@ -14187,7 +16018,7 @@ const steps = [
                 {
                   text: yhLang(
                     "If the person becomes unconscious, start CPR.",
-                    "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।"
+                    "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।",
                   ),
                   icon: "fa-kit-medical",
                   color: "m18l11-follow-cpr2",
@@ -14202,7 +16033,7 @@ const steps = [
                         <div class="m18l11-item-icon"><i class="fa-solid ${item.icon}"></i></div>
                         <p>${item.text}</p>
                       </div>
-                    `
+                    `,
                   )
                   .join("")}</div>`;
 
@@ -14213,25 +16044,35 @@ const steps = [
                   <span class="m18l11-shape m18l11-shape-3"></span>
 
                   <header class="m18l11-hero" data-aos="fade-down">
-                    <h2 class="m18l11-hero-title">
-                      <i class="fa-solid fa-hands-holding-child"></i>
-                      ${yhLang(
-                        "Adult & Child Choking First Aid",
-                        "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)"
-                      )}
-                    </h2>
-                  </header>
+                    
 
                   <div class="m18l11-grid">
                     <section class="m18l11-panel m18l11-panel-initial" data-aos="fade-right" data-aos-delay="20">
                       <h3 class="m18l11-panel-title">
                         <i class="fa-solid fa-hand-holding-medical"></i>
-                        ${yhLang("Initial Back Blow Steps", "প্রাথমিক ধাপ")}
+                        ${yhLang("Initial Back Blow Steps", "প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)")}
                       </h3>
-                      <figure class="m18l11-image-wrap mb-1">
-                        <img src="img/modu18/basic-treatment.bmp" alt="চোকিং প্রাথমিক চিকিৎসা" class="img-fluid rounded img-zoom" />
-                      </figure>
+                      
                       ${renderList(firstGuidance)}
+                     
+                      <div class="m18l11-gallery-box" data-aos="zoom-in" data-aos-delay="120">
+                        <h3 class="m18l11-gallery-title"><i class="fa-solid fa-images"></i> ${yhLang("Reference Images", "সহায়ক চিত্র")}</h3>
+                        <div class="m18l11-gallery-grid">
+                          ${[
+                            "img/modu18/basic.jpg",
+                            "img/modu18/basic2.jpg",
+                            "img/modu18/basic3.jpg",
+                          ]
+                            .map(
+                              (src) => `
+                                <figure class="m18l11-gallery-item mb-0">
+                                  <img src="${src}" alt="চোকিং প্রাথমিক চিকিৎসা" style="height: 400px;" class="img-fluid rounded img-zoom" />
+                                </figure>
+                              `,
+                            )
+                            .join("")}
+                        </div>
+                      </div>
                     </section>
 
                     <section class="m18l11-panel m18l11-panel-followup" data-aos="fade-left" data-aos-delay="40">
@@ -14241,41 +16082,27 @@ const steps = [
                       </h3>
                       ${renderList(followupText)}
 
-                      <div class="m18l11-gallery-box" data-aos="zoom-in" data-aos-delay="120">
-                        <h4 class="m18l11-gallery-title"><i class="fa-solid fa-images"></i> ${yhLang("Reference Images", "সহায়ক চিত্র")}</h4>
-                        <div class="m18l11-gallery-grid">
-                          ${["img/modu18/basic.jpg", "img/modu18/basic2.jpg", "img/modu18/basic3.jpg"]
-                            .map(
-                              (src) => `
-                                <figure class="m18l11-gallery-item mb-0">
-                                  <img src="${src}" alt="চোকিং প্রাথমিক চিকিৎসা" class="img-fluid rounded img-zoom" />
-                                </figure>
-                              `
-                            )
-                            .join("")}
-                        </div>
-                      </div>
+                      
                     </section>
                   </div>
                 </div>
               `;
             })(),
           },
-
         ],
       },
       {
         id: "ch-19",
         title: yhLang(
           "Module-19: Drug addiction - Consequences and prevention",
-          "মডিউল-১৯: তারুণ্যীন পুষ্টি"
+          "মডিউল-১৯: তারুণ্যীন পুষ্টি",
         ),
         lessons: [
           {
             id: "ch19-lesson-1",
             title: yhLang(
               "Importance of Nutritious Food in Adolescence",
-              "পুষ্টিকর খাবারের গুরুত্ব"
+              "পুষ্টিকর খাবারের গুরুত্ব",
             ),
             icon: "fa-apple-whole",
             gradientClass: "bg-gradient-emerald",
@@ -14522,7 +16349,7 @@ const steps = [
                             : ""
                         }
                       </article>
-                    `
+                    `,
                       )
                       .join("")}
                   </div>
@@ -14532,36 +16359,159 @@ const steps = [
           },
           {
             id: "ch19-lesson-2",
-            title: yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)"),
+            title: yhLang(
+              "BMI (Body Mass Index)",
+              "বি.এম.আই (বডি মাস ইনডেক্স)",
+            ),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-sky",
             audioFile: "",
             quiz: null,
             content: (function () {
               const girlsBmi = [
-                { age: "১০", ageEn: "10", low: "১৪.৮", normal: "১৬.৬", overweight: "১৯.০" },
-                { age: "১১", ageEn: "11", low: "১৫.৩", normal: "১৭.২", overweight: "১৯.৯" },
-                { age: "১২", ageEn: "12", low: "১৬.০", normal: "১৮.০", overweight: "২০.৮" },
-                { age: "১৩", ageEn: "13", low: "১৬.৬", normal: "১৮.৮", overweight: "২১.৮" },
-                { age: "১৪", ageEn: "14", low: "১৭.২", normal: "১৯.৬", overweight: "২২.৭" },
-                { age: "১৫", ageEn: "15", low: "১৭.৮", normal: "২০.২", overweight: "২৩.৫" },
-                { age: "১৬", ageEn: "16", low: "১৮.২", normal: "২০.৭", overweight: "২৪.১" },
-                { age: "১৭", ageEn: "17", low: "১৮.৪", normal: "২১.০", overweight: "২৪.৫" },
-                { age: "১৮", ageEn: "18", low: "১৮.৬", normal: "২১.৩", overweight: "২৪.৮" },
-                { age: "১৯", ageEn: "19", low: "১৮.৭", normal: "২১.৪", overweight: "২৫.০" },
+                {
+                  age: "১০",
+                  ageEn: "10",
+                  low: "১৪.৮",
+                  normal: "১৬.৬",
+                  overweight: "১৯.০",
+                },
+                {
+                  age: "১১",
+                  ageEn: "11",
+                  low: "১৫.৩",
+                  normal: "১৭.২",
+                  overweight: "১৯.৯",
+                },
+                {
+                  age: "১২",
+                  ageEn: "12",
+                  low: "১৬.০",
+                  normal: "১৮.০",
+                  overweight: "২০.৮",
+                },
+                {
+                  age: "১৩",
+                  ageEn: "13",
+                  low: "১৬.৬",
+                  normal: "১৮.৮",
+                  overweight: "২১.৮",
+                },
+                {
+                  age: "১৪",
+                  ageEn: "14",
+                  low: "১৭.২",
+                  normal: "১৯.৬",
+                  overweight: "২২.৭",
+                },
+                {
+                  age: "১৫",
+                  ageEn: "15",
+                  low: "১৭.৮",
+                  normal: "২০.২",
+                  overweight: "২৩.৫",
+                },
+                {
+                  age: "১৬",
+                  ageEn: "16",
+                  low: "১৮.২",
+                  normal: "২০.৭",
+                  overweight: "২৪.১",
+                },
+                {
+                  age: "১৭",
+                  ageEn: "17",
+                  low: "১৮.৪",
+                  normal: "২১.০",
+                  overweight: "২৪.৫",
+                },
+                {
+                  age: "১৮",
+                  ageEn: "18",
+                  low: "১৮.৬",
+                  normal: "২১.৩",
+                  overweight: "২৪.৮",
+                },
+                {
+                  age: "১৯",
+                  ageEn: "19",
+                  low: "১৮.৭",
+                  normal: "২১.৪",
+                  overweight: "২৫.০",
+                },
               ];
 
               const boysBmi = [
-                { age: "১০", ageEn: "10", low: "১৪.৮", normal: "১৬.৬", overweight: "১৯.০" },
-                { age: "১১", ageEn: "11", low: "১৫.৩", normal: "১৬.৯", overweight: "১৯.২" },
-                { age: "১২", ageEn: "12", low: "১৫.৮", normal: "১৭.৫", overweight: "১৯.৯" },
-                { age: "১৩", ageEn: "13", low: "১৬.৪", normal: "১৮.২", overweight: "২০.৮" },
-                { age: "১৪", ageEn: "14", low: "১৭.০", normal: "১৯.০", overweight: "২১.৮" },
-                { age: "১৫", ageEn: "15", low: "১৭.৬", normal: "১৯.৮", overweight: "২২.৭" },
-                { age: "১৬", ageEn: "16", low: "১৮.২", normal: "২০.৫", overweight: "২৩.৫" },
-                { age: "১৭", ageEn: "17", low: "১৮.৮", normal: "২১.১", overweight: "২৪.৩" },
-                { age: "১৮", ageEn: "18", low: "১৯.২", normal: "২১.৭", overweight: "২৪.৯" },
-                { age: "১৯", ageEn: "19", low: "১৯.৬", normal: "২২.২", overweight: "২৫.৪" },
+                {
+                  age: "১০",
+                  ageEn: "10",
+                  low: "১৪.৮",
+                  normal: "১৬.৬",
+                  overweight: "১৯.০",
+                },
+                {
+                  age: "১১",
+                  ageEn: "11",
+                  low: "১৫.৩",
+                  normal: "১৬.৯",
+                  overweight: "১৯.২",
+                },
+                {
+                  age: "১২",
+                  ageEn: "12",
+                  low: "১৫.৮",
+                  normal: "১৭.৫",
+                  overweight: "১৯.৯",
+                },
+                {
+                  age: "১৩",
+                  ageEn: "13",
+                  low: "১৬.৪",
+                  normal: "১৮.২",
+                  overweight: "২০.৮",
+                },
+                {
+                  age: "১৪",
+                  ageEn: "14",
+                  low: "১৭.০",
+                  normal: "১৯.০",
+                  overweight: "২১.৮",
+                },
+                {
+                  age: "১৫",
+                  ageEn: "15",
+                  low: "১৭.৬",
+                  normal: "১৯.৮",
+                  overweight: "২২.৭",
+                },
+                {
+                  age: "১৬",
+                  ageEn: "16",
+                  low: "১৮.২",
+                  normal: "২০.৫",
+                  overweight: "২৩.৫",
+                },
+                {
+                  age: "১৭",
+                  ageEn: "17",
+                  low: "১৮.৮",
+                  normal: "২১.১",
+                  overweight: "২৪.৩",
+                },
+                {
+                  age: "১৮",
+                  ageEn: "18",
+                  low: "১৯.২",
+                  normal: "২১.৭",
+                  overweight: "২৪.৯",
+                },
+                {
+                  age: "১৯",
+                  ageEn: "19",
+                  low: "১৯.৬",
+                  normal: "২২.২",
+                  overweight: "২৫.৪",
+                },
               ];
 
               return `
@@ -14596,14 +16546,18 @@ const steps = [
                             </tr>
                           </thead>
                           <tbody>
-                            ${girlsBmi.map((row, idx) => `
+                            ${girlsBmi
+                              .map(
+                                (row, idx) => `
                               <tr data-aos="" data-aos-delay="">
                                 <td class="m19l2-age">${yhLang(row.ageEn, row.age)}</td>
                                 <td class="m19l2-low">${row.low}</td>
                                 <td class="m19l2-normal">${row.normal}</td>
                                 <td class="m19l2-overweight">${row.overweight}</td>
                               </tr>
-                            `).join('')}
+                            `,
+                              )
+                              .join("")}
                           </tbody>
                         </table>
                       </div>
@@ -14628,14 +16582,18 @@ const steps = [
                             </tr>
                           </thead>
                           <tbody>
-                            ${boysBmi.map((row, idx) => `
+                            ${boysBmi
+                              .map(
+                                (row, idx) => `
                               <tr data-aos="" data-aos-delay="">
                                 <td class="m19l2-age">${yhLang(row.ageEn, row.age)}</td>
                                 <td class="m19l2-low">${row.low}</td>
                                 <td class="m19l2-normal">${row.normal}</td>
                                 <td class="m19l2-overweight">${row.overweight}</td>
                               </tr>
-                            `).join('')}
+                            `,
+                              )
+                              .join("")}
                           </tbody>
                         </table>
                       </div>
@@ -14647,14 +16605,15 @@ const steps = [
           },
           {
             id: "ch19-lesson-2",
-            title: yhLang("BMI (Body Mass Index)", "বি.এম.আই (বডি মাস ইনডেক্স)"),
+            title: yhLang(
+              "BMI (Body Mass Index)",
+              "বি.এম.আই (বডি মাস ইনডেক্স)",
+            ),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-sky",
             audioFile: "",
             quiz: null,
             content: (function () {
-              
-
               return `
                 <div class="m19l2-container">
                   <div class="m19l2-shape m19l2-shape-1"></div>
@@ -14681,7 +16640,7 @@ const steps = [
             id: "ch19-lesson-4",
             title: yhLang(
               "Nutrition Components, Sources, and Functions",
-              "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ"
+              "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ",
             ),
             icon: "fa-bowl-food",
             gradientClass: "bg-gradient-gold",
@@ -14691,14 +16650,17 @@ const steps = [
               const nutrients = [
                 {
                   num: "১",
-                  name: yhLang("Carbohydrates", "শ্বেতসার বা শর্করা (কার্বোহাইড্রেট)"),
+                  name: yhLang(
+                    "Carbohydrates",
+                    "শ্বেতসার বা শর্করা (কার্বোহাইড্রেট)",
+                  ),
                   sources: yhLang(
                     "Rice, bread, toast, biscuits, puffed rice, flattened rice, sugar, jaggery, honey, potato, sweet potato",
-                    "ভাত, রুটি, পাউরুটি, বিস্কুট, মুড়ি, চিড়া, চিনি, গুড়, মধু, আলু, মিষ্টি আলু"
+                    "ভাত, রুটি, পাউরুটি, বিস্কুট, মুড়ি, চিড়া, চিনি, গুড়, মধু, আলু, মিষ্টি আলু",
                   ),
                   functions: yhLang(
                     "Provides energy to the body and supports work capacity",
-                    "শরীরের শক্তি জোগায়, কাজ করার ক্ষমতা দেয়"
+                    "শরীরের শক্তি জোগায়, কাজ করার ক্ষমতা দেয়",
                   ),
                   icon: "fa-bread-slice",
                   color: "carbs",
@@ -14708,12 +16670,9 @@ const steps = [
                   name: yhLang("Fats and Oils", "তেল ও চর্বি"),
                   sources: yhLang(
                     "Oil, ghee, butter, fish and meat fat, nuts, coconut",
-                    "তেল, ঘি, মাখন, মাছ-মাংসের চর্বি, বাদাম, নারিকেল"
+                    "তেল, ঘি, মাখন, মাছ-মাংসের চর্বি, বাদাম, নারিকেল",
                   ),
-                  functions: yhLang(
-                    "",
-                    ""
-                  ),
+                  functions: yhLang("", ""),
                   icon: "fa-droplet",
                   color: "fats",
                 },
@@ -14722,11 +16681,11 @@ const steps = [
                   name: yhLang("Proteins", "আমিষ (প্রোটিন)"),
                   sources: yhLang(
                     "Animal: fish, meat, liver, milk, egg, dried fish; Plant: nuts, seeds, lentils, sesame/flax",
-                    "প্রাণীজ: মাছ, মাংস, কলিজা, দুধ, ডিম, শুঁটকি মাছ; উদ্ভিদজ: বাদাম, বিভিন্ন ধরনের বীজ, বিভিন্ন ধরনের ডাল, তিল/তিসি"
+                    "প্রাণীজ: মাছ, মাংস, কলিজা, দুধ, ডিম, শুঁটকি মাছ; উদ্ভিদজ: বাদাম, বিভিন্ন ধরনের বীজ, বিভিন্ন ধরনের ডাল, তিল/তিসি",
                   ),
                   functions: yhLang(
                     "Promotes growth and repairs body tissues",
-                    "শরীরের বৃদ্ধি সাধন ও ক্ষয়পূরণ করে"
+                    "শরীরের বৃদ্ধি সাধন ও ক্ষয়পূরণ করে",
                   ),
                   icon: "fa-drumstick-bite",
                   color: "protein",
@@ -14748,7 +16707,7 @@ const steps = [
 লালশাক, তেতুঁল ইত্যাদি<br>
 <b>আয়োডিন : </b>সামুদ্রিক মাছ, আয়োডিনযুক্ত লবণ
 
-                     `
+                     `,
                   ),
                   functions: yhLang(
                     "Supports digestion, immunity, vision, bone strength and disease prevention",
@@ -14762,7 +16721,7 @@ const steps = [
 থেকে রক্ত পড়া বন্ধ করে, ঘাপাঁচড়া প্রতিরোধ করে।<br>
 রক্তস্বল্পতা, ক্ষুধামন্দা ও দুর্বলতা দূর করে।<br>
 শিশুর মানসিক বিকাশ নিশ্চিত ও গলগণ্ড রোধ করে।
-`
+`,
                   ),
                   icon: "fa-pills",
                   color: "vitamins",
@@ -14772,11 +16731,11 @@ const steps = [
                   name: yhLang("Water", "পানি"),
                   sources: yhLang(
                     "Drinking water, liquids, beverages and water in foods",
-                    "খাওয়ার পানি, বিভিন্ন তরল ও পানীয় জাতীয় খাবার এবং বিভিন্ন খাবারের জলীয় অংশ"
+                    "খাওয়ার পানি, বিভিন্ন তরল ও পানীয় জাতীয় খাবার এবং বিভিন্ন খাবারের জলীয় অংশ",
                   ),
                   functions: yhLang(
                     "Essential for all nutrient functions in the body",
-                    "উপরের ৫টি উপাদানের কার্যক্রম পানি ব্যতীত অসম্ভব"
+                    "উপরের ৫টি উপাদানের কার্যক্রম পানি ব্যতীত অসম্ভব",
                   ),
                   icon: "fa-glass-water",
                   color: "water",
@@ -14788,7 +16747,7 @@ const steps = [
                   <div class="m19l3-table-header" data-aos="fade-up">
                     <h2><i class="fa-solid fa-bowl-food"></i>${yhLang(
                       "Nutrition Components, Sources, and Functions",
-                      "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ"
+                      "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ",
                     )}</h2>
                   </div>
 
@@ -14817,7 +16776,7 @@ const steps = [
                               <td class="col-sources"><div class="m19l3-sources-text"><span>${item.sources}</span></div></td>
                               <td class="col-functions"><div class="m19l3-functions-text"><span>${item.functions}</span></div></td>
                             </tr>
-                          `
+                          `,
                           )
                           .join("")}
                       </tbody>
@@ -14827,12 +16786,12 @@ const steps = [
               `;
             })(),
           },
-  
+
           {
             id: "ch19-lesson-5",
             title: yhLang(
               "Importance of Safe, Nutritious Food and Daily Meal Plan",
-              "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
+              "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
             ),
             icon: "fa-utensils",
             gradientClass: "bg-gradient-rose",
@@ -14847,15 +16806,15 @@ const steps = [
                   color: "breakfast",
                   energy: yhLang(
                     "2-3 medium chapatis OR 2 parathas OR 1 bowl rice",
-                    "মাঝারি সাইজের ২/৩টি রুটি অথবা ২টি পরোটা অথবা ১ বাটি ভাত"
+                    "মাঝারি সাইজের ২/৩টি রুটি অথবা ২টি পরোটা অথবা ১ বাটি ভাত",
                   ),
                   growth: yhLang(
                     "1 egg OR 1 bowl lentils",
-                    "১টি ডিম অথবা ১ বাটি ডাল"
+                    "১টি ডিম অথবা ১ বাটি ডাল",
                   ),
                   immunity: yhLang(
                     "1 bowl mixed vegetables (2-3 types) OR vegetable stir-fry",
-                    "১ বাটি সবজি (২/৩ রকম সবজি মিশিয়ে) অথবা সবজি ভাজি (পটল ভাজি, পেঁপে ভাজি ইত্যাদি)"
+                    "১ বাটি সবজি (২/৩ রকম সবজি মিশিয়ে) অথবা সবজি ভাজি (পটল ভাজি, পেঁপে ভাজি ইত্যাদি)",
                   ),
                 },
                 {
@@ -14865,12 +16824,12 @@ const steps = [
                   color: "midmorning",
                   energy: yhLang(
                     "Homemade snacks (flattened rice/puffed rice + jaggery) and ripe banana",
-                    "বাড়িতে তৈরি নাস্তা জাতীয় খাবার (চিড়া/মুড়ি + গুড়) ও পাকা কলা"
+                    "বাড়িতে তৈরি নাস্তা জাতীয় খাবার (চিড়া/মুড়ি + গুড়) ও পাকা কলা",
                   ),
                   growth: "",
                   immunity: yhLang(
                     "Any local seasonal fruit (mango, jackfruit, papaya, pineapple, etc.)",
-                    "যেকোনো দেশি মৌসুমী ফল (আম, কাঁঠাল, পেঁপে, আনারস ইত্যাদি)"
+                    "যেকোনো দেশি মৌসুমী ফল (আম, কাঁঠাল, পেঁপে, আনারস ইত্যাদি)",
                   ),
                 },
                 {
@@ -14878,17 +16837,14 @@ const steps = [
                   timeBn: "দুপুরের খাবার",
                   icon: "fa-bowl-rice",
                   color: "lunch",
-                  energy: yhLang(
-                    "2-3 bowls rice",
-                    "২/৩ বাটি ভাত"
-                  ),
+                  energy: yhLang("2-3 bowls rice", "২/৩ বাটি ভাত"),
                   growth: yhLang(
                     "1 bowl thick lentils & 1 piece (medium) fish/meat/liver",
-                    "১ বাটি মাঝারি ঘন ডাল ও ১ টুকরা (মাঝারি সাইজের) মাছ/মাংস/কলিজা"
+                    "১ বাটি মাঝারি ঘন ডাল ও ১ টুকরা (মাঝারি সাইজের) মাছ/মাংস/কলিজা",
                   ),
                   immunity: yhLang(
                     "1 bowl leafy greens (red spinach, taro leaves) OR vegetables",
-                    "১ বাটি শাক (লাল শাক, কচুশাক, পুঁই শাক) অথবা সবজি"
+                    "১ বাটি শাক (লাল শাক, কচুশাক, পুঁই শাক) অথবা সবজি",
                   ),
                 },
                 {
@@ -14899,11 +16855,11 @@ const steps = [
                   energy: "",
                   growth: yhLang(
                     "1 glass milk OR any milk-based dessert (pudding, vermicelli, rice pudding, cake, yogurt, etc.)",
-                    "১ গ্লাস দুধ অথবা দুধ দিয়ে তৈরি যেকোনো ঘন খাবার (ফিরনি, সেমাই, পায়েস, পিঠা, দই ইত্যাদি)"
+                    "১ গ্লাস দুধ অথবা দুধ দিয়ে তৈরি যেকোনো ঘন খাবার (ফিরনি, সেমাই, পায়েস, পিঠা, দই ইত্যাদি)",
                   ),
                   immunity: yhLang(
                     "Any local seasonal fruit available",
-                    "যেকোনো দেশি মৌসুমী ফল। ঋতুভেদে যেসব ফল সহজেই আমরা পাই "
+                    "যেকোনো দেশি মৌসুমী ফল। ঋতুভেদে যেসব ফল সহজেই আমরা পাই ",
                   ),
                 },
                 {
@@ -14911,17 +16867,14 @@ const steps = [
                   timeBn: "রাতের খাবার",
                   icon: "fa-plate-wheat",
                   color: "dinner",
-                  energy: yhLang(
-                    "2-3 bowls rice",
-                    "২/৩ বাটি ভাত"
-                  ),
+                  energy: yhLang("2-3 bowls rice", "২/৩ বাটি ভাত"),
                   growth: yhLang(
                     "1 bowl thick lentils (if possible, 1 piece fish/meat)",
-                    "১ বাটি ঘন ডাল (যদি সম্ভব হয় ১ টুকরা মাছ/মাংস)"
+                    "১ বাটি ঘন ডাল (যদি সম্ভব হয় ১ টুকরা মাছ/মাংস)",
                   ),
                   immunity: yhLang(
                     "1 bowl leafy greens OR vegetables",
-                    "১ বাটি শাক অথবা সবজি"
+                    "১ বাটি শাক অথবা সবজি",
                   ),
                 },
               ];
@@ -14941,7 +16894,7 @@ const steps = [
                         <td><span class="m19l4-time-text">${meal.growth || "&mdash;"}</span></td>
                         <td><span class="m19l4-time-text">${meal.immunity || "&mdash;"}</span></td>
                       </tr>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -14957,7 +16910,7 @@ const steps = [
                       <i class="fa-solid fa-utensils"></i>
                       ${yhLang(
                         "Daily Meal Plan for Adolescents",
-                        "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা"
+                        "কৈশোরকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
                       )}
                     </h2>
 
@@ -14974,21 +16927,21 @@ const steps = [
                               <h3>${yhLang("Energy Foods", "তাপ ও শক্তি উৎপাদনকারী খাদ্য")}
                               <small>${yhLang(
                                 "Carbohydrates: rice, bread, flattened rice, puffed rice, potato",
-                                "শর্করা: ভাত, রুটি, চিড়া, মুড়ি, আলু"
+                                "শর্করা: ভাত, রুটি, চিড়া, মুড়ি, আলু",
                               )}</small></h3>
                             </th>
                             <th>
                               <h3>${yhLang("Growth Foods", "শরীরের ক্ষয়পূরণ ও বৃদ্ধিকারক খাদ্য")}
                               <small>${yhLang(
                                 "Proteins: egg, fish, meat, milk, lentils",
-                                "আমিষ: ডিম, মাছ, মাংস, দুধ, ডাল"
+                                "আমিষ: ডিম, মাছ, মাংস, দুধ, ডাল",
                               )}</small></h3>
                             </th>
                             <th>
                               <h3>${yhLang("Immunity Foods", "রোগ প্রতিরোধকারী খাদ্য")}
                               <small>${yhLang(
                                 "Vitamins and minerals: vegetables and seasonal fruits",
-                                "ভিটামিন ও খনিজ: সবজি ও দেশি মৌসুমী ফল"
+                                "ভিটামিন ও খনিজ: সবজি ও দেশি মৌসুমী ফল",
                               )}</small></h3>
                             </th>
                           </tr>
@@ -15017,57 +16970,72 @@ const steps = [
             id: "ch19-lesson-6",
             title: yhLang(
               "Adolescent Food Diversity",
-              "কৈশোরকালীন খাদ্য বৈচিত্র্য"
+              "কৈশোরকালীন খাদ্য বৈচিত্র্য",
             ),
             icon: "fa-seedling",
             gradientClass: "bg-gradient-mint",
             audioFile: "",
             quiz: null,
             content: (function () {
-            const points = [
-            {
-              icon: "fa-bowl-food",
-              text: yhLang(
-                "During adolescence, food should be in the right quantity and contain all six essential food components.",
-                "তারুণ্যে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।"
-              ),
-            },
-            {
-              icon: "fa-shapes",
-              text: yhLang(
-                "Eating the same food every day can become boring, so variety and newness in meals can increase appetite.",
-                "দৈনিক একই খাবার খেতে ভালো লাগবে না, কাজেই খাবারে ভিন্নতা ও নতুনত্ব থাকলে তা রুচি বাড়াতে সক্ষম হবে।"
-              ),
-            },
-            {
-              icon: "fa-house",
-              text: yhLang(
-                "During adolescence, boys and girls should be encouraged to eat nutritious homemade food. Bottled, canned, and processed foods contain fewer nutrients and may reduce interest in healthy home-cooked meals.",
-                "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।"
-              ),
-            },
-            {
-              icon: "fa-triangle-exclamation",
-              text: yhLang(
-                "It is important to note that adolescents often eat street foods such as chanachur, pickles, chotpoti, chips, ice cream, cake, soft drinks, juices, and energy drinks. These foods contain high levels of salt, fat, and sugar, which increase the risk of obesity, heart disease, and diabetes later in life.",
-                "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।"
-              ),
-            },
-            {
-              icon: "fa-apple-whole",
-              text: yhLang(
-                "Foods provide the highest nutrition when eaten in their natural form. For example, eating fresh fruit instead of fruit juice provides more nutrients.",
-                "প্রতিটি খাবারকে যথাসম্ভব প্রাকৃতিক অবস্থায় খেলেই সর্বোচ্চ পুষ্টি পাওয়া যায়। যেমন: ফলের জুস না খেয়ে তাজা ফল খেলে সর্বোচ্চ পুষ্টি পাওয়া যায়।"
-              ),
-            },
-          ];
+              const points = [
+                {
+                  icon: "fa-bowl-food",
+                  text: yhLang(
+                    "During adolescence, food should be in the right quantity and contain all six essential food components.",
+                    "তারুণ্যে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।",
+                  ),
+                },
+                {
+                  icon: "fa-shapes",
+                  text: yhLang(
+                    "Eating the same food every day can become boring, so variety and newness in meals can increase appetite.",
+                    "দৈনিক একই খাবার খেতে ভালো লাগবে না, কাজেই খাবারে ভিন্নতা ও নতুনত্ব থাকলে তা রুচি বাড়াতে সক্ষম হবে।",
+                  ),
+                },
+                {
+                  icon: "fa-house",
+                  text: yhLang(
+                    "During adolescence, boys and girls should be encouraged to eat nutritious homemade food. Bottled, canned, and processed foods contain fewer nutrients and may reduce interest in healthy home-cooked meals.",
+                    "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।",
+                  ),
+                },
+                {
+                  icon: "fa-triangle-exclamation",
+                  text: yhLang(
+                    "It is important to note that adolescents often eat street foods such as chanachur, pickles, chotpoti, chips, ice cream, cake, soft drinks, juices, and energy drinks. These foods contain high levels of salt, fat, and sugar, which increase the risk of obesity, heart disease, and diabetes later in life.",
+                    "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।",
+                  ),
+                },
+                {
+                  icon: "fa-apple-whole",
+                  text: yhLang(
+                    "Foods provide the highest nutrition when eaten in their natural form. For example, eating fresh fruit instead of fruit juice provides more nutrients.",
+                    "প্রতিটি খাবারকে যথাসম্ভব প্রাকৃতিক অবস্থায় খেলেই সর্বোচ্চ পুষ্টি পাওয়া যায়। যেমন: ফলের জুস না খেয়ে তাজা ফল খেলে সর্বোচ্চ পুষ্টি পাওয়া যায়।",
+                  ),
+                },
+              ];
 
               const pointLabels = [
-                yhLang("Balanced Nutrition", "তারুণ্যে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।"),
-                yhLang("Food Variety", "দৈনিক একই খাবার খেতে ভালো লাগবে না, কাজেই খাবারে ভিন্নতা ও নতুনত্ব থাকলে তা রুচি বাড়াতে সক্ষম হবে।"),
-                yhLang("Home-Made Foods", "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।"),
-                yhLang("Avoid Junk Food", "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।"),
-                yhLang("Natural Foods", "প্রতিটি খাবারকে যথাসম্ভব প্রাকৃতিক অবস্থায় খেলেই সর্বোচ্চ পুষ্টি পাওয়া যায়। যেমন: ফলের জুস না খেয়ে তাজা ফল খেলে সর্বোচ্চ পুষ্টি পাওয়া যায়।"),
+                yhLang(
+                  "Balanced Nutrition",
+                  "তারুণ্যে খাবার এমন হতে হবে যেন সেই খাবার পরিমাণে সঠিক হয় এবং এতে খাদ্যের ৬টি উপাদানই থাকে।",
+                ),
+                yhLang(
+                  "Food Variety",
+                  "দৈনিক একই খাবার খেতে ভালো লাগবে না, কাজেই খাবারে ভিন্নতা ও নতুনত্ব থাকলে তা রুচি বাড়াতে সক্ষম হবে।",
+                ),
+                yhLang(
+                  "Home-Made Foods",
+                  "কৈশোরে ছেলে-মেয়েদের ঘরে তৈরি পুষ্টিকর খাবার খেতে দিতে হবে। বোতলজাত, কৌটাজাত, প্রক্রিয়াজাত খাবারে পুষ্টি উপাদান কম থাকে, এমনকি এসব খেলে বাসার পুষ্টিকর খাবারের প্রতিও তারা আগ্রহ হারিয়ে ফেলে।",
+                ),
+                yhLang(
+                  "Avoid Junk Food",
+                  "উল্লেখ্য, কৈশোরে ছেলে-মেয়েরা রাস্তার খোলা খাবার, চানাচুর, আচার, চটপটি, চিপস, আইসক্রিম, কেক, কোমল পানীয়, জুস, এনার্জি ড্রিংক ইত্যাদি মুখরোচক খাবার খায়। এগুলোয় লবণ, চর্বি ও শর্করার মাত্রা বেশি থাকে, যা পরবর্তী জীবনে স্থূলতা, হৃদরোগ এবং ডায়াবেটিসের মতো রোগের ঝুঁকি বাড়িয়ে দেয়।",
+                ),
+                yhLang(
+                  "Natural Foods",
+                  "প্রতিটি খাবারকে যথাসম্ভব প্রাকৃতিক অবস্থায় খেলেই সর্বোচ্চ পুষ্টি পাওয়া যায়। যেমন: ফলের জুস না খেয়ে তাজা ফল খেলে সর্বোচ্চ পুষ্টি পাওয়া যায়।",
+                ),
               ];
 
               const renderPoints = () =>
@@ -15084,7 +17052,7 @@ const steps = [
                           </div>
                         </div>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -15100,12 +17068,12 @@ const steps = [
                       <i class="fa-solid fa-leaf"></i>
                       ${yhLang(
                         "Adolescent Food Diversity",
-                        "কৈশোরকালীন খাদ্য বৈচিত্র্য"
+                        "কৈশোরকালীন খাদ্য বৈচিত্র্য",
                       )}
                     </h2>
                     <p class="m19l5-subtitle">${yhLang(
                       "Eating a variety of nutritious foods ensures proper growth and development",
-                      "বিভিন্ন ধরনের পুষ্টিকর খাবার খাওয়া সঠিক বৃদ্ধি এবং বিকাশ নিশ্চিত করে"
+                      "বিভিন্ন ধরনের পুষ্টিকর খাবার খাওয়া সঠিক বৃদ্ধি এবং বিকাশ নিশ্চিত করে",
                     )}</p>
                   </div>
 
@@ -15120,25 +17088,25 @@ const steps = [
             id: "ch19-lesson-7",
             title: yhLang(
               "Nutritious Food During Menstruation",
-              "মাসিককালীন সময়ে পুষ্টিকর খাদ্য"
+              "মাসিককালীন সময়ে পুষ্টিকর খাদ্য",
             ),
             icon: "fa-droplet",
             gradientClass: "bg-gradient-lilac",
             audioFile: "",
             quiz: null,
             content: (function () {
-                const nutrients = [
+              const nutrients = [
                 {
                   nameEn: "Iron-Rich Foods",
                   nameBn: "আয়রনযুক্ত খাবার",
                   icon: "fa-heart-pulse",
                   role: yhLang(
                     "Prevents iron deficiency during menstruation",
-                    "মাসিকের সময় আয়রনের ঘাটতি দূর করে"
+                    "মাসিকের সময় আয়রনের ঘাটতি দূর করে",
                   ),
                   details: yhLang(
                     "Fish, meat, liver, eggs, dark green leafy vegetables, grains, peas, beans, yard-long beans, nuts, soybeans, molasses, and dried fruits contain a good amount of iron.",
-                    "মাছ, মাংস, কলিজা, ডিম, ঘন সবুজ পাতাজাতীয় শাকসবজি, দানাজাতীয় শস্য, মটরশুঁটি, সিম, বরবটি, বাদাম, সয়াবিন, গুড় ও শুকনা ফলে যথেষ্ট পরিমাণে আয়রন থাকে।"
+                    "মাছ, মাংস, কলিজা, ডিম, ঘন সবুজ পাতাজাতীয় শাকসবজি, দানাজাতীয় শস্য, মটরশুঁটি, সিম, বরবটি, বাদাম, সয়াবিন, গুড় ও শুকনা ফলে যথেষ্ট পরিমাণে আয়রন থাকে।",
                   ),
                 },
                 {
@@ -15147,11 +17115,11 @@ const steps = [
                   icon: "fa-bone",
                   role: yhLang(
                     "Helps blood clotting",
-                    "রক্ত জমাট বাঁধায় সাহায্য করে"
+                    "রক্ত জমাট বাঁধায় সাহায্য করে",
                   ),
                   details: yhLang(
                     "Milk is an excellent source of calcium. Dairy foods such as yogurt, cottage cheese, paneer, and khoa contain high amounts of calcium. Small fish eaten with bones are also rich in calcium. Green vegetables such as kolmi shak, data shak, pui shak, drumstick leaves, and red amaranth contain plenty of calcium. Vegetables like okra, sponge gourd, cabbage, cauliflower, and beans, as well as chickpeas, black gram, mung beans, and soybeans, also contain calcium.",
-                    "দুধ ক্যালসিয়ামের উৎকৃষ্ট উৎস। দুগ্ধজাতীয় খাদ্য যেমন দই, ছানা, পনির, মাওয়া, কাঁটাসহ ছোট মাছে প্রচুর ক্যালসিয়াম আছে। সবুজ শাকসবজি যেমন কলমিশাক, ডাঁটাশাক, পুঁইশাক, সজনে পাতা, লালশাক ইত্যাদিতে প্রচুর পরিমাণে ক্যালসিয়াম থাকে। সবজির মধ্যে ঢ্যাঁড়স, ধুন্দুল, বাঁধাকপি, ফুলকপি, সিম ইত্যাদি, ছোলা, মাসকলাই, মুগ ও সয়াবিনে ক্যালসিয়াম থাকে।"
+                    "দুধ ক্যালসিয়ামের উৎকৃষ্ট উৎস। দুগ্ধজাতীয় খাদ্য যেমন দই, ছানা, পনির, মাওয়া, কাঁটাসহ ছোট মাছে প্রচুর ক্যালসিয়াম আছে। সবুজ শাকসবজি যেমন কলমিশাক, ডাঁটাশাক, পুঁইশাক, সজনে পাতা, লালশাক ইত্যাদিতে প্রচুর পরিমাণে ক্যালসিয়াম থাকে। সবজির মধ্যে ঢ্যাঁড়স, ধুন্দুল, বাঁধাকপি, ফুলকপি, সিম ইত্যাদি, ছোলা, মাসকলাই, মুগ ও সয়াবিনে ক্যালসিয়াম থাকে।",
                   ),
                 },
                 {
@@ -15160,24 +17128,21 @@ const steps = [
                   icon: "fa-seedling",
                   role: yhLang(
                     "Reduces headaches and muscle pain",
-                    "মাথাব্যথা ও পায়ের মাংসপেশীর যন্ত্রণা কমাতে সাহায্য করে"
+                    "মাথাব্যথা ও পায়ের মাংসপেশীর যন্ত্রণা কমাতে সাহায্য করে",
                   ),
                   details: yhLang(
                     "Almost all types of fish contain high levels of magnesium. Whole wheat bread, white rice, green leafy vegetables, spinach, beans, bean seeds, yard-long beans, peas, bananas, pumpkin, and lettuce leaves are major sources of magnesium. Cashew nuts and peanuts are also excellent sources of magnesium.",
-                    "প্রায় সব ধরনের মাছেই উচ্চমাত্রায় ম্যাগনেসিয়াম আছে। গমের রুটি, সাদা ভাত, সবুজ পাতাযুক্ত শাকসবজি, পালংশাক, শিম, শিমের বিচি, বরবটি, মটরশুঁটি, কলা, কুমড়া, লেটুস পাতা ম্যাগনেসিয়ামের অন্যতম প্রধান উৎস। কাজুবাদাম, চীনাবাদাম-এগুলো ম্যাগনেসিয়ামের উৎকৃষ্ট উৎস।"
+                    "প্রায় সব ধরনের মাছেই উচ্চমাত্রায় ম্যাগনেসিয়াম আছে। গমের রুটি, সাদা ভাত, সবুজ পাতাযুক্ত শাকসবজি, পালংশাক, শিম, শিমের বিচি, বরবটি, মটরশুঁটি, কলা, কুমড়া, লেটুস পাতা ম্যাগনেসিয়ামের অন্যতম প্রধান উৎস। কাজুবাদাম, চীনাবাদাম-এগুলো ম্যাগনেসিয়ামের উৎকৃষ্ট উৎস।",
                   ),
                 },
                 {
                   nameEn: "Fiber-Rich Foods",
                   nameBn: "আঁশযুক্ত খাবার",
                   icon: "fa-wheat-awn",
-                  role: yhLang(
-                    "Aids in digestion",
-                    "হজম বা পরিপাকে সহায়ক"
-                  ),
+                  role: yhLang("Aids in digestion", "হজম বা পরিপাকে সহায়ক"),
                   details: yhLang(
                     "Leafy vegetables, peas, beans, yard-long beans, sweet potatoes, whole wheat bread, brown rice, oats, nuts, apples, black grapes, and dates are good sources of fiber.",
-                    "ডাঁটাশাক, মটরশুঁটি, সিম, বরবটি, মিষ্টি আলু, গমের রুটি, ঢেঁকিছাটা চাল, ওটস, বাদাম, আপেল, কালো আঙুর, খেজুর ইত্যাদি।"
+                    "ডাঁটাশাক, মটরশুঁটি, সিম, বরবটি, মিষ্টি আলু, গমের রুটি, ঢেঁকিছাটা চাল, ওটস, বাদাম, আপেল, কালো আঙুর, খেজুর ইত্যাদি।",
                   ),
                 },
                 {
@@ -15186,11 +17151,11 @@ const steps = [
                   icon: "fa-capsules",
                   role: yhLang(
                     "Helps regulate menstruation and reduces headaches",
-                    "অনিয়মিত মাসিক ও মাসিকের সময়ে মাথাব্যথা কমাতে সাহায্য করে"
+                    "অনিয়মিত মাসিক ও মাসিকের সময়ে মাথাব্যথা কমাতে সাহায্য করে",
                   ),
                   details: yhLang(
                     "Vitamin B1 rich foods: milk, eggs, sea fish, cod liver, liver, chicken, chickpeas, spinach, peas, ripe bananas, etc. Vitamin D rich foods: fish such as vetki or coral fish, tilapia, catfish, and dried fish contain vitamin D. Milk is another excellent source of vitamin D. Beef and mutton liver also contain vitamin D. Eggs contain a high amount of vitamin D. People with high blood pressure should be cautious when consuming egg yolk. Grains and mushrooms also contain vitamin D. Sunlight is one of the best sources of vitamin D. Sunlight from 10 AM to 3 PM is most effective. Sitting in the sun for 5 minutes to half an hour twice a week can provide many benefits.",
-                    "ভিটামিন বি-১ সমৃদ্ধ খাবার: দুধ, ডিম, সামুদ্রিক মাছ, কড লিভার, কলিজা, মুরগি, ছোলা, পালংশাক, মটরশুঁটি, পাকা কলা ইত্যাদি। ভিটামিন ডি সমৃদ্ধ খাবার: ভেটকি বা কোরাল মাছ, তেলাপিয়া, মাগুর ও শুঁটকি মাছে ভিটামিন ডি আছে। ভিটামিন ডি-এর অপর একটি চমৎকার উৎস হচ্ছে দুধ। গরু ও খাসির মাংসের কলিজায় ভিটামিন ডি আছে। ডিমে অতিরিক্ত পরিমাণে ভিটামিন ডি আছে। যাদের উচ্চ রক্তচাপ আছে, তাদের ডিমের কুসুম খাওয়ার ক্ষেত্রে সতর্ক থাকতে হবে। শস্যদানায় ও মাশরুমে ভিটামিন ডি আছে। রোদ ভিটামিন ডি-এর অন্যতম উৎস। সকাল ১০টা থেকে বিকেল ৩টা পর্যন্ত রোদ সবচেয়ে ভালো। পাঁচ মিনিট থেকে আধাঘণ্টা পর্যন্ত সপ্তাহে দুবার রোদে বসলে অনেক উপকার পাওয়া যায়।"
+                    "ভিটামিন বি-১ সমৃদ্ধ খাবার: দুধ, ডিম, সামুদ্রিক মাছ, কড লিভার, কলিজা, মুরগি, ছোলা, পালংশাক, মটরশুঁটি, পাকা কলা ইত্যাদি। ভিটামিন ডি সমৃদ্ধ খাবার: ভেটকি বা কোরাল মাছ, তেলাপিয়া, মাগুর ও শুঁটকি মাছে ভিটামিন ডি আছে। ভিটামিন ডি-এর অপর একটি চমৎকার উৎস হচ্ছে দুধ। গরু ও খাসির মাংসের কলিজায় ভিটামিন ডি আছে। ডিমে অতিরিক্ত পরিমাণে ভিটামিন ডি আছে। যাদের উচ্চ রক্তচাপ আছে, তাদের ডিমের কুসুম খাওয়ার ক্ষেত্রে সতর্ক থাকতে হবে। শস্যদানায় ও মাশরুমে ভিটামিন ডি আছে। রোদ ভিটামিন ডি-এর অন্যতম উৎস। সকাল ১০টা থেকে বিকেল ৩টা পর্যন্ত রোদ সবচেয়ে ভালো। পাঁচ মিনিট থেকে আধাঘণ্টা পর্যন্ত সপ্তাহে দুবার রোদে বসলে অনেক উপকার পাওয়া যায়।",
                   ),
                 },
               ];
@@ -15213,7 +17178,7 @@ const steps = [
                         </td>
                         <td class="m19l7-details-cell"><span>${item.details}</span></td>
                       </tr>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -15229,7 +17194,7 @@ const steps = [
                       <i class="fa-solid fa-droplet"></i>
                       ${yhLang(
                         "Nutritious Food During Menstruation",
-                        "মাসিককালীন সময়ে পুষ্টিকর খাদ্য"
+                        "মাসিককালীন সময়ে পুষ্টিকর খাদ্য",
                       )}
                     </h2>
                   </div>
@@ -15241,7 +17206,7 @@ const steps = [
                     <div class="m19l7-info-text">
                       <span>${yhLang(
                         "During menstruation, blood loss from the body can lead to malnutrition and anemia. To compensate for this deficiency, it is necessary to eat iron, calcium, magnesium, fiber and vitamin-rich foods along with normal food. These foods help to stay healthy and strong during menstruation.",
-                        "মাসিকের সময় দেহ থেকে রক্তক্ষরণ হয়, ফলে পুষ্টিহীনতা ও রক্তস্বল্পতা দেখা দিতে পারে। এই ঘাটতি পূরণের জন্য স্বাভাবিক খাবারের পাশাপাশি আয়রন, ক্যালসিয়াম, ম্যাগনেসিয়াম, আঁশযুক্ত ও ভিটামিনসমৃদ্ধ খাবার খাওয়া দরকার। এসব খাবার মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে সাহায্য করে।"
+                        "মাসিকের সময় দেহ থেকে রক্তক্ষরণ হয়, ফলে পুষ্টিহীনতা ও রক্তস্বল্পতা দেখা দিতে পারে। এই ঘাটতি পূরণের জন্য স্বাভাবিক খাবারের পাশাপাশি আয়রন, ক্যালসিয়াম, ম্যাগনেসিয়াম, আঁশযুক্ত ও ভিটামিনসমৃদ্ধ খাবার খাওয়া দরকার। এসব খাবার মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে সাহায্য করে।",
                       )}</span>
                     </div>
                   </div>
@@ -15269,7 +17234,7 @@ const steps = [
             id: "ch19-lesson-8",
             title: yhLang(
               "তরুন-তরুনীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
-              "তরুন-তরুনীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ"
+              "তরুন-তরুনীদের পুষ্টিজনিত প্রধান সমস্যাসমূহ",
             ),
             icon: "fa-apple-whole",
             gradientClass: "bg-gradient-emerald",
@@ -15281,7 +17246,7 @@ const steps = [
                   id: "q19h",
                   question: yhLang(
                     "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?",
-                    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?"
+                    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?",
                   ),
                   options: [
                     yhLang("প্রতি সপ্তাহে", "প্রতি সপ্তাহে"),
@@ -15295,59 +17260,76 @@ const steps = [
             },
             content: (function () {
               const symptomPoints = [
-              yhLang(
-                "Feeling fatigued, lacking interest in work, weakness, and drowsiness",
-                "অবসাদ, কাজ-কর্মে অনীহা, দুর্বলতাবোধ করা ও ঘুমঘুমভাব অনুভব করা"
-              ),
-              yhLang(
-                "Skin becomes pale",
-                "শরীরের চামড়া ফ্যাকাসে হয়ে যায়"
-              ),
-              yhLang(
-                "Difficulty in breathing",
-                "শ্বাস-প্রশ্বাসে কষ্ট হয়"
-              ),
-              yhLang(
-                "Long-term anemia may cause menstrual problems (irregular periods, low bleeding, etc.)",
-                "দীর্ঘদিন রক্তস্বল্পতা থাকলে মাসিকের সমস্যা দেখা দিতে পারে (এলোমেলো মাসিক, কম রক্তপাত ইত্যাদি)"
-              ),
-            ];
+                yhLang(
+                  "Feeling fatigued, lacking interest in work, weakness, and drowsiness",
+                  "অবসাদ, কাজ-কর্মে অনীহা, দুর্বলতাবোধ করা ও ঘুমঘুমভাব অনুভব করা",
+                ),
+                yhLang("Skin becomes pale", "শরীরের চামড়া ফ্যাকাসে হয়ে যায়"),
+                yhLang("Difficulty in breathing", "শ্বাস-প্রশ্বাসে কষ্ট হয়"),
+                yhLang(
+                  "Long-term anemia may cause menstrual problems (irregular periods, low bleeding, etc.)",
+                  "দীর্ঘদিন রক্তস্বল্পতা থাকলে মাসিকের সমস্যা দেখা দিতে পারে (এলোমেলো মাসিক, কম রক্তপাত ইত্যাদি)",
+                ),
+              ];
 
-            const preventionPoints = [
-              yhLang(
-                "Eat dark green leafy vegetables and tomatoes regularly.",
-                "গাঢ় সবুজ শাক-সবজি, টমেটো ইত্যাদি নিয়মিত খেতে হবে।"
-              ),
-              yhLang(
-                "Eat liver, meat, and eggs regularly.",
-                "কলিজা, মাংস এবং ডিম নিয়মিত খেতে হবে।"
-              ),
-              yhLang(
-                "Eat vitamin C rich foods such as lemon, orange, juicy fruits, litchi, guava, papaya, pineapple, watermelon, mango, etc. regularly.",
-                "ভিটামিন-সি সমৃদ্ধ খাবার যেমন : লেবু, কমলালেবু, রসালো ফল, লিচু, পেয়ারা, পেঁপে, আনারস, তরমুজ, আম ইত্যাদি নিয়মিত খেতে হবে।"
-              ),
-              yhLang(
-                "Maintain personal cleanliness.",
-                "ব্যক্তিগতভাবে পরিষ্কার-পরিচ্ছন্ন থাকতে হবে।"
-              ),
-              yhLang(
-                "Cook food on low heat and keep it covered.",
-                "স্বল্প আঁচে/জ্বালে খাদ্যদ্রব্য ঢেকে রান্না করতে হবে।"
-              ),
-              yhLang(
-                "Always wear shoes or sandals to prevent worms in the stomach. Take deworming medicine regularly as advised by a doctor.",
-                "পায়ে সব সময় জুতা/স্যান্ডেল ব্যবহার করতে হবে যাতে পেটে কৃমি না জন্মায়। ডাক্তারের পরামর্শ অনুযায়ী নিয়মিত বিরতিতে কৃমিনাশক ওষুধ খেতে হবে।"
-              ),
-            ];
+              const preventionPoints = [
+                yhLang(
+                  "Eat dark green leafy vegetables and tomatoes regularly.",
+                  "গাঢ় সবুজ শাক-সবজি, টমেটো ইত্যাদি নিয়মিত খেতে হবে।",
+                ),
+                yhLang(
+                  "Eat liver, meat, and eggs regularly.",
+                  "কলিজা, মাংস এবং ডিম নিয়মিত খেতে হবে।",
+                ),
+                yhLang(
+                  "Eat vitamin C rich foods such as lemon, orange, juicy fruits, litchi, guava, papaya, pineapple, watermelon, mango, etc. regularly.",
+                  "ভিটামিন-সি সমৃদ্ধ খাবার যেমন : লেবু, কমলালেবু, রসালো ফল, লিচু, পেয়ারা, পেঁপে, আনারস, তরমুজ, আম ইত্যাদি নিয়মিত খেতে হবে।",
+                ),
+                yhLang(
+                  "Maintain personal cleanliness.",
+                  "ব্যক্তিগতভাবে পরিষ্কার-পরিচ্ছন্ন থাকতে হবে।",
+                ),
+                yhLang(
+                  "Cook food on low heat and keep it covered.",
+                  "স্বল্প আঁচে/জ্বালে খাদ্যদ্রব্য ঢেকে রান্না করতে হবে।",
+                ),
+                yhLang(
+                  "Always wear shoes or sandals to prevent worms in the stomach. Take deworming medicine regularly as advised by a doctor.",
+                  "পায়ে সব সময় জুতা/স্যান্ডেল ব্যবহার করতে হবে যাতে পেটে কৃমি না জন্মায়। ডাক্তারের পরামর্শ অনুযায়ী নিয়মিত বিরতিতে কৃমিনাশক ওষুধ খেতে হবে।",
+                ),
+              ];
 
               const renderList = (items, listType) => {
-                const iconPool = listType === "symptom"
-                  ? ["fa-heart-crack", "fa-face-frown", "fa-lungs", "fa-calendar-xmark", "fa-head-side-cough", "fa-person-falling"]
-                  : ["fa-leaf", "fa-egg", "fa-lemon", "fa-soap", "fa-fire-burner", "fa-shoe-prints"];
+                const iconPool =
+                  listType === "symptom"
+                    ? [
+                        "fa-heart-crack",
+                        "fa-face-frown",
+                        "fa-lungs",
+                        "fa-calendar-xmark",
+                        "fa-head-side-cough",
+                        "fa-person-falling",
+                      ]
+                    : [
+                        "fa-leaf",
+                        "fa-egg",
+                        "fa-lemon",
+                        "fa-soap",
+                        "fa-fire-burner",
+                        "fa-shoe-prints",
+                      ];
 
-                const tonePool = listType === "symptom"
-                  ? ["warn", "danger", "info", "warn", "danger", "info"]
-                  : ["success", "accent", "info", "success", "accent", "warn"];
+                const tonePool =
+                  listType === "symptom"
+                    ? ["warn", "danger", "info", "warn", "danger", "info"]
+                    : [
+                        "success",
+                        "accent",
+                        "info",
+                        "success",
+                        "accent",
+                        "warn",
+                      ];
 
                 return items
                   .map((item, index) => {
@@ -15379,7 +17361,7 @@ const steps = [
                    <p class="m19l8-p">
   ${yhLang(
     "Anemia: Anemia occurs when the number of red blood cells in the blood decreases. Iron deficiency is a very common problem among adolescent girls. Since girls lose blood every month during menstruation, if they do not consume enough iron-rich foods, iron deficiency develops in the body and anemia occurs.",
-    "এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। মেয়েদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় মেয়েদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।"
+    "এনিমিয়া বা রক্তস্বল্পতা : রক্তে লোহিত কণিকার পরিমাণ কমে গেলে তাকে এনিমিয়া বা রক্তস্বল্পতা বলে। মেয়েদের দেহে লৌহজনিত আয়রনের ঘাটতি খুবই সাধারণ সমস্যা। যেহেতু প্রতি মাসেই মাসিকের সময় মেয়েদের শরীর থেকে রক্তপাত হয়, তাই লৌহসমৃদ্ধ খাবার কম গ্রহণ করলে দেহে আয়রনের ঘাটতি দেখা দেয় এবং রক্তস্বল্পতা তৈরি হয়।",
   )}
 </p>
                   </section>
@@ -15408,7 +17390,7 @@ const steps = [
                         <p>
   ${yhLang(
     "To prevent anemia, adolescent girls should take one iron–folic acid tablet every week after a meal. These iron–folic acid tablets are provided to every adolescent girl from government health service centers.",
-    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে।সরকারি বিদ্যালয় ও স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।"
+    "রক্তস্বল্পতা প্রতিরোধে কিশোরীদের প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে।সরকারি বিদ্যালয় ও স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।",
   )}
 </p>
                       </article>
@@ -15417,7 +17399,7 @@ const steps = [
                         <p>
   ${yhLang(
     "Iodine is an important nutrient for the human body. Iodine deficiency can cause various problems such as goiter, stunted growth, and intellectual disability. To prevent these problems, iodized salt should be consumed.",
-    "মানবদেহে আয়োডিন একটি গুরুত্বপূর্ণ পুষ্টি উপাদান। আয়োডিন ঘাটতি হলে গলগণ্ড, খর্বতা ও বুদ্ধি প্রতিবন্ধিতাসহ বিভিন্ন সমস্যা দেখা দেয়, যা প্রতিরোধে আয়োডিনযুক্ত লবণ খেতে হয়।"
+    "মানবদেহে আয়োডিন একটি গুরুত্বপূর্ণ পুষ্টি উপাদান। আয়োডিন ঘাটতি হলে গলগণ্ড, খর্বতা ও বুদ্ধি প্রতিবন্ধিতাসহ বিভিন্ন সমস্যা দেখা দেয়, যা প্রতিরোধে আয়োডিনযুক্ত লবণ খেতে হয়।",
   )}
 </p>
                       </article>
@@ -15426,7 +17408,7 @@ const steps = [
                         <p>
   ${yhLang(
     "Calcium helps in the formation of bones and teeth, keeps the nerves strong, and supports normal blood clotting in the body. Therefore, calcium-rich foods should be consumed during adolescence.",
-    "ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই কৈশোরে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।"
+    "ক্যালসিয়াম হাড় ও দাঁত গঠনে সাহায্য করে, স্নায়ুকে সবল রাখে এবং শরীরে স্বাভাবিক রক্ত জমাট বাঁধতে সহায়তা করে। তাই কৈশোরে ক্যালসিয়ামযুক্ত খাবার খেতে হয়।",
   )}
 </p>
                       </article>
@@ -15440,15 +17422,13 @@ const steps = [
             id: "ch19-lesson-9",
             title: yhLang(
               "Adolescent Nutrition and Malnutrition Cycle",
-              "পুষ্টি এবং অপুষ্টি চক্র"
+              "পুষ্টি এবং অপুষ্টি চক্র",
             ),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: null,
             content: (function () {
-             
-
               return `
                 <link rel="stylesheet" href="css/m19l9.css">
                 <div class="m19l9-container">
@@ -15484,7 +17464,7 @@ const steps = [
             id: "ch19-lesson-10",
             title: yhLang(
               "Adolescent Nutrition and Weight Management",
-              "অপুষ্টি প্রতিরোধে করণীয়"
+              "অপুষ্টি প্রতিরোধে করণীয়",
             ),
             icon: "fa-weight-scale",
             gradientClass: "bg-gradient-sunrise",
@@ -15495,7 +17475,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Eat a balanced diet such as carbohydrate foods (rice, bread, puffed rice, sugar, molasses, honey, potatoes, flattened rice, etc.), protein foods (eggs, milk, fish, meat, lentils, nuts, seeds, etc.), iron-rich foods (meat, liver, and dark green leafy vegetables), and vitamin A rich foods (liver, ripe papaya, mango, carrot, pumpkin, small fish, eggs, green leafy vegetables, and yellow-colored fruits).",
-                    "সুষম খাবার, যেমন— শর্করাজাতীয় খাবার (ভাত, রুটি, মুড়ি, চিনি, গুড়, মধু, আলু, চিড়া ইত্যাদি), আমিষজাতীয় খাবার (ডিম, দুধ, মাছ, মাংস, ডাল, বাদাম, বীচি ইত্যাদি), আয়রনসমৃদ্ধ খাবার (মাংস, কলিজা এবং গাঢ় সবুজ শাক-সবজি), ভিটামিন এ সমৃদ্ধ খাবার (কলিজা, পাকা পেঁপে, আম, গাজর, মিষ্টি কুমড়া, ছোট মাছ, ডিম, সবুজ শাক-সবজি ও হলুদ রঙের ফলমূল) খাওয়া"
+                    "সুষম খাবার, যেমন— শর্করাজাতীয় খাবার (ভাত, রুটি, মুড়ি, চিনি, গুড়, মধু, আলু, চিড়া ইত্যাদি), আমিষজাতীয় খাবার (ডিম, দুধ, মাছ, মাংস, ডাল, বাদাম, বীচি ইত্যাদি), আয়রনসমৃদ্ধ খাবার (মাংস, কলিজা এবং গাঢ় সবুজ শাক-সবজি), ভিটামিন এ সমৃদ্ধ খাবার (কলিজা, পাকা পেঁপে, আম, গাজর, মিষ্টি কুমড়া, ছোট মাছ, ডিম, সবুজ শাক-সবজি ও হলুদ রঙের ফলমূল) খাওয়া",
                   ),
                   icon: "fa-bowl-food",
                   tone: "success",
@@ -15503,7 +17483,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Drink at least 8–10 glasses of water every day.",
-                    "প্রতিদিন কমপক্ষে ৮-১০ গ্লাস পানি পান করা"
+                    "প্রতিদিন কমপক্ষে ৮-১০ গ্লাস পানি পান করা",
                   ),
                   icon: "fa-glass-water",
                   tone: "info",
@@ -15511,7 +17491,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Eat sufficient vitamin B and vitamin C rich foods every day.",
-                    "প্রতিদিন পর্যাপ্ত পরিমাণে ভিটামিন বি এবং ভিটামিন সি-যুক্ত খাবার খাওয়া"
+                    "প্রতিদিন পর্যাপ্ত পরিমাণে ভিটামিন বি এবং ভিটামিন সি-যুক্ত খাবার খাওয়া",
                   ),
                   icon: "fa-lemon",
                   tone: "accent",
@@ -15519,7 +17499,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Take one iron–folic acid (IFA) tablet every week.",
-                    "প্রতি সপ্তাহে ১টি করে আয়রন-ফলিক এসিড (আইএফএ) ট্যাবলেট খাওয়া"
+                    "প্রতি সপ্তাহে ১টি করে আয়রন-ফলিক এসিড (আইএফএ) ট্যাবলেট খাওয়া",
                   ),
                   icon: "fa-tablets",
                   tone: "tip",
@@ -15527,7 +17507,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Eat iodine-rich foods (such as sea fish and vegetables from coastal areas) and use iodized salt.",
-                    "আয়োডিনসমৃদ্ধ খাবার (সামুদ্রিক মাছ এবং সমুদ্র তীরবর্তী এলাকার শাক-সবজি) এবং আয়োডিনযুক্ত লবণ খাওয়া"
+                    "আয়োডিনসমৃদ্ধ খাবার (সামুদ্রিক মাছ এবং সমুদ্র তীরবর্তী এলাকার শাক-সবজি) এবং আয়োডিনযুক্ত লবণ খাওয়া",
                   ),
                   icon: "fa-fish",
                   tone: "info",
@@ -15535,7 +17515,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Every adolescent should take deworming tablets every six months according to a doctor's advice.",
-                    "প্রত্যেক তরুন-তরুনীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি খাওয়া"
+                    "প্রত্যেক তরুন-তরুনীকে চিকিৎসকের পরামর্শ অনুযায়ী ছয় মাস পর পর কৃমিনাশক বড়ি খাওয়া",
                   ),
                   icon: "fa-user-doctor",
                   tone: "warn",
@@ -15543,7 +17523,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Wash hands with soap and safe water before and after eating.",
-                    "খাবার খাওয়ার আগে ও পরে সাবান এবং নিরাপদ পানি দিয়ে হাত ধোয়া"
+                    "খাবার খাওয়ার আগে ও পরে সাবান এবং নিরাপদ পানি দিয়ে হাত ধোয়া",
                   ),
                   icon: "fa-hand-sparkles",
                   tone: "clean",
@@ -15551,7 +17531,7 @@ const steps = [
                 {
                   text: yhLang(
                     "Use hygienic latrines.",
-                    "স্বাস্থ্যসম্মত ল্যাট্রিন ব্যবহার করা"
+                    "স্বাস্থ্যসম্মত ল্যাট্রিন ব্যবহার করা",
                   ),
                   icon: "fa-house-chimney-medical",
                   tone: "clean",
@@ -15559,7 +17539,7 @@ const steps = [
                 {
                   text: yhLang(
                     "No marriage before 18 and no child before 20.",
-                    "১৮-এর আগে বিয়ে নয়, ২০-এর আগে সন্তান নয়"
+                    "১৮-এর আগে বিয়ে নয়, ২০-এর আগে সন্তান নয়",
                   ),
                   icon: "fa-shield-heart",
                   tone: "danger",
@@ -15574,33 +17554,48 @@ const steps = [
                         <span class="m19l10-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m19l10-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("")}</ul>`;
 
               const overweightCauses = [
                 {
-                  text: yhLang("Eating more calories than needed every day.", "প্রতিদিন প্রয়োজনের তুলনায় বেশি ক্যালোরিযুক্ত খাদ্য গ্রহণ"),
+                  text: yhLang(
+                    "Eating more calories than needed every day.",
+                    "প্রতিদিন প্রয়োজনের তুলনায় বেশি ক্যালোরিযুক্ত খাদ্য গ্রহণ",
+                  ),
                   icon: "fa-burger",
                   tone: "warn",
                 },
                 {
-                  text: yhLang("Low physical activity and lack of regular sports.", "কম পরিশ্রম বা নিয়মিত খেলাধুলা না করা"),
+                  text: yhLang(
+                    "Low physical activity and lack of regular sports.",
+                    "কম পরিশ্রম বা নিয়মিত খেলাধুলা না করা",
+                  ),
                   icon: "fa-person-walking",
                   tone: "info",
                 },
                 {
-                  text: yhLang("Irregular lifestyle (late sleeping, late waking, skipping breakfast, overeating later, excessive mobile/screen time).", "অনিয়মিত জীবনযাপন করা (যেমন: রাতজাগা, ঘুম থেকে দেরিতে ওঠা, নাশতা না করে পরে অপরিমিত খাওয়া, বেশি পরিমাণে মোবাইল ফোন ব্যবহার/স্ক্রিনটাইম বেশি হওয়া)"),
+                  text: yhLang(
+                    "Irregular lifestyle (late sleeping, late waking, skipping breakfast, overeating later, excessive mobile/screen time).",
+                    "অনিয়মিত জীবনযাপন করা (যেমন: রাতজাগা, ঘুম থেকে দেরিতে ওঠা, নাশতা না করে পরে অপরিমিত খাওয়া, বেশি পরিমাণে মোবাইল ফোন ব্যবহার/স্ক্রিনটাইম বেশি হওয়া)",
+                  ),
                   icon: "fa-mobile-screen-button",
                   tone: "danger",
                 },
                 {
-                  text: yhLang("Frequent intake of fried, oily, and fatty foods (fast food, cola, chips, etc.).", "তেলে ভাজা, অধিক তৈলাক্ত ও চর্বিজাতীয় খাবার খাওয়া (যেমন: ফাস্ট ফুড, কোকাকোলা, চিপস ইত্যাদি)"),
+                  text: yhLang(
+                    "Frequent intake of fried, oily, and fatty foods (fast food, cola, chips, etc.).",
+                    "তেলে ভাজা, অধিক তৈলাক্ত ও চর্বিজাতীয় খাবার খাওয়া (যেমন: ফাস্ট ফুড, কোকাকোলা, চিপস ইত্যাদি)",
+                  ),
                   icon: "fa-pizza-slice",
                   tone: "warn",
                 },
                 {
-                  text: yhLang("High intake of sugar and sweets.", "চিনি ও মিষ্টিজাতীয় খাবার বেশি খাওয়া"),
+                  text: yhLang(
+                    "High intake of sugar and sweets.",
+                    "চিনি ও মিষ্টিজাতীয় খাবার বেশি খাওয়া",
+                  ),
                   icon: "fa-candy-cane",
                   tone: "accent",
                 },
@@ -15638,7 +17633,7 @@ const steps = [
             id: "ch19-lesson-11",
             title: yhLang(
               "Harmful Effects of Overweight and Obesity",
-              "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব"
+              "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
             ),
             icon: "fa-exclamation-circle",
             gradientClass: "bg-gradient-crimson",
@@ -15654,7 +17649,7 @@ const steps = [
                   <header class="m19-11-header" data-aos="fade-up">
                     <h2 class="m19-11-title"><i class="fa-solid fa-heart-pulse"></i>${yhLang(
                       "Harmful Effects of Overweight and Obesity",
-                      "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব"
+                      "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
                     )}</h2>
                   </header>
 
@@ -15671,7 +17666,7 @@ const steps = [
             id: "ch19-lesson-12",
             title: yhLang(
               "Risks of Overweight and Obesity",
-              "অধিক ওজন ও স্থূলতার ঝুঁকি"
+              "অধিক ওজন ও স্থূলতার ঝুঁকি",
             ),
             icon: "fa-notes-medical",
             gradientClass: "bg-gradient-sunset",
@@ -15680,32 +17675,50 @@ const steps = [
             content: (function () {
               const preventionPoints = [
                 {
-                  text: yhLang("Eat a balanced diet in moderation.", "পরিমিত সুষম খাবার খেতে হবে"),
+                  text: yhLang(
+                    "Eat a balanced diet in moderation.",
+                    "পরিমিত সুষম খাবার খেতে হবে",
+                  ),
                   icon: "fa-bowl-food",
                   tone: "success",
                 },
                 {
-                  text: yhLang("Practice regular exercise, physical activity, and sports.", "নিয়মিত শরীরচর্চা, ব্যায়াম ও খেলাধুলা করতে হবে"),
+                  text: yhLang(
+                    "Practice regular exercise, physical activity, and sports.",
+                    "নিয়মিত শরীরচর্চা, ব্যায়াম ও খেলাধুলা করতে হবে",
+                  ),
                   icon: "fa-person-running",
                   tone: "info",
                 },
                 {
-                  text: yhLang("Adolescents should do at least 60 minutes of moderate to vigorous physical activity daily throughout the week.", "তরুন-তরুনীদের সারা সপ্তাহে প্রতিদিন গড়ে অন্তত ৬০ মিনিট মাঝারি থেকে ভারী শারীরিক ব্যায়াম করা উচিত"),
+                  text: yhLang(
+                    "Adolescents should do at least 60 minutes of moderate to vigorous physical activity daily throughout the week.",
+                    "তরুন-তরুনীদের সারা সপ্তাহে প্রতিদিন গড়ে অন্তত ৬০ মিনিট মাঝারি থেকে ভারী শারীরিক ব্যায়াম করা উচিত",
+                  ),
                   icon: "fa-stopwatch",
                   tone: "accent",
                 },
                 {
-                  text: yhLang("Avoid fried, oily, salty, and fatty foods such as fast food, chips, and fried snacks.", "তেলেভাজা, অধিক তৈলাক্ত, লবণাক্ত ও চর্বিজাতীয় খাবার যেমন ফাস্টফুড, চিপস, ফ্রাইড ফুড ইত্যাদি পরিত্যাগ করতে হবে"),
+                  text: yhLang(
+                    "Avoid fried, oily, salty, and fatty foods such as fast food, chips, and fried snacks.",
+                    "তেলেভাজা, অধিক তৈলাক্ত, লবণাক্ত ও চর্বিজাতীয় খাবার যেমন ফাস্টফুড, চিপস, ফ্রাইড ফুড ইত্যাদি পরিত্যাগ করতে হবে",
+                  ),
                   icon: "fa-ban",
                   tone: "warn",
                 },
                 {
-                  text: yhLang("Build a daily fruit-eating habit and choose whole fruits instead of fruit juice.", "প্রতিদিন ফলমূল খাওয়ার অভ্যাস করতে হবে এবং ফলের রসের বদলে আস্ত ফল খেতে হবে"),
+                  text: yhLang(
+                    "Build a daily fruit-eating habit and choose whole fruits instead of fruit juice.",
+                    "প্রতিদিন ফলমূল খাওয়ার অভ্যাস করতে হবে এবং ফলের রসের বদলে আস্ত ফল খেতে হবে",
+                  ),
                   icon: "fa-apple-whole",
                   tone: "success",
                 },
                 {
-                  text: yhLang("Avoid soft drinks such as soda, energy drinks, and artificial fruit beverages.", "কোমল পানীয় (সফট ড্রিংকস, এনার্জি ড্রিংকস, কৃত্রিম ফলের রস ইত্যাদি) পান করা থেকে বিরত থাকতে হবে"),
+                  text: yhLang(
+                    "Avoid soft drinks such as soda, energy drinks, and artificial fruit beverages.",
+                    "কোমল পানীয় (সফট ড্রিংকস, এনার্জি ড্রিংকস, কৃত্রিম ফলের রস ইত্যাদি) পান করা থেকে বিরত থাকতে হবে",
+                  ),
                   icon: "fa-bottle-droplet",
                   tone: "danger",
                 },
@@ -15719,7 +17732,7 @@ const steps = [
                         <span class="m19-12-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m19-12-li-text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("")}</ul>`;
 
@@ -15733,14 +17746,14 @@ const steps = [
                   <header class="m19-12-header" data-aos="fade-up">
                     <h2 class="m19-12-title d-none"><i class="fa-solid fa-notes-medical"></i>${yhLang(
                       "Risks of Overweight and Obesity",
-                      "অধিক ওজন ও স্থূলতার ঝুঁকি"
+                      "অধিক ওজন ও স্থূলতার ঝুঁকি",
                     )}</h2>
                   </header>
 
                   <section class="m19-12-card m19-12-card--guidance" data-aos="fade-up" data-aos-delay="70">
                     <h3 class="m19-12-subtitle"><i class="fa-solid fa-shield-heart"></i>${yhLang(
                       "How to Prevent Overweight and Obesity",
-                      "অধিক ওজন ও স্থূলতা প্রতিরোধে করণীয়"
+                      "অধিক ওজন ও স্থূলতা প্রতিরোধে করণীয়",
                     )}</h3>
                     ${renderList(preventionPoints)}
                   </section>
@@ -15754,14 +17767,14 @@ const steps = [
         id: "ch-20",
         title: yhLang(
           "Module-20: Special care for vulnerable adolescents",
-          "মডিউল-২০: তরুন-তরুনীদের অসংক্রামক রোগ ও তার প্রতিরোধ"
+          "মডিউল-২০: তরুন-তরুনীদের অসংক্রামক রোগ ও তার প্রতিরোধ",
         ),
         lessons: [
           {
             id: "ch20-lesson-1",
             title: yhLang(
               "What to do to prevent non-communicable diseases and poor eating habits",
-              "অসংক্রামক রোগ ও  ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধে করণীয়"
+              "অসংক্রামক রোগ ও  ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধে করণীয়",
             ),
             icon: "fa-shield-virus",
             gradientClass: "bg-gradient-lavender",
@@ -15769,13 +17782,23 @@ const steps = [
             quiz: null,
             content: (function () {
               const whoRisks = [
-                { text: yhLang("Unhealthy diet", "ত্রুটিপূর্ণ খাদ্যাভ্যাস"), icon: "fa-utensils" },
-                { text: yhLang("Physical inactivity", "কায়িক পরিশ্রমের অভাব"), icon: "fa-person-running" },
-                { text: yhLang("Tobacco use", "তামাকজাত দ্রব্য ব্যবহার"), icon: "fa-smoking" },
-                { text: yhLang("Alcohol and others", "মদ্যপান ও অন্যান্য"), icon: "fa-wine-bottle" },
+                {
+                  text: yhLang("Unhealthy diet", "ত্রুটিপূর্ণ খাদ্যাভ্যাস"),
+                  icon: "fa-utensils",
+                },
+                {
+                  text: yhLang("Physical inactivity", "কায়িক পরিশ্রমের অভাব"),
+                  icon: "fa-person-running",
+                },
+                {
+                  text: yhLang("Tobacco use", "তামাকজাত দ্রব্য ব্যবহার"),
+                  icon: "fa-smoking",
+                },
+                {
+                  text: yhLang("Alcohol and others", "মদ্যপান ও অন্যান্য"),
+                  icon: "fa-wine-bottle",
+                },
               ];
-
-              
 
               const renderList = (items, baseDelay = 0) =>
                 items
@@ -15785,7 +17808,7 @@ const steps = [
                         <i class="fa-solid ${item.icon}"></i>
                         <span>${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -15800,13 +17823,13 @@ const steps = [
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-virus"></i>${yhLang(
                     "অসংক্রামক রোগ",
-                    "অসংক্রামক রোগ"
+                    "অসংক্রামক রোগ",
                   )}</h2>
                   <div class="glass-card p-4 mb-3">
                     <p class="mb-0" data-aos="fade-up" data-aos-delay="80">
                       ${yhLang(
                         "Non-communicable diseases are not spread directly from one person to another. They are also called chronic diseases because they usually develop slowly and persist for a long time. Around three thousand children and adolescents die every day from NCDs worldwide. These diseases account for about 68 percent of all deaths globally, making them a major public health problem.",
-                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও তরুন-তরুনী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।"
+                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও তরুন-তরুনী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।",
                       )}
                     </p>
                   </div>
@@ -15815,7 +17838,7 @@ const steps = [
                       <div class="glass-card p-2 h-100 mb-3">
                         <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang(
                           "WHO has identified four key risk factors for NCDs. They are:",
-                          "বিশ্ব স্বাস্থ্য সংস্থা অসংক্রামক রোগের চারটি ঝুঁকি চিহ্নিত করেছে। ঝুঁকিগুলো হলো:"
+                          "বিশ্ব স্বাস্থ্য সংস্থা অসংক্রামক রোগের চারটি ঝুঁকি চিহ্নিত করেছে। ঝুঁকিগুলো হলো:",
                         )}</h3>
                         <ul class="mb-0 puberty-list">
                           ${renderList(whoRisks, 120)}
@@ -15838,61 +17861,60 @@ const steps = [
             id: "ch20-lesson-2",
             title: yhLang(
               "Preventing physical inactivity",
-              "কায়িক পরিশ্রমের করণীয়"
+              "কায়িক পরিশ্রমের করণীয়",
             ),
             icon: "fa-apple-whole",
             gradientClass: "bg-gradient-mint",
             audioFile: "",
             quiz: null,
             content: (function () {
-
               const preventionList = [
                 {
                   text: yhLang(
                     "Do not stay on an empty stomach in the morning and do not sleep immediately after dinner.",
-                    "সকালে খালি পেটে থাকা উচিত নয় এবং রাতের খাওয়ার সাথে সাথে ঘুমাতে যাওয়া যাবেনা।"
+                    "সকালে খালি পেটে থাকা উচিত নয় এবং রাতের খাওয়ার সাথে সাথে ঘুমাতে যাওয়া যাবেনা।",
                   ),
                   icon: "fa-clock",
                 },
                 {
                   text: yhLang(
                     "Do not add extra salt to meals. Daily salt intake should not exceed five grams per person.",
-                    "পাতে অতিরিক্ত লবণ নেওয়া যাবেনা। জনপ্রতি দৈনিক পাঁচ গ্রামের বেশি লবণ খাওয়া যাবেনা।"
+                    "পাতে অতিরিক্ত লবণ নেওয়া যাবেনা। জনপ্রতি দৈনিক পাঁচ গ্রামের বেশি লবণ খাওয়া যাবেনা।",
                   ),
                   icon: "fa-flask",
                 },
                 {
                   text: yhLang(
                     "Be cautious with high-calorie foods such as cakes, pastries, fast food, and soft drinks.",
-                    "উচ্চ ক্যালরিযুক্ত খাবার যেমন: কেক, পেস্ট্রিফাস্টফুড ও কোমল পানীয় গ্রহণে সাবধানতা অবলম্বন করতে হবে।"
+                    "উচ্চ ক্যালরিযুক্ত খাবার যেমন: কেক, পেস্ট্রিফাস্টফুড ও কোমল পানীয় গ্রহণে সাবধানতা অবলম্বন করতে হবে।",
                   ),
                   icon: "fa-burger",
                 },
                 {
                   text: yhLang(
                     "Foods like biryani, kacchi, processed meats, and grilled chicken contain trans fat. Eat them in moderation.",
-                    "বিরিয়ানি, কাচ্চি, প্রক্রিয়াজাত মাংস, গ্রিল চিকেন জাতীয় খাবারে ট্রান্সফ্যাট রয়েছে। এ জাতীয় খাবার কম খেতে হবে।"
+                    "বিরিয়ানি, কাচ্চি, প্রক্রিয়াজাত মাংস, গ্রিল চিকেন জাতীয় খাবারে ট্রান্সফ্যাট রয়েছে। এ জাতীয় খাবার কম খেতে হবে।",
                   ),
                   icon: "fa-drumstick-bite",
                 },
                 {
                   text: yhLang(
                     "Avoid deep-fried foods and foods fried in palm oil or burnt oil.",
-                    "অতিরিক্ত তেলেভাজা, পাম তেলে বা পোড়া তেলে ভাজা খাবার খাওয়া যাবেনা।"
+                    "অতিরিক্ত তেলেভাজা, পাম তেলে বা পোড়া তেলে ভাজা খাবার খাওয়া যাবেনা।",
                   ),
                   icon: "fa-fire-burner",
                 },
                 {
                   text: yhLang(
                     "Limit red meats such as beef, mutton, buffalo, sheep, and duck because they are high in fat.",
-                    "গরু, খাসি, মহিষ, ভেড়া, হাঁস এ জাতীয় খাবারে লাল রংযুক্ত মাংস গ্রহণে চর্বির অংশ বেশি থাকায় এগুলো পরিমিত খেতে হবে।"
+                    "গরু, খাসি, মহিষ, ভেড়া, হাঁস এ জাতীয় খাবারে লাল রংযুক্ত মাংস গ্রহণে চর্বির অংশ বেশি থাকায় এগুলো পরিমিত খেতে হবে।",
                   ),
                   icon: "fa-bacon",
                 },
                 {
                   text: yhLang(
                     "Eat 400 grams of vegetables and 100 grams of fruit daily.",
-                    "প্রতিদিন ৪০০ গ্রাম শাকসবজি ও ১০০ গ্রাম ফল খাওয়া উচিত।"
+                    "প্রতিদিন ৪০০ গ্রাম শাকসবজি ও ১০০ গ্রাম ফল খাওয়া উচিত।",
                   ),
                   icon: "fa-carrot",
                 },
@@ -15902,28 +17924,28 @@ const steps = [
                 {
                   text: yhLang(
                     "Avoid a sedentary lifestyle and build an active routine.",
-                    "অলস জীবন পরিহার করে কর্মময় জীবন গড়ে তুলতে হবে।"
+                    "অলস জীবন পরিহার করে কর্মময় জীবন গড়ে তুলতে হবে।",
                   ),
                   icon: "fa-person-walking",
                 },
                 {
                   text: yhLang(
                     "Walk briskly for 30–40 minutes at least five days a week.",
-                    "৩০ থেকে ৪০ মিনিট করে সপ্তাহে অন্তত ৫ দিন দ্রুত হাঁটতে হবে।"
+                    "৩০ থেকে ৪০ মিনিট করে সপ্তাহে অন্তত ৫ দিন দ্রুত হাঁটতে হবে।",
                   ),
                   icon: "fa-person-running",
                 },
                 {
                   text: yhLang(
                     "Encourage children to play or exercise from an early age; create play spaces at home, on rooftops, or indoors if needed.",
-                    "বাচ্চাদের ছোটবেলা থেকে খেলাধুলা বা শারীরিক ব্যায়াম করার প্রতি উৎসাহ প্রদান করতে হবে, প্রয়োজনে নিজ বাড়ির আঙিনা, ছাদে বা ঘরের মধ্যে খেলাধুলার পরিবেশ তৈরি করতে হবে।"
+                    "বাচ্চাদের ছোটবেলা থেকে খেলাধুলা বা শারীরিক ব্যায়াম করার প্রতি উৎসাহ প্রদান করতে হবে, প্রয়োজনে নিজ বাড়ির আঙিনা, ছাদে বা ঘরের মধ্যে খেলাধুলার পরিবেশ তৈরি করতে হবে।",
                   ),
                   icon: "fa-futbol",
                 },
                 {
                   text: yhLang(
                     "Encourage adolescent girls to exercise by addressing social barriers and ensuring safe spaces indoors and outdoors.",
-                    "সামাজিক প্রথা পরিহার করে কিশোরীদের শারীরিক ব্যায়াম করতে উৎসাহ প্রদান করতে হবে এবং ঘরে ও বাইরে ব্যায়াম করার পরিবেশ নিশ্চিত করতে হবে।"
+                    "সামাজিক প্রথা পরিহার করে কিশোরীদের শারীরিক ব্যায়াম করতে উৎসাহ প্রদান করতে হবে এবং ঘরে ও বাইরে ব্যায়াম করার পরিবেশ নিশ্চিত করতে হবে।",
                   ),
                   icon: "fa-dumbbell",
                 },
@@ -15937,7 +17959,7 @@ const steps = [
                       <i class="fa-solid ${item.icon}"></i>
                       <span>${item.text}</span>
                     </li>
-                  `
+                  `,
                   )
                   .join("");
 
@@ -15955,7 +17977,7 @@ const steps = [
                       <div class="glass-card p-2 mb-2">
                         <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-clipboard-check"></i>${yhLang(
                           "Actions to prevent unhealthy diet:",
-                          "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতরিোধে করণীয়:"
+                          "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতরিোধে করণীয়:",
                         )}</h3>
                         <ul class="list-unstyled puberty-list mb-0 m20_1 mod20_grid1">
                           ${renderList(preventionList, 120)}
@@ -15964,7 +17986,7 @@ const steps = [
                       <div class="glass-card p-4 h-100">
                         <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-running"></i>${yhLang(
                           "Actions to address lack of physical activity:",
-                          "কায়িক পরিশ্রমের অভাব পূরণে করণীয় :"
+                          "কায়িক পরিশ্রমের অভাব পূরণে করণীয় :",
                         )}</h3>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(activityTips, 80)}
@@ -15982,210 +18004,210 @@ const steps = [
               `;
             })(),
           },
-           {
+          {
             id: "ch20-lesson-3",
             title: yhLang(
               "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়",
-              "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়"
+              "তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়",
             ),
-              icon: "fa-ban-smoking",
-              gradientClass: "bg-gradient-blue",
+            icon: "fa-ban-smoking",
+            gradientClass: "bg-gradient-blue",
             audioFile: "",
             quiz: null,
             content: (function () {
               const introText = yhLang(
-  "An integrated and effective strategy is needed to prevent tobacco use (smoking, jarda, gul, etc.) and alcohol consumption.",
-  " তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়"
-);
+                "An integrated and effective strategy is needed to prevent tobacco use (smoking, jarda, gul, etc.) and alcohol consumption.",
+                " তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়",
+              );
 
-const leftSections = [
-  {
-    heading: yhLang(
-      "1. Actions at Family and Personal Level",
-      "১. পারিবারিক ও ব্যক্তিগত পর্যায়ে করণীয়"
-    ),
-    icon: "fa-house-chimney",
-    bullets: [
-      {
-        text: yhLang(
-          "Children and adolescents tend to imitate adults, so parents and senior family members should avoid tobacco and alcohol in front of them.",
-          "শিশু-কিশোরেরা অনুকরণপ্রিয়, অতএব বাবা-মা বা পরিবারের বড় সদস্যদের তাদের সামনে তামাক ও মদ্যপান পরিহার করা উচিত।"
-        ),
-        icon: "fa-house-chimney",
-      },
-      {
-        text: yhLang(
-          "Parents should openly discuss the harmful effects of tobacco and alcohol with their children.",
-          "তামাক ও মদের ক্ষতিকর প্রভাব নিয়ে সন্তানদের সাথে খোলামেলা আলোচনা করতে হবে"
-        ),
-        icon: "fa-comments",
-      },
-      {
-        text: yhLang(
-          "Create a smoke-free and alcohol-free environment at home.",
-          "বাড়িতে ধূমপান ও মদ্যপানমুক্ত পরিবেশ তৈরি করতে হবে।"
-        ),
-        icon: "fa-ban-smoking",
-      },
-      {
-        text: yhLang(
-          "Keep track of your child’s friends and social circle and guide them when necessary.",
-          "সন্তান কার সাথে বন্ধুত্ব করছে এবং কার সাথে মেলামিশা করছে তা লক্ষ্য রাখা ও প্রয়োজনীয় উপদেশ দিয়ে সহায়তা করা।"
-        ),
-        icon: "fa-user-check",
-      },
-    ],
-  },
-  {
-    heading: yhLang(
-      "2. Role of Educational Institutions",
-      "২. শিক্ষাপ্রতিষ্ঠানের ভূমিকা"
-    ),
-    icon: "fa-school",
-    bullets: [
-      {
-        text: yhLang(
-          "Encourage students to avoid bad company both inside and outside educational institutions.",
-          "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে তরুন-তরুনীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।"
-        ),
-        icon: "fa-user-shield",
-      },
-      {
-        text: yhLang(
-          "Organize regular seminars, poster exhibitions, or debate competitions against tobacco and drugs in schools and colleges.",
-          "স্কুল-কলেজে তামাক ও মাদকের বিরুদ্ধে নিয়মিত সেমিনার, পোস্টার প্রদর্শনী বা বিতর্ক প্রতিযোগিতা আয়োজন।"
-        ),
-        icon: "fa-chalkboard-user",
-      },
-      {
-        text: yhLang(
-          "Provide counseling support to help students cope with mental stress.",
-          "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং ঝুঁকি দেওয়া।"
-        ),
-        icon: "fa-hand-holding-heart",
-      },
-      {
-        text: yhLang(
-          "Teachers should pay special attention to students who are at risk.",
-          "শিক্ষকরা ঝুঁকিপূর্ণ শিক্ষার্থীদের প্রতি বিশেষ নজর দেওয়া।"
-        ),
-        icon: "fa-eye",
-      },
-    ],
-  },
-];
+              const leftSections = [
+                {
+                  heading: yhLang(
+                    "1. Actions at Family and Personal Level",
+                    "১. পারিবারিক ও ব্যক্তিগত পর্যায়ে করণীয়",
+                  ),
+                  icon: "fa-house-chimney",
+                  bullets: [
+                    {
+                      text: yhLang(
+                        "Children and adolescents tend to imitate adults, so parents and senior family members should avoid tobacco and alcohol in front of them.",
+                        "শিশু-কিশোরেরা অনুকরণপ্রিয়, অতএব বাবা-মা বা পরিবারের বড় সদস্যদের তাদের সামনে তামাক ও মদ্যপান পরিহার করা উচিত।",
+                      ),
+                      icon: "fa-house-chimney",
+                    },
+                    {
+                      text: yhLang(
+                        "Parents should openly discuss the harmful effects of tobacco and alcohol with their children.",
+                        "তামাক ও মদের ক্ষতিকর প্রভাব নিয়ে সন্তানদের সাথে খোলামেলা আলোচনা করতে হবে",
+                      ),
+                      icon: "fa-comments",
+                    },
+                    {
+                      text: yhLang(
+                        "Create a smoke-free and alcohol-free environment at home.",
+                        "বাড়িতে ধূমপান ও মদ্যপানমুক্ত পরিবেশ তৈরি করতে হবে।",
+                      ),
+                      icon: "fa-ban-smoking",
+                    },
+                    {
+                      text: yhLang(
+                        "Keep track of your child’s friends and social circle and guide them when necessary.",
+                        "সন্তান কার সাথে বন্ধুত্ব করছে এবং কার সাথে মেলামিশা করছে তা লক্ষ্য রাখা ও প্রয়োজনীয় উপদেশ দিয়ে সহায়তা করা।",
+                      ),
+                      icon: "fa-user-check",
+                    },
+                  ],
+                },
+                {
+                  heading: yhLang(
+                    "2. Role of Educational Institutions",
+                    "২. শিক্ষাপ্রতিষ্ঠানের ভূমিকা",
+                  ),
+                  icon: "fa-school",
+                  bullets: [
+                    {
+                      text: yhLang(
+                        "Encourage students to avoid bad company both inside and outside educational institutions.",
+                        "শিক্ষাপ্রতিষ্ঠানের ভেতরে ও বাইরে তরুন-তরুনীদের খারাপ সঙ্গ এড়িয়ে চলতে শিক্ষার্থীদের উৎসাহিত করা।",
+                      ),
+                      icon: "fa-user-shield",
+                    },
+                    {
+                      text: yhLang(
+                        "Organize regular seminars, poster exhibitions, or debate competitions against tobacco and drugs in schools and colleges.",
+                        "স্কুল-কলেজে তামাক ও মাদকের বিরুদ্ধে নিয়মিত সেমিনার, পোস্টার প্রদর্শনী বা বিতর্ক প্রতিযোগিতা আয়োজন।",
+                      ),
+                      icon: "fa-chalkboard-user",
+                    },
+                    {
+                      text: yhLang(
+                        "Provide counseling support to help students cope with mental stress.",
+                        "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং ঝুঁকি দেওয়া।",
+                      ),
+                      icon: "fa-hand-holding-heart",
+                    },
+                    {
+                      text: yhLang(
+                        "Teachers should pay special attention to students who are at risk.",
+                        "শিক্ষকরা ঝুঁকিপূর্ণ শিক্ষার্থীদের প্রতি বিশেষ নজর দেওয়া।",
+                      ),
+                      icon: "fa-eye",
+                    },
+                  ],
+                },
+              ];
 
-const rightSections = [
-  {
-    heading: yhLang(
-      "3. Social and Government Initiatives",
-      "৩. সামাজিক ও সরকারি উদ্যোগ"
-    ),
-    icon: "fa-gavel",
-    bullets: [
-      {
-        text: yhLang(
-          "Ensure proper enforcement of laws that prohibit smoking and alcohol consumption in public places.",
-          "ধূমপান ও মদ্যপান জনসম্মুখে নিষিদ্ধকরণ সংক্রান্ত আইনের সঠিক বাস্তবায়ন করা।"
-        ),
-        icon: "fa-gavel",
-      },
-      {
-        text: yhLang(
-          "Ban tobacco and alcohol advertising and promote awareness about their harmful effects through mainstream and social media.",
-          "তামাক ও মদের বিজ্ঞাপন নিষিদ্ধ করা এবং তামাক ও মদের ক্ষতিকর প্রভাব সম্পর্কে মূলধারার মিডিয়া ও সোশ্যাল মিডিয়াতে তথ্য প্রচার।"
-        ),
-        icon: "fa-bullhorn",
-      },
-      {
-        text: yhLang(
-          "Spread awareness through community leaders and influencers such as imams, teachers, and doctors.",
-          "কমিউনিটি লিডার ও ইনফ্লুয়েন্সার যেমন ইমাম, শিক্ষক, চিকিৎসক ইত্যাদিদের মাধ্যমে বার্তা ছড়িয়ে দেওয়া।"
-        ),
-        icon: "fa-users",
-      },
-      {
-        text: yhLang(
-          "Increase government and private counseling centers to help people quit tobacco and alcohol.",
-          "তামাক ও মদ্যপান থেকে মুক্তির জন্য সরকারি-বেসরকারি কাউন্সেলিং সেন্টার বাড়ানো।"
-        ),
-        icon: "fa-hospital",
-      },
-    ],
-  },
-  {
-    heading: yhLang(
-      "4. Personal Awareness and Alternative Choices",
-      "৪. ব্যক্তিগত সচেতনতা ও বিকল্প পথ"
-    ),
-    icon: "fa-hand",
-    bullets: [
-      {
-        text: yhLang(
-          "Be able to say 'No' to tobacco and alcohol, even under peer pressure.",
-          "বন্ধু-বান্ধবদের চাপে মদ বা তামাক গ্রহণ থেকে বিরত থাকতে তামাক ও মদ্যপানকে “না” বলতে পারা।"
-        ),
-        icon: "fa-hand",
-      },
-      {
-        text: yhLang(
-          "Adopt healthy alternatives such as fruits, herbal tea, or regular exercise.",
-          "স্বাস্থ্যকর বিকল্প যেমন ফলমূল, হারবাল চা বা ব্যায়ামকে অভ্যাসে পরিণত করা।"
-        ),
-        icon: "fa-leaf",
-      },
-    ],
-  },
-  {
-    heading: yhLang(
-      "5. Promotion of Religious and Moral Education",
-      "৫. ধর্মীয় ও নৈতিক শিক্ষার প্রসার"
-    ),
-    icon: "fa-scale-balanced",
-    bullets: [
-      {
-        text: yhLang(
-          "All religions, including Islam, prohibit drugs and tobacco—this message should be promoted and discussions about prevention should be included in places of worship.",
-          "ইসলামসহ সকল ধর্মে মাদক ও তামাক নিষিদ্ধ—এই বার্তা প্রচার করতে হবে এবং ধর্মীয় উপাসনালয়গুলোতে তামাক ও মদ্যপান প্রতিরোধের আলোচনা অন্তর্ভুক্ত করা।"
-        ),
-        icon: "fa-place-of-worship",
-      },
-      {
-        text: yhLang(
-          "Develop a moral perspective at all levels that tobacco and drugs are harmful to society.",
-          "তামাক ও মাদক সমাজের জন্য ক্ষতিকর—এ বিষয়ে সর্বস্তরে নৈতিক দৃষ্টিভঙ্গি গড়ে তুলতে হবে।"
-        ),
-        icon: "fa-scale-balanced",
-      },
-    ],
-  },
-];
+              const rightSections = [
+                {
+                  heading: yhLang(
+                    "3. Social and Government Initiatives",
+                    "৩. সামাজিক ও সরকারি উদ্যোগ",
+                  ),
+                  icon: "fa-gavel",
+                  bullets: [
+                    {
+                      text: yhLang(
+                        "Ensure proper enforcement of laws that prohibit smoking and alcohol consumption in public places.",
+                        "ধূমপান ও মদ্যপান জনসম্মুখে নিষিদ্ধকরণ সংক্রান্ত আইনের সঠিক বাস্তবায়ন করা।",
+                      ),
+                      icon: "fa-gavel",
+                    },
+                    {
+                      text: yhLang(
+                        "Ban tobacco and alcohol advertising and promote awareness about their harmful effects through mainstream and social media.",
+                        "তামাক ও মদের বিজ্ঞাপন নিষিদ্ধ করা এবং তামাক ও মদের ক্ষতিকর প্রভাব সম্পর্কে মূলধারার মিডিয়া ও সোশ্যাল মিডিয়াতে তথ্য প্রচার।",
+                      ),
+                      icon: "fa-bullhorn",
+                    },
+                    {
+                      text: yhLang(
+                        "Spread awareness through community leaders and influencers such as imams, teachers, and doctors.",
+                        "কমিউনিটি লিডার ও ইনফ্লুয়েন্সার যেমন ইমাম, শিক্ষক, চিকিৎসক ইত্যাদিদের মাধ্যমে বার্তা ছড়িয়ে দেওয়া।",
+                      ),
+                      icon: "fa-users",
+                    },
+                    {
+                      text: yhLang(
+                        "Increase government and private counseling centers to help people quit tobacco and alcohol.",
+                        "তামাক ও মদ্যপান থেকে মুক্তির জন্য সরকারি-বেসরকারি কাউন্সেলিং সেন্টার বাড়ানো।",
+                      ),
+                      icon: "fa-hospital",
+                    },
+                  ],
+                },
+                {
+                  heading: yhLang(
+                    "4. Personal Awareness and Alternative Choices",
+                    "৪. ব্যক্তিগত সচেতনতা ও বিকল্প পথ",
+                  ),
+                  icon: "fa-hand",
+                  bullets: [
+                    {
+                      text: yhLang(
+                        "Be able to say 'No' to tobacco and alcohol, even under peer pressure.",
+                        "বন্ধু-বান্ধবদের চাপে মদ বা তামাক গ্রহণ থেকে বিরত থাকতে তামাক ও মদ্যপানকে “না” বলতে পারা।",
+                      ),
+                      icon: "fa-hand",
+                    },
+                    {
+                      text: yhLang(
+                        "Adopt healthy alternatives such as fruits, herbal tea, or regular exercise.",
+                        "স্বাস্থ্যকর বিকল্প যেমন ফলমূল, হারবাল চা বা ব্যায়ামকে অভ্যাসে পরিণত করা।",
+                      ),
+                      icon: "fa-leaf",
+                    },
+                  ],
+                },
+                {
+                  heading: yhLang(
+                    "5. Promotion of Religious and Moral Education",
+                    "৫. ধর্মীয় ও নৈতিক শিক্ষার প্রসার",
+                  ),
+                  icon: "fa-scale-balanced",
+                  bullets: [
+                    {
+                      text: yhLang(
+                        "All religions, including Islam, prohibit drugs and tobacco—this message should be promoted and discussions about prevention should be included in places of worship.",
+                        "ইসলামসহ সকল ধর্মে মাদক ও তামাক নিষিদ্ধ—এই বার্তা প্রচার করতে হবে এবং ধর্মীয় উপাসনালয়গুলোতে তামাক ও মদ্যপান প্রতিরোধের আলোচনা অন্তর্ভুক্ত করা।",
+                      ),
+                      icon: "fa-place-of-worship",
+                    },
+                    {
+                      text: yhLang(
+                        "Develop a moral perspective at all levels that tobacco and drugs are harmful to society.",
+                        "তামাক ও মাদক সমাজের জন্য ক্ষতিকর—এ বিষয়ে সর্বস্তরে নৈতিক দৃষ্টিভঙ্গি গড়ে তুলতে হবে।",
+                      ),
+                      icon: "fa-scale-balanced",
+                    },
+                  ],
+                },
+              ];
 
-                const renderBullets = (items, baseDelay = 0) =>
-                  items
-                    .map(
-                      (item, idx) => `
+              const renderBullets = (items, baseDelay = 0) =>
+                items
+                  .map(
+                    (item, idx) => `
                         <li data-aos="fade-up" data-aos-delay="${baseDelay + idx * 30}">
                           <i class="fa-solid ${item.icon}"></i>
                           <span>${item.text}</span>
                         </li>
-                      `
-                    )
-                    .join("");
+                      `,
+                  )
+                  .join("");
 
-                const renderSections = (sections, baseDelay = 0) =>
-                  sections
-                    .map(
-                      (section, idx) => `
+              const renderSections = (sections, baseDelay = 0) =>
+                sections
+                  .map(
+                    (section, idx) => `
                         <article class="glass-card p-2 h-100">
                           <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h4>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderBullets(section.bullets, baseDelay + idx * 40 + 20)}
                           </ul>
                         </article>
-                      `
-                    )
-                    .join("");
+                      `,
+                  )
+                  .join("");
 
               return `
                 <div class="lesson-slide mod20-lesson mod20-lesson-3">
@@ -16215,10 +18237,7 @@ const rightSections = [
           },
           {
             id: "ch20-lesson-4",
-            title: yhLang(
-              "অ্যাজমা বা হাঁপানি রোগঃ",
-              "অ্যাজমা বা হাঁপানি রোগঃ"
-            ),
+            title: yhLang("অ্যাজমা বা হাঁপানি রোগঃ", "অ্যাজমা বা হাঁপানি রোগঃ"),
             icon: "fa-wind",
             gradientClass: "bg-gradient-pink",
             audioFile: "",
@@ -16240,7 +18259,7 @@ const rightSections = [
                           <img src="${img.src}" alt="${img.alt}" style="height: 300px" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -16255,7 +18274,7 @@ const rightSections = [
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-wind"></i>${yhLang(
                     "অ্যাজমা বা হাঁপানি রোগঃ",
-                    "অ্যাজমা বা হাঁপানি রোগঃ"
+                    "অ্যাজমা বা হাঁপানি রোগঃ",
                   )}</h2>
                   <div class="row g-2 mt-1">
                     ${renderImageGrid()}
@@ -16269,7 +18288,7 @@ const rightSections = [
             id: "ch20-lesson-5",
             title: yhLang(
               "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
-              "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
+              "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
             ),
             icon: "fa-syringe",
             gradientClass: "bg-gradient-teal",
@@ -16292,7 +18311,7 @@ const rightSections = [
                           <img src="${img.src}" alt="${img.alt}" style="height: 300px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -16307,7 +18326,7 @@ const rightSections = [
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-syringe"></i>${yhLang(
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
-                    "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া"
+                    "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                   )}</h2>
                   <div class="row g-2 mt-1">
                     ${renderImageGrid()}
@@ -16320,20 +18339,29 @@ const rightSections = [
 
           {
             id: "ch20-lesson-9",
-            title: yhLang(
-              "থ্যালাসেমিয়া",
-              "থ্যালাসেমিয়া"
-            ),
+            title: yhLang("থ্যালাসেমিয়া", "থ্যালাসেমিয়া"),
             icon: "fa-notes-medical",
             gradientClass: "bg-gradient-green",
             audioFile: "",
             quiz: null,
             content: (function () {
               const imageList = [
-                { src: "img/modu20/thelasemiaq1.jpg", alt: "থ্যালাসেমিয়া সচেতনতা ১" },
-                { src: "img/modu20/thelasemiaq2.jpg", alt: "থ্যালাসেমিয়া সচেতনতা ২" },
-                { src: "img/modu20/thelasemiaq3.jpg", alt: "থ্যালাসেমিয়া সচেতনতা ৩" },
-                { src: "img/modu20/thelasemiaq4.jpg", alt: "থ্যালাসেমিয়া সচেতনতা ৪" },
+                {
+                  src: "img/modu20/thelasemiaq1.jpg",
+                  alt: "থ্যালাসেমিয়া সচেতনতা ১",
+                },
+                {
+                  src: "img/modu20/thelasemiaq2.jpg",
+                  alt: "থ্যালাসেমিয়া সচেতনতা ২",
+                },
+                {
+                  src: "img/modu20/thelasemiaq3.jpg",
+                  alt: "থ্যালাসেমিয়া সচেতনতা ৩",
+                },
+                {
+                  src: "img/modu20/thelasemiaq4.jpg",
+                  alt: "থ্যালাসেমিয়া সচেতনতা ৪",
+                },
               ];
 
               const renderImageGrid = () =>
@@ -16345,7 +18373,7 @@ const rightSections = [
                           <img src="${img.src}" alt="${img.alt}" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -16360,7 +18388,7 @@ const rightSections = [
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text mb-0" data-aos="fade-up"><i class="fa-solid fa-notes-medical"></i>${yhLang(
                     "থ্যালাসেমিয়া",
-                    "থ্যালাসেমিয়া"
+                    "থ্যালাসেমিয়া",
                   )}</h2>
                   <div class="row g-1">
                     ${renderImageGrid()}
@@ -16372,139 +18400,139 @@ const rightSections = [
           },
           {
             id: "ch20-lesson-10",
-            title: yhLang(
-              "হৃদরোগ ও উচ্চ রক্তচাপ",
-              "হৃদরোগ ও উচ্চ রক্তচাপ"
-            ),
+            title: yhLang("হৃদরোগ ও উচ্চ রক্তচাপ", "হৃদরোগ ও উচ্চ রক্তচাপ"),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-lavender",
             audioFile: "",
             quiz: null,
             content: (function () {
               const heartIntro = yhLang(
-  "Congenital heart disease refers to structural abnormalities or defects in the heart that are present at birth. Examples include holes in the heart wall or absence of the wall, narrowing or absence of heart valves, problems in blood vessels, and abnormal positioning of the heart’s chambers and blood vessels.",
-  "জন্মগত হৃদরোগ বলতে সেই সমস্ত হার্টের অসঙ্গতি বা ত্রুটিকে বোঝায়, যেগুলো শিশুর জন্মের সময় উপস্থিত থাকে। যেমন—হার্টের পর্দায় ছিদ্র অথবা হার্টের পর্দার অনুপস্থিতি, হার্টের ভাল্ব সরু হওয়া বা ভাল্ব তৈরি না হওয়া, রক্তনালীতে সমস্যা, হার্টের রক্তনালী ও প্রকোষ্ঠসমূহের অস্বাভাবিক অবস্থান ইত্যাদি।"
-);
+                "Congenital heart disease refers to structural abnormalities or defects in the heart that are present at birth. Examples include holes in the heart wall or absence of the wall, narrowing or absence of heart valves, problems in blood vessels, and abnormal positioning of the heart’s chambers and blood vessels.",
+                "জন্মগত হৃদরোগ বলতে সেই সমস্ত হার্টের অসঙ্গতি বা ত্রুটিকে বোঝায়, যেগুলো শিশুর জন্মের সময় উপস্থিত থাকে। যেমন—হার্টের পর্দায় ছিদ্র অথবা হার্টের পর্দার অনুপস্থিতি, হার্টের ভাল্ব সরু হওয়া বা ভাল্ব তৈরি না হওয়া, রক্তনালীতে সমস্যা, হার্টের রক্তনালী ও প্রকোষ্ঠসমূহের অস্বাভাবিক অবস্থান ইত্যাদি।",
+              );
 
-const heartEarly = [
-  {
-    text: yhLang(
-      "Frequent cold, runny nose, and cough",
-      "ঘন ঘন ঠান্ডা, সর্দি ও কাশিতে আক্রান্ত হওয়া"
-    ),
-    icon: "fa-head-side-cough",
-  },
-  {
-    text: yhLang("Shortness of breath", "শ্বাসকষ্ট হওয়া"),
-    icon: "fa-lungs",
-  },
-  {
-    text: yhLang(
-      "Becoming breathless while walking or moving",
-      "হাঁটতে / চলাচলের সময় হাঁপিয়ে যাওয়া"
-    ),
-    icon: "fa-person-walking",
-  },
-  {
-    text: yhLang(
-      "Swelling of the legs or fluid accumulation in the legs",
-      "পা ফুলে যাওয়া বা পায়ে পানি আসা"
-    ),
-    icon: "fa-droplet",
-  },
-  {
-    text: yhLang("Baby crying abnormally", "বাচ্চা অস্বাভাবিক কান্না করা"),
-    icon: "fa-baby",
-  },
-  {
-    text: yhLang(
-      "Difficulty in breastfeeding",
-      "বাচ্চার বুকের দুধ টানতে কষ্ট হওয়া"
-    ),
-    icon: "fa-bottle-water",
-  },
-];
+              const heartEarly = [
+                {
+                  text: yhLang(
+                    "Frequent cold, runny nose, and cough",
+                    "ঘন ঘন ঠান্ডা, সর্দি ও কাশিতে আক্রান্ত হওয়া",
+                  ),
+                  icon: "fa-head-side-cough",
+                },
+                {
+                  text: yhLang("Shortness of breath", "শ্বাসকষ্ট হওয়া"),
+                  icon: "fa-lungs",
+                },
+                {
+                  text: yhLang(
+                    "Becoming breathless while walking or moving",
+                    "হাঁটতে / চলাচলের সময় হাঁপিয়ে যাওয়া",
+                  ),
+                  icon: "fa-person-walking",
+                },
+                {
+                  text: yhLang(
+                    "Swelling of the legs or fluid accumulation in the legs",
+                    "পা ফুলে যাওয়া বা পায়ে পানি আসা",
+                  ),
+                  icon: "fa-droplet",
+                },
+                {
+                  text: yhLang(
+                    "Baby crying abnormally",
+                    "বাচ্চা অস্বাভাবিক কান্না করা",
+                  ),
+                  icon: "fa-baby",
+                },
+                {
+                  text: yhLang(
+                    "Difficulty in breastfeeding",
+                    "বাচ্চার বুকের দুধ টানতে কষ্ট হওয়া",
+                  ),
+                  icon: "fa-bottle-water",
+                },
+              ];
 
-const heartDanger = [
-  {
-    text: yhLang(
-      "Baby turning blue while crying",
-      "কাঁদতে কাঁদতে বাচ্চা নীল হয়ে যাওয়া"
-    ),
-    icon: "fa-face-frown",
-  },
-  {
-    text: yhLang("Seizures", "খিঁচুনি হওয়া"),
-    icon: "fa-bolt",
-  },
-  {
-    text: yhLang(
-      "Baby becoming unusually weak or lethargic",
-      "বাচ্চা নিস্তেজ হয়ে যাওয়া"
-    ),
-    icon: "fa-face-dizzy",
-  },
-];
+              const heartDanger = [
+                {
+                  text: yhLang(
+                    "Baby turning blue while crying",
+                    "কাঁদতে কাঁদতে বাচ্চা নীল হয়ে যাওয়া",
+                  ),
+                  icon: "fa-face-frown",
+                },
+                {
+                  text: yhLang("Seizures", "খিঁচুনি হওয়া"),
+                  icon: "fa-bolt",
+                },
+                {
+                  text: yhLang(
+                    "Baby becoming unusually weak or lethargic",
+                    "বাচ্চা নিস্তেজ হয়ে যাওয়া",
+                  ),
+                  icon: "fa-face-dizzy",
+                },
+              ];
 
-const bpIntro = yhLang(
-  "High blood pressure in adolescents is an increasing health concern that can raise the risk of heart disease, stroke, and other complications later in life. Unhealthy lifestyle, obesity, and mental stress are major contributors to this problem.",
-  "তরুন-তরুনীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।"
-);
+              const bpIntro = yhLang(
+                "High blood pressure in adolescents is an increasing health concern that can raise the risk of heart disease, stroke, and other complications later in life. Unhealthy lifestyle, obesity, and mental stress are major contributors to this problem.",
+                "তরুন-তরুনীদের উচ্চ রক্তচাপ একটি ক্রমবর্ধমান স্বাস্থ্য সমস্যা, যা পরবর্তী জীবনে হৃদরোগ, স্ট্রোক ও অন্যান্য জটিলতার ঝুঁকি বাড়ায়। বর্তমানে অস্বাস্থ্যকর জীবনযাপন, স্থূলতা ও মানসিক চাপের কারণে এই সমস্যা বাড়ছে।",
+              );
 
-const bpEarly = [
-  {
-    text: yhLang(
-      "Blood pressure 140/90 or higher",
-      "রক্তচাপ ১৪০/৯০ বা এর বেশি"
-    ),
-    icon: "fa-gauge-high",
-  },
-  {
-    text: yhLang(
-      "Feeling mentally restless or uneasy",
-      "মানসিকভাবে অস্থির লাগা"
-    ),
-    icon: "fa-face-meh",
-  },
-  {
-    text: yhLang(
-      "Headache or dizziness",
-      "মাথাব্যথা বা মাথা ঘোরা"
-    ),
-    icon: "fa-head-side-virus",
-  },
-];
+              const bpEarly = [
+                {
+                  text: yhLang(
+                    "Blood pressure 140/90 or higher",
+                    "রক্তচাপ ১৪০/৯০ বা এর বেশি",
+                  ),
+                  icon: "fa-gauge-high",
+                },
+                {
+                  text: yhLang(
+                    "Feeling mentally restless or uneasy",
+                    "মানসিকভাবে অস্থির লাগা",
+                  ),
+                  icon: "fa-face-meh",
+                },
+                {
+                  text: yhLang(
+                    "Headache or dizziness",
+                    "মাথাব্যথা বা মাথা ঘোরা",
+                  ),
+                  icon: "fa-head-side-virus",
+                },
+              ];
 
-const bpPrevention = [
-  {
-    text: yhLang(
-      "Avoid excessive salt intake",
-      "অতিরিক্ত লবণ পরিহার করতে হবে"
-    ),
-    icon: "fa-salt-shaker",
-  },
-  {
-    text: yhLang(
-      "Avoid tobacco products",
-      "তামাকজাত দ্রব্য পরিহার করতে হবে"
-    ),
-    icon: "fa-ban-smoking",
-  },
-  {
-    text: yhLang(
-      "Reduce consumption of meat and fatty foods",
-      "মাংস ও চর্বিযুক্ত খাবার কম খাওয়া উচিত"
-    ),
-    icon: "fa-drumstick-bite",
-  },
-  {
-    text: yhLang(
-      "Develop a habit of regular walking or physical activity",
-      "নিয়মিত হাঁটাহাঁটির অভ্যাস করতে হবে"
-    ),
-    icon: "fa-person-walking",
-  },
-];
+              const bpPrevention = [
+                {
+                  text: yhLang(
+                    "Avoid excessive salt intake",
+                    "অতিরিক্ত লবণ পরিহার করতে হবে",
+                  ),
+                  icon: "fa-salt-shaker",
+                },
+                {
+                  text: yhLang(
+                    "Avoid tobacco products",
+                    "তামাকজাত দ্রব্য পরিহার করতে হবে",
+                  ),
+                  icon: "fa-ban-smoking",
+                },
+                {
+                  text: yhLang(
+                    "Reduce consumption of meat and fatty foods",
+                    "মাংস ও চর্বিযুক্ত খাবার কম খাওয়া উচিত",
+                  ),
+                  icon: "fa-drumstick-bite",
+                },
+                {
+                  text: yhLang(
+                    "Develop a habit of regular walking or physical activity",
+                    "নিয়মিত হাঁটাহাঁটির অভ্যাস করতে হবে",
+                  ),
+                  icon: "fa-person-walking",
+                },
+              ];
 
               const renderList = (items, baseDelay = 0) =>
                 items
@@ -16514,7 +18542,7 @@ const bpPrevention = [
                         <i class="fa-solid ${item.icon}"></i>
                         <span>${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -16559,13 +18587,9 @@ const bpPrevention = [
             })(),
           },
 
-
           {
             id: "ch20-lesson-13",
-            title: yhLang(
-              "তরুন-তরুনীদের মৃগীরোগ",
-              "তরুন-তরুনীদের মৃগীরোগ"
-            ),
+            title: yhLang("তরুন-তরুনীদের মৃগীরোগ", "তরুন-তরুনীদের মৃগীরোগ"),
             icon: "fa-bolt",
             gradientClass: "bg-gradient-pink",
             audioFile: "",
@@ -16587,7 +18611,7 @@ const bpPrevention = [
                           <img src="${img.src}" style="height: 300px;" alt="${img.alt}" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -16602,7 +18626,7 @@ const bpPrevention = [
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-bolt"></i>${yhLang(
                     "তরুন-তরুনীদের মৃগীরোগ",
-                    "তরুন-তরুনীদের মৃগীরোগ"
+                    "তরুন-তরুনীদের মৃগীরোগ",
                   )}</h2>
                   <div class="row g-3 mt-1">
                     ${renderImageGrid()}
@@ -16614,18 +18638,21 @@ const bpPrevention = [
           },
           {
             id: "ch20-lesson-15",
-            title: yhLang(
-              "নেফ্রোটিক সিনড্রোম রোগ",
-              "নেফ্রোটিক সিনড্রোম রোগ"
-            ),
+            title: yhLang("নেফ্রোটিক সিনড্রোম রোগ", "নেফ্রোটিক সিনড্রোম রোগ"),
             icon: "fa-droplet",
             gradientClass: "bg-gradient-emerald",
             audioFile: "",
             quiz: null,
             content: (function () {
               const nefroImages = [
-                { src: "img/modu20/nefro2.jpg", alt: "নেফ্রোটিক সিনড্রোম সচেতনতা ২" },
-                { src: "img/modu20/nefro3.jpg", alt: "নেফ্রোটিক সিনড্রোম সচেতনতা ৩" },
+                {
+                  src: "img/modu20/nefro2.jpg",
+                  alt: "নেফ্রোটিক সিনড্রোম সচেতনতা ২",
+                },
+                {
+                  src: "img/modu20/nefro3.jpg",
+                  alt: "নেফ্রোটিক সিনড্রোম সচেতনতা ৩",
+                },
               ];
 
               const renderImageGrid = () =>
@@ -16635,7 +18662,7 @@ const bpPrevention = [
                         <figure class="glass-card p-1 text-center">
                           <img src="${img.src}" style="height: 300px" alt="${img.alt}" class="img-fluid w-100 rounded shadow-sm img-zoom"/>
                         </figure>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -16650,7 +18677,7 @@ const bpPrevention = [
                   <div class="mod20-content">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-droplet"></i>${yhLang(
                     "নেফ্রোটিক সিনড্রোম রোগ",
-                    "নেফ্রোটিক সিনড্রোম রোগ"
+                    "নেফ্রোটিক সিনড্রোম রোগ",
                   )}</h2>
                   <div class="row g-3 mt-1">
                       <div class="col-12 col-md-6" style="margin: 0 auto;" data-aos="zoom-in" data-aos-delay="">
@@ -16674,21 +18701,20 @@ const bpPrevention = [
         id: "ch-21",
         title: yhLang(
           "Module-21: Climate change and special attention to adolescents",
-          "মডিউল-২১: ঝুঁকিপূর্ণ তরুন-তরুনীদের বিশেষ যত্ন"
+          "মডিউল-২১: ঝুঁকিপূর্ণ তরুন-তরুনীদের বিশেষ যত্ন",
         ),
         lessons: [
           {
             id: "ch21-lesson-1",
             title: yhLang(
               "Adolescence: Opportunities and Risks",
-              "তারুণ্য: সম্ভাবনা ও ঝুঁকি"
+              "তারুণ্য: সম্ভাবনা ও ঝুঁকি",
             ),
             icon: "fa-helmet-safety",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
             quiz: null,
             content: (function () {
-
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">
@@ -16704,7 +18730,7 @@ const bpPrevention = [
                     <p class="mb-2" style="font-size: 0.92em;">
                     ${yhLang(
                       "Adolescence is a time full of potential, but it is also a period of vulnerability. During this stage, young people begin to develop sexual feelings and their interest in the opposite sex increases. They become capable of reproduction, but most adolescents cannot ensure their own protection due to lack of proper information. As a result, they may be encouraged to take various risks and, under the influence of wrong friends, may sometimes engage in risky and harmful behaviors.",
-                      "তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।"
+                      "তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।",
                     )}
                   </p>
                   </div>
@@ -16713,7 +18739,7 @@ const bpPrevention = [
                     <p class="mb-0" style="font-size: 0.92em;">
                       ${yhLang(
                         "This risk is not limited to ordinary adolescents; young people with special physical and mental needs are also in a highly vulnerable situation. To reduce their risks, it is essential for service providers to offer them special care and counseling.",
-                        "এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।"
+                        "এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।",
                       )}
                     </p>
                   </div>
@@ -16725,55 +18751,55 @@ const bpPrevention = [
             id: "ch21-lesson-2",
             title: yhLang(
               "What to Do to Mitigate Risks for At-Risk Adolescents",
-              "ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়"
+              "ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়",
             ),
             icon: "fa-user-shield",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: null,
             content: (function () {
-                            const secondaryList = [
-  {
-    icon: "fa-house-tsunami",
-    color: "#0288d1",
-    text: yhLang(
-      "Adolescents displaced by natural disasters such as floods, river erosion, or earthquakes and living in shelters",
-      "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া তরুন-তরুনী;"
-    ),
-  },
-  {
-    icon: "fa-person-walking-arrow-right",
-    color: "#c2185b",
-    text: yhLang(
-      "Adolescents who are trafficked or forced into sex work",
-      "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া তরুন-তরুনী;"
-    ),
-  },
-  {
-    icon: "fa-burst",
-    color: "#006cc9",
-    text: yhLang(
-      "Adolescents displaced during war or riots within or outside their country",
-      "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত তরুন-তরুনী;"
-    ),
-  },
-  {
-    icon: "fa-tent",
-    color: "#f57c00",
-    text: yhLang(
-      "Adolescents living in refugee camps",
-      "শরণার্থী শিবিরে বসবাসরত তরুন-তরুনী;"
-    ),
-  },
-  {
-    icon: "fa-mountain",
-    color: "#558b2f",
-    text: yhLang(
-      "Adolescents living in remote areas such as char lands, haor wetlands, or hilly regions",
-      "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার তরুন-তরুনী"
-    ),
-  },
-];
+              const secondaryList = [
+                {
+                  icon: "fa-house-tsunami",
+                  color: "#0288d1",
+                  text: yhLang(
+                    "Adolescents displaced by natural disasters such as floods, river erosion, or earthquakes and living in shelters",
+                    "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া তরুন-তরুনী;",
+                  ),
+                },
+                {
+                  icon: "fa-person-walking-arrow-right",
+                  color: "#c2185b",
+                  text: yhLang(
+                    "Adolescents who are trafficked or forced into sex work",
+                    "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া তরুন-তরুনী;",
+                  ),
+                },
+                {
+                  icon: "fa-burst",
+                  color: "#006cc9",
+                  text: yhLang(
+                    "Adolescents displaced during war or riots within or outside their country",
+                    "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত তরুন-তরুনী;",
+                  ),
+                },
+                {
+                  icon: "fa-tent",
+                  color: "#f57c00",
+                  text: yhLang(
+                    "Adolescents living in refugee camps",
+                    "শরণার্থী শিবিরে বসবাসরত তরুন-তরুনী;",
+                  ),
+                },
+                {
+                  icon: "fa-mountain",
+                  color: "#558b2f",
+                  text: yhLang(
+                    "Adolescents living in remote areas such as char lands, haor wetlands, or hilly regions",
+                    "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার তরুন-তরুনী",
+                  ),
+                },
+              ];
 
               const renderList1 = (items) =>
                 items
@@ -16783,133 +18809,131 @@ const bpPrevention = [
                         <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 8px; font-size: 0.95em;"></i>
                         <span style="font-size: 0.9em;">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
               const primaryList = [
-  {
-    icon: "fa-wheelchair",
-    color: "#9c27b0",
-    text: yhLang(
-      "Physically or mentally disabled adolescents",
-      "শারীরিকভাবে বা মানসিকভাবে প্রতিবন্ধী"
-    ),
-  },
-  {
-    icon: "fa-heart-crack",
-    color: "#e91e63",
-    text: yhLang(
-      "Adolescents whose one or both parents have died",
-      "যে তরুন-তরুনীদের পিতা-মাতা, একজন বা উভয়েই মারা গেছেন"
-    ),
-  },
-  {
-    icon: "fa-people-arrows",
-    color: "#ff5722",
-    text: yhLang(
-      "Living with divorced parents or stepfather/stepmother",
-      "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী"
-    ),
-  },
-  {
-    icon: "fa-person-circle-question",
-    color: "#f44336",
-    text: yhLang(
-      "Adolescents born outside marriage or those without a legal guardian",
-      "বিবাহবহির্ভূত সম্পর্কে জন্ম নেয়া তরুন-তরুনী অথবা যে তরুন-তরুনীর কোনো আইনগত বা বৈধ অভিভাবক নেই"
-    ),
-  },
-  {
-    icon: "fa-house-crack",
-    color: "#ff9800",
-    text: yhLang(
-      "Adolescents living in slums, homeless adolescents, street children, or extremely poor adolescents",
-      "বস্তিতে বসবাস করে এমন তরুন-তরুনী অথবা যে যার কোনো নির্দিষ্ট বাসস্থান বা আবাস নেই বা যার বেঁচে থাকার কোনো সুস্পষ্ট উপায় নেই (পথশিশু বা রাস্তায় কাজ করে এমন তরুন-তরুনী) অথবা অতি দরিদ্র তরুন-তরুনী"
-    ),
-  },
-  {
-    icon: "fa-handcuffs",
-    color: "#795548",
-    text: yhLang(
-      "Adolescents dependent on imprisoned parents or living in prison with their imprisoned mother",
-      "যে তরুন-তরুনী কারাবন্দী পিতা-মাতার উপর নির্ভরশীল বা কারাবন্দী মায়ের সাথে কারাগারে বসবাস করছে"
-    ),
-  },
-  {
-    icon: "fa-person-dress",
-    color: "#880e4f",
-    text: yhLang(
-      "Adolescents born and raised in brothels or involved in such activities",
-      "পতিতালয়ে জন্ম নেয়া ও বড় হওয়া তরুন-তরুনী অথবা এসব কাজে সম্পৃক্ত তরুন-তরুনী"
-    ),
-  },
-  {
-    icon: "fa-caravan",
-    color: "#6d4c41",
-    text: yhLang(
-      "Adolescents belonging to nomadic or Harijan (Dalit) communities",
-      "যে তরুন-তরুনী যাযাবর বা হরিজন (অচ্ছুত)"
-    ),
-  },
-  {
-    icon: "fa-industry",
-    color: "#607d8b",
-    text: yhLang(
-      "Adolescents engaged in hazardous work such as bus/tempo helper, welding, electrical, boiler, tannery work, bidi making, begging, or other harmful activities",
-      "ঝুঁকিপূর্ণ কাজ, যেমন—বাস/টেম্পুর হেল্পার, লেদ মেশিন/ওয়েলডিং/ইলেকট্রিক/বয়লার/ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভিক্ষাবৃত্তি বা শিশুর কল্যাণের বিরোধী কোনো কাজে জড়িত"
-    ),
-  },
-  {
-    icon: "fa-hand-fist",
-    color: "#d32f2f",
-    text: yhLang(
-      "Adolescents who are victims or witnesses of sexual abuse or harassment",
-      "যে তরুন-তরুনী যৌন নিপীড়ন বা হয়রানির শিকার অথবা প্রত্যক্ষদর্শী তরুন-তরুনী"
-    ),
-  },
-  {
-    icon: "fa-rainbow",
-    color: "#ab47bc",
-    text: yhLang(
-      "Third gender, hijra, or homosexual adolescents",
-      "তৃতীয় লিঙ্গ/হিজড়া বা সমকামী তরুন-তরুনী"
-    ),
-  },
-  {
-    icon: "fa-pills",
-    color: "#e53935",
-    text: yhLang(
-      "Children with abnormal behavioral disorders due to drugs or other causes",
-      "যে শিশুর মাদক বা অন্য কোনো কারণে অস্বাভাবিক আচরণগত ব্যাধি হয়েছে"
-    ),
-  },
-  {
-    icon: "fa-virus",
-    color: "#c62828",
-    text: yhLang(
-      "Children affected or infected with HIV/AIDS",
-      "যে শিশু এইচআইভি–এইডসে আক্রান্ত বা ক্ষতিগ্রস্ত"
-    ),
-  },
-  {
-    icon: "fa-user-xmark",
-    color: "#6a1b9a",
-    text: yhLang(
-      "Adolescents involved in bad company or at risk of moral degradation or criminal activities",
-      "যে তরুন-তরুনী অসৎ সঙ্গীতে জড়িত, বা যার নৈতিক অবক্ষয় ঘটতে পারে বা যে অপরাধজগতে প্রবেশের ঝুঁকিতে আছে"
-    ),
-  },
-  {
-    icon: "fa-gavel",
-    color: "#455a64",
-    text: yhLang(
-      "Children considered by the juvenile court or board to require special protection, care, and development",
-      "যে শিশুকে শিশু আদালত বা বোর্ড বিশেষ সুরক্ষা, যত্ন ও উন্নয়নের প্রয়োজন রয়েছে বলে বিবেচনা করে"
-    ),
-  },
-];
-
-
+                {
+                  icon: "fa-wheelchair",
+                  color: "#9c27b0",
+                  text: yhLang(
+                    "Physically or mentally disabled adolescents",
+                    "শারীরিকভাবে বা মানসিকভাবে প্রতিবন্ধী",
+                  ),
+                },
+                {
+                  icon: "fa-heart-crack",
+                  color: "#e91e63",
+                  text: yhLang(
+                    "Adolescents whose one or both parents have died",
+                    "যে তরুন-তরুনীদের পিতা-মাতা, একজন বা উভয়েই মারা গেছেন",
+                  ),
+                },
+                {
+                  icon: "fa-people-arrows",
+                  color: "#ff5722",
+                  text: yhLang(
+                    "Living with divorced parents or stepfather/stepmother",
+                    "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী",
+                  ),
+                },
+                {
+                  icon: "fa-person-circle-question",
+                  color: "#f44336",
+                  text: yhLang(
+                    "Adolescents born outside marriage or those without a legal guardian",
+                    "বিবাহবহির্ভূত সম্পর্কে জন্ম নেয়া তরুন-তরুনী অথবা যে তরুন-তরুনীর কোনো আইনগত বা বৈধ অভিভাবক নেই",
+                  ),
+                },
+                {
+                  icon: "fa-house-crack",
+                  color: "#ff9800",
+                  text: yhLang(
+                    "Adolescents living in slums, homeless adolescents, street children, or extremely poor adolescents",
+                    "বস্তিতে বসবাস করে এমন তরুন-তরুনী অথবা যে যার কোনো নির্দিষ্ট বাসস্থান বা আবাস নেই বা যার বেঁচে থাকার কোনো সুস্পষ্ট উপায় নেই (পথশিশু বা রাস্তায় কাজ করে এমন তরুন-তরুনী) অথবা অতি দরিদ্র তরুন-তরুনী",
+                  ),
+                },
+                {
+                  icon: "fa-handcuffs",
+                  color: "#795548",
+                  text: yhLang(
+                    "Adolescents dependent on imprisoned parents or living in prison with their imprisoned mother",
+                    "যে তরুন-তরুনী কারাবন্দী পিতা-মাতার উপর নির্ভরশীল বা কারাবন্দী মায়ের সাথে কারাগারে বসবাস করছে",
+                  ),
+                },
+                {
+                  icon: "fa-person-dress",
+                  color: "#880e4f",
+                  text: yhLang(
+                    "Adolescents born and raised in brothels or involved in such activities",
+                    "পতিতালয়ে জন্ম নেয়া ও বড় হওয়া তরুন-তরুনী অথবা এসব কাজে সম্পৃক্ত তরুন-তরুনী",
+                  ),
+                },
+                {
+                  icon: "fa-caravan",
+                  color: "#6d4c41",
+                  text: yhLang(
+                    "Adolescents belonging to nomadic or Harijan (Dalit) communities",
+                    "যে তরুন-তরুনী যাযাবর বা হরিজন (অচ্ছুত)",
+                  ),
+                },
+                {
+                  icon: "fa-industry",
+                  color: "#607d8b",
+                  text: yhLang(
+                    "Adolescents engaged in hazardous work such as bus/tempo helper, welding, electrical, boiler, tannery work, bidi making, begging, or other harmful activities",
+                    "ঝুঁকিপূর্ণ কাজ, যেমন—বাস/টেম্পুর হেল্পার, লেদ মেশিন/ওয়েলডিং/ইলেকট্রিক/বয়লার/ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভিক্ষাবৃত্তি বা শিশুর কল্যাণের বিরোধী কোনো কাজে জড়িত",
+                  ),
+                },
+                {
+                  icon: "fa-hand-fist",
+                  color: "#d32f2f",
+                  text: yhLang(
+                    "Adolescents who are victims or witnesses of sexual abuse or harassment",
+                    "যে তরুন-তরুনী যৌন নিপীড়ন বা হয়রানির শিকার অথবা প্রত্যক্ষদর্শী তরুন-তরুনী",
+                  ),
+                },
+                {
+                  icon: "fa-rainbow",
+                  color: "#ab47bc",
+                  text: yhLang(
+                    "Third gender, hijra, or homosexual adolescents",
+                    "তৃতীয় লিঙ্গ/হিজড়া বা সমকামী তরুন-তরুনী",
+                  ),
+                },
+                {
+                  icon: "fa-pills",
+                  color: "#e53935",
+                  text: yhLang(
+                    "Children with abnormal behavioral disorders due to drugs or other causes",
+                    "যে শিশুর মাদক বা অন্য কোনো কারণে অস্বাভাবিক আচরণগত ব্যাধি হয়েছে",
+                  ),
+                },
+                {
+                  icon: "fa-virus",
+                  color: "#c62828",
+                  text: yhLang(
+                    "Children affected or infected with HIV/AIDS",
+                    "যে শিশু এইচআইভি–এইডসে আক্রান্ত বা ক্ষতিগ্রস্ত",
+                  ),
+                },
+                {
+                  icon: "fa-user-xmark",
+                  color: "#6a1b9a",
+                  text: yhLang(
+                    "Adolescents involved in bad company or at risk of moral degradation or criminal activities",
+                    "যে তরুন-তরুনী অসৎ সঙ্গীতে জড়িত, বা যার নৈতিক অবক্ষয় ঘটতে পারে বা যে অপরাধজগতে প্রবেশের ঝুঁকিতে আছে",
+                  ),
+                },
+                {
+                  icon: "fa-gavel",
+                  color: "#455a64",
+                  text: yhLang(
+                    "Children considered by the juvenile court or board to require special protection, care, and development",
+                    "যে শিশুকে শিশু আদালত বা বোর্ড বিশেষ সুরক্ষা, যত্ন ও উন্নয়নের প্রয়োজন রয়েছে বলে বিবেচনা করে",
+                  ),
+                },
+              ];
 
               const renderList = (items) =>
                 items
@@ -16919,7 +18943,7 @@ const bpPrevention = [
                         <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 8px; font-size: 0.95em;"></i>
                         <span style="font-size: 0.9em;">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -16927,7 +18951,7 @@ const bpPrevention = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text mb-1" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-triangle-exclamation" style="color: #f44336; margin-right: 8px; font-size: 1em;"></i>
-                    ${yhLang("Who are the at-risk youth?","ঝুঁকিপূর্ণ তরুণ-তরুণীরা কারা?")}
+                    ${yhLang("Who are the at-risk youth?", "ঝুঁকিপূর্ণ তরুণ-তরুণীরা কারা?")}
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius: 14px; padding: 8px; box-shadow: 0 6px 18px rgba(255, 152, 0, 0.14);">
@@ -16941,7 +18965,7 @@ const bpPrevention = [
                   <p class="fw-semibold mb-2" style="color: #880e4f; font-size: 0.9em;">
                     ${yhLang(
                       "In addition, any adolescent may become vulnerable at any time. For example —",
-                      "এছাড়াও যেকোনো তরুন-তরুনী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন —"
+                      "এছাড়াও যেকোনো তরুন-তরুনী যেকোনো সময়ে ঝুঁকিপূর্ণ অবস্থার শিকার হতে পারে। যেমন —",
                     )}
                   </p>
                     
@@ -16958,7 +18982,7 @@ const bpPrevention = [
             id: "ch21-lesson-3",
             title: yhLang(
               "What to Do to Address Disadvantages of Marginalized Adolescents",
-              "ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়"
+              "ঝুঁকিপূর্ণ তরুন-তরুনীদের ঝুঁকি নিরসনে করণীয়",
             ),
             icon: "fa-hands-holding-child",
             gradientClass: "bg-gradient-green",
@@ -16966,63 +18990,63 @@ const bpPrevention = [
             quiz: null,
             content: (function () {
               const actionItems = [
-  {
-    icon: "fa-magnifying-glass-chart",
-    color: "#1976d2",
-    text: yhLang(
-      "<strong>Identification of Needs:</strong> Identify potential needs and challenges among disadvantaged youth, such as social, mental, or physical problems.",
-      "<strong>ঝুঁকি শনাক্তকরণ:</strong> ঝুঁকিপূর্ণ তরুন-তরুনীদের মধ্যে সম্ভাব্য ঝুঁকি ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।"
-    ),
-  },
-  {
-    icon: "fa-chart-line",
-    color: "#388e3c",
-    text: yhLang(
-      "<strong>Capacity Building:</strong> Provide information and training that support the mental and physical health development of youth, helping them reduce disadvantages.",
-      "<strong>সক্ষমতা বৃদ্ধি:</strong> তরুন-তরুনীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের ঝুঁকি কমাতে সহায়ক হবে।"
-    ),
-  },
-  {
-    icon: "fa-comments",
-    color: "#7b1fa2",
-    text: yhLang(
-      "<strong>Guidance and Support:</strong> Arrange personalized counseling and support for each adolescent so they can solve their problems and live a healthy life.",
-      "<strong>পরামর্শ ও সহায়তা:</strong> প্রত্যেক তরুন-তরুনীর জন্য ব্যক্তিগত পরামর্শ ও সহায়তার ব্যবস্থা করা, যাতে তারা তাদের সমস্যাগুলি সমাধান করতে এবং সুস্থভাবে জীবনযাপন করতে সক্ষম হয়।"
-    ),
-  },
-  {
-    icon: "fa-shield-halved",
-    color: "#d32f2f",
-    text: yhLang(
-      "<strong>Crisis Management:</strong> Teach effective strategies for managing disadvantaged situations and crises so they can remain stable in difficult circumstances.",
-      "<strong>সংকট ব্যবস্থাপনা:</strong> ঝুঁকিপূর্ণ পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।"
-    ),
-  },
-  {
-    icon: "fa-people-group",
-    color: "#f57c00",
-    text: yhLang(
-      "<strong>Enhancing Social Engagement:</strong> Implement activities that help youth build connections and strengthen engagement with their community.",
-      "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> তরুন-তরুনীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।"
-    ),
-  },
-  {
-    icon: "fa-bell",
-    color: "#0288d1",
-    text: yhLang(
-      "<strong>Awareness Building:</strong> Provide necessary information and conduct awareness programs to promote healthy living and coping with disadvantages.",
-      "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও ঝুঁকি মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।"
-    ),
-  },
-  {
-    icon: "fa-brain",
-    color: "#c2185b",
-    text: yhLang(
-      "<strong>Building Self-Reliance and Confidence:</strong> Increase adolescents' self-confidence and self-reliance so they can solve their own problems and face life’s challenges.",
-      "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> তরুন-তরুনীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।"
-    ),
-  },
-];
+                {
+                  icon: "fa-magnifying-glass-chart",
+                  color: "#1976d2",
+                  text: yhLang(
+                    "<strong>Identification of Needs:</strong> Identify potential needs and challenges among disadvantaged youth, such as social, mental, or physical problems.",
+                    "<strong>ঝুঁকি শনাক্তকরণ:</strong> ঝুঁকিপূর্ণ তরুন-তরুনীদের মধ্যে সম্ভাব্য ঝুঁকি ও জটিলতাসমূহ শনাক্ত করা, যেমন সামাজিক, মানসিক বা শারীরিক সমস্যাগুলি।",
+                  ),
+                },
+                {
+                  icon: "fa-chart-line",
+                  color: "#388e3c",
+                  text: yhLang(
+                    "<strong>Capacity Building:</strong> Provide information and training that support the mental and physical health development of youth, helping them reduce disadvantages.",
+                    "<strong>সক্ষমতা বৃদ্ধি:</strong> তরুন-তরুনীদের মানসিক ও শারীরিক স্বাস্থ্য উন্নয়নে সহায়ক তথ্য ও প্রশিক্ষণ প্রদান করা, যা তাদের ঝুঁকি কমাতে সহায়ক হবে।",
+                  ),
+                },
+                {
+                  icon: "fa-comments",
+                  color: "#7b1fa2",
+                  text: yhLang(
+                    "<strong>Guidance and Support:</strong> Arrange personalized counseling and support for each adolescent so they can solve their problems and live a healthy life.",
+                    "<strong>পরামর্শ ও সহায়তা:</strong> প্রত্যেক তরুন-তরুনীর জন্য ব্যক্তিগত পরামর্শ ও সহায়তার ব্যবস্থা করা, যাতে তারা তাদের সমস্যাগুলি সমাধান করতে এবং সুস্থভাবে জীবনযাপন করতে সক্ষম হয়।",
+                  ),
+                },
+                {
+                  icon: "fa-shield-halved",
+                  color: "#d32f2f",
+                  text: yhLang(
+                    "<strong>Crisis Management:</strong> Teach effective strategies for managing disadvantaged situations and crises so they can remain stable in difficult circumstances.",
+                    "<strong>সংকট ব্যবস্থাপনা:</strong> ঝুঁকিপূর্ণ পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।",
+                  ),
+                },
+                {
+                  icon: "fa-people-group",
+                  color: "#f57c00",
+                  text: yhLang(
+                    "<strong>Enhancing Social Engagement:</strong> Implement activities that help youth build connections and strengthen engagement with their community.",
+                    "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> তরুন-তরুনীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।",
+                  ),
+                },
+                {
+                  icon: "fa-bell",
+                  color: "#0288d1",
+                  text: yhLang(
+                    "<strong>Awareness Building:</strong> Provide necessary information and conduct awareness programs to promote healthy living and coping with disadvantages.",
+                    "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও ঝুঁকি মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।",
+                  ),
+                },
+                {
+                  icon: "fa-brain",
+                  color: "#c2185b",
+                  text: yhLang(
+                    "<strong>Building Self-Reliance and Confidence:</strong> Increase adolescents' self-confidence and self-reliance so they can solve their own problems and face life’s challenges.",
+                    "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> তরুন-তরুনীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।",
+                  ),
+                },
+              ];
 
               const renderList = (items) =>
                 items
@@ -17032,7 +19056,7 @@ const bpPrevention = [
                         <i class="fa-solid ${item.icon}" style="color: ${item.color}; margin-right: 8px; font-size: 1em;"></i>
                         <span style="font-size: 0.9em;">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -17060,7 +19084,7 @@ const bpPrevention = [
                       <p class="mb-0" style="color: #0d47a1; font-size: 0.9em;">
                       ${yhLang(
                         "By ensuring the above-mentioned measures, it is possible to reduce the risks faced by adolescents and create a supportive environment for their development. In addition, necessary support should be provided through coordination among different ministries and departments of the government by formulating and implementing relevant policies.",
-                        "উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুন-তরুনীদের ঝুঁকি কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।"
+                        "উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুন-তরুনীদের ঝুঁকি কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।",
                       )}
                     </p>
                     </div>
@@ -17074,15 +19098,12 @@ const bpPrevention = [
         id: "ch-22",
         title: yhLang(
           "Module-22: Climate Change and Health Sector Impact",
-          "মডিউল-২২: জলবায়ু পরিবর্তনের ফলে স্বাস্থ্য খাতে প্রভাব"
+          "মডিউল-২২: জলবায়ু পরিবর্তনের ফলে স্বাস্থ্য খাতে প্রভাব",
         ),
         lessons: [
           {
-            id: "ch22-lesson-1",  
-            title: yhLang(
-              "Weather and Climate",
-              "আবহাওয়া ও জলবায়ু"
-            ),
+            id: "ch22-lesson-1",
+            title: yhLang("Weather and Climate", "আবহাওয়া ও জলবায়ু"),
             icon: "fa-cloud-sun",
             gradientClass: "bg-gradient-cyan",
             audioFile: "",
@@ -17107,11 +19128,11 @@ const bpPrevention = [
                             </h3>
                             <p class="mb-3">${yhLang(
                               "Weather is the daily condition of the lower atmosphere. Weather changes easily from place to place. Weather represents the short-term conditions of a place. On the other hand, climate is the average weather conditions of a large area over at least 30 years. Climate changes with location and season.",
-                              "আবহাওয়া হলো বায়ুমণ্ডলের নিম্নস্তরের দৈনন্দিন অবস্থা। স্থানভেদে আবহাওয়া সহজেই পরিবর্তিত হয়। আবহাওয়া কোনো জায়গার স্বল্প সময়ের অবস্থাকে প্রকাশ করে। অন্যদিকে, জলবায়ু হলো কোনো বিস্তৃত অঞ্চলের কমপক্ষে ৩০ বছরের আবহাওয়ার গড় অবস্থা। জলবায়ুর পরিবর্তন হয় স্থানভেদে ও ঋতুভেদে।"
+                              "আবহাওয়া হলো বায়ুমণ্ডলের নিম্নস্তরের দৈনন্দিন অবস্থা। স্থানভেদে আবহাওয়া সহজেই পরিবর্তিত হয়। আবহাওয়া কোনো জায়গার স্বল্প সময়ের অবস্থাকে প্রকাশ করে। অন্যদিকে, জলবায়ু হলো কোনো বিস্তৃত অঞ্চলের কমপক্ষে ৩০ বছরের আবহাওয়ার গড় অবস্থা। জলবায়ুর পরিবর্তন হয় স্থানভেদে ও ঋতুভেদে।",
                             )}</p>
                             <p>${yhLang(
                               "In Bangladesh, climate change is having a serious adverse effect on human health, especially on children and adolescents. Climate-sensitive diseases such as dengue, chikungunya, kala-azar, cholera, malnutrition, etc. are increasing and creating new challenges.",
-                              "বাংলাদেশে জলবায়ু পরিবর্তনজনিত কারণে মানবস্বাস্থ্যে, বিশেষ করে শিশু-কিশোরদের ওপর মারাত্মকভাবে ক্ষতিকর প্রভাব পড়ছে। জলবায়ু সংবেদনশীল রোগ যেমন ডেঙ্গু, চিকুনগুনিয়া, কালাজ্বর, কলেরা, অপুষ্টি ইত্যাদি বৃদ্ধি পাচ্ছে এবং নতুন নতুন চ্যালেঞ্জ তৈরি হচ্ছে।"
+                              "বাংলাদেশে জলবায়ু পরিবর্তনজনিত কারণে মানবস্বাস্থ্যে, বিশেষ করে শিশু-কিশোরদের ওপর মারাত্মকভাবে ক্ষতিকর প্রভাব পড়ছে। জলবায়ু সংবেদনশীল রোগ যেমন ডেঙ্গু, চিকুনগুনিয়া, কালাজ্বর, কলেরা, অপুষ্টি ইত্যাদি বৃদ্ধি পাচ্ছে এবং নতুন নতুন চ্যালেঞ্জ তৈরি হচ্ছে।",
                             )}</p>
                           </div>
                         
@@ -17124,7 +19145,7 @@ const bpPrevention = [
                             </h3>
                             <p>${yhLang(
                               "Climate change is a global reality. The Earth is continuously warming, sea levels are rising, and as ice sheets melt, the world's climate system is undergoing radical changes. Records from recent decades show that Earth's weather is now much more unpredictable and extreme compared to pre-industrial times. Disasters such as floods, droughts, wildfires, and cyclones are becoming more frequent and intense, having profound effects on the environment, economy, and human society worldwide.Mitigation and adaptation strategies have become essential components of international and national policies and action plans to address this deep-rooted crisis.",
-                              "জলবায়ু পরিবর্তন একটি বৈশ্বিক বাস্তবতা। পৃথিবী ক্রমাগত উষ্ণ হয়ে চলেছে, সমুদ্রের জলস্তর বৃদ্ধি পাচ্ছে এবং বরফের স্তর গলতে থাকায় বিশ্বের জলবায়ু ব্যবস্থায় আমূল পরিবর্তন ঘটছে। গত কয়েক দশকের রেকর্ডে দেখা গেছে, শিল্পযুগ-পূর্ব সময়ের তুলনায় পৃথিবীর আবহাওয়া আজ অনেক বেশি অপ্রত্যাশিত ও চরম আচরণ করছে। ঘনঘন ও তীব্রতর হয়ে উঠছে বন্যা, খরা, দাবানল ও ঘূর্ণিঝড়ের মতো দুর্যোগ, যা বিশ্বজুড়ে পরিবেশ, অর্থনীতি এবং মানবসমাজের ওপর গভীর প্রভাব ফেলছে। এই বদ্ধমূল সঙ্কট মোকাবেলায় প্রশমন ও অভিযোজন কৌশলগুলি আন্তর্জাতিক ও জাতীয় নীতি ও কর্মপরিকল্পনার অপরিহার্য অঙ্গে পরিণত হয়েছে।"
+                              "জলবায়ু পরিবর্তন একটি বৈশ্বিক বাস্তবতা। পৃথিবী ক্রমাগত উষ্ণ হয়ে চলেছে, সমুদ্রের জলস্তর বৃদ্ধি পাচ্ছে এবং বরফের স্তর গলতে থাকায় বিশ্বের জলবায়ু ব্যবস্থায় আমূল পরিবর্তন ঘটছে। গত কয়েক দশকের রেকর্ডে দেখা গেছে, শিল্পযুগ-পূর্ব সময়ের তুলনায় পৃথিবীর আবহাওয়া আজ অনেক বেশি অপ্রত্যাশিত ও চরম আচরণ করছে। ঘনঘন ও তীব্রতর হয়ে উঠছে বন্যা, খরা, দাবানল ও ঘূর্ণিঝড়ের মতো দুর্যোগ, যা বিশ্বজুড়ে পরিবেশ, অর্থনীতি এবং মানবসমাজের ওপর গভীর প্রভাব ফেলছে। এই বদ্ধমূল সঙ্কট মোকাবেলায় প্রশমন ও অভিযোজন কৌশলগুলি আন্তর্জাতিক ও জাতীয় নীতি ও কর্মপরিকল্পনার অপরিহার্য অঙ্গে পরিণত হয়েছে।",
                             )}</p>
                           </div>
                           </div>
@@ -17141,10 +19162,7 @@ const bpPrevention = [
 
           {
             id: "ch22-lesson-2",
-            title: yhLang(
-              "Air Pollution",
-              "বায়ু দূষণ"
-            ),
+            title: yhLang("Air Pollution", "বায়ু দূষণ"),
             icon: "fa-wind",
             gradientClass: "bg-gradient-cyan",
             audioFile: "",
@@ -17202,7 +19220,7 @@ const bpPrevention = [
                               <p>
                                 ${yhLang(
                                   "Air pollution levels can be measured using the Air Quality Index (AQI). In Bangladesh, AQI is calculated based on the existing concentrations of five pollutants (particulate matter PM10 and PM2.5, NO2, CO, SO2, and O3).",
-                                  "বায়ু কতটা দূষিত তা বায়ুর মান সূচক (AQI) দ্বারা পরিমাপ করা যায়। বাংলাদেশে, পাঁচটি দূষণকারী পদার্থের (কণা পদার্থ PM10 এবং PM2.5, NO2, CO, SO2 এবং O3) বিদ্যমান ঘনত্বের উপর ভিত্তি করে AQI গণনা করা হয়।"
+                                  "বায়ু কতটা দূষিত তা বায়ুর মান সূচক (AQI) দ্বারা পরিমাপ করা যায়। বাংলাদেশে, পাঁচটি দূষণকারী পদার্থের (কণা পদার্থ PM10 এবং PM2.5, NO2, CO, SO2 এবং O3) বিদ্যমান ঘনত্বের উপর ভিত্তি করে AQI গণনা করা হয়।",
                                 )}
                               </p>                            
                               <div class="table-responsive mt-4">
@@ -17257,10 +19275,7 @@ const bpPrevention = [
           },
           {
             id: "ch22-lesson-3",
-            title: yhLang(
-              "Sources of Air Pollution",
-              "বায়ু দূষণের উৎস:"
-            ),
+            title: yhLang("Sources of Air Pollution", "বায়ু দূষণের উৎস:"),
             icon: "fa-industry",
             gradientClass: "bg-gradient-amber",
             audioFile: "",
@@ -17268,56 +19283,94 @@ const bpPrevention = [
             content: (function () {
               const leftSections = [
                 {
-  title: yhLang("Sources of Air Pollution:", "বায়ু দূষণের উৎস:"),
-  items: [
-    `
+                  title: yhLang(
+                    "Sources of Air Pollution:",
+                    "বায়ু দূষণের উৎস:",
+                  ),
+                  items: [
+                    `
     <p class="p-2 mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:")}</p>
     `,
-    yhLang("Fine particles (PM 2.5)", "সূক্ষ্ম কণা(PM 2.5)"),
-    yhLang("Coarse particles (PM10)", "মোটা কণা(PM10)"),
-    yhLang("Ground-level ozone gas (O3)", "পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)"),
-    yhLang("Nitrogen dioxide (NO2)", "নাইট্রোজেন ডাই অক্সাইড (NO2)"),
-    yhLang("Sulfur dioxide (SO2)", "সালফার ডাই অক্সাইড(SO2)"),
-    yhLang("Carbon monoxide (CO)", "কার্বন মনোক্সাইড (CO)"),
+                    yhLang("Fine particles (PM 2.5)", "সূক্ষ্ম কণা(PM 2.5)"),
+                    yhLang("Coarse particles (PM10)", "মোটা কণা(PM10)"),
+                    yhLang(
+                      "Ground-level ozone gas (O3)",
+                      "পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)",
+                    ),
+                    yhLang(
+                      "Nitrogen dioxide (NO2)",
+                      "নাইট্রোজেন ডাই অক্সাইড (NO2)",
+                    ),
+                    yhLang("Sulfur dioxide (SO2)", "সালফার ডাই অক্সাইড(SO2)"),
+                    yhLang("Carbon monoxide (CO)", "কার্বন মনোক্সাইড (CO)"),
 
-    `
+                    `
     <div class="modern-card glass-card my-2 air" data-aos="fade-up" data-aos-delay="20" style="border-radius:14px;padding:10px 14px;box-shadow:0 6px 20px rgba(230,81,0,.15), 0 2px 8px rgba(191,54,12,.1);border-left:4px solid #e65100;">
                     <div style="display:flex;align-items:center;">
                       <span style="background:linear-gradient(135deg,#fb8c00,#ef6c00);width:28px;height:28px;min-width:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 3px 10px rgba(251,140,0,.2);"><i class="fa-solid fa-lightbulb" style="color:#fff;font-size:14px;"></i></span>
                       <p class="mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে। ")}</p>
                     </div>
                   </div>
-    `
-  ],
-},
+    `,
+                  ],
+                },
                 {
-                                    title: yhLang("Air Pollution Prevention and Management:", "বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:"),
+                  title: yhLang(
+                    "Air Pollution Prevention and Management:",
+                    "বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:",
+                  ),
 
                   items: [
-                    yhLang("Stop open waste burning", "খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা"),
-                    yhLang("Plant more trees locally", "স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা"),
-                    yhLang("Increase public transport use and encourage walking or cycling", "গণপরিবহনের ব্যবহার বাড়ানো , হাঁটা বা সাইকেল চালানোতে উৎসাহ দেওয়া"),
-                    yhLang("Control black-smoke producing vehicles and close brick kilns", "কালো ধোঁওয়া উৎপন্ন কারী যানবাহন, ইট ভাটা বন্ধ করা"),
-                    yhLang("Sprinkle water on roads to reduce dust", "ধুলো কমাতে রাস্তা ঘাটে পানি ছিটানো"),
+                    yhLang(
+                      "Stop open waste burning",
+                      "খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা",
+                    ),
+                    yhLang(
+                      "Plant more trees locally",
+                      "স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা",
+                    ),
+                    yhLang(
+                      "Increase public transport use and encourage walking or cycling",
+                      "গণপরিবহনের ব্যবহার বাড়ানো , হাঁটা বা সাইকেল চালানোতে উৎসাহ দেওয়া",
+                    ),
+                    yhLang(
+                      "Control black-smoke producing vehicles and close brick kilns",
+                      "কালো ধোঁওয়া উৎপন্ন কারী যানবাহন, ইট ভাটা বন্ধ করা",
+                    ),
+                    yhLang(
+                      "Sprinkle water on roads to reduce dust",
+                      "ধুলো কমাতে রাস্তা ঘাটে পানি ছিটানো",
+                    ),
                   ],
-
                 },
               ];
 
               const rightSections1 = [
                 {
-                  title: yhLang("1. Adverse Birth Outcomes", "১. প্রতিকূল জন্মের ফলাফল"),
+                  title: yhLang(
+                    "1. Adverse Birth Outcomes",
+                    "১. প্রতিকূল জন্মের ফলাফল",
+                  ),
                   items: [
                     yhLang("Preterm birth", "অকাল জন্ম:"),
-                    yhLang("Intrauterine growth restriction (IUGR)", "গর্ভস্থ ভ্রূণের বৃদ্ধি প্রতিবন্ধকতা (IUGR)"),
+                    yhLang(
+                      "Intrauterine growth restriction (IUGR)",
+                      "গর্ভস্থ ভ্রূণের বৃদ্ধি প্রতিবন্ধকতা (IUGR)",
+                    ),
                     yhLang("Low birth weight", "কম জন্ম ওজন"),
                     yhLang("Stillbirth", "স্থির জন্ম"),
                   ],
                 },
                 {
-                  title: yhLang("2. Respiratory Effects in Childhood", "২. শৈশবে শ্বাসযন্ত্রের প্রভাব"),
+                  title: yhLang(
+                    "2. Respiratory Effects in Childhood",
+                    "২. শৈশবে শ্বাসযন্ত্রের প্রভাব",
+                  ),
                   items: [
-                    yhLang("Upper respiratory tract infection", "উচ্চ শ্বাস নালীর সংক্রমণ"),
+                    yhLang(
+                      "Upper respiratory tract infection",
+                      "উচ্চ শ্বাস নালীর সংক্রমণ",
+                    ),
                     yhLang("Otitis media", "ওটিটিস মিডিয়া"),
                   ],
                 },
@@ -17331,54 +19384,200 @@ const bpPrevention = [
                   title: yhLang("4. Asthma", "৪. হাঁপানি"),
                 },
                 {
-                  title: yhLang("5. Other Health Outcomes", "৫. অন্যান্য স্বাস্থ্যগত ফলাফল"),
+                  title: yhLang(
+                    "5. Other Health Outcomes",
+                    "৫. অন্যান্য স্বাস্থ্যগত ফলাফল",
+                  ),
                   items: [
-                    yhLang("Neurodevelopmental impairment (IQ reduction and autism)", "স্নায়ু বিকাশগত প্রতিবন্ধকতা (আইকিউ হ্রাস এবং অটিজম)"),
+                    yhLang(
+                      "Neurodevelopmental impairment (IQ reduction and autism)",
+                      "স্নায়ু বিকাশগত প্রতিবন্ধকতা (আইকিউ হ্রাস এবং অটিজম)",
+                    ),
                     yhLang("Childhood malignancy", "শৈশবকালীন ম্যালিগন্যান্সি"),
-                    yhLang("Infant and child mortality", "শিশু ও শিশু মৃত্যুহার"),
+                    yhLang(
+                      "Infant and child mortality",
+                      "শিশু ও শিশু মৃত্যুহার",
+                    ),
                     yhLang("Stunting / short stature", "স্টান্টিং/ খর্বাকৃতি"),
                   ],
                 },
               ];
 
               const getItemIcon = (item) => {
-                if (item.includes('PM 2.5') || item.includes('সূক্ষ্ম কণা')) return { icon: 'fa-circle-dot', color: '#7b1fa2', bg: 'rgba(123,31,162,.12)' };
-                if (item.includes('PM10') || item.includes('মোটা কণা')) return { icon: 'fa-circle', color: '#1565c0', bg: 'rgba(21,101,192,.12)' };
-                if (item.includes('O3') || item.includes('ওজোন')) return { icon: 'fa-sun', color: '#ef6c00', bg: 'rgba(239,108,0,.12)' };
-                if (item.includes('NO2') || item.includes('নাইট্রোজেন')) return { icon: 'fa-industry', color: '#546e7a', bg: 'rgba(84,110,122,.12)' };
-                if (item.includes('SO2') || item.includes('সালফার')) return { icon: 'fa-smog', color: '#f9a825', bg: 'rgba(249,168,37,.12)' };
-                if (item.includes('CO') || item.includes('কার্বন মনোক্সাইড')) return { icon: 'fa-car-side', color: '#37474f', bg: 'rgba(55,71,79,.12)' };
-                if (item.includes('বর্জ্য পোড়ানো') || item.includes('waste burning')) return { icon: 'fa-ban', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('বৃক্ষরোপণ') || item.includes('trees')) return { icon: 'fa-tree', color: '#2e7d32', bg: 'rgba(46,125,50,.12)' };
-                if (item.includes('গণপরিবহন') || item.includes('public transport')) return { icon: 'fa-bus', color: '#00838f', bg: 'rgba(0,131,143,.12)' };
-                if (item.includes('যানবাহন') || item.includes('vehicles') || item.includes('ধোঁওয়া')) return { icon: 'fa-car-burst', color: '#e65100', bg: 'rgba(230,81,0,.12)' };
-                if (item.includes('পানি ছিটানো') || item.includes('water on roads') || item.includes('ধুলো')) return { icon: 'fa-droplet', color: '#0277bd', bg: 'rgba(2,119,189,.12)' };
-                if (item.includes('অকাল জন্ম') || item.includes('Preterm')) return { icon: 'fa-hourglass-end', color: '#c2185b', bg: 'rgba(194,24,91,.12)' };
-                if (item.includes('IUGR') || item.includes('বৃদ্ধি প্রতিবন্ধকতা')) return { icon: 'fa-chart-line', color: '#00897b', bg: 'rgba(0,137,123,.12)' };
-                if (item.includes('কম জন্ম ওজন') || item.includes('Low birth weight')) return { icon: 'fa-weight-scale', color: '#4527a0', bg: 'rgba(69,39,160,.12)' };
-                if (item.includes('স্থির জন্ম') || item.includes('Stillbirth')) return { icon: 'fa-heart-crack', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
-                if (item.includes('শ্বাস নালীর সংক্রমণ') || item.includes('respiratory tract')) return { icon: 'fa-virus', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('ওটিটিস') || item.includes('Otitis')) return { icon: 'fa-ear-listen', color: '#6a1b9a', bg: 'rgba(106,27,154,.12)' };
-                if (item.includes('স্নায়ু') || item.includes('Neuro')) return { icon: 'fa-brain', color: '#ad1457', bg: 'rgba(173,20,87,.12)' };
-                if (item.includes('ম্যালিগন্যান্সি') || item.includes('malignancy')) return { icon: 'fa-ribbon', color: '#b71c1c', bg: 'rgba(183,28,28,.12)' };
-                if (item.includes('মৃত্যুহার') || item.includes('mortality')) return { icon: 'fa-hand-holding-heart', color: '#546e7a', bg: 'rgba(84,110,122,.12)' };
-                if (item.includes('স্টান্টিং') || item.includes('খর্বাকৃতি') || item.includes('Stunting')) return { icon: 'fa-child-reaching', color: '#558b2f', bg: 'rgba(85,139,47,.12)' };
-                return { icon: 'fa-circle-check', color: '#7b1fa2', bg: 'rgba(123,31,162,.12)' };
+                if (item.includes("PM 2.5") || item.includes("সূক্ষ্ম কণা"))
+                  return {
+                    icon: "fa-circle-dot",
+                    color: "#7b1fa2",
+                    bg: "rgba(123,31,162,.12)",
+                  };
+                if (item.includes("PM10") || item.includes("মোটা কণা"))
+                  return {
+                    icon: "fa-circle",
+                    color: "#1565c0",
+                    bg: "rgba(21,101,192,.12)",
+                  };
+                if (item.includes("O3") || item.includes("ওজোন"))
+                  return {
+                    icon: "fa-sun",
+                    color: "#ef6c00",
+                    bg: "rgba(239,108,0,.12)",
+                  };
+                if (item.includes("NO2") || item.includes("নাইট্রোজেন"))
+                  return {
+                    icon: "fa-industry",
+                    color: "#546e7a",
+                    bg: "rgba(84,110,122,.12)",
+                  };
+                if (item.includes("SO2") || item.includes("সালফার"))
+                  return {
+                    icon: "fa-smog",
+                    color: "#f9a825",
+                    bg: "rgba(249,168,37,.12)",
+                  };
+                if (item.includes("CO") || item.includes("কার্বন মনোক্সাইড"))
+                  return {
+                    icon: "fa-car-side",
+                    color: "#37474f",
+                    bg: "rgba(55,71,79,.12)",
+                  };
+                if (
+                  item.includes("বর্জ্য পোড়ানো") ||
+                  item.includes("waste burning")
+                )
+                  return {
+                    icon: "fa-ban",
+                    color: "#d32f2f",
+                    bg: "rgba(211,47,47,.12)",
+                  };
+                if (item.includes("বৃক্ষরোপণ") || item.includes("trees"))
+                  return {
+                    icon: "fa-tree",
+                    color: "#2e7d32",
+                    bg: "rgba(46,125,50,.12)",
+                  };
+                if (
+                  item.includes("গণপরিবহন") ||
+                  item.includes("public transport")
+                )
+                  return {
+                    icon: "fa-bus",
+                    color: "#00838f",
+                    bg: "rgba(0,131,143,.12)",
+                  };
+                if (
+                  item.includes("যানবাহন") ||
+                  item.includes("vehicles") ||
+                  item.includes("ধোঁওয়া")
+                )
+                  return {
+                    icon: "fa-car-burst",
+                    color: "#e65100",
+                    bg: "rgba(230,81,0,.12)",
+                  };
+                if (
+                  item.includes("পানি ছিটানো") ||
+                  item.includes("water on roads") ||
+                  item.includes("ধুলো")
+                )
+                  return {
+                    icon: "fa-droplet",
+                    color: "#0277bd",
+                    bg: "rgba(2,119,189,.12)",
+                  };
+                if (item.includes("অকাল জন্ম") || item.includes("Preterm"))
+                  return {
+                    icon: "fa-hourglass-end",
+                    color: "#c2185b",
+                    bg: "rgba(194,24,91,.12)",
+                  };
+                if (
+                  item.includes("IUGR") ||
+                  item.includes("বৃদ্ধি প্রতিবন্ধকতা")
+                )
+                  return {
+                    icon: "fa-chart-line",
+                    color: "#00897b",
+                    bg: "rgba(0,137,123,.12)",
+                  };
+                if (
+                  item.includes("কম জন্ম ওজন") ||
+                  item.includes("Low birth weight")
+                )
+                  return {
+                    icon: "fa-weight-scale",
+                    color: "#4527a0",
+                    bg: "rgba(69,39,160,.12)",
+                  };
+                if (item.includes("স্থির জন্ম") || item.includes("Stillbirth"))
+                  return {
+                    icon: "fa-heart-crack",
+                    color: "#c62828",
+                    bg: "rgba(198,40,40,.12)",
+                  };
+                if (
+                  item.includes("শ্বাস নালীর সংক্রমণ") ||
+                  item.includes("respiratory tract")
+                )
+                  return {
+                    icon: "fa-virus",
+                    color: "#d32f2f",
+                    bg: "rgba(211,47,47,.12)",
+                  };
+                if (item.includes("ওটিটিস") || item.includes("Otitis"))
+                  return {
+                    icon: "fa-ear-listen",
+                    color: "#6a1b9a",
+                    bg: "rgba(106,27,154,.12)",
+                  };
+                if (item.includes("স্নায়ু") || item.includes("Neuro"))
+                  return {
+                    icon: "fa-brain",
+                    color: "#ad1457",
+                    bg: "rgba(173,20,87,.12)",
+                  };
+                if (
+                  item.includes("ম্যালিগন্যান্সি") ||
+                  item.includes("malignancy")
+                )
+                  return {
+                    icon: "fa-ribbon",
+                    color: "#b71c1c",
+                    bg: "rgba(183,28,28,.12)",
+                  };
+                if (item.includes("মৃত্যুহার") || item.includes("mortality"))
+                  return {
+                    icon: "fa-hand-holding-heart",
+                    color: "#546e7a",
+                    bg: "rgba(84,110,122,.12)",
+                  };
+                if (
+                  item.includes("স্টান্টিং") ||
+                  item.includes("খর্বাকৃতি") ||
+                  item.includes("Stunting")
+                )
+                  return {
+                    icon: "fa-child-reaching",
+                    color: "#558b2f",
+                    bg: "rgba(85,139,47,.12)",
+                  };
+                return {
+                  icon: "fa-circle-check",
+                  color: "#7b1fa2",
+                  bg: "rgba(123,31,162,.12)",
+                };
               };
 
               const renderList = (items) =>
                 items
-                  .map(
-                    (item) => {
-                      const iconData = getItemIcon(item);
-                      return `
+                  .map((item) => {
+                    const iconData = getItemIcon(item);
+                    return `
                       <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:3px solid ${iconData.color};border-radius:8px;padding:3px 3px;margin-bottom:3px;box-shadow:0 4px 12px rgba(103,58,183,.1), 0 1px 4px ${iconData.bg};transition:all 0.3s ease;">
                         <span style="width:22px;height:22px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;margin-right:3px;box-shadow:0 2px 8px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="color:${iconData.color};font-size:12px;"></i></span>
                         <span class="mb-3" style="color:#333;font-weight:500;font-size:0.9em;">${item}</span>
                       </li>
                     `;
-                    }
-                  )
+                  })
                   .join("");
 
               const renderSection = (section) => {
@@ -17391,17 +19590,69 @@ const bpPrevention = [
                   </h3>
                   ${section.items ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : ``}
                 </div>
-              `;};
+              `;
+              };
 
               const getSectionIcon = (title) => {
-                if (title.includes('বায়ু দূষণের উৎস') || title.includes('Sources of Air')) return { icon: 'fa-wind', color: '#e65100', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
-                if (title.includes('প্রতিরোধ') || title.includes('Prevention')) return { icon: 'fa-shield-halved', color: '#2e7d32', gradient: 'linear-gradient(135deg,#43a047,#2e7d32)' };
-                if (title.includes('প্রতিকূল জন্মের') || title.includes('Adverse Birth')) return { icon: 'fa-baby', color: '#c2185b', gradient: 'linear-gradient(135deg,#e91e63,#c2185b)' };
-                if (title.includes('শ্বাসযন্ত্রের') || title.includes('Respiratory')) return { icon: 'fa-lungs', color: '#1565c0', gradient: 'linear-gradient(135deg,#1e88e5,#1565c0)' };
-                if (title.includes('নিউমোনিয়া') || title.includes('Pneumonia')) return { icon: 'fa-lungs-virus', color: '#ef6c00', gradient: 'linear-gradient(135deg,#fb8c00,#ef6c00)' };
-                if (title.includes('হাঁপানি') || title.includes('Asthma')) return { icon: 'fa-person-dots-from-line', color: '#558b2f', gradient: 'linear-gradient(135deg,#7cb342,#558b2f)' };
-                if (title.includes('অন্যান্য') || title.includes('Other Health')) return { icon: 'fa-disease', color: '#6a1b9a', gradient: 'linear-gradient(135deg,#8e24aa,#6a1b9a)' };
-                return { icon: 'fa-circle-info', color: '#7b1fa2', gradient: 'linear-gradient(135deg,#8e24aa,#6a1b9a)' };
+                if (
+                  title.includes("বায়ু দূষণের উৎস") ||
+                  title.includes("Sources of Air")
+                )
+                  return {
+                    icon: "fa-wind",
+                    color: "#e65100",
+                    gradient: "linear-gradient(135deg,#ff8f00,#e65100)",
+                  };
+                if (title.includes("প্রতিরোধ") || title.includes("Prevention"))
+                  return {
+                    icon: "fa-shield-halved",
+                    color: "#2e7d32",
+                    gradient: "linear-gradient(135deg,#43a047,#2e7d32)",
+                  };
+                if (
+                  title.includes("প্রতিকূল জন্মের") ||
+                  title.includes("Adverse Birth")
+                )
+                  return {
+                    icon: "fa-baby",
+                    color: "#c2185b",
+                    gradient: "linear-gradient(135deg,#e91e63,#c2185b)",
+                  };
+                if (
+                  title.includes("শ্বাসযন্ত্রের") ||
+                  title.includes("Respiratory")
+                )
+                  return {
+                    icon: "fa-lungs",
+                    color: "#1565c0",
+                    gradient: "linear-gradient(135deg,#1e88e5,#1565c0)",
+                  };
+                if (title.includes("নিউমোনিয়া") || title.includes("Pneumonia"))
+                  return {
+                    icon: "fa-lungs-virus",
+                    color: "#ef6c00",
+                    gradient: "linear-gradient(135deg,#fb8c00,#ef6c00)",
+                  };
+                if (title.includes("হাঁপানি") || title.includes("Asthma"))
+                  return {
+                    icon: "fa-person-dots-from-line",
+                    color: "#558b2f",
+                    gradient: "linear-gradient(135deg,#7cb342,#558b2f)",
+                  };
+                if (
+                  title.includes("অন্যান্য") ||
+                  title.includes("Other Health")
+                )
+                  return {
+                    icon: "fa-disease",
+                    color: "#6a1b9a",
+                    gradient: "linear-gradient(135deg,#8e24aa,#6a1b9a)",
+                  };
+                return {
+                  icon: "fa-circle-info",
+                  color: "#7b1fa2",
+                  gradient: "linear-gradient(135deg,#8e24aa,#6a1b9a)",
+                };
               };
 
               return `
@@ -17443,7 +19694,7 @@ const bpPrevention = [
             id: "ch22-lesson-4",
             title: yhLang(
               "Main Causes of Food and Water Contamination",
-              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ"
+              "খাবারপানির দূষণের প্রধান প্রধান কারণ সমূহ",
             ),
             icon: "fa-water",
             gradientClass: "bg-gradient-coral",
@@ -17452,36 +19703,84 @@ const bpPrevention = [
             content: (function () {
               const pollutionCauses = [
                 {
-                  title: yhLang("1. Industrial Waste", "১. শিল্পকারখানার বর্জ্য"),
-                  desc: yhLang("Chemicals, heavy metals, dyes, and acids from factories enter rivers and ponds, contaminating water.", "বিভিন্ন কারখানা থেকে নির্গত রাসায়নিক, ভারী ধাতু, রঙ, এসিড-ক্ষার ইত্যাদি সরাসরি নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।"),
+                  title: yhLang(
+                    "1. Industrial Waste",
+                    "১. শিল্পকারখানার বর্জ্য",
+                  ),
+                  desc: yhLang(
+                    "Chemicals, heavy metals, dyes, and acids from factories enter rivers and ponds, contaminating water.",
+                    "বিভিন্ন কারখানা থেকে নির্গত রাসায়নিক, ভারী ধাতু, রঙ, এসিড-ক্ষার ইত্যাদি সরাসরি নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।",
+                  ),
                 },
                 {
-                  title: yhLang("2. Agricultural Chemicals", "২. কৃষিকাজে ব্যবহৃত রাসায়নিক"),
-                  desc: yhLang("Pesticides, fertilizers, and herbicides mix with soil and reach groundwater, degrading water quality.", "কীটনাশক, সার, আগাছানাশক মাটির সাথে মিশে ভূগর্ভস্থ পানিতে পৌঁছায় এবং পানির মান নষ্ট করে।"),
+                  title: yhLang(
+                    "2. Agricultural Chemicals",
+                    "২. কৃষিকাজে ব্যবহৃত রাসায়নিক",
+                  ),
+                  desc: yhLang(
+                    "Pesticides, fertilizers, and herbicides mix with soil and reach groundwater, degrading water quality.",
+                    "কীটনাশক, সার, আগাছানাশক মাটির সাথে মিশে ভূগর্ভস্থ পানিতে পৌঁছায় এবং পানির মান নষ্ট করে।",
+                  ),
                 },
                 {
-                  title: yhLang("3. Household Waste & Sewage", "৩. গৃহস্থালি বর্জ্য ও নোংরা পানি"),
-                  desc: yhLang("Dirty water from kitchens, bathrooms, and toilets without proper treatment pollutes rivers and streams.", "রান্নাঘর, বাথরুম ও টয়লেটের নোংরা পানি সঠিকভাবে পরিশোধন না করে ফেলে দিলে নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।"),
+                  title: yhLang(
+                    "3. Household Waste & Sewage",
+                    "৩. গৃহস্থালি বর্জ্য ও নোংরা পানি",
+                  ),
+                  desc: yhLang(
+                    "Dirty water from kitchens, bathrooms, and toilets without proper treatment pollutes rivers and streams.",
+                    "রান্নাঘর, বাথরুম ও টয়লেটের নোংরা পানি সঠিকভাবে পরিশোধন না করে ফেলে দিলে নদী-নালা, খাল-বিলে গিয়ে পানিকে দূষিত করে।",
+                  ),
                 },
                 {
-                  title: yhLang("4. Human Waste & Sanitation Problems", "৪. মানববর্জ্য ও স্যানিটেশন সমস্যা"),
-                  desc: yhLang("Open defecation and poor drainage systems spread bacteria, viruses, and parasites in water.", "উন্মুক্ত স্থানে শৌচকর্ম, অপর্যাপ্ত ল্যাট্রিন/পায়খানা  ও ড্রেনেজ ব্যবস্থা পানিতে ব্যাকটেরিয়া, ভাইরাস, পরজীবী ছড়িয়ে দেয় ও পানিকে দূষিত করে।"),
+                  title: yhLang(
+                    "4. Human Waste & Sanitation Problems",
+                    "৪. মানববর্জ্য ও স্যানিটেশন সমস্যা",
+                  ),
+                  desc: yhLang(
+                    "Open defecation and poor drainage systems spread bacteria, viruses, and parasites in water.",
+                    "উন্মুক্ত স্থানে শৌচকর্ম, অপর্যাপ্ত ল্যাট্রিন/পায়খানা  ও ড্রেনেজ ব্যবস্থা পানিতে ব্যাকটেরিয়া, ভাইরাস, পরজীবী ছড়িয়ে দেয় ও পানিকে দূষিত করে।",
+                  ),
                 },
                 {
-                  title: yhLang("5. Plastic & Solid Waste", "৫. নদী-নালা ও খালে প্লাস্টিক ও কঠিন বর্জ্য ফেলা"),
-                  desc: yhLang("Plastic bottles and electronic waste in water release toxic substances and contaminate it.", "পলিথিন, প্লাস্টিকের বোতল, পুরনো ইলেকট্রনিক বর্জ্য পানিতে ফেললে  তা  পানিতে মিশে বিষাক্ত উপাদান ছড়ায় ও পানিকে দূষিত করে।"),
+                  title: yhLang(
+                    "5. Plastic & Solid Waste",
+                    "৫. নদী-নালা ও খালে প্লাস্টিক ও কঠিন বর্জ্য ফেলা",
+                  ),
+                  desc: yhLang(
+                    "Plastic bottles and electronic waste in water release toxic substances and contaminate it.",
+                    "পলিথিন, প্লাস্টিকের বোতল, পুরনো ইলেকট্রনিক বর্জ্য পানিতে ফেললে  তা  পানিতে মিশে বিষাক্ত উপাদান ছড়ায় ও পানিকে দূষিত করে।",
+                  ),
                 },
                 {
-                  title: yhLang("6. Oil & Fuel Spills", "৬. তেল ও জ্বালানি পদার্থের নিঃসরণ"),
-                  desc: yhLang("Oil leaks from boats and generators damage aquatic life and water quality.", "নৌযান/ জাহাজের পাম্প, জেনারেটর থেকে বা দুর্ঘটনার কারণে তেল পানিতে মিশে জীববৈচিত্র্য ও পানির মান নষ্ট করে।"),
+                  title: yhLang(
+                    "6. Oil & Fuel Spills",
+                    "৬. তেল ও জ্বালানি পদার্থের নিঃসরণ",
+                  ),
+                  desc: yhLang(
+                    "Oil leaks from boats and generators damage aquatic life and water quality.",
+                    "নৌযান/ জাহাজের পাম্প, জেনারেটর থেকে বা দুর্ঘটনার কারণে তেল পানিতে মিশে জীববৈচিত্র্য ও পানির মান নষ্ট করে।",
+                  ),
                 },
                 {
-                  title: yhLang("7. Unplanned Urbanization", "৭. অপরিকল্পিত নগরায়ন ও নির্মাণকাজ"),
-                  desc: yhLang("Dust, soil, and concrete from construction pollute water sources.", "মাটিক্ষয়, ধুলা-বালু, কংক্রিটের মিশ্রণসহ অন্যান্য উপাদান পানিতে পড়ে দূষণ বাড়ায়।"),
+                  title: yhLang(
+                    "7. Unplanned Urbanization",
+                    "৭. অপরিকল্পিত নগরায়ন ও নির্মাণকাজ",
+                  ),
+                  desc: yhLang(
+                    "Dust, soil, and concrete from construction pollute water sources.",
+                    "মাটিক্ষয়, ধুলা-বালু, কংক্রিটের মিশ্রণসহ অন্যান্য উপাদান পানিতে পড়ে দূষণ বাড়ায়।",
+                  ),
                 },
                 {
-                  title: yhLang("8. Medical Waste & Chemicals", "৮. চিকিৎসা বর্জ্য ও রাসায়নিক ওষুধ"),
-                  desc: yhLang("Hospital and clinic waste contaminates water with germs and harmful chemicals.", "হাসপাতাল বা ক্লিনিকের বর্জ্য সঠিকভাবে ব্যবস্থাপনা না করলে পানি জীবাণু ও রাসায়নিক দ্বারা দূষিত হয়।"),
+                  title: yhLang(
+                    "8. Medical Waste & Chemicals",
+                    "৮. চিকিৎসা বর্জ্য ও রাসায়নিক ওষুধ",
+                  ),
+                  desc: yhLang(
+                    "Hospital and clinic waste contaminates water with germs and harmful chemicals.",
+                    "হাসপাতাল বা ক্লিনিকের বর্জ্য সঠিকভাবে ব্যবস্থাপনা না করলে পানি জীবাণু ও রাসায়নিক দ্বারা দূষিত হয়।",
+                  ),
                 },
               ];
 
@@ -17489,31 +19788,37 @@ const bpPrevention = [
                 pollutionCauses
                   .map(
                     (item, idx) => `
-                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:4px;box-shadow:${idx % 2 === 0 ? '0 2px 7px rgba(2,136,209,.10)' : '0 3px 8px rgba(255,112,67,.11)'};">
-                        <h3 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? '#0277bd' : '#006cc9'};font-size:0.8em;">
-                          <i class="fa-solid ${idx < 2 ? 'fa-industry' : idx < 4 ? 'fa-house' : idx < 6 ? 'fa-oil-can' : 'fa-truck-medical'} me-2" style="font-size:0.85em;"></i>
+                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:4px;box-shadow:${idx % 2 === 0 ? "0 2px 7px rgba(2,136,209,.10)" : "0 3px 8px rgba(255,112,67,.11)"};">
+                        <h3 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? "#0277bd" : "#006cc9"};font-size:0.8em;">
+                          <i class="fa-solid ${idx < 2 ? "fa-industry" : idx < 4 ? "fa-house" : idx < 6 ? "fa-oil-can" : "fa-truck-medical"} me-2" style="font-size:0.85em;"></i>
                           ${item.title}
                         </h3>
                         <p class="mb-0" style="font-size:0.74em;line-height:1.35;"><i class="fa-solid fa-circle-info me-2 text-secondary" style="font-size:0.78em;"></i>${item.desc}</p>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
               const waterSources = [
                 yhLang("1. Groundwater", "১।  ভূগর্ভস্থ পানি"),
-                yhLang("2. Surface water such as rivers, canals, wetlands, and ponds", "২। ভূপৃষ্ঠের উপরিভাগ যেমনঃ নদি-নলা, খাল-বিল, পুকুর প্রভিতি"),
-                yhLang("3. Others: rainwater, glaciers", "৩। অন্যান্যঃ  বৃষ্টির পানি, হিমবাহ"),
+                yhLang(
+                  "2. Surface water such as rivers, canals, wetlands, and ponds",
+                  "২। ভূপৃষ্ঠের উপরিভাগ যেমনঃ নদি-নলা, খাল-বিল, পুকুর প্রভিতি",
+                ),
+                yhLang(
+                  "3. Others: rainwater, glaciers",
+                  "৩। অন্যান্যঃ  বৃষ্টির পানি, হিমবাহ",
+                ),
               ];
 
               const renderWaterSources = () =>
                 waterSources
                   .map(
                     (item, idx) => `
-                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:1px; padding-left: 10px;box-shadow:${idx % 2 === 0 ? '0 2px 7px rgba(2,136,209,.10)' : '0 3px 8px rgba(255,112,67,.11)'};border-left:3px solid ${idx % 2 === 0 ? '#039be5' : '#f57c00'};">
+                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:1px; padding-left: 10px;box-shadow:${idx % 2 === 0 ? "0 2px 7px rgba(2,136,209,.10)" : "0 3px 8px rgba(255,112,67,.11)"};border-left:3px solid ${idx % 2 === 0 ? "#039be5" : "#f57c00"};">
                         <span style="font-size:0.76em;line-height:1.35;">${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -17531,8 +19836,8 @@ const bpPrevention = [
                   </div>
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius:11px;padding:5px;box-shadow:0 4px 12px rgba(255,112,67,.14), 0 2px 6px rgba(244,81,30,.1);">
                     <h3 style="display:flex;align-items:center;color:#006cc9;margin-bottom:4px; font-weight:700;font-size:0.86em;"><span style="background:linear-gradient(135deg,#29b6f6,#0288d1); width:26px; height:26px; border-radius:7px; display:flex; align-items:center; justify-content:center; margin-right:6px; box-shadow:0 2px 6px rgba(255,112,67,0.22);"><i class="fa-solid fa-industry" style="color:#fff; font-size:12px;"></i></span>${yhLang(
-                        "Main Causes of Food and Water Contamination",
-                        "খাবারপানির দূষণের প্রধান কারণ সমূহ"
+                      "Main Causes of Food and Water Contamination",
+                      "খাবারপানির দূষণের প্রধান কারণ সমূহ",
                     )}</h3>
                     <ul class="list-unstyled feature-list mb-0">
                       ${renderCauses()}
@@ -17545,9 +19850,9 @@ const bpPrevention = [
           },
           {
             id: "ch22-lesson-5",
-            title: yhLang(  
+            title: yhLang(
               "Health Risks from Contaminated Food and Water",
-              "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি"
+              "খাবারপানির দূষণজনিত স্বাস্থ্য ঝুঁকি",
             ),
             icon: "fa-hand-holding-droplet",
             gradientClass: "bg-gradient-violet",
@@ -17563,104 +19868,295 @@ const bpPrevention = [
                     yhLang("Typhoid", "টাইফয়েড"),
                     yhLang("Cholera", "কলেরা"),
                     yhLang("Hepatitis A", "হেপাটাইটিস–এ"),
-                    yhLang("Giardiasis", "জিয়ার্ডিয়াসিস")
+                    yhLang("Giardiasis", "জিয়ার্ডিয়াসিস"),
                   ],
                 },
                 {
-                  title: yhLang("2. Digestive Problems & Malnutrition", "২. পেটের সমস্যা ও অপুষ্টি"),
+                  title: yhLang(
+                    "2. Digestive Problems & Malnutrition",
+                    "২. পেটের সমস্যা ও অপুষ্টি",
+                  ),
                   items: [
                     yhLang("Stomach infection", "পেটের সংক্রমণ"),
                     yhLang("Vomiting", "বমি"),
                     yhLang("Stomach pain", "পেট ব্যথা"),
                     yhLang("Diarrhea", "ডায়রিয়া"),
                     yhLang("Dehydration", "পানিশূন্যতা"),
-                    yhLang("Long-term malnutrition", "দীর্ঘমেয়াদে অপুষ্টির কারণ")
+                    yhLang(
+                      "Long-term malnutrition",
+                      "দীর্ঘমেয়াদে অপুষ্টির কারণ",
+                    ),
                   ],
                 },
               ];
-
-
 
               const rightSections1 = [
                 {
-                  title: yhLang("3. Chemical Pollution Damage", "৩. রাসায়নিক দূষণের ক্ষতি"),
+                  title: yhLang(
+                    "3. Chemical Pollution Damage",
+                    "৩. রাসায়নিক দূষণের ক্ষতি",
+                  ),
                   items: [
-                    yhLang("Arsenicosis (dark spots on skin, skin diseases, cancer risk)", "আর্সেনিকোসিস (ত্বকে কালো দাগ, চর্মরোগ, ক্যান্সারের ঝুঁকি)"),
-                    yhLang("Dental or skeletal fluorosis", "ডেন্টাল বা স্কেলেটাল ফ্লুরোসিস"),
+                    yhLang(
+                      "Arsenicosis (dark spots on skin, skin diseases, cancer risk)",
+                      "আর্সেনিকোসিস (ত্বকে কালো দাগ, চর্মরোগ, ক্যান্সারের ঝুঁকি)",
+                    ),
+                    yhLang(
+                      "Dental or skeletal fluorosis",
+                      "ডেন্টাল বা স্কেলেটাল ফ্লুরোসিস",
+                    ),
                     yhLang("Nervous system damage", "স্নায়ুতন্ত্রের ক্ষতি"),
-                    yhLang("Reduced intelligence & memory (especially in children)", "বুদ্ধি ও স্মৃতিশক্তি হ্রাস (বিশেষত শিশুদের)"),
+                    yhLang(
+                      "Reduced intelligence & memory (especially in children)",
+                      "বুদ্ধি ও স্মৃতিশক্তি হ্রাস (বিশেষত শিশুদের)",
+                    ),
                     yhLang("Kidney & liver problems", "কিডনি ও লিভারের সমস্যা"),
                   ],
                 },
-                
               ];
 
               const rightSections2 = [
-              
                 {
                   title: yhLang("4. Skin Diseases", "৪. ত্বকের রোগ"),
-                  description: yhLang("Can cause skin diseases, eczema, itching, and fungal infections.", "চর্মরোগ, একজিমা, চুলকানি, ফাঙ্গাল সংক্রমণ হতে পারে।"),
+                  description: yhLang(
+                    "Can cause skin diseases, eczema, itching, and fungal infections.",
+                    "চর্মরোগ, একজিমা, চুলকানি, ফাঙ্গাল সংক্রমণ হতে পারে।",
+                  ),
                 },
                 {
-                  title: yhLang("5. Long-term Chronic Diseases", "৫. দীর্ঘমেয়াদি ক্রনিক রোগ"),
+                  title: yhLang(
+                    "5. Long-term Chronic Diseases",
+                    "৫. দীর্ঘমেয়াদি ক্রনিক রোগ",
+                  ),
                   items: [
                     yhLang("Increased cancer risk", "ক্যান্সারের ঝুঁকি বৃদ্ধি"),
                     yhLang("Kidney failure", "কিডনি ফেইলিওর"),
                     yhLang("Liver cirrhosis", "লিভার সিরোসিস"),
                     yhLang("Hormonal imbalance", "হরমোনের ভারসাম্যহীনতা"),
-                    yhLang("Increased risk of heart disease", "হৃদরোগের ঝুঁকি বাড়তে পারে।"),
+                    yhLang(
+                      "Increased risk of heart disease",
+                      "হৃদরোগের ঝুঁকি বাড়তে পারে।",
+                    ),
                   ],
                 },
               ];
 
-
-
               const getItemIcon = (item) => {
-                if (item.includes('ডায়রিয়া') || item.includes('Diarrhea')) return { icon: 'fa-droplet', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
-                if (item.includes('ডিজেন্ট্রি') || item.includes('আমাশয়') || item.includes('Dysentery')) return { icon: 'fa-virus', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('টাইফয়েড') || item.includes('Typhoid')) return { icon: 'fa-temperature-high', color: '#e65100', bg: 'rgba(230,81,0,.12)' };
-                if (item.includes('কলেরা') || item.includes('Cholera')) return { icon: 'fa-disease', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
-                if (item.includes('হেপাটাইটিস') || item.includes('Hepatitis')) return { icon: 'fa-syringe', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
-                if (item.includes('জিয়ার্ডিয়াসিস') || item.includes('Giardiasis')) return { icon: 'fa-bacterium', color: '#ef6c00', bg: 'rgba(239,108,0,.12)' };
-                if (item.includes('পেটের সংক্রমণ') || item.includes('Stomach infection')) return { icon: 'fa-lungs-virus', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
-                if (item.includes('বমি') || item.includes('Vomiting')) return { icon: 'fa-head-side-cough', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
-                if (item.includes('পেট ব্যথা') || item.includes('Stomach pain')) return { icon: 'fa-circle-exclamation', color: '#ff8f00', bg: 'rgba(255,143,0,.12)' };
-                if (item.includes('পানিশূন্যতা') || item.includes('Dehydration')) return { icon: 'fa-droplet-slash', color: '#f4511e', bg: 'rgba(244,81,30,.12)' };
-                if (item.includes('অপুষ্টি') || item.includes('malnutrition')) return { icon: 'fa-child', color: '#e64a19', bg: 'rgba(230,74,25,.12)' };
-                if (item.includes('আর্সেনিকোসিস') || item.includes('Arsenicosis')) return { icon: 'fa-skull-crossbones', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('ফ্লুরোসিস') || item.includes('fluorosis')) return { icon: 'fa-tooth', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
-                if (item.includes('স্নায়ুতন্ত্র') || item.includes('Nervous')) return { icon: 'fa-brain', color: '#ad1457', bg: 'rgba(173,20,87,.12)' };
-                if (item.includes('বুদ্ধি') || item.includes('স্মৃতিশক্তি') || item.includes('intelligence') || item.includes('memory')) return { icon: 'fa-book-medical', color: '#6a1b9a', bg: 'rgba(106,27,154,.12)' };
-                if (item.includes('কিডনি') || item.includes('Kidney')) return { icon: 'fa-person-breastfeeding', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
-                if (item.includes('লিভার') || item.includes('Liver') || item.includes('liver')) return { icon: 'fa-user-doctor', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('ক্যান্সার') || item.includes('cancer')) return { icon: 'fa-ribbon', color: '#b71c1c', bg: 'rgba(183,28,28,.12)' };
-                if (item.includes('হরমোন') || item.includes('Hormonal')) return { icon: 'fa-dna', color: '#880e4f', bg: 'rgba(136,14,79,.12)' };
-                if (item.includes('হৃদরোগ') || item.includes('heart')) return { icon: 'fa-heart-pulse', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
-                return { icon: 'fa-circle-check', color: '#7b1fa2', bg: 'rgba(123,31,162,.12)' };
+                if (item.includes("ডায়রিয়া") || item.includes("Diarrhea"))
+                  return {
+                    icon: "fa-droplet",
+                    color: "#ff6f00",
+                    bg: "rgba(255,111,0,.12)",
+                  };
+                if (
+                  item.includes("ডিজেন্ট্রি") ||
+                  item.includes("আমাশয়") ||
+                  item.includes("Dysentery")
+                )
+                  return {
+                    icon: "fa-virus",
+                    color: "#d32f2f",
+                    bg: "rgba(211,47,47,.12)",
+                  };
+                if (item.includes("টাইফয়েড") || item.includes("Typhoid"))
+                  return {
+                    icon: "fa-temperature-high",
+                    color: "#e65100",
+                    bg: "rgba(230,81,0,.12)",
+                  };
+                if (item.includes("কলেরা") || item.includes("Cholera"))
+                  return {
+                    icon: "fa-disease",
+                    color: "#c62828",
+                    bg: "rgba(198,40,40,.12)",
+                  };
+                if (item.includes("হেপাটাইটিস") || item.includes("Hepatitis"))
+                  return {
+                    icon: "fa-syringe",
+                    color: "#f57c00",
+                    bg: "rgba(245,124,0,.12)",
+                  };
+                if (
+                  item.includes("জিয়ার্ডিয়াসিস") ||
+                  item.includes("Giardiasis")
+                )
+                  return {
+                    icon: "fa-bacterium",
+                    color: "#ef6c00",
+                    bg: "rgba(239,108,0,.12)",
+                  };
+                if (
+                  item.includes("পেটের সংক্রমণ") ||
+                  item.includes("Stomach infection")
+                )
+                  return {
+                    icon: "fa-lungs-virus",
+                    color: "#ff6f00",
+                    bg: "rgba(255,111,0,.12)",
+                  };
+                if (item.includes("বমি") || item.includes("Vomiting"))
+                  return {
+                    icon: "fa-head-side-cough",
+                    color: "#f57c00",
+                    bg: "rgba(245,124,0,.12)",
+                  };
+                if (item.includes("পেট ব্যথা") || item.includes("Stomach pain"))
+                  return {
+                    icon: "fa-circle-exclamation",
+                    color: "#ff8f00",
+                    bg: "rgba(255,143,0,.12)",
+                  };
+                if (
+                  item.includes("পানিশূন্যতা") ||
+                  item.includes("Dehydration")
+                )
+                  return {
+                    icon: "fa-droplet-slash",
+                    color: "#f4511e",
+                    bg: "rgba(244,81,30,.12)",
+                  };
+                if (item.includes("অপুষ্টি") || item.includes("malnutrition"))
+                  return {
+                    icon: "fa-child",
+                    color: "#e64a19",
+                    bg: "rgba(230,74,25,.12)",
+                  };
+                if (
+                  item.includes("আর্সেনিকোসিস") ||
+                  item.includes("Arsenicosis")
+                )
+                  return {
+                    icon: "fa-skull-crossbones",
+                    color: "#d32f2f",
+                    bg: "rgba(211,47,47,.12)",
+                  };
+                if (item.includes("ফ্লুরোসিস") || item.includes("fluorosis"))
+                  return {
+                    icon: "fa-tooth",
+                    color: "#c62828",
+                    bg: "rgba(198,40,40,.12)",
+                  };
+                if (item.includes("স্নায়ুতন্ত্র") || item.includes("Nervous"))
+                  return {
+                    icon: "fa-brain",
+                    color: "#ad1457",
+                    bg: "rgba(173,20,87,.12)",
+                  };
+                if (
+                  item.includes("বুদ্ধি") ||
+                  item.includes("স্মৃতিশক্তি") ||
+                  item.includes("intelligence") ||
+                  item.includes("memory")
+                )
+                  return {
+                    icon: "fa-book-medical",
+                    color: "#6a1b9a",
+                    bg: "rgba(106,27,154,.12)",
+                  };
+                if (item.includes("কিডনি") || item.includes("Kidney"))
+                  return {
+                    icon: "fa-person-breastfeeding",
+                    color: "#c62828",
+                    bg: "rgba(198,40,40,.12)",
+                  };
+                if (
+                  item.includes("লিভার") ||
+                  item.includes("Liver") ||
+                  item.includes("liver")
+                )
+                  return {
+                    icon: "fa-user-doctor",
+                    color: "#d32f2f",
+                    bg: "rgba(211,47,47,.12)",
+                  };
+                if (item.includes("ক্যান্সার") || item.includes("cancer"))
+                  return {
+                    icon: "fa-ribbon",
+                    color: "#b71c1c",
+                    bg: "rgba(183,28,28,.12)",
+                  };
+                if (item.includes("হরমোন") || item.includes("Hormonal"))
+                  return {
+                    icon: "fa-dna",
+                    color: "#880e4f",
+                    bg: "rgba(136,14,79,.12)",
+                  };
+                if (item.includes("হৃদরোগ") || item.includes("heart"))
+                  return {
+                    icon: "fa-heart-pulse",
+                    color: "#c62828",
+                    bg: "rgba(198,40,40,.12)",
+                  };
+                return {
+                  icon: "fa-circle-check",
+                  color: "#7b1fa2",
+                  bg: "rgba(123,31,162,.12)",
+                };
               };
 
               const renderList = (items) =>
                 items
-                  .map(
-                    (item, idx) => {
-                      const iconData = getItemIcon(item);
-                      return `
+                  .map((item, idx) => {
+                    const iconData = getItemIcon(item);
+                    return `
                       <li style="background:linear-gradient(135deg, rgba(255,255,255,.85) 0%, ${iconData.bg} 100%);border-left:4px solid ${iconData.color};border-radius:12px;padding:5px 5px;margin-bottom:5px;box-shadow:0 6px 18px rgba(103,58,183,.14), 0 2px 8px ${iconData.bg};transition:all 0.3s ease; display: flex; align-items: center;">
                         <span style="width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;margin-right:5px;box-shadow:0 4px 12px ${iconData.bg};"><i class="fa-solid ${iconData.icon}" style="${iconData.color};font-size:16px;"></i></span>
                         <span style="color:#333;font-weight:500;">${item}</span>
                       </li>
                     `;
-                    }
-                  )
+                  })
                   .join("");
 
               const getSectionIcon = (title) => {
-                if (title.includes('পানিবাহিত রোগ') || title.includes('Waterborne')) return { icon: 'fa-water', color: '#0277bd', gradient: 'linear-gradient(135deg,#0288d1,#01579b)' };
-                if (title.includes('পেটের সমস্যা') || title.includes('Digestive')) return { icon: 'fa-person-breastfeeding', color: '#ff6f00', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
-                if (title.includes('রাসায়নিক দূষণ') || title.includes('Chemical')) return { icon: 'fa-flask', color: '#d32f2f', gradient: 'linear-gradient(135deg,#e53935,#c62828)' };
-                if (title.includes('ত্বকের রোগ') || title.includes('Skin')) return { icon: 'fa-hand-dots', color: '#f57c00', gradient: 'linear-gradient(135deg,#fb8c00,#ef6c00)' };
-                if (title.includes('দীর্ঘমেয়াদি') || title.includes('ক্রনিক') || title.includes('Long-term') || title.includes('Chronic')) return { icon: 'fa-heart-circle-xmark', color: '#c62828', gradient: 'linear-gradient(135deg,#d32f2f,#b71c1c)' };
-                return { icon: 'fa-circle-info', color: '#7b1fa2', gradient: 'linear-gradient(135deg,#8e24aa,#6a1b9a)' };
+                if (
+                  title.includes("পানিবাহিত রোগ") ||
+                  title.includes("Waterborne")
+                )
+                  return {
+                    icon: "fa-water",
+                    color: "#0277bd",
+                    gradient: "linear-gradient(135deg,#0288d1,#01579b)",
+                  };
+                if (
+                  title.includes("পেটের সমস্যা") ||
+                  title.includes("Digestive")
+                )
+                  return {
+                    icon: "fa-person-breastfeeding",
+                    color: "#ff6f00",
+                    gradient: "linear-gradient(135deg,#ff8f00,#e65100)",
+                  };
+                if (
+                  title.includes("রাসায়নিক দূষণ") ||
+                  title.includes("Chemical")
+                )
+                  return {
+                    icon: "fa-flask",
+                    color: "#d32f2f",
+                    gradient: "linear-gradient(135deg,#e53935,#c62828)",
+                  };
+                if (title.includes("ত্বকের রোগ") || title.includes("Skin"))
+                  return {
+                    icon: "fa-hand-dots",
+                    color: "#f57c00",
+                    gradient: "linear-gradient(135deg,#fb8c00,#ef6c00)",
+                  };
+                if (
+                  title.includes("দীর্ঘমেয়াদি") ||
+                  title.includes("ক্রনিক") ||
+                  title.includes("Long-term") ||
+                  title.includes("Chronic")
+                )
+                  return {
+                    icon: "fa-heart-circle-xmark",
+                    color: "#c62828",
+                    gradient: "linear-gradient(135deg,#d32f2f,#b71c1c)",
+                  };
+                return {
+                  icon: "fa-circle-info",
+                  color: "#7b1fa2",
+                  gradient: "linear-gradient(135deg,#8e24aa,#6a1b9a)",
+                };
               };
 
               const renderSection = (section) => {
@@ -17673,7 +20169,8 @@ const bpPrevention = [
                   </h3>
                   ${section.items ? `<ul class="list-unstyled feature-list grid-2 mb-0">${renderList(section.items)}</ul>` : `<div style="border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
                 </div>
-              `;}
+              `;
+              };
 
               return `
                 <div class="lesson-slide">
@@ -17715,7 +20212,7 @@ const bpPrevention = [
             id: "ch22-lesson-6",
             title: yhLang(
               "Steps to Improve Water, Sanitation and Hygiene",
-              "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ"
+              "পানি, স্যানিটেশন এবং স্বাস্থ্যবিধি উন্নত করার জন্য প্রয়োজনীয় পদক্ষেপ",
             ),
             icon: "fa-hands-bubbles",
             gradientClass: "bg-gradient-mint",
@@ -17725,38 +20222,38 @@ const bpPrevention = [
               const personalPractices = [
                 yhLang(
                   "Universal participation in safe toilet and sanitation systems",
-                  "নিরাপদ টয়লেট ও স্যানিটেশন ব্যবস্থায় সার্বজনীন অংশগ্রহন"
+                  "নিরাপদ টয়লেট ও স্যানিটেশন ব্যবস্থায় সার্বজনীন অংশগ্রহন",
                 ),
                 yhLang(
                   "Ensuring adequate sanitation and hygiene facilities",
-                  "পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি ঝুঁকি নিশ্চিত করন"
+                  "পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি ঝুঁকি নিশ্চিত করন",
                 ),
                 yhLang(
                   "Purifying water at home by boiling, filtering, and using chlorine/alum",
-                  "বাড়িতে  ফুটিয়ে, ফিল্টার ও ক্লোরিন/ ফিটকিরি ব্যাবহার করে পানি বিশুদ্ধ করণ"
+                  "বাড়িতে  ফুটিয়ে, ফিল্টার ও ক্লোরিন/ ফিটকিরি ব্যাবহার করে পানি বিশুদ্ধ করণ",
                 ),
                 yhLang(
                   "Proper storage of safe drinking water to prevent re-contamination is very important",
-                  "পুনঃদূষণ রোধ করার জন্য সঠিক ভাবে নিরাপদ খাবার পানি সংরক্ষণ  অত্যন্ত গুরুত্বপূর্ণ।"
+                  "পুনঃদূষণ রোধ করার জন্য সঠিক ভাবে নিরাপদ খাবার পানি সংরক্ষণ  অত্যন্ত গুরুত্বপূর্ণ।",
                 ),
                 yhLang(
                   "Ensuring proper handwashing",
-                  "সঠিকভাবে হাত ধোয়া নিশ্ছিত করা"
+                  "সঠিকভাবে হাত ধোয়া নিশ্ছিত করা",
                 ),
               ];
 
               const communityActions = [
                 yhLang(
                   "Safe sanitation services must be ensured as part of services at local or community level",
-                  "স্থানীয় বা কমিউনিটি পর্যায়ে সেবার  অংশ হিসেবে নিরাপদ স্যানিটেশন সেবা নিশ্চিত করতে হবে।"
+                  "স্থানীয় বা কমিউনিটি পর্যায়ে সেবার  অংশ হিসেবে নিরাপদ স্যানিটেশন সেবা নিশ্চিত করতে হবে।",
                 ),
                 yhLang(
                   "Ensure national level accessibility to sanitation and hygiene and ensure necessary information reaches everyone",
-                  "স্যানিটেশন এবং স্বাস্থ্যবিধিতে জাতীয় পর্যায়ে সহজলভ্যতা নিশ্চিত করা এবং প্রয়জনীয় তথ্য সকলের নিকট পৌঁছানো নিশ্চিত করতে হবে।"
+                  "স্যানিটেশন এবং স্বাস্থ্যবিধিতে জাতীয় পর্যায়ে সহজলভ্যতা নিশ্চিত করা এবং প্রয়জনীয় তথ্য সকলের নিকট পৌঁছানো নিশ্চিত করতে হবে।",
                 ),
                 yhLang(
                   "Ensure adequate sanitation and hygiene services in schools and health centers and ensure accessibility for all",
-                  "স্কুল এবং স্বাস্থ্যকেন্দ্রে পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি সেবা নিশ্চিত ও সকলের প্রাপ্যতা নিশ্চিত করা।"
+                  "স্কুল এবং স্বাস্থ্যকেন্দ্রে পর্যাপ্ত স্যানিটেশন এবং স্বাস্থ্যবিধি সেবা নিশ্চিত ও সকলের প্রাপ্যতা নিশ্চিত করা।",
                 ),
               ];
 
@@ -17764,11 +20261,11 @@ const bpPrevention = [
                 items
                   .map(
                     (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.66)' : 'rgba(224,242,241,.72)'};border-left:3px solid ${idx % 2 === 0 ? '#26a69a' : '#00acc1'};border-radius:9px;padding:10px 8px;margin-bottom:px;box-shadow:${idx % 2 === 0 ? '0 4px 10px rgba(0,150,136,.15)' : '0 5px 12px rgba(0,172,193,.14)'};">
-                        <i class="fa-solid ${idx < 2 ? 'fa-soap' : idx < 4 ? 'fa-droplet' : 'fa-people-group'} ${idx < 2 ? 'text-success' : idx < 4 ? 'text-info' : 'text-primary'} me-2"></i>
+                      <li style="background:${idx % 2 === 0 ? "rgba(255,255,255,.66)" : "rgba(224,242,241,.72)"};border-left:3px solid ${idx % 2 === 0 ? "#26a69a" : "#00acc1"};border-radius:9px;padding:10px 8px;margin-bottom:px;box-shadow:${idx % 2 === 0 ? "0 4px 10px rgba(0,150,136,.15)" : "0 5px 12px rgba(0,172,193,.14)"};">
+                        <i class="fa-solid ${idx < 2 ? "fa-soap" : idx < 4 ? "fa-droplet" : "fa-people-group"} ${idx < 2 ? "text-success" : idx < 4 ? "text-info" : "text-primary"} me-2"></i>
                         <span style="">${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -17816,7 +20313,7 @@ const bpPrevention = [
             id: "ch22-lesson-7",
             title: yhLang(
               "Lead and Other Hazardous Chemicals",
-              "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক"
+              "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক",
             ),
             icon: "fa-flask",
             gradientClass: "bg-gradient-crimson",
@@ -17825,25 +20322,71 @@ const bpPrevention = [
             content: (function () {
               const introduction = yhLang(
                 "Due to development and industrialization, chemicals are increasingly used in every aspect of our lives. These chemicals have adverse effects on both our environment and our health. Children and pregnant women are at the greatest risk from the short-term and long-term effects of chemicals.",
-                "উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে।"
+                "উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে।",
               );
 
               const definition = yhLang(
                 "Metals with atomic density 5 times or more than water are referred to as heavy metals or hazardous chemical substances. The main hazardous chemicals for public health are listed below:",
-                "পানির চেয়ে ৫ গুণ বা তার বেশি পারমাণবিক ঘনত্ব সম্পন্ন ধাতুসমূহের গ্রুপকে ভারী ধাতু বা ক্ষতিকারক রাসায়নিক পদার্থ হিসাবে উল্লেখ করা হয়। জনস্বাস্থ্যের জন্য প্রধান প্রধান ক্ষতিকারক রাসায়নিক পদার্থ গুলি নীচে দেয়া হল:"
+                "পানির চেয়ে ৫ গুণ বা তার বেশি পারমাণবিক ঘনত্ব সম্পন্ন ধাতুসমূহের গ্রুপকে ভারী ধাতু বা ক্ষতিকারক রাসায়নিক পদার্থ হিসাবে উল্লেখ করা হয়। জনস্বাস্থ্যের জন্য প্রধান প্রধান ক্ষতিকারক রাসায়নিক পদার্থ গুলি নীচে দেয়া হল:",
               );
 
               const chemicals = [
-                { icon: "fa-flask-vial", color: "m22l7-chem-lead", text: yhLang("Lead", "সীসা") },
-                { icon: "fa-flask-vial", color: "m22l7-chem-arsenic", text: yhLang("Arsenic", "আর্সেনিক") },
-                { icon: "fa-wind", color: "m22l7-chem-nitrogen", text: yhLang("Nitrogen Dioxide & Carbon Monoxide", "নাইট্রোজেন ডাই অক্সাইড কার্বন মনোক্সাইড") },
-                { icon: "fa-droplet", color: "m22l7-chem-hydrocarbon", text: yhLang("Hydrocarbons: Kerosene, Turpentine, Paraffin, etc.", "হাইড্রোকার্বন- কেরোসিন, টারপেন, প্যারাফন ইত্যাদি") },
-                { icon: "fa-warning", color: "m22l7-chem-asbestos", text: yhLang("Asbestos", "অ্যাসবেস্টস") },
-                { icon: "fa-teeth", color: "m22l7-chem-fluoride", text: yhLang("Fluoride", "ফ্লোরাইড") },
-                { icon: "fa-flask-vial", color: "m22l7-chem-mercury", text: yhLang("Mercury", "পারদ") },
-                { icon: "fa-flask-vial", color: "m22l7-chem-benzene", text: yhLang("Benzene", "বেনজিন") },
-                { icon: "fa-flask-vial", color: "m22l7-chem-cadmium", text: yhLang("Cadmium", "ক্যাডমিয়াম") },
-                { icon: "fa-biohazard", color: "m22l7-chem-dioxin", text: yhLang("Dioxin", "ডাইঅক্সিন") },
+                {
+                  icon: "fa-flask-vial",
+                  color: "m22l7-chem-lead",
+                  text: yhLang("Lead", "সীসা"),
+                },
+                {
+                  icon: "fa-flask-vial",
+                  color: "m22l7-chem-arsenic",
+                  text: yhLang("Arsenic", "আর্সেনিক"),
+                },
+                {
+                  icon: "fa-wind",
+                  color: "m22l7-chem-nitrogen",
+                  text: yhLang(
+                    "Nitrogen Dioxide & Carbon Monoxide",
+                    "নাইট্রোজেন ডাই অক্সাইড কার্বন মনোক্সাইড",
+                  ),
+                },
+                {
+                  icon: "fa-droplet",
+                  color: "m22l7-chem-hydrocarbon",
+                  text: yhLang(
+                    "Hydrocarbons: Kerosene, Turpentine, Paraffin, etc.",
+                    "হাইড্রোকার্বন- কেরোসিন, টারপেন, প্যারাফন ইত্যাদি",
+                  ),
+                },
+                {
+                  icon: "fa-warning",
+                  color: "m22l7-chem-asbestos",
+                  text: yhLang("Asbestos", "অ্যাসবেস্টস"),
+                },
+                {
+                  icon: "fa-teeth",
+                  color: "m22l7-chem-fluoride",
+                  text: yhLang("Fluoride", "ফ্লোরাইড"),
+                },
+                {
+                  icon: "fa-flask-vial",
+                  color: "m22l7-chem-mercury",
+                  text: yhLang("Mercury", "পারদ"),
+                },
+                {
+                  icon: "fa-flask-vial",
+                  color: "m22l7-chem-benzene",
+                  text: yhLang("Benzene", "বেনজিন"),
+                },
+                {
+                  icon: "fa-flask-vial",
+                  color: "m22l7-chem-cadmium",
+                  text: yhLang("Cadmium", "ক্যাডমিয়াম"),
+                },
+                {
+                  icon: "fa-biohazard",
+                  color: "m22l7-chem-dioxin",
+                  text: yhLang("Dioxin", "ডাইঅক্সিন"),
+                },
               ];
 
               const healthProblems = [
@@ -17854,52 +20397,96 @@ const bpPrevention = [
                 yhLang("Low birth weight", "কম জন্মওজন"),
                 yhLang("Premature birth", "সময়ের পূর্বে জন্ম"),
                 yhLang("Stillbirth", "মৃত শিশুর জন্ম"),
-                yhLang("Reproductive and developmental problems", "প্রজনন ও বিকাশজনিত সমস্যা"),
+                yhLang(
+                  "Reproductive and developmental problems",
+                  "প্রজনন ও বিকাশজনিত সমস্যা",
+                ),
                 yhLang("Premature death", "অকাল মৃত্যু"),
               ];
 
               const preventionMeasures = [
-                { icon: "fa-hand-fist", color: "m22l7-prev-a", text: yhLang("Keep children and pregnant women away from lead-containing batteries and paints", "সীসা যুক্ত ব্যাটারি ও রঙের সংস্পর্শে আসা থেকে শিশু-কিশোর এবং গর্ভবতী মহিলাদের বিরত রাখতে হবে") },
-                { icon: "fa-shield", color: "m22l7-prev-b", text: yhLang("Keep children away from pesticides", "কীটনাশক হতে শিশু-কিশোরদের দুরে রাখতে হবে") },
-                { icon: "fa-recycle", color: "m22l7-prev-c", text: yhLang("Proper industrial and waste management", "শিল্প ও বর্জ্য ব্যবস্থাপনা সঠিক ভাবে পালন করতে হবে") },
-                { icon: "fa-soap", color: "m22l7-prev-d", text: yhLang("Maintain proper hygiene practices", "যথাযথ স্বাস্থ্যবিধি মেনে চলতে হবে") },
-                { icon: "fa-lightbulb", color: "m22l7-prev-e", text: yhLang("Develop national strategy for environmental management of lead-acid batteries, discouraging reuse", "পুনর্ব্যবহার নিরুৎসাহিত করে সীসা-অ্যাসিড ব্যাটারির পরিবেশগত ব্যবস্থাপনার জন্য একটি জাতীয় কৌশল তৈরি করতে হবে") },
+                {
+                  icon: "fa-hand-fist",
+                  color: "m22l7-prev-a",
+                  text: yhLang(
+                    "Keep children and pregnant women away from lead-containing batteries and paints",
+                    "সীসা যুক্ত ব্যাটারি ও রঙের সংস্পর্শে আসা থেকে শিশু-কিশোর এবং গর্ভবতী মহিলাদের বিরত রাখতে হবে",
+                  ),
+                },
+                {
+                  icon: "fa-shield",
+                  color: "m22l7-prev-b",
+                  text: yhLang(
+                    "Keep children away from pesticides",
+                    "কীটনাশক হতে শিশু-কিশোরদের দুরে রাখতে হবে",
+                  ),
+                },
+                {
+                  icon: "fa-recycle",
+                  color: "m22l7-prev-c",
+                  text: yhLang(
+                    "Proper industrial and waste management",
+                    "শিল্প ও বর্জ্য ব্যবস্থাপনা সঠিক ভাবে পালন করতে হবে",
+                  ),
+                },
+                {
+                  icon: "fa-soap",
+                  color: "m22l7-prev-d",
+                  text: yhLang(
+                    "Maintain proper hygiene practices",
+                    "যথাযথ স্বাস্থ্যবিধি মেনে চলতে হবে",
+                  ),
+                },
+                {
+                  icon: "fa-lightbulb",
+                  color: "m22l7-prev-e",
+                  text: yhLang(
+                    "Develop national strategy for environmental management of lead-acid batteries, discouraging reuse",
+                    "পুনর্ব্যবহার নিরুৎসাহিত করে সীসা-অ্যাসিড ব্যাটারির পরিবেশগত ব্যবস্থাপনার জন্য একটি জাতীয় কৌশল তৈরি করতে হবে",
+                  ),
+                },
               ];
 
               const renderChemicals = (items, delay) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m22l7-chem-item ${item.color}" data-aos="flip-left" data-aos-delay="${delay + idx * 50}">
                       <div class="m22l7-chem-icon">
                         <i class="fa-solid ${item.icon}" style="color:${item.color}"></i>
                       </div>
                       <span class="m22l7-chem-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               const renderHealthProblems = (items, delay) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m22l7-health-item" data-aos="zoom-in" data-aos-delay="${delay + idx * 40}">
                       <div class="m22l7-health-icon">
                         <i class="fa-solid fa-circle-exclamation"></i>
                       </div>
                       <span class="m22l7-health-text">${item}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               const renderPrevention = (items, delay) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m22l7-prevent-item ${item.color}" data-aos="fade-right" data-aos-delay="${delay + idx * 55}">
                       <div class="m22l7-prevent-icon">
                         <i class="fa-solid ${item.icon}"></i>
                       </div>
                       <span class="m22l7-prevent-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               return `
@@ -17971,12 +20558,12 @@ const bpPrevention = [
                 </div>`;
             })(),
           },
- 
+
           {
             id: "ch22-lesson-8",
             title: yhLang(
               "Pesticides and Health Risks for Children and Adolescents",
-              "কীটনাশক এবং শিশু-কিশোরদের স্বাস্থ্য ঝুঁকি"
+              "কীটনাশক এবং শিশু-কিশোরদের স্বাস্থ্য ঝুঁকি",
             ),
             icon: "fa-spray-can-sparkles",
             gradientClass: "bg-gradient-rose",
@@ -17984,71 +20571,89 @@ const bpPrevention = [
             quiz: null,
             content: (function () {
               const pesticidePoints = [
-              yhLang(
-                "Pesticides are a broad class of chemical substances designed to kill and control unwanted pests such as insects and rodents in agriculture, homes, yards, gardens, and plants. As Bangladesh is an agriculture-based country, these chemicals are widely used to protect crops.",
-                "কীটনাশক রাসায়নিক উপাদানের একটি বিস্তৃত শ্রেণীবিভাগ যা কৃষি, বাড়ি, উঠান, বাগান, গাছপালা, পোকামাকড় এবং ইঁদুরের মতো অবাঞ্ছিত কীটপতঙ্গ হত্যা এবং নিয়ন্ত্রণের জন্য তৈরি করা হয়। বাংলাদেশ একটি কৃষিপ্রধান দেশ হওয়ায়, ফসল রক্ষার জন্য এই রাসায়নিকগুলি ব্যাপকভাবে ব্যবহৃত হয়।"
-              ),
-              yhLang(
-                "All pesticides are inherently toxic and pose both acute and long-term health risks, including carcinogenicity and mutagenicity. Due to dietary habits, developmental factors, and physiological characteristics, children are more vulnerable to pesticide exposure and its adverse effects.",
-                "সকল কীটনাশক সহজাতভাবে বিষাক্ত এবং তীব্র এবং দীর্ঘস্থায়ী স্বাস্থ্য ঝুঁকি বহন করে যার মধ্যে রয়েছে কার্সিনোজেনিসিটি এবং মিউটেজেনিসিটি। খাদ্যাভ্যাস, বিকাশ-জনিত এবং শারীরবৃত্তীয় কারণগুলির কারণে শিশুরা কীটনাশকের গ্রহণ এবং প্রতিকূল প্রভাবের জন্য বেশি ঝুঁকিপূর্ণ।"
-              ),
-              yhLang(
-                "Pesticides can enter our body through breathing, food or drinks, or through skin contact and cause toxic reactions.",
-                "শ্বাসপ্রশ্বাস, খাবার বা পানীয়ের মাদ্ধমে বা ত্বকের সংস্পর্শে আসার মাধ্যমে কীটনাশক আমাদের শরীরে প্রবেশ করে ও বিষক্রিয়া ঘটায়।"
-              ),
-            ];
-            const riskCards = [
-  {
-    title: yhLang("1. Nervous System Damage", "১. স্নায়ুতন্ত্রের ক্ষতি"),
-    description: yhLang(
-      "Many chemical components of pesticides directly damage the nervous system. This may lead to memory loss, lack of attention, learning difficulties, or impaired neurological development.",
-      "কীটনাশকের অনেক রাসায়নিক উপাদান স্নায়ুতন্ত্রকে সরাসরি ক্ষতি করে। এতে স্মৃতিশক্তি কমে যাওয়া, মনোযোগের ঘাটতি, শেখার সমস্যা বা স্নায়বিক ব্যাহত হতে পারে।"
-    ),
-  },
-  {
-    title: yhLang("2. Hormonal Imbalance", "২. হরমোনের ভারসাম্যহীনতা"),
-    description: yhLang(
-      "Some pesticides disrupt the normal functioning of hormones in the body. This can cause problems during puberty, hinder growth, and affect the development of reproductive organs.",
-      "কিছু কীটনাশক দেহের হরমোনের স্বাভাবিক কাজ ব্যাহত করে। এর ফলে বয়ঃসন্ধির সমস্যা, বৃদ্ধি ব্যাহত হওয়া ও প্রজনন অঙ্গের বিকাশে সমস্যা দেখা দিতে পারে।"
-    ),
-  },
-  {
-    title: yhLang("3. Respiratory Problems", "৩. শ্বাস-প্রশ্বাসের সমস্যা"),
-    description: yhLang(
-      "Breathing in pesticide fumes or vapors may cause asthma, coughing, breathing difficulties, allergies, and inflammation of the lungs.",
-      "কীটনাশকের গন্ধ বা বাষ্পে শ্বাস নিলে হাঁপানি, কাশি, শ্বাসকষ্ট, অ্যালার্জি ও ফুসফুসের প্রদাহ  দেখা দিতে পারে।"
-    ),
-  },
-  {
-    title: yhLang("4. Skin and Eye Irritation", "৪. ত্বক ও চোখের জ্বালা"),
-    description: yhLang(
-      "Direct contact with pesticides can cause skin diseases, itching, rashes, eye irritation, redness, or a burning sensation.",
-      "কীটনাশকের সরাসরি সংস্পর্শে চর্মরোগ, চুলকানি, র‌্যাশ, চোখে জ্বালা, লালভাব বা পোড়া অনুভূতি হতে পারে।"
-    ),
-  },
-  {
-    title: yhLang("5. Stomach Problems and Poisoning", "৫. তীব্র বিষক্রিয়া (Acute poisoning) হতে পারে।"),
-    description: yhLang(
-      "When pesticides enter the body through food or water, they may cause vomiting, stomach pain, dizziness, diarrhea, and in severe cases unconsciousness or seizures.",
-      "খাবার বা পানির মাধ্যমে কীটনাশক শরীরে ঢুকলে বমি, পেট ব্যথা, মাথা ঘোরা, ডায়রিয়া, গুরুতর ক্ষেত্রে অচেতন হওয়া বা খিঁচুনি দেখা যায়।"
-    ),
-  },
-  {
-    title: yhLang("6. Risk of Cancer", "৬. ক্যান্সারের ঝুঁকি"),
-    description: yhLang(
-      "Long-term exposure to some pesticides increases the risk of cancers such as leukemia, lymphoma, and brain tumors, especially among those involved in agricultural work.",
-      "দীর্ঘমেয়াদে কিছু কীটনাশক লিউকেমিয়া, লিম্ফোমা, মস্তিষ্কের টিউমারসহ বিভিন্ন ক্যান্সারের ঝুঁকি বাড়ায়, বিশেষত যারা কৃষি-সম্পর্কিত কাজে জড়িত থাকে।"
-    ),
-  },
-  {
-    title: yhLang("7. Weakened Immune System", "৭. রোগ প্রতিরোধ ক্ষমতা কমে যাওয়া"),
-    description: yhLang(
-      "Pesticides weaken the immune system, making children and adolescents more vulnerable to illnesses.",
-      "কীটনাশক ইমিউন সিস্টেম দুর্বল করে, ফলে শিশু-কিশোররা সহজে অসুস্থ করে তুলতে পারে।"
-    ),
-  },
-];
-const renderCards = () =>
+                yhLang(
+                  "Pesticides are a broad class of chemical substances designed to kill and control unwanted pests such as insects and rodents in agriculture, homes, yards, gardens, and plants. As Bangladesh is an agriculture-based country, these chemicals are widely used to protect crops.",
+                  "কীটনাশক রাসায়নিক উপাদানের একটি বিস্তৃত শ্রেণীবিভাগ যা কৃষি, বাড়ি, উঠান, বাগান, গাছপালা, পোকামাকড় এবং ইঁদুরের মতো অবাঞ্ছিত কীটপতঙ্গ হত্যা এবং নিয়ন্ত্রণের জন্য তৈরি করা হয়। বাংলাদেশ একটি কৃষিপ্রধান দেশ হওয়ায়, ফসল রক্ষার জন্য এই রাসায়নিকগুলি ব্যাপকভাবে ব্যবহৃত হয়।",
+                ),
+                yhLang(
+                  "All pesticides are inherently toxic and pose both acute and long-term health risks, including carcinogenicity and mutagenicity. Due to dietary habits, developmental factors, and physiological characteristics, children are more vulnerable to pesticide exposure and its adverse effects.",
+                  "সকল কীটনাশক সহজাতভাবে বিষাক্ত এবং তীব্র এবং দীর্ঘস্থায়ী স্বাস্থ্য ঝুঁকি বহন করে যার মধ্যে রয়েছে কার্সিনোজেনিসিটি এবং মিউটেজেনিসিটি। খাদ্যাভ্যাস, বিকাশ-জনিত এবং শারীরবৃত্তীয় কারণগুলির কারণে শিশুরা কীটনাশকের গ্রহণ এবং প্রতিকূল প্রভাবের জন্য বেশি ঝুঁকিপূর্ণ।",
+                ),
+                yhLang(
+                  "Pesticides can enter our body through breathing, food or drinks, or through skin contact and cause toxic reactions.",
+                  "শ্বাসপ্রশ্বাস, খাবার বা পানীয়ের মাদ্ধমে বা ত্বকের সংস্পর্শে আসার মাধ্যমে কীটনাশক আমাদের শরীরে প্রবেশ করে ও বিষক্রিয়া ঘটায়।",
+                ),
+              ];
+              const riskCards = [
+                {
+                  title: yhLang(
+                    "1. Nervous System Damage",
+                    "১. স্নায়ুতন্ত্রের ক্ষতি",
+                  ),
+                  description: yhLang(
+                    "Many chemical components of pesticides directly damage the nervous system. This may lead to memory loss, lack of attention, learning difficulties, or impaired neurological development.",
+                    "কীটনাশকের অনেক রাসায়নিক উপাদান স্নায়ুতন্ত্রকে সরাসরি ক্ষতি করে। এতে স্মৃতিশক্তি কমে যাওয়া, মনোযোগের ঘাটতি, শেখার সমস্যা বা স্নায়বিক ব্যাহত হতে পারে।",
+                  ),
+                },
+                {
+                  title: yhLang(
+                    "2. Hormonal Imbalance",
+                    "২. হরমোনের ভারসাম্যহীনতা",
+                  ),
+                  description: yhLang(
+                    "Some pesticides disrupt the normal functioning of hormones in the body. This can cause problems during puberty, hinder growth, and affect the development of reproductive organs.",
+                    "কিছু কীটনাশক দেহের হরমোনের স্বাভাবিক কাজ ব্যাহত করে। এর ফলে বয়ঃসন্ধির সমস্যা, বৃদ্ধি ব্যাহত হওয়া ও প্রজনন অঙ্গের বিকাশে সমস্যা দেখা দিতে পারে।",
+                  ),
+                },
+                {
+                  title: yhLang(
+                    "3. Respiratory Problems",
+                    "৩. শ্বাস-প্রশ্বাসের সমস্যা",
+                  ),
+                  description: yhLang(
+                    "Breathing in pesticide fumes or vapors may cause asthma, coughing, breathing difficulties, allergies, and inflammation of the lungs.",
+                    "কীটনাশকের গন্ধ বা বাষ্পে শ্বাস নিলে হাঁপানি, কাশি, শ্বাসকষ্ট, অ্যালার্জি ও ফুসফুসের প্রদাহ  দেখা দিতে পারে।",
+                  ),
+                },
+                {
+                  title: yhLang(
+                    "4. Skin and Eye Irritation",
+                    "৪. ত্বক ও চোখের জ্বালা",
+                  ),
+                  description: yhLang(
+                    "Direct contact with pesticides can cause skin diseases, itching, rashes, eye irritation, redness, or a burning sensation.",
+                    "কীটনাশকের সরাসরি সংস্পর্শে চর্মরোগ, চুলকানি, র‌্যাশ, চোখে জ্বালা, লালভাব বা পোড়া অনুভূতি হতে পারে।",
+                  ),
+                },
+                {
+                  title: yhLang(
+                    "5. Stomach Problems and Poisoning",
+                    "৫. তীব্র বিষক্রিয়া (Acute poisoning) হতে পারে।",
+                  ),
+                  description: yhLang(
+                    "When pesticides enter the body through food or water, they may cause vomiting, stomach pain, dizziness, diarrhea, and in severe cases unconsciousness or seizures.",
+                    "খাবার বা পানির মাধ্যমে কীটনাশক শরীরে ঢুকলে বমি, পেট ব্যথা, মাথা ঘোরা, ডায়রিয়া, গুরুতর ক্ষেত্রে অচেতন হওয়া বা খিঁচুনি দেখা যায়।",
+                  ),
+                },
+                {
+                  title: yhLang("6. Risk of Cancer", "৬. ক্যান্সারের ঝুঁকি"),
+                  description: yhLang(
+                    "Long-term exposure to some pesticides increases the risk of cancers such as leukemia, lymphoma, and brain tumors, especially among those involved in agricultural work.",
+                    "দীর্ঘমেয়াদে কিছু কীটনাশক লিউকেমিয়া, লিম্ফোমা, মস্তিষ্কের টিউমারসহ বিভিন্ন ক্যান্সারের ঝুঁকি বাড়ায়, বিশেষত যারা কৃষি-সম্পর্কিত কাজে জড়িত থাকে।",
+                  ),
+                },
+                {
+                  title: yhLang(
+                    "7. Weakened Immune System",
+                    "৭. রোগ প্রতিরোধ ক্ষমতা কমে যাওয়া",
+                  ),
+                  description: yhLang(
+                    "Pesticides weaken the immune system, making children and adolescents more vulnerable to illnesses.",
+                    "কীটনাশক ইমিউন সিস্টেম দুর্বল করে, ফলে শিশু-কিশোররা সহজে অসুস্থ করে তুলতে পারে।",
+                  ),
+                },
+              ];
+              const renderCards = () =>
                 riskCards
                   .map(
                     (card, idx) => `
@@ -18059,7 +20664,7 @@ const renderCards = () =>
                           <p class="mb-0">${card.description}</p>
                         </article>
                       </div>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -18067,11 +20672,11 @@ const renderCards = () =>
                 pesticidePoints
                   .map(
                     (item, idx) => `
-                      <li style="border-left:3px solid ${idx % 2 === 0 ? '#f06292' : '#ff8a65'};border-radius:9px;padding: 4px 8px;margin-bottom:0px;box-shadow:${idx % 2 === 0 ? '0 4px 10px rgba(240,98,146,.15)' : '0 5px 12px rgba(255,138,101,.14)'};">
-                        <span class="pesticide-bullet"><i class="fa-solid ${idx === 0 ? 'fa-spray-can' : idx === 1 ? 'fa-skull-crossbones' : 'fa-lungs'}"></i></span>
+                      <li style="border-left:3px solid ${idx % 2 === 0 ? "#f06292" : "#ff8a65"};border-radius:9px;padding: 4px 8px;margin-bottom:0px;box-shadow:${idx % 2 === 0 ? "0 4px 10px rgba(240,98,146,.15)" : "0 5px 12px rgba(255,138,101,.14)"};">
+                        <span class="pesticide-bullet"><i class="fa-solid ${idx === 0 ? "fa-spray-can" : idx === 1 ? "fa-skull-crossbones" : "fa-lungs"}"></i></span>
                         <p class="mb-0" style="font-size:0.9em;">${item}</p>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -18101,7 +20706,7 @@ const renderCards = () =>
                     <i class="fa-solid fa-notes-medical" style="color: #ff8a65; margin-right: 8px; font-size: 1em;"></i>
                     ${yhLang("", "কীটনাশকের সংস্পর্শ শিশু-কিশোরদের জন্য বিশেষভাবে ঝুঁকিপূর্ণ")}
                   </h2>
-                  <p class="text-muted" data-aos="fade-up" data-aos-delay="30" style="padding:3px 14px;border-radius:12px;display:inline-flex;align-items:center;box-shadow:0 4px 14px rgba(255,138,101,.2);"><i class="fa-solid fa-circle-info me-2 text-warning"></i>${yhLang("The main health risks are highlighted below:","নিচে প্রধান স্বাস্থ্য ঝুঁকিগুলো তুলে ধরা হলো:")}</p>
+                  <p class="text-muted" data-aos="fade-up" data-aos-delay="30" style="padding:3px 14px;border-radius:12px;display:inline-flex;align-items:center;box-shadow:0 4px 14px rgba(255,138,101,.2);"><i class="fa-solid fa-circle-info me-2 text-warning"></i>${yhLang("The main health risks are highlighted below:", "নিচে প্রধান স্বাস্থ্য ঝুঁকিগুলো তুলে ধরা হলো:")}</p>
                   <div class="row g-2 risk-grid" data-aos="fade-up" data-aos-delay="60">
                     ${renderCards()}
                   </div>
@@ -18119,27 +20724,27 @@ const renderCards = () =>
             quiz: null,
             content: (function () {
               const cautionPoints = [
-              yhLang(
-                "Children should be kept away while spraying pesticides at home or in the fields. If necessary, cover the nose and mouth and spray in the direction of the wind.",
-                "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়জনে নাক মুখ ধেকে বাতাসের অনুকূলে কীটনাশক ছিটানো ।"
-              ),
-              yhLang(
-                "Fruits and vegetables should not be harvested for sale or consumption immediately after applying pesticides. They should be washed thoroughly with water before eating.",
-                "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা। খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধুয়ে নিতে হবে।"
-              ),
-              yhLang(
-                "Pesticides should be stored out of the reach of children.",
-                "কীটনাশক রাখার জায়গা শিশুদের নাগালের বাইরে রাখতে হবে।"
-              ),
-              yhLang(
-                "After applying pesticides, hands and face should be washed with soap and water, and clothing should be changed if necessary.",
-                "প্রয়োজনে কীটনাশক প্রয়গের পর সাবানের পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয় কাপড় পরিবর্তন করতে হবে।"
-              ),
-              yhLang(
-                "If any symptoms of poisoning appear, the affected person should be taken to the nearest hospital immediately.",
-                "বিষক্রিয়ার যেকোন লক্ষণ দেখা দিলে বিষক্রিয়ায় আক্রান্ত ব্যক্তিকে দ্রুত নিকটস্থ হাস্পাতালে নিয়ে যেতে হবে।"
-              ),
-            ];
+                yhLang(
+                  "Children should be kept away while spraying pesticides at home or in the fields. If necessary, cover the nose and mouth and spray in the direction of the wind.",
+                  "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়জনে নাক মুখ ধেকে বাতাসের অনুকূলে কীটনাশক ছিটানো ।",
+                ),
+                yhLang(
+                  "Fruits and vegetables should not be harvested for sale or consumption immediately after applying pesticides. They should be washed thoroughly with water before eating.",
+                  "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা। খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধুয়ে নিতে হবে।",
+                ),
+                yhLang(
+                  "Pesticides should be stored out of the reach of children.",
+                  "কীটনাশক রাখার জায়গা শিশুদের নাগালের বাইরে রাখতে হবে।",
+                ),
+                yhLang(
+                  "After applying pesticides, hands and face should be washed with soap and water, and clothing should be changed if necessary.",
+                  "প্রয়োজনে কীটনাশক প্রয়গের পর সাবানের পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয় কাপড় পরিবর্তন করতে হবে।",
+                ),
+                yhLang(
+                  "If any symptoms of poisoning appear, the affected person should be taken to the nearest hospital immediately.",
+                  "বিষক্রিয়ার যেকোন লক্ষণ দেখা দিলে বিষক্রিয়ায় আক্রান্ত ব্যক্তিকে দ্রুত নিকটস্থ হাস্পাতালে নিয়ে যেতে হবে।",
+                ),
+              ];
 
               const formatIndex = (value) => String(value).padStart(2, "0");
 
@@ -18148,18 +20753,16 @@ const renderCards = () =>
                   .map(
                     (item, idx) => `
                       <li>
-                        <article class="caution-item" style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.75)' : 'rgba(255,249,196,.82)'};border-left:4px solid ${idx % 2 === 0 ? '#fbc02d' : '#f57f17'};box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(251,192,45,.2)' : '0 8px 20px rgba(245,127,23,.18)'};border-radius:12px;">
-                          <div class="caution-index" style="background:${idx % 2 === 0 ? 'linear-gradient(135deg,#fdd835,#fbc02d)' : 'linear-gradient(135deg,#ffb300,#f57f17)'};color:#fff;">${formatIndex(idx + 1)}</div>
+                        <article class="caution-item" style="background:${idx % 2 === 0 ? "rgba(255,255,255,.75)" : "rgba(255,249,196,.82)"};border-left:4px solid ${idx % 2 === 0 ? "#fbc02d" : "#f57f17"};box-shadow:${idx % 2 === 0 ? "0 6px 16px rgba(251,192,45,.2)" : "0 8px 20px rgba(245,127,23,.18)"};border-radius:12px;">
+                          <div class="caution-index" style="background:${idx % 2 === 0 ? "linear-gradient(135deg,#fdd835,#fbc02d)" : "linear-gradient(135deg,#ffb300,#f57f17)"};color:#fff;">${formatIndex(idx + 1)}</div>
                           <div class="caution-item__body">
                             <p class="mb-0"><i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>${item}</p>
                           </div>
                         </article>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
-
-                 
 
               return `
                 <div class="lesson-slide">
@@ -18185,47 +20788,44 @@ const renderCards = () =>
           },
           {
             id: "ch22-lesson-10",
-            title: yhLang(
-              "Noise Pollution",
-              "শব্দ দূষণ"
-            ),
+            title: yhLang("Noise Pollution", "শব্দ দূষণ"),
             icon: "fa-volume-high",
             gradientClass: "bg-gradient-indigo",
             audioFile: "",
             quiz: null,
             content: (function () {
-               const preventionList = [
-                  yhLang(
-                    "Awareness should be raised about the harmful effects of noise pollution.",
-                    "শব্দ দূষণের কুফল নিয়ে সচেতনতা বৃদ্ধি করতে হবে ।"
-                  ),
-                  yhLang(
-                    "Unnecessary honking and the use of loud microphones should be avoided.",
-                    "অপ্রয়োজনে হর্ন বাজানো ও উচ্চ স্বরে মাইক বাজানো থেকে থেকে বিরত থাকতে হবে ।"
-                  ),
-                  yhLang(
-                    "The volume of TV, sound systems, or headphones at home should be kept at a reasonable level.",
-                    "বাড়িতে টিভি, সাউন্ড সিস্টেম বা হেডফোনে শব্দের মাত্রা যৌক্তিক পর্যায়ে রাখতে হবে ।"
-                  ),
-                  yhLang(
-                    "Different areas such as residential, commercial, and silent zones (e.g., hospitals) can be designated with specific permissible noise levels (dB levels).",
-                    "বিভিন্ন এলাকাকে আবাসিক, বাণিজ্যিক, নীরব (হাসপাতাল) এলাকায় ভাগ করে তাদের জন্য শব্দের মাত্রা (dB level) নির্ধারণ করে দেওয়া যেতে পারে ।"
-                  ),
-                  yhLang(
-                    "Noise Pollution (Control) Rules should be strictly enforced.",
-                    "শব্দ দূষণ (নিয়ন্ত্রণ) বিধিমালা কঠোরভাবে প্রয়োগ করতে হবে ।"
-                  ),
-                ];
+              const preventionList = [
+                yhLang(
+                  "Awareness should be raised about the harmful effects of noise pollution.",
+                  "শব্দ দূষণের কুফল নিয়ে সচেতনতা বৃদ্ধি করতে হবে ।",
+                ),
+                yhLang(
+                  "Unnecessary honking and the use of loud microphones should be avoided.",
+                  "অপ্রয়োজনে হর্ন বাজানো ও উচ্চ স্বরে মাইক বাজানো থেকে থেকে বিরত থাকতে হবে ।",
+                ),
+                yhLang(
+                  "The volume of TV, sound systems, or headphones at home should be kept at a reasonable level.",
+                  "বাড়িতে টিভি, সাউন্ড সিস্টেম বা হেডফোনে শব্দের মাত্রা যৌক্তিক পর্যায়ে রাখতে হবে ।",
+                ),
+                yhLang(
+                  "Different areas such as residential, commercial, and silent zones (e.g., hospitals) can be designated with specific permissible noise levels (dB levels).",
+                  "বিভিন্ন এলাকাকে আবাসিক, বাণিজ্যিক, নীরব (হাসপাতাল) এলাকায় ভাগ করে তাদের জন্য শব্দের মাত্রা (dB level) নির্ধারণ করে দেওয়া যেতে পারে ।",
+                ),
+                yhLang(
+                  "Noise Pollution (Control) Rules should be strictly enforced.",
+                  "শব্দ দূষণ (নিয়ন্ত্রণ) বিধিমালা কঠোরভাবে প্রয়োগ করতে হবে ।",
+                ),
+              ];
 
               const renderListItems = () =>
                 preventionList
                   .map(
                     (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.62)' : 'rgba(255,255,255,.5)'};border-left:4px solid ${idx % 2 === 0 ? '#7e57c2' : '#5e35b1'};border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(126,87,194,.18)' : '0 8px 18px rgba(94,53,177,.16)'};">
-                        <i class="fa-solid ${idx < 2 ? 'fa-bullhorn' : idx < 4 ? 'fa-sliders' : 'fa-gavel'} ${idx < 2 ? 'text-danger' : idx < 4 ? 'text-primary' : 'text-success'} me-2"></i>
+                      <li style="background:${idx % 2 === 0 ? "rgba(255,255,255,.62)" : "rgba(255,255,255,.5)"};border-left:4px solid ${idx % 2 === 0 ? "#7e57c2" : "#5e35b1"};border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:${idx % 2 === 0 ? "0 6px 16px rgba(126,87,194,.18)" : "0 8px 18px rgba(94,53,177,.16)"};">
+                        <i class="fa-solid ${idx < 2 ? "fa-bullhorn" : idx < 4 ? "fa-sliders" : "fa-gavel"} ${idx < 2 ? "text-danger" : idx < 4 ? "text-primary" : "text-success"} me-2"></i>
                         <span style="color:#4a148c;">${item}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
               return `
@@ -18264,21 +20864,21 @@ const renderCards = () =>
                               <i class="fa-solid fa-heart-pulse text-danger me-2"></i>
                               <span style="color:#4a148c;">${yhLang(
                                 "iv. Increases the risk of heart disease and death",
-                                "iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায় ।"
+                                "iv. হৃদরোগ এবং মৃত্যুর ঝুঁকি বাড়ায় ।",
                               )}</span>
                             </li>
                             <li style="background:rgba(255,255,255,.62);border-left:4px solid #7e57c2;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 6px 16px rgba(126,87,194,.18);">
                               <i class="fa-solid fa-brain text-danger me-2"></i>
                               <span style="color:#4a148c;">${yhLang(
                                 "v. Increases the risk of anxiety, stress, attention deficit, and hyperactivity",
-                                "v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে ।"
+                                "v. উদ্বেগ, মানসিক চাপ এবং মনোযোগের ঘাটতি, অতিচঞ্চলতার ঝুঁকি বৃদ্ধি করে ।",
                               )}</span>
                             </li>
                             <li style="background:rgba(255,255,255,.5);border-left:4px solid #5e35b1;border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:0 8px 18px rgba(94,53,177,.16);">
                               <i class="fa-solid fa-baby text-danger me-2"></i>
                               <span style="color:#4a148c;">${yhLang(
                                 "vi. Possible risk of low birth weight and developmental problems",
-                                "vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি ।"
+                                "vi. কম জন্ম ওজন এবং বিকাশগত সমস্যার সম্ভাব্য ঝুঁকি ।",
                               )}</span>
                             </li>
                           </ul>
@@ -18297,21 +20897,20 @@ const renderCards = () =>
                 </div>`;
             })(),
           },
-
         ],
       },
       {
         id: "ch-23",
         title: yhLang(
           "Module-23: Emerging and Re-emerging Diseases",
-          "মডিউল-২৩: উদীয়মান ও পুনরাবির্ভূত রোগ"
+          "মডিউল-২৩: উদীয়মান ও পুনরাবির্ভূত রোগ",
         ),
         lessons: [
           {
             id: "ch23-lesson-1",
             title: yhLang(
               "Emerging and Re-emerging Diseases",
-              "উদীয়মান ও পুনরাবির্ভূত রোগ"
+              "উদীয়মান ও পুনরাবির্ভূত রোগ",
             ),
             icon: "fa-virus-covid",
             gradientClass: "bg-gradient-indigo",
@@ -18387,7 +20986,7 @@ const renderCards = () =>
                           <div class="m23l1-callout__body">
                             <p class="m23l1-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
                               "Bangladesh has faced many emerging and re-emerging diseases in recent years.",
-                              "বাংলাদেশ বিগত বছরগুলোতে সংক্রামক রোগ, অসংক্রামক রোগ সহ অনেক ইমারজিং এবং রি-ইমারজিং রোগের মুখোমুখি হয়েছে।"
+                              "বাংলাদেশ বিগত বছরগুলোতে সংক্রামক রোগ, অসংক্রামক রোগ সহ অনেক ইমারজিং এবং রি-ইমারজিং রোগের মুখোমুখি হয়েছে।",
                             )}</p>
                           </div>
                         </section>
@@ -18398,12 +20997,12 @@ const renderCards = () =>
                             </span>
                             <h3 class="m23l1-card__title m23l1-line" data-aos="fade-up" data-aos-delay="200">${yhLang(
                               "Emerging diseases",
-                              "ইমারজিং বা উদীয়মান রোগ"
+                              "ইমারজিং বা উদীয়মান রোগ",
                             )}</h3>
                           </div>
                           <p class="m23l1-card__line m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
                             "Diseases recently identified in humans for the first time, or previously absent, are called emerging diseases. Examples:",
-                            "যে সব রোগ সম্প্রতি প্রথমবারের মতো মানুষের মধ্যে শনাক্ত হয়েছে, অথবা আগে ছিল না—সেসব রোগকে ইমারজিং বা উদীয়মান রোগ বলা হয়। উদাহরণ: "
+                            "যে সব রোগ সম্প্রতি প্রথমবারের মতো মানুষের মধ্যে শনাক্ত হয়েছে, অথবা আগে ছিল না—সেসব রোগকে ইমারজিং বা উদীয়মান রোগ বলা হয়। উদাহরণ: ",
                           )}</p>
                           <ul class="list-unstyled m23l1-examples" role="list">
                            ${renderExamples(emergingExamples, 340)}
@@ -18417,12 +21016,12 @@ const renderCards = () =>
                             </span>
                             <h3 class="m23l1-card__title m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
                               "Re-emerging diseases",
-                              "রি-ইমারজিং বা পুনরুদ্ভূত রোগ"
+                              "রি-ইমারজিং বা পুনরুদ্ভূত রোগ",
                             )}</h3>
                           </div>
                           <p class="m23l1-card__line m23l1-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
                             "Diseases once controlled or nearly eradicated but resurging to create health risks are called re-emerging diseases. Examples:",
-                            "যে সব রোগ আগে নিয়ন্ত্রণে ছিল বা প্রায় বিলুপ্ত হয়ে গিয়েছিল, কিন্তু পুনরায় বৃদ্ধি পেয়ে স্বাস্থ্যঝুঁকি সৃষ্টি করছে, সেগুলোকে রি-ইমারজিং বা পুনরুদ্ভূত রোগ বলা হয়। উদাহরণ:"
+                            "যে সব রোগ আগে নিয়ন্ত্রণে ছিল বা প্রায় বিলুপ্ত হয়ে গিয়েছিল, কিন্তু পুনরায় বৃদ্ধি পেয়ে স্বাস্থ্যঝুঁকি সৃষ্টি করছে, সেগুলোকে রি-ইমারজিং বা পুনরুদ্ভূত রোগ বলা হয়। উদাহরণ:",
                           )}</p>
                           <ul class="list-unstyled m23l1-examples" role="list">
                             ${renderExamples(reemergingExamples, 380)}
@@ -18436,12 +21035,12 @@ const renderCards = () =>
                             </span>
                             <h3 class="m23l1-card__title m23l1-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
                               "Deliberately emerging diseases",
-                              "ডেলিবারেটলি ইমারজিং বা ইচ্ছাকৃতভাবে উদ্ভূত রোগ"
+                              "ডেলিবারেটলি ইমারজিং বা ইচ্ছাকৃতভাবে উদ্ভূত রোগ",
                             )}</h3>
                           </div>
                           <p class="m23l1-card__line m23l1-line" data-aos="fade-up" data-aos-delay="320">${yhLang(
                             "Infectious diseases intentionally spread by pathogens (bacteria, viruses, or toxins) for harmful purposes such as terrorism.",
-                            "এটি হলো এমন সংক্রামক ব্যাধি যা কোনো রোগজীবাণু (ব্যাকটেরিয়া, ভাইরাস বা টক্সিন) ইচ্ছাকৃতভাবে, উদ্দেশ্যপ্রণোদিতভাবে বা কোনো অশুভ উদ্দেশ্যে (যেমন- সন্ত্রাসবাদ) জনসাধারণের মধ্যে ছড়িয়ে দেওয়া হয়।"
+                            "এটি হলো এমন সংক্রামক ব্যাধি যা কোনো রোগজীবাণু (ব্যাকটেরিয়া, ভাইরাস বা টক্সিন) ইচ্ছাকৃতভাবে, উদ্দেশ্যপ্রণোদিতভাবে বা কোনো অশুভ উদ্দেশ্যে (যেমন- সন্ত্রাসবাদ) জনসাধারণের মধ্যে ছড়িয়ে দেওয়া হয়।",
                           )}</p>
                         </article>
 
@@ -18452,7 +21051,7 @@ const renderCards = () =>
                         <article class="m23l1-media" data-aos="fade-up" data-aos-delay="200">
                           <h3 class="m23l1-media__title mx-2 m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
                             "Factors that accelerate transmission",
-                            "সংক্রমণকে ত্বরান্বিত করনে প্রভাবক সমূহ"
+                            "সংক্রমণকে ত্বরান্বিত করনে প্রভাবক সমূহ",
                           )}</h3>
                           <div class="m23l1-media__frame" data-aos="zoom-in" data-aos-delay="280">
                           </div>
@@ -18468,35 +21067,92 @@ const renderCards = () =>
           },
           {
             id: "ch23-lesson-2",
-            title: yhLang(
-              "Dengue",
-              "ডেংগু"
-            ),
+            title: yhLang("Dengue", "ডেংগু"),
             icon: "fa-mosquito",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: null,
             content: (function () {
               const symptoms = [
-                { text: yhLang("High fever (40°C / 106°F)", "তীব্র জ্বর (৪০০ সে:/ ১০৬০ ফা:)"), icon: "fa-fire" },
-                { text: yhLang("Severe headache", "তীব্র মাথা ব্যথা"), icon: "fa-head-side-virus" },
-                { text: yhLang("Pain behind the eyes", "চোখের পিছনে ব্যথার অনুভূতি"), icon: "fa-eye" },
-                { text: yhLang("Muscle and joint pain", "মাংসপেশি এবং অস্থি-সন্ধিতে ব্যথা"), icon: "fa-person-hiking" },
+                {
+                  text: yhLang(
+                    "High fever (40°C / 106°F)",
+                    "তীব্র জ্বর (৪০০ সে:/ ১০৬০ ফা:)",
+                  ),
+                  icon: "fa-fire",
+                },
+                {
+                  text: yhLang("Severe headache", "তীব্র মাথা ব্যথা"),
+                  icon: "fa-head-side-virus",
+                },
+                {
+                  text: yhLang(
+                    "Pain behind the eyes",
+                    "চোখের পিছনে ব্যথার অনুভূতি",
+                  ),
+                  icon: "fa-eye",
+                },
+                {
+                  text: yhLang(
+                    "Muscle and joint pain",
+                    "মাংসপেশি এবং অস্থি-সন্ধিতে ব্যথা",
+                  ),
+                  icon: "fa-person-hiking",
+                },
                 { text: yhLang("Nausea", "বমিভাব"), icon: "fa-stomach" },
                 { text: yhLang("Dizziness", "মাথাঘোরা"), icon: "fa-head-side" },
-                { text: yhLang("Skin rash or hives", "ত্বকের বিভিন্ন স্থানে র‍্যাশ/ ফুসকুড়ি"), icon: "fa-hand" },
+                {
+                  text: yhLang(
+                    "Skin rash or hives",
+                    "ত্বকের বিভিন্ন স্থানে র‍্যাশ/ ফুসকুড়ি",
+                  ),
+                  icon: "fa-hand",
+                },
               ];
 
               const severeSymptoms = [
-                { text: yhLang("Severe abdominal pain", "প্রচন্ড পেট ব্যথা"), icon: "fa-person-cane" },
-                { text: yhLang("Persistent vomiting", "ক্রমাগত বমি হওয়া"), icon: "fa-bowl-food" },
-                { text: yhLang("Bleeding gums or nosebleeds", "মাড়ি বা নাক থেকে রক্তপাত"), icon: "fa-droplet-slash" },
-                { text: yhLang("Blood in urine and stool", "প্রস্রাবে এবং মলের সাথে রক্তপাত"), icon: "fa-triangle-exclamation" },
-                { text: yhLang("Uncontrolled diarrhea", "অনিয়ন্ত্রিত পায়খানা"), icon: "fa-bed" },
-                { text: yhLang("Bleeding under skin", "ত্বকের নিচে রক্তক্ষরণ"), icon: "fa-hand-dots" },
-                { text: yhLang("Rapid breathing", "দ্রুত শ্বাস প্রশ্বাস"), icon: "fa-lungs" },
+                {
+                  text: yhLang("Severe abdominal pain", "প্রচন্ড পেট ব্যথা"),
+                  icon: "fa-person-cane",
+                },
+                {
+                  text: yhLang("Persistent vomiting", "ক্রমাগত বমি হওয়া"),
+                  icon: "fa-bowl-food",
+                },
+                {
+                  text: yhLang(
+                    "Bleeding gums or nosebleeds",
+                    "মাড়ি বা নাক থেকে রক্তপাত",
+                  ),
+                  icon: "fa-droplet-slash",
+                },
+                {
+                  text: yhLang(
+                    "Blood in urine and stool",
+                    "প্রস্রাবে এবং মলের সাথে রক্তপাত",
+                  ),
+                  icon: "fa-triangle-exclamation",
+                },
+                {
+                  text: yhLang(
+                    "Uncontrolled diarrhea",
+                    "অনিয়ন্ত্রিত পায়খানা",
+                  ),
+                  icon: "fa-bed",
+                },
+                {
+                  text: yhLang("Bleeding under skin", "ত্বকের নিচে রক্তক্ষরণ"),
+                  icon: "fa-hand-dots",
+                },
+                {
+                  text: yhLang("Rapid breathing", "দ্রুত শ্বাস প্রশ্বাস"),
+                  icon: "fa-lungs",
+                },
                 { text: yhLang("Fatigue", "ক্লান্তি"), icon: "fa-face-tired" },
-                { text: yhLang("Restlessness", "অস্থিরতা"), icon: "fa-triangle-exclamation" },
+                {
+                  text: yhLang("Restlessness", "অস্থিরতা"),
+                  icon: "fa-triangle-exclamation",
+                },
               ];
 
               const renderSymptoms = (items, baseDelay) =>
@@ -18528,7 +21184,7 @@ const renderCards = () =>
                     <div class="m23l2-hero__body">
                       <h2 class="slide-title gradient-text mb-0 m23l2-line" data-aos="fade-up" data-aos-delay="60">${yhLang(
                         "Dengue",
-                        "ডেংগু"
+                        "ডেংগু",
                       )}</h2>
                     </div>
                   </header>
@@ -18536,11 +21192,11 @@ const renderCards = () =>
                   <section class="m23l2-intro" data-aos="fade-up" data-aos-delay="120">
                     <p class="m23l2-intro__line m23l2-line" data-aos="fade-up" data-aos-delay="160">${yhLang(
                       "Dengue is transmitted to humans through bites of Aedes mosquitoes infected with dengue virus. It is a significant public health problem for tropical and subtropical regions of the world.",
-                      "ডেংগু ভাইরাসে আক্রান্ত এডিস মশার কামড়ের মাধ্যমে মানুষের মধ্যে এই রোগ সংক্রমিত হয়। বিশ্বের ক্রান্তীয় এবং উপক্রান্তীয় অঞ্চলগুলোর জন্য এটি একটি উল্লেখযোগ্য জনস্বাস্থ্য সমস্যা।"
+                      "ডেংগু ভাইরাসে আক্রান্ত এডিস মশার কামড়ের মাধ্যমে মানুষের মধ্যে এই রোগ সংক্রমিত হয়। বিশ্বের ক্রান্তীয় এবং উপক্রান্তীয় অঞ্চলগুলোর জন্য এটি একটি উল্লেখযোগ্য জনস্বাস্থ্য সমস্যা।",
                     )}</p>
                     <p class="m23l2-intro__line m23l2-line" data-aos="fade-up" data-aos-delay="220">${yhLang(
                       "There is no specific treatment for dengue, but early detection and proper care can keep mortality below one percent. Mosquito control is the primary strategy for dengue prevention, including destroying breeding sites and using pesticides.",
-                      "ডেংগুর জন্য কোন নির্দিষ্ট চিকিৎসা নেই, তবে দ্রুত সনাক্তকরণ এবং সঠিক চিকিৎসা প্রদানের মাধ্যমে এর মৃত্যুহার এক শতাংশের নিচে রাখা সম্ভব। মশা নিয়ন্ত্রণ ডেংগু প্রতিরোধের প্রধান হাতিয়ার যার মধ্যে রয়েছে মশার প্রজনন স্থান ধ্বংস এবং কীটনাশক ব্যবহার করা।"
+                      "ডেংগুর জন্য কোন নির্দিষ্ট চিকিৎসা নেই, তবে দ্রুত সনাক্তকরণ এবং সঠিক চিকিৎসা প্রদানের মাধ্যমে এর মৃত্যুহার এক শতাংশের নিচে রাখা সম্ভব। মশা নিয়ন্ত্রণ ডেংগু প্রতিরোধের প্রধান হাতিয়ার যার মধ্যে রয়েছে মশার প্রজনন স্থান ধ্বংস এবং কীটনাশক ব্যবহার করা।",
                     )}</p>
                   </section>
 
@@ -18553,12 +21209,12 @@ const renderCards = () =>
                           </span>
                           <h3 class="m23l2-panel__title m23l2-line" data-aos="fade-up" data-aos-delay="220">${yhLang(
                             "Dengue Fever Symptoms",
-                            "ডেংগু জ্বরের লক্ষণ"
+                            "ডেংগু জ্বরের লক্ষণ",
                           )}</h3>
                         </div>
                         <p class="m23l2-panel__desc m23l2-line" data-aos="fade-up" data-aos-delay="260">${yhLang(
                           "Most first-time dengue patients show no specific symptoms. Common symptoms appear within 4-10 days of infection and last 2-7 days.",
-                          "বেশীর ভাগ ক্ষেত্রে প্রথমবার ডেংগু-তে আক্রান্ত রোগীর বিশেষ কোন উপসর্গ বা লক্ষণ দেখা যায় না। এই উপসর্গ গুলি রোগ সংক্রমণের ৪-১০ দিনের মধ্যে দেখা দেয় এবং সাধারণত ২-৭ দিন পর্যন্ত উপসর্গ স্থায়ী হতে পারে।"
+                          "বেশীর ভাগ ক্ষেত্রে প্রথমবার ডেংগু-তে আক্রান্ত রোগীর বিশেষ কোন উপসর্গ বা লক্ষণ দেখা যায় না। এই উপসর্গ গুলি রোগ সংক্রমণের ৪-১০ দিনের মধ্যে দেখা দেয় এবং সাধারণত ২-৭ দিন পর্যন্ত উপসর্গ স্থায়ী হতে পারে।",
                         )}</p>
                         <ul class="list-unstyled m23l2-list" role="list">
                           ${renderSymptoms(symptoms, 300)}
@@ -18574,7 +21230,7 @@ const renderCards = () =>
                           </span>
                           <h3 class="m23l2-panel__title m23l2-line" data-aos="fade-up" data-aos-delay="260">${yhLang(
                             "Severe Dengue Symptoms",
-                            "ডেংগুর গুরুতর উপসর্গ"
+                            "ডেংগুর গুরুতর উপসর্গ",
                           )}</h3>
                         </div>
                         <ul class="list-unstyled m23l2-list m23l2-list--danger" role="list">
@@ -18588,7 +21244,7 @@ const renderCards = () =>
                             
                             <span class="m23l2-panel__title m23l2-line" data-aos="fade-up" data-aos-delay="260">${yhLang(
                               "These symptoms appear within 4-10 days of infection. Symptoms can usually last for 2-7 days. The risk of the disease increases if you get infected with dengue a second time. Therefore, people who have previously been infected with dengue are advised to take extra precautions.",
-                              "এই উপসর্গ গুলি রোগ সংক্রমণের ৪-১০ দিনের মধ্যে দেখা দেয়। সাধারণত ২-৭ দিন পর্যন্ত উপসর্গ স্থায়ী হতে পারে। দ্বিতীয় বার ডেংগু তে আক্রান্ত হলে রোগের ভয়াভয়তা বৃদ্ধি পায়। সেই কারনে পূর্বে ডেংগু তে আক্রান্ত ব্যক্তিদের অতিরিক্ত সতর্কতা মেনে চলতে বলা হয়।"
+                              "এই উপসর্গ গুলি রোগ সংক্রমণের ৪-১০ দিনের মধ্যে দেখা দেয়। সাধারণত ২-৭ দিন পর্যন্ত উপসর্গ স্থায়ী হতে পারে। দ্বিতীয় বার ডেংগু তে আক্রান্ত হলে রোগের ভয়াভয়তা বৃদ্ধি পায়। সেই কারনে পূর্বে ডেংগু তে আক্রান্ত ব্যক্তিদের অতিরিক্ত সতর্কতা মেনে চলতে বলা হয়।",
                             )}</span>
                           </div>
                         </article>
@@ -18609,42 +21265,42 @@ const renderCards = () =>
                 {
                   text: yhLang(
                     "Do not allow water to accumulate around your home. Mosquitoes breed in stagnant water.",
-                    "বাড়ির চারপাশে পানি জমতে দেবেন না। জমা পানিতে মশারা বংশবিস্তার করে।"
+                    "বাড়ির চারপাশে পানি জমতে দেবেন না। জমা পানিতে মশারা বংশবিস্তার করে।",
                   ),
                   icon: "fa-house-circle-xmark",
                 },
                 {
                   text: yhLang(
                     "Empty water from plant pots, flower vases, and old car tires. Dispose of stagnant water once every three days.",
-                    "গাছের টব, ফুলদানি, পরে থাকা গাড়ির টায়ারের জমে থাকা পানি ফেলে দিন। তিন দিনে একদিন জমা পানি ফেলে দিন।"
+                    "গাছের টব, ফুলদানি, পরে থাকা গাড়ির টায়ারের জমে থাকা পানি ফেলে দিন। তিন দিনে একদিন জমা পানি ফেলে দিন।",
                   ),
                   icon: "fa-recycle",
                 },
                 {
                   text: yhLang(
                     "Wear body-covering clothes such as long-sleeve shirts, long pants, socks, and shoes.",
-                    "শরীর ঢাকা জামা কাপড় যেমন লম্বা-হাতা শার্ট, লম্বা প্যান্ট, মোজা এবং জুতা পরুন।"
+                    "শরীর ঢাকা জামা কাপড় যেমন লম্বা-হাতা শার্ট, লম্বা প্যান্ট, মোজা এবং জুতা পরুন।",
                   ),
                   icon: "fa-shirt",
                 },
                 {
                   text: yhLang(
                     "Dengue-carrying mosquitoes are most active from dawn to dusk. Be extra cautious during this time.",
-                    "ডেংগু  ভাইরাস বহনকারী মশা ভোর থেকে সন্ধ্যা পর্যন্ত সবচেয়ে বেশি সক্রিয় থাকে। এই সময় অতিরিক্ত সতর্ক থাকুন।"
+                    "ডেংগু  ভাইরাস বহনকারী মশা ভোর থেকে সন্ধ্যা পর্যন্ত সবচেয়ে বেশি সক্রিয় থাকে। এই সময় অতিরিক্ত সতর্ক থাকুন।",
                   ),
                   icon: "fa-clock",
                 },
                 {
                   text: yhLang(
                     "Use mosquito nets when sleeping at night.",
-                    "রাতে শোবার সময় মশারী ব্যবহার করুন।"
+                    "রাতে শোবার সময় মশারী ব্যবহার করুন।",
                   ),
                   icon: "fa-bed",
                 },
                 {
                   text: yhLang(
                     "Use mosquito-repelling chemicals or mosquito coils.",
-                    "মশা নিরোধক কেমিক্যাল/ মশার কয়েল ব্যবহার করুন।"
+                    "মশা নিরোধক কেমিক্যাল/ মশার কয়েল ব্যবহার করুন।",
                   ),
                   icon: "fa-spray-can",
                 },
@@ -18679,7 +21335,7 @@ const renderCards = () =>
                     <div class="m23l3-hero__body">
                       <h2 class="slide-title gradient-text mb-0 m23l3-line" data-aos="fade-up" data-aos-delay="60">${yhLang(
                         "Treatment",
-                        "চিকিৎসা"
+                        "চিকিৎসা",
                       )}</h2>
                     </div>
                   </header>
@@ -18687,7 +21343,7 @@ const renderCards = () =>
                   <section class="m23l3-intro" data-aos="fade-up" data-aos-delay="120">
                     <p class="m23l3-intro__line m23l3-line mx-2" data-aos="fade-up" data-aos-delay="160">${yhLang(
                       "No specific medicine or vaccine for dengue has been discovered yet. Doctors control pain and fever using paracetamol-type medications. If the disease worsens significantly, hospitalization of the patient is essential.",
-                      "ডেংগুর চিকিৎসার বিশেষ কোন ওষুধ বা প্রতিষেধক এখনো পর্যন্ত আবিষ্কৃত হয়নি। চিকিৎসকরা পেরাসিটামিল জাতীয় ওষুধ দিয়ে ব্যথা এবং জ্বরের মাত্রা নিয়ন্ত্রণ করেন। রোগের মাত্রা অতিরিক্ত ভাবে বৃদ্ধি পেলে রোগী কে হাসপাতালে ভর্তি রাখা একান্ত জরুরী।"
+                      "ডেংগুর চিকিৎসার বিশেষ কোন ওষুধ বা প্রতিষেধক এখনো পর্যন্ত আবিষ্কৃত হয়নি। চিকিৎসকরা পেরাসিটামিল জাতীয় ওষুধ দিয়ে ব্যথা এবং জ্বরের মাত্রা নিয়ন্ত্রণ করেন। রোগের মাত্রা অতিরিক্ত ভাবে বৃদ্ধি পেলে রোগী কে হাসপাতালে ভর্তি রাখা একান্ত জরুরী।",
                     )}</p>
                   </section>
 
@@ -18698,7 +21354,7 @@ const renderCards = () =>
                       </span>
                       <h3 class="m23l3-panel__title m23l3-line" data-aos="fade-up" data-aos-delay="260">${yhLang(
                         "Dengue Prevention Measures",
-                        "ডেংগু প্রতিরোধে করণীয়"
+                        "ডেংগু প্রতিরোধে করণীয়",
                       )}</h3>
                     </div>
                     <ul class="list-unstyled m23l3-list" role="list">
@@ -18713,7 +21369,7 @@ const renderCards = () =>
                     <div class="m23l3-callout__body">
                       <p class="m23l3-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
                         "Dengue fever is a common disease, but if neglected, it can become fatal. It is more prevalent in urban areas, so city dwellers need to be more alert and aware. Those who have had dengue previously must be especially cautious, as a second dengue infection can be severe.",
-                        "ডেংগু জ্বর একটি সাধারণ রোগ। কিন্তু অবহেলা করলে এই রোগ মারাত্মক হতে পারে। শহরাঞ্চলে এর প্রকোপ বেশি। তাই নগরবাসীকে আরেকটু সজাগ ও সচেতন হতে হবে। বিশেষ করে যাদের ডেংগু হয়েছে তাদের অতিরিক্ত সতর্ক থাকতে হবে। দ্বিতীয় ডেংগু সংক্রমণ মারাত্মক হতে পারে।"
+                        "ডেংগু জ্বর একটি সাধারণ রোগ। কিন্তু অবহেলা করলে এই রোগ মারাত্মক হতে পারে। শহরাঞ্চলে এর প্রকোপ বেশি। তাই নগরবাসীকে আরেকটু সজাগ ও সচেতন হতে হবে। বিশেষ করে যাদের ডেংগু হয়েছে তাদের অতিরিক্ত সতর্ক থাকতে হবে। দ্বিতীয় ডেংগু সংক্রমণ মারাত্মক হতে পারে।",
                       )}</p>
                     </div>
                   </section>
@@ -18730,7 +21386,10 @@ const renderCards = () =>
             content: (function () {
               const symptoms = [
                 {
-                  text: yhLang("High fever with severe headache", "তীব্র জ্বরসহ মাথাব্যথা"),
+                  text: yhLang(
+                    "High fever with severe headache",
+                    "তীব্র জ্বরসহ মাথাব্যথা",
+                  ),
                   icon: "fa-fire",
                 },
                 {
@@ -18746,7 +21405,10 @@ const renderCards = () =>
                   icon: "fa-user-injured",
                 },
                 {
-                  text: yhLang("Breathing difficulties in some cases", "কোনো কোনো ক্ষেত্রে শ্বাসকষ্ট হওয়া"),
+                  text: yhLang(
+                    "Breathing difficulties in some cases",
+                    "কোনো কোনো ক্ষেত্রে শ্বাসকষ্ট হওয়া",
+                  ),
                   icon: "fa-lungs",
                 },
                 {
@@ -18757,23 +21419,38 @@ const renderCards = () =>
 
               const preventionMeasures = [
                 {
-                  text: yhLang("Do not drink raw date palm sap", "খেজুরের কাঁচা রস খাবেন না"),
+                  text: yhLang(
+                    "Do not drink raw date palm sap",
+                    "খেজুরের কাঁচা রস খাবেন না",
+                  ),
                   icon: "fa-ban",
                 },
                 {
-                  text: yhLang("Do not eat partially eaten fruits", "কোনো ধরনের আংশিক খাওয়া ফল খাবেন না"),
+                  text: yhLang(
+                    "Do not eat partially eaten fruits",
+                    "কোনো ধরনের আংশিক খাওয়া ফল খাবেন না",
+                  ),
                   icon: "fa-apple-whole",
                 },
                 {
-                  text: yhLang("Wash fruits thoroughly with clean water before eating", "ফলমূল পরিষ্কার পানি দিয়ে ভালোভাবে ধুয়ে খাবেন"),
+                  text: yhLang(
+                    "Wash fruits thoroughly with clean water before eating",
+                    "ফলমূল পরিষ্কার পানি দিয়ে ভালোভাবে ধুয়ে খাবেন",
+                  ),
                   icon: "fa-hands-bubbles",
                 },
                 {
-                  text: yhLang("Take the patient to the nearest government hospital immediately if Nipah symptoms appear", "নিপাহ রোগের লক্ষণ দেখা দিলে রোগীকে অতিদ্রুত কাছাকাছি সরকারি হাসপাতালে নিতে হবে"),
+                  text: yhLang(
+                    "Take the patient to the nearest government hospital immediately if Nipah symptoms appear",
+                    "নিপাহ রোগের লক্ষণ দেখা দিলে রোগীকে অতিদ্রুত কাছাকাছি সরকারি হাসপাতালে নিতে হবে",
+                  ),
                   icon: "fa-hospital",
                 },
                 {
-                  text: yhLang("Wash both hands thoroughly with soap and water after contacting an infected patient", "আক্রান্ত রোগীর সংস্পর্শে আসার পর সাবান ও পানি দিয়ে দুই হাত ভালোভাবে ধুয়ে ফেলতে হবে"),
+                  text: yhLang(
+                    "Wash both hands thoroughly with soap and water after contacting an infected patient",
+                    "আক্রান্ত রোগীর সংস্পর্শে আসার পর সাবান ও পানি দিয়ে দুই হাত ভালোভাবে ধুয়ে ফেলতে হবে",
+                  ),
                   icon: "fa-soap",
                 },
               ];
@@ -18820,7 +21497,7 @@ const renderCards = () =>
                     <div class="m23l4-hero__body">
                       <h2 class="slide-title gradient-text mb-0 m23l4-line" data-aos="fade-up" data-aos-delay="60">${yhLang(
                         "Nipah Virus Infection",
-                        "নিপাহ ভাইরাস সংক্রমন"
+                        "নিপাহ ভাইরাস সংক্রমন",
                       )}</h2>
                     </div>
                   </header>
@@ -18832,11 +21509,11 @@ const renderCards = () =>
                           
                           <p class="m23l4-panel__desc m23l4-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
                             "Nipah is a deadly viral disease. Infection causes brain inflammation. Bat droppings and saliva mix with raw date palm sap, carrying Nipah virus. Drinking raw date palm sap can cause infection. Many think heating the sap makes it safe—this is not acceptable.",
-                            "নিপাহ একটি ভাইরাসজনিত মারাত্মক প্রাণঘাতী রোগ। নিপাহ ভাইরাসে আক্রান্ত হলে মস্তিষ্কের প্রদাহ ঘটে। কাঁচা খেজুরের রসে বাদুড়ের বিষ্ঠা ও লালা মিশ্রিত হয় এবং ওই বিষ্ঠা ও লালাতে নিপাহ ভাইরাসের জীবাণু থাকে। ফলে খেজুরের কাঁচা রস পান করলে মানুষ নিপাহ ভাইরাসে আক্রান্ত হতে পারে। অনেকেই মনে করেন, রস গরম করে খেলে বিপদ কাটবে। কিন্তু তা মোটেও গ্রহণযোগ্য নয়।"
+                            "নিপাহ একটি ভাইরাসজনিত মারাত্মক প্রাণঘাতী রোগ। নিপাহ ভাইরাসে আক্রান্ত হলে মস্তিষ্কের প্রদাহ ঘটে। কাঁচা খেজুরের রসে বাদুড়ের বিষ্ঠা ও লালা মিশ্রিত হয় এবং ওই বিষ্ঠা ও লালাতে নিপাহ ভাইরাসের জীবাণু থাকে। ফলে খেজুরের কাঁচা রস পান করলে মানুষ নিপাহ ভাইরাসে আক্রান্ত হতে পারে। অনেকেই মনে করেন, রস গরম করে খেলে বিপদ কাটবে। কিন্তু তা মোটেও গ্রহণযোগ্য নয়।",
                           )}</p>
                           <p class="m23l4-panel__desc m23l4-line" data-aos="fade-up" data-aos-delay="300">${yhLang(
                             "Do not eat fallen or partially eaten fruits from under trees. Adults and children are both affected. Mortality rate exceeds 70%. Prevention is the only way to survive.",
-                            "গাছের নিচে পড়ে থাকা আধা খাওয়া কিংবা ফাটা ফল খাওয়া যাবে না। বর্তমান সময়ে বড়দের পাশাপাশি শিশু-কিশোরেরা নিপাহ ভাইরাসে বেশি আক্রান্ত হচ্ছে। এই রোগে মৃত্যু ৭০ শতাংশের বেশি। তাই প্রতিরোধই হচ্ছে এই রোগ থেকে বাঁচার উপায়।"
+                            "গাছের নিচে পড়ে থাকা আধা খাওয়া কিংবা ফাটা ফল খাওয়া যাবে না। বর্তমান সময়ে বড়দের পাশাপাশি শিশু-কিশোরেরা নিপাহ ভাইরাসে বেশি আক্রান্ত হচ্ছে। এই রোগে মৃত্যু ৭০ শতাংশের বেশি। তাই প্রতিরোধই হচ্ছে এই রোগ থেকে বাঁচার উপায়।",
                           )}</p>
                         </article>
 
@@ -18847,7 +21524,7 @@ const renderCards = () =>
                             </span>
                             <h3 class="m23l4-panel__title m23l4-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
                               "Main Symptoms of Nipah Virus Infection",
-                              "নিপাহ ভাইরাস সংক্রমনের প্রধান লক্ষণগুলো হচ্ছে"
+                              "নিপাহ ভাইরাস সংক্রমনের প্রধান লক্ষণগুলো হচ্ছে",
                             )}</h3>
                           </div>
                           <ul class="list-unstyled m23l4-symptom-list" role="list">
@@ -18874,7 +21551,7 @@ const renderCards = () =>
                             </span>
                             <h3 class="m23l4-panel__title m23l4-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
                               "Nipah Virus Prevention Measures",
-                              "নিপাহ ভাইরাস সংক্রমন প্রতিরোধে করণীয়"
+                              "নিপাহ ভাইরাস সংক্রমন প্রতিরোধে করণীয়",
                             )}</h3>
                           </div>
                           <ul class="list-unstyled m23l4-prevent-list" role="list">
@@ -18897,21 +21574,21 @@ const renderCards = () =>
             content: (function () {
               const intro = yhLang(
                 "Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus. The World Health Organization officially named it 'COVID-19' on February 11, 2020. Here, 'CO' comes from Corona, 'VI' from Virus, 'D' from Disease, and '19' from 2019.",
-                "করোনাভাইরাস রোগ (কোভিড-১৯) হল সার্স-কোভ-২ ভাইরাস দ্বারা সৃষ্ট একটি সংক্রামক রোগ। বিশ্ব স্বাস্থ্য সংস্থা ১১ই ফেব্রুয়ারী ২০২০ তারিখে এই রোগ টিকে কে ‘কোভিড-১৯’ হিসেবে আনুষ্ঠানিক নামকরণ করে। এখানে ‘কো’ কথাটি এসেছে ‘করোনা’ থেকে, ‘ভি’- ভাইরাস থেকে, ‘ডি’- ‘ডিজিজ’ (রোগ) আর ‘১৯’- ২০১৯ থেকে এসেছে।"
+                "করোনাভাইরাস রোগ (কোভিড-১৯) হল সার্স-কোভ-২ ভাইরাস দ্বারা সৃষ্ট একটি সংক্রামক রোগ। বিশ্ব স্বাস্থ্য সংস্থা ১১ই ফেব্রুয়ারী ২০২০ তারিখে এই রোগ টিকে কে ‘কোভিড-১৯’ হিসেবে আনুষ্ঠানিক নামকরণ করে। এখানে ‘কো’ কথাটি এসেছে ‘করোনা’ থেকে, ‘ভি’- ভাইরাস থেকে, ‘ডি’- ‘ডিজিজ’ (রোগ) আর ‘১৯’- ২০১৯ থেকে এসেছে।",
               );
 
               const spreadPoints = [
                 {
                   text: yhLang(
                     "This virus entered humans from animals and now spreads from human to human.",
-                    "এই ভাইরাস প্রাণী থেকে মানুষের দেহে ঢুকে এখন মানুষ থেকে মানুষে সংক্রমণ হচ্ছে"
+                    "এই ভাইরাস প্রাণী থেকে মানুষের দেহে ঢুকে এখন মানুষ থেকে মানুষে সংক্রমণ হচ্ছে",
                   ),
                   icon: "fa-paw",
                 },
                 {
                   text: yhLang(
                     "Coronavirus infects human lungs and spreads through the respiratory system (sneeze/cough/sputum/saliva) or contact with an infected person.",
-                    "করোনা ভাইরাস মানুষের ফুসফুেস সংক্রমণ ঘটায় এবং শ্বাসতন্ত্রের মাধ্যমে (হাঁচি/কাশি/কফ/থুথু) অথবা আক্রান্তব্যক্তির সংস্পর্শে আসলে একজন থেকে আরেকজনে ছড়ায়"
+                    "করোনা ভাইরাস মানুষের ফুসফুেস সংক্রমণ ঘটায় এবং শ্বাসতন্ত্রের মাধ্যমে (হাঁচি/কাশি/কফ/থুথু) অথবা আক্রান্তব্যক্তির সংস্পর্শে আসলে একজন থেকে আরেকজনে ছড়ায়",
                   ),
                   icon: "fa-lungs",
                 },
@@ -18921,26 +21598,35 @@ const renderCards = () =>
                 {
                   text: yhLang(
                     "Symptoms appear about 2-14 days after the virus enters the body.",
-                    "ভাইরাস শরীরে ঢোকার পর সংক্রমণের লক্ষণ দেখা দিতে প্রায় ২-১৪ দিন লাগে"
+                    "ভাইরাস শরীরে ঢোকার পর সংক্রমণের লক্ষণ দেখা দিতে প্রায় ২-১৪ দিন লাগে",
                   ),
                   icon: "fa-calendar-days",
                 },
                 {
-                  text: yhLang("In most cases, the first symptom is fever.", "বেশির ভাগ ক্ষেত্রে প্রথম লক্ষণ জ¦র"),
+                  text: yhLang(
+                    "In most cases, the first symptom is fever.",
+                    "বেশির ভাগ ক্ষেত্রে প্রথম লক্ষণ জ¦র",
+                  ),
                   icon: "fa-temperature-high",
                 },
                 {
-                  text: yhLang("Dry cough or sore throat may occur.", "এছাড়া শুকনো কাশি/ গলা ব্যথা হতে পারে"),
+                  text: yhLang(
+                    "Dry cough or sore throat may occur.",
+                    "এছাড়া শুকনো কাশি/ গলা ব্যথা হতে পারে",
+                  ),
                   icon: "fa-head-side-cough",
                 },
                 {
-                  text: yhLang("Shortness of breath or pneumonia may develop.", "শ্বাসকষ্ট/ নিউমোনিয়া দেখা দিতে পারে"),
+                  text: yhLang(
+                    "Shortness of breath or pneumonia may develop.",
+                    "শ্বাসকষ্ট/ নিউমোনিয়া দেখা দিতে পারে",
+                  ),
                   icon: "fa-wind",
                 },
                 {
                   text: yhLang(
                     "With other illnesses (diabetes/high blood pressure/asthma/heart disease/kidney problems/cancer), organ failure or multiple organ dysfunction can occur.",
-                    "অন্যান্য অসুস্থতা (ডায়াবেটিস/ উচ্চ রক্তচাপ/ শ্বাসকষ্ট/ হৃদরোগ/ কিডনী সমস্যা/ ক্যান্সার ইত্যাদি) থাকলে অরগ্যান ফেইলিওর বা দেহের বিভিন্নপ্রত্যঙ্গ বিকল হতে পারে"
+                    "অন্যান্য অসুস্থতা (ডায়াবেটিস/ উচ্চ রক্তচাপ/ শ্বাসকষ্ট/ হৃদরোগ/ কিডনী সমস্যা/ ক্যান্সার ইত্যাদি) থাকলে অরগ্যান ফেইলিওর বা দেহের বিভিন্নপ্রত্যঙ্গ বিকল হতে পারে",
                   ),
                   icon: "fa-triangle-exclamation",
                 },
@@ -18952,7 +21638,10 @@ const renderCards = () =>
                   icon: "fa-syringe",
                 },
                 {
-                  text: yhLang("Treatment - Symptomatic", "চিকিৎসা- লক্ষণভিত্তিক"),
+                  text: yhLang(
+                    "Treatment - Symptomatic",
+                    "চিকিৎসা- লক্ষণভিত্তিক",
+                  ),
                   icon: "fa-pills",
                 },
               ];
@@ -18965,7 +21654,7 @@ const renderCards = () =>
                         <span class="m23l5-point__icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m23l5-point__text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -19022,35 +21711,131 @@ const renderCards = () =>
           },
           {
             id: "ch23-lesson-6",
-            title: yhLang("What to do to prevent COVID-19", "কোভিড-১৯ প্রতিরোধে করণীয়"),
+            title: yhLang(
+              "What to do to prevent COVID-19",
+              "কোভিড-১৯ প্রতিরোধে করণীয়",
+            ),
             icon: "fa-shield-check",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
             quiz: null,
             content: (function () {
               const section1 = [
-                { text: yhLang("Wash hands frequently with soap and water for at least 20 seconds", "ঘন ঘন সাবান ও পানি দিয়ে হাত ধুবেন (অন্তত ২০ সেকেন্ড যাবৎ)"), icon: "fa-hands-bubbles" },
-                { text: yhLang("Don't touch eyes, nose and mouth with unwashed hands", "অপরিষ্কার হাতে চোখ, নাক ও মুখ স্পর্শ করবেন না"), icon: "fa-hand" },
-                { text: yhLang("Wear a mask", "মাস্ক পরিধান করতে হবে"), icon: "fa-mask" },
-                { text: yhLang("Avoid contact with already infected people", "ইতোমধ্যে আক্রান্ত এমন ব্যক্তিদের সংস্পর্শ এড়িয়ে চলা"), icon: "fa-person-circle-xmark" },
-                { text: yhLang("Avoid crowded places", "জনসমাগম হয় এমন জায়গা এড়িয়ে চলা"), icon: "fa-people-group" },
-                { text: yhLang("Follow coughing etiquette (cover nose/mouth with arm/tissue/cloth when sneezing/coughing)", "কাশি শিষ্টাচার মেনে চলুন (হাঁচি-কাশির সময় বাহু/টিস্যু/কাপড় দিয়ে নাক-মুখ ঢাকা)"), icon: "fa-lungs" },
-                { text: yhLang("Avoid contact with sick animals/birds", "অসুস্থ পশু/পাখির সংস্পর্শ পরিহার করা"), icon: "fa-paw" },
-                { text: yhLang("Cook fish and meat thoroughly", "মাছ-মাংস ভালোভাবে রান্না করে খাওয়া"), icon: "fa-utensils" },
-                { text: yhLang("Wash vegetables and fruits thoroughly", "শাক-সব্জি ও ফল-মূল ভালোভাবে ধুয়ে খেতে হবে"), icon: "fa-apple-whole" },
+                {
+                  text: yhLang(
+                    "Wash hands frequently with soap and water for at least 20 seconds",
+                    "ঘন ঘন সাবান ও পানি দিয়ে হাত ধুবেন (অন্তত ২০ সেকেন্ড যাবৎ)",
+                  ),
+                  icon: "fa-hands-bubbles",
+                },
+                {
+                  text: yhLang(
+                    "Don't touch eyes, nose and mouth with unwashed hands",
+                    "অপরিষ্কার হাতে চোখ, নাক ও মুখ স্পর্শ করবেন না",
+                  ),
+                  icon: "fa-hand",
+                },
+                {
+                  text: yhLang("Wear a mask", "মাস্ক পরিধান করতে হবে"),
+                  icon: "fa-mask",
+                },
+                {
+                  text: yhLang(
+                    "Avoid contact with already infected people",
+                    "ইতোমধ্যে আক্রান্ত এমন ব্যক্তিদের সংস্পর্শ এড়িয়ে চলা",
+                  ),
+                  icon: "fa-person-circle-xmark",
+                },
+                {
+                  text: yhLang(
+                    "Avoid crowded places",
+                    "জনসমাগম হয় এমন জায়গা এড়িয়ে চলা",
+                  ),
+                  icon: "fa-people-group",
+                },
+                {
+                  text: yhLang(
+                    "Follow coughing etiquette (cover nose/mouth with arm/tissue/cloth when sneezing/coughing)",
+                    "কাশি শিষ্টাচার মেনে চলুন (হাঁচি-কাশির সময় বাহু/টিস্যু/কাপড় দিয়ে নাক-মুখ ঢাকা)",
+                  ),
+                  icon: "fa-lungs",
+                },
+                {
+                  text: yhLang(
+                    "Avoid contact with sick animals/birds",
+                    "অসুস্থ পশু/পাখির সংস্পর্শ পরিহার করা",
+                  ),
+                  icon: "fa-paw",
+                },
+                {
+                  text: yhLang(
+                    "Cook fish and meat thoroughly",
+                    "মাছ-মাংস ভালোভাবে রান্না করে খাওয়া",
+                  ),
+                  icon: "fa-utensils",
+                },
+                {
+                  text: yhLang(
+                    "Wash vegetables and fruits thoroughly",
+                    "শাক-সব্জি ও ফল-মূল ভালোভাবে ধুয়ে খেতে হবে",
+                  ),
+                  icon: "fa-apple-whole",
+                },
               ];
 
               const section2 = [
-                { text: yhLang("Stay home when sick; use mask if going out is necessary", "অসুস্থ হলে ঘরে থাকতে হবে, বাইরে যাওয়া অত্যাবশ্যক হলে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে হবে"), icon: "fa-house-medical" },
-                { text: yhLang("Avoid unnecessary travels", "জরুরী প্রয়োজন ব্যতীত অযাথা ভ্রমণ করা থেকে বিরত থাকতে হবে"), icon: "fa-ban" },
-                { text: yhLang("Take precautions during essential travels", "অত্যাবশ্যকীয় ভ্রমণে সাবধানতা অবলম্বন করতে হবে"), icon: "fa-car-side" },
+                {
+                  text: yhLang(
+                    "Stay home when sick; use mask if going out is necessary",
+                    "অসুস্থ হলে ঘরে থাকতে হবে, বাইরে যাওয়া অত্যাবশ্যক হলে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে হবে",
+                  ),
+                  icon: "fa-house-medical",
+                },
+                {
+                  text: yhLang(
+                    "Avoid unnecessary travels",
+                    "জরুরী প্রয়োজন ব্যতীত অযাথা ভ্রমণ করা থেকে বিরত থাকতে হবে",
+                  ),
+                  icon: "fa-ban",
+                },
+                {
+                  text: yhLang(
+                    "Take precautions during essential travels",
+                    "অত্যাবশ্যকীয় ভ্রমণে সাবধানতা অবলম্বন করতে হবে",
+                  ),
+                  icon: "fa-car-side",
+                },
               ];
 
               const section3 = [
-                { text: yhLang("Tell the sick patient to stay home", "অসুস্থ রোগীকে ঘরে থাকতে বলুন"), icon: "fa-person-dots-from-line" },
-                { text: yhLang("Advise severely ill patients to visit the nearest hospital", "মারাত্মক অসুস্থ রোগীকে নিকটস্থ সদর হাসপাতালে যেতে বলুন"), icon: "fa-hospital" },
-                { text: yhLang("Tell patient to use mask to cover nose and mouth", "রোগীকে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে বলুন"), icon: "fa-mask" },
-                { text: yhLang("Patient must drink plenty of water and eat healthy foods with antioxidants, vitamin C, vitamin D and protein", "রোগীকে প্রচুর পানি পান করতে হবে; এন্টি-অক্সিডেন্ট, ভিটামিন-সি, ভিটামিন-ডি ও আমিষ জাতীয় খাবার বেশী বেশী খেতে হবে"), icon: "fa-water" },
+                {
+                  text: yhLang(
+                    "Tell the sick patient to stay home",
+                    "অসুস্থ রোগীকে ঘরে থাকতে বলুন",
+                  ),
+                  icon: "fa-person-dots-from-line",
+                },
+                {
+                  text: yhLang(
+                    "Advise severely ill patients to visit the nearest hospital",
+                    "মারাত্মক অসুস্থ রোগীকে নিকটস্থ সদর হাসপাতালে যেতে বলুন",
+                  ),
+                  icon: "fa-hospital",
+                },
+                {
+                  text: yhLang(
+                    "Tell patient to use mask to cover nose and mouth",
+                    "রোগীকে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে বলুন",
+                  ),
+                  icon: "fa-mask",
+                },
+                {
+                  text: yhLang(
+                    "Patient must drink plenty of water and eat healthy foods with antioxidants, vitamin C, vitamin D and protein",
+                    "রোগীকে প্রচুর পানি পান করতে হবে; এন্টি-অক্সিডেন্ট, ভিটামিন-সি, ভিটামিন-ডি ও আমিষ জাতীয় খাবার বেশী বেশী খেতে হবে",
+                  ),
+                  icon: "fa-water",
+                },
               ];
 
               const renderPoints = (items, baseDelay) =>
@@ -19061,7 +21846,7 @@ const renderCards = () =>
                         <span class="m23l6-point__icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="m23l6-point__text">${item.text}</span>
                       </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -19122,49 +21907,141 @@ const renderCards = () =>
             content: (function () {
               const introText = yhLang(
                 "Light fever or cold during seasonal changes or any other time might seem like a common illness, but it can sometimes be a symptom of influenza. Influenza is primarily a viral infection spread through sneezing and coughing. It can occur at any time of year, but becomes more prevalent during winter.",
-                "ঋতু পরিবর্তন কিংবা অন্য যেকোনো সময়ে হালকা জ্বর বা সর্দি-কাশিকে মানুষ মৌসুমি অসুখ বলে ধরে নিলেও অনেক সময় এটা ইনফ্লুয়েঞ্জার লক্ষণ হতে পারে।  ইনফ্লুয়েঞ্জা মূলত একটি ভাইরাল সংক্রমণ, যা হাঁচি-কাশির মাধ্যমে ছড়ায়। বছরের যেকোনো সময়ই ইনফ্লুয়েঞ্জা হতে পারে। তবে শীতকালে এর প্রকোপ বাড়ে।"
+                "ঋতু পরিবর্তন কিংবা অন্য যেকোনো সময়ে হালকা জ্বর বা সর্দি-কাশিকে মানুষ মৌসুমি অসুখ বলে ধরে নিলেও অনেক সময় এটা ইনফ্লুয়েঞ্জার লক্ষণ হতে পারে।  ইনফ্লুয়েঞ্জা মূলত একটি ভাইরাল সংক্রমণ, যা হাঁচি-কাশির মাধ্যমে ছড়ায়। বছরের যেকোনো সময়ই ইনফ্লুয়েঞ্জা হতে পারে। তবে শীতকালে এর প্রকোপ বাড়ে।",
               );
 
               const spreadPoints = [
-                { text: yhLang("Sneezing, coughing, or speaking from an infected person", "সংক্রমিত ব্যক্তির হাঁচি-কাশি বা কথা বলার মাধ্যমে"), icon: "fa-person-cane" },
-                { text: yhLang("Using items used by an infected person", "সংক্রমিত ব্যক্তির ব্যবহৃত জিনিস ব্যবহারের মাধ্যমে"), icon: "fa-hand-holding" },
-                { text: yhLang("Touching contaminated surfaces", "দূষিত পৃষ্ঠ স্পর্শের মাধ্যমে"), icon: "fa-hand" },
+                {
+                  text: yhLang(
+                    "Sneezing, coughing, or speaking from an infected person",
+                    "সংক্রমিত ব্যক্তির হাঁচি-কাশি বা কথা বলার মাধ্যমে",
+                  ),
+                  icon: "fa-person-cane",
+                },
+                {
+                  text: yhLang(
+                    "Using items used by an infected person",
+                    "সংক্রমিত ব্যক্তির ব্যবহৃত জিনিস ব্যবহারের মাধ্যমে",
+                  ),
+                  icon: "fa-hand-holding",
+                },
+                {
+                  text: yhLang(
+                    "Touching contaminated surfaces",
+                    "দূষিত পৃষ্ঠ স্পর্শের মাধ্যমে",
+                  ),
+                  icon: "fa-hand",
+                },
               ];
 
               const awarenessPoints = [
-                { text: yhLang("Stay at home if sick; use a mask if going out is necessary", "অসুস্থ হলে ঘরে থাকতে হবে, বাইরে যাওয়া অত্যাবশ্যক হলে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে হবে"), icon: "fa-house" },
-                { text: yhLang("Avoid unnecessary travel except in emergencies", "জরুরী প্রয়োজন ব্যতীত অযাথা ভ্রমণ করা থেকে বিরত থাকতে হবে"), icon: "fa-car" },
-                { text: yhLang("Take precautions during essential travel", "অত্যাবশ্যকীয় ভ্রমণে সাবধানতা অবলম্বন করতে হবে"), icon: "fa-shield" },
+                {
+                  text: yhLang(
+                    "Stay at home if sick; use a mask if going out is necessary",
+                    "অসুস্থ হলে ঘরে থাকতে হবে, বাইরে যাওয়া অত্যাবশ্যক হলে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে হবে",
+                  ),
+                  icon: "fa-house",
+                },
+                {
+                  text: yhLang(
+                    "Avoid unnecessary travel except in emergencies",
+                    "জরুরী প্রয়োজন ব্যতীত অযাথা ভ্রমণ করা থেকে বিরত থাকতে হবে",
+                  ),
+                  icon: "fa-car",
+                },
+                {
+                  text: yhLang(
+                    "Take precautions during essential travel",
+                    "অত্যাবশ্যকীয় ভ্রমণে সাবধানতা অবলম্বন করতে হবে",
+                  ),
+                  icon: "fa-shield",
+                },
               ];
 
               const symptomsPoints = [
-                { text: yhLang("Sudden fever of 100°C or higher", "হঠাৎ ১০০ ডিগ্রি সেলসিয়াস বা তার বেশি জ্বর"), icon: "fa-thermometer" },
+                {
+                  text: yhLang(
+                    "Sudden fever of 100°C or higher",
+                    "হঠাৎ ১০০ ডিগ্রি সেলসিয়াস বা তার বেশি জ্বর",
+                  ),
+                  icon: "fa-thermometer",
+                },
                 { text: yhLang("Sore throat", "গলাব্যথা"), icon: "fa-droplet" },
-                { text: yhLang("Cold and cough", "সর্দি-কাশি"), icon: "fa-lungs" },
+                {
+                  text: yhLang("Cold and cough", "সর্দি-কাশি"),
+                  icon: "fa-lungs",
+                },
                 { text: yhLang("Headache", "মাথাব্যথা"), icon: "fa-brain" },
-                { text: yhLang("Diarrhea", "ডায়রিয়া"), icon: "fa-tint-slash" },
-                { text: yhLang("Body weakness", "শরীর দুর্বল হয়ে যাওয়া"), icon: "fa-person-hiking" },
-                { text: yhLang("Nasal congestion", "নাক বন্ধ হয়ে যাওয়া"), icon: "fa-wind" },
-                { text: yhLang("Nausea or vomiting", "বমি-ভাব হওয়া কিংবা বমি হওয়া"), icon: "fa-triangle-exclamation" },
+                {
+                  text: yhLang("Diarrhea", "ডায়রিয়া"),
+                  icon: "fa-tint-slash",
+                },
+                {
+                  text: yhLang("Body weakness", "শরীর দুর্বল হয়ে যাওয়া"),
+                  icon: "fa-person-hiking",
+                },
+                {
+                  text: yhLang("Nasal congestion", "নাক বন্ধ হয়ে যাওয়া"),
+                  icon: "fa-wind",
+                },
+                {
+                  text: yhLang(
+                    "Nausea or vomiting",
+                    "বমি-ভাব হওয়া কিংবা বমি হওয়া",
+                  ),
+                  icon: "fa-triangle-exclamation",
+                },
               ];
 
               const treatmentPoints = [
-                { text: yhLang("Ensure adequate rest for the infected person", "ইনফ্লুয়েঞ্জার সংক্রমণ হলে প্রথমেই আক্রান্ত ব্যক্তির পর্যাপ্ত বিশ্রাম নিশ্চিত করতে হবে।"), icon: "fa-bed" },
-                { text: yhLang("Drink plenty of water and fruit juice to prevent dehydration", "শরীরে যেন পানির ঘাটতি দেখা না দেয়, সে জন্য প্রচুর পরিমাণে পানি ও ফলের রস পান করতে হবে।"), icon: "fa-glass-water" },
-                { text: yhLang("Avoid cold weather and stay warm", "ঠান্ডা আবহাওয়া থেকে দূরে থাকতে হবে এবং নিজেকে উষ্ণ আবহাওয়ার ভেতর রাখতে হবে।"), icon: "fa-sun" },
-                { text: yhLang("Do not share items used by infected person", "ইনফ্লুয়েঞ্জায় আক্রান্ত ব্যক্তির ব্যবহৃত জিনিস যেন আর কেউ ব্যবহার না করে সেটি খেয়াল রাখতে হবে।"), icon: "fa-ban" },
-                { text: yhLang("Get annual flu vaccine to reduce infection risk", "ফ্লুর টিকা দেওয়া হলে আক্রান্ত হওয়ার ঝুঁকি অনেকাংশে কমে যায়। টিকাটি প্রতিবছর একবার করে নিতে হয়।"), icon: "fa-syringe" },
+                {
+                  text: yhLang(
+                    "Ensure adequate rest for the infected person",
+                    "ইনফ্লুয়েঞ্জার সংক্রমণ হলে প্রথমেই আক্রান্ত ব্যক্তির পর্যাপ্ত বিশ্রাম নিশ্চিত করতে হবে।",
+                  ),
+                  icon: "fa-bed",
+                },
+                {
+                  text: yhLang(
+                    "Drink plenty of water and fruit juice to prevent dehydration",
+                    "শরীরে যেন পানির ঘাটতি দেখা না দেয়, সে জন্য প্রচুর পরিমাণে পানি ও ফলের রস পান করতে হবে।",
+                  ),
+                  icon: "fa-glass-water",
+                },
+                {
+                  text: yhLang(
+                    "Avoid cold weather and stay warm",
+                    "ঠান্ডা আবহাওয়া থেকে দূরে থাকতে হবে এবং নিজেকে উষ্ণ আবহাওয়ার ভেতর রাখতে হবে।",
+                  ),
+                  icon: "fa-sun",
+                },
+                {
+                  text: yhLang(
+                    "Do not share items used by infected person",
+                    "ইনফ্লুয়েঞ্জায় আক্রান্ত ব্যক্তির ব্যবহৃত জিনিস যেন আর কেউ ব্যবহার না করে সেটি খেয়াল রাখতে হবে।",
+                  ),
+                  icon: "fa-ban",
+                },
+                {
+                  text: yhLang(
+                    "Get annual flu vaccine to reduce infection risk",
+                    "ফ্লুর টিকা দেওয়া হলে আক্রান্ত হওয়ার ঝুঁকি অনেকাংশে কমে যায়। টিকাটি প্রতিবছর একবার করে নিতে হয়।",
+                  ),
+                  icon: "fa-syringe",
+                },
               ];
 
               const renderPoints = (items, baseDelay) =>
-                items.map(
-                  (item, idx) => `
+                items
+                  .map(
+                    (item, idx) => `
                     <li class="m23l7-point" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 60}">
                       <span class="m23l7-point__icon"><i class="fa-solid ${item.icon}"></i></span>
                       <span class="m23l7-point__text">${item.text}</span>
                     </li>
-                  `
-                ).join("");
+                  `,
+                  )
+                  .join("");
 
               return `
                 <div class="lesson-slide mod23-lesson7">
@@ -19229,45 +22106,45 @@ const renderCards = () =>
             content: (function () {
               const introText = yhLang(
                 "Avian Influenza, or Bird Flu, is a severe contagious viral disease of poultry. Chickens, turkeys, quails, ducks, geese and many other types of birds are affected by this disease. It is believed that wild waterfowl serve as carriers of this virus; however, they are not usually affected by the disease. It is a zoonotic disease that can also affect humans.",
-                "এভিয়ান ইনফ্লুয়েঞ্জা বা বার্ড ফ্লু ভাইরাসজনিত মুরগির একটি মারাত্বক সংক্রামক ও ছোঁয়াচে রোগ। মুরগি, টার্কি, কোয়েল, হাঁস, রাজহাঁস এবং আরও নানা জাতীয় পাখি এ রোগে আক্রান্ত হয়ে থাকে। ধারণা করা হয় বন্য জলচর পাখিরা এ ভাইরাসের বাহক হিসেবে কাজ করে, তবে সাধারণত এরা এ রোগে আক্রান্ত হয়না। এটি একটি জুনোটিক ডিজিজ, যা মানুষকেও আক্রান্ত করতে পারে। "
+                "এভিয়ান ইনফ্লুয়েঞ্জা বা বার্ড ফ্লু ভাইরাসজনিত মুরগির একটি মারাত্বক সংক্রামক ও ছোঁয়াচে রোগ। মুরগি, টার্কি, কোয়েল, হাঁস, রাজহাঁস এবং আরও নানা জাতীয় পাখি এ রোগে আক্রান্ত হয়ে থাকে। ধারণা করা হয় বন্য জলচর পাখিরা এ ভাইরাসের বাহক হিসেবে কাজ করে, তবে সাধারণত এরা এ রোগে আক্রান্ত হয়না। এটি একটি জুনোটিক ডিজিজ, যা মানুষকেও আক্রান্ত করতে পারে। ",
               );
               const introText2 = yhLang(
                 "The virus currently detected in Bangladesh is H5N1 in nature. The H5N1 virus of avian influenza is highly active and dangerous. It can also infect humans.",
-                "বাংলাদেশে বর্তমানে যে ভাইরাসটি সচারাচর সনাক্ত করা হচ্ছে সেটি  H5N1 প্রকৃতির। এভিয়ান ইনফ্লুয়েঞ্জার এই ভাইরাসটি অত্যন্ত সক্রিয় ও ভয়ঙ্কর। এটি মানুষকেও সংক্রমিত করে। "
+                "বাংলাদেশে বর্তমানে যে ভাইরাসটি সচারাচর সনাক্ত করা হচ্ছে সেটি  H5N1 প্রকৃতির। এভিয়ান ইনফ্লুয়েঞ্জার এই ভাইরাসটি অত্যন্ত সক্রিয় ও ভয়ঙ্কর। এটি মানুষকেও সংক্রমিত করে। ",
               );
               const riskFactors = [
                 {
                   text: yhLang(
                     "Working in poultry farms",
-                    "পোল্ট্রি খামারে কর্মরত থাকলে"
+                    "পোল্ট্রি খামারে কর্মরত থাকলে",
                   ),
                   icon: "fa-industry",
                 },
                 {
                   text: yhLang(
                     "Traveling to affected areas",
-                    "আক্রান্ত এলাকায় গমন করলে"
+                    "আক্রান্ত এলাকায় গমন করলে",
                   ),
                   icon: "fa-map-location-dot",
                 },
                 {
                   text: yhLang(
                     "Contact with infected birds",
-                    "সংক্রামিত পাখির সংস্পর্শে আসলে"
+                    "সংক্রামিত পাখির সংস্পর্শে আসলে",
                   ),
                   icon: "fa-crow",
                 },
                 {
                   text: yhLang(
                     "Consuming undercooked chicken or eggs",
-                    "কম রান্না করা মুরগি বা ডিম খেলে"
+                    "কম রান্না করা মুরগি বা ডিম খেলে",
                   ),
                   icon: "fa-drumstick-bite",
                 },
               ];
               const symptomsIntro = yhLang(
                 "A person is suspected of having H5N1 infection if they experience the following symptoms:",
-                "একজন ব্যক্তির H5N1 সংক্রমণ আছে বলে সন্দেহ করা হয় যদি তিনি নিম্নলিখিত উপসর্গগুলির সম্মুখীন হন:"
+                "একজন ব্যক্তির H5N1 সংক্রমণ আছে বলে সন্দেহ করা হয় যদি তিনি নিম্নলিখিত উপসর্গগুলির সম্মুখীন হন:",
               );
               const symptoms = [
                 {
@@ -19303,21 +22180,21 @@ const renderCards = () =>
                 {
                   text: yhLang(
                     "Avoid eating wild or domestic birds.",
-                    "বন্য পাখি বা গৃহপালিত পাখি খাওয়া এড়িয়ে চলুন।"
+                    "বন্য পাখি বা গৃহপালিত পাখি খাওয়া এড়িয়ে চলুন।",
                   ),
                   icon: "fa-ban",
                 },
                 {
                   text: yhLang(
                     "Take influenza antiviral drugs or vaccine after consulting with your doctor for preventive measures.",
-                    "প্রতিরোধমূলক ব্যবস্থার জন্য আপনার ডাক্তারের সাথে পরামর্শ করার পরে ইনফ্লুয়েঞ্জা অ্যান্টিভাইরাল ওষুধ বা ভ্যাকসিন নিতে হবে।"
+                    "প্রতিরোধমূলক ব্যবস্থার জন্য আপনার ডাক্তারের সাথে পরামর্শ করার পরে ইনফ্লুয়েঞ্জা অ্যান্টিভাইরাল ওষুধ বা ভ্যাকসিন নিতে হবে।",
                   ),
                   icon: "fa-user-doctor",
                 },
                 {
                   text: yhLang(
                     "Cook poultry or dairy products well before eating.",
-                    "পোল্ট্রি বা দুগ্ধজাত দ্রব্য ভালভাবে রান্না করার পর খেতে হবে।"
+                    "পোল্ট্রি বা দুগ্ধজাত দ্রব্য ভালভাবে রান্না করার পর খেতে হবে।",
                   ),
                   icon: "fa-fire-burner",
                 },
@@ -19330,7 +22207,7 @@ const renderCards = () =>
                       <span class="m23l8-point__icon"><i class="fa-solid ${item.icon}"></i></span>
                       <span class="m23l8-point__text">${item.text}</span>
                     </li>
-                  `
+                  `,
                   )
                   .join("");
 
@@ -19392,83 +22269,74 @@ const renderCards = () =>
             content: (function () {
               const introText = yhLang(
                 "Mpox is a zoonotic viral disease.",
-                "এমপক্স একটি ভাইরাস জনিত প্রাণিবাহিত (Zoonotic) রোগ।"
+                "এমপক্স একটি ভাইরাস জনিত প্রাণিবাহিত (Zoonotic) রোগ।",
               );
               const introText2 = yhLang(
                 "First identified in monkeys in Denmark in 1958, it was called Monkeypox. In November 2022, WHO renamed it to Mpox following modern naming guidelines.",
-                "১৯৫৮ সালে ডেনমার্ক-এ বানরের দেহে সর্বপ্রথম এ রোগ সনাক্ত হয় বলে একে মাঙ্কিপক্স বলা হয়। ২০২২ সালের নভেম্বরে বিশ্ব স্বাস্থ্য সংস্থা (WHO) রোগের নামকরণের জন্য আধুনিক নির্দেশিকা অনুসরণ করে রোগটির নাম পরিবর্তন করে এমপক্স (Mpox) রাখা হয়।"
+                "১৯৫৮ সালে ডেনমার্ক-এ বানরের দেহে সর্বপ্রথম এ রোগ সনাক্ত হয় বলে একে মাঙ্কিপক্স বলা হয়। ২০২২ সালের নভেম্বরে বিশ্ব স্বাস্থ্য সংস্থা (WHO) রোগের নামকরণের জন্য আধুনিক নির্দেশিকা অনুসরণ করে রোগটির নাম পরিবর্তন করে এমপক্স (Mpox) রাখা হয়।",
               );
               const introText3 = yhLang(
                 "This disease is primarily found in Central and West Africa. It has appeared in other countries, but in those cases, there is evidence of travel history to affected regions or contact with animals imported from those areas.",
-                "এ রোগটির প্রাদুর্ভাব প্রধানত মধ্য ও পশ্চিম আফ্রিকায় দেখা যায়। ইতিপূর্বে এ ছাড়া অন্যান্য দেশেও এ রোগের প্রাদুর্ভাব দেখা গেছে। তবে সে ক্ষেত্রে উক্ত দেশ সমূহে ভ্রমণের ইতিহাস অথবা উক্ত দেশ সমূহ হতে আমদানিকৃত প্রাণীর সংস্পর্শে আসার প্রমাণ আছে।"
+                "এ রোগটির প্রাদুর্ভাব প্রধানত মধ্য ও পশ্চিম আফ্রিকায় দেখা যায়। ইতিপূর্বে এ ছাড়া অন্যান্য দেশেও এ রোগের প্রাদুর্ভাব দেখা গেছে। তবে সে ক্ষেত্রে উক্ত দেশ সমূহে ভ্রমণের ইতিহাস অথবা উক্ত দেশ সমূহ হতে আমদানিকৃত প্রাণীর সংস্পর্শে আসার প্রমাণ আছে।",
               );
               const symptoms = [
                 {
                   text: yhLang(
                     "Fever (above 38°C)",
-                    "জ্বর (৩৮ ডিগ্রি সেন্টিগ্রেডের বেশী তাপমাত্রা)"
+                    "জ্বর (৩৮ ডিগ্রি সেন্টিগ্রেডের বেশী তাপমাত্রা)",
                   ),
                   icon: "fa-temperature-high",
                 },
                 {
-                  text: yhLang(
-                    "Severe headache",
-                    "প্রচন্ড মাথা ব্যথা"
-                  ),
+                  text: yhLang("Severe headache", "প্রচন্ড মাথা ব্যথা"),
                   icon: "fa-head-side-virus",
                 },
                 {
                   text: yhLang(
                     "Swollen lymph nodes and pain (Lymphadenopathy)",
-                    "শরীরের বিভিন্ন জায়গায় লসিকাগ্রন্থি ফুলে যাওয়া ও ব্যথা (Lymphadenopathy)"
+                    "শরীরের বিভিন্ন জায়গায় লসিকাগ্রন্থি ফুলে যাওয়া ও ব্যথা (Lymphadenopathy)",
                   ),
                   icon: "fa-hand-dots",
                 },
                 {
-                  text: yhLang(
-                    "Muscle pain",
-                    "মাংসপেশীতে ব্যথা"
-                  ),
+                  text: yhLang("Muscle pain", "মাংসপেশীতে ব্যথা"),
                   icon: "fa-dumbbell",
                 },
                 {
-                  text: yhLang(
-                    "Fatigue",
-                    "অবসাদগ্রস্ততা"
-                  ),
+                  text: yhLang("Fatigue", "অবসাদগ্রস্ততা"),
                   icon: "fa-bed-pulse",
                 },
                 {
                   text: yhLang(
                     "Rash - starting from face and spreading to palms, soles, and other body parts (usually within 3 days of fever)",
-                    "ফুসকুড়ি- যা মুখ থেকে শুরু হয়ে পর্যায়ক্রমে হাতের তালু, পায়ের তালু সহ শরীরের বিভিন্ন জায়গায় ছড়িয়ে পড়ে (সাধারণত জ্বরের ৩ দিনের মধ্যে)"
+                    "ফুসকুড়ি- যা মুখ থেকে শুরু হয়ে পর্যায়ক্রমে হাতের তালু, পায়ের তালু সহ শরীরের বিভিন্ন জায়গায় ছড়িয়ে পড়ে (সাধারণত জ্বরের ৩ দিনের মধ্যে)",
                   ),
                   icon: "fa-virus",
                 },
               ];
               const symptomsNote = yhLang(
                 "Symptoms usually last 2-4 weeks.",
-                "সাধারণত উপসর্গ ২-৪ সপ্তাহ পর্যন্ত স্থায়ী হয়।"
+                "সাধারণত উপসর্গ ২-৪ সপ্তাহ পর্যন্ত স্থায়ী হয়।",
               );
               const actions = [
                 {
                   text: yhLang(
                     "Isolate yourself from others immediately.",
-                    "সাবার আগে নিজেকে অন্যদের কাছ হতে আলাদা (Isolation) করুন।"
+                    "সাবার আগে নিজেকে অন্যদের কাছ হতে আলাদা (Isolation) করুন।",
                   ),
                   icon: "fa-user-slash",
                 },
                 {
                   text: yhLang(
                     "Contact a doctor/local health center/hospital immediately.",
-                    "সাথে সাথে চিকিৎসক/ নিকটস্থ স্থানীয় স্বাস্থ্য কেন্দ্র/ হাসপাতালে যোগাযোগ করুন।"
+                    "সাথে সাথে চিকিৎসক/ নিকটস্থ স্থানীয় স্বাস্থ্য কেন্দ্র/ হাসপাতালে যোগাযোগ করুন।",
                   ),
                   icon: "fa-hospital",
                 },
                 {
                   text: yhLang(
                     "Especially those already suffering from chronic illnesses (uncontrolled diabetes, high blood pressure, cancer) should seek medical advice urgently.",
-                    "বিশেষ করে যারা আগে থেকেই দীর্ঘমেয়াদী অসুস্থতায় ভুগছেন (যেমনঃ অনিয়ন্ত্রিত ডায়াবেটিস, উচ্চ রক্তচাপ, ক্যান্সার) তারা অতিদ্রুত চিকিৎসকের পরামর্শ নেবেন।"
+                    "বিশেষ করে যারা আগে থেকেই দীর্ঘমেয়াদী অসুস্থতায় ভুগছেন (যেমনঃ অনিয়ন্ত্রিত ডায়াবেটিস, উচ্চ রক্তচাপ, ক্যান্সার) তারা অতিদ্রুত চিকিৎসকের পরামর্শ নেবেন।",
                   ),
                   icon: "fa-user-doctor",
                 },
@@ -19481,7 +22349,7 @@ const renderCards = () =>
                       <span class="m23l9-point__icon"><i class="fa-solid ${item.icon}"></i></span>
                       <span class="m23l9-point__text">${item.text}</span>
                     </li>
-                    `
+                    `,
                   )
                   .join("");
 
@@ -19536,7 +22404,7 @@ const renderCards = () =>
         id: "ch-24",
         title: yhLang(
           "Module-24: Life Skills, Ethics and Values for Adolescents",
-          "মডিউল-২৪: তরুণ–তরুণীদের জীবন দক্ষতা, নৈতিকতা ও মূল্যবোধ শিক্ষা"
+          "মডিউল-২৪: তরুণ–তরুণীদের জীবন দক্ষতা, নৈতিকতা ও মূল্যবোধ শিক্ষা",
         ),
         lessons: [
           {
@@ -19550,18 +22418,18 @@ const renderCards = () =>
                 {
                   text: yhLang(
                     "Life skills are the ability to understand daily life problems and needs and manage them properly",
-                    "জীবন দক্ষতা হলো দৈনন্দিন জীবনের সমস্যা ও চাহিদা বুঝে সেগুলোর সঠিক ব্যবস্থাপনার সক্ষমতা"
+                    "জীবন দক্ষতা হলো দৈনন্দিন জীবনের সমস্যা ও চাহিদা বুঝে সেগুলোর সঠিক ব্যবস্থাপনার সক্ষমতা",
                   ),
                   icon: "fa-brain",
-                  color: "m24l1-item-blue"
+                  color: "m24l1-item-blue",
                 },
                 {
                   text: yhLang(
                     "It helps young people deal with various challenges in life",
-                    "এটি তরুন-তরুনীদের জীবনের নানা চ্যালেঞ্জ মোকাবিলায় সহায়তা করে"
+                    "এটি তরুন-তরুনীদের জীবনের নানা চ্যালেঞ্জ মোকাবিলায় সহায়তা করে",
                   ),
                   icon: "fa-hand-holding-heart",
-                  color: "m24l1-item-teal"
+                  color: "m24l1-item-teal",
                 },
               ];
 
@@ -19569,18 +22437,18 @@ const renderCards = () =>
                 {
                   text: yhLang(
                     "No aspect of life skills is difficult",
-                    "জীবন দক্ষতার কোনো বিষয়ই কঠিন নয়"
+                    "জীবন দক্ষতার কোনো বিষয়ই কঠিন নয়",
                   ),
                   icon: "fa-circle-check",
-                  color: "m24l1-item-green"
+                  color: "m24l1-item-green",
                 },
                 {
                   text: yhLang(
                     "If it is practiced properly and regularly.",
-                    "যদি তা সঠিকভাবে ও নিয়মিত অনুশীলন করা যায়।"
+                    "যদি তা সঠিকভাবে ও নিয়মিত অনুশীলন করা যায়।",
                   ),
                   icon: "fa-dumbbell",
-                  color: "m24l1-item-purple"
+                  color: "m24l1-item-purple",
                 },
               ];
 
@@ -19588,74 +22456,155 @@ const renderCards = () =>
                 {
                   text: yhLang("Parents", "মা–বাবা"),
                   icon: "fa-house-user",
-                  color: "m24l1-item-rose"
+                  color: "m24l1-item-rose",
                 },
                 {
                   text: yhLang("Relatives", "আত্মীয়-স্বজন"),
                   icon: "fa-people-roof",
-                  color: "m24l1-item-orange"
+                  color: "m24l1-item-orange",
                 },
                 {
                   text: yhLang("Teachers", "শিক্ষক"),
                   icon: "fa-chalkboard-user",
-                  color: "m24l1-item-indigo"
+                  color: "m24l1-item-indigo",
                 },
                 {
-                  text: yhLang("Trainers and Service Providers", "প্রশিক্ষক ও সার্ভিস প্রোভাইডার"),
+                  text: yhLang(
+                    "Trainers and Service Providers",
+                    "প্রশিক্ষক ও সার্ভিস প্রোভাইডার",
+                  ),
                   icon: "fa-user-doctor",
-                  color: "m24l1-item-cyan"
+                  color: "m24l1-item-cyan",
                 },
               ];
 
               const skillsList = [
-                { text: yhLang("Effective Communication Skills", "কার্যকর যোগাযোগের দক্ষতা"), icon: "fa-comments", gradient: "bg-gradient-green" },
-                { text: yhLang("Self-awareness", "আত্ম সচেতনতা"), icon: "fa-eye", gradient: "bg-gradient-blue" },
-                { text: yhLang("Empathy", "সমমর্মিতা"), icon: "fa-handshake-angle", gradient: "bg-gradient-rose" },
-                { text: yhLang("Creative Thinking", "সৃজনশীল চিন্তাভাবনা"), icon: "fa-palette", gradient: "bg-gradient-tangerine" },
-                { text: yhLang("Interpersonal Relationship Skills", "আন্ত:ব্যক্তিক সম্পর্ক দক্ষতা"), icon: "fa-people-arrows", gradient: "bg-gradient-teal" },
-                { text: yhLang("Critical Thinking", " সমালোচনা মুলক চিন্তাভাবনা "), icon: "fa-microscope", gradient: "bg-gradient-purple" },
-                { text: yhLang("Decision Making Skills", "সিদ্ধান্ত গ্রহণ দক্ষতা"), icon: "fa-gavel", gradient: "bg-gradient-emerald" },
-                { text: yhLang("Problem Solving Skills", "সমস্যা সমাধান দক্ষতা"), icon: "fa-puzzle-piece", gradient: "bg-gradient-blue" },
-                { text: yhLang("Stress Management Skills", "চাপ মোকাবেলার দক্ষতা"), icon: "fa-spa", gradient: "bg-gradient-rose" },
-                { text: yhLang("Emotion Management Skills", "আবেগ মোকাবেলার দক্ষতা"), icon: "fa-heart-pulse", gradient: "bg-gradient-green" },
-                { text: yhLang("Ability to Say No When Needed", "প্রয়োজনে না বলতে পারা"), icon: "fa-hand", gradient: "bg-gradient-teal" },
-                { text: yhLang("Compromise Mindset", "সমঝোতার মানসিকতা"), icon: "fa-scale-balanced", gradient: "bg-gradient-purple" },
+                {
+                  text: yhLang(
+                    "Effective Communication Skills",
+                    "কার্যকর যোগাযোগের দক্ষতা",
+                  ),
+                  icon: "fa-comments",
+                  gradient: "bg-gradient-green",
+                },
+                {
+                  text: yhLang("Self-awareness", "আত্ম সচেতনতা"),
+                  icon: "fa-eye",
+                  gradient: "bg-gradient-blue",
+                },
+                {
+                  text: yhLang("Empathy", "সমমর্মিতা"),
+                  icon: "fa-handshake-angle",
+                  gradient: "bg-gradient-rose",
+                },
+                {
+                  text: yhLang("Creative Thinking", "সৃজনশীল চিন্তাভাবনা"),
+                  icon: "fa-palette",
+                  gradient: "bg-gradient-tangerine",
+                },
+                {
+                  text: yhLang(
+                    "Interpersonal Relationship Skills",
+                    "আন্ত:ব্যক্তিক সম্পর্ক দক্ষতা",
+                  ),
+                  icon: "fa-people-arrows",
+                  gradient: "bg-gradient-teal",
+                },
+                {
+                  text: yhLang(
+                    "Critical Thinking",
+                    " সমালোচনা মুলক চিন্তাভাবনা ",
+                  ),
+                  icon: "fa-microscope",
+                  gradient: "bg-gradient-purple",
+                },
+                {
+                  text: yhLang(
+                    "Decision Making Skills",
+                    "সিদ্ধান্ত গ্রহণ দক্ষতা",
+                  ),
+                  icon: "fa-gavel",
+                  gradient: "bg-gradient-emerald",
+                },
+                {
+                  text: yhLang(
+                    "Problem Solving Skills",
+                    "সমস্যা সমাধান দক্ষতা",
+                  ),
+                  icon: "fa-puzzle-piece",
+                  gradient: "bg-gradient-blue",
+                },
+                {
+                  text: yhLang(
+                    "Stress Management Skills",
+                    "চাপ মোকাবেলার দক্ষতা",
+                  ),
+                  icon: "fa-spa",
+                  gradient: "bg-gradient-rose",
+                },
+                {
+                  text: yhLang(
+                    "Emotion Management Skills",
+                    "আবেগ মোকাবেলার দক্ষতা",
+                  ),
+                  icon: "fa-heart-pulse",
+                  gradient: "bg-gradient-green",
+                },
+                {
+                  text: yhLang(
+                    "Ability to Say No When Needed",
+                    "প্রয়োজনে না বলতে পারা",
+                  ),
+                  icon: "fa-hand",
+                  gradient: "bg-gradient-teal",
+                },
+                {
+                  text: yhLang("Compromise Mindset", "সমঝোতার মানসিকতা"),
+                  icon: "fa-scale-balanced",
+                  gradient: "bg-gradient-purple",
+                },
               ];
 
               const renderWhatIsPoints = (items, delay) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m24l1-enhanced-item ${item.color}" data-aos="fade-up" data-aos-delay="${delay + idx * 80}">
                       <div class="m24l1-enhanced-icon">
                         <i class="fa-solid ${item.icon}"></i>
                       </div>
                       <span class="m24l1-enhanced-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               const renderIsHardPoints = (items, delay) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m24l1-enhanced-item ${item.color}" data-aos="fade-right" data-aos-delay="${delay + idx * 80}">
                       <div class="m24l1-enhanced-icon">
                         <i class="fa-solid ${item.icon}"></i>
                       </div>
                       <span class="m24l1-enhanced-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               const renderHelpers = (items, delay) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m24l1-enhanced-item ${item.color}" data-aos="fade-left" data-aos-delay="${delay + idx * 80}">
                       <div class="m24l1-enhanced-icon">
                         <i class="fa-solid ${item.icon}"></i>
                       </div>
                       <span class="m24l1-enhanced-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               const renderOrbit = () => {
@@ -19695,11 +22644,11 @@ const renderCards = () =>
                     <div class="m24l1-hero__body">
                       <h1 class="m24l1-hero__title">${yhLang(
                         "Life Skills",
-                        "জীবন দক্ষতা"
+                        "জীবন দক্ষতা",
                       )}</h1>
                       <p class="m24l1-hero__subtitle">${yhLang(
                         "Building Essential Skills for Life Success",
-                        "জীবনে সফলতার জন্য অত্যাবশ্যক দক্ষতা অর্জন"
+                        "জীবনে সফলতার জন্য অত্যাবশ্যক দক্ষতা অর্জন",
                       )}</p>
                     </div>
                   </header>
@@ -19751,7 +22700,7 @@ const renderCards = () =>
                           </div>
                           <div class="m24l1-orbit-center-text"><h2 class="text-white"> ${yhLang(
                             "Important Life Skills",
-                            "গুরুত্বপূর্ণ জীবন দক্ষতা"
+                            "গুরুত্বপূর্ণ জীবন দক্ষতা",
                           )} </h2></div>
                         </div>
                         <div class="m24l1-orbit-ring"></div>
@@ -19775,7 +22724,7 @@ const renderCards = () =>
                   color: "m24l2-item-blue",
                   text: yhLang(
                     "The sense of judging right and wrong",
-                    "মূল্যবোধ হলো — ভালো ও খারাপ বিচার করার বোধ।"
+                    "মূল্যবোধ হলো — ভালো ও খারাপ বিচার করার বোধ।",
                   ),
                 },
                 {
@@ -19783,7 +22732,7 @@ const renderCards = () =>
                   color: "m24l2-item-purple",
                   text: yhLang(
                     "Values = evaluation + sense",
-                    "মূল্যবোধ = মূল্যায়ন + বোধ।"
+                    "মূল্যবোধ = মূল্যায়ন + বোধ।",
                   ),
                 },
                 {
@@ -19791,7 +22740,7 @@ const renderCards = () =>
                   color: "m24l2-item-teal",
                   text: yhLang(
                     "Choosing what is right and just using intellect and judgement",
-                    "অর্থাৎ বুদ্ধি ও বিবেচনা দিয়ে সঠিক ও ন্যায়সংগত কাজ বেছে নেওয়া।"
+                    "অর্থাৎ বুদ্ধি ও বিবেচনা দিয়ে সঠিক ও ন্যায়সংগত কাজ বেছে নেওয়া।",
                   ),
                 },
               ];
@@ -19810,7 +22759,10 @@ const renderCards = () =>
                 {
                   icon: "fa-users",
                   color: "m24l2-item-green",
-                  text: yhLang("Through social practice", "সামাজিক চর্চার মাধ্যমে"),
+                  text: yhLang(
+                    "Through social practice",
+                    "সামাজিক চর্চার মাধ্যমে",
+                  ),
                 },
               ];
 
@@ -19820,7 +22772,7 @@ const renderCards = () =>
                   color: "m24l2-warn-red",
                   text: yhLang(
                     "Lack of family guidance",
-                    "পারিবারিক অনুশাসনের অভাব"
+                    "পারিবারিক অনুশাসনের অভাব",
                   ),
                 },
                 {
@@ -19828,7 +22780,7 @@ const renderCards = () =>
                   color: "m24l2-warn-orange",
                   text: yhLang(
                     "Lack of religious education",
-                    "ধর্মীয় শিক্ষার ঘাটতি"
+                    "ধর্মীয় শিক্ষার ঘাটতি",
                   ),
                 },
                 {
@@ -19836,7 +22788,7 @@ const renderCards = () =>
                   color: "m24l2-warn-amber",
                   text: yhLang(
                     "Social and cultural decline",
-                    "সামাজিক ও সাংস্কৃতিক অবক্ষয়"
+                    "সামাজিক ও সাংস্কৃতিক অবক্ষয়",
                   ),
                 },
                 {
@@ -19844,7 +22796,7 @@ const renderCards = () =>
                   color: "m24l2-warn-yellow",
                   text: yhLang(
                     "Reckless behavior in the name of being modern",
-                    "আধুনিক হতে গিয়ে বেপরোয়া আচরণ"
+                    "আধুনিক হতে গিয়ে বেপরোয়া আচরণ",
                   ),
                 },
                 {
@@ -19857,7 +22809,7 @@ const renderCards = () =>
                   color: "m24l2-warn-orange",
                   text: yhLang(
                     "Uncontrolled use of mobile phones",
-                    "মোবাইল ফোনের অনিয়ন্ত্রিত ব্যবহার"
+                    "মোবাইল ফোনের অনিয়ন্ত্রিত ব্যবহার",
                   ),
                 },
                 {
@@ -19865,7 +22817,7 @@ const renderCards = () =>
                   color: "m24l2-warn-amber",
                   text: yhLang(
                     "Misuse of the internet",
-                    "ইন্টারনেটের অপব্যবহার"
+                    "ইন্টারনেটের অপব্যবহার",
                   ),
                 },
                 {
@@ -19873,63 +22825,117 @@ const renderCards = () =>
                   color: "m24l2-warn-yellow",
                   text: yhLang(
                     "Negative marketing practices",
-                    "নেতিবাচক বিপণন ব্যবস্থা"
+                    "নেতিবাচক বিপণন ব্যবস্থা",
                   ),
                 },
               ];
 
               const valuesList = [
-                { text: yhLang("Honesty", "সততা"), icon: "fa-shield-heart", gradient: "bg-gradient-blue" },
-                { text: yhLang("Discipline", "শৃঙ্খলা"), icon: "fa-list-check", gradient: "bg-gradient-rose" },
-                { text: yhLang("Responsibility", "দায়িত্ববোধ"), icon: "fa-handshake", gradient: "bg-gradient-green" },
-                { text: yhLang("Cooperation", "সহযোগিতার </br>মানসিকতা"), icon: "fa-people-carry-box", gradient: "bg-gradient-teal" },
-                { text: yhLang("Respect", "সম্মানবোধ"), icon: "fa-hands-praying", gradient: "bg-gradient-purple" },
-                { text: yhLang("Self-control", "আত্মসংযম"), icon: "fa-hand-fist", gradient: "bg-gradient-emerald" },
-                { text: yhLang("Justice", "ন্যায় </br> পরায়ণতা"), icon: "fa-scale-balanced", gradient: "bg-gradient-blue" },
-                { text: yhLang("Empathy", "সহানুভূতিশীলতা"), icon: "fa-heart-circle-plus", gradient: "bg-gradient-rose" },
-                { text: yhLang("Patriotism", "দেশপ্রেম"), icon: "fa-flag", gradient: "bg-gradient-green" },
-                { text: yhLang("Hard Work", "পরিশ্রমী </br> মনোভাব"), icon: "fa-person-digging", gradient: "bg-gradient-tangerine" },
-                { text: yhLang("Moral Courage", "নৈতিক </br> সাহস"), icon: "fa-hand-fist", gradient: "bg-gradient-teal" },
-                { text: yhLang("Ethics", "নৈতিকতা"), icon: "fa-book-open", gradient: "bg-gradient-purple" },
+                {
+                  text: yhLang("Honesty", "সততা"),
+                  icon: "fa-shield-heart",
+                  gradient: "bg-gradient-blue",
+                },
+                {
+                  text: yhLang("Discipline", "শৃঙ্খলা"),
+                  icon: "fa-list-check",
+                  gradient: "bg-gradient-rose",
+                },
+                {
+                  text: yhLang("Responsibility", "দায়িত্ববোধ"),
+                  icon: "fa-handshake",
+                  gradient: "bg-gradient-green",
+                },
+                {
+                  text: yhLang("Cooperation", "সহযোগিতার </br>মানসিকতা"),
+                  icon: "fa-people-carry-box",
+                  gradient: "bg-gradient-teal",
+                },
+                {
+                  text: yhLang("Respect", "সম্মানবোধ"),
+                  icon: "fa-hands-praying",
+                  gradient: "bg-gradient-purple",
+                },
+                {
+                  text: yhLang("Self-control", "আত্মসংযম"),
+                  icon: "fa-hand-fist",
+                  gradient: "bg-gradient-emerald",
+                },
+                {
+                  text: yhLang("Justice", "ন্যায় </br> পরায়ণতা"),
+                  icon: "fa-scale-balanced",
+                  gradient: "bg-gradient-blue",
+                },
+                {
+                  text: yhLang("Empathy", "সহানুভূতিশীলতা"),
+                  icon: "fa-heart-circle-plus",
+                  gradient: "bg-gradient-rose",
+                },
+                {
+                  text: yhLang("Patriotism", "দেশপ্রেম"),
+                  icon: "fa-flag",
+                  gradient: "bg-gradient-green",
+                },
+                {
+                  text: yhLang("Hard Work", "পরিশ্রমী </br> মনোভাব"),
+                  icon: "fa-person-digging",
+                  gradient: "bg-gradient-tangerine",
+                },
+                {
+                  text: yhLang("Moral Courage", "নৈতিক </br> সাহস"),
+                  icon: "fa-hand-fist",
+                  gradient: "bg-gradient-teal",
+                },
+                {
+                  text: yhLang("Ethics", "নৈতিকতা"),
+                  icon: "fa-book-open",
+                  gradient: "bg-gradient-purple",
+                },
               ];
 
               const renderHighlights = (items, delay) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m24l2-highlight-item ${item.color}" data-aos="flip-left" data-aos-delay="${delay + idx * 70}">
                       <div class="m24l2-highlight-icon">
                         <i class="fa-solid ${item.icon}"></i>
                       </div>
                       <span class="m24l2-highlight-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               const renderLearnItems = (items, delay) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m24l2-learn-item ${item.color}" data-aos="fade-right" data-aos-delay="${delay + idx * 80}">
                       <div class="m24l2-learn-icon">
                         <i class="fa-solid ${item.icon}"></i>
                       </div>
                       <span class="m24l2-learn-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
               const renderCauses = (items, delay) =>
                 items
-                  .map((item, idx) => `
+                  .map(
+                    (item, idx) => `
                     <li class="m24l2-cause-item ${item.color}" data-aos="zoom-in" data-aos-delay="${delay + idx * 60}">
                       <div class="m24l2-cause-icon">
                         <i class="fa-solid ${item.icon}"></i>
                       </div>
                       <span class="m24l2-cause-text">${item.text}</span>
                     </li>
-                  `)
+                  `,
+                  )
                   .join("");
 
-              const  renderValuesOrbit = () => {
+              const renderValuesOrbit = () => {
                 const angleStep = 360 / valuesList.length;
                 return valuesList
                   .map((item, idx) => {
@@ -19965,11 +22971,11 @@ const renderCards = () =>
                     <div class="m24l2-hero__body">
                       <h1 class="m24l2-hero__title">${yhLang(
                         "What are Values?",
-                        "মূল্যবোধ কী?"
+                        "মূল্যবোধ কী?",
                       )}</h1>
                       <p class="m24l2-hero__subtitle">${yhLang(
                         "Understanding Ethics and Moral Principles",
-                        "নৈতিকতা এবং নৈতিক নীতি বোঝা"
+                        "নৈতিকতা এবং নৈতিক নীতি বোঝা",
                       )}</p>
                     </div>
                   </header>
@@ -19982,9 +22988,9 @@ const renderCards = () =>
                             <i class="fa-solid fa-lightbulb"></i>
                           </span>
                           <span class="m24l2-heading-text">${yhLang(
-                        "What are Values?",
-                        "মূল্যবোধ কী?"
-                      )}</span>
+                            "What are Values?",
+                            "মূল্যবোধ কী?",
+                          )}</span>
                         </h3>
                         <ul class="m24l2-highlight-list">
                           ${renderHighlights(highlights, 280)}
@@ -20001,7 +23007,7 @@ const renderCards = () =>
                         <p class="m24l2-explanation-text" data-aos="fade-up" data-aos-delay="430">
                           ${yhLang(
                             "Using your intellect and judgement to assess what is good or bad in an action, and practicing the good and just aspects—that is values.",
-                            "নিজের বুদ্ধি ও বিবেচনা ব্যবহার করে কোনো কাজের ভালো-মন্দ বিচার করে ভালো ও ন্যায়সংগত দিকগুলো চর্চা করাই হলো মূল্যবোধ।"
+                            "নিজের বুদ্ধি ও বিবেচনা ব্যবহার করে কোনো কাজের ভালো-মন্দ বিচার করে ভালো ও ন্যায়সংগত দিকগুলো চর্চা করাই হলো মূল্যবোধ।",
                           )}
                         </p>
                       </section>
@@ -20029,7 +23035,7 @@ const renderCards = () =>
                           </div>
                           <div class="m24l2-orbit-center-text"> <h2>${yhLang(
                             "Important Moral Values",
-                            "গুরুত্বপূর্ণ নৈতিক মূল্যবোধ"
+                            "গুরুত্বপূর্ণ নৈতিক মূল্যবোধ",
                           )}</h2></div>
                         </div>
                         <div class="m24l2-orbit-ring"></div>
@@ -20053,94 +23059,97 @@ const renderCards = () =>
           },
           {
             id: "ch24-lesson-3",
-            title: yhLang("Ways to develop values: ", "মূল্যবোধ উন্নয়নের উপায়: "),
+            title: yhLang(
+              "Ways to develop values: ",
+              "মূল্যবোধ উন্নয়নের উপায়: ",
+            ),
             icon: "fa-feather-pointed",
             gradientClass: "bg-gradient-yellow",
             audioFile: "",
             content: (function () {
-            const methodsTitle = yhLang(
+              const methodsTitle = yhLang(
                 "How values ​​education contributes to a healthy and beautiful life",
-                "কীভাবে মূল্যবোধ শিক্ষা সুস্থ ও সুন্দর জীবনে অবদান রাখে"
+                "কীভাবে মূল্যবোধ শিক্ষা সুস্থ ও সুন্দর জীবনে অবদান রাখে",
               );
 
-            const methods = [
-                            {
-                              icon: "fa-heart",
-                              accent: "m24l10-step--a",
-                              text: yhLang(
-                                "Awaken your humanity",
-                                "নিজের মানবিক সত্তাকে জাগিয়ে তোলা"
-                              ),
-                            },
-                            {
-                              icon: "fa-user-shield",
-                              accent: "m24l10-step--b",
-                              text: yhLang(
-                                "Avoid unguardian-like behavior with adolescents",
-                                "তরুন-তরুনীদের সাথে অ-অভিভাবকসুলভ আচরণ"
-                              ),
-                            },
-                            {
-                              icon: "fa-user-friends",
-                              accent: "m24l10-step--c",
-                              text: yhLang(
-                                "Build a friendly relationship with your child",
-                                "সন্তানের সাথে বন্ধুত্বপূর্ণ সম্পর্ক"
-                              ),
-                            },
-                            {
-                              icon: "fa-check-double",
-                              accent: "m24l10-step--d",
-                              text: yhLang(
-                                "Develop the habit of telling the truth",
-                                "সত্য বলার অভ্যাস গড়ে তোলা"
-                              ),
-                            },
-                            {
-                              icon: "fa-ban",
-                              accent: "m24l10-step--e",
-                              text: yhLang(
-                                "Teach to hate lies",
-                                "মিথ্যাকে ঘৃণা করতে শেখানো"
-                              ),
-                            },
-                            {
-                              icon: "fa-circle-info",
-                              accent: "m24l10-step--f",
-                              text: yhLang(
-                                "Provide correct and truthful information about sexuality",
-                                "যৌনতা বিষয়ে সঠিক ও সত্য তথ্য দেওয়া"
-                              ),
-                            },
-                            {
-                              icon: "fa-scale-balanced",
-                              accent: "m24l10-step--g",
-                              text: yhLang(
-                                "Help understand good and bad consequences",
-                                "ভালো ও মন্দ পরিণতি বুঝতে সহায়তা করা"
-                              ),
-                            },
-                            {
-                              icon: "fa-thumbs-up",
-                              accent: "m24l10-step--h",
-                              text: yhLang(
-                                "Encourage making the right decision",
-                                "সঠিক সিদ্ধান্ত নিতে উৎসাহ দেওয়া"
-                              ),
-                            },
-                          ];
+              const methods = [
+                {
+                  icon: "fa-heart",
+                  accent: "m24l10-step--a",
+                  text: yhLang(
+                    "Awaken your humanity",
+                    "নিজের মানবিক সত্তাকে জাগিয়ে তোলা",
+                  ),
+                },
+                {
+                  icon: "fa-user-shield",
+                  accent: "m24l10-step--b",
+                  text: yhLang(
+                    "Avoid unguardian-like behavior with adolescents",
+                    "তরুন-তরুনীদের সাথে অ-অভিভাবকসুলভ আচরণ",
+                  ),
+                },
+                {
+                  icon: "fa-user-friends",
+                  accent: "m24l10-step--c",
+                  text: yhLang(
+                    "Build a friendly relationship with your child",
+                    "সন্তানের সাথে বন্ধুত্বপূর্ণ সম্পর্ক",
+                  ),
+                },
+                {
+                  icon: "fa-check-double",
+                  accent: "m24l10-step--d",
+                  text: yhLang(
+                    "Develop the habit of telling the truth",
+                    "সত্য বলার অভ্যাস গড়ে তোলা",
+                  ),
+                },
+                {
+                  icon: "fa-ban",
+                  accent: "m24l10-step--e",
+                  text: yhLang(
+                    "Teach to hate lies",
+                    "মিথ্যাকে ঘৃণা করতে শেখানো",
+                  ),
+                },
+                {
+                  icon: "fa-circle-info",
+                  accent: "m24l10-step--f",
+                  text: yhLang(
+                    "Provide correct and truthful information about sexuality",
+                    "যৌনতা বিষয়ে সঠিক ও সত্য তথ্য দেওয়া",
+                  ),
+                },
+                {
+                  icon: "fa-scale-balanced",
+                  accent: "m24l10-step--g",
+                  text: yhLang(
+                    "Help understand good and bad consequences",
+                    "ভালো ও মন্দ পরিণতি বুঝতে সহায়তা করা",
+                  ),
+                },
+                {
+                  icon: "fa-thumbs-up",
+                  accent: "m24l10-step--h",
+                  text: yhLang(
+                    "Encourage making the right decision",
+                    "সঠিক সিদ্ধান্ত নিতে উৎসাহ দেওয়া",
+                  ),
+                },
+              ];
 
-            const renderMethods = (items) =>
-                            (items || [])
-                              .map(
-                                (item, idx) => `
+              const renderMethods = (items) =>
+                (items || [])
+                  .map(
+                    (item, idx) => `
                                   <li class="m24l10-step ${item.accent} m24l10-line" data-aos="fade-up" data-aos-delay="${320 + idx * 60}" style="--d:${260 + idx * 80}ms">
                                     <span class="m24l10-step__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
                                     <p class="m24l10-step__text">${item.text}</p>
                                   </li>
-                                `
-                              )
-                              .join("");
+                                `,
+                  )
+                  .join("");
 
               const points = [
                 {
@@ -20148,7 +23157,7 @@ const renderCards = () =>
                   accent: "m24l11-item--a",
                   text: yhLang(
                     "Family, social, and religious values education helps young people stay away from crises and risky behaviors.",
-                    "পারিবারিক, সামাজিক ও ধর্মীয় মূল্যবোধ শিক্ষা তরুণ-তরুণীদের সংকট ও ঝুঁকিপূর্ণ আচরণ থেকে দূরে রাখতে সহায়তা করে"
+                    "পারিবারিক, সামাজিক ও ধর্মীয় মূল্যবোধ শিক্ষা তরুণ-তরুণীদের সংকট ও ঝুঁকিপূর্ণ আচরণ থেকে দূরে রাখতে সহায়তা করে",
                   ),
                 },
                 {
@@ -20156,7 +23165,7 @@ const renderCards = () =>
                   accent: "m24l11-item--b",
                   text: yhLang(
                     "When schools and teachers highlight ethics during lessons, students get opportunities to practice them.",
-                    "বিদ্যালয় ও শিক্ষকেরা পাঠদানের সময় নৈতিকতার বিষয়গুলো তুলে ধরলে শিক্ষার্থীরা সেগুলো অনুশীলনের সুযোগ পায়"
+                    "বিদ্যালয় ও শিক্ষকেরা পাঠদানের সময় নৈতিকতার বিষয়গুলো তুলে ধরলে শিক্ষার্থীরা সেগুলো অনুশীলনের সুযোগ পায়",
                   ),
                 },
                 {
@@ -20164,7 +23173,7 @@ const renderCards = () =>
                   accent: "m24l11-item--c",
                   text: yhLang(
                     "Life skills education (through group activities) helps build moral thinking and responsible behavior.",
-                    "জীবন দক্ষতা শিক্ষা (দলগত কার্যক্রমের মাধ্যমে) নৈতিক চিন্তা ও দায়িত্বশীল আচরণ গড়ে তুলতে সাহায্য করে"
+                    "জীবন দক্ষতা শিক্ষা (দলগত কার্যক্রমের মাধ্যমে) নৈতিক চিন্তা ও দায়িত্বশীল আচরণ গড়ে তুলতে সাহায্য করে",
                   ),
                 },
                 {
@@ -20172,7 +23181,7 @@ const renderCards = () =>
                   accent: "m24l11-item--d",
                   text: yhLang(
                     "When people become conscious of ethics and values, crime-proneness and negative behaviors decrease, leading to a healthy and beautiful life.",
-                    "নৈতিকতা ও মূল্যবোধে সচেতন মানুষ তৈরি হলে অপরাধপ্রবণতা ও নেতিবাচক আচরণ কমে গিয়ে সুস্থ ও সুন্দর জীবন গড়ে ওঠে"
+                    "নৈতিকতা ও মূল্যবোধে সচেতন মানুষ তৈরি হলে অপরাধপ্রবণতা ও নেতিবাচক আচরণ কমে গিয়ে সুস্থ ও সুন্দর জীবন গড়ে ওঠে",
                   ),
                 },
               ];
@@ -20185,9 +23194,9 @@ const renderCards = () =>
                         <span class="m24l11-item__icon" aria-hidden="true"><i class="fa-solid ${item.icon}"></i></span>
                         <p class="m24l11-item__text">${item.text}</p>
                       </li>
-                    `
+                    `,
                   )
-                  .join("");                
+                  .join("");
 
               return `
                 <div class="lesson-slide mod24-lesson7 mod24-lesson10 mod24-lesson11">
@@ -20203,7 +23212,8 @@ const renderCards = () =>
                       <i class="fa-solid fa-feather-pointed"></i>
                     </span>
                     <h2 class="slide-title gradient-text mb-0 m24l7-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">${yhLang(
-                      "Ways to develop values: ", "মূল্যবোধ উন্নয়নের উপায়: "
+                      "Ways to develop values: ",
+                      "মূল্যবোধ উন্নয়নের উপায়: ",
                     )}</h2>
                   </header>
 
@@ -20228,17 +23238,14 @@ const renderCards = () =>
                 </div>`;
             })(),
           },
-
-
         ],
       },
       {
         id: "ch-25",
-        title:
-          yhLang(
-            "Module-25: Human Rights, Child Rights, and Sexual and Reproductive Health Rights",
-            "মডিউল-২৫: তরুণদের সাথে যোগাযোগ ও কাউন্সেলিং"
-          ),
+        title: yhLang(
+          "Module-25: Human Rights, Child Rights, and Sexual and Reproductive Health Rights",
+          "মডিউল-২৫: তরুণদের সাথে যোগাযোগ ও কাউন্সেলিং",
+        ),
         lessons: [
           {
             id: "ch25-lesson-1",
@@ -20563,7 +23570,7 @@ const renderCards = () =>
                             </span>
                             <span class="m25l2f-node__text">${yhLang(
                               "Radio, television, newspapers, cinema, posters, other print & electronic media",
-                              "রেডিও, টেলিভিশন, খবরের কাগজ, চলচ্চিত্র, পোস্টার, অন্যান্য মুদ্রণ ও ইলেকট্রনিক মিডিয়া"
+                              "রেডিও, টেলিভিশন, খবরের কাগজ, চলচ্চিত্র, পোস্টার, অন্যান্য মুদ্রণ ও ইলেকট্রনিক মিডিয়া",
                             )}</span>
                           </div>
                         </div>
@@ -20575,10 +23582,7 @@ const renderCards = () =>
           },
           {
             id: "ch25-lesson-3",
-            title: yhLang(
-              "Methods of communication",
-              "যোগাযোগের পদ্ধতি"
-            ),
+            title: yhLang("Methods of communication", "যোগাযোগের পদ্ধতি"),
             icon: "fa-people-arrows-left-right",
             gradientClass: "bg-gradient-pink",
             audioFile: "",
@@ -20591,12 +23595,20 @@ const renderCards = () =>
               ];
 
               const nonverbalItems = [
-                yhLang("Through body language or facial expressions", "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে"),
-                yhLang("Through signs or symbols", "ইঙ্গিত বা প্রতীকের মাধ্যমে"),
+                yhLang(
+                  "Through body language or facial expressions",
+                  "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে",
+                ),
+                yhLang(
+                  "Through signs or symbols",
+                  "ইঙ্গিত বা প্রতীকের মাধ্যমে",
+                ),
               ];
-              const groupItems = [yhLang("Group discussion", "দলীয় আলোচনা"),
-                 yhLang("Group meeting", "দলীয় সভা"), 
-                 yhLang("Lecture", "বক্তৃতা")];
+              const groupItems = [
+                yhLang("Group discussion", "দলীয় আলোচনা"),
+                yhLang("Group meeting", "দলীয় সভা"),
+                yhLang("Lecture", "বক্তৃতা"),
+              ];
 
               const iconForBullet = (text) => {
                 const t = String(text || "").trim();
@@ -20609,9 +23621,15 @@ const renderCards = () =>
                     return "fa-person-chalkboard";
                   case yhLang("Listening to radio", "রেডিও শোনা"):
                     return "fa-radio";
-                  case yhLang("Through body language or facial expressions", "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে"):
+                  case yhLang(
+                    "Through body language or facial expressions",
+                    "শারীরিক অঙ্গভঙ্গি বা অভিব্যক্তির মাধ্যমে",
+                  ):
                     return "fa-person-rays";
-                  case yhLang("Through signs or symbols", "ইঙ্গিত বা প্রতীকের মাধ্যমে"):
+                  case yhLang(
+                    "Through signs or symbols",
+                    "ইঙ্গিত বা প্রতীকের মাধ্যমে",
+                  ):
                     return "fa-hand-pointer";
                   case yhLang("Group discussion", "দলীয় আলোচনা"):
                     return "fa-comments";
@@ -20650,7 +23668,11 @@ const renderCards = () =>
                   })
                   .join("");
 
-              const renderParagraphLines = (text, baseDelay = 260, step = 70) => {
+              const renderParagraphLines = (
+                text,
+                baseDelay = 260,
+                step = 70,
+              ) => {
                 const raw = String(text || "");
                 const parts = raw
                   .split("।")
@@ -20752,23 +23774,44 @@ const renderCards = () =>
             id: "ch25-lesson-4",
             title: yhLang(
               "Conditions Required for Establishing Interpersonal Relationships",
-              "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী"
+              "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী",
             ),
             icon: "fa-handshake",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
             content: (function () {
               const points = [
-                { text: yhLang("Warmth", "বন্ধুত্বপূর্ণ আচরন"), icon: "fa-heart" },
-                { text: yhLang("Acceptability", "গ্রহণযোগ্যতা"), icon: "fa-handshake-angle" },
+                {
+                  text: yhLang("Warmth", "বন্ধুত্বপূর্ণ আচরন"),
+                  icon: "fa-heart",
+                },
+                {
+                  text: yhLang("Acceptability", "গ্রহণযোগ্যতা"),
+                  icon: "fa-handshake-angle",
+                },
                 { text: yhLang("Respect", "সম্মান"), icon: "fa-award" },
-                { text: yhLang("Openness/Genuineness", "স্বচ্ছতা"), icon: "fa-eye" },
+                {
+                  text: yhLang("Openness/Genuineness", "স্বচ্ছতা"),
+                  icon: "fa-eye",
+                },
                 { text: yhLang("Empathy", "সহমর্মিতা"), icon: "fa-handshake" },
-                { text: yhLang("Fluent conversation", "সাবলীল কথপোকথন"), icon: "fa-comments" },
+                {
+                  text: yhLang("Fluent conversation", "সাবলীল কথপোকথন"),
+                  icon: "fa-comments",
+                },
                 { text: yhLang("Warmth", "উষ্ণতা"), icon: "fa-heart" },
-                { text: yhLang("Sympathetic", "সহানুভূতিশীল"), icon: "fa-hand-holding-heart" },
-                { text: yhLang("Confidentiality", "গোপনীয়তা"), icon: "fa-user-shield" },
-                { text: yhLang("Avoid interrogation", "জেরা না করা"), icon: "fa-comment-slash" },
+                {
+                  text: yhLang("Sympathetic", "সহানুভূতিশীল"),
+                  icon: "fa-hand-holding-heart",
+                },
+                {
+                  text: yhLang("Confidentiality", "গোপনীয়তা"),
+                  icon: "fa-user-shield",
+                },
+                {
+                  text: yhLang("Avoid interrogation", "জেরা না করা"),
+                  icon: "fa-comment-slash",
+                },
               ];
 
               const renderPoints = () =>
@@ -20784,20 +23827,53 @@ const renderCards = () =>
                   })
                   .join("");
 
-                  const sections3 = [
+              const sections3 = [
                 {
-                  title:  yhLang("SOLLER Attentiveness Model", "সোলার মনোযোগ মডেল"),
+                  title: yhLang(
+                    "SOLLER Attentiveness Model",
+                    "সোলার মনোযোগ মডেল",
+                  ),
                   icon: "fa-sun",
                   items: [
                     {
                       icon: "fa-people-arrows-left-right",
-                      text: yhLang("S: Sit squarely.", "এস = সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা"),
+                      text: yhLang(
+                        "S: Sit squarely.",
+                        "এস = সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা",
+                      ),
                     },
-                    { icon: "fa-comments", text: yhLang("O: Open posture.", "ও = খোলাখুলি কথা বলা") },
-                    { icon: "fa-person-arrow-up-from-line", text: yhLang("L: Lean forward.", "এল = সামনের দিকে ঝুঁকে বসা") },
-                    { icon: "fa-eye", text: yhLang("L: Let eyes maintain contact.", "এল = সম্মুখ বাক্তির প্রতি দৃষ্টি নিবদ্ধ রাখা") },
-                    { icon: "fa-couch", text: yhLang("E: Engage with a relaxed posture.", "ই = আরামদায়ক ভঙ্গিতে বা স্বাচ্ছন্দ্যে বসা") },
-                    { icon: "fa-location-dot", text: yhLang("R: Remember to be present.", "আর = ঘটনার ভিতর উপস্থিত থাকতে ভুলবেন না।") },
+                    {
+                      icon: "fa-comments",
+                      text: yhLang("O: Open posture.", "ও = খোলাখুলি কথা বলা"),
+                    },
+                    {
+                      icon: "fa-person-arrow-up-from-line",
+                      text: yhLang(
+                        "L: Lean forward.",
+                        "এল = সামনের দিকে ঝুঁকে বসা",
+                      ),
+                    },
+                    {
+                      icon: "fa-eye",
+                      text: yhLang(
+                        "L: Let eyes maintain contact.",
+                        "এল = সম্মুখ বাক্তির প্রতি দৃষ্টি নিবদ্ধ রাখা",
+                      ),
+                    },
+                    {
+                      icon: "fa-couch",
+                      text: yhLang(
+                        "E: Engage with a relaxed posture.",
+                        "ই = আরামদায়ক ভঙ্গিতে বা স্বাচ্ছন্দ্যে বসা",
+                      ),
+                    },
+                    {
+                      icon: "fa-location-dot",
+                      text: yhLang(
+                        "R: Remember to be present.",
+                        "আর = ঘটনার ভিতর উপস্থিত থাকতে ভুলবেন না।",
+                      ),
+                    },
                   ],
                 },
               ];
@@ -20850,21 +23926,33 @@ const renderCards = () =>
 
               const sections = [
                 {
-                  title:  yhLang("Practical Tips", "ব্যবহারিক টিপস"),
+                  title: yhLang("Practical Tips", "ব্যবহারিক টিপস"),
                   icon: "fa-lightbulb",
                   items: [
                     {
                       icon: "fa-hand",
-                      text: yhLang("• Don't interrupt.", "বক্তার কথা বলার সময় মধ্যপথে বাধা দেয়া পরিহার করা"),
+                      text: yhLang(
+                        "• Don't interrupt.",
+                        "বক্তার কথা বলার সময় মধ্যপথে বাধা দেয়া পরিহার করা",
+                      ),
                     },
-                    { icon: "fa-volume-xmark", text: yhLang("• Listen quietly.", "চুপ থাকা") },
+                    {
+                      icon: "fa-volume-xmark",
+                      text: yhLang("• Listen quietly.", "চুপ থাকা"),
+                    },
                     {
                       icon: "fa-bullseye",
-                      text: yhLang("• Keep conversation focused.", "বিষয়বস্তু যেন বিক্ষিপ্ত না হয় সে বিষয়ে নজর দেয়া"),
+                      text: yhLang(
+                        "• Keep conversation focused.",
+                        "বিষয়বস্তু যেন বিক্ষিপ্ত না হয় সে বিষয়ে নজর দেয়া",
+                      ),
                     },
                     {
                       icon: "fa-thumbs-up",
-                      text: yhLang("• Use positive body language.", "ইতিবাচক দেহভঙ্গিমা দেখানো"),
+                      text: yhLang(
+                        "• Use positive body language.",
+                        "ইতিবাচক দেহভঙ্গিমা দেখানো",
+                      ),
                     },
                   ],
                 },
@@ -20909,28 +23997,38 @@ const renderCards = () =>
                   })
                   .join("");
 
-
-
-                  const sections2 = [
+              const sections2 = [
                 {
                   title: yhLang("Key Techniques", "মূল কৌশল"),
                   icon: "fa-compass",
                   items: [
                     {
                       icon: "fa-clipboard-list",
-                      text: yhLang("• Paraphrase/Summarize: Confirm understanding (e.g., \"So you're saying...\").", "ব্যাখ্যা/সারাংশ: পরিস্কার ভাবে বুঝতে পারা নিশ্চিত করা (যেমন, \"তাহলে তুমি বলছো...\")।"),
+                      text: yhLang(
+                        '• Paraphrase/Summarize: Confirm understanding (e.g., "So you\'re saying...").',
+                        'ব্যাখ্যা/সারাংশ: পরিস্কার ভাবে বুঝতে পারা নিশ্চিত করা (যেমন, "তাহলে তুমি বলছো...")।',
+                      ),
                     },
                     {
                       icon: "fa-circle-question",
-                      text: yhLang("• Ask Open-Ended Questions: Short, clear, direct.", "খোলাখুলি প্রশ্ন জিজ্ঞাসা করা: সংক্ষিপ্ত, স্পষ্ট, সরাসরি।"),
+                      text: yhLang(
+                        "• Ask Open-Ended Questions: Short, clear, direct.",
+                        "খোলাখুলি প্রশ্ন জিজ্ঞাসা করা: সংক্ষিপ্ত, স্পষ্ট, সরাসরি।",
+                      ),
                     },
                     {
                       icon: "fa-wave-square",
-                      text: yhLang("• Listen to Tone & Manner: Gauge emotional state.", "স্বর ও ভঙ্গি শোনা: মানসিক অবস্থা পরিমাপ করা।"),
+                      text: yhLang(
+                        "• Listen to Tone & Manner: Gauge emotional state.",
+                        "স্বর ও ভঙ্গি শোনা: মানসিক অবস্থা পরিমাপ করা।",
+                      ),
                     },
                     {
                       icon: "fa-brain",
-                      text: yhLang("• Use Reflective Skills: Acknowledge feelings, encourage self-reflection.", "প্রতিফলনশীল দক্ষতা ব্যবহার করা: অনুভূতি স্বীকার করা, আত্ম-প্রতিফলনকে উৎসাহিত করা।"),
+                      text: yhLang(
+                        "• Use Reflective Skills: Acknowledge feelings, encourage self-reflection.",
+                        "প্রতিফলনশীল দক্ষতা ব্যবহার করা: অনুভূতি স্বীকার করা, আত্ম-প্রতিফলনকে উৎসাহিত করা।",
+                      ),
                     },
                   ],
                 },
@@ -20973,7 +24071,7 @@ const renderCards = () =>
                       </section>
                     `;
                   })
-                  .join("");    
+                  .join("");
 
               return `
                 <div class="lesson-slide mod25-lesson4 mod25-lesson5">
@@ -21019,7 +24117,7 @@ const renderCards = () =>
             id: "ch25-lesson-5",
             title: yhLang(
               "The word GATHER can be used to easily remember the steps of counseling.",
-              "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য GATHER শব্দটির সাহায্য নেয়া যায়"
+              "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য GATHER শব্দটির সাহায্য নেয়া যায়",
             ),
             icon: "fa-list-check",
             gradientClass: "bg-gradient-blue",
@@ -21030,39 +24128,55 @@ const renderCards = () =>
                   letter: "G",
                   left: "Greet (সম্ভাষণ)",
                   icon: "fa-handshake-angle",
-                  right: yhLang( "Warmly and politely greet the client.", 
-                    "সম্মুখ বাক্তিকে বিনীত ও উষ্ণ সম্ভাষণ জানানো"
-                  )
+                  right: yhLang(
+                    "Warmly and politely greet the client.",
+                    "সম্মুখ বাক্তিকে বিনীত ও উষ্ণ সম্ভাষণ জানানো",
+                  ),
                 },
                 {
                   letter: "A",
                   left: "Ask (প্রশ্ন করা)",
                   icon: "fa-circle-question",
-                  right: yhLang( "Ask the client about their feelings, problems, and family.", "সম্মুখ বাক্তিকে তার নিজের অনুভূতি, সমস্যা ও পরিবার সম্পর্কে প্রশ্ন করা"),
+                  right: yhLang(
+                    "Ask the client about their feelings, problems, and family.",
+                    "সম্মুখ বাক্তিকে তার নিজের অনুভূতি, সমস্যা ও পরিবার সম্পর্কে প্রশ্ন করা",
+                  ),
                 },
                 {
                   letter: "T",
                   left: "Tell (বলা)",
                   icon: "fa-bullhorn",
-                  right: yhLang( "Explain what solutions are possible in this situation.", "এই অবস্থায় কী কী সমাধান আছে তা বিস্তারিত বলা"),
+                  right: yhLang(
+                    "Explain what solutions are possible in this situation.",
+                    "এই অবস্থায় কী কী সমাধান আছে তা বিস্তারিত বলা",
+                  ),
                 },
                 {
                   letter: "H",
                   left: "Help (সাহায্য)",
                   icon: "fa-hand-holding-heart",
-                  right: yhLang( "Support the client fully so they feel comfortable and can make the right decision.", "সম্মুখ বাক্তিকে সর্বতোভাবে সাহায্য করা। তিনি যেন স্বাচ্ছন্দ্যবোধ করেন এবং সঠিক সিদ্ধান্ত নিতে পারেন"),
+                  right: yhLang(
+                    "Support the client fully so they feel comfortable and can make the right decision.",
+                    "সম্মুখ বাক্তিকে সর্বতোভাবে সাহায্য করা। তিনি যেন স্বাচ্ছন্দ্যবোধ করেন এবং সঠিক সিদ্ধান্ত নিতে পারেন",
+                  ),
                 },
                 {
                   letter: "E",
                   left: "Explain (বিস্তারিত ব্যাখ্যা)",
                   icon: "fa-circle-info",
-                  right: yhLang( "Explain in detail about postnatal care, instructions, side effects of medicines, nutritional value of local foods, and nutritional needs.", "সম্মুখ বাক্তিকে কোন বিষয়ের সার্বিক ফলাফল সম্পর্কে বিস্তারিত ব্যাখ্যা করা"),
+                  right: yhLang(
+                    "Explain in detail about postnatal care, instructions, side effects of medicines, nutritional value of local foods, and nutritional needs.",
+                    "সম্মুখ বাক্তিকে কোন বিষয়ের সার্বিক ফলাফল সম্পর্কে বিস্তারিত ব্যাখ্যা করা",
+                  ),
                 },
                 {
                   letter: "R",
                   left: "Return visit, referral and/or follow-up (পরবর্তী পদক্ষেপ)",
                   icon: "fa-rotate-left",
-                  right: yhLang( "Explain when and where the client and their family members need to come for follow-up.", "পরবর্তীতে কবে কোথায় যেতে হবে তা সম্মুখ বাক্তিকে এবং তার আত্মীয়-স্বজনদের বুঝিয়ে বলা"),
+                  right: yhLang(
+                    "Explain when and where the client and their family members need to come for follow-up.",
+                    "পরবর্তীতে কবে কোথায় যেতে হবে তা সম্মুখ বাক্তিকে এবং তার আত্মীয়-স্বজনদের বুঝিয়ে বলা",
+                  ),
                 },
               ];
 
@@ -21152,7 +24266,8 @@ const renderCards = () =>
   try {
     if (!Array.isArray(global.coursesData)) return;
 
-    const hasImgZoom = (classValue) => /(^|\s)img-zoom(\s|$)/.test(classValue || "");
+    const hasImgZoom = (classValue) =>
+      /(^|\s)img-zoom(\s|$)/.test(classValue || "");
 
     const ensureImgZoomOnTag = (tag) => {
       try {
@@ -21199,4 +24314,3 @@ const renderCards = () =>
     });
   } catch (_) {}
 })(typeof window !== "undefined" ? window : globalThis);
-

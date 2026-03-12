@@ -12913,9 +12913,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 /* ==================== MODULE 18 • LESSON 7 - DOG BITE CARE ==================== */
 .mod18-lesson7 {
   position: relative;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 28%, #ffb74d 56%, #ffa726 85%, #ff9800 100%);
-  padding: 11px 8px;
+  padding: 3px 8px;
   overflow: hidden;
 }
 
@@ -13059,9 +13057,9 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m18l7-grid {
   position: relative;
   z-index: 10;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .m18l7-symptoms-panel,
@@ -13098,7 +13096,11 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   color: #ff9800;
 }
 
-.m18l7-symptoms-list,
+.m18l7-symptoms-list {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+}
 .m18l7-care-list {
   display: grid;
   gap: 8px;
@@ -13313,8 +13315,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 /* ==================== MODULE 18 • LESSON 8 - POISONING RESPONSE ==================== */
 .mod18-lesson8 {
   position: relative;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 28%, #ce93d8 56%, #ba68c8 85%, #ab47bc 100%);
   padding: 11px 8px;
   overflow: hidden;
 }
@@ -13505,7 +13505,11 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   color: #8e24aa;
 }
 
-.m18l8-signs-list,
+.m18l8-signs-list {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+}
 .m18l8-care-list {
   display: grid;
   gap: 8px;
@@ -14129,7 +14133,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .mod18-lesson10-12 {
   position: relative;
-  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 30%, #b3e5fc 70%, #e1f5fe 100%);
   padding: 11px 10px;
   border-radius: 12px;
   display: flex;
@@ -14216,13 +14219,11 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m18l10x12-panel-main {
-  background: linear-gradient(160deg, rgba(255, 248, 225, 0.95), rgba(255, 224, 178, 0.82));
   box-shadow: 5px 6px 12px rgba(245, 124, 0, 0.16);
   border: 1px solid rgba(255, 183, 77, 0.4);
 }
 
 .m18l10x12-panel-infant {
-  background: linear-gradient(160deg, rgba(225, 245, 254, 0.95), rgba(179, 229, 252, 0.85));
   box-shadow: -5px 6px 12px rgba(2, 136, 209, 0.16);
   border: 1px solid rgba(79, 195, 247, 0.45);
 }
@@ -14465,7 +14466,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .mod18-lesson11 {
   position: relative;
-  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 30%, #d1c4e9 60%, #c5cae9 100%);
   padding: 11px 10px;
   border-radius: 12px;
   display: flex;
@@ -14552,13 +14552,11 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m18l11-panel-initial {
-  background: linear-gradient(160deg, rgba(252, 228, 236, 0.92), rgba(243, 229, 245, 0.9));
   border: 1px solid rgba(186, 104, 200, 0.35);
   box-shadow: 5px 7px 12px rgba(173, 20, 87, 0.15);
 }
 
 .m18l11-panel-followup {
-  background: linear-gradient(160deg, rgba(232, 234, 246, 0.92), rgba(225, 245, 254, 0.9));
   border: 1px solid rgba(92, 107, 192, 0.35);
   box-shadow: -5px 7px 12px rgba(48, 63, 159, 0.16);
 }
@@ -14588,7 +14586,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m18l11-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 3px;
 }
 
 .m18l11-item {
@@ -28804,7 +28802,6 @@ dashboard-titled-title {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(0, 95, 175, 0.12);
-  padding: clamp(0.5rem, 0.5vw, 2.75rem);
   display: grid;
   gap: 2.2rem;
   /* overflow-y: auto; */
