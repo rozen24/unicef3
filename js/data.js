@@ -4233,9 +4233,7 @@ const coursesData = [
                     const angle = angleStep * idx;
                     const color = colorCycle[idx % colorCycle.length];
                     return `
-                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${
-                        120 + idx * 30
-                      }">
+                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 + idx * 30}">
                         <div class="orbit-card ${color}">
                           <span class="orbit-title">${label}</span>
                         </div>
@@ -6959,65 +6957,59 @@ const sexPoints = [
             },
             content: (function () {
               const biasList = [
-                "সমাজে সকল ক্ষেত্রে, যেমন—শিক্ষা, স্বাস্থ্যসেবা পাওয়ার ক্ষেত্রে মেয়েদের তুলনায় ছেলেদের অগ্রাধিকার",
-                "পরিবারে কন্যা সন্তান থেকে পুত্র সন্তানের অধিক মূল্যায়ন",
-                "পরিবারে মেয়েদের তুলনায় ছেলেদের বেশি ও পুষ্টিকর খাবার খেতে দেওয়া",
-                "কন্যা সন্তানকে লেখাপড়া শেখাতে বাবা-মায়ের অনীহা, পুত্রের পড়াশোনার জন্য ব্যয় করা",
-                "কন্যা সন্তানকে পরিবারের বোঝা মনে করে অল্প বয়সে বিয়ে দিয়ে দেওয়া",
-                "যৌতুক দাবি করা এবং যৌতুকের কারণে মেয়েদের উপর শারীরিক ও মানসিক নির্যাতন করা",
-                "অসুস্থ হলে মেয়েদের স্বাস্থ্যসেবা গ্রহণের ব্যাপারে পরিবারের উদাসীনতা",
-                "সন্তান গ্রহণ ও নিজের শরীর সম্পর্কে সিদ্ধান্ত নিতে না পারার প্রথা",
-                "তারুণ্যে সন্তানধারণ করা",
-                "নারীর উপর শারীরিক ও মানসিক নির্যাতন খুব স্বাভাবিকভাবে গ্রহণ করা",
-                "পুরুষের তুলনায় নারীকে কম পারিশ্রমিক দেওয়া",
+                { text: "সমাজে সকল ক্ষেত্রে, যেমন—শিক্ষা, স্বাস্থ্যসেবা পাওয়ার ক্ষেত্রে মেয়েদের তুলনায় ছেলেদের অগ্রাধিকার", icon: "fa-book", color: "blue" },
+                { text: "পরিবারে কন্যা সন্তান থেকে পুত্র সন্তানের অধিক মূল্যায়ন", icon: "fa-family", color: "rose" },
+                { text: "পরিবারে মেয়েদের তুলনায় ছেলেদের বেশি ও পুষ্টিকর খাবার খেতে দেওয়া", icon: "fa-utensils", color: "green" },
+                { text: "কন্যা সন্তানকে লেখাপড়া শেখাতে বাবা-মায়ের অনীহা, পুত্রের পড়াশোনার জন্য ব্যয় করা", icon: "fa-graduation-cap", color: "teal" },
+                { text: "কন্যা সন্তানকে পরিবারের বোঝা মনে করে অল্প বয়সে বিয়ে দিয়ে দেওয়া", icon: "fa-ring", color: "purple" },
+                { text: "যৌতুক দাবি করা এবং যৌতুকের কারণে মেয়েদের উপর শারীরিক ও মানসিক নির্যাতন করা", icon: "fa-money-bill", color: "tangerine" },
+                { text: "অসুস্থ হলে মেয়েদের স্বাস্থ্যসেবা গ্রহণের ব্যাপারে পরিবারের উদাসীনতা", icon: "fa-hospital", color: "emerald" },
+                { text: "সন্তান গ্রহণ ও নিজের শরীর সম্পর্কে সিদ্ধান্ত নিতে না পারার প্রথা", icon: "fa-venus", color: "blue" },
+                { text: "তারুণ্যে সন্তানধারণ করা", icon: "fa-baby", color: "rose" },
+                { text: "নারীর উপর শারীরিক ও মানসিক নির্যাতন খুব স্বাভাবিকভাবে গ্রহণ করা", icon: "fa-hand-fist", color: "green" },
+                { text: "পুরুষের তুলনায় নারীকে কম পারিশ্রমিক দেওয়া", icon: "fa-coins", color: "teal" }
               ];
 
               const orbitItems = [
-                "গর্ভধারণ বিষয়ক জটিলতা থেকে দীর্ঘস্থায়ী অসুস্থতা",
-                "মাতৃমৃত্যু",
-                "কন্যাশিশু মৃত্যু",
-                "প্রজননতন্ত্রের প্রদাহ ও যৌনরোগ",
-                "রক্তস্বল্পতা",
-                "পুষ্টির অভাবজনিত সমস্যা",
-                "মানসিক অসুস্থতা",
-                "প্রলম্বিত অসুস্থতা",
-                "অকাল বার্ধক্য",
-                "অপরিণত বয়সে গর্ভধারণ",
+                { text: "গর্ভধারণ বিষয়ক জটিলতা থেকে দীর্ঘস্থায়ী অসুস্থতা", icon: "fa-heart-pulse", gradient: "bg-gradient-blue" },
+                { text: "মাতৃমৃত্যু", icon: "fa-cross", gradient: "bg-gradient-rose" },
+                { text: "কন্যাশিশু মৃত্যু", icon: "fa-child", gradient: "bg-gradient-green" },
+                { text: "প্রজননতন্ত্রের প্রদাহ ও যৌনরোগ", icon: "fa-virus", gradient: "bg-gradient-teal" },
+                { text: "রক্তস্বল্পতা", icon: "fa-droplet", gradient: "bg-gradient-purple" },
+                { text: "পুষ্টির অভাবজনিত সমস্যা", icon: "fa-apple", gradient: "bg-gradient-tangerine" },
+                { text: "মানসিক অসুস্থতা", icon: "fa-brain", gradient: "bg-gradient-emerald" },
+                { text: "প্রলম্বিত অসুস্থতা", icon: "fa-person-cane", gradient: "bg-gradient-blue" },
+                { text: "অকাল বার্ধক্য", icon: "fa-hourglass-end", gradient: "bg-gradient-rose" },
+                { text: "অপরিণত বয়সে গর্ভধারণ", icon: "fa-pregnancy", gradient: "bg-gradient-green" }
               ];
 
-              const colorCycle = [
-                "bg-gradient-blue",
-                "bg-gradient-rose",
-                "bg-gradient-green",
-                "bg-gradient-teal",
-                "bg-gradient-purple",
-                "bg-gradient-tangerine",
-                "bg-gradient-emerald",
-              ];
 
-              const renderBiasList = () =>
-                biasList
+
+              const renderBiasList = () => {
+                return biasList
                   .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${60 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
+                    (item, idx) => `
+                      <li class="ch13l3-bias-item ch13l3-bias-${item.color}" data-aos="fade-right" data-aos-delay="${60 + idx * 15}">
+                        <span class="ch13l3-bias-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="ch13l3-bias-text">${item.text}</span>
                       </li>
                     `,
                   )
                   .join("");
+              };
 
               const renderOrbit = () => {
-                const radius = 150;
                 const angleStep = 360 / orbitItems.length;
                 return orbitItems
                   .map((item, idx) => {
                     const angle = angleStep * idx;
-                    const color = colorCycle[idx % colorCycle.length];
                     return `
-                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 + idx * 30}">
-                        <div class="orbit-card ${color}">
-                          <span class="orbit-title">${item}</span>
+                      <div class="ch13l3-orbit-item" style="--angle: ${angle}deg; --item-index: ${idx};" data-aos="zoom-in" data-aos-delay="${120 + idx * 30}">
+                        <div class="ch13l3-orbit-card ${item.gradient}">
+                          <div class="ch13l3-orbit-card-icon">
+                            <i class="fa-solid ${item.icon}"></i>
+                          </div>
+                          <span class="ch13l3-orbit-card-text">${item.text}</span>
                         </div>
                       </div>
                     `;
@@ -7025,35 +7017,48 @@ const sexPoints = [
                   .join("");
               };
 
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "সমাজে বিরাজমান জেন্ডার বৈষম্য",
-                    "সমাজে বিরাজমান জেন্ডার বৈষম্য",
-                  )}</h2>
+              const biasListHTML = renderBiasList();
+              const orbitHTML = renderOrbit();
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-start">
-                      <div class="col-lg-6">
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderBiasList()}
-                        </ul>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="orbit-layout" data-orbit-radius="195">
-                          <div class="orbit-center icon-spin-on-hover">
-                            <div class="orbit-card bg-gradient-rose">
-                              <div class="orbit-title fw-bold">${yhLang(
-                                "প্রজনন স্বাস্থ্যে জেন্ডার বৈষম্যের প্রভাব",
-                                "প্রজনন স্বাস্থ্যে জেন্ডার বৈষম্যের প্রভাব",
-                              )}</div>
-                            </div>
+              return `
+                <div class="ch13l3-slide lesson-slide">
+                  <div class="ch13l3-shapes" aria-hidden="true">
+                    <span class="ch13l3-shape ch13l3-shape-orb"></span>
+                    <span class="ch13l3-shape ch13l3-shape-wave"></span>
+                    <span class="ch13l3-shape ch13l3-shape-ring"></span>
+                  </div>
+
+                  <h2 class="ch13l3-title" data-aos="fade-up">
+                    <i class="fa-solid fa-scale-unbalanced"></i>
+                    ${yhLang("Gender Bias Across Society", "সমাজে বিরাজমান জেন্ডার বৈষম্য")}
+                  </h2>
+
+                  <div class="ch13l3-content" data-aos="fade-up" data-aos-delay="80">
+                    <div class="ch13l3-left">
+                      <h3 class="ch13l3-section-title">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        ${yhLang("Biases in Society", "সমাজে বৈষম্যের ধরন")}
+                      </h3>
+                      <ul class="ch13l3-bias-list">
+                        ${biasListHTML}
+                      </ul>
+                    </div>
+
+                    <div class="ch13l3-right">
+                      <div class="ch13l3-orbit-container" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="ch13l3-orbit-center">
+                          <div class="ch13l3-orbit-center-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
                           </div>
-                          ${renderOrbit()}
+                          <div class="ch13l3-orbit-center-text">
+                            <h3>${yhLang("Health Impact", "প্রজনন স্বাস্থ্যে প্রভাব")}</h3>
+                          </div>
                         </div>
+                        <div class="ch13l3-orbit-ring"></div>
+                        ${orbitHTML}
                       </div>
                     </div>
-                  </section>
+                  </div>
                 </div>
               `;
             })(),
