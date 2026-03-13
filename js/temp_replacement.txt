@@ -1,0 +1,25 @@
+              const healthItems = [
+                "গর্ভধারণ বিষয়ক জটিলতা থেকে দীর্ঘস্থায়ী অসুস্থতা",
+                "মাতৃমৃত্যু",
+                "কন্যাশিশু মৃত্যু",
+                "প্রজননতন্ত্রের প্রদাহ ও যৌনরোগ",
+                "রক্তস্বল্পতা",
+                "পুষ্টির অভাবজনিত সমস্যা",
+                "মানসিক অসুস্থতা",
+                "প্রলম্বিত অসুস্থতা",
+                "অকাল বার্ধক্য",
+                "অপরিণত বয়সে গর্ভধারণ",
+              ];
+
+              const healthIcons = [
+                "fa-heartbeat",
+                "fa-heart-broken",
+                "fa-child",
+                "fa-flask-vial",
+                "fa-droplet",
+                "fa-utensils",
+                "fa-brain",
+                "fa-user-injured",
+                "fa-hourglass-end",
+                "fa-exclamation-triangle",
+              ];

@@ -6711,79 +6711,94 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const sexDefinition =
-                "সেক্স: সেক্স বা লিঙ্গ হচ্ছে প্রাকৃতিক বা জৈবিক কারণে সৃষ্ট নারী-পুরুষের বৈশিষ্ট্যসূচক ভিন্নতা বা শারীরিক বৈশিষ্ট্যের ভিত্তিতে নারী-পুরুষের স্বাতন্ত্র্য, কিংবা নারী-পুরুষের শারীরিক বৈশিষ্ট্য, যা পরিবর্তনযোগ্য নয়।";
+              const sexDefinition = yhLang(
+  "Sex: Sex refers to the biological or natural differences between males and females. It is the physical distinction based on biological characteristics that differentiate males and females, and these characteristics are not changeable.",
+  "সেক্স: সেক্স বা লিঙ্গ হচ্ছে প্রাকৃতিক বা জৈবিক কারণে সৃষ্ট নারী-পুরুষের বৈশিষ্ট্যসূচক ভিন্নতা বা শারীরিক বৈশিষ্ট্যের ভিত্তিতে নারী-পুরুষের স্বাতন্ত্র্য, কিংবা নারী-পুরুষের শারীরিক বৈশিষ্ট্য, যা পরিবর্তনযোগ্য নয়।"
+);
 
-              const genderDefinition =
-                "জেন্ডার: জেন্ডার হচ্ছে সমাজ কর্তৃক নির্ধারিত নারী ও পুরুষের সামাজিক পরিচয়, তাদের মধ্যকার বৈশিষ্ট্য এবং নারী ও পুরুষের ভূমিকা, যা পরিবর্তনীয় এবং সমাজ, সংস্কৃতি ইত্যাদি ভেদে ভিন্ন ভিন্ন। অর্থাৎ, জেন্ডার সামাজিকভাবে নির্মিত একটি বিষয়, যা পরিবর্তনশীল।";
+const genderDefinition = yhLang(
+  "Gender: Gender refers to the socially constructed identity of men and women, including their roles, characteristics, and responsibilities in society. These roles are changeable and may vary across different societies and cultures. In other words, gender is a social concept that is dynamic and changeable.",
+  "জেন্ডার: জেন্ডার হচ্ছে সমাজ কর্তৃক নির্ধারিত নারী ও পুরুষের সামাজিক পরিচয়, তাদের মধ্যকার বৈশিষ্ট্য এবং নারী ও পুরুষের ভূমিকা, যা পরিবর্তনীয় এবং সমাজ, সংস্কৃতি ইত্যাদি ভেদে ভিন্ন ভিন্ন। অর্থাৎ, জেন্ডার সামাজিকভাবে নির্মিত একটি বিষয়, যা পরিবর্তনশীল।"
+);
 
-              const genderPoints = [
-                "পরিবর্তনশীল",
-                "সমাজ ও সংস্কৃতি ভেদে ভিন্ন ভিন্ন",
-                "অনির্ধারিত",
-                "সমাজ কর্তৃক আরোপিত",
-                "মানুষ কর্তৃক সৃষ্ট",
-                "রীতিনীতি অর্জিত/অর্পিত হয়",
-                "সমাজসৃষ্ট ভূমিকা, দায়িত্ব, আচরণ",
-              ];
+const genderPoints = [
+  yhLang("Changeable", "পরিবর্তনশীল"),
+  yhLang("Different across societies and cultures", "সমাজ ও সংস্কৃতি ভেদে ভিন্ন ভিন্ন"),
+  yhLang("Not fixed or predetermined", "অনির্ধারিত"),
+  yhLang("Imposed by society", "সমাজ কর্তৃক আরোপিত"),
+  yhLang("Created by humans", "মানুষ কর্তৃক সৃষ্ট"),
+  yhLang("Learned or socially assigned through customs", "রীতিনীতি অর্জিত/অর্পিত হয়"),
+  yhLang("Socially constructed roles, responsibilities, and behaviors", "সমাজসৃষ্ট ভূমিকা, দায়িত্ব, আচরণ"),
+];
 
-              const sexPoints = [
-                "অপরিবর্তনীয়",
-                "পৃথিবীর সব জায়গায় একই রকম",
-                "নির্ধারিত",
-                "আবহমান কাল ধরে একই",
-                "প্রকৃতি প্রদত্ত",
-                "জন্মগত",
-                "শারীরিক",
-              ];
-
-              const renderList = (items, delayStart = 80) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${delayStart + idx * 15}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
+const sexPoints = [
+  yhLang("Unchangeable", "অপরিবর্তনীয়"),
+  yhLang("Same across the world", "পৃথিবীর সব জায়গায় একই রকম"),
+  yhLang("Determined", "নির্ধারিত"),
+  yhLang("Remains the same throughout time", "আবহমান কাল ধরে একই"),
+  yhLang("Given by nature", "প্রকৃতি প্রদত্ত"),
+  yhLang("Present from birth", "জন্মগত"),
+  yhLang("Physical", "শারীরিক"),
+];
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "লিঙ্গ ভিত্তিক বৈষম্য",
-                    "লিঙ্গ ভিত্তিক বৈষম্য",
-                  )}</h2>
+               
+                <div class="ch13l1-slide lesson-slide">
+                  <span class="ch13l1-shape ch13l1-shape-a" aria-hidden="true"></span>
+                  <span class="ch13l1-shape ch13l1-shape-b" aria-hidden="true"></span>
+                  <span class="ch13l1-shape ch13l1-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="gradient-text h5 mb-2">${yhLang("সেক্স", "সেক্স")}</h3>
-                    <p class="mb-3">${sexDefinition}</p>
-                    <h3 class="gradient-text h5 mb-2">${yhLang("জেন্ডার", "জেন্ডার")}</h3>
-                    <p class="mb-0">${genderDefinition}</p>
-                  </section>
+                  <h2 class="ch13l1-title" data-aos="fade-up">
+                    <i class="fa-solid fa-venus-mars"></i>
+                    ${yhLang("Gender-Based Discrimination", "লিঙ্গ ভিত্তিক বৈষম্য")}
+                  </h2>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "জেন্ডার ও সেক্সের মধ্যে পার্থক্য",
-                      "জেন্ডার ও সেক্সের মধ্যে পার্থক্য",
-                    )}</h3>
-                    <div class="table-responsive">
-                      <table class="table table-modern align-middle" aria-label="
-                        জেন্ডার ও সেক্স তুলনামূলক সারণি">
+                  <div class="ch13l1-split-section">
+                    <div class="ch13l1-def-card ch13l1-def-sex" data-aos="fade-right" data-aos-delay="60">
+                      <div class="ch13l1-def-label">
+                        <span class="ch13l1-def-icon"><i class="fa-solid fa-dna"></i></span>
+                        ${yhLang("Sex", "সেক্স")}
+                      </div>
+                      <p class="ch13l1-def-text">${sexDefinition}</p>
+                    </div>
+
+                    <div class="ch13l1-def-card ch13l1-def-gender" data-aos="fade-left" data-aos-delay="60">
+                      <div class="ch13l1-def-label">
+                        <span class="ch13l1-def-icon"><i class="fa-solid fa-people"></i></span>
+                        ${yhLang("Gender", "জেন্ডার")}
+                      </div>
+                      <p class="ch13l1-def-text">${genderDefinition}</p>
+                    </div>
+                  </div>
+
+                  <div style="margin-top:20px;" data-aos="fade-up" data-aos-delay="120">
+                    <div style="text-align:center;margin-bottom:14px;">
+                      <h3 style="font-size:1.3rem;font-weight:700;color:#1a1a3e;margin:0;display:flex;align-items:center;justify-content:center;gap:10px;">
+                        <i class="fa-solid fa-code-compare" style="color:#ff6b9d;"></i>
+                        ${yhLang("Key Differences", "জেন্ডার ও সেক্সের মধ্যে পার্থক্য")}
+                      </h3>
+                    </div>
+                    <div class="ch13l1-table-wrap">
+                      <table class="ch13l1-table" aria-label="Gender vs Sex Comparison Table">
                         <thead>
                           <tr>
-                            <th scope="col">${yhLang("জেন্ডার", "জেন্ডার")}</th>
-                            <th scope="col">${yhLang("সেক্স", "সেক্স")}</th>
+                            <th scope="col">
+                              <i class="fa-solid fa-circle-notch" style="margin-right:8px;"></i>
+                              ${yhLang("Gender", "জেন্ডার")}
+                            </th>
+                            <th scope="col">
+                              <i class="fa-solid fa-dna" style="margin-right:8px;"></i>
+                              ${yhLang("Sex", "সেক্স")}
+                            </th>
                           </tr>
                         </thead>
                         <tbody>
                           ${genderPoints
                             .map(
                               (genderPoint, idx) => `
-                                <tr data-aos="fade-up" data-aos-delay="${100 + idx * 15}">
-                                  <td>${genderPoint}</td>
-                                  <td>${sexPoints[idx] || ""}</td>
+                                <tr data-aos="fade-up" data-aos-delay="${140 + idx * 20}">
+                                  <td><strong>${genderPoint}</strong></td>
+                                  <td><strong>${sexPoints[idx] || ""}</strong></td>
                                 </tr>
                               `,
                             )
@@ -6791,7 +6806,7 @@ const coursesData = [
                         </tbody>
                       </table>
                     </div>
-                  </section>
+                  </div>
                 </div>
               `;
             })(),
@@ -6835,18 +6850,26 @@ const coursesData = [
                 {
                   title: "সমতা",
                   body: "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়। সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।",
+                  icon: "fa-scale-balanced",
+                  type: "equality",
                 },
                 {
                   title: "ন্যায্যতা",
                   body: "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।",
+                  icon: "fa-gavel",
+                  type: "justice",
                 },
                 {
                   title: "জেন্ডার সমতা",
                   body: "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।",
+                  icon: "fa-people-group",
+                  type: "gender",
                 },
                 {
                   title: "সাম্য ও সমতার পার্থক্য",
                   body: "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-ঝুঁকি দিয়ে সাম্য (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।",
+                  icon: "fa-code-compare",
+                  type: "difference",
                 },
               ];
 
@@ -6854,35 +6877,42 @@ const coursesData = [
                 sections
                   .map(
                     (section, idx) => `
-                      <article class="mb-4" data-aos="fade-right" data-aos-delay="${80 + idx * 20}">
-                        <h3 class="h6 gradient-text mb-2">${section.title}</h3>
-                        <p class="mb-0">${section.body}</p>
-                        ${idx < sections.length - 1 ? '<hr class="my-3" />' : ""}
+                      <article class="ch13l2-section ch13l2-section-${section.type}" data-aos="fade-up" data-aos-delay="${100 + idx * 30}">
+                        <h3 class="ch13l2-section-title">
+                          <i class="fa-solid ${section.icon}"></i>
+                          ${section.title}
+                        </h3>
+                        <p class="ch13l2-section-body">${section.body}</p>
                       </article>
                     `,
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "জেন্ডার বৈষম্য",
-                    "জেন্ডার বৈষম্য",
-                  )}</h2>
+                <div class="ch13l2-slide lesson-slide">
+                  <span class="ch13l2-shape ch13l2-shape-a" aria-hidden="true"></span>
+                  <span class="ch13l2-shape ch13l2-shape-b" aria-hidden="true"></span>
+                  <span class="ch13l2-shape ch13l2-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        <p class="mb-4">${intro}</p>
-                        ${renderSections()}
-                      </div>
-                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="80">
-                        <figure class="image-card mb-0">
-                          <img src="img/modu13/gender.png" alt="জেন্ডার সমতা চিত্র" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
-                        </figure>
-                      </div>
-                    </div>
-                  </section>
+                  <h2 class="ch13l2-title" data-aos="fade-up">
+                    <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                    ${yhLang("Understanding Gender Inequity", "জেন্ডার বৈষম্য")}
+                  </h2>
+
+                  <div class="ch13l2-intro-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="ch13l2-intro-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <p class="ch13l2-intro-text">${intro}</p>
+                  </div>
+
+                  <div class="ch13l2-sections">
+                    ${renderSections()}
+                  </div>
+
+                  <div class="ch13l2-image-section" data-aos="fade-left" data-aos-delay="80">
+                    <figure class="ch13l2-image-card mb-0">
+                      <img src="img/modu13/gender.png" alt="জেন্ডার সমতা চিত্র" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
+                    </figure>
+                  </div>
                 </div>
               `;
             })(),
