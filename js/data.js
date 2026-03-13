@@ -8695,6 +8695,186 @@ const coursesData = [
           },
           {
             id: "ch14-lesson-3",
+            title: yhLang("Emotion Management Strategies", "আবেগ ব্যবস্থাপনার কৌশল"),
+            icon: "fa-brain",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14bx",
+                  question: yhLang(
+                    "Which is a breathing-based emotion management technique?",
+                    "কোনটি শ্বাস-প্রশ্বাস ভিত্তিক আবেগ ব্যবস্থাপনার কৌশল?",
+                  ),
+                  options: [
+                    yhLang(
+                      "নাক দিয়ে গভীর নিঃশ্বাস নিয়ে মুখ দিয়ে প্রশ্বাস ছাড়া",
+                      "নাক দিয়ে গভীর নিঃশ্বাস নিয়ে মুখ দিয়ে প্রশ্বাস ছাড়া",
+                    ),
+                    yhLang("ডায়েরী লেখা", "ডায়েরী লেখা"),
+                    yhLang("ব্যায়াম করা", "ব্যায়াম করা"),
+                    yhLang("গান শোনা", "গান শোনা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <style>
+.m14lem-slide{position:relative;overflow:hidden;border-radius:18px;padding:8px;background:linear-gradient(145deg,#edfff9 0%,#f2f0ff 55%,#fff8f0 100%);border:1px solid rgba(100,130,155,0.18);box-shadow:0 3px 10px rgba(40,80,120,0.1);font-family:"Noto Sans Bengali","Hind Siliguri","Poppins",sans-serif;}
+.m14lem-shape{position:absolute;border-radius:999px;pointer-events:none;opacity:0.25;}
+.m14lem-shape-a{width:80px;height:80px;top:-20px;right:-16px;background:linear-gradient(140deg,#c8f5e8,#d4d9ff);}
+.m14lem-shape-b{width:52px;height:52px;left:-12px;bottom:40px;background:linear-gradient(140deg,#fce4ff,#dff7ff);}
+.m14lem-shape-c{width:38px;height:38px;right:25%;bottom:-10px;background:linear-gradient(145deg,#fffbdb,#e6f0ff);}
+.m14lem-header{margin-bottom:6px;position:relative;z-index:1;}
+.m14lem-title{margin:0;display:inline-flex;align-items:center;gap:8px;font-size:1rem;font-weight:700;color:#1e4066;padding:5px 9px;border-radius:12px;background:linear-gradient(130deg,#eef9ff,#f4f0ff);border:1px solid rgba(110,140,170,0.22);box-shadow:-1px 2px 7px rgba(60,100,140,0.14);}
+.m14lem-title i{width:26px;height:26px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:0.78rem;background:linear-gradient(135deg,#a5b4fc,#818cf8);color:#fff;box-shadow:0 1px 4px rgba(80,70,180,0.2);}
+.m14lem-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:relative;z-index:1;}
+.m14lem-panel{border-radius:14px;padding:7px;border:1px solid rgba(110,136,162,0.18);}
+.m14lem-panel-left{background:linear-gradient(140deg,#edfff8 0%,#f2f0ff 100%);box-shadow:-2px 3px 9px rgba(60,130,110,0.12);}
+.m14lem-panel-right{background:linear-gradient(140deg,#fff8f0 0%,#f0f4ff 100%);box-shadow:2px 3px 9px rgba(100,80,170,0.12);}
+.m14lem-panel-title{margin:0 0 5px;display:flex;align-items:center;gap:6px;font-size:0.76rem;font-weight:700;color:#1e4066;line-height:1.3;}
+.m14lem-panel-title i{width:24px;height:24px;min-width:24px;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:0.65rem;box-shadow:0 1px 3px rgba(20,38,56,0.12);}
+.m14lem-list,.m14lem-ei-list{list-style:none;margin:0;padding:0;display:grid;gap:3px;}
+.m14lem-li{display:grid;grid-template-columns:26px 1fr;gap:4px;align-items:center;padding:3px 4px;border-radius:8px;border:1px solid transparent;box-shadow:0 1px 3px rgba(29,51,72,0.09);}
+.m14lem-li-icon{width:26px;height:26px;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:0.65rem;}
+.m14lem-li-text{font-size:0.64rem;line-height:1.3;color:#1f3f5d;}
+.m14lem-img-wrap{border-radius:10px;overflow:hidden;margin-bottom:6px;box-shadow:0 3px 9px rgba(40,60,100,0.14);border:1px solid rgba(110,130,160,0.16);}
+.m14lem-img{width:100%;height:auto;display:block;}
+.m14lem-ei-card{border-radius:12px;padding:6px;background:linear-gradient(140deg,#f3f3ff 0%,#eef9ff 100%);border:1px solid rgba(110,120,200,0.2);box-shadow:0 2px 8px rgba(80,90,180,0.12);}
+.m14lem-ei-title{margin:0 0 3px;display:flex;align-items:center;gap:5px;font-size:0.78rem;font-weight:700;color:#2a3e78;}
+.m14lem-ei-title i{width:22px;height:22px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:0.65rem;background:linear-gradient(135deg,#fde68a,#f59e0b);color:#fff;box-shadow:0 2px 5px rgba(245,158,11,0.25);}
+.m14lem-ei-desc{margin:0 0 5px;font-size:0.64rem;line-height:1.4;color:#2d4a6e;font-style:italic;border-left:2px solid rgba(100,120,200,0.3);padding-left:5px;}
+.m14lem-ei-subtitle{margin:0 0 4px;font-size:0.7rem;font-weight:700;color:#1e3a68;display:flex;align-items:center;gap:4px;}
+.m14lem-ei-subtitle i{width:18px;height:18px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;font-size:0.55rem;background:rgba(255,255,255,0.9);color:#5a4fd6;}
+.m14lem-ei-li{display:grid;grid-template-columns:24px 1fr;gap:4px;align-items:center;padding:3px 4px;border-radius:7px;border:1px solid transparent;box-shadow:0 1px 3px rgba(29,51,72,0.09);margin-bottom:2px;}
+.m14lem-ei-li:last-child{margin-bottom:0;}
+.m14lem-ei-li-icon{width:24px;height:24px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;}
+.m14lem-ei-li-text{font-size:0.62rem;line-height:1.3;color:#1f3f5d;}
+.m14lem-sky{background:linear-gradient(120deg,#edf8ff,#f6fcff);border-color:rgba(88,162,214,0.3);box-shadow:-1px 1px 4px rgba(78,145,193,0.13);} .m14lem-sky .m14lem-li-icon{background:#d9eeff;color:#297eb9;}
+.m14lem-green{background:linear-gradient(120deg,#effff3,#f7fffb);border-color:rgba(84,169,124,0.3);box-shadow:1px 1px 4px rgba(74,157,114,0.13);} .m14lem-green .m14lem-li-icon{background:#dcf8e8;color:#2f9a69;}
+.m14lem-sun{background:linear-gradient(120deg,#fff9e8,#fffdf2);border-color:rgba(216,172,71,0.34);box-shadow:1px 2px 4px rgba(195,151,55,0.13);} .m14lem-sun .m14lem-li-icon{background:#ffefbd;color:#b8831f;}
+.m14lem-teal{background:linear-gradient(120deg,#effffb,#f7fffd);border-color:rgba(76,176,166,0.3);box-shadow:1px -1px 4px rgba(65,157,148,0.13);} .m14lem-teal .m14lem-li-icon{background:#d7faf2;color:#2c9185;}
+.m14lem-info{background:linear-gradient(120deg,#eef7ff,#f6fbff);border-color:rgba(94,150,206,0.3);box-shadow:-1px 1px 4px rgba(77,137,190,0.13);} .m14lem-info .m14lem-li-icon{background:#dcebff;color:#2a78af;}
+.m14lem-violet{background:linear-gradient(120deg,#f8f1ff,#fdf9ff);border-color:rgba(165,118,214,0.28);box-shadow:-1px 2px 4px rgba(151,104,197,0.13);} .m14lem-violet .m14lem-li-icon{background:#f0e0ff;color:#8e5ec3;}
+.m14lem-peach{background:linear-gradient(120deg,#fff2ea,#fffaf6);border-color:rgba(214,139,102,0.31);box-shadow:1px 1px 4px rgba(194,118,82,0.13);} .m14lem-peach .m14lem-li-icon{background:#ffe1d2;color:#bc6f49;}
+.m14lem-amber{background:linear-gradient(120deg,#fff7e9,#fffdf5);border-color:rgba(212,167,71,0.32);box-shadow:1px 1px 4px rgba(196,151,57,0.13);} .m14lem-amber .m14lem-li-icon{background:#ffefc3;color:#b7821f;}
+.m14lem-warn{background:linear-gradient(120deg,#fff4ea,#fffaf3);border-color:rgba(213,147,83,0.32);box-shadow:1px 2px 4px rgba(201,136,62,0.13);} .m14lem-warn .m14lem-li-icon{background:#ffe8ce;color:#c77635;}
+.m14lem-danger{background:linear-gradient(120deg,#fff1f3,#fff8f8);border-color:rgba(214,96,106,0.32);box-shadow:1px 1px 4px rgba(196,84,94,0.13);} .m14lem-danger .m14lem-li-icon{background:#ffdce0;color:#c14a58;}
+.m14lem-mint{background:linear-gradient(120deg,#edfff8,#f6fffb);border-color:rgba(88,174,152,0.3);box-shadow:0 2px 4px rgba(73,152,132,0.13);} .m14lem-mint .m14lem-li-icon{background:#d9fbed;color:#328a74;}
+.m14lem-ei-info{background:linear-gradient(120deg,#eef7ff,#f6fbff);border-color:rgba(94,150,206,0.3);} .m14lem-ei-info .m14lem-ei-li-icon{background:#dcebff;color:#2a78af;}
+.m14lem-ei-success{background:linear-gradient(120deg,#effff3,#f7fffb);border-color:rgba(84,169,124,0.3);} .m14lem-ei-success .m14lem-ei-li-icon{background:#dcf8e8;color:#2f9a69;}
+.m14lem-ei-peach{background:linear-gradient(120deg,#fff2ea,#fffaf6);border-color:rgba(214,139,102,0.3);} .m14lem-ei-peach .m14lem-ei-li-icon{background:#ffe1d2;color:#bc6f49;}
+.m14lem-ei-violet{background:linear-gradient(120deg,#f8f1ff,#fdf9ff);border-color:rgba(165,118,214,0.28);} .m14lem-ei-violet .m14lem-ei-li-icon{background:#f0e0ff;color:#8e5ec3;}
+@media(max-width:820px){.m14lem-grid{grid-template-columns:1fr;} .m14lem-title{font-size:0.9rem;}}
+                </style>
+                <div class="m14lem-slide lesson-slide">
+                  <span class="m14lem-shape m14lem-shape-a" aria-hidden="true"></span>
+                  <span class="m14lem-shape m14lem-shape-b" aria-hidden="true"></span>
+                  <span class="m14lem-shape m14lem-shape-c" aria-hidden="true"></span>
+
+
+                  <div class="m14lem-grid">
+                    <!-- LEFT: Strategies -->
+                    <div class="m14lem-panel m14lem-panel-left" data-aos="fade-right" data-aos-delay="40">
+                      <h3 class="m14lem-panel-title">
+                        <i class="fa-solid fa-list-check" style="background:linear-gradient(135deg,#6ee7b7,#34d399);color:#fff;"></i>
+                        ${yhLang("Emotion Management Strategies", "আবেগ ব্যবস্থাপনার কৌশল")}
+                      </h3>
+                      <ul class="m14lem-list">
+                        <li class="m14lem-li m14lem-sky" data-aos="fade-right" data-aos-delay="50">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-eye"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Observe and understand your feelings, reactions and mental state", "নিজের অনুভূতি, প্রতিক্রিয়া এবং মানসিক অবস্থার প্রতি খেয়াল করা এবং বোঝা")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-green" data-aos="fade-right" data-aos-delay="54">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Take responsibility for your feelings and behavior", "নিজের অনুভূতি ও আচরণের দায়িত্ব নেওয়া")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-sun" data-aos="fade-right" data-aos-delay="58">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-star"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Focus on your strengths and appreciate yourself", "নিজের ভালো দিকগুলিতে ফোকাস করা এবং এর জন্য নিজেকে প্রশংসা করা")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-teal" data-aos="fade-right" data-aos-delay="62">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-tree"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Spend time in nature", "প্রাকৃতিক পরিবেশে সময় অতিবাহিত করা")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-info" data-aos="fade-right" data-aos-delay="66">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-dove"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Be open-minded and accept what is happening around you", "মুক্ত মনা হওয়া ও চারপাশে যা ঘটছে তা গ্রহণ করা")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-violet" data-aos="fade-right" data-aos-delay="70">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-comments"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Share your feelings with someone you trust", "বিশ্বস্ত কারো সাথে মনের কথা শেয়ার করা")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-peach" data-aos="fade-right" data-aos-delay="74">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-music"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Do positive activities you enjoy (reading, listening to music)", "পছন্দনীয় ইতিবাচক কাজ করা (পছন্দের বই পড়া, গান শোনা)")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-amber" data-aos="fade-right" data-aos-delay="78">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-book-open"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Write a diary (events, thoughts and feelings)", "ডায়েরী লেখা (ঘটে যাওয়া ঘটনা, নিজের চিন্তা ও অনুভূতি লেখা)")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-warn" data-aos="fade-right" data-aos-delay="82">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-sun"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Focus on positive events in life", "জীবনের ইতিবাচক ঘটনার প্রতি ফোকাস করা")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-danger" data-aos="fade-right" data-aos-delay="86">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-person-running"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Exercise regularly", "ব্যায়াম করা")}</span>
+                        </li>
+                        <li class="m14lem-li m14lem-mint" data-aos="fade-right" data-aos-delay="90">
+                          <span class="m14lem-li-icon"><i class="fa-solid fa-wind"></i></span>
+                          <span class="m14lem-li-text">${yhLang("Take a deep breath through the nose and exhale through the mouth", "নাক দিয়ে গভীর নিঃশ্বাস নিয়ে মুখ দিয়ে প্রশ্বাস ছাড়া")}</span>
+                        </li>
+                      </ul>
+                      <div class="m14lem-ei-card">
+                        <h3 class="m14lem-ei-title">
+                          <i class="fa-solid fa-lightbulb"></i>
+                          ${yhLang("Emotional Intelligence", "আবেগীয় বুদ্ধিমত্তা")}
+                        </h3>
+                        <p class="m14lem-ei-desc">${yhLang("Emotional intelligence (EI) is the ability to perceive, regulate and use your own emotions and understand others' emotions.", "আবেগীয় বুদ্ধিমত্তা (emotional intelligence) হল নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা।")}</p>
+                        <span class="m14lem-ei-subtitle">
+                          <i class="fa-solid fa-circle-check"></i>
+                          ${yhLang("Important aspects:", "গুরুত্বপূর্ণ দিকগুলো হল:")}
+                        </span>
+                        <ul class="m14lem-ei-list">
+                          <li class="m14lem-ei-li m14lem-ei-info" data-aos="fade-left" data-aos-delay="55">
+                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="m14lem-ei-li-text">${yhLang("Identify your emotions and understand their causes.", "নিজের আবেগগুলো চিহ্নিত করতে পারা এবং তাদের কারণগুলো বুঝতে পারা।")}</span>
+                          </li>
+                          <li class="m14lem-ei-li m14lem-ei-success" data-aos="fade-left" data-aos-delay="60">
+                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-sliders"></i></span>
+                            <span class="m14lem-ei-li-text">${yhLang("Control yourself so emotions do not have a negative effect.", "আবেগগুলো যেন কোনো নেতিবাচক প্রভাব না ফেলে, সে জন্য নিজেকে নিয়ন্ত্রণ করতে পারা।")}</span>
+                          </li>
+                          <li class="m14lem-ei-li m14lem-ei-peach" data-aos="fade-left" data-aos-delay="65">
+                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                            <span class="m14lem-ei-li-text">${yhLang("Understand others' emotions and treat them with sensitivity.", "অন্যদের আবেগগুলো বুঝতে পারা এবং তাদের সাথে সংবেদনশীলভাবে আচরণ করা।")}</span>
+                          </li>
+                          <li class="m14lem-ei-li m14lem-ei-violet" data-aos="fade-left" data-aos-delay="70">
+                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-people-group"></i></span>
+                            <span class="m14lem-ei-li-text">${yhLang("Build good relationships with others through emotional intelligence.", "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা।")}</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- RIGHT: Image + EI card -->
+                    <div class="m14lem-panel m14lem-panel-right h-100" data-aos="fade-left" data-aos-delay="45">
+                      <div class="m14lem-img-wrap">
+                        <img src="img/modu14/abeg.jpg" style="height: 690px;" class="m14lem-img" alt="" loading="lazy" />
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-4",
             title: yhLang("Understanding Anxiety", "উদ্বেগ (Anxiety)"),
             icon: "fa-face-frown",
             gradientClass: "bg-gradient-purple",
@@ -9098,7 +9278,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch14-lesson-4",
+            id: "ch14-lesson-5",
             title: yhLang("মানসিক চাপ (Stress)", "মানসিক চাপ (Stress)"),
             icon: "fa-children",
             gradientClass: "bg-gradient-rose",
@@ -9558,7 +9738,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch14-lesson-5",
+            id: "ch14-lesson-6",
             title: yhLang("Causes of Stress", "মানসিক চাপের কারণসমূহ"),
             icon: "fa-head-side-virus",
             gradientClass: "bg-gradient-indigo",
@@ -9828,7 +10008,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch14-lesson-6",
+            id: "ch14-lesson-7",
             title: yhLang("Understanding Anger", "রাগ (Anger)"),
             icon: "fa-face-angry",
             gradientClass: "bg-gradient-amber",
@@ -10108,7 +10288,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch14-lesson-7",
+            id: "ch14-lesson-8",
             title: yhLang(
               "Why We Get Angry Easily",
               "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই",
@@ -10376,7 +10556,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch14-lesson-8",
+            id: "ch14-lesson-9",
             title: yhLang(
               "Anger Management Techniques",
               "রাগ ব্যবস্থাপনার কৌশল",
@@ -10584,7 +10764,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch14-lesson-9",
+            id: "ch14-lesson-10",
             title: yhLang("Understanding Exam Anxiety", "পরীক্ষা-ভীতি"),
             icon: "fa-book-open-reader",
             gradientClass: "bg-gradient-blue",
@@ -10836,11 +11016,8 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch14-lesson-10",
-            title: yhLang(
-              "Solutions to Exam Fear",
-              "পরীক্ষা-ভীতি দূর করার উপায়",
-            ),
+            id: "ch14-lesson-11",
+            title: yhLang("Solutions to Exam Fear", "পরীক্ষা-ভীতি দূর করার উপায়"),
             icon: "fa-pen-to-square",
             gradientClass: "bg-gradient-emerald",
             audioFile: "",
@@ -11041,6 +11218,221 @@ const coursesData = [
                       ${renderList(mindsetSteps, 110, "up")}
                     </ul>
                   </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch14-lesson-12",
+            title: yhLang("Digital Addiction Prevention", "ডিজিটাল আসক্তি প্রতিরোধ"),
+            icon: "fa-mobile-screen-button",
+            gradientClass: "bg-gradient-cyan",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q14k",
+                  question: yhLang(
+                    "Which habit helps prevent device addiction?",
+                    "ডিভাইস আসক্তি প্রতিরোধে কোন অভ্যাসটি কার্যকর?",
+                  ),
+                  options: [
+                    yhLang(
+                      "Avoiding device use at least 1 hour before sleep",
+                      "ঘুমের আগে অন্তত ১ ঘণ্টা ডিভাইস ব্যবহার না করা",
+                    ),
+                    yhLang("Using social media all night", "সারারাত সামাজিক মাধ্যম ব্যবহার করা"),
+                    yhLang("Skipping physical activity", "শারীরিক কার্যক্রম বাদ দেওয়া"),
+                    yhLang("Not discussing usage rules", "ব্যবহারের নিয়ম নিয়ে আলোচনা না করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const intro = yhLang(
+                "Adolescents are growing up with modern technology where smartphones, tablets, and social media are part of daily life. While these tools provide opportunities, uncontrolled use can create mental and physical health problems. Device addiction and excessive technology use may lead to stress, insomnia, and social isolation.",
+                "তরুণ-তরুণী আধুনিক প্রযুক্তির সঙ্গে বেড়ে উঠছে, যেখানে স্মার্টফোন, ট্যাবলেট এবং সামাজিক মিডিয়া প্ল্যাটফর্ম তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ ও সুবিধা দেয়, অনিয়ন্ত্রিত ব্যবহারে মানসিক ও শারীরিক স্বাস্থ্যগত সমস্যা তৈরি হতে পারে। বিশেষ করে ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা ও সামাজিক বিচ্ছিন্নতার মতো সমস্যার জন্ম দিতে পারে।",
+              );
+
+              const subtitle = yhLang(
+                "Device addiction is a behavioral addiction that reduces self-control over technology use.",
+                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে।",
+              );
+
+              const impactTitle = yhLang(
+                "Its impact can be especially deep among adolescents:",
+                "এর প্রভাব কিশোর-কিশোরীদের মধ্যে বিশেষভাবে গভীর হতে পারে:",
+              );
+
+              const impacts = [
+                {
+                  text: yhLang(
+                    "Mental health: Excessive technology use may cause depression, anxiety, and insomnia.",
+                    "মানসিক স্বাস্থ্য: অতিরিক্ত প্রযুক্তি ব্যবহারের ফলে বিষণ্নতা, উদ্বেগ এবং নিদ্রাহীনতা তৈরি হতে পারে।",
+                  ),
+                  icon: "fa-brain",
+                  tone: "danger",
+                },
+                {
+                  text: yhLang(
+                    "Physical health: Long screen time can cause eye strain, headaches, and neck/back pain.",
+                    "শারীরিক স্বাস্থ্য: দীর্ঘ সময় ডিভাইস ব্যবহার করলে চোখের ক্লান্তি, মাথাব্যথা এবং ঘাড় ও পিঠে ব্যথা দেখা দিতে পারে।",
+                  ),
+                  icon: "fa-eye",
+                  tone: "warn",
+                },
+                {
+                  text: yhLang(
+                    "Social isolation: Overuse of social media may reduce real-life interaction and social skills.",
+                    "সামাজিক বিচ্ছিন্নতা: অতিরিক্ত সামাজিক মিডিয়া ব্যবহারের ফলে বাস্তব সামাজিক মিথস্ক্রিয়ার অভাব তৈরি হতে পারে, যা পরবর্তীতে সামাজিক দক্ষতার ঘাটতি সৃষ্টি করতে পারে।",
+                  ),
+                  icon: "fa-people-arrows-left-right",
+                  tone: "info",
+                },
+              ];
+
+              const guidelineTitle = yhLang(
+                "Guidelines for healthy technology use",
+                "প্রযুক্তি ব্যবহারের জন্য গাইডলাইন",
+              );
+
+              const guidelines = [
+                {
+                  text: yhLang(
+                    "Avoid more than 2 hours of non-essential screen time per day.",
+                    "দিনে ২ ঘণ্টার বেশি অপ্রয়োজনীয় স্ক্রিন টাইম পরিহার করা।",
+                  ),
+                  icon: "fa-clock",
+                  tone: "success",
+                },
+                {
+                  text: yhLang(
+                    "Build a regular digital detox routine to reduce stress.",
+                    "শারীরিক ও মানসিক চাপ কমাতে নিয়মিত ডিজিটাল ডিটক্সের অভ্যাস গড়ে তোলা।",
+                  ),
+                  icon: "fa-leaf",
+                  tone: "teal",
+                },
+                {
+                  text: yhLang(
+                    "Do not use devices at least 1 hour before sleep.",
+                    "ঘুমের আগে অন্তত ১ ঘণ্টা ডিভাইস ব্যবহার না করা।",
+                  ),
+                  icon: "fa-bed",
+                  tone: "indigo",
+                },
+                {
+                  text: yhLang(
+                    "Discuss openly with family and create technology-use rules.",
+                    "পরিবারের সঙ্গে খোলামেলা আলোচনা করে প্রযুক্তি ব্যবহারের নিয়মাবলি তৈরি করা।",
+                  ),
+                  icon: "fa-people-roof",
+                  tone: "peach",
+                },
+              ];
+
+              const renderList = (items, baseDelay = 80, direction = "left") =>
+                items
+                  .map(
+                    (item, idx) => `
+                      <li class="m14l12-li m14l12-${item.tone}" data-aos="fade-${direction}" data-aos-delay="${baseDelay + idx * 12}">
+                        <span class="m14l12-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l12-li-text">${item.text}</span>
+                      </li>
+                    `,
+                  )
+                  .join("");
+
+              return `
+                <style>
+.m14l12-slide{position:relative;overflow:hidden;border-radius:14px;padding:7px;background:linear-gradient(150deg,#eff8ff 0%,#f7f1ff 48%,#fff7ef 100%);border:1px solid rgba(122,144,170,0.22);box-shadow:0 4px 12px rgba(48,72,108,0.11);} 
+.m14l12-shape{position:absolute;border-radius:999px;opacity:.24;pointer-events:none;} 
+.m14l12-shape-a{width:74px;height:74px;top:-20px;right:-16px;background:linear-gradient(130deg,#bde9ff,#dacdff);} 
+.m14l12-shape-b{width:56px;height:56px;left:-14px;bottom:46px;background:linear-gradient(130deg,#ffdff0,#dff8ff);} 
+.m14l12-shape-c{width:38px;height:38px;right:24%;bottom:-10px;background:linear-gradient(130deg,#fff5cc,#dff5e9);} 
+.m14l12-h1,.m14l12-h2,.m14l12-h3,.m14l12-h4,.m14l12-h5,.m14l12-h6{margin:0;display:flex;align-items:center;gap:5px;line-height:1.3;} 
+.m14l12-h1{font-size:.88rem;font-weight:700;color:#1f3f67;padding:5px 8px;border-radius:10px;background:linear-gradient(130deg,#edf7ff,#f2eeff);border:1px solid rgba(106,137,170,.28);box-shadow:-2px 3px 8px rgba(70,100,135,.14);} 
+.m14l12-h2{font-size:.79rem;font-weight:700;color:#244d72;} 
+.m14l12-h3{font-size:.74rem;font-weight:700;color:#24526f;} 
+.m14l12-h4{font-size:.7rem;font-weight:700;color:#315672;} 
+.m14l12-h5{font-size:.66rem;font-weight:700;color:#315d66;} 
+.m14l12-h6{font-size:.62rem;font-weight:700;color:#5f4f7b;} 
+.m14l12-hicon{width:20px;height:20px;min-width:20px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:.58rem;color:#fff;box-shadow:0 2px 5px rgba(41,68,95,.18);} 
+.m14l12-i1{background:linear-gradient(135deg,#7eb6ff,#6f8eff);} 
+.m14l12-i2{background:linear-gradient(135deg,#5ecfb2,#35b48e);} 
+.m14l12-i3{background:linear-gradient(135deg,#ffb680,#f38a5a);} 
+.m14l12-i4{background:linear-gradient(135deg,#89b7ff,#5f8fff);} 
+.m14l12-i5{background:linear-gradient(135deg,#8fd8bc,#5dbf96);} 
+.m14l12-i6{background:linear-gradient(135deg,#d5a8ff,#b07fff);} 
+.m14l12-p{margin:4px 0 0;font-size:.63rem;line-height:1.42;color:#244865;} 
+.m14l12-grid{margin-top:7px;display:grid;grid-template-columns:1fr 1fr;gap:7px;} 
+.m14l12-card{border-radius:11px;padding:6px;border:1px solid rgba(115,136,160,.2);} 
+.m14l12-card-intro{background:linear-gradient(145deg,#f2f8ff 0%,#edf7f5 100%);box-shadow:-3px 4px 10px rgba(66,122,162,.13);} 
+.m14l12-card-impact{background:linear-gradient(145deg,#fff3f0 0%,#f6f2ff 100%);box-shadow:3px 4px 10px rgba(153,105,80,.13);} 
+.m14l12-card-guide{background:linear-gradient(145deg,#eefaf4 0%,#eef4ff 100%);box-shadow:0 5px 11px rgba(64,136,96,.14);} 
+.m14l12-list{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:4px;} 
+.m14l12-li{display:grid;grid-template-columns:24px 1fr;gap:4px;align-items:center;padding:3px 4px;border-radius:8px;border:1px solid transparent;} 
+.m14l12-li-icon{width:24px;height:24px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:.58rem;} 
+.m14l12-li-text{font-size:.62rem;line-height:1.35;color:#20425d;} 
+.m14l12-danger{background:linear-gradient(120deg,#fff0f2,#fff8f8);border-color:rgba(212,99,110,.32);box-shadow:1px 2px 5px rgba(196,92,103,.15);} .m14l12-danger .m14l12-li-icon{background:#ffdce2;color:#c14958;} 
+.m14l12-warn{background:linear-gradient(120deg,#fff6ea,#fffbf4);border-color:rgba(211,155,76,.32);box-shadow:1px 2px 5px rgba(197,145,64,.15);} .m14l12-warn .m14l12-li-icon{background:#ffedc7;color:#b67f25;} 
+.m14l12-info{background:linear-gradient(120deg,#eef8ff,#f6fbff);border-color:rgba(92,148,204,.33);box-shadow:-1px 2px 5px rgba(78,136,192,.15);} .m14l12-info .m14l12-li-icon{background:#dcebff;color:#2b78af;} 
+.m14l12-success{background:linear-gradient(120deg,#effff5,#f7fffb);border-color:rgba(83,169,123,.33);box-shadow:-1px 2px 5px rgba(70,151,109,.15);} .m14l12-success .m14l12-li-icon{background:#dcf8e8;color:#2f9868;} 
+.m14l12-teal{background:linear-gradient(120deg,#edfffb,#f6fffd);border-color:rgba(70,174,162,.33);box-shadow:1px 2px 5px rgba(62,156,146,.15);} .m14l12-teal .m14l12-li-icon{background:#d6f9f1;color:#2c9084;} 
+.m14l12-indigo{background:linear-gradient(120deg,#f0f3ff,#f8f9ff);border-color:rgba(109,124,210,.33);box-shadow:1px 2px 5px rgba(96,112,193,.15);} .m14l12-indigo .m14l12-li-icon{background:#dfe6ff;color:#5268ca;} 
+.m14l12-peach{background:linear-gradient(120deg,#fff3eb,#fff9f4);border-color:rgba(210,136,101,.33);box-shadow:1px 2px 5px rgba(192,120,83,.15);} .m14l12-peach .m14l12-li-icon{background:#ffe2d3;color:#be714b;} 
+@media(max-width:840px){.m14l12-grid{grid-template-columns:1fr;} .m14l12-h1{font-size:.82rem;}}
+                </style>
+                <div class="m14l12-slide lesson-slide">
+                  <span class="m14l12-shape m14l12-shape-a" aria-hidden="true"></span>
+                  <span class="m14l12-shape m14l12-shape-b" aria-hidden="true"></span>
+                  <span class="m14l12-shape m14l12-shape-c" aria-hidden="true"></span>
+
+                  <h1 class="m14l12-h1" data-aos="fade-up">
+                    <span class="m14l12-hicon m14l12-i1"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                    ${yhLang("Digital Addiction Prevention", "ডিজিটাল আসক্তি প্রতিরোধ")}
+                  </h1>
+
+                  <section class="m14l12-card m14l12-card-intro" data-aos="fade-up" data-aos-delay="40">
+                    <h2 class="m14l12-h2">
+                      <span class="m14l12-hicon m14l12-i2"><i class="fa-solid fa-heart-pulse"></i></span>
+                      ${yhLang("Digital Health & Impact of Device Addiction", "ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তির প্রভাব")}
+                    </h2>
+                    <p class="m14l12-p">${intro}</p>
+
+                    <h6 class="m14l12-h6" style="margin-top:5px;">
+                      <span class="m14l12-hicon m14l12-i6"><i class="fa-solid fa-circle-info"></i></span>
+                      ${subtitle}
+                    </h6>
+                  </section>
+
+                  <div class="m14l12-grid">
+                    <section class="m14l12-card m14l12-card-impact" data-aos="fade-right" data-aos-delay="60">
+                      <h3 class="m14l12-h3">
+                        <span class="m14l12-hicon m14l12-i3"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        ${impactTitle}
+                      </h3>
+                      <ul class="m14l12-list">
+                        ${renderList(impacts, 80, "right")}
+                      </ul>
+                      <h5 class="m14l12-h5" style="margin-top:5px;">
+                        <span class="m14l12-hicon m14l12-i5"><i class="fa-solid fa-seedling"></i></span>
+                        ${yhLang("Early awareness helps prevention.", "প্রাথমিক সচেতনতা প্রতিরোধে সহায়ক।")}
+                      </h5>
+                    </section>
+
+                    <section class="m14l12-card m14l12-card-guide" data-aos="fade-left" data-aos-delay="70">
+                      <h4 class="m14l12-h4">
+                        <span class="m14l12-hicon m14l12-i4"><i class="fa-solid fa-list-check"></i></span>
+                        ${guidelineTitle}
+                      </h4>
+                      <ul class="m14l12-list">
+                        ${renderList(guidelines, 92, "left")}
+                      </ul>
+                    </section>
+                  </div>
                 </div>
               `;
             })(),
@@ -15300,7 +15692,7 @@ const coursesData = [
                   id: "q18h",
                   question: yhLang(
                     "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?",
-                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?",
+                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?"
                   ),
                   options: [
                     yhLang("ঝাপসা দৃষ্টি", "ঝাপসা দৃষ্টি"),
@@ -15315,19 +15707,13 @@ const coursesData = [
             content: (function () {
               const intro = yhLang(
                 "Pesticide poisoning (organophosphorus/OPC) is a common incident in Bangladesh. Toxic substances can enter the body in different ways, either intentionally or accidentally.",
-                "বাংলাদেশে কীটনাশকজনিত বিষক্রিয়া (অর্গানোফসফরাস/ওপিসি) একটি সাধারণ ঘটনা। বিভিন্ন ভাবে বিষাক্ত দ্রব্য ব্যক্তির শরীরে প্রবেশ করতে পারে যা ইচ্ছাকৃত বা অনিচ্ছাকৃত দুইভাবেই হতে পারে।",
+                "বাংলাদেশে কীটনাশকজনিত বিষক্রিয়া (অর্গানোফসফরাস/ওপিসি) একটি সাধারণ ঘটনা। বিভিন্ন ভাবে বিষাক্ত দ্রব্য ব্যক্তির শরীরে প্রবেশ করতে পারে যা ইচ্ছাকৃত বা অনিচ্ছাকৃত দুইভাবেই হতে পারে।"
               );
 
-              const signsHeading = yhLang(
-                "Signs and Symptoms of Poisoning:",
-                "বিষক্রিয়ার লক্ষণ-চিহ্নঃ",
-              );
+              const signsHeading = yhLang("Signs and Symptoms of Poisoning:", "বিষক্রিয়ার লক্ষণ-চিহ্নঃ");
               const signs = [
                 {
-                  text: yhLang(
-                    "No response / unconsciousness",
-                    "সাড়া না থাকা / অজ্ঞান হয়ে যাওয়া",
-                  ),
+                  text: yhLang("No response / unconsciousness", "সাড়া না থাকা / অজ্ঞান হয়ে যাওয়া"),
                   icon: "fa-person-falling",
                   color: "m18l8-sign-consciousness",
                 },
@@ -15344,7 +15730,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Burning of lips/tongue (if caused by acid, alkali, or corrosive substances)",
-                    "ঠোঁট, জিহ্বা পুড়ে যাওয়া (এসিড, ক্ষার বা দাহ্য বস্তু দ্বারা হলে)",
+                    "ঠোঁট, জিহ্বা পুড়ে যাওয়া (এসিড, ক্ষার বা দাহ্য বস্তু দ্বারা হলে)"
                   ),
                   icon: "fa-fire-flame-curved",
                   color: "m18l8-sign-burn",
@@ -15373,42 +15759,33 @@ const coursesData = [
 
               const followUp = yhLang(
                 "If poisoning is suspected, identify the toxic substance if possible and take the person to a doctor or hospital immediately. During this time, the following first aid steps may be used.",
-                "যদি মনে হয় কোন ব্যক্তি বিষক্রিয়ায় আক্রান্ত, তবে বিষাক্ত দ্রব্যটি চিহ্নিত করার চেষ্টা করতে হবে এবং তৎক্ষণাৎ চিকিৎসকের কাছে বা হাসপাতালে নিতে হবে। এই সময়ের মাঝে নিম্নলিখিত প্রাথমিক চিকিৎসা পদ্ধতি গুলো ব্যবহার করা যেতে পারে।",
+                "যদি মনে হয় কোন ব্যক্তি বিষক্রিয়ায় আক্রান্ত, তবে বিষাক্ত দ্রব্যটি চিহ্নিত করার চেষ্টা করতে হবে এবং তৎক্ষণাৎ চিকিৎসকের কাছে বা হাসপাতালে নিতে হবে। এই সময়ের মাঝে নিম্নলিখিত প্রাথমিক চিকিৎসা পদ্ধতি গুলো ব্যবহার করা যেতে পারে।"
               );
 
-              const careHeading = yhLang(
-                "First Aid for Poisoning",
-                "বিষক্রিয়ার প্রাথমিক চিকিৎসা",
-              );
+              const careHeading = yhLang("First Aid for Poisoning", "বিষক্রিয়ার প্রাথমিক চিকিৎসা");
               const careSteps = [
                 {
-                  text: yhLang(
-                    "Try to keep the affected person as still as possible.",
-                    "আক্রান্ত ব্যক্তিটিকে যথাসম্ভব স্থির রাখার চেষ্টা করতে হবে।",
-                  ),
+                  text: yhLang("Try to keep the affected person as still as possible.", "আক্রান্ত ব্যক্তিটিকে যথাসম্ভব স্থির রাখার চেষ্টা করতে হবে।"),
                   icon: "fa-hand-holding-heart",
                   color: "m18l8-care-still",
                 },
                 {
                   text: yhLang(
                     "If poisoning happened through inhalation, move the person to fresh air immediately.",
-                    "নিশ্বাস-প্রশ্বাসের মাধ্যমে বিষক্রিয়া হয়ে থাকলে, অবিলম্বে ব্যক্তিকে সতেজ বাতাসে নিয়ে আসতে হবে।",
+                    "নিশ্বাস-প্রশ্বাসের মাধ্যমে বিষক্রিয়া হয়ে থাকলে, অবিলম্বে ব্যক্তিকে সতেজ বাতাসে নিয়ে আসতে হবে।"
                   ),
                   icon: "fa-wind",
                   color: "m18l8-care-air",
                 },
                 {
-                  text: yhLang(
-                    "Try to give the affected person plenty of water.",
-                    "আক্রান্ত ব্যক্তিকে প্রচুর পরিমাণে পানি খাওয়ানোর চেষ্টা করতে হবে।",
-                  ),
+                  text: yhLang("Try to give the affected person plenty of water.", "আক্রান্ত ব্যক্তিকে প্রচুর পরিমাণে পানি খাওয়ানোর চেষ্টা করতে হবে।"),
                   icon: "fa-glass-water",
                   color: "m18l8-care-water",
                 },
                 {
                   text: yhLang(
                     "Examine the scene and the person. Try to identify what poison was taken and, if found, bring it to the hospital with the patient.",
-                    "ঘটনাস্থল এবং আক্রান্ত ব্যক্তিকে পরীক্ষা করতে হবে। ব্যক্তিটি কী বিষ গ্রহণ করেছিল তা খুঁজে বের করার চেষ্টা করতে হবে এবং খুঁজে পেলে তা আক্রান্ত ব্যক্তির সাথে হাসপাতালে নিয়ে যেতে হবে।",
+                    "ঘটনাস্থল এবং আক্রান্ত ব্যক্তিকে পরীক্ষা করতে হবে। ব্যক্তিটি কী বিষ গ্রহণ করেছিল তা খুঁজে বের করার চেষ্টা করতে হবে এবং খুঁজে পেলে তা আক্রান্ত ব্যক্তির সাথে হাসপাতালে নিয়ে যেতে হবে।"
                   ),
                   icon: "fa-magnifying-glass",
                   color: "m18l8-care-check",
@@ -15416,7 +15793,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "If any toxic substance is on the skin, wash the affected area thoroughly with clean water.",
-                    "যদি আক্রান্ত ব্যক্তির শরীরের চামড়ায় কোনো বিষাক্ত পদার্থ পাওয়া যায়, তাহলে আক্রান্ত স্থানটি পরিষ্কার পানি দিয়ে ধুয়ে ফেলতে হবে।",
+                    "যদি আক্রান্ত ব্যক্তির শরীরের চামড়ায় কোনো বিষাক্ত পদার্থ পাওয়া যায়, তাহলে আক্রান্ত স্থানটি পরিষ্কার পানি দিয়ে ধুয়ে ফেলতে হবে।"
                   ),
                   icon: "fa-hand-sparkles",
                   color: "m18l8-care-wash",
@@ -15425,7 +15802,7 @@ const coursesData = [
 
               const caution = yhLang(
                 "Do NOT induce vomiting if acid, alkali, or any corrosive substance was swallowed (e.g., bleach, sulfuric acid, kerosene, petroleum).",
-                "অ্যাসিড, ক্ষার বা কোনো দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তিকে বমি করাবেন না (যেমন—ব্লিচ, সালফিউরিক অ্যাসিড, কেরোসিন, পেট্রোলিয়াম)।",
+                "অ্যাসিড, ক্ষার বা কোনো দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তিকে বমি করাবেন না (যেমন—ব্লিচ, সালফিউরিক অ্যাসিড, কেরোসিন, পেট্রোলিয়াম)।"
               );
 
               const renderSigns = (items) =>
@@ -15436,7 +15813,7 @@ const coursesData = [
                         <div class="m18l8-sign-icon"><i class="fa-solid ${item.icon}"></i></div>
                         <p>${item.text}</p>
                       </div>
-                    `,
+                    `
                   )
                   .join("")}</div>`;
 
@@ -15448,7 +15825,7 @@ const coursesData = [
                         <div class="m18l8-care-icon"><i class="fa-solid ${item.icon}"></i></div>
                         <p>${item.text}</p>
                       </div>
-                    `,
+                    `
                   )
                   .join("")}</div>`;
 
@@ -15487,6 +15864,7 @@ const coursesData = [
                       </h3>
                       ${renderCare(careSteps)}
                       <div class="m18l8-warning" role="alert" data-aos="zoom-in" data-aos-delay="120">
+                        <h4 class="m18l8-warning-title mb-1"><i class="fa-solid fa-ban"></i> ${yhLang("সতর্কতা:", "সতর্কতা:")}</h4>
                         <p class="mb-0">${caution}</p>
                       </div>
                     </section>
