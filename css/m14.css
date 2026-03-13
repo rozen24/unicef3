@@ -3315,7 +3315,7 @@
 .m14l9-title,
 .m14l9-subtitle {
 	margin: 0;
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	gap: 12px;
 	line-height: 1.3;
@@ -3389,8 +3389,8 @@
 
 .m14l9-grid {
 	display: grid;
-	grid-template-columns: 1.4fr 1fr;
-	gap: 6px;
+	grid-template-columns: 1fr 2fr;
+	gap: 10px;
 }
 
 .m14l9-p {
@@ -3424,8 +3424,8 @@
 }
 
 .m14l9-li-icon {
-	width: 36px;
-	height: 36px;
+	width: 32px;
+	height: 32px;
 	border-radius: 10px;
 	display: inline-flex;
 	align-items: center;
@@ -3688,7 +3688,7 @@
 .m14l10-title,
 .m14l10-subtitle {
 	margin: 0;
-	display: inline-flex;
+	display: block;
 	align-items: center;
 	gap: 12px;
 	line-height: 1.3;

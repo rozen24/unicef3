@@ -9349,7 +9349,7 @@ const coursesData = [
                 },
                 {
                   text: yhLang("Nausea", "বমি বমি ভাব"),
-                  icon: "fa-face-nauseated",
+                  icon: "fa-face-flushed",
                   tone: "accent",
                 },
                 {
@@ -10421,24 +10421,24 @@ const coursesData = [
             content: (function () {
               const examFearIntro = yhLang(
                 "A small amount of exam anxiety can motivate preparation, but excessive fear can block performance.",
-                "পরীক্ষাকে ঘিরে স্বাভাবিক উদ্বেগ শিক্ষার্থীদের প্রস্তুতিতে সহায়ক, তবে অতিরিক্ত ভয় কাঙ্ক্ষিত ফল অর্জনে বাধা দেয়।",
+                "পরীক্ষা সম্বন্ধে একটা সাধারণ ভয় বা চিন্তা সবার মনে বিরাজ করে যা পরীক্ষার জন্য প্রয়োজন, তবে অতিরিক্ত পরিমাণ ভয় ছাত্র-ছাত্রীর জন্য পরীক্ষার প্রস্তুতি গ্রহণে এবং কাঙ্খিত ফলাফল অর্জনের পথে সমস্যা তৈরি করতে পারে। এই ভয় পরীক্ষার্থীর জন্য এমন ভীতিকর পরিবেশের সৃষ্টি করে যে পরীক্ষার কথা শুনলেই সে নানা রকম শারীরিক, মানসিক অসুস্থতায় ভুগতে থাকে যেমনঃ বুক ধড়ফড় করা, প্রচুর ঘাম হওয়া, হাত-পা ঠান্ডা হয়ে আসা, বমি বমি লাগা ইত্যাদি।",
               );
 
               const examFearDetails = yhLang(
                 "Exam fear may appear through physical and mental signs; early planning and coping practice can reduce it.",
-                "পরীক্ষার কথা শুনলেই বুক ধড়ফড়, ঘাম, হাত-পা ঠান্ডা হওয়া, বমি বমি ভাবসহ নানা লক্ষণ দেখা দিতে পারে। পরিকল্পিত প্রস্তুতি ও কৌশল অনুশীলনে এটি নিয়ন্ত্রণ করা যায়।",
+                "পরীক্ষাকে কেন্দ্র করে কিশোর-কিশোরীদের মনে নানা ধরনের ভয়-ভীতি লক্ষ করা যায়। এসময় অনেকের মেধ্য বমি বমি ভাব, মাথা ব্যাথা, শরীর ব্যাথা, হাত-পা ঠান্ডা হয়ে যাওয়া ইত্যাদি লক্ষণ দেখা যায়। আগে থেকে সঠিকভাবে প্রস্তুতি নেয়া, সুষ্ঠ সময় ব্যবস্থাপনা, ও ভীতি দূরীকরণের কৌশল অবলম্বনের মাধ্যমে পরীক্ষা ভীতিকে মোকাবিলা করা সম্ভব।",
               );
 
               const physicalSymptoms = [
                 {
-                  text: yhLang("Nausea or vomiting", "বমি বমি ভাব/বমি হওয়া"),
-                  icon: "fa-face-nauseated",
+                  text: yhLang("Nausea or vomiting", "বমি বমি ভাব হওয়া, কোনো কোনো ক্ষেত্রে বমি হয়ে যাওয়া"),
+                  icon: "fa-face-flushed",
                   tone: "warn",
                 },
                 {
                   text: yhLang(
                     "Loss of appetite",
-                    "খাওয়া-দাওয়া করতে না পারা",
+                    "খাওয়া দাওয়া করতে না পারা",
                   ),
                   icon: "fa-utensils",
                   tone: "sun",
@@ -10449,7 +10449,7 @@ const coursesData = [
                   tone: "danger",
                 },
                 {
-                  text: yhLang("Headache or dizziness", "মাথাব্যথা/মাথা ঘোরা"),
+                  text: yhLang("Headache or dizziness", "মাথাব্যথা করা, মাথা ভারভার লাগা, মাথা ঘুরানো"),
                   icon: "fa-head-side-virus",
                   tone: "amber",
                 },
@@ -10472,12 +10472,12 @@ const coursesData = [
                   tone: "slate",
                 },
                 {
-                  text: yhLang("Cold hands and feet", "হাত-পা ঠান্ডা হয়ে আসা"),
+                  text: yhLang("Cold hands and feet", "হঠাৎ করে হাত-পা প্রচণ্ড ঠান্ডা হয়ে আসা"),
                   icon: "fa-snowflake",
                   tone: "info",
                 },
                 {
-                  text: yhLang("Frequent loose motion", "ঘনঘন পাতলা পায়খানা"),
+                  text: yhLang("Frequent loose motion", "ঘনঘন পাতলা পায়খানা হওয়া"),
                   icon: "fa-toilet",
                   tone: "peach",
                 },
@@ -10486,9 +10486,6 @@ const coursesData = [
                   icon: "fa-person-falling",
                   tone: "red",
                 },
-              ];
-
-              const mentalSymptoms = [
                 {
                   text: yhLang("Cannot focus", "মনোযোগ দিতে না পারা"),
                   icon: "fa-bullseye",
@@ -10497,7 +10494,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Losing concentration quickly",
-                    "অল্পতেই একাগ্রতা হারানো",
+                    "অল্পতেই একাগ্রতা হারিয়ে ফেলা",
                   ),
                   icon: "fa-brain",
                   tone: "accent",
@@ -10510,6 +10507,11 @@ const coursesData = [
                   icon: "fa-memory",
                   tone: "slate",
                 },
+              ];
+
+              const mentalSymptoms = [
+                
+                
                 {
                   text: yhLang("Negative self-thoughts", "নেতিবাচক আত্মকথন"),
                   icon: "fa-comment-slash",
@@ -10597,16 +10599,14 @@ const coursesData = [
                     </h2>
                   </header>
 
-                  <section class="m14l9-card m14l9-card-intro">
-                    <h3 class="m14l9-subtitle">
-                      <i class="fa-solid fa-lightbulb"></i>
-                      ${yhLang("Overview", "সংক্ষিপ্ত পরিচিতি")}
-                    </h3>
-                    <p class="m14l9-p">${examFearIntro}</p>
-                    <p class="m14l9-p m14l9-p-last">${examFearDetails}</p>
-                  </section>
+                  
 
                   <div class="m14l9-grid">
+                    <section class="m14l9-card m14l9-card-intro p-3">
+                
+                    <p class="m14l9-p mb-5">${examFearIntro}</p>
+                    <p class="m14l9-p m14l9-p-last mt-5">${examFearDetails}</p>
+                  </section>
                     <section class="m14l9-card m14l9-card-physical">
                       <h3 class="m14l9-subtitle">
                         <i class="fa-solid fa-heart-pulse"></i>
@@ -10617,27 +10617,13 @@ const coursesData = [
                       </ul>
                     </section>
 
-                    <section class="m14l9-card m14l9-card-mental">
+                    <!-- <section class="m14l9-card m14l9-card-mental">
                       <h3 class="m14l9-subtitle">
                         <i class="fa-solid fa-brain"></i>
                         ${yhLang("Mental Symptoms", "মানসিক উপসর্গ")}
                       </h3>
-                      <ul class="m14l9-list">
-                        ${renderList(mentalSymptoms, 95, "right")}
-                      </ul>
-                    </section>
+                    </section> -->
                   </div>
-
-                  <section class="m14l9-card m14l9-card-coping">
-                    <h3 class="m14l9-subtitle">
-                      <i class="fa-solid fa-shield-heart"></i>
-                      ${yhLang("Coping Steps", "মোকাবিলার কৌশল")}
-                    </h3>
-                    <ul class="m14l9-list">
-                      ${renderList(copingSteps, 110, "up")}
-                    </ul>
-                    <p class="m14l9-p m14l9-p-last">${copingNote}</p>
-                  </section>
                 </div>
               `;
             })(),
