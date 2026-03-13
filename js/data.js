@@ -10144,21 +10144,13 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const angerContext = yhLang(
-                "Challenging behavior, lack of support, emotional instability, stress, and humiliation can quickly trigger anger.",
-                "চ্যালেঞ্জিং আচরণ, সামাজিক সমর্থনের অভাব, আবেগীয় বিশৃঙ্খলা, মানসিক আঘাত, মানসিক চাপ কিংবা অপমানকর আচরণ আমাদের খুব সহজেই রাগান্বিত করে।",
-              );
-
-              const angerFocus = yhLang(
-                "If goals are blocked, rights are denied, or we feel disrespected, anger intensity often rises fast.",
-                "লক্ষ্য পূরণে বাধা, অসম্মান বা অধিকার খর্ব হলে রাগের মাত্রা আরও বেড়ে যায়।",
-              );
+             
 
               const angerTriggers = [
                 {
                   text: yhLang(
                     "Negative or challenging behavior",
-                    "চ্যালেঞ্জিং বা নেতিবাচক আচরণ",
+                    "Passive behavior pattern বা নিষ্ক্রিয় আচরণের ফলে",
                   ),
                   icon: "fa-triangle-exclamation",
                   tone: "warn",
@@ -10172,7 +10164,7 @@ const coursesData = [
                   tone: "slate",
                 },
                 {
-                  text: yhLang("Emotional imbalance", "আবেগীয় বিশৃঙ্খলা"),
+                  text: yhLang("Emotional imbalance", "আবেগীয় বিশৃঙ্খলা- বিষণ্নতা, উদ্বেগ ইত্যাদি"),
                   icon: "fa-face-frown",
                   tone: "violet",
                 },
@@ -10187,27 +10179,27 @@ const coursesData = [
                   tone: "amber",
                 },
                 {
-                  text: yhLang("Insulting language", "আঘাত/অপমান করে কথা"),
+                  text: yhLang("Insulting language", "আঘাত/অপমান করে কথা বললে"),
                   icon: "fa-comment-slash",
                   tone: "red",
                 },
                 {
-                  text: yhLang("Feeling threatened", "হুমকির সম্মুখীন হওয়া"),
+                  text: yhLang("Feeling threatened", "হুমকির সম্মুখীন হলে"),
                   icon: "fa-shield-halved",
                   tone: "danger",
                 },
                 {
-                  text: yhLang("Goal frustration", "লক্ষ্যে বাধা পেয়ে হতাশা"),
-                  icon: "fa-road-block",
+                  text: yhLang("Goal frustration", "নিজের লক্ষে পৌঁছতে বাধাগ্রস্ত হয়ে হতাশ হওয়ার ফলে"),
+                  icon: "fa-road",
                   tone: "info",
                 },
                 {
-                  text: yhLang("Being disrespected", "অসম্মানিত হওয়া"),
+                  text: yhLang("Being disrespected", "অসন্মানিত হওয়ার ফলে"),
                   icon: "fa-user-xmark",
                   tone: "peach",
                 },
                 {
-                  text: yhLang("Rights being denied", "অধিকার খর্ব হওয়া"),
+                  text: yhLang("Rights being denied", "অধিকার খর্ব হলে ইত্যাদি"),
                   icon: "fa-scale-balanced",
                   tone: "accent",
                 },
@@ -10225,7 +10217,7 @@ const coursesData = [
                   tone: "violet",
                 },
                 {
-                  text: yhLang("Career setbacks", "পেশাগত ক্ষতি"),
+                  text: yhLang("Career setbacks", "Career বা পেশাগত ক্ষতি "),
                   icon: "fa-briefcase",
                   tone: "warn",
                 },
@@ -10240,12 +10232,12 @@ const coursesData = [
                   tone: "red",
                 },
                 {
-                  text: yhLang("Depressive mood", "বিষণ্নতায় ভোগা"),
+                  text: yhLang("Depressive mood", "বিষণ্নতায় ভোগা"),
                   icon: "fa-cloud-rain",
                   tone: "slate",
                 },
                 {
-                  text: yhLang("Future anxiety", "ভবিষ্যৎ নিয়ে দুশ্চিন্তা"),
+                  text: yhLang("Future anxiety", "ভবিষ্যৎ নিয়ে দুশ্চিন্তা করা"),
                   icon: "fa-hourglass-half",
                   tone: "indigo",
                 },
@@ -10260,176 +10252,27 @@ const coursesData = [
                   tone: "amber",
                 },
                 {
-                  text: yhLang("Repetitive harmful acts", "একই কাজ বারবার করা"),
+                  text: yhLang("Repetitive harmful acts", "একই কাজ বারবার করার প্রবনতা"),
                   icon: "fa-repeat",
                   tone: "teal",
-                },
-                {
-                  text: yhLang("Self-harm risk", "আত্ম-ক্ষতির ঝুঁকি"),
-                  icon: "fa-bandage",
-                  tone: "danger",
                 },
                 {
                   text: yhLang("Blood pressure rise", "রক্তচাপ বেড়ে যাওয়া"),
                   icon: "fa-heart-pulse",
                   tone: "sun",
                 },
+                {
+                text: yhLang("Self-harm risk", "Self-harm বা নিজের ক্ষতি করা ইত্যাদি"),
+                icon: "fa-bandage",
+                tone: "danger",
+              },
               ];
 
               const actionPoints = [
-                {
-                  text: yhLang(
-                    "Pause before reacting",
-                    "প্রতিক্রিয়ার আগে বিরতি নিন",
-                  ),
-                  icon: "fa-pause",
-                  tone: "info",
-                },
-                {
-                  text: yhLang(
-                    "Express feelings safely",
-                    "নিরাপদভাবে অনুভূতি প্রকাশ করুন",
-                  ),
-                  icon: "fa-comment-dots",
-                  tone: "success",
-                },
-                {
-                  text: yhLang("Use deep breathing", "গভীর শ্বাস-প্রশ্বাস নিন"),
-                  icon: "fa-lungs",
-                  tone: "teal",
-                },
-                {
-                  text: yhLang("Seek trusted support", "বিশ্বস্ত সহায়তা নিন"),
-                  icon: "fa-handshake",
-                  tone: "mint",
-                },
-              ];
-
-              const reflectionText = yhLang(
-                "Unexpected situations can create rapid negative thoughts and increase anger. Timely regulation, respectful communication, and healthy coping can reduce harm.",
-                "অপ্রত্যাশিত ঘটনা ঘটলে নেতিবাচক চিন্তা দ্রুত বাড়ে এবং রাগ বেড়ে যায়। সময়মতো রাগ নিয়ন্ত্রণ, সম্মানজনক যোগাযোগ ও স্বাস্থ্যকর কৌশল গ্রহণ করলে ক্ষতি কমানো সম্ভব।",
-              );
-
-              const renderList = (items, baseDelay = 80, direction = "left") =>
-                items
-                  .map(
-                    (item, idx) => `
-                      <li class="m14l7-li m14l7-${item.tone}" data-aos="fade-${direction}" data-aos-delay="${baseDelay + idx * 12}">
-                        <span class="m14l7-li-icon"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m14l7-li-text">${item.text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="m14l7-slide">
-                  <div class="m14l7-shape m14l7-shape-a"></div>
-                  <div class="m14l7-shape m14l7-shape-b"></div>
-                  <div class="m14l7-shape m14l7-shape-c"></div>
-
-                  <header class="m14l7-header">
-                    <h2 class="m14l7-title">
-                      <i class="fa-solid fa-burst"></i>
-                      ${yhLang("Why We Get Angry Easily", "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই")}
-                    </h2>
-                  </header>
-
-                  <section class="m14l7-card m14l7-card-intro">
-                    <h3 class="m14l7-subtitle">
-                      <i class="fa-solid fa-lightbulb"></i>
-                      ${yhLang("Context", "প্রেক্ষাপট")}
-                    </h3>
-                    <p class="m14l7-p">${angerContext}</p>
-                    <p class="m14l7-p m14l7-p-last">${angerFocus}</p>
-                  </section>
-
-                  <div class="m14l7-grid">
-                    <section class="m14l7-card m14l7-card-trigger">
-                      <h3 class="m14l7-subtitle">
-                        <i class="fa-solid fa-bolt"></i>
-                        ${yhLang("Anger Triggers", "সহজে রেগে যাওয়ার কারণ")}
-                      </h3>
-                      <ul class="m14l7-list">
-                        ${renderList(angerTriggers, 80, "left")}
-                      </ul>
-                    </section>
-
-                    <section class="m14l7-card m14l7-card-impact">
-                      <h3 class="m14l7-subtitle">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        ${yhLang("Possible Damages", "রাগের ফলে ক্ষয়ক্ষতি")}
-                      </h3>
-                      <ul class="m14l7-list">
-                        ${renderList(angerDamages, 95, "right")}
-                      </ul>
-                    </section>
-                  </div>
-
-                  <section class="m14l7-card m14l7-card-reflect">
-                    <h3 class="m14l7-subtitle">
-                      <i class="fa-solid fa-seedling"></i>
-                      ${yhLang("Healthy Response", "স্বাস্থ্যকর প্রতিক্রিয়া")}
-                    </h3>
-                    <p class="m14l7-p">${reflectionText}</p>
-                    <ul class="m14l7-list">
-                      ${renderList(actionPoints, 110, "up")}
-                    </ul>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch14-lesson-9",
-            title: yhLang(
-              "Anger Management Techniques",
-              "রাগ ব্যবস্থাপনার কৌশল",
-            ),
-            icon: "fa-hand-holding-heart",
-            gradientClass: "bg-gradient-teal",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q14h",
-                  question: yhLang(
-                    "Which strategy involves pausing before reacting?",
-                    "কোন কৌশলটি প্রতিক্রিয়া প্রকাশের আগে একটু সময় নেওয়ার উপর গুরুত্ব দেয়?",
-                  ),
-                  options: [
-                    yhLang(
-                      "প্রতিক্রিয়ার আগে বিরতি",
-                      "প্রতিক্রিয়ার আগে বিরতি",
-                    ),
-                    yhLang("পর্যাপ্ত ঘুম", "পর্যাপ্ত ঘুম"),
-                    yhLang("নিয়মিত ব্যায়াম", "নিয়মিত ব্যায়াম"),
-                    yhLang(
-                      "মনোচিকিৎসকের কাছে যাওয়া",
-                      "মনোচিকিৎসকের কাছে যাওয়া",
-                    ),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const intro = yhLang(
-                "Anger can be managed through pause techniques, breathing, movement, and supportive communication.",
-                "রাগকে নিয়ন্ত্রণে রাখতে সচেতন বিরতি, শ্বাস-প্রশ্বাস, শারীরিক ব্যায়াম ও পেশাদার সহায়তার মতো কৌশল কার্যকর ভূমিকা পালন করে।",
-              );
-
-              const context = yhLang(
-                "Small daily practices reduce the harmful impact of anger and improve self-control.",
-                "ছোট ছোট ব্যবস্থাপনা কৌশল রাগের নেতিবাচক প্রভাব কমিয়ে আনে এবং আত্মনিয়ন্ত্রণ বাড়ায়।",
-              );
-
-              const immediateStrategies = [
-                {
+                 {
                   text: yhLang(
                     "Pause before reaction",
-                    "প্রতিক্রিয়া প্রকাশের আগে বিরতি",
+                    "প্রতিক্রিয়া প্রকাশের আগে কিছুটা সময় নেয়া",
                   ),
                   icon: "fa-pause",
                   tone: "info",
@@ -10437,7 +10280,7 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Count slowly from 1 to 10",
-                    "১–১০ পর্যন্ত ধীরে ধীরে গুণুন",
+                    "১-১০ পর্যন্ত ধীরে ধীরে গুণতে থাকা",
                   ),
                   icon: "fa-list-ol",
                   tone: "accent",
@@ -10445,30 +10288,11 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Use respectful words",
-                    "যুক্তিসঙ্গত ও সম্মানজনক কথা বলুন",
+                    "সততার সাথে যুক্তিসঙ্গত কথা বলা",
                   ),
                   icon: "fa-comment-dots",
                   tone: "success",
                 },
-                {
-                  text: yhLang(
-                    "Step away briefly",
-                    "পরিস্থিতি থেকে সাময়িক দূরে যান",
-                  ),
-                  icon: "fa-person-walking-arrow-right",
-                  tone: "sky",
-                },
-                {
-                  text: yhLang(
-                    "Practice deep breathing",
-                    "গভীর শ্বাস-প্রশ্বাস অনুশীলন",
-                  ),
-                  icon: "fa-lungs",
-                  tone: "teal",
-                },
-              ];
-
-              const lifestyleStrategies = [
                 {
                   text: yhLang("Sleep adequately", "পর্যাপ্ত ঘুম"),
                   icon: "fa-moon",
@@ -10486,110 +10310,88 @@ const coursesData = [
                 },
                 {
                   text: yhLang(
-                    "Keep breathing routine",
-                    "নিয়মিত শ্বাস-প্রশ্বাস ব্যায়াম",
+                    "Step away briefly",
+                    "পরিস্থিতি থেকে নিজেকে সরিয়ে নেয়া",
                   ),
-                  icon: "fa-wind",
-                  tone: "mint",
-                },
-              ];
-
-              const supportStrategies = [
-                {
-                  text: yhLang(
-                    "Talk to trusted person",
-                    "বিশ্বস্ত কারো সাথে কথা বলুন",
-                  ),
-                  icon: "fa-people-group",
-                  tone: "peach",
+                  icon: "fa-person-walking-arrow-right",
+                  tone: "sky",
                 },
                 {
                   text: yhLang(
-                    "Seek counselor when needed",
-                    "প্রয়োজনে মনোচিকিৎসকের সহায়তা নিন",
+                    "Practice deep breathing",
+                    "নিয়মিত নিঃশ্বাসের ব্যায়াম করা",
                   ),
-                  icon: "fa-user-doctor",
-                  tone: "danger",
+                  icon: "fa-lungs",
+                  tone: "teal",
                 },
               ];
-
               const professionalNote = yhLang(
                 "Some anger-related problems cannot be managed alone; professional support can provide safer and better outcomes.",
-                "কিছু কিছু রাগ সম্পর্কিত সমস্যাগুলি নিজে নিজে ব্যবস্থাপনা সম্ভব হয় না। এমন ক্ষেত্রে পেশাদার মনোচিকিৎসকের সহায়তা নিলে উন্নত ফল পাওয়া যায় এবং নিরাপদে রাগ নিয়ন্ত্রণ সম্ভব হয়।",
+                "কিছুকিছু রাগ সম্পর্কিত সমস্যাগুলি নিজে নিজে ব্যবস্থাপনা সম্ভব হয়না। তাই এমন সমস্যাগুলির ক্ষেত্রে রাগ নিয়ন্ত্রণের জন্য পেশাদার মনোচিকিৎসকের শরণাপণ্ন হলে ভাল ফল পাওয়া যাবে।",
               );
 
               const renderList = (items, baseDelay = 80, direction = "left") =>
                 items
                   .map(
                     (item, idx) => `
-                      <li class="m14l8-li m14l8-${item.tone}" data-aos="fade-${direction}" data-aos-delay="${baseDelay + idx * 12}">
-                        <span class="m14l8-li-icon"><i class="fa-solid ${item.icon}"></i></span>
-                        <span class="m14l8-li-text">${item.text}</span>
+                      <li class="m14l7-li m14l7-${item.tone}" data-aos="fade-${direction}" data-aos-delay="${baseDelay + idx * 12}">
+                        <span class="m14l7-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="m14l7-li-text">${item.text}</span>
                       </li>
                     `,
                   )
                   .join("");
 
               return `
-                <div class="m14l8-slide">
-                  <div class="m14l8-shape m14l8-shape-a"></div>
-                  <div class="m14l8-shape m14l8-shape-b"></div>
-                  <div class="m14l8-shape m14l8-shape-c"></div>
+                <div class="m14l7-slide lesson-slide">
+                  <div class="m14l7-shape m14l7-shape-a"></div>
+                  <div class="m14l7-shape m14l7-shape-b"></div>
+                  <div class="m14l7-shape m14l7-shape-c"></div>
 
-                  <header class="m14l8-header">
-                    <h2 class="m14l8-title">
-                      <i class="fa-solid fa-hand-holding-heart"></i>
-                      ${yhLang("Anger Management Techniques", "রাগ ব্যবস্থাপনার কৌশল")}
+                  <header class="m14l7-header d-none">
+                    <h2 class="m14l7-title">
+                      <i class="fa-solid fa-burst"></i>
+                      ${yhLang("Why We Get Angry Easily", "")}
                     </h2>
                   </header>
 
-                  <section class="m14l8-card m14l8-card-intro">
-                    <h3 class="m14l8-subtitle">
-                      <i class="fa-solid fa-lightbulb"></i>
-                      ${yhLang("Core Idea", "মূল ধারণা")}
-                    </h3>
-                    <p class="m14l8-p">${intro}</p>
-                    <p class="m14l8-p m14l8-p-last">${context}</p>
-                  </section>
-
-                  <div class="m14l8-grid">
-                    <section class="m14l8-card m14l8-card-immediate">
-                      <h3 class="m14l8-subtitle">
+                  <div class="m14l7-grid">
+                    <section class="m14l7-card m14l7-card-trigger">
+                      <h3 class="m14l7-subtitle mb-4">
                         <i class="fa-solid fa-bolt"></i>
-                        ${yhLang("Immediate Techniques", "তাৎক্ষণিক কৌশল")}
+                        ${yhLang("Anger Triggers", "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই")}
                       </h3>
-                      <ul class="m14l8-list">
-                        ${renderList(immediateStrategies, 80, "left")}
+                      <ul class="m14l7-list">
+                        ${renderList(angerTriggers, 80, "left")}
                       </ul>
                     </section>
 
-                    <section class="m14l8-card m14l8-card-lifestyle">
-                      <h3 class="m14l8-subtitle">
-                        <i class="fa-solid fa-seedling"></i>
-                        ${yhLang("Daily Habits", "দৈনন্দিন অভ্যাস")}
+                    <section class="m14l7-card m14l7-card-impact">
+                      <h3 class="m14l7-subtitle mb-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        ${yhLang("Possible Damages", "রাগের ফলে আমাদের কি কি ক্ষতি হয়")}
                       </h3>
-                      <ul class="m14l8-list">
-                        ${renderList(lifestyleStrategies, 95, "right")}
+                      <ul class="m14l7-list">
+                        ${renderList(angerDamages, 95, "right")}
                       </ul>
+                    </section>
+                    <section class="m14l7-card m14l7-card-impact">
+                      <h3 class="m14l7-subtitle mb-4">
+                      <i class="fa-solid fa-seedling"></i>
+                      ${yhLang("Healthy Response", "রাগ ব্যবস্থাপনার কৌশল")}
+                      </h3>
+                       <ul class="m14l7-list mb-4">
+                        ${renderList(actionPoints, 110, "up")}
+                       </ul>
+                       <p class="m14l8-p m14l8-p-last">${professionalNote}</p>
                     </section>
                   </div>
-
-                  <section class="m14l8-card m14l8-card-support">
-                    <h3 class="m14l8-subtitle">
-                      <i class="fa-solid fa-handshake-angle"></i>
-                      ${yhLang("Support and Safety", "সহায়তা ও নিরাপত্তা")}
-                    </h3>
-                    <ul class="m14l8-list">
-                      ${renderList(supportStrategies, 110, "up")}
-                    </ul>
-                    <p class="m14l8-p m14l8-p-last">${professionalNote}</p>
-                  </section>
                 </div>
               `;
             })(),
           },
           {
-            id: "ch14-lesson-10",
+            id: "ch14-lesson-9",
             title: yhLang("Understanding Exam Anxiety", "পরীক্ষা-ভীতি"),
             icon: "fa-book-open-reader",
             gradientClass: "bg-gradient-blue",

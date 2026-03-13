@@ -2519,7 +2519,6 @@
 	overflow: hidden;
 	border-radius: 20px;
 	padding: 10px;
-	background: linear-gradient(146deg, #fff5f2 0%, #f3f8ff 50%, #f8f4ff 100%);
 	border: 1px solid rgba(116, 138, 168, 0.22);
 	box-shadow: 0 4px 12px rgba(53, 80, 112, 0.12);
 	font-family: "Noto Sans Bengali", "Hind Siliguri", "Poppins", sans-serif;
@@ -2644,7 +2643,7 @@
 
 .m14l7-grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: 1fr 1fr 1fr;
 	gap: 6px;
 }
 
