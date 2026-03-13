@@ -2135,8 +2135,7 @@
 	position: relative;
 	overflow: hidden;
 	border-radius: 20px;
-	padding: 10px;
-	background: linear-gradient(146deg, #fff7f1 0%, #f3f8ff 50%, #f9f3ff 100%);
+	padding: 5px;
 	border: 1px solid rgba(116, 138, 168, 0.22);
 	box-shadow: 0 4px 12px rgba(53, 80, 112, 0.12);
 	font-family: "Noto Sans Bengali", "Hind Siliguri", "Poppins", sans-serif;
@@ -2251,7 +2250,7 @@
 
 .m14l6-grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: 1.3fr 2fr 1fr 1fr;
 	gap: 6px;
 }
 
@@ -2279,6 +2278,10 @@
 	padding: 0;
 	display: grid;
 	gap: 4px;
+}
+.m14l6-peach .m14l6-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr !important;
 }
 
 .m14l6-li {

@@ -9364,7 +9364,7 @@ const coursesData = [
                 },
                 {
                   text: yhLang("Sweating", "ঘাম হওয়া"),
-                  icon: "fa-droplets",
+                  icon: "fa-droplet",
                   tone: "teal",
                 },
               ];
@@ -9862,12 +9862,12 @@ const coursesData = [
             content: (function () {
               const angerIntro = yhLang(
                 "Anger is a natural emotion that can range from mild irritation to intense reaction; awareness helps manage it safely.",
-                "রাগ হলো একটি স্বাভাবিক আবেগ, যা বিরক্তি থেকে তীব্র প্রতিক্রিয়া পর্যন্ত হতে পারে; সচেতনতা থাকলে এটি নিরাপদভাবে নিয়ন্ত্রণ করা যায়।",
+                "রাগ হচ্ছে এক ধরনের মৌলিক অনুভূতি যার উৎপত্তি ঘটে কষ্ট, হতাশা,বিরক্তি, আশাহত হওয়া ইত্যাদি থেকে। রাগ প্রকাশের মাত্রা বিভিন্ন ধরনের হতে পারে। সামান্য বিরক্তি প্রকাশমূলক শব্দ থেকে শুরু করে বিভিন্ন ধ্বংসাত্মক কার্যাবলী সম্পাদনের মাধ্যমে রাগের বহিঃপ্রকাশ ঘটতে পারে। রাগ আমাদের স্বাভাবিক আবেগ। সঠিকভাবে ব্যবস্থাপনা করলে এই আবেগ ক্ষতিকর নয়।",
               );
 
               const preSignalIntro = yhLang(
                 "Early warning signs of anger allow us to pause, regulate, and avoid harm.",
-                "রাগের পূর্ব সংকেত আমাদের আগে থেকে থামতে, নিয়ন্ত্রণ নিতে এবং ক্ষতি এড়াতে সহায়তা করে।",
+                "রাগের পূর্ব সংকেত হল রাগ পূর্ববর্তী এমন কিছুসতর্কতা মূলক ইঙ্গিত যা আমাদের বুঝতে সাহায্য করে একজন মানুষ কখন রেগে যাচ্ছে। রাগের সংকেতসমূহ হতে পারে শারীরিক, আবেগীয়, চিন্তামূলক কিংবা আচরণমূলক। রাগ পূর্ব সংকেত সম্পর্কে আগে থেকেই সচেতন থাকলে রাগকে ব্যবস্থাপনা করা সম্ভব হয় ফলে বিভিন্ন ধরনের ক্ষতির হাত থেকে রক্ষা পাওয়া যায়।",
               );
 
               const physicalSignals = [
@@ -9877,7 +9877,7 @@ const coursesData = [
                   tone: "danger",
                 },
                 {
-                  text: yhLang("Chest pressure", "বুকে চাপ অনুভব করা"),
+                  text: yhLang("Chest pressure", "বুকে চাপবোধ হওয়া"),
                   icon: "fa-heart-crack",
                   tone: "warn",
                 },
@@ -9887,18 +9887,18 @@ const coursesData = [
                   tone: "amber",
                 },
                 {
-                  text: yhLang("Frequent blinking", "চোখের পলক বেশি পড়া"),
+                  text: yhLang("Frequent blinking", "বেশি বেশি চোখের পলক পড়া"),
                   icon: "fa-eye",
                   tone: "info",
                 },
                 {
-                  text: yhLang("Muscle tension", "মাংসপেশিতে টান"),
+                  text: yhLang("Muscle tension", "মাংসপেশীতে টান টান বোধ করা"),
                   icon: "fa-dumbbell",
                   tone: "slate",
                 },
                 {
                   text: yhLang("Sweating", "ঘাম হওয়া"),
-                  icon: "fa-droplets",
+                  icon: "fa-droplet",
                   tone: "teal",
                 },
                 {
@@ -9907,7 +9907,7 @@ const coursesData = [
                   tone: "sky",
                 },
                 {
-                  text: yhLang("Body trembling", "শরীর কাঁপা"),
+                  text: yhLang("Body trembling", "শরীর কাঁপা ইত্যাদি"),
                   icon: "fa-person",
                   tone: "accent",
                 },
@@ -9970,7 +9970,7 @@ const coursesData = [
                   tone: "mint",
                 },
                 {
-                  text: yhLang("Future anxiety", "ভবিষ্যতের দুশ্চিন্তা"),
+                  text: yhLang("Future anxiety", "ভবিষ্যতের দুশ্চিন্তা ইত্যাদি"),
                   icon: "fa-hourglass-half",
                   tone: "info",
                 },
@@ -9978,7 +9978,7 @@ const coursesData = [
 
               const cognitiveSignals = [
                 {
-                  text: yhLang("Negative self-talk", "নিজের সাথে নেতিবাচক কথা"),
+                  text: yhLang("Negative self-talk", "নিজের সাথে নেতিবাচক কথা বলা"),
                   icon: "fa-comment-slash",
                   tone: "slate",
                 },
@@ -9988,7 +9988,7 @@ const coursesData = [
                   tone: "danger",
                 },
                 {
-                  text: yhLang("Revenge thoughts", "প্রতিশোধপরায়ণতা"),
+                  text: yhLang("Revenge thoughts", "প্রতিশোধপরায়ণতা ইত্যাদি"),
                   icon: "fa-gavel",
                   tone: "red",
                 },
@@ -10011,7 +10011,7 @@ const coursesData = [
                   tone: "danger",
                 },
                 {
-                  text: yhLang("Hitting doors", "দরজায় জোরে আঘাত"),
+                  text: yhLang("Hitting doors", "জোরে দরজায় আঘাত করা"),
                   icon: "fa-door-open",
                   tone: "red",
                 },
@@ -10034,7 +10034,7 @@ const coursesData = [
                   tone: "sky",
                 },
                 {
-                  text: yhLang("Silent withdrawal", "নীরব থাকা"),
+                  text: yhLang("Silent withdrawal", "নীরব বা চুপ থাকা"),
                   icon: "fa-volume-xmark",
                   tone: "indigo",
                 },
@@ -10076,7 +10076,7 @@ const coursesData = [
               `;
 
               return `
-                <div class="m14l6-slide">
+                <div class="m14l6-slide lesson-slide">
                   <div class="m14l6-shape m14l6-shape-a"></div>
                   <div class="m14l6-shape m14l6-shape-b"></div>
                   <div class="m14l6-shape m14l6-shape-c"></div>
@@ -10089,19 +10089,17 @@ const coursesData = [
                   </header>
 
                   <section class="m14l6-card m14l6-card-intro">
-                    <h3 class="m14l6-subtitle">
-                      <i class="fa-solid fa-lightbulb"></i>
-                      ${yhLang("Anger Basics", "রাগের মৌলিক ধারণা")}
-                    </h3>
+                    
                     <p class="m14l6-p">${angerIntro}</p>
-                    <p class="m14l6-p m14l6-p-last">${preSignalIntro}</p>
+                    
                   </section>
 
                   <section class="m14l6-card m14l6-card-signals">
                     <h3 class="m14l6-subtitle">
                       <i class="fa-solid fa-triangle-exclamation"></i>
-                      ${yhLang("Pre-Anger Signals", "রাগের পূর্ব সংকেতসমূহ")}
+                      ${yhLang("Pre-Anger Signals", "রাগ পূর্ব সংকেত সমূহ হলঃ")}
                     </h3>
+                    <p class="m14l6-p m14l6-p-last">${preSignalIntro}</p>
 
                     <div class="m14l6-grid">
                       ${renderSignalCard(yhLang("Physical Signals", "শারীরিক সংকেত"), "fa-heart-pulse", physicalSignals, "m14l6-sky", 80, "left")}
