@@ -9311,13 +9311,10 @@ const coursesData = [
             content: (function () {
               const stressIntro = yhLang(
                 "Stress is the internal pressure created when there is conflict between a person's needs and abilities.",
-                "ব্যক্তির চাহিদা এবং ক্ষমতার মধ্যে দ্বন্দ্ব তৈরি হলে যে অভ্যন্তরীণ চাপ সৃষ্টি হয় সেটাই মানসিক চাপ বা স্ট্রেস।",
+                "ব্যক্তির চাহিদা এবং ক্ষমতার মধ্যে দ¦ন্দ্ব তৈরি হওয়ার ফলে ব্যক্তির নিজের মধ্যে যে পরিস্থিতির সৃষ্টি হয় তাকে মানসিক চাপ বলা হয়। অর্থাৎ আমরা যে কাজটি যেভাবে করতে চাই তা যখন পরিবেশ ও পরিস্থিতির কারণে করতে পারি না তখন আমরা মানসিকভাবে চাপ অনুভব করে থাকি।",
               );
 
-              const stressContext = yhLang(
-                "When we cannot perform a task as expected due to environment or circumstances, worry, anxiety, and stress increase, disrupting normal life.",
-                "যে কাজটি আমরা পরিবেশ বা পরিস্থিতির কারণে প্রত্যাশিতভাবে করতে পারি না, তখন উদ্বেগ, দুশ্চিন্তা ও চাপ বাড়ে এবং স্বাভাবিক জীবনযাত্রা ব্যাহত হয়।",
-              );
+             
 
               const physicalSymptoms = [
                 {
@@ -9469,149 +9466,14 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Appetite changes",
-                    "খাবারে অরুচি বা অত্যধিক গ্রহণ",
+                    "খাবারে অরুচি বা অত্যধিক পরিমাণে খাবার গ্রহণ করা",
                   ),
                   icon: "fa-utensils",
                   tone: "info",
                 },
               ];
 
-              const stressCauses = [
-                {
-                  text: yhLang(
-                    "Gap between demand and supply",
-                    "চাহিদা ও যোগানের মধ্যে পার্থক্য",
-                  ),
-                  icon: "fa-arrows-left-right",
-                  tone: "info",
-                },
-                {
-                  text: yhLang("Unrealistic expectations", "অবাস্তব প্রত্যাশা"),
-                  icon: "fa-cloud",
-                  tone: "sky",
-                },
-                {
-                  text: yhLang("Lack of self-control", "আত্মনিয়ন্ত্রণের অভাব"),
-                  icon: "fa-person-circle-check",
-                  tone: "success",
-                },
-                {
-                  text: yhLang(
-                    "Fear of rejection",
-                    "প্রত্যাখ্যাত ও বিচ্ছিন্ন হওয়ার ভয়",
-                  ),
-                  icon: "fa-heart-crack",
-                  tone: "danger",
-                },
-                {
-                  text: yhLang("Comparison with others", "তুলনা করা"),
-                  icon: "fa-code-compare",
-                  tone: "warn",
-                },
-                {
-                  text: yhLang("Work pressure", "কর্মক্ষেত্র ও স্কুলের চাপ"),
-                  icon: "fa-briefcase",
-                  tone: "violet",
-                },
-                {
-                  text: yhLang(
-                    "Family relationship breakdown",
-                    "পারিবারিক সম্পর্কের অবনতি",
-                  ),
-                  icon: "fa-people-arrows",
-                  tone: "peach",
-                },
-                {
-                  text: yhLang("Financial problems", "অর্থনৈতিক সমস্যা"),
-                  icon: "fa-coins",
-                  tone: "sun",
-                },
-                {
-                  text: yhLang("Illness", "অসুস্থতা"),
-                  icon: "fa-virus",
-                  tone: "red",
-                },
-                {
-                  text: yhLang("Negative experiences", "নেতিবাচক অভিজ্ঞতা"),
-                  icon: "fa-cloud-bolt",
-                  tone: "slate",
-                },
-              ];
-
-              const managementTips = [
-                {
-                  text: yhLang("Take a walk outside", "বাইরে হাঁটতে যাওয়া"),
-                  icon: "fa-person-hiking",
-                  tone: "info",
-                },
-                {
-                  text: yhLang(
-                    "Spend time with trusted friends",
-                    "বিশ্বস্ত বন্ধুদের সাথে সময়",
-                  ),
-                  icon: "fa-people-group",
-                  tone: "success",
-                },
-                {
-                  text: yhLang("Share your feelings", "মনের কথা শেয়ার করা"),
-                  icon: "fa-hand-holding-heart",
-                  tone: "peach",
-                },
-                {
-                  text: yhLang(
-                    "Read books or listen to music",
-                    "বই পড়া বা গান শোনা",
-                  ),
-                  icon: "fa-book",
-                  tone: "violet",
-                },
-                {
-                  text: yhLang("Write in a diary", "ডায়েরি লেখা"),
-                  icon: "fa-pen",
-                  tone: "accent",
-                },
-                {
-                  text: yhLang("Exercise", "ব্যায়াম করা"),
-                  icon: "fa-person-running",
-                  tone: "sky",
-                },
-                {
-                  text: yhLang(
-                    "Look at yourself in mirror",
-                    "আয়নায় নিজেকে দেখা",
-                  ),
-                  icon: "fa-mirror",
-                  tone: "warn",
-                },
-                {
-                  text: yhLang("Wash face or bathe", "হাত-মুখ ধোয়া"),
-                  icon: "fa-droplet",
-                  tone: "cyan",
-                },
-                {
-                  text: yhLang("Pray or meditate", "প্রার্থনা করা"),
-                  icon: "fa-hands-praying",
-                  tone: "mint",
-                },
-                {
-                  text: yhLang("Get sufficient sleep", "পর্যাপ্ত ঘুমানো"),
-                  icon: "fa-moon",
-                  tone: "indigo",
-                },
-                {
-                  text: yhLang("Spend time in nature", "প্রাকৃতিক পরিবেশ"),
-                  icon: "fa-leaf",
-                  tone: "teal",
-                },
-                {
-                  text: yhLang(
-                    "Deep breathing exercise",
-                    "গভীর শ্বাস-প্রশ্বাস",
-                  ),
-                  icon: "fa-lungs",
-                  tone: "info",
-                },
-              ];
+         
 
               const renderSymptomRows = () => {
                 const maxRows = Math.max(
@@ -9670,39 +9532,35 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="m14l4-slide">
+                <div class="m14l4-slide lesson-slide">
                   <div class="m14l4-shape m14l4-shape-a"></div>
                   <div class="m14l4-shape m14l4-shape-b"></div>
                   <div class="m14l4-shape m14l4-shape-c"></div>
 
                   <header class="m14l4-header">
                     <h2 class="m14l4-title">
-                      <i class="fa-solid fa-person-dots-question"></i>
-                      ${yhLang("Stress", "মানসিক চাপ")}
+                      <i class="fa-solid fa-face-sad-tear"></i>
+                      ${yhLang("Stress", "মানসিক চাপ (Stress)")}
                     </h2>
                   </header>
 
                   <section class="m14l4-card m14l4-card-intro">
-                    <h3 class="m14l4-subtitle">
-                      <i class="fa-solid fa-lightbulb"></i>
-                      ${yhLang("Definition & Context", "সংজ্ঞা ও প্রেক্ষাপট")}
-                    </h3>
+                    
                     <p class="m14l4-p">${stressIntro}</p>
-                    <p class="m14l4-p m14l4-p-last">${stressContext}</p>
                   </section>
 
                   <section class="m14l4-card m14l4-card-symptoms">
                     <h3 class="m14l4-subtitle">
-                      <i class="fa-solid fa-pulse"></i>
+                      <i class="fa-solid fa-face-angry"></i>
                       ${yhLang("Stress Changes", "মানসিক চাপের ফলে সৃষ্ট পরিবর্তনসমূহ")}
                     </h3>
                     <div class="m14l4-table-wrap">
                       <table class="m14l4-table">
                         <thead>
                           <tr>
-                            <th><i class="fa-solid fa-heart"></i> ${yhLang("Physical", "শারীরিক")}</th>
-                            <th><i class="fa-solid fa-face-grin"></i> ${yhLang("Emotional", "আবেগীয়")}</th>
-                            <th><i class="fa-solid fa-person-walking"></i> ${yhLang("Behavioral", "আচরণগত")}</th>
+                            <th><i class="fa-solid fa-heart"></i> ${yhLang("Physical", "শারীরিক পরিবর্তনসমূহ")}</th>
+                            <th><i class="fa-solid fa-face-grin"></i> ${yhLang("Emotional", "আবেগীয় পরিবর্তনসমূহ")}</th>
+                            <th><i class="fa-solid fa-person-walking"></i> ${yhLang("Behavioral", "আচরণগত পরিবর্তনসমূহ")}</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -9712,27 +9570,6 @@ const coursesData = [
                     </div>
                   </section>
 
-                  <div class="m14l4-grid">
-                    <section class="m14l4-card m14l4-card-causes">
-                      <h3 class="m14l4-subtitle">
-                        <i class="fa-solid fa-fire"></i>
-                        ${yhLang("Stress Triggers", "মানসিক চাপের কারণ")}
-                      </h3>
-                      <ul class="m14l4-list">
-                        ${renderCauseList(stressCauses)}
-                      </ul>
-                    </section>
-
-                    <section class="m14l4-card m14l4-card-manage">
-                      <h3 class="m14l4-subtitle">
-                        <i class="fa-solid fa-seedling"></i>
-                        ${yhLang("Coping Strategies", "মানসিক চাপ ব্যবস্থাপনা")}
-                      </h3>
-                      <ul class="m14l4-list">
-                        ${renderManagementList(managementTips)}
-                      </ul>
-                    </section>
-                  </div>
                 </div>
               `;
             })(),
