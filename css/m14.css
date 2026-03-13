@@ -3636,8 +3636,7 @@
 	position: relative;
 	overflow: hidden;
 	border-radius: 20px;
-	padding: 10px;
-	background: linear-gradient(146deg, #f1fff6 0%, #eef8ff 50%, #f8f4ff 100%);
+	padding: 5px;
 	border: 1px solid rgba(116, 138, 168, 0.22);
 	box-shadow: 0 4px 12px rgba(53, 80, 112, 0.12);
 	font-family: "Noto Sans Bengali", "Hind Siliguri", "Poppins", sans-serif;

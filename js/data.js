@@ -10792,25 +10792,28 @@ const coursesData = [
 
               const impacts = [
                 {
+                  title: yhLang("Mental Health", "মানসিক স্বাস্থ্য"),
                   text: yhLang(
-                    "Mental health: Excessive technology use may cause depression, anxiety, and insomnia.",
-                    "মানসিক স্বাস্থ্য: অতিরিক্ত প্রযুক্তি ব্যবহারের ফলে বিষণ্নতা, উদ্বেগ এবং নিদ্রাহীনতা তৈরি হতে পারে।",
+                    "Excessive technology use may cause depression, anxiety, and insomnia.",
+                    "অতিরিক্ত প্রযুক্তি ব্যবহারের ফলে বিষণ্নতা, উদ্বেগ এবং নিদ্রাহীনতা তৈরি হতে পারে।",
                   ),
                   icon: "fa-brain",
                   tone: "danger",
                 },
                 {
+                  title: yhLang("Physical Health", "শারীরিক স্বাস্থ্য"),
                   text: yhLang(
-                    "Physical health: Long screen time can cause eye strain, headaches, and neck/back pain.",
-                    "শারীরিক স্বাস্থ্য: দীর্ঘ সময় ডিভাইস ব্যবহার করলে চোখের ক্লান্তি, মাথাব্যথা এবং ঘাড় ও পিঠে ব্যথা দেখা দিতে পারে।",
+                    "Long screen time can cause eye strain, headaches, and neck/back pain.",
+                    "দীর্ঘ সময় ডিভাইস ব্যবহার করলে চোখের ক্লান্তি, মাথাব্যথা এবং ঘাড় ও পিঠে ব্যথা দেখা দিতে পারে।",
                   ),
                   icon: "fa-eye",
                   tone: "warn",
                 },
                 {
+                  title: yhLang("Social Isolation", "সামাজিক বিচ্ছিন্নতা"),
                   text: yhLang(
-                    "Social isolation: Overuse of social media may reduce real-life interaction and social skills.",
-                    "সামাজিক বিচ্ছিন্নতা: অতিরিক্ত সামাজিক মিডিয়া ব্যবহারের ফলে বাস্তব সামাজিক মিথস্ক্রিয়ার অভাব তৈরি হতে পারে, যা পরবর্তীতে সামাজিক দক্ষতার ঘাটতি সৃষ্টি করতে পারে।",
+                    "Overuse of social media may reduce real-life interaction and social skills.",
+                    "অতিরিক্ত সামাজিক মিডিয়া ব্যবহারের ফলে বাস্তব সামাজিক মিথস্ক্রিয়ার অভাব তৈরি হতে পারে।",
                   ),
                   icon: "fa-people-arrows-left-right",
                   tone: "info",
@@ -10871,7 +10874,7 @@ const coursesData = [
 
               return `
                 <style>
-.m14l12-slide{position:relative;overflow:hidden;border-radius:14px;padding:7px;background:linear-gradient(150deg,#eff8ff 0%,#f7f1ff 48%,#fff7ef 100%);border:1px solid rgba(122,144,170,0.22);box-shadow:0 4px 12px rgba(48,72,108,0.11);} 
+.m14l12-slide{position:relative;overflow:hidden;border-radius:14px;padding:7px;box-shadow:0 4px 12px rgba(48,72,108,0.11);} 
 .m14l12-shape{position:absolute;border-radius:999px;opacity:.24;pointer-events:none;} 
 .m14l12-shape-a{width:74px;height:74px;top:-20px;right:-16px;background:linear-gradient(130deg,#bde9ff,#dacdff);} 
 .m14l12-shape-b{width:56px;height:56px;left:-14px;bottom:46px;background:linear-gradient(130deg,#ffdff0,#dff8ff);} 
@@ -10907,56 +10910,86 @@ const coursesData = [
 .m14l12-teal{background:linear-gradient(120deg,#edfffb,#f6fffd);border-color:rgba(70,174,162,.33);box-shadow:1px 2px 5px rgba(62,156,146,.15);} .m14l12-teal .m14l12-li-icon{background:#d6f9f1;color:#2c9084;} 
 .m14l12-indigo{background:linear-gradient(120deg,#f0f3ff,#f8f9ff);border-color:rgba(109,124,210,.33);box-shadow:1px 2px 5px rgba(96,112,193,.15);} .m14l12-indigo .m14l12-li-icon{background:#dfe6ff;color:#5268ca;} 
 .m14l12-peach{background:linear-gradient(120deg,#fff3eb,#fff9f4);border-color:rgba(210,136,101,.33);box-shadow:1px 2px 5px rgba(192,120,83,.15);} .m14l12-peach .m14l12-li-icon{background:#ffe2d3;color:#be714b;} 
-@media(max-width:840px){.m14l12-grid{grid-template-columns:1fr;} .m14l12-h1{font-size:.82rem;}}
+.m14l12-impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px;}
+.m14l12-impact-heading{border-radius:14px;padding:16px;border:2px solid;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;transition:all 0.3s ease;}
+.m14l12-impact-heading.danger{background:linear-gradient(135deg,#fff0f2,#fff8f8);border-color:rgba(212,99,110,.4);}
+.m14l12-impact-heading.warn{background:linear-gradient(135deg,#fff6ea,#fffbf4);border-color:rgba(211,155,76,.4);}
+.m14l12-impact-heading.info{background:linear-gradient(135deg,#eef8ff,#f6fbff);border-color:rgba(92,148,204,.4);}
+.m14l12-impact-icon-large{width:60px;height:60px;min-width:60px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.15);}
+.m14l12-impact-icon-large.danger{background:linear-gradient(135deg,#ff6b7a,#f05564);}
+.m14l12-impact-icon-large.warn{background:linear-gradient(135deg,#ffb366,#f58a44);}
+.m14l12-impact-icon-large.info{background:linear-gradient(135deg,#5ecfb2,#35b48e);}
+.m14l12-impact-title{font-size:1.2rem;font-weight:700;margin:0;color:#1f3f67;line-height:1.3;}
+.m14l12-impact-text{font-size:.9rem;line-height:1.5;color:#244865;margin:0;}
+.m14l12-guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px;}
+.m14l12-guide-card{border-radius:14px;padding:14px;border:2px solid;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;transition:all 0.3s ease;}
+.m14l12-guide-card.success{background:linear-gradient(135deg,#effff5,#f7fffb);border-color:rgba(83,169,123,.4);}
+.m14l12-guide-card.teal{background:linear-gradient(135deg,#edfffb,#f6fffd);border-color:rgba(70,174,162,.4);}
+.m14l12-guide-card.indigo{background:linear-gradient(135deg,#f0f3ff,#f8f9ff);border-color:rgba(109,124,210,.4);}
+.m14l12-guide-card.peach{background:linear-gradient(135deg,#fff3eb,#fff9f4);border-color:rgba(210,136,101,.4);}
+.m14l12-guide-icon{width:56px;height:56px;min-width:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.15);}
+.m14l12-guide-icon.success{background:linear-gradient(135deg,#53a97b,#2f9868);}
+.m14l12-guide-icon.teal{background:linear-gradient(135deg,#46aea2,#2c9084);}
+.m14l12-guide-icon.indigo{background:linear-gradient(135deg,#6d7cd2,#5268ca);}
+.m14l12-guide-icon.peach{background:linear-gradient(135deg,#d28865,#be714b);}
+.m14l12-guide-text{font-size:.85rem;line-height:1.4;color:#244865;margin:0;}
+@media(max-width:1200px){.m14l12-guide-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:1024px){.m14l12-impact-grid{grid-template-columns:1fr;} .m14l12-guide-grid{grid-template-columns:1fr;}}
+@media(max-width:840px){.m14l12-grid{grid-template-columns:1fr;} .m14l12-h1{font-size:.82rem;} .m14l12-impact-title{font-size:1rem;}}
                 </style>
                 <div class="m14l12-slide lesson-slide">
                   <span class="m14l12-shape m14l12-shape-a" aria-hidden="true"></span>
                   <span class="m14l12-shape m14l12-shape-b" aria-hidden="true"></span>
                   <span class="m14l12-shape m14l12-shape-c" aria-hidden="true"></span>
 
-                  <h1 class="m14l12-h1" data-aos="fade-up">
-                    <span class="m14l12-hicon m14l12-i1"><i class="fa-solid fa-mobile-screen-button"></i></span>
-                    ${yhLang("Digital Addiction Prevention", "ডিজিটাল আসক্তি প্রতিরোধ")}
-                  </h1>
+                  
 
                   <section class="m14l12-card m14l12-card-intro" data-aos="fade-up" data-aos-delay="40">
                     <h2 class="m14l12-h2">
                       <span class="m14l12-hicon m14l12-i2"><i class="fa-solid fa-heart-pulse"></i></span>
-                      ${yhLang("Digital Health & Impact of Device Addiction", "ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তির প্রভাব")}
+                      ${yhLang("Digital Health & Impact of Device Addiction", "ডিজিটাল আসক্তি প্রতিরোধ")}
                     </h2>
-                    <p class="m14l12-p">${intro}</p>
+                    <span class="m14l12-p">${intro}</span>
 
                     <h6 class="m14l12-h6" style="margin-top:5px;">
                       <span class="m14l12-hicon m14l12-i6"><i class="fa-solid fa-circle-info"></i></span>
                       ${subtitle}
                     </h6>
+                    <p class="m14l12-impact-text">${impactTitle}</p>
                   </section>
 
-                  <div class="m14l12-grid">
-                    <section class="m14l12-card m14l12-card-impact" data-aos="fade-right" data-aos-delay="60">
-                      <h3 class="m14l12-h3">
-                        <span class="m14l12-hicon m14l12-i3"><i class="fa-solid fa-triangle-exclamation"></i></span>
-                        ${impactTitle}
-                      </h3>
-                      <ul class="m14l12-list">
-                        ${renderList(impacts, 80, "right")}
-                      </ul>
-                      <h5 class="m14l12-h5" style="margin-top:5px;">
-                        <span class="m14l12-hicon m14l12-i5"><i class="fa-solid fa-seedling"></i></span>
-                        ${yhLang("Early awareness helps prevention.", "প্রাথমিক সচেতনতা প্রতিরোধে সহায়ক।")}
-                      </h5>
-                    </section>
+                  <div class="m14l12-impact-grid">
+                    ${impacts.map((impact, idx) => `
+                      <div class="m14l12-impact-heading ${impact.tone}" data-aos="zoom-in" data-aos-delay="${80 + idx * 20}">
+                        <span class="m14l12-impact-icon-large ${impact.tone}">
+                          <i class="fa-solid ${impact.icon}"></i>
+                        </span>
+                        <h3 class="m14l12-impact-title">${impact.title}</h3>
+                        <p class="m14l12-impact-text">${impact.text}</p>
+                      </div>
+                    `).join("")}
+                  </div>
 
-                    <section class="m14l12-card m14l12-card-guide" data-aos="fade-left" data-aos-delay="70">
-                      <h4 class="m14l12-h4">
+                  <div class="m14l12-grid py-3">
+                    <section class="m14l12-card m14l12-card-guide" data-aos="fade-up" data-aos-delay="70">
+                      <h3 class="m14l12-h3">
                         <span class="m14l12-hicon m14l12-i4"><i class="fa-solid fa-list-check"></i></span>
                         ${guidelineTitle}
-                      </h4>
-                      <ul class="m14l12-list">
-                        ${renderList(guidelines, 92, "left")}
-                      </ul>
+                      </h3>
                     </section>
                   </div>
+
+                  <div class="m14l12-guide-grid">
+                    ${guidelines.map((guideline, idx) => `
+                      <div class="m14l12-guide-card ${guideline.tone}" data-aos="fade-up" data-aos-delay="${90 + idx * 20}">
+                        <span class="m14l12-guide-icon ${guideline.tone}">
+                          <i class="fa-solid ${guideline.icon}"></i>
+                        </span>
+                        <p class="m14l12-guide-text">${guideline.text}</p>
+                      </div>
+                    `).join("")}
+                  </div>
+
                 </div>
               `;
             })(),
@@ -12472,10 +12505,22 @@ const coursesData = [
               const guidelinesIntro = "প্রযুক্তি বয্বহারের জনয্ গাইডলাইন";
 
               const guidelines = [
-                "১. দিনে ২ ঘণ্টার বেশি ¯িঙঊন টাইম পরিহার করা।",
-                "২. শারীরিক এবং মানসিক চাপ কমানোর জন্য ডিজিটাল ডিটক্সের অভ্যাস গড়ে তোলা।",
-                "৩. ঘুমের আগে অšতত ১ ঘণ্টা ডিভাইস ব্যবহার না করা।",
-                "৪. পরিবারের সঙ্গে খোলামেলা আলোচনা করে প্রযুক্তি ব্যবহারের নিয়মাবলি তৈরি করা।",
+                yhLang(
+                  "Avoid more than 2 hours of screen time per day.",
+                  "১. দিনে ২ ঘণ্টার বেশি স্ক্রিন টাইম পরিহার করা।"
+                ),
+                yhLang(
+                  "Develop the habit of digital detox to reduce physical and mental stress.",
+                  "২. শারীরিক এবং মানসিক চাপ কমানোর জন্য ডিজিটাল ডিটক্সের অভ্যাস গড়ে তোলা।"
+                ),
+                yhLang(
+                  "Do not use devices at least 1 hour before going to sleep.",
+                  "৩. ঘুমের আগে অন্তত ১ ঘণ্টা ডিভাইস ব্যবহার না করা।"
+                ),
+                yhLang(
+                  "Discuss openly with family members and create rules for technology use.",
+                  "৪. পরিবারের সঙ্গে খোলামেলা আলোচনা করে প্রযুক্তি ব্যবহারের নিয়মাবলি তৈরি করা।"
+                ),
               ];
 
               const renderList = (items) =>
