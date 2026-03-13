@@ -1656,8 +1656,7 @@
 	position: relative;
 	overflow: hidden;
 	border-radius: 20px;
-	padding: 10px;
-	background: linear-gradient(146deg, #f8f6ff 0%, #f1f9ff 50%, #fff7f1 100%);
+	padding: 5px;
 	border: 1px solid rgba(117, 138, 169, 0.22);
 	box-shadow: 0 4px 12px rgba(54, 81, 113, 0.12);
 	font-family: "Noto Sans Bengali", "Hind Siliguri", "Poppins", sans-serif;
@@ -1782,8 +1781,8 @@
 
 .m14l5-grid {
 	display: grid;
-	grid-template-columns: 1.3fr 1fr;
-	gap: 6px;
+	grid-template-columns: 1fr 1.1fr;
+	gap: 3px;
 }
 
 .m14l5-p {
@@ -1799,7 +1798,7 @@
 
 .m14l5-cause-list {
 	display: grid;
-	gap: 4px;
+	gap: 3px;
 }
 
 .m14l5-cause-card {
@@ -1879,6 +1878,7 @@
 	margin: 0;
 	padding: 0;
 	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: 4px;
 }
 

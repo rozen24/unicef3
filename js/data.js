@@ -9615,7 +9615,7 @@ const coursesData = [
                   title: yhLang("Conflict", "কলহ"),
                   description: yhLang(
                     "Family, social, political, religious, and cultural conflicts can trigger stress.",
-                    "পারিবারিক, সামাজিক, রাজনৈতিক, ধর্মীয়, জাতিগত ও প্রথাগত ক্ষেত্রে সৃষ্ট কলহ মানসিক চাপ বাড়ায়।",
+                    "পারিবারিক, সামাজিক, রাজনৈতিক, ধর্মীয়, জাতিগত, প্রথাগত ইত্যাদি ক্ষেত্রে সৃষ্ট কলহ আমাদের মধ্যে মানসিক চাপ সৃষ্টি করে।",
                   ),
                   icon: "fa-people-arrows-left-right",
                   tone: "danger",
@@ -9624,7 +9624,7 @@ const coursesData = [
                   title: yhLang("Education Pressure", "শিক্ষা"),
                   description: yhLang(
                     "Competition, poor support systems, financial limits, and comparison increase student stress.",
-                    "প্রতিযোগিতা, কাঙ্ক্ষিত ফল না পাওয়া, আর্থিক অস্বচ্ছলতা ও সহপাঠীদের সাথে তুলনা শিক্ষার্থীদের চাপ বাড়ায়।",
+                    "শিক্ষাক্ষেত্রে অতিরিক্ত প্রতিযোগীতামূলক মনোভাব, যোগ্যতা আনুযায়ী কাঙ্খিত ফলাফল অর্জন করতে না পারা, শিক্ষাবান্ধব পরিবেশের অভাব, আর্থিক অস্বচ্ছলতা, সঠিক দিকনির্দেশনার অভাব ইত্যাদি বিষয়গুলো শিক্ষার্থীদের মধ্যে মানসিক চাপ সৃষ্টি করে। অনেক সময় অভিভাবকরা সন্তানদেরকে তাদের সহপাঠীদের সাথে তুলনা করে ফেলেন, যা শিক্ষার্থীদের মধ্যে মানসিক চাপ সৃষ্টি করে।",
                   ),
                   icon: "fa-graduation-cap",
                   tone: "violet",
@@ -9633,7 +9633,7 @@ const coursesData = [
                   title: yhLang("Workload", "কর্মক্ষেত্র"),
                   description: yhLang(
                     "Excessive workload reduces productivity, confidence, and motivation.",
-                    "অতিরিক্ত কাজের চাপ উৎপাদনশীলতা, আত্মবিশ্বাস ও কাজের আগ্রহ কমিয়ে দেয়।",
+                    "কর্মক্ষেত্রে কাজের চাপ থাকা স্বাভাবিক। কিন্তু অতিরিক্ত কাজের চাপ কর্মীদের মধ্যে মানসিক চাপ সৃষ্টি করে যা তাদের কাজের গুণগত মান, উৎপাদনশীলতা, কাজের প্রতি আগ্রহ, আত্মবিশ্বাস ইত্যাদি কমিয়ে দেয়। বিভিন্ন কারণে কর্মক্ষেত্রে মানসিক চাপ সৃষ্টি হতে পারে ",
                   ),
                   icon: "fa-briefcase",
                   tone: "warn",
@@ -9642,7 +9642,7 @@ const coursesData = [
                   title: yhLang("Unemployment", "বেকারত্ব"),
                   description: yhLang(
                     "Lack of expected job opportunity can create long-term stress.",
-                    "প্রত্যাশিত কাজের সুযোগ না পাওয়া বা যোগ্যতার অসামঞ্জস্য মানসিক চাপ তৈরি করে।",
+                    "যখন কোন ব্যক্তি তার প্রত্যাশা অনুযায়ী কাজের সুযোগ না পায় কিংবা কোন ব্যক্তি যখন যোগ্যতার অভাবে কাজে অন্তর্ভুক্ত হতে না পারে তখন মানসিক চাপ অনুভব করে।",
                   ),
                   icon: "fa-user-clock",
                   tone: "slate",
@@ -9651,7 +9651,7 @@ const coursesData = [
                   title: yhLang("Environment", "পারিপার্শ্বিক"),
                   description: yhLang(
                     "Noise, air and water pollution, traffic, heat, and poor ventilation affect mental wellbeing.",
-                    "শব্দদূষণ, বায়ু/পানিদূষণ, যানজট, তীব্র আলো ও অপর্যাপ্ত বায়ুচলাচল মানসিক চাপ সৃষ্টি করে।",
+                    "পারিপার্শ্বিক পরিবেশ অনেক ক্ষেত্রে মানসিক চাপ সৃষ্টি করে থাকে। যেমন-শব্দদূষণ, বায়ুদূষণ, পানিদূষণ, যানজট, তীব্র আলো, কক্ষে অপর্যাপ্ত বায়ুচলাচল, অপরিচ্ছন্ন পরিবেশ ইত্যাদি।",
                   ),
                   icon: "fa-city",
                   tone: "sky",
@@ -9693,20 +9693,20 @@ const coursesData = [
                 {
                   text: yhLang(
                     "Talk with trusted people",
-                    "বিশ্বস্ত মানুষের সাথে কথা বলা",
+                    "বিশ্বস্ত বন্ধুএবং পরিবারের সদস্যদের সাথে সুন্দর সময় অতিবাহিত করা",
                   ),
                   icon: "fa-people-group",
                   tone: "success",
                 },
                 {
-                  text: yhLang("Share your emotions", "মনের কথা শেয়ার করা"),
+                  text: yhLang("Share your emotions", "বিশ্বস্ত কারো সাথে মনের কথা শেয়ার করা"),
                   icon: "fa-hand-holding-heart",
                   tone: "peach",
                 },
                 {
                   text: yhLang(
                     "Read or listen to music",
-                    "বই পড়া বা গান শোনা",
+                    "পছন্দের বই পড়া, গান শোনা",
                   ),
                   icon: "fa-book-open",
                   tone: "violet",
@@ -9717,40 +9717,41 @@ const coursesData = [
                   tone: "accent",
                 },
                 {
-                  text: yhLang("Exercise regularly", "নিয়মিত ব্যায়াম"),
+                  text: yhLang("Exercise regularly", "ব্যায়াম করা"),
                   icon: "fa-person-running",
                   tone: "sky",
                 },
+                 {
+                  text: yhLang("Limit comparison", "আয়নায় নিজেকে দেখা"),
+                  icon: "fa-scale-balanced",
+                  tone: "amber",
+                },
                 {
-                  text: yhLang("Freshen up", "হাত-মুখ ধোয়া বা গোসল"),
+                  text: yhLang("Freshen up", "হাত-মুখ ধোয়া বা গোসল করা"),
                   icon: "fa-droplet",
                   tone: "teal",
                 },
                 {
-                  text: yhLang("Pray or meditate", "প্রার্থনা বা ধ্যান"),
+                  text: yhLang("Pray or meditate", "প্রার্থনা করা"),
                   icon: "fa-hands-praying",
                   tone: "mint",
                 },
                 {
-                  text: yhLang("Sleep adequately", "পর্যাপ্ত ঘুমানো"),
+                  text: yhLang("Sleep adequately", "পর্যাপ্ত পরিমাণে ঘুমানো"),
                   icon: "fa-moon",
                   tone: "indigo",
                 },
                 {
-                  text: yhLang("Spend time in nature", "প্রকৃতির কাছে সময়"),
+                  text: yhLang("Spend time in nature", "প্রাকৃতিক পরিবেশে সময় অতিবাহিত করা"),
                   icon: "fa-leaf",
                   tone: "sun",
                 },
                 {
-                  text: yhLang("Deep breathing", "গভীর শ্বাস-প্রশ্বাস"),
+                  text: yhLang("Deep breathing", "নাক দিয়ে গভীর নিঃশ্বাস নিয়ে মুখ দিয়ে প্রশ্বাস ছাড়া"),
                   icon: "fa-lungs",
                   tone: "cyan",
                 },
-                {
-                  text: yhLang("Limit comparison", "অন্যের সাথে তুলনা কমানো"),
-                  icon: "fa-scale-balanced",
-                  tone: "amber",
-                },
+               
               ];
 
               const renderCauseCards = (items) =>
@@ -9762,8 +9763,8 @@ const coursesData = [
                           <i class="fa-solid ${item.icon}"></i>
                         </div>
                         <div>
-                          <h4 class="m14l5-cause-title">${item.title}</h4>
-                          <p class="m14l5-cause-desc">${item.description}</p>
+                          <h3 class="m14l5-cause-title">${item.title}</h3>
+                          <span class="m14l5-cause-desc">${item.description}</span>
                         </div>
                       </article>
                     `,
@@ -9796,32 +9797,18 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="m14l5-slide">
+                <div class="m14l5-slide lesson-slide">
                   <div class="m14l5-shape m14l5-shape-a"></div>
                   <div class="m14l5-shape m14l5-shape-b"></div>
                   <div class="m14l5-shape m14l5-shape-c"></div>
 
-                  <header class="m14l5-header">
-                    <h2 class="m14l5-title">
-                      <i class="fa-solid fa-head-side-virus"></i>
-                      ${yhLang("Causes of Stress", "মানসিক চাপের কারণসমূহ")}
-                    </h2>
-                  </header>
-
-                  <section class="m14l5-card m14l5-card-intro">
-                    <h3 class="m14l5-subtitle">
-                      <i class="fa-solid fa-lightbulb"></i>
-                      ${yhLang("Overview", "সংক্ষিপ্ত পরিচিতি")}
-                    </h3>
-                    <p class="m14l5-p">${stressIntro}</p>
-                    <p class="m14l5-p m14l5-p-last">${stressFocus}</p>
-                  </section>
+                  
 
                   <div class="m14l5-grid">
                     <section class="m14l5-card m14l5-card-causes">
-                      <h3 class="m14l5-subtitle">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        ${yhLang("Major Stress Triggers", "চাপ সৃষ্টির প্রধান কারণ")}
+                      <h3 class="m14l5-subtitle mb-3">
+                        <i class="fa-solid fa-head-side-virus"></i>
+                        ${yhLang("Causes of Stress", "মানসিক চাপের কারণসমূহ")}
                       </h3>
                       <div class="m14l5-cause-list">
                         ${renderCauseCards(stressCauses)}
@@ -9830,11 +9817,14 @@ const coursesData = [
                     <section class="m14l5-card m14l5-card-manage">
                     <h3 class="m14l5-subtitle">
                       <i class="fa-solid fa-seedling"></i>
-                      ${yhLang("Stress Management Tips", "মানসিক চাপ ব্যবস্থাপনার উপায়")}
+                      ${yhLang("Stress Management Tips", "মানসিক চাপ ব্যবস্থাপনার জন্য প্রয়োজনীয় কিছু উপায় নিম্নে উল্লেখ করা হল- ")}
                     </h3>
                     <ul class="m14l5-list">
                       ${renderTips(managementTips)}
                     </ul>
+                    <figure class="glass-card p-1 mb-0 text-center">
+                          <img src="img/modu14/stress.jpg" alt="" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
                   </section>
 
                   </div>
