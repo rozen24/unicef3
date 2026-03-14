@@ -6841,35 +6841,49 @@ const sexPoints = [
               ],
             },
             content: (function () {
-              const intro =
-                "নারী ও পুরুষের ভিন্নতা, আচরণ ও সামাজিক অভ্যাসভেদে নারী ও পুরুষের মধ্যে কিছু বৈষম্য সৃষ্টি হয়। সামাজিক দৃষ্টিভঙ্গি, ধর্মের অপব্যাখ্যা, মেয়েদের ছোট করে দেখার মানসিকতা ইত্যাদি জেন্ডার বৈষম্য সৃষ্টিতে প্রধান ভূমিকা পালন করে। জেন্ডারের এই বৈষম্যকে পরিবার, সমাজ যখন মেনে নেয় ও আইন, নীতি বা মূল্যবোধের মাধ্যমে রাষ্ট্র যখন বৈধতা দেয় তখন তা প্রাতিষ্ঠানিক রূপ লাভ করে এবং সেটি বৈষম্য হিসেবে গণ্য হয়। এই বৈষম্য সামাজিকভাবে তৈরি যা পরিবার, সমাজ ও সংস্কৃতি থেকে গৃহীত, সমাজ ও স্থান ভেদে ভিন্ন, এবং অবশ্যই পরিবর্তনশীল।";
+              const intro = yhLang(
+  "Differences in roles, behaviors, and social practices between men and women often create certain inequalities. Social attitudes, misinterpretation of religion, and the mindset of undervaluing girls play a major role in creating gender inequality. When families and society accept these inequalities and the state legitimizes them through laws, policies, or values, they become institutionalized and are considered discrimination. These inequalities are socially constructed, shaped by family, society, and culture, vary from place to place, and are changeable.",
+  "নারী ও পুরুষের ভিন্নতা, আচরণ ও সামাজিক অভ্যাসভেদে নারী ও পুরুষের মধ্যে কিছু বৈষম্য সৃষ্টি হয়। সামাজিক দৃষ্টিভঙ্গি, ধর্মের অপব্যাখ্যা, মেয়েদের ছোট করে দেখার মানসিকতা ইত্যাদি জেন্ডার বৈষম্য সৃষ্টিতে প্রধান ভূমিকা পালন করে। জেন্ডারের এই বৈষম্যকে পরিবার, সমাজ যখন মেনে নেয় ও আইন, নীতি বা মূল্যবোধের মাধ্যমে রাষ্ট্র যখন বৈধতা দেয় তখন তা প্রাতিষ্ঠানিক রূপ লাভ করে এবং সেটি বৈষম্য হিসেবে গণ্য হয়। এই বৈষম্য সামাজিকভাবে তৈরি যা পরিবার, সমাজ ও সংস্কৃতি থেকে গৃহীত, সমাজ ও স্থান ভেদে ভিন্ন, এবং অবশ্যই পরিবর্তনশীল।"
+);
 
-              const sections = [
-                {
-                  title: "সমতা",
-                  body: "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়। সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।",
-                  icon: "fa-scale-balanced",
-                  type: "equality",
-                },
-                {
-                  title: "ন্যায্যতা",
-                  body: "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।",
-                  icon: "fa-gavel",
-                  type: "justice",
-                },
-                {
-                  title: "জেন্ডার সমতা",
-                  body: "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।",
-                  icon: "fa-person-group",
-                  type: "gender",
-                },
-                {
-                  title: "সাম্য ও সমতার পার্থক্য",
-                  body: "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-ঝুঁকি দিয়ে সাম্য (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।",
-                  icon: "fa-code-compare",
-                  type: "difference",
-                },
-              ];
+const sections = [
+  {
+    title: yhLang("Equality", "সমতা"),
+    body: yhLang(
+      "Equality generally refers to the same condition or status. It means equal distribution—equal rights, opportunities, responsibilities, and risks for everyone. For example, if a job advertisement invites applications based on qualifications and experience, women, men, third gender, and marginalized groups should all have the opportunity to apply.",
+      "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়। সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।"
+    ),
+    icon: "fa-scale-balanced",
+    type: "equality",
+  },
+  {
+    title: yhLang("Equity / Fairness", "ন্যায্যতা"),
+    body: yhLang(
+      "Equity means distribution according to need. It refers to achieving fairness by considering individual situations, conditions, responsibilities, opportunities, and risks.",
+      "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।"
+    ),
+    icon: "fa-gavel",
+    type: "justice",
+  },
+  {
+    title: yhLang("Gender Equality", "জেন্ডার সমতা"),
+    body: yhLang(
+      "Gender equality refers to realistic equality where both women and men can participate and be empowered equally in all personal and public spheres. Gender equality does not mean men and women are identical, but it ensures that their rights, opportunities, responsibilities, and risks are equal.",
+      "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।"
+    ),
+    icon: "fa-person-group",
+    type: "gender",
+  },
+  {
+    title: yhLang("Difference between Equity and Equality", "সাম্য ও সমতার পার্থক্য"),
+    body: yhLang(
+      "Women are still behind men in many family, social, and state activities. Therefore, by providing women with more opportunities and support than men through equity, gender equality can be achieved.",
+      "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-ঝুঁকি দিয়ে সাম্য (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।"
+    ),
+    icon: "fa-code-compare",
+    type: "difference",
+  },
+];
 
               const renderSections = () =>
                 sections
@@ -6902,15 +6916,21 @@ const sexPoints = [
                     <p class="ch13l2-intro-text">${intro}</p>
                   </div>
 
-                  <div class="ch13l2-sections">
-                    ${renderSections()}
-                  </div>
-
-                  <div class="ch13l2-image-section" data-aos="fade-left" data-aos-delay="80">
-                    <figure class="ch13l2-image-card mb-0">
-                      <img src="img/modu13/gender.png" alt="জেন্ডার সমতা চিত্র" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
-                    </figure>
-                  </div>
+                  <div class="row g-3">
+                       <div class="col-md-7">
+                            <div class="ch13l2-sections">
+                          ${renderSections()}
+                        </div>
+                       </div>
+                       <div class="col-md-5">
+                         <div class="ch13l2-image-section" data-aos="fade-left" data-aos-delay="80">
+                          <figure class="ch13l2-image-card mb-0">
+                            <img src="img/modu13/gender2.jpg" style="height: 500px;" alt="জেন্ডার সমতা চিত্র" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
+                          </figure>
+                        </div>
+                       </div>
+                    </div>
+                  
                 </div>
               `;
             })(),
