@@ -961,7 +961,7 @@ const coursesData = [
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-briefcase"></i> ${yhLang("Employment", "কর্মসংস্থান")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-piggy-bank"></i> ${yhLang("Wealth/child investment", "সম্পদ/সন্তান বিনিয়োগ")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> ${yhLang("Lifelong learning", "আজীবন শিক্ষা")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> ${yhLang("Work-life Balance", "কর্মজীবন-ব্যক্তিজীবনের ভারসাম্য")}</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-person-arrows"></i> ${yhLang("Work-life Balance", "কর্মজীবন-ব্যক্তিজীবনের ভারসাম্য")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> ${yhLang("Security of Place", "বাসস্থানের নিরাপত্তা")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-handshake"></i> ${yhLang("Healthy children", "স্বাস্থ্যবান শিশু")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> ${yhLang("Secure old-age", "নিরাপদ বার্ধক্য")}</li>
@@ -1904,7 +1904,7 @@ const coursesData = [
                 },
                 {
                   title: yhLang("Household & community", "পরিবার ও সম্প্রদায়"),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   color: "bg-gradient-emerald",
                   bullets: [
                     yhLang(
@@ -2141,7 +2141,7 @@ const coursesData = [
                     "Adolescent advisory boards co-design spaces, IEC materials and feedback loops.",
                     "কিশোর উপদেষ্টা বোর্ড স্থান, আইইসি উপকরণ ও প্রতিক্রিয়া পদ্ধতি সহ-নকশা করে।",
                   ),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                 },
               ];
 
@@ -2467,7 +2467,7 @@ const coursesData = [
                     "Adolescents were formally acknowledged as a group with unique SRHR needs.",
                     "তরুন-তরুনীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।",
                   ),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   cls: "tl-rose",
                   delay: 100,
                 },
@@ -2800,7 +2800,7 @@ const coursesData = [
           {
             id: "ch2-lesson-12",
             title: yhLang("A combined effort", "সমন্বিত প্রচেষ্টা"),
-            icon: "fa-people-group",
+            icon: "fa-person-group",
             gradientClass: "bg-gradient-green",
             audioFile: "",
             quiz: {
@@ -2860,7 +2860,7 @@ const coursesData = [
                     "YHAP ambassadors, youth clubs, disability organisations, faith leaders and media.",
                     "ওয়াইএইচএপি দূত, যুব ক্লাব, প্রতিবন্ধী সংগঠন, ধর্মীয় নেতৃবৃন্দ ও গণমাধ্যম।",
                   ),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   color: "bg-gradient-rose",
                 },
                 {
@@ -2975,7 +2975,7 @@ const coursesData = [
                     "Invest in underserved districts, hard-to-reach communities, refugees and adolescents with disabilities.",
                     "অসেবা প্রাপ্ত জেলা, দুর্গম সম্প্রদায়, শরণার্থী ও প্রতিবন্ধী কিশোরদের জন্য বিনিয়োগ বাড়ান।",
                   ),
-                  icon: "fa-people-arrows-left-right",
+                  icon: "fa-person-arrows-left-right",
                   cls: "bg-gradient-rose",
                   delay: 160,
                 },
@@ -2988,7 +2988,7 @@ const coursesData = [
                     "Create advisory boards, pay youth researchers and embed feedback loops in every programme.",
                     "উপদেষ্টা বোর্ড গঠন, তরুণ গবেষকদের পারিশ্রমিক প্রদান ও প্রতিটি কর্মসূচিতে প্রতিক্রিয়া পদ্ধতি যুক্ত করুন।",
                   ),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   cls: "bg-gradient-blue",
                   delay: 200,
                 },
@@ -3596,7 +3596,7 @@ const coursesData = [
               "Support Systems for Menstrual Health",
               "মাসিক ব্যবস্থাপনায় সহযোগিতা",
             ),
-            icon: "fa-people-roof",
+            icon: "fa-person-roof",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: {
@@ -4468,7 +4468,7 @@ const coursesData = [
               "তারুন্যকালীনপরিবার পরিকল্পনা",
               "তারুন্যকালীনপরিবার পরিকল্পনা",
             ),
-            icon: "fa-people-roof",
+            icon: "fa-person-roof",
             gradientClass: "bg-gradient-blue",
             audioFile: "",
             quiz: {
@@ -6755,15 +6755,15 @@ const sexPoints = [
                     <div class="ch13l1-def-card ch13l1-def-sex" data-aos="fade-right" data-aos-delay="60">
                       <div class="ch13l1-def-label">
                         <span class="ch13l1-def-icon"><i class="fa-solid fa-dna"></i></span>
-                        ${yhLang("Sex", "সেক্স")}
+                        <h3>${yhLang("Sex", "সেক্স")} </h3>
                       </div>
                       <p class="ch13l1-def-text">${sexDefinition}</p>
                     </div>
 
                     <div class="ch13l1-def-card ch13l1-def-gender" data-aos="fade-left" data-aos-delay="60">
                       <div class="ch13l1-def-label">
-                        <span class="ch13l1-def-icon"><i class="fa-solid fa-people"></i></span>
-                        ${yhLang("Gender", "জেন্ডার")}
+                        <span class="ch13l1-def-icon"><i class="fa-solid fa-children"></i></span>
+                       <h3> ${yhLang("Gender", "জেন্ডার")}</h3>
                       </div>
                       <p class="ch13l1-def-text">${genderDefinition}</p>
                     </div>
@@ -6777,16 +6777,16 @@ const sexPoints = [
                       </h3>
                     </div>
                     <div class="ch13l1-table-wrap">
-                      <table class="ch13l1-table" aria-label="Gender vs Sex Comparison Table">
+                      <table class="ch13l1-table w-100" aria-label="Gender vs Sex Comparison Table">
                         <thead>
                           <tr>
                             <th scope="col">
-                              <i class="fa-solid fa-circle-notch" style="margin-right:8px;"></i>
-                              ${yhLang("Gender", "জেন্ডার")}
+                              <h3><i class="fa-solid fa-circle-notch" style="margin-right:8px;"></i>
+                              ${yhLang("Gender", "জেন্ডার")}</h3>
                             </th>
                             <th scope="col">
-                              <i class="fa-solid fa-dna" style="margin-right:8px;"></i>
-                              ${yhLang("Sex", "সেক্স")}
+                              <h3><i class="fa-solid fa-dna" style="margin-right:8px;"></i>
+                              ${yhLang("Sex", "সেক্স")}</h3>
                             </th>
                           </tr>
                         </thead>
@@ -6795,8 +6795,8 @@ const sexPoints = [
                             .map(
                               (genderPoint, idx) => `
                                 <tr data-aos="fade-up" data-aos-delay="${140 + idx * 20}">
-                                  <td><strong>${genderPoint}</strong></td>
-                                  <td><strong>${sexPoints[idx] || ""}</strong></td>
+                                  <td><span><strong>${genderPoint}</strong></span></td>
+                                  <td><span><strong>${sexPoints[idx] || ""}</strong></span></td>
                                 </tr>
                               `,
                             )
@@ -6812,7 +6812,7 @@ const sexPoints = [
           {
             id: "ch13-lesson-2",
             title: yhLang("Understanding Gender Inequity", "জেন্ডার বৈষম্য"),
-            icon: "fa-people-arrows",
+            icon: "fa-person-arrows",
             gradientClass: "bg-gradient-purple",
             audioFile: "",
             quiz: {
@@ -6860,7 +6860,7 @@ const sexPoints = [
                 {
                   title: "জেন্ডার সমতা",
                   body: "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।",
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   type: "gender",
                 },
                 {
@@ -7589,7 +7589,7 @@ const sexPoints = [
                     "Girls and boys should grow up with equal status and freedom, identified only as human beings",
                     "সম মর্যাদা, স্বাধীনতা নিয়ে নারী-পুরুষ বেড়ে উঠবে, যার পরিচয় হবে শুধু মানুষ হিসেবে"
                   ),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   type: "type2"
                 },
                 {
@@ -7808,7 +7808,7 @@ const sexPoints = [
                         "Most youth in Bangladesh face lower socioeconomic positions, unemployment, and hopelessness. Socially unestablished, dependent, and depressed individuals are more likely to abuse. Poor socialization and childhood exposure to violence increase the risk.",
                         "বাংলাদেশে যুবসমাজের অধিকাংশই নিম্ন আর্থ-সামাজিক অবস্থানের কারণে এবং বেকার ও হতাশাব্যঞ্জক জীবনযাপন করে থাকে। আবার সামাজিকভাবে অপ্রতিষ্ঠিত, পরনির্ভরশীল, হীনমন্য ও হতাশাগ্রস্থ ব্যক্তিরা এই ধরণের অনাকাঙ্ক্ষিত আচরণ করে থাকে। সুস্থ সামাজিকীকরণের অভাবেও এই ধরনের ঘটনা ঘটে থাকে।"
                       ),
-                      icon: "fa-people-group",
+                      icon: "fa-person-group",
                       type: "type1"
                     }
                   ]
@@ -8026,7 +8026,7 @@ const sexPoints = [
                     { num: "1", title: yhLang("Physical Effects", "শারীরিক প্রভাব"), text: yhLang("Headaches, loss of appetite, nausea, insomnia, and other health complications", "মাথা ব্যথা, ক্ষুধামন্দা, বমি-বমিভাব, অনিদ্রা ইত্যাদি"), icon: "fa-heart-pulse", type: "type1" },
                     { num: "2", title: yhLang("Mental Effects", "মানসিক প্রভাব"), text: yhLang("Anxiety, depression, low mood, irritability, anger, fear, shame, guilt, suicidal thoughts, distrust of others", "দুশ্চিন্তা, মনমরা, বিষণ্নতা, বিরক্তিবোধ, আত্মহত্যার চিন্তা প্রভৃতি"), icon: "fa-head-side-virus", type: "type2" },
                     { num: "3", title: yhLang("Behavioral Effects", "আচরণগত প্রভাব"), text: yhLang("Crying, inability to concentrate, avoidance of crowded places and public transport", "কান্নাকাটি, মনোযোগ না দিতে পারা, জনসমাগম এড়িয়ে চলা"), icon: "fa-child", type: "type3" },
-                    { num: "4", title: yhLang("Social Effects", "সামাজিক প্রভাব"), text: yhLang("Social disgrace, family shame, withdrawal from social activities, forced early marriage", "সমাজে লজ্জা, পারিবারিক বদনাম, সামাজিক কর্ম থেকে দূরে থাকা"), icon: "fa-people-group", type: "type1" }
+                    { num: "4", title: yhLang("Social Effects", "সামাজিক প্রভাব"), text: yhLang("Social disgrace, family shame, withdrawal from social activities, forced early marriage", "সমাজে লজ্জা, পারিবারিক বদনাম, সামাজিক কর্ম থেকে দূরে থাকা"), icon: "fa-person-group", type: "type1" }
                   ]
                 },
                 {
@@ -8040,7 +8040,7 @@ const sexPoints = [
                     { num: "1", title: yhLang("Strengthen Family Bonds", "পারিবারিক বন্ধন শক্তিশালী করা"), text: yhLang("Build trust and communication within the family unit", "পরিবারের সদস্যদের মধ্যে বিশ্বাস ও যোগাযোগ বৃদ্ধি"), icon: "fa-house-heart", type: "type1" },
                     { num: "2", title: yhLang("Foster Safe Relationships", "নিরাপদ সম্পর্ক গড়ে তোলা"), text: yhLang("Create safe, friendly relationships between parents, guardians and youth", "অভিভাবক ও সন্তানের মধ্যে বন্ধুত্বপূর্ণ সম্পর্ক সৃষ্টি"), icon: "fa-handshake", type: "type2" },
                     { num: "3", title: yhLang("Reduce Substance Abuse", "মাদকের অপব্যবহার কমানো"), text: yhLang("Control availability and abuse of drugs and harmful substances", "মাদকের সহজলভ্যতা ও অপব্যবহার হ্রাস করা"), icon: "fa-hand-holding-heart", type: "type3" },
-                    { num: "4", title: yhLang("Gender Equality Awareness", "লিঙ্গ সমতা সচেতনতা"), text: yhLang("Conduct awareness programs on gender discrimination and equality", "জেন্ডার বৈষম্য দূরীকরণে সচেতনতামূলক কর্মসূচি"), icon: "fa-people", type: "type1" },
+                    { num: "4", title: yhLang("Gender Equality Awareness", "লিঙ্গ সমতা সচেতনতা"), text: yhLang("Conduct awareness programs on gender discrimination and equality", "জেন্ডার বৈষম্য দূরীকরণে সচেতনতামূলক কর্মসূচি"), icon: "fa-person", type: "type1" },
                     { num: "5", title: yhLang("Legal Awareness", "আইনি সচেতনতা"), text: yhLang("Educate public and officials on violence prevention and protection laws", "নারী ও শিশু সুরক্ষা আইন সম্পর্কে সচেতনতা"), icon: "fa-scale-balanced", type: "type2" },
                     { num: "6", title: yhLang("Economic Support", "অর্থনৈতিক সহায়তা"), text: yhLang("Provide vocational training and easy-term micro-credit for employment", "ক্ষুদ্রশিল্প প্রশিক্ষণ ও ঋণ প্রদান"), icon: "fa-briefcase", type: "type3" },
                     { num: "7", title: yhLang("Counseling Services", "কাউন্সেলিং সেবা"), text: yhLang("Make mental health and marriage counseling services accessible", "মনোসামাজিক কাউন্সেলিং সেবা সহজলভ্য করা"), icon: "fa-comments", type: "type1" },
@@ -8118,7 +8118,7 @@ const sexPoints = [
               "Adolescent Psychosocial Changes",
               "তারুন্যকালীন মনোসামাজিক পরিবর্তন",
             ),
-            icon: "fa-people-roof",
+            icon: "fa-person-roof",
             gradientClass: "bg-gradient-indigo",
             audioFile: "",
             quiz: {
@@ -8337,7 +8337,7 @@ const sexPoints = [
 
                   <header class="m14l1-header" data-aos="fade-up">
                     <h2 class="m14l1-title">
-                      <i class="fa-solid fa-people-roof"></i>
+                      <i class="fa-solid fa-person-roof"></i>
                       ${yhLang("Psychosocial transitions in adolescence", "তারুন্যকালীন মনোসামাজিক পরিবর্তন")}
                     </h2>
                   </header>
@@ -8350,7 +8350,7 @@ const sexPoints = [
                   <section class="m14l1-grid" data-aos="fade-up" data-aos-delay="70">
                     <article class="m14l1-card m14l1-card-social">
                       <h3 class="m14l1-subtitle">
-                        <i class="fa-solid fa-people-group"></i>
+                        <i class="fa-solid fa-person-group"></i>
                         ${yhLang("Social adjustments", "সামাজিক পরিবর্তনসমূহ")}
                       </h3>
                       <ul class="m14l1-list">
@@ -8679,7 +8679,7 @@ const sexPoints = [
                             <span class="m14lem-ei-li-text">${yhLang("Understand others' emotions and treat them with sensitivity.", "অন্যদের আবেগগুলো বুঝতে পারা এবং তাদের সাথে সংবেদনশীলভাবে আচরণ করা।")}</span>
                           </li>
                           <li class="m14lem-ei-li m14lem-ei-violet" data-aos="fade-left" data-aos-delay="70">
-                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-people-group"></i></span>
+                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-person-group"></i></span>
                             <span class="m14lem-ei-li-text">${yhLang("Build good relationships with others through emotional intelligence.", "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা।")}</span>
                           </li>
                         </ul>
@@ -8934,7 +8934,7 @@ const sexPoints = [
                     "Relationship deterioration",
                     "ব্যক্তিগত ও পারিবারিক সম্পর্কের অবনতি",
                   ),
-                  icon: "fa-people-arrows-left-right",
+                  icon: "fa-person-arrows-left-right",
                   tone: "peach",
                 },
                 {
@@ -8992,7 +8992,7 @@ const sexPoints = [
                     "Build healthier relationships through emotional intelligence.",
                     "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা",
                   ),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   tone: "accent",
                 },
               ];
@@ -9442,7 +9442,7 @@ const sexPoints = [
                     "Family, social, political, religious, and cultural conflicts can trigger stress.",
                     "পারিবারিক, সামাজিক, রাজনৈতিক, ধর্মীয়, জাতিগত, প্রথাগত ইত্যাদি ক্ষেত্রে সৃষ্ট কলহ আমাদের মধ্যে মানসিক চাপ সৃষ্টি করে।",
                   ),
-                  icon: "fa-people-arrows-left-right",
+                  icon: "fa-person-arrows-left-right",
                   tone: "danger",
                 },
                 {
@@ -9520,7 +9520,7 @@ const sexPoints = [
                     "Talk with trusted people",
                     "বিশ্বস্ত বন্ধুএবং পরিবারের সদস্যদের সাথে সুন্দর সময় অতিবাহিত করা",
                   ),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   tone: "success",
                 },
                 {
@@ -9985,7 +9985,7 @@ const sexPoints = [
                     "Lack of social support",
                     "সামাজিক সমর্থনের অভাব",
                   ),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   tone: "slate",
                 },
                 {
@@ -10053,7 +10053,7 @@ const sexPoints = [
                 },
                 {
                   text: yhLang("Relationship damage", "সম্পর্কের ক্ষতি"),
-                  icon: "fa-people-arrows-left-right",
+                  icon: "fa-person-arrows-left-right",
                   tone: "red",
                 },
                 {
@@ -10640,7 +10640,7 @@ const sexPoints = [
                     "Overuse of social media may reduce real-life interaction and social skills.",
                     "অতিরিক্ত সামাজিক মিডিয়া ব্যবহারের ফলে বাস্তব সামাজিক মিথস্ক্রিয়ার অভাব তৈরি হতে পারে।",
                   ),
-                  icon: "fa-people-arrows-left-right",
+                  icon: "fa-person-arrows-left-right",
                   tone: "info",
                 },
               ];
@@ -10680,7 +10680,7 @@ const sexPoints = [
                     "Discuss openly with family and create technology-use rules.",
                     "পরিবারের সঙ্গে খোলামেলা আলোচনা করে প্রযুক্তি ব্যবহারের নিয়মাবলি তৈরি করা।",
                   ),
-                  icon: "fa-people-roof",
+                  icon: "fa-person-roof",
                   tone: "peach",
                 },
               ];
@@ -11265,7 +11265,7 @@ const sexPoints = [
               "Childhood Behavioral Issues",
               "শৈশব ও তারুন্যকালীনমানসিক সমস্যাসমূহ",
             ),
-            icon: "fa-people-arrows",
+            icon: "fa-person-arrows",
             gradientClass: "bg-gradient-crimson",
             audioFile: "",
             quiz: {
@@ -11362,7 +11362,7 @@ const sexPoints = [
                   </style>
                   <span class="m16-orb a"></span>
                   <span class="m16-orb b"></span>
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-people-arrows-left-right")}<span>${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${headingIcon("fa-person-arrows-left-right")}<span>${yhLang(
                     "Behavioral mental health issues",
                     "শৈশব ও তারুন্যকালীনমানসিক সমস্যাসমূহ",
                   )}</span></h2>
@@ -12497,7 +12497,7 @@ const sexPoints = [
                   ),
                 },
                 {
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   color: "m16l1-benefit-c",
                   text: yhLang(
                     "Improves healthy communication and social connection.",
@@ -12584,8 +12584,8 @@ const sexPoints = [
               "Skills for Psychosocial Support",
               "মনোসামাজিক সহায়তার দক্ষতাসমূহ",
             ),
-            icon: "fa-people-arrows",
-            gradientClass: "fa-solid fa-people-group",
+            icon: "fa-person-arrows",
+            gradientClass: "fa-solid fa-person-group",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -12658,7 +12658,7 @@ const sexPoints = [
                   ),
                 },
                 {
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   color: "m16l2-outcome-trust",
                   text: yhLang(
                     "It helps build a strong relationship between beneficiary and helper.",
@@ -12691,7 +12691,7 @@ const sexPoints = [
 
                   <section class="m16l2-hero" data-aos="fade-down">
                     <div class="m16l2-hero__badge" aria-hidden="true">
-                      <i class="fa-solid fa-people-group"></i>
+                      <i class="fa-solid fa-person-group"></i>
                     </div>
                     <div class="m16l2-hero__content">
                       <h2 class="m16l2-hero__title">${yhLang(
@@ -13001,7 +13001,7 @@ const sexPoints = [
 
               const sources = [
                 {
-                  icon: "fa-people-roof",
+                  icon: "fa-person-roof",
                   color: "m16l4-source-family",
                   text: yhLang("Family", "পরিবার"),
                 },
@@ -15709,7 +15709,7 @@ const sexPoints = [
                     "Stand behind the person and wrap both arms around their waist below the ribs.",
                     "আক্রান্ত ব্যক্তির পিছনে দাঁড়িয়ে ব্যক্তির পাঁজরের নিচে কোমর বরাবর প্রাথমিক চিকিৎসা প্রদানকারী তার দুই হাত দিয়ে আঁকড়ে ধরবেন।",
                   ),
-                  icon: "fa-people-arrows",
+                  icon: "fa-person-arrows",
                   color: "m18l11-follow-grip",
                 },
                 {
@@ -18616,7 +18616,7 @@ const sexPoints = [
                   ),
                 },
                 {
-                  icon: "fa-people-arrows",
+                  icon: "fa-person-arrows",
                   color: "#ff5722",
                   text: yhLang(
                     "Living with divorced parents or stepfather/stepmother",
@@ -18809,7 +18809,7 @@ const sexPoints = [
                   ),
                 },
                 {
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   color: "#f57c00",
                   text: yhLang(
                     "<strong>Enhancing Social Engagement:</strong> Implement activities that help youth build connections and strengthen engagement with their community.",
@@ -20048,7 +20048,7 @@ const sexPoints = [
                   .map(
                     (item, idx) => `
                       <li style="background:${idx % 2 === 0 ? "rgba(255,255,255,.66)" : "rgba(224,242,241,.72)"};border-left:3px solid ${idx % 2 === 0 ? "#26a69a" : "#00acc1"};border-radius:9px;padding:10px 8px;margin-bottom:px;box-shadow:${idx % 2 === 0 ? "0 4px 10px rgba(0,150,136,.15)" : "0 5px 12px rgba(0,172,193,.14)"};">
-                        <i class="fa-solid ${idx < 2 ? "fa-soap" : idx < 4 ? "fa-droplet" : "fa-people-group"} ${idx < 2 ? "text-success" : idx < 4 ? "text-info" : "text-primary"} me-2"></i>
+                        <i class="fa-solid ${idx < 2 ? "fa-soap" : idx < 4 ? "fa-droplet" : "fa-person-group"} ${idx < 2 ? "text-success" : idx < 4 ? "text-info" : "text-primary"} me-2"></i>
                         <span style="">${item}</span>
                       </li>
                     `,
@@ -20077,7 +20077,7 @@ const sexPoints = [
                           </div>
                           <div class="hygiene-list">
                             <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;font-size:0.98em;margin-bottom:6px;">
-                             <h3> <i class="fa-solid fa-people-group me-2" style="font-size:20px;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}</h3>
+                             <h3> <i class="fa-solid fa-person-group me-2" style="font-size:20px;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}</h3>
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(communityActions)}
@@ -21537,7 +21537,7 @@ const sexPoints = [
                     "Avoid crowded places",
                     "জনসমাগম হয় এমন জায়গা এড়িয়ে চলা",
                   ),
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                 },
                 {
                   text: yhLang(
@@ -22246,7 +22246,7 @@ const sexPoints = [
                 },
                 {
                   text: yhLang("Relatives", "আত্মীয়-স্বজন"),
-                  icon: "fa-people-roof",
+                  icon: "fa-person-roof",
                   color: "m24l1-item-orange",
                 },
                 {
@@ -22293,7 +22293,7 @@ const sexPoints = [
                     "Interpersonal Relationship Skills",
                     "আন্ত:ব্যক্তিক সম্পর্ক দক্ষতা",
                   ),
-                  icon: "fa-people-arrows",
+                  icon: "fa-person-arrows",
                   gradient: "bg-gradient-teal",
                 },
                 {
@@ -22468,7 +22468,7 @@ const sexPoints = [
                       <section class="m24l1-panel m24l1-panel-help" data-aos="fade-up" data-aos-delay="600">
                         <h3 class="m24l1-section-heading">
                           <span class="m24l1-heading-icon m24l1-icon-help">
-                            <i class="fa-solid fa-people-group"></i>
+                            <i class="fa-solid fa-person-group"></i>
                           </span>
                           <span class="m24l1-heading-text">${yhLang("Who Can Help Teach?", "কারা জীবন দক্ষতা শেখাতে সাহায্য করতে পারেন ?")}</span>
                         </h3>
@@ -22634,7 +22634,7 @@ const sexPoints = [
                 },
                 {
                   text: yhLang("Cooperation", "সহযোগিতার </br>মানসিকতা"),
-                  icon: "fa-people-carry-box",
+                  icon: "fa-person-carry-box",
                   gradient: "bg-gradient-teal",
                 },
                 {
@@ -22939,7 +22939,7 @@ const sexPoints = [
 
               const points = [
                 {
-                  icon: "fa-people-roof",
+                  icon: "fa-person-roof",
                   accent: "m24l11-item--a",
                   text: yhLang(
                     "Family, social, and religious values education helps young people stay away from crises and risky behaviors.",
@@ -22955,7 +22955,7 @@ const sexPoints = [
                   ),
                 },
                 {
-                  icon: "fa-people-group",
+                  icon: "fa-person-group",
                   accent: "m24l11-item--c",
                   text: yhLang(
                     "Life skills education (through group activities) helps build moral thinking and responsible behavior.",
@@ -23295,7 +23295,7 @@ const sexPoints = [
                       <div class="m25l2f-branch m25l2f-branch--left">
                         <div class="m25l2f-node m25l2f-node--main m25l2f-line" data-aos="zoom-in" data-aos-delay="200" style="--d:160ms">
                           <span class="m25l2f-node__icon bg-gradient-mint" aria-hidden="true">
-                            <i class="fa-solid fa-people-arrows"></i>
+                            <i class="fa-solid fa-person-arrows"></i>
                           </span>
                           <span class="m25l2f-node__text">${yhLang("Interpersonal Communication", "অন্তর্ব্যক্তিক যোগাযোগ")}</span>
                         </div>
@@ -23369,7 +23369,7 @@ const sexPoints = [
           {
             id: "ch25-lesson-3",
             title: yhLang("Methods of communication", "যোগাযোগের পদ্ধতি"),
-            icon: "fa-people-arrows-left-right",
+            icon: "fa-person-arrows-left-right",
             gradientClass: "bg-gradient-pink",
             audioFile: "",
             content: (function () {
@@ -23400,7 +23400,7 @@ const sexPoints = [
                 const t = String(text || "").trim();
                 switch (t) {
                   case yhLang("Face-to-face conversation", "মুখোমুখি কথা বলা"):
-                    return "fa-people-arrows-left-right";
+                    return "fa-person-arrows-left-right";
                   case yhLang("Phone call", "টেলিফোনে কথা বলা"):
                     return "fa-phone";
                   case yhLang("Lecture", "বক্তৃতা"):
@@ -23483,7 +23483,7 @@ const sexPoints = [
 
                   <header class="m25l3-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
                     <div class="m25l3-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-people-arrows-left-right"></i>
+                      <i class="fa-solid fa-person-arrows-left-right"></i>
                     </div>
                     <div class="m25l3-hero__body">
                       <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Methods of One-to-One Communication", "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ")}</h2>
@@ -23622,7 +23622,7 @@ const sexPoints = [
                   icon: "fa-sun",
                   items: [
                     {
-                      icon: "fa-people-arrows-left-right",
+                      icon: "fa-person-arrows-left-right",
                       text: yhLang(
                         "S: Sit squarely.",
                         "এস = সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা",
