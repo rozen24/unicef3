@@ -417,7 +417,6 @@
 /* Module 13 - Lesson 3: Gender Bias Across Society */
 .ch13l3-slide {
   position: relative;
-  background: linear-gradient(135deg, #fff5f0 0%, #f5f0ff 50%, #f0f5ff 100%);
   border-radius: 20px;
   padding: 12px;
   overflow: hidden;
@@ -956,13 +955,6 @@
   /* Module 13 - Lesson 4: Gender-Based Violence (Tone-Based System) */
   .ch13l4-slide {
     position: relative;
-    background: linear-gradient(
-      135deg,
-      #fff5f0 0%,
-      #fef3f0 40%,
-      #f5f0ff 70%,
-      #f0f5ff 100%
-    );
     border-radius: 24px;
     padding: 20px;
     overflow: hidden;
@@ -1048,8 +1040,8 @@
   }
   .ch13l4-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    gap: 5px;
     position: relative;
     z-index: 1;
   }
@@ -1190,14 +1182,20 @@
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 8px;
+  }
+  .ch13l4-danger .ch13l4-list , .ch13l4-violet .ch13l4-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
   }
   .ch13l4-li {
     padding: 9px 10px;
     border-radius: 10px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
     position: relative;
     overflow: hidden;

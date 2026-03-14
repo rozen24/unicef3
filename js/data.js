@@ -7134,30 +7134,26 @@ const orbitItems = [
               ];
 
               const psychologicalViolence = [
-                { text: yhLang("Verbal abuse and insults", "গালাগালি ও অপমানজনক কথা বলা"), icon: "fa-comment-slash", tone: "violet" },
-                { text: yhLang("Threats or intimidation", "হুমকি বা ভয় দেখানো"), icon: "fa-triangle-exclamation", tone: "warn" },
-                { text: yhLang("Attempts to control", "নিয়ন্ত্রণ করার চেষ্টা"), icon: "fa-microchip", tone: "indigo" },
-                { text: yhLang("Social isolation", "সামাজিকভাবে বিচ্ছিন্ন করা"), icon: "fa-person-hiking", tone: "slate" },
-                { text: yhLang("Separation from family and friends", "পরিবার ও বন্ধুদের থেকে আলাদা করা"), icon: "fa-chain-broken", tone: "violet" },
-                { text: yhLang("Expression of dissatisfaction", "কাজকর্ম নিয়ে অসন্তুষ্টি প্রকাশ"), icon: "fa-circle-xmark", tone: "indigo" }
-              ];
+                { text: yhLang("Separation from family and friends", "সন্দেকোথাও যেতে বাধা দেয়া"), icon: "fa-chain-broken", tone: "violet" },
+                { text: yhLang("Verbal abuse and insults", "গালমন্দ করা"), icon: "fa-comment-slash", tone: "violet" },
+                { text: yhLang("Threats or intimidation", "অপমান করা"), icon: "fa-triangle-exclamation", tone: "warn" },
+                { text: yhLang("Attempts to control", "হেয় করে কথা বলা"), icon: "fa-microchip", tone: "indigo" },
+                { text: yhLang("Social isolation", "বিরক্ত করা"), icon: "fa-person-hiking", tone: "slate" },
+                { text: yhLang("Separation from family and friends", "সন্দেহ করা"), icon: "fa-chain-broken", tone: "violet" },
+                { text: yhLang("Expression of dissatisfaction", "বিভিন্ন ধরনের বাধ্যবাধকতা আরোপ করা"), icon: "fa-circle-xmark", tone: "indigo" },
+                { text: yhLang("Verbal abuse and insults", "মানসিক অশান্তি বা অস্থিরতা করা ইত্যাদি"), icon: "fa-comment-slash", tone: "violet" },
 
-              const financialViolence = [
-                { text: yhLang("Strict control over spending", "অর্থ ব্যয় করা নিয়ে কঠোর নিয়ন্ত্রণ"), icon: "fa-ban", tone: "amber" },
-                { text: yhLang("Preventing from working", "কাজ করতে বাধা দেওয়া"), icon: "fa-briefcase-close", tone: "sun" },
-                { text: yhLang("Forced to deposit income", "আয়ের অর্থ জমা দিতে বাধ্য করা"), icon: "fa-hand-holding-dollar", tone: "warn" },
-                { text: yhLang("Creating problems over loans", "ঋণের নামে ঝামেলা সৃষ্টি"), icon: "fa-money-bill-wave", tone: "amber" },
-                { text: yhLang("Property theft", "সম্পত্তি লুট করা"), icon: "fa-lock", tone: "sun" },
-                { text: yhLang("Dowry related issues", "যৌতুক নিয়ে সমস্যা"), icon: "fa-gift", tone: "warn" }
               ];
 
               const sexualViolence = [
                 { text: yhLang("Rape", "ধর্ষণ"), icon: "fa-exclamation-circle", tone: "danger" },
-                { text: yhLang("Unwanted sexual touch", "যৌন নিষিদ্ধ স্পর্শ"), icon: "fa-hand-fist", tone: "red" },
-                { text: yhLang("Sexual harassment", "যৌন হয়রানি"), icon: "fa-circle-exclamation", tone: "danger" },
-                { text: yhLang("Refusing sexual relations", "যৌন সম্পর্ক অস্বীকার"), icon: "fa-xmark-circle", tone: "red" },
-                { text: yhLang("Forcing unsafe sexual relations", "অনিরাপদ যৌনসম্পর্ক বাধ্য করা"), icon: "fa-shield-exclamation", tone: "danger" }
+                { text: yhLang("Unwanted sexual touch", "ধর্ষণের চেষ্টা"), icon: "fa-hand-fist", tone: "red" },
+                { text: yhLang("Sexual harassment", "দলবদ্ধ ধর্ষণ"), icon: "fa-circle-exclamation", tone: "danger" },
+                { text: yhLang("Refusing sexual relations", "প্রতারণামূলক বিয়ে বা যৌন সম্পর্ক স্থাপন"), icon: "fa-xmark-circle", tone: "red" },
+                { text: yhLang("Forcing unsafe sexual relations", "জোরপূর্বক যৌন ব্যবসায় বাধ্য করা ইত্যাদি"), icon: "fa-shield-exclamation", tone: "danger" },
               ];
+
+
 
               const renderItems = (items, baseDelay = 70) =>
                 items
@@ -7192,44 +7188,33 @@ const orbitItems = [
 
                   <section class="ch13l4-grid" data-aos="fade-up" data-aos-delay="70">
                     <article class="ch13l4-category ch13l4-danger">
-                      <h3 class="ch13l4-subtitle">
+                      <h3 class="ch13l4-subtitle mb-2">
                         <i class="fa-solid fa-hand-fist"></i>
                         ${yhLang("Physical Violence", "শারীরিক নির্যাতন")}
                       </h3>
-                      <p class="ch13l4-category-desc">${yhLang("Actions or behaviors that harm or threaten to harm the victim's life, health, safety or body.", "এমন কোনো কাজ বা আচরণ করা যার দ্বারা ব্যক্তির জীবন, স্বাস্থ্য, নিরাপত্তা বা শরীরের অঙ্গ ক্ষতিগ্রস্ত হয়।")}</p>
+                      <p class="ch13l4-category-desc mb-3">${yhLang("Actions or behaviors that harm or threaten to harm the victim's life, health, safety or body.", "এমন কোনো কাজ বা আচরণ করা, যার দ্বারা সংক্ষুব্ধ ব্যক্তির জীবন, স্বাস্থ্য, নিরাপত্তা বা শরীরের কোনো অঙ্গ ক্ষতিগ্রস্ত হয় অথবা ক্ষতিগ্রস্ত হবার স¤ভাবনা থাকে এবং সংক্ষুব্ধ ব্যক্তিকে অপরাধমূলক কাজ করতে বাধ্য করা বা প্ররোচনা প্রদান করা বা বলপ্রয়োগ যেমন :")}</p>
                       <ul class="ch13l4-list">
                         ${renderItems(physicalViolence, 100)}
                       </ul>
                     </article>
 
                     <article class="ch13l4-category ch13l4-violet">
-                      <h3 class="ch13l4-subtitle">
+                      <h3 class="ch13l4-subtitle mb-2">
                         <i class="fa-solid fa-brain"></i>
                         ${yhLang("Psychological Violence", "মানসিক নির্যাতন")}
                       </h3>
-                      <p class="ch13l4-category-desc">${yhLang("Creating fear, anger or mental suffering through words or actions.", "কথা বা কাজের মাধ্যমে ভয়, ক্রোধ বা মানসিক যন্ত্রণা সৃষ্টি করা।")}</p>
+                      <p class="ch13l4-category-desc mb-3">${yhLang("Creating fear, anger or mental suffering through words or actions.", "নিম্নবর্ণিত বিষয়সমূহ অর্ন্তভুক্ত হবে - <br>ক. মৌখিক নির্যাতন, অপমান, অবজ্ঞা, ভীতি প্রদর্শন বা এমন কোনো উক্তি করা, যা দ্বারা সংক্ষুব্ধ ব্যক্তির মানসিকভাবে ক্ষতি হয় <br>খ. হয়রানি <br>গ. ব্যক্তি স্বাধীনতায় হস্তক্ষেপ অর্থাৎ স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত ইচ্ছা বা মতামত প্রকাশের উপর হস্তক্ষেপ; যেমন :")}</p>
                       <ul class="ch13l4-list">
                         ${renderItems(psychologicalViolence, 160)}
                       </ul>
                     </article>
 
                     <article class="ch13l4-category ch13l4-amber">
-                      <h3 class="ch13l4-subtitle">
-                        <i class="fa-solid fa-money-bill"></i>
-                        ${yhLang("Financial Violence", "আর্থিক নির্যাতন")}
-                      </h3>
-                      <p class="ch13l4-category-desc">${yhLang("Controlling or restricting financial freedom and resources.", "আর্থিক স্বাধীনতা নিয়ন্ত্রণ বা সীমাবদ্ধ করা।")}</p>
-                      <ul class="ch13l4-list">
-                        ${renderItems(financialViolence, 220)}
-                      </ul>
-                    </article>
-
-                    <article class="ch13l4-category ch13l4-danger">
-                      <h3 class="ch13l4-subtitle">
+                      <h3 class="ch13l4-subtitle mb-2">
                         <i class="fa-solid fa-heart-crack"></i>
                         ${yhLang("Sexual Violence", "যৌন নির্যাতন")}
                       </h3>
-                      <p class="ch13l4-category-desc">${yhLang("Forcing sexual acts without consent.", "সম্মতি ছাড়াই যৌন কাজে অংশগ্রহণ করতে বাধ্য করা।")}</p>
+                      <p class="ch13l4-category-desc mb-3">${yhLang("Forcing sexual acts without consent.", "নিপীড়ন যা দ্বারা সংক্ষদ্ধ ব্যক্তির সম্ভ্রম, সন্মান ও সুনামের ক্ষতি হয়। যৌন আকাঙ্ক্ষা ও চাহিদা পূরণে বিশেষ ধরণের নির্যাতন যা শরীর ও মনের উপর সংঘটিত একটি জঘন্যতম অপরাধ। যেমন - ")}</p>
                       <ul class="ch13l4-list">
                         ${renderItems(sexualViolence, 280)}
                       </ul>
