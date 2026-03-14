@@ -1904,7 +1904,7 @@ const coursesData = [
                 },
                 {
                   title: yhLang("Household & community", "পরিবার ও সম্প্রদায়"),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "bg-gradient-emerald",
                   bullets: [
                     yhLang(
@@ -2141,7 +2141,7 @@ const coursesData = [
                     "Adolescent advisory boards co-design spaces, IEC materials and feedback loops.",
                     "কিশোর উপদেষ্টা বোর্ড স্থান, আইইসি উপকরণ ও প্রতিক্রিয়া পদ্ধতি সহ-নকশা করে।",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                 },
               ];
 
@@ -2467,7 +2467,7 @@ const coursesData = [
                     "Adolescents were formally acknowledged as a group with unique SRHR needs.",
                     "তরুন-তরুনীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   cls: "tl-rose",
                   delay: 100,
                 },
@@ -2800,7 +2800,7 @@ const coursesData = [
           {
             id: "ch2-lesson-12",
             title: yhLang("A combined effort", "সমন্বিত প্রচেষ্টা"),
-            icon: "fa-person-group",
+            icon: "fa-people-group",
             gradientClass: "bg-gradient-green",
             audioFile: "",
             quiz: {
@@ -2860,7 +2860,7 @@ const coursesData = [
                     "YHAP ambassadors, youth clubs, disability organisations, faith leaders and media.",
                     "ওয়াইএইচএপি দূত, যুব ক্লাব, প্রতিবন্ধী সংগঠন, ধর্মীয় নেতৃবৃন্দ ও গণমাধ্যম।",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "bg-gradient-rose",
                 },
                 {
@@ -2988,7 +2988,7 @@ const coursesData = [
                     "Create advisory boards, pay youth researchers and embed feedback loops in every programme.",
                     "উপদেষ্টা বোর্ড গঠন, তরুণ গবেষকদের পারিশ্রমিক প্রদান ও প্রতিটি কর্মসূচিতে প্রতিক্রিয়া পদ্ধতি যুক্ত করুন।",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   cls: "bg-gradient-blue",
                   delay: 200,
                 },
@@ -6871,7 +6871,7 @@ const sections = [
       "Gender equality refers to realistic equality where both women and men can participate and be empowered equally in all personal and public spheres. Gender equality does not mean men and women are identical, but it ensures that their rights, opportunities, responsibilities, and risks are equal.",
       "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।"
     ),
-    icon: "fa-person-group",
+    icon: "fa-people-group",
     type: "gender",
   },
   {
@@ -6976,33 +6976,33 @@ const sections = [
               ],
             },
             content: (function () {
-              const biasList = [
-                { text: "সমাজে সকল ক্ষেত্রে, যেমন—শিক্ষা, স্বাস্থ্যসেবা পাওয়ার ক্ষেত্রে মেয়েদের তুলনায় ছেলেদের অগ্রাধিকার", icon: "fa-book", color: "blue" },
-                { text: "পরিবারে কন্যা সন্তান থেকে পুত্র সন্তানের অধিক মূল্যায়ন", icon: "fa-family", color: "rose" },
-                { text: "পরিবারে মেয়েদের তুলনায় ছেলেদের বেশি ও পুষ্টিকর খাবার খেতে দেওয়া", icon: "fa-utensils", color: "green" },
-                { text: "কন্যা সন্তানকে লেখাপড়া শেখাতে বাবা-মায়ের অনীহা, পুত্রের পড়াশোনার জন্য ব্যয় করা", icon: "fa-graduation-cap", color: "teal" },
-                { text: "কন্যা সন্তানকে পরিবারের বোঝা মনে করে অল্প বয়সে বিয়ে দিয়ে দেওয়া", icon: "fa-ring", color: "purple" },
-                { text: "যৌতুক দাবি করা এবং যৌতুকের কারণে মেয়েদের উপর শারীরিক ও মানসিক নির্যাতন করা", icon: "fa-money-bill", color: "tangerine" },
-                { text: "অসুস্থ হলে মেয়েদের স্বাস্থ্যসেবা গ্রহণের ব্যাপারে পরিবারের উদাসীনতা", icon: "fa-hospital", color: "emerald" },
-                { text: "সন্তান গ্রহণ ও নিজের শরীর সম্পর্কে সিদ্ধান্ত নিতে না পারার প্রথা", icon: "fa-venus", color: "blue" },
-                { text: "তারুণ্যে সন্তানধারণ করা", icon: "fa-baby", color: "rose" },
-                { text: "নারীর উপর শারীরিক ও মানসিক নির্যাতন খুব স্বাভাবিকভাবে গ্রহণ করা", icon: "fa-hand-fist", color: "green" },
-                { text: "পুরুষের তুলনায় নারীকে কম পারিশ্রমিক দেওয়া", icon: "fa-coins", color: "teal" }
-              ];
 
-              const orbitItems = [
-                { text: "গর্ভধারণ বিষয়ক জটিলতা থেকে দীর্ঘস্থায়ী অসুস্থতা", icon: "fa-heart-pulse", gradient: "bg-gradient-blue" },
-                { text: "মাতৃমৃত্যু", icon: "fa-cross", gradient: "bg-gradient-rose" },
-                { text: "কন্যাশিশু মৃত্যু", icon: "fa-child", gradient: "bg-gradient-green" },
-                { text: "প্রজননতন্ত্রের প্রদাহ ও যৌনরোগ", icon: "fa-virus", gradient: "bg-gradient-teal" },
-                { text: "রক্তস্বল্পতা", icon: "fa-droplet", gradient: "bg-gradient-purple" },
-                { text: "পুষ্টির অভাবজনিত সমস্যা", icon: "fa-apple", gradient: "bg-gradient-tangerine" },
-                { text: "মানসিক অসুস্থতা", icon: "fa-brain", gradient: "bg-gradient-emerald" },
-                { text: "প্রলম্বিত অসুস্থতা", icon: "fa-person-cane", gradient: "bg-gradient-blue" },
-                { text: "অকাল বার্ধক্য", icon: "fa-hourglass-end", gradient: "bg-gradient-rose" },
-                { text: "অপরিণত বয়সে গর্ভধারণ", icon: "fa-pregnancy", gradient: "bg-gradient-green" }
-              ];
+            const biasList = [
+  { text: yhLang("In all areas of society such as education and healthcare, boys are given more priority than girls", "সমাজে সকল ক্ষেত্রে, যেমন — শিক্ষা, স্বাস্থ্যসেবা পাওয়ার ক্ষেত্রে মেয়েদের তুলনায় ছেলেদের অগ্রাধিকার"), icon: "fa-book", color: "blue" },
+  { text: yhLang("In families, sons are valued more than daughters", "পরিবারে কন্যা সন্তান থেকে পুত্র সন্তানের অধিক মূল্যায়ন"), icon: "fa-person-dress", color: "rose" },
+  { text: yhLang("Boys are given more and more nutritious food than girls in the family", "পরিবারে মেয়েদের তুলনায় ছেলেদের বেশি ও পুষ্টিকর খাবার খেতে দেয়া"), icon: "fa-utensils", color: "green" },
+  { text: yhLang("Parents show reluctance to educate daughters while spending on sons’ education", "কন্যা সন্তানকে লেখাপড়া শেখাতে বাবা-মায়ের অনীহা, পুত্রের পড়াশোনার জন্য ব্যয় করা"), icon: "fa-graduation-cap", color: "teal" },
+  { text: yhLang("Considering daughters a burden and arranging their marriage at an early age", "কন্যা সন্তানকে পরিবারের বোঝা মনে করে অল্প বয়সে বিয়ে দিয়ে দেওয়া"), icon: "fa-ring", color: "purple" },
+  { text: yhLang("Demanding dowry and abusing girls physically and mentally because of dowry", "যৌতুক দাবি করা এবং যৌতুকের কারণে মেয়েদের উপর শারীরিক ও মানসিক নির্যাতন করা"), icon: "fa-money-bill", color: "tangerine" },
+  { text: yhLang("Family negligence in providing healthcare to girls when they are sick", "অসুস্থ হলে মেয়েদের স্বাস্থ্যসেবা গ্রহণের ব্যাপারে পরিবারের উদাসীনতা"), icon: "fa-hospital", color: "emerald" },
+  { text: yhLang("Women being unable to make decisions about childbirth and their own bodies", "সন্তান গ্রহণ ও নিজের শরীর সম্পর্কে সিদ্ধান্ত নিতে না পারার প্রথা"), icon: "fa-venus", color: "blue" },
+  { text: yhLang("Childbearing during adolescence", "তারুণ্যে সন্তানধারণ করা"), icon: "fa-baby", color: "rose" },
+  { text: yhLang("Physical and mental abuse of women being treated as normal", "নারীর উপর শারীরিক ও মানসিক নির্যাতন খুব স্বাভাবিকভাবে গ্রহণ করা"), icon: "fa-hand-fist", color: "green" },
+  { text: yhLang("Women being paid less than men", "পুরুষের তুলনায় নারীকে কম পারিশ্রমিক দেওয়া"), icon: "fa-coins", color: "teal" }
+];
 
+const orbitItems = [
+  { text: yhLang("Long-term illness due to pregnancy-related complications", "গর্ভধারণ বিষয়ক জটিলতা থেকে দীর্ঘস্থায়ী অসুস্থতা"), icon: "fa-heart-pulse", gradient: "bg-gradient-blue" },
+  { text: yhLang("Maternal death", "মাতৃমৃত্যু"), icon: "fa-cross", gradient: "bg-gradient-rose" },
+  { text: yhLang("Death of girl child", "কন্যাশিশু মৃত্যু"), icon: "fa-child", gradient: "bg-gradient-green" },
+  { text: yhLang("Anemia", "রক্তস্বল্পতা"), icon: "fa-droplet", gradient: "bg-gradient-purple" },
+  { text: yhLang("Reproductive infections and sexually transmitted diseases", "প্রজননতন্ত্রের প্রদাহ ও যৌনরোগ"), icon: "fa-virus", gradient: "bg-gradient-teal" },
+  { text: yhLang("Malnutrition-related problems", "পুষ্টির অভাবজনিত সমস্যা"), icon: "fa-apple", gradient: "bg-gradient-tangerine" },
+  { text: yhLang("Mental illness", "মানসিক অসুস্থতা"), icon: "fa-brain", gradient: "bg-gradient-emerald" },
+  { text: yhLang("Prolonged illness", "প্রলম্বিত অসুস্থতা"), icon: "fa-person-cane", gradient: "bg-gradient-blue" },
+  { text: yhLang("Premature aging", "অকাল বার্ধক্য"), icon: "fa-hourglass-end", gradient: "bg-gradient-rose" },
+  { text: yhLang("Pregnancy at an immature age", "অপরিণত বয়সে গর্ভধারণ"), icon: "fa-person-pregnant", gradient: "bg-gradient-green" }
+];
 
 
               const renderBiasList = () => {
@@ -7055,10 +7055,7 @@ const sections = [
 
                   <div class="ch13l3-content" data-aos="fade-up" data-aos-delay="80">
                     <div class="ch13l3-left">
-                      <h3 class="ch13l3-section-title">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        ${yhLang("Biases in Society", "সমাজে বৈষম্যের ধরন")}
-                      </h3>
+              
                       <ul class="ch13l3-bias-list">
                         ${biasListHTML}
                       </ul>
@@ -7496,7 +7493,7 @@ const sections = [
                     "Depriving the complainant of using or enjoying resources and benefits due to family relations; or hindering them from exercising legitimate rights, such as:",
                     "পারিবারিক সম্পর্কের কারণে যেকোনো সম্পদ বা সুযোগ-সুবিধা দিতে সংক্ষুব্ধ ব্যক্তির ব্যবহার বা ভোগ দখলের অধিকার রয়েছে তা থেকে তাকে বঞ্চিত করা বা এর উপর তার বৈধ অধিকার প্রয়োগে বাধা প্রদান যেমন -"
                   ),
-                  icon: "fa-family",
+                  icon: "fa-person-dress",
                   type: "type3",
                   subPoints: [
                     yhLang("Demanding dowry", "যৌতুক দাবি করা"),
@@ -7609,7 +7606,7 @@ const sections = [
                     "Girls and boys should grow up with equal status and freedom, identified only as human beings",
                     "সম মর্যাদা, স্বাধীনতা নিয়ে নারী-পুরুষ বেড়ে উঠবে, যার পরিচয় হবে শুধু মানুষ হিসেবে"
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   type: "type2"
                 },
                 {
@@ -7828,7 +7825,7 @@ const sections = [
                         "Most youth in Bangladesh face lower socioeconomic positions, unemployment, and hopelessness. Socially unestablished, dependent, and depressed individuals are more likely to abuse. Poor socialization and childhood exposure to violence increase the risk.",
                         "বাংলাদেশে যুবসমাজের অধিকাংশই নিম্ন আর্থ-সামাজিক অবস্থানের কারণে এবং বেকার ও হতাশাব্যঞ্জক জীবনযাপন করে থাকে। আবার সামাজিকভাবে অপ্রতিষ্ঠিত, পরনির্ভরশীল, হীনমন্য ও হতাশাগ্রস্থ ব্যক্তিরা এই ধরণের অনাকাঙ্ক্ষিত আচরণ করে থাকে। সুস্থ সামাজিকীকরণের অভাবেও এই ধরনের ঘটনা ঘটে থাকে।"
                       ),
-                      icon: "fa-person-group",
+                      icon: "fa-people-group",
                       type: "type1"
                     }
                   ]
@@ -8046,7 +8043,7 @@ const sections = [
                     { num: "1", title: yhLang("Physical Effects", "শারীরিক প্রভাব"), text: yhLang("Headaches, loss of appetite, nausea, insomnia, and other health complications", "মাথা ব্যথা, ক্ষুধামন্দা, বমি-বমিভাব, অনিদ্রা ইত্যাদি"), icon: "fa-heart-pulse", type: "type1" },
                     { num: "2", title: yhLang("Mental Effects", "মানসিক প্রভাব"), text: yhLang("Anxiety, depression, low mood, irritability, anger, fear, shame, guilt, suicidal thoughts, distrust of others", "দুশ্চিন্তা, মনমরা, বিষণ্নতা, বিরক্তিবোধ, আত্মহত্যার চিন্তা প্রভৃতি"), icon: "fa-head-side-virus", type: "type2" },
                     { num: "3", title: yhLang("Behavioral Effects", "আচরণগত প্রভাব"), text: yhLang("Crying, inability to concentrate, avoidance of crowded places and public transport", "কান্নাকাটি, মনোযোগ না দিতে পারা, জনসমাগম এড়িয়ে চলা"), icon: "fa-child", type: "type3" },
-                    { num: "4", title: yhLang("Social Effects", "সামাজিক প্রভাব"), text: yhLang("Social disgrace, family shame, withdrawal from social activities, forced early marriage", "সমাজে লজ্জা, পারিবারিক বদনাম, সামাজিক কর্ম থেকে দূরে থাকা"), icon: "fa-person-group", type: "type1" }
+                    { num: "4", title: yhLang("Social Effects", "সামাজিক প্রভাব"), text: yhLang("Social disgrace, family shame, withdrawal from social activities, forced early marriage", "সমাজে লজ্জা, পারিবারিক বদনাম, সামাজিক কর্ম থেকে দূরে থাকা"), icon: "fa-people-group", type: "type1" }
                   ]
                 },
                 {
@@ -8370,7 +8367,7 @@ const sections = [
                   <section class="m14l1-grid" data-aos="fade-up" data-aos-delay="70">
                     <article class="m14l1-card m14l1-card-social">
                       <h3 class="m14l1-subtitle">
-                        <i class="fa-solid fa-person-group"></i>
+                        <i class="fa-solid fa-people-group"></i>
                         ${yhLang("Social adjustments", "সামাজিক পরিবর্তনসমূহ")}
                       </h3>
                       <ul class="m14l1-list">
@@ -8699,7 +8696,7 @@ const sections = [
                             <span class="m14lem-ei-li-text">${yhLang("Understand others' emotions and treat them with sensitivity.", "অন্যদের আবেগগুলো বুঝতে পারা এবং তাদের সাথে সংবেদনশীলভাবে আচরণ করা।")}</span>
                           </li>
                           <li class="m14lem-ei-li m14lem-ei-violet" data-aos="fade-left" data-aos-delay="70">
-                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-person-group"></i></span>
+                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-people-group"></i></span>
                             <span class="m14lem-ei-li-text">${yhLang("Build good relationships with others through emotional intelligence.", "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা।")}</span>
                           </li>
                         </ul>
@@ -9012,7 +9009,7 @@ const sections = [
                     "Build healthier relationships through emotional intelligence.",
                     "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   tone: "accent",
                 },
               ];
@@ -9540,7 +9537,7 @@ const sections = [
                     "Talk with trusted people",
                     "বিশ্বস্ত বন্ধুএবং পরিবারের সদস্যদের সাথে সুন্দর সময় অতিবাহিত করা",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   tone: "success",
                 },
                 {
@@ -10005,7 +10002,7 @@ const sections = [
                     "Lack of social support",
                     "সামাজিক সমর্থনের অভাব",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   tone: "slate",
                 },
                 {
@@ -12517,7 +12514,7 @@ const sections = [
                   ),
                 },
                 {
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "m16l1-benefit-c",
                   text: yhLang(
                     "Improves healthy communication and social connection.",
@@ -12605,7 +12602,7 @@ const sections = [
               "মনোসামাজিক সহায়তার দক্ষতাসমূহ",
             ),
             icon: "fa-person-arrows",
-            gradientClass: "fa-solid fa-person-group",
+            gradientClass: "fa-solid fa-people-group",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -12678,7 +12675,7 @@ const sections = [
                   ),
                 },
                 {
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "m16l2-outcome-trust",
                   text: yhLang(
                     "It helps build a strong relationship between beneficiary and helper.",
@@ -12711,7 +12708,7 @@ const sections = [
 
                   <section class="m16l2-hero" data-aos="fade-down">
                     <div class="m16l2-hero__badge" aria-hidden="true">
-                      <i class="fa-solid fa-person-group"></i>
+                      <i class="fa-solid fa-people-group"></i>
                     </div>
                     <div class="m16l2-hero__content">
                       <h2 class="m16l2-hero__title">${yhLang(
@@ -18829,7 +18826,7 @@ const sections = [
                   ),
                 },
                 {
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "#f57c00",
                   text: yhLang(
                     "<strong>Enhancing Social Engagement:</strong> Implement activities that help youth build connections and strengthen engagement with their community.",
@@ -20068,7 +20065,7 @@ const sections = [
                   .map(
                     (item, idx) => `
                       <li style="background:${idx % 2 === 0 ? "rgba(255,255,255,.66)" : "rgba(224,242,241,.72)"};border-left:3px solid ${idx % 2 === 0 ? "#26a69a" : "#00acc1"};border-radius:9px;padding:10px 8px;margin-bottom:px;box-shadow:${idx % 2 === 0 ? "0 4px 10px rgba(0,150,136,.15)" : "0 5px 12px rgba(0,172,193,.14)"};">
-                        <i class="fa-solid ${idx < 2 ? "fa-soap" : idx < 4 ? "fa-droplet" : "fa-person-group"} ${idx < 2 ? "text-success" : idx < 4 ? "text-info" : "text-primary"} me-2"></i>
+                        <i class="fa-solid ${idx < 2 ? "fa-soap" : idx < 4 ? "fa-droplet" : "fa-people-group"} ${idx < 2 ? "text-success" : idx < 4 ? "text-info" : "text-primary"} me-2"></i>
                         <span style="">${item}</span>
                       </li>
                     `,
@@ -20097,7 +20094,7 @@ const sections = [
                           </div>
                           <div class="hygiene-list">
                             <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;font-size:0.98em;margin-bottom:6px;">
-                             <h3> <i class="fa-solid fa-person-group me-2" style="font-size:20px;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}</h3>
+                             <h3> <i class="fa-solid fa-people-group me-2" style="font-size:20px;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}</h3>
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(communityActions)}
@@ -21557,7 +21554,7 @@ const sections = [
                     "Avoid crowded places",
                     "জনসমাগম হয় এমন জায়গা এড়িয়ে চলা",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                 },
                 {
                   text: yhLang(
@@ -22488,7 +22485,7 @@ const sections = [
                       <section class="m24l1-panel m24l1-panel-help" data-aos="fade-up" data-aos-delay="600">
                         <h3 class="m24l1-section-heading">
                           <span class="m24l1-heading-icon m24l1-icon-help">
-                            <i class="fa-solid fa-person-group"></i>
+                            <i class="fa-solid fa-people-group"></i>
                           </span>
                           <span class="m24l1-heading-text">${yhLang("Who Can Help Teach?", "কারা জীবন দক্ষতা শেখাতে সাহায্য করতে পারেন ?")}</span>
                         </h3>
@@ -22975,7 +22972,7 @@ const sections = [
                   ),
                 },
                 {
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   accent: "m24l11-item--c",
                   text: yhLang(
                     "Life skills education (through group activities) helps build moral thinking and responsible behavior.",
