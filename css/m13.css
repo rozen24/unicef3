@@ -2396,9 +2396,6 @@
 }
 
 .ch13l8-content {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
   position: relative;
   z-index: 1;
 }
@@ -2565,7 +2562,12 @@
   margin: 0;
   line-height: 1.2;
 }
-
+.mohila .ch13l8-li-title , .social .ch13l8-li-title{
+  display: none !important;
+}
+.social .ch13l8-section-desc {
+  display: none !important;
+}
 .ch13l8-li-text {
   font-size: 0.7rem;
   line-height: 1.35;

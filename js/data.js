@@ -7757,8 +7757,9 @@ const orbitItems = [
             content: (function () {
               const sections = [
                 {
+                  class_name: "sohingsota",
                   title: yhLang("What is Violence or Abuse?", "সহিংসতা বা নির্যাতন কী?"),
-                  icon: "fa-exclamation-circle",
+                  icon: "fa-shield-halved",
                   description: yhLang(
                     "Violence or abuse is the intentional use of physical force or power against oneself or another person, which may be threatened or actual. It can be directed against an individual or a group, resulting in injury, death, psychological harm, developmental impairment, or deprivation. Every 10 minutes, one adolescent girl dies due to violence worldwide.",
                     "সহিংসতা বা নির্যাতন হলো কারো বিরুদ্ধে ইচ্ছাকৃতভাবে দেহের শক্তি বা বল প্রয়োগ করা, যা হুমকি বা সত্যিকারের হতে পারে। এই সহিংসতা যেমন ব্যক্তিকেন্দ্রিক হতে পারে ঠিক তেমনিভাবে কোনো দল বা জনসমাজের বিরুদ্ধেও হতে পারে, যার পরিণাম হিসেবে এর শিকার ব্যক্তির মারাত্মক জখম হতে পারে, মারা যেতে পারে, মানসিক ক্ষতি হতে পারে, দেহের বিকাশ অস্বাভাবিক হতে পারে অথবা এর শিকার ব্যক্তি বা গোষ্ঠী কোনোকিছু থেকে বঞ্চিতও হতে পারে। বিশ্বে এই সহিংসতার ফলে প্রতি ১০ মিনিটে একজন কিশোরীর মৃত্যু হয়।"
@@ -7799,24 +7800,26 @@ const orbitItems = [
                       title: yhLang("Social Causes", "সামাজিক কারণ"),
                       text: yhLang(
                         "Most youth in Bangladesh face lower socioeconomic positions, unemployment, and hopelessness. Socially unestablished, dependent, and depressed individuals are more likely to abuse. Poor socialization and childhood exposure to violence increase the risk.",
-                        "বাংলাদেশে যুবসমাজের অধিকাংশই নিম্ন আর্থ-সামাজিক অবস্থানের কারণে এবং বেকার ও হতাশাব্যঞ্জক জীবনযাপন করে থাকে। আবার সামাজিকভাবে অপ্রতিষ্ঠিত, পরনির্ভরশীল, হীনমন্য ও হতাশাগ্রস্থ ব্যক্তিরা এই ধরণের অনাকাঙ্ক্ষিত আচরণ করে থাকে। সুস্থ সামাজিকীকরণের অভাবেও এই ধরনের ঘটনা ঘটে থাকে।"
+                        "বাংলাদেশে যুবসমাজের অধিকাংশই নিম্ন আর্থ-সামাজিক অবস্থানের কারণে এবং বেকার ও হতাশাব্যঞ্জক জীবনযাপন করে থাকে। আবার সামাজিকভাবে অপ্রতিষ্ঠিত, পরনির্ভরশীল, হীনমন্য ও হতাশাগ্রস্থ ব্যক্তিরা এই ধরণের অনাকাঙ্ক্ষিত আচরণ করে থাকে। সুস্থ সামাজিকীকরণের অভাবেও এই ধরনের ঘটনা ঘটে থাকে, যেমন : শৈশবকাল থেকে যখন বয়ঃজেষ্ঠ্যদের কোনো মেয়ের সাথে অন্যায় আচরণ করতে দেখে তখন সে এই বিষয়ে উৎসাহী হয়।"
                       ),
                       icon: "fa-people-group",
                       type: "type1"
                     }
                   ]
-                },
-                {
+                }
+   
+              ];
+              
+                const sections2 = [
+                  { 
+                  class_name: "mohila",
                   title: yhLang("Women & Child Welfare Ministry - Violence Prevention Program", "মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের নারী নির্যাতন প্রতিরোধ ও প্রতিকার কর্মসূচি"),
                   icon: "fa-hospital",
-                  description: yhLang(
-                    "The government provides comprehensive support services for abuse victims through various programs and centers.",
-                    "সরকার বিভিন্ন প্রোগ্রাম এবং কেন্দ্রের মাধ্যমে নির্যাতনের শিকারদের জন্য ব্যাপক সহায়তা সেবা প্রদান করে।"
-                  ),
+                  description: '',
                   items: [
                     {
-                      num: "1",
-                      title: yhLang("One-Stop Crisis Centers", "ওয়ান-স্টপ ক্রাইসিস সেন্টার"),
+                      num: "",
+                      title: '',
                       text: yhLang(
                         "14 medical colleges provide free medical treatment, psychosocial counseling, police and legal services, rehabilitation and reintegration at divisional and district levels for physical, mental, sexual, and burn victims.",
                         "শারীরিক, মানসিক ও যৌন এবং দগ্ধ নির্যাতনের শিকার নারী, শিশু ও কিশোরীদের জন্য বিনামূল্যে একই স্থানে চিকিৎসা, মনোসামাজিক কাউন্সেলিং, পুলিশী এবং আইনী সেবা প্রদানে বিভাগীয় ও জেলা পর্যায়ে চৌদ্দটি মেডিকেল কলেজে ওয়ান-স্টপ ক্রাইসিস সেন্টার রয়েছে।"
@@ -7825,8 +7828,8 @@ const orbitItems = [
                       type: "type2"
                     },
                     {
-                      num: "2",
-                      title: yhLang("Crisis Cells", "ক্রাইসিস সেল"),
+                      num: "",
+                      title: '',
                       text: yhLang(
                         "47 district-level and 20 upazila-level One-Stop Crisis Cells provide emergency support and services.",
                         "সাতচল্লিশ টি জেলা পর্যায়ে ও বিশটি উপজেলা পর্যায়ে ওয়ান-স্টপ ক্রাইসিস সেল জরুরি সহায়তা প্রদান করে।"
@@ -7857,19 +7860,17 @@ const orbitItems = [
                   ]
                 },
                 {
+                  class_name: "social",
                   title: yhLang("Ministry of Social Welfare - Programs", "সমাজকল্যাণ মন্ত্রণালয় কর্তক গৃহীত কর্মসূচি"),
                   icon: "fa-hand-holding-heart",
-                  description: yhLang(
-                    "Social welfare programs provide comprehensive support and protection to vulnerable populations.",
-                    "সামাজিক কল্যাণ কর্মসূচি দুর্বল জনগোষ্ঠীকে ব্যাপক সহায়তা এবং সুরক্ষা প্রদান করে।"
-                  ),
+                  description: "",
                   items: [
                     {
                       num: "1",
                       title: yhLang("Social Safety Net", "সামাজিক নিরাপত্তা বেষ্টনি"),
                       text: yhLang(
                         "Social security belt programs provide financial and social assistance to vulnerable groups.",
-                        "সামাজিক নিরাপত্তা বেষ্টনি কাজকর্মের মাধ্যমে দুর্বল গোষ্ঠীকে আর্থিক ও সামাজিক সহায়তা প্রদান করা হয়।"
+                        "সামাজিক নিরাপত্তা বেষ্টনি কার্যক্রম"
                       ),
                       icon: "fa-shield",
                       type: "type3"
@@ -7879,7 +7880,7 @@ const orbitItems = [
                       title: yhLang("Child Helpline 1098", "চাইল্ড হেল্পলাইন ১০৯৮"),
                       text: yhLang(
                         "Child Helpline 1098 (Toll Free) provides immediate support and assistance to children in distress.",
-                        "চাইল্ড হেল্পলাইন ১০৯৮ (টোল ফ্রি) শিশুদের জরুরি সহায়তা এবং সেবা প্রদান করে।"
+                        "চাইল্ড হেল্পলাইন ১০৯৮ (টোল ফ্রি)"
                       ),
                       icon: "fa-child",
                       type: "type1"
@@ -7889,26 +7890,54 @@ const orbitItems = [
                       title: yhLang("Counselor Services", "কাউন্সেলর সেবা"),
                       text: yhLang(
                         "Psychosocial counselors and social workers provide nationwide services across all districts and upazillas.",
-                        "মনোসামাজিক কাউন্সেলর ও সোশ্যাল ওয়ার্কার কর্তক দেশব্যাপী সেবা প্রদান করা হয়।"
+                        "দেশব্যাপী সেবা প্রদান"
                       ),
                       icon: "fa-comments",
                       type: "type2"
                     }
                   ]
                 }
+   
               ];
 
-              const renderSections = () =>
+              const renderSections1 = () =>
                 sections
                   .map((section, secIdx) => `
                     <div class="ch13l8-section" data-aos="fade-up" data-aos-delay="${80 + secIdx * 40}">
-                      <h3 class="ch13l8-section-title">
+                      <h3 class="ch13l8-section-title my-2">
                         <i class="fa-solid ${section.icon}"></i>
                         ${section.title}
                       </h3>
-                      <p class="ch13l8-section-desc">${section.description}</p>
-                      <ul class="ch13l8-list">
+                      <p class="ch13l8-section-desc mb-3">${section.description}</p>
+                      <ul class="ch13l8-list ${section.class_name}">
                         ${section.items
+                          .map(
+                            (item, idx) => `
+                          <li class="ch13l8-li ch13l8-li-${item.type}" data-aos="fade-left" data-aos-delay="${100 + secIdx * 40 + idx * 15}">
+                            <span class="ch13l8-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                            <span class="ch13l8-li-content">
+                              <strong class="ch13l8-li-title">${item.num}. ${item.title}</strong>
+                              <span class="ch13l8-li-text">${item.text}</span>
+                            </span>
+                          </li>
+                        `
+                          )
+                          .join("")}
+                      </ul>
+                    </div>
+                  `)
+                  .join("");
+              const renderSections2 = () =>
+                sections2
+                  .map((section2, secIdx) => `
+                    <div class="ch13l8-section mb-4" data-aos="fade-up" data-aos-delay="${80 + secIdx * 40}">
+                      <h3 class="ch13l8-section-title my-2">
+                        <i class="fa-solid ${section2.icon}"></i>
+                        ${section2.title}
+                      </h3>
+                      <p class="ch13l8-section-desc">${section2.description}</p>
+                      <ul class="ch13l8-list ${section2.class_name}">
+                        ${section2.items
                           .map(
                             (item, idx) => `
                           <li class="ch13l8-li ch13l8-li-${item.type}" data-aos="fade-left" data-aos-delay="${100 + secIdx * 40 + idx * 15}">
@@ -7934,22 +7963,24 @@ const orbitItems = [
                   <span class="ch13l8-shape ch13l8-shape-b" aria-hidden="true"></span>
                   <span class="ch13l8-shape ch13l8-shape-c" aria-hidden="true"></span>
 
-                  <header class="ch13l8-header" data-aos="fade-up">
+                  <header class="ch13l8-header d-none" data-aos="fade-up">
                     <h2 class="ch13l8-title">
                       <i class="fa-solid fa-shield-halved"></i>
                       ${yhLang("Violence or Abuse", "সহিংসতা বা নির্যাতন")}
                     </h2>
                   </header>
 
-                  <section class="ch13l8-intro-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="ch13l8-intro-text">${yhLang(
-                      "Understanding violence, its causes, and the support systems available is crucial for prevention and protection.",
-                      "সহিংসতা, এর কারণ এবং উপলব্ধ সহায়তা ব্যবস্থা বোঝা প্রতিরোধ এবং সুরক্ষার জন্য অত্যন্ত গুরুত্বপূর্ণ।"
-                    )}</p>
-                  </section>
-
                   <section class="ch13l8-content" data-aos="fade-up" data-aos-delay="60">
-                    ${renderSections()}
+                  <div class="row g-1">
+                       <div class="col-md-6 mb-4">
+                            ${renderSections1()}
+                       </div>
+                       <div class="col-md-6 mb-4">
+                         ${renderSections2()}
+                       </div>
+                    </div>
+                    
+                    
                   </section>
                 </div>
               `;
