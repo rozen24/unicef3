@@ -7130,7 +7130,7 @@ const orbitItems = [
                 { text: yhLang("Pushing", "ধাক্কা দেওয়া"), icon: "fa-hand-back-fist", tone: "danger" },
                 { text: yhLang("Choking", "গলা চিপে ধরা"), icon: "fa-hands", tone: "red" },
                 { text: yhLang("Hair pulling", "চুলের মুঠি ধরে টানা"), icon: "fa-hand-fist", tone: "warn" },
-                { text: yhLang("Slapping, spanking etc.", "চড়, থাপ্পড় ইত্যাদি"), icon: "fa-hand-raised", tone: "danger" }
+                { text: yhLang("Slapping, spanking etc.", "চড়, থাপ্পড় ইত্যাদি"), icon: "fa-hand", tone: "danger" }
               ];
 
               const psychologicalViolence = [
@@ -7138,7 +7138,7 @@ const orbitItems = [
                 { text: yhLang("Verbal abuse and insults", "গালমন্দ করা"), icon: "fa-comment-slash", tone: "violet" },
                 { text: yhLang("Threats or intimidation", "অপমান করা"), icon: "fa-triangle-exclamation", tone: "warn" },
                 { text: yhLang("Attempts to control", "হেয় করে কথা বলা"), icon: "fa-microchip", tone: "indigo" },
-                { text: yhLang("Social isolation", "বিরক্ত করা"), icon: "fa-person-hiking", tone: "slate" },
+                { text: yhLang("Social isolation", "বিরক্ত করা"), icon: "fa-person-burst", tone: "slate" },
                 { text: yhLang("Separation from family and friends", "সন্দেহ করা"), icon: "fa-chain-broken", tone: "violet" },
                 { text: yhLang("Expression of dissatisfaction", "বিভিন্ন ধরনের বাধ্যবাধকতা আরোপ করা"), icon: "fa-circle-xmark", tone: "indigo" },
                 { text: yhLang("Verbal abuse and insults", "মানসিক অশান্তি বা অস্থিরতা করা ইত্যাদি"), icon: "fa-comment-slash", tone: "violet" },
@@ -7150,7 +7150,7 @@ const orbitItems = [
                 { text: yhLang("Unwanted sexual touch", "ধর্ষণের চেষ্টা"), icon: "fa-hand-fist", tone: "red" },
                 { text: yhLang("Sexual harassment", "দলবদ্ধ ধর্ষণ"), icon: "fa-circle-exclamation", tone: "danger" },
                 { text: yhLang("Refusing sexual relations", "প্রতারণামূলক বিয়ে বা যৌন সম্পর্ক স্থাপন"), icon: "fa-xmark-circle", tone: "red" },
-                { text: yhLang("Forcing unsafe sexual relations", "জোরপূর্বক যৌন ব্যবসায় বাধ্য করা ইত্যাদি"), icon: "fa-shield-exclamation", tone: "danger" },
+                { text: yhLang("Forcing unsafe sexual relations", "জোরপূর্বক যৌন ব্যবসায় বাধ্য করা ইত্যাদি"), icon: "fa-shield", tone: "danger" },
               ];
 
 
@@ -7336,7 +7336,7 @@ const orbitItems = [
                     "Forcing exclusion from sports, cultural, institutional or educational activities due to sexual harassment",
                     "যৌন নিপীড়ন বা হয়রানির উদ্দেশ্য খেলাধুলা, সাংস্কৃতিক, প্রাতিষ্ঠানিক এবং শিক্ষাগত কার্যক্রমে অংশগ্রহণ থেকে বিরত থাকতে বাধ্য করা"
                   ),
-                  icon: "fa-person-hiking",
+                  icon: "fa-person-burst",
                   type: "type3"
                 },
                 {
@@ -7715,18 +7715,9 @@ const orbitItems = [
                     </h2>
                   </header>
 
-                  <section class="ch13l7-card-intro" data-aos="fade-up" data-aos-delay="40">
-                    <p class="ch13l7-p">${yhLang(
-                      "Addressing gender discrimination requires concerted efforts from all levels of society. Here are the key steps to create an equitable and just society.",
-                      "জেন্ডার বৈষম্য দূর করতে সমাজের সকল স্তর থেকে সমন্বিত প্রচেষ্টা প্রয়োজন। নিম্নে একটি সমতাপূর্ণ এবং ন্যায্য সমাজ গড়ার জন্য প্রধান পদক্ষেপসমূহ দেওয়া হল।"
-                    )}</p>
-                  </section>
 
                   <section data-aos="fade-up" data-aos-delay="60">
-                    <h3 class="ch13l7-action-title">
-                      <i class="fa-solid fa-list-check"></i>
-                      ${yhLang("Key Action Steps", "প্রধান পদক্ষেপসমূহ")}
-                    </h3>
+                    
                     <ul class="ch13l7-list">
                       ${renderItems()}
                     </ul>
@@ -9234,7 +9225,7 @@ const orbitItems = [
                 },
                 {
                   text: yhLang("Guilt", "অপরাধবোধ"),
-                  icon: "fa-person-hiking",
+                  icon: "fa-person-burst",
                   tone: "peach",
                 },
                 {
@@ -14465,7 +14456,7 @@ const orbitItems = [
                     "If clothes catch fire, tell person to lie down and roll on ground",
                     "শরীরে আগুন লাগলে জ্বলন্ত ব্যক্তিটিকে মাটিতে শুয়ে গড়াগড়ি দিতে বলতে হবে",
                   ),
-                  icon: "fa-person-hiking",
+                  icon: "fa-person-burst",
                   color: "m18l4-step-fire",
                 },
               ];
@@ -15348,7 +15339,7 @@ const orbitItems = [
                     "Place on firm, flat surface facing upward",
                     "আক্রান্ত ব্যক্তিকে শক্ত ও সমতল স্থানে মুখ উপরের দিকে করে শুইয়ে দিতে হবে।",
                   ),
-                  icon: "fa-person-hiking",
+                  icon: "fa-person-burst",
                   color: "m18l9-rescue-position",
                 },
                 {
@@ -20885,7 +20876,7 @@ const orbitItems = [
                     "Muscle and joint pain",
                     "মাংসপেশি এবং অস্থি-সন্ধিতে ব্যথা",
                   ),
-                  icon: "fa-person-hiking",
+                  icon: "fa-person-burst",
                 },
                 { text: yhLang("Nausea", "বমিভাব"), icon: "fa-stomach" },
                 { text: yhLang("Dizziness", "মাথাঘোরা"), icon: "fa-head-side" },
@@ -21657,7 +21648,7 @@ const orbitItems = [
                   <div class="section_wrap lession_6">
                     <section class="m23l6-panel glass-card" data-aos="fade-up" data-aos-delay="80">
                       <h3 class="m23l6-section-title" data-aos="fade-up" data-aos-delay="100">
-                        <i class="fa-solid fa-person-hiking"></i>${yhLang("Personal Awareness", "ব্যক্তিগত সচেতনতা")}
+                        <i class="fa-solid fa-person-burst"></i>${yhLang("Personal Awareness", "ব্যক্তিগত সচেতনতা")}
                       </h3>
                       <ul class="list-unstyled m23l6-list mb-0">
                         ${renderPoints(section1, 140)}
@@ -21766,7 +21757,7 @@ const orbitItems = [
                 },
                 {
                   text: yhLang("Body weakness", "শরীর দুর্বল হয়ে যাওয়া"),
-                  icon: "fa-person-hiking",
+                  icon: "fa-person-burst",
                 },
                 {
                   text: yhLang("Nasal congestion", "নাক বন্ধ হয়ে যাওয়া"),

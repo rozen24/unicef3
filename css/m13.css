@@ -250,7 +250,7 @@
   box-shadow: 0 6px 16px rgba(100, 100, 150, 0.1);
   margin-bottom: 12px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
 }
@@ -1243,6 +1243,7 @@
     font-size: 0.75rem;
     color: #fff;
     margin-top: 2px;
+    background: #931111;
   }
   .ch13l4-li.ch13l4-danger .ch13l4-li-icon {
     background: linear-gradient(135deg, #ff6b9d, #ff4081);
@@ -1345,7 +1346,6 @@
 /* Module 13 - Lesson 5: Sexual Harassment */
 .ch13l5-slide {
   position: relative;
-  background: linear-gradient(135deg, #fff4f0 0%, #ffe6f0 40%, #f0f4ff 70%, #f4f0ff 100%);
   border-radius: 24px;
   padding: 20px;
   overflow: hidden;
@@ -1479,16 +1479,16 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .ch13l5-li {
   padding: 9px 10px;
   border-radius: 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   position: relative;
   overflow: hidden;
@@ -1791,7 +1791,7 @@
   padding: 9px 10px;
   border-radius: 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   position: relative;
   overflow: hidden;
@@ -1902,7 +1902,7 @@
   padding: 7px 8px;
   border-radius: 8px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 6px;
   font-size: 0.75rem;
   line-height: 1.3;
@@ -2005,9 +2005,8 @@
 /* Module 13 - Lesson 7: Steps to Eliminate Gender Discrimination */
 .ch13l7-slide {
   position: relative;
-  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 40%, #ede9fe 70%, #f5f3ff 100%);
   border-radius: 24px;
-  padding: 20px;
+  padding: 5px 20px;
   overflow: hidden;
   border: 1px solid rgba(168, 85, 247, 0.08);
 }
@@ -2133,7 +2132,7 @@
   padding: 10px 11px;
   border-radius: 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 9px;
   position: relative;
   overflow: hidden;
@@ -2461,7 +2460,7 @@
   padding: 8px 9px;
   border-radius: 9px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   position: relative;
   overflow: hidden;
@@ -2830,7 +2829,7 @@
   padding: 5px 6px;
   border-radius: 7px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 5px;
   position: relative;
   overflow: hidden;
