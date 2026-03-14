@@ -1285,7 +1285,6 @@
       font-size: 0.65rem;
     }
   }
-}
 
 /* Module 13 - Lesson 5: Sexual Harassment */
 .ch13l5-slide {
@@ -2254,8 +2253,8 @@
 .ch13l8-slide {
   position: relative;
   background: linear-gradient(135deg, #fff5f5 0%, #ffe0e6 40%, #f5f0ff 70%, #f0f5ff 100%);
-  border-radius: 18px;
-  padding: 14px;
+  border-radius: 24px;
+  padding: 20px;
   overflow: hidden;
   border: 1px solid rgba(220, 38, 38, 0.08);
 }
@@ -2268,24 +2267,24 @@
 }
 
 .ch13l8-shape-a {
-  width: 140px;
-  height: 140px;
-  top: -50px;
-  right: -35px;
+  width: 180px;
+  height: 180px;
+  top: -60px;
+  right: -40px;
   background: linear-gradient(135deg, #dc2626, #b91c1c);
 }
 
 .ch13l8-shape-b {
-  width: 120px;
-  height: 120px;
-  bottom: -40px;
-  left: -25px;
+  width: 150px;
+  height: 150px;
+  bottom: -50px;
+  left: -30px;
   background: linear-gradient(135deg, #f87171, #ef4444);
 }
 
 .ch13l8-shape-c {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   top: 50%;
   left: 40%;
   background: linear-gradient(135deg, #fb923c, #f97316);
@@ -2294,48 +2293,48 @@
 .ch13l8-header {
   position: relative;
   z-index: 1;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .ch13l8-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: #1a1a3e;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   line-height: 1.2;
 }
 
 .ch13l8-title i {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   background: linear-gradient(135deg, #dc2626, #b91c1c);
   color: #fff;
-  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.28);
+  box-shadow: 0 10px 28px rgba(220, 38, 38, 0.32);
 }
 
 .ch13l8-intro-card {
-  border-radius: 10px;
-  padding: 8px;
+  border-radius: 14px;
+  padding: 12px;
   border: 2px solid rgba(220, 38, 38, 0.15);
   background: linear-gradient(145deg, #fff5f5 0%, #ffe0e6 100%);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   position: relative;
   z-index: 1;
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.06);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.08);
 }
 
 .ch13l8-intro-text {
-  font-size: 0.7rem;
-  line-height: 1.4;
+  font-size: 0.8rem;
+  line-height: 1.5;
   color: #374151;
   margin: 0;
   font-weight: 500;
@@ -2344,52 +2343,52 @@
 .ch13l8-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   position: relative;
   z-index: 1;
 }
 
 .ch13l8-section {
-  border-radius: 10px;
-  padding: 8px;
+  border-radius: 14px;
+  padding: 12px;
   border: 2px solid rgba(220, 38, 38, 0.12);
   background: linear-gradient(145deg, #fff7f7 0%, #ffe8eb 100%);
   transition: all 0.3s ease;
 }
 
 .ch13l8-section:hover {
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
-  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.12);
+  transform: translateY(-2px);
 }
 
 .ch13l8-section-title {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #1f2937;
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .ch13l8-section-title i {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  border-radius: 7px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   background: linear-gradient(135deg, #dc2626, #b91c1c);
   color: #fff;
 }
 
 .ch13l8-section-desc {
-  font-size: 0.65rem;
-  line-height: 1.3;
+  font-size: 0.75rem;
+  line-height: 1.4;
   color: #4b5563;
-  margin: 0 0 6px;
+  margin: 0 0 10px;
   font-weight: 500;
 }
 
@@ -2399,19 +2398,19 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .ch13l8-li {
-  padding: 6px 7px;
-  border-radius: 8px;
+  padding: 8px 9px;
+  border-radius: 9px;
   display: flex;
   align-items: flex-start;
-  gap: 6px;
+  gap: 8px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  border-left: 2px solid;
+  border-left: 3px solid;
   background: rgba(255, 255, 255, 0.5);
 }
 
@@ -2425,9 +2424,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 30px;
-  height: 30px;
-  background: rgba(220, 38, 38, 0.06);
+  width: 40px;
+  height: 40px;
+  background: rgba(220, 38, 38, 0.08);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -2442,9 +2441,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 30px;
-  height: 30px;
-  background: rgba(248, 113, 113, 0.06);
+  width: 40px;
+  height: 40px;
+  background: rgba(248, 113, 113, 0.08);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -2459,29 +2458,29 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 30px;
-  height: 30px;
-  background: rgba(251, 146, 60, 0.06);
+  width: 40px;
+  height: 40px;
+  background: rgba(251, 146, 60, 0.08);
   border-radius: 50%;
   pointer-events: none;
 }
 
 .ch13l8-li:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transform: translateX(2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(3px);
 }
 
 .ch13l8-li-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  border-radius: 6px;
-  font-size: 0.6rem;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 7px;
+  font-size: 0.7rem;
   color: #fff;
-  margin-top: 0px;
+  margin-top: 1px;
   flex-shrink: 0;
 }
 
@@ -2501,20 +2500,20 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .ch13l8-li-title {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #1f2937;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .ch13l8-li-text {
-  font-size: 0.6rem;
-  line-height: 1.25;
+  font-size: 0.7rem;
+  line-height: 1.35;
   color: #4b5563;
   margin: 0;
   font-weight: 500;
@@ -2522,82 +2521,81 @@
 
 @media (max-width: 1200px) {
   .ch13l8-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 900px) {
   .ch13l8-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .ch13l8-section {
-    padding: 7px;
+    padding: 10px;
   }
   .ch13l8-li {
-    padding: 5px 6px;
+    padding: 7px 8px;
   }
   .ch13l8-li-icon {
-    width: 18px;
-    height: 18px;
-    font-size: 0.55rem;
-  }
-  .ch13l8-li-title {
+    width: 22px;
+    height: 22px;
     font-size: 0.65rem;
   }
+  .ch13l8-li-title {
+    font-size: 0.75rem;
+  }
   .ch13l8-li-text {
-    font-size: 0.55rem;
+    font-size: 0.65rem;
   }
 }
 
 @media (max-width: 768px) {
   .ch13l8-slide {
-    padding: 8px;
-    border-radius: 12px;
+    padding: 10px;
+    border-radius: 14px;
   }
   .ch13l8-title {
-    font-size: 0.95rem;
-    gap: 6px;
+    font-size: 1.05rem;
+    gap: 8px;
   }
   .ch13l8-title i {
-    width: 32px;
-    height: 32px;
-    font-size: 0.8rem;
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
   }
   .ch13l8-intro-card {
-    padding: 6px;
-    margin-bottom: 6px;
+    padding: 10px;
   }
   .ch13l8-section {
-    padding: 6px;
+    padding: 9px;
   }
   .ch13l8-li {
-    padding: 4px 5px;
-    gap: 4px;
+    padding: 6px 7px;
+    gap: 6px;
   }
   .ch13l8-li-icon {
-    width: 16px;
-    height: 16px;
-    font-size: 0.55rem;
+    width: 20px;
+    height: 20px;
+    font-size: 0.6rem;
   }
   .ch13l8-li-title {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .ch13l8-li-text {
-    font-size: 0.55rem;
+    font-size: 0.6rem;
   }
   .ch13l8-section-title {
-    font-size: 0.75rem;
-    gap: 4px;
+    font-size: 0.9rem;
+    gap: 6px;
   }
   .ch13l8-section-title i {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
   }
   .ch13l8-section-desc {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .ch13l8-intro-text {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 }
 
