@@ -7098,118 +7098,125 @@ const sexPoints = [
               ],
             },
             content: (function () {
-              const intro =
-                "সাধারণত আমাদের চারপাশে যে সব সহিংসতা ও নির্যাতন ঘটে সেগুলোকে পারিবারিক সহিংসতা (প্রতিরোধ ও সুরক্ষা) আইন ২০১০ অনুযায়ী চার ভাগে ভাগ করা হয়েছে।";
+              const introDesc = yhLang(
+                "According to the Domestic Violence Prevention & Protection Act 2010, violence and abuse around us are categorized into four types.",
+                "সাধারণত আমাদের চারপাশে যে সব সহিংসতা ও নির্যাতন ঘটে সেগুলোকে পারিবারিক সহিংসতা (প্রতিরোধ ও সুরক্ষা) আইন ২০১০ অনুযায়ী চার ভাগে ভাগ করা হয়েছে।"
+              );
 
-              const lawHighlights = [
-                {
-                  title: "আইন ২০১০",
-                  desc: "পারিবারিক সহিংসতা প্রতিরোধ ও সুরক্ষা আইন",
-                },
-                {
-                  title: "৪টি ধরণ",
-                  desc: "শারীরিক, মানসিক, আর্থিক ও যৌন",
-                },
-                {
-                  title: "সুরক্ষার পরিধি",
-                  desc: "পরিবারের সকল সদস্য ও সুরক্ষিত ব্যক্তিরা",
-                },
+              const physicalViolence = [ 
+                { text: yhLang("Beating, injury and physical abuse", "মারধর, আঘাত ও যেকোনো শারীরিক নির্যাতন"), icon: "fa-fist-raised", tone: "danger" },
+                { text: yhLang("Acid attack", "এসিড আক্রমণ"), icon: "fa-flask-vial", tone: "red" },
+                { text: yhLang("Human trafficking", "পাচার"), icon: "fa-person-walking", tone: "warn" },
+                { text: yhLang("Abduction", "অপহরণ"), icon: "fa-person-military-pointing", tone: "danger" },
+                { text: yhLang("Murder", "হত্যা"), icon: "fa-skull", tone: "red" },
+                { text: yhLang("Forcing or inciting suicide", "আত্মহত্যায় প্ররোচনা বা বাধ্য করা"), icon: "fa-exclamation-triangle", tone: "warn" },
+                { text: yhLang("Pushing", "ধাক্কা দেওয়া"), icon: "fa-hand-back-fist", tone: "danger" },
+                { text: yhLang("Choking", "গলা চিপে ধরা"), icon: "fa-hands", tone: "red" },
+                { text: yhLang("Hair pulling", "চুলের মুঠি ধরে টানা"), icon: "fa-hand-fist", tone: "warn" },
+                { text: yhLang("Slapping, spanking etc.", "চড়, থাপ্পড় ইত্যাদি"), icon: "fa-hand-raised", tone: "danger" }
               ];
 
-              const physicalDescription =
-                "এমন কোনো কাজ বা আচরণ করা, যার দ্বারা সংক্ষুব্ধ ব্যক্তির জীবন, স্বাস্থ্য, নিরাপত্তা বা শরীরের কোনো অঙ্গ ক্ষতিগ্রস্ত হয় অথবা ক্ষতিগ্রস্ত হওয়ার সম্ভাবনা থাকে এবং সংক্ষুব্ধ ব্যক্তিকে অপরাধমূলক কাজ করতে বাধ্য করা বা প্ররোচনা প্রদান করা বা বলপ্রয়োগ।";
-
-              const physicalExamples = [
-                "মারধর, আঘাত ও যেকোনো শারীরিক নির্যাতন",
-                "এসিড আক্রমণ",
-                "পাচার",
-                "অপহরণ",
-                "হত্যা",
-                "আত্মহত্যায় প্ররোচনা বা বাধ্য করা",
-                "ধাক্কা দেয়া",
-                "গলা চিপে ধরা",
-                "চুলের মুঠি ধরে টানা",
-                "চড়, থাপ্পড় ইত্যাদি",
+              const psychologicalViolence = [
+                { text: yhLang("Verbal abuse and insults", "গালাগালি ও অপমানজনক কথা বলা"), icon: "fa-comment-slash", tone: "violet" },
+                { text: yhLang("Threats or intimidation", "হুমকি বা ভয় দেখানো"), icon: "fa-triangle-exclamation", tone: "warn" },
+                { text: yhLang("Attempts to control", "নিয়ন্ত্রণ করার চেষ্টা"), icon: "fa-microchip", tone: "indigo" },
+                { text: yhLang("Social isolation", "সামাজিকভাবে বিচ্ছিন্ন করা"), icon: "fa-person-hiking", tone: "slate" },
+                { text: yhLang("Separation from family and friends", "পরিবার ও বন্ধুদের থেকে আলাদা করা"), icon: "fa-chain-broken", tone: "violet" },
+                { text: yhLang("Expression of dissatisfaction", "কাজকর্ম নিয়ে অসন্তুষ্টি প্রকাশ"), icon: "fa-circle-xmark", tone: "indigo" }
               ];
 
-              const renderHighlights = () =>
-                lawHighlights
-                  .map(
-                    (item, idx) => `
-                      <article class="policy-journey-card compact" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">
-                        <div class="policy-journey-seal bg-gradient-rose">
-                          <span class="policy-journey-step">${item.title}</span>
-                        </div>
-                        <div class="policy-journey-body">
-                          <p class="mb-0 fw-semibold">${item.desc}</p>
-                        </div>
-                      </article>
-                    `,
-                  )
-                  .join("");
+              const financialViolence = [
+                { text: yhLang("Strict control over spending", "অর্থ ব্যয় করা নিয়ে কঠোর নিয়ন্ত্রণ"), icon: "fa-ban", tone: "amber" },
+                { text: yhLang("Preventing from working", "কাজ করতে বাধা দেওয়া"), icon: "fa-briefcase-close", tone: "sun" },
+                { text: yhLang("Forced to deposit income", "আয়ের অর্থ জমা দিতে বাধ্য করা"), icon: "fa-hand-holding-dollar", tone: "warn" },
+                { text: yhLang("Creating problems over loans", "ঋণের নামে ঝামেলা সৃষ্টি"), icon: "fa-money-bill-wave", tone: "amber" },
+                { text: yhLang("Property theft", "সম্পত্তি লুট করা"), icon: "fa-lock", tone: "sun" },
+                { text: yhLang("Dowry related issues", "যৌতুক নিয়ে সমস্যা"), icon: "fa-gift", tone: "warn" }
+              ];
 
-              const renderExamples = () =>
-                physicalExamples
+              const sexualViolence = [
+                { text: yhLang("Rape", "ধর্ষণ"), icon: "fa-exclamation-circle", tone: "danger" },
+                { text: yhLang("Unwanted sexual touch", "যৌন নিষিদ্ধ স্পর্শ"), icon: "fa-hand-fist", tone: "red" },
+                { text: yhLang("Sexual harassment", "যৌন হয়রানি"), icon: "fa-circle-exclamation", tone: "danger" },
+                { text: yhLang("Refusing sexual relations", "যৌন সম্পর্ক অস্বীকার"), icon: "fa-xmark-circle", tone: "red" },
+                { text: yhLang("Forcing unsafe sexual relations", "অনিরাপদ যৌনসম্পর্ক বাধ্য করা"), icon: "fa-shield-exclamation", tone: "danger" }
+              ];
+
+              const renderItems = (items, baseDelay = 70) =>
+                items
                   .map(
                     (item, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${100 + idx * 15}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                      <li class="ch13l4-li ch13l4-${item.tone}" data-aos="fade-left" data-aos-delay="${baseDelay + idx * 16}">
+                        <span class="ch13l4-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="ch13l4-li-text">${item.text}</span>
                       </li>
                     `,
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ",
-                    "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ",
-                  )}</h2>
+              <link rel="stylesheet" href="css/m13.css">
+              <link rel="stylesheet" href="css/m14.css">
+                <div class="ch13l4-slide lesson-slide">
+                  <span class="ch13l4-shape ch13l4-shape-a" aria-hidden="true"></span>
+                  <span class="ch13l4-shape ch13l4-shape-b" aria-hidden="true"></span>
+                  <span class="ch13l4-shape ch13l4-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-4 fw-semibold">${intro}</p>
-                    <div class="policy-journey-grid" role="list">
-                      ${renderHighlights()}
-                    </div>
+                  <header class="ch13l4-header" data-aos="fade-up">
+                    <h2 class="ch13l4-title">
+                      <i class="fa-solid fa-hand-fist"></i>
+                      ${yhLang("Forms of Gender-Based Violence", "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ")}
+                    </h2>
+                  </header>
+
+                  <section class="ch13l4-card ch13l4-card-intro" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch13l4-p">${introDesc}</p>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+                  <section class="ch13l4-grid" data-aos="fade-up" data-aos-delay="70">
+                    <article class="ch13l4-category ch13l4-danger">
+                      <h3 class="ch13l4-subtitle">
+                        <i class="fa-solid fa-hand-fist"></i>
+                        ${yhLang("Physical Violence", "শারীরিক নির্যাতন")}
+                      </h3>
+                      <p class="ch13l4-category-desc">${yhLang("Actions or behaviors that harm or threaten to harm the victim's life, health, safety or body.", "এমন কোনো কাজ বা আচরণ করা যার দ্বারা ব্যক্তির জীবন, স্বাস্থ্য, নিরাপত্তা বা শরীরের অঙ্গ ক্ষতিগ্রস্ত হয়।")}</p>
+                      <ul class="ch13l4-list">
+                        ${renderItems(physicalViolence, 100)}
+                      </ul>
+                    </article>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
-                        <article class="glass-card p-4 h-100 shadow-sm">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-purple text-white">
-                              <i class="fa-solid fa-hand-fist"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "ধরণ",
-                                "ধরণ",
-                              )}</p>
-                              <h3 class="h5 gradient-text mb-0">${yhLang(
-                                "১. শারীরিক নির্যাতন",
-                                "১. শারীরিক নির্যাতন",
-                              )}</h3>
-                            </div>
-                          </div>
-                          <p class="mb-0">${physicalDescription}</p>
-                        </article>
-                      </div>
-                      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="120">
-                        <div class="glass-card h-100 p-4 shadow-sm">
-                          <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                            "প্রধান উদাহরণ",
-                            "প্রধান উদাহরণ",
-                          )}</h4>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderExamples()}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                    <article class="ch13l4-category ch13l4-violet">
+                      <h3 class="ch13l4-subtitle">
+                        <i class="fa-solid fa-brain"></i>
+                        ${yhLang("Psychological Violence", "মানসিক নির্যাতন")}
+                      </h3>
+                      <p class="ch13l4-category-desc">${yhLang("Creating fear, anger or mental suffering through words or actions.", "কথা বা কাজের মাধ্যমে ভয়, ক্রোধ বা মানসিক যন্ত্রণা সৃষ্টি করা।")}</p>
+                      <ul class="ch13l4-list">
+                        ${renderItems(psychologicalViolence, 160)}
+                      </ul>
+                    </article>
+
+                    <article class="ch13l4-category ch13l4-amber">
+                      <h3 class="ch13l4-subtitle">
+                        <i class="fa-solid fa-money-bill"></i>
+                        ${yhLang("Financial Violence", "আর্থিক নির্যাতন")}
+                      </h3>
+                      <p class="ch13l4-category-desc">${yhLang("Controlling or restricting financial freedom and resources.", "আর্থিক স্বাধীনতা নিয়ন্ত্রণ বা সীমাবদ্ধ করা।")}</p>
+                      <ul class="ch13l4-list">
+                        ${renderItems(financialViolence, 220)}
+                      </ul>
+                    </article>
+
+                    <article class="ch13l4-category ch13l4-danger">
+                      <h3 class="ch13l4-subtitle">
+                        <i class="fa-solid fa-heart-crack"></i>
+                        ${yhLang("Sexual Violence", "যৌন নির্যাতন")}
+                      </h3>
+                      <p class="ch13l4-category-desc">${yhLang("Forcing sexual acts without consent.", "সম্মতি ছাড়াই যৌন কাজে অংশগ্রহণ করতে বাধ্য করা।")}</p>
+                      <ul class="ch13l4-list">
+                        ${renderItems(sexualViolence, 280)}
+                      </ul>
+                    </article>
                   </section>
                 </div>
               `;
@@ -7217,9 +7224,12 @@ const sexPoints = [
           },
           {
             id: "ch13-lesson-5",
-            title: yhLang("Psychological Violence", "মানসিক নির্যাতন"),
-            icon: "fa-brain",
-            gradientClass: "bg-gradient-purple",
+            title: yhLang(
+              "Sexual Harassment",
+              "যৌন হয়রানি"
+            ),
+            icon: "fa-circle-exclamation",
+            gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -7227,141 +7237,176 @@ const sexPoints = [
                 {
                   id: "q13e",
                   question: yhLang(
-                    "Which action is a form of mental abuse?",
-                    "নিম্নের কোনটি মানসিক নির্যাতনের অন্তর্ভুক্ত?",
+                    "What is considered as sexual harassment according to the Supreme Court directive?",
+                    "সুপ্রীম কোর্টের নির্দেশনা অনুযায়ী নিম্নের কোনটি যৌন হয়রানির অন্তর্ভুক্ত?"
                   ),
                   options: [
-                    yhLang("কোথাও যেতে বাধা দেয়া", "কোথাও যেতে বাধা দেয়া"),
-                    yhLang(
-                      "সমর্থন দিয়ে উৎসাহিত করা",
-                      "সমর্থন দিয়ে উৎসাহিত করা",
-                    ),
-                    yhLang(
-                      "স্বাধীন মত প্রকাশে সহায়তা",
-                      "স্বাধীন মত প্রকাশে সহায়তা",
-                    ),
-                    yhLang("সমান সুযোগ দেওয়া", "সমান সুযোগ দেওয়া"),
+                    yhLang("Unwanted sexual advances", "অনাকাঙ্ক্ষিত যৌন আবেদনমূলক আচরণ"),
+                    yhLang("Friendly conversation", "প্রিয়জনের সাথে কথা বলা"),
+                    yhLang("Professional feedback", "পেশাদার মতামত প্রদান"),
+                    yhLang("Supportive behavior", "সহায়ক আচরণ")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
-              const intro = "নিম্নবর্ণিত বিষয়সমূহ অন্তর্ভুক্ত হবে —";
+              const introDesc = yhLang(
+                "The High Court Division of Bangladesh Supreme Court issued landmark guidelines on May 14, 2009, in response to Writ Petition No. 5916/2008, which brought significant changes to the definition of sexual harassment and abuse.",
+                "মহামান্য সুপ্রীম কোর্টের হাইকোর্ট বিভাগ যৌন নির্যাতন বিষয়ে বিগত ১৪ মে, ২০০৯ তারিখে রীট পিটিশন নং ৫৯১৬/২০০৮- এর প্রেক্ষিতে এক যুগান্তকারী নির্দেশনা প্রদান করেছে। যার মাধ্যমে যৌন নির্যাতন ও হয়রানির সংজ্ঞার ব্যাপক পরিবর্তন এসেছে।"
+              );
 
-              const mentalDefinitions = [
-                {
-                  title: "ক. মৌখিক নির্যাতন ও অপমান",
-                  text: "মৌখিক নির্যাতন, অপমান, অবজ্ঞা, ভীতি প্রদর্শন বা এমন কোনো উক্তি করা, যা দ্বারা সংক্ষুব্ধ ব্যক্তির মানসিকভাবে ক্ষতি হয়।",
+              const sexualHarassmentItems = [
+                { 
+                  text: yhLang(
+                    "Unwanted sexual advances (direct or implied) such as physical touch or attempts",
+                    "অনাকাঙ্ক্ষিত যৌন আবেদনমূলক আচরণ (সরাসরি কিংবা ইঙ্গিতে) যেমন : শারীরিক স্পর্শ বা এমন প্রচেষ্টা"
+                  ),
+                  icon: "fa-hand-fist",
+                  type: "type1"
                 },
                 {
-                  title: "খ. হয়রানি",
-                  text: "অবিরাম হয়রানি, অনুসরণ, ভয় দেখানো বা মানসিক চাপ সৃষ্টি করে ব্যক্তিেকে দুর্বল করে দেওয়া।",
+                  text: yhLang(
+                    "Misuse of administrative, authoritative or professional power to establish sexual relations",
+                    "প্রশাসনিক, কর্তৃপক্ষীয় ও পেশাগত ক্ষমতা অপব্যবহার করে কারো সাথে যৌন সম্পর্ক স্থাপনের চেষ্টা করা"
+                  ),
+                  icon: "fa-person-military-pointing",
+                  type: "type2"
                 },
                 {
-                  title: "গ. স্বাধীনতায় হস্তক্ষেপ",
-                  text: "ব্যক্তির স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত ইচ্ছা ও মতামত প্রকাশের স্বাধীনতার উপর হস্তক্ষেপ করে তাকে নিয়ন্ত্রণে রাখার প্রয়াস।",
+                  text: yhLang(
+                    "Sexual harassment or derogatory statements",
+                    "যৌন হয়রানি বা নিপীড়নমূলক উক্তি"
+                  ),
+                  icon: "fa-comment-slash",
+                  type: "type1"
                 },
+                {
+                  text: yhLang(
+                    "Unwanted demands or requests for sexual favors",
+                    "যৌন সুযোগ লাভের জন্য অনাকাঙ্ক্ষিত দাবি বা আবেদন"
+                  ),
+                  icon: "fa-ban",
+                  type: "type3"
+                },
+                {
+                  text: yhLang(
+                    "Showing unwanted pornography",
+                    "অনাকাঙ্ক্ষিত পর্নোগ্রাফি দেখানো"
+                  ),
+                  icon: "fa-triangle-exclamation",
+                  type: "type2"
+                },
+                {
+                  text: yhLang(
+                    "Unwanted sexual remarks or gestures",
+                    "যৌন আবেদনমূলক অনাকাঙ্ক্ষিত মন্তব্য বা ভঙ্গি"
+                  ),
+                  icon: "fa-hand",
+                  type: "type1"
+                },
+                {
+                  text: yhLang(
+                    "Harassing through indecent behavior, sexual language or making jokes with sexual implications",
+                    "অশালীন ভঙ্গি, যৌন নির্যাতনমূলক ভাষা বা মন্তব্যের মাধ্যমে উত্যক্ত করা, কাউকে অনুসরণ করা, যৌন ইঙ্গিতমূলক ভাষা ব্যবহার করে ঠাট্টা বা উপহাস করা"
+                  ),
+                  icon: "fa-mask",
+                  type: "type3"
+                },
+                {
+                  text: yhLang(
+                    "Writing sexual implications on letters, phone, mobile, SMS, pictures, notices, cartoons, walls, etc.",
+                    "চিঠি, টেলিফোন, মোবাইল, এসএমএস, ছবি, নোটিশ, কার্টুন, বেঞ্চ, চেয়ার-টেবিল, নোটিশ বোর্ড, অফিস, ফ্যাক্টরি, শ্রেণিকক্ষ, বাথরুমের দেয়ালে যৌন ইঙ্গিতমূলক অপমানজনক কিছু লেখা"
+                  ),
+                  icon: "fa-pen",
+                  type: "type2"
+                },
+                {
+                  text: yhLang(
+                    "Recording still images or videos for blackmail or character defamation",
+                    "ব্লাকমেইলিং অথবা চরিত্র লঙ্ঘণের উদ্দেশ্য স্থির চিত্র এবং ভিডিও ধারণ করা"
+                  ),
+                  icon: "fa-video",
+                  type: "type1"
+                },
+                {
+                  text: yhLang(
+                    "Forcing exclusion from sports, cultural, institutional or educational activities due to sexual harassment",
+                    "যৌন নিপীড়ন বা হয়রানির উদ্দেশ্য খেলাধুলা, সাংস্কৃতিক, প্রাতিষ্ঠানিক এবং শিক্ষাগত কার্যক্রমে অংশগ্রহণ থেকে বিরত থাকতে বাধ্য করা"
+                  ),
+                  icon: "fa-person-hiking",
+                  type: "type3"
+                },
+                {
+                  text: yhLang(
+                    "Making threats or applying pressure after romantic advances are rejected",
+                    "প্রেম নিবেদন করে প্রত্যাখ্যাত হয়ে হুমকি দেয়া বা চাপ প্রয়োগ করা"
+                  ),
+                  icon: "fa-heart-broken",
+                  type: "type2"
+                },
+                {
+                  text: yhLang(
+                    "Attempting sexual relations through threats, false promises or deception",
+                    "ভয় দেখিয়ে বা মিথ্যা আশ্বাস দিয়ে বা প্রতারণা/ছলনার মাধ্যমে যৌন সম্পর্ক স্থাপনে চেষ্টা করা"
+                  ),
+                  icon: "fa-person-circle-question",
+                  type: "type1"
+                }
               ];
 
-              const controlExamples = [
-                "কোথাও যেতে বাধা দেয়া",
-                "গালমন্দ করা",
-                "অপমান করা",
-                "হেয় করে কথা বলা",
-                "বিরক্ত করা",
-                "সন্দেহ করা",
-                "বিভিন্ন ধরনের বাধ্যবাধকতা আরোপ করা",
-                "মানসিক অশান্তি বা অস্থিরতা সৃষ্টি করা",
-              ];
-
-              const renderDefinitions = () =>
-                mentalDefinitions
+              const renderItems = (items, baseDelay = 70) =>
+                items
                   .map(
                     (item, idx) => `
-                      <article class="modern-card glass-card" data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <h3 class="h6 gradient-text mb-2">${item.title}</h3>
-                        <p class="mb-0">${item.text}</p>
-                      </article>
-                    `,
-                  )
-                  .join("");
-
-              const renderExamples = () =>
-                controlExamples
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${100 + idx * 15}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
+                      <li class="ch13l5-li ch13l5-li-${item.type}" data-aos="fade-left" data-aos-delay="${baseDelay + idx * 16}">
+                        <span class="ch13l5-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="ch13l5-li-text">${item.text}</span>
                       </li>
-                    `,
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "মানসিক নির্যাতন",
-                    "মানসিক নির্যাতন",
-                  )}</h2>
+              <link rel="stylesheet" href="css/m13.css">
+              <link rel="stylesheet" href="css/m14.css">
+                <div class="ch13l5-slide lesson-slide">
+                  <span class="ch13l5-shape ch13l5-shape-a" aria-hidden="true"></span>
+                  <span class="ch13l5-shape ch13l5-shape-b" aria-hidden="true"></span>
+                  <span class="ch13l5-shape ch13l5-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${intro}</p>
-                    <div class="row g-3">
-                      ${renderDefinitions()}
-                    </div>
+                  <header class="ch13l5-header" data-aos="fade-up">
+                    <h2 class="ch13l5-title">
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      ${yhLang("Sexual Harassment", "যৌন হয়রানি")}
+                    </h2>
+                  </header>
+
+                  <section class="ch13l5-card ch13l5-card-intro" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch13l5-p">${introDesc}</p>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-5">
-                        <article class="glass-card p-4 shadow-sm h-100" data-aos="fade-right" data-aos-delay="100">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-rose text-white">
-                              <i class="fa-solid fa-head-side-virus"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "মানসিক প্রভাব",
-                                "মানসিক প্রভাব",
-                              )}</p>
-                              <h3 class="h5 gradient-text mb-0">${yhLang(
-                                "স্বাধীনতায় হস্তক্ষেপ",
-                                "স্বাধীনতায় হস্তক্ষেপ",
-                              )}</h3>
-                            </div>
-                          </div>
-                          <p class="mb-0">${yhLang(
-                            "স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত মতামত প্রকাশে বাধা সৃষ্টি করে মানসিক অশান্তি ও অস্থিরতা তৈরি করা হয়।",
-                            "স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত মতামত প্রকাশে বাধা সৃষ্টি করে মানসিক অশান্তি ও অস্থিরতা তৈরি করা হয়।",
-                          )}</p>
-                        </article>
-                      </div>
-                      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="120">
-                        <div class="glass-card h-100 p-4 shadow-sm">
-                          <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                            "প্রধান উদাহরণ",
-                            "প্রধান উদাহরণ",
-                          )}</h4>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderExamples()}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                  <section class="ch13l5-definition" data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="ch13l5-def-title">
+                      <i class="fa-solid fa-list-check"></i>
+                      ${yhLang("Sexual Harassment Includes:", "যৌন হয়রানি বলতে বোঝায়-")}
+                    </h3>
+                    <ul class="ch13l5-list">
+                      ${renderItems(sexualHarassmentItems, 100)}
+                    </ul>
                   </section>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch13-lesson-6",
-            title: yhLang("Sexual Violence", "যৌন নির্যাতন"),
-            icon: "fa-venus-double",
-            gradientClass: "bg-gradient-rose",
+            title: yhLang(
+              "Financial Loss (Financial Aspects)",
+              "আর্থিক ক্ষতি - আর্থিক দিক"
+            ),
+            icon: "fa-money-bill-wave",
+            gradientClass: "bg-gradient-cyan",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -7369,81 +7414,144 @@ const sexPoints = [
                 {
                   id: "q13f",
                   question: yhLang(
-                    "Which act is considered sexual violence?",
-                    "কোনটি যৌন নির্যাতনের অন্তর্ভুক্ত?",
+                    "Which of the following is NOT considered as financial loss under the Supreme Court directive?",
+                    "সুপ্রীম কোর্টের নির্দেশনা অনুযায়ী নিম্নের কোনটি আর্থিক ক্ষতির অন্তর্ভুক্ত নয়?"
                   ),
                   options: [
-                    yhLang("ধর্ষণ ও ধর্ষণের চেষ্টা", "ধর্ষণ ও ধর্ষণের চেষ্টা"),
-                    yhLang("সম্মানজনক সংলাপ", "সম্মানজনক সংলাপ"),
-                    yhLang(
-                      "পারস্পরিক সম্মত সিদ্ধান্ত",
-                      "পারস্পরিক সম্মত সিদ্ধান্ত",
-                    ),
-                    yhLang("সহায়ক পরামর্শ", "সহায়ক পরামর্শ"),
+                    yhLang("Demanding dowry", "যৌতুক দাবি করা"),
+                    yhLang("Taking away jewelry and property", "গয়না, সম্পত্তি নিয়ে নেয়া"),
+                    yhLang("Providing financial support", "আর্থিক সহায়তা প্রদান করা"),
+                    yhLang("Not providing maintenance", "ভরণপোষণ না দেয়া")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 2
+                }
+              ]
             },
             content: (function () {
-              const intro =
-                "নিপীড়ন যা দ্বারা সংক্ষুব্ধ ব্যক্তির সম্মান, সুনাম ও সম্ভ্রমের ক্ষতি হয়। যৌন আকাঙ্ক্ষা ও চাহিদা পূরণে বিশেষ ধরণের নির্যাতন, যা শরীর ও মনের উপর সংঘটিত একটি জঘন্যতম অপরাধ।";
+              const introDesc = yhLang(
+                "The High Court Division of Bangladesh Supreme Court issued landmark guidelines on May 14, 2009, in response to Writ Petition No. 5916/2008, which brought significant changes to the definition of financial loss and abuse.",
+                "মহামান্য সুপ্রীম কোর্টের হাইকোর্ট বিভাগ যৌন নির্যাতন বিষয়ে বিগত ১৪ মে, ২০০৯ তারিখে রীট পিটিশন নং ৫৯১৬/২০০৮- এর প্রেক্ষিতে এক যুগান্তকারী নির্দেশনা প্রদান করেছে।"
+              );
 
-              const sexualExamples = [
-                "ধর্ষণ",
-                "ধর্ষণের চেষ্টা",
-                "দলবদ্ধ ধর্ষণ",
-                "প্রতারণামূলক বিয়ে বা যৌন সম্পর্ক স্থাপন",
-                "জোরপূর্বক যৌন ব্যবসায় বাধ্য করা",
+              const mainPoints = [
+                {
+                  num: "১",
+                  text: yhLang(
+                    "Depriving the complainant of financial opportunities, assets or property they are entitled to by law, custom, or court order; or hindering them from claiming their legitimate rights",
+                    "আইন বা প্রথা অনুসারে বা কোনো আদালত বা উপযুক্ত কর্তৃপক্ষ কর্তৃক প্রদত্ত আদেশ অনুযায়ী সংক্ষুব্ধ ব্যক্তি যে সব আর্থিক সুযোগ-সুবিধা, সম্পদ বা সম্পত্তি লাভের অধিকারী তা থেকে তাকে বঞ্চিত করা অথবা তার বৈধ অধিকার আদায়ে বাধা প্রদান"
+                  ),
+                  icon: "fa-scale-balanced",
+                  type: "type1"
+                },
+                {
+                  num: "2",
+                  text: yhLang(
+                    "Not providing daily necessities to the complainant",
+                    "সংক্ষুব্ধ ব্যক্তিকে নিত্য ব্যবহার্য জিনিসপত্র প্রদান না করা"
+                  ),
+                  icon: "fa-home",
+                  type: "type2"
+                },
+                {
+                  num: "3",
+                  text: yhLang(
+                    "Depriving the complainant of assets received as wedding gifts, dowry, or other donations; or hindering them from claiming legitimate rights",
+                    "বিবাহের সময় প্রাপ্ত উপহার বা স্ত্রীধন বা অন্য কোনো দান বা উপহার হিসেবে প্রাপ্ত কোনো সম্পদ থেকে সংক্ষুব্ধ ব্যক্তিকে বঞ্চিত করা বা তার বৈধ অধিকার আদায়ে বাধা প্রদান"
+                  ),
+                  icon: "fa-gift",
+                  type: "type1"
+                },
+                {
+                  num: "4",
+                  text: yhLang(
+                    "Transferring any movable or immovable property owned by the complainant without consent; or hindering them from exercising legitimate rights",
+                    "সংক্ষুব্ধ ব্যক্তির মালিকানাধীন যেকোনো স্থাবর বা অস্থাবর সম্পত্তি তার অনুমতি ব্যতিরেকে হস্তান্তর করা বা এর উপর তার বৈধ অধিকার আদায়ে বাধা প্রদান"
+                  ),
+                  icon: "fa-house",
+                  type: "type2"
+                },
+                {
+                  num: "5",
+                  text: yhLang(
+                    "Depriving the complainant of using or enjoying resources and benefits due to family relations; or hindering them from exercising legitimate rights, such as:",
+                    "পারিবারিক সম্পর্কের কারণে যেকোনো সম্পদ বা সুযোগ-সুবিধা দিতে সংক্ষুব্ধ ব্যক্তির ব্যবহার বা ভোগ দখলের অধিকার রয়েছে তা থেকে তাকে বঞ্চিত করা বা এর উপর তার বৈধ অধিকার প্রয়োগে বাধা প্রদান যেমন -"
+                  ),
+                  icon: "fa-family",
+                  type: "type3",
+                  subPoints: [
+                    yhLang("Demanding dowry", "যৌতুক দাবি করা"),
+                    yhLang("Taking away jewelry and property", "গয়না, সম্পত্তি নিয়ে নেয়া"),
+                    yhLang("Taking away salary", "বেতন নিয়ে নেয়া ইত্যাদি"),
+                    yhLang("Husband not providing maintenance to wife", "স্বামী কর্তৃক স্ত্রীকে ভরণপোষণ না দেয়া"),
+                    yhLang("Preventing participation in economic or employment opportunities", "অর্থনৈতিক বা উপার্জনমূলক কাজে অংশগ্রহণের সুযোগ না দেয়া বা বাধা দেয়া")
+                  ]
+                }
               ];
 
-              const renderExamples = () =>
-                sexualExamples
+              const renderMainPoints = () =>
+                mainPoints
                   .map(
-                    (item, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${100 + idx * 15}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
+                    (point, idx) => `
+                      <li class="ch13l6-li ch13l6-li-${point.type}" data-aos="fade-left" data-aos-delay="${70 + idx * 20}">
+                        <span class="ch13l6-li-icon"><i class="fa-solid ${point.icon}"></i></span>
+                        <span class="ch13l6-li-text">
+                          <strong style="font-size: 0.85rem;">${point.num})</strong> ${point.text}
+                          ${point.subPoints ? `
+                            <ul class="ch13l6-sublist">
+                              ${point.subPoints.map(subPoint => `
+                                <li class="ch13l6-subli">
+                                  <span class="ch13l6-subli-icon">•</span>
+                                  <span>${subPoint}</span>
+                                </li>
+                              `).join('')}
+                            </ul>
+                          ` : ''}
+                        </span>
                       </li>
-                    `,
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "যৌন নির্যাতন",
-                    "যৌন নির্যাতন",
-                  )}</h2>
+              <link rel="stylesheet" href="css/m13.css">
+              <link rel="stylesheet" href="css/m14.css">
+                <div class="ch13l6-slide lesson-slide">
+                  <span class="ch13l6-shape ch13l6-shape-a" aria-hidden="true"></span>
+                  <span class="ch13l6-shape ch13l6-shape-b" aria-hidden="true"></span>
+                  <span class="ch13l6-shape ch13l6-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-12">
-                        <p class="mb-0">${intro}</p>
-                      </div>
-                    </div>
+                  <header class="ch13l6-header" data-aos="fade-up">
+                    <h2 class="ch13l6-title">
+                      <i class="fa-solid fa-money-bill-wave"></i>
+                      ${yhLang("Financial Loss (Financial Aspects)", "আর্থিক ক্ষতি")}
+                    </h2>
+                  </header>
+
+                  <section class="ch13l6-card ch13l6-card-intro" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch13l6-p">${introDesc}</p>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "উদাহরণ",
-                      "উদাহরণ",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderExamples()}
+                  <section class="ch13l6-section" data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="ch13l6-section-title">
+                      <i class="fa-solid fa-list-check"></i>
+                      ${yhLang("Financial Loss Includes:", "আর্থিক ক্ষতি বলতে বোঝায়-")}
+                    </h3>
+                    <ul class="ch13l6-list">
+                      ${renderMainPoints()}
                     </ul>
                   </section>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch13-lesson-7",
-            title: yhLang("Sexual Harassment Awareness", "যৌন হয়রানি"),
-            icon: "fa-shield-heart",
-            gradientClass: "bg-gradient-indigo",
+            title: yhLang(
+              "Steps to Eliminate Gender Discrimination",
+              "জেন্ডার বৈষম্য দূর করার জন্য করণীয়"
+            ),
+            icon: "fa-hands",
+            gradientClass: "bg-gradient-fuchsia",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -7451,161 +7559,188 @@ const sexPoints = [
                 {
                   id: "q13g",
                   question: yhLang(
-                    "Which action directly helps prevent sexual harassment?",
-                    "নিম্নের কোনটি যৌন হয়রানি প্রতিরোধে সহায়ক পদক্ষেপ?",
+                    "Which of the following is a key step to eliminate gender discrimination?",
+                    "নিম্নের কোনটি জেন্ডার বৈষম্য দূর করার জন্য প্রধান পদক্ষেপ?"
                   ),
                   options: [
-                    yhLang(
-                      "বিশ্বস্ত ব্যক্তির কাছে ঘটনাটি জানানো",
-                      "বিশ্বস্ত ব্যক্তির কাছে ঘটনাটি জানানো",
-                    ),
-                    yhLang("ঘটনাটি গোপন রাখা", "ঘটনাটি গোপন রাখা"),
-                    yhLang(
-                      "হয়রানিকারীর সাথে একা দেখা করা",
-                      "হয়রানিকারীর সাথে একা দেখা করা",
-                    ),
-                    yhLang(
-                      "সহায়তা প্রত্যাখ্যান করা",
-                      "সহায়তা প্রত্যাখ্যান করা",
-                    ),
+                    yhLang("Creating awareness at all levels of society", "সমাজের সকল স্তরে সচেতনতার সৃষ্টি করা"),
+                    yhLang("Maintaining traditional customs only", "শুধুমাত্র ঐতিহ্যবাহী রীতিনীতি বজায় রাখা"),
+                    yhLang("Limiting women's participation", "নারীদের অংশগ্রহণ সীমাবদ্ধ করা"),
+                    yhLang("Ignoring legal protections", "আইনি সুরক্ষা উপেক্ষা করা")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
-              const definition =
-                "যৌন হয়রানি হলো এমন সব অশোভন আচরণ, ইঙ্গিত, মন্তব্য বা শারীরিক স্পর্শ যা কারো সম্মতি ছাড়া করা হয় এবং যার ফলে ভুক্তভোগী ব্যক্তি অপমান, ভয় বা নিরাপত্তাহীনতায় ভোগে।";
-
-              const legalPoint =
-                "বাংলাদেশের নারী ও শিশু নির্যাতন দমন আইন, কর্মক্ষেত্রে যৌন হয়রানি প্রতিরোধ নীতিমালা এবং ডিজিটাল নিরাপত্তা আইন যৌন হয়রানি অপরাধ হিসেবে বিবেচনা করে এবং প্রতিকার পাওয়ার সুযোগ দেয়।";
-
-              const harassmentForms = [
+              const actionItems = [
                 {
-                  title: "মৌখিক ও অনলাইন হয়রানি",
-                  desc: "অশালীন মন্তব্য, অশ্লীল কৌতুক, ফোন/মেসেজে বিরক্ত করা, সামাজিক যোগাযোগমাধ্যমে অপমানজনক কন্টেন্ট প্রকাশ।",
-                  icon: "fa-comment-slash",
+                  num: "১",
+                  text: yhLang(
+                    "Create awareness against gender discrimination at all levels of society",
+                    "জেন্ডার বৈষম্য রোধে সমাজের সকল স্তরে সচেতনতার সৃষ্টি করা"
+                  ),
+                  icon: "fa-lightbulb",
+                  type: "type1"
                 },
                 {
-                  title: "অমৌখিক ইঙ্গিত",
-                  desc: "অশোভন অঙ্গভঙ্গি, বারবার তাকিয়ে থাকা, যৌন ইঙ্গিতপূর্ণ ছবি প্রদর্শন, অকারণ অনুসরণ করা।",
-                  icon: "fa-eye",
+                  num: "2",
+                  text: yhLang(
+                    "Girls and boys should grow up with equal status and freedom, identified only as human beings",
+                    "সম মর্যাদা, স্বাধীনতা নিয়ে নারী-পুরুষ বেড়ে উঠবে, যার পরিচয় হবে শুধু মানুষ হিসেবে"
+                  ),
+                  icon: "fa-people-group",
+                  type: "type2"
                 },
                 {
-                  title: "শারীরিক হয়রানি",
-                  desc: "অবাঞ্ছিত স্পর্শ, ধাক্কা, হাত ধরা, আলিঙ্গনে বাধ্য করা বা যেকোনো শারীরিক ঘনিষ্ঠতার চেষ্টা।",
-                  icon: "fa-hand-dots",
+                  num: "3",
+                  text: yhLang(
+                    "Both men and women should perform similar roles as humans, not different roles based on gender",
+                    "নারী পুরুষ হিসেবে ভিন্ন ভিন্ন ভূমিকা পালন না করে মানুষ হিসেবে একই রকম ভূমিকা পালন করবে"
+                  ),
+                  icon: "fa-balance-scale",
+                  type: "type3"
                 },
+                {
+                  num: "4",
+                  text: yhLang(
+                    "Ensure all human rights for women including education, employment, healthcare, and prevention of violence",
+                    "নারী শিক্ষা, নারীর কর্মসংস্থানের সুযোগ, নারীর স্বাস্থ্যসেবা প্রাপ্তি, নারী নির্যাতন প্রতিরোধসহ নারীর জন্য সকল মানবাধিকার নিশ্চিত করা"
+                  ),
+                  icon: "fa-heart",
+                  type: "type1"
+                },
+                {
+                  num: "5",
+                  text: yhLang(
+                    "Develop skilled women workforce alongside men for employment and business, contributing to national development",
+                    "পুরুষের পাশাপাশি নারীদেরও চাকরি ও ব্যবসাসহ বিভিন্ন উন্নয়নমূলক কাজের সাথে সম্পৃক্ত হতে হবে, তাই দেশের সার্বিক উন্নয়নে পুরুষের পাশাপাশি দক্ষ নারীশক্তি গড়ে তোলা"
+                  ),
+                  icon: "fa-briefcase",
+                  type: "type2"
+                },
+                {
+                  num: "6",
+                  text: yhLang(
+                    "Ensure equal participation of men and women in all activities based on competence",
+                    "দক্ষতা অনুসারে সকল কর্মকাণ্ডে নারী-পুরুষের সমান অংশগ্রহণ নিশ্চিত করা"
+                  ),
+                  icon: "fa-users",
+                  type: "type3"
+                },
+                {
+                  num: "7",
+                  text: yhLang(
+                    "Give importance to women's opinions in decision-making processes at family and community levels",
+                    "পরিবার ও সমাজে সিদ্ধান্ত গ্রহণের ক্ষেত্রে নারীদের মতামতকে গুরুত্ব দেয়া"
+                  ),
+                  icon: "fa-microphone",
+                  type: "type1"
+                },
+                {
+                  num: "8",
+                  text: yhLang(
+                    "Ensure provision of all legal assistance in protecting women's rights",
+                    "নারীর অধিকার রক্ষায় সকল প্রকার আইনি সহায়তা প্রদান নিশ্চিত করা"
+                  ),
+                  icon: "fa-gavel",
+                  type: "type2"
+                },
+                {
+                  num: "9",
+                  text: yhLang(
+                    "Ensure women's empowerment by maintaining equality between men and women",
+                    "নারী ও পুরুষের সমতা বজায় রাখার মাধ্যমে নারীর ক্ষমতায়ন নিশ্চিত করা"
+                  ),
+                  icon: "fa-bolt",
+                  type: "type3"
+                },
+                {
+                  num: "10",
+                  text: yhLang(
+                    "Enforce existing laws of the country to provide protection for women",
+                    "নারীকে সুরক্ষা প্রদানের জন্য দেশের প্রচলিত আইনের প্রয়োগ করা"
+                  ),
+                  icon: "fa-shield",
+                  type: "type1"
+                },
+                {
+                  num: "11",
+                  text: yhLang(
+                    "Collectively identify and prevent customs and practices that perpetuate gender discrimination",
+                    "যে সব প্রথা বা রীতিনীতি জেন্ডার বৈষম্য টিকিয়ে রাখছে তা চিহ্নিত করে সম্মিলিতভাবে তা প্রতিরোধ করা"
+                  ),
+                  icon: "fa-hand-fist",
+                  type: "type2"
+                },
+                {
+                  num: "12",
+                  text: yhLang(
+                    "Work together as a unified society to eliminate all forms of gender discrimination",
+                    "সমাজ সকলে একসাথে মিলে জেন্ডার বৈষম্য দূর করার জন্য কাজ করা"
+                  ),
+                  icon: "fa-handshake",
+                  type: "type3"
+                }
               ];
 
-              const protectionSteps = [
-                "হয়রানির সময় যত দ্রুত সম্ভব নিরাপদ জায়গায় সরে যান এবং আশেপাশের মানুষের সহায়তা নিন।",
-                "ঘটনার তারিখ, সময়, স্থান ও উপস্থিত সাক্ষীদের নামসহ নোট করে রাখুন।",
-                "বিশ্বস্ত অভিভাবক, শিক্ষক, সহকর্মী বা সহপাঠীকে সঙ্গে সঙ্গে জানান।",
-                "প্রতিষ্ঠানে বিদ্যমান অভিযোগ বক্স, কমিটি বা হটলাইন ব্যবহার করুন এবং প্রয়োজনে ৯৯৯ বা সংশ্লিষ্ট কর্তৃপক্ষকে যোগাযোগ করুন।",
-                "মানসিক চাপ কমাতে কাউন্সেলিং বা মনোসামাজিক সহায়তা গ্রহণ করুন।",
-              ];
-
-              const supportChannels = [
-                "বিদ্যালয়/কলেজের যৌন হয়রানি প্রতিরোধ কমিটি",
-                "উপজেলা মহিলা বিষয়ক কর্মকর্তার অফিস",
-                "জাতীয় হেল্পলাইন ১০৯",
-                "জরুরি সহায়তা ৯৯৯",
-                "বিশ্বস্ত এনজিও বা কমিউনিটি সাপোর্ট গ্রুপ",
-              ];
-
-              const renderFormCards = () =>
-                harassmentForms
+              const renderItems = () =>
+                actionItems
                   .map(
                     (item, idx) => `
-                      <article class="policy-journey-card" data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
-                        <div class="policy-journey-seal bg-gradient-rose">
-                          <i class="fa-solid ${item.icon}"></i>
-                        </div>
-                        <div class="policy-journey-body">
-                          <h3 class="h6 gradient-text mb-1">${item.title}</h3>
-                          <p class="mb-0">${item.desc}</p>
-                        </div>
-                      </article>
-                    `,
-                  )
-                  .join("");
-
-              const renderList = (items, baseDelay = 60) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
+                      <li class="ch13l7-li ch13l7-li-${item.type}" data-aos="fade-left" data-aos-delay="${70 + idx * 18}">
+                        <span class="ch13l7-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                        <span class="ch13l7-li-text">
+                          <span class="ch13l7-li-num">${item.num}.</span> ${item.text}
+                        </span>
                       </li>
-                    `,
+                    `
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "যৌন হয়রানি",
-                    "যৌন হয়রানি",
-                  )}</h2>
+              <link rel="stylesheet" href="css/m13.css">
+              <link rel="stylesheet" href="css/m14.css">
+                <div class="ch13l7-slide lesson-slide">
+                  <span class="ch13l7-shape ch13l7-shape-a" aria-hidden="true"></span>
+                  <span class="ch13l7-shape ch13l7-shape-b" aria-hidden="true"></span>
+                  <span class="ch13l7-shape ch13l7-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${definition}</p>
-                    <div class="alert alert-modern" role="alert">
-                      <i class="fa-solid fa-scale-balanced me-2"></i>
-                      <span>${legalPoint}</span>
-                    </div>
+                  <header class="ch13l7-header" data-aos="fade-up">
+                    <h2 class="ch13l7-title">
+                      <i class="fa-solid fa-hands"></i>
+                      ${yhLang("Steps to Eliminate Gender Discrimination", "জেন্ডার বৈষম্য দূর করার জন্য করণীয়")}
+                    </h2>
+                  </header>
+
+                  <section class="ch13l7-card-intro" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch13l7-p">${yhLang(
+                      "Addressing gender discrimination requires concerted efforts from all levels of society. Here are the key steps to create an equitable and just society.",
+                      "জেন্ডার বৈষম্য দূর করতে সমাজের সকল স্তর থেকে সমন্বিত প্রচেষ্টা প্রয়োজন। নিম্নে একটি সমতাপূর্ণ এবং ন্যায্য সমাজ গড়ার জন্য প্রধান পদক্ষেপসমূহ দেওয়া হল।"
+                    )}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "হয়রানির প্রধান ধরন",
-                      "হয়রানির প্রধান ধরন",
-                    )}</h3>
-                    <div class="policy-journey-grid" role="list">
-                      ${renderFormCards()}
-                    </div>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                          "তাৎক্ষণিক করণীয়",
-                          "তাৎক্ষণিক করণীয়",
-                        )}</h3>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(protectionSteps)}
-                        </ul>
-                      </div>
-                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="120">
-                        <div class="glass-card h-100 p-4 shadow-sm">
-                          <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                            "সহায়তা ও অভিযোগের ঠিকানা",
-                            "সহায়তা ও অভিযোগের ঠিকানা",
-                          )}</h4>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(supportChannels, 80)}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                  <section data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="ch13l7-action-title">
+                      <i class="fa-solid fa-list-check"></i>
+                      ${yhLang("Key Action Steps", "প্রধান পদক্ষেপসমূহ")}
+                    </h3>
+                    <ul class="ch13l7-list">
+                      ${renderItems()}
+                    </ul>
                   </section>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch13-lesson-8",
             title: yhLang(
-              "Financial Harm and Economic Violence",
-              "“আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা—",
+              "Violence or Abuse",
+              "সহিংসতা বা নির্যাতন"
             ),
-            icon: "fa-coins",
-            gradientClass: "bg-gradient-emerald",
+            icon: "fa-shield-halved",
+            gradientClass: "bg-gradient-red",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -7613,172 +7748,228 @@ const sexPoints = [
                 {
                   id: "q13h",
                   question: yhLang(
-                    "Which situation is an example of financial harm?",
-                    "নিম্নের কোনটি আর্থিক ক্ষতির উদাহরণ?",
+                    "What is violence or abuse?",
+                    "সহিংসতা বা নির্যাতন কী?"
                   ),
                   options: [
-                    yhLang(
-                      "স্ত্রীর যৌতুক ও সম্পত্তি জোর করে নিয়ে নেওয়া",
-                      "স্ত্রীর যৌতুক ও সম্পত্তি জোর করে নিয়ে নেওয়া",
-                    ),
-                    yhLang(
-                      "পারিবারিক সম্পদে সবার সমান অংশ নিশ্চিত করা",
-                      "পারিবারিক সম্পদে সবার সমান অংশ নিশ্চিত করা",
-                    ),
-                    yhLang(
-                      "আয়ের উৎস বাড়াতে প্রশিক্ষণ দেওয়া",
-                      "আয়ের উৎস বাড়াতে প্রশিক্ষণ দেওয়া",
-                    ),
-                    yhLang(
-                      "অর্থনৈতিক সহায়তা প্রস্তাব করা",
-                      "অর্থনৈতিক সহায়তা প্রস্তাব করা",
-                    ),
+                    yhLang("Intentional use of physical force that may cause harm or death", "শারীরিক শক্তির ইচ্ছাকৃত ব্যবহার যা ক্ষতি বা মৃত্যু ঘটাতে পারে"),
+                    yhLang("Only verbal disagreement", "শুধুমাত্র মৌখিক মতবিরোধ"),
+                    yhLang("Friendly competition", "বন্ধুত্বপূর্ণ প্রতিযোগিতা"),
+                    yhLang("Normal family conflicts", "স্বাভাবিক পারিবারিক দ্বন্দ্ব")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
-              const intro =
-                "আইন অনুযায়ী “আর্থিক ক্ষতি” কেবল অর্থ ছিনিয়ে নেওয়া নয়; বরং সম্পদ ও বৈধ সুযোগ থেকে কাউকে বঞ্চিত করার যে কোনো প্রচেষ্টা।";
-
-              const clauseItems = [
+              const sections = [
                 {
-                  title: "(১)",
-                  text: "আইন, প্রথা বা আদালতের আদেশ অনুযায়ী যে সম্পদ, সুযোগ বা সম্পত্তি পাওয়ার অধিকার রয়েছে, তা থেকে সংক্ষুব্ধ ব্যক্তিকে বঞ্চিত করা বা বাধা দেওয়া।",
+                  title: yhLang("What is Violence or Abuse?", "সহিংসতা বা নির্যাতন কী?"),
+                  icon: "fa-exclamation-circle",
+                  description: yhLang(
+                    "Violence or abuse is the intentional use of physical force or power against oneself or another person, which may be threatened or actual. It can be directed against an individual or a group, resulting in injury, death, psychological harm, developmental impairment, or deprivation. Every 10 minutes, one adolescent girl dies due to violence worldwide.",
+                    "সহিংসতা বা নির্যাতন হলো কারো বিরুদ্ধে ইচ্ছাকৃতভাবে দেহের শক্তি বা বল প্রয়োগ করা, যা হুমকি বা সত্যিকারের হতে পারে। এই সহিংসতা যেমন ব্যক্তিকেন্দ্রিক হতে পারে ঠিক তেমনিভাবে কোনো দল বা জনসমাজের বিরুদ্ধেও হতে পারে, যার পরিণাম হিসেবে এর শিকার ব্যক্তির মারাত্মক জখম হতে পারে, মারা যেতে পারে, মানসিক ক্ষতি হতে পারে, দেহের বিকাশ অস্বাভাবিক হতে পারে অথবা এর শিকার ব্যক্তি বা গোষ্ঠী কোনোকিছু থেকে বঞ্চিতও হতে পারে। বিশ্বে এই সহিংসতার ফলে প্রতি ১০ মিনিটে একজন কিশোরীর মৃত্যু হয়।"
+                  ),
+                  items: [
+                    {
+                      num: "1",
+                      title: yhLang("Personal Causes", "ব্যক্তিগত কারণ"),
+                      text: yhLang(
+                        "Genetic or physical factors, moral degradation, substance abuse, personality disorders, mental instability, and personal characteristics (age, education, income) influence whether someone becomes a victim or perpetrator.",
+                        "একজন ব্যক্তি নির্যাতনের শিকার হবে, না নির্যাতনকারী হবে তার পেছনে অনেক ক্ষেত্রে বংশগত বা শারীরিক উপাদান কাজ করে। যেমন : বংশগত, শারীরিক অক্ষমতা, নৈতিকতার অবক্ষয়, মাদকাসক্তি, ব্যক্তিত্বের বৈকল্য, মানসিক অস্থিরতা এবং ব্যক্তিগত বৈশিষ্ট্য (বয়স, শিক্ষা, আয়) ইত্যাদি।"
+                      ),
+                      icon: "fa-person",
+                      type: "type1"
+                    },
+                    {
+                      num: "2",
+                      title: yhLang("Interpersonal Causes", "পারস্পরিক কারণ"),
+                      text: yhLang(
+                        "Conflicts within family or friendships, deterioration of marital relationships, extramarital affairs, and lack of mutual respect can lead to abuse incidents.",
+                        "পারিবারিক বা বন্ধুবান্ধবের মধ্যকার দ্বন্দ্ব, বৈবাহিক সম্পর্কের অবনতি, বিবাহবহির্ভূত সম্পর্ক, পারস্পরিক শ্রদ্ধাবোধের অভাব ইত্যাদি কারণেও নির্যাতনের ঘটনা ঘটে।"
+                      ),
+                      icon: "fa-handshake",
+                      type: "type2"
+                    },
+                    {
+                      num: "3",
+                      title: yhLang("Environmental Causes", "পারিপার্শ্বিক কারণ"),
+                      text: yhLang(
+                        "Peer pressure in educational institutions and workplaces, political influence, lack of healthy entertainment, immoral culture, and absence of social security systems can lead to abuse.",
+                        "শিক্ষা প্রতিষ্ঠানে, অফিসে এবং রাস্তাঘাটে সমবয়সীদের চাপ, রাজনৈতিক প্রভাব, সুস্থ বিনোদনের অভাব এবং মুক্ত আকাশ অপসংস্কৃতির কারণেও নির্যাতন সংঘটিত হয়। এছাড়াও সামজিক নিরাপত্তা বেষ্টনীর অভাবের কারণেও নির্যাতনের ঘটনা ঘটে থাকে।"
+                      ),
+                      icon: "fa-city",
+                      type: "type3"
+                    },
+                    {
+                      num: "4",
+                      title: yhLang("Social Causes", "সামাজিক কারণ"),
+                      text: yhLang(
+                        "Most youth in Bangladesh face lower socioeconomic positions, unemployment, and hopelessness. Socially unestablished, dependent, and depressed individuals are more likely to abuse. Poor socialization and childhood exposure to violence increase the risk.",
+                        "বাংলাদেশে যুবসমাজের অধিকাংশই নিম্ন আর্থ-সামাজিক অবস্থানের কারণে এবং বেকার ও হতাশাব্যঞ্জক জীবনযাপন করে থাকে। আবার সামাজিকভাবে অপ্রতিষ্ঠিত, পরনির্ভরশীল, হীনমন্য ও হতাশাগ্রস্থ ব্যক্তিরা এই ধরণের অনাকাঙ্ক্ষিত আচরণ করে থাকে। সুস্থ সামাজিকীকরণের অভাবেও এই ধরনের ঘটনা ঘটে থাকে।"
+                      ),
+                      icon: "fa-people-group",
+                      type: "type1"
+                    }
+                  ]
                 },
                 {
-                  title: "(২)",
-                  text: "সংক্ষুব্ধ ব্যক্তিকে নিত্য প্রয়োজনীয় জিনিসপত্র ও দৈনন্দিন চাহিদা পূরণের সামগ্রী প্রদান না করা।",
+                  title: yhLang("Women & Child Welfare Ministry - Violence Prevention Program", "মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের নারী নির্যাতন প্রতিরোধ ও প্রতিকার কর্মসূচি"),
+                  icon: "fa-hospital",
+                  description: yhLang(
+                    "The government provides comprehensive support services for abuse victims through various programs and centers.",
+                    "সরকার বিভিন্ন প্রোগ্রাম এবং কেন্দ্রের মাধ্যমে নির্যাতনের শিকারদের জন্য ব্যাপক সহায়তা সেবা প্রদান করে।"
+                  ),
+                  items: [
+                    {
+                      num: "1",
+                      title: yhLang("One-Stop Crisis Centers", "ওয়ান-স্টপ ক্রাইসিস সেন্টার"),
+                      text: yhLang(
+                        "14 medical colleges provide free medical treatment, psychosocial counseling, police and legal services, rehabilitation and reintegration at divisional and district levels for physical, mental, sexual, and burn victims.",
+                        "শারীরিক, মানসিক ও যৌন এবং দগ্ধ নির্যাতনের শিকার নারী, শিশু ও কিশোরীদের জন্য বিনামূল্যে একই স্থানে চিকিৎসা, মনোসামাজিক কাউন্সেলিং, পুলিশী এবং আইনী সেবা প্রদানে বিভাগীয় ও জেলা পর্যায়ে চৌদ্দটি মেডিকেল কলেজে ওয়ান-স্টপ ক্রাইসিস সেন্টার রয়েছে।"
+                      ),
+                      icon: "fa-clinic-medical",
+                      type: "type2"
+                    },
+                    {
+                      num: "2",
+                      title: yhLang("Crisis Cells", "ক্রাইসিস সেল"),
+                      text: yhLang(
+                        "47 district-level and 20 upazila-level One-Stop Crisis Cells provide emergency support and services.",
+                        "সাতচল্লিশ টি জেলা পর্যায়ে ও বিশটি উপজেলা পর্যায়ে ওয়ান-স্টপ ক্রাইসিস সেল জরুরি সহায়তা প্রদান করে।"
+                      ),
+                      icon: "fa-phone",
+                      type: "type3"
+                    },
+                    {
+                      num: "3",
+                      title: yhLang("National Helpline", "ন্যাশনাল হেল্পলাইন সেন্টার"),
+                      text: yhLang(
+                        "National Helpline Center (Toll Free 109) and Joy Apps provide 24/7 support to abuse victims.",
+                        "ন্যাশনাল হেল্পলাইন সেন্টার (টোলফ্রি ১০৯) ও জয় অ্যাপস সর্বদা সহায়তা প্রদান করে।"
+                      ),
+                      icon: "fa-headset",
+                      type: "type1"
+                    },
+                    {
+                      num: "4",
+                      title: yhLang("Mental Health Counseling", "মানসিক স্বাস্থ্য সেবা"),
+                      text: yhLang(
+                        "Free psychosocial counseling services for abuse victims and those in mental crisis through mental health services.",
+                        "নির্যাতনের শিকার নারী, শিশু ও কিশোর কিশোরী সহ যেকোন মানসিক সংকটে মানসিক স্বাস্থ্য সেবায় বিনামূল্যে মনোসামাজিক কাউন্সেলিং সেবা।"
+                      ),
+                      icon: "fa-brain",
+                      type: "type2"
+                    }
+                  ]
                 },
                 {
-                  title: "(৩)",
-                  text: "বিবাহের সময় প্রাপ্ত উপহার, স্ত্রীধন বা দান হিসেবে প্রাপ্ত সম্পদ থেকে বঞ্চিত করা বা বৈধ অধিকার আদায়ে বাধা প্রদান।",
-                },
-                {
-                  title: "(৪)",
-                  text: "সংক্ষুব্ধ ব্যক্তির মালিকানাধীন স্থাবর বা অস্থাবর সম্পত্তি তার অনুমতি ছাড়া হস্তান্তর করা অথবা তার বৈধ অধিকার প্রয়োগে বাধা দেওয়া।",
-                },
-                {
-                  title: "(৫)",
-                  text: "পারিবারিক সম্পর্কের কারণে কোনো সম্পদ বা ঝুঁকি ব্যবহারের অধিকার থাকা সত্ত্বেও তা থেকে বঞ্চিত করা বা ভোগ-দখলে বাধা প্রদান।",
-                },
+                  title: yhLang("Ministry of Social Welfare - Programs", "সমাজকল্যাণ মন্ত্রণালয় কর্তক গৃহীত কর্মসূচি"),
+                  icon: "fa-hand-holding-heart",
+                  description: yhLang(
+                    "Social welfare programs provide comprehensive support and protection to vulnerable populations.",
+                    "সামাজিক কল্যাণ কর্মসূচি দুর্বল জনগোষ্ঠীকে ব্যাপক সহায়তা এবং সুরক্ষা প্রদান করে।"
+                  ),
+                  items: [
+                    {
+                      num: "1",
+                      title: yhLang("Social Safety Net", "সামাজিক নিরাপত্তা বেষ্টনি"),
+                      text: yhLang(
+                        "Social security belt programs provide financial and social assistance to vulnerable groups.",
+                        "সামাজিক নিরাপত্তা বেষ্টনি কাজকর্মের মাধ্যমে দুর্বল গোষ্ঠীকে আর্থিক ও সামাজিক সহায়তা প্রদান করা হয়।"
+                      ),
+                      icon: "fa-shield",
+                      type: "type3"
+                    },
+                    {
+                      num: "2",
+                      title: yhLang("Child Helpline 1098", "চাইল্ড হেল্পলাইন ১০৯৮"),
+                      text: yhLang(
+                        "Child Helpline 1098 (Toll Free) provides immediate support and assistance to children in distress.",
+                        "চাইল্ড হেল্পলাইন ১০৯৮ (টোল ফ্রি) শিশুদের জরুরি সহায়তা এবং সেবা প্রদান করে।"
+                      ),
+                      icon: "fa-child",
+                      type: "type1"
+                    },
+                    {
+                      num: "3",
+                      title: yhLang("Counselor Services", "কাউন্সেলর সেবা"),
+                      text: yhLang(
+                        "Psychosocial counselors and social workers provide nationwide services across all districts and upazillas.",
+                        "মনোসামাজিক কাউন্সেলর ও সোশ্যাল ওয়ার্কার কর্তক দেশব্যাপী সেবা প্রদান করা হয়।"
+                      ),
+                      icon: "fa-comments",
+                      type: "type2"
+                    }
+                  ]
+                }
               ];
 
-              const examples = [
-                "যৌতুক দাবি করা",
-                "গয়না বা ব্যক্তিগত সম্পত্তি নিয়ে নেওয়া",
-                "বেতন বা আয় কেড়ে নেওয়া",
-                "স্বামী কর্তৃক স্ত্রীকে ভরণপোষণ না দেওয়া",
-                "অর্থনৈতিক/উপার্জনমূলক কাজে অংশ নিতে বাধা দেওয়া",
-              ];
-
-              const renderClauseCards = () =>
-                clauseItems
-                  .map(
-                    (item, idx) => `
-                      <article class="policy-journey-card" data-aos="fade-up" data-aos-delay="${80 + idx * 30}">
-                        <div class="policy-journey-seal bg-gradient-teal">
-                          <span class="policy-journey-step">${item.title}</span>
-                        </div>
-                        <div class="policy-journey-body">
-                          <p class="mb-0">${item.text}</p>
-                        </div>
-                      </article>
-                    `,
-                  )
-                  .join("");
-
-              const renderExamples = () =>
-                examples
-                  .map(
-                    (item, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `,
-                  )
+              const renderSections = () =>
+                sections
+                  .map((section, secIdx) => `
+                    <div class="ch13l8-section" data-aos="fade-up" data-aos-delay="${80 + secIdx * 40}">
+                      <h3 class="ch13l8-section-title">
+                        <i class="fa-solid ${section.icon}"></i>
+                        ${section.title}
+                      </h3>
+                      <p class="ch13l8-section-desc">${section.description}</p>
+                      <ul class="ch13l8-list">
+                        ${section.items
+                          .map(
+                            (item, idx) => `
+                          <li class="ch13l8-li ch13l8-li-${item.type}" data-aos="fade-left" data-aos-delay="${100 + secIdx * 40 + idx * 15}">
+                            <span class="ch13l8-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                            <span class="ch13l8-li-content">
+                              <strong class="ch13l8-li-title">${item.num}. ${item.title}</strong>
+                              <span class="ch13l8-li-text">${item.text}</span>
+                            </span>
+                          </li>
+                        `
+                          )
+                          .join("")}
+                      </ul>
+                    </div>
+                  `)
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Financial harm provisions",
-                    "“আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা—",
-                  )}</h2>
+              <link rel="stylesheet" href="css/m13.css">
+              <link rel="stylesheet" href="css/m14.css">
+                <div class="ch13l8-slide lesson-slide">
+                  <span class="ch13l8-shape ch13l8-shape-a" aria-hidden="true"></span>
+                  <span class="ch13l8-shape ch13l8-shape-b" aria-hidden="true"></span>
+                  <span class="ch13l8-shape ch13l8-shape-c" aria-hidden="true"></span>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${intro}</p>
-                    <div class="alert alert-modern" role="alert">
-                      <i class="fa-solid fa-scale-balanced me-2"></i>
-                      <span>${yhLang(
-                        "আইন আর্থিক নির্যাতনের শিকার ব্যক্তিকে সম্পদ পুনরুদ্ধার ও নিরাপত্তা দাবি করার সুযোগ দেয়।",
-                        "আইন আর্থিক নির্যাতনের শিকার ব্যক্তিকে সম্পদ পুনরুদ্ধার ও নিরাপত্তা দাবি করার সুযোগ দেয়।",
-                      )}</span>
-                    </div>
+                  <header class="ch13l8-header" data-aos="fade-up">
+                    <h2 class="ch13l8-title">
+                      <i class="fa-solid fa-shield-halved"></i>
+                      ${yhLang("Violence or Abuse", "সহিংসতা বা নির্যাতন")}
+                    </h2>
+                  </header>
+
+                  <section class="ch13l8-intro-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch13l8-intro-text">${yhLang(
+                      "Understanding violence, its causes, and the support systems available is crucial for prevention and protection.",
+                      "সহিংসতা, এর কারণ এবং উপলব্ধ সহায়তা ব্যবস্থা বোঝা প্রতিরোধ এবং সুরক্ষার জন্য অত্যন্ত গুরুত্বপূর্ণ।"
+                    )}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "আইন অনুযায়ী অন্তর্ভুক্ত বিষয়সমূহ",
-                      "আইন অনুযায়ী অন্তর্ভুক্ত বিষয়সমূহ",
-                    )}</h3>
-                    <div class="policy-journey-grid" role="list">
-                      ${renderClauseCards()}
-                    </div>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        <h4 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                          "যেমন —",
-                          "যেমন —",
-                        )}</h4>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderExamples()}
-                        </ul>
-                      </div>
-                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="120">
-                        <article class="glass-card p-4 shadow-sm h-100">
-                          <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="icon-circle bg-gradient-emerald text-white">
-                              <i class="fa-solid fa-house-chimney"></i>
-                            </div>
-                            <div>
-                              <p class="text-uppercase text-muted small mb-1">${yhLang(
-                                "অধিকার",
-                                "অধিকার",
-                              )}</p>
-                              <h3 class="h6 gradient-text mb-0">${yhLang(
-                                "ভোগ-দখল ও ভরণপোষণ",
-                                "ভোগ-দখল ও ভরণপোষণ",
-                              )}</h3>
-                            </div>
-                          </div>
-                          <p class="mb-0">${yhLang(
-                            "সম্পদ ব্যবহার, আয় উপভোগ ও ভরণপোষণ গ্রহণ করা প্রতিটি ব্যক্তির মৌলিক অধিকার এবং সীমিত করার যে কোনো চেষ্টা আইনি অপরাধ।",
-                            "সম্পদ ব্যবহার, আয় উপভোগ ও ভরণপোষণ গ্রহণ করা প্রতিটি ব্যক্তির মৌলিক অধিকার এবং সীমিত করার যে কোনো চেষ্টা আইনি অপরাধ।",
-                          )}</p>
-                        </article>
-                      </div>
-                    </div>
+                  <section class="ch13l8-content" data-aos="fade-up" data-aos-delay="60">
+                    ${renderSections()}
                   </section>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch13-lesson-9",
             title: yhLang(
-              "Actions to End Gender Discrimination",
-              "জেন্ডার বৈষম্য দূর করার জন্য করণীয়",
+              "Forms of Violence Against Youth",
+              "তরুনদের প্রতি সহিংসতার বিভিন্ন রূপ"
             ),
-            icon: "fa-scale-balanced",
-            gradientClass: "bg-gradient-tangerine",
+            icon: "fa-hand-fist",
+            gradientClass: "bg-gradient-purple",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -7786,533 +7977,132 @@ const sexPoints = [
                 {
                   id: "q13i",
                   question: yhLang(
-                    "What is a key step toward eliminating gender discrimination?",
-                    "জেন্ডার বৈষম্য দূর করতে কোন পদক্ষেপটি গুরুত্বপূর্ণ?",
+                    "Which of the following is a form of violence against youth?",
+                    "নিম্নলিখিত কোনটি তরুনদের প্রতি সহিংসতার একটি রূপ?"
                   ),
                   options: [
-                    yhLang(
-                      "নারী-পুরুষের সমান অধিকার ও সিদ্ধান্তে অংশগ্রহণ নিশ্চিত করা",
-                      "নারী-পুরুষের সমান অধিকার ও সিদ্ধান্তে অংশগ্রহণ নিশ্চিত করা",
-                    ),
-                    yhLang(
-                      "নারীদের শিক্ষা সীমিত রাখা",
-                      "নারীদের শিক্ষা সীমিত রাখা",
-                    ),
-                    yhLang(
-                      "মেয়েদের মতামত উপেক্ষা করা",
-                      "মেয়েদের মতামত উপেক্ষা করা",
-                    ),
-                    yhLang(
-                      "নারীদের কর্মসংস্থান নিরুৎসাহিত করা",
-                      "নারীদের কর্মসংস্থান নিরুৎসাহিত করা",
-                    ),
+                    yhLang("All of the above", "উপরের সবগুলি"),
+                    yhLang("Only physical violence", "শুধুমাত্র শারীরিক সহিংসতা"),
+                    yhLang("Only sexual harassment", "শুধুমাত্র যৌন হয়রানি"),
+                    yhLang("Only cybercrime", "শুধুমাত্র সাইবার ক্রাইম")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
-              const intro =
-                "জেন্ডার বৈষম্য দূর করতে পরিবার, সমাজ ও রাষ্ট্রকে একসাথে কাজ করতে হয় যাতে নারী-পুরুষ উভয়েই সম্মান, সুযোগ ও নিরাপত্তা পায়।";
-
-              const actionList = [
-                "জেন্ডার বৈষম্য রোধে সমাজের সকল স্তরে সচেতনতার সৃষ্টি করা।",
-                "সম মর্যাদা ও স্বাধীনতা নিয়ে নারী-পুরুষ মানুষ হিসেবে বেড়ে উঠবে তা নিশ্চিত করা।",
-                "লিঙ্গভিত্তিক আলাদা ভূমিকার বদলে মানুষ হিসেবে একীভূত ভূমিকা পালনের সুযোগ তৈরি করা।",
-                "নারী শিক্ষা, কর্মসংস্থান, স্বাস্থ্যসেবা ও নির্যাতন প্রতিরোধসহ সব মানবাধিকার নিশ্চিত করা।",
-                "দেশের উন্নয়নে দক্ষ নারীশক্তি গড়ে তোলা এবং তাদের চাকরি ও ব্যবসায় সম্পৃক্ত করা।",
-                "দক্ষতার ভিত্তিতে সব কর্মকাণ্ডে নারী-পুরুষের সমান অংশগ্রহণ নিশ্চিত করা।",
-                "পরিবার ও সমাজে সিদ্ধান্ত গ্রহণে নারীর মতামতকে গুরুত্ব দেওয়া।",
-                "নারীর অধিকার রক্ষায় প্রয়োজনীয় সকল আইনি সহায়তা প্রদান নিশ্চিত করা।",
-                "সমতা বজায় রেখে নারীর ক্ষমতায়ন নিশ্চিত করা ও সুরক্ষার জন্য প্রচলিত আইন প্রয়োগ করা।",
-                "জেন্ডার বৈষম্য টিকিয়ে রাখা প্রথা বা রীতিনীতি শনাক্ত করে সম্মিলিতভাবে প্রতিরোধ করা।",
-              ];
-
-              const focusPoints = [
+              const sections = [
                 {
-                  title: "সমতা ও স্বাধীনতা",
-                  text: "নারী-পুরুষ উভয়েই মানুষ হিসেবে মর্যাদা ও স্বাধীনতা ভোগ করবে—এটাই পরিবর্তনের কেন্দ্রবিন্দু।",
-                  icon: "fa-people-group",
+                  title: yhLang("Forms of Violence Against Youth", "তরুনদের প্রতি সহিংসতার বিভিন্ন রূপ"),
+                  icon: "fa-shapes",
+                  description: yhLang(
+                    "Violence against youth takes many forms, each with unique characteristics and impacts. Understanding these forms is essential for prevention and support.",
+                    "তরুনদের প্রতি সহিংসতা বিভিন্ন রূপে প্রকাশিত হয়। প্রতিটি রূপের নিজস্ব বৈশিষ্ট্য ও প্রভাব রয়েছে।"
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Physical Violence", "দৈহিক সহিংসতা"), text: yhLang("Use of physical force causing bodily harm", "শারীরিক শক্তি প্রয়োগে দেহের ক্ষতি"), icon: "fa-hand", type: "type1" },
+                    { num: "2", title: yhLang("Sexual Violence", "যৌন সহিংসতা"), text: yhLang("Sexual assault, abuse, or unwanted sexual contact", "যৌন আক্রমণ ও অপ্রত্যাশিত যৌন স্পর্শ"), icon: "fa-triangle-exclamation", type: "type2" },
+                    { num: "3", title: yhLang("Mental/Emotional Violence", "মানসিক সহিংসতা"), text: yhLang("Psychological abuse, threats, intimidation", "মনোবল ভাঙা, হুমকি, ভয়ভীতি"), icon: "fa-brain", type: "type3" },
+                    { num: "4", title: yhLang("Economic Violence", "অর্থনৈতিক সহিংসতা"), text: yhLang("Denial of financial resources and support", "অর্থ ও সম্পদ অস্বীকার"), icon: "fa-money-bill", type: "type1" },
+                    { num: "5", title: yhLang("Cybercrime", "সাইবার ক্রাইম"), text: yhLang("Online harassment, blackmail, illegal content sharing", "অনলাইন হয়রানি ও গোপনীয়তা লঙ্ঘন"), icon: "fa-computer", type: "type2" },
+                    { num: "6", title: yhLang("Bullying", "বুলিং"), text: yhLang("Repeated harassment and intimidation by peers", "সমবয়সীদের দ্বারা পুনরাবৃত্ত হয়রানি"), icon: "fa-users-slash", type: "type3" },
+                    { num: "7", title: yhLang("Child Marriage", "বাল্যবিবাহ"), text: yhLang("Forced early marriage before legal age", "আইনি বয়স পূর্ণ হওয়ার আগে বিয়ে"), icon: "fa-ring", type: "type1" },
+                    { num: "8", title: yhLang("Human Trafficking", "পাচার"), text: yhLang("Coercion for exploitation and forced labor", "জোরপূর্বক শোষণ ও শ্রম"), icon: "fa-arrows-alt", type: "type2" },
+                    { num: "9", title: yhLang("Sexual Harassment", "যৌন হয়রানি/ইভটিজিং"), text: yhLang("Unwanted sexual remarks, gestures, or comments", "অনাকাঙ্ক্ষিত যৌন মন্তব্য ও অঙ্গভঙ্গি"), icon: "fa-megaphone", type: "type3" },
+                    { num: "10", title: yhLang("Acid Attacks", "এসিড নিক্ষেপ"), text: yhLang("Deliberate burning with corrosive substances", "ক্ষতিকারক পদার্থ দ্বারা পোড়ানো"), icon: "fa-flask", type: "type1" },
+                    { num: "11", title: yhLang("Exploitation", "পর্নোগ্রাফি ও অশ্লীল প্রকাশনা"), text: yhLang("Pornography and indecent publications", "অশ্লীল সামগ্রী নির্মাণ ও প্রচার"), icon: "fa-ban", type: "type2" },
+                    { num: "12", title: yhLang("Sexual Exploitation", "পতিতাবৃত্তি"), text: yhLang("Forced involvement in sex work", "যৌনকর্মে বাধ্য করা"), icon: "fa-person-circle-xmark", type: "type3" },
+                    { num: "13", title: yhLang("Child Labor", "শিশুশ্রম"), text: yhLang("Exploitation of youth in hazardous work", "ঝুঁকিপূর্ণ কাজে শিশু নিয়োগ"), icon: "fa-hammer", type: "type1" }
+                  ]
                 },
                 {
-                  title: "ক্ষমতায়ন",
-                  text: "শিক্ষা, কর্মসংস্থান ও আইনি সহায়তায় নারীদের ক্ষমতায়ন দ্রুত জেন্ডার বৈষম্য কমায়।",
-                  icon: "fa-bolt",
+                  title: yhLang("Impact of Violence", "সহিংসতার প্রভাব"),
+                  icon: "fa-exclamation-circle",
+                  description: yhLang(
+                    "Violence has severe and lasting impacts on victims' physical, mental, behavioral, and social well-being.",
+                    "সহিংসতার প্রভাব শারীরিক, মানসিক, আচরণগত ও সামাজিক — সব ক্ষেত্রেই গভীর।"
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Physical Effects", "শারীরিক প্রভাব"), text: yhLang("Headaches, loss of appetite, nausea, insomnia, and other health complications", "মাথা ব্যথা, ক্ষুধামন্দা, বমি-বমিভাব, অনিদ্রা ইত্যাদি"), icon: "fa-heart-pulse", type: "type1" },
+                    { num: "2", title: yhLang("Mental Effects", "মানসিক প্রভাব"), text: yhLang("Anxiety, depression, low mood, irritability, anger, fear, shame, guilt, suicidal thoughts, distrust of others", "দুশ্চিন্তা, মনমরা, বিষণ্নতা, বিরক্তিবোধ, আত্মহত্যার চিন্তা প্রভৃতি"), icon: "fa-head-side-virus", type: "type2" },
+                    { num: "3", title: yhLang("Behavioral Effects", "আচরণগত প্রভাব"), text: yhLang("Crying, inability to concentrate, avoidance of crowded places and public transport", "কান্নাকাটি, মনোযোগ না দিতে পারা, জনসমাগম এড়িয়ে চলা"), icon: "fa-child", type: "type3" },
+                    { num: "4", title: yhLang("Social Effects", "সামাজিক প্রভাব"), text: yhLang("Social disgrace, family shame, withdrawal from social activities, forced early marriage", "সমাজে লজ্জা, পারিবারিক বদনাম, সামাজিক কর্ম থেকে দূরে থাকা"), icon: "fa-people-group", type: "type1" }
+                  ]
                 },
+                {
+                  title: yhLang("Prevention and Remedy Methods", "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থাসমূহ"),
+                  icon: "fa-shield-heart",
+                  description: yhLang(
+                    "Comprehensive strategies involving family, community, and government support are essential for preventing violence and supporting victims.",
+                    "পরিবার, সমাজ ও সরকারের যৌথ প্রচেষ্টায় সহিংসতা প্রতিরোধ ও প্রতিকার সম্ভব।"
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Strengthen Family Bonds", "পারিবারিক বন্ধন শক্তিশালী করা"), text: yhLang("Build trust and communication within the family unit", "পরিবারের সদস্যদের মধ্যে বিশ্বাস ও যোগাযোগ বৃদ্ধি"), icon: "fa-house-heart", type: "type1" },
+                    { num: "2", title: yhLang("Foster Safe Relationships", "নিরাপদ সম্পর্ক গড়ে তোলা"), text: yhLang("Create safe, friendly relationships between parents, guardians and youth", "অভিভাবক ও সন্তানের মধ্যে বন্ধুত্বপূর্ণ সম্পর্ক সৃষ্টি"), icon: "fa-handshake", type: "type2" },
+                    { num: "3", title: yhLang("Reduce Substance Abuse", "মাদকের অপব্যবহার কমানো"), text: yhLang("Control availability and abuse of drugs and harmful substances", "মাদকের সহজলভ্যতা ও অপব্যবহার হ্রাস করা"), icon: "fa-hand-holding-heart", type: "type3" },
+                    { num: "4", title: yhLang("Gender Equality Awareness", "লিঙ্গ সমতা সচেতনতা"), text: yhLang("Conduct awareness programs on gender discrimination and equality", "জেন্ডার বৈষম্য দূরীকরণে সচেতনতামূলক কর্মসূচি"), icon: "fa-people", type: "type1" },
+                    { num: "5", title: yhLang("Legal Awareness", "আইনি সচেতনতা"), text: yhLang("Educate public and officials on violence prevention and protection laws", "নারী ও শিশু সুরক্ষা আইন সম্পর্কে সচেতনতা"), icon: "fa-scale-balanced", type: "type2" },
+                    { num: "6", title: yhLang("Economic Support", "অর্থনৈতিক সহায়তা"), text: yhLang("Provide vocational training and easy-term micro-credit for employment", "ক্ষুদ্রশিল্প প্রশিক্ষণ ও ঋণ প্রদান"), icon: "fa-briefcase", type: "type3" },
+                    { num: "7", title: yhLang("Counseling Services", "কাউন্সেলিং সেবা"), text: yhLang("Make mental health and marriage counseling services accessible", "মনোসামাজিক কাউন্সেলিং সেবা সহজলভ্য করা"), icon: "fa-comments", type: "type1" },
+                    { num: "8", title: yhLang("Life Skills Training", "জীবনমুখী প্রশিক্ষণ"), text: yhLang("Provide training on self-protection, anger management, social skills, and conflict resolution", "আত্মরক্ষা, রাগ নিয়ন্ত্রণ ও সামাজিক দক্ষতা প্রশিক্ষণ"), icon: "fa-graduation-cap", type: "type2" }
+                  ]
+                }
               ];
 
-              const renderList = () =>
-                actionList
-                  .map(
-                    (item, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              const renderFocusCards = () =>
-                focusPoints
-                  .map(
-                    (item, idx) => `
-                      <article class="modern-card glass-card" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">
-                        <div class="d-flex align-items-center gap-3 mb-2">
-                          <div class="icon-circle bg-gradient-rose text-white">
-                            <i class="fa-solid ${item.icon}"></i>
+              function renderSections() {
+                return sections.map((section, secIdx) => `
+                  <section class="ch13l9-section ch13l9-section-type${(secIdx % 3) + 1}" data-aos="fade-up" data-aos-delay="${60 + secIdx * 20}">
+                    <div class="ch13l9-section-header">
+                      <h3 class="ch13l9-section-title">
+                        <i class="fa-solid ${section.icon}"></i>
+                        ${section.title}
+                      </h3>
+                      <p class="ch13l9-section-desc">${section.description}</p>
+                    </div>
+                    <ul class="ch13l9-list">
+                      ${section.items.map((item, idx) => `
+                        <li class="ch13l9-li ch13l9-li-${item.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 15}">
+                          <span class="ch13l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                          <div class="ch13l9-li-content">
+                            <strong class="ch13l9-li-num">${item.num}</strong>
+                            <h4 class="ch13l9-li-title">${item.title}</h4>
+                            <p class="ch13l9-li-text">${item.text}</p>
                           </div>
-                          <h3 class="h6 gradient-text mb-0">${item.title}</h3>
-                        </div>
-                        <p class="mb-0">${item.text}</p>
-                      </article>
-                    `,
-                  )
-                  .join("");
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </section>
+                `).join('');
+              }
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Ending gender discrimination",
-                    "জেন্ডার বৈষম্য দূর করার জন্য করণীয়",
-                  )}</h2>
+                <div class="ch13l9-slide">
+                  <div class="ch13l9-shape ch13l9-shape-a"></div>
+                  <div class="ch13l9-shape ch13l9-shape-b"></div>
+                  <div class="ch13l9-shape ch13l9-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${intro}</p>
-                    <div class="row g-3">
-                      ${renderFocusCards()}
-                    </div>
+                  <div class="ch13l9-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch13l9-title">
+                      <i class="fa-solid fa-hand-fist"></i>
+                      ${yhLang("Forms of Violence Against Youth", "তরুনদের প্রতি সহিংসতার বিভিন্ন রূপ")}
+                    </h2>
+                  </div>
+
+                  <section class="ch13l9-intro-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch13l9-intro-text">${yhLang(
+                      "Violence against youth manifests in multiple forms. Recognizing these forms and their impacts is crucial for prevention and victim support.",
+                      "তরুনদের প্রতি সহিংসতা বহুমুখী। এর প্রতিরোধ ও প্রতিকারে সচেতনতা অপরিহার্য।"
+                    )}</p>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "মূল করণীয়",
-                      "মূল করণীয়",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList()}
-                    </ul>
+                  <section class="ch13l9-content" data-aos="fade-up" data-aos-delay="60">
+                    ${renderSections()}
                   </section>
                 </div>
               `;
-            })(),
+            })()
           },
-          {
-            id: "ch13-lesson-10",
-            title: yhLang(
-              "Violence Against Adolescents",
-              "তরুন-তরুনীদের প্রতি সহিংসতা",
-            ),
-            icon: "fa-children",
-            gradientClass: "bg-gradient-crimson",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q13j",
-                  question: yhLang(
-                    "Which action helps protect adolescents from violence?",
-                    "তরুন-তরুনীদের সহিংসতা থেকে রক্ষা করতে কোন পদক্ষেপ সহায়ক?",
-                  ),
-                  options: [
-                    yhLang(
-                      "নিরাপদ পরিবেশ ও পরামর্শ প্রদান",
-                      "নিরাপদ পরিবেশ ও পরামর্শ প্রদান",
-                    ),
-                    yhLang(
-                      "সহিংস ঘটনার কথা গোপন রাখা",
-                      "সহিংস ঘটনার কথা গোপন রাখা",
-                    ),
-                    yhLang(
-                      "ঝুঁকিপূর্ণ স্থানে একা পাঠানো",
-                      "ঝুঁকিপূর্ণ স্থানে একা পাঠানো",
-                    ),
-                    yhLang(
-                      "সহিংস আচরণকে স্বাভাবিক ধরা",
-                      "সহিংস আচরণকে স্বাভাবিক ধরা",
-                    ),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const intro =
-                "পারিবারিক, শিক্ষা প্রতিষ্ঠান, কর্মক্ষেত্র বা অনলাইন—প্রতিটি পরিসরেই তরুন-তরুনীরা সহিংসতার ঝুঁকির মুখে থাকে। সচেতনতা, প্রতিরোধমূলক পদক্ষেপ ও সহায়তা ব্যবস্থাই নিরাপত্তার মূলভিত্তি।";
-
-              const violenceTypes = [
-                {
-                  title: "শারীরিক ও মানসিক সহিংসতা",
-                  text: "মারধর, শারীরিক শাস্তি, গালমন্দ, হেয় প্রতিপন্ন করা বা সামাজিকভাবে একঘরে করে দেওয়া।",
-                  icon: "fa-shield-halved",
-                },
-                {
-                  title: "অর্থনৈতিক ও অনলাইন সহিংসতা",
-                  text: "জোরপূর্বক শ্রমে বাধ্য করা, মোবাইল/ইন্টারনেটে ব্ল্যাকমেইল, সাইবার বুলিং ও ব্যক্তিগত তথ্য ফাঁস করা।",
-                  icon: "fa-wifi",
-                },
-                {
-                  title: "যৌন ও লিঙ্গভিত্তিক সহিংসতা",
-                  text: "অবাঞ্ছিত স্পর্শ, হুমকি, বাল্যবিবাহ, যৌন হয়রানি ও ক্ষমতার অপব্যবহার।",
-                  icon: "fa-venus-mars",
-                },
-              ];
-
-              const protectiveActions = [
-                "শিশু ও কিশোরবান্ধব নিরাপদ স্থান, স্কুল ও কমিউনিটি সেন্টার গড়ে তোলা।",
-                "বিশ্বস্ত প্রাপ্তবয়স্কের সাথে অবাধ যোগাযোগ নিশ্চিত করা ও অভিযোগ গ্রহণকারী হটলাইন প্রচার করা।",
-                "অনলাইন নিরাপত্তা, আত্মরক্ষা ও সহপাঠী সমর্থনমুলক কর্মশালা আয়োজন করা।",
-                "শারীরিক ও মানসিক স্বাস্থ্যসেবা, কাউন্সেলিং ও আইনি সহায়তার সহজ প্রাপ্যতা নিশ্চিত করা।",
-                "সহিংসতার ঘটনা দেখলে নীরব না থেকে কর্তৃপক্ষকে জানানো ও প্রমাণ সংরক্ষণ করা।",
-              ];
-
-              const renderViolenceCards = () =>
-                violenceTypes
-                  .map(
-                    (item, idx) => `
-                      <article class="policy-journey-card" data-aos="fade-up" data-aos-delay="${70 + idx * 30}">
-                        <div class="policy-journey-seal bg-gradient-rose">
-                          <i class="fa-solid ${item.icon}"></i>
-                        </div>
-                        <div class="policy-journey-body">
-                          <h3 class="h6 gradient-text mb-1">${item.title}</h3>
-                          <p class="mb-0">${item.text}</p>
-                        </div>
-                      </article>
-                    `,
-                  )
-                  .join("");
-
-              const renderProtectiveList = () =>
-                protectiveActions
-                  .map(
-                    (item, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Violence against adolescents",
-                    "তরুন-তরুনীদের প্রতি সহিংসতা",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-6">
-                        <p class="mb-3">${intro}</p>
-                        <div class="policy-journey-grid" role="list">
-                          ${renderViolenceCards()}
-                        </div>
-                      </div>
-                      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="80">
-                        <figure class="image-card mb-0">
-                          <img src="img/modu13/sohongsotas.png" alt="তরুন-তরুনীদের প্রতি সহিংসতা" class="img-fluid rounded-4 shadow-sm img-zoom" />
-                        </figure>
-                      </div>
-                    </div>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "সহিংসতা প্রতিরোধে করণীয়",
-                      "সহিংসতা প্রতিরোধে করণীয়",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderProtectiveList()}
-                    </ul>
-                  </section>
-
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch13-lesson-11",
-            title: yhLang(
-              "Understanding Violence and Abuse",
-              "সহিংসতা বা নির্যাতন",
-            ),
-            icon: "fa-hand-holding-heart",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q13k",
-                  question: yhLang(
-                    "Which initiative directly helps prevent violence?",
-                    "সহিংসতা প্রতিরোধে কোন পদক্ষেপ কার্যকর?",
-                  ),
-                  options: [
-                    yhLang(
-                      "পরিবারে নিরাপদ ও বন্ধুত্বপূর্ণ সম্পর্ক তৈরি",
-                      "পরিবারে নিরাপদ ও বন্ধুত্বপূর্ণ সম্পর্ক তৈরি",
-                    ),
-                    yhLang(
-                      "সহিংস ঘটনার প্রমাণ লুকিয়ে রাখা",
-                      "সহিংস ঘটনার প্রমাণ লুকিয়ে রাখা",
-                    ),
-                    yhLang(
-                      "মাদকদ্রব্যের সহজলভ্যতা বৃদ্ধি",
-                      "মাদকদ্রব্যের সহজলভ্যতা বৃদ্ধি",
-                    ),
-                    yhLang(
-                      "বৈষম্যমূলক রীতি বজায় রাখা",
-                      "বৈষম্যমূলক রীতি বজায় রাখা",
-                    ),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const definitionText =
-                "‘সহিংসতা বা নির্যাতন হলো কারো বিরুদ্ধে ইচ্ছাকৃতভাবে দেহের শক্তি বা বল প্রয়োগ করা, যা হুমকি বা সত্যিকারের হতে পারে। এর ফলে শারীরিক ক্ষতি, মৃত্যু, মানসিক আঘাত, বিকাশে বাধা বা সুযোগ থেকে বঞ্চিত হওয়ার মতো পরিণতি ঘটে।’";
-
-              const violenceFact =
-                "বিশ্বে সহিংসতার কারণে প্রতি ১০ মিনিটে একজন কিশোরীর মৃত্যু হয়—এটি সমস্যাটির ভয়াবহতা তুলে ধরে।";
-
-              const violenceForms = [
-                "দৈহিক সহিংসতা",
-                "যৌন সহিংসতা",
-                "মানসিক সহিংসতা",
-                "অর্থনৈতিক সহিংসতা",
-                "সাইবার ক্রাইম",
-                "বুলিং",
-                "বাল্যবিবাহ",
-                "পাচার",
-                "যৌন হয়রানি/ইভটিজিং",
-                "এসিড নিক্ষেপ",
-                "পর্নোগ্রাফি ও অশ্লীল প্রকাশনা",
-                "পতিতাবৃত্তি",
-                "শিশুশ্রম",
-              ];
-
-              const causeCards = [
-                {
-                  title: "ব্যক্তিগত কারণ",
-                  body: "বংশগত বা শারীরিক অক্ষমতা, নৈতিকতার অবক্ষয়, মাদকাসক্তি, ব্যক্তিত্বের বৈকল্য, মানসিক অস্থিরতা এবং বয়স-শিক্ষা-আয়ের মতো ব্যক্তিগত বৈশিষ্ট্য সহিংসতার ঝুঁকি বাড়ায়।",
-                },
-                {
-                  title: "পারস্পরিক কারণ",
-                  body: "পরিবার বা বন্ধুদের দ্বন্দ্ব, বিবাহিত জীবনে অবনতি, বিবাহবহির্ভূত সম্পর্ক, পারস্পরিক শ্রদ্ধাহীনতা সম্পর্ককে সহিংস করে তোলে।",
-                },
-                {
-                  title: "পারিপার্শ্বিক কারণ",
-                  body: "শিক্ষা প্রতিষ্ঠান, অফিস বা রাস্তায় সমবয়সীদের চাপ, রাজনৈতিক প্রভাব, সুস্থ বিনোদনের অভাব এবং সামাজিক নিরাপত্তা বেষ্টনীর দুর্বলতা নির্যাতনে ভূমিকা রাখে।",
-                },
-                {
-                  title: "সামাজিক কারণ",
-                  body: "নিম্ন আর্থ-সামাজিক অবস্থা, বেকারত্ব, হতাশা, পরনির্ভরশীলতা, হীনমন্যতা এবং অপসংস্কৃতি থেকে প্রাপ্ত আচরণও সহিংসতাকে প্রলম্বিত করে।",
-                },
-              ];
-
-              const impactCategories = [
-                {
-                  title: "শারীরিক প্রভাব",
-                  items: ["মাথা ব্যথা", "ক্ষুধামন্দা", "বমিভাব", "অনিদ্রা"],
-                },
-                {
-                  title: "মানসিক প্রভাব",
-                  items: [
-                    "দুশ্চিন্তা ও মনমরা ভাব",
-                    "বিষণ্নতা, বিরক্তি ও রাগ",
-                    "ভয়, নিরাপত্তাহীনতা ও ভবিষ্যৎ অনিশ্চয়তা",
-                    "অপমানবোধ, অপরাধবোধ ও আত্মহত্যার প্রবণতা",
-                  ],
-                },
-                {
-                  title: "আচরণগত প্রভাব",
-                  items: [
-                    "কান্নাকাটি",
-                    "মনোযোগের অভাব",
-                    "ভিড় বা গণপরিবহন এড়ানো",
-                  ],
-                },
-                {
-                  title: "সামাজিক প্রভাব",
-                  items: [
-                    "সমাজে হেয় হওয়া ও তিরস্কার",
-                    "সামাজিক কর্মকাণ্ড থেকে সরে আসা",
-                    "অল্প বয়সে বিয়ের চাপ",
-                  ],
-                },
-              ];
-
-              const preventionSteps = [
-                "পারিবারিক ও বন্ধুত্বপূর্ণ সম্পর্ক জোরদার করা।",
-                "সন্তান ও অভিভাবকের মধ্যে নিরাপদ, বন্ধুত্বপূর্ণ যোগাযোগ তৈরি।",
-                "মাদকের অপব্যবহার ও সহজলভ্যতা হ্রাস।",
-                "জেন্ডার বৈষম্য দূরীকরণে সচেতনতামূলক কর্মসূচি চালু করা।",
-                "নারী ও শিশুর প্রতি সহিংসতা দমন আইন সম্পর্কে জনসচেতনতা বৃদ্ধি।",
-                "বেকারত্ব কমাতে প্রশিক্ষণ ও সহজ শর্তে ঋণ প্রদানের সুযোগ তৈরি।",
-              ];
-
-              const programSections = [
-                {
-                  title: "মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের কর্মসূচি",
-                  items: [
-                    "চৌদ্দটি মেডিকেল কলেজে ওয়ান-স্টপ ক্রাইসিস সেন্টার—চিকিৎসা, কাউন্সেলিং, পুলিশি ও আইনি সহায়তা, পুনর্বাসন।",
-                    "সাতচল্লিশ জেলা ও বিশটি উপজেলায় ওয়ান-স্টপ ক্রাইসিস সেল।",
-                    "ন্যাশনাল হেল্পলাইন সেন্টার (টোলফ্রি ১০৯) ও ‘জয়’ অ্যাপ।",
-                    "মানসিক সংকটে বিনামূল্যে মনোসামাজিক কাউন্সেলিং সেবা।",
-                  ],
-                },
-                {
-                  title: "সমাজকল্যাণ মন্ত্রণালয়ের কর্মসূচি",
-                  items: [
-                    "সামাজিক নিরাপত্তা বেষ্টনি কার্যক্রম।",
-                    "চাইল্ড হেল্পলাইন ১০৯৮ (টোল ফ্রি)।",
-                  ],
-                },
-              ];
-
-              const renderSimpleList = (items, baseDelay = 80) =>
-                items
-                  .map(
-                    (item, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${item}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              const renderCauseCards = () =>
-                causeCards
-                  .map(
-                    (item, idx) => `
-                      <article class="modern-card glass-card" data-aos="fade-up" data-aos-delay="${70 + idx * 20}">
-                        <h3 class="h6 gradient-text mb-2">${item.title}</h3>
-                        <p class="mb-0">${item.body}</p>
-                      </article>
-                    `,
-                  )
-                  .join("");
-
-              const renderImpactCards = () =>
-                impactCategories
-                  .map(
-                    (category, idx) => `
-                      <article class="glass-card p-4 h-100" data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <div class="d-flex align-items-center gap-3 mb-3">
-                          <div class="icon-circle bg-gradient-purple text-white">
-                            <i class="fa-solid fa-heart-pulse"></i>
-                          </div>
-                          <h3 class="h6 gradient-text mb-0">${category.title}</h3>
-                        </div>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderSimpleList(category.items, 90)}
-                        </ul>
-                      </article>
-                    `,
-                  )
-                  .join("");
-
-              const renderPrograms = () =>
-                programSections
-                  .map(
-                    (section, idx) => `
-                      <article class="policy-journey-card" data-aos="fade-up" data-aos-delay="${90 + idx * 30}">
-                        <div class="policy-journey-seal bg-gradient-emerald">
-                          <i class="fa-solid fa-circle-info"></i>
-                        </div>
-                        <div class="policy-journey-body">
-                          <h3 class="h6 gradient-text mb-2">${section.title}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderSimpleList(section.items, 100)}
-                          </ul>
-                        </div>
-                      </article>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Violence and abuse overview",
-                    "সহিংসতা বা নির্যাতন",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${definitionText}</p>
-                    <div class="alert alert-modern" role="alert">
-                      <i class="fa-solid fa-triangle-exclamation me-2"></i>
-                      <span>${violenceFact}</span>
-                    </div>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "তরুন-তরুনীদের প্রতি সহিংসতার বিভিন্ন রূপ",
-                      "তরুন-তরুনীদের প্রতি সহিংসতার বিভিন্ন রূপ",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderSimpleList(violenceForms)}
-                    </ul>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "তারুন্যকালীনসহিংসতার কারণ",
-                      "তারুন্যকালীনসহিংসতার কারণ",
-                    )}</h3>
-                    <div class="row g-3">
-                      ${renderCauseCards()}
-                    </div>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="120">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "সহিংসতার প্রভাব",
-                      "সহিংসতার প্রভাব",
-                    )}</h3>
-                    <div class="row g-4">
-                      ${renderImpactCards()}
-                    </div>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="140">
-                    <h3 class="h6 text-uppercase text-muted mb-3">${yhLang(
-                      "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থা",
-                      "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থা",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderSimpleList(preventionSteps)}
-                    </ul>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="160">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "সহায়তা ও সরকারি উদ্যোগ",
-                      "সহায়তা ও সরকারি উদ্যোগ",
-                    )}</h3>
-                    <div class="policy-journey-grid" role="list">
-                      ${renderPrograms()}
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
+     
         ],
       },
       {
