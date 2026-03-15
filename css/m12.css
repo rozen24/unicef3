@@ -2,7 +2,6 @@
 /* Module 12 - Lesson 1: Understanding PCOS */
 .ch12l1-slide {
   position: relative;
-  background: linear-gradient(135deg, #fff5f8 0%, #ffe0eb 35%, #f5e8ff 65%, #e8f5ff 100%);
   border-radius: 16px;
   padding: 12px;
   overflow: hidden;
@@ -102,23 +101,19 @@
   border-radius: 9px;
   padding: 7px;
   border: 2px solid rgba(236, 72, 153, 0.12);
-  background: linear-gradient(145deg, #fff5f8 0%, #ffe0eb 100%);
   transition: all 0.3s ease;
 }
 
 .ch12l1-section-type1 {
   border-color: rgba(236, 72, 153, 0.2);
-  background: linear-gradient(145deg, #fff5f8 0%, #ffe0eb 100%);
 }
 
 .ch12l1-section-type2 {
   border-color: rgba(244, 114, 182, 0.2);
-  background: linear-gradient(145deg, #fff5f8 0%, #fce7f3 100%);
 }
 
 .ch12l1-section-type3 {
   border-color: rgba(249, 168, 212, 0.2);
-  background: linear-gradient(145deg, #fdf2f8 0%, #fcbad3 100%);
 }
 
 .ch12l1-section:hover {
