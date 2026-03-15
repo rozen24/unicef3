@@ -5545,10 +5545,10 @@ const coursesData = [
 
               const complicationIcons = [
                 "fa-virus-covid",
-                "fa-xray",
+                "fa-x-ray",
                 "fa-ban",
                 "fa-brain",
-                "fa-pipe",
+                "fa-person",
                 "fa-heart-crack",
                 "fa-triangle-exclamation",
                 "fa-baby",

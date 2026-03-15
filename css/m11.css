@@ -2840,7 +2840,7 @@
   border-radius: 14px;
   border: 2px solid transparent;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
 }
