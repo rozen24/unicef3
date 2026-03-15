@@ -6474,29 +6474,21 @@ const coursesData = [
 
               const pillars = [
                 { 
-                  num: "1", 
-                  title: yhLang("No Discrimination", "কোনো বৈষম্য নয়"),
                   text: yhLang("No child shall be subjected to discrimination (Article 2). All children have equal opportunity to develop their potential in any circumstance. This includes protection from discrimination based on gender, race, nationality, religion, disability, sexual orientation, or any other status. All children have equal access to education regardless of these characteristics.", "কোনো শিশুই বৈষম্যের শিকার হবেনা (ধারা ২)। যেকোনো পরিস্থিতিতেই সব শিশুই তাদের সম্ভাবনা বিকাশের সমান সুযোগ পাবে। যেমন - লিঙ্গ, বর্ণ, জাতীয়তা, ধর্ম, প্রতিবন্ধিতা, যৌনতার ধরণ বা অন্য কোনো মর্যাদার ভিত্তিতে বৈষেম্যর শিকার না হয়ে সব শিশুই শিক্ষায় অংশগ্রহণের সুযোগ পাবে।"),
                   icon: "fa-person-hiking",
                   type: "pillar1"
                 },
                 { 
-                  num: "2", 
-                  title: yhLang("Best Interest of the Child", "শিশুর সর্বোচ্চ স্বার্থ"),
                   text: yhLang("The best interests of the child shall always be a primary consideration in decisions affecting children (Article 3). When making decisions about budgets or resource allocation, special attention must be given to how these decisions will affect children and their welfare. The child's best interest should always take precedence.", "শিশুদের ওপর প্রভাব ফেলবে এমন কোনো সিদ্ধাান্তের ক্ষেত্রে তাদের স্বার্থগুলো সবসময় অগ্রাধিকার পাবে (ধারা ৩)। যেমন- বাজেট প্রণয়নের সময় খেয়াল রাখতে হবে কোনো খাতে অর্থ বরাদ্দ বা কর্তনের ক্ষেত্রে যেন শিশুদের সর্বোচ্চ স্বার্থটাই গুরুত্ব পায়।"),
                   icon: "fa-heart-circle-check",
                   type: "pillar2"
                 },
                 { 
-                  num: "3", 
-                  title: yhLang("Right to Life and Development", "জীবন ও বিকাশের অধিকার"),
                   text: yhLang("Every child has the right to life, survival, and healthy development (Article 6). All children must have access to essential services and equal opportunity to reach their full potential. For example, children with disabilities must have guaranteed access to education and healthcare services without discrimination.", "বেঁচে থাকার ও সুস্থভাবে বিকাশের অধিকার সব শিশুরই রয়েছে (ধারা ৬)। মৌলিক সেবাগুলোয় শিশুদেও প্রবেশাধিকার ও তাদের পূর্ণ সম্ভাবনা বিকাশের সমান অধিকার নিশ্চিত করতে হবে। যেমন - প্রতিবন্ধী শিশুর অবশ্যই শিক্ষা ও স্বাস্থ্য সেবা গ্রহণের অধিকার থাকবে।"),
                   icon: "fa-circle-nodes",
                   type: "pillar3"
                 },
                 { 
-                  num: "4", 
-                  title: yhLang("Right to be Heard", "মতামত প্রকাশের অধিকার"),
                   text: yhLang("Children affected by decisions have the right to have those decisions take their views into consideration (Article 12). The opinions and perspectives of children on matters affecting their rights must be listened to and respected. For example, when developing policies or plans related to children, their insights must be taken into account and valued.", "শিশুদের ওপর প্রভাব রাখবে এমন বিষয়ে তাদের মতামতগুলো বিবেচনায় নেয়ার বাধ্যবাধকতা রয়েছে (ধারা ১২)। শিশুদের অধিকারভুক্ত সব বিষয়ে তাদের মতামত শুনতে হবে ও সেগুলোয় শ্রদ্ধা রাখতে হবে। যেমন- শিশু বিষয়ক কোনো নীতি বা পরিকল্পনা গ্রহণে শিশুদের উপলব্ধিগুলো গ্রাহ্য করতে হবে।"),
                   icon: "fa-comments",
                   type: "pillar4"
@@ -6508,7 +6500,6 @@ const coursesData = [
                   <li class="ch12l5-li ch12l5-li-${pillar.type}" data-aos="fade-up" data-aos-delay="${80 + idx * 15}">
                     <span class="ch12l5-li-icon"><i class="fa-solid ${pillar.icon}"></i></span>
                     <div class="ch12l5-li-content">
-                      <h4 class="ch12l5-li-title"><strong class="ch12l5-li-num">${pillar.num}.</strong> ${pillar.title}</h4>
                       <p class="ch12l5-li-text">${pillar.text}</p>
                     </div>
                   </li>
@@ -6516,7 +6507,7 @@ const coursesData = [
               }
 
               return `
-                <div class="ch12l5-slide">
+                <div class="ch12l5-slide lesson-slide">
                   <div class="ch12l5-shape ch12l5-shape-a"></div>
                   <div class="ch12l5-shape ch12l5-shape-b"></div>
                   <div class="ch12l5-shape ch12l5-shape-c"></div>
@@ -6539,7 +6530,7 @@ const coursesData = [
                   <div class="ch12l5-section-header" data-aos="fade-up" data-aos-delay="60">
                     <h3 class="ch12l5-section-title">
                       <i class="fa-solid fa-scroll"></i>
-                      ${yhLang("Four Pillars of CRC", "সিআরসি-র চারটি স্তম্ভ")}
+                      ${yhLang("Four Pillars of CRC", "আন্তর্জাতিক শিশু অধিকার সনদে ৫৪টি ধারা রয়েছে। মূলত চারটি স্তম্ভের আলোকে অনুচ্ছেদগুলো ভাগ করা হয়েছে।")}
                     </h3>
                   </div>
 
