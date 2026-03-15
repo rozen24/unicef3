@@ -5595,6 +5595,121 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch9-lesson-4",
+            title: yhLang("STIs and RTIs", "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ"),
+            icon: "fa-bacteria",
+            gradientClass: "bg-gradient-cyan",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q9d",
+                  question: yhLang(
+                    "How can RTIs be transmitted?",
+                    "প্রজননতন্ত্রের সংক্রমণ কীভাবে ছড়ায়?",
+                  ),
+                  options: [
+                    yhLang(
+                      "Through sexual contact, infected blood, contaminated needles, and breast milk",
+                      "যৌন সম্পর্ক, সংক্রমিত রক্ত, দূষিত সূঁচ এবং বুকের দুধের মাধ্যমে",
+                    ),
+                    yhLang("Only through sexual contact", "শুধুমাত্র যৌন সম্পর্কের মাধ্যমে"),
+                    yhLang("Through air only", "শুধুমাত্র বাতাসের মাধ্যমে"),
+                    yhLang("Through food only", "শুধুমাত্র খাদ্যের মাধ্যমে"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const mainDescription = yhLang(
+                "Sexually Transmitted Infections (STIs) are infections spread from one person to another through sexual contact. Reproductive Tract Infections (RTIs) are infections of the reproductive organs. Besides sexual transmission, RTIs can spread through infected blood/blood products, contaminated needles/instruments, and breast milk from infected mothers. All STIs fall under the category of RTIs.",
+                "যৌন সম্পর্কের মাধ্যমে একজন থেকে অন্যজনের মধ্যে যেসব সংক্রমণ ছড়ায় সেগুলোই 'যৌনবাহিত সংক্রমণ'। অন্যদিকে, প্রজনন অঙ্গসমূহের সংক্রমণকে 'প্রজননতন্ত্রের সংক্রমণ' বলে। যৌন সম্পর্ক (যৌনবাহিত সংক্রমণ) ছাড়াও সংক্রমিত রক্ত/রক্তজাত দ্রব্য গ্রহণ, সংক্রমিত সূঁচ/যন্ত্রপাতি ও আক্রান্ত মায়ের বুকের দুধের মাধ্যমে প্রজননতন্ত্রের সংক্রমণ হতে পারে। সকল যৌনবাহিত সংক্রমণই প্রজননতন্ত্রের সংক্রমণের আওতায় পড়ে।"
+              );
+
+              const causePoints = [
+                yhLang("Poor personal hygiene", "ব্যক্তিগত অপরিচ্ছন্নতা"),
+                yhLang("Overgrowth of microorganisms in reproductive tract", "প্রজননতন্ত্রের জীবাণুগুলোর অতিবৃদ্ধি"),
+                yhLang("Unsafe sexual relations", "অনিরাপদ যৌনমিলন"),
+                yhLang("Contaminated environment", "জীবাণুযুক্ত পরিবেশ"),
+                yhLang("Receiving infected blood", "সংক্রমিত রক্ত গ্রহণ"),
+                yhLang("Pregnancy from infected mother", "সংক্রমিত মায়ের গর্ভধারণ"),
+              ];
+
+              const symptomPoints = [
+                yhLang("Itching in genital area", "যৌনাঙ্গে চুলকানি হওয়া"),
+                yhLang("Foul-smelling or odorless discharge from genitals", "যৌনাঙ্গ থেকে দুর্গন্ধযুক্ত বা দুর্গন্ধবিহীন স্রাব যাওয়া"),
+                yhLang("Pus or pus-like discharge and frequent urination", "যৌনাঙ্গ থেকে পুঁজ বা পুঁজের মতো যাওয়া ও বারবার প্রস্রাব হওয়া"),
+                yhLang("Sores or ulcers in genital area", "যৌনাঙ্গে ক্ষত হওয়া"),
+                yhLang("Pain during sexual intercourse", "যৌনমিলনে ব্যথা হওয়া"),
+                yhLang("Itching or rash-like bumps on body", "শরীরে চুলকানি বা ঘামাচির মতো দানা হওয়া"),
+                yhLang("Swollen lymph nodes (in groin or other areas)", "শরীরে লসিকা গ্রন্থি (কুঁচকি বা অন্যান্য স্থানে গুটি হওয়া)"),
+              ];
+
+              const symptomNote = yhLang(
+                "In most cases, STI/RTI symptoms are not obvious. Especially in girls compared to boys, these symptoms often remain hidden. This delays their treatment and can lead to complications.",
+                "অধিকাংশ ক্ষেত্রেই যৌনরোগের লক্ষণ বোঝা যায় না। বিশেষ করে ছেলেদের তুলনায় মেয়েদের এই লক্ষণগুলো অপ্রকাশিত থাকে। তাই চিকিৎসা নিতে তারা অনেক দেরি করে ফেলে, যা থেকে জটিলতাও হতে পারে।"
+              );
+
+              function renderList(items, baseDelay = 80) {
+                return items
+                  .map(
+                    (text, idx) => `
+                    <li class="ch9l4-list-item ch9l4-li-type${(idx % 3) + 1}" data-aos="fade-left" data-aos-delay="${baseDelay + idx * 25}">
+                      <span class="ch9l4-li-icon"><i class="fa-solid fa-circle-dot"></i></span>
+                      <span class="ch9l4-li-text">${text}</span>
+                    </li>
+                  `,
+                  )
+                  .join("");
+              }
+
+              return `
+                <div class="ch9l4-slide lesson-slide">
+                  <h2 class="ch9l4-title" data-aos="fade-down">
+                    <i class="fa-solid fa-bacteria"></i>
+                    ${yhLang("STIs and RTIs", "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ")}
+                  </h2>
+
+                  <section class="ch9l4-description-box" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch9l4-desc-text">${mainDescription}</p>
+                  </section>
+                  <div class="row g-1">
+                       <div class="col-md-5">
+                             <section class="ch9l4-section ch9l4-causes-section" data-aos="fade-up" data-aos-delay="80">
+                              <h3 class="ch9l4-section-title">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                ${yhLang("Causes of RTIs and STIs", "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ")}
+                              </h3>
+                              <ul class="ch9l4-list">
+                                ${renderList(causePoints)}
+                              </ul>
+                            </section>
+                       </div>
+                       <div class="col-md-7">
+                           <section class="ch9l4-section ch9l4-symptoms-section" data-aos="fade-up" data-aos-delay="120">
+                              <h3 class="ch9l4-section-title">
+                                <i class="fa-solid fa-heartbeat"></i>
+                                ${yhLang("Common Symptoms of RTIs/STIs", "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ")}
+                              </h3>
+                              <ul class="ch9l4-list">
+                                ${renderList(symptomPoints, 100)}
+                              </ul>
+                            </section>
+                        </div>
+                    </div>
+                   <div class="ch9l4-warning-box">
+                      <i class="fa-solid fa-circle-info"></i>
+                      <p>${symptomNote}</p>
+                    </div>
+
+                 
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
