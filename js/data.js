@@ -6483,9 +6483,9 @@ const coursesData = [
             },
             content: (function () {
               return `
-                <div class="ch12l6-slide">
-                  <div class="ch12l6-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l6-title">
+                <div class="ch12l6-slide lesson-slide">
+                  <div class="ch12l6-header d-none" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch12l6-title d-none">
                       <i class="fa-solid fa-shield-exclamation"></i>
                       ${yhLang("Child Abuse", "শিশু নির্যাতন")}
                     </h2>
@@ -6533,59 +6533,55 @@ const coursesData = [
 
               const intro2 = yhLang(
                 "Reproductive health is a state of complete physical, mental, and social well-being related to the reproductive system at every stage of life. According to the World Health Organization (WHO), reproductive health encompasses the ability to reproduce, coupled with the right to satisfying and safe sex life, and the freedom to make decisions regarding reproduction.",
-                "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডব্লিউএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
+                "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (WHO) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
               );
-
               const rights = [
-                {
-                  num: "1",
-                  text: yhLang(
-                    "Sexual and reproductive health rights are part of fundamental human rights",
-                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার মৌলিক মানবাধিকারের অংশ।"
-                  ),
-                  icon: "fa-hand-holding-heart",
-                  type: "right1"
-                },
-                {
-                  num: "2",
-                  text: yhLang(
-                    "These rights are crucial for gender equality and sustainable development. Additionally, girls' and women's control over their bodies and sexual relationships is a prerequisite for their empowerment and rights.",
-                    "লিঙ্গ সমতা ও টেকসই উন্নয়নের প্রশ্নে এ অধিকার নিশ্চিত করা খুবই গুরুত্বপূর্ণ। পাশাপাশি নিজের শরীর ও যৌনসম্পর্কের ক্ষেত্রে কিশোরী এবং নারীদের নিয়ন্ত্রণ তাদের ক্ষমতায়ন ও অধিকারের পূর্বশর্ত।"
-                  ),
-                  icon: "fa-venus-mars",
-                  type: "right2"
-                },
-                {
-                  num: "3",
-                  text: yhLang(
-                    "These rights are essential for full participation of girls and women in social, economic, political, and cultural spheres",
-                    "সামাজিক, অর্থনৈতিক, রাজনৈতিক ও সাংস্কৃতিক অঙ্গনে তাদের পূর্ণ অংশগ্রহণের ক্ষেত্রেও এ অধিকার জরুরি।"
-                  ),
-                  icon: "fa-people-group",
-                  type: "right3"
-                },
-                {
-                  num: "4",
-                  text: yhLang(
-                    "These rights protect adolescent girls and women from all forms of discrimination, violence, and abuse. They ensure respect for dignity, equality, and diversity.",
-                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার কিশোরী ও নারীদের সব ধরনের বৈষম্য, সহিংসতা, নির্যাতন থেকে মুক্ত থাকার অধিকারের অন্যতম গুরুত্বপূর্ণ অংশ। মর্যাদা, সমতা ও বৈচিত্র্যের প্রতি সম্মান প্রদর্শনের নীতিগুলো সুরক্ষিত করে এ অধিকার।"
-                  ),
-                  icon: "fa-shield-heart",
-                  type: "right4"
-                }
-              ];
+  {
+    text: yhLang(
+      "Sexual and reproductive health rights are part of fundamental human rights",
+      "যৌন ও প্রজনন স্বাস্থ্য অধিকার মৌলিক মানবাধিকারের অংশ।"
+    ),
+    icon: "fa-hand-holding-heart",
+    type: "right1"
+  },
+  {
+    text: yhLang(
+      "These rights are crucial for gender equality and sustainable development. Additionally, girls' and women's control over their bodies and sexual relationships is a prerequisite for their empowerment and rights.",
+      "লিঙ্গ সমতা ও টেকসই উন্নয়নের প্রশ্নে এ অধিকার নিশ্চিত করা খুবই গুরুত্বপূর্ণ। পাশাপাশি নিজের শরীর ও যৌনসম্পর্কের ক্ষেত্রে কিশোরী এবং নারীদের নিয়ন্ত্রণ তাদের ক্ষমতায়ন ও অধিকারের পূর্বশর্ত।"
+    ),
+    icon: "fa-venus-mars",
+    type: "right2"
+  },
+  {
+    text: yhLang(
+      "These rights are essential for full participation of girls and women in social, economic, political, and cultural spheres",
+      "সামাজিক, অর্থনৈতিক, রাজনৈতিক ও সাংস্কৃতিক অঙ্গনে তাদের পূর্ণ অংশগ্রহণের ক্ষেত্রেও এ অধিকার জরুরি।"
+    ),
+    icon: "fa-people-group",
+    type: "right3"
+  },
+  {
+    text: yhLang(
+      "These rights protect adolescent girls and women from all forms of discrimination, violence, and abuse. They ensure respect for dignity, equality, and diversity.",
+      "যৌন ও প্রজনন স্বাস্থ্য অধিকার কিশোরী ও নারীদের সব ধরনের বৈষম্য, সহিংসতা, নির্যাতন থেকে মুক্ত থাকার অধিকারের অন্যতম গুরুত্বপূর্ণ অংশ। মর্যাদা, সমতা ও বৈচিত্র্যের প্রতি সম্মান প্রদর্শনের নীতিগুলো সুরক্ষিত করে এ অধিকার।"
+    ),
+    icon: "fa-shield-heart",
+    type: "right4"
+  }
+];
+              
 
               function renderRights() {
                 return rights.map((right, idx) => `
                   <li class="ch12l7-li ch12l7-li-${right.type}" data-aos="fade-up" data-aos-delay="${80 + idx * 15}">
                     <span class="ch12l7-li-icon"><i class="fa-solid ${right.icon}"></i></span>
-                    <p class="ch12l7-li-text"><strong class="ch12l7-li-num">${right.num}.</strong> ${right.text}</p>
+                    <p class="ch12l7-li-text"> ${right.text}</p>
                   </li>
                 `).join('');
               }
 
               return `
-                <div class="ch12l7-slide">
+                <div class="ch12l7-slide lesson-slide">
                   <div class="ch12l7-shape ch12l7-shape-a"></div>
                   <div class="ch12l7-shape ch12l7-shape-b"></div>
                   <div class="ch12l7-shape ch12l7-shape-c"></div>
