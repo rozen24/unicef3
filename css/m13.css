@@ -2944,7 +2944,9 @@
   margin: 0;
   line-height: 1.0;
 }
-
+.pratikar .ch13l9-li-title {
+  display: none !important;
+}
 .ch13l9-li-text {
   font-size: 0.55rem;
   line-height: 1.2;

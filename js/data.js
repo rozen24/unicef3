@@ -7932,79 +7932,185 @@ const orbitItems = [
             content: (function () {
               const sections = [
                 {
-                  title: yhLang("Forms of Violence Against Youth", "তরুনদের প্রতি সহিংসতার বিভিন্ন রূপ"),
+                  Class_name: "sohingsota",
+                  title: "",
                   icon: "fa-shapes",
-                  description: yhLang(
-                    "Violence against youth takes many forms, each with unique characteristics and impacts. Understanding these forms is essential for prevention and support.",
-                    "তরুনদের প্রতি সহিংসতা বিভিন্ন রূপে প্রকাশিত হয়। প্রতিটি রূপের নিজস্ব বৈশিষ্ট্য ও প্রভাব রয়েছে।"
-                  ),
+                  description: "",
                   items: [
-                    { num: "1", title: yhLang("Physical Violence", "দৈহিক সহিংসতা"), text: yhLang("Use of physical force causing bodily harm", "শারীরিক শক্তি প্রয়োগে দেহের ক্ষতি"), icon: "fa-hand", type: "type1" },
-                    { num: "2", title: yhLang("Sexual Violence", "যৌন সহিংসতা"), text: yhLang("Sexual assault, abuse, or unwanted sexual contact", "যৌন আক্রমণ ও অপ্রত্যাশিত যৌন স্পর্শ"), icon: "fa-triangle-exclamation", type: "type2" },
-                    { num: "3", title: yhLang("Mental/Emotional Violence", "মানসিক সহিংসতা"), text: yhLang("Psychological abuse, threats, intimidation", "মনোবল ভাঙা, হুমকি, ভয়ভীতি"), icon: "fa-brain", type: "type3" },
-                    { num: "4", title: yhLang("Economic Violence", "অর্থনৈতিক সহিংসতা"), text: yhLang("Denial of financial resources and support", "অর্থ ও সম্পদ অস্বীকার"), icon: "fa-money-bill", type: "type1" },
-                    { num: "5", title: yhLang("Cybercrime", "সাইবার ক্রাইম"), text: yhLang("Online harassment, blackmail, illegal content sharing", "অনলাইন হয়রানি ও গোপনীয়তা লঙ্ঘন"), icon: "fa-computer", type: "type2" },
-                    { num: "6", title: yhLang("Bullying", "বুলিং"), text: yhLang("Repeated harassment and intimidation by peers", "সমবয়সীদের দ্বারা পুনরাবৃত্ত হয়রানি"), icon: "fa-users-slash", type: "type3" },
-                    { num: "7", title: yhLang("Child Marriage", "বাল্যবিবাহ"), text: yhLang("Forced early marriage before legal age", "আইনি বয়স পূর্ণ হওয়ার আগে বিয়ে"), icon: "fa-ring", type: "type1" },
-                    { num: "8", title: yhLang("Human Trafficking", "পাচার"), text: yhLang("Coercion for exploitation and forced labor", "জোরপূর্বক শোষণ ও শ্রম"), icon: "fa-arrows-alt", type: "type2" },
-                    { num: "9", title: yhLang("Sexual Harassment", "যৌন হয়রানি/ইভটিজিং"), text: yhLang("Unwanted sexual remarks, gestures, or comments", "অনাকাঙ্ক্ষিত যৌন মন্তব্য ও অঙ্গভঙ্গি"), icon: "fa-megaphone", type: "type3" },
-                    { num: "10", title: yhLang("Acid Attacks", "এসিড নিক্ষেপ"), text: yhLang("Deliberate burning with corrosive substances", "ক্ষতিকারক পদার্থ দ্বারা পোড়ানো"), icon: "fa-flask", type: "type1" },
-                    { num: "11", title: yhLang("Exploitation", "পর্নোগ্রাফি ও অশ্লীল প্রকাশনা"), text: yhLang("Pornography and indecent publications", "অশ্লীল সামগ্রী নির্মাণ ও প্রচার"), icon: "fa-ban", type: "type2" },
-                    { num: "12", title: yhLang("Sexual Exploitation", "পতিতাবৃত্তি"), text: yhLang("Forced involvement in sex work", "যৌনকর্মে বাধ্য করা"), icon: "fa-person-circle-xmark", type: "type3" },
-                    { num: "13", title: yhLang("Child Labor", "শিশুশ্রম"), text: yhLang("Exploitation of youth in hazardous work", "ঝুঁকিপূর্ণ কাজে শিশু নিয়োগ"), icon: "fa-hammer", type: "type1" }
+                    { title: yhLang("Physical Violence", "দৈহিক সহিংসতা"), icon: "fa-hand", type: "type1" },
+                    { title: yhLang("Sexual Violence", "যৌন সহিংসতা"), icon: "fa-triangle-exclamation", type: "type2" },
+                    { title: yhLang("Mental Violence", "মানসিক সহিংসতা"), icon: "fa-brain", type: "type3" },
+                    { title: yhLang("Economic Violence", "অর্থনৈতিক সহিংসতা"), icon: "fa-money-bill", type: "type1" },
+                    { title: yhLang("Cybercrime", "সাইবার ক্রাইম"), icon: "fa-computer", type: "type2" },
+                    { title: yhLang("Bullying", "বুলিং"), icon: "fa-users-slash", type: "type3" },
+                    { title: yhLang("Child Marriage", "বাল্যবিবাহ"), icon: "fa-ring", type: "type1" },
+                    { title: yhLang("Human Trafficking", "পাচার"), icon: "fa-arrows-alt", type: "type2" },
+                    { title: yhLang("Sexual Harassment", "যৌন হয়রানি/ইভটিজিং"), icon: "fa-face-grin-tongue-wink", type: "type3" },
+                    { title: yhLang("Acid Attack", "এসিড নিক্ষেপ"), icon: "fa-flask", type: "type1" },
+                    { title: yhLang("Pornography and Obscene Publications", "পর্নোগ্রাফি ও অশ্লীল প্রকাশনা"), icon: "fa-ban", type: "type2" },
+                    { title: yhLang("Prostitution", "পতিতাবৃত্তি"), icon: "fa-person-circle-xmark", type: "type3" },
+                    { title: yhLang("Child Labor", "শিশুশ্রম"), icon: "fa-hammer", type: "type1" }
                   ]
-                },
+                }
+              ];
+              const sections2 = [
                 {
+                  class_name: "prabhav",
                   title: yhLang("Impact of Violence", "সহিংসতার প্রভাব"),
                   icon: "fa-exclamation-circle",
                   description: yhLang(
                     "Violence has severe and lasting impacts on victims' physical, mental, behavioral, and social well-being.",
                     "সহিংসতার প্রভাব শারীরিক, মানসিক, আচরণগত ও সামাজিক — সব ক্ষেত্রেই গভীর।"
                   ),
-                  items: [
-                    { num: "1", title: yhLang("Physical Effects", "শারীরিক প্রভাব"), text: yhLang("Headaches, loss of appetite, nausea, insomnia, and other health complications", "মাথা ব্যথা, ক্ষুধামন্দা, বমি-বমিভাব, অনিদ্রা ইত্যাদি"), icon: "fa-heart-pulse", type: "type1" },
-                    { num: "2", title: yhLang("Mental Effects", "মানসিক প্রভাব"), text: yhLang("Anxiety, depression, low mood, irritability, anger, fear, shame, guilt, suicidal thoughts, distrust of others", "দুশ্চিন্তা, মনমরা, বিষণ্নতা, বিরক্তিবোধ, আত্মহত্যার চিন্তা প্রভৃতি"), icon: "fa-head-side-virus", type: "type2" },
-                    { num: "3", title: yhLang("Behavioral Effects", "আচরণগত প্রভাব"), text: yhLang("Crying, inability to concentrate, avoidance of crowded places and public transport", "কান্নাকাটি, মনোযোগ না দিতে পারা, জনসমাগম এড়িয়ে চলা"), icon: "fa-child", type: "type3" },
-                    { num: "4", title: yhLang("Social Effects", "সামাজিক প্রভাব"), text: yhLang("Social disgrace, family shame, withdrawal from social activities, forced early marriage", "সমাজে লজ্জা, পারিবারিক বদনাম, সামাজিক কর্ম থেকে দূরে থাকা"), icon: "fa-people-group", type: "type1" }
-                  ]
+                 items: [
+  { 
+    title: yhLang("Physical Effects", "শারীরিক প্রভাব"),
+    text: yhLang(
+      "Headache, loss of appetite, nausea, insomnia and similar physical problems.",
+      "মাথা ব্যথা, ক্ষুধামন্দা, বমি-বমিভাব অনিদ্রা ইত্যাদি"
+    ),
+    icon: "fa-heart-pulse",
+    type: "type1"
+  },
+  { 
+    class_name: "manoshik",
+    title: yhLang("Mental Effects", "মানসিক প্রভাব"),
+    text: yhLang(
+      "Anxiety, sadness, depression, irritability, anger, fear, feeling helpless, insecurity, uncertainty about the future, humiliation, guilt, hatred toward men, and even suicidal thoughts.",
+      "দুশ্চিন্তা, মনমরা, বিষণ্নতা, বিরক্তিবোধ, রাগান্বিত, খিটখিটে মেজাজ, ভয় পাওয়া এবং অসহায়বোধ করা, নিরাপত্তার অভাব, ভবিষ্যৎ সম্পর্কে অনিশ্চয়তাবোধ, অপমানিত বোধ, অপরাধবোধ, পুরুষের প্রতি ঘৃণা জন্মানো ও আত্মহত্যা ইত্যাদি"
+    ),
+    icon: "fa-head-side-virus",
+    type: "type2"
+  },
+  { 
+    title: yhLang("Behavioral Effects", "আচরণগত প্রভাব"),
+    text: yhLang(
+      "Frequent crying, inability to concentrate, avoiding crowded places and public transport.",
+      "কান্নাকাটি করা, মনোযোগ দিতে না পারা, ভিড়ের জায়গা ও পাবলিক পরিবহণ হতে নিজেকে বিরত রাখা ইত্যাদি"
+    ),
+    icon: "fa-child",
+    type: "type3"
+  },
+  { 
+    title: yhLang("Social Effects", "সামাজিক প্রভাব"),
+    text: yhLang(
+      "Social humiliation, scolding from parents and elders, withdrawal from social activities, and early marriage.",
+      "সমাজে হেয় প্রতিপন্ন হওয়া, বাবা-মা ও গুরুজনদের তিরস্কার, সামাজিক কর্মকাণ্ড হতে নিজেকে গুটিয়ে নেয়া, অল্প বয়সে বিয়ে দিয়ে দেয়া ইত্যাদি।"
+    ),
+    icon: "fa-people-group",
+    type: "type1"
+  }
+]
                 },
                 {
+                  class_name: "pratikar",
                   title: yhLang("Prevention and Remedy Methods", "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থাসমূহ"),
                   icon: "fa-shield-heart",
                   description: yhLang(
                     "Comprehensive strategies involving family, community, and government support are essential for preventing violence and supporting victims.",
                     "পরিবার, সমাজ ও সরকারের যৌথ প্রচেষ্টায় সহিংসতা প্রতিরোধ ও প্রতিকার সম্ভব।"
                   ),
-                  items: [
-                    { num: "1", title: yhLang("Strengthen Family Bonds", "পারিবারিক বন্ধন শক্তিশালী করা"), text: yhLang("Build trust and communication within the family unit", "পরিবারের সদস্যদের মধ্যে বিশ্বাস ও যোগাযোগ বৃদ্ধি"), icon: "fa-house-heart", type: "type1" },
-                    { num: "2", title: yhLang("Foster Safe Relationships", "নিরাপদ সম্পর্ক গড়ে তোলা"), text: yhLang("Create safe, friendly relationships between parents, guardians and youth", "অভিভাবক ও সন্তানের মধ্যে বন্ধুত্বপূর্ণ সম্পর্ক সৃষ্টি"), icon: "fa-handshake", type: "type2" },
-                    { num: "3", title: yhLang("Reduce Substance Abuse", "মাদকের অপব্যবহার কমানো"), text: yhLang("Control availability and abuse of drugs and harmful substances", "মাদকের সহজলভ্যতা ও অপব্যবহার হ্রাস করা"), icon: "fa-hand-holding-heart", type: "type3" },
-                    { num: "4", title: yhLang("Gender Equality Awareness", "লিঙ্গ সমতা সচেতনতা"), text: yhLang("Conduct awareness programs on gender discrimination and equality", "জেন্ডার বৈষম্য দূরীকরণে সচেতনতামূলক কর্মসূচি"), icon: "fa-person", type: "type1" },
-                    { num: "5", title: yhLang("Legal Awareness", "আইনি সচেতনতা"), text: yhLang("Educate public and officials on violence prevention and protection laws", "নারী ও শিশু সুরক্ষা আইন সম্পর্কে সচেতনতা"), icon: "fa-scale-balanced", type: "type2" },
-                    { num: "6", title: yhLang("Economic Support", "অর্থনৈতিক সহায়তা"), text: yhLang("Provide vocational training and easy-term micro-credit for employment", "ক্ষুদ্রশিল্প প্রশিক্ষণ ও ঋণ প্রদান"), icon: "fa-briefcase", type: "type3" },
-                    { num: "7", title: yhLang("Counseling Services", "কাউন্সেলিং সেবা"), text: yhLang("Make mental health and marriage counseling services accessible", "মনোসামাজিক কাউন্সেলিং সেবা সহজলভ্য করা"), icon: "fa-comments", type: "type1" },
-                    { num: "8", title: yhLang("Life Skills Training", "জীবনমুখী প্রশিক্ষণ"), text: yhLang("Provide training on self-protection, anger management, social skills, and conflict resolution", "আত্মরক্ষা, রাগ নিয়ন্ত্রণ ও সামাজিক দক্ষতা প্রশিক্ষণ"), icon: "fa-graduation-cap", type: "type2" }
-                  ]
+                 items: [
+  {
+    text: yhLang(
+      "Strengthen bonds within family and friends.",
+      "পারিবারিক ও বন্ধুবান্ধবের মধ্যকার বন্ধন জোরদার করা।"
+    ),
+    icon: "fa-house",
+    type: "type1"
+  },
+  {
+    text: yhLang(
+      "Create safe and friendly relationships between children and parents/guardians.",
+      "সন্তান ও বাবা-মা/অভিভাবকের মধ্যে নিরাপদ, বন্ধুত্বপূর্ণ সম্পর্ক সৃষ্টি।"
+    ),
+    icon: "fa-handshake",
+    type: "type2"
+  },
+  {
+    text: yhLang(
+      "Reduce substance abuse and limit easy availability of drugs.",
+      "মাদকের অপব্যবহার ও সহজলভ্যতা হ্রাস।"
+    ),
+    icon: "fa-hand-holding-heart",
+    type: "type3"
+  },
+  {
+    text: yhLang(
+      "Implement awareness programs to eliminate gender discrimination.",
+      "জেন্ডার বৈষম্য দূরীকরণের লক্ষ্যে বিবিধ সচেতনতামূলক কর্মসূচি গ্রহণ করা।"
+    ),
+    icon: "fa-person",
+    type: "type1"
+  },
+  {
+    text: yhLang(
+      "Raise awareness among the public and administration about laws preventing violence against women and children.",
+      "নারী ও শিশুর প্রতি সহিংসতা দমন আইন সম্পর্কে জনগণ ও জনপ্রশাসনকে সোচ্চার করা।"
+    ),
+    icon: "fa-scale-balanced",
+    type: "type2"
+  },
+  {
+    text: yhLang(
+      "Reduce unemployment and poverty by providing small-scale industry training and easy-term loans.",
+      "সমাজে বেকারত্ব হ্রাস, দারিদ্র বিমোচন করার লক্ষ্যে ক্ষুদ্রশিল্প প্রশিক্ষণ এবং সহজ শর্তে ঋণ প্রদান।"
+    ),
+    icon: "fa-briefcase",
+    type: "type3"
+  },
+  {
+    text: yhLang(
+      "Make psychosocial counseling services accessible to prevent mental and marital problems.",
+      "মানসিক ও বৈবাহিক সমস্যা, বৈকল্যতা প্রতিরোধের জন্য মনো-সামাজিক কাউন্সেলিং সেবা সহজলভ্য করা।"
+    ),
+    icon: "fa-comments",
+    type: "type1"
+  },
+  {
+    text: yhLang(
+      "Provide life-skills training for children and adolescents such as self-protection, anger management, social skills, conflict resolution with parents and friends, and computer or vocational training.",
+      "শিশু ও কিশোর-কিশোরীদের জীবনমুখী প্রশিক্ষণ, যেমন : কীভাবে নিজেকে সুরক্ষিত রাখা যাবে, রাগ নিয়ন্ত্রণ, সামাজিক দক্ষতা বিকাশ প্রশিক্ষণ, কীভাবে বাবা-মা ও বন্ধুদের সাথে দ্বন্দ্ব কাটানো যাবে, কম্পিউটার ও কারিগরি প্রশিক্ষণ ইত্যাদি।"
+    ),
+    icon: "fa-graduation-cap",
+    type: "type2"
+  }
+]
                 }
               ];
 
-              function renderSections() {
+              function renderSections1() {
                 return sections.map((section, secIdx) => `
                   <section class="ch13l9-section ch13l9-section-type${(secIdx % 3) + 1}" data-aos="fade-up" data-aos-delay="${60 + secIdx * 20}">
-                    <div class="ch13l9-section-header">
-                      <h3 class="ch13l9-section-title">
-                        <i class="fa-solid ${section.icon}"></i>
-                        ${section.title}
-                      </h3>
-                      <p class="ch13l9-section-desc">${section.description}</p>
-                    </div>
-                    <ul class="ch13l9-list">
+                    
+                    <ul class="ch13l9-list ${section.class_name}">
                       ${section.items.map((item, idx) => `
                         <li class="ch13l9-li ch13l9-li-${item.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 15}">
                           <span class="ch13l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                           <div class="ch13l9-li-content">
-                            <strong class="ch13l9-li-num">${item.num}</strong>
-                            <h4 class="ch13l9-li-title">${item.title}</h4>
+                            <h3 class="ch13l9-li-title">${item.title}</h3>
+                          </div>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </section>
+                `).join('');
+              }
+              function renderSections2() {
+                return sections2.map((section2, secIdx) => `
+                  <section class="ch13l9-section ch13l9-section-type${(secIdx % 3) + 1}" data-aos="fade-up" data-aos-delay="${60 + secIdx * 20}">
+                    <div class="ch13l9-section-header">
+                      <h3 class="ch13l9-section-title">
+                        <i class="fa-solid ${section2.icon}"></i>
+                        ${section2.title}
+                      </h3>
+                    </div>
+                    <ul class="ch13l9-list ${section2.class_name}">
+                      ${section2.items.map((item, idx) => `
+                        <li class="ch13l9-li ch13l9-li-${item.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 15}">
+                          <span class="ch13l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                          <div class="ch13l9-li-content">
+                            <h3 class="ch13l9-li-title">${item.title}</h3>
                             <p class="ch13l9-li-text">${item.text}</p>
                           </div>
                         </li>
@@ -8027,15 +8133,17 @@ const orbitItems = [
                     </h2>
                   </div>
 
-                  <section class="ch13l9-intro-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="ch13l9-intro-text">${yhLang(
-                      "Violence against youth manifests in multiple forms. Recognizing these forms and their impacts is crucial for prevention and victim support.",
-                      "তরুনদের প্রতি সহিংসতা বহুমুখী। এর প্রতিরোধ ও প্রতিকারে সচেতনতা অপরিহার্য।"
-                    )}</p>
-                  </section>
 
                   <section class="ch13l9-content" data-aos="fade-up" data-aos-delay="60">
-                    ${renderSections()}
+                  <div class="row g-1">
+                       <div class="col-md-5">
+                             ${renderSections1()}
+                       </div>
+                       <div class="col-md-7">
+                          ${renderSections2()}
+                       </div>
+                    </div>
+                   
                   </section>
                 </div>
               `;
