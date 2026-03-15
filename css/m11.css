@@ -1,0 +1,303 @@
+
+/* ===== MODULE 11 LESSON 4: CERVICAL CANCER PREVENTION (TWO COLUMN) ===== */
+
+.ch11l4-slide {
+  position: relative;
+  padding: 18px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.14);
+  overflow: hidden;
+  border: 1px solid rgba(236, 72, 153, 0.16);
+}
+
+.ch11l4-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
+}
+
+.ch11l4-left {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ch11l4-header {
+  flex-shrink: 0;
+}
+
+.ch11l4-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #be185d;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 4px solid #ec4899;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.12);
+}
+
+.ch11l4-title i {
+  font-size: 1.25rem;
+  color: #ec4899;
+}
+
+.ch11l4-descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.ch11l4-descriptions::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ch11l4-descriptions::-webkit-scrollbar-thumb {
+  background: rgba(236, 72, 153, 0.3);
+  border-radius: 3px;
+}
+
+.ch11l4-desc {
+  padding: 10px 11px;
+  border-radius: 10px;
+  border-left: 4px solid transparent;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 2px 6px rgba(236, 72, 153, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ch11l4-desc:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.16);
+}
+
+/* Description Type Colors */
+.ch11l4-desc-desc1 {
+  border-left-color: #dc2626;
+}
+
+.ch11l4-desc-desc2 {
+  border-left-color: #f59e0b;
+}
+
+.ch11l4-desc-desc3 {
+  border-left-color: #3b82f6;
+}
+
+.ch11l4-desc-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.ch11l4-desc-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.ch11l4-desc-desc1 .ch11l4-desc-icon {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.12);
+}
+
+.ch11l4-desc-desc2 .ch11l4-desc-icon {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.ch11l4-desc-desc3 .ch11l4-desc-icon {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.ch11l4-desc-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #5b21b6;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.3;
+}
+
+.ch11l4-desc-num {
+  font-weight: 700;
+}
+
+.ch11l4-desc-desc1 .ch11l4-desc-num {
+  color: #991b1b;
+}
+
+.ch11l4-desc-desc2 .ch11l4-desc-num {
+  color: #92400e;
+}
+
+.ch11l4-desc-desc3 .ch11l4-desc-num {
+  color: #1e40af;
+}
+
+.ch11l4-desc-text {
+  font-size: 0.72rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.42;
+  font-weight: 500;
+}
+
+.ch11l4-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+
+.ch11l4-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ch11l4-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive: Tablet (900px-1199px) */
+@media (max-width: 1199px) {
+  .ch11l4-slide {
+    padding: 16px;
+    border-radius: 18px;
+    min-height: 350px;
+  }
+
+  .ch11l4-container {
+    gap: 16px;
+  }
+
+  .ch11l4-title {
+    font-size: 1.1rem;
+    gap: 8px;
+    padding: 7px 10px;
+  }
+
+  .ch11l4-title i {
+    font-size: 1.1rem;
+  }
+
+  .ch11l4-descriptions {
+    gap: 8px;
+  }
+
+  .ch11l4-desc {
+    padding: 8px 10px;
+  }
+
+  .ch11l4-desc-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .ch11l4-desc-title {
+    font-size: 0.8rem;
+  }
+
+  .ch11l4-desc-text {
+    font-size: 0.68rem;
+    line-height: 1.38;
+  }
+
+  .ch11l4-right {
+    min-height: 300px;
+  }
+}
+
+/* Responsive: Mobile (768px-899px) */
+@media (max-width: 899px) {
+  .ch11l4-slide {
+    padding: 12px;
+    border-radius: 14px;
+    min-height: auto;
+  }
+
+  .ch11l4-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    min-height: auto;
+  }
+
+  .ch11l4-left {
+    gap: 10px;
+  }
+
+  .ch11l4-title {
+    font-size: 1rem;
+    gap: 7px;
+    padding: 6px 9px;
+  }
+
+  .ch11l4-title i {
+    font-size: 1rem;
+  }
+
+  .ch11l4-descriptions {
+    gap: 7px;
+    max-height: 250px;
+    padding-right: 4px;
+  }
+
+  .ch11l4-desc {
+    padding: 7px 8px;
+  }
+
+  .ch11l4-desc-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .ch11l4-desc-title {
+    font-size: 0.75rem;
+  }
+
+  .ch11l4-desc-text {
+    font-size: 0.65rem;
+    line-height: 1.35;
+  }
+
+  .ch11l4-right {
+    min-height: 250px;
+    max-height: 280px;
+  }
+
+  .ch11l4-image-wrapper {
+    border-radius: 10px;
+  }
+}
+

@@ -3785,7 +3785,7 @@ const coursesData = [
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text d-none">${yhLang("ব্যবস্থাপনা", "ব্যবস্থাপনা")}</h3>
+                    <h3 class="gradient-text">${yhLang("ব্যবস্থাপনা", "ব্যবস্থাপনা")}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(managementPoints)}
                     </ul>
@@ -6035,6 +6035,100 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch11-lesson-4",
+            title: yhLang(
+              "Cervical Cancer Prevention",
+              "জরায়ুমুখ ক্যান্সার"
+            ),
+            icon: "fa-shield-heart",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q11d",
+                  question: yhLang(
+                    "What is the main cause of cervical cancer?",
+                    "জরায়ুমুখ ক্যান্সারের প্রধান কারণ কী?"
+                  ),
+                  options: [
+                    yhLang("Human Papillomavirus (HPV)", "হিউম্যান প্যাপিলোমা ভাইরাস"),
+                    yhLang("Poor hygiene", "খারাপ স্বাস্থ্যবিধি"),
+                    yhLang("Weak immunity", "দুর্বল রোগ প্রতিরোধ ক্ষমতা"),
+                    yhLang("Genetic factors only", "শুধু জিনগত কারণ")
+                  ],
+                  correctAnswer: 0
+                }
+              ]
+            },
+            content: (function () {
+              const descriptions = [
+                {
+                  text: yhLang(
+                    "Cervical cancer is preventable when detected early and treated promptly. Complete recovery is possible with early diagnosis and appropriate treatment. However, it remains one of the leading causes of cancer mortality among women—globally the fourth most common, and the second most common among Bangladeshi women.",
+                    "জরায়ুমুখ ক্যান্সার প্রতিরোধযোগ্য একটি রোগ। দ্রুত রোগ নির্ণয় ও প্রয়োজনীয় চিকিৎসার মাধ্যমে এই রোগ থেকে সম্পূর্ণ সেরে ওঠা সম্ভব। তথাপি এটি সকল ধরণের ক্যান্সার এবং নারীদের ক্যান্সারজনিত মৃত্যুর অন্যতম প্রধান কারণ। সাধারণত নারীরা যেসব ক্যান্সারে আক্রান্ত হয়ে থাকেন, বৈশ্বিকভাবে তাদের মধ্যে জরায়ুমুখ ক্যান্সার চতুর্থ সর্বোচ্চ। বাংলাদেশি নারীদের ক্ষেত্রে এটি দ্বিতীয় সর্বোচ্চ।"
+                  ),
+                  icon: "fa-shield",
+                  type: "desc1"
+                },
+                {
+                  text: yhLang(
+                    "According to 2020 data, over 600,000 women are diagnosed with cervical cancer annually and approximately 342,000 die. Remarkably, 90% of these deaths occur in low- and middle-income countries like Bangladesh.",
+                    "২০২০ সালের তথ্য-উপাত্ত অনুযায়ী প্রতিবছর বিশ্বের ছয় লক্ষাধিক নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হন, যার মধ্যে প্রায় তিন লক্ষ বিয়াল্লিশ হাজার জন মৃত্যুবরণ করে থাকেন। এর প্রায় ৯০% মৃত্যুই বাংলাদেশের মতো উন্নয়নশীল বা স্বল্পোন্নত দেশে ঘটে থাকে।"
+                  ),
+                  icon: "fa-chart-column",
+                  type: "desc2"
+                },
+                {
+                  text: yhLang(
+                    "Human Papillomavirus (HPV)—a sexually transmitted virus—is the primary cause. WHO recommends regular screening and HPV vaccination to reduce incidence and deaths. Without strong prevention and control, projections suggest 700,000 cases and 400,000 deaths by 2030, mostly in developing nations.",
+                    "হিউম্যান প্যাপিলোমা ভাইরাস (এইচপিভি), যা একটি যৌনবাহিত ভাইরাস, এটি জরায়ুমুখ ক্যান্সার সৃষ্টি করে থাকে। বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব। ধারণা করা হচ্ছে, জরায়ুমুখ ক্যান্সার প্রতিরোধ ও নিয়ন্ত্রণ কার্যক্রম সফলভাবে বাস্তবায়িত না হলে ২০৩০ সালে বিশ্বব্যাপী প্রায় সাত লক্ষ নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হবেন, যার প্রায় চার লক্ষ মৃত্যুবরণ করবেন এবং এর সিংহভাগই ঘটবে উন্নয়নশীল দেশে।"
+                  ),
+                  icon: "fa-syringe",
+                  type: "desc3"
+                }
+              ];
+
+              function renderDescriptions() {
+                return descriptions.map((desc, idx) => `
+                  <div class="ch11l4-desc ch11l4-desc-${desc.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 20}">
+                    <div class="ch11l4-desc-header">
+                      <span class="ch11l4-desc-icon"><i class="fa-solid ${desc.icon}"></i></span>
+                      
+                    </div>
+                    <p class="ch11l4-desc-text">${desc.text}</p>
+                  </div>
+                `).join('');
+              }
+
+              return `
+                <div class="ch11l4-slide lesson-slide">
+                  <div class="ch11l4-container">
+                    <div class="ch11l4-left">
+                      <div class="ch11l4-header" data-aos="fade-down" data-aos-delay="0">
+                        <h2 class="ch11l4-title">
+                          <i class="fa-solid fa-shield-heart"></i>
+                          ${yhLang("Cervical Cancer Prevention", "জরায়ুমুখ ক্যান্সার")}
+                        </h2>
+                      </div>
+
+                      <div class="ch11l4-descriptions">
+                        ${renderDescriptions()}
+                      </div>
+                    </div>
+
+                    <div class="ch11l4-right" data-aos="zoom-in" data-aos-delay="60">
+                      <div class="ch11l4-image-wrapper">
+                        <img src="img/modu11/joni.jpg" alt="Cervical Cancer Prevention" class="ch11l4-image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })()
+          }
         ],
       },
       {
@@ -6079,8 +6173,14 @@ const coursesData = [
                   icon: "fa-circle-info",
                   description: yhLang(
                     "Polycystic Ovary Syndrome (PCOS) is a major health issue affecting women worldwide. In this condition, multiple cysts form in the ovaries, which is why it has this name. Research shows that 1 out of every 10 women has this problem. Women of any age can develop PCOS, but it most commonly affects women of reproductive age, particularly those aged 15-45 years.",
-                    "সারা বিশ্বেই নারীদের একটি বড় স্বাস্থ্য সমস্যা পলিসিস্টিক ওভারিয়ান সিনড্রোম বা পিসিওএস। এই রোগে ডিম্বাশয়ে অনেকগুলো সিস্ট হয় বলেই এর এমন নামকরণ। গবেষণা বলছে, প্রতি ১০ জন নারীর মেধ্য ১ জনের এ সমস্যা আছে। যেকোনো বয়সী নারীই এতে আক্রান্ত হতে পারেন। তবে প্রজননক্ষম বা ১৫ থেকে ৪৫ বছর বয়সী নারীরা বেশি আক্রান্ত হন। "
-                  )
+                    "সারা বিশ্বেই নারীদের একটি বড় স্বাস্থ্য সমস্যা পলিসিস্টিক ওভারিয়ান সিনড্রোম বা পিসিওএস। এই রোগে ডিম্বাশয়ে অনেকগুলো সিস্ট হয় বলেই এর এমন নামকরণ। গবেষণা বলছে, প্রতি ১০ জন নারীর মধ্যে ১ জনের এ সমস্যা আছে। যেকোনো বয়সী নারীই এতে আক্রান্ত হতে পারেন। তবে প্রজননক্ষম বা ১৫ থেকে ৪৫ বছর বয়সী নারীরা বেশি আক্রান্ত হন।"
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Hormonal Disorder", "হরমোনাল সমস্যা"), text: yhLang("PCOS is a genetic and hormonal issue", "এটি বংশগত এবং হরমোনাল সমস্যা"), icon: "fa-flask", type: "type1" },
+                    { num: "2", title: yhLang("Androgen Elevation", "পুরুষ হরমোনের বৃদ্ধি"), text: yhLang("Elevated male hormones in women's bodies", "নারীর শরীরে পুরুষ হরমোনের মাত্রা বৃদ্ধি"), icon: "fa-dna", type: "type2" },
+                    { num: "3", title: yhLang("Ovulation Problems", "ডিম্বস্ফোটনের সমস্যা"), text: yhLang("Eggs don't mature and release properly", "ডিম্বাণু পরিপক্ব হওয়ার পর প্রকোষ্ঠ ফেটে না"), icon: "fa-circle", type: "type3" },
+                    { num: "4", title: yhLang("Menstrual Irregularity", "মাসিকের অনিয়ম"), text: yhLang("Irregular or absent periods over time", "অনিয়মিত মাসিক বা মাসিক সম্পূর্ণ বন্ধ"), icon: "fa-calendar", type: "type1" }
+                  ]
                 },
                 {
                   title: yhLang("Causes & Mechanism", "কারণ ও কার্যপ্রণালী"),
@@ -6088,15 +6188,27 @@ const coursesData = [
                   description: yhLang(
                     "This condition is both genetic and hormonal. When the production of male hormones (androgens) increases abnormally in a woman's body, PCOS develops. Due to this hormone elevation, ovulation becomes disrupted. Even though the follicle matures, it fails to rupture and release the egg. Over time, ovulation ceases completely, leading to irregular or absent menstrual periods.",
                     "এটি বংশগত এবং হরমোনাল সমস্যা। নারীর শরীরে পুরুষ হরমোন (অ্যান্ড্রোজেন) স্বাভাবিকের তুলনায় বেড়ে গেলে এ সমস্যা দেখা দেয়। এই হরমোন বৃদ্ধির কারণে নারীর ওভুলেশন বা প্রতি মাসে ডিম্বাণু পরিপক্ব হওয়ার পরও ফলিকল ফেটে যায় না এবং ডিম্বাণু বের হতে পারে না। একসময় মেয়েদের ওভুলেশন বন্ধ হয়ে যায় এবং অনিয়মিত মাসিক হয় বা মাসিক একেবারেই হয় না।"
-                  )
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Genetic Factor", "বংশগত কারণ"), text: yhLang("Family history increases risk", "পরিবারে এর ইতিহাস থাকলে ঝুঁকি বাড়ে"), icon: "fa-dna", type: "type2" },
+                    { num: "2", title: yhLang("Insulin Resistance", "ইনসুলিন প্রতিরোধ"), text: yhLang("Body doesn't respond normally to insulin", "শরীর ইনসুলিনের প্রতি সঠিকভাবে সাড়া দেয় না"), icon: "fa-syringe", type: "type3" },
+                    { num: "3", title: yhLang("Inflammation", "প্রদাহ"), text: yhLang("PCOS is linked with excess inflammation", "পিসিওএস অতিরিক্ত প্রদাহের সাথে সম্পর্কিত"), icon: "fa-fire", type: "type1" },
+                    { num: "4", title: yhLang("Ovarian Dysfunction", "ডিম্বাশয়ের কর্মহীনতা"), text: yhLang("Ovaries fail to respond normally to hormones", "ডিম্বাশয় হরমোনের প্রতি স্বাভাবিকভাবে সাড়া দেয় না"), icon: "fa-circle-xmark", type: "type2" }
+                  ]
                 },
                 {
                   title: yhLang("Fertility & Age Factor", "প্রজননক্ষমতা ও বয়সের প্রভাব"),
                   icon: "fa-hourglass-end",
                   description: yhLang(
                     "Although PCOS causes fertility issues in 60-70% of cases, pregnancy is not always impossible. However, the chances of conception decrease significantly after the age of 35. Women with PCOS can still get pregnant, but they may need medical assistance or specialized treatment. Early awareness and proper management can improve fertility outcomes.",
-                    "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয়, তবে এটি সম্পূর্ণ অসম্ভব নয়। তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়।"
-                  )
+                    "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয়, তবে এটি সম্পূর্ণ অসম্ভব নয়। তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়। পিসিওএস আক্রান্ত নারীরা এখনও গর্ভবতী হতে পারেন, তবে তাদের চিকিৎসাগত সহায়তা বা বিশেষায়িত চিকিৎসার প্রয়োজন হতে পারে।"
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Fertility Rate", "প্রজননক্ষমতার হার"), text: yhLang("60-70% experience difficulty in conception", "৬০-৭০% ক্ষেত্রে গর্ভধারণে সমস্যা"), icon: "fa-person-pregnant", type: "type3" },
+                    { num: "2", title: yhLang("Age Impact", "বয়সের প্রভাব"), text: yhLang("Fertility decreases significantly after 35 years", "৩৫ বছরের পর প্রজননক্ষমতা উল্লেখযোগ্যভাবে হ্রাস পায়"), icon: "fa-calendar-days", type: "type1" },
+                    { num: "3", title: yhLang("Medical Treatment", "চিকিৎসাগত সহায়তা"), text: yhLang("Reproductive assistance may be needed", "প্রজনন সহায়তা প্রয়োজন হতে পারে"), icon: "fa-hospital", type: "type2" },
+                    { num: "4", title: yhLang("Early Management", "প্রাথমিক ব্যবস্থাপনা"), text: yhLang("Early detection improves outcomes", "প্রাথমিক সনাক্তকরণ ফলাফল উন্নত করে"), icon: "fa-check", type: "type3" }
+                  ]
                 }
               ];
 
@@ -6106,16 +6218,28 @@ const coursesData = [
                     <div class="ch12l1-section-header">
                       <h3 class="ch12l1-section-title">
                         <i class="fa-solid ${section.icon}"></i>
-                        <p class="ch12l1-section-desc">${section.description}</p>
+                        ${section.title}
                       </h3>
-                      
+                      <p class="ch12l1-section-desc">${section.description}</p>
                     </div>
+                    <ul class="ch12l1-list">
+                      ${section.items.map((item, idx) => `
+                        <li class="ch12l1-li ch12l1-li-${item.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 15}">
+                          <span class="ch12l1-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                          <div class="ch12l1-li-content">
+                            <strong class="ch12l1-li-num">${item.num}</strong>
+                            <h4 class="ch12l1-li-title">${item.title}</h4>
+                            <p class="ch12l1-li-text">${item.text}</p>
+                          </div>
+                        </li>
+                      `).join('')}
+                    </ul>
                   </section>
                 `).join('');
               }
 
               return `
-                <div class="ch12l1-slide lesson-slide">
+                <div class="ch12l1-slide">
                   <div class="ch12l1-shape ch12l1-shape-a"></div>
                   <div class="ch12l1-shape ch12l1-shape-b"></div>
                   <div class="ch12l1-shape ch12l1-shape-c"></div>
@@ -6123,10 +6247,16 @@ const coursesData = [
                   <div class="ch12l1-header" data-aos="fade-down" data-aos-delay="0">
                     <h2 class="ch12l1-title">
                       <i class="fa-solid fa-heart-pulse"></i>
-                      ${yhLang("Understanding PCOS", "পলিসিস্টিক ওভারিআন সিনড্রোম (পিসিওএস)")}
+                      ${yhLang("Understanding PCOS", "পলিসিস্টিক ওভারি সিনড্রোম বোঝা")}
                     </h2>
                   </div>
 
+                  <section class="ch12l1-intro-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch12l1-intro-text">${yhLang(
+                      "PCOS is a common endocrine disorder in women that affects hormone levels and can impact fertility, metabolism, and overall health. Early awareness and proper management are key to living well with PCOS.",
+                      "পিসিওএস একটি সাধারণ হরমোনাল ব্যাধি যা প্রজননক্ষমতা, বিপাক এবং সামগ্রিক স্বাস্থ্যকে প্রভাবিত করে। প্রাথমিক সচেতনতা ও সঠিক ব্যবস্থাপনা গুরুত্বপূর্ণ।"
+                    )}</p>
+                  </section>
 
                   <section class="ch12l1-content" data-aos="fade-up" data-aos-delay="60">
                     ${renderSections()}
@@ -6165,18 +6295,18 @@ const coursesData = [
             },
             content: (function () {
               const symptoms = [
-  { num: yhLang("1","১"), text: yhLang("Irregular periods or absence of menstruation", "অনিয়মিতভাবে মাসিক হওয়া বা মাসিক বন্ধ থাকা"), icon: "fa-calendar-xmark", type: "type1" },
-  { num: yhLang("2","২"), text: yhLang("Depression, anxiety, and mood disorders", "মানসিক স্বাস্থ্য সমস্যা যেমন দুশ্চিন্তা"), icon: "fa-brain", type: "type2" },
-  { num: yhLang("3","৩"), text: yhLang("Unwanted hair growth on body and face", "শরীরের বিভিন্ন জায়গায় অবাঞ্ছিত লোম গজানো"), icon: "fa-person", type: "type3" },
-  { num: yhLang("4","৪"), text: yhLang("Excessive hair shedding from scalp", "মাথার চুল অতিরিক্ত পরিমাণে পড়ে যাওয়া"), icon: "fa-water", type: "type1" },
-  { num: yhLang("5","৫"), text: yhLang("Persistent acne and skin breakouts", "মুখে ও অন্যত্র ব্রণ বের হওয়া"), icon: "fa-face-grin", type: "type2" },
-  { num: yhLang("6","৬"), text: yhLang("Difficulty conceiving or infertility", "গর্ভধারণে সমস্যা হওয়া এমনকি বন্ধ্যাত্ব"), icon: "fa-person-pregnant", type: "type3" },
-  { num: yhLang("7","৭"), text: yhLang("Sudden or gradual weight increase", "ওজন বেড়ে যাওয়া ও স্থূলতা"), icon: "fa-scale-unbalanced", type: "type1" },
-  { num: yhLang("8","৮"), text: yhLang("Insomnia or poor sleep quality", "ঘুমের ব্যাঘাত হওয়া বা অনিদ্রা"), icon: "fa-moon", type: "type2" },
-  { num: yhLang("9","৯"), text: yhLang("Increased risk of developing diabetes", "টাইপ-২ ডায়বেটিস রোগের ঝুঁকি"), icon: "fa-heartbeat", type: "type3" },
-  { num: yhLang("10","১০"), text: yhLang("Higher cardiovascular disease risk", "হৃদ রোগের ঝুঁকি বাড়ায়"), icon: "fa-heart", type: "type1" },
-  { num: yhLang("11","১১"), text: yhLang("Increased uterine cancer risk", "জরায়ু ক্যান্সারের ঝুঁকি বাড়ায়"), icon: "fa-shield-virus", type: "type2" }
-];
+                { num: "1", text: yhLang("Irregular periods or absence of menstruation", "অনিয়মিতভাবে মাসিক হওয়া বা মাসিক বন্ধ থাকা"), icon: "fa-calendar-xmark", type: "type1" },
+                { num: "2", text: yhLang("Depression, anxiety, and mood disorders", "মানসিক স্বাস্থ্য সমস্যা যেমন দুশ্চিন্তা"), icon: "fa-brain", type: "type2" },
+                { num: "3", text: yhLang("Unwanted hair growth on body and face", "শরীরের বিভিন্ন জায়গায় অবাঞ্ছিত লোম গজানো"), icon: "fa-person", type: "type3" },
+                { num: "4", text: yhLang("Excessive hair shedding from scalp", "মাথার চুল অতিরিক্ত পরিমাণে পড়ে যাওয়া"), icon: "fa-water", type: "type1" },
+                { num: "5", text: yhLang("Persistent acne and skin breakouts", "মুখে ও অন্যত্র ব্রণ বের হওয়া"), icon: "fa-face-grin", type: "type2" },
+                { num: "6", text: yhLang("Difficulty conceiving or infertility", "গর্ভধারণে সমস্যা হওয়া এমনকি বন্ধ্যাত্ব"), icon: "fa-person-pregnant", type: "type3" },
+                { num: "7", text: yhLang("Sudden or gradual weight increase", "ওজন বেড়ে যাওয়া ও স্থূলতা"), icon: "fa-scale-unbalanced", type: "type1" },
+                { num: "8", text: yhLang("Insomnia or poor sleep quality", "ঘুমের ব্যাঘাত হওয়া বা অনিদ্রা"), icon: "fa-moon", type: "type2" },
+                { num: "9", text: yhLang("Increased risk of developing diabetes", "টাইপ-২ ডায়বেটিস রোগের ঝুঁকি"), icon: "fa-heartbeat", type: "type3" },
+                { num: "10", text: yhLang("Higher cardiovascular disease risk", "হৃদ রোগের ঝুঁকি বাড়ায়"), icon: "fa-heart", type: "type1" },
+                { num: "11", text: yhLang("Increased uterine cancer risk", "জরায়ু ক্যান্সারের ঝুঁকি বাড়ায়"), icon: "fa-shield-virus", type: "type2" }
+              ];
 
               function renderSymptoms() {
                 return symptoms.map((symptom, idx) => `
@@ -6188,7 +6318,7 @@ const coursesData = [
               }
 
               return `
-                <div class="ch12l2-slide lesson-slide">
+                <div class="ch12l2-slide">
                   <div class="ch12l2-shape ch12l2-shape-a"></div>
                   <div class="ch12l2-shape ch12l2-shape-b"></div>
                   <div class="ch12l2-shape ch12l2-shape-c"></div>
@@ -6249,17 +6379,17 @@ const coursesData = [
               );
 
               const strategies = [
-  { num: yhLang("1","১"), text: yhLang("Exercise regularly - walking, cycling, or sports to stay physically fit and active", "শারীরিকভাবে কর্মক্ষম, সচল থাকার জন্য ব্যায়াম করতে হবে। সেটা হতে পারে হাঁটা, সাইকেল চালনা, পছন্দের খেলা-ধুলা করা ইত্যাদি।"), icon: "fa-person-hiking", type: "strategy1" },
-  { num: yhLang("2","২"), text: yhLang("Avoid unhealthy habits like smoking and alcohol consumption", "যে সমস্ত অভ্যাস স্বাস্থ্যসম্মত নয় তা বর্জন করতে হবে। যেমন- ধূমপান করা, মদ্যপান করা।"), icon: "fa-hand-paper", type: "strategy2" },
-  { num: yhLang("3","৩"), text: yhLang("Be careful with diet - eat balanced meals and reduce carbohydrate intake to maintain weight", "খাবারের বিষয়ে খুব সতর্কতা অবলম্বন করতে হবে। সুষম খাবার খেতে হবে, শর্করা জাতীয় খাবার কম খেতে হবে যাতে ওজন নিয়ন্ত্রণে থাকে।"), icon: "fa-apple", type: "strategy3" },
-  { num: yhLang("4","৪"), text: yhLang("Eat balanced meals in proper portions and reduce refined carbohydrates", "সুষম খাবার পরিমাণমতো খেতে হবে। শর্করা জাতীয় খাবার কমাতে হবে।"), icon: "fa-utensils", type: "strategy4" },
-  { num: yhLang("5","৫"), text: yhLang("Control total calorie intake or consult a nutritionist. Prefer boiled over fried foods and eat more vegetables", "ওজন নিয়ন্ত্রণে রাখতে হলে টোটাল ক্যালরি কমাতে হবে অথবা পুষ্টিবিদের সাহায্য নিতে হবে। ভাজা খাবারের চাইতে সিদ্ধ করা খাবার ভালো। শাকসবজি বেশি করে খেতে হবে।"), icon: "fa-fire", type: "strategy5" },
-  { num: yhLang("6","৬"), text: yhLang("Eat protein in proper portions - lean meat, fish, eggs, low-fat dairy, nuts and high-fiber foods", "পরিমাণ মতো আমিষ জাতীয় খাবার খেতে হবে; যাতে কম চর্বি যুক্ত মাংস, মাছ, ডিম, কম চর্বি যুক্ত দুগ্ধজাত খাবার, বাদাম এবং বেশি করে ফাইবার সমৃদ্ধ খাবার খেতে হবে।"), icon: "fa-egg", type: "strategy1" },
-  { num: yhLang("7","৭"), text: yhLang("Yogurt contains probiotics and helps reduce weight while maintaining healthy gut bacteria", "দইয়ে যেহেতু প্রোবায়োটিক থাকে তাই দই ওজন কমাতে সাহায্য করে এবং অন্ত্রজীবাণু সুস্থ রাখে।"), icon: "fa-flask", type: "strategy2" },
-  { num: yhLang("8","৮"), text: yhLang("Avoid sugary foods, drinks, soft drinks, chocolate and fast food as they increase weight", "চিনিযুক্ত খাবার, শরবত, কোমল পানীয়, চকোলেট, ফাস্ট ফুডে ওজন বাড়ে তাই এগুলোকে বর্জন করতে হবে।"), icon: "fa-ban", type: "strategy3" },
-  { num: yhLang("9","৯"), text: yhLang("Fruits and vegetables reduce inflammation in the body and are excellent for PCOS patients", "ফল, শাক-সবজি শরীরের প্রদাহ হওয়া থেকে রক্ষা করে। তাই এগুলো পিসিওএস-এর রোগীদের জন্য অনেক ভালো।"), icon: "fa-leaf", type: "strategy4" },
-  { num: yhLang("10","১০"), text: yhLang("Exercise provides mental peace, boosts energy, reduces blood sugar levels - join groups or organizations for regular exercise", "ব্যায়াম মানসিক প্রশান্তি দেয়, শক্তি বাড়ায়, রক্তে চিনির মাত্রা কমায়। নিয়মিত ব্যায়ামের জন্য গ্রুপ অথবা প্রতিষ্ঠানে যুক্ত হওয়া যেতে পারে।"), icon: "fa-heart-pulse", type: "strategy5" }
-];
+                { num: "1", text: yhLang("Exercise regularly - walking, cycling, or sports to stay physically fit and active", "শারীরিকভাবে কর্মক্ষম, সচল থাকার জন্য ব্যায়াম করতে হবে। সেটা হতে পারে হাঁটা, সাইকেল চালনা, পছন্দের খেলা-ধুলা করা ইত্যাদি।"), icon: "fa-person-hiking", type: "strategy1" },
+                { num: "2", text: yhLang("Avoid unhealthy habits like smoking and alcohol consumption", "যে সমস্ত অভ্যাস স্বাস্থ্যসম্মত নয় তা বর্জন করতে হবে। যেমন- ধূমপান করা, মদ্যপান করা।"), icon: "fa-hand-paper", type: "strategy2" },
+                { num: "3", text: yhLang("Be careful with diet - eat balanced meals and reduce carbohydrate intake to maintain weight", "খাবারের বিষয়ে খুব সতর্কতা অবলম্বন করতে হবে। সুষম খাবার খেতে হবে, শর্করা জাতীয় খাবার কম খেতে হবে যাতে ওজন নিয়ন্ত্রণে থাকে।"), icon: "fa-apple", type: "strategy3" },
+                { num: "4", text: yhLang("Eat balanced meals in proper portions and reduce refined carbohydrates", "সুষম খাবার পরিমাণমতো খেতে হবে। শর্করা জাতীয় খাবার কমাতে হবে।"), icon: "fa-utensils", type: "strategy4" },
+                { num: "5", text: yhLang("Control total calorie intake or consult a nutritionist. Prefer boiled over fried foods and eat more vegetables", "ওজন নিয়ন্ত্রণে রাখতে হলে টোটাল ক্যালরি কমাতে হবে অথবা পুষ্টিবিদের সাহায্য নিতে হবে। ভাজা খাবারের চাইতে সিদ্ধ করা খাবার ভালো। শাকসবজি বেশি করে খেতে হবে।"), icon: "fa-fire", type: "strategy5" },
+                { num: "6", text: yhLang("Eat protein in proper portions - lean meat, fish, eggs, low-fat dairy, nuts and high-fiber foods", "পরিমাণ মতো আমিষ জাতীয় খাবার খেতে হবে; যাতে কম চর্বি যুক্ত মাংস, মাছ, ডিম, কম চর্বি যুক্ত দুগ্ধজাত খাবার, বাদাম এবং বেশি করে ফাইবার সমৃদ্ধ খাবার খেতে হবে।"), icon: "fa-egg", type: "strategy1" },
+                { num: "7", text: yhLang("Yogurt contains probiotics and helps reduce weight while maintaining healthy gut bacteria", "দইয়ে যেহেতু প্রোবায়োটিক থাকে তাই দই ওজন কমাতে সাহায্য করে এবং অন্ত্রজীবাণু সুস্থ রাখে।"), icon: "fa-flask", type: "strategy2" },
+                { num: "8", text: yhLang("Avoid sugary foods, drinks, soft drinks, chocolate and fast food as they increase weight", "চিনিযুক্ত খাবার, শরবত, কোমল পানীয়, চকোলেট, ফাস্ট ফুডে ওজন বাড়ে তাই এগুলোকে বর্জন করতে হবে।"), icon: "fa-ban", type: "strategy3" },
+                { num: "9", text: yhLang("Fruits and vegetables reduce inflammation in the body and are excellent for PCOS patients", "ফল, শাক-সবজি শরীরের প্রদাহ হওয়া থেকে রক্ষা করে। তাই এগুলো পিসিওএস-এর রোগীদের জন্য অনেক ভালো।"), icon: "fa-leaf", type: "strategy4" },
+                { num: "10", text: yhLang("Exercise provides mental peace, boosts energy, reduces blood sugar levels - join groups or organizations for regular exercise", "ব্যায়াম মানসিক প্রশান্তি দেয়, শক্তি বাড়ায়, রক্তে চিনির মাত্রা কমায়। নিয়মিত ব্যায়ামের জন্য গ্রুপ অথবা প্রতিষ্ঠানে যুক্ত হওয়া যেতে পারে।"), icon: "fa-heart-pulse", type: "strategy5" }
+              ];
 
               function renderStrategies() {
                 return strategies.map((strategy, idx) => `
@@ -6333,7 +6463,7 @@ const coursesData = [
               return `
                 <div class="ch12l4-slide">
                   <div class="ch12l4-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l4-title d-none">
+                    <h2 class="ch12l4-title">
                       <i class="fa-solid fa-image"></i>
                       ${yhLang("Management", "ব্যবস্থাপনা")}
                     </h2>
@@ -6383,35 +6513,44 @@ const coursesData = [
                 "Child rights are the human rights of children. These rights are protected through the International Convention on the Rights of the Child (CRC). According to CRC, every child should grow up in a peaceful, dignified, tolerant, and free environment; with equality and mutual understanding.",
                 "শিশু অধিকার হচ্ছে শিশুদের মানবাধিকার। এ অধিকারগুলো আন্তর্জাতিক শিশু অধিকার সনদের (সিআরসি) মাধ্যমে সুরক্ষিত। সিআরসি অনুযায়ী, প্রেত্যক শিশুই বেড়ে উঠবে শান্তি ও মর্যাদাপূর্ণ, সহিষ্ণুও মুক্ত স্বাধীন পরিবেশে; সমতা ও সৌহার্দের মধ্য দিয়ে।"
               );
+
               const pillars = [
-  { 
-    text: yhLang("No child shall be subjected to discrimination (Article 2). All children have equal opportunity to develop their potential in any circumstance. This includes protection from discrimination based on gender, race, nationality, religion, disability, sexual orientation, or any other status. All children have equal access to education regardless of these characteristics.", "কোনো শিশুই বৈষম্যের শিকার হবেনা (ধারা ২)। যেকোনো পরিস্থিতিতেই সব শিশুই তাদের সম্ভাবনা বিকাশের সমান সুযোগ পাবে। যেমন - লিঙ্গ, বর্ণ, জাতীয়তা, ধর্ম, প্রতিবন্ধিতা, যৌনতার ধরণ বা অন্য কোনো মর্যাদার ভিত্তিতে বৈষেম্যর শিকার না হয়ে সব শিশুই শিক্ষায় অংশগ্রহণের সুযোগ পাবে।"),
-    icon: "fa-person-hiking",
-    type: "pillar1"
-  },
-  { 
-    text: yhLang("The best interests of the child shall always be a primary consideration in decisions affecting children (Article 3). When making decisions about budgets or resource allocation, special attention must be given to how these decisions will affect children and their welfare. The child's best interest should always take precedence.", "শিশুদের ওপর প্রভাব ফেলবে এমন কোনো সিদ্ধাান্তের ক্ষেত্রে তাদের স্বার্থগুলো সবসময় অগ্রাধিকার পাবে (ধারা ৩)। যেমন- বাজেট প্রণয়নের সময় খেয়াল রাখতে হবে কোনো খাতে অর্থ বরাদ্দ বা কর্তনের ক্ষেত্রে যেন শিশুদের সর্বোচ্চ স্বার্থটাই গুরুত্ব পায়।"),
-    icon: "fa-heart-circle-check",
-    type: "pillar2"
-  },
-  { 
-    text: yhLang("Every child has the right to life, survival, and healthy development (Article 6). All children must have access to essential services and equal opportunity to reach their full potential. For example, children with disabilities must have guaranteed access to education and healthcare services without discrimination.", "বেঁচে থাকার ও সুস্থভাবে বিকাশের অধিকার সব শিশুরই রয়েছে (ধারা ৬)। মৌলিক সেবাগুলোয় শিশুদেও প্রবেশাধিকার ও তাদের পূর্ণ সম্ভাবনা বিকাশের সমান অধিকার নিশ্চিত করতে হবে। যেমন - প্রতিবন্ধী শিশুর অবশ্যই শিক্ষা ও স্বাস্থ্য সেবা গ্রহণের অধিকার থাকবে।"),
-    icon: "fa-circle-nodes",
-    type: "pillar3"
-  },
-  { 
-    text: yhLang("Children affected by decisions have the right to have those decisions take their views into consideration (Article 12). The opinions and perspectives of children on matters affecting their rights must be listened to and respected. For example, when developing policies or plans related to children, their insights must be taken into account and valued.", "শিশুদের ওপর প্রভাব রাখবে এমন বিষয়ে তাদের মতামতগুলো বিবেচনায় নেয়ার বাধ্যবাধকতা রয়েছে (ধারা ১২)। শিশুদের অধিকারভুক্ত সব বিষয়ে তাদের মতামত শুনতে হবে ও সেগুলোয় শ্রদ্ধা রাখতে হবে। যেমন- শিশু বিষয়ক কোনো নীতি বা পরিকল্পনা গ্রহণে শিশুদের উপলব্ধিগুলো গ্রাহ্য করতে হবে।"),
-    icon: "fa-comments",
-    type: "pillar4"
-  }
-];
-             
+                { 
+                  num: "1", 
+                  title: yhLang("No Discrimination", "কোনো বৈষম্য নয়"),
+                  text: yhLang("No child shall be subjected to discrimination (Article 2). All children have equal opportunity to develop their potential in any circumstance. This includes protection from discrimination based on gender, race, nationality, religion, disability, sexual orientation, or any other status. All children have equal access to education regardless of these characteristics.", "কোনো শিশুই বৈষম্যের শিকার হবেনা (ধারা ২)। যেকোনো পরিস্থিতিতেই সব শিশুই তাদের সম্ভাবনা বিকাশের সমান সুযোগ পাবে। যেমন - লিঙ্গ, বর্ণ, জাতীয়তা, ধর্ম, প্রতিবন্ধিতা, যৌনতার ধরণ বা অন্য কোনো মর্যাদার ভিত্তিতে বৈষেম্যর শিকার না হয়ে সব শিশুই শিক্ষায় অংশগ্রহণের সুযোগ পাবে।"),
+                  icon: "fa-person-hiking",
+                  type: "pillar1"
+                },
+                { 
+                  num: "2", 
+                  title: yhLang("Best Interest of the Child", "শিশুর সর্বোচ্চ স্বার্থ"),
+                  text: yhLang("The best interests of the child shall always be a primary consideration in decisions affecting children (Article 3). When making decisions about budgets or resource allocation, special attention must be given to how these decisions will affect children and their welfare. The child's best interest should always take precedence.", "শিশুদের ওপর প্রভাব ফেলবে এমন কোনো সিদ্ধাান্তের ক্ষেত্রে তাদের স্বার্থগুলো সবসময় অগ্রাধিকার পাবে (ধারা ৩)। যেমন- বাজেট প্রণয়নের সময় খেয়াল রাখতে হবে কোনো খাতে অর্থ বরাদ্দ বা কর্তনের ক্ষেত্রে যেন শিশুদের সর্বোচ্চ স্বার্থটাই গুরুত্ব পায়।"),
+                  icon: "fa-heart-circle-check",
+                  type: "pillar2"
+                },
+                { 
+                  num: "3", 
+                  title: yhLang("Right to Life and Development", "জীবন ও বিকাশের অধিকার"),
+                  text: yhLang("Every child has the right to life, survival, and healthy development (Article 6). All children must have access to essential services and equal opportunity to reach their full potential. For example, children with disabilities must have guaranteed access to education and healthcare services without discrimination.", "বেঁচে থাকার ও সুস্থভাবে বিকাশের অধিকার সব শিশুরই রয়েছে (ধারা ৬)। মৌলিক সেবাগুলোয় শিশুদেও প্রবেশাধিকার ও তাদের পূর্ণ সম্ভাবনা বিকাশের সমান অধিকার নিশ্চিত করতে হবে। যেমন - প্রতিবন্ধী শিশুর অবশ্যই শিক্ষা ও স্বাস্থ্য সেবা গ্রহণের অধিকার থাকবে।"),
+                  icon: "fa-circle-nodes",
+                  type: "pillar3"
+                },
+                { 
+                  num: "4", 
+                  title: yhLang("Right to be Heard", "মতামত প্রকাশের অধিকার"),
+                  text: yhLang("Children affected by decisions have the right to have those decisions take their views into consideration (Article 12). The opinions and perspectives of children on matters affecting their rights must be listened to and respected. For example, when developing policies or plans related to children, their insights must be taken into account and valued.", "শিশুদের ওপর প্রভাব রাখবে এমন বিষয়ে তাদের মতামতগুলো বিবেচনায় নেয়ার বাধ্যবাধকতা রয়েছে (ধারা ১২)। শিশুদের অধিকারভুক্ত সব বিষয়ে তাদের মতামত শুনতে হবে ও সেগুলোয় শ্রদ্ধা রাখতে হবে। যেমন- শিশু বিষয়ক কোনো নীতি বা পরিকল্পনা গ্রহণে শিশুদের উপলব্ধিগুলো গ্রাহ্য করতে হবে।"),
+                  icon: "fa-comments",
+                  type: "pillar4"
+                }
+              ];
 
               function renderPillars() {
                 return pillars.map((pillar, idx) => `
                   <li class="ch12l5-li ch12l5-li-${pillar.type}" data-aos="fade-up" data-aos-delay="${80 + idx * 15}">
                     <span class="ch12l5-li-icon"><i class="fa-solid ${pillar.icon}"></i></span>
                     <div class="ch12l5-li-content">
+                      <h4 class="ch12l5-li-title"><strong class="ch12l5-li-num">${pillar.num}.</strong> ${pillar.title}</h4>
                       <p class="ch12l5-li-text">${pillar.text}</p>
                     </div>
                   </li>
@@ -6419,7 +6558,7 @@ const coursesData = [
               }
 
               return `
-                <div class="ch12l5-slide lesson-slide">
+                <div class="ch12l5-slide">
                   <div class="ch12l5-shape ch12l5-shape-a"></div>
                   <div class="ch12l5-shape ch12l5-shape-b"></div>
                   <div class="ch12l5-shape ch12l5-shape-c"></div>
@@ -6427,7 +6566,7 @@ const coursesData = [
                   <div class="ch12l5-header" data-aos="fade-down" data-aos-delay="0">
                     <h2 class="ch12l5-title">
                       <i class="fa-solid fa-handshake"></i>
-                      ${yhLang("Child Rights & Human Rights", "শিশু অধিকার,   মানবাধিকার সনদ এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার")}
+                      ${yhLang("Child Rights & Human Rights", "শিশু অধিকার ও মানবাধিকার")}
                     </h2>
                   </div>
 
@@ -6442,7 +6581,7 @@ const coursesData = [
                   <div class="ch12l5-section-header" data-aos="fade-up" data-aos-delay="60">
                     <h3 class="ch12l5-section-title">
                       <i class="fa-solid fa-scroll"></i>
-                      ${yhLang("Four Pillars of CRC", "আন্তর্জাতিক শিশু অধিকার সনদে ৫৪টি ধারা রয়েছে। মূলত চারটি স্তম্ভের আলোকে অনুচ্ছেদগুলো ভাগ করা হয়েছে।")}
+                      ${yhLang("Four Pillars of CRC", "সিআরসি-র চারটি স্তম্ভ")}
                     </h3>
                   </div>
 
@@ -6483,9 +6622,9 @@ const coursesData = [
             },
             content: (function () {
               return `
-                <div class="ch12l6-slide lesson-slide">
-                  <div class="ch12l6-header d-none" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l6-title d-none">
+                <div class="ch12l6-slide">
+                  <div class="ch12l6-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch12l6-title">
                       <i class="fa-solid fa-shield-exclamation"></i>
                       ${yhLang("Child Abuse", "শিশু নির্যাতন")}
                     </h2>
@@ -6493,117 +6632,6 @@ const coursesData = [
                   <div class="ch12l6-image-container" data-aos="zoom-in" data-aos-delay="40">
                     <img src="img/modu12/child.jpg" alt="Child Abuse Prevention" class="ch12l6-image">
                   </div>
-                </div>
-              `;
-            })()
-          },
-          {
-            id: "ch12-lesson-7",
-            title: yhLang(
-              "Sexual & Reproductive Health Rights",
-              "যৌন ও প্রজনন স্বাস্থ্য অধিকার"
-            ),
-            icon: "fa-heart-pulse",
-            gradientClass: "bg-gradient-pink",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q12g",
-                  question: yhLang(
-                    "What percentage of world population are adolescents (10-19 years)?",
-                    "বিশ্বের মোট জনসংখ্যার কত ভাগ অংশ কিশোর-কিশোরী?"
-                  ),
-                  options: [
-                    yhLang("Approximately 1/6 (about 16%)", "প্রায় ১/৬ ভাগ"),
-                    yhLang("Approximately 1/2 (about 50%)", "প্রায় ১/২ ভাগ"),
-                    yhLang("Approximately 1/4 (about 25%)", "প্রায় ১/৪ ভাগ"),
-                    yhLang("Approximately 1/3 (about 33%)", "প্রায় ১/৩ ভাগ")
-                  ],
-                  correctAnswer: 0
-                }
-              ]
-            },
-            content: (function () {
-              const intro1 = yhLang(
-                "Approximately 1/6 of the world's total population are adolescents (10-19 years). Additionally, nearly 1/3 of the population is under 25 years old. During adolescence, young people experience significant physical and mental changes as sexual characteristics emerge. This age group faces increased risks related to reproductive and sexual health. Without appropriate information and education, they are at much higher risk of contracting sexually transmitted infections. Unintended pregnancies and unsafe, risky abortions are also more common, leading to serious health complications. Therefore, sexual and reproductive health rights are extremely important for this group.",
-                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এবয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্তের সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।"
-              );
-
-              const intro2 = yhLang(
-                "Reproductive health is a state of complete physical, mental, and social well-being related to the reproductive system at every stage of life. According to the World Health Organization (WHO), reproductive health encompasses the ability to reproduce, coupled with the right to satisfying and safe sex life, and the freedom to make decisions regarding reproduction.",
-                "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (WHO) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
-              );
-              const rights = [
-  {
-    text: yhLang(
-      "Sexual and reproductive health rights are part of fundamental human rights",
-      "যৌন ও প্রজনন স্বাস্থ্য অধিকার মৌলিক মানবাধিকারের অংশ।"
-    ),
-    icon: "fa-hand-holding-heart",
-    type: "right1"
-  },
-  {
-    text: yhLang(
-      "These rights are crucial for gender equality and sustainable development. Additionally, girls' and women's control over their bodies and sexual relationships is a prerequisite for their empowerment and rights.",
-      "লিঙ্গ সমতা ও টেকসই উন্নয়নের প্রশ্নে এ অধিকার নিশ্চিত করা খুবই গুরুত্বপূর্ণ। পাশাপাশি নিজের শরীর ও যৌনসম্পর্কের ক্ষেত্রে কিশোরী এবং নারীদের নিয়ন্ত্রণ তাদের ক্ষমতায়ন ও অধিকারের পূর্বশর্ত।"
-    ),
-    icon: "fa-venus-mars",
-    type: "right2"
-  },
-  {
-    text: yhLang(
-      "These rights are essential for full participation of girls and women in social, economic, political, and cultural spheres",
-      "সামাজিক, অর্থনৈতিক, রাজনৈতিক ও সাংস্কৃতিক অঙ্গনে তাদের পূর্ণ অংশগ্রহণের ক্ষেত্রেও এ অধিকার জরুরি।"
-    ),
-    icon: "fa-people-group",
-    type: "right3"
-  },
-  {
-    text: yhLang(
-      "These rights protect adolescent girls and women from all forms of discrimination, violence, and abuse. They ensure respect for dignity, equality, and diversity.",
-      "যৌন ও প্রজনন স্বাস্থ্য অধিকার কিশোরী ও নারীদের সব ধরনের বৈষম্য, সহিংসতা, নির্যাতন থেকে মুক্ত থাকার অধিকারের অন্যতম গুরুত্বপূর্ণ অংশ। মর্যাদা, সমতা ও বৈচিত্র্যের প্রতি সম্মান প্রদর্শনের নীতিগুলো সুরক্ষিত করে এ অধিকার।"
-    ),
-    icon: "fa-shield-heart",
-    type: "right4"
-  }
-];
-              
-
-              function renderRights() {
-                return rights.map((right, idx) => `
-                  <li class="ch12l7-li ch12l7-li-${right.type}" data-aos="fade-up" data-aos-delay="${80 + idx * 15}">
-                    <span class="ch12l7-li-icon"><i class="fa-solid ${right.icon}"></i></span>
-                    <p class="ch12l7-li-text"> ${right.text}</p>
-                  </li>
-                `).join('');
-              }
-
-              return `
-                <div class="ch12l7-slide lesson-slide">
-                  <div class="ch12l7-shape ch12l7-shape-a"></div>
-                  <div class="ch12l7-shape ch12l7-shape-b"></div>
-                  <div class="ch12l7-shape ch12l7-shape-c"></div>
-
-                  <div class="ch12l7-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l7-title">
-                      <i class="fa-solid fa-heart-pulse"></i>
-                      ${yhLang("Sexual & Reproductive Health Rights", "যৌন ও প্রজনন স্বাস্থ্য অধিকার")}
-                    </h2>
-                  </div>
-
-                  <section class="ch12l7-intro-card intro-1" data-aos="fade-up" data-aos-delay="40">
-                    <p class="ch12l7-intro-text">${intro1}</p>
-                  </section>
-
-                  <section class="ch12l7-intro-card intro-2" data-aos="fade-up" data-aos-delay="50">
-                    <p class="ch12l7-intro-text">${intro2}</p>
-                  </section>
-
-                  <ul class="ch12l7-rights-list" data-aos="fade-up" data-aos-delay="60">
-                    ${renderRights()}
-                  </ul>
                 </div>
               `;
             })()
@@ -7795,7 +7823,7 @@ const orbitItems = [
                       title: yhLang("Mental Health Counseling", "মানসিক স্বাস্থ্য সেবা"),
                       text: yhLang(
                         "Free psychosocial counseling services for abuse victims and those in mental crisis through mental health services.",
-                        "নির্যাতনের শিকার নারী, শিশু ও কিশোর কিশোরী সহ যেকোন মানসিক সংকটে মানসিক স্বাস্থ্য সেবায় বিনামূল্যে মনোসামাজিক মানসিক ও বৈবাহিক সমস্যা, বৈকল্যতা প্রতিরোধের জন্য মনো-সামাজিক কাউন্সেলিং সেবা সহজলভ্য করা।।"
+                        "নির্যাতনের শিকার নারী, শিশু ও কিশোর কিশোরী সহ যেকোন মানসিক সংকটে মানসিক স্বাস্থ্য সেবায় বিনামূল্যে মনোসামাজিক কাউন্সেলিং সেবা।"
                       ),
                       icon: "fa-brain",
                       type: "type2"
@@ -7958,62 +7986,65 @@ const orbitItems = [
               ]
             },
             content: (function () {
-             const sections = [
+              const sections = [
                 {
-                  class_name: "torun",
                   title: yhLang("Forms of Violence Against Youth", "তরুনদের প্রতি সহিংসতার বিভিন্ন রূপ"),
                   icon: "fa-shapes",
-                  description: "",
-                 items: [
-                    { num: yhLang("1","১"), title: yhLang("Physical Violence", "দৈহিক সহিংসতা"), text: yhLang("Use of physical force causing bodily harm", "শারীরিক শক্তি প্রয়োগে দেহের ক্ষতি"), icon: "fa-hand", type: "type1" },
-                    { num: yhLang("2","২"), title: yhLang("Sexual Violence", "যৌন সহিংসতা"), text: yhLang("Sexual assault, abuse, or unwanted sexual contact", "যৌন আক্রমণ ও অপ্রত্যাশিত যৌন স্পর্শ"), icon: "fa-triangle-exclamation", type: "type2" },
-                    { num: yhLang("3","৩"), title: yhLang("Mental/Emotional Violence", "মানসিক সহিংসতা"), text: yhLang("Psychological abuse, threats, intimidation", "মনোবল ভাঙা, হুমকি, ভয়ভীতি"), icon: "fa-brain", type: "type3" },
-                    { num: yhLang("4","৪"), title: yhLang("Economic Violence", "অর্থনৈতিক সহিংসতা"), text: yhLang("Denial of financial resources and support", "অর্থ ও সম্পদ অস্বীকার"), icon: "fa-money-bill", type: "type1" },
-                    { num: yhLang("5","৫"), title: yhLang("Cybercrime", "সাইবার ক্রাইম"), text: yhLang("Online harassment, blackmail, illegal content sharing", "অনলাইন হয়রানি ও গোপনীয়তা লঙ্ঘন"), icon: "fa-computer", type: "type2" },
-                    { num: yhLang("6","৬"), title: yhLang("Bullying", "বুলিং"), text: yhLang("Repeated harassment and intimidation by peers", "সমবয়সীদের দ্বারা পুনরাবৃত্ত হয়রানি"), icon: "fa-users-slash", type: "type3" },
-                    { num: yhLang("7","৭"), title: yhLang("Child Marriage", "বাল্যবিবাহ"), text: yhLang("Forced early marriage before legal age", "আইনি বয়স পূর্ণ হওয়ার আগে বিয়ে"), icon: "fa-ring", type: "type1" },
-                    { num: yhLang("8","৮"), title: yhLang("Human Trafficking", "পাচার"), text: yhLang("Coercion for exploitation and forced labor", "জোরপূর্বক শোষণ ও শ্রম"), icon: "fa-arrows-alt", type: "type2" },
-                    { num: yhLang("9","৯"), title: yhLang("Sexual Harassment", "যৌন হয়রানি/ইভটিজিং"), text: yhLang("Unwanted sexual remarks, gestures, or comments", "অনাকাঙ্ক্ষিত যৌন মন্তব্য ও অঙ্গভঙ্গি"), icon: "fa-face-grin-tongue-squint", type: "type3" },
-                    { num: yhLang("10","১০"), title: yhLang("Acid Attacks", "এসিড নিক্ষেপ"), text: yhLang("Deliberate burning with corrosive substances", "ক্ষতিকারক পদার্থ দ্বারা পোড়ানো"), icon: "fa-flask", type: "type1" },
-                    { num: yhLang("11","১১"), title: yhLang("Exploitation", "পর্নোগ্রাফি ও অশ্লীল প্রকাশনা"), text: yhLang("Pornography and indecent publications", "অশ্লীল সামগ্রী নির্মাণ ও প্রচার"), icon: "fa-ban", type: "type2" },
-                    { num: yhLang("12","১২"), title: yhLang("Sexual Exploitation", "পতিতাবৃত্তি"), text: yhLang("Forced involvement in sex work", "যৌনকর্মে বাধ্য করা"), icon: "fa-person-circle-xmark", type: "type3" },
-                    { num: yhLang("13","১৩"), title: yhLang("Child Labor", "শিশুশ্রম"), text: yhLang("Exploitation of youth in hazardous work", "ঝুঁকিপূর্ণ কাজে শিশু নিয়োগ"), icon: "fa-hammer", type: "type1" }
-                  ]
-                }  
-              ];
-
-             const sections2 = [
-                {
-                  class_name: "shohingsotar-probhav",
-                  title: yhLang("Impact of Violence", "সহিংসতার প্রভাব"),
-                  icon: "fa-exclamation-circle",
-                  description: "",
+                  description: yhLang(
+                    "Violence against youth takes many forms, each with unique characteristics and impacts. Understanding these forms is essential for prevention and support.",
+                    "তরুনদের প্রতি সহিংসতা বিভিন্ন রূপে প্রকাশিত হয়। প্রতিটি রূপের নিজস্ব বৈশিষ্ট্য ও প্রভাব রয়েছে।"
+                  ),
                   items: [
-                    { num: "1", title: yhLang("Physical Effects", "শারীরিক প্রভাব"), text: yhLang("Headaches, loss of appetite, nausea, insomnia, and other health complications", "মাথা ব্যথা, ক্ষুধামন্দা, বমি-বমিভাব অনিদ্রা ইত্যাদি"), icon: "fa-heart-pulse", type: "type1" },
-                    { num: "2", title: yhLang("Mental Effects", "মানসিক প্রভাব"), text: yhLang("Anxiety, depression, low mood, irritability, anger, fear, shame, guilt, suicidal thoughts, distrust of others", "দুশ্চিন্তা, মনমরা, বিষণ্নতা, বিরক্তিবোধ, রাগান্বিত, খিটখিটে মেজাজ, ভয় পাওয়া এবং অসহায়বোধ করা, নিরাপত্তার অভাব, ভবিষ্যৎ সম্পর্কে অনিশ্চয়তাবোধ, অপমানিত বোধ, অপরাধবোধ, পুরুষের প্রতি ঘৃণা জন্মানো ও আত্মহত্যা ইত্যাদি"), icon: "fa-head-side-virus", type: "type2" },
-                    { num: "3", title: yhLang("Behavioral Effects", "আচরণগত প্রভাব"), text: yhLang("Crying, inability to concentrate, avoidance of crowded places and public transport", "কান্নাকাটি করা, মনোযোগ দিতে না পারা, ভিড়ের জায়গা ও পাবলিক পরিবহণ হতে নিজেকে বিরত রাখা ইত্যাদি"), icon: "fa-child", type: "type3" },
-                    { num: "4", title: yhLang("Social Effects", "সামাজিক প্রভাব"), text: yhLang("Social disgrace, family shame, withdrawal from social activities, forced early marriage", "সমাজে হেয় প্রতিপন্ন হওয়া, বাবা-মা ও গুরুজনদের তিরস্কার, সামাজিক কর্মকাণ্ড হতে নিজেকে গুটিয়ে নেয়া, অল্প বয়সে বিয়ে দিয়ে দেয়া ইত্যাদি।"), icon: "fa-people-group", type: "type1" }
+                    { num: "1", title: yhLang("Physical Violence", "দৈহিক সহিংসতা"), text: yhLang("Use of physical force causing bodily harm", "শারীরিক শক্তি প্রয়োগে দেহের ক্ষতি"), icon: "fa-hand", type: "type1" },
+                    { num: "2", title: yhLang("Sexual Violence", "যৌন সহিংসতা"), text: yhLang("Sexual assault, abuse, or unwanted sexual contact", "যৌন আক্রমণ ও অপ্রত্যাশিত যৌন স্পর্শ"), icon: "fa-triangle-exclamation", type: "type2" },
+                    { num: "3", title: yhLang("Mental/Emotional Violence", "মানসিক সহিংসতা"), text: yhLang("Psychological abuse, threats, intimidation", "মনোবল ভাঙা, হুমকি, ভয়ভীতি"), icon: "fa-brain", type: "type3" },
+                    { num: "4", title: yhLang("Economic Violence", "অর্থনৈতিক সহিংসতা"), text: yhLang("Denial of financial resources and support", "অর্থ ও সম্পদ অস্বীকার"), icon: "fa-money-bill", type: "type1" },
+                    { num: "5", title: yhLang("Cybercrime", "সাইবার ক্রাইম"), text: yhLang("Online harassment, blackmail, illegal content sharing", "অনলাইন হয়রানি ও গোপনীয়তা লঙ্ঘন"), icon: "fa-computer", type: "type2" },
+                    { num: "6", title: yhLang("Bullying", "বুলিং"), text: yhLang("Repeated harassment and intimidation by peers", "সমবয়সীদের দ্বারা পুনরাবৃত্ত হয়রানি"), icon: "fa-users-slash", type: "type3" },
+                    { num: "7", title: yhLang("Child Marriage", "বাল্যবিবাহ"), text: yhLang("Forced early marriage before legal age", "আইনি বয়স পূর্ণ হওয়ার আগে বিয়ে"), icon: "fa-ring", type: "type1" },
+                    { num: "8", title: yhLang("Human Trafficking", "পাচার"), text: yhLang("Coercion for exploitation and forced labor", "জোরপূর্বক শোষণ ও শ্রম"), icon: "fa-arrows-alt", type: "type2" },
+                    { num: "9", title: yhLang("Sexual Harassment", "যৌন হয়রানি/ইভটিজিং"), text: yhLang("Unwanted sexual remarks, gestures, or comments", "অনাকাঙ্ক্ষিত যৌন মন্তব্য ও অঙ্গভঙ্গি"), icon: "fa-megaphone", type: "type3" },
+                    { num: "10", title: yhLang("Acid Attacks", "এসিড নিক্ষেপ"), text: yhLang("Deliberate burning with corrosive substances", "ক্ষতিকারক পদার্থ দ্বারা পোড়ানো"), icon: "fa-flask", type: "type1" },
+                    { num: "11", title: yhLang("Exploitation", "পর্নোগ্রাফি ও অশ্লীল প্রকাশনা"), text: yhLang("Pornography and indecent publications", "অশ্লীল সামগ্রী নির্মাণ ও প্রচার"), icon: "fa-ban", type: "type2" },
+                    { num: "12", title: yhLang("Sexual Exploitation", "পতিতাবৃত্তি"), text: yhLang("Forced involvement in sex work", "যৌনকর্মে বাধ্য করা"), icon: "fa-person-circle-xmark", type: "type3" },
+                    { num: "13", title: yhLang("Child Labor", "শিশুশ্রম"), text: yhLang("Exploitation of youth in hazardous work", "ঝুঁকিপূর্ণ কাজে শিশু নিয়োগ"), icon: "fa-hammer", type: "type1" }
                   ]
                 },
-             
                 {
-                  class_name: "prevention-and-remedy",
+                  title: yhLang("Impact of Violence", "সহিংসতার প্রভাব"),
+                  icon: "fa-exclamation-circle",
+                  description: yhLang(
+                    "Violence has severe and lasting impacts on victims' physical, mental, behavioral, and social well-being.",
+                    "সহিংসতার প্রভাব শারীরিক, মানসিক, আচরণগত ও সামাজিক — সব ক্ষেত্রেই গভীর।"
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Physical Effects", "শারীরিক প্রভাব"), text: yhLang("Headaches, loss of appetite, nausea, insomnia, and other health complications", "মাথা ব্যথা, ক্ষুধামন্দা, বমি-বমিভাব, অনিদ্রা ইত্যাদি"), icon: "fa-heart-pulse", type: "type1" },
+                    { num: "2", title: yhLang("Mental Effects", "মানসিক প্রভাব"), text: yhLang("Anxiety, depression, low mood, irritability, anger, fear, shame, guilt, suicidal thoughts, distrust of others", "দুশ্চিন্তা, মনমরা, বিষণ্নতা, বিরক্তিবোধ, আত্মহত্যার চিন্তা প্রভৃতি"), icon: "fa-head-side-virus", type: "type2" },
+                    { num: "3", title: yhLang("Behavioral Effects", "আচরণগত প্রভাব"), text: yhLang("Crying, inability to concentrate, avoidance of crowded places and public transport", "কান্নাকাটি, মনোযোগ না দিতে পারা, জনসমাগম এড়িয়ে চলা"), icon: "fa-child", type: "type3" },
+                    { num: "4", title: yhLang("Social Effects", "সামাজিক প্রভাব"), text: yhLang("Social disgrace, family shame, withdrawal from social activities, forced early marriage", "সমাজে লজ্জা, পারিবারিক বদনাম, সামাজিক কর্ম থেকে দূরে থাকা"), icon: "fa-people-group", type: "type1" }
+                  ]
+                },
+                {
                   title: yhLang("Prevention and Remedy Methods", "সহিংসতা প্রতিকার ও প্রতিরোধের পন্থাসমূহ"),
                   icon: "fa-shield-heart",
-                  description: "",
+                  description: yhLang(
+                    "Comprehensive strategies involving family, community, and government support are essential for preventing violence and supporting victims.",
+                    "পরিবার, সমাজ ও সরকারের যৌথ প্রচেষ্টায় সহিংসতা প্রতিরোধ ও প্রতিকার সম্ভব।"
+                  ),
                   items: [
-                    { num: "1", title: yhLang("Strengthen Family Bonds", "পারিবারিক ও বন্ধুবান্ধবের মধ্যকার বন্ধন জোরদার করা।"), text: yhLang("Build trust and communication within the family unit", "পরিবারের সদস্যদের মধ্যে বিশ্বাস ও যোগাযোগ বৃদ্ধি"), icon: "fa-heart", type: "type1" },
-                    { num: "2", title: yhLang("Foster Safe Relationships", "সন্তান ও বাবা-মা/অভিভাবকের মধ্যে নিরাপদ, বন্ধুত্বপূর্ণ সম্পর্ক সৃষ্টি।"), text: yhLang("Create safe, friendly relationships between parents, guardians and youth", "অভিভাবক ও সন্তানের মধ্যে বন্ধুত্বপূর্ণ সম্পর্ক সৃষ্টি"), icon: "fa-handshake", type: "type2" },
-                    { num: "3", title: yhLang("Reduce Substance Abuse", "মাদকের অপব্যবহার ও সহজলভ্যতা হ্রাস।"), text: yhLang("Control availability and abuse of drugs and harmful substances", "মাদকের সহজলভ্যতা ও অপব্যবহার হ্রাস করা"), icon: "fa-hand-holding-heart", type: "type3" },
-                    { num: "4", title: yhLang("Gender Equality Awareness", "জেন্ডার বৈষম্য দূরীকরণের লক্ষ্যে বিবিধ সচেতনতামূলক কর্মসূচি গ্রহণ করা।"), text: yhLang("Conduct awareness programs on gender discrimination and equality", "জেন্ডার বৈষম্য দূরীকরণে সচেতনতামূলক কর্মসূচি"), icon: "fa-person", type: "type1" },
+                    { num: "1", title: yhLang("Strengthen Family Bonds", "পারিবারিক বন্ধন শক্তিশালী করা"), text: yhLang("Build trust and communication within the family unit", "পরিবারের সদস্যদের মধ্যে বিশ্বাস ও যোগাযোগ বৃদ্ধি"), icon: "fa-house-heart", type: "type1" },
+                    { num: "2", title: yhLang("Foster Safe Relationships", "নিরাপদ সম্পর্ক গড়ে তোলা"), text: yhLang("Create safe, friendly relationships between parents, guardians and youth", "অভিভাবক ও সন্তানের মধ্যে বন্ধুত্বপূর্ণ সম্পর্ক সৃষ্টি"), icon: "fa-handshake", type: "type2" },
+                    { num: "3", title: yhLang("Reduce Substance Abuse", "মাদকের অপব্যবহার কমানো"), text: yhLang("Control availability and abuse of drugs and harmful substances", "মাদকের সহজলভ্যতা ও অপব্যবহার হ্রাস করা"), icon: "fa-hand-holding-heart", type: "type3" },
+                    { num: "4", title: yhLang("Gender Equality Awareness", "লিঙ্গ সমতা সচেতনতা"), text: yhLang("Conduct awareness programs on gender discrimination and equality", "জেন্ডার বৈষম্য দূরীকরণে সচেতনতামূলক কর্মসূচি"), icon: "fa-person", type: "type1" },
                     { num: "5", title: yhLang("Legal Awareness", "আইনি সচেতনতা"), text: yhLang("Educate public and officials on violence prevention and protection laws", "নারী ও শিশু সুরক্ষা আইন সম্পর্কে সচেতনতা"), icon: "fa-scale-balanced", type: "type2" },
-                    { num: "6", title: yhLang("Economic Support", "সমাজে বেকারত্ব হ্রাস, দারিদ্র বিমোচন করার লক্ষ্যে ক্ষুদ্রশিল্প প্রশিক্ষণ এবং সহজ শর্তে ঋণ প্রদান।"), text: yhLang("Provide vocational training and easy-term micro-credit for employment", "ক্ষুদ্রশিল্প প্রশিক্ষণ ও ঋণ প্রদান"), icon: "fa-briefcase", type: "type3" },
-                    { num: "7", title: yhLang("Counseling Services", "মানসিক ও বৈবাহিক সমস্যা, বৈকল্যতা প্রতিরোধের জন্য মনো-সামাজিক কাউন্সেলিং সেবা সহজলভ্য করা।"), text: yhLang("Make mental health and marriage counseling services accessible", "মনোসামাজিক মানসিক ও বৈবাহিক সমস্যা, বৈকল্যতা প্রতিরোধের জন্য মনো-সামাজিক কাউন্সেলিং সেবা সহজলভ্য করা। সহজলভ্য করা"), icon: "fa-comments", type: "type1" },
-                    { num: "8", title: yhLang("Life Skills Training", "শিশু ও কিশোর-কিশোরীদের জীবনমুখী প্রশিক্ষণ, যেমন : কীভাবে নিজেকে সুরক্ষিত রাখা যাবে, রাগ নিয়ন্ত্রণ, সামাজিক দক্ষতা বিকাশ প্রশিক্ষণ, কীভাবে বাবা-মা ও বন্ধুদের সাথে দ্বন্দ্ব কাটানো যাবে, কম্পিউটার ও কারিগরি প্রশিক্ষণ ইত্যাদি।"), text: yhLang("Provide training on self-protection, anger management, social skills, and conflict resolution", "আত্মরক্ষা, রাগ নিয়ন্ত্রণ ও সামাজিক দক্ষতা প্রশিক্ষণ"), icon: "fa-graduation-cap", type: "type2" }
+                    { num: "6", title: yhLang("Economic Support", "অর্থনৈতিক সহায়তা"), text: yhLang("Provide vocational training and easy-term micro-credit for employment", "ক্ষুদ্রশিল্প প্রশিক্ষণ ও ঋণ প্রদান"), icon: "fa-briefcase", type: "type3" },
+                    { num: "7", title: yhLang("Counseling Services", "কাউন্সেলিং সেবা"), text: yhLang("Make mental health and marriage counseling services accessible", "মনোসামাজিক কাউন্সেলিং সেবা সহজলভ্য করা"), icon: "fa-comments", type: "type1" },
+                    { num: "8", title: yhLang("Life Skills Training", "জীবনমুখী প্রশিক্ষণ"), text: yhLang("Provide training on self-protection, anger management, social skills, and conflict resolution", "আত্মরক্ষা, রাগ নিয়ন্ত্রণ ও সামাজিক দক্ষতা প্রশিক্ষণ"), icon: "fa-graduation-cap", type: "type2" }
                   ]
-                } 
+                }
               ];
-              function renderSections1() {
+
+              function renderSections() {
                 return sections.map((section, secIdx) => `
                   <section class="ch13l9-section ch13l9-section-type${(secIdx % 3) + 1}" data-aos="fade-up" data-aos-delay="${60 + secIdx * 20}">
                     <div class="ch13l9-section-header">
@@ -8023,38 +8054,13 @@ const orbitItems = [
                       </h3>
                       <p class="ch13l9-section-desc">${section.description}</p>
                     </div>
-                    <ul class="ch13l9-list ${section.class_name}">
+                    <ul class="ch13l9-list">
                       ${section.items.map((item, idx) => `
                         <li class="ch13l9-li ch13l9-li-${item.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 15}">
                           <span class="ch13l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                           <div class="ch13l9-li-content">
                             <strong class="ch13l9-li-num">${item.num}</strong>
-                            <h3 class="ch13l9-li-title">${item.title}</h3>
-                            <p class="ch13l9-li-text">${item.text}</p>
-                          </div>
-                        </li>
-                      `).join('')}
-                    </ul>
-                  </section>
-                `).join('');
-              }
-              function renderSections2() {
-                return sections2.map((section2, secIdx) => `
-                  <section class="ch13l9-section ch13l9-section-type${(secIdx % 3) + 1}" data-aos="fade-up" data-aos-delay="${60 + secIdx * 20}">
-                    <div class="ch13l9-section-header">
-                      <h3 class="ch13l9-section-title">
-                        <i class="fa-solid ${section2.icon}"></i>
-                        ${section2.title}
-                      </h3>
-                      <p class="ch13l9-section-desc">${section2.description}</p>
-                    </div>
-                    <ul class="ch13l9-list ${section2.class_name}">
-                      ${section2.items.map((item, idx) => `
-                        <li class="ch13l9-li ch13l9-li-${item.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 15}">
-                          <span class="ch13l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
-                          <div class="ch13l9-li-content">
-                            <strong class="ch13l9-li-num">${item.num}</strong>
-                            <h3 class="ch13l9-li-title">${item.title}</h3>
+                            <h4 class="ch13l9-li-title">${item.title}</h4>
                             <p class="ch13l9-li-text">${item.text}</p>
                           </div>
                         </li>
@@ -8070,17 +8076,22 @@ const orbitItems = [
                   <div class="ch13l9-shape ch13l9-shape-b"></div>
                   <div class="ch13l9-shape ch13l9-shape-c"></div>
 
+                  <div class="ch13l9-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch13l9-title">
+                      <i class="fa-solid fa-hand-fist"></i>
+                      ${yhLang("Forms of Violence Against Youth", "তরুনদের প্রতি সহিংসতার বিভিন্ন রূপ")}
+                    </h2>
+                  </div>
+
+                  <section class="ch13l9-intro-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch13l9-intro-text">${yhLang(
+                      "Violence against youth manifests in multiple forms. Recognizing these forms and their impacts is crucial for prevention and victim support.",
+                      "তরুনদের প্রতি সহিংসতা বহুমুখী। এর প্রতিরোধ ও প্রতিকারে সচেতনতা অপরিহার্য।"
+                    )}</p>
+                  </section>
 
                   <section class="ch13l9-content" data-aos="fade-up" data-aos-delay="60">
-                    <div class="row g-2">
-                       <div class="col-md-4">
-                            ${renderSections1()}
-                       </div>
-                       <div class="col-md-8">
-                         ${renderSections2()}
-                       </div>
-                    </div>
-                    
+                    ${renderSections()}
                   </section>
                 </div>
               `;
@@ -21485,7 +21496,7 @@ const orbitItems = [
               "What to do to prevent COVID-19",
               "কোভিড-১৯ প্রতিরোধে করণীয়",
             ),
-            icon: "fa-shield-check",
+            icon: "fa-shield",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
             quiz: null,
