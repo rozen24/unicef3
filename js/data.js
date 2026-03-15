@@ -450,7 +450,7 @@ const coursesData = [
                   "YHAP builds foundational health literacy through comprehensive training on essential health and wellbeing. This equips ambassadors with the expertise to act as credible sources of information and effective advocates for prevention of diseases and health promotion.",
                   "YHAP অপরিহার্য স্বাস্থ্য ও সুস্থতা বিষয়ে সমন্বিত প্রশিক্ষণের মাধ্যমে মৌলিক স্বাস্থ্য সাক্ষরতা গড়ে তোলে। এতে দূতরা বিশ্বাসযোগ্য তথ্যদাতা ও প্রতিরোধভিত্তিক স্বাস্থ্য প্রচারের কার্যকর প্রবক্তা হয়ে উঠেন।",
                 ),
-                icon: "fa-book-medical",
+                icon: "fa-children",
                 color: "purple",
               },
               {
@@ -6579,6 +6579,130 @@ const coursesData = [
                 </div>
               `;
             })()
+          },
+          {
+            id: "ch12-lesson-7",
+            title: yhLang("Sexual and Reproductive Health Rights", "যৌন ও প্রজনন স্বাস্থ্য অধিকার"),
+            icon: "fa-heart-circle-bolt",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q12g",
+                  question: yhLang(
+                    "Why is reproductive health important for adolescents?",
+                    "কিশোর-কিশোরীদের জন্য প্রজনন স্বাস্থ্য কেন গুরুত্বপূর্ণ?",
+                  ),
+                  options: [
+                    yhLang(
+                      "Due to high risk of STIs, unwanted pregnancy, and lack of information",
+                      "যৌনবাহিত রোগ, অনাকাঙ্ক্ষিত গর্ভধারণ এবং তথ্যের অভাব",
+                    ),
+                    yhLang("Only for adult women", "শুধুমাত্র প্রাপ্তবয়স্ক নারীদের জন্য"),
+                    yhLang("Not important during adolescence", "কিশোরকালে গুরুত্বপূর্ণ নয়"),
+                    yhLang("Only related to pregnancy", "শুধুমাত্র গর্ভধারণ সম্পর্কিত"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const description1 = yhLang(
+                "About 1 out of every 6 people in the world are adolescents aged 10-19 years, and nearly one-third of the population is under 25 years. During adolescence, teenagers experience physical and mental changes, and signs of sexual development become apparent. Adolescents face increased reproductive and sexual health risks. Without adequate information and education, they are more vulnerable to sexually transmitted infections. Unintended pregnancies and unsafe abortions also present serious health concerns. Therefore, sexual and reproductive health rights are critically important.",
+                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এবয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্তের সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।"
+              );
+
+              const description2 = yhLang(
+                "Reproductive health is the complete physical, mental, and social well-being related to the reproductive system at every stage of life. According to the World Health Organization (WHO), reproductive health means having the capacity for reproduction, along with the right to a satisfying and safe sexual life, and the freedom to make informed decisions about reproduction.",
+                "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডাব্লুএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
+              );
+
+              const rights = [
+                {
+                  text: yhLang(
+                    "Sexual and reproductive health rights are part of fundamental human rights",
+                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার মৌলিক মানবাধিকারের অংশ।"
+                  ),
+                  icon: "fa-handshake",
+                  type: "type1",
+                },
+                {
+                  text: yhLang(
+                    "These rights are essential for gender equality and sustainable development. Control over one's body and sexual relationships is a prerequisite for empowerment and rights of adolescent girls and women.",
+                    "লিঙ্গ সমতা ও টেকসই উন্নয়নের প্রশ্নে এ অধিকার নিশ্চিত করা খুবই গুরুত্বপূর্ণ। পাশাপাশি নিজের শরীর ও যৌনসম্পর্কের ক্ষেত্রে কিশোরী এবং নারীদের নিয়ন্ত্রণ তাদের ক্ষমতায়ন ও অধিকারের পূর্বশর্ত।"
+                  ),
+                  icon: "fa-venus",
+                  type: "type2",
+                },
+                {
+                  text: yhLang(
+                    "These rights are necessary for full participation in social, economic, political, and cultural spheres",
+                    "সামাজিক, অর্থনৈতিক, রাজনৈতিক ও সাংস্কৃতিক অঙ্গনে তাদের পূর্ণ অংশগ্রহণের ক্ষেত্রেও এ অধিকার জরুরি।"
+                  ),
+                  icon: "fa-users-rays",
+                  type: "type3",
+                },
+                {
+                  text: yhLang(
+                    "These rights protect adolescent girls and women from all forms of discrimination, violence, and abuse while upholding principles of dignity, equality, and diversity",
+                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার কিশোরী ও নারীদের সব ধরনের বৈষম্য, সহিংসতা, নির্যাতন থেকে মুক্ত থাকার অধিকারের অন্যতম গুরুত্বপূর্ণ অংশ। মর্যাদা, সমতা ও বৈচিত্র্যের প্রতি সম্মান প্রদর্শনের নীতিগুলো সুরক্ষিত করে এ অধিকার।"
+                  ),
+                  icon: "fa-shield-heart",
+                  type: "type4",
+                },
+              ];
+
+              function renderRights() {
+                return rights
+                  .map(
+                    (right, idx) => `
+                    <div class="ch12l7-right-item ch12l7-right-${right.type}" data-aos="fade-up" data-aos-delay="${100 + idx * 30}">
+                      <div class="ch12l7-icon-wrapper">
+                        <i class="fa-solid ${right.icon}"></i>
+                      </div>
+                      <p class="ch12l7-right-text">${right.text}</p>
+                    </div>
+                  `,
+                  )
+                  .join("");
+              }
+
+              return `
+                <div class="ch12l7-slide lesson-slide">
+                  <div class="ch12l7-header" data-aos="fade-down">
+                    <h2 class="ch12l7-main-title">
+                      <i class="fa-solid fa-heart-circle-bolt"></i>
+                      ${yhLang("Sexual and Reproductive Health Rights", "যৌন ও প্রজনন স্বাস্থ্য অধিকার")}
+                    </h2>
+                  </div>
+
+                  <div class="ch12l7-content-container">
+                    <section class="ch12l7-description-block ch12l7-desc-1" data-aos="fade-right" data-aos-delay="40">
+                      <div class="ch12l7-desc-header">
+                        <i class="fa-solid fa-children"></i>
+                      </div>
+                      <p class="ch12l7-desc-text">${description1}</p>
+                    </section>
+
+                    <section class="ch12l7-description-block ch12l7-desc-2" data-aos="fade-left" data-aos-delay="80">
+                      <div class="ch12l7-desc-header">
+                        <i class="fa-solid fa-circle-info"></i>
+                      </div>
+                      <p class="ch12l7-desc-text">${description2}</p>
+                    </section>
+                  </div>
+
+                  <div class="ch12l7-rights-section">
+                    
+                    <div class="ch12l7-rights-grid">
+                      ${renderRights()}
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
           }
         ],
       },
@@ -8121,7 +8245,7 @@ const orbitItems = [
               }
 
               return `
-                <div class="ch13l9-slide">
+                <div class="ch13l9-slide lesson-slide">
                   <div class="ch13l9-shape ch13l9-shape-a"></div>
                   <div class="ch13l9-shape ch13l9-shape-b"></div>
                   <div class="ch13l9-shape ch13l9-shape-c"></div>
@@ -19882,7 +20006,7 @@ const orbitItems = [
                   item.includes("memory")
                 )
                   return {
-                    icon: "fa-book-medical",
+                    icon: "fa-children",
                     color: "#6a1b9a",
                     bg: "rgba(106,27,154,.12)",
                   };
