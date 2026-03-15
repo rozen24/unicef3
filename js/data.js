@@ -5779,6 +5779,73 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch10-lesson-3",
+            title: yhLang("HIV and AIDS", "এইচআইভি ও এইডস"),
+            icon: "fa-ribbon",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q10c",
+                  question: yhLang(
+                    "How long can HIV remain dormant in the body?",
+                    "এইচআইভি কত সময় পর্যন্ত মানবদেহে সুপ্ত অবস্থায় থাকতে পারে?",
+                  ),
+                  options: [
+                    yhLang("2-10 years", "२-१० বছर"),
+                    yhLang("1-5 years", "१-५ বছর"),
+                    yhLang("10-15 years", "१०-१५ বছর"),
+                    yhLang("Cannot remain dormant", "সুপ্ত থাকতে পারে না"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introText = yhLang(
+                "HIV (Human Immunodeficiency Virus) is a virus that destroys the body's immune system. When the virus enters the bloodstream, it gradually weakens the body's ability to fight infections. Eventually, the immune system becomes so compromised that it cannot defend against diseases like diarrhea, tuberculosis, or cholera. When immunity is completely destroyed, this condition is called AIDS (Acquired Immunodeficiency Syndrome).",
+                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্తে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধক্ষমতা একেবারেই থাকে না। এ সময় বিভিন্ন রোগ যেমন—ডায়রিয়া, যক্ষা, কলেরা ইত্যাদি মানবদেহকে আক্রমণ করলে মানবদেহ তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম এইডস।"
+              );
+
+              const latencyNote = yhLang(
+                "HIV can remain dormant (inactive) in the body for 2–10 years without showing symptoms. During this time, an infected person may look and feel perfectly healthy but can still transmit the virus to others.",
+                "२–१० বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে।"
+              );
+
+              return `
+                <div class="ch10l3-slide lesson-slide">
+                  <h2 class="ch10l3-title gradient-text" data-aos="fade-down">${yhLang(
+                    "HIV and AIDS",
+                    "এইচআইভি ও এইডস",
+                  )}</h2>
+
+                  <div class="ch10l3-content-wrapper">
+                    <section class="ch10l3-description-card ch10l3-desc-1" data-aos="fade-up" data-aos-delay="60">
+                      
+                      <p class="ch10l3-card-text">${introText}</p>
+                    </section>
+
+                    <section class="ch10l3-description-card ch10l3-desc-2" data-aos="fade-up" data-aos-delay="100">
+                      <div class="ch10l3-card-header">
+                        <div class="ch10l3-icon-circle ch10l3-icon-2">
+                          <i class="fa-solid fa-hourglass-half"></i>
+                        </div>
+                        <h3>${yhLang("Dormancy Period", "সুপ্তাবস্থা")}</h3>
+                      </div>
+                      <p class="ch10l3-card-text">${latencyNote}</p>
+                    </section>
+
+                    <figure class="ch10l3-image-card" data-aos="zoom-in" data-aos-delay="140">
+                      <img src="img/modu10/hiv.png" alt="এইচআইভী ও এইডস" class="ch10l3-image img-fluid rounded-4" />
+                    </figure>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
