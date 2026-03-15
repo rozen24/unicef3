@@ -3335,8 +3335,8 @@ const coursesData = [
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <figure class="image-card mb-0" style="min-height:150px; max-width:80%; margin:0 auto;">
-                      <img src="img/modu11/tika.jpg" alt="${yhLang("Women's additional vaccines", "মহিলাদের অন্যান্য টিকা")}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
+                    <figure class="image-card mb-0" style="min-height:150px; max-width:100%; margin:0 auto;">
+                      <img src="img/modu11/tika.jpg" style="height: 600px;" alt="${yhLang("Women's additional vaccines", "মহিলাদের অন্যান্য টিকা")}" class="img-fluid rounded-4 shadow-sm img-zoom" />
                     </figure>
                   </section>
                 </div>
@@ -5788,255 +5788,9 @@ const coursesData = [
           "মডিউল-১১: জরায়ু মুখের ক্যান্সার)",
         ),
         lessons: [
+
           {
             id: "ch11-lesson-1",
-            title: yhLang("Cervical Cancer", "জরায়ুমুখ ক্যান্সার"),
-            icon: "fa-ribbon",
-            gradientClass: "bg-gradient-orange",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q11a",
-                  question: yhLang(
-                    "Which virus most commonly causes cervical cancer?",
-                    "জরায়ুমুখ ক্যান্সারের প্রধান কারণ কোন ভাইরাস?",
-                  ),
-                  options: [
-                    yhLang(
-                      "Human Papillomavirus (HPV)",
-                      "হিউম্যান প্যাপিলোমা ভাইরাস (এইচপিভি)",
-                    ),
-                    yhLang("Common cold virus", "সাধারণ সর্দি ভাইরাস"),
-                    yhLang("Malaria parasite", "ম্যালেরিয়ার পরজীবী"),
-                    yhLang("None", "কোনোটিই নয়"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const paragraphs = [
-                yhLang(
-                  "Cervical cancer is preventable when detected early and treated promptly, yet it remains one of the leading causes of cancer mortality among women—globally the fourth most common, and the second most common among Bangladeshi women.",
-                  "জরায়ুমুখ ক্যান্সার প্রতিরোধযোগ্য একটি রোগ। দ্রুত রোগ নির্ণয় ও প্রয়োজনীয় চিকিৎসার মাধ্যমে এই রোগ থেকে সম্পূর্ণ সেরে ওঠা সম্ভব। তথাপি এটি সকল ধরণের ক্যান্সার এবং নারীদের ক্যান্সারজনিত মৃত্যুর অন্যতম প্রধান কারণ। সাধারণত নারীরা যেসব ক্যান্সারে আক্রান্ত হয়ে থাকেন, বৈশ্বিকভাবে তাদের মধ্যে জরায়ুমুখ ক্যান্সার চতুর্থ সর্বোচ্চ। বাংলাদেশি নারীদের ক্ষেত্রে এটি দ্বিতীয় সর্বোচ্চ।",
-                ),
-                yhLang(
-                  "According to 2020 data, over 600,000 women are diagnosed with cervical cancer annually and about 342,000 die, 90% of them in low- and middle-income countries like Bangladesh.",
-                  "২০২০ সালের তথ্য-উপাত্ত অনুযায়ী প্রতিবছর বিশ্বের ছয় লক্ষাধিক নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হন, যার মধ্যে প্রায় তিন লক্ষ বিয়াল্লিশ হাজার জন মৃত্যুবরণ করে থাকেন। এর প্রায় ৯০% মৃত্যুই বাংলাদেশের মতো উন্নয়নশীল বা স্বল্পোন্নত দেশে ঘটে থাকে।",
-                ),
-                yhLang(
-                  "Human Papillomavirus (HPV)—a sexually transmitted virus—is the primary cause. WHO recommends regular screening and HPV vaccination to reduce incidence and deaths. Without strong prevention and control, projections suggest 700,000 cases and 400,000 deaths by 2030, mostly in developing nations.",
-                  "হিউম্যান প্যাপিলোমা ভাইরাস (এইচপিভি), যা একটি যৌনবাহিত ভাইরাস, এটি জরায়ুমুখ ক্যান্সার সৃষ্টি করে থাকে। বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব। ধারণা করা হচ্ছে, জরায়ুমুখ ক্যান্সার প্রতিরোধ ও নিয়ন্ত্রণ কার্যক্রম সফলভাবে বাস্তবায়িত না হলে ২০৩০ সালে বিশ্বব্যাপী প্রায় সাত লক্ষ নারী জরায়ুমুখ ক্যান্সারে আক্রান্ত হবেন, যার প্রায় চার লক্ষ মৃত্যুবরণ করবেন এবং এর সিংহভাগই ঘটবে উন্নয়নশীল দেশে।",
-                ),
-              ];
-
-              const renderParagraphs = () =>
-                paragraphs
-                  .map(
-                    (text, idx) => `
-                      <p class="mb-3" data-aos="fade-right" data-aos-delay="${60 + idx * 20}">${text}</p>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "জরায়ুমুখ ক্যান্সার",
-                    "জরায়ুমুখ ক্যান্সার",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        ${renderParagraphs()}
-                      </div>
-                      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="80">
-                        <figure class="image-card mb-0" style="min-height:150px; max-width:80%; margin:0 auto;">
-                          <img src="img/modu11/jorau.jpg" alt="জরায়ুমুখ ক্যান্সার" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                        </figure>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch11-lesson-2",
-            title: yhLang("HPV Vaccine", "এইচপিভি টিকা"),
-            icon: "fa-syringe",
-            gradientClass: "bg-gradient-purple",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q11b",
-                  question: yhLang(
-                    "How many HPV vaccine doses are recommended here?",
-                    "এইচপিভি টিকার ডোজ সংখ্যা কত উল্লেখ করা হয়েছে?",
-                  ),
-                  options: [
-                    yhLang("One dose", "এক ডোজ"),
-                    yhLang("Two doses", "দুই ডোজ"),
-                    yhLang("Three doses", "তিন ডোজ"),
-                    yhLang("Four doses", "চার ডোজ"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const intro = yhLang(
-                "Regular screening plus a single HPV vaccine dose can prevent cervical cancer and reduce related deaths.",
-                "বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এক ডোজ এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব।",
-              );
-
-              const advantages = [
-                "এইচপিভি টিকা জরায়ুমুখ ক্যান্সার প্রতিরোধ করে।",
-                "জরায়ুমুখ ক্যান্সার প্রতিরোধে এইচপিভি টিকার একটি ডোজই যথেষ্ট।",
-                "এইচপিভি টিকা বিশ্বব্যাপী পরীক্ষিত, নিরাপদ ও কার্যকর।",
-                "গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের উদ্যোগে এই টিকা বিনামূল্যে প্রদান করা হয়।",
-              ];
-
-              const locations = [
-                "ইপিআই স্থায়ী ও অস্থায়ী টিকা কেন্দ্র থেকে এই টিকা গ্রহণ করা যাবে।",
-              ];
-
-              const eligibility = [
-                "পঞ্চম শ্রেণিতে অধ্যয়নরত সকল ছাত্রী অথবা ১০ বছর বয়সী সকল কিশোরী।",
-              ];
-
-              const doses = ["এক ডোজ"];
-
-              const renderList = (items, baseDelay = 60) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "এইচপিভি টিকা",
-                    "এইচপিভি টিকা",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        <p class="mb-4" data-aos="fade-right" data-aos-delay="60">${intro}</p>
-
-                        <article class="mb-3" data-aos="fade-right" data-aos-delay="80">
-                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকা গ্রহণের ঝুঁকি", "টিকা গ্রহণের ঝুঁকি")}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(advantages, 80)}
-                          </ul>
-                        </article>
-
-                        <article class="mb-3" data-aos="fade-right" data-aos-delay="120">
-                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকা গ্রহণের স্থান", "টিকা গ্রহণের স্থান")}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(locations, 120)}
-                          </ul>
-                        </article>
-
-                        <article class="mb-3" data-aos="fade-right" data-aos-delay="140">
-                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকাগুলো কারা গ্রহণ করতে পারবেন", "টিকাগুলো কারা গ্রহণ করতে পারবেন")}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(eligibility, 140)}
-                          </ul>
-                        </article>
-
-                        <article data-aos="fade-right" data-aos-delay="160">
-                          <h3 class="gradient-text h5 mb-3">${yhLang("টিকার ডোজ সংখ্যা", "টিকার ডোজ সংখ্যা")}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderList(doses, 160)}
-                          </ul>
-                        </article>
-                      </div>
-                      <div class="col-lg-5">
-                        <div class="row g-3">
-                          <div class="col-12" data-aos="fade-left" data-aos-delay="80">
-                            <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto;">
-                              <img src="img/modu11/dose1.jpg" alt="${yhLang("HPV vaccine awareness", "এইচপিভি টিকা")}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" style="height: 200px; object-fit: cover;" />
-                            </figure>
-                          </div>
-                          <div class="col-12" data-aos="fade-left" data-aos-delay="110">
-                            <figure class="image-card mb-0" style="max-height:300px; max-width:80%; margin:0 auto;">
-                              <img src="img/modu11/dose2.jpg" alt="${yhLang("HPV vaccine dose", "এইচপিভি টিকা ডোজ")}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" style="height: 200px; object-fit: cover;" />
-                            </figure>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch11-lesson-3",
-            title: yhLang(
-              "Other Vaccines for Women",
-              "মহিলাদের অন্যান্য  টিকা",
-            ),
-            icon: "fa-notes-medical",
-            gradientClass: "bg-gradient-teal",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q11c",
-                  question: yhLang(
-                    "Why should women stay informed about additional vaccines?",
-                    "মহিলাদের কেন অতিরিক্ত টিকা সম্পর্কে সচেতন থাকা জরুরি?",
-                  ),
-                  options: [
-                    yhLang(
-                      "To protect against preventable diseases",
-                      "প্রতিরোধযোগ্য রোগ থেকে সুরক্ষা পেতে",
-                    ),
-                    yhLang(
-                      "Because vaccines cause illness",
-                      "কারণ টিকা অসুস্থ করে",
-                    ),
-                    yhLang("Vaccines are unnecessary", "টিকা অপ্রয়োজনীয়"),
-                    yhLang("No reason", "কোনো কারণ নেই"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "মহিলাদের অন্যান্য  টিকা",
-                    "মহিলাদের অন্যান্য  টিকা",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <figure class="image-card mb-0" style="margin:0 auto;">
-                      <img src="img/modu11/tika.jpg" alt="মহিলাদের অন্যান্য টিকা" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                    </figure>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch11-lesson-4",
             title: yhLang(
               "Cervical Cancer Prevention",
               "জরায়ুমুখ ক্যান্সার"
@@ -6128,6 +5882,179 @@ const coursesData = [
                 </div>
               `;
             })()
+          },
+          {
+            id: "ch11-lesson-2",
+            title: yhLang(
+              "HPV Vaccine",
+              "এইচপিভি টিকা"
+            ),
+            icon: "fa-syringe",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q11e",
+                  question: yhLang(
+                    "How many doses of HPV vaccine are recommended?",
+                    "এইচপিভি টিকার কতটি ডোজ সুপারিশ করা হয়?"
+                  ),
+                  options: [
+                    yhLang("One dose", "এক ডোজ"),
+                    yhLang("Two doses", "দুই ডোজ"),
+                    yhLang("Three doses", "তিন ডোজ"),
+                    yhLang("Four doses", "চার ডোজ")
+                  ],
+                  correctAnswer: 0
+                }
+              ]
+            },
+            content: (function () {
+              const description = yhLang(
+                "According to WHO recommendations, regular screening and one dose of HPV vaccination can prevent cervical cancer and reduce deaths caused by this cancer.",
+                "বিশ্ব স্বাস্থ্য সংস্থার সুপারিশ অনুযায়ী নিয়মিত পরীক্ষা (স্ক্রিনিং) ও এক ডোজ এইচপিভি টিকাদানের মাধ্যমে জরায়ুমুখ ক্যান্সার প্রতিরোধ এবং এই ক্যান্সারজনিত মৃত্যু হ্রাস করা সম্ভব।"
+              );
+
+              const pointSections = [
+                {
+                  title: yhLang("Vaccine Risks", "টিকা গ্রহণের ঝুঁকি"),
+                  icon: "fa-shield",
+                  items: [
+                    { text: yhLang("HPV vaccine prevents cervical cancer.", "এইচপিভি টিকা জরায়ুমুখ ক্যান্সার প্রতিরোধ করে।"), icon: "fa-check-circle" },
+                    { text: yhLang("One dose of HPV vaccine is sufficient to prevent cervical cancer.", "জরায়ুমুখ ক্যান্সার প্রতিরোধে এইচপিভি টিকার একটি ডোজই যথেষ্ট।"), icon: "fa-star" },
+                    { text: yhLang("HPV vaccine is tested, safe and effective worldwide.", "এইচপিভি টিকা বিশ্বব্যাপী পরীক্ষিত, নিরাপদ ও কার্যকর।"), icon: "fa-heart" },
+                    { text: yhLang("The Government of Bangladesh provides this vaccine for free under the initiative.", "গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের উদ্যোগে এই টিকা বিনামূল্যে প্রদান করা হয়।"), icon: "fa-gift" }
+                  ]
+                },
+                {
+                  title: yhLang("Vaccination Centers", "টিকা গ্রহণের স্থান"),
+                  icon: "fa-hospital",
+                  items: [
+                    { text: yhLang("The vaccine can be obtained from EPI permanent and temporary vaccination centers.", "ইপিআই স্থায়ী ও অস্থায়ী টিকা কেন্দ্র থেকে এই টিকা গ্রহণ করা যাবে।"), icon: "fa-location-dot" }
+                  ]
+                },
+                {
+                  title: yhLang("Who Can Receive", "টিকাগুলো কারা গ্রহণ করতে পারবেন"),
+                  icon: "fa-users",
+                  items: [
+                    { text: yhLang("All schoolgirls studying in class 5 or all adolescent girls aged 10 years.", "পঞ্চম শ্রেণিতে অধ্যয়নরত সকল ছাত্রী অথবা ১০ বছর বয়সী সকল কিশোরী।"), icon: "fa-child" }
+                  ]
+                },
+                {
+                  title: yhLang("Vaccine Doses", "টিকার ডোজ সংখ্যা"),
+                  icon: "fa-capsules",
+                  items: [
+                    { text: yhLang("One dose", "এক ডোজ"), icon: "fa-1" }
+                  ]
+                }
+              ];
+
+              function renderPointSections() {
+                return pointSections.map((section, sIdx) => `
+                  <div class="ch11l5-points-section" data-aos="fade-up" data-aos-delay="${100 + sIdx * 40}">
+                    <h3 class="ch11l5-section-title">
+                      <i class="fa-solid ${section.icon}"></i>
+                      ${section.title}
+                    </h3>
+                    <ul class="ch11l5-points-list">
+                      ${section.items.map((item, iIdx) => `
+                        <li class="ch11l5-point-item" data-aos="fade-right" data-aos-delay="${120 + sIdx * 40 + iIdx * 15}">
+                          <span class="ch11l5-point-icon"><i class="fa-solid ${item.icon}"></i></span>
+                          <span class="ch11l5-point-text">${item.text}</span>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </div>
+                `).join('');
+              }
+
+              return `
+                <div class="ch11l5-slide lesson-slide">
+                  <div class="ch11l5-container">
+                    <div class="ch11l5-left">
+                      <div class="ch11l5-header" data-aos="fade-down" data-aos-delay="0">
+                        <h2 class="ch11l5-title">
+                          <i class="fa-solid fa-syringe"></i>
+                          ${yhLang("HPV Vaccine", "এইচপিভি টিকা")}
+                        </h2>
+                      </div>
+
+                      <div class="ch11l5-description-box" data-aos="fade-right" data-aos-delay="40">
+                        <p class="ch11l5-description">${description}</p>
+                      </div>
+
+                      <div class="ch11l5-points-container">
+                        ${renderPointSections()}
+                      </div>
+                    </div>
+
+                    <div class="ch11l5-right" data-aos="zoom-in" data-aos-delay="80">
+                      <div class="ch11l5-images-wrapper">
+                        <div class="ch11l5-image-box ch11l5-image-1">
+                          <img src="img/modu11/dose1.jpg" alt="HPV Vaccine Dose 1" class="ch11l5-image img-zoom">
+                        </div>
+                        <div class="ch11l5-image-box ch11l5-image-2">
+                          <img src="img/modu11/dose2.jpg" alt="HPV Vaccine Dose 2" class="ch11l5-image img-zoom">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })()
+          },
+                    {
+            id: "ch11-lesson-3",
+            title: yhLang(
+              "Other Vaccines for Women",
+              "মহিলাদের অন্যান্য  টিকা",
+            ),
+            icon: "fa-notes-medical",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q11c",
+                  question: yhLang(
+                    "Why should women stay informed about additional vaccines?",
+                    "মহিলাদের কেন অতিরিক্ত টিকা সম্পর্কে সচেতন থাকা জরুরি?",
+                  ),
+                  options: [
+                    yhLang(
+                      "To protect against preventable diseases",
+                      "প্রতিরোধযোগ্য রোগ থেকে সুরক্ষা পেতে",
+                    ),
+                    yhLang(
+                      "Because vaccines cause illness",
+                      "কারণ টিকা অসুস্থ করে",
+                    ),
+                    yhLang("Vaccines are unnecessary", "টিকা অপ্রয়োজনীয়"),
+                    yhLang("No reason", "কোনো কারণ নেই"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "মহিলাদের অন্যান্য  টিকা",
+                    "মহিলাদের অন্যান্য  টিকা",
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0" style="margin:0 auto;">
+                      <img src="img/modu11/tika.jpg" style="height: 650px;" alt="মহিলাদের অন্যান্য টিকা" class="img-fluid img-zoom rounded-4 shadow-sm" />
+                    </figure>
+                  </section>
+                </div>
+              `;
+            })(),
           }
         ],
       },
