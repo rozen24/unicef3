@@ -6571,13 +6571,8 @@ const coursesData = [
             },
             content: (function () {
               return `
-                <div class="ch12l6-slide">
-                  <div class="ch12l6-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l6-title">
-                      <i class="fa-solid fa-shield-exclamation"></i>
-                      ${yhLang("Child Abuse", "শিশু নির্যাতন")}
-                    </h2>
-                  </div>
+                <div class="ch12l6-slide lesson-slide">
+                  
                   <div class="ch12l6-image-container" data-aos="zoom-in" data-aos-delay="40">
                     <img src="img/modu12/child.jpg" alt="Child Abuse Prevention" class="ch12l6-image">
                   </div>
