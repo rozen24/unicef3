@@ -3785,7 +3785,7 @@ const coursesData = [
                   <div class="menstrual-section-divider" aria-hidden="true"></div>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text">${yhLang("ব্যবস্থাপনা", "ব্যবস্থাপনা")}</h3>
+                    <h3 class="gradient-text d-none">${yhLang("ব্যবস্থাপনা", "ব্যবস্থাপনা")}</h3>
                     <ul class="list-unstyled puberty-list mb-0">
                       ${renderList(managementPoints)}
                     </ul>
@@ -6333,7 +6333,7 @@ const coursesData = [
               return `
                 <div class="ch12l4-slide">
                   <div class="ch12l4-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l4-title">
+                    <h2 class="ch12l4-title d-none">
                       <i class="fa-solid fa-image"></i>
                       ${yhLang("Management", "ব্যবস্থাপনা")}
                     </h2>
