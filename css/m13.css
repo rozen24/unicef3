@@ -2659,7 +2659,6 @@
 /* Module 13 - Lesson 9: Forms of Violence Against Youth */
 .ch13l9-slide {
   position: relative;
-  background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 35%, #ddd6fe 65%, #e9d5ff 100%);
   border-radius: 16px;
   padding: 12px;
   overflow: hidden;
@@ -2748,9 +2747,6 @@
 }
 
 .ch13l9-content {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
   position: relative;
   z-index: 1;
 }
@@ -2826,9 +2822,14 @@
   flex-direction: column;
   gap: 3px;
 }
-
+.torun .ch13l9-li-num, .torun .ch13l9-li-text {
+  display: none !important;
+}
+.shohingsotar-probhav .ch13l9-li-num , .prevention-and-remedy .ch13l9-li-num, .prevention-and-remedy .ch13l9-li-text{
+  display: none !important;
+}
 .ch13l9-li {
-  padding: 5px 6px;
+  padding: 3px 6px;
   border-radius: 7px;
   display: flex;
   align-items: center;
@@ -2937,11 +2938,11 @@
 }
 
 .ch13l9-li-title {
-  font-size: 0.65rem;
-  font-weight: 700;
+  font-size: 14px !important;
+  font-weight: 400;
   color: #3f2c70;
   margin: 0;
-  line-height: 1.05;
+  line-height: 1.0;
 }
 
 .ch13l9-li-text {
@@ -2967,7 +2968,7 @@
     padding: 5px;
   }
   .ch13l9-li {
-    padding: 4px 5px;
+    padding: 3px 5px;
     gap: 4px;
   }
   .ch13l9-li-icon {
