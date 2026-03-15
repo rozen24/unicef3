@@ -6040,17 +6040,17 @@ const coursesData = [
       {
         id: "ch-12",
         title: yhLang(
-          "Module-12: Adolescent nutrition: Nutritional deficiency and prevention",
+          "Module-12: Polycystic Ovary Syndrome (PCOS)",
           "মডিউল-১২: পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)",
         ),
         lessons: [
           {
             id: "ch12-lesson-1",
             title: yhLang(
-              "Polycystic Ovary Syndrome (PCOS)",
-              "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)",
+              "Understanding PCOS",
+              "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস) বোঝা"
             ),
-            icon: "fa-circle-nodes",
+            icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: {
@@ -6059,63 +6059,126 @@ const coursesData = [
                 {
                   id: "q12a",
                   question: yhLang(
-                    "PCOS becomes more common when which hormone rises above normal?",
-                    "শরীরে কোন হরমোন স্বাভাবিকের তুলনায় বেড়ে গেলে পিসিওএস দেখা দিতে পারে?",
+                    "What is PCOS?",
+                    "পিসিওএস কি?"
                   ),
                   options: [
-                    yhLang("Androgen", "অ্যান্ড্রোজেন"),
-                    yhLang("Insulin", "ইনসুলিন"),
-                    yhLang("Thyroxine", "থাইরোক্সিন"),
-                    yhLang("Estrogen", "ইস্ট্রোজেন"),
+                    yhLang("A hormonal disorder affecting the ovaries", "ডিম্বাশয়কে প্রভাবিত করে এমন একটি হরমোনাল বিকার"),
+                    yhLang("A type of cancer", "ক্যান্সারের একটি ধরন"),
+                    yhLang("An infectious disease", "একটি সংক্রামক রোগ"),
+                    yhLang("A skin condition", "ত্বকের অবস্থা")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
-              const paragraphs = [
-                yhLang(
-                  "PCOS is a major global health issue for women. Multiple cysts form in the ovaries, affecting as many as 1 in 10 women of any age, with the highest incidence between 15 and 45 years.",
-                  "সারা বিশ্বেই নারীদের একটি বড় স্বাস্থ্য সমস্যা পলিসিস্টিক ওভারিয়ান সিনড্রোম বা পিসিওএস। এই রোগে ডিম্বাশয়ে অনেকগুলো সিস্ট হয় বলেই এর এমন নামকরণ। গবেষণা বলছে, প্রতি ১০ জন নারীর মধ্যে ১ জনের এ সমস্যা আছে। যেকোনো বয়সী নারীই এতে আক্রান্ত হতে পারেন। তবে প্রজননক্ষম বা ১৫ থেকে ৪৫ বছর বয়সী নারীরা বেশি আক্রান্ত হন।",
-                ),
-                yhLang(
-                  "PCOS is both hereditary and hormonal. When androgen levels rise, ovulation is disrupted, follicles do not rupture, and periods become irregular or even absent.",
-                  "এটি বংশগত এবং হরমোনাল সমস্যা। নারীর শরীরে পুরুষ হরমোন (অ্যান্ড্রোজেন) স্বাভাবিকের তুলনায় বেড়ে গেলে এ সমস্যা দেখা দেয়। এই হরমোন বৃদ্ধির কারণে নারীর ওভুলেশন বা প্রতি মাসে ডিম্বাণু পরিপক্ব হওয়ার পরও ফলিকল ফেটে যায় না এবং ডিম্বাণু বের হতে পারে না। একসময় মেয়েদের ওভুলেশন বন্ধ হয়ে যায় এবং অনিয়মিত মাসিক হয় বা মাসিক একেবারেই হয় না।",
-                ),
-                yhLang(
-                  "Although 60–70% of people with PCOS can still conceive, fertility declines after age 35.",
-                  "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয় না, তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়।",
-                ),
+              const sections = [
+                {
+                  title: yhLang("What is PCOS?", "পিসিওএস কি?"),
+                  icon: "fa-circle-info",
+                  description: yhLang(
+                    "Polycystic Ovary Syndrome (PCOS) is a major health issue affecting women worldwide. In this condition, multiple cysts form in the ovaries, which is why it has this name. Research shows that 1 out of every 10 women has this problem. Women of any age can develop PCOS, but it most commonly affects women of reproductive age, particularly those aged 15-45 years.",
+                    "সারা বিশ্বেই নারীদের একটি বড় স্বাস্থ্য সমস্যা পলিসিস্টিক ওভারিয়ান সিনড্রোম বা পিসিওএস। এই রোগে ডিম্বাশয়ে অনেকগুলো সিস্ট হয় বলেই এর এমন নামকরণ। গবেষণা বলছে, প্রতি ১০ জন নারীর মধ্যে ১ জনের এ সমস্যা আছে। যেকোনো বয়সী নারীই এতে আক্রান্ত হতে পারেন। তবে প্রজননক্ষম বা ১৫ থেকে ৪৫ বছর বয়সী নারীরা বেশি আক্রান্ত হন।"
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Hormonal Disorder", "হরমোনাল সমস্যা"), text: yhLang("PCOS is a genetic and hormonal issue", "এটি বংশগত এবং হরমোনাল সমস্যা"), icon: "fa-flask", type: "type1" },
+                    { num: "2", title: yhLang("Androgen Elevation", "পুরুষ হরমোনের বৃদ্ধি"), text: yhLang("Elevated male hormones in women's bodies", "নারীর শরীরে পুরুষ হরমোনের মাত্রা বৃদ্ধি"), icon: "fa-dna", type: "type2" },
+                    { num: "3", title: yhLang("Ovulation Problems", "ডিম্বস্ফোটনের সমস্যা"), text: yhLang("Eggs don't mature and release properly", "ডিম্বাণু পরিপক্ব হওয়ার পর প্রকোষ্ঠ ফেটে না"), icon: "fa-circle", type: "type3" },
+                    { num: "4", title: yhLang("Menstrual Irregularity", "মাসিকের অনিয়ম"), text: yhLang("Irregular or absent periods over time", "অনিয়মিত মাসিক বা মাসিক সম্পূর্ণ বন্ধ"), icon: "fa-calendar", type: "type1" }
+                  ]
+                },
+                {
+                  title: yhLang("Causes & Mechanism", "কারণ ও কার্যপ্রণালী"),
+                  icon: "fa-gears",
+                  description: yhLang(
+                    "This condition is both genetic and hormonal. When the production of male hormones (androgens) increases abnormally in a woman's body, PCOS develops. Due to this hormone elevation, ovulation becomes disrupted. Even though the follicle matures, it fails to rupture and release the egg. Over time, ovulation ceases completely, leading to irregular or absent menstrual periods.",
+                    "এটি বংশগত এবং হরমোনাল সমস্যা। নারীর শরীরে পুরুষ হরমোন (অ্যান্ড্রোজেন) স্বাভাবিকের তুলনায় বেড়ে গেলে এ সমস্যা দেখা দেয়। এই হরমোন বৃদ্ধির কারণে নারীর ওভুলেশন বা প্রতি মাসে ডিম্বাণু পরিপক্ব হওয়ার পরও ফলিকল ফেটে যায় না এবং ডিম্বাণু বের হতে পারে না। একসময় মেয়েদের ওভুলেশন বন্ধ হয়ে যায় এবং অনিয়মিত মাসিক হয় বা মাসিক একেবারেই হয় না।"
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Genetic Factor", "বংশগত কারণ"), text: yhLang("Family history increases risk", "পরিবারে এর ইতিহাস থাকলে ঝুঁকি বাড়ে"), icon: "fa-dna", type: "type2" },
+                    { num: "2", title: yhLang("Insulin Resistance", "ইনসুলিন প্রতিরোধ"), text: yhLang("Body doesn't respond normally to insulin", "শরীর ইনসুলিনের প্রতি সঠিকভাবে সাড়া দেয় না"), icon: "fa-syringe", type: "type3" },
+                    { num: "3", title: yhLang("Inflammation", "প্রদাহ"), text: yhLang("PCOS is linked with excess inflammation", "পিসিওএস অতিরিক্ত প্রদাহের সাথে সম্পর্কিত"), icon: "fa-fire", type: "type1" },
+                    { num: "4", title: yhLang("Ovarian Dysfunction", "ডিম্বাশয়ের কর্মহীনতা"), text: yhLang("Ovaries fail to respond normally to hormones", "ডিম্বাশয় হরমোনের প্রতি স্বাভাবিকভাবে সাড়া দেয় না"), icon: "fa-circle-xmark", type: "type2" }
+                  ]
+                },
+                {
+                  title: yhLang("Fertility & Age Factor", "প্রজননক্ষমতা ও বয়সের প্রভাব"),
+                  icon: "fa-hourglass-end",
+                  description: yhLang(
+                    "Although PCOS causes fertility issues in 60-70% of cases, pregnancy is not always impossible. However, the chances of conception decrease significantly after the age of 35. Women with PCOS can still get pregnant, but they may need medical assistance or specialized treatment. Early awareness and proper management can improve fertility outcomes.",
+                    "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয়, তবে এটি সম্পূর্ণ অসম্ভব নয়। তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়। পিসিওএস আক্রান্ত নারীরা এখনও গর্ভবতী হতে পারেন, তবে তাদের চিকিৎসাগত সহায়তা বা বিশেষায়িত চিকিৎসার প্রয়োজন হতে পারে।"
+                  ),
+                  items: [
+                    { num: "1", title: yhLang("Fertility Rate", "প্রজননক্ষমতার হার"), text: yhLang("60-70% experience difficulty in conception", "৬০-৭০% ক্ষেত্রে গর্ভধারণে সমস্যা"), icon: "fa-person-pregnant", type: "type3" },
+                    { num: "2", title: yhLang("Age Impact", "বয়সের প্রভাব"), text: yhLang("Fertility decreases significantly after 35 years", "৩৫ বছরের পর প্রজননক্ষমতা উল্লেখযোগ্যভাবে হ্রাস পায়"), icon: "fa-calendar-days", type: "type1" },
+                    { num: "3", title: yhLang("Medical Treatment", "চিকিৎসাগত সহায়তা"), text: yhLang("Reproductive assistance may be needed", "প্রজনন সহায়তা প্রয়োজন হতে পারে"), icon: "fa-hospital", type: "type2" },
+                    { num: "4", title: yhLang("Early Management", "প্রাথমিক ব্যবস্থাপনা"), text: yhLang("Early detection improves outcomes", "প্রাথমিক সনাক্তকরণ ফলাফল উন্নত করে"), icon: "fa-check", type: "type3" }
+                  ]
+                }
               ];
 
-              const renderParagraphs = () =>
-                paragraphs
-                  .map(
-                    (text, idx) => `
-                      <p class="mb-3" data-aos="fade-right" data-aos-delay="${60 + idx * 20}">${text}</p>
-                    `,
-                  )
-                  .join("");
+              function renderSections() {
+                return sections.map((section, secIdx) => `
+                  <section class="ch12l1-section ch12l1-section-type${(secIdx % 3) + 1}" data-aos="fade-up" data-aos-delay="${60 + secIdx * 20}">
+                    <div class="ch12l1-section-header">
+                      <h3 class="ch12l1-section-title">
+                        <i class="fa-solid ${section.icon}"></i>
+                        ${section.title}
+                      </h3>
+                      <p class="ch12l1-section-desc">${section.description}</p>
+                    </div>
+                    <ul class="ch12l1-list">
+                      ${section.items.map((item, idx) => `
+                        <li class="ch12l1-li ch12l1-li-${item.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 15}">
+                          <span class="ch12l1-li-icon"><i class="fa-solid ${item.icon}"></i></span>
+                          <div class="ch12l1-li-content">
+                            <strong class="ch12l1-li-num">${item.num}</strong>
+                            <h4 class="ch12l1-li-title">${item.title}</h4>
+                            <p class="ch12l1-li-text">${item.text}</p>
+                          </div>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </section>
+                `).join('');
+              }
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)",
-                    "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)",
-                  )}</h2>
+                <div class="ch12l1-slide">
+                  <div class="ch12l1-shape ch12l1-shape-a"></div>
+                  <div class="ch12l1-shape ch12l1-shape-b"></div>
+                  <div class="ch12l1-shape ch12l1-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    ${renderParagraphs()}
+                  <div class="ch12l1-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch12l1-title">
+                      <i class="fa-solid fa-heart-pulse"></i>
+                      ${yhLang("Understanding PCOS", "পলিসিস্টিক ওভারি সিনড্রোম বোঝা")}
+                    </h2>
+                  </div>
+
+                  <section class="ch12l1-intro-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch12l1-intro-text">${yhLang(
+                      "PCOS is a common endocrine disorder in women that affects hormone levels and can impact fertility, metabolism, and overall health. Early awareness and proper management are key to living well with PCOS.",
+                      "পিসিওএস একটি সাধারণ হরমোনাল ব্যাধি যা প্রজননক্ষমতা, বিপাক এবং সামগ্রিক স্বাস্থ্যকে প্রভাবিত করে। প্রাথমিক সচেতনতা ও সঠিক ব্যবস্থাপনা গুরুত্বপূর্ণ।"
+                    )}</p>
+                  </section>
+
+                  <section class="ch12l1-content" data-aos="fade-up" data-aos-delay="60">
+                    ${renderSections()}
                   </section>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch12-lesson-2",
-            title: yhLang("PCOS Complications", "সমস্যা সমূহঃ"),
-            icon: "fa-list-check",
-            gradientClass: "bg-gradient-purple",
+            title: yhLang(
+              "Symptoms & Problems of PCOS",
+              "পিসিওএস-এর সমস্যা সমূহ"
+            ),
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-warning",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -6123,99 +6186,78 @@ const coursesData = [
                 {
                   id: "q12b",
                   question: yhLang(
-                    "Which of the following is a possible complication of PCOS?",
-                    "পিসিওএস-এর সম্ভাব্য জটিলতা কোনটি?",
+                    "Which is a common symptom of PCOS?",
+                    "পিসিওএস-এর একটি সাধারণ উপসর্গ কোনটি?"
                   ),
                   options: [
-                    yhLang(
-                      "টাইপ-২ ডায়াবেটিসের ঝুঁকি",
-                      "টাইপ-২ ডায়াবেটিসের ঝুঁকি",
-                    ),
-                    yhLang("তাৎক্ষণিক রোগমুক্তি", "তাৎক্ষণিক রোগমুক্তি"),
-                    yhLang("চোখে বেশি পানি আসা", "চোখে বেশি পানি আসা"),
-                    yhLang(
-                      "কোনো শারীরিক পরিবর্তন নয়",
-                      "কোনো শারীরিক পরিবর্তন নয়",
-                    ),
+                    yhLang("Irregular menstrual periods", "অনিয়মিত মাসিক"),
+                    yhLang("Regular monthly cycles", "নিয়মিত মাসিক"),
+                    yhLang("Reduced body hair", "শরীরের লোম কমা"),
+                    yhLang("Weight loss", "ওজন কমা")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
-              const complications = [
-                "অনিয়মিতভাবে মাসিক হওয়া / মাসিক বন্ধ থাকা",
-                "মানসিক সমস্যা",
-                "শরীরের বিভিন্ন জায়গায় অবাঞ্ছিত লোম গজানো",
-                "চুল পড়ে যাওয়া",
-                "মুখে ব্রণ বের হওয়া",
-                "গর্ভধারণে বিভিন্ন সমস্যা হওয়া, এমনকি জটিলতাও হতে পারে",
-                "ওজন বেড়ে যাওয়া",
-                "ঘুমের ব্যাঘাত হওয়া",
-                "টাইপ-২ ডায়বেটিস রোগের ঝুঁকি",
-                "হৃদরোগের ঝুঁকি",
-                "জরায়ু ক্যান্সারের ঝুঁকি বাড়ায়",
+              const symptoms = [
+                { num: "1", text: yhLang("Irregular periods or absence of menstruation", "অনিয়মিতভাবে মাসিক হওয়া বা মাসিক বন্ধ থাকা"), icon: "fa-calendar-xmark", type: "type1" },
+                { num: "2", text: yhLang("Depression, anxiety, and mood disorders", "মানসিক স্বাস্থ্য সমস্যা যেমন দুশ্চিন্তা"), icon: "fa-brain", type: "type2" },
+                { num: "3", text: yhLang("Unwanted hair growth on body and face", "শরীরের বিভিন্ন জায়গায় অবাঞ্ছিত লোম গজানো"), icon: "fa-person", type: "type3" },
+                { num: "4", text: yhLang("Excessive hair shedding from scalp", "মাথার চুল অতিরিক্ত পরিমাণে পড়ে যাওয়া"), icon: "fa-water", type: "type1" },
+                { num: "5", text: yhLang("Persistent acne and skin breakouts", "মুখে ও অন্যত্র ব্রণ বের হওয়া"), icon: "fa-face-grin", type: "type2" },
+                { num: "6", text: yhLang("Difficulty conceiving or infertility", "গর্ভধারণে সমস্যা হওয়া এমনকি বন্ধ্যাত্ব"), icon: "fa-person-pregnant", type: "type3" },
+                { num: "7", text: yhLang("Sudden or gradual weight increase", "ওজন বেড়ে যাওয়া ও স্থূলতা"), icon: "fa-scale-unbalanced", type: "type1" },
+                { num: "8", text: yhLang("Insomnia or poor sleep quality", "ঘুমের ব্যাঘাত হওয়া বা অনিদ্রা"), icon: "fa-moon", type: "type2" },
+                { num: "9", text: yhLang("Increased risk of developing diabetes", "টাইপ-২ ডায়বেটিস রোগের ঝুঁকি"), icon: "fa-heartbeat", type: "type3" },
+                { num: "10", text: yhLang("Higher cardiovascular disease risk", "হৃদ রোগের ঝুঁকি বাড়ায়"), icon: "fa-heart", type: "type1" },
+                { num: "11", text: yhLang("Increased uterine cancer risk", "জরায়ু ক্যান্সারের ঝুঁকি বাড়ায়"), icon: "fa-shield-virus", type: "type2" }
               ];
 
-              const note =
-                "সবারই সব সমস্যা একসাথে হবে তা নয়, আবার বয়সের সাথে সমস্যাগুলো পরিবর্তনও হতে পারে।";
-
-              const renderList = (items, baseDelay = 60) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 15}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
+              function renderSymptoms() {
+                return symptoms.map((symptom, idx) => `
+                  <li class="ch12l2-li ch12l2-li-${symptom.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 12}">
+                    <span class="ch12l2-li-icon"><i class="fa-solid ${symptom.icon}"></i></span>
+                    <p class="ch12l2-li-text"><strong class="ch12l2-li-num">${symptom.num}.</strong> ${symptom.text}</p>
+                  </li>
+                `).join('');
+              }
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "সমস্যা সমূহঃ",
-                    "সমস্যা সমূহঃ",
-                  )}</h2>
+                <div class="ch12l2-slide">
+                  <div class="ch12l2-shape ch12l2-shape-a"></div>
+                  <div class="ch12l2-shape ch12l2-shape-b"></div>
+                  <div class="ch12l2-shape ch12l2-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-12">
-                        <h3 class="gradient-text h5 mb-3" data-aos="fade-right" data-aos-delay="60">${yhLang(
-                          "পিসিওএস-এ দেখা দিতে পারে এমন জটিলতা",
-                          "পিসিওএস-এ দেখা দিতে পারে এমন জটিলতা",
-                        )}</h3>
-                        <ul class="list-unstyled puberty-list mb-3">
-                          ${renderList(complications)}
-                        </ul>
-                        <p class="text-muted mb-0" data-aos="fade-right" data-aos-delay="220">${note}</p>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="row g-3">
-                          <div class="col-12" data-aos="fade-left" data-aos-delay="80">
-                            <figure class="image-card mb-0" style=" margin:0 auto;">
-                              <img src="img/modu12/pcos1.png" alt="পিসিওএস সচেতনতা চিত্র" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                            </figure>
-                          </div>
-                          <div class="col-12" data-aos="fade-left" data-aos-delay="110">
-                            <figure class="image-card mb-0" style=" margin:0 auto;">
-                              <img src="img/modu12/pcos2.png" alt="পিসিওএস সমস্যা চিত্র" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                            </figure>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="ch12l2-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch12l2-title">
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                      ${yhLang("Symptoms & Problems of PCOS", "পিসিওএস-এর সমস্যা সমূহ")}
+                    </h2>
+                  </div>
+
+                  <ul class="ch12l2-symptoms-list" data-aos="fade-up" data-aos-delay="60">
+                    ${renderSymptoms()}
+                  </ul>
+
+                  <section class="ch12l2-intro-card" data-aos="fade-up" data-aos-delay="80">
+                    <p class="ch12l2-intro-text">${yhLang(
+                      "Not all women with PCOS experience the same symptoms. Additionally, symptoms may change over time with age and life stages.",
+                      "সবারই সব সমস্যা একসাথে হবে তা নয়, আবার বয়সের সাথে সমস্যাগুলো পরিবর্তনও হতে পারে।"
+                    )}</p>
                   </section>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch12-lesson-3",
-            title: yhLang("Managing PCOS", "সমাধানের উপায়"),
-            icon: "fa-heart-circle-check",
-            gradientClass: "bg-gradient-green",
+            title: yhLang(
+              "Solutions & Management",
+              "সমাধানের উপায়"
+            ),
+            icon: "fa-lightbulb",
+            gradientClass: "bg-gradient-teal",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -6223,82 +6265,86 @@ const coursesData = [
                 {
                   id: "q12c",
                   question: yhLang(
-                    "What helps keep PCOS under control?",
-                    "পিসিওএস নিয়ন্ত্রণে রাখতে কী সহায়ক?",
+                    "What helps manage PCOS symptoms?",
+                    "পিসিওএস নিয়ন্ত্রণে কোনটি সাহায্য করে?"
                   ),
                   options: [
-                    yhLang(
-                      "Lifestyle changes and treatment",
-                      "জীবনযাত্রায় পরিবর্তন ও চিকিৎসা",
-                    ),
-                    yhLang(
-                      "কোনো পদক্ষেপের প্রয়োজন নেই",
-                      "কোনো পদক্ষেপের প্রয়োজন নেই",
-                    ),
-                    yhLang("শুধু মিষ্টি খাবার", "শুধু মিষ্টি খাবার"),
-                    yhLang("সম্পূর্ণ বিশ্রাম", "সম্পূর্ণ বিশ্রাম"),
+                    yhLang("Regular exercise and balanced diet", "নিয়মিত ব্যায়াম এবং সুষম খাবার"),
+                    yhLang("Avoiding all physical activity", "সব ধরনের ব্যায়াম এড়ানো"),
+                    yhLang("Eating only fast food", "শুধু ফাস্ট ফুড খাওয়া"),
+                    yhLang("No dietary restrictions", "কোনো খাদ্য নিয়ম নেই")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
               const intro = yhLang(
-                "PCOS cannot be fully cured, but healthy habits and proper care can keep symptoms manageable.",
-                "পিসিওএস হলে মনে রাখতে হবে যে, এটি কখনও নির্মূল হবে না। কিন্তু, চিকিৎসা নিয়ে সুস্থ থাকা সম্ভব।",
+                "Remember that PCOS cannot be cured, but with proper treatment and lifestyle management, you can stay healthy and manage symptoms effectively.",
+                "পিসিওএস হলে মনে রাখতে হবে যে, এটি কখনও নির্মূল হবে না। কিন্তু, চিকিৎসা নিয়ে সুস্থ থাকা সম্ভব।"
               );
 
-              const lifestyleTips = [
-                "শারীরিকভাবে কর্মক্ষম থাকতে হাঁটা, সাইকেল চালানো বা পছন্দের খেলাধুলা করুন।",
-                "ধূমপান ও মদ্যপানের মতো অস্বাস্থ্যকর অভ্যাস বর্জন করুন।",
-                "খাবারে সতর্ক থাকুন, সুষম খাদ্যগ্রহণ করুন এবং শর্করা কমিয়ে ওজন নিয়ন্ত্রণে রাখুন।",
-                "সুষম খাবার পরিমাণমতো খান এবং অপ্রয়োজনীয় শর্করা কমান।",
-                "ওজন নিয়ন্ত্রণে রাখতে মোট ক্যালরি কমান বা পুষ্টিবিদের সহায়তা নিন; ভাজা খাবারের বদলে ভাপানো খাবার ও শাকসবজি বেশি খান।",
-                "কম চর্বিযুক্ত মাংস, মাছ, ডিম, দুধজাত খাবার, বাদাম ও ফাইবারসমৃদ্ধ খাদ্য খান।",
-                "প্রোবায়োটিক সমৃদ্ধ দই ওজন কমাতে এবং অন্ত্রজীবাণু সুস্থ রাখতে সহায়ক।",
-                "চিনিযুক্ত খাবার, কোমল পানীয়, চকোলেট ও ফাস্টফুড এড়িয়ে চলুন।",
-                "ফল ও শাকসবজি প্রদাহ কমায়, তাই এগুলো বেশি করে খান।",
-                "নিয়মিত ব্যায়াম মানসিক প্রশান্তি দেয়, শক্তি বাড়ায় ও রক্তে চিনির মাত্রা নিয়ন্ত্রণ করে; প্রয়োজনে গ্রুপ ব্যায়ামে যুক্ত হোন।",
+              const strategies = [
+                { num: "1", text: yhLang("Exercise regularly - walking, cycling, or sports to stay physically fit and active", "শারীরিকভাবে কর্মক্ষম, সচল থাকার জন্য ব্যায়াম করতে হবে। সেটা হতে পারে হাঁটা, সাইকেল চালনা, পছন্দের খেলা-ধুলা করা ইত্যাদি।"), icon: "fa-person-hiking", type: "strategy1" },
+                { num: "2", text: yhLang("Avoid unhealthy habits like smoking and alcohol consumption", "যে সমস্ত অভ্যাস স্বাস্থ্যসম্মত নয় তা বর্জন করতে হবে। যেমন- ধূমপান করা, মদ্যপান করা।"), icon: "fa-hand-paper", type: "strategy2" },
+                { num: "3", text: yhLang("Be careful with diet - eat balanced meals and reduce carbohydrate intake to maintain weight", "খাবারের বিষয়ে খুব সতর্কতা অবলম্বন করতে হবে। সুষম খাবার খেতে হবে, শর্করা জাতীয় খাবার কম খেতে হবে যাতে ওজন নিয়ন্ত্রণে থাকে।"), icon: "fa-apple", type: "strategy3" },
+                { num: "4", text: yhLang("Eat balanced meals in proper portions and reduce refined carbohydrates", "সুষম খাবার পরিমাণমতো খেতে হবে। শর্করা জাতীয় খাবার কমাতে হবে।"), icon: "fa-utensils", type: "strategy4" },
+                { num: "5", text: yhLang("Control total calorie intake or consult a nutritionist. Prefer boiled over fried foods and eat more vegetables", "ওজন নিয়ন্ত্রণে রাখতে হলে টোটাল ক্যালরি কমাতে হবে অথবা পুষ্টিবিদের সাহায্য নিতে হবে। ভাজা খাবারের চাইতে সিদ্ধ করা খাবার ভালো। শাকসবজি বেশি করে খেতে হবে।"), icon: "fa-fire", type: "strategy5" },
+                { num: "6", text: yhLang("Eat protein in proper portions - lean meat, fish, eggs, low-fat dairy, nuts and high-fiber foods", "পরিমাণ মতো আমিষ জাতীয় খাবার খেতে হবে; যাতে কম চর্বি যুক্ত মাংস, মাছ, ডিম, কম চর্বি যুক্ত দুগ্ধজাত খাবার, বাদাম এবং বেশি করে ফাইবার সমৃদ্ধ খাবার খেতে হবে।"), icon: "fa-egg", type: "strategy1" },
+                { num: "7", text: yhLang("Yogurt contains probiotics and helps reduce weight while maintaining healthy gut bacteria", "দইয়ে যেহেতু প্রোবায়োটিক থাকে তাই দই ওজন কমাতে সাহায্য করে এবং অন্ত্রজীবাণু সুস্থ রাখে।"), icon: "fa-flask", type: "strategy2" },
+                { num: "8", text: yhLang("Avoid sugary foods, drinks, soft drinks, chocolate and fast food as they increase weight", "চিনিযুক্ত খাবার, শরবত, কোমল পানীয়, চকোলেট, ফাস্ট ফুডে ওজন বাড়ে তাই এগুলোকে বর্জন করতে হবে।"), icon: "fa-ban", type: "strategy3" },
+                { num: "9", text: yhLang("Fruits and vegetables reduce inflammation in the body and are excellent for PCOS patients", "ফল, শাক-সবজি শরীরের প্রদাহ হওয়া থেকে রক্ষা করে। তাই এগুলো পিসিওএস-এর রোগীদের জন্য অনেক ভালো।"), icon: "fa-leaf", type: "strategy4" },
+                { num: "10", text: yhLang("Exercise provides mental peace, boosts energy, reduces blood sugar levels - join groups or organizations for regular exercise", "ব্যায়াম মানসিক প্রশান্তি দেয়, শক্তি বাড়ায়, রক্তে চিনির মাত্রা কমায়। নিয়মিত ব্যায়ামের জন্য গ্রুপ অথবা প্রতিষ্ঠানে যুক্ত হওয়া যেতে পারে।"), icon: "fa-heart-pulse", type: "strategy5" }
               ];
 
-              const renderList = (items, baseDelay = 60) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 15}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
+              function renderStrategies() {
+                return strategies.map((strategy, idx) => `
+                  <li class="ch12l3-li ch12l3-li-${strategy.type}" data-aos="fade-up" data-aos-delay="${80 + idx * 15}">
+                    <span class="ch12l3-li-icon"><i class="fa-solid ${strategy.icon}"></i></span>
+                    <p class="ch12l3-li-text"><strong class="ch12l3-li-num">${strategy.num}.</strong> ${strategy.text}</p>
+                  </li>
+                `).join('');
+              }
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "সমাধানের উপায়",
-                    "সমাধানের উপায়",
-                  )}</h2>
+                <div class="ch12l3-slide">
+                  <div class="ch12l3-shape ch12l3-shape-a"></div>
+                  <div class="ch12l3-shape ch12l3-shape-b"></div>
+                  <div class="ch12l3-shape ch12l3-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-4">${intro}</p>
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "জীবনযাপনের কলাকৌশল",
-                      "জীবনযাপনের কলাকৌশল",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(lifestyleTips)}
-                    </ul>
+                  <div class="ch12l3-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch12l3-title">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      ${yhLang("Solutions & Management", "সমাধানের উপায়")}
+                    </h2>
+                  </div>
+
+                  <section class="ch12l3-intro-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch12l3-intro-text">${intro}</p>
                   </section>
+
+                  <div class="ch12l3-section-header" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="ch12l3-section-title">
+                      <i class="fa-solid fa-list-check"></i>
+                      ${yhLang("Lifestyle Strategies", "জীবনযাপনের কলাকৌশল")}
+                    </h3>
+                  </div>
+
+                  <ul class="ch12l3-strategies-list" data-aos="fade-up" data-aos-delay="60">
+                    ${renderStrategies()}
+                  </ul>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch12-lesson-4",
-            title: yhLang("Managing PCOS Visuals", "ম্যানেজিং পিসিসিস"),
-            icon: "fa-hand-holding-heart",
-            gradientClass: "bg-gradient-teal",
+            title: yhLang(
+              "Management",
+              "ব্যবস্থাপনা"
+            ),
+            icon: "fa-image",
+            gradientClass: "bg-gradient-blue",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -6306,56 +6352,43 @@ const coursesData = [
                 {
                   id: "q12d",
                   question: yhLang(
-                    "Which approach supports PCOS management?",
-                    "পিসিওএস ব্যবস্থাপনায় কোনটি সহায়ক?",
+                    "What is the first step in PCOS management?",
+                    "পিসিওএস ব্যবস্থাপনায় প্রথম ধাপ কী?"
                   ),
                   options: [
-                    yhLang(
-                      "Balanced lifestyle and guidance",
-                      "সুষম জীবনযাপন ও পরামর্শ",
-                    ),
-                    yhLang("Only sugary drinks", "শুধু চিনিযুক্ত পানীয়"),
-                    yhLang(
-                      "Ignoring health entirely",
-                      "স্বাস্থ্য সম্পূর্ণ উপেক্ষা করা",
-                    ),
-                    yhLang("Sleeping all day", "সারাদিন শুধু ঘুমানো"),
+                    yhLang("Lifestyle changes and healthy habits", "জীবনযাত্রার পরিবর্তন এবং স্বাস্থ্যকর অভ্যাস"),
+                    yhLang("Immediate surgery", "তাৎক্ষণিক অস্ত্রোপচার"),
+                    yhLang("No action needed", "কোনো ব্যবস্থার প্রয়োজন নেই"),
+                    yhLang("Dietary supplements only", "শুধু পুষ্টিসম্পূরক নিতে হবে")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "ম্যানেজিং পিসিসিস",
-                    "ম্যানেজিং পিসিসিস",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
-                        <figure class="image-card mb-0" style="min-height: 820px; margin:0 auto;">
-                          <img src="img/modu12/manage1.png" alt="PCOS management visual 1", "পিসিওএস ব্যবস্থাপনা চিত্র ১" style="height: 920px;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                        </figure>
-                      </div>
-                      <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
-                        <figure class="image-card mb-0" style="min-height: 820px; margin:0 auto;">
-                          <img src="img/modu12/manage2.png" alt="PCOS management visual 2", "পিসিওএস ব্যবস্থাপনা চিত্র ২" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                        </figure>
-                      </div>
-                    </div>
-                  </section>
+                <div class="ch12l4-slide">
+                  <div class="ch12l4-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch12l4-title">
+                      <i class="fa-solid fa-image"></i>
+                      ${yhLang("Management", "ব্যবস্থাপনা")}
+                    </h2>
+                  </div>
+                  <div class="ch12l4-image-container" data-aos="zoom-in" data-aos-delay="40">
+                    <img src="img/modu12/managemant.jpg" alt="PCOS Management" class="ch12l4-image">
+                  </div>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch12-lesson-5",
-            title: yhLang("BMI Guidance", "বি এম আই"),
-            icon: "fa-scale-balanced",
-            gradientClass: "bg-gradient-blue",
+            title: yhLang(
+              "Child Rights, Human Rights & Sexual Reproductive Health Rights",
+              "শিশু অধিকার, মানবাধিকার সনদ এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার"
+            ),
+            icon: "fa-handshake",
+            gradientClass: "bg-gradient-purple",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -6363,72 +6396,116 @@ const coursesData = [
                 {
                   id: "q12e",
                   question: yhLang(
-                    "Why is tracking BMI important for PCOS?",
-                    "পিসিওএস ব্যবস্থাপনায় বিএমআই পরিমাপ কেন জরুরি?",
+                    "What is the basis of human rights declaration?",
+                    "মানবাধিকারের ভিত্তি কী?"
                   ),
                   options: [
-                    yhLang(
-                      "It helps set target weight and manage symptoms",
-                      "এটি কাঙ্ক্ষিত ওজন ঠিক করে উপসর্গ নিয়ন্ত্রণে সাহায্য করে",
-                    ),
-                    yhLang("It has no connection", "এর কোনো সম্পর্ক নেই"),
-                    yhLang("It increases complications", "এটি জটিলতা বাড়ায়"),
-                    yhLang(
-                      "It replaces healthy food",
-                      "এটি স্বাস্থ্যকর খাবারের বিকল্প",
-                    ),
+                    yhLang("Equality, dignity, freedom, peace and justice", "সমতা, মর্যাদা, স্বাধীনতা, শান্তি এবং ন্যায়"),
+                    yhLang("Only economic benefits", "শুধুমাত্র অর্থনৈতিক সুবিধা"),
+                    yhLang("Political power", "রাজনৈতিক ক্ষমতা"),
+                    yhLang("Religious beliefs", "ধর্মীয় বিশ্বাস")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
-              const message = yhLang(
-                "Monitor your BMI, set a healthy weight goal, and keep PCOS under control through portioned meals and regular exercise.",
-                "নিজের BMI পরিমাপ করে, কাঙ্ক্ষিত ওজন সেট করতে হবে, ওজন নিয়ন্ত্রণে রাখতে পরিমিত খাবার গ্রহণ ও নিয়মিত ব্যায়ামের মাধ্যমে পিসিওএস নিয়ন্ত্রণে রাখতে হবে।",
+              const intro1 = yhLang(
+                "Every human being on this planet is entitled to certain fundamental rights and freedoms. These rights are their birthright, regardless of birthplace, ideology, belief, or way of life. Based on these principles, the Universal Declaration of Human Rights was adopted in 1948, founded on the principles of equality, dignity, freedom, peace, and justice.",
+                "বিশ্বের সব মানুষ কিছু অধিকার ও স্বাধীনতার দাবিদার। তার জন্মস্থান/মতবাদ/বিশ্বাস/জীবনযাপন - সবকিছুর উর্ধ্বে এ অধিকার তার প্রাপ্য যা থেকে কখনো তাকে বঞ্চিত করা যাবেনা। আর ১৯৪৮ সালে প্রণীত হয় মানবাধিকারের বৈশ্বিক ঘোষণা, যার ভিত্তি সমতা, মর্যাদা, স্বাধীনতা, শান্তি ও ন্যায়।"
               );
 
-              const images = [
-                { src: "img/modu12/BMI.png" },
-                { src: "img/modu12/BMI2.png" },
-                { src: "img/modu12/BMI3.png" },
+              const intro2 = yhLang(
+                "Child rights are the human rights of children. These rights are protected through the International Convention on the Rights of the Child (CRC). According to CRC, every child should grow up in a peaceful, dignified, tolerant, and free environment; with equality and mutual understanding.",
+                "শিশু অধিকার হচ্ছে শিশুদের মানবাধিকার। এ অধিকারগুলো আন্তর্জাতিক শিশু অধিকার সনদের (সিআরসি) মাধ্যমে সুরক্ষিত। সিআরসি অনুযায়ী, প্রেত্যক শিশুই বেড়ে উঠবে শান্তি ও মর্যাদাপূর্ণ, সহিষ্ণুও মুক্ত স্বাধীন পরিবেশে; সমতা ও সৌহার্দের মধ্য দিয়ে।"
+              );
+
+              const pillars = [
+                { 
+                  num: "1", 
+                  title: yhLang("No Discrimination", "কোনো বৈষম্য নয়"),
+                  text: yhLang("No child shall be subjected to discrimination (Article 2). All children have equal opportunity to develop their potential in any circumstance. This includes protection from discrimination based on gender, race, nationality, religion, disability, sexual orientation, or any other status. All children have equal access to education regardless of these characteristics.", "কোনো শিশুই বৈষম্যের শিকার হবেনা (ধারা ২)। যেকোনো পরিস্থিতিতেই সব শিশুই তাদের সম্ভাবনা বিকাশের সমান সুযোগ পাবে। যেমন - লিঙ্গ, বর্ণ, জাতীয়তা, ধর্ম, প্রতিবন্ধিতা, যৌনতার ধরণ বা অন্য কোনো মর্যাদার ভিত্তিতে বৈষেম্যর শিকার না হয়ে সব শিশুই শিক্ষায় অংশগ্রহণের সুযোগ পাবে।"),
+                  icon: "fa-person-hiking",
+                  type: "pillar1"
+                },
+                { 
+                  num: "2", 
+                  title: yhLang("Best Interest of the Child", "শিশুর সর্বোচ্চ স্বার্থ"),
+                  text: yhLang("The best interests of the child shall always be a primary consideration in decisions affecting children (Article 3). When making decisions about budgets or resource allocation, special attention must be given to how these decisions will affect children and their welfare. The child's best interest should always take precedence.", "শিশুদের ওপর প্রভাব ফেলবে এমন কোনো সিদ্ধাান্তের ক্ষেত্রে তাদের স্বার্থগুলো সবসময় অগ্রাধিকার পাবে (ধারা ৩)। যেমন- বাজেট প্রণয়নের সময় খেয়াল রাখতে হবে কোনো খাতে অর্থ বরাদ্দ বা কর্তনের ক্ষেত্রে যেন শিশুদের সর্বোচ্চ স্বার্থটাই গুরুত্ব পায়।"),
+                  icon: "fa-heart-circle-check",
+                  type: "pillar2"
+                },
+                { 
+                  num: "3", 
+                  title: yhLang("Right to Life and Development", "জীবন ও বিকাশের অধিকার"),
+                  text: yhLang("Every child has the right to life, survival, and healthy development (Article 6). All children must have access to essential services and equal opportunity to reach their full potential. For example, children with disabilities must have guaranteed access to education and healthcare services without discrimination.", "বেঁচে থাকার ও সুস্থভাবে বিকাশের অধিকার সব শিশুরই রয়েছে (ধারা ৬)। মৌলিক সেবাগুলোয় শিশুদেও প্রবেশাধিকার ও তাদের পূর্ণ সম্ভাবনা বিকাশের সমান অধিকার নিশ্চিত করতে হবে। যেমন - প্রতিবন্ধী শিশুর অবশ্যই শিক্ষা ও স্বাস্থ্য সেবা গ্রহণের অধিকার থাকবে।"),
+                  icon: "fa-circle-nodes",
+                  type: "pillar3"
+                },
+                { 
+                  num: "4", 
+                  title: yhLang("Right to be Heard", "মতামত প্রকাশের অধিকার"),
+                  text: yhLang("Children affected by decisions have the right to have those decisions take their views into consideration (Article 12). The opinions and perspectives of children on matters affecting their rights must be listened to and respected. For example, when developing policies or plans related to children, their insights must be taken into account and valued.", "শিশুদের ওপর প্রভাব রাখবে এমন বিষয়ে তাদের মতামতগুলো বিবেচনায় নেয়ার বাধ্যবাধকতা রয়েছে (ধারা ১২)। শিশুদের অধিকারভুক্ত সব বিষয়ে তাদের মতামত শুনতে হবে ও সেগুলোয় শ্রদ্ধা রাখতে হবে। যেমন- শিশু বিষয়ক কোনো নীতি বা পরিকল্পনা গ্রহণে শিশুদের উপলব্ধিগুলো গ্রাহ্য করতে হবে।"),
+                  icon: "fa-comments",
+                  type: "pillar4"
+                }
               ];
 
-              const renderImages = () =>
-                images
-                  .map(
-                    (img, idx) => `
-                      <div class="col-12 col-md-12" data-aos="zoom-in" data-aos-delay="${80 + idx * 20}">
-                        <figure class="image-card mb-0" style="margin:0 auto;">
-                          <img src="${img.src}" alt="${img.alt}" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
-                        </figure>
-                      </div>
-                    `,
-                  )
-                  .join("");
+              function renderPillars() {
+                return pillars.map((pillar, idx) => `
+                  <li class="ch12l5-li ch12l5-li-${pillar.type}" data-aos="fade-up" data-aos-delay="${80 + idx * 15}">
+                    <span class="ch12l5-li-icon"><i class="fa-solid ${pillar.icon}"></i></span>
+                    <div class="ch12l5-li-content">
+                      <h4 class="ch12l5-li-title"><strong class="ch12l5-li-num">${pillar.num}.</strong> ${pillar.title}</h4>
+                      <p class="ch12l5-li-text">${pillar.text}</p>
+                    </div>
+                  </li>
+                `).join('');
+              }
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "বি এম আই",
-                    "বি এম আই",
-                  )}</h2>
+                <div class="ch12l5-slide">
+                  <div class="ch12l5-shape ch12l5-shape-a"></div>
+                  <div class="ch12l5-shape ch12l5-shape-b"></div>
+                  <div class="ch12l5-shape ch12l5-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-4">${message}</p>
-                    <div class="row g-3 align-items-stretch">
-                      ${renderImages()}
-                    </div>
+                  <div class="ch12l5-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch12l5-title">
+                      <i class="fa-solid fa-handshake"></i>
+                      ${yhLang("Child Rights & Human Rights", "শিশু অধিকার ও মানবাধিকার")}
+                    </h2>
+                  </div>
+
+                  <section class="ch12l5-intro-card intro-1" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch12l5-intro-text">${intro1}</p>
                   </section>
+
+                  <section class="ch12l5-intro-card intro-2" data-aos="fade-up" data-aos-delay="50">
+                    <p class="ch12l5-intro-text">${intro2}</p>
+                  </section>
+
+                  <div class="ch12l5-section-header" data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="ch12l5-section-title">
+                      <i class="fa-solid fa-scroll"></i>
+                      ${yhLang("Four Pillars of CRC", "সিআরসি-র চারটি স্তম্ভ")}
+                    </h3>
+                  </div>
+
+                  <ul class="ch12l5-pillars-list" data-aos="fade-up" data-aos-delay="70">
+                    ${renderPillars()}
+                  </ul>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch12-lesson-6",
-            title: yhLang("PCOS Reminders", "পিসিওএস"),
-            icon: "fa-lightbulb",
-            gradientClass: "bg-gradient-orange",
+            title: yhLang(
+              "Child Abuse",
+              "শিশু নির্যাতন"
+            ),
+            icon: "fa-shield-exclamation",
+            gradientClass: "bg-gradient-danger",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -6436,60 +6513,43 @@ const coursesData = [
                 {
                   id: "q12f",
                   question: yhLang(
-                    "When should someone with PCOS seek medical care for irregular periods?",
-                    "পিসিওএস থাকলে মাসিক বছরে কয়বারের কম হলে চিকিৎসা নিতে হবে?",
+                    "What is child abuse?",
+                    "শিশু নির্যাতন কি?"
                   ),
                   options: [
-                    yhLang(
-                      "Less than four times a year",
-                      "বছরে চার বারের কম হলে",
-                    ),
-                    yhLang("প্রতিদিন", "প্রতিদিন"),
-                    yhLang("শুধু শীতে", "শুধু শীতে"),
-                    yhLang("কখনো নয়", "কখনো নয়"),
+                    yhLang("Any harm or mistreatment of a child", "শিশুর প্রতি যেকোনো ক্ষতি বা দুর্ব্যবহার"),
+                    yhLang("Normal parenting", "স্বাভাবিক প্যারেন্টিং"),
+                    yhLang("Educational discipline", "শিক্ষামূলক শৃঙ্খলা"),
+                    yhLang("Playing with children", "শিশুদের সাথে খেলা")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
-              const reminders = [
-                "পিসিওএসে মাসিক নিয়মিত নাও হতে পারে। বছরে ৪ বারের কম হলে চিকিৎসা নিতে হবে।",
-                "পিসিওএস হলে ঘুমের সমস্যা হতে পারে, তাই স্বাস্থ্যসম্মত ঘুমের অভ্যাস গড়ে তুলতে হবে।",
-                "পিসিওএস সম্পর্কে জানতে হবে, সাপোর্ট নিতে হবে ও সময়মতো সঠিক চিকিৎসা নিতে হবে। পরিবার, বন্ধু, সাপোর্ট গ্রুপের সহযোগিতা ও কাউন্সেলিংয়ের মাধ্যমে সমস্যার সমাধান করতে হবে।",
-              ];
-
-              const renderReminders = () =>
-                reminders
-                  .map(
-                    (text, idx) => `
-                      <article class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="${40 + idx * 20}">
-                        <p class="mb-0"><strong>${text}</strong></p>
-                      </article>
-                    `,
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "পিসিওএস",
-                    "পিসিওএস",
-                  )}</h2>
-
-                  ${renderReminders()}
+                <div class="ch12l6-slide">
+                  <div class="ch12l6-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch12l6-title">
+                      <i class="fa-solid fa-shield-exclamation"></i>
+                      ${yhLang("Child Abuse", "শিশু নির্যাতন")}
+                    </h2>
+                  </div>
+                  <div class="ch12l6-image-container" data-aos="zoom-in" data-aos-delay="40">
+                    <img src="img/modu12/child.jpg" alt="Child Abuse Prevention" class="ch12l6-image">
+                  </div>
                 </div>
               `;
-            })(),
+            })()
           },
           {
             id: "ch12-lesson-7",
             title: yhLang(
-              "Child and Human Rights Charter",
-              "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার",
+              "Sexual & Reproductive Health Rights",
+              "যৌন ও প্রজনন স্বাস্থ্য অধিকার"
             ),
-            icon: "fa-scale-balanced",
-            gradientClass: "bg-gradient-purple",
+            icon: "fa-heart-pulse",
+            gradientClass: "bg-gradient-pink",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -6497,174 +6557,106 @@ const coursesData = [
                 {
                   id: "q12g",
                   question: yhLang(
-                    "Which CRC article prioritizes the best interests of the child?",
-                    "সিআরসি অনুযায়ী কোন ধারায় শিশুর সর্বোচ্চ স্বার্থকে অগ্রাধিকার দেওয়া হয়েছে?",
+                    "What percentage of world population are adolescents (10-19 years)?",
+                    "বিশ্বের মোট জনসংখ্যার কত ভাগ অংশ কিশোর-কিশোরী?"
                   ),
                   options: [
-                    yhLang("Article 3", "ধারা ৩"),
-                    yhLang("Article 9", "ধারা ৯"),
-                    yhLang("Article 20", "ধারা ২০"),
-                    yhLang("Article 42", "ধারা ৪২"),
+                    yhLang("Approximately 1/6 (about 16%)", "প্রায় ১/৬ ভাগ"),
+                    yhLang("Approximately 1/2 (about 50%)", "প্রায় ১/২ ভাগ"),
+                    yhLang("Approximately 1/4 (about 25%)", "প্রায় ১/৪ ভাগ"),
+                    yhLang("Approximately 1/3 (about 33%)", "প্রায় ১/৩ ভাগ")
                   ],
-                  correctAnswer: 0,
-                },
-              ],
+                  correctAnswer: 0
+                }
+              ]
             },
             content: (function () {
-              const intro =
-                "বিশ্বের সব মানুষ কিছু অধিকার ও স্বাধীনতার দাবিদার। তার জন্মস্থান/মতবাদ/বিশ্বাস/জীবনযাপন—সবকিছুর ঊর্ধ্বে এ অধিকার তার প্রাপ্য যা থেকে কখনো তাকে বঞ্চিত করা যাবে না। আর ১৯৪৮ সালে প্রণীত হয় মানবাধিকারের বৈশ্বিক ঘোষণা, যার ভিত্তি সমতা, মর্যাদা, স্বাধীনতা, শান্তি ও ন্যায়।";
+              const intro1 = yhLang(
+                "Approximately 1/6 of the world's total population are adolescents (10-19 years). Additionally, nearly 1/3 of the population is under 25 years old. During adolescence, young people experience significant physical and mental changes as sexual characteristics emerge. This age group faces increased risks related to reproductive and sexual health. Without appropriate information and education, they are at much higher risk of contracting sexually transmitted infections. Unintended pregnancies and unsafe, risky abortions are also more common, leading to serious health complications. Therefore, sexual and reproductive health rights are extremely important for this group.",
+                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এবয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্তের সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।"
+              );
 
-              const crcOverview =
-                "শিশু অধিকার হচ্ছে শিশুদের মানবাধিকার। এ অধিকারগুলো আন্তর্জাতিক শিশু অধিকার সনদের (সিআরসি) মাধ্যমে সুরক্ষিত। সিআরসি অনুযায়ী, প্রত্যেক শিশুই বেড়ে উঠবে শান্তি ও মর্যাদাপূর্ণ, সহিষ্ণু ও মুক্ত স্বাধীন পরিবেশে; সমতা ও সৌহার্দ্যের মাধ্যমে। আন্তর্জাতিক শিশু অধিকার সনদে ৫৪টি ধারা রয়েছে। মূলত চারটি স্তম্ভের আলোকে অনুচ্ছেদগুলো ভাগ করা হয়েছে।";
+              const intro2 = yhLang(
+                "Reproductive health is a state of complete physical, mental, and social well-being related to the reproductive system at every stage of life. According to the World Health Organization (WHO), reproductive health encompasses the ability to reproduce, coupled with the right to satisfying and safe sex life, and the freedom to make decisions regarding reproduction.",
+                "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডব্লিউএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
+              );
 
-              const articles = [
+              const rights = [
                 {
-                  title: "ধারা ২ — বৈষম্যহীনতা",
-                  text: "কোনো শিশুই বৈষম্যের শিকার হবে না। যেকোনো পরিস্থিতিতেই সব শিশুই তাদের সম্ভাবনা বিকাশের সমান সুযোগ পাবে; যেমন—লিঙ্গ, বর্ণ, জাতীয়তা, ধর্ম, প্রতিবন্ধিতা, যৌনতার ধরণ বা অন্য কোনো মর্যাদার ভিত্তিতে বৈষম্যের শিকার না হয়ে শিক্ষায় অংশগ্রহণের সুযোগ পাবে।",
-                },
-                {
-                  title: "ধারা ৩ — শিশুর সর্বোচ্চ স্বার্থ",
-                  text: "শিশুদের ওপর প্রভাব ফেলবে এমন কোনো সিদ্ধান্তের ক্ষেত্রে তাদের স্বার্থগুলো সবসময় অগ্রাধিকার পাবে। যেমন—বাজেট প্রণয়নের সময় খেয়াল রাখতে হবে কোনো খাতে অর্থ বরাদ্দ বা কর্তনের ক্ষেত্রে যেন শিশুদের সর্বোচ্চ স্বার্থটাই গুরুত্ব পায়।",
-                },
-                {
-                  title: "ধারা ৬ — বেঁচে থাকা ও বিকাশ",
-                  text: "বেঁচে থাকার ও সুস্থভাবে বিকাশের অধিকার সব শিশুরই রয়েছে। মৌলিক সেবাগুলোয় শিশুদের প্রবেশাধিকার ও তাদের পূর্ণ সম্ভাবনা বিকাশের সমান অধিকার নিশ্চিত করতে হবে; যেমন—প্রতিবন্ধী শিশুর অবশ্যই শিক্ষা ও স্বাস্থ্যসেবা গ্রহণের অধিকার থাকবে।",
-                },
-                {
-                  title: "ধারা ১২ — মতামত প্রদান",
-                  text: "শিশুদের ওপর প্রভাব রাখবে এমন বিষয়ে তাদের মতামত বিবেচনায় নেওয়া বাধ্যতামূলক। শিশুদের অধিকারভুক্ত সব বিষয়ে তাদের মতামত শুনতে হবে ও শ্রদ্ধা রাখতে হবে; যেমন—শিশুবিষয়ক নীতি বা পরিকল্পনা গ্রহণে শিশুদের উপলব্ধিগুলো গ্রাহ্য করতে হবে।",
-                },
-              ];
-
-              const renderArticles = () =>
-                articles
-                  .map(
-                    (item, idx) => `
-                      <article class="modern-card glass-card" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">
-                        <h3 class="h6 gradient-text mb-2">${item.title}</h3>
-                        <p class="mb-0">${item.text}</p>
-                      </article>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার",
-                    "শিশু অধিকার ও মানবাধিকার সনদ এবং যৌন ও স্বাস্থ্য অধিকার",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${intro}</p>
-                    <p class="mb-0">${crcOverview}</p>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "আন্তর্জাতিক শিশু অধিকার সনদের প্রধান ধারা",
-                      "আন্তর্জাতিক শিশু অধিকার সনদের প্রধান ধারা",
-                    )}</h3>
-                    <div class="row g-3">
-                      ${renderArticles()}
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch12-lesson-8",
-            title: yhLang(
-              "Sexual and Reproductive Health Rights",
-              "যৌন ও প্রজনন স্বাস্থ্য অধিকার",
-            ),
-            icon: "fa-venus-mars",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q12h",
-                  question: yhLang(
-                    "Why are sexual and reproductive health rights critical for adolescents?",
-                    "তরুন-তরুনীদের জন্য যৌন ও প্রজনন স্বাস্থ্য অধিকার কেন গুরুত্বপূর্ণ?",
+                  num: "1",
+                  text: yhLang(
+                    "Sexual and reproductive health rights are part of fundamental human rights",
+                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার মৌলিক মানবাধিকারের অংশ।"
                   ),
-                  options: [
-                    yhLang(
-                      "They protect against disease, unwanted pregnancy, and uphold autonomy",
-                      "এগুলো রোগ, অনাকাঙ্ক্ষিত গর্ভধারণ থেকে সুরক্ষা দেয় এবং স্বায়ত্তশাসন নিশ্চিত করে",
-                    ),
-                    yhLang("Only for entertainment", "শুধু বিনোদনের জন্য"),
-                    yhLang(
-                      "No relation to health",
-                      "স্বাস্থ্যের সাথে কোনো সম্পর্ক নেই",
-                    ),
-                    yhLang(
-                      "Applies only to adults",
-                      "শুধু প্রাপ্তবয়স্কদের প্রযোজ্য",
-                    ),
-                  ],
-                  correctAnswer: 0,
+                  icon: "fa-hand-holding-heart",
+                  type: "right1"
                 },
-              ],
-            },
-            content: (function () {
-              const intro =
-                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ তরুন-তরুনী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে তরুন-তরুনীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এ বয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্ত হওয়ার সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।";
-
-              const whoDefinition =
-                "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডব্লিউএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।";
-
-              const importance = [
-                "যৌন ও প্রজনন স্বাস্থ্য অধিকার মৌলিক মানবাধিকারের অংশ।",
-                "লিঙ্গ সমতা ও টেকসই উন্নয়নের জন্য এ অধিকার নিশ্চিত করা খুবই গুরুত্বপূর্ণ।",
-                "নিজের শরীর ও যৌন সম্পর্কের ক্ষেত্রে কিশোরী এবং নারীদের নিয়ন্ত্রণ তাদের ক্ষমতায়নের পূর্বশর্ত।",
-                "সামাজিক, অর্থনৈতিক, রাজনৈতিক ও সাংস্কৃতিক অঙ্গনে পূর্ণ অংশগ্রহণের জন্য এ অধিকার জরুরি।",
-                "যৌন ও প্রজনন স্বাস্থ্য অধিকার কিশোরী ও নারীদের বৈষম্য, সহিংসতা ও নির্যাতন থেকে মুক্ত থাকার অধিকারকে সুরক্ষিত করে।",
-                "মর্যাদা, সমতা ও বৈচিত্র্যের প্রতি সম্মানের নীতিগুলো বজায় রাখতে এই অধিকার অপরিহার্য।",
+                {
+                  num: "2",
+                  text: yhLang(
+                    "These rights are crucial for gender equality and sustainable development. Additionally, girls' and women's control over their bodies and sexual relationships is a prerequisite for their empowerment and rights.",
+                    "লিঙ্গ সমতা ও টেকসই উন্নয়নের প্রশ্নে এ অধিকার নিশ্চিত করা খুবই গুরুত্বপূর্ণ। পাশাপাশি নিজের শরীর ও যৌনসম্পর্কের ক্ষেত্রে কিশোরী এবং নারীদের নিয়ন্ত্রণ তাদের ক্ষমতায়ন ও অধিকারের পূর্বশর্ত।"
+                  ),
+                  icon: "fa-venus-mars",
+                  type: "right2"
+                },
+                {
+                  num: "3",
+                  text: yhLang(
+                    "These rights are essential for full participation of girls and women in social, economic, political, and cultural spheres",
+                    "সামাজিক, অর্থনৈতিক, রাজনৈতিক ও সাংস্কৃতিক অঙ্গনে তাদের পূর্ণ অংশগ্রহণের ক্ষেত্রেও এ অধিকার জরুরি।"
+                  ),
+                  icon: "fa-people-group",
+                  type: "right3"
+                },
+                {
+                  num: "4",
+                  text: yhLang(
+                    "These rights protect adolescent girls and women from all forms of discrimination, violence, and abuse. They ensure respect for dignity, equality, and diversity.",
+                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার কিশোরী ও নারীদের সব ধরনের বৈষম্য, সহিংসতা, নির্যাতন থেকে মুক্ত থাকার অধিকারের অন্যতম গুরুত্বপূর্ণ অংশ। মর্যাদা, সমতা ও বৈচিত্র্যের প্রতি সম্মান প্রদর্শনের নীতিগুলো সুরক্ষিত করে এ অধিকার।"
+                  ),
+                  icon: "fa-shield-heart",
+                  type: "right4"
+                }
               ];
 
-              const renderList = (items, baseDelay = 60) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 15}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
+              function renderRights() {
+                return rights.map((right, idx) => `
+                  <li class="ch12l7-li ch12l7-li-${right.type}" data-aos="fade-up" data-aos-delay="${80 + idx * 15}">
+                    <span class="ch12l7-li-icon"><i class="fa-solid ${right.icon}"></i></span>
+                    <p class="ch12l7-li-text"><strong class="ch12l7-li-num">${right.num}.</strong> ${right.text}</p>
+                  </li>
+                `).join('');
+              }
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার",
-                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার",
-                  )}</h2>
+                <div class="ch12l7-slide">
+                  <div class="ch12l7-shape ch12l7-shape-a"></div>
+                  <div class="ch12l7-shape ch12l7-shape-b"></div>
+                  <div class="ch12l7-shape ch12l7-shape-c"></div>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${intro}</p>
-                    <p class="mb-0">${whoDefinition}</p>
+                  <div class="ch12l7-header" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="ch12l7-title">
+                      <i class="fa-solid fa-heart-pulse"></i>
+                      ${yhLang("Sexual & Reproductive Health Rights", "যৌন ও প্রজনন স্বাস্থ্য অধিকার")}
+                    </h2>
+                  </div>
+
+                  <section class="ch12l7-intro-card intro-1" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch12l7-intro-text">${intro1}</p>
                   </section>
 
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text h5 mb-3">${yhLang(
-                      "এ অধিকার কেন গুরুত্বপূর্ণ",
-                      "এ অধিকার কেন গুরুত্বপূর্ণ",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(importance)}
-                    </ul>
+                  <section class="ch12l7-intro-card intro-2" data-aos="fade-up" data-aos-delay="50">
+                    <p class="ch12l7-intro-text">${intro2}</p>
                   </section>
+
+                  <ul class="ch12l7-rights-list" data-aos="fade-up" data-aos-delay="60">
+                    ${renderRights()}
+                  </ul>
                 </div>
               `;
-            })(),
-          },
+            })()
+          }
         ],
       },
       {
