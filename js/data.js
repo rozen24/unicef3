@@ -6163,46 +6163,28 @@ const coursesData = [
             content: (function () {
               const sections = [
                 {
-                  title: yhLang("What is PCOS?", "পিসিওএস কি?"),
+                  title: yhLang(""),
                   icon: "fa-circle-info",
                   description: yhLang(
                     "Polycystic Ovary Syndrome (PCOS) is a major health issue affecting women worldwide. In this condition, multiple cysts form in the ovaries, which is why it has this name. Research shows that 1 out of every 10 women has this problem. Women of any age can develop PCOS, but it most commonly affects women of reproductive age, particularly those aged 15-45 years.",
                     "সারা বিশ্বেই নারীদের একটি বড় স্বাস্থ্য সমস্যা পলিসিস্টিক ওভারিয়ান সিনড্রোম বা পিসিওএস। এই রোগে ডিম্বাশয়ে অনেকগুলো সিস্ট হয় বলেই এর এমন নামকরণ। গবেষণা বলছে, প্রতি ১০ জন নারীর মধ্যে ১ জনের এ সমস্যা আছে। যেকোনো বয়সী নারীই এতে আক্রান্ত হতে পারেন। তবে প্রজননক্ষম বা ১৫ থেকে ৪৫ বছর বয়সী নারীরা বেশি আক্রান্ত হন।"
-                  ),
-                  items: [
-                    { num: "1", title: yhLang("Hormonal Disorder", "হরমোনাল সমস্যা"), text: yhLang("PCOS is a genetic and hormonal issue", "এটি বংশগত এবং হরমোনাল সমস্যা"), icon: "fa-flask", type: "type1" },
-                    { num: "2", title: yhLang("Androgen Elevation", "পুরুষ হরমোনের বৃদ্ধি"), text: yhLang("Elevated male hormones in women's bodies", "নারীর শরীরে পুরুষ হরমোনের মাত্রা বৃদ্ধি"), icon: "fa-dna", type: "type2" },
-                    { num: "3", title: yhLang("Ovulation Problems", "ডিম্বস্ফোটনের সমস্যা"), text: yhLang("Eggs don't mature and release properly", "ডিম্বাণু পরিপক্ব হওয়ার পর প্রকোষ্ঠ ফেটে না"), icon: "fa-circle", type: "type3" },
-                    { num: "4", title: yhLang("Menstrual Irregularity", "মাসিকের অনিয়ম"), text: yhLang("Irregular or absent periods over time", "অনিয়মিত মাসিক বা মাসিক সম্পূর্ণ বন্ধ"), icon: "fa-calendar", type: "type1" }
-                  ]
+                  )
                 },
                 {
-                  title: yhLang("Causes & Mechanism", "কারণ ও কার্যপ্রণালী"),
+                  title: yhLang(""),
                   icon: "fa-gears",
                   description: yhLang(
                     "This condition is both genetic and hormonal. When the production of male hormones (androgens) increases abnormally in a woman's body, PCOS develops. Due to this hormone elevation, ovulation becomes disrupted. Even though the follicle matures, it fails to rupture and release the egg. Over time, ovulation ceases completely, leading to irregular or absent menstrual periods.",
                     "এটি বংশগত এবং হরমোনাল সমস্যা। নারীর শরীরে পুরুষ হরমোন (অ্যান্ড্রোজেন) স্বাভাবিকের তুলনায় বেড়ে গেলে এ সমস্যা দেখা দেয়। এই হরমোন বৃদ্ধির কারণে নারীর ওভুলেশন বা প্রতি মাসে ডিম্বাণু পরিপক্ব হওয়ার পরও ফলিকল ফেটে যায় না এবং ডিম্বাণু বের হতে পারে না। একসময় মেয়েদের ওভুলেশন বন্ধ হয়ে যায় এবং অনিয়মিত মাসিক হয় বা মাসিক একেবারেই হয় না।"
-                  ),
-                  items: [
-                    { num: "1", title: yhLang("Genetic Factor", "বংশগত কারণ"), text: yhLang("Family history increases risk", "পরিবারে এর ইতিহাস থাকলে ঝুঁকি বাড়ে"), icon: "fa-dna", type: "type2" },
-                    { num: "2", title: yhLang("Insulin Resistance", "ইনসুলিন প্রতিরোধ"), text: yhLang("Body doesn't respond normally to insulin", "শরীর ইনসুলিনের প্রতি সঠিকভাবে সাড়া দেয় না"), icon: "fa-syringe", type: "type3" },
-                    { num: "3", title: yhLang("Inflammation", "প্রদাহ"), text: yhLang("PCOS is linked with excess inflammation", "পিসিওএস অতিরিক্ত প্রদাহের সাথে সম্পর্কিত"), icon: "fa-fire", type: "type1" },
-                    { num: "4", title: yhLang("Ovarian Dysfunction", "ডিম্বাশয়ের কর্মহীনতা"), text: yhLang("Ovaries fail to respond normally to hormones", "ডিম্বাশয় হরমোনের প্রতি স্বাভাবিকভাবে সাড়া দেয় না"), icon: "fa-circle-xmark", type: "type2" }
-                  ]
+                  )
                 },
                 {
-                  title: yhLang("Fertility & Age Factor", "প্রজননক্ষমতা ও বয়সের প্রভাব"),
+                  title: yhLang(""),
                   icon: "fa-hourglass-end",
                   description: yhLang(
                     "Although PCOS causes fertility issues in 60-70% of cases, pregnancy is not always impossible. However, the chances of conception decrease significantly after the age of 35. Women with PCOS can still get pregnant, but they may need medical assistance or specialized treatment. Early awareness and proper management can improve fertility outcomes.",
-                    "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয়, তবে এটি সম্পূর্ণ অসম্ভব নয়। তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়। পিসিওএস আক্রান্ত নারীরা এখনও গর্ভবতী হতে পারেন, তবে তাদের চিকিৎসাগত সহায়তা বা বিশেষায়িত চিকিৎসার প্রয়োজন হতে পারে।"
-                  ),
-                  items: [
-                    { num: "1", title: yhLang("Fertility Rate", "প্রজননক্ষমতার হার"), text: yhLang("60-70% experience difficulty in conception", "৬০-৭০% ক্ষেত্রে গর্ভধারণে সমস্যা"), icon: "fa-person-pregnant", type: "type3" },
-                    { num: "2", title: yhLang("Age Impact", "বয়সের প্রভাব"), text: yhLang("Fertility decreases significantly after 35 years", "৩৫ বছরের পর প্রজননক্ষমতা উল্লেখযোগ্যভাবে হ্রাস পায়"), icon: "fa-calendar-days", type: "type1" },
-                    { num: "3", title: yhLang("Medical Treatment", "চিকিৎসাগত সহায়তা"), text: yhLang("Reproductive assistance may be needed", "প্রজনন সহায়তা প্রয়োজন হতে পারে"), icon: "fa-hospital", type: "type2" },
-                    { num: "4", title: yhLang("Early Management", "প্রাথমিক ব্যবস্থাপনা"), text: yhLang("Early detection improves outcomes", "প্রাথমিক সনাক্তকরণ ফলাফল উন্নত করে"), icon: "fa-check", type: "type3" }
-                  ]
+                    "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয়, তবে এটি সম্পূর্ণ অসম্ভব নয়। তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়।"
+                  )
                 }
               ];
 
@@ -6216,24 +6198,12 @@ const coursesData = [
                       </h3>
                       <p class="ch12l1-section-desc">${section.description}</p>
                     </div>
-                    <ul class="ch12l1-list">
-                      ${section.items.map((item, idx) => `
-                        <li class="ch12l1-li ch12l1-li-${item.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 15}">
-                          <span class="ch12l1-li-icon"><i class="fa-solid ${item.icon}"></i></span>
-                          <div class="ch12l1-li-content">
-                            <strong class="ch12l1-li-num">${item.num}</strong>
-                            <h4 class="ch12l1-li-title">${item.title}</h4>
-                            <p class="ch12l1-li-text">${item.text}</p>
-                          </div>
-                        </li>
-                      `).join('')}
-                    </ul>
                   </section>
                 `).join('');
               }
 
               return `
-                <div class="ch12l1-slide">
+                <div class="ch12l1-slide lesson-slide">
                   <div class="ch12l1-shape ch12l1-shape-a"></div>
                   <div class="ch12l1-shape ch12l1-shape-b"></div>
                   <div class="ch12l1-shape ch12l1-shape-c"></div>
@@ -6241,16 +6211,10 @@ const coursesData = [
                   <div class="ch12l1-header" data-aos="fade-down" data-aos-delay="0">
                     <h2 class="ch12l1-title">
                       <i class="fa-solid fa-heart-pulse"></i>
-                      ${yhLang("Understanding PCOS", "পলিসিস্টিক ওভারি সিনড্রোম বোঝা")}
+                      ${yhLang("Understanding PCOS", "পলিসিস্টিক ওভারিআন সিনড্রোম (পিসিওএস) ")}
                     </h2>
                   </div>
 
-                  <section class="ch12l1-intro-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="ch12l1-intro-text">${yhLang(
-                      "PCOS is a common endocrine disorder in women that affects hormone levels and can impact fertility, metabolism, and overall health. Early awareness and proper management are key to living well with PCOS.",
-                      "পিসিওএস একটি সাধারণ হরমোনাল ব্যাধি যা প্রজননক্ষমতা, বিপাক এবং সামগ্রিক স্বাস্থ্যকে প্রভাবিত করে। প্রাথমিক সচেতনতা ও সঠিক ব্যবস্থাপনা গুরুত্বপূর্ণ।"
-                    )}</p>
-                  </section>
 
                   <section class="ch12l1-content" data-aos="fade-up" data-aos-delay="60">
                     ${renderSections()}
