@@ -379,7 +379,6 @@
   position: relative;
   padding: 12px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #fff5f8 0%, #ffe0eb 100%);
   box-shadow: 0 4px 12px rgba(236, 72, 153, 0.08);
   overflow: hidden;
 }
@@ -477,7 +476,7 @@
   border-radius: 8px;
   border: 1px solid transparent;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 6px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -540,7 +539,7 @@
 
 .ch12l2-li-text {
   font-size: 0.655rem;
-  color: #8b5967;
+  color: #040303;
   margin: 0;
   line-height: 1.35;
   font-weight: 500;
@@ -673,7 +672,6 @@
   position: relative;
   padding: 14px;
   border-radius: 18px;
-  background: linear-gradient(135deg, #e8f8f5 0%, #d0f0e8 35%, #c8e6e1 65%, #b8d4cc 100%);
   box-shadow: 0 6px 16px rgba(16, 185, 129, 0.12);
   overflow: hidden;
   border: 1px solid rgba(16, 185, 129, 0.15);
@@ -795,11 +793,11 @@
 
 .ch12l3-li {
   position: relative;
-  padding: 7px 8px;
+  padding: 4px 8px;
   border-radius: 10px;
   border: 1px solid transparent;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
@@ -812,27 +810,22 @@
 
 /* Strategy Type Colors */
 .ch12l3-li-strategy1 {
-  background-color: rgba(16, 185, 129, 0.08);
   border-color: #10b981;
 }
 
 .ch12l3-li-strategy2 {
-  background-color: rgba(52, 211, 153, 0.07);
   border-color: #34d399;
 }
 
 .ch12l3-li-strategy3 {
-  background-color: rgba(110, 231, 183, 0.06);
   border-color: #6ee7b7;
 }
 
 .ch12l3-li-strategy4 {
-  background-color: rgba(45, 212, 191, 0.07);
   border-color: #2dd4bf;
 }
 
 .ch12l3-li-strategy5 {
-  background-color: rgba(20, 184, 166, 0.06);
   border-color: #14b8a6;
 }
 
@@ -883,7 +876,7 @@
 
 .ch12l3-li-text {
   font-size: 0.7rem;
-  color: #0d5e47;
+  color: #000;
   margin: 0;
   line-height: 1.4;
   font-weight: 500;

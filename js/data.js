@@ -6095,7 +6095,7 @@ const coursesData = [
                   icon: "fa-hourglass-end",
                   description: yhLang(
                     "Although PCOS causes fertility issues in 60-70% of cases, pregnancy is not always impossible. However, the chances of conception decrease significantly after the age of 35. Women with PCOS can still get pregnant, but they may need medical assistance or specialized treatment. Early awareness and proper management can improve fertility outcomes.",
-                    "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয়, তবে এটি সম্পূর্ণ অসম্ভব নয়। তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়। পিসিওএস আক্রান্ত নারীরা এখনও গর্ভবতী হতে পারেন, তবে তাদের চিকিৎসাগত সহায়তা বা বিশেষায়িত চিকিৎসার প্রয়োজন হতে পারে।"
+                    "যদিও পিসিওএস-এ ৬০-৭০% ক্ষেত্রেই গর্ভধারণে সমস্যা হয়, তবে এটি সম্পূর্ণ অসম্ভব নয়। তবে ৩৫ বছর বয়সের পর গর্ভধারণের সম্ভাবনা কমে যায়।"
                   )
                 }
               ];
@@ -6165,18 +6165,18 @@ const coursesData = [
             },
             content: (function () {
               const symptoms = [
-                { num: "1", text: yhLang("Irregular periods or absence of menstruation", "অনিয়মিতভাবে মাসিক হওয়া বা মাসিক বন্ধ থাকা"), icon: "fa-calendar-xmark", type: "type1" },
-                { num: "2", text: yhLang("Depression, anxiety, and mood disorders", "মানসিক স্বাস্থ্য সমস্যা যেমন দুশ্চিন্তা"), icon: "fa-brain", type: "type2" },
-                { num: "3", text: yhLang("Unwanted hair growth on body and face", "শরীরের বিভিন্ন জায়গায় অবাঞ্ছিত লোম গজানো"), icon: "fa-person", type: "type3" },
-                { num: "4", text: yhLang("Excessive hair shedding from scalp", "মাথার চুল অতিরিক্ত পরিমাণে পড়ে যাওয়া"), icon: "fa-water", type: "type1" },
-                { num: "5", text: yhLang("Persistent acne and skin breakouts", "মুখে ও অন্যত্র ব্রণ বের হওয়া"), icon: "fa-face-grin", type: "type2" },
-                { num: "6", text: yhLang("Difficulty conceiving or infertility", "গর্ভধারণে সমস্যা হওয়া এমনকি বন্ধ্যাত্ব"), icon: "fa-person-pregnant", type: "type3" },
-                { num: "7", text: yhLang("Sudden or gradual weight increase", "ওজন বেড়ে যাওয়া ও স্থূলতা"), icon: "fa-scale-unbalanced", type: "type1" },
-                { num: "8", text: yhLang("Insomnia or poor sleep quality", "ঘুমের ব্যাঘাত হওয়া বা অনিদ্রা"), icon: "fa-moon", type: "type2" },
-                { num: "9", text: yhLang("Increased risk of developing diabetes", "টাইপ-২ ডায়বেটিস রোগের ঝুঁকি"), icon: "fa-heartbeat", type: "type3" },
-                { num: "10", text: yhLang("Higher cardiovascular disease risk", "হৃদ রোগের ঝুঁকি বাড়ায়"), icon: "fa-heart", type: "type1" },
-                { num: "11", text: yhLang("Increased uterine cancer risk", "জরায়ু ক্যান্সারের ঝুঁকি বাড়ায়"), icon: "fa-shield-virus", type: "type2" }
-              ];
+  { num: yhLang("1","১"), text: yhLang("Irregular periods or absence of menstruation", "অনিয়মিতভাবে মাসিক হওয়া বা মাসিক বন্ধ থাকা"), icon: "fa-calendar-xmark", type: "type1" },
+  { num: yhLang("2","২"), text: yhLang("Depression, anxiety, and mood disorders", "মানসিক স্বাস্থ্য সমস্যা যেমন দুশ্চিন্তা"), icon: "fa-brain", type: "type2" },
+  { num: yhLang("3","৩"), text: yhLang("Unwanted hair growth on body and face", "শরীরের বিভিন্ন জায়গায় অবাঞ্ছিত লোম গজানো"), icon: "fa-person", type: "type3" },
+  { num: yhLang("4","৪"), text: yhLang("Excessive hair shedding from scalp", "মাথার চুল অতিরিক্ত পরিমাণে পড়ে যাওয়া"), icon: "fa-water", type: "type1" },
+  { num: yhLang("5","৫"), text: yhLang("Persistent acne and skin breakouts", "মুখে ও অন্যত্র ব্রণ বের হওয়া"), icon: "fa-face-grin", type: "type2" },
+  { num: yhLang("6","৬"), text: yhLang("Difficulty conceiving or infertility", "গর্ভধারণে সমস্যা হওয়া এমনকি বন্ধ্যাত্ব"), icon: "fa-person-pregnant", type: "type3" },
+  { num: yhLang("7","৭"), text: yhLang("Sudden or gradual weight increase", "ওজন বেড়ে যাওয়া ও স্থূলতা"), icon: "fa-scale-unbalanced", type: "type1" },
+  { num: yhLang("8","৮"), text: yhLang("Insomnia or poor sleep quality", "ঘুমের ব্যাঘাত হওয়া বা অনিদ্রা"), icon: "fa-moon", type: "type2" },
+  { num: yhLang("9","৯"), text: yhLang("Increased risk of developing diabetes", "টাইপ-২ ডায়বেটিস রোগের ঝুঁকি"), icon: "fa-heartbeat", type: "type3" },
+  { num: yhLang("10","১০"), text: yhLang("Higher cardiovascular disease risk", "হৃদ রোগের ঝুঁকি বাড়ায়"), icon: "fa-heart", type: "type1" },
+  { num: yhLang("11","১১"), text: yhLang("Increased uterine cancer risk", "জরায়ু ক্যান্সারের ঝুঁকি বাড়ায়"), icon: "fa-shield-virus", type: "type2" }
+];
 
               function renderSymptoms() {
                 return symptoms.map((symptom, idx) => `
@@ -6188,7 +6188,7 @@ const coursesData = [
               }
 
               return `
-                <div class="ch12l2-slide">
+                <div class="ch12l2-slide lesson-slide">
                   <div class="ch12l2-shape ch12l2-shape-a"></div>
                   <div class="ch12l2-shape ch12l2-shape-b"></div>
                   <div class="ch12l2-shape ch12l2-shape-c"></div>
@@ -6249,17 +6249,17 @@ const coursesData = [
               );
 
               const strategies = [
-                { num: "1", text: yhLang("Exercise regularly - walking, cycling, or sports to stay physically fit and active", "শারীরিকভাবে কর্মক্ষম, সচল থাকার জন্য ব্যায়াম করতে হবে। সেটা হতে পারে হাঁটা, সাইকেল চালনা, পছন্দের খেলা-ধুলা করা ইত্যাদি।"), icon: "fa-person-hiking", type: "strategy1" },
-                { num: "2", text: yhLang("Avoid unhealthy habits like smoking and alcohol consumption", "যে সমস্ত অভ্যাস স্বাস্থ্যসম্মত নয় তা বর্জন করতে হবে। যেমন- ধূমপান করা, মদ্যপান করা।"), icon: "fa-hand-paper", type: "strategy2" },
-                { num: "3", text: yhLang("Be careful with diet - eat balanced meals and reduce carbohydrate intake to maintain weight", "খাবারের বিষয়ে খুব সতর্কতা অবলম্বন করতে হবে। সুষম খাবার খেতে হবে, শর্করা জাতীয় খাবার কম খেতে হবে যাতে ওজন নিয়ন্ত্রণে থাকে।"), icon: "fa-apple", type: "strategy3" },
-                { num: "4", text: yhLang("Eat balanced meals in proper portions and reduce refined carbohydrates", "সুষম খাবার পরিমাণমতো খেতে হবে। শর্করা জাতীয় খাবার কমাতে হবে।"), icon: "fa-utensils", type: "strategy4" },
-                { num: "5", text: yhLang("Control total calorie intake or consult a nutritionist. Prefer boiled over fried foods and eat more vegetables", "ওজন নিয়ন্ত্রণে রাখতে হলে টোটাল ক্যালরি কমাতে হবে অথবা পুষ্টিবিদের সাহায্য নিতে হবে। ভাজা খাবারের চাইতে সিদ্ধ করা খাবার ভালো। শাকসবজি বেশি করে খেতে হবে।"), icon: "fa-fire", type: "strategy5" },
-                { num: "6", text: yhLang("Eat protein in proper portions - lean meat, fish, eggs, low-fat dairy, nuts and high-fiber foods", "পরিমাণ মতো আমিষ জাতীয় খাবার খেতে হবে; যাতে কম চর্বি যুক্ত মাংস, মাছ, ডিম, কম চর্বি যুক্ত দুগ্ধজাত খাবার, বাদাম এবং বেশি করে ফাইবার সমৃদ্ধ খাবার খেতে হবে।"), icon: "fa-egg", type: "strategy1" },
-                { num: "7", text: yhLang("Yogurt contains probiotics and helps reduce weight while maintaining healthy gut bacteria", "দইয়ে যেহেতু প্রোবায়োটিক থাকে তাই দই ওজন কমাতে সাহায্য করে এবং অন্ত্রজীবাণু সুস্থ রাখে।"), icon: "fa-flask", type: "strategy2" },
-                { num: "8", text: yhLang("Avoid sugary foods, drinks, soft drinks, chocolate and fast food as they increase weight", "চিনিযুক্ত খাবার, শরবত, কোমল পানীয়, চকোলেট, ফাস্ট ফুডে ওজন বাড়ে তাই এগুলোকে বর্জন করতে হবে।"), icon: "fa-ban", type: "strategy3" },
-                { num: "9", text: yhLang("Fruits and vegetables reduce inflammation in the body and are excellent for PCOS patients", "ফল, শাক-সবজি শরীরের প্রদাহ হওয়া থেকে রক্ষা করে। তাই এগুলো পিসিওএস-এর রোগীদের জন্য অনেক ভালো।"), icon: "fa-leaf", type: "strategy4" },
-                { num: "10", text: yhLang("Exercise provides mental peace, boosts energy, reduces blood sugar levels - join groups or organizations for regular exercise", "ব্যায়াম মানসিক প্রশান্তি দেয়, শক্তি বাড়ায়, রক্তে চিনির মাত্রা কমায়। নিয়মিত ব্যায়ামের জন্য গ্রুপ অথবা প্রতিষ্ঠানে যুক্ত হওয়া যেতে পারে।"), icon: "fa-heart-pulse", type: "strategy5" }
-              ];
+  { num: yhLang("1","১"), text: yhLang("Exercise regularly - walking, cycling, or sports to stay physically fit and active", "শারীরিকভাবে কর্মক্ষম, সচল থাকার জন্য ব্যায়াম করতে হবে। সেটা হতে পারে হাঁটা, সাইকেল চালনা, পছন্দের খেলা-ধুলা করা ইত্যাদি।"), icon: "fa-person-hiking", type: "strategy1" },
+  { num: yhLang("2","২"), text: yhLang("Avoid unhealthy habits like smoking and alcohol consumption", "যে সমস্ত অভ্যাস স্বাস্থ্যসম্মত নয় তা বর্জন করতে হবে। যেমন- ধূমপান করা, মদ্যপান করা।"), icon: "fa-hand-paper", type: "strategy2" },
+  { num: yhLang("3","৩"), text: yhLang("Be careful with diet - eat balanced meals and reduce carbohydrate intake to maintain weight", "খাবারের বিষয়ে খুব সতর্কতা অবলম্বন করতে হবে। সুষম খাবার খেতে হবে, শর্করা জাতীয় খাবার কম খেতে হবে যাতে ওজন নিয়ন্ত্রণে থাকে।"), icon: "fa-apple", type: "strategy3" },
+  { num: yhLang("4","৪"), text: yhLang("Eat balanced meals in proper portions and reduce refined carbohydrates", "সুষম খাবার পরিমাণমতো খেতে হবে। শর্করা জাতীয় খাবার কমাতে হবে।"), icon: "fa-utensils", type: "strategy4" },
+  { num: yhLang("5","৫"), text: yhLang("Control total calorie intake or consult a nutritionist. Prefer boiled over fried foods and eat more vegetables", "ওজন নিয়ন্ত্রণে রাখতে হলে টোটাল ক্যালরি কমাতে হবে অথবা পুষ্টিবিদের সাহায্য নিতে হবে। ভাজা খাবারের চাইতে সিদ্ধ করা খাবার ভালো। শাকসবজি বেশি করে খেতে হবে।"), icon: "fa-fire", type: "strategy5" },
+  { num: yhLang("6","৬"), text: yhLang("Eat protein in proper portions - lean meat, fish, eggs, low-fat dairy, nuts and high-fiber foods", "পরিমাণ মতো আমিষ জাতীয় খাবার খেতে হবে; যাতে কম চর্বি যুক্ত মাংস, মাছ, ডিম, কম চর্বি যুক্ত দুগ্ধজাত খাবার, বাদাম এবং বেশি করে ফাইবার সমৃদ্ধ খাবার খেতে হবে।"), icon: "fa-egg", type: "strategy1" },
+  { num: yhLang("7","৭"), text: yhLang("Yogurt contains probiotics and helps reduce weight while maintaining healthy gut bacteria", "দইয়ে যেহেতু প্রোবায়োটিক থাকে তাই দই ওজন কমাতে সাহায্য করে এবং অন্ত্রজীবাণু সুস্থ রাখে।"), icon: "fa-flask", type: "strategy2" },
+  { num: yhLang("8","৮"), text: yhLang("Avoid sugary foods, drinks, soft drinks, chocolate and fast food as they increase weight", "চিনিযুক্ত খাবার, শরবত, কোমল পানীয়, চকোলেট, ফাস্ট ফুডে ওজন বাড়ে তাই এগুলোকে বর্জন করতে হবে।"), icon: "fa-ban", type: "strategy3" },
+  { num: yhLang("9","৯"), text: yhLang("Fruits and vegetables reduce inflammation in the body and are excellent for PCOS patients", "ফল, শাক-সবজি শরীরের প্রদাহ হওয়া থেকে রক্ষা করে। তাই এগুলো পিসিওএস-এর রোগীদের জন্য অনেক ভালো।"), icon: "fa-leaf", type: "strategy4" },
+  { num: yhLang("10","১০"), text: yhLang("Exercise provides mental peace, boosts energy, reduces blood sugar levels - join groups or organizations for regular exercise", "ব্যায়াম মানসিক প্রশান্তি দেয়, শক্তি বাড়ায়, রক্তে চিনির মাত্রা কমায়। নিয়মিত ব্যায়ামের জন্য গ্রুপ অথবা প্রতিষ্ঠানে যুক্ত হওয়া যেতে পারে।"), icon: "fa-heart-pulse", type: "strategy5" }
+];
 
               function renderStrategies() {
                 return strategies.map((strategy, idx) => `
