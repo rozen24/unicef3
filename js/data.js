@@ -5807,12 +5807,12 @@ const coursesData = [
             content: (function () {
               const introText = yhLang(
                 "HIV (Human Immunodeficiency Virus) is a virus that destroys the body's immune system. When the virus enters the bloodstream, it gradually weakens the body's ability to fight infections. Eventually, the immune system becomes so compromised that it cannot defend against diseases like diarrhea, tuberculosis, or cholera. When immunity is completely destroyed, this condition is called AIDS (Acquired Immunodeficiency Syndrome).",
-                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্తে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধক্ষমতা একেবারেই থাকে না। এ সময় বিভিন্ন রোগ যেমন—ডায়রিয়া, যক্ষা, কলেরা ইত্যাদি মানবদেহকে আক্রমণ করলে মানবদেহ তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম এইডস।"
+                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্তে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধক্ষমতা একেবারেই থাকে না। এ সময় বিভিন্ন রোগ যেমন—ডায়রিয়া, যক্ষা, কলেরা ইত্যাদি মানবদেহকে আক্রমণ করলে মানবদেহ তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম এইডস।"
               );
 
               const latencyNote = yhLang(
                 "HIV can remain dormant (inactive) in the body for 2–10 years without showing symptoms. During this time, an infected person may look and feel perfectly healthy but can still transmit the virus to others.",
-                "२–१० বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে।"
+                "২–১০ বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে।"
               );
 
               return `
@@ -5833,13 +5833,14 @@ const coursesData = [
                         <div class="ch10l3-icon-circle ch10l3-icon-2">
                           <i class="fa-solid fa-hourglass-half"></i>
                         </div>
-                        <h3>${yhLang("Dormancy Period", "সুপ্তাবস্থা")}</h3>
+                        <h3>${latencyNote}</h3>
+                        
+
                       </div>
-                      <p class="ch10l3-card-text">${latencyNote}</p>
                     </section>
 
-                    <figure class="ch10l3-image-card" data-aos="zoom-in" data-aos-delay="140">
-                      <img src="img/modu10/hiv.png" alt="এইচআইভী ও এইডস" class="ch10l3-image img-fluid rounded-4" />
+                    <figure class="" data-aos="zoom-in" data-aos-delay="140">
+                      <img src="img/modu10/hiv2.jpg" style="width: 70%;" alt="এইচআইভী ও এইডস" class="ch10l3-image w-80 mx-auto img-zoom img-fluid rounded-4" />
                     </figure>
                   </div>
                 </div>

@@ -947,9 +947,7 @@
 /* Main slide container with gradient border effect */
 .ch10l3-slide {
   position: relative;
-  padding: 36px 40px;
   border-radius: 24px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #f0f3ff 100%);
   overflow: hidden;
 }
 
@@ -983,11 +981,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 32px;
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px 24px;
+  padding: 10px;
   background-color: rgba(236, 72, 153, 0.08);
   border-radius: 16px;
   border-left: 8px solid #ec4899;
@@ -1001,15 +998,14 @@
 /* Content wrapper with flex layout */
 .ch10l3-content-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px;
+  gap: 5px;
   align-items: start;
 }
 
 /* Description card container */
 .ch10l3-description-card {
   position: relative;
-  padding: 28px 32px;
+  padding: 10px;
   border-radius: 20px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
   backdrop-filter: blur(10px);
@@ -1172,9 +1168,7 @@
   margin: 0;
   border-radius: 20px;
   overflow: hidden;
-  background: linear-gradient(135deg, #f8f9fa 0%, #f0f3ff 100%);
   border: 2px solid transparent;
-  box-shadow: 0 15px 40px rgba(220, 38, 38, 0.15);
   transition: all 0.4s ease;
 }
 
@@ -1217,9 +1211,7 @@
 
 /* Responsive design adjustments */
 @media (max-width: 1024px) {
-  .ch10l3-slide {
-    padding: 28px 32px;
-  }
+  
 
   .ch10l3-title {
     font-size: 2rem;
