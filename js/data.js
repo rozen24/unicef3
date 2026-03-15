@@ -5604,183 +5604,9 @@ const coursesData = [
           "মডিউল-১০: এইচপিভি টিকা ও তারুণ্যে জরায়ুমুখ ক্যান্সার প্রতিরোধ",
         ),
         lessons: [
+      
           {
             id: "ch10-lesson-1",
-            title: yhLang("HIV and AIDS", "এইচআইভি ও এইডস"),
-            icon: "fa-ribbon",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q10a",
-                  question: yhLang(
-                    "এইচআইভি দেহে কী ক্ষতি করে?",
-                    "এইচআইভি দেহে কী ক্ষতি করে?",
-                  ),
-                  options: [
-                    yhLang(
-                      "রোগ প্রতিরোধক্ষমতা ধ্বংস করে",
-                      "রোগ প্রতিরোধক্ষমতা ধ্বংস করে",
-                    ),
-                    yhLang(
-                      "তাৎক্ষণিকভাবে শক্তি বাড়ায়",
-                      "তাৎক্ষণিকভাবে শক্তি বাড়ায়",
-                    ),
-                    yhLang("সব রোগ প্রতিরোধ করে", "সব রোগ প্রতিরোধ করে"),
-                    yhLang(
-                      "শরীরে কোনো প্রভাব ফেলে না",
-                      "শরীরে কোনো প্রভাব ফেলে না",
-                    ),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const introText = yhLang(
-                "HIV is a virus that gradually destroys the body’s immune system, leaving the person defenseless against infections like diarrhoea, tuberculosis, or cholera. Once immunity collapses completely, even minor illnesses cannot be fought off—this state is called AIDS.",
-                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্তে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধক্ষমতা একেবারেই থাকে না। এ সময় বিভিন্ন রোগ যেমন—ডায়রিয়া, যক্ষা, কলেরা ইত্যাদি মানবদেহকে আক্রমণ করলে মানবদেহ তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম <strong>এইডস</strong>.",
-              );
-
-              const latencyNote = yhLang(
-                "HIV can remain dormant in the human body for 2–10 years.",
-                "২–১০ বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে।",
-              );
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "এইচআইভি ও এইডস",
-                    "এইচআইভি ও এইডস",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="gradient-text mb-3">${yhLang(
-                      "এইচআইভি ও এইডস",
-                      "এইচআইভি ও এইডস",
-                    )}</h3>
-                    <p class="mb-3">${introText}</p>
-                    <p class="mb-0">${latencyNote}</p>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <figure class="image-card mb-0" style="min-height:260px;">
-                      <img src="img/modu10/hiv.png" alt="এইচআইভি ও এইডস" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                    </figure>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch10-lesson-2",
-            title: yhLang(
-              "HIV Window Period",
-              "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)",
-            ),
-            icon: "fa-hourglass-half",
-            gradientClass: "bg-gradient-purple",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q10b",
-                  question: yhLang(
-                    "What does the HIV window period describe?",
-                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড) বলতে কী বোঝায়?",
-                  ),
-                  options: [
-                    yhLang(
-                      "Time needed to develop detectable antibodies",
-                      "রক্তে অ্যান্টিবডি তৈরি হতে যে সময় লাগে",
-                    ),
-                    yhLang(
-                      "তাৎক্ষণিক সেরে ওঠার সময়",
-                      "তাৎক্ষণিক সেরে ওঠার সময়",
-                    ),
-                    yhLang("শুধু জ্বর হওয়ার সময়", "শুধু জ্বর হওয়ার সময়"),
-                    yhLang(
-                      "শরীরে কোনো পরিবর্তন না হওয়া সময়",
-                      "শরীরে কোনো পরিবর্তন না হওয়া সময়",
-                    ),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const windowDefinition = yhLang(
-                "After HIV enters the body it may take up to 12 weeks for antibodies to appear in blood—this span is called the window period.",
-                "এইচআইভিতে আক্রান্ত হওয়ার পর রক্তে ভাইরাসের বিরুদ্ধে প্রতিরোধমূলক ব্যবস্থা (অ্যান্টিবডি) তৈরি হতে যে সময় লাগে তাকে অন্তর্বর্তীকালীন সময় বা উইন্ডো পিরিয়ড বলে। এ জন্য সাধারণত ১২ সপ্তাহ পর্যন্ত লাগতে পারে।",
-              );
-
-              const silentSpread = yhLang(
-                "Most people with HIV look healthy for years before symptoms emerge, often without realizing they can still transmit the virus to others.",
-                "বেশিরভাগ এইচআইভি–আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভিজনিত লক্ষণসমূহ প্রকাশ পাওয়ার আগ পর্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি–আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।",
-              );
-
-              const preventionPoints = [
-                "ধর্মীয় অনুশাসন মেনে চললে",
-                "বিবাহবহির্ভূত যৌনমিলন থেকে বিরত থাকলে",
-                "স্ত্রী বা সঙ্গীর প্রতি বিশ্বস্ত থাকলে",
-                "যৌনমিলনে সবসময় কনডম ব্যবহার করলে",
-                "কেবলমাত্র অনুমোদিত ব্লাড ব্যাংক থেকে এইচআইভি পরীক্ষিত রক্ত গ্রহণ করলে",
-                "যে কোনো ধরণের ড্রাগ ব্যবহার থেকে বিরত থাকলে; যদি আপনি একজন শিরায় মাদক গ্রহণকারী হয়ে থাকেন, তবে যে কোনো ধরনের সূঁই (সিরিঞ্জ) জাতীয় বস্তু ভাগাভাগি করা থেকে বিরত থাকলে",
-                "যে কোনো ধরনের যৌনবাহিত সংক্রমণ (এসটিআই)/প্রজননতন্ত্রের সংক্রমণ (আরটিআই) পরীক্ষা করতে হবে এবং চিকিৎসা গ্রহণ করতে হবে।",
-              ];
-
-              const treatmentInfo = yhLang(
-                "Bangladesh prioritizes EMTCT services to stop mother-to-child transmission of HIV, hepatitis B, and syphilis. Preventing, testing, and treating STIs/RTIs remain core to HIV prevention because untreated infections significantly raise HIV risk.",
-                "মা থেকে শিশুর শরীরে এইচআইভি, হেপাটাইটিস বি এবং সিফিলিসের সংক্রমণ নির্মূল করার লক্ষ্যে (Elimination of Mother-to-Child Transmission - EMTCT) বাংলাদেশ এইচআইভি ও যৌনবাহিত রোগসমূহ প্রতিরোধ এবং যৌন ও প্রজনন স্বাস্থ্যসেবায় গুরুত্ব দিয়েছে। এইচআইভি প্রতিরোধ কৌশলের গুরুত্বপূর্ণ উপাদান হলো যৌনবাহিত সংক্রমণ প্রতিরোধ ও চিকিৎসা, কারণ যৌনবাহিত সংক্রমণ এইচআইভি সংক্রমণের ঝুঁকি বৃদ্ধি করে। চিকিৎসা না করালে যৌনবাহিত সংক্রমণের উপস্থিতি এইচআইভি সংক্রমণের ঝুঁকি বাড়াতে পারে।",
-              );
-
-              const renderList = (items, baseDelay = 60) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)",
-                    "অন্তর্বর্তীকালীন সময় (উইন্ডো পিরিয়ড)",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">${windowDefinition}</p>
-                    <p class="mb-0">${silentSpread}</p>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text mb-3">${yhLang(
-                      "তরুন-তরুনীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়",
-                      "তরুন-তরুনীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(preventionPoints)}
-                    </ul>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="120">
-                    <h3 class="gradient-text mb-3">${yhLang("চিকিৎসা", "চিকিৎসা")}</h3>
-                    <p class="mb-0">${treatmentInfo}</p>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch10-lesson-3",
             title: yhLang("HIV and AIDS", "এইচআইভি ও এইডস"),
             icon: "fa-ribbon",
             gradientClass: "bg-gradient-rose",
@@ -5843,6 +5669,126 @@ const coursesData = [
                       <img src="img/modu10/hiv2.jpg" style="width: 70%;" alt="এইচআইভী ও এইডস" class="ch10l3-image w-80 mx-auto img-zoom img-fluid rounded-4" />
                     </figure>
                   </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch10-lesson-2",
+            title: yhLang("Window Period", "অন্তর্বর্তীকালীন সময় (Window Period)"),
+            icon: "fa-stopwatch",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q10d",
+                  question: yhLang(
+                    "What is the HIV window period?",
+                    "এইচআইভি উইন্ডো পিরিয়ড কী?",
+                  ),
+                  options: [
+                    yhLang(
+                      "Time needed for antibodies to appear in blood",
+                      "রক্তে অ্যান্টিবডি তৈরি হতে যে সময় লাগে",
+                    ),
+                    yhLang("Time to show HIV symptoms", "এইচআইভির লক্ষণ দেখা যেতে যা সময় লাগে"),
+                    yhLang("Duration of treatment", "চিকিৎসার সময়কাল"),
+                    yhLang("Recovery period", "সুস্থতার সময়কাল"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const windowDefinition = yhLang(
+                "The window period is the time required for antibodies (the body's defense mechanism) against HIV to develop in the blood after contracting the virus. This typically takes up to 12 weeks.",
+                "এইচআইভিতে আক্রান্ত হওয়ার পর রক্তে ভাইরাসের বিরুদ্ধে প্রতিরোধমূলক ব্যবস্থা (অ্যান্টিবডি) তৈরি হতে যে সময় লাগে তাকে অন্তর্বর্তীকালীন সময় বা উইন্ডো পিরিয়ড বলে। এ জন্য সাধারণত ১২ সপ্তাহ পর্যন্ত লাগতে পারে।"
+              );
+
+              const silentTransmission = yhLang(
+                "Most HIV-infected people appear healthy and lead normal lives before HIV symptoms become apparent. The majority of infected people worldwide don't know they are infected. Any HIV-infected person can transmit the virus to others.",
+                "বেশিরভাগ এইচআইভি–আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভিজনিত লক্ষণসমূহ প্রকাশ পাওয়ার আগ পর্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি–আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।"
+              );
+
+              const preventionPoints = [
+                yhLang("Follow religious discipline", "ধর্মীয় অনুশাসন মেনে চললে"),
+                yhLang("Abstain from premarital sexual relations", "বিবাহবহির্ভূত যৌনমিলন থেকে বিরত থাকলে"),
+                yhLang("Remain faithful to spouse or partner", "স্ত্রী বা সঙ্গীর প্রতি বিশ্বস্ত থাকলে"),
+                yhLang("Always use condoms during sexual intercourse", "যৌনমিলনে সবসময় কনডম ব্যবহার করলে"),
+                yhLang("Receive blood only from approved HIV-tested blood banks", "কেবলমাত্র অনুমোদিত ব্লাড ব্যাংক থেকে এইচআইভি পরীক্ষিত রক্ত গ্রহণ করলে"),
+                yhLang("Avoid all types of drug use; if you inject drugs, don't share needles", "যে কোনো ধরণের ড্রাগ ব্যবহার থেকে বিরত থাকলে; যদি আপনি একজন শিরায় মাদক গ্রহণকারী হয়ে থাকেন, তবে যে কোনো ধরনের সূঁই (সিরিঞ্জ) জাতীয় বস্তু ভাগাভাগি করা থেকে বিরত থাকলে"),
+                yhLang("Get tested and treated for all STIs/RTIs", "যে কোনো ধরনের যৌনবাহিত সংক্রমণ (এসটিআই)/প্রজননতন্ত্রের সংক্রমণ (আরটিআই) পরীক্ষা করতে হবে এবং চিকিৎসা গ্রহণ করতে হবে।"),
+              ];
+
+              const preventionNote = yhLang(
+                "STI prevention and treatment are critical components of HIV prevention strategy, as untreated sexually transmitted infections increase HIV transmission risk.",
+                "এইচআইভি প্রতিরোধ কৌশলের গুরুত্বপূর্ণ উপাদান হলো যৌনবাহিত সংক্রমণ প্রতিরোধ ও চিকিৎসা, কারণ যৌনবাহিত সংক্রমণ এইচআইভি সংক্রমণের ঝুঁকি বৃদ্ধি করে।"
+              );
+
+              const treatmentInfo = yhLang(
+                "By 2030, Bangladesh aims to achieve Elimination of Mother-to-Child Transmission (EMTCT) of HIV, Hepatitis B, and Syphilis and is actively implementing measures to reach this goal.",
+                "বাংলাদেশ সরকার ২০৩০ সালের  মধ্যে Tripple Elimination মাধ্যমে মা থেকে নজাতকের শরীরে মা থেকে শিশুর শরীরে এইচআইভি, হেপাটাইটিস বি এবং সিফিলিসের সংক্রমণ নির্মূল করার লক্ষ স্থির করেছে এবং তা বাস্তবায়নে কাজ করছে।"
+              );
+
+              function renderPreventionList() {
+                return preventionPoints
+                  .map(
+                    (point, idx) => `
+                    <li class="ch10l4-list-item ch10l4-li-type${(idx % 4) + 1}" data-aos="fade-left" data-aos-delay="${100 + idx * 25}">
+                      <span class="ch10l4-li-icon"><i class="fa-solid fa-circle-check"></i></span>
+                      <span class="ch10l4-li-text">${point}</span>
+                    </li>
+                  `,
+                  )
+                  .join("");
+              }
+
+              return `
+                <div class="ch10l4-slide lesson-slide">
+                  <h2 class="ch10l4-title" data-aos="fade-down">
+                    <i class="fa-solid fa-stopwatch"></i>
+                    ${yhLang("Window Period", "অন্তর্বর্তীকালীন সময়")}
+                  </h2>
+
+                  <div class="ch10l4-content-container">
+                    <section class="ch10l4-description-card ch10l4-desc-1" data-aos="fade-up" data-aos-delay="40">
+                      <div class="ch10l4-desc-icon">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                      </div>
+                      <p>${windowDefinition}</p>
+                    </section>
+
+                    <section class="ch10l4-description-card ch10l4-desc-2" data-aos="fade-up" data-aos-delay="80">
+                      <div class="ch10l4-desc-icon">
+                        <i class="fa-solid fa-person-circle-check"></i>
+                      </div>
+                      <p>${silentTransmission}</p>
+                    </section>
+                  </div>
+
+                  <section class="ch10l4-prevention-section" data-aos="fade-up" data-aos-delay="120">
+                    <h3 class="ch10l4-section-title">
+                      <i class="fa-solid fa-shield-heart"></i>
+                      ${yhLang("How to Prevent HIV Among Adolescents", "তরুন-তরুনীদের মধ্যে কীভাবে এইচআইভি প্রতিরোধ করা যায়")}
+                    </h3>
+                    <ul class="ch10l4-prevention-list">
+                      ${renderPreventionList()}
+                    </ul>
+                    <div class="ch10l4-note-box">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      <p>${preventionNote}</p>
+                    </div>
+                  </section>
+
+                  <section class="ch10l4-treatment-section" data-aos="fade-up" data-aos-delay="160">
+                    <h3 class="ch10l4-section-title">
+                      <i class="fa-solid fa-hospital"></i>
+                      ${yhLang("Treatment", "চিকিৎসা")}
+                    </h3>
+                    <p class="ch10l4-treatment-text">${treatmentInfo}</p>
+                  </section>
                 </div>
               `;
             })(),
