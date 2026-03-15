@@ -5340,263 +5340,6 @@ const coursesData = [
         lessons: [
           {
             id: "ch9-lesson-1",
-            title: yhLang(
-              "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
-              "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
-            ),
-            icon: "fa-virus",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q9a",
-                  question: yhLang(
-                    "যৌনবাহিত সংক্রমণ কীভাবে ছড়ায়?",
-                    "যৌনবাহিত সংক্রমণ কীভাবে ছড়ায়?",
-                  ),
-                  options: [
-                    yhLang(
-                      "যৌনসম্পর্ক ও সংক্রমিত শরীরবাহিত তরল",
-                      "যৌনসম্পর্ক ও সংক্রমিত শরীরবাহিত তরল",
-                    ),
-                    yhLang("শুধু বাতাসে", "শুধু বাতাসে"),
-                    yhLang("শুধু খাবারে", "শুধু খাবারে"),
-                    yhLang("কখনো ছড়ায় না", "কখনো ছড়ায় না"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const introText =
-                "যৌন সম্পর্কের মাধ্যমে একজন থেকে অন্যজনের মধ্যে যেসব সংক্রমণ ছড়ায় সেগুলোই ‘যৌনবাহিত সংক্রমণ’। অন্যদিকে, প্রজনন অঙ্গসমূহের সংক্রমণকে ‘প্রজননতন্ত্রের সংক্রমণ’ বলে। যৌন সম্পর্ক (যৌনবাহিত সংক্রমণ) ছাড়াও সংক্রমিত রক্ত/রক্তজাত দ্রব্য গ্রহণ, সংক্রমিত সূঁচ/যন্ত্রপাতি ও আক্রান্ত মায়ের বুকের দুধের মাধ্যমে প্রজননতন্ত্রের সংক্রমণ হতে পারে। সকল যৌনবাহিত সংক্রমণই প্রজননতন্ত্রের সংক্রমণের আওতায় পড়ে।";
-
-              const causes = [
-                "ব্যক্তিগত অপরিচ্ছন্নতা",
-                "প্রজননতন্ত্রের জীবাণুগুলোর অতিবৃদ্ধি",
-                "অনিরাপদ যৌনমিলন",
-                "জীবাণুযুক্ত পরিবেশ",
-                "সংক্রমিত রক্ত গ্রহণ",
-                "সংক্রমিত মায়ের গর্ভধারণ",
-              ];
-
-              const symptoms = [
-                "যৌনাঙ্গে চুলকানি হওয়া",
-                "যৌনাঙ্গ থেকে দুর্গন্ধযুক্ত বা দুর্গন্ধবিহীন স্রাব যাওয়া",
-                "যৌনাঙ্গ থেকে পুঁজ বা পুঁজের মতো যাওয়া ও বারবার প্রস্রাব হওয়া",
-                "যৌনাঙ্গে ক্ষত হওয়া",
-                "যৌনমিলনে ব্যথা হওয়া",
-                "শরীরে চুলকানি বা ঘামাচির মতো দানা হওয়া",
-                "শরীরে লসিকা গ্রন্থি (কুঁচকি বা অন্যান্য স্থানে গুটি হওয়া)",
-              ];
-
-              const renderList = (items, baseDelay = 80) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              const closingNote =
-                "অধিকাংশ ক্ষেত্রেই যৌনরোগের লক্ষণ বোঝা যায় না। বিশেষ করে ছেলেদের তুলনায় মেয়েদের এই লক্ষণগুলো অপ্রকাশিত থাকে। তাই চিকিৎসা নিতে তারা অনেক দেরি করে ফেলে, যা থেকে জটিলতাও হতে পারে।";
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
-                    "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-0">${introText}</p>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
-                    <div class="row g-4 align-items-start">
-                      <div class="col-lg-6">
-                        <h3 class="gradient-text mb-3">${yhLang(
-                          "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ",
-                          "প্রজননতন্ত্রের সংক্রমণ ও যৌনবাহিত রোগের কারণ",
-                        )}</h3>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(causes)}
-                        </ul>
-                      </div>
-                      <div class="col-lg-6">
-                        <h3 class="gradient-text mb-3">${yhLang(
-                          "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ",
-                          "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ",
-                        )}</h3>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(symptoms, 60)}
-                        </ul>
-                      </div>
-                    </div>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <p class="mb-0 text-muted">${closingNote}</p>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch9-lesson-2",
-            title: yhLang(
-              "যৌনবাহিত রোগের ঝুঁকিসমূহ",
-              "যৌনবাহিত রোগের ঝুঁকিসমূহ",
-            ),
-            icon: "fa-triangle-exclamation",
-            gradientClass: "bg-gradient-purple",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q9b",
-                  question: yhLang(
-                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?",
-                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?",
-                  ),
-                  options: [
-                    yhLang("সচেতনতা ও নিরাপদ আচরণ", "সচেতনতা ও নিরাপদ আচরণ"),
-                    yhLang("ঝুঁকি উপেক্ষা করা", "ঝুঁকি উপেক্ষা করা"),
-                    yhLang("অপরিচ্ছন্ন থাকা", "অপরিচ্ছন্ন থাকা"),
-                    yhLang("অচেনা সূঁচ ব্যবহার", "অচেনা সূঁচ ব্যবহার"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "যৌনবাহিত রোগের ঝুঁকিসমূহ",
-                    "যৌনবাহিত রোগের ঝুঁকিসমূহ",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <figure class="image-card mb-0">
-                      <img src="img/modu9/jouno.png" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                    </figure>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch9-lesson-3",
-            title: yhLang(
-              "Complications of Reproductive or Sexually Transmitted Diseases",
-              "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
-            ),
-            icon: "fa-notes-medical",
-            gradientClass: "bg-gradient-orange",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q9c",
-                  question: yhLang(
-                    "প্রজননতন্ত্রের বা যৌনরোগের কোন জটিলতা ঘটতে পারে?",
-                    "প্রজননতন্ত্রের বা যৌনরোগের কোন জটিলতা ঘটতে পারে?",
-                  ),
-                  options: [
-                    yhLang(
-                      "এইচআইভি সংক্রমণের ঝুঁকি",
-                      "এইচআইভি সংক্রমণের ঝুঁকি",
-                    ),
-                    yhLang(
-                      "মুহূর্তেই সব রোগ সেরে যায়",
-                      "মুহূর্তেই সব রোগ সেরে যায়",
-                    ),
-                    yhLang(
-                      "যেকোনো ওষুধে সার্বজনীন প্রতিরোধ",
-                      "যেকোনো ওষুধে সার্বজনীন প্রতিরোধ",
-                    ),
-                    yhLang(
-                      "শরীরে কোনো প্রভাব পড়ে না",
-                      "শরীরে কোনো প্রভাব পড়ে না",
-                    ),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const complications = [
-                "এইচআইভি সংক্রমণের সম্ভাবনা বেড়ে যায়",
-                "হিউম্যান প্যাপিলোমা ভাইরাসে (এইচপিভি) আক্রান্ত নারীদের জরায়ুর মুখে ক্যান্সার হবার সম্ভাবনা থাকে",
-                "সংক্রমিত নারী বা পুরুষের পরবর্তীতে স্থায়ী বন্ধ্যাত্ব হতে পারে",
-                "মস্তিষ্ক, যকৃত বা হৃৎপিণ্ডে জটিলতা দেখা দিতে পারে",
-                "সংক্রমিত পুরুষের মূত্রনালী সরু হয়ে যেতে পারে",
-                "আক্রান্ত মায়ের গর্ভপাত হতে পারে বা মৃত সন্তান প্রসব করতে পারে",
-                "আক্রান্ত মায়ের জরায়ুর পরিবর্তে ডিম্বনালীতে ভ্রূণ বড় হতে পারে",
-                "আক্রান্ত মায়ের শিশু জন্মগত ত্রুটি নিয়ে বা চোখে ইনফেকশন নিয়ে জন্ম নিতে পারে, যা থেকে পরবর্তীতে অন্ধত্বও হতে পারে",
-              ];
-
-              const management = [
-                "বর্তমানে যৌনবাহিত সংক্রমণে আক্রান্ত তরুন-তরুনীরা প্রাপ্তবয়স্কদের মতো একই ব্যবস্থা পাচ্ছে।",
-                "আদর্শ হলো ঝুঁকি নির্ণয় কৌশল অবলম্বন করে বাছাইকরণ (ট্রায়াজ) পরীক্ষার মাধ্যমে প্রাসঙ্গিক ও পর্যাপ্ত চিকিৎসা প্রদান করা।",
-                "যৌন সংক্রমণের সিনড্রোমিক ব্যবস্থাপনার জন্য বাংলাদেশ সরকারের জাতীয় এইচআইভি এইডস কর্মসূচির (এএসপি) গাইডলাইন ব্যবহার করা যেতে পারে।",
-              ];
-
-              const renderList = (items, baseDelay = 60) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
-                    "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="gradient-text mb-3">${yhLang(
-                      "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
-                      "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(complications)}
-                    </ul>
-                  </section>
-
-                  <section class="modern-card glass-card menstrual-info-card mt-3" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text mb-3">${yhLang(
-                      "তরুন-তরুনীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা",
-                      "তরুন-তরুনীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(management, 80)}
-                    </ul>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch9-lesson-4",
             title: yhLang("STIs and RTIs", "যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণ"),
             icon: "fa-bacteria",
             gradientClass: "bg-gradient-cyan",
@@ -5710,6 +5453,147 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch9-lesson-2",
+            title: yhLang(
+              "যৌনবাহিত রোগের ঝুঁকিসমূহ",
+              "যৌনবাহিত রোগের ঝুঁকিসমূহ",
+            ),
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q9b",
+                  question: yhLang(
+                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?",
+                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?",
+                  ),
+                  options: [
+                    yhLang("সচেতনতা ও নিরাপদ আচরণ", "সচেতনতা ও নিরাপদ আচরণ"),
+                    yhLang("ঝুঁকি উপেক্ষা করা", "ঝুঁকি উপেক্ষা করা"),
+                    yhLang("অপরিচ্ছন্ন থাকা", "অপরিচ্ছন্ন থাকা"),
+                    yhLang("অচেনা সূঁচ ব্যবহার", "অচেনা সূঁচ ব্যবহার"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "যৌনবাহিত রোগের ঝুঁকিসমূহ",
+                    "যৌনবাহিত রোগের ঝুঁকিসমূহ",
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0">
+                      <img src="img/modu9/jouno.png" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                    </figure>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch9-lesson-3",
+            title: yhLang("Complications and Management of STIs", "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ"),
+            icon: "fa-exclamation-triangle",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q9e",
+                  question: yhLang(
+                    "What is the recommended practice for screening and managing STIs in youth?",
+                    "তরুন-তরুনীদের মধ্যে যৌনবাহিত সংক্রমণ শনাক্ত ও চিকিৎসার সুপারিশকৃত পদ্ধতি কী?",
+                  ),
+                  options: [
+                    yhLang(
+                      "Screening tests and following ASP guidelines for treatment",
+                      "স্ক্রিনিং পরীক্ষা এবং এএসপি গাইডলাইন অনুযায়ী চিকিৎসা",
+                    ),
+                    yhLang("Self-medication only", "শুধুমাত্র নিজে নিজে ওষুধ খাওয়া"),
+                    yhLang("No treatment needed", "কোনো চিকিৎসার প্রয়োজন নেই"),
+                    yhLang("Home remedies only", "শুধুমাত্র ঘরোয়া চিকিৎসা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const mainDescription = yhLang(
+                "If symptoms of sexually transmitted diseases appear, they are identified through Screening tests (Pap smear for cervical cancer screening), and treatment is provided according to the guidelines of Bangladesh Government's National HIV AIDS Programme (ASP).",
+                "যৌন বাহিত রোগের লক্ষণ প্রকাশ পেলে, Screening পরীক্ষার মাধ্যমে যৗন রোগ শনাক্ত করা হয়, বাংলাদেশ সরকারের জাতীয় এইচআইভি এইডস কর্মসূচির (এএসপি) গাইডলাইন অনুযায়ী চিকিৎসা করা হয়।"
+              );
+
+              const complicationPoints = [
+                yhLang("Risk of HIV infection increases", "এইচআইভি সংক্রমণের সম্ভাবনা বেড়ে যায়"),
+                yhLang("Women infected with HPV have risk of cervical cancer", "হিউম্যান প্যাপিলোমা ভাইরাসে (এইচপিভি) আক্রান্ত নারীদের জরায়ুর মুখে ক্যান্সার হবার সম্ভাবনা থাকে"),
+                yhLang("Infected individuals may develop permanent infertility", "সংক্রমিত নারী বা পুরুষের পরবর্তীতে স্থায়ী বন্ধ্যাত্ব হতে পারে"),
+                yhLang("Complications may occur in brain, liver, or heart", "মস্তিষ্ক, যকৃত বা হৃৎপিণ্ডে জটিলতা দেখা দিতে পারে"),
+                yhLang("Infected men may develop urethral stricture", "সংক্রমিত পুরুষের মূত্রনালী সরু হয়ে যেতে পারে"),
+                yhLang("Infected mothers may have miscarriages or stillbirths", "আক্রান্ত মায়ের গর্ভপাত হতে পারে বা মৃত সন্তান প্রসব করতে পারে"),
+                yhLang("Infected mothers may develop ectopic pregnancy", "আক্রান্ত মায়ের জরায়ুর পরিবর্তে ডিম্বনালীতে ভ্রূণ বড় হতে পারে"),
+                yhLang("Infected mothers' infants may be born with defects or eye infections leading to blindness", "আক্রান্ত মায়ের শিশু জন্মগত ত্রুটি নিয়ে বা চোখে ইনফেকশন নিয়ে জন্ম নিতে পারে, যা থেকে পরবর্তীতে অন্ধত্বও হতে পারে"),
+              ];
+
+              const complicationIcons = [
+                "fa-virus-covid",
+                "fa-xray",
+                "fa-ban",
+                "fa-brain",
+                "fa-pipe",
+                "fa-heart-crack",
+                "fa-triangle-exclamation",
+                "fa-baby",
+              ];
+
+              function renderComplications(items, icons) {
+                return items
+                  .map(
+                    (text, idx) => `
+                    <li class="ch9l5-list-item ch9l5-li-type${(idx % 4) + 1}" data-aos="fade-left" data-aos-delay="${60 + idx * 30}">
+                      <span class="ch9l5-li-icon"><i class="fa-solid ${icons[idx]}"></i></span>
+                      <span class="ch9l5-li-text">${text}</span>
+                    </li>
+                  `,
+                  )
+                  .join("");
+              }
+
+              return `
+                <div class="ch9l5-slide lesson-slide">
+                  <h2 class="ch9l5-title" data-aos="fade-down">
+                    <i class="fa-solid fa-exclamation-triangle"></i>
+                    ${yhLang("Complications and Management", "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ")}
+                  </h2>
+
+                  
+
+                  <section class="ch9l5-complications-section" data-aos="fade-up" data-aos-delay="80">
+                  
+                    <ul class="ch9l5-list">
+                      ${renderComplications(complicationPoints, complicationIcons)}
+                    </ul>
+                  </section>
+                  <section class="ch9l5-description-box" data-aos="fade-up" data-aos-delay="40">
+                    <h3 class="ch9l5-section-header">
+                      <i class="fa-solid fa-stethoscope"></i>
+                      ${yhLang("Youth STI Management", "তরুন-তরুনীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা")}
+                    </h3>
+                    <p class="ch9l5-desc-text">${mainDescription}</p>
+                  </section>
+                </div>
+              `;
+            })(),
+          }
+          
         ],
       },
       {

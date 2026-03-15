@@ -2706,3 +2706,546 @@
   }
 }
 
+/* ===== MODULE 9 LESSON 5: COMPLICATIONS AND MANAGEMENT OF STIs ===== */
+
+/* Main slide container */
+.ch9l5-slide {
+  position: relative;
+  padding: 20px 24px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.ch9l5-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 28px;
+  padding: 2px;
+  background: linear-gradient(135deg, #fed7aa, #fecaca, #fca5a5);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ch9l5-slide > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Main title */
+.ch9l5-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #c2410c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 0 12px 0;
+  padding: 12px 16px;
+  background-color: rgba(249, 115, 22, 0.08);
+  border-radius: 20px;
+  border-left: 12px solid #f97316;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.18);
+  line-height: 1.2;
+}
+
+.ch9l5-title i {
+  font-size: 2.8rem;
+  color: #f97316;
+}
+
+/* Description box */
+.ch9l5-description-box {
+  position: relative;
+  padding: 16px 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 100%);
+  border: 2px solid #fed7aa;
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.12);
+  margin-bottom: 16px;
+}
+
+.ch9l5-section-header {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #7c2d12;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.ch9l5-section-header i {
+  font-size: 1.4rem;
+  color: #c2410c;
+}
+
+.ch9l5-desc-text {
+  font-size: 1.04rem;
+  color: #4b5563;
+  line-height: 1.72;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Complications section */
+.ch9l5-complications-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  padding: 20px 24px;
+  border-radius: 24px;
+  border: 2px solid rgba(249, 115, 22, 0.2);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.ch9l5-complication-title {
+  font-size: 1.64rem;
+  font-weight: 800;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+.ch9l5-complication-title i {
+  font-size: 1.64rem;
+  color: #dc2626;
+}
+
+/* List styling */
+.ch9l5-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.ch9l5-list-item {
+  position: relative;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.ch9l5-list-item:hover {
+  transform: translateX(6px);
+}
+
+/* Type 1: Red/Critical */
+.ch9l5-li-type1 {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.09), rgba(220, 38, 38, 0.02));
+  border-color: #dc2626;
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.12);
+}
+
+.ch9l5-li-type1:hover {
+  box-shadow: 0 10px 28px rgba(220, 38, 38, 0.22);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.13), rgba(220, 38, 38, 0.04));
+}
+
+/* Type 2: Orange/Warning */
+.ch9l5-li-type2 {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.09), rgba(249, 115, 22, 0.02));
+  border-color: #f97316;
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.12);
+}
+
+.ch9l5-li-type2:hover {
+  box-shadow: 0 10px 28px rgba(249, 115, 22, 0.22);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.13), rgba(249, 115, 22, 0.04));
+}
+
+/* Type 3: Purple/Critical */
+.ch9l5-li-type3 {
+  background: linear-gradient(135deg, rgba(147, 51, 234, 0.09), rgba(147, 51, 234, 0.02));
+  border-color: #9333ea;
+  box-shadow: 0 6px 16px rgba(147, 51, 234, 0.12);
+}
+
+.ch9l5-li-type3:hover {
+  box-shadow: 0 10px 28px rgba(147, 51, 234, 0.22);
+  background: linear-gradient(135deg, rgba(147, 51, 234, 0.13), rgba(147, 51, 234, 0.04));
+}
+
+/* Type 4: Pink/Alert */
+.ch9l5-li-type4 {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.09), rgba(236, 72, 153, 0.02));
+  border-color: #ec4899;
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.12);
+}
+
+.ch9l5-li-type4:hover {
+  box-shadow: 0 10px 28px rgba(236, 72, 153, 0.22);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.13), rgba(236, 72, 153, 0.04));
+}
+
+/* Icon styling */
+.ch9l5-li-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ch9l5-li-type1 .ch9l5-li-icon {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.15);
+}
+
+.ch9l5-li-type1:hover .ch9l5-li-icon {
+  transform: scale(1.12) rotate(-8deg);
+}
+
+.ch9l5-li-type2 .ch9l5-li-icon {
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.15);
+}
+
+.ch9l5-li-type2:hover .ch9l5-li-icon {
+  transform: scale(1.12) rotate(8deg);
+}
+
+.ch9l5-li-type3 .ch9l5-li-icon {
+  color: #9333ea;
+  background: rgba(147, 51, 234, 0.15);
+}
+
+.ch9l5-li-type3:hover .ch9l5-li-icon {
+  transform: scale(1.12) rotate(-8deg);
+}
+
+.ch9l5-li-type4 .ch9l5-li-icon {
+  color: #ec4899;
+  background: rgba(236, 72, 153, 0.15);
+}
+
+.ch9l5-li-type4:hover .ch9l5-li-icon {
+  transform: scale(1.12) rotate(8deg);
+}
+
+/* List text */
+.ch9l5-li-text {
+  font-size: 1.04rem;
+  color: #374151;
+  line-height: 1.64;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet: 1024px-1199px */
+@media (max-width: 1199px) {
+  .ch9l5-slide {
+    padding: 18px 22px;
+  }
+
+  .ch9l5-title {
+    font-size: 2.4rem;
+    gap: 16px;
+    padding: 10px 14px;
+    border-left: 10px solid #f97316;
+  }
+
+  .ch9l5-title i {
+    font-size: 2.4rem;
+  }
+
+  .ch9l5-description-box {
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+
+  .ch9l5-section-header {
+    font-size: 1.28rem;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .ch9l5-section-header i {
+    font-size: 1.28rem;
+  }
+
+  .ch9l5-desc-text {
+    font-size: 1rem;
+    line-height: 1.64;
+  }
+
+  .ch9l5-complications-section {
+    padding: 16px 20px;
+  }
+
+  .ch9l5-complication-title {
+    font-size: 1.44rem;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .ch9l5-complication-title i {
+    font-size: 1.44rem;
+  }
+
+  .ch9l5-list {
+    gap: 8px;
+  }
+
+  .ch9l5-list-item {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .ch9l5-li-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .ch9l5-li-text {
+    font-size: 0.96rem;
+    line-height: 1.56;
+  }
+}
+
+/* Tablet: 768px-1023px */
+@media (max-width: 1023px) {
+  .ch9l5-slide {
+    padding: 16px 18px;
+  }
+
+  .ch9l5-title {
+    font-size: 2rem;
+    gap: 12px;
+    padding: 9px 12px;
+    margin-bottom: 10px;
+  }
+
+  .ch9l5-title i {
+    font-size: 2rem;
+  }
+
+  .ch9l5-description-box {
+    padding: 12px 16px;
+    margin-bottom: 12px;
+  }
+
+  .ch9l5-section-header {
+    font-size: 1.12rem;
+    gap: 9px;
+    margin-bottom: 9px;
+  }
+
+  .ch9l5-section-header i {
+    font-size: 1.12rem;
+  }
+
+  .ch9l5-desc-text {
+    font-size: 0.92rem;
+    line-height: 1.56;
+  }
+
+  .ch9l5-complications-section {
+    padding: 14px 18px;
+  }
+
+  .ch9l5-complication-title {
+    font-size: 1.28rem;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .ch9l5-complication-title i {
+    font-size: 1.28rem;
+  }
+
+  .ch9l5-list {
+    gap: 7px;
+  }
+
+  .ch9l5-list-item {
+    padding: 9px 11px;
+    gap: 9px;
+  }
+
+  .ch9l5-li-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .ch9l5-li-text {
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+}
+
+/* Mobile: 480px-767px */
+@media (max-width: 767px) {
+  .ch9l5-slide {
+    padding: 14px 16px;
+  }
+
+  .ch9l5-title {
+    font-size: 1.6rem;
+    gap: 10px;
+    padding: 8px 11px;
+    border-left: 6px solid #f97316;
+    margin-bottom: 10px;
+  }
+
+  .ch9l5-title i {
+    font-size: 1.6rem;
+  }
+
+  .ch9l5-description-box {
+    padding: 11px 14px;
+    margin-bottom: 10px;
+  }
+
+  .ch9l5-section-header {
+    font-size: 1rem;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .ch9l5-section-header i {
+    font-size: 1rem;
+  }
+
+  .ch9l5-desc-text {
+    font-size: 0.84rem;
+    line-height: 1.48;
+  }
+
+  .ch9l5-complications-section {
+    padding: 12px 16px;
+  }
+
+  .ch9l5-complication-title {
+    font-size: 1.12rem;
+    gap: 9px;
+    margin-bottom: 9px;
+  }
+
+  .ch9l5-complication-title i {
+    font-size: 1.12rem;
+  }
+
+  .ch9l5-list {
+    gap: 6px;
+  }
+
+  .ch9l5-list-item {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .ch9l5-li-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .ch9l5-li-text {
+    font-size: 0.8rem;
+    line-height: 1.42;
+  }
+}
+
+/* Small Mobile: up to 479px */
+@media (max-width: 479px) {
+  .ch9l5-slide {
+    padding: 12px 14px;
+  }
+
+  .ch9l5-title {
+    font-size: 1.32rem;
+    gap: 8px;
+    padding: 7px 10px;
+    border-left: 4px solid #f97316;
+    margin-bottom: 9px;
+  }
+
+  .ch9l5-title i {
+    font-size: 1.32rem;
+  }
+
+  .ch9l5-description-box {
+    padding: 10px 12px;
+    margin-bottom: 9px;
+  }
+
+  .ch9l5-section-header {
+    font-size: 0.92rem;
+    gap: 7px;
+    margin-bottom: 7px;
+  }
+
+  .ch9l5-section-header i {
+    font-size: 0.92rem;
+  }
+
+  .ch9l5-desc-text {
+    font-size: 0.8rem;
+    line-height: 1.42;
+  }
+
+  .ch9l5-complications-section {
+    padding: 11px 14px;
+  }
+
+  .ch9l5-complication-title {
+    font-size: 1rem;
+    gap: 7px;
+    margin-bottom: 8px;
+  }
+
+  .ch9l5-complication-title i {
+    font-size: 1rem;
+  }
+
+  .ch9l5-list {
+    gap: 6px;
+  }
+
+  .ch9l5-list-item {
+    padding: 7px 9px;
+    gap: 8px;
+  }
+
+  .ch9l5-li-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .ch9l5-li-text {
+    font-size: 0.76rem;
+    line-height: 1.4;
+  }
+}
+
