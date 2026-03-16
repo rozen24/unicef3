@@ -5429,14 +5429,6 @@ const coursesData = [
                         </h3>
                         <p class="ch8l6-desc-text">${introText}</p>
                       </section>
-
-                      <section class="ch8l6-risk-description-box" data-aos="fade-up" data-aos-delay="80">
-                        <h3 class="ch8l6-risk-section-header">
-                          <i class="fa-solid fa-exclamation-circle"></i>
-                          ${yhLang("Maternal Risks in Adolescence", "কিশোরীদের মাতৃত্বজনিত ঝুঁকি")}
-                        </h3>
-                        <p class="ch8l6-risk-desc-text">${riskDescription}</p>
-                      </section>
                     </div>
 
                     <div class="ch8l6-right">
@@ -5453,6 +5445,109 @@ const coursesData = [
                         </div>
                         <div class="ch8l6-orbit-ring"></div>
                         ${renderOrbitRisks()}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch8-lesson-7",
+            title: yhLang("Adolescent Pregnancy Prevention", "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"),
+            icon: "fa-shield-halved",
+            content: (() => {
+              const preventionMainTitle = yhLang(
+                "Measures to Prevent Adolescent Pregnancy",
+                "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"
+              );
+
+              const preventionIntroText = yhLang(
+                "For safe motherhood, we must strengthen the following actions to ensure that pregnancy does not occur during adolescence.",
+                "নিরাপদ মাতৃত্বের জন্য তারুন্যকালীন গর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।"
+              );
+
+              const pregnancyRisksTitle = yhLang(
+                "Maternal Risks in Adolescence",
+                "কিশোরীদের মাতৃত্বজনিত ঝুঁকি"
+              );
+
+              const pregnancyRisksText = yhLang(
+                "Pregnancy during adolescence is extremely risky. During this time, a girl's own physical growth remains incomplete and her physical and mental development is still ongoing. During this condition, if pregnancy occurs, both the adolescent mother and child face risks. During pregnancy, along with the adolescent, the growing child inside also needs various services and nutrition, which are often not easily available to the adolescent mother. During pregnancy and childbirth in adolescence, both mother and child may face various risks.",
+                "তারুণ্যে গর্ভধারণ অত্যন্ত ঝুঁকিপূর্ণ। কারণ এ সময় কিশোরীর নিজেরই শারীরিক বৃদ্ধি অসম্পূর্ণ থাকে এবং তার শারীরিক ও মানসিক বিকাশ তখনও চলমান থাকে। এ অবস্থায় গর্ভধারণ করলে কিশোরী মা ও শিশু উভয়ই ঝুঁকির মধ্যে পড়ে যায়। গর্ভাবস্থায় কিশোরীর সাথে সাথে তার মধ্যে বেড়ে ওঠা সন্তানেরও নানা প্রকার সেবা–পুষ্টির দরকার হয় যা কিশোরী মায়ের জন্য সবসময় পাওয়া সচরাচর সম্ভব নয়। তারুণ্যে সন্তান ধারণ এবং জন্মদানের ক্ষেত্রে মা এবং সন্তান নানাবিধ ঝুঁকির সম্মুখীন হতে পারে।"
+              );
+
+              const preventionMeasures = [
+                yhLang("Raising Awareness Against Child Marriage", "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা"),
+                yhLang("Proper Implementation of National Laws (No marriage before 18, No childbirth before 20)", "দেশের প্রচলিত আইনের যথাযথ প্রয়োগ (১৮-এর আগে মেয়েদের বিয়ে নয় ২০-এর আগে সন্তান নয়)"),
+                yhLang("Increasing Public Awareness About Family Planning and Promoting Contraceptive Methods", "পরিবার পরিকল্পনা সম্পর্কে জনগণের মধ্য সচেতনতা বাড়ানো এবং পরিবার পরিকল্পনা পদ্ধতি ব্যবহারে উৎসাহ প্রদান"),
+                yhLang("Increasing Public Awareness About Family Planning and Promoting Contraceptive Methods", "পরিবার পরিকল্পনা সম্পর্কে জনগণের মধ্য সচেতনতা বাড়ানো এবং পরিবার পরিকল্পনা পদ্ধতি ব্যবহারে উৎসাহ প্রদান"),
+                yhLang("Creating Awareness About Dangers and Consequences of Adolescent Pregnancy", "কৈশোরকালীন গর্ভধারণের কুফল ও এর ভয়াবহ পরিণতি সম্পর্কে সচেতনতা তৈরি করা"),
+                yhLang("Counseling Couples to Delay Childbirth Even if Married Young", "কৈশোরে বিয়ে হলেও দেরিতে সন্তান গ্রহণে স্বামী, স্ত্রী ও অভিভাবকদের সচেতন করা"),
+                yhLang("Ensuring Easy Access to Family Planning Methods in Adolescence", "কৈশোরে পরিবার পরিকল্পনা পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা"),
+              ];
+
+              const preventionIcons = [
+                "fa-ban",
+                "fa-gavel",
+                "fa-people-group",
+                "fa-clipboard-check",
+                "fa-triangle-exclamation",
+                "fa-hourglass-end",
+                "fa-circle-plus",
+              ];
+
+              const renderPreventionMeasures = () => {
+                const angleStep = 360 / preventionMeasures.length;
+                return preventionMeasures
+                  .map((measure, idx) => {
+                    const angle = angleStep * idx;
+                    return `
+                      <div class="ch8l7-orbit-item" style="--angle: ${angle}deg; --item-index: ${idx};" data-aos="" data-aos-delay="">
+                        <div class="ch8l7-orbit-card ch8l7-prevention-type-${(idx % 3) + 1}">
+                          <div class="ch8l7-orbit-card-icon">
+                            <i class="fa-solid ${preventionIcons[idx]}"></i>
+                          </div>
+                          <span class="ch8l7-orbit-card-text">${measure}</span>
+                        </div>
+                      </div>
+                    `;
+                  })
+                  .join("");
+              };
+
+              return `
+                <div class="ch8l7-slide lesson-slide">
+                  <h2 class="ch8l7-title">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    ${preventionMainTitle}
+                  </h2>
+
+                  <div class="ch8l7-content-wrapper">
+                    <div class="ch8l7-left">
+                      <section class="ch8l7-description-box" data-aos="fade-up" data-aos-delay="40">
+                        <h3 class="ch8l7-section-header">
+                          <i class="fa-solid fa-info-circle"></i>
+                          <p class="ch8l7-desc-text">${preventionIntroText}</p>
+                        </h3>
+                      </section>
+
+                    </div>
+
+                    <div class="ch8l7-right py-3">
+                      <div class="ch8l7-orbit-container" data-aos="" data-aos-delay="">
+                        <div class="ch8l7-orbit-center">
+                          <div class="ch8l7-orbit-center-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                          </div>
+                          <div class="ch8l7-orbit-center-text">
+                            <h2 class="text-white">
+                              ${yhLang("Prevention Measures", "প্রতিরোধে করণীয়")}
+                            </h2>
+                          </div>
+                        </div>
+                        <div class="ch8l7-orbit-ring"></div>
+                        ${renderPreventionMeasures()}
                       </div>
                     </div>
                   </div>
