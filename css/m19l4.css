@@ -59,7 +59,7 @@
 .m19l4-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #C2185B;
+  color: #2856ff;
   margin-bottom: 0.8rem;
   display: flex;
   align-items: center;
@@ -102,7 +102,7 @@
 }
 
 .m19l4-data-table thead th {
-  background: linear-gradient(135deg, #C2185B, #E91E63);
+  background: linear-gradient(135deg, #2856ff, #E91E63);
   color: #FFFFFF;
   font-size: 0.82rem;
   font-weight: 700;
@@ -426,7 +426,7 @@
 .m19l4-food-text em {
   font-style: normal;
   font-weight: 600;
-  color: #C2185B;
+  color: #2856ff;
 }
 
 /* Legend Section */

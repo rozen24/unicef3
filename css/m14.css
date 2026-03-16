@@ -822,7 +822,7 @@
 
 .m14l3-grid {
 	display: grid;
-	grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr);
+	grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr);
 	gap: 6px;
 }
 

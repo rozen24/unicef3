@@ -136,7 +136,7 @@
 
 /* Girls Card */
 .m19l2-girls-card {
-  color: #C2185B;
+  color: #2856ff;
   border-top: 6px solid #FFB6C1;
   background: linear-gradient(135deg, #FFF9FC 0%, white 100%);
 }
@@ -170,7 +170,7 @@
 
 .m19l2-girls-header i {
   background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(244, 67, 54, 0.2));
-  color: #C2185B;
+  color: #2856ff;
 }
 
 .m19l2-boys-header i {

@@ -6272,7 +6272,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m16l1-benefit-a .m16l1-benefit-icon { background: linear-gradient(135deg, #5c6bc0, #3f51b5); box-shadow: 0 2px 6px rgba(92, 107, 192, 0.24); }
 
 .m16l1-benefit-b { border-left-color: #ec407a; }
-.m16l1-benefit-b .m16l1-benefit-icon { background: linear-gradient(135deg, #ec407a, #c2185b); box-shadow: 0 2px 6px rgba(236, 64, 122, 0.24); }
+.m16l1-benefit-b .m16l1-benefit-icon { background: linear-gradient(135deg, #ec407a, #2856ff); box-shadow: 0 2px 6px rgba(236, 64, 122, 0.24); }
 
 .m16l1-benefit-c { border-left-color: #26c6da; }
 .m16l1-benefit-c .m16l1-benefit-icon { background: linear-gradient(135deg, #26c6da, #0097a7); box-shadow: 0 2px 6px rgba(38, 198, 218, 0.24); }
@@ -7355,7 +7355,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #ec407a, #2856ff);
   color: #fff;
   font-size: 0.8rem;
   box-shadow: 0 2px 8px rgba(236, 64, 122, 0.24);
@@ -7377,7 +7377,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #ec407a, #2856ff);
   color: #fff;
   font-size: 0.68rem;
   line-height: 20px;
@@ -8063,7 +8063,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #ec407a, #2856ff);
   color: #fff;
   font-size: 0.8rem;
   box-shadow: 0 2px 8px rgba(233, 30, 99, 0.24);
@@ -8077,7 +8077,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0 0 6px;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #c2185b;
+  color: #2856ff;
 }
 
 .m16l4-diversity-text {
@@ -8326,7 +8326,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #ec407a, #2856ff);
   color: #fff;
   box-shadow: 0 4px 12px rgba(236, 64, 122, 0.32);
   animation: m16l5Pulse 3s ease-in-out infinite;
@@ -8351,7 +8351,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.2;
-  background: linear-gradient(135deg, #c2185b, #ec407a);
+  background: linear-gradient(135deg, #2856ff, #ec407a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -8446,7 +8446,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #ec407a, #2856ff);
   color: #fff;
   font-size: 0.8rem;
   box-shadow: 0 2px 8px rgba(236, 64, 122, 0.24);
@@ -8456,7 +8456,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0;
   font-size: 0.86rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #c2185b, #ec407a);
+  background: linear-gradient(135deg, #2856ff, #ec407a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -8565,12 +8565,12 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m16l5-method-selftalk {
-  border-left-color: #c2185b;
-  color: #c2185b;
+  border-left-color: #2856ff;
+  color: #2856ff;
 }
 
 .m16l5-method-selftalk .m16l5-method-icon {
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #ec407a, #2856ff);
   box-shadow: 0 2px 6px rgba(194, 24, 91, 0.24);
 }
 
@@ -8589,7 +8589,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
     background: linear-gradient(135deg,
       #880e4f 0%,
       #ad1457 22%,
-      #c2185b 42%,
+      #2856ff 42%,
       #e91e63 68%,
       #ec407a 100%
     );
@@ -9080,12 +9080,12 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m16l6-principle--accountability {
-  border-left-color: #b71c1c;
-  color: #b71c1c;
+  border-left-color: #6e4f4f;
+  color: #6e4f4f;
 }
 
 .m16l6-principle--accountability .m16l6-principle-icon {
-  background: linear-gradient(135deg, #ef5350, #b71c1c);
+  background: linear-gradient(135deg, #ef5350, #6e4f4f);
   box-shadow: 0 2px 6px rgba(183, 28, 28, 0.3);
 }
 
@@ -9560,12 +9560,12 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m17l1-cause-pleasure {
-  border-left-color: #c2185b;
-  color: #c2185b;
+  border-left-color: #2856ff;
+  color: #2856ff;
 }
 
 .m17l1-cause-pleasure .m17l1-cause-icon {
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #ec407a, #2856ff);
   box-shadow: 0 2px 6px rgba(194, 24, 91, 0.24);
 }
 
@@ -9826,7 +9826,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 .m17l2-physical-signs-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px
 }
 .m17l2-behavioral-signs-list {
@@ -9987,12 +9987,12 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m17l2-sign-heart {
-  border-left-color: #c2185b;
-  color: #c2185b;
+  border-left-color: #2856ff;
+  color: #2856ff;
 }
 
 .m17l2-sign-heart .m17l2-sign-icon {
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #ec407a, #2856ff);
   box-shadow: 0 2px 6px rgba(194, 24, 91, 0.24);
 }
 
@@ -10536,8 +10536,8 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m17l3-cons-health { color: #ef6c00; border-left-color: #ef6c00; background: rgba(255, 243, 224, 0.9); }
 .m17l3-cons-health .m17l3-list-icon { background: linear-gradient(135deg, #ffb74d, #ef6c00); }
 
-.m17l3-cons-sexual { color: #c2185b; border-left-color: #c2185b; background: rgba(252, 228, 236, 0.9); }
-.m17l3-cons-sexual .m17l3-list-icon { background: linear-gradient(135deg, #ec407a, #c2185b); }
+.m17l3-cons-sexual { color: #2856ff; border-left-color: #2856ff; background: rgba(252, 228, 236, 0.9); }
+.m17l3-cons-sexual .m17l3-list-icon { background: linear-gradient(135deg, #ec407a, #2856ff); }
 
 .m17l3-cons-pregnancy { color: #5e35b1; border-left-color: #5e35b1; background: rgba(237, 231, 246, 0.9); }
 .m17l3-cons-pregnancy .m17l3-list-icon { background: linear-gradient(135deg, #7e57c2, #5e35b1); }
@@ -15778,7 +15778,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 .m22l7-chem-hydrocarbon { border-left-color: #ec407a; }
 .m22l7-chem-hydrocarbon .m22l7-chem-icon i {
-  background: linear-gradient(135deg, #ec407a, #c2185b);
+  background: linear-gradient(135deg, #ec407a, #2856ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   box-shadow: 0 2px 7px rgba(236, 64, 122, 0.25);
@@ -15906,7 +15906,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #383838, #c2185b);
+  background: linear-gradient(135deg, #383838, #2856ff);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -14724,7 +14724,7 @@ const coursesData = [
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(233, 30, 99, 0.15);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #c2185b;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #2856ff;">
                       <i class="fa-solid fa-lightbulb" style="margin-right: 10px; font-size: 24px; color: #f06292;"></i>
                       সম্ভাবনাময় সময়
                     </h3>
@@ -14772,7 +14772,7 @@ const coursesData = [
 
               const secondaryList = [
                 { icon: "fa-house-tsunami", color: "#0288d1", text: "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া কিশোর-কিশোরী;" },
-                { icon: "fa-person-walking-arrow-right", color: "#c2185b", text: "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া কিশোর-কিশোরী;" },
+                { icon: "fa-person-walking-arrow-right", color: "#2856ff", text: "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া কিশোর-কিশোরী;" },
                 { icon: "fa-burst", color: "#d84315", text: "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত কিশোর-কিশোরী;" },
                 { icon: "fa-tent", color: "#f57c00", text: "শরণার্থী শিবিরে বসবাসরত কিশোর-কিশোরী;" },
                 { icon: "fa-mountain", color: "#558b2f", text: "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার কিশোর-কিশোরী" },
@@ -14838,7 +14838,7 @@ const coursesData = [
                 { icon: "fa-shield-halved", color: "#d32f2f", text: "<strong>সংকট ব্যবস্থাপনা:</strong> সুবিধাবঞ্চিত পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।" },
                 { icon: "fa-people-group", color: "#f57c00", text: "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> কিশোর-কিশোরীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।" },
                 { icon: "fa-bell", color: "#0288d1", text: "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও সুবিধা মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।" },
-                { icon: "fa-brain", color: "#c2185b", text: "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> কিশোর-কিশোরীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।" },
+                { icon: "fa-brain", color: "#2856ff", text: "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> কিশোর-কিশোরীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।" },
               ];
 
               const renderList = (items) =>
@@ -14927,8 +14927,8 @@ const coursesData = [
                         </div>
                         
                         <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #ffebee 0%, #fce4ec 50%, #f8bbd0 100%); border-radius: 28px; box-shadow: 0 16px 48px rgba(233, 30, 99, 0.28), 0 6px 16px rgba(194, 24, 91, 0.2); margin-top: 20px;">
-                          <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #c2185b; font-weight: 700;">
-                            <span style="background: linear-gradient(135deg, #e91e63, #c2185b); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);">
+                          <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #2856ff; font-weight: 700;">
+                            <span style="background: linear-gradient(135deg, #e91e63, #2856ff); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);">
                               <i class="fa-solid fa-temperature-arrow-up" style="font-size: 24px; color: #fff;"></i>
                             </span>
                             ${yhLang("Climate Change: A Global Reality", "জলবায়ু পরিবর্তন")}
@@ -15353,7 +15353,7 @@ const coursesData = [
                 if (item.includes('বুদ্ধি') || item.includes('স্মৃতিশক্তি') || item.includes('intelligence') || item.includes('memory')) return { icon: 'fa-book-medical', color: '#6a1b9a', bg: 'rgba(106,27,154,.12)' };
                 if (item.includes('কিডনি') || item.includes('Kidney')) return { icon: 'fa-person-breastfeeding', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
                 if (item.includes('লিভার') || item.includes('Liver') || item.includes('liver')) return { icon: 'fa-user-doctor', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('ক্যান্সার') || item.includes('cancer')) return { icon: 'fa-ribbon', color: '#b71c1c', bg: 'rgba(183,28,28,.12)' };
+                if (item.includes('ক্যান্সার') || item.includes('cancer')) return { icon: 'fa-ribbon', color: '#6e4f4f', bg: 'rgba(183,28,28,.12)' };
                 if (item.includes('হরমোন') || item.includes('Hormonal')) return { icon: 'fa-dna', color: '#880e4f', bg: 'rgba(136,14,79,.12)' };
                 if (item.includes('হৃদরোগ') || item.includes('heart')) return { icon: 'fa-heart-pulse', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
                 return { icon: 'fa-circle-check', color: '#7b1fa2', bg: 'rgba(123,31,162,.12)' };
@@ -15379,7 +15379,7 @@ const coursesData = [
                 if (title.includes('পেটের সমস্যা') || title.includes('Digestive')) return { icon: 'fa-person-breastfeeding', color: '#ff6f00', gradient: 'linear-gradient(135deg,#ff8f00,#672dc5)' };
                 if (title.includes('রাসায়নিক দূষণ') || title.includes('Chemical')) return { icon: 'fa-flask', color: '#d32f2f', gradient: 'linear-gradient(135deg,#e53935,#c62828)' };
                 if (title.includes('ত্বকের রোগ') || title.includes('Skin')) return { icon: 'fa-hand-dots', color: '#f57c00', gradient: 'linear-gradient(135deg,#fb8c00,#ef6c00)' };
-                if (title.includes('দীর্ঘমেয়াদি') || title.includes('ক্রনিক') || title.includes('Long-term') || title.includes('Chronic')) return { icon: 'fa-heart-circle-xmark', color: '#c62828', gradient: 'linear-gradient(135deg,#d32f2f,#b71c1c)' };
+                if (title.includes('দীর্ঘমেয়াদি') || title.includes('ক্রনিক') || title.includes('Long-term') || title.includes('Chronic')) return { icon: 'fa-heart-circle-xmark', color: '#c62828', gradient: 'linear-gradient(135deg,#d32f2f,#6e4f4f)' };
                 return { icon: 'fa-circle-info', color: '#7b1fa2', gradient: 'linear-gradient(135deg,#8e24aa,#6a1b9a)' };
               };
 
@@ -15591,10 +15591,10 @@ const coursesData = [
                     ${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}
                   </h2>
                   <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#ffebee 0%,#ffcdd2 100%);border-radius:22px;box-shadow:0 10px 35px rgba(198,40,40,.18);">
-                    <h5 style="display:flex;align-items:center;color:#b71c1c;"> <i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}</h5>
+                    <h5 style="display:flex;align-items:center;color:#6e4f4f;"> <i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>${yhLang("Lead and Other Hazardous Chemicals", "সীসা এবং অন্যান্য বিপজ্জনক রাসায়নিক")}</h5>
 
                     <p>উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে ।</p>
-                    <h5 style="display:flex;align-items:center;color:#b71c1c;"><i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:</h5>
+                    <h5 style="display:flex;align-items:center;color:#6e4f4f;"><i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:</h5>
                     <p>পানির চেয়ে ৫ গুণ বা তার বেশি পারমাণবিক ঘনত্ব সম্পন্ন ধাতুসমূহের গ্রুপকে ভারী ধাতু বা ক্ষতিকারক রাসায়নিক পদার্থ হিসাবে উল্লেখ করা হয়। জনস্বাস্থ্যের জন্য প্রধান প্রধান ক্ষতিকারক রাসায়নিক পদার্থ  গুলি নীচে দেয়া হল:</p>
                   </div>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="60">

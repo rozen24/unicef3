@@ -18999,7 +18999,7 @@ const orbitItems = [
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius: 14px; padding: 9px; box-shadow: 0 5px 18px rgba(233, 30, 99, 0.12);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #c2185b; font-size: 1em;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #2856ff; font-size: 1em;">
                       <i class="fa-solid fa-lightbulb" style="margin-right: 8px; font-size: 16px; color: #f06292;"></i>
                       ${yhLang("Potentially Vulnerable Period", "সম্ভাবনাময় সময়")}
                     </h3>
@@ -19045,7 +19045,7 @@ const orbitItems = [
                 },
                 {
                   icon: "fa-person-walking-arrow-right",
-                  color: "#c2185b",
+                  color: "#2856ff",
                   text: yhLang(
                     "Adolescents who are trafficked or forced into sex work",
                     "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া তরুন-তরুনী;",
@@ -19316,7 +19316,7 @@ const orbitItems = [
                 },
                 {
                   icon: "fa-brain",
-                  color: "#c2185b",
+                  color: "#2856ff",
                   text: yhLang(
                     "<strong>Building Self-Reliance and Confidence:</strong> Increase adolescents' self-confidence and self-reliance so they can solve their own problems and face life’s challenges.",
                     "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> তরুন-তরুনীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।",
@@ -19413,8 +19413,8 @@ const orbitItems = [
                           </div>
                         
                           <div class="modern-card p-1 glass-card" data-aos="fade-up" data-aos-delay="80" style="border-radius: 28px; box-shadow: 0 16px 48px rgba(233, 30, 99, 0.28), 0 6px 16px rgba(194, 24, 91, 0.2); margin-top: 20px;">
-                            <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #c2185b; font-weight: 700;">
-                              <span style="background: linear-gradient(135deg, #e91e63, #c2185b); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);">
+                            <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #2856ff; font-weight: 700;">
+                              <span style="background: linear-gradient(135deg, #e91e63, #2856ff); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);">
                                 <i class="fa-solid fa-temperature-arrow-up" style="font-size: 24px; color: #fff;"></i>
                               </span>
                               ${yhLang("Climate Change: A Global Reality", "জলবায়ু পরিবর্তন")}
@@ -19763,7 +19763,7 @@ const orbitItems = [
                 if (item.includes("অকাল জন্ম") || item.includes("Preterm"))
                   return {
                     icon: "fa-hourglass-end",
-                    color: "#c2185b",
+                    color: "#2856ff",
                     bg: "rgba(194,24,91,.12)",
                   };
                 if (
@@ -19817,7 +19817,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-ribbon",
-                    color: "#b71c1c",
+                    color: "#6e4f4f",
                     bg: "rgba(183,28,28,.12)",
                   };
                 if (item.includes("মৃত্যুহার") || item.includes("mortality"))
@@ -19891,8 +19891,8 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-baby",
-                    color: "#c2185b",
-                    gradient: "linear-gradient(135deg,#e91e63,#c2185b)",
+                    color: "#2856ff",
+                    gradient: "linear-gradient(135deg,#e91e63,#2856ff)",
                   };
                 if (
                   title.includes("শ্বাসযন্ত্রের") ||
@@ -19950,7 +19950,7 @@ const orbitItems = [
                     <div class="col-12 col-lg-6">
                       <div class="modern-card glass-card h-100" style="border-radius:16px; color: #000;padding:3px;box-shadow:0 8px 24px rgba(233,30,99,.18), 0 3px 12px rgba(194,24,91,.12);">
                         <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:3px;font-weight:700;font-size:1em;">
-                          <span style="background:linear-gradient(135deg,#ec407a,#c2185b);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(236,64,122,.3), 0 1px 6px rgba(194,24,91,.18);"><i class="fa-solid fa-heart-pulse" style="color:#fff;font-size:16px;"></i></span>
+                          <span style="background:linear-gradient(135deg,#ec407a,#2856ff);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(236,64,122,.3), 0 1px 6px rgba(194,24,91,.18);"><i class="fa-solid fa-heart-pulse" style="color:#fff;font-size:16px;"></i></span>
                           ${yhLang("Health Effects (Birth & Respiratory)", "বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থগত প্রভাব")}
                         </h3>
 
@@ -20348,7 +20348,7 @@ const orbitItems = [
                 if (item.includes("ক্যান্সার") || item.includes("cancer"))
                   return {
                     icon: "fa-ribbon",
-                    color: "#b71c1c",
+                    color: "#6e4f4f",
                     bg: "rgba(183,28,28,.12)",
                   };
                 if (item.includes("হরমোন") || item.includes("Hormonal"))
@@ -20426,7 +20426,7 @@ const orbitItems = [
                   return {
                     icon: "fa-heart-circle-xmark",
                     color: "#c62828",
-                    gradient: "linear-gradient(135deg,#d32f2f,#b71c1c)",
+                    gradient: "linear-gradient(135deg,#d32f2f,#6e4f4f)",
                   };
                 return {
                   icon: "fa-circle-info",

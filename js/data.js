@@ -5331,7 +5331,7 @@ const coursesData = [
           },
           {
             id: "ch8-lesson-6",
-            title: yhLang("Maternal Risks in Adolescence", "তারুন্যকালীন মাতৃত্ব"),
+            title: yhLang("Maternal Risks in Adolescence", "তারুণ্যেমাতৃত্ব"),
             icon: "fa-person-pregnant",
             gradientClass: "bg-gradient-amber",
             audioFile: "",
@@ -5342,7 +5342,7 @@ const coursesData = [
                   id: "q8f",
                   question: yhLang(
                     "What are the main risks of adolescent pregnancy?",
-                    "তারুন্যকালীন গর্ভধারণের প্রধান ঝুঁকিগুলি কী?",
+                    "তারুণ্যেগর্ভধারণের প্রধান ঝুঁকিগুলি কী?",
                   ),
                   options: [
                     yhLang(
@@ -5413,7 +5413,7 @@ const coursesData = [
                 <div class="ch8l6-slide lesson-slide">
                   <h2 class="ch8l6-title" data-aos="fade-down">
                     <i class="fa-solid fa-person-pregnant"></i>
-                    ${yhLang("Adolescent Motherhood Risks", "তারুন্যকালীন মাতৃত্ব")}
+                    ${yhLang("Adolescent Motherhood Risks", "তারুণ্যেমাতৃত্ব")}
                   </h2>
 
                   <div class="ch8l6-content-wrapper">
@@ -5424,7 +5424,7 @@ const coursesData = [
                               <section class="ch8l6-description-box" data-aos="fade-up" data-aos-delay="40">
                                 <h3 class="ch8l6-section-header">
                                   <i class="fa-solid fa-info-circle"></i>
-                                  ${yhLang("Understanding Adolescent Pregnancy", "তারুন্যকালীন গর্ভধারণ")}
+                                  ${yhLang("Understanding Adolescent Pregnancy", "তারুণ্যেগর্ভধারণ")}
                                 </h3>
                                 <p class="ch8l6-desc-text">${introText}</p>
                               </section>
@@ -5469,7 +5469,7 @@ const coursesData = [
 
               const preventionIntroText = yhLang(
                 "For safe motherhood, we must strengthen the following actions to ensure that pregnancy does not occur during adolescence.",
-                "নিরাপদ মাতৃত্বের জন্য তারুন্যকালীন গর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।"
+                "নিরাপদ মাতৃত্বের জন্য তারুণ্যেগর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।"
               );
 
               const pregnancyRisksTitle = yhLang(
@@ -7933,116 +7933,107 @@ const orbitItems = [
               ]
             },
             content: (function () {
-              const actionItems = [
-                {
-                  num: "১",
-                  text: yhLang(
-                    "Create awareness against gender discrimination at all levels of society",
-                    "জেন্ডার বৈষম্য রোধে সমাজের সকল স্তরে সচেতনতার সৃষ্টি করা"
-                  ),
-                  icon: "fa-lightbulb",
-                  type: "type1"
-                },
-                {
-                  num: "২",
-                  text: yhLang(
-                    "Girls and boys should grow up with equal status and freedom, identified only as human beings",
-                    "সম মর্যাদা, স্বাধীনতা নিয়ে নারী-পুরুষ বেড়ে উঠবে, যার পরিচয় হবে শুধু মানুষ হিসেবে"
-                  ),
-                  icon: "fa-people-group",
-                  type: "type2"
-                },
-                {
-                  num: "৩",
-                  text: yhLang(
-                    "Both men and women should perform similar roles as humans, not different roles based on gender",
-                    "নারী পুরুষ হিসেবে ভিন্ন ভিন্ন ভূমিকা পালন না করে মানুষ হিসেবে একই রকম ভূমিকা পালন করবে"
-                  ),
-                  icon: "fa-balance-scale",
-                  type: "type3"
-                },
-                {
-                  num: "৪",
-                  text: yhLang(
-                    "Ensure all human rights for women including education, employment, healthcare, and prevention of violence",
-                    "নারী শিক্ষা, নারীর কর্মসংস্থানের সুযোগ, নারীর স্বাস্থ্যসেবা প্রাপ্তি, নারী নির্যাতন প্রতিরোধসহ নারীর জন্য সকল মানবাধিকার নিশ্চিত করা"
-                  ),
-                  icon: "fa-heart",
-                  type: "type1"
-                },
-                {
-                  num: "৫",
-                  text: yhLang(
-                    "Develop skilled women workforce alongside men for employment and business, contributing to national development",
-                    "পুরুষের পাশাপাশি নারীদেরও চাকরি ও ব্যবসাসহ বিভিন্ন উন্নয়নমূলক কাজের সাথে সম্পৃক্ত হতে হবে, তাই দেশের সার্বিক উন্নয়নে পুরুষের পাশাপাশি দক্ষ নারীশক্তি গড়ে তোলা"
-                  ),
-                  icon: "fa-briefcase",
-                  type: "type2"
-                },
-                {
-                  num: "৬",
-                  text: yhLang(
-                    "Ensure equal participation of men and women in all activities based on competence",
-                    "দক্ষতা অনুসারে সকল কর্মকাণ্ডে নারী-পুরুষের সমান অংশগ্রহণ নিশ্চিত করা"
-                  ),
-                  icon: "fa-users",
-                  type: "type3"
-                },
-                {
-                  num: "৭",
-                  text: yhLang(
-                    "Give importance to women's opinions in decision-making processes at family and community levels",
-                    "পরিবার ও সমাজে সিদ্ধান্ত গ্রহণের ক্ষেত্রে নারীদের মতামতকে গুরুত্ব দেয়া"
-                  ),
-                  icon: "fa-microphone",
-                  type: "type1"
-                },
-                {
-                  num: "৮",
-                  text: yhLang(
-                    "Ensure provision of all legal assistance in protecting women's rights",
-                    "নারীর অধিকার রক্ষায় সকল প্রকার আইনি সহায়তা প্রদান নিশ্চিত করা"
-                  ),
-                  icon: "fa-gavel",
-                  type: "type2"
-                },
-                {
-                  num: "৯",
-                  text: yhLang(
-                    "Ensure women's empowerment by maintaining equality between men and women",
-                    "নারী ও পুরুষের সমতা বজায় রাখার মাধ্যমে নারীর ক্ষমতায়ন নিশ্চিত করা"
-                  ),
-                  icon: "fa-bolt",
-                  type: "type3"
-                },
-                {
-                  num: "১০",
-                  text: yhLang(
-                    "Enforce existing laws of the country to provide protection for women",
-                    "নারীকে সুরক্ষা প্রদানের জন্য দেশের প্রচলিত আইনের প্রয়োগ করা"
-                  ),
-                  icon: "fa-shield",
-                  type: "type1"
-                },
-                {
-                  num: "১১",
-                  text: yhLang(
-                    "Collectively identify and prevent customs and practices that perpetuate gender discrimination",
-                    "যে সব প্রথা বা রীতিনীতি জেন্ডার বৈষম্য টিকিয়ে রাখছে তা চিহ্নিত করে সম্মিলিতভাবে তা প্রতিরোধ করা"
-                  ),
-                  icon: "fa-hand-fist",
-                  type: "type2"
-                },
-                {
-                  num: "১২",
-                  text: yhLang(
-                    "Work together as a unified society to eliminate all forms of gender discrimination",
-                    "সমাজ সকলে একসাথে মিলে জেন্ডার বৈষম্য দূর করার জন্য কাজ করা"
-                  ),
-                  icon: "fa-handshake",
-                  type: "type3"
-                }
-              ];
+             const actionItems = [
+  {
+    num: "১",
+    text: yhLang(
+      "Create awareness against gender discrimination at all levels of society.",
+      "জেন্ডার বৈষম্য রোধে সমাজের সকল স্তরে সচেতনতার সৃষ্টি করা;"
+    ),
+    icon: "fa-lightbulb",
+    type: "type1"
+  },
+  {
+    num: "২",
+    text: yhLang(
+      "Girls and boys should grow up with equal dignity and freedom, identified simply as human beings.",
+      "সম মর্যাদা, স্বাধীনতা নিয়ে নারী-পুরুষ বেড়ে উঠবে, যার পরিচয় হবে শুধু মানুষ হিসেবে।"
+    ),
+    icon: "fa-people-group",
+    type: "type2"
+  },
+  {
+    num: "৩",
+    text: yhLang(
+      "Men and women should perform similar roles as human beings rather than different roles based on gender.",
+      "নারী পুরুষ হিসেবে ভিন্ন ভিন্ন ভূমিকা পালন না করে মানুষ হিসেবে একই রকম ভূমিকা পালন করবে;"
+    ),
+    icon: "fa-balance-scale",
+    type: "type3"
+  },
+  {
+    num: "৪",
+    text: yhLang(
+      "Ensure all human rights for women including education, employment opportunities, healthcare, and prevention of violence.",
+      "নারী শিক্ষা, নারীর কর্মসংস্থানের সুযোগ, নারীর স্বাস্থ্যসেবা প্রাপ্তি, নারী নির্যাতন প্রতিরোধসহ নারীর জন্য সকল মানবাধিকার নিশ্চিত করা;"
+    ),
+    icon: "fa-heart",
+    type: "type1"
+  },
+  {
+    num: "৫",
+    text: yhLang(
+      "Alongside men, women should also participate in jobs, businesses, and development activities to build a skilled female workforce for national development.",
+      "পুরুষের পাশাপাশি নারীদেরও চাকরি ও ব্যবসাসহ বিভিন্ন উন্নয়নমূলক কাজের সাথে সম্পৃক্ত হতে হবে, তাই দেশের সার্বিক উন্নয়নে পুরুষের পাশাপাশি দক্ষ নারীশক্তি গড়ে তোলা;"
+    ),
+    icon: "fa-briefcase",
+    type: "type2"
+  },
+  {
+    num: "৬",
+    text: yhLang(
+      "Ensure equal participation of men and women in all activities based on competence.",
+      "দক্ষতা অনুসারে সকল কর্মকাণ্ডে নারী-পুরুষের সমান অংশগ্রহণ নিশ্চিত করা;"
+    ),
+    icon: "fa-users",
+    type: "type3"
+  },
+  {
+    num: "৭",
+    text: yhLang(
+      "Give importance to women's opinions in decision-making processes within families and communities.",
+      "পরিবার ও সমাজে সিদ্ধান্ত গ্রহণের ক্ষেত্রে নারীদের মতামতকে গুরুত্ব দেয়া;"
+    ),
+    icon: "fa-microphone",
+    type: "type1"
+  },
+  {
+    num: "৮",
+    text: yhLang(
+      "Ensure all types of legal assistance to protect women's rights.",
+      "নারীর অধিকার রক্ষায় সকল প্রকার আইনি সহায়তা প্রদান নিশ্চিত করা;"
+    ),
+    icon: "fa-gavel",
+    type: "type2"
+  },
+  {
+    num: "৯",
+    text: yhLang(
+      "Ensure women's empowerment by maintaining equality between men and women.",
+      "নারী ও পুরুষের সমতা বজায় রাখার মাধ্যমে নারীর ক্ষমতায়ন নিশ্চিত করা"
+    ),
+    icon: "fa-bolt",
+    type: "type3"
+  },
+  {
+    num: "১০",
+    text: yhLang(
+      "Enforce existing national laws to ensure protection for women.",
+      "নারীকে সুরক্ষা প্রদানের জন্য দেশের প্রচলিত আইনের প্রয়োগ করা;"
+    ),
+    icon: "fa-shield",
+    type: "type1"
+  },
+  {
+    num: "১১",
+    text: yhLang(
+      "Identify and collectively prevent customs and practices that perpetuate gender discrimination.",
+      "যে সব প্রথা বা রীতিনীতি জেন্ডার বৈষম্য টিকিয়ে রাখছে তা চিহ্নিত করে সম্মিলিতভাবে তা প্রতিরোধ করা"
+    ),
+    icon: "fa-hand-fist",
+    type: "type2"
+  }
+];
 
               const renderItems = () =>
                 actionItems
@@ -8602,14 +8593,14 @@ const orbitItems = [
         id: "ch-14",
         title: yhLang(
           "Module-14: Sex, Gender and Gender Discrimination",
-          "মডিউল-১৪: তারুন্যকালীন মনোসামাজিক পরিবর্তন ও জটিলতাসমূহ",
+          "মডিউল-১৪: তারুণ্যে মনোসামাজিক পরিবর্তন ও জটিলতাসমূহ",
         ),
         lessons: [
           {
             id: "ch14-lesson-1",
             title: yhLang(
               "Adolescent Psychosocial Changes",
-              "তারুন্যকালীন মনোসামাজিক পরিবর্তন",
+              "তারুণ্যে মনোসামাজিক পরিবর্তন",
             ),
             icon: "fa-person",
             gradientClass: "bg-gradient-indigo",
@@ -8831,7 +8822,7 @@ const orbitItems = [
                   <header class="m14l1-header" data-aos="fade-up">
                     <h2 class="m14l1-title">
                       <i class="fa-solid fa-person"></i>
-                      ${yhLang("Psychosocial transitions in adolescence", "তারুন্যকালীন মনোসামাজিক পরিবর্তন")}
+                      ${yhLang("Psychosocial transitions in adolescence", "তারুণ্যে মনোসামাজিক পরিবর্তন")}
                     </h2>
                   </header>
 
@@ -8865,7 +8856,7 @@ const orbitItems = [
                   <section class="m14l1-card m14l1-card-complex" data-aos="fade-up" data-aos-delay="95">
                     <h3 class="m14l1-subtitle">
                       <i class="fa-solid fa-diagram-project"></i>
-                      ${yhLang("Psychosocial complexities", "তারুন্যকালীন মনোসামাজিক জটিলতাসমূহ")}
+                      ${yhLang("Psychosocial complexities", "তারুণ্যে মনোসামাজিক জটিলতাসমূহ")}
                     </h3>
                     <ul class="m14l1-list grid-3 m14l1-grid">
                       ${renderList(psychosocialComplexities, 95)}
@@ -9153,7 +9144,7 @@ const orbitItems = [
                           <i class="fa-solid fa-lightbulb"></i>
                           ${yhLang("Emotional Intelligence", "আবেগীয় বুদ্ধিমত্তা")}
                         </h3>
-                        <p class="m14lem-ei-desc">${yhLang("Emotional intelligence (EI) is the ability to perceive, regulate and use your own emotions and understand others' emotions.", "আবেগীয় বুদ্ধিমত্তা (emotional intelligence) হল নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা।")}</p>
+                        <p class="m14lem-ei-desc">${yhLang("Emotional intelligence (EI) is the ability to perceive, regulate and use your own emotions and understand others' emotions.", "আবেগীয় বুদ্ধিমত্তা (emotional intelligence) হল নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা। আবেগীয় বুদ্ধিমত্তার গুরুত্বপূর্ণ দিকগুলো হল: ")}</p>
                         
                         <ul class="m14lem-ei-list">
                           <li class="m14lem-ei-li m14lem-ei-info" data-aos="fade-left" data-aos-delay="55">
@@ -9449,7 +9440,7 @@ const orbitItems = [
 
               const emotionalIntelligenceIntro = yhLang(
                 "Emotional Intelligence is the ability to recognize, regulate, and apply your own emotions and understand others' emotions effectively.",
-                "আবেগীয় বুদ্ধিমত্তা (Emotional Intelligence) হলো নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা।",
+                "আবেগীয় বুদ্ধিমত্তা (Emotional Intelligence) হলো নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা। আবেগীয় বুদ্ধিমত্তার গুরুত্বপূর্ণ দিকগুলো হল:",
               );
 
               const emotionalIntelligencePoints = [
@@ -9546,10 +9537,20 @@ const orbitItems = [
                   </section>
 
                   <section class="m14l3-grid" data-aos="fade-up" data-aos-delay="70">
+                    
+                    <article class="m14l3-card m14l3-card-causes" data-aos="fade-left" data-aos-delay="95">
+                      <h3 class="m14l3-subtitle">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                        ${yhLang("Causes of anxiety", "উদ্বেগের কারণ")}
+                      </h3>
+                      <ul class="m14l3-list">
+                        ${renderList(anxietyCauses, 92)}
+                      </ul>
+                    </article>
                     <article class="m14l3-card m14l3-card-symptoms">
                       <h3 class="m14l3-subtitle">
                         <i class="fa-solid fa-table-cells-large"></i>
-                        ${yhLang("Anxiety symptoms table", "উদ্বেগের লক্ষণ ও উপসর্গের টেবিল")}
+                        ${yhLang("Anxiety symptoms table", "উদ্বেগের লক্ষণ ও উপসর্গের")}
                       </h3>
                       <div class="m14l3-table-wrap">
                         <table class="m14l3-table">
@@ -9567,15 +9568,6 @@ const orbitItems = [
                       </div>
                     </article>
 
-                    <article class="m14l3-card m14l3-card-causes" data-aos="fade-left" data-aos-delay="95">
-                      <h3 class="m14l3-subtitle">
-                        <i class="fa-solid fa-circle-nodes"></i>
-                        ${yhLang("Causes of anxiety", "উদ্বেগের কারণ")}
-                      </h3>
-                      <ul class="m14l3-list">
-                        ${renderList(anxietyCauses, 92)}
-                      </ul>
-                    </article>
                   </section>
 
                   <section class="m14l3-card m14l3-card-ei d-none" data-aos="fade-up" data-aos-delay="115">
@@ -10412,10 +10404,13 @@ const orbitItems = [
                   <section class="m14l6-card m14l6-card-signals">
                     <h3 class="m14l6-subtitle">
                       <i class="fa-solid fa-triangle-exclamation"></i>
-                      ${yhLang("Pre-Anger Signals", "রাগ পূর্ব সংকেত সমূহ হলঃ")}
+                      ${yhLang("Pre-Anger Signals", "রাগ পূর্ব সংকেত")}
                     </h3>
                     <p class="m14l6-p m14l6-p-last">${preSignalIntro}</p>
-
+                    <h3 class="m14l6-subtitle">
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                      ${yhLang("Pre-Anger Signals", "রাগ পূর্ব সংকেত সমূহ হলঃ")}
+                    </h3>
                     <div class="m14l6-grid">
                       ${renderSignalCard(yhLang("Physical Signals", "শারীরিক সংকেত"), "fa-heart-pulse", physicalSignals, "m14l6-sky", 80, "left")}
                       ${renderSignalCard(yhLang("Emotional Signals", "আবেগীয় সংকেত"), "fa-face-frown", emotionalSignals, "m14l6-peach", 100, "right")}
@@ -11097,12 +11092,12 @@ const orbitItems = [
 
               const subtitle = yhLang(
                 "Device addiction is a behavioral addiction that reduces self-control over technology use.",
-                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে।",
+                "ডিজিটাল স্বাস্থ্য ও ডিভাইস আসক্তির প্রভাব",
               );
 
               const impactTitle = yhLang(
                 "Its impact can be especially deep among adolescents:",
-                "এর প্রভাব কিশোর-কিশোরীদের মধ্যে বিশেষভাবে গভীর হতে পারে:",
+                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব কিশোর-কিশোরীদের মেধ্য বিশেষভাবে গভীর হতে পারে:",
               );
 
               const impacts = [
@@ -16368,7 +16363,7 @@ const orbitItems = [
                   descriptionEn:
                     "During adolescence, both boys and girls experience rapid weight and height growth and intellectual development. Therefore, adolescents need an adequate amount of nutritious and balanced food for proper growth. With correct nutrition, adolescents develop their intellect and abilities, improve concentration in studies, get better results, and increase work capacity.",
                   descriptionBn:
-                    "তারুন্যকালীন ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলশ্রুতিতে লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।",
+                    "তারুণ্যেছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলশ্রুতিতে লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।",
                 },
                 {
                   iconClass: "fa-utensils",
@@ -16392,7 +16387,7 @@ const orbitItems = [
                   descriptionEn:
                     "Nutrition is a process. In this process, food is digested after eating and complex food substances are broken down into simpler elements. The human body absorbs these simple elements. These nutrients provide the body with energy and proper growth, develop the mind and intellect, prevent diseases and ensure health.</br> Both boys and girls undergo normal physical and mental changes during adolescence. Rapid weight and height increase and intelligence develops. Therefore, it is necessary to consume nutritious and balanced food at this time for proper growth of adolescents. Growing up with proper nutrition, adolescents develop talent and intelligence. Attention in studies, good results and ability to work increase.",
                   descriptionBn:
-                    "পুষ্টি হলো একটি প্রক্রিয়া। এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙ্গে সরল উপাদানে পরিণত হয়। মানবদেহ এসব সরল উপাদান শোষণ করে নেয়। এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্থতা নিশ্চিত করে। </br> তারুন্যকালীন ছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চুার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
+                    "পুষ্টি হলো একটি প্রক্রিয়া। এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙ্গে সরল উপাদানে পরিণত হয়। মানবদেহ এসব সরল উপাদান শোষণ করে নেয়। এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্থতা নিশ্চিত করে। </br> তারুণ্যেছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চুার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
                 },
                 {
                   iconClass: "fa-carrot",
@@ -17041,7 +17036,7 @@ const orbitItems = [
             id: "ch19-lesson-5",
             title: yhLang(
               "Importance of Safe, Nutritious Food and Daily Meal Plan",
-              "তারুন্যকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
+              "তারুণ্যেসময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
             ),
             icon: "fa-utensils",
             gradientClass: "bg-gradient-rose",
@@ -17160,7 +17155,7 @@ const orbitItems = [
                       <i class="fa-solid fa-utensils"></i>
                       ${yhLang(
                         "Daily Meal Plan for Adolescents",
-                        "তারুন্যকালীন সময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
+                        "তারুণ্যেসময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
                       )}
                     </h2>
 
@@ -17220,7 +17215,7 @@ const orbitItems = [
             id: "ch19-lesson-6",
             title: yhLang(
               "Adolescent Food Diversity",
-              "তারুন্যকালীন খাদ্য বৈচিত্র্য",
+              "তারুণ্যেখাদ্য বৈচিত্র্য",
             ),
             icon: "fa-seedling",
             gradientClass: "bg-gradient-mint",
@@ -17318,7 +17313,7 @@ const orbitItems = [
                       <i class="fa-solid fa-leaf"></i>
                       ${yhLang(
                         "Adolescent Food Diversity",
-                        "তারুন্যকালীন খাদ্য বৈচিত্র্য",
+                        "তারুণ্যেখাদ্য বৈচিত্র্য",
                       )}
                     </h2>
                     <p class="m19l5-subtitle">${yhLang(
@@ -17640,7 +17635,7 @@ const orbitItems = [
                         <p>
   ${yhLang(
     "To prevent anemia, adolescent girls should take one iron–folic acid tablet every week after a meal. These iron–folic acid tablets are provided to every adolescent girl from government health service centers.",
-    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে।সরকারি বিদ্যালয় ও স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি খেতে হবে।",
+    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে। সরকারি বিদ্যালয় ও স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।",
   )}
 </p>
                       </article>
@@ -18999,7 +18994,7 @@ const orbitItems = [
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius: 14px; padding: 9px; box-shadow: 0 5px 18px rgba(233, 30, 99, 0.12);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #c2185b; font-size: 1em;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #2856ff; font-size: 1em;">
                       <i class="fa-solid fa-lightbulb" style="margin-right: 8px; font-size: 16px; color: #f06292;"></i>
                       ${yhLang("Potentially Vulnerable Period", "সম্ভাবনাময় সময়")}
                     </h3>
@@ -19045,7 +19040,7 @@ const orbitItems = [
                 },
                 {
                   icon: "fa-person-walking-arrow-right",
-                  color: "#c2185b",
+                  color: "#2856ff",
                   text: yhLang(
                     "Adolescents who are trafficked or forced into sex work",
                     "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া তরুন-তরুনী;",
@@ -19316,7 +19311,7 @@ const orbitItems = [
                 },
                 {
                   icon: "fa-brain",
-                  color: "#c2185b",
+                  color: "#2856ff",
                   text: yhLang(
                     "<strong>Building Self-Reliance and Confidence:</strong> Increase adolescents' self-confidence and self-reliance so they can solve their own problems and face life’s challenges.",
                     "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> তরুন-তরুনীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।",
@@ -19413,8 +19408,8 @@ const orbitItems = [
                           </div>
                         
                           <div class="modern-card p-1 glass-card" data-aos="fade-up" data-aos-delay="80" style="border-radius: 28px; box-shadow: 0 16px 48px rgba(233, 30, 99, 0.28), 0 6px 16px rgba(194, 24, 91, 0.2); margin-top: 20px;">
-                            <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #c2185b; font-weight: 700;">
-                              <span style="background: linear-gradient(135deg, #e91e63, #c2185b); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);">
+                            <h3 style="display: flex; align-items: center; margin-bottom: 8px; color: #2856ff; font-weight: 700;">
+                              <span style="background: linear-gradient(135deg, #e91e63, #2856ff); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.4);">
                                 <i class="fa-solid fa-temperature-arrow-up" style="font-size: 24px; color: #fff;"></i>
                               </span>
                               ${yhLang("Climate Change: A Global Reality", "জলবায়ু পরিবর্তন")}
@@ -19763,7 +19758,7 @@ const orbitItems = [
                 if (item.includes("অকাল জন্ম") || item.includes("Preterm"))
                   return {
                     icon: "fa-hourglass-end",
-                    color: "#c2185b",
+                    color: "#2856ff",
                     bg: "rgba(194,24,91,.12)",
                   };
                 if (
@@ -19817,7 +19812,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-ribbon",
-                    color: "#b71c1c",
+                    color: "#6e4f4f",
                     bg: "rgba(183,28,28,.12)",
                   };
                 if (item.includes("মৃত্যুহার") || item.includes("mortality"))
@@ -19891,8 +19886,8 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-baby",
-                    color: "#c2185b",
-                    gradient: "linear-gradient(135deg,#e91e63,#c2185b)",
+                    color: "#2856ff",
+                    gradient: "linear-gradient(135deg,#e91e63,#2856ff)",
                   };
                 if (
                   title.includes("শ্বাসযন্ত্রের") ||
@@ -19950,7 +19945,7 @@ const orbitItems = [
                     <div class="col-12 col-lg-6">
                       <div class="modern-card glass-card h-100" style="border-radius:16px; color: #000;padding:3px;box-shadow:0 8px 24px rgba(233,30,99,.18), 0 3px 12px rgba(194,24,91,.12);">
                         <h3 style="display:flex;align-items:center;color:#880e4f;margin-bottom:3px;font-weight:700;font-size:1em;">
-                          <span style="background:linear-gradient(135deg,#ec407a,#c2185b);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(236,64,122,.3), 0 1px 6px rgba(194,24,91,.18);"><i class="fa-solid fa-heart-pulse" style="color:#fff;font-size:16px;"></i></span>
+                          <span style="background:linear-gradient(135deg,#ec407a,#2856ff);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(236,64,122,.3), 0 1px 6px rgba(194,24,91,.18);"><i class="fa-solid fa-heart-pulse" style="color:#fff;font-size:16px;"></i></span>
                           ${yhLang("Health Effects (Birth & Respiratory)", "বায়ু দূষণের সাথে সম্পর্কিত স্বাস্থগত প্রভাব")}
                         </h3>
 
@@ -20348,7 +20343,7 @@ const orbitItems = [
                 if (item.includes("ক্যান্সার") || item.includes("cancer"))
                   return {
                     icon: "fa-ribbon",
-                    color: "#b71c1c",
+                    color: "#6e4f4f",
                     bg: "rgba(183,28,28,.12)",
                   };
                 if (item.includes("হরমোন") || item.includes("Hormonal"))
@@ -20426,7 +20421,7 @@ const orbitItems = [
                   return {
                     icon: "fa-heart-circle-xmark",
                     color: "#c62828",
-                    gradient: "linear-gradient(135deg,#d32f2f,#b71c1c)",
+                    gradient: "linear-gradient(135deg,#d32f2f,#6e4f4f)",
                   };
                 return {
                   icon: "fa-circle-info",

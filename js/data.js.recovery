@@ -15190,7 +15190,7 @@ const coursesData = [
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(233, 30, 99, 0.15);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #c2185b;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #2856ff;">
                       <i class="fa-solid fa-lightbulb" style="margin-right: 10px; font-size: 1.3em; color: #f06292;"></i>
                       সম্ভাবনাময় সময়
                     </h3>
@@ -15238,7 +15238,7 @@ const coursesData = [
 
               const secondaryList = [
                 { icon: "fa-house-tsunami", color: "#0288d1", text: "বন্যা, নদীভাঙন, ভূমিকম্প বা কোনো প্রাকৃতিক দুর্যোগে উদ্বাস্তু ও আশ্রয় শিবিরে আশ্রয় নেয়া কিশোর-কিশোরী;" },
-                { icon: "fa-person-walking-arrow-right", color: "#c2185b", text: "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া কিশোর-কিশোরী;" },
+                { icon: "fa-person-walking-arrow-right", color: "#2856ff", text: "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া কিশোর-কিশোরী;" },
                 { icon: "fa-burst", color: "#d84315", text: "যুদ্ধ, দাঙ্গা চলাকালীন সময়ে দেশে বা নিজ দেশ থেকে বিতাড়িত কিশোর-কিশোরী;" },
                 { icon: "fa-tent", color: "#f57c00", text: "শরণার্থী শিবিরে বসবাসরত কিশোর-কিশোরী;" },
                 { icon: "fa-mountain", color: "#558b2f", text: "দুর্গম এলাকায়, যেমন চর, হাওড় ও পাহাড়ি এলাকার কিশোর-কিশোরী" },
@@ -15304,7 +15304,7 @@ const coursesData = [
                 { icon: "fa-shield-halved", color: "#d32f2f", text: "<strong>সংকট ব্যবস্থাপনা:</strong> সুবিধাবঞ্চিত পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।" },
                 { icon: "fa-people-group", color: "#f57c00", text: "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> কিশোর-কিশোরীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।" },
                 { icon: "fa-bell", color: "#0288d1", text: "<strong>সচেতনতা বৃদ্ধি:</strong> স্বাস্থ্যকর জীবনযাপন ও সুবিধা মোকাবিলায় সচেতনতা সৃষ্টি করতে প্রয়োজনীয় তথ্য প্রদান এবং সচেতনতা কার্যক্রম পরিচালনা করা।" },
-                { icon: "fa-brain", color: "#c2185b", text: "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> কিশোর-কিশোরীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।" },
+                { icon: "fa-brain", color: "#2856ff", text: "<strong>স্বনির্ভরতা ও আত্মবিশ্বাস বৃদ্ধি:</strong> কিশোর-কিশোরীদের মধ্যে আত্মবিশ্বাস ও স্বনির্ভরতা বাড়ানো, যাতে তারা নিজের সমস্যা সমাধানে সক্ষম হয় এবং জীবনের চ্যালেঞ্জগুলোর সম্মুখীন হতে পারে।" },
               ];
 
               const renderList = (items) =>
@@ -15390,7 +15390,7 @@ const coursesData = [
                   </div>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="80" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border-radius: 25px; box-shadow: 0 12px 40px rgba(233, 30, 99, 0.18); margin-top: 20px;">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 18px; color: #c2185b;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 18px; color: #2856ff;">
                       <i class="fa-solid fa-temperature-arrow-up" style="margin-right: 10px; font-size: 1.3em; color: #e91e63;"></i>
                       জলবায়ু পরিবর্তন: বৈশ্বিক বাস্তবতা
                     </h3>
@@ -15941,7 +15941,7 @@ const coursesData = [
                   </h2>
                   <div class="modern-card glass-card mb-3" data-aos="fade-up" data-aos-delay="20" style="background:linear-gradient(135deg,#ffebee 0%,#ffcdd2 100%);border-radius:22px;box-shadow:0 10px 35px rgba(198,40,40,.18);">
                     <p>উন্নয়ন এবং শিল্পায়নের কারণে, আমাদের জীবনের প্রতিটি ক্ষেত্রে ক্রমবর্ধমান পরিমাণে রাসায়নিকের ব্যবহার শুরু হয়েছে। এই রাসায়নিকগুলির আমাদের পরিবেশের পাশাপাশি আমাদের স্বাস্থ্যের উপরও বিরূপ প্রভাব রয়েছে। শিশু এবং গর্ভবতী মহিলারা রাসায়নিকের স্বল্পমেয়াদী এবং দীর্ঘমেয়াদী প্রভাবের দ্বারা সবচেয়ে বেশি ঝুঁকির মধ্যে রয়েছে ।</p>
-                    <h5 style="display:flex;align-items:center;color:#b71c1c;"><i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:</h5>
+                    <h5 style="display:flex;align-items:center;color:#6e4f4f;"><i class="fa-solid fa-skull-crossbones" style="margin-right:10px;"></i>সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:</h5>
                     <p>পানির চেয়ে ৫ গুণ বা তার বেশি পারমাণবিক ঘনত্ব সম্পন্ন ধাতুসমূহের গ্রুপকে ভারী ধাতু বা ক্ষতিকারক রাসায়নিক পদার্থ হিসাবে উল্লেখ করা হয়। জনস্বাস্থ্যের জন্য প্রধান প্রধান ক্ষতিকারক রাসায়নিক পদার্থ  গুলি নীচে দেয়া হল:</p>
                   </div>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="60">

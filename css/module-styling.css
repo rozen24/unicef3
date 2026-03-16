@@ -15,7 +15,7 @@
   --gradient-mod6: linear-gradient(135deg, #d32f2f 0%, #ffcdd2 100%);
   --gradient-mod7: linear-gradient(135deg, #00897b 0%, #b2dfdb 100%);
   --gradient-mod8: linear-gradient(135deg, #f57c00 0%, #ffe0b2 100%);
-  --gradient-mod9: linear-gradient(135deg, #c2185b 0%, #f8bbd0 100%);
+  --gradient-mod9: linear-gradient(135deg, #2856ff 0%, #f8bbd0 100%);
   --gradient-mod10: linear-gradient(135deg, #388e3c 0%, #c8e6c9 100%);
   --gradient-mod11: linear-gradient(135deg, #1565c0 0%, #bbdefb 100%);
   --gradient-mod12: linear-gradient(135deg, #ff9800 0%, #ffe0b2 100%);
@@ -166,7 +166,7 @@ h5::before {
   content: "\f0f9";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #c2185b;
+  color: #2856ff;
 }
 
 #ch4-lesson-1 h5::before,
@@ -239,7 +239,7 @@ h5::before {
   content: "\f206";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #b71c1c;
+  color: #6e4f4f;
 }
 
 /* ============================================
@@ -308,7 +308,7 @@ h5::before {
   content: "\f6b6";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #c2185b;
+  color: #2856ff;
 }
 
 #ch9-lesson-1 h3::before,
@@ -492,7 +492,7 @@ h5::before {
   content: "\f132";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #b71c1c;
+  color: #6e4f4f;
 }
 
 /* Module 16: Mental Health */
@@ -671,7 +671,7 @@ h5::before {
 }
 
 #ch4-lesson-2 .puberty-list li:nth-child(2) {
-  border-left-color: #c2185b !important;
+  border-left-color: #2856ff !important;
   box-shadow: 0 8px 20px rgba(193, 24, 91, 0.12) !important;
 }
 
@@ -699,7 +699,7 @@ h5::before {
 }
 
 #ch4-lesson-2 .puberty-list li:nth-child(2) i {
-  color: #c2185b !important;
+  color: #2856ff !important;
 }
 
 #ch4-lesson-2 .puberty-list li:nth-child(3) i {
@@ -766,7 +766,7 @@ h5::before {
 #ch4-lesson-3 .puberty-list li,
 #ch4-lesson-4 .puberty-list li,
 #ch4-lesson-5 .puberty-list li {
-  border-left-color: #c2185b !important;
+  border-left-color: #2856ff !important;
   box-shadow: 0 8px 18px rgba(193, 24, 91, 0.12) !important;
 }
 
@@ -782,7 +782,7 @@ h5::before {
 #ch4-lesson-3 .puberty-list li i,
 #ch4-lesson-4 .puberty-list li i,
 #ch4-lesson-5 .puberty-list li i {
-  color: #c2185b !important;
+  color: #2856ff !important;
 }
 
 /* ============================================
@@ -824,7 +824,7 @@ h5::before {
   padding: 12px 14px !important;
   margin-bottom: 10px !important;
   box-shadow: 0 6px 14px rgba(211, 47, 47, 0.12) !important;
-  color: #b71c1c !important;
+  color: #6e4f4f !important;
 }
 
 #ch6-lesson-1 .puberty-list li:nth-child(even),
@@ -902,7 +902,7 @@ h5::before {
 #ch9-lesson-2 .puberty-list li,
 #ch9-lesson-3 .puberty-list li {
   background: rgba(248, 220, 232, 0.7) !important;
-  border-left: 4px solid #c2185b !important;
+  border-left: 4px solid #2856ff !important;
   border-radius: 14px !important;
   padding: 12px 14px !important;
   margin-bottom: 10px !important;
@@ -919,7 +919,7 @@ h5::before {
 #ch9-lesson-1 .puberty-list li i,
 #ch9-lesson-2 .puberty-list li i,
 #ch9-lesson-3 .puberty-list li i {
-  color: #c2185b !important;
+  color: #2856ff !important;
   margin-right: 10px !important;
   font-size: 1.1rem;
 }
@@ -1072,7 +1072,7 @@ h5::before {
   padding: 12px 14px !important;
   margin-bottom: 10px !important;
   box-shadow: 0 6px 14px rgba(211, 47, 47, 0.12) !important;
-  color: #b71c1c !important;
+  color: #6e4f4f !important;
 }
 
 #ch15-lesson-1 .puberty-list li:nth-child(even),
