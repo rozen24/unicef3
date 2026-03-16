@@ -5329,6 +5329,137 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch8-lesson-6",
+            title: yhLang("Maternal Risks in Adolescence", "তারুন্যকালীন মাতৃত্ব"),
+            icon: "fa-person-pregnant",
+            gradientClass: "bg-gradient-amber",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q8f",
+                  question: yhLang(
+                    "What are the main risks of adolescent pregnancy?",
+                    "তারুন্যকালীন গর্ভধারণের প্রধান ঝুঁকিগুলি কী?",
+                  ),
+                  options: [
+                    yhLang(
+                      "Pregnancy complications, delivery difficulties, and maternal/neonatal risks",
+                      "গর্ভধারণ জটিলতা, প্রসবে কঠিনতা এবং মা ও নবজাতকের ঝুঁকি",
+                    ),
+                    yhLang("No risks, adolescents have healthy pregnancies", "কোনো ঝুঁকি নেই, কিশোরীরা সুস্থ গর্ভধারণ করে"),
+                    yhLang("Only physical risks", "শুধুমাত্র শারীরিক ঝুঁকি"),
+                    yhLang("Only psychological risks", "শুধুমাত্র মনস্তাত্ত্বিক ঝুঁকি"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const introText = yhLang(
+                "Adolescent pregnancies carry significant risks of maternal and child mortality. Due to physical development and social circumstances, these risks increase substantially during pregnancy, delivery, and postpartum periods.",
+                "কিশোরীদের গর্ভধারণে মা ও শিশু মৃত্যুর ঝুঁকি অনেক বেশি। শারীরিক গঠন ও সামাজিক অবস্থার কারণে তাদের গর্ভকালীন, প্রসবকালীন এবং প্রসব-পরবর্তী সময়ে এই ঝুঁকির পরিমাণ অনেক বেড়ে যায়।"
+              );
+
+              const riskDescription = yhLang(
+                "Adolescent pregnancy is extremely risky. During this time, the girl's own physical growth is incomplete and her physical and mental development is still ongoing. In this situation, pregnancy puts both the adolescent mother and the child at risk. During pregnancy, the growing child needs various services and nutrition along with the adolescent, which is often not readily available for adolescent mothers. Adolescent pregnancy and childbirth expose both mother and child to various risks.",
+                "তারুণ্যে গর্ভধারণ অত্যন্ত ঝুঁকিপূর্ণ। কারণ এ সময় কিশোরীর নিজেরই শারীরিক বৃদ্ধি অসম্পূর্ণ থাকে এবং তার শারীরিক ও মানসিক বিকাশ তখনও চলমান থাকে। এ অবস্থায় গর্ভধারণ করলে কিশোরী মা ও শিশু উভয়ই ঝুঁকির মধ্যে পড়ে যায়। গর্ভাবস্থায় কিশোরীর সাথে সাথে তার মধ্যে বেড়ে ওঠা সন্তানেরও নানা প্রকার সেবা–পুষ্টির দরকার হয় যা কিশোরী মায়ের জন্য সবসময় পাওয়া সচরাচর সম্ভব নয়। তারুণ্যে সন্তান ধারণ এবং জন্মদানের ক্ষেত্রে মা এবং সন্তান নানাবিধ ঝুঁকির সম্মুখীন হতে পারে।"
+              );
+
+              const maternalRisks = [
+                yhLang("Pregnancy-Induced Hypertension", "গর্ভজনিত উচ্চ রক্তচাপ"),
+                yhLang("Anemia During Pregnancy", "গর্ভকালীন রক্তস্বল্পতা"),
+                yhLang("Pre-eclampsia", "প্রি-একলাম্পসিয়া"),
+                yhLang("Obstructed Labour", "বাধাগ্রস্ত প্রসব"),
+                yhLang("Delayed Labour", "বিলম্বিত প্রসব"),
+                yhLang("Stillbirth", "মৃত সন্তান প্রসব"),
+                yhLang("Premature Delivery", "সময়ের আগে সন্তান জন্মদান"),
+                yhLang("Low Birth Weight Infant", "কম ওজনের সন্তান জন্ম দেওয়া"),
+                yhLang("Postpartum Depression", "প্রসব-পরবর্তী বিষণ্নতা"),
+                yhLang("Inadequate Infant Care and Breastfeeding", "অপর্যাপ্ত শিশু পরিচর্যা ও বুকের দুধ খাওয়ানো"),
+              ];
+
+              const riskIcons = [
+                "fa-heart-pulse",
+                "fa-droplet",
+                "fa-triangle-exclamation",
+                "fa-ban",
+                "fa-hourglass-end",
+                "fa-baby",
+                "fa-clock",
+                "fa-weight-scale",
+                "fa-cloud-rain",
+                "fa-hands-holding-child",
+              ];
+
+              const renderOrbitRisks = () => {
+                const angleStep = 360 / maternalRisks.length;
+                return maternalRisks
+                  .map((risk, idx) => {
+                    const angle = angleStep * idx;
+                    return `
+                      <div class="ch8l6-orbit-item" style="--angle: ${angle}deg; --item-index: ${idx};" data-aos="" data-aos-delay="">
+                        <div class="ch8l6-orbit-card ch8l6-risk-type-${(idx % 3) + 1}">
+                          <div class="ch8l6-orbit-card-icon">
+                            <i class="fa-solid ${riskIcons[idx]}"></i>
+                          </div>
+                          <span class="ch8l6-orbit-card-text">${risk}</span>
+                        </div>
+                      </div>
+                    `;
+                  })
+                  .join("");
+              };
+
+              return `
+                <div class="ch8l6-slide lesson-slide">
+                  <h2 class="ch8l6-title" data-aos="fade-down">
+                    <i class="fa-solid fa-person-pregnant"></i>
+                    ${yhLang("Adolescent Motherhood Risks", "তারুন্যকালীন মাতৃত্ব")}
+                  </h2>
+
+                  <div class="ch8l6-content-wrapper">
+                    <div class="ch8l6-left">
+                      <section class="ch8l6-description-box" data-aos="fade-up" data-aos-delay="40">
+                        <h3 class="ch8l6-section-header">
+                          <i class="fa-solid fa-info-circle"></i>
+                          ${yhLang("Understanding Adolescent Pregnancy", "তারুন্যকালীন গর্ভধারণ")}
+                        </h3>
+                        <p class="ch8l6-desc-text">${introText}</p>
+                      </section>
+
+                      <section class="ch8l6-risk-description-box" data-aos="fade-up" data-aos-delay="80">
+                        <h3 class="ch8l6-risk-section-header">
+                          <i class="fa-solid fa-exclamation-circle"></i>
+                          ${yhLang("Maternal Risks in Adolescence", "কিশোরীদের মাতৃত্বজনিত ঝুঁকি")}
+                        </h3>
+                        <p class="ch8l6-risk-desc-text">${riskDescription}</p>
+                      </section>
+                    </div>
+
+                    <div class="ch8l6-right">
+                      <div class="ch8l6-orbit-container" data-aos="" data-aos-delay="">
+                        <div class="ch8l6-orbit-center">
+                          <div class="ch8l6-orbit-center-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                          </div>
+                          <div class="ch8l6-orbit-center-text">
+                            <h2 class="text-white">
+                              ${yhLang("Maternal Health Risks", "কিশোরীদের মাতৃত্বজনিত ঝুঁকি")}
+                            </h2>
+                          </div>
+                        </div>
+                        <div class="ch8l6-orbit-ring"></div>
+                        ${renderOrbitRisks()}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
