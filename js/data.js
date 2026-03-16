@@ -4167,7 +4167,7 @@ const coursesData = [
                     </div>
                     <div class="col-12 col-md-6 d-flex justify-content-md-end justify-content-center">
                       <div class="circular-callout circular-callout--info" data-aos="zoom-in" data-aos-delay="80">
-                        বাল্যবিবাহ সম্পর্কে কোনো তথ্য থাকলে চাইল্ড হেল্পলাইন <strong>১০৯৮</strong>-এ কল করে রিপোর্ট করা উচিত।
+                        বাল্যবিবাহ সম্পর্কে কোনো তথ্য থাকলে চাইল্ড হেল্পলাইন <strong style="font-weight: bold; color: red;">১০৯৮</strong>-এ কল করে রিপোর্ট করা উচিত।
                       </div>
                     </div>
                   </div>
@@ -8235,10 +8235,13 @@ const orbitItems = [
                     },
                     {
                       num: "2",
-                      title: yhLang("Child Helpline 1098", "চাইল্ড হেল্পলাইন ১০৯৮"),
+                      title: yhLang(
+                        "Child Helpline 1098",
+                        'চাইল্ড হেল্পলাইন <strong style="font-weight: bold; color: red;">১০৯৮</strong> (টোল ফ্রি)'
+                      ),
                       text: yhLang(
-                        "Child Helpline 1098 (Toll Free) provides immediate support and assistance to children in distress.",
-                        "চাইল্ড হেল্পলাইন ১০৯৮ (টোল ফ্রি)"
+                        "Child Helpline 1098",
+                        'চাইল্ড হেল্পলাইন <strong style="font-weight: bold; color: red;">১০৯৮</strong> (টোল ফ্রি)'
                       ),
                       icon: "fa-child",
                       type: "type1"
