@@ -6588,7 +6588,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.2;
-  background: linear-gradient(135deg, #e65100, #fb8c00);
+  background: linear-gradient(135deg, #672dc5, #fb8c00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -6715,7 +6715,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0;
   font-size: 0.9rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #e65100, #fb8c00);
+  background: linear-gradient(135deg, #672dc5, #fb8c00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -9050,12 +9050,12 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m16l6-principle--justice {
-  border-left-color: #e65100;
-  color: #e65100;
+  border-left-color: #672dc5;
+  color: #672dc5;
 }
 
 .m16l6-principle--justice .m16l6-principle-icon {
-  background: linear-gradient(135deg, #ffa726, #e65100);
+  background: linear-gradient(135deg, #ffa726, #672dc5);
   box-shadow: 0 2px 6px rgba(230, 81, 0, 0.3);
 }
 
@@ -9791,7 +9791,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ff9800, #e65100);
+  background: linear-gradient(135deg, #ff9800, #672dc5);
   color: #fff;
   box-shadow: 0 4px 12px rgba(255, 152, 0, 0.32);
   animation: m17l2Pulse 3s ease-in-out infinite;
@@ -9816,7 +9816,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.2;
-  background: linear-gradient(135deg, #e65100, #ff9800);
+  background: linear-gradient(135deg, #672dc5, #ff9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -9868,7 +9868,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ff9800, #e65100);
+  background: linear-gradient(135deg, #ff9800, #672dc5);
   color: #fff;
   font-size: 0.8rem;
   box-shadow: 0 2px 8px rgba(255, 152, 0, 0.24);
@@ -9878,7 +9878,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0;
   font-size: 0.86rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #e65100, #ff9800);
+  background: linear-gradient(135deg, #672dc5, #ff9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -10962,7 +10962,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m18l1-goal-transport .m18l1-goal-content p {
-  color: #e65100;
+  color: #672dc5;
 }
 
 /* Responsive Design */
@@ -11425,7 +11425,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m18l2-step-elevate .m18l2-step-content p {
-  color: #e65100;
+  color: #672dc5;
 }
 
 .m18l2-step-referral {
@@ -11451,7 +11451,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m18l2-step-warning .m18l2-step-content p {
-  color: #f57f17;
+  color: #5458d7;
 }
 
 /* Responsive Design */
@@ -11738,7 +11738,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .m18l3-hero-title i {
   font-size: 1.1rem;
-  color: #e65100;
+  color: #672dc5;
 }
 
 .m18l3-intro {
@@ -11861,7 +11861,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m18l3-type-first .m18l3-type-icon { background: linear-gradient(135deg, #ffa726, #f57c00); }
-.m18l3-type-first p { color: #e65100; }
+.m18l3-type-first p { color: #672dc5; }
 
 .m18l3-type-second {
   border-left-color: #e53935;
@@ -11909,7 +11909,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m18l3-cause-radiation .m18l3-cause-icon { background: linear-gradient(135deg, #fdd835, #f9a825); }
-.m18l3-cause-radiation p { color: #f57f17; }
+.m18l3-cause-radiation p { color: #5458d7; }
 
 @media (max-width: 1024px) {
   .lesson-slide.mod18-lesson3 { padding: 12px 9px; }
@@ -12094,7 +12094,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0;
   font-size: 1.22rem;
   font-weight: 700;
-  color: #f57f17;
+  color: #5458d7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12123,7 +12123,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0 0 10px;
   font-size: 0.97rem;
   font-weight: 650;
-  color: #f57f17;
+  color: #5458d7;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -12169,7 +12169,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #f57f17;
+  color: #5458d7;
   flex-shrink: 0;
 }
 
@@ -12257,7 +12257,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   background: rgba(255, 243, 224, 0.91);
 }
 .m18l4-step-notopical .m18l4-step-icon { background: linear-gradient(135deg, #ffa726, #f57c00); }
-.m18l4-step-notopical p { color: #e65100; }
+.m18l4-step-notopical p { color: #672dc5; }
 
 .m18l4-step-dress {
   border-left-color: #00897b;
@@ -12285,7 +12285,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   background: rgba(255, 243, 224, 0.91);
 }
 .m18l4-step-fire .m18l4-step-icon { background: linear-gradient(135deg, #ffb74d, #ff6f00); }
-.m18l4-step-fire p { color: #e65100; }
+.m18l4-step-fire p { color: #672dc5; }
 
 @media (max-width: 1024px) {
   .lesson-slide.mod18-lesson4 { padding: 11px 8px; }
@@ -13393,7 +13393,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   left: 4%;
   width: 110px;
   height: 110px;
-  border: 3px solid #e65100;
+  border: 3px solid #672dc5;
   border-radius: 50%;
   animation: m18l7Rotate 28s linear infinite;
 }
@@ -13403,7 +13403,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   bottom: 20%;
   width: 92px;
   height: 92px;
-  background: linear-gradient(135deg, #ffa726, #e65100);
+  background: linear-gradient(135deg, #ffa726, #672dc5);
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
   animation: m18l7Rotate 22s linear infinite reverse;
 }
@@ -13413,7 +13413,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   left: 12%;
   width: 140px;
   height: 140px;
-  background: linear-gradient(135deg, #ffb74d, #e65100);
+  background: linear-gradient(135deg, #ffb74d, #672dc5);
   border-radius: 38% 62% 72% 28% / 42% 38% 62% 58%;
   animation: m18l7Morph 24s ease-in-out infinite;
 }
@@ -13444,7 +13444,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: linear-gradient(135deg, #ff9800, #e65100);
+  background: linear-gradient(135deg, #ff9800, #672dc5);
   box-shadow: 0 4px 12px rgba(230, 81, 0, 0.37), 0 0 0 4px rgba(255, 255, 255, 0.33);
   animation: m18l7Pulse 3s ease-in-out infinite;
 }
@@ -13462,7 +13462,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #e65100;
+  color: #672dc5;
 }
 
 .m18l7-intro-panel {
@@ -13470,7 +13470,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   z-index: 10;
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid rgba(255, 255, 255, 0.56);
-  border-left: 4px solid #e65100;
+  border-left: 4px solid #672dc5;
   border-radius: 10px;
   padding: 10px 11px;
   margin-bottom: 11px;
@@ -13511,14 +13511,14 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .m18l7-care-panel {
   box-shadow: 4px 8px 14px rgba(230, 81, 0, 0.13), 0 2px 5px rgba(255, 152, 0, 0.09);
-  border-top: 3px solid #e65100;
+  border-top: 3px solid #672dc5;
 }
 
 .m18l7-panel-title {
   margin: 0 0 9px;
   font-size: 0.95rem;
   font-weight: 660;
-  color: #e65100;
+  color: #672dc5;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -13596,10 +13596,10 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m18l7-symptom-red p { color: #004d40; }
 
 .m18l7-symptom-swell {
-  border-left-color: #e65100;
+  border-left-color: #672dc5;
   background: rgba(255, 243, 224, 0.9);
 }
-.m18l7-symptom-swell .m18l7-symptom-icon { background: linear-gradient(135deg, #ffb74d, #e65100); }
+.m18l7-symptom-swell .m18l7-symptom-icon { background: linear-gradient(135deg, #ffb74d, #672dc5); }
 .m18l7-symptom-swell p { color: #bf360c; }
 
 .m18l7-symptom-pus {
@@ -13614,7 +13614,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   background: rgba(255, 236, 210, 0.9);
 }
 .m18l7-symptom-fever .m18l7-symptom-icon { background: linear-gradient(135deg, #ffb74d, #f57c00); }
-.m18l7-symptom-fever p { color: #e65100; }
+.m18l7-symptom-fever p { color: #672dc5; }
 
 .m18l7-symptom-gland {
   border-left-color: #1976d2;
@@ -14028,7 +14028,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .m18l8-sign-nausea { border-left-color: #fb8c00; background: rgba(255, 243, 224, 0.9); }
 .m18l8-sign-nausea .m18l8-sign-icon { background: linear-gradient(135deg, #ffb74d, #fb8c00); }
-.m18l8-sign-nausea p { color: #e65100; }
+.m18l8-sign-nausea p { color: #672dc5; }
 
 .m18l8-sign-vomit { border-left-color: #8d6e63; background: rgba(239, 235, 233, 0.9); }
 .m18l8-sign-vomit .m18l8-sign-icon { background: linear-gradient(135deg, #a1887f, #6d4c41); }
@@ -15364,7 +15364,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0 0 5px 0;
   font-size: 20px;
   font-weight: 700;
-  color: #e65100;
+  color: #672dc5;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -15440,7 +15440,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 @media (prefers-color-scheme: dark) {
   .mod19-lesson1-2 {
-    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 34%, #e65100 70%, #bf360c 100%);
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 34%, #672dc5 70%, #bf360c 100%);
   }
 
   .m19l1x2-hero,
@@ -15818,9 +15818,9 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   -webkit-text-fill-color: transparent;
   box-shadow: 0 2px 7px rgba(0, 150, 136, 0.25);
 }
-.m22l7-chem-dioxin { border-left-color: #f57f17; }
+.m22l7-chem-dioxin { border-left-color: #5458d7; }
 .m22l7-chem-dioxin .m22l7-chem-icon i {
-  background: linear-gradient(135deg, #f9a825, #f57f17);
+  background: linear-gradient(135deg, #f9a825, #5458d7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   box-shadow: 0 2px 7px rgba(249, 168, 37, 0.25);

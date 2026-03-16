@@ -3596,7 +3596,7 @@ const coursesData = [
               "Support Systems for Menstrual Health",
               "মাসিক ব্যবস্থাপনায় সহযোগিতা",
             ),
-            icon: "fa-person-roof",
+            icon: "fa-person",
             gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: {
@@ -4468,7 +4468,7 @@ const coursesData = [
               "তারুন্যকালীনপরিবার পরিকল্পনা",
               "তারুন্যকালীনপরিবার পরিকল্পনা",
             ),
-            icon: "fa-person-roof",
+            icon: "fa-person",
             gradientClass: "bg-gradient-blue",
             audioFile: "",
             quiz: {
@@ -7283,7 +7283,7 @@ const sections = [
                        <div class="col-md-5">
                          <div class="ch13l2-image-section" data-aos="fade-left" data-aos-delay="80">
                           <figure class="ch13l2-image-card mb-0">
-                            <img src="img/modu13/gender2.jpg" style="height: 500px;" alt="জেন্ডার সমতা চিত্র" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
+                            <img src="img/modu13/gender2.jpg" style="height: 450px;" alt="জেন্ডার সমতা চিত্র" class="img-fluid rounded-4 shadow-sm animate-float-slow img-zoom" />
                           </figure>
                         </div>
                        </div>
@@ -7804,7 +7804,7 @@ const orbitItems = [
                   type: "type1"
                 },
                 {
-                  num: "2",
+                  num: "২",
                   text: yhLang(
                     "Not providing daily necessities to the complainant",
                     "সংক্ষুব্ধ ব্যক্তিকে নিত্য ব্যবহার্য জিনিসপত্র প্রদান না করা"
@@ -7813,7 +7813,7 @@ const orbitItems = [
                   type: "type2"
                 },
                 {
-                  num: "3",
+                  num: "৩",
                   text: yhLang(
                     "Depriving the complainant of assets received as wedding gifts, dowry, or other donations; or hindering them from claiming legitimate rights",
                     "বিবাহের সময় প্রাপ্ত উপহার বা স্ত্রীধন বা অন্য কোনো দান বা উপহার হিসেবে প্রাপ্ত কোনো সম্পদ থেকে সংক্ষুব্ধ ব্যক্তিকে বঞ্চিত করা বা তার বৈধ অধিকার আদায়ে বাধা প্রদান"
@@ -7822,7 +7822,7 @@ const orbitItems = [
                   type: "type1"
                 },
                 {
-                  num: "4",
+                  num: "৪",
                   text: yhLang(
                     "Transferring any movable or immovable property owned by the complainant without consent; or hindering them from exercising legitimate rights",
                     "সংক্ষুব্ধ ব্যক্তির মালিকানাধীন যেকোনো স্থাবর বা অস্থাবর সম্পত্তি তার অনুমতি ব্যতিরেকে হস্তান্তর করা বা এর উপর তার বৈধ অধিকার আদায়ে বাধা প্রদান"
@@ -7831,7 +7831,7 @@ const orbitItems = [
                   type: "type2"
                 },
                 {
-                  num: "5",
+                  num: "৫",
                   text: yhLang(
                     "Depriving the complainant of using or enjoying resources and benefits due to family relations; or hindering them from exercising legitimate rights, such as:",
                     "পারিবারিক সম্পর্কের কারণে যেকোনো সম্পদ বা সুযোগ-সুবিধা দিতে সংক্ষুব্ধ ব্যক্তির ব্যবহার বা ভোগ দখলের অধিকার রয়েছে তা থেকে তাকে বঞ্চিত করা বা এর উপর তার বৈধ অধিকার প্রয়োগে বাধা প্রদান যেমন -"
@@ -7855,7 +7855,7 @@ const orbitItems = [
                       <li class="ch13l6-li ch13l6-li-${point.type}" data-aos="fade-left" data-aos-delay="${70 + idx * 20}">
                         <span class="ch13l6-li-icon"><i class="fa-solid ${point.icon}"></i></span>
                         <span class="ch13l6-li-text">
-                          <strong style="font-size: 0.85rem;">${point.num})</strong> ${point.text}
+                          <strong style="font-size: 1rem;">${point.num})</strong> ${point.text}
                           ${point.subPoints ? `
                             <ul class="ch13l6-sublist">
                               ${point.subPoints.map(subPoint => `
@@ -7944,7 +7944,7 @@ const orbitItems = [
                   type: "type1"
                 },
                 {
-                  num: "2",
+                  num: "২",
                   text: yhLang(
                     "Girls and boys should grow up with equal status and freedom, identified only as human beings",
                     "সম মর্যাদা, স্বাধীনতা নিয়ে নারী-পুরুষ বেড়ে উঠবে, যার পরিচয় হবে শুধু মানুষ হিসেবে"
@@ -7953,7 +7953,7 @@ const orbitItems = [
                   type: "type2"
                 },
                 {
-                  num: "3",
+                  num: "৩",
                   text: yhLang(
                     "Both men and women should perform similar roles as humans, not different roles based on gender",
                     "নারী পুরুষ হিসেবে ভিন্ন ভিন্ন ভূমিকা পালন না করে মানুষ হিসেবে একই রকম ভূমিকা পালন করবে"
@@ -7962,7 +7962,7 @@ const orbitItems = [
                   type: "type3"
                 },
                 {
-                  num: "4",
+                  num: "৪",
                   text: yhLang(
                     "Ensure all human rights for women including education, employment, healthcare, and prevention of violence",
                     "নারী শিক্ষা, নারীর কর্মসংস্থানের সুযোগ, নারীর স্বাস্থ্যসেবা প্রাপ্তি, নারী নির্যাতন প্রতিরোধসহ নারীর জন্য সকল মানবাধিকার নিশ্চিত করা"
@@ -7971,7 +7971,7 @@ const orbitItems = [
                   type: "type1"
                 },
                 {
-                  num: "5",
+                  num: "৫",
                   text: yhLang(
                     "Develop skilled women workforce alongside men for employment and business, contributing to national development",
                     "পুরুষের পাশাপাশি নারীদেরও চাকরি ও ব্যবসাসহ বিভিন্ন উন্নয়নমূলক কাজের সাথে সম্পৃক্ত হতে হবে, তাই দেশের সার্বিক উন্নয়নে পুরুষের পাশাপাশি দক্ষ নারীশক্তি গড়ে তোলা"
@@ -7980,7 +7980,7 @@ const orbitItems = [
                   type: "type2"
                 },
                 {
-                  num: "6",
+                  num: "৬",
                   text: yhLang(
                     "Ensure equal participation of men and women in all activities based on competence",
                     "দক্ষতা অনুসারে সকল কর্মকাণ্ডে নারী-পুরুষের সমান অংশগ্রহণ নিশ্চিত করা"
@@ -7989,7 +7989,7 @@ const orbitItems = [
                   type: "type3"
                 },
                 {
-                  num: "7",
+                  num: "৭",
                   text: yhLang(
                     "Give importance to women's opinions in decision-making processes at family and community levels",
                     "পরিবার ও সমাজে সিদ্ধান্ত গ্রহণের ক্ষেত্রে নারীদের মতামতকে গুরুত্ব দেয়া"
@@ -7998,7 +7998,7 @@ const orbitItems = [
                   type: "type1"
                 },
                 {
-                  num: "8",
+                  num: "৮",
                   text: yhLang(
                     "Ensure provision of all legal assistance in protecting women's rights",
                     "নারীর অধিকার রক্ষায় সকল প্রকার আইনি সহায়তা প্রদান নিশ্চিত করা"
@@ -8007,7 +8007,7 @@ const orbitItems = [
                   type: "type2"
                 },
                 {
-                  num: "9",
+                  num: "৯",
                   text: yhLang(
                     "Ensure women's empowerment by maintaining equality between men and women",
                     "নারী ও পুরুষের সমতা বজায় রাখার মাধ্যমে নারীর ক্ষমতায়ন নিশ্চিত করা"
@@ -8016,7 +8016,7 @@ const orbitItems = [
                   type: "type3"
                 },
                 {
-                  num: "10",
+                  num: "১০",
                   text: yhLang(
                     "Enforce existing laws of the country to provide protection for women",
                     "নারীকে সুরক্ষা প্রদানের জন্য দেশের প্রচলিত আইনের প্রয়োগ করা"
@@ -8025,7 +8025,7 @@ const orbitItems = [
                   type: "type1"
                 },
                 {
-                  num: "11",
+                  num: "১১",
                   text: yhLang(
                     "Collectively identify and prevent customs and practices that perpetuate gender discrimination",
                     "যে সব প্রথা বা রীতিনীতি জেন্ডার বৈষম্য টিকিয়ে রাখছে তা চিহ্নিত করে সম্মিলিতভাবে তা প্রতিরোধ করা"
@@ -8034,7 +8034,7 @@ const orbitItems = [
                   type: "type2"
                 },
                 {
-                  num: "12",
+                  num: "১২",
                   text: yhLang(
                     "Work together as a unified society to eliminate all forms of gender discrimination",
                     "সমাজ সকলে একসাথে মিলে জেন্ডার বৈষম্য দূর করার জন্য কাজ করা"
@@ -8124,7 +8124,7 @@ const orbitItems = [
                   ),
                   items: [
                     {
-                      num: "1",
+                      num: "১",
                       title: yhLang("Personal Causes", "ব্যক্তিগত কারণ"),
                       text: yhLang(
                         "Genetic or physical factors, moral degradation, substance abuse, personality disorders, mental instability, and personal characteristics (age, education, income) influence whether someone becomes a victim or perpetrator.",
@@ -8134,7 +8134,7 @@ const orbitItems = [
                       type: "type1"
                     },
                     {
-                      num: "2",
+                      num: "২",
                       title: yhLang("Interpersonal Causes", "পারস্পরিক কারণ"),
                       text: yhLang(
                         "Conflicts within family or friendships, deterioration of marital relationships, extramarital affairs, and lack of mutual respect can lead to abuse incidents.",
@@ -8144,7 +8144,7 @@ const orbitItems = [
                       type: "type2"
                     },
                     {
-                      num: "3",
+                      num: "৩",
                       title: yhLang("Environmental Causes", "পারিপার্শ্বিক কারণ"),
                       text: yhLang(
                         "Peer pressure in educational institutions and workplaces, political influence, lack of healthy entertainment, immoral culture, and absence of social security systems can lead to abuse.",
@@ -8154,7 +8154,7 @@ const orbitItems = [
                       type: "type3"
                     },
                     {
-                      num: "4",
+                      num: "৪",
                       title: yhLang("Social Causes", "সামাজিক কারণ"),
                       text: yhLang(
                         "Most youth in Bangladesh face lower socioeconomic positions, unemployment, and hopelessness. Socially unestablished, dependent, and depressed individuals are more likely to abuse. Poor socialization and childhood exposure to violence increase the risk.",
@@ -8608,7 +8608,7 @@ const orbitItems = [
               "Adolescent Psychosocial Changes",
               "তারুন্যকালীন মনোসামাজিক পরিবর্তন",
             ),
-            icon: "fa-person-roof",
+            icon: "fa-person",
             gradientClass: "bg-gradient-indigo",
             audioFile: "",
             quiz: {
@@ -8827,7 +8827,7 @@ const orbitItems = [
 
                   <header class="m14l1-header" data-aos="fade-up">
                     <h2 class="m14l1-title">
-                      <i class="fa-solid fa-person-roof"></i>
+                      <i class="fa-solid fa-person"></i>
                       ${yhLang("Psychosocial transitions in adolescence", "তারুন্যকালীন মনোসামাজিক পরিবর্তন")}
                     </h2>
                   </header>
@@ -9151,10 +9151,7 @@ const orbitItems = [
                           ${yhLang("Emotional Intelligence", "আবেগীয় বুদ্ধিমত্তা")}
                         </h3>
                         <p class="m14lem-ei-desc">${yhLang("Emotional intelligence (EI) is the ability to perceive, regulate and use your own emotions and understand others' emotions.", "আবেগীয় বুদ্ধিমত্তা (emotional intelligence) হল নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা।")}</p>
-                        <span class="m14lem-ei-subtitle">
-                          <i class="fa-solid fa-circle-check"></i>
-                          ${yhLang("Important aspects:", "গুরুত্বপূর্ণ দিকগুলো হল:")}
-                        </span>
+                        
                         <ul class="m14lem-ei-list">
                           <li class="m14lem-ei-li m14lem-ei-info" data-aos="fade-left" data-aos-delay="55">
                             <span class="m14lem-ei-li-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -11152,7 +11149,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Build a regular digital detox routine to reduce stress.",
-                    "শারীরিক ও মানসিক চাপ কমাতে নিয়মিত ডিজিটাল ডিটক্সের অভ্যাস গড়ে তোলা।",
+                    "শারীরিক এবং মানসিক চাপ কমানোর জন্য ডিজিটাল ডিটক্সের অভ্যাস গড়ে তোলা।",
                   ),
                   icon: "fa-leaf",
                   tone: "teal",
@@ -11170,7 +11167,7 @@ const orbitItems = [
                     "Discuss openly with family and create technology-use rules.",
                     "পরিবারের সঙ্গে খোলামেলা আলোচনা করে প্রযুক্তি ব্যবহারের নিয়মাবলি তৈরি করা।",
                   ),
-                  icon: "fa-person-roof",
+                  icon: "fa-person",
                   tone: "peach",
                 },
               ];
@@ -13491,7 +13488,7 @@ const orbitItems = [
 
               const sources = [
                 {
-                  icon: "fa-person-roof",
+                  icon: "fa-person",
                   color: "m16l4-source-family",
                   text: yhLang("Family", "পরিবার"),
                 },
@@ -14018,35 +14015,35 @@ const orbitItems = [
     </div>
     <ul class="m17l2-physical-signs-list">
       <li class="m17l2-sign-item m17l2-sign-eyes" data-aos="fade-up" data-aos-delay="45">
-        <span class="m17l2-sign-number">1</span>
+        <span class="m17l2-sign-number">১</span>
         <span class="m17l2-sign-text">${yhLang("Red and watery eyes", "লাল ও ছলছলে চোখ")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-appetite" data-aos="fade-up" data-aos-delay="50">
-        <span class="m17l2-sign-number">2</span>
+        <span class="m17l2-sign-number">২</span>
         <span class="m17l2-sign-text">${yhLang("Loss of appetite, nausea, and vomiting", "ক্ষুধামন্দা, বমিবমি ভাব, বমি হওয়া")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-balance" data-aos="fade-up" data-aos-delay="55">
-        <span class="m17l2-sign-number">3</span>
+        <span class="m17l2-sign-number">৩</span>
         <span class="m17l2-sign-text">${yhLang("Lack of balance and instability", "ভারসাম্যহীনতা ও অস্থিরতা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-tremor" data-aos="fade-up" data-aos-delay="60">
-        <span class="m17l2-sign-number">4</span>
+        <span class="m17l2-sign-number">৪</span>
         <span class="m17l2-sign-text">${yhLang("Trembling hands and body", "হাত-পা কাঁপা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-heart" data-aos="fade-up" data-aos-delay="65">
-        <span class="m17l2-sign-number">5</span>
+        <span class="m17l2-sign-number">৫</span>
         <span class="m17l2-sign-text">${yhLang("Heart palpitations", "বুক ধড়ফড় করা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-weakness" data-aos="fade-up" data-aos-delay="70">
-        <span class="m17l2-sign-number">6</span>
+        <span class="m17l2-sign-number">৬</span>
         <span class="m17l2-sign-text">${yhLang("Extreme weakness and drowsiness", "অতিরিক্ত দুর্বল লাগা, ঘুম ঘুম ভাব")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-marks" data-aos="fade-up" data-aos-delay="75">
-        <span class="m17l2-sign-number">7</span>
+        <span class="m17l2-sign-number">৭</span>
         <span class="m17l2-sign-text">${yhLang("Injection marks on arms/attempts to hide", "সুঁচ ফোটানোর দাগ ও লুকানোর প্রচেষ্টা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-health" data-aos="fade-up" data-aos-delay="80">
-        <span class="m17l2-sign-number">8</span>
+        <span class="m17l2-sign-number">৮</span>
         <span class="m17l2-sign-text">${yhLang("Poor health and eating habit changes", "স্বাস্থ্য ভেঙে যাওয়া এবং খাওয়ার অভ্যাস পরিবর্তন")}</span>
       </li>
     </ul>
@@ -14062,59 +14059,59 @@ const orbitItems = [
     </div>
     <ul class="m17l2-behavioral-signs-list">
       <li class="m17l2-sign-item m17l2-sign-sleep" data-aos="fade-up" data-aos-delay="90">
-        <span class="m17l2-sign-number">1</span>
+        <span class="m17l2-sign-number">১</span>
         <span class="m17l2-sign-text">${yhLang("Staying awake all night and sleeping during day", "রাত জেগে থাকা এবং দিনে ঘুম")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-studies" data-aos="fade-up" data-aos-delay="95">
-        <span class="m17l2-sign-number">2</span>
+        <span class="m17l2-sign-number">২</span>
         <span class="m17l2-sign-text">${yhLang("Poor academic performance", "লেখাপড়া খারাপ করা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-hygiene" data-aos="fade-up" data-aos-delay="100">
-        <span class="m17l2-sign-number">3</span>
+        <span class="m17l2-sign-number">৩</span>
         <span class="m17l2-sign-text">${yhLang("Neglect of personal and clothing hygiene", "নিজের ও পোশাকের প্রতি উদাসীনতা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-absence" data-aos="fade-up" data-aos-delay="105">
-        <span class="m17l2-sign-number">4</span>
+        <span class="m17l2-sign-number">৪</span>
         <span class="m17l2-sign-text">${yhLang("Frequent outings and late night returns", "যখন-তখন বাইরে যাওয়া, অধিক রাতে ফেরা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-money" data-aos="fade-up" data-aos-delay="110">
-        <span class="m17l2-sign-number">5</span>
+        <span class="m17l2-sign-number">৫</span>
         <span class="m17l2-sign-text">${yhLang("Asking for extra money from family", "পরিবারের কাছ থেকে বেশি টাকা চাওয়া")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-evidence" data-aos="fade-up" data-aos-delay="115">
-        <span class="m17l2-sign-number">6</span>
+        <span class="m17l2-sign-number">৬</span>
         <span class="m17l2-sign-text">${yhLang("Empty tablet strips found in room", "বিছানার আশপাশে ট্যাবলেটের খালি স্ট্রিপ")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-behavior" data-aos="fade-up" data-aos-delay="120">
-        <span class="m17l2-sign-number">7</span>
+        <span class="m17l2-sign-number">৭</span>
         <span class="m17l2-sign-text">${yhLang("Intoxicated behavior and mistreatment of family", "অপ্রকৃতস্থ অবস্থায় ফেরা এবং দুর্ব্যবহার")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-mood" data-aos="fade-up" data-aos-delay="125">
-        <span class="m17l2-sign-number">8</span>
+        <span class="m17l2-sign-number">৮</span>
         <span class="m17l2-sign-text">${yhLang("Irritable and moody behavior", "খিটখিটে মেজাজ")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-honesty" data-aos="fade-up" data-aos-delay="130">
-        <span class="m17l2-sign-number">9</span>
+        <span class="m17l2-sign-number">৯</span>
         <span class="m17l2-sign-text">${yhLang("Frequent lying and stealing", "প্রায়ই মিথ্যা বলা ও চুরি করা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-debt" data-aos="fade-up" data-aos-delay="135">
-        <span class="m17l2-sign-number">10</span>
+        <span class="m17l2-sign-number">১০</span>
         <span class="m17l2-sign-text">${yhLang("Getting into debt", "দেনাগ্রস্ত হয়ে পড়া")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-phone" data-aos="fade-up" data-aos-delay="140">
-        <span class="m17l2-sign-number">11</span>
+        <span class="m17l2-sign-number">১১</span>
         <span class="m17l2-sign-text">${yhLang("Frequently changing mobile SIMs", "ঘনঘন মোবাইল সিম পরিবর্তন")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-accidents" data-aos="fade-up" data-aos-delay="145">
-        <span class="m17l2-sign-number">12</span>
+        <span class="m17l2-sign-number">১২</span>
         <span class="m17l2-sign-text">${yhLang("Frequent accidents on roads", "ঘনঘন রাস্তায় দুর্ঘটনা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-crime" data-aos="fade-up" data-aos-delay="150">
-        <span class="m17l2-sign-number">13</span>
+        <span class="m17l2-sign-number">১৩</span>
         <span class="m17l2-sign-text">${yhLang("Involvement in antisocial and criminal activities", "অসামাজিক ও অপরাধমূলক কাজে লিপ্ত")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-friends" data-aos="fade-up" data-aos-delay="155">
-        <span class="m17l2-sign-number">14</span>
+        <span class="m17l2-sign-number">১৪</span>
         <span class="m17l2-sign-text">${yhLang("New friends (addicted) and abandoning old friends", "নেশাগ্রস্ত নতুন বন্ধু এবং পুরোনো ভাল বন্ধু পরিত্যাগ")}</span>
       </li>
     </ul>
@@ -16854,10 +16851,10 @@ const orbitItems = [
             })(),
           },
           {
-            id: "ch19-lesson-2",
+            id: "ch19-lesson-3",
             title: yhLang(
               "BMI (Body Mass Index)",
-              "বি.এম.আই (বডি মাস ইনডেক্স)",
+              "পূর্ণ বয়স্ক তরুণ-তরুণীদের বিএমআই রেঞ্জ",
             ),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-sky",
@@ -17640,7 +17637,7 @@ const orbitItems = [
                         <p>
   ${yhLang(
     "To prevent anemia, adolescent girls should take one iron–folic acid tablet every week after a meal. These iron–folic acid tablets are provided to every adolescent girl from government health service centers.",
-    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে।সরকারি বিদ্যালয় ও স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি দেওয়া হয়।",
+    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  প্রতি সপ্তাহে খাওয়ার পর একটি আয়রন ফলিক এসিড বড়ি খেতে হবে।সরকারি বিদ্যালয় ও স্বাস্থ্যসেবা কেন্দ্রগুলো থেকে প্রত্যেক কিশোরীকে আয়রন-ফলিক এসিড বড়ি খেতে হবে।",
   )}
 </p>
                       </article>
@@ -18830,10 +18827,10 @@ const orbitItems = [
                     <span class="mod20-shape mod20-shape--triangle"></span>
                     <span class="mod20-shape mod20-shape--wave"></span>
                   </div>
-                  <div class="mod20-content">
-                  <div class="row g-3">
+                  <div class="mod20-content w-75 mx-auto">
+                  <div class="row g-3 mx-auto">
                     
-                    <div class="col-12 col-lg-4 d-flex flex-column gap-2">
+                    <div class="col-12 col-lg-5 d-flex flex-column gap-2">
                       <article class="glass-card p-4">
                         <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h4>
                         <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${bpIntro}</p>
@@ -18851,9 +18848,9 @@ const orbitItems = [
                         </ul>
                       </article>
                     </div>
-                    <div class="col-12 col-lg-8">
+                    <div class="col-12 col-lg-7">
                         <figure class="glass-card p-1 text-center">
-                          <img src="img/modu20/heart.jpg" style="height: 700px;" alt="নেফ্রোটিক সিনড্রোম সচেতনতা ১" class="img-fluid w-100 rounded shadow-sm img-zoom"/>
+                          <img src="img/modu20/heart.jpg" style="height: 650px;" alt="নেফ্রোটিক সিনড্রোম সচেতনতা ১" class="img-fluid w-100 rounded shadow-sm img-zoom"/>
                         </figure>
                     </div>
                   </div>
@@ -19581,7 +19578,7 @@ const orbitItems = [
                     yhLang("Carbon monoxide (CO)", "কার্বন মনোক্সাইড (CO)"),
 
                     `
-    <div class="modern-card glass-card my-2 air" data-aos="fade-up" data-aos-delay="20" style="border-radius:14px;padding:10px 14px;box-shadow:0 6px 20px rgba(230,81,0,.15), 0 2px 8px rgba(191,54,12,.1);border-left:4px solid #e65100;">
+    <div class="modern-card glass-card my-2 air" data-aos="fade-up" data-aos-delay="20" style="border-radius:14px;padding:10px 14px;box-shadow:0 6px 20px rgba(230,81,0,.15), 0 2px 8px rgba(191,54,12,.1);border-left:4px solid #672dc5;">
                     <div style="display:flex;align-items:center;">
                       <span style="background:linear-gradient(135deg,#fb8c00,#ef6c00);width:28px;height:28px;min-width:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 3px 10px rgba(251,140,0,.2);"><i class="fa-solid fa-lightbulb" style="color:#fff;font-size:14px;"></i></span>
                       <p class="mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে। ")}</p>
@@ -19747,7 +19744,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-car-burst",
-                    color: "#e65100",
+                    color: "#672dc5",
                     bg: "rgba(230,81,0,.12)",
                   };
                 if (
@@ -19876,8 +19873,8 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-wind",
-                    color: "#e65100",
-                    gradient: "linear-gradient(135deg,#ff8f00,#e65100)",
+                    color: "#672dc5",
+                    gradient: "linear-gradient(135deg,#ff8f00,#672dc5)",
                   };
                 if (title.includes("প্রতিরোধ") || title.includes("Prevention"))
                   return {
@@ -19934,7 +19931,7 @@ const orbitItems = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:3px;">
-                    <span style="background:linear-gradient(135deg,#e65100,#bf360c);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(230,81,0,.25), 0 1px 6px rgba(191,54,12,.15);"><i class="fa-solid fa-wind" style="color:#fff;font-size:18px;"></i></span>
+                    <span style="background:linear-gradient(135deg,#672dc5,#bf360c);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(230,81,0,.25), 0 1px 6px rgba(191,54,12,.15);"><i class="fa-solid fa-wind" style="color:#fff;font-size:18px;"></i></span>
                     ${yhLang("Sources of Air Pollution", "বায়ু দূষণের উৎস:")}
                   </h2>
                   
@@ -20237,7 +20234,7 @@ const orbitItems = [
                 if (item.includes("টাইফয়েড") || item.includes("Typhoid"))
                   return {
                     icon: "fa-temperature-high",
-                    color: "#e65100",
+                    color: "#672dc5",
                     bg: "rgba(230,81,0,.12)",
                   };
                 if (item.includes("কলেরা") || item.includes("Cholera"))
@@ -20400,7 +20397,7 @@ const orbitItems = [
                   return {
                     icon: "fa-person-breastfeeding",
                     color: "#ff6f00",
-                    gradient: "linear-gradient(135deg,#ff8f00,#e65100)",
+                    gradient: "linear-gradient(135deg,#ff8f00,#672dc5)",
                   };
                 if (
                   title.includes("রাসায়নিক দূষণ") ||
@@ -21022,15 +21019,20 @@ const orbitItems = [
                 ),
               ];
 
-              const formatIndex = (value) => String(value).padStart(2, "0");
-
+            const formatIndex = (value) => {
+              const bnDigits = ["০","১","২","৩","৪","৫","৬","৭","৮","৯"];
+              return String(value)
+                .padStart(2, "0")
+                .replace(/\d/g, d => bnDigits[d]);
+            };
               const renderItems = () =>
+                
                 cautionPoints
                   .map(
                     (item, idx) => `
                       <li>
-                        <article class="caution-item" style="background:${idx % 2 === 0 ? "rgba(255,255,255,.75)" : "rgba(255,249,196,.82)"};border-left:4px solid ${idx % 2 === 0 ? "#fbc02d" : "#f57f17"};box-shadow:${idx % 2 === 0 ? "0 6px 16px rgba(251,192,45,.2)" : "0 8px 20px rgba(245,127,23,.18)"};border-radius:12px;">
-                          <div class="caution-index" style="background:${idx % 2 === 0 ? "linear-gradient(135deg,#fdd835,#fbc02d)" : "linear-gradient(135deg,#ffb300,#f57f17)"};color:#fff;">${formatIndex(idx + 1)}</div>
+                        <article class="caution-item" style="background:${idx % 2 === 0 ? "rgba(255,255,255,.75)" : "rgba(255,249,196,.82)"};border-left:4px solid ${idx % 2 === 0 ? "#fbc02d" : "#5458d7"};box-shadow:${idx % 2 === 0 ? "0 6px 16px rgba(251,192,45,.2)" : "0 8px 20px rgba(245,127,23,.18)"};border-radius:12px;">
+                          <div class="caution-index" style="background:${idx % 2 === 0 ? "linear-gradient(135deg,#fdd835,#fbc02d)" : "linear-gradient(135deg,#ffb300,#5458d7)"};color:#fff;">${formatIndex(idx + 1)}</div>
                           <div class="caution-item__body">
                             <p class="mb-0"><i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>${item}</p>
                           </div>
@@ -21050,7 +21052,7 @@ const orbitItems = [
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
-                      <div class="caution-card__head" style="display:flex;align-items:center;color:#f57f17;font-weight:700;margin-bottom:10px;">
+                      <div class="caution-card__head" style="display:flex;align-items:center;color:#5458d7;font-weight:700;margin-bottom:10px;">
                         <h3><i class="fa-solid fa-shield-halved me-2"></i> ${yhLang("Safety Instructions", "নিরাপত্তা নির্দেশনা")}</h3>
                       </div>
                       <div>
@@ -22736,7 +22738,7 @@ const orbitItems = [
                 },
                 {
                   text: yhLang("Relatives", "আত্মীয়-স্বজন"),
-                  icon: "fa-person-roof",
+                  icon: "fa-person",
                   color: "m24l1-item-orange",
                 },
                 {
@@ -23429,7 +23431,7 @@ const orbitItems = [
 
               const points = [
                 {
-                  icon: "fa-person-roof",
+                  icon: "fa-person",
                   accent: "m24l11-item--a",
                   text: yhLang(
                     "Family, social, and religious values education helps young people stay away from crises and risky behaviors.",

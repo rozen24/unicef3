@@ -189,7 +189,7 @@
 }
 
 .m19l5-point-5 .m19l5-point-icon {
-  background: linear-gradient(135deg, #F57C00, #E65100);
+  background: linear-gradient(135deg, #F57C00, #672dc5);
 }
 
 .m19l5-point-number {
@@ -250,7 +250,7 @@
 
 .m19l5-point-5 .m19l5-point-badge {
   background: rgba(245, 124, 0, 0.15);
-  color: #E65100;
+  color: #672dc5;
 }
 
 /* Summary Box */

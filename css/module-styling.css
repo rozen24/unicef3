@@ -287,7 +287,7 @@ h5::before {
   content: "\f1b5";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #e65100;
+  color: #672dc5;
 }
 
 #ch8-lesson-1 h5::before,
@@ -406,7 +406,7 @@ h5::before {
   content: "\f0a0";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #e65100;
+  color: #672dc5;
 }
 
 #ch12-lesson-1 h5::before,
@@ -414,7 +414,7 @@ h5::before {
   content: "\f0e7";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #e65100;
+  color: #672dc5;
 }
 
 /* Module 13: Testicular Health */
@@ -880,7 +880,7 @@ h5::before {
   padding: 12px 14px !important;
   margin-bottom: 10px !important;
   box-shadow: 0 6px 14px rgba(245, 124, 0, 0.12) !important;
-  color: #e65100 !important;
+  color: #672dc5 !important;
 }
 
 #ch8-lesson-1 .puberty-list li:nth-child(even),
@@ -993,7 +993,7 @@ h5::before {
   padding: 12px 14px !important;
   margin-bottom: 10px !important;
   box-shadow: 0 6px 14px rgba(255, 152, 0, 0.12) !important;
-  color: #e65100 !important;
+  color: #672dc5 !important;
 }
 
 #ch12-lesson-1 .puberty-list li:nth-child(even),

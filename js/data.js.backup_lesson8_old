@@ -14798,7 +14798,7 @@ const coursesData = [
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(255, 152, 0, 0.2);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; color: #e65100;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; color: #672dc5;">
                       <i class="fa-solid fa-users" style="margin-right: 10px; font-size: 24px; color: #ff6f00;"></i>
                       প্রধান ঝুঁকিপূর্ণ গোষ্ঠী
                     </h3>
@@ -15097,7 +15097,7 @@ const coursesData = [
                   <div class="row g-2 mb-2" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-6">
                       <div class="modern-card glass-card h-100" style="background:linear-gradient(135deg,#fff9e6 0%,#fff3cd 50%, #ffe0b2 100%);border-radius:24px;box-shadow:0 14px 42px rgba(255,152,0,.25), 0 6px 18px rgba(239,108,0,.15);">
-                        <h4 class="mb-1" style="display:flex;align-items:center;color:#e65100; font-weight:700;">
+                        <h4 class="mb-1" style="display:flex;align-items:center;color:#672dc5; font-weight:700;">
                           <span style="background: linear-gradient(135deg, #ff9800, #ef6c00); width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 10px; box-shadow: 0 4px 14px rgba(255, 152, 0, 0.35);">
                             <i class="fa-solid fa-smog" style="color:#fff; font-size:22px;"></i>
                           </span>
@@ -15108,12 +15108,12 @@ const coursesData = [
                           <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ffa726; box-shadow:0 3px 10px rgba(255,167,38,0.2);"><i class="fa-solid fa-cloud" style="color:#fb8c00; margin-right:8px;"></i>ii. মোটা কণা(PM10)</li>
                           <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ff9800; box-shadow:0 3px 10px rgba(255,152,0,0.2);"><i class="fa-solid fa-sun" style="color:#ef6c00; margin-right:8px;"></i>iii. পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)</li>
                           <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #fb8c00; box-shadow:0 3px 10px rgba(251,140,0,0.2);"><i class="fa-solid fa-industry-windows" style="color:#ff6f00; margin-right:8px;"></i>iv. নাইট্রোজেন ডাই অক্সাইড (NO2)</li>
-                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #f57c00; box-shadow:0 3px 10px rgba(245,124,0,0.2);"><i class="fa-solid fa-smog" style="color:#e65100; margin-right:8px;"></i>v. সালফার ডাই অক্সাইড(SO2)</li>
+                          <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #f57c00; box-shadow:0 3px 10px rgba(245,124,0,0.2);"><i class="fa-solid fa-smog" style="color:#672dc5; margin-right:8px;"></i>v. সালফার ডাই অক্সাইড(SO2)</li>
                           <li style="background:rgba(255,255,255,0.7); padding:8px 12px; border-radius:10px; margin-bottom:8px; border-left:3px solid #ef6c00; box-shadow:0 3px 10px rgba(239,108,0,0.2);"><i class="fa-solid fa-car-side" style="color:#d84315; margin-right:8px;"></i>vi. কার্বন মনোক্সাইড (CO)</li>
                         </ul>
                         <p class="mb-2">${yhLang("In Bangladesh, residential use of solid fuels for cooking is the primary source of PM2.5 pollution, with 74.2% of the population still relying on fuels like wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে ।")}</p>
                         <div class="card-divider mb-3"></div>
-                        <h4 class="mb-1" style="display:flex;align-items:center;color:#e65100;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>${yhLang("Air Pollution Prevention & Management:", "বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:")}</h4>
+                        <h4 class="mb-1" style="display:flex;align-items:center;color:#672dc5;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>${yhLang("Air Pollution Prevention & Management:", "বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:")}</h4>
                         <ul class="list-unstyled feature-list mb-0">
                           <li><i class="fa-solid fa-check-circle text-success me-2"></i>i. খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা</li>
                           <li><i class="fa-solid fa-check-circle text-success me-2"></i>ii. স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা</li>
@@ -15338,7 +15338,7 @@ const coursesData = [
               const getItemIcon = (item) => {
                 if (item.includes('ডায়রিয়া') || item.includes('Diarrhea')) return { icon: 'fa-droplet', color: '#ff6f00', bg: 'rgba(255,111,0,.12)' };
                 if (item.includes('ডিজেন্ট্রি') || item.includes('আমাশয়') || item.includes('Dysentery')) return { icon: 'fa-virus', color: '#d32f2f', bg: 'rgba(211,47,47,.12)' };
-                if (item.includes('টাইফয়েড') || item.includes('Typhoid')) return { icon: 'fa-temperature-high', color: '#e65100', bg: 'rgba(230,81,0,.12)' };
+                if (item.includes('টাইফয়েড') || item.includes('Typhoid')) return { icon: 'fa-temperature-high', color: '#672dc5', bg: 'rgba(230,81,0,.12)' };
                 if (item.includes('কলেরা') || item.includes('Cholera')) return { icon: 'fa-disease', color: '#c62828', bg: 'rgba(198,40,40,.12)' };
                 if (item.includes('হেপাটাইটিস') || item.includes('Hepatitis')) return { icon: 'fa-syringe', color: '#f57c00', bg: 'rgba(245,124,0,.12)' };
                 if (item.includes('জিয়ার্ডিয়াসিস') || item.includes('Giardiasis')) return { icon: 'fa-bacterium', color: '#ef6c00', bg: 'rgba(239,108,0,.12)' };
@@ -15376,7 +15376,7 @@ const coursesData = [
 
               const getSectionIcon = (title) => {
                 if (title.includes('পানিবাহিত রোগ') || title.includes('Waterborne')) return { icon: 'fa-water', color: '#0277bd', gradient: 'linear-gradient(135deg,#0288d1,#01579b)' };
-                if (title.includes('পেটের সমস্যা') || title.includes('Digestive')) return { icon: 'fa-person-breastfeeding', color: '#ff6f00', gradient: 'linear-gradient(135deg,#ff8f00,#e65100)' };
+                if (title.includes('পেটের সমস্যা') || title.includes('Digestive')) return { icon: 'fa-person-breastfeeding', color: '#ff6f00', gradient: 'linear-gradient(135deg,#ff8f00,#672dc5)' };
                 if (title.includes('রাসায়নিক দূষণ') || title.includes('Chemical')) return { icon: 'fa-flask', color: '#d32f2f', gradient: 'linear-gradient(135deg,#e53935,#c62828)' };
                 if (title.includes('ত্বকের রোগ') || title.includes('Skin')) return { icon: 'fa-hand-dots', color: '#f57c00', gradient: 'linear-gradient(135deg,#fb8c00,#ef6c00)' };
                 if (title.includes('দীর্ঘমেয়াদি') || title.includes('ক্রনিক') || title.includes('Long-term') || title.includes('Chronic')) return { icon: 'fa-heart-circle-xmark', color: '#c62828', gradient: 'linear-gradient(135deg,#d32f2f,#b71c1c)' };
@@ -15902,8 +15902,8 @@ const coursesData = [
                   .map(
                     (item, idx) => `
                       <li>
-                        <article class="caution-item" style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.75)' : 'rgba(255,249,196,.82)'};border-left:4px solid ${idx % 2 === 0 ? '#fbc02d' : '#f57f17'};box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(251,192,45,.2)' : '0 8px 20px rgba(245,127,23,.18)'};border-radius:12px;">
-                          <div class="caution-index" style="background:${idx % 2 === 0 ? 'linear-gradient(135deg,#fdd835,#fbc02d)' : 'linear-gradient(135deg,#ffb300,#f57f17)'};color:#fff;">${formatIndex(idx + 1)}</div>
+                        <article class="caution-item" style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.75)' : 'rgba(255,249,196,.82)'};border-left:4px solid ${idx % 2 === 0 ? '#fbc02d' : '#5458d7'};box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(251,192,45,.2)' : '0 8px 20px rgba(245,127,23,.18)'};border-radius:12px;">
+                          <div class="caution-index" style="background:${idx % 2 === 0 ? 'linear-gradient(135deg,#fdd835,#fbc02d)' : 'linear-gradient(135deg,#ffb300,#5458d7)'};color:#fff;">${formatIndex(idx + 1)}</div>
                           <div class="caution-item__body">
                             <p class="mb-0"><i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>${item}</p>
                           </div>
@@ -15923,7 +15923,7 @@ const coursesData = [
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
-                      <div class="caution-card__head" style="display:flex;align-items:center;color:#f57f17;font-weight:700;margin-bottom:10px;">
+                      <div class="caution-card__head" style="display:flex;align-items:center;color:#5458d7;font-weight:700;margin-bottom:10px;">
                         <i class="fa-solid fa-shield-halved me-2"></i> নিরাপত্তা নির্দেশনা
                       </div>
                       <div>

@@ -6639,7 +6639,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.2;
-  background: linear-gradient(135deg, #e65100, #fb8c00);
+  background: linear-gradient(135deg, #672dc5, #fb8c00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -6725,7 +6725,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0;
   font-size: 0.86rem;
   font-weight: 700;
-  color: #e65100;
+  color: #672dc5;
 }
 
 .m16l2-info-card__text {
@@ -6766,7 +6766,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0;
   font-size: 0.9rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #e65100, #fb8c00);
+  background: linear-gradient(135deg, #672dc5, #fb8c00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -9294,7 +9294,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
     #ffcc80 40%,
     #ffb74d 65%,
     #ff9800 85%,
-    #e65100 100%
+    #672dc5 100%
   );
   padding: 12px 10px;
   overflow: hidden;
@@ -9398,7 +9398,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ff9800, #e65100);
+  background: linear-gradient(135deg, #ff9800, #672dc5);
   color: #fff;
   box-shadow: 0 4px 12px rgba(255, 152, 0, 0.32);
   animation: m17l2Pulse 3s ease-in-out infinite;
@@ -9423,7 +9423,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.2;
-  background: linear-gradient(135deg, #e65100, #ff9800);
+  background: linear-gradient(135deg, #672dc5, #ff9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -9463,7 +9463,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ff9800, #e65100);
+  background: linear-gradient(135deg, #ff9800, #672dc5);
   color: #fff;
   font-size: 0.8rem;
   box-shadow: 0 2px 8px rgba(255, 152, 0, 0.24);
@@ -9473,7 +9473,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   margin: 0;
   font-size: 0.86rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #e65100, #ff9800);
+  background: linear-gradient(135deg, #672dc5, #ff9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -10181,8 +10181,8 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m22l7-chem-cadmium { border-left-color: #00897b; }
 .m22l7-chem-cadmium .m22l7-chem-icon { background: linear-gradient(135deg, #009688, #00897b); box-shadow: 0 2px 7px rgba(0, 150, 136, 0.25); }
 
-.m22l7-chem-dioxin { border-left-color: #f57f17; }
-.m22l7-chem-dioxin .m22l7-chem-icon { background: linear-gradient(135deg, #f9a825, #f57f17); box-shadow: 0 2px 7px rgba(249, 168, 37, 0.25); }
+.m22l7-chem-dioxin { border-left-color: #5458d7; }
+.m22l7-chem-dioxin .m22l7-chem-icon { background: linear-gradient(135deg, #f9a825, #5458d7); box-shadow: 0 2px 7px rgba(249, 168, 37, 0.25); }
 
 .m22l7-chem-icon {
   width: 28px;

@@ -19581,7 +19581,7 @@ const orbitItems = [
                     yhLang("Carbon monoxide (CO)", "কার্বন মনোক্সাইড (CO)"),
 
                     `
-    <div class="modern-card glass-card my-2 air" data-aos="fade-up" data-aos-delay="20" style="border-radius:14px;padding:10px 14px;box-shadow:0 6px 20px rgba(230,81,0,.15), 0 2px 8px rgba(191,54,12,.1);border-left:4px solid #e65100;">
+    <div class="modern-card glass-card my-2 air" data-aos="fade-up" data-aos-delay="20" style="border-radius:14px;padding:10px 14px;box-shadow:0 6px 20px rgba(230,81,0,.15), 0 2px 8px rgba(191,54,12,.1);border-left:4px solid #672dc5;">
                     <div style="display:flex;align-items:center;">
                       <span style="background:linear-gradient(135deg,#fb8c00,#ef6c00);width:28px;height:28px;min-width:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 3px 10px rgba(251,140,0,.2);"><i class="fa-solid fa-lightbulb" style="color:#fff;font-size:14px;"></i></span>
                       <p class="mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে। ")}</p>
@@ -19747,7 +19747,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-car-burst",
-                    color: "#e65100",
+                    color: "#672dc5",
                     bg: "rgba(230,81,0,.12)",
                   };
                 if (
@@ -19876,8 +19876,8 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-wind",
-                    color: "#e65100",
-                    gradient: "linear-gradient(135deg,#ff8f00,#e65100)",
+                    color: "#672dc5",
+                    gradient: "linear-gradient(135deg,#ff8f00,#672dc5)",
                   };
                 if (title.includes("প্রতিরোধ") || title.includes("Prevention"))
                   return {
@@ -19934,7 +19934,7 @@ const orbitItems = [
               return `
                 <div class="lesson-slide">
                   <h2 class="slide-title d-none gradient-text" data-aos="fade-up" style="display:flex;align-items:center;margin-bottom:3px;">
-                    <span style="background:linear-gradient(135deg,#e65100,#bf360c);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(230,81,0,.25), 0 1px 6px rgba(191,54,12,.15);"><i class="fa-solid fa-wind" style="color:#fff;font-size:18px;"></i></span>
+                    <span style="background:linear-gradient(135deg,#672dc5,#bf360c);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 4px 12px rgba(230,81,0,.25), 0 1px 6px rgba(191,54,12,.15);"><i class="fa-solid fa-wind" style="color:#fff;font-size:18px;"></i></span>
                     ${yhLang("Sources of Air Pollution", "বায়ু দূষণের উৎস:")}
                   </h2>
                   
@@ -20237,7 +20237,7 @@ const orbitItems = [
                 if (item.includes("টাইফয়েড") || item.includes("Typhoid"))
                   return {
                     icon: "fa-temperature-high",
-                    color: "#e65100",
+                    color: "#672dc5",
                     bg: "rgba(230,81,0,.12)",
                   };
                 if (item.includes("কলেরা") || item.includes("Cholera"))
@@ -20400,7 +20400,7 @@ const orbitItems = [
                   return {
                     icon: "fa-person-breastfeeding",
                     color: "#ff6f00",
-                    gradient: "linear-gradient(135deg,#ff8f00,#e65100)",
+                    gradient: "linear-gradient(135deg,#ff8f00,#672dc5)",
                   };
                 if (
                   title.includes("রাসায়নিক দূষণ") ||
@@ -21029,8 +21029,8 @@ const orbitItems = [
                   .map(
                     (item, idx) => `
                       <li>
-                        <article class="caution-item" style="background:${idx % 2 === 0 ? "rgba(255,255,255,.75)" : "rgba(255,249,196,.82)"};border-left:4px solid ${idx % 2 === 0 ? "#fbc02d" : "#f57f17"};box-shadow:${idx % 2 === 0 ? "0 6px 16px rgba(251,192,45,.2)" : "0 8px 20px rgba(245,127,23,.18)"};border-radius:12px;">
-                          <div class="caution-index" style="background:${idx % 2 === 0 ? "linear-gradient(135deg,#fdd835,#fbc02d)" : "linear-gradient(135deg,#ffb300,#f57f17)"};color:#fff;">${formatIndex(idx + 1)}</div>
+                        <article class="caution-item" style="background:${idx % 2 === 0 ? "rgba(255,255,255,.75)" : "rgba(255,249,196,.82)"};border-left:4px solid ${idx % 2 === 0 ? "#fbc02d" : "#5458d7"};box-shadow:${idx % 2 === 0 ? "0 6px 16px rgba(251,192,45,.2)" : "0 8px 20px rgba(245,127,23,.18)"};border-radius:12px;">
+                          <div class="caution-index" style="background:${idx % 2 === 0 ? "linear-gradient(135deg,#fdd835,#fbc02d)" : "linear-gradient(135deg,#ffb300,#5458d7)"};color:#fff;">${formatIndex(idx + 1)}</div>
                           <div class="caution-item__body">
                             <p class="mb-0"><i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>${item}</p>
                           </div>
@@ -21050,7 +21050,7 @@ const orbitItems = [
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
-                      <div class="caution-card__head" style="display:flex;align-items:center;color:#f57f17;font-weight:700;margin-bottom:10px;">
+                      <div class="caution-card__head" style="display:flex;align-items:center;color:#5458d7;font-weight:700;margin-bottom:10px;">
                         <h3><i class="fa-solid fa-shield-halved me-2"></i> ${yhLang("Safety Instructions", "নিরাপত্তা নির্দেশনা")}</h3>
                       </div>
                       <div>

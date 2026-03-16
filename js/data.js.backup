@@ -14966,7 +14966,7 @@ const coursesData = [
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(255, 152, 0, 0.2);">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; color: #e65100;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; color: #672dc5;">
                       <i class="fa-solid fa-users" style="margin-right: 10px; font-size: 1.3em; color: #ff6f00;"></i>
                       প্রধান ঝুঁকিপূর্ণ গোষ্ঠী
                     </h3>
@@ -15084,7 +15084,7 @@ const coursesData = [
                   </div>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="60" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 22px; box-shadow: 0 10px 35px rgba(255, 152, 0, 0.2); margin-top: 20px;">
-                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #e65100;">
+                    <h3 style="display: flex; align-items: center; margin-bottom: 16px; color: #672dc5;">
                       <i class="fa-solid fa-exclamation-triangle" style="margin-right: 10px; font-size: 1.3em; color: #ff6f00;"></i>
                       বাংলাদেশে জলবায়ু পরিবর্তনের প্রভাব
                     </h3>
@@ -15337,7 +15337,7 @@ const coursesData = [
                     </div>
                     <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card text-center" style="background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 100%);border-radius:20px;box-shadow:0 10px 32px rgba(255,152,0,.2);">
-                        <h5 style="display:flex;align-items:center;justify-content:center;color:#e65100;margin-bottom:14px;">
+                        <h5 style="display:flex;align-items:center;justify-content:center;color:#672dc5;margin-bottom:14px;">
                           <i class="fa-solid fa-heart-pulse" style="margin-right:8px;"></i>
                           ঝুঁকির ভিজ্যুয়াল উপস্থাপন
                         </h5>
@@ -15453,7 +15453,7 @@ const coursesData = [
                         </ul>
                         <p class="mb-4">বাংলাদেশে, রান্নার জন্য আবাসিকভাবে কঠিন জ্বালানির ব্যবহার PM2.5 দূষণের প্রধান উৎস। যেখানে জনসংখ্যার ৭৪.২% এখনও কাঠ, খড় এবং গোবরের মতো জ্বালানির উপর নির্ভর করে ।</p>
                         <div class="card-divider mb-3"></div>
-                        <h4 class="mb-3" style="display:flex;align-items:center;color:#e65100;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:</h4>
+                        <h4 class="mb-3" style="display:flex;align-items:center;color:#672dc5;"><i class="fa-solid fa-shield-heart" style="margin-right:10px;"></i>বায়ু দূষণ প্রতিরোধ ও ব্যবস্থাপনা:</h4>
                         <ul class="list-unstyled feature-list mb-0">
                           <li><i class="fa-solid fa-check-circle text-success me-2"></i>i. খোলা স্থানে বর্জ্য পোড়ানো বন্ধ করা</li>
                           <li><i class="fa-solid fa-check-circle text-success me-2"></i>ii. স্থানীয় ভাবে বেশী বেশী বৃক্ষরোপণ করা</li>
@@ -16234,8 +16234,8 @@ const coursesData = [
                   .map(
                     (item, idx) => `
                       <li>
-                        <article class="caution-item" style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.75)' : 'rgba(255,249,196,.82)'};border-left:4px solid ${idx % 2 === 0 ? '#fbc02d' : '#f57f17'};box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(251,192,45,.2)' : '0 8px 20px rgba(245,127,23,.18)'};border-radius:12px;">
-                          <div class="caution-index" style="background:${idx % 2 === 0 ? 'linear-gradient(135deg,#fdd835,#fbc02d)' : 'linear-gradient(135deg,#ffb300,#f57f17)'};color:#fff;">${formatIndex(idx + 1)}</div>
+                        <article class="caution-item" style="background:${idx % 2 === 0 ? 'rgba(255,255,255,.75)' : 'rgba(255,249,196,.82)'};border-left:4px solid ${idx % 2 === 0 ? '#fbc02d' : '#5458d7'};box-shadow:${idx % 2 === 0 ? '0 6px 16px rgba(251,192,45,.2)' : '0 8px 20px rgba(245,127,23,.18)'};border-radius:12px;">
+                          <div class="caution-index" style="background:${idx % 2 === 0 ? 'linear-gradient(135deg,#fdd835,#fbc02d)' : 'linear-gradient(135deg,#ffb300,#5458d7)'};color:#fff;">${formatIndex(idx + 1)}</div>
                           <div class="caution-item__body">
                             <p class="mb-0"><i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>${item}</p>
                           </div>
@@ -16255,7 +16255,7 @@ const coursesData = [
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
-                      <div class="caution-card__head" style="display:flex;align-items:center;color:#f57f17;font-weight:700;margin-bottom:10px;">
+                      <div class="caution-card__head" style="display:flex;align-items:center;color:#5458d7;font-weight:700;margin-bottom:10px;">
                         <i class="fa-solid fa-shield-halved me-2"></i> নিরাপত্তা নির্দেশনা
                       </div>
                       <div>
