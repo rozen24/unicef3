@@ -5363,10 +5363,6 @@ const coursesData = [
                 "কিশোরীদের গর্ভধারণে মা ও শিশু মৃত্যুর ঝুঁকি অনেক বেশি। শারীরিক গঠন ও সামাজিক অবস্থার কারণে তাদের গর্ভকালীন, প্রসবকালীন এবং প্রসব-পরবর্তী সময়ে এই ঝুঁকির পরিমাণ অনেক বেড়ে যায়।"
               );
 
-              const riskDescription = yhLang(
-                "Adolescent pregnancy is extremely risky. During this time, the girl's own physical growth is incomplete and her physical and mental development is still ongoing. In this situation, pregnancy puts both the adolescent mother and the child at risk. During pregnancy, the growing child needs various services and nutrition along with the adolescent, which is often not readily available for adolescent mothers. Adolescent pregnancy and childbirth expose both mother and child to various risks.",
-                "তারুণ্যে গর্ভধারণ অত্যন্ত ঝুঁকিপূর্ণ। কারণ এ সময় কিশোরীর নিজেরই শারীরিক বৃদ্ধি অসম্পূর্ণ থাকে এবং তার শারীরিক ও মানসিক বিকাশ তখনও চলমান থাকে। এ অবস্থায় গর্ভধারণ করলে কিশোরী মা ও শিশু উভয়ই ঝুঁকির মধ্যে পড়ে যায়। গর্ভাবস্থায় কিশোরীর সাথে সাথে তার মধ্যে বেড়ে ওঠা সন্তানেরও নানা প্রকার সেবা–পুষ্টির দরকার হয় যা কিশোরী মায়ের জন্য সবসময় পাওয়া সচরাচর সম্ভব নয়। তারুণ্যে সন্তান ধারণ এবং জন্মদানের ক্ষেত্রে মা এবং সন্তান নানাবিধ ঝুঁকির সম্মুখীন হতে পারে।"
-              );
 
               const maternalRisks = [
                 yhLang("Pregnancy-Induced Hypertension", "গর্ভজনিত উচ্চ রক্তচাপ"),
@@ -5421,32 +5417,41 @@ const coursesData = [
                   </h2>
 
                   <div class="ch8l6-content-wrapper">
-                    <div class="ch8l6-left">
-                      <section class="ch8l6-description-box" data-aos="fade-up" data-aos-delay="40">
-                        <h3 class="ch8l6-section-header">
-                          <i class="fa-solid fa-info-circle"></i>
-                          ${yhLang("Understanding Adolescent Pregnancy", "তারুন্যকালীন গর্ভধারণ")}
-                        </h3>
-                        <p class="ch8l6-desc-text">${introText}</p>
-                      </section>
-                    </div>
 
-                    <div class="ch8l6-right">
-                      <div class="ch8l6-orbit-container" data-aos="" data-aos-delay="">
-                        <div class="ch8l6-orbit-center">
-                          <div class="ch8l6-orbit-center-icon">
-                            <i class="fa-solid fa-heart-pulse"></i>
-                          </div>
-                          <div class="ch8l6-orbit-center-text">
-                            <h2 class="text-white">
-                              ${yhLang("Maternal Health Risks", "কিশোরীদের মাতৃত্বজনিত ঝুঁকি")}
-                            </h2>
-                          </div>
-                        </div>
-                        <div class="ch8l6-orbit-ring"></div>
-                        ${renderOrbitRisks()}
-                      </div>
+                  <div class="row g-1 justify-content-center">
+                       <div class="col-md-5">
+                            <div class="ch8l6-left h-100">
+                              <section class="ch8l6-description-box" data-aos="fade-up" data-aos-delay="40">
+                                <h3 class="ch8l6-section-header">
+                                  <i class="fa-solid fa-info-circle"></i>
+                                  ${yhLang("Understanding Adolescent Pregnancy", "তারুন্যকালীন গর্ভধারণ")}
+                                </h3>
+                                <p class="ch8l6-desc-text">${introText}</p>
+                              </section>
+                            </div>
+                       </div>
+                       <div class="col-md-7">
+                          <div class="ch8l6-right">
+                            <div class="ch8l6-orbit-container" data-aos="" data-aos-delay="">
+                              <div class="ch8l6-orbit-center">
+                                <div class="ch8l6-orbit-center-icon">
+                                  <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div class="ch8l6-orbit-center-text">
+                                  <h2 class="text-white">
+                                    ${yhLang("Maternal Health Risks", "কিশোরীদের মাতৃত্বজনিত ঝুঁকি")}
+                                  </h2>
+                                </div>
+                              </div>
+                              <div class="ch8l6-orbit-ring"></div>
+                              ${renderOrbitRisks()}
+                            </div>
                     </div>
+                       </div>
+                    </div>
+                    
+
+                    
                   </div>
                 </div>
               `;
@@ -5555,6 +5560,148 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch8-lesson-8",
+            title: yhLang("Adolescent Pregnancy Management", "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"),
+            icon: "fa-hospital-user",
+            content: (() => {
+              const mainTitle = yhLang(
+                "Adolescent Pregnancy Management",
+                "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"
+              );
+
+              const mainDescription = yhLang(
+                "Pregnant adolescents are always at risk—during pregnancy, childbirth, or after delivery. Therefore, as soon as pregnancy is confirmed, at least 4 prenatal checkups must be ensured by visiting the nearest health center, and when labor begins in an adolescent mother, she must be taken to the hospital immediately for delivery. If the risks to the adolescent mother are identified on time and referred to an emergency obstetric care center at the right time, it plays an important role in saving the lives of both the adolescent mother and the child. Because childbirth in adolescent mothers is highly risky, delivery should never be done outside a hospital.",
+                "গর্ভবতী কিশোরী সবসময়ই ঝুঁকিপূর্ণ— গর্ভকালীন, প্রসবকালীন বা প্রসব পরবর্তী সময়েও। একারনে গর্ভ নিশ্চিত হবার সাথে সাথেই নুন্যতম ৪ টি গর্ভকালীন চেকাপ নিশ্চিত করার জন্য নিকটস্থ সাস্থ্যকেন্দ্রে সেবা নিতে হবে এবং কিশোরী মা এর প্রসব ব্যথা শুরু হলে তাকে জরুরি ভিত্তিতে হাসপাতালে নিয়ে ডেলিভারী করাতে হবে। যদি কিশোরী মায়ের ঝুঁকিসমূহ সময়মত শনাক্ত করা যায় ও ঠিক সময়ে জরুরি প্রসূতি সেবাকেন্দ্রে রেফার করা যায়, তাহলে তা কিশোরী মায়ের ও শিশুর জীবন বাঁচাতে গুরুত্বপূর্ণ ভূমিকা রাখবে। কিশোরী মায়ের প্রসব বেশি ঝুঁকিপূর্ণ বিধায় হাসপাতাল ছাড়া কোনোভাবেই প্রসব করানো উচিত নয়।"
+              );
+
+              const sectionTitle = yhLang(
+                "Care and Services for Adolescent Mothers During Pregnancy, Childbirth, and After",
+                "গর্ভকালীন ও প্রসবকালীন এবং প্রসব পরবর্তী সময়ে কিশোরী মায়েদের যত্ন ও সেবা"
+              );
+
+              const points = [
+                {
+                  title: yhLang(
+                    "1. Early Detection and Family Support",
+                    "১. প্রাথমিক অবস্থায় কিশোরীর গর্ভ শনাক্ত করে সে যাতে পরিবারে প্রয়োজনীয় যত্ন ও সহায়তা পায়, সেটা নিশ্চিত করার জন্য পরিবারের সকলকে উদ্বুদ্ধ করতে হবে।"
+                  ),
+                  icon: "fa-hand",
+                  color: "ch8l8-point-type-1",
+                  subPoints: []
+                },
+                {
+                  title: yhLang(
+                    "2. Prenatal Checkups",
+                    "২. গর্ভাবস্থা পরীক্ষা"
+                  ),
+                  titleBn: "২. গর্ভাবস্থা পরীক্ষা",
+                  icon: "fa-stethoscope",
+                  color: "ch8l8-point-type-2",
+                  subPoints: [
+                    yhLang(
+                      "Checkups by trained service providers, at least 4 times (once in 1-4 months, once in 6-7 months, once in 8 months, and once in 9 months)",
+                      "প্রশিক্ষিত সেবা প্রদানকারীর দ্বারা, কমপক্ষে ৪ বার (১-৪ মাসে ১ বার, ৬-৭ মাসে ১ বার, ৮ মাসে ১ বার এবং ৯ মাসে ১ বার) চেকাপ নিশ্চিত করতে হবে"
+                    ),
+                    yhLang(
+                      "Health education by trained provider about nutrition, rest, work, hygiene, TD vaccine (5 doses if not given), and delivery planning consultation",
+                      "প্রশিক্ষত সেবা দান কারীর দারা কিশোরী মায়ের পুষ্টি, বিশ্রাম, কাজ, পরিচ্ছন্নতা বিষয়ে স্বাস্থ্যশিক্ষা নিশিত করা , টিটেনাস-ডিপথেরিয়ার (টিডি) টিকা (৫ ডোজ না দেয়া থাকলে) নেওয়া ও প্রসব পরিকল্পনার পরামর্শ গ্রহন করা"
+                    ),
+                    yhLang(
+                      "If complications arise during this time, immediate referral to appropriate hospital with surgery and blood transfusion facilities",
+                      "এসময়ে কিশোরীদের কোনো জটিলতা দেখা দিলে তৎক্ষণাৎ উপযুক্ত হাসপাতালে রেফার করতে হবে যেখানে গর্ভবতীর অপারেশন বা রক্ত সঞ্চালনের ব্যবস্থা আছে।"
+                    )
+                  ]
+                },
+                {
+                  title: yhLang(
+                    "3. Delivery Planning",
+                    "৩. প্রসব (প্রসবোত্তর) আরও অনুমান"
+                  ),
+                  titleBn: "৩. প্রসব (প্রসবোত্তর) আরও অনুমান",
+                  icon: "fa-list-check",
+                  color: "ch8l8-point-type-3",
+                  subPoints: [
+                    yhLang(
+                      "Planning before delivery can significantly reduce the risk of death for mother and child. For example:",
+                      "আগে থেকে পরিকল্পনা করে মাতৃ এবং ভ্রূণের মৃত্যুর ঝুঁকি উল্লেখযোগ্যভাবে হ্রাস করা যেতে পারে। উদাহরণস্বরূপ:"
+                    ),
+                    yhLang(
+                      "Selection of place of delivery",
+                      "ডেলিভারির স্থান নির্বাচন করা"
+                    ),
+                    yhLang(
+                      "Arrange transportation in advance when labor begins",
+                      "ব্যথা শুরু হলে দ্রুত হাসপাতালে নিতে আগে যানবাহন ঠিক করে রাখা"
+                    ),
+                    yhLang(
+                      "Save money in advance and identify blood donor",
+                      "আগে থেকে টাকা জমানো ও রক্তদাতা ঠিক করে রাখা"
+                    )
+                  ]
+                }
+              ];
+
+              const managementIcons = [
+                "fa-hands",
+                "fa-stethoscope",
+                "fa-list-check",
+              ];
+
+              const renderPoints = () => {
+                return points
+                  .map((point, idx) => {
+                    const hasSubPoints = point.subPoints && point.subPoints.length > 0;
+                    return `
+                      <div class="ch8l8-point-section ${point.color}" data-aos="fade-up" data-aos-delay="${80 + idx * 100}">
+                        <div class="ch8l8-point-header">
+                          <div class="ch8l8-point-icon">
+                            <i class="fa-solid ${point.icon}"></i>
+                          </div>
+                          <h3 class="ch8l8-point-title">${point.title}</h3>
+                        </div>
+                        ${hasSubPoints ? `
+                          <ul class="ch8l8-subpoints-list">
+                            ${point.subPoints.map((subPoint, subIdx) => `
+                              <li class="ch8l8-subpoint-item" data-aos="fade-right" data-aos-delay="${100 + idx * 100 + subIdx * 40}">
+                              <span class="ch8l8-subpoint-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                              <span class="ch8l8-subpoint-text">${subPoint}</span>
+                            </li>
+                            `).join("")}
+                          </ul>
+                        ` : ''}
+                      </div>
+                    `;
+                  })
+                  .join("");
+              };
+
+              return `
+                <div class="ch8l8-slide">
+                  <h2 class="ch8l8-title" data-aos="fade-down">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    ${mainTitle}
+                  </h2>
+
+                  <section class="ch8l8-description-box" data-aos="fade-up" data-aos-delay="40">
+                    <p class="ch8l8-desc-text">${mainDescription}</p>
+                  </section>
+
+                  <section class="ch8l8-section-wrapper" data-aos="fade-up" data-aos-delay="60">
+                    <h3 class="ch8l8-section-title">
+                      <i class="fa-solid fa-clipboard-list"></i>
+                      ${sectionTitle}
+                    </h3>
+
+                    <div class="ch8l8-points-container">
+                      ${renderPoints()}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          
         ],
       },
       {
