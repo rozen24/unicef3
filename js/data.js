@@ -3677,7 +3677,6 @@ const coursesData = [
                     </ul>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
@@ -3803,79 +3802,105 @@ const coursesData = [
           "মডিউল-৫: ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
         ),
         lessons: [
+ 
+
           {
             id: "ch5-lesson-1",
             title: yhLang(
-              "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
-              "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
+              "Male Reproductive System",
+              "পুরুষ প্রজননতন্ত্র",
             ),
-            icon: "fa-mars",
-            gradientClass: "bg-gradient-blue",
+            icon: "fa-dna",
+            gradientClass: "bg-gradient-indigo",
             audioFile: "",
             quiz: {
               passingScore: 60,
               questions: [
                 {
-                  id: "q5a",
+                  id: "q5c",
                   question: yhLang(
-                    "স্বপ্নদোষ বলতে কী বোঝায়?",
-                    "স্বপ্নদোষ বলতে কী বোঝায়?",
+                    "What is the main function of the testes?",
+                    "টেস্টিসের প্রধান কাজ কী?",
                   ),
                   options: [
                     yhLang(
-                      "ঘুমের মধ্যে স্বাভাবিকভাবে বীর্য বের হওয়া",
-                      "ঘুমের মধ্যে স্বাভাবিকভাবে বীর্য বের হওয়া",
+                      "Produce sperm and testosterone",
+                      "শুক্রাণু এবং টেস্টোস্টেরন তৈরি করা",
                     ),
-                    yhLang("দীর্ঘমেয়াদি রোগ", "দীর্ঘমেয়াদি রোগ"),
-                    yhLang("মূত্রনালির সংক্রমণ", "মূত্রনালির সংক্রমণ"),
-                    yhLang("হরমোনের ঘাটতি", "হরমোনের ঘাটতি"),
+                    yhLang("Produce urine", "মূত্র তৈরি করা"),
+                    yhLang("Store semen", "বীর্য সংরক্ষণ করা"),
+                    yhLang("Filter blood", "রক্ত পরিশোধন করা"),
                   ],
                   correctAnswer: 0,
                 },
               ],
             },
             content: (function () {
-              const dreamInfo = [
-                "ছেলেদের সাধারণত বয়ঃসন্ধির সময় বা ১৩ থেকে ১৫ বছর বয়স থেকে বীর্যথলিতে বীর্য তৈরি শুরু হয়। অতিরিক্ত বীর্য স্বাভাবিক নিয়মে শরীর থেকে বেরিয়ে আসে। এটাই হলো বীর্যপাত। ঘুমের মধ্যে এই বীর্য বেরিয়ে আসাকে বলা হয় স্বপ্নদোষ বা স্বপ্নে বীর্যপাত।",
-                "স্বপ্নদোষ ছেলেদের জন্য একটি স্বাভাবিক প্রক্রিয়া, এটি কোনো রোগ নয়। কারো স্বপ্নদোষ না হওয়াও কোনো অস্বাভাবিক বিষয় নয় এবং এর অর্থ এই নয় যে তার বীর্য ঠিকমতো তৈরি হচ্ছে না। তাই ‘জীবন নষ্ট হয়ে গেছে’ ভেবে মন খারাপ করা বা চিকিৎসার জন্য কবিরাজ/হাতুড়ে ডাক্তারের কাছে যাওয়াও উচিত নয়।",
-              ];
+              const anatomyTopics = [
+  {
+    title: yhLang("Penis", "পেনিস/ পুরুষাঙ্গ"),
+    description: yhLang(
+      "The penis delivers sperm into the female vagina during sexual intercourse and also functions for urination. During sexual arousal, blood flow increases, making it erect and larger in size. Ejaculation then occurs, releasing semen from the penis. Ejaculation can also happen during sleep, which is a normal process.",
+      "পেনিস যৌন সংগমের মাধ্যমে নারীর যোনিতে শুক্রাণু প্রবেশ করায় ও এছাড়া এটি মূত্র নির্গমনের কাজও করে। যৌন উত্তেজনার সময় পেনিসে রক্ত চলাচল বেড়ে যায় এবং এটি শক্ত হয়ে আকৃতিতে বড় হয়। তারপর বীর্যপাত হয়, তখন পেনিস থেকে বীর্য বেরিয়ে আসে। বীর্যপাত অনেক সময় ঘুমের মধ্যও হতে পারে; এটি একটি স্বাভাবিক ঘটনা।"
+    ),
+    icon: "fa-droplet",
+  },
+  {
+    title: yhLang("Testes and Scrotum", "টেস্টিস/ অণ্ডকোষ ও স্কোটার্ম/ অণ্ডকোষের থলি"),
+    description: yhLang(
+      "The scrotum is the sac that hangs below the penis and contains two testes. The testes produce sperm and the male hormone testosterone.",
+      "পেনিসের নিচে ঝুলে থাকা থলিটিকে স্কোটার্ম বলে যার মধ্য দুটি 'বলের' মতো টেস্টিস থাকে। এখান থেকেই মূলত শুক্রাণু এবং পুরুষ হরমোন অর্থাৎ টেস্টোস্টেরন তৈরি হয়।"
+    ),
+    icon: "fa-gem",
+  },
+  {
+    title: yhLang("Sperm", "শুক্রাণু"),
+    description: yhLang(
+      "Sperm production begins at puberty. Sperm are contained in a white fluid called semen. During ejaculation, semen exits through the penis. During sexual intercourse, sperm travel through the female reproductive system to reach and fertilize an egg. Only one sperm is needed to fertilize an egg.",
+      "বয়ঃসন্ধি থেকে শুক্রাণু উৎপাদিত হতে শুরু করে। শুক্রাণুগুলো এক ধরনের সাদা তরল পদার্থের মধ্য থাকে যাকে বলা হয় বীর্য। পুরুষের বীর্যপাতের সময় এগুলো পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে। নারীর সঙ্গে শারীরিক মিলনের সময় পুরুষের বীর্যপাত হলে তা নারীর যোনিপথ ও জরায়ু দিয়ে ডিম্বনালিতে প্রবেশ করে ও ডিম্বাণুর সঙ্গে মিলিত হয়। এদের মধ্য খুব অল্প কয়েকটা শুক্রাণু, ডিম্বাণু পর্যন্ত পৌঁছাতে পারে। তবে একটি ডিম্বাণুকে নিষিক্ত করে সন্তান উৎপাদন করতে কেবল একটি শুক্রাণুই প্রয়োজন।"
+    ),
+    icon: "fa-bacteria",
+  },
+  {
+    title: yhLang("Urethra", "ইউরেথ্রা/ মূত্রনালি"),
+    description: yhLang(
+      "Urine and semen exit the body through the tip of the penis via the urethra.",
+      "দেহ থেকে মূত্র এবং বীর্য, পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে।"
+    ),
+    icon: "fa-arrow-down",
+  },
+  {
+    title: yhLang("Nocturnal Emission (Wet Dream)", "ছেলেদের স্বপ্নে বীর্যপাত"),
+    description: yhLang(
+      "During puberty (usually between ages 13–15), semen production begins. Excess semen is naturally released from the body, often during sleep, known as a wet dream. This is a normal process and not a disease. Not experiencing it is also normal and does not indicate any problem.",
+      "ছেলেদের সাধারণত বয়ঃসন্ধির সময় বা ১৩ থেকে ১৫ বছর বয়স থেকে বীর্যথলিতে বীর্য তৈরি শুরু হয়। অতিরিক্ত বীর্য স্বাভাবিক নিয়মে শরীর থেকে বেরিয়ে আসে। এটাই হচ্ছে বীর্যপাত। ঘুমের মধ্য এই বীর্য বেরিয়ে আসাকে বলা হয় স্বপ্নে বীর্যপাত যা সাধারণত স্বপ্নদোষ হিসেবে পরিচিত। স্বপ্নে বীর্যপাত ছেলেদের জন্য একটি স্বাভাবিক প্রক্রিয়া, এটি কোনো রোগ নয়। কারো স্বপ্নদোষ না হওয়াও কোনো অস্বাভাবিক ব্যাপার নয় এবং এর অর্থ এই নয় যে, তার বীর্য ঠিকমত তৈরি হচ্ছে না। এজন্য 'জীবন নষ্ট হয়ে গেছে' ভেবে মন খারাপ করা কিংবা চিকিৎসার জন্য কবিরাজ/হাতুড়ে ডাক্তারের শরণাপন্ন হওয়া উচিত নয়।"
+    ),
+    icon: "fa-bed",
+  },
+  {
+    title: `
+      <figure class=" mb-0">
+                          <img src="img/modu5/birjo.jpg" style="height: 300px; width: 400px; object-fit: cover;" alt="পুরুষ প্রজননতন্ত্র" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m5l3-main-image" />
+                        </figure>
+    `,
+    description: "",
+    icon: "",
+  },
+];
 
-              const anatomySections = [
-                {
-                  title: "টেস্টিস / অণ্ডকোষ ও স্ক্রোটাম / অণ্ডকোষের থলি",
-                  text: "পেনিসের নিচে ঝুলে থাকা থলিটিকে স্ক্রোটাম বলা হয়, যার মধ্যে দুটি বলের মতো টেস্টিস (অণ্ডকোষ) থাকে। এখান থেকেই মূলত শুক্রাণু এবং পুরুষ হরমোন টেস্টোস্টেরন তৈরি হয়।",
-                },
-                {
-                  title: "শুক্রাণু",
-                  text: "বয়ঃসন্ধিকাল থেকে শুক্রাণু উৎপাদিত হতে শুরু করে। শুক্রাণুগুলো একটি সাদা তরল পদার্থের মধ্যে থাকে, যাকে বীর্য বলা হয়। পুরুষের বীর্যপাতের সময় এই বীর্য পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে। নারীর সঙ্গে শারীরিক মিলনের সময় পুরুষের বীর্য নারীর যোনি ও জরায়ুর মধ্য দিয়ে ডিম্বনালিতে প্রবেশ করে এবং ডিম্বাণুর সঙ্গে মিলিত হয়। অনেক শুক্রাণুর মধ্যে মাত্র একটি শুক্রাণু ডিম্বাণুকে নিষিক্ত করার জন্য যথেষ্ট।",
-                },
-                {
-                  title: "ইউরেথ্রা / মূত্রনালি",
-                  text: "দেহ থেকে মূত্র এবং বীর্য, উভয়ই পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে।",
-                },
-              ];
-
-              const renderParagraphs = () =>
-                dreamInfo
+              const renderTopicCards = () =>
+                anatomyTopics
                   .map(
-                    (text, idx) => `
-                      <p class="mb-3" data-aos="fade-up" data-aos-delay="${
-                        80 + idx * 20
-                      }">${text}</p>
-                    `,
-                  )
-                  .join("");
-
-              const renderAnatomy = () =>
-                anatomySections
-                  .map(
-                    (item, idx) => `
-                      <div class="col-12 col-md-4">
-                        <article class="modern-card glass-card menstrual-info-card h-100" data-aos="fade-up" data-aos-delay="${
-                          80 + idx * 40
-                        }">
-                          <h4 class="gradient-text mb-2">${item.title}</h4>
-                          <p class="mb-0">${item.text}</p>
+                    (topic, idx) => `
+                      <div class="col-12 col-lg-6 mb-1 mt-0">
+                        <article class="m5l3-topic-card modern-card glass-card" data-aos="fade-up" data-aos-delay="${80 + idx * 60}">
+                          <div class="m5l3-topic-header">
+                            <div class="m5l3-topic-icon">
+                              <i class="fa-solid ${topic.icon}"></i>
+                            </div>
+                            <h3 class="m5l3-topic-title gradient-text">${topic.title}</h3>
+                          </div>
+                          <p class="m5l3-topic-description mb-0">${topic.description}</p>
                         </article>
                       </div>
                     `,
@@ -3883,49 +3908,22 @@ const coursesData = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
-                    "ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
+                <div class="lesson-slide m5l3-slide">
+                  <h2 class="slide-title gradient-text d-none" data-aos="fade-up">${yhLang(
+                    "Male Reproductive System",
+                    "পুরুষ প্রজননতন্ত্র",
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="gradient-text">${yhLang(
-                      "ছেলেদের স্বপ্নদোষ / বীর্যপাত",
-                      "ছেলেদের স্বপ্নদোষ / বীর্যপাত",
+
+                  <section class="m5l3-topics-section" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="m5l3-section-title gradient-text mb-2">${yhLang(
+                      "Key Components and Functions",
+                      "পুরুষ প্রজনতন্ত্র",
                     )}</h3>
-                    ${renderParagraphs()}
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
-                    <div class="row align-items-center g-4">
-                      <div class="col-lg-7">
-                        <h3 class="gradient-text mb-3">${yhLang(
-                          "পুরুষ প্রজননতন্ত্র",
-                          "পুরুষ প্রজননতন্ত্র",
-                        )}</h3>
-                        <h4 class="fw-semibold mb-2">${yhLang(
-                          "পেনিস / পুরুষাঙ্গ",
-                          "পেনিস / পুরুষাঙ্গ",
-                        )}</h4>
-                        <p class="mb-2">পেনিস যৌন সঙ্গমের মাধ্যমে নারীর যোনিতে শুক্রাণু প্রবেশ করায় এবং একই সাথে এটি মূত্র নির্গমনের কাজও করে। যৌন উত্তেজনার সময় পেনিসে রক্ত চলাচল বেড়ে যায় এবং এটি শক্ত ও বড় হয়। পরবর্তীতে বীর্যপাত হয়, অর্থাৎ পেনিস থেকে বীর্য বেরিয়ে আসে।</p>
-                        <p class="mb-0">বীর্যপাত অনেক সময় ঘুমের মধ্যেও হতে পারে — এটি সম্পূর্ণ স্বাভাবিক।</p>
-                      </div>
-                      <div class="col-lg-5">
-                        <figure class="image-card mb-0">
-                          <img src="img/modu5/birjo.jpg" alt="পেনিস / পুরুষাঙ্গ" style="height: 500px; object-fit: cover;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                        </figure>
-                      </div>
+                    <div class="row g-1">
+                      ${renderTopicCards()}
                     </div>
                   </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <div class="row g-3">
-                    ${renderAnatomy()}
-                  </div>
                 </div>
               `;
             })(),
@@ -3933,34 +3931,31 @@ const coursesData = [
           {
             id: "ch5-lesson-2",
             title: yhLang(
-              "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
+              "Management of Wet Dreams/Ejaculation",
               "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
             ),
-            icon: "fa-hand-holding-heart",
-            gradientClass: "bg-gradient-teal",
+            icon: "fa-heart-pulse",
+            gradientClass: "bg-gradient-rose",
             audioFile: "",
             quiz: {
               passingScore: 60,
               questions: [
                 {
-                  id: "q5b",
+                  id: "q5d",
                   question: yhLang(
-                    "স্বপ্নদোষের পর প্রথম করণীয় কী?",
-                    "স্বপ্নদোষের পর প্রথম করণীয় কী?",
+                    "What should you do after experiencing a wet dream?",
+                    "স্বপ্নদোষের পর আপনি কি করবেন?",
                   ),
                   options: [
                     yhLang(
-                      "শরীর পরিষ্কার করে কাপড় পরিবর্তন করা",
-                      "শরীর পরিষ্কার করে কাপড় পরিবর্তন করা",
+                      "Clean body and change clothes, engage in positive activities",
+                      "শরীর পরিষ্কার করে কাপড় পরিবর্তন করুন, ইতিবাচক কাজে নিয়োজিত হন",
                     ),
+                    yhLang("Hide it and feel ashamed", "লুকান এবং লজ্জিত হন"),
+                    yhLang("Seek immediate medical help", "তাৎক্ষণিক চিকিৎসা নিন"),
                     yhLang(
-                      "ডাক্তারের কাছে দৌড়ে যাওয়া",
-                      "ডাক্তারের কাছে দৌড়ে যাওয়া",
-                    ),
-                    yhLang("খাবার খাওয়া বন্ধ করা", "খাবার খাওয়া বন্ধ করা"),
-                    yhLang(
-                      "বন্ধুদের সঙ্গে বাজে কথা বলা",
-                      "বন্ধুদের সঙ্গে বাজে কথা বলা",
+                      "Restrict daily activities",
+                      "দৈনন্দিন কার্যক্রম সীমিত করুন",
                     ),
                   ],
                   correctAnswer: 0,
@@ -3968,103 +3963,204 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const routineSteps = [
-                "<strong>১.</strong> ছেলেদের স্বপ্নদোষ বা বীর্যপাত হলে শরীর পরিষ্কার করে কাপড় পরিবর্তন করতে হবে।",
-                "<strong>২.</strong> বিষয়টি নিয়ে মন খারাপ না করে নিজেকে বিভিন্ন ধরনের কাজে (পড়াশোনার বাইরে ভালো বই পড়া, খেলাধুলা/ব্যায়াম করা, উন্নয়নমূলক/সেবামূলক কাজ করা, ধর্মীয় কাজ করা ইত্যাদি) সম্পৃক্ত করতে হবে।",
-                "<strong>৩.</strong> প্রতিদিন গোসলের সময় যৌনাঙ্গ পরিষ্কার করতে হবে। যদি পেনিসের অগ্রভাগে বাড়তি চামড়া থাকে (ফোরস্কিন), সেটিও পরিষ্কার করতে হবে।",
-                "<strong>৪.</strong> প্রতিদিন পরিষ্কার আন্ডারওয়্যার ব্যবহার করতে হবে।",
-                "<strong>৫.</strong> যৌনাঙ্গ বা মলদ্বারের ভেতরে কোনো ধরনের অপরিষ্কার বস্তু প্রবেশ করানো যাবে না।",
-                "<strong>৬.</strong> অপরিষ্কার হাতে কখনই নিজের যৌনাঙ্গ ধরা যাবে না।",
-                "<strong>৭.</strong> বয়ঃসন্ধিকালীন বৃদ্ধির কারণে এসময় ছেলেদের প্রচুর পুষ্টিকর খাবার খেতে হবে।",
-              ];
+             const hygienePoints = [
+  {
+    text: yhLang(
+      "If boys experience nocturnal emission or ejaculation, they should clean their body and change clothes.",
+      "ছেলেদের স্বপ্নদোষ বা বীর্যপাত হলে শরীর পরিষ্কার করে কাপড় পরিবর্তন করতে হবে।"
+    ),
+    icon: "fa-soap",
+    color: "#ec4899",
+    bgColor: "rgba(236, 72, 153, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Do not feel upset about it; instead engage in various activities such as reading books, sports/exercise, development or service work, and religious practices.",
+      "বিষয়টি নিয়ে মন খারাপ না করে নিজেকে বিভিন্ন ধরনের কাজে (পড়াশোনার বাইরে ভালো বই পড়া, খেলাধুলা/ব্যায়াম করা, উন্নয়নমূলক/সেবামূলক কাজ করা, ধর্মীয় কাজ করা ইত্যাদি) সম্পৃক্ত করতে হবে।"
+    ),
+    icon: "fa-book-open",
+    color: "#3b82f6",
+    bgColor: "rgba(59, 130, 246, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Clean the genital area daily during bathing. If there is foreskin on the penis, it should also be cleaned.",
+      "প্রতিদিন গোসলের সময় যৌনাঙ্গ পরিষ্কার করতে হবে। যদি পেনিসের অগ্রভাগে বাড়তি চামড়া থাকে (ফোরস্কিন), সেটিও পরিষ্কার করতে হবে।"
+    ),
+    icon: "fa-water",
+    color: "#06b6d4",
+    bgColor: "rgba(6, 182, 212, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Wear clean underwear every day.",
+      "প্রতিদিন পরিষ্কার আন্ডারওয়্যার ব্যবহার করতে হবে।"
+    ),
+    icon: "fa-vest",
+    color: "#10b981",
+    bgColor: "rgba(16, 185, 129, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Do not insert any unclean objects into the genital or anal area.",
+      "যৌনাঙ্গ বা মলদ্বারের ভেতরে কোনো ধরনের অপরিষ্কার বস্তু প্রবেশ করানো যাবে না।"
+    ),
+    icon: "fa-ban",
+    color: "#ef4444",
+    bgColor: "rgba(239, 68, 68, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Never touch your genital area with unclean hands.",
+      "অপরিষ্কার হাতে কখনই নিজের যৌনাঙ্গ ধরা যাবে না।"
+    ),
+    icon: "fa-hand-fist",
+    color: "#f59e0b",
+    bgColor: "rgba(245, 158, 11, 0.12)",
+  },
+  {
+    text: yhLang(
+      "During puberty, boys should consume plenty of nutritious food due to growth.",
+      "বয়ঃসন্ধিকালীন বৃদ্ধির কারণে এসময় ছেলেদের প্রচুর পুষ্টিকর খাবার খেতে হবে।"
+    ),
+    icon: "fa-apple",
+    color: "#8b5cf6",
+    bgColor: "rgba(139, 92, 246, 0.12)",
+  },
+];
 
-              const restraintSteps = [
-                "<strong>১.</strong> বয়ঃসন্ধিকালে বিপরীত লিঙ্গের প্রতি আকর্ষণ অনুভব করা স্বাভাবিক। তবে অবশ্যই মানুষ হিসেবে নিজেকে সংযত রাখতে হবে।",
-                "<strong>২.</strong> এসময় রাস্তাঘাটে বা স্কুল–কলেজের সামনে মেয়েদের আজেবাজে কথা বলা, শিস দেওয়া বা কোনো ধরনের যৌন হয়রানি করা যাবে না।",
-                "<strong>৩.</strong> সুযোগ পেয়ে মেয়েদের শরীরের স্পর্শকাতর স্থানে হাত দেওয়া যাবে না।",
-                "<strong>৪.</strong> কোনো অবস্থাতেই বলপ্রয়োগ করে কারো সঙ্গে যৌন সম্পর্ক স্থাপন করা যাবে না।",
-                "<strong>৫.</strong> খারাপ বন্ধুদের প্ররোচনায় পতিতালয়ে যাওয়া যাবে না।",
-              ];
+              const restraintPoints = [
+  {
+    text: yhLang(
+      "It is normal to feel attraction towards the opposite sex during adolescence, but one must control oneself and act responsibly.",
+      "বয়ঃসন্ধিকালে বিপরীত লিঙ্গের প্রতি আকর্ষণ অনুভব করা স্বাভাবিক। তবে অবশ্যই মানুষ হিসেবে নিজেকে সংযত রাখতে হবে।"
+    ),
+    icon: "fa-heart",
+    color: "#db2777",
+  },
+  {
+    text: yhLang(
+      "Do not make inappropriate comments, whistle, or engage in any form of sexual harassment in public places or around schools and colleges.",
+      "এসময় রাস্তাঘাটে বা স্কুল–কলেজের সামনে মেয়েদের আজেবাজে কথা বলা, শিস দেওয়া বা কোনো ধরনের যৌন হয়রানি করা যাবে না।"
+    ),
+    icon: "fa-triangle-exclamation",
+    color: "#f97316",
+  },
+  {
+    text: yhLang(
+      "Do not touch sensitive parts of someone’s body under any circumstances.",
+      "সুযোগ পেয়ে মেয়েদের শরীরের স্পর্শকাতর স্থানে হাত দেওয়া যাবে না।"
+    ),
+    icon: "fa-hand-holding-heart",
+    color: "#a855f7",
+  },
+  {
+    text: yhLang(
+      "Under no circumstances should anyone be forced into a sexual relationship.",
+      "কোনো অবস্থাতেই বলপ্রয়োগ করে কারো সঙ্গে যৌন সম্পর্ক স্থাপন করা যাবে না।"
+    ),
+    icon: "fa-shield-halved",
+    color: "#dc2626",
+  },
+  {
+    text: yhLang(
+      "Do not be influenced by bad friends to visit brothels.",
+      "খারাপ বন্ধুদের প্ররোচনায় পতিতালয়ে যাওয়া যাবে না।"
+    ),
+    icon: "fa-person-hiking",
+    color: "#059669",
+  },
+];
 
               const reminderPoints = [
-                "স্বাস্থ্যের ক্ষতি হতে পারে",
-                "যৌনবাহিত রোগের ঝুঁকি বেড়ে যায়",
-                "এবং সামাজিকভাবে হেয়-প্রতিপন্ন হতে হয়",
+                { text: "স্বাস্থ্যের ক্ষতি হতে পারে", icon: "fa-heartbeat" },
+                { text: "যৌনবাহিত রোগের ঝুঁকি বেড়ে যায়", icon: "fa-virus" },
+                { text: "সামাজিকভাবে হেয়-প্রতিপন্ন হতে হয়", icon: "fa-user-slash" },
               ];
 
-              const renderTickList = (items, baseDelay = 80) =>
-                items
+              const renderHygieneCards = () =>
+                hygienePoints
                   .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
+                    (point, idx) => `
+                      <li class="m5l4-hygiene-item" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 40
+                      }">
+                        <div class="m5l4-point-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m5l4-point-content">
+                          <p class="m5l4-point-text">${point.text}</p>
+                        </div>
                       </li>
                     `,
                   )
                   .join("");
 
-              const renderAlertList = (items) =>
-                items
+              const renderRestraintCards = () =>
+                restraintPoints
                   .map(
-                    (text, idx) => `
-                      <li data-aos="fade-up" data-aos-delay="${120 + idx * 20}">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        <span>${text}</span>
+                    (point, idx) => `
+                      <li class="m5l4-restraint-item" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 40
+                      }">
+                        <div class="m5l4-restraint-badge" style="color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m5l4-restraint-content">
+                          <p class="m5l4-restraint-text">${point.text}</p>
+                        </div>
+                      </li>
+                    `,
+                  )
+                  .join("");
+
+              const renderReminderPoints = () =>
+                reminderPoints
+                  .map(
+                    (point, idx) => `
+                      <li class="m5l4-reminder-point" data-aos="fade-up" data-aos-delay="${
+                        100 + idx * 30
+                      }">
+                        <i class="fa-solid ${point.icon}"></i>
+                        <span>${point.text}</span>
                       </li>
                     `,
                   )
                   .join("");
 
               return `
-                <div class="lesson-slide">
+                <div class="lesson-slide m5l4-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
+                    "Management of Wet Dreams/Ejaculation",
                     "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row align-items-center g-4 flex-column-reverse flex-lg-row">
-                      <div class="col-lg-5">
-                        <h3 class="gradient-text mb-3">${yhLang(
-                          "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
-                          "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
-                        )}</h3>
-                        <h4 class="fw-semibold mb-3">${yhLang("✔ করণীয়", "✔ করণীয়")}</h4>
-                        <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="60">স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতা বজায় রাখার উপায়গুলো এই নির্দেশনাতে ছবির সাথে দেখানো হয়েছে, যাতে ছেলেরা সহজেই ধাপগুলো অনুসরণ করতে পারে।</p>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderTickList(routineSteps)}
-                        </ul>
+                  <section class="m5l4-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                    
+                    <ul class="m5l4-hygiene-list">
+                      ${renderHygieneCards()}
+                    </ul>
+                  </section>
 
 
-                        <section class="modern-card mb-2 glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                          <h3 class="gradient-text mb-3">${yhLang(
-                            "নিজেকে সংযত রাখা",
-                            "নিজেকে সংযত রাখা",
-                          )}</h3>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderTickList(restraintSteps, 60)}
-                          </ul>
-                        </section>
+                  <section class="m5l4-restraint-section modern-card glass-card" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="m5l4-restraint-heading" data-aos="fade-up" data-aos-delay="100">
+                      <i class="fa-solid fa-balance-scale"></i>
+                      ${yhLang("Self-Restraint & Responsible Behavior", "নিজেকে সংযত রাখা")}
+                    </h3>
+                    <ul class="m5l4-restraint-list">
+                      ${renderRestraintCards()}
+                    </ul>
+                  </section>
 
 
-                        <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
-                          <h3 class="gradient-text mb-3">${yhLang(
-                            "মনে রাখতে হবে",
-                            "মনে রাখতে হবে",
-                          )}</h3>
-                          <p class="text-muted mb-3" data-aos="fade-up" data-aos-delay="100">এসব অসংযত কর্মকাণ্ডের কারণে—</p>
-                          <ul class="list-unstyled puberty-list mb-0">
-                            ${renderAlertList(reminderPoints)}
-                          </ul>
-                        </section>
-                      </div>
-                      <div class="col-lg-7">
-                        <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu5/birjo2.png" style = "height: 1306px; object-fit: cover;" alt="স্বপ্নদোষের পর ব্যক্তিগত পরিচ্ছন্নতার ধাপ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                          <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: স্বপ্নদোষের পর স্বাস্থ্যবিধি অনুসরণের ভিজ্যুয়াল ধাপ</figcaption>
-                        </figure>
-                      </div>
+                  <section class="m5l4-reminder-section modern-card glass-card m5l4-warning-card" data-aos="fade-up" data-aos-delay="120">
+                    <div class="m5l4-reminder-header">
+                      <i class="fa-solid fa-user-slash"></i>
+                      <h3 class="m5l4-reminder-title">${yhLang(
+                        "Important Reminder: Consequences",
+                        "মনে রাখতে হবে, এসব অসংযত কর্মকান্ডের কারনে স্বাস্থ্যের ক্ষতি হওয়া ও যৌনবাহিত রেগের ঝুকি বেড়ে যাওয়া ছাড়াও সামাজিকভাবে হেয়-প্রতিপন্ন হতে হয় ।",
+                      )}</h3>
                     </div>
                   </section>
                 </div>
