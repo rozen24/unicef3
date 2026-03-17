@@ -3793,6 +3793,778 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch4-lesson-6",
+            title: yhLang(
+              "Female Reproductive System",
+              "নারী প্রজননতন্ত্র",
+            ),
+            icon: "fa-person",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4f",
+                  question: yhLang(
+                    "What is the primary function of the uterus?",
+                    "জরায়ুর প্রথম ও প্রধান কাজ কী?",
+                  ),
+                  options: [
+                    yhLang(
+                      "Pregnancy and childbirth",
+                      "গর্ভধারণ করা এবং সন্তান জন্মদান করা",
+                    ),
+                    yhLang("Produce hormones", "হরমোন তৈরি করা"),
+                    yhLang("Store eggs", "ডিম্বাণু সংরক্ষণ করা"),
+                    yhLang("Filter waste", "বর্জ্য পরিশোধন করা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const reproductiveOrgans = [
+                {
+                  title: "ডিম্বাশয়",
+                  subtitle: "(Ovary)",
+                  description: "জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে। প্রত্যেক মাসিক চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।",
+                  icon: "fa-circle",
+                  color: "#ec4899",
+                  bgColor: "rgba(236, 72, 153, 0.12)",
+                },
+                {
+                  title: "জরায়ু",
+                  subtitle: "(Uterus)",
+                  description: "জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়। জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।",
+                  icon: "fa-heart",
+                  color: "#f43f5e",
+                  bgColor: "rgba(244, 63, 94, 0.12)",
+                },
+                {
+                  title: "যোনিপথ",
+                  subtitle: "(Vagina)",
+                  description: "যোনিপথ জরায়ুর ভিতর থেকে শুরু হয়ে শরীরের বাইরে এসে যোনিমুখে শেষ হয়েছে।",
+                  icon: "fa-arrow-down",
+                  color: "#3b82f6",
+                  bgColor: "rgba(59, 130, 246, 0.12)",
+                },
+                {
+                  title: "স্তন",
+                  subtitle: "(Breast)",
+                  description: "স্তন সরাসরি প্রজননতন্ত্রের অংশ না হলেও এটি আনুষঙ্গিক প্রজনন অঙ্গ হিসেবে বিবেচিত হয়, কারণ শিশুর জন্মের পর স্তনেই বুকের দুধ তৈরি হয়।",
+                  icon: "fa-leaf",
+                  color: "#10b981",
+                  bgColor: "rgba(16, 185, 129, 0.12)",
+                },
+              ];
+
+              const renderOrganCards = () =>
+                reproductiveOrgans
+                  .map(
+                    (organ, idx) => `
+                      <article class="m4l6-organ-card modern-card glass-card" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 50
+                      }">
+                        <div class="m4l6-organ-header">
+                          <div class="m4l6-organ-icon" style="background-color: ${organ.bgColor}; color: ${organ.color};">
+                            <i class="fa-solid ${organ.icon}"></i>
+                          </div>
+                          <div class="m4l6-organ-title-section">
+                            <h3 class="m4l6-organ-title">${organ.title}</h3>
+                            <p class="m4l6-organ-subtitle">${organ.subtitle}</p>
+                          </div>
+                        </div>
+                        <p class="m4l6-organ-description mb-0">${organ.description}</p>
+                      </article>
+                    `,
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide m4l6-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Female Reproductive System",
+                    "নারী প্রজননতন্ত্র",
+                  )}</h2>
+
+                  <section class="m4l6-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row align-items-center g-4">
+                      <div class="col-lg-5">
+                        <figure class="image-card mb-0">
+                          <img src="img/modu4/nari.jpg" alt="নারী প্রজননতন্ত্র" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l6-main-image" />
+                          <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: নারী প্রজননতন্ত্রের বিভিন্ন অংশ</figcaption>
+                        </figure>
+                      </div>
+                      <div class="col-lg-7">
+                        <h3 class="m4l6-intro-title gradient-text mb-3">${yhLang(
+                          "Understanding Female Reproductive System",
+                          "নারী প্রজননতন্ত্র বোঝা",
+                        )}</h3>
+                        <p class="m4l6-intro-text">${yhLang(
+                          "The female reproductive system consists of multiple organs and glands that work together for reproduction and hormone production.",
+                          "নারী প্রজননতন্ত্র বিভিন্ন অঙ্গ এবং গ্রন্থি নিয়ে গঠিত যা প্রজনন এবং হরমোন উৎপাদনে একসাথে কাজ করে।",
+                        )}</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+
+                  <section class="m4l6-organs-section" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="m4l6-section-title gradient-text mb-3">${yhLang(
+                      "Key Organs & Functions",
+                      "প্রধান অঙ্গ এবং কাজ",
+                    )}</h3>
+                    <div class="m4l6-organs-grid">
+                      ${renderOrganCards()}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch4-lesson-7",
+            title: yhLang(
+              "Menstrual Management",
+              "মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
+            ),
+            icon: "fa-calendar-days",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4g",
+                  question: yhLang(
+                    "At what age does menstruation typically start?",
+                    "ঋতুস্রাব সাধারণত কত বয়সে শুরু হয়?",
+                  ),
+                  options: [
+                    yhLang(
+                      "9-14 years",
+                      "৯–১৪ বছর বয়সের মধ্যে",
+                    ),
+                    yhLang("15-20 years", "১৫–২০ বছর"),
+                    yhLang("5-8 years", "৫–৮ বছর"),
+                    yhLang("After 20 years", "২০ বছরের পর"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const menstrualPoints = [
+                {
+                  text: "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।",
+                  icon: "fa-child",
+                  color: "#ec4899",
+                  bgColor: "rgba(236, 72, 153, 0.12)",
+                },
+                {
+                  text: "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।",
+                  icon: "fa-calendar",
+                  color: "#f43f5e",
+                  bgColor: "rgba(244, 63, 94, 0.12)",
+                },
+                {
+                  text: "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।",
+                  icon: "fa-hourglass-end",
+                  color: "#3b82f6",
+                  bgColor: "rgba(59, 130, 246, 0.12)",
+                },
+              ];
+
+              const renderMenstrualPoints = () =>
+                menstrualPoints
+                  .map(
+                    (point, idx) => `
+                      <li class="m4l7-point-item" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 40
+                      }">
+                        <div class="m4l7-point-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m4l7-point-content">
+                          <p class="m4l7-point-text">${point.text}</p>
+                        </div>
+                      </li>
+                    `,
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide m4l7-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Menstrual Management",
+                    "মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
+                  )}</h2>
+
+                  <section class="m4l7-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row align-items-center g-3">
+                      <div class="col-lg-6">
+                        <h3 class="m4l7-intro-title gradient-text" data-aos="fade-up" data-aos-delay="60">
+                          <i class="fa-solid fa-droplet"></i>
+                          ${yhLang("About Menstruation", "ঋতুস্রাব সম্পর্কে")}
+                        </h3>
+                        
+                        <p class="m4l7-intro-description" data-aos="fade-up" data-aos-delay="80">
+                          ${yhLang(
+                            "Menstruation is a normal, natural process by which a person prepares for pregnancy and childbirth. The monthly bleeding through the vagina is called menstruation.",
+                            "মাসিক একটি স্বাভাবিক প্রাকৃতিক প্রক্রিয়া, যার মাধ্যমে একজন নারী গর্ভধারণ/সন্তান জন্মদানের জন্য প্রস্তুত হয়। প্রতিমাসে যোনিপথ দিয়ে মেয়েদের যে রক্তস্রাব হয়, তাকে মাসিক/ঋতুস্রাব বলে।",
+                          )}
+                        </p>
+
+                        <ul class="m4l7-points-list">
+                          ${renderMenstrualPoints()}
+                        </ul>
+
+                        <div class="m4l7-info-box" data-aos="fade-up" data-aos-delay="120">
+                          <div class="m4l7-info-icon">
+                            <i class="fa-solid fa-circle-info"></i>
+                          </div>
+                          <p class="m4l7-info-text">${yhLang(
+                            "Having your period means your body is maturing and your reproductive system is working properly. It is completely normal—not unclean or impure—and there is no reason to isolate yourself. You can continue your normal activities unless you experience unusual pain or excessive bleeding.",
+                            "মাসিক হওয়া মানে দেহ পরিণত হচ্ছে এবং প্রজননতন্ত্র সঠিকভাবে কাজ করছে। এটি একটি সম্পূর্ণ স্বাভাবিক ঘটনা। এটি কোনো অপবিত্রতা বা অপরিচ্ছন্নতা নয় এবং এ সময় কোনো নারীকে আলাদা করে রাখারও কিছু নেই। এ সময় যদি অস্বাভাবিক ব্যথা বা অতিরিক্ত রক্তস্রাব না ঘটে, তবে সে তার স্বাভাবিক কাজ-কর্ম চালিয়ে যেতে পারে।",
+                          )}</p>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6">
+                        <figure class="image-card mb-0">
+                          <img src="img/modu4/masikb.jpg" alt="মাসিক/ঋতুস্রাব ব্যবস্থাপনা" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l7-main-image" />
+                          <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: মাসিক/ঋতুস্রাব ব্যবস্থাপনা</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch4-lesson-8",
+            title: yhLang(
+              "What to Do During Menstruation",
+              "মাসিক চলাকালীন মেয়েদের করণীয়",
+            ),
+            icon: "fa-hand-holding-heart",
+            gradientClass: "bg-gradient-fuchsia",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4h",
+                  question: yhLang(
+                    "How often should you change a sanitary napkin during menstruation?",
+                    "মাসিকের সময় স্যানিটারি ন্যাপকিন কতবার বদলাতে হয়?",
+                  ),
+                  options: [
+                    yhLang(
+                      "4 to 6 times a day",
+                      "দিনে অন্ততপক্ষে ৪ থেকে ৬ বার",
+                    ),
+                    yhLang("Once a day", "দিনে একবার"),
+                    yhLang("2 to 3 times a day", "দিনে ২-৩ বার"),
+                    yhLang("Once every 2 days", "প্রতি ২ দিনে একবার"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const menstrualCarePoints = [
+                {
+                  text: "মাসিককালীন সময়ে মেয়েদের প্রচুর পরিমাণে বিভিন্ন ধরনের পুষ্টিকর খাবার, শাকসবজি এবং ফলমূল খেতে হবে এবং প্রচুর পরিমাণে পানি পান করতে হবে।",
+                  icon: "fa-apple",
+                  color: "#10b981",
+                  bgColor: "rgba(16, 185, 129, 0.12)",
+                },
+                {
+                  text: "প্রতিদিন ভালোভাবে গোসল এবং প্রজনন অঙ্গ পানি ও সাবান দিয়ে পরিষ্কার করতে হবে।",
+                  icon: "fa-shower",
+                  color: "#0891b2",
+                  bgColor: "rgba(8, 145, 178, 0.12)",
+                },
+                {
+                  text: "মাসিকের সময় ঘরে তৈরি পরিষ্কার ন্যাপকিন/কাপড় অথবা স্যানিটারি ন্যাপকিন ব্যবহার করতে হবে। রক্তস্রাবের পরিমাণ অনুযায়ী তা দিনে অন্ততপক্ষে ৪ থেকে ৬ বার বদলাতে হবে।",
+                  icon: "fa-handkerchief",
+                  color: "#8b5cf6",
+                  bgColor: "rgba(139, 92, 246, 0.12)",
+                },
+                {
+                  text: "ব্যবহারের পর স্যানিটারি ন্যাপকিন কাগজে মুড়িয়ে ডাস্টবিনে বা ময়লা ফেলার নির্দিষ্ট স্থানে ফেলতে হবে। কাপড় ব্যবহার করলে ব্যবহার শেষে কাপড়টি সাবান ও পানি দিয়ে ধুতে হবে এবং সূর্যের আলোতে শুকিয়ে পরিষ্কার প্যাকেটে রেখে পরবর্তীতে ব্যবহারের জন্য সংরক্ষণ করতে হবে।",
+                  icon: "fa-trash",
+                  color: "#f97316",
+                  bgColor: "rgba(249, 115, 22, 0.12)",
+                },
+                {
+                  text: "মাসিকের সময় স্বাভাবিক হাঁটাচলা ও হালকা ব্যায়াম করতে হবে এবং পর্যাপ্ত পরিমাণে ঘুমাতে হবে।",
+                  icon: "fa-person-walking",
+                  color: "#f59e0b",
+                  bgColor: "rgba(245, 158, 11, 0.12)",
+                },
+                {
+                  text: "মাসিক বন্ধ থাকলে, এক মাসে ২–৩ বার মাসিক হলে, প্রচুর রক্তস্রাব হলে, তীব্র ব্যথা হলে বা অস্বাভাবিক কোনো সমস্যা দেখা দিলে চিকিৎসকের পরামর্শ নিতে হবে।",
+                  icon: "fa-stethoscope",
+                  color: "#dc2626",
+                  bgColor: "rgba(220, 38, 38, 0.12)",
+                },
+              ];
+
+              const renderCarePoints = () =>
+                menstrualCarePoints
+                  .map(
+                    (point, idx) => `
+                      <div class="m4l8-point-card" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 40
+                      }">
+                        <div class="m4l8-point-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m4l8-point-content">
+                          <p class="m4l8-point-text">${point.text}</p>
+                        </div>
+                      </div>
+                    `,
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide m4l8-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "What to Do During Menstruation",
+                    "মাসিক চলাকালীন মেয়েদের করণীয়",
+                  )}</h2>
+
+                  <section class="m4l8-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                    <div class="row align-items-stretch g-2">
+                      <div class="col-lg-5">
+                        <figure class="m4l8-image-card mb-0">
+                          <img src="img/modu4/masik2.png" alt="মাসিক চলাকালীন মেয়েদের করণীয়" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l8-main-image" />
+                          <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: মাসিক চলাকালীন যত্ন</figcaption>
+                        </figure>
+                      </div>
+
+                      <div class="col-lg-7">
+                        <div class="m4l8-points-wrapper">
+                          ${renderCarePoints()}
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch4-lesson-9",
+            title: yhLang(
+              "Roles in Menstrual Management",
+              "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
+            ),
+            icon: "fa-handshake",
+            gradientClass: "bg-gradient-cyan",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4i",
+                  question: yhLang(
+                    "Who has an important role in supporting girls during menstruation?",
+                    "মাসিক ব্যবস্থাপনায় মেয়েদের সাপোর্ট দেওয়ার ক্ষেত্রে কার গুরুত্বপূর্ণ ভূমিকা আছে?",
+                  ),
+                  options: [
+                    yhLang(
+                      "Parents, teachers, and school authorities",
+                      "বাবা-মা, শিক্ষক এবং স্কুল কর্তৃপক্ষ",
+                    ),
+                    yhLang("Only doctors", "শুধুমাত্র ডাক্তার"),
+                    yhLang("Only parents", "শুধুমাত্র বাবা-মা"),
+                    yhLang("Only friends", "শুধুমাত্র বন্ধুরা"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const parentRolePoints = [
+                {
+                  text: "তারুণ্যের শুরুতে কিশোরীকে মাসিক ও এর ব্যবস্থাপনা বিষয়ে তথ্য বা শিক্ষা দেওয়া।",
+                  icon: "fa-book",
+                  color: "#06b6d4",
+                  bgColor: "rgba(6, 182, 212, 0.12)",
+                },
+                {
+                  text: "কোনো সমস্যা হলে যেন বাবা-মায়ের সাথে আলোচনা করে—সেভাবে তাকে উৎসাহিত করা।",
+                  icon: "fa-comments",
+                  color: "#8b5cf6",
+                  bgColor: "rgba(139, 92, 246, 0.12)",
+                },
+                {
+                  text: "ঋতুস্রাবকে ভয় না পেয়ে সহজভাবে নিতে শিক্ষা দেওয়া।",
+                  icon: "fa-heart",
+                  color: "#ec4899",
+                  bgColor: "rgba(236, 72, 153, 0.12)",
+                },
+                {
+                  text: "এই সময়ে স্কুলে যাওয়া, খেলাধুলা করা সহ সব কাজ স্বাভাবিকভাবে করতে উৎসাহ দেওয়া।",
+                  icon: "fa-school",
+                  color: "#f59e0b",
+                  bgColor: "rgba(245, 158, 11, 0.12)",
+                },
+                {
+                  text: "ঋতুস্রাবের সময়ে কিশোরীকে বেশি করে পুষ্টিকর খাবার খেতে উৎসাহিত করা।",
+                  icon: "fa-utensils",
+                  color: "#10b981",
+                  bgColor: "rgba(16, 185, 129, 0.12)",
+                },
+              ];
+
+              const schoolAuthorityPoints = [
+                {
+                  text: "একজন বা দু'জন নারী শিক্ষককে এ বিষয়ে দায়িত্ব দেওয়া যেতে পারে যেন তারা মাসিকের সময়ে ছাত্রীদের ব্যক্তিগত পরিষ্কার-পরিচ্ছন্নতা বিষয়ে তথ্য দিয়ে সাহায্য করতে পারেন।",
+                  icon: "fa-chalkboard-user",
+                  color: "#3b82f6",
+                  bgColor: "rgba(59, 130, 246, 0.12)",
+                },
+                {
+                  text: "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা প্রস্তুতি ছাড়া হঠাৎ করে মাসিক শুরু হয়ে যেতে পারে। সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীকে সাহায্য করতে পারে।",
+                  icon: "fa-first-aid",
+                  color: "#ef4444",
+                  bgColor: "rgba(239, 68, 68, 0.12)",
+                },
+                {
+                  text: "অনেক মেয়ের মাসিকের সময় তলপেটে তীব্র ব্যথা হয়। তাই স্কুলের ফার্স্ট এইড বক্সে বেদনানাশক ট্যাবলেট রাখা প্রয়োজন।",
+                  icon: "fa-pill",
+                  color: "#f97316",
+                  bgColor: "rgba(249, 115, 22, 0.12)",
+                },
+                {
+                  text: "মনে রাখতে হবে যে, ঋতুস্রাব একটি স্বাভাবিক শারীরিক প্রক্রিয়া—এ নিয়ে লজ্জা বা সংকোচের কিছু নেই। এ বিষয়টি ছাত্র-ছাত্রী, শিক্ষকসহ সবাইকে সহজভাবে দেখার জন্য এবং সহযোগিতা দেওয়ার জন্য ওরিয়েন্টেশন প্রদান করা প্রয়োজন।",
+                  icon: "fa-handshake",
+                  color: "#06b6d4",
+                  bgColor: "rgba(6, 182, 212, 0.12)",
+                },
+              ];
+
+              const requiredFacilitiesPoints = [
+                {
+                  text: "ছেলে ও মেয়েদের জন্য পৃথক টয়লেটের ব্যবস্থা করতে হবে",
+                  icon: "fa-restroom",
+                  color: "#7c3aed",
+                  bgColor: "rgba(124, 58, 237, 0.12)",
+                },
+                {
+                  text: "সার্বক্ষণিক পানির ব্যবস্থা থাকতে হবে",
+                  icon: "fa-water",
+                  color: "#0891b2",
+                  bgColor: "rgba(8, 145, 178, 0.12)",
+                },
+                {
+                  text: "টয়লেটে পর্যাপ্ত সাবানের ব্যবস্থা রাখতে হবে",
+                  icon: "fa-soap",
+                  color: "#06b6d4",
+                  bgColor: "rgba(6, 182, 212, 0.12)",
+                },
+                {
+                  text: "টয়লেটে ঢাকনাযুক্ত বিন/ঝুড়ির ব্যবস্থা রাখতে হবে",
+                  icon: "fa-trash-can",
+                  color: "#f59e0b",
+                  bgColor: "rgba(245, 158, 11, 0.12)",
+                },
+                {
+                  text: "টয়লেট প্রতিদিন পরিষ্কারের জন্য পরিচ্ছন্নতা কর্মীর ব্যবস্থা রাখতে হবে",
+                  icon: "fa-broom",
+                  color: "#10b981",
+                  bgColor: "rgba(16, 185, 129, 0.12)",
+                },
+              ];
+
+              const renderParentPoints = () =>
+                parentRolePoints
+                  .map(
+                    (point, idx) => `
+                      <div class="m4l9-point-card" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 40
+                      }">
+                        <div class="m4l9-point-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m4l9-point-content">
+                          <p class="m4l9-point-text">${point.text}</p>
+                        </div>
+                      </div>
+                    `,
+                  )
+                  .join("");
+
+              const renderSchoolPoints = () =>
+                schoolAuthorityPoints
+                  .map(
+                    (point, idx) => `
+                      <div class="m4l9-school-point-card" data-aos="fade-up" data-aos-delay="${
+                        100 + idx * 50
+                      }">
+                        <div class="m4l9-school-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m4l9-school-content">
+                          <p class="m4l9-school-text">${point.text}</p>
+                        </div>
+                      </div>
+                    `,
+                  )
+                  .join("");
+
+              const renderFacilitiesPoints = () =>
+                requiredFacilitiesPoints
+                  .map(
+                    (point, idx) => `
+                      <div class="m4l9-facility-card" data-aos="fade-up" data-aos-delay="${
+                        120 + idx * 40
+                      }">
+                        <div class="m4l9-facility-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m4l9-facility-content">
+                          <p class="m4l9-facility-text">${point.text}</p>
+                        </div>
+                      </div>
+                    `,
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide m4l9-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Roles in Menstrual Management",
+                    "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
+                  )}</h2>
+
+                  <!-- Parent Role Section -->
+                  <section class="m4l9-section-card parent-section" data-aos="fade-up" data-aos-delay="40">
+                    <div class="m4l9-section-header">
+                      <h3 class="m4l9-section-title">
+                        <i class="fa-solid fa-heart"></i>
+                        ${yhLang("Parents' Role", "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা")}
+                      </h3>
+                    </div>
+                    <div class="m4l9-points-grid">
+                      ${renderParentPoints()}
+                    </div>
+                  </section>
+
+                  <!-- School Authorities Section -->
+                  <section class="m4l9-section-card school-section" data-aos="fade-up" data-aos-delay="60">
+                    <div class="m4l9-section-header">
+                      <h3 class="m4l9-section-title">
+                        <i class="fa-solid fa-school"></i>
+                        ${yhLang("School Authorities' Role", "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা")}
+                      </h3>
+                      <p class="m4l9-section-description">${yhLang(
+                        "Many girls avoid attending school during menstruation, especially in the first few days, which negatively impacts their studies and results. To prevent school dropout and early marriage due to poor academic performance, educational authorities must provide proper support to students.",
+                        "অনেক মেয়েই মাসিকের সময়, বিশেষ করে মাসিকের প্রথম দিনগুলোতে স্কুল/কলেজে যেতে চায় না। প্রতিমাসের এমন অনুপস্থিতি তাদের লেখাপড়া ও ফলাফলের উপর নেতিবাচক প্রভাব ফেলে। ফলাফল খারাপ হওয়ায় তারা পড়াশোনা বন্ধ করে দেয়, আবার অনেকের অভিভাবক এ সময় মেয়েদের বিয়ে দিয়ে দেন। এ অবস্থা থেকে পরিত্রাণ পেতে শিক্ষা প্রতিষ্ঠানের কর্তৃপক্ষকে ঋতুস্রাবের সময় ছাত্রীদের সহায়তা প্রদান করতে হবে।",
+                      )}</p>
+                    </div>
+                    <div class="m4l9-school-grid">
+                      ${renderSchoolPoints()}
+                    </div>
+                  </section>
+
+                  <!-- Required Facilities Section -->
+                  <section class="m4l9-section-card facilities-section" data-aos="fade-up" data-aos-delay="80">
+                    <div class="m4l9-section-header">
+                      <h3 class="m4l9-section-title">
+                        <i class="fa-solid fa-check-circle"></i>
+                        ${yhLang("Essential Facilities", "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে")}
+                      </h3>
+                    </div>
+                    <div class="m4l9-facilities-grid">
+                      ${renderFacilitiesPoints()}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch4-lesson-10",
+            title: yhLang(
+              "Menstrual Abnormalities",
+              "মাসিকের অস্বাভাবিকতা",
+            ),
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-red",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q4j",
+                  question: yhLang(
+                    "What does menstrual stoppage might indicate?",
+                    "মাসিক বন্ধ হওয়া কী নির্দেশ করতে পারে?",
+                  ),
+                  options: [
+                    yhLang(
+                      "Pregnancy or hormonal issues",
+                      "গর্ভধারণ বা হরমোনজনিত সমস্যা",
+                    ),
+                    yhLang("Normal occurrence", "স্বাভাবিক ঘটনা"),
+                    yhLang("Nothing serious", "কোনো গুরুতর সমস্যা নেই"),
+                    yhLang("Always healthy", "সর্বদা স্বাস্থ্যকর"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const abnormalityPoints = [
+                {
+                  text: "মাসিক বন্ধ হয়ে গেছে অথবা এক মাসে ২/৩ বার মাসিক হচ্ছে, অর্থাৎ নিয়মিত মাসিক হচ্ছে না।",
+                  icon: "fa-calendar-xmark",
+                  color: "#dc2626",
+                  bgColor: "rgba(220, 38, 38, 0.12)",
+                },
+                {
+                  text: "মাসিকের সময় অতিরিক্ত রক্তক্ষরণ হওয়া।",
+                  icon: "fa-droplets",
+                  color: "#ef4444",
+                  bgColor: "rgba(239, 68, 68, 0.12)",
+                },
+                {
+                  text: "দুইটি মাসিকের মধ্যবর্তী সময়ে ফোঁটায় ফোঁটায় রক্ত যাওয়া।",
+                  icon: "fa-droplet",
+                  color: "#f97316",
+                  bgColor: "rgba(249, 115, 22, 0.12)",
+                },
+                {
+                  text: "দুর্গন্ধযুক্ত রক্ত যাওয়া বা মাসিকের সময় জ্বর থাকা।",
+                  icon: "fa-virus",
+                  color: "#9333ea",
+                  bgColor: "rgba(147, 51, 234, 0.12)",
+                },
+                {
+                  text: "মাসিকের সময় তলপেটে অস্বাভাবিক ব্যথা হওয়া।",
+                  icon: "fa-heart-crack",
+                  color: "#ec4899",
+                  bgColor: "rgba(236, 72, 153, 0.12)",
+                },
+              ];
+
+              const managementPoints = [
+                {
+                  text: "মাসিক বন্ধ হয়ে যাওয়া গর্ভধারণের একটি লক্ষণ। সেক্ষেত্রে উপযুক্ত পরীক্ষা করে গর্ভধারণ নিশ্চিত হলে, স্বাস্থ্যসেবা প্রদানকারীর নিকট থেকে গর্ভজনিত সেবা গ্রহণ করতে হবে। তবে মনে রাখতে হবে, মাসিক বন্ধ মানেই নিশ্চিত গর্ভধারণ নয়—তাই অবশ্যই গর্ভধারণ পরীক্ষা (প্রীয়ড টেস্ট/প্রেগনেন্সি টেস্ট) করতে হবে।",
+                  icon: "fa-flask-vial",
+                  color: "#3b82f6",
+                  bgColor: "rgba(59, 130, 246, 0.12)",
+                },
+                {
+                  text: "এছাড়াও অনিয়মিত মাসিক, মাসিকের সময় অতিরিক্ত রক্ত যাওয়া, অথবা অতিরিক্ত ব্যথা হওয়া—এসব প্রজননতন্ত্র বা হরমোনজনিত সমস্যার লক্ষণ হতে পারে। তাই মেয়েদের বিশেষজ্ঞ চিকিৎসকের কাছে রেফার করতে হবে।",
+                  icon: "fa-hospital",
+                  color: "#0891b2",
+                  bgColor: "rgba(8, 145, 178, 0.12)",
+                },
+                {
+                  text: "মাসিকের সময় অতিরিক্ত ব্যথা হলে ব্যথানাশক ওষুধ (ডাক্তারের পরামর্শ অনুযায়ী) খেতে হবে।",
+                  icon: "fa-pill",
+                  color: "#10b981",
+                  bgColor: "rgba(16, 185, 129, 0.12)",
+                },
+                {
+                  text: "চিকিৎসার পাশাপাশি মেয়েদের পুষ্টিকর খাবার খেতে, স্কুলে যেতে, এবং হালকা ব্যায়াম ও হাঁটাচলা করতে উৎসাহিত করতে হবে।",
+                  icon: "fa-heart-pulse",
+                  color: "#f59e0b",
+                  bgColor: "rgba(245, 158, 11, 0.12)",
+                },
+              ];
+
+              const renderAbnormalityPoints = () =>
+                abnormalityPoints
+                  .map(
+                    (point, idx) => `
+                      <div class="m4l10-abnormality-card" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 40
+                      }">
+                        <div class="m4l10-abnormality-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m4l10-abnormality-content">
+                          <p class="m4l10-abnormality-text">${point.text}</p>
+                        </div>
+                      </div>
+                    `,
+                  )
+                  .join("");
+
+              const renderManagementPoints = () =>
+                managementPoints
+                  .map(
+                    (point, idx) => `
+                      <div class="m4l10-management-card" data-aos="fade-up" data-aos-delay="${
+                        100 + idx * 50
+                      }">
+                        <div class="m4l10-management-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m4l10-management-content">
+                          <p class="m4l10-management-text">${point.text}</p>
+                        </div>
+                      </div>
+                    `,
+                  )
+                  .join("");
+
+              return `
+                <div class="lesson-slide m4l10-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "Menstrual Abnormalities",
+                    "মাসিকের অস্বাভাবিকতা",
+                  )}</h2>
+
+                  <!-- Description Section -->
+                  <div class="m4l10-description-card" data-aos="fade-up" data-aos-delay="40">
+                    <p class="m4l10-description-text">${yhLang(
+                      "If a girl experiences any of the following symptoms regarding her menstruation, it is considered a menstrual abnormality.",
+                      "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।",
+                    )}</p>
+                  </div>
+
+                  <!-- Abnormality Signs Section -->
+                  <section class="m4l10-section-card abnormality-section" data-aos="fade-up" data-aos-delay="60">
+                    <div class="m4l10-section-header">
+                      <h3 class="m4l10-section-title">
+                        <i class="fa-solid fa-exclamation-circle"></i>
+                        ${yhLang("Signs of Abnormality", "অস্বাভাবিকতার লক্ষণসমূহ")}
+                      </h3>
+                    </div>
+                    <div class="m4l10-abnormality-grid">
+                      ${renderAbnormalityPoints()}
+                    </div>
+                  </section>
+
+                  <!-- Management Section -->
+                  <section class="m4l10-section-card management-section" data-aos="fade-up" data-aos-delay="80">
+                    <div class="m4l10-section-header">
+                      <h3 class="m4l10-section-title">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        ${yhLang("Management", "ব্যবস্থাপনা")}
+                      </h3>
+                    </div>
+                    <div class="m4l10-management-grid">
+                      ${renderManagementPoints()}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
