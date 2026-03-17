@@ -4077,384 +4077,9 @@ const coursesData = [
         id: "ch-6",
         title: yhLang("Module-6: Child Marriage", "মডিউল-৬: বাল্যবিবাহ"),
         lessons: [
+ 
           {
             id: "ch6-lesson-1",
-            title: yhLang("বাল্যবিবাহ", "বাল্যবিবাহ"),
-            icon: "fa-ring",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q6a",
-                  question: yhLang(
-                    "বাংলাদেশে মেয়েদের ন্যূনতম বিয়ের বয়স কত?",
-                    "বাংলাদেশে মেয়েদের ন্যূনতম বিয়ের বয়স কত?",
-                  ),
-                  options: [
-                    yhLang("১৮ বছর", "১৮ বছর"),
-                    yhLang("১৬ বছর", "১৬ বছর"),
-                    yhLang("২১ বছর", "২১ বছর"),
-                    yhLang("১৫ বছর", "১৫ বছর"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const bdhsStats = [
-                "বিবাহিত নারীদের <strong>৫০%</strong>-এর বিয়ে হয়েছে <strong>১৮ বছরের আগে</strong>।",
-                "গর্ভবতী কিশোরীদের মধ্যে <strong>জন্মহার প্রতি হাজারে ৯২</strong>।",
-                "<strong>১৫–১৯ বছর</strong> বয়সী চারজন কিশোরীর মধ্যে একজন (২৪%) গর্ভধারণ করে।",
-                "প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।",
-              ];
-
-              const renderStats = (items) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "বাল্যবিবাহ",
-                    "বাল্যবিবাহ",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-start">
-                      <div class="col-lg-7">
-                        <h3 class="gradient-text mb-3">${yhLang(
-                          "বাংলাদেশের আইন ও বাস্তবতা",
-                          "বাংলাদেশের আইন ও বাস্তবতা",
-                        )}</h3>
-                        <p>বাংলাদেশের আইনে মেয়েদের বিয়ের বয়স কমপক্ষে <strong>১৮ বছর</strong> এবং ছেলেদের ক্ষেত্রে <strong>২১ বছর</strong>। এর কম বয়সে বিয়ে হলে তা বাল্যবিবাহ বলে গণ্য করা হয়।</p>
-                        <p>বর্তমানে বিশেষ কিছু কারণে <strong>১৬ বছর বয়সে</strong> বিয়ে দেওয়ার বিষয়টি বাল্যবিবাহ নিরোধ আইনে অন্তর্ভুক্ত থাকলেও, বিয়ের বয়স <strong>১৮ বছরই মূল বয়স</strong> হিসেবে বিবেচনা করতে হবে।</p>
-                        <div class="alert alert-info rounded-4" role="note">
-                          <strong>বিডিএইচএস ২০২২</strong> অনুসারে—
-                        </div>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderStats(bdhsStats)}
-                        </ul>
-                      </div>
-                      <div class="col-lg-5">
-                        <div class="modern-card glass-card h-100" data-aos="fade-left" data-aos-delay="80">
-                          <h4 class="mb-2">${yhLang(
-                            "বাল্যবিবাহের ঝুঁকি",
-                            "বাল্যবিবাহের ঝুঁকি",
-                          )}</h4>
-                          <p class="mb-0 text-muted">স্বাস্থ্য, শিক্ষা, অর্থনীতি ও সামাজিক নিরাপত্তা—সব দিক থেকেই বাল্যবিবাহ তরুন-তরুনীদের ভবিষ্যৎকে ঝুঁকির মুখে ফেলে। সঠিক তথ্য জানিয়ে পরিবার ও সম্প্রদায়কে সচেতন করাই প্রথম পদক্ষেপ।</p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <div class="row g-3 align-items-center justify-content-between">
-                    <div class="col-12 col-md-6 d-flex justify-content-md-start justify-content-center">
-                      <div class="circular-callout circular-callout--warning" data-aos="zoom-in" data-aos-delay="40">
-                        বাল্যবিবাহ আইনের চোখে একটি দণ্ডনীয় অপরাধ।
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 d-flex justify-content-md-end justify-content-center">
-                      <div class="circular-callout circular-callout--info" data-aos="zoom-in" data-aos-delay="80">
-                        বাল্যবিবাহ সম্পর্কে কোনো তথ্য থাকলে চাইল্ড হেল্পলাইন <strong style="font-weight: bold; color: red;">১০৯৮</strong>-এ কল করে রিপোর্ট করা উচিত।
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch6-lesson-2",
-            title: yhLang("বাল্যবিবাহের কারণ", "বাল্যবিবাহের কারণ"),
-            icon: "fa-diagram-project",
-            gradientClass: "bg-gradient-orange",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q6b",
-                  question: yhLang(
-                    "বাল্যবিবাহের একটি প্রধান কারণ কী?",
-                    "বাল্যবিবাহের একটি প্রধান কারণ কী?",
-                  ),
-                  options: [
-                    yhLang("দারিদ্র্য", "দারিদ্র্য"),
-                    yhLang("বেশি খেলাধুলা", "বেশি খেলাধুলা"),
-                    yhLang("জলবায়ু পরিবর্তন", "জলবায়ু পরিবর্তন"),
-                    yhLang("কম্পিউটার ব্যবহার", "কম্পিউটার ব্যবহার"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const orbitCauses = [
-                "দারিদ্র্য",
-                "প্রচলিত সামাজিক প্রথা ও কুসংস্কার",
-                "জেন্ডার বৈষম্য",
-                "কন্যাদায়গ্রস্ত পিতার দায়মুক্ত হওয়ার চেষ্টা",
-                "সামাজিক নিরাপত্তাহীনতা",
-                "শিক্ষা ও সচেতনতার অভাব",
-                "মেয়ে শিশুর প্রতি অবহেলা বা তাকে বোঝা মনে করা",
-                "স্কুল থেকে ঝরে পড়া",
-                "বিবাহ আইন সম্পর্কে অজ্ঞতা",
-                "বাল্যবিবাহ নিরোধ আইনের যথাযথ প্রয়োগ না হওয়া",
-              ];
-
-              const colorCycle = [
-                "bg-gradient-orange",
-                "bg-gradient-blue",
-                "bg-gradient-rose",
-                "bg-gradient-green",
-                "bg-gradient-teal",
-                "bg-gradient-purple",
-                "bg-gradient-tangerine",
-                "bg-gradient-emerald",
-              ];
-
-              const renderOrbitItems = () => {
-                const radius = 150;
-                const angleStep = 360 / orbitCauses.length;
-                return orbitCauses
-                  .map((label, idx) => {
-                    const angle = angleStep * idx;
-                    const color = colorCycle[idx % colorCycle.length];
-                    return `
-                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 + idx * 30}">
-                        <div class="orbit-card ${color}">
-                          <span class="orbit-title">${label}</span>
-                        </div>
-                      </div>
-                    `;
-                  })
-                  .join("");
-              };
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "বাল্যবিবাহের কারণ",
-                    "বাল্যবিবাহের কারণ",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" aria-labelledby="orbit-child-marriage-causes" data-aos="zoom-in" data-aos-delay="60">
-                    <h3 id="orbit-child-marriage-causes" class="d-none">${yhLang(
-                      "বাল্যবিবাহ",
-                      "বাল্যবিবাহ",
-                    )}</h3>
-                    <div class="orbit-layout" data-orbit-radius="190">
-                      <div class="orbit-center icon-spin-on-hover">
-                        <div class="orbit-card bg-gradient-rose">
-                          <div class="orbit-title fw-bold">বাল্যবিবাহ</div>
-                        </div>
-                      </div>
-                      ${renderOrbitItems()}
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch6-lesson-3",
-            title: yhLang("বাল্যবিবাহের পরিণতি", "বাল্যবিবাহের পরিণতি"),
-            icon: "fa-heart-crack",
-            gradientClass: "bg-gradient-purple",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q6c",
-                  question: yhLang(
-                    "বাল্যবিবাহের ফলে কোন ঝুঁকি বেড়ে যায়?",
-                    "বাল্যবিবাহের ফলে কোন ঝুঁকি বেড়ে যায়?",
-                  ),
-                  options: [
-                    yhLang("মা ও শিশুমৃত্যু", "মা ও শিশুমৃত্যু"),
-                    yhLang("খেলাধুলার সাফল্য", "খেলাধুলার সাফল্য"),
-                    yhLang("উচ্চশিক্ষার সুযোগ", "উচ্চশিক্ষার সুযোগ"),
-                    yhLang("পর্যটনের সম্ভাবনা", "পর্যটনের সম্ভাবনা"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const consequences = [
-                "অপরিণত, অপুষ্ট ও স্বল্প ওজনের শিশুর জন্ম",
-                "কিশোরী মায়ের পুষ্টিহীনতা ও স্বাস্থ্যগত সমস্যা",
-                "দীর্ঘস্থায়ী প্রজননস্বাস্থ্যজনিত জটিলতা",
-                "প্রসব ও প্রসব-পরবর্তী জটিলতায় ভোগা",
-                "মা ও শিশুমৃত্যুর ঝুঁকি বৃদ্ধি",
-                "দাম্পত্য কলহ",
-                "সহিংসতার ঝুঁকি ও আত্মহত্যার প্রবণতা",
-                "ঝুঁকিপূর্ণ ও অনিরাপদ যৌন আচরণ",
-                "বিবাহ বিচ্ছেদ",
-              ];
-
-              const renderList = () =>
-                consequences
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "বাল্যবিবাহের পরিণতি",
-                    "বাল্যবিবাহের পরিণতি",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList()}
-                        </ul>
-                      </div>
-                      <div class="col-lg-5">
-                        <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu6/ballo.jpg" alt="অপরিণত, অপুষ্ট ও স্বল্প ওজনের শিশুর জন্ম" style = "height: 400px;" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                        </figure>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch6-lesson-4",
-            title: yhLang(
-              "বাল্যবিবাহ প্রতিরোধে করণীয়",
-              "বাল্যবিবাহ প্রতিরোধে করণীয়",
-            ),
-            icon: "fa-shield-alt",
-            gradientClass: "bg-gradient-emerald",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q6d",
-                  question: yhLang(
-                    "বাল্যবিবাহ প্রতিরোধে কোন একটি করণীয়?",
-                    "বাল্যবিবাহ প্রতিরোধে কোন একটি করণীয়?",
-                  ),
-                  options: [
-                    yhLang(
-                      "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা",
-                      "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা",
-                    ),
-                    yhLang("স্কুল বন্ধ করা", "স্কুল বন্ধ করা"),
-                    yhLang("বিস্কুট বিতরণ করা", "বিস্কুট বিতরণ করা"),
-                    yhLang("বাল্যবিবাহ উৎসাহিত করা", "বাল্যবিবাহ উৎসাহিত করা"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const measures = [
-                "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা",
-                "বিয়ে সম্পাদনের সময় কাজী যেন অবশ্যই জন্মসনদ যাচাই করেন—এ বিষয়ে কাজীকে সচেতন করা",
-                "বাল্যবিবাহের আইন সম্পর্কে কাজী, অভিভাবক ও জনসাধারণকে সচেতন করা",
-                "বাল্যবিবাহ ও এর ভয়াবহ পরিণতি সম্পর্কে জনসচেতনতা তৈরি করা",
-                "বাল্যবিবাহ হলেও জন্মনিয়ন্ত্রণ পদ্ধতি ব্যবহার ও দেরিতে সন্তান গ্রহণ সম্পর্কে তরুন-তরুনী ও অভিভাবকদের সচেতন করা",
-                "তরুন-তরুনীদের জন্য উপযুক্ত জন্মনিয়ন্ত্রণ পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
-                "‘বাল্যবিবাহ’ নিয়ে কমিউনিটি পর্যায়ে আলোচনা ও প্রতিরোধব্যবস্থা তৈরি করা",
-                "বাল্যবিবাহ নিরোধ আইন, ২০১৭ এবং বাল্যবিবাহ নিরোধ বিধিমালা-এর বাস্তব প্রয়োগে সংশ্লিষ্টদের দায়িত্বশীল ভূমিকা নিশ্চিত করা",
-                "বাল্যবিবাহ সম্পর্কে জানতে পারলে চাইল্ড হেল্পলাইন <strong>১০৯৮</strong>-এ কল করে রিপোর্ট করা",
-              ];
-
-              const renderMeasures = () =>
-                measures
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "বাল্যবিবাহ প্রতিরোধে করণীয়",
-                    "বাল্যবিবাহ প্রতিরোধে করণীয়",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4">
-                      <div class="col-12">
-                        <ul class="list-unstyled puberty-list mb-3">
-                          ${renderMeasures()}
-                        </ul>
-                      </div>
-                    </div>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
-                    <h3 class="gradient-text">${yhLang("বিয়ে বাতিলের আইন (মুসলিম বিবাহ বাতিল আইন, ১৯৩৯)", "বিয়ে বাতিলের আইন (মুসলিম বিবাহ বাতিল আইন, ১৯৩৯)")}</h3>
-                    <p>যদি কোনো নারীর <strong>১৮ বছর পূর্ণ হওয়ার আগে</strong> এবং <strong>তার সম্মতি ছাড়া</strong> বিয়ে হয়, তাহলে সে আদালতে বিবাহ বাতিলের আবেদন করতে পারে— যদি:</p>
-                    <ul>
-                      <li>সে স্বামীর সঙ্গে দাম্পত্য সম্পর্ক স্থাপন না করে থাকে, এবং</li>
-                      <li>১৮ বছর পূর্ণ হওয়ার আগের সম্মতি ছাড়া বিয়ের পর <strong>১৯ বছর পূর্ণ হওয়ার আগেই</strong> বিবাহ বাতিলের আবেদন করে।</li>
-                    </ul>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text">${yhLang("বাল্যবিবাহ নিরোধ আইন ও বিধিমালা", "বাল্যবিবাহ নিরোধ আইন ও বিধিমালা")}</h3>
-                    <ul>
-                      <li><strong>বাল্যবিবাহ নিরোধ আইন, ২০১৭</strong></li>
-                      <li><strong>বাল্যবিবাহ নিরোধ বিধিমালা, ২০১৮</strong></li>
-                    </ul>
-                    <p>এসব আইনের অধীনে বাল্যবিবাহ প্রতিরোধের কার্যক্রম চলমান রয়েছে।</p>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="gradient-text">${yhLang("বাল্যবিবাহ করার শাস্তি", "বাল্যবিবাহ করার শাস্তি")}</h3>
-                    <ul>
-                      <li><strong>সর্বোচ্চ ২ বছর কারাদণ্ড</strong>, অথবা</li>
-                      <li><strong>সর্বোচ্চ ১ লক্ষ টাকা অর্থদণ্ড</strong>, অথবা</li>
-                      <li>উভয় দণ্ডই হতে পারে</li>
-                      <li>অর্থদণ্ড অনাদায়ে সর্বোচ্চ <strong>৩ মাস কারাদণ্ড</strong></li>
-                    </ul>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch6-lesson-5",
             title: yhLang("Child Marriage", "বাল্যবিবাহ"),
             icon: "fa-ban",
             gradientClass: "bg-gradient-red",
@@ -4480,7 +4105,7 @@ const coursesData = [
             },
             content: (function () {
               return `
-                <div class="ch6l5-slide" data-module="6" data-lesson="5">
+                <div class="ch6l5-slide lesson-slide" data-module="6" data-lesson="5">
                   <section class="ch6l5-introduction" data-aos="fade-up">
                     <h2 class="ch6l5-main-title">
                       <i class="fa-solid fa-ban"></i>
@@ -4500,7 +4125,6 @@ const coursesData = [
                       <i class="fa-solid fa-exclamation-triangle"></i>
                     </div>
                     <div class="ch6l5-note-content">
-                      <h3 class="ch6l5-note-title">${yhLang("Legal Offense", "আইনের চোখে অপরাধ")}</h3>
                       <p class="ch6l5-note-text">
                         ${yhLang(
                           "Child marriage is a punishable offense under the law.",
@@ -4516,7 +4140,6 @@ const coursesData = [
                       <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="ch6l5-note-content">
-                      <h3 class="ch6l5-note-title">${yhLang("Report Child Marriage", "বাল্যবিবাহ রিপোর্ট করুন")}</h3>
                       <p class="ch6l5-note-text">
                         ${yhLang(
                           "If you have information about child marriage, report it to the ",
@@ -4532,36 +4155,13 @@ const coursesData = [
                   </section>
 
                   <!-- Statistics Section -->
-                  <section class="ch6l5-stats-card" data-aos="fade-up" data-aos-delay="150">
-                    <h3 class="ch6l5-stats-title">
-                      <i class="fa-solid fa-chart-pie"></i>
-                      ${yhLang("Key Statistics", "গুরুত্বপূর্ণ পরিসংখ্যান")}
-                    </h3>
-                    <div class="ch6l5-stats-grid">
-                      <div class="ch6l5-stat-item ch6l5-stat-1" data-aos="zoom-in" data-aos-delay="160">
-                        <div class="ch6l5-stat-number">50%</div>
-                        <p class="ch6l5-stat-label">${yhLang("Married before 18", "১৮ বছরের আগে বিবাহিত")}</p>
-                      </div>
-                      <div class="ch6l5-stat-item ch6l5-stat-2" data-aos="zoom-in" data-aos-delay="180">
-                        <div class="ch6l5-stat-number">92</div>
-                        <p class="ch6l5-stat-label">${yhLang("per 1,000 births", "প্রতি ১০০০ জন্মে")}</p>
-                      </div>
-                      <div class="ch6l5-stat-item ch6l5-stat-3" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="ch6l5-stat-number">24%</div>
-                        <p class="ch6l5-stat-label">${yhLang("Girls 15-19 pregnant", "১৫-১৯ বছরে গর্ভধারণ")}</p>
-                      </div>
-                      <div class="ch6l5-stat-item ch6l5-stat-4" data-aos="zoom-in" data-aos-delay="220">
-                        <div class="ch6l5-stat-number">18%</div>
-                        <p class="ch6l5-stat-label">${yhLang("Adolescent mothers", "কিশোরী মা")}</p>
-                      </div>
-                    </div>
-                  </section>
+                  
                 </div>
               `;
             })(),
           },
           {
-            id: "ch6-lesson-6",
+            id: "ch6-lesson-2",
             title: yhLang("Causes of Child Marriage", "বাল্যবিবাহের কারণ"),
             icon: "fa-circle-exclamation",
             gradientClass: "bg-gradient-orange",
@@ -4619,7 +4219,7 @@ const coursesData = [
               };
 
               return `
-                <div class="ch6l6-slide" data-module="6" data-lesson="6">
+                <div class="ch6l6-slide lesson-slide" data-module="6" data-lesson="6">
                   <section class="ch6l6-introduction" data-aos="fade-up">
                     <h2 class="ch6l6-main-title">
                       <i class="fa-solid fa-circle-exclamation"></i>
@@ -4649,7 +4249,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch6-lesson-7",
+            id: "ch6-lesson-3",
             title: yhLang("Consequences of Child Marriage", "বাল্যবিবাহের পরিণতি"),
             icon: "fa-triangle-exclamation",
             gradientClass: "bg-gradient-red",
@@ -4776,7 +4376,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch6-lesson-8",
+            id: "ch6-lesson-4",
             title: yhLang("Prevention of Child Marriage", "বাল্যবিবাহ প্রতিরোধে করণীয়"),
             icon: "fa-shield-heart",
             gradientClass: "bg-gradient-green",

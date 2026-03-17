@@ -7179,7 +7179,7 @@
 /* Special Note Styles */
 .ch6l5-special-note {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   padding: 16px 18px;
   border-radius: 14px;
@@ -7795,6 +7795,7 @@
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
+  color: #fff;
 }
 
 @keyframes ch6l6-centerRotate {
