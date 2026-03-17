@@ -4367,7 +4367,7 @@ const coursesData = [
                     <!-- Right Column -->
                     <div class="ch6l7-right-column">
                       <div class="ch6l7-image-wrapper" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="img/modu6/ballo.jpg" alt="${yhLang("Consequences of Child Marriage", "বাল্যবিবাহের পরিণতি")}" class="ch6l7-image">
+                        <img src="img/modu6/ballo.jpg" style="height: 650px;" alt="" class="ch6l7-image img-zoom w-100">
                       </div>
                     </div>
                   </section>
@@ -4497,7 +4497,7 @@ const coursesData = [
               };
 
               return `
-                <div class="ch6l8-slide" data-module="6" data-lesson="8">
+                <div class="ch6l8-slide lesson-slide" data-module="6" data-lesson="8">
                   <section class="ch6l8-introduction" data-aos="fade-up">
                     <h2 class="ch6l8-main-title">
                       <i class="fa-solid fa-shield-heart"></i>

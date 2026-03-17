@@ -4031,7 +4031,7 @@ const coursesData = [
                                 icon: "fa-heart-crack",
                                 gradient: "linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%)",
                                 shadow: "0 6px 20px rgba(185, 28, 28, 0.12)",
-                                iconBg: "linear-gradient(135deg, #B91C1C, #991B1B)",
+                                iconBg: "linear-gradient(135deg, #B91C1C, #16261e)",
                                 text: reminderPoints[0]
                               },
                               {

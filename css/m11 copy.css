@@ -143,7 +143,7 @@
 }
 
 .ch11l4-desc-desc1 .ch11l4-desc-num {
-  color: #991b1b;
+  color: #16261e;
 }
 
 .ch11l4-desc-desc2 .ch11l4-desc-num {
@@ -3543,7 +3543,7 @@
 }
 
 .ch8l6-risk-type-1 .ch8l6-orbit-card-icon {
-  background: linear-gradient(135deg, #dc2626, #991b1b);
+  background: linear-gradient(135deg, #dc2626, #16261e);
   box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 
@@ -3981,7 +3981,7 @@
 
 .ch8l7-title i {
   font-size: 1.76rem;
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #16261e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
