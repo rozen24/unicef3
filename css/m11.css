@@ -5854,7 +5854,7 @@
   background: linear-gradient(135deg, rgba(168, 85, 247, 0.06) 0%, rgba(147, 51, 234, 0.03) 100%);
   border-left: 5px solid #a855f7;
   border-radius: 14px;
-  padding: 14px 16px;
+  padding: 8px 16px;
   box-shadow: 0 6px 18px rgba(168, 85, 247, 0.1);
 }
 
@@ -6095,7 +6095,7 @@
   }
 
   .ch7l3-methods-box {
-    padding: 16px 18px;
+    padding: 8px 18px;
   }
 
   .ch7l3-methods-title {
@@ -6148,7 +6148,7 @@
   }
 
   .ch7l3-methods-box {
-    padding: 14px 16px;
+    padding: 8px 16px;
   }
 
   .ch7l3-methods-title {
@@ -6198,7 +6198,7 @@
   }
 
   .ch7l3-methods-box {
-    padding: 12px 14px;
+    padding: 8px 14px;
   }
 
   .ch7l3-methods-title {
@@ -6271,7 +6271,7 @@
   }
 
   .ch7l3-methods-box {
-    padding: 11px 13px;
+    padding: 8px 13px;
   }
 
   .ch7l3-methods-title {
@@ -6351,7 +6351,7 @@
   }
 
   .ch7l3-methods-box {
-    padding: 10px 12px;
+    padding: 8px 12px;
     border-left-width: 3px;
   }
 
@@ -6418,10 +6418,10 @@
 
 /* Base Styles */
 .ch7l4-slide {
-  padding: 12px 14px;
+  padding: 3px 14px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 4px;
 }
 
 .ch7l4-introduction {
@@ -6449,7 +6449,7 @@
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(79, 70, 229, 0.03) 100%);
   border-left: 5px solid #6366f1;
   border-radius: 14px;
-  padding: 14px 16px;
+  padding: 3px 16px;
   box-shadow: 0 6px 18px rgba(99, 102, 241, 0.1);
   overflow: hidden;
 }
@@ -6482,7 +6482,6 @@
 /* Table Wrapper */
 .ch7l4-table-wrapper {
   overflow-x: auto;
-  border-radius: 10px;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
@@ -6715,7 +6714,7 @@
   }
 
   .ch7l4-card {
-    padding: x 18px;
+    padding: 3px 18px;
   }
 
   .ch7l4-card-title {
@@ -6825,7 +6824,7 @@
   }
 
   .ch7l4-card {
-    padding: 12px 14px;
+    padding: 3px 14px;
   }
 
   .ch7l4-card-title {
