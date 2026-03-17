@@ -4847,490 +4847,13 @@ const coursesData = [
           "মডিউল-৮: তারুন্যকালীনমাতৃত্ব",
         ),
         lessons: [
+
+
+
+
+
           {
             id: "ch8-lesson-1",
-            title: yhLang("তারুন্যকালীনমাতৃত্ব", "তারুন্যকালীনমাতৃত্ব"),
-            icon: "fa-baby",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q8a",
-                  question: yhLang(
-                    "তারুণ্যে গর্ভধারণ কেন ঝুঁকিপূর্ণ?",
-                    "তারুণ্যে গর্ভধারণ কেন ঝুঁকিপূর্ণ?",
-                  ),
-                  options: [
-                    yhLang(
-                      "মা ও শিশুর মৃত্যু ও জটিলতার ঝুঁকি বাড়ে",
-                      "মা ও শিশুর মৃত্যু ও জটিলতার ঝুঁকি বাড়ে",
-                    ),
-                    yhLang("সবসময় সহজ প্রসব হয়", "সবসময় সহজ প্রসব হয়"),
-                    yhLang(
-                      "শরীর বেশি শক্তিশালী থাকে",
-                      "শরীর বেশি শক্তিশালী থাকে",
-                    ),
-                    yhLang("কোনো প্রভাব পড়ে না", "কোনো প্রভাব পড়ে না"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const introParagraphs = [
-                "কিশোরীদের গর্ভধারণে মা ও শিশু মৃত্যুর ঝুঁকি অনেক বেশি। শারীরিক গঠন ও সামাজিক অবস্থার কারণে তাদের গর্ভকালীন, প্রসবকালীন এবং প্রসব-পরবর্তী সময়ে এই ঝুঁকির পরিমাণ অনেক বেড়ে যায়।",
-              ];
-
-              const riskDescription =
-                "তারুণ্যে গর্ভধারণ অত্যন্ত ঝুঁকিপূর্ণ। কারণ এ সময় কিশোরীর নিজেরই শারীরিক বৃদ্ধি অসম্পূর্ণ থাকে এবং তার শারীরিক ও মানসিক বিকাশ তখনও চলমান থাকে। এ অবস্থায় গর্ভধারণ করলে কিশোরী মা ও শিশু উভয়ই ঝুঁকির মধ্যে পড়ে যায়। গর্ভাবস্থায় কিশোরীর সাথে সাথে তার মধ্যে বেড়ে ওঠা সন্তানেরও নানা প্রকার সেবা–পুষ্টির দরকার হয় যা কিশোরী মায়ের জন্য সবসময় পাওয়া সচরাচর সম্ভব নয়। তারুণ্যে সন্তান ধারণ এবং জন্মদানের ক্ষেত্রে মা এবং সন্তান নানাবিধ ঝুঁকির সম্মুখীন হতে পারে।";
-
-              const orbitRisks = [
-                "প্রসব-পরবর্তী বিষণ্নতা",
-                "অপর্যাপ্ত শিশু পরিচর্যা ও বুকের দুধ খাওয়ানো",
-                "গর্ভজনিত উচ্চ রক্তচাপ",
-                "গর্ভকালীন রক্তস্বল্পতা",
-                "প্রি-একলাম্পসিয়া",
-                "বাধাগ্রস্ত প্রসব",
-                "বিলম্বিত প্রসব",
-                "মৃত সন্তান প্রসব",
-                "সময়ের আগে সন্তান জন্মদান",
-                "কম ওজনের সন্তান জন্ম দেওয়া",
-              ];
-
-              const colorCycle = [
-                "bg-gradient-rose",
-                "bg-gradient-blue",
-                "bg-gradient-green",
-                "bg-gradient-purple",
-                "bg-gradient-teal",
-                "bg-gradient-orange",
-                "bg-gradient-tangerine",
-                "bg-gradient-emerald",
-              ];
-
-              const renderParagraphs = () =>
-                introParagraphs
-                  .map(
-                    (text, idx) => `
-                      <p class="mb-3" data-aos="fade-up" data-aos-delay="${60 + idx * 20}">${text}</p>
-                    `,
-                  )
-                  .join("");
-
-              const renderOrbitItems = () => {
-                const radius = 150;
-                const angleStep = 360 / orbitRisks.length;
-                return orbitRisks
-                  .map((label, idx) => {
-                    const angle = angleStep * idx;
-                    const color = colorCycle[idx % colorCycle.length];
-                    return `
-                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" >
-                        <div class="orbit-card ${color}">
-                          <span class="orbit-title">${label}</span>
-                        </div>
-                      </div>
-                    `;
-                  })
-                  .join("");
-              };
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুন্যকালীনমাতৃত্ব",
-                    "তারুন্যকালীনমাতৃত্ব",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="gradient-text mb-3">${yhLang(
-                      "তারুন্যকালীনমাতৃত্ব",
-                      "তারুন্যকালীনমাতৃত্ব",
-                    )}</h3>
-                    ${renderParagraphs()}
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" >
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-12">
-                        <h3 class="gradient-text mb-3">${yhLang(
-                          "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
-                          "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
-                        )}</h3>
-                        <p class="text-muted" data-aos="fade-up" data-aos-delay="80">${riskDescription}</p>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="orbit-layout" data-orbit-radius="220">
-                          <div class="orbit-center icon-spin-on-hover">
-                            <div class="orbit-card kishori bg-gradient-rose">
-                              <div class="orbit-title fw-bold">${yhLang(
-                                "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
-                                "কিশোরীদের মাতৃত্বজনিত ঝুঁকি",
-                              )}</div>
-                            </div>
-                          </div>
-                          ${renderOrbitItems()}
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch8-lesson-2",
-            title: yhLang(
-              "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
-              "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
-            ),
-            icon: "fa-shield-heart",
-            gradientClass: "bg-gradient-purple",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q8b",
-                  question: yhLang(
-                    "তারুন্যকালীনগর্ভধারণ প্রতিরোধের একটি উপায় কী?",
-                    "তারুন্যকালীনগর্ভধারণ প্রতিরোধের একটি উপায় কী?",
-                  ),
-                  options: [
-                    yhLang(
-                      "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা",
-                      "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা",
-                    ),
-                    yhLang("সময়মতো স্কুল বন্ধ করা", "সময়মতো স্কুল বন্ধ করা"),
-                    yhLang("খেলাধুলা কমানো", "খেলাধুলা কমানো"),
-                    yhLang("সব সময় ভ্রমণ করা", "সব সময় ভ্রমণ করা"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const introText =
-                "নিরাপদ মাতৃত্বের জন্য তারুন্যকালীনগর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।";
-
-              const orbitActions = [
-                "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা",
-                "দেশের প্রচলিত আইনের যথাযথ প্রয়োগ (১৮-এর আগে মেয়েদের বিয়ে নয়, ২০-এর আগে সন্তান নয়)",
-                "পরিবার পরিকল্পনা সম্পর্কে জনগণের মধ্যে সচেতনতা বাড়ানো এবং পরিবার পরিকল্পনা পদ্ধতি ব্যবহারে উৎসাহ প্রদান",
-                "তারুন্যকালীনগর্ভধারণের কুফল ও এর ভয়াবহ পরিণতি সম্পর্কে সচেতনতা তৈরি করা",
-                "তারুণ্যে বিয়ে হলেও দেরিতে সন্তান গ্রহণে স্বামী, স্ত্রী ও অভিভাবকদের সচেতন করা",
-                "তারুণ্যে পরিবার পরিকল্পনা পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা",
-              ];
-
-              const colorCycle = [
-                "bg-gradient-rose",
-                "bg-gradient-blue",
-                "bg-gradient-green",
-                "bg-gradient-orange",
-                "bg-gradient-teal",
-                "bg-gradient-purple",
-              ];
-
-              const renderOrbitItems = () => {
-                const radius = 150;
-                const angleStep = 360 / orbitActions.length;
-                return orbitActions
-                  .map((label, idx) => {
-                    const angle = angleStep * idx;
-                    const color = colorCycle[idx % colorCycle.length];
-                    return `
-                      <div class="orbit-item" style="transform: rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg);" data-aos="zoom-in" data-aos-delay="${120 + idx * 40}">
-                        <div class="orbit-card ${color}">
-                          <span class="orbit-title">${label}</span>
-                        </div>
-                      </div>
-                    `;
-                  })
-                  .join("");
-              };
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
-                    "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="gradient-text mb-3">${yhLang(
-                      "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
-                      "তারুন্যকালীনগর্ভধারণ প্রতিরোধে করণীয়",
-                    )}</h3>
-                    <p class="mb-0">${introText}</p>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card">
-                    <div class="orbit-layout" data-orbit-radius="190">
-                      <div class="orbit-ring-1" aria-hidden="true"></div>
-                      <div class="orbit-ring-2" aria-hidden="true"></div>
-                      <div class="orbit-center icon-spin-on-hover">
-                        <div class="orbit-card bg-gradient-teal">
-                          <div class="orbit-title fw-bold">${yhLang(
-                            "কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল",
-                            "কিশোর–কিশোরীদের জন্য কার্যকর যোগাযোগের কৌশল",
-                          )}</div>
-                        </div>
-                      </div>
-                      ${renderOrbitItems()}
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch8-lesson-3",
-            title: yhLang("গর্ভকালীন বিপদচিহ্নসমূহ", "গর্ভকালীন বিপদচিহ্নসমূহ"),
-            icon: "fa-triangle-exclamation",
-            gradientClass: "bg-gradient-orange",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q8c",
-                  question: yhLang(
-                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?",
-                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?",
-                  ),
-                  options: [
-                    yhLang(
-                      "অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া",
-                      "অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া",
-                    ),
-                    yhLang("নিজে নিজে ওষুধ খাওয়া", "নিজে নিজে ওষুধ খাওয়া"),
-                    yhLang("উপেক্ষা করা", "উপেক্ষা করা"),
-                    yhLang("কেবল বিশ্রাম নেওয়া", "কেবল বিশ্রাম নেওয়া"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "গর্ভকালীন বিপদচিহ্নসমূহ",
-                    "গর্ভকালীন বিপদচিহ্নসমূহ",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <figure class="image-card mb-0" style="min-height:260px;">
-                      <img src="img/modu8/gorvo.png" alt="গর্ভকালীন বিপদচিহ্ন" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                    </figure>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch8-lesson-4",
-            title: yhLang(
-              "তারুন্যকালীনগর্ভধারণ ব্যবস্থাপনা",
-              "তারুন্যকালীনগর্ভধারণ ব্যবস্থাপনা",
-            ),
-            icon: "fa-user-nurse",
-            gradientClass: "bg-gradient-green",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q8d",
-                  question: yhLang(
-                    "গর্ভনির্ণয়ের পর কিশোরী মায়ের জন্য কী নিশ্চিত করা উচিত?",
-                    "গর্ভনির্ণয়ের পর কিশোরী মায়ের জন্য কী নিশ্চিত করা উচিত?",
-                  ),
-                  options: [
-                    yhLang(
-                      "কমপক্ষে ৪টি গর্ভকালীন চেকআপ",
-                      "কমপক্ষে ৪টি গর্ভকালীন চেকআপ",
-                    ),
-                    yhLang("একেবারেই চেকআপ না করা", "একেবারেই চেকআপ না করা"),
-                    yhLang("শুধু বাড়িতে বিশ্রাম", "শুধু বাড়িতে বিশ্রাম"),
-                    yhLang("শুধু ওষুধ খাওয়া", "শুধু ওষুধ খাওয়া"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const introText =
-                "গর্ভবতী কিশোরী সবসময়ই ঝুঁকিপূর্ণ—গর্ভকালীন, প্রসবকালীন বা প্রসব পরবর্তী সময়েও। এজন্য গর্ভনির্ণয় হওয়ার সাথে সাথেই ন্যূনতম ৪টি গর্ভকালীন চেকআপ নিশ্চিত করার জন্য নিকটস্থ স্বাস্থ্যকেন্দ্রে সেবা নিতে হবে এবং কিশোরী মায়ের প্রসব ব্যথা শুরু হলে তাকে জরুরি ভিত্তিতে হাসপাতালে নিয়ে ডেলিভারি করাতে হবে। যদি কিশোরী মায়ের ঝুঁকিসমূহ সময়মতো শনাক্ত করা যায় এবং ঠিক সময়ে জরুরি প্রসূতি সেবাকেন্দ্রে রেফার করা যায়, তাহলে তা কিশোরী মা ও শিশুর জীবন বাঁচাতে গুরুত্বপূর্ণ ভূমিকা রাখবে। কিশোরী মায়ের প্রসব বেশি ঝুঁকিপূর্ণ বিধায় হাসপাতাল ছাড়া কোনোভাবেই প্রসব করানো উচিত নয়।";
-
-              const careSteps = [
-                {
-                  heading: "১. কিশোরীর গর্ভ শনাক্ত ও সহায়তা",
-                  details:
-                    "প্রাথমিক অবস্থায় কিশোরীর গর্ভ শনাক্ত করে সে যাতে পরিবারে প্রয়োজনীয় যত্ন ও সহায়তা পায়, সেটা নিশ্চিত করার জন্য পরিবারের সকলকে উদ্বুদ্ধ করতে হবে।",
-                },
-                {
-                  heading: "২. গর্ভকালীন চেকআপ",
-                  bulletIntro:
-                    "প্রশিক্ষিত সেবা প্রদানকারীর দ্বারা কমপক্ষে ৪ বার (১–৪ মাসে ১ বার, ৬–৭ মাসে ১ বার, ৮ মাসে ১ বার এবং ৯ মাসে ১ বার) চেকআপ নিশ্চিত করতে হবে।",
-                  bullets: [
-                    "প্রশিক্ষিত সেবাদানকারীর দ্বারা কিশোরী মায়ের পুষ্টি, বিশ্রাম, কাজ, পরিচ্ছন্নতা বিষয়ে স্বাস্থ্যশিক্ষা দেওয়া, টিটেনাস-ডিফথেরিয়া (টিডি) টিকা (৫ ডোজ না দেয়া থাকলে) নেওয়া ও প্রসব পরিকল্পনার পরামর্শ দেওয়া।",
-                    "এ সময়ে কিশোরীদের কোনো জটিলতা দেখা দিলে তৎক্ষণাৎ উপযুক্ত হাসপাতালে রেফার করতে হবে, যেখানে গর্ভবতীর অপারেশন বা রক্ত সঞ্চালনের ব্যবস্থা আছে।",
-                  ],
-                },
-                {
-                  heading: "৩. প্রসব-পূর্ব পরিকল্পনা",
-                  details:
-                    "প্রসবের আগে পরিকল্পনা করলে মা ও শিশুর মৃত্যুঝুঁকি অনেকাংশে কমানো যায়, যেমন—",
-                  bullets: [
-                    "প্রসবের স্থান নির্বাচন",
-                    "ব্যথা শুরু হলে দ্রুত হাসপাতালে নিতে আগে থেকেই যানবাহন ঠিক করে রাখা",
-                    "আগে থেকে টাকা জমানো",
-                    "রক্তদাতা ঠিক করে রাখা",
-                  ],
-                },
-              ];
-
-              const renderBullets = (items, baseDelay = 80) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${baseDelay + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              const renderCareCards = () =>
-                careSteps
-                  .map((step, idx) => {
-                    const hasBullets = step.bullets && step.bullets.length;
-                    return `
-                      <article class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="${
-                        80 + idx * 40
-                      }">
-                        <h4 class="gradient-text mb-3">${step.heading}</h4>
-                        ${step.details ? `<p class="mb-3">${step.details}</p>` : ""}
-                        ${step.bulletIntro ? `<p class="mb-2">${step.bulletIntro}</p>` : ""}
-                        ${
-                          hasBullets
-                            ? `<ul class="list-unstyled puberty-list mb-0">${renderBullets(
-                                step.bullets,
-                                60,
-                              )}</ul>`
-                            : ""
-                        }
-                      </article>
-                    `;
-                  })
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুন্যকালীনগর্ভধারণ ব্যবস্থাপনা",
-                    "তারুন্যকালীনগর্ভধারণ ব্যবস্থাপনা",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-0">${introText}</p>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <div class="row g-3">
-                    <div class="col-12">
-                      ${renderCareCards()}
-                    </div>
-                  </div>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch8-lesson-5",
-            title: yhLang("প্রসব পরবর্তী যত্ন", "প্রসব পরবর্তী যত্ন"),
-            icon: "fa-heart-circle-check",
-            gradientClass: "bg-gradient-teal",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q8e",
-                  question: yhLang(
-                    "প্রসব পরবর্তী চেকআপ কয়বার নিশ্চিত করা উচিত?",
-                    "প্রসব পরবর্তী চেকআপ কয়বার নিশ্চিত করা উচিত?",
-                  ),
-                  options: [
-                    yhLang("কমপক্ষে ৪ বার", "কমপক্ষে ৪ বার"),
-                    yhLang("১ বার", "১ বার"),
-                    yhLang("২ বার", "২ বার"),
-                    yhLang("চেকআপের প্রয়োজন নেই", "চেকআপের প্রয়োজন নেই"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const postpartumPoints = [
-                "মা ও নবজাতকের চেকআপ (কমপক্ষে ৪টি — ১ম বার: প্রসবের ২৪ ঘণ্টার মধ্যে, ২য় বার: ২–৩ দিনের মধ্যে, ৩য় বার: ৪–৭ দিনের মধ্যে এবং ৪র্থ বার: প্রসবের ৪২–৪৫ দিনের মধ্যে)",
-                "প্রাথমিক অবস্থায় প্রসব পরবর্তী জটিলতা শনাক্তকরণ, প্রতিরোধ এবং চিকিৎসা",
-                "মাকে ভিটামিন এ খাওয়ানো, শিশুকে শালদুধ ও শুধুমাত্র বুকের দুধ খাওয়ানো, মা ও শিশুর পুষ্টি, পরিবার পরিকল্পনা পদ্ধতি এবং শিশুর টিকা ও পরিচর্যা বিষয়ক তথ্য প্রদানসহ কাউন্সেলিং এই সময়ে করা হয়।",
-                "কিশোরী মায়েদের এসব পরবর্তী সময়ে বিষণ্নতায় আক্রান্ত হওয়ার হার অনেক বেশি থাকে, যা সময়মতো শনাক্তকরণ ও চিকিৎসার আওতায় নিয়ে আসা প্রয়োজন; অনথায় তা মা ও শিশু দুজনের জন্যই মৃত্যু ঝুঁকি বাড়াতে পারে।",
-              ];
-
-              const renderPoints = () =>
-                postpartumPoints
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "প্রসব পরবর্তী যত্ন",
-                    "প্রসব পরবর্তী যত্ন",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-12">
-                        <h3 class="gradient-text mb-3">${yhLang(
-                          "প্রসব পরবর্তী যত্ন",
-                          "প্রসব পরবর্তী যত্ন",
-                        )}</h3>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderPoints()}
-                        </ul>
-                      </div>
-                      <div class="col-lg-12">
-                        <figure class="image-card mb-0">
-                          <img src="img/modu8/prosob.png" alt="প্রসব পরবর্তী যত্ন" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                        </figure>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch8-lesson-6",
             title: yhLang("Maternal Risks in Adolescence", "তারুণ্যেমাতৃত্ব"),
             icon: "fa-person-pregnant",
             gradientClass: "bg-gradient-amber",
@@ -5458,7 +4981,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch8-lesson-7",
+            id: "ch8-lesson-2",
             title: yhLang("Adolescent Pregnancy Prevention", "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"),
             icon: "fa-shield-halved",
             content: (() => {
@@ -5560,8 +5083,53 @@ const coursesData = [
               `;
             })(),
           },
+                    {
+            id: "ch8-lesson-3",
+            title: yhLang("গর্ভকালীন বিপদচিহ্নসমূহ", "গর্ভকালীন বিপদচিহ্নসমূহ"),
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q8c",
+                  question: yhLang(
+                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?",
+                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?",
+                  ),
+                  options: [
+                    yhLang(
+                      "অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া",
+                      "অবিলম্বে চিকিৎসকের শরণাপন্ন হওয়া",
+                    ),
+                    yhLang("নিজে নিজে ওষুধ খাওয়া", "নিজে নিজে ওষুধ খাওয়া"),
+                    yhLang("উপেক্ষা করা", "উপেক্ষা করা"),
+                    yhLang("কেবল বিশ্রাম নেওয়া", "কেবল বিশ্রাম নেওয়া"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="lesson-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                    "গর্ভকালীন বিপদচিহ্নসমূহ",
+                    "গর্ভকালীন বিপদচিহ্নসমূহ",
+                  )}</h2>
+
+                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card mb-0" style="min-height:260px;">
+                      <img src="img/modu8/gorvo.png" style="height: 600px;" alt="গর্ভকালীন বিপদচিহ্ন" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                    </figure>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
           {
-            id: "ch8-lesson-8",
+            id: "ch8-lesson-4",
             title: yhLang("Adolescent Pregnancy Management", "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"),
             icon: "fa-hospital-user",
             content: (() => {
@@ -5702,7 +5270,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch8-lesson-9",
+            id: "ch8-lesson-5",
             title: yhLang("Postpartum Care", "প্রসব পরবর্তী যত্ন"),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-rose",
