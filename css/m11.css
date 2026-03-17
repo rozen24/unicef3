@@ -5321,3 +5321,481 @@
   }
 }
 
+/* ===== MODULE 8 LESSON 9: POSTPARTUM CARE ===== */
+
+/* Base Styles */
+.ch8l9-slide {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ch8l9-image-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.15);
+}
+
+.ch8l9-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.ch8l9-content-wrapper {
+  width: 100%;
+}
+
+.ch8l9-intro-box {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(236, 72, 153, 0.04) 100%);
+  border-left: 5px solid #ec4899;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.1);
+}
+
+.ch8l9-intro-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.ch8l9-intro-title i {
+  font-size: 1.6rem;
+  color: #ec4899;
+}
+
+.ch8l9-intro-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
+
+.ch8l9-points-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Point Section Base */
+.ch8l9-point-section {
+  position: relative;
+  padding: 14px 16px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.ch8l9-point-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4px;
+  width: 40%;
+  border-radius: 12px 0 0 0;
+}
+
+/* Point Type 1: Pink - Mother/Newborn Checkups */
+.ch8l9-point-type-1 {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 100%);
+  border-left: 4px solid #ec4899;
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.12);
+}
+
+.ch8l9-point-type-1::before {
+  background: linear-gradient(90deg, #ec4899 0%, #db2777 100%);
+}
+
+.ch8l9-point-type-1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(236, 72, 153, 0.18);
+}
+
+/* Point Type 2: Cyan - Early Detection */
+.ch8l9-point-type-2 {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(8, 145, 178, 0.04) 100%);
+  border-left: 4px solid #06b6d4;
+  box-shadow: 0 6px 16px rgba(6, 182, 212, 0.12);
+}
+
+.ch8l9-point-type-2::before {
+  background: linear-gradient(90deg, #06b6d4 0%, #0891b2 100%);
+}
+
+.ch8l9-point-type-2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(6, 182, 212, 0.18);
+}
+
+/* Point Type 3: Green - Counseling & Nutrition */
+.ch8l9-point-type-3 {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.04) 100%);
+  border-left: 4px solid #10b981;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.12);
+}
+
+.ch8l9-point-type-3::before {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+.ch8l9-point-type-3:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(16, 185, 129, 0.18);
+}
+
+/* Point Type 4: Amber - Depression Risk */
+.ch8l9-point-type-4 {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(217, 119, 6, 0.04) 100%);
+  border-left: 4px solid #f59e0b;
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.12);
+}
+
+.ch8l9-point-type-4::before {
+  background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+}
+
+.ch8l9-point-type-4:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(245, 158, 11, 0.18);
+}
+
+/* Point Type 5: Red - Mortality Prevention */
+.ch8l9-point-type-5 {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(220, 38, 38, 0.04) 100%);
+  border-left: 4px solid #ef4444;
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.12);
+}
+
+.ch8l9-point-type-5::before {
+  background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+}
+
+.ch8l9-point-type-5:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(239, 68, 68, 0.18);
+}
+
+/* Point Header */
+.ch8l9-point-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.ch8l9-point-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.ch8l9-point-section:hover .ch8l9-point-icon {
+  transform: rotate(8deg) scale(1.08);
+}
+
+.ch8l9-point-title {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ch8l9-point-description {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
+
+/* Desktop: 1200px and above */
+@media (min-width: 1200px) {
+  .ch8l9-slide {
+    padding: 14px 16px;
+    gap: 18px;
+  }
+
+  .ch8l9-image-container {
+    max-width: 700px;
+  }
+
+  .ch8l9-intro-box {
+    padding: 14px 18px;
+    margin-bottom: 20px;
+  }
+
+  .ch8l9-intro-title {
+    font-size: 1.5rem;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .ch8l9-intro-text {
+    font-size: 0.98rem;
+  }
+
+  .ch8l9-points-container {
+    gap: 16px;
+  }
+
+  .ch8l9-point-section {
+    padding: 16px 18px;
+  }
+
+  .ch8l9-point-header {
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+
+  .ch8l9-point-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+  }
+
+  .ch8l9-point-title {
+    font-size: 1.12rem;
+  }
+
+  .ch8l9-point-description {
+    font-size: 0.96rem;
+  }
+}
+
+/* Tablet: 1024px - 1199px */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .ch8l9-slide {
+    padding: 13px 15px;
+    gap: 16px;
+  }
+
+  .ch8l9-image-container {
+    max-width: 600px;
+  }
+
+  .ch8l9-intro-box {
+    padding: 12px 16px;
+    margin-bottom: 18px;
+  }
+
+  .ch8l9-intro-title {
+    font-size: 1.38rem;
+    gap: 11px;
+    margin-bottom: 9px;
+  }
+
+  .ch8l9-points-container {
+    gap: 14px;
+  }
+
+  .ch8l9-point-section {
+    padding: 14px 16px;
+  }
+
+  .ch8l9-point-header {
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .ch8l9-point-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .ch8l9-point-title {
+    font-size: 1.04rem;
+  }
+
+  .ch8l9-point-description {
+    font-size: 0.92rem;
+  }
+}
+
+/* Mobile: 768px - 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .ch8l9-slide {
+    padding: 12px 14px;
+    gap: 14px;
+  }
+
+  .ch8l9-image-container {
+    max-width: 100%;
+  }
+
+  .ch8l9-intro-box {
+    padding: 11px 14px;
+    margin-bottom: 16px;
+  }
+
+  .ch8l9-intro-title {
+    font-size: 1.28rem;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .ch8l9-intro-text {
+    font-size: 0.90rem;
+  }
+
+  .ch8l9-points-container {
+    gap: 12px;
+  }
+
+  .ch8l9-point-section {
+    padding: 12px 14px;
+  }
+
+  .ch8l9-point-header {
+    gap: 10px;
+    margin-bottom: 7px;
+  }
+
+  .ch8l9-point-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .ch8l9-point-title {
+    font-size: 1rem;
+  }
+
+  .ch8l9-point-description {
+    font-size: 0.88rem;
+  }
+}
+
+/* Small Mobile: up to 767px */
+@media (max-width: 767px) {
+  .ch8l9-slide {
+    padding: 10px 12px;
+    gap: 12px;
+  }
+
+  .ch8l9-image-container {
+    border-radius: 12px;
+  }
+
+  .ch8l9-intro-box {
+    padding: 10px 12px;
+    margin-bottom: 14px;
+  }
+
+  .ch8l9-intro-title {
+    font-size: 1.16rem;
+    gap: 9px;
+    margin-bottom: 7px;
+  }
+
+  .ch8l9-intro-text {
+    font-size: 0.86rem;
+  }
+
+  .ch8l9-points-container {
+    gap: 10px;
+  }
+
+  .ch8l9-point-section {
+    padding: 10px 12px;
+  }
+
+  .ch8l9-point-header {
+    gap: 9px;
+    margin-bottom: 6px;
+  }
+
+  .ch8l9-point-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+
+  .ch8l9-point-title {
+    font-size: 0.96rem;
+  }
+
+  .ch8l9-point-description {
+    font-size: 0.84rem;
+  }
+}
+
+/* Extra Small Mobile: up to 479px */
+@media (max-width: 479px) {
+  .ch8l9-slide {
+    padding: 9px 11px;
+    gap: 11px;
+  }
+
+  .ch8l9-intro-box {
+    padding: 9px 11px;
+    margin-bottom: 12px;
+    border-left-width: 3px;
+  }
+
+  .ch8l9-intro-title {
+    font-size: 1.08rem;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .ch8l9-intro-title i {
+    font-size: 1.4rem;
+  }
+
+  .ch8l9-intro-text {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .ch8l9-points-container {
+    gap: 9px;
+  }
+
+  .ch8l9-point-section {
+    padding: 9px 11px;
+  }
+
+  .ch8l9-point-header {
+    gap: 8px;
+    margin-bottom: 5px;
+  }
+
+  .ch8l9-point-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .ch8l9-point-title {
+    font-size: 0.92rem;
+  }
+
+  .ch8l9-point-description {
+    font-size: 0.80rem;
+    line-height: 1.5;
+  }
+
+  .ch8l9-point-section::before {
+    width: 35%;
+  }
+}

@@ -5701,6 +5701,123 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch8-lesson-9",
+            title: yhLang("Postpartum Care", "প্রসব পরবর্তী যত্ন"),
+            icon: "fa-heart-pulse",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q8i",
+                  question: yhLang(
+                    "How many postpartum check-ups are recommended?",
+                    "কতটি প্রসব পরবর্তী চেকআপ সুপারিশ করা হয়?"
+                  ),
+                  options: [
+                    yhLang("4 check-ups", "৪টি চেকআপ"),
+                    yhLang("2 check-ups", "২টি চেকআপ"),
+                    yhLang("1 check-up", "১টি চেকআপ"),
+                    yhLang("6 check-ups", "৬টি চেকআপ"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const points = [
+                {
+                  title: yhLang("Mother and Newborn Checkups", "মা ও নবজাতকের চেকআপ"),
+                  description: yhLang(
+                    "Minimum 4 visits required: 1st within 24 hours of delivery, 2nd within 2–3 days, 3rd within 4–7 days, and 4th within 42–45 days after delivery",
+                    "মা ও নবজাতকের চেকআপ কমপক্ষে ৪টি সফর: ১ম বার প্রসবের ২৪ ঘণ্টার মধ্যে, ২য় বার ২–৩ দিনের মধ্যে, ৩য় বার ৪–৭ দিনের মধ্যে এবং ৪র্থ বার প্রসবের ৪২–৪৫ দিনের মধ্যে"
+                  ),
+                  type: 1,
+                  icon: "fa-stethoscope",
+                  color: "#ec4899"
+                },
+                {
+                  title: yhLang("Early Complication Detection", "প্রাথমিক অবস্থায় প্রসব পরবর্তী জটিলতা শনাক্তকরণ"),
+                  description: yhLang(
+                    "Identify, prevent, and treat postpartum complications early to ensure mother and baby's health and safety",
+                    "প্রাথমিক অবস্থায় প্রসব পরবর্তী জটিলতা শনাক্তকরণ, প্রতিরোধ এবং চিকিৎসা"
+                  ),
+                  type: 2,
+                  icon: "fa-triangle-exclamation",
+                  color: "#06b6d4"
+                },
+                {
+                  title: yhLang("Counseling & Nutrition", "কাউন্সেলিং এবং পুষ্টি"),
+                  description: yhLang(
+                    "Provide guidance on Vitamin A for mother, exclusive breastfeeding, colostrum feeding, nutrition for mother and baby, family planning methods, immunization schedule and childcare",
+                    "মাকে ভিটামিন এ খাওয়ানো, শিশুকে শালদুধ ও শুধুমাত্র বুকের দুধ খাওয়ানো, মা ও শিশুর পুষ্টি, পরিবার পরিকল্পনা পদ্ধতি এবং শিশুর টিকা ও পরিচর্যা বিষয়ক তথ্য প্রদানসহ কাউন্সেলিং এই সময়ে করা হয়"
+                  ),
+                  type: 3,
+                  icon: "fa-apple",
+                  color: "#10b981"
+                },
+                {
+                  title: yhLang("Postpartum Depression Risk", "প্রসব পরবর্তী বিষণ্নতার ঝুঁকি"),
+                  description: yhLang(
+                    "Adolescent mothers have significantly higher risk of postpartum depression. Early detection and treatment are essential to prevent serious consequences for both mother and baby",
+                    "কিশোরী মায়েদের প্রসব পরবর্তী সময়ে বিষণ্নতায় আক্রান্ত হওয়ার হার অনেক বেশি থাকে, যা সময়মতো শনাক্তকরণ ও চিকিৎসার আওতায় নিয়ে আসা প্রয়োজন অনথায় তা মা ও শিশু উভয়ের জন্যই মৃত্যু ঝুঁকি বাড়াতে পারে"
+                  ),
+                  type: 4,
+                  icon: "fa-brain",
+                  color: "#f59e0b"
+                }
+              ];
+
+              const renderPoints = () => {
+                return points.map((point, idx) => {
+                  const typeClass = `ch8l9-point-type-${point.type}`;
+                  return `
+                    <div class="ch8l9-point-section ${typeClass}" data-aos="fade-up" data-aos-delay="${idx * 100}">
+                      <div class="ch8l9-point-header">
+                        <div class="ch8l9-point-icon" style="background: linear-gradient(135deg, ${point.color}20 0%, ${point.color}05 100%); border: 2px solid ${point.color};">
+                          <i class="fa-solid ${point.icon}" style="color: ${point.color};"></i>
+                        </div>
+                       <p class="ch8l9-point-description">${point.description}</p>
+                      </div>
+                    </div>
+                  `;
+                }).join("");
+              };
+
+              return `
+                <div class="ch8l9-slide lesson-slide" data-module="8" data-lesson="9">
+                  <div class="row g-1">
+                       <div class="col-md-5">
+                          <section class="ch8l9-content-wrapper" data-aos="fade-up" data-aos-delay="50">
+                              <div class="ch8l9-intro-box">
+                                <h2 class="ch8l9-intro-title">
+                                  <i class="fa-solid fa-hand-holding-heart"></i>
+                                  ${yhLang("Comprehensive Postpartum Care", "সম্পূর্ণ প্রসব পরবর্তী যত্ন")}
+                                </h2>
+                              </div>
+
+                              <div class="ch8l9-points-container">
+                                ${renderPoints()}
+                              </div>
+                            </section>
+                       </div>
+                       <div class="col-md-7">
+                         <section class="ch8l9-section-wrapper h-100" data-aos="fade-up">
+                          <div class="ch8l9-image-container">
+                            <img src="img/modu8/prosob.png" style="height: 600px;" alt="Postpartum Care" class="ch8l9-image img-zoom" />
+                          </div>
+                        </section>
+                       </div>
+                    </div>
+                  
+
+                  
+                </div>
+              `;
+            })(),
+          },
           
         ],
       },
