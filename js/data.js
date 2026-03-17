@@ -4453,6 +4453,477 @@ const coursesData = [
               `;
             })(),
           },
+          {
+            id: "ch6-lesson-5",
+            title: yhLang("Child Marriage", "বাল্যবিবাহ"),
+            icon: "fa-ban",
+            gradientClass: "bg-gradient-red",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q6e",
+                  question: yhLang(
+                    "What is the legal minimum age for marriage in Bangladesh?",
+                    "বাংলাদেশে বিয়ের আইনি ন্যূনতম বয়স কত?"
+                  ),
+                  options: [
+                    yhLang("Girls: 18, Boys: 21", "মেয়ে: ১৮, ছেলে: ২১"),
+                    yhLang("Girls: 16, Boys: 18", "মেয়ে: ১৬, ছেলে: ১৮"),
+                    yhLang("Girls: 15, Boys: 18", "মেয়ে: ১৫, ছেলে: ১৮"),
+                    yhLang("No minimum age", "কোনো ন্যূনতম বয়স নেই"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="ch6l5-slide" data-module="6" data-lesson="5">
+                  <section class="ch6l5-introduction" data-aos="fade-up">
+                    <h2 class="ch6l5-main-title">
+                      <i class="fa-solid fa-ban"></i>
+                      ${yhLang("Child Marriage (বাল্যবিবাহ)", "বাল্যবিবাহ")}
+                    </h2>
+                    <p class="ch6l5-intro-text">
+                      ${yhLang(
+                        "Bangladesh law stipulates a minimum marriage age of 18 for girls and 21 for boys. Marriage below these ages is considered child marriage. According to BDHS 2022, 50% of married women were married before age 18, and adolescent birth rate is 92 per 1,000. Among girls aged 15-19, 24% are pregnant and 18% have given birth.",
+                        "বাংলাদেশের আইনে মেয়েদের বিয়ের বয়স কমপক্ষে ১৮ ও ছেলেদের বিয়ের বয়স কমপক্ষে ২১ বছর। এর থেকে কম বয়সে বিয়ে হলে তা বাল্যবিবাহ বলে গণ্য করা হয়। বর্তমানে বিশেষ কয়েকটি কারণে ১৬ বছরে বিয়ে দেয়ার বিষয়টি বাল্যবিবাহ নিরোধ আইনে অন্তর্ভুক্ত হলেও বিয়ের বয়স ১৮ বছরই বলতে হবে। বিডিএইচএস, ২০২২ অনুসারে বিবাহিত ৫০ শতাংশ নারীর বিয়ে হয়েছে ১৮ বছরের মধ্যে এবং গর্ভবতী কিশোরীদের মধ্যে জন্মহার প্রতি হাজারে ৯২। এবং ১৫-১৯ বছর বয়সী চারজনের মধ্যে একজন কিশোরী (২৪%) গর্ভধারন করে, এবং প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।"
+                      )}
+                    </p>
+                  </section>
+
+                  <!-- Special Note 1: Legal Crime -->
+                  <section class="ch6l5-special-note ch6l5-note-type-1" data-aos="fade-up" data-aos-delay="50">
+                    <div class="ch6l5-note-icon">
+                      <i class="fa-solid fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="ch6l5-note-content">
+                      <h3 class="ch6l5-note-title">${yhLang("Legal Offense", "আইনের চোখে অপরাধ")}</h3>
+                      <p class="ch6l5-note-text">
+                        ${yhLang(
+                          "Child marriage is a punishable offense under the law.",
+                          "বাল্যবিবাহ আইনের চোখে একটি দণ্ডনীয় অপরাধ।"
+                        )}
+                      </p>
+                    </div>
+                  </section>
+
+                  <!-- Special Note 2: Helpline -->
+                  <section class="ch6l5-special-note ch6l5-note-type-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ch6l5-note-icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="ch6l5-note-content">
+                      <h3 class="ch6l5-note-title">${yhLang("Report Child Marriage", "বাল্যবিবাহ রিপোর্ট করুন")}</h3>
+                      <p class="ch6l5-note-text">
+                        ${yhLang(
+                          "If you have information about child marriage, report it to the ",
+                          "বাল্যবিবাহ সম্পর্কে কোনো তথ্য থাকলে "
+                        )}
+                        <strong class="ch6l5-helpline-number">1098</strong>
+                        ${yhLang(
+                          " Child Helpline by calling or messaging.",
+                          " চাইল্ড হেল্পলাইনে কল করে রিপোর্ট করা উচিত।"
+                        )}
+                      </p>
+                    </div>
+                  </section>
+
+                  <!-- Statistics Section -->
+                  <section class="ch6l5-stats-card" data-aos="fade-up" data-aos-delay="150">
+                    <h3 class="ch6l5-stats-title">
+                      <i class="fa-solid fa-chart-pie"></i>
+                      ${yhLang("Key Statistics", "গুরুত্বপূর্ণ পরিসংখ্যান")}
+                    </h3>
+                    <div class="ch6l5-stats-grid">
+                      <div class="ch6l5-stat-item ch6l5-stat-1" data-aos="zoom-in" data-aos-delay="160">
+                        <div class="ch6l5-stat-number">50%</div>
+                        <p class="ch6l5-stat-label">${yhLang("Married before 18", "১৮ বছরের আগে বিবাহিত")}</p>
+                      </div>
+                      <div class="ch6l5-stat-item ch6l5-stat-2" data-aos="zoom-in" data-aos-delay="180">
+                        <div class="ch6l5-stat-number">92</div>
+                        <p class="ch6l5-stat-label">${yhLang("per 1,000 births", "প্রতি ১০০০ জন্মে")}</p>
+                      </div>
+                      <div class="ch6l5-stat-item ch6l5-stat-3" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="ch6l5-stat-number">24%</div>
+                        <p class="ch6l5-stat-label">${yhLang("Girls 15-19 pregnant", "১৫-১৯ বছরে গর্ভধারণ")}</p>
+                      </div>
+                      <div class="ch6l5-stat-item ch6l5-stat-4" data-aos="zoom-in" data-aos-delay="220">
+                        <div class="ch6l5-stat-number">18%</div>
+                        <p class="ch6l5-stat-label">${yhLang("Adolescent mothers", "কিশোরী মা")}</p>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch6-lesson-6",
+            title: yhLang("Causes of Child Marriage", "বাল্যবিবাহের কারণ"),
+            icon: "fa-circle-exclamation",
+            gradientClass: "bg-gradient-orange",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q6f",
+                  question: yhLang(
+                    "What is a major cause of child marriage?",
+                    "বাল্যবিবাহের প্রধান কারণ কী?"
+                  ),
+                  options: [
+                    yhLang(
+                      "Poverty, gender discrimination, and lack of education",
+                      "দারিদ্র্য, জেন্ডার বৈষম্য এবং শিক্ষার অভাব"
+                    ),
+                    yhLang("Only poverty", "শুধুমাত্র দারিদ্র্য"),
+                    yhLang("Only gender discrimination", "শুধুমাত্র জেন্ডার বৈষম্য"),
+                    yhLang("Child's choice", "শিশুর পছন্দ"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const causes = [
+                { title: yhLang("Poverty", "দারিদ্র্য"), icon: "fa-hand-holding-heart", color: "#ef4444", desc: yhLang("Economic hardship forces families to marry off daughters early", "অর্থনৈতিক কঠিনতা") },
+                { title: yhLang("Social Customs", "সামাজিক প্রথা"), icon: "fa-people", color: "#f59e0b", desc: yhLang("Traditional beliefs and superstitions", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার") },
+                { title: yhLang("Gender Inequality", "জেন্ডার বৈষম্য"), icon: "fa-scale-balanced", color: "#ec4899", desc: yhLang("Girls considered inferior", "মেয়েদের অসমান অধিকার") },
+                { title: yhLang("Dowry Burden", "দায়গ্রস্ততা"), icon: "fa-sack-dollar", color: "#8b5cf6", desc: yhLang("Parents seek relief from dowry", "কন্যাদায়গ্রস্ত পিতামাতা") },
+                { title: yhLang("Social Insecurity", "সামাজিক অনিরাপত্তা"), icon: "fa-shield-exclamation", color: "#06b6d4", desc: yhLang("Unsafe environment for girls", "সামাজিক নিরাপত্তাহীনতা") },
+                { title: yhLang("Lack of Education", "শিক্ষার অভাব"), icon: "fa-book", color: "#10b981", desc: yhLang("No awareness about rights", "শিক্ষা ও সচেতনতার অভাব") },
+                { title: yhLang("Girl Neglect", "মেয়েদের অবহেলা"), icon: "fa-child", color: "#f97316", desc: yhLang("Girls seen as burden", "মেয়ে শিশুর প্রতি অবহেলা") },
+                { title: yhLang("School Dropout", "স্কুল ছাড়া"), icon: "fa-graduation-cap", color: "#06b6d4", desc: yhLang("Girls drop out of school", "স্কুল থেকে ঝরে পড়া") },
+                { title: yhLang("Legal Ignorance", "আইন অজ্ঞতা"), icon: "fa-gavel", color: "#ef4444", desc: yhLang("Unaware of marriage laws", "বিবাহ আইন সম্পর্কে অজ্ঞতা") },
+                { title: yhLang("Poor Enforcement", "আইন প্রয়োগ"), icon: "fa-check-double", color: "#3b82f6", desc: yhLang("Weak law implementation", "আইনের যথাযথ প্রয়োগ নেই") }
+              ];
+
+              const renderOrbitItems = () => {
+                return causes.map((cause, idx) => {
+                  const angle = (idx * 360) / causes.length;
+                  return `
+                    <div class="ch6l6-orbit-item" style="--angle: ${angle}deg" data-aos="fade-in" data-aos-delay="${50 + idx * 30}">
+                      <div class="ch6l6-orbit-card" style="border-top-color: ${cause.color};">
+                        <div class="ch6l6-orbit-icon" style="background: linear-gradient(135deg, ${cause.color} 0%, ${cause.color}cc 100%);">
+                          <i class="fa-solid ${cause.icon}"></i>
+                        </div>
+                        <p class="ch6l6-orbit-title">${cause.title}</p>
+                      </div>
+                    </div>
+                  `;
+                }).join("");
+              };
+
+              return `
+                <div class="ch6l6-slide" data-module="6" data-lesson="6">
+                  <section class="ch6l6-introduction" data-aos="fade-up">
+                    <h2 class="ch6l6-main-title">
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      ${yhLang("Causes of Child Marriage", "বাল্যবিবাহের কারণ")}
+                    </h2>
+                  </section>
+
+                  <section class="ch6l6-orbit-container" data-aos="fade-up" data-aos-delay="50">
+                    <div class="ch6l6-orbit-wrapper">
+                      <!-- Center -->
+                      <div class="ch6l6-orbit-center">
+                        <div class="ch6l6-center-content">
+                          <i class="fa-solid fa-ban"></i>
+                          <p>${yhLang("Child Marriage", "বাল্যবিবাহ")}</p>
+                        </div>
+                      </div>
+
+                      <!-- Orbit Ring -->
+                      <div class="ch6l6-orbit-ring"></div>
+
+                      <!-- Orbit Items -->
+                      ${renderOrbitItems()}
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch6-lesson-7",
+            title: yhLang("Consequences of Child Marriage", "বাল্যবিবাহের পরিণতি"),
+            icon: "fa-triangle-exclamation",
+            gradientClass: "bg-gradient-red",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q6g",
+                  question: yhLang(
+                    "What are the health consequences of child marriage?",
+                    "বাল্যবিবাহের স্বাস্থ্যগত পরিণতি কী?"
+                  ),
+                  options: [
+                    yhLang(
+                      "Premature births, malnutrition, and increased mortality risk",
+                      "অকাল প্রসব, পুষ্টিহীনতা এবং মৃত্যুর ঝুঁকি বৃদ্ধি"
+                    ),
+                    yhLang("Only premature births", "শুধুমাত্র অকাল প্রসব"),
+                    yhLang("Only malnutrition", "শুধুমাত্র পুষ্টিহীনতা"),
+                    yhLang("No health consequences", "কোন স্বাস্থ্য সমস্যা নেই"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              const consequences = [
+                { 
+                  title: yhLang("Premature & Underweight Births", "অপরিণত, অপুষ্ট ওজনের শিশুর জন্ম"), 
+                  icon: "fa-baby", 
+                  color: "#8b5cf6",
+                  shadowColor: "rgba(139, 92, 246, 0.25)"
+                },
+                { 
+                  title: yhLang("Nutritional Deficiency", "কিশোরী মায়ের পুষ্টিহীনতা ও স্বাস্থ্যগত সমস্যা"), 
+                  icon: "fa-apple", 
+                  color: "#10b981",
+                  shadowColor: "rgba(16, 185, 129, 0.25)"
+                },
+                { 
+                  title: yhLang("Chronic Reproductive Issues", "দীর্ঘস্থায়ী প্রজননস্বাস্থ্যজনিত জটিলতা"), 
+                  icon: "fa-heart-crack", 
+                  color: "#ef4444",
+                  shadowColor: "rgba(239, 68, 68, 0.25)"
+                },
+                { 
+                  title: yhLang("Childbirth Complications", "প্রসব ও প্রসব-পরবর্তী জটিলতায় ভোগা"), 
+                  icon: "fa-hospital", 
+                  color: "#f59e0b",
+                  shadowColor: "rgba(245, 158, 11, 0.25)"
+                },
+                { 
+                  title: yhLang("Increased Mortality Risk", "মা ও শিশুমৃত্যুর ঝুঁকি বৃদ্ধি"), 
+                  icon: "fa-skull-crossbones", 
+                  color: "#dc2626",
+                  shadowColor: "rgba(220, 38, 38, 0.25)"
+                },
+                { 
+                  title: yhLang("Marital Conflict", "দাম্পত্য কলহ"), 
+                  icon: "fa-handshake-slash", 
+                  color: "#06b6d4",
+                  shadowColor: "rgba(6, 182, 212, 0.25)"
+                },
+                { 
+                  title: yhLang("Violence & Suicide Risk", "সহিংসতার ঝুঁকি ও আত্মহত্যার প্রবণতা"), 
+                  icon: "fa-shield-exclamation", 
+                  color: "#ec4899",
+                  shadowColor: "rgba(236, 72, 153, 0.25)"
+                },
+                { 
+                  title: yhLang("Unsafe Sexual Behavior", "ঝুঁকিপূর্ণ ও অনিরাপদ যৌন আচরণ"), 
+                  icon: "fa-exclamation-circle", 
+                  color: "#f97316",
+                  shadowColor: "rgba(249, 115, 22, 0.25)"
+                },
+                { 
+                  title: yhLang("Divorce & Separation", "বিবাহ বিচ্ছেদ"), 
+                  icon: "fa-people-arrows", 
+                  color: "#64748b",
+                  shadowColor: "rgba(100, 116, 139, 0.25)"
+                }
+              ];
+
+              const renderConsequences = () => {
+                return consequences.map((item, idx) => {
+                  return `
+                    <div class="ch6l7-consequence-card" data-aos="fade-up" data-aos-delay="${50 + idx * 30}">
+                      <div class="ch6l7-card-header" style="border-top-color: ${item.color}; box-shadow: 0 8px 24px ${item.shadowColor};">
+                        <div class="ch6l7-icon-wrapper" style="background: linear-gradient(135deg, ${item.color} 0%, ${item.color}cc 100%);">
+                          <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <p class="ch6l7-consequence-title">${item.title}</p>
+                      </div>
+                    </div>
+                  `;
+                }).join("");
+              };
+
+              return `
+                <div class="ch6l7-slide" data-module="6" data-lesson="7">
+                  <section class="ch6l7-container" data-aos="fade-up">
+                    <!-- Left Column -->
+                    <div class="ch6l7-left-column">
+                      <h2 class="ch6l7-main-title">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        ${yhLang("Consequences of Child Marriage", "বাল্যবিবাহের পরিণতি")}
+                      </h2>
+                      
+                      <div class="ch6l7-consequences-grid">
+                        ${renderConsequences()}
+                      </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="ch6l7-right-column">
+                      <div class="ch6l7-image-wrapper" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="img/modu6/ballo.jpg" alt="${yhLang("Consequences of Child Marriage", "বাল্যবিবাহের পরিণতি")}" class="ch6l7-image">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch6-lesson-8",
+            title: yhLang("Prevention of Child Marriage", "বাল্যবিবাহ প্রতিরোধে করণীয়"),
+            icon: "fa-shield-heart",
+            gradientClass: "bg-gradient-green",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q6h",
+                  question: yhLang(
+                    "What are key prevention strategies for child marriage?",
+                    "বাল্যবিবাহ প্রতিরোধের মূল কৌশল কী?"
+                  ),
+                  options: [
+                    yhLang(
+                      "Birth registration, legal awareness, and community education",
+                      "জন্ম নিবন্ধন, আইনি সচেতনতা এবং কমিউনিটি শিক্ষা"
+                    ),
+                    yhLang("Only legal awareness", "শুধুমাত্র আইনি সচেতনতা"),
+                    yhLang("Only birth registration", "শুধুমাত্র জন্ম নিবন্ধন"),
+                    yhLang("No prevention strategies needed", "কোন প্রতিরোধ কৌশলের প্রয়োজন নেই"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+            const preventionPoints = [
+  { 
+    title: yhLang(
+      "Register all children at birth",
+      "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা"
+    ), 
+    icon: "fa-file-circle-check", 
+    color: "#0891b2"
+  },
+  { 
+    title: yhLang(
+      "Ensure marriage registrars verify birth certificates during marriage",
+      "বিয়ে সম্পাদনের সময় কাজী যেন অবশ্যই জন্মসনদ যাচাই করেন—এ বিষয়ে কাজীকে সচেতন করা"
+    ), 
+    icon: "fa-person-chalkboard", 
+    color: "#7c3aed"
+  },
+  { 
+    title: yhLang(
+      "Raise awareness among registrars, guardians, and the public about child marriage laws",
+      "বাল্যবিবাহের আইন সম্পর্কে কাজী, অভিভাবক ও জনসাধারণকে সচেতন করা"
+    ), 
+    icon: "fa-gavel", 
+    color: "#dc2626"
+  },
+  { 
+    title: yhLang(
+      "Create public awareness about child marriage and its harmful consequences",
+      "বাল্যবিবাহ ও এর ভয়াবহ পরিণতি সম্পর্কে জনসচেতনতা তৈরি করা"
+    ), 
+    icon: "fa-bullhorn", 
+    color: "#ea580c"
+  },
+  { 
+    title: yhLang(
+      "Educate youth and guardians on contraception and delaying childbirth even in early marriages",
+      "বাল্যবিবাহ হলেও জন্মনিয়ন্ত্রণ পদ্ধতি ব্যবহার ও দেরিতে সন্তান গ্রহণ সম্পর্কে তরুন-তরুনী ও অভিভাবকদের সচেতন করা"
+    ), 
+    icon: "fa-capsules", 
+    color: "#0891b2"
+  },
+  { 
+    title: yhLang(
+      "Ensure easy access to appropriate contraceptive methods for youth",
+      "তরুন-তরুনীদের জন্য উপযুক্ত জন্মনিয়ন্ত্রণ পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা"
+    ), 
+    icon: "fa-hospital", 
+    color: "#10b981"
+  },
+  { 
+    title: yhLang(
+      "Organize community discussions and build prevention systems against child marriage",
+      "‘বাল্যবিবাহ’ নিয়ে কমিউনিটি পর্যায়ে আলোচনা ও প্রতিরোধব্যবস্থা তৈরি করা"
+    ), 
+    icon: "fa-people-group", 
+    color: "#f59e0b"
+  },
+  { 
+    title: yhLang(
+      "Ensure responsible implementation of Child Marriage Restraint Act 2017 and related rules",
+      "বাল্যবিবাহ নিরোধ আইন, ২০১৭ এবং বাল্যবিবাহ নিরোধ বিধিমালা-এর বাস্তব প্রয়োগে সংশ্লিষ্টদের দায়িত্বশীল ভূমিকা নিশ্চিত করা"
+    ), 
+    icon: "fa-scale-balanced", 
+    color: "#d946ef"
+  },
+  { 
+    title: yhLang(
+      "Report incidents to Child Helpline 1098",
+      "বাল্যবিবাহ সম্পর্কে জানতে পারলে চাইল্ড হেল্পলাইন ১০৯৮-এ কল করে রিপোর্ট করা"
+    ), 
+    icon: "fa-phone", 
+    color: "#2563eb"
+  }
+];
+
+              const renderPoints = () => {
+                return preventionPoints.map((point, idx) => {
+                  return `
+                    <div class="ch6l8-point-card" data-aos="fade-up" data-aos-delay="${50 + idx * 20}">
+                      <div class="ch6l8-card-content" style="border-left-color: ${point.color}; box-shadow: inset 4px 0 0 ${point.color}, 0 6px 20px rgba(0, 0, 0, 0.08);">
+                        <div class="ch6l8-icon-box" style="background: linear-gradient(135deg, ${point.color} 0%, ${point.color}cc 100%);">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="ch6l8-text-box">
+                          <h3 class="ch6l8-point-title">${point.title}</h3>
+                        </div>
+                      </div>
+                    </div>
+                  `;
+                }).join("");
+              };
+
+              return `
+                <div class="ch6l8-slide" data-module="6" data-lesson="8">
+                  <section class="ch6l8-introduction" data-aos="fade-up">
+                    <h2 class="ch6l8-main-title">
+                      <i class="fa-solid fa-shield-heart"></i>
+                      ${yhLang("Prevention Strategies", "বাল্যবিবাহ প্রতিরোধে করণীয়")}
+                    </h2>
+                  </section>
+
+                  <section class="ch6l8-points-container" data-aos="fade-up" data-aos-delay="50">
+                    ${renderPoints()}
+                  </section>
+
+                  <section class="ch6l8-info-section" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ch6l8-info-box">
+                        <p class="ch6l8-info-text ch6l8-highlight">
+                          ${yhLang(
+                            "An adult committing child marriage is liable to imprisonment up to 2 years, or a fine up to 100,000 Taka, or both. If the fine is not paid, additional imprisonment of up to 3 months applies.",
+                            "কোনো নারীর ১৮ বৎসর পূর্ণ হবার আগে এবং তার সম্মতি ছাড়া বিয়ে হলে সে মুসলিম বিবাহ বাতিল আইন, ১৯৩৯ অনুযায়ী আদালতে বিয়ে বাতিলের আবেদন করতে পারে যদি-মেয়েটি স্বামীর সাথে দাম্পত্য সম্পর্ক স্থাপন না করে বা তার ১৮ বৎসর বয়সের আগে সম্মতি ছাড়া বিয়ে হবার পর ১৯ বৎসর আসার আগেই বিবাহ বাতিলের আবেদন করতে হবে। বাল্যবিয়ে প্রতিরোধে Child Marriage Restraint Act, ২০১৭ (বাল্যবিবাহ নিরোধ আইন, ২০১৭) এবং Child Marriage Restraint Rules, ২০১৮ (বাল্যবিবাহ নিরোধ বিধিমালা, ২০১৮) এর বাস্তবায়ণ কার্যক্রম চলমান রয়েছে। বাল্যবিবাহ করার শাস্তি : প্রাপ্তবয়স্ক কোনো নারী বা পুরুষ বাল্যবিবাহ করলে এটি একটি অপরাধ এবং এজন্য তিনি অনধিক ২ (দুই) বছর কারাদণ্ড বা অনধিক ১ (এক) লক্ষ টাকা অর্থদণ্ড বা উভয় দণ্ডে দণ্ডনীয় হবেন এবং অর্থদণ্ড অনাদায়ে অনধিক ৩ (তিন) মাস কারাদণ্ডে দণ্ডনীয় হবেন।"
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
         ],
       },
       {
