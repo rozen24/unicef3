@@ -3352,449 +3352,9 @@ const coursesData = [
           "মডিউল-৪: মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
         ),
         lessons: [
+
           {
             id: "ch4-lesson-1",
-            title: yhLang(
-              "Menstrual/menstrual managementt",
-              "মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
-            ),
-            icon: "fa-droplet",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q4a",
-                  question: yhLang(
-                    "ঋতুস্রাব সাধারণত কোন বয়সের মধ্যে শুরু হয়?",
-                    "ঋতুস্রাব সাধারণত কোন বয়সের মধ্যে শুরু হয়?",
-                  ),
-                  options: [
-                    yhLang("৯–১৪ বছর", "৯–১৪ বছর"),
-                    yhLang("১৫–২৫ বছর", "১৫–২৫ বছর"),
-                    yhLang("২৬–৩৫ বছর", "২৬–৩৫ বছর"),
-                    yhLang("৪৫–৫৫ বছর", "৪৫–৫৫ বছর"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const paragraphs = [
-                yhLang(
-                  "Menstruation is a normal, natural process that prepares a person for pregnancy and childbirth. The monthly bleeding through the vagina is called menstruation (periods).",
-                  "মাসিক একটি স্বাভাবিক প্রাকৃতিক প্রক্রিয়া, যার মাধ্যমে একজন নারী গর্ভধারণ/সন্তান জন্মদানের জন্য প্রস্তুত হয়। প্রতিমাসে যোনিপথ দিয়ে মেয়েদের যে রক্তস্রাব হয়, তাকে মাসিক/ঋতুস্রাব বলে।",
-                ),
-                yhLang(
-                  "Menstruation typically begins between ages 9–14 and continues monthly until about 45–55 years.",
-                  "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।",
-                ),
-                yhLang(
-                  "Bleeding usually lasts 1–7 days each month. Flow is often heavier during the first 1–3 days and becomes lighter afterwards.",
-                  "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।",
-                ),
-                yhLang(
-                  "A typical menstrual cycle occurs every 21–35 days.",
-                  "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।",
-                ),
-                yhLang(
-                  "Having periods means the body is maturing and the reproductive system is functioning properly. It is completely normal—not unclean or impure—and there is no reason to isolate someone during this time. Unless there is unusual pain or excessive bleeding, normal daily activities can continue.",
-                  "মাসিক হওয়া মানে দেহ পরিণত হচ্ছে এবং প্রজননতন্ত্র সঠিকভাবে কাজ করছে। এটি একটি সম্পূর্ণ স্বাভাবিক ঘটনা। এটি কোনো অপবিত্রতা বা অপরিচ্ছন্নতা নয় এবং এ সময় কোনো নারীকে আলাদা করে রাখারও কিছু নেই। এ সময় যদি অস্বাভাবিক ব্যথা বা অতিরিক্ত রক্তস্রাব না ঘটে, তবে সে তার স্বাভাবিক কাজ-কর্ম চালিয়ে যেতে পারে।",
-                ),
-              ];
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "Menstrual/menstrual managementt",
-                    "মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
-                  )}</h2>
-
-                  <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
-                    <span class="menstrual-corner-accent" aria-hidden="true"></span>
-                    <span class="menstrual-corner-pill" aria-hidden="true"></span>
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-12">
-                        <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
-                          <img src="img/modu4/masik.png" alt="Menstrual care" class="img-fluid w-100 object-fit-cover img-zoom" />
-                        </figure>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="d-flex flex-column gap-3">
-                          ${paragraphs
-                            .map(
-                              (text, idx) =>
-                                `<p class="mb-0" data-aos="fade-left" data-aos-delay="${80 + idx * 20}">${text}</p>`,
-                            )
-                            .join("")}
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch4-lesson-2",
-            title: yhLang("নারী প্রজননতন্ত্র", "নারী প্রজননতন্ত্র"),
-            icon: "fa-person-dress",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q4b",
-                  question: yhLang(
-                    "জরায়ুর প্রধান কাজ কী?",
-                    "জরায়ুর প্রধান কাজ কী?",
-                  ),
-                  options: [
-                    yhLang("গর্ভধারণ করা", "গর্ভধারণ করা"),
-                    yhLang(
-                      "শ্বাস-প্রশ্বাস নিয়ন্ত্রণ করা",
-                      "শ্বাস-প্রশ্বাস নিয়ন্ত্রণ করা",
-                    ),
-                    yhLang("রক্ত পরিশোধন", "রক্ত পরিশোধন"),
-                    yhLang("হরমোন জমা রাখা", "হরমোন জমা রাখা"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const points = [
-                "ডিম্বাশয়: জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে। প্রত্যেক মাসিক <br> চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।",
-                "জরায়ু: জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়।",
-                "ডিম্ববাহী নালি: জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।",
-                "যোনিপথ: যোনিপথ জরায়ুর ভিতর থেকে শুরু হয়ে শরীরের বাইরে এসে যোনিমুখে শেষ হয়েছে।",
-                "স্তন: স্তন সরাসরি প্রজননতন্ত্রের অংশ না হলেও এটি আনুষঙ্গিক প্রজনন অঙ্গ হিসেবে বিবেচিত হয়, কারণ শিশুর জন্মের পর স্তনেই বুকের দুধ তৈরি হয়।",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "নারী প্রজননতন্ত্র",
-                    "নারী প্রজননতন্ত্র",
-                  )}</h2>
-
-                  <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
-                    <span class="menstrual-corner-accent" aria-hidden="true"></span>
-                    <span class="menstrual-corner-pill" aria-hidden="true"></span>
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-6">
-                        <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
-                          <img src="img/modu4/nari.jpg" alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 object-fit-cover img-zoom" />
-                        </figure>
-                      </div>
-                      <div class="col-lg-6">
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(points)}
-                        </ul>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch4-lesson-3",
-            title: yhLang(
-              "Care During Menstruation",
-              "মাসিক চলাকালীন মেয়েদের করণীয়",
-            ),
-            icon: "fa-heart-circle-check",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q4c",
-                  question: yhLang(
-                    "মাসিকের সময় ন্যাপকিন কতবার বদলানো উচিত?",
-                    "মাসিকের সময় ন্যাপকিন কতবার বদলানো উচিত?",
-                  ),
-                  options: [
-                    yhLang("দিনে অন্তত ৪–৬ বার", "দিনে অন্তত ৪–৬ বার"),
-                    yhLang("দিনে মাত্র ১ বার", "দিনে মাত্র ১ বার"),
-                    yhLang("সপ্তাহে একবার", "সপ্তাহে একবার"),
-                    yhLang("বদলানোর প্রয়োজন নেই", "বদলানোর প্রয়োজন নেই"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const tips = [
-                "মাসিককালীন সময়ে মেয়েদের প্রচুর পরিমাণে বিভিন্ন ধরনের পুষ্টিকর খাবার, শাকসবজি এবং ফলমূল খেতে হবে এবং প্রচুর পরিমাণে পানি পান করতে হবে।",
-                "প্রতিদিন ভালোভাবে গোসল এবং প্রজনন অঙ্গ পানি ও সাবান দিয়ে পরিষ্কার করতে হবে।",
-                "মাসিকের সময় ঘরে তৈরি পরিষ্কার ন্যাপকিন/কাপড় অথবা স্যানিটারি ন্যাপকিন ব্যবহার করতে হবে। রক্তস্রাবের পরিমাণ অনুযায়ী তা দিনে অন্ততপক্ষে ৪ থেকে ৬ বার বদলাতে হবে।",
-                "ব্যবহারের পর স্যানিটারি ন্যাপকিন কাগজে মুড়িয়ে ডাস্টবিনে বা ময়লা ফেলার নির্দিষ্ট স্থানে ফেলতে হবে। কাপড় ব্যবহার করলে ব্যবহার শেষে কাপড়টি সাবান ও পানি দিয়ে ধুতে হবে এবং সূর্যের আলোতে শুকিয়ে পরিষ্কার প্যাকেটে রেখে পরবর্তীতে ব্যবহারের জন্য সংরক্ষণ করতে হবে।",
-                "মাসিকের সময় স্বাভাবিক হাঁটাচলা ও হালকা ব্যায়াম করতে হবে এবং পর্যাপ্ত পরিমাণে ঘুমাতে হবে।",
-                "মাসিক বন্ধ থাকলে, এক মাসে ২–৩ বার মাসিক হলে, প্রচুর রক্তস্রাব হলে, তীব্র ব্যথা হলে বা অস্বাভাবিক কোনো সমস্যা দেখা দিলে চিকিৎসকের পরামর্শ নিতে হবে।",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "মাসিক চলাকালীন মেয়েদের করণীয়",
-                    "মাসিক চলাকালীন মেয়েদের করণীয়",
-                  )}</h2>
-
-                  <section class="menstrual-feature modern-card glass-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="40">
-                    <span class="menstrual-corner-accent" aria-hidden="true"></span>
-                    <span class="menstrual-corner-pill" aria-hidden="true"></span>
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-12">
-                        <figure class="rounded-4 overflow-hidden shadow-sm mb-0">
-                          <img src="img/modu4/masik2.png" alt="মাসিক চলাকালীন করণীয়" class="img-fluid w-100 object-fit-cover img-zoom"/>
-                        </figure>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="menstrual-inline-divider" aria-hidden="true"></div>
-                        <ul class="list-unstyled puberty-list mb-0">
-                          ${renderList(tips)}
-                        </ul>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch4-lesson-4",
-            title: yhLang(
-              "Support Systems for Menstrual Health",
-              "মাসিক ব্যবস্থাপনায় সহযোগিতা",
-            ),
-            icon: "fa-person",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q4d",
-                  question: yhLang(
-                    "স্কুলে মাসিকের সময় জরুরি স্যানিটারি ন্যাপকিন কেন গুরুত্বপূর্ণ?",
-                    "স্কুলে মাসিকের সময় জরুরি স্যানিটারি ন্যাপকিন কেন গুরুত্বপূর্ণ?",
-                  ),
-                  options: [
-                    yhLang(
-                      "প্রস্তুতি ছাড়া শুরু হলে তাৎক্ষণিক সহায়তা দিতে",
-                      "প্রস্তুতি ছাড়া শুরু হলে তাৎক্ষণিক সহায়তা দিতে",
-                    ),
-                    yhLang("শুধু প্রদর্শনের জন্য", "শুধু প্রদর্শনের জন্য"),
-                    yhLang("অপ্রয়োজনীয় ব্যয়", "অপ্রয়োজনীয় ব্যয়"),
-                    yhLang("নিষिद्ध", "নিষিদ্ধ"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const parentPoints = [
-                "তারুণ্যের শুরুতে কিশোরীকে মাসিক ও এর ব্যবস্থাপনা বিষয়ে তথ্য বা শিক্ষা দেওয়া।",
-                "কোনো সমস্যা হলে যেন বাবা-মায়ের সাথে আলোচনা করে—সেভাবে তাকে উৎসাহিত করা।",
-                "ঋতুস্রাবকে ভয় না পেয়ে সহজভাবে নিতে শিক্ষা দেওয়া।",
-                "এই সময়ে স্কুলে যাওয়া, খেলাধুলা করা সহ সব কাজ স্বাভাবিকভাবে করতে উৎসাহ দেওয়া।",
-                "ঋতুস্রাবের সময়ে কিশোরীকে বেশি করে পুষ্টিকর খাবার খেতে উৎসাহিত করা।",
-              ];
-
-              const schoolIntro =
-                "অনেক মেয়েই মাসিকের সময়, বিশেষ করে মাসিকের প্রথম দিনগুলোতে স্কুল/কলেজে যেতে চায় না। প্রতিমাসের এমন অনুপস্থিতি তাদের লেখাপড়া ও ফলাফলের উপর নেতিবাচক প্রভাব ফেলে। ফলাফল খারাপ হওয়ায় তারা পড়াশোনা বন্ধ করে দেয়, আবার অনেকের অভিভাবক এ সময় মেয়েদের বিয়ে দিয়ে দেন। এ অবস্থা থেকে পরিত্রাণ পেতে শিক্ষা প্রতিষ্ঠানের কর্তৃপক্ষকে ঋতুস্রাবের সময় ছাত্রীদের সহায়তা প্রদান করতে হবে। যেমন—";
-
-              const schoolPoints = [
-                "একজন বা দু’জন নারী শিক্ষককে এ বিষয়ে দায়িত্ব দেওয়া যেতে পারে যেন তারা মাসিকের সময়ে ছাত্রীদের ব্যক্তিগত পরিষ্কার-পরিচ্ছন্নতা বিষয়ে তথ্য দিয়ে সাহায্য করতে পারেন।",
-                "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা প্রস্তুতি ছাড়া হঠাৎ করে মাসিক শুরু হয়ে যেতে পারে। সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীকে সাহায্য করতে পারে।",
-                "অনেক মেয়ের মাসিকের সময় তলপেটে তীব্র ব্যথা হয়। তাই স্কুলের ফার্স্ট এইড বক্সে বেদনানাশক ট্যাবলেট রাখা প্রয়োজন।",
-                "মনে রাখতে হবে যে, ঋতুস্রাব একটি স্বাভাবিক শারীরিক প্রক্রিয়া—এ নিয়ে লজ্জা বা সংকোচের কিছু নেই। এ বিষয়টি ছাত্র-ছাত্রী, শিক্ষকসহ সবাইকে সহজভাবে দেখার জন্য এবং সহযোগিতা দেওয়ার জন্য ওরিয়েন্টেশন প্রদান করা প্রয়োজন।",
-              ];
-
-              const essentials = [
-                "ছেলে ও মেয়েদের জন্য পৃথক টয়লেটের ব্যবস্থা করতে হবে",
-                "সার্বক্ষণিক পানির ব্যবস্থা থাকতে হবে",
-                "টয়লেটে পর্যাপ্ত সাবানের ব্যবস্থা রাখতে হবে",
-                "টয়লেটে ঢাকনাযুক্ত বিন/ঝুড়ির ব্যবস্থা রাখতে হবে",
-                "টয়লেট প্রতিদিন পরিষ্কারের জন্য পরিচ্ছন্নতা কর্মীর ব্যবস্থা রাখতে হবে",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "মাসিক ব্যবস্থাপনায় বাবা-মা ও শিক্ষাপ্রতিষ্ঠানের ভূমিকা",
-                    "মাসিক ব্যবস্থাপনায় বাবা-মা ও শিক্ষাপ্রতিষ্ঠানের ভূমিকা",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
-                      "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
-                      "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(parentPoints)}
-                    </ul>
-                  </section>
-
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
-                      "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা",
-                      "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা",
-                    )}</h3>
-                    <p class="text-muted mb-3">${schoolIntro}</p>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(schoolPoints)}
-                    </ul>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="120">
-                    <h3 class="gradient-text d-flex align-items-center gap-2"><span>✅</span>${yhLang(
-                      "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে",
-                      "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে",
-                    )}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(essentials)}
-                    </ul>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch4-lesson-5",
-            title: yhLang(
-              "মাসিকের অস্বাভাবিকতা ও ব্যবস্থাপনা",
-              "মাসিকের অস্বাভাবিকতা ও ব্যবস্থাপনা",
-            ),
-            icon: "fa-heart-pulse",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q4e",
-                  question: yhLang(
-                    "মাসিক বন্ধ থাকলে প্রথমে কী পরীক্ষা করা উচিত?",
-                    "মাসিক বন্ধ থাকলে প্রথমে কী পরীক্ষা করা উচিত?",
-                  ),
-                  options: [
-                    yhLang("গর্ভধারণ পরীক্ষা", "গর্ভধারণ পরীক্ষা"),
-                    yhLang("রক্তচাপ পরীক্ষা", "রক্তচাপ পরীক্ষা"),
-                    yhLang("চোখের পরীক্ষা", "চোখের পরীক্ষা"),
-                    yhLang("শ্রবণ পরীক্ষা", "শ্রবণ পরীক্ষা"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const warningPoints = [
-                "মাসিক বন্ধ হয়ে গেছে অথবা এক মাসে ২/৩ বার মাসিক হচ্ছে, অর্থাৎ নিয়মিত মাসিক হচ্ছে না।",
-                "মাসিকের সময় অতিরিক্ত রক্তক্ষরণ হওয়া।",
-                "দুইটি মাসিকের মধ্যবর্তী সময়ে ফোঁটায় ফোঁটায় রক্ত যাওয়া।",
-                "দুর্গন্ধযুক্ত রক্ত যাওয়া বা মাসিকের সময় জ্বর থাকা।",
-                "মাসিকের সময় তলপেটে অস্বাভাবিক ব্যথা হওয়া।",
-              ];
-
-              const managementPoints = [
-                "মাসিক বন্ধ হয়ে যাওয়া গর্ভধারণের একটি লক্ষণ। সেক্ষেত্রে উপযুক্ত পরীক্ষা করে গর্ভধারণ নিশ্চিত হলে, স্বাস্থ্যসেবা প্রদানকারীর নিকট থেকে গর্ভজনিত সেবা গ্রহণ করতে হবে। তবে মনে রাখতে হবে, মাসিক বন্ধ মানেই নিশ্চিত গর্ভধারণ নয়—তাই অবশ্যই গর্ভধারণ পরীক্ষা (প্রীয়ড টেস্ট/প্রেগনেন্সি টেস্ট) করতে হবে।",
-                "অনিয়মিত মাসিক, মাসিকের সময় অতিরিক্ত রক্ত যাওয়া, অথবা অতিরিক্ত ব্যথা হওয়া—এসব প্রজননতন্ত্র বা হরমোনজনিত সমস্যার লক্ষণ হতে পারে। তাই মেয়েদের বিশেষজ্ঞ চিকিৎসকের কাছে রেফার করতে হবে।",
-                "মাসিকের সময় অতিরিক্ত ব্যথা হলে ব্যথানাশক ওষুধ (ডাক্তারের পরামর্শ অনুযায়ী) খেতে হবে।",
-                "চিকিৎসার পাশাপাশি মেয়েদের পুষ্টিকর খাবার খেতে, স্কুলে যেতে, এবং হালকা ব্যায়াম ও হাঁটাচলা করতে উৎসাহিত করতে হবে।",
-              ];
-
-              const renderList = (items) =>
-                items
-                  .map(
-                    (text, idx) => `
-                      <li data-aos="fade-left" data-aos-delay="${80 + idx * 20}">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>${text}</span>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "মাসিকের অস্বাভাবিকতা ও এর ব্যবস্থাপনা",
-                    "মাসিকের অস্বাভাবিকতা ও এর ব্যবস্থাপনা",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="gradient-text">${yhLang(
-                      "মাসিকের অস্বাভাবিকতা",
-                      "মাসিকের অস্বাভাবিকতা",
-                    )}</h3>
-                    <p class="text-muted mb-3">${yhLang(
-                      "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।",
-                      "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।",
-                    )}</p>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(warningPoints)}
-                    </ul>
-                  </section>
-
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text">${yhLang("ব্যবস্থাপনা", "ব্যবস্থাপনা")}</h3>
-                    <ul class="list-unstyled puberty-list mb-0">
-                      ${renderList(managementPoints)}
-                    </ul>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch4-lesson-6",
             title: yhLang(
               "Female Reproductive System",
               "নারী প্রজননতন্ত্র",
@@ -3926,7 +3486,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch4-lesson-7",
+            id: "ch4-lesson-2",
             title: yhLang(
               "Menstrual Management",
               "মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
@@ -4046,7 +3606,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch4-lesson-8",
+            id: "ch4-lesson-3",
             title: yhLang(
               "What to Do During Menstruation",
               "মাসিক চলাকালীন মেয়েদের করণীয়",
@@ -4136,7 +3696,7 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide m4l8-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-hand-holding-heart"></i> ${yhLang(
                     "What to Do During Menstruation",
                     "মাসিক চলাকালীন মেয়েদের করণীয়",
                   )}</h2>
@@ -4162,7 +3722,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch4-lesson-9",
+            id: "ch4-lesson-4",
             title: yhLang(
               "Roles in Menstrual Management",
               "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
@@ -4342,7 +3902,7 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide m4l9-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-handshake"></i> ${yhLang(
                     "Roles in Menstrual Management",
                     "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
                   )}</h2>
@@ -4394,7 +3954,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch4-lesson-10",
+            id: "ch4-lesson-5",
             title: yhLang(
               "Menstrual Abnormalities",
               "মাসিকের অস্বাভাবিকতা",
@@ -4425,65 +3985,93 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const abnormalityPoints = [
-                {
-                  text: "মাসিক বন্ধ হয়ে গেছে অথবা এক মাসে ২/৩ বার মাসিক হচ্ছে, অর্থাৎ নিয়মিত মাসিক হচ্ছে না।",
-                  icon: "fa-calendar-xmark",
-                  color: "#dc2626",
-                  bgColor: "rgba(220, 38, 38, 0.12)",
-                },
-                {
-                  text: "মাসিকের সময় অতিরিক্ত রক্তক্ষরণ হওয়া।",
-                  icon: "fa-droplets",
-                  color: "#ef4444",
-                  bgColor: "rgba(239, 68, 68, 0.12)",
-                },
-                {
-                  text: "দুইটি মাসিকের মধ্যবর্তী সময়ে ফোঁটায় ফোঁটায় রক্ত যাওয়া।",
-                  icon: "fa-droplet",
-                  color: "#f97316",
-                  bgColor: "rgba(249, 115, 22, 0.12)",
-                },
-                {
-                  text: "দুর্গন্ধযুক্ত রক্ত যাওয়া বা মাসিকের সময় জ্বর থাকা।",
-                  icon: "fa-virus",
-                  color: "#9333ea",
-                  bgColor: "rgba(147, 51, 234, 0.12)",
-                },
-                {
-                  text: "মাসিকের সময় তলপেটে অস্বাভাবিক ব্যথা হওয়া।",
-                  icon: "fa-heart-crack",
-                  color: "#ec4899",
-                  bgColor: "rgba(236, 72, 153, 0.12)",
-                },
-              ];
+            const abnormalityPoints = [
+  {
+    text: yhLang(
+      "Menstruation has stopped or occurs 2–3 times a month, meaning it is irregular.",
+      "মাসিক বন্ধ হয়ে গেছে অথবা এক মাসে ২/৩ বার মাসিক হচ্ছে, অর্থাৎ নিয়মিত মাসিক হচ্ছে না।"
+    ),
+    icon: "fa-calendar-xmark",
+    color: "#dc2626",
+    bgColor: "rgba(220, 38, 38, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Excessive bleeding during menstruation.",
+      "মাসিকের সময় অতিরিক্ত রক্তক্ষরণ হওয়া।"
+    ),
+    icon: "fa-droplets",
+    color: "#ef4444",
+    bgColor: "rgba(239, 68, 68, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Spotting or light bleeding between two menstrual cycles.",
+      "দুইটি মাসিকের মধ্যবর্তী সময়ে ফোঁটায় ফোঁটায় রক্ত যাওয়া।"
+    ),
+    icon: "fa-droplet",
+    color: "#f97316",
+    bgColor: "rgba(249, 115, 22, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Foul-smelling discharge or fever during menstruation.",
+      "দুর্গন্ধযুক্ত রক্ত যাওয়া বা মাসিকের সময় জ্বর থাকা।"
+    ),
+    icon: "fa-virus",
+    color: "#9333ea",
+    bgColor: "rgba(147, 51, 234, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Severe or unusual lower abdominal pain during menstruation.",
+      "মাসিকের সময় তলপেটে অস্বাভাবিক ব্যথা হওয়া।"
+    ),
+    icon: "fa-heart-crack",
+    color: "#ec4899",
+    bgColor: "rgba(236, 72, 153, 0.12)",
+  },
+];
+
 
               const managementPoints = [
-                {
-                  text: "মাসিক বন্ধ হয়ে যাওয়া গর্ভধারণের একটি লক্ষণ। সেক্ষেত্রে উপযুক্ত পরীক্ষা করে গর্ভধারণ নিশ্চিত হলে, স্বাস্থ্যসেবা প্রদানকারীর নিকট থেকে গর্ভজনিত সেবা গ্রহণ করতে হবে। তবে মনে রাখতে হবে, মাসিক বন্ধ মানেই নিশ্চিত গর্ভধারণ নয়—তাই অবশ্যই গর্ভধারণ পরীক্ষা (প্রীয়ড টেস্ট/প্রেগনেন্সি টেস্ট) করতে হবে।",
-                  icon: "fa-flask-vial",
-                  color: "#3b82f6",
-                  bgColor: "rgba(59, 130, 246, 0.12)",
-                },
-                {
-                  text: "এছাড়াও অনিয়মিত মাসিক, মাসিকের সময় অতিরিক্ত রক্ত যাওয়া, অথবা অতিরিক্ত ব্যথা হওয়া—এসব প্রজননতন্ত্র বা হরমোনজনিত সমস্যার লক্ষণ হতে পারে। তাই মেয়েদের বিশেষজ্ঞ চিকিৎসকের কাছে রেফার করতে হবে।",
-                  icon: "fa-hospital",
-                  color: "#0891b2",
-                  bgColor: "rgba(8, 145, 178, 0.12)",
-                },
-                {
-                  text: "মাসিকের সময় অতিরিক্ত ব্যথা হলে ব্যথানাশক ওষুধ (ডাক্তারের পরামর্শ অনুযায়ী) খেতে হবে।",
-                  icon: "fa-pill",
-                  color: "#10b981",
-                  bgColor: "rgba(16, 185, 129, 0.12)",
-                },
-                {
-                  text: "চিকিৎসার পাশাপাশি মেয়েদের পুষ্টিকর খাবার খেতে, স্কুলে যেতে, এবং হালকা ব্যায়াম ও হাঁটাচলা করতে উৎসাহিত করতে হবে।",
-                  icon: "fa-heart-pulse",
-                  color: "#f59e0b",
-                  bgColor: "rgba(245, 158, 11, 0.12)",
-                },
-              ];
+  {
+    text: yhLang(
+      "Missed periods can be a sign of pregnancy. Proper testing should be done, and if confirmed, pregnancy care should be taken from a healthcare provider. However, missed periods do not always mean pregnancy—so a pregnancy test is necessary.",
+      "মাসিক বন্ধ হয়ে যাওয়া গর্ভধারণের একটি লক্ষণ। সেক্ষেত্রে উপযুক্ত পরীক্ষা করে গর্ভধারণ নিশ্চিত হলে, স্বাস্থ্যসেবা প্রদানকারীর নিকট থেকে গর্ভজনিত সেবা গ্রহণ করতে হবে। তবে মনে রাখতে হবে, মাসিক বন্ধ মানেই নিশ্চিত গর্ভধারণ নয়—তাই অবশ্যই গর্ভধারণ পরীক্ষা (প্রীয়ড টেস্ট/প্রেগনেন্সি টেস্ট) করতে হবে।"
+    ),
+    icon: "fa-flask-vial",
+    color: "#3b82f6",
+    bgColor: "rgba(59, 130, 246, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Irregular periods, excessive bleeding, or severe pain may indicate reproductive or hormonal problems. A specialist doctor should be consulted.",
+      "এছাড়াও অনিয়মিত মাসিক, মাসিকের সময় অতিরিক্ত রক্ত যাওয়া, অথবা অতিরিক্ত ব্যথা হওয়া—এসব প্রজননতন্ত্র বা হরমোনজনিত সমস্যার লক্ষণ হতে পারে। তাই মেয়েদের বিশেষজ্ঞ চিকিৎসকের কাছে রেফার করতে হবে।"
+    ),
+    icon: "fa-hospital",
+    color: "#0891b2",
+    bgColor: "rgba(8, 145, 178, 0.12)",
+  },
+  {
+    text: yhLang(
+      "If there is severe pain during menstruation, pain relief medicine should be taken as advised by a doctor.",
+      "মাসিকের সময় অতিরিক্ত ব্যথা হলে ব্যথানাশক ওষুধ (ডাক্তারের পরামর্শ অনুযায়ী) খেতে হবে।"
+    ),
+    icon: "fa-pill",
+    color: "#10b981",
+    bgColor: "rgba(16, 185, 129, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Along with treatment, girls should be encouraged to eat nutritious food, attend school, and engage in light exercise and walking.",
+      "চিকিৎসার পাশাপাশি মেয়েদের পুষ্টিকর খাবার খেতে, স্কুলে যেতে, এবং হালকা ব্যায়াম ও হাঁটাচলা করতে উৎসাহিত করতে হবে।"
+    ),
+    icon: "fa-heart-pulse",
+    color: "#f59e0b",
+    bgColor: "rgba(245, 158, 11, 0.12)",
+  },
+];
 
               const renderAbnormalityPoints = () =>
                 abnormalityPoints
@@ -4523,7 +4111,7 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide m4l10-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang(
                     "Menstrual Abnormalities",
                     "মাসিকের অস্বাভাবিকতা",
                   )}</h2>
