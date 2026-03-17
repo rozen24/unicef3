@@ -5799,3 +5799,1343 @@
     width: 35%;
   }
 }
+
+/* ===== MODULE 7 LESSON 3: ADOLESCENT FAMILY PLANNING ===== */
+
+/* Base Styles */
+.ch7l3-slide {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ch7l3-introduction {
+  width: 100%;
+}
+
+.ch7l3-main-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.4;
+}
+
+.ch7l3-main-title i {
+  font-size: 1.8rem;
+  color: #a855f7;
+}
+
+.ch7l3-intro-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
+
+/* Content Container - Two Column Layout */
+.ch7l3-content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Left Content: Methods Table */
+.ch7l3-left-content {
+  width: 100%;
+}
+
+.ch7l3-methods-box {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.06) 0%, rgba(147, 51, 234, 0.03) 100%);
+  border-left: 5px solid #a855f7;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 18px rgba(168, 85, 247, 0.1);
+}
+
+.ch7l3-methods-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ch7l3-methods-title i {
+  font-size: 1.5rem;
+  color: #a855f7;
+}
+
+.ch7l3-methods-description {
+  font-size: 0.90rem;
+  line-height: 1.5;
+  color: #374151;
+  margin: 0 0 14px 0;
+}
+
+.ch7l3-methods-table {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Category Headers */
+.ch7l3-category-header {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ch7l3-permanent {
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.ch7l3-permanent i {
+  font-size: 1.3rem;
+}
+
+.ch7l3-temporary {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.ch7l3-temporary i {
+  font-size: 1.3rem;
+}
+
+/* Subcategory Headers */
+.ch7l3-subcategory {
+  margin-bottom: 12px;
+}
+
+.ch7l3-subcategory-header {
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.ch7l3-shortterm {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.25);
+}
+
+.ch7l3-longterm {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.25);
+}
+
+/* Methods Grid */
+.ch7l3-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Method Item */
+.ch7l3-method-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: white;
+  border: 2px solid transparent;
+}
+
+.ch7l3-method-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Method Types */
+.ch7l3-method-type-1 {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(236, 72, 153, 0.04) 100%);
+  border: 2px solid #ec4899;
+  box-shadow: 0 4px 10px rgba(236, 72, 153, 0.12);
+}
+
+.ch7l3-method-type-1:hover {
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.2);
+}
+
+.ch7l3-method-type-2 {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(245, 158, 11, 0.04) 100%);
+  border: 2px solid #f59e0b;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.12);
+}
+
+.ch7l3-method-type-2:hover {
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.2);
+}
+
+.ch7l3-method-type-3 {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0.04) 100%);
+  border: 2px solid #10b981;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.12);
+}
+
+.ch7l3-method-type-3:hover {
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.2);
+}
+
+.ch7l3-method-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.ch7l3-method-type-1 .ch7l3-method-icon {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+}
+
+.ch7l3-method-type-2 .ch7l3-method-icon {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.ch7l3-method-type-3 .ch7l3-method-icon {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.ch7l3-method-item:hover .ch7l3-method-icon {
+  transform: rotate(12deg) scale(1.1);
+}
+
+.ch7l3-method-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ch7l3-method-name {
+  font-size: 0.90rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.ch7l3-method-label {
+  font-size: 0.80rem;
+  color: #666;
+  margin: 2px 0 0 0;
+  line-height: 1.2;
+}
+
+/* Right Content: Image */
+.ch7l3-right-content {
+  width: 100%;
+}
+
+.ch7l3-image-container {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.15);
+}
+
+.ch7l3-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Desktop: 1200px and above */
+@media (min-width: 1200px) {
+  .ch7l3-slide {
+    padding: 14px 16px;
+    gap: 20px;
+  }
+
+  .ch7l3-main-title {
+    font-size: 1.6rem;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .ch7l3-main-title i {
+    font-size: 1.9rem;
+  }
+
+  .ch7l3-intro-text {
+    font-size: 0.98rem;
+  }
+
+  .ch7l3-methods-box {
+    padding: 16px 18px;
+  }
+
+  .ch7l3-methods-title {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+
+  .ch7l3-methods-title i {
+    font-size: 1.6rem;
+  }
+
+  .ch7l3-methods-description {
+    font-size: 0.94rem;
+  }
+
+  .ch7l3-methods-table {
+    gap: 16px;
+  }
+
+  .ch7l3-methods-grid {
+    gap: 12px;
+  }
+
+  .ch7l3-method-item {
+    padding: 12px 14px;
+  }
+
+  .ch7l3-method-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .ch7l3-method-name {
+    font-size: 0.94rem;
+  }
+}
+
+/* Tablet: 1024px - 1199px */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .ch7l3-slide {
+    padding: 13px 15px;
+    gap: 18px;
+  }
+
+  .ch7l3-main-title {
+    font-size: 1.48rem;
+    margin-bottom: 13px;
+  }
+
+  .ch7l3-methods-box {
+    padding: 14px 16px;
+  }
+
+  .ch7l3-methods-title {
+    font-size: 1.32rem;
+    margin-bottom: 11px;
+  }
+
+  .ch7l3-methods-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+  }
+
+  .ch7l3-method-item {
+    padding: 11px 13px;
+  }
+
+  .ch7l3-method-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  .ch7l3-method-name {
+    font-size: 0.91rem;
+  }
+}
+
+/* Mobile: 768px - 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .ch7l3-slide {
+    padding: 12px 14px;
+    gap: 14px;
+  }
+
+  .ch7l3-content-container {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .ch7l3-main-title {
+    font-size: 1.36rem;
+    margin-bottom: 11px;
+  }
+
+  .ch7l3-intro-text {
+    font-size: 0.90rem;
+  }
+
+  .ch7l3-methods-box {
+    padding: 12px 14px;
+  }
+
+  .ch7l3-methods-title {
+    font-size: 1.20rem;
+    margin-bottom: 10px;
+  }
+
+  .ch7l3-methods-description {
+    font-size: 0.88rem;
+  }
+
+  .ch7l3-methods-table {
+    gap: 12px;
+  }
+
+  .ch7l3-category-header {
+    font-size: 1.04rem;
+    padding: 9px 11px;
+  }
+
+  .ch7l3-subcategory-header {
+    font-size: 0.92rem;
+    padding: 7px 9px;
+  }
+
+  .ch7l3-methods-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 9px;
+  }
+
+  .ch7l3-method-item {
+    padding: 10px 12px;
+  }
+
+  .ch7l3-method-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .ch7l3-method-name {
+    font-size: 0.88rem;
+  }
+}
+
+/* Small Mobile: up to 767px */
+@media (max-width: 767px) {
+  .ch7l3-slide {
+    padding: 10px 12px;
+    gap: 12px;
+  }
+
+  .ch7l3-content-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ch7l3-main-title {
+    font-size: 1.24rem;
+    margin-bottom: 10px;
+  }
+
+  .ch7l3-main-title i {
+    font-size: 1.6rem;
+  }
+
+  .ch7l3-intro-text {
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .ch7l3-methods-box {
+    padding: 11px 13px;
+  }
+
+  .ch7l3-methods-title {
+    font-size: 1.12rem;
+    margin-bottom: 9px;
+  }
+
+  .ch7l3-methods-description {
+    font-size: 0.84rem;
+  }
+
+  .ch7l3-methods-table {
+    gap: 10px;
+  }
+
+  .ch7l3-category-header {
+    font-size: 1rem;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+  }
+
+  .ch7l3-subcategory-header {
+    font-size: 0.88rem;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+  }
+
+  .ch7l3-methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .ch7l3-method-item {
+    padding: 9px 11px;
+  }
+
+  .ch7l3-method-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .ch7l3-method-name {
+    font-size: 0.85rem;
+  }
+
+  .ch7l3-method-label {
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small Mobile: up to 479px */
+@media (max-width: 479px) {
+  .ch7l3-slide {
+    padding: 9px 11px;
+    gap: 10px;
+  }
+
+  .ch7l3-content-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .ch7l3-main-title {
+    font-size: 1.12rem;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .ch7l3-main-title i {
+    font-size: 1.4rem;
+  }
+
+  .ch7l3-intro-text {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .ch7l3-methods-box {
+    padding: 10px 12px;
+    border-left-width: 3px;
+  }
+
+  .ch7l3-methods-title {
+    font-size: 1.04rem;
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+
+  .ch7l3-methods-title i {
+    font-size: 1.3rem;
+  }
+
+  .ch7l3-methods-description {
+    font-size: 0.80rem;
+    margin-bottom: 10px;
+  }
+
+  .ch7l3-methods-table {
+    gap: 8px;
+  }
+
+  .ch7l3-category-header {
+    font-size: 0.96rem;
+    padding: 7px 9px;
+    margin-bottom: 7px;
+  }
+
+  .ch7l3-subcategory-header {
+    font-size: 0.84rem;
+    padding: 6px 7px;
+    margin-bottom: 6px;
+  }
+
+  .ch7l3-methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+  }
+
+  .ch7l3-method-item {
+    padding: 8px 9px;
+  }
+
+  .ch7l3-method-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .ch7l3-method-name {
+    font-size: 0.82rem;
+  }
+
+  .ch7l3-method-label {
+    font-size: 0.72rem;
+  }
+
+  .ch7l3-image-container {
+    border-radius: 12px;
+  }
+}
+
+/* ===== MODULE 7 LESSON 4: FAMILY PLANNING METHODS COMPARISON ===== */
+
+/* Base Styles */
+.ch7l4-slide {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ch7l4-introduction {
+  width: 100%;
+}
+
+.ch7l4-main-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.4;
+}
+
+.ch7l4-main-title i {
+  font-size: 1.8rem;
+  color: #6366f1;
+}
+
+/* Card Styles */
+.ch7l4-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(79, 70, 229, 0.03) 100%);
+  border-left: 5px solid #6366f1;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.1);
+  overflow: hidden;
+}
+
+.ch7l4-card-header {
+  margin-bottom: 14px;
+}
+
+.ch7l4-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ch7l4-card-title i {
+  font-size: 1.5rem;
+  color: #6366f1;
+}
+
+.ch7l4-card-subtitle {
+  font-size: 0.90rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Table Wrapper */
+.ch7l4-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Table Styles - Availability Table */
+.ch7l4-availability-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.ch7l4-table-head {
+  background: linear-gradient(90deg, #f0f4ff 0%, #fafafe 100%);
+}
+
+.ch7l4-table-head tr {
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.ch7l4-table-head th {
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.ch7l4-label-header {
+  text-align: left;
+  padding-left: 14px;
+  min-width: 200px;
+}
+
+.ch7l4-method-col {
+  min-width: 100px;
+}
+
+.ch7l4-method-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ch7l4-method-badge i {
+  font-size: 1rem;
+}
+
+.ch7l4-table-body tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.ch7l4-table-body tr:hover {
+  background: linear-gradient(90deg, #f9f5ff 0%, #f5f3ff 100%);
+}
+
+.ch7l4-label-cell {
+  padding: 12px 14px;
+  text-align: left;
+  background: linear-gradient(90deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.ch7l4-label-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 4px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid;
+  border-color: transparent;
+}
+
+.ch7l4-label-badge i {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.ch7l4-check-cell {
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: all 0.2s ease;
+}
+
+.ch7l4-available {
+  color: #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0.04) 100%);
+}
+
+.ch7l4-available:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.08) 100%);
+}
+
+.ch7l4-unavailable {
+  background: linear-gradient(135deg, rgba(209, 213, 219, 0.1) 0%, rgba(209, 213, 219, 0.05) 100%);
+}
+
+/* Usage Table Styles */
+.ch7l4-usage-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.ch7l4-usage-row {
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.ch7l4-usage-row:hover {
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.04) 0%, rgba(99, 102, 241, 0.02) 100%);
+}
+
+.ch7l4-header-method {
+  min-width: 140px;
+  text-align: left;
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 0.90rem;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, #f0f4ff 0%, #fafafe 100%);
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.ch7l4-header-usage {
+  min-width: 280px;
+  text-align: left;
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 0.90rem;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, #f0f4ff 0%, #fafafe 100%);
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.ch7l4-header-duration {
+  min-width: 140px;
+  text-align: center;
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 0.90rem;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, #f0f4ff 0%, #fafafe 100%);
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.ch7l4-method-cell {
+  padding: 4px 20px;
+  text-align: left;
+  background: linear-gradient(90deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.ch7l4-method-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ch7l4-method-tag i {
+  font-size: 1rem;
+}
+
+.ch7l4-usage-cell {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 0.90rem;
+  color: #374151;
+}
+
+.ch7l4-usage-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ch7l4-usage-content i {
+  color: #6366f1;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.ch7l4-duration-cell {
+  padding: 4p 14px;
+  text-align: center;
+}
+
+.ch7l4-duration-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #0c4a6e;
+}
+
+.ch7l4-permanent {
+  background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%) !important;
+  color: #7c2d12 !important;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Desktop: 1200px and above */
+@media (min-width: 1200px) {
+  .ch7l4-slide {
+    gap: 4px;
+  }
+
+  .ch7l4-main-title {
+    font-size: 1.6rem;
+    gap: 14px;
+  }
+
+  .ch7l4-main-title i {
+    font-size: 1.9rem;
+  }
+
+  .ch7l4-card {
+    padding: x 18px;
+  }
+
+  .ch7l4-card-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    gap: 12px;
+  }
+
+  .ch7l4-card-title i {
+    font-size: 1.6rem;
+  }
+
+  .ch7l4-table-head th {
+    padding: 14px 12px;
+    font-size: 0.91rem;
+  }
+
+  .ch7l4-check-cell {
+    padding: 14px 12px;
+  }
+
+  .ch7l4-label-cell {
+    padding: 5px 6px;
+  }
+
+  .ch7l4-method-cell {
+    padding: 4px 20px;
+  }
+
+  .ch7l4-usage-cell {
+    padding: 14px 16px;
+    font-size: 0.93rem;
+  }
+
+  .ch7l4-duration-cell {
+    padding: 4px 16px;
+  }
+}
+
+/* Tablet: 1024px - 1199px */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .ch7l4-slide {
+    gap: 4px;
+  }
+
+  .ch7l4-main-title {
+    font-size: 1.48rem;
+  }
+
+  .ch7l4-card {
+    padding: 14px 16px;
+  }
+
+  .ch7l4-card-title {
+    font-size: 1.32rem;
+    margin-bottom: 9px;
+  }
+
+  .ch7l4-table-head th {
+    padding: 11px 10px;
+    font-size: 0.86rem;
+  }
+
+  .ch7l4-check-cell {
+    padding: 11px 9px;
+    font-size: 1.2rem;
+  }
+
+  .ch7l4-label-cell {
+    padding: 11px 12px;
+  }
+
+  .ch7l4-method-cell {
+    padding: 4px 20px;
+  }
+
+  .ch7l4-usage-cell {
+    padding: 11px 12px;
+    font-size: 0.88rem;
+  }
+
+  .ch7l4-duration-cell {
+    padding: 4px 16px;
+  }
+
+  .ch7l4-label-header {
+    min-width: 160px;
+  }
+
+  .ch7l4-method-col {
+    min-width: 80px;
+  }
+
+  .ch7l4-header-usage {
+    min-width: 200px;
+  }
+}
+
+/* Mobile: 768px - 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .ch7l4-slide {
+    gap: 4px;
+  }
+
+  .ch7l4-main-title {
+    font-size: 1.36rem;
+  }
+
+  .ch7l4-card {
+    padding: 12px 14px;
+  }
+
+  .ch7l4-card-title {
+    font-size: 1.20rem;
+    margin-bottom: 8px;
+  }
+
+  .ch7l4-card-subtitle {
+    font-size: 0.84rem;
+  }
+
+  .ch7l4-table-head th {
+    padding: 10px 8px;
+    font-size: 0.80rem;
+  }
+
+  .ch7l4-method-badge {
+    padding: 5px 8px;
+    font-size: 0.78rem;
+  }
+
+  .ch7l4-check-cell {
+    padding: 10px 8px;
+    font-size: 1.1rem;
+  }
+
+  .ch7l4-label-cell {
+    padding: 10px 10px;
+  }
+
+  .ch7l4-label-badge {
+    padding: 7px 10px;
+    font-size: 0.84rem;
+  }
+
+  .ch7l4-method-cell {
+    padding: 4px 20px;
+  }
+
+  .ch7l4-method-tag {
+    padding: 6px 10px;
+    font-size: 0.82rem;
+  }
+
+  .ch7l4-usage-cell {
+    padding: 10px 10px;
+    font-size: 0.84rem;
+  }
+
+  .ch7l4-usage-content {
+    gap: 6px;
+  }
+
+  .ch7l4-duration-cell {
+    padding: 10px 10px;
+  }
+
+  .ch7l4-duration-badge {
+    padding: 6px 10px;
+    font-size: 0.80rem;
+  }
+
+  .ch7l4-label-header {
+    min-width: 130px;
+  }
+
+  .ch7l4-method-col {
+    min-width: 70px;
+  }
+
+  .ch7l4-header-usage {
+    min-width: 150px;
+  }
+}
+
+/* Small Mobile: up to 767px */
+@media (max-width: 767px) {
+  .ch7l4-slide {
+    gap: 4px;
+  }
+
+  .ch7l4-main-title {
+    font-size: 1.24rem;
+  }
+
+  .ch7l4-main-title i {
+    font-size: 1.6rem;
+  }
+
+  .ch7l4-card {
+    padding: 11px 13px;
+    border-left-width: 4px;
+  }
+
+  .ch7l4-card-title {
+    font-size: 1.12rem;
+    margin-bottom: 7px;
+    gap: 9px;
+  }
+
+  .ch7l4-card-title i {
+    font-size: 1.4rem;
+  }
+
+  .ch7l4-card-subtitle {
+    font-size: 0.81rem;
+  }
+
+  .ch7l4-table-wrapper {
+    font-size: 0.78rem;
+  }
+
+  .ch7l4-table-head th {
+    padding: 8px 6px;
+    font-size: 0.75rem;
+  }
+
+  .ch7l4-method-badge {
+    padding: 4px 6px;
+    font-size: 0.72rem;
+  }
+
+  .ch7l4-method-badge i {
+    font-size: 0.9rem;
+  }
+
+  .ch7l4-check-cell {
+    padding: 8px 6px;
+    font-size: 1rem;
+  }
+
+  .ch7l4-label-cell {
+    padding: 8px 8px;
+  }
+
+  .ch7l4-label-badge {
+    padding: 6px 8px;
+    font-size: 0.80rem;
+    gap: 7px;
+  }
+
+  .ch7l4-label-badge i {
+    font-size: 1rem;
+  }
+
+  .ch7l4-method-cell {
+    padding: 4px 20px;
+  }
+
+  .ch7l4-method-tag {
+    padding: 5px 8px;
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+
+  .ch7l4-method-tag i {
+    font-size: 0.9rem;
+  }
+
+  .ch7l4-usage-cell {
+    padding: 8px 8px;
+    font-size: 0.80rem;
+  }
+
+  .ch7l4-usage-content {
+    gap: 5px;
+  }
+
+  .ch7l4-usage-content i {
+    font-size: 0.75rem;
+  }
+
+  .ch7l4-duration-cell {
+    padding: 8px 8px;
+  }
+
+  .ch7l4-duration-badge {
+    padding: 5px 8px;
+    font-size: 0.76rem;
+  }
+
+  .ch7l4-label-header {
+    min-width: 110px;
+  }
+
+  .ch7l4-method-col {
+    min-width: 60px;
+  }
+
+  .ch7l4-header-usage {
+    min-width: 120px;
+  }
+}
+
+/* Extra Small Mobile: up to 479px */
+@media (max-width: 479px) {
+  .ch7l4-slide {
+    gap: 4px;
+  }
+
+  .ch7l4-main-title {
+    font-size: 1.12rem;
+    gap: 8px;
+  }
+
+  .ch7l4-main-title i {
+    font-size: 1.4rem;
+  }
+
+  .ch7l4-card {
+    padding: 10px 12px;
+    border-left-width: 3px;
+  }
+
+  .ch7l4-card-title {
+    font-size: 1.04rem;
+    margin-bottom: 6px;
+    gap: 8px;
+  }
+
+  .ch7l4-card-title i {
+    font-size: 1.3rem;
+  }
+
+  .ch7l4-card-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .ch7l4-table-wrapper {
+    font-size: 0.70rem;
+  }
+
+  .ch7l4-table-head th {
+    padding: 6px 4px;
+    font-size: 0.70rem;
+  }
+
+  .ch7l4-method-badge {
+    padding: 3px 5px;
+    font-size: 0.66rem;
+  }
+
+  .ch7l4-method-badge i {
+    font-size: 0.8rem;
+  }
+
+  .ch7l4-check-cell {
+    padding: 6px 4px;
+    font-size: 0.95rem;
+  }
+
+  .ch7l4-label-cell {
+    padding: 7px 7px;
+  }
+
+  .ch7l4-label-badge {
+    padding: 5px 7px;
+    font-size: 0.76rem;
+    gap: 6px;
+  }
+
+  .ch7l4-label-badge i {
+    font-size: 0.95rem;
+  }
+
+  .ch7l4-method-cell {
+    padding: 7px 7px;
+  }
+
+  .ch7l4-method-tag {
+    padding: 4px 6px;
+    font-size: 0.72rem;
+    gap: 5px;
+  }
+
+  .ch7l4-method-tag i {
+    font-size: 0.8rem;
+  }
+
+  .ch7l4-usage-cell {
+    padding: 7px 7px;
+    font-size: 0.76rem;
+  }
+
+  .ch7l4-usage-content {
+    gap: 4px;
+  }
+
+  .ch7l4-usage-content i {
+    font-size: 0.70rem;
+  }
+
+  .ch7l4-duration-cell {
+    padding: 7px 7px;
+  }
+
+  .ch7l4-duration-badge {
+    padding: 4px 6px;
+    font-size: 0.72rem;
+  }
+
+  .ch7l4-label-header {
+    min-width: 90px;
+  }
+
+  .ch7l4-method-col {
+    min-width: 50px;
+  }
+
+  .ch7l4-header-usage {
+    min-width: 100px;
+  }
+}

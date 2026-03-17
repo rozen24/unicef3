@@ -4464,171 +4464,168 @@ const coursesData = [
         lessons: [
           {
             id: "ch7-lesson-1",
-            title: yhLang(
-              "তারুন্যকালীনপরিবার পরিকল্পনা",
-              "তারুন্যকালীনপরিবার পরিকল্পনা",
-            ),
-            icon: "fa-person",
-            gradientClass: "bg-gradient-blue",
+            title: yhLang("Adolescent Family Planning", "কৈশোরকালীন পরিবার পরিকল্পনা"),
+            icon: "fa-people-group",
+            gradientClass: "bg-gradient-purple",
             audioFile: "",
             quiz: {
               passingScore: 60,
               questions: [
                 {
-                  id: "q7a",
+                  id: "q7c",
                   question: yhLang(
-                    "পরিবার পরিকল্পনা বলতে কী বোঝায়?",
-                    "পরিবার পরিকল্পনা বলতে কী বোঝায়?",
+                    "Which family planning methods are permanent?",
+                    "কোন পরিবার পরিকল্পনা পদ্ধতিগুলি স্থায়ী?"
                   ),
                   options: [
                     yhLang(
-                      "আয় ও সামাজিক অবস্থার সাথে সন্তান গ্রহণের পরিকল্পনা",
-                      "আয় ও সামাজিক অবস্থার সাথে সন্তান গ্রহণের পরিকল্পনা",
+                      "Tubectomy and NSV (Vasectomy)",
+                      "টিউবেকটমি এবং এনএসভি"
                     ),
-                    yhLang(
-                      "ইচ্ছেমতো সন্তান জন্ম দেওয়া",
-                      "ইচ্ছেমতো সন্তান জন্ম দেওয়া",
-                    ),
-                    yhLang("কেবল চিকিৎসকের কাজ", "কেবল চিকিৎসকের কাজ"),
-                    yhLang("শুধু ভ্রমণ পরিকল্পনা", "শুধু ভ্রমণ পরিকল্পনা"),
+                    yhLang("Pills and Condoms", "বড়ি এবং কনডম"),
+                    yhLang("Injections and IUD", "ইনজেকশন এবং আইইউডি"),
+                    yhLang("All of the above", "উপরের সবগুলি"),
                   ],
                   correctAnswer: 0,
                 },
               ],
             },
             content: (function () {
-              const permanentMethods = [
-                "নারী স্থায়ী পদ্ধতি (টিউবেকটমি)",
-                "পুরুষ স্থায়ী পদ্ধতি (ভ্যাসেকটমি)",
-              ];
-
-              const shortTermMethods = ["খাবার বড়ি", "কনডম", "ইনজেকশন"];
-
-              const longTermMethods = ["ইমপ্ল্যান্ট", "আইইউডি"];
-
-              const methodTableRows = [
-                { type: "স্থায়ী পদ্ধতি", items: permanentMethods },
-                { type: "স্বল্পমেয়াদি পদ্ধতি", items: shortTermMethods },
-                { type: "দীর্ঘমেয়াদি পদ্ধতি", items: longTermMethods },
-              ];
-
-              const renderTableRows = () =>
-                methodTableRows
-                  .map(
-                    (row, idx) => `
-                    <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                      <td class="fw-semibold">${row.type}</td>
-                      <td>${row.items
-                        .map((item) => `<span class="d-block">${item}</span>`)
-                        .join("")}</td>
-                    </tr>
-                  `,
-                  )
-                  .join("");
-
-              const detailedMethodRows = [
-                {
-                  category: "স্থায়ী পদ্ধতি",
-                  subtype: "নারী",
-                  methods: [permanentMethods[0]],
-                },
-                {
-                  category: "স্থায়ী পদ্ধতি",
-                  subtype: "পুরুষ",
-                  methods: [permanentMethods[1]],
-                },
-                {
-                  category: "অস্থায়ী পদ্ধতি",
-                  subtype: "স্বল্পমেয়াদি",
-                  methods: shortTermMethods,
-                },
-                {
-                  category: "অস্থায়ী পদ্ধতি",
-                  subtype: "দীর্ঘমেয়াদি",
-                  methods: longTermMethods,
-                },
-              ];
-
-              const renderDetailedRows = () =>
-                detailedMethodRows
-                  .map(
-                    (row, idx) => `
-                      <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <td class="fw-semibold">${row.category}</td>
-                        <td>${row.subtype}</td>
-                        <td>${row.methods
-                          .map((item) => `<span class="d-block">${item}</span>`)
-                          .join("")}</td>
-                      </tr>
-                    `,
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুন্যকালীনপরিবার পরিকল্পনা",
-                    "তারুন্যকালীনপরিবার পরিকল্পনা",
-                  )}</h2>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <p class="mb-3">একটি দম্পতি তার আয়ের সাথে এবং পারিপার্শ্বিক আর্থ–সামাজিক অবস্থার সাথে সঙ্গতি রেখে কখন এবং কয়টি সন্তান গ্রহণ করবে, দুইটি সন্তানের মাঝে ব্যবধান কতদিনের হবে বা তাদের পরিবার কত ছোট বা বড় হবে, তা ঠিক করা এবং সে লক্ষ্য অর্জনের জন্য যথাযথ ব্যবস্থা গ্রহণ করাই হলো <strong>পরিবার পরিকল্পনা</strong>।</p>
-                    <p class="mb-0">যেকোনো কিশোরীই শারীরিক ও মানসিকভাবে সন্তান ধারণের জন্য উপযুক্ত নয়। প্রজনন স্বাস্থ্য বিষয়ে প্রয়োজনীয় তথ্য না থাকার কারণে এই সময়ে গর্ভধারণ মা ও সন্তান উভয়ের জন্যই অত্যন্ত ঝুঁকিপূর্ণ হতে পারে।</p>
+                <div class="ch7l3-slide" data-module="7" data-lesson="3">
+                  <section class="ch7l3-introduction" data-aos="fade-up">
+                    <h2 class="ch7l3-main-title">
+                      <i class="fa-solid fa-heart-circle-check"></i>
+                      ${yhLang("Adolescent Family Planning", "কৈশোরকালীন পরিবার পরিকল্পনা")}
+                    </h2>
+                    <p class="ch7l3-intro-text">
+                      ${yhLang(
+                        "Family planning involves deciding when and how many children a couple should have based on their income and socio-economic situation, determining the spacing between children, and taking appropriate measures to achieve these goals. Adolescents are not physically and mentally mature for motherhood. Girls often lack essential reproductive health knowledge, making pregnancy risky for both mother and baby.",
+                        "একটি দম্পতি তার আয়ের সাথে ও পারিপার্শ্বিক আর্থ-সামাজিক অবস্থার সাথে সঙ্গতি রেখে কখন ও কয়টি সন্তান গ্রহণ করবে, দু'টি সন্তানের মাঝে বিরতি কতদিনের হবে বা তার পরিবার কত ছোট বা বড় হবে তা ঠিক করা এবং সে লক্ষ্য অর্জনের জন্য যথাযথ ব্যবস্থা অবলম্বন করাই হলো পরিবার পরিকল্পনা। যেকোনো কিশোরীই শারীরিক ও মানসিকভাবে সন্তান ধারণের জন্য উপযুক্ত থাকে না। প্রজনন স্বাস্থ্য বিষয়ক অনেক প্রয়োজনীয় তথ্য জানা না থাকার কারনে, এ সময় গর্ভধারণ মা ও সন্তান উভয়ের জন্যই অনেক ঝুঁকিপূর্ণ হয়ে থাকে।"
+                      )}
+                    </p>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
+                  <section class="ch7l3-content-container">
+                    <!-- Left Side: Table -->
+                    <div class="ch7l3-left-content" data-aos="fade-right" data-aos-delay="100">
+                      <div class="ch7l3-methods-box">
+                        <h3 class="ch7l3-methods-title">
+                          <i class="fa-solid fa-list-check"></i>
+                          ${yhLang("Modern Family Planning Methods", "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ")}
+                        </h3>
+                        <p class="ch7l3-methods-description">
+                          ${yhLang(
+                            "According to Bangladesh's family planning program, any capable couple can adopt modern family planning methods. Methods are provided based on marital status and number of children.",
+                            "বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রম অনুযায়ী যেকোনো সক্ষম দম্পতি আধুনিক পরিবার পরিকল্পনা পদ্ধতি গ্রহণ করতে পারেন। বাংলাদেশে পরিবার পরিকল্পনা কার্যক্রমে বৈবাহিক অবস্থা এবং সন্তান সংখ্যা বিবেচনা করে পদ্ধতি দেয়া হয়।"
+                          )}
+                        </p>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="60">
-                    <div class="row g-4 align-items-center">
-                      <div class="col-lg-7">
-                        <h3 class="gradient-text mb-3">${yhLang(
-                          "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ",
-                          "পরিবার পরিকল্পনা আধুনিক পদ্ধতিসমূহ",
-                        )}</h3>
-                        <p class="text-muted">বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রম অনুযায়ী যেকোনো সক্ষম দম্পতি আধুনিক পরিবার পরিকল্পনা পদ্ধতি গ্রহণ করতে পারেন। বাংলাদেশের পরিবার পরিকল্পনা কার্যক্রমে <strong>বৈবাহিক অবস্থা</strong> এবং <strong>সন্তান সংখ্যা</strong> বিবেচনা করে পদ্ধতি প্রদান করা হয়।</p>
-                        <div class="table-responsive">
-                          <table class="table table-bordered text-center align-middle modern-table">
-                            <thead class="table-light">
-                              <tr>
-                                <th>পদ্ধতির ধরণ</th>
-                                <th>পদ্ধতির তালিকা</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              ${renderTableRows()}
-                            </tbody>
-                          </table>
+                        <div class="ch7l3-methods-table">
+                          <!-- Permanent Methods -->
+                          <div class="ch7l3-table-section">
+                            <div class="ch7l3-category-header ch7l3-permanent">
+                              <i class="fa-solid fa-lock"></i>
+                              ${yhLang("Permanent Methods", "স্থায়ী")}
+                            </div>
+                            <div class="ch7l3-methods-grid">
+                              <div class="ch7l3-method-item ch7l3-method-type-1">
+                                <div class="ch7l3-method-icon">
+                                  <i class="fa-solid fa-person-dress"></i>
+                                </div>
+                                <div class="ch7l3-method-info">
+                                  <p class="ch7l3-method-name">${yhLang("Female Permanent", "নারী স্থায়ী পদ্ধতি")}</p>
+                                  <p class="ch7l3-method-label">${yhLang("Tubectomy", "বা টিউবেকটমি")}</p>
+                                </div>
+                              </div>
+                              <div class="ch7l3-method-item ch7l3-method-type-1">
+                                <div class="ch7l3-method-icon">
+                                  <i class="fa-solid fa-person"></i>
+                                </div>
+                                <div class="ch7l3-method-info">
+                                  <p class="ch7l3-method-name">${yhLang("Male Permanent", "পুরুষ স্থায়ী পদ্ধতি")}</p>
+                                  <p class="ch7l3-method-label">${yhLang("NSV (Vasectomy)", "বা এনএসভি")}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Temporary Methods -->
+                          <div class="ch7l3-table-section">
+                            <div class="ch7l3-category-header ch7l3-temporary">
+                              <i class="fa-solid fa-hourglass-end"></i>
+                              ${yhLang("Temporary Methods", "অস্থায়ী")}
+                            </div>
+
+                            <!-- Short-term -->
+                            <div class="ch7l3-subcategory">
+                              <div class="ch7l3-subcategory-header ch7l3-shortterm">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                ${yhLang("Short-Term", "স্বল্পমেয়াদি")}
+                              </div>
+                              <div class="ch7l3-methods-grid">
+                                <div class="ch7l3-method-item ch7l3-method-type-2">
+                                  <div class="ch7l3-method-icon">
+                                    <i class="fa-solid fa-pill"></i>
+                                  </div>
+                                  <div class="ch7l3-method-info">
+                                    <p class="ch7l3-method-name">${yhLang("Birth Control Pills", "খাবার বড়ি")}</p>
+                                  </div>
+                                </div>
+                                <div class="ch7l3-method-item ch7l3-method-type-2">
+                                  <div class="ch7l3-method-icon">
+                                    <i class="fa-solid fa-syringe"></i>
+                                  </div>
+                                  <div class="ch7l3-method-info">
+                                    <p class="ch7l3-method-name">${yhLang("Injection", "ইনজেকশন")}</p>
+                                  </div>
+                                </div>
+                                <div class="ch7l3-method-item ch7l3-method-type-2">
+                                  <div class="ch7l3-method-icon">
+                                    <i class="fa-solid fa-shield"></i>
+                                  </div>
+                                  <div class="ch7l3-method-info">
+                                    <p class="ch7l3-method-name">${yhLang("Intrauterine Device", "আইইউডি")}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Long-term -->
+                            <div class="ch7l3-subcategory">
+                              <div class="ch7l3-subcategory-header ch7l3-longterm">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                ${yhLang("Long-Term", "দীর্ঘমেয়াদি")}
+                              </div>
+                              <div class="ch7l3-methods-grid">
+                                <div class="ch7l3-method-item ch7l3-method-type-3">
+                                  <div class="ch7l3-method-icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                  </div>
+                                  <div class="ch7l3-method-info">
+                                    <p class="ch7l3-method-name">${yhLang("Condom", "কনডম")}</p>
+                                  </div>
+                                </div>
+                                <div class="ch7l3-method-item ch7l3-method-type-3">
+                                  <div class="ch7l3-method-icon">
+                                    <i class="fa-solid fa-microchip"></i>
+                                  </div>
+                                  <div class="ch7l3-method-info">
+                                    <p class="ch7l3-method-name">${yhLang("Implant", "ইমপ্ল্যান্ট")}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-lg-5">
-                        <figure class="image-card mb-0" style="min-height:260px;">
-                          <img src="img/modu7/kishor.png" alt="তারুন্যকালীনপরিবার পরিকল্পনা" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
-                        </figure>
-                      </div>
                     </div>
-                  </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="gradient-text mb-3">${yhLang(
-                      "স্থায়ী ও অস্থায়ী পদ্ধতির তথ্যসারণি",
-                      "স্থায়ী ও অস্থায়ী পদ্ধতির তথ্যসারণি",
-                    )}</h3>
-                    <p class="text-muted">স্থায়ী এবং অস্থায়ী—উভয় ধরণের পরিবার পরিকল্পনা পদ্ধতি দম্পতির শারীরিক ও সামাজিক উপযোগিতা বিবেচনা করে নির্বাচন করা উচিত। নিচের সারণিতে প্রতিটি শ্রেণি ও উপধরণের উদাহরণ দেখানো হলো।</p>
-                    <div class="table-responsive mt-3">
-                      <table class="table table-bordered text-center align-middle modern-table">
-                        <thead class="table-light">
-                          <tr>
-                            <th>পদ্ধতির ধরন</th>
-                            <th>উপধরন</th>
-                            <th>পদ্ধতির তালিকা</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          ${renderDetailedRows()}
-                        </tbody>
-                      </table>
+                    <!-- Right Side: Image -->
+                    <div class="ch7l3-right-content" data-aos="fade-left" data-aos-delay="100">
+                      <div class="ch7l3-image-container">
+                        <img src="img/modu7/prosob.png" alt="Family Planning Methods" class="ch7l3-image" />
+                      </div>
                     </div>
                   </section>
                 </div>
@@ -4637,199 +4634,169 @@ const coursesData = [
           },
           {
             id: "ch7-lesson-2",
-            title: yhLang(
-              "তারুন্যকালীনপরিবার পরিকল্পনা",
-              "তারুন্যকালীনপরিবার পরিকল্পনা",
-            ),
-            icon: "fa-table",
-            gradientClass: "bg-gradient-teal",
+            title: yhLang("Family Planning Methods Comparison", "পরিবার পরিকল্পনা পদ্ধতি তুলনা"),
+            icon: "fa-chart-column",
+            gradientClass: "bg-gradient-indigo",
             audioFile: "",
             quiz: {
               passingScore: 60,
               questions: [
                 {
-                  id: "q7b",
+                  id: "q7d",
                   question: yhLang(
-                    "সন্তান সংখ্যাভেদে কোন পদ্ধতি বেছে নেওয়া যায়?",
-                    "সন্তান সংখ্যাভেদে কোন পদ্ধতি বেছে নেওয়া যায়?",
+                    "Which methods are suitable for couples with 2+ children?",
+                    "দুই বা তার বেশি সন্তান আছে এমন দম্পতিদের জন্য কোন পদ্ধতিগুলি উপযুক্ত?"
                   ),
                   options: [
-                    yhLang("টেবিলে দেখানো অনুযায়ী", "টেবিলে দেখানো অনুযায়ী"),
-                    yhLang("শুধু একটি পদ্ধতি", "শুধু একটি পদ্ধতি"),
-                    yhLang("সবসময় টিউবেকটমি", "সবসময় টিউবেকটমি"),
-                    yhLang("কোনো পদ্ধতি নয়", "কোনো পদ্ধতি নয়"),
+                    yhLang("All methods are available", "সব পদ্ধতি উপলব্ধ"),
+                    yhLang("Only temporary methods", "শুধুমাত্র অস্থায়ী পদ্ধতি"),
+                    yhLang("Only permanent methods", "শুধুমাত্র স্থায়ী পদ্ধতি"),
+                    yhLang("No methods available", "কোনো পদ্ধতি উপলব্ধ নয়"),
                   ],
                   correctAnswer: 0,
                 },
               ],
             },
             content: (function () {
-              const methodHeaders = [
-                { key: "pill", label: "খাবার বড়ি" },
-                { key: "condom", label: "কনডম" },
-                { key: "injection", label: "ইনজেকশন" },
-                { key: "implant", label: "ইমপ্লান্ট" },
-                { key: "iud", label: "আইইউডি" },
-                { key: "tubectomy", label: "টিউবেকটমি" },
-                { key: "vasectomy", label: "ভেসেকটমি" },
-              ];
-
-              const opportunityRows = [
-                {
-                  label: "নবদম্পতি বা এখনো সন্তান নেয়ার পরিকল্পনা নেই",
-                  availability: {
-                    pill: true,
-                    condom: true,
-                    injection: false,
-                    implant: true,
-                    iud: false,
-                    tubectomy: false,
-                    vasectomy: false,
-                  },
-                },
-                {
-                  label: "একটি জীবিত সন্তান আছে এবং পরবর্তী সন্তান",
-                  availability: {
-                    pill: true,
-                    condom: true,
-                    injection: true,
-                    implant: true,
-                    iud: true,
-                    tubectomy: false,
-                    vasectomy: false,
-                  },
-                },
-                {
-                  label: "দুই বা ততোধিক জীবিত সন্তান আছে",
-                  availability: {
-                    pill: true,
-                    condom: true,
-                    injection: true,
-                    implant: true,
-                    iud: true,
-                    tubectomy: true,
-                    vasectomy: true,
-                  },
-                },
-              ];
-
-              const methodUsage = [
-                {
-                  method: "খাবার বড়ি",
-                  usage: "প্রতিদিন খেতে হয়",
-                  duration: "প্রতিদিন",
-                },
-                {
-                  method: "কনডম",
-                  usage: "প্রতিবার সহবাসের সময় ব্যবহার করতে হয়",
-                  duration: "ব্যবহারের সময়",
-                },
-                {
-                  method: "ইনজেকশন",
-                  usage: "গভীর মাংসপেশীতে দিতে হয়",
-                  duration: "তিন মাস",
-                },
-                {
-                  method: "ইমপ্ল্যান্ট",
-                  usage: "চামড়ার নিচে স্থাপন করা হয়",
-                  duration: "প্রকারভেদে ৩ বছর বা ৫ বছর",
-                },
-                {
-                  method: "আইইউডি",
-                  usage: "জরায়ুতে প্রয়োগ করা হয়",
-                  duration: "১০ বছর",
-                },
-                {
-                  method: "ভ্যাসেকটমি/এনএসভি",
-                  usage: "অন্ডথলির চামড়াতে ছোট অপারেশনের মাধ্যমে করা হয়",
-                  duration: "স্থায়ী",
-                },
-                {
-                  method: "টিউবেকটমি",
-                  usage: "তলপেটে ছোট অপারেশনের মাধ্যমে করা হয়",
-                  duration: "স্থায়ী",
-                },
-              ];
-
-              const renderOpportunityRows = () =>
-                opportunityRows
-                  .map(
-                    (row, idx) => `
-                      <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <td class="fw-semibold text-start">${row.label}</td>
-                        ${methodHeaders
-                          .map(
-                            (method) =>
-                              `<td>${row.availability[method.key] ? "&#10003;" : ""}</td>`,
-                          )
-                          .join("")}
-                      </tr>
-                    `,
-                  )
-                  .join("");
-
-              const renderUsageRows = () =>
-                methodUsage
-                  .map(
-                    (item, idx) => `
-                      <tr data-aos="fade-up" data-aos-delay="${80 + idx * 20}">
-                        <td class="fw-semibold">${item.method}</td>
-                        <td>${item.usage}</td>
-                        <td>${item.duration}</td>
-                      </tr>
-                    `,
-                  )
-                  .join("");
-
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "তারুন্যকালীনপরিবার পরিকল্পনা",
-                    "তারুন্যকালীনপরিবার পরিকল্পনা",
-                  )}</h2>
+                <div class="ch7l4-slide" data-module="7" data-lesson="4">
+                  <section class="ch7l4-introduction" data-aos="fade-up">
+                    <h2 class="ch7l4-main-title d-none">
+                      <i class="fa-solid fa-chart-line"></i>
+                      ${yhLang("Family Planning Methods Comparison", "পরিবার পরিকল্পনা পদ্ধতি তুলনা")}
+                    </h2>
+                  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <h3 class="gradient-text mb-3">${yhLang(
-                      "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ",
-                      "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ",
-                    )}</h3>
-                    <p class="text-muted">কতোজন সন্তান আছে বা নিতে চান—তা অনুযায়ী পরিবার পরিকল্পনা পদ্ধতি নির্বাচন করা উচিত। নিচের সারণিতে সেই নির্দেশনা দেখানো হলো।</p>
-                    <div class="table-responsive mt-3">
-                      <table class="table table-bordered text-center align-middle modern-table">
-                        <thead class="table-light">
+                  <!-- Table 1: Method Availability -->
+                  <section class="ch7l4-card ch7l4-availability-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="ch7l4-card-header">
+                      <h3 class="ch7l4-card-title">
+                        <i class="fa-solid fa-check-circle"></i>
+                        ${yhLang("Number of Children vs Method Availability", "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ")}
+                      </h3>
+                      <p class="ch7l4-card-subtitle">${yhLang(
+                        "Modern Approach to Family Planning",
+                        "পরিবার পরিকল্পনার আধুনিক পদ্ধতি সমূহ"
+                      )}</p>
+                    </div>
+                    <div class="ch7l4-table-wrapper">
+                      <table class="ch7l4-availability-table">
+                        <thead class="ch7l4-table-head">
                           <tr>
-                            <th>সন্তান সংখ্যা</th>
-                            ${methodHeaders
-                              .map((method) => `<th>${method.label}</th>`)
-                              .join("")}
+                            <th class="ch7l4-label-header">${yhLang("No. of Children", "সন্তান সংখ্যা")}</th>
+                            <th class="ch7l4-method-col" data-method="pill"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white;"><i class="fa-solid fa-pill"></i> ${yhLang("Pills", "খাবার বড়ি")}</span></th>
+                            <th class="ch7l4-method-col" data-method="condom"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white;"><i class="fa-solid fa-shield-halved"></i> ${yhLang("Condom", "কনডম")}</span></th>
+                            <th class="ch7l4-method-col" data-method="injection"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</span></th>
+                            <th class="ch7l4-method-col" data-method="implant"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;"><i class="fa-solid fa-microchip"></i> ${yhLang("Implant", "ইমপ্ল্যান্ট")}</span></th>
+                            <th class="ch7l4-method-col" data-method="iud"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white;"><i class="fa-solid fa-shield"></i> ${yhLang("IUD", "আইইউডি")}</span></th>
+                            <th class="ch7l4-method-col" data-method="tubectomy"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white;"><i class="fa-solid fa-person-dress"></i> ${yhLang("Tubectomy", "টিউবেকটমি")}</span></th>
+                            <th class="ch7l4-method-col" data-method="vasectomy"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%); color: white;"><i class="fa-solid fa-person"></i> ${yhLang("Vasectomy", "ভেসেকটমি")}</span></th>
                           </tr>
                         </thead>
-                        <tbody>
-                          ${renderOpportunityRows()}
+                        <tbody class="ch7l4-table-body">
+                          <tr class="ch7l4-availability-row" data-aos="fade-up" data-aos-delay="80">
+                            <td class="ch7l4-label-cell">
+                              <div class="ch7l4-label-badge" style="background: linear-gradient(135deg, #fbbf2433 0%, #fbbf2411 100%); color: #92400e;">
+                                <i class="fa-solid fa-heart"></i>
+                                <span>${yhLang("Newlywed or no children planned", "নবদম্পতি বা এখনো সন্তান নেয়ার পরিকল্পনা নেই")}</span>
+                              </div>
+                            </td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-unavailable"></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-unavailable"></td>
+                            <td class="ch7l4-check-cell ch7l4-unavailable"></td>
+                            <td class="ch7l4-check-cell ch7l4-unavailable"></td>
+                          </tr>
+                          <tr class="ch7l4-availability-row" data-aos="fade-up" data-aos-delay="100">
+                            <td class="ch7l4-label-cell">
+                              <div class="ch7l4-label-badge" style="background: linear-gradient(135deg, #60a5fa33 0%, #60a5fa11 100%); color: #1e40af;">
+                                <i class="fa-solid fa-child"></i>
+                                <span>${yhLang("Has 1 living child, planning next", "একটি জীবিত সন্তান আছে এবং পরবর্তী সন্তান")}</span>
+                              </div>
+                            </td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-unavailable"></td>
+                            <td class="ch7l4-check-cell ch7l4-unavailable"></td>
+                          </tr>
+                          <tr class="ch7l4-availability-row" data-aos="fade-up" data-aos-delay="120">
+                            <td class="ch7l4-label-cell">
+                              <div class="ch7l4-label-badge" style="background: linear-gradient(135deg, #34d39933 0%, #34d39911 100%); color: #065f46;">
+                                <i class="fa-solid fa-people"></i>
+                                <span>${yhLang("Has 2+ living children", "দুই বা ততোধিক জীবিত সন্তান আছে")}</span>
+                              </div>
+                            </td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                            <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
-
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="70">
-                    <h3 class="gradient-text mb-3">${yhLang(
-                      "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল",
-                      "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল",
-                    )}</h3>
-                    <p class="text-muted">প্রতিটি পদ্ধতির প্রয়োগপদ্ধতি ও স্থায়িত্বকাল জানলে তরুন-তরুনী ও নবদম্পতিরা তথ্যভিত্তিক সিদ্ধান্ত নিতে পারে।</p>
-                    <div class="table-responsive mt-3">
-                      <table class="table table-bordered text-center align-middle modern-table">
-                        <thead class="table-light">
+                  <!-- Table 2: Method Usage Details -->
+                  <section class="ch7l4-card ch7l4-usage-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ch7l4-card-header">
+                      <h3 class="ch7l4-card-title">
+                        <i class="fa-solid fa-book-medical"></i>
+                        ${yhLang("Methods: Usage, Application & Duration", "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল")}
+                      </h3>
+                    </div>
+                    <div class="ch7l4-table-wrapper">
+                      <table class="ch7l4-usage-table">
+                        <thead class="ch7l4-table-head">
                           <tr>
-                            <th>পদ্ধতিসমূহ</th>
-                            <th>ব্যবহার ও প্রয়োগ</th>
-                            <th>মেয়াদকাল</th>
+                            <th class="ch7l4-header-method">${yhLang("Method", "পদ্ধতিসমূহ")}</th>
+                            <th class="ch7l4-header-usage">${yhLang("Usage & Application", "ব্যবহার ও প্রয়োগ")}</th>
+                            <th class="ch7l4-header-duration">${yhLang("Duration", "মেয়াদকাল")}</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          ${renderUsageRows()}
+                        <tbody class="ch7l4-table-body">
+                          <tr class="ch7l4-usage-row ch7l4-method-1" data-aos="fade-up" data-aos-delay="80">
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);"><i class="fa-solid fa-pill"></i> ${yhLang("Pills", "খাবার বড়ি")}</div></td>
+                            <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Take daily", "প্রতিদিন খেতে হয়")}</span></div></td>
+                            <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("Daily", "প্রতিদিন")}</div></td>
+                          </tr>
+                          <tr class="ch7l4-usage-row ch7l4-method-2" data-aos="fade-up" data-aos-delay="100">
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);"><i class="fa-solid fa-shield-halved"></i> ${yhLang("Condom", "কনডম")}</div></td>
+                            <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Use during intercourse", "প্রতিবার সহবাসের সময় ব্যবহার করতে হয়")}</span></div></td>
+                            <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("During use", "ব্যবহারের সময়")}</div></td>
+                          </tr>
+                          <tr class="ch7l4-usage-row ch7l4-method-3" data-aos="fade-up" data-aos-delay="120">
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</div></td>
+                            <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Deep intramuscular injection", "গভীর মাংসপেশীতে দিতে হয়")}</span></div></td>
+                            <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("3 months", "তিন মাস")}</div></td>
+                          </tr>
+                          <tr class="ch7l4-usage-row ch7l4-method-4" data-aos="fade-up" data-aos-delay="140">
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);"><i class="fa-solid fa-microchip"></i> ${yhLang("Implant", "ইমপ্ল্যান্ট")}</div></td>
+                            <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Inserted under skin", "চামড়ার নিচে স্থাপন করা হয়")}</span></div></td>
+                            <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("3-5 years", "প্রকারভেদে ৩ বা ৫ বছর")}</div></td>
+                          </tr>
+                          <tr class="ch7l4-usage-row ch7l4-method-5" data-aos="fade-up" data-aos-delay="160">
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);"><i class="fa-solid fa-shield"></i> ${yhLang("IUD", "আইইউডি")}</div></td>
+                            <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Inserted in uterus", "জরায়ুতে প্রয়োগ করা হয়")}</span></div></td>
+                            <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("10 years", "১০ বছর")}</div></td>
+                          </tr>
+                          <tr class="ch7l4-usage-row ch7l4-method-6" data-aos="fade-up" data-aos-delay="180">
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);"><i class="fa-solid fa-person"></i> ${yhLang("NSV (Vasectomy)", "ভ্যাসেকটমি/এনএসভি")}</div></td>
+                            <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Minor surgery on scrotum", "অন্ডথলির চামড়াতে ছোট অপারেশনের মাধ্যমে করা হয়")}</span></div></td>
+                            <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge ch7l4-permanent">${yhLang("Permanent", "স্থায়ী")}</div></td>
+                          </tr>
+                          <tr class="ch7l4-usage-row ch7l4-method-7" data-aos="fade-up" data-aos-delay="200">
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);"><i class="fa-solid fa-person-dress"></i> ${yhLang("Tubectomy", "টিউবেকটমি")}</div></td>
+                            <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Minor surgery on abdomen", "তলপেটে ছোট অপারেশনের মাধ্যমে করা হয়")}</span></div></td>
+                            <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge ch7l4-permanent">${yhLang("Permanent", "স্থায়ী")}</div></td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
