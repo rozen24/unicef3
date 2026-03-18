@@ -986,7 +986,7 @@ const coursesData = [
             id: "ch2-lesson-3",
             title: yhLang(
               "Global scenario of mortality and morbidity among young people",
-              "তরুণদের মৃত্যু ও রোগভার নিয়ে বৈশ্বিক চিত্র",
+              "তরুণদের মৃত্যুহার এবং অসুস্থতার বৈশ্বিক এবং বাংলাদেশের চিত্র",
             ),
             icon: "fa-globe",
             gradientClass: "bg-gradient-purple",
@@ -1013,27 +1013,32 @@ const coursesData = [
             content: (function () {
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global scenario of mortality and morbidity among young people", "তরুণদের মৃত্যু ও রোগভার নিয়ে বৈশ্বিক চিত্র")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global scenario of mortality and morbidity among young people", "তরুণদের মৃত্যুহার এবং অসুস্থতার বৈশ্বিক এবং বাংলাদেশের চিত্র")}</h2>
 
                 <!-- Key Global Insights -->
-                <section class="my-3" data-aos="fade-up" data-aos-delay="40">
-                  <h5 class="gradient-text mb-3">${yhLang("Key global insights", "গুরুত্বপূর্ণ বৈশ্বিক অন্তর্দৃষ্টি")}</h5>
-                  <div class="row g-3">
+                <section class="my-1" data-aos="fade-up" data-aos-delay="40">
+                  <div class="row g-1">
                     ${[
                       {
                         icon: "fa-heart-pulse",
                         color: "bg-gradient-pink",
                         text: yhLang(
                           "Globally over <strong>1.5 million</strong> young people aged 10–24 years died in 2021 — about <strong>4500 every day</strong>.",
-                          "২০২১ সালে বিশ্বব্যাপী <strong>১.৫ মিলিয়নের</strong>ও বেশি ১০–২৪ বছর বয়সী তরুণ মারা গেছে — প্রতিদিন প্রায় <strong>৪৫০০</strong> জন।",
-                        ),
+                          "২০২১ সালে ১০-২৪ বছর বয়সী <strong>১.৫ মিলিয়নেরও বেশি</strong> কিশোর-কিশোরী এবং তরুণ প্রাপ্তবয়স্ক মারা গেছেন, প্রতিদিন প্রায় <strong>৪৫০০</strong> জন।"                        ),
                       },
+                      {
+                        icon: "fa-heart-pulse",
+                        color: "bg-gradient-pink",
+                        text: yhLang(
+                          "Globally over <strong>1.5 million</strong> young people aged 10–24 years died in 2021 — about <strong>4500 every day</strong>.",
+                          "২০২১ সালে বিশ্বব্যাপী <strong>১.৫ মিলিয়নেরও বেশি</strong> ১০–২৪ বছর বয়সী তরুণ মারা গেছে — প্রতিদিন প্রায় <strong>৪৫০০</strong> জন।"
+                        ) },
                       {
                         icon: "fa-shield-halved",
                         color: "bg-gradient-green",
                         text: yhLang(
                           "Young adolescents aged <strong>10–14</strong> have the <strong>lowest risk of death</strong> among all age groups.",
-                          "১০–১৪ বছর বয়সী কিশোরদের মৃত্যুঝুঁকি সব বয়সের মধ্যে সবচেয়ে কম।",
+                          "সকল বয়সের মধ্যে ১০-১৪ বছর বয়সী তরুণ-তরুণীদের মৃত্যুর ঝুঁকি সবচেয়ে কম।",
                         ),
                       },
                       {
@@ -1041,15 +1046,14 @@ const coursesData = [
                         color: "bg-gradient-orange",
                         text: yhLang(
                           "<strong>Injuries</strong> (including road traffic injuries and drowning), <strong>interpersonal violence</strong>, <strong>self-harm</strong>, and <strong>maternal conditions</strong> are leading causes of death.",
-                          "<strong>সড়ক দুর্ঘটনা ও ডুবে যাওয়াসহ বিভিন্ন আঘাত</strong>, <strong>ব্যক্তি-ব্যক্তি সহিংসতা</strong>, <strong>আত্মহানি</strong> এবং <strong>মাতৃস্বাস্থ্যজনিত কারণ</strong> তরুণ মৃত্যুর প্রধান কারণ।",
-                        ),
+                          "<strong>আঘাত (সড়ক দুর্ঘটনা এবং ডুবে যাওয়া সহ)</strong>, <strong>আন্তঃব্যক্তিক সহিংসতা</strong>, <strong>আত্ম-ক্ষতি</strong> এবং <strong>মাতৃত্বকালীন অবস্থা</strong> কিশোর-কিশোরী এবং তরুণ প্রাপ্তবয়স্কদের মধ্যে মৃত্যুর প্রধান কারণ।"),
                       },
                       {
                         icon: "fa-brain",
                         color: "bg-gradient-purple",
                         text: yhLang(
                           "<strong>Half</strong> of all mental health disorders in adulthood start by <strong>age 18</strong>, but most cases are <strong>undetected</strong> and <strong>untreated</strong>.",
-                          "বয়ঃপ্রাপ্তদের অর্ধেক মানসিক স্বাস্থ্য সমস্যার শুরু <strong>১৮ বছর</strong>ের মধ্যেই হয়, কিন্তু অধিকাংশই <strong>অননুমোদিত</strong> এবং <strong>চিকিৎসাবিহীন</strong> থাকে।",
+                          "প্রাপ্তবয়স্কদের মধ্যে মানসিক স্বাস্থ্যের অর্ধেক ব্যাধি <strong>১৮ বছর</strong> বয়সের মধ্যেই শুরু হয়, তবে বেশিরভাগ ক্ষেত্রেই <strong>অজ্ঞাত</strong> এবং <strong>চিকিৎসা করা হয় না</strong>।"
                         ),
                       },
                       {
@@ -1057,7 +1061,7 @@ const coursesData = [
                         color: "bg-gradient-blue",
                         text: yhLang(
                           "<strong>Early substance use</strong> is linked to higher risks of dependence and other problems in adult life; younger people are <strong>disproportionately affected</strong>.",
-                          "<strong>কিশোর বয়সে নেশাজাতীয় দ্রব্যের ব্যবহার</strong> প্রাপ্তবয়সে আসক্তি ও অন্যান্য ঝুঁকি বাড়ায়; তরুণরা এ থেকে <strong>বেশি ক্ষতিগ্রস্ত</strong> হয়।",
+                          "<strong>পদার্থ ব্যবহারের প্রাথমিক সূত্রপাত</strong> প্রাপ্তবয়স্কদের জীবনে আসক্তি এবং অন্যান্য সমস্যা তৈরির ঝুঁকির সাথে সম্পর্কিত, এবং বয়স্কদের তুলনায় <strong>অল্পবয়সীরা বেশি প্রভাবিত</strong> হয়।"
                         ),
                       },
                     ]
@@ -1067,10 +1071,10 @@ const coursesData = [
                         <div class="modern-card glass-card icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${
                           100 + i * 60
                         }">
-                          <div class="d-flex flex-col align-items-start gap-3">
+                          <div class="d-flex flex-col align-items-center gap-1">
                             <span class="${
                               card.color
-                            }" style="width:48px; height:48px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0;">
+                            }" style="width:38px; height:38px; border-radius:50%; display:inline-flex; align-items:center; color:#fff; flex-shrink:0;">
                               <i class="fa-solid ${card.icon}"></i>
                             </span>
                             <div>
@@ -1087,7 +1091,7 @@ const coursesData = [
 
                 <!-- Top 5 Leading Causes of Death -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="80">
-                  <h5 class="gradient-text my-3">${yhLang("Top 5 leading causes of death among adolescents are", "কৈশোরদের মৃত্যুর শীর্ষ ৫ কারণ")}</h5>
+                  <h5 class="gradient-text my-3">${yhLang("Top 5 leading causes of death among adolescents are", "প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন কারণে অসুস্থ হয় বা মত্যুবরণ করে। কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে :")}</h5>
                   <div id="topCausesControls" class="d-flex gap-2 my-3">
                     <button class="btn btn-outline-primary btn-sm active" id="topCausesToggleChart"><i class="fa-solid fa-chart-bar me-1"></i> ${yhLang("Chart", "চার্ট")}</button>
                     <button class="btn btn-outline-primary btn-sm" id="topCausesToggleCards"><i class="fa-solid fa-grip me-1"></i> ${yhLang("Cards", "কার্ডস")}</button>
@@ -1235,7 +1239,7 @@ const coursesData = [
                             }">
                               <span class="${
                                 item.color
-                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff"><i class="fa-solid ${
+                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; color:#fff"><i class="fa-solid ${
                                 item.icon
                               }"></i></span>
                               <span>${item.label}</span>
@@ -1287,7 +1291,7 @@ const coursesData = [
                             }">
                               <span class="${
                                 item.color
-                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff"><i class="fa-solid ${
+                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; color:#fff;"><i class="fa-solid ${
                                 item.icon
                               }"></i></span>
                               <span>${item.label}</span>
