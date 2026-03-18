@@ -3385,40 +3385,48 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const reproductiveOrgans = [
-                {
-                  title: "ডিম্বাশয়",
-                  subtitle: "(Ovary)",
-                  description: "জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে। প্রত্যেক মাসিক চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।",
-                  icon: "fa-circle",
-                  color: "#ec4899",
-                  bgColor: "rgba(236, 72, 153, 0.12)",
-                },
-                {
-                  title: "জরায়ু",
-                  subtitle: "(Uterus)",
-                  description: "জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়। জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।",
-                  icon: "fa-heart",
-                  color: "#f43f5e",
-                  bgColor: "rgba(244, 63, 94, 0.12)",
-                },
-                {
-                  title: "যোনিপথ",
-                  subtitle: "(Vagina)",
-                  description: "যোনিপথ জরায়ুর ভিতর থেকে শুরু হয়ে শরীরের বাইরে এসে যোনিমুখে শেষ হয়েছে।",
-                  icon: "fa-arrow-down",
-                  color: "#3b82f6",
-                  bgColor: "rgba(59, 130, 246, 0.12)",
-                },
-                {
-                  title: "স্তন",
-                  subtitle: "(Breast)",
-                  description: "স্তন সরাসরি প্রজননতন্ত্রের অংশ না হলেও এটি আনুষঙ্গিক প্রজনন অঙ্গ হিসেবে বিবেচিত হয়, কারণ শিশুর জন্মের পর স্তনেই বুকের দুধ তৈরি হয়।",
-                  icon: "fa-leaf",
-                  color: "#10b981",
-                  bgColor: "rgba(16, 185, 129, 0.12)",
-                },
-              ];
+             const reproductiveOrgans = [
+  {
+    title: yhLang("Ovary", "ডিম্বাশয়"),
+    description: yhLang(
+      "There are two ovaries located on either side of the uterus. Around the middle of the 28-day menstrual cycle, an egg matures in one of the ovaries and is released into the fallopian tube.",
+      "জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে। প্রত্যেক মাসিক চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।"
+    ),
+    icon: "fa-circle",
+    color: "#ec4899",
+    bgColor: "rgba(236, 72, 153, 0.12)",
+  },
+  {
+    title: yhLang("Uterus", "জরায়ু"),
+    description: yhLang(
+      "The uterus is a hollow, triangular organ located in the lower abdomen. In front of it is the bladder and behind it is the rectum. It has two parts—the body and the cervix. Its primary function is pregnancy. If pregnancy does not occur, the inner lining sheds due to hormonal changes, resulting in menstruation. The fallopian tubes extend from the uterus to the ovaries. After intercourse, sperm travel through the vagina and uterus to the fallopian tubes, where fertilization may occur. The fertilized egg later implants in the uterus.",
+      "জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়। জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।"
+    ),
+    icon: "fa-heart",
+    color: "#f43f5e",
+    bgColor: "rgba(244, 63, 94, 0.12)",
+  },
+  {
+    title: yhLang("Vagina", "যোনিপথ"),
+    description: yhLang(
+      "The vagina extends from the uterus to the outside of the body and ends at the vaginal opening.",
+      "যোনিপথ জরায়ুর ভিতর থেকে শুরু হয়ে শরীরের বাইরে এসে যোনিমুখে শেষ হয়েছে।"
+    ),
+    icon: "fa-arrow-down",
+    color: "#3b82f6",
+    bgColor: "rgba(59, 130, 246, 0.12)",
+  },
+  {
+    title: yhLang("Breast", "স্তন"),
+    description: yhLang(
+      "Although not directly part of the reproductive system, the breast is considered an accessory reproductive organ because it produces milk after childbirth.",
+      "স্তন সরাসরি প্রজননতন্ত্রের অংশ না হলেও এটি আনুষঙ্গিক প্রজনন অঙ্গ হিসেবে বিবেচিত হয়, কারণ শিশুর জন্মের পর স্তনেই বুকের দুধ তৈরি হয়।"
+    ),
+    icon: "fa-leaf",
+    color: "#10b981",
+    bgColor: "rgba(16, 185, 129, 0.12)",
+  },
+];
 
               const renderOrganCards = () =>
                 reproductiveOrgans
@@ -3433,7 +3441,6 @@ const coursesData = [
                           </div>
                           <div class="m4l6-organ-title-section">
                             <h3 class="m4l6-organ-title">${organ.title}</h3>
-                            <p class="m4l6-organ-subtitle">${organ.subtitle}</p>
                           </div>
                         </div>
                         <p class="m4l6-organ-description mb-0">${organ.description}</p>
@@ -3452,35 +3459,23 @@ const coursesData = [
                   <section class="m4l6-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row align-items-center g-4">
                       <div class="col-lg-5">
-                        <figure class="image-card mb-0">
-                          <img src="img/modu4/nari.jpg" alt="নারী প্রজননতন্ত্র" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l6-main-image" />
-                          <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: নারী প্রজননতন্ত্রের বিভিন্ন অংশ</figcaption>
+                        <figure class=" mb-0">
+                          <img src="img/modu4/nari.jpg" style="height: 630px; object-fit: contain;"  alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 img-zoom rounded-lg shadow-lg animate-float-slow m4l6-main-image" />
                         </figure>
                       </div>
                       <div class="col-lg-7">
-                        <h3 class="m4l6-intro-title gradient-text mb-3">${yhLang(
-                          "Understanding Female Reproductive System",
-                          "নারী প্রজননতন্ত্র বোঝা",
-                        )}</h3>
-                        <p class="m4l6-intro-text">${yhLang(
-                          "The female reproductive system consists of multiple organs and glands that work together for reproduction and hormone production.",
-                          "নারী প্রজননতন্ত্র বিভিন্ন অঙ্গ এবং গ্রন্থি নিয়ে গঠিত যা প্রজনন এবং হরমোন উৎপাদনে একসাথে কাজ করে।",
-                        )}</p>
+                        <section class="m4l6-organs-section" data-aos="fade-up" data-aos-delay="80">
+                    
+                          <div class="m4l6-organs-grid">
+                            ${renderOrganCards()}
+                          </div>
+                        </section>
                       </div>
                     </div>
                   </section>
 
-                  <div class="menstrual-section-divider" aria-hidden="true"></div>
 
-                  <section class="m4l6-organs-section" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="m4l6-section-title gradient-text mb-3">${yhLang(
-                      "Key Organs & Functions",
-                      "প্রধান অঙ্গ এবং কাজ",
-                    )}</h3>
-                    <div class="m4l6-organs-grid">
-                      ${renderOrganCards()}
-                    </div>
-                  </section>
+                  
                 </div>
               `;
             })(),
@@ -3517,26 +3512,35 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const menstrualPoints = [
-                {
-                  text: "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।",
-                  icon: "fa-child",
-                  color: "#ec4899",
-                  bgColor: "rgba(236, 72, 153, 0.12)",
-                },
-                {
-                  text: "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।",
-                  icon: "fa-calendar",
-                  color: "#f43f5e",
-                  bgColor: "rgba(244, 63, 94, 0.12)",
-                },
-                {
-                  text: "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।",
-                  icon: "fa-hourglass-end",
-                  color: "#3b82f6",
-                  bgColor: "rgba(59, 130, 246, 0.12)",
-                },
-              ];
+             const menstrualPoints = [
+  {
+    text: yhLang(
+      "Menstruation usually begins between ages 9–14 and continues monthly until around 45–55 years.",
+      "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।"
+    ),
+    icon: "fa-child",
+    color: "#ec4899",
+    bgColor: "rgba(236, 72, 153, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Menstrual bleeding typically lasts 1–7 days each month. The flow is usually heavier during the first 1–3 days and decreases afterward.",
+      "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।"
+    ),
+    icon: "fa-calendar",
+    color: "#f43f5e",
+    bgColor: "rgba(244, 63, 94, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Menstrual cycles usually occur every 21–35 days.",
+      "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।"
+    ),
+    icon: "fa-hourglass-end",
+    color: "#3b82f6",
+    bgColor: "rgba(59, 130, 246, 0.12)",
+  },
+];
 
               const renderMenstrualPoints = () =>
                 menstrualPoints
@@ -3566,12 +3570,9 @@ const coursesData = [
                   <section class="m4l7-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row align-items-center g-3">
                       <div class="col-lg-6">
-                        <h3 class="m4l7-intro-title gradient-text" data-aos="fade-up" data-aos-delay="60">
-                          <i class="fa-solid fa-droplet"></i>
-                          ${yhLang("About Menstruation", "ঋতুস্রাব সম্পর্কে")}
-                        </h3>
                         
-                        <p class="m4l7-intro-description" data-aos="fade-up" data-aos-delay="80">
+                        
+                        <p class="m4l7-intro-description mb-3" data-aos="fade-up" data-aos-delay="80">
                           ${yhLang(
                             "Menstruation is a normal, natural process by which a person prepares for pregnancy and childbirth. The monthly bleeding through the vagina is called menstruation.",
                             "মাসিক একটি স্বাভাবিক প্রাকৃতিক প্রক্রিয়া, যার মাধ্যমে একজন নারী গর্ভধারণ/সন্তান জন্মদানের জন্য প্রস্তুত হয়। প্রতিমাসে যোনিপথ দিয়ে মেয়েদের যে রক্তস্রাব হয়, তাকে মাসিক/ঋতুস্রাব বলে।",
@@ -3595,8 +3596,7 @@ const coursesData = [
 
                       <div class="col-lg-6">
                         <figure class="image-card mb-0">
-                          <img src="img/modu4/masikb.jpg" alt="মাসিক/ঋতুস্রাব ব্যবস্থাপনা" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l7-main-image" />
-                          <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: মাসিক/ঋতুস্রাব ব্যবস্থাপনা</figcaption>
+                          <img src="img/modu4/masik_b.jpg" alt="মাসিক/ঋতুস্রাব ব্যবস্থাপনা" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l7-main-image" />
                         </figure>
                       </div>
                     </div>
@@ -3638,43 +3638,61 @@ const coursesData = [
             },
             content: (function () {
               const menstrualCarePoints = [
-                {
-                  text: "মাসিককালীন সময়ে মেয়েদের প্রচুর পরিমাণে বিভিন্ন ধরনের পুষ্টিকর খাবার, শাকসবজি এবং ফলমূল খেতে হবে এবং প্রচুর পরিমাণে পানি পান করতে হবে।",
-                  icon: "fa-apple",
-                  color: "#10b981",
-                  bgColor: "rgba(16, 185, 129, 0.12)",
-                },
-                {
-                  text: "প্রতিদিন ভালোভাবে গোসল এবং প্রজনন অঙ্গ পানি ও সাবান দিয়ে পরিষ্কার করতে হবে।",
-                  icon: "fa-shower",
-                  color: "#0891b2",
-                  bgColor: "rgba(8, 145, 178, 0.12)",
-                },
-                {
-                  text: "মাসিকের সময় ঘরে তৈরি পরিষ্কার ন্যাপকিন/কাপড় অথবা স্যানিটারি ন্যাপকিন ব্যবহার করতে হবে। রক্তস্রাবের পরিমাণ অনুযায়ী তা দিনে অন্ততপক্ষে ৪ থেকে ৬ বার বদলাতে হবে।",
-                  icon: "fa-handkerchief",
-                  color: "#8b5cf6",
-                  bgColor: "rgba(139, 92, 246, 0.12)",
-                },
-                {
-                  text: "ব্যবহারের পর স্যানিটারি ন্যাপকিন কাগজে মুড়িয়ে ডাস্টবিনে বা ময়লা ফেলার নির্দিষ্ট স্থানে ফেলতে হবে। কাপড় ব্যবহার করলে ব্যবহার শেষে কাপড়টি সাবান ও পানি দিয়ে ধুতে হবে এবং সূর্যের আলোতে শুকিয়ে পরিষ্কার প্যাকেটে রেখে পরবর্তীতে ব্যবহারের জন্য সংরক্ষণ করতে হবে।",
-                  icon: "fa-trash",
-                  color: "#f97316",
-                  bgColor: "rgba(249, 115, 22, 0.12)",
-                },
-                {
-                  text: "মাসিকের সময় স্বাভাবিক হাঁটাচলা ও হালকা ব্যায়াম করতে হবে এবং পর্যাপ্ত পরিমাণে ঘুমাতে হবে।",
-                  icon: "fa-person-walking",
-                  color: "#f59e0b",
-                  bgColor: "rgba(245, 158, 11, 0.12)",
-                },
-                {
-                  text: "মাসিক বন্ধ থাকলে, এক মাসে ২–৩ বার মাসিক হলে, প্রচুর রক্তস্রাব হলে, তীব্র ব্যথা হলে বা অস্বাভাবিক কোনো সমস্যা দেখা দিলে চিকিৎসকের পরামর্শ নিতে হবে।",
-                  icon: "fa-stethoscope",
-                  color: "#dc2626",
-                  bgColor: "rgba(220, 38, 38, 0.12)",
-                },
-              ];
+  {
+    text: yhLang(
+      "During menstruation, girls should eat plenty of nutritious food, vegetables, and fruits, and drink sufficient water.",
+      "মাসিককালীন সময়ে মেয়েদের প্রচুর পরিমাণে বিভিন্ন ধরনের পুষ্টিকর খাবার, শাকসবজি এবং ফলমূল খেতে হবে এবং প্রচুর পরিমাণে পানি পান করতে হবে।"
+    ),
+    icon: "fa-apple",
+    color: "#10b981",
+    bgColor: "rgba(16, 185, 129, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Take a bath daily and clean the reproductive organs properly with water and soap.",
+      "প্রতিদিন ভালোভাবে গোসল এবং প্রজনন অঙ্গ পানি ও সাবান দিয়ে পরিষ্কার করতে হবে।"
+    ),
+    icon: "fa-shower",
+    color: "#0891b2",
+    bgColor: "rgba(8, 145, 178, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Use clean homemade napkins/cloth or sanitary pads during menstruation. Change them at least 4–6 times a day depending on the flow.",
+      "মাসিকের সময় ঘরে তৈরি পরিষ্কার ন্যাপকিন/কাপড় অথবা স্যানিটারি ন্যাপকিন ব্যবহার করতে হবে। রক্তস্রাবের পরিমাণ অনুযায়ী তা দিনে অন্ততপক্ষে ৪ থেকে ৬ বার বদলাতে হবে।"
+    ),
+    icon: "fa-handkerchief",
+    color: "#8b5cf6",
+    bgColor: "rgba(139, 92, 246, 0.12)",
+  },
+  {
+    text: yhLang(
+      "After use, wrap sanitary napkins in paper and dispose of them in a dustbin. If using cloth, wash it with soap and water, dry it in sunlight, and store it properly for reuse.",
+      "ব্যবহারের পর স্যানিটারি ন্যাপকিন কাগজে মুড়িয়ে ডাস্টবিনে বা ময়লা ফেলার নির্দিষ্ট স্থানে ফেলতে হবে। কাপড় ব্যবহার করলে ব্যবহার শেষে কাপড়টি সাবান ও পানি দিয়ে ধুতে হবে এবং সূর্যের আলোতে শুকিয়ে পরিষ্কার প্যাকেটে রেখে পরবর্তীতে ব্যবহারের জন্য সংরক্ষণ করতে হবে।"
+    ),
+    icon: "fa-trash",
+    color: "#f97316",
+    bgColor: "rgba(249, 115, 22, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Maintain normal movement, do light exercise, and get adequate sleep during menstruation.",
+      "মাসিকের সময় স্বাভাবিক হাঁটাচলা ও হালকা ব্যায়াম করতে হবে এবং পর্যাপ্ত পরিমাণে ঘুমাতে হবে।"
+    ),
+    icon: "fa-person-walking",
+    color: "#f59e0b",
+    bgColor: "rgba(245, 158, 11, 0.12)",
+  },
+  {
+    text: yhLang(
+      "If periods stop, occur 2–3 times a month, involve excessive bleeding, severe pain, or any abnormal symptoms, consult a doctor.",
+      "মাসিক বন্ধ থাকলে, এক মাসে ২–৩ বার মাসিক হলে, প্রচুর রক্তস্রাব হলে, তীব্র ব্যথা হলে বা অস্বাভাবিক কোনো সমস্যা দেখা দিলে চিকিৎসকের পরামর্শ নিতে হবে।"
+    ),
+    icon: "fa-stethoscope",
+    color: "#dc2626",
+    bgColor: "rgba(220, 38, 38, 0.12)",
+  },
+];
 
               const renderCarePoints = () =>
                 menstrualCarePoints
@@ -3703,14 +3721,14 @@ const coursesData = [
 
                   <section class="m4l8-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row align-items-stretch g-2">
-                      <div class="col-lg-5">
+                      <div class="col-lg-7">
                         <figure class="m4l8-image-card mb-0">
                           <img src="img/modu4/masik2.png" alt="মাসিক চলাকালীন মেয়েদের করণীয়" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l8-main-image" />
                           <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: মাসিক চলাকালীন যত্ন</figcaption>
                         </figure>
                       </div>
 
-                      <div class="col-lg-7">
+                      <div class="col-lg-5">
                         <div class="m4l8-points-wrapper">
                           ${renderCarePoints()}
                         </div>
@@ -5338,7 +5356,7 @@ const coursesData = [
         id: "ch-8",
         title: yhLang(
           "Module-8: Adolescent Family Planning",
-          "মডিউল-৮: তারুন্য কালীনমাতৃত্ব",
+          "মডিউল-৮: কৈশোরে কালীনমাতৃত্ব",
         ),
         lessons: [
 

@@ -10481,7 +10481,7 @@ figure.image-card {
 }
 
 .m4l6-organ-description {
-  font-size: 0.5rem;
+  font-size: 18px;
   line-height: 1.5;
   color: #374151;
   position: relative;
@@ -10708,10 +10708,10 @@ figure.image-card {
 /* ===== INTRO DESCRIPTION ===== */
 
 .m4l7-intro-description {
-  font-size: 0.525rem;
+  font-size: 18px;
   line-height: 1.6;
   color: #374151;
-  margin-bottom: 0.8rem;
+  margin: 0.8rem 0px;
   padding: 0.6rem;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 0.4rem;
@@ -10796,7 +10796,7 @@ figure.image-card {
 }
 
 .m4l7-point-text {
-  font-size: 0.5rem;
+  font-size: 18px;
   line-height: 1.5;
   color: #374151;
   margin: 0;
@@ -10850,7 +10850,7 @@ figure.image-card {
 }
 
 .m4l7-info-text {
-  font-size: 0.5rem;
+  font-size: 18px;
   line-height: 1.6;
   color: #15803d;
   margin: 0;
@@ -10900,9 +10900,9 @@ figure.image-card {
   }
 
   .m4l7-intro-description {
-    font-size: 0.5rem;
+    font-size: 18px;
     padding: 0.5rem;
-    margin-bottom: 0.7rem;
+    margin: 0.7rem 0px;
   }
 
   .m4l7-points-list {
@@ -10921,7 +10921,7 @@ figure.image-card {
   }
 
   .m4l7-point-text {
-    font-size: 0.48rem;
+    font-size: 18px;
   }
 
   .m4l7-info-box {
@@ -10936,7 +10936,7 @@ figure.image-card {
   }
 
   .m4l7-info-text {
-    font-size: 0.48rem;
+    font-size: 18px;
   }
 }
 
@@ -10970,10 +10970,10 @@ figure.image-card {
   }
 
   .m4l7-intro-description {
-    font-size: 0.475rem;
+    font-size: 18px;
     line-height: 1.5;
     padding: 0.5rem;
-    margin-bottom: 0.6rem;
+    margin: 0.6rem 0px;
     border-radius: 0.3rem;
   }
 
@@ -11002,7 +11002,7 @@ figure.image-card {
   }
 
   .m4l7-point-text {
-    font-size: 0.45rem;
+    font-size: 18px;
     line-height: 1.4;
   }
 
