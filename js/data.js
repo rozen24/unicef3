@@ -3661,7 +3661,7 @@ const coursesData = [
       "Use clean homemade napkins/cloth or sanitary pads during menstruation. Change them at least 4–6 times a day depending on the flow.",
       "মাসিকের সময় ঘরে তৈরি পরিষ্কার ন্যাপকিন/কাপড় অথবা স্যানিটারি ন্যাপকিন ব্যবহার করতে হবে। রক্তস্রাবের পরিমাণ অনুযায়ী তা দিনে অন্ততপক্ষে ৪ থেকে ৬ বার বদলাতে হবে।"
     ),
-    icon: "fa-handkerchief",
+    icon: "fa-person-half-dress",
     color: "#8b5cf6",
     bgColor: "rgba(139, 92, 246, 0.12)",
   },
@@ -3721,14 +3721,13 @@ const coursesData = [
 
                   <section class="m4l8-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row align-items-stretch g-2">
-                      <div class="col-lg-7">
-                        <figure class="m4l8-image-card mb-0">
-                          <img src="img/modu4/masik2.png" alt="মাসিক চলাকালীন মেয়েদের করণীয়" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l8-main-image" />
-                          <figcaption class="figure-caption text-center mt-2 small text-muted">চিত্র: মাসিক চলাকালীন যত্ন</figcaption>
+                      <div class="col-lg-8">
+                        <figure class=" mb-0">
+                          <img src="img/modu4/masik2.png" style="height: 550px; " alt="মাসিক চলাকালীন মেয়েদের করণীয়" class="img-fluid w-100 img-zoom rounded-lg shadow-lg animate-float-slow m4l8-main-image" />
                         </figure>
                       </div>
 
-                      <div class="col-lg-5">
+                      <div class="col-lg-4">
                         <div class="m4l8-points-wrapper">
                           ${renderCarePoints()}
                         </div>
@@ -3771,98 +3770,142 @@ const coursesData = [
               ],
             },
             content: (function () {
-              const parentRolePoints = [
-                {
-                  text: "তারুণ্যের শুরুতে কিশোরীকে মাসিক ও এর ব্যবস্থাপনা বিষয়ে তথ্য বা শিক্ষা দেওয়া।",
-                  icon: "fa-book",
-                  color: "#06b6d4",
-                  bgColor: "rgba(6, 182, 212, 0.12)",
-                },
-                {
-                  text: "কোনো সমস্যা হলে যেন বাবা-মায়ের সাথে আলোচনা করে—সেভাবে তাকে উৎসাহিত করা।",
-                  icon: "fa-comments",
-                  color: "#8b5cf6",
-                  bgColor: "rgba(139, 92, 246, 0.12)",
-                },
-                {
-                  text: "ঋতুস্রাবকে ভয় না পেয়ে সহজভাবে নিতে শিক্ষা দেওয়া।",
-                  icon: "fa-heart",
-                  color: "#ec4899",
-                  bgColor: "rgba(236, 72, 153, 0.12)",
-                },
-                {
-                  text: "এই সময়ে স্কুলে যাওয়া, খেলাধুলা করা সহ সব কাজ স্বাভাবিকভাবে করতে উৎসাহ দেওয়া।",
-                  icon: "fa-school",
-                  color: "#f59e0b",
-                  bgColor: "rgba(245, 158, 11, 0.12)",
-                },
-                {
-                  text: "ঋতুস্রাবের সময়ে কিশোরীকে বেশি করে পুষ্টিকর খাবার খেতে উৎসাহিত করা।",
-                  icon: "fa-utensils",
-                  color: "#10b981",
-                  bgColor: "rgba(16, 185, 129, 0.12)",
-                },
-              ];
+           const parentRolePoints = [
+  {
+    text: yhLang(
+      "At the beginning of adolescence, provide girls with information or education about menstruation and its management.",
+      "তারুণ্যের শুরুতে কিশোরীকে মাসিক ও এর ব্যবস্থাপনা বিষয়ে তথ্য বা শিক্ষা দেওয়া।"
+    ),
+    icon: "fa-book",
+    color: "#06b6d4",
+    bgColor: "rgba(6, 182, 212, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Encourage them to discuss any problems with their parents.",
+      "কোনো সমস্যা হলে যেন বাবা-মায়ের সাথে আলোচনা করে—সেভাবে তাকে উৎসাহিত করা।"
+    ),
+    icon: "fa-comments",
+    color: "#8b5cf6",
+    bgColor: "rgba(139, 92, 246, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Teach them to accept menstruation naturally without fear.",
+      "ঋতুস্রাবকে ভয় না পেয়ে সহজভাবে নিতে শিক্ষা দেওয়া।"
+    ),
+    icon: "fa-heart",
+    color: "#ec4899",
+    bgColor: "rgba(236, 72, 153, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Encourage them to continue school, sports, and daily activities normally during this time.",
+      "এই সময়ে স্কুলে যাওয়া, খেলাধুলা করা সহ সব কাজ স্বাভাবিকভাবে করতে উৎসাহ দেওয়া।"
+    ),
+    icon: "fa-school",
+    color: "#f59e0b",
+    bgColor: "rgba(245, 158, 11, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Encourage girls to eat more nutritious food during menstruation.",
+      "ঋতুস্রাবের সময়ে কিশোরীকে বেশি করে পুষ্টিকর খাবার খেতে উৎসাহিত করা।"
+    ),
+    icon: "fa-utensils",
+    color: "#10b981",
+    bgColor: "rgba(16, 185, 129, 0.12)",
+  },
+];
 
-              const schoolAuthorityPoints = [
-                {
-                  text: "একজন বা দু'জন নারী শিক্ষককে এ বিষয়ে দায়িত্ব দেওয়া যেতে পারে যেন তারা মাসিকের সময়ে ছাত্রীদের ব্যক্তিগত পরিষ্কার-পরিচ্ছন্নতা বিষয়ে তথ্য দিয়ে সাহায্য করতে পারেন।",
-                  icon: "fa-chalkboard-user",
-                  color: "#3b82f6",
-                  bgColor: "rgba(59, 130, 246, 0.12)",
-                },
-                {
-                  text: "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা প্রস্তুতি ছাড়া হঠাৎ করে মাসিক শুরু হয়ে যেতে পারে। সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীকে সাহায্য করতে পারে।",
-                  icon: "fa-first-aid",
-                  color: "#ef4444",
-                  bgColor: "rgba(239, 68, 68, 0.12)",
-                },
-                {
-                  text: "অনেক মেয়ের মাসিকের সময় তলপেটে তীব্র ব্যথা হয়। তাই স্কুলের ফার্স্ট এইড বক্সে বেদনানাশক ট্যাবলেট রাখা প্রয়োজন।",
-                  icon: "fa-pill",
-                  color: "#f97316",
-                  bgColor: "rgba(249, 115, 22, 0.12)",
-                },
-                {
-                  text: "মনে রাখতে হবে যে, ঋতুস্রাব একটি স্বাভাবিক শারীরিক প্রক্রিয়া—এ নিয়ে লজ্জা বা সংকোচের কিছু নেই। এ বিষয়টি ছাত্র-ছাত্রী, শিক্ষকসহ সবাইকে সহজভাবে দেখার জন্য এবং সহযোগিতা দেওয়ার জন্য ওরিয়েন্টেশন প্রদান করা প্রয়োজন।",
-                  icon: "fa-handshake",
-                  color: "#06b6d4",
-                  bgColor: "rgba(6, 182, 212, 0.12)",
-                },
-              ];
 
-              const requiredFacilitiesPoints = [
-                {
-                  text: "ছেলে ও মেয়েদের জন্য পৃথক টয়লেটের ব্যবস্থা করতে হবে",
-                  icon: "fa-restroom",
-                  color: "#7c3aed",
-                  bgColor: "rgba(124, 58, 237, 0.12)",
-                },
-                {
-                  text: "সার্বক্ষণিক পানির ব্যবস্থা থাকতে হবে",
-                  icon: "fa-water",
-                  color: "#0891b2",
-                  bgColor: "rgba(8, 145, 178, 0.12)",
-                },
-                {
-                  text: "টয়লেটে পর্যাপ্ত সাবানের ব্যবস্থা রাখতে হবে",
-                  icon: "fa-soap",
-                  color: "#06b6d4",
-                  bgColor: "rgba(6, 182, 212, 0.12)",
-                },
-                {
-                  text: "টয়লেটে ঢাকনাযুক্ত বিন/ঝুড়ির ব্যবস্থা রাখতে হবে",
-                  icon: "fa-trash-can",
-                  color: "#f59e0b",
-                  bgColor: "rgba(245, 158, 11, 0.12)",
-                },
-                {
-                  text: "টয়লেট প্রতিদিন পরিষ্কারের জন্য পরিচ্ছন্নতা কর্মীর ব্যবস্থা রাখতে হবে",
-                  icon: "fa-broom",
-                  color: "#10b981",
-                  bgColor: "rgba(16, 185, 129, 0.12)",
-                },
-              ];
+            const schoolAuthorityPoints = [
+  {
+    text: yhLang(
+      "Assign one or two female teachers to guide and support students on menstrual hygiene.",
+      "একজন বা দু'জন নারী শিক্ষককে এ বিষয়ে দায়িত্ব দেওয়া যেতে পারে যেন তারা মাসিকের সময়ে ছাত্রীদের ব্যক্তিগত পরিষ্কার-পরিচ্ছন্নতা বিষয়ে তথ্য দিয়ে সাহায্য করতে পারেন।"
+    ),
+    icon: "fa-chalkboard-user",
+    color: "#3b82f6",
+    bgColor: "rgba(59, 130, 246, 0.12)",
+  },
+  {
+    text: yhLang(
+      "If menstruation starts unexpectedly at school, provide emergency sanitary napkins (free or paid).",
+      "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা প্রস্তুতি ছাড়া হঠাৎ করে মাসিক শুরু হয়ে যেতে পারে। সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীকে সাহায্য করতে পারে।"
+    ),
+    icon: "fa-first-aid",
+    color: "#ef4444",
+    bgColor: "rgba(239, 68, 68, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Keep pain relief tablets in the school first aid box for menstrual pain.",
+      "অনেক মেয়ের মাসিকের সময় তলপেটে তীব্র ব্যথা হয়। তাই স্কুলের ফার্স্ট এইড বক্সে বেদনানাশক ট্যাবলেট রাখা প্রয়োজন।"
+    ),
+    icon: "fa-pills",
+    color: "#f97316",
+    bgColor: "rgba(249, 115, 22, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Ensure awareness that menstruation is a natural process and promote a supportive environment among students and teachers.",
+      "মনে রাখতে হবে যে, ঋতুস্রাব একটি স্বাভাবিক শারীরিক প্রক্রিয়া—এ নিয়ে লজ্জা বা সংকোচের কিছু নেই। এ বিষয়টি ছাত্র-ছাত্রী, শিক্ষকসহ সবাইকে সহজভাবে দেখার জন্য এবং সহযোগিতা দেওয়ার জন্য ওরিয়েন্টেশন প্রদান করা প্রয়োজন।"
+    ),
+    icon: "fa-handshake",
+    color: "#06b6d4",
+    bgColor: "rgba(6, 182, 212, 0.12)",
+  },
+];
+
+             const requiredFacilitiesPoints = [
+  {
+    text: yhLang(
+      "Provide separate toilets for boys and girls.",
+      "ছেলে ও মেয়েদের জন্য পৃথক টয়লেটের ব্যবস্থা করতে হবে"
+    ),
+    icon: "fa-restroom",
+    color: "#7c3aed",
+    bgColor: "rgba(124, 58, 237, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Ensure continuous water supply.",
+      "সার্বক্ষণিক পানির ব্যবস্থা থাকতে হবে"
+    ),
+    icon: "fa-water",
+    color: "#0891b2",
+    bgColor: "rgba(8, 145, 178, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Ensure availability of sufficient soap in toilets.",
+      "টয়লেটে পর্যাপ্ত সাবানের ব্যবস্থা রাখতে হবে"
+    ),
+    icon: "fa-soap",
+    color: "#06b6d4",
+    bgColor: "rgba(6, 182, 212, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Provide covered bins in toilets.",
+      "টয়লেটে ঢাকনাযুক্ত বিন/ঝুড়ির ব্যবস্থা রাখতে হবে"
+    ),
+    icon: "fa-trash-can",
+    color: "#f59e0b",
+    bgColor: "rgba(245, 158, 11, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Ensure daily cleaning of toilets with proper staff.",
+      "টয়লেট প্রতিদিন পরিষ্কারের জন্য পরিচ্ছন্নতা কর্মীর ব্যবস্থা রাখতে হবে"
+    ),
+    icon: "fa-broom",
+    color: "#10b981",
+    bgColor: "rgba(16, 185, 129, 0.12)",
+  },
+];      
+
 
               const renderParentPoints = () =>
                 parentRolePoints
@@ -3920,10 +3963,7 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide m4l9-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-handshake"></i> ${yhLang(
-                    "Roles in Menstrual Management",
-                    "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
-                  )}</h2>
+                
 
                   <!-- Parent Role Section -->
                   <section class="m4l9-section-card parent-section" data-aos="fade-up" data-aos-delay="40">
@@ -4076,7 +4116,7 @@ const coursesData = [
       "If there is severe pain during menstruation, pain relief medicine should be taken as advised by a doctor.",
       "মাসিকের সময় অতিরিক্ত ব্যথা হলে ব্যথানাশক ওষুধ (ডাক্তারের পরামর্শ অনুযায়ী) খেতে হবে।"
     ),
-    icon: "fa-pill",
+    icon: "fa-pills",
     color: "#10b981",
     bgColor: "rgba(16, 185, 129, 0.12)",
   },
@@ -5111,7 +5151,7 @@ const coursesData = [
                               <div class="ch7l3-methods-grid">
                                 <div class="ch7l3-method-item ch7l3-method-type-2">
                                   <div class="ch7l3-method-icon">
-                                    <i class="fa-solid fa-pills"></i>
+                                    <i class="fa-solid fa-pillss"></i>
                                   </div>
                                   <div class="ch7l3-method-info">
                                     <p class="ch7l3-method-name">${yhLang("Birth Control Pills", "খাবার বড়ি")}</p>
@@ -5229,7 +5269,7 @@ const coursesData = [
                         <thead class="ch7l4-table-head">
                           <tr>
                             <th class="ch7l4-label-header"><span>${yhLang("No. of Children", "সন্তান সংখ্যা")}</span></th>
-                            <th class="ch7l4-method-col" data-method="pill"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white;"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</span></th>
+                            <th class="ch7l4-method-col" data-method="pill"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white;"><i class="fa-solid fa-pillss"></i> ${yhLang("Pills", "খাবার বড়ি")}</span></th>
                             <th class="ch7l4-method-col" data-method="condom"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white;"><i class="fa-solid fa-shield-halved"></i> ${yhLang("Condom", "কনডম")}</span></th>
                             <th class="ch7l4-method-col" data-method="injection"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</span></th>
                             <th class="ch7l4-method-col" data-method="implant"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;"><i class="fa-solid fa-microchip"></i> ${yhLang("Implant", "ইমপ্ল্যান্ট")}</span></th>
@@ -5308,7 +5348,7 @@ const coursesData = [
                         </thead>
                         <tbody class="ch7l4-table-body">
                           <tr class="ch7l4-usage-row ch7l4-method-1" data-aos="fade-up" data-aos-delay="80">
-                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</div></td>
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);"><i class="fa-solid fa-pillss"></i> ${yhLang("Pills", "খাবার বড়ি")}</div></td>
                             <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Take daily", "প্রতিদিন খেতে হয়")}</span></div></td>
                             <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("Daily", "প্রতিদিন")}</div></td>
                           </tr>
@@ -12525,7 +12565,7 @@ const orbitItems = [
                               <ul class="m17l1-causes-list">
                                 <li class="m17l1-cause-item m17l1-cause-availability" data-aos="fade-up" data-aos-delay="65">
                                   <div class="m17l1-cause-icon">
-                                    <i class="fa-solid fa-pills"></i>
+                                    <i class="fa-solid fa-pillss"></i>
                                   </div>
                                   <span class="m17l1-cause-text">${yhLang("Easy availability of drugs", "মাদকদ্রব্যের সহজলভ্যতা")}</span>
                                 </li>
@@ -15578,7 +15618,7 @@ const orbitItems = [
 শিশুর মানসিক বিকাশ নিশ্চিত ও গলগণ্ড রোধ করে।
 `,
                   ),
-                  icon: "fa-pills",
+                  icon: "fa-pillss",
                   color: "vitamins",
                 },
                 {
@@ -17783,7 +17823,7 @@ const orbitItems = [
                   ),
                 },
                 {
-                  icon: "fa-pills",
+                  icon: "fa-pillss",
                   color: "#e53935",
                   text: yhLang(
                     "Children with abnormal behavioral disorders due to drugs or other causes",
@@ -20528,7 +20568,7 @@ const orbitItems = [
                     "Treatment - Symptomatic",
                     "চিকিৎসা- লক্ষণভিত্তিক",
                   ),
-                  icon: "fa-pills",
+                  icon: "fa-pillss",
                 },
               ];
 
@@ -21686,7 +21726,7 @@ const orbitItems = [
                   ),
                 },
                 {
-                  icon: "fa-pills",
+                  icon: "fa-pillss",
                   color: "m24l2-warn-red",
                   text: yhLang("Drug use", "মাদক সেবন"),
                 },
