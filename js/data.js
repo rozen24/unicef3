@@ -6090,8 +6090,8 @@ const coursesData = [
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <figure class="image-card mb-0">
-                      <img src="img/modu9/jouno.png" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                    <figure class=" mb-0">
+                      <img src="img/modu9/jouno.png" style="max-height: 650px;" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid w-100 img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
                   </section>
                 </div>
@@ -6472,7 +6472,7 @@ const coursesData = [
                     </div>
 
                     <div class="ch11l4-right" data-aos="zoom-in" data-aos-delay="60">
-                      <div class="ch11l4-image-wrapper">
+                      <div class="">
                         <img src="img/modu11/joni.jpg" style="height: 500px;" alt="Cervical Cancer Prevention" class="ch11l4-image">
                       </div>
                     </div>
@@ -6544,7 +6544,7 @@ const coursesData = [
                   title: yhLang("Vaccine Doses", "টিকার ডোজ সংখ্যা"),
                   icon: "fa-capsules",
                   items: [
-                    { text: yhLang("One dose", "এক ডোজ"), icon: "fa-1" }
+                    { text: yhLang("One dose", "এক ডোজ"), icon: "fa-syringe" }
                   ]
                 }
               ];
@@ -6591,10 +6591,10 @@ const coursesData = [
                     <div class="ch11l5-right" data-aos="zoom-in" data-aos-delay="80">
                       <div class="ch11l5-images-wrapper">
                         <div class="ch11l5-image-box ch11l5-image-1">
-                          <img src="img/modu11/dose1.jpg" alt="HPV Vaccine Dose 1" class="ch11l5-image img-zoom">
+                          <img src="img/modu11/dose1.jpg" style="max-height: 330px;" alt="HPV Vaccine Dose 1" class="ch11l5-image img-zoom">
                         </div>
                         <div class="ch11l5-image-box ch11l5-image-2">
-                          <img src="img/modu11/dose2.jpg" alt="HPV Vaccine Dose 2" class="ch11l5-image img-zoom">
+                          <img src="img/modu11/dose2.jpg" style="max-height: 330px;" alt="HPV Vaccine Dose 2" class="ch11l5-image img-zoom">
                         </div>
                       </div>
                     </div>
@@ -6952,13 +6952,10 @@ const coursesData = [
               return `
                 <div class="ch12l4-slide">
                   <div class="ch12l4-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l4-title">
-                      <i class="fa-solid fa-image"></i>
-                      ${yhLang("Management", "ব্যবস্থাপনা")}
-                    </h2>
+                    
                   </div>
                   <div class="ch12l4-image-container" data-aos="zoom-in" data-aos-delay="40">
-                    <img src="img/modu12/managemant.jpg" alt="PCOS Management" class="ch12l4-image">
+                    <img src="img/modu12/managemant.jpg" style="max-height: 680px;" alt="PCOS Management" class="ch12l4-image">
                   </div>
                 </div>
               `;
@@ -8788,11 +8785,11 @@ const orbitItems = [
 
 
                   <section class="ch13l9-content" data-aos="fade-up" data-aos-delay="60">
-                  <div class="row g-1">
-                       <div class="col-md-5">
+                  <div class="row g-4">
+                       <div class="col-md-4">
                              ${renderSections1()}
                        </div>
-                       <div class="col-md-7">
+                       <div class="col-md-8">
                           ${renderSections2()}
                        </div>
                     </div>
@@ -13592,13 +13589,18 @@ const orbitItems = [
                   color: "m18l4-step-fire",
                 },
               ];
-
+              const formatIndex = (value) => {
+              const bnDigits = ["০","১","২","৩","৪","৫","৬","৭","৮","৯"];
+              return String(value)
+                .padStart(2, "0")
+                .replace(/\d/g, d => bnDigits[d]);
+               }; 
               const renderSteps = (items) =>
                 items
                   .map(
                     (item, index) => `
                       <div class="m18l4-step-item ${item.color}" data-aos="fade-up" data-aos-delay="${35 + index * 30}">
-                        <span class="m18l4-step-num">${index + 1}</span>
+                        <span class="m18l4-step-num">${formatIndex(index + 1)}</span>
                         <span class="m18l4-step-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <p class="mb-0">${item.text}</p>
                       </div>
@@ -13785,20 +13787,20 @@ const orbitItems = [
                     </h2>
                   </header>
 
-                  <section class="m18l5-intro-panel m18l5-intro-overview m18l5-shadow-definition" data-aos="fade-up" data-aos-delay="20">
+                  <section class="m18l5-intro-panel mb-1 p1 m18l5-intro-overview m18l5-shadow-definition" data-aos="fade-up" data-aos-delay="20">
                     <p class="m18l5-block-title">
                       <p class="m18l5-intro-text">${intro}</p>
                     </p>
                     
                   </section>
 
-                  <section class="m18l5-intro-panel m18l5-intro-types m18l5-shadow-example" data-aos="fade-up" data-aos-delay="40">
+                  <section class="m18l5-intro-panel mb-1 p-1 m18l5-intro-types m18l5-shadow-example" data-aos="fade-up" data-aos-delay="40">
                     
                     <p class="m18l5-intro-text">${typeIntro}</p>
                   </section>
-                  <section class="m18l5-intro-panel m18l5-intro-types m18l5-shadow-example" data-aos="fade-up" data-aos-delay="40">
+                  <section class="m18l5-intro-panel mb-1 p-1  m18l5-intro-types m18l5-shadow-example" data-aos="fade-up" data-aos-delay="40">
                     
-                   <h3 class="m18l5-panel-title">
+                   <h3 class="m18l5-panel-title mb-1 p-1 ">
                         <i class="fa-solid fa-bone"></i>
                         ${openFractureHeading}
                       </h3>
@@ -14009,7 +14011,7 @@ const orbitItems = [
 
                   <header class="m18l6-hero" data-aos="fade-up">
                     <div class="m18l6-hero-badge" aria-hidden="true">
-                      <i class="fa-solid fa-snake"></i>
+                      <i class="fa-solid fa-staff-snake"></i>
                     </div>
                     <h2 class="m18l6-hero-title">
                       <i class="fa-solid fa-shield-virus"></i>
@@ -15128,7 +15130,6 @@ const orbitItems = [
                       display: flex;
                       align-items: center;
                       gap: 8px;
-                      margin-bottom: 4px;
                       position: relative;
                       z-index: 1;
                     }
@@ -15137,11 +15138,11 @@ const orbitItems = [
                       display: flex;
                       align-items: center;
                       justify-content: center;
-                      width: 36px;
-                      height: 36px;
+                      width: 28px;
+                      height: 28px;
                       border-radius: 12px;
                       background: rgba(255, 255, 255, 0.6);
-                      font-size: 1.1rem;
+                      font-size: 1rem;
                       flex-shrink: 0;
                     }
 
@@ -15629,7 +15630,7 @@ const orbitItems = [
 
               return `
                 <div class="m19l3-table-container">
-                  <div class="m19l3-table-header" data-aos="fade-up">
+                  <div class="m19l3-table-header my-2" data-aos="fade-up">
                     <h2><i class="fa-solid fa-bowl-food"></i>${yhLang(
                       "Nutrition Components, Sources, and Functions",
                       "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ",
@@ -16334,10 +16335,10 @@ const orbitItems = [
                     <h3 class="m19l9-h3"><i class="fa-solid fa-images"></i>${yhLang("Nutrition Cycle Diagrams", "পুষ্টি চক্র চিত্র")}</h3>
                     <div class="m19l9-gallery">
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="80">
-                        <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" class="img-fluid rounded img-zoom" />
+                        <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" style="height: 480px;" class="img-fluid rounded img-zoom" />
                       </figure>
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="img/modu19/pusti2.png" alt="তারুন্য কালীনপুষ্টি" class="img-fluid rounded img-zoom" />
+                        <img src="img/modu19/pusti2.png" style="height: 480px;" alt="তারুন্য কালীনপুষ্টি" class="img-fluid rounded img-zoom" />
                       </figure>
                     </div>
                   </section>
@@ -19637,7 +19638,7 @@ const orbitItems = [
               const cautionPoints = [
                 yhLang(
                   "Children should be kept away while spraying pesticides at home or in the fields. If necessary, cover the nose and mouth and spray in the direction of the wind.",
-                  "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়জনে নাক মুখ ধেকে বাতাসের অনুকূলে কীটনাশক ছিটানো ।",
+                  "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়োজনে নাক মুখ ধেকে বাতাসের অনুকূলে কীটনাশক ছিটানো ।",
                 ),
                 yhLang(
                   "Fruits and vegetables should not be harvested for sale or consumption immediately after applying pesticides. They should be washed thoroughly with water before eating.",

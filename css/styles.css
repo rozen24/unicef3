@@ -12168,7 +12168,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   background: rgba(251, 192, 45, 0.2);
   border: 1px solid rgba(251, 192, 45, 0.4);
   border-radius: 50%;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #5458d7;
   flex-shrink: 0;
@@ -12203,7 +12203,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   background: rgba(255, 255, 255, 0.84);
   border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 10px;
-  padding: 9px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   box-shadow: 0 4px 12px rgba(251, 192, 45, 0.15), 0 2px 5px rgba(245, 127, 23, 0.09);
@@ -12314,10 +12313,10 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   .m18l4-hero-title { font-size: 0.96rem; }
   .m18l4-section-title { font-size: 0.82rem; }
   .m18l4-step-item { padding: 6px 7px; gap: 6px; }
-  .m18l4-step-num { width: 20px; height: 20px; font-size: 0.65rem; }
+  .m18l4-step-num { width: 20px; height: 20px; font-size: 1rem; }
   .m18l4-step-icon { width: 22px; height: 22px; font-size: 0.68rem; }
   .m18l4-step-item p { font-size: 0.68rem; }
-  .m18l4-figure { padding: 8px; }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12484,8 +12483,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   z-index: 10;
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 12px;
-  padding: 11px 12px;
-  margin-bottom: 11px;
+  padding: 5px;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -12807,7 +12805,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   .m18l5-hero-badge { width: 52px; height: 52px; }
   .m18l5-hero-badge i { font-size: 1.14rem; }
   .m18l5-hero-title { font-size: 0.98rem; }
-  .m18l5-intro-panel { padding: 9px; }
+  .m18l5-intro-panel { padding: 5px; }
   .m18l5-intro-text { font-size: 0.77rem; }
   .m18l5-panel-title { font-size: 0.9rem; }
   .m18l5-panel-subtitle { font-size: 0.8rem; }
@@ -13536,14 +13534,14 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 .m18l7-care-list {
   display: grid;
-  gap: 8px;
+  gap: 3px;
 }
 
 .m18l7-symptom-item,
 .m18l7-care-item {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   border: 1px solid rgba(255, 255, 255, 0.61);
   border-left: 3px solid;
@@ -15218,6 +15216,10 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   opacity: 0.2;
   z-index: 0;
 }
+.m19l3-nutrition-table td.col-num { 
+  padding: 15px !important;
+}
+
 
 .m19l1x2-shape-1 {
   width: 126px;

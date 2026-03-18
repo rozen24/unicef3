@@ -163,8 +163,8 @@
 }
 
 .m14l1-li-icon {
-	width: 36px;
-	height: 36px;
+	width: 30px;
+	height: 30px;
 	border-radius: 10px;
 	display: inline-flex;
 	align-items: center;
@@ -847,18 +847,18 @@
 
 .m14l3-li {
 	display: grid;
-	grid-template-columns: 36px 1fr;
+	grid-template-columns: 32px 1fr;
 	gap: 4px;
 	align-items: center;
-	padding: 4px 5px;
+	padding: 3px 5px;
 	border-radius: 10px;
 	border: 1px solid transparent;
 	box-shadow: 0 1px 3px rgba(29, 51, 72, 0.11);
 }
 
 .m14l3-li-icon {
-	width: 36px;
-	height: 36px;
+	width: 30px;
+	height: 30px;
 	border-radius: 10px;
 	display: inline-flex;
 	align-items: center;
@@ -1110,14 +1110,14 @@
 	.m14l3-title i,
 	.m14l3-subtitle i,
 	.m14l3-li-icon {
-		width: 32px;
-		height: 32px;
+		width: 30px;
+		height: 30px;
 		font-size: 1.16rem;
 	}
 
 	.m14l3-li {
-		grid-template-columns: 32px 1fr;
-		padding: 5px;
+		grid-template-columns: 28px 1fr;
+		padding: 3px;
 	}
 
 	.m14l3-p {
@@ -1358,7 +1358,7 @@
 	display: inline-flex;
 	align-items: center;
 	gap: 4px;
-	padding: 4px 5px;
+	padding: 3px 5px;
 	border-radius: 10px;
 	font-size: 1.08rem;
 	line-height: 1.28;
@@ -1814,8 +1814,8 @@
 
 .m14l5-cause-icon,
 .m14l5-li-icon {
-	width: 36px;
-	height: 36px;
+	width: 30px;
+	height: 30px;
 	border-radius: 10px;
 	display: inline-flex;
 	align-items: center;
@@ -2232,9 +2232,9 @@
 
 .m14l6-card {
 	border-radius: 16px;
-	padding: 6px;
+	padding: 3px;
 	border: 1px solid rgba(111, 136, 162, 0.2);
-	margin-bottom: 6px;
+	margin-bottom: 3px;
 }
 
 .m14l6-card-intro {
@@ -2296,8 +2296,8 @@
 }
 
 .m14l6-li-icon {
-	width: 36px;
-	height: 36px;
+	width: 30px;
+	height: 30px;
 	border-radius: 10px;
 	display: inline-flex;
 	align-items: center;
@@ -3340,8 +3340,8 @@
 
 .m14l9-title i,
 .m14l9-subtitle i {
-	width: 36px;
-	height: 36px;
+	width: 30px;
+	height: 30px;
 	border-radius: 10px;
 	display: inline-flex;
 	align-items: center;
@@ -3611,8 +3611,8 @@
 	.m14l9-title i,
 	.m14l9-subtitle i,
 	.m14l9-li-icon {
-		width: 32px;
-		height: 32px;
+		width: 30px;
+		height: 30px;
 		font-size: 1.16rem;
 	}
 
@@ -3706,14 +3706,13 @@
 
 .m14l10-subtitle {
 	font-size: 1.72rem;
-	margin-bottom: 4px;
 	color: #1f5078;
 }
 
 .m14l10-title i,
 .m14l10-subtitle i {
-	width: 36px;
-	height: 36px;
+	width: 30px;
+	height: 30px;
 	border-radius: 10px;
 	display: inline-flex;
 	align-items: center;
@@ -3980,8 +3979,8 @@
 	.m14l10-title i,
 	.m14l10-subtitle i,
 	.m14l10-li-icon {
-		width: 32px;
-		height: 32px;
+		width: 30px;
+		height: 30px;
 		font-size: 1.16rem;
 	}
 

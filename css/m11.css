@@ -105,11 +105,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 56px;
+  height: 56px;
   border-radius: 6px;
   flex-shrink: 0;
-  font-size: 11px;
+  font-size: 36px;
 }
 
 .ch11l4-desc-desc1 .ch11l4-desc-icon {
@@ -1564,7 +1564,7 @@
   align-items: center;
   gap: 16px;
   margin: 0 0 0px 0;
-  padding: 10px;
+  padding: 5px;
 }
 
 .ch10l4-section-title i {
@@ -1651,8 +1651,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
   border-radius: 10px;
   flex-shrink: 0;
   font-size: 20px;
@@ -1884,7 +1884,7 @@
   .ch10l4-section-title {
     font-size: 1.28rem;
     gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   .ch10l4-section-title i {
@@ -1984,7 +1984,7 @@
   .ch10l4-section-title {
     font-size: 1.12rem;
     gap: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
   }
 
   .ch10l4-section-title i {
@@ -2084,7 +2084,7 @@
   .ch10l4-section-title {
     font-size: 1rem;
     gap: 8px;
-    margin-bottom: 14px;
+    margin-bottom: 5px;
   }
 
   .ch10l4-section-title i {
@@ -2207,7 +2207,7 @@
 .ch9l4-desc-text {
   font-size: 1.08rem;
   color: #4b5563;
-  line-height: 1.76;
+  line-height: 22px;
   margin: 0;
   font-weight: 500;
   letter-spacing: 0.3px;
@@ -2267,7 +2267,7 @@
 
 .ch9l4-list-item {
   position: relative;
-  padding: 12px 14px;
+  padding: 5px;
   border-radius: 14px;
   border: 2px solid transparent;
   display: flex;
@@ -2420,7 +2420,7 @@
 
   .ch9l4-desc-text {
     font-size: 1rem;
-    line-height: 1.64;
+    line-height: 22px;
   }
 
   .ch9l4-section {
@@ -2444,7 +2444,7 @@
   }
 
   .ch9l4-list-item {
-    padding: 10px 12px;
+    padding: 5px;
     gap: 10px;
   }
 
@@ -2497,7 +2497,7 @@
 
   .ch9l4-desc-text {
     font-size: 0.92rem;
-    line-height: 1.56;
+    line-height: 22px;
   }
 
   .ch9l4-section {
@@ -2521,7 +2521,7 @@
   }
 
   .ch9l4-list-item {
-    padding: 9px 11px;
+    padding: 5px;
     gap: 9px;
   }
 
@@ -2575,7 +2575,7 @@
 
   .ch9l4-desc-text {
     font-size: 0.84rem;
-    line-height: 1.48;
+    line-height: 22px;
   }
 
   .ch9l4-section {
@@ -2599,7 +2599,7 @@
   }
 
   .ch9l4-list-item {
-    padding: 8px 10px;
+    padding: 5px;
     gap: 8px;
   }
 
@@ -2653,7 +2653,7 @@
 
   .ch9l4-desc-text {
     font-size: 0.8rem;
-    line-height: 1.42;
+    line-height: 22px;
   }
 
   .ch9l4-section {
@@ -2677,7 +2677,7 @@
   }
 
   .ch9l4-list-item {
-    padding: 7px 9px;
+    padding: 5px;
     gap: 8px;
   }
 
