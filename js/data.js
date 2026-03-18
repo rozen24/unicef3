@@ -785,7 +785,7 @@ const coursesData = [
             id: "ch2-lesson-1",
             title: yhLang(
               "Global Young Population and Demographics",
-              "বৈশ্বিক তরুণ জনগোষ্ঠী ও জনতাত্ত্বিক চিত্র",
+              "তরুণদের বিস্তৃতি",
             ),
             icon: "fa-map-location-dot",
             gradientClass: "bg-gradient-blue",
@@ -812,61 +812,72 @@ const coursesData = [
             content: (function () {
               return `
             <div class="lesson-slide">
-              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী ও জনতাত্ত্বিক চিত্র")}</h2>
+              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বিস্তৃতি")}</h2>
 
-              <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
-              <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
-                <div class="container" style="position: relative">
-                  <img src="img/Distribution/globe.jpg" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
-                  <div class="globe-text-wrap">
-                    <h3 class="fw-bold map-text" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
-                    <p class="lead mt-2 text-dark">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়ন</strong> ১০–২৪ বছর বয়সী তরুণ রয়েছে।")}</p>
-                    <p class="mb-0 text-dark lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "প্রায় <strong>৯০%</strong> তরুণ উন্নয়নশীল দেশে বাস করে।")}</p>
-                  </div>
-                </div>
-              </section>
+              <div class="row g-1">
+                       <div class="col-md-5">
+                         
+                       <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
+                          <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
+                            <div class="container" style="position: relative">
+                              <img src="img/Distribution/globe.jpg" style="height: 350px;" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
+                              <div class="globe-text-wrap">
+                                <h3 class="fw-bold map-text" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
+                                <p class="lead mt-1 text-dark">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়ন</strong> ১০–২৪ বছর বয়সী তরুণ রয়েছে।")}</p>
+                                <p class="mb-0 text-dark lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "বাংলাদেশে মোট তরূণ -<strong>৯০%</strong> তরুণ উন্নয়নশীল দেশে বাস করে।")}</p>
+                              </div>
+                            </div>
+                          </section>
 
-              <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
-              <section class="world-youth-map-and-chart py-4 mb-4 rounded-4" data-aos="zoom-in">
-                <div class="container">
-                  <div class="row g-3 align-items-center">
-                    <div class="col-lg-12">
-                      <div class="modern-card glass-card h-region">
-                        <h5 class="mb-3">${yhLang("Global youth population by region", "অঞ্চলভিত্তিক বৈশ্বিক তরুণ জনগোষ্ঠী")}</h5>
-                        <div style="position:relative; height:340px;">
-                          <canvas id="regionalShareChart" aria-label="Global youth population by region. " role="img"></canvas>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+                          <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
+                            <section class="world-youth-map-and-chart py-1 rounded-4" data-aos="zoom-in">
+                              <div class="container">
+                                <div class="row g-1 align-items-center">
+                                  <div class="col-lg-12">
+                                    <div class="modern-card style="height: 250px;" glass-card h-region">
+                                      <h5 class="mb-1">${yhLang("Global youth population by region", "অঞ্চলভিত্তিক বৈশ্বিক তরুণ জনগোষ্ঠী")}</h5>
+                                      <div style="position:relative; height:250px;">
+                                        <canvas id="regionalShareChart" aria-label="Global youth population by region. " role="img"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                       </div>
+                       <div class="col-md-7">
+                          <!-- Step 4 – Bangladesh Focus -->
+                          <section class="bangladesh-map mb-1" data-aos="fade-right">
+                            <div class="container">
+                              <div class="row align-items-center g- modern-card glass-card">
+                                  <div class="col-md-8" style="padding:1.5rem;">
+                                    <h3>${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h3>
+                                    <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people (~30% of total population).", "<strong>বাংলাদেশে মোট তরূণ:</strong> ৪৯.৫<strong> মিলিয়ন</strong>  (যা মোট জনসংখ্যার প্রায় ৩০%)।")}</p>
+                                  </div>
+                                  <div class="col-md-4">
+                                  <img src="img/Distribution/dis-map.png" class="img-fluid img-zoom rounded shadow" alt="Bangladesh map placeholder">
+                                </div>
+                              </div>
+                            </div>
+                          </section>
 
-              <!-- Step 3 – POPULATION & HOUSING CENSUS 2022 (Chart.js) -->
-              <section class="population-pyramid-wrapper py-4 mb-4" data-aos="fade-up">
-                <div class="modern-card glass-card">
-                  <h5 class="mb-3">${yhLang("POPULATION & HOUSING CENSUS 2022", "জনসংখ্যা ও গৃহগণনা ২০২২")}</h5>
-                  <div style="position:relative; height:420px;">
-                    <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
-                  </div>
-                </div>
-              </section>
+                          <!-- Step 3 – POPULATION & HOUSING CENSUS 2022 (Chart.js) -->
+                          <section class="population-pyramid-wrapper" data-aos="fade-up">
+                            <div class="modern-card glass-card">
+                              <h5 class="">${yhLang("POPULATION & HOUSING CENSUS 2022", "জনসংখ্যা ও গৃহগণনা ২০২২")}</h5>
+                              <div style="position:relative; height:370px;">
+                                <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
+                              </div>
+                            </div>
+                          </section>
+                       </div>
+              </div>
 
-              <!-- Step 4 – Bangladesh Focus -->
-              <section class="bangladesh-map py-4" data-aos="fade-right">
-                <div class="container">
-                  <div class="row align-items-center g-3 modern-card glass-card">
-                      <div class="col-md-8" style="padding:1.5rem;">
-                        <h5>${yhLang("Distribution of Young People", "তরুণ জনগোষ্ঠীর বণ্টন")}</h5>
-                        <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people (~30% of total population).", "<strong>বাংলাদেশ:</strong> প্রায় <strong>৪৯.৫ মিলিয়ন</strong> তরুণ (মোট জনসংখ্যার প্রায় ৩০%)।")}</p>
-                      </div>
-                      <div class="col-md-4">
-                       <img src="img/Distribution/dis-map.png" class="img-fluid img-zoom rounded shadow" alt="Bangladesh map placeholder">
-                     </div>
-                  </div>
-                </div>
-              </section>
+              
 
+              
+
+              
               <!-- <div class="alert alert-info mt-3" role="note" data-aos="fade-up">
                 Complete the knowledge check below to continue.
               </div> -->
@@ -3336,7 +3347,7 @@ const coursesData = [
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <figure class="image-card mb-0" style="min-height:150px; max-width:100%; margin:0 auto;">
-                      <img src="img/modu11/tika.jpg" style="height: 600px;" alt="${yhLang("Women's additional vaccines", "মহিলাদের অন্যান্য টিকা")}" class="img-fluid rounded-4 shadow-sm img-zoom" />
+                      <img src="img/modu11/tika.jpg" style="height: 600px;" alt="" class="img-fluid rounded-4 shadow-sm img-zoom" />
                     </figure>
                   </section>
                 </div>
