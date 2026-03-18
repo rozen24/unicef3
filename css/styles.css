@@ -190,7 +190,9 @@ body {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
 }
-
+.lesson-audio-bar {
+  display: none !important;
+}
 @font-face {
   font-family: 'SolaimanLipi';
   src: url('../fonts/SolaimanLipi.ttf') format('truetype');

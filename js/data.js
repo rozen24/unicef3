@@ -201,7 +201,7 @@ const coursesData = [
                       (card) => `
                       <div class="col-md-12">
                         <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${card.delay}">
-                          <h4 class="gradient-text transition-base"><i class="fas ${card.icon} me-2 animate-float"></i>${card.title}</h4>
+                          <h4 class="gradient-text transition-base"><i class="fas ${card.icon} me-2 animate-float"></i>${card.title}</h2>
                           <p class="mb-0">${card.text}</p>
                         </div>
                       </div>
@@ -211,7 +211,7 @@ const coursesData = [
                 </div>
 
                 <div class="program-intro hover-lift-sm transition-base mt-3" data-aos="fade-up" data-aos-delay="100">
-                  <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>${yhLang("About YHAP", "ওয়াইএইচএপি সম্পর্কে")}</h4>
+                  <h4 class="gradient-text transition-base"><i class="fa-solid fa-lightbulb me-2 animate-float"></i>${yhLang("About YHAP", "ওয়াইএইচএপি সম্পর্কে")}</h2>
                   <p>${yhLang(
                     "The Young Health Ambassador Programme (YHAP) is a joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF to build informed health ambassadors through primary prevention and health promotion.",
                     "ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম (ওয়াইএইচএপি) হলো স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় ও ইউনিসেফের যৌথ উদ্যোগ, যা প্রতিরোধমূলক স্বাস্থ্য প্রচারের মাধ্যমে তথ্যসমৃদ্ধ স্বাস্থ্য দূত গড়ে তোলে।",
@@ -760,13 +760,13 @@ const coursesData = [
           //     <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
           //       <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
           //         <div class="stat-icon"><i class="fas fa-users-between-lines"></i></div>
-          //         <h4>49.5 Million</h4><p>Total young people in Bangladesh (~30%)</p>
+          //         <h4>49.5 Million</h2><p>Total young people in Bangladesh (~30%)</p>
           //       </div>
           //     </div>
           //     <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
           //       <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
           //         <div class="stat-icon"><i class="fas fa-user-group"></i></div>
-          //         <h4>31.5 Million</h4><p>Young (15–24 years) in Bangladesh</p>
+          //         <h4>31.5 Million</h2><p>Young (15–24 years) in Bangladesh</p>
           //       </div>
           //     </div>
           //   </div>
@@ -916,87 +916,68 @@ const coursesData = [
               return `
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Why young people’s health and wellbeing is important?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ?")}</h2>
+                <div class="row g-1">
+                    <div class="col-md-6">
+                        <h5 class="mt-2 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "বর্তমান প্রজন্মের ১০-২৪ বছর বয়সীদের উপর বিনিয়োগ তিনগুণ লাভজনক")}</h5>
 
-                <h5 class="mt-2 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "১০–২৪ বছর বয়সী বর্তমান প্রজন্মে বিনিয়োগ করলে ত্রিমুখী সুফল পাওয়া যায়")}</h5>
-
-                <!-- Triple Dividend Cards -->
-                <div class="row g-3 my-2">
-                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
-                    <div class="modern-card glass-card icon-spin-on-hover dividend-card">
-                      <div class="dividend-icon bg-gradient-blue"><i class="fa-solid fa-heart-pulse"></i></div>
-                      <h6 class="mb-1">${yhLang("Healthy young population now", "এখনই সুস্থ তরুণ জনগোষ্ঠী")}</h6>
-                      <p class="mb-2 text-muted"></p>
-                      <span class="badge-pill"></span>
+                          <!-- Triple Dividend Cards -->
+                          <div class="td-orbit-container" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="td-orbit-center">
+                              <div class="td-orbit-center-icon">
+                                <i class="fa-solid fa-people-group"></i>
+                              </div>
+                              <div class="td-orbit-center-text">
+                                <h2>${yhLang("2 billion young people", "১০-২৪ বছর বয়সী<br>২ বিলিয়ন মানুষ")}</h2>
+                              </div>
+                            </div>
+                            <div class="td-orbit-ring"></div>
+                            <div class="td-orbit-item" style="--angle: 0deg; --item-index: 0;" data-aos="zoom-in" data-aos-delay="240">
+                              <div class="td-orbit-card bg-gradient-green">
+                                <div class="td-orbit-card-icon">
+                                  <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <span class="td-orbit-card-text">${yhLang("Healthy youth population (now)", "সুস্থ তরুণ জনসংখ্যা (বর্তমান)")}</span>
+                              </div>
+                            </div>
+                            <div class="td-orbit-item" style="--angle: 120deg; --item-index: 1;" data-aos="zoom-in" data-aos-delay="270">
+                              <div class="td-orbit-card bg-gradient-blue">
+                                <div class="td-orbit-card-icon">
+                                  <i class="fa-solid fa-child"></i>
+                                </div>
+                                <span class="td-orbit-card-text">${yhLang("Healthy next generation children", "স্বাস্থ্যকর পরবর্তী<br>প্রজন্মের শিশুরা")}</span>
+                              </div>
+                            </div>
+                            <div class="td-orbit-item" style="--angle: 240deg; --item-index: 2;" data-aos="zoom-in" data-aos-delay="300">
+                              <div class="td-orbit-card bg-gradient-tangerine">
+                                <div class="td-orbit-card-icon">
+                                  <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <span class="td-orbit-card-text">${yhLang("Future healthy adult workforce", "ভবিষ্যৎ সুস্থ প্রাপ্তবয়স্ক<br>কর্মীবাহিনী")}</span>
+                              </div>
+                            </div>
+                          </div>
+                          
+                         
                     </div>
-                  </div>
-                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
-                    <div class="modern-card glass-card icon-spin-on-hover dividend-card">
-                      <div class="dividend-icon bg-gradient-green"><i class="fa-solid fa-briefcase"></i></div>
-                      <h6 class="mb-1">${yhLang("Future healthy adult workforce", "ভবিষ্যতের সুস্থ প্রাপ্তবয়স্ক কর্মশক্তি")}</h6>
-                      <p class="mb-0 text-muted"></p>
+                    <div class="col-md-6">
+                       <!-- Demographic Pyramid Compare -->
+                       
+                        <figure class="glass-card mb-0 text-center">
+                          <img src="img/modu2/pyramid.png" alt="Demographic Pyramid" style="height: 650px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
                     </div>
-                  </div>
-                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="modern-card glass-card icon-spin-on-hover dividend-card">
-                      <div class="dividend-icon bg-gradient-orange"><i class="fa-solid fa-baby"></i></div>
-                      <h6 class="mb-1">${yhLang("Healthy next generation of children", "স্বাস্থ্যবান আগামী প্রজন্ম")}</h6>
-                      <p class="mb-0 text-muted"></p>
-                    </div>
-                  </div>
                 </div>
 
-                <!-- ROI Banner -->
-                <div class="modern-card glass-card my-3 roi-banner" data-aos="zoom-in" data-aos-delay="240">
-                  <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-                    <div>
-                      <h5 class="mb-1">${yhLang("Investing in Adolescent Health & Wellbeing", "কৈশোর স্বাস্থ্য ও সুস্থতায় বিনিয়োগ")}</h5>
-                      <p class="mb-0 text-muted">${yhLang("For each US$1 invested, the return is US$5–10.", "প্রতিটি ১ ডলার বিনিয়োগে ৫–১০ ডলার পর্যন্ত ফল পাওয়া যায়।")}</p>
-                    </div>
-                    <div class="d-flex align-items-center gap-2 roi-chip">
-                      <span class="badge-pill">US$1</span>
-                      <i class="fa-solid fa-arrow-right-long"></i>
-                      <span class="badge-pill">US$5–10</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Demographic Pyramid Compare -->
-                <h5 class="gradient-text mt-4" data-aos="fade-up">${yhLang("Pathways to harnessing the Demographic Dividend", "জনমিতিক লভ্যাংশ কাজে লাগানোর পথসমূহ")}</h5>
-                <div class="row g-3 pyramid-compare" data-aos="fade-up" data-aos-delay="80">
-                  <!-- Positive Path -->
-                  <div class="col-lg-12">
-                   <div class="wrap-pyramid modern-card glass-card"> 
-                      <div class="pyramid-path pyramid-positive">
-                        <div class="pyramid-head"><i class="fa-solid fa-chart-line"></i> ${yhLang("Demographic Dividend", "জনমিতিক লভ্যাংশ")}</div>
-                        <ul class="pyramid-steps">
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-school"></i> ${yhLang("School", "বিদ্যালয়")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-briefcase"></i> ${yhLang("Employment", "কর্মসংস্থান")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-piggy-bank"></i> ${yhLang("Wealth/child investment", "সম্পদ/সন্তান বিনিয়োগ")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> ${yhLang("Lifelong learning", "আজীবন শিক্ষা")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> ${yhLang("Work-life Balance", "কর্মজীবন-ব্যক্তিজীবনের ভারসাম্য")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> ${yhLang("Security of Place", "বাসস্থানের নিরাপত্তা")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-handshake"></i> ${yhLang("Healthy children", "স্বাস্থ্যবান শিশু")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> ${yhLang("Secure old-age", "নিরাপদ বার্ধক্য")}</li>
-                        </ul>
-                      </div>
-
-                      <div class="pyramid-center highlight py-3 border-rounded"><i class="fa-solid fa-person-dress"></i> ${yhLang("Adolescent Girl", "কিশোরী")}</div>
-                      <!-- Negative Path -->
-                      <div class="pyramid-path pyramid-negative">
-                      <ul class="pyramid-steps pyramid-container">
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-ring"></i> ${yhLang("Child Marriage", "বাল্যবিবাহ")}</li>
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-person-walking-arrow-right"></i> ${yhLang("Leaving School", "বিদ্যালয় ছেড়ে দেওয়া")}</li>
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-helmet-safety"></i> ${yhLang("Informal work", "অনানুষ্ঠানিক কাজ")}</li>
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-rotate"></i> ${yhLang("Repeat Pregnancies", "বারবার গর্ভধারণ")}</li>
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-person-pregnant"></i> ${yhLang("Maternal morbidity", "মাতৃ অসুস্থতা")}</li>
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-child"></i> ${yhLang("Child illness & death", "শিশু অসুস্থতা ও মৃত্যু")}</li>
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-house-crack"></i> ${yhLang("Insecurity & Displacement", "অনিরাপত্তা ও বাস্তুচ্যুতি")}</li>
-                        <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-halved"></i> ${yhLang("Insecure old-age", "অনিরাপদ বার্ধক্য")}</li>
-                      </ul>
-                      <div class="pyramid-head py-2"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("Missed Demographic Dividend", "হারানো জনমিতিক লভ্যাংশ")}</div>
-                    </div>
-                  </div>                  
-                </div>
-                <p class="small text-muted mt-3 mb-0">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", "সূত্র: আওয়ার ফিউচার—ল্যানসেট কমিশন অন্ অ্যাডোলেসেন্ট হেলথ অ্যান্ড ওয়েলবিইং; প্যাটন প্রমুখ, ২০১৬।")}</p>
+                 <!-- ROI Banner -->
+                          <div class="modern-card glass-card roi-banner" data-aos="zoom-in" data-aos-delay="240">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                              <div>
+                                <h3 class="mb-1">${yhLang("Investing in Adolescent Health & Wellbeing", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় বিনিয়োগ, ১ মার্কিন ডলার বিনিয়োগের মাধ্যমে ৫-১০ মার্কিন ডলার রিটার্ন পাওয়া যাবে।")}</h3>
+                              </div>
+                            </div>
+                          </div>
+                
+                <p class="small text-muted mt-3 mb-0">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", "রেফারেন্স: আমাদের ভবিষ্যৎ: কিশোর স্বাস্থ্য ও সুস্থতার উপর একটি ল্যানসেট কমিশন; প্যাটন এবং অন্যান্যরা ২০১৬।")}</p>
 
               </div>`;
             })(),
@@ -14398,7 +14379,7 @@ const orbitItems = [
                       </h3>
                       ${renderCare(careSteps)}
                       <div class="m18l8-warning" role="alert" data-aos="zoom-in" data-aos-delay="120">
-                        <h4 class="m18l8-warning-title mb-1"><i class="fa-solid fa-ban"></i> ${yhLang("সতর্কতা:", "সতর্কতা:")}</h4>
+                        <h4 class="m18l8-warning-title mb-1"><i class="fa-solid fa-ban"></i> ${yhLang("সতর্কতা:", "সতর্কতা:")}</h2>
                         <p class="mb-0">${caution}</p>
                       </div>
                     </section>
@@ -17126,7 +17107,7 @@ const orbitItems = [
                   .map(
                     (section, idx) => `
                         <article class="glass-card p-2 h-100">
-                          <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h4>
+                          <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h2>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderBullets(section.bullets, baseDelay + idx * 40 + 20)}
                           </ul>
@@ -17485,17 +17466,17 @@ const orbitItems = [
                     
                     <div class="col-12 col-lg-5 d-flex flex-column gap-2">
                       <article class="glass-card p-4">
-                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h4>
+                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h2>
                         <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${bpIntro}</p>
                       </article>
                       <article class="glass-card p-4">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h2>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(bpEarly, 80)}
                         </ul>
                       </article>
                       <article class="glass-card p-4">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-shield-heart"></i>উচ্চ রক্তচাপ প্রতিরোধের উপায়</h4>
+                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-shield-heart"></i>উচ্চ রক্তচাপ প্রতিরোধের উপায়</h2>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(bpPrevention, 80)}
                         </ul>
@@ -18118,7 +18099,7 @@ const orbitItems = [
                                 <i class="fa-solid fa-layer-group" style="color:#fff; font-size:20px;"></i>
                               </span>
                               ${yhLang("Air pollution is primarily of two types:", "বায়ু দূষণ প্রাথমিক ভাবে দুই ধরনের:")}
-                            </h4>
+                            </h2>
                             <div style="background:linear-gradient(135deg,rgba(255,255,255,0.7), rgba(227,242,253,0.75)); padding:12px; border-radius:14px; margin-bottom:12px; border-left:4px solid #42a5f5; box-shadow:0 5px 15px rgba(66,165,245,0.2);">
                               <h5 style="display:flex; align-items:center; color:#1976d2; margin-bottom:8px; font-weight:600;">
                                 <i class="fa-solid fa-city" style="margin-right:8px; color:#1976d2; background:rgba(25,118,210,0.1); padding:8px; border-radius:8px;"></i>
