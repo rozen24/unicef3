@@ -4986,7 +4986,7 @@ const coursesData = [
         id: "ch-7",
         title: yhLang(
           "Module-7: Adolescent Family Planning",
-          "মডিউল-৭: তারুন্যকালীনপরিবার পরিকল্পনা",
+          "মডিউল-৭: তারুন্য কালীন পরিবার পরিকল্পনা",
         ),
         lessons: [
           {
@@ -5338,7 +5338,7 @@ const coursesData = [
         id: "ch-8",
         title: yhLang(
           "Module-8: Adolescent Family Planning",
-          "মডিউল-৮: তারুন্যকালীনমাতৃত্ব",
+          "মডিউল-৮: তারুন্য কালীনমাতৃত্ব",
         ),
         lessons: [
 
@@ -5348,7 +5348,7 @@ const coursesData = [
 
           {
             id: "ch8-lesson-1",
-            title: yhLang("Maternal Risks in Adolescence", "তারুণ্যেমাতৃত্ব"),
+            title: yhLang("Maternal Risks in Adolescence", "কৈশোরে মাতৃত্ব"),
             icon: "fa-person-pregnant",
             gradientClass: "bg-gradient-amber",
             audioFile: "",
@@ -5430,7 +5430,7 @@ const coursesData = [
                 <div class="ch8l6-slide lesson-slide">
                   <h2 class="ch8l6-title" data-aos="fade-down">
                     <i class="fa-solid fa-person-pregnant"></i>
-                    ${yhLang("Adolescent Motherhood Risks", "তারুণ্যেমাতৃত্ব")}
+                    ${yhLang("Adolescent Motherhood Risks", "কৈশোরে মাতৃত্ব")}
                   </h2>
 
                   <div class="ch8l6-content-wrapper">
@@ -5441,7 +5441,7 @@ const coursesData = [
                               <section class="ch8l6-description-box" data-aos="fade-up" data-aos-delay="40">
                                 <h3 class="ch8l6-section-header">
                                   <i class="fa-solid fa-info-circle"></i>
-                                  ${yhLang("Understanding Adolescent Pregnancy", "তারুণ্যেগর্ভধারণ")}
+                                  ${yhLang("Understanding Adolescent Pregnancy", "কৈশোরে মাতৃত্বকালীন ঝুঁকি")}
                                 </h3>
                                 <p class="ch8l6-desc-text">${introText}</p>
                               </section>
@@ -5476,12 +5476,12 @@ const coursesData = [
           },
           {
             id: "ch8-lesson-2",
-            title: yhLang("Adolescent Pregnancy Prevention", "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"),
+            title: yhLang("Adolescent Pregnancy Prevention", "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"),
             icon: "fa-shield-halved",
             content: (() => {
               const preventionMainTitle = yhLang(
                 "Measures to Prevent Adolescent Pregnancy",
-                "কৈশোরকালীন গর্ভধারণ ব্যবস্থাপনা"
+                "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়"
               );
 
               const preventionIntroText = yhLang(
@@ -5856,7 +5856,7 @@ const coursesData = [
                               <div class="ch8l9-intro-box">
                                 <h2 class="ch8l9-intro-title">
                                   <i class="fa-solid fa-hand-holding-heart"></i>
-                                  ${yhLang("Comprehensive Postpartum Care", "সম্পূর্ণ প্রসব পরবর্তী যত্ন")}
+                                  ${yhLang("Comprehensive Postpartum Care", "প্রসব পরবর্তী যত্ন")}
                                 </h2>
                               </div>
 
@@ -6152,7 +6152,7 @@ const coursesData = [
         id: "ch-10",
         title: yhLang(
           "Module-10: HPV vaccination and prevention of cervical cancer in adolescents",
-          "মডিউল-১০: এইচপিভি টিকা ও তারুণ্যে জরায়ুমুখ ক্যান্সার প্রতিরোধ",
+          "মডিউল-১০: এইচআইভি ও এইডস",
         ),
         lessons: [
       
@@ -6205,16 +6205,7 @@ const coursesData = [
                       <p class="ch10l3-card-text">${introText}</p>
                     </section>
 
-                    <section class="ch10l3-description-card ch10l3-desc-2" data-aos="fade-up" data-aos-delay="100">
-                      <div class="ch10l3-card-header">
-                        <div class="ch10l3-icon-circle ch10l3-icon-2">
-                          <i class="fa-solid fa-hourglass-half"></i>
-                        </div>
-                        <h3>${latencyNote}</h3>
-                        
-
-                      </div>
-                    </section>
+                   
 
                     <figure class="" data-aos="zoom-in" data-aos-delay="140">
                       <img src="img/modu10/hiv2.jpg" style="width: 70%;" alt="এইচআইভী ও এইডস" class="ch10l3-image w-80 mx-auto img-zoom img-fluid rounded-4" />
@@ -6255,7 +6246,7 @@ const coursesData = [
             content: (function () {
               const windowDefinition = yhLang(
                 "The window period is the time required for antibodies (the body's defense mechanism) against HIV to develop in the blood after contracting the virus. This typically takes up to 12 weeks.",
-                "এইচআইভিতে আক্রান্ত হওয়ার পর রক্তে ভাইরাসের বিরুদ্ধে প্রতিরোধমূলক ব্যবস্থা (অ্যান্টিবডি) তৈরি হতে যে সময় লাগে তাকে অন্তর্বর্তীকালীন সময় বা উইন্ডো পিরিয়ড বলে। এ জন্য সাধারণত ১২ সপ্তাহ পর্যন্ত লাগতে পারে।"
+                "এইচআইভিতে আক্রান্ত হওয়ার পর রক্তে ভাইরাসের বিরুদ্ধে প্রতিরোধমূলক ব্যবস্থা (অ্যান্টিবডি) তৈরি হতে যে সময় লাগে তাকে অন্তর্বর্তীকালীন সময় বা উইন্ডো পিরিয়ড বলে। এ জন্য সাধারণত ১২ সপ্তাহ পর্যন্ত লাগতে পারে। </br> বেশিরভাগ এইচআইভি–আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভিজনিত লক্ষণসমূহ প্রকাশ পাওয়ার আগ পর্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি–আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।"
               );
 
               const silentTransmission = yhLang(
@@ -6311,12 +6302,6 @@ const coursesData = [
                       <p>${windowDefinition}</p>
                     </section>
 
-                    <section class="ch10l4-description-card ch10l4-desc-2" data-aos="fade-up" data-aos-delay="80">
-                      <div class="ch10l4-desc-icon">
-                        <i class="fa-solid fa-person-circle-check"></i>
-                      </div>
-                      <p>${silentTransmission}</p>
-                    </section>
                   </div>
 
                   <section class="ch10l4-prevention-section" data-aos="fade-up" data-aos-delay="120">
@@ -6440,7 +6425,7 @@ const coursesData = [
 
                     <div class="ch11l4-right" data-aos="zoom-in" data-aos-delay="60">
                       <div class="ch11l4-image-wrapper">
-                        <img src="img/modu11/joni.jpg" alt="Cervical Cancer Prevention" class="ch11l4-image">
+                        <img src="img/modu11/joni.jpg" style="height: 500px;" alt="Cervical Cancer Prevention" class="ch11l4-image">
                       </div>
                     </div>
                   </div>
@@ -7120,7 +7105,7 @@ const coursesData = [
             content: (function () {
               const description1 = yhLang(
                 "About 1 out of every 6 people in the world are adolescents aged 10-19 years, and nearly one-third of the population is under 25 years. During adolescence, teenagers experience physical and mental changes, and signs of sexual development become apparent. Adolescents face increased reproductive and sexual health risks. Without adequate information and education, they are more vulnerable to sexually transmitted infections. Unintended pregnancies and unsafe abortions also present serious health concerns. Therefore, sexual and reproductive health rights are critically important.",
-                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এবয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্তের সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ।"
+                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এবয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্তের সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ। <br>প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডাব্লুএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
               );
 
               const description2 = yhLang(
@@ -7193,13 +7178,6 @@ const coursesData = [
                         <i class="fa-solid fa-children"></i>
                       </div>
                       <p class="ch12l7-desc-text">${description1}</p>
-                    </section>
-
-                    <section class="ch12l7-description-block ch12l7-desc-2" data-aos="fade-left" data-aos-delay="80">
-                      <div class="ch12l7-desc-header">
-                        <i class="fa-solid fa-circle-info"></i>
-                      </div>
-                      <p class="ch12l7-desc-text">${description2}</p>
                     </section>
                   </div>
 
@@ -8802,7 +8780,7 @@ const orbitItems = [
                   id: "q14a",
                   question: yhLang(
                     "Which factor strongly influences psychosocial change during adolescence?",
-                    "তারুন্যকালীনমনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?",
+                    "তারুন্য কালীনমনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?",
                   ),
                   options: [
                     yhLang(
@@ -14954,7 +14932,7 @@ const orbitItems = [
         id: "ch-19",
         title: yhLang(
           "Module-19: Drug addiction - Consequences and prevention",
-          "মডিউল-১৯: তারুন্যকালীনপুষ্টি",
+          "মডিউল-১৯: তারুন্য কালীনপুষ্টি",
         ),
         lessons: [
           {
@@ -16311,7 +16289,7 @@ const orbitItems = [
                         <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" class="img-fluid rounded img-zoom" />
                       </figure>
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="img/modu19/pusti2.png" alt="তারুন্যকালীনপুষ্টি" class="img-fluid rounded img-zoom" />
+                        <img src="img/modu19/pusti2.png" alt="তারুন্য কালীনপুষ্টি" class="img-fluid rounded img-zoom" />
                       </figure>
                     </div>
                   </section>

@@ -1734,7 +1734,7 @@
 /* Content container with responsive grid */
 .ch12l7-content-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
   margin-bottom: 10px;
 }
