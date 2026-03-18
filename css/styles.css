@@ -219,14 +219,14 @@ html[lang|="bn"] .jogagok_text lang {
 }
 html:lang(bn) .lession_11_title  lang,
 html[lang|="bn"] .lession_11_title lang {
-  font-size: 38px !important;
+  font-size: 28px !important;
 }
 html:lang(bn) span  lang,
 html[lang|="bn"] span lang {
   font-size: 20px !important;
   line-height: 16px;
 }
-span {line-height: 18px;}
+
 html:lang(bn) .offcanvas  lang,
 html[lang|="bn"] .offcanvas lang {
   font-size: 22px !important;
@@ -1416,7 +1416,7 @@ html[lang|="bn"] h2 {
   background: linear-gradient(135deg, rgba(160, 196, 255, 0.15), rgba(189, 224, 254, 0.25));
   border: 1px solid rgba(14, 116, 144, 0.15);
   border-radius: 18px;
-  padding: 1.2rem 1.4rem;
+  padding: 7px;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
@@ -1434,7 +1434,7 @@ html[lang|="bn"] h2 {
   align-items: center;
   gap: 0.5rem;
   color: #334155;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .hygiene-list__items li:last-child {
@@ -1763,7 +1763,7 @@ html[lang|="bn"] h2 {
 .caution-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 5px;
   margin: 0;
 }
 
@@ -2091,13 +2091,13 @@ html[lang|="bn"] h2 {
   padding: 5px;
 }
 .m20_1 li i {
-  width: 82px !important;
-  height: 34px !important;
+  width: 32px !important;
+  height: 32px !important;
 }
 .mod20_grid1 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
+  grid-template-columns: 1fr;
+  gap: 3px;
 }
 
 .list-unstyled_flex {
@@ -24582,7 +24582,7 @@ input::placeholder {
 .mod25-lesson3 .m25l3-table-item {
   display: grid;
   grid-template-columns: 34px 1fr;
-  align-items: start;
+  align-items: center;
   gap: 10px;
 }
 
@@ -29237,7 +29237,6 @@ dashboard-titled-title {
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(0, 95, 175, 0.12);
   display: grid;
-  gap: 2.2rem;
   /* overflow-y: auto; */
 }
 
@@ -29667,7 +29666,6 @@ dashboard-titled-title {
   }
 
   .lesson-content-card {
-    padding: 1.8rem;
   }
 
   .lesson-audio-bar {

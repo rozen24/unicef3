@@ -200,7 +200,7 @@ const coursesData = [
                     .map(
                       (card) => `
                       <div class="col-md-12">
-                        <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${card.delay}">
+                        <div class="definition-card hover-lift-sm hover-shadow-glow transition-base " data-aos="fade-up" data-aos-delay="${card.delay}">
                           <h4 class="gradient-text transition-base"><i class="fas ${card.icon} me-2 animate-float"></i>${card.title}</h2>
                           <p class="mb-0">${card.text}</p>
                         </div>
@@ -318,7 +318,7 @@ const coursesData = [
                   .map(
                     (step, i) => `
                   <div class="age-step flex-grow-1" style="min-width: 220px;">
-                    <div class="modern-card glass-card h-100 hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" style="padding:1rem; position:relative; z-index:1;">
+                    <div class="modern-card glass-card h-100 hover-lift-sm hover-shadow-glow transition-base " style="padding:1rem; position:relative; z-index:1;">
                       <div class="d-flex align-items-center justify-content-between mb-2">
                         <span class="badge-pill">${step.label}</span>
                         <span class="badge bg-dark text-light">${
@@ -387,7 +387,7 @@ const coursesData = [
                   .map(
                     (card, idx) => `
                   <div class="col-12 col-md-6">
-                    <div class="definition-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${
+                    <div class="definition-card hover-lift-sm hover-shadow-glow transition-base " data-aos="zoom-in" data-aos-delay="${
                       160 + idx * 60
                     }">
                       <h5 class="gradient-text mb-1"><i class="fa-solid ${
@@ -508,7 +508,7 @@ const coursesData = [
               .map(
                 (pillar, i) => `
               <div class="col-md-6">
-                <div class="component-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover bg-gradient-${pillar.color} shadow-lg" data-aos="zoom-in" data-aos-delay="${
+                <div class="component-card hover-lift-sm hover-shadow-glow transition-base  bg-gradient-${pillar.color} shadow-lg" data-aos="zoom-in" data-aos-delay="${
                   100 + i * 50
                 }">
                   <div class="component-icon bg-gradient-${pillar.color} animate-float"><i class="fas ${pillar.icon}"></i></div>
@@ -592,7 +592,7 @@ const coursesData = [
               .map(
                 (f, i) => `
               <div class="col-md-6">
-                <div class="role-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover bg-gradient-${
+                <div class="role-card hover-lift-sm hover-shadow-glow transition-base  bg-gradient-${
                   ["teal", "orange", "green", "pink"][i]
                 }"
                  data-aos="${
@@ -727,7 +727,7 @@ const coursesData = [
               }">
               <div class="step-card bg-gradient-${
                 s.color
-              } hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover text-center">
+              } hover-lift-sm hover-shadow-glow transition-base  text-center">
                 <div class="step-icon animate-float-slow d-inline-flex align-items-center justify-content-center"
                    style="width:64px; height:64px; border-radius:50%; animation-duration:6s; animation-delay:${(
                      i * 0.2
@@ -758,13 +758,13 @@ const coursesData = [
           //   <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Distribution of Young People</h2>
           //   <div class="row g-4 mb-4">
           //     <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
-          //       <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+          //       <div class="stat-card hover-lift-sm hover-shadow-glow transition-base ">
           //         <div class="stat-icon"><i class="fas fa-users-between-lines"></i></div>
           //         <h4>49.5 Million</h2><p>Total young people in Bangladesh (~30%)</p>
           //       </div>
           //     </div>
           //     <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
-          //       <div class="stat-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover">
+          //       <div class="stat-card hover-lift-sm hover-shadow-glow transition-base ">
           //         <div class="stat-icon"><i class="fas fa-user-group"></i></div>
           //         <h4>31.5 Million</h2><p>Young (15–24 years) in Bangladesh</p>
           //       </div>
@@ -1068,7 +1068,7 @@ const coursesData = [
                       .map(
                         (card, i) => `
                       <div class="col-md-6">
-                        <div class="modern-card glass-card icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${
+                        <div class="modern-card glass-card " data-aos="zoom-in" data-aos-delay="${
                           100 + i * 60
                         }">
                           <div class="d-flex flex-col align-items-center gap-1">
@@ -1134,7 +1134,7 @@ const coursesData = [
                         .map(
                           (cause, i) => `
                         <div class="col-12 col-md-6 col-lg-4">
-                          <div class="modern-card glass-card icon-spin-on-hover" data-aos="zoom-in" data-aos-delay="${
+                          <div class="modern-card glass-card " data-aos="zoom-in" data-aos-delay="${
                             120 + i * 60
                           }">
                             <div class="d-flex align-items-center gap-3">
@@ -1234,7 +1234,7 @@ const coursesData = [
                           ]
                             .map(
                               (item, i) => `
-                            <li class="d-flex align-items-center gap-2 icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${
+                            <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
                               140 + i * 40
                             }">
                               <span class="${
@@ -1286,7 +1286,7 @@ const coursesData = [
                           ]
                             .map(
                               (item, i) => `
-                            <li class="d-flex align-items-center gap-2 icon-spin-on-hover" data-aos="fade-up" data-aos-delay="${
+                            <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
                               160 + i * 40
                             }">
                               <span class="${
@@ -1425,7 +1425,7 @@ const coursesData = [
                 <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Child marriage and teenage pregnancies", "বাল্যবিবাহ ও কিশোরী মাতৃত্ব")}</h2>
 
                 <!-- Special info badge -->
-                <div class="fact-card alert-warning hover-lift-sm transition-base icon-spin-on-hover mb-3" data-aos="fade-up" data-aos-delay="60">
+                <div class="fact-card alert-warning hover-lift-sm transition-base  mb-3" data-aos="fade-up" data-aos-delay="60">
                   <i class="fas fa-ranking-star" aria-hidden="true"></i>
                   <p class="mb-0">${yhLang("Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.", "বাল্যবিবাহের হার সবচেয়ে বেশি যে <strong>শীর্ষ ১০টি দেশে</strong> বাংলাদেশ সেগুলোর একটি।")}</p>
                 </div>
@@ -1719,7 +1719,7 @@ const coursesData = [
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Adolescent health related issues", "কৈশোর স্বাস্থ্য সম্পর্কিত চ্যালেঞ্জ")}</h2>
 
-                <div class="fact-card alert-info hover-lift-sm transition-base icon-spin-on-hover mb-3" data-aos="fade-up" data-aos-delay="60">
+                <div class="fact-card alert-info hover-lift-sm transition-base  mb-3" data-aos="fade-up" data-aos-delay="60">
                   <i class="fas fa-lightbulb" aria-hidden="true"></i>
                   <p class="mb-0">${yhLang("Actions to improve adolescent health and wellbeing need to address established and emerging determinants and <strong>meaningfully engage</strong> with adolescents and young people.", "কৈশোর স্বাস্থ্য ও সুস্থতা উন্নত করতে বিদ্যমান ও নতুন নির্ধারকগুলো মোকাবিলা করতে হবে এবং তরুন-তরুনীদের <strong>অর্থবহভাবে সম্পৃক্ত</strong> করতে হবে।")}</p>
                 </div>
@@ -2216,7 +2216,7 @@ const coursesData = [
                       .map(
                         (c) => `
                       <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="${c.delay}">
-                        <article class="modern-card hover-lift-sm hover-shadow-glow transition-base icon-spin-on-hover h-100">
+                        <article class="modern-card hover-lift-sm hover-shadow-glow transition-base  h-100">
                           <div class="d-flex align-items-start gap-3">
                             <span class="badge-pill ${c.color}" aria-hidden="true"><i class="fa-solid ${c.icon}"></i></span>
                             <div>
@@ -2311,7 +2311,7 @@ const coursesData = [
                   .map(
                     (s) => `
                   <div class="col-6 col-md-4 col-lg-3 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" data-aos="flip-left" data-aos-delay="${s.delay}">
-                    <article class="sdg-lean-card bg-gradient-${s.cls} sdg-hover-tilt transition-base icon-spin-on-hover h-100">
+                    <article class="sdg-lean-card bg-gradient-${s.cls} sdg-hover-tilt transition-base  h-100">
                       <div class="sdg-card-icon animate-float-slow"><i class="fa-solid ${s.icon}"></i></div>
                       <h6 class="sdg-card-title">${s.label}</h6>
                     </article>
@@ -2780,7 +2780,7 @@ const coursesData = [
 
                 <section class="mt-4" aria-labelledby="orbit-title">
                   <div class="orbit-layout" id="orbitLayout" data-aos="zoom-in" data-aos-delay="240" data-orbit-manual="true">
-                    <div class="orbit-center icon-spin-on-hover">
+                    <div class="orbit-center ">
                       <div class="orbit-card bg-gradient-blue">
                         <div class="orbit-icon mb-1"><i class="fa-solid fa-flag fa-lg"></i></div>
                         <div class="orbit-title fw-bold">${yhLang("National Health Strategy", "জাতীয় স্বাস্থ্য কৌশল")}</div>
@@ -3075,7 +3075,7 @@ const coursesData = [
                         .map(
                           (rec) => `
                           <div data-aos="fade-up" data-aos-delay="${rec.delay}">
-                            <article class="recs-petal-card ${rec.cls} mb-2 icon-spin-on-hover hover-glow">
+                            <article class="recs-petal-card ${rec.cls} mb-2  hover-glow">
                               <div class="timeline-card-icon animate-float-slow"><i class="fa-solid ${rec.icon}"></i></div>
                               <div class="timeline-card-title">${rec.title}</div>
                               <p class="timeline-card-text rec-title">${rec.text}</p>
@@ -16885,8 +16885,8 @@ const orbitItems = [
                   <div class="mod20-content">
                   <div class="row g-3">
                     <div class="col-12 col-lg-5">
-                      <div class="glass-card p-2 mb-2">
-                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-clipboard-check"></i>${yhLang(
+                      <div class="glass-card p-1 mb-2">
+                        <h3 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-clipboard-check"></i>${yhLang(
                           "Actions to prevent unhealthy diet:",
                           "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতরিোধে করণীয়:",
                         )}</h3>
@@ -16894,10 +16894,10 @@ const orbitItems = [
                           ${renderList(preventionList, 120)}
                         </ul>
                       </div>
-                      <div class="glass-card p-4 h-100">
-                        <h3 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-running"></i>${yhLang(
+                      <div class="glass-card p-1">
+                        <h3 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-running"></i>${yhLang(
                           "Actions to address lack of physical activity:",
-                          "কায়িক পরিশ্রমের অভাব পূরণে করণীয় :",
+                          "কায়িক পরিশ্রমের অভাব পূরণে করণীয় :",
                         )}</h3>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(activityTips, 80)}
@@ -16906,7 +16906,7 @@ const orbitItems = [
                     </div>
                     <div class="col-12 col-lg-7">
                       <figure class="text-center mb-0 h-100" data-aos="zoom-in" data-aos-delay="140">
-                        <img src="img/modu20/unhealthy.png" style="max-height: 100%; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 h-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
+                        <img src="img/modu20/unhealthy.png" style="max-height: 700px; border-radius: 18px !important;" alt="অসংক্রামক রোগ সচেতনতা" class="img-fluid w-100 h-100 rounded shadow-sm img-zoom" style= "width: 100%;"/>
                       </figure>
                     </div>
                   </div>
@@ -17420,7 +17420,7 @@ const orbitItems = [
                     "Avoid excessive salt intake",
                     "অতিরিক্ত লবণ পরিহার করতে হবে",
                   ),
-                  icon: "fa-salt-shaker",
+                  icon: "fa-cubes-stacked",
                 },
                 {
                   text: yhLang(
@@ -19074,8 +19074,8 @@ const orbitItems = [
                 const iconData = getSectionIcon(section.title);
                 return `
                 <div class="health-section mb-1" style="background:rgba(255,255,255,.4);border-radius:18px;padding:5px;box-shadow:0 8px 22px rgba(103,58,183,.12);">
-                  <h3 class="mb-3" style="display:flex;align-items:center;color:#000 important;font-weight:700;">
-                    <span style="background:${iconData.gradient};width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
+                  <h3 class="mb-2" style="display:flex;align-items:center;color:#000 important;font-weight:700;">
+                    <span style="background:${iconData.gradient};width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
                     ${section.title}
                   </h3>
                   ${section.items ? `<ul class="list-unstyled feature-list grid-2 mb-0">${renderList(section.items)}</ul>` : `<div style="border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
@@ -19094,7 +19094,7 @@ const orbitItems = [
                     
                     <div>
                        <h3 style="display:flex;align-items:center;color:#000;margin-bottom:5px;font-weight:700;font-size:1.4em;">
-                          <span style="background:linear-gradient(135deg,#5c6bc0,#3949ab);width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(92,107,192,.4), 0 2px 8px rgba(57,73,171,.25);"><i class="fa-solid fa-briefcase-medical" style="color:#fff;font-size:24px;"></i></span>
+                          <span style="background:linear-gradient(135deg,#5c6bc0,#3949ab);width:42px;height:42px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-right:14px;box-shadow:0 6px 18px rgba(92,107,192,.4), 0 2px 8px rgba(57,73,171,.25);"><i class="fa-solid fa-briefcase-medical" style="color:#fff;font-size:24px;"></i></span>
                           ${yhLang("Immediate Health Risks", "অনিরাপদ খাবারপানির সাথে সম্পর্কিত স্বাস্থ্য ঝুঁকি")}
                         </h3>
                       <p class="mb-0" style="color:#4a148c;font-size:1.05em;font-weight:500;line-height:1.7;">${yhLang("Contaminated food and water can cause various serious health risks. The main health risks are:", "অনিরাপদ বা দূষিত খাবারপানির কারণে নানা ধরনের গুরুতর স্বাস্থ্য ঝুঁকি হতে পারে। প্রধান স্বাস্থ্য ঝুঁকিগুলো হলো:")}</p>
@@ -19681,16 +19681,16 @@ const orbitItems = [
                   .join("");
 
               return `
-                <div class="lesson-slide">
+                <div class="">
                   <h2 class="slide-title gradient-text" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-triangle-exclamation" style="color: #fbc02d; margin-right: 12px; font-size: 1.2em;"></i>
                     সতর্কতাঃ
                   </h2>
-                  <div class="modern-card glass-card caution-card lesson-slide" data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 16px 48px rgba(251,192,45,.3), 0 6px 20px rgba(245,127,23,.2);">
+                  <div class="lesson-slide" data-aos="fade-up" data-aos-delay="40" style="border-radius:26px;box-shadow:0 16px 48px rgba(251,192,45,.3), 0 6px 20px rgba(245,127,23,.2);">
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
-                      <div class="caution-card__head" style="display:flex;align-items:center;color:#5458d7;font-weight:700;margin-bottom:10px;">
+                      <div class="caution-card__head" style="display:flex;align-items:center;color:#5458d7;font-weight:700;margin-bottom:5px;">
                         <h3><i class="fa-solid fa-shield-halved me-2"></i> ${yhLang("Safety Instructions", "নিরাপত্তা নির্দেশনা")}</h3>
                       </div>
                       <div>
@@ -20015,8 +20015,8 @@ const orbitItems = [
                   ),
                   icon: "fa-person-burst",
                 },
-                { text: yhLang("Nausea", "বমিভাব"), icon: "fa-stomach" },
-                { text: yhLang("Dizziness", "মাথাঘোরা"), icon: "fa-head-side" },
+                { text: yhLang("Nausea", "বমিভাব"), icon: "fa-head-side-cough" },
+                { text: yhLang("Dizziness", "মাথাঘোরা"), icon: "fa-head-side-virus" },
                 {
                   text: yhLang(
                     "Skin rash or hives",
@@ -20094,7 +20094,7 @@ const orbitItems = [
                   </div>
 
                   <header class="m23l2-hero" data-aos="fade-up">
-                    <span class="m23l2-hero__badge bg-gradient-rose icon-spin-on-hover" aria-hidden="true">
+                    <span class="m23l2-hero__badge bg-gradient-rose " aria-hidden="true">
                       <i class="fa-solid fa-mosquito"></i>
                     </span>
                     <div class="m23l2-hero__body">
@@ -20245,7 +20245,7 @@ const orbitItems = [
                   </div>
 
                   <header class="m23l3-hero" data-aos="fade-up">
-                    <span class="m23l3-hero__badge bg-gradient-mint icon-spin-on-hover" aria-hidden="true">
+                    <span class="m23l3-hero__badge bg-gradient-mint " aria-hidden="true">
                       <i class="fa-solid fa-notes-medical"></i>
                     </span>
                     <div class="m23l3-hero__body">
@@ -20407,7 +20407,7 @@ const orbitItems = [
                   </div>
 
                   <header class="m23l4-hero" data-aos="fade-up">
-                    <span class="m23l4-hero__badge bg-gradient-purple icon-spin-on-hover" aria-hidden="true">
+                    <span class="m23l4-hero__badge bg-gradient-purple " aria-hidden="true">
                       <i class="fa-solid fa-biohazard"></i>
                     </span>
                     <div class="m23l4-hero__body">
@@ -22124,7 +22124,7 @@ const orbitItems = [
                   </div>
 
                   <header class="m24l7-hero" data-aos="fade-up">
-                    <span class="m24l7-hero__badge bg-gradient-yellow icon-spin-on-hover" aria-hidden="true">
+                    <span class="m24l7-hero__badge bg-gradient-yellow " aria-hidden="true">
                       <i class="fa-solid fa-feather-pointed"></i>
                     </span>
                     <h2 class="slide-title gradient-text mb-0 m24l7-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">${yhLang(
@@ -22322,7 +22322,7 @@ const orbitItems = [
                   </div>
 
                   <header class="m25l3f-hero" data-aos="fade-up">
-                    <span class="m25l3f-hero__badge bg-gradient-mint icon-spin-on-hover" aria-hidden="true">
+                    <span class="m25l3f-hero__badge bg-gradient-mint " aria-hidden="true">
                       <i class="fa-solid fa-sitemap"></i>
                     </span>
                     <h2 class="slide-title gradient-text mb-0 m25l3f-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">
@@ -22390,7 +22390,7 @@ const orbitItems = [
                   </div>
 
                   <header class="m25l2f-hero mb-0" data-aos="fade-up">
-                    <span class="m25l2f-hero__badge bg-gradient-teal icon-spin-on-hover" aria-hidden="true">
+                    <span class="m25l2f-hero__badge bg-gradient-teal " aria-hidden="true">
                       <i class="fa-solid fa-diagram-project"></i>
                     </span>
                     <h2 class="slide-title gradient-text mb-0 m25l2f-line" data-aos="fade-up" data-aos-delay="60" style="--d:60ms">
@@ -22612,7 +22612,7 @@ const orbitItems = [
                   </div>
 
                   <header class="m25l3-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25l3-hero__badge icon-spin-on-hover" aria-hidden="true">
+                    <div class="m25l3-hero__badge " aria-hidden="true">
                       <i class="fa-solid fa-person"></i>
                     </div>
                     <div class="m25l3-hero__body">
@@ -22624,7 +22624,7 @@ const orbitItems = [
                     <div class="col-12 col-lg-5">
                       <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-right" data-aos-delay="90">
                         <div class="m25l3-card__title yhap_box_shadow" data-aos="fade-up" data-aos-delay="130">
-                          <span class="m25l3-icon bg-gradient-blue icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-table"></i></span>
+                          <span class="m25l3-icon bg-gradient-blue " aria-hidden="true"><i class="fa-solid fa-table"></i></span>
                           <h3 class="mb-0" data-aos="fade-up" data-aos-delay="170">${yhLang("Methods of One-to-One Communication", "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ")}</h3>
                         </div>
 
@@ -22665,7 +22665,7 @@ const orbitItems = [
                       <article class="modern-card glass-card h-100 m25l3-card grid_2" data-aos="fade-left" data-aos-delay="110">
                         <section class="m25l3-section m25l3-section--group" data-aos="zoom-in" data-aos-delay="140">
                           <div class="m25l3-section__title yhap_box_shadow">
-                            <span class="m25l3-icon bg-gradient-purple icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
+                            <span class="m25l3-icon bg-gradient-purple " aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="180"> ${yhLang("Methods of Group Communication", "দলীয় যোগাযোগের পদ্ধতি সমূহ")}</h3>
                           </div>
                           <ul class="list-unstyled info-list mb-0 yhap_box_shadow">
@@ -22675,7 +22675,7 @@ const orbitItems = [
 
                         <section class="m25l3-section m25l3-section--mass" data-aos="zoom-in" data-aos-delay="220">
                           <div class="m25l3-section__title yhap_box_shadow">
-                            <span class="m25l3-icon bg-gradient-yellow icon-spin-on-hover" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
+                            <span class="m25l3-icon bg-gradient-yellow " aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
                             <h3 class="mb-0" data-aos="fade-up" data-aos-delay="260"> ${yhLang("Mass Communication", "গণযোগাযোগ")}</h3>
                           </div>
                           <span class="mb-0 m25l3-mass">${yhLang("Different forms of mass media are used to deliver messages to large audiences. In this case, the sender and receiver do not interact directly.", "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।")}</span>
@@ -22815,7 +22815,7 @@ const orbitItems = [
                     return `
                       <section class="m25l5-block" data-aos="fade-up" data-aos-delay="${blockDelay3}">
                         <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base mb-1 py-2" data-aos="fade-up">
-                          <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
+                          <div class="m25l5-hero__badge " aria-hidden="true">
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
                           </div>
                           <div class="m25l5-hero__body">
@@ -23001,14 +23001,14 @@ const orbitItems = [
                   <div class="row g-1 mt-md-0 mt-sm-1 align-items-stretch">
                     <div class="col-12 col-lg-4">
                        <header class="m25l5-hero gradient-text-hover hover-lift-sm transition-base mb-1 py-2" data-aos="fade-up">
-                          <div class="m25l5-hero__badge icon-spin-on-hover" aria-hidden="true">
+                          <div class="m25l5-hero__badge " aria-hidden="true">
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
                           </div>
                           <div class="m25l5-hero__body">
                             <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Techniques of interpersonal relationship", "আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী")}</h2>
                           </div>
                         </header>
-                      <article class="modern-card glass-card m25l4-card h-100" data-aos="fade-left" data-aos-delay="140">
+                      <article class="modern-card glass-card m25l4-card" data-aos="fade-left" data-aos-delay="140">
                         <ul class="list-unstyled m25l4-list mb-0" role="list">
                           ${renderPoints()}
                         </ul>
@@ -23126,7 +23126,7 @@ const orbitItems = [
                   </div>
 
                   <header class="m25l6-hero d-none gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                    <div class="m25l6-hero__badge icon-spin-on-hover" aria-hidden="true">
+                    <div class="m25l6-hero__badge " aria-hidden="true">
                       <i class="fa-solid fa-list-check"></i>
                     </div>
                     <div class="m25l6-hero__body">
@@ -23136,7 +23136,7 @@ const orbitItems = [
                   <div class="row g-1 mt-1 align-items-stretch">
                     <div class="col-12 col-md-3">
                       <header class="m25l6-hero mb-2 gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                        <div class="m25l6-hero__badge icon-spin-on-hover" aria-hidden="true">
+                        <div class="m25l6-hero__badge " aria-hidden="true">
                           <i class="fas fa-user-friends"></i>
                         </div>
                         <div class="m25l6-hero__body">
@@ -23150,7 +23150,7 @@ const orbitItems = [
                     </div>
                     <div class="col-12 col-md-9">
                       <header class="m25l6-hero mb-2 gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
-                        <div class="m25l6-hero__badge icon-spin-on-hover" aria-hidden="true">
+                        <div class="m25l6-hero__badge " aria-hidden="true">
                           <i class="fa-solid fa-list-check"></i>
                         </div>
                         <div class="m25l6-hero__body">
