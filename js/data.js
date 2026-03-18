@@ -961,7 +961,7 @@ const coursesData = [
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-briefcase"></i> ${yhLang("Employment", "কর্মসংস্থান")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1200"><i class="fa-solid fa-piggy-bank"></i> ${yhLang("Wealth/child investment", "সম্পদ/সন্তান বিনিয়োগ")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-graduation-cap"></i> ${yhLang("Lifelong learning", "আজীবন শিক্ষা")}</li>
-                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-person-arrows"></i> ${yhLang("Work-life Balance", "কর্মজীবন-ব্যক্তিজীবনের ভারসাম্য")}</li>
+                          <li class="pyramid-step" data-aos="fade-up" data-aos-delay="1800"><i class="fa-solid fa-people-arrows"></i> ${yhLang("Work-life Balance", "কর্মজীবন-ব্যক্তিজীবনের ভারসাম্য")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2100"><i class="fa-solid fa-location-dot"></i> ${yhLang("Security of Place", "বাসস্থানের নিরাপত্তা")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2400"><i class="fa-solid fa-handshake"></i> ${yhLang("Healthy children", "স্বাস্থ্যবান শিশু")}</li>
                           <li class="pyramid-step" data-aos="fade-up" data-aos-delay="2700"><i class="fa-solid fa-shield-heart"></i> ${yhLang("Secure old-age", "নিরাপদ বার্ধক্য")}</li>
@@ -1904,7 +1904,7 @@ const coursesData = [
                 },
                 {
                   title: yhLang("Household & community", "পরিবার ও সম্প্রদায়"),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "bg-gradient-emerald",
                   bullets: [
                     yhLang(
@@ -2141,7 +2141,7 @@ const coursesData = [
                     "Adolescent advisory boards co-design spaces, IEC materials and feedback loops.",
                     "কিশোর উপদেষ্টা বোর্ড স্থান, আইইসি উপকরণ ও প্রতিক্রিয়া পদ্ধতি সহ-নকশা করে।",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                 },
               ];
 
@@ -2467,7 +2467,7 @@ const coursesData = [
                     "Adolescents were formally acknowledged as a group with unique SRHR needs.",
                     "তরুন-তরুনীদের অনন্য এসআরএইচআর চাহিদাসহ স্বতন্ত্র গোষ্ঠী হিসেবে স্বীকৃতি দেওয়া হয়।",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   cls: "tl-rose",
                   delay: 100,
                 },
@@ -2800,7 +2800,7 @@ const coursesData = [
           {
             id: "ch2-lesson-12",
             title: yhLang("A combined effort", "সমন্বিত প্রচেষ্টা"),
-            icon: "fa-person-group",
+            icon: "fa-people-group",
             gradientClass: "bg-gradient-green",
             audioFile: "",
             quiz: {
@@ -2860,7 +2860,7 @@ const coursesData = [
                     "YHAP ambassadors, youth clubs, disability organisations, faith leaders and media.",
                     "ওয়াইএইচএপি দূত, যুব ক্লাব, প্রতিবন্ধী সংগঠন, ধর্মীয় নেতৃবৃন্দ ও গণমাধ্যম।",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "bg-gradient-rose",
                 },
                 {
@@ -2988,7 +2988,7 @@ const coursesData = [
                     "Create advisory boards, pay youth researchers and embed feedback loops in every programme.",
                     "উপদেষ্টা বোর্ড গঠন, তরুণ গবেষকদের পারিশ্রমিক প্রদান ও প্রতিটি কর্মসূচিতে প্রতিক্রিয়া পদ্ধতি যুক্ত করুন।",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   cls: "bg-gradient-blue",
                   delay: 200,
                 },
@@ -3349,7 +3349,7 @@ const coursesData = [
         id: "ch-4",
         title: yhLang(
           "Module-4: Menstrual/menstrual management",
-          "মডিউল-৪: মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
+          "মডিউল-৪: নারী প্রজনতন্ত্র ও মাসিক ব্যবস্থাপনা",
         ),
         lessons: [
 
@@ -3400,7 +3400,7 @@ const coursesData = [
     title: yhLang("Uterus", "জরায়ু"),
     description: yhLang(
       "The uterus is a hollow, triangular organ located in the lower abdomen. In front of it is the bladder and behind it is the rectum. It has two parts—the body and the cervix. Its primary function is pregnancy. If pregnancy does not occur, the inner lining sheds due to hormonal changes, resulting in menstruation. The fallopian tubes extend from the uterus to the ovaries. After intercourse, sperm travel through the vagina and uterus to the fallopian tubes, where fertilization may occur. The fertilized egg later implants in the uterus.",
-      "জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়। জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।"
+      "জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়।<br> </br>জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।"
     ),
     icon: "fa-heart",
     color: "#f43f5e",
@@ -3457,7 +3457,7 @@ const coursesData = [
                   )}</h2>
 
                   <section class="m4l6-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row align-items-center g-4">
+                    <div class="row align-items-center g-1">
                       <div class="col-lg-5">
                         <figure class=" mb-0">
                           <img src="img/modu4/nari.jpg" style="height: 630px; object-fit: contain;"  alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 img-zoom rounded-lg shadow-lg animate-float-slow m4l6-main-image" />
@@ -3484,7 +3484,7 @@ const coursesData = [
             id: "ch4-lesson-2",
             title: yhLang(
               "Menstrual Management",
-              "মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
+              "মাসিক/ঋতুস্রাব",
             ),
             icon: "fa-calendar-days",
             gradientClass: "bg-gradient-rose",
@@ -3564,14 +3564,20 @@ const coursesData = [
                 <div class="lesson-slide m4l7-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Menstrual Management",
-                    "মাসিক/ঋতুস্রাব ব্যবস্থাপনা",
+                    "মাসিক/ঋতুস্রাব",
                   )}</h2>
 
                   <section class="m4l7-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row align-items-center g-3">
                       <div class="col-lg-6">
+
+                        <figure class="image-card mb-0">
+                          <img src="img/modu4/masik_b.jpg" style="height: 600px;" alt="মাসিক/ঋতুস্রাব ব্যবস্থাপনা" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l7-main-image" />
+                        </figure>
                         
-                        
+                      </div>
+
+                      <div class="col-lg-6">
                         <p class="m4l7-intro-description mb-3" data-aos="fade-up" data-aos-delay="80">
                           ${yhLang(
                             "Menstruation is a normal, natural process by which a person prepares for pregnancy and childbirth. The monthly bleeding through the vagina is called menstruation.",
@@ -3584,6 +3590,7 @@ const coursesData = [
                         </ul>
 
                         <div class="m4l7-info-box" data-aos="fade-up" data-aos-delay="120">
+                        
                           <div class="m4l7-info-icon">
                             <i class="fa-solid fa-circle-info"></i>
                           </div>
@@ -3592,12 +3599,6 @@ const coursesData = [
                             "মাসিক হওয়া মানে দেহ পরিণত হচ্ছে এবং প্রজননতন্ত্র সঠিকভাবে কাজ করছে। এটি একটি সম্পূর্ণ স্বাভাবিক ঘটনা। এটি কোনো অপবিত্রতা বা অপরিচ্ছন্নতা নয় এবং এ সময় কোনো নারীকে আলাদা করে রাখারও কিছু নেই। এ সময় যদি অস্বাভাবিক ব্যথা বা অতিরিক্ত রক্তস্রাব না ঘটে, তবে সে তার স্বাভাবিক কাজ-কর্ম চালিয়ে যেতে পারে।",
                           )}</p>
                         </div>
-                      </div>
-
-                      <div class="col-lg-6">
-                        <figure class="image-card mb-0">
-                          <img src="img/modu4/masik_b.jpg" alt="মাসিক/ঋতুস্রাব ব্যবস্থাপনা" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l7-main-image" />
-                        </figure>
                       </div>
                     </div>
                   </section>
@@ -3668,7 +3669,7 @@ const coursesData = [
   {
     text: yhLang(
       "After use, wrap sanitary napkins in paper and dispose of them in a dustbin. If using cloth, wash it with soap and water, dry it in sunlight, and store it properly for reuse.",
-      "ব্যবহারের পর স্যানিটারি ন্যাপকিন কাগজে মুড়িয়ে ডাস্টবিনে বা ময়লা ফেলার নির্দিষ্ট স্থানে ফেলতে হবে। কাপড় ব্যবহার করলে ব্যবহার শেষে কাপড়টি সাবান ও পানি দিয়ে ধুতে হবে এবং সূর্যের আলোতে শুকিয়ে পরিষ্কার প্যাকেটে রেখে পরবর্তীতে ব্যবহারের জন্য সংরক্ষণ করতে হবে।"
+      "ব্যবহারের পর স্যানিটারি ন্যাপকিন কাগজে মুড়িয়ে ডাস্টবিনে বা ময়লা ফেলার নির্দিষ্ট স্থানে ফেলতে হবে। কাপড় ব্যবহার করলে ব্যবহার শেষে কাপড়টি সাবান ও পানি দিয়ে ধুতে হবে এবং সূর্যের আলোতে শুকিয়ে পরিষ্কার প্যাকেটে রেখে পরবর্তীতে ব্যবহারের জন্য রেখে দিতে হবে।"
     ),
     icon: "fa-trash",
     color: "#f97316",
@@ -3686,7 +3687,7 @@ const coursesData = [
   {
     text: yhLang(
       "If periods stop, occur 2–3 times a month, involve excessive bleeding, severe pain, or any abnormal symptoms, consult a doctor.",
-      "মাসিক বন্ধ থাকলে, এক মাসে ২–৩ বার মাসিক হলে, প্রচুর রক্তস্রাব হলে, তীব্র ব্যথা হলে বা অস্বাভাবিক কোনো সমস্যা দেখা দিলে চিকিৎসকের পরামর্শ নিতে হবে।"
+      "মাসিক বন্ধ থাকলে, এক মাসে ২–৩ বার মাসিক হলে, প্রচুর রক্তস্রাব হলে, তীব্র ব্যথা হলে বা অস্বাভাবিক কোনো সমস্যা দেখা দিলে চিকিৎসকের পরামর্শ নিতে বলতে হবে।"
     ),
     icon: "fa-stethoscope",
     color: "#dc2626",
@@ -3723,7 +3724,7 @@ const coursesData = [
                     <div class="row align-items-stretch g-2">
                       <div class="col-lg-8">
                         <figure class=" mb-0">
-                          <img src="img/modu4/masik2.png" style="height: 550px; " alt="মাসিক চলাকালীন মেয়েদের করণীয়" class="img-fluid w-100 img-zoom rounded-lg shadow-lg animate-float-slow m4l8-main-image" />
+                          <img src="img/modu4/masik2.png" style="height: 570px; " alt="মাসিক চলাকালীন মেয়েদের করণীয়" class="img-fluid w-100 img-zoom rounded-lg shadow-lg animate-float-slow m4l8-main-image" />
                         </figure>
                       </div>
 
@@ -3774,7 +3775,7 @@ const coursesData = [
   {
     text: yhLang(
       "At the beginning of adolescence, provide girls with information or education about menstruation and its management.",
-      "তারুণ্যের শুরুতে কিশোরীকে মাসিক ও এর ব্যবস্থাপনা বিষয়ে তথ্য বা শিক্ষা দেওয়া।"
+      "কৈশরের শুরুতে কিশোরীকে মাসিক ও এর ব্যবস্থাপনা বিষয়ে তথ্য বা শিক্ষা দেওয়া।"
     ),
     icon: "fa-book",
     color: "#06b6d4",
@@ -4058,7 +4059,7 @@ const coursesData = [
       "Excessive bleeding during menstruation.",
       "মাসিকের সময় অতিরিক্ত রক্তক্ষরণ হওয়া।"
     ),
-    icon: "fa-droplets",
+    icon: "fa-droplet",
     color: "#ef4444",
     bgColor: "rgba(239, 68, 68, 0.12)",
   },
@@ -4184,12 +4185,7 @@ const coursesData = [
 
                   <!-- Abnormality Signs Section -->
                   <section class="m4l10-section-card abnormality-section" data-aos="fade-up" data-aos-delay="60">
-                    <div class="m4l10-section-header">
-                      <h3 class="m4l10-section-title">
-                        <i class="fa-solid fa-exclamation-circle"></i>
-                        ${yhLang("Signs of Abnormality", "অস্বাভাবিকতার লক্ষণসমূহ")}
-                      </h3>
-                    </div>
+                    
                     <div class="m4l10-abnormality-grid">
                       ${renderAbnormalityPoints()}
                     </div>
@@ -4217,7 +4213,7 @@ const coursesData = [
         id: "ch-5",
         title: yhLang(
           "Module-5: Wet dream (ejaculation) Hygiene and Management",
-          "মডিউল-৫: ছেলেদের স্বপ্নদোষ ও বীর্যপাত ব্যবস্থাপনা",
+          "মডিউল-৫: পুরুষ প্রজননতন্ত্র ও বীর্যপাত ব্যবস্থাপনা",
         ),
         lessons: [
  
@@ -4350,7 +4346,7 @@ const coursesData = [
             id: "ch5-lesson-2",
             title: yhLang(
               "Management of Wet Dreams/Ejaculation",
-              "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
+              "ছেলেদের স্বপ্নে বীর্যপাতের ব্যাবস্থাপনা",
             ),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-rose",
@@ -4550,7 +4546,7 @@ const coursesData = [
                 <div class="lesson-slide m5l4-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
                     "Management of Wet Dreams/Ejaculation",
-                    "ছেলেদের স্বপ্নদোষ / বীর্যপাতের ব্যবস্থাপনা",
+                    "ছেলেদের স্বপ্নে বীর্যপাতের ব্যাবস্থাপনা",
                   )}</h2>
 
                   <section class="m5l4-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
@@ -4589,7 +4585,7 @@ const coursesData = [
       },
       {
         id: "ch-6",
-        title: yhLang("Module-6: Child Marriage", "মডিউল-৬: বাল্যবিবাহ"),
+        title: yhLang("Module-6: Child Marriage", "বাল্যবিবাহের কুফল ও প্রতিরোধ"),
         lessons: [
  
           {
@@ -4704,16 +4700,16 @@ const coursesData = [
             },
             content: (function () {
               const causes = [
-                { title: yhLang("Poverty", "দারিদ্র্য"), icon: "fa-hand-holding-heart", color: "#ef4444", desc: yhLang("Economic hardship forces families to marry off daughters early", "অর্থনৈতিক কঠিনতা") },
-                { title: yhLang("Social Customs", "সামাজিক প্রথা"), icon: "fa-people", color: "#f59e0b", desc: yhLang("Traditional beliefs and superstitions", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার") },
+                { title: yhLang("Poverty", "দারিদ্র্যতা"), icon: "fa-hand-holding-heart", color: "#ef4444", desc: yhLang("Economic hardship forces families to marry off daughters early", "অর্থনৈতিক কঠিনতা") },
+                { title: yhLang("Social Customs", "সামাজিক প্রথা ও কুসংস্কার"), icon: "fa-person", color: "#f59e0b", desc: yhLang("Traditional beliefs and superstitions", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার") },
+                { title: yhLang("Lack of Education", "শিক্ষা ও সচেতনতার অভাব"), icon: "fa-book", color: "#10b981", desc: yhLang("No awareness about rights", "শিক্ষা ও সচেতনতার অভাব") },
+                { title: yhLang("Dowry Burden", "কন্যাদায়গ্রস্ত পিতার দায়মুক্ত হওয়া"), icon: "fa-sack-dollar", color: "#8b5cf6", desc: yhLang("Parents seek relief from dowry", "কন্যাদায়গ্রস্ত পিতামাতা") },
                 { title: yhLang("Gender Inequality", "জেন্ডার বৈষম্য"), icon: "fa-scale-balanced", color: "#ec4899", desc: yhLang("Girls considered inferior", "মেয়েদের অসমান অধিকার") },
-                { title: yhLang("Dowry Burden", "দায়গ্রস্ততা"), icon: "fa-sack-dollar", color: "#8b5cf6", desc: yhLang("Parents seek relief from dowry", "কন্যাদায়গ্রস্ত পিতামাতা") },
-                { title: yhLang("Social Insecurity", "সামাজিক অনিরাপত্তা"), icon: "fa-shield-exclamation", color: "#06b6d4", desc: yhLang("Unsafe environment for girls", "সামাজিক নিরাপত্তাহীনতা") },
-                { title: yhLang("Lack of Education", "শিক্ষার অভাব"), icon: "fa-book", color: "#10b981", desc: yhLang("No awareness about rights", "শিক্ষা ও সচেতনতার অভাব") },
-                { title: yhLang("Girl Neglect", "মেয়েদের অবহেলা"), icon: "fa-child", color: "#f97316", desc: yhLang("Girls seen as burden", "মেয়ে শিশুর প্রতি অবহেলা") },
-                { title: yhLang("School Dropout", "স্কুল ছাড়া"), icon: "fa-graduation-cap", color: "#06b6d4", desc: yhLang("Girls drop out of school", "স্কুল থেকে ঝরে পড়া") },
-                { title: yhLang("Legal Ignorance", "আইন অজ্ঞতা"), icon: "fa-gavel", color: "#ef4444", desc: yhLang("Unaware of marriage laws", "বিবাহ আইন সম্পর্কে অজ্ঞতা") },
-                { title: yhLang("Poor Enforcement", "আইন প্রয়োগ"), icon: "fa-check-double", color: "#3b82f6", desc: yhLang("Weak law implementation", "আইনের যথাযথ প্রয়োগ নেই") }
+                { title: yhLang("Social Insecurity", "সামাজিক নিরাপত্তাহীনতা"), icon: "fa-circle-exclamation", color: "#06b6d4", desc: yhLang("Unsafe environment for girls", "সামাজিক নিরাপত্তাহীনতা") },
+                { title: yhLang("Girl Neglect", "মেয়ে শিশুর প্রতি অবহেলা বা তাকে বোঝা মনে করা"), icon: "fa-child", color: "#f97316", desc: yhLang("Girls seen as burden", "মেয়ে শিশুর প্রতি অবহেলা") },
+                { title: yhLang("Legal Ignorance", "বিবাহ আইন সম্পর্কে ধারণা কম থাকা"), icon: "fa-gavel", color: "#ef4444", desc: yhLang("Unaware of marriage laws", "বিবাহ আইন সম্পর্কে অজ্ঞতা") },
+                { title: yhLang("School Dropout", "স্কুল থেকে ঝরে পড়া"), icon: "fa-graduation-cap", color: "#06b6d4", desc: yhLang("Girls drop out of school", "স্কুল থেকে ঝরে পড়া") },
+                { title: yhLang("Poor Enforcement", "বাল্য বিবাহ নিরোধ আইনের যথাযথ প্রয়োগ না হওয়া"), icon: "fa-check-double", color: "#3b82f6", desc: yhLang("Weak law implementation", "আইনের যথাযথ প্রয়োগ নেই") }
               ];
 
               const renderOrbitItems = () => {
@@ -4793,31 +4789,31 @@ const coursesData = [
             content: (function () {
               const consequences = [
                 { 
-                  title: yhLang("Premature & Underweight Births", "অপরিণত, অপুষ্ট ওজনের শিশুর জন্ম"), 
+                  title: yhLang("Premature & Underweight Births", "অপরিণত, অপরিপক্ক, অপুষ্ট ও স্বল্প ওজনের শিশুর জন্মদান"), 
                   icon: "fa-baby", 
                   color: "#8b5cf6",
                   shadowColor: "rgba(139, 92, 246, 0.25)"
                 },
                 { 
-                  title: yhLang("Nutritional Deficiency", "কিশোরী মায়ের পুষ্টিহীনতা ও স্বাস্থ্যগত সমস্যা"), 
+                  title: yhLang("Nutritional Deficiency", "কিশোরী মায়ের পুষ্টির অভাবজনিত সমস্যা"), 
                   icon: "fa-apple", 
                   color: "#10b981",
                   shadowColor: "rgba(16, 185, 129, 0.25)"
                 },
                 { 
-                  title: yhLang("Chronic Reproductive Issues", "দীর্ঘস্থায়ী প্রজননস্বাস্থ্যজনিত জটিলতা"), 
+                  title: yhLang("Chronic Reproductive Issues", "দীর্ঘস্থায়ী প্রজনন স্বাস্থ্য সমস্যা"), 
                   icon: "fa-heart-crack", 
                   color: "#ef4444",
                   shadowColor: "rgba(239, 68, 68, 0.25)"
                 },
                 { 
-                  title: yhLang("Childbirth Complications", "প্রসব ও প্রসব-পরবর্তী জটিলতায় ভোগা"), 
+                  title: yhLang("Childbirth Complications", "প্রসব ও প্রসব পরবর্তী জটিলতায় ভোগা"), 
                   icon: "fa-hospital", 
                   color: "#f59e0b",
                   shadowColor: "rgba(245, 158, 11, 0.25)"
                 },
                 { 
-                  title: yhLang("Increased Mortality Risk", "মা ও শিশুমৃত্যুর ঝুঁকি বৃদ্ধি"), 
+                  title: yhLang("Increased Mortality Risk", "মা ও শিশুমৃত্যুর ঝুঁকি বাড়ে"), 
                   icon: "fa-skull-crossbones", 
                   color: "#dc2626",
                   shadowColor: "rgba(220, 38, 38, 0.25)"
@@ -4829,8 +4825,8 @@ const coursesData = [
                   shadowColor: "rgba(6, 182, 212, 0.25)"
                 },
                 { 
-                  title: yhLang("Violence & Suicide Risk", "সহিংসতার ঝুঁকি ও আত্মহত্যার প্রবণতা"), 
-                  icon: "fa-shield-exclamation", 
+                  title: yhLang("Violence & Suicide Risk", "সহিংসতার ঝুঁকি ও আত্মহত্যা"), 
+                  icon: "fa-circle-exclamation", 
                   color: "#ec4899",
                   shadowColor: "rgba(236, 72, 153, 0.25)"
                 },
@@ -4930,7 +4926,7 @@ const coursesData = [
   { 
     title: yhLang(
       "Ensure marriage registrars verify birth certificates during marriage",
-      "বিয়ে সম্পাদনের সময় কাজী যেন অবশ্যই জন্মসনদ যাচাই করেন—এ বিষয়ে কাজীকে সচেতন করা"
+      "বিয়ে পড়ানোর সময় কাজী যেন অবশ্যই জন্মসনদ দেখে বিয়ে পড়ান সে ব্যাপারে কাজীকে সচেতন করা;"
     ), 
     icon: "fa-person-chalkboard", 
     color: "#7c3aed"
@@ -4954,7 +4950,7 @@ const coursesData = [
   { 
     title: yhLang(
       "Educate youth and guardians on contraception and delaying childbirth even in early marriages",
-      "বাল্যবিবাহ হলেও জন্মনিয়ন্ত্রণ পদ্ধতি ব্যবহার ও দেরিতে সন্তান গ্রহণ সম্পর্কে তরুন-তরুনী ও অভিভাবকদের সচেতন করা"
+      "বাল্যবিবাহ হলেও জন্মনিয়ন্ত্রণ পদ্ধতি ব্যবহার ও দেরিতে সন্তান গ্রহণে কিশোর-কিশোরী ও অভিভাবকদেরও সচেতন করা;"
     ), 
     icon: "fa-capsules", 
     color: "#0891b2"
@@ -4962,7 +4958,7 @@ const coursesData = [
   { 
     title: yhLang(
       "Ensure easy access to appropriate contraceptive methods for youth",
-      "তরুন-তরুনীদের জন্য উপযুক্ত জন্মনিয়ন্ত্রণ পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা"
+      "কিশোর-কিশোরীদের জন্য উপযুক্ত জন্মনিয়ন্ত্রণ পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা;"
     ), 
     icon: "fa-hospital", 
     color: "#10b981"
@@ -5044,13 +5040,13 @@ const coursesData = [
         id: "ch-7",
         title: yhLang(
           "Module-7: Adolescent Family Planning",
-          "মডিউল-৭: তারুন্য কালীন পরিবার পরিকল্পনা",
+          "মডিউল-৭: কৈশোর কালীন পরিবার পরিকল্পনা",
         ),
         lessons: [
           {
             id: "ch7-lesson-1",
             title: yhLang("Adolescent Family Planning", "কৈশোরকালীন পরিবার পরিকল্পনা"),
-            icon: "fa-person-group",
+            icon: "fa-people-group",
             gradientClass: "bg-gradient-purple",
             audioFile: "",
             quiz: {
@@ -5119,8 +5115,7 @@ const coursesData = [
                                   <i class="fa-solid fa-person-dress"></i>
                                 </div>
                                 <div class="ch7l3-method-info">
-                                  <p class="ch7l3-method-name">${yhLang("Female Permanent", "নারী স্থায়ী পদ্ধতি")}</p>
-                                  <p class="ch7l3-method-label">${yhLang("Tubectomy", "বা টিউবেকটমি")}</p>
+                                  <p class="ch7l3-method-label">${yhLang("Tubectomy", "নারী স্থায়ী পদ্ধতি বা টিউবেকটমি")}</p>
                                 </div>
                               </div>
                               <div class="ch7l3-method-item ch7l3-method-type-1">
@@ -5128,8 +5123,7 @@ const coursesData = [
                                   <i class="fa-solid fa-person"></i>
                                 </div>
                                 <div class="ch7l3-method-info">
-                                  <p class="ch7l3-method-name">${yhLang("Male Permanent", "পুরুষ স্থায়ী পদ্ধতি")}</p>
-                                  <p class="ch7l3-method-label">${yhLang("NSV (Vasectomy)", "বা এনএসভি")}</p>
+                                  <p class="ch7l3-method-label">${yhLang("NSV (Vasectomy)", "পুরুষ স্থায়ী পদ্ধতি বা এনএসভি")}</p>
                                 </div>
                               </div>
                             </div>
@@ -5151,7 +5145,7 @@ const coursesData = [
                               <div class="ch7l3-methods-grid">
                                 <div class="ch7l3-method-item ch7l3-method-type-2">
                                   <div class="ch7l3-method-icon">
-                                    <i class="fa-solid fa-pillss"></i>
+                                    <i class="fa-solid fa-pills"></i>
                                   </div>
                                   <div class="ch7l3-method-info">
                                     <p class="ch7l3-method-name">${yhLang("Birth Control Pills", "খাবার বড়ি")}</p>
@@ -5269,7 +5263,7 @@ const coursesData = [
                         <thead class="ch7l4-table-head">
                           <tr>
                             <th class="ch7l4-label-header"><span>${yhLang("No. of Children", "সন্তান সংখ্যা")}</span></th>
-                            <th class="ch7l4-method-col" data-method="pill"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white;"><i class="fa-solid fa-pillss"></i> ${yhLang("Pills", "খাবার বড়ি")}</span></th>
+                            <th class="ch7l4-method-col" data-method="pill"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white;"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</span></th>
                             <th class="ch7l4-method-col" data-method="condom"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white;"><i class="fa-solid fa-shield-halved"></i> ${yhLang("Condom", "কনডম")}</span></th>
                             <th class="ch7l4-method-col" data-method="injection"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</span></th>
                             <th class="ch7l4-method-col" data-method="implant"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;"><i class="fa-solid fa-microchip"></i> ${yhLang("Implant", "ইমপ্ল্যান্ট")}</span></th>
@@ -5348,7 +5342,7 @@ const coursesData = [
                         </thead>
                         <tbody class="ch7l4-table-body">
                           <tr class="ch7l4-usage-row ch7l4-method-1" data-aos="fade-up" data-aos-delay="80">
-                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);"><i class="fa-solid fa-pillss"></i> ${yhLang("Pills", "খাবার বড়ি")}</div></td>
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</div></td>
                             <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Take daily", "প্রতিদিন খেতে হয়")}</span></div></td>
                             <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("Daily", "প্রতিদিন")}</div></td>
                           </tr>
@@ -5570,7 +5564,7 @@ const coursesData = [
               const preventionIcons = [
                 "fa-ban",
                 "fa-gavel",
-                "fa-person-group",
+                "fa-people-group",
                 "fa-clipboard-check",
                 "fa-triangle-exclamation",
                 "fa-hourglass-end",
@@ -7099,7 +7093,7 @@ const coursesData = [
               "Child Abuse",
               "শিশু নির্যাতন"
             ),
-            icon: "fa-shield-exclamation",
+            icon: "fa-circle-exclamation",
             gradientClass: "bg-gradient-danger",
             audioFile: "",
             quiz: {
@@ -7396,7 +7390,7 @@ const sexPoints = [
           {
             id: "ch13-lesson-2",
             title: yhLang("Understanding Gender Inequity", "জেন্ডার বৈষম্য"),
-            icon: "fa-person-arrows",
+            icon: "fa-people-arrows",
             gradientClass: "bg-gradient-purple",
             audioFile: "",
             quiz: {
@@ -7455,7 +7449,7 @@ const sections = [
       "Gender equality refers to realistic equality where both women and men can participate and be empowered equally in all personal and public spheres. Gender equality does not mean men and women are identical, but it ensures that their rights, opportunities, responsibilities, and risks are equal.",
       "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।"
     ),
-    icon: "fa-person-group",
+    icon: "fa-people-group",
     type: "gender",
   },
   {
@@ -8175,7 +8169,7 @@ const orbitItems = [
       "Girls and boys should grow up with equal dignity and freedom, identified simply as human beings.",
       "সম মর্যাদা, স্বাধীনতা নিয়ে নারী-পুরুষ বেড়ে উঠবে, যার পরিচয় হবে শুধু মানুষ হিসেবে।"
     ),
-    icon: "fa-person-group",
+    icon: "fa-people-group",
     type: "type2"
   },
   {
@@ -8377,7 +8371,7 @@ const orbitItems = [
                         "Most youth in Bangladesh face lower socioeconomic positions, unemployment, and hopelessness. Socially unestablished, dependent, and depressed individuals are more likely to abuse. Poor socialization and childhood exposure to violence increase the risk.",
                         "বাংলাদেশে যুবসমাজের অধিকাংশই নিম্ন আর্থ-সামাজিক অবস্থানের কারণে এবং বেকার ও হতাশাব্যঞ্জক জীবনযাপন করে থাকে। আবার সামাজিকভাবে অপ্রতিষ্ঠিত, পরনির্ভরশীল, হীনমন্য ও হতাশাগ্রস্থ ব্যক্তিরা এই ধরণের অনাকাঙ্ক্ষিত আচরণ করে থাকে। সুস্থ সামাজিকীকরণের অভাবেও এই ধরনের ঘটনা ঘটে থাকে, যেমন : শৈশবকাল থেকে যখন বয়ঃজেষ্ঠ্যদের কোনো মেয়ের সাথে অন্যায় আচরণ করতে দেখে তখন সে এই বিষয়ে উৎসাহী হয়।"
                       ),
-                      icon: "fa-person-group",
+                      icon: "fa-people-group",
                       type: "type1"
                     }
                   ]
@@ -8660,7 +8654,7 @@ const orbitItems = [
       "Social humiliation, scolding from parents and elders, withdrawal from social activities, and early marriage.",
       "সমাজে হেয় প্রতিপন্ন হওয়া, বাবা-মা ও গুরুজনদের তিরস্কার, সামাজিক কর্মকাণ্ড হতে নিজেকে গুটিয়ে নেয়া, অল্প বয়সে বিয়ে দিয়ে দেয়া ইত্যাদি।"
     ),
-    icon: "fa-person-group",
+    icon: "fa-people-group",
     type: "type1"
   }
 ]
@@ -9060,7 +9054,7 @@ const orbitItems = [
                   <section class="m14l1-grid" data-aos="fade-up" data-aos-delay="70">
                     <article class="m14l1-card m14l1-card-social">
                       <h3 class="m14l1-subtitle">
-                        <i class="fa-solid fa-person-group"></i>
+                        <i class="fa-solid fa-people-group"></i>
                         ${yhLang("Social adjustments", "সামাজিক পরিবর্তনসমূহ")}
                       </h3>
                       <ul class="m14l1-list">
@@ -9386,7 +9380,7 @@ const orbitItems = [
                             <span class="m14lem-ei-li-text">${yhLang("Understand others' emotions and treat them with sensitivity.", "অন্যদের আবেগগুলো বুঝতে পারা এবং তাদের সাথে সংবেদনশীলভাবে আচরণ করা।")}</span>
                           </li>
                           <li class="m14lem-ei-li m14lem-ei-violet" data-aos="fade-left" data-aos-delay="70">
-                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-person-group"></i></span>
+                            <span class="m14lem-ei-li-icon"><i class="fa-solid fa-people-group"></i></span>
                             <span class="m14lem-ei-li-text">${yhLang("Build good relationships with others through emotional intelligence.", "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা।")}</span>
                           </li>
                         </ul>
@@ -9699,7 +9693,7 @@ const orbitItems = [
                     "Build healthier relationships through emotional intelligence.",
                     "আবেগীয় বুদ্ধিমত্তার মাধ্যমে অন্যদের সাথে ভালো সম্পর্ক গড়ে তুলতে পারা",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   tone: "accent",
                 },
               ];
@@ -10228,7 +10222,7 @@ const orbitItems = [
                     "Talk with trusted people",
                     "বিশ্বস্ত বন্ধুএবং পরিবারের সদস্যদের সাথে সুন্দর সময় অতিবাহিত করা",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   tone: "success",
                 },
                 {
@@ -10696,7 +10690,7 @@ const orbitItems = [
                     "Lack of social support",
                     "সামাজিক সমর্থনের অভাব",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   tone: "slate",
                 },
                 {
@@ -11632,7 +11626,7 @@ const orbitItems = [
                   ),
                 },
                 {
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "m16l1-benefit-c",
                   text: yhLang(
                     "Improves healthy communication and social connection.",
@@ -11719,8 +11713,8 @@ const orbitItems = [
               "Skills for Psychosocial Support",
               "মনোসামাজিক সহায়তার দক্ষতাসমূহ",
             ),
-            icon: "fa-person-arrows",
-            gradientClass: "fa-solid fa-person-group",
+            icon: "fa-people-arrows",
+            gradientClass: "fa-solid fa-people-group",
             audioFile: "",
             quiz: {
               passingScore: 60,
@@ -11793,7 +11787,7 @@ const orbitItems = [
                   ),
                 },
                 {
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "m16l2-outcome-trust",
                   text: yhLang(
                     "It helps build a strong relationship between beneficiary and helper.",
@@ -11826,7 +11820,7 @@ const orbitItems = [
 
                   <section class="m16l2-hero" data-aos="fade-down">
                     <div class="m16l2-hero__badge" aria-hidden="true">
-                      <i class="fa-solid fa-person-group"></i>
+                      <i class="fa-solid fa-people-group"></i>
                     </div>
                     <div class="m16l2-hero__content">
                       <h2 class="m16l2-hero__title">${yhLang(
@@ -12565,7 +12559,7 @@ const orbitItems = [
                               <ul class="m17l1-causes-list">
                                 <li class="m17l1-cause-item m17l1-cause-availability" data-aos="fade-up" data-aos-delay="65">
                                   <div class="m17l1-cause-icon">
-                                    <i class="fa-solid fa-pillss"></i>
+                                    <i class="fa-solid fa-pills"></i>
                                   </div>
                                   <span class="m17l1-cause-text">${yhLang("Easy availability of drugs", "মাদকদ্রব্যের সহজলভ্যতা")}</span>
                                 </li>
@@ -14844,7 +14838,7 @@ const orbitItems = [
                     "Stand behind the person and wrap both arms around their waist below the ribs.",
                     "আক্রান্ত ব্যক্তির পিছনে দাঁড়িয়ে ব্যক্তির পাঁজরের নিচে কোমর বরাবর প্রাথমিক চিকিৎসা প্রদানকারী তার দুই হাত দিয়ে আঁকড়ে ধরবেন।",
                   ),
-                  icon: "fa-person-arrows",
+                  icon: "fa-people-arrows",
                   color: "m18l11-follow-grip",
                 },
                 {
@@ -15618,7 +15612,7 @@ const orbitItems = [
 শিশুর মানসিক বিকাশ নিশ্চিত ও গলগণ্ড রোধ করে।
 `,
                   ),
-                  icon: "fa-pillss",
+                  icon: "fa-pills",
                   color: "vitamins",
                 },
                 {
@@ -17751,7 +17745,7 @@ const orbitItems = [
                   ),
                 },
                 {
-                  icon: "fa-person-arrows",
+                  icon: "fa-people-arrows",
                   color: "#ff5722",
                   text: yhLang(
                     "Living with divorced parents or stepfather/stepmother",
@@ -17823,7 +17817,7 @@ const orbitItems = [
                   ),
                 },
                 {
-                  icon: "fa-pillss",
+                  icon: "fa-pills",
                   color: "#e53935",
                   text: yhLang(
                     "Children with abnormal behavioral disorders due to drugs or other causes",
@@ -17944,7 +17938,7 @@ const orbitItems = [
                   ),
                 },
                 {
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   color: "#f57c00",
                   text: yhLang(
                     "<strong>Enhancing Social Engagement:</strong> Implement activities that help youth build connections and strengthen engagement with their community.",
@@ -19183,7 +19177,7 @@ const orbitItems = [
                   .map(
                     (item, idx) => `
                       <li style="background:${idx % 2 === 0 ? "rgba(255,255,255,.66)" : "rgba(224,242,241,.72)"};border-left:3px solid ${idx % 2 === 0 ? "#26a69a" : "#00acc1"};border-radius:9px;padding:10px 8px;margin-bottom:px;box-shadow:${idx % 2 === 0 ? "0 4px 10px rgba(0,150,136,.15)" : "0 5px 12px rgba(0,172,193,.14)"};">
-                        <i class="fa-solid ${idx < 2 ? "fa-soap" : idx < 4 ? "fa-droplet" : "fa-person-group"} ${idx < 2 ? "text-success" : idx < 4 ? "text-info" : "text-primary"} me-2"></i>
+                        <i class="fa-solid ${idx < 2 ? "fa-soap" : idx < 4 ? "fa-droplet" : "fa-people-group"} ${idx < 2 ? "text-success" : idx < 4 ? "text-info" : "text-primary"} me-2"></i>
                         <span style="">${item}</span>
                       </li>
                     `,
@@ -19212,7 +19206,7 @@ const orbitItems = [
                           </div>
                           <div class="hygiene-list">
                             <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;font-size:0.98em;margin-bottom:6px;">
-                             <h3> <i class="fa-solid fa-person-group me-2" style="font-size:20px;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}</h3>
+                             <h3> <i class="fa-solid fa-people-group me-2" style="font-size:20px;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}</h3>
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(communityActions)}
@@ -20568,7 +20562,7 @@ const orbitItems = [
                     "Treatment - Symptomatic",
                     "চিকিৎসা- লক্ষণভিত্তিক",
                   ),
-                  icon: "fa-pillss",
+                  icon: "fa-pills",
                 },
               ];
 
@@ -20677,7 +20671,7 @@ const orbitItems = [
                     "Avoid crowded places",
                     "জনসমাগম হয় এমন জায়গা এড়িয়ে চলা",
                   ),
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                 },
                 {
                   text: yhLang(
@@ -21433,7 +21427,7 @@ const orbitItems = [
                     "Interpersonal Relationship Skills",
                     "আন্ত:ব্যক্তিক সম্পর্ক দক্ষতা",
                   ),
-                  icon: "fa-person-arrows",
+                  icon: "fa-people-arrows",
                   gradient: "bg-gradient-teal",
                 },
                 {
@@ -21608,7 +21602,7 @@ const orbitItems = [
                       <section class="m24l1-panel m24l1-panel-help" data-aos="fade-up" data-aos-delay="600">
                         <h3 class="m24l1-section-heading">
                           <span class="m24l1-heading-icon m24l1-icon-help">
-                            <i class="fa-solid fa-person-group"></i>
+                            <i class="fa-solid fa-people-group"></i>
                           </span>
                           <span class="m24l1-heading-text">${yhLang("Who Can Help Teach?", "কারা জীবন দক্ষতা শেখাতে সাহায্য করতে পারেন ?")}</span>
                         </h3>
@@ -21726,7 +21720,7 @@ const orbitItems = [
                   ),
                 },
                 {
-                  icon: "fa-pillss",
+                  icon: "fa-pills",
                   color: "m24l2-warn-red",
                   text: yhLang("Drug use", "মাদক সেবন"),
                 },
@@ -22095,7 +22089,7 @@ const orbitItems = [
                   ),
                 },
                 {
-                  icon: "fa-person-group",
+                  icon: "fa-people-group",
                   accent: "m24l11-item--c",
                   text: yhLang(
                     "Life skills education (through group activities) helps build moral thinking and responsible behavior.",
@@ -22435,7 +22429,7 @@ const orbitItems = [
                       <div class="m25l2f-branch m25l2f-branch--left">
                         <div class="m25l2f-node m25l2f-node--main m25l2f-line" data-aos="zoom-in" data-aos-delay="200" style="--d:160ms">
                           <span class="m25l2f-node__icon bg-gradient-mint" aria-hidden="true">
-                            <i class="fa-solid fa-person-arrows"></i>
+                            <i class="fa-solid fa-people-arrows"></i>
                           </span>
                           <span class="m25l2f-node__text">${yhLang("Interpersonal Communication", "অন্তর্ব্যক্তিক যোগাযোগ")}</span>
                         </div>
