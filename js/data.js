@@ -2975,7 +2975,7 @@ const coursesData = [
                     "Invest in underserved districts, hard-to-reach communities, refugees and adolescents with disabilities.",
                     "অসেবা প্রাপ্ত জেলা, দুর্গম সম্প্রদায়, শরণার্থী ও প্রতিবন্ধী কিশোরদের জন্য বিনিয়োগ বাড়ান।",
                   ),
-                  icon: "fa-person-arrows-left-right",
+                  icon: "fa-person",
                   cls: "bg-gradient-rose",
                   delay: 160,
                 },
@@ -9531,7 +9531,7 @@ const orbitItems = [
                 },
                 {
                   text: yhLang("Dry mouth", "মুখ শুকিয়ে যাওয়া"),
-                  icon: "fa-mouth-open",
+                  icon: "fa-frown-open",
                   tone: "peach",
                 },
                 {
@@ -9641,7 +9641,7 @@ const orbitItems = [
                     "Relationship deterioration",
                     "ব্যক্তিগত ও পারিবারিক সম্পর্কের অবনতি",
                   ),
-                  icon: "fa-person-arrows-left-right",
+                  icon: "fa-person",
                   tone: "peach",
                 },
                 {
@@ -9844,7 +9844,7 @@ const orbitItems = [
             content: (function () {
               const stressIntro = yhLang(
                 "Stress is the internal pressure created when there is conflict between a person's needs and abilities.",
-                "ব্যক্তির চাহিদা এবং ক্ষমতার মধ্যে দ¦ন্দ্ব তৈরি হওয়ার ফলে ব্যক্তির নিজের মধ্যে যে পরিস্থিতির সৃষ্টি হয় তাকে মানসিক চাপ বলা হয়। অর্থাৎ আমরা যে কাজটি যেভাবে করতে চাই তা যখন পরিবেশ ও পরিস্থিতির কারণে করতে পারি না তখন আমরা মানসিকভাবে চাপ অনুভব করে থাকি।",
+                "ব্যক্তির চাহিদা এবং ক্ষমতার মধ্যে দ্বন্দ্ব তৈরি হওয়ার ফলে ব্যক্তির নিজের মধ্যে যে পরিস্থিতির সৃষ্টি হয় তাকে মানসিক চাপ বলা হয়। অর্থাৎ আমরা যে কাজটি যেভাবে করতে চাই তা যখন পরিবেশ ও পরিস্থিতির কারণে করতে পারি না তখন আমরা মানসিকভাবে চাপ অনুভব করে থাকি।",
               );
 
              
@@ -9887,7 +9887,7 @@ const orbitItems = [
                 },
                 {
                   text: yhLang("Diarrhea", "ডায়রিয়া"),
-                  icon: "fa-toilets",
+                  icon: "fa-toilet",
                   tone: "peach",
                 },
                 {
@@ -9905,7 +9905,7 @@ const orbitItems = [
               const emotionalSymptoms = [
                 {
                   text: yhLang("Irritability", "বিরক্ত বোধ"),
-                  icon: "fa-frustration-frustrated",
+                  icon: "fa-frown-open",
                   tone: "warn",
                 },
                 {
@@ -9935,7 +9935,7 @@ const orbitItems = [
                 },
                 {
                   text: yhLang("Lack of confidence", "আত্মবিশ্বাসের অভাব"),
-                  icon: "fa-person-dots-question",
+                  icon: "fa-person",
                   tone: "accent",
                 },
                 {
@@ -10150,7 +10150,7 @@ const orbitItems = [
                     "Family, social, political, religious, and cultural conflicts can trigger stress.",
                     "পারিবারিক, সামাজিক, রাজনৈতিক, ধর্মীয়, জাতিগত, প্রথাগত ইত্যাদি ক্ষেত্রে সৃষ্ট কলহ আমাদের মধ্যে মানসিক চাপ সৃষ্টি করে।",
                   ),
-                  icon: "fa-person-arrows-left-right",
+                  icon: "fa-person",
                   tone: "danger",
                 },
                 {
@@ -10764,7 +10764,7 @@ const orbitItems = [
                 },
                 {
                   text: yhLang("Relationship damage", "সম্পর্কের ক্ষতি"),
-                  icon: "fa-person-arrows-left-right",
+                  icon: "fa-person",
                   tone: "red",
                 },
                 {
@@ -11351,7 +11351,7 @@ const orbitItems = [
                     "Overuse of social media may reduce real-life interaction and social skills.",
                     "অতিরিক্ত সামাজিক মিডিয়া ব্যবহারের ফলে বাস্তব সামাজিক মিথস্ক্রিয়ার অভাব তৈরি হতে পারে।",
                   ),
-                  icon: "fa-person-arrows-left-right",
+                  icon: "fa-person",
                   tone: "info",
                 },
               ];
@@ -22509,7 +22509,7 @@ const orbitItems = [
           {
             id: "ch25-lesson-3",
             title: yhLang("Methods of communication", "যোগাযোগের পদ্ধতি"),
-            icon: "fa-person-arrows-left-right",
+            icon: "fa-person",
             gradientClass: "bg-gradient-pink",
             audioFile: "",
             content: (function () {
@@ -22540,7 +22540,7 @@ const orbitItems = [
                 const t = String(text || "").trim();
                 switch (t) {
                   case yhLang("Face-to-face conversation", "মুখোমুখি কথা বলা"):
-                    return "fa-person-arrows-left-right";
+                    return "fa-person";
                   case yhLang("Phone call", "টেলিফোনে কথা বলা"):
                     return "fa-phone";
                   case yhLang("Lecture", "বক্তৃতা"):
@@ -22623,7 +22623,7 @@ const orbitItems = [
 
                   <header class="m25l3-hero gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">
                     <div class="m25l3-hero__badge icon-spin-on-hover" aria-hidden="true">
-                      <i class="fa-solid fa-person-arrows-left-right"></i>
+                      <i class="fa-solid fa-person"></i>
                     </div>
                     <div class="m25l3-hero__body">
                       <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Methods of One-to-One Communication", "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ")}</h2>
@@ -22762,7 +22762,7 @@ const orbitItems = [
                   icon: "fa-sun",
                   items: [
                     {
-                      icon: "fa-person-arrows-left-right",
+                      icon: "fa-person",
                       text: yhLang(
                         "S: Sit squarely.",
                         "এস = সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা",
