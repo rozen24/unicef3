@@ -2182,9 +2182,15 @@ body {
   height: 100dvh !important;
 }   
 .lesson-slide {
-  min-height: calc(100dvh - 167px);
+  min-height: calc(100dvh - 144px);
   overflow: hidden;
 }   
+/* Apply ONLY when height is 768px or less */
+@media screen and (max-height: 768px) {
+  .lesson-slide {
+  min-height: calc(100dvh - 125px);
+  }  
+}
 .lession_slide_none {
   min-height: auto;
 }
@@ -20354,6 +20360,7 @@ input::placeholder {
   background: var(--hero-gradient);
   display: inline-flex;
   box-shadow: 0 4px 16px rgba(59,130,246,0.35);
+  display: none;
 }
 
 .lesson-slide .modern-card,
@@ -28922,13 +28929,13 @@ dashboard-titled-title {
 }
 
 .lesson-hero__top {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .lesson-hero__counts {
@@ -28960,17 +28967,17 @@ dashboard-titled-title {
 }
 
 .lesson-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1.15rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.78rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 11px;
 }
 
 .lesson-title {
@@ -29049,18 +29056,18 @@ dashboard-titled-title {
 }
 
 .lesson-progress__meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.3rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(226, 240, 255, 0.78);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(226, 240, 255, 0.78);
 }
 
 .lesson-progress__label {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .lesson-progress__value {
@@ -29071,7 +29078,7 @@ dashboard-titled-title {
 }
 
 .lesson-progress__caption {
-  font-size: 0.8rem;
+  font-size: 11px;
   color: rgba(226, 240, 255, 0.82);
   letter-spacing: 0.02em;
 }
@@ -29272,10 +29279,7 @@ dashboard-titled-title {
   color: #4b647f;
 }
 
-.lesson-content-body {
-  display: grid;
-  gap: 10px;
-}
+
 
 .lesson-quiz-card {
   background: linear-gradient(135deg, rgba(0, 95, 175, 0.08), rgba(40, 122, 210, 0.12));
@@ -29648,7 +29652,7 @@ dashboard-titled-title {
   .lesson-back {
     width: 100%;
     justify-content: center;
-    padding: 0.45rem 0.9rem;
+    padding: 5px 10px;
     font-size: 0.85rem;
   }
 

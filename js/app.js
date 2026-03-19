@@ -3566,7 +3566,7 @@ class YouthHealthLMS {
                   <div class="lesson-progress__meta">
                     <div class="lesson-progress__course">
                       <span class="lesson-progress__label">${this.lang("Course progress:", "কোর্সের অগ্রগতি:")}</span>
-                      <span class="lesson-progress__value">&nbsp;${courseProgressDisplay}%</span>
+                      <span class="lesson-progress__value">${courseProgressDisplay}%</span>
                     </div>
                     ${
                       totalLessons > 0
@@ -3629,16 +3629,16 @@ class YouthHealthLMS {
                       }
                       <div class="inline-lesson-nav">
                         ${!isModuleQuizLesson && hasPrevChapter ? `<button class="btn btn-outline-secondary" onclick="app.previousChapter()">
-                          <i class="fa-solid fa-arrow-left me-2"></i>Previous module
+                          <i class="fa-solid fa-arrow-left me-1"></i>Previous module
                         </button>` : ''}
                         ${!isModuleQuizLesson && hasPrevLesson ? `<button class="btn btn-outline-primary" onclick="app.previousLesson()">
-                          <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
+                          <i class="fa-solid fa-arrow-left-long me-1"></i>Previous lesson
                         </button>` : !isModuleQuizLesson ? `<span></span>` : ''}
                         ${!isModuleQuizLesson && hasNextLesson ? `<button class="btn btn-primary" onclick="app.nextLesson()">
-                          Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
+                          Next lesson<i class="fa-solid fa-arrow-right-long ms-1"></i>
                         </button>` : !isModuleQuizLesson ? `<span></span>` : ''}
                         ${!isModuleQuizLesson && hasNextChapter ? `<button class="btn btn-primary" onclick="app.nextChapter()">
-                          Next module<i class="fa-solid fa-arrow-right ms-2"></i>
+                          Next module<i class="fa-solid fa-arrow-right ms-1"></i>
                         </button>` : ''}
                       </div>
                     </div>

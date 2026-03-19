@@ -3213,44 +3213,50 @@ const coursesData = [
               );
 
               const maleChanges = [
-                "উচ্চতা ও ওজন বাড়ে",
-                "বুক ও কাঁধ চওড়া হয়",
-                "হালকা গোঁফের রেখা দেখা দেয়",
-                "গলার স্বর ভেঙে যায় ও ভারী হয়",
-                "অন্ডকোষ ও লিঙ্গের আকার বৃদ্ধি পায়",
-                "লিঙ্গের চারপাশ ও বগলে লোম গজায়",
-                "কখনো কখনো ঘুমের মধ্যে বীর্যপাত হয়",
-                "চামড়া তৈলাক্ত হয়",
+                yhLang("Height and weight increase", "উচ্চতা ও ওজন বাড়ে"),
+                yhLang("Chest and shoulders broaden", "বুক ও কাঁধ চওড়া হয়"),
+                yhLang("Light moustache begins to appear", "হালকা গোঁফের রেখা দেখা দেয়"),
+                yhLang("Voice breaks and becomes deeper", "গলার স্বর ভেঙে যায় ও ভারী হয়"),
+                yhLang("Testicles and penis increase in size", "অন্ডকোষ ও লিঙ্গের আকার বৃদ্ধি পায়"),
+                yhLang("Hair grows around genitals and underarms", "লিঙ্গের চারপাশ ও বগলে লোম গজায়"),
+                yhLang("Nocturnal emission may occur", "কখনো কখনো ঘুমের মধ্যে বীর্যপাত হয়"),
+                yhLang("Skin becomes oily", "চামড়া তৈলাক্ত হয়"),
               ];
 
               const femaleChanges = [
-                "উচ্চতা ও ওজন বাড়ে",
-                "স্তনের আকার বড় হয়",
-                "গলার স্বর পরিবর্তন হয়",
-                "মাসিক শুরু হয়",
-                "উরু ও নিতম্ব ভারী হয়",
-                "যোনি অঞ্চলে ও বগলে লোম গজায়",
-                "জরায়ু ও ডিম্বাশয় বড় হয়",
-                "চামড়া তৈলাক্ত হয়",
-              ];
+              yhLang("Height and weight increase", "উচ্চতা ও ওজন বাড়ে"),
+              yhLang("Breasts develop and enlarge", "স্তনের আকার বড় হয়"),
+              yhLang("Voice changes", "গলার স্বর পরিবর্তন হয়"),
+              yhLang("Menstruation begins", "মাসিক শুরু হয়"),
+              yhLang("Hips and thighs become wider", "উরু ও নিতম্ব ভারী হয়"),
+              yhLang("Hair grows in genital area and underarms", "যোনি অঞ্চলে ও বগলে লোম গজায়"),
+              yhLang("Uterus and ovaries grow", "জরায়ু ও ডিম্বাশয় বড় হয়"),
+              yhLang("Skin becomes oily", "চামড়া তৈলাক্ত হয়"),
+            ];
 
               const mentalChanges = [
-                "মনে নানা প্রশ্ন ও কৌতূহল জাগে",
-                "বিপরীত লিঙ্গের প্রতি আকর্ষণ বোধ করে",
-                "লাজুক ভাব দেখা দেয় ও সঙ্কোচ বোধ করে",
-                "নিজের প্রতি অনেক বেশি মনোযোগ দাবি করে; আবেগপ্রবণ হয় এবং স্নেহ-ভালবাসা পেতে চায়",
-                "বন্ধু-বান্ধবের সঙ্গ এবং তাদের প্রতি নির্ভরতা বাড়ে",
-                "স্বাধীনভাবে চলাফেরা করতে চায়",
-                "বড়দের মতো আচরণ করতে চায়",
-                "ভাবুক এবং কল্পনাপ্রবণ হয়",
-              ];
+              yhLang("Various questions and curiosity arise", "মনে নানা প্রশ্ন ও কৌতূহল জাগে"),
+              yhLang("Attraction towards opposite gender develops", "বিপরীত লিঙ্গের প্রতি আকর্ষণ বোধ করে"),
+              yhLang("Shyness and hesitation appear", "লাজুক ভাব দেখা দেয় ও সঙ্কোচ বোধ করে"),
+              yhLang(
+                "Becomes more self-focused, emotional, and seeks love and affection",
+                "নিজের প্রতি অনেক বেশি মনোযোগ দাবি করে; আবেগপ্রবণ হয় এবং স্নেহ-ভালবাসা পেতে চায়"
+              ),
+              yhLang(
+                "Dependence on friends increases",
+                "বন্ধু-বান্ধবের সঙ্গ এবং তাদের প্রতি নির্ভরতা বাড়ে"
+              ),
+              yhLang("Desires independence", "স্বাধীনভাবে চলাফেরা করতে চায়"),
+              yhLang("Wants to behave like adults", "বড়দের মতো আচরণ করতে চায়"),
+              yhLang("Becomes imaginative and thoughtful", "ভাবুক এবং কল্পনাপ্রবণ হয়"),
+            ];
 
               const renderList = (items) =>
                 items
                   .map(
                     (text, idx) => `
-                      <li style="background: ${idx % 2 === 0 ? "rgba(255,255,255,.6)" : "rgba(255,240,245,.5)"}; border-left: 4px solid #f06292; border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; box-shadow: 0 ${5 + (idx % 3) * 2}px ${12 + (idx % 3) * 3}px rgba(240,107,147,${0.1 + (idx % 3) * 0.05});">
-                        <i class="fa-solid fa-circle-check" style="color: #e91e63; margin-right: 8px;"></i>
+                      <li style="background: ${idx % 2 === 0 ? "rgba(255,255,255,.6)" : "rgba(255,240,245,.5)"}; border-left: 4px solid #f06292; border-radius: 12px; padding: 5px 6px; line-height: 17px; margin-bottom: 4px; box-shadow: 0 ${5 + (idx % 3) * 2}px ${12 + (idx % 3) * 3}px rgba(240,107,147,${0.1 + (idx % 3) * 0.05});">
+                        <i class="fa-solid fa-circle-check" style="color: #e91e63; margin-right: 4px;"></i>
                         <span style="color: #6d4c41;">${text}</span>
                       </li>
                     `,
@@ -3259,17 +3265,17 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Puberty", "বয়ঃসন্ধিকাল")}</h2>
-                  <p class="text-muted" data-aos="fade-up" data-aos-delay="40">${description}</p>
+                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Puberty", "বয়ঃসন্ধিকাল")} | <p class="text-muted" data-aos="fade-up" data-aos-delay="40">${description}</p></h2>
+                  
 
-                  <div class="modern-card glass-card table-responsive" data-aos="fade-up" data-aos-delay="80">
-                    <p class="text-muted gradient-text" data-aos="fade-up" data-aos-delay="40">${yhLang("Changes during puberty", "বয়ঃসন্ধিকালীন পরিবর্তনসমূহ ")}</p>
+                  <div class="modern-card module3 glass-card table-responsive" data-aos="fade-up" data-aos-delay="80">
+                    <p class="text-muted gradient-text text-center" data-aos="fade-up" data-aos-delay="40">${yhLang("Changes during puberty", "বয়ঃসন্ধিকালীন পরিবর্তনসমূহ ")}</p>
                     <table class="table table-borderless text-start puberty-table" style="border-collapse: collapse; width: 100%;">
                       <thead style="background: linear-gradient(135deg, rgba(251,195,144,.25) 0%, rgba(255,193,7,.15) 100%);">
-                        <tr style="border-bottom: 3px solid #ff8a65;">
-                          <th style="padding: 14px; color: #5d4037; font-weight: 700; text-align: left;">${yhLang("Physical changes in boys", "ছেলেদের শারীরিক পরিবর্তন")}</th>
-                          <th style="padding: 14px; color: #5d4037; font-weight: 700; text-align: left;">${yhLang("Physical changes in girls", "মেয়েদের শারীরিক পরিবর্তন")}</th>
-                          <th style="padding: 14px; color: #5d4037; font-weight: 700; text-align: left;">${yhLang("Emotional changes", "ছেলে-মেয়েদের মানসিক পরিবর্তন")}</th>
+                        <tr style="border-bottom: 1px solid #ff8a65; mb-0">
+                          <th style="padding: 3px; color: #141313; font-weight: 500; text-align: center;">${yhLang("Physical changes in boys", "ছেলেদের শারীরিক পরিবর্তন")}</th>
+                          <th style="padding: 3px; color: #141313; font-weight: 500; text-align: center;">${yhLang("Physical changes in girls", "মেয়েদের শারীরিক পরিবর্তন")}</th>
+                          <th style="padding: 3px; color: #141313; font-weight: 500; text-align: center;">${yhLang("Emotional changes", "ছেলে-মেয়েদের মানসিক পরিবর্তন")}</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -3386,7 +3392,7 @@ const coursesData = [
     title: yhLang("Ovary", "ডিম্বাশয়"),
     description: yhLang(
       "There are two ovaries located on either side of the uterus. Around the middle of the 28-day menstrual cycle, an egg matures in one of the ovaries and is released into the fallopian tube.",
-      "জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে। প্রত্যেক মাসিক চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।"
+      "জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে।  প্রত্যেক মাসিক চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।"
     ),
     icon: "fa-circle",
     color: "#ec4899",
@@ -3453,13 +3459,13 @@ const coursesData = [
                   )}</h2>
 
                   <section class="m4l6-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row align-items-center g-1">
-                      <div class="col-lg-5">
+                    <div class="row g-1">
+                      <div class="col-lg-4">
                         <figure class=" mb-0">
-                          <img src="img/modu4/nari.jpg" style="height: 630px; object-fit: contain;"  alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 img-zoom rounded-lg shadow-lg animate-float-slow m4l6-main-image" />
+                          <img src="img/modu4/nari.jpg" style="height: 400px; object-fit: contain;"  alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 img-zoom rounded-lg shadow-lg m4l6-main-image" />
                         </figure>
                       </div>
-                      <div class="col-lg-7">
+                      <div class="col-lg-8">
                         <section class="m4l6-organs-section" data-aos="fade-up" data-aos-delay="80">
                     
                           <div class="m4l6-organs-grid">
@@ -3565,15 +3571,15 @@ const coursesData = [
 
                   <section class="m4l7-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row align-items-center g-3">
-                      <div class="col-lg-6">
+                      <div class="col-lg-5">
 
-                        <figure class="image-card mb-0">
-                          <img src="img/modu4/masik_b.jpg" style="height: 600px;" alt="মাসিক/ঋতুস্রাব ব্যবস্থাপনা" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l7-main-image" />
+                        <figure class="image-card_masik mb-0">
+                          <img src="img/modu4/masik_b.jpg" alt="মাসিক/ঋতুস্রাব ব্যবস্থাপনা" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l7-main-image" />
                         </figure>
                         
                       </div>
 
-                      <div class="col-lg-6">
+                      <div class="col-lg-7">
                         <p class="m4l7-intro-description mb-3" data-aos="fade-up" data-aos-delay="80">
                           ${yhLang(
                             "Menstruation is a normal, natural process by which a person prepares for pregnancy and childbirth. The monthly bleeding through the vagina is called menstruation.",
@@ -3718,13 +3724,13 @@ const coursesData = [
 
                   <section class="m4l8-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
                     <div class="row align-items-stretch g-2">
-                      <div class="col-lg-8">
+                      <div class="col-lg-6">
                         <figure class=" mb-0">
-                          <img src="img/modu4/masik2.png" style="height: 570px; " alt="মাসিক চলাকালীন মেয়েদের করণীয়" class="img-fluid w-100 img-zoom rounded-lg shadow-lg animate-float-slow m4l8-main-image" />
+                          <img src="img/modu4/masik2.png" style="height: 400px; object-fit: fill;" alt="মাসিক চলাকালীন মেয়েদের করণীয়" class="img-fluid w-100 img-zoom rounded-lg shadow-lg m4l8-main-image" />
                         </figure>
                       </div>
 
-                      <div class="col-lg-4">
+                      <div class="col-lg-6">
                         <div class="m4l8-points-wrapper">
                           ${renderCarePoints()}
                         </div>
@@ -4289,8 +4295,8 @@ const coursesData = [
   },
   {
     title: `
-      <figure class=" mb-0">
-                          <img src="img/modu5/birjo.jpg" style="height: 300px; width: 400px; object-fit: cover;" alt="পুরুষ প্রজননতন্ত্র" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m5l3-main-image" />
+      <figure class="birgo_img mb-0">
+                          <img src="img/modu5/birjo.jpg" alt="পুরুষ প্রজননতন্ত্র" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m5l3-main-image" />
                         </figure>
     `,
     description: "",
