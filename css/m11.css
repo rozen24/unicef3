@@ -5933,7 +5933,9 @@
   gap: 8px;
   margin-bottom: 8px;
 }
-
+.ch7l3-subcategory-header p, .ch7l3-category-header p {
+  color: #fff;
+}
 .ch7l3-shortterm {
   background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
   color: white;
@@ -6066,7 +6068,7 @@
 
 .ch7l3-image {
   width: 100%;
-  height: auto;
+  height: 525px;
   display: block;
   border-radius: 12px;
 }
@@ -6121,7 +6123,7 @@
   }
 
   .ch7l3-method-item {
-    padding: 12px 14px;
+    padding: 5px 14px;
   }
 
   .ch7l3-method-icon {
@@ -6162,7 +6164,7 @@
   }
 
   .ch7l3-method-item {
-    padding: 11px 13px;
+    padding: 5px 13px;
   }
 
   .ch7l3-method-icon {
@@ -6230,7 +6232,7 @@
   }
 
   .ch7l3-method-item {
-    padding: 10px 12px;
+    padding: 5px 12px;
   }
 
   .ch7l3-method-icon {
@@ -6305,7 +6307,7 @@
   }
 
   .ch7l3-method-item {
-    padding: 9px 11px;
+    padding: 5px 11px;
   }
 
   .ch7l3-method-icon {
@@ -6392,7 +6394,7 @@
   }
 
   .ch7l3-method-item {
-    padding: 8px 9px;
+    padding: 5px 9px;
   }
 
   .ch7l3-method-icon {
@@ -7186,6 +7188,9 @@
   border-left: 5px solid;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
 }
 
 .ch6l5-special-note:hover {

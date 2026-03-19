@@ -4632,7 +4632,8 @@ const coursesData = [
                   </section>
 
                   <!-- Special Note 1: Legal Crime -->
-                  <section class="ch6l5-special-note ch6l5-note-type-1" data-aos="fade-up" data-aos-delay="50">
+                  <div class="d-flex h-100 justify-content-between align-items-center">
+                     <section class="ch6l5-special-note ch6l5-note-type-1" data-aos="fade-up" data-aos-delay="50">
                     <div class="ch6l5-note-icon">
                       <i class="fa-solid fa-exclamation-triangle"></i>
                     </div>
@@ -4665,6 +4666,8 @@ const coursesData = [
                       </p>
                     </div>
                   </section>
+                  </div>
+                  
 
                   <!-- Statistics Section -->
                   
@@ -5135,14 +5138,14 @@ const coursesData = [
                           <div class="ch7l3-table-section">
                             <div class="ch7l3-category-header ch7l3-temporary">
                               <i class="fa-solid fa-hourglass-end"></i>
-                              ${yhLang("Temporary Methods", "অস্থায়ী")}
+                              <p>${yhLang("Temporary Methods", "অস্থায়ী")}</p>
                             </div>
 
                             <!-- Short-term -->
                             <div class="ch7l3-subcategory">
                               <div class="ch7l3-subcategory-header ch7l3-shortterm">
                                 <i class="fa-solid fa-calendar-days"></i>
-                                ${yhLang("Short-Term", "স্বল্পমেয়াদি")}
+                                <p>${yhLang("Short-Term", "স্বল্পমেয়াদি")}</p>
                               </div>
                               <div class="ch7l3-methods-grid">
                                 <div class="ch7l3-method-item ch7l3-method-type-2">
@@ -5205,7 +5208,7 @@ const coursesData = [
                     <!-- Right Side: Image -->
                     <div class="ch7l3-right-content" data-aos="fade-left" data-aos-delay="100">
                       <div class="ch7l3-image-container">
-                        <img src="img/modu7/kishor.png" style="height: 570px;" alt="Family Planning Methods" class="ch7l3-image" />
+                        <img src="img/modu7/kishor.png" alt="Family Planning Methods" class="ch7l3-image img-zoom" />
                       </div>
                     </div>
                   </section>

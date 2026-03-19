@@ -609,4 +609,53 @@
   .m5l4-intro-section, .m5l4-restraint-section, .m5l4-warning-card {
     padding: 7px;
 }
+.ch7l3-intro-text {
+    line-height: 16px;
+}
+.ch7l3-methods-description {
+    line-height: 16px;
+}
+.ch7l3-method-icon {
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+}
+.ch7l3-category-header {
+    padding: 3px 11px;
+}
+.ch7l3-category-header {
+    padding: 3px 6px;
+    margin-bottom: 3px;
+}
+.ch7l3-slide {
+    padding: 6px 7px;
+    gap: 10px;
+    padding-bottom: 0px;
+}
+.ch7l3-methods-table {
+    gap: 8px;
+}
+.ch7l3-image {
+  height: 360px;
+}
+.ch7l3-methods-box {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.ch7l3-permanent i {
+    font-size: 14px;
+}
+.ch7l3-temporary i {
+    font-size: 14px;
+}
+.ch7l3-methods-box {
+    padding: 0px 14px;
+}
+.ch7l3-method-name {
+    font-weight: 400; 
+}
+.ch7l3-subcategory-header {
+    padding: 3px 9px;
+}
+
 }
