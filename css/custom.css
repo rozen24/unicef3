@@ -685,7 +685,10 @@
 .ch7l4-method-tag, .ch7l4-method-badge, .ch7l4-duration-badge {
     font-size: 14px;
 }
-
+/* Module 8 lesson 1  */
+.ch8l6-content-wrapper {
+  max-height: 250px;
+}
 
 
 

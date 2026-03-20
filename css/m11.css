@@ -3262,9 +3262,10 @@
 .ch8l6-content-wrapper {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 50px;
   align-items: center;
   justify-content: center;
+  max-height: 550px;
 }
 
 .ch8l6-left {
@@ -3283,7 +3284,7 @@
 
 /* Main title */
 .ch8l6-title {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   font-weight: 800;
   background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
   -webkit-background-clip: text;

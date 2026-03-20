@@ -5506,7 +5506,7 @@ const coursesData = [
                        </div>
                        <div class="col-md-7">
                           <div class="ch8l6-right">
-                            <div class="ch8l6-orbit-container" data-aos="" data-aos-delay="">
+                            <div class="ch8l6-orbit-container h-100" data-aos="" data-aos-delay="">
                               <div class="ch8l6-orbit-center">
                                 <div class="ch8l6-orbit-center-icon">
                                   <i class="fa-solid fa-heart-pulse"></i>
