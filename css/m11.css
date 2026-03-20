@@ -6451,7 +6451,7 @@
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(79, 70, 229, 0.03) 100%);
   border-left: 5px solid #6366f1;
   border-radius: 14px;
-  padding: 3px 16px;
+  padding: 3px;
   box-shadow: 0 6px 18px rgba(99, 102, 241, 0.1);
   overflow: hidden;
 }
@@ -6494,7 +6494,9 @@
   border-collapse: collapse;
   background: white;
 }
-
+.ch7l4-usage-card {
+  margin-top: 10px;
+}
 .ch7l4-table-head {
   background: linear-gradient(90deg, #f0f4ff 0%, #fafafe 100%);
 }
@@ -6504,7 +6506,7 @@
 }
 
 .ch7l4-table-head th {
-  padding: 12px 10px;
+  padding: 5px;
   text-align: center;
   font-size: 0.88rem;
   font-weight: 700;
@@ -6569,7 +6571,7 @@
 }
 
 .ch7l4-check-cell {
-  padding: 12px 10px;
+  padding: 4px;
   text-align: center;
   font-size: 1.3rem;
   transition: all 0.2s ease;
@@ -6715,9 +6717,6 @@
     font-size: 1.9rem;
   }
 
-  .ch7l4-card {
-    padding: 3px 18px;
-  }
 
   .ch7l4-card-title {
     font-size: 1.4rem;
@@ -6730,12 +6729,12 @@
   }
 
   .ch7l4-table-head th {
-    padding: 14px 12px;
+    padding: 5px;
     font-size: 0.91rem;
   }
 
   .ch7l4-check-cell {
-    padding: 14px 12px;
+    padding: 4px;
   }
 
   .ch7l4-label-cell {
@@ -6766,17 +6765,13 @@
     font-size: 1.48rem;
   }
 
-  .ch7l4-card {
-    padding: 14px 16px;
-  }
-
   .ch7l4-card-title {
     font-size: 1.32rem;
     margin-bottom: 9px;
   }
 
   .ch7l4-table-head th {
-    padding: 11px 10px;
+    padding: 5px;
     font-size: 0.86rem;
   }
 
@@ -6825,10 +6820,6 @@
     font-size: 1.36rem;
   }
 
-  .ch7l4-card {
-    padding: 3px 14px;
-  }
-
   .ch7l4-card-title {
     font-size: 1.20rem;
     margin-bottom: 8px;
@@ -6858,7 +6849,7 @@
   }
 
   .ch7l4-label-badge {
-    padding: 7px 10px;
+    padding: 4px 5px;
     font-size: 0.84rem;
   }
 
@@ -6917,7 +6908,6 @@
   }
 
   .ch7l4-card {
-    padding: 11px 13px;
     border-left-width: 4px;
   }
 
@@ -6963,7 +6953,7 @@
   }
 
   .ch7l4-label-badge {
-    padding: 6px 8px;
+    padding: 4px 5px;
     font-size: 0.80rem;
     gap: 7px;
   }
@@ -7037,7 +7027,7 @@
   }
 
   .ch7l4-card {
-    padding: 10px 12px;
+    padding: 3px;
     border-left-width: 3px;
   }
 
@@ -7060,7 +7050,7 @@
   }
 
   .ch7l4-table-head th {
-    padding: 6px 4px;
+    padding: 5px;
     font-size: 0.70rem;
   }
 
@@ -7074,7 +7064,7 @@
   }
 
   .ch7l4-check-cell {
-    padding: 6px 4px;
+    padding: 4px 4px;
     font-size: 0.95rem;
   }
 
@@ -7083,7 +7073,7 @@
   }
 
   .ch7l4-label-badge {
-    padding: 5px 7px;
+    padding: 5px 6px;
     font-size: 0.76rem;
     gap: 6px;
   }

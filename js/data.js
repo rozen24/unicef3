@@ -5252,7 +5252,7 @@ const coursesData = [
                   </section>
 
                   <!-- Table 1: Method Availability -->
-                  <section class="ch7l4-card ch7l4-availability-card" data-aos="fade-up" data-aos-delay="50">
+                  <section class="ch7l4-card ch7l4-availability-card " data-aos="fade-up" data-aos-delay="50">
                     <div class="ch7l4-card-header">
                       <h3 class="ch7l4-card-title">
                         <i class="fa-solid fa-check-circle"></i>

@@ -657,5 +657,31 @@
 .ch7l3-subcategory-header {
     padding: 3px 9px;
 }
+/* module 7 lesson 1 */
+.ch7l4-usage-card {
+  margin-top: 0px;
+}
+.ch7l4-card-header, .ch7l4-card-title {
+    margin-bottom: 2px;
+}
+.ch7l4-method-tag i, .ch7l4-duration-badge i, .ch7l4-method-badge i,.ch7l4-label-badge i {
+    font-size: 13px;
+}
+.ch7l4-method-tag {
+    padding: 1px 6px;
+}
+.ch7l4-usage-cell, .ch7l4-duration-cell, .ch7l4-method-cell, .ch7l4-duration-badge {
+    padding: 3px 14px;
+}
+.ch7l4-check-cell {
+    padding: 0px;
+}
+.ch7l4-table-head th {
+    padding: 1px;
+}
+.ch7l4-usage-cell, .ch7l4-duration-cell, .ch7l4-method-cell, .ch7l4-duration-badge {
+    padding: 1px 14px;
+}
+
 
 }
