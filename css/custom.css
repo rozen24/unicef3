@@ -682,6 +682,17 @@
 .ch7l4-usage-cell, .ch7l4-duration-cell, .ch7l4-method-cell, .ch7l4-duration-badge {
     padding: 1px 14px;
 }
+.ch7l4-method-tag, .ch7l4-method-badge, .ch7l4-duration-badge {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
 
 
 }

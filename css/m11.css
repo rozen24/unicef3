@@ -6529,13 +6529,13 @@
   gap: 6px;
   padding: 6px 10px;
   border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 400;
   white-space: nowrap;
 }
 
 .ch7l4-method-badge i {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .ch7l4-table-body tr {
@@ -6648,12 +6648,12 @@
 .ch7l4-method-tag {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  gap: 2px;
+  padding: 0px 12px;
   border-radius: 8px;
   color: white;
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 400;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -6689,7 +6689,7 @@
   display: inline-block;
   padding: 8px 14px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   font-weight: 600;
   background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
   color: #0c4a6e;
@@ -6754,7 +6754,9 @@
     padding: 4px 16px;
   }
 }
-
+.ch7l4-usage-cell, .ch7l4-duration-cell, .ch7l4-method-cell, .ch7l4-duration-badge {
+    padding: 5px 14px;
+}
 /* Tablet: 1024px - 1199px */
 @media (max-width: 1199px) and (min-width: 1024px) {
   .ch7l4-slide {
@@ -6858,7 +6860,7 @@
   }
 
   .ch7l4-method-tag {
-    padding: 6px 10px;
+    padding: 4px 10px;
     font-size: 0.82rem;
   }
 
