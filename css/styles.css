@@ -261,7 +261,7 @@ html[lang|="bn"] h6 lang {
 }
 html:lang(bn) h3 lang,
 html[lang|="bn"] h3 lang {
-  font-size: 26px !important;
+  font-size: 22px !important;
   line-height: 24px;
 }
 html:lang(bn) .m25l4-text lang,

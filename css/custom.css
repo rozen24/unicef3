@@ -726,6 +726,35 @@
 .menstrual-info-card {
   padding: 5px;
 }
+/* module 8 lession 4*/
+.ch8l8-description-box, .ch8l8-section-title, .ch8l8-point-header , .ch8l8-point-section {
+    padding: 3px 13px;
+    margin-bottom: 3px;
+}
+.ch8l8-subpoint-item {
+    padding: 2px 9px;
+}
+.ch8l8-points-container {
+    gap: 3px;
+}
+.ch8l8-subpoints-list {
+    gap: 0px;
+}
+.ch8l8-point-icon {
+  width: 25px;
+  height: 25px;
+}
+.ch8l8-point-icon i{
+  font-size: 13px;
+}
+.ch8l8-subpoints-list {
+  margin: 0px;
+}
+.prosob_li .ch8l8-subpoints-list {
+  grid-template-columns: 1fr !important;
+}
+
+
 
 
 

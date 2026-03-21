@@ -5712,7 +5712,7 @@ const coursesData = [
                     "১. প্রাথমিক অবস্থায় কিশোরীর গর্ভ শনাক্ত করে সে যাতে পরিবারে প্রয়োজনীয় যত্ন ও সহায়তা পায়, সেটা নিশ্চিত করার জন্য পরিবারের সকলকে উদ্বুদ্ধ করতে হবে।"
                   ),
                   icon: "fa-hand",
-                  color: "ch8l8-point-type-1",
+                  color: "ch8l8-point-type-1 gorvo_li",
                   subPoints: []
                 },
                 {
@@ -5722,7 +5722,7 @@ const coursesData = [
                   ),
                   titleBn: "২. গর্ভাবস্থা পরীক্ষা",
                   icon: "fa-stethoscope",
-                  color: "ch8l8-point-type-2",
+                  color: "ch8l8-point-type-2 prosob_li",
                   subPoints: [
                     yhLang(
                       "Checkups by trained service providers, at least 4 times (once in 1-4 months, once in 6-7 months, once in 8 months, and once in 9 months)",
