@@ -3250,6 +3250,10 @@
 }
 
 /* ===== MODULE 8 LESSON 6: ADOLESCENT MOTHERHOOD RISKS (ORBIT LAYOUT) ===== */
+.image-card_m8l3 img{
+  max-height: 600px;
+  width: 100%;
+}
 
 .ch8l6-slide {
   position: relative;
