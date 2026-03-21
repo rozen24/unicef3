@@ -753,9 +753,22 @@
 .prosob_li .ch8l8-subpoints-list {
   grid-template-columns: 1fr !important;
 }
-
-
-
+/* module 8 lession 5*/
+.ch8l9-image-container img{
+  max-height: 450px;
+}
+.ch8l9-point-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+}
+.ch8l9-point-description {
+    line-height: 16px;
+}
+.ch8l9-point-header {
+    gap: 11px;
+    margin-bottom: 0px;
+}
 
 
 

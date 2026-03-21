@@ -5931,7 +5931,7 @@ const coursesData = [
                        <div class="col-md-7">
                          <section class="ch8l9-section-wrapper h-100" data-aos="fade-up">
                           <div class="ch8l9-image-container">
-                            <img src="img/modu8/prosob.png" style="height: 600px;" alt="Postpartum Care" class="ch8l9-image img-zoom" />
+                            <img src="img/modu8/prosob.png" alt="Postpartum Care" class="ch8l9-image img-zoom" />
                           </div>
                         </section>
                        </div>
