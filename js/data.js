@@ -5559,9 +5559,9 @@ const coursesData = [
               const preventionMeasures = [
                 yhLang("Raising Awareness Against Child Marriage", "বাল্যবিবাহ বন্ধে সচেতনতা বৃদ্ধি করা"),
                 yhLang("Proper Implementation of National Laws (No marriage before 18, No childbirth before 20)", "দেশের প্রচলিত আইনের যথাযথ প্রয়োগ (১৮-এর আগে মেয়েদের বিয়ে নয় ২০-এর আগে সন্তান নয়)"),
-                yhLang("Increasing Public Awareness About Family Planning and Promoting Contraceptive Methods", "পরিবার পরিকল্পনা সম্পর্কে জনগণের মধ্য সচেতনতা বাড়ানো এবং পরিবার পরিকল্পনা পদ্ধতি ব্যবহারে উৎসাহ প্রদান"),
-                yhLang("Increasing Public Awareness About Family Planning and Promoting Contraceptive Methods", "পরিবার পরিকল্পনা সম্পর্কে জনগণের মধ্য সচেতনতা বাড়ানো এবং পরিবার পরিকল্পনা পদ্ধতি ব্যবহারে উৎসাহ প্রদান"),
                 yhLang("Creating Awareness About Dangers and Consequences of Adolescent Pregnancy", "কৈশোরকালীন গর্ভধারণের কুফল ও এর ভয়াবহ পরিণতি সম্পর্কে সচেতনতা তৈরি করা"),
+                yhLang("Increasing Public Awareness About Family Planning and Promoting Contraceptive Methods", "পরিবার পরিকল্পনা সম্পর্কে জনগণের মধ্য সচেতনতা বাড়ানো"),
+                yhLang("Increasing Public Awareness About Family Planning and Promoting Contraceptive Methods", "পরিবার পরিকল্পনা পদ্ধতি ব্যবহারে উৎসাহ প্রদান"),
                 yhLang("Counseling Couples to Delay Childbirth Even if Married Young", "কৈশোরে বিয়ে হলেও দেরিতে সন্তান গ্রহণে স্বামী, স্ত্রী ও অভিভাবকদের সচেতন করা"),
                 yhLang("Ensuring Easy Access to Family Planning Methods in Adolescence", "কৈশোরে পরিবার পরিকল্পনা পদ্ধতির সহজপ্রাপ্যতা নিশ্চিত করা"),
               ];
@@ -5602,31 +5602,37 @@ const coursesData = [
                     ${preventionMainTitle}
                   </h2>
 
-                  <div class="ch8l7-content-wrapper">
+                  <div class="ch8l7-content-wrapper h-100">
                     <div class="ch8l7-left">
                       <section class="ch8l7-description-box" data-aos="fade-up" data-aos-delay="40">
+                        
                         <h3 class="ch8l7-section-header">
                           <i class="fa-solid fa-info-circle"></i>
-                          <p class="ch8l7-desc-text">${preventionIntroText}</p>
+                          ${preventionIntroText}
                         </h3>
-                      </section>
 
+                      </section>
                     </div>
 
-                    <div class="ch8l7-right py-3">
-                      <div class="ch8l7-orbit-container" data-aos="" data-aos-delay="">
+                    <div class="ch8l7-right">
+                      <div class="ch8l7-orbit-container" data-aos="fade-up" data-aos-delay="100">
+                        
                         <div class="ch8l7-orbit-center">
                           <div class="ch8l7-orbit-center-icon">
                             <i class="fa-solid fa-shield-halved"></i>
                           </div>
+
                           <div class="ch8l7-orbit-center-text">
                             <h2 class="text-white">
                               ${yhLang("Prevention Measures", "প্রতিরোধে করণীয়")}
                             </h2>
                           </div>
                         </div>
+
                         <div class="ch8l7-orbit-ring"></div>
+
                         ${renderPreventionMeasures()}
+
                       </div>
                     </div>
                   </div>
