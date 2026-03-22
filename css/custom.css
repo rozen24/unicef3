@@ -407,6 +407,10 @@
         font-size: 17px !important;
         line-height: 10px;
     }
+    html:lang(bn) h2 lang, html[lang|="bn"] h2 lang {
+    font-size: 24px !important;
+    line-height: 20px;
+}
     .lesson-back {
         border: none;
         background: rgba(255, 255, 255, 0.12);
@@ -548,8 +552,16 @@
     }
 
 }
+h2 {
+    font-size: 24px !important;
+    line-height: 20px;
+  }
 /* Apply ONLY when height is 768px or less */
 @media screen and (max-height: 768px) {
+  h2 {
+    font-size: 24px !important;
+    line-height: 20px;
+  }
   .image-card_masik img {
     height: 350px;
     object-fit: fill;
@@ -768,6 +780,30 @@
     gap: 11px;
     margin-bottom: 0px;
 }
+/* module 9 lesson 1*/
+.ch9l4-title i {
+    font-size: 25px;
+}
+.ch9l4-section {
+    padding: 3px 7px;
+    margin-bottom: 5px;
+}
+.ch9l4-li-text {
+    line-height: 16px;
+}
+.ch9l4-li-icon {
+    width: 30px;
+    height: 30px;
+}
+.symptomp{
+    grid-template-columns: 1.3fr 1fr;
+    gap: 3px;
+}
+.ch9l4-warning-box {
+    padding: 8px 10px;
+}
+
+
 
 
 

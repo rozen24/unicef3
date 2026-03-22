@@ -6052,7 +6052,7 @@ const coursesData = [
                                 <i class="fa-solid fa-heartbeat"></i>
                                 ${yhLang("Common Symptoms of RTIs/STIs", "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ")}
                               </h3>
-                              <ul class="ch9l4-list">
+                              <ul class="ch9l4-list symptomp">
                                 ${renderList(symptomPoints, 100)}
                               </ul>
                             </section>
