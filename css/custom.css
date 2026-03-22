@@ -397,7 +397,7 @@
     }
     p {
         font-size: 14px;
-        line-height: 1.3;
+        line-height: 16px;
     }
     span {
         font-size: 14px;
@@ -821,6 +821,45 @@ h2 {
   height: 330px !important;
   object-fit: fill !important;
 }
+/* module 10 lesson 2*/
+  .ch10l4-description-card p {
+    font-size: 1.08rem;
+    line-height: 13px;
+  }
+.ch10l4-title {
+    gap: 10px;
+    padding: 5px;
+}
+.ch10l4-title i {
+    font-size: 1.8rem;
+}
+.ch10l4-section-title i {
+    font-size: 1.2rem;
+}
+.ch10l4-li-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 17px;
+}
+.ch10l4-li-text {
+    line-height: 15px;
+}
+.ch10l4-prevention-section {
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

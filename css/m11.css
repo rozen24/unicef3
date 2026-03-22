@@ -1434,7 +1434,7 @@
 /* Description card styling */
 .ch10l4-description-card {
   position: relative;
-  padding: 20px 0 0 10px;
+  padding: 15px 0 5px 5px;
   border-radius: 22px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 100%);
   backdrop-filter: blur(10px);
@@ -1538,12 +1538,13 @@
 
 /* Description text */
 .ch10l4-description-card p {
-  font-size: 1.08rem;
+  font-size: 1.2rem;
   color: #4b5563;
-  line-height: 1.76;
+  line-height: 18px;
   margin: 0;
   font-weight: 500;
 }
+
 
 /* Prevention section */
 .ch10l4-prevention-section {
@@ -1745,9 +1746,9 @@
 .ch10l4-treatment-text {
   font-size: 1.06rem;
   color: #4b5563;
-  line-height: 1.76;
   margin: 0;
   font-weight: 500;
+  line-height: 16px;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -1789,8 +1790,8 @@
   }
 
   .ch10l4-description-card p {
-    font-size: 1rem;
-    line-height: 1.64;
+    font-size: 1.8rem;
+    line-height: 18px;
   }
 
   .ch10l4-prevention-section {
@@ -1832,7 +1833,7 @@
 
   .ch10l4-treatment-text {
     font-size: 0.98rem;
-    line-height: 1.68;
+    line-height: 16px;
   }
 }
 
@@ -1874,7 +1875,7 @@
 
   .ch10l4-description-card p {
     font-size: 0.92rem;
-    line-height: 1.56;
+    line-height: 18px;
   }
 
   .ch10l4-prevention-section {
@@ -1932,7 +1933,7 @@
 
   .ch10l4-treatment-text {
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 16px;
   }
 }
 
@@ -1974,7 +1975,7 @@
 
   .ch10l4-description-card p {
     font-size: 0.84rem;
-    line-height: 1.48;
+    line-height: 18px;
   }
 
   .ch10l4-prevention-section {
@@ -2032,7 +2033,7 @@
 
   .ch10l4-treatment-text {
     font-size: 0.84rem;
-    line-height: 1.52;
+    line-height: 16px;
   }
 }
 
@@ -2059,7 +2060,7 @@
   }
 
   .ch10l4-description-card {
-    padding: 16px 20px;
+    padding: 15px 0 5px 5px;
   }
 
   .ch10l4-desc-icon {
@@ -2074,7 +2075,7 @@
 
   .ch10l4-description-card p {
     font-size: 0.8rem;
-    line-height: 1.44;
+    line-height: 16px;
   }
 
   .ch10l4-prevention-section {

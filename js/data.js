@@ -6265,7 +6265,7 @@ const coursesData = [
                   <div class="ch10l3-content-wrapper">
                     <section class="ch10l3-description-card ch10l3-desc-1" data-aos="fade-up" data-aos-delay="60">
                       
-                      <p class="ch10l3-card-text">${introText}</p>
+                      <span class="ch10l3-card-text">${introText}</span>
                     </section>
 
                    
