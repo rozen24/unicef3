@@ -6619,57 +6619,148 @@ const coursesData = [
               `;
             })()
           },
-                    {
+          {
             id: "ch11-lesson-3",
             title: yhLang(
-              "Other Vaccines for Women",
-              "মহিলাদের অন্যান্য  টিকা",
+              "Importance of TD Vaccine",
+              "টিডি টিকার গুরুত্ব",
             ),
-            icon: "fa-notes-medical",
-            gradientClass: "bg-gradient-teal",
+            icon: "fa-shield-virus",
+            gradientClass: "bg-gradient-violet",
             audioFile: "",
             quiz: {
               passingScore: 60,
               questions: [
                 {
-                  id: "q11c",
+                  id: "q11td1",
                   question: yhLang(
-                    "Why should women stay informed about additional vaccines?",
-                    "মহিলাদের কেন অতিরিক্ত টিকা সম্পর্কে সচেতন থাকা জরুরি?",
+                    "How many doses of TD vaccine does a woman need in her lifetime?",
+                    "সারাজীবনে একজন নারীকে কতটি ডোজ টিডি টিকা নিতে হয়?",
                   ),
                   options: [
-                    yhLang(
-                      "To protect against preventable diseases",
-                      "প্রতিরোধযোগ্য রোগ থেকে সুরক্ষা পেতে",
-                    ),
-                    yhLang(
-                      "Because vaccines cause illness",
-                      "কারণ টিকা অসুস্থ করে",
-                    ),
-                    yhLang("Vaccines are unnecessary", "টিকা অপ্রয়োজনীয়"),
-                    yhLang("No reason", "কোনো কারণ নেই"),
+                    yhLang("3 doses", "৩ ডোজ"),
+                    yhLang("5 doses", "৫ ডোজ"),
+                    yhLang("2 doses", "২ ডোজ"),
+                    yhLang("7 doses", "৭ ডোজ"),
                   ],
-                  correctAnswer: 0,
+                  correctAnswer: 1,
                 },
               ],
             },
             content: (function () {
               return `
-                <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
-                    "মহিলাদের অন্যান্য  টিকা",
-                    "মহিলাদের অন্যান্য  টিকা",
-                  )}</h2>
+                <div class="lesson-slide ch11l4-slide-td">
+                  <section class="ch11l4-td-intro" data-aos="fade-up">
+                    <div class="ch11l4-td-desc-card">
+                      <h2 class="ch11l4-td-title">
+                        <i class="fa-solid fa-shield-virus"></i>
+                        ${yhLang("Importance of TD Vaccine", "টিডি টিকার গুরুত্ব")}
+                      </h2>
+                      <p class="ch11l4-td-description">
+                        ${yhLang(
+                          "A woman needs a minimum of 5 doses of TD vaccine throughout her lifetime. According to the Expanded Programme on Immunization (EPI), vaccination starts at age 15 and requires a total of 5 TD vaccine doses. It takes approximately 2 years and 7 months to complete all doses.",
+                          "সারাজীবনে একজন নারীকে নূন্যতম ৫ ডোজ টিডি টিকা নিতে হয়। সম্প্রসারিত টিকাদান কর্মসূচী অনুযায়ী ১৫ বছর বয়স থেকে টিকা দেয়া শুরু করতে হয় এবং সে অনুযায়ী মোট ৫ ডোজ টিডি টিকা নিতে হয়। পুরো ডোজ শেষ করতে মোট ২ বছর ৭ মাস সময় লাগে।"
+                        )}
+                      </p>
+                    </div>
+                  </section>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <figure class="image-card mb-0" style="margin:0 auto;">
-                      <img src="img/modu11/tika.jpg" style="height: 650px;" alt="মহিলাদের অন্যান্য টিকা" class="img-fluid img-zoom rounded-4 shadow-sm" />
-                    </figure>
+                  <section class="ch11l4-td-table-section" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="ch11l4-td-table-title">
+                      <i class="fa-solid fa-table"></i>
+                      ${yhLang("TD Vaccine Schedule for Women Aged 15-49 Years", "১৫-৪৯ বছর বয়সের মহিলাদের টিডি টিকাদান সময়সূচি")}
+                    </h3>
+                    <div class="ch11l4-td-table-wrapper">
+                      <table class="ch11l4-td-table">
+                        <thead>
+                          <tr>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Disease Name", "রোগের নাম")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Vaccine Name", "টিকার নাম")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Dose", "টিকার ডোজ")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Number of Doses", "ডোজের সংখ্যা")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Timing", "টিকাদানের সময়")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Site", "স্থান")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Route", "প্রয়োগ পথ")}</h3></th>
+                          </tr>
+                        </thead>
+                        <tbody> 
+                          <tr>
+                            <td rowspan="5" class="ch11l4-td-td-disease">
+                             <p> ${yhLang("Tetanus & Diphtheria (TD)", "ধনুষ্টংকার<br>(টিটেনাস ও ডিপথেরিয়া)")}</p>
+                            </td>
+                            <td rowspan="5" class="ch11l4-td-vaccine"><p>${yhLang("TD <br> Tetanus & Diphtheria (TD)", "টিডি <br> (টিটেনাস ও ডিপথেরিয়া)")}</p></td>
+                            <td rowspan="5" class="ch11l4-td-dose"><p>${yhLang("0.5 mL", "০.৫ মিলিলিটার")}</p></td>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-1", "টিডি-১")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("At age 15 immediately", "১৫ বছর বয়স হলেই যথা শীঘ্র")}</p></td>
+                            <td rowspan="5" class="ch11l4-td-site"><p>${yhLang("Upper arm", "বাহুর উপরের অংশে")}</p></td>
+                            <td rowspan="5" class="ch11l4-td-route"><p>${yhLang("Intramuscular", "মাংশপেশী")}</p></td>
+                          </tr>
+                          <tr>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-2", "টিডি-২")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("28 days after TD-1", "টিডি-১ পাওয়ার কমপক্ষে ২৮ দিন পর")}</p></td>
+                          </tr>
+                          <tr>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-3", "টিডি-৩")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("6 months after TD-2", "টিডি-২ পাওয়ার কমপক্ষে ৬ মাস পর")}</p></td>
+                          </tr>
+                          <tr>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-4", "টিডি-৪")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("1 year after TD-3", "টিডি-৩ পাওয়ার কমপক্ষে ১ বছর পর")}</p></td>
+                          </tr>
+                          <tr>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-5", "টিডি-৫")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("1 year after TD-4", "টিডি-৪ পাওয়ার কমপক্ষে ১ বছর পর")}</p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p class="ch11l4-td-table-note">
+                      <i class="fa-solid fa-quote-left"></i>
+                      ${yhLang("Source: Expanded Programme on Immunization (EPI), Ministry of Health, Government of Bangladesh", "সম্প্রসারিত টিকাদান কর্মসূচি (ইপিআই), স্বাস্থ্য অধিদপ্তর, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার")}
+                    </p>
+                  </section>
+
+                  <section class="ch11l4-td-pregnant-section" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ch11l4-td-highlight-card">
+                      <h3 class="ch11l4-td-highlight-title">
+                        <i class="fa-solid fa-person-pregnant"></i>
+                        ${yhLang("TD Vaccine for Pregnant Women", "গর্ভবতীর টিডি টিকা")}
+                      </h3>
+                      <div class="ch11l4-td-highlight-content">
+                        <p class="ch11l4-td-highlight-text">
+                          ${yhLang(
+                            "Pregnant women who have never received TD vaccine should follow the schedule above, with the 1st dose given in the 4th month of pregnancy. The 2nd dose should be given 4 weeks later. The 3rd dose should be given 6 months after the 2nd dose or during the next pregnancy. The 4th dose should be given 1 year after the 3rd dose or during the next pregnancy. The 5th dose should be given 1 year after the 4th dose or during the next pregnancy. When all 5 doses are given at the correct time, both mother and child are protected against tetanus and diphtheria for life.",
+                            "যে সকল গর্ভবতী মা আগে কখনো টিডি টিকা নেয়নি তাকে উপরের ছক অনুযায়ী ১ম ডোজ টিডি টিকা নিতে হবে গর্ভধারণের ৪র্থ মাসে। ২য় ডোজ নিতে হবে তার ৪ সপ্তাহ পর। ৩য় ডোজ নিতে হবে ২য় ডোজের ৬ মাস পর অথবা পরবর্তী গর্ভধারণের সময়। ৪র্থ ডোজ নিতে হবে ৩য় ডোজের ১ বছর পর অথবা পরবর্তী গর্ভধারণের সময়। ৫ম ডোজটি ৪র্থ ডোজের ১ বছর পর অথবা পরবর্তী গর্ভধারণের সময় নিতে হবে। এভাবে ৫ ডোজ টিকা সঠিক সময়ে নেয়া হলে মা ও শিশু সারাজীবন ধনুষ্টংকার ও ডিপথেরিয়া থেকে রক্ষা পাবে।"
+                          )}
+                        </p>
+                        <p class="ch11l4-td-highlight-text">
+                          ${yhLang(
+                            "If a girl has already received 5 doses of TD vaccine, she does not need to receive TD vaccine during pregnancy.",
+                            "যদি কিশোরী ৫ ভোজ টিডি পেয়ে থাকে তাহলে গর্ভকালীন সময়ে টিডি টিকা নেয়ার প্রয়োজন নাই।"
+                          )}
+                        </p>
+                        <div class="ch11l4-td-important-box">
+                          <p class="ch11l4-td-important-text">
+                            <i class="fa-solid fa-exclamation-circle"></i> ${yhLang(
+                              "The timing of vaccination does not change with the timing of delivery.",
+                              "প্রসবের সময়ের সাথে টিকাদান সময়সূচির কোনো পরিবর্তন হবে না"
+                            )}
+                          </p>
+                          <p class="ch11l4-td-important-text">
+                            <strong>${yhLang("Important:", "মনে রাখতে হবেত্বপূর্ণ:")}</strong> ${yhLang(
+                              "The timing of vaccination does not change with the timing of delivery.",
+                              "ধনুষ্টংকার ও ডিপথেরিয়া মারাত্মক রোগ। এ রোগগুলো থেকে রক্ষা পেতে সব নারীকে ৫ ডোজ টিডি টিকা সঠিক সময়ে নিতে হবে।"
+                            )}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </section>
                 </div>
               `;
             })(),
           }
+
         ],
       },
             {
