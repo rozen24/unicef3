@@ -812,6 +812,19 @@ h2 {
   height: 430px !important;
   object-fit: fill !important;
 }
+/* module 10 lesson 1*/
+.ch10l3-card-text {
+    line-height: 16px;
+}
+
+.m10l1 img {
+  height: 330px !important;
+  object-fit: fill !important;
+}
+
+
+
+
 
 
 
