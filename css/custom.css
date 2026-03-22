@@ -857,13 +857,33 @@ h2 {
     height: 40px;
     font-size: 30px;
 }
-
-
-
-
-
-
-
+.ch11l5-image-box img {
+  max-height: 200px;
+}
+.ch11l5-left {
+    gap: 4px;
+}
+/* module 10 lesson 3*/
+.tika-risk .ch11l5-points-list {
+    display: grid;
+    flex-direction: column;
+    gap: 3px;
+    grid-template-columns: 1fr 1.3fr;
+}
+.ch11l5-points-container {
+    gap: 3px;
+}
+.ch11l5-points-section {
+    padding: 4px;
+}
+.ch11l5-point-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 0.60rem;
+}
+.ch11l5-point-item {
+    padding: 3px 9px;
+}
 
 
 

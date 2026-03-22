@@ -6532,6 +6532,7 @@ const coursesData = [
 
               const pointSections = [
                 {
+                  class_name: "tika-risk",
                   title: yhLang("Vaccine Risks", "টিকা গ্রহণের ঝুঁকি"),
                   icon: "fa-shield",
                   items: [
@@ -6566,7 +6567,7 @@ const coursesData = [
 
               function renderPointSections() {
                 return pointSections.map((section, sIdx) => `
-                  <div class="ch11l5-points-section" data-aos="fade-up" data-aos-delay="${100 + sIdx * 40}">
+                  <div class="ch11l5-points-section ${section.class_name}" data-aos="fade-up" data-aos-delay="${100 + sIdx * 40}">
                     <h3 class="ch11l5-section-title">
                       <i class="fa-solid ${section.icon}"></i>
                       ${section.title}
@@ -6606,10 +6607,10 @@ const coursesData = [
                     <div class="ch11l5-right" data-aos="zoom-in" data-aos-delay="80">
                       <div class="ch11l5-images-wrapper">
                         <div class="ch11l5-image-box ch11l5-image-1">
-                          <img src="img/modu11/dose1.jpg" style="max-height: 330px;" alt="HPV Vaccine Dose 1" class="ch11l5-image img-zoom">
+                          <img src="img/modu11/dose1.jpg" alt="HPV Vaccine Dose 1" class="ch11l5-image img-zoom">
                         </div>
                         <div class="ch11l5-image-box ch11l5-image-2">
-                          <img src="img/modu11/dose2.jpg" style="max-height: 330px;" alt="HPV Vaccine Dose 2" class="ch11l5-image img-zoom">
+                          <img src="img/modu11/dose2.jpg" alt="HPV Vaccine Dose 2" class="ch11l5-image img-zoom">
                         </div>
                       </div>
                     </div>
