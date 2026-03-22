@@ -6914,7 +6914,7 @@ const coursesData = [
               }
 
               return `
-                <div class="ch12l2-slide">
+                <div class="ch12l2-slide lesson-slide">
                   <div class="ch12l2-shape ch12l2-shape-a"></div>
                   <div class="ch12l2-shape ch12l2-shape-b"></div>
                   <div class="ch12l2-shape ch12l2-shape-c"></div>
