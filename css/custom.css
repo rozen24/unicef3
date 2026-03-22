@@ -847,7 +847,11 @@ h2 {
 .ch10l4-prevention-section {
     padding: 5px;
 }
-
+.ch11l4-image img{
+  max-height: 430px;
+  width: 100%;
+  object-fit: fill;
+}
 
 
 

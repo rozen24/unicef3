@@ -6486,9 +6486,9 @@ const coursesData = [
                       </div>
                     </div>
 
-                    <div class="ch11l4-right" data-aos="zoom-in" data-aos-delay="60">
-                      <div class="">
-                        <img src="img/modu11/joni.jpg" style="height: 500px;" alt="Cervical Cancer Prevention" class="ch11l4-image">
+                    <div class="ch11l4-right h-100" data-aos="zoom-in" data-aos-delay="60">
+                      <div class="ch11l4-image w-100 h-100">
+                        <img src="img/modu11/joni.jpg" alt="Cervical Cancer Prevention" class=" w-100">
                       </div>
                     </div>
                   </div>
