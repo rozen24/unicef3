@@ -917,14 +917,17 @@ p {
     padding: 3px;
 }
 /* module 10 lesson 2*/
-.ch12l2-symptoms-list {
+.ch12l2-symptoms-list, .ch12l3-strategies-list {
     display: grid;
     gap: 7px;
     grid-template-columns: 1fr 1fr;
 }
 
-
-
+.ch12l4-image {
+  max-height: 430px !important;
+  object-fit: contain !important;
+  max-width: 100%;
+}
 
 
 

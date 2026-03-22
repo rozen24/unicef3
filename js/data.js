@@ -6997,7 +6997,7 @@ const coursesData = [
               }
 
               return `
-                <div class="ch12l3-slide">
+                <div class="ch12l3-slide lesson-slide">
                   <div class="ch12l3-shape ch12l3-shape-a"></div>
                   <div class="ch12l3-shape ch12l3-shape-b"></div>
                   <div class="ch12l3-shape ch12l3-shape-c"></div>
@@ -7057,12 +7057,12 @@ const coursesData = [
             },
             content: (function () {
               return `
-                <div class="ch12l4-slide">
+                <div class="ch12l4-slide lesson-slide">
                   <div class="ch12l4-header" data-aos="fade-down" data-aos-delay="0">
                     
                   </div>
                   <div class="ch12l4-image-container" data-aos="zoom-in" data-aos-delay="40">
-                    <img src="img/modu12/managemant.jpg" style="max-height: 680px;" alt="PCOS Management" class="ch12l4-image">
+                    <img src="img/modu12/managemant.jpg" alt="PCOS Management" class="ch12l4-image img-zoom">
                   </div>
                 </div>
               `;
