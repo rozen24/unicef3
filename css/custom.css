@@ -403,14 +403,7 @@
         font-size: 14px;
         line-height: 1.3;
     }
-    html:lang(bn) span  lang, html[lang|="bn"] span lang {
-        font-size: 17px !important;
-        line-height: 10px;
-    }
-    html:lang(bn) h2 lang, html[lang|="bn"] h2 lang {
-    font-size: 24px !important;
-    line-height: 20px;
-}
+    
     .lesson-back {
         border: none;
         background: rgba(255, 255, 255, 0.12);
@@ -552,6 +545,15 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
 h2 {
     font-size: 24px !important;
     line-height: 20px;
@@ -566,14 +568,33 @@ p {
 }
 
 /* Apply ONLY when height is 768px or less */
+
 @media screen and (max-height: 768px) {
+
+  html:lang(bn) p lang,
+  html[lang|="bn"] p lang {
+    font-size: 18px !important;
+    line-height: 17px !important;
+  }
+  html:lang(bn) h3 lang, html[lang|="bn"] h3 lang {
+    font-size: 20px !important;
+    line-height: 19px;
+  }
+  html:lang(bn) span  lang, html[lang|="bn"] span lang {
+        font-size: 18px !important;
+        line-height: 17px;
+  }
+  html:lang(bn) h2 lang, html[lang|="bn"] h2 lang {
+    font-size: 22px !important;
+    line-height: 21px;
+  }
   h2 {
     font-size: 20px !important;
     line-height: 16px;
   }
  p {
-    font-size: 14px !important;
-    line-height: 13px !important;
+    font-size: 15px !important;
+    line-height: 15px !important;
 }
   .image-card_masik img {
     height: 350px;
@@ -589,15 +610,7 @@ p {
   .m4l9-point-card {
      align-items: center;
   }
-  html:lang(bn) p lang,
-  html[lang|="bn"] p lang {
-    font-size: 18px !important;
-    line-height: 13px !important;
-  }
-  html:lang(bn) h3 lang, html[lang|="bn"] h3 lang {
-    font-size: 18px !important;
-    line-height: 24px;
-}
+
 /* Menstrual Abnormalities */
     .m4l10-description-card {
     padding: 7px;
@@ -928,9 +941,26 @@ p {
   object-fit: contain !important;
   max-width: 100%;
 }
-
-
-
+/* module 13 lesson 1*/
+.ch12l5-li {
+    padding: 6px 9px;
+    align-items: center;
+    gap: 10px;
+}
+.ch12l6-image {
+  max-height: 480px !important;
+  object-fit: fill !important;
+}
+.ch12l7-desc-header {
+    margin-bottom: 10px;
+}
+.ch12l7-right-item {
+    gap: 8px;
+}
+.ch12l7-icon-wrapper {
+    width: 60px;
+    height: 60px;
+}
 
 
 }
