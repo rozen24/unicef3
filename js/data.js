@@ -6099,14 +6099,14 @@ const coursesData = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                  <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang(
                     "যৌনবাহিত রোগের ঝুঁকিসমূহ",
                     "যৌনবাহিত রোগের ঝুঁকিসমূহ",
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <figure class=" mb-0">
-                      <img src="img/modu9/jouno.png" style="max-height: 650px;" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid w-100 img-zoom rounded-4 shadow-sm animate-float-slow" />
+                    <figure class="m9l2img mb-0">
+                      <img src="img/modu9/jouno.png" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid w-100 img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
                   </section>
                 </div>

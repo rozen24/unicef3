@@ -556,6 +556,11 @@ h2 {
     font-size: 24px !important;
     line-height: 20px;
   }
+.m9l2img img {
+  height: 600px !important;
+  object-fit: fill !important;
+}
+
 /* Apply ONLY when height is 768px or less */
 @media screen and (max-height: 768px) {
   h2 {
@@ -802,8 +807,11 @@ h2 {
 .ch9l4-warning-box {
     padding: 8px 10px;
 }
-
-
+/* module 9 lesson 2*/
+.m9l2img img {
+  height: 430px !important;
+  object-fit: fill !important;
+}
 
 
 
