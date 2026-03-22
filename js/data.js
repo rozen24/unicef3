@@ -6271,7 +6271,7 @@ const coursesData = [
                    
 
                     <figure class="m10l1" data-aos="zoom-in" data-aos-delay="140">
-                      <img src="img/modu10/hiv2.jpg" alt="এইচআইভী ও এইডস" class="ch10l3-image w-80 mx-auto img-zoom img-fluid rounded-4" />
+                      <img src="img/modu10/hiv2.jpg" alt="এইচআইভী ও এইডস" class="ch10l3-image mx-auto img-zoom img-fluid rounded-4" />
                     </figure>
                   </div>
                 </div>

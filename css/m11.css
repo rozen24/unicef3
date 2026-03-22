@@ -1203,6 +1203,8 @@
   min-height: 320px;
   border-radius: 18px;
   transition: transform 0.3s ease;
+  max-height: 540px;
+  object-fit: fill;
 }
 
 .ch10l3-image-card:hover .ch10l3-image {
