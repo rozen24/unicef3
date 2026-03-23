@@ -208,6 +208,7 @@ body {
 html:lang(bn) lang {
   font-family: 'SolaimanLipi', sans-serif;
   /* font-size: 18px; */
+  white-space: pre-wrap !important;
 }
 html:lang(bn) .lesson-hero__top  lang,
 html[lang|="bn"] .lesson-hero__top lang {

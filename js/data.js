@@ -7772,7 +7772,7 @@ const sexPoints = [
             content: (function () {
               const intro = yhLang(
   "Differences in roles, behaviors, and social practices between men and women often create certain inequalities. Social attitudes, misinterpretation of religion, and the mindset of undervaluing girls play a major role in creating gender inequality. When families and society accept these inequalities and the state legitimizes them through laws, policies, or values, they become institutionalized and are considered discrimination. These inequalities are socially constructed, shaped by family, society, and culture, vary from place to place, and are changeable.",
-  "নারী ও পুরুষের ভিন্নতা, আচরণ ও সামাজিক অভ্যাসভেদে নারী ও পুরুষের মধ্যে কিছু বৈষম্য সৃষ্টি হয়। সামাজিক দৃষ্টিভঙ্গি, ধর্মের অপব্যাখ্যা, মেয়েদের ছোট করে দেখার মানসিকতা ইত্যাদি জেন্ডার বৈষম্য সৃষ্টিতে প্রধান ভূমিকা পালন করে। জেন্ডারের এই বৈষম্যকে পরিবার, সমাজ যখন মেনে নেয় ও আইন, নীতি বা মূল্যবোধের মাধ্যমে রাষ্ট্র যখন বৈধতা দেয় তখন তা প্রাতিষ্ঠানিক রূপ লাভ করে এবং সেটি বৈষম্য হিসেবে গণ্য হয়। এই বৈষম্য সামাজিকভাবে তৈরি যা পরিবার, সমাজ ও সংস্কৃতি থেকে গৃহীত, সমাজ ও স্থান ভেদে ভিন্ন, এবং অবশ্যই পরিবর্তনশীল।"
+  "নারী ও পুরুষের ভিন্নতা, আচরণ ও সামাজিক অভ্যাসভেদে নারী ও পুরুষের মধ্যে কিছু বৈষম্য সৃষ্টি হয়। সামাজিক দৃষ্টিভঙ্গি, ধর্মের অপব্যাখ্যা, মেয়েদের ছোট করে দেখার মানসিকতা ইত্যাদি জেন্ডার বৈষম্য সৃষ্টিতে প্রধান ভূমিকা পালন করে। জেন্ডারের এই বৈষম্যকে পরিবার, সমাজ যখন মেনে নেয় ও আইন, নীতি বা মূল্যবোধের মাধ্যমে রাষ্ট্র যখন বৈধতা দেয় তখন তা প্রাতিষ্ঠানিক রূপ লাভ করে এবং সেটি বৈষম্য হিসেবে গণ্য হয়।  এই বৈষম্য সামাজিকভাবে তৈরি যা পরিবার, সমাজ ও সংস্কৃতি থেকে গৃহীত, সমাজ ও স্থান ভেদে ভিন্ন, এবং অবশ্যই পরিবর্তনশীল।"
 );
 
 const sections = [
@@ -7780,7 +7780,7 @@ const sections = [
     title: yhLang("Equality", "সমতা"),
     body: yhLang(
       "Equality generally refers to the same condition or status. It means equal distribution—equal rights, opportunities, responsibilities, and risks for everyone. For example, if a job advertisement invites applications based on qualifications and experience, women, men, third gender, and marginalized groups should all have the opportunity to apply.",
-      "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়। সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।"
+      "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়।  সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।"
     ),
     icon: "fa-scale-balanced",
     type: "equality",
@@ -8690,7 +8690,7 @@ const orbitItems = [
                       title: yhLang("Personal Causes", "ব্যক্তিগত কারণ"),
                       text: yhLang(
                         "Genetic or physical factors, moral degradation, substance abuse, personality disorders, mental instability, and personal characteristics (age, education, income) influence whether someone becomes a victim or perpetrator.",
-                        "একজন ব্যক্তি নির্যাতনের শিকার হবে, না নির্যাতনকারী হবে তার পেছনে অনেক ক্ষেত্রে বংশগত বা শারীরিক উপাদান কাজ করে। যেমন : বংশগত, শারীরিক অক্ষমতা, নৈতিকতার অবক্ষয়, মাদকাসক্তি, ব্যক্তিত্বের বৈকল্য, মানসিক অস্থিরতা এবং ব্যক্তিগত বৈশিষ্ট্য (বয়স, শিক্ষা, আয়) ইত্যাদি।"
+                        "একজন ব্যক্তি নির্যাতনের শিকার হবে, না নির্যাতনকারী হবে তার পেছনে অনেক ক্ষেত্রে বংশগত বা শারীরিক উপাদান কাজ করে।  যেমন : বংশগত, শারীরিক অক্ষমতা, নৈতিকতার অবক্ষয়, মাদকাসক্তি, ব্যক্তিত্বের বৈকল্য, মানসিক অস্থিরতা এবং ব্যক্তিগত বৈশিষ্ট্য (বয়স, শিক্ষা, আয়) ইত্যাদি।"
                       ),
                       icon: "fa-person",
                       type: "type1"
@@ -8710,7 +8710,7 @@ const orbitItems = [
                       title: yhLang("Environmental Causes", "পারিপার্শ্বিক কারণ"),
                       text: yhLang(
                         "Peer pressure in educational institutions and workplaces, political influence, lack of healthy entertainment, immoral culture, and absence of social security systems can lead to abuse.",
-                        "শিক্ষা প্রতিষ্ঠানে, অফিসে এবং রাস্তাঘাটে সমবয়সীদের চাপ, রাজনৈতিক প্রভাব, সুস্থ বিনোদনের অভাব এবং মুক্ত আকাশ অপসংস্কৃতির কারণেও নির্যাতন সংঘটিত হয়। এছাড়াও সামজিক নিরাপত্তা বেষ্টনীর অভাবের কারণেও নির্যাতনের ঘটনা ঘটে থাকে।"
+                        "শিক্ষা প্রতিষ্ঠানে, অফিসে এবং রাস্তাঘাটে সমবয়সীদের চাপ, রাজনৈতিক প্রভাব, সুস্থ বিনোদনের অভাব এবং মুক্ত আকাশ অপসংস্কৃতির কারণেও নির্যাতন সংঘটিত হয়।  এছাড়াও সামজিক নিরাপত্তা বেষ্টনীর অভাবের কারণেও নির্যাতনের ঘটনা ঘটে থাকে।"
                       ),
                       icon: "fa-city",
                       type: "type3"
@@ -8720,7 +8720,7 @@ const orbitItems = [
                       title: yhLang("Social Causes", "সামাজিক কারণ"),
                       text: yhLang(
                         "Most youth in Bangladesh face lower socioeconomic positions, unemployment, and hopelessness. Socially unestablished, dependent, and depressed individuals are more likely to abuse. Poor socialization and childhood exposure to violence increase the risk.",
-                        "বাংলাদেশে যুবসমাজের অধিকাংশই নিম্ন আর্থ-সামাজিক অবস্থানের কারণে এবং বেকার ও হতাশাব্যঞ্জক জীবনযাপন করে থাকে। আবার সামাজিকভাবে অপ্রতিষ্ঠিত, পরনির্ভরশীল, হীনমন্য ও হতাশাগ্রস্থ ব্যক্তিরা এই ধরণের অনাকাঙ্ক্ষিত আচরণ করে থাকে। সুস্থ সামাজিকীকরণের অভাবেও এই ধরনের ঘটনা ঘটে থাকে, যেমন : শৈশবকাল থেকে যখন বয়ঃজেষ্ঠ্যদের কোনো মেয়ের সাথে অন্যায় আচরণ করতে দেখে তখন সে এই বিষয়ে উৎসাহী হয়।"
+                        "বাংলাদেশে যুবসমাজের অধিকাংশই নিম্ন আর্থ-সামাজিক অবস্থানের কারণে এবং বেকার ও হতাশাব্যঞ্জক জীবনযাপন করে থাকে। আবার সামাজিকভাবে অপ্রতিষ্ঠিত, পরনির্ভরশীল, হীনমন্য ও হতাশাগ্রস্থ ব্যক্তিরা এই ধরণের অনাকাঙ্ক্ষিত আচরণ করে থাকে।  সুস্থ সামাজিকীকরণের অভাবেও এই ধরনের ঘটনা ঘটে থাকে, যেমন : শৈশবকাল থেকে যখন বয়ঃজেষ্ঠ্যদের কোনো মেয়ের সাথে অন্যায় আচরণ করতে দেখে তখন সে এই বিষয়ে উৎসাহী হয়।"
                       ),
                       icon: "fa-people-group",
                       type: "type1"
