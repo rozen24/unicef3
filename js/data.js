@@ -3117,7 +3117,7 @@ const coursesData = [
             },
             content: (function () {
               const points = [
-                "ডিম্বাশয়: জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে। প্রত্যেক মাসিক চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।",
+                "ডিম্বাশয়: জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে। প্রত্যেক মাসিক চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে ঢোকে।",
                 "জরায়ু: জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়।",
                 "ডিম্ববাহী নালি: জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।",
                 "যোনিপথ: যোনিপথ জরায়ুর ভিতর থেকে শুরু হয়ে শরীরের বাইরে এসে যোনিমুখে শেষ হয়েছে।",
@@ -3652,7 +3652,7 @@ const coursesData = [
     title: yhLang("Uterus", "জরায়ু"),
     description: yhLang(
       "The uterus is a hollow, triangular organ located in the lower abdomen. In front of it is the bladder and behind it is the rectum. It has two parts—the body and the cervix. Its primary function is pregnancy. If pregnancy does not occur, the inner lining sheds due to hormonal changes, resulting in menstruation. The fallopian tubes extend from the uterus to the ovaries. After intercourse, sperm travel through the vagina and uterus to the fallopian tubes, where fertilization may occur. The fertilized egg later implants in the uterus.",
-      "জরায়ু হচ্ছে তলপেটের ভেতরে থাকা একটি ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি এবং পেছনে মলদ্বার। জরায়ুর দুটি ভাগ—মূল অংশ বা বডি এবং জরায়ুমুখ। মূল অংশের ওপরের দুই কোণা থেকে দুটি ডিম্ববাহী নালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ হলো গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রের হরমোনজনিত কারণে জরায়ুর ভিতরের একটি স্তর ঝরে পড়ে — একে ঋতুস্রাব বা মাসিক বলা হয়।<br> </br>জরায়ু থেকে লম্বা দুটি ডিম্ববাহী নালি দুই দিকে ডিম্বাশয়/ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহী নালির শেষ অংশ হাতের আঙুলের মতো অনেকগুলো ভাগে বিভক্ত থাকে—এটিকে ফিম্ব্রিয়া বলে। সহবাসের পরে শুক্রাণু যোনিপথ হয়ে জরায়ু পেরিয়ে ডিম্বনালিতে পৌঁছায়। এ সময় যদি ওভুলেশন ঘটে, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণু ও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বাণুটি কয়েকদিন ডিম্বনালিতে থেকে পরে জরায়ুতে ফিরে এসে ভ্রূণ হিসেবে স্থাপিত হয়।"
+      "জরায়ু হচ্ছে তলপেটের ভেতরে ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি ও পেছনে মলদ্বার। জরায়ুর দুইটি ভাগ— মূল অংশ বা বডি ও জরায়ুর মুখ। মূল অংশের ওপরের দুইকোণা থেকে দুটি ডিম্ববাহীনালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রে হরমোনের কারণে জরায়ুর ভিতরের একটি অংশ ঝরে পড়ে, একে ঋতুস্রাব বা মাসিক বলা হয়।<br> </br>জরায়ু থেকে লম্বা দুটি ডিম্ববাহীনালি দুইদিকে ডিম্বাশয়/ ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহীনালির শেষ অংশ হাতের আঙুলের মত বিভক্ত থাকে যাকে ফিম্ব্রিয়া বলে। সহবাসের পর শুক্রাণু যোনিপথ থেকে জরায়ু পার হয়ে ডিম্বনালিতে আসে। এসময় যদি ওভুলেশন হয়, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণুও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বটি ডিম্বনালিতে কয়েকদিন থাকার পর আবার জরায়ুতে ফিরে এসে ভ্রুণ হিসেবে গ্রথিত হয়।"
     ),
     icon: "fa-heart",
     color: "#f43f5e",
@@ -3786,7 +3786,7 @@ const coursesData = [
   {
     text: yhLang(
       "Menstrual cycles usually occur every 21–35 days.",
-      "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।"
+      "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।"
     ),
     icon: "fa-hourglass-end",
     color: "#3b82f6",
@@ -4348,8 +4348,8 @@ const coursesData = [
               const managementPoints = [
   {
     text: yhLang(
-      "Missed periods can be a sign of pregnancy. Proper testing should be done, and if confirmed, pregnancy care should be taken from a healthcare provider. However, missed periods do not always mean pregnancy—so a pregnancy test is necessary.",
-      "মাসিক বন্ধ হয়ে যাওয়া গর্ভধারণের একটি লক্ষণ। সেক্ষেত্রে উপযুক্ত পরীক্ষা করে গর্ভধারণ নিশ্চিত হলে, স্বাস্থ্যসেবা প্রদানকারীর নিকট থেকে গর্ভজনিত সেবা গ্রহণ করতে হবে। তবে মনে রাখতে হবে, মাসিক বন্ধ মানেই নিশ্চিত গর্ভধারণ নয়—তাই অবশ্যই গর্ভধারণ পরীক্ষা (প্রীয়ড টেস্ট/প্রেগনেন্সি টেস্ট) করতে হবে।"
+      "The cessation of menstruation is one of the signs of pregnancy. In this case, if pregnancy is confirmed by appropriate testing, one should seek prenatal care from a healthcare provider. However, it should be remembered that a pregnancy test should not be taken just because menstruation has stopped.",
+      "মাসিক বন্ধ হয়ে যাওয়া গর্ভধারণের লক্ষণগুলোর একটি। সেক্ষেত্রে উপযুক্ত পরীক্ষা কওে গর্ভধারন নিশ্চিত হলে, স্বাস্থ্যসেবা প্রদানকারীর নিকট হতে গর্ভজনিত সেবা গ্রহন করতে হবে।  তবে মনে রাখতে হবে যে, মাসিক বন্ধ হয়ে গেছে বলেই যে সে গর্ভবতী তা ধারনা না করে প্রেগ্ন্যন্সি টেষ্ট করতে হবে।"
     ),
     icon: "fa-flask-vial",
     color: "#3b82f6",
@@ -4367,7 +4367,7 @@ const coursesData = [
   {
     text: yhLang(
       "If there is severe pain during menstruation, pain relief medicine should be taken as advised by a doctor.",
-      "মাসিকের সময় অতিরিক্ত ব্যথা হলে ব্যথানাশক ওষুধ (ডাক্তারের পরামর্শ অনুযায়ী) খেতে হবে।"
+      "মাসিকের সময় অতিরিক্ত ব্যথা হলে ব্যথানাশক বড়ি খেতে হবে।"
     ),
     icon: "fa-pills",
     color: "#10b981",
@@ -4837,7 +4837,7 @@ const coursesData = [
       },
       {
         id: "ch-6",
-        title: yhLang("Module-6: Child Marriage", "বাল্যবিবাহের কুফল ও প্রতিরোধ"),
+        title: yhLang("Module-6: Child Marriage", "মডিউল-৬: বাল্যবিবাহ"),
         lessons: [
  
           {
@@ -5645,7 +5645,7 @@ const coursesData = [
         id: "ch-8",
         title: yhLang(
           "Module-8: Adolescent Family Planning",
-          "মডিউল-৮: কৈশোরে কালীনমাতৃত্ব",
+          "মডিউল-৮: কৈশোরকালীন মাতৃত্ব",
         ),
         lessons: [
 
@@ -5874,7 +5874,7 @@ const coursesData = [
 
                           <div class="ch8l7-orbit-center-text">
                             <h2 class="text-white">
-                              ${yhLang("Prevention Measures", "প্রতিরোধে করণীয়")}
+                              ${yhLang("Prevention Measures", "কৈশোরকালীন গর্ভধারণ প্রতিরোধে করণীয়")}
                             </h2>
                           </div>
                         </div>
@@ -5968,9 +5968,9 @@ const coursesData = [
                 {
                   title: yhLang(
                     "2. Prenatal Checkups",
-                    "২. গর্ভাবস্থা পরীক্ষা"
+                    "২. গর্ভকালীন চেকাপ"
                   ),
-                  titleBn: "২. গর্ভাবস্থা পরীক্ষা",
+                  titleBn: "২. গর্ভকালীন চেকাপ",
                   icon: "fa-stethoscope",
                   color: "ch8l8-point-type-2 prosob_li",
                   subPoints: [
@@ -5991,19 +5991,16 @@ const coursesData = [
                 {
                   title: yhLang(
                     "3. Delivery Planning",
-                    "৩. প্রসব (প্রসবোত্তর) আরও অনুমান"
+                    "৩. প্রসবের আগে পরিকল্পনা করলে মা ও শিশুর মৃত্যুঝুঁকি অনেকাংশে কমানো যায়। যেমনঃ "
                   ),
-                  titleBn: "৩. প্রসব (প্রসবোত্তর) আরও অনুমান",
+                  titleBn: "৩. প্রসবের আগে পরিকল্পনা করলে মা ও শিশুর মৃত্যুঝুঁকি অনেকাংশে কমানো যায়। যেমনঃ ",
                   icon: "fa-list-check",
                   color: "ch8l8-point-type-3",
                   subPoints: [
-                    yhLang(
-                      "Planning before delivery can significantly reduce the risk of death for mother and child. For example:",
-                      "আগে থেকে পরিকল্পনা করে মাতৃ এবং ভ্রূণের মৃত্যুর ঝুঁকি উল্লেখযোগ্যভাবে হ্রাস করা যেতে পারে। উদাহরণস্বরূপ:"
-                    ),
+                    
                     yhLang(
                       "Selection of place of delivery",
-                      "ডেলিভারির স্থান নির্বাচন করা"
+                      "প্রসবের স্থান নির্বাচন"
                     ),
                     yhLang(
                       "Arrange transportation in advance when labor begins",
@@ -6011,7 +6008,11 @@ const coursesData = [
                     ),
                     yhLang(
                       "Save money in advance and identify blood donor",
-                      "আগে থেকে টাকা জমানো ও রক্তদাতা ঠিক করে রাখা"
+                      "আগে থেকে টাকা জমানো ও"
+                    ),
+                    yhLang(
+                      "Identify blood donor and keep contact information ready",
+                      "রক্তদাতা ঠিক করে রাখা"
                     )
                   ]
                 }
@@ -6604,7 +6605,7 @@ const coursesData = [
                 <div class="ch10l4-slide lesson-slide">
                   <h2 class="ch10l4-title" data-aos="fade-down">
                     <i class="fa-solid fa-stopwatch"></i>
-                    ${yhLang("Window Period", "অন্তর্বর্তীকালীন সময়")}
+                    ${yhLang("Window Period", "অন্তর্বর্তীকালীন সময় (Window Period)")}
                   </h2>
 
                   <div class="ch10l4-content-container">
@@ -6648,7 +6649,7 @@ const coursesData = [
         id: "ch-11",
         title: yhLang(
           "Module-11: Polycystic ovary syndrome (PCOS) in adolescents",
-          "মডিউল-১১: জরায়ু মুখের ক্যান্সার)",
+          "মডিউল-১১: এইচপিভি টিকাদান ও জরায়ু মুখের ক্যান্সার প্রতিরোধ",
         ),
         lessons: [
 
@@ -6783,7 +6784,7 @@ const coursesData = [
               const pointSections = [
                 {
                   class_name: "tika-risk",
-                  title: yhLang("Vaccine Risks", "টিকা গ্রহণের ঝুঁকি"),
+                  title: yhLang("Vaccine Risks", "টিকা গ্রহণের সুবিধা"),
                   icon: "fa-shield",
                   items: [
                     { text: yhLang("HPV vaccine prevents cervical cancer.", "এইচপিভি টিকা জরায়ুমুখ ক্যান্সার প্রতিরোধ করে।"), icon: "fa-check-circle" },
@@ -6873,7 +6874,7 @@ const coursesData = [
             id: "ch11-lesson-2",
             title: yhLang(
               "Importance of TD Vaccine",
-              "টিডি টিকার গুরুত্ব",
+              "মহিলাদের অন্যান্য টিকা",
             ),
             icon: "fa-shield-virus",
             gradientClass: "bg-gradient-violet",
@@ -6904,7 +6905,7 @@ const coursesData = [
                     <div class="ch11l4-td-desc-card">
                       <h2 class="ch11l4-td-title">
                         <i class="fa-solid fa-shield-virus"></i>
-                        ${yhLang("Importance of TD Vaccine", "টিডি টিকার গুরুত্ব")}
+                        ${yhLang("Importance of TD Vaccine", "টিডি টিকা : টিডি টিকার গুরুত্ব")}
                       </h2>
                       <p class="ch11l4-td-description">
                         ${yhLang(
@@ -7024,7 +7025,7 @@ const coursesData = [
             id: "ch12-lesson-1",
             title: yhLang(
               "Understanding PCOS",
-              "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস) বোঝা"
+              "পলিসিস্টিক ওভারি সিনড্রোম (পিসিওএস)"
             ),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-rose",
@@ -7507,7 +7508,7 @@ const coursesData = [
             content: (function () {
               const description1 = yhLang(
                 "About 1 out of every 6 people in the world are adolescents aged 10-19 years, and nearly one-third of the population is under 25 years. During adolescence, teenagers experience physical and mental changes, and signs of sexual development become apparent. Adolescents face increased reproductive and sexual health risks. Without adequate information and education, they are more vulnerable to sexually transmitted infections. Unintended pregnancies and unsafe abortions also present serious health concerns. Therefore, sexual and reproductive health rights are critically important.",
-                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এবয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্তের সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ। <br>প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডাব্লুএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
+                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এবয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্তের সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ। <br> </br>প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডাব্লুএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
               );
 
               const description2 = yhLang(
@@ -8761,7 +8762,7 @@ const orbitItems = [
                       title: yhLang("National Helpline", "ন্যাশনাল হেল্পলাইন সেন্টার"),
                       text: yhLang(
                         "National Helpline Center (Toll Free 109) and Joy Apps provide 24/7 support to abuse victims.",
-                        "ন্যাশনাল হেল্পলাইন সেন্টার (টোলফ্রি ১০৯) ও জয় অ্যাপস সর্বদা সহায়তা প্রদান করে।"
+                        `ন্যাশনাল হেল্পলাইন সেন্টার (টোলফ্রি <strong style="font-weight: bold; color: red;"> ১০৯</strong>) ও জয় অ্যাপস সর্বদা সহায়তা প্রদান করে।`
                       ),
                       icon: "fa-headset",
                       type: "type1"
