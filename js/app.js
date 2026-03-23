@@ -151,6 +151,32 @@ class YouthHealthLMS {
           const desired = lang === "bn" ? bnSrc : enSrc;
           if (desired) img.setAttribute("src", desired);
         });
+
+      // Update chart labels for bilingual support
+      try {
+        if (this.childMarriageChart) {
+          const labelsData = JSON.parse(document.getElementById("cmFigure4Chart")?.dataset.labelsData || "{}");
+          if (labelsData.en && labelsData.bn) {
+            const wrapLabel = (str, max = 10) => {
+              if (!str || typeof str !== 'string') return str;
+              if (str.length <= max) return str;
+              const words = str.split(' ');
+              if (words.length === 1) return str;
+              const lines = [];
+              let line = '';
+              words.forEach(w => {
+                const test = line ? (line + ' ' + w) : w;
+                if (test.length > max) { if (line) lines.push(line); line = w; } else { line = test; }
+              });
+              if (line) lines.push(line);
+              return lines;
+            };
+            const selectedLabels = lang === "bn" ? labelsData.bn : labelsData.en;
+            this.childMarriageChart.data.labels = selectedLabels.map(l => wrapLabel(l, 10));
+            this.childMarriageChart.update();
+          }
+        }
+      } catch (_) {}
     } catch (_) {}
   }
 
@@ -1532,8 +1558,23 @@ class YouthHealthLMS {
         try {
           const ctx = cmCanvas.getContext("2d");
           // Adaptive horizontal bar chart (Chart.js v2 & v3+ compatible)
-          const labelsHM = ["Bangladesh","Nepal","Afghanistan","India","Bhutan","Pakistan","Sri Lanka","Maldives", "South Asia", "World"]; 
+          const labelsHMData = {
+            en: ["Bangladesh","Nepal","Afghanistan","India","Bhutan","Pakistan","Sri Lanka","Maldives", "South Asia", "World"],
+            bn: ["বাংলাদেশ","নেপাল","আফগানিস্তান","ভারত","ভুটান","পাকিস্তান","শ্রীলঙ্কা","মালদ্বীপ", "দক্ষিণ এশিয়া", "বিশ্ব"]
+          };
+
           const valuesHM = [51, 40, 28, 27, 26, 18, 10, 2, 29, 20];
+
+          // Helper function to convert numbers to Bengali numerals if needed
+          const convertToLanguageNumbers = (num) => {
+            const bengaliDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+            const numStr = String(num);
+            if (this.currentLanguage === "bn") {
+              return numStr.split('').map(digit => bengaliDigits[parseInt(digit)] || digit).join('');
+            }
+            return numStr;
+          };
+
           // Wrap long labels into multiple lines for readability
           const wrapLabel = (str, max = 10) => {
             try {
@@ -1551,7 +1592,11 @@ class YouthHealthLMS {
               return lines;
             } catch(_) { return str; }
           };
-          const labelsHMWrap = labelsHM.map(l => wrapLabel(l, 10));
+          const getCurrentLabels = () => {
+            const lang = this.currentLanguage === "bn" ? "bn" : "en";
+            return labelsHMData[lang].map(l => wrapLabel(l, 10));
+          };
+          const labelsHMWrap = getCurrentLabels();
 
           // Compute top-3 indices for highlight
           const top3Idx = valuesHM
@@ -1559,6 +1604,7 @@ class YouthHealthLMS {
             .sort((a, b) => b[0] - a[0])
             .slice(0, 1)
             .map(([, i]) => i);
+         
           const paletteHM = [
             "#ff0000ff", // Bangladesh
             "#A78BFA", // Nepal
@@ -1598,7 +1644,7 @@ class YouthHealthLMS {
                 y: {
                   suggestedMin: 0,
                   suggestedMax: 100,
-                  ticks: { callback: (v) => v + '%' },
+                  ticks: { callback: (v) => convertToLanguageNumbers(v) + '%' },
                 },
                 x: {
                   ticks: { autoSkip: false, maxRotation: 0, minRotation: 0, padding: 6 },
@@ -1610,7 +1656,7 @@ class YouthHealthLMS {
                 legend: { display: false },
                 tooltip: {
                   callbacks: {
-                    label: (ctx) => `${ctx.raw}%`
+                    label: (ctx) => `${convertToLanguageNumbers(ctx.raw)}%`
                   }
                 },
                 title: {
@@ -1623,14 +1669,17 @@ class YouthHealthLMS {
                   font: { size: 15, weight: '700', family: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif' },
                   color: '#111827'
                 },
-                barValueLabels: { formatter: v => v + '%' } // append percent sign
+                barValueLabels: { formatter: (v) => convertToLanguageNumbers(v) + '%' } // append percent sign with language-specific numbers
               },
               animation: { duration: 900, easing: 'easeOutCubic' }
             }
           };
           // Render chart without background highlight plugin (plain styled title only)
-          new window.Chart(ctx, chartConfig);
+          const childMarriageChart = new window.Chart(ctx, chartConfig);
           cmCanvas.dataset.chartInitialized = "true";
+          // Store reference for language updates
+          cmCanvas.dataset.labelsData = JSON.stringify(labelsHMData);
+          this.childMarriageChart = childMarriageChart;
         } catch (_) {}
       }
 

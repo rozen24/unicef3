@@ -26567,7 +26567,11 @@ input::placeholder {
   gap: 1rem;
   transition: all 0.3s ease;
 }
-
+.m2l5 {
+  width: 400px;
+  height: 400px;
+  border-radius: 200px;
+}
 .fact-card:hover {
   transform: translateX(5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);

@@ -1424,21 +1424,22 @@ const coursesData = [
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Child marriage and teenage pregnancies", "কৈশোর কালীন স্বাস্থ্য")}</h2>
 
-                <!-- Special info badge -->
-                <div class="fact-card alert-warning hover-lift-sm transition-base  mb-3" data-aos="fade-up" data-aos-delay="60">
-                  <i class="fas fa-ranking-star" aria-hidden="true"></i>
-                  <p class="mb-0">${yhLang("Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.", "বাল্যবিবাহের হার সবচেয়ে বেশি এমন <strong>১০টি</strong> দেশের মধ্যে বাংলাদেশ অন্যতম।")}</p>
-                </div>
+                
 
                 <!-- FIG.4: Graph chart section -->
-                <section class="mb-4" aria-labelledby="cm-figure4-title">
-                  <div class="row g-3 align-items-stretch">
-                    <div class="col-lg-12" data-aos="fade-right" data-aos-delay="100">
+                <section class="" aria-labelledby="cm-figure4-title">
+                  <div class="row g-3 d-flex align-items-center justify-content-center h-100">
+                    <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+                      <!-- Special info badge -->
+                      <div class="fact-card m2l5 alert-warning hover-lift-sm transition-base  mb-3" data-aos="fade-up" data-aos-delay="60">
+                        <i class="fas fa-ranking-star" aria-hidden="true"></i>
+                        <p class="mb-0">${yhLang("Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.", "বাল্যবিবাহের হার সবচেয়ে বেশি এমন <strong>১০টি</strong> দেশের মধ্যে বাংলাদেশ অন্যতম।")}</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-left" data-aos-delay="120">
                       <article class="modern-card" style="height:500px">
                         <canvas id="cmFigure4Chart" aria-label="Child marriage before 18: Bangladesh vs South Asia vs World" role="img"></canvas>
                       </article>
-                    </div>
-                    <div class="col-lg-12" data-aos="fade-left" data-aos-delay="120">
                       <article class="modern-card h-100 d-flex flex-column">
                         <div class="d-flex flex-wrap gap-2">
                           ${[
@@ -1500,78 +1501,9 @@ const coursesData = [
                             )
                             .join("")}
                         </div>
-                        <p class="small text-muted mt-3 mb-0">${yhLang("Note: Chart shows available values for Bangladesh (51%), South Asia (29%) and World (20%). Country-level values for other South Asian nations can be added when verified.", "নোট: এই চার্টে বাংলাদেশ (৫১%), দক্ষিণ এশিয়া (২৯%) এবং বিশ্ব (২০%) এর উপলব্ধ পরিসংখ্যান দেখানো হয়েছে। নির্ভরযোগ্য তথ্য পাওয়া গেলে অন্যান্য দক্ষিণ এশীয় দেশের মান যোগ করা যাবে।")}</p>
+                        <p class="small text-muted p-1 mb-0">${yhLang("Note: Chart shows available values for Bangladesh (51%), South Asia (29%) and World (20%). Country-level values for other South Asian nations can be added when verified.", "দক্ষিণ এশিয়ায় কন্যাশিশুদের বাল্যবিবাহের হার")}</p>
                       </article>
                     </div>
-                  </div>
-                </section>
-
-                <!-- KEY FACTS -->
-                <section aria-labelledby="cm-keyfacts-title">
-                  <h3 class="d-none gradient-text mb-1" id="cm-keyfacts-title" data-aos="fade-up" data-aos-delay="140">KEY FACTS</h3>
-                  <p class="d-none text-muted mb-3" data-aos="fade-up" data-aos-delay="160">About child marriage in Bangladesh</p>
-                  <div class="row g-3">
-                    <div class="key-img py-2" style="border-radius: 20px;" data-aos="zoom-in" data-aos-delay="180">
-                      <img src="img/Child-marraige/child-marriage-bangladesh.png" alt="Key Facts" class="img-fluid rounded-4 img-zoom" />
-                    </div>
-                    <div class="key-img py-2" style="border-radius: 20px;" data-aos="zoom-in" data-aos-delay="180">
-                      <img src="img/Child-marraige/childbearing.jpg" alt="Key Facts" class="img-fluid rounded-4 img-zoom" />
-                    </div>
-                    <!--
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="180">
-                      <div class="fact-card alert-info hover-lift-sm transition-base">
-                        <i class="fas fa-children" aria-hidden="true"></i>
-                        <p class="mb-0"><strong>38 million</strong> child brides live in Bangladesh; <strong>13 million</strong> married before age 15.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                      <div class="fact-card alert-primary hover-lift-sm transition-base">
-                        <i class="fas fa-percent" aria-hidden="true"></i>
-                        <p class="mb-0"><strong>51%</strong> of young women were married before their 18th birthday.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="220">
-                      <div class="fact-card alert-warning hover-lift-sm transition-base">
-                        <i class="fas fa-ranking-star" aria-hidden="true"></i>
-                        <p class="mb-0">Bangladesh ranks among the <strong>top 10</strong> countries globally for child marriage.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="240">
-                      <div class="fact-card alert-secondary hover-lift-sm transition-base">
-                        <i class="fas fa-school" aria-hidden="true"></i>
-                        <p class="mb-0">Risk factors include rural residence, poverty, and lower than secondary education.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="260">
-                      <div class="fact-card alert-danger hover-lift-sm transition-base">
-                        <i class="fas fa-user-graduate" aria-hidden="true"></i>
-                        <p class="mb-0">Married girls are <strong>4×</strong> more likely to be out of school than unmarried girls.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="280">
-                      <div class="fact-card alert-success hover-lift-sm transition-base">
-                        <i class="fas fa-baby" aria-hidden="true"></i>
-                        <p class="mb-0">Nearly <strong>5 in 10</strong> child brides gave birth before 18; <strong>8 in 10</strong> before 20.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                      <div class="fact-card alert-success hover-lift-sm transition-base">
-                        <i class="fas fa-arrow-trend-down" aria-hidden="true"></i>
-                        <p class="mb-0">Child marriage is less common today than in previous generations.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="320">
-                      <div class="fact-card alert-secondary hover-lift-sm transition-base">
-                        <i class="fas fa-chart-line" aria-hidden="true"></i>
-                        <p class="mb-0">Declines seen across wealth groups, with faster progress among the richest.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="340">
-                      <div class="fact-card alert-primary hover-lift-sm transition-base">
-                        <i class="fas fa-bullseye" aria-hidden="true"></i>
-                        <p class="mb-0">To meet national (2041) and SDG (2030) targets, progress must accelerate by <strong>8×</strong> and <strong>17×</strong>, respectively.</p>
-                      </div>
-                    </div> -->
                   </div>
                 </section>
               </div>`,
