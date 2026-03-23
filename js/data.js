@@ -3336,7 +3336,7 @@ const coursesData = [
           },
           {
             id: "ch3-lesson-2",
-            title: yhLang("Adolescent Growth & Development Stages", "কৈশোরকালীন বৃদ্ধি ও বিকাশের ধাপ এবং পরিবর্তনসমূহ"),
+            title: yhLang("Adolescent Growth & Development Stages", "কৈশোরকালীন বৃদ্ধি ও বিকাশের ধাপ এবং পরিবর্তনসমূহ এবং পরিবর্তনসমূহ"),
             icon: "fa-timeline",
             gradientClass: "bg-gradient-sky",
             audioFile: "",
@@ -3485,13 +3485,7 @@ const coursesData = [
                         <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-heart"></i> ${yhLang("Emotional", "মানসিক")}</strong></h3></td>
                         <td class="ch3l3-td-early">
   <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concern about rapid physical growth", "দ্রুত শারীরিক বৃদ্ধি নিয়ে চিন্তা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concern about body image", "শারীরিক অবয়ব নিয়ে চিন্তা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concern about major changes", "আমূল পরিবর্তন নিয়ে চিন্তা")}</p>
+    <p>${yhLang("Concerned with rapid physical growth, body image, major changes", "দ্রুত শারীরিক বৃদ্ধি, শারীরিক অবয়ব, আমূল পরিবর্তন নিয়ে চিন্তায় থাকা")}</p>
   </div>
 </td>
 
@@ -3509,10 +3503,7 @@ const coursesData = [
 
 <td class="ch3l3-td-late">
   <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Stable intelligence develops", "স্থায়ী বুদ্ধিমত্তা আসে")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Realistic identity develops", "বাস্তবভিত্তিক পরিচয় তৈরি হয়")}</p>
+    <p>${yhLang("Stable intelligence and realistic identity established", "স্থায়ী বুদ্ধিমত্তা ও বাস্তবভিত্তিক পরিচয় স্থায়িত্ব লাভ করে")}</p>
   </div>
 </td>
                       </tr>
@@ -3520,22 +3511,19 @@ const coursesData = [
                         <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-house"></i> ${yhLang("Family", "পরিবার")}</strong></h3></td>
                         <td class="ch3l3-td-early">
   <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Defining the boundary between dependence and independence", "পরনির্ভরতা ও আত্মনির্ভরতার সীমানা নির্ধারণ")}</p>
+    <p>${yhLang("Setting boundaries of dependence and independence", "পরনির্ভরতা ও আত্মনির্ভরতার সীমানা নির্ধারণ")}</p>
   </div>
 </td>
 
 <td class="ch3l3-td-mid">
   <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Conflict over authority", "কর্তৃত্ব নিয়ে দ্বন্দ্ব")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Conflict over control", "নিয়ন্ত্রণ নিয়ে দ্বন্দ্ব")}</p>
+    <p>${yhLang("Conflict over authority and control", "কর্তৃত্ব বা নিয়ন্ত্রণ নিয়ে দ্বন্দ্ব")}</p>
   </div>
 </td>
 
 <td class="ch3l3-td-late">
   <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Expectation of responsibility", "দায়িত্বশীলতার প্রত্যাশা")}</p>
+    <p>${yhLang("Family expects responsibility from them", "পরিবার তার কাছ থেকে দায়িত্বশীলতা আশা করে")}</p>
   </div>
 </td>
                       </tr>
@@ -3543,7 +3531,7 @@ const coursesData = [
                         <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-users"></i> ${yhLang("Peer", "সতীর্থ দল")}</strong></h3></td>
                         <td class="ch3l3-td-early">
   <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Desire to resist instability", "অস্থায়িত্ব প্রতিরোধ করার ইচ্ছা")}</p>
+    <p>${yhLang("Desire to prevent instability", "অস্থায়িত্ব প্রতিরোধ করার ইচ্ছা প্রকাশ")}</p>
   </div>
 </td>
 
@@ -3552,13 +3540,13 @@ const coursesData = [
     <p>${yhLang("Searching for identity to maintain individuality", "স্বকীয়তা ধরে রাখতে পরিচয় খোঁজা")}</p>
   </div>
   <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Behavior influenced by peers", "সতীর্থ কর্তৃক আচরণ ঠিক হয়")}</p>
+    <p>${yhLang("Behavior influenced by peers", "সতীর্থ কর্তৃক আচরণ ঠিক করা")}</p>
   </div>
 </td>
 
 <td class="ch3l3-td-late">
   <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Developing personal friendships", "ব্যক্তিগত বন্ধুত্ব গড়ে তোলা")}</p>
+    <p>${yhLang("Moving from peer group to personal friendships", "সতীর্থ দল থেকে ব্যক্তিগত বন্ধুত্বে যাওয়া")}</p>
   </div>
 </td>
                       </tr>
@@ -3566,16 +3554,13 @@ const coursesData = [
                         <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-heart-pulse"></i> ${yhLang("Sexuality", "যৌনতা")}</strong></h3></td>
                         <td class="ch3l3-td-early">
   <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Searching for self-identity", "নিজেকে খোঁজা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Self-evaluation", "নিজেকে মূল্যায়ন করা")}</p>
+    <p>${yhLang("Self-discovery and self-evaluation", "নিজেকে খোঁজা ও মূল্যায়ন করা")}</p>
   </div>
 </td>
 
 <td class="ch3l3-td-mid">
   <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Preoccupied with romantic fantasies", "রোমান্টিক কাল্পনা নিয়ে ব্যস্ত")}</p>
+    <p>${yhLang("Engaged in romantic fantasies", "রোমান্টিক কাল্পনিক জগত নিয়ে ব্যস্ততা")}</p>
   </div>
   <div class="ch3l3-point ch3l3-point-mid">
     <p>${yhLang("Attraction toward the opposite sex", "বিপরীত লিঙ্গের প্রতি আকর্ষণ")}</p>
@@ -3584,13 +3569,10 @@ const coursesData = [
 
 <td class="ch3l3-td-late">
   <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Building stable relationships", "স্থায়ী সম্পর্ক তৈরি করা")}</p>
+    <p>${yhLang("Building stable relationships", "স্থায়ী সম্পর্ক তৈরি")}</p>
   </div>
   <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Developing mutual consent", "পারস্পরিক সম্মতি তৈরি")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Planning for the future", "ভবিষ্যত পরিকল্পনা করা")}</p>
+    <p>${yhLang("Developing mutual consent", "পারস্পরিক ও ভবিষ্যত পরিকল্পনা করা")}</p>
   </div>
 </td>
                       </tr>
@@ -3604,7 +3586,7 @@ const coursesData = [
                   <div class="ch3l3-intro-section">
                     <h2 class="ch3l3-main-title">
                       <i class="fa-solid fa-timeline"></i>
-                      ${yhLang("Adolescent Growth & Development Stages", "কৈশোরকালীন বৃদ্ধি ও বিকাশের ধাপ")}
+                      ${yhLang("Adolescent Growth & Development Stages", "কৈশোরকালীন বৃদ্ধি ও বিকাশের ধাপ এবং পরিবর্তনসমূহ")}
                     </h2>
                   </div>
                   ${renderStageTable()}
