@@ -1617,10 +1617,9 @@ class YouthHealthLMS {
                   display: true,
                   position: 'top',
                   text: [
-                    'Bangladesh has the highest prevalence of child marriage in South Asia,',
-                    'and is among the 10 countries worldwide with the highest levels.'
+                    ''
                   ],
-                  padding: { top: 12, bottom: 18 },
+                  padding: { top: 2, bottom: 3 },
                   font: { size: 15, weight: '700', family: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif' },
                   color: '#111827'
                 },

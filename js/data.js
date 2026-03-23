@@ -1074,7 +1074,7 @@ const coursesData = [
                           <div class="d-flex flex-col align-items-center gap-1">
                             <span class="${
                               card.color
-                            }" style="width:38px; height:38px; border-radius:50%; display:inline-flex; align-items:center; color:#fff; flex-shrink:0;">
+                            }" style="width:38px; height:38px; border-radius:50%; display:inline-flex; justify-content: center; align-items:center; color:#fff; flex-shrink:0;">
                               <i class="fa-solid ${card.icon}"></i>
                             </span>
                             <div>
@@ -1140,7 +1140,7 @@ const coursesData = [
                             <div class="d-flex align-items-center gap-3">
                               <span class="${
                                 cause.color
-                              }" style="width:48px; height:48px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0;">
+                              }" style="width:48px; height:48px; border-radius:50%; display:inline-flex; align-items: center; justify-content: center; color:#fff; flex-shrink:0;">
                                 <i class="fa-solid ${cause.icon}"></i>
                               </span>
                               <h6 class="mb-0">${cause.label}</h6>
@@ -1204,7 +1204,7 @@ const coursesData = [
                     <div class="col-lg-6">
                       <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="100">
                         <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Males", "ছেলে")}</span></h6>
-                        <ul class="list-unstyled d-grid gap-2 mb-0">
+                        <ul class="list-unstyled grid_2 d-grid gap-2 mb-0">
                           ${[
                             {
                               label: yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
@@ -1239,7 +1239,7 @@ const coursesData = [
                             }">
                               <span class="${
                                 item.color
-                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; color:#fff"><i class="fa-solid ${
+                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff"><i class="fa-solid ${
                                 item.icon
                               }"></i></span>
                               <span>${item.label}</span>
@@ -1253,7 +1253,7 @@ const coursesData = [
                     <div class="col-lg-6">
                       <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="120">
                         <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Females", "মেয়ে")}</span></h6>
-                        <ul class="list-unstyled d-grid gap-2 mb-0">
+                        <ul class="list-unstyled grid_2 d-grid gap-2 mb-0">
                           ${[
                             {
                               label: yhLang("Diarrhea", "ডায়রিয়া"),
@@ -1291,7 +1291,7 @@ const coursesData = [
                             }">
                               <span class="${
                                 item.color
-                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; color:#fff;"><i class="fa-solid ${
+                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff;"><i class="fa-solid ${
                                 item.icon
                               }"></i></span>
                               <span>${item.label}</span>
@@ -1396,7 +1396,7 @@ const coursesData = [
             id: "ch2-lesson-5",
             title: yhLang(
               "Child marriage and teenage pregnancies",
-              "বাল্যবিবাহ ও কিশোরী মাতৃত্ব",
+              "কৈশোর কালীন স্বাস্থ্য",
             ),
             icon: "fa-child-reaching",
             gradientClass: "bg-gradient-orange",
@@ -1422,17 +1422,16 @@ const coursesData = [
             },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Child marriage and teenage pregnancies", "বাল্যবিবাহ ও কিশোরী মাতৃত্ব")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Child marriage and teenage pregnancies", "কৈশোর কালীন স্বাস্থ্য")}</h2>
 
                 <!-- Special info badge -->
                 <div class="fact-card alert-warning hover-lift-sm transition-base  mb-3" data-aos="fade-up" data-aos-delay="60">
                   <i class="fas fa-ranking-star" aria-hidden="true"></i>
-                  <p class="mb-0">${yhLang("Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.", "বাল্যবিবাহের হার সবচেয়ে বেশি যে <strong>শীর্ষ ১০টি দেশে</strong> বাংলাদেশ সেগুলোর একটি।")}</p>
+                  <p class="mb-0">${yhLang("Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.", "বাল্যবিবাহের হার সবচেয়ে বেশি এমন <strong>১০টি</strong> দেশের মধ্যে বাংলাদেশ অন্যতম।")}</p>
                 </div>
 
                 <!-- FIG.4: Graph chart section -->
                 <section class="mb-4" aria-labelledby="cm-figure4-title">
-                  <h3 class="gradient-text py-2" id="cm-figure4-title" data-aos="fade-up" data-aos-delay="80">${yhLang("Percentage of women (20–24) first married/union before age 18", "২০–২৪ বছর বয়সী যে নারীরা ১৮ পূর্ণ হওয়ার আগে বিয়ে/সম্পর্কে জড়িয়েছেন তাদের শতকরা হার")}</h3>
                   <div class="row g-3 align-items-stretch">
                     <div class="col-lg-12" data-aos="fade-right" data-aos-delay="100">
                       <article class="modern-card" style="height:500px">
