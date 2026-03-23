@@ -1511,205 +1511,139 @@ const coursesData = [
           {
             id: "ch2-lesson-6",
             title: yhLang(
-              "Adolescent health related issues",
-              "কৈশোর স্বাস্থ্য সম্পর্কিত চ্যালেঞ্জ",
+              "Key Information",
+              "মূল তথ্য",
             ),
-            icon: "fa-circle-nodes",
-            gradientClass: "bg-gradient-cyan",
+            icon: "fa-chart-bar",
+            gradientClass: "bg-gradient-blue",
             audioFile: "",
             quiz: {
               passingScore: 60,
               questions: [
                 {
-                  id: "q2d-issues",
+                  id: "q2f",
                   question: yhLang(
-                    "Improving adolescent health requires…",
-                    "কৈশোর স্বাস্থ্য উন্নত করতে কী প্রয়োজন?",
+                    "What percentage of adolescents suffer from mental health issues?",
+                    "কত শতাংশ কিশোর-কিশোরী মানসিক স্বাস্থ্যগত সমস্যায় ভুগছে?",
                   ),
                   options: [
-                    yhLang("Single-sector approach", "একক খাতভিত্তিক পদ্ধতি"),
-                    yhLang(
-                      "Rights-based, multisectoral action",
-                      "অধিকারভিত্তিক বহুখাতীয় উদ্যোগ",
-                    ),
-                    yhLang("Ignoring evidence", "তথ্যকে উপেক্ষা করা"),
-                    yhLang("Only services", "শুধু পরিষেবা"),
+                    yhLang("13.4%", "১৩.৪%"),
+                    yhLang("23%", "২৩%"),
+                    yhLang("5%", "৫%"),
+                    yhLang("40%", "৪০%"),
                   ],
-                  correctAnswer: 1,
+                  correctAnswer: 0,
                 },
               ],
             },
             content: (function () {
-              const healthStats = [
-                yhLang(
-                  '<span class="stat-chip"><span class="value">12.6</span><span class="unit">%</span></span> children and adolescents (7–17 years) live with a diagnosable mental health condition.',
-                  '<span class="stat-chip"><span class="value">১২.৬</span><span class="unit">%</span></span> শিশু-কিশোর (৭–১৭ বছর) নির্ণয়যোগ্য মানসিক স্বাস্থ্য সমস্যায় ভোগে।',
-                ),
-                yhLang(
-                  'NCD risk factors: <span class="stat-chip"><span class="value">14</span><span class="unit">%</span></span> had one risk, <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> had two, <span class="stat-chip"><span class="value">29</span><span class="unit">%</span></span> had three, and <span class="stat-chip"><span class="value">34</span><span class="unit">%</span></span> lived with four or more.',
-                  'এনসিডি ঝুঁকি: <span class="stat-chip"><span class="value">১৪</span><span class="unit">%</span></span> কিশোর একটি ঝুঁকিতে, <span class="stat-chip"><span class="value">২২</span><span class="unit">%</span></span> দুটিতে, <span class="stat-chip"><span class="value">২৯</span><span class="unit">%</span></span> তিনটিতে এবং <span class="stat-chip"><span class="value">৩৪</span><span class="unit">%</span></span> চার বা ততোধিক ঝুঁকিতে রয়েছে।',
-                ),
-                yhLang(
-                  'Substance use prevalence among 12–17 years stands at <span class="stat-chip"><span class="value">1.5</span><span class="unit">%</span></span>.',
-                  '১২–১৭ বছর বয়সী কিশোরদের মধ্যে নেশাজাতীয় দ্রব্য ব্যবহারের হার <span class="stat-chip"><span class="value">১.৫</span><span class="unit">%</span></span>।',
-                ),
-                yhLang(
-                  'Road traffic injuries cause nearly <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> of adolescent deaths; students account for over <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> of fatalities.',
-                  'সড়ক দুর্ঘটনায় কিশোর মৃত্যুর প্রায় <span class="stat-chip"><span class="value">১০</span><span class="unit">%</span></span> ঘটে; নিহতদের মধ্যে শিক্ষার্থীর অনুপাত <span class="stat-chip"><span class="value">১৬</span><span class="unit">%</span></span>-এর বেশি।',
-                ),
-                yhLang(
-                  'Internet addiction affects <span class="stat-chip"><span class="value">24.1</span><span class="unit">%</span></span> adolescents aged 13–19 years.',
-                  '১৩–১৯ বছর বয়সী কিশোরদের মধ্যে ইন্টারনেট আসক্তির হার <span class="stat-chip"><span class="value">২৪.১</span><span class="unit">%</span></span>।',
-                ),
-              ];
+              const factPoints = [
+  {
+    text: yhLang(
+      "13.4% of adolescents suffer from mental health problems.",
+      "১৩.৪% কিশোর-কিশোরী মানসিক স্বাস্থ্যগত সমস্যায় ভুগছে।"
+    ),
+    icon: "fa-brain",
+    color: "#7c3aed",
+    bgColor: "rgba(124, 58, 237, 0.12)",
+  },
+  {
+    text: yhLang(
+      "36% of married adolescent girls and 32% of unmarried adolescent girls are stunted; 4% of married and 8% of unmarried girls are underweight.",
+      "বিবাহিত কিশোরীদের ৩৬% এবং অবিবাহিত কিশোরীদের ৩২% বৃদ্ধি খর্বকায় এবং বিবাহিত কিশোরীদের ৪% এবং অবিবাহিত কিশোরীদের ৮% ওজন কম।"
+    ),
+    icon: "fa-ruler",
+    color: "#f59e0b",
+    bgColor: "rgba(245, 158, 11, 0.12)",
+  },
+  {
+    text: yhLang(
+      "About one-third (30%) of adolescents suffer from anemia.",
+      "প্রায় এক-তৃতীয়াংশ (৩০%) কিশোর-কিশোরী রক্তাল্পতায় ভুগছে।"
+    ),
+    icon: "fa-droplet",
+    color: "#dc2626",
+    bgColor: "rgba(220, 38, 38, 0.12)",
+  },
+  {
+    text: yhLang(
+      "16% of married and 10% of unmarried adolescent girls are overweight or obese.",
+      "বিবাহিত কিশোরীদের ১৬% এবং অবিবাহিত কিশোরীদের ১০% অতিরিক্ত ওজন বা স্থূলকায়।"
+    ),
+    icon: "fa-weight-scale",
+    color: "#ec4899",
+    bgColor: "rgba(236, 72, 153, 0.12)",
+  },
+  {
+    text: yhLang(
+      "One-fifth of adolescent girls and women experience physical or sexual violence, regardless of marital status.",
+      "কিশোরী ও নারীদের এক-পঞ্চমাংশ, তাদের বৈবাহিক অবস্থা নির্বিশেষে শারীরিক বা যৌন সহিংসতার শিকার।"
+    ),
+    icon: "fa-shield",
+    color: "#ef4444",
+    bgColor: "rgba(239, 68, 68, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Married adolescent girls experience violence from their husbands.",
+      "বিবাহিত কিশোরীদের তাদের স্বামীদের দ্বারা নির্যাতিত হয়।"
+    ),
+    icon: "fa-hand-fist",
+    color: "#d946ef",
+    bgColor: "rgba(217, 70, 239, 0.12)",
+  },
+  {
+    text: yhLang(
+      "About 1.78 million adolescents in Bangladesh are engaged in child labor.",
+      "বাংলাদেশে প্রায় ১.৭৮ মিলিয়ন কিশোর-কিশোরী শিশুশ্রমে জড়িত।"
+    ),
+    icon: "fa-children",
+    color: "#f97316",
+    bgColor: "rgba(249, 115, 22, 0.12)",
+  },
+  {
+    text: yhLang(
+      "Dropout rate from secondary education. The rate among adolescents (34.87%) is higher than boys (30.46%).",
+      "মাধ্যমিক শিক্ষা থেকে ঝরে পড়ার হার। কিশোর-কিশোরীদের মধ্যে ঝরে পড়ার হার (৩৪.৮৭%) ছেলেদের (৩০.৪৬%) তুলনায় বেশি।"
+    ),
+    icon: "fa-graduation-cap",
+    color: "#3b82f6",
+    bgColor: "rgba(59, 130, 246, 0.12)",
+  },
+];
 
-              const nutritionStats = [
-                yhLang(
-                  'Stunting: one-third of girls are stunted (<span class="stat-chip"><span class="value">36</span><span class="unit">%</span></span> ever married, <span class="stat-chip"><span class="value">32</span><span class="unit">%</span></span> unmarried) versus <span class="stat-chip"><span class="value">22</span><span class="unit">%</span></span> of unmarried boys.',
-                  'খাটো বৃদ্ধি: প্রতি তিনজন কিশোরীর একজন খর্বাকৃতি (<span class="stat-chip"><span class="value">৩৬</span><span class="unit">%</span></span> বিবাহিত, <span class="stat-chip"><span class="value">৩২</span><span class="unit">%</span></span> অবিবাহিতা) যেখানে অবিবাহিত ছেলেদের মাত্র <span class="stat-chip"><span class="value">২২</span><span class="unit">%</span></span>।',
-                ),
-                yhLang(
-                  'Underweight: only <span class="stat-chip"><span class="value">4</span><span class="unit">%</span></span> ever-married and <span class="stat-chip"><span class="value">8</span><span class="unit">%</span></span> unmarried girls vs. <span class="stat-chip"><span class="value">11</span><span class="unit">%</span></span> boys.',
-                  'কম ওজন: বিবাহিত কিশোরীর মাত্র <span class="stat-chip"><span class="value">৪</span><span class="unit">%</span></span> ও অবিবাহিতা <span class="stat-chip"><span class="value">৮</span><span class="unit">%</span></span> কম ওজনে; অবিবাহিত ছেলেদের মধ্যে হার <span class="stat-chip"><span class="value">১১</span><span class="unit">%</span></span>।',
-                ),
-                yhLang(
-                  'Overweight: <span class="stat-chip"><span class="value">16</span><span class="unit">%</span></span> ever-married girls, <span class="stat-chip"><span class="value">10</span><span class="unit">%</span></span> unmarried girls, and <span class="stat-chip"><span class="value">9</span><span class="unit">%</span></span> unmarried boys.',
-                  'অধিক ওজন: বিবাহিত কিশোরীর <span class="stat-chip"><span class="value">১৬</span><span class="unit">%</span></span>, অবিবাহিতা <span class="stat-chip"><span class="value">১০</span><span class="unit">%</span></span> ও অবিবাহিত ছেলেদের <span class="stat-chip"><span class="value">৯</span><span class="unit">%</span></span>।',
-                ),
-                yhLang(
-                  'Anaemia: nearly <span class="stat-chip"><span class="value">30</span><span class="unit">%</span></span> adolescents are anaemic.',
-                  'রক্তস্বল্পতা: প্রায় <span class="stat-chip"><span class="value">৩০</span><span class="unit">%</span></span> তরুন-তরুনী রক্তস্বল্পতায় ভোগে।',
-                ),
-              ];
-
-              const educationStats = [
-                yhLang(
-                  'Secondary Gross Enrolment Ratio stands at <span class="stat-chip"><span class="value">74.81</span><span class="unit">%</span></span>.',
-                  'মাধ্যমিক মোট ভর্তি হার (GER) <span class="stat-chip"><span class="value">৭৪.৮১</span><span class="unit">%</span></span>।',
-                ),
-                yhLang(
-                  'Net Enrolment Rate is <span class="stat-chip"><span class="value">72.20</span><span class="unit">%</span></span>.',
-                  'শুদ্ধ ভর্তি হার (NER) <span class="stat-chip"><span class="value">৭২.২০</span><span class="unit">%</span></span>।',
-                ),
-                yhLang(
-                  'Secondary completion rate reaches <span class="stat-chip"><span class="value">65.1</span><span class="unit">%</span></span>.',
-                  'মাধ্যমিক সমাপ্তির হার <span class="stat-chip"><span class="value">৬৫.১</span><span class="unit">%</span></span>।',
-                ),
-                yhLang(
-                  'Dropout rate remains high at <span class="stat-chip"><span class="value">32.85</span><span class="unit">%</span></span>.',
-                  'পড়ালেখা থেকে ঝরে পড়ার হার <span class="stat-chip"><span class="value">৩২.৮৫</span><span class="unit">%</span></span>।',
-                ),
-              ];
-
-              const protectionStats = [
-                yhLang(
-                  '<span class="stat-chip"><span class="value">1</span>/<span class="value">5</span></span> adolescent girls/women experience physical or sexual violence irrespective of marital status.',
-                  'বিয়ে হয়েছে কি-না বিবেচনা না করেই প্রতি <span class="stat-chip"><span class="value">৫</span></span> কিশোরী/নারীর মধ্যে <span class="stat-chip"><span class="value">১</span></span> জন শারীরিক বা যৌন সহিংসতার শিকার।',
-                ),
-                yhLang(
-                  '<span class="stat-chip"><span class="value">77</span><span class="unit">%</span></span> married adolescent girls report intimate partner violence.',
-                  '<span class="stat-chip"><span class="value">৭৭</span><span class="unit">%</span></span> বিবাহিত কিশোরী স্বামীর সহিংসতার শিকার।',
-                ),
-                yhLang(
-                  'About <span class="stat-chip"><span class="value">1.78</span><span class="unit">M</span></span> adolescents remain in child labour.',
-                  'প্রায় <span class="stat-chip"><span class="value">১.৭৮</span><span class="unit">মিলিয়ন</span></span> তরুন-তরুনী শিশুশ্রমে নিযুক্ত।',
-                ),
-                yhLang(
-                  'During monsoon <span class="stat-chip"><span class="value">40</span><span class="unit">/day</span></span> children drown (~<span class="stat-chip"><span class="value">14,000</span></span> annually).',
-                  'বর্ষায় প্রতিদিন গড়ে <span class="stat-chip"><span class="value">৪০</span><span class="unit">জন</span></span> শিশু ডুবে মারা যায়; বছরে প্রায় <span class="stat-chip"><span class="value">১৪,০০০</span></span> জন।',
-                ),
-                yhLang(
-                  'Around <span class="stat-chip"><span class="value">89</span><span class="unit">%</span></span> children (~<span class="stat-chip"><span class="value">45</span><span class="unit">M</span></span>) experience violent discipline at home.',
-                  'মোট শিশুদের <span class="stat-chip"><span class="value">৮৯</span><span class="unit">%</span></span> (প্রায় <span class="stat-chip"><span class="value">৪৫</span><span class="unit">মিলিয়ন</span></span>) ঘরে সহিংস শাসনের শিকার।',
-                ),
-              ];
-
-              const domainCards = [
-                {
-                  icon: "fa-solid fa-heart-pulse",
-                  label: yhLang("Health", "স্বাস্থ্য"),
-                },
-                {
-                  icon: "fa-solid fa-utensils",
-                  label: yhLang("Nutrition", "পুষ্টি"),
-                },
-                {
-                  icon: "fa-solid fa-graduation-cap",
-                  label: yhLang("Education", "শিক্ষা"),
-                },
-                {
-                  icon: "fa-solid fa-shield-heart",
-                  label: yhLang("Protection", "সুরক্ষা"),
-                },
-              ];
-
-              const renderList = (items) =>
-                items.map((text) => `<li>${text}</li>`).join("");
+              const renderFactPoints = () =>
+                factPoints
+                  .map(
+                    (point, idx) => `
+                      <div class="m2l7-fact-card" data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
+                        <div class="m2l7-fact-content">
+                          <div class="m2l7-fact-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                            <i class="fa-solid ${point.icon}"></i>
+                          </div>
+                          <p class="m2l7-fact-text">${point.text}</p>
+                        </div>
+                      </div>
+                    `,
+                  )
+                  .join("");
 
               return `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Adolescent health related issues", "কৈশোর স্বাস্থ্য সম্পর্কিত চ্যালেঞ্জ")}</h2>
+                <div class="lesson-slide m2l7-slide">
+                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-chart-bar"></i> ${yhLang(
+                    "Key Information",
+                    "মূল তথ্য",
+                  )}</h2>
 
-                <div class="fact-card alert-info hover-lift-sm transition-base  mb-3" data-aos="fade-up" data-aos-delay="60">
-                  <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                  <p class="mb-0">${yhLang("Actions to improve adolescent health and wellbeing need to address established and emerging determinants and <strong>meaningfully engage</strong> with adolescents and young people.", "কৈশোর স্বাস্থ্য ও সুস্থতা উন্নত করতে বিদ্যমান ও নতুন নির্ধারকগুলো মোকাবিলা করতে হবে এবং তরুন-তরুনীদের <strong>অর্থবহভাবে সম্পৃক্ত</strong> করতে হবে।")}</p>
-                </div>
-
-                <section class="issue-matrix" aria-labelledby="issue-matrix-title">
-                  <h3 id="issue-matrix-title" class="mb-3 gradient-text" data-aos="fade-up" data-aos-delay="80">${yhLang("Key domains", "মূল ক্ষেত্র")}</h3>
-                  <div class="row shadow-sm rounded-4 overflow-hidden">
-                    <div class="health row g-1">
-                      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <article class="issue-panel">
-                          <ul class="stat-list">${renderList(healthStats)}</ul>
-                        </article>
-                      </div>
-                      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="120">
-                        <article class="issue-panel">
-                          <ul class="stat-list">${renderList(nutritionStats)}</ul>
-                        </article>
-                      </div>
-                    </div>
-
-                    <div class="issue-cross-wrapper" data-aos="zoom-in" data-aos-delay="130">
-                      <div class="issue-cross-lines" aria-hidden="true">
-                        <span class="issue-cross-line issue-cross-line--vertical"></span>
-                        <span class="issue-cross-line issue-cross-line--horizontal"></span>
-                      </div>
-                      <div class="issue-cross-grid">
-                        ${domainCards
-                          .map(
-                            (card) => `
-                              <article class="issue-cross-card">
-                                <span class="issue-icon"><i class="${card.icon}"></i></span>
-                                <h6 class="issue-title">${card.label}</h6>
-                              </article>
-                            `,
-                          )
-                          .join("")}
-                      </div>
-                    </div>
-
-                    <div class="education row g-1">
-                      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="140">
-                        <article class="issue-panel">
-                          <ul class="stat-list">${renderList(educationStats)}</ul>
-                        </article>
-                      </div>
-                      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="160">
-                        <article class="issue-panel">
-                          <ul class="stat-list">${renderList(protectionStats)}</ul>
-                        </article>
-                      </div>
-                    </div>
+                  <div class="m2l7-facts-grid">
+                    ${renderFactPoints()}
                   </div>
-                  <div class="panel-source small"><i class="fa-solid fa-book-open me-1"></i>${yhLang("Source: add citation(s)", "সূত্র: উদ্ধৃতি যুক্ত করুন")}</div>
-                </section>
-              </div>`;
+                </div>
+              `;
             })(),
           },
           {
-            id: "ch2-lesson-7",
+            id: "ch2-lesson-8",
             title: yhLang(
               "Determinants for adolescent health and well-being",
               "কৈশোর স্বাস্থ্য ও সুস্থতার নির্ধারক",
