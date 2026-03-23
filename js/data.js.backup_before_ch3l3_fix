@@ -3336,6 +3336,147 @@ const coursesData = [
           },
           {
             id: "ch3-lesson-2",
+            title: yhLang(
+              "TD Vaccine",
+              "টিডি টিকা",
+            ),
+            icon: "fa-shield-virus",
+            gradientClass: "bg-gradient-violet",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q11td1",
+                  question: yhLang(
+                    "How many doses of TD vaccine does a woman need in her lifetime?",
+                    "সারাজীবনে একজন নারীকে কতটি ডোজ টিডি টিকা নিতে হয়?",
+                  ),
+                  options: [
+                    yhLang("3 doses", "৩ ডোজ"),
+                    yhLang("5 doses", "৫ ডোজ"),
+                    yhLang("2 doses", "২ ডোজ"),
+                    yhLang("7 doses", "৭ ডোজ"),
+                  ],
+                  correctAnswer: 1,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+                <div class="lesson-slide ch11l4-slide-td">
+                  <section class="ch11l4-td-intro" data-aos="fade-up">
+                    <div class="ch11l4-td-desc-card">
+                      <h2 class="ch11l4-td-title">
+                        <i class="fa-solid fa-shield-virus"></i>
+                        ${yhLang("Importance of TD Vaccine", "টিডি টিকার গুরুত্ব")}
+                      </h2>
+                      <p class="ch11l4-td-description">
+                        ${yhLang(
+                          "A woman needs a minimum of 5 doses of TD vaccine throughout her lifetime. According to the Expanded Programme on Immunization (EPI), vaccination starts at age 15 and requires a total of 5 TD vaccine doses. It takes approximately 2 years and 7 months to complete all doses.",
+                          "সারাজীবনে একজন নারীকে নূন্যতম ৫ ডোজ টিডি টিকা নিতে হয়। সম্প্রসারিত টিকাদান কর্মসূচী অনুযায়ী ১৫ বছর বয়স থেকে টিকা দেয়া শুরু করতে হয় এবং সে অনুযায়ী মোট ৫ ডোজ টিডি টিকা নিতে হয়। পুরো ডোজ শেষ করতে মোট ২ বছর ৭ মাস সময় লাগে।"
+                        )}
+                      </p>
+                    </div>
+                  </section>
+
+                  <section class="ch11l4-td-table-section" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="ch11l4-td-table-title">
+                      <i class="fa-solid fa-table"></i>
+                      ${yhLang("TD Vaccine Schedule for Women Aged 15-49 Years", "১৫-৪৯ বছর বয়সের মহিলাদের টিডি টিকাদান সময়সূচি")}
+                    </h3>
+                    <div class="ch11l4-td-table-wrapper">
+                      <table class="ch11l4-td-table">
+                        <thead>
+                          <tr>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Disease Name", "রোগের নাম")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Vaccine Name", "টিকার নাম")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Dose", "টিকার ডোজ")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Number of Doses", "ডোজের সংখ্যা")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Timing", "টিকাদানের সময়")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Site", "স্থান")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Route", "প্রয়োগ পথ")}</h3></th>
+                          </tr>
+                        </thead>
+                        <tbody> 
+                          <tr>
+                            <td rowspan="5" class="ch11l4-td-td-disease">
+                             <p> ${yhLang("Tetanus & Diphtheria (TD)", "ধনুষ্টংকার<br>(টিটেনাস ও ডিপথেরিয়া)")}</p>
+                            </td>
+                            <td rowspan="5" class="ch11l4-td-vaccine"><p>${yhLang("TD <br> Tetanus & Diphtheria (TD)", "টিডি <br> (টিটেনাস ও ডিপথেরিয়া)")}</p></td>
+                            <td rowspan="5" class="ch11l4-td-dose"><p>${yhLang("0.5 mL", "০.৫ মিলিলিটার")}</p></td>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-1", "টিডি-১")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("At age 15 immediately", "১৫ বছর বয়স হলেই যথা শীঘ্র")}</p></td>
+                            <td rowspan="5" class="ch11l4-td-site"><p>${yhLang("Upper arm", "বাহুর উপরের অংশে")}</p></td>
+                            <td rowspan="5" class="ch11l4-td-route"><p>${yhLang("Intramuscular", "মাংশপেশী")}</p></td>
+                          </tr>
+                          <tr>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-2", "টিডি-২")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("28 days after TD-1", "টিডি-১ পাওয়ার কমপক্ষে ২৮ দিন পর")}</p></td>
+                          </tr>
+                          <tr>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-3", "টিডি-৩")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("6 months after TD-2", "টিডি-২ পাওয়ার কমপক্ষে ৬ মাস পর")}</p></td>
+                          </tr>
+                          <tr>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-4", "টিডি-৪")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("1 year after TD-3", "টিডি-৩ পাওয়ার কমপক্ষে ১ বছর পর")}</p></td>
+                          </tr>
+                          <tr>
+                            <td class="ch11l4-td-dose-num"><p>${yhLang("TD-5", "টিডি-৫")}</p></td>
+                            <td class="ch11l4-td-timing"><p>${yhLang("1 year after TD-4", "টিডি-৪ পাওয়ার কমপক্ষে ১ বছর পর")}</p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p class="ch11l4-td-table-note">
+                      <i class="fa-solid fa-quote-left"></i>
+                      ${yhLang("Source: Expanded Programme on Immunization (EPI), Ministry of Health, Government of Bangladesh", "সম্প্রসারিত টিকাদান কর্মসূচি (ইপিআই), স্বাস্থ্য অধিদপ্তর, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার")}
+                    </p>
+                  </section>
+
+                  <section class="ch11l4-td-pregnant-section" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ch11l4-td-highlight-card">
+                      <h3 class="ch11l4-td-highlight-title">
+                        <i class="fa-solid fa-person-pregnant"></i>
+                        ${yhLang("TD Vaccine for Pregnant Women", "গর্ভবতীর টিডি টিকা")}
+                      </h3>
+                      <div class="ch11l4-td-highlight-content">
+                        <p class="ch11l4-td-highlight-text">
+                          ${yhLang(
+                            "Pregnant women who have never received TD vaccine should follow the schedule above, with the 1st dose given in the 4th month of pregnancy. The 2nd dose should be given 4 weeks later. The 3rd dose should be given 6 months after the 2nd dose or during the next pregnancy. The 4th dose should be given 1 year after the 3rd dose or during the next pregnancy. The 5th dose should be given 1 year after the 4th dose or during the next pregnancy. When all 5 doses are given at the correct time, both mother and child are protected against tetanus and diphtheria for life.",
+                            "যে সকল গর্ভবতী মা আগে কখনো টিডি টিকা নেয়নি তাকে উপরের ছক অনুযায়ী ১ম ডোজ টিডি টিকা নিতে হবে গর্ভধারণের ৪র্থ মাসে। ২য় ডোজ নিতে হবে তার ৪ সপ্তাহ পর। ৩য় ডোজ নিতে হবে ২য় ডোজের ৬ মাস পর অথবা পরবর্তী গর্ভধারণের সময়। ৪র্থ ডোজ নিতে হবে ৩য় ডোজের ১ বছর পর অথবা পরবর্তী গর্ভধারণের সময়। ৫ম ডোজটি ৪র্থ ডোজের ১ বছর পর অথবা পরবর্তী গর্ভধারণের সময় নিতে হবে। এভাবে ৫ ডোজ টিকা সঠিক সময়ে নেয়া হলে মা ও শিশু সারাজীবন ধনুষ্টংকার ও ডিপথেরিয়া থেকে রক্ষা পাবে।"
+                          )}
+                        </p>
+                        <p class="ch11l4-td-highlight-text">
+                          ${yhLang(
+                            "If a girl has already received 5 doses of TD vaccine, she does not need to receive TD vaccine during pregnancy.",
+                            "যদি কিশোরী ৫ ভোজ টিডি পেয়ে থাকে তাহলে গর্ভকালীন সময়ে টিডি টিকা নেয়ার প্রয়োজন নাই।"
+                          )}
+                        </p>
+                        <div class="ch11l4-td-important-box">
+                          <p class="ch11l4-td-important-text">
+                            <i class="fa-solid fa-exclamation-circle"></i> ${yhLang(
+                              "The timing of vaccination does not change with the timing of delivery.",
+                              "প্রসবের সময়ের সাথে টিকাদান সময়সূচির কোনো পরিবর্তন হবে না"
+                            )}
+                          </p>
+                          <p class="ch11l4-td-important-text">
+                            <strong>${yhLang("Important:", "মনে রাখতে হবেত্বপূর্ণ:")}</strong> ${yhLang(
+                              "The timing of vaccination does not change with the timing of delivery.",
+                              "ধনুষ্টংকার ও ডিপথেরিয়া মারাত্মক রোগ। এ রোগগুলো থেকে রক্ষা পেতে সব নারীকে ৫ ডোজ টিডি টিকা সঠিক সময়ে নিতে হবে।"
+                            )}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              `;
+            })(),
+          },
+          {
+            id: "ch3-lesson-3",
             title: yhLang("Adolescent Growth & Development Stages", "কৈশোরকালীন বৃদ্ধি ও বিকাশের ধাপ এবং পরিবর্তনসমূহ"),
             icon: "fa-timeline",
             gradientClass: "bg-gradient-sky",
@@ -3405,211 +3546,70 @@ const coursesData = [
                 },
               ];
 
-              const renderStageTable = () => `
+              const renderStageTable = () => \`
                 <div class="ch3l3-table-wrapper">
                   <table class="ch3l3-development-table">
                     <thead>
                       <tr>
-                        <th class="ch3l3-th-change"><h3><i class="fa-solid fa-arrows-right-left"></i> ${yhLang("Changes", "পরিবর্তন")} </h3></th>
-                        <th class="ch3l3-th-early"><h3><i class="fa-solid fa-child"></i> ${yhLang("Early (10-14)", "প্রাক ১০-১৪ বছর")}</h3></th>
-                        <th class="ch3l3-th-mid"><h3><i class="fa-solid fa-person"></i> ${yhLang("Mid (15-17)", "প্রাক ১৫-১৭ বছর")}</h3></th>
-                        <th class="ch3l3-th-late"><h3><i class="fa-solid fa-person-adult"></i> ${yhLang("Late (15-17)", "শেষ কৈশোর  : ১৫-১৭ বছর")}</h3></th>
+                        <th class="ch3l3-th-change"><i class="fa-solid fa-arrows-right-left"></i> \${yhLang("Changes", "পরিবর্তন")}</th>
+                        <th class="ch3l3-th-early"><i class="fa-solid fa-child"></i> \${yhLang("Early (10-14)", "প্রাক (১০-১৪)")}</th>
+                        <th class="ch3l3-th-mid"><i class="fa-solid fa-person"></i> \${yhLang("Mid (15-17)", "মধ্য (১৫-১৭)")}</th>
+                        <th class="ch3l3-th-late"><i class="fa-solid fa-person-adult"></i> \${yhLang("Late (15-17)", "চূড়ান্ত (১৫-১৭)")}</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="ch3l3-row-growth">
-                        <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-ruler"></i> ${yhLang("Growth", "বৃদ্ধি")}</strong></h3></td>
-                        <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Secondary sexual characteristics appear", "যৌন বৈশিষ্ট্য দেখা যায়")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Growth is at its peak", "সবচেয়ে বেশি বৃদ্ধি ঘটে")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Sexual characteristics become more prominent", "যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Growth rate slows down", "বৃদ্ধি কমে আসে")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("About 95% of adult height is achieved", "প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Physical maturity is reached", "শারীরিক পূর্ণতাপ্রাপ্তি")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-label"><strong><i class="fa-solid fa-ruler"></i> \${yhLang("Growth", "বৃদ্ধি")}</strong></td>
+                        <td class="ch3l3-td-early"><div class="ch3l3-point ch3l3-point-early">যৌন বৈশিষ্ট্য দেখা যায়</div><div class="ch3l3-point ch3l3-point-early">সবচেয়ে বেশি বৃদ্ধি ঘটে</div></td>
+                        <td class="ch3l3-td-mid"><div class="ch3l3-point ch3l3-point-mid">যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে</div><div class="ch3l3-point ch3l3-point-mid">বৃদ্ধি কমে আসে</div><div class="ch3l3-point ch3l3-point-mid">প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়</div></td>
+                        <td class="ch3l3-td-late"><div class="ch3l3-point ch3l3-point-late">শারীরিক পূর্ণতাপ্রাপ্তি</div></td>
                       </tr>
                       <tr class="ch3l3-row-concept">
-                        <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-lightbulb"></i> ${yhLang("Knowledge", "জ্ঞান")}</strong></h3></td>
-                         <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concrete thinking", "স্থূল চিন্তাধারা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Inability to understand long-term consequences", "কাজের সুদূরপ্রসারী প্রভাব বোঝার অক্ষমতা")}</p>
-  </div>
-</td>
-
-                        <td class="ch3l3-td-mid">
-                          <div class="ch3l3-point ch3l3-point-mid">
-                            <p>${yhLang("More abstract thinking", "বেশি বিমূর্ত চিন্তাধারা")}</p>
-                          </div>
-                          <div class="ch3l3-point ch3l3-point-mid">
-                            <p>${yhLang("Ability to think about long-term consequences", "সুদূরপ্রসারী চিন্তার ক্ষমতা")}</p>
-                          </div>
-                          <div class="ch3l3-point ch3l3-point-mid">
-                            <p>${yhLang("May revert to concrete thinking under stress", "সমস্যায় পড়লে স্থূল চিন্তার ক্ষমতা")}</p>
-                          </div>
-                        </td>
-
-                        <td class="ch3l3-td-late">
-                          <div class="ch3l3-point ch3l3-point-late">
-                            <p>${yhLang("Stable abstract thinking", "স্থায়ী বিমূর্ত চিন্তাধারা")}</p>
-                          </div>
-                          <div class="ch3l3-point ch3l3-point-late">
-                            <p>${yhLang("Future-oriented thinking", "ভবিষ্যৎ চিন্তা")}</p>
-                          </div>
-                          <div class="ch3l3-point ch3l3-point-late">
-                            <p>${yhLang("Ability to consider long-term outcomes", "সুদূরপ্রসারী ফলাফল চিন্তা করা")}</p>
-                          </div>
-                        </td>
+                        <td class="ch3l3-td-label"><strong><i class="fa-solid fa-lightbulb"></i> \${yhLang("Knowledge", "জ্ঞান")}</strong></td>
+                        <td class="ch3l3-td-early"><div class="ch3l3-point ch3l3-point-early">স্থূল চিন্তাধারা</div><div class="ch3l3-point ch3l3-point-early">কাজের সুদূরপ্রসারী প্রভাব বোঝার অক্ষমতা</div></td>
+                        <td class="ch3l3-td-mid"><div class="ch3l3-point ch3l3-point-mid">বেশি বিমূর্ত চিন্তাধারা</div><div class="ch3l3-point ch3l3-point-mid">সুদূরপ্রসারী চিন্তার ক্ষমতা</div><div class="ch3l3-point ch3l3-point-mid">সমস্যায় পড়লে স্থূল চিন্তার ক্ষমতা</div></td>
+                        <td class="ch3l3-td-late"><div class="ch3l3-point ch3l3-point-late">স্থায়ী বিমূর্ত চিন্তাধারা</div><div class="ch3l3-point ch3l3-point-late">ভবিষ্যৎ চিন্তা</div><div class="ch3l3-point ch3l3-point-late">সুদূরপ্রসারী ফলাফল চিন্তা করা</div></td>
                       </tr>
                       <tr class="ch3l3-row-emotion">
-                        <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-heart"></i> ${yhLang("Emotional", "মানসিক")}</strong></h3></td>
-                        <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concern about rapid physical growth", "দ্রুত শারীরিক বৃদ্ধি নিয়ে চিন্তা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concern about body image", "শারীরিক অবয়ব নিয়ে চিন্তা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concern about major changes", "আমূল পরিবর্তন নিয়ে চিন্তা")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Reconstruction of self-image", "অবয়ব/ইমেজ পুনঃস্থাপন")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Pressure from imagination and ideals", "কল্পনা ও আদর্শ নিয়ে চাপ")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Sense of personal power", "নিজেকে ক্ষমতাবান ভাবা")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Stable intelligence develops", "স্থায়ী বুদ্ধিমত্তা আসে")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Realistic identity develops", "বাস্তবভিত্তিক পরিচয় তৈরি হয়")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-label"><strong><i class="fa-solid fa-heart"></i> \${yhLang("Emotional", "মানসিক")}</strong></td>
+                        <td class="ch3l3-td-early"><div class="ch3l3-point ch3l3-point-early">দ্রুত শারীরিক বৃদ্ধি নিয়ে চিন্তা</div><div class="ch3l3-point ch3l3-point-early">শারীরিক অবয়ব নিয়ে চিন্তা</div><div class="ch3l3-point ch3l3-point-early">আমূল পরিবর্তন নিয়ে চিন্তা</div></td>
+                        <td class="ch3l3-td-mid"><div class="ch3l3-point ch3l3-point-mid">অবয়ব/ইমেজ পুনঃস্থাপন</div><div class="ch3l3-point ch3l3-point-mid">কল্পনা ও আদর্শ নিয়ে চাপ</div><div class="ch3l3-point ch3l3-point-mid">নিজেকে ক্ষমতাবান ভাবা</div></td>
+                        <td class="ch3l3-td-late"><div class="ch3l3-point ch3l3-point-late">স্থায়ী বুদ্ধিমত্তা আসে</div><div class="ch3l3-point ch3l3-point-late">বাস্তবভিত্তিক পরিচয় তৈরি হয়</div></td>
                       </tr>
                       <tr class="ch3l3-row-family">
-                        <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-house"></i> ${yhLang("Family", "পরিবার")}</strong></h3></td>
-                        <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Defining the boundary between dependence and independence", "পরনির্ভরতা ও আত্মনির্ভরতার সীমানা নির্ধারণ")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Conflict over authority", "কর্তৃত্ব নিয়ে দ্বন্দ্ব")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Conflict over control", "নিয়ন্ত্রণ নিয়ে দ্বন্দ্ব")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Expectation of responsibility", "দায়িত্বশীলতার প্রত্যাশা")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-label"><strong><i class="fa-solid fa-house"></i> \${yhLang("Family", "পরিবার")}</strong></td>
+                        <td class="ch3l3-td-early"><div class="ch3l3-point ch3l3-point-early">পরনির্ভরতা ও আত্মনির্ভরতার সীমানা নির্ধারণ</div></td>
+                        <td class="ch3l3-td-mid"><div class="ch3l3-point ch3l3-point-mid">কর্তৃত্ব নিয়ে দ্বন্দ্ব</div><div class="ch3l3-point ch3l3-point-mid">নিয়ন্ত্রণ নিয়ে দ্বন্দ্ব</div></td>
+                        <td class="ch3l3-td-late"><div class="ch3l3-point ch3l3-point-late">দায়িত্বশীলতার প্রত্যাশা</div></td>
                       </tr>
                       <tr class="ch3l3-row-peer">
-                        <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-users"></i> ${yhLang("Peer", "সতীর্থ দল")}</strong></h3></td>
-                        <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Desire to resist instability", "অস্থায়িত্ব প্রতিরোধ করার ইচ্ছা")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Searching for identity to maintain individuality", "স্বকীয়তা ধরে রাখতে পরিচয় খোঁজা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Behavior influenced by peers", "সতীর্থ কর্তৃক আচরণ ঠিক হয়")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Developing personal friendships", "ব্যক্তিগত বন্ধুত্ব গড়ে তোলা")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-label"><strong><i class="fa-solid fa-users"></i> \${yhLang("Peer", "সতীর্থ")}</strong></td>
+                        <td class="ch3l3-td-early"><div class="ch3l3-point ch3l3-point-early">অস্থায়িত্ব প্রতিরোধ করার ইচ্ছা</div></td>
+                        <td class="ch3l3-td-mid"><div class="ch3l3-point ch3l3-point-mid">স্বকীয়তা ধরে রাখতে পরিচয় খোঁজা</div><div class="ch3l3-point ch3l3-point-mid">সতীর্থ কর্তৃক আচরণ ঠিক হয়</div></td>
+                        <td class="ch3l3-td-late"><div class="ch3l3-point ch3l3-point-late">ব্যক্তিগত বন্ধুত্ব গড়ে তোলা</div></td>
                       </tr>
                       <tr class="ch3l3-row-sexuality">
-                        <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-heart-pulse"></i> ${yhLang("Sexuality", "যৌনতা")}</strong></h3></td>
-                        <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Searching for self-identity", "নিজেকে খোঁজা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Self-evaluation", "নিজেকে মূল্যায়ন করা")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Preoccupied with romantic fantasies", "রোমান্টিক কাল্পনা নিয়ে ব্যস্ত")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Attraction toward the opposite sex", "বিপরীত লিঙ্গের প্রতি আকর্ষণ")}</p>
-  </div>
-</td>
-
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Building stable relationships", "স্থায়ী সম্পর্ক তৈরি করা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Developing mutual consent", "পারস্পরিক সম্মতি তৈরি")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Planning for the future", "ভবিষ্যত পরিকল্পনা করা")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-label"><strong><i class="fa-solid fa-heart-pulse"></i> \${yhLang("Sexuality", "যৌনতা")}</strong></td>
+                        <td class="ch3l3-td-early"><div class="ch3l3-point ch3l3-point-early">নিজেকে খোঁজা</div><div class="ch3l3-point ch3l3-point-early">নিজেকে মূল্যায়ন করা</div></td>
+                        <td class="ch3l3-td-mid"><div class="ch3l3-point ch3l3-point-mid">রোমান্টিক কাল্পনা নিয়ে ব্যস্ত</div><div class="ch3l3-point ch3l3-point-mid">বিপরীত লিঙ্গের প্রতি আকর্ষণ</div></td>
+                        <td class="ch3l3-td-late"><div class="ch3l3-point ch3l3-point-late">স্থায়ী সম্পর্ক তৈরি করা</div><div class="ch3l3-point ch3l3-point-late">পারস্পরিক সম্মতি তৈরি</div><div class="ch3l3-point ch3l3-point-late">ভবিষ্যত পরিকল্পনা করা</div></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-              `;
+              \`;
 
-              return `
-                <div class="ch3l3-slide-container lesson-slide">
+              return \`
+                <div class="ch3l3-slide-container">
                   <div class="ch3l3-intro-section">
-                    <h2 class="ch3l3-main-title">
+                    <h1 class="ch3l3-main-title">
                       <i class="fa-solid fa-timeline"></i>
-                      ${yhLang("Adolescent Growth & Development Stages", "কৈশোরকালীন বৃদ্ধি ও বিকাশের ধাপ")}
-                    </h2>
+                      \${yhLang("Adolescent Growth & Development Stages", "কৈশোরকালীন বৃদ্ধি ও বিকাশের ধাপ")}
+                    </h1>
                   </div>
-                  ${renderStageTable()}
+                  \${renderStageTable()}
                 </div>
-              `;
+              \`;
             })(),
           }
           

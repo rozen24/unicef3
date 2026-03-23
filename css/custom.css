@@ -558,9 +558,13 @@ h2 {
     font-size: 24px !important;
     line-height: 20px;
   }
+h3 {
+    font-size: 20px !important;
+    line-height: 18px;
+  }
 p {
-    font-size: 16px !important;
-    line-height: 15px !important;
+    font-size: 15px !important;
+    line-height: 13px !important;
 }
 .m9l2img img {
   height: 600px !important;
@@ -570,6 +574,23 @@ p {
 /* Apply ONLY when height is 768px or less */
 
 @media screen and (max-height: 768px) {
+  h2 {
+    font-size: 18px !important;
+    line-height: 15px !important;
+  }
+h3 {
+    font-size: 15px !important;
+    line-height: 13px !important;
+  }
+p {
+    font-size: 12px !important;
+    line-height: 10px !important;
+}
+.m9l2img img {
+  height: 600px !important;
+  object-fit: fill !important;
+}
+
 
   html:lang(bn) p lang,
   html[lang|="bn"] p lang {
@@ -578,7 +599,7 @@ p {
   }
   html:lang(bn) h3 lang, html[lang|="bn"] h3 lang {
     font-size: 20px !important;
-    line-height: 19px;
+    line-height: 17px;
   }
   html:lang(bn) span  lang, html[lang|="bn"] span lang {
         font-size: 18px !important;
@@ -586,16 +607,8 @@ p {
   }
   html:lang(bn) h2 lang, html[lang|="bn"] h2 lang {
     font-size: 22px !important;
-    line-height: 21px;
+    line-height: 20px !important;
   }
-  h2 {
-    font-size: 20px !important;
-    line-height: 16px;
-  }
- p {
-    font-size: 15px !important;
-    line-height: 15px !important;
-}
   .image-card_masik img {
     height: 350px;
     object-fit: fill;
@@ -961,6 +974,54 @@ p {
     width: 60px;
     height: 60px;
 }
+/* module 3 lesson 1*/
+.ch3l2-item-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 20px;
+    font-size: 0.55rem;
+}
+.ch3l2-cards-grid {
+    grid-template-columns: 1fr 1fr 1.7fr;
+    gap: 3px;
+}
+.ch3l2-intro-section {
+    margin-bottom: 5px;
+    padding: 5px 14px;
+    border: 1px solid;
+}
+.ch3l2-table-title {
+    margin: 0 0 5px 0;
+    gap: 8px;
+    padding: 5px 12px;
+}
+.ch3l2-list-item {
+    padding: 4px 8px;
+}
+.ch3l2-card-body {
+    padding: 5px 10px;
+    gap: 3px;
+
+}
+
+/* Module 3 lesson 2*/
+.ch3l3-intro-section {
+    margin-bottom: 6px;
+    padding: 5px;
+}
+.ch3l3-development-table th {
+    padding: 5px 10px;
+}
+.ch3l3-td-early, .ch3l3-td-mid, .ch3l3-td-late {
+    padding: 4px 8px;
+}
+
+
+
+
+
+
+
 
 
 }
