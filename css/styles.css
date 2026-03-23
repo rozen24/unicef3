@@ -1358,7 +1358,10 @@ html[lang|="bn"] h2 {
   transition: var(--transition-normal);
   height: 100%;
 }
-
+.image-card-m2l7 {
+  height: 630px;
+  object-fit: fill;
+}
 .image-card:hover {
   transform: scale(1.02);
   box-shadow: var(--shadow-xl);

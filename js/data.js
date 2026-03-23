@@ -1646,7 +1646,7 @@ const coursesData = [
             id: "ch2-lesson-8",
             title: yhLang(
               "Determinants for adolescent health and well-being",
-              "কৈশোর স্বাস্থ্য ও সুস্থতার নির্ধারক",
+              "কৈশোর কালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ",
             ),
             icon: "fa-triangle-exclamation",
             gradientClass: "bg-gradient-pink",
@@ -1831,15 +1831,11 @@ const coursesData = [
 
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Determinants for adolescent health and well-being", "কৈশোর স্বাস্থ্য ও সুস্থতার নির্ধারক")}</h2>
-
-                <p class="text-muted" data-aos="fade-up" data-aos-delay="40">${yhLang("AA-HA! 2.0 groups determinants so programmes can tackle biological, social and digital pressures at the same time.", "এএ-এইচএ! ২.০ নির্ধারকগুলোকে এমনভাবে সাজায় যাতে কর্মসূচি একযোগে জৈবিক, সামাজিক ও ডিজিটাল চাপে কাজ করতে পারে।")}</p>
-
-                <section class="mb-4 p-3 p-md-4 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
-                  <div class="row g-3 align-items-center">
+                <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang("Determinants for adolescent health and well-being", "কৈশোর কালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ")}</h2>
+                <section class="p-1 p-md-1 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
+                  <div class="row g-1 align-items-center">
                     <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
-                      <h3 class="mb-3 gradient-text" id="determinants-title" data-aos="fade-up" data-aos-delay="120">${yhLang("Key determinant clusters", "প্রধান নির্ধারক গুচ্ছ")}</h3>
-                      <div class="row g-3">
+                      <div class="row g-1">
                         ${determinantCards
                           .map(
                             (d) => `
@@ -1848,7 +1844,7 @@ const coursesData = [
                               <div class="component-icon ${d.color} animate-float" aria-hidden="true">
                                 <i class="fas ${d.icon}"></i>
                               </div>
-                              <h6 class="mt-2 mb-0">${d.label}</h6>
+                              <h3 class="mt-1 mb-0">${d.label}</h3>
                             </div>
                           </div>
                         `,
@@ -1857,7 +1853,7 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
-                      <figure class="image-card"><img src="img/determinants/determinants.png" style="max-height: 900px;" alt="AA-HA! guidance" class="img-zoom"></figure>
+                      <figure class="image-card-m2l7"><img src="img/determinants/determinants_b.jpg" alt="AA-HA! guidance" class="img-zoom w-100 h-100"></figure>
                     </div>
                   </div>
                 </section>
