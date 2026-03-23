@@ -3169,7 +3169,7 @@ const coursesData = [
         id: "ch-3",
         title: yhLang(
           "Module-3: Changes during adolescence and puberty",
-          "মডিউল-৩: কৈশোর ও বয়ঃসন্ধিকালের পরিবর্তন",
+          "মডিউল-৩: বয়ঃসন্ধিকালীন পরিবর্তনসমূহ",
         ),
         lessons: [
 
