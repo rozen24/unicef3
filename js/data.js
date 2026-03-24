@@ -1865,7 +1865,7 @@ const coursesData = [
             id: "ch2-lesson-8",
             title: yhLang(
               "Why young people need special care?",
-              "তরুণদের বিশেষ যত্ন কেন প্রয়োজন?",
+              "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন?",
             ),
             icon: "fa-user-nurse",
             gradientClass: "bg-gradient-teal",
@@ -1897,11 +1897,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Adolescents have diverse needs",
-                    "কিশোরদের চাহিদা বহুবিধ",
+                    "চাহিদার ভিন্নতা",
                   ),
                   desc: yhLang(
                     "Needs in SRHR, mental health and other NCDs, nutrition,  violence against adolescents, vulnerable adolescents etc.",
-                    "এসআরএইচআর, মানসিক স্বাস্থ্য, এনসিডি, পুষ্টি ও সুরক্ষাসহ চলমান কিশোরদের জন্য উপযোগী প্যাকেজ দরকার।",
+                    "মানসিক স্বাস্থ্য এবং অন্যান্য অসংক্রামক রোগ, পুষ্টি, সহিংসতা, ঝুঁকিপূর্ণ তরুণদের চাহিদা।",
                   ),
                   icon: "fa-layer-group",
                   color: "bg-gradient-violet",
@@ -1910,11 +1910,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Unaware of the laws, policies, rights",
-                    "আইন ও অধিকারের সম্পর্কে সীমিত ধারণা",
+                    "আইন, নীতি এবং অধিকার সম্পর্কে অজ্ঞতা",
                   ),
                   desc: yhLang(
                     "Sexual and reproductive health rights, Child rights.",
-                    "এসআরএইচআর, শিশুর অধিকার ও সাইবার সুরক্ষা সম্পর্কিত বিধান অনেক কিশোর ও অভিভাবকের অজানা।",
+                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার, শিশু অধিকার",
                   ),
                   icon: "fa-scale-balanced",
                   color: "bg-gradient-emerald",
@@ -1923,11 +1923,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Limited ability to execute the rights.",
-                    "সীমিত ক্ষমতায়ন",
+                    "অধিকার কার্যকর করার সীমিত ক্ষমতা",
                   ),
                   desc: yhLang(
                     "Lack of confidence, parental influence, peer pressure",
-                    "আত্মবিশ্বাসের অভাব, সহপাঠী চাপ ও গেটকিপিং ঝুঁকি চিনলেও সহায়তা নিতে বিলম্ব ঘটায়।",
+                    "আত্মবিশ্বাসের অভাব, পিতামাতার প্রভাব, সহপাঠীদের চাপ",
                   ),
                   icon: "fa-hands-holding",
                   color: "bg-gradient-tangerine",
@@ -1936,11 +1936,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Barriers in accessing the information, knowledge, skills.",
-                    "জ্ঞানপ্রাপ্তির বাধা",
+                    "তথ্য, জ্ঞান এবং দক্ষতা অর্জনের ক্ষেত্রে বাধা",
                   ),
                   desc: yhLang(
                     "Social stigma, discomfort among parents, family members, peers, teachers to talk about AH issues.",
-                    "পরিবার বা বিদ্যালয়ে লজ্জা ও অস্বস্তিকর আলোচনার কারণে সঠিক তথ্য চেপে রাখা হয়।",
+                    "তরুণদের স্বাস্থ্য সমস্যা নিয়ে কথা বলার সময় বাবা-মা, পরিবারের সদস্য, সহকর্মী এবং শিক্ষকদের মধ্যে সামাজিক কলঙ্ক এবং অস্বস্তি।",
                   ),
                   icon: "fa-book-open-reader",
                   color: "bg-gradient-rose",
@@ -1949,11 +1949,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Barriers in accessing the health services.",
-                    "সেবা প্রদানে ঘাটতি",
+                    "স্বাস্থ্যসেবা প্রাপ্তির ক্ষেত্রে বাধা",
                   ),
                   desc: yhLang(
                     "Limited care seeking behaviors, no dedicated service (no separate space, no privacy, no dedicated staff, negligence and unawareness among service providers.",
-                    "স্বতন্ত্র কর্নার, নিয়মিত সময়, গোপনীয়তা ও প্রশিক্ষিত কর্মীর অভাব সেবায় আস্থা কমায়।",
+                    "সীমিত সেবা গ্রহণের আগ্রহ, নিবেদিত স্বাস্থ্য সেবার অভাব (আলাদা স্থান, গোপনীয়তা ও নিবেদিতপ্রাণ স্বাস্থ্যকর্মীর   অভাব, সেবা প্রদানকারীদের মধ্যে অবহেলা এবং অসচেতনতা)",
                   ),
                   icon: "fa-hospital-user",
                   color: "bg-gradient-cyan",
@@ -2063,10 +2063,9 @@ const coursesData = [
               <div class="lesson-slide">
                 <div class="alert alert-info hover-lift-sm transition-base mb-3" data-aos="fade-up" data-aos-delay="60">
                   <div class="d-flex align-items-center gap-3">
-                    <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group"></i></span>
+                    <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group" style="color: #fff;"></i></span>
                     <div>
-                      <h5 class="mb-1">${yhLang("Why young people need special care?", "তরুণদের বিশেষ যত্ন কেন প্রয়োজন?")}</h5>
-                      <p class="mb-0 small">${yhLang("WHO adolescent-friendly standards emphasise readiness across people, places and processes.", "ডব্লিউএইচও-র কিশোরবান্ধব মানদণ্ড মানুষ, স্থান ও প্রক্রিয়ায় প্রস্তুতিকে গুরুত্ব দেয়।")}</p>
+                      <h2 class="">${yhLang("Why young people need special care?", "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন?")}</h2>
                     </div>
                   </div>
                 </div>
@@ -2078,8 +2077,8 @@ const coursesData = [
                         (c) => `
                       <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="${c.delay}">
                         <article class="modern-card hover-lift-sm hover-shadow-glow transition-base  h-100">
-                          <div class="d-flex align-items-start gap-3">
-                            <span class="badge-pill ${c.color}" aria-hidden="true"><i class="fa-solid ${c.icon}"></i></span>
+                          <div class="d-flex align-items-center gap-3">
+                            <span class="badge-pill ${c.color}" aria-hidden="true"><i class="fa-solid ${c.icon}" style="color: #fff;"></i></span>
                             <div>
                               <h6 class="mb-1">${c.title}</h6>
                               <p class="mb-0 small">${c.desc}</p>
@@ -2091,11 +2090,6 @@ const coursesData = [
                       )
                       .join("")}
                   </div>
-                </section>
-
-                <section class="p-3 p-md-4 rounded-4" style="background: rgba(0,0,0,0.03);" aria-labelledby="adol-checklist-title">
-                  
-                  <p class="text-muted small mt-3" data-aos="fade-up" data-aos-delay="200">${yhLang("Aligns with WHO’s eight global standards for quality health services for adolescents.", "ডব্লিউএইচওর কিশোর সেবা মান নিশ্চিতকারী আটটি বৈশ্বিক মানের সাথে সামঞ্জস্যপূর্ণ।")}</p>
                 </section>
               </div>`;
             })(),
@@ -2180,107 +2174,11 @@ const coursesData = [
                 `,
                   )
                   .join("")}</div>
-                   <!-- 2-column layout: first two images stacked in left column, third image beside them -->
-                    <div class="row g-3 sdc_main"> 
-                      <div class="col-12 col-md-5"><!-- three image start -->
-                        <div class="row g-3"><!-- two image start -->
-                          <div class="col-12" data-aos="zoom-in" data-aos-delay="80"><!-- image 1 -->
-                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base" style="height: 300px;">
-                            <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
-                              <img
-                              src="img/sdc/1.jpg"
-                              alt="SDG highlight 1"
-                              class="img-zoom"
-                              loading="lazy"
-                              style=""
-                              />
-                            </figure>
-                            </article>
-                          </div>
-                          <div class="col-12" data-aos="zoom-in" data-aos-delay="110"><!-- image 2 -->
-                            <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base" style="height: 300px;">
-                            <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
-                              <img
-                              src="img/sdc/2.webp"
-                              alt="SDG highlight 2"
-                              class="img-zoom"
-                              loading="lazy"
-                              style=""
-                              />
-                            </figure>
-                            </article>
-                          </div>
-                        </div><!-- two image end -->
-                      </div>
-                      <div class="col-12 col-md-7" data-aos="zoom-in" data-aos-delay="140"><!-- image 3 -->
-                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base h-100" style="max-height: 610px;">
-                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
-                          <img
-                          src="img/sdc/3.png"
-                          alt="SDG highlight 3"
-                          class="img-zoom"
-                          loading="lazy"
-                          style=""
-                          />
-                        </figure>
-                        </article>
-                      </div>
-                    </div>
-
                    <!-- Bottom row: 4 images -->
-                    <div class="row g-3 mt-0 sdc_main">
-                      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="170">
-                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
-                          <img
-                          src="img/sdc/4.png"
-                          alt="SDG related 4"
-                          class="img-zoom"
-                          loading="lazy"
-                          style=""
-                          />
+                    <div class="sdc_main">
+                      <figure class="glass-card p-1 mb-0 text-center">
+                          <img src="img/sdc/sdc.png" alt="SDC" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
-                        </article>
-                      </div>
-                      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
-                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
-                          <img
-                          src="img/sdc/5.webp"
-                          alt="SDG related 5"
-                          class="img-zoom"
-                          loading="lazy"
-                          style=""
-                          />
-                        </figure>
-                        </article>
-                      </div>
-                      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="230">
-                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
-                          <img
-                          src="img/sdc/6.png"
-                          alt="SDG related 6"
-                          class="img-zoom"
-                          loading="lazy"
-                          style=""
-                          />
-                        </figure>
-                        </article>
-                      </div>
-                      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="260">
-                        <article class="modern-card glass-card hover-lift-sm hover-shadow-glow transition-base">
-                        <figure class="image-card" style="overflow: hidden; border-radius: 14px;">
-                          <img
-                          src="img/sdc/7.png"
-                          alt="SDG related 7"
-                          class="img-zoom"
-                          loading="lazy"
-                          style=""
-                          />
-                        </figure>
-                        </article>
-                      </div>
                     </div>
               </div>`,
           },
