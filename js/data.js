@@ -917,11 +917,11 @@ const coursesData = [
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Why young people’s health and wellbeing is important?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ?")}</h2>
                 <div class="row g-1">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <h5 class="mt-2 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "বর্তমান প্রজন্মের ১০-২৪ বছর বয়সীদের উপর বিনিয়োগ তিনগুণ লাভজনক")}</h5>
 
                           <!-- Triple Dividend Cards -->
-                          <div class="td-orbit-container" data-aos="zoom-in" data-aos-delay="200">
+                          <div class="td-orbit-container mx-2" data-aos="zoom-in" data-aos-delay="200">
                             <div class="td-orbit-center">
                               <div class="td-orbit-center-icon">
                                 <i class="fa-solid fa-people-group"></i>
@@ -959,11 +959,11 @@ const coursesData = [
                           
                          
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                        <!-- Demographic Pyramid Compare -->
                        
-                        <figure class="glass-card mb-0 text-center">
-                          <img src="img/modu2/pyramid.png" alt="Demographic Pyramid" style="height: 650px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        <figure class="mb-0 text-center bg-pyramid p-2  sadow-sm glass-card">
+                          <img src="img/modu2/pyramid.png" alt="Demographic Pyramid" style="height: 500px; object-fit: fill;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                     </div>
                 </div>
@@ -972,12 +972,12 @@ const coursesData = [
                           <div class="modern-card glass-card roi-banner" data-aos="zoom-in" data-aos-delay="240">
                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
                               <div>
-                                <h3 class="mb-1">${yhLang("Investing in Adolescent Health & Wellbeing", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় বিনিয়োগ, ১ মার্কিন ডলার বিনিয়োগের মাধ্যমে ৫-১০ মার্কিন ডলার রিটার্ন পাওয়া যাবে।")}</h3>
+                                <h3 class="mt-3 mb-2">${yhLang("Investing in Adolescent Health & Wellbeing", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় বিনিয়োগ, ১ মার্কিন ডলার বিনিয়োগের মাধ্যমে ৫-১০ মার্কিন ডলার রিটার্ন পাওয়া যাবে।")}</h3>
                               </div>
                             </div>
                           </div>
                 
-                <p class="small text-muted mt-3 mb-0">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", "রেফারেন্স: আমাদের ভবিষ্যৎ: কিশোর স্বাস্থ্য ও সুস্থতার উপর একটি ল্যানসেট কমিশন; প্যাটন এবং অন্যান্যরা ২০১৬।")}</p>
+                <p class="small text-muted mt-1 mb-0">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", "রেফারেন্স: আমাদের ভবিষ্যৎ: কিশোর স্বাস্থ্য ও সুস্থতার উপর একটি ল্যানসেট কমিশন; প্যাটন এবং অন্যান্যরা ২০১৬।")}</p>
 
               </div>`;
             })(),
@@ -4871,7 +4871,7 @@ const coursesData = [
                     <!-- Right Side: Image -->
                     <div class="ch7l3-right-content" data-aos="fade-left" data-aos-delay="100">
                       <div class="ch7l3-image-container">
-                        <img src="img/modu7/kishor.png" alt="Family Planning Methods" class="ch7l3-image img-zoom" />
+                        <img src="img/modu7/kishor.jpg" alt="Family Planning Methods" class="ch7l3-image img-zoom" />
                       </div>
                     </div>
                   </section>
@@ -12760,7 +12760,6 @@ const orbitItems = [
                           src="img/modu17/madok2.jpg"
                           alt="মাদকাসক্তি প্রতিরোধ"
                           class="m17l3-image"
-                          style="height: 400px;"
                         />
                       </figure>
                     </article>
