@@ -77,7 +77,7 @@
 /* ===== TRIPLE DIVIDEND ORBIT LAYOUT ===== */
 .td-orbit-container {
   position: relative;
-  width: 600px;
+  width: 550px;
   height: 550px;
   display: flex;
   align-items: center;
