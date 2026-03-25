@@ -820,7 +820,7 @@ const coursesData = [
                        <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
                           <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
                             <div class="container" style="position: relative">
-                              <img src="img/Distribution/globe.jpg" style="height: 350px;" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
+                              <img src="img/Distribution/globe.jpg" style="height: 290px;" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
                               <div class="globe-text-wrap">
                                 <h3 class="fw-bold map-text" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
                                 <p class="lead mt-1 text-dark">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়ন</strong> ১০–২৪ বছর বয়সী তরুণ রয়েছে।")}</p>
@@ -834,7 +834,7 @@ const coursesData = [
                               <div class="container">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-lg-12">
-                                    <div class="modern-card style="height: 250px;" glass-card h-region">
+                                    <div class="modern-card style="height: 220px;" glass-card h-region">
                                       <h5 class="mb-1">${yhLang("Global youth population by region", "অঞ্চলভিত্তিক বৈশ্বিক তরুণ জনগোষ্ঠী")}</h5>
                                       <div style="position:relative; height:250px;">
                                         <canvas id="regionalShareChart" aria-label="Global youth population by region. " role="img"></canvas>
@@ -865,7 +865,7 @@ const coursesData = [
                           <section class="population-pyramid-wrapper" data-aos="fade-up">
                             <div class="modern-card glass-card">
                               <h5 class="">${yhLang("POPULATION & HOUSING CENSUS 2022", "জনসংখ্যা ও গৃহগণনা ২০২২")}</h5>
-                              <div style="position:relative; height:370px;">
+                              <div style="position:relative; height:350px;">
                                 <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
                               </div>
                             </div>

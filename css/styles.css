@@ -30083,8 +30083,9 @@ p.lead {
   color: #fff;
   font-size: 32px;
 }
-.map-text {
-  font-size: 5rem  !important;
+.map-text , .map-text span {
+  font-size: 40px  !important;
+  margin-bottom: 10px !important;
 }
 
 .strong {
