@@ -2513,7 +2513,7 @@ const coursesData = [
                                   "কিশোর-কিশোরীদের বিরুদ্ধে সহিংসতা"
                                 ),
                                 icon: "fa-shield-halved",
-                                gradient: "bg-gradient-red",
+                                gradient: "bg-gradient-teal",
                               },
                               {
                                 text: yhLang(
@@ -2545,7 +2545,7 @@ const coursesData = [
                                   "চ্যালেঞ্জিং পরিস্থিতিতে ঝুঁকিপূর্ণ কিশোর-কিশোরী এবং কিশোর-কিশোরীরা"
                                 ),
                                 icon: "fa-hand-fist",
-                                gradient: "bg-gradient-orange",
+                                gradient: "bg-gradient-purple",
                               },
                               {
                                 text: yhLang(
