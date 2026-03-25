@@ -1829,14 +1829,63 @@ class YouthHealthLMS {
       if (wrap.querySelector('.orbit-item')) return;
 
       const orbitItems = [
-        { label: 'Adolescent Sexual & Reproductive Health', icon: 'fa-venus-mars', cls: 'bg-gradient-purple' },
-        { label: 'Violence against Adolescents', icon: 'fa-hand-fist', cls: 'bg-gradient-teal' },
-        { label: 'Mental Health for Adolescents', icon: 'fa-brain', cls: 'bg-gradient-orange' },
-        { label: 'Health System Strengthening', icon: 'fa-screwdriver-wrench', cls: 'bg-gradient-green' },
-        { label: 'Social & Behaviour Change Communication', icon: 'fa-bullhorn', cls: 'bg-gradient-pink' },
-        { label: 'Vulnerable Adolescents', icon: 'fa-people-roof', cls: 'bg-gradient-yellow' },
-        { label: 'Adolescent Nutrition', icon: 'fa-utensils', cls: 'bg-gradient-lavender' }
-      ];
+  {
+    label: yhLang(
+      "Adolescent Sexual and Reproductive Health and Rights",
+      "কিশোর-কিশোরীদের যৌন ও প্রজনন স্বাস্থ্য ও অধিকার"
+    ),
+    icon: "fa-venus-mars",
+    cls: "bg-gradient-purple",
+  },
+  {
+    label: yhLang(
+      "Violence Against Adolescents",
+      "কিশোর-কিশোরীদের বিরুদ্ধে সহিংসতা"
+    ),
+    icon: "fa-hand-fist",
+    cls: "bg-gradient-teal",
+  },
+  {
+    label: yhLang(
+      "Mental Health for Adolescents",
+      "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য"
+    ),
+    icon: "fa-brain",
+    cls: "bg-gradient-orange",
+  },
+  {
+    label: yhLang(
+      "Health System Strengthening",
+      "স্বাস্থ্য ব্যবস্থা শক্তিশালীকরণ"
+    ),
+    icon: "fa-screwdriver-wrench",
+    cls: "bg-gradient-green",
+  },
+  {
+    label: yhLang(
+      "Social and Behaviour Change Communication",
+      "সামাজিক ও আচরণগত পরিবর্তন বিষয়ক যোগাযোগ"
+    ),
+    icon: "fa-bullhorn",
+    cls: "bg-gradient-pink",
+  },
+  {
+    label: yhLang(
+      "Vulnerable Adolescents in Challenging Situations",
+      "চ্যালেঞ্জিং পরিস্থিতিতে ঝুঁকিপূর্ণ কিশোর-কিশোরী এবং কিশোর-কিশোরীরা"
+    ),
+    icon: "fa-people-roof",
+    cls: "bg-gradient-yellow",
+  },
+  {
+    label: yhLang(
+      "Adolescent Nutrition",
+      "কৈশোরকালীন পুষ্টি"
+    ),
+    icon: "fa-utensils",
+    cls: "bg-gradient-lavender",
+  },
+];
 
       const total = orbitItems.length;
       // Resolve radius: data-orbit-radius (px) or CSS var --orbit-radius (%) or default 180px

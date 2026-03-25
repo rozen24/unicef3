@@ -11875,7 +11875,9 @@ figure.image-card {
     line-height: 1.4;
   }
 }
-
+.agenda img {
+  max-height: 680px;
+}
 /* Extra Small Mobile - 479px and below */
 @media (max-width: 479px) {
   .m2l7-slide {
@@ -11915,4 +11917,6 @@ figure.image-card {
     font-size: 0.75rem;
     line-height: 1.3;
   }
+
+
 }

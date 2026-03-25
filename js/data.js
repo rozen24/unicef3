@@ -2116,7 +2116,7 @@ const coursesData = [
             },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("SDG related to adolescent health", "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG")}</h2>
+                <h2 class="slide-title d-none gradient-text" data-aos="fade-up">${yhLang("SDG related to adolescent health", "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG")}</h2>
 
                 <!-- SDG/SDC cards with distinct lean gradients, icons, and hover effects -->
                 <div class="row g-3 d-none">${[
@@ -2336,30 +2336,10 @@ const coursesData = [
 
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Adolescent Health in the Global Agenda", "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য")}</h2>
-
-                <section class="timeline-chart" aria-labelledby="ah-global-agenda-title">
-                  <h3 class="visually-hidden" id="ah-global-agenda-title">${yhLang("Milestones shaping the agenda", "এজেন্ডা গঠনের মাইলফলক")}</h3>
-                  <div class="timeline-track" aria-hidden="true"></div>
-                  ${timeline
-                    .map(
-                      (m) => `
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="${m.delay}">
-                      <div class="timeline-dot"><span>${m.year}</span></div>
-                      <article class="timeline-card ${m.cls}">
-                        <div class="timeline-card-icon"><i class="fa-solid ${m.icon}"></i></div>
-                        <h6 class="timeline-card-title">${m.title}</h6>
-                        <p class="timeline-card-text">${m.desc}</p>
-                      </article>
-                    </div>
-                  `,
-                    )
-                    .join("")}
-                </section>
-
-                <section class="mt-4" aria-labelledby="ah-design-priorities">
-                  <p class="small text-muted mt-2" data-aos="fade-up" data-aos-delay="120">${yhLang("Source: AA-HA! 2.0, Lancet Commission, Generation Unlimited.", "সূত্র: এএ-এইচএ! ২.০, ল্যানসেট কমিশন, জেনারেশন আনলিমিটেড।")}</p>
-                </section>
+                <h2 class="slide-title gradient-text d-none" data-aos="fade-up">${yhLang("Adolescent Health in the Global Agenda", "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য")}</h2>
+                <figure class="glass-card agenda text-center">
+                          <img src="img/agenda/agenda_b.jpg" alt="agenda"  class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                </figure>
               </div>`;
             })(),
           },
@@ -2507,48 +2487,92 @@ const coursesData = [
               ];
 
               return `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
+              <div class="lesson-slide d-flex align-items-center justify-content-center gap-4 flex-column flex-lg-row">
+                <div class="">
+                   <div class="row g-4 ">
+                        <div class="col-md-6">
+                            <h2 class="slide-title gradient-text mb-4" data-aos="fade-up">${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
+                            <figure class="glass-card p-1 mb-0 text-center">
+                              <img src="img/age/plan.jpg" alt="" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                            </figure>
+                        </div>
+                        <div class="col-md-6">
+                          ${(() => {
+                            const orbitItems = [
+                              {
+                                text: yhLang(
+                                  "Adolescent Sexual and Reproductive Health and Rights",
+                                  "কিশোর-কিশোরীদের যৌন ও প্রজনন স্বাস্থ্য ও অধিকার"
+                                ),
+                                icon: "fa-heart-pulse",
+                                gradient: "bg-gradient-rose",
+                              },
+                              {
+                                text: yhLang(
+                                  "Violence Against Adolescents",
+                                  "কিশোর-কিশোরীদের বিরুদ্ধে সহিংসতা"
+                                ),
+                                icon: "fa-shield-halved",
+                                gradient: "bg-gradient-red",
+                              },
+                              {
+                                text: yhLang(
+                                  "Mental Health for Adolescents",
+                                  "কিশোর-কিশোরীদের জন্য মানসিক স্বাস্থ্য"
+                                ),
+                                icon: "fa-brain",
+                                gradient: "bg-gradient-purple",
+                              },
+                              {
+                                text: yhLang(
+                                  "Health System Strengthening",
+                                  "স্বাস্থ্য ব্যবস্থা শক্তিশালীকরণ"
+                                ),
+                                icon: "fa-hospital",
+                                gradient: "bg-gradient-blue",
+                              },
+                              {
+                                text: yhLang(
+                                  "Social and Behaviour Change Communication",
+                                  "সামাজিক ও আচরণগত পরিবর্তন বিষয়ক যোগাযোগ"
+                                ),
+                                icon: "fa-comments",
+                                gradient: "bg-gradient-teal",
+                              },
+                              {
+                                text: yhLang(
+                                  "Vulnerable Adolescents in Challenging Situations",
+                                  "চ্যালেঞ্জিং পরিস্থিতিতে ঝুঁকিপূর্ণ কিশোর-কিশোরী এবং কিশোর-কিশোরীরা"
+                                ),
+                                icon: "fa-hand-fist",
+                                gradient: "bg-gradient-orange",
+                              },
+                              {
+                                text: yhLang(
+                                  "Adolescent Nutrition",
+                                  "কৈশোরকালীন পুষ্টি"
+                                ),
+                                icon: "fa-apple",
+                                gradient: "bg-gradient-green",
+                              }
+                            ];
 
-                <section class="flow-chart policy-journey" aria-labelledby="bd-commitment-flow-title">
-                  <div class="policy-journey-grid" id="bd-commitment-flow-title" role="list">
-                    ${policyJourney
-                      .map(
-                        (card) => `
-                        <article class="policy-journey-card" role="listitem" data-aos="fade-up" data-aos-delay="${card.delay}">
-                          <div class="policy-journey-seal ${card.color}">
-                            <span class="policy-journey-step">${yhLang("Step", "ধাপ")}&nbsp;${card.step}</span>
-                            <span class="policy-journey-years">${card.years}</span>
-                          </div>
-                          <figure class="policy-journey-media">
-                            <img src="${card.image}" alt="${card.title}" loading="lazy" />
-                          </figure>
-                          <div class="policy-journey-body">
-                            <div class="policy-journey-icon ${card.color}" aria-hidden="true"><i class="fa-solid ${card.icon}"></i></div>
-                            <div>
-                              <h6 class="policy-journey-title">${card.title}</h6>
-                              <p class="policy-journey-copy">${card.copy}</p>
-                            </div>
-                          </div>
-                        </article>
-                      `,
-                      )
-                      .join("")}
-                  </div>
-                </section>
+                            const renderOrbit = () => {
+                              const angleStep = 360 / orbitItems.length;
+                              return orbitItems
+                                .map((item, idx) => {
+                                  const angle = angleStep * idx;
+                                  return '<div class="m24l1-orbit-item" style="--angle: ' + angle + 'deg; --item-index: ' + idx + ';" data-aos="zoom-in" data-aos-delay="' + (120 + idx * 30) + '"><div class="m24l1-orbit-card ' + item.gradient + '"><div class="m24l1-orbit-card-icon"><i class="fa-solid ' + item.icon + '"></i></div><span class="m24l1-orbit-card-text">' + item.text + '</span></div></div>';
+                                })
+                                .join("");
+                            };
 
-                <section class="mt-4" aria-labelledby="orbit-title">
-                  <div class="orbit-layout" id="orbitLayout" data-aos="zoom-in" data-aos-delay="240" data-orbit-manual="true">
-                    <div class="orbit-center ">
-                      <div class="orbit-card bg-gradient-blue">
-                        <div class="orbit-icon mb-1"><i class="fa-solid fa-flag fa-lg"></i></div>
-                        <div class="orbit-title fw-bold">${yhLang("National Health Strategy", "জাতীয় স্বাস্থ্য কৌশল")}</div>
-                        <div class="orbit-sub">2017–2030</div>
-                      </div>
+                            return '<div class="m24l1-orbit-container" data-aos="zoom-in" data-aos-delay="300"><div class="m24l1-orbit-center"><div class="m24l1-orbit-center-icon"><i class="fa-solid fa-star"></i></div><div class="m24l1-orbit-center-text"><h2 class="text-white">জাতীয়  কৈশোর স্বাস্থ্য কৌশল ২০১৭-২০৩০</h2></div></div><div class="m24l1-orbit-ring"></div>' + renderOrbit() + '</div>';
+                          })()}
+                        </div>
                     </div>
-                  </div>
+                </div>
                 
-                </section>
               </div>`;
             })(),
           },
