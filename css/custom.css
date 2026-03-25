@@ -583,8 +583,12 @@ h3 {
     line-height: 13px !important;
   }
 p {
-    font-size: 12px !important;
-    line-height: 10px !important;
+    font-size: 14px !important;
+    line-height: 14px !important;
+}
+span {
+    font-size: 14px !important;
+    line-height: 14px !important;
 }
 .m9l2img img {
   height: 600px !important;
@@ -772,6 +776,8 @@ p {
 /* module 8 lession 3*/
 .image-card_m8l3 img{
   max-height: 430px;
+  width: 70%;
+  margin: 0 auto !important;
 }
 .menstrual-info-card {
   padding: 5px;
@@ -851,8 +857,8 @@ p {
     line-height: 16px;
 }
 
-.m10l1 img {
-  height: 330px !important;
+.ch10l3-image {
+  height: 310px !important;
   object-fit: fill !important;
 }
 /* module 10 lesson 2*/
@@ -1015,13 +1021,53 @@ p {
 .ch3l3-td-early, .ch3l3-td-mid, .ch3l3-td-late {
     padding: 4px 8px;
 }
-
-
-
-
-
-
-
+.ch6l6-orbit-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+.ch6l6-slide {
+    padding: 5px 16px;
+    gap: 0px;
+}
+.ch6l6-orbit-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+}
+.ch6l7-image{
+  height: 430px;
+  object-fit: fill;
+}
+.ch9l5-list-item {
+    padding: 5px 12px;
+    gap: 10px;
+  }
+.ch9l5-li-icon {
+    width: 37px;
+    height: 37px;
+}
+.ch10l3-card-text {
+    line-height: 10px !important;
+}
+.ch12l7-description-block {
+  display: flex;
+}
+.ch13l1-table th {
+    padding: 5px;
+}
+.ch13l1-table td {
+    padding: 5px 16px;
+}
+.ch13l1-def-card {
+    padding: 5px;
+    border: none;
+}
+.ch13l1-split-section {
+  margin-top: 5px;
+}
 
 
 }

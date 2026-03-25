@@ -169,7 +169,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 @media (max-width: 900px) {
   .ch13l1-split-section {

@@ -1273,7 +1273,6 @@
   position: relative;
   padding: 8px 9px;
   border-radius: 10px;
-  border: 1.5px solid transparent;
   display: flex;
   align-items: flex-start;
   gap: 9px;

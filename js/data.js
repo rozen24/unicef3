@@ -116,7 +116,7 @@ const coursesData = [
         id: "ch-1",
         title: yhLang(
           "Module-1: Introduction of Young Health Ambassador Program (YHAP)",
-          "মডিউল-১: ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম (ওয়াইএইচএপি) পরিচিতি",
+          "মডিউল-১: তরুণ স্বাস্থ্যদূত কার্যক্রম (ইয়ুথ হেলথ অ্যাম্বাসেডর প্রোগ্রাম)",
         ),
         lessons: [
           // Understanding YHAP
@@ -124,7 +124,7 @@ const coursesData = [
             id: "ch1-lesson-1",
             title: yhLang(
               "Understanding Young Health Ambassador Programme",
-              "যুব স্বাস্থ্য দূত কর্মসূচি বোঝা",
+              "তরুণ স্বাস্থ্যদূত কার্যক্রম",
             ),
             icon: "fa-heartbeat",
             gradientClass: "bg-gradient-purple",
@@ -151,7 +151,7 @@ const coursesData = [
             content: (function () {
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">${yhLang("Young Health Ambassador Programme", "যুব স্বাস্থ্য দূত কর্মসূচি")}</h2>
+                <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">${yhLang("Young Health Ambassador Programme", "তরুণ স্বাস্থ্যদূত কার্যক্রম")}</h2>
                 <div class="floating-bg" aria-hidden="true">
                   <span class="float-elem" style="top:8%; left:6%; width:70px; height:70px;"></span>
                   <span class="float-elem" style="top:35%; right:10%; width:90px; height:90px;"></span>
@@ -224,11 +224,111 @@ const coursesData = [
               </div>`;
             })(),
           },
+          // Young Health Ambassador Program Details
+          {
+            id: "ch1-lesson-2",
+            title: yhLang(
+              "Youth Health Ambassador Programme",
+              "তরুণ স্বাস্থ্যদূত কার্যক্রম",
+            ),
+            icon: "fa-star-of-life",
+            gradientClass: "bg-gradient-rose",
+            audioFile: "",
+            quiz: {
+              passingScore: 70,
+              questions: [
+                {
+                  id: "q1a-yhap",
+                  question: yhLang(
+                    "Who jointly initiated the YHAP?",
+                    "YHAP কে যৌথভাবে উদ্যোগ নিয়েছে?",
+                  ),
+                  options: [
+                    yhLang("Ministry of Health and UNICEF", "স্বাস্থ্য মন্ত্রণালয় ও UNICEF"),
+                    yhLang("Only WHO", "শুধু WHO"),
+                    yhLang("World Bank", "বিশ্বব্যাংক"),
+                    yhLang("NGOs only", "শুধু NGO"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+              <div class="lesson-slide">
+                <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up"><i class="fa-solid fa-star-of-life me-2" style="color:#FF6B9D;"></i>${yhLang("Youth Health Ambassador Programme", "তরুণ স্বাস্থ্যদূত কার্যক্রম")}</h2>
+                <div class="floating-bg" aria-hidden="true">
+                  <span class="float-elem" style="top:6%; left:4%; width:72px; height:72px;"></span>
+                  <span class="float-elem" style="top:40%; right:6%; width:88px; height:88px;"></span>
+                  <span class="float-elem" style="bottom:10%; left:10%; width:80px; height:80px;"></span>
+                </div>
+
+                <div class="m1l2-intro-card hover-lift-sm hover-shadow-glow transition-base" data-aos="fade-up" data-aos-delay="100">
+                  <div class="m1l2-intro-header">
+                    <i class="fa-solid fa-lightbulb m1l2-intro-icon animate-float"></i>
+                  </div>
+                  <h4 class="m1l2-intro-title"><i class="fa-solid fa-seedling me-2"></i>${yhLang("About the Programme", "কার্যক্রম সম্পর্কে")}</h4>
+                  <p class="m1l2-intro-text">${yhLang(
+                    "The Youth Health Ambassador Programme is a strategic joint initiative of the Ministry of Health and Family Welfare and UNICEF. This programme is designed to empower young people to increase their health awareness and build capacity for primary disease prevention and health information promotion. Through this training, young people will be equipped with knowledge and skills in physical and mental health, enabling them to actively participate and influence healthy habits within their communities and networks as health ambassadors.",
+                    "তরুণ স্বাস্থ্যদূত কার্যক্রম, স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় এবং ইউনিসেফের একটি কৌশলগত যৌথ উদ্যোগ। এই কর্মসূচিটি তরুণসমাজকে তাদের স্বাস্থ্য সচেতনতা বৃদ্ধি এবং প্রাথমিক রোগ প্রতিরোধ ও স্বাস্থ্য তথ্য প্রচারে তাদের সক্ষমতা বৃদ্ধির জন্য ডিজাইন করা হয়েছে। এই প্রশিক্ষণ, তরুণ সমাজকে শারীরিক ও মানসিক স্বাস্থ্যের জ্ঞান এবং দক্ষতায় সমৃদ্ধ করবে, যা তরুণ সমাজের স্বাস্থ্যের জন্য তাদেরকে সক্রিয় অংশগ্রহণের মাধ্যমে তাদের কমিউনিটি এবং নেটওয়ার্কের মধ্যে স্বাস্থ্যকর অভ্যাসগুলিকে প্রভাবিত করতে সাহায্য করবে।",
+                  )}</p>
+                </div>
+
+                <div class="row g-4 mt-2">
+                  ${(() => {
+                    const cards = [
+                      {
+                        id: "def-health",
+                        term: yhLang("Health", "স্বাস্থ্য"),
+                        icon: "fa-heart-pulse",
+                        description: yhLang(
+                          "According to the World Health Organization, health is defined as a state of complete physical, mental, and social well-being; which is not merely the absence of disease or infirmity.",
+                          "বিশ্ব স্বাস্থ্য সংস্থার মতে, স্বাস্থ্যকে সম্পূর্ণ শারীরিক, মানসিক এবং সামাজিক সুস্থতার একটি অবস্থা হিসেবে সংজ্ঞায়িত করা হয়; যা কেবল রোগ বা দুর্বলতার অনুপস্থিতি নয়।",
+                        ),
+                        delay: 150,
+                      },
+                      {
+                        id: "def-adolescence",
+                        term: yhLang("Adolescence", "বয়ঃসন্ধিকাল"),
+                        icon: "fa-child-reaching",
+                        description: yhLang(
+                          "According to the World Health Organization, adolescence is the life stage between childhood and adulthood, aged 10 to 19 years. Adolescents experience rapid physical growth, intellectual and mental development. This impacts their feelings, thoughts, decision-making, and interaction with the world around them.",
+                          "বিশ্ব স্বাস্থ্য সংস্থার মতে, বয়ঃসন্ধিকাল হল শৈশব এবং প্রাপ্তবয়স্কতার মধ্যবর্তী জীবনের পর্যায়, ১০ থেকে ১৯ বছর বয়স পর্যন্ত। কিশোর-কিশোরীরা এসময় দ্রুত শারীরিক বৃদ্ধি, বুদ্ধিবৃত্তিক এবং মানসিক বিকাশের অভিজ্ঞতা লাভ করে। এটি তাদের অনুভূতি, চিন্তাভাবনা, সিদ্ধান্ত গ্রহণ এবং তাদের চারপাশের বিশ্বের সাথে যোগাযোগের উপর প্রভাব ফেলে।",
+                        ),
+                        delay: 200,
+                      },
+                      {
+                        id: "def-youth",
+                        term: yhLang("Youth", "যুবক"),
+                        icon: "fa-person-hiking",
+                        description: yhLang(
+                          "According to the United Nations, youth refers to persons aged 15 to 24 years, without prejudice to other definitions by member states. This is a period of transition from childhood dependence to adult independence.",
+                          "জাতিসংঘের (UN) মতে, যুবক বলতে ১৫ থেকে ২৪ বছর বয়সী ব্যক্তিদের বোঝায়, সদস্য রাষ্ট্রগুলির অন্যান্য সংজ্ঞার সাথে কোনও বিরূপ আচরণ না করে। এটি শৈশবের নির্ভরতা থেকে প্রাপ্তবয়স্কতার স্বাধীনতায় রূপান্তরের একটি সময়কাল।",
+                        ),
+                        delay: 250,
+                      },
+                      {
+                        id: "def-young",
+                        term: yhLang("Young", "তরুণ"),
+                        icon: "fa-users",
+                        description: yhLang(
+                          "According to the World Health Organization, young people refers to persons aged 10 to 24 years.",
+                          "বিশ্ব স্বাস্থ্য সংস্থার (WHO) মতে, তরুণ বলতে ১০ থেকে ২৪ বছর বয়সী ব্যক্তিদের বোঝায়।",
+                        ),
+                        delay: 300,
+                      },
+                    ];
+                    return cards.map(card => '<div class="col-md-6"><div class="m1l2-def-card m1l2-' + card.id + ' hover-lift-sm hover-shadow-glow transition-base" data-aos="zoom-in" data-aos-delay="' + card.delay + '"><div class="m1l2-def-icon"><i class="fa-solid ' + card.icon + '"></i></div><h4 class="m1l2-def-term"><i class="fa-solid ' + card.icon + ' me-2"></i>' + card.term + '</h4><p class="m1l2-def-text mb-0">' + card.description + '</p></div></div>').join('');
+                  })()}
+                </div>
+              </div>`;
+            })(),
+          },
           // Age progression (inserted after Lesson 1)
 
           // Age progression (inserted after Lesson 1)
           {
-            id: "ch1-lesson-2",
+            id: "ch1-lesson-3",
             title: yhLang(
               "Age Progression: Adolescence to Young Adulthood (10–24)",
               "বয়সের ধাপ: কৈশোর থেকে তরুণ প্রাপ্তবয়স্ক (১০–২৪)",
@@ -405,7 +505,7 @@ const coursesData = [
           },
           // Six pillars
           {
-            id: "ch1-lesson-3",
+            id: "ch1-lesson-4",
             title: yhLang(
               "Six pillars that build confident health ambassadors",
               "আত্মবিশ্বাসী স্বাস্থ্য দূত গড়তে ছয়টি স্তম্ভ",
@@ -524,7 +624,7 @@ const coursesData = [
           },
           // Who am I
           {
-            id: "ch1-lesson-4",
+            id: "ch1-lesson-5",
             title: yhLang(
               "Who Am I as a Health Ambassador?",
               "স্বাস্থ্য দূত হিসেবে আমি কে?",
@@ -612,7 +712,7 @@ const coursesData = [
           },
           // Nine steps
           {
-            id: "ch1-lesson-5",
+            id: "ch1-lesson-6",
             title: yhLang(
               "Nine interactive steps to become a certified Young Health Ambassador",
               "সনদপ্রাপ্ত যুব স্বাস্থ্য দূত হতে নয়টি ধাপ",
@@ -4286,7 +4386,7 @@ const coursesData = [
                       <i class="fa-solid fa-ban"></i>
                       ${yhLang("Child Marriage (বাল্যবিবাহ)", "বাল্যবিবাহ")}
                     </h2>
-                    <p class="ch6l5-intro-text">
+                    <p class="ch6l5-intro-text text-center px-5 mx-5">
                       ${yhLang(
                         "Bangladesh law stipulates a minimum marriage age of 18 for girls and 21 for boys. Marriage below these ages is considered child marriage. According to BDHS 2022, 50% of married women were married before age 18, and adolescent birth rate is 92 per 1,000. Among girls aged 15-19, 24% are pregnant and 18% have given birth.",
                         "বাংলাদেশের আইনে মেয়েদের বিয়ের বয়স কমপক্ষে ১৮ ও ছেলেদের বিয়ের বয়স কমপক্ষে ২১ বছর। এর থেকে কম বয়সে বিয়ে হলে তা বাল্যবিবাহ বলে গণ্য করা হয়। বর্তমানে বিশেষ কয়েকটি কারণে ১৬ বছরে বিয়ে দেয়ার বিষয়টি বাল্যবিবাহ নিরোধ আইনে অন্তর্ভুক্ত হলেও বিয়ের বয়স ১৮ বছরই বলতে হবে। বিডিএইচএস, ২০২২ অনুসারে বিবাহিত ৫০ শতাংশ নারীর বিয়ে হয়েছে ১৮ বছরের মধ্যে এবং গর্ভবতী কিশোরীদের মধ্যে জন্মহার প্রতি হাজারে ৯২। এবং ১৫-১৯ বছর বয়সী চারজনের মধ্যে একজন কিশোরী (২৪%) গর্ভধারন করে, এবং প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।"
@@ -4295,40 +4395,40 @@ const coursesData = [
                   </section>
 
                   <!-- Special Note 1: Legal Crime -->
-                  <div class="d-flex h-100 justify-content-between align-items-center">
-                     <section class="ch6l5-special-note ch6l5-note-type-1" data-aos="fade-up" data-aos-delay="50">
-                    <div class="ch6l5-note-icon">
-                      <i class="fa-solid fa-exclamation-triangle"></i>
-                    </div>
-                    <div class="ch6l5-note-content">
-                      <p class="ch6l5-note-text">
-                        ${yhLang(
-                          "Child marriage is a punishable offense under the law.",
-                          "বাল্যবিবাহ আইনের চোখে একটি দণ্ডনীয় অপরাধ।"
-                        )}
-                      </p>
-                    </div>
-                  </section>
+                  <div class="d-flex justify-content-around align-items-center">
+                     <section class="ch6l5-special-note d-flex align-items-center ch6l5-note-type-1" data-aos="fade-up" data-aos-delay="50">
+                        <div class="ch6l5-note-icon mt-5">
+                          <i class="fa-solid fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="ch6l5-note-content">
+                          <h3 class="ch6l5-note-text">
+                            ${yhLang(
+                              "Child marriage is a punishable offense under the law.",
+                              "বাল্যবিবাহ আইনের চোখে একটি দণ্ডনীয় অপরাধ।"
+                            )}
+                          </h3>
+                        </div>
+                     </section>
 
-                  <!-- Special Note 2: Helpline -->
-                  <section class="ch6l5-special-note ch6l5-note-type-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="ch6l5-note-icon">
-                      <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="ch6l5-note-content">
-                      <p class="ch6l5-note-text">
-                        ${yhLang(
-                          "If you have information about child marriage, report it to the ",
-                          "বাল্যবিবাহ সম্পর্কে কোনো তথ্য থাকলে "
-                        )}
-                        <strong class="ch6l5-helpline-number">1098</strong>
-                        ${yhLang(
-                          " Child Helpline by calling or messaging.",
-                          " চাইল্ড হেল্পলাইনে কল করে রিপোর্ট করা উচিত।"
-                        )}
-                      </p>
-                    </div>
-                  </section>
+                      <!-- Special Note 2: Helpline -->
+                      <section class="ch6l5-special-note ch6l5-note-type-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="ch6l5-note-icon mt-5">
+                          <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="ch6l5-note-content">
+                          <h3 class="ch6l5-note-text">
+                            ${yhLang(
+                              "If you have information about child marriage, report it to the ",
+                              "বাল্যবিবাহ সম্পর্কে কোনো তথ্য থাকলে "
+                            )}
+                            <strong class="ch6l5-helpline-number">${yhLang("1098", "১০৯৮")}</strong>
+                            ${yhLang(
+                              " Child Helpline by calling or messaging.",
+                              " চাইল্ড হেল্পলাইনে কল করে রিপোর্ট করা উচিত।"
+                            )}
+                          </h3>
+                        </div>
+                      </section>
                   </div>
                   
 
@@ -4545,7 +4645,7 @@ const coursesData = [
                     <!-- Right Column -->
                     <div class="ch6l7-right-column">
                       <div class="ch6l7-image-wrapper" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="img/modu6/ballo.jpg" style="height: 650px;" alt="" class="ch6l7-image img-zoom w-100">
+                        <img src="img/modu6/ballo.jpg" alt="" class="ch6l7-image img-zoom w-100">
                       </div>
                     </div>
                   </section>
@@ -5339,9 +5439,9 @@ const coursesData = [
                     "গর্ভকালীন বিপদচিহ্নসমূহ",
                   )}</h2>
 
-                  <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <figure class="image-card_m8l3 mb-0">
-                      <img src="img/modu8/gorvo.png" alt="গর্ভকালীন বিপদচিহ্ন" class="img-fluid img-zoom rounded-4 shadow-sm animate-float-slow" />
+                  <section class="modern-card glass-card mx-auto menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                    <figure class="image-card_m8l3 mx-auto">
+                      <img src="img/modu8/gorvo.png" alt="গর্ভকালীন বিপদচিহ্ন" class="img-fluid mx-auto img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
                   </section>
                 </div>
@@ -5404,7 +5504,7 @@ const coursesData = [
                 {
                   title: yhLang(
                     "3. Delivery Planning",
-                    "৩. প্রসবের আগে পরিকল্পনা করলে মা ও শিশুর মৃত্যুঝুঁকি অনেকাংশে কমানো যায়। যেমনঃ "
+                    "৩. প্রসবের আগে পরিকল্পনা করলে মা ও শিশুর মৃত্যুঝুঁকি অনেকাংশে কমানো যায়।  যেমনঃ "
                   ),
                   titleBn: "৩. প্রসবের আগে পরিকল্পনা করলে মা ও শিশুর মৃত্যুঝুঁকি অনেকাংশে কমানো যায়। যেমনঃ ",
                   icon: "fa-list-check",
@@ -5578,7 +5678,7 @@ const coursesData = [
               return `
                 <div class="ch8l9-slide lesson-slide" data-module="8" data-lesson="9">
                   <div class="row g-1">
-                       <div class="col-md-5">
+                       <div class="col-md-7">
                           <section class="ch8l9-content-wrapper" data-aos="fade-up" data-aos-delay="50">
                               <div class="ch8l9-intro-box">
                                 <h2 class="ch8l9-intro-title">
@@ -5592,7 +5692,7 @@ const coursesData = [
                               </div>
                             </section>
                        </div>
-                       <div class="col-md-7">
+                       <div class="col-md-5">
                          <section class="ch8l9-section-wrapper h-100" data-aos="fade-up">
                           <div class="ch8l9-image-container">
                             <img src="img/modu8/prosob.png" alt="Postpartum Care" class="ch8l9-image img-zoom" />
@@ -5769,7 +5869,7 @@ const coursesData = [
                   )}</h2>
 
                   <section class="modern-card glass-card menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
-                    <figure class="m9l2img mb-0">
+                    <figure class="m9l2img mb-0 w-75 mx-auto">
                       <img src="img/modu9/jouno.png" alt="যৌনবাহিত রোগের ঝুঁকিসমূহ" class="img-fluid w-100 img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
                   </section>
@@ -7111,7 +7211,7 @@ const sexPoints = [
                     </div>
                   </div>
 
-                  <div style="margin-top:20px;" data-aos="fade-up" data-aos-delay="120">
+                  <div style="margin-top:10px;" data-aos="fade-up" data-aos-delay="120">
                     <div style="text-align:center;margin-bottom:14px;">
                       <h3 style="font-size:1.3rem;font-weight:700;color:#1a1a3e;margin:0;display:flex;align-items:center;justify-content:center;gap:10px;">
                         <i class="fa-solid fa-code-compare" style="color:#ff6b9d;"></i>
