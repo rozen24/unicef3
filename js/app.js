@@ -946,6 +946,8 @@ class YouthHealthLMS {
         requestAnimationFrame(tick);
       }
 
+      
+
       // Initialize Chart.js population pyramid if canvas exists
       const pyramidCanvas = document.getElementById("populationPyramid");
       if (pyramidCanvas && !pyramidCanvas.dataset.chartInitialized && window.Chart) {
@@ -2862,7 +2864,10 @@ class YouthHealthLMS {
                     <div class=\"course-chapters-card\">
                       <div class=\"course-chapters-header\">
                         <h3 class=\"mb-1 py-2\">${course.title}</h3>
-                        <span class=\"text-muted\">${course.chapters.length} module${course.chapters.length>1?'s':''}</span>
+                        <span class=\"text-muted\">${course.chapters.length} ${this.lang(
+                          `module${course.chapters.length > 1 ? 's' : ''}`,
+                          `মডিউল`
+                        )}</span>
                       </div>
                       <div class=\"row g-3\">${moduleCards}</div>
                     </div>`;
@@ -3125,14 +3130,14 @@ class YouthHealthLMS {
       const scorePercent = Math.round(this.quizState.score);
       const correctCount = computeCorrectCount();
       const incorrectCount = questions.length - correctCount;
-      const resultBadge = passed ? "Quiz completed" : "Keep practicing";
-      const resultEyebrow = passed ? "Mission accomplished" : "Almost there";
+      const resultBadge = passed ? this.lang("Quiz completed", "কুইজ সম্পন্ন") : this.lang("Keep practicing", "অনুশীলন করতে থাকুন");
+      const resultEyebrow = passed ? this.lang("Mission accomplished", "মিশন সম্পন্ন") : this.lang("Almost there", "প্রায় হয়ে এসেছে");
       const resultTitle = passed
-        ? "You passed the quiz!"
-        : "Review and try again";
+        ? this.lang("You passed the quiz!", "আপনি কুইজ পাস করেছেন!")
+        : this.lang("Review and try again", "পর্যালোচনা করুন এবং আবার চেষ্টা করুন");
       const resultSubtitle = passed
-        ? "Great work! You're ready for the next step in the journey."
-        : "Revisit the lesson highlights and retake the quiz when you're ready.";
+        ? this.lang("Great work! You're ready for the next step in the journey.", "দুর্দান্ত কাজ! আপনি যাত্রার পরবর্তী পদক্ষেপের জন্য প্রস্তুত।")
+        : this.lang("Revisit the lesson highlights and retake the quiz when you're ready.", "পাঠের হাইলাইটগুলি পুনরায় দেখুন এবং আপনি প্রস্তুত হলে কুইজটি পুনরায় নিন।")
 
       return `
         <div class="quiz-shell quiz-shell--results">
@@ -3141,7 +3146,7 @@ class YouthHealthLMS {
               <div class="quiz-hero__top">
                 <button class="quiz-back" onclick="app.showQuiz = false; app.render()">
                   <i class="fa-solid fa-arrow-left-long"></i>
-                  Back to lesson
+                  ${this.lang("Back to lesson", "পাঠে ফিরুন")}
                 </button>
                 <span class="lesson-pill">${resultBadge}</span>
               </div>
@@ -3160,19 +3165,19 @@ class YouthHealthLMS {
                     <div class="completion-ring__content">
                       <span class="completion-ring__value">${scorePercent}%</span>
                       <span class="completion-ring__label">${
-                        passed ? "Passed" : "Score"
+                        passed ? this.lang("Passed", "সফল") : this.lang("Score", "স্কোর")
                       }</span>
                     </div>
                   </div>
                   <div class="quiz-scorecard-stats">
                     <div>
-                      <span class="stat-label">Correct answers</span>
+                      <span class="stat-label">${this.lang("Correct answers", "সঠিক উত্তর")}</span>
                       <span class="stat-value">${correctCount}/${
         questions.length
       }</span>
                     </div>
                     <div>
-                      <span class="stat-label">Incorrect</span>
+                      <span class="stat-label">${this.lang("Incorrect", "ভুল")}</span>
                       <span class="stat-value">${incorrectCount}</span>
                     </div>
                   </div>
@@ -3184,7 +3189,7 @@ class YouthHealthLMS {
           <section class="quiz-body">
             <div class="container">
               <article class="quiz-result-panel">
-                <h2 class="quiz-result-heading"><i class="fa-solid fa-list-check me-2"></i>Answer review</h2>
+                <h2 class="quiz-result-heading"><i class="fa-solid fa-list-check me-2"></i>${this.lang("Answer review", "উত্তর পর্যালোচনা")}</h2>
                 <div class="quiz-review-list">
                   ${questions
                     .map((question, qIndex) => {
@@ -3193,7 +3198,7 @@ class YouthHealthLMS {
                       const userAnswerText =
                         userAnswer !== undefined
                           ? question.options[userAnswer]
-                          : "Not answered";
+                          : this.lang("Not answered", "উত্তর দেওয়া হয়নি");
                       const correctAnswerText =
                         question.options[question.correctAnswer];
                       return `
@@ -3207,11 +3212,11 @@ class YouthHealthLMS {
                           </div>
                           <div class="quiz-review-content">
                             <h3>Q${qIndex + 1}. ${question.question}</h3>
-                            <p class="quiz-review-answer">Your answer: <span>${userAnswerText}</span></p>
+                            <p class="quiz-review-answer">${this.lang("Your answer:", "আপনার উত্তর:")} <span>${userAnswerText}</span></p>
                             ${
                               isCorrect || !passed
                                 ? ""
-                                : `<p class="quiz-review-answer quiz-review-answer--correct">Correct answer: <span>${correctAnswerText}</span></p>`
+                                : `<p class="quiz-review-answer quiz-review-answer--correct">${this.lang("Correct answer:", "সঠিক উত্তর:")} <span>${correctAnswerText}</span></p>`
                             }
                           </div>
                         </div>
@@ -3224,14 +3229,14 @@ class YouthHealthLMS {
                   ${
                     passed
                       ? `<button class="btn btn-primary quiz-action-btn" onclick="app.finishQuiz()">
-                          Continue<i class="fa-solid fa-arrow-right-long ms-2"></i>
+                          ${this.lang("Continue", "চালিয়ে যান")}<i class="fa-solid fa-arrow-right-long ms-2"></i>
                         </button>`
                       : `<div class="quiz-action-row">
                           <button class="btn btn-outline-primary quiz-action-btn" onclick="app.showQuiz = false; app.render()">
-                            <i class="fa-solid fa-book me-2"></i>Review lesson
+                            <i class="fa-solid fa-book me-2"></i>${this.lang("Review lesson", "পাঠ পর্যালোচনা করুন")}
                           </button>
                           <button class="btn btn-primary quiz-action-btn" onclick="app.retryQuiz()">
-                            Try again<i class="fa-solid fa-arrow-rotate-right ms-2"></i>
+                            ${this.lang("Try again", "আবার চেষ্টা করুন")}<i class="fa-solid fa-arrow-rotate-right ms-2"></i>
                           </button>
                         </div>`
                   }
@@ -3254,8 +3259,8 @@ class YouthHealthLMS {
       ? "app.showQuiz = false; app.render()"
       : "app.previousQuestion()";
     const previousLabel = isFirstQuestion
-      ? "Review lesson"
-      : "Previous question";
+      ? this.lang("Review lesson", "পাঠ পর্যালোচনা করুন")
+      : this.lang("Previous question", "আগের প্রশ্ন");
     const previousIcon = isFirstQuestion
       ? "fa-book-open"
       : "fa-arrow-left-long";
@@ -3270,26 +3275,27 @@ class YouthHealthLMS {
             <div class="quiz-hero__top">
               <button class="quiz-back" onclick="app.showQuiz = false; app.render()">
                 <i class="fa-solid fa-arrow-left-long"></i>
-                Back to lesson
+                ${this.lang("Back to lesson", "পাঠে ফিরুন")}
               </button>
-              <span class="lesson-pill">Question ${
-                this.quizState.currentQuestionIndex + 1
-              } of ${questions.length}</span>
+              <span class="lesson-pill">${this.lang(
+                `Question ${this.quizState.currentQuestionIndex + 1} of ${questions.length}`,
+                `প্রশ্ন ${this.quizState.currentQuestionIndex + 1} মোট ${questions.length}`
+              )}</span>
             </div>
             <div class="quiz-hero__content">
               <div>
-                <span class="quiz-hero__eyebrow">Knowledge check</span>
+                <span class="quiz-hero__eyebrow">${this.lang("Knowledge check", "জ্ঞান পরীক্ষা")}</span>
                 <h1 class="quiz-hero__title">${lessonTitle}</h1>
                 <div class="quiz-hero__meta">
                   <span class="meta-pill"><i class="fa-solid fa-book"></i>${courseTitle}</span>
-                  <span class="meta-pill"><i class="fa-solid fa-gauge-high"></i>Passing ${passingScore}%</span>
+                  <span class="meta-pill"><i class="fa-solid fa-gauge-high"></i>${this.lang("Passing", "সফল হওয়ার স্কোর")} ${passingScore}%</span>
                 </div>
               </div>
               <div class="quiz-hero__scorecard">
                 <div class="completion-ring" style="--progress: ${displayProgress};">
                   <div class="completion-ring__content">
                     <span class="completion-ring__value">${displayProgress}%</span>
-                    <span class="completion-ring__label">Progress</span>
+                    <span class="completion-ring__label">${this.lang("Progress", "অগ্রগতি")}</span>
                   </div>
                 </div>
               </div>
@@ -3302,10 +3308,11 @@ class YouthHealthLMS {
             <article class="quiz-panel">
               <div class="quiz-progress-container">
                 <div class="quiz-progress-label">
-                  <span><i class="fa-solid fa-circle-dot"></i>Question ${
-                    this.quizState.currentQuestionIndex + 1
-                  } of ${questions.length}</span>
-                  <span><i class="fa-solid fa-trophy"></i>Passing score ${passingScore}%</span>
+                  <span><i class="fa-solid fa-circle-dot"></i>${this.lang(
+                    `Question ${this.quizState.currentQuestionIndex + 1} of ${questions.length}`,
+                    `প্রশ্ন ${this.quizState.currentQuestionIndex + 1} মোট ${questions.length}`
+                  )}</span>
+                  <span><i class="fa-solid fa-trophy"></i>${this.lang("Passing score", "সফল হওয়ার স্কোর")} ${passingScore}%</span>
                 </div>
                 <div class="quiz-progress-bar">
                   <div class="quiz-progress-fill" style="width: ${progressPercent}%;"></div>
@@ -3313,7 +3320,7 @@ class YouthHealthLMS {
               </div>
 
               <div class="quiz-question">
-                <span class="quiz-question-eyebrow">Select the best answer</span>
+                <span class="quiz-question-eyebrow">${this.lang("Select the best answer", "সেরা উত্তর বেছুনি")}</span>
                 <h2>${currentQuestion.question}</h2>
               </div>
 
@@ -3346,7 +3353,7 @@ class YouthHealthLMS {
               ${
                 hasSelection
                   ? ""
-                  : `<div class=\"quiz-warning\"><i class=\"fa-solid fa-circle-exclamation\"></i><span>Please choose an option before continuing.</span></div>`
+                  : `<div class=\"quiz-warning\"><i class=\"fa-solid fa-circle-exclamation\"></i><span>${this.lang("Please choose an option before continuing.", "চালিয়ে যাওয়ার আগে একটি বিকল্প বেছুনি।")}</span></div>`
               }
 
               <div class="quiz-nav">
@@ -3358,8 +3365,8 @@ class YouthHealthLMS {
                 } onclick="app.nextQuestion()">
                   ${
                     isLastQuestion
-                      ? 'Submit quiz<i class="fa-solid fa-check ms-2"></i>'
-                      : 'Next question<i class="fa-solid fa-arrow-right-long ms-2"></i>'
+                      ? `${this.lang("Submit quiz", "কুইজ জমা করুন")}<i class="fa-solid fa-check ms-2"></i>`
+                      : `${this.lang("Next question", "পরবর্তী প্রশ্ন")}<i class="fa-solid fa-arrow-right-long ms-2"></i>`
                   }
                 </button>
               </div>
@@ -3414,17 +3421,18 @@ class YouthHealthLMS {
         quiz: { passingScore: 80, questions: aggregatedQuestions },
         content: `
           <div class="lesson-slide lession_slide_none">
-            <h2 class="slide-title gradient-text" data-aos="fade-up">Module Quiz</h2>
+            <h2 class="slide-title gradient-text" data-aos="fade-up">${this.lang("Module Quiz", "মডিউল কুইজ")}</h2>
             <p class="text-muted" data-aos="fade-up" data-aos-delay="60">
-              This quiz checks your understanding of the key ideas in this module.
-              There are <strong>${aggregatedQuestions.length}</strong> multiple‑choice questions.
-              You must score at least <strong>80%</strong> to pass and unlock the next module.
+              ${this.lang(
+                `This quiz checks your understanding of the key ideas in this module. There are <strong>${aggregatedQuestions.length}</strong> multiple‑choice questions. You must score at least <strong>80%</strong> to pass and unlock the next module.`,
+                `এই কুইজ এই মডিউলের মূল ধারণাগুলির প্রতি আপনার বোঝাপড়া পরীক্ষা করে। এখানে <strong>${aggregatedQuestions.length}</strong>টি বহুনির্বাচনী প্রশ্ন রয়েছে। পাস করতে এবং পরবর্তী মডিউল আনলক করতে আপনাকে কমপক্ষে <strong>80%</strong> স্কোর করতে হবে।`
+              )}
             </p>
             <ul class="text-muted mb-0" data-aos="fade-up" data-aos-delay="90" style="padding-left: 1.2rem;">
-              <li>Quiz test is very crucial for every learning path.</li>
-              <li>Read each question carefully and select the correct answer.</li>
-              <li>You can go back to review the lesson at any time.</li>
-              <li>Retakes are allowed — your best score will be saved.</li>
+              <li>${this.lang("Quiz test is very crucial for every learning path.", "প্রতিটি শেখার পথের জন্য কুইজ পরীক্ষা অত্যন্ত গুরুত্বপূর্ণ।")}</li>
+              <li>${this.lang("Read each question carefully and select the correct answer.", "প্রতিটি প্রশ্ন সাবধানে পড়ুন এবং সঠিক উত্তর নির্বাচন করুন।")}</li>
+              <li>${this.lang("You can go back to review the lesson at any time.", "আপনি যেকোনো সময় পাঠটি পর্যালোচনা করতে ফিরে যেতে পারেন।")}</li>
+              <li>${this.lang("Retakes are allowed — your best score will be saved.", "পুনরায় ভরা করা অনুমোদিত — আপনার সেরা স্কোর সংরক্ষণ করা হবে।")}</li>
             </ul>
           </div>`
       };
@@ -3560,9 +3568,9 @@ class YouthHealthLMS {
                         <button type="button" class="list-group-item list-group-item-action d-flex align-items-center accordion-button ${disabledCls}" ${click} ${dismiss}>
                           <i class="fa-solid ${icon} me-2" aria-hidden="true"></i>
                           <span class="flex-grow-1">${ls.title}</span>
-                          <span class="badge bg-light text-dark border me-2 d-none">${estMin} min</span>
-                          ${isCurrent ? '<span class="badge bg-info text-dark me-2">Current</span>' : ''}
-                          ${isDone ? '<span class="ring ring--done" title="Completed" aria-label="Completed"><span class="ring__inner"><i class="fa-solid fa-check"></i></span></span>' : ''}
+                          <span class="badge bg-light text-dark border me-2 d-none">${estMin} ${this.lang("min", "মিনিট")}</span>
+                          ${isCurrent ? `<span class="badge bg-info text-dark me-2">${this.lang("Current", "বর্তমান")}</span>` : ''}
+                          ${isDone ? `<span class="ring ring--done" title="Completed" aria-label="Completed"><span class="ring__inner"><i class="fa-solid fa-check"></i></span></span>` : ''}
                         </button>`;
                     }).join('')}
                   </div>
@@ -3627,6 +3635,10 @@ class YouthHealthLMS {
             })
             .join("")}
         </div>`;
+       const toBanglaNumber = (num) => {
+        const bnDigits = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+        return String(num).replace(/\d/g, d => bnDigits[d]);
+      };
 
       return `
         <div class="lesson-shell modules-expanded" data-modules-state="expanded">
@@ -3638,12 +3650,12 @@ class YouthHealthLMS {
                 </button>
                  <div class="lesson-hero__counts">
                   <span class="lesson-pill">${this.lang(
-                    `Module ${chIndex + 1} of ${totalChapters}`,
-                    `মডিউল ${chIndex + 1} মোট ${totalChapters}`
+                    `Module ${chIndex + 1} Out Of ${totalChapters}`,
+                    `মডিউল ${toBanglaNumber(chIndex + 1)} মোট ${toBanglaNumber(totalChapters)}`
                   )}</span>
                   <span class="lesson-pill">${this.lang(
-                    `Lesson ${activeIndex + 1} of ${totalLessons}`,
-                    `পাঠ ${activeIndex + 1} মোট ${totalLessons}`
+                    `Lesson ${activeIndex + 1} Out Of ${totalLessons}`,
+                    `পাঠ ${toBanglaNumber(activeIndex + 1)} মোট ${toBanglaNumber(totalLessons)}`
                   )}</span>
                 </div>
                 <div class="lesson-hero__progress">
@@ -3663,14 +3675,23 @@ class YouthHealthLMS {
                   <div class="lesson-progress__meta">
                     <div class="lesson-progress__course">
                       <span class="lesson-progress__label">${this.lang("Course progress:", "কোর্সের অগ্রগতি:")}</span>
-                      <span class="lesson-progress__value">${courseProgressDisplay}%</span>
+                      <span class="lesson-progress__value">${yhLang(
+                        courseProgressDisplay,
+                        toBanglaNumber(courseProgressDisplay)
+                      )}%</span>
                     </div>
                     ${
                       totalLessons > 0
-                        ? `<span class="lesson-progress__caption">${this.lang(
-                            `Module ${chIndex + 1} progress`,
-                            `${chIndex + 1} নম্বর মডিউলের অগ্রগতি`
-                          )}: <span id="chapterProgressValue" data-target="${chapterProgressDisplay}">0</span>%</span>`
+                        ? `<span class="lesson-progress__caption">
+  ${this.lang(
+    `Module ${chIndex + 1} progress`,
+    `${toBanglaNumber(chIndex + 1)} নম্বর মডিউলের অগ্রগতি`
+  )}:
+  
+  <span id="chapterProgressValue2" data-target="${chapterProgressDisplay}">${yhLang(
+  chapterProgressDisplay,
+  toBanglaNumber(chapterProgressDisplay)
+)}</span>%</span>`
                         : ""
                     }
                   </div>
@@ -3804,21 +3825,22 @@ class YouthHealthLMS {
               <div class="lesson_buttons"> 
                  <button class="lesson-back" onclick="app.navigateTo('dashboard')">
                   <i class="fa-solid fa-arrow-left-long"></i>
-                  Back to dashboard
+                  ${this.lang("Back to dashboard", "ড্যাশবোর্ডে ফিরুন")}
                  </button>
                 <button class="d-none d-lg-block btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
-                  <i class="fa-solid fa-list me-2"></i>Browse modules & lessons
+                  <i class="fa-solid fa-list me-2"></i>${this.lang("Browse modules & lessons", "মডিউল ও পাঠ দেখুন")}
                 </button>
               </div>
               <div class="lesson-hero__counts">
-                <span class="lesson-pill">Lesson ${
-                  activeIndex + 1
-                } of ${totalLessons}</span>
+                <span class="lesson-pill">${this.lang(
+                  `Lesson ${activeIndex + 1} of ${totalLessons}`,
+                  `পাঠ ${activeIndex + 1} মোট ${totalLessons}`
+                )}</span>
               </div>
             </div>
             <div class="d-lg-none mt-3">
               <button class="btn btn-primary w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileLessonBrowserFlat" aria-controls="mobileLessonBrowserFlat">
-                <i class="fa-solid fa-list me-2"></i>Browse lessons
+                <i class="fa-solid fa-list me-2"></i>${this.lang("Browse lessons", "পাঠ দেখুন")}
               </button>
             </div>
             
@@ -3837,7 +3859,7 @@ class YouthHealthLMS {
                 ></div>
               </div>
               <div class="lesson-progress__meta">
-                <span class="lesson-progress__label">Course progress</span>
+                <span class="lesson-progress__label">${this.lang("Course progress:", "কোর্সের অগ্রগতি:")}</span>
                 <span class="lesson-progress__value">${courseProgressDisplay}%</span>
               </div>
             </div>
@@ -3855,8 +3877,8 @@ class YouthHealthLMS {
                       ? `
                     <div class="lesson-audio-bar">
                       <div class="lesson-audio-meta">
-                        <span class="lesson-audio-label"><i class="fa-solid fa-headphones"></i> Audio companion</span>
-                        <span class="lesson-audio-sub">Listen while you learn or pause to read at your own pace.</span>
+                        <span class="lesson-audio-label"><i class="fa-solid fa-headphones"></i> ${this.lang("Audio companion", "অডিও সহায়ক")}</span>
+                        <span class="lesson-audio-sub">${this.lang("Listen while you learn or pause to read at your own pace.", "শিখতে শিখতে শুনুন অথবা আপনার নিজের গতিতে পড়ার জন্য থামুন।")}</span>
                       </div>
                       <button class="btn btn-primary" id="audioToggleBtn" onclick="app.toggleAudio()" style="min-width: 120px;">
                         <i class="bi bi-pause-fill" id="audioIcon"></i>
@@ -3883,14 +3905,14 @@ class YouthHealthLMS {
                           ? 'onclick="app.previousLesson()"'
                           : "disabled"
                       }>
-                        <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
+                        <i class="fa-solid fa-arrow-left-long me-2"></i>${this.lang("Previous lesson", "আগের পাঠ")}
                       </button>
                       <button class="btn btn-primary" ${
                         hasNextLesson
                           ? 'onclick="app.nextLesson()"'
                           : "disabled"
                       }>
-                        Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
+                        ${this.lang("Next lesson", "পরবর্তী পাঠ")}<i class="fa-solid fa-arrow-right-long ms-2"></i>
                       </button>
                     </div>
                   </div>
@@ -3899,8 +3921,8 @@ class YouthHealthLMS {
                     lessonCompleted ? "lesson-quiz-card--complete" : ""
                   }">
                     <div class="lesson-quiz-card__header">
-                      <span class="lesson-quiz-badge"><i class="fa-solid fa-circle-question"></i> Module quiz</span>
-                      <span class="lesson-quiz-score">Passing score: ${
+                      <span class="lesson-quiz-badge"><i class="fa-solid fa-circle-question"></i> ${this.lang("Module quiz", "মডিউল কুইজ")}</span>
+                      <span class="lesson-quiz-score">${this.lang("Passing score:", "সফল হওয়ার স্কোর:")} ${
                         currentLesson.quiz.passingScore
                       }%</span>
                     </div>
@@ -3914,27 +3936,27 @@ class YouthHealthLMS {
                             : "fa-rotate-right"
                         }"></i>
                         <div>
-                          <p class="lesson-quiz-status__title">Latest attempt: ${quizScore}%</p>
+                          <p class="lesson-quiz-status__title">${this.lang("Latest attempt:", "সর্বশেষ প্রচেষ্টা:")} ${quizScore}%</p>
                           <p class="lesson-quiz-status__meta">${
                             lessonCompleted
-                              ? "Great job! You can retake the quiz to boost your score."
-                              : "Give it another try to reach the passing score."
+                              ? this.lang("Great job! You can retake the quiz to boost your score.", "দুর্দান্ত! আপনি কুইজ পুনরায় নিয়ে আপনার স্কোর বাড়াতে পারেন।")
+                              : this.lang("Give it another try to reach the passing score.", "সফল হওয়ার স্কোরে পৌঁছাতে আবার চেষ্টা করুন।")
                           }</p>
                         </div>
                       </div>`
                         : ""
                     }
                     <p class="lesson-quiz-text">
-                      Test your understanding and unlock the next milestone.
-                      This quiz has <strong>${
-                        currentLesson.quiz.questions.length
-                      }</strong> questions.
-                      Score at least <strong>${
-                        currentLesson.quiz.passingScore
-                      }%</strong> to mark this lesson as complete. You can retake it — your best score will be saved.
+                      ${this.lang(
+                        `Test your understanding and unlock the next milestone. This quiz has <strong>${currentLesson.quiz.questions.length}</strong> questions. Score at least <strong>${currentLesson.quiz.passingScore}%</strong> to mark this lesson as complete. You can retake it — your best score will be saved.`,
+                        `আপনার বোঝাপড়া পরীক্ষা করুন এবং পরবর্তী মাইলফলক আনলক করুন। এই কুইজে <strong>${currentLesson.quiz.questions.length}</strong> প্রশ্ন আছে। এই পাঠটি সম্পন্ন করতে চিহ্নিত করতে কমপক্ষে <strong>${currentLesson.quiz.passingScore}%</strong> স্কোর করুন। আপনি এটি পুনরায় নিতে পারেন - আপনার সর্বোত্তম স্কোর সংরক্ষণ করা হবে।`
+                      )}
                     </p>
                     <button class="btn btn-primary btn-lg" onclick="app.startQuiz()">
-                      ${lessonCompleted ? "Retake quiz" : "Start quiz"}
+                      ${this.lang(
+                        lessonCompleted ? "Retake quiz" : "Start quiz",
+                        lessonCompleted ? "কুইজ পুনরায় নিন" : "কুইজ শুরু করুন"
+                      )}
                       <i class="fa-solid fa-arrow-right-long ms-2"></i>
                     </button>
                   </div>
@@ -3944,7 +3966,7 @@ class YouthHealthLMS {
                       activeIndex > 0
                         ? `
                       <button class="btn btn-outline-primary lesson-nav-btn" onclick="app.previousLesson()">
-                        <i class="fa-solid fa-arrow-left-long me-2"></i>Previous lesson
+                        <i class="fa-solid fa-arrow-left-long me-2"></i>${this.lang("Previous lesson", "আগের পাঠ")}
                       </button>`
                         : "<span></span>"
                     }
@@ -3952,11 +3974,11 @@ class YouthHealthLMS {
                       activeIndex < totalLessons - 1
                         ? `
                       <button class="btn btn-primary lesson-nav-btn" onclick="app.nextLesson()">
-                        Next lesson<i class="fa-solid fa-arrow-right-long ms-2"></i>
+                        ${this.lang("Next lesson", "পরবর্তী পাঠ")}<i class="fa-solid fa-arrow-right-long ms-2"></i>
                       </button>`
                         : `
                       <button class="btn btn-success lesson-nav-btn" onclick="app.completeLesson()">
-                        <i class="fa-solid fa-award me-2"></i>Complete course
+                        <i class="fa-solid fa-award me-2"></i>${this.lang("Complete course", "কোর্স সম্পন্ন করুন")}
                       </button>`
                     }
                   </div>
@@ -3967,7 +3989,7 @@ class YouthHealthLMS {
         </section>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileLessonBrowserFlat" aria-labelledby="mobileLessonBrowserFlatLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="mobileLessonBrowserFlatLabel">Lessons</h5>
+            <h5 class="offcanvas-title" id="mobileLessonBrowserFlatLabel">${this.lang("Lessons", "পাঠ")}</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
@@ -3990,15 +4012,15 @@ class YouthHealthLMS {
                 <button type="button" class="list-group-item list-group-item-action d-flex align-items-center" onclick="app.changeLesson(${li})" data-bs-dismiss="offcanvas">
                   <i class="fa-solid ${icon} me-2"></i>
                   <span class="flex-grow-1">${ls.title}</span>
-                  <span class="badge bg-light text-dark border me-2">${estMin} min</span>
+                  <span class="badge bg-light text-dark border me-2">${estMin} ${this.lang("min", "মিনিট")}</span>
                   ${
                     isCurrent
-                      ? '<span class="badge bg-info text-dark me-2">Current</span>'
+                      ? `<span class="badge bg-info text-dark me-2">${this.lang("Current", "বর্তমান")}</span>`
                       : ""
                   }
                   ${
                     isDone
-                      ? '<span class="ring ring--done" title="Completed" aria-label="Completed"><span class="ring__inner"><i class="fa-solid fa-check"></i></span></span>'
+                      ? `<span class="ring ring--done" title="Completed" aria-label="Completed"><span class="ring__inner"><i class="fa-solid fa-check"></i></span></span>`
                       : ""
                   }
                 </button>`;
