@@ -396,8 +396,8 @@
         font-weight: 600;
     }
     p {
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 15px;
+        line-height: 15px;
     }
     span {
         font-size: 14px;
@@ -563,8 +563,8 @@ h3 {
     line-height: 18px;
   }
 p {
-    font-size: 15px !important;
-    line-height: 13px !important;
+    font-size: 16px !important;
+    line-height: 16px !important;
 }
 .m9l2img img {
   height: 600px !important;
