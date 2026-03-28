@@ -120,611 +120,22 @@ const coursesData = [
         ),
         lessons: [
           // Understanding YHAP
-          {
-            id: "ch1-lesson-1",
-            title: yhLang(
-              "Understanding Young Health Ambassador Programme",
-              "তরুণ স্বাস্থ্যদূত কার্যক্রম",
-            ),
-            icon: "fa-heartbeat",
-            gradientClass: "bg-gradient-purple",
-            audioFile: "1.mp3",
-            quiz: {
-              passingScore: 80,
-              questions: [
-                {
-                  id: "q1a",
-                  question: yhLang(
-                    "What age range defines youth according to the UN ?",
-                    "জাতিসংঘের মতে কোন বয়সসীমাকে যুব বলা হয় ?",
-                  ),
-                  options: [
-                    yhLang("15–24 years", "১৫–২৪ বছর"),
-                    yhLang("10–19 years", "১০–১৯ বছর"),
-                    yhLang("18–29 years", "১৮–২৯ বছর"),
-                    yhLang("12–21 years", "১২–২১ বছর"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">${yhLang("Young Health Ambassador Programme", "তরুণ স্বাস্থ্যদূত কার্যক্রম")}</h2>
-                <div class="floating-bg" aria-hidden="true">
-                  <span class="float-elem" style="top:8%; left:6%; width:70px; height:70px;"></span>
-                  <span class="float-elem" style="top:35%; right:10%; width:90px; height:90px;"></span>
-                  <span class="float-elem" style="bottom:12%; left:14%; width:80px; height:80px;"></span>
-                </div>
 
-                <div class="row g-3 mt-2">
-                  ${[
-                    {
-                      icon: "fa-heartbeat",
-                      title: yhLang("Health", "স্বাস্থ্য"),
-                      text: yhLang(
-                        "As per World Health Organization (WHO), health is defined as a state of complete physical, mental, and social well-being, and not merely the absence of disease or infirmity.",
-                        "বিশ্ব স্বাস্থ্য সংস্থা (WHO) স্বাস্থ্যকে একটি পূর্ণাঙ্গ শারীরিক, মানসিক ও সামাজিক সুস্থতার অবস্থা হিসেবে চিহ্নিত করে—শুধু অসুস্থতার অনুপস্থিতি নয়।",
-                      ),
-                      delay: 160,
-                    },
-                    {
-                      icon: "fa-child-reaching",
-                      title: yhLang("Adolescence", "কৈশোর"),
-                      text: yhLang(
-                        "According to WHO, adolescence is the life phase between childhood and adulthood (10–19 years) marked by rapid physical, cognitive, and psychosocial growth.",
-                        "WHO–এর মতে ১০–১৯ বছর বয়সীনদের কৈশোর বলা হয়—এই পর্যায়ে দ্রুত শারীরিক, মানসিক ও সামাজিক পরিবর্তন ঘটে।",
-                      ),
-                      delay: 200,
-                    },
-                    {
-                      icon: "fa-user-group",
-                      title: yhLang("Youth", "যুবক-যুবতী"),
-                      text: yhLang(
-                        "The United Nations defines youth as persons aged 15–24, marking the transition from dependence to independence.",
-                        "জাতিসংঘ ১৫–২৪ বছরের ব্যক্তিদের যুব বলে—এ সময়েই নির্ভরতামুক্ত হয়ে স্বনির্ভরতার পথে এগিয়ে যায়।",
-                      ),
-                      delay: 240,
-                    },
-                    {
-                      icon: "fa-users-between-lines",
-                      title: yhLang("Young people", "তরুণ জনগোষ্ঠী"),
-                      text: yhLang(
-                        "WHO describes young people as those aged 10–24.",
-                        "WHO-এর মতে ১০–২৪ বছর বয়সীরাই তরুণ জনগোষ্ঠী।",
-                      ),
-                      delay: 280,
-                    },
-                  ]
-                    .map(
-                      (card) => `
-                      <div class="col-md-12">
-                        <div class="definition-card hover-lift-sm hover-shadow-glow transition-base " data-aos="fade-up" data-aos-delay="${card.delay}">
-                          <h4 class="gradient-text transition-base"><i class="fas ${card.icon} me-2 animate-float"></i>${card.title}</h2>
-                          <p class="mb-0">${card.text}</p>
-                        </div>
-                      </div>
-                    `,
-                    )
-                    .join("")}
-                </div>
-
-                <div class="program-intro hover-lift-sm transition-base mt-3" data-aos="fade-up" data-aos-delay="100">
-                  <p>${yhLang(
-                    "The Young Health Ambassador Programme (YHAP) is a joint initiative of the Ministry of Health and Family Welfare (MOHFW) and UNICEF to build informed health ambassadors through primary prevention and health promotion.",
-                    "ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম (ওয়াইএইচএপি) হলো স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় ও ইউনিসেফের যৌথ উদ্যোগ, যা প্রতিরোধমূলক স্বাস্থ্য প্রচারের মাধ্যমে তথ্যসমৃদ্ধ স্বাস্থ্য দূত গড়ে তোলে।",
-                  )}</p>
-                  <p>${yhLang(
-                    "The course equips young people with knowledge on physical, sexual and reproductive health, nutrition, and mental wellbeing so they can champion healthier choices in their communities.",
-                    "এই কোর্স তরুণদের শারীরিক, যৌন ও প্রজনন স্বাস্থ্য, পুষ্টি ও মানসিক সুস্থতা নিয়ে জ্ঞান ও দক্ষতা দেয়, যাতে তারা নিজের সম্প্রদায়ে সুস্থ জীবনধারার অনুকূল পরিবেশ গড়তে পারে।",
-                  )}</p>
-                </div>
-              </div>`;
-            })(),
-          },
           // Young Health Ambassador Program Details
-          {
-            id: "ch1-lesson-2",
-            title: yhLang(
-              "Youth Health Ambassador Programme",
-              "তরুণ স্বাস্থ্যদূত কার্যক্রম",
-            ),
-            icon: "fa-star-of-life",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 70,
-              questions: [
-                {
-                  id: "q1a-yhap",
-                  question: yhLang(
-                    "Who jointly initiated the YHAP ?",
-                    "YHAP কে যৌথভাবে উদ্যোগ নিয়েছে ?",
-                  ),
-                  options: [
-                    yhLang("Ministry of Health and UNICEF", "স্বাস্থ্য মন্ত্রণালয় ও UNICEF"),
-                    yhLang("Only WHO", "শুধু WHO"),
-                    yhLang("World Bank", "বিশ্বব্যাংক"),
-                    yhLang("NGOs only", "শুধু NGO"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up"><i class="fa-solid fa-star-of-life me-2" style="color:#FF6B9D;"></i>${yhLang("Youth Health Ambassador Programme", "তরুণ স্বাস্থ্যদূত কার্যক্রম")}</h2>
-                <div class="floating-bg" aria-hidden="true">
-                  <span class="float-elem" style="top:6%; left:4%; width:72px; height:72px;"></span>
-                  <span class="float-elem" style="top:40%; right:6%; width:88px; height:88px;"></span>
-                  <span class="float-elem" style="bottom:10%; left:10%; width:80px; height:80px;"></span>
-                </div>
 
-                <div class="m1l2-intro-card hover-lift-sm hover-shadow-glow transition-base" data-aos="fade-up" data-aos-delay="100">
-                  <div class="m1l2-intro-header">
-                    <i class="fa-solid fa-lightbulb m1l2-intro-icon animate-float"></i>
-                  </div>
-                  <h4 class="m1l2-intro-title"><i class="fa-solid fa-seedling me-2"></i>${yhLang("About the Programme", "কার্যক্রম সম্পর্কে")}</h4>
-                  <p class="m1l2-intro-text">${yhLang(
-                    "The Youth Health Ambassador Programme is a strategic joint initiative of the Ministry of Health and Family Welfare and UNICEF. This programme is designed to empower young people to increase their health awareness and build capacity for primary disease prevention and health information promotion. Through this training, young people will be equipped with knowledge and skills in physical and mental health, enabling them to actively participate and influence healthy habits within their communities and networks as health ambassadors.",
-                    "তরুণ স্বাস্থ্যদূত কার্যক্রম, স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় এবং ইউনিসেফের একটি কৌশলগত যৌথ উদ্যোগ। এই কর্মসূচিটি তরুণসমাজকে তাদের স্বাস্থ্য সচেতনতা বৃদ্ধি এবং প্রাথমিক রোগ প্রতিরোধ ও স্বাস্থ্য তথ্য প্রচারে তাদের সক্ষমতা বৃদ্ধির জন্য ডিজাইন করা হয়েছে। এই প্রশিক্ষণ, তরুণ সমাজকে শারীরিক ও মানসিক স্বাস্থ্যের জ্ঞান এবং দক্ষতায় সমৃদ্ধ করবে, যা তরুণ সমাজের স্বাস্থ্যের জন্য তাদেরকে সক্রিয় অংশগ্রহণের মাধ্যমে তাদের কমিউনিটি এবং নেটওয়ার্কের মধ্যে স্বাস্থ্যকর অভ্যাসগুলিকে প্রভাবিত করতে সাহায্য করবে।",
-                  )}</p>
-                </div>
-
-                <div class="row g-4 mt-2">
-                  ${(() => {
-                    const cards = [
-                      {
-                        id: "def-health",
-                        term: yhLang("Health", "স্বাস্থ্য"),
-                        icon: "fa-heart-pulse",
-                        description: yhLang(
-                          "According to the World Health Organization, health is defined as a state of complete physical, mental, and social well-being; which is not merely the absence of disease or infirmity.",
-                          "বিশ্ব স্বাস্থ্য সংস্থার মতে, স্বাস্থ্যকে সম্পূর্ণ শারীরিক, মানসিক এবং সামাজিক সুস্থতার একটি অবস্থা হিসেবে সংজ্ঞায়িত করা হয়; যা কেবল রোগ বা দুর্বলতার অনুপস্থিতি নয়।",
-                        ),
-                        delay: 150,
-                      },
-                      {
-                        id: "def-adolescence",
-                        term: yhLang("Adolescence", "বয়ঃসন্ধিকাল"),
-                        icon: "fa-child-reaching",
-                        description: yhLang(
-                          "According to the World Health Organization, adolescence is the life stage between childhood and adulthood, aged 10 to 19 years. Adolescents experience rapid physical growth, intellectual and mental development. This impacts their feelings, thoughts, decision-making, and interaction with the world around them.",
-                          "বিশ্ব স্বাস্থ্য সংস্থার মতে, বয়ঃসন্ধিকাল হল শৈশব এবং প্রাপ্তবয়স্কতার মধ্যবর্তী জীবনের পর্যায়, ১০ থেকে ১৯ বছর বয়স পর্যন্ত। কিশোর-কিশোরীরা এসময় দ্রুত শারীরিক বৃদ্ধি, বুদ্ধিবৃত্তিক এবং মানসিক বিকাশের অভিজ্ঞতা লাভ করে। এটি তাদের অনুভূতি, চিন্তাভাবনা, সিদ্ধান্ত গ্রহণ এবং তাদের চারপাশের বিশ্বের সাথে যোগাযোগের উপর প্রভাব ফেলে।",
-                        ),
-                        delay: 200,
-                      },
-                      {
-                        id: "def-youth",
-                        term: yhLang("Youth", "যুবক"),
-                        icon: "fa-person-hiking",
-                        description: yhLang(
-                          "According to the United Nations, youth refers to persons aged 15 to 24 years, without prejudice to other definitions by member states. This is a period of transition from childhood dependence to adult independence.",
-                          "জাতিসংঘের (UN) মতে, যুবক বলতে ১৫ থেকে ২৪ বছর বয়সী ব্যক্তিদের বোঝায়, সদস্য রাষ্ট্রগুলির অন্যান্য সংজ্ঞার সাথে কোনও বিরূপ আচরণ না করে। এটি শৈশবের নির্ভরতা থেকে প্রাপ্তবয়স্কতার স্বাধীনতায় রূপান্তরের একটি সময়কাল।",
-                        ),
-                        delay: 250,
-                      },
-                      {
-                        id: "def-young",
-                        term: yhLang("Young", "তরুণ"),
-                        icon: "fa-users",
-                        description: yhLang(
-                          "According to the World Health Organization, young people refers to persons aged 10 to 24 years.",
-                          "বিশ্ব স্বাস্থ্য সংস্থার (WHO) মতে, তরুণ বলতে ১০ থেকে ২৪ বছর বয়সী ব্যক্তিদের বোঝায়।",
-                        ),
-                        delay: 300,
-                      },
-                    ];
-                    return cards.map(card => '<div class="col-md-6"><div class="m1l2-def-card m1l2-' + card.id + ' hover-lift-sm hover-shadow-glow transition-base" data-aos="zoom-in" data-aos-delay="' + card.delay + '"><div class="m1l2-def-icon"><i class="fa-solid ' + card.icon + '"></i></div><h4 class="m1l2-def-term"><i class="fa-solid ' + card.icon + ' me-2"></i>' + card.term + '</h4><p class="m1l2-def-text mb-0">' + card.description + '</p></div></div>').join('');
-                  })()}
-                </div>
-              </div>`;
-            })(),
-          },
           // Age progression (inserted after Lesson 1)
 
           // Age progression (inserted after Lesson 1)
-          {
-            id: "ch1-lesson-3",
-            title: yhLang(
-              "Age Progression: Adolescence to Young Adulthood (10–24)",
-              "বয়সের ধাপ: কৈশোর থেকে তরুণ প্রাপ্তবয়স্ক (১০–২৪)",
-            ),
-            icon: "fa-children",
-            gradientClass: "bg-gradient-violet",
-            audioFile: "",
-            quiz: {
-              passingScore: 70,
-              questions: [
-                {
-                  id: "q1a-ages-1",
-                  question: yhLang(
-                    "Which range is considered Mid Adolescence ?",
-                    "কোন বয়সসীমাকে মধ্য কৈশোর ধরা হয় ?",
-                  ),
-                  options: [
-                    yhLang("10–13 years", "১০–১৩ বছর"),
-                    yhLang("14–16 years", "১৪–১৬ বছর"),
-                    yhLang("17–19 years", "১৭–১৯ বছর"),
-                    yhLang("20–24 years", "২০–২৪ বছর"),
-                  ],
-                  correctAnswer: 1,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-            <div class="lesson-slide">
-              <div class="floating-bg" aria-hidden="true">
-                <span class="float-elem" style="top:8%; left:6%; width:64px; height:64px;"></span>
-                <span class="float-elem" style="top:30%; right:8%; width:80px; height:80px;"></span>
-                <span class="float-elem" style="bottom:10%; left:12%; width:72px; height:72px;"></span>
-              </div>
 
-              <div class="alert alert-primary mb-1 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="60">
-                <div class="d-flex align-items-center gap-3">
-                  <span class="badge bg-primary bg-gradient p-2"><i class="fa-solid fa-users-between-lines"></i></span>
-                  <div>
-                    <h3 class="">${yhLang("Understanding Age Groups (10–24)", "বয়সভিত্তিক ধাপ (১০–২৪)")}</h3>
-                  </div>
-                </div>
-              </div>
-
-              
-             <figure class="glass-card age-figure p-1 mb-0 text-center">
-                    <img src="img/age/age-figure.jpg" alt="" class="img-fluid w-100 rounded shadow-sm img-zoom" />
-              </figure>
-
-            </div>`;
-            })(),
-          },
           // Six pillars
-          {
-            id: "ch1-lesson-4",
-            title: yhLang(
-              "Six pillars that build confident health ambassadors",
-              "আত্মবিশ্বাসী স্বাস্থ্য দূত গড়তে ছয়টি স্তম্ভ",
-            ),
-            icon: "fa-layer-group",
-            gradientClass: "bg-gradient-blue",
-            audioFile: "2.mp3",
-            quiz: {
-              passingScore: 80,
-              questions: [
-                {
-                  id: "q1b",
-                  question: yhLang(
-                    "Which pillar focuses on accurate messaging ?",
-                    "কোন স্তম্ভ সঠিক বার্তা প্রচারে গুরুত্ব দেয় ?",
-                  ),
-                  options: [
-                    yhLang("Leadership", "নেতৃত্ব"),
-                    yhLang("Advocacy", "অ্যাডভোকেসি"),
-                    yhLang(
-                      "Health Education & Awareness",
-                      "স্বাস্থ্য শিক্ষা ও সচেতনতা",
-                    ),
-                    yhLang("Empowerment", "ক্ষমতায়ন"),
-                  ],
-                  correctAnswer: 2,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-          <div class="lesson-slide">
-            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">${yhLang("Core Components of YHAP", "YHAP–এর মূল উপাদান")}</h2>
-            <div class="floating-bg" aria-hidden="true">
-              <span class="float-elem" style="top:10%; left:8%; width:70px; height:70px;"></span>
-              <span class="float-elem" style="bottom:10%; right:12%; width:90px; height:90px;"></span>
-            </div>
-            <div class="row g-4">${[
-              {
-                title: yhLang("Health Literacy", "স্বাস্থ্য সাক্ষরতা"),
-                description: yhLang(
-                  "YHAP builds foundational health literacy through comprehensive training on essential health and wellbeing. This equips ambassadors with the expertise to act as credible sources of information and effective advocates for prevention of diseases and health promotion.",
-                  "YHAP অপরিহার্য স্বাস্থ্য ও সুস্থতা বিষয়ে সমন্বিত প্রশিক্ষণের মাধ্যমে মৌলিক স্বাস্থ্য সাক্ষরতা গড়ে তোলে। এতে দূতরা বিশ্বাসযোগ্য তথ্যদাতা ও প্রতিরোধভিত্তিক স্বাস্থ্য প্রচারের কার্যকর প্রবক্তা হয়ে উঠেন।",
-                ),
-                icon: "fa-children",
-                color: "purple",
-              },
-              {
-                title: yhLang(
-                  "Health Education & Awareness",
-                  "স্বাস্থ্য শিক্ষা ও সচেতনতা",
-                ),
-                description: yhLang(
-                  "Young Health Ambassadors (YHAs) will create health education and awareness through campaigns on key health issues, comprehensive trainings, mentorships etc., Through these multifaceted efforts, they will ensure the accurate dissemination of crucial health information towards fostering well-informed and health-literate communities.",
-                  "যুব স্বাস্থ্য দূতেরা (YHA) গুরুত্বপূর্ণ স্বাস্থ্য ইস্যুতে প্রচারণা, প্রশিক্ষণ ও মেন্টরশিপের মাধ্যমে স্বাস্থ্য শিক্ষা ও সচেতনতা তৈরি করবে, যাতে সঠিক তথ্য পৌঁছে স্বাস্থ্য–সচেতন সমাজ গড়ে ওঠে।",
-                ),
-                icon: "fa-graduation-cap",
-                color: "blue",
-              },
-              {
-                title: yhLang(
-                  "Peer to Peer Influence",
-                  "সহপাঠী থেকে সহপাঠী প্রভাব",
-                ),
-                description: yhLang(
-                  "The programme is built on the principle that peer-to-peer engagement is a powerful catalyst for change. By facilitating supportive mentorship and encouraging positive role-modeling among contemporaries, YHAP leverages the profound impact of shared experiences to promote healthy behaviors.",
-                  "এই কর্মসূচি সহপাঠীদের পারস্পরিক সম্পৃক্ততাকে পরিবর্তনের শক্তিশালী অনুঘটক হিসেবে বিবেচনা করে। ইতিবাচক রোল মডেলিং ও সহায়ক মেন্টরশিপের মাধ্যমে অভিজ্ঞতা ভাগ করে স্বাস্থ্যকর আচরণ উৎসাহিত করা হয়।",
-                ),
-                icon: "fa-users",
-                color: "teal",
-              },
-              {
-                title: yhLang("Empowerment", "ক্ষমতায়ন"),
-                description: yhLang(
-                  "YHAP empowers individuals by equipping them with the tools, confidence, and skills needed to take effective control and contribute to the economic development, creating a productive, resilient, and healthy workforce for the future.",
-                  "YHAP তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে ক্ষমতায়িত করে, যাতে তারা কার্যকর ভূমিকা নিয়ে অর্থনৈতিক উন্নয়নে অবদান রাখতে পারে এবং ভবিষ্যতের জন্য সৃজনশীল ও সুস্থ কর্মশক্তি গড়ে ওঠে।",
-                ),
-                icon: "fa-hand-fist",
-                color: "orange",
-              },
-              {
-                title: yhLang("Leadership", "নেতৃত্ব"),
-                description: yhLang(
-                  "The program cultivates leadership qualities in youth, preparing them to become effective, ethical, and inspiring agents of change in their communities.",
-                  "এই কর্মসূচি তরুণদের মধ্যে নেতৃত্বের গুণাবলি বিকাশ করে, যাতে তারা সম্প্রদায়ের পরিবর্তনের নৈতিক, কার্যকর ও অনুপ্রেরণাদায়ী দূত হয়ে উঠতে পারে।",
-                ),
-                icon: "fa-flag",
-                color: "green",
-              },
-              {
-                title: yhLang("Advocacy", "অ্যাডভোকেসি"),
-                description: yhLang(
-                  "The Youth Health Ambassador Programme (YHAP) builds foundational competencies in health advocacy, empowering youth to effectively raise voice, articulate public health priorities to drive systemic reform. This is achieved through strategic engagement with key stakeholders, evidence-based promotion of policies, and active contribution to the formulation of legislation for strengthening health systems.",
-                  "YHAP স্বাস্থ্য অ্যাডভোকেসির মৌলিক দক্ষতা তৈরি করে, যাতে তরুণরা জনস্বাস্থ্যের অগ্রাধিকার তুলে ধরে নীতিগত পরিবর্তন আনতে পারে। অংশীদারদের সঙ্গে কৌশলগত সম্পৃক্ততা, প্রমাণভিত্তিক নীতিপ্রচারণা এবং আইন প্রণয়নে অংশগ্রহণের মাধ্যমে স্বাস্থ্যব্যবস্থা শক্তিশালী করা হয়।",
-                ),
-                icon: "fa-bullhorn",
-                color: "pink",
-              },
-            ]
-              .map(
-                (pillar, i) => `
-              <div class="col-md-6">
-                <div class="component-card hover-lift-sm hover-shadow-glow transition-base  bg-gradient-${pillar.color} shadow-lg" data-aos="zoom-in" data-aos-delay="${
-                  100 + i * 50
-                }">
-                  <div class="component-icon bg-gradient-${pillar.color} animate-float"><i class="fas ${pillar.icon}"></i></div>
-                  <h5 class="gradient-text transition-base">${pillar.title}</h5>
-                  <p>${pillar.description}</p>
-                </div>
-              </div>`,
-              )
-              .join("")}
-            </div>
-          </div>`;
-            })(),
-          },
+
           // Who am I
-          {
-            id: "ch1-lesson-5",
-            title: yhLang(
-              "Who Am I as a Health Ambassador ?",
-              "স্বাস্থ্য দূত হিসেবে আমি কে ?",
-            ),
-            icon: "fa-user-shield",
-            gradientClass: "bg-gradient-teal",
-            audioFile: "3.mp3",
-            quiz: {
-              passingScore: 80,
-              questions: [
-                {
-                  id: "q1c",
-                  question: yhLang(
-                    "Advocacy includes engaging which stakeholders ?",
-                    "অ্যাডভোকেসিতে কোন অংশীদারদের সম্পৃক্ত করা হয় ?",
-                  ),
-                  options: [
-                    yhLang("Only peers", "শুধু সহপাঠী"),
-                    yhLang(
-                      "Policy makers and gatekeepers",
-                      "নীতিনির্ধারক ও অভিভাবকগোষ্ঠী",
-                    ),
-                    yhLang("Only media", "শুধু গণমাধ্যম"),
-                    yhLang("No one", "কাউকেই নয়"),
-                  ],
-                  correctAnswer: 1,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-          <div class="lesson-slide">
-            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">${yhLang("Roles and Responsibilities of Health Ambassador", "স্বাস্থ্য দূতের ভূমিকা ও দায়িত্ব")}</h2>
-            <h3 class="text-center mb-4 gradient-text hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">${yhLang("Who am I ?", "আমি কে ?")}</h3>
-            <div class="row g-4">${[
-              {
-                icon: "fa-shield-heart",
-                text: yhLang(
-                  "I am equipped with expertise in safeguarding health and well-being of young people, enabling me to contribute meaningfully to society while harnessing the triple dividend of health, social, and economic benefits.",
-                  "তরুণদের স্বাস্থ্য ও সুস্থতা রক্ষায় আমার জ্ঞান ও দক্ষতা আছে, যা আমাকে সমাজে কার্যকর অবদান রাখতে ও স্বাস্থ্য, সামাজিক ও অর্থনৈতিক ত্রি-মুখী সুফল অর্জনে সহায়তা করে।",
-                ),
-              },
-              {
-                icon: "fa-share-nodes",
-                text: yhLang(
-                  "I actively empower my peers by sharing knowledge on health promotion, disease prevention, and holistic well-being, fostering informed decision-making among young people.",
-                  "স্বাস্থ্য উন্নয়ন, রোগ প্রতিরোধ ও সামগ্রিক সুস্থতা নিয়ে জ্ঞান ভাগ করে আমি সহপাঠীদের ক্ষমতায়িত করি এবং তরুণদের সুচিন্তিত সিদ্ধান্ত গ্রহণে সহায়তা করি।",
-                ),
-              },
-              {
-                icon: "fa-handshake",
-                text: yhLang(
-                  "Through advocacy, I engage policy makers, stakeholders and community influencer,  gatekeepers to prioritize health and wellbeing of young people, ensuring supportive policies and collaborative action for sustainable well-being.",
-                  "অ্যাডভোকেসির মাধ্যমে নীতিনির্ধারক, অংশীদার ও সম্প্রদায়ের প্রভাবশালীদের সম্পৃক্ত করি যাতে তরুণদের স্বাস্থ্য অগ্রাধিকার পায় ও সহায়ক নীতি ও সমন্বিত পদক্ষেপ নিশ্চিত হয়।",
-                ),
-              },
-              {
-                icon: "fa-chart-line",
-                text: yhLang(
-                  "I drive awareness and demand creation within communities, inspiring collective responsibility and action towards better health outcomes for adolescents and youth.",
-                  "আমি সম্প্রদায়জুড়ে সচেতনতা ও চাহিদা সৃষ্টিতে ভূমিকা রাখি, যাতে সবাই মিলে তরুন-তরুনীদের উন্নত স্বাস্থ্যফল নিশ্চিত করতে পারে।",
-                ),
-              },
-            ]
-              .map(
-                (f, i) => `
-              <div class="col-md-6">
-                <div class="role-card hover-lift-sm hover-shadow-glow transition-base  bg-gradient-${
-                  ["teal", "orange", "green", "pink"][i]
-                }"
-                 data-aos="${
-                   i % 2  ? "fade-left" : "fade-right"
-                 }" data-aos-delay="${100 + i * 50}">
-                  <div class="role-icon animate-float"><i class="fas ${
-                    f.icon
-                  }"></i></div>
-                  <p>${f.text}</p>
-                </div>
-              </div>`,
-              )
-              .join("")}
-            </div>
-          </div>`;
-            })(),
-          },
+
           // Nine steps
-          {
-            id: "ch1-lesson-6",
-            title: yhLang(
-              "Nine interactive steps to become a certified Young Health Ambassador",
-              "সনদপ্রাপ্ত যুব স্বাস্থ্য দূত হতে নয়টি ধাপ",
-            ),
-            icon: "fa-clipboard-check",
-            gradientClass: "bg-gradient-orange",
-            audioFile: "4.mp3",
-            quiz: {
-              passingScore: 80,
-              questions: [
-                {
-                  id: "q1d",
-                  question: yhLang(
-                    "Which step confirms identity ?",
-                    "কোন ধাপ পরিচয় নিশ্চিত করে ?",
-                  ),
-                  options: [
-                    yhLang("Registration", "নিবন্ধন"),
-                    yhLang("Unique ID Generation", "ইউনিক আইডি তৈরি"),
-                    yhLang("Assessment", "মূল্যায়ন"),
-                    yhLang("Certificate download", "সার্টিফিকেট ডাউনলোড"),
-                  ],
-                  correctAnswer: 1,
-                },
-              ],
-            },
-            content: (function () {
-              const steps = [
-                {
-                  text: yhLang(
-                    "Online registration in Young Health Ambassador Program (YHAP)",
-                    "ওয়াইএইচএপি-তে অনলাইনে নিবন্ধন",
-                  ),
-                  icon: "fa-pen-to-square",
-                  color: "purple",
-                },
-                {
-                  text: yhLang("Unique ID Generation", "ইউনিক আইডি তৈরি"),
-                  icon: "fa-id-card",
-                  color: "blue",
-                },
-                {
-                  text: yhLang(
-                    "Log in to the Website/App",
-                    "ওয়েবসাইট/অ্যাপে লগইন",
-                  ),
-                  icon: "fa-right-to-bracket",
-                  color: "teal",
-                },
-                {
-                  text: yhLang(
-                    "Access Young Health Ambassador Program (YAHP) course",
-                    "ইয়াং হেলথ অ্যাম্বাসেডর কোর্সে প্রবেশ",
-                  ),
-                  icon: "fa-book-open",
-                  color: "orange",
-                },
-                {
-                  text: yhLang(
-                    "Complete YHAP course",
-                    "ওয়াইএইচএপি কোর্স সম্পন্ন",
-                  ),
-                  icon: "fa-list-check",
-                  color: "green",
-                },
-                {
-                  text: yhLang(
-                    "Obtain passing marks in final assessment",
-                    "চূড়ান্ত মূল্যায়নে উত্তীর্ণ নম্বর লাভ",
-                  ),
-                  icon: "fa-trophy",
-                  color: "pink",
-                },
-                {
-                  text: yhLang(
-                    "System generated certificate",
-                    "সিস্টেম থেকে স্বয়ংক্রিয় সার্টিফিকেট",
-                  ),
-                  icon: "fa-certificate",
-                  color: "yellow",
-                },
-                {
-                  text: yhLang(
-                    "Self declaration/Oath Taking",
-                    "স্বপ্রত্যয়ন/শপথ গ্রহণ",
-                  ),
-                  icon: "fa-hand",
-                  color: "lavender",
-                },
-                {
-                  text: yhLang(
-                    "Final Certificate (Course validity-2 years)",
-                    "চূড়ান্ত সনদ (কোর্সের মেয়াদ ২ বছর)",
-                  ),
-                  icon: "fa-award",
-                  color: "mint",
-                },
-              ];
-              return `
-            <div class="lesson-slide">
-            <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">${yhLang("Eligibility and Steps to be a YHA", "ওয়াইএইচএ হওয়ার যোগ্যতা ও ধাপ")}</h2>
-            <div class="alert alert-info mb-4 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">
-              <h5><i class="fas fa-info-circle me-2"></i>${yhLang("Eligibility", "যোগ্যতা")}</h5>
-              <p class="mb-0">${yhLang("Any person aged <strong>10-24 years</strong> can become a Young Health Ambassador.", "<strong>১০-২৪ বছর</strong> বয়সী যে কেউ যুব স্বাস্থ্য দূত হতে পারে।")}</p>
-            </div>
-            <div class="row g-3">
-              ${steps
-                .map(
-                  (s, i) => `
-              <div class="col-md-4" data-aos="fade-up" data-aos-delay="${
-                1 + i * 40
-              }">
-              <div class="step-card bg-gradient-${
-                s.color
-              } hover-lift-sm hover-shadow-glow transition-base  text-center">
-                <div class="step-icon animate-float-slow d-inline-flex align-items-center justify-content-center"
-                   style="width:64px; height:64px; border-radius:50%; animation-duration:6s; animation-delay:${(
-                     i * 0.2
-                   ).toFixed(1)}s">
-                <i class="fas ${
-                  s.icon
-                } text-white" style="font-size:1.35rem"></i>
-                </div>
-                <h6 class="mt-2">${s.text}</h6>
-              </div>
-              </div>`,
-                )
-                .join("")}
-            </div>
-            </div>`;
-            })(),
-          },
+
           // Youth Health Ambassador Program - Comprehensive Overview
           {
-            id: "ch1-lesson-7",
+            id: "ch1-lesson-1",
             title: yhLang(
               "Youth Health Ambassador Program Overview",
               "তরুণ স্বাস্থ্যদূত কার্যক্রম",
@@ -764,7 +175,7 @@ const coursesData = [
                   <div class="m7l-intro-content">
                     <p class="m7l-intro-text">${yhLang(
                       "The Young Health Ambassador Programme (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare and UNICEF. This programme is designed to empower young people to increase their health awareness and build capacity for primary disease prevention and health information promotion. This training will equip young people with knowledge and skills in physical and mental health, enabling them to actively participate and influence healthy habits within their communities and networks as health ambassadors.",
-                      "তরুণ স্বাস্থ্যদূত কার্যক্রম, স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় এবং ইউনিসেফের একটি কৌশলগত যৌথ উদ্যোগ। এই কর্মসূচিটি তরুণসমাজকে তাদের স্বাস্থ্য সচেতনতা বৃদ্ধি এবং প্রাথমিক রোগ প্রতিরোধ ও স্বাস্থ্য তথ্য প্রচারে তাদের সক্ষমতা বৃদ্ধির জন্য ডিজাইন করা হয়েছে। এই প্রশিক্ষণ, তরুণ সমাজকে শারীরিক ও মানসিক স্বাস্থ্যের জ্ঞান এবং দক্ষতায় সমৃদ্ধ করবে, যা তরুণ সমাজের স্বাস্থ্যের জন্য তাদেরকে সক্রিয় অংশগ্রহণের মাধ্যমে তাদের কমিউনিটি এবং নেটওয়ার্কের মধ্যে স্বাস্থ্যকর অভ্যাসগুলিকে প্রভাবিত করতে সাহায্য করবে।",
+                      "তরুণ স্বাস্থ্যদূত কার্যক্রম, স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় এবং ইউনিসেফের একটি কৌশলগত যৌথ উদ্যোগ। এই কর্মসূচিটি তরুণসমাজকে তাদের স্বাস্থ্য সচেতনতা বৃদ্ধি এবং প্রাথমিক রোগ প্রতিরোধ ও স্বাস্থ্য তথ্য প্রচারে তাদের সক্ষমতা বৃদ্ধির জন্য ডিজাইন করা হয়েছে।<br></br>এই প্রশিক্ষণ, তরুণ সমাজকে শারীরিক ও মানসিক স্বাস্থ্যের জ্ঞান এবং দক্ষতায় সমৃদ্ধ করবে, যা তরুণ সমাজের স্বাস্থ্যের জন্য তাদেরকে সক্রিয় অংশগ্রহণের মাধ্যমে তাদের কমিউনিটি এবং নেটওয়ার্কের মধ্যে স্বাস্থ্যকর অভ্যাসগুলিকে প্রভাবিত করতে সাহায্য করবে।",
                     )}</p>
                   </div>
                 </div>
@@ -841,6 +252,60 @@ const coursesData = [
               </div>`;
             })(),
           },
+                    {
+            id: "ch1-lesson-2",
+            title: yhLang(
+              "Age Progression: Adolescence to Young Adulthood (10–24)",
+              "বয়সের ধাপ: কৈশোর থেকে তরুণ প্রাপ্তবয়স্ক (১০–২৪)",
+            ),
+            icon: "fa-children",
+            gradientClass: "bg-gradient-violet",
+            audioFile: "",
+            quiz: {
+              passingScore: 70,
+              questions: [
+                {
+                  id: "q1a-ages-1",
+                  question: yhLang(
+                    "Which range is considered Mid Adolescence ?",
+                    "কোন বয়সসীমাকে মধ্য কৈশোর ধরা হয় ?",
+                  ),
+                  options: [
+                    yhLang("10–13 years", "১০–১৩ বছর"),
+                    yhLang("14–16 years", "১৪–১৬ বছর"),
+                    yhLang("17–19 years", "১৭–১৯ বছর"),
+                    yhLang("20–24 years", "২০–২৪ বছর"),
+                  ],
+                  correctAnswer: 1,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+            <div class="lesson-slide">
+              <div class="floating-bg" aria-hidden="true">
+                <span class="float-elem" style="top:8%; left:6%; width:64px; height:64px;"></span>
+                <span class="float-elem" style="top:30%; right:8%; width:80px; height:80px;"></span>
+                <span class="float-elem" style="bottom:10%; left:12%; width:72px; height:72px;"></span>
+              </div>
+
+              <div class="alert alert-primary mb-1 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="60">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-primary bg-gradient p-2"><i class="fa-solid fa-users-between-lines"></i></span>
+                  <div>
+                    <h3 class="">${yhLang("Understanding Age Groups (10–24)", "বয়সভিত্তিক ধাপ (১০–২৪)")}</h3>
+                  </div>
+                </div>
+              </div>
+
+              
+             <figure class="glass-card age-figure p-1 mb-0 text-center">
+                    <img src="img/age/age-figure.jpg" alt="" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+              </figure>
+
+            </div>`;
+            })(),
+          },
           // Young Around the World
           // {
           //   id: 'ch1-lesson-5',
@@ -870,7 +335,7 @@ const coursesData = [
           // }
           // Core Components of YHAP
           {
-            id: "ch1-lesson-8",
+            id: "ch1-lesson-3",
             title: yhLang(
               "Core Components of Young Health Ambassador Program",
               "তরুন স্বাস্থ্যদূত কার্যক্রমের মৌলিক অংশ",
@@ -1035,7 +500,7 @@ const coursesData = [
           },
           // Role and Responsibility of Youth Health Ambassador
           {
-            id: "ch1-lesson-9",
+            id: "ch1-lesson-4",
             title: yhLang(
               "Role and Responsibility of Youth Health Ambassador - Who Am I ",
               "স্বাস্থ্য দূতের (ইয়ুথ হেলথ অ্যাম্বাসেডর) ভূমিকা এবং দায়িত্ব - আমি কে ?",
@@ -1065,7 +530,7 @@ const coursesData = [
             content: (function () {
               return `
               <div class="lesson-slide m9l-slide">
-                <h2 class="slide-title m9l-title" data-aos="fade-up"><i class="fa-solid fa-person-circle-check me-2"></i>${yhLang("Role and Responsibility of Youth Health Ambassador - Who Am I ?", "স্বাস্থ্য দূতের (ইয়ুথ হেলথ অ্যাম্বাসেডর) ভূমিকা এবং দায়িত্ব - আমি কে ?")}</h2>
+                <h2 class="slide-title m9l-title m9l-title-enhanced " data-aos="fade-up"><i class="fa-solid fa-person-circle-check"></i>${yhLang("Role and Responsibility of Youth Health Ambassador - Who Am I ?", "স্বাস্থ্য দূতের (ইয়ুথ হেলথ অ্যাম্বাসেডর) ভূমিকা এবং দায়িত্ব - আমি কে ?")}</h2>
                 
                 <div class="m9l-points-container">
                   ${(() => {
@@ -1137,7 +602,7 @@ const coursesData = [
           },
           // Eligibility and Steps to Become a Youth Health Ambassador
           {
-            id: "ch1-lesson-10",
+            id: "ch1-lesson-5",
             title: yhLang(
               "Eligibility and Steps to Become a Youth Health Ambassador",
               "তরুণ স্বাস্থ্যদূত বা ইয়ুথ হেলথ অ্যাম্বাসেডর হওয়ার যোগ্যতা এবং পদক্ষেপ",

@@ -13554,6 +13554,51 @@ figure.image-card {
   text-align: center;
 }
 
+/* Enhanced Title for Lesson 4 */
+.m9l-title-enhanced {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1f2937;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 0 28px 0;
+  padding: 20px 28px;
+  background-color: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(124, 58, 237, 0.06) 100%);
+  border-radius: 24px;
+  border-left: 8px solid #8b5cf6;
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.18);
+  line-height: 1.4;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.m9l-title-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 2.4rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.m9l-title-enhanced:hover .m9l-title-icon {
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.4);
+}
+
 .m9l-points-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -13887,6 +13932,70 @@ figure.image-card {
   .m9l-point-text {
     font-size: 0.7rem;
     line-height: 1.5;
+  }
+
+  /* Enhanced Title Responsive - Small Mobile */
+  .m9l-title-enhanced {
+    font-size: 1.4rem;
+    gap: 10px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-left: 6px solid #8b5cf6;
+  }
+
+  .m9l-title-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+  }
+}
+
+/* Enhanced Title Responsive Styles */
+@media (max-width: 767px) {
+  .m9l-title-enhanced {
+    font-size: 1.6rem;
+    gap: 12px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    border-left: 6px solid #8b5cf6;
+  }
+
+  .m9l-title-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .m9l-title-enhanced {
+    font-size: 1.9rem;
+    gap: 14px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    border-left: 7px solid #8b5cf6;
+  }
+
+  .m9l-title-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .m9l-title-enhanced {
+    font-size: 2.4rem;
+    gap: 18px;
+    padding: 20px 28px;
+    margin-bottom: 28px;
+    border-left: 8px solid #8b5cf6;
+  }
+
+  .m9l-title-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 2.4rem;
   }
 }
 
