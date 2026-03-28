@@ -15,7 +15,7 @@
   function writeFlag(flag) {
     try {
       // Write in the existing app.js format ('1'/'0') for compatibility
-      localStorage.setItem(STORAGE_KEY, flag ? "1" : "0");
+      localStorage.setItem(STORAGE_KEY, flag  ? "1" : "0");
     } catch (_) {}
   }
 
@@ -34,11 +34,11 @@
   };
 
   api.getLessonShellClass = function () {
-    return api.sidebarHidden ? "modules-collapsed" : "modules-expanded";
+    return api.sidebarHidden  ? "modules-collapsed" : "modules-expanded";
   };
 
   api.getLessonShellState = function () {
-    return api.sidebarHidden ? "collapsed" : "expanded";
+    return api.sidebarHidden  ? "collapsed" : "expanded";
   };
 
   // Optional: apply classes/attributes to a given shell element immediately
@@ -73,21 +73,21 @@
   if (typeof global.yhLang === "function") return;
 
   const encodeAttr = (value) =>
-    String(value ?? "")
+    String(value  ?? "")
       .replace(/&/g, "&amp;")
       .replace(/"/g, "&quot;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
 
   const encodeHtml = (value) =>
-    String(value ?? "")
+    String(value  ?? "")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
 
   global.yhLang = function yhLang(enText, bnText) {
     const enSafe = encodeAttr(enText);
-    const bnSafe = encodeAttr(bnText != null ? bnText : enText);
+    const bnSafe = encodeAttr(bnText != null  ? bnText : enText);
     const fallback = encodeHtml(enText);
     return `<lang en="${enSafe}" bn="${bnSafe}">${fallback}</lang>`;
   };
@@ -108,7 +108,7 @@ const coursesData = [
     duration: yhLang("10 Lessons", "১০টি পাঠ"),
     level: yhLang("Comprehensive", "সমন্বিত"),
     imageUrl:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac ?w=800&q=80",
     enrolled: 0,
     // Chapterized structure
     chapters: [
@@ -135,8 +135,8 @@ const coursesData = [
                 {
                   id: "q1a",
                   question: yhLang(
-                    "What age range defines youth according to the UN?",
-                    "জাতিসংঘের মতে কোন বয়সসীমাকে যুব বলা হয়?",
+                    "What age range defines youth according to the UN ?",
+                    "জাতিসংঘের মতে কোন বয়সসীমাকে যুব বলা হয় ?",
                   ),
                   options: [
                     yhLang("15–24 years", "১৫–২৪ বছর"),
@@ -239,8 +239,8 @@ const coursesData = [
                 {
                   id: "q1a-yhap",
                   question: yhLang(
-                    "Who jointly initiated the YHAP?",
-                    "YHAP কে যৌথভাবে উদ্যোগ নিয়েছে?",
+                    "Who jointly initiated the YHAP ?",
+                    "YHAP কে যৌথভাবে উদ্যোগ নিয়েছে ?",
                   ),
                   options: [
                     yhLang("Ministry of Health and UNICEF", "স্বাস্থ্য মন্ত্রণালয় ও UNICEF"),
@@ -341,8 +341,8 @@ const coursesData = [
                 {
                   id: "q1a-ages-1",
                   question: yhLang(
-                    "Which range is considered Mid Adolescence?",
-                    "কোন বয়সসীমাকে মধ্য কৈশোর ধরা হয়?",
+                    "Which range is considered Mid Adolescence ?",
+                    "কোন বয়সসীমাকে মধ্য কৈশোর ধরা হয় ?",
                   ),
                   options: [
                     yhLang("10–13 years", "১০–১৩ বছর"),
@@ -396,8 +396,8 @@ const coursesData = [
                 {
                   id: "q1b",
                   question: yhLang(
-                    "Which pillar focuses on accurate messaging?",
-                    "কোন স্তম্ভ সঠিক বার্তা প্রচারে গুরুত্ব দেয়?",
+                    "Which pillar focuses on accurate messaging ?",
+                    "কোন স্তম্ভ সঠিক বার্তা প্রচারে গুরুত্ব দেয় ?",
                   ),
                   options: [
                     yhLang("Leadership", "নেতৃত্ব"),
@@ -503,8 +503,8 @@ const coursesData = [
           {
             id: "ch1-lesson-5",
             title: yhLang(
-              "Who Am I as a Health Ambassador?",
-              "স্বাস্থ্য দূত হিসেবে আমি কে?",
+              "Who Am I as a Health Ambassador ?",
+              "স্বাস্থ্য দূত হিসেবে আমি কে ?",
             ),
             icon: "fa-user-shield",
             gradientClass: "bg-gradient-teal",
@@ -515,8 +515,8 @@ const coursesData = [
                 {
                   id: "q1c",
                   question: yhLang(
-                    "Advocacy includes engaging which stakeholders?",
-                    "অ্যাডভোকেসিতে কোন অংশীদারদের সম্পৃক্ত করা হয়?",
+                    "Advocacy includes engaging which stakeholders ?",
+                    "অ্যাডভোকেসিতে কোন অংশীদারদের সম্পৃক্ত করা হয় ?",
                   ),
                   options: [
                     yhLang("Only peers", "শুধু সহপাঠী"),
@@ -535,7 +535,7 @@ const coursesData = [
               return `
           <div class="lesson-slide">
             <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">${yhLang("Roles and Responsibilities of Health Ambassador", "স্বাস্থ্য দূতের ভূমিকা ও দায়িত্ব")}</h2>
-            <h3 class="text-center mb-4 gradient-text hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">${yhLang("Who am I?", "আমি কে?")}</h3>
+            <h3 class="text-center mb-4 gradient-text hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="50">${yhLang("Who am I ?", "আমি কে ?")}</h3>
             <div class="row g-4">${[
               {
                 icon: "fa-shield-heart",
@@ -573,7 +573,7 @@ const coursesData = [
                   ["teal", "orange", "green", "pink"][i]
                 }"
                  data-aos="${
-                   i % 2 ? "fade-left" : "fade-right"
+                   i % 2  ? "fade-left" : "fade-right"
                  }" data-aos-delay="${100 + i * 50}">
                   <div class="role-icon animate-float"><i class="fas ${
                     f.icon
@@ -603,8 +603,8 @@ const coursesData = [
                 {
                   id: "q1d",
                   question: yhLang(
-                    "Which step confirms identity?",
-                    "কোন ধাপ পরিচয় নিশ্চিত করে?",
+                    "Which step confirms identity ?",
+                    "কোন ধাপ পরিচয় নিশ্চিত করে ?",
                   ),
                   options: [
                     yhLang("Registration", "নিবন্ধন"),
@@ -738,8 +738,8 @@ const coursesData = [
                 {
                   id: "q1g",
                   question: yhLang(
-                    "What is health according to WHO?",
-                    "WHO অনুযায়ী স্বাস্থ্য কী?",
+                    "What is health according to WHO ?",
+                    "WHO অনুযায়ী স্বাস্থ্য কী ?",
                   ),
                   options: [
                     yhLang("Absence of disease only", "শুধু রোগের অনুপস্থিতি"),
@@ -848,7 +848,7 @@ const coursesData = [
           //   icon: 'fa-earth-americas',
           //   gradientClass: 'bg-gradient-green',
           //   audioFile: '5.mp3',
-          //   quiz: { passingScore: 80, questions: [{ id:'q1e', question: 'Approximate share of young living in developing countries?', options:['30%','50%','70%','90%'], correctAnswer:3 }] },
+          //   quiz: { passingScore: 80, questions: [{ id:'q1e', question: 'Approximate share of young living in developing countries ?', options:['30%','50%','70%','90%'], correctAnswer:3 }] },
           //   content: (function(){ return `
           // <div class="lesson-slide">
           //   <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base" data-aos="fade-up">Distribution of Young People</h2>
@@ -884,8 +884,8 @@ const coursesData = [
                 {
                   id: "q1h",
                   question: yhLang(
-                    "Which is a core component of YHAP?",
-                    "ওয়াইএইচএপির মূল উপাদান কোনটি?",
+                    "Which is a core component of YHAP ?",
+                    "ওয়াইএইচএপির মূল উপাদান কোনটি ?",
                   ),
                   options: [
                     yhLang("Health Literacy", "স্বাস্থ্য সাক্ষরতা"),
@@ -1032,6 +1032,108 @@ const coursesData = [
                 </div>
               </div>`;
             })(),
+          },
+          // Role and Responsibility of Youth Health Ambassador
+          {
+            id: "ch1-lesson-9",
+            title: yhLang(
+              "Role and Responsibility of Youth Health Ambassador - Who Am I ",
+              "স্বাস্থ্য দূতের (ইয়ুথ হেলথ অ্যাম্বাসেডর) ভূমিকা এবং দায়িত্ব - আমি কে ?",
+            ),
+            icon: "fa-person-circle-check",
+            gradientClass: "bg-gradient-purple",
+            audioFile: "",
+            quiz: {
+              passingScore: 75,
+              questions: [
+                {
+                  id: "q1i",
+                  question: yhLang(
+                    "What is a primary responsibility of a Youth Health Ambassador ?",
+                    "ইয়ুথ হেলথ অ্যাম্বাসেডরের প্রধান দায়িত্ব কী ?",
+                  ),
+                  options: [
+                    yhLang("Sharing health knowledge with peers", "সহপাঠীদের সাথে স্বাস্থ্য জ্ঞান ভাগ করা"),
+                    yhLang("Advocacy for youth health policies", "তরুণদের স্বাস্থ্য নীতির জন্য অ্যাডভোকেসি"),
+                    yhLang("Community engagement and empowerment", "সম্প্রদায়ের সম্পৃক্ততা এবং ক্ষমতায়ন"),
+                    yhLang("All of the above", "উপরের সব"),
+                  ],
+                  correctAnswer: 3,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+              <div class="lesson-slide m9l-slide">
+                <h2 class="slide-title m9l-title" data-aos="fade-up"><i class="fa-solid fa-person-circle-check me-2"></i>${yhLang("Role and Responsibility of Youth Health Ambassador - Who Am I ?", "স্বাস্থ্য দূতের (ইয়ুথ হেলথ অ্যাম্বাসেডর) ভূমিকা এবং দায়িত্ব - আমি কে ?")}</h2>
+                
+                <div class="m9l-points-container">
+                  ${(() => {
+                    const points = [
+                      {
+                        id: "knowledge-skills",
+                        icon: "fa-brain",
+                        title: yhLang("Knowledge & Skills", "জ্ঞান এবং দক্ষতা"),
+                        text: yhLang(
+                          "I have knowledge and skills to protect the health and well-being of young people, which enables me to make effective contributions to society and achieve health, social, and economic benefits.",
+                          "তরুণদের স্বাস্থ্য ও সুস্থতা রক্ষায় আমার জ্ঞান ও দক্ষতা আছে, যা আমাকে সমাজে কার্যকর অবদান রাখতে ও স্বাস্থ্য, সামাজিক ও অর্থনৈতিক ত্রি-মুখী সুফল অর্জনে সহায়তা করে।",
+                        ),
+                        color: "rose",
+                        delay: 150,
+                      },
+                      {
+                        id: "knowledge-sharing",
+                        icon: "fa-share-nodes",
+                        title: yhLang("Knowledge Sharing & Empowerment", "জ্ঞান ভাগাভাগি এবং ক্ষমতায়ন"),
+                        text: yhLang(
+                          "By sharing knowledge about health development, disease prevention, and overall well-being, I empower my peers and help young people make informed health decisions.",
+                          "আমি স্বাস্থ্য উন্নয়ন, রোগ প্রতিরোধ ও সামগ্রিক সুস্থতা নিয়ে জ্ঞান ভাগ করে আমি সহপাঠীদের ক্ষমতায়িত করি এবং তরুণদের সুচিন্তিত সিদ্ধান্ত গ্রহণে সহায়তা করি।",
+                        ),
+                        color: "emerald",
+                        delay: 200,
+                      },
+                      {
+                        id: "advocacy",
+                        icon: "fa-flag",
+                        title: yhLang("Advocacy & Engagement", "অ্যাডভোকেসি এবং সম্পৃক্ততা"),
+                        text: yhLang(
+                          "Through advocacy, I engage policymakers, partners, and community influencers to ensure youth health is prioritized and supportive policies and coordinated actions are implemented.",
+                          "অ্যাডভোকেসির মাধ্যমে নীতিনির্ধারক, অংশীদার ও সম্প্রদায়ের প্রভাবশালীদের সম্পৃক্ত করি যাতে তরুণদের স্বাস্থ্য অগ্রাধিকার পায় ও সহায়ক নীতি ও সমন্বিত পদক্ষেপ নিশ্চিত হয়।",
+                        ),
+                        color: "sapphire",
+                        delay: 250,
+                      },
+                      {
+                        id: "community",
+                        icon: "fa-people-group",
+                        title: yhLang("Community Role", "সম্প্রদায়ের ভূমিকা"),
+                        text: yhLang(
+                          "I play a role in creating demand and fostering needs awareness within the youth community, ensuring collective efforts for improved health outcomes for all young people.",
+                          "আমি যুব সম্প্রদায়ের মধ্যে ও চাহিদা সৃষ্টিতে ভূমিকা রাখি, যাতে সবাই মিলে তরুন-তরুনীদের উন্নত স্বাস্থ্যফল নিশ্চিত করতে পারে।",
+                        ),
+                        color: "tangerine",
+                        delay: 300,
+                      },
+                    ];
+                    return points
+                      .map(
+                        (point) => `
+                      <div class="m9l-point-card m9l-point-${point.color} hover-lift-md transition-base" data-aos="fade-up" data-aos-delay="${point.delay}">
+                        <div class="m9l-point-icon">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m9l-point-content">
+                          <h3 class="m9l-point-title">${point.title}</h3>
+                          <p class="m9l-point-text">${point.text}</p>
+                        </div>
+                      </div>
+                    `,
+                      )
+                      .join("");
+                  })()}
+                </div>
+              </div>`;
+            })(),
           }
         ],
       },
@@ -1057,8 +1159,8 @@ const coursesData = [
                 {
                   id: "q2a",
                   question: yhLang(
-                    "What percentage of the world’s youth live in developing countries?",
-                    "বিশ্বের তরুণদের কত শতাংশ উন্নয়নশীল দেশে বাস করে?",
+                    "What percentage of the world’s youth live in developing countries ?",
+                    "বিশ্বের তরুণদের কত শতাংশ উন্নয়নশীল দেশে বাস করে ?",
                   ),
                   options: [
                     yhLang("90%", "৯০%"),
@@ -1148,8 +1250,8 @@ const coursesData = [
           {
             id: "ch2-lesson-2",
             title: yhLang(
-              "Why young people’s health and wellbeing is important?",
-              "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ?",
+              "Why young people’s health and wellbeing is important ?",
+              "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ ?",
             ),
             icon: "fa-heart-pulse",
             gradientClass: "bg-gradient-green",
@@ -1161,7 +1263,7 @@ const coursesData = [
                   id: "q2b",
                   question: yhLang(
                     "Investments in adolescents yield a…",
-                    "তারুণ্যে বিনিয়োগ করলে কী ধরনের ফল পাওয়া যায়?",
+                    "তারুণ্যে বিনিয়োগ করলে কী ধরনের ফল পাওয়া যায় ?",
                   ),
                   options: [
                     yhLang("Single benefit", "একটি সুফল"),
@@ -1176,7 +1278,7 @@ const coursesData = [
             content: (function () {
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Why young people’s health and wellbeing is important?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ?")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Why young people’s health and wellbeing is important ?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ ?")}</h2>
                 <div class="row g-1">
                     <div class="col-md-5">
                         <h5 class="mt-2 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "বর্তমান প্রজন্মের ১০-২৪ বছর বয়সীদের উপর বিনিয়োগ তিনগুণ লাভজনক")}</h5>
@@ -1439,8 +1541,8 @@ const coursesData = [
                 {
                   id: "q2c-bd",
                   question: yhLang(
-                    "Among Bangladeshi adolescent males (10–19), which is a leading cause of death?",
-                    "বাংলাদেশি কৈশোর বয়সী ছেলেদের (১০–১৯) মৃত্যুর প্রধান কারণ কোনটি?",
+                    "Among Bangladeshi adolescent males (10–19), which is a leading cause of death ?",
+                    "বাংলাদেশি কৈশোর বয়সী ছেলেদের (১০–১৯) মৃত্যুর প্রধান কারণ কোনটি ?",
                   ),
                   options: [
                     yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
@@ -1669,7 +1771,7 @@ const coursesData = [
                   id: "q2d",
                   question: yhLang(
                     "Ending child marriage helps protect…",
-                    "বাল্যবিবাহ বন্ধ করলে কী সুরক্ষিত হয়?",
+                    "বাল্যবিবাহ বন্ধ করলে কী সুরক্ষিত হয় ?",
                   ),
                   options: [
                     yhLang("Education and health", "শিক্ষা ও স্বাস্থ্য"),
@@ -1784,8 +1886,8 @@ const coursesData = [
                 {
                   id: "q2f",
                   question: yhLang(
-                    "What percentage of adolescents suffer from mental health issues?",
-                    "কত শতাংশ কিশোর-কিশোরী মানসিক স্বাস্থ্যগত সমস্যায় ভুগছে?",
+                    "What percentage of adolescents suffer from mental health issues ?",
+                    "কত শতাংশ কিশোর-কিশোরী মানসিক স্বাস্থ্যগত সমস্যায় ভুগছে ?",
                   ),
                   options: [
                     yhLang("13.4%", "১৩.৪%"),
@@ -1919,7 +2021,7 @@ const coursesData = [
                   id: "q2e",
                   question: yhLang(
                     "Determinants include…",
-                    "নির্ধারকগুলো কী কী অন্তর্ভুক্ত করে?",
+                    "নির্ধারকগুলো কী কী অন্তর্ভুক্ত করে ?",
                   ),
                   options: [
                     yhLang("Only nutrition", "শুধু পুষ্টি"),
@@ -2125,8 +2227,8 @@ const coursesData = [
           {
             id: "ch2-lesson-8",
             title: yhLang(
-              "Why young people need special care?",
-              "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন?",
+              "Why young people need special care ?",
+              "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন ?",
             ),
             icon: "fa-user-nurse",
             gradientClass: "bg-gradient-teal",
@@ -2138,7 +2240,7 @@ const coursesData = [
                   id: "q2f",
                   question: yhLang(
                     "Adolescent services should be…",
-                    "কৈশোরবান্ধব সেবা কেমন হওয়া উচিত?",
+                    "কৈশোরবান্ধব সেবা কেমন হওয়া উচিত ?",
                   ),
                   options: [
                     yhLang("Judgmental", "বিচারমূলক"),
@@ -2326,7 +2428,7 @@ const coursesData = [
                   <div class="d-flex align-items-center gap-3">
                     <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group" style="color: #fff;"></i></span>
                     <div>
-                      <h2 class="">${yhLang("Why young people need special care?", "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন?")}</h2>
+                      <h2 class="">${yhLang("Why young people need special care ?", "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন ?")}</h2>
                     </div>
                   </div>
                 </div>
@@ -2369,7 +2471,7 @@ const coursesData = [
               questions: [
                 {
                   id: "q2g",
-                  question: "Young health impacts how many SDGs?",
+                  question: "Young health impacts how many SDGs ?",
                   options: ["Only 1", "Several", "None", "Unknown"],
                   correctAnswer: 1,
                 },
@@ -2458,8 +2560,8 @@ const coursesData = [
                 {
                   id: "q2h",
                   question: yhLang(
-                    "Put whom at the center of design?",
-                    "ডিজাইনের কেন্দ্রবিন্দুতে কাকে রাখতে হবে?",
+                    "Put whom at the center of design ?",
+                    "ডিজাইনের কেন্দ্রবিন্দুতে কাকে রাখতে হবে ?",
                   ),
                   options: [
                     yhLang("Providers", "সেবা প্রদানকারী"),
@@ -2620,7 +2722,7 @@ const coursesData = [
                   id: "q2j",
                   question: yhLang(
                     "Bangladesh invests in adolescent health via…",
-                    "বাংলাদেশ কীভাবে কৈশোরস্বাস্থ্যে বিনিয়োগ করে?",
+                    "বাংলাদেশ কীভাবে কৈশোরস্বাস্থ্যে বিনিয়োগ করে ?",
                   ),
                   options: [
                     yhLang(
@@ -2859,8 +2961,8 @@ const coursesData = [
                 {
                   id: "q3b",
                   question: yhLang(
-                    "Which is a mental change during adolescence?",
-                    "বয়ঃসন্ধিকালে কোনটি মানসিক পরিবর্তন?"
+                    "Which is a mental change during adolescence ?",
+                    "বয়ঃসন্ধিকালে কোনটি মানসিক পরিবর্তন ?"
                   ),
                   options: [
                     yhLang(
@@ -3020,8 +3122,8 @@ const coursesData = [
                 {
                   id: "q3c",
                   question: yhLang(
-                    "At what age does abstract thinking become more developed?",
-                    "কোন বয়সে বিমূর্ত চিন্তাধারা আরও বিকশিত হয়?"
+                    "At what age does abstract thinking become more developed ?",
+                    "কোন বয়সে বিমূর্ত চিন্তাধারা আরও বিকশিত হয় ?"
                   ),
                   options: [
                     yhLang("15-17 years", "১৫-১৭ বছর"),
@@ -3294,8 +3396,8 @@ const coursesData = [
                 {
                   id: "q4f",
                   question: yhLang(
-                    "What is the primary function of the uterus?",
-                    "জরায়ুর প্রথম ও প্রধান কাজ কী?",
+                    "What is the primary function of the uterus ?",
+                    "জরায়ুর প্রথম ও প্রধান কাজ কী ?",
                   ),
                   options: [
                     yhLang(
@@ -3421,8 +3523,8 @@ const coursesData = [
                 {
                   id: "q4g",
                   question: yhLang(
-                    "At what age does menstruation typically start?",
-                    "ঋতুস্রাব সাধারণত কত বয়সে শুরু হয়?",
+                    "At what age does menstruation typically start ?",
+                    "ঋতুস্রাব সাধারণত কত বয়সে শুরু হয় ?",
                   ),
                   options: [
                     yhLang(
@@ -3547,8 +3649,8 @@ const coursesData = [
                 {
                   id: "q4h",
                   question: yhLang(
-                    "How often should you change a sanitary napkin during menstruation?",
-                    "মাসিকের সময় স্যানিটারি ন্যাপকিন কতবার বদলাতে হয়?",
+                    "How often should you change a sanitary napkin during menstruation ?",
+                    "মাসিকের সময় স্যানিটারি ন্যাপকিন কতবার বদলাতে হয় ?",
                   ),
                   options: [
                     yhLang(
@@ -3680,8 +3782,8 @@ const coursesData = [
                 {
                   id: "q4i",
                   question: yhLang(
-                    "Who has an important role in supporting girls during menstruation?",
-                    "মাসিক ব্যবস্থাপনায় মেয়েদের সাপোর্ট দেওয়ার ক্ষেত্রে কার গুরুত্বপূর্ণ ভূমিকা আছে?",
+                    "Who has an important role in supporting girls during menstruation ?",
+                    "মাসিক ব্যবস্থাপনায় মেয়েদের সাপোর্ট দেওয়ার ক্ষেত্রে কার গুরুত্বপূর্ণ ভূমিকা আছে ?",
                   ),
                   options: [
                     yhLang(
@@ -3953,8 +4055,8 @@ const coursesData = [
                 {
                   id: "q4j",
                   question: yhLang(
-                    "What does menstrual stoppage might indicate?",
-                    "মাসিক বন্ধ হওয়া কী নির্দেশ করতে পারে?",
+                    "What does menstrual stoppage might indicate ?",
+                    "মাসিক বন্ধ হওয়া কী নির্দেশ করতে পারে ?",
                   ),
                   options: [
                     yhLang(
@@ -4159,8 +4261,8 @@ const coursesData = [
                 {
                   id: "q5c",
                   question: yhLang(
-                    "What is the main function of the testes?",
-                    "টেস্টিসের প্রধান কাজ কী?",
+                    "What is the main function of the testes ?",
+                    "টেস্টিসের প্রধান কাজ কী ?",
                   ),
                   options: [
                     yhLang(
@@ -4283,8 +4385,8 @@ const coursesData = [
                 {
                   id: "q5d",
                   question: yhLang(
-                    "What should you do after experiencing a wet dream?",
-                    "স্বপ্নদোষের পর আপনি কি করবেন?",
+                    "What should you do after experiencing a wet dream ?",
+                    "স্বপ্নদোষের পর আপনি কি করবেন ?",
                   ),
                   options: [
                     yhLang(
@@ -4526,8 +4628,8 @@ const coursesData = [
                 {
                   id: "q6e",
                   question: yhLang(
-                    "What is the legal minimum age for marriage in Bangladesh?",
-                    "বাংলাদেশে বিয়ের আইনি ন্যূনতম বয়স কত?"
+                    "What is the legal minimum age for marriage in Bangladesh ?",
+                    "বাংলাদেশে বিয়ের আইনি ন্যূনতম বয়স কত ?"
                   ),
                   options: [
                     yhLang("Girls: 18, Boys: 21", "মেয়ে: ১৮, ছেলে: ২১"),
@@ -4611,8 +4713,8 @@ const coursesData = [
                 {
                   id: "q6f",
                   question: yhLang(
-                    "What is a major cause of child marriage?",
-                    "বাল্যবিবাহের প্রধান কারণ কী?"
+                    "What is a major cause of child marriage ?",
+                    "বাল্যবিবাহের প্রধান কারণ কী ?"
                   ),
                   options: [
                     yhLang(
@@ -4699,8 +4801,8 @@ const coursesData = [
                 {
                   id: "q6g",
                   question: yhLang(
-                    "What are the health consequences of child marriage?",
-                    "বাল্যবিবাহের স্বাস্থ্যগত পরিণতি কী?"
+                    "What are the health consequences of child marriage ?",
+                    "বাল্যবিবাহের স্বাস্থ্যগত পরিণতি কী ?"
                   ),
                   options: [
                     yhLang(
@@ -4826,8 +4928,8 @@ const coursesData = [
                 {
                   id: "q6h",
                   question: yhLang(
-                    "What are key prevention strategies for child marriage?",
-                    "বাল্যবিবাহ প্রতিরোধের মূল কৌশল কী?"
+                    "What are key prevention strategies for child marriage ?",
+                    "বাল্যবিবাহ প্রতিরোধের মূল কৌশল কী ?"
                   ),
                   options: [
                     yhLang(
@@ -4984,8 +5086,8 @@ const coursesData = [
                 {
                   id: "q7c",
                   question: yhLang(
-                    "Which family planning methods are permanent?",
-                    "কোন পরিবার পরিকল্পনা পদ্ধতিগুলি স্থায়ী?"
+                    "Which family planning methods are permanent ?",
+                    "কোন পরিবার পরিকল্পনা পদ্ধতিগুলি স্থায়ী ?"
                   ),
                   options: [
                     yhLang(
@@ -5152,8 +5254,8 @@ const coursesData = [
                 {
                   id: "q7d",
                   question: yhLang(
-                    "Which methods are suitable for couples with 2+ children?",
-                    "দুই বা তার বেশি সন্তান আছে এমন দম্পতিদের জন্য কোন পদ্ধতিগুলি উপযুক্ত?"
+                    "Which methods are suitable for couples with 2+ children ?",
+                    "দুই বা তার বেশি সন্তান আছে এমন দম্পতিদের জন্য কোন পদ্ধতিগুলি উপযুক্ত ?"
                   ),
                   options: [
                     yhLang("All methods are available", "সব পদ্ধতি উপলব্ধ"),
@@ -5339,8 +5441,8 @@ const coursesData = [
                 {
                   id: "q8f",
                   question: yhLang(
-                    "What are the main risks of adolescent pregnancy?",
-                    "তারুণ্যেগর্ভধারণের প্রধান ঝুঁকিগুলি কী?",
+                    "What are the main risks of adolescent pregnancy ?",
+                    "তারুণ্যেগর্ভধারণের প্রধান ঝুঁকিগুলি কী ?",
                   ),
                   options: [
                     yhLang(
@@ -5576,8 +5678,8 @@ const coursesData = [
                 {
                   id: "q8c",
                   question: yhLang(
-                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?",
-                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত?",
+                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত ?",
+                    "গর্ভকালীন বিপদচিহ্ন দেখা দিলে কী করা উচিত ?",
                   ),
                   options: [
                     yhLang(
@@ -5710,7 +5812,7 @@ const coursesData = [
                           </div>
                           <h3 class="ch8l8-point-title">${point.title}</h3>
                         </div>
-                        ${hasSubPoints ? `
+                        ${hasSubPoints  ? `
                           <ul class="ch8l8-subpoints-list">
                             ${point.subPoints.map((subPoint, subIdx) => `
                               <li class="ch8l8-subpoint-item" data-aos="fade-right" data-aos-delay="${100 + idx * 100 + subIdx * 40}">
@@ -5763,8 +5865,8 @@ const coursesData = [
                 {
                   id: "q8i",
                   question: yhLang(
-                    "How many postpartum check-ups are recommended?",
-                    "কতটি প্রসব পরবর্তী চেকআপ সুপারিশ করা হয়?"
+                    "How many postpartum check-ups are recommended ?",
+                    "কতটি প্রসব পরবর্তী চেকআপ সুপারিশ করা হয় ?"
                   ),
                   options: [
                     yhLang("4 check-ups", "৪টি চেকআপ"),
@@ -5890,8 +5992,8 @@ const coursesData = [
                 {
                   id: "q9d",
                   question: yhLang(
-                    "How can RTIs be transmitted?",
-                    "প্রজননতন্ত্রের সংক্রমণ কীভাবে ছড়ায়?",
+                    "How can RTIs be transmitted ?",
+                    "প্রজননতন্ত্রের সংক্রমণ কীভাবে ছড়ায় ?",
                   ),
                   options: [
                     yhLang(
@@ -6008,8 +6110,8 @@ const coursesData = [
                 {
                   id: "q9b",
                   question: yhLang(
-                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?",
-                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি?",
+                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি ?",
+                    "যৌনবাহিত রোগের ঝুঁকি কমাতে কী জরুরি ?",
                   ),
                   options: [
                     yhLang("সচেতনতা ও নিরাপদ আচরণ", "সচেতনতা ও নিরাপদ আচরণ"),
@@ -6050,8 +6152,8 @@ const coursesData = [
                 {
                   id: "q9e",
                   question: yhLang(
-                    "What is the recommended practice for screening and managing STIs in youth?",
-                    "তরুন-তরুনীদের মধ্যে যৌনবাহিত সংক্রমণ শনাক্ত ও চিকিৎসার সুপারিশকৃত পদ্ধতি কী?",
+                    "What is the recommended practice for screening and managing STIs in youth ?",
+                    "তরুন-তরুনীদের মধ্যে যৌনবাহিত সংক্রমণ শনাক্ত ও চিকিৎসার সুপারিশকৃত পদ্ধতি কী ?",
                   ),
                   options: [
                     yhLang(
@@ -6156,8 +6258,8 @@ const coursesData = [
                 {
                   id: "q10c",
                   question: yhLang(
-                    "How long can HIV remain dormant in the body?",
-                    "এইচআইভি কত সময় পর্যন্ত মানবদেহে সুপ্ত অবস্থায় থাকতে পারে?",
+                    "How long can HIV remain dormant in the body ?",
+                    "এইচআইভি কত সময় পর্যন্ত মানবদেহে সুপ্ত অবস্থায় থাকতে পারে ?",
                   ),
                   options: [
                     yhLang("2-10 years", "२-१० বছर"),
@@ -6215,8 +6317,8 @@ const coursesData = [
                 {
                   id: "q10d",
                   question: yhLang(
-                    "What is the HIV window period?",
-                    "এইচআইভি উইন্ডো পিরিয়ড কী?",
+                    "What is the HIV window period ?",
+                    "এইচআইভি উইন্ডো পিরিয়ড কী ?",
                   ),
                   options: [
                     yhLang(
@@ -6342,8 +6444,8 @@ const coursesData = [
                 {
                   id: "q11d",
                   question: yhLang(
-                    "What is the main cause of cervical cancer?",
-                    "জরায়ুমুখ ক্যান্সারের প্রধান কারণ কী?"
+                    "What is the main cause of cervical cancer ?",
+                    "জরায়ুমুখ ক্যান্সারের প্রধান কারণ কী ?"
                   ),
                   options: [
                     yhLang("Human Papillomavirus (HPV)", "হিউম্যান প্যাপিলোমা ভাইরাস"),
@@ -6436,8 +6538,8 @@ const coursesData = [
                 {
                   id: "q11e",
                   question: yhLang(
-                    "How many doses of HPV vaccine are recommended?",
-                    "এইচপিভি টিকার কতটি ডোজ সুপারিশ করা হয়?"
+                    "How many doses of HPV vaccine are recommended ?",
+                    "এইচপিভি টিকার কতটি ডোজ সুপারিশ করা হয় ?"
                   ),
                   options: [
                     yhLang("One dose", "এক ডোজ"),
@@ -6559,8 +6661,8 @@ const coursesData = [
                 {
                   id: "q11td1",
                   question: yhLang(
-                    "How many doses of TD vaccine does a woman need in her lifetime?",
-                    "সারাজীবনে একজন নারীকে কতটি ডোজ টিডি টিকা নিতে হয়?",
+                    "How many doses of TD vaccine does a woman need in her lifetime ?",
+                    "সারাজীবনে একজন নারীকে কতটি ডোজ টিডি টিকা নিতে হয় ?",
                   ),
                   options: [
                     yhLang("3 doses", "৩ ডোজ"),
@@ -6710,8 +6812,8 @@ const coursesData = [
                 {
                   id: "q12a",
                   question: yhLang(
-                    "What is PCOS?",
-                    "পিসিওএস কি?"
+                    "What is PCOS ?",
+                    "পিসিওএস কি ?"
                   ),
                   options: [
                     yhLang("A hormonal disorder affecting the ovaries", "ডিম্বাশয়কে প্রভাবিত করে এমন একটি হরমোনাল বিকার"),
@@ -6801,8 +6903,8 @@ const coursesData = [
                 {
                   id: "q12b",
                   question: yhLang(
-                    "Which is a common symptom of PCOS?",
-                    "পিসিওএস-এর একটি সাধারণ উপসর্গ কোনটি?"
+                    "Which is a common symptom of PCOS ?",
+                    "পিসিওএস-এর একটি সাধারণ উপসর্গ কোনটি ?"
                   ),
                   options: [
                     yhLang("Irregular menstrual periods", "অনিয়মিত মাসিক"),
@@ -6880,8 +6982,8 @@ const coursesData = [
                 {
                   id: "q12c",
                   question: yhLang(
-                    "What helps manage PCOS symptoms?",
-                    "পিসিওএস নিয়ন্ত্রণে কোনটি সাহায্য করে?"
+                    "What helps manage PCOS symptoms ?",
+                    "পিসিওএস নিয়ন্ত্রণে কোনটি সাহায্য করে ?"
                   ),
                   options: [
                     yhLang("Regular exercise and balanced diet", "নিয়মিত ব্যায়াম এবং সুষম খাবার"),
@@ -6967,8 +7069,8 @@ const coursesData = [
                 {
                   id: "q12d",
                   question: yhLang(
-                    "What is the first step in PCOS management?",
-                    "পিসিওএস ব্যবস্থাপনায় প্রথম ধাপ কী?"
+                    "What is the first step in PCOS management ?",
+                    "পিসিওএস ব্যবস্থাপনায় প্রথম ধাপ কী ?"
                   ),
                   options: [
                     yhLang("Lifestyle changes and healthy habits", "জীবনযাত্রার পরিবর্তন এবং স্বাস্থ্যকর অভ্যাস"),
@@ -7019,8 +7121,8 @@ const coursesData = [
                 {
                   id: "q12e",
                   question: yhLang(
-                    "What is the basis of human rights declaration?",
-                    "মানবাধিকারের ভিত্তি কী?"
+                    "What is the basis of human rights declaration ?",
+                    "মানবাধিকারের ভিত্তি কী ?"
                   ),
                   options: [
                     yhLang("Equality, dignity, freedom, peace and justice", "সমতা, মর্যাদা, স্বাধীনতা, শান্তি এবং ন্যায়"),
@@ -7127,8 +7229,8 @@ const coursesData = [
                 {
                   id: "q12f",
                   question: yhLang(
-                    "What is child abuse?",
-                    "শিশু নির্যাতন কি?"
+                    "What is child abuse ?",
+                    "শিশু নির্যাতন কি ?"
                   ),
                   options: [
                     yhLang("Any harm or mistreatment of a child", "শিশুর প্রতি যেকোনো ক্ষতি বা দুর্ব্যবহার"),
@@ -7163,8 +7265,8 @@ const coursesData = [
                 {
                   id: "q12g",
                   question: yhLang(
-                    "Why is reproductive health important for adolescents?",
-                    "কিশোর-কিশোরীদের জন্য প্রজনন স্বাস্থ্য কেন গুরুত্বপূর্ণ?",
+                    "Why is reproductive health important for adolescents ?",
+                    "কিশোর-কিশোরীদের জন্য প্রজনন স্বাস্থ্য কেন গুরুত্বপূর্ণ ?",
                   ),
                   options: [
                     yhLang(
@@ -7292,8 +7394,8 @@ const coursesData = [
                 {
                   id: "q13a",
                   question: yhLang(
-                    "Which statement best describes gender?",
-                    "জেন্ডারকে কীভাবে সংজ্ঞায়িত করা যায়?",
+                    "Which statement best describes gender ?",
+                    "জেন্ডারকে কীভাবে সংজ্ঞায়িত করা যায় ?",
                   ),
                   options: [
                     yhLang(
@@ -7424,8 +7526,8 @@ const sexPoints = [
                 {
                   id: "q13b",
                   question: yhLang(
-                    "What helps achieve gender equality?",
-                    "জেন্ডার সমতা অর্জনে কী সহায়ক?",
+                    "What helps achieve gender equality ?",
+                    "জেন্ডার সমতা অর্জনে কী সহায়ক ?",
                   ),
                   options: [
                     yhLang(
@@ -7553,8 +7655,8 @@ const sections = [
                 {
                   id: "q13c",
                   question: yhLang(
-                    "Which area shows gender bias in the examples?",
-                    "উদাহরণগুলোর কোনটি জেন্ডার বৈষম্যের দৃষ্টান্ত?",
+                    "Which area shows gender bias in the examples ?",
+                    "উদাহরণগুলোর কোনটি জেন্ডার বৈষম্যের দৃষ্টান্ত ?",
                   ),
                   options: [
                     yhLang(
@@ -7698,8 +7800,8 @@ const orbitItems = [
                 {
                   id: "q13d",
                   question: yhLang(
-                    "Which act falls under physical abuse?",
-                    "নিম্নের কোনটি শারীরিক নির্যাতনের উদাহরণ?",
+                    "Which act falls under physical abuse ?",
+                    "নিম্নের কোনটি শারীরিক নির্যাতনের উদাহরণ ?",
                   ),
                   options: [
                     yhLang("হত্যা বা মারধর", "হত্যা বা মারধর"),
@@ -7842,8 +7944,8 @@ const orbitItems = [
                 {
                   id: "q13e",
                   question: yhLang(
-                    "What is considered as sexual harassment according to the Supreme Court directive?",
-                    "সুপ্রীম কোর্টের নির্দেশনা অনুযায়ী নিম্নের কোনটি যৌন হয়রানির অন্তর্ভুক্ত?"
+                    "What is considered as sexual harassment according to the Supreme Court directive ?",
+                    "সুপ্রীম কোর্টের নির্দেশনা অনুযায়ী নিম্নের কোনটি যৌন হয়রানির অন্তর্ভুক্ত ?"
                   ),
                   options: [
                     yhLang("Unwanted sexual advances", "অনাকাঙ্ক্ষিত যৌন আবেদনমূলক আচরণ"),
@@ -8019,8 +8121,8 @@ const orbitItems = [
                 {
                   id: "q13f",
                   question: yhLang(
-                    "Which of the following is NOT considered as financial loss under the Supreme Court directive?",
-                    "সুপ্রীম কোর্টের নির্দেশনা অনুযায়ী নিম্নের কোনটি আর্থিক ক্ষতির অন্তর্ভুক্ত নয়?"
+                    "Which of the following is NOT considered as financial loss under the Supreme Court directive ?",
+                    "সুপ্রীম কোর্টের নির্দেশনা অনুযায়ী নিম্নের কোনটি আর্থিক ক্ষতির অন্তর্ভুক্ত নয় ?"
                   ),
                   options: [
                     yhLang("Demanding dowry", "যৌতুক দাবি করা"),
@@ -8101,7 +8203,7 @@ const orbitItems = [
                         <span class="ch13l6-li-icon"><i class="fa-solid ${point.icon}"></i></span>
                         <span class="ch13l6-li-text">
                           <strong style="font-size: 1rem;">${point.num})</strong> ${point.text}
-                          ${point.subPoints ? `
+                          ${point.subPoints  ? `
                             <ul class="ch13l6-sublist">
                               ${point.subPoints.map(subPoint => `
                                 <li class="ch13l6-subli">
@@ -8164,8 +8266,8 @@ const orbitItems = [
                 {
                   id: "q13g",
                   question: yhLang(
-                    "Which of the following is a key step to eliminate gender discrimination?",
-                    "নিম্নের কোনটি জেন্ডার বৈষম্য দূর করার জন্য প্রধান পদক্ষেপ?"
+                    "Which of the following is a key step to eliminate gender discrimination ?",
+                    "নিম্নের কোনটি জেন্ডার বৈষম্য দূর করার জন্য প্রধান পদক্ষেপ ?"
                   ),
                   options: [
                     yhLang("Creating awareness at all levels of society", "সমাজের সকল স্তরে সচেতনতার সৃষ্টি করা"),
@@ -8335,8 +8437,8 @@ const orbitItems = [
                 {
                   id: "q13h",
                   question: yhLang(
-                    "What is violence or abuse?",
-                    "সহিংসতা বা নির্যাতন কী?"
+                    "What is violence or abuse ?",
+                    "সহিংসতা বা নির্যাতন কী ?"
                   ),
                   options: [
                     yhLang("Intentional use of physical force that may cause harm or death", "শারীরিক শক্তির ইচ্ছাকৃত ব্যবহার যা ক্ষতি বা মৃত্যু ঘটাতে পারে"),
@@ -8352,7 +8454,7 @@ const orbitItems = [
               const sections = [
                 {
                   class_name: "sohingsota",
-                  title: yhLang("What is Violence or Abuse?", "সহিংসতা বা নির্যাতন কী?"),
+                  title: yhLang("What is Violence or Abuse ?", "সহিংসতা বা নির্যাতন কী ?"),
                   icon: "fa-shield-halved",
                   description: yhLang(
                     "Violence or abuse is the intentional use of physical force or power against oneself or another person, which may be threatened or actual. It can be directed against an individual or a group, resulting in injury, death, psychological harm, developmental impairment, or deprivation. Every 10 minutes, one adolescent girl dies due to violence worldwide.",
@@ -8598,8 +8700,8 @@ const orbitItems = [
                 {
                   id: "q13i",
                   question: yhLang(
-                    "Which of the following is a form of violence against youth?",
-                    "নিম্নলিখিত কোনটি তরুনদের প্রতি সহিংসতার একটি রূপ?"
+                    "Which of the following is a form of violence against youth ?",
+                    "নিম্নলিখিত কোনটি তরুনদের প্রতি সহিংসতার একটি রূপ ?"
                   ),
                   options: [
                     yhLang("All of the above", "উপরের সবগুলি"),
@@ -8856,8 +8958,8 @@ const orbitItems = [
                 {
                   id: "q14a",
                   question: yhLang(
-                    "Which factor strongly influences psychosocial change during adolescence?",
-                    "তারুন্য কালীনমনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে?",
+                    "Which factor strongly influences psychosocial change during adolescence ?",
+                    "তারুন্য কালীনমনোসামাজিক পরিবর্তনে কোন উপাদানটি বড় ভূমিকা রাখে ?",
                   ),
                   options: [
                     yhLang(
@@ -9123,8 +9225,8 @@ const orbitItems = [
                 {
                   id: "q14b",
                   question: yhLang(
-                    "Why is emotion management important in daily life?",
-                    "দৈনন্দিন জীবনে আবেগ ব্যবস্থাপনা কেন জরুরি?",
+                    "Why is emotion management important in daily life ?",
+                    "দৈনন্দিন জীবনে আবেগ ব্যবস্থাপনা কেন জরুরি ?",
                   ),
                   options: [
                     yhLang(
@@ -9259,8 +9361,8 @@ const orbitItems = [
                 {
                   id: "q14bx",
                   question: yhLang(
-                    "Which is a breathing-based emotion management technique?",
-                    "কোনটি শ্বাস-প্রশ্বাস ভিত্তিক আবেগ ব্যবস্থাপনার কৌশল?",
+                    "Which is a breathing-based emotion management technique ?",
+                    "কোনটি শ্বাস-প্রশ্বাস ভিত্তিক আবেগ ব্যবস্থাপনার কৌশল ?",
                   ),
                   options: [
                     yhLang(
@@ -9436,8 +9538,8 @@ const orbitItems = [
                 {
                   id: "q14c",
                   question: yhLang(
-                    "Why should adolescents address anxiety early?",
-                    "উদ্বেগ দ্রুত নিয়ন্ত্রণ করা কেন জরুরি?",
+                    "Why should adolescents address anxiety early ?",
+                    "উদ্বেগ দ্রুত নিয়ন্ত্রণ করা কেন জরুরি ?",
                   ),
                   options: [
                     yhLang(
@@ -9737,7 +9839,7 @@ const orbitItems = [
 
               const renderTableChip = (item) =>
                 item
-                  ? `<span class="m14l3-chip m14l3-${item.tone}"><i class="fa-solid ${item.icon}"></i><span>${item.text}</span></span>`
+                   ? `<span class="m14l3-chip m14l3-${item.tone}"><i class="fa-solid ${item.icon}"></i><span>${item.text}</span></span>`
                   : `<span class="m14l3-chip m14l3-empty">-</span>`;
 
               const renderSymptomRows = () => {
@@ -9841,8 +9943,8 @@ const orbitItems = [
                 {
                   id: "q14d",
                   question: yhLang(
-                    "What triggers stress according to the lesson?",
-                    "এই পাঠ অনুযায়ী মানসিক চাপ কীভাবে সৃষ্টি হয়?",
+                    "What triggers stress according to the lesson ?",
+                    "এই পাঠ অনুযায়ী মানসিক চাপ কীভাবে সৃষ্টি হয় ?",
                   ),
                   options: [
                     yhLang(
@@ -10138,8 +10240,8 @@ const orbitItems = [
                 {
                   id: "q14e",
                   question: yhLang(
-                    "Which environmental issue does the lesson highlight as a stressor?",
-                    "নিম্নের কোন পরিবেশগত বিষয়টি মানসিক চাপ সৃষ্টিকারী হিসেবে উল্লেখ করা হয়েছে?",
+                    "Which environmental issue does the lesson highlight as a stressor ?",
+                    "নিম্নের কোন পরিবেশগত বিষয়টি মানসিক চাপ সৃষ্টিকারী হিসেবে উল্লেখ করা হয়েছে ?",
                   ),
                   options: [
                     yhLang("শব্দদূষণ ও যানজট", "শব্দদূষণ ও যানজট"),
@@ -10398,8 +10500,8 @@ const orbitItems = [
                 {
                   id: "q14f",
                   question: yhLang(
-                    "Which type of anger signal includes rapid heartbeat and muscle tension?",
-                    "কোন ধরনের রাগের সংকেতে দ্রুত হৃদস্পন্দন ও মাংসপেশির টান দেখা যায়?",
+                    "Which type of anger signal includes rapid heartbeat and muscle tension ?",
+                    "কোন ধরনের রাগের সংকেতে দ্রুত হৃদস্পন্দন ও মাংসপেশির টান দেখা যায় ?",
                   ),
                   options: [
                     yhLang("শারীরিক সংকেত", "শারীরিক সংকেত"),
@@ -10682,8 +10784,8 @@ const orbitItems = [
                 {
                   id: "q14g",
                   question: yhLang(
-                    "Which situation from the lesson can quickly trigger anger?",
-                    "পাঠ অনুযায়ী কোন পরিস্থিতি আমাদের খুব সহজেই রাগান্বিত করতে পারে?",
+                    "Which situation from the lesson can quickly trigger anger ?",
+                    "পাঠ অনুযায়ী কোন পরিস্থিতি আমাদের খুব সহজেই রাগান্বিত করতে পারে ?",
                   ),
                   options: [
                     yhLang("সামাজিক সমর্থনের অভাব", "সামাজিক সমর্থনের অভাব"),
@@ -10957,8 +11059,8 @@ const orbitItems = [
                 {
                   id: "q14i",
                   question: yhLang(
-                    "Which of the following is a common symptom of exam fear?",
-                    "নিম্নের কোনটি পরীক্ষা-ভীতির সাধারণ উপসর্গ?",
+                    "Which of the following is a common symptom of exam fear ?",
+                    "নিম্নের কোনটি পরীক্ষা-ভীতির সাধারণ উপসর্গ ?",
                   ),
                   options: [
                     yhLang("বুক ধড়ফড় করা", "বুক ধড়ফড় করা"),
@@ -11195,8 +11297,8 @@ const orbitItems = [
                 {
                   id: "q14j",
                   question: yhLang(
-                    "Which strategy focuses on gathering accurate exam details?",
-                    "কোন কৌশলটি পরীক্ষার সঠিক তথ্য সংগ্রহের উপর জোর দেয়?",
+                    "Which strategy focuses on gathering accurate exam details ?",
+                    "কোন কৌশলটি পরীক্ষার সঠিক তথ্য সংগ্রহের উপর জোর দেয় ?",
                   ),
                   options: [
                     yhLang(
@@ -11233,7 +11335,7 @@ const orbitItems = [
           "পরিমিত ঘুম-৭/৮ ঘণ্টা, পুষ্টিকর খাবার খাওয়া, বেশি বেশি পানি পান করা, ব্যায়াম, খেলাধুলা ও বিনোদন-‘টিভি দেখা/গল্প করার সাথে জীবনযাপন করা।"
         );
             const intro6 = yhLang(
-  "First, identify the cause of the anxiety. Is it due to lack of preparation, or fear of what others might say if the result is poor? If worrying about others' opinions is the main reason, remember that exams are a normal part of life. Exams are closely connected with education, but a single exam never determines a person's entire success or failure in life. Therefore, it is important to develop a mindset that accepts exams as a natural part of life.",
+  "First, identify the cause of the anxiety. Is it due to lack of preparation, or fear of what others might say if the result is poor ? If worrying about others' opinions is the main reason, remember that exams are a normal part of life. Exams are closely connected with education, but a single exam never determines a person's entire success or failure in life. Therefore, it is important to develop a mindset that accepts exams as a natural part of life.",
   "প্রথমেই নির্ধারন করতে হবে দুঃশ্চিন্তার কারণ কি, এটা কি প্রয়োজনীয় প্রস্তুতির অভাবে, না ফলাফল খারাপ হলে অন্যরা কি বলবে এ কারণে। যদি অন্যরা কি বলবে এটা দুঃশ্চিন্তার প্রধান কারণ হয় তাহলে ভাবতে হবে জীবনে পরীক্ষা থাকবেই। পড়াশুনার সাথে পরীক্ষা ওতপ্রোতভাবে জড়িত। একটি পরীক্ষা কখনই পুরো জীবনের সফলতা বা ব্যর্থতা বর্ণনা করে না। পরীক্ষা বিষয় টিকে জীবনের একটি অংশ হিসেবে নিয়ে সাধারনভাবে গ্রহণ করার মানসিকতা অর্জনের চেষ্টা করতে হবে।"
 );
 
@@ -11313,8 +11415,8 @@ const orbitItems = [
                 {
                   id: "q14k",
                   question: yhLang(
-                    "Which habit helps prevent device addiction?",
-                    "ডিভাইস আসক্তি প্রতিরোধে কোন অভ্যাসটি কার্যকর?",
+                    "Which habit helps prevent device addiction ?",
+                    "ডিভাইস আসক্তি প্রতিরোধে কোন অভ্যাসটি কার্যকর ?",
                   ),
                   options: [
                     yhLang(
@@ -11571,8 +11673,8 @@ const orbitItems = [
                 {
                   id: "q16a",
                   question: yhLang(
-                    "What helps adolescents return to normal routines after crises?",
-                    "কিসের মাধ্যমে তরুন-তরুনীরা বিপর্যয়ের পর স্বাভাবিক জীবনে ফিরতে পারে?",
+                    "What helps adolescents return to normal routines after crises ?",
+                    "কিসের মাধ্যমে তরুন-তরুনীরা বিপর্যয়ের পর স্বাভাবিক জীবনে ফিরতে পারে ?",
                   ),
                   options: [
                     yhLang("মনোসামাজিক শিক্ষা", "মনোসামাজিক শিক্ষা"),
@@ -11747,8 +11849,8 @@ const orbitItems = [
                 {
                   id: "q16b",
                   question: yhLang(
-                    "What distinguishes empathy from sympathy?",
-                    "সমবেদনা ও সমমর্মিতার পার্থক্য কী?",
+                    "What distinguishes empathy from sympathy ?",
+                    "সমবেদনা ও সমমর্মিতার পার্থক্য কী ?",
                   ),
                   options: [
                     yhLang(
@@ -11895,8 +11997,8 @@ const orbitItems = [
                 {
                   id: "q16c",
                   question: yhLang(
-                    "How often should direct eye contact be maintained for attentive listening?",
-                    "মনোযোগী শ্রোতা হওয়ার জন্য কত সময় পর পর দৃষ্টি সংযোগ করা উচিত?",
+                    "How often should direct eye contact be maintained for attentive listening ?",
+                    "মনোযোগী শ্রোতা হওয়ার জন্য কত সময় পর পর দৃষ্টি সংযোগ করা উচিত ?",
                   ),
                   options: [
                     yhLang("প্রতি ৩/৪ সেকেন্ডে", "প্রতি ৩/৪ সেকেন্ডে"),
@@ -12131,8 +12233,8 @@ const orbitItems = [
                 {
                   id: "q16d",
                   question: yhLang(
-                    "Which influences commonly shape personal values?",
-                    "কোন কোন প্রভাব সাধারণত আমাদের মূল্যবোধ গঠন করে?",
+                    "Which influences commonly shape personal values ?",
+                    "কোন কোন প্রভাব সাধারণত আমাদের মূল্যবোধ গঠন করে ?",
                   ),
                   options: [
                     yhLang(
@@ -12289,8 +12391,8 @@ const orbitItems = [
                 {
                   id: "q16e",
                   question: yhLang(
-                    "What guides human behavior according to the lesson?",
-                    "মানুষের আচরণকে কী দ্বারা পরিচালিত বলা হয়েছে?",
+                    "What guides human behavior according to the lesson ?",
+                    "মানুষের আচরণকে কী দ্বারা পরিচালিত বলা হয়েছে ?",
                   ),
                   options: [
                     yhLang("ব্যক্তির মূল্যবোধ", "ব্যক্তির মূল্যবোধ"),
@@ -12394,8 +12496,8 @@ const orbitItems = [
                 {
                   id: "q16f",
                   question: yhLang(
-                    "Which of the following is an ethical principle in psychosocial support?",
-                    "নিচের কোনটি মনোসামাজিক সহায়তার নৈতিক নীতি?",
+                    "Which of the following is an ethical principle in psychosocial support ?",
+                    "নিচের কোনটি মনোসামাজিক সহায়তার নৈতিক নীতি ?",
                   ),
                   options: [
                     yhLang("গোপনীয়তা রক্ষা করা", "গোপনীয়তা রক্ষা করা"),
@@ -12529,8 +12631,8 @@ const orbitItems = [
                 {
                   id: "q17a",
                   question: yhLang(
-                    "What happens when a person stops taking addictive substances?",
-                    "মাদক গ্রহণ বন্ধ করলে কী ধরনের প্রভাব দেখা যায়?",
+                    "What happens when a person stops taking addictive substances ?",
+                    "মাদক গ্রহণ বন্ধ করলে কী ধরনের প্রভাব দেখা যায় ?",
                   ),
                   options: [
                     yhLang(
@@ -12643,8 +12745,8 @@ const orbitItems = [
                 {
                   id: "q17b",
                   question: yhLang(
-                    "Which column covers behavioral signs of drug addiction?",
-                    "মাদকাসক্তির আচরণগত লক্ষণ কোন কলামে রয়েছে?",
+                    "Which column covers behavioral signs of drug addiction ?",
+                    "মাদকাসক্তির আচরণগত লক্ষণ কোন কলামে রয়েছে ?",
                   ),
                   options: [
                     yhLang("আচরণগত লক্ষণসমূহ", "আচরণগত লক্ষণসমূহ"),
@@ -12802,8 +12904,8 @@ const orbitItems = [
                 {
                   id: "q17c",
                   question: yhLang(
-                    "পাঠে উল্লেখিত কোনটি মাদকাসক্তির পরিণতি?",
-                    "পাঠে উল্লেখিত কোনটি মাদকাসক্তির পরিণতি?",
+                    "পাঠে উল্লেখিত কোনটি মাদকাসক্তির পরিণতি ?",
+                    "পাঠে উল্লেখিত কোনটি মাদকাসক্তির পরিণতি ?",
                   ),
                   options: [
                     yhLang(
@@ -13050,8 +13152,8 @@ const orbitItems = [
                 {
                   id: "q18a",
                   question: yhLang(
-                    "প্রাথমিক চিকিৎসার প্রথম লক্ষ্য কী?",
-                    "ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবার প্রথম লক্ষ্য কী?",
+                    "প্রাথমিক চিকিৎসার প্রথম লক্ষ্য কী ?",
+                    "ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবার প্রথম লক্ষ্য কী ?",
                   ),
                   options: [
                     yhLang("জীবন বাঁচানো", "জীবন বাঁচানো"),
@@ -13180,8 +13282,8 @@ const orbitItems = [
                 {
                   id: "q18b",
                   question: yhLang(
-                    "রক্তক্ষরণে চাপ দিয়ে রাখা কাপড় ভিজে গেলে কী করতে হবে?",
-                    "রক্তক্ষরণে চাপ দিয়ে রাখা কাপড় ভিজে গেলে কী করতে হবে?",
+                    "রক্তক্ষরণে চাপ দিয়ে রাখা কাপড় ভিজে গেলে কী করতে হবে ?",
+                    "রক্তক্ষরণে চাপ দিয়ে রাখা কাপড় ভিজে গেলে কী করতে হবে ?",
                   ),
                   options: [
                     yhLang(
@@ -13340,8 +13442,8 @@ const orbitItems = [
                 {
                   id: "q18c",
                   question: yhLang(
-                    "তৃতীয় ডিগ্রি বার্নে কোন স্তর ক্ষতিগ্রস্ত হয়?",
-                    "তৃতীয় ডিগ্রি বার্নে কোন স্তর ক্ষতিগ্রস্ত হয়?",
+                    "তৃতীয় ডিগ্রি বার্নে কোন স্তর ক্ষতিগ্রস্ত হয় ?",
+                    "তৃতীয় ডিগ্রি বার্নে কোন স্তর ক্ষতিগ্রস্ত হয় ?",
                   ),
                   options: [
                     yhLang("ত্বকের সব স্তর", "ত্বকের সব স্তর"),
@@ -13521,8 +13623,8 @@ const orbitItems = [
                 {
                   id: "q18d",
                   question: yhLang(
-                    "পোড়া স্থানে কোনটি ব্যবহার করা উচিত নয়?",
-                    "পোড়া স্থানে কোনটি ব্যবহার করা উচিত নয়?",
+                    "পোড়া স্থানে কোনটি ব্যবহার করা উচিত নয় ?",
+                    "পোড়া স্থানে কোনটি ব্যবহার করা উচিত নয় ?",
                   ),
                   options: [
                     yhLang(
@@ -13681,8 +13783,8 @@ const orbitItems = [
                 {
                   id: "q18e",
                   question: yhLang(
-                    "উন্মুক্ত হাড় ভাঙ্গায় প্রথমে কোন পদক্ষেপ নিতে হবে?",
-                    "উন্মুক্ত হাড় ভাঙ্গায় প্রথমে কোন পদক্ষেপ নিতে হবে?",
+                    "উন্মুক্ত হাড় ভাঙ্গায় প্রথমে কোন পদক্ষেপ নিতে হবে ?",
+                    "উন্মুক্ত হাড় ভাঙ্গায় প্রথমে কোন পদক্ষেপ নিতে হবে ?",
                   ),
                   options: [
                     yhLang(
@@ -13893,8 +13995,8 @@ const orbitItems = [
                 {
                   id: "q18f",
                   question: yhLang(
-                    "সাপের কামড়ে আক্রান্ত অঙ্গকে কীভাবে রাখা উচিত?",
-                    "সাপের কামড়ে আক্রান্ত অঙ্গকে কীভাবে রাখা উচিত?",
+                    "সাপের কামড়ে আক্রান্ত অঙ্গকে কীভাবে রাখা উচিত ?",
+                    "সাপের কামড়ে আক্রান্ত অঙ্গকে কীভাবে রাখা উচিত ?",
                   ),
                   options: [
                     yhLang(
@@ -14072,8 +14174,8 @@ const orbitItems = [
                 {
                   id: "q18g",
                   question: yhLang(
-                    "কুকুরের কামড়ের ক্ষত কতক্ষণ ধুয়ে রাখতে বলা হয়েছে?",
-                    "কুকুরের কামড়ের ক্ষত কতক্ষণ ধুয়ে রাখতে বলা হয়েছে?",
+                    "কুকুরের কামড়ের ক্ষত কতক্ষণ ধুয়ে রাখতে বলা হয়েছে ?",
+                    "কুকুরের কামড়ের ক্ষত কতক্ষণ ধুয়ে রাখতে বলা হয়েছে ?",
                   ),
                   options: [
                     yhLang("কমপক্ষে ১৫ মিনিট", "কমপক্ষে ১৫ মিনিট"),
@@ -14243,8 +14345,8 @@ const orbitItems = [
                 {
                   id: "q18h",
                   question: yhLang(
-                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?",
-                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে?"
+                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে ?",
+                    "বিষক্রিয়ার লক্ষণ হিসেবে কোনটি উল্লেখ রয়েছে ?"
                   ),
                   options: [
                     yhLang("ঝাপসা দৃষ্টি", "ঝাপসা দৃষ্টি"),
@@ -14437,8 +14539,8 @@ const orbitItems = [
                 {
                   id: "q18i",
                   question: yhLang(
-                    "ডুবন্ত ব্যক্তিকে বাঁচাতে গিয়ে কত দূরত্ব বজায় রাখতে বলা হয়েছে?",
-                    "ডুবন্ত ব্যক্তিকে বাঁচাতে গিয়ে কত দূরত্ব বজায় রাখতে বলা হয়েছে?",
+                    "ডুবন্ত ব্যক্তিকে বাঁচাতে গিয়ে কত দূরত্ব বজায় রাখতে বলা হয়েছে ?",
+                    "ডুবন্ত ব্যক্তিকে বাঁচাতে গিয়ে কত দূরত্ব বজায় রাখতে বলা হয়েছে ?",
                   ),
                   options: [
                     yhLang("কমপক্ষে ২ মিটার", "কমপক্ষে ২ মিটার"),
@@ -14590,8 +14692,8 @@ const orbitItems = [
                 {
                   id: "q18j",
                   question: yhLang(
-                    "শ্বাস আটকে যাওয়া অবস্থাকে কেন জরুরি বলা হয়?",
-                    "শ্বাস আটকে যাওয়া অবস্থাকে কেন জরুরি বলা হয়?",
+                    "শ্বাস আটকে যাওয়া অবস্থাকে কেন জরুরি বলা হয় ?",
+                    "শ্বাস আটকে যাওয়া অবস্থাকে কেন জরুরি বলা হয় ?",
                   ),
                   options: [
                     yhLang(
@@ -14809,8 +14911,8 @@ const orbitItems = [
                 {
                   id: "q18k",
                   question: yhLang(
-                    "পিঠে চাপড় দেওয়ার পরে কী লক্ষ্য করতে হবে?",
-                    "পিঠে চাপড় দেওয়ার পরে কী লক্ষ্য করতে হবে?",
+                    "পিঠে চাপড় দেওয়ার পরে কী লক্ষ্য করতে হবে ?",
+                    "পিঠে চাপড় দেওয়ার পরে কী লক্ষ্য করতে হবে ?",
                   ),
                   options: [
                     yhLang(
@@ -14854,7 +14956,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "After each blow, check whether the object is expelled and the person can breathe.",
-                    "আঘাতের পর লক্ষ্য করতে হবে যে গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং আক্রান্ত ব্যক্তি শ্বাস নিতে পারছে কিনা?",
+                    "আঘাতের পর লক্ষ্য করতে হবে যে গলায় আটকে থাকা বস্তুটি বের হয়েছে কিনা এবং আক্রান্ত ব্যক্তি শ্বাস নিতে পারছে কিনা ?",
                   ),
                   icon: "fa-binoculars",
                   color: "m18l11-first-check",
@@ -15260,7 +15362,7 @@ const orbitItems = [
                         </p>
                         ${
                           section.formulaEn
-                            ? `<div class="m19l1-section-formula">
+                             ? `<div class="m19l1-section-formula">
                                 ${yhLang(section.formulaEn, section.formulaBn)}
                               </div>`
                             : ""
@@ -16162,8 +16264,8 @@ const orbitItems = [
                 {
                   id: "q19h",
                   question: yhLang(
-                    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?",
-                    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে?",
+                    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে ?",
+                    "রক্তস্বল্পতা প্রতিরোধে মেয়েদের  কত সময় পর আয়রন ফলিক এসিড বড়ি খেতে বলা হয়েছে ?",
                   ),
                   options: [
                     yhLang("প্রতি সপ্তাহে", "প্রতি সপ্তাহে"),
@@ -16219,7 +16321,7 @@ const orbitItems = [
               const renderList = (items, listType) => {
                 const iconPool =
                   listType === "symptom"
-                    ? [
+                     ? [
                         "fa-heart-crack",
                         "fa-face-frown",
                         "fa-lungs",
@@ -16238,7 +16340,7 @@ const orbitItems = [
 
                 const tonePool =
                   listType === "symptom"
-                    ? ["warn", "danger", "info", "warn", "danger", "info"]
+                     ? ["warn", "danger", "info", "warn", "danger", "info"]
                     : [
                         "success",
                         "accent",
@@ -17894,7 +17996,7 @@ const orbitItems = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text mb-1" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-triangle-exclamation" style="color: #f44336; margin-right: 8px; font-size: 1em;"></i>
-                    ${yhLang("Who are the at-risk youth?", "ঝুঁকিপূর্ণ তরুণ-তরুণীরা কারা?")}
+                    ${yhLang("Who are the at-risk youth ?", "ঝুঁকিপূর্ণ তরুণ-তরুণীরা কারা ?")}
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius: 14px; padding: 8px; box-shadow: 0 6px 18px rgba(255, 152, 0, 0.14);">
@@ -18531,7 +18633,7 @@ const orbitItems = [
                     <span style="background:${iconData.gradient};width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-right:8px;box-shadow:0 3px 10px rgba(103,58,183,.18);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:14px;"></i></span>
                     ${section.title}
                   </h3>
-                  ${section.items ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : ``}
+                  ${section.items  ? `<ul class="list-unstyled feature-list mb-0">${renderList(section.items)}</ul>` : ``}
                 </div>
               `;
               };
@@ -18731,9 +18833,9 @@ const orbitItems = [
                 pollutionCauses
                   .map(
                     (item, idx) => `
-                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:4px;box-shadow:${idx % 2 === 0 ? "0 2px 7px rgba(2,136,209,.10)" : "0 3px 8px rgba(255,112,67,.11)"};">
-                        <h3 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0 ? "#0277bd" : "#006cc9"};font-size:0.8em;">
-                          <i class="fa-solid ${idx < 2 ? "fa-industry" : idx < 4 ? "fa-house" : idx < 6 ? "fa-oil-can" : "fa-truck-medical"} me-2" style="font-size:0.85em;"></i>
+                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:4px;box-shadow:${idx % 2 === 0  ? "0 2px 7px rgba(2,136,209,.10)" : "0 3px 8px rgba(255,112,67,.11)"};">
+                        <h3 class="mb-1" style="display:flex;align-items:center;color:${idx % 2 === 0  ? "#0277bd" : "#006cc9"};font-size:0.8em;">
+                          <i class="fa-solid ${idx < 2  ? "fa-industry" : idx < 4  ? "fa-house" : idx < 6  ? "fa-oil-can" : "fa-truck-medical"} me-2" style="font-size:0.85em;"></i>
                           ${item.title}
                         </h3>
                         <p class="mb-0" style="font-size:0.74em;line-height:1.35;"><i class="fa-solid fa-circle-info me-2 text-secondary" style="font-size:0.78em;"></i>${item.desc}</p>
@@ -18758,7 +18860,7 @@ const orbitItems = [
                 waterSources
                   .map(
                     (item, idx) => `
-                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:1px; padding-left: 10px;box-shadow:${idx % 2 === 0 ? "0 2px 7px rgba(2,136,209,.10)" : "0 3px 8px rgba(255,112,67,.11)"};border-left:3px solid ${idx % 2 === 0 ? "#039be5" : "#f57c00"};">
+                      <li class="" style="background:rgba(255,255,255,.65);border-radius:7px;padding:1px; padding-left: 10px;box-shadow:${idx % 2 === 0  ? "0 2px 7px rgba(2,136,209,.10)" : "0 3px 8px rgba(255,112,67,.11)"};border-left:3px solid ${idx % 2 === 0  ? "#039be5" : "#f57c00"};">
                         <span style="font-size:0.76em;line-height:1.35;">${item}</span>
                       </li>
                     `,
@@ -19110,7 +19212,7 @@ const orbitItems = [
                     <span style="background:${iconData.gradient};width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-right:12px;box-shadow:0 5px 16px rgba(103,58,183,.25);"><i class="fa-solid ${iconData.icon}" style="color:#fff;font-size:20px;"></i></span>
                     ${section.title}
                   </h3>
-                  ${section.items ? `<ul class="list-unstyled feature-list grid-2 mb-0">${renderList(section.items)}</ul>` : `<div style="border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
+                  ${section.items  ? `<ul class="list-unstyled feature-list grid-2 mb-0">${renderList(section.items)}</ul>` : `<div style="border-left:4px solid ${iconData.color};border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(245,124,0,.15);"><i class="fa-solid fa-info-circle me-2" style="color:${iconData.color};"></i><span style="color:#333;font-weight:500;">${section.description}</span></div>`}
                 </div>
               `;
               };
@@ -19204,8 +19306,8 @@ const orbitItems = [
                 items
                   .map(
                     (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? "rgba(255,255,255,.66)" : "rgba(224,242,241,.72)"};border-left:3px solid ${idx % 2 === 0 ? "#26a69a" : "#00acc1"};border-radius:9px;padding:10px 8px;margin-bottom:px;box-shadow:${idx % 2 === 0 ? "0 4px 10px rgba(0,150,136,.15)" : "0 5px 12px rgba(0,172,193,.14)"};">
-                        <i class="fa-solid ${idx < 2 ? "fa-soap" : idx < 4 ? "fa-droplet" : "fa-people-group"} ${idx < 2 ? "text-success" : idx < 4 ? "text-info" : "text-primary"} me-2"></i>
+                      <li style="background:${idx % 2 === 0  ? "rgba(255,255,255,.66)" : "rgba(224,242,241,.72)"};border-left:3px solid ${idx % 2 === 0  ? "#26a69a" : "#00acc1"};border-radius:9px;padding:10px 8px;margin-bottom:px;box-shadow:${idx % 2 === 0  ? "0 4px 10px rgba(0,150,136,.15)" : "0 5px 12px rgba(0,172,193,.14)"};">
+                        <i class="fa-solid ${idx < 2  ? "fa-soap" : idx < 4  ? "fa-droplet" : "fa-people-group"} ${idx < 2  ? "text-success" : idx < 4  ? "text-info" : "text-primary"} me-2"></i>
                         <span style="">${item}</span>
                       </li>
                     `,
@@ -19615,8 +19717,8 @@ const orbitItems = [
                 pesticidePoints
                   .map(
                     (item, idx) => `
-                      <li style="border-left:3px solid ${idx % 2 === 0 ? "#f06292" : "#ff8a65"};border-radius:9px;padding: 4px 8px;margin-bottom:0px;box-shadow:${idx % 2 === 0 ? "0 4px 10px rgba(240,98,146,.15)" : "0 5px 12px rgba(255,138,101,.14)"};">
-                        <span class="pesticide-bullet"><i class="fa-solid ${idx === 0 ? "fa-spray-can" : idx === 1 ? "fa-skull-crossbones" : "fa-lungs"}"></i></span>
+                      <li style="border-left:3px solid ${idx % 2 === 0  ? "#f06292" : "#ff8a65"};border-radius:9px;padding: 4px 8px;margin-bottom:0px;box-shadow:${idx % 2 === 0  ? "0 4px 10px rgba(240,98,146,.15)" : "0 5px 12px rgba(255,138,101,.14)"};">
+                        <span class="pesticide-bullet"><i class="fa-solid ${idx === 0  ? "fa-spray-can" : idx === 1  ? "fa-skull-crossbones" : "fa-lungs"}"></i></span>
                         <p class="mb-0" style="font-size:0.9em;">${item}</p>
                       </li>
                     `,
@@ -19701,8 +19803,8 @@ const orbitItems = [
                   .map(
                     (item, idx) => `
                       <li>
-                        <article class="caution-item" style="background:${idx % 2 === 0 ? "rgba(255,255,255,.75)" : "rgba(255,249,196,.82)"};border-left:4px solid ${idx % 2 === 0 ? "#fbc02d" : "#5458d7"};box-shadow:${idx % 2 === 0 ? "0 6px 16px rgba(251,192,45,.2)" : "0 8px 20px rgba(245,127,23,.18)"};border-radius:12px;">
-                          <div class="caution-index" style="background:${idx % 2 === 0 ? "linear-gradient(135deg,#fdd835,#fbc02d)" : "linear-gradient(135deg,#ffb300,#5458d7)"};color:#fff;">${formatIndex(idx + 1)}</div>
+                        <article class="caution-item" style="background:${idx % 2 === 0  ? "rgba(255,255,255,.75)" : "rgba(255,249,196,.82)"};border-left:4px solid ${idx % 2 === 0  ? "#fbc02d" : "#5458d7"};box-shadow:${idx % 2 === 0  ? "0 6px 16px rgba(251,192,45,.2)" : "0 8px 20px rgba(245,127,23,.18)"};border-radius:12px;">
+                          <div class="caution-index" style="background:${idx % 2 === 0  ? "linear-gradient(135deg,#fdd835,#fbc02d)" : "linear-gradient(135deg,#ffb300,#5458d7)"};color:#fff;">${formatIndex(idx + 1)}</div>
                           <div class="caution-item__body">
                             <p class="mb-0"><i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>${item}</p>
                           </div>
@@ -19769,8 +19871,8 @@ const orbitItems = [
                 preventionList
                   .map(
                     (item, idx) => `
-                      <li style="background:${idx % 2 === 0 ? "rgba(255,255,255,.62)" : "rgba(255,255,255,.5)"};border-left:4px solid ${idx % 2 === 0 ? "#7e57c2" : "#5e35b1"};border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:${idx % 2 === 0 ? "0 6px 16px rgba(126,87,194,.18)" : "0 8px 18px rgba(94,53,177,.16)"};">
-                        <i class="fa-solid ${idx < 2 ? "fa-bullhorn" : idx < 4 ? "fa-sliders" : "fa-gavel"} ${idx < 2 ? "text-danger" : idx < 4 ? "text-primary" : "text-success"} me-2"></i>
+                      <li style="background:${idx % 2 === 0  ? "rgba(255,255,255,.62)" : "rgba(255,255,255,.5)"};border-left:4px solid ${idx % 2 === 0  ? "#7e57c2" : "#5e35b1"};border-radius:12px;padding:10px 12px;margin-bottom:5px;box-shadow:${idx % 2 === 0  ? "0 6px 16px rgba(126,87,194,.18)" : "0 8px 18px rgba(94,53,177,.16)"};">
+                        <i class="fa-solid ${idx < 2  ? "fa-bullhorn" : idx < 4  ? "fa-sliders" : "fa-gavel"} ${idx < 2  ? "text-danger" : idx < 4  ? "text-primary" : "text-success"} me-2"></i>
                         <span style="color:#4a148c;">${item}</span>
                       </li>
                     `,
@@ -21608,7 +21710,7 @@ const orbitItems = [
                           <span class="m24l1-heading-icon m24l1-icon-what">
                             <i class="fa-solid fa-circle-question"></i>
                           </span>
-                          <span class="m24l1-heading-text">${yhLang("What is Life Skills?", "জীবন দক্ষতা কী ?")}</span>
+                          <span class="m24l1-heading-text">${yhLang("What is Life Skills ?", "জীবন দক্ষতা কী  ?")}</span>
                         </h3>
                         <ul class="m24l1-enhanced-list">
                           ${renderWhatIsPoints(whatIsDesc, 280)}
@@ -21620,7 +21722,7 @@ const orbitItems = [
                           <span class="m24l1-heading-icon m24l1-icon-hard">
                             <i class="fa-solid fa-graduation-cap"></i>
                           </span>
-                          <span class="m24l1-heading-text">${yhLang("Is it Hard to Learn?", "জীবন দক্ষতা শেখা কি কঠিন ?")}</span>
+                          <span class="m24l1-heading-text">${yhLang("Is it Hard to Learn ?", "জীবন দক্ষতা শেখা কি কঠিন  ?")}</span>
                         </h3>
                         <ul class="m24l1-enhanced-list">
                           ${renderIsHardPoints(isHardDesc, 480)}
@@ -21632,7 +21734,7 @@ const orbitItems = [
                           <span class="m24l1-heading-icon m24l1-icon-help">
                             <i class="fa-solid fa-people-group"></i>
                           </span>
-                          <span class="m24l1-heading-text">${yhLang("Who Can Help Teach?", "কারা জীবন দক্ষতা শেখাতে সাহায্য করতে পারেন ?")}</span>
+                          <span class="m24l1-heading-text">${yhLang("Who Can Help Teach ?", "কারা জীবন দক্ষতা শেখাতে সাহায্য করতে পারেন  ?")}</span>
                         </h3>
                         <ul class="m24l1-enhanced-list list_2grid">
                           ${renderHelpers(helpers, 680)}
@@ -21661,7 +21763,7 @@ const orbitItems = [
           },
           {
             id: "ch24-lesson-2",
-            title: yhLang("What are Values?", "মূল্যবোধ কী ?"),
+            title: yhLang("What are Values ?", "মূল্যবোধ কী  ?"),
             icon: "fa-scale-balanced",
             gradientClass: "bg-gradient-blue",
             audioFile: "",
@@ -21918,8 +22020,8 @@ const orbitItems = [
                     </span>
                     <div class="m24l2-hero__body">
                       <h1 class="m24l2-hero__title">${yhLang(
-                        "What are Values?",
-                        "মূল্যবোধ কী?",
+                        "What are Values ?",
+                        "মূল্যবোধ কী ?",
                       )}</h1>
                       <p class="m24l2-hero__subtitle">${yhLang(
                         "Understanding Ethics and Moral Principles",
@@ -21936,8 +22038,8 @@ const orbitItems = [
                             <i class="fa-solid fa-lightbulb"></i>
                           </span>
                           <span class="m24l2-heading-text">${yhLang(
-                            "What are Values?",
-                            "মূল্যবোধ কী?",
+                            "What are Values ?",
+                            "মূল্যবোধ কী ?",
                           )}</span>
                         </h3>
                         <ul class="m24l2-highlight-list">
@@ -23240,7 +23342,7 @@ const orbitItems = [
 
     const ensureImgZoomInHtml = (html) => {
       if (typeof html !== "string" || html.indexOf("<img") === -1) return html;
-      return html.replace(/<img\b[^>]*?>/gi, ensureImgZoomOnTag);
+      return html.replace(/<img\b[^>]* ?>/gi, ensureImgZoomOnTag);
     };
 
     const walkLessons = (lessons) => {
@@ -23261,4 +23363,4 @@ const orbitItems = [
       walkLessons(course.lessons);
     });
   } catch (_) {}
-})(typeof window !== "undefined" ? window : globalThis);
+})(typeof window !== "undefined"  ? window : globalThis);
