@@ -13693,13 +13693,13 @@ figure.image-card {
 
 /* Point Icon */
 .m9l-point-icon {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 45px;
+  height: 45px;
   border-radius: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: white;
   flex-shrink: 0;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -13746,9 +13746,9 @@ figure.image-card {
   }
 
   .m9l-point-icon {
-    width: 3.6rem;
-    height: 3.6rem;
-    font-size: 1.8rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
   }
 
   .m9l-point-title {
@@ -13778,10 +13778,10 @@ figure.image-card {
   }
 
   .m9l-point-icon {
-    width: 3.2rem;
-    height: 3.2rem;
-    font-size: 1.5rem;
-  }
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+}
 
   .m9l-point-title {
     font-size: 1.05rem;
@@ -13810,10 +13810,10 @@ figure.image-card {
   }
 
   .m9l-point-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 45px;
+    height: 45px;
     font-size: 1.4rem;
-  }
+}
 
   .m9l-point-title {
     font-size: 1rem;
@@ -13842,9 +13842,9 @@ figure.image-card {
   }
 
   .m9l-point-icon {
-    width: 2.8rem;
-    height: 2.8rem;
-    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
   }
 
   .m9l-point-title {
@@ -13874,9 +13874,9 @@ figure.image-card {
   }
 
   .m9l-point-icon {
-    width: 2.6rem;
-    height: 2.6rem;
-    font-size: 1.1rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
   }
 
   .m9l-point-title {
@@ -13887,6 +13887,682 @@ figure.image-card {
   .m9l-point-text {
     font-size: 0.7rem;
     line-height: 1.5;
+  }
+}
+
+/* ===== MODULE 1 LESSON 10: ELIGIBILITY AND STEPS TO BECOME YOUTH HEALTH AMBASSADOR ===== */
+
+/* Main Slide */
+.ch1l10-slide {
+  position: relative;
+  padding: 10px 36px;
+  background: linear-gradient(135deg, rgba(245, 243, 255, 0.8) 0%, rgba(240, 249, 255, 0.8) 100%);
+  border-radius: 28px;
+  box-shadow: 0 16px 40px rgba(16, 185, 129, 0.12);
+  border: 2px solid rgba(16, 185, 129, 0.15);
+  overflow: hidden;
+}
+
+/* Title with Icon */
+.ch1l10-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0d9488;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 28px 0;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(34, 197, 94, 0.06) 100%);
+  border-radius: 20px;
+  border-left: 8px solid #10b981;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.14);
+  line-height: 1.3;
+}
+
+.ch1l10-title i {
+  font-size: 2.2rem;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+/* Special Note Section */
+.ch1l10-special-note {
+  position: relative;
+  padding: 10px 28px;
+  margin-bottom: 10px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 253, 250, 0.95) 100%);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.15);
+  background-clip: padding-box;
+  overflow: hidden;
+}
+
+/* Eligibility Note - Blue Gradient Border */
+.ch1l10-note-eligibility {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(240, 253, 250, 0.95)) padding-box,
+              linear-gradient(135deg, #3b82f6, #06b6d4) border-box;
+}
+
+.ch1l10-note-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+
+.ch1l10-note-header i {
+  font-size: 1.6rem;
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.ch1l10-note-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0;
+}
+
+.ch1l10-note-content {
+  padding: 0;
+  margin: 0;
+}
+
+.ch1l10-note-description {
+  font-size: 1.12rem;
+  color: #1e3a8a;
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Steps Section */
+.ch1l10-steps-section {
+  position: relative;
+  margin-top: 32px;
+}
+
+.ch1l10-steps-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 28px 0;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(34, 197, 94, 0.06) 100%);
+  border-radius: 20px;
+  border-left: 6px solid #10b981;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.1);
+}
+
+.ch1l10-steps-title i {
+  font-size: 1.8rem;
+  color: #10b981;
+}
+
+/* Three Column Layout */
+.ch1l10-columns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.92) 100%);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px;
+}
+
+/* Individual Column */
+.ch1l10-column {
+  
+  padding: 5px;
+ 
+}
+
+/* Column-specific gradient borders */
+
+
+
+.ch1l10-column:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* Column Header */
+.ch1l10-column-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.08);
+}
+
+.ch1l10-column-header i {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.ch1l10-col-1 .ch1l10-column-header i {
+  color: #f59e0b;
+}
+
+.ch1l10-col-2 .ch1l10-column-header i {
+  color: #8b5cf6;
+}
+
+.ch1l10-col-3 .ch1l10-column-header i {
+  color: #ec4899;
+}
+
+.ch1l10-column-header span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Steps List */
+.ch1l10-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+/* Individual Step Item */
+.ch1l10-step-item {
+  display: flex;
+  gap: 16px;
+  padding: 7px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(250, 250, 250, 0.85) 100%);
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.ch1l10-step-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Step-specific colors */
+.ch1l10-step-1 { border-color: rgba(245, 158, 11, 0.3); }
+.ch1l10-step-2 { border-color: rgba(249, 115, 22, 0.3); }
+.ch1l10-step-3 { border-color: rgba(236, 72, 153, 0.3); }
+.ch1l10-step-4 { border-color: rgba(139, 92, 246, 0.3); }
+.ch1l10-step-5 { border-color: rgba(99, 102, 241, 0.3); }
+.ch1l10-step-6 { border-color: rgba(34, 197, 94, 0.3); }
+.ch1l10-step-7 { border-color: rgba(6, 182, 212, 0.3); }
+.ch1l10-step-8 { border-color: rgba(136, 58, 234, 0.3); }
+.ch1l10-step-9 { border-color: rgba(168, 85, 247, 0.3); }
+
+/* Step Icon */
+.ch1l10-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  color: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon gradient backgrounds */
+.ch1l10-step-1 .ch1l10-step-icon { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+.ch1l10-step-2 .ch1l10-step-icon { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
+.ch1l10-step-3 .ch1l10-step-icon { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); }
+.ch1l10-step-4 .ch1l10-step-icon { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+.ch1l10-step-5 .ch1l10-step-icon { background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); }
+.ch1l10-step-6 .ch1l10-step-icon { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); }
+.ch1l10-step-7 .ch1l10-step-icon { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); }
+.ch1l10-step-8 .ch1l10-step-icon { background: linear-gradient(135deg, #884ea0 0%, #6b21a8 100%); }
+.ch1l10-step-9 .ch1l10-step-icon { background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); }
+
+.ch1l10-step-item:hover .ch1l10-step-icon {
+  transform: scale(1.12) rotate(5deg);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* Step Content */
+.ch1l10-step-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex: 1;
+}
+
+.ch1l10-step-text {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* Arrow Elements */
+.ch1l10-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ch1l10-arrow i {
+  font-size: 1.4rem;
+  color: #0d9488;
+  opacity: 0.8;
+}
+
+.ch1l10-arrow-down {
+  margin: 8px 0;
+}
+
+.ch1l10-arrow-right {
+  justify-content: center;
+  margin: 12px 0;
+  /* transform: rotate(90deg); */
+  animation: none;
+  margin-left: 100px;
+}
+.m1l6_last {
+    position: absolute;
+    bottom: 22px;
+    left: 272px;
+}
+.m1l6_first {
+    position: absolute;
+    top: 22px;
+    right: 375px;
+}
+.ch1l10-arrow-up {
+  margin: 8px 0;
+}
+
+@keyframes arrowBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(4px);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive Design */
+/* Tablet: 1024px-1199px */
+@media (max-width: 1199px) {
+  .ch1l10-slide {
+    padding: 10px 32px;
+  }
+
+  .ch1l10-title {
+    font-size: 1.9rem;
+    gap: 14px;
+    padding: 10px 18px;
+    margin-bottom: 10px;
+  }
+
+  .ch1l10-title i {
+    font-size: 1.9rem;
+  }
+
+  .ch1l10-special-note {
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+
+  .ch1l10-note-title {
+    font-size: 1.4rem;
+  }
+
+  .ch1l10-note-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .ch1l10-steps-title {
+    font-size: 1.6rem;
+    gap: 12px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+  }
+
+  .ch1l10-columns-container {
+    gap: 20px;
+  }
+
+  .ch1l10-column {
+    padding: 20px;
+  }
+
+  .ch1l10-column-header {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .ch1l10-column-header i {
+    font-size: 1.2rem;
+  }
+
+  .ch1l10-column-header span {
+    font-size: 1.2rem;
+  }
+
+  .ch1l10-step-item {
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .ch1l10-step-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+  }
+
+  .ch1l10-step-text {
+    font-size: 0.98rem;
+  }
+
+  .ch1l10-arrow i {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet: 768px-1023px */
+@media (max-width: 1023px) {
+  .ch1l10-slide {
+    padding: 10px 28px;
+  }
+
+  .ch1l10-title {
+    font-size: 1.6rem;
+    gap: 12px;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+  }
+
+  .ch1l10-title i {
+    font-size: 1.6rem;
+  }
+
+  .ch1l10-special-note {
+    padding: 18px 22px;
+    margin-bottom: 24px;
+  }
+
+  .ch1l10-note-header {
+    gap: 10px;
+  }
+
+  .ch1l10-note-header i {
+    font-size: 1.4rem;
+  }
+
+  .ch1l10-note-title {
+    font-size: 1.2rem;
+  }
+
+  .ch1l10-note-description {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .ch1l10-steps-title {
+    font-size: 1.4rem;
+    gap: 10px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+  }
+
+  .ch1l10-columns-container {
+    gap: 20px;
+  }
+
+  .ch1l10-column {
+    padding: 18px;
+  }
+
+  .ch1l10-column-header {
+    margin-bottom: 18px;
+    gap: 9px;
+  }
+
+  .ch1l10-column-header i {
+    font-size: 1.1rem;
+  }
+
+  .ch1l10-column-header span {
+    font-size: 1.1rem;
+  }
+
+  .ch1l10-steps-list {
+    gap: 14px;
+  }
+
+  .ch1l10-step-item {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .ch1l10-step-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .ch1l10-step-text {
+    font-size: 0.9rem;
+  }
+
+  .ch1l10-arrow i {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile: 480px-767px */
+@media (max-width: 767px) {
+  .ch1l10-slide {
+    padding: 10px 24px;
+  }
+
+  .ch1l10-title {
+    font-size: 1.3rem;
+    gap: 10px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+  }
+
+  .ch1l10-title i {
+    font-size: 1.3rem;
+  }
+
+  .ch1l10-special-note {
+    padding: 16px 20px;
+    margin-bottom: 20px;
+  }
+
+  .ch1l10-note-header {
+    gap: 8px;
+    margin-bottom: 5px;
+  }
+
+  .ch1l10-note-header i {
+    font-size: 1.2rem;
+  }
+
+  .ch1l10-note-title {
+    font-size: 1.1rem;
+  }
+
+  .ch1l10-note-description {
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .ch1l10-steps-title {
+    font-size: 1.2rem;
+    gap: 9px;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+  }
+
+  .ch1l10-columns-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ch1l10-column {
+    padding: 16px;
+  }
+
+  .ch1l10-column-header {
+    margin-bottom: 16px;
+    gap: 8px;
+    padding-bottom: 12px;
+  }
+
+  .ch1l10-column-header i {
+    font-size: 1rem;
+  }
+
+  .ch1l10-column-header span {
+    font-size: 1rem;
+  }
+
+  .ch1l10-steps-list {
+    gap: 12px;
+  }
+
+  .ch1l10-step-item {
+    gap: 11px;
+    padding: 11px;
+  }
+
+  .ch1l10-step-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .ch1l10-step-text {
+    font-size: 0.84rem;
+    line-height: 1.4;
+  }
+
+  .ch1l10-arrow i {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile: up to 479px */
+@media (max-width: 479px) {
+  .ch1l10-slide {
+    padding: 10px 18px;
+  }
+
+  .ch1l10-title {
+    font-size: 1.1rem;
+    gap: 8px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+  }
+
+  .ch1l10-title i {
+    font-size: 1.1rem;
+  }
+
+  .ch1l10-special-note {
+    padding: 14px 16px;
+    margin-bottom: 16px;
+  }
+
+  .ch1l10-note-header {
+    gap: 7px;
+    margin-bottom: 5px;
+  }
+
+  .ch1l10-note-header i {
+    font-size: 1rem;
+  }
+
+  .ch1l10-note-title {
+    font-size: 0.95rem;
+  }
+
+  .ch1l10-note-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .ch1l10-steps-title {
+    font-size: 1rem;
+    gap: 7px;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+  }
+
+  .ch1l10-columns-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ch1l10-column {
+    padding: 14px;
+  }
+
+  .ch1l10-column-header {
+    margin-bottom: 14px;
+    gap: 7px;
+    padding-bottom: 10px;
+  }
+
+  .ch1l10-column-header i {
+    font-size: 0.95rem;
+  }
+
+  .ch1l10-column-header span {
+    font-size: 0.95rem;
+  }
+
+  .ch1l10-steps-list {
+    gap: 10px;
+  }
+
+  .ch1l10-step-item {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .ch1l10-step-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .ch1l10-step-text {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .ch1l10-arrow i {
+    font-size: 0.9rem;
   }
 }
 }

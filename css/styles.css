@@ -2183,7 +2183,7 @@ body {
   height: 100dvh !important;
 }   
 .lesson-slide {
-  min-height: calc(100dvh - 144px);
+  min-height: calc(100dvh - 137px);
   overflow: hidden;
 }   
 /* Apply ONLY when height is 768px or less */

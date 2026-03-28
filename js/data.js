@@ -1134,6 +1134,258 @@ const coursesData = [
                 </div>
               </div>`;
             })(),
+          },
+          // Eligibility and Steps to Become a Youth Health Ambassador
+          {
+            id: "ch1-lesson-10",
+            title: yhLang(
+              "Eligibility and Steps to Become a Youth Health Ambassador",
+              "তরুণ স্বাস্থ্যদূত বা ইয়ুথ হেলথ অ্যাম্বাসেডর হওয়ার যোগ্যতা এবং পদক্ষেপ",
+            ),
+            icon: "fa-clipboard-check",
+            gradientClass: "bg-gradient-teal",
+            audioFile: "",
+            quiz: {
+              passingScore: 75,
+              questions: [
+                {
+                  id: "q1j",
+                  question: yhLang(
+                    "What is the age requirement to become a Youth Health Ambassador?",
+                    "ইয়ুথ হেলথ অ্যাম্বাসেডর হওয়ার বয়সের প্রয়োজনীয়তা কী?",
+                  ),
+                  options: [
+                    yhLang("10-18 years", "১০-১৮ বছর"),
+                    yhLang("15-24 years", "১৫-২৪ বছর"),
+                    yhLang("18-30 years", "১৮-৩০ বছর"),
+                    yhLang("20-35 years", "২০-৩৫ বছর"),
+                  ],
+                  correctAnswer: 1,
+                },
+                {
+                  id: "q1k",
+                  question: yhLang(
+                    "What is the duration of the Health Ambassador certification?",
+                    "স্বাস্থ্য দূত সার্টিফিকেশনের মেয়াদ কত?",
+                  ),
+                  options: [
+                    yhLang("1 year", "১ বছর"),
+                    yhLang("2 years", "২ বছর"),
+                    yhLang("3 years", "৩ বছর"),
+                    yhLang("5 years", "৫ বছর"),
+                  ],
+                  correctAnswer: 1,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+              <div class="lesson-slide ch1l10-slide">
+                <h2 class="slide-title ch1l10-title" data-aos="fade-up">
+                  <i class="fa-solid fa-clipboard-check me-2"></i>
+                  ${yhLang("Eligibility and Steps to Become a Youth Health Ambassador", "তরুণ স্বাস্থ্যদূত বা ইয়ুথ হেলথ অ্যাম্বাসেডর হওয়ার যোগ্যতা এবং পদক্ষেপ")}
+                </h2>
+
+                <!-- Special Note: Eligibility Criteria -->
+                <div class="ch1l10-special-note ch1l10-note-eligibility" data-aos="fade-up" data-aos-delay="100">
+                  <div class="ch1l10-note-header">
+                    <i class="fa-solid fa-star"></i>
+                    <h3 class="ch1l10-note-title">${yhLang("Eligibility Criteria", "যোগ্যতার মানদণ্ড:")}</h3>
+                  </div>
+                  <div class="ch1l10-note-content">
+                    <p class="ch1l10-note-description">
+                      ${yhLang("Any person aged 15-24 years is eligible to become a Youth Health Ambassador.", "১৫-২৪ বছর বয়সী যেকোনো ব্যক্তি যুব স্বাস্থ্য দূত হওয়ার যোগ্য।")}
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Steps to Become Youth Health Ambassador - 3 Column Layout -->
+                <div class="ch1l10-steps-section" data-aos="fade-up" data-aos-delay="150">
+                  <h3 class="ch1l10-steps-title">
+                    <i class="fa-solid fa-person-hiking"></i>
+                    ${yhLang("Steps to Become a Youth Health Ambassador", "তরুণ স্বাস্থ্যদূত হওয়ার পদক্ষেপ:")}
+                  </h3>
+
+                  <div class="ch1l10-columns-container">
+                    <!-- Column 1: Registration and Setup -->
+                    <div class="ch1l10-column ch1l10-col-1">
+                      
+                      
+                      <div class="ch1l10-steps-list">
+                        <!-- Step 1 -->
+                        <div class="ch1l10-step-item ch1l10-step-1">
+                          <div class="ch1l10-step-icon">
+                            <i class="fa-solid fa-list-check"></i>
+                          </div>
+                          <div class="ch1l10-step-content">
+                            <p class="ch1l10-step-text">
+                              ${yhLang("Online Registration in Health Ambassador Program", "স্বাস্থ্য দূত প্রোগ্রামে অনলাইন নিবন্ধন")}
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Arrow Down -->
+                        <div class="ch1l10-arrow ch1l10-arrow-down">
+                          <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="ch1l10-step-item ch1l10-step-2">
+                          <div class="ch1l10-step-icon">
+                            <i class="fa-solid fa-id-card"></i>
+                          </div>
+                          <div class="ch1l10-step-content">
+                            <p class="ch1l10-step-text">
+                              ${yhLang("Create ID", "আইডি তৈরি")}
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Arrow Down -->
+                        <div class="ch1l10-arrow ch1l10-arrow-down">
+                          <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="ch1l10-step-item ch1l10-step-3">
+                          <div class="ch1l10-step-icon">
+                            <i class="fa-solid fa-globe"></i>
+                          </div>
+                          <div class="ch1l10-step-content d-flex align-items-center">
+                            <p class="ch1l10-step-text">
+                              ${yhLang("Log In to Website/App", "ওয়েবসাইট/অ্যাপে লগ ইন")}
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <!-- Arrow Right -->
+                        <div class="ch1l10-arrow ch1l10-arrow-right m1l6_last">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                        
+                      </div>
+                    </div>
+
+                    <!-- Column 2: Course and Evaluation -->
+                    <div class="ch1l10-column ch1l10-col-2">
+                      
+
+                      <div class="ch1l10-steps-list">
+                        <!-- Arrow Up from Col 1 -->
+                        
+
+                        <!-- Step 4 -->
+                        <div class="ch1l10-step-item ch1l10-step-4">
+                          <div class="ch1l10-step-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                          </div>
+                          <div class="ch1l10-step-content d-flex align-items-center">
+                            <p class="ch1l10-step-text">
+                              ${yhLang("Enroll in 'Health Ambassador Course'", "'স্বাস্থ্য দূত কোর্স'-এ প্রবেশ")}
+                            </p>
+                            
+                          </div>
+                        </div>
+
+                        <!-- Arrow Right -->
+                            <div class="ch1l10-arrow ch1l10-arrow-right m1l6_first">
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+
+                        <!-- Arrow Up -->
+                        <div class="ch1l10-arrow ch1l10-arrow-up">
+                          <i class="fa-solid fa-arrow-up"></i>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="ch1l10-step-item ch1l10-step-5">
+                          <div class="ch1l10-step-icon">
+                            <i class="fa-solid fa-video"></i>
+                          </div>
+                          <div class="ch1l10-step-content">
+                            <p class="ch1l10-step-text">
+                              ${yhLang("Complete Online 'Health Ambassador Course'", "অনলাইন 'হেলথ অ্যাম্বাসেডর কোর্স' সম্পূর্ণ করুন")}
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Arrow Up -->
+                        <div class="ch1l10-arrow ch1l10-arrow-up">
+                          <i class="fa-solid fa-arrow-up"></i>
+                        </div>
+
+                        <!-- Step 6 -->
+                        <div class="ch1l10-step-item ch1l10-step-6">
+                          <div class="ch1l10-step-icon">
+                            <i class="fa-solid fa-check-circle"></i>
+                          </div>
+                          <div class="ch1l10-step-content">
+                            <p class="ch1l10-step-text">
+                              ${yhLang("Achieve Passing Score in Final Assessment", "চূড়ান্ত মূল্যায়নে পাস নম্বর অর্জন করুন")}
+                            </p>
+                          </div>
+                        </div>
+
+                        
+                      </div>
+                    </div>
+
+                    <!-- Column 3: Certification and Closure -->
+                    <div class="ch1l10-column ch1l10-col-3">
+
+                      <div class="ch1l10-steps-list">
+                        <!-- Step 7 -->
+                        <div class="ch1l10-step-item ch1l10-step-7">
+                          <div class="ch1l10-step-icon">
+                            <i class="fa-solid fa-certificate"></i>
+                          </div>
+                          <div class="ch1l10-step-content">
+                            <p class="ch1l10-step-text">
+                              ${yhLang("System-Generated Certification", "সিস্টেম-জেনারেটেড সার্টিফিকেশন")}
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Arrow Down -->
+                        <div class="ch1l10-arrow ch1l10-arrow-down">
+                          <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+
+                        <!-- Step 8 -->
+                        <div class="ch1l10-step-item ch1l10-step-8">
+                          <div class="ch1l10-step-icon">
+                            <i class="fa-solid fa-hand-fist"></i>
+                          </div>
+                          <div class="ch1l10-step-content">
+                            <p class="ch1l10-step-text">
+                              ${yhLang("Take Oath/Pledge", "শপথ গ্রহণ")}
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Arrow Down -->
+                        <div class="ch1l10-arrow ch1l10-arrow-down">
+                          <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+
+                        <!-- Step 9 -->
+                        <div class="ch1l10-step-item ch1l10-step-9">
+                          <div class="ch1l10-step-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                          </div>
+                          <div class="ch1l10-step-content">
+                            <p class="ch1l10-step-text">
+                              ${yhLang("Final Certificate (Course Duration - 2 Years)", "চূড়ান্ত সার্টিফিকেট (কোর্সের মেয়াদ—২ বছর)")}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>`;
+            })(),
           }
         ],
       },
