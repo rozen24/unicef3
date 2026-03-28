@@ -899,11 +899,11 @@ const coursesData = [
             },
             content: (function () {
               return `
-              <div class="lesson-slide m8l-slide">
+              <div class="lesson-slide">
                 <h2 class="slide-title m8l-title" data-aos="fade-up"><i class="fa-solid fa-puzzle-piece me-2" style="color:#6366F1;"></i>${yhLang("Core Components of YHAP", "তরুন স্বাস্থ্যদূত কার্যক্রমের মৌলিক অংশ")}</h2>
                 
-                <div class="row g-1 mt-1">
-                  <div class="col-lg-7">
+                <div class="row g-1">
+                  <div class="col-lg-8">
                     <div class="m8l-content-wrapper">
                       ${(() => {
                         const components = [
@@ -987,8 +987,8 @@ const coursesData = [
                     </div>
                   </div>
 
-                  <div class="col-lg-5">
-                    <div class="m8l-orbit-wrapper" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="col-lg-4">
+                    <div class="m8l-orbit-wrapper d-flex align-items-center h-100" data-aos="zoom-in" data-aos-delay="300">
                       <div class="m8l-orbit-container">
                         <div class="m8l-orbit-center">
                           <div class="m8l-orbit-center-icon">

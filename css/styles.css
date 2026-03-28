@@ -271,7 +271,7 @@ html[lang|="bn"] .m25l4-text lang {
 }
 html:lang(bn) p lang,
 html[lang|="bn"] p lang {
-  font-size: 21px !important;
+  font-size: 20px !important;
   line-height: 20px;
 }
 
@@ -19069,7 +19069,7 @@ td.aqi-chip--hazardous { background: #7030A0; }
 /* ==================== ENHANCED BUTTON STYLES ==================== */
 .btn {
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
+  padding: 0.55rem 1.5rem;
   border-radius: 12px;
   transition: all 0.3s ease;
   font-size: 1rem;

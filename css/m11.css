@@ -12908,14 +12908,14 @@ figure.image-card {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 1.6rem;
+  margin-bottom: 10px;
 }
 
 /* Left Side Content Wrapper */
 .m8l-content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 5px;
 }
 
 /* Component Cards - Left Side */
@@ -13049,7 +13049,7 @@ figure.image-card {
 .m8l-comp-title {
   font-size: 0.5rem;
   font-weight: 700;
-  margin: 0 0 0.25rem 0;
+  margin-bottom: 3px;
   color: #1F2937;
 }
 
@@ -13066,7 +13066,6 @@ figure.image-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 400px;
 }
 
 .m8l-orbit-container {
@@ -13166,9 +13165,8 @@ figure.image-card {
 
 /* Orbit Cards */
 .m8l-orbit-card {
-  min-width: 90px;
-  max-width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   padding: 0.6rem;
   border-radius: 0.8rem;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
@@ -13251,7 +13249,7 @@ figure.image-card {
 @media (min-width: 1200px) {
   .m8l-title {
     font-size: 2rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 10px;
   }
 
   .m8l-component-card {
@@ -13267,7 +13265,7 @@ figure.image-card {
 
   .m8l-comp-title {
     font-size: 0.55rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 3px;
   }
 
   .m8l-comp-description {
@@ -13294,16 +13292,15 @@ figure.image-card {
   }
 
   .m8l-orbit-card {
-    min-width: 100px;
-    max-width: 155px;
-    height: 155px;
+    max-width: 100px;
+    height: 108px;
   }
 }
 
 @media (max-width: 1199px) and (min-width: 1024px) {
   .m8l-title {
     font-size: 1.8rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 10px;
   }
 
   .m8l-component-card {
@@ -13319,7 +13316,7 @@ figure.image-card {
 
   .m8l-comp-title {
     font-size: 0.5rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 3px;
   }
 
   .m8l-comp-description {
@@ -13337,8 +13334,8 @@ figure.image-card {
   }
 
   .m8l-orbit-center {
-    width: 145px;
-    height: 145px;
+    width: 144px;
+    height: 144px;
   }
 
   .m8l-orbit-item {
@@ -13355,7 +13352,7 @@ figure.image-card {
 @media (max-width: 1023px) and (min-width: 768px) {
   .m8l-title {
     font-size: 1.6rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 10px;
   }
 
   .m8l-component-card {
@@ -13371,7 +13368,7 @@ figure.image-card {
 
   .m8l-comp-title {
     font-size: 0.475rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 3px;
   }
 
   .m8l-comp-description {
@@ -13411,7 +13408,7 @@ figure.image-card {
 @media (max-width: 767px) {
   .m8l-title {
     font-size: 1.4rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 10px;
   }
 
   .m8l-component-card {
@@ -13427,7 +13424,7 @@ figure.image-card {
 
   .m8l-comp-title {
     font-size: 0.475rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 3px;
   }
 
   .m8l-comp-description {
@@ -13476,7 +13473,7 @@ figure.image-card {
 @media (max-width: 479px) {
   .m8l-title {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
   }
 
   .m8l-component-card {
@@ -13492,7 +13489,7 @@ figure.image-card {
 
   .m8l-comp-title {
     font-size: 0.425rem;
-    margin-bottom: 0.15rem;
+    margin-bottom: 3px;
   }
 
   .m8l-comp-description {
