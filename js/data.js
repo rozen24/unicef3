@@ -2863,7 +2863,7 @@ const coursesData = [
                 {
                   title: yhLang("Growth", "বৃদ্ধি"),
                   col1: yhLang("Sexual characteristics appear, maximum growth occurs", "যৌন বৈশিষ্ট্য দেখা যায়, সবচেয়ে বেশি বৃদ্ধি ঘটে"),
-                  col2: yhLang("Sexual characteristics become prominent,growth decreases, ~95% height achieved", "যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে, বৃদ্ধি কমে আসে, প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়"),
+                  col2: yhLang(`Sexual characteristics become prominent,growth decreases, ~95% height achieved`, `যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে, (বৃদ্ধি কমে আসে, প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়)`),
                   col3: yhLang("Physical maturity achieved", "শারীরিক পূর্ণতাপ্রাপ্তি"),
                 },
                 {
