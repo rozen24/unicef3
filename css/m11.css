@@ -1,5 +1,5 @@
 .age-figure img{
-  max-height: 620px;
+  max-height: 520px;
 }
 
 
@@ -12605,7 +12605,7 @@ figure.image-card {
 .m7l-def-term {
   font-size: 1rem;
   font-weight: 700;
-  margin: 0 0 0.4rem 0;
+  margin: 0 0 0 0;
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -12669,7 +12669,7 @@ figure.image-card {
 
   .m7l-def-term {
     font-size: 1.1rem;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0px;
   }
 
   .m7l-def-text {
@@ -12717,7 +12717,7 @@ figure.image-card {
 
   .m7l-def-term {
     font-size: 1rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0px;
   }
 
   .m7l-def-text {
@@ -12765,7 +12765,7 @@ figure.image-card {
 
   .m7l-def-term {
     font-size: 0.95rem;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0px;
   }
 
   .m7l-def-text {
@@ -12826,7 +12826,7 @@ figure.image-card {
 
   .m7l-def-term {
     font-size: 0.9rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0px;
   }
 
   .m7l-def-text {
@@ -12888,7 +12888,7 @@ figure.image-card {
 
   .m7l-def-term {
     font-size: 0.85rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0px;
   }
 
   .m7l-def-text {

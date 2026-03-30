@@ -168,7 +168,7 @@ const coursesData = [
             content: (function () {
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base m7l-title" data-aos="fade-up"><i class="fa-solid fa-stethoscope me-2" style="color:#06B6D4;"></i>${yhLang("Youth Health Ambassador Program Overview", "তরুণ স্বাস্থ্যদূত কার্যক্রম")}</h2>
+                <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base m7l-title" data-aos="fade-up"><i class="fa-solid fa-stethoscope me-2" style="color:#06B6D4;"></i>${yhLang("Youth Health Ambassador Program Overview", "তরুণ স্বাস্থ্যদূত কার্যক্রম (ইয়ুথ হেলথ অ্যাম্বাসেডর প্রোগ্রাম)")}</h2>
                 
                 <div class="m7l-intro-card hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="100">
                   
@@ -180,7 +180,8 @@ const coursesData = [
                   </div>
                 </div>
 
-                <div class="row g-4 mt-4">
+                <div class="row g-1">
+                 <div class="col-md-6">
                   ${(() => {
                     const definitions = [
                       {
@@ -197,7 +198,7 @@ const coursesData = [
                       {
                         id: "m7l-adolescence",
                         icon: "fa-child-reaching",
-                        term: yhLang("Adolescence", "বয়ঃসন্ধিকাল"),
+                        term: yhLang("Adolescence", "কৈশোরকাল"),
                         color: "emerald",
                         description: yhLang(
                           "According to the World Health Organization, adolescence is the life phase between childhood and adulthood, from 10 to 19 years of age. Adolescents during this time experience rapid physical growth, intellectual and mental development. It affects how they feel, think, make decisions and interact with the world around them.",
@@ -230,8 +231,9 @@ const coursesData = [
                     ];
                     return definitions
                       .map(
+                        
                         (def) => `
-                      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="${def.delay}">
+                      
                         <div class="m7l-def-card m7l-def-${def.color} hover-lift-sm transition-base">
                           <div class="m7l-def-icon-wrapper">
                             <div class="m7l-def-icon">
@@ -243,69 +245,24 @@ const coursesData = [
                             <p class="m7l-def-text">${def.description}</p>
                           </div>
                         </div>
-                      </div>
+                    
                     `,
                       )
                       .join("");
                   })()}
+                  </div>
+                  <div class="col-md-6">
+                     <figure class="glass-card age-figure m p-1 mb-0 text-center">
+                          <img src="img/age/age-figure.jpg" alt="" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                    </figure>
+                  </div>
                 </div>
               </div>`;
             })(),
           },
-                    {
-            id: "ch1-lesson-2",
-            title: yhLang(
-              "Age Progression: Adolescence to Young Adulthood (10–24)",
-              "বয়সের ধাপ: কৈশোর থেকে তরুণ প্রাপ্তবয়স্ক (১০–২৪)",
-            ),
-            icon: "fa-children",
-            gradientClass: "bg-gradient-violet",
-            audioFile: "",
-            quiz: {
-              passingScore: 70,
-              questions: [
-                {
-                  id: "q1a-ages-1",
-                  question: yhLang(
-                    "Which range is considered Mid Adolescence ?",
-                    "কোন বয়সসীমাকে মধ্য কৈশোর ধরা হয় ?",
-                  ),
-                  options: [
-                    yhLang("10–13 years", "১০–১৩ বছর"),
-                    yhLang("14–16 years", "১৪–১৬ বছর"),
-                    yhLang("17–19 years", "১৭–১৯ বছর"),
-                    yhLang("20–24 years", "২০–২৪ বছর"),
-                  ],
-                  correctAnswer: 1,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-            <div class="lesson-slide">
-              <div class="floating-bg" aria-hidden="true">
-                <span class="float-elem" style="top:8%; left:6%; width:64px; height:64px;"></span>
-                <span class="float-elem" style="top:30%; right:8%; width:80px; height:80px;"></span>
-                <span class="float-elem" style="bottom:10%; left:12%; width:72px; height:72px;"></span>
-              </div>
 
-              <div class="alert alert-primary mb-1 hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="60">
-                <div class="d-flex align-items-center gap-3">
-                  <span class="badge bg-primary bg-gradient p-2"><i class="fa-solid fa-users-between-lines"></i></span>
-                  <div>
-                    <h3 class="">${yhLang("Understanding Age Groups (10–24)", "বয়সভিত্তিক ধাপ (১০–২৪)")}</h3>
-                  </div>
-                </div>
-              </div>
 
-              
-             <figure class="glass-card age-figure p-1 mb-0 text-center">
-                    <img src="img/age/age-figure.jpg" alt="" class="img-fluid w-100 rounded shadow-sm img-zoom" />
-              </figure>
 
-            </div>`;
-            })(),
-          },
           // Young Around the World
           // {
           //   id: 'ch1-lesson-5',
@@ -338,7 +295,7 @@ const coursesData = [
             id: "ch1-lesson-3",
             title: yhLang(
               "Core Components of Young Health Ambassador Program",
-              "তরুন স্বাস্থ্যদূত কার্যক্রমের মৌলিক অংশ",
+              "তরুন স্বাস্থ্যদূত কার্যক্রমের মৌলিক উপাদান সমূহ ",
             ),
             icon: "fa-puzzle-piece",
             gradientClass: "bg-gradient-indigo",
@@ -354,7 +311,7 @@ const coursesData = [
                   ),
                   options: [
                     yhLang("Health Literacy", "স্বাস্থ্য সাক্ষরতা"),
-                    yhLang("Peer-to-peer impact", "পিয়ার-টু-পিয়ার প্রভাব"),
+                    yhLang("Peer-to-peer impact", "পিয়ার টু পিয়ার ইনফ্লুয়েন্স"),
                     yhLang("Empowerment", "ক্ষমতায়ন"),
                     yhLang("All of the above", "উপরের সব"),
                   ],
@@ -365,7 +322,7 @@ const coursesData = [
             content: (function () {
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title m8l-title" data-aos="fade-up"><i class="fa-solid fa-puzzle-piece me-2" style="color:#6366F1;"></i>${yhLang("Core Components of YHAP", "তরুন স্বাস্থ্যদূত কার্যক্রমের মৌলিক অংশ")}</h2>
+                <h2 class="slide-title m8l-title" data-aos="fade-up"><i class="fa-solid fa-puzzle-piece me-2" style="color:#6366F1;"></i>${yhLang("Core Components of YHAP", "তরুন স্বাস্থ্যদূত কার্যক্রমের মৌলিক উপাদান সমূহ ")}</h2>
                 
                 <div class="row g-1">
                   <div class="col-lg-8">
@@ -379,7 +336,7 @@ const coursesData = [
                             color: "rose",
                             description: yhLang(
                               "The Young Health Ambassador Programme builds basic health literacy through comprehensive training on health and wellbeing. It provides young ambassadors with trustworthy information sources and enables them to play effective roles in disease prevention and promoting healthier lifestyles.",
-                              "ইয়ুথ হেলথ অ্যাম্বাসেডর প্রোগ্রাম, স্বাস্থ্য এবং সুস্থতার উপর ব্যাপক প্রশিক্ষণের মাধ্যমে তরুণ স্বাস্থ্যদূতদের মৌলিক স্বাস্থ্য-সাক্ষরতা তৈরি করবে।এটি তাদের বিশ্বাসযোগ্য তথ্যের উৎস প্রদান করবে এবং রোগ প্রতিরধে ও স্বাস্থ্যকর জীবন-যাপনের প্রচারণায় কার্যকর ভূমিকা রাখবে।",
+                              "ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম, স্বাস্থ্য ও সুস্থতা সংক্রান্ত সার্বিক প্রশিক্ষণের মাধ্যমে তরুণ স্বাস্থ্যদূতদের প্রাথমিক স্বাস্থ্যসাক্ষরতায় দক্ষ করে তুলবে ।  এ কর্মসূচি তাদেরকে নির্ভরযোগ্য তথ্যের উৎস প্রদান করবে এবং রোগ প্রতিরোধ ও স্বাস্থ্যকর জীবনাচার প্রচারে কার্যকরী ভূমিকা পালনে সক্ষম করবে।",
                             ),
                           },
                           {
@@ -389,17 +346,17 @@ const coursesData = [
                             color: "emerald",
                             description: yhLang(
                               "Young Health Ambassadors create health education and awareness through campaigns, training and mentorship on critical health issues. Through these multifaceted efforts, they ensure proper dissemination of important health information, enabling young people to become health-conscious citizens.",
-                              "তরুণ স্বাস্থ্যদূতরা (YHAs) গুরুত্বপূর্ণ স্বাস্থ্য বিষয়গুলির উপর প্রচারণা, প্রশিক্ষন ও মেন্টরশিপের মাধ্যমে স্বাস্থ্য শিক্ষা এবং সচেতনতা তৈরি করবে। এই বহুমুখী প্রচেষ্টার মাধ্যমে, তারা গুরুত্বপূর্ণ স্বাস্থ্যবিষয়ক তথ্যের সঠিক প্রচার নিশ্চিত করবে, যার ফলে সঠিক স্বাস্থ্যতথ্যের মাধ্যমে তরুন জনগোষ্ঠী  স্বাস্থ্য–সচেতন জনগোষ্ঠী হিসাবে গড়ে উঠবে।",
+                              "তরুণ স্বাস্থ্যদূতরা গুরুত্বপূর্ণ স্বাস্থ্য বিষয়গুলির উপর প্রচারণা, প্রশিক্ষন ও মেন্টরশিপের মাধ্যমে স্বাস্থ্য শিক্ষা এবং সচেতনতা তৈরি করবে।  এই বহুমুখী প্রচেষ্টার মাধ্যমে, তারা গুরুত্বপূর্ণ স্বাস্থ্যবিষয়ক তথ্যের সঠিক প্রচার নিশ্চিত করবে, যার ফলে সঠিক স্বাস্থ্যতথ্যের মাধ্যমে তরুন জনগোষ্ঠী  স্বাস্থ্যুসচেতন জনগোষ্ঠী হিসাবে গড়ে উঠবে।",
                             ),
                           },
                           {
                             id: "peer-impact",
-                            title: yhLang("Peer-to-Peer Impact", "পিয়ার টু পিয়ার প্রভাব"),
+                            title: yhLang("Peer-to-Peer Impact", "পিয়ার টু পিয়ার ইনফ্লুয়েন্স"),
                             icon: "fa-people-arrows",
                             color: "sapphire",
                             description: yhLang(
                               "The YHAP is built on the principle that peer-to-peer engagement acts as a powerful catalyst for change. By encouraging supportive mentoring and positive role-modeling among peers, this programme leverages the power of experience-sharing among young people to promote healthier behaviours.",
-                              "তরুণ  স্বাস্থ্যদূত কার্যক্রমটি এই নীতির উপর ভিত্তি করে তৈরি করা হয়েছে যে, পিয়ার-টু-পিয়ার সম্পৃক্ততা পরিবর্তনের জন্য একটি শক্তিশালী অনুঘটক হিসাবে কাজ করে। সমসাময়িক তরুনদের মধ্যে সহায়ক পরামর্শদান এবং ইতিবাচক রোল-মডেলকে উৎসাহিত করে, এই কার্যক্রমটি স্বাস্থ্যকর আচরণ প্রচারের জন্য তরুণদের মধ্যে অভিজ্ঞতা বিনিময়ের প্রভাবকে কাজে লাগাবে।",
+                              "তরুণদের মধ্যে পারস্পারিক সম্প্রিক্ততাই  তরুন স্বাস্থ্যদূত কার্যক্রমটির মুল চালিকাশক্তি।  এই সম্পৃক্ততা, ইতিবাচক পরিবর্তনের জন্য একটি শক্তিশালী অনুঘটক হিসাবে কাজ করে।  সমসাময়িক তরুনদের মধ্যে সহায়ক পরামর্শদান এবং রোল-মডেলকে উৎসাহিত করে, এই কার্যক্রমটি তরুণদের মধ্যে স্বাস্থ্যকর আচরণ প্রচারের জন্য প্রভাবক হিসাবে ভূমিকা পালন করবে। ",
                             ),
                           },
                           {
@@ -409,7 +366,7 @@ const coursesData = [
                             color: "tangerine",
                             description: yhLang(
                               "The YHAP empowers young people with necessary skills, confidence and resources to take effective action, contribute to economic development, and create healthy future workforces for tomorrow's society.",
-                              "তরুণ স্বাস্থ্যদূত কার্যক্রম, তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে ক্ষমতায়িত করে, যাতে তারা কার্যকর ভূমিকা নিয়ে অর্থনৈতিক উন্নয়নে অবদান রাখতে পারে এবং ভবিষ্যতের জন্য সৃজনশীল ও সুস্থ কর্মশক্তি গড়ে ওঠে।",
+                              "তরুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে তরুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে সহায়তা করে, যাতে তারা ভবিষ্যতের জন্য একটি সৃজনশীল ও সুস্থ কর্মশক্তি গড়ে তোলার মাধ্যমে অর্থনৈতিক উন্নয়নে কার্যকর ভূমিকা পালন করতে পারে। ",
                             ),
                           },
                           {
@@ -419,7 +376,7 @@ const coursesData = [
                             color: "violet",
                             description: yhLang(
                               "This programme develops leadership qualities among young people, enabling them to become ethical, effective and inspiring agents of community change and progress.",
-                              "এই কর্মসূচি তরুণদের মধ্যে নেতৃত্বের গুণাবলী বিকাশ করে, যাতে তারা সম্প্রদায়ের পরিবর্তনের নৈতিক, কার্যকর ও অনুপ্রেরণাদায়ী দূত হয়ে উঠতে পারে।",
+                              "এই কর্মসূচি তরুণদের মধ্যে নেতৃত্বের গুণাবলি বিকাশ করে, যাতে তারা তরুণ-সম্প্রদায়ের ইতিবাচক পরিবর্তনের নৈতিক, ফল্প্রসু ও অনুপ্রেরণাদায়ী দূত হয়ে উঠতে পারে।",
                             ),
                           },
                           {
@@ -429,7 +386,7 @@ const coursesData = [
                             color: "cyan",
                             description: yhLang(
                               "The YHAP enables young people to highlight public health priorities and drive policy change. Through strategic partnerships, evidence-based advocacy and legislative participation, the health system is strengthened.",
-                              "তরুণ স্বাস্থ্যদূত কার্যক্রম, যাতে তরুণরা জনস্বাস্থ্যের অগ্রাধিকার তুলে ধরে নীতিগত পরিবর্তন আনতে পারে। অংশীদারদের সঙ্গে কৌশলগত সম্পৃক্ততা, প্রমাণভিত্তিক নীতিপ্রচারণা এবং আইন প্রণয়নে অংশগ্রহণের মাধ্যমে স্বাস্থ্যব্যবস্থা শক্তিশালী করা হয়।",
+                              "তরুণ স্বাস্থ্যদূত কার্যক্রম, তরুণদের এমনভাবে গড়ে তোলে যাতে তারা জনস্বাস্থ্যের জরুরি অগ্রাধিকারসমূহ উপস্থাপন করে নীতি পর্যায়ে পরিবর্তন আনতে পারে। এই কার্যক্রমটি,  বিভিন্ন অংশীদারদের সঙ্গে কৌশলগত সম্পৃক্ততা, প্রমাণভিত্তিক নীতিপ্রচারণা এবং আইন প্রণয়নে অংশগ্রহণের মাধ্যমে স্বাস্থ্যব্যবস্থাকে শক্তিশালী করতে গুরুত্বপূর্ণ  ভূমিকা পালন করবে।",
                             ),
                           },
                         ];
@@ -470,7 +427,7 @@ const coursesData = [
                             { text: yhLang("Health Literacy", "স্বাস্থ্য সাক্ষরতা"), icon: "fa-book-open", gradient: "m8l-orbit-rose" },
                             { text: yhLang("Leadership", "নেতৃত্ব"), icon: "fa-crown", gradient: "m8l-orbit-violet" },
                             { text: yhLang("Advocacy", "অ্যাডভোকেসি"), icon: "fa-bullhorn", gradient: "m8l-orbit-cyan" },
-                            { text: yhLang("Peer-to-Peer Impact", "পিয়ার-টু-পিয়ার প্রভাব"), icon: "fa-people-arrows", gradient: "m8l-orbit-sapphire" },
+                            { text: yhLang("Peer-to-Peer Impact", "পিয়ার টু পিয়ার ইনফ্লুয়েন্স"), icon: "fa-people-arrows", gradient: "m8l-orbit-sapphire" },
                             { text: yhLang("Empowerment", "ক্ষমতায়ন"), icon: "fa-bolt", gradient: "m8l-orbit-tangerine" },
                           ];
                           return orbitItems
@@ -503,7 +460,7 @@ const coursesData = [
             id: "ch1-lesson-4",
             title: yhLang(
               "Role and Responsibility of Youth Health Ambassador - Who Am I ",
-              "স্বাস্থ্য দূতের (ইয়ুথ হেলথ অ্যাম্বাসেডর) ভূমিকা এবং দায়িত্ব - আমি কে ?",
+              "স্বাস্থ্য দূতের ভূমিকা এবং দায়িত্ব -",
             ),
             icon: "fa-person-circle-check",
             gradientClass: "bg-gradient-purple",
@@ -530,18 +487,18 @@ const coursesData = [
             content: (function () {
               return `
               <div class="lesson-slide m9l-slide">
-                <h2 class="slide-title m9l-title m9l-title-enhanced " data-aos="fade-up"><i class="fa-solid fa-person-circle-check"></i>${yhLang("Role and Responsibility of Youth Health Ambassador - Who Am I ?", "স্বাস্থ্য দূতের (ইয়ুথ হেলথ অ্যাম্বাসেডর) ভূমিকা এবং দায়িত্ব - আমি কে ?")}</h2>
+                <h2 class="slide-title m9l-title m9l-title-enhanced " data-aos="fade-up"><i class="fa-solid fa-person-circle-check"></i>${yhLang("Role and Responsibility of Youth Health Ambassador - Who Am I ?", "স্বাস্থ্য দূতের ভূমিকা এবং দায়িত্ব -")}</h2>
                 
                 <div class="m9l-points-container">
                   ${(() => {
                     const points = [
                       {
                         id: "knowledge-skills",
-                        icon: "fa-brain",
+                        icon: "fa-book",
                         title: yhLang("Knowledge & Skills", "জ্ঞান এবং দক্ষতা"),
                         text: yhLang(
                           "I have knowledge and skills to protect the health and well-being of young people, which enables me to make effective contributions to society and achieve health, social, and economic benefits.",
-                          "তরুণদের স্বাস্থ্য ও সুস্থতা রক্ষায় আমার জ্ঞান ও দক্ষতা আছে, যা আমাকে সমাজে কার্যকর অবদান রাখতে ও স্বাস্থ্য, সামাজিক ও অর্থনৈতিক ত্রি-মুখী সুফল অর্জনে সহায়তা করে।",
+                          "তরুণ স্বাস্থ্যদূত কার্যক্রমটি, তরুণদের স্বাস্থ্য ও সুস্থতা সুরক্ষায় আমার অর্জিত জ্ঞান ও দক্ষতা আমাকে সমাজে কার্যকর অবদান রাখতে এবং স্বাস্থ্যগত, সামাজিক ও অর্থনৈতিক-এই ত্রি-মুখী সুফল অর্জনে সহায়তা করবে।",
                         ),
                         color: "rose",
                         delay: 150,
@@ -552,7 +509,7 @@ const coursesData = [
                         title: yhLang("Knowledge Sharing & Empowerment", "জ্ঞান ভাগাভাগি এবং ক্ষমতায়ন"),
                         text: yhLang(
                           "By sharing knowledge about health development, disease prevention, and overall well-being, I empower my peers and help young people make informed health decisions.",
-                          "আমি স্বাস্থ্য উন্নয়ন, রোগ প্রতিরোধ ও সামগ্রিক সুস্থতা নিয়ে জ্ঞান ভাগ করে আমি সহপাঠীদের ক্ষমতায়িত করি এবং তরুণদের সুচিন্তিত সিদ্ধান্ত গ্রহণে সহায়তা করি।",
+                          "একজন তরুণ স্বাস্থ্যদূত হিসাবে আমি স্বাস্থ্য উন্নয়ন, রোগ প্রতিরোধ ও সামগ্রিক সুস্থতা সম্পর্কে জ্ঞান বিনিময় করে আমার সহপাঠীদের সার্বিকভাবে সক্ষম তুলব যা তাদের সুস্থ, সুচিন্তিত ও যুক্তিভিত্তিক সিদ্ধান্ত গ্রহণে সহায়তা করবে।",
                         ),
                         color: "emerald",
                         delay: 200,
@@ -563,7 +520,7 @@ const coursesData = [
                         title: yhLang("Advocacy & Engagement", "অ্যাডভোকেসি এবং সম্পৃক্ততা"),
                         text: yhLang(
                           "Through advocacy, I engage policymakers, partners, and community influencers to ensure youth health is prioritized and supportive policies and coordinated actions are implemented.",
-                          "অ্যাডভোকেসির মাধ্যমে নীতিনির্ধারক, অংশীদার ও সম্প্রদায়ের প্রভাবশালীদের সম্পৃক্ত করি যাতে তরুণদের স্বাস্থ্য অগ্রাধিকার পায় ও সহায়ক নীতি ও সমন্বিত পদক্ষেপ নিশ্চিত হয়।",
+                          "অ্যাডভোকেসির মাধ্যমে নীতিনির্ধারক, গুরুত্বপূর্ণ স্টেকহোল্ডার  এবং সমাজের  প্রভাবশালীদের সম্পৃক্ত করে,  তরুণদের স্বাস্থ্য অগ্রাধিকার ও সহায়ক নীতি ও সমন্বিত পদক্ষেপ বাস্তবায়ন নিশ্চিত করব।",
                         ),
                         color: "sapphire",
                         delay: 250,
@@ -574,7 +531,7 @@ const coursesData = [
                         title: yhLang("Community Role", "সম্প্রদায়ের ভূমিকা"),
                         text: yhLang(
                           "I play a role in creating demand and fostering needs awareness within the youth community, ensuring collective efforts for improved health outcomes for all young people.",
-                          "আমি যুব সম্প্রদায়ের মধ্যে ও চাহিদা সৃষ্টিতে ভূমিকা রাখি, যাতে সবাই মিলে তরুন-তরুনীদের উন্নত স্বাস্থ্যফল নিশ্চিত করতে পারে।",
+                          " একজন স্বাস্থ্যদূত হিসাবে, আমি যুব সম্প্রদায়ের মধ্যে স্বাস্থ্য সচেতনতা বৃদ্ধিতে  সমাজের সব স্তরের সম্মিলিত দায়িত্ববোধ পালনে সক্রিয় ভূমিকা ও কার্যকর পদক্ষেপ গ্রহণে উৎসাহিত করব।",
                         ),
                         color: "tangerine",
                         delay: 300,
@@ -588,7 +545,6 @@ const coursesData = [
                           <i class="fa-solid ${point.icon}"></i>
                         </div>
                         <div class="m9l-point-content">
-                          <h3 class="m9l-point-title">${point.title}</h3>
                           <p class="m9l-point-text">${point.text}</p>
                         </div>
                       </div>
@@ -701,7 +657,7 @@ const coursesData = [
                           </div>
                           <div class="ch1l10-step-content">
                             <p class="ch1l10-step-text">
-                              ${yhLang("Create ID", "আইডি তৈরি")}
+                              ${yhLang("ID verification", "আইডি যাচাইকরণ")}
                             </p>
                           </div>
                         </div>
@@ -740,16 +696,15 @@ const coursesData = [
                         <!-- Arrow Up from Col 1 -->
                         
 
-                        <!-- Step 4 -->
-                        <div class="ch1l10-step-item ch1l10-step-4">
+                        <!-- Step 6 -->
+                        <div class="ch1l10-step-item ch1l10-step-6">
                           <div class="ch1l10-step-icon">
-                            <i class="fa-solid fa-book-open"></i>
+                            <i class="fa-solid fa-check-circle"></i>
                           </div>
-                          <div class="ch1l10-step-content d-flex align-items-center">
+                          <div class="ch1l10-step-content">
                             <p class="ch1l10-step-text">
-                              ${yhLang("Enroll in 'Health Ambassador Course'", "'স্বাস্থ্য দূত কোর্স'-এ প্রবেশ")}
+                              ${yhLang("Achieve Passing Score in Final Assessment", "চূড়ান্ত মূল্যায়নে পাস নম্বর অর্জন করুন")}
                             </p>
-                            
                           </div>
                         </div>
 
@@ -780,15 +735,16 @@ const coursesData = [
                           <i class="fa-solid fa-arrow-up"></i>
                         </div>
 
-                        <!-- Step 6 -->
-                        <div class="ch1l10-step-item ch1l10-step-6">
+                        <!-- Step 4 -->
+                        <div class="ch1l10-step-item ch1l10-step-4">
                           <div class="ch1l10-step-icon">
-                            <i class="fa-solid fa-check-circle"></i>
+                            <i class="fa-solid fa-book-open"></i>
                           </div>
-                          <div class="ch1l10-step-content">
+                          <div class="ch1l10-step-content d-flex align-items-center">
                             <p class="ch1l10-step-text">
-                              ${yhLang("Achieve Passing Score in Final Assessment", "চূড়ান্ত মূল্যায়নে পাস নম্বর অর্জন করুন")}
+                              ${yhLang("Enroll in 'Health Ambassador Course'", "'স্বাস্থ্য দূত কোর্স'-এ প্রবেশ")}
                             </p>
+                            
                           </div>
                         </div>
 
@@ -2668,7 +2624,7 @@ const coursesData = [
 
           {
             id: "ch3-lesson-1",
-            title: yhLang("Adolescence Changes", "বয়ঃসন্ধিকালীন পরিবর্তন"),
+            title: yhLang("Adolescence Changes", "বয়ঃসন্ধিকালীন"),
             icon: "fa-person-young",
             gradientClass: "bg-gradient-purple",
             audioFile: "",
@@ -2777,7 +2733,7 @@ const coursesData = [
                   <div class="ch3l2-intro-section">
                     <h1 class="ch3l2-main-title">
                       <i class="fa-solid fa-arrows-up-down"></i>
-                      ${yhLang("Adolescence Changes", "বয়ঃসন্ধিকালীন পরিবর্তন")}
+                      ${yhLang("Adolescence Changes", "বয়ঃসন্ধিকালীন")}
                     </h1>
                     <p class="ch3l2-description">${description}</p>
                   </div>
@@ -2863,7 +2819,7 @@ const coursesData = [
                 {
                   title: yhLang("Growth", "বৃদ্ধি"),
                   col1: yhLang("Sexual characteristics appear, maximum growth occurs", "যৌন বৈশিষ্ট্য দেখা যায়, সবচেয়ে বেশি বৃদ্ধি ঘটে"),
-                  col2: yhLang(`Sexual characteristics become prominent,growth decreases, ~95% height achieved`, `যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে, (বৃদ্ধি কমে আসে, প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়)`),
+                  col2: yhLang("Sexual characteristics become prominent", "growth decreases, ~95% height achieved", "যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে", "বৃদ্ধি কমে আসে, প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়"),
                   col3: yhLang("Physical maturity achieved", "শারীরিক পূর্ণতাপ্রাপ্তি"),
                 },
                 {
@@ -3488,7 +3444,7 @@ const coursesData = [
             id: "ch4-lesson-4",
             title: yhLang(
               "Roles in Menstrual Management",
-              "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা",
+              "মাসিক ব্যবস্থাপনায় বাবা-মার ভূমিকা",
             ),
             icon: "fa-handshake",
             gradientClass: "bg-gradient-cyan",
@@ -3556,7 +3512,7 @@ const coursesData = [
   {
     text: yhLang(
       "Encourage girls to eat more nutritious food during menstruation.",
-      "ঋতুস্রাবের সময়ে কিশোরীকে বেশি করে পুষ্টিকর খাবার খেতে উৎসাহিত করা।"
+      "ঋতুস্রাবের সময়ে কিশোরীকে বেশি করে পুষ্টিকর খাবার খেতে উদ্বুদ্ধ করা।"
     ),
     icon: "fa-utensils",
     color: "#10b981",
@@ -3578,7 +3534,7 @@ const coursesData = [
   {
     text: yhLang(
       "If menstruation starts unexpectedly at school, provide emergency sanitary napkins (free or paid).",
-      "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা প্রস্তুতি ছাড়া হঠাৎ করে মাসিক শুরু হয়ে যেতে পারে। সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীকে সাহায্য করতে পারে।"
+      "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা হঠাৎ করে প্রস্তুতি ছাড়া মাসিক শুরু হয়ে যেতে পারে।  সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীকে সাহায্য করতে পারে।"
     ),
     icon: "fa-first-aid",
     color: "#ef4444",
@@ -3587,7 +3543,7 @@ const coursesData = [
   {
     text: yhLang(
       "Keep pain relief tablets in the school first aid box for menstrual pain.",
-      "অনেক মেয়ের মাসিকের সময় তলপেটে তীব্র ব্যথা হয়। তাই স্কুলের ফার্স্ট এইড বক্সে বেদনানাশক ট্যাবলেট রাখা প্রয়োজন।"
+      "অনেক মেয়ের মাসিকের সময় তলপেটে তীব্র ব্যথা হয়।  তাই স্কুলের ফার্স্ট এইড বক্সে বেদনানাশক ট্যাবলেট রাখা প্রয়োজন।"
     ),
     icon: "fa-pills",
     color: "#f97316",
@@ -3596,7 +3552,7 @@ const coursesData = [
   {
     text: yhLang(
       "Ensure awareness that menstruation is a natural process and promote a supportive environment among students and teachers.",
-      "মনে রাখতে হবে যে, ঋতুস্রাব একটি স্বাভাবিক শারীরিক প্রক্রিয়া—এ নিয়ে লজ্জা বা সংকোচের কিছু নেই। এ বিষয়টি ছাত্র-ছাত্রী, শিক্ষকসহ সবাইকে সহজভাবে দেখার জন্য এবং সহযোগিতা দেওয়ার জন্য ওরিয়েন্টেশন প্রদান করা প্রয়োজন।"
+      "মনে রাখতে হবে যে, ঋতুস্রাব একটি স্বাভাবিক শারীরিক প্রক্রিয়া—এ নিয়ে লজ্জা বা সংকোচের কিছু নেই।  এ বিষয়টি ছাত্র-ছাত্রী, শিক্ষকসহ সবাইকে সহজভাবে দেখার জন্য এবং সহযোগিতা দেওয়ার জন্য ওরিয়েন্টেশন প্রদান করা প্রয়োজন।"
     ),
     icon: "fa-handshake",
     color: "#06b6d4",
@@ -3716,7 +3672,7 @@ const coursesData = [
                     <div class="m4l9-section-header">
                       <h3 class="m4l9-section-title">
                         <i class="fa-solid fa-heart"></i>
-                        ${yhLang("Parents' Role", "মাসিক ব্যবস্থাপনায় বাবা-মায়ের ভূমিকা")}
+                        ${yhLang("Parents' Role", "মাসিক ব্যবস্থাপনায় বাবা-মার ভূমিকা")}
                       </h3>
                     </div>
                     <div class="m4l9-points-grid">
@@ -3733,7 +3689,7 @@ const coursesData = [
                       </h3>
                       <p class="m4l9-section-description">${yhLang(
                         "Many girls avoid attending school during menstruation, especially in the first few days, which negatively impacts their studies and results. To prevent school dropout and early marriage due to poor academic performance, educational authorities must provide proper support to students.",
-                        "অনেক মেয়েই মাসিকের সময়, বিশেষ করে মাসিকের প্রথম দিনগুলোতে স্কুল/কলেজে যেতে চায় না। প্রতিমাসের এমন অনুপস্থিতি তাদের লেখাপড়া ও ফলাফলের উপর নেতিবাচক প্রভাব ফেলে। ফলাফল খারাপ হওয়ায় তারা পড়াশোনা বন্ধ করে দেয়, আবার অনেকের অভিভাবক এ সময় মেয়েদের বিয়ে দিয়ে দেন। এ অবস্থা থেকে পরিত্রাণ পেতে শিক্ষা প্রতিষ্ঠানের কর্তৃপক্ষকে ঋতুস্রাবের সময় ছাত্রীদের সহায়তা প্রদান করতে হবে।",
+                        "অনেক মেয়েরাই মাসিকের সময়, বিশেষ করে মাসিকের প্রথম দিনগুলোতে স্কুল/কলেজে যেতে চায় না।  প্রতিমাসের এমন অনুপস্থিতি তাদের লেখাপড়া ও ফলাফলের উপর নেতিবাচক প্রভাব ফেলে।  ফলাফল খারাপ করায় তারা পড়াশোনা বন্ধ করে দেয়, আবার অনেকের অভিভাবক এ সময় মেয়েদের বিয়ে দিয়ে দেন।  এ অবস্থা থেকে পরিত্রাণ পেতে শিক্ষা প্রতিষ্ঠান কর্তৃপক্ষকে ঋতুস্রাবের সময় ছাত্রীদের সহায়তা প্রদান করতে হবে।  যেমন :",
                       )}</p>
                     </div>
                     <div class="m4l9-school-grid">

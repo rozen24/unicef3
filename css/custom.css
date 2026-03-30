@@ -573,6 +573,10 @@ p {
 
 /* Apply ONLY when height is 768px or less */
 
+
+.age-figure img {
+  height: 500px;
+}
 @media screen and (max-height: 768px) {
   h2 {
     font-size: 18px !important;
@@ -1068,6 +1072,13 @@ span {
 .ch13l1-split-section {
   margin-top: 5px;
 }
+.age-figure img {
+  height: 300px;
+}
+
+
+
+
 
 
 }
