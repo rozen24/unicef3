@@ -915,15 +915,15 @@ class YouthHealthLMS {
           else counterEl.dataset.animated = "true";
         };
         // Trigger on intersect to avoid animating offscreen
-        const obs = new IntersectionObserver((entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting && !counterEl.dataset.animated) {
-              requestAnimationFrame(step);
-              obs.disconnect();
-            }
-          });
-        }, { threshold: 0.4 });
-        obs.observe(counterEl);
+        // const obs = new IntersectionObserver((entries) => {
+        //   entries.forEach((e) => {
+        //     if (e.isIntersecting && !counterEl.dataset.animated) {
+        //       requestAnimationFrame(step);
+        //       obs.disconnect();
+        //     }
+        //   });
+        // }, { threshold: 0.4 });
+        // obs.observe(counterEl);
       }
 
       // Animate chapter progress percent from 0 to target once per render
@@ -1123,7 +1123,7 @@ class YouthHealthLMS {
           // Build a map wrapper to replace the canvas
           const regions = [
             { key: 'north-america', label: 'North America (4%)', top: '36%', left: '18%', color: '#60A5FA' },
-            { key: 'latin-america', label: 'Latin America (8%)', top: '58%', left: '30%', color: '#F472B6' },
+            { key: 'latin-america', label: 'Latin America (8%)', top: '52%', left: '23%', color: '#F472B6' },
             { key: 'europe', label: 'Europe (6%)', top: '28%', left: '52%', color: '#A78BFA' },
             { key: 'mena', label: 'MENA (10%)', top: '40%', left: '54%', color: '#22D3EE' },
             { key: 'ssa', label: 'Sub-Saharan Africa (26%)', top: '60%', left: '52%', color: '#34D399' },

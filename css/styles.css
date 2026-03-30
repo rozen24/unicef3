@@ -214,6 +214,11 @@ html:lang(bn) .lesson-hero__top  lang,
 html[lang|="bn"] .lesson-hero__top lang {
   font-size: 15px !important;
 }
+
+html:lang(bn) .map-text  lang,
+html[lang|="bn"] .map-text lang {
+  font-size: 50px !important;
+}
 html:lang(bn) .jogagok_text  lang,
 html[lang|="bn"] .jogagok_text lang {
   font-size: 30px !important;
@@ -30450,7 +30455,7 @@ p.lead {
     transform: translate(-51%, -84%) rotate(calc(var(--a) + var(--inner-offset))) translate(var(--r)) rotate(calc((var(--a) + var(--inner-offset)) * -1)) !important;
 }
 .h-region {
-  height: 650px;
+  max-height: 650px;
 }
 /* My Codes  custom lines 1 */ 
 .pyramid-positive .pyramid-step:nth-child(1) {  

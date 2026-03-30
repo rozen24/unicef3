@@ -821,7 +821,7 @@ const coursesData = [
             id: "ch2-lesson-1",
             title: yhLang(
               "Global Young Population and Demographics",
-              "তরুণদের বিস্তৃতি",
+              "তরুণদের বৈশ্বিক প্রেক্ষাপট",
             ),
             icon: "fa-map-location-dot",
             gradientClass: "bg-gradient-blue",
@@ -848,31 +848,34 @@ const coursesData = [
             content: (function () {
               return `
             <div class="lesson-slide">
-              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বিস্তৃতি")}</h2>
+              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বৈশ্বিক প্রেক্ষাপট")}</h2>
 
-              <div class="row g-1">
-                       <div class="col-md-5">
+              <div class="row g-1 d-flex align-items-center">
+                       <div class="col-md-6">
                          
                        <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
                           <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
-                            <div class="container" style="position: relative">
-                              <img src="img/Distribution/globe.jpg" style="height: 290px;" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
+                            <div class="container m2_globe" style="position: relative">
+                              <img src="img/Distribution/globe.jpg" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
                               <div class="globe-text-wrap">
-                                <h3 class="fw-bold map-text" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">0</span>%</h3>
+                                <h3 class="fw-bold map-text mb-2" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">${yhLang("70", "৯০")}</span>%</h3>
                                 <p class="lead mt-1 text-dark">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়ন</strong> ১০–২৪ বছর বয়সী তরুণ রয়েছে।")}</p>
                                 <p class="mb-0 text-dark lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "বাংলাদেশে মোট তরূণ -<strong>৯০%</strong> তরুণ উন্নয়নশীল দেশে বাস করে।")}</p>
                               </div>
                             </div>
                           </section>
+                          
+                       </div>
+                       <div class="col-md-6">
 
-                          <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
-                            <section class="world-youth-map-and-chart py-1 rounded-4" data-aos="zoom-in">
+                         <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
+                            <section class="world-youth-map-and-chart rounded-4" data-aos="zoom-in">
                               <div class="container">
-                                <div class="row g-1 align-items-center">
+                                <div class="row">
                                   <div class="col-lg-12">
-                                    <div class="modern-card style="height: 220px;" glass-card h-region">
-                                      <h5 class="mb-1">${yhLang("Global youth population by region", "অঞ্চলভিত্তিক বৈশ্বিক তরুণ জনগোষ্ঠী")}</h5>
-                                      <div style="position:relative; height:250px;">
+                                    <div class="modern-card p-2 glass-card h-region">
+                                      <h2 class="mb-2">${yhLang("Global youth population by region", "অঞ্চলভিত্তিক বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
+                                      <div style="position:relative; height:500px;">
                                         <canvas id="regionalShareChart" aria-label="Global youth population by region. " role="img"></canvas>
                                       </div>
                                     </div>
@@ -881,27 +884,70 @@ const coursesData = [
                               </div>
                             </section>
                        </div>
-                       <div class="col-md-7">
-                          <!-- Step 4 – Bangladesh Focus -->
-                          <section class="bangladesh-map mb-1" data-aos="fade-right">
-                            <div class="container">
-                              <div class="row align-items-center g- modern-card glass-card">
-                                  <div class="col-md-8" style="padding:1.5rem;">
-                                    <h3>${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h3>
+              </div>
+
+              
+
+              
+
+              
+              <!-- <div class="alert alert-info mt-3" role="note" data-aos="fade-up">
+                Complete the knowledge check below to continue.
+              </div> -->
+            </div>`;
+            })(),
+          },
+          {
+            id: "ch2-lesson-2",
+            title: yhLang(
+              "Global Young Population and Demographics",
+              "তরুণদের বাংলাদেশ প্রেক্ষাপট",
+            ),
+            icon: "fa-map-location-dot",
+            gradientClass: "bg-gradient-blue",
+            audioFile: "",
+            quiz: {
+              passingScore: 60,
+              questions: [
+                {
+                  id: "q2a",
+                  question: yhLang(
+                    "What percentage of the world’s youth live in developing countries ?",
+                    "বিশ্বের তরুণদের কত শতাংশ উন্নয়নশীল দেশে বাস করে ?",
+                  ),
+                  options: [
+                    yhLang("90%", "৯০%"),
+                    yhLang("75%", "৭৫%"),
+                    yhLang("60%", "৬০%"),
+                    yhLang("40%", "৪০%"),
+                  ],
+                  correctAnswer: 0,
+                },
+              ],
+            },
+            content: (function () {
+              return `
+            <div class="lesson-slide">
+              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বাংলাদেশ প্রেক্ষাপট")}</h2>
+              <div class="" style="padding:1.5rem;">
+                                    <h3 class="d-none">${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h3>
                                     <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people (~30% of total population).", "<strong>বাংলাদেশে মোট তরূণ:</strong> ৪৯.৫<strong> মিলিয়ন</strong>  (যা মোট জনসংখ্যার প্রায় ৩০%)।")}</p>
                                   </div>
-                                  <div class="col-md-4">
-                                  <img src="img/Distribution/dis-map.png" class="img-fluid img-zoom rounded shadow" alt="Bangladesh map placeholder">
+              <div class="row g-2">
+                       <div class="col-md-4">
+                          <!-- Step 4 – Bangladesh Focus -->
+                          <section class="bangladesh-map rounded-4 p-2" data-aos="fade-right">   
+                                  <div class="">
+                                  <img src="img/Distribution/dis-map.png" class="img-fluid w-100 img-zoom shadow" alt="Bangladesh map placeholder">
                                 </div>
-                              </div>
-                            </div>
                           </section>
-
+                       </div>
+                       <div class="col-md-8">
                           <!-- Step 3 – POPULATION & HOUSING CENSUS 2022 (Chart.js) -->
                           <section class="population-pyramid-wrapper" data-aos="fade-up">
                             <div class="modern-card glass-card">
-                              <h5 class="">${yhLang("POPULATION & HOUSING CENSUS 2022", "জনসংখ্যা ও গৃহগণনা ২০২২")}</h5>
-                              <div style="position:relative; height:350px;">
+                              <h5 class="d-none">${yhLang("POPULATION & HOUSING CENSUS 2022", "জনসংখ্যা ও গৃহগণনা ২০২২")}</h5>
+                              <div style="position:relative; height:520px;">
                                 <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
                               </div>
                             </div>
@@ -921,7 +967,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-2",
+            id: "ch2-lesson-3",
             title: yhLang(
               "Why young people’s health and wellbeing is important ?",
               "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ ?",
@@ -1019,7 +1065,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-3",
+            id: "ch2-lesson-4",
             title: yhLang(
               "Global scenario of mortality and morbidity among young people",
               "তরুণদের মৃত্যুহার এবং অসুস্থতার বৈশ্বিক এবং বাংলাদেশের চিত্র",
@@ -1200,7 +1246,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-4",
+            id: "ch2-lesson-5",
             title: yhLang(
               "Bangladesh scenario of mortality and morbidity among young people",
               "বাংলাদেশে তরুণদের মৃত্যু ও রোগভার পরিস্থিতি",
@@ -1429,7 +1475,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-5",
+            id: "ch2-lesson-6",
             title: yhLang(
               "Child marriage and teenage pregnancies",
               "কৈশোর কালীন স্বাস্থ্য",
@@ -1545,7 +1591,7 @@ const coursesData = [
               </div>`,
           },
           {
-            id: "ch2-lesson-6",
+            id: "ch2-lesson-7",
             title: yhLang(
               "Key Information",
               "মূল তথ্য",
@@ -1898,7 +1944,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-8",
+            id: "ch2-lesson-9",
             title: yhLang(
               "Why young people need special care ?",
               "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন ?",
@@ -2131,7 +2177,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-9",
+            id: "ch2-lesson-10",
             title: yhLang(
               "SDG related to adolescent health",
               "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG",
@@ -2219,7 +2265,7 @@ const coursesData = [
               </div>`,
           },
           {
-            id: "ch2-lesson-10",
+            id: "ch2-lesson-11",
             title: yhLang(
               "AH in Global Agenda",
               "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য",
@@ -2380,7 +2426,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-11",
+            id: "ch2-lesson-12",
             title: yhLang(
               "Bangladesh Government’s commitment",
               "বাংলাদেশ সরকারের অঙ্গীকার",
