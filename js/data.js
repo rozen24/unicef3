@@ -1059,123 +1059,55 @@ const coursesData = [
               </div>`;
             })(),
           },
+
           {
-            id: "ch2-lesson-4",
+            id: "ch2-lesson-5",
             title: yhLang(
-              "Global scenario of mortality and morbidity among young people",
-              "তরুণদের মৃত্যুহার এবং অসুস্থতার বৈশ্বিক এবং বাংলাদেশের চিত্র",
+              "Bangladesh scenario of mortality and morbidity among young people",
+              "বৈশ্বিক এবং বাংলাদেশের  তরুণ জনগোষ্ঠীর অসুস্থতা ও মৃত্যুহার",
             ),
-            icon: "fa-globe",
-            gradientClass: "bg-gradient-purple",
+            icon: "fa-flag",
+            gradientClass: "bg-gradient-blue",
             audioFile: "",
             quiz: {
               passingScore: 60,
               questions: [
                 {
-                  id: "q2c",
+                  id: "q2c-bd",
                   question: yhLang(
-                    "A leading cause of adolescent death includes…",
-                    "কৈশোরদের মৃত্যুর প্রধান কারণগুলোর একটি হলো…",
+                    "Among Bangladeshi adolescent males (10–19), which is a leading cause of death ?",
+                    "বাংলাদেশি কৈশোর বয়সী ছেলেদের (১০–১৯) মৃত্যুর প্রধান কারণ কোনটি ?",
                   ),
                   options: [
-                    yhLang("Common cold", "সাধারণ সর্দি"),
-                    yhLang("Road injuries", "সড়ক দুর্ঘটনা"),
-                    yhLang("Allergies", "অ্যালার্জি"),
-                    yhLang("None", "কোনোটিই নয়"),
+                    yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
+                    yhLang("Cancer", "ক্যান্সার"),
+                    yhLang("Diabetes", "ডায়াবেটিস"),
+                    yhLang("Malaria", "ম্যালেরিয়া"),
                   ],
-                  correctAnswer: 1,
+                  correctAnswer: 0,
                 },
               ],
             },
             content: (function () {
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global scenario of mortality and morbidity among young people", "তরুণদের মৃত্যুহার এবং অসুস্থতার বৈশ্বিক এবং বাংলাদেশের চিত্র")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Bangladesh scenario of mortality and morbidity among young people", "বৈশ্বিক এবং বাংলাদেশের  তরুণ জনগোষ্ঠীর অসুস্থতা ও মৃত্যুহার")}</h2>
 
-                <!-- Key Global Insights -->
-                <section class="my-1" data-aos="fade-up" data-aos-delay="40">
-                  <div class="row g-1">
-                    ${[
-                      {
-                        icon: "fa-heart-pulse",
-                        color: "bg-gradient-pink",
-                        text: yhLang(
-                          "Globally over <strong>1.5 million</strong> young people aged 10–24 years died in 2021 — about <strong>4500 every day</strong>.",
-                          "২০২১ সালে ১০-২৪ বছর বয়সী <strong>১.৫ মিলিয়নেরও বেশি</strong> কিশোর-কিশোরী এবং তরুণ প্রাপ্তবয়স্ক মারা গেছেন, প্রতিদিন প্রায় <strong>৪৫০০</strong> জন।"                        ),
-                      },
-                      {
-                        icon: "fa-heart-pulse",
-                        color: "bg-gradient-pink",
-                        text: yhLang(
-                          "Globally over <strong>1.5 million</strong> young people aged 10–24 years died in 2021 — about <strong>4500 every day</strong>.",
-                          "২০২১ সালে বিশ্বব্যাপী <strong>১.৫ মিলিয়নেরও বেশি</strong> ১০–২৪ বছর বয়সী তরুণ মারা গেছে — প্রতিদিন প্রায় <strong>৪৫০০</strong> জন।"
-                        ) },
-                      {
-                        icon: "fa-shield-halved",
-                        color: "bg-gradient-green",
-                        text: yhLang(
-                          "Young adolescents aged <strong>10–14</strong> have the <strong>lowest risk of death</strong> among all age groups.",
-                          "সকল বয়সের মধ্যে ১০-১৪ বছর বয়সী তরুণ-তরুণীদের মৃত্যুর ঝুঁকি সবচেয়ে কম।",
-                        ),
-                      },
-                      {
-                        icon: "fa-car-burst",
-                        color: "bg-gradient-orange",
-                        text: yhLang(
-                          "<strong>Injuries</strong> (including road traffic injuries and drowning), <strong>interpersonal violence</strong>, <strong>self-harm</strong>, and <strong>maternal conditions</strong> are leading causes of death.",
-                          "<strong>আঘাত (সড়ক দুর্ঘটনা এবং ডুবে যাওয়া সহ)</strong>, <strong>আন্তঃব্যক্তিক সহিংসতা</strong>, <strong>আত্ম-ক্ষতি</strong> এবং <strong>মাতৃত্বকালীন অবস্থা</strong> কিশোর-কিশোরী এবং তরুণ প্রাপ্তবয়স্কদের মধ্যে মৃত্যুর প্রধান কারণ।"),
-                      },
-                      {
-                        icon: "fa-brain",
-                        color: "bg-gradient-purple",
-                        text: yhLang(
-                          "<strong>Half</strong> of all mental health disorders in adulthood start by <strong>age 18</strong>, but most cases are <strong>undetected</strong> and <strong>untreated</strong>.",
-                          "প্রাপ্তবয়স্কদের মধ্যে মানসিক স্বাস্থ্যের অর্ধেক ব্যাধি <strong>১৮ বছর</strong> বয়সের মধ্যেই শুরু হয়, তবে বেশিরভাগ ক্ষেত্রেই <strong>অজ্ঞাত</strong> এবং <strong>চিকিৎসা করা হয় না</strong>।"
-                        ),
-                      },
-                      {
-                        icon: "fa-wine-bottle",
-                        color: "bg-gradient-blue",
-                        text: yhLang(
-                          "<strong>Early substance use</strong> is linked to higher risks of dependence and other problems in adult life; younger people are <strong>disproportionately affected</strong>.",
-                          "<strong>পদার্থ ব্যবহারের প্রাথমিক সূত্রপাত</strong> প্রাপ্তবয়স্কদের জীবনে আসক্তি এবং অন্যান্য সমস্যা তৈরির ঝুঁকির সাথে সম্পর্কিত, এবং বয়স্কদের তুলনায় <strong>অল্পবয়সীরা বেশি প্রভাবিত</strong> হয়।"
-                        ),
-                      },
-                    ]
-                      .map(
-                        (card, i) => `
-                      <div class="col-md-6">
-                        <div class="modern-card glass-card " data-aos="zoom-in" data-aos-delay="${
-                          100 + i * 60
-                        }">
-                          <div class="d-flex flex-col align-items-center gap-1">
-                            <span class="${
-                              card.color
-                            }" style="width:38px; height:38px; border-radius:50%; display:inline-flex; justify-content: center; align-items:center; color:#fff; flex-shrink:0;">
-                              <i class="fa-solid ${card.icon}"></i>
-                            </span>
-                            <div>
-                              <p class="mb-0">${card.text}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    `,
-                      )
-                      .join("")}
-                  </div>
-                </section>
-
+                <!-- Sex-disaggregated Top 5 Causes (UNICEF Adolescent Data Portal 2019) -->
                 <!-- Top 5 Leading Causes of Death -->
-                <section class="my-3" data-aos="fade-up" data-aos-delay="80">
-                  <h5 class="gradient-text my-3">${yhLang("Top 5 leading causes of death among adolescents are", "প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন কারণে অসুস্থ হয় বা মত্যুবরণ করে। কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে :")}</h5>
-                  <div id="topCausesControls" class="d-flex gap-2 my-3">
-                    <button class="btn btn-outline-primary btn-sm active" id="topCausesToggleChart"><i class="fa-solid fa-chart-bar me-1"></i> ${yhLang("Chart", "চার্ট")}</button>
-                    <button class="btn btn-outline-primary btn-sm" id="topCausesToggleCards"><i class="fa-solid fa-grip me-1"></i> ${yhLang("Cards", "কার্ডস")}</button>
-                  </div>
-                  <div id="topCausesCards" style="display:none">
-                    <div class="row g-3">
-                      ${[
+                
+                    
+                     
+
+                <section class="my-3" data-aos="fade-up" data-aos-delay="60">
+                  <h5 class="gradient-text mb-3">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ‘অ্যাডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী, বাংলাদেশে ১০–১৯ বছর বয়সী তরুন-তরুনীদের মৃত্যুর শীর্ষ ৫ কারণ হলো:")}
+                  </h5>
+                  <div class="row g-1">
+                    <div class="col-lg-4 modern-card glass-card">
+                      <div class="" data-aos="zoom-in" data-aos-delay="100">
+                  <p class="gradient-text my-3">${yhLang("Top 5 leading causes of death among adolescents are", "প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন কারণে অসুস্থ হয় বা মত্যুবরণ করে। কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে :")}</p>
+                        <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
+                          ${[
                         {
                           label: yhLang(
                             "Road traffic accident",
@@ -1208,80 +1140,28 @@ const coursesData = [
                           color: "bg-gradient-teal",
                         },
                       ]
-                        .map(
-                          (cause, i) => `
-                        <div class="col-12 col-md-6 col-lg-4">
-                          <div class="modern-card glass-card " data-aos="zoom-in" data-aos-delay="${
-                            120 + i * 60
-                          }">
-                            <div class="d-flex align-items-center gap-3">
+                            .map(
+                              (item, i) => `
+                            <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
+                              140 + i * 40
+                            }">
                               <span class="${
-                                cause.color
-                              }" style="width:48px; height:48px; border-radius:50%; display:inline-flex; align-items: center; justify-content: center; color:#fff; flex-shrink:0;">
-                                <i class="fa-solid ${cause.icon}"></i>
-                              </span>
-                              <h6 class="mb-0">${cause.label}</h6>
-                            </div>
-                          </div>
-                        </div>
-                      `,
-                        )
-                        .join("")}
-                    </div>
-                  </div>
-                  <div id="topCausesChartWrap">
-                    <div class="modern-card glass-card">
-                      <div style="position:relative; height:320px;">
-                        <canvas id="top5CausesChart" aria-label="Top 5 adolescent death causes (relative rank)" role="img"></canvas>
+                                item.color
+                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff"><i class="fa-solid ${
+                                item.icon
+                              }"></i></span>
+                              <span>${item.label}</span>
+                            </li>
+                          `,
+                            )
+                            .join("")}
+                        </ul>
                       </div>
                     </div>
-                  </div>
-                </section>
-              </div>`;
-            })(),
-          },
-          {
-            id: "ch2-lesson-5",
-            title: yhLang(
-              "Bangladesh scenario of mortality and morbidity among young people",
-              "বাংলাদেশে তরুণদের মৃত্যু ও রোগভার পরিস্থিতি",
-            ),
-            icon: "fa-flag",
-            gradientClass: "bg-gradient-blue",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q2c-bd",
-                  question: yhLang(
-                    "Among Bangladeshi adolescent males (10–19), which is a leading cause of death ?",
-                    "বাংলাদেশি কৈশোর বয়সী ছেলেদের (১০–১৯) মৃত্যুর প্রধান কারণ কোনটি ?",
-                  ),
-                  options: [
-                    yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
-                    yhLang("Cancer", "ক্যান্সার"),
-                    yhLang("Diabetes", "ডায়াবেটিস"),
-                    yhLang("Malaria", "ম্যালেরিয়া"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              return `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Bangladesh scenario of mortality and morbidity among young people", "বাংলাদেশে তরুণদের মৃত্যু ও রোগভার পরিস্থিতি")}</h2>
-
-                <!-- Sex-disaggregated Top 5 Causes (UNICEF Adolescent Data Portal 2019) -->
-                <section class="my-3" data-aos="fade-up" data-aos-delay="60">
-                  <h5 class="gradient-text mb-3">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ‘অ্যাডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী, বাংলাদেশে ১০–১৯ বছর বয়সী তরুন-তরুনীদের মৃত্যুর শীর্ষ ৫ কারণ হলো:")}
-                  </h5>
-                  <div class="row g-3">
-                    <div class="col-lg-6">
-                      <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="100">
-                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Males", "ছেলে")}</span></h6>
-                        <ul class="list-unstyled grid_2 d-grid gap-2 mb-0">
+                    <div class="col-lg-4 modern-card glass-card">
+                      <div class="" data-aos="zoom-in" data-aos-delay="100">
+                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Males", "কিশোরদের মৃত্যুর ৫ টি কারণ:")}</span></h6>
+                        <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
                           ${[
                             {
                               label: yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
@@ -1327,10 +1207,10 @@ const coursesData = [
                         </ul>
                       </div>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="modern-card glass-card" data-aos="zoom-in" data-aos-delay="120">
-                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Females", "মেয়ে")}</span></h6>
-                        <ul class="list-unstyled grid_2 d-grid gap-2 mb-0">
+                    <div class="col-lg-4 modern-card glass-card">
+                      <div class="" data-aos="zoom-in" data-aos-delay="120">
+                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Females", "কিশোরীদের মৃত্যুর ৫ টি কারণ:")}</span></h6>
+                        <ul class="list-unstyled d-grid grid_3 mb-0">
                           ${[
                             {
                               label: yhLang("Diarrhea", "ডায়রিয়া"),
@@ -1384,14 +1264,15 @@ const coursesData = [
 
                 <!-- Doughnut charts: Adolescents vs Young adults -->
                 <section class="my-3" data-aos="fade-up" data-aos-delay="80">
-                  <h5 class="gradient-text mb-3">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোর ও তরুণ প্রাপ্তবয়স্কদের মৃত্যুর চিত্র")}</h5>
+                  <p class="gradient-text mb-3">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</p>
+                  <h3 class="gradient-text mb-3">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</h3>
                   <div class="row g-3 align-items-stretch">
                     <div class="col-md-6">
                       <div class="modern-card glass-card h-100">
                         <div class="d-flex align-items-center justify-content-between mb-2">
                           <span class="badge-pill">${yhLang("Adolescents (10–19)", "তরুন-তরুনী (১০–১৯)")}</span>
                         </div>
-                        <div style="position:relative; height:320px;">
+                        <div style="position:relative; height:200px;">
                           <canvas id="bdMortalityAdolescents" aria-label="Adolescent mortality distribution (relative)" role="img"></canvas>
                         </div>
                       </div>
@@ -1401,7 +1282,7 @@ const coursesData = [
                         <div class="d-flex align-items-center justify-content-between mb-2">
                           <span class="badge-pill">${yhLang("Young adults (20–24)", "তরুণ প্রাপ্তবয়স্ক (২০–২৪)")}</span>
                         </div>
-                        <div style="position:relative; height:320px;">
+                        <div style="position:relative; height:200px;">
                           <canvas id="bdMortalityYoungAdults" aria-label="Young adult mortality distribution (relative)" role="img"></canvas>
                         </div>
                       </div>

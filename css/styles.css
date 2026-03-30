@@ -23826,6 +23826,11 @@ input::placeholder {
   grid-template-columns: 60% 2fr;
   gap: 10px;
 }
+.grid_3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
 /* Per-line animation */
 .mod25-lesson-elements-qualities .m25l5e-line {
   animation: m25l5eLineIn 700ms ease both;
