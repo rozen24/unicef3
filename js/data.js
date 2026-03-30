@@ -1270,7 +1270,7 @@ const coursesData = [
                     <div class="col-md-6">
                       <div class="modern-card glass-card h-100">
                         <div class="d-flex align-items-center justify-content-between mb-2">
-                          <span class="badge-pill">${yhLang("Adolescents (10–19)", "তরুন-তরুনী (১০–১৯)")}</span>
+                          <span class="badge-pill">${yhLang("Adolescents (10–19)", "কিশোর (১০–১৯)")}</span>
                         </div>
                         <div style="position:relative; height:200px;">
                           <canvas id="bdMortalityAdolescents" aria-label="Adolescent mortality distribution (relative)" role="img"></canvas>
@@ -1391,7 +1391,7 @@ const coursesData = [
                       <!-- Special info badge -->
                       <div class="fact-card m2l5 alert-warning hover-lift-sm transition-base  mb-3" data-aos="fade-up" data-aos-delay="60">
                         <i class="fas fa-ranking-star" aria-hidden="true"></i>
-                        <p class="mb-0">${yhLang("Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.", "বাল্যবিবাহের হার সবচেয়ে বেশি এমন <strong>১০টি</strong> দেশের মধ্যে বাংলাদেশ অন্যতম।")}</p>
+                        <p class="mb-0">${yhLang("Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.", "বিশ্বে বাল্যবিবাহের হার সবচেয়ে বেশি এমন <strong>১০টি</strong> দেশের মধ্যে বাংলাদেশ অন্যতম।")}</p>
                       </div>
                     </div>
                     <div class="col-lg-8" data-aos="fade-left" data-aos-delay="120">
@@ -1459,7 +1459,7 @@ const coursesData = [
                             )
                             .join("")}
                         </div>
-                        <p class="small text-muted p-1 mb-0">${yhLang("Note: Chart shows available values for Bangladesh (51%), South Asia (29%) and World (20%). Country-level values for other South Asian nations can be added when verified.", "দক্ষিণ এশিয়ায় কন্যাশিশুদের বাল্যবিবাহের হার")}</p>
+                        <p class="small text-muted p-1 mb-0">${yhLang("Note: Chart shows available values for Bangladesh (51%), South Asia (29%) and World (20%). Country-level values for other South Asian nations can be added when verified.", "দক্ষিণ এশিয়ায় বাল্যবিবাহের হার")}</p>
                       </article>
                     </div>
                   </div>
@@ -1470,7 +1470,7 @@ const coursesData = [
             id: "ch2-lesson-7",
             title: yhLang(
               "Key Information",
-              "মূল তথ্য",
+              "তথ্য উপাত্ত",
             ),
             icon: "fa-chart-bar",
             gradientClass: "bg-gradient-blue",
@@ -1590,7 +1590,7 @@ const coursesData = [
                 <div class="lesson-slide m2l7-slide">
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-chart-bar"></i> ${yhLang(
                     "Key Information",
-                    "মূল তথ্য",
+                    "তথ্য উপাত্ত",
                   )}</h2>
 
                   <div class="m2l7-facts-grid">
