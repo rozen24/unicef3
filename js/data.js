@@ -1859,7 +1859,7 @@ const coursesData = [
                   ),
                   desc: yhLang(
                     "Needs in SRHR, mental health and other NCDs, nutrition,  violence against adolescents, vulnerable adolescents etc.",
-                    "মানসিক স্বাস্থ্য এবং অন্যান্য অসংক্রামক রোগ, পুষ্টি, সহিংসতা, ঝুঁকিপূর্ণ তরুণদের চাহিদা।",
+                    "যৌন ও প্রজনন স্বাস্থ্য, মানসিক স্বাস্থ্য এবং অন্যান্য অসংক্রামক রোগ, পুষ্টি, সহিংসতা, ঝুঁকিপূর্ণ তরুণদের বিষয়ে তাদের চাহিদা।",
                   ),
                   icon: "fa-layer-group",
                   color: "bg-gradient-violet",
@@ -1872,7 +1872,7 @@ const coursesData = [
                   ),
                   desc: yhLang(
                     "Sexual and reproductive health rights, Child rights.",
-                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার, শিশু অধিকার",
+                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার, শিশু অধিকার বিষয়ে তাদের অজ্ঞতা ",
                   ),
                   icon: "fa-scale-balanced",
                   color: "bg-gradient-emerald",
@@ -1898,7 +1898,7 @@ const coursesData = [
                   ),
                   desc: yhLang(
                     "Social stigma, discomfort among parents, family members, peers, teachers to talk about AH issues.",
-                    "তরুণদের স্বাস্থ্য সমস্যা নিয়ে কথা বলার সময় বাবা-মা, পরিবারের সদস্য, সহকর্মী এবং শিক্ষকদের মধ্যে সামাজিক কলঙ্ক এবং অস্বস্তি।",
+                    "তরুণদের স্বাস্থ্য সমস্যা নিয়ে কথা বলার সময় বাবা-মা, পরিবারের সদস্য, সহকর্মী এবং শিক্ষকদের মধ্যে সামাজিক বাধা এবং অস্বস্তি।",
                   ),
                   icon: "fa-book-open-reader",
                   color: "bg-gradient-rose",
@@ -1911,7 +1911,7 @@ const coursesData = [
                   ),
                   desc: yhLang(
                     "Limited care seeking behaviors, no dedicated service (no separate space, no privacy, no dedicated staff, negligence and unawareness among service providers.",
-                    "সীমিত সেবা গ্রহণের আগ্রহ, নিবেদিত স্বাস্থ্য সেবার অভাব (আলাদা স্থান, গোপনীয়তা ও নিবেদিতপ্রাণ স্বাস্থ্যকর্মীর   অভাব, সেবা প্রদানকারীদের মধ্যে অবহেলা এবং অসচেতনতা)",
+                    "সীমিত সেবা গ্রহণের আগ্রহ, নিবেদিত স্বাস্থ্য সেবার অভাব (আলাদা স্থান, গোপনীয়তা ও নিবেদিতপ্রাণ স্বাস্থ্যকর্মীর অভাব, সেবা প্রদানকারীদের মধ্যে অবহেলা এবং অসচেতনতা)",
                   ),
                   icon: "fa-hospital-user",
                   color: "bg-gradient-cyan",
