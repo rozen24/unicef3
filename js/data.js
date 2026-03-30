@@ -999,6 +999,13 @@ const coursesData = [
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Why young people’s health and wellbeing is important ?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ ?")}</h2>
                 <div class="row g-1">
+                    <div class="col-md-7">
+                       <!-- Demographic Pyramid Compare -->
+                       
+                        <figure class="mb-0 text-center bg-pyramid p-2  sadow-sm glass-card">
+                          <img src="img/adolsent/adolecent.jpg" alt="Demographic Pyramid" style="height: 500px; object-fit: fill;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
+                    </div>
                     <div class="col-md-5">
                         <h5 class="mt-2 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "বর্তমান প্রজন্মের ১০-২৪ বছর বয়সীদের উপর বিনিয়োগ তিনগুণ লাভজনক")}</h5>
 
@@ -1041,13 +1048,7 @@ const coursesData = [
                           
                          
                     </div>
-                    <div class="col-md-7">
-                       <!-- Demographic Pyramid Compare -->
-                       
-                        <figure class="mb-0 text-center bg-pyramid p-2  sadow-sm glass-card">
-                          <img src="img/modu2/pyramid.png" alt="Demographic Pyramid" style="height: 500px; object-fit: fill;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
-                        </figure>
-                    </div>
+                    
                 </div>
 
                  <!-- ROI Banner -->
