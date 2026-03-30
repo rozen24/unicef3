@@ -996,18 +996,18 @@ const coursesData = [
             },
             content: (function () {
               return `
-              <div class="lesson-slide">
+              <div class="lesson-slide m2l3_new">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Why young people’s health and wellbeing is important ?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ ?")}</h2>
                 <div class="row g-1">
                     <div class="col-md-7">
                        <!-- Demographic Pyramid Compare -->
                        
                         <figure class="mb-0 text-center bg-pyramid p-2  sadow-sm glass-card">
-                          <img src="img/adolsent/adolecent.jpg" alt="Demographic Pyramid" style="height: 500px; object-fit: fill;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <img src="img/adolsent/adolecent.jpg" alt="Demographic Pyramid" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                     </div>
                     <div class="col-md-5">
-                        <h5 class="mt-2 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "বর্তমান প্রজন্মের ১০-২৪ বছর বয়সীদের উপর বিনিয়োগ তিনগুণ লাভজনক")}</h5>
+                        <h5 class="mt-2 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "১০-২৪ বছর বয়সী প্রজন্মের ওপর বিনিয়োগ একটি ত্রি-মাত্রিক লভ্যাংশ (ট্রিপল ডিভিডেন্ড) এনে দেয় ")}</h5>
 
                           <!-- Triple Dividend Cards -->
                           <div class="td-orbit-container mx-2" data-aos="zoom-in" data-aos-delay="200">
@@ -1016,7 +1016,7 @@ const coursesData = [
                                 <i class="fa-solid fa-people-group"></i>
                               </div>
                               <div class="td-orbit-center-text">
-                                <h2>${yhLang("2 billion young people", "১০-২৪ বছর বয়সী<br>২ বিলিয়ন মানুষ")}</h2>
+                                <h2>${yhLang("young people", "তরুন প্রজন্ম")}</h2>
                               </div>
                             </div>
                             <div class="td-orbit-ring"></div>
@@ -1033,7 +1033,7 @@ const coursesData = [
                                 <div class="td-orbit-card-icon">
                                   <i class="fa-solid fa-child"></i>
                                 </div>
-                                <span class="td-orbit-card-text">${yhLang("Healthy next generation children", "স্বাস্থ্যকর পরবর্তী<br>প্রজন্মের শিশুরা")}</span>
+                                <span class="td-orbit-card-text">${yhLang("Healthy next generation children", "সুস্থ পরবর্তী প্রজন্ম")}</span>
                               </div>
                             </div>
                             <div class="td-orbit-item" style="--angle: 240deg; --item-index: 2;" data-aos="zoom-in" data-aos-delay="300">
@@ -1041,26 +1041,20 @@ const coursesData = [
                                 <div class="td-orbit-card-icon">
                                   <i class="fa-solid fa-briefcase"></i>
                                 </div>
-                                <span class="td-orbit-card-text">${yhLang("Future healthy adult workforce", "ভবিষ্যৎ সুস্থ প্রাপ্তবয়স্ক<br>কর্মীবাহিনী")}</span>
+                                <span class="td-orbit-card-text">${yhLang("Future healthy adult workforce", "ভবিষ্যৎ সুস্থ ও দক্ষ জনশক্তি")}</span>
                               </div>
                             </div>
                           </div>
-                          
+                          <h5 class="mt-5 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় বিনিয়োগে প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়")}</h5>
+
                          
                     </div>
                     
                 </div>
 
                  <!-- ROI Banner -->
-                          <div class="modern-card glass-card roi-banner" data-aos="zoom-in" data-aos-delay="240">
-                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-                              <div>
-                                <h3 class="mt-3 mb-2">${yhLang("Investing in Adolescent Health & Wellbeing", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় বিনিয়োগ, ১ মার্কিন ডলার বিনিয়োগের মাধ্যমে ৫-১০ মার্কিন ডলার রিটার্ন পাওয়া যাবে।")}</h3>
-                              </div>
-                            </div>
-                          </div>
                 
-                <p class="small text-muted mt-1 mb-0">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", "রেফারেন্স: আমাদের ভবিষ্যৎ: কিশোর স্বাস্থ্য ও সুস্থতার উপর একটি ল্যানসেট কমিশন; প্যাটন এবং অন্যান্যরা ২০১৬।")}</p>
+                <p class="small text-muted mt-1 mb-0 text-end">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", "রেফারেন্স: আমাদের ভবিষ্যৎ: কিশোর স্বাস্থ্য ও সুস্থতার উপর একটি ল্যানসেট কমিশন; প্যাটন এবং অন্যান্যরা ২০১৬।")}</p>
 
               </div>`;
             })(),

@@ -11901,7 +11901,8 @@ figure.image-card {
   max-height: 360px;
   object-fit: fill;
 }
-.bg-pyramid {
+.bg-pyramid img{
+   height: 600px;
 }
 /* Extra Small Mobile - 479px and below */
 @media (max-width: 479px) {

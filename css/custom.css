@@ -83,6 +83,9 @@
   align-items: center;
   justify-content: center;
 }
+.m2l3_new .td-orbit-container {
+  height: 490px;
+}
 
 .td-orbit-center {
   position: absolute;
