@@ -116,7 +116,7 @@ const coursesData = [
         id: "ch-1",
         title: yhLang(
           "Module-1: Introduction of Young Health Ambassador Program (YHAP)",
-          "মডিউল-১: তরুণ স্বাস্থ্যদূত কার্যক্রম (ইয়ুথ হেলথ অ্যাম্বাসেডর প্রোগ্রাম)",
+          "মডিউল-১: তরুণ স্বাস্থ্যদূত কার্যক্রম (ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম)",
         ),
         lessons: [
           // Understanding YHAP
@@ -168,14 +168,14 @@ const coursesData = [
             content: (function () {
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base m7l-title" data-aos="fade-up"><i class="fa-solid fa-stethoscope me-2" style="color:#06B6D4;"></i>${yhLang("Youth Health Ambassador Program Overview", "তরুণ স্বাস্থ্যদূত কার্যক্রম (ইয়ুথ হেলথ অ্যাম্বাসেডর প্রোগ্রাম)")}</h2>
+                <h2 class="slide-title gradient-text gradient-text-hover hover-lift-sm transition-base m7l-title" data-aos="fade-up"><i class="fa-solid fa-stethoscope me-2" style="color:#06B6D4;"></i>${yhLang("Youth Health Ambassador Program Overview", "তরুণ স্বাস্থ্যদূত কার্যক্রম (ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম)")}</h2>
                 
                 <div class="m7l-intro-card hover-lift-sm transition-base" data-aos="fade-up" data-aos-delay="100">
                   
                   <div class="m7l-intro-content">
                     <p class="m7l-intro-text">${yhLang(
                       "The Young Health Ambassador Programme (YHAP) is a strategic joint initiative of the Ministry of Health and Family Welfare and UNICEF. This programme is designed to empower young people to increase their health awareness and build capacity for primary disease prevention and health information promotion. This training will equip young people with knowledge and skills in physical and mental health, enabling them to actively participate and influence healthy habits within their communities and networks as health ambassadors.",
-                      "তরুণ স্বাস্থ্যদূত কার্যক্রম, স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় এবং ইউনিসেফের একটি কৌশলগত যৌথ উদ্যোগ। এই কর্মসূচিটি তরুণসমাজকে তাদের স্বাস্থ্য সচেতনতা বৃদ্ধি এবং প্রাথমিক রোগ প্রতিরোধ ও স্বাস্থ্য তথ্য প্রচারে তাদের সক্ষমতা বৃদ্ধির জন্য ডিজাইন করা হয়েছে।<br></br>এই প্রশিক্ষণ, তরুণ সমাজকে শারীরিক ও মানসিক স্বাস্থ্যের জ্ঞান এবং দক্ষতায় সমৃদ্ধ করবে, যা তরুণ সমাজের স্বাস্থ্যের জন্য তাদেরকে সক্রিয় অংশগ্রহণের মাধ্যমে তাদের কমিউনিটি এবং নেটওয়ার্কের মধ্যে স্বাস্থ্যকর অভ্যাসগুলিকে প্রভাবিত করতে সাহায্য করবে।",
+                      "তরুণ স্বাস্থ্যদূত কার্যক্রম, স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় এবং ইউনিসেফের একটি সম্মিলিত উদ্যোগ। এই কর্মসূচিটি তরুণ সমাজের স্বাস্থ্যসচেতনতা বৃদ্ধি এবং প্রাথমিক পর্যায়ে রোগ প্রতিরোধ ও স্বাস্থ্যতথ্য প্রচারে তাদের সক্ষমতা বিকাশের লক্ষ্যে এই কর্মসূচিটি প্রণয়ন করা হয়েছে। এর ফলে তরুণসমাজ, স্বাস্থ্যদূত হিসেবে কাজ করার জন্য প্রস্তুত হবে। <br></br>এই প্রশিক্ষণ তরুণদের শারীরিক ও মানসিক স্বাস্থ্যের জ্ঞান ও দক্ষতায় সমৃদ্ধ করবে। এর ফলে তারা নিজেদের কমিউনিটি ও নেটওয়ার্কে সক্রিয়ভাবে অংশগ্রহণের মাধ্যমে স্বাস্থ্যকর অভ্যাস গড়ে তুলতে এবং অন্যদেরও প্রভাবিত করতে সক্ষম হবে।",
                     )}</p>
                   </div>
                 </div>
@@ -202,7 +202,7 @@ const coursesData = [
                         color: "emerald",
                         description: yhLang(
                           "According to the World Health Organization, adolescence is the life phase between childhood and adulthood, from 10 to 19 years of age. Adolescents during this time experience rapid physical growth, intellectual and mental development. It affects how they feel, think, make decisions and interact with the world around them.",
-                          "বিশ্ব স্বাস্থ্য সংস্থার মতে, বয়ঃসন্ধিকাল হল শৈশব এবং প্রাপ্তবয়স্কতার মধ্যবর্তী জীবনের পর্যায়, ১০ থেকে ১৯ বছর বয়স পর্যন্ত। কিশোর-কিশোরীরা এসময় দ্রুত শারীরিক বৃদ্ধি, বুদ্ধিবৃত্তিক এবং মানসিক বিকাশের অভিজ্ঞতা লাভ করে। এটি তাদের অনুভূতি, চিন্তাভাবনা, সিদ্ধান্ত গ্রহণ এবং তাদের চারপাশের বিশ্বের সাথে যোগাযোগের উপর প্রভাব ফেলে।",
+                          "বিশ্ব স্বাস্থ্য সংস্থার  সংজ্ঞা অনুযায়ী, ১০-১৯ বছর হচ্ছে কৈশোরকাল। শৈশব ও যৌবনের সন্ধিক্ষণে দ্রুত ও গুরুত্বপূর্ণ পরিবর্তনের সময়কালই কৈশোরকাল হিসেবে ধরা হয়। এটি জীবনের এমন একটি সময় যখন একজন মানুষ শৈশব কাল হতে প্রাপ্ত-বয়স্ক হয়।",
                         ),
                         delay: 200,
                       },
@@ -213,7 +213,7 @@ const coursesData = [
                         color: "sapphire",
                         description: yhLang(
                           "According to the United Nations (UN), youth refers to persons aged 15 to 24 years, without prejudice to other definitions by member states. It is a time of transition from childhood's dependence to adulthood's independence.",
-                          "জাতিসংঘের (UN) মতে, যুবক বলতে ১৫ থেকে ২৪ বছর বয়সী ব্যক্তিদের বোঝায়, সদস্য রাষ্ট্রগুলির অন্যান্য সংজ্ঞার সাথে কোনও বিরূপ আচরণ না করে। এটি শৈশবের নির্ভরতা থেকে প্রাপ্তবয়স্কতার স্বাধীনতায় রূপান্তরের একটি সময়কাল।",
+                          "জাতিসংঘের সংজ্ঞা অনুযায়ী, যুবক বলতে ১৫ থেকে ২৪ বছর বয়সী ব্যক্তিদের বোঝানো হয়। এটি সেই সময় যখন একজন ব্যক্তি শৈশবের নির্ভরশীলতা পেরিয়ে প্রাপ্তবয়স্কতার স্বাধীনতার দিকে অগ্রসর হয়।",
                         ),
                         delay: 250,
                       },
@@ -224,7 +224,7 @@ const coursesData = [
                         color: "tangerine",
                         description: yhLang(
                           "According to the World Health Organization (WHO), young people refers to persons aged 10 to 24 years.",
-                          "বিশ্ব স্বাস্থ্য সংস্থার (WHO) মতে, তরুণ বলতে ১০ থেকে ২৪ বছর বয়সী ব্যক্তিদের বোঝায়।",
+                          `বিশ্ব স্বাস্থ্য সংস্থার সংজ্ঞা অনুযায়ী, "তরুণ" বলতে ১০ থেকে ২৪ বছর বয়সী ব্যক্তিদের বোঝায়।`,
                         ),
                         delay: 300,
                       },
@@ -366,7 +366,7 @@ const coursesData = [
                             color: "tangerine",
                             description: yhLang(
                               "The YHAP empowers young people with necessary skills, confidence and resources to take effective action, contribute to economic development, and create healthy future workforces for tomorrow's society.",
-                              "তরুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে তরুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে সহায়তা করে, যাতে তারা ভবিষ্যতের জন্য একটি সৃজনশীল ও সুস্থ কর্মশক্তি গড়ে তোলার মাধ্যমে অর্থনৈতিক উন্নয়নে কার্যকর ভূমিকা পালন করতে পারে। ",
+                              "রুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে তরুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে সহায়তা করে, যাতে তারা ভবিষ্যতের জন্য একটি সৃজনশীল ও সুস্থ কর্মশক্তি গড়ে তোলার মাধ্যমে অর্থনৈতিক উন্নয়নে কার্যকর ভূমিকা পালন করতে পারে। ",
                             ),
                           },
                           {
@@ -417,7 +417,7 @@ const coursesData = [
                             <i class="fa-solid fa-star"></i>
                           </div>
                           <div class="m8l-orbit-center-text">
-                            <h3>${yhLang("Youth Health Ambassador Program", "ইয়ুথ হেলথ অ্যাম্বাসেডর প্রোগ্রাম")}</h3>
+                            <h3>${yhLang("Youth Health Ambassador Program", "ইয়াং হেলথ অ্যাম্বাসেডর প্রোগ্রাম")}</h3>
                           </div>
                         </div>
                         <div class="m8l-orbit-ring"></div>
@@ -427,7 +427,7 @@ const coursesData = [
                             { text: yhLang("Health Literacy", "স্বাস্থ্য সাক্ষরতা"), icon: "fa-book-open", gradient: "m8l-orbit-rose" },
                             { text: yhLang("Leadership", "নেতৃত্ব"), icon: "fa-crown", gradient: "m8l-orbit-violet" },
                             { text: yhLang("Advocacy", "অ্যাডভোকেসি"), icon: "fa-bullhorn", gradient: "m8l-orbit-cyan" },
-                            { text: yhLang("Peer-to-Peer Impact", "পিয়ার টু পিয়ার ইনফ্লুয়েন্স"), icon: "fa-people-arrows", gradient: "m8l-orbit-sapphire" },
+                            { text: yhLang("Peer-to-Peer Impact", "পিয়ার টু পিয়ার প্রভাব"), icon: "fa-people-arrows", gradient: "m8l-orbit-sapphire" },
                             { text: yhLang("Empowerment", "ক্ষমতায়ন"), icon: "fa-bolt", gradient: "m8l-orbit-tangerine" },
                           ];
                           return orbitItems
