@@ -859,8 +859,8 @@ const coursesData = [
                               <img src="img/Distribution/globe.jpg" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
                               <div class="globe-text-wrap">
                                 <h3 class="fw-bold map-text mb-2" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">${yhLang("70", "৯০")}</span>%</h3>
-                                <p class="lead mt-1 text-dark">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়ন</strong> ১০–২৪ বছর বয়সী তরুণ রয়েছে।")}</p>
-                                <p class="mb-0 text-dark lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "বাংলাদেশে মোট তরূণ -<strong>৯০%</strong> তরুণ উন্নয়নশীল দেশে বাস করে।")}</p>
+                                <p class="lead mt-1 text-dark">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়নেরও</strong> বেশি তরূণ রয়েছে।")}</p>
+                                <p class="mb-0 text-dark lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "যাদের <strong>৯০%</strong> শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</p>
                               </div>
                             </div>
                           </section>
@@ -931,7 +931,7 @@ const coursesData = [
               <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বাংলাদেশ প্রেক্ষাপট")}</h2>
               <div class="" style="padding:1.5rem;">
                                     <h3 class="d-none">${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h3>
-                                    <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people (~30% of total population).", "<strong>বাংলাদেশে মোট তরূণ:</strong> ৪৯.৫<strong> মিলিয়ন</strong>  (যা মোট জনসংখ্যার প্রায় ৩০%)।")}</p>
+                                    <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "<strong>বাংলাদেশে মোট তরূণ:</strong> ৪৯.৫<strong> মিলিয়ন</strong> যা মোট জনসংখ্যার প্রায় ৩০%।")}</p>
                                   </div>
               <div class="row g-2">
                        <div class="col-md-4">
@@ -1025,7 +1025,7 @@ const coursesData = [
                                 <div class="td-orbit-card-icon">
                                   <i class="fa-solid fa-heart-pulse"></i>
                                 </div>
-                                <span class="td-orbit-card-text">${yhLang("Healthy youth population (now)", "সুস্থ তরুণ জনসংখ্যা (বর্তমান)")}</span>
+                                <span class="td-orbit-card-text">${yhLang("Healthy youth population (now)", "সুস্থ তরুণ জনগোষ্ঠী (বর্তমান)")}</span>
                               </div>
                             </div>
                             <div class="td-orbit-item" style="--angle: 120deg; --item-index: 1;" data-aos="zoom-in" data-aos-delay="270">
@@ -1045,7 +1045,7 @@ const coursesData = [
                               </div>
                             </div>
                           </div>
-                          <h5 class="mt-5 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় বিনিয়োগে প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়")}</h5>
+                          <h5 class="mt-5 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় বিনিয়োগে প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়।")}</h5>
 
                          
                     </div>
@@ -1099,13 +1099,13 @@ const coursesData = [
                     
                      
 
-                <section class="my-3" data-aos="fade-up" data-aos-delay="60">
-                  <h5 class="gradient-text mb-3">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ‘অ্যাডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী, বাংলাদেশে ১০–১৯ বছর বয়সী তরুন-তরুনীদের মৃত্যুর শীর্ষ ৫ কারণ হলো:")}
-                  </h5>
-                  <div class="row g-1">
+                <section class="my-1" data-aos="fade-up" data-aos-delay="60">
+                  <h3 class="gradient-text mb-1">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}
+                  </h3>
+                  <div class="row g-3">
                     <div class="col-lg-4 modern-card glass-card">
                       <div class="" data-aos="zoom-in" data-aos-delay="100">
-                  <p class="gradient-text my-3">${yhLang("Top 5 leading causes of death among adolescents are", "প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন কারণে অসুস্থ হয় বা মত্যুবরণ করে। কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে :")}</p>
+                       <p class="gradient-text my-1">${yhLang("Top 5 leading causes of death among adolescents are", "বিশ্বে প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন কারণে অসুস্থ হয় বা মত্যুবরণ করে।  কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে:")}</p>
                         <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
                           ${[
                         {
@@ -1129,13 +1129,13 @@ const coursesData = [
                         {
                           label: yhLang(
                             "Lower Respiratory Tract infection",
-                            "নিম্ন শ্বাসতন্ত্রের সংক্রমণ",
+                            "শ্বাসতন্ত্রের নিচের অংশের সংক্রমণ, এবং",
                           ),
                           icon: "fa-lungs",
                           color: "bg-gradient-blue",
                         },
                         {
-                          label: yhLang("HIV/AIDS", "এইচআইভি/এইডস"),
+                          label: yhLang("HIV/AIDS", "এইচআইভি"),
                           icon: "fa-virus",
                           color: "bg-gradient-teal",
                         },
@@ -1160,7 +1160,7 @@ const coursesData = [
                     </div>
                     <div class="col-lg-4 modern-card glass-card">
                       <div class="" data-aos="zoom-in" data-aos-delay="100">
-                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Males", "কিশোরদের মৃত্যুর ৫ টি কারণ:")}</span></h6>
+                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Males", "কিশোরদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
                         <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
                           ${[
                             {
@@ -1174,7 +1174,7 @@ const coursesData = [
                               color: "bg-gradient-blue",
                             },
                             {
-                              label: yhLang("Drowning", "ডুবে মৃত্যু"),
+                              label: yhLang("Drowning", "পানিতে ডুবা"),
                               icon: "fa-water",
                               color: "bg-gradient-teal",
                             },
@@ -1209,7 +1209,7 @@ const coursesData = [
                     </div>
                     <div class="col-lg-4 modern-card glass-card">
                       <div class="" data-aos="zoom-in" data-aos-delay="120">
-                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Females", "কিশোরীদের মৃত্যুর ৫ টি কারণ:")}</span></h6>
+                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Females", "কিশোরীদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
                         <ul class="list-unstyled d-grid grid_3 mb-0">
                           ${[
                             {
@@ -1228,14 +1228,14 @@ const coursesData = [
                               color: "bg-gradient-orange",
                             },
                             {
-                              label: yhLang("Maternal mortality", "মাতৃমৃত্যু"),
+                              label: yhLang("Maternal mortality", "মার্তত্বজনিত কারন"),
                               icon: "fa-person-pregnant",
                               color: "bg-gradient-pink",
                             },
                             {
                               label: yhLang(
                                 "Lower respiratory tract infections",
-                                "নিম্ন শ্বাসতন্ত্রের সংক্রমণ",
+                                "শ্বাসতন্ত্রের নিচের অংশের সংক্রমণ",
                               ),
                               icon: "fa-lungs",
                               color: "bg-gradient-green",
@@ -1263,29 +1263,16 @@ const coursesData = [
                 </section>
 
                 <!-- Doughnut charts: Adolescents vs Young adults -->
-                <section class="my-3" data-aos="fade-up" data-aos-delay="80">
-                  <p class="gradient-text mb-3">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</p>
-                  <h3 class="gradient-text mb-3">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</h3>
-                  <div class="row g-3 align-items-stretch">
-                    <div class="col-md-6">
-                      <div class="modern-card glass-card h-100">
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                          <span class="badge-pill">${yhLang("Adolescents (10–19)", "কিশোর (১০–১৯)")}</span>
-                        </div>
-                        <div style="position:relative; height:200px;">
-                          <canvas id="bdMortalityAdolescents" aria-label="Adolescent mortality distribution (relative)" role="img"></canvas>
-                        </div>
-                      </div>
+                <section class="my-1" data-aos="fade-up" data-aos-delay="80">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-4">
+                        <h2 class="gradient-text mb-3">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</h2>
                     </div>
-                    <div class="col-md-6">
-                      <div class="modern-card glass-card h-100">
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                          <span class="badge-pill">${yhLang("Young adults (20–24)", "তরুণ প্রাপ্তবয়স্ক (২০–২৪)")}</span>
-                        </div>
-                        <div style="position:relative; height:200px;">
-                          <canvas id="bdMortalityYoungAdults" aria-label="Young adult mortality distribution (relative)" role="img"></canvas>
-                        </div>
-                      </div>
+                    <div class="col-md-8">
+                       <h3 class="gradient-text my-1">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</h3>
+                       <figure class="glass-card p-1 mb-0 text-center">
+                          <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        </figure>
                     </div>
                   </div>
                   <!-- <div class="small text-muted mt-2">Note: Chart shows relative emphasis for categories; update with official proportions when available.</div> -->

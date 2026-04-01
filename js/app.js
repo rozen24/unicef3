@@ -1105,7 +1105,7 @@ class YouthHealthLMS {
                 legend: { position: "bottom" },
                 subtitle: {
                   display: true,
-                  text: "Highlighted age groups: 10–14, 15–19, 20–24",
+                  text: "",
                   padding: { top: 4, bottom: 8 },
                   color: "#374151"
                 }
@@ -1151,7 +1151,7 @@ class YouthHealthLMS {
 
           // Optional legend at bottom for screen readers and visibility
           const legend = document.createElement('ul');
-          legend.className = 'region-legend';
+          legend.className = 'region-legend d-none';
           regions.forEach(r => {
             const li = document.createElement('li');
             li.innerHTML = `<span class="legend-swatch" style="background:${r.color}"></span>${r.label}`;
