@@ -1378,7 +1378,7 @@ const coursesData = [
                       <!-- Special info badge -->
                       <div class="fact-card m2l5 alert-warning hover-lift-sm transition-base  mb-3" data-aos="fade-up" data-aos-delay="60">
                         <i class="fas fa-ranking-star" aria-hidden="true"></i>
-                        <p class="mb-0">${yhLang("Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.", "বিশ্বে বাল্যবিবাহের হার সবচেয়ে বেশি এমন <strong>১০টি</strong> দেশের মধ্যে বাংলাদেশ অন্যতম।")}</p>
+                        <h3 class="mb-0">${yhLang("Bangladesh is among the <strong>top 10 countries</strong> with the highest levels of child marriage.", "বিশ্বে বাল্যবিবাহের সর্বোচ্চ হারের তালিকায় শীর্ষ ১০টি দেশের মধ্যে বাংলাদেশের অবস্থান অন্যতম।")}</h3>
                       </div>
                     </div>
                     <div class="col-lg-8" data-aos="fade-left" data-aos-delay="120">
@@ -1501,6 +1501,15 @@ const coursesData = [
     color: "#f59e0b",
     bgColor: "rgba(245, 158, 11, 0.12)",
   },
+   {
+    text: yhLang(
+      "Bangladesh is among the top 10 countries with the highest rates of child marriage in the world.",
+      "১৫-১৯ বছর বয়সী চারজনের মধ্যে একজন বিবাহিত কিশোরী (২৪%) গর্ভধারন করে, এবং প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।"
+    ),
+    icon: "fa-children",
+    color: "#f97316",
+    bgColor: "rgba(249, 115, 22, 0.12)",
+  },
   {
     text: yhLang(
       "About one-third (30%) of adolescents suffer from anemia.",
@@ -1519,6 +1528,7 @@ const coursesData = [
     color: "#ec4899",
     bgColor: "rgba(236, 72, 153, 0.12)",
   },
+  
   {
     text: yhLang(
       "One-fifth of adolescent girls and women experience physical or sexual violence, regardless of marital status.",
@@ -1632,7 +1642,7 @@ const coursesData = [
                 {
                   label: yhLang(
                     "SRH, HIV & STIs",
-                    "যৌন ও প্রজনন স্বাস্থ্য, এইচআইভি ও এসটিআই",
+                    "যৌন ও প্রজনন স্বাস্থ্য, এইচআইভি এবং যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণসমূহ ",
                   ),
                   icon: "fa-venus-mars",
                   color: "bg-gradient-violet",
@@ -1657,13 +1667,13 @@ const coursesData = [
                   delay: 240,
                 },
                 {
-                  label: yhLang("Alcohol & drug use", "মদ ও মাদক ব্যবহার"),
+                  label: yhLang("Alcohol & drug use", "মাদকদ্রব্যের ব্যবহার"),
                   icon: "fa-wine-bottle",
                   color: "bg-gradient-tangerine",
                   delay: 260,
                 },
                 {
-                  label: yhLang("Tobacco use", "তামাক সেবন"),
+                  label: yhLang("Tobacco use", "তামাকজাত দ্রব্যের ব্যবহার"),
                   icon: "fa-smoking",
                   color: "bg-gradient-teal",
                   delay: 280,
@@ -1671,7 +1681,7 @@ const coursesData = [
                 {
                   label: yhLang(
                     "Physical activity & sedentary behavior",
-                    "শারীরিক পরিশ্রম ও স্থবির জীবনধারা",
+                    "শারীরিক সক্রিয়তা এবং অলস জীবনযাপন ",
                   ),
                   icon: "fa-person-running",
                   color: "bg-gradient-cyan",
@@ -1810,7 +1820,7 @@ const coursesData = [
             id: "ch2-lesson-9",
             title: yhLang(
               "Why young people need special care ?",
-              "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন ?",
+              "কেন তরুণদের বিশেষ যত্ন প্রয়োজন?",
             ),
             icon: "fa-user-nurse",
             gradientClass: "bg-gradient-teal",
@@ -1842,11 +1852,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Adolescents have diverse needs",
-                    "চাহিদার ভিন্নতা",
+                    "কিশোর-কিশোরী ও তরুণদের বিশেষ ধরনের চাহিদা রয়েছে",
                   ),
                   desc: yhLang(
                     "Needs in SRHR, mental health and other NCDs, nutrition,  violence against adolescents, vulnerable adolescents etc.",
-                    "যৌন ও প্রজনন স্বাস্থ্য, মানসিক স্বাস্থ্য এবং অন্যান্য অসংক্রামক রোগ, পুষ্টি, সহিংসতা, ঝুঁকিপূর্ণ তরুণদের বিষয়ে তাদের চাহিদা।",
+                    "কিশোর কিশোরী ও তরুণদের যৌন ও প্রজনন স্বাস্থ্য (SRHR), মানসিক স্বাস্থ্য, পুষ্টি, অসংক্রামক রোগ (NCDs), সহিংসতা থেকে সুরক্ষা এবং ঝুঁকিপূর্ণ আচরণ বিষয়ে তথ্য ও সেবার প্রয়োজন রয়েছে।",
                   ),
                   icon: "fa-layer-group",
                   color: "bg-gradient-violet",
@@ -1859,7 +1869,7 @@ const coursesData = [
                   ),
                   desc: yhLang(
                     "Sexual and reproductive health rights, Child rights.",
-                    "যৌন ও প্রজনন স্বাস্থ্য অধিকার, শিশু অধিকার বিষয়ে তাদের অজ্ঞতা ",
+                    "কিশোর-কিশোরী ও তরুণদের মধ্যে যৌন ও প্রজনন স্বাস্থ্য অধিকার (SRHR) এবং শিশু অধিকার সম্পর্কে পর্যাপ্ত জ্ঞানের অভাব রয়েছে।",
                   ),
                   icon: "fa-scale-balanced",
                   color: "bg-gradient-emerald",
@@ -1868,11 +1878,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Limited ability to execute the rights.",
-                    "অধিকার কার্যকর করার সীমিত ক্ষমতা",
+                    "অধিকার প্রয়োগে সীমিত সক্ষমতা।",
                   ),
                   desc: yhLang(
                     "Lack of confidence, parental influence, peer pressure",
-                    "আত্মবিশ্বাসের অভাব, পিতামাতার প্রভাব, সহপাঠীদের চাপ",
+                    "আত্মবিশ্বাসের অভাব, পরিবারের প্রভাব এবং সমবয়সীদের চাপ অনেক সময় কিশোর-কিশোরী ও তরুণদের নিজেদের অধিকার রক্ষা ও প্রয়োগে বাধা সৃষ্টি করে।",
                   ),
                   icon: "fa-hands-holding",
                   color: "bg-gradient-tangerine",
@@ -1881,11 +1891,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Barriers in accessing the information, knowledge, skills.",
-                    "তথ্য, জ্ঞান এবং দক্ষতা অর্জনের ক্ষেত্রে বাধা",
+                    "তথ্য, জ্ঞান ও দক্ষতা অর্জনের ক্ষেত্রে বাধা।",
                   ),
                   desc: yhLang(
                     "Social stigma, discomfort among parents, family members, peers, teachers to talk about AH issues.",
-                    "তরুণদের স্বাস্থ্য সমস্যা নিয়ে কথা বলার সময় বাবা-মা, পরিবারের সদস্য, সহকর্মী এবং শিক্ষকদের মধ্যে সামাজিক বাধা এবং অস্বস্তি।",
+                    "সমাজে কুসংস্কার ও খোলামেলা আলোচনার অভাবে অনেক বেদলোর-বেদলোরী ও তরুণ প্রয়োজনীয় তথ্য ও দক্ষতা থেকে বঞ্চিত হয়।",
                   ),
                   icon: "fa-book-open-reader",
                   color: "bg-gradient-rose",
@@ -1894,11 +1904,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Barriers in accessing the health services.",
-                    "স্বাস্থ্যসেবা প্রাপ্তির ক্ষেত্রে বাধা",
+                    "স্বাস্থ্যসেবা গ্রহণে বাধা।",
                   ),
                   desc: yhLang(
                     "Limited care seeking behaviors, no dedicated service (no separate space, no privacy, no dedicated staff, negligence and unawareness among service providers.",
-                    "সীমিত সেবা গ্রহণের আগ্রহ, নিবেদিত স্বাস্থ্য সেবার অভাব (আলাদা স্থান, গোপনীয়তা ও নিবেদিতপ্রাণ স্বাস্থ্যকর্মীর অভাব, সেবা প্রদানকারীদের মধ্যে অবহেলা এবং অসচেতনতা)",
+                    "সেবা গ্রহণের সীমিত সুযোগ; কোনো নির্দিষ্ট স্থান নেই, গোপনীয়তা নেই, নির্দিষ্ট কর্মী নেই; সেবাদানকারীদের অবহেলা ও অসচেতনতা রয়েছে।",
                   ),
                   icon: "fa-hospital-user",
                   color: "bg-gradient-cyan",
@@ -2010,7 +2020,7 @@ const coursesData = [
                   <div class="d-flex align-items-center gap-3">
                     <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group" style="color: #fff;"></i></span>
                     <div>
-                      <h2 class="">${yhLang("Why young people need special care ?", "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন ?")}</h2>
+                      <h2 class="">${yhLang("Why young people need special care ?", "কেন তরুণদের বিশেষ যত্ন প্রয়োজন?")}</h2>
                     </div>
                   </div>
                 </div>

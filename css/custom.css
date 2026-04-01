@@ -606,11 +606,11 @@ span {
   html:lang(bn) p lang,
   html[lang|="bn"] p lang {
     font-size: 18px !important;
-    line-height: 17px !important;
+    line-height: 18px !important;
   }
   html:lang(bn) h3 lang, html[lang|="bn"] h3 lang {
     font-size: 20px !important;
-    line-height: 17px;
+    line-height: 20px;
   }
   html:lang(bn) span  lang, html[lang|="bn"] span lang {
         font-size: 18px !important;
@@ -618,7 +618,7 @@ span {
   }
   html:lang(bn) h2 lang, html[lang|="bn"] h2 lang {
     font-size: 22px !important;
-    line-height: 20px !important;
+    line-height: 22px !important;
   }
   .image-card_masik img {
     height: 350px;
