@@ -14140,10 +14140,6 @@ figure.image-card {
 
 
 
-.ch1l10-column:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15);
-}
 
 /* Column Header */
 .ch1l10-column-header {
@@ -14198,11 +14194,6 @@ figure.image-card {
   align-items: center;
 }
 
-.ch1l10-step-item:hover {
-  transform: translateX(6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  border-color: rgba(0, 0, 0, 0.12);
-}
 
 /* Step-specific colors */
 .ch1l10-step-1 { border-color: rgba(245, 158, 11, 0.3); }
@@ -14240,12 +14231,6 @@ figure.image-card {
 .ch1l10-step-8 .ch1l10-step-icon { background: linear-gradient(135deg, #884ea0 0%, #6b21a8 100%); }
 .ch1l10-step-9 .ch1l10-step-icon { background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); }
 
-.ch1l10-step-item:hover .ch1l10-step-icon {
-  transform: scale(1.12) rotate(5deg);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
-}
-
-/* Step Content */
 .ch1l10-step-content {
   display: flex;
   justify-content: center;

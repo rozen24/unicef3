@@ -29042,6 +29042,7 @@ dashboard-titled-title {
    position: fixed;
   right: 6px;
   top: 2px;
+  display:none;
 }
 
 .lesson-hero .language-toggle button {

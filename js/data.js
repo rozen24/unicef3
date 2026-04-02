@@ -366,7 +366,7 @@ const coursesData = [
                             color: "tangerine",
                             description: yhLang(
                               "The YHAP empowers young people with necessary skills, confidence and resources to take effective action, contribute to economic development, and create healthy future workforces for tomorrow's society.",
-                              "রুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে তরুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে সহায়তা করে, যাতে তারা ভবিষ্যতের জন্য একটি সৃজনশীল ও সুস্থ কর্মশক্তি গড়ে তোলার মাধ্যমে অর্থনৈতিক উন্নয়নে কার্যকর ভূমিকা পালন করতে পারে। ",
+                              "তরুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে তরুণ স্বাস্থ্যদূত কার্যক্রম তরুণদের প্রয়োজনীয় দক্ষতা, আত্মবিশ্বাস ও উপকরণ দিয়ে সহায়তা করে, যাতে তারা ভবিষ্যতের জন্য একটি সৃজনশীল ও সুস্থ কর্মশক্তি গড়ে তোলার মাধ্যমে অর্থনৈতিক উন্নয়নে কার্যকর ভূমিকা পালন করতে পারে। ",
                             ),
                           },
                           {
@@ -561,7 +561,7 @@ const coursesData = [
             id: "ch1-lesson-5",
             title: yhLang(
               "Eligibility and Steps to Become a Youth Health Ambassador",
-              "তরুণ স্বাস্থ্যদূত বা ইয়ুথ হেলথ অ্যাম্বাসেডর হওয়ার যোগ্যতা এবং পদক্ষেপ",
+              "তরুণ স্বাস্থ্যদূত বা ইয়াং হেলথ অ্যাম্বাসেডর হওয়ার যোগ্যতা এবং পদক্ষেপ",
             ),
             icon: "fa-clipboard-check",
             gradientClass: "bg-gradient-teal",
@@ -604,7 +604,7 @@ const coursesData = [
               <div class="lesson-slide ch1l10-slide">
                 <h2 class="slide-title ch1l10-title" data-aos="fade-up">
                   <i class="fa-solid fa-clipboard-check me-2"></i>
-                  ${yhLang("Eligibility and Steps to Become a Youth Health Ambassador", "তরুণ স্বাস্থ্যদূত বা ইয়ুথ হেলথ অ্যাম্বাসেডর হওয়ার যোগ্যতা এবং পদক্ষেপ")}
+                  ${yhLang("Eligibility and Steps to Become a Youth Health Ambassador", "তরুণ স্বাস্থ্যদূত বা ইয়াং হেলথ অ্যাম্বাসেডর হওয়ার যোগ্যতা এবং পদক্ষেপ")}
                 </h2>
 
                 <!-- Special Note: Eligibility Criteria -->
@@ -615,7 +615,7 @@ const coursesData = [
                   </div>
                   <div class="ch1l10-note-content">
                     <p class="ch1l10-note-description">
-                      ${yhLang("Any person aged 15-24 years is eligible to become a Youth Health Ambassador.", "১৫-২৪ বছর বয়সী যেকোনো ব্যক্তি যুব স্বাস্থ্য দূত হওয়ার যোগ্য।")}
+                      ${yhLang("Any person aged 15-24 years is eligible to become a Youth Health Ambassador.", "১০-২৪ বছর বয়সী যেকোনো ব্যক্তি যুব স্বাস্থ্য দূত হওয়ার যোগ্য।")}
                     </p>
                   </div>
                 </div>
@@ -703,7 +703,7 @@ const coursesData = [
                           </div>
                           <div class="ch1l10-step-content">
                             <p class="ch1l10-step-text">
-                              ${yhLang("Achieve Passing Score in Final Assessment", "চূড়ান্ত মূল্যায়নে পাস নম্বর অর্জন করুন")}
+                              ${yhLang("Achieve Passing Score in Final Assessment", "চূড়ান্ত মূল্যায়নে কাঙ্ক্ষিত  নম্বর অর্জন")}
                             </p>
                           </div>
                         </div>
@@ -725,7 +725,7 @@ const coursesData = [
                           </div>
                           <div class="ch1l10-step-content">
                             <p class="ch1l10-step-text">
-                              ${yhLang("Complete Online 'Health Ambassador Course'", "অনলাইন 'হেলথ অ্যাম্বাসেডর কোর্স' সম্পূর্ণ করুন")}
+                              ${yhLang("Complete Online 'Health Ambassador Course'", "'হেলথ অ্যাম্বাসেডর কোর্স' সম্পূর্ণ করন")}
                             </p>
                           </div>
                         </div>
@@ -931,7 +931,7 @@ const coursesData = [
               <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বাংলাদেশ প্রেক্ষাপট")}</h2>
               <div class="" style="padding:1.5rem;">
                                     <h3 class="d-none">${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h3>
-                                    <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "<strong>বাংলাদেশে মোট তরূণ:</strong> ৪৯.৫<strong> মিলিয়ন</strong> যা মোট জনসংখ্যার প্রায় ৩০%।")}</p>
+                                    <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে মোট তরুণ: <strong> ৪৯.৫ </strong> মিলিয়ন যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</p>
                                   </div>
               <div class="row g-2">
                        <div class="col-md-4">
@@ -1054,7 +1054,8 @@ const coursesData = [
 
                  <!-- ROI Banner -->
                 
-                <p class="small text-muted mt-1 mb-0 text-end">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", "রেফারেন্স: আমাদের ভবিষ্যৎ: কিশোর স্বাস্থ্য ও সুস্থতার উপর একটি ল্যানসেট কমিশন; প্যাটন এবং অন্যান্যরা ২০১৬।")}</p>
+                <p class="small text-muted mt-1 mb-0 text-end">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", `Ref: Our Future: A Lancet Commission on Adolescent  Health and Wellbeing; Patton et al. 2016.
+https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-address-rising-threats-to-young-peoples-health-and-wellbeing`)}</p>
 
               </div>`;
             })(),
@@ -1100,8 +1101,6 @@ const coursesData = [
                      
 
                 <section class="my-1" data-aos="fade-up" data-aos-delay="60">
-                  <h3 class="gradient-text mb-1">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}
-                  </h3>
                   <div class="row g-3">
                     <div class="col-lg-4 modern-card glass-card">
                       <div class="" data-aos="zoom-in" data-aos-delay="100">
@@ -1158,107 +1157,119 @@ const coursesData = [
                         </ul>
                       </div>
                     </div>
-                    <div class="col-lg-4 modern-card glass-card">
-                      <div class="" data-aos="zoom-in" data-aos-delay="100">
-                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Males", "কিশোরদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
-                        <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
-                          ${[
-                            {
-                              label: yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
-                              icon: "fa-car-burst",
-                              color: "bg-gradient-orange",
-                            },
-                            {
-                              label: yhLang("Diarrhea", "ডায়রিয়া"),
-                              icon: "fa-bacteria",
-                              color: "bg-gradient-blue",
-                            },
-                            {
-                              label: yhLang("Drowning", "পানিতে ডুবা"),
-                              icon: "fa-water",
-                              color: "bg-gradient-teal",
-                            },
-                            {
-                              label: yhLang("Tuberculosis", "যক্ষ্মা"),
-                              icon: "fa-lungs",
-                              color: "bg-gradient-purple",
-                            },
-                            {
-                              label: yhLang("Suicide", "আত্মহত্যা"),
-                              icon: "fa-heart-crack",
-                              color: "bg-gradient-pink",
-                            },
-                          ]
-                            .map(
-                              (item, i) => `
-                            <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
-                              140 + i * 40
-                            }">
-                              <span class="${
-                                item.color
-                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff"><i class="fa-solid ${
-                                item.icon
-                              }"></i></span>
-                              <span>${item.label}</span>
-                            </li>
-                          `,
-                            )
-                            .join("")}
-                        </ul>
-                      </div>
+                    <div class="col-lg-8 modern-card">
+                       <h3 class="gradient-text mb-1">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}
+                       </h3>
+                       <div class="row g-1">
+                          <div class="col-md-6">
+                              <div class="modern-card glass-card">
+                                  <div class="" data-aos="zoom-in" data-aos-delay="100">
+                                    <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Males", "কিশোরদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
+                                    <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
+                                      ${[
+                                        {
+                                          label: yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
+                                          icon: "fa-car-burst",
+                                          color: "bg-gradient-orange",
+                                        },
+                                        {
+                                          label: yhLang("Diarrhea", "ডায়রিয়া"),
+                                          icon: "fa-bacteria",
+                                          color: "bg-gradient-blue",
+                                        },
+                                        {
+                                          label: yhLang("Drowning", "পানিতে ডুবা"),
+                                          icon: "fa-water",
+                                          color: "bg-gradient-teal",
+                                        },
+                                        {
+                                          label: yhLang("Tuberculosis", "যক্ষ্মা"),
+                                          icon: "fa-lungs",
+                                          color: "bg-gradient-purple",
+                                        },
+                                        {
+                                          label: yhLang("Suicide", "আত্মহত্যা"),
+                                          icon: "fa-heart-crack",
+                                          color: "bg-gradient-pink",
+                                        },
+                                      ]
+                                        .map(
+                                          (item, i) => `
+                                        <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
+                                          140 + i * 40
+                                        }">
+                                          <span class="${
+                                            item.color
+                                          }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff"><i class="fa-solid ${
+                                            item.icon
+                                          }"></i></span>
+                                          <span>${item.label}</span>
+                                        </li>
+                                      `,
+                                        )
+                                        .join("")}
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                          <div class="col-md-6">
+                             <div class="modern-card glass-card">
+                                <div class="" data-aos="zoom-in" data-aos-delay="120">
+                                  <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Females", "কিশোরীদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
+                                  <ul class="list-unstyled d-grid grid_3 mb-0">
+                                    ${[
+                                      {
+                                        label: yhLang("Diarrhea", "ডায়রিয়া"),
+                                        icon: "fa-bacteria",
+                                        color: "bg-gradient-blue",
+                                      },
+                                      {
+                                        label: yhLang("Tuberculosis", "যক্ষ্মা"),
+                                        icon: "fa-lungs",
+                                        color: "bg-gradient-purple",
+                                      },
+                                      {
+                                        label: yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
+                                        icon: "fa-car-burst",
+                                        color: "bg-gradient-orange",
+                                      },
+                                      {
+                                        label: yhLang("Maternal mortality", "মার্তত্বজনিত কারন"),
+                                        icon: "fa-person-pregnant",
+                                        color: "bg-gradient-pink",
+                                      },
+                                      {
+                                        label: yhLang(
+                                          "Lower respiratory tract infections",
+                                          "শ্বাসতন্ত্রের নিচের অংশের সংক্রমণ",
+                                        ),
+                                        icon: "fa-lungs",
+                                        color: "bg-gradient-green",
+                                      },
+                                    ]
+                                      .map(
+                                        (item, i) => `
+                                      <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
+                                        160 + i * 40
+                                      }">
+                                        <span class="${
+                                          item.color
+                                        }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff;"><i class="fa-solid ${
+                                          item.icon
+                                        }"></i></span>
+                                        <span>${item.label}</span>
+                                      </li>
+                                    `,
+                                      )
+                                      .join("")}
+                                  </ul>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
                     </div>
-                    <div class="col-lg-4 modern-card glass-card">
-                      <div class="" data-aos="zoom-in" data-aos-delay="120">
-                        <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Females", "কিশোরীদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
-                        <ul class="list-unstyled d-grid grid_3 mb-0">
-                          ${[
-                            {
-                              label: yhLang("Diarrhea", "ডায়রিয়া"),
-                              icon: "fa-bacteria",
-                              color: "bg-gradient-blue",
-                            },
-                            {
-                              label: yhLang("Tuberculosis", "যক্ষ্মা"),
-                              icon: "fa-lungs",
-                              color: "bg-gradient-purple",
-                            },
-                            {
-                              label: yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
-                              icon: "fa-car-burst",
-                              color: "bg-gradient-orange",
-                            },
-                            {
-                              label: yhLang("Maternal mortality", "মার্তত্বজনিত কারন"),
-                              icon: "fa-person-pregnant",
-                              color: "bg-gradient-pink",
-                            },
-                            {
-                              label: yhLang(
-                                "Lower respiratory tract infections",
-                                "শ্বাসতন্ত্রের নিচের অংশের সংক্রমণ",
-                              ),
-                              icon: "fa-lungs",
-                              color: "bg-gradient-green",
-                            },
-                          ]
-                            .map(
-                              (item, i) => `
-                            <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
-                              160 + i * 40
-                            }">
-                              <span class="${
-                                item.color
-                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff;"><i class="fa-solid ${
-                                item.icon
-                              }"></i></span>
-                              <span>${item.label}</span>
-                            </li>
-                          `,
-                            )
-                            .join("")}
-                        </ul>
-                      </div>
-                    </div>
+                    
+                    
                   </div>
                 </section>
 
@@ -1808,7 +1819,7 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
-                      <figure class="image-card-m2l7"><img src="img/determinants/determinants_b.jpg" alt="AA-HA! guidance" class="img-zoom w-100 h-100"></figure>
+                      <figure class="image-card-m2l7"><img src="img/determinants/determinants_b.png" alt="AA-HA! guidance" class="img-zoom w-100 h-100"></figure>
                     </div>
                   </div>
                 </section>
@@ -1820,7 +1831,7 @@ const coursesData = [
             id: "ch2-lesson-9",
             title: yhLang(
               "Why young people need special care ?",
-              "কেন তরুণদের বিশেষ যত্ন প্রয়োজন?",
+              "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন?",
             ),
             icon: "fa-user-nurse",
             gradientClass: "bg-gradient-teal",
@@ -1852,7 +1863,7 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Adolescents have diverse needs",
-                    "কিশোর-কিশোরী ও তরুণদের বিশেষ ধরনের চাহিদা রয়েছে",
+                    "চাহিদার ভিন্নতা।",
                   ),
                   desc: yhLang(
                     "Needs in SRHR, mental health and other NCDs, nutrition,  violence against adolescents, vulnerable adolescents etc.",
@@ -1865,7 +1876,7 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Unaware of the laws, policies, rights",
-                    "আইন, নীতি এবং অধিকার সম্পর্কে অজ্ঞতা",
+                    "আইন, নীতি এবং অধিকার সম্পর্কে অজ্ঞতা।",
                   ),
                   desc: yhLang(
                     "Sexual and reproductive health rights, Child rights.",
@@ -1878,7 +1889,7 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Limited ability to execute the rights.",
-                    "অধিকার প্রয়োগে সীমিত সক্ষমতা।",
+                    "অধিকার প্রয়োগে সীমিত ক্ষমতা।",
                   ),
                   desc: yhLang(
                     "Lack of confidence, parental influence, peer pressure",
@@ -1891,11 +1902,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Barriers in accessing the information, knowledge, skills.",
-                    "তথ্য, জ্ঞান ও দক্ষতা অর্জনের ক্ষেত্রে বাধা।",
+                    "তথ্য, জ্ঞান এবং দক্ষতা অর্জনের ক্ষেত্রে বাধা",
                   ),
                   desc: yhLang(
                     "Social stigma, discomfort among parents, family members, peers, teachers to talk about AH issues.",
-                    "সমাজে কুসংস্কার ও খোলামেলা আলোচনার অভাবে অনেক বেদলোর-বেদলোরী ও তরুণ প্রয়োজনীয় তথ্য ও দক্ষতা থেকে বঞ্চিত হয়।",
+                    "তরুণদের স্বাস্থ্য সমস্যা নিয়ে কথা বলার সময় বাবা-মা, পরিবারের সদস্য, সহকর্মী এবং শিক্ষকদের মধ্যে সামাজিক বাধা এবং অস্বস্তি।",
                   ),
                   icon: "fa-book-open-reader",
                   color: "bg-gradient-rose",
@@ -1904,11 +1915,11 @@ const coursesData = [
                 {
                   title: yhLang(
                     "Barriers in accessing the health services.",
-                    "স্বাস্থ্যসেবা গ্রহণে বাধা।",
+                    "স্বাস্থ্যসেবা প্রাপ্তির ক্ষেত্রে বাধা।",
                   ),
                   desc: yhLang(
                     "Limited care seeking behaviors, no dedicated service (no separate space, no privacy, no dedicated staff, negligence and unawareness among service providers.",
-                    "সেবা গ্রহণের সীমিত সুযোগ; কোনো নির্দিষ্ট স্থান নেই, গোপনীয়তা নেই, নির্দিষ্ট কর্মী নেই; সেবাদানকারীদের অবহেলা ও অসচেতনতা রয়েছে।",
+                    "সীমিত সেবা গ্রহণের আগ্রহ, নিবেদিত স্বাস্থ্য সেবার অভাব (আলাদা স্থান, গোপনীয়তা ও নিবেদিতপ্রাণ স্বাস্থ্যকর্মীর   অভাব, সেবা প্রদানকারীদের মধ্যে অবহেলা এবং অসচেতনতা)।",
                   ),
                   icon: "fa-hospital-user",
                   color: "bg-gradient-cyan",
@@ -2020,7 +2031,7 @@ const coursesData = [
                   <div class="d-flex align-items-center gap-3">
                     <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group" style="color: #fff;"></i></span>
                     <div>
-                      <h2 class="">${yhLang("Why young people need special care ?", "কেন তরুণদের বিশেষ যত্ন প্রয়োজন?")}</h2>
+                      <h2 class="">${yhLang("Why young people need special care ?", "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন?")}</h2>
                     </div>
                   </div>
                 </div>
@@ -3875,27 +3886,11 @@ const coursesData = [
     title: yhLang("Penis", "পেনিস/ পুরুষাঙ্গ"),
     description: yhLang(
       "The penis delivers sperm into the female vagina during sexual intercourse and also functions for urination. During sexual arousal, blood flow increases, making it erect and larger in size. Ejaculation then occurs, releasing semen from the penis. Ejaculation can also happen during sleep, which is a normal process.",
-      "পেনিস যৌন সংগমের মাধ্যমে নারীর যোনিতে শুক্রাণু প্রবেশ করায় ও এছাড়া এটি মূত্র নির্গমনের কাজও করে। যৌন উত্তেজনার সময় পেনিসে রক্ত চলাচল বেড়ে যায় এবং এটি শক্ত হয়ে আকৃতিতে বড় হয়। তারপর বীর্যপাত হয়, তখন পেনিস থেকে বীর্য বেরিয়ে আসে। বীর্যপাত অনেক সময় ঘুমের মধ্যও হতে পারে; এটি একটি স্বাভাবিক ঘটনা।"
+      "পেনিস যৌন সংগমের মাধ্যমে নারীর যোনিতে শুক্রাণু প্রবেশ করায় ও এছাড়া এটি মূত্র নির্গমনের কাজও করে।  যৌন উত্তেজনার সময় পেনিসে রক্ত চলাচল বেড়ে যায় এবং এটি শক্ত হয়ে আকৃতিতে বড় হয়।  তারপর বীর্যপাত হয়, তখন পেনিস থেকে বীর্য বেরিয়ে আসে।  বীর্যপাত অনেক সময় ঘুমের মধ্যেও হতে পারে; এটি একটি স্বাভাবিক ঘটনা।"
     ),
     icon: "fa-droplet",
   },
-  {
-    title: yhLang("Testes and Scrotum", "টেস্টিস/ অণ্ডকোষ ও স্কোটার্ম/ অণ্ডকোষের থলি"),
-    description: yhLang(
-      "The scrotum is the sac that hangs below the penis and contains two testes. The testes produce sperm and the male hormone testosterone.",
-      "পেনিসের নিচে ঝুলে থাকা থলিটিকে স্কোটার্ম বলে যার মধ্য দুটি 'বলের' মতো টেস্টিস থাকে। এখান থেকেই মূলত শুক্রাণু এবং পুরুষ হরমোন অর্থাৎ টেস্টোস্টেরন তৈরি হয়।"
-    ),
-    icon: "fa-gem",
-  },
-  {
-    title: yhLang("Sperm", "শুক্রাণু"),
-    description: yhLang(
-      "Sperm production begins at puberty. Sperm are contained in a white fluid called semen. During ejaculation, semen exits through the penis. During sexual intercourse, sperm travel through the female reproductive system to reach and fertilize an egg. Only one sperm is needed to fertilize an egg.",
-      "বয়ঃসন্ধি থেকে শুক্রাণু উৎপাদিত হতে শুরু করে। শুক্রাণুগুলো এক ধরনের সাদা তরল পদার্থের মধ্য থাকে যাকে বলা হয় বীর্য। পুরুষের বীর্যপাতের সময় এগুলো পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে। নারীর সঙ্গে শারীরিক মিলনের সময় পুরুষের বীর্যপাত হলে তা নারীর যোনিপথ ও জরায়ু দিয়ে ডিম্বনালিতে প্রবেশ করে ও ডিম্বাণুর সঙ্গে মিলিত হয়। এদের মধ্য খুব অল্প কয়েকটা শুক্রাণু, ডিম্বাণু পর্যন্ত পৌঁছাতে পারে। তবে একটি ডিম্বাণুকে নিষিক্ত করে সন্তান উৎপাদন করতে কেবল একটি শুক্রাণুই প্রয়োজন।"
-    ),
-    icon: "fa-bacteria",
-  },
-  {
+   {
     title: yhLang("Urethra", "ইউরেথ্রা/ মূত্রনালি"),
     description: yhLang(
       "Urine and semen exit the body through the tip of the penis via the urethra.",
@@ -3903,14 +3898,31 @@ const coursesData = [
     ),
     icon: "fa-arrow-down",
   },
+  
+  {
+    title: yhLang("Testes and Scrotum", "টেস্টিস/ অণ্ডকোষ ও স্কোটার্ম/ অণ্ডকোষের থলি"),
+    description: yhLang(
+      "The scrotum is the sac that hangs below the penis and contains two testes. The testes produce sperm and the male hormone testosterone.",
+      "পেনিসের নিচে ঝুলে থাকা থলিটিকে স্কোটার্ম বলে যার মধ্য দুটি 'বলের' মতো টেস্টিস থাকে।  এখান থেকেই মূলত শুক্রাণু এবং পুরুষ হরমোন অর্থাৎ টেস্টোস্টেরন তৈরি হয়।"
+    ),
+    icon: "fa-gem",
+  },
   {
     title: yhLang("Nocturnal Emission (Wet Dream)", "ছেলেদের স্বপ্নে বীর্যপাত"),
     description: yhLang(
       "During puberty (usually between ages 13–15), semen production begins. Excess semen is naturally released from the body, often during sleep, known as a wet dream. This is a normal process and not a disease. Not experiencing it is also normal and does not indicate any problem.",
-      "ছেলেদের সাধারণত বয়ঃসন্ধির সময় বা ১৩ থেকে ১৫ বছর বয়স থেকে বীর্যথলিতে বীর্য তৈরি শুরু হয়। অতিরিক্ত বীর্য স্বাভাবিক নিয়মে শরীর থেকে বেরিয়ে আসে। এটাই হচ্ছে বীর্যপাত। ঘুমের মধ্য এই বীর্য বেরিয়ে আসাকে বলা হয় স্বপ্নে বীর্যপাত যা সাধারণত স্বপ্নদোষ হিসেবে পরিচিত। স্বপ্নে বীর্যপাত ছেলেদের জন্য একটি স্বাভাবিক প্রক্রিয়া, এটি কোনো রোগ নয়। কারো স্বপ্নদোষ না হওয়াও কোনো অস্বাভাবিক ব্যাপার নয় এবং এর অর্থ এই নয় যে, তার বীর্য ঠিকমত তৈরি হচ্ছে না। এজন্য 'জীবন নষ্ট হয়ে গেছে' ভেবে মন খারাপ করা কিংবা চিকিৎসার জন্য কবিরাজ/হাতুড়ে ডাক্তারের শরণাপন্ন হওয়া উচিত নয়।"
+      "ছেলেদের সাধারণত বয়ঃসন্ধির সময় বা ১৩ থেকে ১৫ বছর বয়স থেকে বীর্যথলিতে বীর্য তৈরি শুরু হয়। অতিরিক্ত বীর্য স্বাভাবিক নিয়মে শরীর থেকে বেরিয়ে আসে।  এটাই হচ্ছে বীর্যপাত।  ঘুমের মধ্য এই বীর্য বেরিয়ে আসাকে বলা হয় স্বপ্নে বীর্যপাত যা সাধারণত স্বপ্নদোষ হিসেবে পরিচিত।<br>স্বপ্নে বীর্যপাত ছেলেদের জন্য একটি স্বাভাবিক প্রক্রিয়া, এটি কোনো রোগ নয়।  কারো স্বপ্নদোষ না হওয়াও কোনো অস্বাভাবিক ব্যাপার নয় এবং এর অর্থ এই নয় যে, তার বীর্য ঠিকমত তৈরি হচ্ছে না।  এজন্য 'জীবন নষ্ট হয়ে গেছে' ভেবে মন খারাপ করা কিংবা চিকিৎসার জন্য কবিরাজ/হাতুড়ে ডাক্তারের শরণাপন্ন হওয়া উচিত নয়।"
     ),
     icon: "fa-bed",
   },
+  {
+    title: yhLang("Sperm", "শুক্রাণু"),
+    description: yhLang(
+      "Sperm production begins at puberty. Sperm are contained in a white fluid called semen. During ejaculation, semen exits through the penis. During sexual intercourse, sperm travel through the female reproductive system to reach and fertilize an egg. Only one sperm is needed to fertilize an egg.",
+      "বয়ঃসন্ধি থেকে শুক্রাণু উৎপাদিত হতে শুরু করে।  শুক্রাণুগুলো এক ধরনের সাদা তরল পদার্থের মধ্য থাকে যাকে বলা হয় বীর্য।  পুরুষের বীর্যপাতের সময় এগুলো পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে।  নারীর সঙ্গে শারীরিক মিলনের সময় পুরুষের বীর্যপাত হলে তা নারীর যোনিপথ ও জরায়ু দিয়ে ডিম্বনালিতে প্রবেশ করে ও ডিম্বাণুর সঙ্গে মিলিত হয়।  এদের মধ্য খুব অল্প কয়েকটা শুক্রাণু, ডিম্বাণু পর্যন্ত পৌঁছাতে পারে।  তবে একটি ডিম্বাণুকে নিষিক্ত করে সন্তান উৎপাদন করতে কেবল একটি শুক্রাণুই প্রয়োজন।"
+    ),
+    icon: "fa-bacteria",
+  }, 
   {
     title: `
       <figure class="birgo_img mb-0">

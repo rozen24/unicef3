@@ -1076,12 +1076,15 @@ span {
   margin-top: 5px;
 }
 .age-figure img {
-  height: 300px;
+  height: 350px;
 }
-
-
-
-
+/* module 1 lession 4 */
+.m1l6_first {
+    right: 402px;
+}
+.m1l6_last {
+    left: 302px;
+}
 
 
 }
