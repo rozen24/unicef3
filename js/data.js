@@ -4336,7 +4336,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             content: (function () {
               const causes = [
                 { title: yhLang("Poverty", "দারিদ্র্যতা"), icon: "fa-hand-holding-heart", color: "#ef4444", desc: yhLang("Economic hardship forces families to marry off daughters early", "অর্থনৈতিক কঠিনতা") },
-                { title: yhLang("Social Customs", "সামাজিক প্রথা ও কুসংস্কার"), icon: "fa-person", color: "#f59e0b", desc: yhLang("Traditional beliefs and superstitions", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার") },
+                { title: yhLang("Social Customs", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার"), icon: "fa-person", color: "#f59e0b", desc: yhLang("Traditional beliefs and superstitions", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার") },
                 { title: yhLang("Lack of Education", "শিক্ষা ও সচেতনতার অভাব"), icon: "fa-book", color: "#10b981", desc: yhLang("No awareness about rights", "শিক্ষা ও সচেতনতার অভাব") },
                 { title: yhLang("Dowry Burden", "কন্যাদায়গ্রস্ত পিতার দায়মুক্ত হওয়া"), icon: "fa-sack-dollar", color: "#8b5cf6", desc: yhLang("Parents seek relief from dowry", "কন্যাদায়গ্রস্ত পিতামাতা") },
                 { title: yhLang("Gender Inequality", "জেন্ডার বৈষম্য"), icon: "fa-scale-balanced", color: "#ec4899", desc: yhLang("Girls considered inferior", "মেয়েদের অসমান অধিকার") },
@@ -4553,7 +4553,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   { 
     title: yhLang(
       "Register all children at birth",
-      "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা"
+      "ছেলে-মেয়ে সকলের জন্ম নিবন্ধন করা;"
     ), 
     icon: "fa-file-circle-check", 
     color: "#0891b2"
@@ -4569,7 +4569,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   { 
     title: yhLang(
       "Raise awareness among registrars, guardians, and the public about child marriage laws",
-      "বাল্যবিবাহের আইন সম্পর্কে কাজী, অভিভাবক ও জনসাধারণকে সচেতন করা"
+      "বাল্যবিবাহের আইন সম্পর্কে কাজী, অভিভাবক ও জনসাধারণকে সচেতন করা;"
     ), 
     icon: "fa-gavel", 
     color: "#dc2626"
@@ -4577,7 +4577,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   { 
     title: yhLang(
       "Create public awareness about child marriage and its harmful consequences",
-      "বাল্যবিবাহ ও এর ভয়াবহ পরিণতি সম্পর্কে জনসচেতনতা তৈরি করা"
+      "বাল্যবিবাহ ও এর ভয়াবহ পরিণতি সম্পর্কে জনসচেতনতা তৈরি করা;"
     ), 
     icon: "fa-bullhorn", 
     color: "#ea580c"
@@ -4601,7 +4601,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   { 
     title: yhLang(
       "Organize community discussions and build prevention systems against child marriage",
-      "‘বাল্যবিবাহ’ নিয়ে কমিউনিটি পর্যায়ে আলোচনা ও প্রতিরোধব্যবস্থা তৈরি করা"
+      "‘বাল্যবিবাহ’ নিয়ে কমিউনিটি পর্যায়ে আলোচনা ও প্রতিরোধব্যবস্থা তৈরি করা;"
     ), 
     icon: "fa-people-group", 
     color: "#f59e0b"
@@ -4609,7 +4609,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   { 
     title: yhLang(
       "Ensure responsible implementation of Child Marriage Restraint Act 2017 and related rules",
-      "বাল্যবিবাহ নিরোধ আইন, ২০১৭ এবং বাল্যবিবাহ নিরোধ বিধিমালা-এর বাস্তব প্রয়োগে সংশ্লিষ্টদের দায়িত্বশীল ভূমিকা নিশ্চিত করা"
+      "বাল্যবিবাহ নিরোধ আইন, ২০১৭ ও বাল্যবিবাহ নিরোধ বিধিমালা-এর বাস্তব প্রয়োগে সংশ্লিষ্টদের সঠিক দায়িত্ব পালন;"
     ), 
     icon: "fa-scale-balanced", 
     color: "#d946ef"
@@ -4617,7 +4617,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   { 
     title: yhLang(
       "Report incidents to Child Helpline 1098",
-      "বাল্যবিবাহ সম্পর্কে জানতে পারলে চাইল্ড হেল্পলাইন ১০৯৮-এ কল করে রিপোর্ট করা"
+      "বাল্যবিবাহ সম্পর্কে জানতে পারলে চাইল্ড হেল্পলাইন ১০৯৮-এ কল করে রিপোর্ট করা।"
     ), 
     icon: "fa-phone", 
     color: "#2563eb"
