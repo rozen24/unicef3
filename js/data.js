@@ -1352,7 +1352,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             id: "ch2-lesson-6",
             title: yhLang(
               "Child marriage and teenage pregnancies",
-              "কৈশোর কালীন স্বাস্থ্য",
+              "কৈশোরকালীন স্বাস্থ্য",
             ),
             icon: "fa-child-reaching",
             gradientClass: "bg-gradient-orange",
@@ -1378,7 +1378,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Child marriage and teenage pregnancies", "কৈশোর কালীন স্বাস্থ্য")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Child marriage and teenage pregnancies", "কৈশোরকালীন স্বাস্থ্য")}</h2>
 
                 
 
@@ -1612,7 +1612,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             id: "ch2-lesson-8",
             title: yhLang(
               "Determinants for adolescent health and well-being",
-              "কৈশোর কালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ",
+              "কৈশোরকালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ",
             ),
             icon: "fa-triangle-exclamation",
             gradientClass: "bg-gradient-pink",
@@ -1797,7 +1797,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
 
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang("Determinants for adolescent health and well-being", "কৈশোর কালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ")}</h2>
+                <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang("Determinants for adolescent health and well-being", "কৈশোরকালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ")}</h2>
                 <section class="p-1 p-md-1 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
                   <div class="row g-1 align-items-center">
                     <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
@@ -4675,7 +4675,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
         id: "ch-7",
         title: yhLang(
           "Module-7: Adolescent Family Planning",
-          "মডিউল-৭: কৈশোর কালীন পরিবার পরিকল্পনা",
+          "মডিউল-৭: কৈশোরকালীন পরিবার পরিকল্পনা",
         ),
         lessons: [
           {
@@ -4717,7 +4717,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                     <p class="ch7l3-intro-text">
                       ${yhLang(
                         "Family planning involves deciding when and how many children a couple should have based on their income and socio-economic situation, determining the spacing between children, and taking appropriate measures to achieve these goals. Adolescents are not physically and mentally mature for motherhood. Girls often lack essential reproductive health knowledge, making pregnancy risky for both mother and baby.",
-                        "একটি দম্পতি তার আয়ের সাথে ও পারিপার্শ্বিক আর্থ-সামাজিক অবস্থার সাথে সঙ্গতি রেখে কখন ও কয়টি সন্তান গ্রহণ করবে, দু'টি সন্তানের মাঝে বিরতি কতদিনের হবে বা তার পরিবার কত ছোট বা বড় হবে তা ঠিক করা এবং সে লক্ষ্য অর্জনের জন্য যথাযথ ব্যবস্থা অবলম্বন করাই হলো পরিবার পরিকল্পনা। যেকোনো কিশোরীই শারীরিক ও মানসিকভাবে সন্তান ধারণের জন্য উপযুক্ত থাকে না। প্রজনন স্বাস্থ্য বিষয়ক অনেক প্রয়োজনীয় তথ্য জানা না থাকার কারনে, এ সময় গর্ভধারণ মা ও সন্তান উভয়ের জন্যই অনেক ঝুঁকিপূর্ণ হয়ে থাকে।"
+                        "একটি দম্পতি তার আয়ের সাথে ও পারিপার্শ্বিক আর্থ-সামাজিক অবস্থার সাথে সঙ্গতি রেখে কখন ও কয়টি সন্তান গ্রহণ করবে, দু'টি সন্তানের মাঝে বিরতি কতদিনের হবে বা তার পরিবার কত ছোট বা বড় হবে তা ঠিক করা এবং সে লক্ষ্য অর্জনের জন্য যথাযথ ব্যবস্থা অবলম্বন করাই হলো পরিবার পরিকল্পনা।  যেকোনো কিশোরীই শারীরিক ও মানসিকভাবে সন্তান ধারণের জন্য উপযুক্ত থাকে না।  প্রজনন স্বাস্থ্য বিষয়ক অনেক প্রয়োজনীয় তথ্য জানা না থাকার কারনে, এ সময় গর্ভধারণ মা ও সন্তান উভয়ের জন্যই অনেক ঝুঁকিপূর্ণ হয়ে থাকে।"
                       )}
                     </p>
                   </section>
@@ -4888,10 +4888,6 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                         <i class="fa-solid fa-check-circle"></i>
                         ${yhLang("Number of Children vs Method Availability", "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ")}
                       </h3>
-                      <p class="ch7l4-card-subtitle">${yhLang(
-                        "Modern Approach to Family Planning",
-                        "পরিবার পরিকল্পনার আধুনিক পদ্ধতি সমূহ"
-                      )}</p>
                     </div>
                     <div class="ch7l4-table-wrapper">
                       <table class="ch7l4-availability-table">
@@ -4927,7 +4923,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                             <td class="ch7l4-label-cell">
                               <div class="ch7l4-label-badge" style="background: linear-gradient(135deg, #60a5fa33 0%, #60a5fa11 100%); color: #1e40af;">
                                 <i class="fa-solid fa-child"></i>
-                                <span>${yhLang("Has 1 living child, planning next", "একটি জীবিত সন্তান আছে এবং পরবর্তী সন্তান")}</span>
+                                <span>${yhLang("Has 1 living child, planning next", "একটি জীবিত সন্তান আছে এবং পরবর্তী সন্তান এখনি নয়")}</span>
                               </div>
                             </td>
                             <td class="ch7l4-check-cell ch7l4-available"><i class="fa-solid fa-check"></i></td>
