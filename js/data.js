@@ -6281,7 +6281,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                     <div class="ch11l4-td-desc-card">
                       <h2 class="ch11l4-td-title">
                         <i class="fa-solid fa-shield-virus"></i>
-                        ${yhLang("Importance of TD Vaccine", "টিডি টিকা : টিডি টিকার গুরুত্ব")}
+                        ${yhLang("Importance of TD Vaccine", "মহিলাদের অন্যান্য টিকা : টিডি টিকা : টিডি টিকার গুরুত্ব")}
                       </h2>
                       <p class="ch11l4-td-description">
                         ${yhLang(
@@ -6305,9 +6305,9 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                             <th class="ch11l4-td-th"><h3>${yhLang("Vaccine Name", "টিকার নাম")}</h3></th>
                             <th class="ch11l4-td-th"><h3>${yhLang("Dose", "টিকার ডোজ")}</h3></th>
                             <th class="ch11l4-td-th"><h3>${yhLang("Number of Doses", "ডোজের সংখ্যা")}</h3></th>
-                            <th class="ch11l4-td-th"><h3>${yhLang("Timing", "টিকাদানের সময়")}</h3></th>
-                            <th class="ch11l4-td-th"><h3>${yhLang("Site", "স্থান")}</h3></th>
-                            <th class="ch11l4-td-th"><h3>${yhLang("Route", "প্রয়োগ পথ")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Timing", "টিকা শুরু করার সঠিক সময়")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Site", "টিকাদানের স্থান")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Route", "টিকাদানের প্রয়োগ পথ")}</h3></th>
                           </tr>
                         </thead>
                         <tbody> 
@@ -6341,7 +6341,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                         </tbody>
                       </table>
                     </div>
-                    <p class="ch11l4-td-table-note">
+                    <p class="ch11l4-td-table-note text-end">
                       <i class="fa-solid fa-quote-left"></i>
                       ${yhLang("Source: Expanded Programme on Immunization (EPI), Ministry of Health, Government of Bangladesh", "সম্প্রসারিত টিকাদান কর্মসূচি (ইপিআই), স্বাস্থ্য অধিদপ্তর, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার")}
                     </p>
@@ -6370,11 +6370,11 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                           <p class="ch11l4-td-important-text">
                             <i class="fa-solid fa-exclamation-circle"></i> ${yhLang(
                               "The timing of vaccination does not change with the timing of delivery.",
-                              "প্রসবের সময়ের সাথে টিকাদান সময়সূচির কোনো পরিবর্তন হবে না"
+                              "প্রসবের সময়ের সাথে টিকাদান কর্মসূচির কোনো পরিবর্তন হবে না"
                             )}
                           </p>
                           <p class="ch11l4-td-important-text">
-                            <strong>${yhLang("Important:", "মনে রাখতে হবেত্বপূর্ণ:")}</strong> ${yhLang(
+                            <strong>${yhLang("Important:", "মনে রাখতে হবে:")}</strong> ${yhLang(
                               "The timing of vaccination does not change with the timing of delivery.",
                               "ধনুষ্টংকার ও ডিপথেরিয়া মারাত্মক রোগ। এ রোগগুলো থেকে রক্ষা পেতে সব নারীকে ৫ ডোজ টিডি টিকা সঠিক সময়ে নিতে হবে।"
                             )}
