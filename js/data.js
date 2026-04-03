@@ -5577,7 +5577,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
         id: "ch-9",
         title: yhLang(
           "Module-9: Sexually Transmitted Diseases (STIs) and Reproductive Tract Infections (RTIs)",
-          "মডিউল-৯: যৌনবাহিত রোগ (এসটিআই) ও প্রজননতন্ত্রের সংক্রমণ (আরটিআই)",
+          "মডিউল-৯: যৌনবাহিত ও প্রজননতন্ত্রের সংক্রমণসমূহ ও এর প্রতিরোধ ",
         ),
         lessons: [
           {
@@ -5611,7 +5611,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             content: (function () {
               const mainDescription = yhLang(
                 "Sexually Transmitted Infections (STIs) are infections spread from one person to another through sexual contact. Reproductive Tract Infections (RTIs) are infections of the reproductive organs. Besides sexual transmission, RTIs can spread through infected blood/blood products, contaminated needles/instruments, and breast milk from infected mothers. All STIs fall under the category of RTIs.",
-                "যৌন সম্পর্কের মাধ্যমে একজন থেকে অন্যজনের মধ্যে যেসব সংক্রমণ ছড়ায় সেগুলোই 'যৌনবাহিত সংক্রমণ'। অন্যদিকে, প্রজনন অঙ্গসমূহের সংক্রমণকে 'প্রজননতন্ত্রের সংক্রমণ' বলে। যৌন সম্পর্ক (যৌনবাহিত সংক্রমণ) ছাড়াও সংক্রমিত রক্ত/রক্তজাত দ্রব্য গ্রহণ, সংক্রমিত সূঁচ/যন্ত্রপাতি ও আক্রান্ত মায়ের বুকের দুধের মাধ্যমে প্রজননতন্ত্রের সংক্রমণ হতে পারে। সকল যৌনবাহিত সংক্রমণই প্রজননতন্ত্রের সংক্রমণের আওতায় পড়ে।"
+                "যৌন সম্পর্কের মাধ্যমে একজন থেকে অন্যজনের মধ্যে যেসব সংক্রমণ ছড়ায় সেগুলোই 'যৌনবাহিত সংক্রমণ'। অন্যদিকে, প্রজনন অঙ্গসমূহের সংক্রমণকে 'প্রজননতন্ত্রের সংক্রমণ' বলে। যৌন সম্পর্ক (যৌনবাহিত সংক্রমণ) ছাড়াও সংক্রমিত রক্ত/রক্তজাত দ্রব্যাদি গ্রহণ, সংক্রমিত সূঁচ/যন্ত্রপাতি ও আক্রান্ত মায়ের বুকের দুধের মাধ্যমে প্রজননতন্ত্রের সংক্রমণ হতে পারে। সকল যৌনবাহিত সংক্রমণই প্রজননতন্ত্রের সংক্রমণের আওতায় পড়ে।"
               );
 
               const causePoints = [
@@ -5630,7 +5630,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 yhLang("Sores or ulcers in genital area", "যৌনাঙ্গে ক্ষত হওয়া"),
                 yhLang("Pain during sexual intercourse", "যৌনমিলনে ব্যথা হওয়া"),
                 yhLang("Itching or rash-like bumps on body", "শরীরে চুলকানি বা ঘামাচির মতো দানা হওয়া"),
-                yhLang("Swollen lymph nodes (in groin or other areas)", "শরীরে লসিকা গ্রন্থি (কুঁচকি বা অন্যান্য স্থানে গুটি হওয়া)"),
+                yhLang("Swollen lymph nodes (in groin or other areas)", "শরীরে লসিকা গ্রন্থি ফুলে যাওয়া ও ব্যাথা (কুঁচকি বা অন্যান্য স্থানে গুটি হওয়া)"),
               ];
 
               const symptomNote = yhLang(
@@ -5677,7 +5677,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                            <section class="ch9l4-section ch9l4-symptoms-section" data-aos="fade-up" data-aos-delay="120">
                               <h3 class="ch9l4-section-title">
                                 <i class="fa-solid fa-heartbeat"></i>
-                                ${yhLang("Common Symptoms of RTIs/STIs", "যৌনরোগ বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ")}
+                                ${yhLang("Common Symptoms of RTIs/STIs", "যৌনরোগের বা প্রজননতন্ত্রের সংক্রমণের সাধারণ লক্ষণসমূহ")}
                               </h3>
                               <ul class="ch9l4-list symptomp">
                                 ${renderList(symptomPoints, 100)}
