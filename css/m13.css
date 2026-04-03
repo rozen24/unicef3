@@ -758,21 +758,21 @@
   }
 }
 .ch13l3-orbit-card {
-  width: 105px;
-  height: 105px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+    width: 101px;
+    height: 111px;
+    padding: 4px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
 .ch13l3-orbit-card::before {
@@ -2235,7 +2235,7 @@
   font-weight: 700;
   color: #1f2937;
   min-width: 20px;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 1200px) {

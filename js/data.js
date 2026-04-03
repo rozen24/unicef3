@@ -7015,12 +7015,12 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             content: (function () {
               const sexDefinition = yhLang(
   "Sex: Sex refers to the biological or natural differences between males and females. It is the physical distinction based on biological characteristics that differentiate males and females, and these characteristics are not changeable.",
-  "সেক্স: সেক্স বা লিঙ্গ হচ্ছে প্রাকৃতিক বা জৈবিক কারণে সৃষ্ট নারী-পুরুষের বৈশিষ্ট্যসূচক ভিন্নতা বা শারীরিক বৈশিষ্ট্যের ভিত্তিতে নারী-পুরুষের স্বাতন্ত্র্য, কিংবা নারী-পুরুষের শারীরিক বৈশিষ্ট্য, যা পরিবর্তনযোগ্য নয়।"
+  "সেক্স বা লিঙ্গ হচ্ছে প্রাকৃতিক বা জৈবিক কারণে সৃষ্ট নারী-পুরুষের বৈশিষ্ট্যসূচক ভিন্নতা বা শারীরিক বৈশিষ্ট্যের ভিত্তিতে নারী-পুরুষের স্বাতন্ত্র্য, কিংবা নারী-পুরুষের শারীরিক বৈশিষ্ট্য, যা পরিবর্তনযোগ্য নয়।"
 );
 
 const genderDefinition = yhLang(
   "Gender: Gender refers to the socially constructed identity of men and women, including their roles, characteristics, and responsibilities in society. These roles are changeable and may vary across different societies and cultures. In other words, gender is a social concept that is dynamic and changeable.",
-  "জেন্ডার: জেন্ডার হচ্ছে সমাজ কর্তৃক নির্ধারিত নারী ও পুরুষের সামাজিক পরিচয়, তাদের মধ্যকার বৈশিষ্ট্য এবং নারী ও পুরুষের ভূমিকা, যা পরিবর্তনীয় এবং সমাজ, সংস্কৃতি ইত্যাদি ভেদে ভিন্ন ভিন্ন। অর্থাৎ, জেন্ডার সামাজিকভাবে নির্মিত একটি বিষয়, যা পরিবর্তনশীল।"
+  "জেন্ডার হচ্ছে সমাজ কর্তৃক নির্ধারিত নারী ও পুরুষের সামাজিক পরিচয়, তাদের মধ্যকার বৈশিষ্ট্য এবং নারী ও পুরুষের ভূমিকা, যা পরিবর্তনীয় এবং সমাজ, সংস্কৃতি ইত্যাদি ভেদে ভিন্ন ভিন্ন। অর্থাৎ, জেন্ডার সামাজিকভাবে নির্মিত একটি বিষয়, যা পরিবর্তনশীল।"
 );
 
 const genderPoints = [
@@ -7059,7 +7059,7 @@ const sexPoints = [
                     <div class="ch13l1-def-card ch13l1-def-sex" data-aos="fade-right" data-aos-delay="60">
                       <div class="ch13l1-def-label">
                         <span class="ch13l1-def-icon"><i class="fa-solid fa-dna"></i></span>
-                        <h3>${yhLang("Sex", "সেক্স")} </h3>
+                        <h3><b>${yhLang("Sex", "সেক্স")} </b></h3>
                       </div>
                       <p class="ch13l1-def-text">${sexDefinition}</p>
                     </div>
@@ -7067,7 +7067,7 @@ const sexPoints = [
                     <div class="ch13l1-def-card ch13l1-def-gender" data-aos="fade-left" data-aos-delay="60">
                       <div class="ch13l1-def-label">
                         <span class="ch13l1-def-icon"><i class="fa-solid fa-children"></i></span>
-                       <h3> ${yhLang("Gender", "জেন্ডার")}</h3>
+                       <h3><b>${yhLang("Gender", "জেন্ডার")}</b></h3>
                       </div>
                       <p class="ch13l1-def-text">${genderDefinition}</p>
                     </div>
@@ -7086,11 +7086,11 @@ const sexPoints = [
                           <tr>
                             <th scope="col">
                               <h3><i class="fa-solid fa-circle-notch" style="margin-right:8px;"></i>
-                              ${yhLang("Gender", "জেন্ডার")}</h3>
+                              <b>${yhLang("Gender", "জেন্ডার")}</b></h3>
                             </th>
                             <th scope="col">
                               <h3><i class="fa-solid fa-dna" style="margin-right:8px;"></i>
-                              ${yhLang("Sex", "সেক্স")}</h3>
+                              <b>${yhLang("Sex", "সেক্স")}</b></h3>
                             </th>
                           </tr>
                         </thead>
@@ -7147,7 +7147,7 @@ const sexPoints = [
             content: (function () {
               const intro = yhLang(
   "Differences in roles, behaviors, and social practices between men and women often create certain inequalities. Social attitudes, misinterpretation of religion, and the mindset of undervaluing girls play a major role in creating gender inequality. When families and society accept these inequalities and the state legitimizes them through laws, policies, or values, they become institutionalized and are considered discrimination. These inequalities are socially constructed, shaped by family, society, and culture, vary from place to place, and are changeable.",
-  "নারী ও পুরুষের ভিন্নতা, আচরণ ও সামাজিক অভ্যাসভেদে নারী ও পুরুষের মধ্যে কিছু বৈষম্য সৃষ্টি হয়। সামাজিক দৃষ্টিভঙ্গি, ধর্মের অপব্যাখ্যা, মেয়েদের ছোট করে দেখার মানসিকতা ইত্যাদি জেন্ডার বৈষম্য সৃষ্টিতে প্রধান ভূমিকা পালন করে। জেন্ডারের এই বৈষম্যকে পরিবার, সমাজ যখন মেনে নেয় ও আইন, নীতি বা মূল্যবোধের মাধ্যমে রাষ্ট্র যখন বৈধতা দেয় তখন তা প্রাতিষ্ঠানিক রূপ লাভ করে এবং সেটি বৈষম্য হিসেবে গণ্য হয়।  এই বৈষম্য সামাজিকভাবে তৈরি যা পরিবার, সমাজ ও সংস্কৃতি থেকে গৃহীত, সমাজ ও স্থান ভেদে ভিন্ন, এবং অবশ্যই পরিবর্তনশীল।"
+  "নারী ও পুরুষের ভিন্নতা, আচরণ ও সামাজিক অবস্থাভেদে নারী ও পুরুষের মধ্যে কিছু বৈষম্য সৃষ্টি হয়। সামাজিক দৃষ্টিভঙ্গি, ধর্মের অপব্যাখ্যা, মেয়েদের ছোট করে দেখার মানসিকতা ইত্যাদি জেন্ডার বৈষম্য সৃষ্টিতে প্রধান ভূমিকা পালন করে। জেন্ডারের এই বৈষম্যকে পরিবার, সমাজ যখন মেনে নেয় ও আইন, নীতি বা মূল্যবোধের মাধ্যমে রাষ্ট্র যখন বৈধতা দেয় তখন তা প্রাতিষ্ঠানিক রূপ লাভ করে এবং সেটি বৈষম্য হিসেবে গণ্য হয়।  এই বৈষম্য সামাজিকভাবে তৈরি যা পরিবার, সমাজ ও সংস্কৃতি থেকে গৃহীত, সমাজ ও স্থান ভেদে ভিন্ন, এবং অবশ্যই পরিবর্তনশীল।"
 );
 
 const sections = [
@@ -7155,7 +7155,7 @@ const sections = [
     title: yhLang("Equality", "সমতা"),
     body: yhLang(
       "Equality generally refers to the same condition or status. It means equal distribution—equal rights, opportunities, responsibilities, and risks for everyone. For example, if a job advertisement invites applications based on qualifications and experience, women, men, third gender, and marginalized groups should all have the opportunity to apply.",
-      "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়।  সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।"
+      "সমতা বলতে সাধারণত সমঅবস্থাকে বোঝায়।  সমতা হচ্ছে সমভাবে বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-সুবিধা লাভ ইত্যাদি সকল ক্ষেত্রে সমান ভূমিকা ও অধিকার। যেমন: চাকরির বিজ্ঞপ্তিতে যোগ্যতা ও অভিজ্ঞতার মাপকাঠিতে আবেদনপত্র আহ্বান করা হলে নারী, পুরুষ ও তৃতীয় লিঙ্গ অথবা পিছিয়ে পড়া জনগোষ্ঠী সকলেই আবেদন করার সুযোগ পাবে।"
     ),
     icon: "fa-scale-balanced",
     type: "equality",
@@ -7164,7 +7164,7 @@ const sections = [
     title: yhLang("Equity / Fairness", "ন্যায্যতা"),
     body: yhLang(
       "Equity means distribution according to need. It refers to achieving fairness by considering individual situations, conditions, responsibilities, opportunities, and risks.",
-      "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-ঝুঁকি লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।"
+      "প্রয়োজন অনুযায়ী বণ্টন—অর্থাৎ প্রাপ্তি, দায়িত্ব পালন, সুযোগ-সুবিধা লাভ ইত্যাদি ক্ষেত্রে ব্যক্তি, অবস্থা, পরিস্থিতি বিশ্লেষণ সাপেক্ষে সাম্য প্রতিষ্ঠা করাই হচ্ছে ন্যায্যতা।"
     ),
     icon: "fa-gavel",
     type: "justice",
@@ -7173,7 +7173,7 @@ const sections = [
     title: yhLang("Gender Equality", "জেন্ডার সমতা"),
     body: yhLang(
       "Gender equality refers to realistic equality where both women and men can participate and be empowered equally in all personal and public spheres. Gender equality does not mean men and women are identical, but it ensures that their rights, opportunities, responsibilities, and risks are equal.",
-      "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-ঝুঁকি এবং অধিকার সমান হবে তা নিশ্চিত করে।"
+      "জেন্ডার সমতা হচ্ছে বাস্তবসম্মত সমতা যা ব্যক্তিগত পর্যায়ের সকল ক্ষেত্রে এবং জনসমক্ষে নারী–পুরুষের অংশগ্রহণ এবং ক্ষমতায়ন নির্দেশ করে। জেন্ডার সমতা নারী এবং পুরুষ এক তা মনে করে না; বরং নারী এবং পুরুষের দায়িত্ব, সুযোগ-সুবিধা এবং অধিকার সমান হবে তা নিশ্চিত করে।"
     ),
     icon: "fa-people-group",
     type: "gender",
@@ -7182,7 +7182,7 @@ const sections = [
     title: yhLang("Difference between Equity and Equality", "সাম্য ও সমতার পার্থক্য"),
     body: yhLang(
       "Women are still behind men in many family, social, and state activities. Therefore, by providing women with more opportunities and support than men through equity, gender equality can be achieved.",
-      "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-ঝুঁকি দিয়ে সাম্য (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।"
+      "পরিবার, সমাজ ও রাষ্ট্রের বিভিন্ন কর্মকাণ্ডে নারীরা এখনো পিছিয়ে রয়েছে। তাই পুরুষের চেয়ে নারীকে বেশি সুযোগ-সুবিধা দিয়ে সাম্যের (Equity) মাধ্যমে জেন্ডার সমতা (Equality) আনতে হবে।"
     ),
     icon: "fa-code-compare",
     type: "difference",
@@ -7290,9 +7290,14 @@ const sections = [
   { text: yhLang("Demanding dowry and abusing girls physically and mentally because of dowry", "যৌতুক দাবি করা এবং যৌতুকের কারণে মেয়েদের উপর শারীরিক ও মানসিক নির্যাতন করা"), icon: "fa-money-bill", color: "tangerine" },
   { text: yhLang("Family negligence in providing healthcare to girls when they are sick", "অসুস্থ হলে মেয়েদের স্বাস্থ্যসেবা গ্রহণের ব্যাপারে পরিবারের উদাসীনতা"), icon: "fa-hospital", color: "emerald" },
   { text: yhLang("Women being unable to make decisions about childbirth and their own bodies", "সন্তান গ্রহণ ও নিজের শরীর সম্পর্কে সিদ্ধান্ত নিতে না পারার প্রথা"), icon: "fa-venus", color: "blue" },
-  { text: yhLang("Childbearing during adolescence", "তারুণ্যে সন্তানধারণ করা"), icon: "fa-baby", color: "rose" },
+  { text: yhLang("Childbearing during adolescence", "কৈশোরে সন্তানধারণ করা"), icon: "fa-baby", color: "rose" },
   { text: yhLang("Physical and mental abuse of women being treated as normal", "নারীর উপর শারীরিক ও মানসিক নির্যাতন খুব স্বাভাবিকভাবে গ্রহণ করা"), icon: "fa-hand-fist", color: "green" },
-  { text: yhLang("Women being paid less than men", "পুরুষের তুলনায় নারীকে কম পারিশ্রমিক দেওয়া"), icon: "fa-coins", color: "teal" }
+  { text: yhLang("Women being paid less than men", "পুরুষের তুলনায় নারীকে কম পারিশ্রমিক দেওয়া"), icon: "fa-coins", color: "teal" },
+
+  // New points
+  { text: yhLang("Unequal distribution of resources between men and women", "নারী ও পুরুষের মাঝে সম্পদের অসম বিতরণ"), icon: "fa-scale-balanced", color: "purple" },
+  { text: yhLang("Women not having control over their own earnings", "নিজ উপার্জনের উপর নারীর অধিকার না থাকা"), icon: "fa-wallet", color: "green" },
+  { text: yhLang("Women not being given opportunities to prove their skills in the workplace", "কর্মক্ষেত্রে নারীর দক্ষতা প্রমাণের সুযোগ না দেয়া"), icon: "fa-briefcase", color: "blue" }
 ];
 
 const orbitItems = [
@@ -7372,7 +7377,7 @@ const orbitItems = [
                             <i class="fa-solid fa-heart-pulse"></i>
                           </div>
                           <div class="ch13l3-orbit-center-text">
-                            <h3>${yhLang("Health Impact", "প্রজনন স্বাস্থ্যে প্রভাব")}</h3>
+                            <h3>${yhLang("Health Impact", "প্রজনন স্বাস্থ্যে জেন্ডার বৈষম্যের প্রভাব")}</h3>
                           </div>
                         </div>
                         <div class="ch13l3-orbit-ring"></div>
@@ -7438,7 +7443,7 @@ const orbitItems = [
               ];
 
               const psychologicalViolence = [
-                { text: yhLang("Separation from family and friends", "সন্দেকোথাও যেতে বাধা দেয়া"), icon: "fa-chain-broken", tone: "violet" },
+                { text: yhLang("Separation from family and friends", "কোথাও যেতে বাধা দেয়া"), icon: "fa-chain-broken", tone: "violet" },
                 { text: yhLang("Verbal abuse and insults", "গালমন্দ করা"), icon: "fa-comment-slash", tone: "violet" },
                 { text: yhLang("Threats or intimidation", "অপমান করা"), icon: "fa-triangle-exclamation", tone: "warn" },
                 { text: yhLang("Attempts to control", "হেয় করে কথা বলা"), icon: "fa-microchip", tone: "indigo" },
@@ -7494,7 +7499,7 @@ const orbitItems = [
                     <article class="ch13l4-category ch13l4-danger">
                       <h3 class="ch13l4-subtitle mb-2">
                         <i class="fa-solid fa-hand-fist"></i>
-                        ${yhLang("Physical Violence", "শারীরিক নির্যাতন")}
+                        ${yhLang("Physical Violence", "১. শারীরিক নির্যাতন")}
                       </h3>
                       <p class="ch13l4-category-desc mb-3">${yhLang("Actions or behaviors that harm or threaten to harm the victim's life, health, safety or body.", "এমন কোনো কাজ বা আচরণ করা, যার দ্বারা সংক্ষুব্ধ ব্যক্তির জীবন, স্বাস্থ্য, নিরাপত্তা বা শরীরের কোনো অঙ্গ ক্ষতিগ্রস্ত হয় অথবা ক্ষতিগ্রস্ত হবার স¤ভাবনা থাকে এবং সংক্ষুব্ধ ব্যক্তিকে অপরাধমূলক কাজ করতে বাধ্য করা বা প্ররোচনা প্রদান করা বা বলপ্রয়োগ যেমন :")}</p>
                       <ul class="ch13l4-list">
@@ -7505,7 +7510,7 @@ const orbitItems = [
                     <article class="ch13l4-category ch13l4-violet">
                       <h3 class="ch13l4-subtitle mb-2">
                         <i class="fa-solid fa-brain"></i>
-                        ${yhLang("Psychological Violence", "মানসিক নির্যাতন")}
+                        ${yhLang("Psychological Violence", "২. মানসিক নির্যাতন")}
                       </h3>
                       <p class="ch13l4-category-desc mb-3">${yhLang("Creating fear, anger or mental suffering through words or actions.", "নিম্নবর্ণিত বিষয়সমূহ অর্ন্তভুক্ত হবে - <br>ক. মৌখিক নির্যাতন, অপমান, অবজ্ঞা, ভীতি প্রদর্শন বা এমন কোনো উক্তি করা, যা দ্বারা সংক্ষুব্ধ ব্যক্তির মানসিকভাবে ক্ষতি হয় <br>খ. হয়রানি <br>গ. ব্যক্তি স্বাধীনতায় হস্তক্ষেপ অর্থাৎ স্বাভাবিক চলাচল, যোগাযোগ বা ব্যক্তিগত ইচ্ছা বা মতামত প্রকাশের উপর হস্তক্ষেপ; যেমন :")}</p>
                       <ul class="ch13l4-list">
@@ -7516,7 +7521,7 @@ const orbitItems = [
                     <article class="ch13l4-category ch13l4-amber">
                       <h3 class="ch13l4-subtitle mb-2">
                         <i class="fa-solid fa-heart-crack"></i>
-                        ${yhLang("Sexual Violence", "যৌন নির্যাতন")}
+                        ${yhLang("Sexual Violence", "৩. যৌন নির্যাতন")}
                       </h3>
                       <p class="ch13l4-category-desc mb-3">${yhLang("Forcing sexual acts without consent.", "নিপীড়ন যা দ্বারা সংক্ষদ্ধ ব্যক্তির সম্ভ্রম, সন্মান ও সুনামের ক্ষতি হয়। যৌন আকাঙ্ক্ষা ও চাহিদা পূরণে বিশেষ ধরণের নির্যাতন যা শরীর ও মনের উপর সংঘটিত একটি জঘন্যতম অপরাধ। যেমন - ")}</p>
                       <ul class="ch13l4-list">
@@ -7787,7 +7792,7 @@ const orbitItems = [
                   subPoints: [
                     yhLang("Demanding dowry", "যৌতুক দাবি করা"),
                     yhLang("Taking away jewelry and property", "গয়না, সম্পত্তি নিয়ে নেয়া"),
-                    yhLang("Taking away salary", "বেতন নিয়ে নেয়া ইত্যাদি"),
+                    yhLang("Taking away salary", "বেতন নিয়ে নেয়া"),
                     yhLang("Husband not providing maintenance to wife", "স্বামী কর্তৃক স্ত্রীকে ভরণপোষণ না দেয়া"),
                     yhLang("Preventing participation in economic or employment opportunities", "অর্থনৈতিক বা উপার্জনমূলক কাজে অংশগ্রহণের সুযোগ না দেয়া বা বাধা দেয়া")
                   ]
@@ -7829,19 +7834,12 @@ const orbitItems = [
                   <header class="ch13l6-header" data-aos="fade-up">
                     <h2 class="ch13l6-title">
                       <i class="fa-solid fa-money-bill-wave"></i>
-                      ${yhLang("Financial Loss (Financial Aspects)", "আর্থিক ক্ষতি")}
+                      ${yhLang("Financial Loss (Financial Aspects)", "৪. “আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা -")}
                     </h2>
                   </header>
 
-                  <section class="ch13l6-card ch13l6-card-intro" data-aos="fade-up" data-aos-delay="40">
-                    <p class="ch13l6-p">${introDesc}</p>
-                  </section>
-
                   <section class="ch13l6-section" data-aos="fade-up" data-aos-delay="60">
-                    <h3 class="ch13l6-section-title">
-                      <i class="fa-solid fa-list-check"></i>
-                      ${yhLang("Financial Loss Includes:", "আর্থিক ক্ষতি বলতে বোঝায়-")}
-                    </h3>
+                  
                     <ul class="ch13l6-list">
                       ${renderMainPoints()}
                     </ul>
@@ -8037,7 +8035,7 @@ const orbitItems = [
                   id: "q13h",
                   question: yhLang(
                     "What is violence or abuse ?",
-                    "সহিংসতা বা নির্যাতন কী ?"
+                    "সহিংসতা বা নির্যাতন"
                   ),
                   options: [
                     yhLang("Intentional use of physical force that may cause harm or death", "শারীরিক শক্তির ইচ্ছাকৃত ব্যবহার যা ক্ষতি বা মৃত্যু ঘটাতে পারে"),
@@ -8053,12 +8051,15 @@ const orbitItems = [
               const sections = [
                 {
                   class_name: "sohingsota",
-                  title: yhLang("What is Violence or Abuse ?", "সহিংসতা বা নির্যাতন কী ?"),
+                  title: yhLang("What is Violence or Abuse ?", "সহিংসতা বা নির্যাতন"),
                   icon: "fa-shield-halved",
                   description: yhLang(
                     "Violence or abuse is the intentional use of physical force or power against oneself or another person, which may be threatened or actual. It can be directed against an individual or a group, resulting in injury, death, psychological harm, developmental impairment, or deprivation. Every 10 minutes, one adolescent girl dies due to violence worldwide.",
                     "সহিংসতা বা নির্যাতন হলো কারো বিরুদ্ধে ইচ্ছাকৃতভাবে দেহের শক্তি বা বল প্রয়োগ করা, যা হুমকি বা সত্যিকারের হতে পারে। এই সহিংসতা যেমন ব্যক্তিকেন্দ্রিক হতে পারে ঠিক তেমনিভাবে কোনো দল বা জনসমাজের বিরুদ্ধেও হতে পারে, যার পরিণাম হিসেবে এর শিকার ব্যক্তির মারাত্মক জখম হতে পারে, মারা যেতে পারে, মানসিক ক্ষতি হতে পারে, দেহের বিকাশ অস্বাভাবিক হতে পারে অথবা এর শিকার ব্যক্তি বা গোষ্ঠী কোনোকিছু থেকে বঞ্চিতও হতে পারে। বিশ্বে এই সহিংসতার ফলে প্রতি ১০ মিনিটে একজন কিশোরীর মৃত্যু হয়।"
                   ),
+                  title2: yhLang("What is Violence or Abuse ?", "সহিংসতার কারণ"),
+                  icon2: "fa-shield-halved",
+                  
                   items: [
                     {
                       num: "১",
@@ -8117,7 +8118,7 @@ const orbitItems = [
                       title: '',
                       text: yhLang(
                         "14 medical colleges provide free medical treatment, psychosocial counseling, police and legal services, rehabilitation and reintegration at divisional and district levels for physical, mental, sexual, and burn victims.",
-                        "শারীরিক, মানসিক ও যৌন এবং দগ্ধ নির্যাতনের শিকার নারী, শিশু ও কিশোরীদের জন্য বিনামূল্যে একই স্থানে চিকিৎসা, মনোসামাজিক কাউন্সেলিং, পুলিশী এবং আইনী সেবা প্রদানে বিভাগীয় ও জেলা পর্যায়ে চৌদ্দটি মেডিকেল কলেজে ওয়ান-স্টপ ক্রাইসিস সেন্টার রয়েছে।"
+                        "শারীরিক, মানসিক ও যৌন এবং দগ্ধ নির্যাতনের শিকার নারী, শিশু ও কিশোরীদের জন্য বিনামূল্যে একই স্থানে চিকিৎসা, মনোসামাজিক কাউন্সেলিং, পুলিশী এবং আইনী, পুনর্বাসন ও পুনএকত্মীকরণ সেবা প্রদানে বিভাগীয় ও জেলা পর্যায়ে চৌদ্দটি মেডিকেল কলেজে ওয়ান-স্টপ ক্রাইসিস সেন্টার রয়েছে"
                       ),
                       icon: "fa-clinic-medical",
                       type: "type2"
@@ -8127,7 +8128,7 @@ const orbitItems = [
                       title: '',
                       text: yhLang(
                         "47 district-level and 20 upazila-level One-Stop Crisis Cells provide emergency support and services.",
-                        "সাতচল্লিশ টি জেলা পর্যায়ে ও বিশটি উপজেলা পর্যায়ে ওয়ান-স্টপ ক্রাইসিস সেল জরুরি সহায়তা প্রদান করে।"
+                        "সাতচল্লিশ টি জেলা পর্যায়ে ও বিশটি উপজেলা পর্যায়ে ওয়ান-স্টপ ক্রাইসিস সেল।"
                       ),
                       icon: "fa-phone",
                       type: "type3"
@@ -8137,7 +8138,7 @@ const orbitItems = [
                       title: yhLang("National Helpline", "ন্যাশনাল হেল্পলাইন সেন্টার"),
                       text: yhLang(
                         "National Helpline Center (Toll Free 109) and Joy Apps provide 24/7 support to abuse victims.",
-                        `ন্যাশনাল হেল্পলাইন সেন্টার (টোলফ্রি <strong style="font-weight: bold; color: red;"> ১০৯</strong>) ও জয় অ্যাপস সর্বদা সহায়তা প্রদান করে।`
+                        `ন্যাশনাল হেল্পলাইন সেন্টার (টোলফ্রি <strong style="font-weight: bold; color: red;"> ১০৯</strong>) ও জয় অ্যাপস সর্বদা।`
                       ),
                       icon: "fa-headset",
                       type: "type1"
@@ -8188,7 +8189,7 @@ const orbitItems = [
                       title: yhLang("Counselor Services", "কাউন্সেলর সেবা"),
                       text: yhLang(
                         "Psychosocial counselors and social workers provide nationwide services across all districts and upazillas.",
-                        "দেশব্যাপী সেবা প্রদান"
+                        "মনোসামাজিক কাউন্সেলর ও সোশ্যাল ওর্য়াকার কর্তক দেশব্যাপী সেবা প্রদান"
                       ),
                       icon: "fa-comments",
                       type: "type2"
@@ -8207,6 +8208,10 @@ const orbitItems = [
                         ${section.title}
                       </h3>
                       <p class="ch13l8-section-desc mb-3">${section.description}</p>
+                      <h3 class="ch13l8-section-title my-2">
+                        <i class="fa-solid ${section.icon2}"></i>
+                        ${section.title2}
+                      </h3>
                       <ul class="ch13l8-list ${section.class_name}">
                         ${section.items
                           .map(
@@ -8350,7 +8355,7 @@ const orbitItems = [
     title: yhLang("Physical Effects", "শারীরিক প্রভাব"),
     text: yhLang(
       "Headache, loss of appetite, nausea, insomnia and similar physical problems.",
-      "মাথা ব্যথা, ক্ষুধামন্দা, বমি-বমিভাব অনিদ্রা ইত্যাদি"
+      "মাথা ব্যথা, ক্ষুধামন্দা, বমি-বমি ভাব অনিদ্রা ইত্যাদি"
     ),
     icon: "fa-heart-pulse",
     type: "type1"
@@ -8493,7 +8498,7 @@ const orbitItems = [
                         <li class="ch13l9-li ch13l9-li-${item.type}" data-aos="fade-right" data-aos-delay="${80 + idx * 15}">
                           <span class="ch13l9-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                           <div class="ch13l9-li-content">
-                            <h3 class="ch13l9-li-title">${item.title}</h3>
+                            <h3 class="ch13l9-li-title"><b>${item.title} :</b></h3>
                             <p class="ch13l9-li-text">${item.text}</p>
                           </div>
                         </li>
