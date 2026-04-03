@@ -116,7 +116,7 @@ class YouthHealthLMS {
       const stored = localStorage.getItem("preferredLanguage");
       if (stored === "bn" || stored === "en") return stored;
     } catch (_) {}
-    return "en";
+    return "bn";
   }
 
   setLanguage(lang) {
