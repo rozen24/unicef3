@@ -6700,7 +6700,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
         id: "ch-13",
         title: yhLang(
           "Module-13: Polycystic Ovary Syndrome (PCOS) 2",
-          "মডিউল-১৩: শিশু অধিকার, মানবাধিকার সনদ এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার",
+          "মডিউল-১৩: মানবাধিকার ও শিশু অধিকার সনদ এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার",
         ),
         lessons: [
          
@@ -6709,7 +6709,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             id: "ch12-lesson-1",
             title: yhLang(
               "Child Rights, Human Rights & Sexual Reproductive Health Rights",
-              "শিশু অধিকার, মানবাধিকার সনদ এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার"
+              "মানবাধিকার ও শিশু অধিকার সনদ এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার"
             ),
             icon: "fa-handshake",
             gradientClass: "bg-gradient-purple",
@@ -6741,27 +6741,27 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
 
               const intro2 = yhLang(
                 "Child rights are the human rights of children. These rights are protected through the International Convention on the Rights of the Child (CRC). According to CRC, every child should grow up in a peaceful, dignified, tolerant, and free environment; with equality and mutual understanding.",
-                "শিশু অধিকার হচ্ছে শিশুদের মানবাধিকার। এ অধিকারগুলো আন্তর্জাতিক শিশু অধিকার সনদের (সিআরসি) মাধ্যমে সুরক্ষিত। সিআরসি অনুযায়ী, প্রেত্যক শিশুই বেড়ে উঠবে শান্তি ও মর্যাদাপূর্ণ, সহিষ্ণুও মুক্ত স্বাধীন পরিবেশে; সমতা ও সৌহার্দের মধ্য দিয়ে।"
+                "শিশু অধিকার হচ্ছে শিশুদের মানবাধিকার। এ অধিকারগুলো আন্তর্জাতিক শিশু অধিকার সনদের (সিআরসি) মাধ্যমে সুরক্ষিত। সিআরসি অনুযায়ী, প্রেত্যক শিশুই বেড়ে উঠবে শান্তি ও মর্যাদাপূর্ণ, সহিষ্ণু ও মুক্ত স্বাধীন পরিবেশে; সমতা ও সৌহার্দের মধ্য দিয়ে।"
               );
 
               const pillars = [
                 { 
-                  text: yhLang("No child shall be subjected to discrimination (Article 2). All children have equal opportunity to develop their potential in any circumstance. This includes protection from discrimination based on gender, race, nationality, religion, disability, sexual orientation, or any other status. All children have equal access to education regardless of these characteristics.", "কোনো শিশুই বৈষম্যের শিকার হবেনা (ধারা ২)। যেকোনো পরিস্থিতিতেই সব শিশুই তাদের সম্ভাবনা বিকাশের সমান সুযোগ পাবে। যেমন - লিঙ্গ, বর্ণ, জাতীয়তা, ধর্ম, প্রতিবন্ধিতা, যৌনতার ধরণ বা অন্য কোনো মর্যাদার ভিত্তিতে বৈষেম্যর শিকার না হয়ে সব শিশুই শিক্ষায় অংশগ্রহণের সুযোগ পাবে।"),
+                  text: yhLang("No child shall be subjected to discrimination (Article 2). All children have equal opportunity to develop their potential in any circumstance. This includes protection from discrimination based on gender, race, nationality, religion, disability, sexual orientation, or any other status. All children have equal access to education regardless of these characteristics.", "কোনো শিশুই বৈষম্যের শিকার হবেনা (ধারা ২)।  যেকোনো পরিস্থিতিতেই সব শিশুই তাদের সম্ভাবনা বিকাশের সমান সুযোগ পাবে। যেমন - লিঙ্গ, বর্ণ, জাতীয়তা, ধর্ম, প্রতিবন্ধিতা, যৌনতার ধরণ বা অন্য কোনো মর্যাদার ভিত্তিতে বৈষেম্যর শিকার না হয়ে সব শিশুই শিক্ষায় অংশগ্রহণের সুযোগ পাবে।"),
                   icon: "fa-person-hiking",
                   type: "pillar1"
                 },
                 { 
-                  text: yhLang("The best interests of the child shall always be a primary consideration in decisions affecting children (Article 3). When making decisions about budgets or resource allocation, special attention must be given to how these decisions will affect children and their welfare. The child's best interest should always take precedence.", "শিশুদের ওপর প্রভাব ফেলবে এমন কোনো সিদ্ধাান্তের ক্ষেত্রে তাদের স্বার্থগুলো সবসময় অগ্রাধিকার পাবে (ধারা ৩)। যেমন- বাজেট প্রণয়নের সময় খেয়াল রাখতে হবে কোনো খাতে অর্থ বরাদ্দ বা কর্তনের ক্ষেত্রে যেন শিশুদের সর্বোচ্চ স্বার্থটাই গুরুত্ব পায়।"),
+                  text: yhLang("The best interests of the child shall always be a primary consideration in decisions affecting children (Article 3). When making decisions about budgets or resource allocation, special attention must be given to how these decisions will affect children and their welfare. The child's best interest should always take precedence.", "শিশুদের ওপর প্রভাব ফেলবে এমন কোনো সিদ্ধাান্তের ক্ষেত্রে তাদের স্বার্থগুলো সবসময় অগ্রাধিকার পাবে (ধারা ৩)।  যেমন- বাজেট প্রণয়নের সময় খেয়াল রাখতে হবে কোনো খাতে অর্থ বরাদ্দ বা কর্তনের ক্ষেত্রে যেন শিশুদের সর্বোচ্চ স্বার্থটাই গুরুত্ব পায়।"),
                   icon: "fa-heart-circle-check",
                   type: "pillar2"
                 },
                 { 
-                  text: yhLang("Every child has the right to life, survival, and healthy development (Article 6). All children must have access to essential services and equal opportunity to reach their full potential. For example, children with disabilities must have guaranteed access to education and healthcare services without discrimination.", "বেঁচে থাকার ও সুস্থভাবে বিকাশের অধিকার সব শিশুরই রয়েছে (ধারা ৬)। মৌলিক সেবাগুলোয় শিশুদেও প্রবেশাধিকার ও তাদের পূর্ণ সম্ভাবনা বিকাশের সমান অধিকার নিশ্চিত করতে হবে। যেমন - প্রতিবন্ধী শিশুর অবশ্যই শিক্ষা ও স্বাস্থ্য সেবা গ্রহণের অধিকার থাকবে।"),
+                  text: yhLang("Every child has the right to life, survival, and healthy development (Article 6). All children must have access to essential services and equal opportunity to reach their full potential. For example, children with disabilities must have guaranteed access to education and healthcare services without discrimination.", "বেঁচে থাকার ও সুস্থভাবে বিকাশের অধিকার সব শিশুরই রয়েছে (ধারা ৬)।  মৌলিক সেবাগুলোয় শিশুদের ও প্রবেশাধিকার ও তাদের পূর্ণ সম্ভাবনা বিকাশের সমান অধিকার নিশ্চিত করতে হবে।  যেমন - প্রতিবন্ধী শিশুর অবশ্যই শিক্ষা ও স্বাস্থ্য সেবা গ্রহণের অধিকার থাকবে।"),
                   icon: "fa-circle-nodes",
                   type: "pillar3"
                 },
                 { 
-                  text: yhLang("Children affected by decisions have the right to have those decisions take their views into consideration (Article 12). The opinions and perspectives of children on matters affecting their rights must be listened to and respected. For example, when developing policies or plans related to children, their insights must be taken into account and valued.", "শিশুদের ওপর প্রভাব রাখবে এমন বিষয়ে তাদের মতামতগুলো বিবেচনায় নেয়ার বাধ্যবাধকতা রয়েছে (ধারা ১২)। শিশুদের অধিকারভুক্ত সব বিষয়ে তাদের মতামত শুনতে হবে ও সেগুলোয় শ্রদ্ধা রাখতে হবে। যেমন- শিশু বিষয়ক কোনো নীতি বা পরিকল্পনা গ্রহণে শিশুদের উপলব্ধিগুলো গ্রাহ্য করতে হবে।"),
+                  text: yhLang("Children affected by decisions have the right to have those decisions take their views into consideration (Article 12). The opinions and perspectives of children on matters affecting their rights must be listened to and respected. For example, when developing policies or plans related to children, their insights must be taken into account and valued.", "শিশুদের ওপর প্রভাব রাখবে এমন বিষয়ে তাদের মতামতগুলো বিবেচনায় নেয়ার বাধ্যবাধকতা রয়েছে (ধারা ১২)।  শিশুদের অধিকারভুক্ত সব বিষয়ে তাদের মতামত শুনতে হবে ও সেগুলোয় শ্রদ্ধা রাখতে হবে।  যেমন - শিশু বিষয়ক কোনো নীতি বা পরিকল্পনা গ্রহণে শিশুদের উপলব্ধিগুলো গ্রাহ্য করতে হবে।"),
                   icon: "fa-comments",
                   type: "pillar4"
                 }
@@ -6883,12 +6883,12 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             content: (function () {
               const description1 = yhLang(
                 "About 1 out of every 6 people in the world are adolescents aged 10-19 years, and nearly one-third of the population is under 25 years. During adolescence, teenagers experience physical and mental changes, and signs of sexual development become apparent. Adolescents face increased reproductive and sexual health risks. Without adequate information and education, they are more vulnerable to sexually transmitted infections. Unintended pregnancies and unsafe abortions also present serious health concerns. Therefore, sexual and reproductive health rights are critically important.",
-                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)। আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ। বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এবয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি। উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্তের সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়। সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ। <br> </br>প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডাব্লুএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
+                "বিশ্বের মোট জনসংখ্যার প্রায় ৬ ভাগের ১ ভাগ কিশোর-কিশোরী (১০-১৯ বছর)।  আর ২৫ বছর বয়সের নিচের জনগোষ্ঠী মোট জনসংখ্যার প্রায় এক-তৃতীয়াংশ।  বয়ঃসন্ধিকালে কিশোর-কিশোরীদের শারীরিক ও মানসিক পরিবর্তন ঘটে এবং যৌনতার লক্ষণগুলো প্রকাশ পেতে থাকে। এ বয়সিদের প্রজনন ও যৌন স্বাস্থ্যবিষয়ক ঝুঁকিও থাকে বেশি।  উপযুক্ত তথ্য ও শিক্ষার অভাবে তাদের যৌনবাহিত রোগে আক্রান্তের সম্ভাবনা অনেক বেশি থাকে। অনাকাঙ্ক্ষিত গর্ভধারণ এবং এর ফলে অনিরাপদ ও ঝুঁকিপূর্ণ গর্ভপাতজনিত স্বাস্থ্য সমস্যাও বেশি দেখা যায়।  সুতরাং যৌন ও প্রজনন স্বাস্থ্যের অধিকার এক্ষেত্রে খুবই গুরুত্বপূর্ণ। <br> </br>প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা।  বিশ্ব স্বাস্থ্য সংস্থা (WHO) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
               );
 
               const description2 = yhLang(
                 "Reproductive health is the complete physical, mental, and social well-being related to the reproductive system at every stage of life. According to the World Health Organization (WHO), reproductive health means having the capacity for reproduction, along with the right to a satisfying and safe sexual life, and the freedom to make informed decisions about reproduction.",
-                "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা। বিশ্ব স্বাস্থ্য সংস্থা (ডাব্লুএইচও) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
+                "প্রজনন স্বাস্থ্য হচ্ছে জীবনের প্রতিটি ধাপে প্রজননতন্ত্র সম্পর্কীয় একটি পরিপূর্ণ দৈহিক, মানসিক এবং সামাজিক কল্যাণের সামগ্রিক অবস্থা।  বিশ্ব স্বাস্থ্য সংস্থা (WHO) এর মতে, একজন মানুষের প্রজননে সক্ষমতার পাশাপাশি সন্তোষজনক ও নিরাপদ যৌন জীবন-যাপন এবং স্বাধীনভাবে সিদ্ধান্ত গ্রহণ করাই প্রজনন স্বাস্থ্য।"
               );
 
               const rights = [
