@@ -5031,7 +5031,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
 
           {
             id: "ch8-lesson-1",
-            title: yhLang("Maternal Risks in Adolescence", "কৈশোরে মাতৃত্ব"),
+            title: yhLang("Maternal Risks in Adolescence", "কৈশোরকালীন মাতৃত্ব"),
             icon: "fa-person-pregnant",
             gradientClass: "bg-gradient-amber",
             audioFile: "",
@@ -5042,7 +5042,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                   id: "q8f",
                   question: yhLang(
                     "What are the main risks of adolescent pregnancy ?",
-                    "তারুণ্যেগর্ভধারণের প্রধান ঝুঁকিগুলি কী ?",
+                    "কৈশোরকালীন গর্ভধারণের প্রধান ঝুঁকিগুলি কী ?",
                   ),
                   options: [
                     yhLang(
@@ -5074,7 +5074,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 yhLang("Premature Delivery", "সময়ের আগে সন্তান জন্মদান"),
                 yhLang("Low Birth Weight Infant", "কম ওজনের সন্তান জন্ম দেওয়া"),
                 yhLang("Postpartum Depression", "প্রসব-পরবর্তী বিষণ্নতা"),
-                yhLang("Inadequate Infant Care and Breastfeeding", "অপর্যাপ্ত শিশু পরিচর্যা ও বুকের দুধ খাওয়ানো"),
+                yhLang("Inadequate Infant Care and Breastfeeding", "অপর্যাপ্ত শিশু পরিচর্যা ও বুকের দুধ"),
               ];
 
               const riskIcons = [
@@ -5113,9 +5113,9 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 <div class="ch8l6-slide lesson-slide">
                   <h2 class="ch8l6-title" data-aos="fade-down">
                     <i class="fa-solid fa-person-pregnant"></i>
-                    ${yhLang("Adolescent Motherhood Risks", "কৈশোরে মাতৃত্ব")}
+                    ${yhLang("Adolescent Motherhood Risks", "কৈশোরকালীন মাতৃত্ব")}
                   </h2>
-
+                  <p class="ch8l6-desc-text">${yhLang("Adolescent Motherhood Risks", "কিশোরীদের গর্ভধারণে মা ও শিশু মৃত্যুর ঝুঁকি অনেক বেশি। শারীরিক গঠন ও সামাজিক অবস্থার কারণে তাদের গর্ভকালীন, <br>প্রসবকালীন এবং প্রসবপরবর্তী সময়ে এই ঝুঁকির পরিমাণ অনেক বেড়ে যায়।")}</p>
                   <div class="ch8l6-content-wrapper">
 
                   <div class="row g-1 justify-content-center">
@@ -5124,7 +5124,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                               <section class="ch8l6-description-box" data-aos="fade-up" data-aos-delay="40">
                                 <h3 class="ch8l6-section-header">
                                   <i class="fa-solid fa-info-circle"></i>
-                                  ${yhLang("Understanding Adolescent Pregnancy", "কৈশোরে মাতৃত্বকালীন ঝুঁকি")}
+                                  ${yhLang("Understanding Adolescent Pregnancy", "কিশোরীদের মাতৃত্বজনিত ঝুঁকি")}
                                 </h3>
                                 <p class="ch8l6-desc-text">${introText}</p>
                               </section>
@@ -5169,7 +5169,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
 
               const preventionIntroText = yhLang(
                 "For safe motherhood, we must strengthen the following actions to ensure that pregnancy does not occur during adolescence.",
-                "নিরাপদ মাতৃত্বের জন্য তারুণ্যেগর্ভধারণ যেন না হয়, সে জন্য আমাদের নিম্নলিখিত কার্যক্রম জোরদার করতে হবে।"
+                "নিরাপদ মাতৃত্বের জন্য কৈশোরকালীন গর্ভধারণ যেন না হয়, সে জন্য আমাদের বর্ণিত কার্যক্রম জোরদার করতে হবে।"
               );
 
               const pregnancyRisksTitle = yhLang(
@@ -5297,14 +5297,14 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                  <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang(
                     "গর্ভকালীন বিপদচিহ্নসমূহ",
                     "গর্ভকালীন বিপদচিহ্নসমূহ",
                   )}</h2>
 
                   <section class="modern-card glass-card mx-auto menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
                     <figure class="image-card_m8l3 mx-auto">
-                      <img src="img/modu8/gorvo.png" alt="গর্ভকালীন বিপদচিহ্ন" class="img-fluid mx-auto img-zoom rounded-4 shadow-sm animate-float-slow" />
+                      <img src="img/modu8/gorvo.png" alt="গর্ভকালীন বিপদচিহ্ন" class="mx-auto img-zoom rounded-4 shadow-sm animate-float-slow" />
                     </figure>
                   </section>
                 </div>
@@ -5384,7 +5384,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                     ),
                     yhLang(
                       "Save money in advance and identify blood donor",
-                      "আগে থেকে টাকা জমানো ও"
+                      "আগে থেকে টাকা জমানো"
                     ),
                     yhLang(
                       "Identify blood donor and keep contact information ready",
@@ -5484,17 +5484,17 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                   title: yhLang("Mother and Newborn Checkups", "মা ও নবজাতকের চেকআপ"),
                   description: yhLang(
                     "Minimum 4 visits required: 1st within 24 hours of delivery, 2nd within 2–3 days, 3rd within 4–7 days, and 4th within 42–45 days after delivery",
-                    "মা ও নবজাতকের চেকআপ কমপক্ষে ৪টি সফর: ১ম বার প্রসবের ২৪ ঘণ্টার মধ্যে, ২য় বার ২–৩ দিনের মধ্যে, ৩য় বার ৪–৭ দিনের মধ্যে এবং ৪র্থ বার প্রসবের ৪২–৪৫ দিনের মধ্যে"
+                    "মা ও নবজাতকের চেকআপ (কমপক্ষে ৪টি -১ম বার : প্রসবের ২৪ ঘণ্টার মধ্য, ২য় বার: ২-৩ দিনের মেধ্য, ৩য় বার: ৪-৭ দিনের মেধ্য  এ বং ৪র্থ বার: প্রসবের ৪২-৪৫ দিনের মধ্য)।"
                   ),
                   type: 1,
                   icon: "fa-stethoscope",
                   color: "#ec4899"
                 },
                 {
-                  title: yhLang("Early Complication Detection", "প্রাথমিক অবস্থায় প্রসব পরবর্তী জটিলতা শনাক্তকরণ"),
+                  title: yhLang("Early Complication Detection", "প্রাথমিক অবস্থায় প্রসব পরবর্তী জটিলতা শনাক্তকরণ।"),
                   description: yhLang(
                     "Identify, prevent, and treat postpartum complications early to ensure mother and baby's health and safety",
-                    "প্রাথমিক অবস্থায় প্রসব পরবর্তী জটিলতা শনাক্তকরণ, প্রতিরোধ এবং চিকিৎসা"
+                    "প্রাথমিক অবস্থায় প্রসব পরবর্তী জটিলতা শনাক্তকরণ, প্রতিরোধ এবং চিকিৎসা।"
                   ),
                   type: 2,
                   icon: "fa-triangle-exclamation",
@@ -5504,7 +5504,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                   title: yhLang("Counseling & Nutrition", "কাউন্সেলিং এবং পুষ্টি"),
                   description: yhLang(
                     "Provide guidance on Vitamin A for mother, exclusive breastfeeding, colostrum feeding, nutrition for mother and baby, family planning methods, immunization schedule and childcare",
-                    "মাকে ভিটামিন এ খাওয়ানো, শিশুকে শালদুধ ও শুধুমাত্র বুকের দুধ খাওয়ানো, মা ও শিশুর পুষ্টি, পরিবার পরিকল্পনা পদ্ধতি এবং শিশুর টিকা ও পরিচর্যা বিষয়ক তথ্য প্রদানসহ কাউন্সেলিং এই সময়ে করা হয়"
+                    "মাকে ভিটামিন এ খাওয়ানো, শিশুকে শালদুধ ও শুধুমাত্র বুকের দুধ খাওয়ানো, মা ও শিশুর পুষ্টি, পরিবার পরিকল্পনা পদ্ধতি এবং শিশুর টিকা ও পরিচর্যা বিষয়ক তথ্য প্রদানসহ কাউন্সেলিং এই সময়ে করা হয়।"
                   ),
                   type: 3,
                   icon: "fa-apple",
@@ -5514,7 +5514,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                   title: yhLang("Postpartum Depression Risk", "প্রসব পরবর্তী বিষণ্নতার ঝুঁকি"),
                   description: yhLang(
                     "Adolescent mothers have significantly higher risk of postpartum depression. Early detection and treatment are essential to prevent serious consequences for both mother and baby",
-                    "কিশোরী মায়েদের প্রসব পরবর্তী সময়ে বিষণ্নতায় আক্রান্ত হওয়ার হার অনেক বেশি থাকে, যা সময়মতো শনাক্তকরণ ও চিকিৎসার আওতায় নিয়ে আসা প্রয়োজন অনথায় তা মা ও শিশু উভয়ের জন্যই মৃত্যু ঝুঁকি বাড়াতে পারে"
+                    "কিশোরী মায়েদের প্রসব পরবর্তী সময়ে বিষণ্নতায় আক্রান্ত হওয়ার হার অনেক বেশি থাকে, যা সময়মতো শনাক্তকরণ ও চিকিৎসার আওতায় নিয়ে আসা প্রয়োজন অনথায় তা মা ও শিশু উভয়ের জন্যই মৃত্যু ঝুঁকি বাড়াতে পারে।"
                   ),
                   type: 4,
                   icon: "fa-brain",

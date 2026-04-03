@@ -760,7 +760,7 @@ span {
 .ch8l7-orbit-card {
     min-width: 100px;
     max-width: 156px;
-    height: 120px;
+    height: 125px;
 }
 .ch8l7-orbit-container {
     height: 0px;
@@ -783,8 +783,7 @@ span {
 /* module 8 lession 3*/
 .image-card_m8l3 img{
   max-height: 430px;
-  width: 70%;
-  margin: 0 auto !important;
+  width: 100%;
 }
 .menstrual-info-card {
   padding: 5px;
