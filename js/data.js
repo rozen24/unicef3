@@ -5874,7 +5874,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             content: (function () {
               const introText = yhLang(
                 "HIV (Human Immunodeficiency Virus) is a virus that destroys the body's immune system. When the virus enters the bloodstream, it gradually weakens the body's ability to fight infections. Eventually, the immune system becomes so compromised that it cannot defend against diseases like diarrhea, tuberculosis, or cholera. When immunity is completely destroyed, this condition is called AIDS (Acquired Immunodeficiency Syndrome).",
-                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্তে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধক্ষমতা একেবারেই থাকে না। এ সময় বিভিন্ন রোগ যেমন—ডায়রিয়া, যক্ষা, কলেরা ইত্যাদি মানবদেহকে আক্রমণ করলে মানবদেহ তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম এইডস।"
+                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধ ক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্তে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধ ক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধ ক্ষমতা একেবারেই থাকেনা। এসময় বিভিন্ন রোগ যেমন- ডায়রিয়া, যক্ষ্মা, কলেরা ইত্যাদি মানব দেহকে আক্রমণ করলে মানব দেহে তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম এইডস। ২-১০ বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে। "
               );
 
               const latencyNote = yhLang(
@@ -5936,12 +5936,12 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
             content: (function () {
               const windowDefinition = yhLang(
                 "The window period is the time required for antibodies (the body's defense mechanism) against HIV to develop in the blood after contracting the virus. This typically takes up to 12 weeks.",
-                "এইচআইভিতে আক্রান্ত হওয়ার পর রক্তে ভাইরাসের বিরুদ্ধে প্রতিরোধমূলক ব্যবস্থা (অ্যান্টিবডি) তৈরি হতে যে সময় লাগে তাকে অন্তর্বর্তীকালীন সময় বা উইন্ডো পিরিয়ড বলে। এ জন্য সাধারণত ১২ সপ্তাহ পর্যন্ত লাগতে পারে। </br> বেশিরভাগ এইচআইভি–আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভিজনিত লক্ষণসমূহ প্রকাশ পাওয়ার আগ পর্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি–আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।"
+                "এইচআইভি তে আক্রান্ত হওয়ার পর রক্তে ভাইরাসের বিরুদ্ধে প্রতিরোধমূলক ব্যবস্থা (এন্টিবডি) তৈরি হতে যে সময় লাগে তাকে অন্তবর্তীকালীন সময় বা উইন্ডো পিরিয়ড বলে। এ জন্য সাধারণত ১২ সপ্তাহ পর্যন্ত লাগতে পারে।<br></br>বেশিরভাগ এইচআইভি আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভি জনিত লক্ষণসমূহ প্রকাশ পাবার আগ পার্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।"
               );
 
               const silentTransmission = yhLang(
                 "Most HIV-infected people appear healthy and lead normal lives before HIV symptoms become apparent. The majority of infected people worldwide don't know they are infected. Any HIV-infected person can transmit the virus to others.",
-                "বেশিরভাগ এইচআইভি–আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভিজনিত লক্ষণসমূহ প্রকাশ পাওয়ার আগ পর্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি–আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।"
+                "বেশিরভাগ এইচআইভি আক্রান্ত ব্যক্তিই দেখতে সুস্থ দেখায় এবং এইচআইভি জনিত লক্ষণসমূহ প্রকাশ পাবার আগ পার্যন্ত দীর্ঘদিন স্বাভাবিক জীবন কাটায়। বিশ্বের বেশিরভাগ আক্রান্ত মানুষই জানে না যে তারা আক্রান্ত। এইচআইভি আক্রান্ত যে কেউই অন্যের মাঝে এই ভাইরাস ছড়াতে পারে।"
               );
 
               const preventionPoints = [
@@ -5961,7 +5961,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
 
               const treatmentInfo = yhLang(
                 "By 2030, Bangladesh aims to achieve Elimination of Mother-to-Child Transmission (EMTCT) of HIV, Hepatitis B, and Syphilis and is actively implementing measures to reach this goal.",
-                "বাংলাদেশ সরকার ২০৩০ সালের  মধ্যে Tripple Elimination মাধ্যমে মা থেকে নজাতকের শরীরে মা থেকে শিশুর শরীরে এইচআইভি, হেপাটাইটিস বি এবং সিফিলিসের সংক্রমণ নির্মূল করার লক্ষ স্থির করেছে এবং তা বাস্তবায়নে কাজ করছে।"
+                "বাংলাদেশ সরকার ২০৩০ সালের  মধ্যে Tripple Elimination মাধ্যমে মা থেকে নজাতকের শরীরে এইচআইভি, হেপাটাইটিস বি এবং সিফিলিসের সংক্রমণ নির্মূল করার লক্ষ স্থির করেছে এবং তা বাস্তবায়নে কাজ করছে।"
               );
 
               function renderPreventionList() {
