@@ -263,8 +263,8 @@ class YouthHealthLMS {
     return `
       <div class="language-toggle" role="group" aria-label="Language toggle">
         <button type="button" data-lang-option="bn">BN</button>
-        <span class="language-toggle__divider" aria-hidden="true">|</span>
-        <button type="button" data-lang-option="en">EN</button>
+        <span class="language-toggle__divider d-none" aria-hidden="true">|</span>
+        <button class="d-none" type="button" data-lang-option="en">EN</button>
       </div>
     `;
   }
