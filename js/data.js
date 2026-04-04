@@ -12432,11 +12432,11 @@ const orbitItems = [
       </li>
       <li class="m17l2-sign-item m17l2-sign-marks" data-aos="fade-up" data-aos-delay="75">
         <span class="m17l2-sign-number">৭</span>
-        <span class="m17l2-sign-text">${yhLang("Injection marks on arms/attempts to hide", "সুঁচ ফোটানোর দাগ ও লুকানোর প্রচেষ্টা")}</span>
+        <span class="m17l2-sign-text">${yhLang("Injection marks on arms/attempts to hide", "হাত-পায়ের শিরায় সুঁচ ফোটানোর দাগ এবং ফুল হাতা শার্ট পের এগুলো ঢাকার প্রচেষ্টা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-health" data-aos="fade-up" data-aos-delay="80">
         <span class="m17l2-sign-number">৮</span>
-        <span class="m17l2-sign-text">${yhLang("Poor health and eating habit changes", "স্বাস্থ্য ভেঙে যাওয়া এবং খাওয়ার অভ্যাস পরিবর্তন")}</span>
+        <span class="m17l2-sign-text">${yhLang("Poor health and eating habit changes", "স্বাস্থ্য ভেঙে যাওয়া এবং খাওয়া দাওয়ার অভ্যাসে পরিবর্তন হওয়া")}</span>
       </li>
     </ul>
   </section>
@@ -12452,7 +12452,7 @@ const orbitItems = [
     <ul class="m17l2-behavioral-signs-list">
       <li class="m17l2-sign-item m17l2-sign-sleep" data-aos="fade-up" data-aos-delay="90">
         <span class="m17l2-sign-number">১</span>
-        <span class="m17l2-sign-text">${yhLang("Staying awake all night and sleeping during day", "রাত জেগে থাকা এবং দিনে ঘুম")}</span>
+        <span class="m17l2-sign-text">${yhLang("Staying awake all night and sleeping during day", "সারা রাত জেগে থাকা এবং দিনের বেলায় ঘুমানো")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-studies" data-aos="fade-up" data-aos-delay="95">
         <span class="m17l2-sign-number">২</span>
@@ -12460,23 +12460,23 @@ const orbitItems = [
       </li>
       <li class="m17l2-sign-item m17l2-sign-hygiene" data-aos="fade-up" data-aos-delay="100">
         <span class="m17l2-sign-number">৩</span>
-        <span class="m17l2-sign-text">${yhLang("Neglect of personal and clothing hygiene", "নিজের ও পোশাকের প্রতি উদাসীনতা")}</span>
+        <span class="m17l2-sign-text">${yhLang("Neglect of personal and clothing hygiene", "নিজের ও পোশাক পরিচ্ছদের প্রতি উদাসীনতা প্রদর্শন")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-absence" data-aos="fade-up" data-aos-delay="105">
         <span class="m17l2-sign-number">৪</span>
-        <span class="m17l2-sign-text">${yhLang("Frequent outings and late night returns", "যখন-তখন বাইরে যাওয়া, অধিক রাতে ফেরা")}</span>
+        <span class="m17l2-sign-text">${yhLang("Frequent outings and late night returns", "যখন তখন বাইরে যাওয়া, অধিক রাতে ঘরে ফেরা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-money" data-aos="fade-up" data-aos-delay="110">
         <span class="m17l2-sign-number">৫</span>
-        <span class="m17l2-sign-text">${yhLang("Asking for extra money from family", "পরিবারের কাছ থেকে বেশি টাকা চাওয়া")}</span>
+        <span class="m17l2-sign-text">${yhLang("Asking for extra money from family", "পরিবারের কাছ থেকে বেশি বেশি হাত খরচের টাকা-পয়সা চাওয়া")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-evidence" data-aos="fade-up" data-aos-delay="115">
         <span class="m17l2-sign-number">৬</span>
-        <span class="m17l2-sign-text">${yhLang("Empty tablet strips found in room", "বিছানার আশপাশে ট্যাবলেটের খালি স্ট্রিপ")}</span>
+        <span class="m17l2-sign-text">${yhLang("Empty tablet strips found in room", "বিছানার আশপাশে এবং বালিশ ও বিছানার নিচে ট্যাবলেটের খালি ষ্ট্রিপ পড়ে থাকা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-behavior" data-aos="fade-up" data-aos-delay="120">
         <span class="m17l2-sign-number">৭</span>
-        <span class="m17l2-sign-text">${yhLang("Intoxicated behavior and mistreatment of family", "অপ্রকৃতস্থ অবস্থায় ফেরা এবং দুর্ব্যবহার")}</span>
+        <span class="m17l2-sign-text">${yhLang("Intoxicated behavior and mistreatment of family", "অনেক সময় অপ্রকৃতস্থ অবস্থায় ঘরে ফেরা এবং পরিবারের লোকজনদের সাথে দুর্ব্যবহার করা")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-mood" data-aos="fade-up" data-aos-delay="125">
         <span class="m17l2-sign-number">৮</span>
@@ -12496,15 +12496,15 @@ const orbitItems = [
       </li>
       <li class="m17l2-sign-item m17l2-sign-accidents" data-aos="fade-up" data-aos-delay="145">
         <span class="m17l2-sign-number">১২</span>
-        <span class="m17l2-sign-text">${yhLang("Frequent accidents on roads", "ঘনঘন রাস্তায় দুর্ঘটনা")}</span>
+        <span class="m17l2-sign-text">${yhLang("Frequent accidents on roads", "প্রায়ই রাস্তঘাটে দুর্ঘটনার কবলে পতিত হওয়া")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-crime" data-aos="fade-up" data-aos-delay="150">
         <span class="m17l2-sign-number">১৩</span>
-        <span class="m17l2-sign-text">${yhLang("Involvement in antisocial and criminal activities", "অসামাজিক ও অপরাধমূলক কাজে লিপ্ত")}</span>
+        <span class="m17l2-sign-text">${yhLang("Involvement in antisocial and criminal activities", "অসামাজিক ও অপরাধমূলক কাজকর্মে লিপ্ত হওয়া")}</span>
       </li>
       <li class="m17l2-sign-item m17l2-sign-friends" data-aos="fade-up" data-aos-delay="155">
         <span class="m17l2-sign-number">১৪</span>
-        <span class="m17l2-sign-text">${yhLang("New friends (addicted) and abandoning old friends", "নেশাগ্রস্ত নতুন বন্ধু এবং পুরোনো ভাল বন্ধু পরিত্যাগ")}</span>
+        <span class="m17l2-sign-text">${yhLang("New friends (addicted) and abandoning old friends", "নতুন (নেশাগ্রস্ত) বন্ধুবান্ধব হওয়া ও পুরোনো ভাল বন্ধুদের সাথে সম্পর্ক না রাখা")}</span>
       </li>
     </ul>
   </section>
