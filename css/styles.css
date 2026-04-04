@@ -30692,7 +30692,8 @@ tbody, td, tfoot, th, thead, tr {
     border-width: 1px !important;
 }
 .table thead th {
-    background-color: #4ec2ff !important;
+    background-color: #eaeaee !important;
+    color: #000 !important;
 }
 
 .fa-circle-check {

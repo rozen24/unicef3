@@ -17763,7 +17763,7 @@ const orbitItems = [
         id: "ch-22",
         title: yhLang(
           "Module-22: Climate Change and Health Sector Impact",
-          "মডিউল-২২: জলবায়ু পরিবর্তনের ফলে স্বাস্থ্য খাতে প্রভাব",
+          "মডিউল-২২:জলবায়ু পরিবর্তন এবং স্বাস্থ্য খাতে জলবায়ুপরিবর্তনের প্রভাব",
         ),
         lessons: [
           {
@@ -17892,9 +17892,9 @@ const orbitItems = [
                               <table class="table table-bordered table-aqi align-middle" style="background:rgba(255,255,255,.76);border-radius:16px;overflow:hidden;">
                                 <thead>
                                   <tr>
-                                    <th style="background:linear-gradient(135deg,#4fc3f7,#29b6f6);color:#fff;">${yhLang("Air Quality Index (AQI)", "বায়ুর মান সূচক (AQI)")}</th>
-                                    <th style="background:linear-gradient(135deg,#4dd0e1,#26c6da);color:#fff;">${yhLang("Category", "ক্যাটাগরি")}</th>
-                                    <th style="background:linear-gradient(135deg,#81c784,#66bb6a);color:#fff;">${yhLang("Color", "রং")}</th>
+                                    <th style="background: #eaeaea;color:#fff;">${yhLang("Air Quality Index (AQI)", "বায়ুর মান সূচক (AQI)")}</th>
+                                    <th style="background:#eaeaea;color:#fff;">${yhLang("Category", "ক্যাটাগরি")}</th>
+                                    <th style="background:#eaeaea;color:#fff;">${yhLang("Color", "রং")}</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -17956,8 +17956,8 @@ const orbitItems = [
                     `
     <p class="p-2 mb-0" style="color:#4a148c;font-size:0.95em;font-weight:500;line-height:1.5;">${yhLang("In Bangladesh, household use of solid fuel for cooking is a major source of PM2.5 pollution. About 74.2% of the population still depends on fuels such as wood, straw, and dung.", "WHO জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ অন্তত ছয়টি বায়ু দূষণকারী পদার্থ চিহ্নিত করেছে:")}</p>
     `,
-                    yhLang("Fine particles (PM 2.5)", "সূক্ষ্ম কণা(PM 2.5)"),
-                    yhLang("Coarse particles (PM10)", "মোটা কণা(PM10)"),
+                    yhLang("Fine particles (PM 2.5)", "সূক্ষ্ম কণা (PM 2.5)"),
+                    yhLang("Coarse particles (PM10)", "মোটা কণা (PM10)"),
                     yhLang(
                       "Ground-level ozone gas (O3)",
                       "পৃথিবী পৃষ্ঠের ওজোন গ্যাস (O3)",
@@ -17966,7 +17966,7 @@ const orbitItems = [
                       "Nitrogen dioxide (NO2)",
                       "নাইট্রোজেন ডাই অক্সাইড (NO2)",
                     ),
-                    yhLang("Sulfur dioxide (SO2)", "সালফার ডাই অক্সাইড(SO2)"),
+                    yhLang("Sulfur dioxide (SO2)", "সালফার ডাই অক্সাইড (SO2)"),
                     yhLang("Carbon monoxide (CO)", "কার্বন মনোক্সাইড (CO)"),
 
                     `
@@ -18023,7 +18023,7 @@ const orbitItems = [
                       "গর্ভস্থ ভ্রূণের বৃদ্ধি প্রতিবন্ধকতা (IUGR)",
                     ),
                     yhLang("Low birth weight", "কম জন্ম ওজন"),
-                    yhLang("Stillbirth", "স্থির জন্ম"),
+                    yhLang("Stillbirth", "স্থির জন্ম বা স্টিলবার্থ"),
                   ],
                 },
                 {
@@ -18036,7 +18036,7 @@ const orbitItems = [
                       "Upper respiratory tract infection",
                       "উচ্চ শ্বাস নালীর সংক্রমণ",
                     ),
-                    yhLang("Otitis media", "ওটিটিস মিডিয়া"),
+                    yhLang("Otitis media", "ওটাইটিস মিডিয়া"),
                   ],
                 },
               ];
@@ -18465,14 +18465,14 @@ const orbitItems = [
                   .join("");
 
               const waterSources = [
-                yhLang("1. Groundwater", "১।  ভূগর্ভস্থ পানি"),
+                yhLang("1. Groundwater", "১।   ভূগর্ভস্থ পানি"),
                 yhLang(
                   "2. Surface water such as rivers, canals, wetlands, and ponds",
-                  "২। ভূপৃষ্ঠের উপরিভাগ যেমনঃ নদি-নলা, খাল-বিল, পুকুর প্রভিতি",
+                  "২।  ভূপৃষ্ঠের উপরিভাগ যেমনঃ নদী-নালা, খাল-বিল, পুকুর প্রভিতি",
                 ),
                 yhLang(
                   "3. Others: rainwater, glaciers",
-                  "৩। অন্যান্যঃ  বৃষ্টির পানি, হিমবাহ",
+                  "৩।  অন্যান্যঃ  বৃষ্টির পানি, হিমবাহ",
                 ),
               ];
 
@@ -18492,7 +18492,7 @@ const orbitItems = [
                   <div class="modern-card glass-card mb-2" data-aos="fade-up" data-aos-delay="60" style="border-radius:11px;padding:5px;box-shadow:0 4px 12px rgba(3,155,229,.14), 0 2px 6px rgba(2,119,189,.1);">
                     <h3 style="display:flex;align-items:center;color:#0277bd;margin-bottom:4px; font-weight:700;font-size:20px;"><span style="background:linear-gradient(135deg,#29b6f6,#0288d1); width:26px; height:26px; border-radius:7px; display:flex; align-items:center; justify-content:center; margin-right:6px; box-shadow:0 2px 6px rgba(41,182,246,.22);"><i class="fa-solid fa-droplet" style="color:#fff; font-size:12px;"></i></span>${yhLang("Water Pollution", "পানি দূষণ")}</h3>
 
-                    <p class="mb-1" style="font-size:0.74em;line-height:1.35;">${yhLang("Only 0.75% of water on Earth is clean and easily accessible for drinking. Safe drinking water must be available and free from contamination. Due to climate change, extreme floods and droughts occur, putting safe drinking water sources at risk.", "পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য। নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে। জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়। এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।")}</p>
+                    <p class="mb-1" style="font-size:0.74em;line-height:1.35;">${yhLang("Only 0.75% of water on Earth is clean and easily accessible for drinking. Safe drinking water must be available and free from contamination. Due to climate change, extreme floods and droughts occur, putting safe drinking water sources at risk.", "পৃথিবীতে মাত্র ০.৭৫% খাবারপানি বিশুদ্ধ এবং সহজলভ্য।  নিরাপদ খাবারপানি অবশ্যই সহজলভ্য এবং দূষণমুক্ত হতে হবে।  জলবায়ু পরিবর্তনের ফলে চরম বন্যা এবং খরা দেখা দেয়।  এর ফলে নিরাপদ খাবারপানির উৎস ঝুঁকির মধ্যে পরে।")}</p>
 
                     <h3 style="display:flex;align-items:center;color:#1565c0;margin-bottom:4px; font-weight:700;font-size:20px;"><i class="fa-solid fa-list-check" style="margin-right:6px;font-size:0.85em;"></i>${yhLang("Sources of Drinking Water", "খাবারপানির উৎসঃ")}</h3>
                     <ul class="list-unstyled feature-list m22l4-grid mb-0">
@@ -18529,7 +18529,7 @@ const orbitItems = [
                   title: yhLang("1. Waterborne Diseases", "১. পানিবাহিত রোগ"),
                   items: [
                     yhLang("Diarrhea", "ডায়রিয়া"),
-                    yhLang("Dysentery", "ডিজেন্ট্রি (আমাশয়)"),
+                    yhLang("Dysentery", "আমাশয় বা ডিসেন্ট্রি"),
                     yhLang("Typhoid", "টাইফয়েড"),
                     yhLang("Cholera", "কলেরা"),
                     yhLang("Hepatitis A", "হেপাটাইটিস–এ"),
@@ -18947,16 +18947,16 @@ const orbitItems = [
                       <div class="row g-3 align-items-center">
                         <div class="col-12 col-lg-6">
                           <div class="hygiene-list mb-2">
-                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00695c;font-weight:600;">
-                             <h3 style="font-size:1em;margin-bottom:6px;"> <i class="fa-solid fa-hands-bubbles me-2" style="font-size:20px;"></i>${yhLang("Personal Practices:", "ব্যক্তিগত অনুশীলন:")}</h3>
+                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00695c;font-weight:900;">
+                             <h3 style="font-size:1em;margin-bottom:6px;"> <i class="fa-solid fa-hands-bubbles me-2" style="font-size:20px;"></i><b>${yhLang("Personal Practices:", "ব্যক্তিগত অনুশীলন:")}</b></h3>
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(personalPractices)}
                             </ul>
                           </div>
                           <div class="hygiene-list">
-                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:600;font-size:0.98em;margin-bottom:6px;">
-                             <h3> <i class="fa-solid fa-people-group me-2" style="font-size:20px;"></i>${yhLang("Community Level:", "কমিউনিটি স্তর:")}</h3>
+                            <div class="hygiene-list__title" style="display:flex;align-items:center;color:#00796b;font-weight:900;font-size:0.98em;margin-bottom:6px;">
+                             <h3> <i class="fa-solid fa-people-group me-2" style="font-size:20px;"></i><b>${yhLang("Community Level:", "কমিউনিটি স্তর:")}</b></h3>
                             </div>
                             <ul class="list-unstyled hygiene-list__items mb-0">
                               ${renderList(communityActions)}
@@ -19179,9 +19179,7 @@ const orbitItems = [
                     </div>
                     <div class="m22l7-intro-card">
                       <p class="m22l7-intro-text">${introduction}</p>
-                      <div class="m22l7-definition-card" data-aos="zoom-in" data-aos-delay="220">
-                        <p class="m22l7-definition-text">${definition}</p>
-                      </div>
+                      
                     </div>
                   </section>
 
@@ -19190,7 +19188,10 @@ const orbitItems = [
                       <div class="m22l7-section-icon m22l7-section-icon--chemicals">
                         <i class="fa-solid fa-flask-vial"></i>
                       </div>
-                      <h2 class="m22l7-section-title">${yhLang("Harmful Chemicals", "ক্ষতিকারক রাসায়নিক পদার্থ")}</h2>
+                      <h2 class="m22l7-section-title">${yhLang("Harmful Chemicals", "সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:")}</h2>
+                      <div class="m22l7-definition-card" data-aos="zoom-in" data-aos-delay="220">
+                        <p class="m22l7-definition-text">${definition}</p>
+                      </div>
                     </div>
                     <ul class="m22l7-chemicals-grid">
                       ${renderChemicals(chemicals, 350)}
@@ -19238,7 +19239,7 @@ const orbitItems = [
               const pesticidePoints = [
                 yhLang(
                   "Pesticides are a broad class of chemical substances designed to kill and control unwanted pests such as insects and rodents in agriculture, homes, yards, gardens, and plants. As Bangladesh is an agriculture-based country, these chemicals are widely used to protect crops.",
-                  "কীটনাশক রাসায়নিক উপাদানের একটি বিস্তৃত শ্রেণীবিভাগ যা কৃষি, বাড়ি, উঠান, বাগান, গাছপালা, পোকামাকড় এবং ইঁদুরের মতো অবাঞ্ছিত কীটপতঙ্গ হত্যা এবং নিয়ন্ত্রণের জন্য তৈরি করা হয়। বাংলাদেশ একটি কৃষিপ্রধান দেশ হওয়ায়, ফসল রক্ষার জন্য এই রাসায়নিকগুলি ব্যাপকভাবে ব্যবহৃত হয়।",
+                  "কীটনাশক রাসায়নিক উপাদানের একটি বিস্তৃত শ্রেণীবিভাগ যা কৃষি, বাড়ি, উঠান, বাগান, গাছপালা, পোকামাকড় এবং ইঁদুরের মতো অবাঞ্ছিত কীটপতঙ্গ হত্যা এবং নিয়ন্ত্রণের জন্য তৈরি করা হয়।  বাংলাদেশ একটি কৃষিপ্রধান দেশ হওয়ায়, ফসল রক্ষার জন্য এই রাসায়নিকগুলি ব্যাপকভাবে ব্যবহৃত হয়।",
                 ),
                 yhLang(
                   "All pesticides are inherently toxic and pose both acute and long-term health risks, including carcinogenicity and mutagenicity. Due to dietary habits, developmental factors, and physiological characteristics, children are more vulnerable to pesticide exposure and its adverse effects.",
@@ -19257,7 +19258,7 @@ const orbitItems = [
                   ),
                   description: yhLang(
                     "Many chemical components of pesticides directly damage the nervous system. This may lead to memory loss, lack of attention, learning difficulties, or impaired neurological development.",
-                    "কীটনাশকের অনেক রাসায়নিক উপাদান স্নায়ুতন্ত্রকে সরাসরি ক্ষতি করে। এতে স্মৃতিশক্তি কমে যাওয়া, মনোযোগের ঘাটতি, শেখার সমস্যা বা স্নায়বিক ব্যাহত হতে পারে।",
+                    "কীটনাশকের অনেক রাসায়নিক উপাদান, স্নায়ুতন্ত্রকে সরাসরি ক্ষতি-গ্রস্থ করে।  এর ফলে স্মৃতিশক্তি কমে যাওয়া, মনোযোগের ঘাটতি, শেখার সমস্যা বা স্নায়বিক বিকাশ ব্যাহত হতে পারে।",
                   ),
                 },
                 {
@@ -19267,7 +19268,7 @@ const orbitItems = [
                   ),
                   description: yhLang(
                     "Some pesticides disrupt the normal functioning of hormones in the body. This can cause problems during puberty, hinder growth, and affect the development of reproductive organs.",
-                    "কিছু কীটনাশক দেহের হরমোনের স্বাভাবিক কাজ ব্যাহত করে। এর ফলে বয়ঃসন্ধির সমস্যা, বৃদ্ধি ব্যাহত হওয়া ও প্রজনন অঙ্গের বিকাশে সমস্যা দেখা দিতে পারে।",
+                    "কিছু কীটনাশক দেহের হরমোনের স্বাভাবিক কাজ ব্যাহত করে।  এর কারণে বয়ঃসন্ধির সমস্যা, বৃদ্ধি ব্যাহত হওয়া ও প্রজনন অঙ্গের বিকাশে সমস্যা দেখা দিতে পারে।",
                   ),
                 },
                 {
@@ -19293,18 +19294,18 @@ const orbitItems = [
                 {
                   title: yhLang(
                     "5. Stomach Problems and Poisoning",
-                    "৫. তীব্র বিষক্রিয়া (Acute poisoning) হতে পারে।",
+                    "৫. পেটের সমস্যা ও বিষক্রিয়া",
                   ),
                   description: yhLang(
                     "When pesticides enter the body through food or water, they may cause vomiting, stomach pain, dizziness, diarrhea, and in severe cases unconsciousness or seizures.",
-                    "খাবার বা পানির মাধ্যমে কীটনাশক শরীরে ঢুকলে বমি, পেট ব্যথা, মাথা ঘোরা, ডায়রিয়া, গুরুতর ক্ষেত্রে অচেতন হওয়া বা খিঁচুনি দেখা যায়।",
+                    "খাবার বা পানির মাধ্যমে কীটনাশক শরীরে ঢুকলে বমি, পেট ব্যথা, মাথা ঘোরা, ডায়রিয়া, গুরুতর ক্ষেত্রে অচেতন, খিঁচুনি বা তীব্র বিষক্রিয়া (Acute poisoning) হতে পারে।",
                   ),
                 },
                 {
                   title: yhLang("6. Risk of Cancer", "৬. ক্যান্সারের ঝুঁকি"),
                   description: yhLang(
                     "Long-term exposure to some pesticides increases the risk of cancers such as leukemia, lymphoma, and brain tumors, especially among those involved in agricultural work.",
-                    "দীর্ঘমেয়াদে কিছু কীটনাশক লিউকেমিয়া, লিম্ফোমা, মস্তিষ্কের টিউমারসহ বিভিন্ন ক্যান্সারের ঝুঁকি বাড়ায়, বিশেষত যারা কৃষি-সম্পর্কিত কাজে জড়িত থাকে।",
+                    "দীর্ঘমেয়াদে কিছু কীটনাশক লিউকেমিয়া, লিম্ফোমা, মস্তিষ্কের টিউমারসহ বিভিন্ন ক্যান্সারের ঝুঁকি বাড়াতে পারে, বিশেষত যারা কৃষি-সম্পর্কিত  কাজে জড়িত থাকে।",
                   ),
                 },
                 {
@@ -19314,7 +19315,7 @@ const orbitItems = [
                   ),
                   description: yhLang(
                     "Pesticides weaken the immune system, making children and adolescents more vulnerable to illnesses.",
-                    "কীটনাশক ইমিউন সিস্টেম দুর্বল করে, ফলে শিশু-কিশোররা সহজে অসুস্থ করে তুলতে পারে।",
+                    "কীটনাশক ইমিউন সিস্টেম দুর্বল করে শিশুদের সহজে অসুস্থ করে তুলতে পারে।",
                   ),
                 },
               ];
@@ -19403,7 +19404,7 @@ const orbitItems = [
                 ),
                 yhLang(
                   "After applying pesticides, hands and face should be washed with soap and water, and clothing should be changed if necessary.",
-                  "প্রয়োজনে কীটনাশক প্রয়গের পর সাবানের পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয় কাপড় পরিবর্তন করতে হবে।",
+                  "প্রয়োজনে কীটনাশক প্রয়গের পর সাবান পানি দিয়ে হাত-মুখ ধুতে হবে এবং পরিধেয় কাপড় পরিবর্তন করতে হবে।",
                 ),
                 yhLang(
                   "If any symptoms of poisoning appear, the affected person should be taken to the nearest hospital immediately.",
@@ -19444,9 +19445,6 @@ const orbitItems = [
                     <span class="caution-card__shape caution-card__shape--corner" aria-hidden="true"></span>
                     <span class="caution-card__shape caution-card__shape--dots" aria-hidden="true"></span>
                     <div class="caution-card__body">
-                      <div class="caution-card__head" style="display:flex;align-items:center;color:#5458d7;font-weight:700;margin-bottom:5px;">
-                        <h3><i class="fa-solid fa-shield-halved me-2"></i> ${yhLang("Safety Instructions", "নিরাপত্তা নির্দেশনা")}</h3>
-                      </div>
                       <div>
                         <ul class="list-unstyled caution-list mb-0">
                         ${renderItems()}
@@ -19502,16 +19500,16 @@ const orbitItems = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text d-none" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-volume-high" style="color: #5e35b1; margin-right: 12px; font-size: 1.2em;"></i>
-                    ${yhLang("Noise Pollution", "শব্দ দূষণ")}
+                    <b>${yhLang("Noise Pollution", "শব্দ দূষণ")}</b>
                   </h2>
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card mb-3" style="border-radius:24px;box-shadow:0 14px 42px rgba(94,53,177,.28), 0 6px 18px rgba(81,45,168,.15);">
-                        <h3 class="mb-1" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-volume-high" style="margin-right:10px;"></i>${yhLang("Noise Pollution", "শব্দ দূষণ")}</h3>
-                        <p>${yhLang("The World Health Organization (WHO) defines noise pollution as 'unwanted and harmful sound caused by activities'. A United Nations Environment Programme (UNEP, 2022) report declared Dhaka the noisiest city in the world. Compared to the WHO's permissible limit of 55 decibels, noise levels in Dhaka are at least double, found at 110-132 decibels. 75% of noise pollution in Dhaka originates from vehicles. A Department of Environment (DoE) study states that approximately 11.7% of Bangladesh's population has lost hearing due to noise pollution.", "বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ হিসেবে সংজ্ঞায়িত করেছে। জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।")}</p>
+                        <h3 class="mb-1" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-volume-high" style="margin-right:10px;"></i><b>${yhLang("Noise Pollution", "শব্দ দূষণ")}</b></h3>
+                        <p>${yhLang("The World Health Organization (WHO) defines noise pollution as 'unwanted and harmful sound caused by activities'. A United Nations Environment Programme (UNEP, 2022) report declared Dhaka the noisiest city in the world. Compared to the WHO's permissible limit of 55 decibels, noise levels in Dhaka are at least double, found at 110-132 decibels. 75% of noise pollution in Dhaka originates from vehicles. A Department of Environment (DoE) study states that approximately 11.7% of Bangladesh's population has lost hearing due to noise pollution.", `বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে " কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ" হিসেবে সংজ্ঞায়িত করেছে।  জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।`)}</p>
                         <div class="card-divider my-3"></div>
-                        <h3 class="mb-1" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i>${yhLang("Sources", "উৎস")}</h3>
-                        <p>${yhLang("Noise pollution comes from many everyday sources, including loud toys, household appliances, entertainment devices, and mobile phones. In Bangladesh, the primary source of noise pollution is high-volume vehicle horns. Urbanization and deforestation also indirectly increase noise in once-quiet areas.", "শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন। বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।")}</p>
+                        <h3 class="mb-1" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i><b>${yhLang("Sources", "উৎস")}</b></h3>
+                        <p>${yhLang("Noise pollution comes from many everyday sources, including loud toys, household appliances, entertainment devices, and mobile phones. In Bangladesh, the primary source of noise pollution is high-volume vehicle horns. Urbanization and deforestation also indirectly increase noise in once-quiet areas.", "শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন।  বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।")}</p>
                       </div>
                       
                         <div class="d-flex gap-4">
