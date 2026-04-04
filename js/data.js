@@ -8855,17 +8855,17 @@ const orbitItems = [
               const emotionDefinition = yhLang(
                 "Emotion is a mental state linked with thoughts, feelings, behavioral reactions, and levels of pleasure or distress. It influences physical responses, behavior, and decision-making.",
                 `আবেগ হলো এক ধরনের মানসিক অবস্থা যা চিন্তন, অনুভূতি, আচরণগত প্রতিক্রিয়া এবং আনন্দ/বেদনার মাত্রার সাথে সম্পর্কিত। আবেগের ফলে আমাদের নানা রকম শারীরিক, আচরণগত এবং চিন্তার পরিবর্তন হয়। <br>
-আবেগ হলো অভ্যন্তরীণ এবং বািহ্যক ঘটনার প্রতি আমাদের শারীরবৃত্তীয় ও আচরণগত প্রতিক্রিয়া (Sternberg, R. 1998)। ব্যক্তি থেকে ব্যক্তিতে আবেগের বহিঃপ্রকাশ ভিন্ন হয়ে থাকে।`,
+আবেগ হলো অভ্যন্তরীণ এবং বাহ্যিক ঘটনার প্রতি আমাদের শারীরবৃত্তীয় ও আচরণগত প্রতিক্রিয়া (Sternberg, R. 1998)। ব্যক্তি থেকে ব্যক্তিতে আবেগের বহিঃপ্রকাশ ভিন্ন হয়ে থাকে।`,
               );
 
               const managementIntro = yhLang(
                 "Negative experiences in daily life can quickly destabilize emotions and create uncertainty about what action to take.",
-                "দৈনন্দিন জীবনের নেতিবাচক অভিজ্ঞতা আমাদের আবেগকে সহজেই বিপর্যস্ত করে, ফলে কী করতে হবে তা নিয়ে অনিশ্চয়তা তৈরি হয়।",
+                "দৈনন্দিন জীবনে আমাদের অনেক নেতিবাচক ঘটনার মেধ্য দিয়ে যেতে হয়। ফলে আমরা নানা ধরনের আবেগীয় সংকটের সম্মুখীন হই।",
               );
 
               const managementDetails = yhLang(
                 "Organized emotion management strengthens self-control, helps select appropriate responses, and supports productive action through self-awareness.",
-                "সুশৃঙ্খল আবেগ ব্যবস্থাপনা ব্যক্তিকে আত্মনিয়ন্ত্রণে সহায়তা করে, নেতিবাচক পরিস্থিতিতে সঠিক প্রতিক্রিয়া বেছে নিতে শেখায় এবং ব্যক্তিগত গুণাবলি উপলব্ধি করে ফলপ্রসূভাবে কাজ করার শক্তি দেয়। এতে আত্মবিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা ও আত্মসম্মানবোধ বৃদ্ধি পায়।",
+                "আবেগ ব্যবস্থাপনা ব্যক্তিকে আত্ম নিয়ন্ত্রনে সহায়তা করবে, নেতিবাচক পরিস্থিতি মোকাবেলা করতে এবং এ ধরনের পরিস্থিতিতে কিভাবে প্রতিক্রিয়া করতে হবে তাতে সহায়তা করবে। ব্যক্তি তার গুনাবলীগুলো উপলব্ধি করতে পারবে এবং ফলপ্রসূভাবে কাজ করতে পারবে। এটি আত্ম-বিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা এবং আত্মসন্মানবোধ বৃব্ধিতে সহায়তা করবে।",
               );
 
 
@@ -8945,7 +8945,7 @@ const orbitItems = [
                       <i class="fa-solid fa-sliders"></i>
                       ${yhLang("Why emotion management matters", "কেন আবেগ ব্যবস্থাপনা করা গুরুত্বপূর্ণ")}
                     </h3>
-                    <p class="m14l2-p">${managementIntro}</p>
+                    <p class="m14l2-p mb-2">${managementIntro}</p>
                     <p class="m14l2-p">${managementDetails}</p>
                     
                   </section>
@@ -9170,18 +9170,9 @@ const orbitItems = [
             content: (function () {
               const anxietyDefinition = yhLang(
                 "Anxiety is an emotion characterized by intense worry and physical changes such as elevated blood pressure.",
-                "উদ্বেগ হলো এক ধরনের আবেগ, যাকে তীব্র অনুভূতি, দুশ্চিন্তা এবং রক্তচাপ বৃদ্ধি করার মতো শারীরিক পরিবর্তনগুলো দ্বারা চিহ্নিত করা হয়।",
+                "“উদ্বেগ হলো এক ধরনের আবেগ যাকে তীব্র অনুভূতি, দুঃশ্চিন্তা এবং রক্তচাপ বৃদ্ধি করার মতো শারীরিক পরিবর্তনগুলো দ্বারা চিহ্নিত করা হয়।” স্বাভাবিক মাত্রায় উদ্বেগের অনুভূতি থাকা ভালো, যেটা ব্যক্তিকে কোন বিপজ্জনক পরিস্থিতি মোকাবেলা করতে প্রস্তুত ও সহায়তা করে। তবে উদ্বেগ বেশি মাত্রায় থাকলে ব্যক্তির জন্য ক্ষতিকর হয় ফলে ব্যক্তির স্বাভাবিক জীবন যাত্রার মান ব্যহত হয় এবং ব্যক্তির মানসিক অবস্থা হুমকির সম্মুখীন হয়।",
               );
 
-              const anxietyContext = yhLang(
-                "At a normal level, anxiety can help a person stay alert and prepared. Excessive anxiety disrupts daily life and creates psychosocial risk.",
-                "স্বাভাবিক মাত্রায় উদ্বেগ ব্যক্তিকে সতর্ক করে ও বিপদ মোকাবিলায় প্রস্তুত করে। তবে মাত্রাতিরিক্ত উদ্বেগ স্বাভাবিক জীবনধারা ব্যাহত করে ও মানসিক অবস্থাকে ঝুঁকিতে ফেলে।",
-              );
-
-              const anxietySignificance = yhLang(
-                "Among many emotions, anxiety is especially important because delayed management can lead to long-term complications.",
-                "তবে উদ্বেগ বেশি মাত্রায় থাকলে ব্যক্তির জন্য ক্ষতিকর হয় ফলে ব্যক্তির স্বাভাবিক জীবন যাত্রার মান ব্যহত হয় এবং ব্যক্তির মানসিক অবস্থা হুমকির সম্মুখীন হয়।",
-              );
 
               const mentalSymptoms = [
                 {
@@ -9289,14 +9280,19 @@ const orbitItems = [
 
               const behavioralSymptoms = [
                 {
-                  text: yhLang("Avoiding situations", "পরিস্থিতি এড়িয়ে চলা"),
+                  text: yhLang("Avoiding situations", "ঘুম না হওয়া বা ঘুমের পরিমাণ বেড়ে যাওয়া"),
                   icon: "fa-person-circle-xmark",
                   tone: "slate",
                 },
                 {
+                  text: yhLang("Withdrawal behavior", "পরিস্থিতি এড়িয়ে চলা"),
+                  icon: "fa-door-closed",
+                  tone: "peach",
+                },
+                {
                   text: yhLang(
                     "Loss of appetite or overeating",
-                    "খাবারে অরুচি বা অত্যধিক খাবার গ্রহণ",
+                    "খাবারে অরুচি বা অত্যধিক পরিমাণে খাবার গ্রহণ করা",
                   ),
                   icon: "fa-utensils",
                   tone: "amber",
@@ -9309,7 +9305,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Substance use / alcohol use",
-                    "মাদক দ্রব্য গ্রহণ/মদ্যপান",
+                    "মাদক দ্রব্য গ্রহণ করা/মদ্যপান করা",
                   ),
                   icon: "fa-wine-bottle",
                   tone: "danger",
@@ -9319,6 +9315,7 @@ const orbitItems = [
                   icon: "fa-door-closed",
                   tone: "peach",
                 },
+                
               ];
 
               const anxietyCauses = [
@@ -9483,8 +9480,6 @@ const orbitItems = [
                   <section class="m14l3-card m14l3-card-intro" data-aos="fade-up" data-aos-delay="40">
                 
                     <p class="m14l3-p">${anxietyDefinition}</p>
-                    <p class="m14l3-p">${anxietyContext}</p>
-                    <p class="m14l3-p m14l3-p-last">${anxietySignificance}</p>
                   </section>
 
                   <section class="m14l3-grid" data-aos="fade-up" data-aos-delay="70">
@@ -9682,7 +9677,7 @@ const orbitItems = [
                   tone: "violet",
                 },
                 {
-                  text: yhLang("Substance abuse", "মাদক দ্রব্য গ্রহণ"),
+                  text: yhLang("Substance abuse", "মাদক দ্রব্য গ্রহণ করা/মদ্যপান করা"),
                   icon: "fa-flask-vial",
                   tone: "danger",
                 },
@@ -10021,7 +10016,7 @@ const orbitItems = [
                           <i class="fa-solid ${item.icon}"></i>
                         </div>
                         <div>
-                          <h3 class="m14l5-cause-title">${item.title}</h3>
+                          <h3 class="m14l5-cause-title"><b>${item.title} :</b></h3>
                           <span class="m14l5-cause-desc">${item.description}</span>
                         </div>
                       </article>
@@ -10066,7 +10061,7 @@ const orbitItems = [
                     <section class="m14l5-card m14l5-card-causes">
                       <h3 class="m14l5-subtitle mb-3">
                         <i class="fa-solid fa-head-side-virus"></i>
-                        ${yhLang("Causes of Stress", "মানসিক চাপের কারণসমূহ")}
+                        <b>${yhLang("Causes of Stress", "মানসিক চাপের কারণসমূহ")}</b>
                       </h3>
                       <div class="m14l5-cause-list">
                         ${renderCauseCards(stressCauses)}
@@ -10228,7 +10223,7 @@ const orbitItems = [
                   tone: "mint",
                 },
                 {
-                  text: yhLang("Future anxiety", "ভবিষ্যতের দুশ্চিন্তা ইত্যাদি"),
+                  text: yhLang("Future anxiety", "ভবিষ্যতের জন্য দুশ্চিন্তা করা ইত্যাদি"),
                   icon: "fa-hourglass-half",
                   tone: "info",
                 },
@@ -10565,7 +10560,7 @@ const orbitItems = [
                   tone: "violet",
                 },
                 {
-                  text: yhLang("Exercise regularly", "নিয়মিত ব্যায়াম"),
+                  text: yhLang("Exercise regularly", "নিয়মিত শরীর চর্চা বা ব্যায়াম করা"),
                   icon: "fa-person-running",
                   tone: "sun",
                 },
@@ -10891,7 +10886,7 @@ const orbitItems = [
           },
           {
             id: "ch14-lesson-11",
-            title: yhLang("Solutions to Exam Fear", "পরীক্ষা-ভীতি দূর করার উপায় বা সমাধান বা সমাধান বা সমাধান বা সমাধান বা সমাধান বা সমাধান বা সমাধান"),
+            title: yhLang("Solutions to Exam Fear", "পরীক্ষা-ভীতি দূর করার উপায় বা সমাধান"),
             icon: "fa-pen-to-square",
             gradientClass: "bg-gradient-emerald",
             audioFile: "",
@@ -10924,7 +10919,7 @@ const orbitItems = [
               );
               const intro2 = yhLang(
   "Study regularly every day and create a visible study plan that includes the exam schedule, the number of days off before each exam, which subjects are more difficult and need more time, and which are easier and require less time. Study with understanding rather than memorization and connect lessons with examples to understand them better.",
-  "প্রতিদিন নিয়মিত পড়া, যেখানে পরীক্ষার সময়সূচী, প্রতিটি পরীক্ষার আগে কতদিন ছুটি, কোন বিষয়টি কঠিন তুলনামূলক বেশিদিন পড়তে হবে, কোনটি সহজ তুলনা অল্পদিন পড়তে হবে সব কিছু উল্লেখ করে পড়ালেখার একটি দৃশ্যমান তালিকা তৈরি করা, বুঝে পড়া মুখস্থ করা, উদাহরণের সাথে পড়ার সংযোগ করে পড়া।"
+  "প্রতিদিন নিয়মিত পড়া, যেখানে পরীক্ষার সময়সূচী, প্রতিটি পরীক্ষার আগে কতদিন ছুটি, কোন বিষয়টি কঠিন তুলনামূলক বেশিদিন পড়তে হবে, কোনটি সহজ তুলনামূলক অল্পদিন পড়তে হবে সব কিছু উল্লেখ করে পড়ালেখার একটি দৃশ্যমান তালিকা তৈরি করা, বুঝে পড়া মুখস্থ করা, উদাহরণের সাথে পড়ার সংযোগ করে পড়া।"
 );
               const intro3 = yhLang(
               "To perform well in examinations, students should focus on the exam syllabus and the lessons taught before the exam. They should review and analyze previous years’ question papers to understand the question patterns and practice solving them.",
@@ -10940,7 +10935,7 @@ const orbitItems = [
         );
             const intro6 = yhLang(
   "First, identify the cause of the anxiety. Is it due to lack of preparation, or fear of what others might say if the result is poor ? If worrying about others' opinions is the main reason, remember that exams are a normal part of life. Exams are closely connected with education, but a single exam never determines a person's entire success or failure in life. Therefore, it is important to develop a mindset that accepts exams as a natural part of life.",
-  "প্রথমেই নির্ধারন করতে হবে দুঃশ্চিন্তার কারণ কি, এটা কি প্রয়োজনীয় প্রস্তুতির অভাবে, না ফলাফল খারাপ হলে অন্যরা কি বলবে এ কারণে। যদি অন্যরা কি বলবে এটা দুঃশ্চিন্তার প্রধান কারণ হয় তাহলে ভাবতে হবে জীবনে পরীক্ষা থাকবেই। পড়াশুনার সাথে পরীক্ষা ওতপ্রোতভাবে জড়িত। একটি পরীক্ষা কখনই পুরো জীবনের সফলতা বা ব্যর্থতা বর্ণনা করে না। পরীক্ষা বিষয় টিকে জীবনের একটি অংশ হিসেবে নিয়ে সাধারনভাবে গ্রহণ করার মানসিকতা অর্জনের চেষ্টা করতে হবে।"
+  "প্রথমেই নির্ধারন করতে হবে দুঃশ্চিন্তার কারণ কি, এটা যদি প্রয়োজনীয় প্রস্তুতির অভাবে, না ফলাফল খারাপ হলে অন্যরা কি বলবে এ কারণে। যদি অন্যরা কি বলবে এটা দুঃশ্চিন্তার প্রধান কারণ হয় তাহলে ভাবতে হবে জীবনে পরীক্ষা থাকবেই। পড়াশুনার সাথে পরীক্ষা ওতপ্রোতভাবে জড়িত। একটি পরীক্ষা কখনই পুরো জীবনের সফলতা বা ব্যর্থতা বর্ণনা করে না। পরীক্ষা বিষয় টিকে জীবনের একটি অংশ হিসেবে নিয়ে সাধারনভাবে গ্রহণ করার মানসিকতা অর্জনের চেষ্টা করতে হবে।"
 );
 
 
@@ -10983,7 +10978,7 @@ const orbitItems = [
                   <section class="m14l10-card m14l10-card-intro m14l1-teal">
                     <h3 class="m14l10-subtitle">
                       <i class="fa-solid fa-users"></i>
-                      ${yhLang("Core Strategy", "বন্ধুদের সাথে দলবদ্ধভাবে পড়ালেখা করা (Group of study with friends)")}
+                      ${yhLang("Core Strategy", "বন্ধুদের সাথে দলবদ্ধভাবে পড়ালেখা করা (Group study with friends)")}
                     </h3>
                     <p class="m14l10-p m14l10-p-last">${intro4}</p>
                   </section>
@@ -11038,7 +11033,7 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
                 "Adolescents are growing up with modern technology where smartphones, tablets, and social media are part of daily life. While these tools provide opportunities, uncontrolled use can create mental and physical health problems. Device addiction and excessive technology use may lead to stress, insomnia, and social isolation.",
-                "তরুণ-তরুণী আধুনিক প্রযুক্তির সঙ্গে বেড়ে উঠছে, যেখানে স্মার্টফোন, ট্যাবলেট এবং সামাজিক মিডিয়া প্ল্যাটফর্ম তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ ও সুবিধা দেয়, অনিয়ন্ত্রিত ব্যবহারে মানসিক ও শারীরিক স্বাস্থ্যগত সমস্যা তৈরি হতে পারে। বিশেষ করে ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা ও সামাজিক বিচ্ছিন্নতার মতো সমস্যার জন্ম দিতে পারে।",
+                "তরুন তরুনী আধুনিক প্রযুক্তির সঙ্গে বেড়ে ওঠছে, যেখানে স্মার্টফোন, ট্যাবলেট, এবং সামাজিক মিডিয়া প্লাটফর্মগুলো তাদের দৈনন্দিন জীবনের অবিচ্ছেদ্য অংশ হয়ে উঠেছে। যদিও এই প্রযুক্তিগুলো বিভিন্ন সুযোগ এবং সুবিধা প্রদান করে, সেগুলি অনিয়ন্ত্রিত ব্যবহারের কারণে মানসিক এবং শারীরিক স্বাস্থ্যগত সমস্যা সৃষ্টি করতে পারে। বিশেষ করে, ডিভাইস আসক্তি বা অতিরিক্ত প্রযুক্তি ব্যবহারের প্রভাব কিশোরদের মানসিক চাপ, নিদ্রাহীনতা, এবং সামাজিক বিচ্ছিন্নতার মতো সমস্যাগুলোর জন্ম দিতে পারে।",
               );
 
               const subtitle = yhLang(
@@ -11074,7 +11069,7 @@ const orbitItems = [
                   title: yhLang("Social Isolation", "সামাজিক বিচ্ছিন্নতা"),
                   text: yhLang(
                     "Overuse of social media may reduce real-life interaction and social skills.",
-                    "অতিরিক্ত সামাজিক মিডিয়া ব্যবহারের ফলে বাস্তব সামাজিক মিথস্ক্রিয়ার অভাব তৈরি হতে পারে।",
+                    "অতিরিক্ত সামাজিক মিডিয়া ব্যবহারের ফলে বাস্তব সামাজিক মিথস্ক্রিয়ার অভাব তৈরি হতে পারে, যা পরবর্তীতে সামাজিক দক্ষতার অভাব সৃষ্টি করতে পারে।",
                   ),
                   icon: "fa-person",
                   tone: "info",
