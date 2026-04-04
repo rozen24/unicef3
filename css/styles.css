@@ -11794,7 +11794,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .m18l3-section-title {
   margin: 0 0 10px;
   font-size: 0.98rem;
-  font-weight: 650;
+  font-weight: 400;
   color: #bf360c;
   display: flex;
   align-items: center;
@@ -13441,7 +13441,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .m18l7-hero {
   position: relative;
-  z-index: 10;
   text-align: center;
   margin-bottom: 12px;
 }
@@ -13478,7 +13477,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .m18l7-intro-panel {
   position: relative;
-  z-index: 10;
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid rgba(255, 255, 255, 0.56);
   border-left: 4px solid #672dc5;
@@ -28926,7 +28924,7 @@ dashboard-titled-title {
 .lesson-hero {
     position: sticky;
     top: 0;
-    z-index: 9;
+    z-index: 999;
     border-radius: var(--radius-xl);
     padding: clamp(0.8rem, 1vw, 1.8rem);
     background: var(--hero-gradient);

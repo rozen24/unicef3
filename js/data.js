@@ -12864,7 +12864,7 @@ const orbitItems = [
                     <p class="mb-0">
                       ${yhLang(
                         "First aid is the initial assistance given to an injured person due to injury in various situations or to a person who suddenly becomes ill. First aid is usually given at the scene before a doctor or paramedic arrives, or before an ambulance arrives, or until the affected person is taken to a medical center or hospital.",
-                        "বিভিন্ন পরিস্থিতিতে ইনজুরির কারণে আহত ব্যক্তি বা হঠাৎ করে অসুস্থ হয়ে পড়া ব্যক্তিকে প্রাথমিকভাবে যে সহায়তা দেওয়া হয়, তাকে প্রাথমিক চিকিৎসা বলে। সাধারণত প্রাথমিক চিকিৎসা দেওয়া হয় ঘটনাস্থলে চিকিৎসক বা প্যারামেডিকস আসার পূর্বে, অথবা অ্যাম্বুলেন্স আসার পূর্বে, অথবা আক্রান্ত ব্যক্তিকে চিকিৎসাকেন্দ্র বা হাসপাতালে নিয়ে যাওয়া পর্যন্ত।",
+                        "বিভিন্ন পরিস্থিতিতে ইনজুরির কারণে আহত ব্যক্তি বা হঠাৎ করে অসুস্থ হয়ে পড়া ব্যক্তিকে প্রাথমিকভাবে যে সহায়তা দেওয়া হয়, তাকে প্রাথমিক চিকিৎসা বলে।  সাধারণত প্রাথমিক চিকিৎসা দেওয়া হয় ঘটনাস্থলে চিকিৎসক বা প্যারামেডিকস আসার পূর্বে, অথবা অ্যাম্বুলেন্স আসার পূর্বে, অথবা আক্রান্ত ব্যক্তিকে চিকিৎসাকেন্দ্র বা হাসপাতালে নিয়ে যাওয়া পর্যন্ত।",
                       )}
                     </p>
                   </div>
@@ -12943,7 +12943,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Press the wound with a clean cloth or gauze. If the wound area is small, keep pressure for up to 10 minutes (until bleeding stops).",
-                    "পরিষ্কার কাপড় বা গজ দিয়ে ক্ষতস্থানটি চেপে ধরতে হবে। ক্ষতস্থানটি যদি অল্প জায়গা জুড়ে হয়, তবে কাপড় বা গজ ১০ মিনিট পর্যন্ত চাপ দিয়ে ধরে রাখতে হবে (যতক্ষণ রক্তপাত বন্ধ না হয়)।",
+                    "পরিষ্কার কাপড় বা গজ দিয়ে ক্ষতস্থানটি চেপে ধরতে হবে।  ক্ষতস্থানটি যদি অল্প জায়গা জুড়ে হয়, তবে কাপড় বা গজ ১০ মিনিট পর্যন্ত চাপ দিয়ে ধরে রাখতে হবে (যতক্ষণ রক্তপাত বন্ধ না হয়)।",
                   ),
                   icon: "fa-hand-holding-medical",
                   tone: "m18l2-step-pressure",
@@ -12952,7 +12952,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "If the first gauze or cloth layer gets soaked with blood, do not remove it. Add another clean layer on top and keep pressing.",
-                    "চাপ দিয়ে ধরে রাখা গজ বা কাপড়ের প্রথম স্তরটি যদি রক্তে ভিজে যায়, তবুও গজ বা কাপড়টি সরানো যাবে না। এর উপরে অন্য একটি পরিষ্কার কাপড় বা গজ দিয়ে চেপে ধরতে হবে।",
+                    "চাপ দিয়ে ধরে রাখা গজ বা কাপড়ের প্রথম স্তরটি যদি রক্তে ভিজে যায়, তবুও গজ বা কাপড়টি সরানো যাবেনা।  এর উপরে অন্য আরেকটি পরিস্কার কাপড় বা গজ দিয়ে চেপে ধরতে হবে। ",
                   ),
                   icon: "fa-layer-group",
                   tone: "m18l2-step-layer",
@@ -12970,7 +12970,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "If the wound is on hand or leg, raise the limb above heart level to reduce blood flow and bleeding.",
-                    "ক্ষতস্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিণ্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয়—এর ফলে রক্তপাত কমে যাবে। কারণ অধিক রক্তক্ষরণে অজ্ঞান হয়ে যাওয়ার সম্ভাবনা থাকে।",
+                    "ক্ষত স্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিন্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয় যার ফলে রক্তপাত কমে যাবে। কারণ অধিক রক্তক্ষরণে অজ্ঞান হয়ে যাওয়ার সম্ভাবনা আছে।",
                   ),
                   icon: "fa-arrow-up-right-dots",
                   tone: "m18l2-step-elevate",
@@ -12978,7 +12978,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "If the wound is deep or bleeding does not stop, seek skilled health worker support and refer to a health center.",
-                    "ক্ষত গভীর হলে বা রক্তক্ষরণ বন্ধ না হলে দক্ষ স্বাস্থ্যকর্মীর সাহায্য নিতে হবে এবং আক্রান্ত ব্যক্তিকে স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে। প্রয়োজনে ক্ষতস্থানে আরো গজ বা কাপড়ের সাহায্যে চেপে ধরে রাখতে হতে পারে।",
+                    "ক্ষত গভীর হলে বা রক্তক্ষরণ বন্ধ না হলে দক্ষ স্বাস্থ্যকর্মীর সাহায্য নিতে হবে এবং আক্রান্ত ব্যক্তিকে স্বাস্থ্যকেন্দ্রে প্রেরণ করতে হবে।  প্রয়োজনে ক্ষতস্থানে আরো গজ বা কাপড়ের সাহায্যে চেপে ধরে রাখতে হতে পারে।",
                   ),
                   icon: "fa-truck-medical",
                   tone: "m18l2-step-referral",
@@ -12986,7 +12986,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "If an object is embedded in the body (e.g., broken glass or stick), do not remove it; apply pressure around both sides, not directly on top.",
-                    "কোন ব্যক্তির শরীরে কোন বস্তু ঢুকে রক্তপাত হলে (যেমন ভাঙা কাঁচ বা কাঠি), ক্ষতস্থান থেকে বস্তুটি বের করার চেষ্টা করা যাবে না। ক্ষতস্থানের দুই পাশে চেপে ধরতে হবে, তবে ক্ষতস্থানের উপর চাপ দেওয়া যাবে না।",
+                    "কোন ব্যক্তির শরীরে কোন বস্তু ঢুকে রক্তপাত হলে (যেমন ভাঙা কাঁচ বা কাঠি), ক্ষতস্থান থেকে বস্তুটি বের করার চেষ্টা করা যাবে না।  ক্ষতস্থানের দুই পাশে চেপে ধরতে হবে, তবে ক্ষতস্থানের উপর চাপ দেওয়া যাবে না।",
                   ),
                   icon: "fa-triangle-exclamation",
                   tone: "m18l2-step-warning",
@@ -13107,7 +13107,7 @@ const orbitItems = [
                   title: yhLang("Third-degree burn", "তৃতীয় ডিগ্রি বার্ন"),
                   text: yhLang(
                     "All skin layers are damaged and tissue may die. The wound may look black, white, or brown, and pain may be absent.",
-                    "ত্বকের সব স্তর ক্ষতিগ্রস্ত হয় এবং টিস্যু মারা যেতে পারে। ক্ষতস্থান কালো, সাদা বা বাদামী রঙের হতে পারে এবং ব্যথা অনুভূত নাও হতে পারে।",
+                    "ত্বকের সব স্তর ক্ষতিগ্রস্ত হয় এবং টিস্যু মারা যেতে পারে।  ক্ষতস্থান কালো, সাদা বা বাদামী রঙের হতে পারে এবং ব্যথা অনুভূত নাও হতে পারে।",
                   ),
                   icon: "fa-skull-crossbones",
                   color: "m18l3-type-third",
@@ -13118,7 +13118,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Heat: fire, hot water, steam, or contact with hot objects",
-                    "তাপ: আগুন, গরম পানি, বাষ্প বা গরম বস্তু সংস্পর্শ",
+                    "তাপ: আগুন, গরম পানি, বাষ্প বা গরম বস্তুর সংস্পর্শ",
                   ),
                   icon: "fa-fire",
                   color: "m18l3-cause-heat",
@@ -13156,7 +13156,7 @@ const orbitItems = [
                       <article class="m18l3-type-card ${item.color}" data-aos="fade-up" data-aos-delay="${40 + index * 40}">
                         <h3 class="m18l3-type-title">
                           <span class="m18l3-type-icon"><i class="fa-solid ${item.icon}"></i></span>
-                          ${item.title}
+                          <b>${item.title} :</b>
                         </h3>
                         <p class="mb-0">${item.text}</p>
                       </article>
@@ -13191,10 +13191,10 @@ const orbitItems = [
                   </header>
 
                   <section class="m18l3-intro" data-aos="fade-up" data-aos-delay="20">
-                     <h3 class="m18l3-section-title">
+                     <p class="m18l3-section-title">
                       <i class="fa-solid fa-circle-info"></i>
                       ${intro}
-                    </h3>
+                    </p>
                     
                      
                     
@@ -13267,7 +13267,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Determine burn type and quickly remove from source (fire, smoke) to stop/slow the burning process",
-                    "ত্বক কতটা পুড়েছে, তার ধরন নির্ধারণ করে চিকিৎসা করা হয়। আক্রান্ত ব্যক্তিকে দ্রুত পোড়ার উৎস (যেমন- আগুন বা ধোঁয়া) থেকে সরিয়ে নিতে হবে যেন পুড়ে যাওয়ার প্রক্রিয়াটি ধীর হয় বা একেবারে বন্ধ হয়। ",
+                    "ত্বক কতটা পুড়েছে, তার ধরন নির্ধারণ করে চিকিৎসা করা হয়।  আক্রান্ত ব্যক্তিকে দ্রুত পোড়ার উৎস (যেমন- আগুন বা ধোঁয়া) থেকে সরিয়ে নিতে হবে যেন পুড়ে যাওয়ার প্রক্রিয়াটি ধীর হয় বা একেবারে বন্ধ হয়। ",
                   ),
                   icon: "fa-hand-fist",
                   color: "m18l4-step-remove",
@@ -13323,7 +13323,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Ensure the person drinks adequate fluids",
-                    "আঘাতপ্রাপ্ত ব্যক্তি যেন পর্যাপ্ত তরল পান করে তা নিশ্চিত করতে হবে",
+                    "আক্রান্ত ব্যক্তি যেন পর্যাপ্ত তরল পান করে তা নিশ্চিত করতে হবে। ",
                   ),
                   icon: "fa-water",
                   color: "m18l4-step-fluids",
@@ -13431,12 +13431,12 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
                 "A bone fracture is a condition where one or more bones in the body break, crack, or bend due to injury. Usually, strong impacts or injuries can cause bones to break, but sometimes fractures may also occur due to age or certain diseases.",
-                "হাড় ভাঙ্গা (ফ্র্যাকচার) হল এমন একটি অবস্থা যেখানে শরীরের এক বা একাধিক হাড় ভেঙে যায় বা ফাটল ধরে বা কোন আঘাতের কারণে বেঁকে যায়। সাধারণত শক্তিশালী আঘাত বা ইনজুরির কারণে কোনো ব্যক্তির হাড় ভেঙে যেতে পারে, তবে কখনো কখনো বয়স বা অসুস্থতাজনিত কারণেও কোনো ব্যক্তি হাড় ভাঙ্গার শিকার হতে পারে।",
+                "হাড় ভাঙ্গা (ফ্রাকচার) হল এমন একটি অবস্থা যেখানে শরীরের এক বা একাধিক হাড় ভেঙ্গে যায় বা ফাটল ধের বা কোন আঘাতের কারণে বেঁকে যায়।  সাধারণত, শক্তিশালী আঘাত বা ইনজুরির জেন্য কোন ব্যক্তির হাড় ভেঙ্গে যেতে পারে, তবে কখনো কখনো বদ্ধ বয়স বা অসুস্থতাজনিত কারণে ও কোন ব্যক্তি হাড় ভাঙ্গার শিকার হতে পারে। ",
               );
 
               const typeIntro = yhLang(
                 "Bone fractures are mainly of two types—open fractures and closed fractures. An open fracture occurs when the broken bone pierces through the skin and becomes visible. A closed fracture occurs when the broken bone remains inside the body and cannot be seen from outside.",
-                "হাড় ভাঙ্গা মূলত দুই ধরনের হতে পারে—উন্মুক্ত হাড় ভাঙ্গা ও আবদ্ধ হাড় ভাঙ্গা। উন্মুক্ত হাড় ভাঙ্গা হচ্ছে যখন রোগীর ভাঙ্গা হাড় চামড়ার ভেতর থেকে বেরিয়ে আসে এবং বাইরে থেকে দেখা যায়। আর আবদ্ধ হাড় ভাঙ্গা হলো ভাঙ্গা হাড়টি শরীরের ভেতরে অবস্থান করে এবং বাইরে থেকে দেখা যায় না।",
+                "হাড় ভাঙ্গা মূলত দুই ধরনের হতে পারে—উন্মুক্ত হাড় ভাঙ্গা ও আবদ্ধ হাড় ভাঙ্গা।  উন্মুক্ত হাড় ভাঙ্গা হচ্ছে যখন রোগীর ভাঙ্গা হাড় চামড়ার ভেতর থেকে বেরিয়ে আসে এবং বাইরে থেকে দেখা যায়।  আর আবদ্ধ হাড় ভাঙ্গা হলো ভাঙ্গা হাড়টি শরীরের ভেতরে অবস্থান করে এবং বাইরে থেকে দেখা যায় না।",
               );
 
               const openFractureHeading = yhLang(
@@ -13650,13 +13650,21 @@ const orbitItems = [
 
               const steps = [
                 {
+                text: yhLang(
+                    "Do not puncture the wound with needles or apply ointments, creams, or lotions.",
+                    "বাংলাদেশে বেশির ভাগ সাপের কামড়, বিষহীন সাপ দ্বারা হয়ে থাকে। যদি কোন বাক্তিকে বিষধর সাপে কামড়েছে বলে মনে হয়, তাহলে প্রধান কাজ হল বিষ দ্রুত শরীরে ছড়িয়ে পড়া প্রতিরোধ করা।  সে কারণে আক্রান্ত বাক্তি যেন নড়াচড়া না করে তার ব্যবস্থা নেয়া।",
+                  ),
+                  icon: "fa-staff-snake",
+                  color: "m18l6-step-avoid",
+                },
+                {
                   title: yhLang(
                     "Keep the Person Calm and Still",
                     "স্থির ও শান্ত রাখা",
                   ),
                   text: yhLang(
                     "If the person's breathing is normal, ask them to remain calm and still. The bite area may swell, so remove any rings, watches, jewelry, or tight items.",
-                    "যদি আক্রান্ত ব্যক্তির শ্বাস-প্রশ্বাস স্বাভাবিক থাকে, তাহলে ব্যক্তিকে স্থির এবং শান্ত থাকতে বলুন। কামড়ের জায়গা ফুলে যেতে পারে, তাই কোনো আংটি, ঘড়ি, অলংকার বা বাঁধন থাকলে তা খুলে দিন।",
+                    "যদি আক্রান্ত বাক্তির শ্বাস-প্রশ্বাস স্বাভাবিক থাকে, তাহলে বাক্তিকে স্থির এবং শান্ত থাকতে বলতে হবে।  কামড়ের জায়গা ফুলে যেতে পারে তাই কোন আংটি, ঘড়ি, অলংকার বা বাঁধন থাকলে তা খুলে ফেলতে হবে।",
                   ),
                   icon: "fa-person-circle-check",
                   color: "m18l6-step-calm",
@@ -13665,7 +13673,7 @@ const orbitItems = [
                   title: yhLang("Clean the Wound", "ক্ষত স্থান পরিষ্কার"),
                   text: yhLang(
                     "Check the wound to see if the snake bite has punctured the skin. Wash the bite area thoroughly with clean water.",
-                    "ক্ষত স্থানটি পরীক্ষা করে দেখুন, সাপে কামড়ের স্থানটি ছিদ্র হয়ে গেছে কিনা। কামড়ের স্থানটি পরিষ্কার পানি দিয়ে ভাল করে ধুয়ে ফেলতে হবে।",
+                    "ক্ষত স্থানটি পরীক্ষা করে দেখতে হবে যে, সাপে কামড়ের স্থানটি ছিদ্র হয়ে গেছে কিনা।  কামড়ের স্থানটি পরিষ্কার পানি দিয়ে ভাল করে ধুয়ে ফেলতে হবে। ",
                   ),
                   icon: "fa-pump-soap",
                   color: "m18l6-step-clean",
@@ -13674,7 +13682,7 @@ const orbitItems = [
                   title: yhLang("Immobilize the Limb", "অঙ্গ স্থির রাখা"),
                   text: yhLang(
                     "Keep the affected limb as still as possible and use a stick, wooden board, or bamboo splint to support it so that the limb remains stable.",
-                    "আক্রান্ত অঙ্গটিকে নড়াচড়া কম করতে দিন এবং লাঠি, কাঠ বা বাঁশের ফালি দিয়ে বেঁধে দিন যেন অঙ্গটি যথাসম্ভব স্থির থাকে।",
+                    "আক্রান্ত অঙ্গটিকে নড়াচড়া কম করতে দিতে হবে, এবং লাঠি বা কাঠ বা বাঁশের ফালি দিয়ে বেঁধে দিতে হবে যেন অঙ্গটি যথা সম্ভব স্থির থাকে। ",
                   ),
                   icon: "fa-bandage",
                   color: "m18l6-step-immob",
@@ -13686,7 +13694,7 @@ const orbitItems = [
                   ),
                   text: yhLang(
                     "Observe the patient for danger signs such as bleeding from the wound, dizziness, vomiting, swelling at the bite site, drooping eyelids, blurred vision, breathing difficulty, or reduced/dark urine.",
-                    "আক্রান্ত ব্যক্তির দিকে খেয়াল রাখুন নিচের কোনো বিপদ লক্ষণ আছে কিনা, যেমন—ক্ষতস্থান থেকে রক্তপাত হওয়া, মাথা ঘোরানো, বমি করা, কামড়ের অংশ ফুলে যাওয়া, চোখের পাতা বন্ধ হয়ে আসা বা চোখে ঝাপসা দেখা, শ্বাসকষ্ট হওয়া, প্রস্রাবের পরিমাণ কমে যাওয়া / গাঢ় বর্ণের প্রস্রাব হওয়া।",
+                    "আক্রান্ত ব্যক্তির দিকে খেয়াল রাখতে হবে যেন নিম্নলিখিত কোন বিপদ লক্ষণ আছে কিনা, যেমন-ক্ষতস্থান থেকে রক্তপাত হওয়া, মাথা ঘোরানো, বমি করা, কামড়ের অংশ ফুলে যাওয়া, চোখের পাতা বন্ধ হয়ে আসা বা চোখে ঝাপসা দেখা, শ্বাসকষ্ট হওয়া, প্রস্রাবের পরিমাণ কমে যাওয়া / গাঢ় বর্ণের প্রস্রাব হওয়া। ",
                   ),
                   icon: "fa-triangle-exclamation",
                   color: "m18l6-step-monitor",
@@ -13698,7 +13706,7 @@ const orbitItems = [
                   ),
                   text: yhLang(
                     "If the person is not breathing normally, begin CPR. Do not tie a tourniquet or cut the bite wound.",
-                    "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে সিপিআর শুরু করুন। কামড়ের স্থানে কোনো গিঁট বাঁধা যাবে না / ক্ষত স্থানটি কাটা যাবে না।",
+                    "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে প্রশিক্ষণ প্রাপ্ত ব্যক্তি সিপিআর শুরু করতে হবে।  কামড়ের স্থানে কোন গিঁট বাধা যাবে না / ক্ষত স্থানটি কাটা যাবে না। ",
                   ),
                   icon: "fa-heart-pulse",
                   color: "m18l6-step-cpr",
@@ -13710,7 +13718,7 @@ const orbitItems = [
                   ),
                   text: yhLang(
                     "Do not puncture the wound with needles or apply ointments, creams, or lotions.",
-                    "সুঁই দিয়ে ক্ষতস্থানটি খোচানো যাবেনা বা মলম বা লোশন জাতীয় কিছু লাগানো যাবে না।",
+                    "সুঁই দিয়ে ক্ষতস্থানটি খোচানো যাবেনা বা ক্রিম বা লোশন জাতীয় কিছু লাগানো যাবে না। ",
                   ),
                   icon: "fa-ban",
                   color: "m18l6-step-avoid",
@@ -13722,7 +13730,7 @@ const orbitItems = [
                   ),
                   text: yhLang(
                     "Do not seek treatment from traditional healers or apply herbal remedies.",
-                    "স্থানীয় কবিরাজ বা ওঝার কাছে চিকিৎসা নেয়া অথবা কোনো ভেষজ ওষুধ প্রয়োগ করা যাবে না।",
+                    "স্থানীয় কবিরাজ বা ওঝার কাছে চিকিৎসা নেওয়া অথবা কোনো ভেষজ ওষুধ প্রয়োগ করা যাবে না।",
                   ),
                   icon: "fa-leaf",
                   color: "m18l6-step-remedy",
@@ -13865,7 +13873,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Ensure scene safety first. Prevent further animal contact. Keep away from the dog.",
-                    "প্রাথমিক চিকিৎসা প্রদানের পূর্বে ঘটনাস্থলের নিরাপত্তা নিশ্চিত করুন এবং প্রাণীটি যাতে আর কামড় দিতে না পারে তা নিশ্চিত করতে হবে।",
+                    "প্রাথমিক চিকিৎসা প্রদানের পূর্বে ঘটনাস্থলের নিরাপত্তা এবং প্রাণীটি যাতে আর কামড় দিতে না পারে তা নিশ্চিত করতে হবে।",
                   ),
                   icon: "fa-shield",
                   color: "m18l7-care-safety",
@@ -13873,7 +13881,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Remove jewelry, watches, tight bindings from bitten area as swelling may occur.",
-                    "কামড়ানো অংশে যদি কোনো আংটি বা বাঁধন থাকে তা খুলে দিন, কারণ সে অংশটি ফুলে যেতে পারে।",
+                    "কামড়ানো অংশে যদি কোন আংটি বা বাঁধন থাকে তা খুলে দিতে হবে, কারণ সে অংশটি  ফুলে যেতে পারে। ",
                   ),
                   icon: "fa-ring",
                   color: "m18l7-care-remove",
@@ -13881,7 +13889,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Wash wound thoroughly with running water and soap for at least 15 minutes to remove bacteria.",
-                    "ক্ষতস্থানটি পরিস্কার পানি ও ক্ষার জাতীয় সাবান ব্যবহার করে কমপক্ষে ১৫ মিনিটের মত ধুয়ে ফেলতে হবে। প্রবাহমান পানির উৎস যেমন ট্যাঁপের পানি ব্যবহার করতে হবে তবে যদি প্রবাহমান পানির ব্যবস্থা না থাকে, তাহলে কিছুক্ষণ পর পর পানি বদলিয়ে কামড়ের জায়গাটি ভাল ভাবে ধুয়ে নিতে হবে। ক্ষত স্থান হাত দিয়ে ধরা যাবেনা। ",
+                    "ক্ষতস্থানটি পরিস্কার পানি ও ক্ষার জাতীয় সাবান ব্যবহার করে কমপক্ষে ১৫ মিনিটের মত ধুয়ে ফেলতে হবে।  প্রবাহমান পানির উৎস যেমন ট্যাঁপের পানি ব্যবহার করতে হবে তবে যদি প্রবাহমান পানির ব্যবস্থা না থাকে, তাহলে কিছুক্ষণ পর পর পানি বদলিয়ে কামড়ের জায়গাটি ভাল ভাবে ধুয়ে নিতে হবে। ক্ষত স্থান হাত দিয়ে ধরা যাবেনা। ",
                   ),
                   icon: "fa-water",
                   color: "m18l7-care-wash",
@@ -13889,7 +13897,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Cover wound with clean, dry, sterile gauze or cloth. Apply gentle pressure if bleeding continues.",
-                    "ক্ষত স্থান শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে রাখতে হবে। যদি ক্ষতস্থান থেকে প্রচুর রক্তপাত হয়, তবে “রক্তক্ষরণ নিয়ন্ত্রণ” অংশে বর্ণিত পদ্ধতি অনুযায়ী প্রাথমিক চিকিৎসা দিতে হবে",
+                    "ক্ষত স্থান শুকনো জীবাণুমুক্ত পরিষ্কার কাপড় বা গজ দিয়ে ঢেকে রাখতে হবে।  যদি ক্ষতস্থান থেকে প্রচুর রক্তপাত হয়, তবে “রক্তক্ষরণ নিয়ন্ত্রণ” অংশে বর্ণিত পদ্ধতি অনুযায়ী প্রাথমিক চিকিৎসা দিতে হবে",
                   ),
                   icon: "fa-bandage",
                   color: "m18l7-care-cover",
@@ -13933,7 +13941,7 @@ const orbitItems = [
                               <section class="m18l7-symptoms-panel" data-aos="fade-right" data-aos-delay="50">
                                   <h3 class="m18l7-panel-title">
                                       <i class="fa-solid fa-triangle-exclamation"></i>
-                                      ${yhLang("Possible Symptoms", "কুকুরের কামড় থেকে নিম্নলিখিত রোগ সংক্রমণের এক বা একাধিক লক্ষণ দেখা দিতে পারেঃ")}
+                                      ${yhLang("Possible Symptoms", "কুকুরের কামড় থেকে রোগ সংক্রমণের এক বা একাধিক লক্ষণ দেখা দিতে পারেঃ")}
                                   </h3>
                                   ${renderSymptoms(dogBiteSymptoms)}
                               </section>
@@ -13984,7 +13992,7 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
                 "Pesticide poisoning (organophosphorus/OPC) is a common incident in Bangladesh. Toxic substances can enter the body in different ways, either intentionally or accidentally.",
-                "বাংলাদেশে কীটনাশকজনিত বিষক্রিয়া (অর্গানোফসফরাস/ওপিসি) একটি সাধারণ ঘটনা। বিভিন্ন ভাবে বিষাক্ত দ্রব্য ব্যক্তির শরীরে প্রবেশ করতে পারে যা ইচ্ছাকৃত বা অনিচ্ছাকৃত দুইভাবেই হতে পারে।"
+                "বাংলাদেশে কীটনাশকজনিত বিষক্রিয়া (অর্গানোফসফরাস/ওপিসি) একটি সাধারণ ঘটনা।  বিভিন্ন ভাবে বিষাক্ত দ্রব্য ব্যক্তির শরীরে প্রবেশ করতে পারে যা ইচ্ছাকৃত বা অনিচ্ছাকৃত দুইভাবেই হতে পারে।"
               );
 
               const signsHeading = yhLang("Signs and Symptoms of Poisoning:", "বিষক্রিয়ার লক্ষণ-চিহ্নঃ");
@@ -14036,7 +14044,7 @@ const orbitItems = [
 
               const followUp = yhLang(
                 "If poisoning is suspected, identify the toxic substance if possible and take the person to a doctor or hospital immediately. During this time, the following first aid steps may be used.",
-                "যদি মনে হয় কোন ব্যক্তি বিষক্রিয়ায় আক্রান্ত, তবে বিষাক্ত দ্রব্যটি চিহ্নিত করার চেষ্টা করতে হবে এবং তৎক্ষণাৎ চিকিৎসকের কাছে বা হাসপাতালে নিতে হবে। এই সময়ের মাঝে নিম্নলিখিত প্রাথমিক চিকিৎসা পদ্ধতি গুলো ব্যবহার করা যেতে পারে।"
+                "যদি মনে হয় কোন ব্যক্তি বিষক্রিয়ায় আক্রান্ত, তবে বিষাক্ত দ্রব্যটি চিহ্নিত করার চেষ্টা করতে হবে এবং তৎক্ষণাৎ চিকিৎসকের কাছে বা হাসপাতালে নিতে হবে।  এই সময়ের মাঝে প্রাথমিক চিকিৎসা পদ্ধতি গুলো ব্যবহার করা যেতে পারে।"
               );
 
               const careHeading = yhLang("First Aid for Poisoning", "বিষক্রিয়ার প্রাথমিক চিকিৎসা");
@@ -14079,7 +14087,7 @@ const orbitItems = [
 
               const caution = yhLang(
                 "Do NOT induce vomiting if acid, alkali, or any corrosive substance was swallowed (e.g., bleach, sulfuric acid, kerosene, petroleum).",
-                "অ্যাসিড, ক্ষার বা কোনো দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তিকে বমি করাবেন না (যেমন—ব্লিচ, সালফিউরিক অ্যাসিড, কেরোসিন, পেট্রোলিয়াম)।"
+                "অ্যাসিড, ক্ষার বা কোন দাহ্য বস্তু খেয়ে থাকলে আক্রান্ত ব্যক্তি কে বমি করানো যাবেনা, কারণ বমি করাতে গেলে তা শ্বাসনালীতে গিয়ে রোগীর মৃত্যুর কারন হতে পারে।"
               );
 
               const renderSigns = (items) =>
@@ -14141,7 +14149,6 @@ const orbitItems = [
                       </h3>
                       ${renderCare(careSteps)}
                       <div class="m18l8-warning" role="alert" data-aos="zoom-in" data-aos-delay="120">
-                        <h4 class="m18l8-warning-title mb-1"><i class="fa-solid fa-ban"></i> ${yhLang("সতর্কতা:", "সতর্কতা:")}</h2>
                         <p class="mb-0">${caution}</p>
                       </div>
                     </section>
@@ -14178,12 +14185,12 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
                 "Drowning is one of the leading causes of child deaths in Bangladesh. If you see a child or person drowning in a pond, lake, or river, immediately call for help. Extend a stick, bamboo, or rope towards the drowning person to help them reach safety. Once grasped, they can swim back to shore with assistance.",
-                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা। কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে। ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে। ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে।",
+                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা।  কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে। ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে।  ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে।",
               );
 
               const shallowTip = yhLang(
                 "In shallow water, you can enter the water to approach the drowning person. Always maintain at least 2 meters distance so they don't panic and grab you, potentially pulling you down.",
-                "যদি পুকুর বা জলাশয় অগভীর থাকে তবে পানিতে নেমে ডুবন্ত ব্যক্তির কাছে যাওয়া যেতে পারে। সবসময় ডুবন্ত ব্যক্তির কাছ থেকে কমপক্ষে ২ মিটার দূরে থাকতে হবে যেন ডুবন্ত ব্যক্তি কখনোই যাকে বাঁচাতে যায় তাকেই জাপটে ধরতে না পারে।",
+                "যদি পুকুর বা জলাশয় অগভীর থাকে তবে পানিতে নেমে ডুবন্ত ব্যক্তির কাছে যাওয়া যেতে পারে।  সবসময় ডুবন্ত ব্যক্তির কাছ থেকে কমপক্ষে ২ মিটার দূরে থাকতে হবে  যেন ডুবন্ত ব্যক্তি কখনোই যে  বাঁচাতে যায় তাকেই জাপটে ধরতে না পারে।",
               );
 
               const rescueHeading = yhLang(
@@ -14243,7 +14250,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Give 2 rescue breaths and 30 chest compressions. Continue CPR if needed",
-                    "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে। যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।",
+                    "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে।  যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।",
                   ),
                   icon: "fa-heart-pulse",
                   color: "m18l9-rescue-cpr",
@@ -14571,7 +14578,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Using the heel of your other hand, give 5 firm back blows between the shoulder blades.",
-                    "আপনার অন্য হাতের তালু দিয়ে ব্যক্তির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
+                    "অন্য হাতের তালু দিয়ে ব্যক্তির পিঠ বা কাঁধের মাঝ বরাবর ৫ বার সজোরে চাপড় দিতে হবে।",
                   ),
                   icon: "fa-hand",
                   color: "m18l11-first-backblow",
@@ -14606,7 +14613,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Hold the fist with the other hand and give 5 strong inward and upward abdominal thrusts.",
-                    "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।",
+                    "অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।",
                   ),
                   icon: "fa-arrow-up-right-dots",
                   color: "m18l11-follow-thrust",
@@ -14634,38 +14641,6 @@ const orbitItems = [
                   ),
                   icon: "fa-heart-pulse",
                   color: "m18l11-follow-cpr",
-                },
-                {
-                  text: yhLang(
-                    "Hold the fist with the other hand and give 5 strong inward and upward abdominal thrusts.",
-                    "প্রাথমিক চিকিৎসা প্রদানকারী তার অন্য হাত দিয়ে মুষ্টিবদ্ধ হাতটির উপরের অংশ ধরে ভেতরের দিকে ও নিচ থেকে উপরের দিকে ৫ বার সজোরে চাপ দিতে হবে।",
-                  ),
-                  icon: "fa-hand-fist",
-                  color: "m18l11-follow-thrust2",
-                },
-                {
-                  text: yhLang(
-                    "After each thrust, check if the object is expelled. If not, continue alternating back blows and abdominal thrusts until the object comes out or the person becomes unconscious.",
-                    "প্রতিটা চাপ দেওয়ার পর শ্বাসনালীতে আটকে থাকা বস্তুটি বের হয়েছে কিনা খেয়াল করতে হবে। যদি শ্বাসনালীতে আটকে থাকা বস্তুটি বের না হয়, তাহলে পর্যায়ক্রমে পিঠে চাপড় দেওয়া ও পেটে চাপ দেওয়ার প্রক্রিয়াটি চালিয়ে যেতে হবে, যতক্ষণ না বস্তুটি বের হয় অথবা আক্রান্ত ব্যক্তিটি অজ্ঞান হয়ে পড়ে।",
-                  ),
-                  icon: "fa-rotate-right",
-                  color: "m18l11-follow-repeat2",
-                },
-                {
-                  text: yhLang(
-                    "If the person is pregnant or obese, avoid abdominal thrusts; lean them forward and apply chest thrusts from lower to upper center chest.",
-                    "আক্রান্ত ব্যক্তি যদি গর্ভবতী হয় অথবা মোটা-সোটা হয় তবে পেটে চাপ দেওয়ার পরিবর্তে, ব্যক্তিকে সামনের দিকে ঝুঁকিয়ে বুকের মাঝ বরাবর নিচ থেকে উপরের দিকে চাপ দিতে হবে।",
-                  ),
-                  icon: "fa-shield-heart",
-                  color: "m18l11-follow-special2",
-                },
-                {
-                  text: yhLang(
-                    "If the person becomes unconscious, start CPR.",
-                    "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।",
-                  ),
-                  icon: "fa-kit-medical",
-                  color: "m18l11-follow-cpr2",
                 },
               ];
 
@@ -14698,8 +14673,18 @@ const orbitItems = [
                       </h3>
                       
                       ${renderList(firstGuidance)}
-                     
-                      <div class="m18l11-gallery-box" data-aos="zoom-in" data-aos-delay="120">
+
+                      <h3 class="m18l11-panel-title">
+                        <i class="fa-solid fa-lungs"></i>
+                        ${yhLang("If Object Does Not Come Out", "যদি বস্তুটি বের না হয় এবং শ্বাসকষ্ট বজায় থাকে")}
+                      </h3>
+                      ${renderList(followupText)}
+                      
+                    </section>
+
+                    <section class="m18l11-panel m18l11-panel-followup" data-aos="fade-left" data-aos-delay="40">
+                      
+                        <div class="m18l11-gallery-box" data-aos="zoom-in" data-aos-delay="120">
                         <div class="m18l11-gallery-grid">
                           ${[
                             "img/modu18/basic.jpg",
@@ -14709,22 +14694,13 @@ const orbitItems = [
                             .map(
                               (src) => `
                                 <figure class="m18l11-gallery-item mb-0">
-                                  <img src="${src}" alt="চোকিং প্রাথমিক চিকিৎসা" style="height: 400px;" class="img-fluid rounded img-zoom" />
+                                  <img src="${src}" alt="চোকিং প্রাথমিক চিকিৎসা" style="height: 450px;" class="img-fluid rounded img-zoom" />
                                 </figure>
                               `,
                             )
                             .join("")}
                         </div>
                       </div>
-                    </section>
-
-                    <section class="m18l11-panel m18l11-panel-followup" data-aos="fade-left" data-aos-delay="40">
-                      <h3 class="m18l11-panel-title">
-                        <i class="fa-solid fa-lungs"></i>
-                        ${yhLang("If Object Does Not Come Out", "যদি বস্তুটি বের না হয় এবং শ্বাসকষ্ট বজায় থাকে")}
-                      </h3>
-                      ${renderList(followupText)}
-
                       
                     </section>
                   </div>
