@@ -14737,7 +14737,7 @@ const orbitItems = [
                   descriptionEn:
                     "During adolescence, both boys and girls experience rapid weight and height growth and intellectual development. Therefore, adolescents need an adequate amount of nutritious and balanced food for proper growth. With correct nutrition, adolescents develop their intellect and abilities, improve concentration in studies, get better results, and increase work capacity.",
                   descriptionBn:
-                    "তারুণ্যেছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলশ্রুতিতে লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।",
+                    "তারুণ্যে ছেলে-মেয়ে উভয়েরই দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে।  তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন।  সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয় এবং ফলশ্রুতিতে লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতাও বৃদ্ধি পায়।",
                 },
                 {
                   iconClass: "fa-utensils",
@@ -14749,7 +14749,7 @@ const orbitItems = [
                   descriptionEn:
                     "Food is essential to keep the human body healthy and strong. Food refers to organic substances that play a role in building the human body, compensate for wear and tear, provide energy and build the body's disease resistance ability.",
                   descriptionBn:
-                    "মানবদেহকে সুস্থ-সবল রাখার জন্য খাদ্য অপরিহার্য। খাদ্য বলতে সেই সকল জৈব উপাদানকে বুঝায় যেগুলো মানবদেহ গঠনে ভূমিকা রাখে, ক্ষয়পূরণ করে, শক্তি বৃদ্ধসহ শরীরের রোগ প্রতিরোধ ক্ষমতা তৈরি করে।",
+                    "মানবদেহকে সুস্থ-সবল রাখার জন্য খাদ্য অপরিহার্য।  খাদ্য বলতে সেই সকল জৈব উপাদানকে বুঝায় যেগুলো মানবদেহ গঠনে ভূমিকা রাখে, ক্ষয়পূরণ করে, শক্তি বৃদ্ধসহ শরীরের রোগ প্রতিরোধ ক্ষমতা তৈরি করে।",
                 },
                 {
                   iconClass: "fa-apple-whole",
@@ -14761,7 +14761,7 @@ const orbitItems = [
                   descriptionEn:
                     "Nutrition is a process. In this process, food is digested after eating and complex food substances are broken down into simpler elements. The human body absorbs these simple elements. These nutrients provide the body with energy and proper growth, develop the mind and intellect, prevent diseases and ensure health.</br> Both boys and girls undergo normal physical and mental changes during adolescence. Rapid weight and height increase and intelligence develops. Therefore, it is necessary to consume nutritious and balanced food at this time for proper growth of adolescents. Growing up with proper nutrition, adolescents develop talent and intelligence. Attention in studies, good results and ability to work increase.",
                   descriptionBn:
-                    "পুষ্টি হলো একটি প্রক্রিয়া। এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙ্গে সরল উপাদানে পরিণত হয়। মানবদেহ এসব সরল উপাদান শোষণ করে নেয়। এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্থতা নিশ্চিত করে। </br> তারুণ্যেছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়। দ্রুত ওজন ও উচ্চুার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে। তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয়। লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
+                    "পুষ্টি হলো একটি প্রক্রিয়া।  এ প্রক্রিয়াতে খাদ্যবস্তু খাওয়ার পরে পরিপাক হয় এবং জটিল খাদ্য উপাদানগুলো ভেঙ্গে সরল উপাদানে পরিণত হয়।  মানবদেহ এসব সরল উপাদান শোষণ করে নেয়।  এসব খাদ্য উপাদান মানবদেহের শক্তি ও যথাযথ বৃদ্ধি সাধন করে, মেধা ও বুদ্ধির বিকাশ ঘটায়, রোগ প্রতিরোধ করে এবং সুস্থতা নিশ্চিত করে। </br>তারুণ্যে ছেলে-মেয়ে উভয়েরই স্বাভাবিক শারীরিক ও মানসিক পরিবর্তন হয়।  দ্রুত ওজন ও উচ্চতার বৃদ্ধি এবং বুদ্ধির বিকাশ ঘটে।  তাই তরুন-তরুনীদের সঠিক বৃদ্ধির জন্য এসময় পরিমান মত পুষ্টিকর ও সুষম খাবার গ্রহণ করা প্রয়োজন। সঠিক পুষ্টি নিয়ে বেড়ে উঠলে তরুন-তরুনীদের মেধা ও বুদ্ধির বিকাশ হয়।  লেখাপড়ায় মনোযোগ, ভালো ফলাফল এবং কাজ করার সক্ষমতা বৃদ্ধি পায়।",
                 },
                 {
                   iconClass: "fa-carrot",
@@ -14773,7 +14773,7 @@ const orbitItems = [
                   descriptionEn:
                     "Food that produces heat and energy, builds and develops the body, and keeps the body strong and active is called nutritious food. Food and nutrition are interrelated. Every food must be nutritious and safe. Regular intake of nutritious food keeps body and mind healthy, brings cheerfulness and increases concentration in studies and work. Lack of proper nutrition reduces disease resistance and increases the risk of diseases.",
                   descriptionBn:
-                    "যেসব খাদ্য খেলে শরীরে তাপ ও শক্তি উৎপাদিত হয়, দেহের গঠন ও বৃদ্ধি হয়, শরীর সবল, কর্মক্ষম থাকে, তাকে পুষ্টিকর খাদ্য বলে। খাদ্য ও পুষ্টি একে অপরের সাথে জড়িত। প্রতিটি খাদ্য অবশ্যই পুষ্টিকর ও নিরাপদ হতে হবে। নিয়মিত পুষ্টিকর খাদ্য গ্রহণ করলে শরীর ও মন ভালো থাকে, মনে প্রফুল্লতা আসে এবং পড়াশোনা ও কাজে মনোযোগ বাড়ে। মনে রাখতে হবে পুষ্টিকর খাদ্য গ্রহণ না করলে রোগ প্রতিরোধ ক্ষমতা কমে যায় এবং বিভিন্ন রোগে আক্রান্ত হওয়ার ঝুঁকি বেড়ে যায়।",
+                    "যেসব খাদ্য খেলে শরীরে তাপ ও শক্তি উৎপাদিত হয়, দেহের গঠন ও বৃদ্ধি হয়, শরীর সবল, কর্মক্ষম থাকে, তাকে পুষ্টিকর খাদ্য বলে। খাদ্য ও পুষ্টি একে অপরের সাথে জড়িত। প্রতিটি খাদ্য অবশ্যই পুষ্টিকর ও নিরাপদ হতে হবে। নিয়মিত পুষ্টিকর খাদ্য গ্রহণ করলে শরীর ও মন ভালো থাকে, মনে প্রফুল্লতা আসে এবং পড়াশোনা ও কাজে মনোযোগ বাড়ে।  মনে রাখতে হবে পুষ্টিকর খাদ্য গ্রহণ না করলে রোগ প্রতিরোধ ক্ষমতা কমে যায় এবং বিভিন্ন রোগে আক্রান্ত হওয়ার ঝুঁকি বেড়ে যায়।",
                 },
                 {
                   iconClass: "fa-ruler-vertical",
@@ -14785,7 +14785,7 @@ const orbitItems = [
                   descriptionEn:
                     "According to the World Health Organization, there is an ideal standard for body weight and height growth with age. If a child or adolescent has lower weight compared to height, or lower weight or height compared to their age, it is identified as malnutrition.",
                   descriptionBn:
-                    "বিশ্ব স্বাস্থ্য সংস্থা অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে। যদি কোন শিশু বা তরুন-তরুনীদের উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
+                    "বিশ্ব স্বাস্থ্য সংস্থা রেফারেন্স অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে।  যদি কোন শিশু বা তরুন-তরুনীদের উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
                 },
                 {
                   iconClass: "fa-calculator",
@@ -14797,7 +14797,7 @@ const orbitItems = [
                   descriptionEn:
                     "Body Mass Index (BMI) is the ratio of a person's weight to the square of their height. It is an important method for determining nutritional status. To calculate BMI, weight must be in kilograms and height in meters. BMI is calculated by dividing weight by the square of height.",
                   descriptionBn:
-                    "কোন ব্যক্তির ওজন এবং উচ্চতার হারের বর্গের অনুপাতই হলো বি.এম.আই। এটি পুষ্টিগত অবস্থা নির্ণয়ের একটি উল্লেখযোগ্য পদ্ধতি। বি.এম.আই নির্ণয় করতে ব্যক্তির ওজন কিলোগ্রাম এককে ও উচ্চতা মিটার এককে জানা প্রয়োজন। ওজন কে উচ্চতার বর্গ দিয়ে ভাগ করলেই বি.এম.আই. পাওয়া যাবে।",
+                    "কোন ব্যক্তির ওজন এবং উচ্চতার হারের বর্গের অনুপাতই হলো বি.এম.আই।  এটি পুষ্টিগত অবস্থা নির্ণয়ের একটি উল্লেখযোগ্য পদ্ধতি।  বি.এম.আই নির্ণয় করতে ব্যক্তির ওজন কিলোগ্রাম এককে ও উচ্চতা মিটার এককে জানা প্রয়োজন।  ওজন কে উচ্চতার বর্গ দিয়ে ভাগ করলেই বি.এম.আই. পাওয়া যাবে।",
                   formulaEn: "BMI = Weight (kg) / Height (m)²",
                   formulaBn: "বি.এম.আই. = ওজন (কিলোগ্রাম) / উচ্চতা (মিটার)²",
                 },
@@ -15158,7 +15158,7 @@ const orbitItems = [
                           <thead>
                             <tr>
                               <th><span>${yhLang("Age", "বয়স<br>(বছর)")}</span></th>
-                              <th><span>${yhLang("Low", "সল্প পুষ্টি<br>(বি.এম.আই)")}</span></th>
+                              <th><span>${yhLang("Low", "সল্প  অপুষ্টি<br>(বি.এম.আই)")}</span></th>
                               <th><span>${yhLang("Normal", "স্বাভাবিক পুষ্টি <br> (বি.এম.আই)")}</span></th>
                               <th><span>${yhLang("Overweight", "সল্প মুটিয়ে যাওয়া <br>(বি.এম.আই)")}</span></th>
                             </tr>
@@ -15194,7 +15194,7 @@ const orbitItems = [
                           <thead>
                             <tr>
                               <th><span>${yhLang("Age", "বয়স<br>(বছর)")}</span></th>
-                              <th><span>${yhLang("Low", "সল্প পুষ্টি<br>(বি.এম.আই)")}</span></th>
+                              <th><span>${yhLang("Low", "সল্প  অপুষ্টি<br>(বি.এম.আই)")}</span></th>
                               <th><span>${yhLang("Normal", "স্বাভাবিক পুষ্টি <br> (বি.এম.আই)")}</span></th>
                               <th><span>${yhLang("Overweight", "সল্প মুটিয়ে যাওয়া <br>(বি.এম.আই)")}</span></th>
                             </tr>
@@ -15299,7 +15299,7 @@ const orbitItems = [
                   name: yhLang("Proteins", "আমিষ (প্রোটিন)"),
                   sources: yhLang(
                     "Animal: fish, meat, liver, milk, egg, dried fish; Plant: nuts, seeds, lentils, sesame/flax",
-                    "প্রাণীজ: মাছ, মাংস, কলিজা, দুধ, ডিম, শুঁটকি মাছ; উদ্ভিদজ: বাদাম, বিভিন্ন ধরনের বীজ, বিভিন্ন ধরনের ডাল, তিল/তিসি",
+                    "<b>প্রাণীজ:</b> মাছ, মাংস, কলিজা, দুধ, ডিম, শুঁটকি মাছ;<br><b>উদ্ভিদজ:</b> বাদাম, বিভিন্ন ধরনের বীজ, বিভিন্ন ধরনের ডাল, তিল/তিসি",
                   ),
                   functions: yhLang(
                     "Promotes growth and repairs body tissues",
@@ -15310,11 +15310,19 @@ const orbitItems = [
                 },
                 {
                   num: "৪",
-                  name: yhLang("Vitamins and Minerals", "ভিটামিন ও খনিজ লবণ"),
+                  name: yhLang("Vitamins and Minerals", "ভিটামিন"),
+                  sources: yhLang("Vitamins and Minerals", `<b>প্রাণীজ:</b> দুধ, মাছ, মাংস, কলিজা<br>`),
+                  functions: yhLang("Vitamins and Minerals", "পরিপাক ও পুষ্টিসাধনের প্রক্রিয়াকে সহায়তা করে। "),
+                  icon: "fa-pills",
+                  color: "vitamins",
+                },
+                {
+                  num: "৫",
+                  name: yhLang("Vitamins and Minerals", "খনিজ লবণ"),
                   sources: yhLang(
                     "Animal and plant foods including milk, fish, meat, liver, nuts, seeds, leafy vegetables and fruits",
                     `
-                      <b>প্রাণীজ:</b> দুধ, মাছ, মাংস, কলিজা<br>
+                      
 <b>উদ্ভিদ :</b> বাদাম, বিভিন্ন ধরনের বীজ, শাক, সবজি ও ফলমূল<br>
 <b>ভিটামিন ‘এ’ : </b>বিভিন্ন ধরনের রঙিন শাক-সবজি,
 লালশাক, গাজর, মিষ্টি কুমড়া<br>
@@ -15329,9 +15337,9 @@ const orbitItems = [
                   ),
                   functions: yhLang(
                     "Supports digestion, immunity, vision, bone strength and disease prevention",
-                    `পরিপাক ও পুষ্টিসাধনের প্রক্রিয়াকে সহায়তা করে। <br>
+                    `
 রোগ প্রতিরোধ ক্ষমতা তৈরি করে।<br>
-শরীরকে রোগজীবাণুথেকে রক্ষা করে।<br>
+শরীরকে রোগজীবাণু থেকে রক্ষা করে।<br>
 রাতকানা রোগ প্রতিরোধ করে ও চামড়া মসৃণ করে।<br>
 হাড় ও দাঁতের গঠন মজবুত
 করে, রিকেট প্রতিরোধ করে।<br>
@@ -15345,7 +15353,7 @@ const orbitItems = [
                   color: "vitamins",
                 },
                 {
-                  num: "৫",
+                  num: "৬",
                   name: yhLang("Water", "পানি"),
                   sources: yhLang(
                     "Drinking water, liquids, beverages and water in foods",
@@ -15373,7 +15381,7 @@ const orbitItems = [
                     <table class="m19l3-nutrition-table">
                       <thead>
                         <tr>
-                          <th class="col-num"><h3>${yhLang("No.", "নং")}</h3></th>
+                          <th class="col-num"><h3>${yhLang("", "")}</h3></th>
                           <th class="col-nutrient"><h3>${yhLang("Nutrient", "পুষ্টি উপাদান")}</h3></th>
                           <th class="col-sources"><h3>${yhLang("Sources", "খাদ্য উৎস")}</h3></th>
                           <th class="col-functions"><h3>${yhLang("Functions", "শরীরের প্রধান কাজসমূহ")}</h3></th>
@@ -15409,7 +15417,7 @@ const orbitItems = [
             id: "ch19-lesson-5",
             title: yhLang(
               "Importance of Safe, Nutritious Food and Daily Meal Plan",
-              "তারুণ্যেসময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
+              "তারুণ্যে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
             ),
             icon: "fa-utensils",
             gradientClass: "bg-gradient-rose",
@@ -15447,7 +15455,7 @@ const orbitItems = [
                   growth: "",
                   immunity: yhLang(
                     "Any local seasonal fruit (mango, jackfruit, papaya, pineapple, etc.)",
-                    "যেকোনো দেশি মৌসুমী ফল (আম, কাঁঠাল, পেঁপে, আনারস ইত্যাদি)",
+                    "যেকোনো দেশি মৌসুমী ফল (আম, কাঁঠাল, পেঁপে, আনারস ইত্যাদি)।ঋতুভেদে যেসব ফল সহজেই আমরা পাই।",
                   ),
                 },
                 {
@@ -15473,7 +15481,7 @@ const orbitItems = [
                   energy: "",
                   growth: yhLang(
                     "1 glass milk OR any milk-based dessert (pudding, vermicelli, rice pudding, cake, yogurt, etc.)",
-                    "১ গ্লাস দুধ অথবা দুধ দিয়ে তৈরি যেকোনো ঘন খাবার (ফিরনি, সেমাই, পায়েস, পিঠা, দই ইত্যাদি)",
+                    "১ গ্লাস দুধ অথবা দুধ দিয়ে তৈরি ঘন যেকোনো খাবার (ফিরনি/সেমাই/পায়েস/ পিঠা/দই ইত্যাদি)",
                   ),
                   immunity: yhLang(
                     "Any local seasonal fruit available",
@@ -15528,7 +15536,7 @@ const orbitItems = [
                       <i class="fa-solid fa-utensils"></i>
                       ${yhLang(
                         "Daily Meal Plan for Adolescents",
-                        "তারুণ্যেসময়ে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
+                        "তারুণ্যে নিরাপদ ও পুষ্টিসমৃদ্ধ খাবারের গুরুত্ব এবং প্রতিদিনের খাদ্য তালিকার নমুনা",
                       )}
                     </h2>
 
@@ -15545,21 +15553,21 @@ const orbitItems = [
                               <h3>${yhLang("Energy Foods", "তাপ ও শক্তি উৎপাদনকারী খাদ্য")}
                               <small>${yhLang(
                                 "Carbohydrates: rice, bread, flattened rice, puffed rice, potato",
-                                "শর্করা: ভাত, রুটি, চিড়া, মুড়ি, আলু",
+                                "(শর্করা: ভাত, রুটি, চিড়া, মুড়ি, আলু)",
                               )}</small></h3>
                             </th>
                             <th>
                               <h3>${yhLang("Growth Foods", "শরীরের ক্ষয়পূরণ ও বৃদ্ধিকারক খাদ্য")}
                               <small>${yhLang(
                                 "Proteins: egg, fish, meat, milk, lentils",
-                                "আমিষ: ডিম, মাছ, মাংস, দুধ, ডাল",
+                                "(আমিষ: ডিম, মাছ, মাংস, দুধ, ডাল)",
                               )}</small></h3>
                             </th>
                             <th>
                               <h3>${yhLang("Immunity Foods", "রোগ প্রতিরোধকারী খাদ্য")}
                               <small>${yhLang(
                                 "Vitamins and minerals: vegetables and seasonal fruits",
-                                "ভিটামিন ও খনিজ: সবজি ও দেশি মৌসুমী ফল",
+                                "(ভিটামিন ও খনিজ: সবজি ও দেশি মৌসুমী ফল)",
                               )}</small></h3>
                             </th>
                           </tr>
@@ -15575,7 +15583,7 @@ const orbitItems = [
                      </div>
                      <div class="col-md-5">
                        <figure class="glass-card p-1 h-100 mb-0 text-center">
-                          <img src="img/modu19/food.jpg" alt="" style="height: 650px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <img src="img/modu19/food.png" alt="" style="height: 650px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                      <div>
                   </div>
@@ -15588,7 +15596,7 @@ const orbitItems = [
             id: "ch19-lesson-6",
             title: yhLang(
               "Adolescent Food Diversity",
-              "তারুণ্যেখাদ্য বৈচিত্র্য",
+              "তারুণ্যে খাদ্য বৈচিত্র্য",
             ),
             icon: "fa-seedling",
             gradientClass: "bg-gradient-mint",
@@ -15655,7 +15663,12 @@ const orbitItems = [
                   "প্রতিটি খাবারকে যথাসম্ভব প্রাকৃতিক অবস্থায় খেলেই সর্বোচ্চ পুষ্টি পাওয়া যায়। যেমন: ফলের জুস না খেয়ে তাজা ফল খেলে সর্বোচ্চ পুষ্টি পাওয়া যায়।",
                 ),
               ];
-
+              const formatIndex = (value) => {
+              const bnDigits = ["০","১","২","৩","৪","৫","৬","৭","৮","৯"];
+              return String(value)
+                .padStart(2, "0")
+                .replace(/\d/g, d => bnDigits[d]);
+            };
               const renderPoints = () =>
                 points
                   .map(
@@ -15663,7 +15676,7 @@ const orbitItems = [
                       <div class="m19l5-point-card m19l5-point-${idx + 1}" data-aos="fade-up" data-aos-delay="${80 + idx * 60}">
                         <div class="m19l5-point-header">
                           <div class="m19l5-point-icon">
-                            <span class="m19l5-point-number">${idx + 1}</span>
+                            <h3 class="m19l5-point-number">${formatIndex(idx + 1)}</h3>
                           </div>
                           <div style="flex: 1;">
                             <h3 class="m19l5-point-title">${pointLabels[idx]}</h3>
@@ -15686,13 +15699,9 @@ const orbitItems = [
                       <i class="fa-solid fa-leaf"></i>
                       ${yhLang(
                         "Adolescent Food Diversity",
-                        "তারুণ্যেখাদ্য বৈচিত্র্য",
+                        "তারুণ্যে খাদ্য বৈচিত্র্য",
                       )}
                     </h2>
-                    <p class="m19l5-subtitle">${yhLang(
-                      "Eating a variety of nutritious foods ensures proper growth and development",
-                      "বিভিন্ন ধরনের পুষ্টিকর খাবার খাওয়া সঠিক বৃদ্ধি এবং বিকাশ নিশ্চিত করে",
-                    )}</p>
                   </div>
 
                   <div class="m19l5-points-grid">
@@ -15724,7 +15733,7 @@ const orbitItems = [
                   ),
                   details: yhLang(
                     "Fish, meat, liver, eggs, dark green leafy vegetables, grains, peas, beans, yard-long beans, nuts, soybeans, molasses, and dried fruits contain a good amount of iron.",
-                    "মাছ, মাংস, কলিজা, ডিম, ঘন সবুজ পাতাজাতীয় শাকসবজি, দানাজাতীয় শস্য, মটরশুঁটি, সিম, বরবটি, বাদাম, সয়াবিন, গুড় ও শুকনা ফলে যথেষ্ট পরিমাণে আয়রন থাকে।",
+                    "মাছ, মাংস, কলিজা, ডিম, ঘন সবুজ পাতাজাতীয় শাকসবজি, দানাজাতীয় শস্য, মটরশুঁটি, শিম, বরবটি, বাদাম, সয়াবিন, গুড় ও শুকনা ফলে যথেষ্ট পরিমাণে আয়রন থাকে।",
                   ),
                 },
                 {
@@ -15750,7 +15759,7 @@ const orbitItems = [
                   ),
                   details: yhLang(
                     "Almost all types of fish contain high levels of magnesium. Whole wheat bread, white rice, green leafy vegetables, spinach, beans, bean seeds, yard-long beans, peas, bananas, pumpkin, and lettuce leaves are major sources of magnesium. Cashew nuts and peanuts are also excellent sources of magnesium.",
-                    "প্রায় সব ধরনের মাছেই উচ্চমাত্রায় ম্যাগনেসিয়াম আছে। গমের রুটি, সাদা ভাত, সবুজ পাতাযুক্ত শাকসবজি, পালংশাক, শিম, শিমের বিচি, বরবটি, মটরশুঁটি, কলা, কুমড়া, লেটুস পাতা ম্যাগনেসিয়ামের অন্যতম প্রধান উৎস। কাজুবাদাম, চীনাবাদাম-এগুলো ম্যাগনেসিয়ামের উৎকৃষ্ট উৎস।",
+                    "প্রায় সব ধরনের মাছেই উচ্চমাত্রায় ম্যাগনেসিয়াম আছে। গমের রুটি, সাদা ভাত, সবুজ পাতাযুক্ত শাকসবজি, পালংশাক, শিম, শিমের বিচি, বরবটি, মটরশুঁটি, কলা, কুমড়া, লেটুস পাতা ম্যাগনেসিয়ামের অন্যতম প্রধান উৎস। <br>কাজুবাদাম, চীনাবাদাম-এগুলো ম্যাগনেসিয়ামের উৎকৃষ্ট উৎস।",
                   ),
                 },
                 {
@@ -15773,7 +15782,7 @@ const orbitItems = [
                   ),
                   details: yhLang(
                     "Vitamin B1 rich foods: milk, eggs, sea fish, cod liver, liver, chicken, chickpeas, spinach, peas, ripe bananas, etc. Vitamin D rich foods: fish such as vetki or coral fish, tilapia, catfish, and dried fish contain vitamin D. Milk is another excellent source of vitamin D. Beef and mutton liver also contain vitamin D. Eggs contain a high amount of vitamin D. People with high blood pressure should be cautious when consuming egg yolk. Grains and mushrooms also contain vitamin D. Sunlight is one of the best sources of vitamin D. Sunlight from 10 AM to 3 PM is most effective. Sitting in the sun for 5 minutes to half an hour twice a week can provide many benefits.",
-                    "ভিটামিন বি-১ সমৃদ্ধ খাবার: দুধ, ডিম, সামুদ্রিক মাছ, কড লিভার, কলিজা, মুরগি, ছোলা, পালংশাক, মটরশুঁটি, পাকা কলা ইত্যাদি। ভিটামিন ডি সমৃদ্ধ খাবার: ভেটকি বা কোরাল মাছ, তেলাপিয়া, মাগুর ও শুঁটকি মাছে ভিটামিন ডি আছে। ভিটামিন ডি-এর অপর একটি চমৎকার উৎস হচ্ছে দুধ। গরু ও খাসির মাংসের কলিজায় ভিটামিন ডি আছে। ডিমে অতিরিক্ত পরিমাণে ভিটামিন ডি আছে। যাদের উচ্চ রক্তচাপ আছে, তাদের ডিমের কুসুম খাওয়ার ক্ষেত্রে সতর্ক থাকতে হবে। শস্যদানায় ও মাশরুমে ভিটামিন ডি আছে। রোদ ভিটামিন ডি-এর অন্যতম উৎস। সকাল ১০টা থেকে বিকেল ৩টা পর্যন্ত রোদ সবচেয়ে ভালো। পাঁচ মিনিট থেকে আধাঘণ্টা পর্যন্ত সপ্তাহে দুবার রোদে বসলে অনেক উপকার পাওয়া যায়।",
+                    "<b>ভিটামিন বি-১ সমৃদ্ধ খাবার: </b>দুধ, ডিম, সামুদ্রিক মাছ, কড লিভার, কলিজা, মুরগি, ছোলা, পালংশাক, মটরশুঁটি, পাকা কলা ইত্যাদি। <br><b>ভিটামিন ডি সমৃদ্ধ খাবার: </b>ভেটকি বা কোরাল মাছ, তেলাপিয়া, মাগুর ও শুঁটকি মাছে ভিটামিন ডি আছে। ভিটামিন ডি-এর অপর একটি চমৎকার উৎস হচ্ছে দুধ। গরু ও খাসির মাংসের কলিজায় ভিটামিন ডি আছে। ডিমে অতিরিক্ত পরিমাণে ভিটামিন ডি আছে। যাদের উচ্চ রক্তচাপ আছে, তাদের ডিমের কুসুম খাওয়ার ক্ষেত্রে সতর্ক থাকতে হবে। শস্যদানায় ও মাশরুমে ভিটামিন ডি আছে। রোদ ভিটামিন ডি-এর অন্যতম উৎস। সকাল ১০টা থেকে বিকেল ৩টা পর্যন্ত রোদ সবচেয়ে ভালো। পাঁচ মিনিট থেকে আধাঘণ্টা পর্যন্ত সপ্তাহে দুবার রোদে বসলে অনেক উপকার পাওয়া যায়।",
                   ),
                 },
               ];
@@ -15824,7 +15833,7 @@ const orbitItems = [
                     <div class="m19l7-info-text">
                       <span>${yhLang(
                         "During menstruation, blood loss from the body can lead to malnutrition and anemia. To compensate for this deficiency, it is necessary to eat iron, calcium, magnesium, fiber and vitamin-rich foods along with normal food. These foods help to stay healthy and strong during menstruation.",
-                        "মাসিকের সময় দেহ থেকে রক্তক্ষরণ হয়, ফলে পুষ্টিহীনতা ও রক্তস্বল্পতা দেখা দিতে পারে। এই ঘাটতি পূরণের জন্য স্বাভাবিক খাবারের পাশাপাশি আয়রন, ক্যালসিয়াম, ম্যাগনেসিয়াম, আঁশযুক্ত ও ভিটামিনসমৃদ্ধ খাবার খাওয়া দরকার। এসব খাবার মাসিক চলাকালীন সময় সুস্থ ও সবল রাখতে সাহায্য করে।",
+                        "মাসিকের সময় দেহ থেকে রক্তক্ষরণ হয়, ফলে পুষ্টিহীনতা ও রক্তস্বল্পতা দেখা দিতে পারে। এই ঘাটতি পূরণের জন্য স্বাভাবিক খাবারের পাশাপাশি আয়রন, ক্যালসিয়াম, ম্যাগনেসিয়াম, আঁশযুক্ত ও ভিটামিনসমৃদ্ধ খাবার খাওয়া দরকার। এসব খাবার মাসিক চলাকালীন সময় দেহকে সুস্থ ও সবল রাখতে সাহায্য করে।",
                       )}</span>
                     </div>
                   </div>
@@ -16064,15 +16073,17 @@ const orbitItems = [
                   </section>
 
                   <section class="m19l9-section m19l9-section-c" data-aos="fade-up" data-aos-delay="60">
-                    <h3 class="m19l9-h3"><i class="fa-solid fa-images"></i>${yhLang("Nutrition Cycle Diagrams", "পুষ্টি চক্র চিত্র")}</h3>
                     <div class="m19l9-gallery">
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="80">
+                      <h3 class="m19l9-h3"><i class="fa-solid fa-images"></i>${yhLang("Nutrition Cycle Diagrams", "পুষ্টি চক্র")}</h3>
                         <img src="img/modu19/pusti1.png" alt="পুষ্টি সচেতনতা" style="height: 480px;" class="img-fluid rounded img-zoom" />
                       </figure>
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <h3 class="m19l9-h3"><i class="fa-solid fa-images"></i>${yhLang("Nutrition Cycle Diagrams", "অপুষ্টি চক্র")}</h3>
                         <img src="img/modu19/pusti2.png" style="height: 480px;" alt="তারুন্য কালীনপুষ্টি" class="img-fluid rounded img-zoom" />
                       </figure>
                     </div>
+
                   </section>
                 </div>
               `;
