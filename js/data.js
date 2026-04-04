@@ -17390,12 +17390,12 @@ const orbitItems = [
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius: 14px; padding: 9px; box-shadow: 0 5px 18px rgba(233, 30, 99, 0.12);">
                     <h3 style="display: flex; align-items: center; margin-bottom: 10px; color: #2856ff; font-size: 1em;">
                       <i class="fa-solid fa-lightbulb" style="margin-right: 8px; font-size: 16px; color: #f06292;"></i>
-                      ${yhLang("Potentially Vulnerable Period", "সম্ভাবনাময় সময়")}
+                
                     </h3>
                     <p class="mb-2" style="font-size: 0.92em;">
                     ${yhLang(
                       "Adolescence is a time full of potential, but it is also a period of vulnerability. During this stage, young people begin to develop sexual feelings and their interest in the opposite sex increases. They become capable of reproduction, but most adolescents cannot ensure their own protection due to lack of proper information. As a result, they may be encouraged to take various risks and, under the influence of wrong friends, may sometimes engage in risky and harmful behaviors.",
-                      "তারুণ্য একটি সম্ভাবনাময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যে তরুন-তরুনীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে। তাদের প্রজননক্ষমতা হয়, কিন্তু অধিকাংশ তরুন-তরুনী সঠিক তথ্যের অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না। ফলে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে প্ররোচিত হয় এবং ভুল বন্ধু-বান্ধবের প্রভাবে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর আচরণ করে বসে।",
+                      "তারুন্য একটি সম্ভাবনময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মেধ্য তরুণ-তরুণীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে।  তারা প্রজননক্ষম হয়, কিন্তু অধিকাংশ রুণ-তরুণী সঠিক তেথ্যর অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না।  এসময়ে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে উৎসুক হয়ে উঠে এবং একই সাথে বন্ধু-বান্ধবদের দ্বারা প্রভাবিত হয়ে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর অভ্যাসে সে জড়িয়ে পড়ে। ",
                     )}
                   </p>
                   </div>
@@ -17404,7 +17404,7 @@ const orbitItems = [
                     <p class="mb-0" style="font-size: 0.92em;">
                       ${yhLang(
                         "This risk is not limited to ordinary adolescents; young people with special physical and mental needs are also in a highly vulnerable situation. To reduce their risks, it is essential for service providers to offer them special care and counseling.",
-                        "এটা শুধুমাত্র সাধারণ তরুন-তরুনীদের নয়, বিশেষ শারীরিক ও মানসিক চাহিদাসম্পন্ন তরুন-তরুনীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে। তাদের ঝুঁকি কমানোর জন্য সেবাদানকারীদের বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।",
+                        "শুধমাত্রু সাধারণ তরুণ-তরুণীরাই  নয়, বিশেষ শারীরিক ও মানসিক চাহিদা সম্পন্ন তরুণ-তরুণীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে।  তাদের ঝুঁকি কমানোর জন্য বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।",
                       )}
                     </p>
                   </div>
@@ -17437,7 +17437,7 @@ const orbitItems = [
                   color: "#2856ff",
                   text: yhLang(
                     "Adolescents who are trafficked or forced into sex work",
-                    "পাচার বা জোরপূর্বক যৌনকর্ম হওয়া তরুন-তরুনী;",
+                    "পাচার বা জোরপূর্বক যৌনকর্মী হওয়া তরুণ-তরুণী;",
                   ),
                 },
                 {
@@ -17499,7 +17499,7 @@ const orbitItems = [
                   color: "#ff5722",
                   text: yhLang(
                     "Living with divorced parents or stepfather/stepmother",
-                    "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী",
+                    "তালাকপ্রাপ্ত বাবা/মা বা সৎ বাবা/মায়ের সাথে বসবাসকারী তরুণ-তরুণীরা ",
                   ),
                 },
                 {
@@ -17515,7 +17515,7 @@ const orbitItems = [
                   color: "#ff9800",
                   text: yhLang(
                     "Adolescents living in slums, homeless adolescents, street children, or extremely poor adolescents",
-                    "বস্তিতে বসবাস করে এমন তরুন-তরুনী অথবা যে যার কোনো নির্দিষ্ট বাসস্থান বা আবাস নেই বা যার বেঁচে থাকার কোনো সুস্পষ্ট উপায় নেই (পথশিশু বা রাস্তায় কাজ করে এমন তরুন-তরুনী) অথবা অতি দরিদ্র তরুন-তরুনী",
+                    "বস্তিতে বসবাস করে এমন তরুন-তরুনী অথবা যার কোনো নির্দিষ্ট বাসস্থান বা আবাস নেই বা যার বেঁচে থাকার কোনো সুস্পষ্ট উপায় নেই (পথশিশু বা রাস্তায় কাজ করে এমন তরুন-তরুনী) অথবা অতি দরিদ্র তরুন-তরুনী",
                   ),
                 },
                 {
@@ -17547,7 +17547,7 @@ const orbitItems = [
                   color: "#607d8b",
                   text: yhLang(
                     "Adolescents engaged in hazardous work such as bus/tempo helper, welding, electrical, boiler, tannery work, bidi making, begging, or other harmful activities",
-                    "ঝুঁকিপূর্ণ কাজ, যেমন—বাস/টেম্পুর হেল্পার, লেদ মেশিন/ওয়েলডিং/ইলেকট্রিক/বয়লার/ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভিক্ষাবৃত্তি বা শিশুর কল্যাণের বিরোধী কোনো কাজে জড়িত",
+                    "ঝুঁকিপূর্ণ কাজ, যেমন—বাস/টেম্পুর হেল্পার, লেদ মেশিন/ওয়েলডিং/ইলেকট্রিক/বয়লার/ট্যানারির কাজ, বিড়ি বানানোর কাজ অথবা ভিক্ষাবৃত্তি বা কল্যাণের বিরোধী কোনো কাজে জড়িত",
                   ),
                 },
                 {
@@ -17571,7 +17571,7 @@ const orbitItems = [
                   color: "#e53935",
                   text: yhLang(
                     "Children with abnormal behavioral disorders due to drugs or other causes",
-                    "যে শিশুর মাদক বা অন্য কোনো কারণে অস্বাভাবিক আচরণগত ব্যাধি হয়েছে",
+                    "যে তরুণ-তরুণীর মাদক বা অন্য কোনো কারণে অস্বাভাবিক আচরণগত ব্যাধি হয়েছে",
                   ),
                 },
                 {
@@ -17579,7 +17579,7 @@ const orbitItems = [
                   color: "#c62828",
                   text: yhLang(
                     "Children affected or infected with HIV/AIDS",
-                    "যে শিশু এইচআইভি–এইডসে আক্রান্ত বা ক্ষতিগ্রস্ত",
+                    "যে তরুণ-তরুণী এইচআইভি-এইডসে আক্রান্ত বা ক্ষতিগ্রস্ত",
                   ),
                 },
                 {
@@ -17595,7 +17595,7 @@ const orbitItems = [
                   color: "#455a64",
                   text: yhLang(
                     "Children considered by the juvenile court or board to require special protection, care, and development",
-                    "যে শিশুকে শিশু আদালত বা বোর্ড বিশেষ সুরক্ষা, যত্ন ও উন্নয়নের প্রয়োজন রয়েছে বলে বিবেচনা করে",
+                    "যে তরুণ-তরুণী অসৎ সঙ্গীতে জড়িত, বা যার নৈতিক অবক্ষয় ঘটতে পারে বা যে অপরাধজগতে প্রবেশের ঝুঁকিতে আছে",
                   ),
                 },
               ];
@@ -17616,7 +17616,7 @@ const orbitItems = [
                 <div class="lesson-slide">
                   <h2 class="slide-title gradient-text mb-1" data-aos="fade-up" style="display: flex; align-items: center;">
                     <i class="fa-solid fa-triangle-exclamation" style="color: #f44336; margin-right: 8px; font-size: 1em;"></i>
-                    ${yhLang("Who are the at-risk youth ?", "ঝুঁকিপূর্ণ তরুণ-তরুণীরা কারা ?")}
+                    ${yhLang("Who are the at-risk youth ?", "ঝুঁকিপূর্ণ তরুণ-তরুণী কারা ?")}
                   </h2>
                   
                   <div class="modern-card glass-card" data-aos="fade-up" data-aos-delay="40" style="border-radius: 14px; padding: 8px; box-shadow: 0 6px 18px rgba(255, 152, 0, 0.14);">
@@ -17692,7 +17692,7 @@ const orbitItems = [
                   color: "#f57c00",
                   text: yhLang(
                     "<strong>Enhancing Social Engagement:</strong> Implement activities that help youth build connections and strengthen engagement with their community.",
-                    "<strong>সামাজিক সম্পৃক্ততা উন্নয়ন:</strong> তরুন-তরুনীদের সামাজিক সম্পৃক্ততা ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়নে সহায়ক কার্যক্রম বাস্তবায়ন করা।",
+                    "<strong>সামাজিক সম্পক উন্নয়ন:</strong> তরুণ-তরুণীদের সামাজিক সম্পর্ক ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়ন করতে সহায়ক কার্যক্রম বাস্তবায়ন করা।",
                   ),
                 },
                 {
@@ -17749,7 +17749,7 @@ const orbitItems = [
                       <p class="mb-0" style="color: #0d47a1; font-size: 0.9em;">
                       ${yhLang(
                         "By ensuring the above-mentioned measures, it is possible to reduce the risks faced by adolescents and create a supportive environment for their development. In addition, necessary support should be provided through coordination among different ministries and departments of the government by formulating and implementing relevant policies.",
-                        "উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুন-তরুনীদের ঝুঁকি কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ্য অর্জন করা সম্ভব। এছাড়াও সরকারের বিভিন্ন মন্ত্রণালয় ও বিভাগের মধ্যে সমন্বয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন ও প্রয়োগের মাধ্যমে প্রয়োজনীয় সহায়তা দিতে হবে।",
+                        "উল্লেখিত বিষয়গুলো নিশ্চিত করে তরুণ-তরুণীদের ঝুঁকি কমানো এবং তাদের উন্নয়নে সহায়ক পরিবেশ তৈরির লক্ষ অর্জন করা সম্ভব।  এছাড়াও সরকারের বিভিন্ন মন্ত্রানালয় ও বিভাগের মধ্যে সমন্নয় পূর্বক বিভিন্ন নীতিমালা প্রণয়ন পূর্বক প্রয়োজনীয় সহায়তা দিতে হবে।",
                       )}
                     </p>
                     </div>
