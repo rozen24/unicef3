@@ -16454,13 +16454,19 @@ const orbitItems = [
                   icon: "fa-wine-bottle",
                 },
               ];
+              const formatIndex = (value) => {
+              const bnDigits = ["০","১","২","৩","৪","৫","৬","৭","৮","৯"];
+              return String(value)
+                .padStart(1, "0")
+                .replace(/\d/g, d => bnDigits[d]);
+            };
 
               const renderList = (items, baseDelay = 0) =>
                 items
                   .map(
                     (item, idx) => `
                       <li data-aos="fade-up" class="m20_1" data-aos-delay="${baseDelay + idx * 30}">
-                        <i class="fa-solid ${item.icon}"></i>
+                        <i class="fa-solid ${item.icon}"></i><h3>${formatIndex(idx + 1)} .</h3>
                         <span>${item.text}</span>
                       </li>
                     `,
@@ -16484,7 +16490,7 @@ const orbitItems = [
                     <p class="mb-0" data-aos="fade-up" data-aos-delay="80">
                       ${yhLang(
                         "Non-communicable diseases are not spread directly from one person to another. They are also called chronic diseases because they usually develop slowly and persist for a long time. Around three thousand children and adolescents die every day from NCDs worldwide. These diseases account for about 68 percent of all deaths globally, making them a major public health problem.",
-                        "অসংক্রামক রোগ হলো সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না। এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে। পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু ও তরুন-তরুনী মারা যায় অসংক্রামক রোগে। পৃথিবীর মোট মৃত্যুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ, যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে।",
+                        "অসংক্রামক রোগ হল সেই রোগ যা সরাসরি একজন থেকে অন্যজনে ছড়ায় না।  এদেরকে দীর্ঘস্থায়ী রোগও বলা হয়, কারণ এগুলো সাধারণত ধীরে ধীরে শরীরে বাসা বাঁধে এবং দীর্ঘ সময় ধরে চলতে থাকে।  পৃথিবীতে প্রতিদিন প্রায় তিন হাজার শিশু-কিশোর ও তরুন-তরুণী মারা যায় অসক্রামক রোগে।  পৃথিবীর মোট মৃত্যুুহারের শতকরা ৬৮ ভাগের কারণ এসব রোগ যা বিশ্বব্যাপী একটি বড় সমস্যায় পরিণত হয়েছে। ",
                       )}
                     </p>
                   </div>
@@ -16541,14 +16547,14 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Be cautious with high-calorie foods such as cakes, pastries, fast food, and soft drinks.",
-                    "উচ্চ ক্যালরিযুক্ত খাবার যেমন: কেক, পেস্ট্রিফাস্টফুড ও কোমল পানীয় গ্রহণে সাবধানতা অবলম্বন করতে হবে।",
+                    "উচ্চ ক্যালরিযুক্ত খাবার যেমন: কেক, পেস্ট্রি, ফাস্টফুড ও কোমল পানীয় গ্রহণে সাবধানতা অবলম্বন করতে হবে।",
                   ),
                   icon: "fa-burger",
                 },
                 {
                   text: yhLang(
                     "Foods like biryani, kacchi, processed meats, and grilled chicken contain trans fat. Eat them in moderation.",
-                    "বিরিয়ানি, কাচ্চি, প্রক্রিয়াজাত মাংস, গ্রিল চিকেন জাতীয় খাবারে ট্রান্সফ্যাট রয়েছে। এ জাতীয় খাবার কম খেতে হবে।",
+                    "বিরিয়ানি, কাচ্চি, প্রক্রিয়াজাত মাংস, গ্রিল চিকেন জাতীয় খাবারে ট্রান্সফ্যাট রয়েছে।  এ জাতীয় খাবার কম খেতে হবে।",
                   ),
                   icon: "fa-drumstick-bite",
                 },
@@ -16600,7 +16606,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Encourage adolescent girls to exercise by addressing social barriers and ensuring safe spaces indoors and outdoors.",
-                    "সামাজিক প্রথা পরিহার করে কিশোরীদের শারীরিক ব্যায়াম করতে উৎসাহ প্রদান করতে হবে এবং ঘরে ও বাইরে ব্যায়াম করার পরিবেশ নিশ্চিত করতে হবে।",
+                    "সামাজিক প্রথা পরিহার করে তরুণদের শারীরিক ব্যায়াম করতে উৎসাহ প্রদান করতে হবে এবং ঘরে ও বাইরে ব্যায়াম করার পরিবেশ নিশ্চিত করতে হবে।",
                   ),
                   icon: "fa-dumbbell",
                 },
@@ -16632,7 +16638,7 @@ const orbitItems = [
                       <div class="glass-card p-1 mb-2">
                         <h3 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-clipboard-check"></i>${yhLang(
                           "Actions to prevent unhealthy diet:",
-                          "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতরিোধে করণীয়:",
+                          "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধে করণীয়: ",
                         )}</h3>
                         <ul class="list-unstyled puberty-list mb-0 m20_1 mod20_grid1">
                           ${renderList(preventionList, 120)}
@@ -16672,7 +16678,7 @@ const orbitItems = [
             content: (function () {
               const introText = yhLang(
                 "An integrated and effective strategy is needed to prevent tobacco use (smoking, jarda, gul, etc.) and alcohol consumption.",
-                " তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয়",
+                " তামাকজাত দ্রব্য ব্যবহার ও মদ্যপান প্রতিরোধে করণীয় :",
               );
 
               const leftSections = [
@@ -16686,14 +16692,14 @@ const orbitItems = [
                     {
                       text: yhLang(
                         "Children and adolescents tend to imitate adults, so parents and senior family members should avoid tobacco and alcohol in front of them.",
-                        "শিশু-কিশোরেরা অনুকরণপ্রিয়, অতএব বাবা-মা বা পরিবারের বড় সদস্যদের তাদের সামনে তামাক ও মদ্যপান পরিহার করা উচিত।",
+                        "তরুণ-তরুণীরা অনুকরণপ্রিয়, অতএব বাবা-মা বা পরিবারের বড় সদস্যদের তাদের সামনে তামাক ও মদ্যপান পরিহার করা উচিত।",
                       ),
                       icon: "fa-house-chimney",
                     },
                     {
                       text: yhLang(
                         "Parents should openly discuss the harmful effects of tobacco and alcohol with their children.",
-                        "তামাক ও মদের ক্ষতিকর প্রভাব নিয়ে সন্তানদের সাথে খোলামেলা আলোচনা করতে হবে",
+                        "তামাক ও মদের ক্ষতিকর প্রভাব নিয়ে তরুণ-তরুণীদের সাথে খোলামেলা আলোচনা করতে হবে",
                       ),
                       icon: "fa-comments",
                     },
@@ -16707,7 +16713,7 @@ const orbitItems = [
                     {
                       text: yhLang(
                         "Keep track of your child’s friends and social circle and guide them when necessary.",
-                        "সন্তান কার সাথে বন্ধুত্ব করছে এবং কার সাথে মেলামিশা করছে তা লক্ষ্য রাখা ও প্রয়োজনীয় উপদেশ দিয়ে সহায়তা করা।",
+                        "তরুণ-তরুণী কার সাথে বন্ধুত্ব করছে এবং কার সাথে মেলামিশা করছে তা লক্ষ্য রাখা ও প্রয়োজনীয় উপদেশ দিয়ে সহায়তা করা।",
                       ),
                       icon: "fa-user-check",
                     },
@@ -16737,14 +16743,14 @@ const orbitItems = [
                     {
                       text: yhLang(
                         "Provide counseling support to help students cope with mental stress.",
-                        "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং ঝুঁকি দেওয়া।",
+                        "শিক্ষার্থীদের মানসিক চাপ মোকাবিলায় কাউন্সেলিং সুবিধা দেওয়া।",
                       ),
                       icon: "fa-hand-holding-heart",
                     },
                     {
                       text: yhLang(
                         "Teachers should pay special attention to students who are at risk.",
-                        "শিক্ষকরা ঝুঁকিপূর্ণ শিক্ষার্থীদের প্রতি বিশেষ নজর দেওয়া।",
+                        "শিক্ষকরা ঝুঁকিপূর্ণ শিক্ষার্থীদের প্রতি বিশেষ নজর দিবেন।",
                       ),
                       icon: "fa-eye",
                     },
@@ -16807,7 +16813,7 @@ const orbitItems = [
                     {
                       text: yhLang(
                         "Adopt healthy alternatives such as fruits, herbal tea, or regular exercise.",
-                        "স্বাস্থ্যকর বিকল্প যেমন ফলমূল, হারবাল চা বা ব্যায়ামকে অভ্যাসে পরিণত করা।",
+                        "স্বাস্থ্যকর বিকল্প যেমন ফলমূল, হারবাল-টি বা ব্যায়ামকে অভ্যাসে পরিণত করা।",
                       ),
                       icon: "fa-leaf",
                     },
@@ -16875,7 +16881,11 @@ const orbitItems = [
                   <div class="mod20-content">
                   <div class="glass-card p-1 mb-3">
                     
-                    <h2 class="mb-0 slide-title " data-aos="fade-up" data-aos-delay="40"> <i class="fa-solid fa-ban-smoking"></i> ${introText}</h2>
+                    <h2 class="mb-0 slide-title " data-aos="fade-up" data-aos-delay="40"> <i class="fa-solid fa-ban-smoking"></i> <b>${introText}</b></h2>
+                    <p>${yhLang(
+                    "অ্যাজমা বা হাঁপানি রোগঃ",
+                    "তামাকজাত দ্রব্য (ধূমপান, জর্দা, গুল ইত্যাদি) এবং মদ্যপান প্রতিরোধে একটি সমন্বিত ও কার্যকর কৌশল প্রয়োজন। ",
+                  )}</p>
                   </div>
                   <div class="row g-2">
                     <div class="col-12 col-lg-6 d-flex flex-column gap-2">
@@ -20173,7 +20183,7 @@ const orbitItems = [
                           )}</p>
                           <p class="m23l4-panel__desc m23l4-line" data-aos="fade-up" data-aos-delay="300">${yhLang(
                             "Do not eat fallen or partially eaten fruits from under trees. Adults and children are both affected. Mortality rate exceeds 70%. Prevention is the only way to survive.",
-                            "গাছের নিচে পড়ে থাকা আধা খাওয়া কিংবা ফাটা ফল খাওয়া যাবে না। বর্তমান সময়ে বড়দের পাশাপাশি শিশু-কিশোরেরা নিপাহ ভাইরাসে বেশি আক্রান্ত হচ্ছে। এই রোগে মৃত্যু ৭০ শতাংশের বেশি। তাই প্রতিরোধই হচ্ছে এই রোগ থেকে বাঁচার উপায়।",
+                            "গাছের নিচে পড়ে থাকা আধা খাওয়া কিংবা ফাটা ফল খাওয়া যাবে না। বর্তমান সময়ে বড়দের পাশাপাশি তরুণ-তরুণীরা নিপাহ ভাইরাসে বেশি আক্রান্ত হচ্ছে। এই রোগে মৃত্যু ৭০ শতাংশের বেশি। তাই প্রতিরোধই হচ্ছে এই রোগ থেকে বাঁচার উপায়।",
                           )}</p>
                         </article>
 
