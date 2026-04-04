@@ -11293,46 +11293,52 @@ const orbitItems = [
                 "এটি এমন এক ধরণের সেবা যার দ্বারা মানুষ আত্মসচেতন হওয়ার মাধ্যমে নিজের আচরণ ও মনোভাবের কাক্সিক্ষত পরিবর্তন আনতে সক্ষম হয়।";
 
               const sections = [
-                {
-                  icon: "fa-graduation-cap",
-                  color: "m16l1-section-education",
-                  title: yhLang("Psychosocial Education", "মনোসামাজিক শিক্ষা"),
-                  description:
-                    "মনোসামাজিক শিক্ষা হল এমন এক ধরনের শিক্ষণ প্রক্রিয়া যার মাধ্যমে একজন ব্যক্তির আকস্মিক বিপর্যয়, বিপত্তি, উৎপীড়ন, নিপীড়নের ফলে যে মানসিক অবস্থার সৃষ্টি হয় তা থেকে স্বাভাবিক অবস্থায় ফিরিয়ে আনতে ও স্বাভাবিক জীবনে মানিয়ে নিতে সহায়তা করে। মনোসামাজিক শিক্ষা ব্যক্তিকে তার প্রাত্যহিক জীবনে স্বাভাবিক কর্মকান্ড পরিচালনায় সহায়তা করে এবং পরিস্থিতি মোকাবেলার জন্য প্রস্তুত করে।",
-                },
-                {
-                  icon: "fa-school",
-                  color: "m16l1-section-necessity",
-                  title: yhLang(
-                    "Need for Psychosocial Education",
-                    "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা",
-                  ),
-                  description:
-                    "তরুন-তরুনীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে তরুন-তরুনীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।",
-                },
-                {
-                  icon: "fa-school",
-                  color: "m16l1-section-necessity",
-                  title: yhLang(
-                    "Psychosocial Support",
-                    "মনোসামাজিক সহায়তা",
-                  ),
-                  description:
-                    "এটি এমন এক ধরণের সেবা যার দ্বারা মানুষ আত্মসচেতন হওয়ার মাধ্যমে নিজের আচরণ ও মনোভাবের কাঙ্ক্ষিত পরিবর্তন আনতে সক্ষম হয়।",
-                },
-                {
-                  icon: "fa-user-doctor",
-                  color: "m16l1-section-provider",
-                  title: yhLang(
-                    "Psychosocial Support Provider",
-                    "মনোসামাজিক সহায়তাকারী",
-                  ),
-                  description:
-                    "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অঝুঁকি হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।",
-                },
-                
-                
-              ];
+  {
+    icon: "fa-graduation-cap",
+    color: "m16l1-section-education",
+    title: yhLang("Psychosocial Education", "মনোসামাজিক শিক্ষা"),
+    description: yhLang(
+      "Psychosocial education is a learning process that helps individuals recover from mental stress caused by sudden crises, adversity, or abuse, and supports them in returning to normal life. It enables individuals to carry out daily activities effectively and prepares them to cope with challenging situations.",
+      "মনোসামাজিক শিক্ষা হল এমন এক ধরনের শিক্ষণ প্রক্রিয়া যার মাধ্যমে একজন ব্যক্তির আকস্মিক বিপর্যয়, বিপত্তি, উৎপীড়ন, নিপীড়নের ফলে যে মানসিক অবস্থার সৃষ্টি হয় তা থেকে স্বাভাবিক অবস্থায় ফিরিয়ে আনতে ও স্বাভাবিক জীবনে মানিয়ে নিতে সহায়তা করে। মনোসামাজিক শিক্ষা ব্যক্তিকে তার প্রাত্যহিক জীবনে স্বাভাবিক কর্মকান্ড পরিচালনায় সহায়তা করে এবং পরিস্থিতি মোকাবেলার জন্য প্রস্তুত করে।"
+    ),
+  },
+  {
+    icon: "fa-school",
+    color: "m16l1-section-necessity",
+    title: yhLang(
+      "Need for Psychosocial Education",
+      "মনোসামাজিক শিক্ষার প্রয়োজনীয়তা"
+    ),
+    description: yhLang(
+      "Young people spend a significant portion of their day at school. Therefore, schools can be an ideal place to provide psychosocial education to adolescents.",
+      "তরুন-তরুনীরা দিনের একটি বড় সময় বিদ্যালয়ে কাটিয়ে থাকে। তাই বিদ্যালয় হতে পারে একটি উপযুক্ত স্থান যেখানে তরুন-তরুনীদের মনোসামাজিক শিক্ষা প্রদান করা সম্ভব।"
+    ),
+  },
+  {
+    icon: "fa-school",
+    color: "m16l1-section-necessity",
+    title: yhLang(
+      "Psychosocial Support",
+      "মনোসামাজিক সহায়তা"
+    ),
+    description: yhLang(
+      "It is a type of service that helps individuals become self-aware and bring about desired changes in their behavior and attitudes.",
+      "এটি এমন এক ধরণের সেবা যার দ্বারা মানুষ আত্মসচেতন হওয়ার মাধ্যমে নিজের আচরণ ও মনোভাবের কাঙ্ক্ষিত পরিবর্তন আনতে সক্ষম হয়।"
+    ),
+  },
+  {
+    icon: "fa-user-doctor",
+    color: "m16l1-section-provider",
+    title: yhLang(
+      "Psychosocial Support Provider",
+      "মনোসামাজিক সহায়তাকারী"
+    ),
+    description: yhLang(
+      "At times, we may need psychosocial support when facing difficulties in decision-making or coping with daily stress. Providers deliver these services using appropriate training, skills, and qualities. They are usually trained by psychologists or certified psychosocial counselors.",
+      "আমাদের জীবনে কোনো সিদ্ধান্ত নিতে অসুবিধা হলে, দৈনন্দিন উদ্বেগের সাথে খাপ খাওয়ানো ইত্যাদি ক্ষেত্রে সমস্যা হলে কখনো কখনো মনোসামাজিক সহায়তা গ্রহণের প্রয়োজন হতে পারে। মনোসামাজিক সহায়তাকারীরা প্রয়োজনীয় প্রশিক্ষণ, দক্ষতা ও গুণাবলী প্রয়োগের মাধ্যমে সেবা প্রদান করে থাকেন। মনোসামাজিক সহায়তাকারী সাধারণত মনোবিজ্ঞানীদের কাছ থেকে অথবা প্রশিক্ষণপ্রাপ্ত মনোসামাজিক কাউন্সেলরের কাছ থেকে প্রশিক্ষণপ্রাপ্ত হয়ে থাকেন।"
+    ),
+  },
+];
 
               const benefits = [
                 {
@@ -11388,7 +11394,7 @@ const orbitItems = [
                           </div>
                           <h3 class="m16l1-section-title">${section.title}</h3>
                         </div>
-                        <span class="m16l1-section-text">${section.description}</span>
+                        <p class="m16l1-section-text">${section.description}</p>
                       </section>
                     `,
                   )
@@ -11467,7 +11473,7 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
   "Empathy: Empathy is the ability through which we can understand and feel another person's emotions from their own perspective. Sympathy and empathy are not the same. Sympathy is only a feeling for someone, whereas empathy involves both feeling and the ability to understand a situation from the other person's point of view.",
-  "সমমর্মিতা (Empathy) সমমর্মিতা হলো যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতা (Empathy) এক নয়, সমবেদনা হলো শুধুই অনুভূতি আর সমমর্মিতা হলো অনুভূতিও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা।"
+  "সমমর্মিতা হচ্ছে যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতার(Empathy) এক নয়, সমবেদনা হোল শুধুই অনুভুতি আর সহমর্মিতা হচ্ছে অনুভুতি ও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা"
 );
               const comparisonNote = yhLang(
                 "Sympathy is only emotional response, while empathy combines emotional understanding with seeing from the other person's position.",
@@ -11562,8 +11568,13 @@ const orbitItems = [
                         <div class="m16l2-info-card__icon" aria-hidden="true">
                           <i class="fa-solid fa-lightbulb"></i>
                         </div>
-                        <span class="m16l2-info-card__title">${intro}</span>
+                        <h3 class="m16l2-outcomes-title">${yhLang(
+                        "Empathy Skills",
+                        "১. সমমর্মিতা (Empathy) : ",
+                      )}</h3>
                       </div>
+                      <span class="m16l2-info-card__title">${intro}</span>
+
                      
                     </article>
 
@@ -11675,9 +11686,10 @@ const orbitItems = [
                     "Through Asking Questions",
                     "প্রশ্ন করার মাধ্যমে",
                   ),
-                  description:
-                    "অংশগ্রহণকারীর কথা শুনে তার কাছে বিভিন্ন ধরনের প্রশ্ন করার মাধ্যমে তার ঘটনাটা বিস্তারিতভাবে জানা সম্ভব। যেমনঃ কবে ঘটেছিল, কোথায় ঘটেছিল, কে করেছে ইত্যাদি। অংশগ্রহণকারীর কথার ফাঁকে ফাঁকে প্রশ্ন করার মাধ্যমে ঘটনাটা বিস্তারিতভাবে জানা সম্ভব।",
-                },
+                  description: yhLang(
+                  "By listening to the participant and asking different types of questions, it is possible to understand the incident in detail—such as when it happened, where it happened, and who was involved. Asking questions at appropriate moments during the conversation helps gather a clearer understanding of the situation.",
+                  "অংশগ্রহণকারীর কথা শুনে তার কাছে বিভিন্ন ধরনের প্রশ্ন করার মাধ্যমে তার ঘটনাটা বিস্তারিতভাবে জানা সম্ভব। যেমনঃ কবে ঘটেছিল, কোথায় ঘটেছিল, কে করেছে ইত্যাদি। অংশগ্রহণকারীর কথার ফাঁকে ফাঁকে প্রশ্ন করার মাধ্যমে ঘটনাটা বিস্তারিতভাবে জানা সম্ভব।"
+                )},
                 {
                   icon: "fa-solid fa-magnifying-glass",
                   color: "m16l3-tech-questioning",
@@ -11696,59 +11708,71 @@ const orbitItems = [
                   `,
                 },
                 {
-                  icon: "fa-eye",
-                  color: "m16l3-tech-eyecontact",
-                  number: "৩",
-                  title: yhLang("Eye Contact", "দৃষ্টি সংযোগ"),
-                  description:
-                    "সঠিকভাবে চোখে চোখ রেখে কথা বলা খুবই জরুরী। ফলে সহায়তাকারী অন্যের কথা খুবই আগ্রহ নিয়ে শুনছেন তা প্রকাশ পায়। প্রতি ৩/৪ সেকেন্ডে পরপর সরাসরি দৃষ্টি সংযোগ করা মনোযোগী শ্রোতা হবার জন্য খুবই গুরুত্বপূর্ণ।",
-                },
-                {
-                  icon: "fa-message",
-                  color: "m16l3-tech-verbal",
-                  number: "৪",
-                  title: yhLang("Verbal Acknowledgment", "মৌখিকভাবে বলা"),
-                  description:
-                    "আমি তোমার সাথে আছি, তোমার অবস্থাটা আমি বুঝতে পারছি ইত্যাদি।",
-                },
-                {
-                  icon: "fa-chair",
-                  color: "m16l3-tech-sitting",
-                  number: "৫",
-                  title: yhLang(
-                    "Natural Sitting Position",
-                    "স্বাভাবিকভাবে বসা",
-                  ),
-                  description:
-                    "মুখোমুখি একটি নির্দিষ্ট দূরত্বে জড়তাহীন ভাবে বসা, একটি ফলপ্রসূ মনোসামাজিক সহায়তা নিশ্চিত করে।",
-                },
-                {
-                  icon: "fa-hand-back-fist",
-                  color: "m16l3-tech-bodylang",
-                  number: "৬",
-                  title: yhLang(
-                    "Avoid Dismissive Behavior",
-                    "অবহেলা প্রদর্শনমূলক আচরণ করা যাবে না",
-                  ),
-                  description:
-                    "আমাদের শারীরিক ভাষা বা Body Language / Body Movement — মুখভঙ্গী, হাত-পা দিয়ে এমন আচরণ করা যাবে না যার মাধ্যমে অংশগ্রহণকারীর প্রতি অবহেলা প্রদর্শন বোঝায়।",
-                },
-                {
-                  icon: "fa-person-rays",
-                  color: "m16l3-tech-posture",
-                  number: "৭",
-                  title: yhLang("Proper Posture", "সঠিক দৈহিক ভঙ্গি (Posture)"),
-                  description:
-                    "একটি ইতিবাচক আচরণ নিয়ে আসে যার মাধ্যমে অংশগ্রহণকারী সংকেত পায় যে সহায়তাকারী তার কথা খুব মনোযোগ দিয়ে শুনছে।",
-                },
-                {
-                  icon: "fa-face-smile",
-                  color: "m16l3-tech-facial",
-                  number: "৮",
-                  title: yhLang("Facial Expression", "মুখের প্রকাশভঙ্গী (Facial Expression)"),
-                  description:
-                    "এর মাধ্যমে সংকেত পাওয়া যায় যে অংশগ্রহণকারীর কথা শোনার জন্য প্রস্তুত ও যথেষ্ট আগ্রহী আছে।",
-                },
+  icon: "fa-eye",
+  color: "m16l3-tech-eyecontact",
+  number: "৩",
+  title: yhLang("Eye Contact", "দৃষ্টি সংযোগ"),
+  description: yhLang(
+    "Maintaining proper eye contact is very important. It shows that the supporter is listening attentively. Making direct eye contact every 3–4 seconds helps demonstrate active listening.",
+    "সঠিকভাবে চোখে চোখ রেখে কথা বলা খুবই জরুরী। ফলে সহায়তাকারী অন্যের কথা খুবই আগ্রহ নিয়ে শুনছেন তা প্রকাশ পায়।  প্রত্যেক ৩/৪ সেকেন্ডে পরপর সরাসরি দৃষ্টি সংযোগ করা মনোযোগী শ্রোতা হবার জন্য খুবই গুরুত্বপূর্ণ।"
+  ),
+},
+{
+  icon: "fa-message",
+  color: "m16l3-tech-verbal",
+  number: "৪",
+  title: yhLang("Verbal Acknowledgment", "মৌখিকভাবে বলা"),
+  description: yhLang(
+    "Using supportive words like “I am with you” or “I understand your situation” helps reassure the person.",
+    "আমি তোমার সাথে আছি, তোমার অবস্থাটা আমি বুঝতে পারছি ইত্যাদি।"
+  ),
+},
+{
+  icon: "fa-chair",
+  color: "m16l3-tech-sitting",
+  number: "৫",
+  title: yhLang(
+    "Natural Sitting Position",
+    "স্বাভাবিকভাবে বসা"
+  ),
+  description: yhLang(
+    "Sitting face-to-face at a comfortable distance without stiffness ensures effective psychosocial support.",
+    "মুখোমুখি একটি নির্দিষ্ট দূরত্বে জড়তাহীন ভাবে বসা, একটি ফলপ্রসূ মনোসামাজিক সহায়তা নিশ্চিত করে।"
+  ),
+},
+{
+  icon: "fa-hand-back-fist",
+  color: "m16l3-tech-bodylang",
+  number: "৬",
+  title: yhLang(
+    "Avoid Dismissive Behavior",
+    "অবহেলা প্রদর্শনমূলক আচরণ করা যাবে না"
+  ),
+  description: yhLang(
+    "Body language such as facial expressions or gestures should not show neglect or disinterest toward the participant.",
+    "আমাদের শারীরিক ভাষা বা Body Language / Body Movement — মুখভঙ্গী, হাত-পা দিয়ে এমন আচরণ করা যাবে না যার মাধ্যমে অংশগ্রহণকারীর প্রতি অবহেলা প্রদর্শন বোঝায়।"
+  ),
+},
+{
+  icon: "fa-person-rays",
+  color: "m16l3-tech-posture",
+  number: "৭",
+  title: yhLang("Proper Posture", "সঠিক দৈহিক ভঙ্গি (Posture)"),
+  description: yhLang(
+    "Maintaining proper posture conveys a positive attitude and signals that the supporter is listening attentively.",
+    "এটি ইতিবাচক আমেজ নিয়ে আসে যার মাধ্যমে অংশগ্রহণকারী সংকেত পায় যে সহায়তাকারী তার কথা খুব মনোযোগ দিয়ে শুনছে।"
+  ),
+},
+{
+  icon: "fa-face-smile",
+  color: "m16l3-tech-facial",
+  number: "৮",
+  title: yhLang("Facial Expression", "মুখের প্রকাশভঙ্গী (Facial Expression)"),
+  description: yhLang(
+    "Facial expressions indicate readiness and genuine interest in listening to the participant.",
+    "এর মাধ্যমে সংকেত পাওয়া যায় যে অংশগ্রহণকারীর কথা শোনার জন্য প্রস্তুত ও যথেষ্ট আগ্রহী আছে।"
+  ),
+}
               ];
 
               
@@ -11790,7 +11814,7 @@ const orbitItems = [
                     <div class="m16l3-hero__content">
                       <h2 class="m16l3-hero__title">${yhLang(
                         "Attentive Listening",
-                        "মনোযোগী শ্রবণ",
+                        "২. মনোযোগী শ্রবণ",
                       )}</h2>
                       <p class="m16l3-hero__subtitle">${yhLang(
                         "Essential skill for understanding deeper meaning",
@@ -11926,7 +11950,7 @@ const orbitItems = [
                     <div class="m16l4-hero__content">
                       <h2 class="m16l4-hero__title">${yhLang(
                         "Understanding Values",
-                        "মূল্যবোধ",
+                        "৩. মূল্যবোধ",
                       )}</h2>
                     </div>
                   </section>
@@ -12015,7 +12039,7 @@ const orbitItems = [
       <i class="fa-solid fa-hands-praying"></i>
     </div>
     <div class="m16l5-hero__content">
-      <h2 class="m16l5-hero__title">${yhLang("Understanding Behavior", "আচরণ")}</h2>
+      <h2 class="m16l5-hero__title">${yhLang("Understanding Behavior", "৪. আচরণ")}</h2>
     </div>
   </section>
 
@@ -12024,12 +12048,12 @@ const orbitItems = [
     <div class="m16l5-definition-icon">
       <i class="fa-solid fa-lightbulb"></i>
     </div>
-    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ স্বীয় বিশ্বাসের প্রতিফলন। যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা, তাহলে আচরণ হবে অন্যেরসাথে ভদ্রতার সহিত কথা বলা। মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়। ")}</p>
+    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ স্বীয় বিশ্বাসের প্রতিফলন।  যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা, তাহলে আচরণ হবে অন্যের সাথে ভদ্রতার সহিত কথা বলা।  মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়। ")}</p>
   </section>
 
   <!-- Neutrality Card -->
   <section class="m16l5-neutrality-card" data-aos="fade-up" data-aos-delay="50">
-    <p class="m16l5-neutrality-text">${yhLang("Every person is unique with different thoughts, beliefs, values, and judgment abilities. An important quality of a psychosocial helper is to respect these differences and act neutrally, without imposing their own values on others.", "প্রতিটি মানুষই আলাদা, প্রেত্যকের চিন্তা, বিশ্বাস, মূল্যবোধ এবং বিচার-বিবেচনা করার ক্ষমতা আলাদা সেই বিষয়টির প্রতি সন্মান রেখে নিরপেক্ষ আচরণ করা একজন মনোসামাজিক সহায়তাকারীর অন্যতম গুনাবলীর মধ্যে একটি।")}</p>
+    <p class="m16l5-neutrality-text">${yhLang("Every person is unique with different thoughts, beliefs, values, and judgment abilities. An important quality of a psychosocial helper is to respect these differences and act neutrally, without imposing their own values on others.", "প্রতিটি মানুষই আলাদা, প্রেত্যকের চিন্তা, বিশ্বাস, মূল্যবোধ এবং বিচার-বিবেচনা করার ক্ষমতা আলাদা।  সেই বিষয়টির প্রতি সন্মান রেখে নিরপেক্ষ আচরণ করা একজন মনোসামাজিক সহায়তাকারীর অন্যতম গুনাবলীর মধ্যে একটি।")}</p>
   </section>
 
   <!-- Methods Section -->
@@ -12057,7 +12081,7 @@ const orbitItems = [
         <div class="m16l5-method-icon">
           <i class="fa-solid fa-person"></i>
         </div>
-        <span class="m16l5-method-text">${yhLang("Respect others' personal freedom and tolerance", "অন্যের ব্যক্তি স্বাধীনতা ও মূল্যবোধের প্রতি সহনশীল থাকা")}</span>
+        <span class="m16l5-method-text">${yhLang("Respect others' personal freedom and tolerance", "অন্যের ব্যক্তি স্বাধীনতায় বিশ্বাস করা এবং অন্যের মূল্যবোধের প্রতি সহনশীল থাকা")}</span>
       </li>
       <li class="m16l5-method-item m16l5-method-listening" data-aos="fade-up" data-aos-delay="80">
         <div class="m16l5-method-icon">
@@ -12124,7 +12148,7 @@ const orbitItems = [
       <i class="fa-solid fa-scale-balanced"></i>
     </div>
     <div class="m16l6-hero__content">
-      <h2 class="m16l6-hero__title">${yhLang("Ethics", "নৈতিকতা")}</h2>
+      <h2 class="m16l6-hero__title">${yhLang("Ethics", "৫. নৈতিকতা")}</h2>
     </div>
   </section>
 
@@ -12149,7 +12173,7 @@ const orbitItems = [
     <div class="m16l6-desc-icon">
       <i class="fa-solid fa-user-shield"></i>
     </div>
-    <p class="m16l6-desc-text">${yhLang("It is the duty of every psychosocial helper to learn about certain ethical qualities before taking responsibility, and to follow those principles after taking responsibility.", "মনোসামাজিক সহায়তাকারীর দায়িত্ব গ্রহণের পূর্বে কিছুনৈতিক গুণাবলী সম্পর্কে জানা এবং দায়িত্ব গ্রহণের পর সেই নীতিগুলো পালন করা প্রতিটি মনোসামাজিক সহায়তাকারীরই কর্তব্য।")}</p>
+    <p class="m16l6-desc-text">${yhLang("It is the duty of every psychosocial helper to learn about certain ethical qualities before taking responsibility, and to follow those principles after taking responsibility.", "মনোসামাজিক সহায়তাকারীর দায়িত্ব গ্রহণের পূর্বে কিছু নৈতিক গুণাবলী সম্পর্কে জানা এবং দায়িত্ব গ্রহণের পর সেই নীতিগুলো পালন করা প্রতিটি মনোসামাজিক সহায়তাকারীরই কর্তব্য।")}</p>
   </section>
 
   <!-- Principles Section -->
