@@ -19832,11 +19832,7 @@ const orbitItems = [
                   <section class="m23l2-intro" data-aos="fade-up" data-aos-delay="120">
                     <p class="m23l2-intro__line m23l2-line" data-aos="fade-up" data-aos-delay="160">${yhLang(
                       "Dengue is transmitted to humans through bites of Aedes mosquitoes infected with dengue virus. It is a significant public health problem for tropical and subtropical regions of the world.",
-                      "ডেংগু ভাইরাসে আক্রান্ত এডিস মশার কামড়ের মাধ্যমে মানুষের মধ্যে এই রোগ সংক্রমিত হয়। বিশ্বের ক্রান্তীয় এবং উপক্রান্তীয় অঞ্চলগুলোর জন্য এটি একটি উল্লেখযোগ্য জনস্বাস্থ্য সমস্যা।",
-                    )}</p>
-                    <p class="m23l2-intro__line m23l2-line" data-aos="fade-up" data-aos-delay="220">${yhLang(
-                      "There is no specific treatment for dengue, but early detection and proper care can keep mortality below one percent. Mosquito control is the primary strategy for dengue prevention, including destroying breeding sites and using pesticides.",
-                      "ডেংগুর জন্য কোন নির্দিষ্ট চিকিৎসা নেই, তবে দ্রুত সনাক্তকরণ এবং সঠিক চিকিৎসা প্রদানের মাধ্যমে এর মৃত্যুহার এক শতাংশের নিচে রাখা সম্ভব। মশা নিয়ন্ত্রণ ডেংগু প্রতিরোধের প্রধান হাতিয়ার যার মধ্যে রয়েছে মশার প্রজনন স্থান ধ্বংস এবং কীটনাশক ব্যবহার করা।",
+                      "ডেংগু ভাইরাসে আক্রান্ত এডিস মশার কামড়ের মাধ্যমে মানুষের মধ্যে এই রোগ সংক্রমিত হয়। বিশ্বের ক্রান্তীয় এবং উপক্রান্তীয় অঞ্চলগুলোর জন্য এটি একটি উল্লেখযোগ্য জনস্বাস্থ্য সমস্যা।  ডেংগুর জন্য কোন নির্দিষ্ট চিকিৎসা নেই, তবে দ্রুত সনাক্তকরণ এবং সঠিক চিকিৎসা প্রদানের মাধ্যমে এর মৃত্যুহার এক শতাংশের নিচে রাখা সম্ভব।  মশা নিয়ন্ত্রণ ডেংগু প্রতিরোধের প্রধান হাতিয়ার যার মধ্যে রয়েছে মশার প্রজনন স্থান ধ্বংস এবং কীটনাশক ব্যবহার করা।",
                     )}</p>
                   </section>
 
@@ -19854,7 +19850,7 @@ const orbitItems = [
                         </div>
                         <p class="m23l2-panel__desc m23l2-line" data-aos="fade-up" data-aos-delay="260">${yhLang(
                           "Most first-time dengue patients show no specific symptoms. Common symptoms appear within 4-10 days of infection and last 2-7 days.",
-                          "বেশীর ভাগ ক্ষেত্রে প্রথমবার ডেংগু-তে আক্রান্ত রোগীর বিশেষ কোন উপসর্গ বা লক্ষণ দেখা যায় না। এই উপসর্গ গুলি রোগ সংক্রমণের ৪-১০ দিনের মধ্যে দেখা দেয় এবং সাধারণত ২-৭ দিন পর্যন্ত উপসর্গ স্থায়ী হতে পারে।",
+                          "বেশীর ভাগ ক্ষেত্রে প্রথমবার ডেংগু-তে আক্রান্ত রোগীর বিশেষ কোন উপসর্গ বা লক্ষণ দেখা যায় না।  ডেংগুর সাধারণ উপসর্গ গুলি হলো -",
                         )}</p>
                         <ul class="list-unstyled m23l2-list" role="list">
                           ${renderSymptoms(symptoms, 300)}
@@ -19905,42 +19901,35 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Do not allow water to accumulate around your home. Mosquitoes breed in stagnant water.",
-                    "বাড়ির চারপাশে পানি জমতে দেবেন না। জমা পানিতে মশারা বংশবিস্তার করে।",
+                    "বাড়ির চারপাশে পানি জমতে দেওয়া যাবেনা।  জমা পানিতে মশারা বংশবিস্তার করে।  গাছের টব, ফুলদানি, পরে থাকা গাড়ির টায়ারের জমে থাকা পানি ফেলে দিতে হবে।",
                   ),
                   icon: "fa-house-circle-xmark",
                 },
                 {
                   text: yhLang(
-                    "Empty water from plant pots, flower vases, and old car tires. Dispose of stagnant water once every three days.",
-                    "গাছের টব, ফুলদানি, পরে থাকা গাড়ির টায়ারের জমে থাকা পানি ফেলে দিন। তিন দিনে একদিন জমা পানি ফেলে দিন।",
-                  ),
-                  icon: "fa-recycle",
-                },
-                {
-                  text: yhLang(
                     "Wear body-covering clothes such as long-sleeve shirts, long pants, socks, and shoes.",
-                    "শরীর ঢাকা জামা কাপড় যেমন লম্বা-হাতা শার্ট, লম্বা প্যান্ট, মোজা এবং জুতা পরুন।",
+                    "শরীর ঢাকা জামা কাপড় যেমন লম্বা-হাতা শার্ট, লম্বা প্যান্ট, মোজা এবং জুতা পরতে হবে।",
                   ),
                   icon: "fa-shirt",
                 },
                 {
                   text: yhLang(
                     "Dengue-carrying mosquitoes are most active from dawn to dusk. Be extra cautious during this time.",
-                    "ডেংগু  ভাইরাস বহনকারী মশা ভোর থেকে সন্ধ্যা পর্যন্ত সবচেয়ে বেশি সক্রিয় থাকে। এই সময় অতিরিক্ত সতর্ক থাকুন।",
+                    "ডেংগু  ভাইরাস বহনকারী মশা ভোর থেকে সন্ধ্যা পর্যন্ত সবচেয়ে বেশি সক্রিয় থাকে। এই সময় অতিরিক্ত সতর্ক থাকতে হবে।",
                   ),
                   icon: "fa-clock",
                 },
                 {
                   text: yhLang(
                     "Use mosquito nets when sleeping at night.",
-                    "রাতে শোবার সময় মশারী ব্যবহার করুন।",
+                    "রাতে শোবার সময় মশারী ব্যবহার করতে হবে।",
                   ),
                   icon: "fa-bed",
                 },
                 {
                   text: yhLang(
                     "Use mosquito-repelling chemicals or mosquito coils.",
-                    "মশা নিরোধক কেমিক্যাল/ মশার কয়েল ব্যবহার করুন।",
+                    "মশা নিরোধক কেমিক্যাল / মশার কয়েল ব্যবহার করতে হবে।",
                   ),
                   icon: "fa-spray-can",
                 },
@@ -19974,8 +19963,8 @@ const orbitItems = [
                     </span>
                     <div class="m23l3-hero__body">
                       <h2 class="slide-title gradient-text mb-0 m23l3-line" data-aos="fade-up" data-aos-delay="60">${yhLang(
-                        "Treatment",
-                        "চিকিৎসা",
+                        "Dengue Treatment",
+                        "ডেংগুর চিকিৎসা",
                       )}</h2>
                     </div>
                   </header>
@@ -19983,7 +19972,7 @@ const orbitItems = [
                   <section class="m23l3-intro" data-aos="fade-up" data-aos-delay="120">
                     <p class="m23l3-intro__line m23l3-line mx-2" data-aos="fade-up" data-aos-delay="160">${yhLang(
                       "No specific medicine or vaccine for dengue has been discovered yet. Doctors control pain and fever using paracetamol-type medications. If the disease worsens significantly, hospitalization of the patient is essential.",
-                      "ডেংগুর চিকিৎসার বিশেষ কোন ওষুধ বা প্রতিষেধক এখনো পর্যন্ত আবিষ্কৃত হয়নি। চিকিৎসকরা পেরাসিটামিল জাতীয় ওষুধ দিয়ে ব্যথা এবং জ্বরের মাত্রা নিয়ন্ত্রণ করেন। রোগের মাত্রা অতিরিক্ত ভাবে বৃদ্ধি পেলে রোগী কে হাসপাতালে ভর্তি রাখা একান্ত জরুরী।",
+                      "ডেংগুর চিকিৎসার বিশেষ কোন ওষুধ বা প্রতিষেধক এখনো পর্যন্ত আবিষ্কৃত হয়নি।  চিকিৎসকরা প্যারাসিটামল জাতীয় ওষুধ দিয়ে ব্যথা এবং জ্বরের মাত্রা নিয়ন্ত্রণ করেন।  রোগের মাত্রা অতিরিক্ত ভাবে বৃদ্ধি পেলে রোগী কে হাসপাতালে ভর্তি রাখা একান্ত জরুরী। ",
                     )}</p>
                   </section>
 
@@ -20061,21 +20050,21 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Do not drink raw date palm sap",
-                    "খেজুরের কাঁচা রস খাবেন না",
+                    "খেজুরের কাঁচা রস খাওয়া যাবেনা",
                   ),
                   icon: "fa-ban",
                 },
                 {
                   text: yhLang(
                     "Do not eat partially eaten fruits",
-                    "কোনো ধরনের আংশিক খাওয়া ফল খাবেন না",
+                    "কোনো ধরনের আংশিক খাওয়া ফল খাওয়া যাবেনা",
                   ),
                   icon: "fa-apple-whole",
                 },
                 {
                   text: yhLang(
                     "Wash fruits thoroughly with clean water before eating",
-                    "ফলমূল পরিষ্কার পানি দিয়ে ভালোভাবে ধুয়ে খাবেন",
+                    "ফলমূল পরিষ্কার পানি দিয়ে ভালোভাবে ধুয়ে খেতে হবে",
                   ),
                   icon: "fa-hands-bubbles",
                 },
@@ -20214,7 +20203,7 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
                 "Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus. The World Health Organization officially named it 'COVID-19' on February 11, 2020. Here, 'CO' comes from Corona, 'VI' from Virus, 'D' from Disease, and '19' from 2019.",
-                "করোনাভাইরাস রোগ (কোভিড-১৯) হল সার্স-কোভ-২ ভাইরাস দ্বারা সৃষ্ট একটি সংক্রামক রোগ। বিশ্ব স্বাস্থ্য সংস্থা ১১ই ফেব্রুয়ারী ২০২০ তারিখে এই রোগ টিকে কে ‘কোভিড-১৯’ হিসেবে আনুষ্ঠানিক নামকরণ করে। এখানে ‘কো’ কথাটি এসেছে ‘করোনা’ থেকে, ‘ভি’- ভাইরাস থেকে, ‘ডি’- ‘ডিজিজ’ (রোগ) আর ‘১৯’- ২০১৯ থেকে এসেছে।",
+                "করোনাভাইরাস রোগ (কোভিড-১৯) হল সার্স-কোভ-২ ভাইরাস দ্বারা সৃষ্ট একটি সংক্রামক রোগ।  বিশ্ব স্বাস্থ্য সংস্থা ১১ই ফেব্রুয়ারী ২০২০ তারিখে এই রোগ টিকে কে ‘কোভিড-১৯’ হিসেবে আনুষ্ঠানিক নামকরণ করে।  এখানে ‘কো’ কথাটি এসেছে ‘করোনা’ থেকে, ‘ভি’- ভাইরাস থেকে, ‘ডি’- ‘ডিজিজ’ (রোগ) আর ‘১৯’- ২০১৯ থেকে এসেছে।",
               );
 
               const spreadPoints = [
@@ -20245,28 +20234,28 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "In most cases, the first symptom is fever.",
-                    "বেশির ভাগ ক্ষেত্রে প্রথম লক্ষণ জ¦র",
+                    "বেশির ভাগ ক্ষেত্রে প্রথম লক্ষণ জ্বর",
                   ),
                   icon: "fa-temperature-high",
                 },
                 {
                   text: yhLang(
                     "Dry cough or sore throat may occur.",
-                    "এছাড়া শুকনো কাশি/ গলা ব্যথা হতে পারে",
+                    "এছাড়া শুকনো কাশি / গলা ব্যথা হতে পারে",
                   ),
                   icon: "fa-head-side-cough",
                 },
                 {
                   text: yhLang(
                     "Shortness of breath or pneumonia may develop.",
-                    "শ্বাসকষ্ট/ নিউমোনিয়া দেখা দিতে পারে",
+                    "শ্বাসকষ্ট / নিউমোনিয়া দেখা দিতে পারে",
                   ),
                   icon: "fa-wind",
                 },
                 {
                   text: yhLang(
                     "With other illnesses (diabetes/high blood pressure/asthma/heart disease/kidney problems/cancer), organ failure or multiple organ dysfunction can occur.",
-                    "অন্যান্য অসুস্থতা (ডায়াবেটিস/ উচ্চ রক্তচাপ/ শ্বাসকষ্ট/ হৃদরোগ/ কিডনী সমস্যা/ ক্যান্সার ইত্যাদি) থাকলে অরগ্যান ফেইলিওর বা দেহের বিভিন্নপ্রত্যঙ্গ বিকল হতে পারে",
+                    "অন্যান্য অসুস্থতা (ডায়াবেটিস/ উচ্চ রক্তচাপ/ শ্বাসকষ্ট/ হৃদরোগ/ কিডনী সমস্যা / ক্যান্সার ইত্যাদি) থাকলে অরগ্যান ফেইলিওর বা দেহের বিভিন্ন প্রত্যঙ্গ বিকল হতে পারে",
                   ),
                   icon: "fa-triangle-exclamation",
                 },
@@ -20274,7 +20263,7 @@ const orbitItems = [
 
               const remedies = [
                 {
-                  text: yhLang("Vaccine/Vaccination", "টিকা/ভ্যাকসিন"),
+                  text: yhLang("Vaccine/Vaccination", "টিকা / ভ্যাকসিন"),
                   icon: "fa-syringe",
                 },
                 {
@@ -20364,14 +20353,14 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Wash hands frequently with soap and water for at least 20 seconds",
-                    "ঘন ঘন সাবান ও পানি দিয়ে হাত ধুবেন (অন্তত ২০ সেকেন্ড যাবৎ)",
+                    "ঘন ঘন সাবান ও পানি দিয়ে হাত ধুতে হবে(অন্তত ২০ সেকেন্ড যাবৎ)",
                   ),
                   icon: "fa-hands-bubbles",
                 },
                 {
                   text: yhLang(
                     "Don't touch eyes, nose and mouth with unwashed hands",
-                    "অপরিষ্কার হাতে চোখ, নাক ও মুখ স্পর্শ করবেন না",
+                    "অপরিষ্কার হাতে চোখ, নাক ও মুখ স্পর্শ করা যাবেনা",
                   ),
                   icon: "fa-hand",
                 },
@@ -20382,35 +20371,35 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Avoid contact with already infected people",
-                    "ইতোমধ্যে আক্রান্ত এমন ব্যক্তিদের সংস্পর্শ এড়িয়ে চলা",
+                    "ইতোমধ্যে আক্রান্ত এমন ব্যক্তিদের সংস্পর্শ এড়িয়ে চলতে হবে",
                   ),
                   icon: "fa-person-circle-xmark",
                 },
                 {
                   text: yhLang(
                     "Avoid crowded places",
-                    "জনসমাগম হয় এমন জায়গা এড়িয়ে চলা",
+                    "জনসমাগম হয় এমন জায়গা এড়িয়ে চলতে হবে",
                   ),
                   icon: "fa-people-group",
                 },
                 {
                   text: yhLang(
                     "Follow coughing etiquette (cover nose/mouth with arm/tissue/cloth when sneezing/coughing)",
-                    "কাশি শিষ্টাচার মেনে চলুন (হাঁচি-কাশির সময় বাহু/টিস্যু/কাপড় দিয়ে নাক-মুখ ঢাকা)",
+                    "কাশি শিষ্টাচার মেনে চলতে হবে (হাঁচি-কাশির সময় বাহু/টিস্যু/কাপড় দিয়ে নাক-মুখ ঢাকা)",
                   ),
                   icon: "fa-lungs",
                 },
                 {
                   text: yhLang(
                     "Avoid contact with sick animals/birds",
-                    "অসুস্থ পশু/পাখির সংস্পর্শ পরিহার করা",
+                    "অসুস্থ পশু/পাখির সংস্পর্শ পরিহার করতে হবে",
                   ),
                   icon: "fa-paw",
                 },
                 {
                   text: yhLang(
                     "Cook fish and meat thoroughly",
-                    "মাছ-মাংস ভালোভাবে রান্না করে খাওয়া",
+                    "মাছ-মাংস ভালোভাবে রান্না করে খেতে হবে",
                   ),
                   icon: "fa-utensils",
                 },
@@ -20451,21 +20440,21 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Tell the sick patient to stay home",
-                    "অসুস্থ রোগীকে ঘরে থাকতে বলুন",
+                    "অসুস্থ রোগীকে ঘরে থাকতে বলতে হবে",
                   ),
                   icon: "fa-person-dots-from-line",
                 },
                 {
                   text: yhLang(
                     "Advise severely ill patients to visit the nearest hospital",
-                    "মারাত্মক অসুস্থ রোগীকে নিকটস্থ সদর হাসপাতালে যেতে বলুন",
+                    "মারাত্মক অসুস্থ রোগীকে নিকটস্থ সদর হাসপাতালে যেতে বলতে হবে",
                   ),
                   icon: "fa-hospital",
                 },
                 {
                   text: yhLang(
                     "Tell patient to use mask to cover nose and mouth",
-                    "রোগীকে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে বলুন",
+                    "রোগীকে নাক-মুখ ঢাকার জন্য মাস্ক ব্যবহার করতে বলতে হবে",
                   ),
                   icon: "fa-mask",
                 },
@@ -20706,13 +20695,13 @@ const orbitItems = [
                   <div class="section_wrap modu23_less_7_1">
                     <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="140">
                       <h3 class="m23l7-section-title"><i class="fa-solid fa-arrows-spin"></i> ${yhLang("How It Spreads:", "কীভাবে ছড়ায়:")}</h3>
-                      <ul class="m23l7-list list-unstyled">
-                        ${renderPoints(spreadPoints, 200)}
-                      </ul>
+                      <p class="m23l7-intro__text mt-2">${yhLang("Influenza", "সাধারণত ইতিমধ্যেই সংক্রমিত হয়েছে, এমন ব্যক্তির হাঁচি-কাশি, কথা বলা কিংবা তার ব্যবহৃত কিছু ব্যবহারের মাধ্যমে ইনফ্লুয়েঞ্জা ছড়ায়।  এ ছাড়া ইনফ্লুয়েঞ্জা ভাইরাস আছে, এমন কিছু স্পর্শ করার মাধ্যমেও ইনফ্লুয়েঞ্জা ছড়াতে পারে।  এ ভাইরাস প্রতিনিয়ত নিজেকে পরিবর্তন করে থাকে, যাকে বলা হয় মিউটেশন।")}</p>
+                      <h3 class="m23l7-section-title mt-2"><i class="fa-solid fa-shield-heart"></i> ${yhLang("Personal Awareness:", "লক্ষণ :")}</h3>
+                      <p class="m23l7-intro__text mt-2">${yhLang("Influenza", "প্রাথমিকভাবে ইনফ্লুয়েঞ্জার সংক্রমণ হলে সাধারণ ঠান্ডা লাগার মতোই লক্ষণ দেখা দেয়।  যেমন জ্বর, গলাব্যথা, নাক দিয়ে পানি পড়া, সর্দি, কাশি ইত্যাদি। সাধারণ ঠান্ডা লাগার সঙ্গে ইনফ্লুয়েঞ্জা সংক্রমণের পার্থক্য হচ্ছে, এটি দ্রুত বেড়ে যায়।  পরিবারের একজন আক্রান্ত হলে অন্যদেরও আক্রান্ত হওয়ার আশঙ্কা থাকে।")}</p>
                     </section>
 
-                    <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="380">
-                      <h3 class="m23l7-section-title"><i class="fa-solid fa-shield-heart"></i> ${yhLang("Personal Awareness:", "ব্যক্তিগত সচেতনতা :")}</h3>
+                    <section class="m23l7-panel d-none" data-aos="fade-up" data-aos-delay="380">
+                      <h3 class="m23l7-section-title d-none"><i class="fa-solid fa-shield-heart"></i> ${yhLang("Personal Awareness:", "ব্যক্তিগত সচেতনতা :")}</h3>
                       <ul class="m23l7-list list-unstyled">
                         ${renderPoints(awarenessPoints, 440)}
                       </ul>
@@ -20723,16 +20712,14 @@ const orbitItems = [
                         ${renderPoints(symptomsPoints, 680)}
                       </ul>
                     </section>
-                  </div>
-
-                  
-
-                  <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="1100">
+                    <section class="m23l7-panel" data-aos="fade-up" data-aos-delay="1100">
                     <h3 class="m23l7-section-title"><i class="fa-solid fa-flask-vial"></i> ${yhLang("Treatment & Prevention:", "চিকিৎসা ও প্রতিকার:")}</h3>
                     <ul class="m23l7-list list-unstyled">
                       ${renderPoints(treatmentPoints, 1160)}
                     </ul>
                   </section>
+                  </div>
+
                 </div>`;
             })(),
           },
@@ -20913,11 +20900,11 @@ const orbitItems = [
               );
               const introText2 = yhLang(
                 "First identified in monkeys in Denmark in 1958, it was called Monkeypox. In November 2022, WHO renamed it to Mpox following modern naming guidelines.",
-                "১৯৫৮ সালে ডেনমার্ক-এ বানরের দেহে সর্বপ্রথম এ রোগ সনাক্ত হয় বলে একে মাঙ্কিপক্স বলা হয়। ২০২২ সালের নভেম্বরে বিশ্ব স্বাস্থ্য সংস্থা (WHO) রোগের নামকরণের জন্য আধুনিক নির্দেশিকা অনুসরণ করে রোগটির নাম পরিবর্তন করে এমপক্স (Mpox) রাখা হয়।",
+                "১৯৫৮ সালে ডেনমার্ক-এ বানরের দেহে সর্বপ্রথম এ রোগ সনাক্ত হয় বলে একে মাঙ্কিপক্স বলা হয়।  ২০২২ সালের নভেম্বরে বিশ্ব স্বাস্থ্য সংস্থা (WHO) রোগের নামকরণের জন্য আধুনিক নির্দেশিকা অনুসরণ করে রোগটির নাম পরিবর্তন করে এমপক্স (Mpox) রাখা হয়।",
               );
               const introText3 = yhLang(
                 "This disease is primarily found in Central and West Africa. It has appeared in other countries, but in those cases, there is evidence of travel history to affected regions or contact with animals imported from those areas.",
-                "এ রোগটির প্রাদুর্ভাব প্রধানত মধ্য ও পশ্চিম আফ্রিকায় দেখা যায়। ইতিপূর্বে এ ছাড়া অন্যান্য দেশেও এ রোগের প্রাদুর্ভাব দেখা গেছে। তবে সে ক্ষেত্রে উক্ত দেশ সমূহে ভ্রমণের ইতিহাস অথবা উক্ত দেশ সমূহ হতে আমদানিকৃত প্রাণীর সংস্পর্শে আসার প্রমাণ আছে।",
+                "এ রোগটির প্রাদুর্ভাব প্রধানত মধ্য ও পশ্চিম আফ্রিকায় দেখা যায়।  ইতিপূর্বে এ ছাড়া অন্যান্য দেশেও এ রোগের প্রাদুর্ভাব দেখা গেছে।  তবে সে ক্ষেত্রে উক্ত দেশ সমূহে ভ্রমণের ইতিহাস অথবা উক্ত দেশ সমূহ হতে আমদানিকৃত প্রাণীর সংস্পর্শে আসার প্রমাণ আছে।",
               );
               const symptoms = [
                 {
@@ -20962,7 +20949,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Isolate yourself from others immediately.",
-                    "সাবার আগে নিজেকে অন্যদের কাছ হতে আলাদা (Isolation) করুন।",
+                    "সাবার আগে নিজেকে অন্যদের কাছ হতে আলাদা (Isolation) করতে হবে।",
                   ),
                   icon: "fa-user-slash",
                 },
@@ -20976,7 +20963,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Especially those already suffering from chronic illnesses (uncontrolled diabetes, high blood pressure, cancer) should seek medical advice urgently.",
-                    "বিশেষ করে যারা আগে থেকেই দীর্ঘমেয়াদী অসুস্থতায় ভুগছেন (যেমনঃ অনিয়ন্ত্রিত ডায়াবেটিস, উচ্চ রক্তচাপ, ক্যান্সার) তারা অতিদ্রুত চিকিৎসকের পরামর্শ নেবেন।",
+                    "বিশেষ করে যারা আগে থেকেই দীর্ঘমেয়াদী অসুস্থতায় ভুগছেন (যেমনঃ অনিয়ন্ত্রিত ডায়াবেটিস, উচ্চ রক্তচাপ, ক্যান্সার) তাদের অতিদ্রুত চিকিৎসকের পরামর্শ  নিতে হবে।",
                   ),
                   icon: "fa-user-doctor",
                 },
