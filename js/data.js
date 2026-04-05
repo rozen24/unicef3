@@ -21064,18 +21064,10 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "No aspect of life skills is difficult",
-                    "জীবন দক্ষতার কোনো বিষয়ই কঠিন নয়",
+                    "জীবন দক্ষতার কোনো বিষয়ই কঠিন নয়।  যদি তা সঠিকভাবে ও নিয়মিত অনুশীলন করা যায়।",
                   ),
                   icon: "fa-circle-check",
                   color: "m24l1-item-green",
-                },
-                {
-                  text: yhLang(
-                    "If it is practiced properly and regularly.",
-                    "যদি তা সঠিকভাবে ও নিয়মিত অনুশীলন করা যায়।",
-                  ),
-                  icon: "fa-dumbbell",
-                  color: "m24l1-item-purple",
                 },
               ];
 
@@ -21713,7 +21705,7 @@ const orbitItems = [
                   accent: "m24l10-step--b",
                   text: yhLang(
                     "Avoid unguardian-like behavior with adolescents",
-                    "তরুন-তরুনীদের সাথে অ-অভিভাবকসুলভ আচরণ",
+                    "নিজের মানবিক সত্তাকে জাগিয়ে তোলা",
                   ),
                 },
                 {
@@ -21729,7 +21721,7 @@ const orbitItems = [
                   accent: "m24l10-step--d",
                   text: yhLang(
                     "Develop the habit of telling the truth",
-                    "সত্য বলার অভ্যাস গড়ে তোলা",
+                    "নিজে সত্য বলার অভ্যাস গড়ে তোলা",
                   ),
                 },
                 {
@@ -21737,7 +21729,7 @@ const orbitItems = [
                   accent: "m24l10-step--e",
                   text: yhLang(
                     "Teach to hate lies",
-                    "মিথ্যাকে ঘৃণা করতে শেখানো",
+                    "মিথ্যাকে নিজে ঘৃণা করা ও ঘৃণা করতে শেখানো",
                   ),
                 },
                 {
@@ -21745,7 +21737,7 @@ const orbitItems = [
                   accent: "m24l10-step--f",
                   text: yhLang(
                     "Provide correct and truthful information about sexuality",
-                    "যৌনতা বিষয়ে সঠিক ও সত্য তথ্য দেওয়া",
+                    "যৌনতা বিষয়ে সঠিক তথ্য দেওয়া",
                   ),
                 },
                 {
@@ -21800,7 +21792,7 @@ const orbitItems = [
                   accent: "m24l11-item--c",
                   text: yhLang(
                     "Life skills education (through group activities) helps build moral thinking and responsible behavior.",
-                    "জীবন দক্ষতা শিক্ষা (দলগত কার্যক্রমের মাধ্যমে) নৈতিক চিন্তা ও দায়িত্বশীল আচরণ গড়ে তুলতে সাহায্য করে",
+                    "জীবন দক্ষতা শিক্ষা নৈতিক চিন্তা ও দায়িত্বশীল আচরণ গড়ে তুলতে সাহায্য করে",
                   ),
                 },
                 {
@@ -21808,7 +21800,7 @@ const orbitItems = [
                   accent: "m24l11-item--d",
                   text: yhLang(
                     "When people become conscious of ethics and values, crime-proneness and negative behaviors decrease, leading to a healthy and beautiful life.",
-                    "নৈতিকতা ও মূল্যবোধে সচেতন মানুষ তৈরি হলে অপরাধপ্রবণতা ও নেতিবাচক আচরণ কমে গিয়ে সুস্থ ও সুন্দর জীবন গড়ে ওঠে",
+                    "নৈতিকতা ও মূল্যবোধে সচেতন মানুষ তৈরি হলে অপরাধপ্রবণতা ও নেতিবাচক আচরণ কমে গিয়ে সুস্থ ও সুন্দর জীবন গড়ে তুলতে ভুমিকা পালন করে",
                   ),
                 },
               ];
@@ -21855,7 +21847,7 @@ const orbitItems = [
 
                     <div class="col-12 col-lg-12">
                       <article class="m24l7-panel" data-aos="fade-left" data-aos-delay="120">
-                        <h3 class="m24l10-title m24l10-line" data-aos="fade-up" data-aos-delay="220" style="--d:200ms">${methodsTitle}</h3>
+                        <h3 class="m24l10-title m24l10-line" data-aos="fade-up" data-aos-delay="220" style="--d:200ms"><b>${methodsTitle}</b></h3>
                         <ul class="list-unstyled m24l11-list mb-0 w-lg-80 mx-auto">
                           ${render(points)}
                         </ul>
