@@ -931,7 +931,7 @@ const coursesData = [
               <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বাংলাদেশ প্রেক্ষাপট")}</h2>
               <div class="" style="padding:1.5rem;">
                                     <h3 class="d-none">${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h3>
-                                    <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে মোট তরুণ: <strong> ৪৯.৫ </strong> মিলিয়ন যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</p>
+                                    <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</p>
                                   </div>
               <div class="row g-2">
                        <div class="col-md-4">
@@ -1003,7 +1003,7 @@ const coursesData = [
                        <!-- Demographic Pyramid Compare -->
                        
                         <figure class="mb-0 text-center bg-pyramid p-2  sadow-sm glass-card">
-                          <img src="img/adolsent/adolecent.jpg" alt="Demographic Pyramid" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <img src="img/adolsent/adolcent.png" alt="Demographic Pyramid" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
                     </div>
                     <div class="col-md-5">
@@ -19571,14 +19571,14 @@ const orbitItems = [
         id: "ch-23",
         title: yhLang(
           "Module-23: Emerging and Re-emerging Diseases",
-          "মডিউল-২৩: উদীয়মান ও পুনরাবির্ভূত রোগ",
+          "মডিউল-২৩: ইমারজিং এবং রি-ইমারজিং ডিজিজেস",
         ),
         lessons: [
           {
             id: "ch23-lesson-1",
             title: yhLang(
               "Emerging and Re-emerging Diseases",
-              "উদীয়মান ও পুনরাবির্ভূত রোগ",
+              "ইমারজিং এবং রি-ইমারজিং ডিজিজেস",
             ),
             icon: "fa-virus-covid",
             gradientClass: "bg-gradient-indigo",
@@ -19597,7 +19597,7 @@ const orbitItems = [
                   tone: "bg-gradient-lavender",
                 },
                 {
-                  text: yhLang("Zika virus", "জিকা ভাইরাস"),
+                  text: yhLang("Zika virus", "জিকা ভাইরাস ইত্যাদি।"),
                   icon: "fa-mosquito",
                   tone: "bg-gradient-teal",
                 },
@@ -19615,7 +19615,7 @@ const orbitItems = [
                   tone: "bg-gradient-blue",
                 },
                 {
-                  text: yhLang("Cholera", "কলেরা"),
+                  text: yhLang("Cholera", "কলেরা ইত্যাদি।"),
                   icon: "fa-droplet",
                   tone: "bg-gradient-yellow",
                 },
@@ -19684,12 +19684,12 @@ const orbitItems = [
                             </span>
                             <h3 class="m23l1-card__title m23l1-line" data-aos="fade-up" data-aos-delay="240">${yhLang(
                               "Re-emerging diseases",
-                              "রি-ইমারজিং বা পুনরুদ্ভূত রোগ",
+                              "রি-ইমারজিং বা পুনরুদ্ভুত রোগ",
                             )}</h3>
                           </div>
                           <p class="m23l1-card__line m23l1-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
                             "Diseases once controlled or nearly eradicated but resurging to create health risks are called re-emerging diseases. Examples:",
-                            "যে সব রোগ আগে নিয়ন্ত্রণে ছিল বা প্রায় বিলুপ্ত হয়ে গিয়েছিল, কিন্তু পুনরায় বৃদ্ধি পেয়ে স্বাস্থ্যঝুঁকি সৃষ্টি করছে, সেগুলোকে রি-ইমারজিং বা পুনরুদ্ভূত রোগ বলা হয়। উদাহরণ:",
+                            "যে সব রোগ আগে নিয়ন্ত্রণে ছিল বা প্রায় বিলুপ্ত হয়ে গিয়েছিল, কিন্তু পুনরায় বৃদ্ধি পেয়ে স্বাস্থ্যঝুঁকি সৃষ্টি করছে, সেগুলোকে রি-ইমারজিং বা পুনরুদ্ভুত রোগ বলা হয়। উদাহরণ:",
                           )}</p>
                           <ul class="list-unstyled m23l1-examples" role="list">
                             ${renderExamples(reemergingExamples, 380)}
@@ -19923,7 +19923,7 @@ const orbitItems = [
           },
           {
             id: "ch23-lesson-3",
-            title: yhLang("Treatment", "চিকিৎসা"),
+            title: yhLang("Treatment", "ডেংগু: প্রতিরোধ ও চিকিৎসা"),
             icon: "fa-notes-medical",
             gradientClass: "bg-gradient-teal",
             audioFile: "",
