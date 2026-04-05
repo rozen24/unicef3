@@ -4754,7 +4754,7 @@ const anatomyTopics2 = [
                             <div class="ch7l3-subcategory">
                               <div class="ch7l3-subcategory-header ch7l3-shortterm">
                                 <i class="fa-solid fa-calendar-days"></i>
-                                <p>${yhLang("Short-Term", "স্বল্পমেয়াদি")}</p>
+                                <p>${yhLang("Short-Term", "১. স্বল্পমেয়াদি")}</p>
                               </div>
                               <div class="ch7l3-methods-grid">
                                 <div class="ch7l3-method-item ch7l3-method-type-2">
@@ -4765,32 +4765,6 @@ const anatomyTopics2 = [
                                     <p class="ch7l3-method-name">${yhLang("Birth Control Pills", "খাবার বড়ি")}</p>
                                   </div>
                                 </div>
-                                <div class="ch7l3-method-item ch7l3-method-type-2">
-                                  <div class="ch7l3-method-icon">
-                                    <i class="fa-solid fa-syringe"></i>
-                                  </div>
-                                  <div class="ch7l3-method-info">
-                                    <p class="ch7l3-method-name">${yhLang("Injection", "ইনজেকশন")}</p>
-                                  </div>
-                                </div>
-                                <div class="ch7l3-method-item ch7l3-method-type-2">
-                                  <div class="ch7l3-method-icon">
-                                    <i class="fa-solid fa-shield"></i>
-                                  </div>
-                                  <div class="ch7l3-method-info">
-                                    <p class="ch7l3-method-name">${yhLang("Intrauterine Device", "আইইউডি")}</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <!-- Long-term -->
-                            <div class="ch7l3-subcategory">
-                              <div class="ch7l3-subcategory-header ch7l3-longterm">
-                                <i class="fa-solid fa-calendar-check"></i>
-                                ${yhLang("Long-Term", "দীর্ঘমেয়াদি")}
-                              </div>
-                              <div class="ch7l3-methods-grid">
                                 <div class="ch7l3-method-item ch7l3-method-type-3">
                                   <div class="ch7l3-method-icon">
                                     <i class="fa-solid fa-shield-halved"></i>
@@ -4799,12 +4773,40 @@ const anatomyTopics2 = [
                                     <p class="ch7l3-method-name">${yhLang("Condom", "কনডম")}</p>
                                   </div>
                                 </div>
+                                <div class="ch7l3-method-item ch7l3-method-type-2">
+                                  <div class="ch7l3-method-icon">
+                                    <i class="fa-solid fa-syringe"></i>
+                                  </div>
+                                  <div class="ch7l3-method-info">
+                                    <p class="ch7l3-method-name">${yhLang("Injection", "ইনজেকশন")}</p>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+
+                            <!-- Long-term -->
+                            <div class="ch7l3-subcategory">
+                              <div class="ch7l3-subcategory-header ch7l3-longterm">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                ${yhLang("Long-Term", "২. দীর্ঘমেয়াদি")}
+                              </div>
+                              <div class="ch7l3-methods-grid">
+                                
                                 <div class="ch7l3-method-item ch7l3-method-type-3">
                                   <div class="ch7l3-method-icon">
                                     <i class="fa-solid fa-microchip"></i>
                                   </div>
                                   <div class="ch7l3-method-info">
                                     <p class="ch7l3-method-name">${yhLang("Implant", "ইমপ্ল্যান্ট")}</p>
+                                  </div>
+                                </div>
+                                <div class="ch7l3-method-item ch7l3-method-type-2">
+                                  <div class="ch7l3-method-icon">
+                                    <i class="fa-solid fa-shield"></i>
+                                  </div>
+                                  <div class="ch7l3-method-info">
+                                    <p class="ch7l3-method-name">${yhLang("Intrauterine Device", "আইইউডি")}</p>
                                   </div>
                                 </div>
                               </div>
@@ -5039,7 +5041,7 @@ const anatomyTopics2 = [
             content: (function () {
               const introText = yhLang(
                 "Adolescent pregnancies carry significant risks of maternal and child mortality. Due to physical development and social circumstances, these risks increase substantially during pregnancy, delivery, and postpartum periods.",
-                "কিশোরীদের গর্ভধারণে মা ও শিশু মৃত্যুর ঝুঁকি অনেক বেশি। শারীরিক গঠন ও সামাজিক অবস্থার কারণে তাদের গর্ভকালীন, প্রসবকালীন এবং প্রসব-পরবর্তী সময়ে এই ঝুঁকির পরিমাণ অনেক বেড়ে যায়।"
+                "কৈশোরে গর্ভধারণ অত্যন্ত ঝুঁকিপূর্ণ। কারণ এ সময় কিশোরীর নিজেরই শারীরিক বৃদ্ধি অসম্পূর্ণ থাকে এবং তার শারীরিক ও মানসিক বিকাশ তখনও চলমান থাকে।  এ অবস্থায় গর্ভধারণ করলে কিশোরী মা ও শিশু উভয়ই ঝুঁকির মধ্যে পড়ে যায়।  গর্ভাবস্থায় কিশোরীর সাথে সাথে তার মধ্যে বেড়ে ওঠা সন্তানেরও নানা প্রকার সেবা পুষ্টির দরকার হয় যা কিশোরী মা এর জন্য সবসময় পাওয়া সচরাচর সম্ভব নয়।  কৈশোরে সন্তান ধারণ এবং জন্মদানের ক্ষেত্রে মা এবং সন্তান বিভিন্ন ঝুঁকির সম্মুখীন হতে পারে।"
               );
 
 
@@ -5463,7 +5465,7 @@ const anatomyTopics2 = [
                   title: yhLang("Mother and Newborn Checkups", "মা ও নবজাতকের চেকআপ"),
                   description: yhLang(
                     "Minimum 4 visits required: 1st within 24 hours of delivery, 2nd within 2–3 days, 3rd within 4–7 days, and 4th within 42–45 days after delivery",
-                    "মা ও নবজাতকের চেকআপ (কমপক্ষে ৪টি -১ম বার : প্রসবের ২৪ ঘণ্টার মধ্য, ২য় বার: ২-৩ দিনের মেধ্য, ৩য় বার: ৪-৭ দিনের মেধ্য  এ বং ৪র্থ বার: প্রসবের ৪২-৪৫ দিনের মধ্য)।"
+                    "মা ও নবজাতকের চেকআপ (কমপক্ষে ৪টি -১ম বার : প্রসবের ২৪ ঘণ্টার মধ্য, ২য় বার: ২-৩ দিনের মেধ্য, ৩য় বার: ৪-৭ দিনের মধ্যে এ বং ৪র্থ বার: প্রসবের ৪২-৪৫ দিনের মধ্য)।"
                   ),
                   type: 1,
                   icon: "fa-stethoscope",
@@ -8839,7 +8841,7 @@ const orbitItems = [
 
               const managementIntro = yhLang(
                 "Negative experiences in daily life can quickly destabilize emotions and create uncertainty about what action to take.",
-                "দৈনন্দিন জীবনে আমাদের অনেক নেতিবাচক ঘটনার মেধ্য দিয়ে যেতে হয়। ফলে আমরা নানা ধরনের আবেগীয় সংকটের সম্মুখীন হই।",
+                "দৈনন্দিন জীবনে আমাদের অনেক নেতিবাচক ঘটনার মধ্যেদিয়ে যেতে হয়। ফলে আমরা নানা ধরনের আবেগীয় সংকটের সম্মুখীন হই।",
               );
 
               const managementDetails = yhLang(
@@ -10661,7 +10663,7 @@ const orbitItems = [
 
               const examFearDetails = yhLang(
                 "Exam fear may appear through physical and mental signs; early planning and coping practice can reduce it.",
-                "পরীক্ষাকে কেন্দ্র করে কিশোর-কিশোরীদের মনে নানা ধরনের ভয়-ভীতি লক্ষ করা যায়। এসময় অনেকের মেধ্য বমি বমি ভাব, মাথা ব্যাথা, শরীর ব্যাথা, হাত-পা ঠান্ডা হয়ে যাওয়া ইত্যাদি লক্ষণ দেখা যায়। আগে থেকে সঠিকভাবে প্রস্তুতি নেয়া, সুষ্ঠ সময় ব্যবস্থাপনা, ও ভীতি দূরীকরণের কৌশল অবলম্বনের মাধ্যমে পরীক্ষা ভীতিকে মোকাবিলা করা সম্ভব।",
+                "পরীক্ষাকে কেন্দ্র করে কিশোর-কিশোরীদের মনে নানা ধরনের ভয়-ভীতি লক্ষ করা যায়। এসময় অনেকের মধ্যেবমি বমি ভাব, মাথা ব্যাথা, শরীর ব্যাথা, হাত-পা ঠান্ডা হয়ে যাওয়া ইত্যাদি লক্ষণ দেখা যায়। আগে থেকে সঠিকভাবে প্রস্তুতি নেয়া, সুষ্ঠ সময় ব্যবস্থাপনা, ও ভীতি দূরীকরণের কৌশল অবলম্বনের মাধ্যমে পরীক্ষা ভীতিকে মোকাবিলা করা সম্ভব।",
               );
 
               const physicalSymptoms = [
@@ -11022,7 +11024,7 @@ const orbitItems = [
 
               const impactTitle = yhLang(
                 "Its impact can be especially deep among adolescents:",
-                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব কিশোর-কিশোরীদের মেধ্য বিশেষভাবে গভীর হতে পারে:",
+                "ডিভাইস আসক্তি এক ধরনের আচরণগত আসক্তি যা ব্যবহারকারীকে প্রযুক্তি ব্যবহারে নিয়ন্ত্রণহীন করে তোলে। এর প্রভাব কিশোর-কিশোরীদের মধ্যেবিশেষভাবে গভীর হতে পারে:",
               );
 
               const impacts = [
@@ -17374,7 +17376,7 @@ const orbitItems = [
                     <p class="mb-2" style="font-size: 0.92em;">
                     ${yhLang(
                       "Adolescence is a time full of potential, but it is also a period of vulnerability. During this stage, young people begin to develop sexual feelings and their interest in the opposite sex increases. They become capable of reproduction, but most adolescents cannot ensure their own protection due to lack of proper information. As a result, they may be encouraged to take various risks and, under the influence of wrong friends, may sometimes engage in risky and harmful behaviors.",
-                      "তারুন্য একটি সম্ভাবনময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মেধ্য তরুণ-তরুণীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে।  তারা প্রজননক্ষম হয়, কিন্তু অধিকাংশ রুণ-তরুণী সঠিক তেথ্যর অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না।  এসময়ে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে উৎসুক হয়ে উঠে এবং একই সাথে বন্ধু-বান্ধবদের দ্বারা প্রভাবিত হয়ে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর অভ্যাসে সে জড়িয়ে পড়ে। ",
+                      "তারুন্য একটি সম্ভাবনময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যেতরুণ-তরুণীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে।  তারা প্রজননক্ষম হয়, কিন্তু অধিকাংশ রুণ-তরুণী সঠিক তেথ্যর অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না।  এসময়ে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে উৎসুক হয়ে উঠে এবং একই সাথে বন্ধু-বান্ধবদের দ্বারা প্রভাবিত হয়ে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর অভ্যাসে সে জড়িয়ে পড়ে। ",
                     )}
                   </p>
                   </div>
