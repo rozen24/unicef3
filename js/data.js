@@ -856,11 +856,11 @@ const coursesData = [
                        <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
                           <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
                             <div class="container m2_globe" style="position: relative">
-                              <img src="img/Distribution/globe.jpg" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
+                              <img src="img/Distribution/globe.jpg" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-100" alt="Globe showing youth population">
                               <div class="globe-text-wrap">
                                 <h3 class="fw-bold map-text mb-2" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">${yhLang("70", "৯০")}</span>%</h3>
-                                <p class="lead mt-1 text-dark">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়নেরও</strong> বেশি তরূণ রয়েছে।")}</p>
-                                <p class="mb-0 text-dark lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "যাদের <strong>৯০%</strong> শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</p>
+                                <p class="lead mt-1 text-white">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়নেরও</strong> বেশি তরূণ রয়েছে,")}</p>
+                                <p class="mb-0 text-white lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "যাদের <strong>৯০%</strong> উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</p>
                               </div>
                             </div>
                           </section>
@@ -874,7 +874,7 @@ const coursesData = [
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <div class="modern-card p-2 glass-card h-region">
-                                      <h2 class="mb-2">${yhLang("Global youth population by region", "অঞ্চলভিত্তিক বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
+                                      <h2 class="mb-2"><b>${yhLang("Global youth population by region", "অঞ্চলভিত্তিক বৈশ্বিক তরুণ জনগোষ্ঠী")}</b></h2>
                                       <div style="position:relative; height:500px;">
                                         <canvas id="regionalShareChart" aria-label="Global youth population by region. " role="img"></canvas>
                                       </div>
@@ -1045,7 +1045,7 @@ const coursesData = [
                               </div>
                             </div>
                           </div>
-                          <h5 class="mt-5 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় বিনিয়োগে প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়।")}</h5>
+                          <h5 class="mt-5 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়।")}</h5>
 
                          
                     </div>
@@ -1054,8 +1054,8 @@ const coursesData = [
 
                  <!-- ROI Banner -->
                 
-                <p class="small text-muted mt-1 mb-0 text-end">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", `Ref: Our Future: A Lancet Commission on Adolescent  Health and Wellbeing; Patton et al. 2016.
-https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-address-rising-threats-to-young-peoples-health-and-wellbeing`)}</p>
+                <h4 class="small text-muted mt-1 mb-0 text-end">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", `Ref: Our Future: A Lancet Commission on Adolescent  Health and Wellbeing; Patton et al. 2016.
+`)}</h4>
 
               </div>`;
             })(),
@@ -1102,7 +1102,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
 
                 <section class="my-1" data-aos="fade-up" data-aos-delay="60">
                   <div class="row g-3">
-                    <div class="col-lg-4 modern-card glass-card">
+                    <div class="col-lg-4 modern-card glass-card ps-4">
                       <div class="" data-aos="zoom-in" data-aos-delay="100">
                        <p class="gradient-text my-1">${yhLang("Top 5 leading causes of death among adolescents are", "বিশ্বে প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন কারণে অসুস্থ হয় বা মত্যুবরণ করে।  কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে:")}</p>
                         <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
@@ -1277,7 +1277,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 <section class="my-1" data-aos="fade-up" data-aos-delay="80">
                   <div class="row g-3 align-items-center">
                     <div class="col-md-4">
-                        <h2 class="gradient-text mb-3">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</h2>
+                        <h2 class=" mb-1">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</h2>
                     </div>
                     <div class="col-md-8">
                        <h3 class="gradient-text my-1">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</h3>
@@ -1457,7 +1457,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                             )
                             .join("")}
                         </div>
-                        <p class="small text-muted p-1 mb-0">${yhLang("Note: Chart shows available values for Bangladesh (51%), South Asia (29%) and World (20%). Country-level values for other South Asian nations can be added when verified.", "দক্ষিণ এশিয়ায় বাল্যবিবাহের হার")}</p>
+                        <p class="small text-muted p-1 mb-0 mx-auto"><b>${yhLang("Note: Chart shows available values for Bangladesh (51%), South Asia (29%) and World (20%). Country-level values for other South Asian nations can be added when verified.", "দক্ষিণ এশিয়ায় বাল্যবিবাহের হার")}</b></p>
                       </article>
                     </div>
                   </div>
@@ -1863,7 +1863,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 {
                   title: yhLang(
                     "Adolescents have diverse needs",
-                    "চাহিদার ভিন্নতা।",
+                    "কিশোর কিশোরী ও তরুণদের বিভিন্ন ধরনের চাহিদা রয়েছে ",
                   ),
                   desc: yhLang(
                     "Needs in SRHR, mental health and other NCDs, nutrition,  violence against adolescents, vulnerable adolescents etc.",
@@ -1876,7 +1876,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 {
                   title: yhLang(
                     "Unaware of the laws, policies, rights",
-                    "আইন, নীতি এবং অধিকার সম্পর্কে অজ্ঞতা।",
+                    "আইন, নীতি এবং অধিকার সম্পর্কে অজ্ঞতা",
                   ),
                   desc: yhLang(
                     "Sexual and reproductive health rights, Child rights.",
@@ -1889,7 +1889,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 {
                   title: yhLang(
                     "Limited ability to execute the rights.",
-                    "অধিকার প্রয়োগে সীমিত ক্ষমতা।",
+                    "অধিকার প্রয়োগে সীমিত ক্ষমতা",
                   ),
                   desc: yhLang(
                     "Lack of confidence, parental influence, peer pressure",
@@ -1902,11 +1902,11 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 {
                   title: yhLang(
                     "Barriers in accessing the information, knowledge, skills.",
-                    "তথ্য, জ্ঞান এবং দক্ষতা অর্জনের ক্ষেত্রে বাধা",
+                    "তথ্য, জ্ঞান এবং দক্ষতা অর্জনে বাধা",
                   ),
                   desc: yhLang(
                     "Social stigma, discomfort among parents, family members, peers, teachers to talk about AH issues.",
-                    "তরুণদের স্বাস্থ্য সমস্যা নিয়ে কথা বলার সময় বাবা-মা, পরিবারের সদস্য, সহকর্মী এবং শিক্ষকদের মধ্যে সামাজিক বাধা এবং অস্বস্তি।",
+                    "সামাজিক কুসংস্কার ও খোলামেলা আলোচনার অভাবে অনেক কিশোর-কিশোরী ও তরুণ প্রয়োজনীয় তথ্য ও দক্ষতা থেকে বঞ্চিত হয়।।",
                   ),
                   icon: "fa-book-open-reader",
                   color: "bg-gradient-rose",
@@ -1915,11 +1915,11 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 {
                   title: yhLang(
                     "Barriers in accessing the health services.",
-                    "স্বাস্থ্যসেবা প্রাপ্তির ক্ষেত্রে বাধা।",
+                    "স্বাস্থ্যসেবা প্রাপ্তির ক্ষেত্রে বাধা",
                   ),
                   desc: yhLang(
                     "Limited care seeking behaviors, no dedicated service (no separate space, no privacy, no dedicated staff, negligence and unawareness among service providers.",
-                    "সীমিত সেবা গ্রহণের আগ্রহ, নিবেদিত স্বাস্থ্য সেবার অভাব (আলাদা স্থান, গোপনীয়তা ও নিবেদিতপ্রাণ স্বাস্থ্যকর্মীর   অভাব, সেবা প্রদানকারীদের মধ্যে অবহেলা এবং অসচেতনতা)।",
+                    "সেবা গ্রহণের সীমিত অভ্যাস; কোনো নির্দিষ্ট স্থান নেই, গোপনীয়তা নেই, নির্দিষ্ট কর্মী নেই; সেবাদানকারীদের অবহেলা ও অসচেতনতা রয়েছে।",
                   ),
                   icon: "fa-hospital-user",
                   color: "bg-gradient-cyan",
@@ -2031,7 +2031,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                   <div class="d-flex align-items-center gap-3">
                     <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group" style="color: #fff;"></i></span>
                     <div>
-                      <h2 class="">${yhLang("Why young people need special care ?", "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন?")}</h2>
+                      <h6 class=""><b>${yhLang("Why young people need special care ?", "কেন তরুণদের বিশেষ যত্নের প্রয়োজন?")}</b></h6>
                     </div>
                   </div>
                 </div>
@@ -2304,7 +2304,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text d-none" data-aos="fade-up">${yhLang("Adolescent Health in the Global Agenda", "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য")}</h2>
                 <figure class="glass-card agenda text-center">
-                          <img src="img/agenda/agenda_b.jpg" alt="agenda"  class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <img src="img/agenda/agenda-b.png" alt="agenda"  class="img-fluid w-100 rounded shadow-sm img-zoom" />
                 </figure>
               </div>`;
             })(),
@@ -2663,7 +2663,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                   <div class="ch3l2-intro-section">
                     <h1 class="ch3l2-main-title">
                       <i class="fa-solid fa-arrows-up-down"></i>
-                      ${yhLang("Adolescence Changes", "বয়ঃসন্ধিকালীন")}
+                      ${yhLang("Adolescence Changes", "বয়ঃসন্ধিকাল")}
                     </h1>
                     <p class="ch3l2-description">${description}</p>
                   </div>
@@ -2739,50 +2739,6 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
               ],
             },
             content: (function () {
-              const stages = [
-                {
-                  title: yhLang("Change", "পরিবর্তন"),
-                  col1: yhLang("Early (10-14 years)", "প্রাক ১০-১৪ বছর"),
-                  col2: yhLang("Mid (15-17 years)", "মধ্য ১৫-১৭ বছর"),
-                  col3: yhLang("Late Adolescence (15-17 years)", "চূড়ান্ত কৈশোর: ১৫-১৭ বছর"),
-                },
-                {
-                  title: yhLang("Growth", "বৃদ্ধি"),
-                  col1: yhLang("Sexual characteristics appear, maximum growth occurs", "যৌন বৈশিষ্ট্য দেখা যায়, সবচেয়ে বেশি বৃদ্ধি ঘটে"),
-                  col2: yhLang("Sexual characteristics become prominent", "growth decreases, ~95% height achieved", "যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে", "বৃদ্ধি কমে আসে, প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়"),
-                  col3: yhLang("Physical maturity achieved", "শারীরিক পূর্ণতাপ্রাপ্তি"),
-                },
-                {
-                  title: yhLang("Concepts/Knowledge", "ধারণা/জ্ঞান"),
-                  col1: yhLang("Concrete thinking, unable to understand long-term consequences", "স্থূল চিন্তাধারা, কাজের সুদূরপ্রসারী প্রভাব বোঝার অক্ষমতা"),
-                  col2: yhLang("More abstract thinking, capable of long-term planning, concrete thinking when in trouble", "বেশি বিমূর্ত চিন্তাধারা, সুদূরপ্রসারী চিন্তার ক্ষমতা, সমস্যায় পড়লে স্থূল চিন্তার ক্ষমতা"),
-                  col3: yhLang("Permanent abstract thinking, future-oriented, considers long-term consequences", "স্থায়ী বিমূর্ত চিন্তাধারা, ভবিষ্যৎ চিন্তা, সুদূরপ্রসারী ফলাফল চিন্তা করা"),
-                },
-                {
-                  title: yhLang("Mental/Emotional", "মানসিক"),
-                  col1: yhLang("Concerned with rapid physical growth, body image, major changes", "দ্রুত শারীরিক বৃদ্ধি, শারীরিক অবয়ব, আমূল পরিবর্তন নিয়ে চিন্তায় থাকা"),
-                  col2: yhLang("Image reconstruction, pressure about ideals, feels powerful", "অবয়ব/ইমেজ পুনঃস্থাপন, কল্পনা ও আদর্শ নিয়ে চাপে থাকা, নিজেকে ক্ষমতাবান ভাবা"),
-                  col3: yhLang("Stable intelligence and realistic identity established", "স্থায়ী বুদ্ধিমত্তা ও বাস্তবভিত্তিক পরিচয় স্থায়িত্ব লাভ করে"),
-                },
-                {
-                  title: yhLang("Family", "পরিবার"),
-                  col1: yhLang("Setting boundaries of dependence and independence", "পরনির্ভরতা ও আত্মনির্ভরতার সীমানা নির্ধারণ"),
-                  col2: yhLang("Conflict over authority and control", "কর্তৃত্ব বা নিয়ন্ত্রণ নিয়ে দ্বন্দ্ব"),
-                  col3: yhLang("Family expects responsibility from them", "পরিবার তার কাছ থেকে দায়িত্বশীলতা আশা করে"),
-                },
-                {
-                  title: yhLang("Peer Group", "সতীর্থ দল"),
-                  col1: yhLang("Desire to prevent instability", "অস্থায়িত্ব প্রতিরোধ করার ইচ্ছা প্রকাশ"),
-                  col2: yhLang("Seeking identity to maintain individuality, peer behavior shapes conduct", "স্বকীয়তা ধরে রাখতে পরিচয় খোঁজা, সতীর্থ কর্তৃক আচরণধারা ঠিক করা"),
-                  col3: yhLang("Moving from peer group to personal friendships", "সতীর্থ দল থেকে ব্যক্তিগত বন্ধুত্বে যাওয়া"),
-                },
-                {
-                  title: yhLang("Sexuality", "যৌনতা"),
-                  col1: yhLang("Self-discovery and self-evaluation", "নিজেকে খোঁজা ও মূল্যায়ন করা"),
-                  col2: yhLang("Engaged in romantic fantasies, attraction to opposite gender", "রোমান্টিক কাল্পনিক জগত নিয়ে ব্যস্ততা, বিপরীত লিঙ্গের প্রতি আকর্ষণ"),
-                  col3: yhLang("Building lasting relationships, mutual and future planning", "স্থায়ী সম্পর্ক তৈরি, পারস্পরিক ও ভবিষ্যত পরিকল্পনা করা"),
-                },
-              ];
 
               const renderStageTable = () => `
                 <div class="ch3l3-table-wrapper">
@@ -2790,9 +2746,9 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                     <thead>
                       <tr>
                         <th class="ch3l3-th-change"><h3><i class="fa-solid fa-arrows-right-left"></i> ${yhLang("Changes", "পরিবর্তন")} </h3></th>
-                        <th class="ch3l3-th-early"><h3><i class="fa-solid fa-child"></i> ${yhLang("Early (10-14)", "প্রাক ১০-১৪ বছর")}</h3></th>
-                        <th class="ch3l3-th-mid"><h3><i class="fa-solid fa-person"></i> ${yhLang("Mid (15-17)", "প্রাক ১৫-১৭ বছর")}</h3></th>
-                        <th class="ch3l3-th-late"><h3><i class="fa-solid fa-person-adult"></i> ${yhLang("Late (15-17)", "শেষ কৈশোর  : ১৫-১৭ বছর")}</h3></th>
+                        <th class="ch3l3-th-early"><h3><i class="fa-solid fa-child"></i> ${yhLang("Early (10-14)", "প্রাক : ১০-১৪ বছর")}</h3></th>
+                        <th class="ch3l3-th-mid"><h3><i class="fa-solid fa-person"></i> ${yhLang("Mid (15-17)", "মধ্য : ১৫-১৭ বছর")}</h3></th>
+                        <th class="ch3l3-th-late"><h3><i class="fa-solid fa-person-adult"></i> ${yhLang("Late (15-17)", "শেষ-কৈশোর : ১৮-১৯ বছর")}</h3></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -2812,10 +2768,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
     <p>${yhLang("Sexual characteristics become more prominent", "যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে")}</p>
   </div>
   <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Growth rate slows down", "বৃদ্ধি কমে আসে")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("About 95% of adult height is achieved", "প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়")}</p>
+    <p>${yhLang("Growth rate slows down", "বৃদ্ধি কমে আসে, প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়")}</p>
   </div>
 </td>
 
@@ -2864,7 +2817,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                         <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-heart"></i> ${yhLang("Emotional", "মানসিক")}</strong></h3></td>
                         <td class="ch3l3-td-early">
   <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concerned with rapid physical growth, body image, major changes", "দ্রুত শারীরিক বৃদ্ধি, শারীরিক অবয়ব, আমূল পরিবর্তন নিয়ে চিন্তায় থাকা")}</p>
+    <p>${yhLang("Concerned with rapid physical growth, body image, major changes", "দ্রুত শারীরিক বৃদ্ধি, শারীরিক অবয়ব, আমূল পরিবর্তন ইত্যাদি নিয়ে চিন্তায় থাকা")}</p>
   </div>
 </td>
 
@@ -3464,7 +3417,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "If menstruation starts unexpectedly at school, provide emergency sanitary napkins (free or paid).",
-      "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা হঠাৎ করে প্রস্তুতি ছাড়া মাসিক শুরু হয়ে যেতে পারে।  সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীকে সাহায্য করতে পারে।"
+      "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা হঠাৎ করে প্রস্তুতি ছাড়া মাসিক শুরু হয়ে যেতে পারে।  সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীটিকে সাহায্য করতে পারে।"
     ),
     icon: "fa-first-aid",
     color: "#ef4444",
@@ -3473,7 +3426,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "Keep pain relief tablets in the school first aid box for menstrual pain.",
-      "অনেক মেয়ের মাসিকের সময় তলপেটে তীব্র ব্যথা হয়।  তাই স্কুলের ফার্স্ট এইড বক্সে বেদনানাশক ট্যাবলেট রাখা প্রয়োজন।"
+      "অনেক মেয়ের মাসিকের সময় তলপেটে অতিরিক্ত ব্যথা হয়।  তাই স্কুলের ফাস্ট এইড বক্সে বেদনানাশক ট্যাবলেট রাখা প্রয়োজন।"
     ),
     icon: "fa-pills",
     color: "#f97316",
@@ -3482,7 +3435,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "Ensure awareness that menstruation is a natural process and promote a supportive environment among students and teachers.",
-      "মনে রাখতে হবে যে, ঋতুস্রাব একটি স্বাভাবিক শারীরিক প্রক্রিয়া—এ নিয়ে লজ্জা বা সংকোচের কিছু নেই।  এ বিষয়টি ছাত্র-ছাত্রী, শিক্ষকসহ সবাইকে সহজভাবে দেখার জন্য এবং সহযোগিতা দেওয়ার জন্য ওরিয়েন্টেশন প্রদান করা প্রয়োজন।"
+      "মনে রাখতে হবে যে, ঋতুস্রাব একটি স্বাভাবিক দৈহিক প্রক্রিয়া, এ নিয়ে লজ্জা বা সংকোচের কিছু নেই।  এ বিষয়টি ছাত্র-ছাত্রী, শিক্ষকসহ সবাইকে খুব সহজভাবে দেখার জন্য ও সহযোগিতা দেয়ার জন্য ওরিয়েন্টেশন প্রদান করা প্রয়োজন।"
     ),
     icon: "fa-handshake",
     color: "#06b6d4",
@@ -3521,7 +3474,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "Provide covered bins in toilets.",
-      "টয়লেটে ঢাকনাযুক্ত বিন/ঝুড়ির ব্যবস্থা রাখতে হবে"
+      "টয়লেটে ঢাকনাযুক্ত বিন/ ঝুড়ির ব্যবস্থা করতে হবে"
     ),
     icon: "fa-trash-can",
     color: "#f59e0b",
@@ -3632,7 +3585,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                     <div class="m4l9-section-header">
                       <h3 class="m4l9-section-title">
                         <i class="fa-solid fa-check-circle"></i>
-                        ${yhLang("Essential Facilities", "সবচেয়ে প্রয়োজনীয় বিষয়সমূহ যা শিক্ষা প্রতিষ্ঠানকে অবশ্যই পালন করতে হবে")}
+                        ${yhLang("Essential Facilities", "সবচেয়ে প্রয়োজনীয় বিষয়টি হচ্ছে শিক্ষা প্রতিষ্ঠান কর্তৃপক্ষকে নিম্নলিখিত বিষয়গুলো আবশ্যকভাবে পালন করতে হবে:")}
                       </h3>
                     </div>
                     <div class="m4l9-facilities-grid">
@@ -3728,7 +3681,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "The cessation of menstruation is one of the signs of pregnancy. In this case, if pregnancy is confirmed by appropriate testing, one should seek prenatal care from a healthcare provider. However, it should be remembered that a pregnancy test should not be taken just because menstruation has stopped.",
-      "মাসিক বন্ধ হয়ে যাওয়া গর্ভধারণের লক্ষণগুলোর একটি। সেক্ষেত্রে উপযুক্ত পরীক্ষা কওে গর্ভধারন নিশ্চিত হলে, স্বাস্থ্যসেবা প্রদানকারীর নিকট হতে গর্ভজনিত সেবা গ্রহন করতে হবে।  তবে মনে রাখতে হবে যে, মাসিক বন্ধ হয়ে গেছে বলেই যে সে গর্ভবতী তা ধারনা না করে প্রেগ্ন্যন্সি টেষ্ট করতে হবে।"
+      "মাসিক বন্ধ হয়ে যাওয়া গর্ভধারণের লক্ষণগুলোর একটি। সেক্ষেত্রে উপযুক্ত পরীক্ষা কাণ্ডের গর্ভধারন নিশ্চিত হলে, স্বাস্থ্যসেবা প্রদানকারীর নিকট হতে গর্ভজনিত সেবা গ্রহন করতে হবে।  তবে মনে রাখতে হবে যে, মাসিক বন্ধ হয়ে গেছে বলেই যে সে গর্ভবতী তা ধারনা না করে প্রেগ্ন্যন্সি টেষ্ট করতে হবে।"
     ),
     icon: "fa-flask-vial",
     color: "#3b82f6",
@@ -3737,7 +3690,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "Irregular periods, excessive bleeding, or severe pain may indicate reproductive or hormonal problems. A specialist doctor should be consulted.",
-      "এছাড়াও অনিয়মিত মাসিক, মাসিকের সময় অতিরিক্ত রক্ত যাওয়া, অথবা অতিরিক্ত ব্যথা হওয়া—এসব প্রজননতন্ত্র বা হরমোনজনিত সমস্যার লক্ষণ হতে পারে। তাই মেয়েদের বিশেষজ্ঞ চিকিৎসকের কাছে রেফার করতে হবে।"
+      "এছাড়াও অনিয়মিত মাসিক এবং মাসিকের সময় বেশি রক্ত যাওয়া ও অতিরিক্ত  ব্যথা হওয়া প্রজননতন্ত্রের বা হরমোনজনিত রোগের লক্ষণ এবং এসব ক্ষেত্রে মেয়েদের বিশেষজ্ঞ চিকিৎসকের কাছে রেফার করতে হবে।"
     ),
     icon: "fa-hospital",
     color: "#0891b2",
@@ -3810,7 +3763,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                   <div class="m4l10-description-card" data-aos="fade-up" data-aos-delay="40">
                     <p class="m4l10-description-text">${yhLang(
                       "If a girl experiences any of the following symptoms regarding her menstruation, it is considered a menstrual abnormality.",
-                      "যদি কোনো মেয়ের মাসিকের ক্ষেত্রে নিচের যেকোনো একটিও দেখা যায়, তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।",
+                      "যদি কোনো মেয়ের মাসিক চক্রে নিম্নের যেকোনো একটিও দেখা যায় তবে তাকে মাসিকের অস্বাভাবিকতা বলা হবে।",
                     )}</p>
                   </div>
 
@@ -3908,6 +3861,17 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
     icon: "fa-gem",
   },
   {
+    title: yhLang("Sperm", "শুক্রাণু"),
+    description: yhLang(
+      "Sperm production begins at puberty. Sperm are contained in a white fluid called semen. During ejaculation, semen exits through the penis. During sexual intercourse, sperm travel through the female reproductive system to reach and fertilize an egg. Only one sperm is needed to fertilize an egg.",
+      "বয়ঃসন্ধি থেকে শুক্রাণু উৎপাদিত হতে শুরু করে।  শুক্রাণুগুলো এক ধরনের সাদা তরল পদার্থের মধ্য থাকে যাকে বলা হয় বীর্য।  পুরুষের বীর্যপাতের সময় এগুলো পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে।  নারীর সঙ্গে শারীরিক মিলনের সময় পুরুষের বীর্যপাত হলে তা নারীর যোনিপথ ও জরায়ু দিয়ে ডিম্বনালিতে প্রবেশ করে ও ডিম্বাণুর সঙ্গে মিলিত হয়।  এদের মধ্য খুব অল্প কয়েকটা শুক্রাণু, ডিম্বাণু পর্যন্ত পৌঁছাতে পারে।  তবে একটি ডিম্বাণুকে নিষিক্ত করে সন্তান উৎপাদন করতে কেবল একটি শুক্রাণুই প্রয়োজন।"
+    ),
+    icon: "fa-bacteria",
+  },
+];
+
+const anatomyTopics2 = [
+  {
     title: yhLang("Nocturnal Emission (Wet Dream)", "ছেলেদের স্বপ্নে বীর্যপাত"),
     description: yhLang(
       "During puberty (usually between ages 13–15), semen production begins. Excess semen is naturally released from the body, often during sleep, known as a wet dream. This is a normal process and not a disease. Not experiencing it is also normal and does not indicate any problem.",
@@ -3915,14 +3879,6 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
     ),
     icon: "fa-bed",
   },
-  {
-    title: yhLang("Sperm", "শুক্রাণু"),
-    description: yhLang(
-      "Sperm production begins at puberty. Sperm are contained in a white fluid called semen. During ejaculation, semen exits through the penis. During sexual intercourse, sperm travel through the female reproductive system to reach and fertilize an egg. Only one sperm is needed to fertilize an egg.",
-      "বয়ঃসন্ধি থেকে শুক্রাণু উৎপাদিত হতে শুরু করে।  শুক্রাণুগুলো এক ধরনের সাদা তরল পদার্থের মধ্য থাকে যাকে বলা হয় বীর্য।  পুরুষের বীর্যপাতের সময় এগুলো পেনিসের অগ্রভাগ দিয়ে বেরিয়ে আসে।  নারীর সঙ্গে শারীরিক মিলনের সময় পুরুষের বীর্যপাত হলে তা নারীর যোনিপথ ও জরায়ু দিয়ে ডিম্বনালিতে প্রবেশ করে ও ডিম্বাণুর সঙ্গে মিলিত হয়।  এদের মধ্য খুব অল্প কয়েকটা শুক্রাণু, ডিম্বাণু পর্যন্ত পৌঁছাতে পারে।  তবে একটি ডিম্বাণুকে নিষিক্ত করে সন্তান উৎপাদন করতে কেবল একটি শুক্রাণুই প্রয়োজন।"
-    ),
-    icon: "fa-bacteria",
-  }, 
   {
     title: `
       <figure class="birgo_img mb-0">
@@ -3938,7 +3894,25 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                 anatomyTopics
                   .map(
                     (topic, idx) => `
-                      <div class="col-12 col-lg-6 mb-1 mt-0">
+                      <div class="col-12 col-lg-12 mb-1 mt-0">
+                        <article class="m5l3-topic-card modern-card glass-card" data-aos="fade-up" data-aos-delay="${80 + idx * 60}">
+                          <div class="m5l3-topic-header">
+                            <div class="m5l3-topic-icon">
+                              <i class="fa-solid ${topic.icon}"></i>
+                            </div>
+                            <h3 class="m5l3-topic-title gradient-text">${topic.title}</h3>
+                          </div>
+                          <p class="m5l3-topic-description mb-0">${topic.description}</p>
+                        </article>
+                      </div>
+                    `,
+                  )
+                  .join("");
+              const renderTopicCards2 = () =>
+                anatomyTopics2
+                  .map(
+                    (topic, idx) => `
+                      <div class="col-12 col-lg-12 mb-1 mt-0">
                         <article class="m5l3-topic-card modern-card glass-card" data-aos="fade-up" data-aos-delay="${80 + idx * 60}">
                           <div class="m5l3-topic-header">
                             <div class="m5l3-topic-icon">
@@ -3967,7 +3941,12 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
                       "পুরুষ প্রজনতন্ত্র",
                     )}</h3>
                     <div class="row g-1">
-                      ${renderTopicCards()}
+                      <div class="col-md-6">
+                            ${renderTopicCards()}
+                       </div>
+                       <div class="col-md-6">
+                            ${renderTopicCards2()}
+                       </div>
                     </div>
                   </section>
                 </div>
@@ -4031,7 +4010,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "Clean the genital area daily during bathing. If there is foreskin on the penis, it should also be cleaned.",
-      "প্রতিদিন গোসলের সময় যৌনাঙ্গ পরিষ্কার করতে হবে। যদি পেনিসের অগ্রভাগে বাড়তি চামড়া থাকে (ফোরস্কিন), সেটিও পরিষ্কার করতে হবে।"
+      "প্রতিদিন গোসলের সময় যৌনাঙ্গ পরিষ্কার করতে হবে।  যদি পেনিসের অগ্রভাগে বাড়তি চামড়া থাকে, সেটাও পরিষ্কার করতে হবে।"
     ),
     icon: "fa-water",
     color: "#06b6d4",
@@ -4079,7 +4058,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "It is normal to feel attraction towards the opposite sex during adolescence, but one must control oneself and act responsibly.",
-      "বয়ঃসন্ধিকালে বিপরীত লিঙ্গের প্রতি আকর্ষণ অনুভব করা স্বাভাবিক। তবে অবশ্যই মানুষ হিসেবে নিজেকে সংযত রাখতে হবে।"
+      "বয়ঃসন্ধিকালে বিপরীত লিঙ্গের প্রতি আকর্ষণ অনুভব করা স্বাভাবিক।  তবে অবশ্যই মানুষ হিসেবে নিজেকে সংযত রাখতে হবে।"
     ),
     icon: "fa-heart",
     color: "#db2777",
@@ -4087,7 +4066,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "Do not make inappropriate comments, whistle, or engage in any form of sexual harassment in public places or around schools and colleges.",
-      "এসময় রাস্তাঘাটে বা স্কুল–কলেজের সামনে মেয়েদের আজেবাজে কথা বলা, শিস দেওয়া বা কোনো ধরনের যৌন হয়রানি করা যাবে না।"
+      "এসময় রাস্তাঘাটে বা স্কুল কলেজের সামনে মেয়েদের আাজেবাজে কথা বলে  বা শীষ দিয়ে যৌনহয়রানি করা যাবেনা।"
     ),
     icon: "fa-triangle-exclamation",
     color: "#f97316",
@@ -4095,7 +4074,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "Do not touch sensitive parts of someone’s body under any circumstances.",
-      "সুযোগ পেয়ে মেয়েদের শরীরের স্পর্শকাতর স্থানে হাত দেওয়া যাবে না।"
+      "সুযোগ পেয়ে মেয়েদের শরীরের স্পর্শকাতর স্থানে হাত দেয়া যাবে না।"
     ),
     icon: "fa-hand-holding-heart",
     color: "#a855f7",
@@ -4111,7 +4090,7 @@ https://www.countdown2030.org/uncategorized/lancet-commission-action-needed-to-a
   {
     text: yhLang(
       "Do not be influenced by bad friends to visit brothels.",
-      "খারাপ বন্ধুদের প্ররোচনায় পতিতালয়ে যাওয়া যাবে না।"
+      "খারাপ বন্ধুদের প্ররোচনায় পতিতালয় যাওয়া যাবে না।"
     ),
     icon: "fa-person-hiking",
     color: "#059669",
