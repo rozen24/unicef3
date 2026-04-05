@@ -5611,7 +5611,7 @@ const anatomyTopics2 = [
                 yhLang("Sores or ulcers in genital area", "যৌনাঙ্গে ক্ষত হওয়া"),
                 yhLang("Pain during sexual intercourse", "যৌনমিলনে ব্যথা হওয়া"),
                 yhLang("Itching or rash-like bumps on body", "শরীরে চুলকানি বা ঘামাচির মতো দানা হওয়া"),
-                yhLang("Swollen lymph nodes (in groin or other areas)", "শরীরে লসিকা গ্রন্থি ফুলে যাওয়া ও ব্যাথা (কুঁচকি বা অন্যান্য স্থানে গুটি হওয়া)"),
+                yhLang("Swollen lymph nodes (in groin or other areas)", "শরীরে লসিকা গ্রন্থি ফুলে যাওয়া ও ব্যাথা (কুঁচকি বা অন্যান্য স্থানে ফুলে হওয়া)"),
               ];
 
               const symptomNote = yhLang(
@@ -5855,7 +5855,7 @@ const anatomyTopics2 = [
             content: (function () {
               const introText = yhLang(
                 "HIV (Human Immunodeficiency Virus) is a virus that destroys the body's immune system. When the virus enters the bloodstream, it gradually weakens the body's ability to fight infections. Eventually, the immune system becomes so compromised that it cannot defend against diseases like diarrhea, tuberculosis, or cholera. When immunity is completely destroyed, this condition is called AIDS (Acquired Immunodeficiency Syndrome).",
-                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধ ক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্তে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধ ক্ষমতা নষ্ট করে দেয়। এক সময় শরীরের রোগ প্রতিরোধ ক্ষমতা একেবারেই থাকেনা। এসময় বিভিন্ন রোগ যেমন- ডায়রিয়া, যক্ষ্মা, কলেরা ইত্যাদি মানব দেহকে আক্রমণ করলে মানব দেহে তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না। ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম এইডস। ২-১০ বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে। "
+                "এইচআইভি (HIV) হলো মানুষের রোগ প্রতিরোধ ক্ষমতা বিনাশকারী ভাইরাস। এ ভাইরাস মানবদেহের রক্তে প্রবেশের পর ধীরে ধীরে শরীরের রোগ প্রতিরোধ ক্ষমতা নষ্ট করে দেয়।  এক সময় শরীরের রোগ প্রতিরোধ ক্ষমতা একেবারেই থাকেনা।  এসময় বিভিন্ন রোগ যেমন- ডায়রিয়া, যক্ষ্মা, কলেরা ইত্যাদি মানব দেহকে আক্রমণ করলে মানব দেহে তার বিরুদ্ধে কোনো প্রতিরোধ ব্যবস্থা গড়ে তুলতে পারে না।  ফলে যেকোনো রোগ হলে আর ভালো হয় না। শরীরের এই অবস্থার নাম এইডস।  ২-১০ বছর পর্যন্ত এইচআইভি (HIV) মানবদেহে সুপ্ত অবস্থায় থাকতে পারে। "
               );
 
               const latencyNote = yhLang(
@@ -6262,7 +6262,7 @@ const anatomyTopics2 = [
                     <div class="ch11l4-td-desc-card">
                       <h2 class="ch11l4-td-title">
                         <i class="fa-solid fa-shield-virus"></i>
-                        ${yhLang("Importance of TD Vaccine", "মহিলাদের অন্যান্য টিকা : টিডি টিকা : টিডি টিকার গুরুত্ব")}
+                        ${yhLang("Importance of TD Vaccine", "<b>মহিলাদের অন্যান্য টিকা</b> <br>টিডি টিকা")}
                       </h2>
                       <p class="ch11l4-td-description">
                         ${yhLang(
@@ -6288,13 +6288,13 @@ const anatomyTopics2 = [
                             <th class="ch11l4-td-th"><h3>${yhLang("Number of Doses", "ডোজের সংখ্যা")}</h3></th>
                             <th class="ch11l4-td-th"><h3>${yhLang("Timing", "টিকা শুরু করার সঠিক সময়")}</h3></th>
                             <th class="ch11l4-td-th"><h3>${yhLang("Site", "টিকাদানের স্থান")}</h3></th>
-                            <th class="ch11l4-td-th"><h3>${yhLang("Route", "টিকাদানের প্রয়োগ পথ")}</h3></th>
+                            <th class="ch11l4-td-th"><h3>${yhLang("Route", "টিকার প্রয়োগ পথ")}</h3></th>
                           </tr>
                         </thead>
                         <tbody> 
                           <tr>
                             <td rowspan="5" class="ch11l4-td-td-disease">
-                             <p> ${yhLang("Tetanus & Diphtheria (TD)", "ধনুষ্টংকার<br>(টিটেনাস ও ডিপথেরিয়া)")}</p>
+                             <p> ${yhLang("Tetanus & Diphtheria (TD)", "ধনুষ্টংকার<br> ও <br>ডিপথেরিয়া")}</p>
                             </td>
                             <td rowspan="5" class="ch11l4-td-vaccine"><p>${yhLang("TD <br> Tetanus & Diphtheria (TD)", "টিডি <br> (টিটেনাস ও ডিপথেরিয়া)")}</p></td>
                             <td rowspan="5" class="ch11l4-td-dose"><p>${yhLang("0.5 mL", "০.৫ মিলিলিটার")}</p></td>
@@ -6322,10 +6322,6 @@ const anatomyTopics2 = [
                         </tbody>
                       </table>
                     </div>
-                    <p class="ch11l4-td-table-note text-end">
-                      <i class="fa-solid fa-quote-left"></i>
-                      ${yhLang("Source: Expanded Programme on Immunization (EPI), Ministry of Health, Government of Bangladesh", "সম্প্রসারিত টিকাদান কর্মসূচি (ইপিআই), স্বাস্থ্য অধিদপ্তর, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার")}
-                    </p>
                   </section>
 
                   <section class="ch11l4-td-pregnant-section" data-aos="fade-up" data-aos-delay="100">
@@ -6355,10 +6351,10 @@ const anatomyTopics2 = [
                             )}
                           </p>
                           <p class="ch11l4-td-important-text">
-                            <strong>${yhLang("Important:", "মনে রাখতে হবে:")}</strong> ${yhLang(
+                            <strong>${yhLang("Important:", "মনে রাখতে হবে:")}</strong> <span style="color: blue;">${yhLang(
                               "The timing of vaccination does not change with the timing of delivery.",
                               "ধনুষ্টংকার ও ডিপথেরিয়া মারাত্মক রোগ। এ রোগগুলো থেকে রক্ষা পেতে সব নারীকে ৫ ডোজ টিডি টিকা সঠিক সময়ে নিতে হবে।"
-                            )}
+                            )}</span>
                           </p>
                         </div>
                       </div>
@@ -6681,7 +6677,7 @@ const anatomyTopics2 = [
         id: "ch-13",
         title: yhLang(
           "Module-13: Polycystic Ovary Syndrome (PCOS) 2",
-          "মডিউল-১৩: মানবাধিকার ও শিশু অধিকার সনদ এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার",
+          "মডিউল-১৩: শিশু অধিকার ও মানবাধিকার এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার",
         ),
         lessons: [
          
@@ -6690,7 +6686,7 @@ const anatomyTopics2 = [
             id: "ch12-lesson-1",
             title: yhLang(
               "Child Rights, Human Rights & Sexual Reproductive Health Rights",
-              "মানবাধিকার ও শিশু অধিকার সনদ এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার"
+              "শিশু অধিকার ও মানবাধিকার এবং যৌন ও প্রজনন স্বাস্থ্য অধিকার"
             ),
             icon: "fa-handshake",
             gradientClass: "bg-gradient-purple",
@@ -7482,7 +7478,7 @@ const orbitItems = [
                         <i class="fa-solid fa-hand-fist"></i>
                         ${yhLang("Physical Violence", "১. শারীরিক নির্যাতন")}
                       </h3>
-                      <p class="ch13l4-category-desc mb-3">${yhLang("Actions or behaviors that harm or threaten to harm the victim's life, health, safety or body.", "এমন কোনো কাজ বা আচরণ করা, যার দ্বারা সংক্ষুব্ধ ব্যক্তির জীবন, স্বাস্থ্য, নিরাপত্তা বা শরীরের কোনো অঙ্গ ক্ষতিগ্রস্ত হয় অথবা ক্ষতিগ্রস্ত হবার স¤ভাবনা থাকে এবং সংক্ষুব্ধ ব্যক্তিকে অপরাধমূলক কাজ করতে বাধ্য করা বা প্ররোচনা প্রদান করা বা বলপ্রয়োগ যেমন :")}</p>
+                      <p class="ch13l4-category-desc mb-3">${yhLang("Actions or behaviors that harm or threaten to harm the victim's life, health, safety or body.", "এমন কোনো কাজ বা আচরণ করা, যার দ্বারা সংক্ষুব্ধ ব্যক্তির জীবন, স্বাস্থ্য, নিরাপত্তা বা শরীরের কোনো অঙ্গ ক্ষতিগ্রস্ত হয় অথবা ক্ষতিগ্রস্ত হবার সম্ভাবনা থাকে এবং সংক্ষুব্ধ ব্যক্তিকে অপরাধমূলক কাজ করতে বাধ্য করা বা প্ররোচনা প্রদান করা বা বলপ্রয়োগ যেমন :")}</p>
                       <ul class="ch13l4-list">
                         ${renderItems(physicalViolence, 100)}
                       </ul>
@@ -7967,7 +7963,7 @@ const orbitItems = [
                       <li class="ch13l7-li ch13l7-li-${item.type}" data-aos="fade-left" data-aos-delay="${70 + idx * 18}">
                         <span class="ch13l7-li-icon"><i class="fa-solid ${item.icon}"></i></span>
                         <span class="ch13l7-li-text">
-                          <span class="ch13l7-li-num">${item.num}.</span> ${item.text}
+                          <span class="ch13l7-li-num"></span> ${item.text}
                         </span>
                       </li>
                     `
@@ -8841,14 +8837,10 @@ const orbitItems = [
 
               const managementIntro = yhLang(
                 "Negative experiences in daily life can quickly destabilize emotions and create uncertainty about what action to take.",
-                "দৈনন্দিন জীবনে আমাদের অনেক নেতিবাচক ঘটনার মধ্যেদিয়ে যেতে হয়। ফলে আমরা নানা ধরনের আবেগীয় সংকটের সম্মুখীন হই।",
+                "দৈনন্দিন জীবনে আমাদের অনেক নেতিবাচক ঘটনার মধ্যেদিয়ে যেতে হয়। ফলে আমরা নানা ধরনের আবেগীয় সংকটের সম্মুখীন হই।  আবেগ ব্যবস্থাপনা ব্যক্তিকে আত্ম নিয়ন্ত্রনে সহায়তা করবে, নেতিবাচক পরিস্থিতি মোকাবেলা করতে এবং এ ধরনের পরিস্থিতিতে কিভাবে প্রতিক্রিয়া করতে হবে তাতে সহায়তা করবে।  ব্যক্তি তার গুনাবলীগুলো উপলব্ধি করতে পারবে এবং ফলপ্রসূভাবে কাজ করতে পারবে। এটি আত্ম-বিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা এবং আত্মসন্মানবোধ বৃব্ধিতে সহায়তা করবে।",
               );
 
-              const managementDetails = yhLang(
-                "Organized emotion management strengthens self-control, helps select appropriate responses, and supports productive action through self-awareness.",
-                "আবেগ ব্যবস্থাপনা ব্যক্তিকে আত্ম নিয়ন্ত্রনে সহায়তা করবে, নেতিবাচক পরিস্থিতি মোকাবেলা করতে এবং এ ধরনের পরিস্থিতিতে কিভাবে প্রতিক্রিয়া করতে হবে তাতে সহায়তা করবে। ব্যক্তি তার গুনাবলীগুলো উপলব্ধি করতে পারবে এবং ফলপ্রসূভাবে কাজ করতে পারবে। এটি আত্ম-বিশ্বাস, আত্মনিয়ন্ত্রণ ক্ষমতা এবং আত্মসন্মানবোধ বৃব্ধিতে সহায়তা করবে।",
-              );
-
+              
 
 
               const basicEmotions = [
@@ -8927,7 +8919,6 @@ const orbitItems = [
                       ${yhLang("Why emotion management matters", "কেন আবেগ ব্যবস্থাপনা করা গুরুত্বপূর্ণ")}
                     </h3>
                     <p class="m14l2-p mb-2">${managementIntro}</p>
-                    <p class="m14l2-p">${managementDetails}</p>
                     
                   </section>
                 </div>
@@ -9477,7 +9468,7 @@ const orbitItems = [
                     <article class="m14l3-card m14l3-card-symptoms">
                       <h3 class="m14l3-subtitle">
                         <i class="fa-solid fa-table-cells-large"></i>
-                        ${yhLang("Anxiety symptoms table", "উদ্বেগের লক্ষণ ও উপসর্গের")}
+                        ${yhLang("Anxiety symptoms table", "উদ্বেগের লক্ষণ ও উপসর্গ")}
                       </h3>
                       <div class="m14l3-table-wrap">
                         <table class="m14l3-table">
@@ -10847,7 +10838,7 @@ const orbitItems = [
                     <section class="m14l9-card m14l9-card-physical">
                       <h3 class="m14l9-subtitle">
                         <i class="fa-solid fa-heart-pulse"></i>
-                        ${yhLang("Physical Symptoms", "শারীরিক উপসর্গ")}
+                        ${yhLang("Physical Symptoms", "পরীক্ষা-ভীতির শারীরিক ও মানসিক উপসর্গসমূহ")}
                       </h3>
                       <ul class="m14l9-list">
                         ${renderList(physicalSymptoms, 80, "left")}
@@ -10900,7 +10891,7 @@ const orbitItems = [
               );
               const intro2 = yhLang(
   "Study regularly every day and create a visible study plan that includes the exam schedule, the number of days off before each exam, which subjects are more difficult and need more time, and which are easier and require less time. Study with understanding rather than memorization and connect lessons with examples to understand them better.",
-  "প্রতিদিন নিয়মিত পড়া, যেখানে পরীক্ষার সময়সূচী, প্রতিটি পরীক্ষার আগে কতদিন ছুটি, কোন বিষয়টি কঠিন তুলনামূলক বেশিদিন পড়তে হবে, কোনটি সহজ তুলনামূলক অল্পদিন পড়তে হবে সব কিছু উল্লেখ করে পড়ালেখার একটি দৃশ্যমান তালিকা তৈরি করা, বুঝে পড়া মুখস্থ করা, উদাহরণের সাথে পড়ার সংযোগ করে পড়া।"
+  "প্রতিদিন নিয়মিত পড়া, যেখানে পরীক্ষার সময়সূচী, প্রতিটি পরীক্ষার আগে কতদিন ছুটি, কোন বিষয়টি কঠিন ও তুলনামূলক বেশিদিন পড়তে হবে, কোনটি সহজ ও তুলনামূলক অল্পদিন পড়তে হবে সব কিছু উল্লেখ করে পড়ালেখার একটি দৃশ্যমান তালিকা তৈরি করা, বুঝে পড়া মুখস্থ করা, উদাহরণের সাথে পড়ার সংযোগ করে পড়া।"
 );
               const intro3 = yhLang(
               "To perform well in examinations, students should focus on the exam syllabus and the lessons taught before the exam. They should review and analyze previous years’ question papers to understand the question patterns and practice solving them.",
@@ -10916,7 +10907,7 @@ const orbitItems = [
         );
             const intro6 = yhLang(
   "First, identify the cause of the anxiety. Is it due to lack of preparation, or fear of what others might say if the result is poor ? If worrying about others' opinions is the main reason, remember that exams are a normal part of life. Exams are closely connected with education, but a single exam never determines a person's entire success or failure in life. Therefore, it is important to develop a mindset that accepts exams as a natural part of life.",
-  "প্রথমেই নির্ধারন করতে হবে দুঃশ্চিন্তার কারণ কি, এটা যদি প্রয়োজনীয় প্রস্তুতির অভাবে, না ফলাফল খারাপ হলে অন্যরা কি বলবে এ কারণে। যদি অন্যরা কি বলবে এটা দুঃশ্চিন্তার প্রধান কারণ হয় তাহলে ভাবতে হবে জীবনে পরীক্ষা থাকবেই। পড়াশুনার সাথে পরীক্ষা ওতপ্রোতভাবে জড়িত। একটি পরীক্ষা কখনই পুরো জীবনের সফলতা বা ব্যর্থতা বর্ণনা করে না। পরীক্ষা বিষয় টিকে জীবনের একটি অংশ হিসেবে নিয়ে সাধারনভাবে গ্রহণ করার মানসিকতা অর্জনের চেষ্টা করতে হবে।"
+  "প্রথমেই নির্ধারন করতে হবে দুঃশ্চিন্তার কারণ কি, এটা কি প্রয়োজনীয় প্রস্তুতির অভাবে, না ফলাফল খারাপ হলে অন্যরা কি বলবে এ কারণে। যদি অন্যরা কি বলবে এটা দুঃশ্চিন্তার প্রধান কারণ হয় তাহলে ভাবতে হবে জীবনে পরীক্ষা থাকবেই। পড়াশুনার সাথে পরীক্ষা ওতপ্রোতভাবে জড়িত। একটি পরীক্ষা কখনই পুরো জীবনের সফলতা বা ব্যর্থতা বর্ণনা করে না। পরীক্ষা বিষয় টিকে জীবনের একটি অংশ হিসেবে নিয়ে সাধারনভাবে গ্রহণ করার মানসিকতা অর্জনের চেষ্টা করতে হবে।"
 );
 
 
@@ -10931,7 +10922,7 @@ const orbitItems = [
                   <header class="m14l10-header">
                     <h2 class="m14l10-title">
                       <i class="fa-solid fa-pen-to-square"></i>
-                      ${yhLang("Solutions to Exam Fear", "পরীক্ষা-ভীতি দূর করার উপায় বা সমাধান বা সমাধান বা সমাধান বা সমাধান বা সমাধান বা সমাধান বা সমাধান")}
+                      ${yhLang("Solutions to Exam Fear", "পরীক্ষা-ভীতি দূর করার উপায় বা সমাধান")}
                     </h2>
                   </header>
 
@@ -11454,7 +11445,7 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
   "Empathy: Empathy is the ability through which we can understand and feel another person's emotions from their own perspective. Sympathy and empathy are not the same. Sympathy is only a feeling for someone, whereas empathy involves both feeling and the ability to understand a situation from the other person's point of view.",
-  "সমমর্মিতা হচ্ছে যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতার(Empathy) এক নয়, সমবেদনা হোল শুধুই অনুভুতি আর সহমর্মিতা হচ্ছে অনুভুতি ও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা"
+  "সমমর্মিতা হচ্ছে যার মাধ্যমে আমরা অপর ব্যক্তির অনুভূতিকে তার অবস্থান থেকে তার মত করে অনুভব করতে পারি। সমবেদনা (Sympathy) এবং সমমর্মিতা(Empathy) এক নয়, সমবেদনা হোল শুধুই অনুভুতি আর সহমর্মিতা হচ্ছে অনুভুতি ও পাশাপাশি অপরের অবস্থান থেকে তার মত করে বোঝার ক্ষমতা"
 );
               const comparisonNote = yhLang(
                 "Sympathy is only emotional response, while empathy combines emotional understanding with seeing from the other person's position.",
