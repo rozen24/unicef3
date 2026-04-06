@@ -21892,18 +21892,17 @@ const orbitItems = [
                   </header>
 
                   <div class="row g-1 mt-1 mb-5 align-items-stretch">
+                    <div class="col-12 col-lg-4">
+                      <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
+                        <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
+                          <span class="m25l1-circle__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
+                          <span class="m25l1-circle__text" data-aos="fade-up" data-aos-delay="220">${yhLang("Elements of communication", "যোগাযোগের উপাদান")}</span>
+                        </div>
+                      </div>
+                    </div>
                     
-
-                    <div class="col-12 col-lg-7">
-                      <div class="d-flex">
-                         <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
-                            <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
-                              <span class="m25l1-circle__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
-                              <span class="m25l1-circle__text" data-aos="fade-up" data-aos-delay="220">${yhLang("Elements of communication", "যোগাযোগের উপাদান")}</span>
-                            </div>
-                          </div>
-
-                        <div class="m25l1-right" data-aos="fade-left" data-aos-delay="140">
+                    <div class="col-12 col-lg-4">
+                      <div class="m25l1-right" data-aos="fade-left" data-aos-delay="140">
                         <div class="m25l1-timeline">
                           <svg class="m25l1-timeline-curve" viewBox="0 0 40 320" preserveAspectRatio="none" aria-hidden="true">
                             <path d="M 28 0 C 10 60, 10 120, 28 170 C 40 205, 36 260, 18 320" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="6" stroke-linecap="round" />
@@ -21955,49 +21954,46 @@ const orbitItems = [
                           </section>
                         </div>
                       </div>
-                      </div>
-                      
-                      
                     </div>
-                    <div class="col-12 col-lg-5">
+                    <div class="col-12 col-lg-4">
                       <div class="m25l1-left" data-aos="fade-left" data-aos-delay="160">
                         <div class="m25-section" style="height: 100%;">
-                          <h6 class="mb-3" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 10px;">
+                          <h3 class="mb-3" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 10px;">
                             <span class="m25-icon bg-gradient-lavender" aria-hidden="true">
                               <i class="fa-solid fa-bullseye"></i>
                             </span>
                             <span>${yhLang("Purpose of Communication", "যোগাযোগের উদ্দেশ্য")}</span>
-                          </h6>
+                          </h3>
                           <ul class="list-unstyled mb-0" style="display: flex; flex-direction: column; gap: 10px;">
                             <li data-aos="fade-left" data-aos-delay="240" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-rose" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-heart" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Expressing feelings", "ভাব প্রকাশ করা")}</span>
+                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Expressing feelings", "ভাব প্রকাশ করা")}</span>
                             </li>
                             <li data-aos="fade-left" data-aos-delay="280" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-teal" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-arrows-left-right" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Exchanging information", "তথ্য আদান-প্রদান করা")}</span>
+                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Exchanging information", "তথ্য আদান-প্রদান করা")}</span>
                             </li>
                             <li data-aos="fade-left" data-aos-delay="320" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-blue" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-ear-listen" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Understanding others' opinions and ideas", "অন্যের মতামত ও ধারণা বোঝা")}</span>
+                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Understanding others' opinions and ideas", "অন্যের মতামত ও ধারণা বোঝা")}</span>
                             </li>
                             <li data-aos="fade-left" data-aos-delay="360" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-mint" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-comment-dots" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Presenting one's opinion to others", "নিজের মতামত অন্যের কাছে তুলে ধরা")}</span>
+                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Presenting one's opinion to others", "নিজের মতামত অন্যের কাছে তুলে ধরা")}</span>
                             </li>
                             <li data-aos="fade-left" data-aos-delay="400" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-yellow" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-lightbulb" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Raising awareness and bringing behavioral change", "মানুষকে সচেতন করে আচরণের পরিবর্তন আনা")}</span>
+                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Raising awareness and bringing behavioral change", "মানুষকে সচেতন করে আচরণের পরিবর্তন আনা")}</span>
                             </li>
                           </ul>
                         </div>
@@ -22187,7 +22183,7 @@ const orbitItems = [
                             </span>
                             <span class="m25l2f-node__text">${yhLang(
                               "Radio, television, newspapers, cinema, posters, other print & electronic media",
-                              "রেডিও, টেলিভিশন, খবরের কাগজ, চলচ্চিত্র, পোস্টার, অন্যান্য মুদ্রণ ও ইলেকট্রনিক মিডিয়া",
+                              "রেডিও, টেলিভিশন, খবরের কাগজ, চলচ্চিত্র, পোস্টার, অন্যান্য প্রিন্ট ও ইলেকট্রনিক মিডিয়া",
                             )}</span>
                           </div>
                         </div>
@@ -22317,7 +22313,7 @@ const orbitItems = [
                       <i class="fa-solid fa-person"></i>
                     </div>
                     <div class="m25l3-hero__body">
-                      <h2 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Methods of One-to-One Communication", "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ")}</h2>
+                      <h6 class="slide-title gradient-text mb-0" data-aos="fade-up" data-aos-delay="70">${yhLang("Methods of One-to-One Communication", "যোগাযোগের পদ্ধতি")}</h6>
                     </div>
                   </header>
 
@@ -22326,7 +22322,7 @@ const orbitItems = [
                       <article class="modern-card glass-card h-100 m25l3-card" data-aos="fade-right" data-aos-delay="90">
                         <div class="m25l3-card__title yhap_box_shadow" data-aos="fade-up" data-aos-delay="130">
                           <span class="m25l3-icon bg-gradient-blue " aria-hidden="true"><i class="fa-solid fa-table"></i></span>
-                          <h3 class="mb-0" data-aos="fade-up" data-aos-delay="170">${yhLang("Methods of One-to-One Communication", "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতসিমূহ")}</h3>
+                          <h2 class="mb-0" data-aos="fade-up" data-aos-delay="170"><b>${yhLang("Methods of One-to-One Communication", "আন্তঃ ব্যক্তিক যোগাযোগের পদ্ধতিসমূহ")}</b></h2>
                         </div>
 
                         <div class="mt-3 m25l3-table-wrap" data-aos="zoom-in" data-aos-delay="200">
@@ -22367,17 +22363,17 @@ const orbitItems = [
                         <section class="m25l3-section m25l3-section--group" data-aos="zoom-in" data-aos-delay="140">
                           <div class="m25l3-section__title yhap_box_shadow">
                             <span class="m25l3-icon bg-gradient-purple " aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
-                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="180"> ${yhLang("Methods of Group Communication", "দলীয় যোগাযোগের পদ্ধতি সমূহ")}</h3>
+                            <h2 class="mb-0" data-aos="fade-up" data-aos-delay="180"> <b>${yhLang("Methods of Group Communication", "দলীয় যোগাযোগেরপদ্ধতি সমূহ")}</b></h2>
                           </div>
-                          <ul class="list-unstyled info-list mb-0 yhap_box_shadow">
-                            <span>${renderInfoList(groupItems, 220, 60)}</span>
-                          </ul>
+                          <ul class="m25l3-table-list" role="list">
+                                   ${renderInfoList(groupItems, 220, 60)}
+                                  </ul>
                         </section>
 
                         <section class="m25l3-section m25l3-section--mass" data-aos="zoom-in" data-aos-delay="220">
                           <div class="m25l3-section__title yhap_box_shadow">
                             <span class="m25l3-icon bg-gradient-yellow " aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
-                            <h3 class="mb-0" data-aos="fade-up" data-aos-delay="260"> ${yhLang("Mass Communication", "গণযোগাযোগ")}</h3>
+                            <h2 class="mb-0" data-aos="fade-up" data-aos-delay="260"><b> ${yhLang("Mass Communication", "গণযোগাযোগ")}</b></h2>
                           </div>
                           <span class="mb-0 m25l3-mass">${yhLang("Different forms of mass media are used to deliver messages to large audiences. In this case, the sender and receiver do not interact directly.", "বৃহৎ জনগোষ্ঠীর কাছে বার্তা পৌঁছানো এবং তথ্য প্রচারের জন্য বিভিন্ন ধরনের গণমাধ্যম ব্যব্হার করা হয়। এক্ষেত্রে প্রেরক এবং প্রাপকের মধ্যে সংযোগ ঘটেনা।")}</span>
                         </section>
@@ -22391,7 +22387,7 @@ const orbitItems = [
             id: "ch25-lesson-4",
             title: yhLang(
               "Conditions Required for Establishing Interpersonal Relationships",
-              "আন্তঃ ব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী",
+              "আন্তঃব্যক্তিক সম্পর্ক স্থাপনে অন্তর্নিহিত শর্তাবলী ও কৌশল",
             ),
             icon: "fa-handshake",
             gradientClass: "bg-gradient-teal",
@@ -22448,7 +22444,7 @@ const orbitItems = [
                 {
                   title: yhLang(
                     "SOLLER Attentiveness Model",
-                    "সোলার মনোযোগ মডেল",
+                    "সোলার (SOLLER) মনোযোগ মডেল",
                   ),
                   icon: "fa-sun",
                   items: [
@@ -22456,39 +22452,32 @@ const orbitItems = [
                       icon: "fa-person",
                       text: yhLang(
                         "S: Sit squarely.",
-                        "এস = সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা",
+                        "S = সম্মুখ বাক্তির সাথে মুখোমুখি বা সোজাসুজি বসা",
                       ),
                     },
                     {
                       icon: "fa-comments",
-                      text: yhLang("O: Open posture.", "ও = খোলাখুলি কথা বলা"),
+                      text: yhLang("O: Open posture.", "O = খোলাখুলি কথা বলা"),
                     },
                     {
                       icon: "fa-person-arrow-up-from-line",
                       text: yhLang(
                         "L: Lean forward.",
-                        "এল = সামনের দিকে ঝুঁকে বসা",
-                      ),
-                    },
-                    {
-                      icon: "fa-eye",
-                      text: yhLang(
-                        "L: Let eyes maintain contact.",
-                        "এল = সম্মুখ বাক্তির প্রতি দৃষ্টি নিবদ্ধ রাখা",
+                        "L = সামনের দিকে ঝুঁকে বসা",
                       ),
                     },
                     {
                       icon: "fa-couch",
                       text: yhLang(
                         "E: Engage with a relaxed posture.",
-                        "ই = আরামদায়ক ভঙ্গিতে বা স্বাচ্ছন্দ্যে বসা",
+                        "E = আরামদায়ক ভঙ্গিতে বা স্বাচ্ছন্দ্যে বসা",
                       ),
                     },
                     {
                       icon: "fa-location-dot",
                       text: yhLang(
                         "R: Remember to be present.",
-                        "আর = ঘটনার ভিতর উপস্থিত থাকতে ভুলবেন না।",
+                        "R = ঘটনার ভিতর উপস্থিত থাকা।",
                       ),
                     },
                   ],
@@ -22555,7 +22544,7 @@ const orbitItems = [
                     },
                     {
                       icon: "fa-volume-xmark",
-                      text: yhLang("• Listen quietly.", "চুপ থাকা"),
+                      text: yhLang("• Listen quietly.", "অন্যের কথা বলার সময় চুপ থাকা"),
                     },
                     {
                       icon: "fa-bullseye",
@@ -22734,7 +22723,7 @@ const orbitItems = [
             id: "ch25-lesson-5",
             title: yhLang(
               "The word GATHER can be used to easily remember the steps of counseling.",
-              "কাউন্সেলিংয়ের ধাপসমূহ সহজে মনে রাখার জন্য GATHER শব্দটির সাহায্য নেয়া যায়",
+              "কাউন্সেলিং ও কাউন্সেলিংয়ের ধাপসমূহ",
             ),
             icon: "fa-list-check",
             gradientClass: "bg-gradient-blue",
