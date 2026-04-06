@@ -2903,8 +2903,26 @@ body {
 }
 
 .m24l1-orbit-card {
-    width: 78px;
-    height: 89px;
+    width: 146px;
+    height: 113px;
+    padding: 4px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.mod24-lesson1 .m24l1-orbit-card {
+    width: 82px;
+    height: 91px;
     padding: 4px;
     border-radius: 10px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
@@ -30686,9 +30704,7 @@ p.lead {
 /* custom lines 2 */
 
 tbody, td, tfoot, th, thead, tr {
-    border-color: inherit;
-    border-style: solid;
-    border-width: 1px !important;
+    
 }
 .table thead th {
     background-color: #eaeaee !important;

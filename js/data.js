@@ -14690,7 +14690,7 @@ const orbitItems = [
         id: "ch-19",
         title: yhLang(
           "Module-19: Drug addiction - Consequences and prevention",
-          "মডিউল-১৯: তারুন্য কালীনপুষ্টি",
+          "মডিউল-১৯: তারুন্যকালীন পুষ্টি",
         ),
         lessons: [
           {
@@ -14725,7 +14725,7 @@ const orbitItems = [
                   descriptionEn:
                     "Food is essential to keep the human body healthy and strong. Food refers to organic substances that play a role in building the human body, compensate for wear and tear, provide energy and build the body's disease resistance ability.",
                   descriptionBn:
-                    "মানবদেহকে সুস্থ-সবল রাখার জন্য খাদ্য অপরিহার্য।  খাদ্য বলতে সেই সকল জৈব উপাদানকে বুঝায় যেগুলো মানবদেহ গঠনে ভূমিকা রাখে, ক্ষয়পূরণ করে, শক্তি বৃদ্ধসহ শরীরের রোগ প্রতিরোধ ক্ষমতা তৈরি করে।",
+                    "মানবদেহকে সুস্থ-সবল রাখার জন্য খাদ্য অপরিহার্য।  খাদ্য বলতে সেই সকল জৈব উপাদানকে বুঝায় যেগুলো মানবদেহ গঠনে ভূমিকা রাখে, ক্ষয়পূরণ করে, শক্তি বৃদ্ধিসহ শরীরের রোগ প্রতিরোধ ক্ষমতা তৈরি করে।",
                 },
                 {
                   iconClass: "fa-apple-whole",
@@ -14749,7 +14749,7 @@ const orbitItems = [
                   descriptionEn:
                     "Food that produces heat and energy, builds and develops the body, and keeps the body strong and active is called nutritious food. Food and nutrition are interrelated. Every food must be nutritious and safe. Regular intake of nutritious food keeps body and mind healthy, brings cheerfulness and increases concentration in studies and work. Lack of proper nutrition reduces disease resistance and increases the risk of diseases.",
                   descriptionBn:
-                    "যেসব খাদ্য খেলে শরীরে তাপ ও শক্তি উৎপাদিত হয়, দেহের গঠন ও বৃদ্ধি হয়, শরীর সবল, কর্মক্ষম থাকে, তাকে পুষ্টিকর খাদ্য বলে। খাদ্য ও পুষ্টি একে অপরের সাথে জড়িত। প্রতিটি খাদ্য অবশ্যই পুষ্টিকর ও নিরাপদ হতে হবে। নিয়মিত পুষ্টিকর খাদ্য গ্রহণ করলে শরীর ও মন ভালো থাকে, মনে প্রফুল্লতা আসে এবং পড়াশোনা ও কাজে মনোযোগ বাড়ে।  মনে রাখতে হবে পুষ্টিকর খাদ্য গ্রহণ না করলে রোগ প্রতিরোধ ক্ষমতা কমে যায় এবং বিভিন্ন রোগে আক্রান্ত হওয়ার ঝুঁকি বেড়ে যায়।",
+                    "যেসব খাদ্য খেলে শরীরে তাপ ও শক্তি উৎপাদিত হয়, দেহের গঠন ও বৃদ্ধি হয়, শরীর সবল, কর্মক্ষম থাকে, তাকে পুষ্টিকর খাদ্য বলে।  খাদ্য ও পুষ্টি একে অপরের সাথে জড়িত।  প্রতিটি খাদ্য অবশ্যই পুষ্টিকর ও নিরাপদ হতে হবে।  নিয়মিত পুষ্টিকর খাদ্য গ্রহণ করলে শরীর ও মন ভালো থাকে, মনে প্রফুল্লতা আসে এবং পড়াশোনা ও কাজে মনোযোগ বাড়ে।  মনে রাখতে হবে পুষ্টিকর খাদ্য গ্রহণ না করলে রোগ প্রতিরোধ ক্ষমতা কমে যায় এবং বিভিন্ন রোগে আক্রান্ত হওয়ার ঝুঁকি বেড়ে যায়।",
                 },
                 {
                   iconClass: "fa-ruler-vertical",
@@ -14761,7 +14761,7 @@ const orbitItems = [
                   descriptionEn:
                     "According to the World Health Organization, there is an ideal standard for body weight and height growth with age. If a child or adolescent has lower weight compared to height, or lower weight or height compared to their age, it is identified as malnutrition.",
                   descriptionBn:
-                    "বিশ্ব স্বাস্থ্য সংস্থা রেফারেন্স অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে।  যদি কোন শিশু বা তরুন-তরুনীদের উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
+                    "বিশ্ব স্বাস্থ্য সংস্থার রেফারেন্স অনুযায়ী বয়সের সাথে সাথে দেহের ওজন ও উচ্চতা বৃদ্ধির একটি আদর্শ মান রয়েছে।  যদি কোন শিশু বা তরুন-তরুনীদের উচ্চতার (মিটার এককে) তুলনায় ওজন কম অথবা বয়সের তুলনায় ওজন কম অথবা বয়সের তুলনায় উচ্চতা কম থাকে তাহলে তাকে অপুষ্টি হিসেবে চিহ্নিত করা হয়।",
                 },
                 {
                   iconClass: "fa-calculator",
@@ -15287,26 +15287,16 @@ const orbitItems = [
                 {
                   num: "৪",
                   name: yhLang("Vitamins and Minerals", "ভিটামিন"),
-                  sources: yhLang("Vitamins and Minerals", `<b>প্রাণীজ:</b> দুধ, মাছ, মাংস, কলিজা<br>`),
-                  functions: yhLang("Vitamins and Minerals", "পরিপাক ও পুষ্টিসাধনের প্রক্রিয়াকে সহায়তা করে। "),
-                  icon: "fa-pills",
-                  color: "vitamins",
-                },
-                {
-                  num: "৫",
-                  name: yhLang("Vitamins and Minerals", "খনিজ লবণ"),
                   sources: yhLang(
                     "Animal and plant foods including milk, fish, meat, liver, nuts, seeds, leafy vegetables and fruits",
                     `
-                      
+<b>প্রাণীজ:</b> দুধ, মাছ, মাংস, কলিজা<br>                     
 <b>উদ্ভিদ :</b> বাদাম, বিভিন্ন ধরনের বীজ, শাক, সবজি ও ফলমূল<br>
-<b>ভিটামিন ‘এ’ : </b>বিভিন্ন ধরনের রঙিন শাক-সবজি,
-লালশাক, গাজর, মিষ্টি কুমড়া<br>
+<b>ভিটামিন ‘এ’ : </b>বিভিন্ন ধরনের রঙিন শাক-সবজি, লালশাক, গাজর, মিষ্টি কুমড়া<br>
 <b>ভিটামিন ‘ডি’ : </b>ডিমের কুসুম, মাছের তেল, কলিজা, মাখন, পনির ইত্যাদি<br>
 <b>ভিটামিন ‘সি’ : </b>আমলকি, কমলা, ধনেপাতা, আমড়া, তাজা ও টক জাতীয় শাক-সবজি ও ফল ইত্যাদি<br>
 <b>ক্যালসিয়াম : </b>দুধ ও দুগ্ধজাত খাদ্য, গাঢ় সবুজ শাকসবজি, শুটকি মাছ, ছোট মাছ, গুড়, ছোলা ইত্যাদি<br>
-<b>আয়রন : </b>মাছ, মাংস, কলিজা, ডিম, কচু/পুঁই/
-লালশাক, তেতুঁল ইত্যাদি<br>
+<b>আয়রন :</b> মাছ, মাংস, কলিজা, ডিম, কচু/পুঁই/লালশাক, তেতুঁল ইত্যাদি<br>
 <b>আয়োডিন : </b>সামুদ্রিক মাছ, আয়োডিনযুক্ত লবণ
 
                      `,
@@ -15314,17 +15304,25 @@ const orbitItems = [
                   functions: yhLang(
                     "Supports digestion, immunity, vision, bone strength and disease prevention",
                     `
+পরিপাক ও পুষ্টিসাধনের প্রক্রিয়াকে সহায়তা করে। <br>
 রোগ প্রতিরোধ ক্ষমতা তৈরি করে।<br>
 শরীরকে রোগজীবাণু থেকে রক্ষা করে।<br>
 রাতকানা রোগ প্রতিরোধ করে ও চামড়া মসৃণ করে।<br>
-হাড় ও দাঁতের গঠন মজবুত
-করে, রিকেট প্রতিরোধ করে।<br>
-ক্ষত দূর করে, দাঁতের মাড়ি
-থেকে রক্ত পড়া বন্ধ করে, ঘাপাঁচড়া প্রতিরোধ করে।<br>
+হাড় ও দাঁতের গঠন মজবুত করে, রিকেট প্রতিরোধ করে।<br>
+ক্ষত দূর করে, দাঁতের মাড়ি থেকে রক্ত পড়া বন্ধ করে, ঘাপাঁচড়া প্রতিরোধ করে।<br>
 রক্তস্বল্পতা, ক্ষুধামন্দা ও দুর্বলতা দূর করে।<br>
 শিশুর মানসিক বিকাশ নিশ্চিত ও গলগণ্ড রোধ করে।
 `,
                   ),
+                  
+                  icon: "fa-pills",
+                  color: "vitamins",
+                },
+                {
+                  num: "৫",
+                  name: yhLang("Vitamins and Minerals", "খনিজ লবণ"),
+                  sources: "",
+                  functions: "",
                   icon: "fa-pills",
                   color: "vitamins",
                 },
@@ -15745,7 +15743,7 @@ const orbitItems = [
                   role: yhLang("Aids in digestion", "হজম বা পরিপাকে সহায়ক"),
                   details: yhLang(
                     "Leafy vegetables, peas, beans, yard-long beans, sweet potatoes, whole wheat bread, brown rice, oats, nuts, apples, black grapes, and dates are good sources of fiber.",
-                    "ডাঁটাশাক, মটরশুঁটি, সিম, বরবটি, মিষ্টি আলু, গমের রুটি, ঢেঁকিছাটা চাল, ওটস, বাদাম, আপেল, কালো আঙুর, খেজুর ইত্যাদি।",
+                    "ডাঁটাশাক, মটরশুঁটি, শিম, বরবটি, মিষ্টি আলু, গমের রুটি, ঢেঁকিছাটা চাল, ওটস, বাদাম, আপেল, কালো আঙুর, খেজুর ইত্যাদি।",
                   ),
                 },
                 {
@@ -16056,7 +16054,7 @@ const orbitItems = [
                       </figure>
                       <figure class="m19l9-gallery-item" data-aos="zoom-in" data-aos-delay="100">
                         <h3 class="m19l9-h3"><i class="fa-solid fa-images"></i>${yhLang("Nutrition Cycle Diagrams", "অপুষ্টি চক্র")}</h3>
-                        <img src="img/modu19/pusti2.png" style="height: 480px;" alt="তারুন্য কালীনপুষ্টি" class="img-fluid rounded img-zoom" />
+                        <img src="img/modu19/pusti2.png" style="height: 480px;" alt="তারুন্যকালীন পুষ্টি" class="img-fluid rounded img-zoom" />
                       </figure>
                     </div>
 
@@ -16582,7 +16580,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Encourage adolescent girls to exercise by addressing social barriers and ensuring safe spaces indoors and outdoors.",
-                    "সামাজিক প্রথা পরিহার করে তরুণদের শারীরিক ব্যায়াম করতে উৎসাহ প্রদান করতে হবে এবং ঘরে ও বাইরে ব্যায়াম করার পরিবেশ নিশ্চিত করতে হবে।",
+                    "সামাজিক প্রথা পরিহার করে তরুণীদের শারীরিক ব্যায়াম করতে উৎসাহ প্রদান করতে হবে এবং ঘরে ও বাইরে ব্যায়াম করার পরিবেশ নিশ্চিত করতে হবে।",
                   ),
                   icon: "fa-dumbbell",
                 },
@@ -16689,7 +16687,7 @@ const orbitItems = [
                     {
                       text: yhLang(
                         "Keep track of your child’s friends and social circle and guide them when necessary.",
-                        "তরুণ-তরুণী কার সাথে বন্ধুত্ব করছে এবং কার সাথে মেলামিশা করছে তা লক্ষ্য রাখা ও প্রয়োজনীয় উপদেশ দিয়ে সহায়তা করা।",
+                        "তরুণ-তরুণীরা কার সাথে বন্ধুত্ত করছে এবং কার সাথে মেলামেশা  করছে তা লক্ষ রাখতে হবে",
                       ),
                       icon: "fa-user-check",
                     },
@@ -17371,7 +17369,7 @@ const orbitItems = [
                     <p class="mb-2" style="font-size: 0.92em;">
                     ${yhLang(
                       "Adolescence is a time full of potential, but it is also a period of vulnerability. During this stage, young people begin to develop sexual feelings and their interest in the opposite sex increases. They become capable of reproduction, but most adolescents cannot ensure their own protection due to lack of proper information. As a result, they may be encouraged to take various risks and, under the influence of wrong friends, may sometimes engage in risky and harmful behaviors.",
-                      "তারুন্য একটি সম্ভাবনময়, কিন্তু ঝুঁকিপূর্ণ সময়। এই সময়ের মধ্যেতরুণ-তরুণীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে।  তারা প্রজননক্ষম হয়, কিন্তু অধিকাংশ রুণ-তরুণী সঠিক তেথ্যর অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না।  এসময়ে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে উৎসুক হয়ে উঠে এবং একই সাথে বন্ধু-বান্ধবদের দ্বারা প্রভাবিত হয়ে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর অভ্যাসে সে জড়িয়ে পড়ে। ",
+                      "তারুন্য একটি সম্ভাবনময়, কিন্তু ঝুঁকিপূর্ণ সময়।  এই সময়ের মধ্যেতরুণ-তরুণীদের যৌন অনুভূতি জাগ্রত হয় এবং বিপরীত লিঙ্গের প্রতি আগ্রহ বাড়ে।  তারা প্রজননক্ষম হয়, কিন্তু অধিকাংশ রুণ-তরুণী সঠিক তেথ্যর অভাবে নিজেদের সুরক্ষা নিশ্চিত করতে পারে না।  এসময়ে তারা বিভিন্ন ধরনের ঝুঁকি গ্রহণে উৎসুক হয়ে উঠে এবং একই সাথে বন্ধু-বান্ধবদের দ্বারা প্রভাবিত হয়ে অনেক সময় ঝুঁকিপূর্ণ ও ক্ষতিকর অভ্যাসে সে জড়িয়ে পড়ে। ",
                     )}
                   </p>
                   </div>
@@ -17380,7 +17378,7 @@ const orbitItems = [
                     <p class="mb-0" style="font-size: 0.92em;">
                       ${yhLang(
                         "This risk is not limited to ordinary adolescents; young people with special physical and mental needs are also in a highly vulnerable situation. To reduce their risks, it is essential for service providers to offer them special care and counseling.",
-                        "শুধমাত্রু সাধারণ তরুণ-তরুণীরাই  নয়, বিশেষ শারীরিক ও মানসিক চাহিদা সম্পন্ন তরুণ-তরুণীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে।  তাদের ঝুঁকি কমানোর জন্য বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।",
+                        "শুধুমাত্র সাধারণ তরুণ-তরুণীরাই  নয়, বিশেষ শারীরিক ও মানসিক চাহিদা সম্পন্ন তরুণ-তরুণীরাও অত্যন্ত ঝুঁকিপূর্ণ অবস্থায় থাকে।  তাদের ঝুঁকি কমানোর জন্য বিশেষভাবে তাদের সেবা ও পরামর্শ প্রদান করা অপরিহার্য।",
                       )}
                     </p>
                   </div>
@@ -17668,7 +17666,7 @@ const orbitItems = [
                   color: "#f57c00",
                   text: yhLang(
                     "<strong>Enhancing Social Engagement:</strong> Implement activities that help youth build connections and strengthen engagement with their community.",
-                    "<strong>সামাজিক সম্পক উন্নয়ন:</strong> তরুণ-তরুণীদের সামাজিক সম্পর্ক ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়ন করতে সহায়ক কার্যক্রম বাস্তবায়ন করা।",
+                    "<strong>সামাজিক সম্পর্ক উন্নয়ন:</strong> তরুণ-তরুণীদের সামাজিক সম্পর্ক ও সম্প্রদায়ের সঙ্গে সংযোগ স্থাপন ও উন্নয়ন করতে সহায়ক কার্যক্রম বাস্তবায়ন করা।",
                   ),
                 },
                 {
@@ -18941,7 +18939,7 @@ const orbitItems = [
                         </div>
                         <div class="col-12 col-lg-6">
                           <figure class="image-card mb-0 h-100" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);padding:0px;border-radius:12px;box-shadow:0 5px 14px rgba(3,155,229,.14);">
-                            <img src="img/modu22/sanitization_b2.jpeg" style="max-height: 630px;" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
+                            <img src="img/modu22/sinitization_new.jpg" style="max-height: 630px;" class="img-fluid rounded shadow-sm img-zoom w-100" alt="Handwashing illustration" loading="lazy">
                           </figure>
                         </div>
                       </div>
@@ -19165,10 +19163,10 @@ const orbitItems = [
                         <i class="fa-solid fa-flask-vial"></i>
                       </div>
                       <h2 class="m22l7-section-title">${yhLang("Harmful Chemicals", "সাধারণ ক্ষতিকারক রাসায়নিক পদার্থ:")}</h2>
-                      <div class="m22l7-definition-card" data-aos="zoom-in" data-aos-delay="220">
+                    </div>
+                    <div class="m22l7-definition-card mb-2" data-aos="zoom-in" data-aos-delay="220">
                         <p class="m22l7-definition-text">${definition}</p>
                       </div>
-                    </div>
                     <ul class="m22l7-chemicals-grid">
                       ${renderChemicals(chemicals, 350)}
                     </ul>
@@ -19264,7 +19262,7 @@ const orbitItems = [
                   ),
                   description: yhLang(
                     "Direct contact with pesticides can cause skin diseases, itching, rashes, eye irritation, redness, or a burning sensation.",
-                    "কীটনাশকের সরাসরি সংস্পর্শে চর্মরোগ, চুলকানি, র‌্যাশ, চোখে জ্বালা, লালভাব বা পোড়া অনুভূতি হতে পারে।",
+                    "কীটনাশকের সরাসরি সংস্পর্শে চর্মরোগ, চুলকানি, র‍্যাশ, চোখে জ্বালা, লালভাব বা পোড়া অনুভূতি হতে পারে।",
                   ),
                 },
                 {
@@ -19368,11 +19366,11 @@ const orbitItems = [
               const cautionPoints = [
                 yhLang(
                   "Children should be kept away while spraying pesticides at home or in the fields. If necessary, cover the nose and mouth and spray in the direction of the wind.",
-                  "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা। প্রয়োজনে নাক মুখ ধেকে বাতাসের অনুকূলে কীটনাশক ছিটানো ।",
+                  "বাড়িতে বা ফসলের মাঠে স্প্রে করার সময় শিশুদের দূরে রাখা।  প্রয়োজনে নাক মুখ ধেকে বাতাসের অনুকূলে কীটনাশক ছিটানো ।",
                 ),
                 yhLang(
                   "Fruits and vegetables should not be harvested for sale or consumption immediately after applying pesticides. They should be washed thoroughly with water before eating.",
-                  "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা। খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধুয়ে নিতে হবে।",
+                  "কীটনাশক প্রয়োগের পরপর ফল-মুল/ শাকসবজি তুলে বাজারে বিক্রি বা খাওয়া যাবেনা।  খাবার আগে, ফল-মুল/ শাকসবজি পানিতে ধুয়ে নিতে হবে।",
                 ),
                 yhLang(
                   "Pesticides should be stored out of the reach of children.",
@@ -19481,8 +19479,8 @@ const orbitItems = [
                   <div class="row g-4" data-aos="fade-up" data-aos-delay="40">
                     <div class="col-12 col-lg-12">
                       <div class="modern-card glass-card mb-3" style="border-radius:24px;box-shadow:0 14px 42px rgba(94,53,177,.28), 0 6px 18px rgba(81,45,168,.15);">
-                        <h3 class="mb-1" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-volume-high" style="margin-right:10px;"></i><b>${yhLang("Noise Pollution", "শব্দ দূষণ")}</b></h3>
-                        <p>${yhLang("The World Health Organization (WHO) defines noise pollution as 'unwanted and harmful sound caused by activities'. A United Nations Environment Programme (UNEP, 2022) report declared Dhaka the noisiest city in the world. Compared to the WHO's permissible limit of 55 decibels, noise levels in Dhaka are at least double, found at 110-132 decibels. 75% of noise pollution in Dhaka originates from vehicles. A Department of Environment (DoE) study states that approximately 11.7% of Bangladesh's population has lost hearing due to noise pollution.", `বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে " কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক  শব্দ" হিসেবে সংজ্ঞায়িত করেছে।  জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।`)}</p>
+                        <h6 class="mb-1" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-volume-high" style="margin-right:10px;"></i><b>${yhLang("Noise Pollution", "শব্দ দূষণ")}</b></h6>
+                        <p>${yhLang("The World Health Organization (WHO) defines noise pollution as 'unwanted and harmful sound caused by activities'. A United Nations Environment Programme (UNEP, 2022) report declared Dhaka the noisiest city in the world. Compared to the WHO's permissible limit of 55 decibels, noise levels in Dhaka are at least double, found at 110-132 decibels. 75% of noise pollution in Dhaka originates from vehicles. A Department of Environment (DoE) study states that approximately 11.7% of Bangladesh's population has lost hearing due to noise pollution.", `বিশ্ব স্বাস্থ্য সংস্থা (WHO) শব্দ দূষণকে "কার্যকলাপ দ্বারা সৃষ্ট অবাঞ্ছিত এবং ক্ষতিকারক শব্দ" হিসেবে সংজ্ঞায়িত করেছে।  জাতিসংঘের পরিবেশ প্রোগ্রাম (UNEP, ২০২২)এর প্রতিবেদনে ঢাকাকে বিশ্বের সবচেয়ে কোলাহলপূর্ণ শহর হিসেবে ঘোষণা করা হয়েছে। বিশ্ব স্বাস্থ্য সংস্থা কর্তৃক নির্ধারিত ৫৫ ডেসিবেলের অনুমোদিত সীমার বিপরীতে, ঢাকায় শব্দের মাত্রা এর কমপক্ষে দ্বিগুণ, ১১০-১৩২ ডেসিবেলে পাওয়া গেছে। ঢাকায় ৭৫% শব্দ দূষণের উৎপত্তি যানবাহন থেকে। পরিবেশ অধিদপ্তরের(DoE) গবেষণায় বলা হয়েছে, বাংলাদেশের প্রায় ১১.৭% জনসংখ্যা শব্দ দূষণের কারণে শ্রবণশক্তি হারিয়েছে।`)}</p>
                         <div class="card-divider my-3"></div>
                         <h3 class="mb-1" style="display:flex;align-items:center;color:#5e35b1;"><i class="fa-solid fa-bullhorn" style="margin-right:10px;"></i><b>${yhLang("Sources", "উৎস")}</b></h3>
                         <p>${yhLang("Noise pollution comes from many everyday sources, including loud toys, household appliances, entertainment devices, and mobile phones. In Bangladesh, the primary source of noise pollution is high-volume vehicle horns. Urbanization and deforestation also indirectly increase noise in once-quiet areas.", "শব্দ দূষণ অনেক দৈনন্দিন উৎস থেকে আসে, যার মধ্যে রয়েছে উচ্চ শব্দের খেলনা, গৃহস্থালীর যন্ত্রপাতি, বিনোদন যন্ত্র এবং মোবাইল ফোন।  বাংলাদেশে, শব্দ দূষণের প্রাথমিক উৎস হল যানবাহনের উচ্চ শব্দের হর্ন।  নগরায়ন এবং বন উজাড়ও একসময়ের শান্ত এলাকায় পরোক্ষভাবে শব্দ বৃদ্ধি করে।")}</p>
@@ -19919,7 +19917,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Dengue-carrying mosquitoes are most active from dawn to dusk. Be extra cautious during this time.",
-                    "ডেংগু  ভাইরাস বহনকারী মশা ভোর থেকে সন্ধ্যা পর্যন্ত সবচেয়ে বেশি সক্রিয় থাকে। এই সময় অতিরিক্ত সতর্ক থাকতে হবে।",
+                    "ডেংগু  ভাইরাস বহনকারী মশা ভোর থেকে সন্ধ্যা পর্যন্ত সবচেয়ে বেশি সক্রিয় থাকে।  এই সময় অতিরিক্ত সতর্ক থাকতে হবে।",
                   ),
                   icon: "fa-clock",
                 },
@@ -20002,7 +20000,7 @@ const orbitItems = [
                     <div class="m23l3-callout__body">
                       <p class="m23l3-line" data-aos="fade-up" data-aos-delay="280">${yhLang(
                         "Dengue fever is a common disease, but if neglected, it can become fatal. It is more prevalent in urban areas, so city dwellers need to be more alert and aware. Those who have had dengue previously must be especially cautious, as a second dengue infection can be severe.",
-                        "ডেংগু জ্বর একটি সাধারণ রোগ। কিন্তু অবহেলা করলে এই রোগ মারাত্মক হতে পারে। শহরাঞ্চলে এর প্রকোপ বেশি। তাই নগরবাসীকে আরেকটু সজাগ ও সচেতন হতে হবে। বিশেষ করে যাদের ডেংগু হয়েছে তাদের অতিরিক্ত সতর্ক থাকতে হবে। দ্বিতীয় ডেংগু সংক্রমণ মারাত্মক হতে পারে।",
+                        "ডেংগু জ্বর একটি সাধারণ রোগ। কিন্তু অবহেলা করলে এই রোগ মারাত্মক হতে পারে।  শহরাঞ্চলে এর প্রকোপ বেশি।  তাই নগরবাসীকে আরেকটু সজাগ ও সচেতন হতে হবে।  বিশেষ করে যাদের ডেংগু হয়েছে তাদের অতিরিক্ত সতর্ক থাকতে হবে। দ্বিতীয় ডেংগু সংক্রমণ মারাত্মক হতে পারে।",
                       )}</p>
                     </div>
                   </section>
@@ -20357,7 +20355,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Wash hands frequently with soap and water for at least 20 seconds",
-                    "ঘন ঘন সাবান ও পানি দিয়ে হাত ধুতে হবে(অন্তত ২০ সেকেন্ড যাবৎ)",
+                    "ঘন ঘন সাবান ও পানি দিয়ে হাত ধুতে হবে (অন্তত ২০ সেকেন্ড যাবৎ)",
                   ),
                   icon: "fa-hands-bubbles",
                 },
@@ -20960,7 +20958,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Contact a doctor/local health center/hospital immediately.",
-                    "সাথে সাথে চিকিৎসক/ নিকটস্থ স্থানীয় স্বাস্থ্য কেন্দ্র/ হাসপাতালে যোগাযোগ করুন।",
+                    "সাথে সাথে চিকিৎসক/ নিকটস্থ স্থানীয় স্বাস্থ্য কেন্দ্র/ হাসপাতালে যোগাযোগ করতে হবে।",
                   ),
                   icon: "fa-hospital",
                 },
@@ -21471,7 +21469,7 @@ const orbitItems = [
                 },
                 {
                   text: yhLang("Cooperation", "সহযোগিতার </br>মানসিকতা"),
-                  icon: "fa-person-carry-box",
+                  icon: "fa-person",
                   gradient: "bg-gradient-teal",
                 },
                 {
@@ -21709,15 +21707,7 @@ const orbitItems = [
                   accent: "m24l10-step--b",
                   text: yhLang(
                     "Avoid unguardian-like behavior with adolescents",
-                    "নিজের মানবিক সত্তাকে জাগিয়ে তোলা",
-                  ),
-                },
-                {
-                  icon: "fa-user-friends",
-                  accent: "m24l10-step--c",
-                  text: yhLang(
-                    "Build a friendly relationship with your child",
-                    "সন্তানের সাথে বন্ধুত্বপূর্ণ সম্পর্ক",
+                    "মা বাবা তরুন-তরুনীদের সাথে বন্ধুত্বপূর্ণ ও অ-অভিভাবকসুলভ আচরণ করা",
                   ),
                 },
                 {
