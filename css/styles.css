@@ -7793,7 +7793,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   position: relative;
   z-index: 10;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   padding: 10px;
   border-radius: 10px;
@@ -7824,7 +7824,6 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.76);
   font-weight: 500;
-  font-style: italic;
 }
 
 .m16l4-sources-section {
@@ -8868,7 +8867,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
   position: relative;
   z-index: 10;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   padding: 9px 10px;
   border-radius: 10px;
@@ -23253,7 +23252,7 @@ input::placeholder {
 
 .mod25-lesson1 .m25l1-comm-timeline .timeline-card-title {
   margin: 0;
-  font-weight: 750;
+  font-weight: 600;
   font-size: 1.05rem;
 }
 .mod25-lesson1 .jogajok {

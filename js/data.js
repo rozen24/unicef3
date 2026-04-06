@@ -11847,7 +11847,7 @@ const orbitItems = [
             content: (function () {
              const definition = yhLang(
   "Values are our beliefs, ideals, and principles that influence our behavior and help guide our lives. Through values, people are motivated to lead and manage their lives in a meaningful way.",
-  "মূল্যবোধ হলো আমাদের বিশ্বাস, আদর্শ ও নীতি, যার প্রভাব আমাদের আচরণের উপর পড়ে এবং জীবন পরিচালনায় সহায়তা করে। মূল্যবোধের আলোকে মানুষ তার জীবন পরিচালনা করতে উদ্বুদ্ধ হয়।"
+  "মূল্যবোধ হলো আমাদের বিশ্বাস, আদর্শ ও নীতি, যার প্রভাব আমাদের আচরণের উপর পড়ে এবং জীবন পরিচালনায় সহায়তা করে।  মূল্যবোধের আলোকে মানুষ তার জীবন পরিচালনা করতে উদ্বুদ্ধ হয়।"
 );
 
               const sources = [
@@ -11885,12 +11885,12 @@ const orbitItems = [
 
               const exampleText = yhLang(
                 "For example, in the family, a child is taught to always tell the truth and respect elders. Similarly, we also learn different values from society, such as marriage, religious values, doing honorable work without stealing, and not smoking in front of older people.",
-                "যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সম্মান করতে ইত্যাদি। আবার সমাজ থেকেও আমরা বিভিন্ন মূল্যবোধ শেখা যায়, যেমন—বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সম্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধুমপান না করা ইত্যাদি।।"
+                " যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সম্মান করতে ইত্যাদি। আবার সমাজ থেকেও আমরা বিভিন্ন মূল্যবোধ শেখা যায়, যেমন—বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সম্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধুমপান না করা ইত্যাদি।।"
               );
 
               const diversityText = yhLang(
                 "Values can vary across countries, societies, races, religions, and castes. Some values may also be shaped by one's personal beliefs. Embracing and respecting this diversity is desirable.",
-                "দেশ, সমাজ, জাতি, ধর্ম ও বর্ণভেদে মূল্যবোধ ভিন্ন হতে পারে। নিজের স্বতন্ত্র ব্যক্তিগত বিশ্বাস থেকে কিছু মূল্যবোধ তৈরি হতে পারে। এই বিভিন্নতাকে গ্রহণ এবং সম্মান করা বাঞ্ছনীয়।"
+                "দেশ, সমাজ, জাতি, ধর্ম ও বর্ণভেদে মূল্যবোধ ভিন্ন হতে পারে। নিজের স্বতন্ত্র ব্যক্তিগত বিশ্বাস থেকে কিছু মূল্যবোধ তৈরি হতে পারে।  এই বিভিন্নতাকে গ্রহণ এবং সম্মান করা বাঞ্ছনীয়।"
               );
 
               const renderSources = (items, delay = 100) =>
@@ -11944,12 +11944,16 @@ const orbitItems = [
                         "মূল্যবোধের উৎস",
                       )}</h3>
                     </div>
-                    <ul class="m16l4-sources-list">
-                      ${renderSources(sources, 130)}
-                    </ul>
+                    <p class="m16l4-definition-text">${yhLang(
+                        "Understanding Values",
+                        `পরিবার, বিদ্যালয়, সমাজ, ধর্ম, গোত্র/গোষ্ঠি, শিক্ষা ও সংস্কৃতি ইত্যাদির প্রভাবে আমাদের মূল্যবোধ তৈরী হয়।  যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সন্মান করতে ইত্যাদি।  আবার সমাজ থেকেও আমরা বিভিন্ন মল্যবোধ শেখা যায়, যেমন - বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সন্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধুমপান না করা ইত্যাদি।
+<br> </br>দেশ, সমাজ , জাতি, ধর্ম ও বর্ণভেদে মূল্যবোধ ভিন্ন হতে পারে।  নিজের স্বতন্ত্র ব্যক্তিগত বিশ্বাস থেকে কিছু মূল্যবোধ তৈরি হতে পারে।  এই বিভিন্নতাকে গ্রহণ এবং সম্মান করা বাঞ্ছনীয়। 
+`,
+                      )}</p>
+                    
                   </section>
 
-                  <section class="m16l4-example-section" data-aos="fade-up" data-aos-delay="430">
+                  <section class="m16l4-example-section d-none" data-aos="fade-up" data-aos-delay="430">
                     <div class="m16l4-example-card">
                       <div class="m16l4-example-icon" aria-hidden="true">
                         <i class="fa-solid fa-book"></i>
@@ -11960,12 +11964,12 @@ const orbitItems = [
                     </div>
                   </section>
 
-                  <section class="m16l4-diversity-section" data-aos="fade-up" data-aos-delay="470">
+                  <section class="m16l4-diversity-section d-none" data-aos="fade-up" data-aos-delay="470">
                     <div class="m16l4-diversity-card">
                       <div class="m16l4-diversity-icon" aria-hidden="true">
                         <i class="fa-solid fa-hands"></i>
                       </div>
-                      <div class="m16l4-diversity-content">
+                      <div class="m16l4-diversity-content mt-3">
                         <p class="m16l4-diversity-text">${diversityText}</p>
                       </div>
                     </div>
@@ -12034,7 +12038,7 @@ const orbitItems = [
       <div class="m16l5-methods-icon">
         <i class="fa-solid fa-list-check"></i>
       </div>
-      <h3 class="m16l5-methods-title">${yhLang("Ways to Remain Neutral", "নিরপেক্ষ থাকার উপায়")}</h3>
+      <h3 class="m16l5-methods-title">${yhLang("Ways to Remain Neutral", "নিরপেক্ষ হবার উপায়")}</h3>
     </div>
     <ul class="m16l5-methods-list">
       <li class="m16l5-method-item m16l5-method-awareness" data-aos="fade-up" data-aos-delay="65">
@@ -12047,7 +12051,7 @@ const orbitItems = [
         <div class="m16l5-method-icon">
           <i class="fa-solid fa-compass"></i>
         </div>
-        <span class="m16l5-method-text">${yhLang("Identify your own beliefs and values", "নিজের বিশ্বাস ও মূল্যবোধ খুঁজে বের করা")}</span>
+        <span class="m16l5-method-text">${yhLang("Identify your own beliefs and values", "নিজের মূল্যবোধ ও বিশ্বাস খুঁজে বের করা")}</span>
       </li>
       <li class="m16l5-method-item m16l5-method-autonomy" data-aos="fade-up" data-aos-delay="75">
         <div class="m16l5-method-icon">
@@ -12137,7 +12141,7 @@ const orbitItems = [
     <div class="m16l6-desc-icon">
       <i class="fa-solid fa-heart-circle-check"></i>
     </div>
-    <p class="m16l6-desc-text">${yhLang("The psychosocial support process is guided by ethics such as maintaining confidentiality, giving equal dignity to all, and being fair — these guide the support process and help the helper stay aware of what kind of response is needed in any situation, by making them responsible.", "মনোসামাজিক সহায়তা প্রক্রিয়া কতগুলো নৈতিকতা যেমন- গোপনীয়তা রক্ষা করা, সবাইকে সমান মর্যাদা দেয়া, ন্যায়পরায়ণ থাকা ইত্যাদির উপর ভিত্তি করে পরিচালিত হয় যা সহায়তা প্রক্রিয়াকে দিক নির্দেশনা দিয়ে থাকে। এই নৈতিকতা সহায়তাকারীকে দায়িত্বশীল করে তোলার মাধ্যমে কোন পরিস্থিতিতে কোন ধরনের প্রতিক্রিয়া করতে হবে সে সম্পর্কে সচেতন থাকতে সহায়তা করে।")}</p>
+    <p class="m16l6-desc-text">${yhLang("The psychosocial support process is guided by ethics such as maintaining confidentiality, giving equal dignity to all, and being fair — these guide the support process and help the helper stay aware of what kind of response is needed in any situation, by making them responsible.", "মনোসামাজিক সহায়তা প্রক্রিয়া কতগুলো নৈতিকতা যেমন- গোপনীয়তা রক্ষা করা, সবাইকে সমান মর্যাদা দেয়া, ন্যায়পরায়ণ থাকা ইত্যাদির উপর ভিত্তি করে পরিচালিত হয় যা সহায়তা প্রক্রিয়াকে দিক নির্দেশনা দিয়ে থাকে।  এই নৈতিকতা সহায়তাকারীকে দায়িত্বশীল করে তোলার মাধ্যমে কোন পরিস্থিতিতে কোন ধরনের প্রতিক্রিয়া করতে হবে সে সম্পর্কে সচেতন থাকতে সহায়তা করে।")}</p>
   </section>
 
   <!-- Description 3: Duty -->
@@ -21898,17 +21902,18 @@ const orbitItems = [
                   </header>
 
                   <div class="row g-1 mt-1 mb-5 align-items-stretch">
-                    <div class="col-12 col-lg-4">
-                      <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
-                        <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
-                          <span class="m25l1-circle__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
-                          <span class="m25l1-circle__text" data-aos="fade-up" data-aos-delay="220">${yhLang("Elements of communication", "যোগাযোগের উপাদান")}</span>
-                        </div>
-                      </div>
-                    </div>
+                    
 
-                    <div class="col-12 col-lg-4">
-                      <div class="m25l1-right" data-aos="fade-left" data-aos-delay="140">
+                    <div class="col-12 col-lg-7">
+                      <div class="d-flex">
+                         <div class="m25l1-left" data-aos="zoom-in" data-aos-delay="120">
+                            <div class="m25l1-circle" role="group" aria-label="যোগাযোগের উপাদান" data-aos="zoom-in" data-aos-delay="160">
+                              <span class="m25l1-circle__icon bg-gradient-lavender" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
+                              <span class="m25l1-circle__text" data-aos="fade-up" data-aos-delay="220">${yhLang("Elements of communication", "যোগাযোগের উপাদান")}</span>
+                            </div>
+                          </div>
+
+                        <div class="m25l1-right" data-aos="fade-left" data-aos-delay="140">
                         <div class="m25l1-timeline">
                           <svg class="m25l1-timeline-curve" viewBox="0 0 40 320" preserveAspectRatio="none" aria-hidden="true">
                             <path d="M 28 0 C 10 60, 10 120, 28 170 C 40 205, 36 260, 18 320" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="6" stroke-linecap="round" />
@@ -21960,46 +21965,49 @@ const orbitItems = [
                           </section>
                         </div>
                       </div>
+                      </div>
+                      
+                      
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-5">
                       <div class="m25l1-left" data-aos="fade-left" data-aos-delay="160">
                         <div class="m25-section" style="height: 100%;">
-                          <h3 class="mb-3" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 10px;">
+                          <h6 class="mb-3" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 10px;">
                             <span class="m25-icon bg-gradient-lavender" aria-hidden="true">
                               <i class="fa-solid fa-bullseye"></i>
                             </span>
                             <span>${yhLang("Purpose of Communication", "যোগাযোগের উদ্দেশ্য")}</span>
-                          </h3>
+                          </h6>
                           <ul class="list-unstyled mb-0" style="display: flex; flex-direction: column; gap: 10px;">
                             <li data-aos="fade-left" data-aos-delay="240" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-rose" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-heart" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Expressing feelings", "ভাব প্রকাশ করা")}</span>
+                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Expressing feelings", "ভাব প্রকাশ করা")}</span>
                             </li>
                             <li data-aos="fade-left" data-aos-delay="280" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-teal" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-arrows-left-right" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Exchanging information", "তথ্য আদান-প্রদান করা")}</span>
+                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Exchanging information", "তথ্য আদান-প্রদান করা")}</span>
                             </li>
                             <li data-aos="fade-left" data-aos-delay="320" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-blue" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-ear-listen" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Understanding others' opinions and ideas", "অন্যের মতামত ও ধারণা বোঝা")}</span>
+                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Understanding others' opinions and ideas", "অন্যের মতামত ও ধারণা বোঝা")}</span>
                             </li>
                             <li data-aos="fade-left" data-aos-delay="360" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-mint" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-comment-dots" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Presenting one's opinion to others", "নিজের মতামত অন্যের কাছে তুলে ধরা")}</span>
+                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Presenting one's opinion to others", "নিজের মতামত অন্যের কাছে তুলে ধরা")}</span>
                             </li>
                             <li data-aos="fade-left" data-aos-delay="400" style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3)); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
                               <span class="m25-icon bg-gradient-yellow" style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px;" aria-hidden="true">
                                 <i class="fa-solid fa-lightbulb" style="font-size: 0.95rem;"></i>
                               </span>
-                              <span style="font-weight: 600; font-size: 0.95rem; line-height: 1.4;">${yhLang("Raising awareness and bringing behavioral change", "মানুষকে সচেতন করে আচরণের পরিবর্তন আনা")}</span>
+                              <span style="font-weight: 400; font-size: 0.95rem; line-height: 1.4;">${yhLang("Raising awareness and bringing behavioral change", "মানুষকে সচেতন করে আচরণের পরিবর্তন আনা")}</span>
                             </li>
                           </ul>
                         </div>
