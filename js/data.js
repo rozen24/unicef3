@@ -11885,7 +11885,7 @@ const orbitItems = [
 
               const exampleText = yhLang(
                 "For example, in the family, a child is taught to always tell the truth and respect elders. Similarly, we also learn different values from society, such as marriage, religious values, doing honorable work without stealing, and not smoking in front of older people.",
-                " যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সম্মান করতে ইত্যাদি। আবার সমাজ থেকেও আমরা বিভিন্ন মূল্যবোধ শেখা যায়, যেমন—বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সম্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধুমপান না করা ইত্যাদি।।"
+                " যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সম্মান করতে ইত্যাদি। আবার সমাজ থেকেও বিভিন্ন মূল্যবোধ শেখা যায়, যেমন—বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সম্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধুমপান না করা ইত্যাদি।।"
               );
 
               const diversityText = yhLang(
@@ -11946,7 +11946,7 @@ const orbitItems = [
                     </div>
                     <p class="m16l4-definition-text">${yhLang(
                         "Understanding Values",
-                        `পরিবার, বিদ্যালয়, সমাজ, ধর্ম, গোত্র/গোষ্ঠি, শিক্ষা ও সংস্কৃতি ইত্যাদির প্রভাবে আমাদের মূল্যবোধ তৈরী হয়।  যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সন্মান করতে ইত্যাদি।  আবার সমাজ থেকেও আমরা বিভিন্ন মল্যবোধ শেখা যায়, যেমন - বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সন্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধুমপান না করা ইত্যাদি।
+                        `পরিবার, বিদ্যালয়, সমাজ, ধর্ম, গোত্র/গোষ্ঠি, শিক্ষা ও সংস্কৃতি ইত্যাদির প্রভাবে আমাদের মূল্যবোধ তৈরী হয়।  যেমন পরিবারে একটি শিশুকে শেখানো হয় সবসময় সত্য কথা বলতে, বড়দের সন্মান করতে ইত্যাদি।  আবার সমাজ থেকেও বিভিন্ন মল্যবোধ শেখা যায়, যেমন - বিয়ে, ধর্মীয় মূল্যবোধ, চুরি না করে সন্মানজনক কাজ করা, বয়স বা সম্পর্কে বড় কারও সামনে ধুমপান না করা ইত্যাদি।
 <br> </br>দেশ, সমাজ , জাতি, ধর্ম ও বর্ণভেদে মূল্যবোধ ভিন্ন হতে পারে।  নিজের স্বতন্ত্র ব্যক্তিগত বিশ্বাস থেকে কিছু মূল্যবোধ তৈরি হতে পারে।  এই বিভিন্নতাকে গ্রহণ এবং সম্মান করা বাঞ্ছনীয়। 
 `,
                       )}</p>
@@ -12024,7 +12024,7 @@ const orbitItems = [
     <div class="m16l5-definition-icon">
       <i class="fa-solid fa-lightbulb"></i>
     </div>
-    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ স্বীয় বিশ্বাসের প্রতিফলন।  যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা, তাহলে আচরণ হবে অন্যের সাথে ভদ্রতার সহিত কথা বলা।  মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়। ")}</p>
+    <p class="m16l5-definition-text">${yhLang("Human behavior is guided by values, and every action reflects a person's beliefs. If someone values respecting others, they will speak politely and treat people kindly. Values directly influence and shape how we behave toward others and in society.", "মানুষের আচরণ মূল্যবোধ দ্বারা পরিচালিত হয় এবং প্রতিটি আচরণ স্বীয় বিশ্বাসের প্রতিফলন, যেমন: মূল্যবোধ যদি হয় সকলকে সম্মান করা, তাহলে আচরণ হবে অন্যের সাথে ভদ্রতার সহিত কথা বলা।  মূল্যবোধ দ্বারা আচরণ প্রভাবিত হয়। ")}</p>
   </section>
 
   <!-- Neutrality Card -->
@@ -12267,7 +12267,7 @@ const orbitItems = [
     <div class="m17l1-definition-icon">
       <i class="fa-solid fa-lightbulb"></i>
     </div>
-    <p class="m17l1-definition-text">${yhLang("Addictive substances include alcohol, cannabis, opium, heroin, and other drugs that create dependency and cause withdrawal symptoms when not used. Drug addiction is the state where a person becomes completely dependent on these substances and cannot function without them.", "মদ, গাঁজা, আফিম, পেথেড্রিন, হেরোইন, সিসা, ইয়াবা, ডান্ডি প্রভুতি যা আসক্তির উদব্রেক ঘটায় এবং পরবর্তীতে গ্রহণ না করলে শরীরে প্রত্যাহার জনিত প্রভাব ফেলে তাই মাদকদ্রব্য হিসাবে পরিচিত। ক্রমাগত মাদক সেবন করতে করতে এক পর্যায়ে ব্যক্তিটি পুরোপুরি মাদকনির্ভর হয়ে পড়ে ও মাদক ছাড়া চলে না। এই অবস্থাই হচ্ছে মাদকাসক্তি। ")}</p>
+    <p class="m17l1-definition-text">${yhLang("Addictive substances include alcohol, cannabis, opium, heroin, and other drugs that create dependency and cause withdrawal symptoms when not used. Drug addiction is the state where a person becomes completely dependent on these substances and cannot function without them.", "মদ, গাঁজা, আফিম, পেথেড্রিন, হেরোইন, সিসা, ইয়াবা, ডান্ডি প্রভুতি যা আসক্তির উদব্রেক ঘটায় এবং পরবর্তীতে গ্রহণ না করলে শরীরে প্রত্যাহার জনিত প্রভাব ফেলে তাই মাদকদ্রব্য হিসাবে পরিচিত।  ক্রমাগত মাদক সেবন করতে করতে এক পর্যায়ে ব্যক্তিটি পুরোপুরি মাদকনির্ভর হয়ে পড়ে ও মাদক ছাড়া চলে না।  এই অবস্থাই হচ্ছে মাদকাসক্তি। ")}</p>
   </section>
 
   
@@ -12721,7 +12721,7 @@ const orbitItems = [
                         <img
                           src="img/modu17/madok2.jpg"
                           alt="মাদকাসক্তি প্রতিরোধ"
-                          class="m17l3-image"
+                          class="m17l3-image img-zoom"
                         />
                       </figure>
                     </article>
@@ -12946,7 +12946,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "If the wound is on hand or leg, raise the limb above heart level to reduce blood flow and bleeding.",
-                    "ক্ষত স্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিন্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয় যার ফলে রক্তপাত কমে যাবে। কারণ অধিক রক্তক্ষরণে অজ্ঞান হয়ে যাওয়ার সম্ভাবনা আছে।",
+                    "ক্ষত স্থানটি যদি হাতে বা পায়ে হয়, তবে হাত বা পা উঁচু করে ধরতে হবে (হৃদপিন্ডের উপরে), যাতে আক্রান্ত স্থানে রক্ত চলাচল কম হয় যার ফলে রক্তপাত কমে যাবে।  কারণ অধিক রক্তক্ষরণে  অজ্ঞান হয়ে যাওয়ার সম্ভাবনা আছে।",
                   ),
                   icon: "fa-arrow-up-right-dots",
                   tone: "m18l2-step-elevate",
@@ -13007,7 +13007,7 @@ const orbitItems = [
                     <p class="mb-0">
                       ${yhLang(
                         "Heavy bleeding may occur due to injury or accidents and can become life-threatening for the affected person. In such cases, immediate management is necessary, and quickly controlling bleeding is a primary first-aid objective.",
-                        "কোন আঘাত বা দুর্ঘটনার ফলে প্রচুর রক্তপাত ঘটতে পারে যা আক্রান্ত ব্যক্তির জন্য জীবন-সংশয় তৈরি করতে পারে। এমন অবস্থায় তাৎক্ষণিক ব্যবস্থাপনা প্রয়োজন এবং দ্রুত রক্তপাত বন্ধ করা প্রাথমিক চিকিৎসার মূল লক্ষ্য।",
+                        "কোন আঘাত বা দুর্ঘটনার ফলে প্রচুর রক্তপাত ঘটতে পারে যা আক্রান্ত ব্যক্তির জন্য জীবন-সংশয় তৈরি করতে পারে।  এমন অবস্থায় তাৎক্ষণিক ব্যবস্থাপনা প্রয়োজন এবং দ্রুত রক্তপাত বন্ধ করা প্রাথমিক চিকিৎসার মূল লক্ষ্য।",
                       )}
                     </p>
                   </section>
@@ -13057,7 +13057,7 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
                 "Burn injury is one of the common causes of injury in Bangladesh. A burned area needs quick and proper treatment.",
-                "বাংলাদেশে পুড়ে যাওয়া হল ইনজুরির অন্যতম কারণ। পুড়ে যাওয়া স্থানের দ্রুত চিকিৎসা করা প্রয়োজন।",
+                "বাংলাদেশে পুড়ে যাওয়া হল ইনজুরির অন্যতম কারণ।  পুড়ে যাওয়া স্থানের দ্রুত চিকিৎসা করা প্রয়োজন।",
               );
 
               const burnTypes = [
@@ -13065,7 +13065,7 @@ const orbitItems = [
                   title: yhLang("First-degree burn", "প্রথম ডিগ্রি বার্ন"),
                   text: yhLang(
                     "The outer skin layer is affected. Common signs include redness, mild swelling, and mild pain.",
-                    "ত্বকের উপরিভাগ ক্ষতিগ্রস্ত হয়। লক্ষণগুলোর মধ্যে রয়েছে লালভাব, ফোলা এবং হালকা ব্যথা।",
+                    "ত্বকের উপরিভাগ ক্ষতিগ্রস্ত হয়।  লক্ষণগুলোর মধ্যে রয়েছে লালভাব, ফোলা এবং হালকা ব্যথা।",
                   ),
                   icon: "fa-temperature-low",
                   color: "m18l3-type-first",
@@ -13074,7 +13074,7 @@ const orbitItems = [
                   title: yhLang("Second-degree burn", "দ্বিতীয় ডিগ্রি বার্ন"),
                   text: yhLang(
                     "Both the outer skin layer and dermis are affected. Blisters, severe pain, and redness can appear.",
-                    "ত্বকের উপরের স্তর এবং নিচের ডার্মিস স্তর ক্ষতিগ্রস্ত হয়। ফোসকা, তীব্র ব্যথা এবং লালভাব দেখা দেয়।",
+                    "ত্বকের উপরের স্তর এবং নিচের ডার্মিস স্তর ক্ষতিগ্রস্ত হয়।  ফোসকা, তীব্র ব্যথা এবং লালভাব দেখা দেয়।",
                   ),
                   icon: "fa-fire-flame-curved",
                   color: "m18l3-type-second",
@@ -13094,7 +13094,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Heat: fire, hot water, steam, or contact with hot objects",
-                    "তাপ: আগুন, গরম পানি, বাষ্প বা গরম বস্তুর সংস্পর্শ",
+                    "<b>তাপ: </b>আগুন, গরম পানি, বাষ্প বা গরম বস্তুর সংস্পর্শ",
                   ),
                   icon: "fa-fire",
                   color: "m18l3-cause-heat",
@@ -13102,7 +13102,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Chemical: exposure to acid, alkali, or other chemicals",
-                    "রাসায়নিক: এসিড, ক্ষার বা অন্যান্য রাসায়নিকের সংস্পর্শ",
+                    "<b>রাসায়নিক: </b>এসিড, ক্ষার বা অন্যান্য রাসায়নিকের সংস্পর্শ",
                   ),
                   icon: "fa-flask-vial",
                   color: "m18l3-cause-chemical",
@@ -13110,7 +13110,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Electric: electric shock or current flow",
-                    "বিদ্যুৎ: বৈদ্যুতিক শক বা বিদ্যুৎ প্রবাহ",
+                    "<b>বিদ্যুৎ: </b>বৈদ্যুতিক শক বা বিদ্যুৎ প্রবাহ",
                   ),
                   icon: "fa-bolt",
                   color: "m18l3-cause-electric",
@@ -13118,7 +13118,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Radiation: ultraviolet rays from sun or radiotherapy",
-                    "বিকিরণ: সূর্যের অতিবেগুনি রশ্মি বা রেডিওথেরাপির কারণে",
+                    "<b>বিকিরণ: </b>সূর্যের অতিবেগুনি রশ্মি বা রেডিওথেরাপির কারণে",
                   ),
                   icon: "fa-sun",
                   color: "m18l3-cause-radiation",
@@ -13160,10 +13160,10 @@ const orbitItems = [
 
                   <header class="m18l3-hero" data-aos="zoom-in" data-aos-duration="600">
                     <div class="m18l3-hero-badge"><i class="fa-solid fa-fire"></i></div>
-                    <h2 class="m18l3-hero-title">
+                    <h6 class="m18l3-hero-title">
                       <i class="fa-solid fa-triangle-exclamation"></i>
                       ${yhLang("Burn Injuries", "পোড়া")}
-                    </h2>
+                    </h6>
                   </header>
 
                   <section class="m18l3-intro" data-aos="fade-up" data-aos-delay="20">
@@ -13179,10 +13179,10 @@ const orbitItems = [
                   <div class="row g-3">
                        <div class="col-md-5">
                             <section class="m18l3-panel m18l3-panel-causes" data-aos="fade-up" data-aos-delay="90">
-                    <span class="m18l3-section-title">
+                    <h6 class="m18l3-section-title">
                       <i class="fa-solid fa-list-check"></i>
                       ${yhLang("Causes of Burn Injuries", "পোড়া ক্ষতের কারণ")}
-                    </span>
+                    </h6>
                     <p class="mb-0">${yhLang("পোড়া ক্ষত বিভিন্ন কারণে হতে পারে, যেমন:", "পোড়া ক্ষত বিভিন্ন কারণে হতে পারে, যেমন:")}</p>
                     <div class="m18l3-cause-list">
                       ${renderCauseList(causes)}
@@ -13192,10 +13192,10 @@ const orbitItems = [
                        <div class="col-md-7">
                           
                   <section class="m18l3-panel m18l3-panel-types" data-aos="fade-up" data-aos-delay="60">
-                    <h3 class="m18l3-section-title">
+                    <h6 class="m18l3-section-title">
                       <i class="fa-solid fa-layer-group"></i>
                       ${yhLang("Types of Burn Injuries", "পোড়া ক্ষতের প্রকারভেদ")}
-                    </h3>
+                    </h6>
                     
                     <div class="m18l3-types-grid">
                       ${renderTypeCards(burnTypes)}
@@ -13407,7 +13407,7 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
                 "A bone fracture is a condition where one or more bones in the body break, crack, or bend due to injury. Usually, strong impacts or injuries can cause bones to break, but sometimes fractures may also occur due to age or certain diseases.",
-                "হাড় ভাঙ্গা (ফ্রাকচার) হল এমন একটি অবস্থা যেখানে শরীরের এক বা একাধিক হাড় ভেঙ্গে যায় বা ফাটল ধের বা কোন আঘাতের কারণে বেঁকে যায়।  সাধারণত, শক্তিশালী আঘাত বা ইনজুরির জেন্য কোন ব্যক্তির হাড় ভেঙ্গে যেতে পারে, তবে কখনো কখনো বদ্ধ বয়স বা অসুস্থতাজনিত কারণে ও কোন ব্যক্তি হাড় ভাঙ্গার শিকার হতে পারে। ",
+                "হাড় ভাঙ্গা (ফ্রাকচার) হল এমন একটি অবস্থা যেখানে শরীরের এক বা একাধিক হাড় ভেঙ্গে যায় বা ফাটল ধের বা কোন আঘাতের কারণে বেঁকে যায়।  সাধারণত, শক্তিশালী আঘাত বা ইনজুরির জেন্য কোন ব্যক্তির হাড় ভেঙ্গে যেতে পারে, তবে কখনো কখনো বৃদ্ধ বয়স বা অসুস্থতাজনিত কারণে ও কোন ব্যক্তি হাড় ভাঙ্গার শিকার হতে পারে। ",
               );
 
               const typeIntro = yhLang(
@@ -13513,10 +13513,10 @@ const orbitItems = [
                     <div class="m18l5-hero-badge" aria-hidden="true">
                       <i class="fa-solid fa-bone"></i>
                     </div>
-                    <h2 class="m18l5-hero-title">
+                    <h6 class="m18l5-hero-title">
                       <i class="fa-solid fa-kit-medical"></i>
                       ${yhLang("হাড় ভাঙ্গা", "হাড় ভাঙ্গা")}
-                    </h2>
+                    </h6>
                   </header>
 
                   <section class="m18l5-intro-panel mb-1 p1 m18l5-intro-overview m18l5-shadow-definition" data-aos="fade-up" data-aos-delay="20">
@@ -13682,7 +13682,7 @@ const orbitItems = [
                   ),
                   text: yhLang(
                     "If the person is not breathing normally, begin CPR. Do not tie a tourniquet or cut the bite wound.",
-                    "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে প্রশিক্ষণ প্রাপ্ত ব্যক্তি সিপিআর শুরু করতে হবে।  কামড়ের স্থানে কোন গিঁট বাধা যাবে না / ক্ষত স্থানটি কাটা যাবে না। ",
+                    "যদি ব্যক্তির স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, তাহলে প্রশিক্ষণ প্রাপ্ত ব্যক্তি দ্বারা সিপিআর শুরু করতে হবে।  কামড়ের স্থানে কোন গিঁট বাধা যাবে না / ক্ষত স্থানটি কাটা যাবে না। ",
                   ),
                   icon: "fa-heart-pulse",
                   color: "m18l6-step-cpr",
@@ -13917,7 +13917,7 @@ const orbitItems = [
                               <section class="m18l7-symptoms-panel" data-aos="fade-right" data-aos-delay="50">
                                   <h3 class="m18l7-panel-title">
                                       <i class="fa-solid fa-triangle-exclamation"></i>
-                                      ${yhLang("Possible Symptoms", "কুকুরের কামড় থেকে রোগ সংক্রমণের এক বা একাধিক লক্ষণ দেখা দিতে পারেঃ")}
+                                      ${yhLang("Possible Symptoms", "কুকুরের কামড় থেকে সংক্রমণের এক বা একাধিক লক্ষণ দেখা দিতে পারেঃ")}
                                   </h3>
                                   ${renderSymptoms(dogBiteSymptoms)}
                               </section>
@@ -14161,7 +14161,7 @@ const orbitItems = [
             content: (function () {
               const intro = yhLang(
                 "Drowning is one of the leading causes of child deaths in Bangladesh. If you see a child or person drowning in a pond, lake, or river, immediately call for help. Extend a stick, bamboo, or rope towards the drowning person to help them reach safety. Once grasped, they can swim back to shore with assistance.",
-                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা।  কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে। ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে।  ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে।",
+                "বাংলাদেশে শিশু মৃত্যুর অন্যতম প্রধান কারণ হল পানিতে ডুবা।  কোন শিশু/ব্যক্তিকে পুকুর, জলাশয় বা নদীতে ডুবে যেতে দেখলে প্রথমে সাহায্যের জন্য চিৎকার করতে হবে।  ডুবন্ত ব্যক্তির দিকে একটি লাঠি/বাঁশ বাড়িয়ে দিয়ে অথবা দড়ি/প্যাঁচানো চাদর ইত্যাদির যে কোন এক প্রান্ত শক্ত করে ধরে অপর প্রান্ত ডুবন্ত ব্যক্তির দিকে ছুঁড়ে দিতে হবে।  ডুবন্ত ব্যক্তিকে তা ধরে রেখে সাঁতার কেটে নিরাপদে নিকটবর্তী তীরে আসতে বলতে হবে।",
               );
 
               const shallowTip = yhLang(
@@ -14226,7 +14226,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "Give 2 rescue breaths and 30 chest compressions. Continue CPR if needed",
-                    "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে।  যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে সিপিআর চালিয়ে যেতে হবে।",
+                    "প্রথমে ২ বার মুখে শ্বাস দিতে হবে এবং ৩০ বার বুকে চাপ দিতে হবে।  যদি আক্রান্ত ব্যক্তি সাড়া না দেয় বা স্বাভাবিক শ্বাস-প্রশ্বাস না থাকে, বেসিক লাইফ সাপোর্টের পর্যায়ক্রমিক ধাপসমূহ অনুসরণ করে প্রশিক্ষনপ্রাপ্ত ব্যক্তি দ্বারা সিপিআর চালিয়ে যেতে হবে ।",
                   ),
                   icon: "fa-heart-pulse",
                   color: "m18l9-rescue-cpr",
@@ -14613,7 +14613,7 @@ const orbitItems = [
                 {
                   text: yhLang(
                     "If the person becomes unconscious, start CPR.",
-                    "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, সিপিআর শুরু করতে হবে।",
+                    "যদি আক্রান্ত ব্যক্তি অজ্ঞান হয়ে যায়, তাহলে প্রশিক্ষণপ্রাপ্ত ব্যক্তি দ্বারা সিপিআর ।",
                   ),
                   icon: "fa-heart-pulse",
                   color: "m18l11-follow-cpr",

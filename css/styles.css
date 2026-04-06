@@ -14313,7 +14313,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
 .m18l9-rescue-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   padding: 8px 9px;
   border-radius: 8px;
