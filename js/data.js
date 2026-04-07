@@ -2454,10 +2454,10 @@ const coursesData = [
               ];
 
               return `
-              <div class="lesson-slide d-flex align-items-center justify-content-center gap-1 flex-column flex-lg-row">
+              <div class="lesson-slide">
                 <div class="">
-                   <div class="row g-4 ">
-                        <div class="col-md-6">
+                   <div class="row g-1">
+                        <div class="col-md-4">
                             <h2 class="slide-title gradient-text mb-4" data-aos="fade-up">${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
                             <figure class="glass-card p-1 mb-0 text-center">
                               <img src="img/age/plan.jpg" alt="" class="img-fluid w-100 rounded shadow-sm img-zoom" />
@@ -2536,6 +2536,17 @@ const coursesData = [
 
                             return '<div class="m24l1-orbit-container" data-aos="zoom-in" data-aos-delay="300"><div class="m24l1-orbit-center"><div class="m24l1-orbit-center-icon"><i class="fa-solid fa-star"></i></div><div class="m24l1-orbit-center-text"><h2 class="text-white">জাতীয়  কৈশোর স্বাস্থ্য কৌশল ২০১৭-২০৩০</h2></div></div><div class="m24l1-orbit-ring"></div>' + renderOrbit() + '</div>';
                           })()}
+                        </div>
+                        <div class="col-md-2">
+                          <div class="d-flex flex-column" style="max-height: 400px;">
+                             <figure class="glass-card p-1 mb-0 text-center">
+                              <img src="img/modu2/ongikar1.jpg" style="max-height: 200px;" alt="" class="img-fluid  w-100 rounded shadow-sm img-zoom" />
+                            </figure>
+                            <figure class="glass-card p-1 mb-0 text-center">
+                              <img src="img/modu2/ongikar2.jpg" alt="" style="max-height: 200px;" class="img-fluid  w-100 rounded shadow-sm img-zoom" />
+                            </figure> 
+                          </div>
+                            
                         </div>
                     </div>
                 </div>
