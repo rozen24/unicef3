@@ -181,7 +181,7 @@ const coursesData = [
                 </div>
 
                 <div class="row g-1">
-                 <div class="col-md-6">
+                 <div class="col-md-6 d-flex justify-content-between flex-column">
                   ${(() => {
                     const definitions = [
                       {
