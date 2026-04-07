@@ -1,5 +1,5 @@
 .age-figure img{
-  max-height: 500px;
+  max-height: 480px;
 }
 
 
@@ -12491,7 +12491,7 @@ figure.image-card {
     align-items: flex-start;
     overflow: hidden;
     /* gap: 59px !important; */
-    margin-bottom: 33px;
+    margin-bottom: 30px;
 }
 
 .m7l-def-card:hover {
