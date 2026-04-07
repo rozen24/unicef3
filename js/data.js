@@ -848,7 +848,7 @@ const coursesData = [
             content: (function () {
               return `
             <div class="lesson-slide">
-              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বৈশ্বিক প্রেক্ষাপট")}</h2>
+              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
 
               <div class="row g-1 d-flex align-items-center">
                        <div class="col-md-6">
@@ -874,7 +874,7 @@ const coursesData = [
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <div class="modern-card p-2 glass-card h-region">
-                                      <h2 class="mb-2"><b>${yhLang("Global youth population by region", "অঞ্চলভিত্তিক বৈশ্বিক তরুণ জনগোষ্ঠী")}</b></h2>
+                                      <h2 class="mb-2"><b>${yhLang("Global youth population by region", "অঞ্চলভিত্তিক তরুণ জনগোষ্ঠী")}</b></h2>
                                       <div style="position:relative; height:500px;">
                                         <canvas id="regionalShareChart" aria-label="Global youth population by region. " role="img"></canvas>
                                       </div>
