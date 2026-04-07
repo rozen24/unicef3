@@ -2182,22 +2182,18 @@ html[lang|="bn"] h2 {
    ======================================== */
 body {
   height: 100dvh !important;
-/* }   
+}   
 .lesson-slide {
-  min-height: calc(100dvh - 137px);
+  /* min-height: calc(100dvh - 137px); */
   overflow: hidden;
-}    */
+}   
 
-.lesson-slide {
+/* .lesson-slide {
   min-height: calc(100dvh - 150px);
   overflow: hidden;
-}
+} */
 /* Apply ONLY when height is 768px or less */
-@media screen and (max-height: 768px) {
-  .lesson-slide {
-  min-height: calc(100dvh - 125px);
-  }  
-}
+
 .lession_slide_none {
   min-height: auto;
 }

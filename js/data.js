@@ -848,16 +848,15 @@ const coursesData = [
             content: (function () {
               return `
             <div class="lesson-slide">
-              <h2 class="slide-title gradient-text d-none" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
+              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
 
               <div class="row g-1 d-flex align-items-center">
                        <div class="col-md-6">
-                         
-                       <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
+
+                          <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
                           <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
-                            <div class="container m2_globe" style="position: relative">
-                              <h2 class="mb-2"><b>${yhLang("Global youth population by region", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</b></h2>
-                              <img src="img/Distribution/globe.jpg" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-100" alt="Globe showing youth population">
+                            <div class="container" style="position: relative">
+                              <img src="img/Distribution/globe.jpg" class="img-fluid h-100 img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
                               <div class="globe-text-wrap">
                                 <h3 class="fw-bold map-text mb-2" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">${yhLang("70", "৯০")}</span>%</h3>
                                 <p class="lead mt-1 text-white">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়নেরও</strong> বেশি তরূণ রয়েছে,")}</p>
@@ -865,19 +864,17 @@ const coursesData = [
                               </div>
                             </div>
                           </section>
-                          
                        </div>
                        <div class="col-md-6">
-
+                       <h2 class="mb-2"><b>${yhLang("Global youth population by region", "অঞ্চলভিত্তিক তরুণ জনগোষ্ঠী")}</b></h2>
                          <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
                             <section class="world-youth-map-and-chart rounded-4" data-aos="zoom-in">
                               <div class="container">
                                 <div class="row">
                                   <div class="col-lg-12">
-                                    <div class="modern-card p-2 glass-card h-region">
-                                      <h2 class="mb-2"><b>${yhLang("Global youth population by region", "অঞ্চলভিত্তিক তরুণ জনগোষ্ঠী")}</b></h2>
-                                      <div style="position:relative; height:500px;">
-                                        <canvas id="regionalShareChart" aria-label="Global youth population by region. " role="img"></canvas>
+                                    <div class="modern-card p-2 glass-card h-100">
+                                      <div style="position:relative;" class="h-100">
+                                        <canvas id="regionalShareChart" aria-label="Global youth population by region. " class="h-100" role="img"></canvas>
                                       </div>
                                     </div>
                                   </div>
@@ -1000,15 +997,15 @@ const coursesData = [
               <div class="lesson-slide m2l3_new">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Why young people’s health and wellbeing is important ?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ ?")}</h2>
                 <div class="row g-1">
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                        <!-- Demographic Pyramid Compare -->
                        
-                        <figure class="mb-0 text-center bg-pyramid p-2  sadow-sm glass-card">
-                          <img src="img/adolsent/adolcent.png" alt="Demographic Pyramid" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                        <figure class="mb-0 text-center p-2 sadow-sm glass-card">
+                          <img src="img/adolsent/adolcent.png" alt="Demographic Pyramid" class="img-fluid h-100 w-100 rounded shadow-sm img-zoom" />
                         </figure>
                     </div>
-                    <div class="col-md-5">
-                        <h5 class="mt-2 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "১০-২৪ বছর বয়সী প্রজন্মের ওপর বিনিয়োগ একটি ত্রি-মাত্রিক লভ্যাংশ (ট্রিপল ডিভিডেন্ড) এনে দেয় ")}</h5>
+                    <div class="col-md-6">
+                        <h5 class="mb-3 gradient-text p-2 sadow-sm glass-card" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "১০-২৪ বছর বয়সী প্রজন্মের ওপর বিনিয়োগ একটি ত্রি-মাত্রিক লভ্যাংশ (ট্রিপল ডিভিডেন্ড) এনে দেয়।  কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়")}</h5>
 
                           <!-- Triple Dividend Cards -->
                           <div class="td-orbit-container mx-2" data-aos="zoom-in" data-aos-delay="200">
@@ -1046,7 +1043,6 @@ const coursesData = [
                               </div>
                             </div>
                           </div>
-                          <h5 class="mt-5 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়।")}</h5>
 
                          
                     </div>
@@ -1497,12 +1493,30 @@ const coursesData = [
               const factPoints = [
   {
     text: yhLang(
-      "13.4% of adolescents suffer from mental health problems.",
-      "১৩.৪% কিশোর-কিশোরী মানসিক স্বাস্থ্যগত সমস্যায় ভুগছে।"
+      "16% of married and 10% of unmarried adolescent girls are overweight or obese.",
+      "১৫-১৯ বছর বয়সী বিবাহিত কিশোরীদের মধ্যে প্রজনন হার প্রতি হাজারে ৯২।"
     ),
-    icon: "fa-brain",
-    color: "#7c3aed",
-    bgColor: "rgba(124, 58, 237, 0.12)",
+    icon: "fa-weight-scale",
+    color: "#ec4899",
+    bgColor: "rgba(236, 72, 153, 0.12)",
+  },
+  {
+    text: yhLang(
+      "36% of married adolescent girls and 32% of unmarried adolescent girls are stunted; 4% of married and 8% of unmarried girls are underweight.",
+      "১৫-১৯ বছর বয়সী বিবাহিত নারীদের মধ্যে যাদের পরিবার পরিকল্পনার চাহিদা পূরণ হয়নি, তাদের হার ১২.৭%।"
+    ),
+    icon: "fa-ruler",
+    color: "#f59e0b",
+    bgColor: "rgba(245, 158, 11, 0.12)",
+  },              
+  {
+    text: yhLang(
+      "Bangladesh is among the top 10 countries with the highest rates of child marriage in the world.",
+      "১৫-১৯ বছর বয়সী চারজনের মধ্যে একজন বিবাহিত কিশোরী (২৪%) গর্ভধারন করে, এবং প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।"
+    ),
+    icon: "fa-children",
+    color: "#f97316",
+    bgColor: "rgba(249, 115, 22, 0.12)",
   },
   {
     text: yhLang(
@@ -1512,15 +1526,6 @@ const coursesData = [
     icon: "fa-ruler",
     color: "#f59e0b",
     bgColor: "rgba(245, 158, 11, 0.12)",
-  },
-   {
-    text: yhLang(
-      "Bangladesh is among the top 10 countries with the highest rates of child marriage in the world.",
-      "১৫-১৯ বছর বয়সী চারজনের মধ্যে একজন বিবাহিত কিশোরী (২৪%) গর্ভধারন করে, এবং প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।"
-    ),
-    icon: "fa-children",
-    color: "#f97316",
-    bgColor: "rgba(249, 115, 22, 0.12)",
   },
   {
     text: yhLang(
@@ -1552,15 +1557,6 @@ const coursesData = [
   },
   {
     text: yhLang(
-      "Married adolescent girls experience violence from their husbands.",
-      "বিবাহিত কিশোরীদের তাদের স্বামীদের দ্বারা নির্যাতিত হয়।"
-    ),
-    icon: "fa-hand-fist",
-    color: "#d946ef",
-    bgColor: "rgba(217, 70, 239, 0.12)",
-  },
-  {
-    text: yhLang(
       "About 1.78 million adolescents in Bangladesh are engaged in child labor.",
       "বাংলাদেশে প্রায় ১.৭৮ মিলিয়ন কিশোর-কিশোরী শিশুশ্রমে জড়িত।"
     ),
@@ -1571,12 +1567,21 @@ const coursesData = [
   {
     text: yhLang(
       "Dropout rate from secondary education. The rate among adolescents (34.87%) is higher than boys (30.46%).",
-      "মাধ্যমিক শিক্ষা থেকে ঝরে পড়ার হার। কিশোর-কিশোরীদের মধ্যে ঝরে পড়ার হার (৩৪.৮৭%) ছেলেদের (৩০.৪৬%) তুলনায় বেশি।"
+      "কিশোরীদের মধ্যে মাধ্যমিক শিক্ষা থেকে ঝরে পড়ার হার (৩৪.৮৭%) কিশোরদের (৩০.৪৬%) তুলনায় বেশি।"
     ),
     icon: "fa-graduation-cap",
     color: "#3b82f6",
     bgColor: "rgba(59, 130, 246, 0.12)",
   },
+  {
+    text: yhLang(
+      "13.4% of adolescents suffer from mental health problems.",
+      "১৩.৪% কিশোর-কিশোরী মানসিক স্বাস্থ্যগত সমস্যায় ভুগছে।"
+    ),
+    icon: "fa-brain",
+    color: "#7c3aed",
+    bgColor: "rgba(124, 58, 237, 0.12)",
+  }
 ];
 
               const renderFactPoints = () =>
