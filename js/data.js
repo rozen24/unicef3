@@ -252,8 +252,8 @@ const coursesData = [
                   })()}
                   </div>
                   <div class="col-md-6">
-                     <figure class="glass-card age-figure m p-1 mb-0 text-center">
-                          <img src="img/age/age-figure.jpg" alt="" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                     <figure class="glass-card age-figure h-100 p-1 mb-0 text-center">
+                          <img src="img/age/age-figure.jpg" alt="" class="img-fluid w-100 h-100 rounded shadow-sm img-zoom" />
                     </figure>
                   </div>
                 </div>
