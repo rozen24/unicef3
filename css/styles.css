@@ -30222,11 +30222,6 @@ p.lead {
   100% { transform: translateY(0px); }
 }
 
-.age-figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 
 /* Dark mode adjustments for age track */
 .dark-mode .age-track::before {

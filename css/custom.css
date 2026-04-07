@@ -357,6 +357,7 @@
 
 /* Small screens (laptops like 1366px) */
 @media  (max-height: 768px) {
+  
   .module3 {
       thead {
         background: linear-gradient(135deg, rgba(251,195,144,.25) 0%, rgba(255,193,7,.15) 100%);
@@ -577,10 +578,17 @@ p {
 /* Apply ONLY when height is 768px or less */
 
 
-.age-figure img {
-  height: 500px;
-}
+
 @media screen and (max-height: 768px) {
+  .btn {
+        font-weight: 600;
+        padding: 5px 9px !important;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-size: 13px;
+        text-transform: none;
+        letter-spacing: 0.3px;
+    }
   h2 {
     font-size: 18px !important;
     line-height: 15px !important;
@@ -1074,9 +1082,7 @@ span {
 .ch13l1-split-section {
   margin-top: 5px;
 }
-.age-figure img {
-  height: 350px;
-}
+
 /* module 1 lession 4 */
 .m1l6_first {
     right: 402px;
@@ -1100,7 +1106,12 @@ span {
     top: 22px;
     right: 401px;
 }
-
+.m7l-title {
+  margin-bottom: 5px;
+}
+.m7l-def-card {
+  padding: 5px;
+}
 
 
 
