@@ -1,6 +1,4 @@
-.age-figure img{
-  max-height: 480px;
-}
+
 
 
 /* ===== MODULE 11 LESSON 4: CERVICAL CANCER PREVENTION (TWO COLUMN) ===== */
@@ -13544,7 +13542,6 @@ figure.image-card {
   background-clip: text;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 18px;
   margin: 0 0 28px 0;
   padding: 20px 28px;
