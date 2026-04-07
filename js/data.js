@@ -295,7 +295,7 @@ const coursesData = [
             id: "ch1-lesson-3",
             title: yhLang(
               "Core Components of Young Health Ambassador Program",
-              "তরুন স্বাস্থ্যদূত কার্যক্রমের মৌলিক উপাদান সমূহ ",
+              "তরুণ স্বাস্থ্যদূত কার্যক্রমের মৌলিক উপাদান সমূহ ",
             ),
             icon: "fa-puzzle-piece",
             gradientClass: "bg-gradient-indigo",
@@ -322,7 +322,7 @@ const coursesData = [
             content: (function () {
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title m8l-title" data-aos="fade-up"><i class="fa-solid fa-puzzle-piece me-2" style="color:#6366F1;"></i>${yhLang("Core Components of YHAP", "তরুন স্বাস্থ্যদূত কার্যক্রমের মৌলিক উপাদান সমূহ ")}</h2>
+                <h2 class="slide-title m8l-title" data-aos="fade-up"><i class="fa-solid fa-puzzle-piece me-2" style="color:#6366F1;"></i>${yhLang("Core Components of YHAP", "তরুণ স্বাস্থ্যদূত কার্যক্রমের মৌলিক উপাদান সমূহ ")}</h2>
                 
                 <div class="row g-1">
                   <div class="col-lg-8">
