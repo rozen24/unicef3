@@ -848,7 +848,7 @@ const coursesData = [
             content: (function () {
               return `
             <div class="lesson-slide">
-              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
+              <h2 class="slide-title gradient-text d-none" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
 
               <div class="row g-1 d-flex align-items-center">
                        <div class="col-md-6">
@@ -856,6 +856,7 @@ const coursesData = [
                        <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
                           <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
                             <div class="container m2_globe" style="position: relative">
+                              <h2 class="mb-2"><b>${yhLang("Global youth population by region", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</b></h2>
                               <img src="img/Distribution/globe.jpg" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-100" alt="Globe showing youth population">
                               <div class="globe-text-wrap">
                                 <h3 class="fw-bold map-text mb-2" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">${yhLang("70", "৯০")}</span>%</h3>
