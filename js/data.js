@@ -1485,15 +1485,16 @@ const coursesData = [
             },
             content: (function () {
               const factPoints = [
-  {
+   {
     text: yhLang(
-      "16% of married and 10% of unmarried adolescent girls are overweight or obese.",
-      "১৫-১৯ বছর বয়সী বিবাহিত কিশোরীদের মধ্যে প্রজনন হার প্রতি হাজারে ৯২।"
+      "Bangladesh is among the top 10 countries with the highest rates of child marriage in the world.",
+      "১৫-১৯ বছর বয়সী চারজনের মধ্যে একজন বিবাহিত কিশোরী (২৪%) গর্ভধারন করে, এবং প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।"
     ),
-    icon: "fa-weight-scale",
-    color: "#ec4899",
-    bgColor: "rgba(236, 72, 153, 0.12)",
-  },
+    icon: "fa-children",
+    color: "#f97316",
+    bgColor: "rgba(249, 115, 22, 0.12)",
+  },              
+ 
   {
     text: yhLang(
       "36% of married adolescent girls and 32% of unmarried adolescent girls are stunted; 4% of married and 8% of unmarried girls are underweight.",
@@ -1503,14 +1504,14 @@ const coursesData = [
     color: "#f59e0b",
     bgColor: "rgba(245, 158, 11, 0.12)",
   },              
-  {
+   {
     text: yhLang(
-      "Bangladesh is among the top 10 countries with the highest rates of child marriage in the world.",
-      "১৫-১৯ বছর বয়সী চারজনের মধ্যে একজন বিবাহিত কিশোরী (২৪%) গর্ভধারন করে, এবং প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।"
+      "16% of married and 10% of unmarried adolescent girls are overweight or obese.",
+      "১৫-১৯ বছর বয়সী বিবাহিত কিশোরীদের মধ্যে প্রজনন হার প্রতি হাজারে ৯২।"
     ),
-    icon: "fa-children",
-    color: "#f97316",
-    bgColor: "rgba(249, 115, 22, 0.12)",
+    icon: "fa-weight-scale",
+    color: "#ec4899",
+    bgColor: "rgba(236, 72, 153, 0.12)",
   },
   {
     text: yhLang(
@@ -1800,7 +1801,7 @@ const coursesData = [
                 <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang("Determinants for adolescent health and well-being", "কৈশোরকালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ")}</h2>
                 <section class="p-1 p-md-1 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
                   <div class="row g-1 align-items-center">
-                    <div class="col-md-6" data-aos="fade-left" data-aos-delay="80">
+                    <div class="col-md-7" data-aos="fade-left" data-aos-delay="80">
                       <div class="row g-1">
                         ${determinantCards
                           .map(
@@ -1818,7 +1819,7 @@ const coursesData = [
                           .join("")}
                       </div>
                     </div>
-                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="60">
+                    <div class="col-md-5" data-aos="fade-right" data-aos-delay="60">
                       <figure class="image-card-m2l7"><img src="img/determinants/determinants_b.png" alt="AA-HA! guidance" class="img-zoom w-100 h-100"></figure>
                     </div>
                   </div>
@@ -2142,8 +2143,8 @@ const coursesData = [
                   .join("")}</div>
                    <!-- Bottom row: 4 images -->
                     <div class="sdc_main">
-                      <figure class="glass-card p-1 mb-0 text-center">
-                          <img src="img/sdc/sdc.png" alt="SDC" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                      <figure class="glass-card sdc_img mb-0 text-center">
+                          <img src="img/sdc/sdc.png" alt="SDC" class="rounded shadow-sm img-zoom" />
                         </figure>
                     </div>
               </div>`,
@@ -2302,9 +2303,9 @@ const coursesData = [
 
               return `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text d-none" data-aos="fade-up">${yhLang("Adolescent Health in the Global Agenda", "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য")}</h2>
-                <figure class="glass-card agenda text-center">
-                          <img src="img/agenda/agenda-b.png" alt="agenda"  class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang("Adolescent Health in the Global Agenda", "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য")}</h2>
+                <figure class="glass-card agenda text-center h-100 p-3">
+                          <img src="img/agenda/agenda-b.png" alt="agenda"  class="h-100 rounded shadow-sm img-zoom" />
                 </figure>
               </div>`;
             })(),
@@ -2453,7 +2454,7 @@ const coursesData = [
               ];
 
               return `
-              <div class="lesson-slide d-flex align-items-center justify-content-center gap-4 flex-column flex-lg-row">
+              <div class="lesson-slide d-flex align-items-center justify-content-center gap-1 flex-column flex-lg-row">
                 <div class="">
                    <div class="row g-4 ">
                         <div class="col-md-6">

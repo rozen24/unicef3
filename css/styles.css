@@ -16613,6 +16613,9 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 .sdc_main .modern-card {
   padding: 1.25rem;
 }
+.sdc_img img {
+  width: 80%;
+}
 .sdc_main .modern-card figure {
   margin-bottom: 0 !important;
 
