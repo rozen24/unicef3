@@ -579,7 +579,7 @@ p {
 
 
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 750px) {
   .btn {
         font-weight: 600;
         padding: 5px 9px !important;
