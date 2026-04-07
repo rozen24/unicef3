@@ -848,11 +848,11 @@ const coursesData = [
             content: (function () {
               return `
             <div class="lesson-slide">
-              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
+              <h2 class="slide-title gradient-text d-none" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
 
               <div class="row g-1 d-flex align-items-center">
                        <div class="col-md-6">
-
+                          <h2 class="mb-2"><b>${yhLang("Global youth population by region", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</b></h2>
                           <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
                           <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
                             <div class="container" style="position: relative">
@@ -869,17 +869,11 @@ const coursesData = [
                        <h2 class="mb-2"><b>${yhLang("Global youth population by region", "অঞ্চলভিত্তিক তরুণ জনগোষ্ঠী")}</b></h2>
                          <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
                             <section class="world-youth-map-and-chart rounded-4" data-aos="zoom-in">
-                              <div class="container">
-                                <div class="row">
-                                  <div class="col-lg-12">
                                     <div class="modern-card p-2 glass-card h-100">
                                       <div style="position:relative;" class="h-100">
                                         <canvas id="regionalShareChart" aria-label="Global youth population by region. " class="h-100" role="img"></canvas>
                                       </div>
                                     </div>
-                                  </div>
-                                </div>
-                              </div>
                             </section>
                        </div>
               </div>
@@ -1155,10 +1149,21 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-lg-8 modern-card">
+                        <h2 class=" mb-1">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</h2>
+                    </div>
+                    
+                    
+                  </div>
+                </section>
+
+                <!-- Doughnut charts: Adolescents vs Young adults -->
+                <section class="my-1" data-aos="fade-up" data-aos-delay="80">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-4">
                        <h3 class="gradient-text mb-1">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}
                        </h3>
                        <div class="row g-1">
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                               <div class="modern-card glass-card">
                                   <div class="" data-aos="zoom-in" data-aos-delay="100">
                                     <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Males", "কিশোরদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
@@ -1209,7 +1214,7 @@ const coursesData = [
                                   </div>
                                 </div>
                               </div>
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                              <div class="modern-card glass-card">
                                 <div class="" data-aos="zoom-in" data-aos-delay="120">
                                   <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Females", "কিশোরীদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
@@ -1265,19 +1270,8 @@ const coursesData = [
                           </div>
                         </div>
                     </div>
-                    
-                    
-                  </div>
-                </section>
-
-                <!-- Doughnut charts: Adolescents vs Young adults -->
-                <section class="my-1" data-aos="fade-up" data-aos-delay="80">
-                  <div class="row g-3 align-items-center">
-                    <div class="col-md-4">
-                        <h2 class=" mb-1">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</h2>
-                    </div>
                     <div class="col-md-8">
-                       <h3 class="gradient-text my-1">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</h3>
+                       <h3 class="gradient-text my-1"><b>${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</b></h3>
                        <figure class="glass-card p-1 mb-0 text-center">
                           <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                         </figure>
@@ -1349,7 +1343,7 @@ const coursesData = [
             id: "ch2-lesson-6",
             title: yhLang(
               "Child marriage and teenage pregnancies",
-              "কৈশোরকালীন স্বাস্থ্য",
+              "বাল্যবিবাহ",
             ),
             icon: "fa-child-reaching",
             gradientClass: "bg-gradient-orange",
@@ -1375,7 +1369,7 @@ const coursesData = [
             },
             content: `
               <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Child marriage and teenage pregnancies", "কৈশোরকালীন স্বাস্থ্য")}</h2>
+                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Child marriage and teenage pregnancies", "বাল্যবিবাহ")}</h2>
 
                 
 
