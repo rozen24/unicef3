@@ -1159,7 +1159,7 @@ const coursesData = [
                 <!-- Doughnut charts: Adolescents vs Young adults -->
                 <section class="my-1" data-aos="fade-up" data-aos-delay="80">
                   <div class="row g-5 align-items-center">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                        <h3 class="gradient-text mb-1">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}
                        </h3>
                        <div class="row g-1">
@@ -1270,7 +1270,7 @@ const coursesData = [
                           </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                        <h3 class="gradient-text my-1"><b>${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</b></h3>
                        <figure class="glass-card p-1 mb-0 text-center">
                           <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
