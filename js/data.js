@@ -2247,7 +2247,7 @@ const coursesData = [
               <div class="lesson-slide">
                 <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang("Adolescent Health in the Global Agenda", "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য")}</h2>
                 <figure class="glass-card agenda text-center h-100 p-3">
-                          <img src="img/agenda/agenda-b.png" alt="agenda"  class="h-100 rounded shadow-sm img-zoom" />
+                <img src="img/agenda/agenda-b.png" alt="agenda"  class="h-100 rounded shadow-sm img-zoom" />
                 </figure>
               </div>`;
             })(),
@@ -2397,10 +2397,10 @@ const coursesData = [
 
               return `
               <div class="lesson-slide">
+                <h2 class="slide-title gradient-text mb-4" data-aos="fade-up">${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
                 <div class="">
-                   <div class="row g-1">
+                   <div class="row g-1 align-items-center">
                         <div class="col-md-4">
-                            <h2 class="slide-title gradient-text mb-4" data-aos="fade-up">${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
                             <figure class="glass-card p-1 mb-0 text-center">
                               <img src="img/age/plan.jpg" alt="" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                             </figure>
@@ -2480,12 +2480,12 @@ const coursesData = [
                           })()}
                         </div>
                         <div class="col-md-2">
-                          <div class="d-flex flex-column" style="max-height: 400px;">
+                          <div class="d-flex flex-column">
                              <figure class="glass-card p-1 mb-0 text-center">
-                              <img src="img/modu2/ongikar1.jpg" style="max-height: 200px;" alt="" class="img-fluid  w-100 rounded shadow-sm img-zoom" />
+                              <img src="img/modu2/ongikar1.jpg" style="max-height: 50vh" alt="" class="img-fluid  w-100 rounded shadow-sm img-zoom" />
                             </figure>
                             <figure class="glass-card p-1 mb-0 text-center">
-                              <img src="img/modu2/ongikar2.jpg" alt="" style="max-height: 200px;" class="img-fluid  w-100 rounded shadow-sm img-zoom" />
+                              <img src="img/modu2/ongikar2.jpg" alt="" style="max-height: 50vh" class="img-fluid  w-100 rounded shadow-sm img-zoom" />
                             </figure> 
                           </div>
                             
