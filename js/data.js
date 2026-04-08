@@ -1092,7 +1092,7 @@ const coursesData = [
                      
 
                 <section class="my-1" data-aos="fade-up" data-aos-delay="60">
-                  <div class="row g-5">
+                  <div class="row g-6">
                     <div class="col-lg-5 modern-card glass-card ps-4">
                       <div class="" data-aos="zoom-in" data-aos-delay="100">
                        <p class="gradient-text my-1">${yhLang("Top 5 leading causes of death among adolescents are", "বিশ্বে প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন <br>কারণে অসুস্থ হয় বা মত্যুবরণ করে।  কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে:")}</p>
@@ -1148,7 +1148,7 @@ const coursesData = [
                         </ul>
                       </div>
                     </div>
-                    <div class="col-lg-7 modern-card">
+                    <div class="col-lg-6 modern-card">
                         <h2 class="p-3">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</h2>
                     </div>
                     
@@ -1159,7 +1159,7 @@ const coursesData = [
                 <!-- Doughnut charts: Adolescents vs Young adults -->
                 <section class="my-1" data-aos="fade-up" data-aos-delay="80">
                   <div class="row g-5 align-items-center">
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                        <h3 class="gradient-text mb-1">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}
                        </h3>
                        <div class="row g-1">
@@ -1270,7 +1270,7 @@ const coursesData = [
                           </div>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-8">
                        <h3 class="gradient-text my-1"><b>${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</b></h3>
                        <figure class="glass-card p-1 mb-0 text-center">
                           <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
