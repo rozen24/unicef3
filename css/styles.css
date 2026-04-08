@@ -1880,6 +1880,10 @@ html[lang|="bn"] h2 {
 }
 
 /* ==================== MODULE 20 ==================== */
+.bangladesh-map img {
+  height: 60vh;
+  object-fit: fill;
+}
 .mod20-lesson {
   position: relative;
   overflow: hidden;
@@ -30816,18 +30820,23 @@ tbody, td, tfoot, th, thead, tr {
   .region-legend {display: none;}
 }
 
+.chart-pyramid {
+  height: 100vh; /* small screens */
+  object-fit: fill;
+}
 /* Responsive heights similar to chart */
 @media (min-width: 992px) {
   .regional-map-wrap { min-height: 520px; }
 }
 /* Responsive height for population pyramid chart */
 .chart-pyramid {
-  height: 480px; /* small screens */
+  height: 100vh; /* small screens */
+  object-fit: fill;
 }
 
 @media (min-width: 992px) { /* Bootstrap lg breakpoint */
   .chart-pyramid {
-    height: 640px; /* large screens */
+    height: 100vh; /* large screens */
   }
 }
 @media (min-width: 992px) {

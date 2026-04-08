@@ -926,20 +926,20 @@ const coursesData = [
                                     <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</p>
                                   </div>
               <div class="row g-2">
-                       <div class="col-md-4">
+                       <div class="col-md-5">
                           <!-- Step 4 – Bangladesh Focus -->
-                          <section class="bangladesh-map rounded-4 p-2" data-aos="fade-right">   
-                                  <div class="">
+                          <section class=" rounded-4 p-2" data-aos="fade-right">   
+                                  <div class="bangladesh-map">
                                   <img src="img/Distribution/dis-map.png" class="img-fluid w-100 img-zoom shadow" alt="Bangladesh map placeholder">
                                 </div>
                           </section>
                        </div>
-                       <div class="col-md-8">
+                       <div class="col-md-7">
                           <!-- Step 3 – POPULATION & HOUSING CENSUS 2022 (Chart.js) -->
                           <section class="population-pyramid-wrapper" data-aos="fade-up">
                             <div class="modern-card glass-card">
                               <h5 class="d-none">${yhLang("POPULATION & HOUSING CENSUS 2022", "জনসংখ্যা ও গৃহগণনা ২০২২")}</h5>
-                              <div style="position:relative; height:520px;">
+                              <div style="position:relative;">
                                 <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
                               </div>
                             </div>
@@ -991,15 +991,15 @@ const coursesData = [
               <div class="lesson-slide m2l3_new">
                 <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Why young people’s health and wellbeing is important ?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ ?")}</h2>
                 <div class="row g-1">
-                    <div class="col-md-6">
+                    <div class="col-md-6  p-2 rounded-5 sadow-sm glass-card">
                        <!-- Demographic Pyramid Compare -->
                        
-                        <figure class="mb-0 text-center p-2 sadow-sm glass-card">
-                          <img src="img/adolsent/adolcent.png" alt="Demographic Pyramid" class="img-fluid h-100 w-100 rounded shadow-sm img-zoom" />
+                        <figure class="mb-0 text-center h-100">
+                          <img src="img/adolsent/adolcent.png" alt="Demographic Pyramid" class="img-fluid h-100 w-100 img-zoom" />
                         </figure>
                     </div>
-                    <div class="col-md-6">
-                        <h5 class="mb-3 gradient-text p-2 sadow-sm glass-card" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "১০-২৪ বছর বয়সী প্রজন্মের ওপর বিনিয়োগ একটি ত্রি-মাত্রিক লভ্যাংশ (ট্রিপল ডিভিডেন্ড) এনে দেয়।  কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়")}</h5>
+                    <div class="col-md-6 p-2 rounded-5 sadow-sm glass-card">
+                        <h5 class="mb-3 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "১০-২৪ বছর বয়সী প্রজন্মের ওপর বিনিয়োগ একটি ত্রি-মাত্রিক লভ্যাংশ (ট্রিপল ডিভিডেন্ড) এনে দেয়।  কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়")}</h5>
 
                           <!-- Triple Dividend Cards -->
                           <div class="td-orbit-container mx-2" data-aos="zoom-in" data-aos-delay="200">
