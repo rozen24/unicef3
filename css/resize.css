@@ -2,14 +2,24 @@
 .lesson-hero {
     height: 12dvh;
 }
-
+body{
+  overflow-x: hidden !important;
+}
 .lesson-slide {
-  height: 82dvh;
+  height: 83dvh;
   overflow-y: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
 }  
+
+.lesson-content-card {
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 95, 175, 0.12);
+  display: grid;
+  /* overflow-y: auto; */
+}
 .inline-lesson-nav {
     height: 5dvh;
 }

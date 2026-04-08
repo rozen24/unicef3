@@ -991,10 +991,10 @@ class YouthHealthLMS {
                   if (!highlightAges.has(lab)) return;
                   const center = yScale.getPixelForValue(lab);
                   // Approximate category height using neighbor delta
-                  const prev = yScale.getPixelForValue(labels[Math.max(0, i - 1)]);
-                  const next = yScale.getPixelForValue(labels[Math.min(labels.length - 1, i + 1)]);
-                  const step = Math.max(8, Math.abs(next - prev) / 2); // fallback minimum thickness
-                  const top = center - step / 2;
+                  const prev = yScale.getPixelForValue(labels[Math.max(0, i - 0)]);
+                  const next = yScale.getPixelForValue(labels[Math.min(labels.length - 0, i + 0)]);
+                  const step = Math.max(1, Math.abs(next - prev) / 0); // fallback minimum thickness
+                  const top = center - step / 0;
                   const height = step;
                   ctx.fillStyle = "rgba(253, 4, 4, 0.28)"; // subtle orange wash
                   ctx.fillRect(chartArea.left, top, chartArea.right - chartArea.left, height);
@@ -1024,7 +1024,7 @@ class YouthHealthLMS {
                     const x = bar.x, y = bar.y, base = bar.base;
                     const width = Math.abs((bar.x ?? 0) - (bar.base ?? 0));
                     const left = Math.min(x, base);
-                    const top = y - (bar.height || 0) / 2;
+                    const top = y - (bar.height || 0) / 0;
                     const height = (bar.height || 0);
                     ctx.shadowBlur = 6;
                     ctx.shadowColor = "rgba(29, 78, 216, 0.25)"; // blue-700
@@ -1043,7 +1043,7 @@ class YouthHealthLMS {
                     const x = bar.x, y = bar.y, base = bar.base;
                     const width = Math.abs((bar.x ?? 0) - (bar.base ?? 0));
                     const left = Math.min(x, base);
-                    const top = y - (bar.height || 0) / 2;
+                    const top = y - (bar.height || 0) / 0;
                     const height = (bar.height || 0);
                     ctx.shadowBlur = 6;
                     ctx.shadowColor = "rgba(234, 88, 12, 0.25)"; // orange-600
@@ -1122,13 +1122,50 @@ class YouthHealthLMS {
         try {
           // Build a map wrapper to replace the canvas
           const regions = [
-            { key: 'north-america', label: 'North America (4%)', top: '36%', left: '18%', color: '#60A5FA' },
-            { key: 'latin-america', label: 'Latin America (8%)', top: '52%', left: '23%', color: '#F472B6' },
-            { key: 'europe', label: 'Europe (6%)', top: '28%', left: '52%', color: '#A78BFA' },
-            { key: 'mena', label: 'MENA (10%)', top: '40%', left: '54%', color: '#22D3EE' },
-            { key: 'ssa', label: 'Sub-Saharan Africa (26%)', top: '60%', left: '52%', color: '#34D399' },
-            { key: 'asia-pacific', label: 'Asia-Pacific (29%)', top: '44%', left: '74%', color: '#FBBF24' }
-          ];
+  {
+    key: 'north-america',
+    label: yhLang('North America (4%)', 'উত্তর আমেরিকা (৪%)'),
+    top: '36%',
+    left: '18%',
+    color: '#60A5FA'
+  },
+  {
+    key: 'latin-america',
+    label: yhLang('Latin America (8%)', 'লাতিন আমেরিকা (৮%)'),
+    top: '52%',
+    left: '23%',
+    color: '#F472B6'
+  },
+  {
+    key: 'europe',
+    label: yhLang('Europe (6%)', 'ইউরোপ (৬%)'),
+    top: '28%',
+    left: '52%',
+    color: '#A78BFA'
+  },
+  {
+    key: 'mena',
+    label: yhLang('MENA (10%)', 'মধ্যপ্রাচ্য এবং উত্তর আফ্রিকা অঞ্চল (১০%)'),
+    top: '40%',
+    left: '54%',
+    color: '#22D3EE'
+  },
+  {
+    key: 'ssa',
+    label: yhLang('Sub-Saharan Africa (26%)', 'সাব-সাহারান আফ্রিকা (২৬%)'),
+    top: '60%',
+    left: '52%',
+    color: '#34D399'
+  },
+  {
+    key: 'asia-pacific',
+    label: yhLang('Asia-Pacific (29%)', 'এশিয়া-প্যাসিফিক (২৯%)'),
+    top: '49%',
+    left: '70%',
+    color: '#FBBF24'
+  }
+];
+          
 
           const wrap = document.createElement('div');
           wrap.className = 'regional-map-wrap';

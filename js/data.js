@@ -324,7 +324,7 @@ const coursesData = [
               <div class="lesson-slide">
                 <h2 class="slide-title m8l-title" data-aos="fade-up"><i class="fa-solid fa-puzzle-piece me-2" style="color:#6366F1;"></i>${yhLang("Core Components of YHAP", "তরুণ স্বাস্থ্যদূত কার্যক্রমের মৌলিক উপাদান সমূহ ")}</h2>
                 
-                <div class="row g-1">
+                <div class="row g-1 d-flex align-items-center justify-content-center flex-nowrap">
                   <div class="col-lg-8">
                     <div class="m8l-content-wrapper">
                       ${(() => {
@@ -410,7 +410,7 @@ const coursesData = [
                   </div>
 
                   <div class="col-lg-4">
-                    <div class="m8l-orbit-wrapper d-flex align-items-center h-100" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="m8l-orbit-wrapper" data-aos="zoom-in" data-aos-delay="300">
                       <div class="m8l-orbit-container">
                         <div class="m8l-orbit-center">
                           <div class="m8l-orbit-center-icon">
@@ -850,7 +850,7 @@ const coursesData = [
             <div class="lesson-slide">
               <h2 class="slide-title gradient-text d-none" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
 
-              <div class="row g-1 d-flex align-items-center">
+              <div class="row g-1 d-flex">
                        <div class="col-md-6">
                           <h2 class="mb-2"><b>${yhLang("Global youth population by region", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</b></h2>
                           <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
@@ -2086,7 +2086,7 @@ const coursesData = [
                 <h2 class="slide-title d-none gradient-text" data-aos="fade-up">${yhLang("SDG related to adolescent health", "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG")}</h2>
                     <div class="sdc_main h-100">
                       <figure class="glass-card sdc_img h-100 mb-0 text-center">
-                          <img src="img/sdc/sdc.png" alt="SDC" class=" h-100 rounded shadow-sm img-zoom" />
+                          <img src="img/sdc/sdc.png" alt="SDC" class="rounded img-zoom" />
                         </figure>
                     </div>
               </div>`,

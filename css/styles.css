@@ -186,7 +186,7 @@ body {
   font-family: var(--font-secondary);
   color: #1a202c;
   background-color: var(--hero-gradient) !important;
-  overflow-x: hidden;
+  overflow: hidden;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
 }
@@ -2183,16 +2183,8 @@ html[lang|="bn"] h2 {
 body {
   height: 100dvh !important;
 }   
-.lesson-slide {
-  height: 90vh;
-  overflow: hidden;
-}   
+ 
 
-/* .lesson-slide {
-  min-height: calc(100dvh - 150px);
-  overflow: hidden;
-} */
-/* Apply ONLY when height is 768px or less */
 
 .lession_slide_none {
   min-height: auto;
@@ -2203,14 +2195,6 @@ body {
    Enhanced UI with Modern Design System
    ======================================== */
 
-.lesson-slide.mod24-lesson1 {
-  overflow: hidden;
-  border-radius: 20px;
-  padding: 12px;
-  /* background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 30%, #e0e7ff 70%, #ede9fe 100%); */
-  position: relative;
-  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
-}
 
 .lesson-slide.mod24-lesson1::before {
   content: "";
@@ -3064,7 +3048,6 @@ body {
 @media (max-width: 768px) {
   .lesson-slide.mod24-lesson1 {
     padding: 12px;
-    min-height: 550px;
   }
 
   .m24l1-hero {
@@ -20303,7 +20286,7 @@ input::placeholder {
   padding: 5px 5px;
   box-shadow: 0 28px 80px rgba(15, 53, 110, 0.12);
   animation: lessonEnter 0.65s var(--transition-curve);
-  position: relative; /* ensure content sits above floating backgrounds */
+/* ensure content sits above floating backgrounds */
   z-index: 1;
 }
 
@@ -29266,15 +29249,7 @@ dashboard-titled-title {
 .m17l1-cause-escape .m17l1-cause-icon{
   background-color: green;
 }
-.lesson-content-card {
-  /* background: rgba(255, 255, 255, 0.97); */
-  background-color: var(--hero-gradient) !important;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(0, 95, 175, 0.12);
-  display: grid;
-  /* overflow-y: auto; */
-}
+
 
 .lesson-audio-bar {
   display: flex;
