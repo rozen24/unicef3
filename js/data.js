@@ -858,9 +858,9 @@ const coursesData = [
                             <div class="container" style="position: relative">
                               <img src="img/Distribution/globe.jpg" class="img-fluid h-100 img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
                               <div class="globe-text-wrap">
-                                <h3 class="fw-bold map-text mb-2" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">${yhLang("70", "৯০")}</span>%</h3>
-                                <p class="lead mt-1 text-white">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়নেরও</strong> বেশি তরূণ রয়েছে,")}</p>
-                                <p class="mb-0 text-white lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "যাদের <strong>৯০%</strong> উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</p>
+                                <h6 class="fw-bold map-text mb-2" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">${yhLang("70", "৯০")}</span>%</h6>
+                                <h3 class="lead mt-1 text-white">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়নেরও</strong> বেশি তরূণ রয়েছে,")}</h3>
+                                <h3 class="mb-0 text-white lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "যাদের <strong>৯০%</strong> উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h3>
                               </div>
                             </div>
                           </section>
@@ -922,8 +922,8 @@ const coursesData = [
             <div class="lesson-slide">
               <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বাংলাদেশ প্রেক্ষাপট")}</h2>
               <div class="" style="padding:1.5rem;">
-                                    <h3 class="d-none">${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h3>
-                                    <p class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</p>
+                                    <h6 class="d-none">${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h6>
+                                    <h3 class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</h3>
                                   </div>
               <div class="row g-2">
                        <div class="col-md-5">
