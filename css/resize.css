@@ -1,0 +1,15 @@
+
+.lesson-hero {
+    height: 12dvh;
+}
+
+.lesson-slide {
+  height: 82dvh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
+}  
+.inline-lesson-nav {
+    height: 5dvh;
+}

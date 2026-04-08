@@ -2184,7 +2184,7 @@ body {
   height: 100dvh !important;
 }   
 .lesson-slide {
-  /* min-height: calc(100dvh - 137px); */
+  height: 90vh;
   overflow: hidden;
 }   
 
@@ -29137,10 +29137,6 @@ dashboard-titled-title {
   align-items: flex-start;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1rem;
-}
-
-.lesson-body {
-  padding: 0 0 clamp(0px, 10vw, 0px);
 }
 
 

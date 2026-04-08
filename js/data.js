@@ -2084,67 +2084,9 @@ const coursesData = [
             content: `
               <div class="lesson-slide">
                 <h2 class="slide-title d-none gradient-text" data-aos="fade-up">${yhLang("SDG related to adolescent health", "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG")}</h2>
-
-                <!-- SDG/SDC cards with distinct lean gradients, icons, and hover effects -->
-                <div class="row g-3 d-none">${[
-                  {
-                    label: "No Poverty",
-                    icon: "fa-hand-holding-heart",
-                    cls: "purple",
-                    delay: 100,
-                  },
-                  {
-                    label: "Zero Hunger",
-                    icon: "fa-bowl-food",
-                    cls: "blue",
-                    delay: 130,
-                  },
-                  {
-                    label: "Good Health And Well-Being",
-                    icon: "fa-heart-pulse",
-                    cls: "teal",
-                    delay: 160,
-                  },
-                  {
-                    label: "Quality Education",
-                    icon: "fa-graduation-cap",
-                    cls: "orange",
-                    delay: 190,
-                  },
-                  {
-                    label: "Gender Equality",
-                    icon: "fa-venus-mars",
-                    cls: "green",
-                    delay: 220,
-                  },
-                  {
-                    label: "Decent Work And Economic Growth",
-                    icon: "fa-briefcase",
-                    cls: "pink",
-                    delay: 250,
-                  },
-                  {
-                    label: "Peace, Justice And Strong Institutions",
-                    icon: "fa-scale-balanced",
-                    cls: "yellow",
-                    delay: 280,
-                  },
-                ]
-                  .map(
-                    (s) => `
-                  <div class="col-6 col-md-4 col-lg-3 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" data-aos="flip-left" data-aos-delay="${s.delay}">
-                    <article class="sdg-lean-card bg-gradient-${s.cls} sdg-hover-tilt transition-base  h-100">
-                      <div class="sdg-card-icon animate-float-slow"><i class="fa-solid ${s.icon}"></i></div>
-                      <h6 class="sdg-card-title">${s.label}</h6>
-                    </article>
-                  </div>
-                `,
-                  )
-                  .join("")}</div>
-                   <!-- Bottom row: 4 images -->
-                    <div class="sdc_main">
-                      <figure class="glass-card sdc_img mb-0 text-center">
-                          <img src="img/sdc/sdc.png" alt="SDC" class="rounded shadow-sm img-zoom" />
+                    <div class="sdc_main h-100">
+                      <figure class="glass-card sdc_img h-100 mb-0 text-center">
+                          <img src="img/sdc/sdc.png" alt="SDC" class=" h-100 rounded shadow-sm img-zoom" />
                         </figure>
                     </div>
               </div>`,

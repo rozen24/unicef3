@@ -3711,8 +3711,8 @@ class YouthHealthLMS {
 
           <section class="lesson-body">
             <div class="container">
-              <div class="row g-4 lesson-body-row">
-                <div class="lesson-content-col col-12 col-md-12">
+              <div class="row lesson-body-row">
+                <div class="lesson-content">
                   <article class="lesson-content-card">
                     ${
                       currentLesson && currentLesson.audioFile
