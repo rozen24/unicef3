@@ -82,9 +82,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 .m2l3_new .td-orbit-container {
-  height: 490px;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
 }
 
 .td-orbit-center {
@@ -288,12 +291,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .td-orbit-container {
-    width: 450px;
-    height: 450px;
-  }
-}
+
 
 @media (max-width: 768px) {
   .td-orbit-container {

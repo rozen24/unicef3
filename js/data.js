@@ -930,7 +930,7 @@ const coursesData = [
                           <!-- Step 4 – Bangladesh Focus -->
                           <section class=" rounded-4 p-2" data-aos="fade-right">   
                                   <div class="bangladesh-map">
-                                  <img src="img/Distribution/dis-map.png" class="img-fluid w-100 img-zoom shadow" alt="Bangladesh map placeholder">
+                                  <img src="img/Distribution/dis-map.jpg" class="img-fluid rounded-4 w-100 img-zoom shadow" alt="Bangladesh map placeholder">
                                 </div>
                           </section>
                        </div>
@@ -1002,7 +1002,7 @@ const coursesData = [
                         <h5 class="mb-3 gradient-text" data-aos="fade-up" data-aos-delay="60">${yhLang("Investments in the current generation of 10–24-year-olds will reap a triple dividend", "১০-২৪ বছর বয়সী প্রজন্মের ওপর বিনিয়োগ একটি ত্রি-মাত্রিক লভ্যাংশ (ট্রিপল ডিভিডেন্ড) এনে দেয়।  কিশোর-কিশোরীদের স্বাস্থ্য ও সুস্থতায় প্রতি মার্কিন ডলার বিনিয়োগে ৫-১০ ডলার পর্যন্ত রিটার্ন পাওয়া যায়")}</h5>
 
                           <!-- Triple Dividend Cards -->
-                          <div class="td-orbit-container mx-2" data-aos="zoom-in" data-aos-delay="200">
+                          <div class="td-orbit-container" data-aos="zoom-in" data-aos-delay="200">
                             <div class="td-orbit-center">
                               <div class="td-orbit-center-icon">
                                 <i class="fa-solid fa-people-group"></i>
@@ -1158,8 +1158,8 @@ const coursesData = [
 
                 <!-- Doughnut charts: Adolescents vs Young adults -->
                 <section class="my-1" data-aos="fade-up" data-aos-delay="80">
-                  <div class="row g-5 align-items-center">
-                    <div class="col-md-5">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-6">
                        <h3 class="gradient-text mb-1">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}
                        </h3>
                        <div class="row g-1">
@@ -1270,7 +1270,7 @@ const coursesData = [
                           </div>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                        <h3 class="gradient-text my-1"><b>${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</b></h3>
                        <figure class="glass-card p-1 mb-0 text-center">
                           <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
