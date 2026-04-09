@@ -947,6 +947,20 @@ const coursesData = [
                        </div>
               </div>
 
+              <!-- NEW Population Pyramid Chart -->
+              <div class="row mt-5">
+                <div class="col-12">
+                  <section class="population-pyramid-wrapper-new" data-aos="fade-up">
+                    <div class="modern-card glass-card">
+                      <h5 class="d-none">Population Pyramid by Age</h5>
+                      <div style="position:relative; height: 600px;">
+                        <canvas id="populationPyramidNew" aria-label="Population Pyramid" role="img"></canvas>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
               
 
               
