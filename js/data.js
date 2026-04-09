@@ -928,7 +928,7 @@ const coursesData = [
               <div class="row g-2">
                        <div class="col-md-5">
                           <!-- Step 4 – Bangladesh Focus -->
-                          <section class=" rounded-4 p-2" data-aos="fade-right">   
+                          <section class="rounded-4 p-2" data-aos="fade-right">   
                                   <div class="bangladesh-map">
                                   <img src="img/Distribution/dis-map.jpg" class="img-fluid rounded-4 w-100 img-zoom shadow" alt="Bangladesh map placeholder">
                                 </div>
@@ -1656,7 +1656,7 @@ const coursesData = [
                 {
                   label: yhLang("Unintentional injury", "অনিচ্ছাকৃত আঘাত"),
                   icon: "fa-car-burst",
-                  color: "bg-gradient-orange",
+                  color: "bg-gradient-tangerine",
                   delay: 140,
                 },
                 {
@@ -2414,12 +2414,8 @@ const coursesData = [
                 <h2 class="slide-title gradient-text mb-4" data-aos="fade-up">${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
                 <div class="">
                    <div class="row g-1 align-items-center">
-                        <div class="col-md-4">
-                            <figure class="glass-card p-1 mb-0 text-center">
-                              <img src="img/age/plan.jpg" alt="" class="img-fluid w-100 rounded shadow-sm img-zoom" />
-                            </figure>
-                        </div>
-                        <div class="col-md-6">
+                        
+                        <div class="col-md-7">
                           ${(() => {
                             const orbitItems = [
                               {
@@ -2493,13 +2489,13 @@ const coursesData = [
                             return '<div class="m24l1-orbit-container" data-aos="zoom-in" data-aos-delay="300"><div class="m24l1-orbit-center"><div class="m24l1-orbit-center-icon"><i class="fa-solid fa-star"></i></div><div class="m24l1-orbit-center-text"><h2 class="text-white">জাতীয়  কৈশোর স্বাস্থ্য কৌশল ২০১৭-২০৩০</h2></div></div><div class="m24l1-orbit-ring"></div>' + renderOrbit() + '</div>';
                           })()}
                         </div>
-                        <div class="col-md-2">
-                          <div class="d-flex flex-column">
+                        <div class="col-md-5 h-100">
+                          <div class="d-flex align-items-center gap-2" data-aos="fade-up" data-aos-delay="60">
                              <figure class="glass-card p-1 mb-0 text-center">
-                              <img src="img/modu2/ongikar1.jpg" style="max-height: 50vh" alt="" class="img-fluid  w-100 rounded shadow-sm img-zoom" />
+                              <img src="img/modu2/ongikar1.jpg"alt="" class="img-fluid h-100  w-100 rounded shadow-sm img-zoom" />
                             </figure>
                             <figure class="glass-card p-1 mb-0 text-center">
-                              <img src="img/modu2/ongikar2.jpg" alt="" style="max-height: 50vh" class="img-fluid  w-100 rounded shadow-sm img-zoom" />
+                              <img src="img/modu2/ongikar2.jpg" alt="" class="img-fluid h-100  w-100 rounded shadow-sm img-zoom" />
                             </figure> 
                           </div>
                             

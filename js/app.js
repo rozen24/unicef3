@@ -18,6 +18,9 @@ class YouthHealthLMS {
     // Track confetti firing to avoid duplicates per lesson
     this._confettiFiredFor = new Set();
 
+    // Chart references for language updates
+    this.populationPyramidChart = null;
+
     // Localization state
     this.currentLanguage = this.getStoredLanguage();
 
@@ -174,6 +177,17 @@ class YouthHealthLMS {
             const selectedLabels = lang === "bn" ? labelsData.bn : labelsData.en;
             this.childMarriageChart.data.labels = selectedLabels.map(l => wrapLabel(l, 10));
             this.childMarriageChart.update();
+          }
+        }
+
+        // Update population pyramid chart labels
+        if (this.populationPyramidChart) {
+          const pyramidCanvas = document.getElementById("populationPyramid");
+          if (pyramidCanvas && pyramidCanvas.dataset.chart) {
+            const chartData = JSON.parse(pyramidCanvas.dataset.chart);
+            const selectedLabels = lang === "bn" ? chartData.labelsBN : chartData.labelsEN;
+            this.populationPyramidChart.data.labels = selectedLabels;
+            this.populationPyramidChart.update();
           }
         }
       } catch (_) {}
@@ -946,8 +960,6 @@ class YouthHealthLMS {
         requestAnimationFrame(tick);
       }
 
-      
-
       const pyramidCanvas = document.getElementById("populationPyramid");
 
 if (pyramidCanvas && window.Chart) {
@@ -1056,6 +1068,8 @@ if (pyramidCanvas && window.Chart) {
     plugins: [ageBandHighlightBg]
   });
 }
+
+      
 
       // Regional shares SVG map overlay (no image): shows all regions on a vector world-style backdrop
       const regionalCanvas = document.getElementById("regionalShareChart");

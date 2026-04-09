@@ -10,11 +10,11 @@
   --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
   /* Pastel gradient palette */
   --purple-gradient: linear-gradient(135deg, #cbb8ff 0%, #e6d9ff 100%);
-  --blue-gradient: linear-gradient(135deg, #a0c4ff 0%, #bde0fe 100%);
-  --teal-gradient: linear-gradient(135deg, #a5e3e3 0%, #b9f5f1 100%);
+  --blue-gradient: linear-gradient(135deg, #0061ff 0%, #0089ff 100%);
+  --teal-gradient: linear-gradient(135deg, #00ffff 0%, #00ffee 100%);
   --orange-gradient: linear-gradient(135deg, #ffd6a5 0%, #ffcab0 100%);
-  --green-gradient: linear-gradient(135deg, #b9fbc0 0%, #a7f3d0 100%);
-  --pink-gradient: linear-gradient(135deg, #ffc6d9 0%, #ffd6e7 100%);
+  --green-gradient: linear-gradient(135deg, #00ff1b 0%, #00fb87 100%);
+  --pink-gradient: linear-gradient(135deg, #e51157 0%, #ff006a 100%);
   /* Additional pastel gradients */
   --yellow-gradient: linear-gradient(135deg, #fff3b0 0%, #ffefa1 100%);
   --lavender-gradient: linear-gradient(135deg, #e8def8 0%, #f3e8ff 100%);
@@ -1881,8 +1881,9 @@ html[lang|="bn"] h2 {
 
 /* ==================== MODULE 20 ==================== */
 .bangladesh-map img {
+  width: 100%;
   height: 60vh;
-  object-fit: fill;
+  object-fit: auto;
 }
 .mod20-lesson {
   position: relative;
