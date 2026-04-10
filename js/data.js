@@ -939,7 +939,7 @@ const coursesData = [
                           <section class="population-pyramid-wrapper" data-aos="fade-up">
                             <div class="modern-card glass-card">
                               <h5 class="d-none">${yhLang("POPULATION & HOUSING CENSUS 2022", "জনসংখ্যা ও গৃহগণনা ২০২২")}</h5>
-                              <div style="position:relative;">
+                              <div id="chartWrapper" style="width:100%; position: relative;">
                                 <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
                               </div>
                             </div>

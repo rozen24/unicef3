@@ -959,19 +959,20 @@ class YouthHealthLMS {
         chapterEl.textContent = '0';
         requestAnimationFrame(tick);
       }
-
+// age bar
       const pyramidCanvas = document.getElementById("populationPyramid");
 
 if (pyramidCanvas && window.Chart) {
-  const ctx = pyramidCanvas.getContext("2d");
+
+  
 
   const labels = [
-    "0-4","5-9","10-14","15-19","20-24","25-29","30-34","35-39",
-    "40-44","45-49","50-54","55-59","60-64","65-69","70-74","75-79",
-    "80-84","85-89","90-94","95-99","100+"
+    "০-৪","৫-৯","১০-১৪","১৫-১৯","২০-২৪","২৫-২৯","৩০-৩৪","৩৫-৩৯",
+"৪০-৪৪","৪৫-৪৯","৫০-৫৪","৫৫-৫৯","৬০-৬৪","৬৫-৬৯","৭০-৭৪","৭৫-৭৯",
+"৮০-৮৪","৮৫-৮৯","৯০-৯৪","৯৫-৯৯","১০০+"
   ];
 
-  const highlightAges = new Set(["10-14","15-19","20-24"]);
+  const highlightAges = new Set(["১০-১৪","১৫-১৯","২০-২৪"]);
 
   const maleData = [-7.63,-7.41,-7.82,-8.5,-8.27,-7.92,-6.46,-6.68,-6.04,-4.92,-4.14,-3.78,-2.78,-2.59,-1.77,-1.26,-0.56,-0.18,-0.12,-0.06,-0.01];
   const femaleData = [7.95,7.92,8.51,8.07,6.72,7.92,6.46,5.66,6.04,5.12,4.13,4.0,2.96,3.01,2.15,1.57,0.67,0.46,0.17,0.08,0.01];
@@ -1013,46 +1014,72 @@ if (pyramidCanvas && window.Chart) {
     }
   };
 
+  const labelCount = labels.length;
+      const rowHeight = 21; // px per bar (adjust if needed)
+      const minHeight = 400;
+
+      const dynamicHeight = Math.max(minHeight, labelCount * rowHeight);
+
+      // apply to parent container
+      pyramidCanvas.parentNode.style.height = dynamicHeight + "px";
+  const ctx = pyramidCanvas.getContext("2d");
+  
+
   new Chart(ctx, {
     type: "bar",
     data: {
       labels,
       datasets: [
         {
-          label: "Male",
+          label: "পুরুষ",
           data: maleData,
           backgroundColor: maleColors,
           borderWidth: 1
         },
         {
-          label: "Female",
+          label: "মহিলা",
           data: femaleData,
           backgroundColor: femaleColors,
           borderWidth: 1
         }
       ]
     },
+    
     options: {
       responsive: true,
+      maintainAspectRatio: false, // 🔥 must,
       indexAxis: "y",
       scales: {
         x: {
           stacked: true,
           ticks: {
-            callback: value => Math.abs(value)
+            callback: function(value) {
+              const toBanglaNumber = (num) => {
+                const bnDigits = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+                return String(num).replace(/\d/g, d => bnDigits[d]);
+              };
+
+              return toBanglaNumber(Math.abs(value));
+            }
           },
           title: {
             display: true,
-            text: "Population (%)"
+            text: "জনসংখ্যা (মিলিয়নে)"
           }
         },
         y: {
-          stacked: true,
-          title: {
-            display: true,
-            text: "Age Group"
+            stacked: true,
+            ticks: {
+              autoSkip: false,   // 🔥 show all labels
+              font: {
+                size: 10         // optional: reduce size to fit
+              }
+            },
+            title: {
+              display: true,
+              text: "বয়স গ্রুপ"
+            }
           }
-        }
       },
       plugins: {
         legend: {
@@ -1060,7 +1087,14 @@ if (pyramidCanvas && window.Chart) {
         },
         tooltip: {
           callbacks: {
-            label: ctx => `${ctx.dataset.label}: ${Math.abs(ctx.raw)}%`
+            label: ctx => {
+               const toBanglaNumber = (num) => {
+                const bnDigits = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+                return String(num).replace(/\d/g, d => bnDigits[d]);
+              };
+              const value = Math.abs(ctx.raw);
+              return `${ctx.dataset.label}: ${toBanglaNumber(value)}%`;
+            }
           }
         }
       }
