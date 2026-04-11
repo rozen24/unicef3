@@ -1043,7 +1043,7 @@ const coursesData = [
           },
 
           {
-            id: "ch2-lesson-5",
+            id: "ch2-lesson-4",
             title: yhLang(
               "Bangladesh scenario of mortality and morbidity among young people",
               "বৈশ্বিক এবং বাংলাদেশের  তরুণ জনগোষ্ঠীর অসুস্থতা ও মৃত্যুহার",
@@ -1072,91 +1072,92 @@ const coursesData = [
             },
             content: (function () {
               return `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Bangladesh scenario of mortality and morbidity among young people", "বৈশ্বিক এবং বাংলাদেশের  তরুণ জনগোষ্ঠীর অসুস্থতা ও মৃত্যুহার")}</h2>
+              <div class="lesson-slide m2l4-slide">
+                <style>
+                  .m2l4-slide h2, .m2l4-slide h3, .m2l4-slide h6 {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    font-weight: 600;
+                  }
+                  .m2l4-slide h2 i, .m2l4-slide h3 i, .m2l4-slide h6 i {
+                    font-size: 1.2em;
+                    min-width: 32px;
+                  }
+                </style>
+                <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-chart-line"></i> ${yhLang("Bangladesh scenario of mortality and morbidity among young people", "বৈশ্বিক এবং বাংলাদেশের  তরুণ জনগোষ্ঠীর অসুস্থতা ও মৃত্যুহার")}</h2>
 
                 <!-- Sex-disaggregated Top 5 Causes (UNICEF Adolescent Data Portal 2019) -->
                 <!-- Top 5 Leading Causes of Death -->
-                
-                    
-                     
-
-                <section class="my-1" data-aos="fade-up" data-aos-delay="60">
-                  <div class="row g-6">
-                    <div class="col-lg-5 modern-card glass-card ps-4">
-                      <div class="" data-aos="zoom-in" data-aos-delay="100">
-                       <p class="gradient-text my-1">${yhLang("Top 5 leading causes of death among adolescents are", "বিশ্বে প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন <br>কারণে অসুস্থ হয় বা মত্যুবরণ করে।  কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে:")}</p>
-                        <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
-                          ${[
-                        {
-                          label: yhLang(
-                            "Road traffic accident",
-                            "সড়ক দুর্ঘটনা",
-                          ),
-                          icon: "fa-car-burst",
-                          color: "bg-gradient-orange",
-                        },
-                        {
-                          label: yhLang("Suicide", "আত্মহত্যা"),
-                          icon: "fa-heart-crack",
-                          color: "bg-gradient-pink",
-                        },
-                        {
-                          label: yhLang("Violence", "সহিংসতা"),
-                          icon: "fa-hand-fist",
-                          color: "bg-gradient-green",
-                        },
-                        {
-                          label: yhLang(
-                            "Lower Respiratory Tract infection",
-                            "শ্বাসতন্ত্রের নিচের অংশের সংক্রমণ, এবং",
-                          ),
-                          icon: "fa-lungs",
-                          color: "bg-gradient-blue",
-                        },
-                        {
-                          label: yhLang("HIV/AIDS", "এইচআইভি"),
-                          icon: "fa-virus",
-                          color: "bg-gradient-teal",
-                        },
-                      ]
-                            .map(
-                              (item, i) => `
-                            <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
-                              140 + i * 40
-                            }">
-                              <span class="${
-                                item.color
-                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff"><i class="fa-solid ${
-                                item.icon
-                              }"></i></span>
-                              <span>${item.label}</span>
-                            </li>
-                          `,
-                            )
-                            .join("")}
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-6 modern-card">
-                        <h2 class="p-3">${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</h2>
-                    </div>
-                    
-                    
-                  </div>
-                </section>
 
                 <!-- Doughnut charts: Adolescents vs Young adults -->
-                <section class="my-1" data-aos="fade-up" data-aos-delay="80">
-                  <div class="row g-3 align-items-center">
-                    <div class="col-md-6">
-                       <h3 class="gradient-text mb-1">${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}
-                       </h3>
-                       <div class="row g-1">
-                          <div class="col-md-12">
-                              <div class="modern-card glass-card">
+                <section class="" data-aos="fade-up" data-aos-delay="80">
+                  <div class="row g-2 align-items-center">
+                    <div class="col-md-5 d-flex flex-column align-items-center p-2">
+                          <div class="">
+                                  <h3 class="gradient-text mb-3"><b><i class="fa-solid fa-exclamation-triangle"></i> ${yhLang("Top 5 leading causes of death among adolescents are", "বিশ্বে প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন কারণে অসুস্থ হয় বা মত্যুবরণ করে।  কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে:")}</b></h3>  
+                                 <div class="modern-card glass-card p-2">
+                                 
                                   <div class="" data-aos="zoom-in" data-aos-delay="100">
-                                    <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Males", "কিশোরদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
+                                    <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
+                                      ${[
+                                    {
+                                      label: yhLang(
+                                        "Road traffic accident",
+                                        "সড়ক দুর্ঘটনা",
+                                      ),
+                                      icon: "fa-car-burst",
+                                      color: "bg-gradient-orange",
+                                    },
+                                    {
+                                      label: yhLang("Suicide", "আত্মহত্যা"),
+                                      icon: "fa-heart-crack",
+                                      color: "bg-gradient-pink",
+                                    },
+                                    {
+                                      label: yhLang("Violence", "সহিংসতা"),
+                                      icon: "fa-hand-fist",
+                                      color: "bg-gradient-green",
+                                    },
+                                    {
+                                      label: yhLang(
+                                        "Lower Respiratory Tract infection",
+                                        "শ্বাসতন্ত্রের নিচের অংশের সংক্রমণ, এবং",
+                                      ),
+                                      icon: "fa-lungs",
+                                      color: "bg-gradient-blue",
+                                    },
+                                    {
+                                      label: yhLang("HIV/AIDS", "এইচআইভি"),
+                                      icon: "fa-virus",
+                                      color: "bg-gradient-teal",
+                                    },
+                                  ]
+                                        .map(
+                                          (item, i) => `
+                                        <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
+                                          140 + i * 40
+                                        }">
+                                          <span class="${
+                                            item.color
+                                          }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff"><i class="fa-solid ${
+                                            item.icon
+                                          }"></i></span>
+                                          <span>${item.label}</span>
+                                        </li>
+                                      `,
+                                        )
+                                        .join("")}
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mt-5">
+                                
+                              <h3 class="gradient-text my-4"><b><i class="fa-solid fa-list-check"></i> ${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}</b></h3>
+                              <div class="modern-card glass-card p-2">
+                                  <div class="" data-aos="zoom-in" data-aos-delay="100">
+                                    <h3 class="my-2 d-flex align-items-center gap-2"><b><i class="fa-solid fa-person"></i> ${yhLang("Males", "কিশোরদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</b></h3>
                                     <ul class="list-unstyled grid_3 d-grid gap-2 mb-0">
                                       ${[
                                         {
@@ -1202,135 +1203,78 @@ const coursesData = [
                                         .join("")}
                                     </ul>
                                   </div>
-                                </div>
+                                  <div class="mb-2">
+                                      <div class="" data-aos="zoom-in" data-aos-delay="120">
+                                        <h3 class="my-2 d-flex align-items-center gap-2"><b><i class="fa-solid fa-person-dress"></i> ${yhLang("Females", "কিশোরীদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</b></h3>
+                                        <ul class="list-unstyled d-grid grid_3 mb-0">
+                                          ${[
+                                            {
+                                              label: yhLang("Diarrhea", "ডায়রিয়া"),
+                                              icon: "fa-bacteria",
+                                              color: "bg-gradient-blue",
+                                            },
+                                            {
+                                              label: yhLang("Tuberculosis", "যক্ষ্মা"),
+                                              icon: "fa-lungs",
+                                              color: "bg-gradient-purple",
+                                            },
+                                            {
+                                              label: yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
+                                              icon: "fa-car-burst",
+                                              color: "bg-gradient-orange",
+                                            },
+                                            {
+                                              label: yhLang("Maternal mortality", "মার্তত্বজনিত কারন"),
+                                              icon: "fa-person-pregnant",
+                                              color: "bg-gradient-pink",
+                                            },
+                                            {
+                                              label: yhLang(
+                                                "Lower respiratory tract infections",
+                                                "শ্বাসতন্ত্রের নিচের অংশের সংক্রমণ",
+                                              ),
+                                              icon: "fa-lungs",
+                                              color: "bg-gradient-green",
+                                            },
+                                          ]
+                                            .map(
+                                              (item, i) => `
+                                            <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
+                                              160 + i * 40
+                                            }">
+                                              <span class="${
+                                                item.color
+                                              }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff;"><i class="fa-solid ${
+                                                item.icon
+                                              }"></i></span>
+                                              <span>${item.label}</span>
+                                            </li>
+                                          `,
+                                            )
+                                            .join("")}
+                                        </ul>
                               </div>
-                          <div class="col-md-12">
-                             <div class="modern-card glass-card">
-                                <div class="" data-aos="zoom-in" data-aos-delay="120">
-                                  <h6 class="mb-2 d-flex align-items-center gap-2"><span class="badge-pill">${yhLang("Females", "কিশোরীদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</span></h6>
-                                  <ul class="list-unstyled d-grid grid_3 mb-0">
-                                    ${[
-                                      {
-                                        label: yhLang("Diarrhea", "ডায়রিয়া"),
-                                        icon: "fa-bacteria",
-                                        color: "bg-gradient-blue",
-                                      },
-                                      {
-                                        label: yhLang("Tuberculosis", "যক্ষ্মা"),
-                                        icon: "fa-lungs",
-                                        color: "bg-gradient-purple",
-                                      },
-                                      {
-                                        label: yhLang("Road accidents", "সড়ক দুর্ঘটনা"),
-                                        icon: "fa-car-burst",
-                                        color: "bg-gradient-orange",
-                                      },
-                                      {
-                                        label: yhLang("Maternal mortality", "মার্তত্বজনিত কারন"),
-                                        icon: "fa-person-pregnant",
-                                        color: "bg-gradient-pink",
-                                      },
-                                      {
-                                        label: yhLang(
-                                          "Lower respiratory tract infections",
-                                          "শ্বাসতন্ত্রের নিচের অংশের সংক্রমণ",
-                                        ),
-                                        icon: "fa-lungs",
-                                        color: "bg-gradient-green",
-                                      },
-                                    ]
-                                      .map(
-                                        (item, i) => `
-                                      <li class="d-flex align-items-center gap-2 " data-aos="fade-up" data-aos-delay="${
-                                        160 + i * 40
-                                      }">
-                                        <span class="${
-                                          item.color
-                                        }" style="width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content: center; color:#fff;"><i class="fa-solid ${
-                                          item.icon
-                                        }"></i></span>
-                                        <span>${item.label}</span>
-                                      </li>
-                                    `,
-                                      )
-                                      .join("")}
-                                  </ul>
-                                </div>
-                              </div>
-                          </div>
+                            </div>
                         </div>
+                      </div>
+                    
                     </div>
-                    <div class="col-md-6">
-                       <h3 class="gradient-text my-1"><b>${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</b></h3>
-                       <figure class="glass-card p-1 mb-0 text-center">
-                          <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 310px;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                    <div class="col-md-7">
+                       <figure class="modern-card p-1 mb-0 text-center">
+                        <h3 class="p-1"><i class="fa-solid fa-info-circle"></i> ${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</h3>
+
+                        <h3 class="gradient-text my-1"><b><i class="fa-solid fa-chart-bar"></i> ${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</b></h3>
+
+                          <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 80vh;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <p class="ref small text-muted text-end">Ref: Adolescent and young adult mortality in Bangladesh: findings from household surveys. J Glob Health. 2025;15:04193</p>
                         </figure>
                     </div>
-                  </div>
-                  <!-- <div class="small text-muted mt-2">Note: Chart shows relative emphasis for categories; update with official proportions when available.</div> -->
-
-                  <!-- Legend with icons -->
-                  <div class="d-flex flex-wrap gap-2 mt-2 d-none">
-                    ${[
-                      {
-                        label: "Heart disease",
-                        icon: "fa-heart",
-                        color: "bg-gradient-pink",
-                      },
-                      {
-                        label: "Stroke",
-                        icon: "fa-brain",
-                        color: "bg-gradient-purple",
-                      },
-                      {
-                        label: "Respiratory",
-                        icon: "fa-lungs",
-                        color: "bg-gradient-blue",
-                      },
-                      {
-                        label: "Infection",
-                        icon: "fa-virus",
-                        color: "bg-gradient-green",
-                      },
-                      {
-                        label: "Cancer",
-                        icon: "fa-ribbon",
-                        color: "bg-gradient-orange",
-                      },
-                      {
-                        label: "Obstetric",
-                        icon: "fa-person-pregnant",
-                        color: "bg-gradient-pink",
-                      },
-                      {
-                        label: "Road traffic",
-                        icon: "fa-car-burst",
-                        color: "bg-gradient-tangerine",
-                      },
-                      {
-                        label: "Drowning & accidents",
-                        icon: "fa-water",
-                        color: "bg-gradient-teal",
-                      },
-                      {
-                        label: "Other",
-                        icon: "fa-circle-dot",
-                        color: "bg-gradient-blue",
-                      },
-                    ]
-                      .map(
-                        (l) => `
-                      <span class="badge-pill" title="${l.label}"><i class="fa-solid ${l.icon} me-1"></i>${l.label}</span>
-                    `,
-                      )
-                      .join("")}
-                  </div>
                 </section>
               </div>`;
             })(),
           },
           {
-            id: "ch2-lesson-6",
+            id: "ch2-lesson-5",
             title: yhLang(
               "Child marriage and teenage pregnancies",
               "বাল্যবিবাহ",
@@ -1446,7 +1390,7 @@ const coursesData = [
               </div>`,
           },
           {
-            id: "ch2-lesson-7",
+            id: "ch2-lesson-6",
             title: yhLang(
               "Key Information",
               "তথ্য উপাত্ত",
@@ -1600,7 +1544,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-8",
+            id: "ch2-lesson-7",
             title: yhLang(
               "Determinants for adolescent health and well-being",
               "কৈশোরকালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ",
@@ -1819,7 +1763,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-9",
+            id: "ch2-lesson-8",
             title: yhLang(
               "Why young people need special care ?",
               "কিশোর-কিশোরীদের কেন বিশেষ যত্নের প্রয়োজন?",
@@ -1956,7 +1900,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-10",
+            id: "ch2-lesson-9",
             title: yhLang(
               "SDG related to adolescent health",
               "তরুন-তরুনীদের স্বাস্থ্য সম্পর্কিত SDG",
@@ -1986,7 +1930,7 @@ const coursesData = [
               </div>`,
           },
           {
-            id: "ch2-lesson-11",
+            id: "ch2-lesson-10",
             title: yhLang(
               "AH in Global Agenda",
               "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য",
@@ -2147,7 +2091,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch2-lesson-12",
+            id: "ch2-lesson-11",
             title: yhLang(
               "Bangladesh Government’s commitment",
               "বাংলাদেশ সরকারের অঙ্গীকার",
