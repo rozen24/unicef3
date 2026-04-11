@@ -1,14 +1,11 @@
 
 .lesson-hero {
-    height: 12dvh;
+    /* height: 12dvh; */
 }
-body{
-  overflow-x: hidden !important;
-}
+
 .lesson-slide {
-  height: 83dvh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  /* height: 83dvh; */
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 118, 190, 0.55) rgba(0, 118, 190, 0.12);
@@ -21,5 +18,13 @@ body{
   /* overflow-y: auto; */
 }
 .inline-lesson-nav {
-    height: 5dvh;
+    position: sticky;
+    bottom: 0px !important;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    padding-top: 5px;
+    z-index: 999;
+}
+.btn-outline-primary {
+    background: #fff;
 }

@@ -9,7 +9,7 @@
   --info-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
   --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
   /* Pastel gradient palette */
-  --purple-gradient: linear-gradient(135deg, #cbb8ff 0%, #e6d9ff 100%);
+  --purple-gradient: linear-gradient(135deg, #4400ff 0%, #5600fb 100%);
   --blue-gradient: linear-gradient(135deg, #0061ff 0%, #0089ff 100%);
   --teal-gradient: linear-gradient(135deg, #00ffff 0%, #00ffee 100%);
   --orange-gradient: linear-gradient(135deg, #ffd6a5 0%, #ffcab0 100%);
@@ -316,7 +316,8 @@ a {
 }
 
 img {
-  max-width: 100%;
+  max-inline-size: 100%;
+  display: block;
   height: auto;
 }
 
@@ -1882,8 +1883,8 @@ html[lang|="bn"] h2 {
 /* ==================== MODULE 20 ==================== */
 .bangladesh-map img {
   width: 100%;
-  height: 60vh;
-  object-fit: auto;
+  height: 80vh;
+  object-fit: fill;
 }
 .mod20-lesson {
   position: relative;
@@ -16604,6 +16605,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 .sdc_img img {
   width: 80%;
+  margin: auto;
 }
 .sdc_main .modern-card figure {
   margin-bottom: 0 !important;
@@ -20310,16 +20312,13 @@ input::placeholder {
 
 .lesson-slide::before {
   width: 320px;
-  height: 320px;
-  top: -140px;
-  left: -120px;
+
 }
 
 .lesson-slide::after {
   width: 260px;
-  height: 260px;
-  bottom: -110px;
-  right: -150px;
+
+
   /* Staggered timing for a parallax feel */
   animation: floatDriftAlt 32s ease-in-out infinite alternate, glowPulse 8s ease-in-out infinite;
   animation-delay: -6s, -1s;
@@ -30298,6 +30297,10 @@ p.lead {
 
 /* ==================== LESSON 2: GLOBAL YOUTH MODULE ==================== */
 
+.global-map img{
+  height: 100vh;
+}
+
 .globe-text-wrap {
     position: absolute;
     z-index: 111;
@@ -30333,7 +30336,7 @@ p.lead {
 .world-youth-map .latin { top: 56%; left: 27%; }
 .world-youth-map .mena { top: 44%; left: 56%; }
 
-.population-pyramid-wrapper canvas { width: 100%; height: 100%; }
+.population-pyramid-wrapper canvas { width: 100%; height: 80vh !important; }
 
 /* ==================== LESSON 2: WHY YOUNG HEALTH MATTERS ==================== */
 .dividend-card .dividend-icon {
@@ -30704,7 +30707,7 @@ tbody, td, tfoot, th, thead, tr {
 .regional-map-wrap {
   position: relative;
   width: 100%;
-  min-height: 420px;
+  min-height: 100vh;
   background-color: #0b1324; /* fallback color */
   background-image: url('../img/Distribution/global.jpg');
   background-size: cover;
@@ -30827,7 +30830,7 @@ tbody, td, tfoot, th, thead, tr {
 }
 /* Responsive heights similar to chart */
 @media (min-width: 992px) {
-  .regional-map-wrap { min-height: 520px; }
+  .regional-map-wrap { min-height: 100vh; }
 }
 /* Responsive height for population pyramid chart */
 .chart-pyramid {

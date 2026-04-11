@@ -848,19 +848,18 @@ const coursesData = [
             content: (function () {
               return `
             <div class="lesson-slide">
-              <h2 class="slide-title gradient-text d-none" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
+              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
 
-              <div class="row g-1 d-flex">
+              <div class="row g-1 d-flex align-items-center">
                        <div class="col-md-6">
-                          <h2 class="mb-2"><b>${yhLang("Global youth population by region", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</b></h2>
                           <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
                           <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
-                            <div class="container" style="position: relative">
-                              <img src="img/Distribution/globe.jpg" class="img-fluid h-100 img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
+                            <div class="container global-map" style="position: relative">
+                              <img src="img/Distribution/globe.png" class="img-fluid img-zoom mx-auto d-block rounded-4 globe-rotate opacity-75" alt="Globe showing youth population">
                               <div class="globe-text-wrap">
                                 <h6 class="fw-bold map-text mb-2" style="color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.25)"><span id="globalCounter" data-target="90">${yhLang("70", "৯০")}</span>%</h6>
-                                <h3 class="lead mt-1 text-white">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়নেরও</strong> বেশি তরূণ রয়েছে,")}</h3>
-                                <h3 class="mb-0 text-white lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "যাদের <strong>৯০%</strong> উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h3>
+                                <h2 class="lead mt-1 text-white">${yhLang("The world counts <strong>1.8 billion</strong> young people aged 10–24.", "বিশ্বে <strong>১.৮ বিলিয়নেরও</strong> বেশি তরূণ রয়েছে,")}</h2>
+                                <h2 class="mb-0 text-white lead">${yhLang("Around <strong>90%</strong> live in developing countries.", "যাদের <strong>৯০%</strong> উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h2>
                               </div>
                             </div>
                           </section>
@@ -921,23 +920,23 @@ const coursesData = [
               return `
             <div class="lesson-slide">
               <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বাংলাদেশ প্রেক্ষাপট")}</h2>
-              <div class="" style="padding:1.5rem;">
-                                    <h6 class="d-none">${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h6>
-                                    <h3 class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</h3>
+              <div class="" style="">
+                <h6 class="d-none">${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h6>
+                <h3 class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</h3>
                                   </div>
               <div class="row g-2">
                        <div class="col-md-5">
                           <!-- Step 4 – Bangladesh Focus -->
-                          <section class="rounded-4 p-2" data-aos="fade-right">   
+                          <section class="rounded-4 h-100 p-2 shadow-sm" data-aos="fade-right">   
                                   <div class="bangladesh-map">
-                                  <img src="img/Distribution/dis-map.jpg" class="img-fluid rounded-4 w-100 img-zoom shadow" alt="Bangladesh map placeholder">
+                                  <img src="img/Distribution/dis-map.jpg" class="img-fluid rounded-4 w-100 img-zoom" alt="Bangladesh map placeholder">
                                 </div>
                           </section>
                        </div>
                        <div class="col-md-7">
                           <!-- Step 3 – POPULATION & HOUSING CENSUS 2022 (Chart.js) -->
                           <section class="population-pyramid-wrapper" data-aos="fade-up">
-                            <div class="modern-card glass-card">
+                            <div class="rounded-4 p-2 shadow-sm">
                               <h5 class="d-none">${yhLang("POPULATION & HOUSING CENSUS 2022", "জনসংখ্যা ও গৃহগণনা ২০২২")}</h5>
                               <div id="chartWrapper" style="width:100%; position: relative;">
                                 <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
@@ -946,29 +945,6 @@ const coursesData = [
                           </section>
                        </div>
               </div>
-
-              <!-- NEW Population Pyramid Chart -->
-              <div class="row mt-5">
-                <div class="col-12">
-                  <section class="population-pyramid-wrapper-new" data-aos="fade-up">
-                    <div class="modern-card glass-card">
-                      <h5 class="d-none">Population Pyramid by Age</h5>
-                      <div style="position:relative; height: 600px;">
-                        <canvas id="populationPyramidNew" aria-label="Population Pyramid" role="img"></canvas>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-
-              
-
-              
-
-              
-              <!-- <div class="alert alert-info mt-3" role="note" data-aos="fade-up">
-                Complete the knowledge check below to continue.
-              </div> -->
             </div>`;
             })(),
           },
@@ -1597,7 +1573,7 @@ const coursesData = [
                 factPoints
                   .map(
                     (point, idx) => `
-                      <div class="m2l7-fact-card" data-aos="fade-up" data-aos-delay="${80 + idx * 40}">
+                      <div class="m2l7-fact-card" data-aos="" data-aos-delay="">
                         <div class="m2l7-fact-content">
                           <div class="m2l7-fact-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
                             <i class="fa-solid ${point.icon}"></i>
@@ -1834,7 +1810,7 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-md-5" data-aos="fade-right" data-aos-delay="60">
-                      <figure class="image-card-m2l7"><img src="img/determinants/determinants_b.png" alt="AA-HA! guidance" class="img-zoom w-100 h-100"></figure>
+                      <figure class="image-card-m2l7 h-100"><img src="img/determinants/determinants_b.png" alt="AA-HA! guidance" class="img-zoom w-100"></figure>
                     </div>
                   </div>
                 </section>
@@ -1941,102 +1917,6 @@ const coursesData = [
                   delay: 220,
                 },
               ];
-
-              const carePrinciples = [
-                {
-                  title: yhLang(
-                    "Respect & confidentiality",
-                    "সম্মান ও গোপনীয়তা",
-                  ),
-                  text: yhLang(
-                    "Service providers greet adolescents, use preferred names/pronouns and keep records secure.",
-                    "সেবা প্রদানকারীরা কিশোরদের অভিবাদন জানান, পছন্দের নাম ও সর্বনাম ব্যবহার করেন এবং নথি সুরক্ষিত রাখেন।",
-                  ),
-                  icon: "fa-lock",
-                },
-                {
-                  title: yhLang(
-                    "Accessibility & affordability",
-                    "সহজপ্রাপ্যতা ও সাশ্রয়ী সেবা",
-                  ),
-                  text: yhLang(
-                    "Flexible hours, zero or low fees, disability-friendly layouts and virtual follow-up channels.",
-                    "নমনীয় সময়সূচি, স্বল্প বা বিনা ফি, প্রতিবন্ধীবান্ধব ব্যবস্থা ও ভার্চুয়াল ফলো-আপ চ্যানেল নিশ্চিত করতে হয়।",
-                  ),
-                  icon: "fa-universal-access",
-                },
-                {
-                  title: yhLang("Holistic packages", "সমন্বিত সেবা প্যাকেজ"),
-                  text: yhLang(
-                    "SRHR, mental health, nutrition, violence response and life-skills support offered together.",
-                    "এসআরএইচআর, মানসিক স্বাস্থ্য, পুষ্টি, সহিংসতা প্রতিক্রিয়া ও জীবনদক্ষতা সহায়তা একসাথে দেওয়া হয়।",
-                  ),
-                  icon: "fa-box",
-                },
-                {
-                  title: yhLang("Youth participation", "তরুণদের অংশগ্রহণ"),
-                  text: yhLang(
-                    "Adolescent advisory boards co-design spaces, IEC materials and feedback loops.",
-                    "কিশোর উপদেষ্টা বোর্ড স্থান, আইইসি উপকরণ ও প্রতিক্রিয়া পদ্ধতি সহ-নকশা করে।",
-                  ),
-                  icon: "fa-people-group",
-                },
-              ];
-
-              const checklist = [
-                {
-                  title: yhLang("Environment", "পরিবেশ"),
-                  items: [
-                    yhLang(
-                      "Separate waiting area with relatable visuals and gender-neutral signage.",
-                      "চেনা ভিজ্যুয়াল ও জেন্ডার-নিরপেক্ষ সাইনেজসহ আলাদা অপেক্ষাকক্ষ।",
-                    ),
-                    yhLang(
-                      "Privacy assured consultation rooms and clear referral desk.",
-                      "গোপনীয় পরামর্শ কক্ষ ও স্পষ্ট রেফারাল ডেস্ক।",
-                    ),
-                    yhLang(
-                      "Green & digital elements (plants, charging points, Wi-Fi).",
-                      "সবুজ ও ডিজিটাল উপাদান (গাছপালা, চার্জিং পয়েন্ট, ওয়াই-ফাই)।",
-                    ),
-                  ],
-                },
-                {
-                  title: yhLang("People", "মানুষ"),
-                  items: [
-                    yhLang(
-                      "Trained adolescent-friendly providers with job aids in Bangla & English.",
-                      "বাংলা ও ইংরেজি জব এইডসহ প্রশিক্ষিত কিশোরবান্ধব সেবাদাতা।",
-                    ),
-                    yhLang(
-                      "Peer educators manage triage, explain consent and accompany clients.",
-                      "সহপাঠী শিক্ষকেরা ট্রায়াজ, সম্মতি ব্যাখ্যা ও সঙ্গ দিয়ে সহায়তা করে।",
-                    ),
-                    yhLang(
-                      "Safeguarding focal points for disclosure of violence or abuse.",
-                      "সহিংসতা বা নির্যাতন প্রকাশের জন্য সুরক্ষা ফোকাল পয়েন্ট।",
-                    ),
-                  ],
-                },
-                {
-                  title: yhLang("Processes", "প্রক্রিয়া"),
-                  items: [
-                    yhLang(
-                      "Self-registration kiosks, SMS reminders and helpline numbers visible.",
-                      "স্ব-নিবন্ধন কিয়স্ক, এসএমএস স্মারক ও হেল্পলাইন দৃশ্যমান রাখা।",
-                    ),
-                    yhLang(
-                      "Standard operating procedures for confidentiality and referrals.",
-                      "গোপনীয়তা ও রেফারালের জন্য মানসম্মত কার্যপদ্ধতি।",
-                    ),
-                    yhLang(
-                      "Feedback wall/QR codes to capture youth satisfaction.",
-                      "তরুণদের মতামত সংগ্রহে ফিডব্যাক ওয়াল বা কিউআর কোড।",
-                    ),
-                  ],
-                },
-              ];
-
               const renderList = (items) =>
                 items.map((text) => `<li>${text}</li>`).join("");
 

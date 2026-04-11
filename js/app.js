@@ -876,8 +876,8 @@ class YouthHealthLMS {
     try {
       const htmlEl = document.documentElement;
       if (this.currentView === "lesson-slider") {
-        if (htmlEl) htmlEl.style.overflowX = "visible";
-        if (document.body) document.body.style.overflowX = "visible";
+        if (htmlEl) htmlEl.style.overflowY = "visible";
+        if (document.body) document.body.style.overflowY = "visible";
       } else {
         if (htmlEl) htmlEl.style.overflowX = ""; // revert to stylesheet (likely hidden)
         if (document.body) document.body.style.overflowX = "";
@@ -1014,14 +1014,7 @@ if (pyramidCanvas && window.Chart) {
     }
   };
 
-  const labelCount = labels.length;
-      const rowHeight = 21; // px per bar (adjust if needed)
-      const minHeight = 400;
-
-      const dynamicHeight = Math.max(minHeight, labelCount * rowHeight);
-
-      // apply to parent container
-      pyramidCanvas.parentNode.style.height = dynamicHeight + "px";
+  
   const ctx = pyramidCanvas.getContext("2d");
   
 

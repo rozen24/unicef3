@@ -11595,7 +11595,6 @@ figure.image-card {
 .m2l7-slide {
   padding: 1.6rem 2rem;
   gap: 1.2rem;
-  position: relative;
   overflow: hidden;
 }
 
@@ -11893,6 +11892,7 @@ figure.image-card {
 }
 .agenda img {
   max-width: 80%;
+  margin: auto;
 }
 
 /* Extra Small Mobile - 479px and below */
@@ -13509,7 +13509,6 @@ figure.image-card {
     font-size: 0.55rem;
   }
 }
-}
 
 /* ===== MODULE 1 LESSON 9: ROLE AND RESPONSIBILITY OF YOUTH HEALTH AMBASSADOR ===== */
 
@@ -14630,5 +14629,5 @@ figure.image-card {
   .ch1l10-arrow i {
     font-size: 0.9rem;
   }
-}
+ 
 }
