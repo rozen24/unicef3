@@ -932,7 +932,9 @@ html[lang|="bn"] h2 {
   background: rgba(255,255,255,0.18); color: var(--blue-gradient); border: 1px solid rgba(255,255,255,0.35);
   backdrop-filter: blur(8px);
 }
-
+.badge-pill_heading {
+  padding: 10px 15px; border-radius: 999px; font-weight: 600; font-size: 2rem;
+}
 /* Decorative background ornaments */
 .bg-ornaments { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .orb { position: absolute; border-radius: 50%; filter: blur(6px); opacity: .25; mix-blend-mode: screen; }

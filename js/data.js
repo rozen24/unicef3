@@ -847,11 +847,13 @@ const coursesData = [
             },
             content: (function () {
               return `
-            <div class="lesson-slide">
-              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
+            <div class="lesson-slide m2l1-slide">
+              <style>
+              </style>
 
-              <div class="row g-1 d-flex align-items-center">
+              <div class="row g-1">
                        <div class="col-md-6">
+                         <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-globe"></i> ${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
                           <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
                           <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
                             <div class="container global-map" style="position: relative">
@@ -865,7 +867,7 @@ const coursesData = [
                           </section>
                        </div>
                        <div class="col-md-6">
-                       <h2 class="mb-2"><b>${yhLang("Global youth population by region", "অঞ্চলভিত্তিক তরুণ জনগোষ্ঠী")}</b></h2>
+                       <h2 class="mb-2"><b><i class="fa-solid fa-chart-pie"></i> ${yhLang("Global youth population by region", "অঞ্চলভিত্তিক তরুণ জনগোষ্ঠী")}</b></h2>
                          <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
                             <section class="world-youth-map-and-chart rounded-4" data-aos="zoom-in">
                                     <div class="modern-card p-2 glass-card h-100">
@@ -918,11 +920,50 @@ const coursesData = [
             },
             content: (function () {
               return `
-            <div class="lesson-slide">
-              <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Global Young Population and Demographics", "তরুণদের বাংলাদেশ প্রেক্ষাপট")}</h2>
+            <div class="lesson-slide m2l2-slide">
+              <style>
+                .m2l2-slide h2, .m2l2-slide h3, .m2l2-slide h6 {
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  font-weight: 600;
+                }
+                .m2l2-slide h2 i, .m2l2-slide h3 i, .m2l2-slide h6 i {
+                  font-size: 1.2em;
+                  min-width: 32px;
+                }
+                /* Main title - Teal/Green gradient */
+                .m2l2-slide > h2 {
+                  color: #00897b;
+                }
+                .m2l2-slide > h2 i {
+                  background: linear-gradient(135deg, #00897b, #009688);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                }
+                /* Hidden h6 styling (if shown) */
+                .m2l2-slide h6.d-none {
+                  color: #5e35b1;
+                }
+                .m2l2-slide h6 i {
+                  color: #5e35b1;
+                }
+                /* Bangladesh h3 - Red/Pink gradient */
+                .m2l2-slide h3 {
+                  color: #d32f2f;
+                }
+                .m2l2-slide h3 i {
+                  background: linear-gradient(135deg, #d32f2f, #f44336);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                }
+              </style>
+              <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-map"></i> ${yhLang("Global Young Population and Demographics", "তরুণদের বাংলাদেশ প্রেক্ষাপট")}</h2>
               <div class="" style="">
-                <h6 class="d-none">${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h6>
-                <h3 class="mb-0">${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</h3>
+                <h6 class="d-none"><i class="fa-solid fa-globe"></i> ${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h6>
+                <h3 class="mb-0"><i class="fa-solid fa-people-group"></i> ${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</h3>
                                   </div>
               <div class="row g-2">
                        <div class="col-md-5">
@@ -937,7 +978,6 @@ const coursesData = [
                           <!-- Step 3 – POPULATION & HOUSING CENSUS 2022 (Chart.js) -->
                           <section class="population-pyramid-wrapper" data-aos="fade-up">
                             <div class="rounded-4 p-2 shadow-sm">
-                              <h5 class="d-none">${yhLang("POPULATION & HOUSING CENSUS 2022", "জনসংখ্যা ও গৃহগণনা ২০২২")}</h5>
                               <div id="chartWrapper" style="width:100%; position: relative;">
                                 <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
                               </div>
@@ -978,8 +1018,29 @@ const coursesData = [
             },
             content: (function () {
               return `
-              <div class="lesson-slide m2l3_new">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Why young people’s health and wellbeing is important ?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ ?")}</h2>
+              <div class="lesson-slide m2l3-slide"><style>
+                  .m2l3-slide h2, .m2l3-slide h3, .m2l3-slide h6 {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    font-weight: 600;
+                  }
+                  .m2l3-slide h2 i, .m2l3-slide h3 i, .m2l3-slide h6 i {
+                    font-size: 1.2em;
+                    min-width: 32px;
+                  }
+                  /* Main title - Red/Green gradient */
+                  .m2l3-slide > h2 {
+                    color: #c41c3b;
+                  }
+                  .m2l3-slide > h2 i {
+                    background: linear-gradient(135deg, #c41c3b, #e91e63);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                </style>
+                <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-heart-pulse"></i> ${yhLang("Why young people’s health and wellbeing is important ?", "তরুণদের স্বাস্থ্য ও সুস্থতা কেন গুরুত্বপূর্ণ ?")}</h2>
                 <div class="row g-1">
                     <div class="col-md-6  p-2 rounded-5 sadow-sm glass-card">
                        <!-- Demographic Pyramid Compare -->
@@ -1083,6 +1144,76 @@ const coursesData = [
                   .m2l4-slide h2 i, .m2l4-slide h3 i, .m2l4-slide h6 i {
                     font-size: 1.2em;
                     min-width: 32px;
+                  }
+                  /* Main H2 title - Blue gradient */
+                  .m2l4-slide > h2 {
+                    color: #0277bd;
+                  }
+                  .m2l4-slide > h2 i {
+                    background: linear-gradient(135deg, #0277bd, #1565c0);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                  /* Top 5 causes H3 - Red/Orange gradient */
+                  .m2l4-slide h3:has(> i.fa-exclamation-triangle) {
+                    color: #d32f2f;
+                  }
+                  .m2l4-slide h3:has(> i.fa-exclamation-triangle) i {
+                    background: linear-gradient(135deg, #d32f2f, #ff5722);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                  /* According to UNICEF H3 - Green gradient */
+                  .m2l4-slide h3:has(> i.fa-list-check) {
+                    color: #388e3c;
+                  }
+                  .m2l4-slide h3:has(> i.fa-list-check) i {
+                    background: linear-gradient(135deg, #388e3c, #66bb6a);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                  /* Males H3 - Blue gradient */
+                  .m2l4-slide h3:has(> i.fa-person) {
+                    color: #1976d2;
+                  }
+                  .m2l4-slide h3:has(> i.fa-person) i {
+                    background: linear-gradient(135deg, #1976d2, #42a5f5);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                  /* Females H3 - Pink gradient */
+                  .m2l4-slide h3:has(> i.fa-person-dress) {
+                    color: #c2185b;
+                  }
+                  .m2l4-slide h3:has(> i.fa-person-dress) i {
+                    background: linear-gradient(135deg, #c2185b, #e91e63);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                  /* Info circle H3 - Purple gradient */
+                  .m2l4-slide h3:has(> i.fa-info-circle) {
+                    color: #5e35b1;
+                  }
+                  .m2l4-slide h3:has(> i.fa-info-circle) i {
+                    background: linear-gradient(135deg, #5e35b1, #7e57c2);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                  /* Chart bar H3 - Teal gradient */
+                  .m2l4-slide h3:has(> i.fa-chart-bar) {
+                    color: #00897b;
+                  }
+                  .m2l4-slide h3:has(> i.fa-chart-bar) i {
+                    background: linear-gradient(135deg, #00897b, #4db6ac);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
                   }
                 </style>
                 <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-chart-line"></i> ${yhLang("Bangladesh scenario of mortality and morbidity among young people", "বৈশ্বিক এবং বাংলাদেশের  তরুণ জনগোষ্ঠীর অসুস্থতা ও মৃত্যুহার")}</h2>
@@ -1302,8 +1433,30 @@ const coursesData = [
               ],
             },
             content: `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang("Child marriage and teenage pregnancies", "বাল্যবিবাহ")}</h2>
+              <div class="lesson-slide m2l5-slide">
+                <style>
+                  .m2l5-slide h2, .m2l5-slide h3, .m2l5-slide h6 {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    font-weight: 600;
+                  }
+                  .m2l5-slide h2 i, .m2l5-slide h3 i, .m2l5-slide h6 i {
+                    font-size: 1.2em;
+                    min-width: 32px;
+                  }
+                  /* Main title - Red/Orange gradient */
+                  .m2l5-slide > h2 {
+                    color: #d32f2f;
+                  }
+                  .m2l5-slide > h2 i {
+                    background: linear-gradient(135deg, #d32f2f, #ff6f00);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                </style>
+                <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-child"></i> ${yhLang("Child marriage and teenage pregnancies", "বাল্যবিবাহ")}</h2>
 
                 
 
@@ -1531,6 +1684,28 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide m2l7-slide">
+                  <style>
+                    .m2l7-slide h2, .m2l7-slide h3, .m2l7-slide h6 {
+                      display: flex;
+                      align-items: center;
+                      gap: 12px;
+                      font-weight: 600;
+                    }
+                    .m2l7-slide h2 i, .m2l7-slide h3 i, .m2l7-slide h6 i {
+                      font-size: 1.2em;
+                      min-width: 32px;
+                    }
+                    /* Main title - Blue gradient */
+                    .m2l7-slide > h2 {
+                      color: #0277bd;
+                    }
+                    .m2l7-slide > h2 i {
+                      background: linear-gradient(135deg, #0277bd, #42a5f5);
+                      -webkit-background-clip: text;
+                      background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    }
+                  </style>
                   <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-chart-bar"></i> ${yhLang(
                     "Key Information",
                     "তথ্য উপাত্ত",
@@ -1731,8 +1906,21 @@ const coursesData = [
                 items.map((item) => `<li>${item}</li>`).join("");
 
               return `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang("Determinants for adolescent health and well-being", "কৈশোরকালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ")}</h2>
+              <div class="lesson-slide m2l8-slide">
+                <style>
+                  
+                  /* Main title - Purple gradient */
+                  .m2l8-slide > h2 {
+                    color: #6366f1;
+                  }
+                  .m2l8-slide > h2 i {
+                    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                </style>
+                <h2 class="slide-title gradient-text mb-2" data-aos="fade-up"><i class="fa-solid fa-network-wired"></i> ${yhLang("Determinants for adolescent health and well-being", "কৈশোরকালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ")}</h2>
                 <section class="p-1 p-md-1 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
                   <div class="row g-1 align-items-center">
                     <div class="col-md-7" data-aos="fade-left" data-aos-delay="80">
@@ -1868,9 +2056,9 @@ const coursesData = [
               <div class="lesson-slide">
                 <div class="alert alert-info hover-lift-sm transition-base mb-3" data-aos="fade-up" data-aos-delay="60">
                   <div class="d-flex align-items-center gap-3">
-                    <span class="badge-pill bg-gradient-blue"><i class="fa-solid fa-user-group" style="color: #fff;"></i></span>
+                    <span class="badge-pill_heading bg-gradient-blue"><i class="fa-solid fa-user-group" style="color: #fff;"></i></span>
                     <div>
-                      <h6 class=""><b>${yhLang("Why young people need special care ?", "কেন তরুণদের বিশেষ যত্নের প্রয়োজন?")}</b></h6>
+                      <h2 class="mb-0"><b>${yhLang("Why young people need special care ?", "কেন তরুণদের বিশেষ যত্নের প্রয়োজন?")}</b></h2>
                     </div>
                   </div>
                 </div>
@@ -1885,7 +2073,7 @@ const coursesData = [
                           <div class="d-flex align-items-center gap-3">
                             <span class="badge-pill ${c.color}" aria-hidden="true"><i class="fa-solid ${c.icon}" style="color: #fff;"></i></span>
                             <div>
-                              <h6 class="mb-1">${c.title}</h6>
+                              <h3 class="mb-1">${c.title}</h3>
                               <p class="mb-0 small">${c.desc}</p>
                             </div>
                           </div>
@@ -2082,8 +2270,30 @@ const coursesData = [
                 items.map((text) => `<li>${text}</li>`).join("");
 
               return `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang("Adolescent Health in the Global Agenda", "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য")}</h2>
+              <div class="lesson-slide m2l10-slide">
+                <style>
+                  .m2l10-slide h2, .m2l10-slide h3, .m2l10-slide h6 {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    font-weight: 600;
+                  }
+                  .m2l10-slide h2 i, .m2l10-slide h3 i, .m2l10-slide h6 i {
+                    font-size: 1.2em;
+                    min-width: 32px;
+                  }
+                  /* Main title - Teal/Green gradient */
+                  .m2l10-slide > h2 {
+                    color: #00897b;
+                  }
+                  .m2l10-slide > h2 i {
+                    background: linear-gradient(135deg, #00897b, #009688);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                </style>
+                <h2 class="slide-title gradient-text mb-2" data-aos="fade-up"><i class="fa-solid fa-globe"></i> ${yhLang("Adolescent Health in the Global Agenda", "বৈশ্বিক এজেন্ডায় কৈশোর স্বাস্থ্য")}</h2>
                 <figure class="glass-card agenda text-center h-100 p-3">
                 <img src="img/agenda/agenda-b.png" alt="agenda"  class="h-100 rounded shadow-sm img-zoom" />
                 </figure>
@@ -2234,8 +2444,29 @@ const coursesData = [
               ];
 
               return `
-              <div class="lesson-slide">
-                <h2 class="slide-title gradient-text mb-4" data-aos="fade-up">${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
+              <div class="lesson-slide m2l11-slide"><style>
+                  .m2l11-slide h2, .m2l11-slide h3, .m2l11-slide h6 {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    font-weight: 600;
+                  }
+                  .m2l11-slide h2 i, .m2l11-slide h3 i, .m2l11-slide h6 i {
+                    font-size: 1.2em;
+                    min-width: 32px;
+                  }
+                  /* Main title - Orange/Tangerine gradient */
+                  .m2l11-slide > h2 {
+                    color: #ff7043;
+                  }
+                  .m2l11-slide > h2 i {
+                    background: linear-gradient(135deg, #ff7043, #ff6f00);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                </style>
+                <h2 class="slide-title gradient-text mb-4" data-aos="fade-up"><i class="fa-solid fa-landmark"></i> ${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
                 <div class="">
                    <div class="row g-1 align-items-center">
                         
