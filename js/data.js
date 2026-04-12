@@ -870,8 +870,8 @@ const coursesData = [
                        <h2 class="mb-2"><b><i class="fa-solid fa-chart-pie"></i> ${yhLang("Global youth population by region", "অঞ্চলভিত্তিক তরুণ জনগোষ্ঠী")}</b></h2>
                          <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
                             <section class="world-youth-map-and-chart rounded-4" data-aos="zoom-in">
-                                    <div class="modern-card p-2 glass-card h-100">
-                                      <div style="position:relative;" class="h-100">
+                                    <div class="modern-card p-2 glass-card">
+                                      <div style="position:relative;" class="">
                                         <canvas id="regionalShareChart" aria-label="Global youth population by region. " class="h-100" role="img"></canvas>
                                       </div>
                                     </div>
@@ -961,12 +961,10 @@ const coursesData = [
                 }
               </style>
               <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-map"></i> ${yhLang("Global Young Population and Demographics", "তরুণদের বাংলাদেশ প্রেক্ষাপট")}</h2>
-              <div class="" style="">
-                <h6 class="d-none"><i class="fa-solid fa-globe"></i> ${yhLang("Distribution of Young People", "বর্তমানে বিশ্বে ১.৮ বিলিয়নেরও বেশি তরূণ রয়েছে, যাদের ৯০ শতাংশই উন্নয়নশীল দেশগুলিতে বাস করে, যেখানে তারা জনসংখ্যার একটি বড় অংশ।")}</h6>
-                <h3 class="mb-0"><i class="fa-solid fa-people-group"></i> ${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</h3>
-                                  </div>
+              
               <div class="row g-2">
                        <div class="col-md-5">
+                         <h3 class="mb-0"><i class="fa-solid fa-people-group"></i> ${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "বাংলাদেশে তরূণ জনগোষ্ঠী<strong> ৪৯.৫ </strong> মিলিয়ন, যা মোট জনসংখ্যার প্রায় <strong> ৩০%</strong>।")}</h3>
                           <!-- Step 4 – Bangladesh Focus -->
                           <section class="rounded-4 h-100 p-2 shadow-sm" data-aos="fade-right">   
                                   <div class="bangladesh-map">
@@ -975,11 +973,13 @@ const coursesData = [
                           </section>
                        </div>
                        <div class="col-md-7">
+                         <h3 class="mb-0"><i class="fa-solid fa-people-group"></i> ${yhLang("<strong>Bangladesh:</strong> <strong>49.5 million</strong> young people ~30% of total population.", "জনসংখ্যা পিরামিড")}</h3>
                           <!-- Step 3 – POPULATION & HOUSING CENSUS 2022 (Chart.js) -->
                           <section class="population-pyramid-wrapper" data-aos="fade-up">
                             <div class="rounded-4 p-2 shadow-sm">
                               <div id="chartWrapper" style="width:100%; position: relative;">
                                 <canvas id="populationPyramid" aria-label="POPULATION & HOUSING CENSUS 2022" role="img"></canvas>
+                                <h4 class="small text-muted mt-1 mb-0 text-end">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", `Ref: Population and Housing Census 2022`)}</h4>
                               </div>
                             </div>
                           </section>
@@ -1096,8 +1096,7 @@ const coursesData = [
 
                  <!-- ROI Banner -->
                 
-                <h4 class="small text-muted mt-1 mb-0 text-end">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", `Ref: Our Future: A Lancet Commission on Adolescent  Health and Wellbeing; Patton et al. 2016.
-`)}</h4>
+                <h4 class="small text-muted mt-1 mb-0 text-end">${yhLang("Ref: Our Future: A Lancet Commission on Adolescent Health and Wellbeing; Patton et al. 2016.", `Ref: Our Future: A Lancet Commission on Adolescent  Health and Wellbeing; Patton et al. 2016.`)}</h4>
 
               </div>`;
             })(),
@@ -1396,7 +1395,7 @@ const coursesData = [
 
                         <h3 class="gradient-text my-1"><b><i class="fa-solid fa-chart-bar"></i> ${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</b></h3>
 
-                          <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 80vh;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 70vh;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                           <p class="ref small text-muted text-end">Ref: Adolescent and young adult mortality in Bangladesh: findings from household surveys. J Glob Health. 2025;15:04193</p>
                         </figure>
                     </div>
@@ -1942,7 +1941,7 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-md-5" data-aos="fade-right" data-aos-delay="60">
-                      <figure class="image-card-m2l7 h-100"><img src="img/determinants/determinants_b.png" alt="AA-HA! guidance" class="img-zoom w-100"></figure>
+                      <figure class="image-card-m2l7"><img src="img/determinants/determinants_b.png" alt="AA-HA! guidance" class="img-zoom w-100"></figure>
                     </div>
                   </div>
                 </section>
@@ -2064,12 +2063,12 @@ const coursesData = [
                 </div>
 
                 <section class="mb-4" aria-labelledby="adol-needs-title">
-                  <div class="row g-3">
+                  <div class="row g-2 align-items-stretch">
                     ${barrierCards
                       .map(
                         (c) => `
                       <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="${c.delay}">
-                        <article class="modern-card p-2 hover-lift-sm hover-shadow-glow transition-base  h-100">
+                        <article class="modern-card m2l8_card hover-lift-sm hover-shadow-glow transition-base  h-100">
                           <div class="d-flex align-items-center gap-3">
                             <span class="badge-pill ${c.color}" aria-hidden="true"><i class="fa-solid ${c.icon}" style="color: #fff;"></i></span>
                             <div>

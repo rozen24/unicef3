@@ -933,7 +933,10 @@ html[lang|="bn"] h2 {
   backdrop-filter: blur(8px);
 }
 .badge-pill_heading {
-  padding: 10px 15px; border-radius: 999px; font-weight: 600; font-size: 2rem;
+  padding: 10px 10px; border-radius: 999px; font-weight: 600; font-size: 2rem;
+}
+.m2l8_card {
+  padding: 10px 1.5rem !important;
 }
 /* Decorative background ornaments */
 .bg-ornaments { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
@@ -1361,8 +1364,8 @@ html[lang|="bn"] h2 {
   transition: var(--transition-normal);
   height: 100%;
 }
-.image-card-m2l7 {
-  height: 630px;
+.image-card-m2l7 img{
+  height: 70vh;
   object-fit: fill;
 }
 .image-card:hover {
@@ -1885,7 +1888,7 @@ html[lang|="bn"] h2 {
 /* ==================== MODULE 20 ==================== */
 .bangladesh-map img {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   object-fit: fill;
 }
 .mod20-lesson {
@@ -26338,14 +26341,14 @@ input::placeholder {
 }
 
 .component-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
-  font-size: 1.75rem;
+  margin: 0 auto 3px;
+  font-size: 1.15rem;
   color: white;
 }
 
@@ -30314,7 +30317,7 @@ p.lead {
 /* ==================== LESSON 2: GLOBAL YOUTH MODULE ==================== */
 
 .global-map img{
-  height: 100vh;
+  height: 75vh;
 }
 
 .globe-text-wrap {
@@ -30352,7 +30355,7 @@ p.lead {
 .world-youth-map .latin { top: 56%; left: 27%; }
 .world-youth-map .mena { top: 44%; left: 56%; }
 
-.population-pyramid-wrapper canvas { width: 100%; height: 80vh !important; }
+.population-pyramid-wrapper canvas { width: 100%; height: 70vh !important; }
 
 /* ==================== LESSON 2: WHY YOUNG HEALTH MATTERS ==================== */
 .dividend-card .dividend-icon {
@@ -30723,7 +30726,7 @@ tbody, td, tfoot, th, thead, tr {
 .regional-map-wrap {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 75vh;
   background-color: #0b1324; /* fallback color */
   background-image: url('../img/Distribution/global.jpg');
   background-size: cover;
@@ -30846,7 +30849,7 @@ tbody, td, tfoot, th, thead, tr {
 }
 /* Responsive heights similar to chart */
 @media (min-width: 992px) {
-  .regional-map-wrap { min-height: 100vh; }
+ 
 }
 /* Responsive height for population pyramid chart */
 .chart-pyramid {
