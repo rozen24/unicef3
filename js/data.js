@@ -853,7 +853,7 @@ const coursesData = [
 
               <div class="row g-1">
                        <div class="col-md-6">
-                         <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-globe"></i> ${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
+                         <h2 class="slide-title gradient-text m7l-title" data-aos="fade-up"><i class="fa-solid fa-globe"></i> ${yhLang("Global Young Population and Demographics", "বৈশ্বিক তরুণ জনগোষ্ঠী")}</h2>
                           <!-- Step 1 – Global Overview global-overview  style="filter: drop-shadow(0 10px 30px rgba(0,0,0,.2));"-->
                           <section class="text-center" data-aos="fade-up" style="position:relative; overflow:hidden;">
                             <div class="container global-map" style="position: relative">
@@ -867,7 +867,7 @@ const coursesData = [
                           </section>
                        </div>
                        <div class="col-md-6">
-                       <h2 class="mb-2"><b><i class="fa-solid fa-chart-pie"></i> ${yhLang("Global youth population by region", "অঞ্চলভিত্তিক তরুণ জনগোষ্ঠী")}</b></h2>
+                       <h2 class="mb-2 m8l-title"><b><i class="fa-solid fa-chart-pie"></i> ${yhLang("Global youth population by region", "অঞ্চলভিত্তিক তরুণ জনগোষ্ঠী")}</b></h2>
                          <!-- Step 2 – Global Youth Population by Region (Map + Doughnut) -->
                             <section class="world-youth-map-and-chart rounded-4" data-aos="zoom-in">
                                     <div class="modern-card p-2 glass-card">
@@ -1454,7 +1454,7 @@ const coursesData = [
                     -webkit-text-fill-color: transparent;
                   }
                 </style>
-                <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-child"></i> ${yhLang("Child marriage and teenage pregnancies", "বাল্যবিবাহ")}</h2>
+                <h2 class="slide-title gradient-text " data-aos="fade-up"><i class="fa-solid fa-child"></i> ${yhLang("Child marriage and teenage pregnancies", "বাল্যবিবাহ")}</h2>
 
                 
 
@@ -2670,7 +2670,7 @@ const coursesData = [
               return `
                 <div class="ch3l2-slide-container lesson-slide">
                   <div class="ch3l2-intro-section">
-                    <h1 class="ch3l2-main-title">
+                    <h1 class="ch3l2-main-title m7l-title">
                       <i class="fa-solid fa-arrows-up-down"></i>
                       ${yhLang("Adolescence Changes", "বয়ঃসন্ধিকাল")}
                     </h1>
@@ -3042,9 +3042,57 @@ const coursesData = [
                   )
                   .join("");
 
+               const menstrualPoints = [
+                    {
+                      text: yhLang(
+                        "Menstruation usually begins between ages 9–14 and continues monthly until around 45–55 years.",
+                        "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।"
+                      ),
+                      icon: "fa-child",
+                      color: "#ec4899",
+                      bgColor: "rgba(236, 72, 153, 0.12)",
+                    },
+                    {
+                      text: yhLang(
+                        "Menstrual bleeding typically lasts 1–7 days each month. The flow is usually heavier during the first 1–3 days and decreases afterward.",
+                        "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।"
+                      ),
+                      icon: "fa-calendar",
+                      color: "#f43f5e",
+                      bgColor: "rgba(244, 63, 94, 0.12)",
+                    },
+                    {
+                      text: yhLang(
+                        "Menstrual cycles usually occur every 21–35 days.",
+                        "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।"
+                      ),
+                      icon: "fa-hourglass-end",
+                      color: "#3b82f6",
+                      bgColor: "rgba(59, 130, 246, 0.12)",
+                    },
+                  ];
+
+              const renderMenstrualPoints = () =>
+                menstrualPoints
+                  .map(
+                    (point, idx) => `
+                      <li class="m4l7-point-item" data-aos="fade-up" data-aos-delay="${
+                        80 + idx * 40
+                      }">
+                        <div class="m4l7-point-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
+                          <i class="fa-solid ${point.icon}"></i>
+                        </div>
+                        <div class="m4l7-point-content">
+                          <p class="m4l7-point-text">${point.text}</p>
+                        </div>
+                      </li>
+                    `,
+                  )
+                  .join("");   
+
               return `
                 <div class="lesson-slide m4l6-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                  <h2 class="slide-title gradient-text mb-lg-3" data-aos="fade-up">${yhLang(
                     "Female Reproductive System",
                     "নারী প্রজননতন্ত্র",
                   )}</h2>
@@ -3106,34 +3154,34 @@ const coursesData = [
             },
             content: (function () {
              const menstrualPoints = [
-  {
-    text: yhLang(
-      "Menstruation usually begins between ages 9–14 and continues monthly until around 45–55 years.",
-      "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।"
-    ),
-    icon: "fa-child",
-    color: "#ec4899",
-    bgColor: "rgba(236, 72, 153, 0.12)",
-  },
-  {
-    text: yhLang(
-      "Menstrual bleeding typically lasts 1–7 days each month. The flow is usually heavier during the first 1–3 days and decreases afterward.",
-      "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।"
-    ),
-    icon: "fa-calendar",
-    color: "#f43f5e",
-    bgColor: "rgba(244, 63, 94, 0.12)",
-  },
-  {
-    text: yhLang(
-      "Menstrual cycles usually occur every 21–35 days.",
-      "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।"
-    ),
-    icon: "fa-hourglass-end",
-    color: "#3b82f6",
-    bgColor: "rgba(59, 130, 246, 0.12)",
-  },
-];
+                    {
+                      text: yhLang(
+                        "Menstruation usually begins between ages 9–14 and continues monthly until around 45–55 years.",
+                        "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।"
+                      ),
+                      icon: "fa-child",
+                      color: "#ec4899",
+                      bgColor: "rgba(236, 72, 153, 0.12)",
+                    },
+                    {
+                      text: yhLang(
+                        "Menstrual bleeding typically lasts 1–7 days each month. The flow is usually heavier during the first 1–3 days and decreases afterward.",
+                        "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।"
+                      ),
+                      icon: "fa-calendar",
+                      color: "#f43f5e",
+                      bgColor: "rgba(244, 63, 94, 0.12)",
+                    },
+                    {
+                      text: yhLang(
+                        "Menstrual cycles usually occur every 21–35 days.",
+                        "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।"
+                      ),
+                      icon: "fa-hourglass-end",
+                      color: "#3b82f6",
+                      bgColor: "rgba(59, 130, 246, 0.12)",
+                    },
+                  ];
 
               const renderMenstrualPoints = () =>
                 menstrualPoints
@@ -3155,7 +3203,7 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide m4l7-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up">${yhLang(
+                  <h2 class="slide-title gradient-text mb-lg-3" data-aos="fade-up">${yhLang(
                     "Menstrual Management",
                     "মাসিক/ঋতুস্রাব",
                   )}</h2>

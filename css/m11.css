@@ -8490,15 +8490,13 @@ figure.image-card {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    letter-spacing: -0.5px;
     padding: 6px10px;
     /* background: linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(244, 63, 94, 0.12) 100%); */
     /* border: 2px solid; */
     /* border-image: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%) 1; */
     border-radius: 0.6rem;
-    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.15),
-              inset 0 1px 0 rgba(255, 255, 255, 0.4);
     transition: all 0.3s ease;
+    color: #1399DE;
 }
 .m4l6-slide .slide-title::before {
   content: "👩";
@@ -8638,39 +8636,33 @@ figure.image-card {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 .m4l6-organ-card:nth-child(1) .m4l6-organ-icon {
-  border-color: #ec4899;
+  color: #ec4899;
 }
-.m4l6-organ-card:nth-child(1):hover .m4l6-organ-icon {
+.m4l6-organ-card:nth-child(1):hover .m4l6-organ-icon i{
   background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
   color: white;
-  transform: scale(1.15) rotate(-10deg);
-  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.3);
 }
 .m4l6-organ-card:nth-child(2) .m4l6-organ-icon {
   border-color: #f43f5e;
 }
-.m4l6-organ-card:nth-child(2):hover .m4l6-organ-icon {
+.m4l6-organ-card:nth-child(2):hover .m4l6-organ-icon i{
   background: linear-gradient(135deg, #f43f5e 0%, #eb0029 100%);
   color: white;
-  transform: scale(1.15) rotate(-10deg);
-  box-shadow: 0 6px 16px rgba(244, 63, 94, 0.3);
 }
 .m4l6-organ-card:nth-child(3) .m4l6-organ-icon {
   border-color: #3b82f6;
 }
-.m4l6-organ-card:nth-child(3):hover .m4l6-organ-icon {
+.m4l6-organ-card:nth-child(3):hover .m4l6-organ-icon i{
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
-  transform: scale(1.15) rotate(-10deg);
   box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
 }
 .m4l6-organ-card:nth-child(4) .m4l6-organ-icon {
   border-color: #10b981;
 }
-.m4l6-organ-card:nth-child(4):hover .m4l6-organ-icon {
+.m4l6-organ-card:nth-child(4):hover .m4l6-organ-icon i {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
-  transform: scale(1.15) rotate(-10deg);
   box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
 }
 .m4l6-organ-title-section {
@@ -8817,16 +8809,13 @@ figure.image-card {
 .m4l7-slide .slide-title {
   font-size: 1.2rem;
   font-weight: 800;
-  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  letter-spacing: -0.5px;
   padding: 5px 10px;
   border-radius: 0.6rem;
-  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.15),
-              inset 0 1px 0 rgba(255, 255, 255, 0.4);
   transition: all 0.3s ease;
+  color: #005E9D;
 }
 .m4l7-slide .slide-title::before {
   content: "🩸";
@@ -10901,13 +10890,13 @@ figure.image-card {
   background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%);
 }
 .ch3l2-male-header {
-  background: linear-gradient(135deg, #0284c7 0%, #0895d0 100%);
-  color: white;
-  padding: 10px 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 3px solid #0369a1;
+    background: linear-gradient(135deg, #88c8e9 0%, #ffffff 100%);
+    color: #3c3a3a;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid #0369a1;
 }
 .ch3l2-male-header i {
   font-size: 1.3rem;
@@ -10919,7 +10908,6 @@ figure.image-card {
   line-height: 1.3;
 }
 .ch3l2-male-icon {
-  background: linear-gradient(135deg, #7dd3fc 0%, #67e8f9 100%);
   color: #0369a1;
   border: 2px solid #0284c7;
   box-shadow: 0 3px 8px rgba(3, 105, 161, 0.2);
@@ -10929,8 +10917,8 @@ figure.image-card {
   background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
 }
 .ch3l2-female-header {
-  background: linear-gradient(135deg, #be185d 0%, #be123c 100%);
-  color: white;
+  background: linear-gradient(135deg, #d9b3c2 0%, #ffffff 100%);
+  color: #3c3a3a;
   padding: 10px 12px;
   display: flex;
   align-items: center;
@@ -10947,7 +10935,6 @@ figure.image-card {
   line-height: 1.3;
 }
 .ch3l2-female-icon {
-  background: linear-gradient(135deg, #fbcfe8 0%, #fbcfe8 100%);
   color: #be185d;
   border: 2px solid #ec4899;
   box-shadow: 0 3px 8px rgba(236, 72, 153, 0.2);
@@ -10957,8 +10944,8 @@ figure.image-card {
   background: linear-gradient(135deg, #ede9fe 0%, #e9d5ff 100%);
 }
 .ch3l2-mental-header {
-  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
-  color: white;
+  background: linear-gradient(135deg, #cbc0dd 0%, #f7f7f7 100%);
+  color: #3c3a3a;
   padding: 10px 12px;
   display: flex;
   align-items: center;
@@ -10975,7 +10962,6 @@ figure.image-card {
   line-height: 1.3;
 }
 .ch3l2-mental-icon {
-  background: linear-gradient(135deg, #ddd6fe 0%, #e9d5ff 100%);
   color: #7c3aed;
   border: 2px solid #a855f7;
   box-shadow: 0 3px 8px rgba(168, 85, 247, 0.2);
@@ -11237,6 +11223,9 @@ figure.image-card {
   z-index: 5;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+.ch3l3-th-change {
+  border-left: 5px solid blue;
+}
 .ch3l3-development-table th {
   padding: 12px 10px;
   text-align: center;
@@ -11257,7 +11246,9 @@ figure.image-card {
 /* Row Styles */
 .ch3l3-row-growth {
   border-left: 5px solid #16a34a;
-  background: linear-gradient(90deg, rgba(22, 163, 74, 0.04) 0%, rgba(34, 197, 94, 0.02) 100%);
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(34, 197, 94, 0.08) 100%) !important;
+  color: #15803d;
+  border-right-color: 1px solid rgba(22, 163, 74, 0.3);
 }
 .ch3l3-row-concept {
   border-left: 5px solid #4f46e5;
@@ -11280,7 +11271,7 @@ figure.image-card {
   background: linear-gradient(90deg, rgba(168, 85, 247, 0.04) 0%, rgba(192, 132, 250, 0.02) 100%);
 }
 .ch3l3-development-table tbody tr {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #cdcdcd;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
 }
 .ch3l3-development-table tbody tr:last-child {
@@ -11295,13 +11286,12 @@ figure.image-card {
   font-weight: 700;
   font-size: 0.85rem;
   min-width: 110px;
-  background: rgba(255, 255, 255, 0.6);
-  border-right: 2px solid rgba(0, 0, 0, 0.08);
   position: sticky;
   left: 0;
   z-index: 4;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   white-space: nowrap;
 }
@@ -11319,7 +11309,7 @@ figure.image-card {
   background: rgba(255, 255, 255, 0.4);
 }
 .ch3l3-point {
-  display: inline-flex;
+  display: block;
   align-items: center;
   gap: 5px;
   margin-bottom: 5px;
@@ -11370,32 +11360,32 @@ figure.image-card {
   border: 1px solid rgba(32, 201, 201, 0.25);
   color: #0f766e;
 }
-.ch3l3-row-growth .ch3l3-td-label {
+.ch3l3-row-growth {
   background: linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(34, 197, 94, 0.08) 100%);
   color: #15803d;
   border-right-color: rgba(22, 163, 74, 0.3);
 }
-.ch3l3-row-concept .ch3l3-td-label {
+.ch3l3-row-concept {
   background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(99, 102, 241, 0.08) 100%);
   color: #342e81;
   border-right-color: rgba(79, 70, 229, 0.3);
 }
-.ch3l3-row-emotion .ch3l3-td-label {
+.ch3l3-row-emotion{
   background: linear-gradient(135deg, rgba(219, 39, 119, 0.1) 0%, rgba(236, 72, 153, 0.08) 100%);
   color: #9d174d;
   border-right-color: rgba(219, 39, 119, 0.3);
 }
-.ch3l3-row-family .ch3l3-td-label {
+.ch3l3-row-family {
   background: linear-gradient(135deg, rgba(234, 88, 12, 0.1) 0%, rgba(249, 115, 22, 0.08) 100%);
   color: #92400e;
   border-right-color: rgba(234, 88, 12, 0.3);
 }
-.ch3l3-row-peer .ch3l3-td-label {
+.ch3l3-row-peer {
   background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(239, 68, 68, 0.08) 100%);
   color: #7f1d1d;
   border-right-color: rgba(220, 38, 38, 0.3);
 }
-.ch3l3-row-sexuality .ch3l3-td-label {
+.ch3l3-row-sexuality {
   background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(192, 132, 250, 0.08) 100%);
   color: #5e21a4;
   border-right-color: rgba(168, 85, 247, 0.3);
