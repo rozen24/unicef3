@@ -2671,7 +2671,7 @@ const coursesData = [
                 <div class="ch3l2-slide-container lesson-slide">
                   <div class="ch3l2-intro-section">
                     <h1 class="ch3l2-main-title m7l-title">
-                      <i class="fa-solid fa-arrows-up-down"></i>
+                      <i class="fa-solid fa-children"></i>
                       ${yhLang("Adolescence Changes", "বয়ঃসন্ধিকাল")}
                     </h1>
                     <p class="ch3l2-description">${description}</p>
@@ -3092,31 +3092,75 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide m4l6-slide">
-                  <h2 class="slide-title gradient-text mb-lg-3" data-aos="fade-up">${yhLang(
-                    "Female Reproductive System",
-                    "নারী প্রজননতন্ত্র",
-                  )}</h2>
+                  <div class="row g-1">
+                      <div class="col-md-7">
+                          <h2 class="slide-title gradient-text mb-lg-3" data-aos="fade-up">${yhLang(
+                            "Female Reproductive System",
+                            "নারী প্রজননতন্ত্র",
+                          )}</h2>
 
-                  <section class="m4l6-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row g-1">
-                      <div class="col-lg-4">
-                        <figure class=" mb-0">
-                          <img src="img/modu4/nari.jpg" style="height: 400px; object-fit: contain;"  alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 img-zoom rounded-lg shadow-lg m4l6-main-image" />
-                        </figure>
+                          <section class="m4l6-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                            <div class="row g-1">
+                              <div class="col-lg-4">
+                                <figure class=" mb-0">
+                                  <img src="img/modu4/nari.jpg" style="height: 400px; object-fit: contain;"  alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 img-zoom rounded-lg shadow-lg m4l6-main-image" />
+                                </figure>
+                              </div>
+                              <div class="col-lg-8">
+                                <section class="m4l6-organs-section" data-aos="fade-up" data-aos-delay="80">
+                            
+                                  <div class="m4l6-organs-grid">
+                                    ${renderOrganCards()}
+                                  </div>
+                                </section>
+                              </div>
+                            </div>
+                          </section>
                       </div>
-                      <div class="col-lg-8">
-                        <section class="m4l6-organs-section" data-aos="fade-up" data-aos-delay="80">
-                    
-                          <div class="m4l6-organs-grid">
-                            ${renderOrganCards()}
-                          </div>
-                        </section>
+                      <div class="col-md-5">
+                         <h2 class="slide-title gradient-text mb-lg-3" data-aos="fade-up">${yhLang(
+                              "Menstrual Management",
+                              "মাসিক/ঋতুস্রাব",
+                            )}</h2>
+
+                            <section class="m4l7-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                              <div class="row g-1">
+                                <div class="col-lg-5">
+
+                                  <figure class="image-card_masik mb-0">
+                                    <img src="img/modu4/masik_b.jpg" alt="মাসিক/ঋতুস্রাব ব্যবস্থাপনা" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l7-main-image" />
+                                  </figure>
+                                  
+                                </div>
+
+                                <div class="col-lg-7">
+                                  <p class="m4l7-intro-description mb-3" data-aos="fade-up" data-aos-delay="80">
+                                    ${yhLang(
+                                      "Menstruation is a normal, natural process by which a person prepares for pregnancy and childbirth. The monthly bleeding through the vagina is called menstruation.",
+                                      "মাসিক একটি স্বাভাবিক প্রাকৃতিক প্রক্রিয়া, যার মাধ্যমে একজন নারী গর্ভধারণ/সন্তান জন্মদানের জন্য প্রস্তুত হয়। প্রতিমাসে যোনিপথ দিয়ে মেয়েদের যে রক্তস্রাব হয়, তাকে মাসিক/ঋতুস্রাব বলে।",
+                                    )}
+                                  </p>
+
+                                  <ul class="m4l7-points-list">
+                                    ${renderMenstrualPoints()}
+                                  </ul>
+
+                                  <div class="m4l7-info-box" data-aos="fade-up" data-aos-delay="120">
+                                  
+                                    <div class="m4l7-info-icon">
+                                      <i class="fa-solid fa-circle-info"></i>
+                                    </div>
+                                    <p class="m4l7-info-text">${yhLang(
+                                      "Having your period means your body is maturing and your reproductive system is working properly. It is completely normal—not unclean or impure—and there is no reason to isolate yourself. You can continue your normal activities unless you experience unusual pain or excessive bleeding.",
+                                      "মাসিক হওয়া মানে দেহ পরিণত হচ্ছে এবং প্রজননতন্ত্র সঠিকভাবে কাজ করছে। এটি একটি সম্পূর্ণ স্বাভাবিক ঘটনা। এটি কোনো অপবিত্রতা বা অপরিচ্ছন্নতা নয় এবং এ সময় কোনো নারীকে আলাদা করে রাখারও কিছু নেই। এ সময় যদি অস্বাভাবিক ব্যথা বা অতিরিক্ত রক্তস্রাব না ঘটে, তবে সে তার স্বাভাবিক কাজ-কর্ম চালিয়ে যেতে পারে।",
+                                    )}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+
                       </div>
-                    </div>
-                  </section>
-
-
-                  
+                  </div> 
                 </div>
               `;
             })(),
@@ -3356,7 +3400,7 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide m4l8-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-hand-holding-heart"></i> ${yhLang(
+                  <h2 class="slide-title gradient-text m7l-title" data-aos="fade-up"><i class="fa-solid fa-hand-holding-heart"></i> ${yhLang(
                     "What to Do During Menstruation",
                     "মাসিক চলাকালীন মেয়েদের করণীয়",
                   )}</h2>
@@ -3608,12 +3652,12 @@ const coursesData = [
                 
 
                   <!-- Parent Role Section -->
-                  <section class="m4l9-section-card parent-section" data-aos="fade-up" data-aos-delay="40">
+                  <section class="m4l9-section-card parent-section mb-1 mb-lg-3 p-1" data-aos="fade-up" data-aos-delay="40">
                     <div class="m4l9-section-header">
-                      <h3 class="m4l9-section-title">
+                      <h2 class="m4l9-section-title m8l-title mb-1 mb-lg-2">
                         <i class="fa-solid fa-heart"></i>
                         ${yhLang("Parents' Role", "মাসিক ব্যবস্থাপনায় বাবা-মার ভূমিকা")}
-                      </h3>
+                      </h2>
                     </div>
                     <div class="m4l9-points-grid">
                       ${renderParentPoints()}
@@ -3621,12 +3665,12 @@ const coursesData = [
                   </section>
 
                   <!-- School Authorities Section -->
-                  <section class="m4l9-section-card school-section" data-aos="fade-up" data-aos-delay="60">
+                  <section class="m4l9-section-card school-section mb-1 mb-lg-3 p-1" data-aos="fade-up" data-aos-delay="60">
                     <div class="m4l9-section-header">
-                      <h3 class="m4l9-section-title">
+                      <h2 class="m4l9-section-title m8l-title mb-1 mb-lg-2">
                         <i class="fa-solid fa-school"></i>
                         ${yhLang("School Authorities' Role", "মাসিক ব্যবস্থাপনায় স্কুল/কলেজ কর্তৃপক্ষের ভূমিকা")}
-                      </h3>
+                      </h2>
                       <p class="m4l9-section-description">${yhLang(
                         "Many girls avoid attending school during menstruation, especially in the first few days, which negatively impacts their studies and results. To prevent school dropout and early marriage due to poor academic performance, educational authorities must provide proper support to students.",
                         "অনেক মেয়েরাই মাসিকের সময়, বিশেষ করে মাসিকের প্রথম দিনগুলোতে স্কুল/কলেজে যেতে চায় না।  প্রতিমাসের এমন অনুপস্থিতি তাদের লেখাপড়া ও ফলাফলের উপর নেতিবাচক প্রভাব ফেলে।  ফলাফল খারাপ করায় তারা পড়াশোনা বন্ধ করে দেয়, আবার অনেকের অভিভাবক এ সময় মেয়েদের বিয়ে দিয়ে দেন।  এ অবস্থা থেকে পরিত্রাণ পেতে শিক্ষা প্রতিষ্ঠান কর্তৃপক্ষকে ঋতুস্রাবের সময় ছাত্রীদের সহায়তা প্রদান করতে হবে।  যেমন :",
@@ -3638,14 +3682,14 @@ const coursesData = [
                   </section>
 
                   <!-- Required Facilities Section -->
-                  <section class="m4l9-section-card facilities-section" data-aos="fade-up" data-aos-delay="80">
+                  <section class="m4l9-section-card facilities-section mb-0 p-1" data-aos="fade-up" data-aos-delay="80">
                     <div class="m4l9-section-header">
-                      <h3 class="m4l9-section-title">
+                      <h2 class="m4l9-section-title m8l-title mb-1 mb-lg-2">
                         <i class="fa-solid fa-check-circle"></i>
                         ${yhLang("Essential Facilities", "সবচেয়ে প্রয়োজনীয় বিষয়টি হচ্ছে শিক্ষা প্রতিষ্ঠান কর্তৃপক্ষকে নিম্নলিখিত বিষয়গুলো আবশ্যকভাবে পালন করতে হবে:")}
-                      </h3>
+                      </h2>
                     </div>
-                    <div class="m4l9-facilities-grid">
+                    <div class="m4l9-facilities-grid mb-0">
                       ${renderFacilitiesPoints()}
                     </div>
                   </section>
@@ -3811,7 +3855,7 @@ const coursesData = [
 
               return `
                 <div class="lesson-slide m4l10-slide">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang(
+                  <h2 class="slide-title gradient-text m7l-title " data-aos="fade-up"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang(
                     "Menstrual Abnormalities",
                     "মাসিকের অস্বাভাবিকতা",
                   )}</h2>
@@ -3835,10 +3879,10 @@ const coursesData = [
                   <!-- Management Section -->
                   <section class="m4l10-section-card management-section" data-aos="fade-up" data-aos-delay="80">
                     <div class="m4l10-section-header">
-                      <h3 class="m4l10-section-title">
+                      <h2 class="m4l10-section-title m8l-title">
                         <i class="fa-solid fa-stethoscope"></i>
                         ${yhLang("Management", "ব্যবস্থাপনা")}
-                      </h3>
+                      </h2>
                     </div>
                     <div class="m4l10-management-grid">
                       ${renderManagementPoints()}
@@ -3993,10 +4037,10 @@ const anatomyTopics2 = [
 
 
                   <section class="m5l3-topics-section" data-aos="fade-up" data-aos-delay="80">
-                    <h3 class="m5l3-section-title gradient-text mb-2">${yhLang(
+                    <h2 class="m5l3-section-title gradient-text mb-2 m7l-title">${yhLang(
                       "Key Components and Functions",
                       "পুরুষ প্রজনতন্ত্র",
-                    )}</h3>
+                    )}</h2>
                     <div class="row g-1">
                       <div class="col-md-6">
                             ${renderTopicCards()}
