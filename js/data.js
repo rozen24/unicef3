@@ -2443,16 +2443,7 @@ const coursesData = [
 
               return `
               <div class="lesson-slide m2l11-slide"><style>
-                  .m2l11-slide h2, .m2l11-slide h3, .m2l11-slide h6 {
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-weight: 600;
-                  }
-                  .m2l11-slide h2 i, .m2l11-slide h3 i, .m2l11-slide h6 i {
-                    font-size: 1.2em;
-                    min-width: 32px;
-                  }
+                  
                   /* Main title - Orange/Tangerine gradient */
                   .m2l11-slide > h2 {
                     color: #ff7043;
@@ -2466,9 +2457,9 @@ const coursesData = [
                 </style>
                 <h2 class="slide-title gradient-text mb-4" data-aos="fade-up"><i class="fa-solid fa-landmark"></i> ${yhLang("Bangladesh Government’s commitment", "বাংলাদেশ সরকারের অঙ্গীকার")}</h2>
                 <div class="">
-                   <div class="row g-1 align-items-center">
+                   <div class="row align-items-center">
                         
-                        <div class="col-md-7">
+                        <div class="col-md-6">
                           ${(() => {
                             const orbitItems = [
                               {
@@ -2542,14 +2533,15 @@ const coursesData = [
                             return '<div class="m24l1-orbit-container" data-aos="zoom-in" data-aos-delay="300"><div class="m24l1-orbit-center"><div class="m24l1-orbit-center-icon"><i class="fa-solid fa-star"></i></div><div class="m24l1-orbit-center-text"><h2 class="text-white">জাতীয়  কৈশোর স্বাস্থ্য কৌশল ২০১৭-২০৩০</h2></div></div><div class="m24l1-orbit-ring"></div>' + renderOrbit() + '</div>';
                           })()}
                         </div>
-                        <div class="col-md-5 h-100">
-                          <div class="d-flex align-items-center gap-2" data-aos="fade-up" data-aos-delay="60">
-                             <figure class="glass-card p-1 mb-0 text-center">
-                              <img src="img/modu2/ongikar1.jpg"alt="" class="img-fluid h-100  w-100 rounded shadow-sm img-zoom" />
-                            </figure>
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center gap-1" data-aos="fade-up" data-aos-delay="60">
+                             
                             <figure class="glass-card p-1 mb-0 text-center">
                               <img src="img/modu2/ongikar2.jpg" alt="" class="img-fluid h-100  w-100 rounded shadow-sm img-zoom" />
                             </figure> 
+                             <figure class="glass-card p-1 mb-0 text-center">
+                              <img src="img/modu2/ongikar1.jpg"alt="" class="img-fluid h-100  w-100 rounded shadow-sm img-zoom" />
+                            </figure>
                           </div>
                             
                         </div>
