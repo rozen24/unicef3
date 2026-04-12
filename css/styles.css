@@ -928,7 +928,7 @@ html[lang|="bn"] h2 {
   display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1rem;
 }
 .badge-pill {
-  padding: .4rem .50rem; border-radius: 999px; font-weight: 600; font-size: 1rem;
+  padding: 10px 10px; border-radius: 999px; font-weight: 600; font-size: 1rem;
   background: rgba(255,255,255,0.18); color: var(--blue-gradient); border: 1px solid rgba(255,255,255,0.35);
   backdrop-filter: blur(8px);
 }

@@ -951,10 +951,10 @@ const coursesData = [
                 }
                 /* Bangladesh h3 - Red/Pink gradient */
                 .m2l2-slide h3 {
-                  color: #d32f2f;
+                  color: #cd7b41;
                 }
                 .m2l2-slide h3 i {
-                  background: linear-gradient(135deg, #d32f2f, #f44336);
+                  background: linear-gradient(135deg, #cd7b41, #f44336);
                   -webkit-background-clip: text;
                   background-clip: text;
                   -webkit-text-fill-color: transparent;
@@ -1031,10 +1031,10 @@ const coursesData = [
                   }
                   /* Main title - Red/Green gradient */
                   .m2l3-slide > h2 {
-                    color: #c41c3b;
+                    color: #cd7b41;
                   }
                   .m2l3-slide > h2 i {
-                    background: linear-gradient(135deg, #c41c3b, #e91e63);
+                    background: linear-gradient(135deg, #cd7b41, #e91e63);
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -1157,10 +1157,10 @@ const coursesData = [
                   }
                   /* Top 5 causes H3 - Red/Orange gradient */
                   .m2l4-slide h3:has(> i.fa-exclamation-triangle) {
-                    color: #d32f2f;
+                    color: #cd7b41;
                   }
                   .m2l4-slide h3:has(> i.fa-exclamation-triangle) i {
-                    background: linear-gradient(135deg, #d32f2f, #ff5722);
+                    background: linear-gradient(135deg, #cd7b41, #ff5722);
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -1447,10 +1447,10 @@ const coursesData = [
                   }
                   /* Main title - Red/Orange gradient */
                   .m2l5-slide > h2 {
-                    color: #d32f2f;
+                    color: #cd7b41;
                   }
                   .m2l5-slide > h2 i {
-                    background: linear-gradient(135deg, #d32f2f, #ff6f00);
+                    background: linear-gradient(135deg, #cd7b41, #ff6f00);
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -2069,7 +2069,7 @@ const coursesData = [
                       .map(
                         (c) => `
                       <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="${c.delay}">
-                        <article class="modern-card hover-lift-sm hover-shadow-glow transition-base  h-100">
+                        <article class="modern-card p-2 hover-lift-sm hover-shadow-glow transition-base  h-100">
                           <div class="d-flex align-items-center gap-3">
                             <span class="badge-pill ${c.color}" aria-hidden="true"><i class="fa-solid ${c.icon}" style="color: #fff;"></i></span>
                             <div>
@@ -17545,7 +17545,7 @@ const orbitItems = [
                 },
                 {
                   icon: "fa-hand-fist",
-                  color: "#d32f2f",
+                  color: "#cd7b41",
                   text: yhLang(
                     "Adolescents who are victims or witnesses of sexual abuse or harassment",
                     "যে তরুন-তরুনী যৌন নিপীড়ন বা হয়রানির শিকার অথবা প্রত্যক্ষদর্শী তরুন-তরুনী",
@@ -17674,7 +17674,7 @@ const orbitItems = [
                 },
                 {
                   icon: "fa-shield-halved",
-                  color: "#d32f2f",
+                  color: "#cd7b41",
                   text: yhLang(
                     "<strong>Crisis Management:</strong> Teach effective strategies for managing disadvantaged situations and crises so they can remain stable in difficult circumstances.",
                     "<strong>সংকট ব্যবস্থাপনা:</strong> ঝুঁকিপূর্ণ পরিস্থিতি ও সংকট মোকাবিলায় কার্যকর ব্যবস্থাপনা কৌশল শেখানো, যাতে তারা প্রতিকূল পরিস্থিতিতে স্থিতিশীল থাকতে পারে।",
@@ -18104,7 +18104,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-ban",
-                    color: "#d32f2f",
+                    color: "#cd7b41",
                     bg: "rgba(211,47,47,.12)",
                   };
                 if (item.includes("বৃক্ষরোপণ") || item.includes("trees"))
@@ -18178,7 +18178,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-virus",
-                    color: "#d32f2f",
+                    color: "#cd7b41",
                     bg: "rgba(211,47,47,.12)",
                   };
                 if (item.includes("ওটিটিস") || item.includes("Otitis"))
@@ -18613,7 +18613,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-virus",
-                    color: "#d32f2f",
+                    color: "#cd7b41",
                     bg: "rgba(211,47,47,.12)",
                   };
                 if (item.includes("টাইফয়েড") || item.includes("Typhoid"))
@@ -18685,7 +18685,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-skull-crossbones",
-                    color: "#d32f2f",
+                    color: "#cd7b41",
                     bg: "rgba(211,47,47,.12)",
                   };
                 if (item.includes("ফ্লুরোসিস") || item.includes("fluorosis"))
@@ -18724,7 +18724,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-user-doctor",
-                    color: "#d32f2f",
+                    color: "#cd7b41",
                     bg: "rgba(211,47,47,.12)",
                   };
                 if (item.includes("ক্যান্সার") || item.includes("cancer"))
@@ -18790,7 +18790,7 @@ const orbitItems = [
                 )
                   return {
                     icon: "fa-flask",
-                    color: "#d32f2f",
+                    color: "#cd7b41",
                     gradient: "linear-gradient(135deg,#e53935,#c62828)",
                   };
                 if (title.includes("ত্বকের রোগ") || title.includes("Skin"))
@@ -18808,7 +18808,7 @@ const orbitItems = [
                   return {
                     icon: "fa-heart-circle-xmark",
                     color: "#c62828",
-                    gradient: "linear-gradient(135deg,#d32f2f,#6e4f4f)",
+                    gradient: "linear-gradient(135deg,#cd7b41,#6e4f4f)",
                   };
                 return {
                   icon: "fa-circle-info",
