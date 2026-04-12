@@ -1366,7 +1366,10 @@ html[lang|="bn"] h2 {
 }
 .image-card-m2l7 img{
   height: 70vh;
+  width: 80%;
   object-fit: fill;
+  margin: 0 0 0 auto;
+  text-align: right;
 }
 .image-card:hover {
   transform: scale(1.02);

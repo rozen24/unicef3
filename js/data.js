@@ -1222,8 +1222,8 @@ const coursesData = [
 
                 <!-- Doughnut charts: Adolescents vs Young adults -->
                 <section class="" data-aos="fade-up" data-aos-delay="80">
-                  <div class="row g-2 align-items-center">
-                    <div class="col-md-5 d-flex flex-column align-items-center p-2">
+                  <div class="row g-2">
+                    <div class="col-md-5 p-2">
                           <div class="">
                                   <h3 class="gradient-text mb-3"><b><i class="fa-solid fa-exclamation-triangle"></i> ${yhLang("Top 5 leading causes of death among adolescents are", "বিশ্বে প্রতিবছর ১.১ মিলিয়ন কিশোর/ কিশোরী নিরাময়যোগ্য এমন কারণে অসুস্থ হয় বা মত্যুবরণ করে।  কিশোর/কিশোরীদের মধ্যে মত্যুর প্রধান ৫টি কারণ হচ্ছে:")}</b></h3>  
                                  <div class="modern-card glass-card p-2">
@@ -1282,9 +1282,9 @@ const coursesData = [
                                   </div>
                                 </div>
                               </div>
-                              <div class="mt-5">
+                              <div class="mt-2">
                                 
-                              <h3 class="gradient-text my-4"><b><i class="fa-solid fa-list-check"></i> ${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}</b></h3>
+                              <h3 class="gradient-text mb-2"><b><i class="fa-solid fa-list-check"></i> ${yhLang("According to UNICEF's 'Adolescent Data Portal 2019', the top 5 causes of death (average) for adolescents aged 10-19 in Bangladesh are:", "ইউনিসেফের ’এডোলেসেন্ট ডাটা পোর্টাল ২০১৯’ অনুযায়ী বাংলাদেশে ১০-১৯ বছরের কিশোর/কিশোরীদের মৃর্ত্যুর (Mortality) প্রধান ৫টি কারণ হচ্ছে :")}</b></h3>
                               <div class="modern-card glass-card p-2">
                                   <div class="" data-aos="zoom-in" data-aos-delay="100">
                                     <h3 class="my-2 d-flex align-items-center gap-2"><b><i class="fa-solid fa-person"></i> ${yhLang("Males", "কিশোরদের মৃর্ত্যুর প্রধান ৫টি কারণ:")}</b></h3>
@@ -1383,7 +1383,8 @@ const coursesData = [
                                             )
                                             .join("")}
                                         </ul>
-                              </div>
+                                  </div>
+                                  <p class="p-1 mt-2"><i class="fa-solid fa-info-circle"></i> ${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</p>
                             </div>
                         </div>
                       </div>
@@ -1391,11 +1392,9 @@ const coursesData = [
                     </div>
                     <div class="col-md-7">
                        <figure class="modern-card p-1 mb-0 text-center">
-                        <h3 class="p-1"><i class="fa-solid fa-info-circle"></i> ${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে কিশোরীরা বাল্যবিয়ে ও মাতৃত্বজনিত সমস্যা ছাড়াও অনিরাপদ গর্ভপাত, লিঙ্গভিত্তিক বৈষম্য, যৌন হয়রানি ও সহিংসতা/নির্যাতন, যৌনবাহিত সংক্রমণ, খর্বাকৃতি, কৃশাকৃতি ও রক্তস্বল্পতার মতো অপুষ্টিজনিত সমস্যার শিকার হয়ে থাকে।  কিশোরদের সমস্যার মধ্যে রয়েছে মাদক, ধূমপান বা অন্যান্য ধরনের আসক্তি ও অনিরাপদ যৌনমিলনের ফলে বিভিন্ন ধরনের যৌনবাহিত রোগ । ")}</h3>
-
                         <h3 class="gradient-text my-1"><b><i class="fa-solid fa-chart-bar"></i> ${yhLang("Adolescent and young adult mortality in Bangladesh", "বাংলাদেশে বয়স ভিত্তিক তরুণ জনগোষ্ঠীর মৃত্যুহার")}</b></h3>
 
-                          <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 70vh;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
+                          <img src="img/deseases.png" alt="Young adult mortality in Bangladesh" style="height: 85vh;" class="img-fluid w-100 rounded shadow-sm img-zoom" />
                           <p class="ref small text-muted text-end">Ref: Adolescent and young adult mortality in Bangladesh: findings from household surveys. J Glob Health. 2025;15:04193</p>
                         </figure>
                     </div>
@@ -1921,7 +1920,7 @@ const coursesData = [
                 </style>
                 <h2 class="slide-title gradient-text mb-2" data-aos="fade-up"><i class="fa-solid fa-network-wired"></i> ${yhLang("Determinants for adolescent health and well-being", "কৈশোরকালীন স্বাস্থ্য এবং সুস্থতার জন্য নির্ধারক সমূহ ")}</h2>
                 <section class="p-1 p-md-1 rounded-4" style="background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(16,185,129,0.10)); border: 1px solid rgba(0,0,0,0.06);" aria-labelledby="aa-ha-title">
-                  <div class="row g-1 align-items-center">
+                  <div class="row g-1 align-items-center justify-content-between">
                     <div class="col-md-7" data-aos="fade-left" data-aos-delay="80">
                       <div class="row g-1">
                         ${determinantCards
@@ -1941,7 +1940,7 @@ const coursesData = [
                       </div>
                     </div>
                     <div class="col-md-5" data-aos="fade-right" data-aos-delay="60">
-                      <figure class="image-card-m2l7"><img src="img/determinants/determinants_b.png" alt="AA-HA! guidance" class="img-zoom w-100"></figure>
+                      <figure class="image-card-m2l7"><img src="img/determinants/determinants_b.png" alt="AA-HA! guidance" class="img-zoom"></figure>
                     </div>
                   </div>
                 </section>
