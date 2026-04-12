@@ -20283,6 +20283,20 @@ input::placeholder {
 .offcanvas .list-group .list-group-item .ring .ring__inner { color: #0f172a; }
 
 /* Lesson Main Content */
+.lesson-slide {
+  min-height: calc(100dvh - 137px);
+  overflow: hidden;
+}   
+/* Apply ONLY when height is 768px or less */
+@media screen and (max-height: 768px) {
+  .lesson-slide {
+  min-height: calc(100dvh - 125px);
+  }  
+}
+.lession_slide_none {
+  min-height: auto;
+}
+
 .lesson-main-content {
   padding: 2rem;
   max-width: 1200px;
