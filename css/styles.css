@@ -1636,7 +1636,7 @@ html[lang|="bn"] h2 {
   align-items: center;
   justify-content: center;
   background: rgba(244, 63, 94, 0.15);
-  color: #f43f5e;
+  color: #3f5ef4;
   flex-shrink: 0;
   margin-top: 0.1rem;
 }
@@ -1885,7 +1885,7 @@ html[lang|="bn"] h2 {
 }
 
 .bg-gradient-rose {
-  background: linear-gradient(135deg, #FB7185 0%, #F43F5E 100%);
+  background: linear-gradient(135deg, #FB7185 0%, #3f5ef4 100%);
 }
 
 /* ==================== MODULE 20 ==================== */
@@ -2708,11 +2708,11 @@ body {
 }
 
 .m24l1-item-rose::before {
-  background: linear-gradient(180deg, #f43f5e, #e11d48);
+  background: linear-gradient(180deg, #3f5ef4, #e11d48);
 }
 
 .m24l1-item-rose .m24l1-enhanced-icon {
-  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  background: linear-gradient(135deg, #3f5ef4 0%, #e11d48 100%);
 }
 
 .m24l1-item-rose:hover {
@@ -2948,7 +2948,7 @@ body {
 }
 
 .m24l1-orbit-card.bg-gradient-rose::before {
-  background: linear-gradient(90deg, #f43f5e, #e11d48);
+  background: linear-gradient(90deg, #3f5ef4, #e11d48);
 }
 
 .m24l1-orbit-card.bg-gradient-green::before {
@@ -3001,7 +3001,7 @@ body {
 }
 
 .bg-gradient-rose .m24l1-orbit-card-icon {
-  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  background: linear-gradient(135deg, #3f5ef4, #e11d48);
   box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
 }
 
@@ -4715,7 +4715,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m24l2-item-rose .m24l2-learn-icon {
-  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  background: linear-gradient(135deg, #3f5ef4, #e11d48);
   box-shadow: 0 3px 10px rgba(244, 63, 94, 0.3);
 }
 
@@ -4982,7 +4982,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .m24l2-orbit-card.bg-gradient-rose::before {
-  background: linear-gradient(90deg, #f43f5e, #e11d48);
+  background: linear-gradient(90deg, #3f5ef4, #e11d48);
 }
 
 .m24l2-orbit-card.bg-gradient-green::before {
@@ -5035,7 +5035,7 @@ inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .bg-gradient-rose .m24l2-orbit-card-icon {
-  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  background: linear-gradient(135deg, #3f5ef4, #e11d48);
   box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
 }
 
@@ -30699,9 +30699,6 @@ p.lead {
 
 /* custom lines 2 */
 
-tbody, td, tfoot, th, thead, tr {
-    
-}
 .table thead th {
     background-color: #eaeaee !important;
     color: #000 !important;

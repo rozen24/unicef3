@@ -1595,7 +1595,7 @@ const coursesData = [
       "১৫-১৯ বছর বয়সী বিবাহিত কিশোরীদের মধ্যে প্রজনন হার প্রতি হাজারে ৯২।"
     ),
     icon: "fa-weight-scale",
-    color: "#ec4899",
+    color: "#00AEEF",
     bgColor: "rgba(236, 72, 153, 0.12)",
   },
   {
@@ -1622,7 +1622,7 @@ const coursesData = [
       "বিবাহিত কিশোরীদের ১৬% এবং অবিবাহিত কিশোরীদের ১০% অতিরিক্ত ওজন বা স্থূলকায়।"
     ),
     icon: "fa-weight-scale",
-    color: "#ec4899",
+    color: "#00AEEF",
     bgColor: "rgba(236, 72, 153, 0.12)",
   },
   
@@ -2677,7 +2677,7 @@ const coursesData = [
                     <p class="ch3l2-description">${description}</p>
                   </div>
 
-                  <div class="ch3l2-table-section">
+                  <div class="ch3l2-table-section mb-3">
                     <h2 class="ch3l2-table-title">
                       <i class="fa-solid fa-list"></i>
                       ${yhLang("Changes during Adolescence", "বয়ঃসন্ধিকালীন পরিবর্তনসমূহ")}
@@ -2986,7 +2986,7 @@ const coursesData = [
       "জরায়ুর দুই পাশে একটি করে দুটি ডিম্বাশয়/ওভারি আছে।  প্রত্যেক মাসিক চক্রের ২৮ দিনের মাঝামাঝি সময়ে ডিম্বাশয় দুটির যেকোনো একটিতে একটি ডিম্বাণু পরিপক্ব হয় এবং ডিম্বাশয় থেকে বেরিয়ে ডিম্ববাহী নালিতে প্রবেশ করে।"
     ),
     icon: "fa-circle",
-    color: "#ec4899",
+    color: "#00AEEF",
     bgColor: "rgba(236, 72, 153, 0.12)",
   },
   {
@@ -2996,7 +2996,7 @@ const coursesData = [
       "জরায়ু হচ্ছে তলপেটের ভেতরে ফাঁপা ত্রিকোণাকৃতি অঙ্গ। এর সামনে থাকে মূত্রথলি ও পেছনে মলদ্বার। জরায়ুর দুইটি ভাগ— মূল অংশ বা বডি ও জরায়ুর মুখ। মূল অংশের ওপরের দুইকোণা থেকে দুটি ডিম্ববাহীনালি শুরু হয়েছে। জরায়ুর প্রথম ও প্রধান কাজ গর্ভধারণ করা। গর্ভধারণ না হলে মাসিক চক্রে হরমোনের কারণে জরায়ুর ভিতরের একটি অংশ ঝরে পড়ে, একে ঋতুস্রাব বা মাসিক বলা হয়।<br> </br>জরায়ু থেকে লম্বা দুটি ডিম্ববাহীনালি দুইদিকে ডিম্বাশয়/ ওভারি পর্যন্ত বিস্তৃত। ডিম্ববাহীনালির শেষ অংশ হাতের আঙুলের মত বিভক্ত থাকে যাকে ফিম্ব্রিয়া বলে। সহবাসের পর শুক্রাণু যোনিপথ থেকে জরায়ু পার হয়ে ডিম্বনালিতে আসে। এসময় যদি ওভুলেশন হয়, তবে ডিম্বাণুটি ডিম্বাশয় থেকে ফিম্ব্রিয়ার মাধ্যমে ডিম্বনালিতে প্রবেশ করে। এখানেই ডিম্বাণুও শুক্রাণুর মিলন হয়। নিষিক্ত ডিম্বটি ডিম্বনালিতে কয়েকদিন থাকার পর আবার জরায়ুতে ফিরে এসে ভ্রুণ হিসেবে গ্রথিত হয়।"
     ),
     icon: "fa-heart",
-    color: "#f43f5e",
+    color: "#22C4FF",
     bgColor: "rgba(244, 63, 94, 0.12)",
   },
   {
@@ -3049,7 +3049,7 @@ const coursesData = [
                         "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।"
                       ),
                       icon: "fa-child",
-                      color: "#ec4899",
+                      color: "#00AEEF",
                       bgColor: "rgba(236, 72, 153, 0.12)",
                     },
                     {
@@ -3058,7 +3058,7 @@ const coursesData = [
                         "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।"
                       ),
                       icon: "fa-calendar",
-                      color: "#f43f5e",
+                      color: "#22C4FF",
                       bgColor: "rgba(244, 63, 94, 0.12)",
                     },
                     {
@@ -3091,7 +3091,7 @@ const coursesData = [
                   .join("");   
 
               return `
-                <div class="lesson-slide m4l6-slide">
+                <div class="lesson-slide">
                   <div class="row g-1">
                       <div class="col-md-7">
                           <h2 class="slide-title gradient-text mb-lg-3" data-aos="fade-up">${yhLang(
@@ -3099,8 +3099,8 @@ const coursesData = [
                             "নারী প্রজননতন্ত্র",
                           )}</h2>
 
-                          <section class="m4l6-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
-                            <div class="row g-1">
+                          <section class="m4l6-intro-section" data-aos="fade-up" data-aos-delay="40">
+                            <div class="row g-1 align-items-center">
                               <div class="col-lg-4">
                                 <figure class=" mb-0">
                                   <img src="img/modu4/nari.jpg" style="height: 400px; object-fit: contain;"  alt="নারী প্রজননতন্ত্র" class="img-fluid w-100 img-zoom rounded-lg shadow-lg m4l6-main-image" />
@@ -3123,7 +3123,7 @@ const coursesData = [
                               "মাসিক/ঋতুস্রাব",
                             )}</h2>
 
-                            <section class="m4l7-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                            <section class="m4l7-main-section" data-aos="fade-up" data-aos-delay="40">
                               <div class="row g-1">
                                 <div class="col-lg-5">
 
@@ -3144,8 +3144,9 @@ const coursesData = [
                                   <ul class="m4l7-points-list">
                                     ${renderMenstrualPoints()}
                                   </ul>
-
-                                  <div class="m4l7-info-box" data-aos="fade-up" data-aos-delay="120">
+                                </div>
+                              </div>
+                              <div class="m4l7-info-box" data-aos="fade-up" data-aos-delay="120">
                                   
                                     <div class="m4l7-info-icon">
                                       <i class="fa-solid fa-circle-info"></i>
@@ -3155,8 +3156,6 @@ const coursesData = [
                                       "মাসিক হওয়া মানে দেহ পরিণত হচ্ছে এবং প্রজননতন্ত্র সঠিকভাবে কাজ করছে। এটি একটি সম্পূর্ণ স্বাভাবিক ঘটনা। এটি কোনো অপবিত্রতা বা অপরিচ্ছন্নতা নয় এবং এ সময় কোনো নারীকে আলাদা করে রাখারও কিছু নেই। এ সময় যদি অস্বাভাবিক ব্যথা বা অতিরিক্ত রক্তস্রাব না ঘটে, তবে সে তার স্বাভাবিক কাজ-কর্ম চালিয়ে যেতে পারে।",
                                     )}</p>
                                   </div>
-                                </div>
-                              </div>
                             </section>
 
                       </div>
@@ -3165,134 +3164,9 @@ const coursesData = [
               `;
             })(),
           },
+
           {
             id: "ch4-lesson-2",
-            title: yhLang(
-              "Menstrual Management",
-              "মাসিক/ঋতুস্রাব",
-            ),
-            icon: "fa-calendar-days",
-            gradientClass: "bg-gradient-rose",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q4g",
-                  question: yhLang(
-                    "At what age does menstruation typically start ?",
-                    "ঋতুস্রাব সাধারণত কত বয়সে শুরু হয় ?",
-                  ),
-                  options: [
-                    yhLang(
-                      "9-14 years",
-                      "৯–১৪ বছর বয়সের মধ্যে",
-                    ),
-                    yhLang("15-20 years", "১৫–২০ বছর"),
-                    yhLang("5-8 years", "৫–৮ বছর"),
-                    yhLang("After 20 years", "২০ বছরের পর"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-             const menstrualPoints = [
-                    {
-                      text: yhLang(
-                        "Menstruation usually begins between ages 9–14 and continues monthly until around 45–55 years.",
-                        "ঋতুস্রাব সাধারণত ৯–১৪ বছর বয়সের মধ্যে শুরু হয় এবং ৪৫–৫৫ বছর পর্যন্ত প্রতিমাসে একবার করে হতে থাকে।"
-                      ),
-                      icon: "fa-child",
-                      color: "#ec4899",
-                      bgColor: "rgba(236, 72, 153, 0.12)",
-                    },
-                    {
-                      text: yhLang(
-                        "Menstrual bleeding typically lasts 1–7 days each month. The flow is usually heavier during the first 1–3 days and decreases afterward.",
-                        "প্রতিমাসেই ১–৭ দিন পর্যন্ত রক্তস্রাব হয়ে থাকে। প্রথম ১–৩ দিন একটু বেশি পরিমাণ রক্ত গেলেও পরবর্তী দিনগুলোতে রক্তস্রাবের পরিমাণ কমে আসে।"
-                      ),
-                      icon: "fa-calendar",
-                      color: "#f43f5e",
-                      bgColor: "rgba(244, 63, 94, 0.12)",
-                    },
-                    {
-                      text: yhLang(
-                        "Menstrual cycles usually occur every 21–35 days.",
-                        "সাধারণত প্রতিমাসে ২১–৩৫ দিন অন্তর অন্তর যোনিপথে এই রক্তক্ষরণ হয়ে থাকে।"
-                      ),
-                      icon: "fa-hourglass-end",
-                      color: "#3b82f6",
-                      bgColor: "rgba(59, 130, 246, 0.12)",
-                    },
-                  ];
-
-              const renderMenstrualPoints = () =>
-                menstrualPoints
-                  .map(
-                    (point, idx) => `
-                      <li class="m4l7-point-item" data-aos="fade-up" data-aos-delay="${
-                        80 + idx * 40
-                      }">
-                        <div class="m4l7-point-icon" style="background-color: ${point.bgColor}; color: ${point.color};">
-                          <i class="fa-solid ${point.icon}"></i>
-                        </div>
-                        <div class="m4l7-point-content">
-                          <p class="m4l7-point-text">${point.text}</p>
-                        </div>
-                      </li>
-                    `,
-                  )
-                  .join("");
-
-              return `
-                <div class="lesson-slide m4l7-slide">
-                  <h2 class="slide-title gradient-text mb-lg-3" data-aos="fade-up">${yhLang(
-                    "Menstrual Management",
-                    "মাসিক/ঋতুস্রাব",
-                  )}</h2>
-
-                  <section class="m4l7-main-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
-                    <div class="row align-items-center g-3">
-                      <div class="col-lg-5">
-
-                        <figure class="image-card_masik mb-0">
-                          <img src="img/modu4/masik_b.jpg" alt="মাসিক/ঋতুস্রাব ব্যবস্থাপনা" class="img-fluid img-zoom rounded-lg shadow-lg animate-float-slow m4l7-main-image" />
-                        </figure>
-                        
-                      </div>
-
-                      <div class="col-lg-7">
-                        <p class="m4l7-intro-description mb-3" data-aos="fade-up" data-aos-delay="80">
-                          ${yhLang(
-                            "Menstruation is a normal, natural process by which a person prepares for pregnancy and childbirth. The monthly bleeding through the vagina is called menstruation.",
-                            "মাসিক একটি স্বাভাবিক প্রাকৃতিক প্রক্রিয়া, যার মাধ্যমে একজন নারী গর্ভধারণ/সন্তান জন্মদানের জন্য প্রস্তুত হয়। প্রতিমাসে যোনিপথ দিয়ে মেয়েদের যে রক্তস্রাব হয়, তাকে মাসিক/ঋতুস্রাব বলে।",
-                          )}
-                        </p>
-
-                        <ul class="m4l7-points-list">
-                          ${renderMenstrualPoints()}
-                        </ul>
-
-                        <div class="m4l7-info-box" data-aos="fade-up" data-aos-delay="120">
-                        
-                          <div class="m4l7-info-icon">
-                            <i class="fa-solid fa-circle-info"></i>
-                          </div>
-                          <p class="m4l7-info-text">${yhLang(
-                            "Having your period means your body is maturing and your reproductive system is working properly. It is completely normal—not unclean or impure—and there is no reason to isolate yourself. You can continue your normal activities unless you experience unusual pain or excessive bleeding.",
-                            "মাসিক হওয়া মানে দেহ পরিণত হচ্ছে এবং প্রজননতন্ত্র সঠিকভাবে কাজ করছে। এটি একটি সম্পূর্ণ স্বাভাবিক ঘটনা। এটি কোনো অপবিত্রতা বা অপরিচ্ছন্নতা নয় এবং এ সময় কোনো নারীকে আলাদা করে রাখারও কিছু নেই। এ সময় যদি অস্বাভাবিক ব্যথা বা অতিরিক্ত রক্তস্রাব না ঘটে, তবে সে তার স্বাভাবিক কাজ-কর্ম চালিয়ে যেতে পারে।",
-                          )}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch4-lesson-3",
             title: yhLang(
               "What to Do During Menstruation",
               "মাসিক চলাকালীন মেয়েদের করণীয়",
@@ -3425,7 +3299,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch4-lesson-4",
+            id: "ch4-lesson-3",
             title: yhLang(
               "Roles in Menstrual Management",
               "মাসিক ব্যবস্থাপনায় বাবা-মার ভূমিকা",
@@ -3481,7 +3355,7 @@ const coursesData = [
       "ঋতুস্রাবকে ভয় না পেয়ে সহজভাবে নিতে শিক্ষা দেওয়া।"
     ),
     icon: "fa-heart",
-    color: "#ec4899",
+    color: "#00AEEF",
     bgColor: "rgba(236, 72, 153, 0.12)",
   },
   {
@@ -3698,7 +3572,7 @@ const coursesData = [
             })(),
           },
           {
-            id: "ch4-lesson-5",
+            id: "ch4-lesson-4",
             title: yhLang(
               "Menstrual Abnormalities",
               "মাসিকের অস্বাভাবিকতা",
@@ -3772,7 +3646,7 @@ const coursesData = [
       "মাসিকের সময় তলপেটে অস্বাভাবিক ব্যথা হওয়া।"
     ),
     icon: "fa-heart-crack",
-    color: "#ec4899",
+    color: "#00AEEF",
     bgColor: "rgba(236, 72, 153, 0.12)",
   },
 ];
@@ -4096,7 +3970,7 @@ const anatomyTopics2 = [
       "ছেলেদের স্বপ্নদোষ বা বীর্যপাত হলে শরীর পরিষ্কার করে কাপড় পরিবর্তন করতে হবে।"
     ),
     icon: "fa-soap",
-    color: "#ec4899",
+    color: "#00AEEF",
     bgColor: "rgba(236, 72, 153, 0.12)",
   },
   {
@@ -4419,7 +4293,7 @@ const anatomyTopics2 = [
                 { title: yhLang("Social Customs", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার"), icon: "fa-person", color: "#f59e0b", desc: yhLang("Traditional beliefs and superstitions", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার") },
                 { title: yhLang("Lack of Education", "শিক্ষা ও সচেতনতার অভাব"), icon: "fa-book", color: "#10b981", desc: yhLang("No awareness about rights", "শিক্ষা ও সচেতনতার অভাব") },
                 { title: yhLang("Dowry Burden", "কন্যাদায়গ্রস্ত পিতার দায়মুক্ত হওয়া"), icon: "fa-sack-dollar", color: "#8b5cf6", desc: yhLang("Parents seek relief from dowry", "কন্যাদায়গ্রস্ত পিতামাতা") },
-                { title: yhLang("Gender Inequality", "জেন্ডার বৈষম্য"), icon: "fa-scale-balanced", color: "#ec4899", desc: yhLang("Girls considered inferior", "মেয়েদের অসমান অধিকার") },
+                { title: yhLang("Gender Inequality", "জেন্ডার বৈষম্য"), icon: "fa-scale-balanced", color: "#00AEEF", desc: yhLang("Girls considered inferior", "মেয়েদের অসমান অধিকার") },
                 { title: yhLang("Social Insecurity", "সামাজিক নিরাপত্তাহীনতা"), icon: "fa-circle-exclamation", color: "#06b6d4", desc: yhLang("Unsafe environment for girls", "সামাজিক নিরাপত্তাহীনতা") },
                 { title: yhLang("Girl Neglect", "মেয়ে শিশুর প্রতি অবহেলা বা তাকে বোঝা মনে করা"), icon: "fa-child", color: "#f97316", desc: yhLang("Girls seen as burden", "মেয়ে শিশুর প্রতি অবহেলা") },
                 { title: yhLang("Legal Ignorance", "বিবাহ আইন সম্পর্কে ধারণা কম থাকা"), icon: "fa-gavel", color: "#ef4444", desc: yhLang("Unaware of marriage laws", "বিবাহ আইন সম্পর্কে অজ্ঞতা") },
@@ -4542,7 +4416,7 @@ const anatomyTopics2 = [
                 { 
                   title: yhLang("Violence & Suicide Risk", "সহিংসতার ঝুঁকি ও আত্মহত্যা"), 
                   icon: "fa-circle-exclamation", 
-                  color: "#ec4899",
+                  color: "#00AEEF",
                   shadowColor: "rgba(236, 72, 153, 0.25)"
                 },
                 { 
@@ -4976,7 +4850,7 @@ const anatomyTopics2 = [
                         <thead class="ch7l4-table-head">
                           <tr>
                             <th class="ch7l4-label-header"><span>${yhLang("No. of Children", "সন্তান সংখ্যা")}</span></th>
-                            <th class="ch7l4-method-col" data-method="pill"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white;"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</span></th>
+                            <th class="ch7l4-method-col" data-method="pill"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #00AEEF 0%, #db2777 100%); color: white;"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</span></th>
                             <th class="ch7l4-method-col" data-method="condom"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white;"><i class="fa-solid fa-shield-halved"></i> ${yhLang("Condom", "কনডম")}</span></th>
                             <th class="ch7l4-method-col" data-method="injection"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</span></th>
                             <th class="ch7l4-method-col" data-method="implant"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;"><i class="fa-solid fa-microchip"></i> ${yhLang("Implant", "ইমপ্ল্যান্ট")}</span></th>
@@ -5055,7 +4929,7 @@ const anatomyTopics2 = [
                         </thead>
                         <tbody class="ch7l4-table-body">
                           <tr class="ch7l4-usage-row ch7l4-method-1" data-aos="fade-up" data-aos-delay="80">
-                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</div></td>
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #00AEEF 0%, #db2777 100%);"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</div></td>
                             <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Take daily", "প্রতিদিন খেতে হয়")}</span></div></td>
                             <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("Daily", "প্রতিদিন")}</div></td>
                           </tr>
@@ -5570,7 +5444,7 @@ const anatomyTopics2 = [
                   ),
                   type: 1,
                   icon: "fa-stethoscope",
-                  color: "#ec4899"
+                  color: "#00AEEF"
                 },
                 {
                   title: yhLang("Early Complication Detection", "প্রাথমিক অবস্থায় প্রসব পরবর্তী জটিলতা শনাক্তকরণ।"),
