@@ -7789,8 +7789,8 @@ figure.image-card {
   transform: scale(1.15) rotate(-10deg);
   box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
 }
-/* Selects the 6th element that matches the class, regardless of other siblings */
-:nth-child(6 of .m5l3-topic-card) .m5l3-topic-icon {
+/* Targets the 6th column, then the icon inside its card */
+.row > .col-md-6:last-child > .col-12:nth-of-type(2) .m5l3-topic-icon {
     display: none !important;
 }
 
