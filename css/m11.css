@@ -9907,13 +9907,11 @@ figure.image-card {
   z-index: 1;
 }
 .m4l10-description-card {
-  background: linear-gradient(135deg, rgba(255, 245, 245, 0.9) 0%, rgba(254, 242, 242, 0.95) 100%);
   border: 1px solid rgba(220, 38, 38, 0.15);
   border-left: 4px solid rgba(220, 38, 38, 0.4);
   border-radius: 0.9rem;
   padding: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.08);
 }
 .m4l10-description-text {
   font-size: 0.9rem;
