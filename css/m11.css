@@ -73,7 +73,7 @@
 }
 /* Description Type Colors */
 .ch11l4-desc-desc1 {
-  border-left-color: #dc2626;
+  border-left-color: #0008ff;
 }
 .ch11l4-desc-desc2 {
   border-left-color: #f59e0b;
@@ -98,7 +98,7 @@
   font-size: 36px;
 }
 .ch11l4-desc-desc1 .ch11l4-desc-icon {
-  color: #dc2626;
+  color: #0008ff;
   background: rgba(220, 38, 38, 0.12);
 }
 .ch11l4-desc-desc2 .ch11l4-desc-icon {
@@ -1885,7 +1885,7 @@
 }
 .ch9l4-causes-section .ch9l4-section-title i {
   font-size: 1.64rem;
-  color: #dc2626;
+  color: #0008ff;
 }
 .ch9l4-symptoms-section .ch9l4-section-title i {
   font-size: 1.64rem;
@@ -1916,7 +1916,7 @@
 /* Type 1: Red/Warning */
 .ch9l4-li-type1 {
   background: linear-gradient(135deg, rgba(220, 38, 38, 0.09), rgba(220, 38, 38, 0.02));
-  border-color: #dc2626;
+  border-color: #0008ff;
   box-shadow: 0 6px 16px rgba(220, 38, 38, 0.12);
 }
 .ch9l4-li-type1:hover {
@@ -1958,7 +1958,7 @@
   transition: all 0.3s ease;
 }
 .ch9l4-li-type1 .ch9l4-li-icon {
-  color: #dc2626;
+  color: #0008ff;
   background: rgba(220, 38, 38, 0.15);
 }
 .ch9l4-li-type1:hover .ch9l4-li-icon {
@@ -2364,7 +2364,7 @@
 }
 .ch9l5-complication-title i {
   font-size: 1.64rem;
-  color: #dc2626;
+  color: #0008ff;
 }
 /* List styling */
 .ch9l5-list {
@@ -2390,7 +2390,7 @@
 /* Type 1: Red/Critical */
 .ch9l5-li-type1 {
   background: linear-gradient(135deg, rgba(220, 38, 38, 0.09), rgba(220, 38, 38, 0.02));
-  border-color: #dc2626;
+  border-color: #0008ff;
   box-shadow: 0 6px 16px rgba(220, 38, 38, 0.12);
 }
 .ch9l5-li-type1:hover {
@@ -2442,7 +2442,7 @@
   transition: all 0.3s ease;
 }
 .ch9l5-li-type1 .ch9l5-li-icon {
-  color: #dc2626;
+  color: #0008ff;
   background: rgba(220, 38, 38, 0.15);
 }
 .ch9l5-li-type1:hover .ch9l5-li-icon {
@@ -2801,7 +2801,7 @@
 }
 .ch8l6-risk-section-header i {
   font-size: 1.4rem;
-  color: #dc2626;
+  color: #0008ff;
 }
 .ch8l6-desc-text,
 .ch8l6-risk-desc-text {
@@ -2921,7 +2921,7 @@
   opacity: 0.9;
 }
 .ch8l6-risk-type-1::before {
-  background: linear-gradient(90deg, #dc2626, #b91c1c);
+  background: linear-gradient(90deg, #0008ff, #b91c1c);
 }
 .ch8l6-risk-type-2::before {
   background: linear-gradient(90deg, #f97316, #ea580c);
@@ -2976,7 +2976,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .ch8l6-risk-type-1 .ch8l6-orbit-card-icon {
-  background: linear-gradient(135deg, #dc2626, #16261e);
+  background: linear-gradient(135deg, #0008ff, #16261e);
   box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 .ch8l6-risk-type-2 .ch8l6-orbit-card-icon {
@@ -3333,13 +3333,13 @@
   gap: 12px;
   padding: 12px 16px;
   background: linear-gradient(135deg, rgba(220, 38, 38, 0.06) 0%, rgba(31, 41, 55, 0.03) 100%);
-  border-left: 5px solid #dc2626;
+  border-left: 5px solid #0008ff;
   border-radius: 8px;
   margin-bottom: 5px;
 }
 .ch8l7-title i {
   font-size: 1.76rem;
-  background: linear-gradient(135deg, #dc2626 0%, #16261e 100%);
+  background: linear-gradient(135deg, #0008ff 0%, #16261e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3396,7 +3396,7 @@
 }
 .ch8l7-section-header i {
   font-size: 1.5rem;
-  color: #dc2626;
+  color: #0008ff;
 }
 .ch8l7-risk-section-header {
   font-size: 1.08rem;
@@ -3451,7 +3451,7 @@
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  background: linear-gradient(135deg, #0008ff 0%, #b91c1c 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3553,7 +3553,7 @@
   opacity: 0.8;
 }
 .ch8l7-prevention-type-1::before {
-  background: linear-gradient(90deg, #dc2626, #b91c1c);
+  background: linear-gradient(90deg, #0008ff, #b91c1c);
 }
 .ch8l7-prevention-type-2::before {
   background: linear-gradient(90deg, #f97316, #ea580c);
@@ -3583,7 +3583,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .ch8l7-prevention-type-1 .ch8l7-orbit-card-icon {
-  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  background: linear-gradient(135deg, #0008ff, #b91c1c);
   box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 .ch8l7-prevention-type-2 .ch8l7-orbit-card-icon {
@@ -4592,7 +4592,7 @@
   box-shadow: 0 6px 16px rgba(239, 68, 68, 0.12);
 }
 .ch8l9-point-type-5::before {
-  background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+  background: linear-gradient(90deg, #1693eb 0%, #0008ff 100%);
 }
 .ch8l9-point-type-5:hover {
   transform: translateY(-2px);
@@ -6008,7 +6008,7 @@
   flex-shrink: 0;
 }
 .ch6l5-note-type-1 .ch6l5-note-icon {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  background: linear-gradient(135deg, #1693eb 0%, #0008ff 100%);
   color: white;
   box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
 }
@@ -6035,7 +6035,7 @@
   text-align: center;
 }
 .ch6l5-helpline-number {
-  color: #dc2626;
+  color: #0008ff;
   font-weight: 800;
   font-size: 1.1rem;
 }
@@ -6109,7 +6109,7 @@
   line-height: 1;
   margin-bottom: 8px;
 }
-.ch6l5-stat-1 .ch6l5-stat-number { color: #dc2626; }
+.ch6l5-stat-1 .ch6l5-stat-number { color: #0008ff; }
 .ch6l5-stat-2 .ch6l5-stat-number { color: #d97706; }
 .ch6l5-stat-3 .ch6l5-stat-number { color: #db2777; }
 .ch6l5-stat-4 .ch6l5-stat-number { color: #2563eb; }
@@ -6851,7 +6851,7 @@
 }
 .ch6l7-main-title i {
   font-size: 2.2rem;
-  color: #dc2626;
+  color: #0008ff;
   flex-shrink: 0;
 }
 .ch6l7-consequences-grid {
@@ -7240,7 +7240,7 @@
 .ch6l8-info-box {
   background: linear-gradient(135deg, #fef2f2 0%, #fef3c7 50%, #f0fdf4 100%);
   border: 2px solid;
-  border-image: linear-gradient(135deg, #dc2626 0%, #f59e0b 50%, #059669 100%) 1;
+  border-image: linear-gradient(135deg, #0008ff 0%, #f59e0b 50%, #059669 100%) 1;
   border-radius: 12px;
   padding: 10px;
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03), 0 6px 16px rgba(0, 0, 0, 0.05);
@@ -7251,7 +7251,7 @@
   gap: 5px;
   font-size: 1.15rem;
   font-weight: 800;
-  color: #dc2626;
+  color: #0008ff;
   margin: 0 0 6px 0;
   line-height: 1.3;
 }
@@ -8198,7 +8198,7 @@ figure.image-card {
   transform: translateX(8px);
 }
 .m5l4-restraint-item:nth-child(4) {
-  border-left-color: #dc2626;
+  border-left-color: #0008ff;
   background: linear-gradient(90deg, rgba(220, 38, 38, 0.08) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 .m5l4-restraint-item:nth-child(4):hover {
@@ -8257,11 +8257,11 @@ figure.image-card {
   transform: scale(1.2) rotate(-15deg);
 }
 .m5l4-restraint-item:nth-child(4) .m5l4-restraint-badge {
-  border-color: #dc2626;
-  color: #dc2626;
+  border-color: #0008ff;
+  color: #0008ff;
 }
 .m5l4-restraint-item:nth-child(4):hover .m5l4-restraint-badge {
-  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  background: linear-gradient(135deg, #0008ff 0%, #1693eb 100%);
   color: white;
   transform: scale(1.2) rotate(-15deg);
 }
@@ -8289,7 +8289,7 @@ figure.image-card {
 .m5l4-warning-card {
   background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(251, 146, 60, 0.08) 100%);
   border: 2px solid;
-  border-image: linear-gradient(135deg, #ef4444 0%, #fb923c 100%) 1;
+  border-image: linear-gradient(135deg, #1693eb 0%, #fb923c 100%) 1;
   border-radius: 0.8rem;
   padding: 1rem;
   box-shadow: 0 12px 40px rgba(239, 68, 68, 0.15),
@@ -8306,7 +8306,7 @@ figure.image-card {
   left: 0;
   right: 0;
   height: 0.4rem;
-  background: linear-gradient(90deg, #ef4444 0%, #fb923c 50%, #ef4444 100%);
+  background: linear-gradient(90deg, #1693eb 0%, #fb923c 50%, #1693eb 100%);
   animation: shimmer-warning 3s infinite;
 }
 @keyframes shimmer-warning {
@@ -8326,7 +8326,7 @@ figure.image-card {
 }
 .m5l4-reminder-header i {
   font-size: 1rem;
-  color: #dc2626;
+  color: #0008ff;
   animation: warning-pulse 2s ease-in-out infinite;
 }
 @keyframes warning-pulse {
@@ -8337,7 +8337,7 @@ figure.image-card {
   font-size: 0.8rem;
   font-weight: 700;
   margin: 0;
-  color: #7f1d1d;
+  color: #1d497f;
 }
 .m5l4-reminder-intro {
   font-size: 0.55rem;
@@ -8347,7 +8347,7 @@ figure.image-card {
   padding: 0.5rem;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 0.4rem;
-  border-left: 4px solid #dc2626;
+  border-left: 4px solid #0008ff;
 }
 .m5l4-reminder-list {
   list-style: none;
@@ -8380,7 +8380,7 @@ figure.image-card {
 }
 .m5l4-reminder-point i {
   font-size: 0.8rem;
-  color: #dc2626;
+  color: #0008ff;
   flex-shrink: 0;
 }
 /* ===== RESPONSIVE DESIGN FOR MODULE 5 LESSON 4 ===== */
@@ -9191,7 +9191,7 @@ figure.image-card {
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, rgba(245, 158, 11, 0.02) 100%);
 }
 .m4l8-point-card:nth-child(6) {
-  border-left-color: #dc2626;
+  border-left-color: #0008ff;
   background: linear-gradient(135deg, rgba(220, 38, 38, 0.06) 0%, rgba(220, 38, 38, 0.02) 100%);
 }
 .m4l8-point-card:hover {
@@ -9982,7 +9982,7 @@ figure.image-card {
   opacity: 0.3;
 }
 .m4l10-abnormality-card:nth-child(1) {
-  border-left-color: #dc2626;
+  border-left-color: #0008ff;
 }
 .m4l10-abnormality-card:nth-child(2) {
   border-left-color: #ef4444;
@@ -10580,7 +10580,7 @@ figure.image-card {
 .ch11l4-td-important-text {
   margin: 0;
   font-size: 0.68rem;
-  color: #7f1d1d;
+  color: #1d497f;
   font-weight: 600;
   line-height: 1.4;
   display: flex;
@@ -10588,7 +10588,7 @@ figure.image-card {
   gap: 4px;
 }
 .ch11l4-td-important-text i {
-  color: #dc2626;
+  color: #0008ff;
   margin-top: 1px;
   font-size: 0.75rem;
   flex-shrink: 0;
@@ -11249,7 +11249,7 @@ figure.image-card {
   background: linear-gradient(90deg, rgba(234, 88, 12, 0.04) 0%, rgba(249, 115, 22, 0.02) 100%);
 }
 .ch3l3-row-peer {
-  border-left: 5px solid #dc2626;
+  border-left: 5px solid #0008ff;
   background: linear-gradient(90deg, rgba(220, 38, 38, 0.04) 0%, rgba(239, 68, 68, 0.02) 100%);
 }
 .ch3l3-row-sexuality {
@@ -11368,7 +11368,7 @@ figure.image-card {
 }
 .ch3l3-row-peer {
   background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(239, 68, 68, 0.08) 100%);
-  color: #7f1d1d;
+  color: #1d497f;
   border-right-color: rgba(220, 38, 38, 0.3);
 }
 .ch3l3-row-sexuality {
@@ -11400,7 +11400,7 @@ figure.image-card {
 .ch3l3-row-peer .ch3l3-point-icon {
   background: linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(239, 68, 68, 0.1));
   border-color: rgba(220, 38, 38, 0.3);
-  color: #7f1d1d;
+  color: #1d497f;
 }
 .ch3l3-row-sexuality .ch3l3-point-icon {
   background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(192, 132, 250, 0.1));
@@ -11633,7 +11633,7 @@ figure.image-card {
 }
 
 .m2l7-fact-card:nth-child(3) {
-  border-left-color: #dc2626;
+  border-left-color: #0008ff;
 }
 
 .m2l7-fact-card:nth-child(4) {
