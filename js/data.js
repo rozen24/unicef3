@@ -2677,7 +2677,7 @@ const coursesData = [
                     <p class="ch3l2-description">${description}</p>
                   </div>
 
-                  <div class="ch3l2-table-section mb-3">
+                  <div class="ch3l2-table-section mt-lg-4">
                     <h2 class="ch3l2-table-title">
                       <i class="fa-solid fa-list"></i>
                       ${yhLang("Changes during Adolescence", "বয়ঃসন্ধিকালীন পরিবর্তনসমূহ")}
