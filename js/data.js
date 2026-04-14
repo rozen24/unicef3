@@ -1613,7 +1613,7 @@ const coursesData = [
       "প্রায় এক-তৃতীয়াংশ (৩০%) কিশোর-কিশোরী রক্তাল্পতায় ভুগছে।"
     ),
     icon: "fa-droplet",
-    color: "#dc2626",
+    color: "#08bf05",
     bgColor: "rgba(220, 38, 38, 0.12)",
   },
   {
@@ -1632,7 +1632,7 @@ const coursesData = [
       "কিশোরী ও নারীদের এক-পঞ্চমাংশ, তাদের বৈবাহিক অবস্থা নির্বিশেষে শারীরিক বা যৌন সহিংসতার শিকার।"
     ),
     icon: "fa-shield",
-    color: "#ef4444",
+    color: "#08bf05",
     bgColor: "rgba(239, 68, 68, 0.12)",
   },
   {
@@ -3249,7 +3249,7 @@ const coursesData = [
       "মাসিক বন্ধ থাকলে, এক মাসে ২–৩ বার মাসিক হলে, প্রচুর রক্তস্রাব হলে, তীব্র ব্যথা হলে বা অস্বাভাবিক কোনো সমস্যা দেখা দিলে চিকিৎসকের পরামর্শ নিতে বলতে হবে।"
     ),
     icon: "fa-stethoscope",
-    color: "#dc2626",
+    color: "#08bf05",
     bgColor: "rgba(220, 38, 38, 0.12)",
   },
 ];
@@ -3395,7 +3395,7 @@ const coursesData = [
       "অনেক সময় মাসের নির্দিষ্ট সময়ের আগে বা হঠাৎ করে প্রস্তুতি ছাড়া মাসিক শুরু হয়ে যেতে পারে।  সে সময় স্কুল কর্তৃপক্ষ জরুরি ভিত্তিতে স্যানিটারি ন্যাপকিন দিয়ে (অর্থ ছাড়া বা অর্থের বিনিময়ে) ছাত্রীটিকে সাহায্য করতে পারে।"
     ),
     icon: "fa-first-aid",
-    color: "#ef4444",
+    color: "#08bf05",
     bgColor: "rgba(239, 68, 68, 0.12)",
   },
   {
@@ -3610,7 +3610,7 @@ const coursesData = [
       "মাসিক বন্ধ হয়ে গেছে অথবা এক মাসে ২/৩ বার মাসিক হচ্ছে, অর্থাৎ নিয়মিত মাসিক হচ্ছে না।"
     ),
     icon: "fa-calendar-xmark",
-    color: "#dc2626",
+    color: "#08bf05",
     bgColor: "rgba(220, 38, 38, 0.12)",
   },
   {
@@ -3619,7 +3619,7 @@ const coursesData = [
       "মাসিকের সময় অতিরিক্ত রক্তক্ষরণ হওয়া।"
     ),
     icon: "fa-droplet",
-    color: "#ef4444",
+    color: "#08bf05",
     bgColor: "rgba(239, 68, 68, 0.12)",
   },
   {
@@ -4006,7 +4006,7 @@ const anatomyTopics2 = [
       "যৌনাঙ্গ বা মলদ্বারের ভেতরে কোনো ধরনের অপরিষ্কার বস্তু প্রবেশ করানো যাবে না।"
     ),
     icon: "fa-ban",
-    color: "#ef4444",
+    color: "#08bf05",
     bgColor: "rgba(239, 68, 68, 0.12)",
   },
   {
@@ -4060,7 +4060,7 @@ const anatomyTopics2 = [
       "কোনো অবস্থাতেই বলপ্রয়োগ করে কারো সঙ্গে যৌন সম্পর্ক স্থাপন করা যাবে না।"
     ),
     icon: "fa-shield-halved",
-    color: "#dc2626",
+    color: "#08bf05",
   },
   {
     text: yhLang(
@@ -4135,7 +4135,7 @@ const anatomyTopics2 = [
                     "ছেলেদের স্বপ্নে বীর্যপাতের ব্যাবস্থাপনা",
                   )}</h2>
 
-                  <section class="m5l4-intro-section modern-card glass-card" data-aos="fade-up" data-aos-delay="40">
+                  <section class="m5l4-intro-section modern-card glass-card mb-lg-2" data-aos="fade-up" data-aos-delay="40">
                     
                     <ul class="m5l4-hygiene-list">
                       ${renderHygieneCards()}
@@ -4143,7 +4143,7 @@ const anatomyTopics2 = [
                   </section>
 
 
-                  <section class="m5l4-restraint-section modern-card glass-card" data-aos="fade-up" data-aos-delay="80">
+                  <section class="m5l4-restraint-section modern-card glass-card mb-lg-2" data-aos="fade-up" data-aos-delay="80">
                     <h3 class="m5l4-restraint-heading" data-aos="fade-up" data-aos-delay="100">
                       <i class="fa-solid fa-balance-scale"></i>
                       ${yhLang("Self-Restraint & Responsible Behavior", "নিজেকে সংযত রাখা")}
@@ -4289,14 +4289,14 @@ const anatomyTopics2 = [
             },
             content: (function () {
               const causes = [
-                { title: yhLang("Poverty", "দারিদ্র্যতা"), icon: "fa-hand-holding-heart", color: "#ef4444", desc: yhLang("Economic hardship forces families to marry off daughters early", "অর্থনৈতিক কঠিনতা") },
+                { title: yhLang("Poverty", "দারিদ্র্যতা"), icon: "fa-hand-holding-heart", color: "#08bf05", desc: yhLang("Economic hardship forces families to marry off daughters early", "অর্থনৈতিক কঠিনতা") },
                 { title: yhLang("Social Customs", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার"), icon: "fa-person", color: "#f59e0b", desc: yhLang("Traditional beliefs and superstitions", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার") },
                 { title: yhLang("Lack of Education", "শিক্ষা ও সচেতনতার অভাব"), icon: "fa-book", color: "#10b981", desc: yhLang("No awareness about rights", "শিক্ষা ও সচেতনতার অভাব") },
                 { title: yhLang("Dowry Burden", "কন্যাদায়গ্রস্ত পিতার দায়মুক্ত হওয়া"), icon: "fa-sack-dollar", color: "#8b5cf6", desc: yhLang("Parents seek relief from dowry", "কন্যাদায়গ্রস্ত পিতামাতা") },
                 { title: yhLang("Gender Inequality", "জেন্ডার বৈষম্য"), icon: "fa-scale-balanced", color: "#00AEEF", desc: yhLang("Girls considered inferior", "মেয়েদের অসমান অধিকার") },
                 { title: yhLang("Social Insecurity", "সামাজিক নিরাপত্তাহীনতা"), icon: "fa-circle-exclamation", color: "#06b6d4", desc: yhLang("Unsafe environment for girls", "সামাজিক নিরাপত্তাহীনতা") },
                 { title: yhLang("Girl Neglect", "মেয়ে শিশুর প্রতি অবহেলা বা তাকে বোঝা মনে করা"), icon: "fa-child", color: "#f97316", desc: yhLang("Girls seen as burden", "মেয়ে শিশুর প্রতি অবহেলা") },
-                { title: yhLang("Legal Ignorance", "বিবাহ আইন সম্পর্কে ধারণা কম থাকা"), icon: "fa-gavel", color: "#ef4444", desc: yhLang("Unaware of marriage laws", "বিবাহ আইন সম্পর্কে অজ্ঞতা") },
+                { title: yhLang("Legal Ignorance", "বিবাহ আইন সম্পর্কে ধারণা কম থাকা"), icon: "fa-gavel", color: "#08bf05", desc: yhLang("Unaware of marriage laws", "বিবাহ আইন সম্পর্কে অজ্ঞতা") },
                 { title: yhLang("School Dropout", "স্কুল থেকে ঝরে পড়া"), icon: "fa-graduation-cap", color: "#06b6d4", desc: yhLang("Girls drop out of school", "স্কুল থেকে ঝরে পড়া") },
                 { title: yhLang("Poor Enforcement", "বাল্য বিবাহ নিরোধ আইনের যথাযথ প্রয়োগ না হওয়া"), icon: "fa-check-double", color: "#3b82f6", desc: yhLang("Weak law implementation", "আইনের যথাযথ প্রয়োগ নেই") }
               ];
@@ -4392,7 +4392,7 @@ const anatomyTopics2 = [
                 { 
                   title: yhLang("Chronic Reproductive Issues", "দীর্ঘস্থায়ী প্রজনন স্বাস্থ্য সমস্যা"), 
                   icon: "fa-heart-crack", 
-                  color: "#ef4444",
+                  color: "#08bf05",
                   shadowColor: "rgba(239, 68, 68, 0.25)"
                 },
                 { 
@@ -4404,7 +4404,7 @@ const anatomyTopics2 = [
                 { 
                   title: yhLang("Increased Mortality Risk", "মা ও শিশুমৃত্যুর ঝুঁকি বাড়ে"), 
                   icon: "fa-skull-crossbones", 
-                  color: "#dc2626",
+                  color: "#08bf05",
                   shadowColor: "rgba(220, 38, 38, 0.25)"
                 },
                 { 
@@ -4526,7 +4526,7 @@ const anatomyTopics2 = [
       "বাল্যবিবাহের আইন সম্পর্কে কাজী, অভিভাবক ও জনসাধারণকে সচেতন করা;"
     ), 
     icon: "fa-gavel", 
-    color: "#dc2626"
+    color: "#08bf05"
   },
   { 
     title: yhLang(
@@ -4840,10 +4840,10 @@ const anatomyTopics2 = [
                   <!-- Table 1: Method Availability -->
                   <section class="ch7l4-card ch7l4-availability-card " data-aos="fade-up" data-aos-delay="50">
                     <div class="ch7l4-card-header">
-                      <h3 class="ch7l4-card-title">
+                      <h2 class="ch7l4-card-title">
                         <i class="fa-solid fa-check-circle"></i>
                         ${yhLang("Number of Children vs Method Availability", "সন্তান সংখ্যা বনাম পদ্ধতি গ্রহণের সুযোগ")}
-                      </h3>
+                      </h2>
                     </div>
                     <div class="ch7l4-table-wrapper">
                       <table class="ch7l4-availability-table">
@@ -4855,7 +4855,7 @@ const anatomyTopics2 = [
                             <th class="ch7l4-method-col" data-method="injection"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</span></th>
                             <th class="ch7l4-method-col" data-method="implant"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;"><i class="fa-solid fa-microchip"></i> ${yhLang("Implant", "ইমপ্ল্যান্ট")}</span></th>
                             <th class="ch7l4-method-col" data-method="iud"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white;"><i class="fa-solid fa-shield"></i> ${yhLang("IUD", "আইইউডি")}</span></th>
-                            <th class="ch7l4-method-col" data-method="tubectomy"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white;"><i class="fa-solid fa-person-dress"></i> ${yhLang("Tubectomy", "টিউবেকটমি")}</span></th>
+                            <th class="ch7l4-method-col" data-method="tubectomy"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #08bf05 0%, #08bf05 100%); color: white;"><i class="fa-solid fa-person-dress"></i> ${yhLang("Tubectomy", "টিউবেকটমি")}</span></th>
                             <th class="ch7l4-method-col" data-method="vasectomy"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%); color: white;"><i class="fa-solid fa-person"></i> ${yhLang("Vasectomy", "ভেসেকটমি")}</span></th>
                           </tr>
                         </thead>
@@ -4911,12 +4911,12 @@ const anatomyTopics2 = [
                   </section>
 
                   <!-- Table 2: Method Usage Details -->
-                  <section class="ch7l4-card ch7l4-usage-card" data-aos="fade-up" data-aos-delay="100">
+                  <section class="ch7l4-card ch7l4-usage-card mt-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="ch7l4-card-header">
-                      <h3 class="ch7l4-card-title">
+                      <h2 class="ch7l4-card-title">
                         <i class="fa-solid fa-book-medical"></i>
                         ${yhLang("Methods: Usage, Application & Duration", "পরিবার পরিকল্পনা পদ্ধতিসমূহ : ব্যবহার, প্রয়োগ ও মেয়াদকাল")}
-                      </h3>
+                      </h2>
                     </div>
                     <div class="ch7l4-table-wrapper">
                       <table class="ch7l4-usage-table">
@@ -4959,7 +4959,7 @@ const anatomyTopics2 = [
                             <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge ch7l4-permanent">${yhLang("Permanent", "স্থায়ী")}</div></td>
                           </tr>
                           <tr class="ch7l4-usage-row ch7l4-method-7" data-aos="fade-up" data-aos-delay="200">
-                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);"><i class="fa-solid fa-person-dress"></i> ${yhLang("Tubectomy", "টিউবেকটমি")}</div></td>
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #08bf05 0%, #08bf05 100%);"><i class="fa-solid fa-person-dress"></i> ${yhLang("Tubectomy", "টিউবেকটমি")}</div></td>
                             <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Minor surgery on abdomen", "তলপেটে ছোট অপারেশনের মাধ্যমে করা হয়")}</span></div></td>
                             <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge ch7l4-permanent">${yhLang("Permanent", "স্থায়ী")}</div></td>
                           </tr>
@@ -5385,21 +5385,21 @@ const anatomyTopics2 = [
               };
 
               return `
-                <div class="ch8l8-slide">
+                <div class="lesson-slide ch8l8-slide">
                   <h2 class="ch8l8-title" data-aos="fade-down">
                     <i class="fa-solid fa-hospital-user"></i>
                     ${mainTitle}
                   </h2>
 
-                  <section class="ch8l8-description-box" data-aos="fade-up" data-aos-delay="40">
+                  <section class="ch8l8-description-box mb-lg-3" data-aos="fade-up" data-aos-delay="40">
                     <p class="ch8l8-desc-text">${mainDescription}</p>
                   </section>
 
-                  <section class="ch8l8-section-wrapper" data-aos="fade-up" data-aos-delay="60">
-                    <h3 class="ch8l8-section-title">
+                  <section class="ch8l8-section-wrapper mb-lg-3" data-aos="fade-up" data-aos-delay="60">
+                    <h2 class="ch8l8-section-title">
                       <i class="fa-solid fa-clipboard-list"></i>
                       ${sectionTitle}
-                    </h3>
+                    </h2>
 
                     <div class="ch8l8-points-container">
                       ${renderPoints()}
@@ -5767,7 +5767,7 @@ const anatomyTopics2 = [
 
               return `
                 <div class="ch9l5-slide lesson-slide">
-                  <h2 class="ch9l5-title" data-aos="fade-down">
+                  <h2 class="ch9l5-title ch-title" data-aos="fade-down">
                     <i class="fa-solid fa-exclamation-triangle"></i>
                     ${yhLang("Complications and Management", "প্রজননতন্ত্রের বা যৌনরোগের জটিলতাসমূহ")}
                   </h2>
@@ -5780,7 +5780,7 @@ const anatomyTopics2 = [
                       ${renderComplications(complicationPoints, complicationIcons)}
                     </ul>
                   </section>
-                  <section class="ch9l5-description-box" data-aos="fade-up" data-aos-delay="40">
+                  <section class="ch9l5-description-box mt-lg-2" data-aos="fade-up" data-aos-delay="40">
                     <h3 class="ch9l5-section-header">
                       <i class="fa-solid fa-stethoscope"></i>
                       ${yhLang("Youth STI Management", "তরুন-তরুনীদের যৌনবাহিত সংক্রমণ ব্যবস্থাপনা")}
@@ -5840,7 +5840,7 @@ const anatomyTopics2 = [
 
               return `
                 <div class="ch10l3-slide lesson-slide">
-                  <h2 class="ch10l3-title gradient-text" data-aos="fade-down">${yhLang(
+                  <h2 class="ch10l3-title gradient-text ch-title" data-aos="fade-down"><i class="fa-solid fa-virus"></i>${yhLang(
                     "HIV and AIDS",
                     "এইচআইভি ও এইডস",
                   )}</h2>
@@ -5935,7 +5935,7 @@ const anatomyTopics2 = [
 
               return `
                 <div class="ch10l4-slide lesson-slide">
-                  <h2 class="ch10l4-title" data-aos="fade-down">
+                  <h2 class="ch10l4-title ch-title" data-aos="fade-down">
                     <i class="fa-solid fa-stopwatch"></i>
                     ${yhLang("Window Period", "অন্তর্বর্তীকালীন সময় (Window Period)")}
                   </h2>
