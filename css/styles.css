@@ -85,7 +85,7 @@
   --pestel-bg: linear-gradient(135deg, #F472B6 0%, #EC4899 100%);
   --pestel-bg-soft: linear-gradient(135deg, rgba(244, 114, 182, .16), rgba(236, 72, 153, .16));
   --pestel-item-soft: linear-gradient(135deg, #FDF2F8, #FCE7F3);
-  --pestel-fg: #831843;
+  --pestel-fg: #184883;
   --pestel-fg-active: #ffffff;
 }
 .pestel-technological {
@@ -19577,7 +19577,7 @@ input::placeholder {
 
 /* Dark Mode Hero Section */
 .dark-mode .hero-section {
-  background: linear-gradient(135deg, #1e3a8a 0%, #5b21b6 50%, #831843 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #5b21b6 50%, #184883 100%);
 }
 
 .dark-mode .hero-section::before {

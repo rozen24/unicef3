@@ -6058,7 +6058,7 @@ const anatomyTopics2 = [
                   <div class="ch11l4-container">
                     <div class="ch11l4-left">
                       <div class="ch11l4-header" data-aos="fade-down" data-aos-delay="0">
-                        <h2 class="ch11l4-title">
+                        <h2 class="ch11l4-title ch-title">
                           <i class="fa-solid fa-shield-heart"></i>
                           ${yhLang("Cervical Cancer Prevention", "জরায়ুমুখ ক্যান্সার")}
                         </h2>
@@ -6172,7 +6172,7 @@ const anatomyTopics2 = [
                   <div class="ch11l5-container">
                     <div class="ch11l5-left">
                       <div class="ch11l5-header" data-aos="fade-down" data-aos-delay="0">
-                        <h2 class="ch11l5-title">
+                        <h2 class="ch11l5-title ch-title">
                           <i class="fa-solid fa-syringe"></i>
                           ${yhLang("HPV Vaccine", "এইচপিভি টিকা")}
                         </h2>
@@ -6235,7 +6235,7 @@ const anatomyTopics2 = [
                 <div class="lesson-slide ch11l4-slide-td">
                   <section class="ch11l4-td-intro" data-aos="fade-up">
                     <div class="ch11l4-td-desc-card">
-                      <h2 class="ch11l4-td-title">
+                      <h2 class="ch11l4-td-title ch-title">
                         <i class="fa-solid fa-shield-virus"></i>
                         ${yhLang("Importance of TD Vaccine", "<b>মহিলাদের অন্যান্য টিকা</b> <br>টিডি টিকা")}
                       </h2>
@@ -6426,7 +6426,7 @@ const anatomyTopics2 = [
                   <div class="ch12l1-shape ch12l1-shape-c"></div>
 
                   <div class="ch12l1-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l1-title">
+                    <h2 class="ch12l1-title ch-title">
                       <i class="fa-solid fa-heart-pulse"></i>
                       ${yhLang("Understanding PCOS", "পলিসিস্টিক ওভারিআন সিনড্রোম (পিসিওএস) ")}
                     </h2>
@@ -6499,7 +6499,7 @@ const anatomyTopics2 = [
                   <div class="ch12l2-shape ch12l2-shape-c"></div>
 
                   <div class="ch12l2-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l2-title">
+                    <h2 class="ch12l2-title ch-title">
                       <i class="fa-solid fa-triangle-exclamation"></i>
                       ${yhLang("Symptoms & Problems of PCOS", "পিসিওএস-এর সমস্যা সমূহ")}
                     </h2>
@@ -6581,7 +6581,7 @@ const anatomyTopics2 = [
                   <div class="ch12l3-shape ch12l3-shape-c"></div>
 
                   <div class="ch12l3-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l3-title">
+                    <h2 class="ch12l3-title ch-title">
                       <i class="fa-solid fa-lightbulb"></i>
                       ${yhLang("Solutions & Management", "সমাধানের উপায়")}
                     </h2>
@@ -6737,7 +6737,7 @@ const anatomyTopics2 = [
                   <div class="ch12l5-shape ch12l5-shape-c"></div>
 
                   <div class="ch12l5-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch12l5-title">
+                    <h2 class="ch12l5-title ch-title">
                       <i class="fa-solid fa-handshake"></i>
                       ${yhLang("Child Rights & Human Rights", "শিশু অধিকার ও মানবাধিকার")}
                     </h2>
@@ -6896,7 +6896,7 @@ const anatomyTopics2 = [
               return `
                 <div class="ch12l7-slide lesson-slide">
                   <div class="ch12l7-header" data-aos="fade-down">
-                    <h2 class="ch12l7-main-title">
+                    <h2 class="ch12l7-main-title ch-title">
                       <i class="fa-solid fa-heart-circle-bolt"></i>
                       ${yhLang("Sexual and Reproductive Health Rights", "যৌন ও প্রজনন স্বাস্থ্য অধিকার")}
                     </h2>
@@ -7002,7 +7002,7 @@ const sexPoints = [
                   <span class="ch13l1-shape ch13l1-shape-b" aria-hidden="true"></span>
                   <span class="ch13l1-shape ch13l1-shape-c" aria-hidden="true"></span>
 
-                  <h2 class="ch13l1-title" data-aos="fade-up">
+                  <h2 class="ch13l1-title ch-title" data-aos="fade-up">
                     <i class="fa-solid fa-venus-mars"></i>
                     ${yhLang("Gender-Based Discrimination", "লিঙ্গ ভিত্তিক বৈষম্য")}
                   </h2>
@@ -7162,7 +7162,7 @@ const sections = [
                   <span class="ch13l2-shape ch13l2-shape-b" aria-hidden="true"></span>
                   <span class="ch13l2-shape ch13l2-shape-c" aria-hidden="true"></span>
 
-                  <h2 class="ch13l2-title" data-aos="fade-up">
+                  <h2 class="ch13l2-title ch-title" data-aos="fade-up">
                     <i class="fa-solid fa-scale-unbalanced-flip"></i>
                     ${yhLang("Understanding Gender Inequity", "জেন্ডার বৈষম্য")}
                   </h2>
@@ -7309,7 +7309,7 @@ const orbitItems = [
                     <span class="ch13l3-shape ch13l3-shape-ring"></span>
                   </div>
 
-                  <h2 class="ch13l3-title" data-aos="fade-up">
+                  <h2 class="ch13l3-title ch-title" data-aos="fade-up">
                     <i class="fa-solid fa-scale-unbalanced"></i>
                     ${yhLang("Gender Bias Across Society", "সমাজে বিরাজমান জেন্ডার বৈষম্য")}
                   </h2>
@@ -7437,7 +7437,7 @@ const orbitItems = [
                   <span class="ch13l4-shape ch13l4-shape-c" aria-hidden="true"></span>
 
                   <header class="ch13l4-header" data-aos="fade-up">
-                    <h2 class="ch13l4-title">
+                    <h2 class="ch13l4-title ch-title">
                       <i class="fa-solid fa-hand-fist"></i>
                       ${yhLang("Forms of Gender-Based Violence", "জেন্ডারভিত্তিক সহিংসতা ও নির্যাতনের ধরণ")}
                     </h2>
@@ -7639,7 +7639,7 @@ const orbitItems = [
                   <span class="ch13l5-shape ch13l5-shape-c" aria-hidden="true"></span>
 
                   <header class="ch13l5-header" data-aos="fade-up">
-                    <h2 class="ch13l5-title">
+                    <h2 class="ch13l5-title ch-title">
                       <i class="fa-solid fa-circle-exclamation"></i>
                       ${yhLang("Sexual Harassment", "যৌন হয়রানি")}
                     </h2>
@@ -7784,7 +7784,7 @@ const orbitItems = [
                   <span class="ch13l6-shape ch13l6-shape-c" aria-hidden="true"></span>
 
                   <header class="ch13l6-header" data-aos="fade-up">
-                    <h2 class="ch13l6-title">
+                    <h2 class="ch13l6-title ch-title">
                       <i class="fa-solid fa-money-bill-wave"></i>
                       ${yhLang("Financial Loss (Financial Aspects)", "৪. “আর্থিক ক্ষতি” অর্থে নিম্নবর্ণিত বিষয়সমূহও অন্তর্ভুক্ত হবে, যথা -")}
                     </h2>
@@ -7954,7 +7954,7 @@ const orbitItems = [
                   <span class="ch13l7-shape ch13l7-shape-c" aria-hidden="true"></span>
 
                   <header class="ch13l7-header" data-aos="fade-up">
-                    <h2 class="ch13l7-title">
+                    <h2 class="ch13l7-title ch-title">
                       <i class="fa-solid fa-hands"></i>
                       ${yhLang("Steps to Eliminate Gender Discrimination", "জেন্ডার বৈষম্য দূর করার জন্য করণীয়")}
                     </h2>
@@ -8467,7 +8467,7 @@ const orbitItems = [
                   <div class="ch13l9-shape ch13l9-shape-c"></div>
 
                   <div class="ch13l9-header" data-aos="fade-down" data-aos-delay="0">
-                    <h2 class="ch13l9-title">
+                    <h2 class="ch13l9-title ch-title">
                       <i class="fa-solid fa-hand-fist"></i>
                       ${yhLang("Forms of Violence Against Youth", "তরুনদের প্রতি সহিংসতার বিভিন্ন রূপ")}
                     </h2>
@@ -8723,7 +8723,7 @@ const orbitItems = [
                   <span class="m14l1-shape m14l1-shape-c" aria-hidden="true"></span>
 
                   <header class="m14l1-header" data-aos="fade-up">
-                    <h2 class="m14l1-title">
+                    <h2 class="m14l1-title ch-title">
                       <i class="fa-solid fa-person"></i>
                       ${yhLang("Psychosocial transitions in adolescence", "তারুণ্যে মনোসামাজিক পরিবর্তন")}
                     </h2>
@@ -8863,7 +8863,7 @@ const orbitItems = [
                   <span class="m14l2-shape m14l2-shape-c" aria-hidden="true"></span>
 
                   <header class="m14l2-header" data-aos="fade-up">
-                    <h2 class="m14l2-title">
+                    <h2 class="m14l2-title ch-title">
                       <i class="fa-solid fa-face-smile"></i>
                       ${yhLang("Emotion essentials", "আবেগ (Emotion)")}
                     </h2>
@@ -8987,10 +8987,10 @@ const orbitItems = [
                   <div class="m14lem-grid">
                     <!-- LEFT: Strategies -->
                     <div class="m14lem-panel m14lem-panel-left" data-aos="fade-right" data-aos-delay="40">
-                      <h3 class="m14lem-panel-title">
+                      <h2 class="m14lem-panel-title ch-title">
                         <i class="fa-solid fa-list-check" style="background:linear-gradient(135deg,#6ee7b7,#34d399);color:#fff;"></i>
                         ${yhLang("Emotion Management Strategies", "আবেগ ব্যবস্থাপনার কৌশল")}
-                      </h3>
+                      </h2>
                       <ul class="m14lem-list">
                         <li class="m14lem-li m14lem-sky" data-aos="fade-right" data-aos-delay="50">
                           <span class="m14lem-li-icon"><i class="fa-solid fa-eye"></i></span>
@@ -9038,10 +9038,10 @@ const orbitItems = [
                         </li>
                       </ul>
                       <div class="m14lem-ei-card">
-                        <h3 class="m14lem-ei-title">
+                        <h2 class="m14lem-ei-title ch-title">
                           <i class="fa-solid fa-lightbulb"></i>
                           ${yhLang("Emotional Intelligence", "আবেগীয় বুদ্ধিমত্তা")}
-                        </h3>
+                        </h2>
                         <p class="m14lem-ei-desc">${yhLang("Emotional intelligence (EI) is the ability to perceive, regulate and use your own emotions and understand others' emotions.", "আবেগীয় বুদ্ধিমত্তা (emotional intelligence) হল নিজের আবেগ এবং অন্যদের আবেগ অনুধাবন, নিয়ন্ত্রণ ও ব্যবহার করার ক্ষমতা। আবেগীয় বুদ্ধিমত্তার গুরুত্বপূর্ণ দিকগুলো হল: ")}</p>
                         
                         <ul class="m14lem-ei-list">
@@ -9418,7 +9418,7 @@ const orbitItems = [
                   <span class="m14l3-shape m14l3-shape-c" aria-hidden="true"></span>
 
                   <header class="m14l3-header" data-aos="fade-up">
-                    <h2 class="m14l3-title">
+                    <h2 class="m14l3-title ch-title">
                       <i class="fa-solid fa-face-frown-open"></i>
                       ${yhLang("Anxiety overview", "উদ্বেগ (Anxiety)")}
                     </h2>
@@ -9738,7 +9738,7 @@ const orbitItems = [
                   <div class="m14l4-shape m14l4-shape-c"></div>
 
                   <header class="m14l4-header">
-                    <h2 class="m14l4-title">
+                    <h2 class="m14l4-title ch-title">
                       <i class="fa-solid fa-face-sad-tear"></i>
                       ${yhLang("Stress", "মানসিক চাপ (Stress)")}
                     </h2>
@@ -10006,19 +10006,19 @@ const orbitItems = [
 
                   <div class="m14l5-grid">
                     <section class="m14l5-card m14l5-card-causes">
-                      <h3 class="m14l5-subtitle mb-3">
+                      <h2 class="m14l5-subtitle mb-3 ch-title">
                         <i class="fa-solid fa-head-side-virus"></i>
                         <b>${yhLang("Causes of Stress", "মানসিক চাপের কারণসমূহ")}</b>
-                      </h3>
+                      </h2>
                       <div class="m14l5-cause-list">
                         ${renderCauseCards(stressCauses)}
                       </div>
                     </section>
                     <section class="m14l5-card m14l5-card-manage">
-                    <h3 class="m14l5-subtitle">
+                    <h2 class="m14l5-subtitle ch-title">
                       <i class="fa-solid fa-seedling"></i>
                       ${yhLang("Stress Management Tips", "মানসিক চাপ ব্যবস্থাপনার জন্য প্রয়োজনীয় কিছু উপায় নিম্নে উল্লেখ করা হল- ")}
-                    </h3>
+                    </h2>
                     <ul class="m14l5-list">
                       ${renderTips(managementTips)}
                     </ul>
@@ -10282,7 +10282,7 @@ const orbitItems = [
                   <div class="m14l6-shape m14l6-shape-c"></div>
 
                   <header class="m14l6-header">
-                    <h2 class="m14l6-title">
+                    <h2 class="m14l6-title ch-title">
                       <i class="fa-solid fa-face-angry"></i>
                       ${yhLang("Understanding Anger", "রাগ (Anger)")}
                     </h2>
@@ -10560,29 +10560,29 @@ const orbitItems = [
 
                   <div class="m14l7-grid">
                     <section class="m14l7-card m14l7-card-trigger">
-                      <h3 class="m14l7-subtitle mb-4">
+                      <h2 class="m14l7-subtitle mb-4 ch-title">
                         <i class="fa-solid fa-bolt"></i>
                         ${yhLang("Anger Triggers", "আমরা কি কারণে এবং কখন খুব সহজেই রেগে যাই")}
-                      </h3>
+                      </h2>
                       <ul class="m14l7-list">
                         ${renderList(angerTriggers, 80, "left")}
                       </ul>
                     </section>
 
                     <section class="m14l7-card m14l7-card-impact">
-                      <h3 class="m14l7-subtitle mb-2">
+                      <h2 class="m14l7-subtitle mb-2 ch-title">
                         <i class="fa-solid fa-triangle-exclamation"></i>
                         ${yhLang("Possible Damages", "রাগের ফলে আমাদের কি কি ক্ষতি হয়")}
-                      </h3>
+                      </h2>
                       <ul class="m14l7-list">
                         ${renderList(angerDamages, 95, "right")}
                       </ul>
                     </section>
                     <section class="m14l7-card m14l7-card-impact">
-                      <h3 class="m14l7-subtitle mb-4">
-                      <i class="fa-solid fa-seedling"></i>
-                      ${yhLang("Healthy Response", "রাগ ব্যবস্থাপনার কৌশল")}
-                      </h3>
+                      <h2 class="m14l7-subtitle mb-4 ch-title">
+                        <i class="fa-solid fa-seedling"></i>
+                        ${yhLang("Healthy Response", "রাগ ব্যবস্থাপনার কৌশল")}
+                      </h2>
                        <ul class="m14l7-list mb-4">
                         ${renderList(actionPoints, 110, "up")}
                        </ul>
@@ -10796,7 +10796,7 @@ const orbitItems = [
                   <div class="m14l9-shape m14l9-shape-c"></div>
 
                   <header class="m14l9-header">
-                    <h2 class="m14l9-title">
+                    <h2 class="m14l9-title ch-title">
                       <i class="fa-solid fa-book-open-reader"></i>
                       ${yhLang("Understanding Exam Anxiety", "পরীক্ষা-ভীতি")}
                     </h2>
@@ -10895,7 +10895,7 @@ const orbitItems = [
                   <div class="m14l10-shape m14l10-shape-c"></div>
 
                   <header class="m14l10-header">
-                    <h2 class="m14l10-title">
+                    <h2 class="m14l10-title ch-title">
                       <i class="fa-solid fa-pen-to-square"></i>
                       ${yhLang("Solutions to Exam Fear", "পরীক্ষা-ভীতি দূর করার উপায় বা সমাধান")}
                     </h2>
@@ -11118,8 +11118,17 @@ const orbitItems = [
 .m14l12-impact-heading.danger{background:linear-gradient(135deg,#fff0f2,#fff8f8);border-color:rgba(212,99,110,.4);}
 .m14l12-impact-heading.warn{background:linear-gradient(135deg,#fff6ea,#fffbf4);border-color:rgba(211,155,76,.4);}
 .m14l12-impact-heading.info{background:linear-gradient(135deg,#eef8ff,#f6fbff);border-color:rgba(92,148,204,.4);}
-.m14l12-impact-icon-large{width:60px;height:60px;min-width:60px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.15);}
-.m14l12-impact-icon-large.danger{background:linear-gradient(135deg,#ff6b7a,#f05564);}
+.m14l12-impact-icon-large {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}.m14l12-impact-icon-large.danger{background:linear-gradient(135deg,#ff6b7a,#f05564);}
 .m14l12-impact-icon-large.warn{background:linear-gradient(135deg,#ffb366,#f58a44);}
 .m14l12-impact-icon-large.info{background:linear-gradient(135deg,#5ecfb2,#35b48e);}
 .m14l12-impact-title{font-size:1.2rem;font-weight:700;margin:0;color:#1f3f67;line-height:1.3;}
@@ -11130,8 +11139,17 @@ const orbitItems = [
 .m14l12-guide-card.teal{background:linear-gradient(135deg,#edfffb,#f6fffd);border-color:rgba(70,174,162,.4);}
 .m14l12-guide-card.indigo{background:linear-gradient(135deg,#f0f3ff,#f8f9ff);border-color:rgba(109,124,210,.4);}
 .m14l12-guide-card.peach{background:linear-gradient(135deg,#fff3eb,#fff9f4);border-color:rgba(210,136,101,.4);}
-.m14l12-guide-icon{width:56px;height:56px;min-width:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.15);}
-.m14l12-guide-icon.success{background:linear-gradient(135deg,#53a97b,#2f9868);}
+.m14l12-guide-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}.m14l12-guide-icon.success{background:linear-gradient(135deg,#53a97b,#2f9868);}
 .m14l12-guide-icon.teal{background:linear-gradient(135deg,#46aea2,#2c9084);}
 .m14l12-guide-icon.indigo{background:linear-gradient(135deg,#6d7cd2,#5268ca);}
 .m14l12-guide-icon.peach{background:linear-gradient(135deg,#d28865,#be714b);}
@@ -11148,16 +11166,16 @@ const orbitItems = [
                   
 
                   <section class="m14l12-card m14l12-card-intro" data-aos="fade-up" data-aos-delay="40">
-                    <h2 class="m14l12-h2">
+                    <h2 class="m14l12-h2 ch-title">
                       <span class="m14l12-hicon m14l12-i2"><i class="fa-solid fa-heart-pulse"></i></span>
                       ${yhLang("Digital Health & Impact of Device Addiction", "ডিজিটাল আসক্তি প্রতিরোধ")}
                     </h2>
                     <span class="m14l12-p">${intro}</span>
 
-                    <h6 class="m14l12-h6" style="margin-top:5px;">
+                    <h2 class="m14l12-h6 ch-title" style="margin-top:5px;">
                       <span class="m14l12-hicon m14l12-i6"><i class="fa-solid fa-circle-info"></i></span>
                       ${subtitle}
-                    </h6>
+                    </h2>
                     <p class="m14l12-impact-text">${impactTitle}</p>
                   </section>
 
@@ -11339,7 +11357,7 @@ const orbitItems = [
                           <div class="m16l1-section-icon" aria-hidden="true">
                             <i class="fa-solid ${section.icon}"></i>
                           </div>
-                          <h3 class="m16l1-section-title">${section.title}</h3>
+                          <h2 class="m16l1-section-title ch-title">${section.title}</h2>
                         </div>
                         <p class="m16l1-section-text">${section.description}</p>
                       </section>
@@ -11502,9 +11520,9 @@ const orbitItems = [
                       <i class="fa-solid fa-people-group"></i>
                     </div>
                     <div class="m16l2-hero__content">
-                      <h2 class="m16l2-hero__title">${yhLang(
+                      <h2 class="m16l2-hero__title ch-title ch-title">${yhLang(
                         "Empathy Skills",
-                        "মনোসামাজিক সহায়তার দক্ষতাসমূহ",
+                        "মনোসামাজিক সহায়তার দক্ষতাসমূহ",
                       )}</h2>
                     </div>
                   </section>
@@ -11895,7 +11913,7 @@ const orbitItems = [
                       <i class="fa-solid fa-scale-balanced"></i>
                     </div>
                     <div class="m16l4-hero__content">
-                      <h2 class="m16l4-hero__title">${yhLang(
+                      <h2 class="m16l4-hero__title ch-title">${yhLang(
                         "Understanding Values",
                         "৩. মূল্যবোধ",
                       )}</h2>
@@ -11990,7 +12008,7 @@ const orbitItems = [
       <i class="fa-solid fa-hands-praying"></i>
     </div>
     <div class="m16l5-hero__content">
-      <h2 class="m16l5-hero__title">${yhLang("Understanding Behavior", "৪. আচরণ")}</h2>
+      <h2 class="m16l5-hero__title ch-title">${yhLang("Understanding Behavior", "৪. আচরণ")}</h2>
     </div>
   </section>
 
@@ -12099,7 +12117,7 @@ const orbitItems = [
       <i class="fa-solid fa-scale-balanced"></i>
     </div>
     <div class="m16l6-hero__content">
-      <h2 class="m16l6-hero__title">${yhLang("Ethics", "৫. নৈতিকতা")}</h2>
+      <h2 class="m16l6-hero__title ch-title">${yhLang("Ethics", "৫. নৈতিকতা")}</h2>
     </div>
   </section>
 
@@ -12232,7 +12250,7 @@ const orbitItems = [
     <div class="m17l1-hero__badge">
       <i class="fa-solid fa-syringe"></i>
     </div>
-    <div class="m17l1-hero__content">
+    <div class="m17l1-hero__content ch-title">
       <h2 class="m17l1-hero__title">${yhLang("Understanding Drug Addiction", "মাদকাসক্তি")}</h2>
     </div>
   </section>
@@ -12344,7 +12362,7 @@ const orbitItems = [
       <i class="fa-solid fa-eye"></i>
     </div>
     <div class="m17l2-hero__content">
-      <h2 class="m17l2-hero__title">${yhLang("Signs of Drug Addiction", "মাদকাসক্তির লক্ষণসমূহ")}</h2>
+      <h2 class="m17l2-hero__title ch-title">${yhLang("Signs of Drug Addiction", "মাদকাসক্তির লক্ষণসমূহ")}</h2>
     </div>
   </section>
 
@@ -12668,10 +12686,10 @@ const orbitItems = [
                         <div class="m17l3-panel-icon" aria-hidden="true">
                           <i class="fa-solid fa-scale-balanced"></i>
                         </div>
-                        <h3 class="m17l3-panel-title">${yhLang(
+                        <h2 class="m17l3-panel-title ch-title">${yhLang(
                           "Consequences of Addiction",
                           "মাদকাসক্তির পরিণতি",
-                        )}</h3>
+                        )}</h2>
                       </div>
                       <ul class="m17l3-list">
                         ${renderList(consequences, 120)}
@@ -12683,10 +12701,10 @@ const orbitItems = [
                         <div class="m17l3-panel-icon" aria-hidden="true">
                           <i class="fa-solid fa-shield-heart"></i>
                         </div>
-                        <h3 class="m17l3-panel-title">${yhLang(
+                        <h2 class="m17l3-panel-title ch-title">${yhLang(
                           "Addiction Prevention",
                           "মাদকাসক্তি প্রতিরোধ",
-                        )}</h3>
+                        )}</h2>
                       </div>
                       <ul class="m17l3-list">
                         ${renderList(prevention, 140)}
@@ -12806,7 +12824,7 @@ const orbitItems = [
                     <div class="m18l1-hero__badge">
                       <i class="fa-solid fa-briefcase-medical"></i>
                     </div>
-                    <h2 class="m18l1-hero__title">
+                    <h2 class="m18l1-hero__title ch-title">
                       ${yhLang("First Aid Support", "ইনজুরি প্রতিরোধ ও প্রাথমিক চিকিৎসা সেবা")}
                     </h2>
                   </div>
@@ -12972,7 +12990,7 @@ const orbitItems = [
                     <div class="m18l2-hero__badge">
                       <i class="fa-solid fa-bandage"></i>
                     </div>
-                    <h2 class="m18l2-hero__title">
+                    <h2 class="m18l2-hero__title ch-title">
                       <i class="fa-solid fa-droplet"></i>
                       ${yhLang("Bleeding Control", "রক্তক্ষরণ নিয়ন্ত্রণ")}
                     </h2>
@@ -13135,10 +13153,10 @@ const orbitItems = [
 
                   <header class="m18l3-hero" data-aos="zoom-in" data-aos-duration="600">
                     <div class="m18l3-hero-badge"><i class="fa-solid fa-fire"></i></div>
-                    <h6 class="m18l3-hero-title">
+                    <h2 class="m18l3-hero-title ch-title">
                       <i class="fa-solid fa-triangle-exclamation"></i>
                       ${yhLang("Burn Injuries", "পোড়া")}
-                    </h6>
+                    </h2>
                   </header>
 
                   <section class="m18l3-intro" data-aos="fade-up" data-aos-delay="20">
@@ -13323,7 +13341,7 @@ const orbitItems = [
 
                   <header class="m18l4-hero" data-aos="zoom-in" data-aos-duration="600">
                     <div class="m18l4-hero-badge"><i class="fa-solid fa-hand-holding-medical"></i></div>
-                    <h2 class="m18l4-hero-title">
+                    <h2 class="m18l4-hero-title ch-title">
                       <i class="fa-solid fa-shield-medical"></i>
                       ${yhLang("Burn First Aid", "পোড়ার প্রাথমিক চিকিৎসা")}
                     </h2>
@@ -13488,10 +13506,10 @@ const orbitItems = [
                     <div class="m18l5-hero-badge" aria-hidden="true">
                       <i class="fa-solid fa-bone"></i>
                     </div>
-                    <h6 class="m18l5-hero-title">
+                    <h2 class="m18l5-hero-title ch-title">
                       <i class="fa-solid fa-kit-medical"></i>
                       ${yhLang("হাড় ভাঙ্গা", "হাড় ভাঙ্গা")}
-                    </h6>
+                    </h2>
                   </header>
 
                   <section class="m18l5-intro-panel mb-1 p1 m18l5-intro-overview m18l5-shadow-definition" data-aos="fade-up" data-aos-delay="20">
@@ -13728,7 +13746,7 @@ const orbitItems = [
                     <div class="m18l6-hero-badge" aria-hidden="true">
                       <i class="fa-solid fa-staff-snake"></i>
                     </div>
-                    <h2 class="m18l6-hero-title">
+                    <h2 class="m18l6-hero-title ch-title text-center">
                       <i class="fa-solid fa-shield-virus"></i>
                       ${yhLang("সাপের কামড়", "সাপের কামড়")}
                     </h2>
@@ -13878,7 +13896,7 @@ const orbitItems = [
         <div class="m18l7-hero-badge">
             <i class="fa-solid fa-dog"></i>
         </div>
-        <h2 class="m18l7-hero-title">
+        <h2 class="m18l7-hero-title ch-title">
             ${yhLang("Dog Bite Care", "কুকুরের কামড়")}
         </h2>
     </header>
@@ -14073,7 +14091,7 @@ const orbitItems = [
 
                   <header class="m18l8-hero" data-aos="zoom-in" data-aos-duration="600">
                     <div class="m18l8-hero-badge"><i class="fa-solid fa-skull-crossbones"></i></div>
-                    <h2 class="m18l8-hero-title">
+                    <h2 class="m18l8-hero-title ch-title">
                       <i class="fa-solid fa-vial-circle-check"></i>
                       ${yhLang("Poisoning Response", "বিষক্রিয়া")}
                     </h2>
@@ -14225,7 +14243,7 @@ const orbitItems = [
               return `
                 <div class="mod18-lesson9">
                   <header class="m18l9-hero" data-aos="fade-down">
-                    <h2 class="m18l9-hero-title">
+                    <h2 class="m18l9-hero-title ch-title">
                       <i class="fa-solid fa-person-swimming"></i>
                       ${yhLang("Drowning Response", "পানিতে ডুবা")}
                     </h2>
@@ -14439,10 +14457,10 @@ const orbitItems = [
 
                   <div class="m18l10x12-grid">
                     <section class="m18l10x12-panel m18l10x12-panel-main" data-aos="fade-right" data-aos-delay="20">
-                      <h3 class="m18l10x12-panel-title">
+                      <h2 class="m18l10x12-panel-title ch-title">
                         <i class="fa-solid fa-lungs"></i>
                         ${yhLang("Choking and Airway Block", "শ্বাস আটকে যাওয়া বা গলায় কিছু আটকে যাওয়া (Chocking)")}
-                      </h3>
+                      </h2>
                       <p class="m18l10x12-intro-text">${chokingIntro}</p>
                       <div class="m18l10x12-context-box">
                         <p class="mb-0">${chokingScenarios}</p>
@@ -14462,10 +14480,10 @@ const orbitItems = [
                     </section>
 
                     <section class="m18l10x12-panel m18l10x12-panel-infant" data-aos="fade-left" data-aos-delay="40">
-                      <h3 class="m18l10x12-panel-title">
+                      <h2 class="m18l10x12-panel-title ch-title">
                         <i class="fa-solid fa-baby"></i>
-                        ${yhLang("Infant Choking First Aid", "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচের বয়সী শিশুর ক্ষেত্রে)")}
-                      </h3>
+                        ${yhLang("Infant Choking First Aid", "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (১ বছরের নিচের বয়সী শিশুর ক্ষেত্রে)")}
+                      </h2>
                       ${renderList(infantSteps)}
                       <div class="m18l10x12-alert-box" role="alert" data-aos="zoom-in" data-aos-delay="110">
                         <h3 class="m18l10x12-alert-title"><i class="fa-solid fa-triangle-exclamation"></i> ${yhLang("If Infant Becomes Unconscious", "যদি শিশুটি অজ্ঞান হয়ে পড়ে")}</h3>
@@ -14618,10 +14636,10 @@ const orbitItems = [
 
                   <div class="m18l11-grid">
                     <section class="m18l11-panel m18l11-panel-initial" data-aos="fade-right" data-aos-delay="20">
-                      <h3 class="m18l11-panel-title">
+                      <h2 class="m18l11-panel-title ch-title">
                         <i class="fa-solid fa-hand-holding-medical"></i>
                         ${yhLang("Initial Back Blow Steps", "শ্বাস আটকে যাওয়ার প্রাথমিক চিকিৎসা (প্রাপ্তবয়স্ক এবং ১ বছরের উপরের বয়সী শিশুর ক্ষেত্রে)")}
-                      </h3>
+                      </h2>
                       
                       ${renderList(firstGuidance)}
 
@@ -14903,9 +14921,9 @@ const orbitItems = [
                           <div class="m19l1-section-icon" style="color: ${section.iconColor};">
                             <i class="fa-solid ${section.iconClass}"></i>
                           </div>
-                          <h3 class="m19l1-section-title">
+                          <h2 class="m19l1-section-title ch-title">
                             ${yhLang(section.titleEn, section.titleBn)}
-                          </h3>
+                          </h2>
                         </div>
                         <p class="m19l1-section-description">
                           ${yhLang(section.descriptionEn, section.descriptionBn)}
@@ -15090,7 +15108,7 @@ const orbitItems = [
                   <div class="m19l2-shape m19l2-shape-3"></div>
 
                   <div class="m19l2-header" data-aos="fade-up">
-                    <h2 class="m19l2-title">
+                    <h2 class="m19l2-title ch-title">
                       <i class="fa-solid fa-scale-balanced"></i>
                       ${yhLang("BMI (Body Mass Index)", "বি.এম.আই (Body Mass Index)")}
                     </h2>
@@ -15190,9 +15208,9 @@ const orbitItems = [
                   <div class="m19l2-shape m19l2-shape-3"></div>
 
                   <div class="m19l2-header" data-aos="fade-up">
-                    <h2 class="m19l2-title">
+                    <h2 class="m19l2-title ch-title">
                       <i class="fa-solid fa-scale-balanced"></i>
-                      ${yhLang("BMI (Body Mass Index)", "পূর্ণ বয়স্ক তরুণ-তরুণীদের বিএমআই রেঞ্জ")}
+                      ${yhLang("BMI (Body Mass Index)", "পূর্ণ বয়স্ক তরুণ-তরুণীদের বিএমআই রেঞ্জ")}
                     </h2>
                   </div>
 
@@ -15320,7 +15338,7 @@ const orbitItems = [
               return `
                 <div class="m19l3-table-container">
                   <div class="m19l3-table-header my-2" data-aos="fade-up">
-                    <h2><i class="fa-solid fa-bowl-food"></i>${yhLang(
+                    <h2 class="ch-title"><i class="fa-solid fa-bowl-food"></i>${yhLang(
                       "Nutrition Components, Sources, and Functions",
                       "পুষ্টি উপাদানসমূহ, উৎস এবং তাদের নির্দিষ্ট কাজসমূহ",
                     )}</h2>
@@ -15481,7 +15499,7 @@ const orbitItems = [
                   <div class="m19l4-shape m19l4-shape-3"></div>
 
                   <div class="m19l4-header" data-aos="fade-up">
-                    <h2 class="m19l4-title">
+                    <h2 class="m19l4-title ch-title">
                       <i class="fa-solid fa-utensils"></i>
                       ${yhLang(
                         "Daily Meal Plan for Adolescents",
@@ -15644,7 +15662,7 @@ const orbitItems = [
                   <div class="m19l5-shape m19l5-shape-3"></div>
 
                   <div class="m19l5-header" data-aos="fade-up">
-                    <h2 class="m19l5-title">
+                    <h2 class="m19l5-title ch-title">
                       <i class="fa-solid fa-leaf"></i>
                       ${yhLang(
                         "Adolescent Food Diversity",
@@ -15766,11 +15784,11 @@ const orbitItems = [
                   <div class="m19l7-shape m19l7-shape-3"></div>
 
                   <div class="m19l7-header" data-aos="fade-up">
-                    <h2 class="m19l7-title">
+                    <h2 class="m19l7-title ch-title">
                       <i class="fa-solid fa-droplet"></i>
                       ${yhLang(
                         "Nutritious Food During Menstruation",
-                        "মাসিককালীন সময়ে পুষ্টিকর খাদ্য",
+                        "মাসিককালীন সময়ে পুষ্টিকর খাদ্য",
                       )}
                     </h2>
                   </div>
@@ -15929,7 +15947,7 @@ const orbitItems = [
                   <div class="m19l8-shape m19l8-shape-3"></div>
 
                   <div class="m19l8-header" data-aos="fade-up">
-                    <h2 class="m19l8-h2"><i class="fa-solid fa-apple-whole"></i>${yhLang("পুষ্টিজনিত প্রধান সমস্যাসমূহ", "পুষ্টিজনিত প্রধান সমস্যাসমূহ")}</h2>
+                    <h2 class="m19l8-h2 ch-title"><i class="fa-solid fa-apple-whole"></i>${yhLang("পুষ্টিজনিত প্রধান সমস্যাসমূহ", "পুষ্টিজনিত প্রধান সমস্যাসমূহ")}</h2>
                   </div>
 
                   <section class="m19l8-section m19l8-section-a" data-aos="fade-up" data-aos-delay="20">
@@ -16013,7 +16031,7 @@ const orbitItems = [
                   <div class="m19l9-shape m19l9-shape-3"></div>
 
                   <div class="m19l9-header" data-aos="fade-up">
-                    <h2 class="m19l9-h2"><i class="fa-solid fa-rotate"></i>${yhLang("Adolescent Nutrition and Malnutrition Cycle", "পুষ্টি এবং অপুষ্টি চক্র")}</h2>
+                    <h2 class="m19l9-h2 ch-title"><i class="fa-solid fa-rotate"></i>${yhLang("Adolescent Nutrition and Malnutrition Cycle", "পুষ্টি এবং অপুষ্টি চক্র")}</h2>
                   </div>
 
                   <section class="m19l9-section m19l9-section-b" data-aos="fade-up" data-aos-delay="40">
@@ -16238,10 +16256,10 @@ const orbitItems = [
                        <div class="col-md-6 m19l10">
                          <section class="m19l10-section m19l10-section-c p-4" data-aos="fade-up" data-aos-delay="60">
                             <article class="m19l10-box is-definition mb-4">
-                            <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-scale-balanced"></i>${yhLang("Understanding Overweight and Obesity", "অধিক ওজন ও স্থূলতা")}</h3>
+                            <h2 class="m19l10-h3 mb-2 ch-title"><i class="fa-solid fa-scale-balanced"></i>${yhLang("Understanding Overweight and Obesity", "অধিক ওজন ও স্থূলতা")}</h2>
                             <p class="m19l10-p">${yhLang("A BMI between 25 and 29.9 is considered overweight. A BMI of 30 or higher is classified as obesity. Among adolescents, obesity rates are influenced by home environment, food habits, socioeconomic status, regular physical activity, exercise opportunities, and facilities.", "বডি মাস ইনডেক্স (BMI) ২৫ থেকে ২৯.৯ এর মধ্যে থাকলে তাকে অতিরিক্ত ওজন হিসেবে ধরা হয়। অন্যদিকে  BMI ৩০ বা তার বেশি হলে তাকে স্থূলতা বলা হয়। ঘরের পরিবেশ, খাদ্যাভ্যাস, আর্থসামাজিক অবস্থা, নিয়মিত খেলাধূলা, ব্যায়াম ও সুযোগ-সুবিধা তরুণ-তরুণীদের মধ্যে স্থূলতার হার বৃিদ্ধর জন্য গুরুত্বপূর্ণ ভূমিকা পালন করে। সুষম খাবার, সুষম খাবারের প্রয়োজনীয়তা ও এর সুফল সম্পর্কে পরিবারের মধ্যে যথাযথ ধারনার অভাব রয়েছে। তাছাড়া গ্রাম ও শহরে তরুণীদের উপযুক্ত খেলার স্থান ও নিরাপদ কাঠামোর সংকট রয়েছে।")}</p>
                           </article>
-                            <h3 class="m19l10-h3 mb-2"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Causes of Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজনের কারণ")}</h3>
+                            <h2 class="m19l10-h3 mb-2 ch-title"><i class="fa-solid fa-triangle-exclamation"></i>${yhLang("Causes of Overweight and Obesity", "স্থূলতা এবং অতিরিক্ত ওজনের কারণ")}</h2>
                             ${renderList(overweightCauses)}
                           </section>
                        </div>
@@ -16250,7 +16268,7 @@ const orbitItems = [
                             <div class="m19-11-card" data-aos="fade-up" data-aos-delay="60">
                             <figure class="m19-11-figure">
                               <header class="m19-11-header" data-aos="fade-up">
-                              <h2 class="m19-11-title"><i class="fa-solid fa-heart-pulse"></i>${yhLang(
+                              <h2 class="m19-11-title ch-title"><i class="fa-solid fa-heart-pulse"></i>${yhLang(
                                 "Harmful Effects of Overweight and Obesity",
                                 "অধিক ওজন ও স্থুলতার ক্ষতিকর প্রভাব",
                               )}</h2>
@@ -16355,10 +16373,10 @@ const orbitItems = [
                   </header>
 
                   <section class="m19-12-card m19-12-card--guidance" data-aos="fade-up" data-aos-delay="70">
-                    <h3 class="m19-12-subtitle"><i class="fa-solid fa-shield-heart"></i>${yhLang(
+                    <h2 class="m19-12-subtitle ch-title"><i class="fa-solid fa-shield-heart"></i>${yhLang(
                       "How to Prevent Overweight and Obesity",
-                      "অধিক ওজন ও স্থূলতা প্রতিরোধে করণীয়",
-                    )}</h3>
+                      "অধিক ওজন ও স্থূলতা প্রতিরোধে করণীয়",
+                    )}</h2>
                     ${renderList(preventionPoints)}
                   </section>
                 </div>
@@ -16431,7 +16449,7 @@ const orbitItems = [
                     <span class="mod20-shape mod20-shape--wave"></span>
                   </div>
                   <div class="mod20-content">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-virus"></i>${yhLang(
+                  <h2 class="slide-title gradient-text ch-title" data-aos="fade-up"><i class="fa-solid fa-virus"></i>${yhLang(
                     "অসংক্রামক রোগ",
                     "অসংক্রামক রোগ",
                   )}</h2>
@@ -16585,19 +16603,19 @@ const orbitItems = [
                   <div class="row g-3">
                     <div class="col-12 col-lg-5">
                       <div class="glass-card p-1 mb-2">
-                        <h3 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-clipboard-check"></i>${yhLang(
+                        <h2 class="gradient-text ch-title mb-1" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-clipboard-check"></i>${yhLang(
                           "Actions to prevent unhealthy diet:",
                           "ত্রুটিপূর্ণ খাদ্যাভ্যাস প্রতিরোধে করণীয়: ",
-                        )}</h3>
+                        )}</h2>
                         <ul class="list-unstyled puberty-list mb-0 m20_1 mod20_grid1">
                           ${renderList(preventionList, 120)}
                         </ul>
                       </div>
                       <div class="glass-card p-1">
-                        <h3 class="gradient-text mb-1" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-running"></i>${yhLang(
+                        <h2 class="gradient-text mb-1 ch-title" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-person-running"></i>${yhLang(
                           "Actions to address lack of physical activity:",
                           "কায়িক পরিশ্রমের অভাব পূরণে করণীয় :",
-                        )}</h3>
+                        )}</h2>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(activityTips, 80)}
                         </ul>
@@ -16810,7 +16828,7 @@ const orbitItems = [
                   .map(
                     (section, idx) => `
                         <article class="glass-card p-2 h-100">
-                          <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i>${section.heading}</h2>
+                          <h3 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="${baseDelay + idx * 40}"><i class="fa-solid ${section.icon}"></i><b>${section.heading}</b></h3>
                           <ul class="list-unstyled puberty-list mb-0">
                             ${renderBullets(section.bullets, baseDelay + idx * 40 + 20)}
                           </ul>
@@ -16830,7 +16848,7 @@ const orbitItems = [
                   <div class="mod20-content">
                   <div class="glass-card p-1 mb-3">
                     
-                    <h2 class="mb-0 slide-title " data-aos="fade-up" data-aos-delay="40"> <i class="fa-solid fa-ban-smoking"></i> <b>${introText}</b></h2>
+                    <h2 class="mb-0 slide-title ch-title" data-aos="fade-up" data-aos-delay="40"> <i class="fa-solid fa-ban-smoking"></i> <b>${introText}</b></h2>
                     <p>${yhLang(
                     "অ্যাজমা বা হাঁপানি রোগঃ",
                     "তামাকজাত দ্রব্য (ধূমপান, জর্দা, গুল ইত্যাদি) এবং মদ্যপান প্রতিরোধে একটি সমন্বিত ও কার্যকর কৌশল প্রয়োজন। ",
@@ -16886,7 +16904,7 @@ const orbitItems = [
                     <span class="mod20-shape mod20-shape--wave"></span>
                   </div>
                   <div class="mod20-content">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-wind"></i>${yhLang(
+                  <h2 class="slide-title gradient-text ch-title" data-aos="fade-up"><i class="fa-solid fa-wind"></i>${yhLang(
                     "অ্যাজমা বা হাঁপানি রোগঃ",
                     "অ্যাজমা বা হাঁপানি রোগঃ",
                   )}</h2>
@@ -16938,7 +16956,7 @@ const orbitItems = [
                     <span class="mod20-shape mod20-shape--wave"></span>
                   </div>
                   <div class="mod20-content">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-syringe"></i>${yhLang(
+                  <h2 class="slide-title gradient-text ch-title" data-aos="fade-up"><i class="fa-solid fa-syringe"></i>${yhLang(
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                     "ডায়াবেটিস ও হাইপোগ্লাইসেমিয়া",
                   )}</h2>
@@ -17000,7 +17018,7 @@ const orbitItems = [
                     <span class="mod20-shape mod20-shape--wave"></span>
                   </div>
                   <div class="mod20-content">
-                  <h2 class="slide-title gradient-text mb-0" data-aos="fade-up"><i class="fa-solid fa-notes-medical"></i>${yhLang(
+                  <h2 class="slide-title gradient-text mb-0 ch-title" data-aos="fade-up"><i class="fa-solid fa-notes-medical"></i>${yhLang(
                     "থ্যালাসেমিয়া",
                     "থ্যালাসেমিয়া",
                   )}</h2>
@@ -17173,17 +17191,17 @@ const orbitItems = [
                     
                     <div class="col-12 col-lg-5 d-flex flex-column gap-2">
                       <article class="glass-card p-4">
-                        <h4 class="gradient-text mb-2" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h2>
+                        <h2 class="gradient-text mb-2 ch-title" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-gauge-high"></i>উচ্চ রক্তচাপ</h2>
                         <p class="mb-0" data-aos="fade-up" data-aos-delay="60">${bpIntro}</p>
                       </article>
                       <article class="glass-card p-4">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h2>
+                        <h2 class="gradient-text mb-3 ch-title" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-stethoscope"></i>উচ্চ রক্তচাপের প্রাথমিক লক্ষণসমূহ</h2>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(bpEarly, 80)}
                         </ul>
                       </article>
                       <article class="glass-card p-4">
-                        <h4 class="gradient-text mb-3" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-shield-heart"></i>উচ্চ রক্তচাপ প্রতিরোধের উপায়</h2>
+                        <h2 class="gradient-text mb-3 ch-title" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-shield-heart"></i>উচ্চ রক্তচাপ প্রতিরোধের উপায়</h2>
                         <ul class="list-unstyled puberty-list mb-0">
                           ${renderList(bpPrevention, 80)}
                         </ul>
@@ -17238,7 +17256,7 @@ const orbitItems = [
                     <span class="mod20-shape mod20-shape--wave"></span>
                   </div>
                   <div class="mod20-content">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-bolt"></i>${yhLang(
+                  <h2 class="slide-title gradient-text ch-title" data-aos="fade-up"><i class="fa-solid fa-bolt"></i>${yhLang(
                     "তরুন-তরুনীদের মৃগীরোগ",
                     "তরুন-তরুনীদের মৃগীরোগ",
                   )}</h2>
@@ -17289,7 +17307,7 @@ const orbitItems = [
                     <span class="mod20-shape mod20-shape--hexagon"></span>
                   </div>
                   <div class="mod20-content">
-                  <h2 class="slide-title gradient-text" data-aos="fade-up"><i class="fa-solid fa-droplet"></i>${yhLang(
+                  <h2 class="slide-title gradient-text ch-title" data-aos="fade-up"><i class="fa-solid fa-droplet"></i>${yhLang(
                     "নেফ্রোটিক সিনড্রোম রোগ",
                     "নেফ্রোটিক সিনড্রোম রোগ",
                   )}</h2>

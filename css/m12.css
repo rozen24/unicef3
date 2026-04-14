@@ -5,7 +5,7 @@
   border-radius: 16px;
   padding: 12px;
   overflow: hidden;
-  border: 1px solid rgba(236, 72, 153, 0.12);
+  border: 1px solid rgb(72 100 236 / 12%);
 }
 
 .ch12l1-shape {
@@ -20,7 +20,7 @@
   height: 120px;
   top: -40px;
   right: -30px;
-  background: linear-gradient(135deg, #ec4899, #be185d);
+  background: linear-gradient(135deg, #5a48ec, #1888be);
 }
 
 .ch12l1-shape-b {
@@ -28,7 +28,7 @@
   height: 100px;
   bottom: -35px;
   left: -20px;
-  background: linear-gradient(135deg, #f472b6, #db2777);
+  background: linear-gradient(135deg, #7276f4, #2745db);
 }
 
 .ch12l1-shape-c {
@@ -48,7 +48,7 @@
 .ch12l1-title {
   font-size: 1.1rem;
   font-weight: 800;
-  color: #831843;
+  color: #182583;
   margin: 0;
   display: flex;
   align-items: center;
@@ -65,9 +65,9 @@
   align-items: center;
   justify-content: center;
   font-size: 0.85rem;
-  background: linear-gradient(135deg, #ec4899, #be185d);
+  background: linear-gradient(135deg, #5a48ec, #1888be);
   color: #fff;
-  box-shadow: 0 5px 12px rgba(236, 72, 153, 0.25);
+  box-shadow: 0 5px 12px rgb(120 72 236 / 25%);
 }
 
 .ch12l1-intro-card {
@@ -100,24 +100,24 @@
 .ch12l1-section {
   border-radius: 9px;
   padding: 7px;
-  border: 2px solid rgba(236, 72, 153, 0.12);
+  border: 2px solid rgb(72 100 236 / 12%);
   transition: all 0.3s ease;
 }
 
 .ch12l1-section-type1 {
-  border-color: rgba(236, 72, 153, 0.2);
+  border-color: rgb(72 100 236 / 20%);
 }
 
 .ch12l1-section-type2 {
-  border-color: rgba(244, 114, 182, 0.2);
+  border-color: rgb(72 100 236 / 20%);
 }
 
 .ch12l1-section-type3 {
-  border-color: rgba(249, 168, 212, 0.2);
+  border-color: rgb(72 100 236 / 20%);
 }
 
 .ch12l1-section:hover {
-  box-shadow: 0 3px 8px rgba(236, 72, 153, 0.12);
+  box-shadow: 0 3px 8px rgb(72 100 236 / 12%);
   transform: translateY(-1px);
 }
 
@@ -144,7 +144,7 @@
   align-items: center;
   justify-content: center;
   font-size: 0.65rem;
-  background: linear-gradient(135deg, #f472b6, #db2777);
+  background: linear-gradient(135deg, #7276f4, #2745db);
   color: #fff;
 }
 
@@ -179,8 +179,8 @@
 }
 
 .ch12l1-li-type1 {
-  border-left-color: #ec4899;
-  background: rgba(236, 72, 153, 0.06);
+  border-left-color: #486bec;
+  background: rgb(72 138 236 / 6%);
 }
 
 .ch12l1-li-type1::before {
@@ -196,7 +196,7 @@
 }
 
 .ch12l1-li-type2 {
-  border-left-color: #f472b6;
+  border-left-color: #7288f4;
   background: rgba(244, 114, 182, 0.05);
 }
 
@@ -213,7 +213,7 @@
 }
 
 .ch12l1-li-type3 {
-  border-left-color: #f9a8d4;
+  border-left-color: #482ed5;
   background: rgba(249, 168, 212, 0.05);
 }
 
@@ -249,15 +249,15 @@
 }
 
 .ch12l1-li-type1 .ch12l1-li-icon {
-  background: linear-gradient(135deg, #ec4899, #be185d);
+  background: linear-gradient(135deg, #5a48ec, #1888be);
 }
 
 .ch12l1-li-type2 .ch12l1-li-icon {
-  background: linear-gradient(135deg, #f472b6, #db2777);
+  background: linear-gradient(135deg, #7276f4, #2745db);
 }
 
 .ch12l1-li-type3 .ch12l1-li-icon {
-  background: linear-gradient(135deg, #f9a8d4, #f43f5e);
+  background: linear-gradient(135deg, #482ed5, #f43f5e);
 }
 
 .ch12l1-li-content {
@@ -393,7 +393,7 @@
 .ch12l2-shape-a {
   width: 80px;
   height: 80px;
-  background: radial-gradient(circle, #ec4899 0%, transparent 70%);
+  background: radial-gradient(circle, #486bec 0%, transparent 70%);
   top: -10px;
   right: 20px;
 }
@@ -401,7 +401,7 @@
 .ch12l2-shape-b {
   width: 60px;
   height: 60px;
-  background: radial-gradient(circle, #f472b6 0%, transparent 70%);
+  background: radial-gradient(circle, #7288f4 0%, transparent 70%);
   bottom: 30px;
   left: 10px;
 }
@@ -409,7 +409,7 @@
 .ch12l2-shape-c {
   width: 50px;
   height: 50px;
-  background: radial-gradient(circle, #f9a8d4 0%, transparent 70%);
+  background: radial-gradient(circle, #482ed5 0%, transparent 70%);
   bottom: 10px;
   right: 15px;
 }
@@ -423,21 +423,21 @@
 .ch12l2-title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #be185d;
+  color: #183cbe;
   display: flex;
   align-items: center;
   gap: 8px;
   margin: 0;
   padding: 6px 8px;
   background: rgba(255, 255, 255, 0.7);
-  border-left: 4px solid #ec4899;
+  border-left: 4px solid #486bec;
   border-radius: 4px;
   backdrop-filter: blur(5px);
 }
 
 .ch12l2-title i {
   font-size: 1.1rem;
-  color: #ec4899;
+  color: #486bec;
 }
 
 .ch12l2-intro-card {
@@ -446,14 +446,14 @@
   padding: 8px 10px;
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(236, 72, 153, 0.2);
+  border: 1px solid rgb(72 100 236 / 20%);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(236, 72, 153, 0.05);
 }
 
 .ch12l2-intro-text {
   font-size: 0.7rem;
-  color: #93185d;
+  color: #184f93;
   line-height: 1.4;
   margin: 0;
   font-weight: 500;
@@ -488,18 +488,18 @@
 }
 
 .ch12l2-li-type1 {
-  background-color: rgba(236, 72, 153, 0.06);
-  border-color: #ec4899;
+  background-color: rgb(72 138 236 / 6%);
+  border-color: #486bec;
 }
 
 .ch12l2-li-type2 {
   background-color: rgba(244, 114, 182, 0.05);
-  border-color: #f472b6;
+  border-color: #7288f4;
 }
 
 .ch12l2-li-type3 {
   background-color: rgba(249, 168, 212, 0.05);
-  border-color: #f9a8d4;
+  border-color: #482ed5;
 }
 
 .ch12l2-li-icon {
@@ -516,24 +516,24 @@
 }
 
 .ch12l2-li-type1 .ch12l2-li-icon {
-  color: #ec4899;
-  background: rgba(236, 72, 153, 0.12);
+  color: #486bec;
+  background: rgb(72 100 236 / 12%);
 }
 
 .ch12l2-li-type2 .ch12l2-li-icon {
-  color: #f472b6;
-  background: rgba(244, 114, 182, 0.12);
+  color: #7288f4;
+  background: rgb(114 142 244 / 12%);
 }
 
 .ch12l2-li-type3 .ch12l2-li-icon {
-  color: #f9a8d4;
-  background: rgba(249, 168, 212, 0.12);
+  color: #482ed5;
+  background: rgb(184 168 249 / 12%);
 }
 
 .ch12l2-li-num {
   font-size: 0.65rem;
   font-weight: 700;
-  color: #be185d;
+  color: #183cbe;
   margin-right: 3px;
 }
 
@@ -1287,8 +1287,8 @@
 
 /* Pillar Type Colors */
 .ch12l5-li-pillar1 {
-  background-color: rgba(239, 68, 68, 0.07);
-  border-color: #ef4444;
+  background-color: rgb(68 105 239 / 7%);
+  border-color: #4488ef;
 }
 
 .ch12l5-li-pillar2 {
@@ -1320,8 +1320,8 @@
 }
 
 .ch12l5-li-pillar1 .ch12l5-li-icon {
-  color: #ef4444;
-  background: rgba(239, 68, 68, 0.14);
+  color: #4488ef;
+  background: rgb(68 113 239 / 14%);
 }
 
 .ch12l5-li-pillar2 .ch12l5-li-icon {
@@ -1698,7 +1698,7 @@
 .ch12l7-main-title {
   font-size: 2.6rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #d97706 0%, #ec4899 50%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #d97706 0%, #486bec 50%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1709,7 +1709,7 @@
   padding: 18px 28px;
   background-color: rgba(217, 119, 6, 0.08);
   border-radius: 18px;
-  border-left: 10px solid #d97706;
+  border-left: 5px solid #d97706;
   box-shadow: 0 6px 20px rgba(217, 119, 6, 0.15);
   line-height: 1.2;
 }
@@ -1763,7 +1763,7 @@
   left: 0;
   width: 100%;
   height: 6px;
-  background: linear-gradient(90deg, #d97706, #ec4899);
+  background: linear-gradient(90deg, #d97706, #486bec);
   border-radius: 22px 22px 0 0;
   z-index: 2;
 }

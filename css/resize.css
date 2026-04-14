@@ -9,14 +9,17 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 0 0 12px 0;
-    padding: 12px 12px;
+    padding: 12px 2px;
     border-radius: 20px;
     line-height: 1.2;
 }
-  .ch-title i {
-        font-size: 25px;
-    }
+.m18l6-hero-title.ch-title , .m18l7-hero-title.ch-title, .m18l8-hero-title.ch-title, .m18l9-hero-title.ch-title {
+  display: block;
+}
+
+.ch-title i {
+    font-size: 25px;
+}
 
 .lesson-slide {
   /* height: 83dvh; */
