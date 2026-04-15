@@ -4200,62 +4200,152 @@ const anatomyTopics2 = [
               ],
             },
             content: (function () {
+              const causes = [
+                { title: yhLang("Poverty", "দারিদ্র্যতা"), icon: "fa-hand-holding-heart", color: "#08bf05", desc: yhLang("Economic hardship forces families to marry off daughters early", "অর্থনৈতিক কঠিনতা") },
+                { title: yhLang("Social Customs", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার"), icon: "fa-person", color: "#f59e0b", desc: yhLang("Traditional beliefs and superstitions", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার") },
+                { title: yhLang("Lack of Education", "শিক্ষা ও সচেতনতার অভাব"), icon: "fa-book", color: "#10b981", desc: yhLang("No awareness about rights", "শিক্ষা ও সচেতনতার অভাব") },
+                { title: yhLang("Dowry Burden", "কন্যাদায়গ্রস্ত পিতার দায়মুক্ত হওয়া"), icon: "fa-sack-dollar", color: "#8b5cf6", desc: yhLang("Parents seek relief from dowry", "কন্যাদায়গ্রস্ত পিতামাতা") },
+                { title: yhLang("Gender Inequality", "জেন্ডার বৈষম্য"), icon: "fa-scale-balanced", color: "#00AEEF", desc: yhLang("Girls considered inferior", "মেয়েদের অসমান অধিকার") },
+                { title: yhLang("Social Insecurity", "সামাজিক নিরাপত্তাহীনতা"), icon: "fa-circle-exclamation", color: "#06b6d4", desc: yhLang("Unsafe environment for girls", "সামাজিক নিরাপত্তাহীনতা") },
+                { title: yhLang("Girl Neglect", "মেয়ে শিশুর প্রতি অবহেলা বা তাকে বোঝা মনে করা"), icon: "fa-child", color: "#f97316", desc: yhLang("Girls seen as burden", "মেয়ে শিশুর প্রতি অবহেলা") },
+                { title: yhLang("Legal Ignorance", "বিবাহ আইন সম্পর্কে ধারণা কম থাকা"), icon: "fa-gavel", color: "#08bf05", desc: yhLang("Unaware of marriage laws", "বিবাহ আইন সম্পর্কে অজ্ঞতা") },
+                { title: yhLang("School Dropout", "স্কুল থেকে ঝরে পড়া"), icon: "fa-graduation-cap", color: "#06b6d4", desc: yhLang("Girls drop out of school", "স্কুল থেকে ঝরে পড়া") },
+                { title: yhLang("Poor Enforcement", "বাল্য বিবাহ নিরোধ আইনের যথাযথ প্রয়োগ না হওয়া"), icon: "fa-check-double", color: "#3b82f6", desc: yhLang("Weak law implementation", "আইনের যথাযথ প্রয়োগ নেই") }
+              ];
+
+              const renderOrbitItems = () => {
+                return causes.map((cause, idx) => {
+                  const angle = (idx * 360) / causes.length;
+                  return `
+                    <div class="ch6l6-orbit-item" style="--angle: ${angle}deg" data-aos="fade-in" data-aos-delay="${50 + idx * 30}">
+                      <div class="ch6l6-orbit-card" style="border-top-color: ${cause.color};">
+                        <div class="ch6l6-orbit-icon" style="background: linear-gradient(135deg, ${cause.color} 0%, ${cause.color}cc 100%);">
+                          <i class="fa-solid ${cause.icon}"></i>
+                        </div>
+                        <p class="ch6l6-orbit-title">${cause.title}</p>
+                      </div>
+                    </div>
+                  `;
+                }).join("");
+              };  
               return `
                 <div class="ch6l5-slide lesson-slide" data-module="6" data-lesson="5">
-                  <section class="ch6l5-introduction" data-aos="fade-up">
-                    <h2 class="ch6l5-main-title">
-                      <i class="fa-solid fa-ban"></i>
-                      ${yhLang("Child Marriage (বাল্যবিবাহ)", "বাল্যবিবাহ")}
-                    </h2>
-                    <p class="ch6l5-intro-text text-center px-5 mx-5">
-                      ${yhLang(
-                        "Bangladesh law stipulates a minimum marriage age of 18 for girls and 21 for boys. Marriage below these ages is considered child marriage. According to BDHS 2022, 50% of married women were married before age 18, and adolescent birth rate is 92 per 1,000. Among girls aged 15-19, 24% are pregnant and 18% have given birth.",
-                        "বাংলাদেশের আইনে মেয়েদের বিয়ের বয়স কমপক্ষে ১৮ ও ছেলেদের বিয়ের বয়স কমপক্ষে ২১ বছর। এর থেকে কম বয়সে বিয়ে হলে তা বাল্যবিবাহ বলে গণ্য করা হয়। বর্তমানে বিশেষ কয়েকটি কারণে ১৬ বছরে বিয়ে দেয়ার বিষয়টি বাল্যবিবাহ নিরোধ আইনে অন্তর্ভুক্ত হলেও বিয়ের বয়স ১৮ বছরই বলতে হবে। বিডিএইচএস, ২০২২ অনুসারে বিবাহিত ৫০ শতাংশ নারীর বিয়ে হয়েছে ১৮ বছরের মধ্যে এবং গর্ভবতী কিশোরীদের মধ্যে জন্মহার প্রতি হাজারে ৯২। এবং ১৫-১৯ বছর বয়সী চারজনের মধ্যে একজন কিশোরী (২৪%) গর্ভধারন করে, এবং প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।"
-                      )}
-                    </p>
-                  </section>
+  <div class="row g-1">
+    
+    <!-- LEFT COLUMN -->
+    <div class="col-md-6">
+      
+      <!-- INTRO -->
+      <section class="ch6l5-introduction" data-aos="fade-up">
+        <h2 class="ch6l5-main-title ch-title">
+          <i class="fa-solid fa-children"></i>
+          ${yhLang("Child Marriage (বাল্যবিবাহ)", "বাল্যবিবাহ")}
+        </h2>
 
-                  <!-- Special Note 1: Legal Crime -->
-                  <div class="d-flex justify-content-around align-items-center">
-                     <section class="ch6l5-special-note d-flex align-items-center ch6l5-note-type-1" data-aos="fade-up" data-aos-delay="50">
-                        <div class="ch6l5-note-icon mt-5">
-                          <i class="fa-solid fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="ch6l5-note-content">
-                          <h3 class="ch6l5-note-text">
-                            ${yhLang(
-                              "Child marriage is a punishable offense under the law.",
-                              "বাল্যবিবাহ আইনের চোখে একটি দণ্ডনীয় অপরাধ।"
-                            )}
-                          </h3>
-                        </div>
-                     </section>
+        <p class="ch6l5-intro-text">
+          ${yhLang(
+            "Bangladesh law stipulates a minimum marriage age of 18 for girls and 21 for boys...",
+            "বাংলাদেশের আইনে মেয়েদের বিয়ের বয়স কমপক্ষে ১৮ ও ছেলেদের বিয়ের বয়স কমপক্ষে ২১ বছর।  এর থেকে কম বয়সে বিয়ে হলে তা বাল্যবিবাহ বলে গণ্য করা হয়।  বর্তমানে বিশেষ কয়েকটি কারণে ১৬ বছরে বিয়ে দেয়ার বিষয়টি বাল্যবিবাহ নিরোধ আইনে অন্তর্ভুক্ত হলেও বিয়ের বয়স ১৮ বছরই বলতে হবে।  বিডিএইচএস, ২০২২ অনুসারে বিবাহিত ৫০ শতাংশ নারীর বিয়ে হয়েছে ১৮ বছরের মধ্যে এবং গর্ভবতী কিশোরীদের মধ্যে জন্মহার প্রতি হাজারে ৯২।  এবং ১৫-১৯ বছর বয়সী চারজনের মধ্যে একজন কিশোরী (২৪%) গর্ভধারন করে, এবং প্রায় পাঁচজনের মধ্যে একজন কিশোরী (১৮%) জীবিত সন্তান জন্মদান করে।"
+          )}
+        </p>
+      </section>
 
-                      <!-- Special Note 2: Helpline -->
-                      <section class="ch6l5-special-note ch6l5-note-type-2" data-aos="fade-up" data-aos-delay="100">
-                        <div class="ch6l5-note-icon mt-5">
-                          <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="ch6l5-note-content">
-                          <h3 class="ch6l5-note-text">
-                            ${yhLang(
-                              "If you have information about child marriage, report it to the ",
-                              "বাল্যবিবাহ সম্পর্কে কোনো তথ্য থাকলে "
-                            )}
-                            <strong class="ch6l5-helpline-number">${yhLang("1098", "১০৯৮")}</strong>
-                            ${yhLang(
-                              " Child Helpline by calling or messaging.",
-                              " চাইল্ড হেল্পলাইনে কল করে রিপোর্ট করা উচিত।"
-                            )}
-                          </h3>
-                        </div>
-                      </section>
-                  </div>
-                  
+      <!-- SPECIAL NOTES -->
+      <div class="d-flex justify-content-around align-items-center my-2">
 
-                  <!-- Statistics Section -->
-                  
-                </div>
+        <!-- NOTE 1 -->
+        <section class="ch6l5-special-note d-flex align-items-center ch6l5-note-type-1"
+                 data-aos="fade-up" data-aos-delay="50">
+          
+          <div class="ch6l5-note-icon mt-2 mt-lg-4">
+            <i class="fa-solid fa-exclamation-triangle"></i>
+          </div>
+
+          <div class="ch6l5-note-content">
+            <h3 class="ch6l5-note-text">
+              ${yhLang(
+                "Child marriage is a punishable offense under the law.",
+                "বাল্যবিবাহ আইনের চোখে একটি দণ্ডনীয় অপরাধ।"
+              )}
+            </h3>
+          </div>
+        </section>
+
+        <!-- NOTE 2 -->
+        <section class="ch6l5-special-note ch6l5-note-type-2"
+                 data-aos="fade-up" data-aos-delay="100">
+          
+          <div class="ch6l5-note-icon mt-2 mt-lg-3">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div class="ch6l5-note-content">
+            <h3 class="ch6l5-note-text">
+              ${yhLang(
+                "If you have information about child marriage, report it to the ",
+                "বাল্যবিবাহ সম্পর্কে কোনো তথ্য থাকলে "
+              )}
+              <strong class="ch6l5-helpline-number">
+                ${yhLang("1098", "১০৯৮")}
+              </strong>
+              ${yhLang(
+                " Child Helpline by calling or messaging.",
+                " চাইল্ড হেল্পলাইনে কল করে রিপোর্ট করা উচিত।"
+              )}
+            </h3>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- INFO SECTION -->
+      <section class="ch6l8-info-section" data-aos="fade-up" data-aos-delay="100">
+        <div class="ch6l8-info-box">
+          <p class="ch6l8-info-text ch6l8-highlight">
+            ${yhLang(
+              "An adult committing child marriage is liable to imprisonment up to 2 years...",
+              "কোনো নারীর ১৮ বৎসর পূর্ণ হবার আগে এবং তার সম্মতি ছাড়া বিয়ে হলে সে মুসলিম বিবাহ বাতিল আইন, ১৯৩৯ অনুযায়ী আদালতে বিয়ে বাতিলের আবেদন করতে পারে যদি-মেয়েটি স্বামীর সাথে দাম্পত্য সম্পর্ক স্থাপন না করে বা তার ১৮ বৎসর বয়সের আগে সম্মতি ছাড়া বিয়ে হবার পর ১৯ বৎসর আসার আগেই বিবাহ বাতিলের আবেদন করতে হবে।  বাল্যবিয়ে প্রতিরোধে Child Marriage Restraint Act, ২০১৭ (বাল্যবিবাহ নিরোধ আইন, ২০১৭) এবং Child Marriage Restraint Rules, ২০১৮ (বাল্যবিবাহ নিরোধ বিধিমালা, ২০১৮) এর বাস্তবায়ণ কার্যক্রম চলমান রয়েছে।  বাল্যবিবাহ করার শাস্তি : প্রাপ্তবয়স্ক কোনো নারী বা পুরুষ বাল্যবিবাহ করলে এটি একটি অপরাধ এবং এজন্য তিনি অনধিক ২ (দুই) বছর কারাদণ্ড বা অনধিক ১ (এক) লক্ষ টাকা অর্থদণ্ড বা উভয় দণ্ডে দণ্ডনীয় হবেন এবং অর্থদণ্ড অনাদায়ে অনধিক ৩ (তিন) মাস কারাদণ্ডে দণ্ডনীয় হবেন।"
+            )}
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col-md-6">
+
+      <section class="ch6l6-introduction" data-aos="fade-up">
+        <h2 class="ch6l6-main-title">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          ${yhLang("Causes of Child Marriage", "বাল্যবিবাহের কারণ")}
+        </h2>
+      </section>
+
+      <section class="ch6l6-orbit-container" data-aos="fade-up" data-aos-delay="50">
+        <div class="ch6l6-orbit-wrapper">
+
+          <!-- CENTER -->
+          <div class="ch6l6-orbit-center">
+            <div class="ch6l6-center-content">
+              <i class="fa-solid fa-children"></i>
+              <p>${yhLang("Child Marriage", "বাল্যবিবাহ")}</p>
+            </div>
+          </div>
+
+          <!-- ORBIT -->
+          <div class="ch6l6-orbit-ring"></div>
+
+          <!-- ITEMS -->
+          ${renderOrbitItems()}
+
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</div>
               `;
             })(),
           },
@@ -4331,7 +4421,7 @@ const anatomyTopics2 = [
                       <!-- Center -->
                       <div class="ch6l6-orbit-center">
                         <div class="ch6l6-center-content">
-                          <i class="fa-solid fa-ban"></i>
+                          <i class="fa-solid fa-children"></i>
                           <p>${yhLang("Child Marriage", "বাল্যবিবাহ")}</p>
                         </div>
                       </div>
@@ -4378,6 +4468,12 @@ const anatomyTopics2 = [
             content: (function () {
               const consequences = [
                 { 
+                  title: yhLang("Unsafe Sexual Behavior", "বিদ্যালয় থেকে ঝরে পড়া"), 
+                  icon: "fa-school", 
+                  color: "#162df9",
+                  shadowColor: "rgba(249, 115, 22, 0.25)"
+                },
+                { 
                   title: yhLang("Premature & Underweight Births", "অপরিণত, অপরিপক্ক, অপুষ্ট ও স্বল্প ওজনের শিশুর জন্মদান"), 
                   icon: "fa-baby", 
                   color: "#8b5cf6",
@@ -4404,7 +4500,13 @@ const anatomyTopics2 = [
                 { 
                   title: yhLang("Increased Mortality Risk", "মা ও শিশুমৃত্যুর ঝুঁকি বাড়ে"), 
                   icon: "fa-skull-crossbones", 
-                  color: "#08bf05",
+                  color: "#05bf87",
+                  shadowColor: "rgba(220, 38, 38, 0.25)"
+                },
+                { 
+                  title: yhLang("Increased Mortality Risk", "মমানসিক স্বাস্থ্য সমস্যা"), 
+                  icon: "fa-skull-crossbones", 
+                  color: "#1bbf05",
                   shadowColor: "rgba(220, 38, 38, 0.25)"
                 },
                 { 
@@ -4423,6 +4525,12 @@ const anatomyTopics2 = [
                   title: yhLang("Unsafe Sexual Behavior", "ঝুঁকিপূর্ণ ও অনিরাপদ যৌন আচরণ"), 
                   icon: "fa-exclamation-circle", 
                   color: "#f97316",
+                  shadowColor: "rgba(249, 115, 22, 0.25)"
+                },
+                { 
+                  title: yhLang("Unsafe Sexual Behavior", "যৌনবাহিত সংক্রমণ সমূহ"), 
+                  icon: "fa-exclamation-circle", 
+                  color: "#8016f9",
                   shadowColor: "rgba(249, 115, 22, 0.25)"
                 },
                 { 
@@ -4458,15 +4566,8 @@ const anatomyTopics2 = [
                         ${yhLang("Consequences of Child Marriage", "বাল্যবিবাহের পরিণতি")}
                       </h2>
                       
-                      <div class="ch6l7-consequences-grid">
+                      <div class="ch6l7-consequences-grid grid_2">
                         ${renderConsequences()}
-                      </div>
-                    </div>
-
-                    <!-- Right Column -->
-                    <div class="ch6l7-right-column">
-                      <div class="ch6l7-image-wrapper" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="img/modu6/ballo.jpg" alt="" class="ch6l7-image img-zoom w-100">
                       </div>
                     </div>
                   </section>
@@ -4608,17 +4709,7 @@ const anatomyTopics2 = [
                     ${renderPoints()}
                   </section>
 
-                  <section class="ch6l8-info-section" data-aos="fade-up" data-aos-delay="100">
-                    <div class="ch6l8-info-box">
-                        <p class="ch6l8-info-text ch6l8-highlight">
-                          ${yhLang(
-                            "An adult committing child marriage is liable to imprisonment up to 2 years, or a fine up to 100,000 Taka, or both. If the fine is not paid, additional imprisonment of up to 3 months applies.",
-                            "কোনো নারীর ১৮ বৎসর পূর্ণ হবার আগে এবং তার সম্মতি ছাড়া বিয়ে হলে সে মুসলিম বিবাহ বাতিল আইন, ১৯৩৯ অনুযায়ী আদালতে বিয়ে বাতিলের আবেদন করতে পারে যদি-মেয়েটি স্বামীর সাথে দাম্পত্য সম্পর্ক স্থাপন না করে বা তার ১৮ বৎসর বয়সের আগে সম্মতি ছাড়া বিয়ে হবার পর ১৯ বৎসর আসার আগেই বিবাহ বাতিলের আবেদন করতে হবে। বাল্যবিয়ে প্রতিরোধে Child Marriage Restraint Act, ২০১৭ (বাল্যবিবাহ নিরোধ আইন, ২০১৭) এবং Child Marriage Restraint Rules, ২০১৮ (বাল্যবিবাহ নিরোধ বিধিমালা, ২০১৮) এর বাস্তবায়ণ কার্যক্রম চলমান রয়েছে। বাল্যবিবাহ করার শাস্তি : প্রাপ্তবয়স্ক কোনো নারী বা পুরুষ বাল্যবিবাহ করলে এটি একটি অপরাধ এবং এজন্য তিনি অনধিক ২ (দুই) বছর কারাদণ্ড বা অনধিক ১ (এক) লক্ষ টাকা অর্থদণ্ড বা উভয় দণ্ডে দণ্ডনীয় হবেন এবং অর্থদণ্ড অনাদায়ে অনধিক ৩ (তিন) মাস কারাদণ্ডে দণ্ডনীয় হবেন।"
-                          )}
-                        </p>
-                      </div>
-                    </div>
-                  </section>
+                  
                 </div>
               `;
             })(),
@@ -4852,7 +4943,7 @@ const anatomyTopics2 = [
                             <th class="ch7l4-label-header"><span>${yhLang("No. of Children", "সন্তান সংখ্যা")}</span></th>
                             <th class="ch7l4-method-col" data-method="pill"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #00AEEF 0%, #db2777 100%); color: white;"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</span></th>
                             <th class="ch7l4-method-col" data-method="condom"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white;"><i class="fa-solid fa-shield-halved"></i> ${yhLang("Condom", "কনডম")}</span></th>
-                            <th class="ch7l4-method-col" data-method="injection"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</span></th>
+                            <th class="ch7l4-method-col" data-method="injection"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #24f50bf7 0%, #06d947 100%); color: white;"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</span></th>
                             <th class="ch7l4-method-col" data-method="implant"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;"><i class="fa-solid fa-microchip"></i> ${yhLang("Implant", "ইমপ্ল্যান্ট")}</span></th>
                             <th class="ch7l4-method-col" data-method="iud"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white;"><i class="fa-solid fa-shield"></i> ${yhLang("IUD", "আইইউডি")}</span></th>
                             <th class="ch7l4-method-col" data-method="tubectomy"><span class="ch7l4-method-badge" style="background: linear-gradient(135deg, #08bf05 0%, #08bf05 100%); color: white;"><i class="fa-solid fa-person-dress"></i> ${yhLang("Tubectomy", "টিউবেকটমি")}</span></th>
@@ -4862,7 +4953,7 @@ const anatomyTopics2 = [
                         <tbody class="ch7l4-table-body">
                           <tr class="ch7l4-availability-row" data-aos="fade-up" data-aos-delay="80">
                             <td class="ch7l4-label-cell">
-                              <div class="ch7l4-label-badge" style="background: linear-gradient(135deg, #fbbf2433 0%, #fbbf2411 100%); color: #92400e;">
+                              <div class="ch7l4-label-badge" style="background: linear-gradient(135deg, #24a2fb33 0%, #fbbf2411 100%); color: #0e9274;">
                                 <i class="fa-solid fa-heart"></i>
                                 <span>${yhLang("Newlywed or no children planned", "নবদম্পতি বা এখনো সন্তান নেয়ার পরিকল্পনা নেই")}</span>
                               </div>
@@ -4931,7 +5022,7 @@ const anatomyTopics2 = [
                           <tr class="ch7l4-usage-row ch7l4-method-1" data-aos="fade-up" data-aos-delay="80">
                             <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #00AEEF 0%, #db2777 100%);"><i class="fa-solid fa-pills"></i> ${yhLang("Pills", "খাবার বড়ি")}</div></td>
                             <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Take daily", "প্রতিদিন খেতে হয়")}</span></div></td>
-                            <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("Daily", "প্রতিদিন")}</div></td>
+                            <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("Daily", "দৈনিক")}</div></td>
                           </tr>
                           <tr class="ch7l4-usage-row ch7l4-method-2" data-aos="fade-up" data-aos-delay="100">
                             <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);"><i class="fa-solid fa-shield-halved"></i> ${yhLang("Condom", "কনডম")}</div></td>
@@ -4939,7 +5030,7 @@ const anatomyTopics2 = [
                             <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("During use", "ব্যবহারের সময়")}</div></td>
                           </tr>
                           <tr class="ch7l4-usage-row ch7l4-method-3" data-aos="fade-up" data-aos-delay="120">
-                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</div></td>
+                            <td class="ch7l4-method-cell"><div class="ch7l4-method-tag" style="background: linear-gradient(135deg, #24f50bf7 0%, #06d947 100%);"><i class="fa-solid fa-syringe"></i> ${yhLang("Injection", "ইনজেকশন")}</div></td>
                             <td class="ch7l4-usage-cell"><div class="ch7l4-usage-content"><i class="fa-solid fa-arrow-right"></i> <span>${yhLang("Deep intramuscular injection", "গভীর মাংসপেশীতে দিতে হয়")}</span></div></td>
                             <td class="ch7l4-duration-cell"><div class="ch7l4-duration-badge">${yhLang("3 months", "তিন মাস")}</div></td>
                           </tr>

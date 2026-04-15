@@ -738,6 +738,9 @@ span {
 .ch7l4-usage-cell, .ch7l4-duration-cell, .ch7l4-method-cell, .ch7l4-duration-badge {
     padding: 1px 14px;
 }
+.ch7l4-usage-cell, .ch7l4-duration-cell, .ch7l4-method-cell, .ch7l4-duration-badge {
+    border-right: 1px solid #c1b3b3;
+}
 .ch7l4-method-tag, .ch7l4-method-badge, .ch7l4-duration-badge {
     font-size: 14px;
 }
@@ -1096,7 +1099,12 @@ span {
 .m7l-def-card {
   padding: 5px;
 }
-
+/* module 6 lesson 3 */
+.ch6l7-icon-wrapper {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+}
 
 
 
