@@ -5857,7 +5857,10 @@ const anatomyTopics2 = [
                    
 
                     <figure class="m10l1" data-aos="zoom-in" data-aos-delay="140">
-                      <img src="img/modu10/hiv2.jpg" alt="এইচআইভী ও এইডস" class="ch10l3-image mx-auto img-zoom img-fluid rounded-4" />
+                      <div class="grid_2_new">
+                        <img src="img/modu10/hiv.jpg" alt="এইচআইভী ও এইডস" class="ch10l3-image mx-auto img-zoom img-fluid rounded-4" />
+                        <img src="img/modu10/hiv_new.jpg" alt="এইচআইভী ও এইডস" class="ch10l3-image mx-auto img-zoom img-fluid rounded-4" />
+                      </div>  
                     </figure>
                   </div>
                 </div>
@@ -6072,9 +6075,9 @@ const anatomyTopics2 = [
                       </div>
                     </div>
 
-                    <div class="ch11l4-right h-100" data-aos="zoom-in" data-aos-delay="60">
-                      <div class="ch11l4-image w-100 h-100">
-                        <img src="img/modu11/joni.jpg" alt="Cervical Cancer Prevention" class=" w-100">
+                    <div class="ch11l4-right" data-aos="zoom-in" data-aos-delay="60">
+                      <div class="ch11l4-image">
+                        <img src="img/modu11/joni.jpg" alt="Cervical Cancer Prevention" class=" w-75 h-75 ms-auto rounded-2">
                       </div>
                     </div>
                   </div>
@@ -6245,7 +6248,7 @@ const anatomyTopics2 = [
                       <p class="ch11l4-td-description">
                         ${yhLang(
                           "A woman needs a minimum of 5 doses of TD vaccine throughout her lifetime. According to the Expanded Programme on Immunization (EPI), vaccination starts at age 15 and requires a total of 5 TD vaccine doses. It takes approximately 2 years and 7 months to complete all doses.",
-                          "সারাজীবনে একজন নারীকে নূন্যতম ৫ ডোজ টিডি টিকা নিতে হয়। সম্প্রসারিত টিকাদান কর্মসূচী অনুযায়ী ১৫ বছর বয়স থেকে টিকা দেয়া শুরু করতে হয় এবং সে অনুযায়ী মোট ৫ ডোজ টিডি টিকা নিতে হয়। পুরো ডোজ শেষ করতে মোট ২ বছর ৭ মাস সময় লাগে।"
+                          "সারাজীবনে একজন নারীকে নূন্যতম ৫ ডোজ টিডি টিকা নিতে হয়।  সম্প্রসারিত টিকাদান কর্মসূচী অনুযায়ী ১৫ বছর বয়স থেকে টিকা দেয়া শুরু করতে হয় এবং সে অনুযায়ী মোট ৫ ডোজ টিডি টিকা নিতে হয়।  পুরো ডোজ শেষ করতে মোট ২ বছর ৭ মাস সময় লাগে।"
                         )}
                       </p>
                     </div>
@@ -6312,7 +6315,7 @@ const anatomyTopics2 = [
                         <p class="ch11l4-td-highlight-text">
                           ${yhLang(
                             "Pregnant women who have never received TD vaccine should follow the schedule above, with the 1st dose given in the 4th month of pregnancy. The 2nd dose should be given 4 weeks later. The 3rd dose should be given 6 months after the 2nd dose or during the next pregnancy. The 4th dose should be given 1 year after the 3rd dose or during the next pregnancy. The 5th dose should be given 1 year after the 4th dose or during the next pregnancy. When all 5 doses are given at the correct time, both mother and child are protected against tetanus and diphtheria for life.",
-                            "যে সকল গর্ভবতী মা আগে কখনো টিডি টিকা নেয়নি তাকে উপরের ছক অনুযায়ী ১ম ডোজ টিডি টিকা নিতে হবে গর্ভধারণের ৪র্থ মাসে। ২য় ডোজ নিতে হবে তার ৪ সপ্তাহ পর। ৩য় ডোজ নিতে হবে ২য় ডোজের ৬ মাস পর অথবা পরবর্তী গর্ভধারণের সময়। ৪র্থ ডোজ নিতে হবে ৩য় ডোজের ১ বছর পর অথবা পরবর্তী গর্ভধারণের সময়। ৫ম ডোজটি ৪র্থ ডোজের ১ বছর পর অথবা পরবর্তী গর্ভধারণের সময় নিতে হবে। এভাবে ৫ ডোজ টিকা সঠিক সময়ে নেয়া হলে মা ও শিশু সারাজীবন ধনুষ্টংকার ও ডিপথেরিয়া থেকে রক্ষা পাবে।"
+                            "যে সকল গর্ভবতী মা আগে কখনো টিডি টিকা নেয়নি তাকে উপরের ছক অনুযায়ী ১ম ডোজ টিডি টিকা নিতে হবে গর্ভধারণের ৪র্থ মাসে। ২য় ডোজ নিতে হবে তার ৪ সপ্তাহ পর।  ৩য় ডোজ নিতে হবে ২য় ডোজের ৬ মাস পর অথবা পরবর্তী গর্ভধারণের সময়।  ৪র্থ ডোজ নিতে হবে ৩য় ডোজের ১ বছর পর অথবা পরবর্তী গর্ভধারণের সময়।  ৫ম ডোজটি ৪র্থ ডোজের ১ বছর পর অথবা পরবর্তী গর্ভধারণের সময় নিতে হবে।  এভাবে ৫ ডোজ টিকা সঠিক সময়ে নেয়া হলে মা ও শিশু সারাজীবন ধনুষ্টংকার ও ডিপথেরিয়া থেকে রক্ষা পাবে।"
                           )}
                         </p>
                         <p class="ch11l4-td-highlight-text">
@@ -6329,7 +6332,7 @@ const anatomyTopics2 = [
                             )}
                           </p>
                           <p class="ch11l4-td-important-text">
-                            <strong>${yhLang("Important:", "মনে রাখতে হবে:")}</strong> <span style="color: blue;">${yhLang(
+                            <strong>${yhLang("Important:", "মনে রাখতে হবে:")}</strong> <span style="color: green;">${yhLang(
                               "The timing of vaccination does not change with the timing of delivery.",
                               "ধনুষ্টংকার ও ডিপথেরিয়া মারাত্মক রোগ। এ রোগগুলো থেকে রক্ষা পেতে সব নারীকে ৫ ডোজ টিডি টিকা সঠিক সময়ে নিতে হবে।"
                             )}</span>

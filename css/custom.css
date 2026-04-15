@@ -918,8 +918,8 @@ span {
     padding: 4px;
 }
 .ch11l5-point-icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     font-size: 0.60rem;
 }
 .ch11l5-point-item {
@@ -938,9 +938,7 @@ span {
 .ch11l4-td-description, .ch11l4-td-highlight-text {
     line-height: 14px;
 }
-.ch11l4-td-table td {
-    padding: 3px 6px;
-}
+
 .ch11l4-td-highlight-card {
     padding: 3px 10px;
 }

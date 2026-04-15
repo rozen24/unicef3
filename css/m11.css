@@ -288,7 +288,7 @@
 .ch11l5-title {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #7b1fa2;
+  color: #1f90a2;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -296,26 +296,25 @@
   padding: 9px 14px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 240, 255, 0.9));
   border-left: 4px solid;
-  border-image: linear-gradient(135deg, #7b1fa2 0%, #ab47bc 100%) 1;
+  border-image: linear-gradient(135deg, #1f90a2 0%, #47bc91 100%) 1;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(186, 104, 200, 0.15);
   font-family: "Noto Sans Bengali", "Poppins", sans-serif;
 }
 .ch11l5-title i {
   font-size: 1.4rem;
-  color: #ab47bc;
+  color: #47bc91;
 }
 .ch11l5-description-box {
   padding: 12px;
   border-radius: 10px;
-  background: linear-gradient(135deg, rgba(237, 201, 247, 0.6) 0%, rgba(225, 190, 231, 0.5) 100%);
   border: 1px solid rgba(171, 71, 188, 0.3);
-  border-left: 3px solid #ab47bc;
+  border-left: 3px solid #47bc91;
   box-shadow: 0 2px 10px rgba(171, 71, 188, 0.08);
 }
 .ch11l5-description {
   font-size: 0.88rem;
-  color: #4a148c;
+  color: #000;
   line-height: 1.6;
   margin: 0;
   font-weight: 500;
@@ -335,20 +334,16 @@
   transition: all 0.3s ease;
 }
 .ch11l5-points-section:nth-child(1) {
-  border-left: 3px solid #ab47bc;
-  background: linear-gradient(135deg, rgba(243, 229, 245, 0.8), rgba(225, 190, 231, 0.6));
+  border-left: 3px solid #47bc91;
 }
 .ch11l5-points-section:nth-child(2) {
   border-left: 3px solid #ce93d8;
-  background: linear-gradient(135deg, rgba(248, 187, 208, 0.5), rgba(245, 220, 220, 0.4));
 }
 .ch11l5-points-section:nth-child(3) {
   border-left: 3px solid #ba68c8;
-  background: linear-gradient(135deg, rgba(225, 190, 231, 0.5), rgba(206, 147, 216, 0.4));
 }
 .ch11l5-points-section:nth-child(4) {
   border-left: 3px solid #e1bee7;
-  background: linear-gradient(135deg, rgba(243, 229, 245, 0.7), rgba(237, 201, 247, 0.5));
 }
 .ch11l5-points-section:hover {
   transform: translateY(-1px);
@@ -357,7 +352,7 @@
 .ch11l5-section-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #6a1b9a;
+  color: #1f90a2;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -367,7 +362,7 @@
 }
 .ch11l5-section-title i {
   font-size: 0.95rem;
-  color: #ab47bc;
+  color: #47bc91;
 }
 .ch11l5-points-list {
   list-style: none;
@@ -406,28 +401,28 @@
 }
 /* Icon color variations for different point types */
 .ch11l5-points-section:nth-child(1) .ch11l5-point-icon {
-  background: linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%);
+  background: linear-gradient(135deg, #47bc91 0%, #24aa85 100%);
   color: white;
   box-shadow: 0 1px 4px rgba(171, 71, 188, 0.2);
 }
 .ch11l5-points-section:nth-child(2) .ch11l5-point-icon {
-  background: linear-gradient(135deg, #ce93d8 0%, #ba68c8 100%);
+  background: linear-gradient(135deg, #47bc91 0%, #24aa85 100%);
   color: white;
   box-shadow: 0 1px 4px rgba(206, 147, 216, 0.2);
 }
 .ch11l5-points-section:nth-child(3) .ch11l5-point-icon {
-  background: linear-gradient(135deg, #ba68c8 0%, #ab47bc 100%);
+  background: linear-gradient(135deg, #47bc91 0%, #24aa85 100%);
   color: white;
   box-shadow: 0 1px 4px rgba(186, 104, 200, 0.2);
 }
 .ch11l5-points-section:nth-child(4) .ch11l5-point-icon {
-  background: linear-gradient(135deg, #e1bee7 0%, #ce93d8 100%);
-  color: #6a1b9a;
+  background: linear-gradient(135deg, #47bc91 0%, #24aa85 100%);
+  color: #fcfcfc;
   box-shadow: 0 1px 4px rgba(206, 147, 216, 0.12);
 }
 .ch11l5-point-text {
   font-size: 0.82rem;
-  color: #4a148c;
+  color: #000;
   line-height: 1.5;
   font-weight: 500;
   font-family: "Noto Sans Bengali", "Poppins", sans-serif;
@@ -688,7 +683,7 @@
   }
   .ch11l5-description-box {
     padding: 8px;
-    border-left: 2px solid #ab47bc;
+    border-left: 2px solid #47bc91;
   }
   .ch11l5-description {
     font-size: 0.75rem;
@@ -2690,7 +2685,7 @@
 .ch8l6-title {
     font-size: 1.8rem;
     font-weight: 600;
-    background: linear-gradient(135deg, #007193 0%, #007193 50%, #b45309 100%);
+    background: linear-gradient(135deg, #007193 0%, #007193 50%, #097db4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -7645,7 +7640,7 @@ figure.image-card {
 }
 .m5l3-topic-card:nth-child(2) .m5l3-topic-icon {
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(251, 191, 36, 0.15) 100%);
-  color: #b45309;
+  color: #097db4;
   border: 1px solid rgba(245, 158, 11, 0.3);
 }
 .m5l3-topic-card:nth-child(2):hover .m5l3-topic-icon {
@@ -8233,7 +8228,7 @@ figure.image-card {
   font-size: 0.8rem;
   font-weight: 700;
   margin: 0;
-  color: #1d497f;
+  color: #1d7f71;
 }
 .m5l4-reminder-intro {
   font-size: 0.55rem;
@@ -10302,7 +10297,7 @@ figure.image-card {
   align-items: center;
   gap: 5px;
   padding: 5px 8px;
-  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  background: linear-gradient(135deg, #fdfdfd 0%, #d8dadb 100%);
   border-left: 4px solid #007193;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
@@ -10313,7 +10308,6 @@ figure.image-card {
 }
 .ch11l4-td-table-wrapper {
   overflow-x: auto;
-  border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   background: white;
   border: 1px solid rgba(226, 232, 240, 0.8);
@@ -10324,7 +10318,7 @@ figure.image-card {
   background: white;
 }
 .ch11l4-td-th {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #18663f 0%, #74a24b 100%);
   color: white;
   padding: 5px 6px;
   text-align: left;
@@ -10354,44 +10348,39 @@ figure.image-card {
 }
 .ch11l4-td-td-disease {
   font-weight: 700;
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(166, 139, 250, 0.08) 100%);
   border-left: 4px solid #00AEEF;
   color: #6B21A8;
 }
 .ch11l4-td-vaccine {
   font-weight: 600;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(6, 182, 212, 0.06) 100%);
   color: #3b82f6;
 }
 .ch11l4-td-dose {
   font-weight: 600;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.06) 100%);
   color: #059669;
 }
 .ch11l4-td-dose-num {
   font-weight: 700;
   padding: 3px 5px;
-  background: linear-gradient(135deg, #dbeafe 0%, #cffafe 100%);
   color: #22a9ef;
   border-radius: 6px;
   border-left: 3px solid #0284c7;
   text-align: center;
+  border-bottom: 1px solid #0284c7;
 }
 .ch11l4-td-timing {
-  background: linear-gradient(135deg, #fef3c7 0%, #fef08a 100%);
   color: #293ab5;
   border-left: 3px solid #007193;
   font-weight: 500;
+  border-bottom: 1px solid #0284c7;
 }
 .ch11l4-td-site {
   font-weight: 600;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(236, 72, 153, 0.06) 100%);
-  color: #b45309;
+  color: #097db4;
 }
 .ch11l4-td-route {
   font-weight: 700;
   text-align: center;
-  background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%);
   color: #16a34a;
   border-radius: 6px;
   border: 2px solid #22c55e;
@@ -10416,11 +10405,8 @@ figure.image-card {
   margin-bottom: 8px;
 }
 .ch11l4-td-highlight-card {
-  background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
   border-radius: 14px;
   padding: 10px;
-  box-shadow: 0 16px 40px rgba(249, 115, 22, 0.2),
-              inset 0 1px 2px rgba(255, 255, 255, 0.5);
   position: relative;
 }
 .ch11l4-td-highlight-card::before {
@@ -10437,7 +10423,7 @@ figure.image-card {
 .ch11l4-td-highlight-title {
   font-size: 0.95rem;
   font-weight: 800;
-  color: #b45309;
+  color: #097db4;
   margin: 0 0 6px 0;
   display: flex;
   align-items: center;
@@ -10456,25 +10442,22 @@ figure.image-card {
 }
 .ch11l4-td-highlight-text {
   font-size: 0.75rem;
-  color: #7c2d12;
   line-height: 1.5;
   margin: 0 0 6px 0;
   padding: 0;
   font-weight: 500;
 }
 .ch11l4-td-important-box {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
   border-left: 4px solid #08bf05;
   border-radius: 10px;
   padding: 6px 8px;
   margin-top: 6px;
-  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.1);
   border: 1px solid rgba(239, 68, 68, 0.2);
 }
 .ch11l4-td-important-text {
   margin: 0;
   font-size: 0.68rem;
-  color: #1d497f;
+  color: #1d7f71;
   font-weight: 600;
   line-height: 1.4;
   display: flex;
@@ -10632,9 +10615,7 @@ figure.image-card {
   .ch11l4-td-notes-text {
     font-size: 0.65rem;
   }
-  .ch11l4-td-table-wrapper {
-    border-radius: 8px;
-  }
+  
 }
 @media (max-width: 480px) {
   .ch11l4-slide-td {
@@ -11121,7 +11102,7 @@ figure.image-card {
     border-left: 5px solid #293ab5;
 }
 .ch3l3-row-peer {
-  border-left: 5px solid #1d497f;
+  border-left: 5px solid #1d7f71;
   background: linear-gradient(90deg, rgba(220, 38, 38, 0.04) 0%, rgba(239, 68, 68, 0.02) 100%);
 }
 .ch3l3-row-sexuality {
@@ -11237,7 +11218,7 @@ figure.image-card {
 }
 .ch3l3-row-peer {
     background: linear-gradient(135deg, rgb(2 56 251 / 10%) 0%, rgb(4 0 255 / 8%) 100%);
-    color: #1d497f;
+    color: #1d7f71;
     border-right-color: rgba(220, 38, 38, 0.3);
 }
 .ch3l3-row-sexuality {
@@ -11268,7 +11249,7 @@ figure.image-card {
 .ch3l3-row-peer .ch3l3-point-icon {
   background: linear-gradient(135deg, rgb(38 77 220 / 15%), rgba(239, 68, 68, 0.1));
   border-color: rgba(220, 38, 38, 0.3);
-  color: #1d497f;
+  color: #1d7f71;
 }
 .ch3l3-row-sexuality .ch3l3-point-icon {
   background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(192, 132, 250, 0.1));

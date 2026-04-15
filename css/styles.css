@@ -23851,6 +23851,11 @@ input::placeholder {
   grid-template-columns: 60% 2fr;
   gap: 10px;
 }
+.grid_2_new {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 .grid_3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
