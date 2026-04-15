@@ -5398,16 +5398,32 @@ const anatomyTopics2 = [
                     <p class="ch8l8-desc-text">${mainDescription}</p>
                   </section>
 
-                  <section class="ch8l8-section-wrapper mb-lg-3" data-aos="fade-up" data-aos-delay="60">
-                    <h2 class="ch8l8-section-title">
-                      <i class="fa-solid fa-clipboard-list"></i>
-                      ${sectionTitle}
-                    </h2>
+                  <div class="row g-1">
+                      <div class="col-md-6">
+                          <section class="ch8l8-section-wrapper mb-lg-3" data-aos="fade-up" data-aos-delay="60">
+                                    <h2 class="ch8l8-section-title">
+                                      <i class="fa-solid fa-clipboard-list"></i>
+                                      ${sectionTitle}
+                                    </h2>
 
-                    <div class="ch8l8-points-container">
-                      ${renderPoints()}
-                    </div>
-                  </section>
+                                    <div class="ch8l8-points-container">
+                                      ${renderPoints()}
+                                    </div>
+                                  </section>
+                              </div>
+                              <div class="col-md-6">
+                                  <h2 class="slide-title gradient-text mb-2 ch8l6-title ch-title" data-aos="fade-up"><i class="fa-solid fa-person-breastfeeding"></i> ${yhLang(
+                            "গর্ভকালীন বিপদচিহ্নসমূহ",
+                            "গর্ভকালীন বিপদচিহ্নসমূহ",
+                          )}</h2>
+
+                          <section class="modern-card glass-card mx-auto menstrual-info-card" data-aos="fade-up" data-aos-delay="40">
+                            <figure class="image-card_m8l3 mx-auto">
+                              <img src="img/modu8/gorvo.png" alt="গর্ভকালীন বিপদচিহ্ন" class="mx-auto img-zoom rounded-4 shadow-sm animate-float-slow" />
+                            </figure>
+                          </section>
+                      </div>
+                  </div>
                 </div>
               `;
             })(),
@@ -6077,7 +6093,7 @@ const anatomyTopics2 = [
 
                     <div class="ch11l4-right" data-aos="zoom-in" data-aos-delay="60">
                       <div class="ch11l4-image">
-                        <img src="img/modu11/joni.jpg" alt="Cervical Cancer Prevention" class=" w-75 h-75 ms-auto rounded-2">
+                        <img src="img/modu11/joni.jpg" alt="Cervical Cancer Prevention" class="ms-auto rounded-2">
                       </div>
                     </div>
                   </div>
@@ -6199,7 +6215,7 @@ const anatomyTopics2 = [
                           <img src="img/modu11/dose1.jpg" alt="HPV Vaccine Dose 1" class="ch11l5-image img-zoom">
                         </div>
                         <div class="ch11l5-image-box ch11l5-image-2">
-                          <img src="img/modu11/dose2.jpg" alt="HPV Vaccine Dose 2" class="ch11l5-image img-zoom">
+                          <img src="img/modu11/dose2_new.jpg" alt="HPV Vaccine Dose 2" class="ch11l5-image img-zoom">
                         </div>
                       </div>
                     </div>
@@ -6332,7 +6348,7 @@ const anatomyTopics2 = [
                             )}
                           </p>
                           <p class="ch11l4-td-important-text">
-                            <strong>${yhLang("Important:", "মনে রাখতে হবে:")}</strong> <span style="color: green;">${yhLang(
+                            <strong>${yhLang("Important:", "মনে রাখতে হবে:")}</strong> <span style="color: greendose2.jpg;">${yhLang(
                               "The timing of vaccination does not change with the timing of delivery.",
                               "ধনুষ্টংকার ও ডিপথেরিয়া মারাত্মক রোগ। এ রোগগুলো থেকে রক্ষা পেতে সব নারীকে ৫ ডোজ টিডি টিকা সঠিক সময়ে নিতে হবে।"
                             )}</span>
@@ -6804,7 +6820,11 @@ const anatomyTopics2 = [
                 <div class="ch12l6-slide lesson-slide">
                   
                   <div class="ch12l6-image-container" data-aos="zoom-in" data-aos-delay="40">
-                    <img src="img/modu12/child.jpg" alt="Child Abuse Prevention" class="ch12l6-image">
+                    <div class="grid_3">
+                      <img src="img/modu12/child1.jpg" alt="Child Abuse Prevention" class="ch12l6-image">
+                      <img src="img/modu12/child2.jpg" alt="Child Abuse Prevention" class="ch12l6-image">
+                      <img src="img/modu12/child3.jpg" alt="Child Abuse Prevention" class="ch12l6-image">
+                    </div>
                   </div>
                 </div>
               `;

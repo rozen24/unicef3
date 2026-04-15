@@ -156,8 +156,8 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .ch11l4-image img{
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: fill;
   max-height: 550px;
 }
@@ -2651,7 +2651,6 @@
 }
 /* ===== MODULE 8 LESSON 6: ADOLESCENT MOTHERHOOD RISKS (ORBIT LAYOUT) ===== */
 .image-card_m8l3{
-  width: 80%;
   margin: 0 auto;
 }
 .ch8l6-slide {
@@ -3984,7 +3983,7 @@
 .ch8l8-points-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 35px;
 }
 .ch8l8-point-section {
   padding: 5px 12px;
@@ -10324,7 +10323,7 @@ figure.image-card {
   text-align: left;
   font-weight: 700;
   font-size: 0.65rem;
-  border-bottom: 3px solid #5a67d8;
+  border: 3px solid #5a67d8;
   white-space: nowrap;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
@@ -10345,6 +10344,8 @@ figure.image-card {
   color: #374151;
   line-height: 1.4;
   vertical-align: middle;
+  border-right: 3px solid #0284c7;
+  border-bottom: 3px solid #0284c7;
 }
 .ch11l4-td-td-disease {
   font-weight: 700;
@@ -10556,6 +10557,7 @@ figure.image-card {
   .ch11l4-td-table td,
   .ch11l4-td-table th {
     padding: 4px 5px;
+    border-right: 3px solid #0284c7;
   }
 }
 @media (max-width: 768px) {
@@ -10591,6 +10593,7 @@ figure.image-card {
   .ch11l4-td-table td,
   .ch11l4-td-table th {
     padding: 3px 4px;
+    border-right: 3px solid #0284c7;
   }
   .ch11l4-td-highlight-title {
     font-size: 0.8rem;
@@ -10634,6 +10637,8 @@ figure.image-card {
   .ch11l4-td-table td,
   .ch11l4-td-table th {
     padding: 2px 3px;
+    border-right: 3px solid #0284c7;
+
   }
   .ch11l4-td-highlight-title {
     font-size: 0.75rem;
