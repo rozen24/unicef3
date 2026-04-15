@@ -5685,7 +5685,7 @@ const anatomyTopics2 = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang(
+                  <h2 class="slide-title gradient-text mb-2 ch9l4-title ch-title" data-aos="fade-up"><i class="fa-solid fa-viruses"></i>${yhLang(
                     "যৌনবাহিত রোগের ঝুঁকিসমূহ",
                     "যৌনবাহিত রোগের ঝুঁকিসমূহ",
                   )}</h2>

@@ -4397,7 +4397,7 @@
   width: 100%;
 }
 .ch8l9-intro-box {
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(236, 72, 153, 0.04) 100%);
+  background: linear-gradient(135deg, rgb(72 221 236 / 8%) 0%, rgba(236, 72, 153, 0.04) 100%);
   border-left: 5px solid #00AEEF;
   border-radius: 12px;
   padding: 12px 16px;
@@ -4448,7 +4448,7 @@
 }
 /* Point Type 1: Pink - Mother/Newborn Checkups */
 .ch8l9-point-type-1 {
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 100%);
+  background: linear-gradient(135deg, rgb(72 213 236 / 8%) 0%, rgba(219, 39, 119, 0.04) 100%);
   border-left: 4px solid #00AEEF;
   box-shadow: 0 6px 16px rgba(236, 72, 153, 0.12);
 }
@@ -4487,9 +4487,9 @@
 }
 /* Point Type 4: Amber - Depression Risk */
 .ch8l9-point-type-4 {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(217, 119, 6, 0.04) 100%);
-  border-left: 4px solid #007193;
-  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.12);
+    background: linear-gradient(135deg, rgb(79 245 11 / 8%) 0%, rgb(77 217 6 / 4%) 100%);
+    border-left: 4px solid #007193;
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.12);
 }
 .ch8l9-point-type-4::before {
   background: linear-gradient(90deg, #007193 0%, #007193 100%);
