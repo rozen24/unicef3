@@ -8743,7 +8743,7 @@ const orbitItems = [
 
               return `
                 <link rel="stylesheet" href="css/m14.css">
-                <div class="m14l1-slide">
+                <div class="lesson-slide m14l1-slide">
                   <span class="m14l1-shape m14l1-shape-a" aria-hidden="true"></span>
                   <span class="m14l1-shape m14l1-shape-b" aria-hidden="true"></span>
                   <span class="m14l1-shape m14l1-shape-c" aria-hidden="true"></span>
@@ -8989,19 +8989,19 @@ const orbitItems = [
 .m14lem-ei-li-text{font-size:0.62rem;line-height:1.3;color:#1f3f5d;}
 .m14lem-sky{background:linear-gradient(120deg,#edf8ff,#f6fcff);border-color:rgba(88,162,214,0.3);box-shadow:-1px 1px 4px rgba(78,145,193,0.13);} .m14lem-sky .m14lem-li-icon{background:#d9eeff;color:#297eb9;}
 .m14lem-green{background:linear-gradient(120deg,#effff3,#f7fffb);border-color:rgba(84,169,124,0.3);box-shadow:1px 1px 4px rgba(74,157,114,0.13);} .m14lem-green .m14lem-li-icon{background:#dcf8e8;color:#2f9a69;}
-.m14lem-sun{background:linear-gradient(120deg,#fff9e8,#fffdf2);border-color:rgba(216,172,71,0.34);box-shadow:1px 2px 4px rgba(195,151,55,0.13);} .m14lem-sun .m14lem-li-icon{background:#ffefbd;color:#b8831f;}
+.m14lem-sun{border-color:rgba(216,172,71,0.34);box-shadow:1px 2px 4px rgba(195,151,55,0.13);} .m14lem-sun .m14lem-li-icon{background:#ffefbd;color:#b8831f;}
 .m14lem-teal{background:linear-gradient(120deg,#effffb,#f7fffd);border-color:rgba(76,176,166,0.3);box-shadow:1px -1px 4px rgba(65,157,148,0.13);} .m14lem-teal .m14lem-li-icon{background:#d7faf2;color:#2c9185;}
 .m14lem-info{background:linear-gradient(120deg,#eef7ff,#f6fbff);border-color:rgba(94,150,206,0.3);box-shadow:-1px 1px 4px rgba(77,137,190,0.13);} .m14lem-info .m14lem-li-icon{background:#dcebff;color:#2a78af;}
-.m14lem-violet{background:linear-gradient(120deg,#f8f1ff,#fdf9ff);border-color:rgba(165,118,214,0.28);box-shadow:-1px 2px 4px rgba(151,104,197,0.13);} .m14lem-violet .m14lem-li-icon{background:#f0e0ff;color:#8e5ec3;}
-.m14lem-peach{background:linear-gradient(120deg,#fff2ea,#fffaf6);border-color:rgba(214,139,102,0.31);box-shadow:1px 1px 4px rgba(194,118,82,0.13);} .m14lem-peach .m14lem-li-icon{background:#ffe1d2;color:#bc6f49;}
-.m14lem-amber{background:linear-gradient(120deg,#fff7e9,#fffdf5);border-color:rgba(212,167,71,0.32);box-shadow:1px 1px 4px rgba(196,151,57,0.13);} .m14lem-amber .m14lem-li-icon{background:#ffefc3;color:#b7821f;}
-.m14lem-warn{background:linear-gradient(120deg,#fff4ea,#fffaf3);border-color:rgba(213,147,83,0.32);box-shadow:1px 2px 4px rgba(201,136,62,0.13);} .m14lem-warn .m14lem-li-icon{background:#ffe8ce;color:#c77635;}
-.m14lem-danger{background:linear-gradient(120deg,#fff1f3,#fff8f8);border-color:rgba(214,96,106,0.32);box-shadow:1px 1px 4px rgba(196,84,94,0.13);} .m14lem-danger .m14lem-li-icon{background:#ffdce0;color:#c14a58;}
-.m14lem-mint{background:linear-gradient(120deg,#edfff8,#f6fffb);border-color:rgba(88,174,152,0.3);box-shadow:0 2px 4px rgba(73,152,132,0.13);} .m14lem-mint .m14lem-li-icon{background:#d9fbed;color:#328a74;}
-.m14lem-ei-info{background:linear-gradient(120deg,#eef7ff,#f6fbff);border-color:rgba(94,150,206,0.3);} .m14lem-ei-info .m14lem-ei-li-icon{background:#dcebff;color:#2a78af;}
+.m14lem-violet{border-color:rgba(165,118,214,0.28);box-shadow:-1px 2px 4px rgba(151,104,197,0.13);} .m14lem-violet .m14lem-li-icon{background:#f0e0ff;color:#8e5ec3;}
+.m14lem-peach{border-color:rgba(214,139,102,0.31);box-shadow:1px 1px 4px rgba(194,118,82,0.13);} .m14lem-peach .m14lem-li-icon{background:#ffe1d2;color:#bc6f49;}
+.m14lem-amber{border-color:rgba(212,167,71,0.32);box-shadow:1px １px 4px rgba(１96,１5１,５７,０.１３);} .m１４lem-amber .m１４lem-li-icon{background:#ffefc3;color:#b７８２１f;}
+.m１４lem-warn{background:linear-gradient(１２０deg,#fff４ea,#fffaf３);border-color:rgba(２１３,１４７,８３,０.３２);box-shadow:１px ２px ４px rgba(２０１,１３６,６２,０.１３);} .m１４lem-warn .m１４lem-li-icon{background:#ffe８ce;color:#c７７６３５;}
+.m１４lem-danger{background:linear-gradient(１２０deg,#fff１f３,#fff８f８);border-color:rgba(２１４,９６,１０６,０.３２);box-shadow:１px １px ４px rgba(１９６,８４,９４,０.１３);} .m１４lem-danger .m１４lem-li-icon{background:#ffdce０;color:#c₁４a５８;}
+.m１４lem-mint{background:linear-gradient(１２０deg,#edfff８,#f６fffb);border-color:rgba(８８,１７４,１５２,０.３);box-shadow:０ ２px ４px rgba(７３,１５２,１３２,０.₁３);} .m１４lem-mint .m１４lem-li-icon{background:#d９fbed;color:#3２8a７４;}
+.m₁₄lem-ei-info{background:linear-gradient(₁₂₀deg,#eef７ff,#f6fbff);border-color:rgba(９₄,₁₅₀,₂₀₆,₀.₃);} .m₁₄lem-ei-info .m₁₄lem-ei-li-icon{background:#dcebff;color:#₂a78af;}
 .m14lem-ei-success{background:linear-gradient(120deg,#effff3,#f7fffb);border-color:rgba(84,169,124,0.3);} .m14lem-ei-success .m14lem-ei-li-icon{background:#dcf8e8;color:#2f9a69;}
-.m14lem-ei-peach{background:linear-gradient(120deg,#fff2ea,#fffaf6);border-color:rgba(214,139,102,0.3);} .m14lem-ei-peach .m14lem-ei-li-icon{background:#ffe1d2;color:#bc6f49;}
-.m14lem-ei-violet{background:linear-gradient(120deg,#f8f1ff,#fdf9ff);border-color:rgba(165,118,214,0.28);} .m14lem-ei-violet .m14lem-ei-li-icon{background:#f0e0ff;color:#8e5ec3;}
+.m14lem-ei-peach{border-color:rgba(214,139,102,0.3);} .m14lem-ei-peach .m14lem-ei-li-icon{background:#ffe1d2;color:#bc6f49;}
+.m14lem-ei-violet{border-color:rgba(165,118,214,0.28);} .m14lem-ei-violet .m14lem-ei-li-icon{background:#f0e0ff;color:#8e5ec3;}
 @media(max-width:820px){.m14lem-grid{grid-template-columns:1fr;} .m14lem-title{font-size:0.9rem;}}
                 </style>
                 <div class="m14lem-slide lesson-slide">
@@ -9438,7 +9438,7 @@ const orbitItems = [
 
               return `
                 <link rel="stylesheet" href="css/m14.css">
-                <div class="m14l3-slide">
+                <div class="lesson-slide m14l3-slide">
                   <span class="m14l3-shape m14l3-shape-a" aria-hidden="true"></span>
                   <span class="m14l3-shape m14l3-shape-b" aria-hidden="true"></span>
                   <span class="m14l3-shape m14l3-shape-c" aria-hidden="true"></span>
