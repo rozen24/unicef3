@@ -4230,7 +4230,7 @@ const anatomyTopics2 = [
               };  
               return `
                 <div class="ch6l5-slide lesson-slide" data-module="6" data-lesson="5">
-  <div class="row g-1">
+  <div class="row g-1 align-items-center">
     
     <!-- LEFT COLUMN -->
     <div class="col-md-6">
@@ -4350,95 +4350,7 @@ const anatomyTopics2 = [
             })(),
           },
           {
-            id: "ch6-lesson-2",
-            title: yhLang("Causes of Child Marriage", "বাল্যবিবাহের কারণ"),
-            icon: "fa-circle-exclamation",
-            gradientClass: "bg-gradient-orange",
-            audioFile: "",
-            quiz: {
-              passingScore: 60,
-              questions: [
-                {
-                  id: "q6f",
-                  question: yhLang(
-                    "What is a major cause of child marriage ?",
-                    "বাল্যবিবাহের প্রধান কারণ কী ?"
-                  ),
-                  options: [
-                    yhLang(
-                      "Poverty, gender discrimination, and lack of education",
-                      "দারিদ্র্য, জেন্ডার বৈষম্য এবং শিক্ষার অভাব"
-                    ),
-                    yhLang("Only poverty", "শুধুমাত্র দারিদ্র্য"),
-                    yhLang("Only gender discrimination", "শুধুমাত্র জেন্ডার বৈষম্য"),
-                    yhLang("Child's choice", "শিশুর পছন্দ"),
-                  ],
-                  correctAnswer: 0,
-                },
-              ],
-            },
-            content: (function () {
-              const causes = [
-                { title: yhLang("Poverty", "দারিদ্র্যতা"), icon: "fa-hand-holding-heart", color: "#08bf05", desc: yhLang("Economic hardship forces families to marry off daughters early", "অর্থনৈতিক কঠিনতা") },
-                { title: yhLang("Social Customs", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার"), icon: "fa-person", color: "#f59e0b", desc: yhLang("Traditional beliefs and superstitions", "প্রচলিত সামাজিক প্রথা ও কুসংস্কার") },
-                { title: yhLang("Lack of Education", "শিক্ষা ও সচেতনতার অভাব"), icon: "fa-book", color: "#10b981", desc: yhLang("No awareness about rights", "শিক্ষা ও সচেতনতার অভাব") },
-                { title: yhLang("Dowry Burden", "কন্যাদায়গ্রস্ত পিতার দায়মুক্ত হওয়া"), icon: "fa-sack-dollar", color: "#8b5cf6", desc: yhLang("Parents seek relief from dowry", "কন্যাদায়গ্রস্ত পিতামাতা") },
-                { title: yhLang("Gender Inequality", "জেন্ডার বৈষম্য"), icon: "fa-scale-balanced", color: "#00AEEF", desc: yhLang("Girls considered inferior", "মেয়েদের অসমান অধিকার") },
-                { title: yhLang("Social Insecurity", "সামাজিক নিরাপত্তাহীনতা"), icon: "fa-circle-exclamation", color: "#06b6d4", desc: yhLang("Unsafe environment for girls", "সামাজিক নিরাপত্তাহীনতা") },
-                { title: yhLang("Girl Neglect", "মেয়ে শিশুর প্রতি অবহেলা বা তাকে বোঝা মনে করা"), icon: "fa-child", color: "#f97316", desc: yhLang("Girls seen as burden", "মেয়ে শিশুর প্রতি অবহেলা") },
-                { title: yhLang("Legal Ignorance", "বিবাহ আইন সম্পর্কে ধারণা কম থাকা"), icon: "fa-gavel", color: "#08bf05", desc: yhLang("Unaware of marriage laws", "বিবাহ আইন সম্পর্কে অজ্ঞতা") },
-                { title: yhLang("School Dropout", "স্কুল থেকে ঝরে পড়া"), icon: "fa-graduation-cap", color: "#06b6d4", desc: yhLang("Girls drop out of school", "স্কুল থেকে ঝরে পড়া") },
-                { title: yhLang("Poor Enforcement", "বাল্য বিবাহ নিরোধ আইনের যথাযথ প্রয়োগ না হওয়া"), icon: "fa-check-double", color: "#3b82f6", desc: yhLang("Weak law implementation", "আইনের যথাযথ প্রয়োগ নেই") }
-              ];
-
-              const renderOrbitItems = () => {
-                return causes.map((cause, idx) => {
-                  const angle = (idx * 360) / causes.length;
-                  return `
-                    <div class="ch6l6-orbit-item" style="--angle: ${angle}deg" data-aos="fade-in" data-aos-delay="${50 + idx * 30}">
-                      <div class="ch6l6-orbit-card" style="border-top-color: ${cause.color};">
-                        <div class="ch6l6-orbit-icon" style="background: linear-gradient(135deg, ${cause.color} 0%, ${cause.color}cc 100%);">
-                          <i class="fa-solid ${cause.icon}"></i>
-                        </div>
-                        <p class="ch6l6-orbit-title">${cause.title}</p>
-                      </div>
-                    </div>
-                  `;
-                }).join("");
-              };
-
-              return `
-                <div class="ch6l6-slide lesson-slide" data-module="6" data-lesson="6">
-                  <section class="ch6l6-introduction" data-aos="fade-up">
-                    <h2 class="ch6l6-main-title">
-                      <i class="fa-solid fa-circle-exclamation"></i>
-                      ${yhLang("Causes of Child Marriage", "বাল্যবিবাহের কারণ")}
-                    </h2>
-                  </section>
-
-                  <section class="ch6l6-orbit-container" data-aos="fade-up" data-aos-delay="50">
-                    <div class="ch6l6-orbit-wrapper">
-                      <!-- Center -->
-                      <div class="ch6l6-orbit-center">
-                        <div class="ch6l6-center-content">
-                          <i class="fa-solid fa-children"></i>
-                          <p>${yhLang("Child Marriage", "বাল্যবিবাহ")}</p>
-                        </div>
-                      </div>
-
-                      <!-- Orbit Ring -->
-                      <div class="ch6l6-orbit-ring"></div>
-
-                      <!-- Orbit Items -->
-                      ${renderOrbitItems()}
-                    </div>
-                  </section>
-                </div>
-              `;
-            })(),
-          },
-          {
-            id: "ch6-lesson-3",
+            id: "ch6-lesson-4",
             title: yhLang("Consequences of Child Marriage", "বাল্যবিবাহের পরিণতি"),
             icon: "fa-triangle-exclamation",
             gradientClass: "bg-gradient-red",
@@ -4576,7 +4488,7 @@ const anatomyTopics2 = [
             })(),
           },
           {
-            id: "ch6-lesson-4",
+            id: "ch6-lesson-5",
             title: yhLang("Prevention of Child Marriage", "বাল্যবিবাহ প্রতিরোধে করণীয়"),
             icon: "fa-shield-heart",
             gradientClass: "bg-gradient-green",
@@ -4920,7 +4832,7 @@ const anatomyTopics2 = [
             },
             content: (function () {
               return `
-                <div class="ch7l4-slide" data-module="7" data-lesson="4">
+                <div class="lesson-slide ch7l4-slide" data-module="7" data-lesson="4">
                   <section class="ch7l4-introduction" data-aos="fade-up">
                     <h2 class="ch7l4-main-title d-none">
                       <i class="fa-solid fa-chart-line"></i>
@@ -5344,7 +5256,7 @@ const anatomyTopics2 = [
             content: (function () {
               return `
                 <div class="lesson-slide">
-                  <h2 class="slide-title gradient-text mb-2" data-aos="fade-up">${yhLang(
+                  <h2 class="slide-title gradient-text mb-2 ch8l6-title ch-title" data-aos="fade-up"><i class="fa-solid fa-person-breastfeeding"></i> ${yhLang(
                     "গর্ভকালীন বিপদচিহ্নসমূহ",
                     "গর্ভকালীন বিপদচিহ্নসমূহ",
                   )}</h2>
