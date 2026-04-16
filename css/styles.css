@@ -307,7 +307,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   color: #4a5568;
-  margin-bottom: 0px !important
 }
 
 a {
@@ -2196,6 +2195,7 @@ html[lang|="bn"] h2 {
    ======================================== */
 body {
   height: 100dvh !important;
+  overflow-y: auto;
 }   
  
 
@@ -19087,14 +19087,14 @@ td.aqi-chip--hazardous { background: #7030A0; }
 
 /* ==================== ENHANCED BUTTON STYLES ==================== */
 .btn {
-  font-weight: 600;
-  padding: 0.55rem 1.5rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  text-transform: none;
-  letter-spacing: 0.3px;
-}
+        font-weight: 600;
+        padding: 5px 9px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-size: 13px;
+        text-transform: none;
+        letter-spacing: 0.3px;
+  }
 
 .btn-primary {
     background: linear-gradient(135deg, #0000004d 0%, #0090ff 100%);
@@ -29806,6 +29806,7 @@ dashboard-titled-title {
 
 .dashboard-subtitle {
   color: #000000 !important;
+  margin-bottom: 10px;
 }
 
 .dark-mode .meta-pill {
