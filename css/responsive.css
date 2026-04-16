@@ -1,5 +1,5 @@
-@media (max-height: 400px) {
-  .ch3l2-cards-grid {
+@media (max-width: 400px) {
+  .ch3l2-cards-grid, .ch3l2-cards-grid {
     grid-template-columns: 1fr;
     gap: 3px;
 }
