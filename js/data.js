@@ -2764,39 +2764,39 @@ const coursesData = [
                       <tr class="ch3l3-row-growth">
                         <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-ruler"></i> ${yhLang("Growth", "বৃদ্ধি")}</strong></h3></td>
                         <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Secondary sexual characteristics appear", "যৌন বৈশিষ্ট্য দেখা যায়")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Growth is at its peak", "সবচেয়ে বেশি বৃদ্ধি ঘটে")}</p>
-  </div>
-</td>
+                          <div class="ch3l3-point ch3l3-point-early">
+                            <p>${yhLang("Secondary sexual characteristics appear", "যৌন বৈশিষ্ট্য দেখা যায়")}</p>
+                          </div>
+                          <div class="ch3l3-point ch3l3-point-early">
+                            <p>${yhLang("Growth is at its peak", "সবচেয়ে বেশি বৃদ্ধি ঘটে")}</p>
+                          </div>
+                        </td>
 
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Sexual characteristics become more prominent", "যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Growth rate slows down", "বৃদ্ধি কমে আসে, প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-mid">
+                          <div class="ch3l3-point ch3l3-point-mid">
+                            <p>${yhLang("Sexual characteristics become more prominent", "যৌন বৈশিষ্ট্যসমূহ প্রকট হয়ে ওঠে")}</p>
+                          </div>
+                          <div class="ch3l3-point ch3l3-point-mid">
+                            <p>${yhLang("Growth rate slows down", "বৃদ্ধি কমে আসে, প্রায় ৯৫% উচ্চতা এই সময় তৈরি হয়")}</p>
+                          </div>
+                        </td>
 
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Physical maturity is reached", "শারীরিক পূর্ণতাপ্রাপ্তি")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-late">
+                          <div class="ch3l3-point ch3l3-point-late">
+                            <p>${yhLang("Physical maturity is reached", "শারীরিক পূর্ণতাপ্রাপ্তি")}</p>
+                          </div>
+                        </td>
                       </tr>
                       <tr class="ch3l3-row-concept">
                         <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-lightbulb"></i> ${yhLang("Knowledge", "জ্ঞান")}</strong></h3></td>
                          <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concrete thinking", "স্থূল চিন্তাধারা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Inability to understand long-term consequences", "কাজের সুদূরপ্রসারী প্রভাব বোঝার অক্ষমতা")}</p>
-  </div>
-</td>
+                          <div class="ch3l3-point ch3l3-point-early">
+                            <p>${yhLang("Concrete thinking", "স্থূল চিন্তাধারা")}</p>
+                          </div>
+                          <div class="ch3l3-point ch3l3-point-early">
+                            <p>${yhLang("Inability to understand long-term consequences", "কাজের সুদূরপ্রসারী প্রভাব বোঝার অক্ষমতা")}</p>
+                          </div>
+                        </td>
 
                         <td class="ch3l3-td-mid">
                           <div class="ch3l3-point ch3l3-point-mid">
@@ -2825,97 +2825,97 @@ const coursesData = [
                       <tr class="ch3l3-row-emotion">
                         <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-heart"></i> ${yhLang("Emotional", "মানসিক")}</strong></h3></td>
                         <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Concerned with rapid physical growth, body image, major changes", "দ্রুত শারীরিক বৃদ্ধি, শারীরিক অবয়ব, আমূল পরিবর্তন ইত্যাদি নিয়ে চিন্তায় থাকা")}</p>
-  </div>
-</td>
+                        <div class="ch3l3-point ch3l3-point-early">
+                          <p>${yhLang("Concerned with rapid physical growth, body image, major changes", "দ্রুত শারীরিক বৃদ্ধি, শারীরিক অবয়ব, আমূল পরিবর্তন ইত্যাদি নিয়ে চিন্তায় থাকা")}</p>
+                        </div>
+                      </td>
 
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Reconstruction of self-image", "অবয়ব/ইমেজ পুনঃস্থাপন")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Pressure from imagination and ideals", "কল্পনা ও আদর্শ নিয়ে চাপ")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Sense of personal power", "নিজেকে ক্ষমতাবান ভাবা")}</p>
-  </div>
-</td>
+                      <td class="ch3l3-td-mid">
+                        <div class="ch3l3-point ch3l3-point-mid">
+                          <p>${yhLang("Reconstruction of self-image", "অবয়ব/ইমেজ পুনঃস্থাপন")}</p>
+                        </div>
+                        <div class="ch3l3-point ch3l3-point-mid">
+                          <p>${yhLang("Pressure from imagination and ideals", "কল্পনা ও আদর্শ নিয়ে চাপ")}</p>
+                        </div>
+                        <div class="ch3l3-point ch3l3-point-mid">
+                          <p>${yhLang("Sense of personal power", "নিজেকে ক্ষমতাবান ভাবা")}</p>
+                        </div>
+                      </td>
 
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Stable intelligence and realistic identity established", "স্থায়ী বুদ্ধিমত্তা ও বাস্তবভিত্তিক পরিচয় স্থায়িত্ব লাভ করে")}</p>
-  </div>
-</td>
-                      </tr>
-                      <tr class="ch3l3-row-family">
-                        <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-house"></i> ${yhLang("Family", "পরিবার")}</strong></h3></td>
-                        <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Setting boundaries of dependence and independence", "পরনির্ভরতা ও আত্মনির্ভরতার সীমানা নির্ধারণ")}</p>
-  </div>
-</td>
+                      <td class="ch3l3-td-late">
+                        <div class="ch3l3-point ch3l3-point-late">
+                          <p>${yhLang("Stable intelligence and realistic identity established", "স্থায়ী বুদ্ধিমত্তা ও বাস্তবভিত্তিক পরিচয় স্থায়িত্ব লাভ করে")}</p>
+                        </div>
+                      </td>
+                                            </tr>
+                                            <tr class="ch3l3-row-family">
+                                              <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-house"></i> ${yhLang("Family", "পরিবার")}</strong></h3></td>
+                                              <td class="ch3l3-td-early">
+                        <div class="ch3l3-point ch3l3-point-early">
+                          <p>${yhLang("Setting boundaries of dependence and independence", "পরনির্ভরতা ও আত্মনির্ভরতার সীমানা নির্ধারণ")}</p>
+                        </div>
+                      </td>
 
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Conflict over authority and control", "কর্তৃত্ব বা নিয়ন্ত্রণ নিয়ে দ্বন্দ্ব")}</p>
-  </div>
-</td>
+                      <td class="ch3l3-td-mid">
+                        <div class="ch3l3-point ch3l3-point-mid">
+                          <p>${yhLang("Conflict over authority and control", "কর্তৃত্ব বা নিয়ন্ত্রণ নিয়ে দ্বন্দ্ব")}</p>
+                        </div>
+                      </td>
 
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Family expects responsibility from them", "পরিবার তার কাছ থেকে দায়িত্বশীলতা আশা করে")}</p>
-  </div>
-</td>
-                      </tr>
-                      <tr class="ch3l3-row-peer">
-                        <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-users"></i> ${yhLang("Peer", "সতীর্থ দল")}</strong></h3></td>
-                        <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Desire to prevent instability", "অস্থায়িত্ব প্রতিরোধ করার ইচ্ছা প্রকাশ")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-late">
+                          <div class="ch3l3-point ch3l3-point-late">
+                            <p>${yhLang("Family expects responsibility from them", "পরিবার তার কাছ থেকে দায়িত্বশীলতা আশা করে")}</p>
+                          </div>
+                        </td>
+                                              </tr>
+                                              <tr class="ch3l3-row-peer">
+                                                <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-users"></i> ${yhLang("Peer", "সতীর্থ দল")}</strong></h3></td>
+                                                <td class="ch3l3-td-early">
+                          <div class="ch3l3-point ch3l3-point-early">
+                            <p>${yhLang("Desire to prevent instability", "অস্থায়িত্ব প্রতিরোধ করার ইচ্ছা প্রকাশ")}</p>
+                          </div>
+                        </td>
 
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Searching for identity to maintain individuality", "স্বকীয়তা ধরে রাখতে পরিচয় খোঁজা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Behavior influenced by peers", "সতীর্থ কর্তৃক আচরণ ঠিক করা")}</p>
-  </div>
-</td>
+                      <td class="ch3l3-td-mid">
+                        <div class="ch3l3-point ch3l3-point-mid">
+                          <p>${yhLang("Searching for identity to maintain individuality", "স্বকীয়তা ধরে রাখতে পরিচয় খোঁজা")}</p>
+                        </div>
+                        <div class="ch3l3-point ch3l3-point-mid">
+                          <p>${yhLang("Behavior influenced by peers", "সতীর্থ কর্তৃক আচরণ ঠিক করা")}</p>
+                        </div>
+                      </td>
 
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Moving from peer group to personal friendships", "সতীর্থ দল থেকে ব্যক্তিগত বন্ধুত্বে যাওয়া")}</p>
-  </div>
-</td>
+                      <td class="ch3l3-td-late">
+                        <div class="ch3l3-point ch3l3-point-late">
+                          <p>${yhLang("Moving from peer group to personal friendships", "সতীর্থ দল থেকে ব্যক্তিগত বন্ধুত্বে যাওয়া")}</p>
+                        </div>
+                      </td>
                       </tr>
                       <tr class="ch3l3-row-sexuality">
                         <td class="ch3l3-td-label"><h3><strong><i class="fa-solid fa-heart-pulse"></i> ${yhLang("Sexuality", "যৌনতা")}</strong></h3></td>
                         <td class="ch3l3-td-early">
-  <div class="ch3l3-point ch3l3-point-early">
-    <p>${yhLang("Self-discovery and self-evaluation", "নিজেকে খোঁজা ও মূল্যায়ন করা")}</p>
-  </div>
-</td>
+                          <div class="ch3l3-point ch3l3-point-early">
+                            <p>${yhLang("Self-discovery and self-evaluation", "নিজেকে খোঁজা ও মূল্যায়ন করা")}</p>
+                          </div>
+                        </td>
 
-<td class="ch3l3-td-mid">
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Engaged in romantic fantasies", "রোমান্টিক কাল্পনিক জগত নিয়ে ব্যস্ততা")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-mid">
-    <p>${yhLang("Attraction toward the opposite sex", "বিপরীত লিঙ্গের প্রতি আকর্ষণ")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-mid">
+                          <div class="ch3l3-point ch3l3-point-mid">
+                            <p>${yhLang("Engaged in romantic fantasies", "রোমান্টিক কাল্পনিক জগত নিয়ে ব্যস্ততা")}</p>
+                          </div>
+                          <div class="ch3l3-point ch3l3-point-mid">
+                            <p>${yhLang("Attraction toward the opposite sex", "বিপরীত লিঙ্গের প্রতি আকর্ষণ")}</p>
+                          </div>
+                        </td>
 
-<td class="ch3l3-td-late">
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Building stable relationships", "স্থায়ী সম্পর্ক তৈরি")}</p>
-  </div>
-  <div class="ch3l3-point ch3l3-point-late">
-    <p>${yhLang("Developing mutual consent", "পারস্পরিক ও ভবিষ্যত পরিকল্পনা করা")}</p>
-  </div>
-</td>
+                        <td class="ch3l3-td-late">
+                          <div class="ch3l3-point ch3l3-point-late">
+                            <p>${yhLang("Building stable relationships", "স্থায়ী সম্পর্ক তৈরি")}</p>
+                          </div>
+                          <div class="ch3l3-point ch3l3-point-late">
+                            <p>${yhLang("Developing mutual consent", "পারস্পরিক ও ভবিষ্যত পরিকল্পনা করা")}</p>
+                          </div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -2925,7 +2925,7 @@ const coursesData = [
               return `
                 <div class="ch3l3-slide-container lesson-slide">
                   <div class="ch3l3-intro-section">
-                    <h2 class="ch3l3-main-title">
+                    <h2 class="ch3l3-main-title ch-title">
                       <i class="fa-solid fa-timeline"></i>
                       ${yhLang("Adolescent Growth & Development Stages", "কৈশোরকালীন বৃদ্ধি ও বিকাশের ধাপ এবং পরিবর্তনসমূহ")}
                     </h2>
@@ -11141,9 +11141,9 @@ const orbitItems = [
 .m14l12-peach{background:linear-gradient(120deg,#fff3eb,#fff9f4);border-color:rgba(210,136,101,.33);box-shadow:1px 2px 5px rgba(192,120,83,.15);} .m14l12-peach .m14l12-li-icon{background:#ffe2d3;color:#be714b;} 
 .m14l12-impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px;}
 .m14l12-impact-heading{border-radius:14px;padding:16px;border:2px solid;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;transition:all 0.3s ease;}
-.m14l12-impact-heading.danger{background:linear-gradient(135deg,#fff0f2,#fff8f8);border-color:rgba(212,99,110,.4);}
-.m14l12-impact-heading.warn{background:linear-gradient(135deg,#fff6ea,#fffbf4);border-color:rgba(211,155,76,.4);}
-.m14l12-impact-heading.info{background:linear-gradient(135deg,#eef8ff,#f6fbff);border-color:rgba(92,148,204,.4);}
+.m14l12-impact-heading.danger{border-color:rgba(212,99,110,.4);}
+.m14l12-impact-heading.warn{border-color:rgba(211,155,76,.4);}
+.m14l12-impact-heading.info{border-color:rgba(92,148,204,.4);}
 .m14l12-impact-icon-large {
     width: 40px;
     height: 40px;
@@ -11164,7 +11164,7 @@ const orbitItems = [
 .m14l12-guide-card.success{background:linear-gradient(135deg,#effff5,#f7fffb);border-color:rgba(83,169,123,.4);}
 .m14l12-guide-card.teal{background:linear-gradient(135deg,#edfffb,#f6fffd);border-color:rgba(70,174,162,.4);}
 .m14l12-guide-card.indigo{background:linear-gradient(135deg,#f0f3ff,#f8f9ff);border-color:rgba(109,124,210,.4);}
-.m14l12-guide-card.peach{background:linear-gradient(135deg,#fff3eb,#fff9f4);border-color:rgba(210,136,101,.4);}
+.m14l12-guide-card.peach{border-color:rgba(210,136,101,.4);}
 .m14l12-guide-icon {
     width: 40px;
     height: 40px;

@@ -1302,7 +1302,7 @@
 
 .ch12l5-li-pillar4 {
   background-color: rgba(59, 130, 246, 0.07);
-  border-color: #3b82f6;
+  border-color: #10b981;
 }
 
 .ch12l5-li-icon {
@@ -1334,7 +1334,7 @@
 }
 
 .ch12l5-li-pillar4 .ch12l5-li-icon {
-  color: #3b82f6;
+  color: #10b981;
   background: rgba(59, 130, 246, 0.14);
 }
 
@@ -1373,7 +1373,7 @@
 }
 
 .ch12l5-li-pillar4 .ch12l5-li-num {
-  color: #2563eb;
+  color: #059669;
 }
 
 .ch12l5-li-text {
@@ -1929,7 +1929,7 @@
 
 .ch12l7-right-type4 {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.02));
-  border-color: #3b82f6;
+  border-color: #10b981;
   box-shadow: 0 10px 28px rgba(59, 130, 246, 0.16);
 }
 
@@ -1981,7 +1981,7 @@
 
 .ch12l7-right-type4 .ch12l7-icon-wrapper {
   background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-  color: #3b82f6;
+  color: #10b981;
 }
 
 .ch12l7-right-type4:hover .ch12l7-icon-wrapper {

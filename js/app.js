@@ -2221,6 +2221,8 @@ if (pyramidCanvas && window.Chart) {
         </div>
       </section>
 
+      
+
       <footer class="footer">
         <div class="container">
           <div class="row g-4">

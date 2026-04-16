@@ -20,7 +20,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #ffdfe8, #f0e8ff);
 }
 
 .m14l1-shape-b {
@@ -28,7 +27,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #dff3ff, #e7ffe9);
 }
 
 .m14l1-shape-c {
@@ -36,7 +34,6 @@
 	height: 44px;
 	right: 28%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #fff0d8, #e7ebff);
 }
 
 .m14l1-header,
@@ -104,7 +101,6 @@
 }
 
 .m14l1-card-intro {
-	background: linear-gradient(140deg, #eef8ff 0%, #fff9f2 100%);
 	box-shadow: 1px 3px 8px rgba(62, 108, 147, 0.14);
 }
 
@@ -365,7 +361,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #ffe6d8, #ffe3f3);
 }
 
 .m14l2-shape-b {
@@ -373,7 +368,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #dff5ff, #e4fff2);
 }
 
 .m14l2-shape-c {
@@ -381,7 +375,6 @@
 	height: 44px;
 	right: 30%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #fff2dc, #e8e9ff);
 }
 
 .m14l2-header,
@@ -452,12 +445,10 @@
 }
 
 .m14l2-card-basic {
-	background: linear-gradient(140deg, #f2fff7 0%, #f0f9ff 100%);
 	box-shadow: -2px 3px 9px rgba(68, 143, 122, 0.16);
 }
 
 .m14l2-card-trait {
-	background: linear-gradient(140deg, #f4f3ff 0%, #eef8ff 100%);
 	box-shadow: 2px 3px 9px rgba(101, 102, 176, 0.16);
 }
 
@@ -519,7 +510,6 @@
 }
 
 .m14l2-info {
-	background: linear-gradient(120deg, #eef7ff, #f6fbff);
 	border-color: rgba(94, 150, 206, 0.34);
 	box-shadow: -1px 1px 4px rgba(77, 137, 190, 0.17);
 }
@@ -530,7 +520,6 @@
 }
 
 .m14l2-success {
-	background: linear-gradient(120deg, #effff3, #f7fffb);
 	border-color: rgba(84, 169, 124, 0.34);
 	box-shadow: 1px 1px 4px rgba(74, 157, 114, 0.17);
 }
@@ -541,7 +530,6 @@
 }
 
 .m14l2-accent {
-	background: linear-gradient(120deg, #f3f1ff, #f8f6ff);
 	border-color: rgba(130, 114, 208, 0.34);
 	box-shadow: 1px -1px 4px rgba(119, 103, 196, 0.18);
 }
@@ -579,7 +567,6 @@
 }
 
 .m14l2-slate {
-	background: linear-gradient(120deg, #f2f6fb, #f9fbfd);
 	border-color: rgba(115, 142, 170, 0.34);
 	box-shadow: -1px 1px 4px rgba(101, 126, 151, 0.16);
 }
@@ -590,7 +577,6 @@
 }
 
 .m14l2-sun {
-	background: linear-gradient(120deg, #fff9e8, #fffdf2);
 	border-color: rgba(216, 172, 71, 0.38);
 	box-shadow: 1px 2px 4px rgba(195, 151, 55, 0.18);
 }
@@ -662,7 +648,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #ffe2d6, #f2e6ff);
 }
 
 .m14l3-shape-b {
@@ -670,7 +655,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #ddf3ff, #ebfff0);
 }
 
 .m14l3-shape-c {
@@ -678,7 +662,6 @@
 	height: 44px;
 	right: 32%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #fff0d4, #e7e9ff);
 }
 
 .m14l3-header,
@@ -837,7 +820,6 @@
 .m14l3-table th {
 	font-size: 1.18rem;
 	color: #24486a;
-	background: linear-gradient(120deg, #f0f8ff, #f9f3ff);
 	font-weight: 700;
 	white-space: nowrap;
 }
@@ -874,7 +856,6 @@
 }
 
 .m14l3-info {
-	background: linear-gradient(120deg, #eef7ff, #f6fbff);
 	border-color: rgba(94, 150, 206, 0.34);
 	box-shadow: -1px 1px 4px rgba(77, 137, 190, 0.17);
 }
@@ -885,7 +866,6 @@
 }
 
 .m14l3-success {
-	background: linear-gradient(120deg, #effff3, #f7fffb);
 	border-color: rgba(84, 169, 124, 0.34);
 	box-shadow: 1px 1px 4px rgba(74, 157, 114, 0.17);
 }
@@ -896,7 +876,6 @@
 }
 
 .m14l3-accent {
-	background: linear-gradient(120deg, #f3f1ff, #f8f6ff);
 	border-color: rgba(130, 114, 208, 0.34);
 	box-shadow: 1px -1px 4px rgba(119, 103, 196, 0.18);
 }
@@ -1090,7 +1069,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #ffd9e8, #f0d9ff);
 }
 
 .m14l4-shape-b {
@@ -1098,7 +1076,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #ddf0ff, #e9fff5);
 }
 
 .m14l4-shape-c {
@@ -1106,7 +1083,6 @@
 	height: 44px;
 	right: 30%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #fff4ce, #e9e6ff);
 }
 
 .m14l4-header,
@@ -1135,7 +1111,6 @@
 	font-size: 1.96rem;
 	padding: 6px 10px;
 	border-radius: 14px;
-	background: linear-gradient(130deg, #fff2ee, #eef7ff);
 	border: 1px solid rgba(122, 145, 180, 0.24);
 	box-shadow: -1px 3px 8px rgba(85, 117, 151, 0.16);
 }
@@ -1175,22 +1150,18 @@
 }
 
 .m14l4-card-intro {
-	background: linear-gradient(140deg, #fff6f0 0%, #f0f7ff 100%);
 	box-shadow: 1px 3px 8px rgba(173, 122, 91, 0.14);
 }
 
 .m14l4-card-symptoms {
-	background: linear-gradient(140deg, #f2f8ff 0%, #faf3ff 100%);
 	box-shadow: -2px 3px 9px rgba(87, 125, 183, 0.16);
 }
 
 .m14l4-card-causes {
-	background: linear-gradient(140deg, #faf2f5 0%, #fffbf2 100%);
 	box-shadow: 2px 3px 9px rgba(183, 105, 130, 0.16);
 }
 
 .m14l4-card-manage {
-	background: linear-gradient(140deg, #f0fef8 0%, #f8f4ff 100%);
 	box-shadow: 0 4px 10px rgba(71, 145, 126, 0.16);
 	margin-bottom: 0;
 }
@@ -1270,7 +1241,6 @@
 .m14l4-table th {
 	font-size: 1.18rem;
 	color: #25496b;
-	background: linear-gradient(120deg, #f0f9ff, #faf4ff);
 	font-weight: 700;
 	white-space: nowrap;
 }
@@ -1309,7 +1279,6 @@
 }
 
 .m14l4-info {
-	background: linear-gradient(120deg, #eef7ff, #f6fbff);
 	border-color: rgba(94, 150, 206, 0.34);
 	box-shadow: -1px 1px 4px rgba(77, 137, 190, 0.17);
 }
@@ -1322,7 +1291,6 @@
 }
 
 .m14l4-success {
-	background: linear-gradient(120deg, #effff3, #f7fffb);
 	border-color: rgba(84, 169, 124, 0.34);
 	box-shadow: 1px 1px 4px rgba(74, 157, 114, 0.17);
 }
@@ -1335,7 +1303,6 @@
 }
 
 .m14l4-accent {
-	background: linear-gradient(120deg, #f3f1ff, #f8f6ff);
 	border-color: rgba(130, 114, 208, 0.34);
 	box-shadow: 1px -1px 4px rgba(119, 103, 196, 0.18);
 }
@@ -1348,7 +1315,6 @@
 }
 
 .m14l4-warn {
-	background: linear-gradient(120deg, #fff4ea, #fffaf3);
 	border-color: rgba(213, 147, 83, 0.36);
 	box-shadow: 1px 2px 4px rgba(201, 136, 62, 0.18);
 }
@@ -1361,7 +1327,6 @@
 }
 
 .m14l4-danger {
-	background: linear-gradient(120deg, #fff1f3, #fff8f8);
 	border-color: rgba(214, 96, 106, 0.36);
 	box-shadow: 1px 1px 4px rgba(196, 84, 94, 0.19);
 }
@@ -1374,7 +1339,6 @@
 }
 
 .m14l4-slate {
-	background: linear-gradient(120deg, #f2f6fb, #f9fbfd);
 	border-color: rgba(115, 142, 170, 0.34);
 	box-shadow: -1px 1px 4px rgba(101, 126, 151, 0.16);
 }
@@ -1387,7 +1351,6 @@
 }
 
 .m14l4-sun {
-	background: linear-gradient(120deg, #fff9e8, #fffdf2);
 	border-color: rgba(216, 172, 71, 0.38);
 	box-shadow: 1px 2px 4px rgba(195, 151, 55, 0.18);
 }
@@ -1400,7 +1363,6 @@
 }
 
 .m14l4-violet {
-	background: linear-gradient(120deg, #f8f1ff, #fdf9ff);
 	border-color: rgba(165, 118, 214, 0.32);
 	box-shadow: -1px 2px 4px rgba(151, 104, 197, 0.18);
 }
@@ -1413,7 +1375,6 @@
 }
 
 .m14l4-pink {
-	background: linear-gradient(120deg, #ffe8f0, #fff5f8);
 	border-color: rgba(214, 139, 165, 0.34);
 	box-shadow: 1px 1px 4px rgba(194, 118, 150, 0.17);
 }
@@ -1426,7 +1387,6 @@
 }
 
 .m14l4-peach {
-	background: linear-gradient(120deg, #fff2ea, #fffaf6);
 	border-color: rgba(214, 139, 102, 0.35);
 	box-shadow: 1px 1px 4px rgba(194, 118, 82, 0.17);
 }
@@ -1439,7 +1399,6 @@
 }
 
 .m14l4-sky {
-	background: linear-gradient(120deg, #edf8ff, #f6fcff);
 	border-color: rgba(88, 162, 214, 0.34);
 	box-shadow: -1px 1px 4px rgba(78, 145, 193, 0.17);
 }
@@ -1452,7 +1411,6 @@
 }
 
 .m14l4-cyan {
-	background: linear-gradient(120deg, #e6f9ff, #f0ffff);
 	border-color: rgba(76, 176, 204, 0.34);
 	box-shadow: 1px -1px 4px rgba(65, 157, 184, 0.17);
 }
@@ -1465,7 +1423,6 @@
 }
 
 .m14l4-teal {
-	background: linear-gradient(120deg, #effffb, #f7fffd);
 	border-color: rgba(76, 176, 166, 0.34);
 	box-shadow: 1px -1px 4px rgba(65, 157, 148, 0.17);
 }
@@ -1478,7 +1435,6 @@
 }
 
 .m14l4-mint {
-	background: linear-gradient(120deg, #edfff8, #f6fffb);
 	border-color: rgba(88, 174, 152, 0.34);
 	box-shadow: 0 2px 4px rgba(73, 152, 132, 0.17);
 }
@@ -1491,7 +1447,6 @@
 }
 
 .m14l4-indigo {
-	background: linear-gradient(120deg, #f2f3ff, #f8f9ff);
 	border-color: rgba(114, 126, 216, 0.34);
 	box-shadow: -1px 1px 4px rgba(98, 111, 199, 0.17);
 }
@@ -1504,7 +1459,6 @@
 }
 
 .m14l4-red {
-	background: linear-gradient(120deg, #fff1f2, #fff8f8);
 	border-color: rgba(217, 94, 94, 0.36);
 	box-shadow: 1px 1px 4px rgba(194, 80, 80, 0.19);
 }
@@ -1517,7 +1471,6 @@
 }
 
 .m14l4-amber {
-	background: linear-gradient(120deg, #fff7e9, #fffdf5);
 	border-color: rgba(212, 167, 71, 0.36);
 	box-shadow: 1px 1px 4px rgba(196, 151, 57, 0.18);
 }
@@ -1604,7 +1557,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #e8dcff, #dff2ff);
 }
 
 .m14l5-shape-b {
@@ -1612,7 +1564,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #ffe6d8, #f0f1ff);
 }
 
 .m14l5-shape-c {
@@ -1620,7 +1571,6 @@
 	height: 44px;
 	right: 30%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #fff3c9, #ece7ff);
 }
 
 .m14l5-header,
@@ -1649,7 +1599,6 @@
 	font-size: 1.96rem;
 	padding: 6px 10px;
 	border-radius: 14px;
-	background: linear-gradient(130deg, #f2ecff, #edf8ff);
 	border: 1px solid rgba(120, 143, 177, 0.24);
 	box-shadow: -1px 3px 8px rgba(81, 113, 147, 0.16);
 }
@@ -1689,22 +1638,18 @@
 }
 
 .m14l5-card-intro {
-	background: linear-gradient(140deg, #f2edff 0%, #eef7ff 100%);
 	box-shadow: 1px 3px 8px rgba(101, 95, 178, 0.14);
 }
 
 .m14l5-card-causes {
-	background: linear-gradient(140deg, #fff3f6 0%, #fffaf2 100%);
 	box-shadow: 2px 3px 9px rgba(180, 102, 127, 0.16);
 }
 
 .m14l5-card-table {
-	background: linear-gradient(140deg, #eef8ff 0%, #f4f3ff 100%);
 	box-shadow: -2px 3px 9px rgba(83, 122, 180, 0.16);
 }
 
 .m14l5-card-manage {
-	background: linear-gradient(140deg, #f0fff8 0%, #f8f4ff 100%);
 	box-shadow: 0 4px 10px rgba(70, 145, 125, 0.16);
 	margin-bottom: 0;
 }
@@ -1794,7 +1739,6 @@
 .m14l5-table th {
 	font-size: 1.16rem;
 	color: #24486a;
-	background: linear-gradient(120deg, #f0f8ff, #f9f3ff);
 	font-weight: 700;
 	white-space: nowrap;
 }
@@ -1830,82 +1774,66 @@
 }
 
 .m14l5-info {
-	background: linear-gradient(120deg, #eef7ff, #f6fbff);
 	border-color: rgba(94, 150, 206, 0.34);
 }
 
 .m14l5-success {
-	background: linear-gradient(120deg, #effff3, #f7fffb);
 	border-color: rgba(84, 169, 124, 0.34);
 }
 
 .m14l5-accent {
-	background: linear-gradient(120deg, #f3f1ff, #f8f6ff);
 	border-color: rgba(130, 114, 208, 0.34);
 }
 
 .m14l5-warn {
-	background: linear-gradient(120deg, #fff4ea, #fffaf3);
 	border-color: rgba(213, 147, 83, 0.36);
 }
 
 .m14l5-danger {
-	background: linear-gradient(120deg, #fff1f3, #fff8f8);
 	border-color: rgba(214, 96, 106, 0.36);
 }
 
 .m14l5-slate {
-	background: linear-gradient(120deg, #f2f6fb, #f9fbfd);
 	border-color: rgba(115, 142, 170, 0.34);
 }
 
 .m14l5-sun {
-	background: linear-gradient(120deg, #fff9e8, #fffdf2);
 	border-color: rgba(216, 172, 71, 0.38);
 }
 
 .m14l5-violet {
-	background: linear-gradient(120deg, #f8f1ff, #fdf9ff);
 	border-color: rgba(165, 118, 214, 0.32);
 }
 
 .m14l5-peach {
-	background: linear-gradient(120deg, #fff2ea, #fffaf6);
 	border-color: rgba(214, 139, 102, 0.35);
 }
 
 .m14l5-sky {
-	background: linear-gradient(120deg, #edf8ff, #f6fcff);
 	border-color: rgba(88, 162, 214, 0.34);
 }
 
 .m14l5-cyan {
-	background: linear-gradient(120deg, #e6f9ff, #f0ffff);
 	border-color: rgba(76, 176, 204, 0.34);
 }
 
 .m14l5-teal {
-	background: linear-gradient(120deg, #effffb, #f7fffd);
 	border-color: rgba(76, 176, 166, 0.34);
 }
 
 .m14l5-mint {
-	background: linear-gradient(120deg, #edfff8, #f6fffb);
 	border-color: rgba(88, 174, 152, 0.34);
 }
 
 .m14l5-indigo {
-	background: linear-gradient(120deg, #f2f3ff, #f8f9ff);
 	border-color: rgba(114, 126, 216, 0.34);
 }
 
 .m14l5-red {
-	background: linear-gradient(120deg, #fff1f2, #fff8f8);
 	border-color: rgba(217, 94, 94, 0.36);
 }
 
 .m14l5-amber {
-	background: linear-gradient(120deg, #fff7e9, #fffdf5);
 	border-color: rgba(212, 167, 71, 0.36);
 }
 
@@ -2083,7 +2011,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #ffd9d5, #ffe8c9);
 }
 
 .m14l6-shape-b {
@@ -2091,7 +2018,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #ddeeff, #ede8ff);
 }
 
 .m14l6-shape-c {
@@ -2099,7 +2025,6 @@
 	height: 44px;
 	right: 30%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #ffe8db, #ece5ff);
 }
 
 .m14l6-header,
@@ -2128,7 +2053,6 @@
 	font-size: 1.96rem;
 	padding: 6px 10px;
 	border-radius: 14px;
-	background: linear-gradient(130deg, #fff2ea, #eef7ff);
 	border: 1px solid rgba(119, 143, 176, 0.24);
 	box-shadow: -1px 3px 8px rgba(80, 113, 147, 0.16);
 }
@@ -2168,12 +2092,10 @@
 }
 
 .m14l6-card-intro {
-	background: linear-gradient(140deg, #fff4ee 0%, #f2f8ff 100%);
 	box-shadow: 1px 3px 8px rgba(172, 120, 90, 0.14);
 }
 
 .m14l6-card-signals {
-	background: linear-gradient(140deg, #f2f8ff 0%, #f8f3ff 100%);
 	box-shadow: -2px 3px 9px rgba(84, 122, 180, 0.16);
 	margin-bottom: 0;
 }
@@ -2243,82 +2165,66 @@
 }
 
 .m14l6-info {
-	background: linear-gradient(120deg, #eef7ff, #f6fbff);
 	border-color: rgba(94, 150, 206, 0.34);
 }
 
 .m14l6-success {
-	background: linear-gradient(120deg, #effff3, #f7fffb);
 	border-color: rgba(84, 169, 124, 0.34);
 }
 
 .m14l6-accent {
-	background: linear-gradient(120deg, #f3f1ff, #f8f6ff);
 	border-color: rgba(130, 114, 208, 0.34);
 }
 
 .m14l6-warn {
-	background: linear-gradient(120deg, #fff4ea, #fffaf3);
 	border-color: rgba(213, 147, 83, 0.36);
 }
 
 .m14l6-danger {
-	background: linear-gradient(120deg, #fff1f3, #fff8f8);
 	border-color: rgba(214, 96, 106, 0.36);
 }
 
 .m14l6-slate {
-	background: linear-gradient(120deg, #f2f6fb, #f9fbfd);
 	border-color: rgba(115, 142, 170, 0.34);
 }
 
 .m14l6-sun {
-	background: linear-gradient(120deg, #fff9e8, #fffdf2);
 	border-color: rgba(216, 172, 71, 0.38);
 }
 
 .m14l6-violet {
-	background: linear-gradient(120deg, #f8f1ff, #fdf9ff);
 	border-color: rgba(165, 118, 214, 0.32);
 }
 
 .m14l6-peach {
-	background: linear-gradient(120deg, #fff2ea, #fffaf6);
 	border-color: rgba(214, 139, 102, 0.35);
 }
 
 .m14l6-sky {
-	background: linear-gradient(120deg, #edf8ff, #f6fcff);
 	border-color: rgba(88, 162, 214, 0.34);
 }
 
 .m14l6-teal {
-	background: linear-gradient(120deg, #effffb, #f7fffd);
 	border-color: rgba(76, 176, 166, 0.34);
 }
 
 .m14l6-mint {
-	background: linear-gradient(120deg, #edfff8, #f6fffb);
 	border-color: rgba(88, 174, 152, 0.34);
 }
 
 .m14l6-indigo {
-	background: linear-gradient(120deg, #f2f3ff, #f8f9ff);
 	border-color: rgba(114, 126, 216, 0.34);
 }
 
 .m14l6-red {
-	background: linear-gradient(120deg, #fff1f2, #fff8f8);
 	border-color: rgba(217, 94, 94, 0.36);
 }
 
 .m14l6-amber {
-	background: linear-gradient(120deg, #fff7e9, #fffdf5);
 	border-color: rgba(212, 167, 71, 0.36);
 }
 
 .m14l6-cyan {
-	background: linear-gradient(120deg, #e6f9ff, #f0ffff);
 	border-color: rgba(76, 176, 204, 0.34);
 }
 
@@ -2466,7 +2372,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #ffd9d8, #ffe9db);
 }
 
 .m14l7-shape-b {
@@ -2474,7 +2379,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #ddeeff, #ece8ff);
 }
 
 .m14l7-shape-c {
@@ -2482,7 +2386,6 @@
 	height: 44px;
 	right: 30%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #fff0d8, #ece6ff);
 }
 
 .m14l7-header,
@@ -2511,7 +2414,6 @@
 	font-size: 1.96rem;
 	padding: 6px 10px;
 	border-radius: 14px;
-	background: linear-gradient(130deg, #fff1eb, #eef7ff);
 	border: 1px solid rgba(119, 143, 176, 0.24);
 	box-shadow: -1px 3px 8px rgba(80, 113, 147, 0.16);
 }
@@ -2551,22 +2453,18 @@
 }
 
 .m14l7-card-intro {
-	background: linear-gradient(140deg, #fff4ee 0%, #f2f8ff 100%);
 	box-shadow: 1px 3px 8px rgba(172, 120, 90, 0.14);
 }
 
 .m14l7-card-trigger {
-	background: linear-gradient(140deg, #fff3f5 0%, #fffaf2 100%);
 	box-shadow: 2px 3px 9px rgba(180, 102, 127, 0.16);
 }
 
 .m14l7-card-impact {
-	background: linear-gradient(140deg, #eef8ff 0%, #f4f3ff 100%);
 	box-shadow: -2px 3px 9px rgba(83, 122, 180, 0.16);
 }
 
 .m14l7-card-reflect {
-	background: linear-gradient(140deg, #f0fff8 0%, #f8f4ff 100%);
 	box-shadow: 0 4px 10px rgba(70, 145, 125, 0.16);
 	margin-bottom: 0;
 }
@@ -2625,77 +2523,62 @@
 }
 
 .m14l7-info {
-	background: linear-gradient(120deg, #eef7ff, #f6fbff);
 	border-color: rgba(94, 150, 206, 0.34);
 }
 
 .m14l7-success {
-	background: linear-gradient(120deg, #effff3, #f7fffb);
 	border-color: rgba(84, 169, 124, 0.34);
 }
 
 .m14l7-accent {
-	background: linear-gradient(120deg, #f3f1ff, #f8f6ff);
 	border-color: rgba(130, 114, 208, 0.34);
 }
 
 .m14l7-warn {
-	background: linear-gradient(120deg, #fff4ea, #fffaf3);
 	border-color: rgba(213, 147, 83, 0.36);
 }
 
 .m14l7-danger {
-	background: linear-gradient(120deg, #fff1f3, #fff8f8);
 	border-color: rgba(214, 96, 106, 0.36);
 }
 
 .m14l7-slate {
-	background: linear-gradient(120deg, #f2f6fb, #f9fbfd);
 	border-color: rgba(115, 142, 170, 0.34);
 }
 
 .m14l7-sun {
-	background: linear-gradient(120deg, #fff9e8, #fffdf2);
 	border-color: rgba(216, 172, 71, 0.38);
 }
 
 .m14l7-violet {
-	background: linear-gradient(120deg, #f8f1ff, #fdf9ff);
 	border-color: rgba(165, 118, 214, 0.32);
 }
 
 .m14l7-peach {
-	background: linear-gradient(120deg, #fff2ea, #fffaf6);
 	border-color: rgba(214, 139, 102, 0.35);
 }
 
 .m14l7-sky {
-	background: linear-gradient(120deg, #edf8ff, #f6fcff);
 	border-color: rgba(88, 162, 214, 0.34);
 }
 
 .m14l7-teal {
-	background: linear-gradient(120deg, #effffb, #f7fffd);
 	border-color: rgba(76, 176, 166, 0.34);
 }
 
 .m14l7-mint {
-	background: linear-gradient(120deg, #edfff8, #f6fffb);
 	border-color: rgba(88, 174, 152, 0.34);
 }
 
 .m14l7-indigo {
-	background: linear-gradient(120deg, #f2f3ff, #f8f9ff);
 	border-color: rgba(114, 126, 216, 0.34);
 }
 
 .m14l7-red {
-	background: linear-gradient(120deg, #fff1f2, #fff8f8);
 	border-color: rgba(217, 94, 94, 0.36);
 }
 
 .m14l7-amber {
-	background: linear-gradient(120deg, #fff7e9, #fffdf5);
 	border-color: rgba(212, 167, 71, 0.36);
 }
 
@@ -2821,7 +2704,6 @@
 	overflow: hidden;
 	border-radius: 20px;
 	padding: 10px;
-	background: linear-gradient(146deg, #f1fff9 0%, #f3f8ff 50%, #fff6f1 100%);
 	border: 1px solid rgba(116, 138, 168, 0.22);
 	box-shadow: 0 4px 12px rgba(53, 80, 112, 0.12);
 	font-family: "Noto Sans Bengali", "Hind Siliguri", "Poppins", sans-serif;
@@ -2839,7 +2721,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #d9fff0, #dcf2ff);
 }
 
 .m14l8-shape-b {
@@ -2847,7 +2728,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #fff1d9, #e9eeff);
 }
 
 .m14l8-shape-c {
@@ -2855,7 +2735,6 @@
 	height: 44px;
 	right: 30%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #ffe9de, #e8f9ff);
 }
 
 .m14l8-header,
@@ -2884,7 +2763,6 @@
 	font-size: 1.96rem;
 	padding: 6px 10px;
 	border-radius: 14px;
-	background: linear-gradient(130deg, #ecfff6, #eef7ff);
 	border: 1px solid rgba(119, 143, 176, 0.24);
 	box-shadow: -1px 3px 8px rgba(80, 113, 147, 0.16);
 }
@@ -2924,22 +2802,18 @@
 }
 
 .m14l8-card-intro {
-	background: linear-gradient(140deg, #ecfff6 0%, #eef7ff 100%);
 	box-shadow: 1px 3px 8px rgba(90, 168, 142, 0.14);
 }
 
 .m14l8-card-immediate {
-	background: linear-gradient(140deg, #fff3ef 0%, #fffaf3 100%);
 	box-shadow: 2px 3px 9px rgba(180, 126, 102, 0.16);
 }
 
 .m14l8-card-lifestyle {
-	background: linear-gradient(140deg, #eef9ff 0%, #f4f3ff 100%);
 	box-shadow: -2px 3px 9px rgba(83, 122, 180, 0.16);
 }
 
 .m14l8-card-support {
-	background: linear-gradient(140deg, #f0fff8 0%, #f8f4ff 100%);
 	box-shadow: 0 4px 10px rgba(70, 145, 125, 0.16);
 	margin-bottom: 0;
 }
@@ -2998,77 +2872,62 @@
 }
 
 .m14l8-info {
-	background: linear-gradient(120deg, #eef7ff, #f6fbff);
 	border-color: rgba(94, 150, 206, 0.34);
 }
 
 .m14l8-success {
-	background: linear-gradient(120deg, #effff3, #f7fffb);
 	border-color: rgba(84, 169, 124, 0.34);
 }
 
 .m14l8-accent {
-	background: linear-gradient(120deg, #f3f1ff, #f8f6ff);
 	border-color: rgba(130, 114, 208, 0.34);
 }
 
 .m14l8-warn {
-	background: linear-gradient(120deg, #fff4ea, #fffaf3);
 	border-color: rgba(213, 147, 83, 0.36);
 }
 
 .m14l8-danger {
-	background: linear-gradient(120deg, #fff1f3, #fff8f8);
 	border-color: rgba(214, 96, 106, 0.36);
 }
 
 .m14l8-slate {
-	background: linear-gradient(120deg, #f2f6fb, #f9fbfd);
 	border-color: rgba(115, 142, 170, 0.34);
 }
 
 .m14l8-sun {
-	background: linear-gradient(120deg, #fff9e8, #fffdf2);
 	border-color: rgba(216, 172, 71, 0.38);
 }
 
 .m14l8-violet {
-	background: linear-gradient(120deg, #f8f1ff, #fdf9ff);
 	border-color: rgba(165, 118, 214, 0.32);
 }
 
 .m14l8-peach {
-	background: linear-gradient(120deg, #fff2ea, #fffaf6);
 	border-color: rgba(214, 139, 102, 0.35);
 }
 
 .m14l8-sky {
-	background: linear-gradient(120deg, #edf8ff, #f6fcff);
 	border-color: rgba(88, 162, 214, 0.34);
 }
 
 .m14l8-teal {
-	background: linear-gradient(120deg, #effffb, #f7fffd);
 	border-color: rgba(76, 176, 166, 0.34);
 }
 
 .m14l8-mint {
-	background: linear-gradient(120deg, #edfff8, #f6fffb);
 	border-color: rgba(88, 174, 152, 0.34);
 }
 
 .m14l8-indigo {
-	background: linear-gradient(120deg, #f2f3ff, #f8f9ff);
 	border-color: rgba(114, 126, 216, 0.34);
 }
 
 .m14l8-red {
-	background: linear-gradient(120deg, #fff1f2, #fff8f8);
 	border-color: rgba(217, 94, 94, 0.36);
 }
 
 .m14l8-amber {
-	background: linear-gradient(120deg, #fff7e9, #fffdf5);
 	border-color: rgba(212, 167, 71, 0.36);
 }
 
@@ -3194,7 +3053,6 @@
 	overflow: hidden;
 	border-radius: 20px;
 	padding: 10px;
-	background: linear-gradient(146deg, #f2f8ff 0%, #f5f6ff 50%, #fff8f1 100%);
 	border: 1px solid rgba(116, 138, 168, 0.22);
 	box-shadow: 0 4px 12px rgba(53, 80, 112, 0.12);
 	font-family: "Noto Sans Bengali", "Hind Siliguri", "Poppins", sans-serif;
@@ -3212,7 +3070,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #dbeeff, #e5e8ff);
 }
 
 .m14l9-shape-b {
@@ -3220,7 +3077,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #fff0de, #ecf7ff);
 }
 
 .m14l9-shape-c {
@@ -3228,7 +3084,6 @@
 	height: 44px;
 	right: 30%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #fff2d5, #ece8ff);
 }
 
 .m14l9-header,
@@ -3257,7 +3112,6 @@
 	font-size: 1.96rem;
 	padding: 6px 10px;
 	border-radius: 14px;
-	background: linear-gradient(130deg, #eef7ff, #f4f1ff);
 	border: 1px solid rgba(119, 143, 176, 0.24);
 	box-shadow: -1px 3px 8px rgba(80, 113, 147, 0.16);
 }
@@ -3297,22 +3151,18 @@
 }
 
 .m14l9-card-intro {
-	background: linear-gradient(140deg, #eef7ff 0%, #f5f3ff 100%);
 	box-shadow: 1px 3px 8px rgba(95, 128, 182, 0.14);
 }
 
 .m14l9-card-physical {
-	background: linear-gradient(140deg, #fff2f3 0%, #fffaf5 100%);
 	box-shadow: 2px 3px 9px rgba(181, 108, 120, 0.16);
 }
 
 .m14l9-card-mental {
-	background: linear-gradient(140deg, #eef9ff 0%, #f5f3ff 100%);
 	box-shadow: -2px 3px 9px rgba(83, 122, 180, 0.16);
 }
 
 .m14l9-card-coping {
-	background: linear-gradient(140deg, #f0fff8 0%, #f7f4ff 100%);
 	box-shadow: 0 4px 10px rgba(70, 145, 125, 0.16);
 	margin-bottom: 0;
 }
@@ -3371,77 +3221,62 @@
 }
 
 .m14l9-info {
-	background: linear-gradient(120deg, #eef7ff, #f6fbff);
 	border-color: rgba(94, 150, 206, 0.34);
 }
 
 .m14l9-success {
-	background: linear-gradient(120deg, #effff3, #f7fffb);
 	border-color: rgba(84, 169, 124, 0.34);
 }
 
 .m14l9-accent {
-	background: linear-gradient(120deg, #f3f1ff, #f8f6ff);
 	border-color: rgba(130, 114, 208, 0.34);
 }
 
 .m14l9-warn {
-	background: linear-gradient(120deg, #fff4ea, #fffaf3);
 	border-color: rgba(213, 147, 83, 0.36);
 }
 
 .m14l9-danger {
-	background: linear-gradient(120deg, #fff1f3, #fff8f8);
 	border-color: rgba(214, 96, 106, 0.36);
 }
 
 .m14l9-slate {
-	background: linear-gradient(120deg, #f2f6fb, #f9fbfd);
 	border-color: rgba(115, 142, 170, 0.34);
 }
 
 .m14l9-sun {
-	background: linear-gradient(120deg, #fff9e8, #fffdf2);
 	border-color: rgba(216, 172, 71, 0.38);
 }
 
 .m14l9-violet {
-	background: linear-gradient(120deg, #f8f1ff, #fdf9ff);
 	border-color: rgba(165, 118, 214, 0.32);
 }
 
 .m14l9-peach {
-	background: linear-gradient(120deg, #fff2ea, #fffaf6);
 	border-color: rgba(214, 139, 102, 0.35);
 }
 
 .m14l9-sky {
-	background: linear-gradient(120deg, #edf8ff, #f6fcff);
 	border-color: rgba(88, 162, 214, 0.34);
 }
 
 .m14l9-teal {
-	background: linear-gradient(120deg, #effffb, #f7fffd);
 	border-color: rgba(76, 176, 166, 0.34);
 }
 
 .m14l9-mint {
-	background: linear-gradient(120deg, #edfff8, #f6fffb);
 	border-color: rgba(88, 174, 152, 0.34);
 }
 
 .m14l9-indigo {
-	background: linear-gradient(120deg, #f2f3ff, #f8f9ff);
 	border-color: rgba(114, 126, 216, 0.34);
 }
 
 .m14l9-red {
-	background: linear-gradient(120deg, #fff1f2, #fff8f8);
 	border-color: rgba(217, 94, 94, 0.36);
 }
 
 .m14l9-amber {
-	background: linear-gradient(120deg, #fff7e9, #fffdf5);
 	border-color: rgba(212, 167, 71, 0.36);
 }
 
@@ -3584,7 +3419,6 @@
 	height: 96px;
 	top: -28px;
 	right: -20px;
-	background: linear-gradient(140deg, #d8ffe9, #dff1ff);
 }
 
 .m14l10-shape-b {
@@ -3592,7 +3426,6 @@
 	height: 60px;
 	left: -16px;
 	bottom: 48px;
-	background: linear-gradient(140deg, #fff0db, #e9edff);
 }
 
 .m14l10-shape-c {
@@ -3600,7 +3433,6 @@
 	height: 44px;
 	right: 30%;
 	bottom: -12px;
-	background: linear-gradient(145deg, #eafff3, #ece8ff);
 }
 
 .m14l10-header,
@@ -3629,7 +3461,6 @@
 	font-size: 1.96rem;
 	padding: 6px 10px;
 	border-radius: 14px;
-	background: linear-gradient(130deg, #ecfff6, #eef7ff);
 	border: 1px solid rgba(119, 143, 176, 0.24);
 	box-shadow: -1px 3px 8px rgba(80, 113, 147, 0.16);
 }
@@ -3670,17 +3501,14 @@
 
 
 .m14l10-card-plan {
-	background: linear-gradient(140deg, #fff3ef 0%, #fffaf4 100%);
 	box-shadow: 2px 3px 9px rgba(181, 126, 102, 0.16);
 }
 
 .m14l10-card-study {
-	background: linear-gradient(140deg, #eef9ff 0%, #f4f3ff 100%);
 	box-shadow: -2px 3px 9px rgba(83, 122, 180, 0.16);
 }
 
 .m14l10-card-mindset {
-	background: linear-gradient(140deg, #f0fff8 0%, #f7f4ff 100%);
 	box-shadow: 0 4px 10px rgba(70, 145, 125, 0.16);
 	margin-bottom: 0;
 }
@@ -3739,77 +3567,62 @@
 }
 
 .m14l10-info {
-	background: linear-gradient(120deg, #eef7ff, #f6fbff);
 	border-color: rgba(94, 150, 206, 0.34);
 }
 
 .m14l10-success {
-	background: linear-gradient(120deg, #effff3, #f7fffb);
 	border-color: rgba(84, 169, 124, 0.34);
 }
 
 .m14l10-accent {
-	background: linear-gradient(120deg, #f3f1ff, #f8f6ff);
 	border-color: rgba(130, 114, 208, 0.34);
 }
 
 .m14l10-warn {
-	background: linear-gradient(120deg, #fff4ea, #fffaf3);
 	border-color: rgba(213, 147, 83, 0.36);
 }
 
 .m14l10-danger {
-	background: linear-gradient(120deg, #fff1f3, #fff8f8);
 	border-color: rgba(214, 96, 106, 0.36);
 }
 
 .m14l10-slate {
-	background: linear-gradient(120deg, #f2f6fb, #f9fbfd);
 	border-color: rgba(115, 142, 170, 0.34);
 }
 
 .m14l10-sun {
-	background: linear-gradient(120deg, #fff9e8, #fffdf2);
 	border-color: rgba(216, 172, 71, 0.38);
 }
 
 .m14l10-violet {
-	background: linear-gradient(120deg, #f8f1ff, #fdf9ff);
 	border-color: rgba(165, 118, 214, 0.32);
 }
 
 .m14l10-peach {
-	background: linear-gradient(120deg, #fff2ea, #fffaf6);
 	border-color: rgba(214, 139, 102, 0.35);
 }
 
 .m14l10-sky {
-	background: linear-gradient(120deg, #edf8ff, #f6fcff);
 	border-color: rgba(88, 162, 214, 0.34);
 }
 
 .m14l10-teal {
-	background: linear-gradient(120deg, #effffb, #f7fffd);
 	border-color: rgba(76, 176, 166, 0.34);
 }
 
 .m14l10-mint {
-	background: linear-gradient(120deg, #edfff8, #f6fffb);
 	border-color: rgba(88, 174, 152, 0.34);
 }
 
 .m14l10-indigo {
-	background: linear-gradient(120deg, #f2f3ff, #f8f9ff);
 	border-color: rgba(114, 126, 216, 0.34);
 }
 
 .m14l10-red {
-	background: linear-gradient(120deg, #fff1f2, #fff8f8);
 	border-color: rgba(217, 94, 94, 0.36);
 }
 
 .m14l10-amber {
-	background: linear-gradient(120deg, #fff7e9, #fffdf5);
 	border-color: rgba(212, 167, 71, 0.36);
 }
 

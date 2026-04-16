@@ -84,7 +84,7 @@
 
 .m19l3-nutrition-table tbody tr:hover {
   background-color: #fafafa;
-  box-shadow: inset 4px 0 0 0 currentColor;
+  box-shadow: inset 4px 0 0 0 currentColor;  
 }
 
 .col-sources, .col-functions, .col-nutrient, .col-num {

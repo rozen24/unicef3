@@ -472,8 +472,7 @@
 }
 
 .m19l4-legend-item:hover {
-  background: rgba(0, 0, 0, 0.04);
-  transform: scale(1.02);
+  background: linear-gradient(135deg, #10b981, #1976D2);
 }
 
 .m19l4-legend-color {

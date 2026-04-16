@@ -259,8 +259,7 @@
   box-shadow: 0 1px 3px rgba(239, 68, 68, 0.4);
 }
 
-/* Tree - Plant trees (Green) */
-.m22l3-li-tree .m22l3-icon {
+.m22l3-icon {
   background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
   color: #fff;
   box-shadow: 0 1px 3px rgba(34, 197, 94, 0.4);
