@@ -2328,20 +2328,23 @@ if (pyramidCanvas && window.Chart) {
               <i class="bi bi-arrow-left me-2"></i>${this.lang("Back to Home", "প্রথম পাতায় ফিরুন")}
             </button>
 
-            <div class="card shadow-lg border-0">
-              <div class="card-body p-4">
+            <div class="auth-card">
+              <div>
                 <h2 class="text-center mb-2 login-title">${this.lang("Become an Ambassador", "দূত হয়ে উঠুন")}</h2>
-                <p class="text-center text-muted mb-4">${this.lang("Log in to continue your learning journey", "আপনার শেখার যাত্রা চালিয়ে যেতে লগইন করুন")}</p>
+                <p class="text-center auth-subtitle">${this.lang("Log in to continue your learning journey", "আপনার শেখার যাত্রা চালিয়ে যেতে লগইন করুন")}</p>
 
-                <div id="loginError" class="alert alert-danger d-none"></div>
+                <div id="loginError" class="form-error d-none"></div>
 
-                <form id="loginForm">
-                  <div class="mb-3">
-                    <label for="loginEmail" class="form-label">${this.lang("Phone/Email", "ফোন/ইমেইল")}</label>
-                    <input type="text" class="form-control" id="loginEmail" placeholder="Phone/Email" required>
+                <form id="loginForm" class="custom-form">
+                  <div class="form-group-custom">
+                    <label for="loginEmail" class="form-label-custom">${this.lang("Phone/Email", "ফোন/ইমেইল")}</label>
+                    <div class="input-wrapper">
+                      <i class="fa-solid fa-phone input-icon"></i>
+                      <input type="text" class="input-custom" id="loginEmail" placeholder="Phone/Email" required>
+                    </div>
                   </div>
 
-                  <div class="mb-3">
+                  <div class="auth-form-group">
                     <label for="loginPassword" class="form-label">${this.lang("Password", "পাসওয়ার্ড")}</label>
                     <div class="input-group">
                       <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
@@ -2352,16 +2355,13 @@ if (pyramidCanvas && window.Chart) {
                   </div>
 
                   <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary">${this.lang("Log In", "লগইন")}</button>
-                    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">${this.lang("Forgot password?", "পাসওয়ার্ড ভুলে গেছেন?")}</button>
+                    <button type="submit" class="btn btn-auth-primary"><i class="fa-solid fa-arrow-right-to-bracket"></i>${this.lang("Log In", "লগইন")}</button>
+                    <button type="button" class="btn btn-auth-link" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">${this.lang("Forgot password?", "পাসওয়ার্ড ভুলে গেছেন?")}</button>
                   </div>
                 </form>
 
-                <div class="text-center mt-4">
-                  <p class="text-muted mb-0">
-                    ${this.lang("Don't have an account?", "অ্যাকাউন্ট নেই?")}
-                    <a href="#" onclick="app.navigateTo('register'); return false;" class="text-decoration-none">${this.lang("Sign up", "নিবন্ধন করুন")}</a>
-                  </p>
+                <div class="auth-footer">
+                  <p>${this.lang("Don't have an account?", "অ্যাকাউন্ট নেই?")} <a href="#" onclick="app.navigateTo('register'); return false;">${this.lang("Sign up", "নিবন্ধন করুন")}</a></p>
                 </div>
               </div>
             </div>
@@ -2504,31 +2504,31 @@ if (pyramidCanvas && window.Chart) {
               <i class="bi bi-arrow-left me-2"></i>${this.lang("Back to Home", "প্রথম পাতায় ফিরুন")}
             </button>
 
-            <div class="card shadow-lg border-0">
-              <div class="card-body p-4">
+            <div class="auth-card">
+              <div>
                 <h2 class="text-center mb-2 login-title">${this.lang("Be a Young Health Ambassador", "যুব স্বাস্থ্য দূত হয়ে উঠুন")}</h2>
-                <p class="text-center text-muted mb-4">${this.lang("Start your health learning journey today", "আজই আপনার স্বাস্থ্য শিক্ষার যাত্রা শুরু করুন")}</p>
+                <p class="text-center auth-subtitle">${this.lang("Start your health learning journey today", "আজই আপনার স্বাস্থ্য শিক্ষার যাত্রা শুরু করুন")}</p>
 
                 <div id="registerError" class="alert alert-danger d-none"></div>
 
                 <form id="registerForm">
-                  <div class="mb-3">
+                  <div class="auth-form-group">
                     <label for="registerName" class="form-label">${this.lang("Full Name", "পুরো নাম")}</label>
                     <input type="text" class="form-control" id="registerName" placeholder="Roqnuzzaman Rozen" required>
                   </div>
                   
-                  <div class="mb-3">
+                  <div class="auth-form-group">
                     <label for="registerPhone" class="form-label">${this.lang("Phone", "ফোন")}</label>
                     <input type="tel" class="form-control" id="registerPhone" placeholder="+8801XXXXXXXXX" pattern="^(\+?8801[3-9]\d{8}|01[3-9]\d{8}|1[3-9]\d{8})$" required aria-describedby="phoneHelp">
                     <div id="phoneHelp" class="form-text">${this.lang("We’ll use your phone for login and account recovery.", "লগইন ও অ্যাকাউন্ট পুনরুদ্ধারে আপনার ফোন নম্বর ব্যবহৃত হবে।")}</div>
                   </div>
-                  <div class="mb-3">
+                  <div class="auth-form-group">
                     <label for="registerEmail" class="form-label">${this.lang("Email (optional)", "ইমেইল (ঐচ্ছিক)")}</label>
                     <input type="email" class="form-control" id="registerEmail" placeholder="your@email.com">
                   </div>
                   
 
-                  <div class="mb-3">
+                  <div class="auth-form-group">
                     <label for="registerPassword" class="form-label">${this.lang("Password", "পাসওয়ার্ড")}</label>
                     <div class="input-group">
                       <input type="password" class="form-control" id="registerPassword" placeholder="At least 6 characters" required aria-describedby="passwordHelp">
@@ -2539,7 +2539,7 @@ if (pyramidCanvas && window.Chart) {
                     <div id="passwordHelp" class="form-text">${this.lang("At least 6 characters and must include a number and a special character.", "কমপক্ষে ৬ অক্ষরের হতে হবে এবং অন্তত একটি সংখ্যা ও বিশেষ অক্ষর থাকতে হবে।")}</div>
                   </div>
 
-                  <div class="mb-3">
+                  <div class="auth-form-group">
                     <label for="registerConfirmPassword" class="form-label">${this.lang("Confirm Password", "পাসওয়ার্ড নিশ্চিত করুন")}</label>
                     <div class="input-group">
                       <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Repeat password" required>
@@ -2549,14 +2549,11 @@ if (pyramidCanvas && window.Chart) {
                     </div>
                   </div>
 
-                  <button type="submit" class="btn btn-primary w-100">${this.lang("Create Account", "অ্যাকাউন্ট তৈরি করুন")}</button>
+                  <button type="submit" class="btn btn-auth-primary w-100"><i class="fa-solid fa-user-plus"></i>${this.lang("Create Account", "অ্যাকাউন্ট তৈরি করুন")}</button>
                 </form>
 
-                <div class="text-center mt-4">
-                  <p class="text-muted mb-0">
-                    ${this.lang("Already have an account?", "অ্যাকাউন্ট আছে?")}
-                    <a href="#" onclick="app.navigateTo('login'); return false;" class="text-decoration-none">${this.lang("Log in", "লগইন")}</a>
-                  </p>
+                <div class="auth-footer">
+                  <p>${this.lang("Already have an account?", "অ্যাকাউন্ট আছে?")} <a href="#" onclick="app.navigateTo('login'); return false;">${this.lang("Log in", "লগইন")}</a></p>
                 </div>
               </div>
             </div>
