@@ -2156,23 +2156,53 @@ if (pyramidCanvas && window.Chart) {
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg fixed-top navbar-neo">
         <div class="container">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="app.navigateTo('home'); return false;">
-            <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" style="width: 100%; height: 60px; object-fit: contain;">
+          <a class="navbar-brand" href="#" onclick="app.navigateTo('home'); return false;" title="YHAP - Young Health Ambassador Programme">
+            <img src="img/Unicef Logo-01.png" alt="UNICEF Logo" style="width: 100%; height: 50px; object-fit: contain;">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
-              <li class="nav-item"><a class="nav-link active transition-base" href="#home">${this.lang("Home", "প্রথম পাতা")}</a></li>
-              <li class="nav-item"><a class="nav-link transition-base" href="#about">${this.lang("About", "পরিচিতি")}</a></li>
-              <li class="nav-item"><a class="nav-link transition-base" href="#components">${this.lang("Components", "প্রধান উপাদান")}</a></li>
-              <li class="nav-item"><a class="nav-link transition-base" href="#roles">${this.lang("Roles", "ভূমিকা")}</a></li>
-              <li class="nav-item"><a class="nav-link transition-base" href="#eligibility">${this.lang("Join", "যোগ দিন")}</a></li>
+              <li class="nav-item">
+                <a class="nav-link active transition-base" href="#home" onclick="app.navigateTo('home'); return false;">
+                  <i class="fa-solid fa-home"></i>
+                  <span>${this.lang("Home", "প্রথম পাতা")}</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link transition-base" href="#about">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <span>${this.lang("About", "পরিচিতি")}</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link transition-base" href="#components">
+                  <i class="fa-solid fa-cube"></i>
+                  <span>${this.lang("Components", "প্রধান উপাদান")}</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link transition-base" href="#roles">
+                  <i class="fa-solid fa-people-group"></i>
+                  <span>${this.lang("Roles", "ভূমিকা")}</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link transition-base" href="#eligibility">
+                  <i class="fa-solid fa-handshake"></i>
+                  <span>${this.lang("Join", "যোগ দিন")}</span>
+                </a>
+              </li>
               <li class="nav-item ms-lg-3">
                 ${this.renderLanguageToggle()}
               </li>
-              <li class="nav-item ms-lg-3"><a href="#" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">${this.lang("Login", "লগইন")}</a></li>
+              <li class="nav-item ms-lg-3">
+                <a href="#" class="btn-cta-primary hover-lift-sm focus-visible-ring transition-base" onclick="app.navigateTo('login'); return false;">
+                  <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                  <span>${this.lang("Login", "লগইন")}</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -3553,50 +3583,56 @@ if (pyramidCanvas && window.Chart) {
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            ${course.chapters.map((ch, ci) => {
-              const lessons = ch.lessons || [];
-              const isActiveModule = ci === chIndex;
-              const moduleLessonPointer = isActiveModule && lessons.length
-                ? Math.min(activeIndex, lessons.length - 1)
-                : -1;
-              const doneCount = lessons.reduce((acc, ls) => acc + (completedIds.has(ls.id) ? 1 : 0), 0);
-              return `
-                <div class="mb-3 accordion-item ${isActiveModule ? 'is-active-module' : ''}" ${isActiveModule ? 'data-active-module="true"' : ''}>
-                  <div class="module-header accordion-button fw-semibold ${isActiveModule ? 'module-header--active' : ''}">
-                    <span class="chapter-icon me-2"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]} me-2 shadow-lg"></i></span>
-                    <span class="chapter-title flex-grow-1">${ch.title}</span>
-                    ${isActiveModule ? `<span class="module-active-pill me-2"><i class="fa-solid fa-circle-dot me-1"></i>${this.lang("Now learning", "এখন শিখছেন")}</span>` : ''}
-                    <span class="chapter-progress-pill" title="${doneCount} of ${lessons.length} lessons">${doneCount}/${lessons.length}</span>
-                  </div>
-                  <div class="list-group">
-                    ${lessons.map((ls, li) => {
-                      const prevId = lessons[Math.max(0, li - 1)]?.id;
-                      const isUnlocked = fullAccess || li === 0 || (prevId && completedIds.has(prevId));
-                      const isDone = completedIds.has(ls.id);
-                      const isCurrent = isActiveModule && li === moduleLessonPointer;
-                      // Estimate reading time from content length (~200 wpm)
-                      let estMin = 1;
-                      try {
-                        const text = String(ls.content || '').replace(/<[^>]+>/g, ' ');
-                        const words = (text.match(/\S+/g) || []).length;
-                        estMin = Math.max(1, Math.round(words / 200));
-                      } catch (_) {}
-                      const icon = isDone ? 'fa-check' : (isUnlocked ? 'fa-unlock' : 'fa-lock');
-                      const disabledCls = isUnlocked ? '' : 'disabled';
-                      const click = isUnlocked ? `onclick=\"app.changeChapterLesson(${ci}, ${li})\"` : '';
-                      const dismiss = isUnlocked ? 'data-bs-dismiss="offcanvas"' : '';
-                      return `
-                        <button type="button" class="list-group-item list-group-item-action d-flex align-items-center accordion-button ${disabledCls}" ${click} ${dismiss}>
-                          <i class="fa-solid ${icon} me-2" aria-hidden="true"></i>
-                          <span class="flex-grow-1">${ls.title}</span>
-                          <span class="badge bg-light text-dark border me-2 d-none">${estMin} ${this.lang("min", "মিনিট")}</span>
-                          ${isCurrent ? `<span class="badge bg-info text-dark me-2">${this.lang("Current", "বর্তমান")}</span>` : ''}
-                          ${isDone ? `<span class="ring ring--done" title="Completed" aria-label="Completed"><span class="ring__inner"><i class="fa-solid fa-check"></i></span></span>` : ''}
-                        </button>`;
-                    }).join('')}
-                  </div>
-                </div>`;
-            }).join('')}
+            <div class="accordion mobile-lesson-accordion" id="mobileChaptersAccordion">
+              ${course.chapters.map((ch, ci) => {
+                const lessons = ch.lessons || [];
+                const isActiveModule = ci === chIndex;
+                const moduleLessonPointer = isActiveModule && lessons.length
+                  ? Math.min(activeIndex, lessons.length - 1)
+                  : -1;
+                const doneCount = lessons.reduce((acc, ls) => acc + (completedIds.has(ls.id) ? 1 : 0), 0);
+                return `
+                  <div class="accordion-item ${isActiveModule ? 'is-active-module' : ''}" ${isActiveModule ? 'data-active-module="true"' : ''}>
+                    <h2 class="accordion-header" id="mobileHeading-${ci}">
+                      <button class="accordion-button module-header fw-semibold ${isActiveModule ? '' : 'collapsed'} ${isActiveModule ? 'module-header--active' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#mobileCollapse-${ci}" aria-expanded="${isActiveModule}" aria-controls="mobileCollapse-${ci}">
+                        <span class="chapter-icon"><i class="fa-solid ${chapterIcons[ci % chapterIcons.length]}"></i></span>
+                        <span class="chapter-title flex-grow-1">${ch.title}</span>
+                        ${isActiveModule ? `<span class="module-active-pill me-2"><i class="fa-solid fa-circle-dot me-1"></i>${this.lang("Now learning", "এখন শিখছেন")}</span>` : ''}
+                        <span class="chapter-progress-pill" title="${doneCount} of ${lessons.length} lessons">${doneCount}/${lessons.length}</span>
+                      </button>
+                    </h2>
+                    <div id="mobileCollapse-${ci}" class="accordion-collapse collapse ${isActiveModule ? 'show' : ''}" aria-labelledby="mobileHeading-${ci}" data-bs-parent="#mobileChaptersAccordion">
+                      <div class="list-group accordion-body">
+                        ${lessons.map((ls, li) => {
+                          const prevId = lessons[Math.max(0, li - 1)]?.id;
+                          const isUnlocked = fullAccess || li === 0 || (prevId && completedIds.has(prevId));
+                          const isDone = completedIds.has(ls.id);
+                          const isCurrent = isActiveModule && li === moduleLessonPointer;
+                          // Estimate reading time from content length (~200 wpm)
+                          let estMin = 1;
+                          try {
+                            const text = String(ls.content || '').replace(/<[^>]+>/g, ' ');
+                            const words = (text.match(/\S+/g) || []).length;
+                            estMin = Math.max(1, Math.round(words / 200));
+                          } catch (_) {}
+                          const icon = isDone ? 'fa-check' : (isUnlocked ? 'fa-unlock' : 'fa-lock');
+                          const disabledCls = isUnlocked ? '' : 'disabled';
+                          const click = isUnlocked ? `onclick=\"app.changeChapterLesson(${ci}, ${li})\"` : '';
+                          const dismiss = isUnlocked ? 'data-bs-dismiss="offcanvas"' : '';
+                          return `
+                            <button type="button" class="list-group-item list-group-item-action d-flex align-items-center ${disabledCls} ${isCurrent ? 'is-active' : ''} ${!isUnlocked ? 'is-locked' : ''}" ${click} ${dismiss}>
+                              - 
+                              <span class="flex-grow-1">${ls.title}</span>
+                              <span class="badge bg-light text-dark border me-2 d-none">${estMin} ${this.lang("min", "মিনিট")}</span>
+                              ${isCurrent ? `<span class="badge bg-info text-dark me-2">${this.lang("Current", "বর্তমান")}</span>` : ''}
+                              ${isDone ? `<span class="ring ring--done" title="Completed" aria-label="Completed"><span class="ring__inner"><i class="fa-solid fa-check"></i></span></span>` : ''}
+                            </button>`;
+                        }).join('')}
+                      </div>
+                    </div>
+                  </div>`;
+              }).join('')}
+            </div>
           </div>
         </div>`;
 
