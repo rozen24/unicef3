@@ -9047,8 +9047,8 @@ figure.image-card {
 .m4l8-points-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: 1rem;
-  height: 100%;
 }
 .m4l8-point-card {
   display: flex;
