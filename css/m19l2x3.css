@@ -137,25 +137,53 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 1rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
   font-size: 1.1rem;
   font-weight: 600;
   color: #2c3e50;
+  transition: all 0.3s ease;
 }
 
 .m19l2x3-bmi-girls .m19l2x3-bmi-header {
+  background: linear-gradient(135deg, rgba(40, 86, 255, 0.12) 0%, rgba(255, 182, 193, 0.08) 100%);
   color: #2856ff;
+  border-color: rgba(40, 86, 255, 0.2);
 }
 
 .m19l2x3-bmi-girls .m19l2x3-bmi-header i {
+  font-size: 1.3rem;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
   color: #2856ff;
+  background: linear-gradient(135deg, rgba(40, 86, 255, 0.15) 0%, rgba(255, 182, 193, 0.1) 100%);
+  box-shadow: 0 3px 10px rgba(40, 86, 255, 0.12);
 }
 
 .m19l2x3-bmi-boys .m19l2x3-bmi-header {
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.12) 0%, rgba(135, 206, 235, 0.08) 100%);
   color: #1976D2;
+  border-color: rgba(25, 118, 210, 0.2);
 }
 
 .m19l2x3-bmi-boys .m19l2x3-bmi-header i {
+  font-size: 1.3rem;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
   color: #1976D2;
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.15) 0%, rgba(135, 206, 235, 0.1) 100%);
+  box-shadow: 0 3px 10px rgba(25, 118, 210, 0.12);
 }
 
 .m19l2x3-table-wrapper {
