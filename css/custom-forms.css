@@ -264,9 +264,7 @@
 
 /* Button Override - Primary */
 .btn-auth-primary, .btn-primary {
-  width: 100% !important;
   padding: 1rem 1.5rem !important;
-  margin-top: 0.5rem !important;
   font-size: 1rem !important;
   font-weight: 800 !important;
   letter-spacing: -0.3px;
@@ -332,8 +330,6 @@
 
 /* Button Override - Link/Secondary */
 .btn-auth-link, .btn-outline-secondary {
-  width: 100% !important;
-  padding: 0.8rem 1.2rem !important;
   background: transparent !important;
   border: 2px solid rgba(0, 174, 239, 0.2) !important;
   color: #0077C8 !important;
